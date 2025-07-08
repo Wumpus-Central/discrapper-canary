@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    i = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    i = n(442837),
     a = n(481060),
     s = n(594174),
     c = n(381585),
@@ -13,11 +13,11 @@ var l = n(120356),
     f = n(806734);
 let g = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        g = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+        g = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     return null == g
         ? null
         : (0, r.jsxs)('div', {
-              className: i()(f.shelfBlockContainer, f.centeredSection),
+              className: o()(f.shelfBlockContainer, f.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: f.blockHeader,
@@ -38,9 +38,9 @@ let g = (e) => {
                       className: f.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
-                              let i = u.Z.getCategoryForProduct(e),
-                                  o = u.Z.getProduct(e);
-                              return null == i || null == o
+                              let o = u.Z.getCategoryForProduct(e),
+                                  i = u.Z.getProduct(e);
+                              return null == o || null == i
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -53,8 +53,8 @@ let g = (e) => {
                                             children: (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    product: o,
-                                                    category: i,
+                                                    product: i,
+                                                    category: o,
                                                     user: g,
                                                     tab: l
                                                 },

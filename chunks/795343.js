@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     l = n(73800),
-    i = n(399606),
-    o = n(481060),
+    o = n(399606),
+    i = n(481060),
     a = n(594174),
     s = n(381585),
     c = n(597688),
@@ -20,9 +20,9 @@ function _(e) {
         E = (0, s.sp)(),
         v = null != (t = null == E ? void 0 : E.sessionId) ? t : '',
         { noCache: S, includeUnpublished: x } = (0, b.Z)(),
-        y = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
+        y = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
         { skus: j, currentPage: T, totalCount: P, isFetchingResults: L } = (0, p.a)(),
-        I = (0, i.Wu)([c.Z], () => c.Z.getProductsBySkus(j)),
+        I = (0, o.Wu)([c.Z], () => c.Z.getProductsBySkus(j)),
         k = l.useCallback(() => {
             var e;
             null == C || null == (e = C.current) || e.scrollToTop({ animate: !0 });
@@ -88,7 +88,7 @@ function _(e) {
                           (0, r.jsx)('div', {
                               className: m.paginationContainer,
                               children: (0, r.jsx)('div', {
-                                  children: (0, r.jsx)(o.DsT, {
+                                  children: (0, r.jsx)(i.DsT, {
                                       currentPage: T,
                                       totalCount: P,
                                       pageSize: Z,

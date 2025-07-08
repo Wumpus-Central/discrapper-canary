@@ -6,8 +6,8 @@
     n(388685));
 var r = n(73800),
     l = n(442837),
-    i = n(100527),
-    o = n(906732),
+    o = n(100527),
+    i = n(906732),
     a = n(626135),
     s = n(74538),
     c = n(328347),
@@ -17,25 +17,25 @@ var r = n(73800),
 let f = (e) => {
         switch (e) {
             case u.AW.ORBS:
-                return i.Z.COLLECTIBLES_SHOP_ORBS_TAB;
+                return o.Z.COLLECTIBLES_SHOP_ORBS_TAB;
             case u.AW.HOME:
-                return i.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
+                return o.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
             case u.AW.BUNDLES:
-                return i.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
+                return o.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
             case u.AW.AVATAR_DECORATIONS:
-                return i.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
+                return o.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
             case u.AW.PROFILE_EFFECTS:
-                return i.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
+                return o.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
             case u.AW.NAMEPLATES:
-                return i.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
+                return o.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
             case u.AW.CATALOG:
-                return i.Z.COLLECTIBLES_SHOP_FULLSCREEN;
+                return o.Z.COLLECTIBLES_SHOP_FULLSCREEN;
         }
     },
     g = (e) => {
         let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
             r = f(e),
-            { analyticsLocations: a, newestAnalyticsLocation: s } = (0, o.ZP)([...n, i.Z.COLLECTIBLES_SHOP, r]);
+            { analyticsLocations: a, newestAnalyticsLocation: s } = (0, i.ZP)([...n, o.Z.COLLECTIBLES_SHOP, r]);
         return {
             analyticsSource: t,
             analyticsLocations: a,
@@ -43,19 +43,19 @@ let f = (e) => {
             currentTabLocation: r
         };
     },
-    h = (e, t, n, l, i) => {
-        let { analyticsLocations: o, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = g(t);
+    h = (e, t, n, l, o) => {
+        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = g(t);
         r.useEffect(() => {
             if (l !== u.f7.VISIBLE || p !== c) return;
-            let r = t === u.AW.CATALOG ? i : s;
+            let r = t === u.AW.CATALOG ? o : s;
             a.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
-                location_stack: o,
+                location_stack: i,
                 source: r,
                 page_session_id: e,
                 page_type: t === u.AW.CATALOG ? 'full' : t,
                 category: t === u.AW.HOME ? void 0 : n
             });
-        }, [o, e, t, n, c, l, i, s, p]);
+        }, [i, e, t, n, c, l, o, s, p]);
     },
     b = (e, t) => {
         let { analyticsLocations: n } = g(e);

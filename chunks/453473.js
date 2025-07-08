@@ -1,6 +1,6 @@
 (n.d(t, {
     K: () => U,
-    P: () => B
+    P: () => G
 }),
     n(388685));
 var r = n(255367),
@@ -62,7 +62,7 @@ function Z(e) {
     }
     return e;
 }
-function L(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function L(e, t) {
         e
     );
 }
-let D = {
+let L = {
     offset: {
         left: 4,
         right: -12
@@ -119,12 +119,12 @@ function U(e) {
     ),
     0 === n.length)
         ? (0, r.jsx)(A.w, {})
-        : (0, r.jsx)(G, {
+        : (0, r.jsx)(B, {
               savedMessageKeys: n,
               closePopout: t
           });
 }
-function B(e) {
+function G(e) {
     let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: i } = e,
         [o, c] = s.useState(!1),
         u = s.useRef(null),
@@ -154,7 +154,7 @@ function B(e) {
         }
     });
 }
-function G(e) {
+function B(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         l = s.useRef(null),
         a = (0, S.Z)('for-later', l),
@@ -192,7 +192,7 @@ function G(e) {
                         })(e, ['ref']);
                     return (0, r.jsx)(
                         f.h21,
-                        L(
+                        D(
                             Z(
                                 {
                                     ref: (e) => {
@@ -266,7 +266,7 @@ function z(e) {
                           className: F.message,
                           compact: _.jU.getSetting(),
                           animateAvatar: !1,
-                          focusProps: D,
+                          focusProps: L,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
@@ -352,7 +352,7 @@ function W(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          L(Z({}, n), {
+                                          D(Z({}, n), {
                                               label: M.intl.string(M.t.roMu1N),
                                               message: t.message
                                           })
@@ -395,7 +395,7 @@ function W(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          L(Z({}, n), {
+                                          D(Z({}, n), {
                                               label: M.intl.string(M.t.mJ3P0N),
                                               message: t.message
                                           })

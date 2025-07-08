@@ -1,7 +1,7 @@
-n.d(t, { F: () => o });
+n.d(t, { F: () => i });
 var r = n(818083),
     l = n(987338);
-let i = (0, r.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2025-06_collectibles_browse',
         label: 'Collectibles Browse Experiment',
@@ -15,4 +15,4 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }).collectiblesBrowseEnabled;
+    i = (e) => o.useExperiment({ location: e }).collectiblesBrowseEnabled;

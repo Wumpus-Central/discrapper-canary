@@ -190,11 +190,11 @@ function w(e) {
             o().each(n, (e) => {
                 F.push(...S(e));
             }));
-    let L = null;
+    let D = null;
     null != n &&
         n.length > 0 &&
         null != h &&
-        (L = i
+        (D = i
             ? (0, r.jsx)(
                   'div',
                   {
@@ -218,9 +218,9 @@ function w(e) {
                     className: I.scrollingFooterWrap,
                     children: m()
                 }));
-    let D = null == y ? void 0 : y(),
+    let L = null == y ? void 0 : y(),
         H =
-            Z && null != D
+            Z && null != L
                 ? (0, r.jsx)('div', {
                       className: I.footer,
                       children: (0, r.jsx)(f.Z, {
@@ -229,13 +229,13 @@ function w(e) {
                               paddingTop: 10,
                               paddingBottom: 10
                           },
-                          children: D
+                          children: L
                       })
                   })
                 : null,
         U = { maxHeight: w.height - 43 - 25 - 48 };
     k && (U.maxHeight -= 40);
-    let B = null != h && l;
+    let G = null != h && l;
     return (0, r.jsx)('div', {
         className: a()(x, I.messagesPopoutWrap),
         style: U,
@@ -247,7 +247,7 @@ function w(e) {
             children: [
                 (0, r.jsxs)(d.Den, {
                     className: a()(I.messagesPopout, b),
-                    onScroll: B ? M : void 0,
+                    onScroll: G ? M : void 0,
                     ref: N,
                     children: [
                         (0, r.jsx)(c.bG, {
@@ -312,7 +312,7 @@ function w(e) {
                                 }
                             })
                         }),
-                        L
+                        D
                     ]
                 }),
                 H

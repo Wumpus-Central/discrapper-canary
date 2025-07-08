@@ -1,8 +1,8 @@
 (n.d(t, { I: () => B }), n(388685), n(539854));
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    o = n(120356),
+    i = n.n(o),
     a = n(636977),
     s = n(442837),
     c = n(481060),
@@ -28,16 +28,16 @@ var r = n(255367),
     L = n(388032),
     I = n(774457);
 function k(e) {
-    let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
+    let { tab: t, displayText: n, selected: l, handleTransition: o } = e;
     return (0, r.jsx)(h.Z.Title, {
-        onClick: () => i(t),
+        onClick: () => o(t),
         wrapperClassName: I.tabWrapper,
-        className: o()(I.tab, { [I.selected]: l }),
+        className: i()(I.tab, { [I.selected]: l }),
         children: n
     });
 }
 function N(e) {
-    let { tab: t, selected: n, displayText: i, handleTransition: o } = e,
+    let { tab: t, selected: n, displayText: o, handleTransition: i } = e,
         [a, s] = l.useState(!1),
         u = l.useRef(null),
         [d, p] = l.useState(0),
@@ -68,7 +68,7 @@ function N(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(y.Z, {
-                    handleTransition: o,
+                    handleTransition: i,
                     onClose: t
                 });
             },
@@ -84,9 +84,9 @@ function N(e) {
                             k,
                             {
                                 tab: t,
-                                displayText: i,
+                                displayText: o,
                                 selected: n,
-                                handleTransition: o
+                                handleTransition: i
                             },
                             t
                         ),
@@ -105,7 +105,7 @@ function N(e) {
     });
 }
 function B(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: f, handleTransition: g } = e,
+    let { isFullScreen: t, isLayer: n, onClose: o, selectedTab: f, handleTransition: g } = e,
         y = (0, p.ZP)(),
         B = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         A = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
@@ -126,7 +126,7 @@ function B(e) {
             tab: T.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
         });
-    let F = n ? v.DR : i,
+    let F = n ? v.DR : o,
         D = f === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
         M = l.useCallback(() => {
             (t && (F(), (0, u.Ou)()),
@@ -142,7 +142,7 @@ function B(e) {
         theme: y,
         children: (e) =>
             (0, r.jsxs)(h.Z, {
-                className: o()(e, I.headerBar, { [I.fullscreenHeaderBar]: t }),
+                className: i()(e, I.headerBar, { [I.fullscreenHeaderBar]: t }),
                 innerClassname: R ? I.headerBarInner : void 0,
                 toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [

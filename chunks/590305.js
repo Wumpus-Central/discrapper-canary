@@ -10,5 +10,6 @@ e.exports = {
     theme: 'theme__11877',
     themeToggled: 'themeToggled__11877',
     circle: 'circle__11877',
-    circleToggled: 'circleToggled__11877'
+    circleToggled: 'circleToggled__11877',
+    checkIcon: 'checkIcon__11877'
 };

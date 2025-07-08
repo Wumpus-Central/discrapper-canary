@@ -1,10 +1,10 @@
 n.d(t, {
-    B: () => i,
-    S: () => o
+    B: () => o,
+    S: () => i
 });
 var r = n(818083),
     l = n(987338);
-let i = (0, r.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2025-05_shop_index_page_menu',
         label: 'Shop Index Page Menu',
@@ -18,4 +18,4 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }).showShopMenuWithIndexPage;
+    i = (e) => o.useExperiment({ location: e }).showShopMenuWithIndexPage;

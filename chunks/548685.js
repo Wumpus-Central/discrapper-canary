@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => P }), n(388685));
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    o = n(120356),
+    i = n.n(o),
     a = n(442837),
     s = n(481060),
     c = n(782568),
@@ -26,11 +26,11 @@ var r = n(255367),
     T = n(806734);
 let P = (e) => {
     var t;
-    let { isLoading: n, sortedSkuIds: i, handleTransition: P, numVisibleItems: L, tab: I } = e,
+    let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: I } = e,
         k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         N = h.ZP.canUseCollectibles(k),
         B = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(i, N),
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, N),
         M = (0, S.St)(w),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -55,7 +55,7 @@ let P = (e) => {
     return null == k
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(T.popularPicksSection, T.centeredSection),
+              className: i()(T.popularPicksSection, T.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: T.blockHeader,

@@ -1,6 +1,6 @@
 (n.d(t, {
     FZ: () => N,
-    Hl: () => L,
+    Hl: () => D,
     NJ: () => w,
     R8: () => F,
     Sq: () => R,
@@ -8,7 +8,7 @@
     Zn: () => I,
     c2: () => A,
     eE: () => M,
-    iE: () => D,
+    iE: () => L,
     iK: () => k,
     lv: () => P,
     nR: () => T,
@@ -176,7 +176,7 @@ function Z(e) {
         n = e.getSelection();
     return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));
 }
-function L(e) {
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = R(e);
     if (n.length > t) {
@@ -185,7 +185,7 @@ function L(e) {
     }
     return e;
 }
-function D(e) {
+function L(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
     let n = t.getRangeAt(0);

@@ -1,21 +1,21 @@
 n.d(t, { U: () => c });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
-    o = n(388032),
+var l = n(120356),
+    o = n.n(l),
+    i = n(481060),
+    a = n(388032),
     s = n(44615);
 let c = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
-        ? (0, r.jsx)(a.ua7, {
+        ? (0, r.jsx)(i.ua7, {
               tooltipClassName: s.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
-              text: o.intl.string(o.t.y1VWkZ),
+              text: a.intl.string(a.t.y1VWkZ),
               children: (e) => {
-                  var n, i;
+                  var n, l;
                   return (0, r.jsxs)(
                       'div',
                       ((n = (function (e) {
@@ -42,26 +42,26 @@ let c = (e) => {
                                   }));
                           }
                           return e;
-                      })({ className: l()(s.partialOwnStateContainer, t) }, e)),
-                      (i = i =
+                      })({ className: o()(s.partialOwnStateContainer, t) }, e)),
+                      (l = l =
                           {
                               children: [
                                   (0, r.jsx)('span', {
                                       className: s.iconWrapper,
-                                      children: (0, r.jsx)(a.d3s, {
+                                      children: (0, r.jsx)(i.d3s, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: s.infoIcon
                                       })
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       variant: 'text-md/semibold',
-                                      children: o.intl.string(o.t.BEjTio)
+                                      children: a.intl.string(a.t.BEjTio)
                                   })
                               ]
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -69,16 +69,16 @@ let c = (e) => {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(i)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                            })(Object(l)).forEach(function (e) {
+                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                             }),
                       n)
                   );
               }
           })
-        : (0, r.jsx)(a.Text, {
+        : (0, r.jsx)(i.Text, {
               variant: 'text-md/semibold',
               className: t,
-              children: o.intl.string(o.t['6cfuDg'])
+              children: a.intl.string(a.t['6cfuDg'])
           });
 };

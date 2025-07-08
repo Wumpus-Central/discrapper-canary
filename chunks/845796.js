@@ -1,8 +1,8 @@
 (n.d(t, { ZP: () => f }), n(388685), n(642613));
 var r = n(255367),
     l = n(73800),
-    i = n(497598),
-    o = n(792091),
+    o = n(497598),
+    i = n(792091),
     a = n(481060),
     s = n(501431),
     c = n(215023),
@@ -43,8 +43,8 @@ let p = (e) => {
             { sort: d, onSetSort: f, searchQuery: g } = (0, s.S)(),
             h = l.useCallback((e) => {
                 let { sortType: t, sortDirection: n } = e;
-                return t === o.E.RECENCY
-                    ? n === i.F.DESC
+                return t === i.E.RECENCY
+                    ? n === o.F.DESC
                         ? {
                               label: u.intl.string(u.t['51Bhi4']),
                               value: 'recent'
@@ -53,8 +53,8 @@ let p = (e) => {
                               label: u.intl.string(u.t['l7S+cH']),
                               value: 'old'
                           }
-                    : t === o.E.PRICE
-                      ? n === i.F.ASC
+                    : t === i.E.PRICE
+                      ? n === o.F.ASC
                           ? {
                                 label: u.intl.string(u.t.m8RVU1),
                                 value: 'price-asc'
@@ -63,7 +63,7 @@ let p = (e) => {
                                 label: u.intl.string(u.t.zBwQJC),
                                 value: 'price-desc'
                             }
-                      : t === o.E.RELEVANCE
+                      : t === i.E.RELEVANCE
                         ? {
                               label: u.intl.string(u.t['XoeT//']),
                               value: 'relevance'
@@ -77,28 +77,28 @@ let p = (e) => {
                 (e) =>
                     ({
                         recent: {
-                            sortType: o.E.RECENCY,
-                            sortDirection: i.F.DESC
+                            sortType: i.E.RECENCY,
+                            sortDirection: o.F.DESC
                         },
                         old: {
-                            sortType: o.E.RECENCY,
-                            sortDirection: i.F.ASC
+                            sortType: i.E.RECENCY,
+                            sortDirection: o.F.ASC
                         },
                         'price-asc': {
-                            sortType: o.E.PRICE,
-                            sortDirection: i.F.ASC
+                            sortType: i.E.PRICE,
+                            sortDirection: o.F.ASC
                         },
                         'price-desc': {
-                            sortType: o.E.PRICE,
-                            sortDirection: i.F.DESC
+                            sortType: i.E.PRICE,
+                            sortDirection: o.F.DESC
                         },
                         popularity: {
-                            sortType: o.E.POPULARITY,
-                            sortDirection: i.F.DESC
+                            sortType: i.E.POPULARITY,
+                            sortDirection: o.F.DESC
                         },
                         relevance: {
-                            sortType: o.E.RELEVANCE,
-                            sortDirection: i.F.DESC
+                            sortType: i.E.RELEVANCE,
+                            sortDirection: o.F.DESC
                         }
                     })[e],
                 []

@@ -1,6 +1,7 @@
 (n.d(t, {
     I1: () => x,
     IZ: () => C,
+    PJ: () => T,
     Qb: () => y,
     Yc: () => j,
     bo: () => I,
@@ -215,5 +216,16 @@ function S(e) {
         describe_search_question_option: s,
         describe_search_question_text: c
     });
+}
+function T(e) {
+    let { searchType: t, searchId: n } = e;
+    (m(n, (e) => {
+        a.Z.initialize(e, p.sR.MESSAGES);
+    }),
+        i.ZP.trackWithMetadata(d.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
+            search_type: t,
+            search_id: null != n ? o.Z.getAnalyticsId(n) : null,
+            search_session_id: f(n)
+        }));
 }
 new l.Z('SearchTracking');

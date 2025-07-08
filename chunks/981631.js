@@ -3361,6 +3361,7 @@ var n_ = (function (e) {
             (e.SEARCH_RESULTS_FEEDBACK_SUBMITTED = 'search_results_feedback_submitted'),
             (e.SEARCH_RESULTS_FEEDBACK_MODAL_VIEWED = 'search_results_feedback_modal_viewed'),
             (e.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED = 'search_results_feedback_entrypoint_viewed'),
+            (e.SEARCH_MESSAGES_CHANNEL_PREFILL = 'search_messages_channel_prefill'),
             (e.MESSAGES_SEARCH_STARTED = 'messages_search_started'),
             (e.SEARCH_V2_OPENED = 'search_v2_opened'),
             (e.SEARCH_V2_CLOSED = 'search_v2_closed'),

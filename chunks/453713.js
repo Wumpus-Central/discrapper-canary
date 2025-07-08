@@ -1,20 +1,20 @@
-n.d(t, { P: () => j });
+n.d(t, { P: () => S });
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(404759),
-    s = n.n(o),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
+    a = n(404759),
+    s = n.n(a),
     c = n(91192),
     u = n(536895),
     d = n(866442),
     p = n(481060),
-    v = n(209613),
-    f = n(429368),
-    m = n(724994),
+    f = n(209613),
+    g = n(429368),
+    h = n(724994),
     b = n(388032),
-    h = n(820612);
-function g(e) {
+    m = n(820612);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function g(e) {
     }
     return e;
 }
-function _(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,26 +57,26 @@ function _(e, t) {
         e
     );
 }
-function y(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-            return i;
+                l = {},
+                o = Object.keys(e);
+            for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+            return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
     }
-    return i;
+    return l;
 }
-let O = s()((e) => {
+let E = s()((e) => {
         let t = !1;
         if (null != e && (0, d.FX)(e)) {
             let n = (0, d._i)(e);
@@ -84,26 +84,26 @@ let O = s()((e) => {
         }
         return t ? p.TVs.unsafe_rawColors.PRIMARY_700.css : p.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
-    x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: l, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: v, minimal: x } = e,
-            { isPurchased: j } = (0, m.L)(n),
-            P = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(l)),
-            { onFocus: w } = P,
-            C = y(P, ['onFocus']),
-            I = i.useCallback(
+    v = (e) => {
+        let { variantGroupProduct: t, variant: n, variantIndex: o, totalVariants: a, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: v } = e,
+            { isPurchased: S } = (0, h.L)(n),
+            x = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(o)),
+            { onFocus: y } = x,
+            j = O(x, ['onFocus']),
+            T = l.useCallback(
                 (e) => {
-                    (e.preventDefault(), e.stopPropagation(), (0, f.$)(t, l), w());
+                    (e.preventDefault(), e.stopPropagation(), (0, g.$)(t, o), y());
                 },
-                [w, t, l]
+                [y, t, o]
             );
         return (0, r.jsx)(p.ua7, {
             text: b.intl.string(b.t['6cfuDg']),
             'aria-label': !1,
-            shouldShow: !x && j,
+            shouldShow: !v && S,
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    _(g({}, C), {
+                    C(_({}, j), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -111,7 +111,7 @@ let O = s()((e) => {
                         },
                         onMouseLeave: () => {
                             var t;
-                            (v(), null == (t = e.onMouseLeave) || t.call(e));
+                            (f(), null == (t = e.onMouseLeave) || t.call(e));
                         },
                         onFocus: () => {
                             var t;
@@ -119,26 +119,26 @@ let O = s()((e) => {
                         },
                         onBlur: () => {
                             var t;
-                            (v(), null == (t = e.onMouseLeave) || t.call(e));
+                            (f(), null == (t = e.onMouseLeave) || t.call(e));
                         },
-                        onClick: I,
+                        onClick: T,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && I(e);
+                            e.key === u.R8.ENTER && T(e);
                         },
-                        className: h.colorVariant,
+                        className: m.colorVariant,
                         children: (0, r.jsx)('div', {
-                            className: a()(h.colorSwatch, {
-                                [h.open]: !x,
-                                [h.selected]: l === s
+                            className: i()(m.colorSwatch, {
+                                [m.open]: !v,
+                                [m.selected]: o === s
                             }),
                             style: {
                                 backgroundColor: n.variantValue,
-                                zIndex: o - l
+                                zIndex: a - o
                             },
-                            children: j
+                            children: S
                                 ? (0, r.jsx)(p.kSu, {
-                                      className: h.purchasedIndicator,
-                                      color: O(n.variantValue)
+                                      className: m.purchasedIndicator,
+                                      color: E(n.variantValue)
                                   })
                                 : null
                         })
@@ -146,49 +146,49 @@ let O = s()((e) => {
                 )
         });
     },
-    j = (e) => {
+    S = (e) => {
         var t, n;
-        let { variantGroupProduct: i, className: l, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: f, alternativeBackgroundColor: m } = e,
-            O = o.previewingVariantIndex,
-            j = null == (t = i.variants) ? void 0 : t[f],
-            P = null !== O ? (null == (n = i.variants) ? void 0 : n[O]) : void 0,
-            w = (0, v.Z)('shop-variants-group-'.concat(i.storeListingId), u.hy.HORIZONTAL);
-        if (null == j) return null;
-        let C = null != P ? P.variantLabel : null == j ? void 0 : j.variantLabel;
+        let { variantGroupProduct: l, className: o, previewingVariantIndexProps: a, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: g, alternativeBackgroundColor: h } = e,
+            E = a.previewingVariantIndex,
+            S = null == (t = l.variants) ? void 0 : t[g],
+            x = null !== E ? (null == (n = l.variants) ? void 0 : n[E]) : void 0,
+            y = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
+        if (null == S) return null;
+        let j = null != x ? x.variantLabel : null == S ? void 0 : S.variantLabel;
         return (0, r.jsx)(c.bG, {
-            navigator: w,
+            navigator: y,
             children: (0, r.jsx)(c.SJ, {
                 children: (e) => {
                     var t,
                         { ref: n } = e,
-                        c = y(e, ['ref']);
+                        c = O(e, ['ref']);
                     return (0, r.jsxs)(
                         'div',
-                        _(g({ ref: n }, c), {
-                            className: a()(h.variantsPanel, l, {
-                                [h.minimalState]: d,
-                                [h.alternativeColor]: m
+                        C(_({ ref: n }, c), {
+                            className: i()(m.variantsPanel, o, {
+                                [m.minimalState]: d,
+                                [m.alternativeColor]: h
                             }),
                             onMouseEnter: () => (null == s ? void 0 : s(!0)),
                             onMouseLeave: () => (null == s ? void 0 : s(!1)),
                             children: [
                                 (0, r.jsx)('ol', {
-                                    className: h.variantsList,
+                                    className: m.variantsList,
                                     children:
-                                        null == (t = i.variants)
+                                        null == (t = l.variants)
                                             ? void 0
                                             : t.map((e, t) => {
-                                                  var n, l;
+                                                  var n, o;
                                                   return (0, r.jsx)(
-                                                      x,
+                                                      v,
                                                       {
-                                                          variantGroupProduct: i,
+                                                          variantGroupProduct: l,
                                                           variant: e,
                                                           variantIndex: t,
-                                                          selectedVariantIndex: f,
-                                                          totalVariants: null != (l = null == (n = i.variants) ? void 0 : n.length) ? l : 0,
-                                                          onEnter: () => o.handleEntering(t),
-                                                          onLeave: o.handleLeaving,
+                                                          selectedVariantIndex: g,
+                                                          totalVariants: null != (o = null == (n = l.variants) ? void 0 : n.length) ? o : 0,
+                                                          onEnter: () => a.handleEntering(t),
+                                                          onLeave: a.handleLeaving,
                                                           minimal: d
                                                       },
                                                       t
@@ -198,8 +198,8 @@ let O = s()((e) => {
                                 (0, r.jsx)(p.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
-                                    className: h.variantLabel,
-                                    children: d ? b.intl.string(b.t.wbgaj4) : C
+                                    className: m.variantLabel,
+                                    children: d ? b.intl.string(b.t.wbgaj4) : j
                                 })
                             ]
                         })

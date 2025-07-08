@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    o = n(120356),
+    i = n.n(o),
     a = n(990705),
     s = n(335818),
     c = n(255835),
@@ -34,7 +34,7 @@ function m() {
                 ]
             }),
             (0, r.jsx)(O, {}),
-            (0, r.jsx)(v, {})
+            (0, r.jsx)(S, {})
         ]
     });
 }
@@ -47,12 +47,12 @@ let _ = (e) => {
                 [s.G.NAMEPLATE]: h.intl.string(h.t.V68Fq6),
                 [s.G.BUNDLE]: h.intl.string(h.t.FYFppq)
             },
-            { itemTypeFilters: i, onToggleItemType: o } = (0, p.S)();
+            { itemTypeFilters: o, onToggleItemType: i } = (0, p.S)();
         return (0, r.jsx)('div', {
             children: (0, r.jsx)(C, {
-                onChange: () => o(n),
+                onChange: () => i(n),
                 text: null != (t = l[n]) ? t : '',
-                value: i.has(n)
+                value: o.has(n)
             })
         });
     },
@@ -152,24 +152,60 @@ let _ = (e) => {
         return (0, r.jsx)('div', {
             className: b.colorSwatchRow,
             children: t.map((e) => {
-                let { color: t, label: i, enum: a } = e;
+                let { color: t, label: o, enum: i } = e;
                 return (0, r.jsx)(
-                    u.P3F,
+                    v,
                     {
-                        className: o()(b.circle, { [b.circleToggled]: n.has(a) }),
-                        style: { backgroundColor: t },
-                        'aria-label': i,
-                        onClick: () => l(a)
+                        color: t,
+                        label: o,
+                        enum: i,
+                        isToggled: n.has(i),
+                        onToggleColor: l
                     },
-                    t
+                    i
                 );
             })
         });
     },
-    v = () => {
+    v = (e) => {
+        let { color: t, label: n, enum: l, isToggled: o, onToggleColor: a } = e;
+        return (0, r.jsx)(
+            u.ua7,
+            {
+                text: n,
+                children: (e) => {
+                    let { onMouseEnter: s, onMouseLeave: c } = e;
+                    return (0, r.jsx)(
+                        u.P3F,
+                        {
+                            onMouseEnter: s,
+                            onMouseLeave: c,
+                            onFocus: s,
+                            onBlur: c,
+                            className: i()(b.circle, { [b.circleToggled]: o }),
+                            style: { backgroundColor: t },
+                            'aria-label': n,
+                            onClick: () => {
+                                a(l);
+                            },
+                            children:
+                                o &&
+                                (0, r.jsx)('div', {
+                                    className: b.checkIcon,
+                                    children: (0, r.jsx)(u.sV5, { color: u.TVs.colors.WHITE })
+                                })
+                        },
+                        t
+                    );
+                }
+            },
+            n
+        );
+    },
+    S = () => {
         let { themeFilters: e, onToggleTheme: t } = (0, p.S)(),
             n = (0, d.ZP)() === g.BR.DARK,
-            i = l.useCallback(
+            o = l.useCallback(
                 (t) => {
                     if (e.has(t) || n) return 'always-white';
                 },
@@ -288,12 +324,12 @@ let _ = (e) => {
                                 return (0, r.jsxs)(
                                     u.P3F,
                                     {
-                                        className: o()(b.theme, { [b.themeToggled]: e.has(s) }),
+                                        className: i()(b.theme, { [b.themeToggled]: e.has(s) }),
                                         onClick: () => t(s),
                                         children: [
                                             a,
                                             (0, r.jsx)(u.Text, {
-                                                color: i(s),
+                                                color: o(s),
                                                 variant: 'text-xs/medium',
                                                 children: l
                                             })

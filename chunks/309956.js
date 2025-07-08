@@ -1,20 +1,20 @@
 (n.d(t, { B: () => p }), n(388685), n(539854));
 var r = n(73800),
     l = n(114858),
-    i = n(335818),
-    o = n(822857),
+    o = n(335818),
+    i = n(822857),
     a = n(870289),
     s = n(501431),
     c = n(215023),
     u = n(981631);
 let d = {
-        [c.AW.AVATAR_DECORATIONS]: i.G.AVATAR_DECORATION,
-        [c.AW.PROFILE_EFFECTS]: i.G.PROFILE_EFFECT,
-        [c.AW.NAMEPLATES]: i.G.NAMEPLATE,
-        [c.AW.BUNDLES]: i.G.BUNDLE
+        [c.AW.AVATAR_DECORATIONS]: o.G.AVATAR_DECORATION,
+        [c.AW.PROFILE_EFFECTS]: o.G.PROFILE_EFFECT,
+        [c.AW.NAMEPLATES]: o.G.NAMEPLATE,
+        [c.AW.BUNDLES]: o.G.BUNDLE
     },
     p = (e, t, n) => {
-        let { enabled: i } = (0, o.WX)({ location: 'useShopViewTransition' }),
+        let { enabled: o } = (0, i.WX)({ location: 'useShopViewTransition' }),
             p = (0, a.F)('CollectiblesBrowse'),
             { setItemTypeFilter: f, clearItemTypeFilter: g, reset: h } = (0, s.S)();
         r.useEffect(() => {
@@ -23,7 +23,7 @@ let d = {
                 null != e && f(e);
             } else g();
         }, [p, t, f, g]);
-        let b = r.useMemo(() => (t !== c.AW.ORBS || i ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, i, p]),
+        let b = r.useMemo(() => (t !== c.AW.ORBS || o ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, o, p]),
             [m, _] = r.useState(b),
             [C, O] = r.useState(c.f7.VISIBLE);
         r.useEffect(() => {
