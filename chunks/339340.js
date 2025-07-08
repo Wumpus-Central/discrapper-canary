@@ -37,7 +37,7 @@ function R(e) {
         w = (0, s.e7)([_.Z], () => _.Z.getChannelStatus(t)),
         D = (0, s.e7)([y.Z], () => y.Z.getMediaSessionId()),
         [L, x] = i.useState(null != w ? w : ''),
-        [k, M] = i.useState(!1),
+        [M, k] = i.useState(!1),
         [j, U] = i.useState(null),
         G = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         B = L.length > C;
@@ -55,12 +55,12 @@ function R(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = f.Z.validateMessage(n, G, t.id);
-                return (U(e), M(!1), { hasErrors: !0 });
+                return (U(e), k(!1), { hasErrors: !0 });
             }
             return { hasErrors: !1 };
         },
         Z = async (e) => {
-            (L === w && R(), null == e || e.preventDefault(), U(null), M(!0));
+            (L === w && R(), null == e || e.preventDefault(), U(null), k(!0));
             let n = L.length,
                 r = L.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = b.ZP.parse(t, L),
@@ -82,7 +82,7 @@ function R(e) {
                 } catch (e) {
                     V(e);
                 }
-                M(!1);
+                k(!1);
             }
         },
         [H, Y] = i.useState((0, h.JM)(L)),
@@ -90,7 +90,7 @@ function R(e) {
             (x(t), Y(n));
         },
         K = async () => (
-            B || k || (await Z()),
+            B || M || (await Z()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
@@ -141,7 +141,7 @@ function R(e) {
                   },
                   {
                       variant: 'primary',
-                      loading: k,
+                      loading: M,
                       disabled: B,
                       text: T.intl.string(T.t.XqK2Iy),
                       onClick: Z
@@ -200,7 +200,7 @@ function R(e) {
                               }),
                               (0, r.jsx)(u.zxk, {
                                   onClick: Z,
-                                  submitting: k,
+                                  submitting: M,
                                   className: S.button,
                                   disabled: B,
                                   children: T.intl.string(T.t.XqK2Iy)

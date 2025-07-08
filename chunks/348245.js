@@ -123,7 +123,7 @@ function x(e) {
     for (let e in i) i[e] < n && delete i[e];
     return (o.K.set(L, i), !0);
 }
-function k(e) {
+function M(e) {
     var t;
     if (null != r && r.channelId === e) return r;
     let n = (0, a.LX)(location.pathname, {
@@ -135,12 +135,12 @@ function k(e) {
         messageId: null == n || null == (t = n.params) ? void 0 : t.message
     };
 }
-function M() {
+function k() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
     if (null == t) return;
-    let n = k(t.id);
+    let n = M(t.id);
     ((r = void 0),
         w({
             guildId: t.getGuildId(),
@@ -290,10 +290,10 @@ function q(e) {
 }
 class X extends d.Z {
     _initialize() {
-        s.Z.subscribe('CONNECTION_OPEN', M);
+        s.Z.subscribe('CONNECTION_OPEN', k);
     }
     _terminate() {
-        s.Z.unsubscribe('CONNECTION_OPEN', M);
+        s.Z.unsubscribe('CONNECTION_OPEN', k);
     }
     constructor(...e) {
         (super(...e),
@@ -302,7 +302,7 @@ class X extends d.Z {
             R(this, 'stores', new Map().set(E.ZP, F)),
             R(this, 'actions', {
                 APP_STATE_UPDATE: q,
-                OVERLAY_INITIALIZE: M,
+                OVERLAY_INITIALIZE: k,
                 CHANNEL_SELECT: U,
                 VOICE_CHANNEL_SELECT: G,
                 THREAD_CREATE: H,

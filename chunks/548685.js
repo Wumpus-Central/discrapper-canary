@@ -30,7 +30,7 @@ let P = (e) => {
         k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         B = h.ZP.canUseCollectibles(k),
         N = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(o, B),
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, B),
         M = (0, S.St)(w),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -67,7 +67,7 @@ let P = (e) => {
                                       variant: 'heading-lg/semibold',
                                       children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
-                                  F &&
+                                  D &&
                                       (0, r.jsx)(s.ua7, {
                                           text: j.intl.string(j.t['3taPdn']),
                                           position: 'top',
@@ -152,7 +152,7 @@ let P = (e) => {
                                                 onClick: () => {
                                                     (G({
                                                         isShuffling: !0,
-                                                        onOutroComplete: D,
+                                                        onOutroComplete: F,
                                                         returnRef: q
                                                     }),
                                                         g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: Y }));

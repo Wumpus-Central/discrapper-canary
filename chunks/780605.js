@@ -98,7 +98,7 @@ function A(e) {
     let t;
     var n,
         a,
-        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: k = !1, className: M, style: j } = e,
+        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: M = !1, className: k, style: j } = e,
         U = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'loading', 'loadingStartedLabel', 'loadingFinishedLabel', 'rounded', 'className', 'style']);
     let G = (0, m.M)(),
         B = null != (n = null == G ? void 0 : G.size) ? n : E,
@@ -156,7 +156,7 @@ function A(e) {
                                 className: o()(g.button, g[B], g[d], {
                                     [g.hasText]: Z,
                                     [g.fullWidth]: V,
-                                    [g.rounded]: k
+                                    [g.rounded]: M
                                 }),
                                 ref: H
                             },

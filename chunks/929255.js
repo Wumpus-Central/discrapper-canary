@@ -47,7 +47,7 @@ function E(e) {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: O.controlsLeftSide,
-                                        children: (0, r.jsx)(d.Z, { sortedCategories: E })
+                                        children: (0, r.jsx)(d.Z, {})
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: O.controlsRightSide,

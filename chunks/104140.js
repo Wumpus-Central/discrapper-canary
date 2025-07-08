@@ -159,8 +159,8 @@ function v(e) {
         D = ''.concat(R, '-blob_mask'),
         L = ''.concat(R, '-stroke_mask'),
         x = ''.concat(R, '-highlight_mask'),
-        k = (null == f ? void 0 : f.width) != null ? f.width : g,
-        M = (null == f ? void 0 : f.height) != null ? f.height : g,
+        M = (null == f ? void 0 : f.width) != null ? f.width : g,
+        k = (null == f ? void 0 : f.height) != null ? f.height : g,
         j = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
@@ -217,10 +217,10 @@ function v(e) {
                                         ? (0, r.jsx)('rect', {
                                               id: w,
                                               className: u.badgeStroke,
-                                              x: n - (k + 2 * p) + p,
-                                              y: n - (M + 2 * p) + p,
-                                              width: k + 2 * p,
-                                              height: M + 2 * p,
+                                              x: n - (M + 2 * p) + p,
+                                              y: n - (k + 2 * p) + p,
+                                              width: M + 2 * p,
+                                              height: k + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2
                                           })

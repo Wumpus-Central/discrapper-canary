@@ -89,12 +89,12 @@ function L(e, t) {
 function x(e) {
     return e === u.EO.VIDEO;
 }
-function k(e) {
+function M(e) {
     return ((0, g._M)(e) || (0, g.MO)(e)) && (e.pathname.toLowerCase().endsWith('.webp') || e.pathname.toLowerCase().endsWith('.avif'));
 }
-function M(e) {
+function k(e) {
     let t = b.Z.toURLSafe(e);
-    return null != t && k(t) ? (t.searchParams.set('animated', 'true'), t.toString()) : e;
+    return null != t && M(t) ? (t.searchParams.set('animated', 'true'), t.toString()) : e;
 }
 class j extends i.PureComponent {
     componentDidMount() {
@@ -129,7 +129,7 @@ class j extends i.PureComponent {
             { loaded: i } = this.state;
         return i
             ? (0, r.jsx)('img', {
-                  src: M(e),
+                  src: k(e),
                   width: t,
                   height: n,
                   className: I.gif,

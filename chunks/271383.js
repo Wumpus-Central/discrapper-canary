@@ -1,7 +1,7 @@
 (n.d(t, {
     O5: () => K,
     V6: () => W,
-    ZP: () => ek
+    ZP: () => eM
 }),
     n(35282),
     n(388685),
@@ -87,8 +87,8 @@ let R = new f.Z('GuildMemberStore'),
     D = {},
     L = {},
     x = {},
-    k = !1,
-    M = 0,
+    M = !1,
+    k = 0,
     j = 0,
     U = {},
     G = {},
@@ -112,7 +112,7 @@ function F(e, t) {
         }
 }
 function Z(e) {
-    ((M += 1), (U[e] = M));
+    ((k += 1), (U[e] = k));
 }
 function H(e) {
     (W(e) === y.default.getId() && (0, p.l)(K(e)), delete x[e]);
@@ -189,7 +189,7 @@ function q(e) {
     return w;
 }
 function X(e) {
-    (k ? (k = !1) : ((P = {}), (w = {})), (x = {}), J(e));
+    (M ? (M = !1) : ((P = {}), (w = {})), (x = {}), J(e));
 }
 function Q(e) {
     e.guilds.forEach((e) => {
@@ -216,7 +216,7 @@ function $(e) {
 }
 function ee(e) {
     let { guildMembers: t, guilds: n } = e;
-    ((k = !0), (P = A({}, t)), (w = {}), (L = {}), en(n));
+    ((M = !0), (P = A({}, t)), (w = {}), (L = {}), en(n));
 }
 function et(e) {
     let { guilds: t } = e;
@@ -232,9 +232,9 @@ function en(e) {
 function er(e) {
     var t, n;
     if (null == e.guildId || null == I.Z.getGuild(e.guildId)) return !1;
-    ((k = !0), (P[e.guildId] = null != (t = P[e.guildId]) ? t : {}));
+    ((M = !0), (P[e.guildId] = null != (t = P[e.guildId]) ? t : {}));
     let r = !1;
-    for (let t of ((k = !0), (P[e.guildId] = null != (n = P[e.guildId]) ? n : {}), e.members)) null == P[e.guildId][t.userId] && ((r = !0), (P[e.guildId][t.userId] = t));
+    for (let t of ((M = !0), (P[e.guildId] = null != (n = P[e.guildId]) ? n : {}), e.members)) null == P[e.guildId][t.userId] && ((r = !0), (P[e.guildId][t.userId] = t));
     return r;
 }
 function ei(e) {
@@ -682,7 +682,7 @@ class ex extends (r = s.ZP.Store) {
         return x;
     }
     getCommunicationDisabledVersion() {
-        return M;
+        return k;
     }
     getPendingRoleUpdates(e) {
         var t;
@@ -699,7 +699,7 @@ class ex extends (r = s.ZP.Store) {
     }
 }
 S(ex, 'displayName', 'GuildMemberStore');
-let ek = new ex(l.Z, {
+let eM = new ex(l.Z, {
     CONNECTION_OPEN: X,
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
     OVERLAY_INITIALIZE: $,

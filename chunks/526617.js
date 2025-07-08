@@ -38,8 +38,8 @@ var r = n(255367),
     D = n(74538),
     L = n(388081),
     x = n(763296),
-    k = n(697426),
-    M = n(242291),
+    M = n(697426),
+    k = n(242291),
     j = n(22382),
     U = n(747071),
     G = n(421673),
@@ -113,27 +113,27 @@ let $ = 16,
     ea = 150,
     eo = '3',
     es = {
-        [k.bg.SEARCH]: _.Z.SOUNDBOARD_SEARCH_RESULTS_SECTION,
-        [k.bg.DEFAULTS]: _.Z.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
-        [k.bg.GUILD]: _.Z.SOUNDBOARD_GUILD_SOUNDS_SECTION,
-        [k.bg.FAVORITES]: _.Z.SOUNDBOARD_FAVORITES_SECTION,
-        [k.bg.RECENTLY_HEARD]: _.Z.SOUNDBOARD_RECENTLY_HEARD_SECTION,
-        [k.bg.FREQUENTLY_USED]: _.Z.SOUNDBOARD_FREQUENTLY_USED_SECTION
+        [M.bg.SEARCH]: _.Z.SOUNDBOARD_SEARCH_RESULTS_SECTION,
+        [M.bg.DEFAULTS]: _.Z.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
+        [M.bg.GUILD]: _.Z.SOUNDBOARD_GUILD_SOUNDS_SECTION,
+        [M.bg.FAVORITES]: _.Z.SOUNDBOARD_FAVORITES_SECTION,
+        [M.bg.RECENTLY_HEARD]: _.Z.SOUNDBOARD_RECENTLY_HEARD_SECTION,
+        [M.bg.FREQUENTLY_USED]: _.Z.SOUNDBOARD_FREQUENTLY_USED_SECTION
     };
 function el(e, t, n) {
-    return (null == n && e.type === k.bg.GUILD && !t) || (e.type === k.bg.GUILD && e.guild.id !== n && !t);
+    return (null == n && e.type === M.bg.GUILD && !t) || (e.type === M.bg.GUILD && e.guild.id !== n && !t);
 }
 function ec(e) {
     let { categoryInfo: t, collapsed: n, toggleCollapsed: i, index: a, isSectionNitroLocked: s, showNitroDivider: l } = e;
     function u() {
         switch (t.type) {
-            case k.bg.FAVORITES:
+            case M.bg.FAVORITES:
                 return (0, r.jsx)(c.r7p, {
                     size: 'xs',
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case k.bg.RECENTLY_HEARD:
+            case M.bg.RECENTLY_HEARD:
                 return (0, r.jsx)(c.T39, {
                     size: 'custom',
                     width: 20,
@@ -141,15 +141,15 @@ function ec(e) {
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case k.bg.FREQUENTLY_USED:
+            case M.bg.FREQUENTLY_USED:
                 return (0, r.jsx)(c.IeX, { className: z.headerIcon });
-            case k.bg.GUILD:
+            case M.bg.GUILD:
                 return (0, r.jsx)(g.Z, {
                     guild: t.guild,
                     height: $,
                     width: $
                 });
-            case k.bg.DEFAULTS:
+            case M.bg.DEFAULTS:
                 return (0, r.jsx)(c.gw7, {
                     size: 'custom',
                     width: 28,
@@ -157,7 +157,7 @@ function ec(e) {
                     color: 'currentColor',
                     className: z.headerIcon
                 });
-            case k.bg.SEARCH:
+            case M.bg.SEARCH:
                 return (0, r.jsx)(c._Ve, {
                     size: 'md',
                     color: 'currentColor',
@@ -167,17 +167,17 @@ function ec(e) {
     }
     function d() {
         switch (t.type) {
-            case k.bg.FAVORITES:
+            case M.bg.FAVORITES:
                 return K.intl.string(K.t.k8fFjo);
-            case k.bg.RECENTLY_HEARD:
+            case M.bg.RECENTLY_HEARD:
                 return K.intl.string(K.t['8i/+SE']);
-            case k.bg.FREQUENTLY_USED:
+            case M.bg.FREQUENTLY_USED:
                 return K.intl.string(K.t['+cGVV1']);
-            case k.bg.GUILD:
+            case M.bg.GUILD:
                 return t.guild.name;
-            case k.bg.DEFAULTS:
+            case M.bg.DEFAULTS:
                 return K.intl.string(K.t.Rtvk9f);
-            case k.bg.SEARCH:
+            case M.bg.SEARCH:
                 return K.intl.string(K.t.zkoeq6);
         }
     }
@@ -238,9 +238,9 @@ function ed(e) {
         eP = (0, m.Dt)(),
         ew = L.C.useExperiment({ location: 'SoundboardSoundGrid' }),
         { categories: eD, allSounds: eL, soundCounts: ex } = (0, B.ZP)(a, {}, ep),
-        [ek, eM] = i.useState([]),
+        [eM, ek] = i.useState([]),
         [ej, eU] = i.useState(!1),
-        eG = (0, B.FS)(eD, ek, eC),
+        eG = (0, B.FS)(eD, eM, eC),
         eB = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         eV = eG.filter((e) => e.items.length > 0),
         eF = eV.findLastIndex((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
@@ -258,11 +258,11 @@ function ed(e) {
         eq = i.useCallback(
             (e, t, n) => {
                 if (null != I && !P) return I(e, n);
-                let r = (0, M.Nq)(eT, e, a, !1);
+                let r = (0, k.Nq)(eT, e, a, !1);
                 if (null != I && P && r) I(e, n);
-                else if (!q && r && (0, M.C0)(a)) {
+                else if (!q && r && (0, k.C0)(a)) {
                     var i;
-                    ((0, M.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
+                    ((0, k.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
                         eR &&
                             w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
@@ -271,7 +271,7 @@ function ed(e) {
                                 location_stack: t
                             }));
                 } else {
-                    if ((0, M.Nq)(eT, e, a)) return;
+                    if ((0, k.Nq)(eT, e, a)) return;
                     Q && eI(e);
                 }
             },
@@ -280,11 +280,11 @@ function ed(e) {
         eX = i.useCallback(
             (e, t) => {
                 switch (e.item.type) {
-                    case k.vB.SOUND:
+                    case M.vB.SOUND:
                         var n;
                         let r = null != (n = es[null == e ? void 0 : e.category]) ? n : null;
                         return eq(e.item.sound, null == r ? eE : [...eE, r], (null == t ? void 0 : t.shiftKey) !== !0);
-                    case k.vB.ADD_SOUND:
+                    case M.vB.ADD_SOUND:
                         return (g(), (0, H.Z)(e.item.guild.id));
                 }
             },
@@ -392,7 +392,7 @@ function ed(e) {
             },
             [eF, eZ, eV.length]
         ),
-        e5 = i.useCallback((e) => eM((0, G.cK)(e, Array.from(eL.values()).flat(), eT, a, eE)), [a, eT, eL, eE]),
+        e5 = i.useCallback((e) => ek((0, G.cK)(e, Array.from(eL.values()).flat(), eT, a, eE)), [a, eT, eL, eE]),
         e6 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
@@ -456,7 +456,7 @@ function ed(e) {
         te = i.useCallback(
             (e) => {
                 var t;
-                return (null == e ? void 0 : e.item.type) !== k.vB.SOUND
+                return (null == e ? void 0 : e.item.type) !== M.vB.SOUND
                     ? null
                     : (0, r.jsx)(F.Z, {
                           closePicker: g,
@@ -518,7 +518,7 @@ function ed(e) {
                     store: E.Wq,
                     onSelectItem: eX,
                     onSearchExpressions: e5,
-                    hasSearchResults: ek.length > 0,
+                    hasSearchResults: eM.length > 0,
                     defaultSearchPlaceholder: K.intl.string(K.t.sKt3xc),
                     renderRow: eQ,
                     renderSectionHeader: e3,

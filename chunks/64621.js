@@ -40,8 +40,8 @@ function S(e) {
     (0, l.Z)(() => L(!0), w() ? v : null);
     let {
             asset: x,
-            assetClassName: k,
-            className: M,
+            assetClassName: M,
+            className: k,
             content: j,
             header: U,
             spacing: G,
@@ -81,11 +81,11 @@ function S(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(d.ZP, {
-                    className: M,
+                    className: k,
                     asset: (0, r.jsx)('img', {
                         alt: '',
                         src: x,
-                        className: k
+                        className: M
                     }),
                     buttonCTA: E.intl.string(E.t['+IrDzM']),
                     buttonLayout: d._F.STACKED,

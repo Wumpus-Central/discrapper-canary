@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(953529));
+(n.d(t, { Z: () => k }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -99,10 +99,10 @@ function x(e) {
                     guild: e
                 });
         }, [t, l]),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (a(), (0, I.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
-        M = {
+        k = {
             tension: 400,
             friction: 30
         },
@@ -110,16 +110,16 @@ function x(e) {
             transform: D ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
-            config: M
+            config: k
         }),
         U = (0, u.q_F)({
             y: D ? -25 : 0,
-            config: M
+            config: k
         }),
         G = (0, u.q_F)({
             opacity: +!!D,
             transform: D ? 'translateY(0)' : 'translateY(20px)',
-            config: M
+            config: k
         }),
         B = i.useCallback((e) => {
             e && b(!0);
@@ -168,7 +168,7 @@ function x(e) {
                             g &&
                                 (0, r.jsx)(u.zxk, {
                                     grow: !0,
-                                    onClick: k,
+                                    onClick: M,
                                     color: u.zxk.Colors.PRIMARY,
                                     className: R.button,
                                     children: N.intl.string(N.t.GoCQxc)
@@ -185,7 +185,7 @@ function x(e) {
         ]
     });
 }
-let k = i.forwardRef((e, t) => {
+let M = i.forwardRef((e, t) => {
     var n, a;
     let { guild: o, onClose: s } = e;
     i.useEffect(() => {
@@ -224,5 +224,5 @@ let k = i.forwardRef((e, t) => {
               ]
           });
 });
-k.displayName = 'GuildPowerupsMarketingPowerupCards';
-let M = k;
+M.displayName = 'GuildPowerupsMarketingPowerupCards';
+let k = M;

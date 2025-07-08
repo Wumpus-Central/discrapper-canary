@@ -4,13 +4,13 @@
     DZ: () => C,
     PS: () => P,
     T6: () => S,
-    Z1: () => k,
+    Z1: () => M,
     aj: () => R,
     bE: () => j,
     fy: () => E.fy,
     hW: () => N,
     nm: () => D,
-    sr: () => M,
+    sr: () => k,
     w9: () => x
 }),
     n(415506),
@@ -344,14 +344,14 @@ function x(e) {
         E.fy.INFREQUENT_USER_ACTION
     );
 }
-function k(e) {
+function M(e) {
     return L(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: '0',
         lastDismissedObjectId: '0'
     });
 }
-function M() {
+function k() {
     return N.updateAsync(
         'userContent',
         (e) => {

@@ -105,15 +105,15 @@ function P(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = T(e, ['guilds', 'merged_members', 'merged_presences']);
-    let s = k(R, null == a ? void 0 : a.friends),
+    let s = M(R, null == a ? void 0 : a.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = k(R, null == a ? void 0 : a.guilds[t]),
-                              r = k(R, null == i ? void 0 : i[t]);
+                          let n = M(R, null == a ? void 0 : a.guilds[t]),
+                              r = M(R, null == i ? void 0 : i[t]);
                           return I(O({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -156,13 +156,13 @@ function D(e, t, n) {
         { users: a, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = T(e, ['users', 'relationships', 'private_channels', 'merged_members', 'guilds']);
     j(n);
-    let f = k((R = o().keyBy(a, (e) => e.id)), s);
+    let f = M((R = o().keyBy(a, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
             (null != t && (e.recipients = t.map((e) => (i()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids);
         });
-    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = k(R, null == c ? void 0 : c[t])), G(e))))) ? r : [],
+    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = M(R, null == c ? void 0 : c[t])), G(e))))) ? r : [],
         p = L(t, u, (e) => G(e));
     return (
         null != p && _.push(p),
@@ -200,7 +200,7 @@ function x(e, t) {
         o
     );
 }
-function k(e, t) {
+function M(e, t) {
     let n = [];
     return (
         null == t ||
@@ -212,7 +212,7 @@ function k(e, t) {
         n
     );
 }
-function M(e) {
+function k(e) {
     let t = N[e];
     return (delete N[e], t);
 }
@@ -250,7 +250,7 @@ function U(e, t, n) {
 }
 function G(e) {
     var t, n, r, i, a, o, s, l;
-    let c = M(e.id);
+    let c = k(e.id);
     if ('partial' !== e.data_mode)
         return {
             id: e.id,
@@ -311,7 +311,7 @@ function G(e) {
 }
 function B(e, t) {
     var n, r, i, a, o, s, l, c;
-    if ((null == t && (t = M(e.id)), 'partial' !== e.data_mode))
+    if ((null == t && (t = k(e.id)), 'partial' !== e.data_mode))
         return {
             id: e.id,
             guild_scheduled_events: e.guild_scheduled_events,

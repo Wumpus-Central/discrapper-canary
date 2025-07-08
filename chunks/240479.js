@@ -70,10 +70,10 @@ function A(e) {
                 }));
     }, [g, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),
-        k = L === b.y.JOIN_GUILD,
-        M = !y && w,
+        M = L === b.y.JOIN_GUILD,
+        k = !y && w,
         j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(O) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [O, A, N]);
-    return M
+    return k
         ? (0, r.jsx)(f.SE, {})
         : (0, r.jsxs)('div', {
               className: T.infoContainer,
@@ -111,7 +111,7 @@ function A(e) {
                                           children: (0, r.jsx)(d.Oe, {
                                               expressionSourceGuild: j,
                                               hasJoinedExpressionSourceGuild: A,
-                                              isDisplayingJoinGuildButtonInPopout: k
+                                              isDisplayingJoinGuildButtonInPopout: M
                                           })
                                       }),
                                       (0, r.jsx)(S, {

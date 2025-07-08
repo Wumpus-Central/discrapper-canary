@@ -1,13 +1,13 @@
 n.d(t, {
     AT: () => g,
-    fC: () => S,
+    fC: () => y,
     gr: () => m,
     hQ: () => f
 });
 var r,
-    s = n(73800),
-    l = n(913527),
-    a = n.n(l),
+    l = n(73800),
+    s = n(913527),
+    a = n.n(s),
     i = n(442837),
     o = n(493683),
     c = n(336197),
@@ -23,11 +23,11 @@ function g(e) {
             string: '',
             isOverdue: !1
         };
-    let s = 0 === r ? p.t.TjNWND : p.t.H4gnX1,
-        l = 0 === r ? p.t.haia19 : p.t['Uq7Y+/'],
+    let l = 0 === r ? p.t.TjNWND : p.t.H4gnX1,
+        s = 0 === r ? p.t.haia19 : p.t['Uq7Y+/'],
         i = n > t;
     return {
-        dueInText: p.intl.formatToPlainString(i ? l : s, {
+        dueInText: p.intl.formatToPlainString(i ? s : l, {
             duration: a()
                 .duration(t.getTime() - n.getTime(), 'millisecond')
                 .humanize()
@@ -37,7 +37,7 @@ function g(e) {
 }
 function m(e) {
     let t = (0, i.e7)([d.Z], () => d.Z.getChannel(e.saveData.channelId));
-    return s.useMemo(
+    return l.useMemo(
         () =>
             null != t
                 ? t
@@ -52,7 +52,7 @@ function m(e) {
         [t, e]
     );
 }
-async function S(e, t) {
+async function y(e, t) {
     if ((null == t ? void 0 : t.type) === h.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
             let t = await o.Z.fetchChannel(e.saveData.channelId);

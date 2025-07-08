@@ -83,11 +83,11 @@ function O(e, t, n) {
             }),
             [A, N, w]
         ),
-        { activeCommand: x, activeCommandOption: k } = (0, a.cj)([s.Z], () => ({
+        { activeCommand: x, activeCommandOption: M } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(A.id),
             activeCommandOption: s.Z.getActiveOption(A.id)
         })),
-        M = (0, p.Z)({
+        k = (0, p.Z)({
             navId: 'channel-autocomplete',
             scrollerRef: n,
             state: C,
@@ -95,9 +95,9 @@ function O(e, t, n) {
         }),
         j = null == (g = e.editorRef.current) ? void 0 : g.getCurrentWord(),
         U = y(E({}, e), {
-            navigator: M,
+            navigator: k,
             activeCommand: x,
-            activeCommandOption: k,
+            activeCommandOption: M,
             canMentionUsers: null != (I = null == (b = N.users) ? void 0 : b.allowMentioning) && I,
             canMentionEveryone: D,
             hidePersonalInformation: L,
@@ -105,7 +105,7 @@ function O(e, t, n) {
             emojiIntention: N === l.Ie.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
             currentWord: null != (T = null == j ? void 0 : j.word) ? T : '',
             currentWordIsAtStart: (null == j ? void 0 : j.isAtStart) === !0,
-            optionText: null != k ? (0, o.KF)({ [k.name]: null != (S = null == (O = e.editorRef.current) ? void 0 : O.getCurrentCommandOptionValue()) ? S : [] }, k.name) : ''
+            optionText: null != M ? (0, o.KF)({ [M.name]: null != (S = null == (O = e.editorRef.current) ? void 0 : O.getCurrentCommandOptionValue()) ? S : [] }, M.name) : ''
         }),
         [G] = r.useState(() => new _.Z(U));
     return (
@@ -134,6 +134,6 @@ function O(e, t, n) {
                 };
             }
         }, [G, null == (v = C.query) ? void 0 : v.typeInfo]),
-        [C, G, M]
+        [C, G, k]
     );
 }

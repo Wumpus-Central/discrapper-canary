@@ -1,6 +1,6 @@
 (n.d(t, {
     Q8: () => x,
-    ZP: () => M
+    ZP: () => k
 }),
     n(388685),
     n(539854));
@@ -134,7 +134,7 @@ function x(e) {
         }
     );
 }
-class k extends i.PureComponent {
+class M extends i.PureComponent {
     componentDidMount() {
         var e;
         ((0, c.GE)(),
@@ -280,8 +280,8 @@ class k extends i.PureComponent {
             }));
     }
 }
-let M = s.ZP.connectStores([m.Z], () => ({
+let k = s.ZP.connectStores([m.Z], () => ({
     ipCountryCode: m.Z.ipCountryCode,
     ipCountryCodeHasError: m.Z.ipCountryCodeHasError,
     localizedPromo: m.Z.localizedPricingPromo
-}))(k);
+}))(M);

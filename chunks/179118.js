@@ -34,7 +34,7 @@ function x(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: E, isSendingMessage: b } = e,
         [O, I] = i.useState(u.kO8.Modes.DEFAULT),
         x = (0, c.e7)([v.Z], () => v.Z.enabled),
-        M = f || (null != l && null != h),
+        k = f || (null != l && null != h),
         j = (null == a ? void 0 : a.productLine) === R.POd.COLLECTIBLES,
         U = (0, g.Z)(),
         { selectedGiftingPromotionReward: G } = (0, C.wD)(),
@@ -48,7 +48,7 @@ function x(e) {
                 ? w.intl.string(w.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === P.rV.MONTH ? (M ? (F ? B.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : M ? (F ? B.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
+                  : ((e = s.interval === P.rV.MONTH ? (k ? (F ? B.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : k ? (F ? B.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
                     w.intl.format(e, {
                         skuName: (0, A.aq)(s.id),
                         intervalCount: s.intervalCount
@@ -117,7 +117,7 @@ function x(e) {
                         children: H()
                     }),
                     null == E &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             giftCode: t,
                             onClose: d
                         }),
@@ -182,11 +182,11 @@ function x(e) {
                       }),
                       children: Y()
                   }),
-                  (f && null != h && null == E) || M ? q() : z()
+                  (f && null != h && null == E) || k ? q() : z()
               ]
           });
 }
-let k = (e) => {
+let M = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         (f.Z.fetchRelationships(), (0, E._)());

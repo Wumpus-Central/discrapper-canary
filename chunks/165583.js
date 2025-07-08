@@ -46,7 +46,7 @@ function x(e) {
     let r = t.diff(u()(), 'minutes');
     return w.intl.formatToPlainString(w.t['XtQ+Ag'], { numMinutes: r });
 }
-function k(e) {
+function M(e) {
     var t, n, i;
     let { className: a, children: s, withBottomMargin: l, discountOffer: c, trialOffer: u } = e,
         d = null != (t = null == u ? void 0 : u.expires_at) ? t : null == c ? void 0 : c.expires_at,
@@ -89,7 +89,7 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     var t, n;
     let { className: a, onClose: o, subscriptionTier: s, analyticsLocationObject: l, trialOffer: c, discountOffer: u } = e,
         [d, f] = i.useState(!1),
@@ -145,7 +145,7 @@ function U(e) {
                 className: D.cancelButton,
                 children: w.intl.string(w.t.cpT0Cg)
             }),
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 className: D.subscribeButton,
                 subscriptionTier: t,
                 analyticsLocationObject: i,
@@ -172,7 +172,7 @@ function G(e) {
                 color: 'text-default',
                 children: w.intl.format(w.t['fF+cgY'], { onClick: () => (0, S.z)() })
             }),
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 trialOffer: i,
                 className: D.subscribeButtonWide,
                 subscriptionTier: R.Si.TIER_2,
@@ -202,7 +202,7 @@ function B(e) {
                     variant: 'text-md/normal',
                     children: n
                 }),
-            (0, r.jsx)(k, {
+            (0, r.jsx)(M, {
                 trialOffer: a,
                 discountOffer: o,
                 children: i
@@ -240,7 +240,7 @@ function V(e) {
                                 color: 'header-primary',
                                 children: w.intl.string(w.t.HEm04O)
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 trialOffer: y,
                                 discountOffer: S,
                                 children: w.intl.format(w.t['2HoFKC'], {
@@ -280,7 +280,7 @@ function V(e) {
                                     color: 'header-primary',
                                     children: w.intl.string(w.t.jJG1pq)
                                 }),
-                                (0, r.jsx)(k, {
+                                (0, r.jsx)(M, {
                                     trialOffer: y,
                                     discountOffer: S,
                                     children: w.intl.format(w.t['2HoFKC'], {
@@ -321,7 +321,7 @@ function V(e) {
                                 color: 'header-primary',
                                 children: w.intl.string(w.t['1SsvhY'])
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 trialOffer: y,
                                 discountOffer: S,
                                 children: w.intl.format(w.t.md4nPz, {
@@ -395,7 +395,7 @@ function V(e) {
                             variant: 'text-md/normal',
                             children: i
                         }),
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             trialOffer: y,
                             discountOffer: S,
                             children: j
@@ -416,7 +416,7 @@ function V(e) {
                         variant: 'text-md/normal',
                         children: i
                     }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(M, {
                         trialOffer: y,
                         discountOffer: S,
                         children: w.intl.format(w.t.poib9P, {
@@ -424,7 +424,7 @@ function V(e) {
                             onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                         })
                     }),
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(k, {
                         className: D.upsellButton,
                         subscriptionTier: u,
                         analyticsLocationObject: b,
@@ -437,7 +437,7 @@ function V(e) {
         case R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
                 l()(null != a, 'You must specify children for this upsell type'),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(M, {
                     trialOffer: y,
                     discountOffer: S,
                     children: w.intl.format(w.t['5KMAnJ'], {
@@ -463,7 +463,7 @@ function V(e) {
                         children: w.intl.string(w.t.ZvHg3N)
                     }),
                     (0, r.jsx)('div', { className: D.divider }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(M, {
                         trialOffer: y,
                         discountOffer: S,
                         className: D.messageLengthBrandedContainer,
@@ -475,7 +475,7 @@ function V(e) {
                             }
                         })
                     }),
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(k, {
                         subscriptionTier: u,
                         analyticsLocationObject: b,
                         onClose: s,

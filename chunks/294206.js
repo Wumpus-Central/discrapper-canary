@@ -73,7 +73,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,7 +84,7 @@ function k(e, t) {
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -117,7 +117,7 @@ function Z(e) {
         children: (e) =>
             (0, r.jsx)(
                 d.P3F,
-                k(L({}, e), {
+                M(L({}, e), {
                     innerRef: l,
                     'aria-label': i,
                     className: o()(w.secondaryButton, { [w.buttonDisabled]: t }),
@@ -159,7 +159,7 @@ function Y(e) {
                         ? (0, O.hs)(t.soundId)
                         : ((0, T.lF)({
                               sound: t,
-                              location: k(L({}, a), { object: N.qAy.SOUNDBOARD_SOUND })
+                              location: M(L({}, a), { object: N.qAy.SOUNDBOARD_SOUND })
                           }),
                           (0, O.TB)(t.soundId)));
             },
@@ -207,7 +207,7 @@ let K = i.forwardRef(function (e, t) {
         O,
         v,
         { sound: N, channel: D, containerClassName: x, className: j, focused: Z, forceSecondaryActions: K = !1, interactive: z = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = I.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
-        eu = M(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
+        eu = k(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
     let { name: ed, emojiId: ef, emojiName: e_ } = N,
         ep = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
         eh = (0, A.z)(N, null == D ? void 0 : D.guild_id),
@@ -227,13 +227,13 @@ let K = i.forwardRef(function (e, t) {
         ew = null != (O = m.Wq.useStore().bottomPosition) ? O : 0,
         eD = (null != (v = null == (a = ey.current) ? void 0 : a.getBoundingClientRect().bottom) ? v : 0) + 50 > ew ? 'top' : 'bottom',
         [eL, ex] = i.useState(!1),
-        ek = eR && et;
-    function eM() {
+        eM = eR && et;
+    function ek() {
         X || em($);
     }
     function ej(e) {
         if ((eS && !ev && ((eI.current = Math.min(eI.current + V, B)), Math.random() < eI.current && eb(eO.x, eO.y, void 0, void 0, { sprite: C.vv })), null != J)) return void J(e);
-        eM();
+        ek();
     }
     let eU = H({
             sound: N,
@@ -242,7 +242,7 @@ let K = i.forwardRef(function (e, t) {
         }),
         eG = (e) =>
             X || eR
-                ? ek
+                ? eM
                     ? (0, r.jsx)(d.mBM, {
                           size: 'xs',
                           color: 'currentColor',
@@ -259,7 +259,7 @@ let K = i.forwardRef(function (e, t) {
             disabled: !z && !K
         }),
         eV = () =>
-            ek && !en
+            eM && !en
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: w.buttonOverlayBackground }),
@@ -358,10 +358,10 @@ let K = i.forwardRef(function (e, t) {
                 children: (e) =>
                     (0, r.jsxs)(
                         d.kL8,
-                        k(
+                        M(
                             L(
-                                k(L({}, eu), {
-                                    buttonProps: k(L({}, eN), {
+                                M(L({}, eu), {
+                                    buttonProps: M(L({}, eN), {
                                         id: eA,
                                         role: 'button'
                                     }),

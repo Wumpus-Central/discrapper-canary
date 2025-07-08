@@ -36,7 +36,7 @@ let d = {
             transitionState: C,
             transitionToTab: r.useCallback(
                 async (t, r) => {
-                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? g(d[t]) : f(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
+                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? (h(), g(d[t])) : f(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
                 },
                 [v, n, e, p, g, f, h]
             )

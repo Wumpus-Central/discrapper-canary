@@ -148,14 +148,14 @@ function R(e) {
                 ((t[v] = e.hex), s(t));
             }
         },
-        k = async () => {
+        M = async () => {
             if (null != y)
                 try {
                     let { sRGBHex: e } = await y.open();
                     ((0, m.J4)(), D(e));
                 } catch (e) {}
         },
-        M = () => {
+        k = () => {
             if (o.length === S) return;
             (0 === o.length && (0, h.ft)(), (0, m.gG)());
             let e = o.length > 0 ? o[o.length - 1] : R,
@@ -194,7 +194,7 @@ function R(e) {
                                     size: f.zxk.Sizes.ICON,
                                     look: f.zxk.Looks.BLANK,
                                     disabled: o.length === S,
-                                    onClick: M,
+                                    onClick: k,
                                     children: (0, r.jsx)(f.Text, {
                                         variant: 'text-sm/medium',
                                         className: b.addColorButtonText,
@@ -249,7 +249,7 @@ function R(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: M,
                                                     className: b.iconButton,
                                                     children: (0, r.jsx)(u.i, {
                                                         size: 'xs',

@@ -81,7 +81,7 @@ function T(e) {
         null != t && t.type !== g.fO.ACTIVITY && l.Z.selectParticipant(o, t.id);
     }
     function T(e) {
-        if (e.pipWindow.component === m.NYg.EMBED_IFRAME && null != b) {
+        if (e.pipWindow.component === m.NYg.ACTIVITY && null != b) {
             var t;
             let e = null == (t = d.Z.getApplication(b.applicationId)) ? void 0 : t.name;
             return null == e ? E.intl.string(E.t['8raC1N']) : E.intl.formatToPlainString(E.t['a9+V+f'], { activityName: e });
@@ -134,12 +134,12 @@ function T(e) {
 let S = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
-        c = Array.from((0, a.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.EMBED_IFRAME),
+        c = Array.from((0, a.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.ACTIVITY),
         u = (0, a.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
             return e.ownerId !== (null == (n = h.default.getCurrentUser()) ? void 0 : n.id) && e.channelId === t;
         }),
-        d = (1 === c.length && c[0].component === m.NYg.EMBED_IFRAME) || 0 === u.length,
+        d = (1 === c.length && c[0].component === m.NYg.ACTIVITY) || 0 === u.length,
         f = 1 === c.length && u.length <= 1;
     return d || f
         ? null

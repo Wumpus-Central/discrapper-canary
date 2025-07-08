@@ -31,7 +31,7 @@ var r = n(255367),
     D = n(671147),
     L = n(388032),
     x = n(882903);
-function k(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             }));
     }
     return e;
@@ -128,7 +128,7 @@ function V() {
                 children: (e) =>
                     (0, r.jsx)(
                         c.SrA,
-                        M(
+                        k(
                             {
                                 size: 'custom',
                                 height: 20,
@@ -247,7 +247,7 @@ function W(e) {
         children: (e) =>
             (0, r.jsxs)(
                 c.zxk,
-                U(M({}, e), {
+                U(k({}, e), {
                     className: x.surpriseMeButton,
                     innerClassName: x.surpriseMeButtonContent,
                     look: c.zxk.Looks.FILLED,
@@ -267,7 +267,7 @@ function K(e) {
         children: (e) =>
             (0, r.jsx)(
                 c.zxk,
-                U(M({}, e), {
+                U(k({}, e), {
                     className: i,
                     size: c.zxk.Sizes.NONE,
                     onClick: t,
@@ -356,8 +356,8 @@ function X(e) {
         d = S.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         g = (0, T.jJ)(),
         E = i.useRef(!1),
-        { colors: b, chassisMixAmount: I, gradientAngle: R, setColors: w, setChassisMixAmount: D, setGradientAngle: k } = (0, v.Ig)(),
-        [M, j] = i.useState(null != (t = b[0]) ? t : v.Dp),
+        { colors: b, chassisMixAmount: I, gradientAngle: R, setColors: w, setChassisMixAmount: D, setGradientAngle: M } = (0, v.Ig)(),
+        [k, j] = i.useState(null != (t = b[0]) ? t : v.Dp),
         U = (0, s.e7)([O.Z], () => O.Z.theme),
         G = (0, m.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: B } = (0, p.ZP)(_.Z.CUSTOM_THEMES_EDITOR),
@@ -389,7 +389,7 @@ function X(e) {
         [g]
     ),
     (0, f.ZP)(() => {
-        o || (0, T.lT)(b, M, w);
+        o || (0, T.lT)(b, k, w);
     }),
     d)
         ? (0, r.jsx)('div', {
@@ -411,19 +411,19 @@ function X(e) {
                                       onChange: (e) => {
                                           (j(e), 0 === b.length && (0, T.lT)(b, e, w));
                                       },
-                                      value: M,
+                                      value: k,
                                       colors: b,
                                       setColors: w
                                   }),
                                   b.length > 1 &&
                                       (0, r.jsx)(H, {
                                           gradientAngle: R,
-                                          setGradientAngle: k
+                                          setGradientAngle: M
                                       }),
                                   (0, r.jsx)(Y, {
                                       chassisMixAmount: I,
                                       setChassisMixAmount: (e) => {
-                                          (D(e), 0 === b.length && (0, T.lT)(b, M, w));
+                                          (D(e), 0 === b.length && (0, T.lT)(b, k, w));
                                       }
                                   }),
                                   (0, r.jsxs)(c.zxk, {

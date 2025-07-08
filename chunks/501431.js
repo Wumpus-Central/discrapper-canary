@@ -1,6 +1,6 @@
 (n.d(t, {
-    A: () => m,
-    S: () => f
+    A: () => C,
+    S: () => b
 }),
     n(388685),
     n(642613),
@@ -71,9 +71,18 @@ let g = {
         searchQuery: '',
         queryPageSize: 20,
         queryPageOffset: 0,
-        isFetchingResults: !1
+        isFetchingResults: !1,
+        fullScreenOpen: !1
     },
-    f = (0, l.U)(
+    f = {
+        sortType: a.E.RELEVANCE,
+        sortDirection: i.F.DESC
+    },
+    h = {
+        sortType: a.E.RECENCY,
+        sortDirection: i.F.DESC
+    },
+    b = (0, l.U)(
         (0, o.XR)((e, t) =>
             d(u({}, g), {
                 hasFilters: () => {
@@ -81,16 +90,28 @@ let g = {
                     return [e, n, r].some((e) => e.size > 0) || l || o.sortType !== a.E.RECENCY || o.sortDirection !== i.F.DESC || '' !== s;
                 },
                 onToggleItemType: (t) => {
-                    e((e) => ({ itemTypeFilters: p(e.itemTypeFilters, t) }));
+                    e((e) => ({
+                        itemTypeFilters: p(e.itemTypeFilters, t),
+                        sort: h
+                    }));
                 },
                 onToggleColor: (t) => {
-                    e((e) => ({ colorFilters: p(e.colorFilters, t) }));
+                    e((e) => ({
+                        colorFilters: p(e.colorFilters, t),
+                        sort: f
+                    }));
                 },
                 onToggleTheme: (t) => {
-                    e((e) => ({ themeFilters: p(e.themeFilters, t) }));
+                    e((e) => ({
+                        themeFilters: p(e.themeFilters, t),
+                        sort: f
+                    }));
                 },
                 onToggleOrbEligible: () => {
-                    e((e) => ({ orbEligible: !e.orbEligible }));
+                    e((e) => ({
+                        orbEligible: !e.orbEligible,
+                        sort: h
+                    }));
                 },
                 onSetSort: (t) => {
                     e({ sort: t });
@@ -100,23 +121,10 @@ let g = {
                 },
                 onSetSearchQuery: (t) => {
                     e((e) =>
-                        '' === e.searchQuery && '' !== t
-                            ? d(u({}, e, g), {
-                                  searchQuery: t,
-                                  sort: {
-                                      sortType: a.E.RELEVANCE,
-                                      sortDirection: i.F.DESC
-                                  }
-                              })
-                            : '' !== e.searchQuery && '' === t
-                              ? d(u({}, e), {
-                                    searchQuery: t,
-                                    sort: {
-                                        sortType: a.E.RECENCY,
-                                        sortDirection: i.F.DESC
-                                    }
-                                })
-                              : d(u({}, e), { searchQuery: t })
+                        d(u({}, e), {
+                            searchQuery: t,
+                            sort: f
+                        })
                     );
                 },
                 setQueryPageSize: (t) => {
@@ -140,11 +148,14 @@ let g = {
                 },
                 reset: () => {
                     e(u({}, g));
+                },
+                setFullScreenOpen: (t) => {
+                    e({ fullScreenOpen: t });
                 }
             })
         )
     ),
-    h = (e) => {
+    m = (e) => {
         let { itemTypeFilters: t, colorFilters: n, themeFilters: r, orbEligible: l, sort: o, searchQuery: i, queryPageSize: a, queryPageOffset: s } = e;
         return {
             item_types: Array.from(t),
@@ -158,7 +169,7 @@ let g = {
             search: '' !== i ? i : void 0
         };
     },
-    b = (e) => {
+    _ = (e) => {
         let t = e.skus,
             n = e.pagination.total,
             r = e.pagination.has_more;
@@ -170,29 +181,37 @@ let g = {
             pageLimit: e.pagination.limit
         };
     },
-    m = () => {
+    C = () => {
         let { onSetResponse: e, setSearchError: t, clear: n, setIsFetchingResults: l } = (0, c.a)();
         r.useEffect(() => {
-            let r = f.subscribe(
-                h,
-                (r) => {
-                    (async () => {
-                        (n(), l(!0));
-                        try {
-                            let t = await (0, s.y)(r);
-                            e(b(t));
-                        } catch (e) {
-                            var o;
-                            t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
-                        } finally {
-                            l(!1);
-                        }
-                    })();
-                },
-                { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
-            );
+            let r = null,
+                o = b.subscribe(
+                    m,
+                    (o) => {
+                        let i = async () => {
+                            (n(), l(!0));
+                            try {
+                                let t = await (0, s.y)(o);
+                                e(_(t));
+                            } catch (e) {
+                                var r;
+                                t(null != (r = null == e ? void 0 : e.message) ? r : 'Unknown error');
+                            } finally {
+                                l(!1);
+                            }
+                        };
+                        (null != r && clearTimeout(r),
+                            (r = setTimeout(
+                                async () => {
+                                    (await i(), (r = null));
+                                },
+                                200 * (null != r)
+                            )));
+                    },
+                    { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
+                );
             return () => {
-                r();
+                o();
             };
         }, [e, t, n, l]);
     };

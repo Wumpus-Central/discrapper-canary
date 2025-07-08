@@ -114,7 +114,7 @@ function h(e) {
                     children: [
                         (0, i.jsx)(d.u, {
                             onClick: D,
-                            colorMix: !0
+                            colorMix: null != y.gradientColor
                         }),
                         (0, i.jsx)(o.V, {
                             asset: y.asset,
@@ -124,7 +124,7 @@ function h(e) {
                             title: y.title,
                             body: y.body,
                             badge: y.badge,
-                            footerLink: y.footerLink
+                            textLink: y.textLink
                         }),
                         (0, i.jsx)('div', {
                             className: p.actionBar,

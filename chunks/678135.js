@@ -24,7 +24,7 @@ var i = n(120356),
     T = n(388032),
     S = n(997926);
 function A(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: T, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: R, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, pendingLegacyUsernameDisabled: L, avatarClassName: x, containerClassName: k, isTryItOutFlow: M = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, showViewFullProfileButton: F = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: T, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: R, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, pendingLegacyUsernameDisabled: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, showViewFullProfileButton: F = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, u.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: K, avatarDecorationSrc: z } = (0, f.Z)({
             user: t,
@@ -52,7 +52,7 @@ function A(e) {
                 displayProfile: W,
                 themeType: I.lY.POPOUT,
                 pendingThemeColors: w,
-                className: a()(S.container, k),
+                className: a()(S.container, M),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -65,7 +65,7 @@ function A(e) {
                                 canUsePremiumCustomization: i,
                                 pendingBanner: l,
                                 pendingAccentColor: h,
-                                isTryItOutFlow: M,
+                                isTryItOutFlow: k,
                                 disabledInputs: j,
                                 onUpsellClick: () => (null == o ? void 0 : o({ object: v.qAy.EDIT_PROFILE_BANNER }))
                             }),
@@ -80,7 +80,7 @@ function A(e) {
                                 previewPrimaryColor: Q,
                                 className: x,
                                 disabledInputs: j,
-                                isTryItOutFlow: M,
+                                isTryItOutFlow: k,
                                 onUpsellClick: () => (null == o ? void 0 : o({ object: v.qAy.AVATAR }))
                             }),
                             !U &&
@@ -102,7 +102,7 @@ function A(e) {
                         pendingBio: m,
                         pendingPronouns: T,
                         pendingLegacyUsernameDisabled: L,
-                        isTryItOutFlow: M,
+                        isTryItOutFlow: k,
                         hideBioSection: G,
                         pendingBadges: Z,
                         shouldOpenBadgeTooltip: H

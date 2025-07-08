@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(539854), n(35282));
+(n.d(t, { Z: () => k }), n(388685), n(539854), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -80,10 +80,10 @@ function x(e, t) {
     );
 }
 new E.Z('ChannelEditor.tsx');
-let k = function () {
+let M = function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
 };
-class M extends i.Component {
+class k extends i.Component {
     componentDidMount() {
         (this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload));
     }
@@ -191,7 +191,7 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: N, id: R, required: w, maxCharacterCount: L, allowNewLines: k, 'aria-describedby': M, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: N, id: R, required: w, maxCharacterCount: L, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
             { submitting: G, popup: B } = this.state,
             V = {
                 channel: m,
@@ -214,7 +214,7 @@ class M extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: k,
+                allowNewLines: M,
                 onChange: d,
                 onResize: p,
                 onKeyDown: _,
@@ -234,7 +234,7 @@ class M extends i.Component {
                 'aria-expanded': null !== B.id || void 0,
                 'aria-activedescendant': null != (s = B.activeDescendant) ? s : void 0,
                 'aria-invalid': l.length > L,
-                'aria-describedby': M,
+                'aria-describedby': k,
                 'aria-labelledby': j,
                 'aria-autocomplete': 'list'
             },
@@ -371,7 +371,7 @@ class M extends i.Component {
                     l = null != r ? r : a,
                     { files: c } = j(e.clipboardData, o.uploadLongMessages ? l : null);
                 return (
-                    k(
+                    M(
                         'onPaste',
                         [...e.clipboardData.items].map((e) => {
                             if ('file' !== e.kind)

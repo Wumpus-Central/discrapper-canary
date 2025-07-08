@@ -139,7 +139,7 @@ function I() {
     });
 }
 function T(e) {
-    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: k, children: M, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: V, submittingFinishedLabel: F } = e,
+    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: V, submittingFinishedLabel: F } = e,
         Z = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
     let H = h || E,
         Y = H && (null != L || null != x),
@@ -165,7 +165,7 @@ function T(e) {
                     onMouseDown: h ? void 0 : w,
                     onMouseEnter: L,
                     onMouseLeave: x,
-                    onKeyDown: h ? void 0 : k,
+                    onKeyDown: h ? void 0 : M,
                     type: T,
                     disabled: h,
                     style: S,
@@ -193,7 +193,7 @@ function T(e) {
                             : null,
                         (0, r.jsx)('div', {
                             className: o()(f.contents, C),
-                            children: M
+                            children: k
                         })
                     ]
                 })

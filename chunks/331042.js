@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(597688),
     L = n(1870),
     x = n(429368),
-    k = n(884697),
-    M = n(587792),
+    M = n(884697),
+    k = n(587792),
     j = n(228624),
     U = n(635552),
     G = n(905357),
@@ -269,7 +269,7 @@ let eu = 880,
     },
     eh = (e) => {
         let { product: t, onClose: n, confettiTarget: a, confettiCanvas: o, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: v = !0, purchaseType: I = ee.o8.FIAT } = e,
-            T = (0, M.o)('CollectiblesCollectedModal'),
+            T = (0, k.o)('CollectiblesCollectedModal'),
             A = (0, Q.W)(t, E),
             N = (0, f.e7)([R.default], () => {
                 var e, t;
@@ -284,7 +284,7 @@ let eu = 880,
             w = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
             L = i.useRef(null),
             { analyticsLocations: x } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            { collectedModalBackground: k } = (0, J.Ac)(A),
+            { collectedModalBackground: M } = (0, J.Ac)(A),
             j = (0, O.Z)();
         function U() {
             var e;
@@ -312,7 +312,7 @@ let eu = 880,
                                       style: t
                                   })
                                 : (0, r.jsx)(Z.Z, {
-                                      asset: k,
+                                      asset: M,
                                       size: (0, H.ML)(eu),
                                       className: ea.decorationBanner,
                                       categoryBannerOverride: (0, ee.ZS)(A.categorySkuId)
@@ -378,7 +378,7 @@ let eu = 880,
                 onError: o
             }),
             { firstAvatarDecoration: I, firstProfileEffect: T } = (0, B.Rj)(n),
-            S = (0, k.x6)(n) ? null != I && null != T : null != I || null != T || n.type === u.Z.NAMEPLATE;
+            S = (0, M.x6)(n) ? null != I && null != T : null != I || null != T || n.type === u.Z.NAMEPLATE;
         i.useEffect(() => {
             ee.Vt.ORB_PROFILE_BADGE === n.skuId && (0, N.Ls)([(0, K.X)()], em);
         }, [n.skuId]);
@@ -566,7 +566,7 @@ let eu = 880,
                 skuId: b.skuId
             }),
             { analyticsLocations: T } = (0, g.ZP)([...s, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            S = i.useMemo(() => (0, k.jm)(b.type, b.skuId), [b.type, b.skuId]);
+            S = i.useMemo(() => (0, M.jm)(b.type, b.skuId), [b.type, b.skuId]);
         return (
             i.useEffect(() => {
                 P.default.track(et.rMx.OPEN_MODAL, {

@@ -3,10 +3,10 @@
     Lk: () => F,
     Mx: () => B,
     Xg: () => Z,
-    ZP: () => k,
+    ZP: () => M,
     _0: () => G,
     _Z: () => U,
-    c7: () => M,
+    c7: () => k,
     j3: () => H,
     qN: () => V
 }),
@@ -110,7 +110,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function k(e) {
+function M(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
         (0, p.Tt)({ location: N.intl.string(N.t['3S249/']) }),
@@ -137,8 +137,8 @@ function k(e) {
         })
     );
 }
-function M(e) {
-    return (0, r.jsx)(k, D(P({}, e), { headerClassName: C.headerSuccess }));
+function k(e) {
+    return (0, r.jsx)(M, D(P({}, e), { headerClassName: C.headerSuccess }));
 }
 function j(e) {
     var { guild: t, application: n } = e,
@@ -167,7 +167,7 @@ function j(e) {
     return (0, r.jsx)('div', {
         className: C.authorizedSuccessWrapper,
         children: (0, r.jsx)(
-            M,
+            k,
             P(
                 {
                     message: o,
@@ -311,7 +311,7 @@ function V(e) {
 function F(e) {
     return (0, r.jsx)('div', {
         className: C.errorWrapper,
-        children: (0, r.jsx)(k, D(P({}, e), { headerClassName: C.headerFailure }))
+        children: (0, r.jsx)(M, D(P({}, e), { headerClassName: C.headerFailure }))
     });
 }
 function Z() {

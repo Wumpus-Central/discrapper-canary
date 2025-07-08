@@ -126,17 +126,17 @@ function N(e) {
             tab: T.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
         });
-    let D = n ? v.DR : o,
-        F = g === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
+    let F = n ? v.DR : o,
+        D = g === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
         M = l.useCallback(() => {
-            (t && (D(), (0, u.Ou)()),
+            (t && (F(), (0, u.Ou)()),
                 (0, m.Y)({
-                    pageType: F,
+                    pageType: D,
                     sectionType: P.jXE.ORBS_BALANCE_MENU,
                     ctaObject: P.qAy.CTA_TO_QUEST_HOME
                 }),
                 (0, b.navigateToQuestHome)({ fromContent: a.j.ORBS_BALANCE_MENU }));
-        }, [D, t, F]),
+        }, [F, t, D]),
         H = (0, S.F)('collectibles_shop_header_bar');
     return (0, r.jsx)(c.f6W, {
         theme: y,
@@ -184,11 +184,11 @@ function N(e) {
                         (0, r.jsxs)('div', {
                             className: I.alignedRightContent,
                             children: [
-                                H && (0, r.jsx)(j.Z, {}),
+                                H && (0, r.jsx)(j.Z, { handleTransition: f }),
                                 R &&
                                     (0, r.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
-                                        analyticsPage: F,
+                                        analyticsPage: D,
                                         cardAlignment: C.V9.CardAlignment.END,
                                         ctaText: L.intl.string(L.t.VC4Mq6),
                                         ctaOnClick: M,
@@ -196,7 +196,7 @@ function N(e) {
                                     }),
                                 t &&
                                     (0, r.jsx)(d.Z, {
-                                        closeAction: D,
+                                        closeAction: F,
                                         keybind: 'ESC'
                                     })
                             ]

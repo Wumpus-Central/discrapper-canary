@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(388032),
     b = n(590305);
 function m() {
-    let { onToggleOrbEligible: e, orbEligible: t } = (0, p.S)();
+    let { onToggleOrbEligible: e, orbEligible: t, reset: n } = (0, p.S)();
     return (0, r.jsxs)('div', {
         className: b.filterBar,
         children: [
@@ -34,7 +34,13 @@ function m() {
                 ]
             }),
             (0, r.jsx)(O, {}),
-            (0, r.jsx)(S, {})
+            (0, r.jsx)(S, {}),
+            (0, r.jsx)(u.zxk, {
+                color: u.Ttl.PRIMARY,
+                className: b.resetButton,
+                onClick: n,
+                children: h.intl.string(h.t.jwH6KS)
+            })
         ]
     });
 }

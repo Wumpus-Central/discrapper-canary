@@ -4,7 +4,7 @@ let r;
     CA: () => D,
     F8: () => $,
     JM: () => w,
-    NZ: () => k,
+    NZ: () => M,
     ZP: () => et,
     aN: () => x,
     ay: () => Q,
@@ -14,7 +14,7 @@ let r;
     pK: () => b,
     pU: () => en,
     rI: () => K,
-    tp: () => M,
+    tp: () => k,
     xR: () => X
 }),
     n(35282),
@@ -189,7 +189,7 @@ function x(e) {
     let u = { size: (0, l.oO)(a * (0, l.x_)()) };
     return ('webp' === c && i && X(r) && (u.animated = !0), (t += '?'.concat(o.stringify(u))));
 }
-function k(e) {
+function M(e) {
     let { avatarDecoration: t, size: n, canAnimate: r = !1 } = e;
     if (null == t || (0, s.fO)(t)) return;
     let i = t.asset;
@@ -201,7 +201,7 @@ function k(e) {
     let u = new URL(null != a ? 'https://'.concat(a).concat(c) : ''.concat(location.protocol).concat(o).concat(c));
     return (u.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), u.searchParams.set('passthrough', ''.concat(r && (0, s.ae)(i))), u.toString());
 }
-function M(e) {
+function k(e) {
     let t,
         { id: n, guildId: r, banner: i, canAnimate: a, size: s } = e;
     if (null == i || null == r) return;
@@ -382,9 +382,9 @@ let et = {
     getGuildMemberAvatarURL: D,
     getGuildMemberAvatarURLSimple: w,
     getGuildMemberAvatarSource: L,
-    getGuildMemberBannerURL: M,
+    getGuildMemberBannerURL: k,
     getUserBannerURL: x,
-    getAvatarDecorationURL: k,
+    getAvatarDecorationURL: M,
     hasAnimatedGuildIcon: function e(e) {
         return X(null == e ? void 0 : e.icon);
     },

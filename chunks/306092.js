@@ -1,35 +1,35 @@
-r.d(t, { e: () => c });
-var n = r(255367),
-    i = r(409116),
-    l = r(755007),
-    o = r(231338),
-    a = r(858022);
+n.d(t, { e: () => c });
+var r = n(255367),
+    l = n(409116),
+    o = n(755007),
+    i = n(231338),
+    a = n(858022);
 function s(e) {
-    let { price: t, isPremiumUser: r, discount: s, hasSufficientOrbs: c } = e;
-    return t.currency === o.pK.DISCORD_ORB
-        ? (0, n.jsx)(l.Z, {
+    let { price: t, isPremiumUser: n, discount: s, hasSufficientOrbs: c } = e;
+    return t.currency === i.pK.DISCORD_ORB
+        ? (0, r.jsx)(o.Z, {
               orbAmount: t.amount,
               className: c ? void 0 : a.disabled
           })
-        : (0, n.jsx)(i.F, {
+        : (0, r.jsx)(l.F, {
               price: t,
               discount: s,
-              nitroIconType: r ? 'default' : void 0,
+              nitroIconType: n ? 'default' : void 0,
               nitroIconSize: 'md'
           });
 }
 function c(e) {
-    let { displayPrices: t, isPremiumUser: r, discount: i, hasSufficientOrbs: l } = e;
-    return (0, n.jsx)('div', {
+    let { displayPrices: t, isPremiumUser: n, discount: l, hasSufficientOrbs: o } = e;
+    return (0, r.jsx)('div', {
         className: a.priceLine,
         children: t.map((e, t) =>
-            (0, n.jsx)(
+            (0, r.jsx)(
                 s,
                 {
                     price: e,
-                    isPremiumUser: r,
-                    discount: i,
-                    hasSufficientOrbs: l
+                    isPremiumUser: n,
+                    discount: l,
+                    hasSufficientOrbs: o
                 },
                 t
             )

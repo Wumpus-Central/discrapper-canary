@@ -1,6 +1,6 @@
 (n.d(t, {
-    A: () => k,
-    Z: () => M
+    A: () => M,
+    Z: () => k
 }),
     n(539854));
 var r = n(392711),
@@ -83,7 +83,7 @@ function w(e, t) {
 let D = 10,
     L = 1500000,
     x = 1500000;
-class k {
+class M {
     setActionContext(e) {
         this.actionContext = e;
     }
@@ -109,7 +109,7 @@ class k {
         (C(this, 'streamRegion', void 0), C(this, 'streamApplication', void 0), C(this, 'streamSourceType', void 0), C(this, 'actionContext', void 0), C(this, 'maxViewers', void 0), C(this, 'nativePickerStyleUsed', void 0), C(this, 'startTime', void 0), C(this, 'endTime', void 0), C(this, 'goLiveModalDurationMs', void 0), C(this, 'numViewers', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i), (this.goLiveModalDurationMs = a), (this.numViewers = i));
     }
 }
-class M extends s.Z {
+class k extends s.Z {
     get isOwner() {
         let { ownerId: e } = this._streamContext;
         return p.default.getId() === e;
@@ -218,7 +218,7 @@ class M extends s.Z {
                             }
                             let P = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != c ? c : 0) + (null != g ? g : 0) + (null != m ? m : 0),
                                 w = (null == v || null == (I = v.desktopSource) ? void 0 : I.sourcePid) != null ? _.ZP.getGameForPID(v.desktopSource.sourcePid) : null,
-                                { gameName: D, gameId: L, exe: x, distributor: k } = (0, f.G8)(w);
+                                { gameName: D, gameId: L, exe: x, distributor: M } = (0, f.G8)(w);
                             O.default.track(
                                 A.rMx.SCREENSHARE_FINISHED,
                                 R(
@@ -247,7 +247,7 @@ class M extends s.Z {
                                         share_game_name: D,
                                         share_game_id: L,
                                         share_game_exe: x,
-                                        share_game_distributor: k,
+                                        share_game_distributor: M,
                                         picker_type_used: null != this.analyticsContext.nativePickerStyleUsed ? 'native' : 'internal',
                                         duration: this.analyticsContext.getDuration()
                                     },

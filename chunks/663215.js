@@ -135,8 +135,8 @@ function A(e) {
             autoTrackExposure: !0
         }),
         x = C(),
-        k = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
-        M = p.C.useExperiment({ location: 'useSoundGrid' });
+        M = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
+        k = p.C.useExperiment({ location: 'useSoundGrid' });
     return r.useMemo(() => {
         let e = 0,
             r = 0,
@@ -168,7 +168,7 @@ function A(e) {
                     sections: i,
                     guildIds: A,
                     allSounds: f,
-                    potentialSoundIdsForSection: k,
+                    potentialSoundIdsForSection: M,
                     sectionType: g.bg.RECENTLY_HEARD,
                     sortById: !1
                 }),
@@ -187,7 +187,7 @@ function A(e) {
                     allSounds: f,
                     filterOutEmptyCurrentGuild: t
                 }));
-        let a = R || M.moveDefaultToBottom;
+        let a = R || k.moveDefaultToBottom;
         return (
             a || S(i, f),
             I({
@@ -212,7 +212,7 @@ function A(e) {
                 }
             }
         );
-    }, [A, f, b, k, x, L, D, P, w, t, R, N, n, O, u, M.moveDefaultToBottom]);
+    }, [A, f, b, M, x, L, D, P, w, t, R, N, n, O, u, k.moveDefaultToBottom]);
 }
 function N(e, t, n) {
     return r.useMemo(

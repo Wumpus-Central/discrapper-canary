@@ -60,7 +60,7 @@ function g(e) {
         onRequestClose: c,
         position: g,
         align: h,
-        spacing: 18,
+        spacing: 14,
         layerContext: void 0,
         positionKey: void 0,
         popoutKey: void 0,

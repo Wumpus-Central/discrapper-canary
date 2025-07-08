@@ -28,7 +28,7 @@ function i(e) {
     Qu: () => e1,
     R7: () => eB,
     Rb: () => eW,
-    Rs: () => eM,
+    Rs: () => ek,
     S: () => q,
     S5: () => eD,
     Tc: () => eF,
@@ -37,7 +37,7 @@ function i(e) {
     V3: () => eH,
     Vr: () => ec,
     Wl: () => e7,
-    Wt: () => ek,
+    Wt: () => eM,
     XP: () => e9,
     YA: () => eA,
     Yc: () => eV,
@@ -48,7 +48,7 @@ function i(e) {
     am: () => eL,
     d$: () => Y,
     dE: () => eq,
-    dJ: () => M,
+    dJ: () => k,
     dN: () => es,
     eD: () => em,
     eW: () => I,
@@ -303,17 +303,17 @@ function D(e, t, n, i) {
 }
 let L = ['omit', 'same-origin', 'include'],
     x = ['same-origin', 'no-cors', 'cors', 'navigate'],
-    k =
+    M =
         'undefined' == typeof FinalizationRegistry
             ? {
                   register: () => {},
                   unregister: () => {}
               }
             : new FinalizationRegistry((e) => r.__wbg_blockeddomainsstore_free(e >>> 0, 1));
-class M {
+class k {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), k.unregister(this), e);
+        return ((this.__wbg_ptr = 0), M.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -605,10 +605,10 @@ function eL(e, t, n) {
 function ex(e, t) {
     e.body = t;
 }
-function ek(e, t) {
+function eM(e, t) {
     e.credentials = L[t];
 }
-function eM(e, t) {
+function ek(e, t) {
     e.headers = t;
 }
 function ej(e, t) {

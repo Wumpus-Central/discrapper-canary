@@ -65,7 +65,7 @@ function b(e, t) {
     );
 }
 async function y(e) {
-    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: O, baseAnalyticsData: v, analyticsLocation: I, analyticsLocations: T, flowStartTime: S, subscriptionPlan: A, planGroup: N, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: k, sku: M, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: V, invoicePreview: F } = e;
+    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: O, baseAnalyticsData: v, analyticsLocation: I, analyticsLocations: T, flowStartTime: S, subscriptionPlan: A, planGroup: N, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: M, sku: k, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: V, invoicePreview: F } = e;
     (t(_.A.PURCHASING), n(!0), r(!0), a.Z.wait(s.fw), m(null));
     try {
         let e, n, r;
@@ -84,9 +84,9 @@ async function y(e) {
         )
             return;
         if (U === p.GZQ.ONE_TIME)
-            (i()(null != M, 'SKU must exist and be fetched.'),
+            (i()(null != k, 'SKU must exist and be fetched.'),
                 i()(null != j, 'SKUPricePreview must exist.'),
-                (e = await (0, c.ZZ)(M.applicationId, M.id, {
+                (e = await (0, c.ZZ)(k.applicationId, k.id, {
                     expectedAmount: j.amount,
                     expectedCurrency: j.currency,
                     isGift: O,
@@ -145,7 +145,7 @@ async function y(e) {
                     currency: R.currency,
                     paymentSource: P,
                     trialId: C,
-                    metadata: k,
+                    metadata: M,
                     referralCode: G,
                     loadId: B,
                     expectedInvoicePrice: t,

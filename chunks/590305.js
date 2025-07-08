@@ -11,5 +11,6 @@ e.exports = {
     themeToggled: 'themeToggled__11877',
     circle: 'circle__11877',
     circleToggled: 'circleToggled__11877',
-    checkIcon: 'checkIcon__11877'
+    checkIcon: 'checkIcon__11877',
+    resetButton: 'resetButton__11877'
 };

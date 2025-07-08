@@ -200,7 +200,7 @@ class E extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, a, s, l, c, u, d, _, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, k, M, j;
+        var t, n, i, a, s, l, c, u, d, _, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j;
         (super(), p(this, 'id', void 0), p(this, 'username', void 0), p(this, 'discriminator', void 0), p(this, 'avatar', void 0), p(this, 'avatarDecorationData', void 0), p(this, 'banner', void 0), p(this, 'email', void 0), p(this, 'verified', void 0), p(this, 'bot', void 0), p(this, 'system', void 0), p(this, 'mfaEnabled', void 0), p(this, 'mobile', void 0), p(this, 'desktop', void 0), p(this, 'premiumType', void 0), p(this, 'flags', void 0), p(this, 'publicFlags', void 0), p(this, 'purchasedFlags', void 0), p(this, 'premiumUsageFlags', void 0), p(this, 'phone', void 0), p(this, 'nsfwAllowed', void 0), p(this, 'ageVerificationStatus', void 0), p(this, 'guildMemberAvatars', void 0), p(this, 'hasBouncedEmail', void 0), p(this, 'personalConnectionId', void 0), p(this, 'globalName', void 0), p(this, 'primaryGuild', void 0), p(this, 'collectibles', void 0), p(this, 'displayNameStyles', void 0), p(this, 'hasFlag', (e) => !1), p(this, 'isStaff', () => !1), p(this, 'isStaffPersonal', () => !1), p(this, 'hasAnyStaffLevel', () => !1));
         let U = null != (n = e.premium_type) ? n : e.premiumType;
         ((this.id = e.id),
@@ -228,7 +228,7 @@ class E extends i.Z {
             (this.personalConnectionId = null != (L = null != (D = e.personal_connection_id) ? D : e.personalConnectionId) ? L : null),
             (this.globalName = null != (x = e.global_name) ? x : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, o.l)(null != (M = null != (k = e.primary_guild) ? k : e.primaryGuild) ? M : null)),
+            (this.primaryGuild = (0, o.l)(null != (k = null != (M = e.primary_guild) ? M : e.primaryGuild) ? k : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (j = e.display_name_styles) ? j : e.displayNameStyles),
             Object.defineProperties(this, {

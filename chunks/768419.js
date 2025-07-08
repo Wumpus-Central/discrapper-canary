@@ -67,7 +67,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function k(e, t) {
         e
     );
 }
-let M = h.Z.get(w.ABu.SPOTIFY),
+let k = h.Z.get(w.ABu.SPOTIFY),
     j = 'wss://dealer.spotify.com/?access_token=',
     U = 'hm://pusher/v1/connections/',
     G = 30 * N.Z.Millis.SECOND,
@@ -201,7 +201,7 @@ class ep {
         let { type: t, event: n } = e;
         switch (t) {
             case 'PLAYER_STATE_CHANGED':
-                null != n && null != n.state && eM(this.accountId, this.accessToken, n.state);
+                null != n && null != n.state && ek(this.accountId, this.accessToken, n.state);
                 break;
             case 'DEVICE_STATE_CHANGED':
                 this.handleDeviceStateChange();
@@ -473,15 +473,15 @@ function ex(e) {
     if (null == r) return !1;
     ((r.isPremium = n), J.info('Profile updated for '.concat(t, ': isPremium = ').concat(n)));
 }
-function ek(e) {
+function eM(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == el || el.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === M.name && n ? (el = new f.Xp()).start(B, eP) : (null == el || el.stop(), (el = null));
+        null != e && E.ZP.getObservedAppNameForWindow(e) === k.name && n ? (el = new f.Xp()).start(B, eP) : (null == el || el.stop(), (el = null));
     } else null == t && (null == el || el.stop(), (el = null));
 }
-function eM(e, t, n) {
+function ek(e, t, n) {
     var r, i, a, o, s, l, c, u, d, f, p, h, m, g;
     let E,
         b,
@@ -520,7 +520,7 @@ function eM(e, t, n) {
                 artists: [],
                 isLocal: !1
             });
-    if ((null != y && !0 !== y.is_active && (y = k(L({}, y), { is_active: !0 })), null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))) {
+    if ((null != y && !0 !== y.is_active && (y = M(L({}, y), { is_active: !0 })), null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))) {
         let n = eG.getPlayerState(e);
         b =
             null != n && null != n.context && n.context.uri === S.uri
@@ -562,7 +562,7 @@ function ej(e, t) {
         })
         .then((n) => {
             let r = n.body;
-            null != r ? eM(e, t, r).then(() => n) : ed(e);
+            null != r ? ek(e, t, r).then(() => n) : ed(e);
         })
         .catch(() => ed(e));
 }
@@ -643,7 +643,7 @@ class eU extends (o = u.ZP.Store) {
                 button_urls: []
             },
             y = {
-                name: M.name,
+                name: k.name,
                 assets: h,
                 details: g,
                 state: e,
@@ -672,6 +672,6 @@ let eG = new eU(_.Z, {
         SPOTIFY_SET_ACTIVE_DEVICE: eA,
         SPEAKING: eD,
         VOICE_STATE_UPDATES: eL,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ek
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eM
     }),
     eB = eG;

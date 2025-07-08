@@ -43,8 +43,8 @@ var i,
     D = n(145597),
     L = n(370862),
     x = n(981631),
-    k = n(987650);
-function M(e, t, n) {
+    M = n(987650);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -476,10 +476,10 @@ function eL(e, t) {
 function ex(e) {
     ew(X);
 }
-function ek(e) {
+function eM(e) {
     q = e.games;
 }
-function eM() {
+function ek() {
     W = !1;
 }
 function ej(e) {
@@ -605,7 +605,7 @@ function eX() {
         }));
 }),
     !__OVERLAY__ &&
-        ((0, P.isDesktop)() || k.iP) &&
+        ((0, P.isDesktop)() || M.iP) &&
         (en = function () {
             let e = [],
                 t = new Set();
@@ -797,11 +797,11 @@ class eQ extends (i = c.ZP.Store) {
         ec.add(null != (t = (0, h.F)(e)) ? t : e);
     }
 }
-M(eQ, 'displayName', 'RunningGameStore');
+k(eQ, 'displayName', 'RunningGameStore');
 let eJ = new eQ(d.Z, {
         RUNNING_GAMES_CHANGE: ex,
-        CANDIDATE_GAMES_CHANGE: ek,
-        PERMISSION_CLEAR_PTT_ADMIN_WARNING: eM,
+        CANDIDATE_GAMES_CHANGE: eM,
+        PERMISSION_CLEAR_PTT_ADMIN_WARNING: ek,
         PERMISSION_REQUEST_ELEVATED_PROCESS: ej,
         PERMISSION_CLEAR_ELEVATED_PROCESS: eG,
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: eU,

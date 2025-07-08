@@ -7,12 +7,12 @@
     II: () => R,
     MC: () => C,
     Vj: () => N,
-    ZP: () => M,
+    ZP: () => k,
     gO: () => P,
     i_: () => w,
     jQ: () => x,
     qE: () => A,
-    v6: () => k,
+    v6: () => M,
     zx: () => S
 }),
     n(953529),
@@ -293,7 +293,7 @@ let R = (e) => {
                   ]
               });
     },
-    k = (e) => {
+    M = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(P, {
             className: t,
@@ -309,7 +309,7 @@ let R = (e) => {
             ]
         });
     },
-    M = (e) => {
+    k = (e) => {
         let { className: t, contentClassName: n, tag: i = 'section', onSubmit: s, children: l, expanded: c = !1, theme: u = p.BRd.DARK, style: d } = e;
         return (0, r.jsx)(o.f6W, {
             theme: u,

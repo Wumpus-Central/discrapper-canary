@@ -1,7 +1,7 @@
 (n.d(t, { U: () => m }), n(388685));
 var r = n(255367),
-    s = n(704215),
-    l = n(481060),
+    l = n(704215),
+    s = n(481060),
     a = n(243778),
     i = n(970731),
     o = n(2818),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(388032),
     d = n(327298),
     h = n(235810);
-let p = s.z.FOR_LATER_POPOUT_COACHMARK,
+let p = l.z.FOR_LATER_POPOUT_COACHMARK,
     f = () =>
         (0, r.jsx)('div', {
             className: d.imageContainer,
@@ -27,7 +27,7 @@ let p = s.z.FOR_LATER_POPOUT_COACHMARK,
             content: u.intl.string(u.t.URrJq6),
             buttonCTA: u.intl.string(u.t['NX+WJC']),
             buttonProps: {
-                color: l.Ttl.WHITE,
+                color: s.Ttl.WHITE,
                 innerClassName: d.primaryButton
             },
             onClick: () => e(c.L.USER_DISMISS),
@@ -35,17 +35,17 @@ let p = s.z.FOR_LATER_POPOUT_COACHMARK,
             caretPosition: i.DF.TOP_RIGHT
         });
 function m(e) {
-    let { location: t, children: n, targetElementRef: s } = e,
+    let { location: t, children: n, targetElementRef: l } = e,
         { enabled: i, inInbox: c } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
         [u, d] = (0, a.US)(i && t === (c ? 'inbox-button' : 'bookmarks-button') ? [p] : [], void 0);
     return u !== p
         ? n
-        : (0, r.jsx)(l.yRy, {
-              targetElementRef: s,
+        : (0, r.jsx)(s.yRy, {
+              targetElementRef: l,
               renderPopout: () => g(d),
               position: 'bottom',
               align: 'right',
-              animation: l.yRy.Animation.TRANSLATE,
+              animation: s.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n
           });

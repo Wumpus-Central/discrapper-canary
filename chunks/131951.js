@@ -25,8 +25,8 @@ var u,
     D = n(646047),
     L = n(594190),
     x = n(502286),
-    k = n(822253),
-    M = n(355552),
+    M = n(822253),
+    k = n(355552),
     j = n(294473),
     U = n(706629),
     G = n(166884),
@@ -127,11 +127,11 @@ let eN = new C.Z('MediaEngineStore'),
     eD = 1,
     eL = 1,
     ex = 0.5,
-    ek = {
+    eM = {
         left: 1,
         right: 1
     },
-    eM = 500,
+    ek = 500,
     ej = 5 * et.Z.Millis.SECOND,
     eU = -60,
     eG = 100,
@@ -339,7 +339,7 @@ function tx() {
                         useLoopback: r.getExperimentalSoundshare(),
                         useQuartzCapturer: !0,
                         allowScreenCaptureKit: tV(),
-                        videoHookStaleFrameTimeoutMs: eM,
+                        videoHookStaleFrameTimeoutMs: ek,
                         graphicsCaptureStaleFrameTimeoutMs: ej,
                         hdrCaptureMode: t
                     },
@@ -361,7 +361,7 @@ function tx() {
             );
     }
 }
-function tk(e, t, n, r) {
+function tM(e, t, n, r) {
     var i;
     let a = null != (i = null == e ? void 0 : e.soundshareSession) ? i : '';
     null == tS[a] && (tS[a] = new Set());
@@ -380,7 +380,7 @@ function tk(e, t, n, r) {
                 )
             ));
 }
-function tM(e) {
+function tk(e) {
     switch (e) {
         case eO.H3.CPU_OVERUSE:
             return P.Nk.NoiseCancellerCpuOveruse;
@@ -421,7 +421,7 @@ function tU() {
             e.setGoLiveUsePixelCounts(r);
         }
         ((0, en.isWindows)() ? ((null == tv ? void 0 : tv.startsWith('NVIDIA')) || (null == tv ? void 0 : tv.startsWith('AMD')) ? e.setExperimentFlag(eO.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(eO.V8.SIGNAL_AV1_DECODE, !0)) : ((0, en.isMac)() || (0, en.isLinux)()) && e.setExperimentFlag(eO.V8.SIGNAL_AV1_DECODE, !0), (0, en.isWindows)() && e.setExperimentFlag(eO.V8.SIGNAL_AV1_HARDWARE_DECODE, !0), eH.setHasFullbandPerformance((0, R.Z)()));
-        let f = (0, M.D)('setupMediaEngine').enabled;
+        let f = (0, k.D)('setupMediaEngine').enabled;
         if ((e.setRemoteAudioHistory(1000 * !!f), (0, N.Z)(r))) {
             let t = A.Z.getSettings();
             e.setExperimentFlag(eO.V8.STREAMER_CLIP, t.clipsEnabled);
@@ -466,7 +466,7 @@ function tU() {
             }),
             e.on(b.Sh.SoundshareFailed, (e) => {
                 let { failureCode: t, failureReason: n, willRetry: r } = e;
-                tk(null == a ? void 0 : a.desktopSource, t, n, r);
+                tM(null == a ? void 0 : a.desktopSource, t, n, r);
             }),
             e.on(b.Sh.SoundshareSpeaking, () => {
                 (null == a ? void 0 : a.desktopSource) != null && ($.default.track(em.rMx.SOUNDSHARE_TRANSMITTING, (0, x.Z)(null == a ? void 0 : a.desktopSource)), null != ed.Z.getHookError(em.K3D.SOUND) && v.Z.wait(() => v.Z.dispatch({ type: 'MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING' })));
@@ -487,7 +487,7 @@ function tU() {
                         n = e.code,
                         r = e.retry;
                     (null == a ? void 0 : a.desktopSource) != null &&
-                        (tk(null == a ? void 0 : a.desktopSource, n, t, r),
+                        (tM(null == a ? void 0 : a.desktopSource, n, t, r),
                         r ||
                             (_.stop(),
                             v.Z.wait(() =>
@@ -529,7 +529,7 @@ function tU() {
                 (eN.warn('noisecancellererror event: '.concat(e)),
                     (0, P.kr)({
                         type: P.u.NOISE_CANCELLER_ERROR,
-                        underlyingError: tM(e)
+                        underlyingError: tk(e)
                     }),
                     (tp = !0),
                     $.default.track(em.rMx.VOICE_PROCESSING, { noise_canceller_error: e }),
@@ -550,7 +550,7 @@ function tU() {
                 (eN.warn('voiceactivitydetectorerror event: '.concat(e)),
                     (0, P.kr)({
                         type: P.u.NOISE_CANCELLER_ERROR,
-                        underlyingError: tM(e)
+                        underlyingError: tk(e)
                     }),
                     $.default.track(em.rMx.VOICE_PROCESSING, { noise_canceller_error: e }),
                     v.Z.dispatch({
@@ -971,7 +971,7 @@ function t5(e) {
             nN()));
     let t = tR();
     if ((tF() && (tZ() ? n3(eO.iA.AUTOMATIC) : t.automaticAudioSubsystem && n4()), eH.supports(eO.AN.OFFLOAD_ADM_CONTROLS))) {
-        let { enabled: e } = k.S.getCurrentConfig({ location: 'handleConnectionOpen' }, { autoTrackExposure: !0 });
+        let { enabled: e } = M.S.getCurrentConfig({ location: 'handleConnectionOpen' }, { autoTrackExposure: !0 });
         eH.setOffloadAdmControls(e);
     }
     ((0, Q.wt)({
@@ -1272,10 +1272,10 @@ function nx(e) {
         eH.setAv1Enabled(null == (t = i.hardwareEncoding) || t),
         eH.setH265Enabled(null == (n = i.hardwareEncoding) || n));
 }
-function nk(e) {
+function nM(e) {
     (tW({ silenceWarning: e.enabled }), tH.update());
 }
-function nM(e) {
+function nk(e) {
     eH.setDebugLogging(e.enabled);
 }
 function nj(e) {
@@ -1476,7 +1476,7 @@ function rt(e) {
             useLoopback: r.getExperimentalSoundshare(),
             useQuartzCapturer: !0,
             allowScreenCaptureKit: tV(),
-            videoHookStaleFrameTimeoutMs: eM,
+            videoHookStaleFrameTimeoutMs: ek,
             graphicsCaptureStaleFrameTimeoutMs: ej,
             hdrCaptureMode: f
         },
@@ -1771,7 +1771,7 @@ class rg extends (u = E.ZP.Store) {
     getLocalPan(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eO.Yn.DEFAULT,
             n = tR(t).localPans[e];
-        return null != n ? n : ek;
+        return null != n ? n : eM;
     }
     getLocalVolume(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eO.Yn.DEFAULT,
@@ -2088,8 +2088,8 @@ let rb = (r = new rg(v.Z, {
     AUDIO_SET_AUTOMATIC_GAIN_CONTROL: nP,
     AUDIO_SET_NOISE_CANCELLATION: nw,
     AUDIO_SET_KRISP_MODEL_OVERRIDE: nD,
-    AUDIO_SET_DISPLAY_SILENCE_WARNING: nk,
-    AUDIO_SET_DEBUG_LOGGING: nM,
+    AUDIO_SET_DISPLAY_SILENCE_WARNING: nM,
+    AUDIO_SET_DEBUG_LOGGING: nk,
     AUDIO_SET_KRISP_SUPPRESSION_LEVEL: nj,
     MEDIA_ENGINE_SET_VIDEO_HOOK: nU,
     MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE: nG,

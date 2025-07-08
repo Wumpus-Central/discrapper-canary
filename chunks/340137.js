@@ -60,8 +60,8 @@ function C(e) {
             className: v.icon,
             color: g || N ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
             size: 'custom',
-            height: 16,
-            width: 16
+            height: 20,
+            width: 20
         });
     return (0, r.jsxs)(c.Kqy, {
         gap: 0,
@@ -132,8 +132,8 @@ function C(e) {
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(u.ZP, {
-                                                              width: 16,
-                                                              height: 16,
+                                                              width: 20,
+                                                              height: 20,
                                                               mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                               children: T
                                                           }),
@@ -182,7 +182,7 @@ function S() {
                 targetElementRef: e,
                 popoutPosition: 'bottom',
                 popoutAlign: 'center',
-                spacing: 4,
+                spacing: 2,
                 children: (t, n, i) =>
                     (0, r.jsx)(C, {
                         ref: e,

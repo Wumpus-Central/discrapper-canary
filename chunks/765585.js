@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(418952);
 let m = 280,
     g = i.forwardRef(function (e, t) {
-        let { body: n, header: a, artClassName: g, headerClassName: E, contentClassName: b, tryItText: y, dismissText: O, onTryFeature: v, onClose: I, className: T, inlineArt: S = !1, isPremiumFeature: A = !1, shouldUseHorizontalButtons: N = !1, showGIFTag: C = !1, dismissibleContent: R, position: P = 'top', align: w = 'center', art: D, isPremiumEarlyAccess: L = !1, maxWidth: x = m, hideDismissButton: k = !1, pointerClassName: M, dismissIconClassName: j, dismissIcon: U, onDismissIconClick: G, tryItButtonColor: B } = e,
+        let { body: n, header: a, artClassName: g, headerClassName: E, contentClassName: b, tryItText: y, dismissText: O, onTryFeature: v, onClose: I, className: T, inlineArt: S = !1, isPremiumFeature: A = !1, shouldUseHorizontalButtons: N = !1, showGIFTag: C = !1, dismissibleContent: R, position: P = 'top', align: w = 'center', art: D, isPremiumEarlyAccess: L = !1, maxWidth: x = m, hideDismissButton: M = !1, pointerClassName: k, dismissIconClassName: j, dismissIcon: U, onDismissIconClick: G, tryItButtonColor: B } = e,
             V = N ? s.zxk.Sizes.LARGE : s.zxk.Sizes.MAX,
             [F, Z] = i.useState(!1),
             { ref: H, width: Y } = (0, l.ZP)();
@@ -116,7 +116,7 @@ let m = 280,
                                                   color: null != B ? B : A || L ? s.zxk.Colors.BRAND_INVERTED : s.zxk.Colors.WHITE,
                                                   children: null != y ? y : p.intl.string(p.t.IHf1RE)
                                               }),
-                                              !k &&
+                                              !M &&
                                                   (0, r.jsx)(s.zxk, {
                                                       className: h.button,
                                                       size: V,
@@ -140,7 +140,7 @@ let m = 280,
                                       })
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(h.pointer, M, {
+                            className: o()(h.pointer, k, {
                                 [h.bottomPointer]: 'top' === P,
                                 [h.centerLeftPointer]: 'right' === P && 'center' === w,
                                 [h.topLeftPointer]: 'right' === P && 'top' === w,

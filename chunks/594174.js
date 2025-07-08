@@ -209,11 +209,11 @@ function L(e) {
 function x(e) {
     if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new d.Z(t));
 }
-function k(e) {
+function M(e) {
     let { user: t } = e;
     t.id !== p.default.getId() && N(t);
 }
-function M(e) {
+function k(e) {
     let { user: t } = e;
     N(t);
 }
@@ -555,8 +555,8 @@ class eP extends h.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: j,
             OVERLAY_INITIALIZE: x,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: k,
-            CURRENT_USER_UPDATE: M,
+            USER_UPDATE: M,
+            CURRENT_USER_UPDATE: k,
             PRESENCE_UPDATES: J,
             SEARCH_FINISH: V,
             MOD_VIEW_SEARCH_FINISH: V,

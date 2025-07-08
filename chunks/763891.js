@@ -33,8 +33,8 @@ function I(e) {
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: R, includeUnpublished: w } = (0, _.Z)(),
         Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, M] = l.useState(1),
+        F = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [D, M] = l.useState(1),
         H = () => {
             var e;
             null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
@@ -57,12 +57,12 @@ function I(e) {
         q = l.useMemo(
             () =>
                 Y(
-                    D.filter((e) => {
+                    F.filter((e) => {
                         var t;
                         return e.type === z || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [D, z, Y]
+            [F, z, Y]
         ),
         K = (0, f.l)(q);
     return (l.useEffect(() => {
@@ -100,7 +100,7 @@ function I(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: E.products,
-                      children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
+                      children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -128,7 +128,7 @@ function I(e) {
                           className: E.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
-                                  currentPage: F,
+                                  currentPage: D,
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {

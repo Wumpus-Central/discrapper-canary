@@ -2,8 +2,8 @@
     BB: () => j,
     C$: () => A,
     H9: () => S,
-    Kd: () => M,
-    d2: () => k,
+    Kd: () => k,
+    d2: () => M,
     dU: () => I
 }),
     n(388685),
@@ -214,7 +214,7 @@ function L(e) {
 function x(e) {
     return e + 'Key';
 }
-function k(e) {
+function M(e) {
     let t = {
         keyCode: 0,
         key: '',
@@ -237,7 +237,7 @@ function k(e) {
               }
           }, []);
 }
-function M(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
     return e

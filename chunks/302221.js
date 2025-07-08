@@ -12,7 +12,7 @@
     pz: () => h,
     rj: () => _,
     vq: () => g,
-    xj: () => M
+    xj: () => k
 }),
     n(415506),
     n(388685),
@@ -325,14 +325,14 @@ function x(e) {
                           }
             };
         })
-        .sort(k)[0].hex;
+        .sort(M)[0].hex;
 }
-function k(e, t) {
+function M(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function M(e) {
+function k(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;

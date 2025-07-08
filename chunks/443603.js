@@ -94,7 +94,7 @@ let E = 20,
 function y(e) {
     let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: _, icon: h, children: g, onClick: y, isActive: O, onMouseEnter: v, onMouseLeave: I, onFocus: T, onBlur: S, pulse: A, sparkle: N, notification: C, 'aria-label': R, 'aria-expanded': P, 'aria-haspopup': w, 'aria-controls': D, noHover: L } = e,
         x = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? 'children' : 'icon') })),
-        k = (e) => {
+        M = (e) => {
             let { component: t } = e;
             return null != C
                 ? (0, r.jsxs)('div', {
@@ -145,7 +145,7 @@ function y(e) {
                           {
                               style: e,
                               className: o()(f.buttonWrapper, a),
-                              children: k({ component: g })
+                              children: M({ component: g })
                           },
                           i
                       )
@@ -155,7 +155,7 @@ function y(e) {
                             {
                                 style: e,
                                 className: o()(f.buttonWrapper, a),
-                                children: k({
+                                children: M({
                                     component: (0, r.jsx)(h, {
                                         className: o()(f.icon, _, { [f.pulseIcon]: A }),
                                         color: 'currentColor'

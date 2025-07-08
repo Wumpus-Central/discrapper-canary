@@ -21,7 +21,7 @@ function u(e) {
             asset: h,
             size: f = 'md',
             buttons: b,
-            footerLink: x,
+            textLink: x,
             gradientColor: _,
             onRequestClose: E,
             popoverRef: j
@@ -44,7 +44,7 @@ function u(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'buttons', 'footerLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
+        })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'buttons', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
     let C = r.useCallback(() => {
             null == E || E();
         }, [E]),
@@ -87,7 +87,7 @@ function u(e) {
                     children: [
                         (0, i.jsx)(c.u, {
                             onClick: S,
-                            colorMix: !0
+                            colorMix: null != _
                         }),
                         (0, i.jsx)(a.V, {
                             asset: h,
@@ -97,7 +97,7 @@ function u(e) {
                             title: u,
                             body: m,
                             badge: g,
-                            footerLink: x
+                            textLink: x
                         }),
                         (0, i.jsx)(l.k, { buttons: b }),
                         (0, i.jsx)(o.$, { caretConfig: p })

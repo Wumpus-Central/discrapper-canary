@@ -40,8 +40,8 @@ let p = (e) => {
     g = () => {
         let [e, t] = l.useState(!1),
             n = l.useRef(null),
-            { sort: d, onSetSort: g, searchQuery: f } = (0, s.S)(),
-            h = l.useCallback((e) => {
+            { sort: d, onSetSort: g } = (0, s.S)(),
+            f = l.useCallback((e) => {
                 let { sortType: t, sortDirection: n } = e;
                 return t === i.E.RECENCY
                     ? n === o.F.DESC
@@ -73,7 +73,7 @@ let p = (e) => {
                               value: 'popularity'
                           };
             }, []),
-            b = l.useCallback(
+            h = l.useCallback(
                 (e) =>
                     ({
                         recent: {
@@ -103,7 +103,7 @@ let p = (e) => {
                     })[e],
                 []
             ),
-            m = h(d);
+            b = f(d);
         return (0, r.jsx)(a.yRy, {
             children: () =>
                 (0, r.jsx)(a.zxk, {
@@ -111,7 +111,7 @@ let p = (e) => {
                     onClick: () => t((e) => !e),
                     look: a.iLD.OUTLINED,
                     color: a.Ttl.PRIMARY,
-                    children: m.label
+                    children: b.label
                 }),
             closeOnScroll: !0,
             onRequestClose: () => t(!1),
@@ -119,10 +119,10 @@ let p = (e) => {
             align: 'right',
             renderPopout: () =>
                 (0, r.jsx)(p, {
-                    options: (0, c.aP)(f).map(h),
-                    selected: m,
+                    options: c.aP.map(f),
+                    selected: b,
                     onSelect: (e) => {
-                        g(b(e));
+                        g(h(e));
                     }
                 }),
             shouldShow: e,

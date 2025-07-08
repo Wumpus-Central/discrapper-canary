@@ -18,7 +18,7 @@ let d = (e) => {
 };
 function u(e) {
     var t;
-    let { title: n, body: r, badge: o, className: u, footerLink: m } = e,
+    let { title: n, body: r, badge: o, className: u, textLink: m } = e,
         p = null == (t = null == m ? void 0 : m.external) || t;
     return (0, i.jsxs)('div', {
         className: s()(c.header, u),

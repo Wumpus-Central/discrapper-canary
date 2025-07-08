@@ -33,7 +33,7 @@ var r = n(255367),
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
 function P(e) {
-    let { containerContext: t, image: n, title: a, description: R, enableSocialProof: P, analyticsLocationSection: w, upsellViewedTrackingData: D, onClose: L, onDisplay: x, onLearnMore: k, isEmojiPickerOverlay: M = !1 } = e,
+    let { containerContext: t, image: n, title: a, description: R, enableSocialProof: P, analyticsLocationSection: w, upsellViewedTrackingData: D, onClose: L, onDisplay: x, onLearnMore: M, isEmojiPickerOverlay: k = !1 } = e,
         j = (0, s.e7)([g.Z], () => g.Z.affinities),
         U = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     (i.useEffect(() => {
@@ -49,7 +49,7 @@ function P(e) {
                 location_section: w,
                 location_object: T.qAy.NAVIGATION_LINK
             }),
-                null == k || k(),
+                null == M || M(),
                 (0, _.Z)(),
                 L(),
                 (0, d.xf)(),
@@ -61,7 +61,7 @@ function P(e) {
             return null != (e = (0, m.fr)(F)) ? e : S.intl.string(S.t.pj0XBA);
         }, [F]),
         H = (0, l.ap)((0, f.ZP)());
-    return (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && M
+    return (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && k
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(c.ZMr, {

@@ -89,7 +89,7 @@ function x(e) {
     let n,
         m,
         T,
-        { channel: R, entry: x, closePopout: k, onReaction: M, onVoiceChannelPreview: j } = e,
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -144,7 +144,7 @@ function x(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k());
+                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
             };
             X.push(
                 (0, r.jsx)(
@@ -183,7 +183,7 @@ function x(e) {
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: M,
+                    onReaction: k,
                     onVoiceChannelPreview: j,
                     user: Z,
                     channel: R,

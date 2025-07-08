@@ -6,7 +6,7 @@
     J0: () => P,
     K8: () => L,
     RE: () => T,
-    Vt: () => M,
+    Vt: () => k,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
@@ -16,14 +16,13 @@
     kN: () => w,
     lb: () => A,
     o0: () => U,
-    o8: () => k,
+    o8: () => M,
     pv: () => R,
     rL: () => m,
     xg: () => G,
     yf: () => b
 }),
     n(388685),
-    n(290780),
     n(73800));
 var r = n(463570),
     i = n.n(r),
@@ -161,45 +160,39 @@ let I = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
     D = new Date('2025-02-15T23:59:00-08:00'),
     L = 3,
     x = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
-var k = (function (e) {
+var M = (function (e) {
     return ((e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e);
 })({});
-let M = {
+let k = {
         ORB_PROFILE_BADGE: '1342211853484429445',
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY
     },
-    j = new Set(Object.values(M)),
+    j = new Set(Object.values(k)),
     U = (e) => j.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    B = (e) => {
-        let t = [
-            {
-                sortType: d.E.RECENCY,
-                sortDirection: u.F.DESC
-            },
-            {
-                sortType: d.E.RECENCY,
-                sortDirection: u.F.ASC
-            },
-            {
-                sortType: d.E.PRICE,
-                sortDirection: u.F.ASC
-            },
-            {
-                sortType: d.E.PRICE,
-                sortDirection: u.F.DESC
-            },
-            {
-                sortType: d.E.POPULARITY,
-                sortDirection: u.F.DESC
-            }
-        ];
-        return (
-            '' !== e &&
-                t.unshift({
-                    sortType: d.E.RELEVANCE,
-                    sortDirection: u.F.DESC
-                }),
-            t
-        );
-    };
+    B = [
+        {
+            sortType: d.E.RELEVANCE,
+            sortDirection: u.F.DESC
+        },
+        {
+            sortType: d.E.RECENCY,
+            sortDirection: u.F.DESC
+        },
+        {
+            sortType: d.E.RECENCY,
+            sortDirection: u.F.ASC
+        },
+        {
+            sortType: d.E.PRICE,
+            sortDirection: u.F.ASC
+        },
+        {
+            sortType: d.E.PRICE,
+            sortDirection: u.F.DESC
+        },
+        {
+            sortType: d.E.POPULARITY,
+            sortDirection: u.F.DESC
+        }
+    ];

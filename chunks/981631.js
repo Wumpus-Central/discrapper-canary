@@ -12,7 +12,7 @@
     AEg: () => nO,
     ANM: () => eS,
     AQB: () => ew,
-    AeJ: () => nk,
+    AeJ: () => nM,
     Ai1: () => g.Ai,
     AlD: () => g.Al,
     AzA: () => rO,
@@ -42,7 +42,7 @@
     EkH: () => O,
     Etm: () => g.Et,
     Eu4: () => nn,
-    FD8: () => eM,
+    FD8: () => ek,
     FQ1: () => rD,
     Fc: () => tt,
     FoC: () => q,
@@ -153,7 +153,7 @@
     ULH: () => R,
     Ucd: () => rZ,
     Uk1: () => g.Uk,
-    UkZ: () => rM,
+    UkZ: () => rk,
     Usc: () => H,
     Uvt: () => l.U,
     V$x: () => c.V,
@@ -241,16 +241,16 @@
     ihW: () => E.ih,
     ipw: () => et,
     ivE: () => nZ,
-    j3N: () => ek,
+    j3N: () => eM,
     j8d: () => g.j8,
-    jXE: () => tk,
+    jXE: () => tM,
     jm8: () => rR,
     jsM: () => rf,
     jwA: () => nA,
     kEZ: () => j,
     kGb: () => rs,
     kNB: () => ri,
-    kVF: () => k,
+    kVF: () => M,
     kg4: () => v,
     kod: () => eb,
     l$U: () => eH,
@@ -281,13 +281,13 @@
     pmI: () => t3,
     q5t: () => tD,
     q9n: () => nG,
-    qAy: () => tM,
+    qAy: () => tk,
     qWG: () => rG,
     qXD: () => rm,
     qc2: () => rr,
     qhL: () => te,
     qrD: () => w,
-    r2o: () => M,
+    r2o: () => k,
     rMx: () => np,
     rnv: () => tI,
     rsA: () => nT,
@@ -321,7 +321,7 @@
     wC$: () => Q,
     wI2: () => rI,
     wZ8: () => ef,
-    wli: () => rk,
+    wli: () => rM,
     x0X: () => nY,
     x8Z: () => rv,
     xAR: () => rB,
@@ -331,7 +331,7 @@
     xjy: () => eN,
     xmn: () => G,
     xr4: () => g.xr,
-    yXg: () => nM,
+    yXg: () => nk,
     yXt: () => g.yX,
     yYS: () => g.yY,
     yb: () => Y,
@@ -410,10 +410,10 @@ var o = n(106351),
     x = (function (e) {
         return ((e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e);
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return ((e.GENERIC = 'GENERIC'), (e.LAUNCH_GAME_FAILURE = 'LAUNCH_GAME_FAILURE'), (e.UNCLAIMED_ACCOUNT = 'UNCLAIMED_ACCOUNT'), (e.UNVERIFIED_ACCOUNT = 'UNVERIFIED_ACCOUNT'), (e.PENDING_MEMBER = 'PENDING_MEMBER'), (e.DOWNLOAD_NAG = 'DOWNLOAD_NAG'), (e.VOICE_DISABLED = 'VOICE_DISABLED'), (e.SCHEDULED_MAINTENANCE = 'SCHEDULED_MAINTENANCE'), (e.NO_INPUT_DETECTED = 'NO_INPUT_DETECTED'), (e.NO_INPUT_DEVICES_DETECTED = 'NO_INPUT_DEVICES_DETECTED'), (e.H264_DISABLED = 'H264_DISABLED'), (e.STREAMER_MODE = 'STREAMER_MODE'), (e.SURVEY = 'SURVEY'), (e.CORRUPT_INSTALLATION = 'CORRUPT_INSTALLATION'), (e.VIDEO_UNSUPPORTED_BROWSER = 'VIDEO_UNSUPPORTED_BROWSER'), (e.CONNECT_SPOTIFY = 'CONNECT_SPOTIFY'), (e.SPOTIFY_AUTO_PAUSED = 'SPOTIFY_AUTO_PAUSED'), (e.PREMIUM_PROMO = 'PREMIUM_PROMO'), (e.MFA_SMS_BACKUP = 'MFA_SMS_BACKUP'), (e.HARDWARE_MUTE = 'HARDWARE_MUTE'), (e.DISPATCH_ERROR = 'DISPATCH_ERROR'), (e.DISPATCH_INSTALL_SCRIPT_PROGRESS = 'DISPATCH_INSTALL_SCRIPT_PROGRESS'), (e.APPLICATION_TEST_MODE = 'APPLICATION_TEST_MODE'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL'), (e.PREMIUM_TIER_2_TRIAL_ENDING = 'PREMIUM_TIER_2_TRIAL_ENDING'), (e.PREMIUM_TIER_0_TRIAL_ENDING = 'PREMIUM_TIER_0_TRIAL_ENDING'), (e.LURKING_GUILD = 'LURKING_GUILD'), (e.VIEWING_ROLES = 'VIEWING_ROLES'), (e.INVITED_TO_SPEAK = 'INVITED_TO_SPEAK'), (e.OUTBOUND_PROMOTION = 'OUTBOUND_PROMOTION'), (e.PREMIUM_UNCANCEL = 'PREMIUM_UNCANCEL'), (e.PREMIUM_MISSING_PAYMENT = 'PREMIUM_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_MISSING_PAYMENT = 'PREMIUM_PAST_DUE_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_INVALID_PAYMENT = 'PREMIUM_PAST_DUE_INVALID_PAYMENT'), (e.PREMIUM_REACTIVATE = 'PREMIUM_REACTIVATE'), (e.CONNECT_PLAYSTATION = 'CONNECT_PLAYSTATION'), (e.LOCALIZED_PRICING = 'LOCALIZED_PRICING'), (e.BACK_TO_PREVIOUS_SCREEN = 'BACK_TO_PREVIOUS_SCREEN'), (e.QUARANTINED = 'QUARANTINED'), (e.PREMIUM_TIER_0 = 'PREMIUM_TIER_0'), (e.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT = 'PREMIUM_PAST_DUE_ONE_TIME_PAYMENT'), (e.BOUNCED_EMAIL_DETECTED = 'BOUNCED_EMAIL_DETECTED'), (e.AUTO_MODERATION_MENTION_RAID_DETECTION = 'AUTO_MODERATION_MENTION_RAID_DETECTION'), (e.ACTIVATE_SERVER_SUBSCRIPTION = 'ACTIVATE_SERVER_SUBSCRIPTION'), (e.AUTOMOD_QUARANTINED_USER_PROFILE = 'AUTOMOD_QUARANTINED_USER_PROFILE'), (e.POMELO_ELIGIBLE = 'POMELO_ELIGIBLE'), (e.GUILD_RAID_NOTIFICATION = 'GUILD_RAID_NOTIFICATION'), (e.SAFETY_USER_SENTIMENT_NAGBAR = 'SAFETY_USER_SENTIMENT_NAGBAR'), (e.WIN32_DEPRECATED_MESSAGE = 'WIN32_DEPRECATED_MESSAGE'), (e.BLOCKED_BY_PROXY = 'BLOCKED_BY_PROXY'), (e.VOICE_CONNECTED_LAST_SESSION = 'VOICE_CONNECTED_LAST_SESSION'), (e.HABITUAL_DND = 'HABITUAL_DND'), (e.WIN7_8_DEPRECATED_MESSAGE = 'WIN7_8_DEPRECATED_MESSAGE'), (e.QUESTS_PROGRESS_INTERRUPTION = 'QUESTS_PROGRESS_INTERRUPTION'), (e.CHECKOUT_RECOVERY_NAGBAR = 'CHECKOUT_RECOVERY_NAGBAR'), (e.BLOCK_USER_FEEDBACK_NAGBAR = 'BLOCK_USER_FEEDBACK_NAGBAR'), (e.IGNORE_USER_FEEDBACK_NAGBAR = 'IGNORE_USER_FEEDBACK_NAGBAR'), (e.GIFTING_PROMOTION_REMINDER = 'GIFTING_PROMOTION_REMINDER'), (e.LOGIN = 'LOGIN'), (e.REGISTER = 'REGISTER'), (e.MACOS_19_DEPRECATED_MESSAGE = 'MACOS_19_DEPRECATED_MESSAGE'), (e.REPORT_TO_MOD_SURVEY = 'REPORT_TO_MOD_SURVEY'), e);
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return ((e.RESOLVING = 'RESOLVING'), (e.RESOLVED = 'RESOLVED'), (e.EXPIRED = 'EXPIRED'), (e.BANNED = 'BANNED'), (e.ACCEPTING = 'ACCEPTING'), (e.ACCEPTED = 'ACCEPTED'), (e.APP_OPENING = 'APP_OPENING'), (e.APP_OPENED = 'APP_OPENED'), (e.APP_NOT_OPENED = 'APP_NOT_OPENED'), (e.ERROR = 'ERROR'), e);
     })({}),
     j = (function (e) {
@@ -1551,8 +1551,8 @@ let eR = 100,
     eD = 50,
     eL = 25,
     ex = 200,
-    ek = 100,
-    eM = 250,
+    eM = 100,
+    ek = 250,
     ej = 2000,
     eU = 4000,
     eG = 50,
@@ -2022,7 +2022,7 @@ var tC = (function (e) {
         );
     })({});
 let tx = 'help_center_cta';
-var tk = (function (e) {
+var tM = (function (e) {
         return (
             (e.HERO = 'Hero'),
             (e.BODY = 'Body'),
@@ -2414,7 +2414,7 @@ var tk = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.TOOLTIP = 'Tooltip'),
             (e.CARD = 'Card'),
@@ -4488,17 +4488,17 @@ var nw = (function (e) {
         return ((e.CAPTCHA = 'captcha'), (e.EMAIL_OR_PHONE = 'email_or_phone'), (e.PHONE = 'phone'), (e.EMAIL = 'email'), (e.REVERIFY_PHONE = 'reverify_phone'), (e.REVERIFY_EMAIL = 'reverify_email'), e);
     })({});
 let nx = 512;
-var nk = (function (e) {
+var nM = (function (e) {
         return ((e[(e.PRIMARY = 0)] = 'PRIMARY'), (e[(e.SECONDARY = 2)] = 'SECONDARY'), (e[(e.WHEEL = 4)] = 'WHEEL'), (e[(e.BACK = 8)] = 'BACK'), (e[(e.FORWARD = 16)] = 'FORWARD'), e);
     })({}),
-    nM = (function (e) {
+    nk = (function (e) {
         return ((e[(e.BACKSPACE = 8)] = 'BACKSPACE'), (e[(e.TAB = 9)] = 'TAB'), (e[(e.ENTER = 13)] = 'ENTER'), (e[(e.ESCAPE = 27)] = 'ESCAPE'), (e[(e.SPACE = 32)] = 'SPACE'), (e[(e.END = 35)] = 'END'), (e[(e.HOME = 36)] = 'HOME'), (e[(e.ARROW_LEFT = 37)] = 'ARROW_LEFT'), (e[(e.ARROW_UP = 38)] = 'ARROW_UP'), (e[(e.ARROW_RIGHT = 39)] = 'ARROW_RIGHT'), (e[(e.ARROW_DOWN = 40)] = 'ARROW_DOWN'), (e[(e.DELETE = 46)] = 'DELETE'), (e[(e.DIGIT_0 = 48)] = 'DIGIT_0'), (e[(e.DIGIT_1 = 49)] = 'DIGIT_1'), (e[(e.DIGIT_2 = 50)] = 'DIGIT_2'), (e[(e.DIGIT_3 = 51)] = 'DIGIT_3'), (e[(e.DIGIT_4 = 52)] = 'DIGIT_4'), (e[(e.DIGIT_5 = 53)] = 'DIGIT_5'), (e[(e.DIGIT_6 = 54)] = 'DIGIT_6'), (e[(e.DIGIT_7 = 55)] = 'DIGIT_7'), (e[(e.DIGIT_8 = 56)] = 'DIGIT_8'), (e[(e.DIGIT_9 = 57)] = 'DIGIT_9'), (e[(e.A = 65)] = 'A'), (e[(e.B = 66)] = 'B'), (e[(e.D = 68)] = 'D'), (e[(e.E = 69)] = 'E'), (e[(e.H = 72)] = 'H'), (e[(e.I = 73)] = 'I'), (e[(e.K = 75)] = 'K'), (e[(e.N = 78)] = 'N'), (e[(e.P = 80)] = 'P'), (e[(e.S = 83)] = 'S'), (e[(e.U = 85)] = 'U'), (e[(e.COMMA = 188)] = 'COMMA'), e);
     })({}),
     nj = (function (e) {
         return ((e.TOP_LEFT = 'top-left'), (e.TOP_RIGHT = 'top-right'), (e.BOTTOM_LEFT = 'bottom-left'), (e.BOTTOM_RIGHT = 'bottom-right'), e);
     })({}),
     nU = (function (e) {
-        return ((e.VIDEO = 'VIDEO'), (e.EMBED_IFRAME = 'EMBED_IFRAME'), e);
+        return ((e.VIDEO = 'VIDEO'), (e.ACTIVITY = 'ACTIVITY'), (e.FRAME = 'FRAME'), e);
     })({}),
     nG = (function (e) {
         return ((e.GIF = 'GIF'), (e.STICKER = 'STICKER'), e);
@@ -5212,8 +5212,8 @@ var rN = (function (e) {
     rx = (function (e) {
         return ((e.UNKNOWN = 'unknown'), (e.SLOW_TWO_G = 'slow-2g'), (e.TWO_G = '2g'), (e.THREE_G = '3g'), (e.FOUR_G = '4g'), (e.FIVE_G = '5g'), e);
     })({});
-let rk = 'discodoEasterEgg';
-var rM = (function (e) {
+let rM = 'discodoEasterEgg';
+var rk = (function (e) {
         return ((e.INITIAL = 'initial'), (e.ENTER = 'enter'), (e.UPDATE = 'update'), (e.LEAVE = 'leave'), e);
     })({}),
     rj = (function (e) {

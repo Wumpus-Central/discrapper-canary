@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(896246),
     L = n(320317),
     x = n(994427),
-    k = n(814076),
-    M = n(712297),
+    M = n(814076),
+    k = n(712297),
     j = n(585686),
     U = n(771206),
     G = n(362755),
@@ -131,7 +131,7 @@ function X(e) {
             isGift: X,
             excludeSubscriptionPlansBySKU: en
         }),
-        eO = (0, k.Z)(),
+        eO = (0, M.Z)(),
         [ev, eI] = i.useState(!1),
         {
             step: eT,
@@ -145,8 +145,8 @@ function X(e) {
         }),
         [eR, eP] = (0, x.Z)(eT),
         { paymentError: ew, paymentAuthenticationState: eD } = (0, D.Z)(),
-        { purchaseError: eL, purchaseErrorBlockRef: ex, setPurchaseError: ek } = (0, L.Z)(),
-        eM = (0, u.Z)(() => {
+        { purchaseError: eL, purchaseErrorBlockRef: ex, setPurchaseError: eM } = (0, L.Z)(),
+        ek = (0, u.Z)(() => {
             let e = null != T ? T : (0, l.Z)();
             return (
                 N.Z.addBreadcrumb({ message: 'Checkout session ID: '.concat(e) }),
@@ -184,7 +184,7 @@ function X(e) {
             hasFetchedSkus: ti,
             skuPricePreviewsById: ta,
             previewErrorsById: to
-        } = (0, M.Z)({
+        } = (0, k.Z)({
             applicationId: null != ee ? ee : V.CL,
             skuIDs: q,
             currentPaymentSourceId: ef,
@@ -225,7 +225,7 @@ function X(e) {
                 {
                     stripe: ei,
                     paymentElementsEnabled: tT,
-                    contextMetadata: eM,
+                    contextMetadata: ek,
                     blockedPayments: ea,
                     activeSubscription: Z,
                     hasFetchedSubscriptions: eo,
@@ -260,7 +260,7 @@ function X(e) {
                 paymentAuthenticationState: eD,
                 paymentError: ew,
                 purchaseError: eL,
-                setPurchaseError: ek,
+                setPurchaseError: eM,
                 purchasePreviewError: tc,
                 setPurchasePreviewError: tu,
                 purchaseErrorBlockRef: ex,

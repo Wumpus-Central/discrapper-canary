@@ -6,14 +6,14 @@
     L1: () => K,
     Ow: () => W,
     PZ: () => z,
-    WA: () => M,
+    WA: () => k,
     Wx: () => R,
     XZ: () => H,
     Y$: () => G,
     Yn: () => Z,
     dF: () => j,
     jD: () => D,
-    lf: () => k,
+    lf: () => M,
     pF: () => Y,
     sl: () => B,
     vJ: () => x,
@@ -137,11 +137,11 @@ function x(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
-function k(e) {
+function M(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
-function M(e) {
+function k(e) {
     let t = U(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())],
         r = Date.now();
@@ -152,7 +152,7 @@ function M(e) {
     return o.ww.NONE;
 }
 function j(e) {
-    switch (M(e)) {
+    switch (k(e)) {
         case o.ww.NEW:
             return 'New';
         case o.ww.UPDATED:

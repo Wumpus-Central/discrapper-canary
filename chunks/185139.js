@@ -22,16 +22,16 @@ function O(e) {
     let { steps: t, currentStep: n, body: o, paymentError: O, header: v, footer: I, isGift: T = !1, giftMessage: S = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: A = !1, isLoading: N = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
         x = null;
     null != O && null == (0, p.ly)(O) ? (x = O) : null != C ? (x = C) : null != P && (x = P);
-    let k = null != x ? x.message : '';
-    null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (k += ' '.concat(E.intl.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
-    let { stripe: M } = (0, _.JL)();
-    N = N || null == M;
+    let M = null != x ? x.message : '';
+    null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (M += ' '.concat(E.intl.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, _.JL)();
+    N = N || null == k;
     let j = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = j.current;
         return (
-            null != M || e.isStarted()
-                ? null != M && e.stop()
+            null != k || e.isStarted()
+                ? null != k && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error('Stripe took too long to load');
                       (0, h.q2)(e);
@@ -40,11 +40,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [M]);
+    }, [k]);
     let U = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
-        stripe: M,
+        stripe: k,
         children: [
             v,
             (0, r.jsxs)('div', {
@@ -82,7 +82,7 @@ function O(e) {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: R,
-                                          children: k
+                                          children: M
                                       })
                                   }),
                             N

@@ -101,7 +101,7 @@ let b = function (e) {
             confirmationFooter: N,
             paymentModalBanner: C
         };
-    function k(e) {
+    function M(e) {
         let n = null != R ? R : t === d.Si.TIER_1 ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN;
         return (0, r.jsx)(
             c.Z,
@@ -155,7 +155,7 @@ let b = function (e) {
     return null != L.buttonTooltipText
         ? (0, r.jsx)(s.ua7, {
               text: L.buttonTooltipText,
-              children: k
+              children: M
           })
-        : k();
+        : M();
 };
