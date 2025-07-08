@@ -33121,6 +33121,10 @@ body .headerAnimation_b54a5b {
     flex-direction: column
 }
 
+.loadingContainer_ceece4 {
+    padding-top: 18px
+}
+
 .visible_ceece4 {
     transform: translateX(0)
 }
