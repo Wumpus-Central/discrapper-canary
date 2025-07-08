@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(481060),
     m = n(391650),
     f = n(313201),
-    _ = n(314897),
-    g = n(594174),
+    g = n(314897),
+    _ = n(594174),
     h = n(626135),
     b = n(361207),
     E = n(981631),
@@ -77,7 +77,7 @@ let x = [
             { platform: n, onClick: i, onMouseEnter: l, isActive: o, claimed: s } = e,
             { getOs: c, icon: u, url: d, platformKey: m } = n,
             f = c(),
-            _ = a()(C.icon, u);
+            g = a()(C.icon, u);
         if (Array.isArray(d))
             t = d.map((e, t) => {
                 let n = s ? e.url() : '';
@@ -107,7 +107,7 @@ let x = [
                 children: [
                     (0, r.jsxs)('div', {
                         className: C.iconWrap,
-                        children: [(0, r.jsx)('div', { className: _ }), (0, r.jsx)('div', { className: a()(C.active, _) })]
+                        children: [(0, r.jsx)('div', { className: g }), (0, r.jsx)('div', { className: a()(C.active, g) })]
                     }),
                     (0, r.jsxs)('div', {
                         children: [
@@ -128,8 +128,8 @@ let x = [
     };
 function I(e) {
     let { source: t, onClose: n, transitionState: l } = e,
-        a = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
-        o = (0, d.e7)([_.default], () => _.default.getFingerprint()),
+        a = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
+        o = (0, d.e7)([g.default], () => g.default.getFingerprint()),
         b = null == a || a.isClaimed(),
         [O, I] = i.useState(
             (function () {

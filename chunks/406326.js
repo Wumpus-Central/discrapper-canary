@@ -33,7 +33,7 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { searchMode: t, searchByMode: n } = e;
+    let { searchMode: t, onSearchModeChange: n } = e;
     return (0, r.jsxs)('header', {
         className: c.searchHeader,
         children: [

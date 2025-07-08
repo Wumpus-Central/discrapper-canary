@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(313201),
     m = n(542578),
     f = n(203143),
-    _ = n(79390),
-    g = n(839963),
+    g = n(79390),
+    _ = n(839963),
     h = n(139256),
     b = n(294608),
     E = n(388032),
@@ -46,11 +46,11 @@ function x(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
-        [g, h] = i.useState(''),
+        [_, h] = i.useState(''),
         [E, x] = i.useState(!1),
-        v = '' !== g && E,
+        v = '' !== _ && E,
         O = i.useCallback(() => {
-            h((0, _.e1)(u, c, a));
+            h((0, g.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
             (O(), x(!0));
@@ -92,7 +92,7 @@ function x(e) {
                                   variant: 'text-sm/normal',
                                   color: 'text-muted',
                                   scaleFontToUserSetting: !0,
-                                  children: g
+                                  children: _
                               }),
                               forceOpen: v,
                               'aria-label': !1,
@@ -133,7 +133,7 @@ function x(e) {
                           v &&
                               (0, r.jsx)(o.T, {
                                   id: s,
-                                  children: g
+                                  children: _
                               })
                       ]
                   })
@@ -172,14 +172,14 @@ function O(e) {
         answersInteraction: t,
         didSelfVote: i
     })
-        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
+        .with({ answersInteraction: _.Y7.RADIO_BUTTONS }, () =>
             (0, r.jsx)(h.Og, {
                 isSelected: n,
                 size: 24,
                 className: o
             })
         )
-        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
+        .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
             (0, r.jsx)(h.zs, {
                 isSelected: n,
                 size: 20,
@@ -188,7 +188,7 @@ function O(e) {
         )
         .with(
             {
-                answersInteraction: g.Y7.LIST,
+                answersInteraction: _.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
@@ -209,7 +209,7 @@ function j(e) {
         m = t.shouldAnimateTransition;
     return (0, r.jsxs)('div', {
         className: a()(y.answerInner, {
-            [y.currentlyVoting]: i !== g.Y7.LIST,
+            [y.currentlyVoting]: i !== _.Y7.LIST,
             [y.selected]: c
         }),
         children: [

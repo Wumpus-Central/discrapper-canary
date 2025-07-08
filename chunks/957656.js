@@ -3,15 +3,15 @@ var n = t(255367);
 t(73800);
 var o = t(481060),
     s = t(198952),
-    l = t(329242),
-    c = t(916723),
-    i = t(388032),
+    i = t(329242),
+    l = t(916723),
+    c = t(388032),
     a = t(305623);
 let d = (e) => {
     var r,
         t,
-        { children: s, className: l } = e,
-        c = (function (e, r) {
+        { children: s, className: i } = e,
+        l = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -56,7 +56,7 @@ let d = (e) => {
                     }));
             }
             return e;
-        })({ className: l }, c)),
+        })({ className: i }, l)),
         (t = t =
             {
                 parentComponent: 'FamilyCenterCommonModal',
@@ -85,13 +85,13 @@ let d = (e) => {
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: c, header: i } = e;
+        let { icon: r, currentUser: t, otherUser: l, header: c } = e;
         return (0, n.jsxs)('div', {
             className: a.header,
             children: [
                 (0, n.jsx)(s.Z, {
                     currentUser: t,
-                    otherUser: c,
+                    otherUser: l,
                     children: r
                 }),
                 (0, n.jsxs)('div', {
@@ -99,9 +99,9 @@ let d = (e) => {
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: 'text-lg/bold',
-                            children: i
+                            children: c
                         }),
-                        (0, n.jsx)(l.Z, { user: c })
+                        (0, n.jsx)(i.Z, { user: l })
                     ]
                 })
             ]
@@ -122,7 +122,7 @@ let d = (e) => {
                 (0, n.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: i.intl.string(c.default.cXgKMD)
+                    children: c.intl.string(l.default.cXgKMD)
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',

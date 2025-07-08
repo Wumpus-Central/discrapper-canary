@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(539854), n(781311), n(290780));
+(n.d(t, { Z: () => k }), n(539854), n(781311), n(290780));
 var r,
     s,
     l,
@@ -84,7 +84,7 @@ function j(e, t) {
             cursorScope: d,
             autocompletes: h
         })),
-        k.emitChange());
+        w.emitChange());
 }
 function C(e, t, n) {
     var r, s, l;
@@ -257,7 +257,7 @@ class A extends (r = a.ZP.Store) {
               writable: !0
           })
         : (A[s] = l));
-let k = new A(i.Z, {
+let w = new A(i.Z, {
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
             var t;
             let n,
@@ -310,4 +310,4 @@ let k = new A(i.Z, {
             Object.keys(E).forEach(T);
         }
     }),
-    w = k;
+    k = w;

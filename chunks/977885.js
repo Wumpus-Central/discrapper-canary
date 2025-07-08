@@ -1,55 +1,81 @@
-(n.d(t, { Z: () => d }), n(388685));
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(392711),
     s = n.n(r),
     l = n(570140),
-    a = n(952537),
-    i = n(405656),
-    o = n(700366),
-    c = n(416638),
-    u = n(981631);
-let d = {
+    a = n(603263),
+    i = n(952537),
+    o = n(405656),
+    c = n(700366),
+    u = n(416638),
+    d = n(981631);
+let h = {
     fetchMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: u, trackExactTotalHits: d, getLimit: h, onFetchStart: p, onFetchSuccess: f } = e,
-            g = i.kG(r),
-            m = i.$G(g);
+        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: h, trackExactTotalHits: p, getLimit: f, onFetchStart: g, onFetchSuccess: m, searchMode: S = d.QIO.NEWEST } = e,
+            y = o.kG(r),
+            b = o.$G(y);
         !(function (e) {
             if (!Array.isArray(e.pinned)) return;
             let t = e.pinned.some((e) => !0 === e);
             e.pinned = t;
-        })(m);
-        let S = (0, c.s5)(t);
-        null != S && i.jW(m, S);
-        let y = o.Z.getSearchTabFetcher({
+        })(b);
+        let x = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    ('function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            ((r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r));
+                        }));
+                }
+                return e;
+            })({}, b, (0, a.zH)(S)),
+            _ = (0, u.s5)(t);
+        null != _ && o.jW(x, _);
+        let E = c.Z.getSearchTabFetcher({
                 searchContext: t,
-                searchQuery: m,
+                searchQuery: x,
                 searchTabs: n,
-                getLimit: h,
-                pagination: u,
-                trackExactTotalHits: d
+                getLimit: f,
+                pagination: h,
+                trackExactTotalHits: p
             }),
-            b = n.map((e) => (0, c.jj)(t, e, r));
+            v = n.map((e) => (0, u.jj)(t, e, r));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: b
+                ids: v
             }),
-            null == p ||
-                p({
+            null == g ||
+                g({
                     searchContext: t,
                     searchQueryString: r,
-                    searchQuery: m
+                    searchQuery: x
                 }),
-            y.fetch(
+            E.fetch(
                 (e) => {
                     let { body: n } = e,
-                        i = Object.entries(n.tabs);
+                        a = Object.entries(n.tabs);
                     (l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_SUCCESS',
-                        guildId: S,
-                        data: i.map((e) => {
-                            var l, i, o;
-                            let [u, d] = e,
-                                h = (0, c.jj)(t, u, r),
+                        guildId: _,
+                        data: a.map((e) => {
+                            var l, a, o;
+                            let [c, d] = e,
+                                h = (0, u.jj)(t, c, r),
                                 p = d.cursor;
                             return {
                                 id: h,
@@ -58,47 +84,47 @@ let d = {
                                 cursor: null != p && s().isEmpty(p) ? null : p,
                                 messages: d.messages,
                                 channels: null != (l = d.channels) ? l : [],
-                                threads: null != (i = d.threads) ? i : [],
-                                members: (null != (o = d.members) ? o : []).map((e) => (0, a.Z)(e)),
+                                threads: null != (a = d.threads) ? a : [],
+                                members: (null != (o = d.members) ? o : []).map((e) => (0, i.Z)(e)),
                                 doingHistoricalIndex: n.doing_deep_historical_index,
                                 documentsIndexed: n.documents_indexed
                             };
                         })
                     }),
-                        i.forEach((e) => {
+                        a.forEach((e) => {
                             var r, s;
-                            let [i, o] = e;
+                            let [a, o] = e;
                             l.Z.dispatch({
                                 type: 'SEARCH_FINISH',
-                                searchId: (0, c.WJ)(t),
-                                guildId: (0, c.s5)(t),
+                                searchId: (0, u.WJ)(t),
+                                guildId: (0, u.s5)(t),
                                 analyticsId: n.analytics_id,
                                 totalResults: o.total_results,
                                 channels: o.channels,
                                 messages: o.messages,
                                 threads: null != (r = o.threads) ? r : [],
-                                members: (null != (s = o.members) ? s : []).map((e) => (0, a.Z)(e)),
+                                members: (null != (s = o.members) ? s : []).map((e) => (0, i.Z)(e)),
                                 hasError: !1,
                                 doingHistoricalIndex: n.doing_deep_historical_index,
                                 documentsIndexed: n.documents_indexed
                             });
                         }),
-                        null == f ||
-                            f({
+                        null == m ||
+                            m({
                                 searchContext: t,
-                                tabEntries: i
+                                tabEntries: a
                             }));
                 },
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: b
+                        ids: v
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: b,
+                        ids: v,
                         error: e
                     });
                 }
@@ -113,8 +139,8 @@ let d = {
         l.Z.dispatch({ type: 'SEARCH_MESSAGES_CLEAR_ALL' });
     },
     addSearchHistoryItem: function (e, t) {
-        if (e.type !== u.aib.DMS && e.type !== u.aib.GUILD) return;
-        let n = (0, c.Tm)(e);
+        if (e.type !== d.aib.DMS && e.type !== d.aib.GUILD) return;
+        let n = (0, u.Tm)(e);
         l.Z.dispatch({
             type: 'SEARCH_HISTORY_ADD_ITEM',
             id: n,
@@ -122,7 +148,7 @@ let d = {
         });
     },
     removeSearchHistoryItem: function (e, t) {
-        let n = (0, c.Tm)(e);
+        let n = (0, u.Tm)(e);
         l.Z.dispatch({
             type: 'SEARCH_HISTORY_REMOVE_ITEM',
             id: n,
@@ -130,14 +156,14 @@ let d = {
         });
     },
     clearSearchHistory: function (e) {
-        let t = (0, c.Tm)(e);
+        let t = (0, u.Tm)(e);
         l.Z.dispatch({
             type: 'SEARCH_HISTORY_CLEAR_ITEMS',
             id: t
         });
     },
     openSearchScreen: function (e) {
-        let t = (0, c.WJ)(e);
+        let t = (0, u.WJ)(e);
         l.Z.dispatch({
             type: 'SEARCH_SCREEN_OPEN',
             searchId: t

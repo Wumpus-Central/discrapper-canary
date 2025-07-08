@@ -1,15 +1,16 @@
 n.d(t, {
-    Gn: () => y,
-    Nz: () => m,
+    Gn: () => C,
+    Nz: () => f,
     QQ: () => _,
-    QY: () => E,
-    Vj: () => p,
-    Vs: () => C,
-    j8: () => g,
-    oO: () => f,
-    qt: () => h,
-    u$: () => b,
-    yC: () => d
+    QY: () => y,
+    Vj: () => m,
+    Vs: () => x,
+    j8: () => h,
+    oO: () => g,
+    qt: () => b,
+    u$: () => E,
+    yC: () => d,
+    zH: () => p
 });
 var r = n(570140),
     i = n(652399),
@@ -78,43 +79,33 @@ function d(e, t, n, a) {
         }));
 }
 function p(e) {
+    switch (e) {
+        case s.QIO.MOST_RELEVANT:
+            return {
+                sort_by: 'relevance',
+                sort_order: 'desc'
+            };
+        case s.QIO.OLDEST:
+            return {
+                sort_by: 'timestamp',
+                sort_order: 'asc'
+            };
+        case s.QIO.NEWEST:
+        default:
+            return {
+                sort_by: 'timestamp',
+                sort_order: 'desc'
+            };
+    }
+}
+function m(e) {
     return null == e.sort_by || null == e.sort_order ? s.QIO.NEWEST : 'relevance' === e.sort_by ? s.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? s.QIO.OLDEST : s.QIO.NEWEST;
 }
-function m(e, t, n) {
-    let r = a.Z.getQuery(e);
-    return d(
-        e,
-        u(
-            c(
-                {},
-                r,
-                (function (e) {
-                    switch (e) {
-                        case s.QIO.MOST_RELEVANT:
-                            return {
-                                sort_by: 'relevance',
-                                sort_order: 'desc'
-                            };
-                        case s.QIO.OLDEST:
-                            return {
-                                sort_by: 'timestamp',
-                                sort_order: 'asc'
-                            };
-                        case s.QIO.NEWEST:
-                        default:
-                            return {
-                                sort_by: 'timestamp',
-                                sort_order: 'desc'
-                            };
-                    }
-                })(t)
-            ),
-            { offset: 0 }
-        ),
-        n
-    );
-}
 function f(e, t, n) {
+    let r = a.Z.getQuery(e);
+    return d(e, u(c({}, r, p(t)), { offset: 0 }), n);
+}
+function g(e, t, n) {
     var r = e,
         i = t * s.vpv,
         l = n;
@@ -128,7 +119,7 @@ function _(e) {
         searchId: e
     });
 }
-function g(e, t) {
+function h(e, t) {
     null != e &&
         r.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',
@@ -136,7 +127,7 @@ function g(e, t) {
             editorState: t
         });
 }
-function h(e) {
+function b(e) {
     r.Z.wait(() =>
         r.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CLEAR',
@@ -144,7 +135,7 @@ function h(e) {
         })
     );
 }
-function b(e, t, n) {
+function E(e, t, n) {
     null != e &&
         r.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
@@ -153,20 +144,20 @@ function b(e, t, n) {
             cursorScope: n
         });
 }
-function E(e, t) {
+function y(e, t) {
     r.Z.dispatch({
         type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
         searchId: e,
         showBlocked: t
     });
 }
-function y(e) {
+function C(e) {
     r.Z.dispatch({
         type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
         searchId: e
     });
 }
-function C(e, t, n) {
+function x(e, t, n) {
     r.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

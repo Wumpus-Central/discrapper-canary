@@ -11,8 +11,8 @@ var r,
     p = n(594190),
     m = n(592745),
     f = n(757266),
-    _ = n(417363),
-    g = n(358085),
+    g = n(417363),
+    _ = n(358085),
     h = n(346329),
     b = n(981631),
     E = n(388032),
@@ -109,7 +109,7 @@ class O extends (r = l.PureComponent) {
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: r, isLaunchable: l, isLaunching: a, isRunning: s, isShiny: u, hideNotLaunchable: d } = this.props;
-        if (!l) return d ? null : this.renderDisabledButton(E.intl.string(E.t['359PbW']), g.isPlatformEmbedded ? E.intl.string(E.t.NASLa2) : E.intl.string(E.t.o1bhkJ));
+        if (!l) return d ? null : this.renderDisabledButton(E.intl.string(E.t['359PbW']), _.isPlatformEmbedded ? E.intl.string(E.t.NASLa2) : E.intl.string(E.t.o1bhkJ));
         if (s) return this.renderDisabledButton(E.intl.string(E.t['3elwAA']));
         let p = u ? c.gtL : c.zxk;
         return (0, i.jsxs)(p, {
@@ -166,9 +166,9 @@ class O extends (r = l.PureComponent) {
 function j(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, d.O)(),
-        [l, a] = (0, s.Wu)([f.Z, m.Z, _.Z], () => [f.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && _.Z.isLaunchable(n.id, n.branchId)), m.Z.launchingGames.has(t)], [t, n]),
+        [l, a] = (0, s.Wu)([f.Z, m.Z, g.Z], () => [f.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && g.Z.isLaunchable(n.id, n.branchId)), m.Z.launchingGames.has(t)], [t, n]),
         o = (0, s.e7)([p.ZP], () => new Set(p.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
-        c = (0, s.e7)([_.Z], () => (null != n ? _.Z.getState(n.id, n.branchId) : null), [n]);
+        c = (0, s.e7)([g.Z], () => (null != n ? g.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         O,
         v(x({}, e), {

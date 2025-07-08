@@ -19,8 +19,8 @@ var r = n(255367),
     p = n(906732),
     m = n(915346),
     f = n(783097),
-    _ = n(812236),
-    g = n(561308),
+    g = n(812236),
+    _ = n(561308),
     h = n(567409),
     b = n(706454),
     E = n(314897),
@@ -39,7 +39,7 @@ var r = n(255367),
     w = n(388032),
     Z = n(758364);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
         { name: h, bot: b } = (t = (0, N.O)(t)),
         y = null == b ? void 0 : b.id,
         C = (0, f.ye)(t),
@@ -53,7 +53,7 @@ function R(e) {
         { analyticsLocations: D } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
-        H = (0, _.ms)({
+        H = (0, g.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
@@ -118,7 +118,7 @@ function R(e) {
             linkType: l,
             referrerId: R,
             activityCustomId: a,
-            onView: g
+            onView: _
         }
     });
 }
@@ -204,7 +204,7 @@ function L(e) {
                     guildId: c,
                     activityText: w.intl.string(w.t['IJa+4+'])
                 });
-            if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

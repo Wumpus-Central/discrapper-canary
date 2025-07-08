@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(568836),
     m = n(730749),
     f = n(112724),
-    _ = n(607070),
-    g = n(884697),
+    g = n(607070),
+    _ = n(884697),
     h = n(600164),
     b = n(479446),
     E = n(930114),
@@ -187,7 +187,7 @@ class z extends i.Component {
             (0, r.jsx)(
                 u.zxk,
                 G(B({}, l), {
-                    className: (0, g.mO)(e) ? U.collectiblesAcceptButton : null,
+                    className: (0, _.mO)(e) ? U.collectiblesAcceptButton : null,
                     size: u.zxk.Sizes.SMALL,
                     children: e.redeemed ? M.intl.string(M.t.BTihoq) : null != e.giftStyle ? M.intl.string(M.t.TiZFqa) : M.intl.string(M.t.bUvv1d)
                 })
@@ -208,7 +208,7 @@ class z extends i.Component {
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
         let o = r.isPreorder() ? M.intl.formatToPlainString(M.t.evinTU, { name: r.name }) : r.name;
         if (e.redeemed)
-            return e.isSubscription || (0, g.mO)(e)
+            return e.isSubscription || (0, _.mO)(e)
                 ? M.intl.string(M.t.mVC3Cg)
                 : M.intl.format(M.t['ss/L+/'], {
                       skuName: o,
@@ -304,7 +304,7 @@ class z extends i.Component {
                     width: n
                 });
             else return (0, r.jsx)(p.OR, { isHorizontal: n >= p.aL });
-        return (0, g.mO)(e)
+        return (0, _.mO)(e)
             ? (0, r.jsx)('div', {
                   className: U.collectiblesEmbedWrapper,
                   children: this.renderEmbed()
@@ -382,12 +382,12 @@ class z extends i.Component {
     }
 }
 let W = (0, f.Z)((0, m.Z)(z)),
-    K = c.ZP.connectStores([O.Z, T.Z, I.default, j.Z, S.Z, v.default, _.Z], (e) => {
+    K = c.ZP.connectStores([O.Z, T.Z, I.default, j.Z, S.Z, v.default, g.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
             i = O.Z.get(t),
             l = null != i ? T.Z.get(i.skuId) : null,
             a = null != i && null != i.userId ? I.default.getUser(i.userId) : null,
-            o = _.Z.useReducedMotion;
+            o = g.Z.useReducedMotion;
         return {
             sku: l,
             giftCode: i,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
@@ -27,7 +27,7 @@ class f extends (l = a.ZP.Store) {
               writable: !0
           })
         : (f[r] = i));
-let _ = new f(o.Z, {
+let g = new f(o.Z, {
     CONNECTION_OPEN: function () {
         return m !== (m = d.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(u.default.getId()) < Date.now() - p);
     }

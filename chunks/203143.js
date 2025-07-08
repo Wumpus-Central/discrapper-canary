@@ -19,8 +19,8 @@ var r = n(512722),
     p = n(749210),
     m = n(904245),
     f = n(881052),
-    _ = n(367907),
-    g = n(41776),
+    g = n(367907),
+    _ = n(41776),
     h = n(58873),
     b = n(566006),
     E = n(869765),
@@ -110,7 +110,7 @@ function L(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
         i = C.Z.getChannel(t);
     if (null == i) return;
-    if (g.Z.isLurking(i.guild_id))
+    if (_.Z.isLurking(i.guild_id))
         return void k({
             guildId: i.guild_id,
             title: A.intl.string(A.t['7LpysL']),
@@ -184,7 +184,7 @@ async function F(e) {
     let { channelId: t, messageId: n } = e,
         r = C.Z.getChannel(t);
     if (null == r) return;
-    if (g.Z.isLurking(r.guild_id))
+    if (_.Z.isLurking(r.guild_id))
         return void k({
             guildId: r.guild_id,
             title: A.intl.string(A.t.Qic1FB),
@@ -250,7 +250,7 @@ async function B(e) {
     let { channelId: t, messageId: n } = e,
         r = C.Z.getChannel(t);
     if (null != r)
-        return g.Z.isLurking(r.guild_id)
+        return _.Z.isLurking(r.guild_id)
             ? void k({
                   guildId: r.guild_id,
                   title: A.intl.string(A.t.B9QnBg),
@@ -308,7 +308,7 @@ async function G(e) {
                                   }, 0)
                                 : 0;
                     return (
-                        _.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                        g.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
                             channel_id: t,
                             message_id: n,
                             show_results: l,
@@ -399,7 +399,7 @@ let H = {
                 let e = new Set([r]),
                     { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = R(null == (n = o.poll) ? void 0 : n.answers, e);
                 return (
-                    _.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                    g.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                         channel_id: l,
                         message_id: a,
                         selected_answer_ids: t,
@@ -424,7 +424,7 @@ let H = {
             }
             let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = R(null == (t = o.poll) ? void 0 : t.answers, s);
             return (
-                _.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                g.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                     channel_id: l,
                     message_id: a,
                     selected_answer_ids: u,

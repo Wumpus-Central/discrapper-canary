@@ -17,14 +17,14 @@ var r = n(81643),
     p = n(723359),
     m = n(981631),
     f = n(388032);
-let _ = new Date('06/16/2020'),
-    g = [m.V_K.AGE_RESTRICTED, m.V_K.EXPLICIT];
+let g = new Date('06/16/2020'),
+    _ = [m.V_K.AGE_RESTRICTED, m.V_K.EXPLICIT];
 function h() {
     let e = c.default.getCurrentUser();
-    return null != e && u.default.extractTimestamp(e.id) > _.getTime() && null == e.nsfwAllowed;
+    return null != e && u.default.extractTimestamp(e.id) > g.getTime() && null == e.nsfwAllowed;
 }
 function b(e) {
-    return g.includes(e.nsfwLevel);
+    return _.includes(e.nsfwLevel);
 }
 function E() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),

@@ -3,7 +3,7 @@ n.d(t, {
     Cp: () => N,
     Cs: () => O,
     EY: () => x,
-    I5: () => g,
+    I5: () => _,
     JQ: () => j,
     RY: () => y,
     Sv: () => C,
@@ -16,7 +16,7 @@ n.d(t, {
     qS: () => I,
     s: () => b,
     sQ: () => m,
-    wo: () => _
+    wo: () => g
 });
 var r,
     i,
@@ -44,9 +44,9 @@ class m {}
 (p(m, 'TOS_LINK', 'https://discord.com/terms'), p(m, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), p(m, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), p(m, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), p(m, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), p(m, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__'), p(m, 'LEARN_MORE_UU_APPEAL_LINK', 'https://support.discord.com/hc/articles/360041820932'));
 class f {}
 (p(f, 'CLASSIFICATION_ID', 'classification_id'), p(f, 'INCIDENT_TIMESTAMP', 'incident_time'));
-var _ = (((r = {}).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link'), r);
-class g {}
-(p(g, 'ICON_TYPE', 'icon_type'), p(g, 'HEADER', 'header'), p(g, 'BODY', 'body'), p(g, 'CTAS', 'ctas'), p(g, 'TIMESTAMP', 'timestamp'), p(g, 'THEME', 'theme'), p(g, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), p(g, 'LEARN_MORE_LINK', 'learn_more_link'), p(g, 'CLASSIFICATION_ID', 'classification_id'));
+var g = (((r = {}).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link'), r);
+class _ {}
+(p(_, 'ICON_TYPE', 'icon_type'), p(_, 'HEADER', 'header'), p(_, 'BODY', 'body'), p(_, 'CTAS', 'ctas'), p(_, 'TIMESTAMP', 'timestamp'), p(_, 'THEME', 'theme'), p(_, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), p(_, 'LEARN_MORE_LINK', 'learn_more_link'), p(_, 'CLASSIFICATION_ID', 'classification_id'));
 var h = (((i = {})[(i.ViewViolationDetail = 0)] = 'ViewViolationDetail'), (i[(i.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'), (i[(i.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'), (i[(i.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'), (i[(i.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'), (i[(i.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'), (i[(i.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'), (i[(i.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'), i),
     b = (((l = {})[(l.SystemDM = 0)] = 'SystemDM'), (l[(l.StandingTab = 1)] = 'StandingTab'), (l[(l.AppealIngestion = 2)] = 'AppealIngestion'), l);
 Object.freeze({

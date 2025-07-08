@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(100527),
     m = n(367907),
     f = n(676742),
-    _ = n(1585),
-    g = n(841762),
+    g = n(1585),
+    _ = n(841762),
     h = n(336197),
     b = n(406432),
     E = n(348238),
@@ -124,15 +124,15 @@ function M(e) {
     if (null == V) return null;
     let em = (0, I.NZ)({
             avatarDecoration: en,
-            size: (0, _.y9)(u.EFr.SIZE_40),
+            size: (0, g.y9)(u.EFr.SIZE_40),
             canAnimate: es
         }),
         ef = null == (n = V.user) ? void 0 : n.getAvatarURL(V.guildId, 40, es),
-        e_ = () => {
+        eg = () => {
             eo.enabled || ec((e) => !e);
         },
-        eg = V.coverImage,
-        eh = null != eg && (0, b.d$)(eg);
+        e_ = V.coverImage,
+        eh = null != e_ && (0, b.d$)(e_);
     return (0, r.jsxs)('div', {
         className: R.postPreviewContainer,
         children: [
@@ -150,9 +150,9 @@ function M(e) {
                                   onContextMenu: W,
                                   onError: () => J(!0)
                               })
-                            : (0, r.jsx)(g.Z, {
-                                  src: !(Y && (K || X)) && eh ? ''.concat(eg, '?format=png') : eg,
-                                  backgroundSrc: ''.concat(eg, '?format=png'),
+                            : (0, r.jsx)(_.Z, {
+                                  src: !(Y && (K || X)) && eh ? ''.concat(e_, '?format=png') : e_,
+                                  backgroundSrc: ''.concat(e_, '?format=png'),
                                   alt: Z.intl.string(Z.t.rIbh8P),
                                   aspectRatio: 16 / 9,
                                   className: a()(R.thumbnail, { [R.spoiler]: V.shouldSpoiler }),
@@ -217,8 +217,8 @@ function M(e) {
                                     spacing: 12,
                                     children: (e) =>
                                         (0, r.jsx)('div', {
-                                            onMouseEnter: e_,
-                                            onMouseLeave: e_,
+                                            onMouseEnter: eg,
+                                            onMouseLeave: eg,
                                             children: (0, r.jsx)(
                                                 u.qEK,
                                                 D(L({}, e), {

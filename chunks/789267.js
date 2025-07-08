@@ -9,7 +9,7 @@ function o(e) {
         p = (0, i.ZP)(t),
         m = p.nick,
         f = u(p),
-        _ = (function (e) {
+        g = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
         })(t);
@@ -19,11 +19,11 @@ function o(e) {
               timestamp: t.timestamp,
               compact: o,
               children:
-                  null != _
+                  null != g
                       ? a.intl.format(a.t.AcqBmJ, {
                             username: m,
                             usernameHook: f,
-                            callDuration: _
+                            callDuration: g
                         })
                       : a.intl.format(a.t['43phHx'], {
                             username: m,
@@ -35,11 +35,11 @@ function o(e) {
               timestamp: t.timestamp,
               compact: o,
               children: [
-                  null != _
+                  null != g
                       ? a.intl.format(a.t['7TeC1N'], {
                             username: m,
                             usernameHook: f,
-                            callDuration: _
+                            callDuration: g
                         })
                       : a.intl.format(a.t.LuB5RE, {
                             username: m,

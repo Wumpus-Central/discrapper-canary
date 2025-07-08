@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(603721),
     m = n(124072),
     f = n(892001),
-    _ = n(592125),
-    g = n(485386),
+    g = n(592125),
+    _ = n(485386),
     h = n(430824),
     b = n(594174),
     E = n(739566),
@@ -156,7 +156,7 @@ let T = i.memo(function (e) {
                             }
                             case c.jw.CHANNEL: {
                                 let e = x.value.toString(),
-                                    t = _.Z.getChannel(e);
+                                    t = g.Z.getChannel(e);
                                 null != t &&
                                     (h = (0, r.jsxs)(
                                         m.Z,
@@ -168,7 +168,7 @@ let T = i.memo(function (e) {
                             }
                             case c.jw.ROLE: {
                                 let e = x.value.toString(),
-                                    t = null != N ? g.Z.getRole(N.id, e) : void 0;
+                                    t = null != N ? _.Z.getRole(N.id, e) : void 0;
                                 null != t &&
                                     (h = (0, r.jsxs)(
                                         m.Z,
@@ -180,7 +180,7 @@ let T = i.memo(function (e) {
                             }
                             case c.jw.MENTIONABLE: {
                                 let e = x.value.toString(),
-                                    t = null != N ? g.Z.getRole(N.id, e) : void 0;
+                                    t = null != N ? _.Z.getRole(N.id, e) : void 0;
                                 if (null != t)
                                     h = (0, r.jsxs)(m.Z, {
                                         children: [y.ME, t.name]

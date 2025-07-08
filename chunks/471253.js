@@ -1,63 +1,63 @@
 n.d(t, {
-    DT: () => f,
-    Ef: () => P,
-    HO: () => m,
-    NZ: () => y,
-    Pq: () => R,
-    Q1: () => g,
-    RK: () => S,
-    _0: () => O,
-    hz: () => A,
-    yi: () => N
+    DT: () => R,
+    Ef: () => y,
+    HO: () => C,
+    NZ: () => b,
+    Pq: () => P,
+    Q1: () => N,
+    RK: () => A,
+    _0: () => f,
+    hz: () => g,
+    yi: () => m
 });
-var i = n(512722),
-    r = n.n(i),
+var r = n(512722),
+    i = n.n(r),
     l = n(149765),
     o = n(544891),
-    s = n(493683);
+    a = n(493683);
 n(749210);
-var a = n(911969),
-    c = n(367907),
-    d = n(944486),
-    u = n(979651),
+var c = n(911969),
+    s = n(367907),
+    u = n(944486),
+    d = n(979651),
     _ = n(700785),
     E = n(922482),
-    h = n(192079),
+    O = n(192079),
     I = n(706058),
-    p = n(590415),
-    C = n(981631);
-function T(e) {
+    T = n(590415),
+    p = n(981631);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i));
+                        : (e[t] = r));
             }));
     }
     return e;
 }
-function g(e, t) {
+function N(e, t) {
     let n = e.getGuildId();
     return (
-        r()(null != n, 'This channel cannot be guildless.'),
-        t && (0, c.yw)(C.rMx.REQUEST_TO_SPEAK_INITIATED, T({}, (0, h.s$)(e))),
+        i()(null != n, 'This channel cannot be guildless.'),
+        t && (0, s.yw)(p.rMx.REQUEST_TO_SPEAK_INITIATED, S({}, (0, O.s$)(e))),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(n),
+            url: p.ANM.UPDATE_VOICE_STATE(n),
             body: {
                 request_to_speak_timestamp: t ? new Date().toISOString() : null,
                 channel_id: e.id
@@ -66,12 +66,12 @@ function g(e, t) {
         })
     );
 }
-function O(e, t) {
+function f(e, t) {
     let n = e.getGuildId();
     return (
-        r()(null != n, 'This channel cannot be guildless.'),
+        i()(null != n, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(n, t),
+            url: p.ANM.UPDATE_VOICE_STATE(n, t),
             body: {
                 suppress: !1,
                 request_to_speak_timestamp: new Date().toISOString(),
@@ -81,16 +81,16 @@ function O(e, t) {
         })
     );
 }
-function S(e, t) {
+function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = null == e ? void 0 : e.getGuildId();
-    r()(null != i, 'This channel cannot be guildless.');
-    let l = u.Z.getVoiceStateForChannel(e.id);
+        r = null == e ? void 0 : e.getGuildId();
+    i()(null != r, 'This channel cannot be guildless.');
+    let l = d.Z.getVoiceStateForChannel(e.id);
     return (
-        (0, p.gf)(l) !== p.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, c.yw)(C.rMx.PROMOTED_TO_SPEAKER, T({}, (0, h.s$)(e))),
+        (0, T.gf)(l) !== T.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, s.yw)(p.rMx.PROMOTED_TO_SPEAKER, S({}, (0, O.s$)(e))),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(i),
-            body: T(
+            url: p.ANM.UPDATE_VOICE_STATE(r),
+            body: S(
                 {
                     suppress: t,
                     request_to_speak_timestamp: null,
@@ -102,12 +102,12 @@ function S(e, t) {
         })
     );
 }
-function N(e) {
+function m(e) {
     let t = null == e ? void 0 : e.getGuildId();
     return (
-        r()(null != t, 'This channel cannot be guildless.'),
+        i()(null != t, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(t),
+            url: p.ANM.UPDATE_VOICE_STATE(t),
             body: {
                 suppress: !0,
                 channel_id: e.id,
@@ -118,12 +118,12 @@ function N(e) {
         })
     );
 }
-function f(e, t, n) {
-    let i = e.getGuildId();
+function R(e, t, n) {
+    let r = e.getGuildId();
     return (
-        r()(null != i, 'This channel cannot be guildless.'),
+        i()(null != r, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(i, t),
+            url: p.ANM.UPDATE_VOICE_STATE(r, t),
             body: {
                 suppress: n,
                 channel_id: e.id
@@ -132,14 +132,14 @@ function f(e, t, n) {
         })
     );
 }
-function A(e, t) {
+function g(e, t) {
     if (null == t || null == e) return;
     let n = t.getGuildId();
     return (
-        r()(null != n, 'This channel cannot be guildless.'),
-        f(t, e.id, !0),
+        i()(null != n, 'This channel cannot be guildless.'),
+        R(t, e.id, !0),
         o.tn.patch({
-            url: C.ANM.UPDATE_VOICE_STATE(n, e.id),
+            url: p.ANM.UPDATE_VOICE_STATE(n, e.id),
             body: {
                 suppress: !0,
                 channel_id: t.id,
@@ -150,30 +150,30 @@ function A(e, t) {
         })
     );
 }
-function R(e, t, n) {
-    let i = e.getGuildId();
-    r()(null != i, 'Channel cannot be guildless');
-    let o = e.permissionOverwrites[i],
-        c = T(
+function P(e, t, n) {
+    let r = e.getGuildId();
+    i()(null != r, 'Channel cannot be guildless');
+    let o = e.permissionOverwrites[r],
+        s = S(
             {
-                id: i,
-                type: a.BN.ROLE,
+                id: r,
+                type: c.BN.ROLE,
                 allow: _.Hn,
                 deny: _.Hn
             },
             o
         );
-    (n ? ((c.allow = l.IH(c.allow, t)), (c.deny = l.Od(c.deny, t))) : ((c.allow = l.Od(c.allow, t)), (c.deny = l.IH(c.deny, t))), s.Z.updatePermissionOverwrite(e.id, c));
+    (n ? ((s.allow = l.IH(s.allow, t)), (s.deny = l.Od(s.deny, t))) : ((s.allow = l.Od(s.allow, t)), (s.deny = l.IH(s.deny, t))), a.Z.updatePermissionOverwrite(e.id, s));
 }
-async function m(e, t, n, i) {
+async function C(e, t, n, r) {
     if ('' === t) return;
-    d.Z.getVoiceChannelId() !== e.id && (0, E.TM)(e);
-    let r = await (0, I.me)(e.id, t, n, i);
-    return (S(e, !1, !0), r);
+    u.Z.getVoiceChannelId() !== e.id && (0, E.TM)(e);
+    let i = await (0, I.me)(e.id, t, n, r);
+    return (A(e, !1, !0), i);
 }
-async function P(e, t, n) {
+async function y(e, t, n) {
     if ('' !== t) return await (0, I.Dk)(e.id, t, n);
 }
-async function y(e) {
+async function b(e) {
     await (0, I.Ix)(e.id);
 }

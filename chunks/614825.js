@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(568836),
     m = n(100527),
     f = n(906732),
-    _ = n(963249),
-    g = n(594174),
+    g = n(963249),
+    _ = n(594174),
     h = n(78839),
     b = n(55935),
     E = n(63063),
@@ -56,9 +56,9 @@ function N(e) {
 class P extends i.Component {
     renderTitle(e, t, n) {
         let { trialOffer: r } = this.props,
-            i = g.default.getUser(r.user_id),
+            i = _.default.getUser(r.user_id),
             l = null != i ? i.username : '???',
-            a = g.default.getUser(r.referrer_id),
+            a = _.default.getUser(r.referrer_id),
             o = null != a ? a.username : '???';
         return e && void 0 === r.redeemed_at
             ? I.intl.formatToPlainString(I.t.Mptau7, { username: l })
@@ -99,7 +99,7 @@ class P extends i.Component {
                                 {
                                     size: d.zxk.Sizes.SMALL,
                                     onClick: () => {
-                                        (0, _.Z)({
+                                        (0, g.Z)({
                                             initialPlanId: null,
                                             subscriptionTier: O.Si.TIER_2,
                                             analyticsLocations: s,
@@ -176,7 +176,7 @@ class P extends i.Component {
     constructor(...e) {
         (super(...e),
             T(this, 'handleStartTrial', (e, t) => {
-                (0, _.Z)({
+                (0, g.Z)({
                     initialPlanId: null,
                     subscriptionTier: O.Si.TIER_2,
                     analyticsLocations: t,
@@ -195,8 +195,8 @@ function A(e) {
             }),
             [n, t]
         ),
-        a = g.default.getCurrentUser(),
-        o = (0, u.e7)([g.default], () => null != i && (0, y.I5)(void 0 !== a && i.user_id === a.id ? a : g.default.getUser(i.user_id))),
+        a = _.default.getCurrentUser(),
+        o = (0, u.e7)([_.default], () => null != i && (0, y.I5)(void 0 !== a && i.user_id === a.id ? a : _.default.getUser(i.user_id))),
         s = (0, u.e7)([h.Z], () => {
             var e;
             return o ? (null == (e = h.Z.getPremiumTypeSubscription()) ? void 0 : e.trialEndsAt) : null;

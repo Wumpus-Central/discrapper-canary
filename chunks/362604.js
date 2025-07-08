@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(419922),
     m = n(626135),
     f = n(585483),
-    _ = n(115610),
-    g = n(981631),
+    g = n(115610),
+    _ = n(981631),
     h = n(388032),
     b = n(711643);
 function E(e) {
@@ -49,13 +49,13 @@ function E(e) {
                               children: (0, r.jsx)(s.zxk, {
                                   color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      (m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (m.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
+                                          f.S.dispatch(_.CkL.UPLOAD_FILE),
                                           (0, u.fE)({
                                               message: t,
                                               channel: l,
@@ -73,13 +73,13 @@ function E(e) {
                               children: (0, r.jsx)(s.zxk, {
                                   color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      (m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (m.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, _.O)(t.id, l));
+                                          (0, g.O)(t.id, l));
                                   },
                                   children:
                                       null != C

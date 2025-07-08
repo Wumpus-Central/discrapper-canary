@@ -30,8 +30,8 @@ var r = n(255367),
     p = n(235894),
     m = n(675478),
     f = n(592125),
-    _ = n(323873),
-    g = n(375954),
+    g = n(323873),
+    _ = n(375954),
     h = n(594174),
     b = n(585483),
     E = n(5967),
@@ -112,8 +112,8 @@ function D(e, t, a, o) {
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             let i = f.Z.getChannel(c),
-                s = g.Z.getMessage(c, u),
-                d = _.Z.isEditing(c, u);
+                s = _.Z.getMessage(c, u),
+                d = g.Z.isEditing(c, u);
             null == i ||
                 null == s ||
                 d ||
@@ -235,8 +235,8 @@ function G(e) {
     let { groupId: r, message: l, defaultValue: a, popouts: o } = e,
         { canShowReactionsOnMessageHover: s } = c.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         f = l.author.id,
-        _ = ''.concat(r, ':').concat(f),
-        g = i.useRef(a),
+        g = ''.concat(r, ':').concat(f),
+        _ = i.useRef(a),
         h =
             ((t = l),
             (n = o),
@@ -262,18 +262,18 @@ function G(e) {
                 [t, n]
             )),
         [E, y] = i.useState(a);
-    g.current = E || g.current;
+    _.current = E || _.current;
     let C = i.useCallback(
             (e) => {
-                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !0), h(e), y(!0)));
+                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !0), h(e), y(!0)));
             },
-            [E, _, s, h]
+            [E, g, s, h]
         ),
         x = i.useCallback(() => {
-            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !1), y(!1));
-        }, [_]);
+            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, g, !1), y(!1));
+        }, [g]);
     return {
-        hasHovered: g.current,
+        hasHovered: _.current,
         isHovered: E,
         handleMouseEnter: C,
         handleMouseLeave: x

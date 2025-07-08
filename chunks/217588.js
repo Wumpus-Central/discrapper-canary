@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(600164),
     m = n(111028),
     f = n(231053),
-    _ = n(697568),
-    g = n(183023),
+    g = n(697568),
+    _ = n(183023),
     h = n(524444),
     b = n(98278),
     E = n(767714),
@@ -123,20 +123,20 @@ let F = (e) => {
             });
         (0, O.Pq)(n.pack_id);
         let f = (0, O.Sd)(l),
-            _ = {
+            g = {
                 refreshPositionKey: a,
                 channel: l
             },
-            g = i.useRef(_);
+            _ = i.useRef(g);
         return (i.useEffect(() => {
-            g.current = _;
+            _.current = g;
         }),
         i.useEffect(() => {
-            let { refreshPositionKey: e } = g.current;
+            let { refreshPositionKey: e } = _.current;
             e();
         }, [u]),
         i.useEffect(() => {
-            let { channel: e } = g.current;
+            let { channel: e } = _.current;
             x.default.track(
                 N.rMx.OPEN_POPOUT,
                 R(
@@ -230,7 +230,7 @@ let F = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = X.current;
                 (async () => {
-                    ((null == e || e.features.has(N.oNc.DISCOVERABLE)) && j(await (0, _.Z)(n.id)), T(!0));
+                    ((null == e || e.features.has(N.oNc.DISCOVERABLE)) && j(await (0, g.Z)(n.id)), T(!0));
                 })();
             }, [n.id, B]));
         let q = n.guild_id === l.getGuildId(),
@@ -315,7 +315,7 @@ let F = (e) => {
                                           className: Z.guildTitle,
                                           children: B ? A.intl.string(A.t.kx6pEB) : A.intl.string(A.t.pDE7GR)
                                       }),
-                                      (0, r.jsx)(g.Oe, {
+                                      (0, r.jsx)(_.Oe, {
                                           expressionSourceGuild: i,
                                           hasJoinedExpressionSourceGuild: B,
                                           isDisplayingJoinGuildButtonInPopout: ee

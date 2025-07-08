@@ -13,14 +13,14 @@ function u(e, t) {
         p = (0, c.Z)(null == (n = u.poll) ? void 0 : n.expiry),
         m = l.Yk.useSetting(),
         f = (0, i.ZP)(),
-        _ = null != t ? t : f;
+        g = null != t ? t : f;
     return r.useMemo(
         () =>
             (0, s.ZP)(u, d, {
                 animateEmoji: m,
-                theme: _,
+                theme: g,
                 formattedExpirationLabel: p
             }),
-        [m, u, d, p, _]
+        [m, u, d, p, g]
     );
 }
