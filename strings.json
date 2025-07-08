@@ -5793,7 +5793,7 @@
   "41/Kbm": "Please select a different image, this one is not valid.",
   "8RCtpK": "Please select a server for the emoji.",
   "xZLPcH": "The selected file failed to load.\\n\\nSupported file types include .jpg, .png, .gif, .webp, and others.\\n\\n",
-  "QY7ZFR": "You must first join a server where you have permissions to create emojis.",
+  "QY7ZFR": "You currently don't have emoji upload permissions in any of your servers.",
   "U2JFHR": "emoji_name",
   "JmuIb2": "Preview",
   "tE41+f": "Emoji preview when rendered large",
