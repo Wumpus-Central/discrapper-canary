@@ -44,7 +44,7 @@ function y(e) {
               verifyGateDescription: n ? f.intl.string(f.t.akjk0d) : f.intl.string(f.t['u/xqhY'])
           };
 }
-let C = () => {
+let x = () => {
         let e = c.default.getCurrentUser();
         if (null == e) return !1;
         let t = (function () {
@@ -54,8 +54,8 @@ let C = () => {
         })();
         return null == e.nsfwAllowed || t;
     },
-    x = (e) => {
-        if (!C() || null == e) return !1;
+    C = (e) => {
+        if (!x() || null == e) return !1;
         let t = s.Z.getGuild(e);
         return (
             null != t &&
@@ -68,8 +68,8 @@ let C = () => {
     },
     v = (e) => {
         var t;
-        return !!C() && null != e && (null == (t = o.Z.getChannel(e)) ? void 0 : t.isNSFW());
+        return !!x() && null != e && (null == (t = o.Z.getChannel(e)) ? void 0 : t.isNSFW());
     };
 function O(e, t, n) {
-    return x(e) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_SERVER) : v(t) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_CHANNEL) : void 0;
+    return C(e) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_SERVER) : v(t) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_CHANNEL) : void 0;
 }

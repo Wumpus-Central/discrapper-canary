@@ -4,7 +4,7 @@ n.d(t, {
     QQ: () => g,
     QY: () => E,
     Vj: () => p,
-    Vs: () => C,
+    Vs: () => x,
     j8: () => _,
     oO: () => f,
     qt: () => h,
@@ -166,7 +166,7 @@ function y(e) {
         searchId: e
     });
 }
-function C(e, t, n) {
+function x(e, t, n) {
     r.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

@@ -1,6 +1,6 @@
 (n.d(t, {
-    I1: () => C,
-    IZ: () => x,
+    I1: () => x,
+    IZ: () => C,
     Qb: () => y,
     Yc: () => j,
     bo: () => I,
@@ -55,7 +55,7 @@ function _(e) {
     return null != (r = null == e || null == (n = e.content) || null == (t = n.trim()) ? void 0 : t.length) ? r : 0;
 }
 function h(e) {
-    let { searchType: t, searchId: n, searchAnalyticsId: r, prevSearchAnalyticsId: l, isError: a, limit: o, offset: s, page: c, totalResults: u, pageResults: p, isIndexing: m, pageNumMessages: h, pageNumLinks: b, pageNumEmbeds: E, pageNumAttachments: y, searchQueryString: C, searchQuery: x } = e;
+    let { searchType: t, searchId: n, searchAnalyticsId: r, prevSearchAnalyticsId: l, isError: a, limit: o, offset: s, page: c, totalResults: u, pageResults: p, isIndexing: m, pageNumMessages: h, pageNumLinks: b, pageNumEmbeds: E, pageNumAttachments: y, searchQueryString: x, searchQuery: C } = e;
     i.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: t,
         search_id: r,
@@ -72,8 +72,8 @@ function h(e) {
         page_num_links: b,
         page_num_embeds: E,
         page_num_attach: y,
-        search_query_length: g(C),
-        search_query_content_length: _(x)
+        search_query_length: g(x),
+        search_query_content_length: _(C)
     });
 }
 function b(e) {
@@ -113,7 +113,7 @@ function y(e) {
         search_query_content_length: _(a)
     });
 }
-function C(e) {
+function x(e) {
     let { searchType: t, searchId: n } = e;
     (m(n, (e) => {
         a.Z.initialize(e, p.sR.MESSAGES);
@@ -124,7 +124,7 @@ function C(e) {
             search_type: t
         }));
 }
-function x(e) {
+function C(e) {
     let { searchId: t, searchType: n } = e;
     (i.ZP.trackWithMetadata(d.rMx.SEARCH_CLOSED, {
         search_id: null != t ? o.Z.getAnalyticsId(t) : null,
@@ -156,11 +156,11 @@ function O(e) {
         b = 0,
         E = 0,
         y = 0,
-        C = 0,
         x = 0,
+        C = 0,
         v = 0;
     (p.forEach((e) => {
-        e.type === d.dCx.ANSWER_IN ? m++ : e.type === d.dCx.ANSWER_USERNAME_FROM ? h++ : e.type === d.dCx.ANSWER_USERNAME_MENTIONS ? b++ : e.type === d.dCx.ANSWER_HAS ? E++ : e.type === d.dCx.ANSWER_BEFORE ? y++ : e.type === d.dCx.ANSWER_ON ? C++ : e.type === d.dCx.ANSWER_AFTER ? x++ : e.type === d.dCx.ANSWER_PINNED && v++;
+        e.type === d.dCx.ANSWER_IN ? m++ : e.type === d.dCx.ANSWER_USERNAME_FROM ? h++ : e.type === d.dCx.ANSWER_USERNAME_MENTIONS ? b++ : e.type === d.dCx.ANSWER_HAS ? E++ : e.type === d.dCx.ANSWER_BEFORE ? y++ : e.type === d.dCx.ANSWER_ON ? x++ : e.type === d.dCx.ANSWER_AFTER ? C++ : e.type === d.dCx.ANSWER_PINNED && v++;
     }),
         i.ZP.trackWithMetadata(d.rMx.MESSAGES_SEARCH_STARTED, {
             search_id: null != n ? o.Z.getAnalyticsId(n) : null,
@@ -174,8 +174,8 @@ function O(e) {
             filter_mentions_count: b,
             filter_has_count: E,
             filter_before_count: y,
-            filter_during_count: C,
-            filter_after_count: x,
+            filter_during_count: x,
+            filter_after_count: C,
             filter_pinned_count: v
         }),
         i.ZP.trackWithMetadata(d.rMx.SEARCH_STARTED, {

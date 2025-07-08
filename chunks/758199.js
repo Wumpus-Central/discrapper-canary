@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => O,
-    u: () => x
+    u: () => C
 }),
     n(190126),
     n(368063),
@@ -37,7 +37,7 @@ function y() {
             return e;
         }).apply(this, arguments);
 }
-function C(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function C(e) {
     }
     return e;
 }
-var x = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var C = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function v(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
@@ -78,7 +78,7 @@ function v(e) {
 }
 function O(e) {
     var t, n, r, a;
-    let { title: x, header: O, footer: j, info: I, staticBannerSrc: S, videoBannerSrc: T, bannerAspectRatio: N = 0, iconSrc: P, embedUrl: A, infoUrl: w, actions: Z = [], trackingConfig: R, onClickContent: k } = e;
+    let { title: C, header: O, footer: j, info: I, staticBannerSrc: S, videoBannerSrc: T, bannerAspectRatio: N = 0, iconSrc: P, embedUrl: A, infoUrl: w, actions: Z = [], trackingConfig: R, onClickContent: k } = e;
     R = {
         id: null != (n = null == (t = R) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.Un.UNKNOWN,
@@ -212,7 +212,7 @@ function O(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: E.contentTitle,
-                                                        children: x
+                                                        children: C
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: E.contentInfoWrapper,
@@ -261,12 +261,12 @@ function O(e) {
                                                                   return e;
                                                               })(e)
                                                           );
-                                                          return (0, i.jsx)(c.zxk, C({}, m, t));
+                                                          return (0, i.jsx)(c.zxk, x({}, m, t));
                                                       }
                                                   },
                                                   n
                                               )
-                                            : (0, i.jsx)(c.zxk, C({}, m), n);
+                                            : (0, i.jsx)(c.zxk, x({}, m), n);
                                     })
                                 })
                         ]

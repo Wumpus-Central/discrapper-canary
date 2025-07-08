@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(895924),
     E = n(311819),
     y = n(758199),
-    C = n(943762),
-    x = n(914498),
+    x = n(943762),
+    C = n(914498),
     v = n(515344),
     O = n(429551),
     j = n(973616),
@@ -161,11 +161,11 @@ let B = i.memo(function (e) {
     let ec = N.default.getCurrentUser(),
         eu = q.length,
         ed = null != (s = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? s : null == Q ? void 0 : Q.created_at,
-        ep = (0, C.r)(Q),
+        ep = (0, x.r)(Q),
         em = [
             {
                 label: et ? M.intl.string(M.t.cnBQPD) : M.intl.string(M.t.VJlc0d),
-                trackingArea: x.j_.PLAY,
+                trackingArea: C.j_.PLAY,
                 onClick: el,
                 disabledReason: d,
                 submitting: ei
@@ -230,7 +230,7 @@ let B = i.memo(function (e) {
                                   ]
                               }),
                           eu > 0 &&
-                              (0, r.jsx)(C.K, {
+                              (0, r.jsx)(x.K, {
                                   activityUsers: q,
                                   guildId: R,
                                   activityText: ep.text
@@ -242,7 +242,7 @@ let B = i.memo(function (e) {
         onClickContent: eo,
         trackingConfig: {
             id: O.id,
-            linkType: x.Un.ACTIVITY_INSTANCE
+            linkType: C.Un.ACTIVITY_INSTANCE
         }
     });
 });

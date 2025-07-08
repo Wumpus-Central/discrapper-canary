@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(880251),
     E = n(515344),
     y = n(835473),
-    C = n(471445),
-    x = n(111028),
+    x = n(471445),
+    C = n(111028),
     v = n(601964),
     O = n(592125),
     j = n(430824),
@@ -83,7 +83,7 @@ function k(e) {
 function L(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: l } = e;
     if (null != t && null != n) {
-        let e = (0, C.KS)(t, n);
+        let e = (0, x.KS)(t, n);
         return (0, r.jsxs)('div', {
             className: a()(R.channel, { [R.ended]: i }),
             children: [
@@ -94,7 +94,7 @@ function L(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(C.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: l,
@@ -110,7 +110,7 @@ function L(e) {
     return null != n
         ? (0, r.jsx)('div', {
               className: a()(R.channel, { [R.ended]: i }),
-              children: (0, r.jsx)(x.Z, {
+              children: (0, r.jsx)(C.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       color: l,
@@ -133,8 +133,8 @@ function D(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        C = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
-        x = (0, y.Z)([b.id])[0],
+        x = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
+        C = (0, y.Z)([b.id])[0],
         N = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == a ? void 0 : a.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) ? void 0 : e.applicationId) === b.id;
@@ -177,23 +177,23 @@ function D(e) {
                 }));
         }, [a, o, D, u]),
         G = a.state === A.r2o.ACCEPTING,
-        H = null != C;
-    if (null == C) {
+        H = null != x;
+    if (null == x) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
-        C = new v.ZP(a.guild);
+        x = new v.ZP(a.guild);
     }
     let V = (H && !L) || (H && N);
-    return (H && N && (l = Z.intl.string(Z.t.wJNK8P)), L || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == x)
+    return (H && N && (l = Z.intl.string(Z.t.wJNK8P)), L || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == C)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
               children: (0, r.jsx)(M, {
-                  app: x,
+                  app: C,
                   invite: a,
                   activityUsers: F,
                   isMember: H,
                   channel: k,
-                  guild: C,
+                  guild: x,
                   members: g,
                   membersOnline: _,
                   isActivityActive: R,
@@ -207,7 +207,7 @@ function D(e) {
 }
 function M(e) {
     var t, n;
-    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: C, handleAcceptInvite: x, onView: v } = e,
+    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: x, handleAcceptInvite: C, onView: v } = e,
         O = new URL(a.code, 'https://discord.gg').toString(),
         { bot: j, icon: I } = l,
         S = N.ZP.getApplicationIconURL({
@@ -224,11 +224,11 @@ function M(e) {
                     label: s ? (m ? Z.intl.string(Z.t.VJlc0d) : Z.intl.string(Z.t.RscU7O)) : Z.intl.string(Z.t['2BP08P']),
                     trackingArea: s ? h.j_.PLAY : h.j_.JOIN_SERVER,
                     submitting: f,
-                    disabledReason: y && null != C ? C : void 0,
-                    onClick: x
+                    disabledReason: y && null != x ? x : void 0,
+                    onClick: C
                 }
             ],
-            [x, m, y, s, f, C]
+            [C, m, y, s, f, x]
         );
     return (0, r.jsx)(
         g.W,

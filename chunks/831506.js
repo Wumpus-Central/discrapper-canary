@@ -72,7 +72,7 @@ function y() {
         t = u.Z.getActivities();
     return h(d.ME, e, t);
 }
-function C(e) {
+function x(e) {
     let { relationship: t } = e;
     if (!c.Z.isBlocked(t.id) && !c.Z.isIgnored(t.id)) return !1;
     let n = m[t.id];
@@ -82,7 +82,7 @@ function C(e) {
         null != n && n.delete(t.id);
     }
 }
-class x extends (r = a.ZP.Store) {
+class C extends (r = a.ZP.Store) {
     initialize() {
         (this.syncWith([u.Z], y), this.waitFor(u.Z, c.Z));
     }
@@ -96,8 +96,8 @@ class x extends (r = a.ZP.Store) {
         return f;
     }
 }
-p(x, 'displayName', 'GamePartyStore');
-let v = new x(o.Z, {
+p(C, 'displayName', 'GamePartyStore');
+let v = new C(o.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             r = !1;
@@ -159,8 +159,8 @@ let v = new x(o.Z, {
             )
         );
     },
-    RELATIONSHIP_ADD: C,
-    RELATIONSHIP_UPDATE: C,
+    RELATIONSHIP_ADD: x,
+    RELATIONSHIP_UPDATE: x,
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
             n = m[t.id];

@@ -22,13 +22,13 @@ function y(e) {
         i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(C, {
+        : (0, r.jsx)(x, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function C(e) {
+function x(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e,
         u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
         d = (function (e) {

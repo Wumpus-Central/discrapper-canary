@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    x = (e) => {
+let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    C = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(_.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: h.cd.STICKER_IN_MESSAGE_HOVER,
@@ -115,7 +115,7 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             text: (0, u.Y)(j),
                             'aria-label': !1,
                             onTooltipShow: () => {
-                                x(v);
+                                C(v);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
@@ -129,7 +129,7 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: C,
+                                            size: x,
                                             sticker: null != v ? v : t
                                         })
                                     })

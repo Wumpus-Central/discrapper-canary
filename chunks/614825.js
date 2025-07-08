@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(55935),
     E = n(63063),
     y = n(74538),
-    C = n(276444),
-    x = n(93237),
+    x = n(276444),
+    C = n(93237),
     v = n(786397),
     O = n(474936),
     j = n(981631),
@@ -137,7 +137,7 @@ class P extends i.Component {
         if (void 0 !== r.redeemed_at && !n && null !== i) return I.intl.formatToPlainString(I.t.nP0ivb, { date: (0, b.vc)(s()(i), 'LL') });
         if (e || void 0 === r.expires_at) return null;
         let l = s()(r.expires_at);
-        return t ? I.intl.formatToPlainString(I.t.PuSHfX, { date: (0, b.vc)(s()(l), 'LL') }) : (0, x.F6)(l.valueOf());
+        return t ? I.intl.formatToPlainString(I.t.PuSHfX, { date: (0, b.vc)(s()(l), 'LL') }) : (0, C.F6)(l.valueOf());
     }
     renderMedia() {
         return (0, r.jsx)('div', { className: S.referral });
@@ -188,10 +188,10 @@ class P extends i.Component {
 function A(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: i, isResolving: l } = (0, u.cj)(
-            [C.Z],
+            [x.Z],
             () => ({
-                trialOffer: n ? C.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && C.Z.isResolving(t)
+                trialOffer: n ? x.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && x.Z.isResolving(t)
             }),
             [n, t]
         ),

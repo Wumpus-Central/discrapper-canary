@@ -77,11 +77,6 @@ let _ = (e) => {
         let e = l.useMemo(
                 () => [
                     {
-                        color: '#262626',
-                        label: h.intl.string(h.t['dMey+v']),
-                        enum: a.x.BLACK
-                    },
-                    {
                         color: '#9B59B6',
                         label: h.intl.string(h.t.kqUD4O),
                         enum: a.x.PURPLE
@@ -92,20 +87,10 @@ let _ = (e) => {
                         enum: a.x.BLUE
                     },
                     {
-                        color: '#1ABC9C',
-                        label: h.intl.string(h.t.ceaZKy),
-                        enum: a.x.TEAL
-                    },
-                    {
                         color: '#2ECC71',
                         label: h.intl.string(h.t['f/Ylk5']),
                         enum: a.x.GREEN
-                    }
-                ],
-                []
-            ),
-            t = l.useMemo(
-                () => [
+                    },
                     {
                         color: '#A0522D',
                         label: h.intl.string(h.t['Sd/BMT']),
@@ -115,7 +100,12 @@ let _ = (e) => {
                         color: '#F1C40F',
                         label: h.intl.string(h.t['0fevY2']),
                         enum: a.x.YELLOW
-                    },
+                    }
+                ],
+                []
+            ),
+            t = l.useMemo(
+                () => [
                     {
                         color: '#E67E22',
                         label: h.intl.string(h.t.ZE7weH),
@@ -130,6 +120,16 @@ let _ = (e) => {
                         color: '#EC407A',
                         label: h.intl.string(h.t.HvLEGB),
                         enum: a.x.PINK
+                    },
+                    {
+                        color: '#FFFFFF',
+                        label: h.intl.string(h.t['CB+lND']),
+                        enum: a.x.WHITE
+                    },
+                    {
+                        color: '#262626',
+                        label: h.intl.string(h.t['dMey+v']),
+                        enum: a.x.BLACK
                     }
                 ],
                 []

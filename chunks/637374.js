@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(479446),
     E = n(930114),
     y = n(981632),
-    C = n(108989),
-    x = n(703656),
+    x = n(108989),
+    C = n(703656),
     v = n(314897),
     O = n(82142),
     j = n(283595),
@@ -315,7 +315,7 @@ class z extends i.Component {
         (super(...e),
             F(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                (e.preventDefault(), null != t && t.isHidden() ? (0, x.uL)(L.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, x.uL)(L.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }));
+                (e.preventDefault(), null != t && t.isHidden() ? (0, C.uL)(L.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, C.uL)(L.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }));
             }),
             F(this, 'handleVerificationClick', (e) => {
                 (e.stopPropagation(), e.preventDefault(), d.Z.open(L.oAB.ACCOUNT));
@@ -365,7 +365,7 @@ class z extends i.Component {
                     children: [
                         !t &&
                             D.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(x.Z, {
                                 className: U.snow,
                                 wind: 5
                             }),

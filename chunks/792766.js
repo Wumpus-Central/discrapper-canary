@@ -102,11 +102,11 @@ let f = (e) => {
             h = i.useMemo(() => (null == l ? null : l instanceof u.ZP ? l : new u.ZP(l)), [l]);
         if (null == n || null == h) return null;
         let { topic: b, speaker_count: E, participant_count: y } = n,
-            C = null != (t = n.members) ? t : [],
-            x = g ? C.slice(0, 3) : C,
-            v = E - x.length;
+            x = null != (t = n.members) ? t : [],
+            C = g ? x.slice(0, 3) : x,
+            v = E - C.length;
         return (
-            g && (v += C.length - x.length),
+            g && (v += x.length - C.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -178,11 +178,11 @@ let f = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(m.members, { [m.embed]: g }),
                         children: [
-                            x.length > 0 &&
+                            C.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: m.speakers,
                                     children: [
-                                        x.map((e) =>
+                                        C.map((e) =>
                                             (0, r.jsx)(
                                                 f,
                                                 {

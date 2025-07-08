@@ -24,8 +24,8 @@ var r = n(255367),
     b = n(238),
     E = n(55563),
     y = n(551428),
-    C = n(626135),
-    x = n(572004),
+    x = n(626135),
+    C = n(572004),
     v = n(601911),
     O = n(504211),
     j = n(970321),
@@ -80,21 +80,21 @@ function Z(e) {
     i.useEffect(() => {
         (h === b.N.NONE && (0, c.k)(t), null != u || d || f || (0, m.UM)(t));
     }, [u, t, f, d, h]);
-    let x = g.subscriptions.length,
+    let C = g.subscriptions.length,
         I = g.otps.length,
         A = i.useMemo(
             () =>
-                x > 0 && I > 0
+                C > 0 && I > 0
                     ? N.intl.formatToPlainString(N.t['jA648/'], {
-                          subCount: x,
+                          subCount: C,
                           itemCount: I
                       })
-                    : x > 0
-                      ? N.intl.formatToPlainString(N.t.GSfibG, { count: x })
+                    : C > 0
+                      ? N.intl.formatToPlainString(N.t.GSfibG, { count: C })
                       : I > 0
                         ? N.intl.formatToPlainString(N.t.j7Go5O, { count: I })
                         : N.intl.string(N.t.rMA98v),
-            [I, x]
+            [I, C]
         );
     if (!a || null == u) return null;
     let w = () => {
@@ -120,7 +120,7 @@ function Z(e) {
         iconSrc: y,
         onIconClick: () => {
             (w(),
-                C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                x.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: 'app_icon'
                 }));
@@ -128,7 +128,7 @@ function Z(e) {
         children: (0, r.jsx)(s.zxk, {
             onClick: () => {
                 (w(),
-                    C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    x.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'open_store_button'
                     }));
@@ -169,7 +169,7 @@ function R(e) {
             },
             [u]
         ),
-        x = i.useMemo(() => (null != E ? (0, v.y)(E, 45) : void 0), [E]),
+        C = i.useMemo(() => (null != E ? (0, v.y)(E, 45) : void 0), [E]),
         Z = (0, j.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
         { openModal: R, subscriptionPurchaseButtonState: L } = (0, g.Z)({
             skuId: c,
@@ -249,7 +249,7 @@ function R(e) {
               : t.trim();
     '' === B && (B = void 0);
     let G = () => {
-        C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+        x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: E.id,
             sku_id: m.id,
             area: 'purchase_button'
@@ -263,10 +263,10 @@ function R(e) {
         onLinkCopy: () => {
             (0, O.X)(E.id, O.B.SKU_EMBED, c);
         },
-        iconSrc: x,
+        iconSrc: C,
         onIconClick: () => {
             (U(),
-                C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: E.id,
                     sku_id: m.id,
                     area: 'app_icon'
@@ -279,7 +279,7 @@ function R(e) {
                     color: s.Ttl.CUSTOM,
                     onClick: () => {
                         (F(),
-                            C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                            x.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: E.id,
                                 sku_id: m.id,
                                 area: 'view_details'
@@ -339,13 +339,13 @@ function k(e) {
                             })
                         ]
                     }),
-                    x.wS &&
+                    C.wS &&
                         (0, r.jsx)(s.zxk, {
                             look: s.iLD.BLANK,
                             size: s.PhG.ICON,
                             'aria-label': N.intl.string(N.t.WqhZsr),
                             onClick: () => {
-                                (0, x.JG)(l, () => {
+                                (0, C.JG)(l, () => {
                                     ((0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.SUCCESS)), c());
                                 });
                             },

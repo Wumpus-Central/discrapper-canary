@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -32,7 +32,7 @@ function y(e) {
                 }),
             [d, t, l]
         ),
-        C = i.useMemo(
+        x = i.useMemo(
             () =>
                 E({
                     assets: u,
@@ -41,7 +41,7 @@ function y(e) {
                 }),
             [u, t, l]
         ),
-        x = i.useCallback(async () => {
+        C = i.useCallback(async () => {
             let { valid: e } = await (0, _.v)({
                 type: s.Ie.FORM,
                 content: '',
@@ -123,7 +123,7 @@ function y(e) {
         color: a.Ttl.PRIMARY,
         onMouseEnter: () => h(!0),
         onMouseLeave: () => h(!1),
-        onClick: x,
+        onClick: C,
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
@@ -131,11 +131,11 @@ function y(e) {
                 sticker: y,
                 size: 28
             }),
-            C
+            x
         ]
     });
 }
-function C(e) {
+function x(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {

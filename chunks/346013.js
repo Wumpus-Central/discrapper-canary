@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(406432),
     E = n(348238),
     y = n(38267),
-    C = n(884902),
-    x = n(670188),
+    x = n(884902),
+    C = n(670188),
     v = n(695346),
     O = n(271383),
     j = n(594174),
@@ -102,7 +102,7 @@ function M(e) {
             var e;
             return [null != (e = null == et ? void 0 : et.colorString) ? e : 'inherit', null == et ? void 0 : et.colorStrings, null == et ? void 0 : et.colorRoleId];
         }, [et]),
-        ea = (0, C.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
+        ea = (0, x.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
         { reducedMotion: eo } = i.useContext(u.Sfi),
         [es, ec] = i.useState(!1),
         eu = i.useCallback(() => {
@@ -205,7 +205,7 @@ function M(e) {
                         children: [
                             null != V.authorId &&
                                 null != ef &&
-                                (0, r.jsx)(x.Z, {
+                                (0, r.jsx)(C.Z, {
                                     targetElementRef: H,
                                     userId: V.authorId,
                                     guildId: V.guildId,
@@ -270,7 +270,7 @@ function M(e) {
                                                               className: R.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              x.Z,
+                                                              C.Z,
                                                               {
                                                                   targetElementRef: G,
                                                                   userId: V.authorId,

@@ -27,8 +27,8 @@ var r,
     b = n(421474),
     E = n(603270),
     y = n(234431),
-    C = n(162297),
-    x = n(222709),
+    x = n(162297),
+    C = n(222709),
     v = n(446411),
     O = n(960904),
     j = n(161314),
@@ -81,8 +81,8 @@ var r,
     eb = n(408433),
     eE = n(630388),
     ey = n(709054),
-    eC = n(591759),
-    ex = n(594173),
+    ex = n(591759),
+    eC = n(594173),
     ev = n(169525),
     eO = n(786761),
     ej = n(161010),
@@ -238,13 +238,13 @@ class e5 extends (r = l.Component) {
         let { message: e, channel: t, ctaButtonType: n } = this.props,
             r = null;
         switch (n) {
-            case ex.aD.MARK_AS_FALSE_POSITIVE:
+            case eC.aD.MARK_AS_FALSE_POSITIVE:
                 r = (0, i.jsx)(N.Z, {
                     messageId: e.id,
                     channelId: t.id
                 });
                 break;
-            case ex.aD.AGE_VERIFICATION_RETRY:
+            case eC.aD.AGE_VERIFICATION_RETRY:
                 r = (0, i.jsx)(h.Z, { channelId: t.id });
                 break;
             default:
@@ -338,7 +338,7 @@ class e5 extends (r = l.Component) {
                             );
                   } else if (n === O.g.APP_OAUTH2_LINK)
                       return (0, i.jsx)(
-                          C.Z,
+                          x.Z,
                           {
                               applicationId: r,
                               embedUrl: l
@@ -488,7 +488,7 @@ class e5 extends (r = l.Component) {
                       renderLinkComponent: eU.iT
                   };
                   if (t.type === eW.hBH.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && 'Discord' === t.provider.name) {
-                      let l = eC.Z.safeParseWithQuery(t.url);
+                      let l = ex.Z.safeParseWithQuery(t.url);
                       if (null != l && null != l.pathname) {
                           let a = l.pathname.split('/')[3];
                           if (null != a)
@@ -538,7 +538,7 @@ class e5 extends (r = l.Component) {
     renderPublishBump(e) {
         return this.props.channel.type !== eW.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
             ? null
-            : (0, i.jsx)(x.Z, {
+            : (0, i.jsx)(C.Z, {
                   channelId: e.channel_id,
                   messageId: e.id
               });
@@ -727,8 +727,8 @@ class e5 extends (r = l.Component) {
             b = this.renderReactions(t),
             E = this.renderPublishBump(t),
             y = this.renderEphemeralAccessories(t),
-            C = this.renderStickersAccessories(t),
-            x = this.renderThreadAccessories(t),
+            x = this.renderStickersAccessories(t),
+            C = this.renderThreadAccessories(t),
             v = this.renderComponentAccessories(t),
             O = this.renderThreadRoleMentionWarning(t),
             j = this.renderEmbeddedApplicationInstanceEmbed(t),
@@ -741,12 +741,12 @@ class e5 extends (r = l.Component) {
             w = this.renderPoll(t, r),
             Z = this.renderForwardedMessage(t),
             R = this.renderReportedMessage(t);
-        return null == u && null == m && null == _ && null == h && null == b && null == d && null == p && null == E && null == y && null == C && null == x && null == v && null == j && null == O && null == S && null == T && null != I && null == w && null == P && null == Z && null == R
+        return null == u && null == m && null == _ && null == h && null == b && null == d && null == p && null == E && null == y && null == x && null == C && null == v && null == j && null == O && null == S && null == T && null != I && null == w && null == P && null == Z && null == R
             ? null
             : (0, i.jsxs)('div', {
                   id: (0, eL.bX)(t),
                   className: o()(e, eX.container),
-                  children: [R, Z, O, w, u, d, p, S, m, f, _, A, h, C, v, j, I, g, c, b, E, y, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), x, T, N, P]
+                  children: [R, Z, O, w, u, d, p, S, m, f, _, A, h, x, v, j, I, g, c, b, E, y, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), C, T, N, P]
               });
     }
     constructor(...e) {
@@ -853,10 +853,10 @@ function e6(e) {
             [f, n]
         ),
         y = (0, Z.ux)(n.guild_id),
-        [, C] = (0, R.AB)(n.guild_id),
-        x = (0, eo.$R)(n),
-        v = (o === r.author.id || E) && r.author.id !== eW.LAt && !1 !== l && !(0, eE.yE)(r.flags, eW.iLy.EPHEMERAL) && x && 1 === (0, eS.Z)(r),
-        O = o === r.author.id && x && !a,
+        [, x] = (0, R.AB)(n.guild_id),
+        C = (0, eo.$R)(n),
+        v = (o === r.author.id || E) && r.author.id !== eW.LAt && !1 !== l && !(0, eE.yE)(r.flags, eW.iLy.EPHEMERAL) && C && 1 === (0, eS.Z)(r),
+        O = o === r.author.id && C && !a,
         j = r.author.id === o,
         I = r.isFirstMessageInForumPost(n),
         T = (0, eN.Z)({
@@ -866,8 +866,8 @@ function e6(e) {
             canAddNewReactions: b,
             isLurking: g,
             isGuest: _,
-            communicationDisabled: C,
-            isActiveChannelOrUnarchivableThread: x,
+            communicationDisabled: x,
+            isActiveChannelOrUnarchivableThread: C,
             isAutomodQuarantined: y
         }),
         N = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
@@ -875,7 +875,7 @@ function e6(e) {
         A = (0, q.Z)(r),
         w = (0, S.v)(r),
         k = (0, eI._)(n),
-        L = (0, ex.ro)(r.id, r.channel_id);
+        L = (0, eC.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
         e5,
         e$(
@@ -946,7 +946,7 @@ let e7 = (e) => {
         _ = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         h = (0, K.Z)(null == r ? void 0 : r.id),
         b = (0, S.v)(n),
-        E = (0, ex.ro)(n.id, n.channel_id),
+        E = (0, eC.ro)(n.id, n.channel_id),
         y = (0, q.Z)(n);
     return (0, i.jsx)(
         e5,

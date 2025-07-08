@@ -116,7 +116,7 @@ let b = {
     E = function (e) {
         var t,
             { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: y } = e,
-            C = (function (e, t) {
+            x = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -135,7 +135,7 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: x } = c.ny6[s],
+        let { size: C } = c.ny6[s],
             {
                 statusCoords: v,
                 frontAvatarOffsetPx: O,
@@ -143,7 +143,7 @@ let b = {
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(x, '-').concat(f);
+                let t = ''.concat(C, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,7 +160,7 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [x, f, s]),
+            }, [C, f, s]),
             S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: x,
-                    height: x
+                    width: C,
+                    height: C
                 },
                 E
             ),
-            'aria-label': C['aria-label'],
-            'aria-hidden': C['aria-hidden'],
+            'aria-label': x['aria-label'],
+            'aria-hidden': x['aria-hidden'],
             className: a()(p.container, y),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: x,
-                    width: x,
+                    height: C,
+                    width: C,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,

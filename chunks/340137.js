@@ -27,7 +27,10 @@ function C(e) {
         { unreadRecentMentionsCount: y, unreadChannelIds: C } = (function () {
             let e = (0, O.wt)(),
                 t = (0, s.Wu)([f.ZP], () => e.filter((e) => f.ZP.hasUnread(e)), [e]),
-                n = (0, s.e7)([d.Z], () => d.Z.getSettingsFilteredMentions());
+                n = (0, s.Wu)([d.Z], () => {
+                    var e;
+                    return null != (e = d.Z.getSettingsFilteredMentions()) ? e : [];
+                });
             return {
                 unreadRecentMentionsCount: (0, s.e7)(
                     [f.ZP, p.Z, h.Z],

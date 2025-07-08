@@ -156,12 +156,12 @@ function J(e) {
             );
         }),
         i.useEffect(() => {
-            if ((null != eU && null != eg ? eT(eU) : eT(M), null != ec)) ev(ec);
+            if ((null == eI && (null != eU && null != eg ? eT(eU) : eT(M)), null != ec)) ev(ec);
             else if (null != M) {
                 var e;
                 ev(null == (e = A.Z.get(M)) ? void 0 : e.skuId);
             }
-        }, [eT, ev, M, ec, eU, eg]));
+        }, [eT, eI, ev, M, ec, eU, eg]));
     let eJ = i.useCallback(() => {
             let e = (0, R.MY)(eZ) === R.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();

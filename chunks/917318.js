@@ -53,25 +53,25 @@ function _(e) {
         b = n.getChannelId(),
         E = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
         y = (0, o.JZ)(d, i),
-        C = (0, s.l)({
+        x = (0, s.l)({
             user: d,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
         })(y),
-        x = (0, o.Sw)(E, i),
+        C = (0, o.Sw)(E, i),
         v = (0, s.l)({
             user: E,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
-        })(x),
+        })(C),
         O = null != (t = m[_]) ? t : null;
     if (null == O) return null;
     let j = p.intl.format(O(), {
         actorName: h.nick,
-        actorHook: C,
-        targetName: null == x ? void 0 : x.nick,
+        actorHook: x,
+        targetName: null == C ? void 0 : C.nick,
         targetHook: v
     });
     return (0, r.jsx)(c.Z, {

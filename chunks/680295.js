@@ -90,6 +90,8 @@ let v = (e) => {
             (0, r.jsx)('div', {
                 ref: v,
                 className: o()(b.profileEffects, { [b.hovered]: s && l }),
+                'aria-label': R,
+                role: 'img',
                 children: (0, r.jsx)('div', {
                     className: y ? b.innerNoRadius : b.inner,
                     children: I.map((e, i) => {
@@ -105,7 +107,8 @@ let v = (e) => {
                                         left: null != (l = null == (o = e.position) ? void 0 : o.x) ? l : 0
                                     },
                                     src: n,
-                                    alt: R
+                                    alt: '',
+                                    'aria-hidden': !0
                                 },
                                 e.src + i
                             );
@@ -117,7 +120,6 @@ let v = (e) => {
                                 animationType: E.animationType,
                                 ticking: x.current,
                                 time: P,
-                                accessibilityLabel: R,
                                 hasPlayedThrough: M,
                                 setHasPlayedThrough: j,
                                 urlQueryString: m,
@@ -137,13 +139,16 @@ let v = (e) => {
             { reducedMotionSrc: c, thumbnailPreviewSrc: u, accessibilityLabel: d } = t;
         return (0, r.jsx)('div', {
             className: o()(b.profileEffects, { [b.hovered]: s && l }),
+            'aria-label': d,
+            role: 'img',
             children: (0, r.jsx)('div', {
                 className: a ? b.innerNoRadius : b.inner,
                 children: (0, r.jsx)('img', {
                     src: n && !s ? u : c,
                     className: b.effect,
                     style: { top: 0 - i },
-                    alt: d
+                    alt: '',
+                    'aria-hidden': !0
                 })
             })
         });

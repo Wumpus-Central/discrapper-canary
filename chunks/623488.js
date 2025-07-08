@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function g(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: C, showOpaqueBackground: x = !1, hideRoleTag: v = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: C = !1, hideRoleTag: v = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -119,7 +119,7 @@ function g(e) {
                                       })
                             ]
                         }),
-                        C
+                        x
                     ]
                 }),
                 (0, r.jsxs)('div', {
@@ -150,7 +150,7 @@ function g(e) {
         });
     return null == y
         ? (0, r.jsx)('article', {
-              className: l()(p.productCard, x ? p.opaqueBackground : p.solidBackground),
+              className: l()(p.productCard, C ? p.opaqueBackground : p.solidBackground),
               'aria-labelledby': P,
               children: A
           })
@@ -162,7 +162,7 @@ function g(e) {
               children: (0, r.jsx)(a.kL8, {
                   tag: 'article',
                   'aria-label': d.intl.formatToPlainString(d.t['e+TmJS'], { productName: n }),
-                  className: l()(p.productCard, x ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
+                  className: l()(p.productCard, C ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
                   onClick: y,
                   children: A
               })
