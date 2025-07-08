@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(501431),
     d = n(888302),
     p = n(193227),
-    f = n(845796),
-    g = n(841875),
+    g = n(845796),
+    f = n(841875),
     h = n(312030),
     b = n(795343),
     m = n(763891),
@@ -25,10 +25,10 @@ function E(e) {
         });
     (0, u.A)();
     let y = (0, c.F)('CollectiblesBrowse'),
-        [T, j] = l.useState(y);
+        [j, T] = l.useState(y);
     l.useEffect(() => {
-        y || j(!1);
-    }, [y, j]);
+        y || T(!1);
+    }, [y, T]);
     let P = (0, u.S)((e) => e.hasFilters());
     return (0, r.jsx)('div', {
         className: i()(O.pageWrapper, { [O.pageWrapperFilter]: y }),
@@ -52,15 +52,15 @@ function E(e) {
                                     (0, r.jsxs)('div', {
                                         className: O.controlsRightSide,
                                         children: [
-                                            (0, r.jsx)(f.ZP, {}),
+                                            (0, r.jsx)(g.ZP, {}),
                                             (0, r.jsx)(a.zxk, {
-                                                onClick: () => j((e) => !e),
+                                                onClick: () => T((e) => !e),
                                                 look: a.iLD.OUTLINED,
                                                 color: a.Ttl.PRIMARY,
                                                 children: (0, r.jsxs)('div', {
                                                     className: O.filterButton,
                                                     children: [
-                                                        C.intl.string(T ? C.t.fYtm6e : C.t.TeTYEx),
+                                                        C.intl.string(j ? C.t.fYtm6e : C.t.TeTYEx),
                                                         (0, r.jsx)(a.gXV, {
                                                             size: 'xs',
                                                             color: 'var(--button-outline-primary-text)'
@@ -104,10 +104,10 @@ function E(e) {
                                 })
                     ]
                 }),
-                T &&
+                j &&
                     (0, r.jsx)(a.Ttm, {
                         className: O.filterBar,
-                        children: (0, r.jsx)(g.Z, {})
+                        children: (0, r.jsx)(f.Z, {})
                     })
             ]
         })

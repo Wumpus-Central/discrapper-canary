@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(410030),
     p = n(501431),
-    f = n(215023),
-    g = n(231338),
+    g = n(215023),
+    f = n(231338),
     h = n(388032),
     b = n(590305);
 function m() {
@@ -25,7 +25,7 @@ function m() {
                         variant: 'text-md/semibold',
                         children: h.intl.string(h.t.Qk6r1d)
                     }),
-                    f.xg.map((e) => (0, r.jsx)(_, { filter: e }, e)),
+                    g.xg.map((e) => (0, r.jsx)(_, { filter: e }, e)),
                     (0, r.jsx)(C, {
                         onChange: () => e(),
                         text: h.intl.string(h.t.AHHHgI),
@@ -204,7 +204,7 @@ let _ = (e) => {
     },
     S = () => {
         let { themeFilters: e, onToggleTheme: t } = (0, p.S)(),
-            n = (0, d.ZP)() === g.BR.DARK,
+            n = (0, d.ZP)() === f.BR.DARK,
             o = l.useCallback(
                 (t) => {
                     if (e.has(t) || n) return 'always-white';

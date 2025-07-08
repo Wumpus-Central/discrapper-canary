@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(626135),
     d = n(381585),
     p = n(597688),
-    f = n(297651),
-    g = n(794324),
+    g = n(297651),
+    f = n(794324),
     h = n(981631),
     b = n(388032),
     m = n(806734);
@@ -20,21 +20,21 @@ let _ = (e) => {
         { category: O, subblock: E, badgeText: v, handleTransition: S } = e;
     null != E && (C = null == (t = p.Z.getCategoryByStoreListingId(null == E ? void 0 : E.categoryStoreListingId)) ? void 0 : t.skuId);
     let x = null != (n = null != C ? C : null == O ? void 0 : O.skuId) ? n : '',
-        { handleCardVisibilityChange: y } = (0, f.E)(x, 'home', 'marketing featured block'),
-        { featuredBlockBanner: T } = (0, g.YG)(O, E),
-        j = l.useRef(null),
+        { handleCardVisibilityChange: y } = (0, g.E)(x, 'home', 'marketing featured block'),
+        { featuredBlockBanner: j } = (0, f.YG)(O, E),
+        T = l.useRef(null),
         P = x === a.T.NAMEPLATES_V3,
         L = P ? 'NAMEPLATES VOL.3' : null,
         I = null == E ? void 0 : E.bodyText,
         k = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: j,
+        innerRef: T,
         onChange: y,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: j,
-            style: { backgroundImage: 'url('.concat(T, ')') },
+            innerRef: T,
+            style: { backgroundImage: 'url('.concat(j, ')') },
             onClick: () => {
                 (S('shop marketing tile', x),
                     u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {

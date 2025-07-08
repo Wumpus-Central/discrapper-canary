@@ -1,136 +1,136 @@
-(n.d(t, { default: () => _ }), n(388685));
-var r = n(255367),
-    i = n(73800),
-    l = n(442837),
-    a = n(481060),
-    o = n(100527),
-    s = n(906732),
-    c = n(335131),
-    u = n(884697),
-    d = n(150039),
-    p = n(594174),
-    v = n(626135),
-    f = n(653079),
-    m = n(576386),
-    b = n(981631),
-    h = n(388032),
-    g = n(637635);
-function _(e) {
-    let { transitionState: t, analyticsLocations: n, onClose: c } = e,
+(r.d(t, { default: () => y }), r(388685));
+var n = r(255367),
+    i = r(73800),
+    l = r(442837),
+    o = r(481060),
+    a = r(100527),
+    s = r(906732),
+    c = r(335131),
+    u = r(884697),
+    d = r(150039),
+    p = r(594174),
+    v = r(626135),
+    b = r(653079),
+    f = r(576386),
+    m = r(981631),
+    h = r(388032),
+    g = r(637635);
+function y(e) {
+    let { transitionState: t, analyticsLocations: r, onClose: c } = e,
         d = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        { analyticsLocations: f } = (0, s.ZP)(n, o.Z.EDIT_NAMEPLATE_MODAL),
-        { available: m, purchased: h, isFetchingCategories: _, isFetchingPurchases: O } = (0, u.yV)('NameplateModal'),
-        x = _ || (O && 0 === h.length);
+        { analyticsLocations: b } = (0, s.ZP)(r, a.Z.EDIT_NAMEPLATE_MODAL),
+        { available: f, purchased: h, isFetchingCategories: y, isFetchingPurchases: _ } = (0, u.yV)('NameplateModal'),
+        j = y || (_ && 0 === h.length);
     return (
         (0, i.useEffect)(() => {
-            v.default.track(b.rMx.OPEN_MODAL, {
-                type: b.jXE.NAMEPLATE_CUSTOMIZATION,
-                location_stack: f
+            v.default.track(m.rMx.OPEN_MODAL, {
+                type: m.jXE.NAMEPLATE_CUSTOMIZATION,
+                location_stack: b
             });
-        }, [f]),
+        }, [b]),
         null == d
             ? null
-            : (0, r.jsx)(s.Gt, {
-                  value: f,
-                  children: (0, r.jsx)(a.Y0X, {
+            : (0, n.jsx)(s.Gt, {
+                  value: b,
+                  children: (0, n.jsx)(o.Y0X, {
                       transitionState: t,
-                      size: x ? a.CgR.DYNAMIC : a.CgR.MEDIUM,
+                      size: j ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
                       parentComponent: 'NameplateModal',
-                      children: x
-                          ? (0, r.jsx)(a.$jN, {
+                      children: j
+                          ? (0, n.jsx)(o.$jN, {
                                 className: g.spinner,
-                                type: a.$jN.Type.SPINNING_CIRCLE
+                                type: o.$jN.Type.SPINNING_CIRCLE
                             })
-                          : (0, r.jsx)(y, {
+                          : (0, n.jsx)(O, {
                                 user: d,
                                 onClose: c,
-                                available: m,
+                                available: f,
                                 purchased: h,
-                                analyticsLocations: f
+                                analyticsLocations: b
                             })
                   })
               })
     );
 }
-function y(e) {
-    let { user: t, available: n, purchased: l, analyticsLocations: s, onClose: u } = e,
+function O(e) {
+    let { user: t, available: r, purchased: l, analyticsLocations: s, onClose: u } = e,
         p = l.find((e) => {
-            var n, r;
-            return e.skuId === (null == t || null == (r = t.collectibles) || null == (n = r.nameplate) ? void 0 : n.skuId);
+            var r, n;
+            return e.skuId === (null == t || null == (n = t.collectibles) || null == (r = n.nameplate) ? void 0 : r.skuId);
         }),
         { pendingNameplate: v } = (0, d._A)(),
-        [b, _] = (0, i.useState)(() => (void 0 !== v ? v : null != p ? p : null)),
-        [y, O] = (0, i.useState)(null != b),
-        x = (0, i.useCallback)(
+        [m, y] = (0, i.useState)(() => (void 0 !== v ? v : null != p ? p : null)),
+        [O, _] = (0, i.useState)(null != m),
+        j = (0, i.useCallback)(
             (e) => {
                 (u(),
                     (0, c.mK)({
                         analyticsLocations: s,
-                        analyticsSource: o.Z.EDIT_NAMEPLATE_MODAL,
+                        analyticsSource: a.Z.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e
                     }));
             },
             [s, u]
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsxs)(a.xBx, {
+            (0, n.jsxs)(o.xBx, {
                 separator: !1,
                 className: g.header,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, n.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
                         children: h.intl.string(h.t.BwdeMz)
                     }),
-                    (0, r.jsx)(a.olH, {
+                    (0, n.jsx)(o.olH, {
                         className: g.closeButton,
                         onClick: u
                     })
                 ]
             }),
-            (0, r.jsxs)(a.hzk, {
+            (0, n.jsxs)(o.hzk, {
                 className: g.content,
                 scrollbarType: 'none',
                 children: [
-                    (0, r.jsx)(m.Z, {
-                        selected: b,
+                    (0, n.jsx)(f.Z, {
+                        selected: m,
                         onSelect: (e, t) => {
-                            (_(e), O(null != t && t));
+                            (y(e), _(null != t && t));
                         },
-                        onOpenShop: x,
-                        available: n,
+                        onOpenShop: j,
+                        available: r,
                         purchased: l
                     }),
-                    (0, r.jsx)(f.Z, {
+                    (0, n.jsx)(b.Z, {
                         user: t,
-                        selectedNameplate: b,
-                        purchased: y
+                        selectedNameplate: m,
+                        purchased: O
                     })
                 ]
             }),
-            (0, r.jsxs)(a.mzw, {
+            (0, n.jsxs)(o.mzw, {
                 children: [
-                    y || null == b
-                        ? (0, r.jsx)(a.zxk, {
-                              disabled: void 0 === b,
+                    O || null == m
+                        ? (0, n.jsx)(o.zxk, {
+                              disabled: void 0 === m,
                               onClick: () => {
-                                  ((0, d.Wh)(b), u());
+                                  ((0, d.Wh)(m), u());
                               },
                               children: h.intl.string(h.t.Jh8fJy)
                           })
-                        : (0, r.jsx)(a.zxk, {
+                        : (0, n.jsx)(o.zxk, {
                               className: g.goToShopButton,
-                              color: a.Ttl.CUSTOM,
-                              onClick: () => x(null == b ? void 0 : b.skuId),
-                              children: (0, r.jsx)(a.Text, {
+                              color: o.Ttl.CUSTOM,
+                              onClick: () => j(null == m ? void 0 : m.skuId),
+                              children: (0, n.jsx)(o.Text, {
                                   color: 'always-white',
                                   variant: 'text-sm/medium',
                                   children: h.intl.string(h.t.fYfGgI)
                               })
                           }),
-                    (0, r.jsx)(a.zxk, {
-                        look: a.zxk.Looks.LINK,
-                        color: a.zxk.Colors.PRIMARY,
+                    (0, n.jsx)(o.zxk, {
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: u,
                         children: h.intl.string(h.t.mDcKND)
                     })

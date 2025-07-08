@@ -14,7 +14,7 @@ var n = a(255367),
     T = a(981631),
     g = a(474936),
     p = a(388032),
-    E = a(882714);
+    E = a(22844);
 function h(e) {
     var t;
     let { levelUpData: a } = e,

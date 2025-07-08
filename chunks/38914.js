@@ -4,26 +4,26 @@ n(73800);
 var i = n(481060),
     l = n(483444),
     a = n(388032),
-    s = n(505318),
-    o = n(302681);
+    o = n(505318),
+    s = n(302681);
 let c = () => {
     let e = [a.t.E1NP29, a.t.kpMomJ, a.t.xT1Vfn, a.t.myyAEh, a.t.zTk8Ul];
     return (0, r.jsxs)('div', {
-        className: s.container,
+        className: o.container,
         children: [
             (0, r.jsx)('img', {
-                src: o.Z,
+                src: s.Z,
                 alt: '',
-                className: s.headerAsset
+                className: o.headerAsset
             }),
             (0, r.jsx)(l.Z, { color: 'white' }),
             (0, r.jsx)('div', {
-                className: s.benefits,
+                className: o.benefits,
                 children: e.map((e, t) =>
                     (0, r.jsxs)(
                         'div',
                         {
-                            className: s.benefitRow,
+                            className: o.benefitRow,
                             children: [
                                 (0, r.jsx)(i.kmB, { color: i.TVs.colors.WHITE }),
                                 (0, r.jsx)(i.Text, {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -24,10 +24,7 @@ let f = [
         {
             getQuestion: () => u.intl.string(u.t.kYmXWF),
             getAnswer: () => u.intl.string(u.t['+OURPj'])
-        }
-    ],
-    _ = [
-        ...f,
+        },
         {
             getQuestion: () => u.intl.string(u.t['LsX/vb']),
             getAnswer: () => u.intl.string(u.t['3TeauL'])
@@ -49,10 +46,9 @@ let f = [
             getAnswer: () => u.intl.string(u.t.Aje8PT)
         }
     ],
-    p = function (e) {
-        let { className: t, isGuildPowerupsExperimentEnabled: n } = e,
-            [a, l] = i.useState(null),
-            c = n ? _ : f;
+    _ = function (e) {
+        let { className: t } = e,
+            [n, a] = i.useState(null);
         return (0, r.jsxs)('div', {
             className: o()(d.wrapper, t),
             children: [
@@ -63,16 +59,16 @@ let f = [
                 }),
                 (0, r.jsx)('ul', {
                     className: d.list,
-                    children: c.map((e, t) => {
-                        let n = a === t;
+                    children: f.map((e, t) => {
+                        let i = n === t;
                         return (0, r.jsxs)(
                             'div',
                             {
                                 className: d.listItem,
                                 children: [
                                     (0, r.jsxs)(s.P3F, {
-                                        className: o()(d.questionWrapper, { [d.questionWrapperExpanded]: n }),
-                                        onClick: () => l((e) => (e === t ? null : t)),
+                                        className: o()(d.questionWrapper, { [d.questionWrapperExpanded]: i }),
+                                        onClick: () => a((e) => (e === t ? null : t)),
                                         tag: 'li',
                                         children: [
                                             (0, r.jsx)(s.Text, {
@@ -80,7 +76,7 @@ let f = [
                                                 variant: 'text-lg/normal',
                                                 children: e.getQuestion()
                                             }),
-                                            n
+                                            i
                                                 ? (0, r.jsx)(s.V_R, {
                                                       size: 'md',
                                                       color: 'currentColor',
@@ -93,7 +89,7 @@ let f = [
                                                   })
                                         ]
                                     }),
-                                    n &&
+                                    i &&
                                         (0, r.jsx)(s.Text, {
                                             className: d.answer,
                                             color: 'text-default',

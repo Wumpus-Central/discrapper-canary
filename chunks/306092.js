@@ -1,41 +1,35 @@
-n.d(t, { e: () => u });
-var r = n(255367),
-    l = n(481060),
-    o = n(409116),
-    i = n(755007),
-    a = n(231338),
-    s = n(858022);
-function c(e) {
-    let { price: t, isPremiumUser: n, discount: c, hasSufficientOrbs: u } = e;
-    return t.currency === a.pK.DISCORD_ORB
-        ? (0, r.jsx)(i.Z, {
+r.d(t, { e: () => c });
+var n = r(255367),
+    i = r(409116),
+    l = r(755007),
+    o = r(231338),
+    a = r(858022);
+function s(e) {
+    let { price: t, isPremiumUser: r, discount: s, hasSufficientOrbs: c } = e;
+    return t.currency === o.pK.DISCORD_ORB
+        ? (0, n.jsx)(l.Z, {
               orbAmount: t.amount,
-              className: u ? void 0 : s.disabled
+              className: c ? void 0 : a.disabled
           })
-        : (0, r.jsx)(o.F, {
+        : (0, n.jsx)(i.F, {
               price: t,
-              discount: c,
-              icon: n
-                  ? (0, r.jsx)(l.SrA, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: s.nitroIcon
-                    })
-                  : void 0
+              discount: s,
+              nitroIconType: r ? 'default' : void 0,
+              nitroIconSize: 'md'
           });
 }
-function u(e) {
-    let { displayPrices: t, isPremiumUser: n, discount: l, hasSufficientOrbs: o } = e;
-    return (0, r.jsx)('div', {
-        className: s.priceLine,
+function c(e) {
+    let { displayPrices: t, isPremiumUser: r, discount: i, hasSufficientOrbs: l } = e;
+    return (0, n.jsx)('div', {
+        className: a.priceLine,
         children: t.map((e, t) =>
-            (0, r.jsx)(
-                c,
+            (0, n.jsx)(
+                s,
                 {
                     price: e,
-                    isPremiumUser: n,
-                    discount: l,
-                    hasSufficientOrbs: o
+                    isPremiumUser: r,
+                    discount: i,
+                    hasSufficientOrbs: l
                 },
                 t
             )

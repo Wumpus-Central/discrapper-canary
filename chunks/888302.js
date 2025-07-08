@@ -10,13 +10,13 @@ function u(e) {
     let { sortedCategories: t } = e,
         { itemTypeFilters: n, searchQuery: u } = (0, a.S)((e) => e),
         { totalCount: d, isFetchingResults: p } = (0, s.a)(),
-        f = t.length,
-        g = (0, a.S)((e) => e.hasFilters()),
+        g = t.length,
+        f = (0, a.S)((e) => e.hasFilters()),
         h = l.useCallback(
             () =>
                 p
                     ? c.intl.string(c.t['/FaMSE'])
-                    : g
+                    : f
                       ? '' !== u
                           ? c.intl.format(c.t.KJMJOz, {
                                 count: d,
@@ -31,8 +31,8 @@ function u(e) {
                                 : 1 === n.size && n.has(o.G.BUNDLE)
                                   ? c.intl.format(c.t.fZ1rdn, { count: d })
                                   : c.intl.format(c.t['/rPvmZ'], { count: d })
-                      : c.intl.format(c.t['+687XV'], { count: f }),
-            [n, d, f, g, u, p]
+                      : c.intl.format(c.t['+687XV'], { count: g }),
+            [n, d, g, f, u, p]
         );
     return (0, r.jsx)(i.X6q, {
         variant: 'heading-lg/semibold',

@@ -10,14 +10,14 @@ var r = n(255367),
 function d() {
     let [e, t] = l.useState(''),
         [n, d] = l.useState(''),
-        { searchQuery: p, onSetSearchQuery: f, setQueryPageOffset: g } = (0, a.S)(),
+        { searchQuery: p, onSetSearchQuery: g, setQueryPageOffset: f } = (0, a.S)(),
         { clear: h } = (0, s.a)(),
         b = l.useMemo(
             () =>
                 (0, o.debounce)((e) => {
-                    (h(), g(0), f(e), d(e));
+                    (h(), f(0), g(e), d(e));
                 }, 500),
-            [f, h, g]
+            [g, h, f]
         );
     return (
         l.useEffect(() => {

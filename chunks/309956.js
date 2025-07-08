@@ -16,13 +16,13 @@ let d = {
     p = (e, t, n) => {
         let { enabled: o } = (0, i.WX)({ location: 'useShopViewTransition' }),
             p = (0, a.F)('CollectiblesBrowse'),
-            { setItemTypeFilter: f, clearItemTypeFilter: g, reset: h } = (0, s.S)();
+            { setItemTypeFilter: g, clearItemTypeFilter: f, reset: h } = (0, s.S)();
         r.useEffect(() => {
             if (p) {
                 let e = d[t];
-                null != e && f(e);
-            } else g();
-        }, [p, t, f, g]);
+                null != e && g(e);
+            } else f();
+        }, [p, t, g, f]);
         let b = r.useMemo(() => (t !== c.AW.ORBS || o ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, o, p]),
             [m, _] = r.useState(b),
             [C, O] = r.useState(c.f7.VISIBLE);
@@ -36,9 +36,9 @@ let d = {
             transitionState: C,
             transitionToTab: r.useCallback(
                 async (t, r) => {
-                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? f(d[t]) : g(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
+                    (t === c.AW.HOME && p && h(), r ? (O(c.f7.OUT), await E(1.1 * c.lb), _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), O(c.f7.IN)) : (p ? ((0, c.RE)(t) ? g(d[t]) : f(), _(c.AW.CATALOG)) : _(t), n || v.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), O(c.f7.VISIBLE));
                 },
-                [v, n, e, p, f, g, h]
+                [v, n, e, p, g, f, h]
             )
         };
     };

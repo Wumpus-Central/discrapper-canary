@@ -10,7 +10,7 @@ var r = n(255367),
 let d = (e) => {
     let { guild: t } = e,
         n = i.useCallback(() => {
-            (0, l.xm)(t.id);
+            (0, l.x)(t.id);
         }, [t.id]);
     return (0, r.jsx)(o.Z, {
         guild: t,

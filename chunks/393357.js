@@ -1,52 +1,47 @@
-(t.r(n), t.d(n, { default: () => g }));
+(t.r(n), t.d(n, { default: () => x }));
 var r = t(255367);
 t(73800);
-var i = t(114858),
-    o = t(990547),
-    a = t(442837),
-    s = t(906732),
-    l = t(213609),
-    c = t(353926),
-    d = t(443002),
-    u = t(703656),
-    m = t(430824),
-    p = t(742139),
-    _ = t(50101),
-    f = t(639777),
-    x = t(504392),
-    b = t(981631);
-function g(e) {
+var i = t(990547),
+    o = t(442837),
+    a = t(906732),
+    s = t(213609),
+    l = t(353926),
+    c = t(443002),
+    d = t(703656),
+    u = t(430824),
+    m = t(742139),
+    p = t(639777),
+    _ = t(504392),
+    f = t(981631);
+function x(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        g = (0, a.e7)([m.Z], () => m.Z.getGuild(n)),
-        v = (0, a.e7)([c.Z], () => c.Z.hasLoadedExperiments),
-        h = (0, f.Z)(n),
-        j = (0, u.At)(),
-        C = (0, _.Ek)(n, 'GuildPowerupsPage'),
-        E = (0, p.V)('GuildPowerupsPage'),
-        N = !v || null == h || null == g,
-        Z = (0, s.ZP)(null != j ? j : []);
-    return ((0, l.Z)(
+        x = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
+        b = (0, o.e7)([l.Z], () => l.Z.hasLoadedExperiments),
+        g = (0, p.Z)(n),
+        v = (0, d.At)(),
+        h = (0, m.V)('GuildPowerupsPage'),
+        j = !b || null == g || null == x,
+        C = (0, a.ZP)(null != v ? v : []);
+    return ((0, s.Z)(
         {
-            type: o.ImpressionTypes.VIEW,
-            name: o.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: Z.analyticsLocations }
+            type: i.ImpressionTypes.VIEW,
+            name: i.ImpressionNames.BOOST_SHOP_OPENED,
+            properties: { location_stack: C.analyticsLocations }
         },
-        { disableTrack: N }
+        { disableTrack: j }
     ),
-    N)
+    j)
         ? null
-        : C
-          ? h || E
-              ? (0, r.jsx)(x.Z, {
-                    guildId: n,
-                    powerupSkuId: t
-                })
-              : (0, r.jsx)(d.Z, {
-                    analyticsLocation: {
-                        section: b.jXE.CHANNEL_LIST,
-                        object: b.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
-                    },
-                    guild: g
-                })
-          : (0, r.jsx)(i.l_, { to: b.Z5c.CHANNEL(n) });
+        : g || h
+          ? (0, r.jsx)(_.Z, {
+                guildId: n,
+                powerupSkuId: t
+            })
+          : (0, r.jsx)(c.Z, {
+                analyticsLocation: {
+                    section: f.jXE.CHANNEL_LIST,
+                    object: f.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
+                },
+                guild: x
+            });
 }

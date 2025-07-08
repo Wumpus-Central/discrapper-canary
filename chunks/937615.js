@@ -2,9 +2,12 @@
     T3: () => d,
     T4: () => c,
     og: () => u,
+    qr: () => p,
     xg: () => f
 }),
-    n(415506));
+    n(415506),
+    n(704826),
+    n(35282));
 var r = n(221513),
     i = n(706454),
     a = n(74538),
@@ -37,4 +40,10 @@ function f(e) {
     let t = 'interval_count' in e ? e.interval_count : e.intervalCount,
         n = (0, a.aS)(e.id);
     return u(c(n.amount, n.currency), e.interval, t);
+}
+function _(e) {
+    return e.length > 5 ? e.replace(/\.00$/, '') : e;
+}
+function p(e, t, n) {
+    return _(c(e, t, n));
 }

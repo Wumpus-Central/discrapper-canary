@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(370039),
     d = n(501431),
     p = n(149705),
-    f = n(303952),
-    g = n(38900),
+    g = n(303952),
+    f = n(38900),
     h = n(709999),
     b = n(81136),
     m = n(484920);
@@ -21,19 +21,19 @@ function _(e) {
         v = null != (t = null == E ? void 0 : E.sessionId) ? t : '',
         { noCache: S, includeUnpublished: x } = (0, b.Z)(),
         y = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
-        { skus: T, currentPage: j, totalCount: P, isFetchingResults: L } = (0, p.a)(),
-        I = (0, o.Wu)([c.Z], () => c.Z.getProductsBySkus(T)),
+        { skus: j, currentPage: T, totalCount: P, isFetchingResults: L } = (0, p.a)(),
+        I = (0, o.Wu)([c.Z], () => c.Z.getProductsBySkus(j)),
         k = l.useCallback(() => {
             var e;
             null == C || null == (e = C.current) || e.scrollToTop({ animate: !0 });
         }, [C]),
-        N = (0, u.a)(),
-        B = l.useMemo(() => N(I), [N, I]);
+        B = (0, u.a)(),
+        N = l.useMemo(() => B(I), [B, I]);
     l.useEffect(() => {
         n ||
-            (0, f.n)({
+            (0, g.n)({
                 sessionId: v,
-                checkpoint: f.a.SHOP_RENDERED,
+                checkpoint: g.a.SHOP_RENDERED,
                 tab: O,
                 isFullScreen: _,
                 unpublishedCategoriesShown: x,
@@ -52,16 +52,16 @@ function _(e) {
             return (e.observe(A.current), () => e.disconnect());
         }
     }, [R]);
-    let F = n || L || null == y;
+    let D = n || L || null == y;
     return (0, r.jsx)('div', {
         ref: A,
-        children: F
-            ? (0, r.jsx)(g.Z, {})
+        children: D
+            ? (0, r.jsx)(f.Z, {})
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)('div', {
                           className: m.products,
-                          children: B.map((e, t) => {
+                          children: N.map((e, t) => {
                               let n = c.Z.getCategory(e.categorySkuId);
                               return null == n
                                   ? null
@@ -89,7 +89,7 @@ function _(e) {
                               className: m.paginationContainer,
                               children: (0, r.jsx)('div', {
                                   children: (0, r.jsx)(i.DsT, {
-                                      currentPage: j,
+                                      currentPage: T,
                                       totalCount: P,
                                       pageSize: Z,
                                       onPageChange: (e) => {

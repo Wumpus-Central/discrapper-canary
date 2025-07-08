@@ -80,11 +80,13 @@ function v(e) {
                 rejectWithError: !1
             })
             .then(
-                () =>
+                (e) => (
                     s.Z.dispatch({
                         type: 'EMOJI_UPLOAD_STOP',
                         guildId: t
                     }),
+                    e.body
+                ),
                 (e) => (
                     s.Z.dispatch({
                         type: 'EMOJI_UPLOAD_STOP',

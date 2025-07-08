@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(160404),
     K = n(703656),
     q = n(917405),
-    Q = n(641015),
-    X = n(848543),
+    X = n(641015),
+    Q = n(848543),
     J = n(565799),
     $ = n(501655),
     ee = n(368442),
@@ -240,14 +240,14 @@ function eq() {
         }
     });
 }
-function eQ(e) {
+function eX(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
         o = i.useRef(null),
         { parentAnalyticsLocation: s } = (0, Z.ZP)(),
         c = (0, ea.Z)(),
         d = (0, es.Z)(t),
         p = (0, u.e7)([v.ZP], () => null != v.ZP.getSelfEmbeddedActivityForLocation(v.ZP.getConnectedActivityLocation())),
-        f = (0, Q.Z)(t),
+        f = (0, X.Z)(t),
         { reachedLimit: b, limit: _ } = (0, eo.Z)(t),
         E = i.useCallback(() => {
             (0, eu.Z)();
@@ -357,7 +357,7 @@ function eQ(e) {
         )
     );
 }
-function eX(e) {
+function eQ(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, I.bp)(),
         { analyticsLocations: l, parentAnalyticsLocation: o } = (0, Z.ZP)(),
@@ -449,7 +449,7 @@ function eJ(e) {
         m = (0, es.Z)(n),
         b = n.getGuildId(),
         _ = (0, u.cj)([v.ZP], () => null != v.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        E = (0, Q.Z)(n),
+        E = (0, X.Z)(n),
         O = i.useCallback(() => {
             (0, ep.Z)(b, n.id, eR.jXE.ACTIVITY_PANEL);
         }, [b, n.id]),
@@ -634,7 +634,7 @@ class e$ extends i.PureComponent {
         return (0, r.jsxs)('div', {
             className: eG.actionButtons,
             children: [
-                (0, r.jsx)(eQ, {
+                (0, r.jsx)(eX, {
                     channel: e,
                     enableActivities: d,
                     disabled: !h && p
@@ -646,13 +646,13 @@ class e$ extends i.PureComponent {
                     disabled: e.isGuildStageVoice() && ((h && null == a) || (!h && p))
                 }),
                 d && !c
-                    ? (0, r.jsx)(eX, {
+                    ? (0, r.jsx)(eQ, {
                           channel: e,
                           enableActivities: i
                       })
                     : null,
-                (0, Q.Z)(e) && !s
-                    ? (0, r.jsx)(X.Z, {
+                (0, X.Z)(e) && !s
+                    ? (0, r.jsx)(Q.Z, {
                           channel: e,
                           focusProps: eW
                       })

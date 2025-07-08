@@ -1,6 +1,6 @@
 (n.d(t, {
-    ZP: () => O,
-    xm: () => b
+    ZP: () => y,
+    xm: () => E
 }),
     n(953529));
 var r = n(255367);
@@ -8,15 +8,14 @@ n(73800);
 var i = n(399606),
     a = n(481060),
     o = n(607070),
-    s = n(50101),
-    l = n(388032),
-    c = n(93841),
-    u = n(501867),
-    d = n(567949),
-    f = n(552781),
-    _ = n(952567),
-    p = n(807159);
-function h(e, t, n) {
+    s = n(388032),
+    l = n(93841),
+    c = n(501867),
+    u = n(567949),
+    d = n(552781),
+    f = n(952567),
+    _ = n(807159);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,23 +39,23 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = E(e, t);
+        i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function E(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -65,26 +64,26 @@ function E(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function b(e) {
+function E(e) {
     let { heading: t, description: n, label: i, isEnabled: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
-                className: u.topPerksCardHeading,
+                className: c.topPerksCardHeading,
                 variant: 'heading-lg/extrabold',
                 children: t
             }),
             (0, r.jsx)(a.Text, {
-                className: u.topPerksCardDescription,
+                className: c.topPerksCardDescription,
                 variant: 'text-sm/normal',
                 children: n
             }),
             (0, r.jsxs)('div', {
-                className: u.labelsContainer,
+                className: c.labelsContainer,
                 children: [
                     null != i &&
                         (0, r.jsxs)('div', {
-                            className: u.topPerksCardLabelContainer,
+                            className: c.topPerksCardLabelContainer,
                             children: [
                                 (0, r.jsx)(a.$Eu, {
                                     size: 'sm',
@@ -98,7 +97,7 @@ function b(e) {
                         }),
                     o &&
                         (0, r.jsxs)('div', {
-                            className: u.topPerksCardLabelContainer,
+                            className: c.topPerksCardLabelContainer,
                             children: [
                                 (0, r.jsx)(a.owK, {
                                     size: 'custom',
@@ -109,7 +108,7 @@ function b(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'currentColor',
-                                    children: l.intl.string(l.t.pCMkDQ)
+                                    children: s.intl.string(s.t.pCMkDQ)
                                 })
                             ]
                         })
@@ -118,56 +117,54 @@ function b(e) {
         ]
     });
 }
-function y(e) {
+function b(e) {
     var { imgSrc: t } = e,
-        n = g(e, ['imgSrc']);
+        n = m(e, ['imgSrc']);
     return (0, r.jsxs)('div', {
-        className: u.topPerksCard,
+        className: c.topPerksCard,
         children: [
             (0, r.jsx)('img', {
-                className: u.topPerksCardImage,
+                className: c.topPerksCardImage,
                 src: t,
                 alt: ''
             }),
             (0, r.jsx)('div', {
-                className: u.contentContainer,
-                children: (0, r.jsx)(b, m({}, n))
+                className: c.contentContainer,
+                children: (0, r.jsx)(E, h({}, n))
             })
         ]
     });
 }
-let O = function (e) {
-    let { guild: t } = e,
-        n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        h = (0, s.Ek)(t.id, 'GuildBoostingMarketingTopPerksCards');
+let y = function () {
+    let e = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
-        className: u.wrapper,
+        className: c.wrapper,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: u.heading,
+                className: c.heading,
                 variant: 'heading-xxl/extrabold',
-                children: l.intl.string(l.t.aGdB3N)
+                children: s.intl.string(s.t.aGdB3N)
             }),
             (0, r.jsxs)('div', {
-                className: u.topPerksCards,
+                className: c.topPerksCards,
                 children: [
-                    (0, r.jsx)(y, {
-                        description: l.intl.string(l.t.wOYbTk),
-                        heading: l.intl.string(l.t.G6jZo6),
-                        imgSrc: n ? f : d,
-                        label: h ? l.intl.string(c.default.na6fmJ) : void 0
+                    (0, r.jsx)(b, {
+                        description: s.intl.string(s.t.wOYbTk),
+                        heading: s.intl.string(s.t.G6jZo6),
+                        imgSrc: e ? d : u,
+                        label: s.intl.string(l.default.na6fmJ)
                     }),
-                    (0, r.jsx)(y, {
-                        description: l.intl.string(l.t.HTvLGh),
-                        heading: l.intl.string(l.t.IpRQw8),
+                    (0, r.jsx)(b, {
+                        description: s.intl.string(s.t.HTvLGh),
+                        heading: s.intl.string(s.t.IpRQw8),
+                        imgSrc: f,
+                        label: s.intl.string(l.default.dyNT9v)
+                    }),
+                    (0, r.jsx)(b, {
+                        description: s.intl.string(s.t.yCjoUF),
+                        heading: s.intl.string(s.t['/bX4Ji']),
                         imgSrc: _,
-                        label: h ? l.intl.string(c.default.dyNT9v) : void 0
-                    }),
-                    (0, r.jsx)(y, {
-                        description: l.intl.string(l.t.yCjoUF),
-                        heading: l.intl.string(l.t['/bX4Ji']),
-                        imgSrc: p,
-                        label: h ? l.intl.string(c.default['8AEGEx']) : void 0
+                        label: s.intl.string(l.default['8AEGEx'])
                     })
                 ]
             })

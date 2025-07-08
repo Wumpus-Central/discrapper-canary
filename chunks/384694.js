@@ -1,4 +1,4 @@
-(n.d(t, { q: () => g }), n(388685));
+(n.d(t, { q: () => m }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(442837),
@@ -7,83 +7,86 @@ var r = n(255367),
     o = n(430824),
     c = n(496675),
     u = n(981631),
-    d = n(588687);
-let h = (e) => ({
+    d = n(388032),
+    h = n(588687);
+let p = (e) => ({
         label: e.name,
         value: e.id
     }),
-    p = (e) => c.Z.can(u.Plq.CREATE_GUILD_EXPRESSIONS, e),
-    g = (e) => {
+    g = (e) => c.Z.can(u.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    m = (e) => {
         let { onChange: t, selected: n, onError: c, labelledBy: u } = e,
-            g = (0, a.e7)([o.Z], () => o.Z.getGuilds()),
-            m = l.useMemo(() => Object.values(g).filter(p).map(h), [g]),
-            f = l.useCallback(
+            m = (0, a.e7)([o.Z], () => o.Z.getGuilds()),
+            f = l.useMemo(() => Object.values(m).filter(g).map(p), [m]),
+            v = l.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
-                    let n = g[t.value];
+                    let n = m[t.value];
                     return null == n
                         ? null
                         : (0, r.jsxs)('div', {
-                              className: d.value,
+                              className: h.value,
                               children: [
                                   (0, r.jsx)(s.Z, {
                                       guild: n,
                                       size: s.Z.Sizes.SMALLER,
                                       active: !0,
-                                      className: d.icon
+                                      className: h.icon
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       variant: 'text-sm/normal',
-                                      className: d.text,
+                                      className: h.text,
                                       children: t.label
                                   })
                               ]
                           });
                 },
-                [g]
+                [m]
             ),
-            v = l.useCallback(
+            x = l.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
-                    let t = g[e.value];
+                    let t = m[e.value];
                     return null == t
                         ? null
                         : (0, r.jsxs)('div', {
-                              className: d.option,
+                              className: h.option,
                               children: [
                                   (0, r.jsx)(s.Z, {
                                       guild: t,
                                       size: s.Z.Sizes.MEDIUM,
                                       active: !0,
-                                      className: d.icon
+                                      className: h.icon
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-muted',
-                                      className: d.text,
+                                      className: h.text,
                                       children: e.label
                                   })
                               ]
                           });
                 },
-                [g]
+                [m]
             );
-        return (l.useEffect(() => {
-            if (m.length < 1) return void c();
-            null == n && t(m[0].value);
-        }, [m, t, c, n]),
-        m.length < 1)
-            ? null
-            : (0, r.jsx)(i.q4e, {
-                  className: d.guildSelector,
-                  onChange: t,
-                  options: m,
-                  popoutPosition: 'top',
-                  popoutWidth: 240,
-                  renderOptionLabel: v,
-                  renderOptionValue: f,
-                  value: n,
-                  'aria-labelledby': u
-              });
+        return (
+            l.useEffect(() => {
+                if (f.length < 1) return void c();
+                null == n && t(f[0].value);
+            }, [f, t, c, n]),
+            (0, r.jsx)(i.q4e, {
+                className: h.guildSelector,
+                onChange: t,
+                options: f,
+                popoutPosition: 'top',
+                popoutWidth: 240,
+                renderOptionLabel: x,
+                renderOptionValue: v,
+                value: n,
+                'aria-labelledby': u,
+                placeholder: f.length < 1 ? d.intl.string(d.t.jHpxws) : d.intl.string(d.t.XqMe3N),
+                isDisabled: f.length < 1
+            })
+        );
     };

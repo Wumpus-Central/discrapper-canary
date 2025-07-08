@@ -70,6 +70,10 @@ let l = {
         shop_show_debug_overlay: {
             label: 'Show debug log overlay in collectibles shop',
             category: 5
+        },
+        bypass_google_sku_sync: {
+            label: 'Bypass Google SKU sync in collectibles shop',
+            category: 5
         }
     },
     c = {};

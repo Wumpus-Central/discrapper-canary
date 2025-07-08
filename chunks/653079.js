@@ -1,60 +1,60 @@
-n.d(t, { Z: () => v });
-var r = n(255367),
-    i = n(120356),
-    l = n.n(i),
-    a = n(442837),
-    o = n(481060),
-    s = n(597688),
-    c = n(709999),
-    u = n(22267),
-    d = n(388032),
-    p = n(52431);
+r.d(t, { Z: () => v });
+var n = r(255367),
+    i = r(120356),
+    l = r.n(i),
+    o = r(442837),
+    a = r(481060),
+    s = r(597688),
+    c = r(709999),
+    u = r(22267),
+    d = r(388032),
+    p = r(52431);
 let v = (e) => {
-    let { user: t, selectedNameplate: n, purchased: i } = e,
-        v = (0, a.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId));
-    return (0, r.jsxs)('div', {
-        className: l()(p.previewBorder, { [p.upsell]: !i && null != n }),
+    let { user: t, selectedNameplate: r, purchased: i } = e,
+        v = (0, o.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));
+    return (0, n.jsxs)('div', {
+        className: l()(p.previewBorder, { [p.upsell]: !i && null != r }),
         children: [
-            (0, r.jsx)('div', {
+            (0, n.jsx)('div', {
                 className: p.previewBox,
-                children: (0, r.jsxs)('div', {
+                children: (0, n.jsxs)('div', {
                     className: p.previewContents,
                     children: [
-                        (0, r.jsx)(c.d, {
+                        (0, n.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9
                         }),
-                        (0, r.jsx)(c.d, {
+                        (0, n.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9
                         }),
-                        (0, r.jsx)(u.Z, {
+                        (0, n.jsx)(u.Z, {
                             user: t,
-                            nameplate: n,
+                            nameplate: r,
                             isHighlighted: !0
                         }),
-                        (0, r.jsx)(c.d, {
+                        (0, n.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9
                         }),
-                        (0, r.jsx)(c.d, {
+                        (0, n.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9
                         })
                     ]
                 })
             }),
-            null != n
-                ? (0, r.jsxs)('div', {
+            null != r
+                ? (0, n.jsxs)('div', {
                       className: p.previewDescription,
                       children: [
-                          (0, r.jsx)(o.Text, {
+                          (0, n.jsx)(a.Text, {
                               variant: 'text-sm/semibold',
                               children: null == v ? void 0 : v.name
                           }),
                           i
                               ? null
-                              : (0, r.jsx)(o.Text, {
+                              : (0, n.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     children: d.intl.string(d.t.fEGjVV)
                                 })

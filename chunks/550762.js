@@ -5,6 +5,7 @@ n.r(
         primary: 'primary__98277',
         secondary: 'secondary__98277',
         'always-white': 'always-white__98277',
-        critical: 'critical__98277'
+        critical: 'critical__98277',
+        button: 'button__98277'
     })
 );

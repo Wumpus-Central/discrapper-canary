@@ -1,6 +1,6 @@
 (n.d(t, {
     A: () => m,
-    S: () => g
+    S: () => f
 }),
     n(388685),
     n(642613),
@@ -59,7 +59,7 @@ function p(e, t) {
     let n = new Set(e);
     return (n.has(t) ? n.delete(t) : n.add(t), n);
 }
-let f = {
+let g = {
         itemTypeFilters: new Set(),
         colorFilters: new Set(),
         themeFilters: new Set(),
@@ -73,9 +73,9 @@ let f = {
         queryPageOffset: 0,
         isFetchingResults: !1
     },
-    g = (0, l.U)(
+    f = (0, l.U)(
         (0, o.XR)((e, t) =>
-            d(u({}, f), {
+            d(u({}, g), {
                 hasFilters: () => {
                     let { itemTypeFilters: e, colorFilters: n, themeFilters: r, orbEligible: l, sort: o, searchQuery: s } = t();
                     return [e, n, r].some((e) => e.size > 0) || l || o.sortType !== a.E.RECENCY || o.sortDirection !== i.F.DESC || '' !== s;
@@ -101,7 +101,7 @@ let f = {
                 onSetSearchQuery: (t) => {
                     e((e) =>
                         '' === e.searchQuery && '' !== t
-                            ? d(u({}, e, f), {
+                            ? d(u({}, e, g), {
                                   searchQuery: t,
                                   sort: {
                                       sortType: a.E.RELEVANCE,
@@ -139,7 +139,7 @@ let f = {
                     });
                 },
                 reset: () => {
-                    e(u({}, f));
+                    e(u({}, g));
                 }
             })
         )
@@ -173,7 +173,7 @@ let f = {
     m = () => {
         let { onSetResponse: e, setSearchError: t, clear: n, setIsFetchingResults: l } = (0, c.a)();
         r.useEffect(() => {
-            let r = g.subscribe(
+            let r = f.subscribe(
                 h,
                 (r) => {
                     (async () => {

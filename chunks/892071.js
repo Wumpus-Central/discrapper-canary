@@ -1,6 +1,6 @@
 (n.d(t, {
-    cE: () => f,
-    vP: () => d
+    cE: () => _,
+    vP: () => f
 }),
     n(415506));
 var r = n(255367),
@@ -9,56 +9,61 @@ var r = n(255367),
     o = n.n(a),
     s = n(873546),
     l = n(481060),
-    c = n(597952);
-let u = i.createContext({
+    c = n(597952),
+    u = n(580747);
+let d = i.createContext({
     lang: '',
     style: '',
     className: ''
 });
-function d() {
-    let e = i.useContext(u);
+function f() {
+    let e = i.useContext(d);
     if (void 0 === e) throw Error('useRootElementContext must be used within a RootElementContextProvider');
     return e;
 }
-function f(e) {
-    let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: T } = e,
-        S = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        A = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
-        N = o()(
+function _(e) {
+    let { rootClassName: t, lang: n, theme: a, density: f, focused: _, fontScale: p, fontScaleClass: h, mouseMode: m, keyboardModeEnabled: g, saturation: E, desaturateUserColors: b, useForcedColors: y, systemForcedColors: O, useReducedMotion: v, alwaysShowLinkDecorations: I, hardwareAccelerationEnabled: T, children: S } = e,
+        A = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        N = 'font-size: '.concat(p, '%; --saturation-factor: ').concat(E, ';'),
+        C = (0, u.Z)('highlight_mana_buttons'),
+        R = (0, u.Z)('highlight_void_buttons'),
+        P = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
-            'density-'.concat(d),
-            p,
+            'density-'.concat(f),
+            h,
             {
-                'low-saturation': g <= l.AEw,
-                'keyboard-mode': m,
-                'decorate-links': v,
-                'no-webkit-scrollbar': !S,
-                'has-webkit-scrollbar': S,
-                'mouse-mode': h,
-                'reduce-motion': O,
-                'full-motion': !O,
+                'low-saturation': E <= l.AEw,
+                'keyboard-mode': g,
+                'decorate-links': I,
+                'no-webkit-scrollbar': !A,
+                'has-webkit-scrollbar': A,
+                'mouse-mode': m,
+                'reduce-motion': v,
+                'full-motion': !v,
                 'is-mobile': s.tq,
-                'app-focused': f,
-                'desaturate-user-colors': E,
-                'disable-forced-colors': !b && 'active' === y,
-                'enable-forced-colors': b,
+                'app-focused': _,
+                'desaturate-user-colors': b,
+                'disable-forced-colors': !y && 'active' === O,
+                'enable-forced-colors': y,
                 'visual-refresh': !0,
-                'hardware-acceleration-disabled': !I,
-                'visual-refresh-chat-input': !1
+                'hardware-acceleration-disabled': !T,
+                'visual-refresh-chat-input': !1,
+                'highlight-mana-buttons': C,
+                'highlight-void-buttons': R
             },
             t
         ),
-        C = i.useMemo(
+        w = i.useMemo(
             () => ({
                 lang: n,
-                style: A,
-                className: N
+                style: N,
+                className: P
             }),
-            [n, A, N]
+            [n, N, P]
         );
-    return (0, r.jsx)(u.Provider, {
-        value: C,
-        children: T
+    return (0, r.jsx)(d.Provider, {
+        value: w,
+        children: S
     });
 }
