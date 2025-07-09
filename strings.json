@@ -6789,7 +6789,7 @@
   "t8geR0": "See Less",
   "zsVtfn": "Pending Requests — !!{pendingRequestNumber}!!",
   "npJsRk": "Sent — !!{count}!!",
-  "IJa+4+": "Friends Played",
+  "IJa+4+": "{count, plural, =1 { Friend} other { Friends} } Played",
   "6QQCQ0": "Incoming Friend Request",
   "s/+byM": "Outgoing Friend Request",
   "ed99+v": "Accept Suggestion",
