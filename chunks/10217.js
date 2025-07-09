@@ -5,17 +5,17 @@ var r = n(255367),
     i = n.n(a),
     o = n(913527),
     s = n.n(o),
-    c = n(442837),
-    u = n(846519),
-    d = n(212605),
-    p = n(755721),
-    m = n(481060),
-    f = n(100527),
-    b = n(906732),
-    g = n(70097),
-    j = n(237617),
-    y = n(318374),
-    h = n(717680),
+    c = n(893999),
+    u = n(442837),
+    d = n(846519),
+    p = n(212605),
+    m = n(755721),
+    f = n(481060),
+    b = n(100527),
+    g = n(906732),
+    j = n(70097),
+    y = n(237617),
+    h = n(318374),
     x = n(594174),
     v = n(962399),
     O = n(626135),
@@ -72,14 +72,14 @@ function L(e, t) {
 }
 let I = function (e) {
     var t, n, a;
-    let { clip: o, exporting: s, actionsDisabled: d, isNew: p, onDelete: g, onEdit: h, onShare: v } = e,
-        w = (0, c.Wu)([x.default], () => o.users.map((e) => x.default.getUser(e)).filter(C.lm)),
-        { analyticsLocations: N } = (0, b.ZP)(f.Z.CLIPS_GALLERY_ITEM),
+    let { clip: o, exporting: s, actionsDisabled: c, isNew: p, onDelete: m, onEdit: j, onShare: v } = e,
+        w = (0, u.Wu)([x.default], () => o.users.map((e) => x.default.getUser(e)).filter(C.lm)),
+        { analyticsLocations: N } = (0, g.ZP)(b.Z.CLIPS_GALLERY_ITEM),
         [Z, D] = l.useState(!1),
         L = l.useRef(null),
-        I = (0, j.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
+        I = (0, y.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
         _ = l.useRef(
-            new u.sW(500, () => {
+            new d.sW(500, () => {
                 var e;
                 let t = L.current;
                 null != t && t.paused && ((t.currentTime = I.current), null == (e = L.current) || e.play());
@@ -113,17 +113,17 @@ let I = function (e) {
             minute: '2-digit'
         }),
         Y = ''.concat(F, ' \u2022 ').concat(G);
-    return (0, r.jsx)(b.Gt, {
+    return (0, r.jsx)(g.Gt, {
         value: N,
-        children: (0, r.jsxs)(m.kL8, {
-            'aria-disabled': d,
+        children: (0, r.jsxs)(f.kL8, {
+            'aria-disabled': c,
             'aria-label': S.intl.string(S.t.bt75u7),
-            onClick: d
+            onClick: c
                 ? void 0
                 : () => {
-                      (h(o), O.default.track(E.rMx.CLIP_GALLERY_CARD_CLICKED));
+                      (j(o), O.default.track(E.rMx.CLIP_GALLERY_CARD_CLICKED));
                   },
-            className: i()(k.clipItem, { [k.disabled]: d }),
+            className: i()(k.clipItem, { [k.disabled]: c }),
             onBlur: V,
             onFocus: A,
             onMouseOver: A,
@@ -142,13 +142,13 @@ let I = function (e) {
                             focused: Z,
                             onFocus: A
                         }),
-                        (0, r.jsx)(m.Text, {
+                        (0, r.jsx)(f.Text, {
                             className: k.clipMetadata,
                             color: 'text-default',
                             variant: 'text-md/medium',
                             children: o.applicationName
                         }),
-                        (0, r.jsx)(m.Text, {
+                        (0, r.jsx)(f.Text, {
                             className: k.clipMetadata,
                             color: 'text-default',
                             variant: 'text-md/medium',
@@ -157,7 +157,7 @@ let I = function (e) {
                         (0, r.jsxs)('div', {
                             className: k.usersAndDelete,
                             children: [
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(h.Z, {
                                     maxUsers: 4,
                                     users: w,
                                     onFocus: (e) => {
@@ -170,11 +170,11 @@ let I = function (e) {
                                 Z &&
                                     (0, r.jsx)(z, {
                                         clip: o,
-                                        actionsDisabled: d,
+                                        actionsDisabled: c,
                                         exporting: s,
                                         onBeforeDelete: R,
-                                        onDelete: g,
-                                        onEdit: h,
+                                        onDelete: m,
+                                        onEdit: j,
                                         onShare: v,
                                         onBlur: (e) => {
                                             var t;
@@ -212,7 +212,7 @@ function T(e) {
                     i &&
                         (0, r.jsx)('div', {
                             className: k.clipProcessingBadge,
-                            children: (0, r.jsx)(m.Text, {
+                            children: (0, r.jsx)(f.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
                                 children: S.intl.string(S.t['2Fp7OD'])
@@ -220,12 +220,12 @@ function T(e) {
                         }),
                     !i &&
                         n &&
-                        (0, r.jsxs)(m.Text, {
+                        (0, r.jsxs)(f.Text, {
                             className: k.clipNewBadge,
                             variant: 'eyebrow',
                             color: 'always-white',
                             children: [
-                                (0, r.jsx)(m.T$Z, {
+                                (0, r.jsx)(f.T$Z, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: k.newIcon
@@ -238,7 +238,7 @@ function T(e) {
                             className: k.clipDurationBadge,
                             children: [
                                 o ? (0, r.jsx)(v.Z, { className: k.clipDurationEditIcon }) : null,
-                                (0, r.jsx)(m.Text, {
+                                (0, r.jsx)(f.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
                                     children: ''.concat(c.minutes(), ':').concat(u)
@@ -255,11 +255,11 @@ function M(e) {
     let { clip: n, focused: a, onFocus: o } = e,
         [s, c] = l.useState(n.name),
         u = !n.name,
-        [p, f] = l.useState(!1),
+        [d, m] = l.useState(!1),
         [b, g] = l.useState(null != (t = n.name) ? t : ''),
         [j, y] = l.useState(!1),
         h = async () => {
-            (y(!0), await (0, w.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1));
+            (y(!0), await (0, w.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), m(!1));
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
@@ -267,8 +267,8 @@ function M(e) {
             (c(n.name), g(null != (e = n.name) ? e : ''));
         }
     }, [n.name, s]),
-    p)
-        ? (0, r.jsx)(m.oil, {
+    d)
+        ? (0, r.jsx)(f.oil, {
               inputClassName: i()(Z['heading-lg/medium'], k.clipTitleInput),
               onClick: (e) => e.stopPropagation(),
               value: b,
@@ -280,33 +280,33 @@ function M(e) {
               onChange: g,
               onBlur: h
           })
-        : (0, r.jsxs)(m.P3F, {
+        : (0, r.jsxs)(f.P3F, {
               className: k.clipTitleInputPlaceholder,
               onFocus: o,
               onClick: (e) => {
-                  (e.stopPropagation(), f(!0));
+                  (e.stopPropagation(), m(!0));
               },
               children: [
                   u
-                      ? (0, r.jsx)(m.X6q, {
+                      ? (0, r.jsx)(f.X6q, {
                             className: k.clipTitle,
                             color: 'text-muted',
                             variant: 'heading-lg/medium',
                             children: S.intl.string(S.t['x+/nmJ'])
                         })
-                      : (0, r.jsx)(m.X6q, {
+                      : (0, r.jsx)(f.X6q, {
                             className: k.clipTitle,
                             color: 'text-default',
                             variant: 'heading-lg/medium',
                             children: n.name
                         }),
                   a &&
-                      (0, r.jsx)(m.vdY, {
+                      (0, r.jsx)(f.vdY, {
                           size: 'custom',
                           'aria-label': S.intl.string(S.t.bt75u7),
-                          color: m.TVs.colors.TEXT_MUTED,
-                          height: d.Z.sm,
-                          width: d.Z.sm,
+                          color: f.TVs.colors.TEXT_MUTED,
+                          height: p.Z.sm,
+                          width: p.Z.sm,
                           className: k.clipTitleIcon
                       })
               ]
@@ -316,12 +316,12 @@ function _(e) {
     let { clip: t, videoRef: n } = e,
         l = (0, N.l)(t);
     return 0 === t.length
-        ? (0, r.jsx)(m.$jN, {
-              type: m.RAz.SPINNING_CIRCLE_SIMPLE,
+        ? (0, r.jsx)(f.$jN, {
+              type: f.RAz.SPINNING_CIRCLE_SIMPLE,
               className: k.clipThumb
           })
         : null != l
-          ? (0, r.jsx)(g.Z, {
+          ? (0, r.jsx)(j.Z, {
                 preload: 'metadata',
                 muted: !0,
                 poster: t.thumbnail,
@@ -337,43 +337,43 @@ function _(e) {
             });
 }
 function z(e) {
-    let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: c, onBlur: u } = e,
-        d = (0, h.Z)(),
-        f = l.useCallback(
+    let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: u, onBlur: d } = e,
+        p = (0, c.Z)(),
+        b = l.useCallback(
             (e) => {
                 (e.stopPropagation(), e.shiftKey ? (i(), (0, w.sS)(t.filepath)) : o(t, i), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' }));
             },
             [o, i, t]
         ),
-        b = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 (e.stopPropagation(), s(t), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' }));
             },
             [s, t]
         ),
-        g = l.useCallback(
+        j = l.useCallback(
             (e) => {
-                (e.stopPropagation(), c(t), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' }));
+                (e.stopPropagation(), u(t), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' }));
             },
-            [c, t]
+            [u, t]
         );
     return (0, r.jsxs)('div', {
         className: k.buttonContainer,
         children: [
             null != o &&
-                (0, r.jsx)(m.ua7, {
+                (0, r.jsx)(f.ua7, {
                     text: S.intl.string(S.t.oyYWHB),
                     children: (e) =>
                         (0, r.jsx)(
-                            p.zx,
+                            m.zx,
                             L(D({}, e), {
                                 disabled: a,
-                                color: d ? p.zx.Colors.RED : p.zx.Colors.PRIMARY,
-                                onClick: f,
+                                color: p ? m.zx.Colors.RED : m.zx.Colors.PRIMARY,
+                                onClick: b,
                                 className: k.button,
-                                size: p.zx.Sizes.NONE,
-                                look: p.zx.Looks.FILLED,
-                                children: (0, r.jsx)(m.XHJ, {
+                                size: m.zx.Sizes.NONE,
+                                look: m.zx.Looks.FILLED,
+                                children: (0, r.jsx)(f.XHJ, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: k.miniIcon
@@ -381,23 +381,23 @@ function z(e) {
                             })
                         )
                 }),
-            (0, r.jsx)(m.ua7, {
+            (0, r.jsx)(f.ua7, {
                 text: S.intl.string(S.t.bt75u7),
                 children: (e) =>
                     (0, r.jsx)(
-                        p.zx,
+                        m.zx,
                         L(D({}, e), {
                             disabled: a,
-                            color: p.zx.Colors.PRIMARY,
-                            onClick: b,
+                            color: m.zx.Colors.PRIMARY,
+                            onClick: g,
                             className: k.button,
-                            size: p.zx.Sizes.NONE,
-                            look: p.zx.Looks.FILLED,
+                            size: m.zx.Sizes.NONE,
+                            look: m.zx.Looks.FILLED,
                             children: (0, r.jsx)(v.Z, { className: k.miniIcon })
                         })
                     )
             }),
-            (0, r.jsx)(m.ua7, {
+            (0, r.jsx)(f.ua7, {
                 text: S.intl.string(S.t.RDE0SU),
                 children: (e) => {
                     var { onBlur: t } = e,
@@ -421,19 +421,19 @@ function z(e) {
                             return l;
                         })(e, ['onBlur']);
                     return (0, r.jsx)(
-                        p.zx,
+                        m.zx,
                         L(D({}, l), {
                             disabled: a && !n,
                             submitting: n,
-                            color: p.zx.Colors.BRAND,
+                            color: m.zx.Colors.BRAND,
                             onBlur: (e) => {
-                                (u(e), null == t || t());
+                                (d(e), null == t || t());
                             },
-                            onClick: g,
+                            onClick: j,
                             className: k.button,
-                            size: p.zx.Sizes.NONE,
-                            look: p.zx.Looks.FILLED,
-                            children: (0, r.jsx)(m.aAc, {
+                            size: m.zx.Sizes.NONE,
+                            look: m.zx.Looks.FILLED,
+                            children: (0, r.jsx)(f.aAc, {
                                 size: 'lg',
                                 color: 'currentColor',
                                 className: k.miniIcon
