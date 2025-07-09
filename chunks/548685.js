@@ -28,9 +28,9 @@ let P = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: I } = e,
         k = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        B = h.ZP.canUseCollectibles(k),
-        N = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, B),
+        N = h.ZP.canUseCollectibles(k),
+        B = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, N),
         M = (0, S.St)(w),
         H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, i.e7)([p.Z], () => p.Z.isFocused()),
@@ -128,7 +128,7 @@ let P = (e) => {
                           (0, r.jsxs)('div', {
                               className: T.headerRight,
                               children: [
-                                  N &&
+                                  B &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
@@ -145,7 +145,7 @@ let P = (e) => {
                                           ]
                                       }),
                                   I === x.AW.HOME &&
-                                      (N
+                                      (B
                                           ? (0, r.jsx)(s.zxk, {
                                                 variant: 'secondary',
                                                 text: j.intl.string(j.t.X3tnc3),

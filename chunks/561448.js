@@ -1,33 +1,86 @@
 (n.d(t, {
-    Ko: () => d,
-    ZK: () => p,
-    hR: () => s,
-    lS: () => g,
-    qH: () => u,
-    zK: () => _
+    Ho: () => E,
+    Ko: () => h,
+    ZK: () => b,
+    hR: () => d,
+    lS: () => v,
+    qH: () => p,
+    zK: () => g
 }),
     n(388685));
 var r = n(622999),
     i = n(51144),
     a = n(231338),
     o = n(388032);
-let s = (e) => {
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let d = (e) => {
         if ('card' === e) return a.He.CARD;
         if ('ideal' === e) return a.He.IDEAL;
-        let t = b[(0, r.rI)()];
+        let t = T[(0, r.rI)()];
         return e in t ? t[e] : null;
     },
-    l = new Set([a.He.CARD, a.He.PAYPAL]),
-    c = new Set([a.He.IDEAL, a.He.GOPAY_WALLET]);
-function u(e, t) {
+    f = new Set([a.He.CARD, a.He.PAYPAL]),
+    _ = new Set([a.He.IDEAL, a.He.GOPAY_WALLET]);
+function p(e, t) {
     let n = null != t ? t : (0, i.vP)(),
-        r = l.has(e);
-    return n ? r || c.has(e) : r;
+        r = f.has(e);
+    return n ? r || _.has(e) : r;
 }
-function d(e) {
-    return e in f;
+function h(e) {
+    return e in m;
 }
-let f = {
+let m = {
         [a.He.PAYPAL]: {
             paymentSourceType: a.He.PAYPAL,
             liveId: 'cpmt_1RbPZnCR4aIufmH2qyrDhNFa',
@@ -44,17 +97,21 @@ let f = {
             isStaffOnly: !0
         }
     },
-    _ = {
+    g = {
         [a.He.CARD]: 'card',
         [a.He.IDEAL]: 'ideal'
     },
-    p = (e, t) => {
-        let n = f[e];
+    E = u(l({}, g), {
+        [a.He.PAYPAL]: 'paypal',
+        [a.He.GOPAY_WALLET]: 'gopay'
+    }),
+    b = (e, t) => {
+        let n = m[e];
         return 'live' === t ? n.liveId : n.testId;
     };
-function h(e) {
-    return Object.values(f).map((t) => ({
-        id: p(t.paymentSourceType, e),
+function y(e) {
+    return Object.values(m).map((t) => ({
+        id: b(t.paymentSourceType, e),
         options: {
             type: 'static',
             subtitle: o.intl.string(t.subtitleTranslationKey)
@@ -64,19 +121,19 @@ function h(e) {
         paymentSourceType: t.paymentSourceType
     }));
 }
-let m = {
-        unknown: h('test'),
-        test: h('test'),
-        live: h('live')
+let O = {
+        unknown: y('test'),
+        test: y('test'),
+        live: y('live')
     },
-    g = (e, t) => m[(0, r.rI)()].filter((n) => (!n.isStaffOnly || !!t) && (!n.isRegionalPaymentMethod || !!e.includes(n.paymentSourceType)));
-function E(e) {
+    v = (e, t) => O[(0, r.rI)()].filter((n) => (!n.isStaffOnly || !!t) && (!n.isRegionalPaymentMethod || !!e.includes(n.paymentSourceType)));
+function I(e) {
     let t = {};
-    for (let n of Object.values(f)) t[p(n.paymentSourceType, e)] = n.paymentSourceType;
+    for (let n of Object.values(m)) t[b(n.paymentSourceType, e)] = n.paymentSourceType;
     return t;
 }
-let b = {
-    unknown: E('test'),
-    test: E('test'),
-    live: E('live')
+let T = {
+    unknown: I('test'),
+    test: I('test'),
+    live: I('live')
 };

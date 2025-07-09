@@ -22,6 +22,7 @@ e.exports = {
     categoriesNoFilter: 'categoriesNoFilter__6db1d',
     categories: 'categories__6db1d',
     products: 'products__6db1d',
+    productsEmpty: 'productsEmpty__6db1d',
     skeletons: 'skeletons__6db1d',
     paginationContainer: 'paginationContainer__6db1d',
     bannerContainer: 'bannerContainer__6db1d',

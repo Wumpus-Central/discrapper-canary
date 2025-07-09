@@ -96,6 +96,7 @@ function y(e) {
         breadcrumpSteps: r,
         currentBreadcrumpStep: I,
         usePaymentModalStep: !0,
+        analyticsData: t,
         onReturn: B,
         onComplete: (e) => {
             f.Nj.has(e) ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e })) : c(f.h8.REVIEW, { trackedFromStep: e });

@@ -1,4 +1,4 @@
-(n.d(t, { I: () => N }), n(388685), n(539854));
+(n.d(t, { I: () => B }), n(388685), n(539854));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -36,7 +36,7 @@ function k(e) {
         children: n
     });
 }
-function B(e) {
+function N(e) {
     let { tab: t, selected: n, displayText: o, handleTransition: a } = e,
         [i, s] = l.useState(!1),
         u = l.useRef(null),
@@ -104,11 +104,11 @@ function B(e) {
         })
     });
 }
-function N(e) {
+function B(e) {
     let { isFullScreen: t, isLayer: n, onClose: o, selectedTab: g, handleTransition: f } = e,
         y = (0, p.ZP)(),
-        N = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-        A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
+        B = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
+        A = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
         { enabled: R } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
         w = (0, x.S)('collectibles_shop_header_bar'),
         Z = [
@@ -159,7 +159,7 @@ function N(e) {
                             let { tab: t, displayText: n } = e;
                             return t === T.AW.CATALOG && w
                                 ? (0, r.jsx)(
-                                      B,
+                                      N,
                                       {
                                           tab: t,
                                           selected: (0, T.RE)(g) || g === t,

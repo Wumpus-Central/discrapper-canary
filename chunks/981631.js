@@ -3194,6 +3194,7 @@ var n_ = (function (e) {
             (e.APPLE_RETRY_PENDING_PURCHASE_STARTED = 'apple_retry_pending_purchase_started'),
             (e.APPLE_RETRY_PENDING_PURCHASE_SUCCEEDED = 'apple_retry_pending_purchase_succeeded'),
             (e.APPLE_RETRY_PENDING_PURCHASE_FAILED = 'apple_retry_pending_purchase_failed'),
+            (e.PAYMENT_ELEMENT_CHANGED = 'payment_element_changed'),
             (e.PAYMENT_FLOW_STARTED = 'payment_flow_started'),
             (e.PAYMENT_FLOW_COMPLETED = 'payment_flow_completed'),
             (e.PAYMENT_FLOW_STEP = 'payment_flow_step'),

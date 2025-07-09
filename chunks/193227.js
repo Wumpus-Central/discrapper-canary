@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+(n.d(t, { Z: () => B }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -135,7 +135,7 @@ function k(e) {
         )
     );
 }
-function B(e) {
+function N(e) {
     let { category: t, initialItemCardRef: n, isFullScreen: o } = e,
         [a, i] = l.useState(!1),
         s = (0, j.M7)(t.skuId),
@@ -168,7 +168,7 @@ function B(e) {
         ]
     });
 }
-function N(e) {
+function B(e) {
     var t;
     let { sortedCategories: n, setCategoryRef: o, isFullScreen: c, currentPage: d, handlePageChange: g } = e,
         h = (0, p.sp)(),
@@ -218,11 +218,11 @@ function N(e) {
         isLayer: k,
         initialItemCardRef: I
     });
-    let N = (0, f.F)('CollectiblesBrowse');
+    let B = (0, f.F)('CollectiblesBrowse');
     return b
         ? (0, r.jsx)(v.Z, {})
         : (0, r.jsxs)('div', {
-              className: a()(L.categories, { [L.categoriesNoFilter]: !N }),
+              className: a()(L.categories, { [L.categoriesNoFilter]: !B }),
               children: [
                   j.map((e, t) =>
                       (0, r.jsx)(
@@ -231,7 +231,7 @@ function N(e) {
                               ref: (t) => o(e.skuId, t),
                               children: (0, r.jsx)(p.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, r.jsx)(B, {
+                                  children: (0, r.jsx)(N, {
                                       category: e,
                                       initialItemCardRef: I,
                                       isFullScreen: c

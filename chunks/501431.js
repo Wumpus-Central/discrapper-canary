@@ -93,28 +93,28 @@ let g = {
                 onToggleItemType: (t) => {
                     e((e) => ({
                         itemTypeFilters: p(e.itemTypeFilters, t),
-                        sort: h,
+                        sort: e.hasFilters() ? e.sort : h,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleColor: (t) => {
                     e((e) => ({
                         colorFilters: p(e.colorFilters, t),
-                        sort: f,
+                        sort: e.hasFilters() ? e.sort : f,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleTheme: (t) => {
                     e((e) => ({
                         themeFilters: p(e.themeFilters, t),
-                        sort: f,
+                        sort: e.hasFilters() ? e.sort : f,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleOrbEligible: () => {
                     e((e) => ({
                         orbEligible: !e.orbEligible,
-                        sort: h,
+                        sort: e.hasFilters() ? e.sort : h,
                         queryPageOffset: 0
                     }));
                 },
@@ -128,14 +128,14 @@ let g = {
                     e((e) => u({}, e, t));
                 },
                 onSetSearchQuery: (t) => {
-                    let n = '' === t ? h : f;
-                    e((e) =>
-                        d(u({}, e), {
+                    e((e) => {
+                        let n = e.hasFilters() ? e.sort : f;
+                        return d(u({}, e), {
                             searchQuery: t,
                             sort: n,
                             queryPageOffset: 0
-                        })
-                    );
+                        });
+                    });
                 },
                 setQueryPageSize: (t) => {
                     e({ queryPageSize: t });

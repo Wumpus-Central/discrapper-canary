@@ -244,7 +244,7 @@ let C = (e) => {
                     },
                     {
                         name: b.intl.string(b.t.yuEmLi),
-                        icon: (0, r.jsx)(d.YqE, {
+                        icon: (0, r.jsx)(d.h_8, {
                             size: 'xs',
                             color: i(c.h.CUTE_COZY)
                         }),
@@ -276,7 +276,7 @@ let C = (e) => {
                     },
                     {
                         name: b.intl.string(b.t.w0nSGx),
-                        icon: (0, r.jsx)(d.Qjj, {
+                        icon: (0, r.jsx)(d.Ffc, {
                             size: 'xs',
                             color: i(c.h.ANIMALS_PETS)
                         }),

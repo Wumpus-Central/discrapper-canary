@@ -1,64 +1,64 @@
-(n.d(t, { default: () => d }), n(388685));
-var i = n(255367),
-    a = n(73800),
-    s = n(481060),
-    r = n(313201),
-    l = n(117984),
-    o = n(388032),
-    c = n(788428);
-function d(e) {
-    let { onClose: t, transitionState: n } = e,
-        d = (0, r.Dt)(),
-        [h, u] = a.useState('');
+(t.d(n, { default: () => c }), t(388685));
+var i = t(255367),
+    a = t(73800),
+    o = t(481060),
+    r = t(313201),
+    l = t(117984),
+    s = t(388032),
+    d = t(788428);
+function c(e) {
+    let { onClose: n, transitionState: t } = e,
+        c = (0, r.Dt)(),
+        [f, u] = a.useState('');
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
-            (e.preventDefault(), (0, l.CM)(h), t());
+            (e.preventDefault(), (0, l.CM)(f), n());
         },
-        children: (0, i.jsxs)(s.Y0X, {
-            transitionState: n,
-            'aria-labelledby': d,
+        children: (0, i.jsxs)(o.Y0X, {
+            transitionState: t,
+            'aria-labelledby': c,
             parentComponent: 'AddFavoriteCategoryModal',
             children: [
-                (0, i.jsxs)(s.hzk, {
+                (0, i.jsxs)(o.hzk, {
                     children: [
-                        (0, i.jsx)(s.X6q, {
-                            id: d,
-                            className: c.header,
+                        (0, i.jsx)(o.X6q, {
+                            id: c,
+                            className: d.header,
                             variant: 'heading-xl/semibold',
-                            children: o.intl.string(o.t['ISN+ND'])
+                            children: s.intl.string(s.t['ISN+ND'])
                         }),
-                        (0, i.jsx)(s.olH, {
-                            onClick: t,
-                            className: c.closeButton
+                        (0, i.jsx)(o.olH, {
+                            onClick: n,
+                            className: d.closeButton
                         }),
-                        (0, i.jsx)(s.xJW, {
-                            title: o.intl.string(o.t.OCAkGB),
-                            className: c.name,
-                            children: (0, i.jsx)(s.oil, {
-                                value: h,
+                        (0, i.jsx)(o.xJW, {
+                            title: s.intl.string(s.t.OCAkGB),
+                            className: d.name,
+                            children: (0, i.jsx)(o.oil, {
+                                value: f,
                                 onChange: u,
                                 maxLength: 100,
-                                placeholder: o.intl.string(o.t.eTVbt7),
-                                className: c.__invalid_inputWrapper,
+                                placeholder: s.intl.string(s.t.eTVbt7),
+                                className: d.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(s.mzw, {
-                    children: (0, i.jsxs)(s.hE2, {
+                (0, i.jsx)(o.mzw, {
+                    children: (0, i.jsxs)(o.hE2, {
                         direction: 'horizontal-reverse',
                         children: [
-                            (0, i.jsx)(s.zxk, {
+                            (0, i.jsx)(o.zxk, {
                                 variant: 'primary',
-                                text: o.intl.string(o.t['ISN+ND']),
+                                text: s.intl.string(s.t['ISN+ND']),
                                 type: 'submit',
-                                disabled: '' === h
+                                disabled: '' === f
                             }),
-                            (0, i.jsx)(s.zxk, {
+                            (0, i.jsx)(o.zxk, {
                                 variant: 'secondary',
-                                text: o.intl.string(o.t['ETE/oK']),
-                                onClick: t
+                                text: s.intl.string(s.t['ETE/oK']),
+                                onClick: n
                             })
                         ]
                     })
