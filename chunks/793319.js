@@ -24,8 +24,8 @@ var r = n(255367),
     C = n(596040),
     x = n(100527),
     v = n(906732),
-    j = n(358221),
-    O = n(887012),
+    O = n(358221),
+    j = n(887012),
     E = n(659580),
     S = n(793865),
     I = n(575175),
@@ -88,7 +88,7 @@ function ev() {
             return e;
         }).apply(this, arguments);
 }
-function ej(e) {
+function eO(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -113,7 +113,7 @@ function ej(e) {
     }
     return e;
 }
-function eO(e, t) {
+function ej(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -150,7 +150,7 @@ function eS(e) {
             (0, eg.Z)(y, t.id, e_.ZY5.GUILD_CHANNEL);
         }, [y, t.id, o, l]),
         x = (0, U.B4)(),
-        [j, O] = i.useState(!1),
+        [O, j] = i.useState(!1),
         E = () => {
             if (((0, P.v)(c, P.d.STREAM, !0), o)) return void C();
             (0, em.Z)();
@@ -183,7 +183,7 @@ function eS(e) {
                 o = null != m;
             return (0, r.jsx)(
                 X.O,
-                eO(ej({}, l), {
+                ej(eO({}, l), {
                     centerButton: !0,
                     disabled: s || !a,
                     className: ex.controlButton,
@@ -197,7 +197,7 @@ function eS(e) {
                         : null,
                     popoutOpen: t,
                     shouldShowTooltip: !t,
-                    renderNUXHighlight: j,
+                    renderNUXHighlight: O,
                     buttonRef: g,
                     onClick: null != m ? S : E
                 })
@@ -214,12 +214,12 @@ function eS(e) {
                             let { visibleContent: t, markAsDismissed: n } = e;
                             if (t === d.z.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
-                                    O(!0),
+                                    j(!0),
                                     (0, r.jsx)(B.h, {
                                         buttonRef: g,
                                         dismissed: !1,
                                         onDismiss: () => {
-                                            (n(eC.L.USER_DISMISS), O(!1));
+                                            (n(eC.L.USER_DISMISS), j(!1));
                                         }
                                     })
                                 );
@@ -284,7 +284,7 @@ function eI(e) {
 let eP = i.memo(function (e) {
     let { currentUser: t, onDisconnectCall: n, channel: l, connectedEmbeddedActivity: o } = e,
         { parentAnalyticsLocation: a } = (0, v.ZP)(),
-        s = (0, u.e7)([j.Z], () => j.Z.getSelectedParticipant(l.id)),
+        s = (0, u.e7)([O.Z], () => O.Z.getSelectedParticipant(l.id)),
         { reducedMotion: d } = i.useContext(p.Sfi),
         [h, f] = i.useState(!1),
         b = null == s ? void 0 : s.id,
@@ -297,7 +297,7 @@ let eP = i.memo(function (e) {
             })
         ),
         x = (0, M.qY)(l.id),
-        O = i.useRef(null),
+        j = i.useRef(null),
         E = i.useCallback(() => ((null == s ? void 0 : s.type) === ey.fO.ACTIVITY && s.applicationId === (null == o ? void 0 : o.applicationId) ? 'ACTIVITY' : y ? 'STREAM' : null != x ? 'EVENT' : 'CALL'), [s, null == o ? void 0 : o.applicationId, y, x]),
         [S, I] = i.useState(E()),
         Z = (0, p.q_F)(
@@ -335,7 +335,7 @@ let eP = i.memo(function (e) {
                     if (null == s || null == t || s.type !== ey.fO.ACTIVITY || null == o) return;
                     return (0, r.jsx)(
                         W.Z,
-                        eO(ej({}, c), {
+                        ej(eO({}, c), {
                             applicationId: s.applicationId,
                             color: 'disconnect',
                             location: o.location,
@@ -345,7 +345,7 @@ let eP = i.memo(function (e) {
                 case 'STREAM':
                     return (0, r.jsx)(
                         X.O,
-                        eO(ej({}, c), {
+                        ej(eO({}, c), {
                             hasPermission: !0,
                             streamActive: !0,
                             color: 'disconnect',
@@ -359,7 +359,7 @@ let eP = i.memo(function (e) {
                 case 'CALL':
                     return (0, r.jsx)(
                         Y.Z,
-                        eO(ej({}, c), {
+                        ej(eO({}, c), {
                             color: 'disconnect',
                             onClick: () => {
                                 ((0, P.v)(a, P.d.DISCONNECT), null == n || n());
@@ -377,7 +377,7 @@ let eP = i.memo(function (e) {
             }
         };
     return (0, r.jsx)(p.yRy, {
-        targetElementRef: O,
+        targetElementRef: j,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(eh.Z, {
@@ -398,7 +398,7 @@ let eP = i.memo(function (e) {
                 { isShown: i } = t;
             return (0, r.jsx)(c.animated.div, {
                 style: Z,
-                ref: O,
+                ref: j,
                 children: T(i, n)
             });
         }
@@ -465,7 +465,7 @@ let eT = function (e) {
             let e = ei.default.getCurrentUser();
             return (s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e);
         }),
-        { cameraUnavailable: C, enabled: j } = (0, el.Z)(),
+        { cameraUnavailable: C, enabled: O } = (0, el.Z)(),
         P = (0, es.Z)(n),
         { suppress: Z, selfMute: N, mute: w } = (0, ec.Z)(n),
         { canGoLive: k } = (0, u.cj)([en.Z], () => ({ canGoLive: (0, R.Z)(en.Z) })),
@@ -476,7 +476,7 @@ let eT = function (e) {
             var e;
             return (null != (e = null == M ? void 0 : M.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
         }),
-        H = (0, O.Z)(n, !0),
+        H = (0, j.Z)(n, !0),
         V = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, ea.Z)(n),
         { analyticsLocations: Y } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
@@ -581,7 +581,7 @@ let eT = function (e) {
                                                       ref: eh,
                                                       centerButton: !0,
                                                       hasPermission: P,
-                                                      enabled: j,
+                                                      enabled: O,
                                                       cameraUnavailable: C,
                                                       onChange: eE,
                                                       onCameraUnavailable: ef.Z,

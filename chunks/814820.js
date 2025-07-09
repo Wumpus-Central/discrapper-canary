@@ -11,14 +11,14 @@ var r = n(255367),
     p = n(496675),
     m = n(594174),
     f = n(838440),
-    g = n(779139),
-    _ = n(981631),
+    _ = n(779139),
+    g = n(981631),
     h = n(388032),
     b = n(429495);
 let E = (e) => {
         let { channel: t, message: n } = e,
             [l, c] = i.useState(!1),
-            u = (0, g.y6)(n.id),
+            u = (0, _.y6)(n.id),
             d = i.useCallback(() => {
                 (0, f.v)({
                     type: o.Ie.FORM,
@@ -26,7 +26,7 @@ let E = (e) => {
                     channel: t
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, g.TZ)(t, n, u.id);
+                    r && (0, _.TZ)(t, n, u.id);
                 });
             }, [t, n, u]);
         return (0, r.jsx)('div', {
@@ -57,12 +57,12 @@ let E = (e) => {
                 var e;
                 let r = m.default.getCurrentUser(),
                     l = (0, c.xl)(n),
-                    a = p.Z.can(_.Plq.SEND_MESSAGES, n),
+                    a = p.Z.can(g.Plq.SEND_MESSAGES, n),
                     o = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     f = d.Z.getGuild(i),
-                    g = null != f && (f.systemChannelFlags & _.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && g;
+                    _ = null != f && (f.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return a && !l && !o && !s && _;
             });
         return null != i && a
             ? (0, r.jsx)(E, {

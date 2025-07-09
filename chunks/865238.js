@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(5192),
     x = n(823961),
     v = n(981631),
-    j = n(37113),
-    O = n(388032),
+    O = n(37113),
+    j = n(388032),
     E = n(15322),
     S = n(574169);
 function I(e) {
@@ -55,7 +55,7 @@ function Z(e) {
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
         w = (0, u.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
-        R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
+        R = A && null != w && w.resolution !== O.LY.RESOLUTION_1440 && w.frameRate !== O.ws.FPS_60,
         [k, M] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         M(!0);
@@ -89,20 +89,20 @@ function Z(e) {
     if (null == G || null == l || null == T) return null;
     let V = s()(G).diff(s()(), 'hours'),
         z = Z
-            ? O.intl.format(O.t['6LrV9f'], {
+            ? j.intl.format(j.t['6LrV9f'], {
                   username: F,
                   num: V,
                   helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
               })
             : l.id === T.id
-              ? O.intl.string(O.t.IjKvNT)
+              ? j.intl.string(j.t.IjKvNT)
               : !0 === A
-                ? O.intl.format(O.t.JkWoqK, {
+                ? j.intl.format(j.t.JkWoqK, {
                       username: F,
                       helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
                   })
-                : O.intl.formatToPlainString(O.t.vNbVXF, { username: F }),
-        W = R ? O.intl.string(O.t.o7NIjY) : H ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);
+                : j.intl.formatToPlainString(j.t.vNbVXF, { username: F }),
+        W = R ? j.intl.string(j.t.o7NIjY) : H ? j.intl.string(j.t.r6xhBw) : j.intl.string(j.t.yKw8Dg);
     return null == l || null == T
         ? null
         : (0, r.jsxs)(c.animated.div, {

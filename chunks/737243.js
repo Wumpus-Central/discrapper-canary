@@ -12,7 +12,7 @@ var r = n(255367),
 let h = i.memo(function (e) {
     var t, n;
     let { message: h, channel: f, compact: m = !1, interactionUsernameProfile: g, interactionAvatarProfile: b, interactionData: _, referencedUsernameProfile: y, referencedAvatarProfile: C, setPopout: x } = e,
-        { isInteractionUserBlocked: v, isInteractionUserIgnored: j } = (0, l.cj)(
+        { isInteractionUserBlocked: v, isInteractionUserIgnored: O } = (0, l.cj)(
             [c.Z],
             () => ({
                 isInteractionUserBlocked: c.Z.isBlockedForMessage(h),
@@ -20,7 +20,7 @@ let h = i.memo(function (e) {
             }),
             [h]
         ),
-        O = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
+        j = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
         E = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
         S = (0, d.Nk)(h.interaction, f, g, x),
         I = (0, d.NU)(b, x),
@@ -49,18 +49,18 @@ let h = i.memo(function (e) {
                     referencedAvatarProfile: C,
                     referencedUsernameProfile: y,
                     replyReference: h.messageReference,
-                    replyMessage: O,
+                    replyMessage: j,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [f, m, h, C, O, y, x]
+            [f, m, h, C, j, y, x]
         );
     return (0, r.jsx)(u.Z, {
         message: h,
         channel: f,
         compact: m,
         isInteractionUserBlocked: v,
-        isInteractionUserIgnored: j,
+        isInteractionUserIgnored: O,
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: _,

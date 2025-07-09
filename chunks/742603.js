@@ -20,8 +20,8 @@ var i = n(120356),
     C = n(984370),
     x = n(910611),
     v = n(454585),
-    j = n(134483),
-    O = n(210975),
+    O = n(134483),
+    j = n(210975),
     E = n(809244),
     S = n(618158),
     I = n(358221),
@@ -233,7 +233,7 @@ function V(e) {
             { modalKey: A.a }
         );
     }
-    let V = (0, O.m$)({ channelId: t.id });
+    let V = (0, j.m$)({ channelId: t.id });
     return (0, r.jsxs)('div', {
         className: D.subtitleContainer,
         children: [
@@ -293,7 +293,7 @@ function V(e) {
                         ]
                     })
             }),
-            (0, r.jsx)(j.Z, { channelId: t.id })
+            (0, r.jsx)(O.Z, { channelId: t.id })
         ]
     });
 }

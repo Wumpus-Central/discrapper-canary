@@ -1,8 +1,6 @@
 e.exports = {
     header: 'header_a7218d',
     headerImage: 'headerImage_a7218d',
-    headerImageSimple: 'headerImageSimple_a7218d',
-    headerImageBG: 'headerImageBG_a7218d',
     searchSubtitle: 'searchSubtitle_a7218d',
     searchTitle: 'searchTitle_a7218d',
     headerContentWrapper: 'headerContentWrapper_a7218d',

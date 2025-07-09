@@ -11,18 +11,18 @@ var r = n(255367),
     p = n(496675),
     m = n(594174),
     f = n(626135),
-    g = n(709054),
-    _ = n(838440),
+    _ = n(709054),
+    g = n(838440),
     h = n(981631),
     b = n(18485);
 function E(e) {
     let { assets: t, currentUser: n, message: r } = e,
-        i = (g.default.extractTimestamp(n.id) + g.default.extractTimestamp(r.id)) % t.length;
+        i = (_.default.extractTimestamp(n.id) + _.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
 function y(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
-        [g, h] = i.useState(!1),
+        [_, h] = i.useState(!1),
         y = i.useMemo(
             () =>
                 E({
@@ -42,7 +42,7 @@ function y(e) {
             [u, t, l]
         ),
         x = i.useCallback(async () => {
-            let { valid: e } = await (0, _.v)({
+            let { valid: e } = await (0, g.v)({
                 type: s.Ie.FORM,
                 content: '',
                 channel: n
@@ -127,7 +127,7 @@ function y(e) {
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
-                isInteracting: g,
+                isInteracting: _,
                 sticker: y,
                 size: 28
             }),

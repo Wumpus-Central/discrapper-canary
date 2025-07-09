@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(539854), n(781311), n(290780));
+(n.d(t, { Z: () => A }), n(388685), n(539854), n(781311), n(290780));
 var r,
     l,
     s,
@@ -90,7 +90,7 @@ function C(e, t, n) {
     var r, l, s;
     let a,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
-    if (null == e || '' === e) return null;
+    if (null == e) return null;
     let c = (0, u.g)(n),
         h = null != (l = null == t || null == (r = t.getFullMatch()) ? void 0 : r.trim()) ? l : '',
         p = e === _.dCx.FILTER_FROM || e === _.dCx.FILTER_MENTIONS;
@@ -134,18 +134,18 @@ function P(e, t) {
         r = (function (e) {
             let t = (0, u.g)(e),
                 n = (0, p.R6)(t);
-            return {
-                [_.dCx.FILTER_FROM]: !S.Z.hidePersonalInformation,
-                [_.dCx.FILTER_MENTIONS]: !S.Z.hidePersonalInformation,
-                [_.dCx.FILTER_HAS]: !0,
-                [_.dCx.FILTER_BEFORE]: !0,
-                [_.dCx.FILTER_AFTER]: !0,
-                [_.dCx.FILTER_ON]: !0,
-                [_.dCx.FILTER_IN]: n,
-                [_.dCx.FILTER_PINNED]: !0
-            };
+            return new Map([
+                [_.dCx.FILTER_FROM, !S.Z.hidePersonalInformation],
+                [_.dCx.FILTER_MENTIONS, !S.Z.hidePersonalInformation],
+                [_.dCx.FILTER_HAS, !0],
+                [_.dCx.FILTER_BEFORE, !0],
+                [_.dCx.FILTER_AFTER, !0],
+                [_.dCx.FILTER_ON, !0],
+                [_.dCx.FILTER_IN, n],
+                [_.dCx.FILTER_PINNED, !0]
+            ]);
         })(t),
-        l = (0, o.nB)(n).filter((e) => r[e.token]);
+        l = (0, o.nB)(n).filter((e) => null != e.token && null != r.get(e.token));
     return {
         group: _.rtL.SEARCH_OPTIONS,
         results: l

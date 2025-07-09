@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(665149),
     x = n(695346),
     v = n(979651),
-    j = n(488131),
-    O = n(388032);
+    O = n(488131),
+    j = n(388032);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function I(e) {
     function a() {
         l((e) => !e);
     }
-    let c = O.intl.string(O.t.UKOtz8);
+    let c = j.intl.string(j.t.UKOtz8);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: o,
         shouldShow: n,
@@ -107,7 +107,7 @@ function P(e) {
         S = (0, g.Z)(t),
         I = (0, y.Z)({
             id: t.id,
-            label: O.intl.string(O.t.DQ797u)
+            label: j.intl.string(j.t.DQ797u)
         }),
         P = (0, u.Z)(t),
         Z = (0, d.Z)(t),
@@ -120,7 +120,7 @@ function P(e) {
     return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': O.intl.string(O.t['1NBjqa']),
+        'aria-label': j.intl.string(j.t['1NBjqa']),
         onSelect: i,
         children: [
             (0, r.jsxs)(s.kSQ, {
@@ -134,9 +134,9 @@ function P(e) {
                     R && !k
                         ? (0, r.jsx)(s.sNh, {
                               id: 'open',
-                              label: O.intl.string(O.t.bX7EaG),
+                              label: j.intl.string(j.t.bX7EaG),
                               action: function () {
-                                  (0, j.ok)(t);
+                                  (0, O.ok)(t);
                               }
                           })
                         : null

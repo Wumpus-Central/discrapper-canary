@@ -28,8 +28,8 @@ var r,
     C = n(194359),
     x = n(425493),
     v = n(461745),
-    j = n(493773),
-    O = n(40851),
+    O = n(493773),
+    j = n(40851),
     E = n(100527),
     S = n(367907),
     I = n(906732),
@@ -886,7 +886,7 @@ function e_(e) {
             [r, y, _]
         ),
         v = l.useRef(null),
-        [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
+        [j, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
         S = l.useCallback(() => (_ ? (C ? (0, h.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
     l.useEffect(
         () => (
@@ -898,7 +898,7 @@ function e_(e) {
         [m, S, _]
     );
     let I = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
-    return ((0, j.ZP)(() => {
+    return ((0, O.ZP)(() => {
         (0, M._)();
     }),
     (null != (t = null == I ? void 0 : I.bot) && t) || (null != (n = null == I ? void 0 : I.isProvisional) && n))
@@ -925,7 +925,7 @@ function e_(e) {
                         })
                     ),
                 position: d,
-                shouldShow: O,
+                shouldShow: j,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: f,
@@ -950,7 +950,7 @@ function e_(e) {
 }
 function ey(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: o = 'right' } = e;
-    (0, j.ZP)(() => {
+    (0, O.ZP)(() => {
         (0, M._)();
     });
     let a = (0, A.a)('PrivateChannelRecipientsInviteTextButton'),
@@ -1029,4 +1029,4 @@ function eC(e) {
 function ex(e) {
     return JSON.stringify(e.sort());
 }
-eo(em, 'contextType', O.ZP);
+eo(em, 'contextType', j.ZP);

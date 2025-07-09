@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(895924),
     x = n(471518),
     v = n(425986),
-    j = n(216780),
-    O = n(390322),
+    O = n(216780),
+    j = n(390322),
     E = n(857192),
     S = n(626135),
     I = n(456100),
@@ -80,7 +80,7 @@ function L(e) {
         ? null
         : (null != g.id &&
               null != g.image_hash &&
-              (n = (0, j.$_)({
+              (n = (0, O.$_)({
                   itemId: g.id,
                   hash: g.image_hash,
                   containerWidth: 584
@@ -124,9 +124,9 @@ let U = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             a || s();
         }, [s, a]));
-    let j = (0, h.bp)(),
+    let O = (0, h.bp)(),
         { analyticsLocations: E } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-        M = j === w.IlC.POPOUT,
+        M = O === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => P.ux(), 1000);
@@ -155,7 +155,7 @@ let U = i.forwardRef(function (e, t) {
         G = B ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: E,
-        children: (0, r.jsx)(O.Z, {
+        children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
                 'aria-labelledby': D,

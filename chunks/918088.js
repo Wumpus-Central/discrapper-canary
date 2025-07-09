@@ -18,8 +18,8 @@ var r = n(278074),
     p = n(375954),
     m = n(594174),
     f = n(768581),
-    g = n(176354),
-    _ = n(358085),
+    _ = n(176354),
+    g = n(358085),
     h = n(798628),
     b = n(79390),
     E = n(839963),
@@ -97,18 +97,18 @@ function N(e, t) {
     if (null == o) return;
     let m = e.state === v.yb.SENT,
         f = m ? (null != a ? a : (0, x.H)(o.expiry)) : '',
-        g = null == f && m,
-        { selectedAnswerIds: _, submitting: b, editing: E, showResults: y } = null != (i = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) ? i : j,
+        _ = null == f && m,
+        { selectedAnswerIds: g, submitting: b, editing: E, showResults: y } = null != (i = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) ? i : j,
         C = e.reactions,
         O = !0;
     if (!T(e)) {
         let t = p.Z.getMessage(e.channel_id, e.id);
         ((O = !e.isSearchHit && null != t), (C = null != (l = null == t ? void 0 : t.reactions) ? l : C));
     }
-    let I = _.size > 0,
+    let I = g.size > 0,
         S = C.some((e) => !0 === e.me_vote),
         N = !E && S,
-        P = N || g || y,
+        P = N || _ || y,
         A = m && O && (!S || E || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
@@ -118,7 +118,7 @@ function N(e, t) {
     return {
         poll: o,
         canTapAnswers: A,
-        canRemoveVote: N && m && !g,
+        canRemoveVote: N && m && !_,
         canShowVoteCounts: P,
         canSubmitVote: L,
         expirationLabel: f,
@@ -126,11 +126,11 @@ function N(e, t) {
         hasVoted: N,
         hasVoteRecorded: S,
         isEditingVote: E,
-        isExpired: g,
+        isExpired: _,
         isInteractive: O,
         isSent: m,
         reactions: C,
-        selectedAnswerIds: _,
+        selectedAnswerIds: g,
         submitting: b,
         tapShouldOpenVotersModal: P,
         showResults: y
@@ -167,14 +167,14 @@ function P(e, t) {
                 d = null != (n = null == u || null == (t = u.count_details) ? void 0 : t.vote) ? n : 0,
                 p = 0 === Y ? 0 : d / Y,
                 m = V.has(s),
-                _ = d >= q && 0 !== d,
+                g = d >= q && 0 !== d,
                 h = U && null != (l = null == u ? void 0 : u.me_vote) && l,
                 b = S({
                     didSelfVote: h,
                     hasVoted: U,
                     isExpired: B,
                     isSelected: m,
-                    isLeader: _,
+                    isLeader: g,
                     showResults: K
                 });
             return {
@@ -196,7 +196,7 @@ function P(e, t) {
                             displayName: null == e.id ? o.ZP.convertSurrogateToName(e.name) : e.name,
                             src:
                                 null == e.id
-                                    ? g.ZP.getURL(e.name)
+                                    ? _.ZP.getURL(e.name)
                                     : f.ZP.getEmojiURL({
                                           id: e.id,
                                           animated: s,
@@ -209,7 +209,7 @@ function P(e, t) {
                     attachmentIds: e.poll_media.attachment_ids
                 },
                 isSelected: m,
-                isVictor: B && _,
+                isVictor: B && g,
                 didSelfVote: h,
                 style: b,
                 shouldAnimateTransition: z && !v,
@@ -260,7 +260,7 @@ function P(e, t) {
                 enabled: L,
                 type: 'submit'
             })),
-        $ = (0, _.isIOS)() ? O.intl.string(O.t.PVATMz) : O.intl.string(O.t.cHfFqq),
+        $ = (0, g.isIOS)() ? O.intl.string(O.t.PVATMz) : O.intl.string(O.t.cHfFqq),
         ee = (0, r.EQ)({
             isExpired: B,
             isInteractive: G,

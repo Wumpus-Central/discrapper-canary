@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(699516),
     x = n(594174),
     v = n(768581),
-    j = n(525541),
-    O = n(981631),
+    O = n(525541),
+    j = n(981631),
     E = n(228168),
     S = n(388032),
     I = n(882875);
@@ -108,7 +108,7 @@ let P = (e) => {
             c = () => {
                 s.Z.addRelationship({
                     userId: i,
-                    context: { location: O.ZY5.DM_CHANNEL }
+                    context: { location: j.ZY5.DM_CHANNEL }
                 });
             },
             u = (0, r.jsx)(a.zxk, {
@@ -116,13 +116,13 @@ let P = (e) => {
                 size: a.zxk.Sizes.TINY,
                 color: a.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    s.Z.blockUser(i, { location: O.ZY5.DM_CHANNEL });
+                    s.Z.blockUser(i, { location: j.ZY5.DM_CHANNEL });
                 },
                 children: S.intl.string(S.t.l4EmaW)
             }),
             p = (0, d.n)({ userId: i });
         switch (n) {
-            case O.OGo.NONE:
+            case j.OGo.NONE:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         !o &&
@@ -136,14 +136,14 @@ let P = (e) => {
                         u
                     ]
                 });
-            case O.OGo.FRIEND:
+            case j.OGo.FRIEND:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.zxk, {
                             className: I.action,
                             size: a.zxk.Sizes.TINY,
                             onClick: () => {
-                                s.Z.removeFriend(i, { location: O.ZY5.DM_CHANNEL });
+                                s.Z.removeFriend(i, { location: j.ZY5.DM_CHANNEL });
                             },
                             color: a.zxk.Colors.PRIMARY,
                             children: S.intl.string(S.t.cvSt1N)
@@ -151,17 +151,17 @@ let P = (e) => {
                         u
                     ]
                 });
-            case O.OGo.BLOCKED:
+            case j.OGo.BLOCKED:
                 return (0, r.jsx)(a.zxk, {
                     className: I.action,
                     size: a.zxk.Sizes.TINY,
                     onClick: () => {
-                        s.Z.unblockUser(i, { location: O.ZY5.DM_CHANNEL });
+                        s.Z.unblockUser(i, { location: j.ZY5.DM_CHANNEL });
                     },
                     color: a.zxk.Colors.PRIMARY,
                     children: S.intl.string(S.t.XyHpKC)
                 });
-            case O.OGo.PENDING_INCOMING:
+            case j.OGo.PENDING_INCOMING:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.Text, {
@@ -181,14 +181,14 @@ let P = (e) => {
                             size: a.zxk.Sizes.TINY,
                             color: a.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                s.Z.cancelFriendRequest(i, { location: O.ZY5.DM_CHANNEL });
+                                s.Z.cancelFriendRequest(i, { location: j.ZY5.DM_CHANNEL });
                             },
                             children: S.intl.string(S.t.rQSndn)
                         }),
                         u
                     ]
                 });
-            case O.OGo.PENDING_OUTGOING:
+            case j.OGo.PENDING_OUTGOING:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.zxk, {
@@ -278,7 +278,7 @@ let P = (e) => {
                                   showingBanner: i
                               }),
                               !i &&
-                                  (0, r.jsx)(j.Z, {
+                                  (0, r.jsx)(O.Z, {
                                       otherUserId: t,
                                       channel: n,
                                       navigateAwayOnReportSuccess: d

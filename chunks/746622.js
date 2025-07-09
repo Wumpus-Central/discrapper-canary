@@ -9,19 +9,18 @@ var r = n(255367),
     s = n(185923),
     o = n(388032);
 let c = (e) => {
-        let { error: t, color: n = 'text-danger' } = e;
+        let { error: t, variant: n, color: a } = e;
         return (0, r.jsx)(l.Text, {
-            variant: 'text-sm/normal',
-            color: n,
+            variant: n,
+            color: a,
             children: u(t)
         });
     },
     u = (e) => {
         switch (e) {
             case i.evJ.TOO_MANY_EMOJI:
-                return o.intl.string(o.t['jP/Rqq']);
             case i.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return o.intl.string(o.t['6v5dPz']);
+                return o.intl.string(o.t['FtKH4+']);
             case a.ze.TOO_BIG:
             case i.evJ.INVALID_FILE_ASSET_SIZE:
             case i.evJ.INVALID_FORM_BODY:

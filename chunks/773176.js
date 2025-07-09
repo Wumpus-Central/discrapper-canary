@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(868643),
     x = n(245216),
     v = n(223606),
-    j = n(188597),
-    O = n(41776),
+    O = n(188597),
+    j = n(41776),
     E = n(980463),
     S = n(328908),
     I = n(992970),
@@ -184,7 +184,7 @@ function ef(e) {
             canReact: _,
             canConfigureJoin: y,
             canReply: v,
-            canStartThread: j,
+            canStartThread: O,
             canViewThread: T,
             canForward: A,
             isExpanded: w,
@@ -214,9 +214,9 @@ function ef(e) {
                     [t, _]
                 ),
                 v = (0, R.U)(t, n),
-                j = (0, D.NE)(t, n),
+                O = (0, D.NE)(t, n),
                 E = (0, D.Ek)(n),
-                S = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
+                S = (0, c.e7)([j.Z], () => null != t.guild_id && j.Z.isLurking(t.guild_id), [t]),
                 I = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 P = s.id === d,
                 Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
@@ -249,7 +249,7 @@ function ef(e) {
                 canDelete: Z,
                 canReport: N,
                 canReply: v,
-                canStartThread: j,
+                canStartThread: O,
                 canViewThread: E,
                 canForward: q,
                 canCopy: W.wS,
@@ -283,12 +283,12 @@ function ef(e) {
         e_ = n.hasFlag(ei.iLy.CROSSPOSTED),
         [ey, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ex = ey === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [ev, ej] = i.useState(!1),
-        eO = i.useCallback(() => {
-            ej(!0);
+        [ev, eO] = i.useState(!1),
+        ej = i.useCallback(() => {
+            eO(!0);
         }, []),
         eE = i.useCallback(() => {
-            ej(!1);
+            eO(!1);
         }, []),
         eS = i.useCallback(
             (e, t) => {
@@ -382,7 +382,7 @@ function ef(e) {
                                     'pin'
                                 )
                               : null,
-                          j && A
+                          O && A
                               ? (0, r.jsx)(
                                     $.sF,
                                     {
@@ -481,14 +481,14 @@ function ef(e) {
                           label: ea.intl.string(ea.t.I3ltXF),
                           icon: x.Z,
                           onClick: () => eS(t, n),
-                          onTooltipShow: eO,
+                          onTooltipShow: ej,
                           onTooltipHide: eE,
                           showNewBadge: !ev && ex
                       },
                       'forward'
                   )
                 : null,
-            j && !A
+            O && !A
                 ? (0, r.jsx)(
                       $.sF,
                       {
@@ -499,7 +499,7 @@ function ef(e) {
                       'thread'
                   )
                 : null,
-            !j && T
+            !O && T
                 ? (0, r.jsx)(
                       $.sF,
                       {
@@ -598,7 +598,7 @@ function ef(e) {
 function em(e) {
     let { channel: t, message: n } = e,
         i = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
-        l = null == n.interaction || (null != n.interactionData && (0, j.$s)(n.interactionData));
+        l = null == n.interaction || (null != n.interactionData && (0, O.$s)(n.interactionData));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !i &&

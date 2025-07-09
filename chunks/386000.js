@@ -31,7 +31,7 @@ function u(e) {
         _ = t || n || u,
         y = d ? c.d : c.Z,
         C = (0, o.Z)(t, n, u, p),
-        { events: x, play: v, Component: j } = (0, s.b)(_);
+        { events: x, play: v, Component: O } = (0, s.b)(_);
     return (
         i.useEffect(() => () => v(), [v, _]),
         (0, r.jsx)(
@@ -62,7 +62,7 @@ function u(e) {
                 return e;
             })(
                 {
-                    iconComponent: j,
+                    iconComponent: O,
                     isTrayButton: !0,
                     caretColor: _ ? 'red' : 'primaryDark',
                     color: _ ? 'red' : void 0,

@@ -19,8 +19,8 @@ var r = n(73800),
     C = n(585483),
     x = n(358085),
     v = n(709054),
-    j = n(418476),
-    O = n(901461),
+    O = n(418476),
+    j = n(901461),
     E = n(432376),
     S = n(996861),
     I = n(981631);
@@ -51,10 +51,10 @@ let Z = function (e, t, n) {
                         ((0, x.isMac)() ? A : T) && y.wS && (n.preventDefault(), (0, y.JG)(R.content));
                         break;
                     case 'e':
-                        r && !k.isSystemDM() && (0, j.Z)(R, M) && (n.preventDefault(), (0, S.Hd)(k, R));
+                        r && !k.isSystemDM() && (0, O.Z)(R, M) && (n.preventDefault(), (0, S.Hd)(k, R));
                         break;
                     case 'p':
-                        (r || w) && !k.isSystemDM() && !(0, O.Z)(R) && (P(k) || k.isPrivate()) && (n.preventDefault(), (0, S.rY)(k, R, n));
+                        (r || w) && !k.isSystemDM() && !(0, j.Z)(R) && (P(k) || k.isPrivate()) && (n.preventDefault(), (0, S.rY)(k, R, n));
                         break;
                     case '+':
                         (r || w) &&

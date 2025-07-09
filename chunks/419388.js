@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => O }), n(388685), n(642613), n(539854));
+(n.d(t, { ZP: () => j }), n(388685), n(642613), n(539854));
 var r = n(73800),
     i = n(392711),
     l = n.n(i),
@@ -54,7 +54,7 @@ let v = {
     scrollHeight: 0,
     offsetHeight: 0
 };
-class j {
+class O {
     isReady() {
         return this.props.messages.ready;
     }
@@ -566,12 +566,12 @@ class j {
         }
     }
 }
-function O(e) {
+function j(e) {
     let { messages: t, channel: n, compact: i, hasUnreads: l, focusId: o, placeholderHeight: a, canLoadMore: s = !0, handleScrollToBottom: c, handleScrollFromBottom: d, additionalMessagePadding: p = 0 } = e,
         { windowId: h } = r.useContext(u.ZP),
         [f] = r.useState(
             () =>
-                new j({
+                new O({
                     messages: t,
                     channel: n,
                     compact: i,

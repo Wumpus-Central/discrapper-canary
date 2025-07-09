@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(79390),
     x = n(216789),
     v = n(665906),
-    j = n(695346),
-    O = n(433355),
+    O = n(695346),
+    j = n(433355),
     E = n(819640),
     S = n(375954),
     I = n(496675),
@@ -89,7 +89,7 @@ let H = i.memo(function (e) {
         J = (0, a.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
         $ = (0, a.e7)([g.Z], () => g.Z.getLastClipsSession()),
         ee = (0, a.Wu)([g.Z], () => g.Z.getNewClipIds()),
-        et = (0, a.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(G.id)),
+        et = (0, a.e7)([j.ZP], () => null == j.ZP.getCurrentSidebarChannelId(G.id)),
         { showClipsHeaderEntrypoint: en } = m.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         er = (0, a.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         ei = (0, c.s9z)((e) => (0, c.DEQ)(e, M.Qr)),
@@ -135,12 +135,12 @@ let H = i.memo(function (e) {
     });
     let eg = (0, v.NE)(G),
         eb = (0, v.Xu)(G),
-        e_ = !j.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
+        e_ = !O.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
         ey = (0, C.UI)(null != G ? G : void 0),
         eC = (0, h.qB)(),
         ex = (0, x.Us)({ location: 'ChannelAttachButton' }),
         ev = null != (l = null == ee ? void 0 : ee.length) ? l : 0,
-        ej = (0, R.Z)({
+        eO = (0, R.Z)({
             canAttachFiles: ed,
             canStartThreads: eg || eb,
             useSlate: e_,
@@ -154,10 +154,10 @@ let H = i.memo(function (e) {
             appContext: q,
             canSendScheduledMessages: ex
         }),
-        eO = (0, f.Z)('ChannelAttachButton');
-    if (0 === ej.length) return null;
+        ej = (0, f.Z)('ChannelAttachButton');
+    if (0 === eO.length) return null;
     let eE = 'refresh_sm',
-        eS = eO
+        eS = ej
             ? (0, r.jsx)(c.svS, {
                   size: eE,
                   color: 'currentColor',
@@ -196,7 +196,7 @@ let H = i.memo(function (e) {
                             w.Z,
                             F(B({}, e), {
                                 onClose: () => es(null),
-                                options: ej,
+                                options: eO,
                                 channel: G,
                                 onFileUpload: () => {
                                     var e;

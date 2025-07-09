@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(997841), n(388685));
+(n.d(t, { Z: () => j }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -35,7 +35,7 @@ function v(e) {
         g = (0, l.e7)([p.Z], () => p.Z.getGuild(f), [f]),
         b = t.type === y.d4z.GUILD_ANNOUNCEMENT,
         v = null != g && g.features.has(y.oNc.NEWS),
-        O = b && v,
+        j = b && v,
         {
             editingMessage: E,
             editingTextValue: S,
@@ -55,15 +55,15 @@ function v(e) {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return (O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve());
+                return (j && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve());
             },
-            [E, O, P, t]
+            [E, j, P, t]
         ),
         N = i.useCallback(
             (e) => {
                 var t, n;
                 return (0, i.createElement)(
-                    j,
+                    O,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -127,7 +127,7 @@ function v(e) {
           })
         : null;
 }
-function j(e) {
+function O(e) {
     let { textValue: t, richValue: n, message: l, channel: o, onChange: a, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
         [h, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
@@ -166,7 +166,7 @@ function j(e) {
         )
     );
 }
-function O(e, t, n) {
+function j(e, t, n) {
     let { message: i, channel: l, compact: o } = e;
     return n
         ? (0, r.jsx)(v, {

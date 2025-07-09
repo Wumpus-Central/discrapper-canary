@@ -24,8 +24,8 @@ var r = n(255367),
     C = n(701362),
     x = n(670188),
     v = n(597998),
-    j = n(314897),
-    O = n(430824),
+    O = n(314897),
+    j = n(430824),
     E = n(496675),
     S = n(594174),
     I = n(979651),
@@ -120,7 +120,7 @@ let M = (0, p.$)(function (e) {
         ef = () => {
             K && (null == ee || ee(p.id));
         },
-        em = () => K && (0, _.p9)(R, I.Z, O.Z, E.Z, m.Z)[0],
+        em = () => K && (0, _.p9)(R, I.Z, j.Z, E.Z, m.Z)[0],
         eg = () => {
             if (!em()) return;
             let e = {
@@ -129,7 +129,7 @@ let M = (0, p.$)(function (e) {
                 channelId: R.id,
                 guildId: R.guild_id
             };
-            (j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id));
+            (O.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id));
         },
         eb = (e) => {
             (0, c.jW)(e, async () => {

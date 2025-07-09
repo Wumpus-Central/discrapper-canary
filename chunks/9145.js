@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(271383),
     x = n(944486),
     v = n(594174),
-    j = n(585483),
-    O = n(51144),
+    O = n(585483),
+    j = n(51144),
     E = n(566620),
     S = n(317381),
     I = n(619915),
@@ -183,7 +183,7 @@ function G(e) {
         var t;
         if (null == e || void 0 === e || e === A.ag) return null;
         let n = em.get(e.id),
-            i = null != (t = null == n ? void 0 : n.nick) ? t : O.ZP.getName(e);
+            i = null != (t = null == n ? void 0 : n.nick) ? t : j.ZP.getName(e);
         return (0, r.jsx)(
             c.DY3,
             {
@@ -298,10 +298,10 @@ function G(e) {
                               maxHeight: G,
                               resizableNode: $,
                               onResize: (e) => {
-                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
+                                  (O.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
                               },
                               onResizeEnd: (e) => {
-                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
+                                  (O.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
                               }
                           })
                         : null

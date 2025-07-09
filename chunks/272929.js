@@ -99,19 +99,19 @@ function f(e) {
             },
             'animate-always'
         ),
-        j = x ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
-        O = _ ? s.d : s.Z;
+        O = x ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
+        j = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,
         ref: y,
         children: [
             x ? (0, r.jsx)(h, { percentComplete: v.percentComplete }) : null,
             (0, r.jsx)(
-                O,
+                j,
                 p(d({}, C), {
                     isTrayButton: !0,
                     disabled: x,
-                    label: j,
+                    label: O,
                     iconComponent: a.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),
                     className: l()(C.className, u.button),

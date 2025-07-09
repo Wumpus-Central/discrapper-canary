@@ -11,10 +11,10 @@ var r = n(255367),
     p = n(906732),
     m = n(406218),
     f = n(993860),
-    g = n(137162),
-    _ = n(15210),
-    h = n(43542),
-    b = n(910200),
+    _ = n(328656),
+    g = n(708321),
+    h = n(174161),
+    b = n(798476),
     E = n(358595),
     y = n(981631),
     C = n(388032),
@@ -22,7 +22,7 @@ var r = n(255367),
 function v(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         p = i.useRef(null),
-        [f, _] = i.useState(!0),
+        [f, g] = i.useState(!0),
         [v, j] = i.useState(!1),
         I = t.state === y.r2o.ACCEPTING,
         S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
@@ -32,10 +32,10 @@ function v(e) {
     }, [j]);
     let T = (0, m.PC)(t),
         N = i.useCallback(() => {
-            v && f && _(!1);
+            v && f && g(!1);
         }, [f, v]),
         P = i.useCallback(() => {
-            v && (f || _(!0));
+            v && (f || g(!0));
         }, [f, v]),
         A = i.useMemo(() => {
             var e;
@@ -63,7 +63,7 @@ function v(e) {
                           }),
                           (0, r.jsx)(b.N3, { profile: T }),
                           (0, r.jsx)(h.Z, { profile: T }),
-                          (0, r.jsx)(g.E, {
+                          (0, r.jsx)(_.E, {
                               profile: T,
                               className: x.mainContent
                           })
@@ -109,7 +109,7 @@ function v(e) {
 }
 function O(e) {
     let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u } = e,
-        { guildId: m, ctaType: g } = (0, f.ZP)(n, f.F3.INVITE),
+        { guildId: m, ctaType: _ } = (0, f.ZP)(n, f.F3.INVITE),
         { analyticsLocations: h } = (0, p.ZP)(d.Z.INVITE_EMBED),
         b = i.useCallback(() => {
             let e = l ? 'transition' : 'accept';
@@ -123,11 +123,11 @@ function O(e) {
                 h
             );
         }, [t, a, h, l]);
-    return null == g
+    return null == _
         ? null
-        : (0, r.jsx)(_.o, {
+        : (0, r.jsx)(g.o, {
               guildId: m,
-              ctaType: g,
+              ctaType: _,
               submitting: o,
               onGoToGuild: s,
               onAcceptInvite: u,

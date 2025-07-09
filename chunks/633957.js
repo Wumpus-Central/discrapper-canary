@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(317381),
     m = n(638880),
     f = n(122613),
-    g = n(527805),
-    _ = n(100527),
+    _ = n(527805),
+    g = n(100527),
     h = n(906732),
     b = n(895924),
     E = n(311819),
@@ -60,7 +60,7 @@ let B = i.memo(function (e) {
     var t, n, l, s;
     let d,
         { application: O, channelId: w, guildId: R } = e,
-        { analyticsLocations: B } = (0, h.ZP)(_.Z.ACTIVITY_INSTANCE_EMBED),
+        { analyticsLocations: B } = (0, h.ZP)(g.Z.ACTIVITY_INSTANCE_EMBED),
         G = (0, u.O)(),
         H = (0, o.e7)([S.Z], () => S.Z.getChannel(w), [w]),
         V = (null == H || null == (t = H.isThread) ? void 0 : t.call(H)) ? (null == H ? void 0 : H.parent_id) : w,
@@ -104,7 +104,7 @@ let B = i.memo(function (e) {
             let e = new j.ZP(O);
             return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e);
         }, [O]),
-        ee = (0, g.s5)({
+        ee = (0, _.s5)({
             userId: z,
             channelId: w,
             application: $

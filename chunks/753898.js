@@ -44,7 +44,7 @@ function C(e) {
         {
             avatarDecorationSrc: x,
             eventHandlers: v,
-            isAnimating: j
+            isAnimating: O
         } = (0, m.Z)({
             user: b,
             size: l.EFr.SIZE_80,
@@ -81,7 +81,7 @@ function C(e) {
             {
                 children: [
                     (() => {
-                        let e = !_ && j;
+                        let e = !_ && O;
                         return h.isMultiUserDM()
                             ? (0, r.jsx)(p.v, {
                                   channel: h,

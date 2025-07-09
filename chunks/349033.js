@@ -47,8 +47,8 @@ function s(e, t) {
     return ((n.index = t), n);
 }
 class l {
-    reset(e) {
-        ((this._rules = []), (this._followers = {}), (this._nonTokenType = null != e ? e : a));
+    reset() {
+        ((this._rules = []), (this._followers = {}), (this._nonTokenType = a));
     }
     addRule(e) {
         let t,
@@ -99,8 +99,8 @@ class l {
             i = null != t ? t.type : null;
         return ((null == t ? void 0 : t.end) === n && (r = o(e, this._followers[String(i)], n)), null == r && (r = o(e, this._rules, n)), r);
     }
-    constructor(e = [], t) {
-        (r(this, '_rules', []), r(this, '_followers', {}), r(this, '_nonTokenType', a), this.reset(t), e.forEach((e) => this.addRule(e)));
+    constructor(e = []) {
+        (r(this, '_rules', []), r(this, '_followers', {}), r(this, '_nonTokenType', a), this.reset(), e.forEach((e) => this.addRule(e)));
     }
 }
 (r(l, 'NON_TOKEN_TYPE', void 0), r(l, 'Token', void 0));

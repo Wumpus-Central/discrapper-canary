@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(410030),
     x = n(857595),
     v = n(607070),
-    j = n(367907),
-    O = n(450936),
+    O = n(367907),
+    j = n(450936),
     E = n(993766),
     S = n(499254),
     I = n(541099),
@@ -73,8 +73,8 @@ var r = n(255367),
     eC = n(45251),
     ex = n(705533),
     ev = n(618857),
-    ej = n(268350),
-    eO = n(155409),
+    eO = n(268350),
+    ej = n(155409),
     eE = n(163612),
     eS = n(314897),
     eI = n(433355),
@@ -208,7 +208,7 @@ class tn extends i.PureComponent {
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
-        (f.Z.startEditMessage(t.id, e.id, e.content), j.ZP.trackWithMetadata(e0.rMx.MESSAGE_EDIT_UP_ARROW));
+        (f.Z.startEditMessage(t.id, e.id, e.content), O.ZP.trackWithMetadata(e0.rMx.MESSAGE_EDIT_UP_ARROW));
     }
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
@@ -556,7 +556,7 @@ class tn extends i.PureComponent {
                     return (
                         this.setState((0, B.H2)()),
                         (0, eb.A6)(c.id),
-                        (0, ej.qB)(c.id, d.drafts.type),
+                        (0, eO.qB)(c.id, d.drafts.type),
                         {
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -612,7 +612,7 @@ class tr extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: l, keyboardModeEnabled: a, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: y, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: S, pendingScheduledMessage: I, recipientUser: P, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w, isChatInputBottomAligned: R } = this.props,
+            { channel: i, guild: l, keyboardModeEnabled: a, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: y, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: O, showAppLauncherButton: j, showAppDMsUI: E, isInitialLoading: S, pendingScheduledMessage: I, recipientUser: P, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w, isChatInputBottomAligned: R } = this.props,
             { textAreaFocused: k, textAreaHighlighted: M } = this.state,
             D = d === U.Ie.SIDEBAR;
         n = D && i.type === e0.d4z.GUILD_VOICE ? e2.t.pnnyFR : D && i.type === e0.d4z.GUILD_STAGE_VOICE ? e2.t.YInSkp : u.T.THREADS.has(i.type) ? e2.t['OkzL+f'] : e2.t.UbNmGR;
@@ -623,7 +623,7 @@ class tr extends i.PureComponent {
             B = (0, r.jsxs)('div', {
                 className: e3.channelBottomBarArea,
                 children: [
-                    (0, r.jsx)(eO.Z, {
+                    (0, r.jsx)(ej.Z, {
                         childRef: this.containerDomRef,
                         tutorialId: 'writing-messages',
                         position: 'left',
@@ -658,7 +658,7 @@ class tr extends i.PureComponent {
             F = E && S,
             H = F && S ? L : B,
             G = o()({
-                [e7.barWithAppLauncherButton]: O,
+                [e7.barWithAppLauncherButton]: j,
                 [e7.barWithAppsDMsUI]: E
             }),
             { enabled: V } = eE.Z.getCurrentConfig({
@@ -736,7 +736,7 @@ class tr extends i.PureComponent {
                                                             showQuarantinedUserBanner: m,
                                                             guild: l,
                                                             communicationDisabledUntil: y,
-                                                            showAutomodUserProfileChatBlocker: j
+                                                            showAutomodUserProfileChatBlocker: O
                                                         }))
                                                       ? t
                                                       : (0, r.jsxs)('form', {
@@ -904,7 +904,7 @@ let ti = i.memo(function (e) {
             channel: t,
             chatInputType: l
         }),
-        j = (0, L.Q)(t.id),
+        O = (0, L.Q)(t.id),
         S = (0, ex.k)(t.id),
         P = (0, C.ZP)(),
         N = (0, K.Z)(t.id),
@@ -917,7 +917,7 @@ let ti = i.memo(function (e) {
             applicationId: M,
             channelId: D,
             commands: U
-        } = (0, O.Z)({
+        } = (0, j.Z)({
             context: {
                 channel: t,
                 type: 'channel'
@@ -958,7 +958,7 @@ let ti = i.memo(function (e) {
         isSelectedResourceChannel: y,
         showAutomodUserProfileChatBlocker: h && !m,
         showAppLauncherButton: x,
-        showAppDMsUI: j,
+        showAppDMsUI: O,
         isInitialLoading: A,
         showEntryPointAppCommandButton: null != w,
         entryPointCommandButtonRef: B,

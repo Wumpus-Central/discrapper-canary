@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(160404),
     x = n(765104),
     v = n(695346),
-    j = n(314897),
-    O = n(796974),
+    O = n(314897),
+    j = n(796974),
     E = n(323873),
     S = n(607744),
     I = n(375954),
@@ -104,8 +104,8 @@ function z(e, t) {
 let W = i.memo(
         function (e) {
             var t, n;
-            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: M, isChatInputBottomAligned: W } = e,
-                [Y, q] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
+            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: O, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: M, isChatInputBottomAligned: W } = e,
+                [Y, q] = i.useState(null != (n = j.Z.isAtBottom(g.id)) && n),
                 K = i.useMemo(
                     () =>
                         x
@@ -159,7 +159,7 @@ let W = i.memo(
                     showNewMessagesBar: y,
                     messageDisplayCompact: x,
                     channelStream: v,
-                    uploads: j,
+                    uploads: O,
                     loadMore: X.loadMore,
                     scrollManager: X,
                     specs: K,
@@ -300,7 +300,7 @@ let W = i.memo(
         let {
                 canManageMessages: h,
                 permissionVersion: C,
-                canChat: O
+                canChat: j
             } = (function (e) {
                 let t = e.getGuildId(),
                     n = (0, c.e7)([S.Z], () => null == t || S.Z.canChatInGuild(t), [t]),
@@ -364,7 +364,7 @@ let W = i.memo(
                         [e.id]
                     ),
                     { enabled: o } = y.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-                    a = null != (n = null == (t = T.default.getUser(j.default.getId())) ? void 0 : t.hasFlag(B.xW$.SPAMMER)) && n,
+                    a = null != (n = null == (t = T.default.getUser(O.default.getId())) ? void 0 : t.hasFlag(B.xW$.SPAMMER)) && n,
                     s = (0, p.ts)(e),
                     u = (0, _.Z)('use_topic_dividers_in_chat'),
                     d = (0, c.Wu)(
@@ -427,7 +427,7 @@ let W = i.memo(
                         uploads: (0, c.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != Y,
-                        canChat: O,
+                        canChat: j,
                         editingMessageId: q,
                         fontSize: k,
                         keyboardModeEnabled: U,

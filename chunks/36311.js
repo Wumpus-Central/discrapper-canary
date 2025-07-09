@@ -25,10 +25,10 @@ function x(e) {
         }),
         o = (0, p.Kt)(),
         { verifyAgreementButtonText: x, verifyGateDescription: v } = (0, p.a1)(null != t && (0, f.Y2)(t) ? _.L0.NSFW_SERVER : _.L0.NSFW_CHANNEL),
-        j = i.useCallback(() => {
+        O = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
-        O = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != t && c.Z.nsfwAgree(t.id);
         }, [t]),
         E = i.useCallback(() => {
@@ -40,7 +40,7 @@ function x(e) {
               channelId: n,
               modalType: d.it.NSFW_CHANNEL_AGE_VERIFY,
               onAgree: E,
-              onDisagree: j,
+              onDisagree: O,
               title: y.intl.string(y.t.ZmwvDQ),
               description: v,
               agreement: x,
@@ -53,8 +53,8 @@ function x(e) {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_UNDERAGE,
-                onAgree: O,
-                onDisagree: j,
+                onAgree: j,
+                onDisagree: O,
                 title: y.intl.string(y.t.NEabBQ),
                 description: y.intl.format(y.t['2kHZen'], { helpURL: g.Z.getArticleURL(b.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
@@ -65,8 +65,8 @@ function x(e) {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_VERIFIED,
-                onAgree: O,
-                onDisagree: j,
+                onAgree: j,
+                onDisagree: O,
                 title: y.intl.string(y.t.ZmwvDQ),
                 description: y.intl.string(y.t.E4Cd5O),
                 agreement: y.intl.string(y.t.wVq7ur),

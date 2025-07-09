@@ -22,6 +22,7 @@ function _(e) {
         : (0, r.jsx)('div', {
               className: o()(f.container, { [f.fadeIn]: m.current }),
               style: { background: _.background },
+              'aria-hidden': !0,
               children: (0, r.jsx)(p, {
                   nameplate: t,
                   className: o()(f.img, {
@@ -46,7 +47,6 @@ function p(e) {
         ? null
         : u
           ? (0, r.jsx)(m, {
-                nameplate: t,
                 asset: a ? l : s,
                 className: n,
                 style: i
@@ -84,11 +84,11 @@ function h(e) {
     );
 }
 function m(e) {
-    let { nameplate: t, asset: n, className: i, style: a } = e;
+    let { asset: t, className: n, style: i } = e;
     return (0, r.jsx)('img', {
-        src: n,
-        className: i,
-        style: a,
-        alt: t.imgAlt
+        src: t,
+        className: n,
+        style: i,
+        alt: ''
     });
 }

@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(348238),
     x = n(981631),
     v = n(388032);
-function j(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -116,12 +116,12 @@ let E = i.memo(function (e) {
                         shouldFilterKeywords: k
                     },
                     n = e.isFirstMessageInForumPost(S)
-                        ? O(j({}, t), {
+                        ? j(O({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0
                           })
-                        : O(j({}, t), {
+                        : j(O({}, t), {
                               formatInline: !0,
                               allowHeading: M,
                               allowList: M

@@ -89,9 +89,10 @@ let s = new (class {
         var t;
         return null == (t = this.getState(e)) ? void 0 : t.selectedSearchTab;
     }
-    initialize(e, t) {
-        let n = (0, l.Tm)(e);
-        (this.sessions.has(n) || this.sessions.set(n, o(t)), this.searchQueryIds.has(n) || this.searchQueryIds.set(n, (0, r.Z)()));
+    initialize(e) {
+        let { searchContext: t, initialTab: n, initializeSearchQueryId: i } = e,
+            a = (0, l.Tm)(t);
+        (this.sessions.has(a) || this.sessions.set(a, o(n)), i && !this.searchQueryIds.has(a) && this.searchQueryIds.set(a, (0, r.Z)()));
     }
     terminate(e) {
         let t = (0, l.Tm)(e);

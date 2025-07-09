@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(944543),
     x = n(410575),
     v = n(393238),
-    j = n(110924),
-    O = n(40851),
+    O = n(110924),
+    j = n(40851),
     E = n(636449),
     S = n(115130),
     I = n(317381),
@@ -73,8 +73,8 @@ var r = n(255367),
     eC = n(358085),
     ex = n(998502),
     ev = n(228488),
-    ej = n(358221),
-    eO = n(414910),
+    eO = n(358221),
+    ej = n(414910),
     eE = n(887012),
     eS = n(909820),
     eI = n(493010),
@@ -664,7 +664,7 @@ class eW extends i.PureComponent {
                     children: [
                         null != i && i.type !== eD.fO.ACTIVITY && i.user.id !== n
                             ? (0, r.jsx)(el.Z, {
-                                  context: (0, eO.Z)(i.type),
+                                  context: (0, ej.Z)(i.type),
                                   userId: i.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
                                   sliderClassName: eB.volumeSlider,
@@ -760,7 +760,7 @@ let eY = function (e) {
         { width: a = 0, ref: s } = (0, v.ZP)(),
         { width: c = 0, height: p = 0, ref: f } = (0, v.ZP)(),
         { ref: m } = (0, v.ZP)(),
-        g = (0, O.bp)(),
+        g = (0, j.bp)(),
         b = (0, D.Z)(),
         _ = (0, u.e7)([ef.Z], () => {
             var e;
@@ -777,24 +777,24 @@ let eY = function (e) {
             chatOpen: B,
             selectedParticipant: F
         } = (0, u.cj)(
-            [ej.Z],
+            [eO.Z],
             () => {
                 let e = g === eL.IlC.POPOUT,
-                    t = ej.Z.getMode(n.id);
+                    t = eO.Z.getMode(n.id);
                 e && (t = eL.WtW.VIDEO);
-                let r = t === eL.WtW.VIDEO ? ej.Z.getLayout(n.id, g) : eL.AEg.MINIMUM;
+                let r = t === eL.WtW.VIDEO ? eO.Z.getLayout(n.id, g) : eL.AEg.MINIMUM;
                 return (
                     e && r !== eL.AEg.FULL_SCREEN && (r = eL.AEg.NO_CHAT),
                     {
                         mode: t,
                         layout: r,
-                        selectedParticipant: t !== eL.WtW.VOICE ? ej.Z.getSelectedParticipant(n.id) : null,
-                        participants: ej.Z.getParticipants(n.id),
-                        filteredParticipants: ej.Z.getFilteredParticipants(n.id),
-                        participantsOpen: ej.Z.getParticipantsOpen(n.id),
-                        chatOpen: ej.Z.getChatOpen(n.id),
-                        participantsListOpen: ej.Z.getParticipantsListOpen(n.id),
-                        participantsVersion: ej.Z.getParticipantsVersion(n.id)
+                        selectedParticipant: t !== eL.WtW.VOICE ? eO.Z.getSelectedParticipant(n.id) : null,
+                        participants: eO.Z.getParticipants(n.id),
+                        filteredParticipants: eO.Z.getFilteredParticipants(n.id),
+                        participantsOpen: eO.Z.getParticipantsOpen(n.id),
+                        chatOpen: eO.Z.getChatOpen(n.id),
+                        participantsListOpen: eO.Z.getParticipantsListOpen(n.id),
+                        participantsVersion: eO.Z.getParticipantsVersion(n.id)
                     }
                 );
             },
@@ -820,7 +820,7 @@ let eY = function (e) {
         er = null != (t = null == z ? void 0 : z.id) ? t : null,
         ei = (0, P.Z)(er, n.id),
         el = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
-        eo = (0, j.Z)(el);
+        eo = (0, O.Z)(el);
     i.useEffect(() => {
         el === S.O.ERROR && eo !== S.O.ERROR && (0, h.showToast)((0, h.createToast)(eU.intl.string(eU.t.AlJyIy), h.ToastType.FAILURE));
     }, [el, eo]);
@@ -843,7 +843,7 @@ let eY = function (e) {
         ey = (0, k.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: eC } = (0, A.ZP)(N.Z.CHANNEL_CALL),
         ev = I.ZP.getEmbeddedActivitiesForChannel(n.id),
-        { theme: eO } = (0, h.TCT)();
+        { theme: ej } = (0, h.TCT)();
     return (0, r.jsx)(A.Gt, {
         value: eC,
         children: (0, r.jsx)(x.Z, {
@@ -894,7 +894,7 @@ let eY = function (e) {
                             forceShowControls: ey,
                             awaitingRemoteSessionInfo: ee,
                             currentChannelActivities: ev,
-                            theme: eO
+                            theme: ej
                         }),
                         !n.isPrivate() && (0, r.jsx)(ew.YR, {}),
                         (0, r.jsx)(eS.H_, {})

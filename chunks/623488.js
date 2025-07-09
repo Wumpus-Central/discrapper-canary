@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(953529));
+(n.d(t, { Z: () => _ }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -71,8 +71,8 @@ function f(e) {
               children: i
           });
 }
-function g(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: C, showOpaqueBackground: x = !1, hideRoleTag: v = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
+function _(e) {
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: _, ctaComponent: g, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: C, showOpaqueBackground: x = !1, hideRoleTag: v = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -112,10 +112,10 @@ function g(e) {
                                         onShowFullDescription: b,
                                         variant: T
                                     }),
-                                v || null == g || '' === g.name
+                                v || null == _ || '' === _.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
-                                          children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: g })]
+                                          children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: _ })]
                                       })
                             ]
                         }),
@@ -142,7 +142,7 @@ function g(e) {
                             onClick: (e) => {
                                 e.stopPropagation();
                             },
-                            children: _
+                            children: g
                         })
                     ]
                 })

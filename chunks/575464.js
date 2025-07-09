@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: C = !0, onClick: x, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: C = !0, onClick: x, onMouseEnter: v, 'aria-setsize': O, 'aria-posinset': j } = e,
         E = (0, a.e7)([p.Z], () => p.Z.getStatus(i.id)),
         S = (0, o.JA)(String(i.id));
     return (0, r.jsx)(
@@ -60,8 +60,8 @@ function m(e) {
             {
                 role: 'option',
                 'aria-selected': y,
-                'aria-setsize': j,
-                'aria-posinset': O,
+                'aria-setsize': O,
+                'aria-posinset': j,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {

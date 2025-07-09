@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(158776),
     x = n(471253),
     v = n(431328),
-    j = n(145834),
-    O = n(590415),
+    O = n(145834),
+    j = n(590415),
     E = n(614173),
     S = n(618896),
     I = n(231338),
@@ -108,7 +108,7 @@ let A = i.memo(function (e) {
             w = (0, g.X7)(t.guild_id, null == A ? void 0 : A.userId, null == A ? void 0 : A.colorStrings),
             R = i.useMemo(() => ({ [E]: [l.user.id] }), [E, l.user.id]);
         (0, f.$)(R);
-        let k = l.rtsState === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let k = l.rtsState === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function M() {
             (0, x.DT)(t, l.user.id, !1);
         }
@@ -175,7 +175,7 @@ let A = i.memo(function (e) {
                                                 (0, r.jsx)(u.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: (0, j.$)(l)
+                                                    children: (0, O.$)(l)
                                                 })
                                             ]
                                         })

@@ -1,12 +1,12 @@
 n.d(t, {
     Gn: () => C,
     Nz: () => f,
-    QQ: () => _,
+    QQ: () => g,
     QY: () => y,
     Vj: () => m,
     Vs: () => x,
     j8: () => h,
-    oO: () => g,
+    oO: () => _,
     qt: () => b,
     u$: () => E,
     yC: () => d,
@@ -105,7 +105,7 @@ function f(e, t, n) {
     let r = a.Z.getQuery(e);
     return d(e, u(c({}, r, p(t)), { offset: 0 }), n);
 }
-function g(e, t, n) {
+function _(e, t, n) {
     var r = e,
         i = t * s.vpv,
         l = n;
@@ -113,7 +113,7 @@ function g(e, t, n) {
         p = a.Z.getTotalResults(r);
     return i < 0 || i > p ? void 0 : d(r, u(c({}, o), { offset: i }), l);
 }
-function _(e) {
+function g(e) {
     r.Z.dispatch({
         type: 'SEARCH_CLEAR_HISTORY',
         searchId: e

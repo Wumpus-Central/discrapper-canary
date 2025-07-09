@@ -48,15 +48,15 @@ function C(e) {
 }
 function x(e) {
     let { channelId: t, warningId: x, senderId: v } = e,
-        { isBlocked: j } = (0, o.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(v) }), [v]),
-        O = i.useCallback(() => {
+        { isBlocked: O } = (0, o.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(v) }), [v]),
+        j = i.useCallback(() => {
             (0, h.T)(t, [x]);
         }, [t, x]),
         E = (0, b.C2)(),
         S = i.useCallback(
             (e) => () => {
                 (s.Z.blockUser(v, { location: b.zr }).then(() => {
-                    O();
+                    j();
                 }),
                     (0, m.qc)({
                         channelId: t,
@@ -66,7 +66,7 @@ function x(e) {
                         cta: e
                     }));
             },
-            [O, t, x, v]
+            [j, t, x, v]
         );
     i.useEffect(() => {
         ((0, m.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
@@ -201,7 +201,7 @@ function x(e) {
         warningType: f.pj.STRANGER_DANGER,
         header: y.intl.string(y.t.iOkDpK),
         description: y.intl.string(y.t.ISUbcH),
-        onDismiss: O,
+        onDismiss: j,
         buttons: [
             {
                 text: y.intl.string(y.t['Qk/c4+']),
@@ -217,7 +217,7 @@ function x(e) {
                         }));
                 }
             },
-            ...(j
+            ...(O
                 ? []
                 : [
                       {

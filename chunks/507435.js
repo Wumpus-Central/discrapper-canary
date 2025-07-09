@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(739566),
     m = n(942951),
     f = n(834129),
-    g = n(809026),
-    _ = n(139256),
+    _ = n(809026),
+    g = n(139256),
     h = n(489887),
     b = n(388032),
     E = n(271629);
@@ -96,7 +96,7 @@ function x(e) {
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, r.jsx)(_.ZY, {
+                            (0, r.jsx)(g.ZY, {
                                 size: 16,
                                 className: E.victorIcon,
                                 isVictor: !0,
@@ -214,8 +214,8 @@ function O(e) {
     var t;
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
-        _ = i.useMemo(() => (0, g.Z)(d), [d]),
-        y = (0, o.aF)(null != (t = null == _ ? void 0 : _.questionText) ? t : '', h.Dv),
+        g = i.useMemo(() => (0, _.Z)(d), [d]),
+        y = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', h.Dv),
         C = (0, p.ZP)(n),
         x = (0, m.l)({
             user: n.author,
@@ -233,7 +233,7 @@ function O(e) {
                     returnMessageId: n.id
                 });
         }, [n.id, O]);
-    return null == _
+    return null == g
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -250,7 +250,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(v, {
                       className: E.embed,
-                      data: _,
+                      data: g,
                       onClickPollLink: u ? void 0 : j
                   })
               ]

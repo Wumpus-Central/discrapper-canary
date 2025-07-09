@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(768119),
     x = n(944486),
     v = n(585483),
-    j = n(72006),
-    O = n(965996),
+    O = n(72006),
+    j = n(965996),
     E = n(652399),
     S = n(970850),
     I = n(861262),
@@ -49,7 +49,7 @@ function L(e, t, n) {
 }
 function U(e) {
     let t = null != e ? C.Z.getEditorState(e) : null;
-    return null != t ? j.Sq(t) : null;
+    return null != t ? O.Sq(t) : null;
 }
 class B extends i.Component {
     componentDidMount() {
@@ -383,7 +383,7 @@ function V(e) {
         h = (0, c.e7)([g.Z], () => g.Z.getLastSearchAnalyticsId()),
         { searchResults: f, ignoreCount: m, blockCount: y } = (0, P.G)(o),
         { searchMode: x, setSearchMode: v } = (0, S.Z)({ searchId: a }),
-        j = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 v(e);
                 let t = U(a);
@@ -396,7 +396,7 @@ function V(e) {
             },
             [o, a, v]
         ),
-        O = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 var t;
                 (d(e),
@@ -422,8 +422,8 @@ function V(e) {
         theme: t,
         isFeedbackVisible: n,
         dismissFeedbackEntrypoint: l,
-        onPageChange: O,
-        onSearchModeChange: j,
+        onPageChange: j,
+        onSearchModeChange: O,
         searchMode: x
     });
 }
@@ -433,7 +433,7 @@ function z(e) {
         l = (0, m.U)({ location: 'SearchResults' }),
         o = i.useRef(null),
         [a, s] = i.useState(!1),
-        { enabled: c, force: u } = (0, O.f)({ location: 'SearchResults' });
+        { enabled: c, force: u } = (0, j.f)({ location: 'SearchResults' });
     (i.useEffect(() => {
         c && u && s(!0);
     }, [u, c]),

@@ -1,4 +1,4 @@
-(n.d(t, { T: () => O }), n(388685), n(539854));
+(n.d(t, { T: () => j }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,7 +36,7 @@ function v(e) {
         isTyping: t
     };
 }
-function j(e) {
+function O(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: i, mentionCount: l, isTyping: o, voiceChannelIsSelected: a } = v(n);
     return (0, r.jsx)(_.Z, {
@@ -47,10 +47,10 @@ function j(e) {
         canBadge: a
     });
 }
-function O(e) {
+function j(e) {
     let t;
     var { channelId: n, className: l, showingClassName: a, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
-        O = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,7 +70,7 @@ function O(e) {
             return i;
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
-        { disabled: S } = O,
+        { disabled: S } = j,
         I = i.useRef(null),
         P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
@@ -103,7 +103,7 @@ function O(e) {
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, r.jsx)(j, {
+                return (0, r.jsx)(O, {
                     className: t,
                     channelId: n
                 });
@@ -179,7 +179,7 @@ function O(e) {
                     wrapperClassName: o()(l, null != a && { [a]: Z }),
                     forceTooltipOpen: k
                 },
-                O
+                j
             )
         )
     );

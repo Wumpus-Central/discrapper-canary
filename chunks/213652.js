@@ -22,13 +22,13 @@ function y(e) {
         C = (null == y ? void 0 : y.type) === g.fO.STREAM,
         x = (0, l.e7)([p.Z], () => (C ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
         { ignoreSenderPreference: v } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
-        { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
+        { viewerClippingAllowed: O, isAtMaxSavingClipOperations: j } = (0, l.cj)([s.Z], () => ({
             viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
         E = s.Z.getSettings().clipsEnabled,
         S = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        I = !E || !(S || j) || O || null == y,
+        I = !E || !(S || O) || j || null == y,
         P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
@@ -81,7 +81,7 @@ function y(e) {
         },
         disabled: I,
         iconComponent: P,
-        label: null == x ? b.intl.string(b.t.eg5qtb) : S || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
+        label: null == x ? b.intl.string(b.t.eg5qtb) : S || O ? (E ? (j ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
         grow: !1
     });
 }

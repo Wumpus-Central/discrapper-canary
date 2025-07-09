@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(539854), n(388685));
+(n.d(t, { Z: () => O }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -147,7 +147,7 @@ class v extends i.PureComponent {
         (super(...e), y(this, 'scaleAnimation', new a.Z.Value(0)), y(this, 'spriteAnimation', new a.Z.Value(0)), y(this, 'spriteOpacity', new a.Z.Value(0)), y(this, 'widthAnimation', new a.Z.Value(0)));
     }
 }
-function j(e) {
+function O(e) {
     var t;
     let { participants: n, onContextMenu: i, className: l, onClick: a, width: u, guildId: b } = e,
         _ = (0, p.ZP)(),

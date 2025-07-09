@@ -25,7 +25,7 @@ function m(e) {
     )
         return null;
     let v = !0 === b ? f.intl.string(h.default.dpfwQ0) : f.intl.string(h.default.ASv23d),
-        j = 'ban-user-'.concat(null == m ? void 0 : m.id);
+        O = 'ban-user-'.concat(null == m ? void 0 : m.id);
     return (0, r.jsx)(
         p.Z,
         {
@@ -91,6 +91,6 @@ function m(e) {
             submitting: y,
             color: o.zxk.Colors.RED
         },
-        j
+        O
     );
 }

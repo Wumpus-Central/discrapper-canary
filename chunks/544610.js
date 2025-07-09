@@ -19,16 +19,16 @@ var i,
     C = n(981631);
 let x = !1,
     v = '',
-    j = 0,
-    O = [],
+    O = 0,
+    j = [],
     E = !1,
     S = new Set(),
     I = null;
 function P() {
-    ((v = ''), (j = 0), (O = []), (S = new Set()), (x = !1), (I = null));
+    ((v = ''), (O = 0), (j = []), (S = new Set()), (x = !1), (I = null));
 }
 function Z(e) {
-    ((v = e), (j = 0), N());
+    ((v = e), (O = 0), N());
 }
 function N() {
     if (!x) return !1;
@@ -36,7 +36,7 @@ function N() {
     if (0 === v.trim().length)
         return (
             null != r && r.clearQuery(),
-            (O = (function (e) {
+            (j = (function (e) {
                 let t = _.Z.getFriendIDs(),
                     n = y.default.getCurrentUser();
                 return (
@@ -123,7 +123,7 @@ function w(e) {
                 comparator: r
             });
     }
-    ((O = n), U.emitChange());
+    ((j = n), U.emitChange());
 }
 function R() {
     return (null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000));
@@ -144,7 +144,7 @@ class L extends (i = a.ZP.Store) {
         (this.waitFor(y.default, m.Z, _.Z, u.Z, g.Z), this.syncWith([y.default, m.Z], N), this.syncWith([_.Z], T));
     }
     getResults() {
-        return O;
+        return j;
     }
     hasFriends() {
         return E;
@@ -158,9 +158,9 @@ class L extends (i = a.ZP.Store) {
     getState() {
         return {
             query: v,
-            selectedRow: j,
+            selectedRow: O,
             selectedUsers: S,
-            results: O,
+            results: j,
             hasFriends: E
         };
     }
@@ -196,7 +196,7 @@ let U = new L(s.Z, {
             ((I = e.channelId), Z(e.query));
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-            j = e.row;
+            O = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;

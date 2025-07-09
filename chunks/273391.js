@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(511004),
     d = n(598117),
     h = n(388032),
-    p = n(917093);
-function g(e) {
+    g = n(917093);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,15 +74,15 @@ let f = new o.Z('ImageEditor'),
                 right: 0
             }),
             [w, T] = l.useState(0),
-            [A, M] = l.useState({
+            [A, k] = l.useState({
                 x: 0,
                 y: 0
             }),
-            [k, P] = l.useState(!1),
+            [M, P] = l.useState(!1),
             R = 'image/gif' === t.type,
             L = (0, i.v)(t.type),
-            z = L && !R,
-            [Z, G] = l.useState(null);
+            Z = L && !R,
+            [z, G] = l.useState(null);
         l.useEffect(() => {
             (0, u.Z)();
         }, []);
@@ -149,7 +149,7 @@ let f = new o.Z('ImageEditor'),
                 };
             }, [D, w, E]),
             H = l.useCallback((e) => {
-                (M({
+                (k({
                     x: e.clientX - x.current.x,
                     y: e.clientY - x.current.y
                 }),
@@ -162,18 +162,18 @@ let f = new o.Z('ImageEditor'),
         let V = l.useCallback(
             (e) => {
                 let { x: t, y: n } = x.current;
-                k &&
+                M &&
                     (e.clientX !== t || e.clientY !== n) &&
                     U({
                         x: (t = e.clientX - A.x),
                         y: (n = e.clientY - A.y)
                     });
             },
-            [k, A, U]
+            [M, A, U]
         );
         l.useEffect(() => {
-            if (k) return (window.addEventListener('mousemove', V), () => window.removeEventListener('mousemove', V));
-        }, [V, k]);
+            if (M) return (window.addEventListener('mousemove', V), () => window.removeEventListener('mousemove', V));
+        }, [V, M]);
         let Y = l.useRef(null),
             J = l.useCallback(async () => {
                 let e;
@@ -210,7 +210,7 @@ let f = new o.Z('ImageEditor'),
                         (null == (u = Y.current) || u.call(Y), (Y.current = null));
                     }
                 else
-                    e = z
+                    e = Z
                         ? n
                         : (0, a.PT)({
                               image: l,
@@ -231,11 +231,11 @@ let f = new o.Z('ImageEditor'),
                         (null == (e = Y.current) || e.call(Y), (Y.current = null));
                     }
                 );
-            }, [t, w, R, z, o, D, E, n]);
+            }, [t, w, R, Z, o, D, E, n]);
         l.useEffect(() => {
             J();
-        }, [J, w, D, k, E, Z]);
-        let X = l.useCallback(() => {
+        }, [J, w, D, M, E, z]);
+        let K = l.useCallback(() => {
             if (null == N.current) return;
             let e = N.current.naturalWidth,
                 t = N.current.naturalHeight;
@@ -258,27 +258,27 @@ let f = new o.Z('ImageEditor'),
                 ));
         }, [L]);
         return (0, r.jsxs)('div', {
-            className: p.imageEditor,
+            className: g.imageEditor,
             children: [
                 (0, r.jsxs)('div', {
-                    className: p.editingContainer,
+                    className: g.editingContainer,
                     children: [
                         (0, r.jsx)('img', {
-                            onLoad: X,
+                            onLoad: K,
                             onError: () => {
                                 o({
                                     error: d.ze.IMAGE_LOAD,
                                     loading: !1
                                 });
                             },
-                            style: g(
+                            style: m(
                                 {
                                     opacity: +(null != D),
                                     transform: 'translate3d('.concat(x.current.x, 'px, ').concat(x.current.y, 'px, 0) rotate(').concat(w, 'deg)')
                                 },
                                 F()
                             ),
-                            className: p.image,
+                            className: g.image,
                             src: n,
                             crossOrigin: 'anonymous',
                             alt: h.intl.string(h.t.EYR1FR),
@@ -286,9 +286,9 @@ let f = new o.Z('ImageEditor'),
                             onMouseDown: H,
                             draggable: !1
                         }),
-                        !z &&
+                        !Z &&
                             (0, r.jsx)('div', {
-                                className: p.overlay,
+                                className: g.overlay,
                                 style: {
                                     opacity: +(null != D),
                                     width: v.width,
@@ -297,9 +297,9 @@ let f = new o.Z('ImageEditor'),
                             })
                     ]
                 }),
-                z
+                Z
                     ? (0, r.jsx)('div', {
-                          className: p.animatedInfoContainer,
+                          className: g.animatedInfoContainer,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-muted',
@@ -307,7 +307,7 @@ let f = new o.Z('ImageEditor'),
                           })
                       })
                     : (0, r.jsxs)('div', {
-                          className: p.toolsContainer,
+                          className: g.toolsContainer,
                           children: [
                               (0, r.jsx)(s.ua7, {
                                   text: h.intl.string(h.t['oCs/+P']),
@@ -335,10 +335,10 @@ let f = new o.Z('ImageEditor'),
                                           })(e, ['onClick']);
                                       return (0, r.jsx)(
                                           s.zxk,
-                                          m(
-                                              g(
+                                          p(
+                                              m(
                                                   {
-                                                      className: p.rotateButton,
+                                                      className: g.rotateButton,
                                                       look: s.zxk.Looks.BLANK,
                                                       size: s.PhG.NONE,
                                                       color: s.zxk.Colors.TRANSPARENT,
@@ -358,16 +358,16 @@ let f = new o.Z('ImageEditor'),
                                   }
                               }),
                               (0, r.jsxs)('div', {
-                                  className: p.zoomControls,
+                                  className: g.zoomControls,
                                   children: [
                                       (0, r.jsx)(s.BlJ, {
                                           color: s.TVs.colors.ICON_SECONDARY,
                                           size: 'sm'
                                       }),
-                                      null != Z &&
+                                      null != z &&
                                           (0, r.jsx)(s.iRW, {
-                                              className: p.slider,
-                                              initialValue: Z,
+                                              className: g.slider,
+                                              initialValue: z,
                                               minValue: 1,
                                               maxValue: 4,
                                               keyboardStep: 0.025,
@@ -439,7 +439,7 @@ let O = (e, t, n) => {
         s = Math.floor(a < 1 ? d.eT * a : d.eT / a),
         o = a < 1 ? s : d.eT,
         c = a > 1 ? s : d.eT;
-    return m(g({}, e), {
+    return p(m({}, e), {
         cropDimensions: i,
         resizeHeight: o,
         resizeWidth: c

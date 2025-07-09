@@ -12,13 +12,13 @@ var i = n(442837),
     p = n(592125),
     m = n(430824),
     f = n(699516),
-    g = n(594174),
-    _ = n(934415),
+    _ = n(594174),
+    g = n(934415),
     h = n(900849),
     b = n(981631);
 function E(e) {
     let { channel: t, onClick: n, beforeTransition: E, className: y, openChatWithoutConnecting: C } = e,
-        x = (0, i.e7)([g.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, g.default, f.Z)), [t]);
+        x = (0, i.e7)([_.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, _.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
         text: x,
         position: 'top',
@@ -52,7 +52,7 @@ function E(e) {
                 },
                 onMouseEnter: i,
                 onMouseLeave: s,
-                iconType: (0, _.wl)(t),
+                iconType: (0, g.wl)(t),
                 children: x
             });
         }

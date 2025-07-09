@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => j,
+    ZP: () => O,
     cy: () => x,
     iu: () => C
 }),
@@ -136,7 +136,7 @@ class v extends a.PureComponent {
             }));
     }
 }
-class j extends (r = a.PureComponent) {
+class O extends (r = a.PureComponent) {
     render() {
         let e = this.props,
             { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: i, isLongText: l, title: a, body: s, children: c, spacing: u, forceTheme: p, innerRef: h } = e,
@@ -214,4 +214,4 @@ class j extends (r = a.PureComponent) {
             }));
     }
 }
-(b(j, 'TextAlignments', C), b(j, 'defaultProps', { textAlign: 'left' }));
+(b(O, 'TextAlignments', C), b(O, 'defaultProps', { textAlign: 'left' }));

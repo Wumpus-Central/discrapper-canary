@@ -26,15 +26,15 @@ function b(e) {
         C = r.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : g.intl.string(g.t['3xjX0d'])), [n]),
         x = void 0 !== o.flags && (0, f.yE)(o.flags, m.udG.EMBEDDED),
         v = null != _ && _.applicationId === o.id && (0, a.p)(_.location) === t.channel.id,
-        { analyticsLocations: j } = (0, u.ZP)(c.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
-        O = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
+        { analyticsLocations: O } = (0, u.ZP)(c.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
+        j = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
     return {
         isExecutingLaunchInteraction: p,
         buttonText:
             (0, h.ms)({
                 context: t,
                 applicationId: o.id,
-                botUserId: O
+                botUserId: j
             }) && x
                 ? v
                     ? g.intl.string(g.t['Hi1/aW'])
@@ -45,9 +45,9 @@ function b(e) {
         hasActiveMatchingEmbeddedActivity: v,
         isEmbeddedApp: x,
         currentEmbeddedActivity: _,
-        channelRecipientUserId: O,
+        channelRecipientUserId: j,
         setIsExecutingLaunchInteraction: b,
-        analyticsLocations: j
+        analyticsLocations: O
     };
 }
 function _(e) {

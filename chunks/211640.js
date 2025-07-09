@@ -23,7 +23,7 @@ function f(e) {
     if (!g) return null;
     let x = null == _ ? h.intl.string(p.default['0IZbwM']) : h.intl.string(p.default.Uj6oDw),
         v = null == _,
-        j = 'delete-message-'.concat(t.id);
+        O = 'delete-message-'.concat(t.id);
     return (0, r.jsx)(
         d.Z,
         {
@@ -40,6 +40,6 @@ function f(e) {
             disabled: v,
             color: l.zxk.Colors.RED
         },
-        j
+        O
     );
 }

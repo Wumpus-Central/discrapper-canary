@@ -11,8 +11,8 @@ function c(e) {
     let { message: c, usernameHook: u, onClickPins: d, compact: p } = e,
         m = (0, a.ZP)(c),
         f = m.nick,
-        g = u(m),
-        _ = () => {
+        _ = u(m),
+        g = () => {
             if (null == c.messageReference) return;
             let { channel_id: e, message_id: t } = c.messageReference;
             l.Z.jumpToMessage({
@@ -62,23 +62,23 @@ function c(e) {
                     null != c.messageReference
                         ? null == d
                             ? s.intl.format(s.t.lD5tur, {
-                                  usernameHook: g,
+                                  usernameHook: _,
                                   username: f,
-                                  messageOnClick: _
+                                  messageOnClick: g
                               })
                             : s.intl.format(s.t.yIDvPD, {
-                                  usernameHook: g,
+                                  usernameHook: _,
                                   username: f,
                                   pinsActionOnClick: d,
-                                  messageOnClick: _
+                                  messageOnClick: g
                               })
                         : null == d
                           ? s.intl.format(s.t.vfkjq6, {
-                                usernameHook: g,
+                                usernameHook: _,
                                 username: f
                             })
                           : s.intl.format(s.t.R7vZGR, {
-                                usernameHook: g,
+                                usernameHook: _,
                                 username: f,
                                 pinsActionOnClick: d
                             })
