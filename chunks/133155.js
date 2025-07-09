@@ -1,0 +1,1 @@
+i.exports = JSON.parse('{"klSpfn":"Muokkaa asetuksia","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["viesti"],"other":["viestiä"]},0,"cardinal"]],"O+racX":"Ilmoituksia ei ole.","dcpdhI":"Valitse viesti, niin siirryt siihen.","VAK+h4":"Tervetuloa ilmoituskeskukseesi!"}');

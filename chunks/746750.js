@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"klSpfn":"Beállítások szerkesztése","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["üzenet"],"other":["üzenet"]},0,"cardinal"]],"O+racX":"Nincsenek értesítések.","dcpdhI":"Válassz egy üzenetet, hogy oda tudj navigálni.","VAK+h4":"Üdv az Értesítési központban!"}');

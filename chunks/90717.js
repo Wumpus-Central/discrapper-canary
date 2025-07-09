@@ -1,0 +1,1 @@
+i.exports = JSON.parse('{"klSpfn":"Ayarları Düzenle","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["mesaj"],"other":["mesajlar"]},0,"cardinal"]],"O+racX":"Bildirim yok.","dcpdhI":"Oraya gitmek için bir mesaj seç.","VAK+h4":"Bildirim Merkezine hoş geldin!"}');

@@ -1,0 +1,1 @@
+c.exports = JSON.parse('{"klSpfn":"設定を編集","NzUuLC":["+",[1,"count"],"件の",[6,"count",{"one":["メッセージ"],"other":["メッセージ"]},0,"cardinal"]],"O+racX":"通知はありません\u3002","dcpdhI":"メッセージを選択すると\u3001そのメッセージに移動します\u3002","VAK+h4":"通知センターにようこそ\uFF01"}');

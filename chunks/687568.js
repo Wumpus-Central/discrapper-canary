@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"klSpfn":"Modifier les paramètres","NzUuLC":["+",[1,"count"],"\xA0",[6,"count",{"one":["message"],"other":["messages"]},0,"cardinal"]],"O+racX":"Il n\'y a aucune notification.","dcpdhI":"Sélectionne un message pour y aller.","VAK+h4":"Bienvenue dans ton centre de notifications\xA0!"}');
