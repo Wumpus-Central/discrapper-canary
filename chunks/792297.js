@@ -9,8 +9,8 @@ var r = n(255367),
     o = n.n(a),
     s = n(519160),
     l = n(956664),
-    c = n(212459),
-    u = n(730606),
+    c = n(730606),
+    u = n(369171),
     d = n(179963);
 let f = 24,
     _ = 36,
@@ -44,33 +44,36 @@ function g(e, t) {
 }
 function E(e) {
     let { items: t, currentIndex: n, children: a } = e,
-        { entering: l } = (0, c.Y)(),
-        f = t[n],
-        _ = g(t.length > 1, {
-            width: f.width,
-            height: f.height
+        l = t[n],
+        f = g(t.length > 1, {
+            width: l.width,
+            height: l.height
         }),
-        [p, h] = i.useState(0);
+        [_, p] = i.useState(0);
     return (
         i.useEffect(() => {
-            let e = () => h((e) => e + 1);
+            let e = () => p((e) => e + 1);
             return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
         }),
         i.useEffect(() => {
             if (t.length > 1) {
                 let e = t[(0, s.gN)(n - 1, t.length)],
                     r = t[(0, s.gN)(n + 1, t.length)];
-                ((0, u.WG)(e, !0), t.length > 2 && (0, u.WG)(r, !0));
+                ((0, c.WG)(e, !0), t.length > 2 && (0, c.WG)(r, !0));
             }
         }, [n, t]),
-        (0, r.jsx)(
-            'div',
-            {
-                className: o()(d.mediaArea, { [d.animated]: l }),
-                children: _.width > 0 && _.height > 0 && a(_.width, _.height)
-            },
-            f.url
-        )
+        (0, r.jsx)(u.ZP, {
+            mode: u.lx.PINNED,
+            children: (e) =>
+                (0, r.jsx)(
+                    'div',
+                    {
+                        className: o()(d.mediaArea, e),
+                        children: f.width > 0 && f.height > 0 && a(f.width, f.height)
+                    },
+                    l.url
+                )
+        })
     );
 }
 let b = i.memo(E);

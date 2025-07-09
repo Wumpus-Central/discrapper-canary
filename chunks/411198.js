@@ -347,12 +347,11 @@ function N(e) {
     };
 }
 function C(e) {
-    return P(
-        f(u({}, e), {
-            features: (0, a.G)(e.features),
-            joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null
-        })
-    );
+    let t = f(u({}, e), {
+        features: (0, a.G)(e.features),
+        joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null
+    });
+    return (delete t.roles, delete t.member, P(t));
 }
 function R(e) {
     return P(u({}, s.Cx, e));

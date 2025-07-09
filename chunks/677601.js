@@ -727,30 +727,31 @@ class eW extends i.PureComponent {
                 });
             }),
             eF(this, 'renderHeader', () => {
-                let { renderExternalHeader: e, channel: t, guild: n, appContext: i, chatOpen: l, inCall: a } = this.props,
-                    { useExternalHeader: o, canSelectRegion: s, renderHeader: c } = this.viewProperties;
-                return c
-                    ? (0, r.jsxs)(Q.Z, {
-                          children: [
-                              (0, r.jsx)('div', {
-                                  className: eB.headerWrapper,
-                                  children: o
-                                      ? null == e
-                                          ? void 0
-                                          : e()
-                                      : (0, r.jsx)(eP.Z, {
-                                            channel: t,
-                                            guild: n,
-                                            appContext: i,
-                                            inCall: a,
-                                            isChatOpen: l || (this.popoutOpen && !this.inPopout && a),
-                                            exitFullScreen: this.maybeLeaveFullScreen
-                                        })
-                              }),
-                              s ? this.renderRegionSelect() : null
-                          ]
-                      })
-                    : null;
+                var e, t;
+                let { renderExternalHeader: n, channel: i, guild: l, appContext: a, chatOpen: o, inCall: s } = this.props,
+                    { useExternalHeader: c, canSelectRegion: u, renderHeader: d } = this.viewProperties;
+                if (!d) return null;
+                let p = null != (t = null == (e = this._lastIdleProps) ? void 0 : e.idle) && t;
+                return (0, r.jsxs)(Q.Z, {
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: eB.headerWrapper,
+                            children: c
+                                ? null == n
+                                    ? void 0
+                                    : n(p)
+                                : (0, r.jsx)(eP.Z, {
+                                      channel: i,
+                                      guild: l,
+                                      appContext: a,
+                                      inCall: s,
+                                      isChatOpen: o || (this.popoutOpen && !this.inPopout && s),
+                                      exitFullScreen: this.maybeLeaveFullScreen
+                                  })
+                        }),
+                        u ? this.renderRegionSelect() : null
+                    ]
+                });
             }));
     }
 }

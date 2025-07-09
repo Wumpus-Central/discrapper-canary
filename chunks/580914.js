@@ -94,10 +94,10 @@ let w = {
             G = (0, E.sp)(),
             { showBetaTag: z } = m.Z.useExperiment({ location: 'collectible_hero_block' }),
             Y = l.useMemo(() => (null != D ? D : Z(T)), [D, T]),
-            { isPreviewingStaticBanner: q, bannerOverrides: K, bannerStyleOverrides: X, heroLogo: Q, heroBannerStatic: J, heroBannerAnimated: $ } = (0, I.hr)(Y),
+            { isPreviewingStaticBanner: q, bannerOverrides: K, bannerStyleOverrides: Q, heroLogo: X, heroBannerStatic: J, heroBannerAnimated: $ } = (0, I.hr)(Y),
             ee = null == K ? void 0 : K.heroBanner,
-            et = null != (n = null != (t = null == X ? void 0 : X.responsive) ? t : Y.responsive) && n,
-            en = null != (o = null == X ? void 0 : X.backgroundStyle) ? o : Y.backgroundStyle,
+            et = null != (n = null != (t = null == Q ? void 0 : Q.responsive) ? t : Y.responsive) && n,
+            en = null != (o = null == Q ? void 0 : Q.backgroundStyle) ? o : Y.backgroundStyle,
             er = l.useMemo(() => U(Y.rankedSkuIds), [s, U, Y.rankedSkuIds]),
             el = (0, y.a)()(er),
             eo = (0, j.l)(el).slice(0, 4),
@@ -122,7 +122,7 @@ let w = {
                                         autoPlay: !0,
                                         loop: !0
                                     }),
-                              (null == X ? void 0 : X.hideSideShadow) === !0
+                              (null == Q ? void 0 : Q.hideSideShadow) === !0
                                   ? null
                                   : (0, r.jsx)(F, {
                                         heroBannerOverrides: ee,
@@ -153,7 +153,7 @@ let w = {
                                                             null != Y.logoUrl &&
                                                                 (0, r.jsx)('img', {
                                                                     className: R.heroHeaderLogo,
-                                                                    src: Q,
+                                                                    src: X,
                                                                     alt: Y.name
                                                                 }),
                                                             null != Y.title &&

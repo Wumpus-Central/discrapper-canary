@@ -7,8 +7,8 @@ var a = n(255367),
     l = n(755721),
     s = n(481060),
     u = n(607070),
-    p = n(299206),
-    d = n(868643),
+    d = n(299206),
+    p = n(868643),
     m = n(912332),
     g = n(296182),
     f = n(850908),
@@ -23,9 +23,9 @@ var a = n(255367),
     C = n(369171),
     T = n(312097),
     E = n(388032),
-    P = n(505348);
-function x() {
-    return (x =
+    x = n(505348);
+function P() {
+    return (P =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -106,7 +106,7 @@ let D = r.forwardRef(function (e, t) {
         text: r,
         position: 'bottom',
         children: (e) => {
-            var r = x(
+            var r = P(
                 {},
                 (function (e) {
                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -123,9 +123,9 @@ let D = r.forwardRef(function (e, t) {
                             look: l.iL.BLANK,
                             size: l.Ph.ICON,
                             color: l.Tt.TRANSPARENT,
-                            className: i()(P.actionButton, { [P.selected]: o }),
-                            wrapperClassName: P.actionButtonWrapper,
-                            innerClassName: P.actionButtonInner,
+                            className: i()(x.actionButton, { [x.selected]: o }),
+                            wrapperClassName: x.actionButtonWrapper,
+                            innerClassName: x.actionButtonInner,
                             grow: !1
                         }),
                         u
@@ -173,7 +173,7 @@ function L(e) {
                 });
             }
         }, [i, c]);
-    return null != i && null != c && (0, d.h)(i)
+    return null != i && null != c && (0, p.h)(i)
         ? (0, a.jsx)(D, {
               onClick: l,
               tooltipText: E.intl.string(E.t.I3ltXF),
@@ -222,7 +222,7 @@ function k(e) {
     var t, n;
     let { item: r, canCopyImage: o, canCopyLink: i, onClose: c, onSelect: l } = e,
         u = (null == (n = r.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment' ? r.sourceMetadata.identifier.attachmentId : null,
-        d = (0, p.Z)({
+        p = (0, d.Z)({
             id: u,
             label: E.intl.string(E.t.nwg3lZ)
         }),
@@ -233,20 +233,20 @@ function k(e) {
                 l = Z(E.intl.string(E.t['3Nf9u7']), 'size'),
                 u = Z(E.intl.string(E.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == r || null == (t = r.identifier) ? void 0 : t.type) !== 'attachment') return null;
-            let p = (0, f.Z)(r.identifier),
-                d = (0, O.BU)(r.identifier.size / 1000);
+            let d = (0, f.Z)(r.identifier),
+                p = (0, O.BU)(r.identifier.size / 1000);
             return (0, a.jsxs)(
                 s.sNh,
                 {
                     id: 'media-viewer-details',
                     label: E.intl.string(E.t.sqBLa2),
                     children: [
-                        c(p),
+                        c(d),
                         l(
                             E.intl.formatToPlainString(E.t.DTdonJ, {
                                 width: o,
                                 height: i,
-                                fileSize: d
+                                fileSize: p
                             })
                         ),
                         u(n)
@@ -302,7 +302,7 @@ function k(e) {
                 ]
             }),
             m,
-            d
+            p
         ]
     });
 }
@@ -339,9 +339,9 @@ function B(e) {
         i = r.useRef(null),
         [c, l] = r.useState(!1),
         u = y.Sb.useSetting(),
-        p = 'IMAGE' === o.type && null == o.children && !o.animated && (0, g.Lz)(o.url, o.contentType),
-        d = (0, g.Jj)(o.url);
-    return u || p || d || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
+        d = 'IMAGE' === o.type && null == o.children && !o.animated && (0, g.Lz)(o.url, o.contentType),
+        p = (0, g.Jj)(o.url);
+    return u || d || p || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
         ? (0, a.jsx)(s.yRy, {
               targetElementRef: i,
               shouldShow: c,
@@ -353,8 +353,8 @@ function B(e) {
               renderPopout: () =>
                   (0, a.jsx)(k, {
                       item: o,
-                      canCopyImage: p,
-                      canCopyLink: d,
+                      canCopyImage: d,
+                      canCopyLink: p,
                       onClose: () => l(!1)
                   }),
               children: (e) => {
@@ -387,7 +387,7 @@ let G = r.memo(function (e) {
             children: (e) =>
                 (0, a.jsxs)('div', {
                     ref: l,
-                    className: i()(P.actionButtons, e),
+                    className: i()(x.actionButtons, e),
                     onClick: (e) => e.stopPropagation(),
                     onMouseLeave: s,
                     children: [

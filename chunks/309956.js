@@ -31,13 +31,10 @@ let d = {
             E = (0, l.k6)(),
             v = r.useCallback(
                 async (t, r) => {
-                    if (b === t) return;
-                    if ((r && (C(c.f7.OUT), await O(1.1 * c.lb)), (0, c.RE)(t))) {
-                        let e = d[t];
-                        (f(), g(e));
-                    }
+                    if ((f(), b === t)) return;
+                    (r && (C(c.f7.OUT), await O(1.1 * c.lb)), (0, c.RE)(t) && g(d[t]));
                     let l = p && ![c.AW.HOME, c.AW.ORBS].includes(t) ? c.AW.CATALOG : t;
-                    (l === c.AW.HOME && f(), m(l), r && C(c.f7.IN), n || E.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(l), { shallow: !0 }), null != e.current && e.current.scrollTo({ to: 0 }), C(c.f7.VISIBLE));
+                    (m(l), r && C(c.f7.IN), n || E.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(l), { shallow: !0 }), null != e.current && e.current.scrollTo({ to: 0 }), C(c.f7.VISIBLE));
                 },
                 [E, n, e, p, g, f, b]
             );

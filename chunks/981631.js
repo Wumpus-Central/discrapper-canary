@@ -2368,6 +2368,7 @@ var tM = (function (e) {
             (e.REFERRAL_MESSAGE_EMBED = 'Message Embed'),
             (e.SHOP_PRODUCT_DETAILS = 'Shop Product Details'),
             (e.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS = 'Collectibles Shop View All Category Items'),
+            (e.COLLECTIBLES_SHOP_FEATURED_PAGE = 'Collectibles Shop Featured Page'),
             (e.SHOP_KEEPER = 'Shop Keeper'),
             (e.APPEAL_INGESTION_SPEED_BUMP = 'Appeal Ingestion Speed Bump'),
             (e.APPEAL_INGESTION_COLLECT_SIGNAL = 'Appeal Ingestion Collect Signal'),
@@ -2678,8 +2679,9 @@ let tU = {
         FRIEND_REQUESTS: 'Friend Requests',
         CLIPS: 'Settings Clips',
         COLLECTIBLES_SHOP: 'Shop',
-        COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS: 'Collectibles Shop View All Category Items',
         SHOP_KEEPER: 'Shop Keeper',
+        COLLECTIBLES_SHOP_FEATURED_PAGE: 'Collectibles Shop Featured Page',
+        COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS: 'Collectibles Shop View All Category Items',
         COMMUNITY_ALERTS: 'Community Alerts Settings',
         HIGHLIGHT_NOTIFICATIONS: 'Highlight notification settings',
         QUESTS: 'Quests',
@@ -4497,7 +4499,7 @@ var nM = (function (e) {
         return ((e.TOP_LEFT = 'top-left'), (e.TOP_RIGHT = 'top-right'), (e.BOTTOM_LEFT = 'bottom-left'), (e.BOTTOM_RIGHT = 'bottom-right'), e);
     })({}),
     nU = (function (e) {
-        return ((e.VIDEO = 'VIDEO'), (e.EMBED_IFRAME = 'EMBED_IFRAME'), e);
+        return ((e.VIDEO = 'VIDEO'), (e.ACTIVITY = 'ACTIVITY'), (e.FRAME = 'FRAME'), e);
     })({}),
     nG = (function (e) {
         return ((e.GIF = 'GIF'), (e.STICKER = 'STICKER'), e);

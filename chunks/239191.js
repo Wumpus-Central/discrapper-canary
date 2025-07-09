@@ -163,7 +163,7 @@ function w(e) {
                     id: 'gradient',
                     label: o,
                     className: a()((0, c.wjy)(i) ? O.darkOverlay : O.lightOverlay, O.themeOption),
-                    style: { background: 'var(--bg-overlay), '.concat(l) }
+                    style: { background: 'var(--background-gradient), '.concat(l) }
                 });
             }
             return (

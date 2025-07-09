@@ -73,7 +73,7 @@ function v(e) {
                 let { colors: t, gradientAngle: n } = I;
                 e = 'linear-gradient('.concat(n, 'deg, ').concat(t.join(', '), ')');
             }
-            return { background: 'var(--bg-overlay), '.concat(e) };
+            return { background: 'var(--background-gradient), '.concat(e) };
         }, [I, P]),
         D = (0, f.Sl)(g.Il.WHITE).hex,
         L = (0, f.Sl)(g.Il.RED_430).hex,

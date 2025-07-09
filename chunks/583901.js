@@ -195,7 +195,7 @@ function I(e) {
         isSelected: n,
         name: t.getName(),
         className: a()([i ? h.disabled : null, (0, c.wj)(p) ? h.darkOverlay : h.lightOverlay]),
-        style: { background: 'var(--bg-overlay), '.concat(m) },
+        style: { background: 'var(--background-gradient), '.concat(m) },
         tabIndex: o,
         showBadge: l,
         showLockedBadge: u

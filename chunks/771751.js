@@ -173,10 +173,10 @@ function S(e) {
             };
         }
     }, [f, y]);
-    let z = 'Active';
+    let U = 'Active';
     return (
-        D && (z = 'Acked'),
-        L && (z = 'Expired'),
+        D && (U = 'Acked'),
+        L && (U = 'Expired'),
         (0, n.jsxs)('div', {
             className: i()(_.card, M ? _.gradientWrapperTier0 : _.gradientWrapperTier2),
             children: [
@@ -293,8 +293,8 @@ function S(e) {
                             }),
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acked' === z ? void 0 : 'always-white',
-                                children: z
+                                color: 'Acked' === U ? void 0 : 'always-white',
+                                children: U
                             })
                         }),
                         null != I &&
@@ -537,9 +537,9 @@ function w() {
     r.useEffect(() => {
         F();
     }, [F]);
-    let z = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
+    let U = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     (r.useEffect(() => {
-        L(z(M));
+        L(U(M));
     }, [M]),
         r.useEffect(() => {
             (0 === e.length || 0 === a.length || R) &&
@@ -564,7 +564,7 @@ function w() {
                     (O(e.trial.sort((e, t) => e.id.localeCompare(t.id))), I(e.discount.sort((e, t) => e.id.localeCompare(t.id))));
                 }));
         }, [R]));
-    let U = async () => {
+    let z = async () => {
             null != i && (await C(i, 'trial'), k(!0));
         },
         G = async () => {
@@ -636,7 +636,7 @@ function w() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
                                     text: 'Create',
-                                    onClick: U
+                                    onClick: z
                                 })
                             ]
                         })

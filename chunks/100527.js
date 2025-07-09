@@ -445,6 +445,7 @@ var r = (function (e) {
         (e.CUSTOM_STATUS_TAGS_COACHMARK = 'custom status tags coachmark'),
         (e.CLICKER_GAME = 'clicker game'),
         (e.ACTIVITY_PIP = 'activity PIP'),
+        (e.FRAME_PIP = 'frame PIP'),
         (e.VIDEO_PIP = 'video PIP'),
         (e.INCOMING_CALL_MODAL = 'incoming call modal'),
         (e.VOICE_CHANNEL_HEADER = 'voice channel header'),

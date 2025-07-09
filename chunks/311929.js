@@ -1,4 +1,5 @@
 (n.d(t, {
+    $E: () => E,
     TS: () => f,
     Wh: () => h,
     bk: () => m,
@@ -7,8 +8,8 @@
 }),
     n(953529),
     n(388685),
-    n(415506),
-    n(49124));
+    n(49124),
+    n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(843991),
@@ -91,6 +92,7 @@ function g(e, t) {
     return null == e || null == t ? e === t : e === t || (e instanceof Date && t instanceof Date ? e.getTime() === t.getTime() : e instanceof Set && t instanceof Set ? (0, a.z)(e, t) : Array.isArray(e) && Array.isArray(t) ? (0, o.E)(e, t) : 'object' == typeof e && 'object' == typeof t && (0, o.Z)(e, t));
 }
 function E(e, t) {
+    if (e === t) return !0;
     for (let n of Object.keys(e)) {
         let r = n;
         if (!g(e[r], t[r])) return !1;

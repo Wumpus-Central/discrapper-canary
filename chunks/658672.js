@@ -2,6 +2,7 @@ e.exports = {
     hamburger: 'hamburger__9293f',
     container: 'container__9293f',
     transparent: 'transparent__9293f',
+    showToolbar: 'showToolbar__9293f',
     upperContainer: 'upperContainer__9293f',
     children: 'children__9293f',
     scrollable: 'scrollable__9293f',

@@ -52,8 +52,7 @@ function b() {
                 sku_id: e.skuId,
                 currency: c.pKx.USD,
                 price: 0,
-                price_tier: 0,
-                discount_price: null
+                price_tier: 0
             })
         )
     );

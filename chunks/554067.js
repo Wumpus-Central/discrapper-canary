@@ -7,29 +7,30 @@ var r = n(255367),
     s = n(388032),
     c = n(234209);
 function u(e) {
-    let { handleTransition: t } = e,
-        { searchQuery: n, onSetSearchQuery: u } = (0, i.S)(),
-        [d, p] = l.useState('');
+    let { handleTransition: t, selectedTab: n } = e,
+        { searchQuery: u, onSetSearchQuery: d } = (0, i.S)(),
+        [p, g] = l.useState('');
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
-                u(d);
+                d(p);
             }, 250);
             return () => clearTimeout(e);
-        }, [d, u]),
-        l.useEffect(() => {}, []),
+        }, [p, d]),
         l.useEffect(() => {
-            p(n);
-        }, [n]),
+            g(u);
+        }, [u]),
         (0, r.jsx)(o.E1j, {
-            onFocus: () => t(a.AW.CATALOG),
+            onFocus: () => {
+                n !== a.AW.CATALOG && t(a.AW.CATALOG);
+            },
             className: c.searchBar,
             onKeyDown: (e) => {
-                'Enter' === e.key && u(d);
+                'Enter' === e.key && d(p);
             },
-            query: d,
-            onChange: p,
-            onClear: () => p(''),
+            query: p,
+            onChange: g,
+            onClear: () => g(''),
             placeholder: s.intl.string(s.t['hIt/Nj'])
         })
     );

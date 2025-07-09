@@ -262,7 +262,6 @@ class ef extends (r = l.PureComponent) {
                             ref: this.setListRef,
                             className: ec.scroller,
                             fade: !0,
-                            customTheme: !0,
                             sectionHeight: this.getSectionHeight,
                             footerHeight: this.getSectionFooterHeight,
                             rowHeight: this.getRowHeight,

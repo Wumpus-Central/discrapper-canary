@@ -369,8 +369,7 @@ class eo extends i.Component {
                                                     renderRow: this.renderRow,
                                                     sections: e.map((e) => e.count),
                                                     onScroll: this.handleScroll,
-                                                    fade: !0,
-                                                    customTheme: !0
+                                                    fade: !0
                                                 },
                                                 c,
                                                 l

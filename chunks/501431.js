@@ -85,9 +85,10 @@ let g = {
     b = (0, l.U)(
         (0, o.XR)((e, t) =>
             d(u({}, g), {
+                hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === h.sortType && t().sort.sortDirection === h.sortDirection,
                 hasFilters: () => {
-                    let { itemTypeFilters: e, colorFilters: n, themeFilters: r, orbEligible: l, sort: o, searchQuery: s } = t();
-                    return [e, n, r].some((e) => e.size > 0) || l || o.sortType !== a.E.RECENCY || o.sortDirection !== i.F.DESC || '' !== s;
+                    let { itemTypeFilters: e, colorFilters: n, themeFilters: r, orbEligible: l, searchQuery: o } = t();
+                    return [e, n, r].some((e) => e.size > 0) || l || '' !== o;
                 },
                 onToggleItemType: (t) => {
                     e((e) => ({
@@ -183,23 +184,44 @@ let g = {
         let { onSetResponse: e, setSearchError: t, clear: n, setIsFetchingResults: l } = (0, c.a)();
         r.useEffect(() => {
             let r = b.subscribe(
-                m,
-                (r) => {
-                    (async () => {
-                        (n(), l(!0));
-                        try {
-                            let t = await (0, s.y)(r);
-                            e(_(t));
-                        } catch (e) {
-                            var o;
-                            t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
-                        } finally {
-                            l(!1);
-                        }
-                    })();
-                },
-                { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
-            );
-            return () => r();
+                    m,
+                    (r) => {
+                        (async () => {
+                            (n(), l(!0));
+                            try {
+                                let t = await (0, s.y)(r);
+                                e(_(t));
+                            } catch (e) {
+                                var o;
+                                t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
+                            } finally {
+                                l(!1);
+                            }
+                        })();
+                    },
+                    { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
+                ),
+                o = b.subscribe(
+                    (e) => e.hasFilters(),
+                    (e, t) => {
+                        !e && t && b.setState({ sort: h });
+                    }
+                ),
+                i = b.subscribe(
+                    (e) => ({
+                        itemTypeFilters: e.itemTypeFilters,
+                        colorFilters: e.colorFilters,
+                        themeFilters: e.themeFilters,
+                        orbEligible: e.orbEligible,
+                        sort: e.sort,
+                        searchQuery: e.searchQuery
+                    }),
+                    () => {
+                        b.setState({ queryPageOffset: 0 });
+                    }
+                );
+            return () => {
+                (r(), o(), i());
+            };
         }, [e, t, n, l]);
     };

@@ -184,7 +184,11 @@ function N(e) {
                         (0, r.jsxs)('div', {
                             className: I.alignedRightContent,
                             children: [
-                                H && (0, r.jsx)(j.Z, { handleTransition: f }),
+                                H &&
+                                    (0, r.jsx)(j.Z, {
+                                        handleTransition: f,
+                                        selectedTab: g
+                                    }),
                                 R &&
                                     (0, r.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',

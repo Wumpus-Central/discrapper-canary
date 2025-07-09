@@ -82,8 +82,8 @@ let w = (e) => {
             Y = l.useCallback((e, t) => {
                 (z(e), V(t));
             }, []),
-            { selectedTab: q, transitionState: K, transitionToTab: X } = (0, j.B)(A, n, t),
-            { handleScroll: Q } = (0, f.z)(A, o, q);
+            { selectedTab: q, transitionState: K, transitionToTab: Q } = (0, j.B)(A, n, t),
+            { handleScroll: X } = (0, f.z)(A, o, q);
         ((0, S.q3)(o, q, U, K, G),
             (0, S.EB)(q, c),
             (0, k.Z)(),
@@ -123,7 +123,7 @@ let w = (e) => {
                               children: (0, r.jsx)(u.Den, {
                                   className: R.shopScroll,
                                   ref: A,
-                                  onScroll: Q,
+                                  onScroll: X,
                                   children: (0, r.jsxs)('div', {
                                       className: i()(R.shopViewWrapper, {
                                           [R.visible]: K === B.f7.VISIBLE,
@@ -135,7 +135,7 @@ let w = (e) => {
                                               isFullScreen: t,
                                               isLayer: J,
                                               onClose: F,
-                                              handleTransition: X,
+                                              handleTransition: Q,
                                               selectedTab: q
                                           }),
                                           (0, r.jsx)(P.Z, {
@@ -143,7 +143,7 @@ let w = (e) => {
                                               isFullScreen: t,
                                               scrollerRef: A,
                                               refreshCategories: M,
-                                              transitionToTab: X,
+                                              transitionToTab: Q,
                                               transitionState: K,
                                               sortedCategories: H,
                                               updateAnalyticsState: Y

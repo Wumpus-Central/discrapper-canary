@@ -221,10 +221,15 @@ class v extends a.Z {
         return (0, u.Hg)();
     }
     getNoiseCancellationStats() {
-        return new Promise((e) => (0, d.zS)().getNoiseCancellationStats((t) => e(JSON.parse(t))));
+        return new Promise((e) => {
+            let t = (0, d.zS)();
+            if (null == t.getNoiseCancellationStats) return void e(null);
+            t.getNoiseCancellationStats((t) => e(JSON.parse(t)));
+        });
     }
     setNoiseCancellationEnableStats(e) {
-        (0, d.zS)().setNoiseCancellationEnableStats(e);
+        var t, n;
+        null == (t = (n = (0, d.zS)()).setNoiseCancellationEnableStats) || t.call(n, e);
     }
     setAudioInputDevice(e) {
         (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)

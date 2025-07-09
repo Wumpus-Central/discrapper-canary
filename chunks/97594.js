@@ -1,4 +1,4 @@
-(n.d(t, { default: () => _ }), n(388685));
+(n.d(t, { default: () => S }), n(388685));
 var a = n(255367),
     r = n(73800),
     o = n(120356),
@@ -7,17 +7,22 @@ var a = n(255367),
     l = n(481060),
     s = n(376641),
     u = n(714338),
+    d = n(607070),
     p = n(585483),
-    d = n(254109),
-    m = n(212459),
-    g = n(730606),
-    f = n(860153),
-    y = n(981631),
-    b = n(388032),
-    O = n(269045);
-function _(e) {
-    var { onClose: t, items: n, startingIndex: o, enabledContentHarmTypeFlags: _, shouldHideMediaOptions: h = !1, transitionState: S } = e,
-        v = (function (e, t) {
+    m = n(254109),
+    g = n(212459),
+    f = n(730606),
+    y = n(860153),
+    b = n(981631),
+    O = n(388032),
+    _ = n(269045);
+function h(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
+}
+function S(e) {
+    var { onClose: t, items: n, startingIndex: o, enabledContentHarmTypeFlags: S, shouldHideMediaOptions: v = !1, transitionState: j } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -36,28 +41,37 @@ function _(e) {
             }
             return r;
         })(e, ['onClose', 'items', 'startingIndex', 'enabledContentHarmTypeFlags', 'shouldHideMediaOptions', 'transitionState']);
-    let [j, C] = r.useState(null != o ? o : 0),
-        [T, E] = r.useState(!1),
-        P = r.useRef(null);
+    let [T, E] = r.useState(null != o ? o : 0),
+        [x, P] = r.useState(!1),
+        [M, w] = (0, l.q_F)(() => ({
+            scale: d.Z.useReducedMotion ? 1 : 0.9,
+            x: 0,
+            y: 0,
+            config: {
+                friction: 30,
+                tension: 300
+            }
+        })),
+        I = r.useRef(null);
     (r.useEffect(() => {
         if (null != t)
             return (
-                p.S.subscribe(y.CkL.MEDIA_MODAL_CLOSE, t),
+                p.S.subscribe(b.CkL.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    p.S.unsubscribe(y.CkL.MEDIA_MODAL_CLOSE, t);
+                    p.S.unsubscribe(b.CkL.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]),
         r.useEffect(() => {
             var e, t;
-            (S === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), S === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)));
+            (j === l.Dvm.ENTERING && h(M.scale, 1), j === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), j === l.Dvm.HIDDEN && (h(M.scale, 0.9), u.Z.disable(), u.Z.enableTemp(s.v)), j === l.Dvm.EXITING && h(M.scale, 0.9));
             let n = () => {
                     (u.Z.disable(), u.Z.enableTemp(s.P));
                 },
                 a = () => {
                     u.Z.disableTemp();
                 },
-                r = null == (t = P.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = I.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
                 null == r || r.addEventListener('focus', n),
                 null == r || r.addEventListener('blur', a),
@@ -65,21 +79,30 @@ function _(e) {
                     (null == r || r.removeEventListener('focus', n), null == r || r.removeEventListener('blur', a), u.Z.disableTemp());
                 }
             );
-        }, [S]));
-    let x = r.useCallback((e) => {
-            (C(e), (0, d.yg)(d.uG.SELECTED_ITEM_CHANGE));
+        }, [j, M]));
+    let D = r.useCallback((e) => {
+            (E(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE));
         }, []),
-        M = r.useMemo(
+        A = r.useMemo(
             () => ({
-                zoomed: T,
-                setZoomed: E,
-                entering: S === l.Dvm.ENTERING || null == S
+                scale: M.scale,
+                x: M.x,
+                y: M.y,
+                setScale(e, t) {
+                    h(M.scale, e, null == t ? void 0 : t.immediate);
+                },
+                setOffset(e, t, n) {
+                    (h(M.x, e, null == n ? void 0 : n.immediate), h(M.y, t, null == n ? void 0 : n.immediate));
+                },
+                zoomed: x,
+                setZoomed(e) {
+                    (P(e), h(M.scale, e ? 2.5 : 1), e || (h(M.x, 0), h(M.y, 0)));
+                }
             }),
-            [T, S]
-        ),
-        w = n[j];
+            [x, M]
+        );
     return (0, a.jsx)(l.f6W, {
-        theme: y.BRd.MIDNIGHT,
+        theme: b.BRd.MIDNIGHT,
         children: (e) => {
             var r, o;
             return (0, a.jsx)(
@@ -111,10 +134,10 @@ function _(e) {
                 })(
                     {
                         hideShadow: !0,
-                        className: i()(O.carouselModal, e),
-                        transitionState: S
+                        className: i()(_.carouselModal, e),
+                        transitionState: j
                     },
-                    v
+                    C
                 )),
                 (o = o =
                     {
@@ -122,26 +145,26 @@ function _(e) {
                         animation: c.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        'aria-label': b.intl.string(b.t.AMTX3t),
+                        'aria-label': O.intl.string(O.t.AMTX3t),
                         parentComponent: 'MediaViewerModal',
-                        children: (0, a.jsxs)(m.z.Provider, {
-                            value: M,
+                        children: (0, a.jsxs)(g.z.Provider, {
+                            value: A,
                             children: [
-                                (0, a.jsx)(f.Z, {
-                                    item: w,
-                                    hideMediaOptions: h,
+                                (0, a.jsx)(y.Z, {
+                                    item: n[T],
+                                    hideMediaOptions: v,
                                     onClose: t
                                 }),
                                 (0, a.jsx)('div', {
                                     style: { display: 'none' },
-                                    ref: P
+                                    ref: I
                                 }),
-                                (0, a.jsx)(g.ZP, {
+                                (0, a.jsx)(f.ZP, {
                                     items: n,
-                                    startIndex: j,
-                                    onIndexChange: x,
-                                    enabledContentHarmTypeFlags: _,
-                                    shouldHideMediaOptions: h
+                                    startIndex: T,
+                                    onIndexChange: D,
+                                    enabledContentHarmTypeFlags: S,
+                                    shouldHideMediaOptions: v
                                 })
                             ]
                         })

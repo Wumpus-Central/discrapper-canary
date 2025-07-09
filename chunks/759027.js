@@ -135,13 +135,13 @@ function y(e) {
             }
             T();
         },
-        z = (null == (t = b.GP[N.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
-        U = null == (a = N.metadata) ? void 0 : a.ended_at,
-        G = null != U ? new Date(U).toISOString().substring(0, 10) : '',
+        U = (null == (t = b.GP[N.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
+        z = null == (a = N.metadata) ? void 0 : a.ended_at,
+        G = null != z ? new Date(z).toISOString().substring(0, 10) : '',
         V = N.hasActiveTrial,
         H = (null == (l = N.metadata) ? void 0 : l.active_discount_id) != null;
     return (0, n.jsxs)('div', {
-        className: i()(f.card, z ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
+        className: i()(f.card, U ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
         children: [
             V &&
                 (0, n.jsx)(o.P3F, {

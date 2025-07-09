@@ -67,13 +67,14 @@ function er(e) {
     return (0, r.jsxs)('div', {
         className: en.partyStatusWrapper,
         children: [
-            (0, r.jsx)(Q.ZP, {
-                guildId: l,
-                users: u,
-                max: i > 0 ? Math.min(i, 8) : 8,
-                size: Q.u8.SIZE_16,
-                dimEmptyUsers: !0
-            }),
+            u.length > 0 &&
+                (0, r.jsx)(Q.ZP, {
+                    guildId: l,
+                    users: u,
+                    max: i > 0 ? Math.min(i, 8) : 8,
+                    size: Q.u8.SIZE_16,
+                    dimEmptyUsers: !0
+                }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 color: 'none',
