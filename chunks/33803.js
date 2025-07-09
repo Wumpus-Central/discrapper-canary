@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(825829),
     E = n(226192),
     y = n(36459),
-    C = n(336197),
-    x = n(359110),
+    x = n(336197),
+    C = n(359110),
     v = n(726033),
     O = n(496675),
     j = n(594174),
@@ -343,7 +343,7 @@ function et(e) {
         }, [o.id, el, en, s]),
         eh = i.useCallback(
             (e) => {
-                null != ea && null != et && (e.stopPropagation(), e.preventDefault(), (0, C.Z)(U.Z5c.CHANNEL(null == et ? void 0 : et.guild_id, null == et ? void 0 : et.id, ea)));
+                null != ea && null != et && (e.stopPropagation(), e.preventDefault(), (0, x.Z)(U.Z5c.CHANNEL(null == et ? void 0 : et.guild_id, null == et ? void 0 : et.id, ea)));
             },
             [et, ea]
         ),
@@ -355,7 +355,7 @@ function et(e) {
                         channelId: e,
                         messageId: o.id
                     }),
-                    (0, x.Kh)(e));
+                    (0, C.Kh)(e));
             },
             [o, et]
         ),
@@ -363,8 +363,8 @@ function et(e) {
             (0, y.Xx)(o.id, s, h.d.DELETE_USER_MESSAGE);
         }, [s, o.id]),
         ey = (0, B.L9)(Number(eo)),
-        eC = null != es,
-        ex = Q && null != ea && (null == ec || !ec.actions.hasOwnProperty(h.d.DELETE_USER_MESSAGE)),
+        ex = null != es,
+        eC = Q && null != ea && (null == ec || !ec.actions.hasOwnProperty(h.d.DELETE_USER_MESSAGE)),
         ev = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
         eO = null != ev;
     return (0, r.jsx)('div', {
@@ -476,7 +476,7 @@ function et(e) {
                                                     })
                                             ]
                                         }),
-                                        eC
+                                        ex
                                             ? (0, r.jsx)(q, {
                                                   children: (0, r.jsx)(m.Text, {
                                                       variant: 'text-xs/medium',
@@ -564,7 +564,7 @@ function et(e) {
                                         })
                                     })
                                 }),
-                                ex
+                                eC
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', { className: H.dot }),

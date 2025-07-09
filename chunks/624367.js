@@ -9,29 +9,27 @@ var i = n(100527),
     c = n(365415),
     u = n(50523);
 function d(e) {
-    let { applicationId: t, customId: n, referrerId: d, embedUrl: p, linkId: m } = e,
-        { analyticsLocations: f } = (0, l.ZP)(i.Z.ACTIVITY_BOOKMARK),
-        [_] = (0, s.Z)([t]),
-        g = null != _ && (0, a.ye)(_),
-        { data: h, error: b } = (0, c.h)(null == _ ? void 0 : _.id, m);
-    return null == _ || !1 === g
+    let { applicationId: t, customId: n, referrerId: d, linkId: p } = e,
+        { analyticsLocations: m } = (0, l.ZP)(i.Z.ACTIVITY_BOOKMARK),
+        [f] = (0, s.Z)([t]),
+        _ = null != f && (0, a.ye)(f),
+        { data: g, error: h } = (0, c.h)(null == f ? void 0 : f.id, p);
+    return null == f || !1 === _
         ? null
-        : null != m && null == b && null != h
+        : null != p && null == h && null != g
           ? (0, r.jsx)(l.Gt, {
-                value: f,
+                value: m,
                 children: (0, r.jsx)(u.b, {
-                    application: _,
+                    application: f,
                     customId: n,
-                    customLink: h,
-                    embedUrl: p,
+                    customLink: g,
                     referrerId: d
                 })
             })
           : (0, r.jsx)(l.Gt, {
-                value: f,
+                value: m,
                 children: (0, r.jsx)(o.O, {
-                    app: _,
-                    embedUrl: p,
+                    app: f,
                     linkType: o.U.ACTIVITY,
                     activityCustomId: n,
                     activityReferrerId: d

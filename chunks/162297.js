@@ -11,40 +11,36 @@ var r = n(255367),
     p = n(230171),
     m = n(433534);
 function f(e) {
-    let { applicationId: t, embedUrl: n } = e,
-        [l, o, s] = (0, a.Wu)([d.Z], () => [d.Z.getApplication(t), d.Z.isFetchingApplication(t), d.Z.didFetchingApplicationFail(t)], [t]);
+    let { applicationId: t } = e,
+        [n, l, o] = (0, a.Wu)([d.Z], () => [d.Z.getApplication(t), d.Z.isFetchingApplication(t), d.Z.didFetchingApplicationFail(t)], [t]);
     return (i.useEffect(() => {
-        null != l || o || s || u.ZP.fetchApplication(t);
-    }, [l, o, s, t]),
-    null != l &&
+        null != n || l || o || u.ZP.fetchApplication(t);
+    }, [n, l, o, t]),
+    null != n &&
         (0, m.Eb)({
-            customInstallUrl: l.customInstallUrl,
-            installParams: l.installParams,
-            integrationTypesConfig: l.integrationTypesConfig
+            customInstallUrl: n.customInstallUrl,
+            installParams: n.installParams,
+            integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, r.jsx)(_, {
-              application: l,
-              embedUrl: n
-          })
+        ? (0, r.jsx)(_, { application: n })
         : null;
 }
 function _(e) {
-    let { application: t, embedUrl: n } = e,
-        a = i.useCallback(() => {
+    let { application: t } = e,
+        n = i.useCallback(() => {
             (0, c.h)({
                 type: l.ImpressionTypes.VIEW,
                 name: l.ImpressionNames.APP_OAUTH2_LINK_EMBED,
                 properties: { application_id: t.id }
             });
         }, [t.id]),
-        { analyticsLocations: u } = (0, s.ZP)(o.Z.APP_OAUTH2_LINK_EMBED);
+        { analyticsLocations: a } = (0, s.ZP)(o.Z.APP_OAUTH2_LINK_EMBED);
     return (0, r.jsx)(s.Gt, {
-        value: u,
+        value: a,
         children: (0, r.jsx)(p.O, {
             app: t,
-            embedUrl: n,
             linkType: p.U.OAUTH,
-            onView: a
+            onView: n
         })
     });
 }

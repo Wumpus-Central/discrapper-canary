@@ -10,6 +10,7 @@ e.exports = {
     contentContainer: 'contentContainer__98ba8',
     contentAndCopyButtonWrapper: 'contentAndCopyButtonWrapper__98ba8',
     contentWrapper: 'contentWrapper__98ba8',
+    cursorPointer: 'cursorPointer__98ba8',
     contentWrapperClickable: 'contentWrapperClickable__98ba8',
     contentTitle: 'contentTitle__98ba8',
     img: 'img__98ba8',

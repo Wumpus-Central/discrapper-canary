@@ -17,8 +17,8 @@ var r,
     b = n(417363),
     E = n(941128),
     y = n(780570),
-    C = n(358085),
-    x = n(814225),
+    x = n(358085),
+    C = n(814225),
     v = n(346329),
     O = n(701560),
     j = n(981631),
@@ -116,7 +116,7 @@ class R extends (r = a.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let r = null != n ? w[n] : null;
-        return null != r ? r : null != t && t.type === j.vxO.UNINSTALLING ? 'uninstalling' : (0, C.isWeb)() ? 'play' : 'unsupported_os';
+        return null != r ? r : null != t && t.type === j.vxO.UNINSTALLING ? 'uninstalling' : (0, x.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: a, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
@@ -189,7 +189,7 @@ class R extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = x.en(e.sku);
+                    let t = C.en(e.sku);
                     return null != t ? I.intl.formatToPlainString(I.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );

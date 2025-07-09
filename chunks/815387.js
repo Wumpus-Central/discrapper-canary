@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(387188),
     E = n(825829),
     y = n(623624),
-    C = n(29887),
-    x = n(533694),
+    x = n(29887),
+    C = n(533694),
     v = n(345114),
     O = n(924301),
     j = n(225890),
@@ -71,8 +71,8 @@ var r = n(255367),
     eb = n(857640),
     eE = n(614972),
     ey = n(701181),
-    eC = n(29338),
-    ex = n(461135),
+    ex = n(29338),
+    eC = n(461135),
     ev = n(296571),
     eO = n(587737),
     ej = n(482239),
@@ -530,7 +530,7 @@ let eD = Object.freeze({
             var t;
             let { message: n, channel: i, compact: l } = e;
             return (null == (t = n.purchaseNotification) ? void 0 : t.type) === p.Eh.GUILD_PRODUCT
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(C.Z, {
                       message: n,
                       channel: i,
                       compact: l
@@ -549,7 +549,7 @@ let eD = Object.freeze({
                 o = (0, l.e7)([O.ZP], () => O.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(eC.Z, {
+                    (0, r.jsx)(ex.Z, {
                         message: t,
                         compact: i,
                         usernameHook: a
@@ -637,7 +637,7 @@ let eD = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 });
-            return (0, r.jsx)(ex.Z, {
+            return (0, r.jsx)(eC.Z, {
                 message: t,
                 compact: i,
                 usernameHook: l
@@ -704,9 +704,9 @@ let eD = Object.freeze({
                 compact: i
             });
         },
-        [eN.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: C.Cn,
-        [eN.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: C.Ue,
-        [eN.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: C.R6,
+        [eN.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: x.Cn,
+        [eN.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: x.Ue,
+        [eN.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: x.R6,
         [eN.uaV.HD_STREAMING_UPGRADED]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)($.Z, {

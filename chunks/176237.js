@@ -1,9 +1,9 @@
-t.d(n, {
+n.d(t, {
     $: () => a,
     D: () => r
 });
-var l = t(818083);
-let r = (0, t(427164).le)({
+var l = n(818083);
+let r = (0, n(427164).le)({
         name: '2025-06-apex-aa-evolving-tenure-badge-web',
         kind: 'user',
         defaultConfig: { value: 'blue' },

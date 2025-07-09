@@ -25,8 +25,8 @@ var r = n(255367),
     b = n(706454),
     E = n(314897),
     y = n(699516),
-    C = n(914010),
-    x = n(594174),
+    x = n(914010),
+    C = n(594174),
     v = n(768581),
     O = n(433534),
     j = n(506895),
@@ -42,8 +42,8 @@ function R(e) {
     let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
         { name: h, bot: b } = (t = (0, N.O)(t)),
         y = null == b ? void 0 : b.id,
-        C = (0, f.ye)(t),
-        x = v.ZP.getApplicationIconURL({
+        x = (0, f.ye)(t),
+        C = v.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
@@ -58,17 +58,17 @@ function R(e) {
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != y && C && H,
-        z = B && C,
+        V = null != y && x && H,
+        z = B && x,
         W = (0, A.G)(t),
         K = (0, A.z)(t),
         Y = i.useMemo(() => {
             let e = [];
             return (
-                C
+                x
                     ? (z &&
                           e.push({
-                              label: null == U ? w.intl.string(w.t.cnBQPD) : w.intl.string(w.t.VJlc0d),
+                              label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
                               trackingArea: T.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
@@ -101,14 +101,15 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, k, t.id, G, a, R, M, C, K, y]),
-        X = C ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(L, { app: t });
+        }, [z, V, U, F, k, t.id, G, a, R, M, x, K, y]),
+        X = x ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
         title: h,
         staticBannerSrc: O,
         videoBannerSrc: S,
+        onClickBanner: W,
         bannerAspectRatio: Z,
-        iconSrc: x,
+        iconSrc: C,
         embedUrl: n,
         info: X,
         actions: Y,
@@ -173,23 +174,23 @@ function L(e) {
 }
 function D(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: l } = t,
+        { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(
-            [C.Z],
+            [x.Z],
             () => {
                 var e;
-                return null != (e = C.Z.getGuildId()) ? e : void 0;
+                return null != (e = x.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         u = (0, h.N)(t.id),
         d = (0, o.Wu)(
-            [x.default, y.Z],
+            [C.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = x.default.getUser(n.author_id),
+                    let r = C.default.getUser(n.author_id),
                         i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
@@ -202,7 +203,7 @@ function D(e) {
                 return (0, r.jsx)(S.K, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: w.intl.string(w.t['IJa+4+'])
+                    activityText: w.intl.formatToPlainString(w.t['IJa+4+'], { count: d.length })
                 });
             if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
@@ -214,7 +215,7 @@ function D(e) {
                         w.intl.string(w.t.TsWCdX)
                     ]
                 });
-            let e = null != l ? w.intl.format(w.t.z8EAJS, { count: l }) : w.intl.string(w.t.RjceQU);
+            let e = l > 0 ? w.intl.format(w.t.z8EAJS, { count: l }) : w.intl.string(w.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(s.tBG, {

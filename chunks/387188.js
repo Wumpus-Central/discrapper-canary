@@ -1,6 +1,6 @@
 (n.d(t, {
-    e: () => C,
-    i: () => x
+    e: () => x,
+    i: () => C
 }),
     n(35282),
     n(388685));
@@ -28,7 +28,7 @@ function y(e) {
     }, [e]);
     return (0, s.e7)([_.ZP], () => (null == t ? null : _.ZP.getCustomEmojiById(t)));
 }
-function C(e) {
+function x(e) {
     let { message: t, className: n } = e,
         [l, o] = i.useState(!1),
         s = t.getChannelId(),
@@ -74,20 +74,20 @@ function C(e) {
               })
           });
 }
-function x(e) {
+function C(e) {
     var t;
     let { message: n, channel: l, compact: a, usernameHook: s } = e,
         [m, _] = i.useState(!1),
         E = (0, d.ZP)(n),
-        C = s(E),
-        x = y(n.content),
+        x = s(E),
+        C = y(n.content),
         v = i.useCallback(() => {
-            null != x &&
+            null != C &&
                 f.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
-                    plainText: ':'.concat(x.name, ':'),
+                    plainText: ':'.concat(C.name, ':'),
                     addSpace: !0
                 });
-        }, [x]);
+        }, [C]);
     return (0, r.jsx)(p.Z, {
         iconNode: (0, r.jsx)(o.EO4, {
             size: 'refresh_sm',
@@ -102,14 +102,14 @@ function x(e) {
             variant: 'text-md/normal',
             color: 'text-secondary',
             children:
-                null == x
+                null == C
                     ? h.intl.format(h.t.k6Jc9f, {
                           username: E.nick,
-                          usernameHook: C
+                          usernameHook: x
                       })
                     : h.intl.format(h.t.uoCHWV, {
                           username: E.nick,
-                          usernameHook: C,
+                          usernameHook: x,
                           emoji: (0, r.jsxs)(c.P3F, {
                               className: b.clickableEmoji,
                               tag: 'span',
@@ -118,10 +118,10 @@ function x(e) {
                               onMouseLeave: () => _(!1),
                               children: [
                                   (0, r.jsx)(u.Z, {
-                                      emojiName: x.name,
+                                      emojiName: C.name,
                                       size: 'default',
-                                      emojiId: x.id,
-                                      animated: x.animated,
+                                      emojiId: C.id,
+                                      animated: C.animated,
                                       isInteracting: m,
                                       channelId: l.id,
                                       messageId: n.id,
@@ -131,7 +131,7 @@ function x(e) {
                                       tag: 'span',
                                       variant: 'text-md/medium',
                                       color: 'text-primary',
-                                      children: ':'.concat(null != (t = x.originalName) ? t : x.name, ':')
+                                      children: ':'.concat(null != (t = C.originalName) ? t : C.name, ':')
                                   })
                               ]
                           })

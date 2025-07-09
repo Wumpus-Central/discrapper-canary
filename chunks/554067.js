@@ -14,15 +14,19 @@ function u(e) {
         l.useEffect(() => {
             let e = setTimeout(() => {
                 u(d);
-            }, 1000);
+            }, 250);
             return () => clearTimeout(e);
         }, [d, u]),
+        l.useEffect(() => {}, []),
         l.useEffect(() => {
             p(n);
         }, [n]),
         (0, r.jsx)(o.E1j, {
             onFocus: () => t(a.AW.CATALOG),
             className: c.searchBar,
+            onKeyDown: (e) => {
+                'Enter' === e.key && u(d);
+            },
             query: d,
             onChange: p,
             onClear: () => p(''),

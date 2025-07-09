@@ -35,11 +35,11 @@ let E = (e) => {
             },
             [d, n, E]
         ),
-        { enabled: C } = a.m.useExperiment({ location: 'ActivityInviteEmbed' }, { autoTrackExposure: !0 }),
-        x = b(d),
+        { enabled: x } = a.m.useExperiment({ location: 'ActivityInviteEmbed' }, { autoTrackExposure: !0 }),
+        C = b(d),
         { data: v } = (0, u.IX)(null == (t = d.application) ? void 0 : t.id),
-        O = null != v ? v : x;
-    return null != O && C
+        O = null != v ? v : C;
+    return null != O && x
         ? (0, r.jsx)(o.c, {
               app: O,
               channel: n,

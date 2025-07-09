@@ -72,8 +72,8 @@ let b = {
     },
     E = b,
     y = {},
-    C = null,
-    x = !1,
+    x = null,
+    C = !1,
     v = 86400000;
 var O = (((i = O || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
 let j = new Set(Object.values(O));
@@ -81,7 +81,7 @@ function I() {
     return null == E.lastFetched || Date.now() - E.lastFetched >= v;
 }
 function S() {
-    !x && (I() || null != E.surveyOverride) && ((x = !0), (0, s.wk)(E.surveyOverride, !0));
+    !C && (I() || null != E.surveyOverride) && ((C = !0), (0, s.wk)(E.surveyOverride, !0));
 }
 function T(e) {
     var t;
@@ -131,20 +131,20 @@ function T(e) {
 }
 function N(e) {
     let { survey: t } = e;
-    if (((x = !1), (E.lastFetched = Date.now()), null == E.hiddenSurveys && (E.hiddenSurveys = {}), null != t && null == E.hiddenSurveys[t.key])) {
+    if (((C = !1), (E.lastFetched = Date.now()), null == E.hiddenSurveys && (E.hiddenSurveys = {}), null != t && null == E.hiddenSurveys[t.key])) {
         if (!T(t)) return;
-        C = t;
+        x = t;
     }
 }
 function P() {
-    if (null != C && (T(C) || ((C = null), 0))) return !1;
+    if (null != x && (T(x) || ((x = null), 0))) return !1;
     let e = Object.values((y = null != y ? y : {}))[0];
     null != e && T(e)
         ? N({
               type: 'SURVEY_FETCHED',
               survey: e
           })
-        : null != C && (C = null);
+        : null != x && (x = null);
 }
 class A extends (r = a.ZP.PersistedStore) {
     initialize(e) {
@@ -154,7 +154,7 @@ class A extends (r = a.ZP.PersistedStore) {
         return E;
     }
     getCurrentSurvey() {
-        return I() ? null : C;
+        return I() ? null : x;
     }
     getSurveyOverride() {
         return E.surveyOverride;
@@ -185,7 +185,7 @@ let w = new A(o.Z, {
     SURVEY_FETCHED: N,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        ((E.hiddenSurveys[t] = !0), (C = null), (y = null != y ? y : {}), delete y[t]);
+        ((E.hiddenSurveys[t] = !0), (x = null), (y = null != y ? y : {}), delete y[t]);
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;

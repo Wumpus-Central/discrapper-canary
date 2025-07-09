@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(464891),
     E = n(507418),
     y = n(348238),
-    C = n(38267),
-    x = n(25015),
+    x = n(38267),
+    C = n(25015),
     v = n(438075),
     O = n(359110),
     j = n(6025),
@@ -100,7 +100,7 @@ function B(e) {
             showUsernamePopout: p,
             showAvatarPopout: m
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, C.Z)(e.id, k.d$),
+            let { popouts: n, setPopout: r } = (0, x.Z)(e.id, k.d$),
                 { usernameProfile: l, avatarProfile: a } = n,
                 o = (0, y.XO)(e, t, l, r);
             return {
@@ -176,7 +176,7 @@ function G(e) {
         h = I.NA.useSetting(),
         b = (0, a.e7)([N.Z], () => N.Z.isDeveloper),
         E = (0, f.A)((null != (l = _.editedTimestamp) ? l : _.timestamp).valueOf()),
-        { content: y, hasSpoilerEmbeds: C } = (0, x.Z)(_, {
+        { content: y, hasSpoilerEmbeds: x } = (0, C.Z)(_, {
             hideSimpleEmbedContent: g && h,
             isInteracting: !1,
             formatInline: !1,
@@ -209,7 +209,7 @@ function G(e) {
                                   channel: O,
                                   compact: !1
                               },
-                              hasSpoilerEmbeds: C,
+                              hasSpoilerEmbeds: x,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
