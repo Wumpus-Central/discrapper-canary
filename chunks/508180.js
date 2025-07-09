@@ -57,8 +57,8 @@ let h = () => {
                               o.u,
                               p(
                                   {
-                                      heading: f.intl.string(f.t.dLLxCw),
-                                      headerBody: f.intl.string(f.t['64lmt7']),
+                                      title: f.intl.string(f.t.dLLxCw),
+                                      subtitle: f.intl.string(f.t['64lmt7']),
                                       actions: [
                                           {
                                               text: f.intl.string(f.t.BddRzc),

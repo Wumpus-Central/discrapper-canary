@@ -1,11 +1,11 @@
-r.d(t, {
-    D: () => l,
-    E: () => o
+n.d(t, {
+    D: () => o,
+    E: () => a
 });
-var n,
-    i = r(818083),
-    l = 12633 == r.j ? (((n = {})[(n.CONTROL = 0)] = 'CONTROL'), (n[(n.TRANSFORMATION = 1)] = 'TRANSFORMATION'), (n[(n.NO_MOVEMENT = 2)] = 'NO_MOVEMENT'), n) : null;
-let a = (0, i.B)({
+var r,
+    l = n(818083),
+    o = (((r = {})[(r.CONTROL = 0)] = 'CONTROL'), (r[(r.TRANSFORMATION = 1)] = 'TRANSFORMATION'), (r[(r.NO_MOVEMENT = 2)] = 'NO_MOVEMENT'), r);
+let i = (0, l.B)({
         kind: 'user',
         id: '2024-03_shop_card_hover_animation',
         label: 'Shop card hover animation experiment',
@@ -23,4 +23,4 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (e) => a.useExperiment({ location: e });
+    a = (e) => i.useExperiment({ location: e });

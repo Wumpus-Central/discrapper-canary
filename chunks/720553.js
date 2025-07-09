@@ -10,15 +10,15 @@ var l = n(990547),
     d = n(626135),
     x = n(988158),
     m = n(981631),
-    h = n(388032),
-    u = n(946555);
+    u = n(388032),
+    h = n(946555);
 function p(t) {
     let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: f } = t,
         _ = (0, o.Dt)(),
         v = (0, c.q)('MaskedLinkModal'),
         {
-            protocol: j,
-            authorityPrefix: b,
+            protocol: b,
+            authorityPrefix: j,
             hostname: T,
             theRestOfTheUrl: M,
             shouldTrustUrl: y,
@@ -56,29 +56,29 @@ function p(t) {
                   size: 'md',
                   transitionState: f,
                   onClose: g,
-                  heading: h.intl.string(h.t['3w1QGh']),
-                  headerBody: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU),
+                  title: u.intl.string(u.t['3w1QGh']),
+                  subtitle: p ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU),
                   actions: [
                       {
-                          text: h.intl.string(h.t['/g10LC']),
+                          text: u.intl.string(u.t['/g10LC']),
                           onClick: E,
                           variant: 'secondary'
                       },
                       {
-                          text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
+                          text: p ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
                           onClick: X,
                           variant: 'primary'
                       }
                   ],
                   children: [
                       (0, a.jsxs)(r.Ttm, {
-                          className: u.linkCalloutContainer,
+                          className: h.linkCalloutContainer,
                           children: [
                               (0, a.jsxs)(r.Text, {
                                   tag: 'span',
                                   variant: p ? 'text-md/semibold' : 'text-md/normal',
                                   color: p ? 'text-default' : 'text-muted',
-                                  children: [j, b]
+                                  children: [b, j]
                               }),
                               (0, a.jsx)(r.Text, {
                                   tag: 'span',
@@ -95,13 +95,13 @@ function p(t) {
                           ]
                       }),
                       (0, a.jsx)(r.XZJ, {
-                          className: u.checkboxMana,
+                          className: h.checkboxMana,
                           type: r.XZJ.Types.INVERTED,
                           value: y,
                           onChange: (t, e) => D(e),
                           children: (0, a.jsx)(r.Text, {
                               variant: 'text-sm/normal',
-                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
+                              children: p ? u.intl.format(u.t['haA+X1'], { protocol: b.replace(':', '') }) : u.intl.format(u.t.ZgXDsL, { domain: T })
                           })
                       })
                   ]
@@ -117,22 +117,22 @@ function p(t) {
                               (0, a.jsx)(r.X6q, {
                                   id: _,
                                   variant: 'heading-xl/bold',
-                                  className: u.title,
-                                  children: h.intl.string(h.t['3w1QGh'])
+                                  className: h.title,
+                                  children: u.intl.string(u.t['3w1QGh'])
                               }),
                               (0, a.jsx)(r.Text, {
-                                  className: u.warningText,
+                                  className: h.warningText,
                                   variant: 'text-md/normal',
-                                  children: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU)
+                                  children: p ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU)
                               }),
                               (0, a.jsxs)(r.Ttm, {
-                                  className: u.linkCalloutContainer,
+                                  className: h.linkCalloutContainer,
                                   children: [
                                       (0, a.jsxs)(r.Text, {
                                           tag: 'span',
                                           variant: p ? 'text-md/semibold' : 'text-md/normal',
                                           color: p ? 'text-default' : 'text-muted',
-                                          children: [j, b]
+                                          children: [b, j]
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           tag: 'span',
@@ -149,13 +149,13 @@ function p(t) {
                                   ]
                               }),
                               (0, a.jsx)(r.XZJ, {
-                                  className: u.checkbox,
+                                  className: h.checkbox,
                                   type: r.XZJ.Types.INVERTED,
                                   value: y,
                                   onChange: (t, e) => D(e),
                                   children: (0, a.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
+                                      children: p ? u.intl.format(u.t['haA+X1'], { protocol: b.replace(':', '') }) : u.intl.format(u.t.ZgXDsL, { domain: T })
                                   })
                               })
                           ]
@@ -166,13 +166,13 @@ function p(t) {
                               children: [
                                   (0, a.jsx)(r.zxk, {
                                       variant: 'primary',
-                                      text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
+                                      text: p ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
                                       type: 'button',
                                       onClick: X
                                   }),
                                   (0, a.jsx)(r.zxk, {
                                       variant: 'secondary',
-                                      text: h.intl.string(h.t['/g10LC']),
+                                      text: u.intl.string(u.t['/g10LC']),
                                       type: 'button',
                                       onClick: E
                                   })

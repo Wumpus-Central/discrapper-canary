@@ -1,4 +1,4 @@
-(n.d(t, { i: () => e8 }), n(539854), n(388685));
+(n.d(t, { i: () => e6 }), n(539854), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(990547),
@@ -122,8 +122,8 @@ let eJ = () => {
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(R.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eK.intl.string(eK.t.y2b7CA) }) : null;
     },
     e3 = eD.Z,
-    e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: tl, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tp, isInputProfileCustom: tg, isGoreContentFilteringEnabled: th } = e;
+    e6 = (e) => {
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e6 = !1, shouldMergeGameSettings: e8, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: tl, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tp, isInputProfileCustom: tg, isGoreContentFilteringEnabled: th } = e;
         return Object.freeze({
             [eF.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -241,7 +241,7 @@ let eJ = () => {
                 label: eK.intl.string(eK.t.URyqtL),
                 ariaLabel: eK.intl.string(eK.t.URyqtL),
                 element: eL.Z,
-                predicate: () => e6
+                predicate: () => e8
             },
             [eF.s6.GAMES_MY_GAMES]: {
                 section: ez.oAB.GAMES,
@@ -559,9 +559,9 @@ let eJ = () => {
                 searchableTitles: [eK.intl.string(eK.t.z2jK6e)],
                 label: eK.intl.string(eK.t.z2jK6e),
                 ariaLabel: eK.intl.string(eK.t.z2jK6e),
-                icon: e8 ? (0, i.jsx)(O.Z, {}) : void 0,
+                icon: e6 ? (0, i.jsx)(O.Z, {}) : void 0,
                 element: C.Z,
-                predicate: () => !e6,
+                predicate: () => !e8,
                 url: ez.Z5c.SETTINGS('clips')
             },
             [eF.s6.RESTRICTED_USERS]: {
@@ -1505,23 +1505,23 @@ let eJ = () => {
                 label: eK.intl.string(eK.t.Cq98yM),
                 ariaLabel: eK.intl.string(eK.t.Cq98yM),
                 element: eo.Z,
-                predicate: () => !e6,
+                predicate: () => !e8,
                 url: ez.Z5c.SETTINGS('activity-privacy')
             },
             [eF.s6.ACTIVITY_PRIVACY_STATUS]: {
-                section: e6 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
+                section: e8 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eK.intl.string(eK.t['8ka8lp'])],
-                parent: e6 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
+                parent: e8 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
             },
             [eF.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-                section: e6 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
+                section: e8 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eK.intl.string(eK.t.VOszPD)],
-                parent: e6 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
+                parent: e8 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
             },
             [eF.s6.ACTIVITY_PRIVACY_TOS]: {
-                section: e6 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
+                section: e8 ? ez.oAB.GAMES : ez.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eF.CF],
-                parent: e6 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
+                parent: e8 ? eF.s6.GAMES_ACTIVITY_PRIVACY : eF.s6.ACTIVITY_PRIVACY
             },
             [eF.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY]: {
                 section: ez.oAB.ACTIVITY_PRIVACY,
@@ -1533,14 +1533,14 @@ let eJ = () => {
                 searchableTitles: [eK.intl.string(eK.t.AVDyEh)],
                 label: eK.intl.string(eK.t.AVDyEh),
                 element: e_.Z,
-                predicate: () => !e6 && (0, ek.Jw)()
+                predicate: () => !e8 && (0, ek.Jw)()
             },
             [eF.s6.OVERLAY]: {
                 section: ez.oAB.OVERLAY,
                 searchableTitles: [eK.intl.string(eK.t['9cb1U1']), eK.intl.string(eK.t.HcoRu7)],
                 label: eK.intl.string(eK.t['9cb1U1']),
                 element: eS.Z,
-                predicate: () => !e6 && V
+                predicate: () => !e8 && V
             },
             [eF.s6.CHANGELOG]: {
                 section: 'changelog',

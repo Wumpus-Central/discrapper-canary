@@ -22,7 +22,7 @@ var i = n(255367),
     D = n(981631),
     j = n(388032),
     _ = n(130883),
-    y = n(739788);
+    b = n(739788);
 function M(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function M(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -100,7 +100,7 @@ class A extends l.PureComponent {
             v = o.type === D.d4z.GUILD_ANNOUNCEMENT && (0, x.yE)(d.flags, D.iLy.CROSSPOSTED);
         (u &&
             (e = (0, i.jsx)(h.Z, {
-                className: y.spacingTop,
+                className: b.spacingTop,
                 children: j.intl.format(j.t.IxY7Ex, {})
             })),
             (0, S.vc)(d) &&
@@ -108,14 +108,14 @@ class A extends l.PureComponent {
                     value: l,
                     onChange: this.handleToggleReport,
                     hideBorder: !0,
-                    className: y.spacingTop,
+                    className: b.spacingTop,
                     children: j.intl.string(j.t.x0jzo6)
                 })));
         let N = v ? j.intl.string(j.t['2kHABQ']) : j.intl.string(j.t.AMvpS0),
             O = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
-                        className: y.message,
+                        className: b.message,
                         children: (0, i.jsx)(p.Z, {
                             channel: o,
                             message: d,
@@ -130,7 +130,7 @@ class A extends l.PureComponent {
                 children: [
                     (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/medium',
-                        className: y.spacing,
+                        className: b.spacing,
                         children: N
                     }),
                     O
@@ -142,7 +142,7 @@ class A extends l.PureComponent {
                 value: o.guild_id,
                 children: (0, i.jsxs)(
                     c.Y0X,
-                    I(b({ parentComponent: 'DeleteModal' }, E), {
+                    I(y({ parentComponent: 'DeleteModal' }, E), {
                         children: [
                             (0, i.jsx)(c.xBx, {
                                 separator: !1,
@@ -151,7 +151,7 @@ class A extends l.PureComponent {
                                     justify: 'space-between',
                                     children: [
                                         (0, i.jsx)(c.olH, {
-                                            className: y.closeButton,
+                                            className: b.closeButton,
                                             onClick: E.onClose
                                         }),
                                         (0, i.jsx)(c.X6q, {
@@ -188,8 +188,8 @@ class A extends l.PureComponent {
             value: o.guild_id,
             children: n
                 ? (0, i.jsx)(a.u, {
-                      heading: v ? j.intl.string(j.t.aIz1oa) : j.intl.string(j.t.MWMcg4),
-                      headerBody: N,
+                      title: v ? j.intl.string(j.t.aIz1oa) : j.intl.string(j.t.MWMcg4),
+                      subtitle: N,
                       actions: [
                           {
                               text: j.intl.string(j.t['ETE/oK']),
@@ -209,7 +209,7 @@ class A extends l.PureComponent {
                 : (0, i.jsx)(
                       c.ConfirmModal,
                       I(
-                          b(
+                          y(
                               {
                                   header: v ? j.intl.string(j.t.aIz1oa) : j.intl.string(j.t.MWMcg4),
                                   confirmText: j.intl.string(j.t.oyYWHB),
@@ -273,7 +273,7 @@ let C = {
                     children: (0, i.jsxs)(
                         c.ConfirmModal,
                         I(
-                            b(
+                            y(
                                 {
                                     header: j.intl.string(j.t.bKMaZW),
                                     confirmText: j.intl.string(j.t.rOQ5BQ),
@@ -287,11 +287,11 @@ let C = {
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-md/normal',
-                                        className: y.spacing,
+                                        className: b.spacing,
                                         children: l
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: y.message,
+                                        className: b.message,
                                         children: (0, i.jsx)(p.Z, {
                                             channel: e,
                                             message: t,
@@ -314,7 +314,7 @@ let C = {
                 children: (0, i.jsxs)(
                     c.ConfirmModal,
                     I(
-                        b(
+                        y(
                             {
                                 header: j.intl.string(j.t.CFF2vL),
                                 confirmText: j.intl.string(j.t.lAU5jI),
@@ -327,11 +327,11 @@ let C = {
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-md/normal',
-                                    className: y.spacing,
+                                    className: b.spacing,
                                     children: j.intl.string(j.t.NjEPp6)
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: s()(y.message, y.spacing),
+                                    className: s()(b.message, b.spacing),
                                     children: (0, i.jsx)(p.Z, {
                                         channel: e,
                                         message: t,
@@ -352,7 +352,7 @@ let C = {
         (0, c.h7j)((r) =>
             (0, i.jsx)(
                 A,
-                b(
+                y(
                     {
                         channel: e,
                         message: t,
@@ -369,7 +369,7 @@ let C = {
             (0, i.jsx)(
                 c.ConfirmModal,
                 I(
-                    b(
+                    y(
                         {
                             header: j.intl.string(j.t.aIz1oa),
                             confirmText: j.intl.string(j.t['cY+Ooa']),
@@ -382,7 +382,7 @@ let C = {
                     {
                         children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            className: y.spacing,
+                            className: b.spacing,
                             children: j.intl.string(j.t.grBcMz)
                         })
                     }

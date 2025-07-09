@@ -27,18 +27,18 @@ function i(t) {
 function r(t) {
     let { url: e, trustUrl: n, onConfirm: l, onCancel: r, onClose: s } = t,
         [o, c] = a.useState(!1),
-        { protocol: d, authorityPrefix: x, hostname: m, theRestOfTheUrl: h } = i(e),
-        u = a.useCallback(() => {
+        { protocol: d, authorityPrefix: x, hostname: m, theRestOfTheUrl: u } = i(e),
+        h = a.useCallback(() => {
             (o && n(e), null == s || s(), l());
         }, [e, o, n, l, s]);
     return {
         protocol: d,
         authorityPrefix: x,
         hostname: m,
-        theRestOfTheUrl: h,
+        theRestOfTheUrl: u,
         shouldTrustUrl: o,
         setShouldTrustUrl: c,
-        handleConfirm: u,
+        handleConfirm: h,
         handleCancel: a.useCallback(() => {
             (null == s || s(), r());
         }, [r, s])

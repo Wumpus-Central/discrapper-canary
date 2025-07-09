@@ -98,8 +98,8 @@ function g(e) {
               size: 'sm',
               gradientColor: 'blue',
               graphic: v,
-              heading: null != C ? C : y.intl.string(y.t.FpoiHR),
-              headerBody: null != O ? O : y.intl.string(y.t['/CidxM']),
+              title: null != C ? C : y.intl.string(y.t.FpoiHR),
+              subtitle: null != O ? O : y.intl.string(y.t['/CidxM']),
               children: _
           })
         : (0, r.jsx)(s.Y0X, {

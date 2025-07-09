@@ -1,119 +1,119 @@
-r.d(t, { Z: () => O });
-var n = r(255367),
-    i = r(73800),
-    l = r(979554),
-    a = r(755721),
-    o = r(481060),
-    s = r(906732),
-    c = r(333867),
-    u = r(626135),
-    d = r(381585),
-    p = r(884697),
-    v = r(228624),
-    b = r(410127),
-    f = r(67409),
-    m = r(981631),
-    h = r(474936),
-    g = r(388032),
-    y = r(846165);
+n.d(t, { Z: () => O });
+var r = n(255367),
+    l = n(73800),
+    o = n(979554),
+    i = n(755721),
+    a = n(481060),
+    s = n(906732),
+    c = n(333867),
+    u = n(626135),
+    d = n(381585),
+    p = n(884697),
+    g = n(228624),
+    f = n(410127),
+    h = n(67409),
+    b = n(981631),
+    m = n(474936),
+    _ = n(388032),
+    C = n(846165);
 let O = (e) => {
-    let { product: t, selectedVariantIndex: r, returnRef: O, onSuccess: _, tooltipDelay: j, color: x = a.Tt.BRAND } = e,
-        { analyticsLocations: P } = (0, s.ZP)(),
-        w = i.useRef(null),
-        C = (0, v.hv)('CollectiblesShopGiftButton'),
-        S = (0, d.sp)(),
-        I = (0, b.Z)();
+    let { product: t, selectedVariantIndex: n, returnRef: O, onSuccess: E, tooltipDelay: v, color: S = i.Tt.BRAND } = e,
+        { analyticsLocations: x } = (0, s.ZP)(),
+        y = l.useRef(null),
+        j = (0, g.hv)('CollectiblesShopGiftButton'),
+        T = (0, d.sp)(),
+        P = (0, f.Z)();
     return (0, p.x6)(t)
         ? null
-        : (0, n.jsx)(o.ua7, {
-              text: g.intl.string(g.t['JCFN//']),
-              delay: j,
+        : (0, r.jsx)(a.ua7, {
+              text: _.intl.string(_.t['JCFN//']),
+              delay: v,
               children: (e) => {
-                  var i, s;
-                  return (0, n.jsx)(
-                      a.zx,
-                      ((i = (function (e) {
+                  var l, s;
+                  return (0, r.jsx)(
+                      i.zx,
+                      ((l = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
                               ('function' == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       })
                                   )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      ((n = r[t]),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      ((r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: n,
+                                                    value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = n));
+                                              : (e[t] = r));
                                   }));
                           }
                           return e;
                       })({}, e)),
                       (s = s =
                           {
-                              buttonRef: w,
-                              className: y.giftButton,
-                              color: x,
-                              look: a.zx.Looks.FILLED,
-                              size: a.Ph.ICON,
-                              innerClassName: y.giftButtonInner,
-                              'aria-label': g.intl.string(g.t.PEjaCw),
+                              buttonRef: y,
+                              className: C.giftButton,
+                              color: S,
+                              look: i.zx.Looks.FILLED,
+                              size: i.Ph.ICON,
+                              innerClassName: C.giftButtonInner,
+                              'aria-label': _.intl.string(_.t.PEjaCw),
                               onClick: (e) => {
                                   (e.stopPropagation(),
-                                      u.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == S ? void 0 : S.sessionId,
+                                      u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                                           sku_id: t.skuId,
-                                          page_section: null == S ? void 0 : S.pageSection,
-                                          page_category: null == S ? void 0 : S.pageCategory,
-                                          tile_type: l.Z[t.type],
-                                          tile_position: String(null == S ? void 0 : S.tilePosition),
+                                          page_section: null == T ? void 0 : T.pageSection,
+                                          page_category: null == T ? void 0 : T.pageCategory,
+                                          tile_type: o.Z[t.type],
+                                          tile_position: String(null == T ? void 0 : T.tilePosition),
                                           cta_name: 'gift button',
-                                          page_type: I || 'home'
+                                          page_type: P || 'home'
                                       }),
                                       (0, c.Z)({
-                                          skuId: (0, f.S)({
+                                          skuId: (0, h.S)({
                                               product: t,
-                                              selectedVariantIndex: r
+                                              selectedVariantIndex: n
                                           }),
                                           isGift: !0,
-                                          giftingOrigin: h.Wt.SHOP_PAGE,
-                                          analyticsLocations: P,
+                                          giftingOrigin: m.Wt.SHOP_PAGE,
+                                          analyticsLocations: x,
                                           returnRef: O,
-                                          variantsReturnStyle: C,
+                                          variantsReturnStyle: j,
                                           onClose:
-                                              null != _
+                                              null != E
                                                   ? (e) => {
-                                                        e && _();
+                                                        e && E();
                                                     }
                                                   : void 0
                                       }));
                               },
-                              children: (0, n.jsx)(o.OgN, {
+                              children: (0, r.jsx)(a.OgN, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                           : (function (e, t) {
-                                var r = Object.keys(e);
+                                var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var n = Object.getOwnPropertySymbols(e);
-                                    r.push.apply(r, n);
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
                                 }
-                                return r;
+                                return n;
                             })(Object(s)).forEach(function (e) {
-                                Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
-                      i)
+                      l)
                   );
               }
           });

@@ -1,18 +1,18 @@
-(r.d(t, { f: () => l }), r(388685));
-var n = r(73800),
-    i = r(979554);
-let l = (e) => {
-    let [t, r] = (0, n.useState)(null);
+(n.d(t, { f: () => o }), n(388685));
+var r = n(73800),
+    l = n(979554);
+let o = (e) => {
+    let [t, n] = (0, r.useState)(null);
     return {
         previewingVariantIndex: t,
-        handleEntering: (0, n.useCallback)(
+        handleEntering: (0, r.useCallback)(
             (t) => {
-                (null == e ? void 0 : e.type) === i.Z.VARIANTS_GROUP && r(t);
+                (null == e ? void 0 : e.type) === l.Z.VARIANTS_GROUP && n(t);
             },
             [null == e ? void 0 : e.type]
         ),
-        handleLeaving: (0, n.useCallback)(() => {
-            (null == e ? void 0 : e.type) === i.Z.VARIANTS_GROUP && r(null);
+        handleLeaving: (0, r.useCallback)(() => {
+            (null == e ? void 0 : e.type) === l.Z.VARIANTS_GROUP && n(null);
         }, [null == e ? void 0 : e.type])
     };
 };

@@ -132,8 +132,8 @@ function P(e) {
               transitionState: n,
               onClose: P,
               graphic: N,
-              heading: S.intl.string(S.t['5CyJBQ']),
-              headerBody: S.intl.string(S.t.NRBYjo),
+              title: S.intl.string(S.t['5CyJBQ']),
+              subtitle: S.intl.string(S.t.NRBYjo),
               actions: [
                   {
                       variant: 'secondary',

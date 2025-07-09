@@ -79,8 +79,8 @@ function p(e, t) {
     return i;
 }
 function h(e) {
-    var { size: t, heading: n, headerBody: c, input: d, preview: p, actions: h, actionBarInput: m, children: g } = e,
-        E = _(e, ['size', 'heading', 'headerBody', 'input', 'preview', 'actions', 'actionBarInput', 'children']);
+    var { size: t, title: n, subtitle: c, input: d, preview: p, actions: h, actionBarInput: m, children: g } = e,
+        E = _(e, ['size', 'title', 'subtitle', 'input', 'preview', 'actions', 'actionBarInput', 'children']);
     let b = null != t ? t : null != d || null != g ? 'md' : 'sm';
     return (0, r.jsxs)(
         i.IX,
@@ -88,8 +88,8 @@ function h(e) {
             size: b,
             children: [
                 (0, r.jsx)(l.x, {
-                    heading: n,
-                    body: c
+                    title: n,
+                    subtitle: c
                 }),
                 (0, r.jsx)(o.f, {
                     controls: d,

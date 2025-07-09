@@ -175,10 +175,20 @@ function N(e) {
         b = (0, S.R)(),
         _ = null != (t = null == h ? void 0 : h.sessionId) ? t : '',
         { noCache: O, includeUnpublished: v } = (0, x.Z)(),
-        y = l.useMemo(() => {
+        y = l.useMemo(
+            () =>
+                n
+                    .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
+                    .filter((e) => {
+                        let { products: t } = e;
+                        return t.length > 0;
+                    }),
+            [n]
+        ),
+        j = l.useMemo(() => {
             let e = (d - 1) * T.kN;
-            return n.slice(e, e + T.kN);
-        }, [n, d]);
+            return y.slice(e, e + T.kN);
+        }, [y, d]);
     (l.useEffect(() => {
         (0, m.n)({
             sessionId: _,
@@ -191,7 +201,7 @@ function N(e) {
     }, []),
         l.useEffect(() => {
             b ||
-                0 === y.length ||
+                0 === j.length ||
                 (0, m.n)({
                     sessionId: _,
                     checkpoint: m.a.SHOP_RENDERED,
@@ -200,48 +210,42 @@ function N(e) {
                     unpublishedCategoriesShown: v,
                     cacheDisabled: O
                 });
-        }, [_, c, v, O, b, y.length]));
-    let j = l.useRef(null),
-        I = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
+        }, [_, c, v, O, b, j.length]));
+    let I = l.useRef(null),
+        k = (0, a.e7)([u.Z], () => u.Z.getLayers().includes(P.S9g.COLLECTIBLES_SHOP));
     (0, C.Kp)({
         isFetchingCategories: b,
-        isLayer: I,
-        initialItemCardRef: j
+        isLayer: k,
+        initialItemCardRef: I
     });
-    let k = (0, f.F)('CollectiblesBrowse');
+    let N = (0, f.F)('CollectiblesBrowse');
     return b
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)('div', {
-              className: i()(L.categories, { [L.categoriesNoFilter]: !k }),
+              className: i()(L.categories, { [L.categoriesNoFilter]: !N }),
               children: [
-                  y
-                      .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
-                      .filter((e) => {
-                          let { products: t } = e;
-                          return t.length > 0;
-                      })
-                      .map((e, t) =>
-                          (0, r.jsx)(
-                              'div',
-                              {
-                                  ref: (t) => o(e.skuId, t),
-                                  children: (0, r.jsx)(p.k0, {
-                                      newValue: { categoryPosition: t },
-                                      children: (0, r.jsx)(B, {
-                                          category: e,
-                                          initialItemCardRef: j,
-                                          isFullScreen: c
-                                      })
+                  j.map((e, t) =>
+                      (0, r.jsx)(
+                          'div',
+                          {
+                              ref: (t) => o(e.skuId, t),
+                              children: (0, r.jsx)(p.k0, {
+                                  newValue: { categoryPosition: t },
+                                  children: (0, r.jsx)(B, {
+                                      category: e,
+                                      initialItemCardRef: I,
+                                      isFullScreen: c
                                   })
-                              },
-                              e.skuId
-                          )
-                      ),
+                              })
+                          },
+                          e.skuId
+                      )
+                  ),
                   (0, r.jsx)('div', {
                       className: L.paginationContainer,
                       children: (0, r.jsx)(s.DsT, {
                           currentPage: d,
-                          totalCount: n.length,
+                          totalCount: y.length,
                           pageSize: T.kN,
                           onPageChange: g,
                           disablePaginationGap: !0

@@ -88,7 +88,7 @@ function p(e) {
     );
 }
 function h(e) {
-    let { gradientColor: t, graphic: n, heading: i, headingTextVariant: a, body: l, alignCenter: f = !1, leading: h, trailing: m } = e,
+    let { gradientColor: t, graphic: n, title: i, titleTextVariant: a, subtitle: l, alignCenter: f = !1, leading: h, trailing: m } = e,
         { headingId: g } = (0, u.v)(),
         E = null != t,
         b = f ? p : _,
