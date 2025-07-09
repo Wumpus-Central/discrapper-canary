@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(511004),
     d = n(598117),
     h = n(388032),
-    g = n(917093);
-function m(e) {
+    m = n(917093);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -258,10 +258,10 @@ let f = new o.Z('ImageEditor'),
                 ));
         }, [L]);
         return (0, r.jsxs)('div', {
-            className: g.imageEditor,
+            className: m.imageEditor,
             children: [
                 (0, r.jsxs)('div', {
-                    className: g.editingContainer,
+                    className: m.editingContainer,
                     children: [
                         (0, r.jsx)('img', {
                             onLoad: K,
@@ -271,14 +271,14 @@ let f = new o.Z('ImageEditor'),
                                     loading: !1
                                 });
                             },
-                            style: m(
+                            style: g(
                                 {
                                     opacity: +(null != D),
                                     transform: 'translate3d('.concat(x.current.x, 'px, ').concat(x.current.y, 'px, 0) rotate(').concat(w, 'deg)')
                                 },
                                 F()
                             ),
-                            className: g.image,
+                            className: m.image,
                             src: n,
                             crossOrigin: 'anonymous',
                             alt: h.intl.string(h.t.EYR1FR),
@@ -288,7 +288,7 @@ let f = new o.Z('ImageEditor'),
                         }),
                         !Z &&
                             (0, r.jsx)('div', {
-                                className: g.overlay,
+                                className: m.overlay,
                                 style: {
                                     opacity: +(null != D),
                                     width: v.width,
@@ -299,7 +299,7 @@ let f = new o.Z('ImageEditor'),
                 }),
                 Z
                     ? (0, r.jsx)('div', {
-                          className: g.animatedInfoContainer,
+                          className: m.animatedInfoContainer,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-muted',
@@ -307,7 +307,7 @@ let f = new o.Z('ImageEditor'),
                           })
                       })
                     : (0, r.jsxs)('div', {
-                          className: g.toolsContainer,
+                          className: m.toolsContainer,
                           children: [
                               (0, r.jsx)(s.ua7, {
                                   text: h.intl.string(h.t['oCs/+P']),
@@ -336,9 +336,9 @@ let f = new o.Z('ImageEditor'),
                                       return (0, r.jsx)(
                                           s.zxk,
                                           p(
-                                              m(
+                                              g(
                                                   {
-                                                      className: g.rotateButton,
+                                                      className: m.rotateButton,
                                                       look: s.zxk.Looks.BLANK,
                                                       size: s.PhG.NONE,
                                                       color: s.zxk.Colors.TRANSPARENT,
@@ -358,7 +358,7 @@ let f = new o.Z('ImageEditor'),
                                   }
                               }),
                               (0, r.jsxs)('div', {
-                                  className: g.zoomControls,
+                                  className: m.zoomControls,
                                   children: [
                                       (0, r.jsx)(s.BlJ, {
                                           color: s.TVs.colors.ICON_SECONDARY,
@@ -366,7 +366,7 @@ let f = new o.Z('ImageEditor'),
                                       }),
                                       null != z &&
                                           (0, r.jsx)(s.iRW, {
-                                              className: g.slider,
+                                              className: m.slider,
                                               initialValue: z,
                                               minValue: 1,
                                               maxValue: 4,
@@ -439,7 +439,7 @@ let O = (e, t, n) => {
         s = Math.floor(a < 1 ? d.eT * a : d.eT / a),
         o = a < 1 ? s : d.eT,
         c = a > 1 ? s : d.eT;
-    return p(m({}, e), {
+    return p(g({}, e), {
         cropDimensions: i,
         resizeHeight: o,
         resizeWidth: c

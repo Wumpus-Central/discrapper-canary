@@ -45,32 +45,34 @@ function C(e) {
                     m.TW.MESSAGE
                 );
         }, [s, d, t.id]);
-    return (0, r.jsx)(c.P3F, {
-        className: a()(n, b.ctaReactionButton),
-        onClick: p,
-        onMouseEnter: () => o(!0),
-        onMouseLeave: () => o(!1),
-        children: (0, r.jsx)(c.Text, {
-            variant: 'text-sm/semibold',
-            color: 'text-secondary',
-            className: b.ctaText,
-            children: h.intl.format(h.t.z5Rnl5, {
-                renderedEmoji:
-                    null == d
-                        ? null
-                        : (0, r.jsx)(u.Z, {
-                              emojiName: d.name,
-                              size: 'default',
-                              emojiId: d.id,
-                              animated: d.animated,
-                              isInteracting: l,
-                              channelId: s,
-                              messageId: t.id,
-                              className: b.ctaEmoji
-                          })
-            })
-        })
-    });
+    return null == d
+        ? null
+        : (0, r.jsx)(c.P3F, {
+              className: a()(n, b.ctaReactionButton),
+              onClick: p,
+              onMouseEnter: () => o(!0),
+              onMouseLeave: () => o(!1),
+              children: (0, r.jsx)(c.Text, {
+                  variant: 'text-sm/semibold',
+                  color: 'text-secondary',
+                  className: b.ctaText,
+                  children: h.intl.format(h.t.z5Rnl5, {
+                      renderedEmoji:
+                          null == d
+                              ? null
+                              : (0, r.jsx)(u.Z, {
+                                    emojiName: d.name,
+                                    size: 'default',
+                                    emojiId: d.id,
+                                    animated: d.animated,
+                                    isInteracting: l,
+                                    channelId: s,
+                                    messageId: t.id,
+                                    className: b.ctaEmoji
+                                })
+                  })
+              })
+          });
 }
 function x(e) {
     var t;
@@ -88,7 +90,7 @@ function x(e) {
         }, [x]);
     return (0, r.jsx)(p.Z, {
         iconNode: (0, r.jsx)(o.EO4, {
-            size: 'md',
+            size: 'refresh_sm',
             color: 'currentColor'
         }),
         iconContainerClassName: b.iconContainer,

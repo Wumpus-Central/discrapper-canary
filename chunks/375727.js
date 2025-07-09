@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(710845),
     d = n(430824),
     h = n(496675),
-    g = n(914010),
-    m = n(176354),
+    m = n(914010),
+    g = n(176354),
     p = n(598117),
     f = n(390620),
     v = n(903759),
@@ -24,8 +24,8 @@ let E = new u.Z('EmojiStudio'),
     I = (e) => {
         let { userImage: t, guildId: n } = e,
             [a, u] = l.useState(t),
-            I = (0, s.e7)([d.Z, g.Z, h.Z], () => {
-                let e = g.Z.getGuildId(),
+            I = (0, s.e7)([d.Z, m.Z, h.Z], () => {
+                let e = m.Z.getGuildId(),
                     t = d.Z.getGuild(e);
                 return h.Z.can(j.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
@@ -57,7 +57,7 @@ let E = new u.Z('EmojiStudio'),
                     }));
             }, [y, a, R, M]),
             U = l.useCallback((e) => {
-                P(e.length < 2 ? e : m.ZP.sanitizeEmojiName(e));
+                P(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
             }, []),
             W = l.useCallback(() => {
                 (T(null), u(null), L(null), P(''));
@@ -66,7 +66,7 @@ let E = new u.Z('EmojiStudio'),
             F = l.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: r } = e,
                     l = null;
-                (null != t && m.ZP.isDataTooBig(t) && (l = p.ze.TOO_BIG), T(null != r ? r : l), n < B.current || (null != t && (L(t), (B.current = n))));
+                (null != t && g.ZP.isDataTooBig(t) && (l = p.ze.TOO_BIG), T(null != r ? r : l), n < B.current || (null != t && (L(t), (B.current = n))));
             }, []),
             H = l.useCallback((e) => {
                 var t;
@@ -77,7 +77,7 @@ let E = new u.Z('EmojiStudio'),
                         let l = null != (r = null == e || null == (n = e.file) ? void 0 : n.name) ? r : '',
                             a = l.lastIndexOf('.'),
                             i = -1 === a ? l : l.substring(0, a);
-                        return m.ZP.sanitizeEmojiName(i);
+                        return g.ZP.sanitizeEmojiName(i);
                     }),
                     L(null != (t = null == e ? void 0 : e.data) ? t : null));
             }, []);
@@ -138,6 +138,12 @@ let E = new u.Z('EmojiStudio'),
                                             error: A,
                                             variant: 'text-xs/medium',
                                             color: 'text-feedback-warning'
+                                        }),
+                                    null == y &&
+                                        (0, r.jsx)(o.Text, {
+                                            variant: 'text-xs/medium',
+                                            color: 'text-tertiary',
+                                            children: O.intl.string(O.t['1pdw0N'])
                                         })
                                 ]
                             })

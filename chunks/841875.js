@@ -198,7 +198,10 @@ let _ = (e) => {
                                 o &&
                                 (0, r.jsx)('div', {
                                     className: b.checkIcon,
-                                    children: (0, r.jsx)(u.sV5, { color: u.TVs.colors.WHITE })
+                                    children: (0, r.jsx)(u.sV5, {
+                                        size: 'xs',
+                                        color: u.TVs.colors.WHITE
+                                    })
                                 })
                         },
                         t

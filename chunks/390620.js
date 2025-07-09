@@ -10,8 +10,8 @@ var l = n(120356),
     u = n(70956),
     d = n(388032),
     h = n(882714),
-    g = n(986449);
-let m = 6 * u.Z.Millis.SECOND;
+    m = n(986449);
+let g = 6 * u.Z.Millis.SECOND;
 function p(e) {
     let { emoji: t, guildId: n } = e,
         l = (0, i.e7)([c.Z], () => {
@@ -19,7 +19,7 @@ function p(e) {
             return null == (e = c.Z.getGuild(n)) ? void 0 : e.name;
         });
     return (0, r.jsxs)('div', {
-        className: a()(g.toast, h.toast),
+        className: a()(m.toast, h.toast),
         children: [
             (0, r.jsx)(o.Z, {
                 emojiId: t.id,
@@ -67,7 +67,7 @@ function f(e) {
                 emoji: t,
                 guildId: n
             }),
-            duration: m
+            duration: g
         })
     );
 }

@@ -32,8 +32,8 @@ async function i(e) {
     let { file: t, image: r, cropDimensions: i, cropOriginCoordinates: s, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
         {
             sourceX: h,
-            sourceY: g,
-            sourceWidth: m,
+            sourceY: m,
+            sourceWidth: g,
             sourceHeight: p
         } = (0, l.GS)({
             image: r,
@@ -70,8 +70,8 @@ async function i(e) {
             type: a.u.CROP_GIF_START,
             gif: new Uint8Array(f),
             x: 0 | h,
-            y: 0 | g,
-            width: 0 | m,
+            y: 0 | m,
+            width: 0 | g,
             height: 0 | p,
             imageRotation: 0 | c,
             resizeWidth: u,

@@ -483,7 +483,8 @@ let ei = i.memo(function (e) {
                                 hasSpoilerEmbeds: eU,
                                 handleContextMenu: e_,
                                 isInteracting: ew,
-                                isAutomodBlockedMessage: eK
+                                isAutomodBlockedMessage: eK,
+                                forceAddReactions: x.type === q.uaV.EMOJI_ADDED
                             }),
                             childrenButtons:
                                 ev || eE

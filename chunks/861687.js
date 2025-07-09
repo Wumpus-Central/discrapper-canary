@@ -986,7 +986,10 @@ class ev extends d.Z {
             p.Z.dispatch({
                 type: 'RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS',
                 context: this.context,
-                wants: e
+                wants: e,
+                channelId: this.channelId,
+                guildId: this.guildId,
+                userId: this.userId
             }),
             null == t || t.setRemoteVideoSinkWants(e));
     }
@@ -1455,8 +1458,6 @@ class ev extends d.Z {
             }),
             (this.context = i),
             (this._fetchAsyncResourcesPromise = x.Z.fetchAsyncResources()),
-            (this.logger = new b.Z('RTCConnection('.concat(this.trueServerId, ', ').concat(this.context, ')'))),
-            this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),
             (this.guildId = n),
@@ -1465,6 +1466,8 @@ class ev extends d.Z {
             (this.streamServerId = a),
             (this.streamChannelId = s),
             (this.parentMediaSessionId = l),
+            (this.logger = new b.Z('RTCConnection('.concat(this.trueServerId, ', ').concat(this.context, ')'))),
+            this.logger.enableNativeLogger(!0),
             (this._endpoint = null),
             (this.hostname = null),
             (this.port = null),

@@ -9,15 +9,15 @@ var r = n(255367),
     u = n(430824),
     d = n(496675),
     h = n(267642),
-    g = n(598117),
-    m = n(981631),
+    m = n(598117),
+    g = n(981631),
     p = n(388032),
     f = n(588687);
 let v = (e) => ({
         label: e.name,
         value: e.id
     }),
-    x = (e) => d.Z.can(m.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    x = (e) => d.Z.can(g.Plq.CREATE_GUILD_EXPRESSIONS, e),
     b = (e) => {
         let { onChange: t, selected: n, onError: d, labelledBy: b } = e,
             _ = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
@@ -80,8 +80,8 @@ let v = (e) => ({
             );
         return (
             l.useEffect(() => {
-                (N.length < 1
-                    ? d(g.ze.NO_PERMISSIONS)
+                N.length < 1
+                    ? d(m.ze.NO_PERMISSIONS)
                     : null != j &&
                         null != O &&
                         1 >
@@ -89,10 +89,9 @@ let v = (e) => ({
                                 let n = t.filter((t) => !(0, c.Kt)(t, e.id)).length;
                                 return (0, h.y4)(e) - n;
                             })(j, O)
-                      ? d(m.evJ.TOO_MANY_EMOJI)
-                      : d(null),
-                    null == n && t(N[0].value));
-            }, [N, t, d, n, j, O]),
+                      ? d(g.evJ.TOO_MANY_EMOJI)
+                      : d(null);
+            }, [N, d, j, O]),
             (0, r.jsx)(i.q4e, {
                 className: f.guildSelector,
                 onChange: t,
@@ -103,7 +102,7 @@ let v = (e) => ({
                 renderOptionValue: E,
                 value: n,
                 'aria-labelledby': b,
-                placeholder: N.length < 1 ? p.intl.string(p.t.jHpxws) : p.intl.string(p.t.XqMe3N),
+                placeholder: N.length < 1 ? p.intl.string(p.t.jHpxws) : p.intl.string(p.t['4mqeQE']),
                 isDisabled: N.length < 1
             })
         );

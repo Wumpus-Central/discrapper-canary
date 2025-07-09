@@ -1,54 +1,53 @@
 n.d(t, {
-    Q: () => s,
-    Z: () => o
+    Q: () => o,
+    Z: () => a
 });
 var r = n(255367);
 n(73800);
-var i = n(275726),
-    l = n(275344),
-    a = n(938353);
-function o(e) {
+var i = n(275344),
+    l = n(938353);
+function a(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: o = !1 },
-        hasSpoilerEmbeds: s,
-        handleContextMenu: c,
-        isInteracting: u,
-        isAutomodBlockedMessage: d,
-        isMessageSnapshot: p,
-        renderThreadAccessory: m,
-        renderSuppressEmbeds: f,
-        renderReactions: _,
-        forceAddReactions: g,
-        disableComponentInteractivity: h,
-        className: b
+        channelMessageProps: { message: t, channel: n, compact: a = !1 },
+        hasSpoilerEmbeds: o,
+        handleContextMenu: s,
+        isInteracting: c,
+        isAutomodBlockedMessage: u,
+        isMessageSnapshot: d,
+        renderThreadAccessory: p,
+        renderSuppressEmbeds: m,
+        renderReactions: f,
+        forceAddReactions: _,
+        disableComponentInteractivity: g,
+        className: h
     } = e;
-    return d
+    return u
         ? null
-        : (0, r.jsx)(l.Z, {
+        : (0, r.jsx)(i.Z, {
               message: t,
-              children: (0, r.jsx)(a.ZP, {
-                  className: b,
-                  isInteracting: u,
+              children: (0, r.jsx)(l.ZP, {
+                  className: h,
+                  isInteracting: c,
                   message: t,
                   channel: n,
-                  compact: o,
-                  hasSpoilerEmbeds: s,
-                  isMessageSnapshot: p,
-                  onMediaItemContextMenu: c,
-                  renderThreadAccessory: m,
-                  disableComponentInteractivity: h,
-                  renderSuppressEmbeds: f,
-                  forceAddReactions: g || t.type === i.u.EMOJI_ADDED,
-                  renderReactions: _
+                  compact: a,
+                  hasSpoilerEmbeds: o,
+                  isMessageSnapshot: d,
+                  onMediaItemContextMenu: s,
+                  renderThreadAccessory: p,
+                  disableComponentInteractivity: g,
+                  renderSuppressEmbeds: m,
+                  forceAddReactions: _,
+                  renderReactions: f
               })
           });
 }
-function s(e, t) {
-    let { message: n, channel: i, compact: l = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
-    return (0, r.jsx)(a.$p, {
+function o(e, t) {
+    let { message: n, channel: i, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
+    return (0, r.jsx)(l.$p, {
         message: n,
         channel: i,
-        compact: l,
+        compact: a,
         hasSpoilerEmbeds: t,
         renderThreadAccessory: o,
         disableReactionCreates: s,

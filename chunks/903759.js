@@ -26,7 +26,7 @@ let h = (e) => {
                         children: u.intl.format(u.t['Ks2/3d'], {
                             selectFileHook: (e, n) =>
                                 (0, r.jsx)(
-                                    g,
+                                    m,
                                     {
                                         translatedContent: e,
                                         setUserImage: t
@@ -49,7 +49,7 @@ let h = (e) => {
             })
         });
     },
-    g = (e) => {
+    m = (e) => {
         let { setUserImage: t, translatedContent: n } = e;
         return (0, r.jsx)(a.P3F, {
             focusProps: { within: !0 },
