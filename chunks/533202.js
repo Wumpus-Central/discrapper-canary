@@ -5,7 +5,7 @@ var i = n(255367),
     a = n(481060),
     r = n(458879),
     o = n(996453),
-    c = n(601964),
+    c = n(411198),
     d = n(99325),
     u = n(454432),
     m = n(492749),
@@ -34,7 +34,7 @@ function f(e) {
             if (!U) {
                 if (null == E || null == Z) return;
                 let t = await r.Z.createGuildFromTemplate(E, O, Z);
-                k((e = new c.ZP(t)));
+                k((e = (0, c.R)(t)));
             }
             null != e && (await d.bF(t, e.id, H, G), I(p.VX.CONFIRMATION));
         },

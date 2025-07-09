@@ -79,7 +79,12 @@ let _ = new f({
     OVERLAY_INITIALIZE: (e, t) => {
         let { guilds: n } = e;
         t.reset((e) => {
-            if (null != n) for (let t of n) e[t.id] = new i.ZP(t);
+            if (null != n)
+                for (let { properties: t, additionalFields: r } of n)
+                    e[t.id] = a.Ee(t, {
+                        joinedAt: null != r.joinedAt ? new Date(r.joinedAt) : null,
+                        premiumSubscriberCount: r.premiumSubscriberCount
+                    });
         });
     },
     CACHE_LOADED: (e, t) => {
@@ -101,7 +106,7 @@ let _ = new f({
     },
     GUILD_UPDATE: (e, t) => {
         let { guild: n } = e;
-        t.set(n.id, (e) => a.di(n, e));
+        t.set(n.id, (e) => a.R(n, e));
     },
     GUILD_DELETE: (e, t) => {
         let { guild: n } = e;

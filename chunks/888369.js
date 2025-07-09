@@ -229,7 +229,7 @@ function K(e) {
     let { length: n } = t;
     for (let e = 0; e < n; e++) {
         let n = t[e];
-        null != n && W(n.id);
+        null != n && W(n.properties.id);
     }
 }
 function z(e) {

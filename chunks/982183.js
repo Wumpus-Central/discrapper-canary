@@ -12,16 +12,18 @@ e.d(n, {
 var i,
     l,
     r,
-    d = e(601964),
-    a = e(70956),
+    d = e(70956),
+    a = e(411198),
     s = e(388032);
 let _ = 'notifications_inbox_guild_id',
     u = 88,
-    p = a.Z.Millis.WEEK,
-    o = new d.ZP({
+    p = d.Z.Millis.WEEK,
+    o = (0, a.yS)({
         id: _,
         name: s.intl.string(s.t.HcoRu7),
-        description: ''
+        description: '',
+        icon: void 0,
+        features: []
     });
 var E = 12633 == e.j ? (((i = {}).UNREAD = 'UNREAD'), (i.TODAY = 'TODAY'), (i.YESTERDAY = 'YESTERDAY'), (i.OLDER = 'OLDER'), i) : null,
     c = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,

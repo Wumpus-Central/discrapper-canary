@@ -19,13 +19,13 @@ var r = n(255367),
     y = n(835473),
     C = n(471445),
     x = n(111028),
-    v = n(601964),
-    O = n(592125),
-    j = n(430824),
-    I = n(496675),
-    S = n(594174),
-    T = n(626135),
-    N = n(768581),
+    v = n(592125),
+    O = n(430824),
+    j = n(496675),
+    I = n(594174),
+    S = n(626135),
+    T = n(768581),
+    N = n(411198),
     P = n(358595),
     A = n(981631),
     w = n(245335),
@@ -128,14 +128,14 @@ function M(e) {
     s()(h === w.Iq.EMBEDDED_APPLICATION && null != b, 'invalid application invite');
     let E = i.useCallback(() => {
             var e;
-            T.default.track(A.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
+            S.default.track(A.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
                 application_id: b.id,
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        C = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
+        C = (0, c.e7)([O.Z], () => (null != a.guild ? O.Z.getGuild(a.guild.id) : null), [a]),
         x = (0, y.Z)([b.id])[0],
-        N = (0, c.e7)([p.ZP], () => {
+        T = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == a ? void 0 : a.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) ? void 0 : e.applicationId) === b.id;
         }),
@@ -146,8 +146,8 @@ function M(e) {
                 return b.id === t;
             });
         }),
-        L = O.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
-        D = (0, c.e7)([I.Z], () => null != L && I.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, L), [L]),
+        L = v.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        D = (0, c.e7)([j.Z], () => null != L && j.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, L), [L]),
         { analyticsLocations: M } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
             [p.ZP],
@@ -159,7 +159,7 @@ function M(e) {
                     : [],
             [L, b.id]
         ),
-        F = (0, c.Wu)([S.default], () => U.map((e) => S.default.getUser(e)).filter((e) => null != e), [U]),
+        F = (0, c.Wu)([I.default], () => U.map((e) => I.default.getUser(e)).filter((e) => null != e), [U]),
         B = i.useCallback(() => {
             ((0, d.r$)(
                 {
@@ -180,10 +180,10 @@ function M(e) {
         H = null != C;
     if (null == C) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
-        C = new v.ZP(a.guild);
+        C = (0, N.Qs)(a.guild);
     }
-    let V = (H && !D) || (H && N);
-    return (H && N && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == x)
+    let V = (H && !D) || (H && T);
+    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == x)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: M,
@@ -210,12 +210,12 @@ function k(e) {
     let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: C, handleAcceptInvite: x, onView: v } = e,
         O = new URL(a.code, 'https://discord.gg').toString(),
         { bot: j, icon: I } = l,
-        S = N.ZP.getApplicationIconURL({
+        S = T.ZP.getApplicationIconURL({
             id: l.id,
             icon: I,
             bot: j
         }),
-        T = (0, E.G)(l),
+        N = (0, E.G)(l),
         P = (0, b.E)(l),
         A = o.length,
         w = i.useMemo(
@@ -291,7 +291,7 @@ function k(e) {
                     ]
                 }),
                 actions: w,
-                onClickContent: T,
+                onClickContent: N,
                 trackingConfig: {
                     id: l.id,
                     linkType: h.Un.ACTIVITY_INVITE,

@@ -11,7 +11,7 @@ var i = n(755721),
     a = n(372769),
     o = n(742593),
     c = n(390072),
-    u = n(601964),
+    u = n(411198),
     d = n(230224),
     h = n(388032),
     p = n(807048);
@@ -51,7 +51,7 @@ function g(e) {
 function m(e) {
     var t;
     let { invite: n } = e,
-        i = null != n.guild ? new u.ZP(n.guild) : null;
+        i = null != n.guild ? (0, u.Qs)(n.guild) : null;
     if (null == i) return null;
     let o = null != (t = i.description) ? t : '';
     return (0, r.jsxs)('div', {

@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => f }), n(388685));
-var l = n(255367),
-    i = n(73800),
-    r = n(120356),
-    a = n.n(r),
+(n.d(t, { Z: () => g }), n(388685));
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(755721),
     o = n(481060),
     c = n(231239),
@@ -10,13 +10,13 @@ var l = n(255367),
     u = n(313201),
     m = n(888592),
     h = n(981631),
-    x = n(388032),
-    _ = n(257356);
-let g = (0, u.hQ)(),
-    f = (e) => {
-        let { email: t, setStep: n, onBack: r, school: u, setSchool: f } = e,
-            [p, v] = i.useState(null),
-            [N, E] = i.useState(!1),
+    f = n(388032),
+    x = n(257356);
+let p = (0, u.hQ)(),
+    g = (e) => {
+        let { email: t, setStep: n, onBack: i, school: u, setSchool: g } = e,
+            [_, v] = l.useState(null),
+            [N, E] = l.useState(!1),
             S = async () => {
                 (v(null), E(!0));
                 try {
@@ -27,62 +27,62 @@ let g = (0, u.hQ)(),
                     E(!1);
                 }
             },
-            I = async (e) => {
+            y = async (e) => {
                 null != u && '' !== u && e.charCode === h.yXg.ENTER && (await S());
             };
-        return (0, l.jsxs)('div', {
-            className: _.container,
+        return (0, r.jsxs)('div', {
+            className: x.container,
             children: [
-                (0, l.jsx)('div', { className: _.__invalid_topImage }),
-                (0, l.jsx)(o.X6q, {
-                    className: a()(_.centerText, _.header),
+                (0, r.jsx)('div', { className: x.__invalid_topImage }),
+                (0, r.jsx)(o.X6q, {
+                    className: a()(x.centerText, x.header),
                     variant: 'heading-xl/semibold',
-                    children: x.intl.string(x.t['2FNWBA'])
+                    children: f.intl.string(f.t['2FNWBA'])
                 }),
-                (0, l.jsx)('div', {
-                    className: _.descriptionWidth,
-                    children: (0, l.jsx)(o.Text, {
-                        className: _.centerText,
+                (0, r.jsx)('div', {
+                    className: x.descriptionWidth,
+                    children: (0, r.jsx)(o.Text, {
+                        className: x.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: x.intl.string(x.t['/4y6o6'])
+                        children: f.intl.string(f.t['/4y6o6'])
                     })
                 }),
-                (0, l.jsxs)(o.xJW, {
-                    className: _.formItem,
+                (0, r.jsxs)(o.xJW, {
+                    className: x.formItem,
                     children: [
-                        (0, l.jsx)(o.vwX, {
-                            id: g,
-                            children: x.intl.string(x.t['L+AfJi'])
+                        (0, r.jsx)(o.vwX, {
+                            id: p,
+                            children: f.intl.string(f.t['L+AfJi'])
                         }),
-                        (0, l.jsx)(o.oil, {
-                            onKeyPress: I,
-                            placeholder: x.intl.string(x.t.Y1btJS),
+                        (0, r.jsx)(o.oil, {
+                            onKeyPress: y,
+                            placeholder: f.intl.string(f.t.Y1btJS),
                             onChange: (e) => {
-                                f(e);
+                                g(e);
                             },
-                            error: null == p ? void 0 : p.getAnyErrorMessage(),
-                            'aria-labelledby': g
+                            error: null == _ ? void 0 : _.getAnyErrorMessage(),
+                            'aria-labelledby': p
                         })
                     ]
                 }),
-                (0, l.jsxs)('div', {
-                    className: _.footer,
+                (0, r.jsxs)('div', {
+                    className: x.footer,
                     children: [
-                        (0, l.jsx)(s.zx, {
-                            className: _.backButton,
-                            onClick: r,
+                        (0, r.jsx)(s.zx, {
+                            className: x.backButton,
+                            onClick: i,
                             look: s.zx.Looks.LINK,
                             size: s.zx.Sizes.NONE,
                             color: s.zx.Colors.PRIMARY,
-                            children: x.intl.string(x.t['13/7kZ'])
+                            children: f.intl.string(f.t['13/7kZ'])
                         }),
-                        (0, l.jsx)('div', {
+                        (0, r.jsx)('div', {
                             'data-button-hoisted-classname-wrapper': !0,
-                            className: _.__invalid_submitButton,
-                            children: (0, l.jsx)(o.zxk, {
+                            className: x.__invalid_submitButton,
+                            children: (0, r.jsx)(o.zxk, {
                                 variant: 'primary',
-                                text: x.intl.string(x.t.PDsYAg),
+                                text: f.intl.string(f.t.PDsYAg),
                                 onClick: S,
                                 loading: N
                             })

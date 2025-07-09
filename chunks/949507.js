@@ -9,8 +9,8 @@ var a = n(120356),
     c = n(565138),
     d = n(372769),
     u = n(134432),
-    p = n(601964),
-    m = n(768581),
+    p = n(768581),
+    m = n(411198),
     h = n(981631),
     g = n(388032),
     f = n(754726),
@@ -19,11 +19,11 @@ var a = n(120356),
 function x(e) {
     let { guild: t, className: n, onClick: a } = e,
         x = (0, s.ZP)(),
-        v = new p.ZP({
+        v = (0, m.Jh)({
             name: t.name,
             icon: t.icon
         }),
-        C = m.ZP.getGuildDiscoverySplashURL({
+        C = p.ZP.getGuildDiscoverySplashURL({
             id: t.id,
             splash: t.discovery_splash,
             size: 192 * (0, u.x_)()
@@ -39,7 +39,7 @@ function x(e) {
                               return b;
                       }
                   })(x),
-        y = m.ZP.getGuildIconURL({
+        y = p.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 50

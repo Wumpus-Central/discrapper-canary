@@ -1,4 +1,4 @@
-(n.d(t, { t: () => j }), n(388685));
+(n.d(t, { t: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -11,26 +11,28 @@ var r = n(255367),
     h = n(243778),
     p = n(341907),
     f = n(819640),
-    g = n(507808),
-    m = n(822857),
-    b = n(479766),
-    _ = n(331663),
-    O = n(981631),
-    y = n(921944),
-    v = n(46140);
-let C = 'orb-announcement-modal-key';
-function j() {
+    g = n(594174),
+    m = n(74538),
+    b = n(507808),
+    _ = n(822857),
+    O = n(479766),
+    y = n(331663),
+    v = n(981631),
+    C = n(921944),
+    j = n(46140);
+let E = 'orb-announcement-modal-key';
+function S() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
-        { onboardingModalOpenedPrior: t } = (0, o.cj)([b.Z], () => ({ onboardingModalOpenedPrior: b.Z.onboardingModalOpenedPrior })),
-        { enabled: j } = (0, m.hl)({ location: 'virtual_currency_announcement_modal' }),
-        [E, S] = (0, h.US)(j ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ..._.b.useSelectedDismissibleContent),
-        x = (0, c.s9z)(c.JQI);
+        { onboardingModalOpenedPrior: t } = (0, o.cj)([O.Z], () => ({ onboardingModalOpenedPrior: O.Z.onboardingModalOpenedPrior })),
+        { enabled: S } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
+        [x, I] = (0, h.US)(S ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
+        P = (0, c.s9z)(c.JQI);
     i.useEffect(() => {
-        j &&
-            !t &&
-            E === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+        if (x !== a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL) return;
+        let i = g.default.getCurrentUser();
+        !(!S || t || (0, m.EO)(i)) &&
             (e ||
-                x ||
+                P ||
                 (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
                 (0, s.ZD)(
                     async () => {
@@ -38,28 +40,28 @@ function j() {
                         return function (t) {
                             let { onClose: n, transitionState: i } = t,
                                 o = async () => {
-                                    (await n(), S(y.L.USER_DISMISS));
+                                    (await n(), I(C.L.USER_DISMISS));
                                 };
                             return (0, r.jsx)(e, {
                                 transitionState: i,
                                 onClose: o,
                                 ctaOnClick: () => {
-                                    (S(y.L.TAKE_ACTION),
+                                    (I(C.L.TAKE_ACTION),
                                         (0, d.Q3)(a.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                            dismissAction: y.L.INDIRECT_ACTION,
-                                            groupName: y.R.VIRTUAL_CURRENCY_ONBOARDING
+                                            dismissAction: C.L.INDIRECT_ACTION,
+                                            groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
                                         (0, d.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                            dismissAction: y.L.INDIRECT_ACTION,
-                                            groupName: y.R.VIRTUAL_CURRENCY_ONBOARDING
+                                            dismissAction: C.L.INDIRECT_ACTION,
+                                            groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
-                                        (0, g.Y)({
-                                            pageType: O.ZY5.ORBS_ANNOUNCEMENT_MODAL,
-                                            sectionType: O.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                            ctaObject: O.qAy.CTA_TO_ORB_INTRO_QUEST
+                                        (0, b.Y)({
+                                            pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
+                                            sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
+                                            ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST
                                         }),
                                         (0, p.navigateToQuestHome)({
-                                            questId: v.V6,
+                                            questId: j.V6,
                                             fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
                                         }),
                                         n());
@@ -68,11 +70,11 @@ function j() {
                         };
                     },
                     {
-                        modalKey: C,
+                        modalKey: E,
                         onCloseRequest: () => {
-                            (S(y.L.USER_DISMISS), (0, c.Mr3)(C));
+                            (I(C.L.USER_DISMISS), (0, c.Mr3)(E));
                         }
                     }
                 )));
-    }, [E, j, t, S, e, x]);
+    }, [x, S, t, I, e, P]);
 }

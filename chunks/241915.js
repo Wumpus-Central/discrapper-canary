@@ -319,7 +319,7 @@ let A = (e) => {
                     null == t
                         ? null
                         : n.map((e) => {
-                              if (e.id !== t.id && e.component !== f.NYg.ACTIVITY && e.component !== f.NYg.FRAME) return null;
+                              if (e.id !== t.id && e.component !== f.NYg.EMBED_IFRAME) return null;
                               let n = 'string' == typeof e.component ? _[e.component] : e.component;
                               return (0, i.jsx)(n, m({ width: r }, e.props), e.id);
                           }),
@@ -331,8 +331,7 @@ let A = (e) => {
             T = a.useCallback(() => {
                 O(!1);
             }, []),
-            A = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
-            N = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
+            A = a.useMemo(() => n.some((e) => e.component === f.NYg.EMBED_IFRAME), [n]);
         return null == t
             ? (0, i.jsx)('div', { className: p.pictureInPicture })
             : (0, i.jsx)('div', {
@@ -355,7 +354,7 @@ let A = (e) => {
                       edgeOffsetLeft: y.left,
                       edgeOffsetRight: y.top,
                       roundCorners: g,
-                      resizeConfig: A || N ? void 0 : E,
+                      resizeConfig: A ? void 0 : E,
                       children: v
                   })
               });

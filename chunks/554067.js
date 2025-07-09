@@ -1,20 +1,32 @@
-n.d(t, { Z: () => c });
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    o = n(501431),
-    i = n(215023),
-    a = n(388032),
-    s = n(234209);
-function c(e) {
+(n.d(t, { Z: () => u }), n(388685));
+var r = n(255367),
+    l = n(73800),
+    o = n(481060),
+    i = n(501431),
+    a = n(215023),
+    s = n(388032),
+    c = n(234209);
+function u(e) {
     let { handleTransition: t } = e,
-        { searchQuery: n, onSetSearchQuery: c } = (0, o.S)();
-    return (0, r.jsx)(l.E1j, {
-        onFocus: () => t(i.AW.CATALOG),
-        className: s.searchBar,
-        query: n,
-        onChange: c,
-        onClear: () => c(''),
-        placeholder: a.intl.string(a.t['hIt/Nj'])
-    });
+        { searchQuery: n, onSetSearchQuery: u } = (0, i.S)(),
+        [d, p] = l.useState('');
+    return (
+        l.useEffect(() => {
+            let e = setTimeout(() => {
+                u(d);
+            }, 1000);
+            return () => clearTimeout(e);
+        }, [d, u]),
+        l.useEffect(() => {
+            p(n);
+        }, [n]),
+        (0, r.jsx)(o.E1j, {
+            onFocus: () => t(a.AW.CATALOG),
+            className: c.searchBar,
+            query: d,
+            onChange: p,
+            onClear: () => p(''),
+            placeholder: s.intl.string(s.t['hIt/Nj'])
+        })
+    );
 }

@@ -15,9 +15,9 @@ var i = n(255367),
     _ = n(372769),
     E = n(955415),
     h = n(922482),
-    I = n(601964),
-    p = n(592125),
-    C = n(430824),
+    I = n(592125),
+    p = n(430824),
+    C = n(411198),
     T = n(15274),
     g = n(924301),
     O = n(725436),
@@ -36,7 +36,7 @@ let U = (e, t) => (n) => {
         (n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n));
     },
     M = (e, t) => (n) => {
-        let i = p.Z.getChannel(e.channel_id);
+        let i = I.Z.getChannel(e.channel_id);
         null != i && (n.stopPropagation(), (0, h.Cq)(i), null == t || t(n));
     },
     L = (e, t) => {
@@ -53,15 +53,16 @@ let U = (e, t) => (n) => {
         var t;
         let { guild: n, guildScheduledEvent: l, channel: o, isMember: a } = e,
             u = (0, s.e7)(
-                [C.Z],
+                [p.Z],
                 () => {
-                    var e;
-                    return null == n ? null : null != (e = C.Z.getGuild(n.id)) ? e : new I.ZP(n);
+                    if (null == n) return null;
+                    let e = p.Z.getGuild(n.id);
+                    return null != e ? e : (0, C.lM)(n) ? n : (0, C.Qs)(n);
                 },
                 [n]
             ),
             h = (0, P.u)(l, o),
-            p = r.useCallback(
+            I = r.useCallback(
                 (e) => {
                     a && null != l && (e.stopPropagation(), (0, d.Bk)(l));
                 },
@@ -95,7 +96,7 @@ let U = (e, t) => (n) => {
             children: [
                 (0, i.jsx)(E.Z.Icon, {
                     guild: u,
-                    onClick: p
+                    onClick: I
                 }),
                 (0, i.jsxs)('div', {
                     className: v.verticalContainer,
@@ -112,7 +113,7 @@ let U = (e, t) => (n) => {
                                 }),
                                 (0, i.jsx)(c.P3F, {
                                     className: v.guildNameClickable,
-                                    onClick: p,
+                                    onClick: I,
                                     children: (0, i.jsx)(c.X6q, {
                                         className: a ? v.guildNameLinkable : v.guildName,
                                         variant: 'text-sm/medium',

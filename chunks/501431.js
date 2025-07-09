@@ -120,10 +120,11 @@ let g = {
                     e((e) => u({}, e, t));
                 },
                 onSetSearchQuery: (t) => {
+                    let n = '' === t ? h : f;
                     e((e) =>
                         d(u({}, e), {
                             searchQuery: t,
-                            sort: f
+                            sort: n
                         })
                     );
                 },
@@ -181,34 +182,24 @@ let g = {
     C = () => {
         let { onSetResponse: e, setSearchError: t, clear: n, setIsFetchingResults: l } = (0, c.a)();
         r.useEffect(() => {
-            let r = null,
-                o = b.subscribe(
-                    m,
-                    (o) => {
-                        let i = async () => {
-                            (n(), l(!0));
-                            try {
-                                let t = await (0, s.y)(o);
-                                e(_(t));
-                            } catch (e) {
-                                var r;
-                                t(null != (r = null == e ? void 0 : e.message) ? r : 'Unknown error');
-                            } finally {
-                                l(!1);
-                            }
-                        };
-                        (null != r && clearTimeout(r),
-                            (r = setTimeout(
-                                async () => {
-                                    (await i(), (r = null));
-                                },
-                                200 * (null != r)
-                            )));
-                    },
-                    { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
-                );
-            return () => {
-                o();
-            };
+            let r = b.subscribe(
+                m,
+                (r) => {
+                    (async () => {
+                        (n(), l(!0));
+                        try {
+                            let t = await (0, s.y)(r);
+                            e(_(t));
+                        } catch (e) {
+                            var o;
+                            t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
+                        } finally {
+                            l(!1);
+                        }
+                    })();
+                },
+                { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }
+            );
+            return () => r();
         }, [e, t, n, l]);
     };

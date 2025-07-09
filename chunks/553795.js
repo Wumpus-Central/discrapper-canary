@@ -5,7 +5,7 @@ var r,
     o = n(457330),
     s = n(726542),
     l = n(368111),
-    c = n(601964);
+    c = n(411198);
 function u(e, t, n) {
     return (
         t in e
@@ -73,7 +73,7 @@ function I(e) {
     v(e.connectedAccounts.map((e) => new l.Z(e)));
 }
 function T(e) {
-    e.local && null != e.accounts ? v(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : o.Z.fetch();
+    e.local && null != e.accounts ? v(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: (0, c.yS)(_(d({}, e.guild), { features: [] })) })) })))) : o.Z.fetch();
 }
 function S(e) {
     E[e.integrationId] = e.joining;

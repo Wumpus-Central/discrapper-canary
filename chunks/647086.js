@@ -2,10 +2,10 @@ n.d(t, {
     _: () => a,
     g: () => o
 });
-var r = n(601964),
+var r = n(411198),
     i = n(981631);
 let a = '373',
-    o = new r.ZP({
+    o = (0, r.Jh)({
         id: a,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',

@@ -30,8 +30,8 @@ var i = t(255367),
     R = t(379164),
     Z = t(590965),
     z = t(981631),
-    D = t(474936),
-    M = t(388032),
+    M = t(474936),
+    D = t(388032),
     k = t(911042),
     O = t(20493);
 function U() {
@@ -39,7 +39,7 @@ function U() {
     return (
         l.useEffect(() => {
             T.default.track(z.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: D.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                type: M.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: z.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: n
             });
@@ -63,11 +63,11 @@ function U() {
                 }),
                 (0, i.jsx)('span', {
                     className: k.experimentUpsellText,
-                    children: M.intl.string(M.t['4/W4Pz'])
+                    children: D.intl.string(D.t['4/W4Pz'])
                 }),
                 (0, i.jsx)('span', {
                     className: k.experimentGetNitro,
-                    children: M.intl.string(M.t.b6KOkJ)
+                    children: D.intl.string(D.t.b6KOkJ)
                 })
             ]
         })
@@ -109,17 +109,17 @@ function F(e) {
                         id: t,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: M.intl.string(M.t.u9zxnZ)
+                        children: D.intl.string(D.t.u9zxnZ)
                     }),
                     (0, i.jsx)('div', {
                         className: k.errorBody,
-                        children: M.intl.string(M.t.FWkU6O)
+                        children: D.intl.string(D.t.FWkU6O)
                     }),
                     (0, i.jsx)(p.zx, {
                         size: p.zx.Sizes.LARGE,
                         onClick: () => R.Z.close(),
                         color: p.zx.Colors.BRAND,
-                        children: M.intl.string(M.t.wcqOoK)
+                        children: D.intl.string(D.t.wcqOoK)
                     })
                 ]
             })
@@ -138,7 +138,7 @@ function G(e) {
         return null == (e = S.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
     let C = (0, o.e7)([S.default], () => S.default.getCurrentUser()),
-        { invite: A, error: D, submitting: y } = (0, o.cj)([Z.Z], () => Z.Z.getProps());
+        { invite: A, error: M, submitting: y } = (0, o.cj)([Z.Z], () => Z.Z.getProps());
     l.useEffect(() => {
         if (null != A && null != A.guild) {
             var e;
@@ -158,8 +158,8 @@ function G(e) {
         null != A && R.Z.acceptInvite(A);
     }
     let { guild: w, channel: K, inviter: Y, target_application: H } = A,
-        X = null != w,
-        Q = null != A.stage_instance,
+        Q = null != w,
+        X = null != A.stage_instance,
         q = null == A.guild && null == A.channel && null != A.inviter;
     if (null != H) ((t = null == w ? void 0 : w.name), (a = j.ZP.createFromServer(H).getCoverImageURL(1024)));
     else if (null != w)
@@ -171,7 +171,7 @@ function G(e) {
     else if (((null == (t = K.name) || '' === t) && null != Y && (t = Y.username), null == t)) throw Error('no name for group DM invite');
     let J = (0, v.yU)();
     return (
-        (r = Q ? M.intl.string(M.t['5UKyUl']) : f ? M.intl.format(M.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: G }) }) : q ? M.intl.string(M.t['e/6Ogo']) : M.intl.format(M.t.QD7BDA, { guildName: t })),
+        (r = X ? D.intl.string(D.t['5UKyUl']) : f ? D.intl.format(D.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: G }) }) : q ? D.intl.string(D.t['e/6Ogo']) : D.intl.format(D.t.QD7BDA, { guildName: t })),
         (0, i.jsx)(_.Gt, {
             value: W,
             children: (0, i.jsxs)(c.Y0X, {
@@ -199,11 +199,11 @@ function G(e) {
                                     id: V,
                                     children: (0, i.jsx)(u.Z, {
                                         invite: A,
-                                        disableUser: X,
-                                        error: D
+                                        disableUser: Q,
+                                        error: M
                                     })
                                 }),
-                                Q && null != w
+                                X && null != w
                                     ? (0, i.jsx)('div', {
                                           className: k.stage,
                                           children: (0, i.jsx)(x.Z, {
@@ -219,7 +219,7 @@ function G(e) {
                                         J ? (0, i.jsx)(U, {}) : null,
                                         null == H
                                             ? (0, i.jsx)(c.ua7, {
-                                                  text: J ? M.intl.string(M.t.iLyuDA) : null,
+                                                  text: J ? D.intl.string(D.t.iLyuDA) : null,
                                                   position: 'bottom',
                                                   children: (e) => {
                                                       let { onMouseEnter: n, onMouseLeave: t } = e;
@@ -228,11 +228,11 @@ function G(e) {
                                                           onClick: B,
                                                           submitting: y,
                                                           disabled: J,
-                                                          color: Q ? p.zx.Colors.GREEN : p.zx.Colors.BRAND,
+                                                          color: X ? p.zx.Colors.GREEN : p.zx.Colors.BRAND,
                                                           onMouseEnter: n,
                                                           onMouseLeave: t,
                                                           children: J
-                                                              ? M.intl.string(M.t.ZNCziI)
+                                                              ? D.intl.string(D.t.ZNCziI)
                                                               : (0, i.jsxs)('div', {
                                                                     className: k.acceptAs,
                                                                     children: [
@@ -259,14 +259,14 @@ function G(e) {
                                                           size: p.zx.Sizes.LARGE,
                                                           onClick: B,
                                                           submitting: y,
-                                                          children: M.intl.string(M.t.RscU7O)
+                                                          children: D.intl.string(D.t.RscU7O)
                                                       }),
                                                       (0, i.jsx)(p.zx, {
                                                           color: p.zx.Colors.PRIMARY,
                                                           size: p.zx.Sizes.LARGE,
                                                           onClick: B,
                                                           submitting: y,
-                                                          children: M.intl.string(M.t.eylRaW)
+                                                          children: D.intl.string(D.t.eylRaW)
                                                       })
                                                   ]
                                               }),
@@ -285,7 +285,7 @@ function G(e) {
                                                         R.Z.close());
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
-                                                children: M.intl.string(M.t.ndsK4e)
+                                                children: D.intl.string(D.t.ndsK4e)
                                             })
                                         })
                                     ]

@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => p }), n(388685));
-var l = n(255367),
-    i = n(73800),
-    r = n(120356),
-    a = n.n(r),
+(n.d(t, { Z: () => _ }), n(388685));
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(755721),
     o = n(481060),
     c = n(231239),
@@ -10,106 +10,106 @@ var l = n(255367),
     u = n(313201),
     m = n(592125),
     h = n(888592),
-    x = n(981631),
-    _ = n(388032),
-    g = n(167150);
-let f = (0, u.hQ)(),
-    p = (e) => {
-        let { setStep: t, setGuildsInfo: n, email: r, setEmail: u, setGuildId: p, invite: v, onClose: N, isNUXFlow: E } = e,
-            [S, I] = i.useState(null),
-            [j, y] = i.useState(!1),
-            C = async (e) => {
-                (e.preventDefault(), I(null), y(!0));
+    f = n(981631),
+    x = n(388032),
+    p = n(167150);
+let g = (0, u.hQ)(),
+    _ = (e) => {
+        let { setStep: t, setGuildsInfo: n, email: i, setEmail: u, setGuildId: _, invite: v, onClose: N, isNUXFlow: E } = e,
+            [S, y] = l.useState(null),
+            [j, I] = l.useState(!1),
+            b = async (e) => {
+                (e.preventDefault(), y(null), I(!0));
                 try {
-                    var l, i, a, s, o;
-                    let e = null != (o = null != (s = null == v || null == (l = v.guild) ? void 0 : l.id) ? s : null == (i = m.Z.getChannel(null == v || null == (a = v.channel) ? void 0 : a.id)) ? void 0 : i.getGuildId()) ? o : void 0;
+                    var r, l, a, s, o;
+                    let e = null != (o = null != (s = null == v || null == (r = v.guild) ? void 0 : r.id) ? s : null == (l = m.Z.getChannel(null == v || null == (a = v.channel) ? void 0 : a.id)) ? void 0 : l.getGuildId()) ? o : void 0;
                     e === h.fQ && (e = void 0);
-                    let d = await c.Z.sendVerificationEmail(r, !0, e),
+                    let d = await c.Z.sendVerificationEmail(i, !0, e),
                         u = d.guilds_info;
-                    d.has_matching_guild ? (p(e), t(h.tF.VERIFY_PIN)) : 0 === u.length ? t(h.tF.SUBMIT_SCHOOL) : 1 === u.length ? (p(u[0].id), await c.Z.sendVerificationEmail(r, !0, u[0].id), t(h.tF.VERIFY_PIN)) : (n(u), t(h.tF.SELECT_SCHOOL));
+                    d.has_matching_guild ? (_(e), t(h.tF.VERIFY_PIN)) : 0 === u.length ? t(h.tF.SUBMIT_SCHOOL) : 1 === u.length ? (_(u[0].id), await c.Z.sendVerificationEmail(i, !0, u[0].id), t(h.tF.VERIFY_PIN)) : (n(u), t(h.tF.SELECT_SCHOOL));
                 } catch (e) {
-                    I(new d.Hx(e));
+                    y(new d.Hx(e));
                 } finally {
-                    y(!1);
+                    I(!1);
                 }
             },
-            T = _.intl.string(_.t.H1jCHB),
-            b = _.intl.string(_.t.YfeHRE);
-        if (E) ((T = _.intl.string(_.t.LVyxND)), (b = _.intl.string(_.t.ECd7Rk)));
+            O = x.intl.string(x.t.H1jCHB),
+            C = x.intl.string(x.t.YfeHRE);
+        if (E) ((O = x.intl.string(x.t.LVyxND)), (C = x.intl.string(x.t.ECd7Rk)));
         else if ((null == v ? void 0 : v.guild) != null && v.guild.id !== h.fQ && (null == v ? void 0 : v.approximate_member_count) != null) {
             let { name: e } = v.guild;
-            T = _.intl.formatToPlainString(_.t['4T4+p6'], {
+            O = x.intl.formatToPlainString(x.t['4T4+p6'], {
                 guildName: e,
                 count: v.approximate_member_count
             });
         }
-        return (0, l.jsxs)('div', {
-            className: g.container,
+        return (0, r.jsxs)('div', {
+            className: p.container,
             children: [
-                (0, l.jsx)('div', { className: g.topImage }),
-                (0, l.jsx)(o.X6q, {
-                    className: a()(g.centerText, g.header),
+                (0, r.jsx)('div', { className: p.topImage }),
+                (0, r.jsx)(o.X6q, {
+                    className: a()(p.centerText, p.header),
                     variant: 'heading-xl/semibold',
-                    children: T
+                    children: O
                 }),
-                (0, l.jsx)('div', {
-                    className: g.descriptionWidth,
-                    children: (0, l.jsx)(o.Text, {
-                        className: g.centerText,
+                (0, r.jsx)('div', {
+                    className: p.descriptionWidth,
+                    children: (0, r.jsx)(o.Text, {
+                        className: p.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: b
+                        children: C
                     })
                 }),
-                (0, l.jsxs)('form', {
-                    className: g.formContent,
-                    onSubmit: C,
+                (0, r.jsxs)('form', {
+                    className: p.formContent,
+                    onSubmit: b,
                     children: [
-                        (0, l.jsxs)(o.xJW, {
+                        (0, r.jsxs)(o.xJW, {
                             children: [
-                                (0, l.jsx)(o.vwX, {
-                                    id: f,
-                                    children: _.intl.string(_.t.kmCxkZ)
+                                (0, r.jsx)(o.vwX, {
+                                    id: g,
+                                    children: x.intl.string(x.t.kmCxkZ)
                                 }),
-                                (0, l.jsx)(o.oil, {
-                                    placeholder: _.intl.string(_.t.ImAOh4),
+                                (0, r.jsx)(o.oil, {
+                                    placeholder: x.intl.string(x.t.ImAOh4),
                                     onChange: (e) => {
                                         u(e);
                                     },
                                     error: null == S ? void 0 : S.getAnyErrorMessage(),
-                                    'aria-labelledby': f
+                                    'aria-labelledby': g
                                 })
                             ]
                         }),
-                        (0, l.jsx)(o.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: 'header-secondary',
-                            className: g.formDescription,
+                            className: p.formDescription,
                             variant: 'text-sm/normal',
-                            children: _.intl.string(_.t.Cv7mmJ)
+                            children: x.intl.string(x.t.Cv7mmJ)
                         }),
-                        (0, l.jsx)(s.zx, {
+                        (0, r.jsx)(s.zx, {
                             type: 'submit',
                             size: s.zx.Sizes.LARGE,
                             color: s.zx.Colors.BRAND,
-                            className: g.submitButton,
+                            className: p.submitButton,
                             submitting: j,
-                            children: _.intl.string(_.t['8vmKOz'])
+                            children: x.intl.string(x.t['8vmKOz'])
                         }),
-                        (0, l.jsx)(o.Text, {
-                            className: g.termsPhrase,
+                        (0, r.jsx)(o.Text, {
+                            className: p.termsPhrase,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: _.intl.format(_.t.RPT0vr, {
-                                termsURL: x.EYA.TERMS,
-                                privacyURL: x.EYA.PRIVACY
+                            children: x.intl.format(x.t.RPT0vr, {
+                                termsURL: f.EYA.TERMS,
+                                privacyURL: f.EYA.PRIVACY
                             })
                         }),
                         E &&
-                            (0, l.jsx)(s.zx, {
+                            (0, r.jsx)(s.zx, {
                                 look: s.zx.Looks.LINK,
                                 onClick: N,
-                                className: g.cancelButton,
-                                children: _.intl.string(_.t.hO6qJy)
+                                className: p.cancelButton,
+                                children: x.intl.string(x.t.hO6qJy)
                             })
                     ]
                 })

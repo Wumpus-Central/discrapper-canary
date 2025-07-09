@@ -1,67 +1,66 @@
-(n.d(t, { Z: () => j }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(755721),
     a = n(481060),
     o = n(542094),
     s = n(895924),
-    c = n(813370),
-    u = n(626135),
-    d = n(499254),
-    p = n(541099),
-    m = n(827498),
-    f = n(160973),
-    h = n(783097),
-    v = n(890280),
-    y = n(176412),
-    x = n(981631),
-    b = n(388032),
-    g = n(854408);
-function j(e) {
-    let { context: t, application: n, sectionName: j, primaryEntryPointCommand: N, buttonSize: C = r.Ph.MEDIUM } = e,
-        E = i.useId(),
-        P = i.useCallback(() => {
-            d.yT(m.ti.ACTIVITY);
+    c = n(626135),
+    u = n(499254),
+    d = n(541099),
+    p = n(827498),
+    m = n(160973),
+    f = n(783097),
+    h = n(890280),
+    v = n(176412),
+    y = n(981631),
+    x = n(388032),
+    b = n(854408);
+function g(e) {
+    let { context: t, application: n, sectionName: g, primaryEntryPointCommand: j, buttonSize: N = r.Ph.MEDIUM } = e,
+        C = i.useId(),
+        E = i.useCallback(() => {
+            u.yT(p.ti.ACTIVITY);
         }, []),
-        O = i.useCallback(() => {
-            p.Z.shouldShowModal() && P();
-        }, [P]),
-        { submitting: A, wasSubmitting: I } = (0, v.Z)({
+        P = i.useCallback(() => {
+            d.Z.shouldShowModal() && E();
+        }, [E]),
+        { submitting: O, wasSubmitting: A } = (0, h.Z)({
             applicationId: n.id,
             context: t,
-            launchingComponentId: E,
-            onSubmissionComplete: P
+            launchingComponentId: C,
+            onSubmissionComplete: E
         }),
-        [_, S] = i.useState(!1),
-        T = (0, o.Qv)({
+        [I, _] = i.useState(!1),
+        S = (0, o.Qv)({
             applicationId: n.id,
             context: t
         }),
-        L = i.useMemo(() => (0, h.XZ)(N.displayName), [N.displayName]),
+        T = i.useMemo(() => (0, f.XZ)(j.displayName), [j.displayName]),
         {
-            onActivityItemSelected: R,
-            buttonColor: Z,
-            buttonText: w
-        } = (0, y.P7)({
+            onActivityItemSelected: L,
+            buttonColor: R,
+            buttonText: Z
+        } = (0, v.P7)({
             context: t,
             application: n,
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: j,
-            commandName: L,
-            autoDismissOnClick: T === o.JS.LEAVE || (0, c.g)(n),
-            launchingComponentId: E,
-            submitting: null != I ? I : A,
-            onConfirmActivityLaunchChecksAlertOpen: O
+            sectionName: g,
+            commandName: T,
+            autoDismissOnClick: S === o.JS.LEAVE,
+            launchingComponentId: C,
+            submitting: null != A ? A : O,
+            onConfirmActivityLaunchChecksAlertOpen: P
         }),
-        { disabled: k, reason: M } = (0, f.Z)({
+        { disabled: w, reason: k } = (0, m.Z)({
             context: t,
             application: n,
-            activityAction: T
+            activityAction: S
         });
     return (0, l.jsx)(a.ua7, {
-        shouldShow: null != M,
-        tooltipContentClassName: g.tooltipContent,
-        text: M,
+        shouldShow: null != k,
+        tooltipContentClassName: b.tooltipContent,
+        text: k,
         children: (e) => {
             var t,
                 i,
@@ -115,24 +114,24 @@ function j(e) {
                 (i = i =
                     {
                         type: 'submit',
-                        size: C,
-                        color: Z,
-                        disabled: k,
-                        submitting: _,
+                        size: N,
+                        color: R,
+                        disabled: w,
+                        submitting: I,
                         onClick: () => {
-                            (S(!0),
-                                R(),
+                            (_(!0),
+                                L(),
                                 null == a || a(),
-                                u.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                                c.default.track(y.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
-                                    button_action: m._y.USE_APP_COMMAND
+                                    button_action: p._y.USE_APP_COMMAND
                                 }));
                         },
-                        'aria-label': b.intl.formatToPlainString(b.t['XjP/R0'], {
-                            buttonText: w,
+                        'aria-label': x.intl.formatToPlainString(x.t['XjP/R0'], {
+                            buttonText: Z,
                             applicationName: n.name
                         }),
-                        children: w
+                        children: Z
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))

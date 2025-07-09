@@ -71,7 +71,7 @@ let v = {
     };
 function j(e) {
     var t, n, r;
-    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: P, children: S } = e,
+    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: S, children: P } = e,
         E = (0, o.e7)([p.default], () => p.default.locale),
         N = new Intl.ListFormat(E),
         T = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
@@ -111,12 +111,12 @@ function j(e) {
         ? null
         : (0, a.jsxs)(a.Fragment, {
               children: [
-                  S,
+                  P,
                   (0, a.jsxs)('div', {
                       className: s()(j, f.wrapper),
                       children: [
                           (0, a.jsx)('div', {
-                              className: s()(f.icons, P),
+                              className: s()(f.icons, S),
                               children:
                                   R.length > 0
                                       ? (0, a.jsxs)(a.Fragment, {

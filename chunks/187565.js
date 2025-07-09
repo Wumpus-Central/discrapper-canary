@@ -15,8 +15,8 @@ var r,
     o = n(999382),
     s = n(658666),
     a = n(384632),
-    c = n(601964),
-    u = n(430824),
+    c = n(430824),
+    u = n(411198),
     d = n(863249),
     m = n(944163),
     f = n(246364),
@@ -62,9 +62,9 @@ function x(e, t, n) {
     };
 }
 function j(e, t, n) {
-    let r = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+    let r = (0, l.e7)([c.Z], () => c.Z.getGuild(e)),
         s = (0, l.e7)([o.Z], () => o.Z.getGuild());
-    return i.useMemo(() => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? new c.ZP(t) : null), [n, s, e, r, t]);
+    return i.useMemo(() => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, u.Rj)(t) : null), [n, s, e, r, t]);
 }
 function v(e) {
     let t = !(null == e ? void 0 : e.isClaimed()),

@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(594174),
     I = n(626135),
     O = n(572004),
-    P = n(135431),
-    S = n(881294),
+    S = n(135431),
+    P = n(881294),
     E = n(258971),
     N = n(98449),
     T = n(981631),
@@ -110,11 +110,11 @@ function w(e) {
 function D(e) {
     let { application: t, variant: n, size: i, color: o } = e,
         { onClickInstallApplication: u, canInstall: p } = (function (e) {
-            let t = (0, S.nu)(),
+            let t = (0, P.nu)(),
                 n = a.useCallback(() => {
                     var t;
                     let n = null != (t = E.z8.getField('guildId')) ? t : void 0;
-                    (0, P.L)({
+                    (0, S.L)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -134,8 +134,8 @@ function D(e) {
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
-                        if (((0, S.zZ)(T.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (s.tq || s.Em) && null == e.custom_install_url)) {
-                            let t = (0, P.E)({
+                        if (((0, P.zZ)(T.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (s.tq || s.Em) && null == e.custom_install_url)) {
+                            let t = (0, S.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
@@ -153,7 +153,7 @@ function D(e) {
                                 source: 'product_page',
                                 device_platform: s.tq ? 'mobile_web' : 'desktop_web'
                             }),
-                                (0, S.rf)({ [R]: 'true' }));
+                                (0, P.rf)({ [R]: 'true' }));
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
@@ -220,8 +220,8 @@ let M = a.forwardRef(function (e, t) {
         s = g.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         b = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         { analyticsLocations: I } = (0, h.ZP)(),
-        P = a.useCallback(() => {
-            ((0, S.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, O.JG)(b(n.id), () => (0, d.showToast)((0, d.createToast)(A.intl.string(A.t['L/PwZW']), d.ToastType.SUCCESS))));
+        S = a.useCallback(() => {
+            ((0, P.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, O.JG)(b(n.id), () => (0, d.showToast)((0, d.createToast)(A.intl.string(A.t['L/PwZW']), d.ToastType.SUCCESS))));
         }, [n.id]),
         E = (0, o.e7)([j.default], () => j.default.locale),
         R = a.useCallback(() => {
@@ -241,7 +241,7 @@ let M = a.forwardRef(function (e, t) {
         G = (0, v.Z)({
             application: n,
             onItemClick: () => {
-                (0, S.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
+                (0, P.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
             }
         }),
         z = a.useCallback(
@@ -258,7 +258,7 @@ let M = a.forwardRef(function (e, t) {
                                   children: (0, r.jsx)(d.sNh, {
                                       id: 'copy',
                                       label: A.intl.string(A.t.z4sP5O),
-                                      action: P,
+                                      action: S,
                                       icon: d.xPt
                                   })
                               })
@@ -274,7 +274,7 @@ let M = a.forwardRef(function (e, t) {
                         null != M ? (0, r.jsx)(d.kSQ, { children: M }) : null
                     ]
                 }),
-            [M, R, P, s, G]
+            [M, R, S, s, G]
         ),
         { onClickLaunchActivity: B, isSubmitting: U } = (function (e, t) {
             var n;
@@ -282,7 +282,7 @@ let M = a.forwardRef(function (e, t) {
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
                 l = null != i && (0, _.BQ)(e) && (0, _.ye)(e),
                 [s, c] = a.useState(!1),
-                d = (0, S.nu)(),
+                d = (0, P.nu)(),
                 u = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
                 h = (0, o.e7)([p.ZP], () => p.ZP.getCurrentEmbeddedActivity()),
                 g = a.useCallback(
@@ -315,7 +315,7 @@ let M = a.forwardRef(function (e, t) {
             }, [d, l, i, r, t, u, g]);
             let b = a.useCallback(async () => {
                 if (null != i) {
-                    if (((0, S.zZ)(T.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, S.rf)({ [Z]: 'true' });
+                    if (((0, P.zZ)(T.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, P.rf)({ [Z]: 'true' });
                     await g(i, r, t);
                 }
             }, [i, r, t, d, g]);
@@ -353,7 +353,7 @@ let M = a.forwardRef(function (e, t) {
                               className: l()(L.iconButton, { [L.small]: 'sm' === i }),
                               innerClassName: L.innerIconButton,
                               'aria-label': A.intl.string(A.t.z4sP5O),
-                              onClick: P,
+                              onClick: S,
                               children: (0, r.jsx)(d.xPt, {
                                   size: 'xs',
                                   color: 'currentColor'

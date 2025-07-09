@@ -7,14 +7,14 @@ var i,
     o = t(442837),
     s = t(570140),
     c = t(924301),
-    u = t(601964),
+    u = t(411198),
     _ = t(75666);
 let g = !1,
     p = {},
     m = {},
     f = {},
     I = (e) => (
-        (f[e.guild_scheduled_event.id] = new u.ZP(e.guild_scheduled_event.guild)),
+        (f[e.guild_scheduled_event.id] = (0, u.Q0)(e.guild_scheduled_event.guild)),
         (m[e.guild_scheduled_event.id] = e.guild_scheduled_event),
         {
             channelId: e.directory_channel_id,

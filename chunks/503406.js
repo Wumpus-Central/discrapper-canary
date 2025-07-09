@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => v }), n(388685));
-var l = n(255367),
-    i = n(73800),
-    r = n(120356),
-    a = n.n(r),
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(392711),
     o = n.n(s),
     c = n(755721),
@@ -10,77 +10,77 @@ var l = n(255367),
     u = n(231239),
     m = n(881052),
     h = n(313201),
-    x = n(703656),
-    _ = n(981631),
-    g = n(388032),
-    f = n(768680);
-let p = (0, h.hQ)(),
+    f = n(703656),
+    x = n(981631),
+    p = n(388032),
+    g = n(768680);
+let _ = (0, h.hQ)(),
     v = (e) => {
-        let { email: t, guildId: n, onClose: r } = e,
-            [s, h] = i.useState(''),
-            [v, N] = i.useState(null),
-            E = i.useCallback(async () => {
+        let { email: t, guildId: n, onClose: i } = e,
+            [s, h] = l.useState(''),
+            [v, N] = l.useState(null),
+            E = l.useCallback(async () => {
                 if (null != n)
                     try {
                         let e = await u.Z.verifyCode(s, n, t);
-                        e.guild && (null == r || r(), (0, x.uL)(_.Z5c.CHANNEL(e.guild.id)));
+                        e.guild && (null == i || i(), (0, f.uL)(x.Z5c.CHANNEL(e.guild.id)));
                     } catch (e) {
                         N(new m.Hx(e));
                     }
-            }, [s, t, n, r]),
+            }, [s, t, n, i]),
             S = o().throttle(() => {
                 u.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
-            I = async (e) => {
-                null != s && '' !== s && e.charCode === _.yXg.ENTER && (await E());
+            y = async (e) => {
+                null != s && '' !== s && e.charCode === x.yXg.ENTER && (await E());
             };
-        return (0, l.jsxs)('div', {
-            className: f.container,
+        return (0, r.jsxs)('div', {
+            className: g.container,
             children: [
-                (0, l.jsx)('div', { className: f.topImage }),
-                (0, l.jsx)(d.X6q, {
-                    className: a()(f.centerText, f.header),
+                (0, r.jsx)('div', { className: g.topImage }),
+                (0, r.jsx)(d.X6q, {
+                    className: a()(g.centerText, g.header),
                     variant: 'heading-xl/semibold',
-                    children: g.intl.string(g.t.SJ3Lxc)
+                    children: p.intl.string(p.t.SJ3Lxc)
                 }),
-                (0, l.jsx)('div', {
-                    className: f.descriptionWidth,
-                    children: (0, l.jsx)(d.Text, {
-                        className: f.centerText,
+                (0, r.jsx)('div', {
+                    className: g.descriptionWidth,
+                    children: (0, r.jsx)(d.Text, {
+                        className: g.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: g.intl.format(g.t['b+W0oq'], {
+                        children: p.intl.format(p.t['b+W0oq'], {
                             email: t,
                             onClick: S
                         })
                     })
                 }),
-                (0, l.jsxs)(d.xJW, {
-                    className: f.formItem,
+                (0, r.jsxs)(d.xJW, {
+                    className: g.formItem,
                     children: [
-                        (0, l.jsx)(d.vwX, {
-                            id: p,
-                            children: g.intl.string(g.t.rpWT1t)
+                        (0, r.jsx)(d.vwX, {
+                            id: _,
+                            children: p.intl.string(p.t.rpWT1t)
                         }),
-                        (0, l.jsx)(d.oil, {
-                            onKeyPress: I,
+                        (0, r.jsx)(d.oil, {
+                            onKeyPress: y,
                             onChange: (e) => {
                                 null != e && '' !== e && h(e);
                             },
                             error: null == v ? void 0 : v.getAnyErrorMessage(),
-                            'aria-labelledby': p
+                            'aria-labelledby': _
                         })
                     ]
                 }),
-                (0, l.jsx)(c.zx, {
+                (0, r.jsx)(c.zx, {
                     fullWidth: !0,
                     onClick: E,
                     size: c.zx.Sizes.LARGE,
                     color: c.zx.Colors.BRAND,
-                    children: (0, l.jsx)(d.Text, {
-                        className: f.submitText,
+                    children: (0, r.jsx)(d.Text, {
+                        className: g.submitText,
                         variant: 'text-sm/normal',
-                        children: g.intl.string(g.t.geKm7u)
+                        children: p.intl.string(p.t.geKm7u)
                     })
                 })
             ]

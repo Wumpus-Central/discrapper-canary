@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => G }), t(953529));
+(t.d(n, { Z: () => Z }), t(953529));
 var i = t(255367),
     l = t(73800),
     r = t(120356),
@@ -120,7 +120,7 @@ function U(e) {
                 : s
     });
 }
-function Z(e) {
+function G(e) {
     let { userCount: n, onClick: t } = e;
     return (0, i.jsxs)('div', {
         className: D.row,
@@ -144,10 +144,10 @@ function Z(e) {
         ]
     });
 }
-function G(e) {
+function Z(e) {
     let { guildEvent: n, guild: t, channel: r, headerId: a, onClose: c, onClickInterestedCount: u, isHub: _ = !1, containerRef: g, recurrenceId: p, setRecurrenceId: m } = e,
         I = (0, d.e7)([f.Z], () => null != f.Z.getGuild(t.id), [t.id]),
-        { startTime: S, endTime: G } = (0, E.ZP)(n, p),
+        { startTime: S, endTime: Z } = (0, E.ZP)(n, p),
         P = (0, b.Z)(n.guild_id, n.id, p),
         z = l.useCallback(
             (e) => {
@@ -170,7 +170,7 @@ function G(e) {
                 children: [
                     (0, i.jsx)(j.z, {
                         startTime: S.toISOString(),
-                        endTime: null == G ? void 0 : G.toISOString(),
+                        endTime: null == Z ? void 0 : Z.toISOString(),
                         status: null != B ? B : n.status,
                         eventType: n.entity_type,
                         guildEventId: n.id,
@@ -199,7 +199,7 @@ function G(e) {
                         onClose: c
                     }),
                     null != P &&
-                        (0, i.jsx)(Z, {
+                        (0, i.jsx)(G, {
                             userCount: P,
                             onClick: u
                         }),

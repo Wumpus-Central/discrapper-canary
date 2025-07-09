@@ -72,14 +72,8 @@ let h = new i.Z('Guilds'),
                 let e = o.Z.getGuild(n.id);
                 if (null != e) {
                     let i = l.Z.getRoles(n.id),
-                        r = 'partial' === n.data_mode ? c.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, d.C5)(n.id, n.roles);
-                    this.put(
-                        c.rk(c.sp(n, e), {
-                            roles: r,
-                            member: a.ZP.getSelfMember(n.id)
-                        }),
-                        t
-                    );
+                        r = 'partial' === n.data_mode ? d.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, d.C5)(n.id, n.roles);
+                    this.put(c.rk(c.sp(n, e), r, a.ZP.getSelfMember(n.id)), t);
                 }
             }
         }
@@ -91,14 +85,8 @@ let h = new i.Z('Guilds'),
         }
         handleGuildUpdate(e, t) {
             let n = o.Z.getGuild(e.guild.id),
-                i = c.di(e.guild, n);
-            this.put(
-                c.rk(i, {
-                    roles: (0, d.C5)(e.guild.id, e.guild.roles),
-                    member: a.ZP.getSelfMember(e.guild.id)
-                }),
-                t
-            );
+                i = c.R(e.guild, n);
+            this.put(c.rk(i, (0, d.C5)(e.guild.id, e.guild.roles), a.ZP.getSelfMember(e.guild.id)), t);
         }
         handleGuildDelete(e, t) {
             this.delete(e.guild.id, t);
@@ -106,14 +94,7 @@ let h = new i.Z('Guilds'),
         handleGuildRoleChange(e, t) {
             let n = o.Z.getGuild(e.guildId),
                 i = l.Z.getRoles(e.guildId);
-            null != n &&
-                this.put(
-                    c.rk(n, {
-                        roles: g(p({}, i), { [e.role.id]: e.role }),
-                        member: a.ZP.getSelfMember(e.guildId)
-                    }),
-                    t
-                );
+            null != n && this.put(c.rk(n, g(p({}, i), { [e.role.id]: e.role }), a.ZP.getSelfMember(e.guildId)), t);
         }
         handleGuildRoleDelete(e, t) {
             let n = o.Z.getGuild(e.guildId);
@@ -121,27 +102,13 @@ let h = new i.Z('Guilds'),
                 let i = p({}, l.Z.getRoles(e.guildId));
                 delete i[e.roleId];
                 let r = a.ZP.getSelfMember(e.guildId);
-                (null != r && (r = g(p({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
-                    this.put(
-                        c.rk(n, {
-                            roles: i,
-                            member: r
-                        }),
-                        t
-                    ));
+                (null != r && (r = g(p({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })), this.put(c.rk(n, i, r), t));
             }
         }
         handleGuildMemberAdd(e, t) {
             if (null != e.joinedAt && e.user.id === s.default.getId()) {
                 let n = o.Z.getGuild(e.guildId);
-                null != n &&
-                    this.put(
-                        c.rk((0, r.kH)(n, e.joinedAt), {
-                            roles: l.Z.getRoles(n.id),
-                            member: a.ZP.getSelfMember(n.id)
-                        }),
-                        t
-                    );
+                null != n && this.put(c.rk((0, r.kH)(n, e.joinedAt), l.Z.getRoles(n.id), a.ZP.getSelfMember(n.id)), t);
             }
         }
         handleGuildMemberUpdate(e, t) {
@@ -149,12 +116,9 @@ let h = new i.Z('Guilds'),
             let n = o.Z.getGuild(e.guildId);
             null != n &&
                 this.put(
-                    c.rk(n, {
-                        member: {
-                            roles: e.roles,
-                            userId: e.user.id
-                        },
-                        roles: l.Z.getRoles(n.id)
+                    c.rk(n, l.Z.getRoles(n.id), {
+                        roles: e.roles,
+                        userId: e.user.id
                     }),
                     t
                 );
@@ -163,16 +127,16 @@ let h = new i.Z('Guilds'),
         putOne(e, t) {
             let n = e.members.find((e) => e.user.id === s.default.getId()),
                 i = o.Z.getGuild(e.id),
-                r = c.rk(c.wD(e, i), {
-                    roles: e.roles instanceof Array ? (0, d.C5)(e.id, e.roles) : e.roles,
-                    member:
-                        null != n
-                            ? {
-                                  userId: n.user.id,
-                                  roles: n.roles
-                              }
-                            : void 0
-                });
+                r = c.rk(
+                    c.wD(e, i),
+                    e.roles instanceof Array ? (0, d.C5)(e.id, e.roles) : e.roles,
+                    null != n
+                        ? {
+                              userId: n.user.id,
+                              roles: n.roles
+                          }
+                        : null
+                );
             this.put(r, t);
         }
         put(e, t) {

@@ -7,9 +7,9 @@
 var r = n(73800),
     i = n(149765),
     a = n(442837),
-    o = n(601964),
-    s = n(496675),
-    l = n(594174),
+    o = n(496675),
+    s = n(594174),
+    l = n(411198),
     c = n(85243),
     u = n(231338);
 let d = {
@@ -37,9 +37,9 @@ let d = {
         return (e.isGuildStageVoice() ? (t = c.LK) : e.isGuildVoice() && (t = c.AN), [i.$e(t, u.Pl.CREATE_EVENTS), i.$e(t, u.Pl.MANAGE_EVENTS)]);
     },
     p = (e) => {
-        let [t, n] = e instanceof o.ZP ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),
-            [i, c, p, h] = (0, a.Wu)([s.Z], () => [s.Z.can(u.Pl.CREATE_GUILD_EXPRESSIONS, e), s.Z.can(u.Pl.MANAGE_GUILD_EXPRESSIONS, e), s.Z.can(t, e), s.Z.can(n, e)]),
-            m = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
+        let [t, n] = (0, l.lM)(e) ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),
+            [i, c, p, h] = (0, a.Wu)([o.Z], () => [o.Z.can(u.Pl.CREATE_GUILD_EXPRESSIONS, e), o.Z.can(u.Pl.MANAGE_GUILD_EXPRESSIONS, e), o.Z.can(t, e), o.Z.can(n, e)]),
+            m = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
             g = r.useCallback((e) => f(e, m, c, i), [i, c, m]),
             E = r.useCallback((e) => f(e, m, h, p), [h, p, m]);
         return null == e
@@ -54,9 +54,9 @@ let d = {
               };
     },
     h = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Z,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.default,
-            [r, i] = e instanceof o.ZP ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Z,
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.default,
+            [r, i] = (0, l.lM)(e) ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),
             a = t.can(u.Pl.CREATE_GUILD_EXPRESSIONS, e),
             c = t.can(u.Pl.MANAGE_GUILD_EXPRESSIONS, e),
             p = t.can(r, e),

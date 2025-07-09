@@ -69,7 +69,7 @@ function S(e, n) {
     );
 }
 function D(e) {
-    let { guild: n, channel: D, guildScheduledEvent: O, isActive: U, recurrenceId: Z, onActionTaken: G } = e,
+    let { guild: n, channel: D, guildScheduledEvent: O, isActive: U, recurrenceId: G, onActionTaken: Z } = e,
         { scheduled_start_time: P, id: z, entity_type: A, guild_id: R } = O,
         { canManageGuildEvent: k } = (0, c.XJ)(null != D ? D : n),
         B = k(O),
@@ -78,9 +78,9 @@ function D(e) {
         { withinStartWindow: M } = (0, b.ub)(P),
         X = (0, l.e7)([m.Z], () => null == D || !D.isGuildVocal() || m.Z.can(L.Plq.CONNECT, D), [D]),
         V = (0, s.J)(R),
-        F = (0, C.Z)(Z, z);
+        F = (0, C.Z)(G, z);
     function Y(e) {
-        (e.stopPropagation(), (0, T.Z)(z, Z, R));
+        (e.stopPropagation(), (0, T.Z)(z, G, R));
     }
     async function W(e) {
         (e.stopPropagation(), await d.Z.joinGuild(R), p.Z.addConditionalChangeListener(() => null == p.Z.getGuild(R) || (U || Y(e), q(e), !1)));
@@ -124,7 +124,7 @@ function D(e) {
                                 N(
                                     {
                                         guildEventId: z,
-                                        recurrenceId: Z,
+                                        recurrenceId: G,
                                         channel: D,
                                         guild: n
                                     },
@@ -137,10 +137,10 @@ function D(e) {
             X || V
                 ? function (e) {
                       if ((e.stopPropagation(), V)) {
-                          (null == G || G(), (0, o.hk)(R));
+                          (null == Z || Z(), (0, o.hk)(R));
                           return;
                       }
-                      (null == D ? void 0 : D.isGuildStageVoice()) ? ((0, _.Cq)(D), null == G || G()) : (null == D ? void 0 : D.isGuildVoice()) && (v.Z.joinVoiceEvent(D.guild_id, D.id), null == G || G());
+                      (null == D ? void 0 : D.isGuildStageVoice()) ? ((0, _.Cq)(D), null == Z || Z()) : (null == D ? void 0 : D.isGuildVoice()) && (v.Z.joinVoiceEvent(D.guild_id, D.id), null == Z || Z());
                   }
                 : void 0,
         onRsvpClick: Y,
@@ -155,7 +155,7 @@ function D(e) {
                                       e,
                                       S(N({}, n), {
                                           event: O,
-                                          onSuccess: G
+                                          onSuccess: Z
                                       })
                                   );
                           }));

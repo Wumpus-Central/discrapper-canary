@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,14 +16,15 @@ var r = n(255367),
     x = n(699516),
     b = n(594174),
     j = n(259580),
-    _ = n(51144),
-    v = n(426563),
-    O = n(909746),
-    C = n(501801),
-    y = n(981631),
-    N = n(388032),
-    I = n(677234);
-function E(e) {
+    _ = n(411198),
+    v = n(51144),
+    O = n(426563),
+    C = n(909746),
+    y = n(501801),
+    N = n(981631),
+    I = n(388032),
+    E = n(677234);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +49,7 @@ function E(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,73 +67,73 @@ function S(e, t) {
         e
     );
 }
-class T extends i.PureComponent {
+class P extends i.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
         return (0, r.jsxs)('span', {
             onContextMenu: t,
-            className: I.userHook,
+            className: E.userHook,
             children: [
                 (0, r.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: _.ZP.getUserTag(e, { mode: 'username' })
+                    children: v.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
                     (0, r.jsxs)(d.Text, {
                         variant: 'text-xs/normal',
-                        className: I.discrim,
+                        className: E.discrim,
                         children: ['#', e.discriminator]
                     })
             ]
         });
     }
 }
-let P = i.forwardRef((e, t) => {
+let w = i.forwardRef((e, t) => {
     let n,
-        { log: l, className: o, expanded: f, guildId: _, guild: P, onChannelContextMenu: w, onContentClick: R, onHeaderClick: Z, onTargetContextMenu: D, onUserContextMenu: A, theme: L } = e,
-        k = i.useRef(null),
-        M = (function () {
+        { log: l, className: o, expanded: f, guildId: v, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: L, theme: k } = e,
+        M = i.useRef(null),
+        G = (function () {
             let { changes: e } = l;
-            return (l.actionType !== y.vB8.DELETE || l.action === y.rsA.MEMBER_BAN_ADD || l.action === y.rsA.MEMBER_KICK || l.action === y.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(l, e));
+            return (l.actionType !== N.vB8.DELETE || l.action === N.rsA.MEMBER_BAN_ADD || l.action === N.rsA.MEMBER_KICK || l.action === N.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, y.xO)(l, e));
         })(),
-        G = I.headerDefault;
-    f ? (G = I.headerExpanded) : M && (G = I.headerClickable);
-    let U = l.timestampStart.calendar(),
-        B = l.timestampEnd.calendar();
+        U = E.headerDefault;
+    f ? (U = E.headerExpanded) : G && (U = E.headerClickable);
+    let B = l.timestampStart.calendar(),
+        F = l.timestampEnd.calendar();
     n =
-        U === B
+        B === F
             ? (0, r.jsx)(d.Text, {
-                  className: I.timestamp,
+                  className: E.timestamp,
                   variant: 'text-sm/normal',
-                  children: U
+                  children: B
               })
             : (0, r.jsxs)(d.Text, {
-                  className: I.timestamp,
+                  className: E.timestamp,
                   variant: 'text-sm/normal',
-                  children: [U, '\u2014', B]
+                  children: [B, '\u2014', F]
               });
-    let F = M ? Z : y.dG4;
+    let z = G ? D : N.dG4;
     return (0, r.jsx)(a.mh, {
         id: l.id,
         children: (e) =>
             (0, r.jsxs)('div', {
                 ref: t,
-                className: s()(I.auditLog, o),
+                className: s()(E.auditLog, o),
                 children: [
                     (0, r.jsxs)(
                         d.P3F,
-                        S(
-                            E(
+                        T(
+                            S(
                                 {
-                                    className: G,
+                                    className: U,
                                     'aria-expanded': f,
-                                    onClick: F
+                                    onClick: z
                                 },
                                 e
                             ),
                             {
                                 children: [
-                                    (0, r.jsx)(C.mp, {
+                                    (0, r.jsx)(y.mp, {
                                         action: l.action,
                                         actionType: l.actionType,
                                         targetType: l.targetType
@@ -145,21 +146,21 @@ let P = i.forwardRef((e, t) => {
                                         } = l;
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
-                                                targetElementRef: k,
+                                                targetElementRef: M,
                                                 user: e,
-                                                guildId: _,
+                                                guildId: v,
                                                 newAnalyticsLocations: [m.Z.AVATAR],
                                                 children: (e) => {
                                                     var t;
                                                     return (0, r.jsx)(
                                                         d.qEK,
-                                                        S(E({}, e), {
-                                                            ref: k,
+                                                        T(S({}, e), {
+                                                            ref: M,
                                                             onClick: (t) => {
                                                                 (t.stopPropagation(), e.onClick(t));
                                                             },
-                                                            className: I.avatar,
-                                                            src: l.action === y.rsA.AUTO_MODERATION_BLOCK_MESSAGE || l.action === y.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || l.action === y.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || l.action === y.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null == (t = l.user) ? void 0 : t.getAvatarURL(_, 40),
+                                                            className: E.avatar,
+                                                            src: l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE || l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || l.action === N.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || l.action === N.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, O.j)() : null == (t = l.user) ? void 0 : t.getAvatarURL(v, 40),
                                                             'aria-hidden': !0,
                                                             size: d.EFr.SIZE_40
                                                         })
@@ -169,9 +170,9 @@ let P = i.forwardRef((e, t) => {
                                         if (null != n) {
                                             let e = u.Z.get(n);
                                             if (null != e) {
-                                                let t = (0, c.wj)(L) ? e.icon.darkSVG : e.icon.lightSVG;
+                                                let t = (0, c.wj)(k) ? e.icon.darkSVG : e.icon.lightSVG;
                                                 return (0, r.jsx)(d.qEK, {
-                                                    className: I.avatar,
+                                                    className: E.avatar,
                                                     src: t,
                                                     'aria-hidden': !0,
                                                     size: d.EFr.SIZE_40
@@ -181,52 +182,52 @@ let P = i.forwardRef((e, t) => {
                                         return null;
                                     })(),
                                     (0, r.jsxs)('div', {
-                                        className: I.timeWrap,
+                                        className: E.timeWrap,
                                         children: [
                                             (0, r.jsx)('div', {
-                                                className: I.title,
+                                                className: E.title,
                                                 children: (function () {
                                                     let e,
                                                         { user: t, target: n, options: i } = l;
-                                                    e = 'object' == typeof n && 'name' in n ? n.name : n.toString();
-                                                    let s = O.N5(l);
+                                                    e = (0, _.lM)(n) ? n.name : n.toString();
+                                                    let s = C.N5(l);
                                                     return null != s
                                                         ? (0, r.jsx)('div', {
-                                                              className: I.overflowEllipsis,
-                                                              children: N.intl.format(s, {
+                                                              className: E.overflowEllipsis,
+                                                              children: I.intl.format(s, {
                                                                   user: t,
                                                                   target: e,
                                                                   userHook: (e, t) => {
                                                                       if (null != l.user)
                                                                           return (0, r.jsx)(
-                                                                              T,
+                                                                              P,
                                                                               {
                                                                                   user: l.user,
-                                                                                  onContextMenu: A
+                                                                                  onContextMenu: L
                                                                               },
                                                                               t
                                                                           );
                                                                       if (null != l.options.integration_type) {
                                                                           var n;
                                                                           let e = u.Z.get(l.options.integration_type);
-                                                                          return null != (n = null == e ? void 0 : e.name) ? n : N.intl.string(N.t['n+olu7']);
+                                                                          return null != (n = null == e ? void 0 : e.name) ? n : I.intl.string(I.t['n+olu7']);
                                                                       }
-                                                                      return N.intl.string(N.t['30mdIy']);
+                                                                      return I.intl.string(I.t['30mdIy']);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      l.targetType === y.KFR.USER && l.target instanceof h.Z
+                                                                      l.targetType === N.KFR.USER && l.target instanceof h.Z
                                                                           ? (0, r.jsx)(
-                                                                                T,
+                                                                                P,
                                                                                 {
                                                                                     user: l.target,
-                                                                                    onContextMenu: D
+                                                                                    onContextMenu: A
                                                                                 },
                                                                                 t
                                                                             )
                                                                           : (0, r.jsx)(
                                                                                 'span',
                                                                                 {
-                                                                                    onContextMenu: D,
+                                                                                    onContextMenu: A,
                                                                                     children: e
                                                                                 },
                                                                                 t
@@ -237,7 +238,7 @@ let P = i.forwardRef((e, t) => {
                                                                       (0, r.jsx)(
                                                                           'span',
                                                                           {
-                                                                              onContextMenu: w,
+                                                                              onContextMenu: R,
                                                                               children: e
                                                                           },
                                                                           t
@@ -251,10 +252,10 @@ let P = i.forwardRef((e, t) => {
                                             n
                                         ]
                                     }),
-                                    M
+                                    G
                                         ? (0, r.jsx)(j.Z, {
-                                              className: I.expand,
-                                              foreground: I.expandForeground,
+                                              className: E.expand,
+                                              foreground: E.expandForeground,
                                               expanded: f,
                                               'aria-hidden': !0
                                           })
@@ -263,17 +264,17 @@ let P = i.forwardRef((e, t) => {
                             }
                         )
                     ),
-                    f ? (0, r.jsx)('div', { className: I.divider }) : null,
-                    f && null != P
-                        ? (0, r.jsx)(C.tP, {
+                    f ? (0, r.jsx)('div', { className: E.divider }) : null,
+                    f && null != w
+                        ? (0, r.jsx)(y.tP, {
                               log: l,
-                              guild: P,
-                              onContentClick: R
+                              guild: w,
+                              onContentClick: Z
                           })
                         : null
                 ]
             })
     });
 });
-P.displayName = 'GuildSettingsAuditLogEntry';
-let w = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }), { forwardRef: !0 })(P);
+w.displayName = 'GuildSettingsAuditLogEntry';
+let R = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }), { forwardRef: !0 })(w);

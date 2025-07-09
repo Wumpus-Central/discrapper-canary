@@ -31,7 +31,7 @@ let v = {
         a.useEffect(() => {
             I(1);
         }, [n]);
-        let P = a.useMemo(
+        let S = a.useMemo(
                 () => ({
                     query: _.EMPTY_QUERY,
                     page: y,
@@ -40,7 +40,7 @@ let v = {
                 }),
                 [y, n]
             ),
-            S = (0, l.e7)([u.Z], () =>
+            P = (0, l.e7)([u.Z], () =>
                 u.Z.getFetchState({
                     query: _.EMPTY_QUERY,
                     page: y,
@@ -50,10 +50,10 @@ let v = {
             ),
             E = (0, l.cj)([u.Z], () => {
                 var e;
-                return null != (e = u.Z.getSearchResults(P)) ? e : v;
+                return null != (e = u.Z.getSearchResults(S)) ? e : v;
             }),
             N = null != (t = (0, o.Z)(E)) ? t : v,
-            { results: T, totalPages: A, loadId: L } = a.useMemo(() => (S === d.M.FETCHING ? N : E), [S, N, E]),
+            { results: T, totalPages: A, loadId: L } = a.useMemo(() => (P === d.M.FETCHING ? N : E), [P, N, E]),
             R = a.useMemo(() => (null == T ? void 0 : T.filter((e) => e.type === i.s.APPLICATION)), [T]),
             Z = a.useCallback((e) => {
                 let { page: t, activeCategoryId: n, onSuccessCallback: r, guildId: a, fetchCounts: i } = e;
@@ -93,13 +93,13 @@ let v = {
             },
             [L, C]
         );
-        return S === d.M.ERROR
+        return P === d.M.ERROR
             ? (0, r.jsx)('div', {
                   className: x.errorContainer,
                   children: (0, r.jsx)(g.Z, { className: x.error })
               })
             : (0, r.jsxs)(m.Z, {
-                  loading: S === d.M.FETCHING,
+                  loading: P === d.M.FETCHING,
                   children: [
                       (0, r.jsx)('div', {
                           className: x.content,

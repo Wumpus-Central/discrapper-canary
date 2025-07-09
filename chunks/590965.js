@@ -6,12 +6,12 @@ var i,
     a = n(413605),
     s = n(703656),
     c = n(131704),
-    u = n(601964),
-    d = n(592125),
-    h = n(430824),
-    p = n(701190),
-    f = n(496675),
-    g = n(594174),
+    u = n(592125),
+    d = n(430824),
+    h = n(701190),
+    p = n(496675),
+    f = n(594174),
+    g = n(411198),
     m = n(998502),
     b = n(981631),
     _ = n(176505);
@@ -53,7 +53,7 @@ function S() {
 }
 class x extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, p.Z, g.default);
+        this.waitFor(d.Z, h.Z, f.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
@@ -81,16 +81,16 @@ let I = new x(o.Z, {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
             if ((0, c.bc)(e.type)) {
-                if (null != d.Z.getChannel(e.id)) return ((0, s.XU)(b.ME, e.id), m.ZP.focus(), !1);
+                if (null != u.Z.getChannel(e.id)) return ((0, s.XU)(b.ME, e.id), m.ZP.focus(), !1);
             } else {
                 if (null == n) return !1;
-                if (null != h.Z.getGuild(n.id) && !(0, a.TY)(t)) {
+                if (null != d.Z.getGuild(n.id) && !(0, a.TY)(t)) {
                     let e = (function (e) {
                         if ((0, a.W6)(e)) return _.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
-                            let e = d.Z.getChannel(t.id);
-                            if (f.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
+                            let e = u.Z.getChannel(t.id);
+                            if (p.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
@@ -107,8 +107,8 @@ let I = new x(o.Z, {
             return !1;
         ((v = e.context), (j = !1));
         let n = (function (e) {
-            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: a, stage_instance: s, type: c, channel: d, guild: h, is_nickname_changeable: p } = e,
-                f = {
+            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: a, stage_instance: s, type: c, channel: u, guild: d, is_nickname_changeable: h } = e,
+                p = {
                     code: r,
                     state: i,
                     approximate_member_count: t,
@@ -118,9 +118,9 @@ let I = new x(o.Z, {
                     target_application: a,
                     stage_instance: s,
                     type: c,
-                    is_nickname_changeable: p
+                    is_nickname_changeable: h
                 };
-            return (null != d && (f.channel = y({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = y({}, e.inviter)), f);
+            return (null != u && (p.channel = y({}, u)), null != d && (p.guild = (0, g.Qs)(d)), null != e.inviter && (p.inviter = y({}, e.inviter)), p);
         })(t);
         E.push([n, e.resolve]);
     },

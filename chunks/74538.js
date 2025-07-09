@@ -3,7 +3,8 @@
     Ap: () => eP,
     BK: () => z,
     CY: () => Z,
-    EK: () => tP,
+    EK: () => tw,
+    EO: () => te,
     Gf: () => en,
     I5: () => S.I5,
     JE: () => eq,
@@ -24,12 +25,12 @@
     Ue: () => eJ,
     V7: () => ef,
     W_: () => eZ,
-    Wz: () => tC,
+    Wz: () => tR,
     XK: () => e0,
     Z8: () => ey,
-    ZP: () => tj,
+    ZP: () => tU,
     Zx: () => e1,
-    _O: () => tR,
+    _O: () => tP,
     a5: () => eY,
     aS: () => H,
     al: () => e$,
@@ -54,8 +55,8 @@
     uZ: () => eb,
     v6: () => eD,
     v9: () => e3,
-    xG: () => tk,
-    xe: () => tD,
+    xG: () => tj,
+    xe: () => tL,
     yd: () => S.yd,
     zL: () => eu,
     zV: () => eG
@@ -495,7 +496,7 @@ function el(e) {
     var t, n, r, i, a, s, c, u, d, f;
     let { subscription: _, planId: h, price: m, includePremiumGuilds: g, hasDiscountApplied: E, activeDiscountInfo: b, renewalInvoicePreview: O, hasFractionalPremiumWithSub: v } = e,
         I = R.GP[h],
-        T = tN(Z(I.id), I.interval),
+        T = tC(Z(I.id), I.interval),
         S = eU(_) || (null == _.paymentSourceId && !_.isPurchasedExternally && !(null == (t = p.default.getCurrentUser()) ? void 0 : t.hasFreePremium())),
         A = null != m && null == _.paymentGateway,
         C = _.status === N.O0b.UNPAID && null !== _.latestInvoice && (null == (n = _.latestInvoice) ? void 0 : n.status) === N.hUK.OPEN,
@@ -761,7 +762,7 @@ function em(e) {
     return null;
 }
 function eg(e) {
-    let t = g.Z.getPlanIdsForSkus([tC(R.Si.GUILD)]);
+    let t = g.Z.getPlanIdsForSkus([tR(R.Si.GUILD)]);
     i()(null != t, 'Missing guildSubscriptionPlanIds');
     let n = e.find((e) => {
         let { planId: n } = e;
@@ -927,7 +928,7 @@ function eT(e, t) {
 function eS(e, t, n, r) {
     let i = o()(r ? void 0 : e);
     if (t.length > 0) {
-        let e = tM(t);
+        let e = tk(t);
         i = i.add(e, 'hours');
     }
     if (!r && void 0 !== n) {
@@ -938,7 +939,7 @@ function eS(e, t, n, r) {
     return i.toDate();
 }
 function eA(e) {
-    let t = tM(e.unactivatedUnits);
+    let t = tk(e.unactivatedUnits);
     if (!(t > 0 && e.fractionalState === R.a$.NONE)) return '';
     let n = {
             days: w.t.fYmir6,
@@ -1100,7 +1101,7 @@ function eV(e, t, n, r) {
         let t = Error('Unsupported plan');
         throw ((0, b.q2)(t, { tags: { planId: e } }), t);
     }
-    let o = g.Z.getForSkuAndInterval(tC(R.Si.GUILD), a.interval, a.intervalCount);
+    let o = g.Z.getForSkuAndInterval(tR(R.Si.GUILD), a.interval, a.intervalCount);
     if (null == o) {
         let t = Error('Unsupported plan');
         throw ((0, b.q2)(t, { tags: { planId: e } }), t);
@@ -1340,120 +1341,121 @@ function e9(e) {
             return C.Rj.PREMIUM_TIER_2;
     }
 }
-function te(e) {
+let te = (e) => null != e && Date.now() - e.createdAt.getTime() < B;
+function tt(e) {
     return (0, f.ks)(f.g_, e);
 }
-function tt(e) {
+function tn(e) {
     return (0, f.ks)(f.m_, e);
 }
-function tn(e) {
+function tr(e) {
     return (0, f.ks)(f._y, e);
 }
-function tr(e) {
+function ti(e) {
     return (0, f.ks)(f.tj, e);
 }
-function ti(e) {
+function ta(e) {
     return (0, f.ks)(f.EQ, e);
 }
-function ta(e) {
+function to(e) {
     return (0, f.ks)(f.Pl, e);
 }
-function to(e) {
+function ts(e) {
     return (0, f.ks)(f.wN, e);
 }
-function ts(e) {
+function tl(e) {
     return (0, f.ks)(f._G, e);
 }
-function tl(e, t) {
+function tc(e, t) {
     return (0, f.ks)(f.j4, e, t);
 }
-function tc(e) {
+function tu(e) {
     return (0, f.ks)(f.lX, e);
 }
-function tu(e) {
+function td(e) {
     return (0, f.ks)(f.Uw, e);
 }
-function td(e) {
+function tf(e) {
     return (0, f.ks)(f.zm, e);
 }
-function tf(e) {
+function t_(e) {
     return (0, f.ks)(f.zZ, e);
 }
-function t_(e) {
+function tp(e) {
     return (0, f.ks)(f.do, e);
 }
-function tp(e) {
+function th(e) {
     return (0, f.ks)(f.ZE, e);
 }
-function th(e) {
+function tm(e) {
     return (0, f.ks)(f.Ej, e);
 }
-function tm(e) {
+function tg(e) {
     return (0, f.ks)(f.Ct, e);
 }
-function tg(e) {
+function tE(e) {
     return (0, f.ks)(f.O1, e);
 }
-function tE(e) {
+function tb(e) {
     return (0, f.ks)(f.uw, e);
 }
-function tb(e, t) {
+function ty(e, t) {
     return 'high' === e ? (0, f.ks)(f.O8, t) : 'mid' === e && (0, f.ks)(f.g7, t);
 }
-function ty(e, t) {
+function tO(e, t) {
     return (0, f.ks)(f.$0, e, t);
 }
-function tO(e) {
+function tv(e) {
     return (0, f.ks)(f.ME, e);
 }
-function tv(e) {
+function tI(e) {
     return (0, f.ks)(f.AN, e);
 }
-function tI(e) {
+function tT(e) {
     return (0, f.ks)(f._O, e);
 }
-function tT(e) {
+function tS(e) {
     return (0, f.ks)(f.qH, e);
 }
-function tS(e) {
+function tA(e) {
     return (0, f.ks)(f.hs, e);
 }
-function tA(e) {
+function tN(e) {
     return (0, f.ks)(f.DU, e);
 }
-function tN(e, t) {
+function tC(e, t) {
     let n = (0, A.T4)(e.amount, e.currency),
         r = ee(t);
     return ''.concat(n, '/').concat(r);
 }
-function tC(e) {
+function tR(e) {
     return e;
 }
-function tR(e) {
+function tP(e) {
     return 'isNitroLocked' in e;
 }
-function tP() {
+function tw() {
     let e = (0, s.e7)([p.default], () => p.default.getCurrentUser());
     return (0, S.M5)(e, R.p9.TIER_2);
 }
-function tw(e) {
+function tD(e) {
     return null != e && R.OT.includes(e) ? 1 : 2;
 }
-function tD(e) {
+function tL(e) {
     return e === R.Rt ? R.FL : R.ff;
 }
-function tL(e) {
+function tx(e) {
     if (e === R.rV.YEAR) return w.intl.string(w.t.tfqrho);
     if (e === R.rV.MONTH) return w.intl.string(w.t.FPybU1);
     throw Error('Invalid interval type: '.concat(e));
 }
-function tx(e) {
+function tM(e) {
     return null != e && !e.isProvisional && !e.bot;
 }
-function tM(e) {
-    return tk(e.map((e) => e.skuId));
-}
 function tk(e) {
+    return tj(e.map((e) => e.skuId));
+}
+function tj(e) {
     return e.reduce((e, t) => {
         let [n, r] = R.Cx[t],
             i = 1;
@@ -1467,12 +1469,12 @@ function tk(e) {
         return e + i * r;
     }, 0);
 }
-let tj = Object.freeze({
-    isNewUser: (e) => null != e && Date.now() - e.createdAt.getTime() < B,
+let tU = Object.freeze({
+    isNewUser: te,
     isPremiumAtLeast: S.yd,
     isPremium: S.I5,
     isPremiumExactly: S.M5,
-    isPremiumEligible: tx,
+    isPremiumEligible: tM,
     getPrice: H,
     getDefaultPrice: Z,
     getInterval: Q,
@@ -1483,8 +1485,8 @@ let tj = Object.freeze({
     getDisplayPremiumType: eo,
     getPremiumPlanOptions: ef,
     getUpgradeEligibilities: eh,
-    getReverseTrialWeeks: tw,
-    formatInterval: tL,
+    getReverseTrialWeeks: tD,
+    formatInterval: tx,
     getPlanDescription: el,
     isPremiumSku: ed,
     getClosestUpgrade: em,
@@ -1513,35 +1515,35 @@ let tj = Object.freeze({
     getPremiumTypeFromSubscription: e8,
     getPremiumTypeFromSubscriptionRenewalMutations: e7,
     getPremiumGradientColor: e9,
-    getUnactivatedFractionalPremiumHours: tM,
-    castPremiumSubscriptionAsSkuId: tC,
-    canUseAnimatedEmojis: te,
-    canUseEmojisEverywhere: tt,
-    canUseSoundboardEverywhere: tn,
-    canUseCustomCallSounds: tr,
-    canUploadLargeFiles: ti,
-    canUseBadges: ta,
-    canUseHighVideoUploadQuality: to,
-    canEditDiscriminator: ts,
-    hasBoostDiscount: tl,
-    canUseAnimatedAvatar: tc,
-    canUseFancyVoiceChannelReactions: tu,
-    canInstallPremiumApplications: td,
-    canUseIncreasedMessageLength: tf,
-    canUseIncreasedGuildCap: t_,
-    canRedeemPremiumPerks: tp,
-    canUsePremiumProfileCustomization: th,
-    canUsePremiumAppIcons: tm,
-    canUsePremiumGuildMemberProfile: tg,
-    canUseClientThemes: tE,
-    canStreamQuality: tb,
-    hasFreeBoosts: ty,
-    canUseCustomStickersEverywhere: tO,
-    canUseCustomBackgrounds: tv,
-    canUseCollectibles: tI,
-    canUseCustomNotificationSounds: tT,
-    canUsePremiumVoiceFilters: tS,
-    canUseChatWallpapers: tA,
-    formatPriceString: tN,
+    getUnactivatedFractionalPremiumHours: tk,
+    castPremiumSubscriptionAsSkuId: tR,
+    canUseAnimatedEmojis: tt,
+    canUseEmojisEverywhere: tn,
+    canUseSoundboardEverywhere: tr,
+    canUseCustomCallSounds: ti,
+    canUploadLargeFiles: ta,
+    canUseBadges: to,
+    canUseHighVideoUploadQuality: ts,
+    canEditDiscriminator: tl,
+    hasBoostDiscount: tc,
+    canUseAnimatedAvatar: tu,
+    canUseFancyVoiceChannelReactions: td,
+    canInstallPremiumApplications: tf,
+    canUseIncreasedMessageLength: t_,
+    canUseIncreasedGuildCap: tp,
+    canRedeemPremiumPerks: th,
+    canUsePremiumProfileCustomization: tm,
+    canUsePremiumAppIcons: tg,
+    canUsePremiumGuildMemberProfile: tE,
+    canUseClientThemes: tb,
+    canStreamQuality: ty,
+    hasFreeBoosts: tO,
+    canUseCustomStickersEverywhere: tv,
+    canUseCustomBackgrounds: tI,
+    canUseCollectibles: tT,
+    canUseCustomNotificationSounds: tS,
+    canUsePremiumVoiceFilters: tA,
+    canUseChatWallpapers: tN,
+    formatPriceString: tC,
     StreamQuality: V
 });
