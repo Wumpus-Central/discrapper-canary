@@ -14601,40 +14601,6 @@ svg.radioIcon_c1e9c4 {
     overflow: hidden
 }
 
-.horizontal_e03578 {
-    grid-column: 1/span 5;
-    grid-row: 2;
-    margin: 24px
-}
-
-.vertical_e03578 {
-    grid-column: 3;
-    grid-row: 1/span 3;
-    margin: 24px
-}
-
-.mediaArea_e03578 {
-    grid-column: 1/span 5;
-    grid-row: 1/span 3;
-    place-self: center
-}
-
-.full-motion .animated_e03578 {
-    animation: fadeIn_e03578 .2s ease-out forwards
-}
-
-@keyframes fadeIn_e03578 {
-    0% {
-        opacity: 0;
-        scale: .85
-    }
-
-    to {
-        opacity: 1;
-        scale: 1
-    }
-}
-
 @keyframes fadeIn__5cd44 {
     0% {
         opacity: 0
@@ -14663,6 +14629,24 @@ svg.radioIcon_c1e9c4 {
 .base__5cd44.hidden__5cd44:not(.focusSensitive__5cd44:focus-within) {
     animation: fadeOut__5cd44 .15s ease-out forwards;
     pointer-events: none
+}
+
+.horizontal_e03578 {
+    grid-column: 1/span 5;
+    grid-row: 2;
+    margin: 24px
+}
+
+.vertical_e03578 {
+    grid-column: 3;
+    grid-row: 1/span 3;
+    margin: 24px
+}
+
+.mediaArea_e03578 {
+    grid-column: 1/span 5;
+    grid-row: 1/span 3;
+    place-self: center
 }
 
 .controlIcon_f1ceac {
@@ -15721,18 +15705,6 @@ svg.radioIcon_c1e9c4 {
 
 .enable-forced-colors .videoControls_cf09d8 {
     background-color: ButtonFace
-}
-
-.wrapper__091cf {
-    cursor: inherit
-}
-
-.wrapper__091cf.pannable__091cf {
-    cursor: grab
-}
-
-.wrapper__091cf.pannable__091cf.panning__091cf {
-    cursor: grabbing
 }
 
 .dimensionlessImage_a22bfd {
