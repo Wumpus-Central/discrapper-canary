@@ -9986,7 +9986,12 @@ svg.radioIcon_c1e9c4 {
 }
 
 .container__9293f.transparent__9293f {
-    background: transparent
+    background: transparent;
+    pointer-events: none
+}
+
+.container__9293f.transparent__9293f.showToolbar__9293f {
+    pointer-events: auto
 }
 
 .upperContainer__9293f {
@@ -10030,6 +10035,23 @@ svg.radioIcon_c1e9c4 {
 
 .transparent__9293f .children__9293f:after {
     display: none
+}
+
+.transparent__9293f {
+    border-bottom: none
+}
+
+.transparent__9293f .children__9293f:not(.showToolbar__9293f),
+.transparent__9293f .toolbar__9293f:not(.showToolbar__9293f),
+.transparent__9293f .upperContainer__9293f:not(.showToolbar__9293f) {
+    opacity: 0;
+    pointer-events: none
+}
+
+.transparent__9293f .children__9293f.showToolbar__9293f,
+.transparent__9293f .toolbar__9293f.showToolbar__9293f,
+.transparent__9293f .upperContainer__9293f.showToolbar__9293f {
+    pointer-events: auto
 }
 
 .toolbar__9293f {
