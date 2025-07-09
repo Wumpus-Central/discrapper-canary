@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(688465),
-    l = n(388032);
-let a = () =>
+    a = n(388032);
+let l = () =>
     (0, i.jsx)(r.DY3, {
-        text: l.intl.string(l.t['/fgfWl']),
+        text: a.intl.string(a.t['/fgfWl']),
         children: (0, i.jsx)(s.Z, {})
     });

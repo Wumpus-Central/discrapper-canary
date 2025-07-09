@@ -1,88 +1,88 @@
-l.d(t, { Z: () => s });
-var n = l(255367);
-l(73800);
-var r = l(325767);
+n.d(t, { Z: () => s });
+var l = n(255367);
+n(73800);
+var r = n(325767);
 function s(e) {
     var t,
-        l,
-        { width: s = 24, height: i = 24, color: o = 'currentColor' } = e,
-        a = (function (e, t) {
+        n,
+        { width: s = 24, height: i = 24, color: a = 'currentColor' } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var l,
-                n,
+            var n,
+                l,
                 r = (function (e, t) {
                     if (null == e) return {};
-                    var l,
-                        n,
+                    var n,
+                        l,
                         r = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) ((l = s[n]), t.indexOf(l) >= 0 || (r[l] = e[l]));
+                    for (l = 0; l < s.length; l++) ((n = s[l]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) ((l = s[n]), !(t.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]));
+                for (l = 0; l < s.length; l++) ((n = s[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
         })(e, ['width', 'height', 'color']);
-    return (0, n.jsxs)(
+    return (0, l.jsxs)(
         'svg',
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var l = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(l);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    l = Object.keys(n);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(l).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                    (l = l.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        ((n = l[t]),
+                    l.forEach(function (t) {
+                        var l;
+                        ((l = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: n,
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n));
+                                : (e[t] = l));
                     }));
             }
             return e;
-        })({}, (0, r.Z)(a))),
-        (l = l =
+        })({}, (0, r.Z)(o))),
+        (n = n =
             {
                 width: s,
                 height: i,
                 viewBox: '0 0 16 16',
                 children: [
-                    (0, n.jsx)('path', {
+                    (0, l.jsx)('path', {
                         fillRule: 'evenodd',
                         clipRule: 'evenodd',
                         d: 'M8.45329 8.53891L3.26217 13.7844C2.95995 14.0719 2.49772 14.0719 2.21328 13.7844C1.92883 13.497 1.92883 13.0299 2.21328 12.7245L6.88884 7.99999L2.21328 3.27543C1.92883 2.988 1.92883 2.50297 2.21328 2.21555C2.49772 1.92812 2.95995 1.92812 3.26217 2.21555L8.45329 7.47903C8.73774 7.76645 8.73774 8.23352 8.45329 8.53891Z',
-                        fill: o
+                        fill: a
                     }),
-                    (0, n.jsx)('path', {
+                    (0, l.jsx)('path', {
                         fillRule: 'evenodd',
                         clipRule: 'evenodd',
                         d: 'M14.4533 8.53891L9.26217 13.7844C8.95995 14.0719 8.49772 14.0719 8.21328 13.7844C7.92883 13.497 7.92883 13.0299 8.21328 12.7245L12.8888 7.99999L8.21328 3.27543C7.92883 2.988 7.92883 2.50297 8.21328 2.21555C8.49772 1.92812 8.95995 1.92812 9.26217 2.21555L14.4533 7.47903C14.7377 7.76645 14.7377 8.23352 14.4533 8.53891Z',
-                        fill: o
+                        fill: a
                     })
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
-                  var l = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      l.push.apply(l, n);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
-                  return l;
-              })(Object(l)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
         t)
     );

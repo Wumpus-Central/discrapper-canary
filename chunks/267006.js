@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(846027),
     d = n(921801),
@@ -16,11 +16,11 @@ var i = n(255367),
     b = n(20493);
 function x(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, a.e7)([u.Z], () => u.Z.getExperimentalEncoders());
+        n = (0, l.e7)([u.Z], () => u.Z.getExperimentalEncoders());
     return (0, i.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, i.jsx)(o.j7V, {
-            className: l()(b.marginTop8, b.marginBottom20),
+            className: a()(b.marginTop8, b.marginBottom20),
             value: n,
             onChange: c.Z.setExperimentalEncoders,
             hideBorder: t,
@@ -30,13 +30,13 @@ function x(e) {
 }
 function _(e) {
     let { refreshStyles: t = !1 } = e,
-        { openH264: n, hardwareEncoding: s } = (0, a.cj)([u.Z], () => ({
+        { openH264: n, hardwareEncoding: s } = (0, l.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
         _ = r.useRef(null);
     (0, m.Z)(_, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
-    let E = r.useCallback((e) => {
+    let j = r.useCallback((e) => {
             e
                 ? c.Z.setHardwareEncoding(!0)
                 : (0, o.h7j)((e) => {
@@ -99,12 +99,12 @@ function _(e) {
                       );
                   });
         }, []),
-        j = (0, i.jsxs)(i.Fragment, {
+        E = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(d.F, {
                     setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                     children: (0, i.jsx)(o.j7V, {
-                        className: t ? null : l()(b.marginTop8, b.marginBottom20),
+                        className: t ? null : a()(b.marginTop8, b.marginBottom20),
                         value: n,
                         onChange: c.Z.setOpenH264,
                         hideBorder: t,
@@ -118,9 +118,9 @@ function _(e) {
                             (0, i.jsx)(o.j7V, {
                                 style: { scrollMarginTop: '48px' },
                                 containerRef: _,
-                                className: t ? null : l()(b.marginTop8, b.marginBottom20),
+                                className: t ? null : a()(b.marginTop8, b.marginBottom20),
                                 value: s,
-                                onChange: E,
+                                onChange: j,
                                 note: f.intl.string(f.t.P1UKqq),
                                 hideBorder: t,
                                 children: f.intl.string(f.t.Sln58f)
@@ -139,11 +139,11 @@ function _(e) {
     return (0, i.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
         children: t
-            ? j
+            ? E
             : (0, i.jsx)(o.hjN, {
                   className: b.marginBottom20,
                   title: f.intl.string(f.t.Tceiq6),
-                  children: j
+                  children: E
               })
     });
 }

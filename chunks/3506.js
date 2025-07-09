@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(512722),
     s = n.n(r),
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     d = n(660216),
@@ -17,12 +17,12 @@ var r = n(512722),
     b = n(486016),
     x = n(809357),
     _ = n(371651),
-    E = n(624864),
-    j = n(957148),
+    j = n(624864),
+    E = n(957148),
     O = n(556296),
     C = n(808506),
-    S = n(237997),
-    v = n(626135);
+    v = n(237997),
+    S = n(626135);
 n(63063);
 var T = n(13140),
     N = n(981631),
@@ -31,7 +31,7 @@ var T = n(13140),
 let A = P(null);
 function P(e) {
     var t;
-    let n = S.default.getNotificationPositionMode(),
+    let n = v.default.getNotificationPositionMode(),
         i = n !== N._vf.DISABLED,
         r = O.ZP.getOverlayKeybind(),
         s = O.ZP.getOverlayChatKeybind();
@@ -39,10 +39,10 @@ function P(e) {
         enabled: C.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
+        text_notifications_mode: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, T.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
-        text_opacity_slider: S.default.getTextWidgetOpacity(),
+        text_opacity_slider: v.default.getTextWidgetOpacity(),
         old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : C.default.enabled
     };
 }
@@ -56,7 +56,7 @@ function R(e) {
 }
 function D(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { oopEnabled: r, legacyEnabled: l } = (0, o.cj)([_.default], () => _.default.getGlobalEnabledStatus()),
+        { oopEnabled: r, legacyEnabled: a } = (0, o.cj)([_.default], () => _.default.getGlobalEnabledStatus()),
         {
             avatarSizeMode: C,
             displayNameMode: T,
@@ -64,20 +64,20 @@ function D(e) {
             textChatDisabled: Z,
             notificationPositionMode: w,
             shouldShowKeybindIndicators: k
-        } = (0, o.cj)([S.default, E.Z], () => ({
-            avatarSizeMode: S.default.getAvatarSizeMode(),
-            displayNameMode: S.default.getDisplayNameMode(),
-            displayUserMode: S.default.getDisplayUserMode(),
-            notificationPositionMode: S.default.getNotificationPositionMode(),
-            shouldShowKeybindIndicators: S.default.showKeybindIndicators,
-            textChatDisabled: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
+        } = (0, o.cj)([v.default, j.Z], () => ({
+            avatarSizeMode: v.default.getAvatarSizeMode(),
+            displayNameMode: v.default.getDisplayNameMode(),
+            displayUserMode: v.default.getDisplayUserMode(),
+            notificationPositionMode: v.default.getNotificationPositionMode(),
+            shouldShowKeybindIndicators: v.default.showKeybindIndicators,
+            textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
         L = (0, o.e7)([O.ZP], () => O.ZP.getOverlayKeybind()),
         B = (0, x.Z)({ location: 'overlay_user_settings' }),
         M = (0, p.$1)(),
         U = P(A);
     return (
-        a().isEqual(U, A) || (v.default.track(N.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
+        l().isEqual(U, A) || (S.default.track(N.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(c.hjN, {
@@ -94,7 +94,7 @@ function D(e) {
                                     className: y.enableOverlayItem,
                                     children: (0, i.jsx)(c.j7V, {
                                         className: y.enableSwitch,
-                                        value: l,
+                                        value: a,
                                         disabled: M,
                                         note: M ? I.intl.string(I.t.Eb0lnJ) : null,
                                         hideBorder: !0,
@@ -102,7 +102,7 @@ function D(e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
                                             let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, j.l)(f.AE.LEGACY, i));
+                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, E.l)(f.AE.LEGACY, i));
                                         },
                                         children: I.intl.string(I.t.vSP6c3)
                                     })
@@ -111,7 +111,7 @@ function D(e) {
                                     title: I.intl.string(I.t.VsAZcH),
                                     className: y.enableOverlayItem,
                                     children: (0, i.jsx)(m.Z, {
-                                        disabled: !l,
+                                        disabled: !a,
                                         defaultValue: null != L ? L.shortcut : [],
                                         onChange: function (e) {
                                             var t, n;
@@ -257,7 +257,7 @@ function D(e) {
                                 value: w !== N._vf.DISABLED && !Z,
                                 disabled: w === N._vf.DISABLED,
                                 onChange: function () {
-                                    let e = E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT);
+                                    let e = j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT);
                                     u.Z.setNotificationDisabledSetting(b.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
                                 },
                                 hideBorder: !0,

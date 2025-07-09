@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => A }), t(539854));
+(t.d(n, { Z: () => k }), t(539854));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
@@ -54,7 +54,7 @@ function B(e) {
     }
     return e;
 }
-function k(e, n) {
+function A(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -72,8 +72,8 @@ function k(e, n) {
         e
     );
 }
-function A(e) {
-    let { channelId: n, baseChannelId: A, channelViewSource: R = 'Split View', isResourceChannelView: D } = e,
+function k(e) {
+    let { channelId: n, baseChannelId: k, channelViewSource: R = 'Split View', isResourceChannelView: D } = e,
         L = (0, i.e7)([v.Z], () => v.Z.getChannel(n)),
         M = (0, i.e7)([I.Z], () => I.Z.getGuild(null == L ? void 0 : L.getGuildId())),
         H = (0, i.e7)([Z.default], () => Z.default.getCurrentUser()),
@@ -89,7 +89,7 @@ function A(e) {
         X = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            null == L || X.current || ((X.current = !0), (0, d.yw)(E.rMx.CHANNEL_OPENED, k(B({}, (0, d.$H)(L.id)), { channel_view: R })), (0, u.a)(E.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
+            null == L || X.current || ((X.current = !0), (0, d.yw)(E.rMx.CHANNEL_OPENED, A(B({}, (0, d.$H)(L.id)), { channel_view: R })), (0, u.a)(E.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
         }, [L, R]),
         null == L || null == M)
     )
@@ -102,7 +102,7 @@ function A(e) {
             {
                 icon: a.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => b.Z.closeChannelSidebar(A)
+                onClick: () => b.Z.closeChannelSidebar(k)
             },
             'close'
         )
@@ -128,7 +128,7 @@ function A(e) {
                                   return (n) =>
                                       (0, l.jsx)(
                                           e,
-                                          k(B({}, n), {
+                                          A(B({}, n), {
                                               channel: L,
                                               guild: M
                                           })

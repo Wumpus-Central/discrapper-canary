@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(257502),
     i = n(749280),
     l = n(456100);
-function o(e) {
+function a(e) {
     let { enabled: t } = l.c.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-        { Component: n, events: o, play: a } = (0, i.w)(),
+        { Component: n, events: a, play: o } = (0, i.w)(),
         { Component: s, events: c, play: u } = (0, r._)();
     return t
         ? {
@@ -13,8 +13,8 @@ function o(e) {
               Component: s
           }
         : {
-              events: o,
-              play: a,
+              events: a,
+              play: o,
               Component: n
           };
 }

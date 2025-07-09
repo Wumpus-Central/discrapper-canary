@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(255367);
 n(73800);
-var i = n(481060),
+var i = n(755721),
     a = n(763472),
     o = n(394821),
     s = n(49012),
@@ -41,7 +41,7 @@ function h(e) {
                       u.tG,
                       {
                           text: l ? f.intl.string(f.t['I6JG4+']) : e,
-                          size: i.PhG.TINY,
+                          size: i.Ph.TINY,
                           themeColor: 'secondary',
                           onClick: (e) => {
                               (e.stopPropagation(),

@@ -1,112 +1,113 @@
-(t.d(r, { default: () => v }), t(388685));
+(t.d(r, { default: () => O }), t(388685));
 var n = t(255367),
     o = t(73800),
     s = t(120356),
     a = t.n(s),
     l = t(512722),
     i = t.n(l),
-    c = t(481060),
-    d = t(493773),
-    u = t(198993),
-    f = t(626135),
-    C = t(985002),
-    m = t(880257),
-    p = t(631885),
-    x = t(292352),
-    b = t(981631),
-    g = t(916723),
-    h = t(388032),
-    y = t(22419),
-    _ = t(20493);
-let v = (e) => {
+    c = t(755721),
+    d = t(481060),
+    u = t(493773),
+    f = t(198993),
+    C = t(626135),
+    m = t(985002),
+    p = t(880257),
+    x = t(631885),
+    b = t(292352),
+    g = t(981631),
+    h = t(916723),
+    y = t(388032),
+    _ = t(22419),
+    v = t(20493);
+let O = (e) => {
     let { transitionState: r, onClose: t } = e,
-        s = (0, m.Z)(),
-        [l, v] = o.useState(!1),
-        { getLinkCode: O, isGetLinkCodeLoading: j } = (0, C.G)({}),
-        z = (0, p.rW)(),
-        N = (0, p.gU)(),
-        q = o.useRef(N);
+        s = (0, p.Z)(),
+        [l, O] = o.useState(!1),
+        { getLinkCode: j, isGetLinkCodeLoading: z } = (0, m.G)({}),
+        N = (0, x.rW)(),
+        q = (0, x.gU)(),
+        S = o.useRef(q);
     i()(!s, 'FamilyCenterQRCodeModal should only be rendered for teens.');
-    let k = () => {
-        (v((e) => (f.default.track(b.rMx.FAMILY_CENTER_ACTION, { action: l ? x.YC.HideQRCode : x.YC.RevealQRCode }), !e)),
+    let w = () => {
+        (O((e) => (C.default.track(g.rMx.FAMILY_CENTER_ACTION, { action: l ? b.YC.HideQRCode : b.YC.RevealQRCode }), !e)),
             l ||
                 setTimeout(() => {
                     t();
-                }, x.f2));
+                }, b.f2));
     };
-    ((0, d.ZP)(() => {
-        O();
+    ((0, u.ZP)(() => {
+        j();
     }),
         o.useEffect(() => {
-            N > q.current && t();
-        }, [q, N, t]));
-    let S = l && !j && null != z;
-    return (0, n.jsxs)(c.Y0X, {
-        className: y.modalRoot,
+            q > S.current && t();
+        }, [S, q, t]));
+    let E = l && !z && null != N;
+    return (0, n.jsxs)(d.Y0X, {
+        className: _.modalRoot,
         transitionState: r,
         parentComponent: 'FamilyCenterQRCodeModal',
         children: [
-            (0, n.jsxs)(c.qXd, {
-                className: y.notice,
-                color: c.DM8.WARNING,
+            (0, n.jsxs)(d.qXd, {
+                className: _.notice,
+                color: d.DM8.WARNING,
                 children: [
-                    (0, n.jsx)(c.d3s, {
+                    (0, n.jsx)(d.d3s, {
                         size: 'sm',
                         color: 'currentColor'
                     }),
-                    h.intl.string(g.default.iHYMAw)
+                    y.intl.string(h.default.iHYMAw)
                 ]
             }),
-            (0, n.jsxs)(c.hzk, {
-                className: y.content,
+            (0, n.jsxs)(d.hzk, {
+                className: _.content,
                 children: [
-                    (0, n.jsx)(c.Text, {
-                        className: _.marginBottom8,
+                    (0, n.jsx)(d.Text, {
+                        className: v.marginBottom8,
                         variant: 'text-lg/bold',
                         color: 'header-primary',
-                        children: h.intl.string(g.default.AVTZaG)
+                        children: y.intl.string(h.default.AVTZaG)
                     }),
-                    (0, n.jsx)(c.Text, {
-                        className: _.marginBottom20,
+                    (0, n.jsx)(d.Text, {
+                        className: v.marginBottom20,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: h.intl.format(g.default.LyyCsL, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        children: y.intl.format(h.default.LyyCsL, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     (0, n.jsx)('div', {
-                        className: y.qrCodeContainer,
-                        children: (0, n.jsx)(c.P3F, {
-                            className: a()(y.qrCodeObscure, { [y.visible]: S }),
-                            onClick: k,
-                            children: (0, n.jsx)(u.c2, {
+                        className: _.qrCodeContainer,
+                        children: (0, n.jsx)(d.P3F, {
+                            className: a()(_.qrCodeObscure, { [_.visible]: E }),
+                            onClick: w,
+                            children: (0, n.jsx)(f.c2, {
                                 size: 272,
-                                text: S ? z : x.vH,
-                                overlaySize: u.cK.SIZE_60,
-                                className: y.qrCodeOverlay
+                                text: E ? N : b.vH,
+                                overlaySize: f.cK.SIZE_60,
+                                className: _.qrCodeOverlay
                             })
                         })
                     }),
-                    (0, n.jsx)(c.Text, {
-                        className: y.reminder,
+                    (0, n.jsx)(d.Text, {
+                        className: _.reminder,
                         variant: 'text-xs/semibold',
                         color: 'header-secondary',
-                        children: h.intl.string(g.default.goDyoa)
+                        children: y.intl.string(h.default.goDyoa)
                     }),
                     (0, n.jsxs)('div', {
-                        className: a()(y.buttonContainer, _.marginTop20),
+                        className: a()(_.buttonContainer, v.marginTop20),
                         children: [
-                            (0, n.jsx)(c.zxk, {
-                                className: _.marginBottom8,
+                            (0, n.jsx)(c.zx, {
+                                className: v.marginBottom8,
                                 grow: !0,
-                                size: c.zxk.Sizes.LARGE,
-                                onClick: k,
-                                submitting: l && j,
-                                children: l ? h.intl.string(g.default.wg2xwc) : h.intl.string(g.default['10dX6e'])
+                                size: c.zx.Sizes.LARGE,
+                                onClick: w,
+                                submitting: l && z,
+                                children: l ? y.intl.string(h.default.wg2xwc) : y.intl.string(h.default['10dX6e'])
                             }),
-                            (0, n.jsx)(c.zxk, {
+                            (0, n.jsx)(c.zx, {
                                 grow: !0,
-                                color: c.zxk.Colors.PRIMARY,
+                                color: c.zx.Colors.PRIMARY,
                                 onClick: t,
-                                children: h.intl.string(h.t.cpT0Cg)
+                                children: y.intl.string(y.t.cpT0Cg)
                             })
                         ]
                     })

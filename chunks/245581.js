@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var l = n(481060),
     i = n(313201),
     u = n(268999);
-function s(e) {
-    let { transitionState: t, title: n, subtitle: s, children: a } = e,
-        o = (0, i.Dt)();
+function a(e) {
+    let { transitionState: t, title: n, subtitle: a, children: s } = e,
+        c = (0, i.Dt)();
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        'aria-labelledby': o,
+        'aria-labelledby': c,
         parentComponent: 'SecureFramesVerificationModal',
         children: [
             (0, r.jsx)('div', {
@@ -37,9 +37,9 @@ function s(e) {
                         className: u.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: s
+                        children: a
                     }),
-                    a
+                    s
                 ]
             })
         ]

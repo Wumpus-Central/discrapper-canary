@@ -1,28 +1,29 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    s = n(367907),
-    a = n(807582),
-    o = n(26323),
-    c = n(516129),
-    d = n(345861),
-    u = n(709586),
-    m = n(768581),
-    g = n(434404),
-    p = n(981631),
-    f = n(30513),
-    h = n(486324),
-    x = n(200299),
-    b = n(388032),
-    j = n(773100);
-let _ = function (e) {
+    l = n(755721),
+    s = n(481060),
+    a = n(367907),
+    o = n(807582),
+    c = n(26323),
+    d = n(516129),
+    u = n(345861),
+    m = n(709586),
+    g = n(768581),
+    p = n(434404),
+    f = n(981631),
+    h = n(30513),
+    x = n(486324),
+    b = n(200299),
+    j = n(388032),
+    _ = n(773100);
+let v = function (e) {
     let { guild: t } = e,
-        _ = t.features.has(p.oNc.BANNER),
-        v = i.useCallback(
+        v = t.features.has(f.oNc.BANNER),
+        O = i.useCallback(
             (e, i) => {
-                if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
-                (0, l.ZDy)(async () => {
+                if (null == e || void 0 === i) return void p.Z.saveGuild(t.id, { homeHeader: null });
+                (0, s.ZDy)(async () => {
                     let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
@@ -57,9 +58,9 @@ let _ = function (e) {
                                     file: i,
                                     onCrop: (e) => {
                                         let { imageUri: n } = e;
-                                        return g.Z.saveGuild(t.id, { homeHeader: n });
+                                        return p.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: h.pC.HOME_HEADER
+                                    uploadType: x.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -68,86 +69,86 @@ let _ = function (e) {
             },
             [t.id]
         ),
-        O = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 (e.preventDefault(),
                     e.stopPropagation(),
-                    (0, s.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, a.yw)(f.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
-                            section: p.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: p.qAy.LEARN_MORE
+                            section: f.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: f.qAy.LEARN_MORE
                         },
                         guild_id: null == t ? void 0 : t.id,
                         location_stack: []
                     }),
-                    (0, o.Z)({
+                    (0, c.Z)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
-                            section: p.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: p.qAy.ONBOARDING_EDIT,
-                            page: p.ZY5.GUILD_SETTINGS
+                            section: f.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: f.qAy.ONBOARDING_EDIT,
+                            page: f.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, f.XO)()
+                        perks: (0, h.XO)()
                     }));
             },
             [t]
         ),
-        C = (0, r.jsx)(c.Z, {
+        y = (0, r.jsx)(d.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
-                    ? m.ZP.getGuildHomeHeaderURL({
+                    ? g.ZP.getGuildHomeHeaderURL({
                           id: t.id,
                           homeHeader: e
                       })
                     : null,
-            disabled: !_,
-            onChange: v,
-            hint: b.intl.string(b.t.NyXznp),
-            enabled: _,
-            maxFileSizeBytes: x.B
+            disabled: !v,
+            onChange: O,
+            hint: j.intl.string(j.t.NyXznp),
+            enabled: v,
+            maxFileSizeBytes: b.B
         });
-    return _
+    return v
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)('div', {
-                      className: j.sectionHeader,
+                      className: _.sectionHeader,
                       children: [
-                          (0, r.jsx)(l.X6q, {
-                              className: j.header,
+                          (0, r.jsx)(s.X6q, {
+                              className: _.header,
                               variant: 'heading-lg/extrabold',
-                              children: b.intl.string(b.t.BBj1nZ)
+                              children: j.intl.string(j.t.BBj1nZ)
                           }),
-                          (0, r.jsx)(a.Z, {
-                              className: j.boostIndicator,
+                          (0, r.jsx)(o.Z, {
+                              className: _.boostIndicator,
                               guild: t,
-                              guildFeature: p.oNc.BANNER,
-                              onClick: O
+                              guildFeature: f.oNc.BANNER,
+                              onClick: C
                           })
                       ]
                   }),
                   (0, r.jsxs)('div', {
-                      className: j.section,
+                      className: _.section,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: j.homeBannerExplainer,
+                              className: _.homeBannerExplainer,
                               children: [
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: b.intl.string(b.t.Vwintr)
+                                      children: j.intl.string(j.t.Vwintr)
                                   }),
-                                  (0, r.jsx)(d.Z, {
-                                      color: l.Ttl.BRAND,
-                                      className: j.uploadButton,
-                                      buttonCTA: b.intl.string(b.t.yG2pUl),
-                                      onChange: v,
-                                      maxFileSizeBytes: x.B
+                                  (0, r.jsx)(u.Z, {
+                                      color: l.Tt.BRAND,
+                                      className: _.uploadButton,
+                                      buttonCTA: j.intl.string(j.t.yG2pUl),
+                                      onChange: O,
+                                      maxFileSizeBytes: b.B
                                   })
                               ]
                           }),
-                          (0, r.jsx)('div', { children: C })
+                          (0, r.jsx)('div', { children: y })
                       ]
                   })
               ]
@@ -155,53 +156,53 @@ let _ = function (e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)('div', {
-                      className: j.sectionHeader,
+                      className: _.sectionHeader,
                       children: [
-                          (0, r.jsx)(l.X6q, {
-                              className: j.header,
+                          (0, r.jsx)(s.X6q, {
+                              className: _.header,
                               variant: 'heading-lg/extrabold',
-                              children: b.intl.string(b.t.BBj1nZ)
+                              children: j.intl.string(j.t.BBj1nZ)
                           }),
-                          (0, r.jsx)(a.Z, {
-                              className: j.boostIndicator,
+                          (0, r.jsx)(o.Z, {
+                              className: _.boostIndicator,
                               guild: t,
-                              guildFeature: p.oNc.BANNER,
-                              onClick: O
+                              guildFeature: f.oNc.BANNER,
+                              onClick: C
                           })
                       ]
                   }),
                   (0, r.jsxs)('div', {
-                      className: j.section,
+                      className: _.section,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: j.homeBannerExplainer,
+                              className: _.homeBannerExplainer,
                               children: [
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: b.intl.string(b.t.Vwintr)
+                                      children: j.intl.string(j.t.Vwintr)
                                   }),
-                                  (0, r.jsxs)(l.gtL, {
-                                      className: j.upsellButton,
-                                      innerClassName: j.upsellButtonInner,
-                                      color: l.zxk.Colors.GREEN,
-                                      onClick: O,
+                                  (0, r.jsxs)(s.gtL, {
+                                      className: _.upsellButton,
+                                      innerClassName: _.upsellButtonInner,
+                                      color: l.zx.Colors.GREEN,
+                                      onClick: C,
                                       children: [
-                                          (0, r.jsx)(u.Z, {
+                                          (0, r.jsx)(m.Z, {
                                               height: 16,
                                               width: 16
                                           }),
-                                          b.intl.string(b.t['+7XY39'])
+                                          j.intl.string(j.t['+7XY39'])
                                       ]
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              children: (0, r.jsx)(l.P3F, {
+                              children: (0, r.jsx)(s.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
-                                  onClick: O,
-                                  children: C
+                                  onClick: C,
+                                  children: y
                               })
                           })
                       ]

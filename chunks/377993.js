@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => k }), n(388685), n(539854));
+(n.d(t, { Z: () => M }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(873546),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(239091),
     c = n(144144),
     u = n(100527),
@@ -54,11 +54,11 @@ function N(e) {
 let T = [],
     A = E.ZP.getEnableHardwareAcceleration();
 function w(e) {
-    let { user: t, channel: a, status: u, activities: d } = e,
-        p = (0, o.e7)([y.Z], () => null != y.Z.getTypingUsers(a.id)[t.id]),
-        f = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
-        x = (0, o.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        O = (0, o.e7)([_.Z], () => _.Z.getNickname(t.id)),
+    let { user: t, channel: o, status: u, activities: d } = e,
+        p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
+        f = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
+        x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        O = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
         Z = i.useRef(null),
         T = (e) => {
@@ -72,7 +72,7 @@ function w(e) {
                         (l = l =
                             {
                                 user: t,
-                                channel: a
+                                channel: o
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -94,24 +94,24 @@ function w(e) {
         w = () => {
             let e = '@'.concat(j.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            (v.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
+            (v.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
                 v.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
-                c.Z.startTyping(a.id));
+                c.Z.startTyping(o.id));
         },
         R = (0, m.K)({ user: t }),
-        [k, M] = i.useState(!1);
+        [M, D] = i.useState(!1);
     return (0, r.jsx)(g.Z, {
         targetElementRef: Z,
         user: t,
-        channelId: a.id,
+        channelId: o.id,
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: w,
-        shouldShow: k,
-        onRequestClose: () => M(!1),
+        shouldShow: M,
+        onRequestClose: () => D(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
                 l = (function (e, t) {
@@ -140,24 +140,24 @@ function w(e) {
                         ref: Z,
                         user: t,
                         currentUser: f,
-                        isOwner: t.id === a.ownerId,
+                        isOwner: t.id === o.ownerId,
                         ownerTooltipText: P.intl.string(P.t['MRXZ+/']),
                         shouldAnimateStatus: A,
                         isTyping: p,
                         status: u,
                         activities: d,
                         applicationStream: E,
-                        channel: a,
+                        channel: o,
                         onContextMenu: T,
-                        selected: k,
+                        selected: M,
                         isMobile: x,
                         nick: O,
                         nameplate: R,
                         onClick: (e) => {
-                            e.shiftKey ? null == w || w() : M((e) => !e);
+                            e.shiftKey ? null == w || w() : D((e) => !e);
                         },
                         onMouseDown: (e) => {
-                            k ? e.stopPropagation() : null == i || i(e);
+                            M ? e.stopPropagation() : null == i || i(e);
                         }
                     },
                     l
@@ -176,12 +176,12 @@ function R(e, t) {
     }
     return !0;
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e,
         n = C.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
-        { listItems: c } = (0, o.e7)(
+        { listItems: c } = (0, a.e7)(
             [_.Z, C.default, b.Z],
             () => {
                 let e = (0, O.T)(t.recipients, C.default),
@@ -198,16 +198,16 @@ function k(e) {
                               activities: T
                           });
                 }
-                let o = [];
+                let a = [];
                 for (let t of e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
                         activities: n[t.id].activities
                     };
-                    o.push(e);
+                    a.push(e);
                 }
-                return { listItems: o };
+                return { listItems: a };
             },
             [t],
             R
@@ -226,7 +226,7 @@ function k(e) {
             className: Z.container,
             children: (0, r.jsx)('aside', {
                 className: Z.membersWrap,
-                children: (0, r.jsxs)(a.Ttm, {
+                children: (0, r.jsxs)(o.Ttm, {
                     className: Z.members,
                     fade: !0,
                     children: [

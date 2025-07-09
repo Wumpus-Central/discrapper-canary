@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(46973),
     c = n(846519),
     d = n(692547),
@@ -16,20 +16,20 @@ var i = n(255367),
     b = n(979385),
     x = n(251574),
     _ = n(893354),
-    E = n(20493);
-let j = (0, p.hQ)();
+    j = n(20493);
+let E = (0, p.hQ)();
 function O() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: O, autoThreshold: C } = (0, a.cj)([g.Z], () => ({
+        { threshold: O, autoThreshold: C } = (0, l.cj)([g.Z], () => ({
             threshold: g.Z.getModeOptions().threshold,
             autoThreshold: g.Z.getModeOptions().autoThreshold
         })),
         {
-            inputMode: S,
-            automaticVADSupported: v,
+            inputMode: v,
+            automaticVADSupported: S,
             isEnabled: T
-        } = (0, a.cj)([g.Z], () => ({
+        } = (0, l.cj)([g.Z], () => ({
             inputMode: g.Z.getMode(),
             automaticVADSupported: g.Z.supports(h.AN.AUTOMATIC_VAD),
             isEnabled: g.Z.isEnabled()
@@ -38,7 +38,7 @@ function O() {
         (t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE));
     }
     function I(e, t) {
-        m.Z.setMode(S, {
+        m.Z.setMode(v, {
             threshold: e,
             autoThreshold: t
         });
@@ -55,19 +55,19 @@ function O() {
         );
     }, []);
     let y = (0, i.jsx)('section', {
-        className: l()(b.inputSensitivityToggle, b.manual),
+        className: a()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
             initialValue: O + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
             onValueChange: (e) => I(-((100 - e) * 1), C),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': j,
+            'aria-labelledby': E,
             children: (0, i.jsxs)('div', {
-                className: l()(b.sliderBar, b.microphone, b.inputSensitivityBar, x.bar),
+                className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, x.bar),
                 children: [
                     (0, i.jsx)('div', {
-                        className: l()(b.fill, b.inputSensitivityBarFill),
+                        className: a()(b.fill, b.inputSensitivityBarFill),
                         style: { width: e + 100 + '%' }
                     }),
                     (0, i.jsx)('div', { className: 'grow' })
@@ -82,29 +82,29 @@ function O() {
                 children: [
                     (0, i.jsx)('div', {
                         className: b.inputSensitivitySlider,
-                        children: (0, i.jsx)('div', { className: l()(b.inputSensitivityBar, b.sliderBar, { [b.speaking]: n }) })
+                        children: (0, i.jsx)('div', { className: a()(b.inputSensitivityBar, b.sliderBar, { [b.speaking]: n }) })
                     }),
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: E.marginBottom8,
+                        className: j.marginBottom8,
                         children: f.intl.string(f.t.W3K5Ii)
                     })
                 ]
             })),
         (0, i.jsxs)(u.xJW, {
             title: f.intl.string(f.t['sqUm+v']),
-            titleId: j,
+            titleId: E,
             className: b.sensitivity,
             children: [
-                v &&
+                S &&
                     (0, i.jsx)(p.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
-                                className: l()(_.horizontal, E.marginBottom4),
+                                className: a()(_.horizontal, j.marginBottom4),
                                 children: [
                                     (0, i.jsx)(u.vwX, {
                                         tag: u.RB0.H3,
-                                        className: E.marginReset,
+                                        className: j.marginReset,
                                         children: (0, i.jsx)('label', {
                                             htmlFor: e,
                                             children: f.intl.string(f.t.I1Zuq6)
@@ -122,7 +122,7 @@ function O() {
                 !T &&
                     (0, i.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: l()(b.inputDisabledWarning, E.marginBottom8),
+                        className: a()(b.inputDisabledWarning, j.marginBottom8),
                         children: f.intl.format(f.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]

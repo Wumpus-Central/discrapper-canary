@@ -2,10 +2,10 @@ n.d(t, { Z: () => u });
 var r,
     i,
     l,
-    o = n(442837),
-    a = n(570140);
+    a = n(442837),
+    o = n(570140);
 let s = {};
-class c extends (l = o.ZP.Store) {
+class c extends (l = a.ZP.Store) {
     getFollowerStatsForChannel(e) {
         return s[e];
     }
@@ -19,7 +19,7 @@ class c extends (l = o.ZP.Store) {
               writable: !0
           })
         : (c[r] = i));
-let u = new c(a.Z, {
+let u = new c(o.Z, {
     CONNECTION_OPEN: function () {
         s = {};
     },

@@ -42,19 +42,19 @@ function E(e) {
     let R = (0, a.e7)([m.Z], () => m.Z.getHighestRole(T), [T]),
         Z = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
         D = i.useRef(null),
-        k = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
-        A = {
+        A = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
+        L = {
             role: P,
             editRoleId: n
         },
-        L = i.useRef(A);
+        k = i.useRef(L);
     if (
         (i.useEffect(() => {
-            L.current = A;
+            k.current = L;
         }),
         i.useEffect(() => {
             var e, t;
-            let { role: n, editRoleId: r } = L.current,
+            let { role: n, editRoleId: r } = k.current,
                 i = (0, b.UT)(E),
                 l = null != (t = null == (e = f.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(
@@ -128,7 +128,7 @@ function E(e) {
                 role: P,
                 locked: Z,
                 setSelectedSection: S,
-                integrations: null != k ? k : void 0
+                integrations: null != A ? A : void 0
             });
             break;
         case y.ZI.MEMBERS:

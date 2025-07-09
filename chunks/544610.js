@@ -2,8 +2,8 @@ let r;
 (n.d(t, { Z: () => B }), n(388685), n(781311), n(539854), n(642613));
 var i,
     l,
-    o,
-    a = n(442837),
+    a,
+    o = n(442837),
     s = n(570140),
     c = n(279779),
     u = n(353926),
@@ -87,8 +87,8 @@ function N() {
                         let r = b.Z.getScoreWithoutFetchingLatest(e.id),
                             i = e.getRecipientId(),
                             l = 0.2 * !!_.Z.isFriend(i),
-                            o = 0.1 * (null != m.Z.getDMFromUserId(i));
-                        n[i] = 1 + r / t + l + o;
+                            a = 0.1 * (null != m.Z.getDMFromUserId(i));
+                        n[i] = 1 + r / t + l + a;
                     }),
                     n
                 );
@@ -105,9 +105,9 @@ function T() {
 function A(e, t) {
     if (g.Z.hasConsented(C.pjP.PERSONALIZATION)) {
         var n, r, i, l;
-        let o = null != (i = null == (n = d.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability) ? i : 0,
-            a = null != (l = null == (r = d.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability) ? l : 0;
-        if (o !== a) return a - o;
+        let a = null != (i = null == (n = d.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability) ? i : 0,
+            o = null != (l = null == (r = d.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability) ? l : 0;
+        if (a !== o) return o - a;
     }
     return (0, h._I)(f.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, h._I)(f.ZP.getName(t.user).toLocaleLowerCase()));
 }
@@ -128,18 +128,18 @@ function w(e) {
 function R() {
     return (null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000));
 }
-function k(e) {
+function M(e) {
     if (e.key !== C.vTt) return !1;
     ((x = !0), T(), (r = R()), (I = null), Z(''));
 }
-function M(e) {
+function D(e) {
     if (e.key !== C.vTt) return !1;
-    D();
+    L();
 }
-function D() {
+function L() {
     (null != r && (r.destroy(), (r = null)), P());
 }
-class L extends (i = a.ZP.Store) {
+class k extends (i = o.ZP.Store) {
     initialize() {
         (this.waitFor(y.default, m.Z, _.Z, u.Z, g.Z), this.syncWith([y.default, m.Z], N), this.syncWith([_.Z], T));
     }
@@ -165,16 +165,16 @@ class L extends (i = a.ZP.Store) {
         };
     }
 }
-((o = 'PrivateChannelRecipientsInviteStore'),
-    (l = 'displayName') in L
-        ? Object.defineProperty(L, l, {
-              value: o,
+((a = 'PrivateChannelRecipientsInviteStore'),
+    (l = 'displayName') in k
+        ? Object.defineProperty(k, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (L[l] = o));
-let U = new L(s.Z, {
+        : (k[l] = a));
+let U = new k(s.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -184,14 +184,14 @@ let U = new L(s.Z, {
             let r = x;
             return (P(), (x = r), (I = n), N());
         },
-        MODAL_PUSH: k,
-        SHOW_ACTION_SHEET: k,
+        MODAL_PUSH: M,
+        SHOW_ACTION_SHEET: M,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
             ((x = !0), T(), (r = R()), (I = e.channelId), Z(''));
         },
-        MODAL_POP: M,
-        HIDE_ACTION_SHEET: M,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: D,
+        MODAL_POP: D,
+        HIDE_ACTION_SHEET: D,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
             ((I = e.channelId), Z(e.query));
         },

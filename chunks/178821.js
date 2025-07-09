@@ -3,8 +3,8 @@
     Y5: () => v,
     ZF: () => T,
     ZP: () => F,
-    d6: () => k,
-    m8: () => y,
+    d6: () => y,
+    m8: () => k,
     nU: () => I,
     tO: () => p
 }),
@@ -125,7 +125,7 @@ function T(e) {
         ]
     );
 }
-function k(e, t) {
+function y(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         n = a.useRef(Array(j).fill(0)),
         c = a.useRef(performance.now()),
@@ -166,7 +166,7 @@ function k(e, t) {
         onResetFrameData: x
     };
 }
-function y(e) {
+function k(e) {
     let t = e.dispatcher.getIsSchedulerBackgrounded(),
         r = a.useRef(t);
     r.current = t;
@@ -180,10 +180,10 @@ function y(e) {
 }
 function w(e) {
     let { socket: t, isAverageFrameTime: r } = e,
-        [c, s] = y(t),
-        { currentFPS: l, averageFrameTime: o, timeSinceLastDrop: x, onResetFrameData: f, droppedFramesRef: b, renderedFrameCount: j, bufferFramecountRef: w, frameCheckerEffect: S } = k(r, c),
-        [R, O, I] = T(t),
-        [F, C] = v(R, S),
+        [c, s] = k(t),
+        { currentFPS: l, averageFrameTime: o, timeSinceLastDrop: x, onResetFrameData: f, droppedFramesRef: b, renderedFrameCount: j, bufferFramecountRef: w, frameCheckerEffect: R } = y(r, c),
+        [S, O, I] = T(t),
+        [F, C] = v(S, R),
         E = performance.now() - s.current < g,
         D = O(o, w.current);
     (0, i.ZP)(
@@ -326,15 +326,16 @@ function w(e) {
             (0, n.jsx)('div', {
                 className: d.bottomPanelButton,
                 children: (0, n.jsx)(u.zxk, {
-                    size: u.zxk.Sizes.SMALL,
-                    onClick: P,
-                    children: 'Reset Frame Data'
+                    variant: 'primary',
+                    size: 'sm',
+                    text: 'Reset Frame Data',
+                    onClick: P
                 })
             })
         ]
     });
 }
-function S(e) {
+function R(e) {
     let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: c } = e,
         [s, l] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         i = a.useRef(null);
@@ -394,7 +395,7 @@ function S(e) {
         ]
     });
 }
-function R(e) {
+function S(e) {
     let { socket: t } = e,
         r = t.dispatcher.getDispatchTimings(),
         [c, l] = a.useState(!1);
@@ -553,11 +554,12 @@ function O(e) {
                           (0, n.jsx)('div', {
                               className: d.bottomPanelButton,
                               children: (0, n.jsx)(u.zxk, {
-                                  size: u.zxk.Sizes.SMALL,
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: 'Reset Scheduler Telemetry',
                                   onClick: () => {
                                       r.reset();
-                                  },
-                                  children: 'Reset Scheduler Telemetry'
+                                  }
                               })
                           })
                       ]
@@ -591,12 +593,12 @@ function F() {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, n.jsx)(S, {
+                    (0, n.jsx)(R, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: r
                     }),
-                    (0, n.jsx)(R, { socket: e }),
+                    (0, n.jsx)(S, { socket: e }),
                     (0, n.jsx)(O, { socket: e })
                 ]
             })

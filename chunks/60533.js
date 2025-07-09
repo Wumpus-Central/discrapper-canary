@@ -62,12 +62,15 @@ function d(e) {
                                     }));
                             }
                             return e;
-                        })({ disabled: !n }, e)),
-                        (i = i =
+                        })(
                             {
-                                onClick: d,
-                                children: 'Accept New Terms'
-                            }),
+                                variant: 'primary',
+                                text: 'Accept New Terms',
+                                disabled: !n
+                            },
+                            e
+                        )),
+                        (i = i = { onClick: d }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {

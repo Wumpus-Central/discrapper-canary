@@ -1,92 +1,93 @@
-n.d(t, { default: () => N });
+n.d(t, { default: () => A });
 var i = n(255367),
     l = n(73800),
     o = n(120356),
     s = n.n(o),
-    E = n(481060),
-    r = n(788080),
-    _ = n(81643),
-    a = n(469775),
-    I = n(388032),
-    c = n(23525);
-let N = function (e) {
-    let { onClose: t, onComplete: n, onCancel: o, transitionState: N, webviewUrl: A, useV1: L = !1 } = e,
-        S = (0, r.GE)(),
-        u = l.useCallback(() => {
+    E = n(755721),
+    r = n(481060),
+    _ = n(788080),
+    a = n(81643),
+    I = n(469775),
+    c = n(388032),
+    N = n(23525);
+let A = function (e) {
+    let { onClose: t, onComplete: n, onCancel: o, transitionState: A, webviewUrl: L, useV1: S = !1 } = e,
+        u = (0, _.GE)(),
+        T = l.useCallback(() => {
             (n(), t());
         }, [n, t]),
-        T = l.useCallback(() => {
-            (0, E.nfh)(a.zJ) && u();
-        }, [u]);
-    (0, _.F5)(T);
-    let d = l.useCallback(
+        d = l.useCallback(() => {
+            (0, r.nfh)(I.zJ) && T();
+        }, [T]);
+    (0, a.F5)(d);
+    let C = l.useCallback(
         (e) => {
-            if (S && '' !== A) {
+            if (u && '' !== L) {
                 var t;
-                (null == e || null == (t = e.data) ? void 0 : t.eventType) === 'Verification.Result' && u();
+                (null == e || null == (t = e.data) ? void 0 : t.eventType) === 'Verification.Result' && T();
             }
         },
-        [A, u, S]
+        [L, T, u]
     );
     return (
         l.useEffect(
             () => (
-                window.addEventListener('message', d),
+                window.addEventListener('message', C),
                 () => {
-                    window.removeEventListener('message', d);
+                    window.removeEventListener('message', C);
                 }
             ),
-            [d]
+            [C]
         ),
-        (0, i.jsxs)(E.Y0X, {
-            transitionState: N,
-            className: c.root,
+        (0, i.jsxs)(r.Y0X, {
+            transitionState: A,
+            className: N.root,
             parentComponent: 'AgeVerificationModal',
             children: [
-                (0, i.jsxs)(E.hzk, {
-                    className: s()(c.content, { [c.fullbleed]: !L }),
+                (0, i.jsxs)(r.hzk, {
+                    className: s()(N.content, { [N.fullbleed]: !S }),
                     scrollbarType: 'none',
                     children: [
-                        L &&
-                            (0, i.jsx)(E.X6q, {
+                        S &&
+                            (0, i.jsx)(r.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: I.intl.string(I.t.tYNaXF)
+                                children: c.intl.string(c.t.tYNaXF)
                             }),
                         (0, i.jsx)('iframe', {
                             id: 'frame',
-                            src: A,
-                            className: c.iframe,
+                            src: L,
+                            className: N.iframe,
                             allow: 'camera; microphone'
                         })
                     ]
                 }),
-                (0, i.jsx)(E.mzw, {
-                    children: L
-                        ? (0, i.jsx)(E.zxk, {
-                              color: E.zxk.Colors.TRANSPARENT,
-                              look: E.zxk.Looks.BLANK,
+                (0, i.jsx)(r.mzw, {
+                    children: S
+                        ? (0, i.jsx)(E.zx, {
+                              color: E.zx.Colors.TRANSPARENT,
+                              look: E.zx.Looks.BLANK,
                               onClick: t,
-                              className: c.cancelButton,
-                              children: I.intl.string(I.t['4gTnU1'])
+                              className: N.cancelButton,
+                              children: c.intl.string(c.t['4gTnU1'])
                           })
                         : (0, i.jsxs)('div', {
-                              className: c.footer,
+                              className: N.footer,
                               children: [
-                                  (0, i.jsx)(E.zxk, {
-                                      color: E.zxk.Colors.TRANSPARENT,
-                                      look: E.zxk.Looks.BLANK,
+                                  (0, i.jsx)(E.zx, {
+                                      color: E.zx.Colors.TRANSPARENT,
+                                      look: E.zx.Looks.BLANK,
                                       onClick: t,
-                                      size: E.zxk.Sizes.SMALL,
-                                      className: c.footerButton,
-                                      children: I.intl.string(I.t.fjKFaW)
+                                      size: E.zx.Sizes.SMALL,
+                                      className: N.footerButton,
+                                      children: c.intl.string(c.t.fjKFaW)
                                   }),
-                                  (0, i.jsx)(E.zxk, {
-                                      color: E.zxk.Colors.TRANSPARENT,
-                                      look: E.zxk.Looks.BLANK,
-                                      size: E.zxk.Sizes.SMALL,
+                                  (0, i.jsx)(E.zx, {
+                                      color: E.zx.Colors.TRANSPARENT,
+                                      look: E.zx.Looks.BLANK,
+                                      size: E.zx.Sizes.SMALL,
                                       onClick: o,
-                                      className: c.footerButton,
-                                      children: I.intl.string(I.t['4gTnU1'])
+                                      className: N.footerButton,
+                                      children: c.intl.string(c.t['4gTnU1'])
                                   })
                               ]
                           })

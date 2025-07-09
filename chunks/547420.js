@@ -1,24 +1,24 @@
 n.d(t, {
     MY: () => c,
     RC: () => o,
-    UF: () => a,
+    UF: () => l,
     ZP: () => d
 });
 var i = n(857595),
     r = n(607070),
     s = n(981631);
-function l(e) {
+function a(e) {
     return s.yqN.ZOOM_SCALES[Math.max(0, Math.min(s.yqN.ZOOM_SCALES.indexOf(r.Z.zoom) + e, s.yqN.ZOOM_SCALES.length - 1))];
 }
-let a = {
+let l = {
         binds: ['mod+plus'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.cq)(l(1)), !1)
+        action: () => ((0, i.cq)(a(1)), !1)
     },
     o = {
         binds: ['mod+minus'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.cq)(l(-1)), !1)
+        action: () => ((0, i.cq)(a(-1)), !1)
     },
     c = {
         binds: ['mod+0'],
@@ -28,7 +28,7 @@ let a = {
     d =
         12633 == n.j
             ? {
-                  ZOOM_IN: a,
+                  ZOOM_IN: l,
                   ZOOM_OUT: o,
                   ZOOM_RESET: c
               }

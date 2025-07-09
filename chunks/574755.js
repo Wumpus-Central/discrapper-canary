@@ -1,9 +1,9 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => v });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(704215),
-    a = n(481060),
+    a = n(704215),
+    l = n(481060),
     o = n(906732),
     c = n(266454),
     d = n(441167),
@@ -16,33 +16,33 @@ var i = n(255367),
     b = n(703288),
     x = n(491758),
     _ = n(233685),
-    E = n(388032),
-    j = n(922284),
+    j = n(388032),
+    E = n(922284),
     O = n(802454),
     C = n(20493);
-function S(e) {
+function v(e) {
     let { className: t, showHeader: n = !0 } = e,
-        S = u.tU.useSetting(),
-        { enableViewerClipping: v } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        v = u.tU.useSetting(),
+        { enableViewerClipping: S } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: T } = (0, o.ZP)(),
         N = (0, p.Go)(),
         { viewerClipsEnabled: I } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
         y = (0, h.Z)(m.Z);
     return (
         r.useEffect(() => {
-            (0, c.Q3)(l.z.CLIPS_SETTINGS_BETA_TAG);
+            (0, c.Q3)(a.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, i.jsxs)(o.Gt, {
             value: T,
             children: [
                 (N || n) &&
-                    (0, i.jsx)(a.hjN, {
+                    (0, i.jsx)(l.hjN, {
                         className: t,
-                        tag: a.RB0.H1,
+                        tag: l.RB0.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: j.headerContainer,
-                                  children: [E.intl.string(E.t.z2jK6e), (0, i.jsx)(b.Z, {})]
+                                  className: E.headerContainer,
+                                  children: [j.intl.string(j.t.z2jK6e), (0, i.jsx)(b.Z, {})]
                               })
                             : null,
                         children:
@@ -52,31 +52,31 @@ function S(e) {
                                 children: [(0, i.jsx)(x.Z, {}), (0, i.jsx)(_.Z, {})]
                             })
                     }),
-                N && (0, i.jsx)(a.$i$, {}),
-                (0, i.jsxs)(a.hjN, {
+                N && (0, i.jsx)(l.$i$, {}),
+                (0, i.jsxs)(l.hjN, {
                     className: n || N ? C.marginTop20 : t,
                     children: [
-                        (0, i.jsx)(a.j7V, {
+                        (0, i.jsx)(l.j7V, {
                             hideBorder: !0,
                             className: O.formItem,
-                            value: S,
-                            note: E.intl.string(E.t['wW9/zc']),
+                            value: v,
+                            note: j.intl.string(j.t['wW9/zc']),
                             onChange: (e) => f.yg({ allowVoiceRecording: e }),
-                            children: E.intl.string(E.t.AGDDkJ)
+                            children: j.intl.string(j.t.AGDDkJ)
                         }),
-                        v &&
+                        S &&
                             y &&
-                            (0, i.jsx)(a.j7V, {
+                            (0, i.jsx)(l.j7V, {
                                 hideBorder: !0,
                                 className: O.formItem,
                                 value: I,
-                                note: E.intl.string(E.t['0vjy8P']),
+                                note: j.intl.string(j.t['0vjy8P']),
                                 onChange: (e) =>
                                     f.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
-                                children: E.intl.string(E.t.NWw7kZ)
+                                children: j.intl.string(j.t.NWw7kZ)
                             })
                     ]
                 })

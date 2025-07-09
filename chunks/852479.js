@@ -1,36 +1,37 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
     l = n(73800),
     o = n(913527),
     i = n.n(o),
     a = n(399606),
-    s = n(481060),
-    c = n(740900),
-    u = n(241559),
-    d = n(893966),
-    C = n(527379),
-    m = n(388032),
-    b = n(350381),
-    p = n(93163);
-function f(e) {
+    s = n(755721),
+    c = n(481060),
+    u = n(740900),
+    d = n(241559),
+    C = n(893966),
+    m = n(527379),
+    b = n(388032),
+    p = n(350381),
+    f = n(93163);
+function h(e) {
     let { guild: t, onSubmit: o } = e,
-        f = (0, a.e7)([d.Z], () => d.Z.getMembersCountByGuildId(t.id, c.R_.NEW_GUILD_MEMBER), [t.id]),
-        h = (0, a.e7)(
-            [d.Z],
+        h = (0, a.e7)([C.Z], () => C.Z.getMembersCountByGuildId(t.id, u.R_.NEW_GUILD_MEMBER), [t.id]),
+        j = (0, a.e7)(
+            [C.Z],
             () => {
-                let e = d.Z.getNewMemberTimestamp(t.id);
+                let e = C.Z.getNewMemberTimestamp(t.id);
                 return i()(e).format('h:mm A');
             },
             [t.id]
         ),
-        j = (0, a.e7)([d.Z], () => d.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        g = l.useCallback(() => {
-            ((0, C.YO)(t.id), null == o || o());
-        }, [t.id, o]),
+        g = (0, a.e7)([C.Z], () => C.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
         x = l.useCallback(() => {
-            j
-                ? g()
-                : (0, s.ZDy)(async () => {
+            ((0, m.YO)(t.id), null == o || o());
+        }, [t.id, o]),
+        v = l.useCallback(() => {
+            g
+                ? x()
+                : (0, c.ZDy)(async () => {
                       let { default: e } = await n.e('24478').then(n.bind(n, 319481));
                       return (t) => {
                           var n, l;
@@ -61,7 +62,7 @@ function f(e) {
                                   }
                                   return e;
                               })({}, t)),
-                              (l = l = { onConfirm: g }),
+                              (l = l = { onConfirm: x }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
@@ -78,50 +79,50 @@ function f(e) {
                           );
                       };
                   });
-        }, [g, j]),
-        v = new Intl.NumberFormat(m.intl.currentLocale).format(f),
-        O = (0, u.nX)(t.id),
-        y = (0, u.xC)(t.id),
-        _ = l.useMemo(() => 1 + +!!O + +!!y, [O, y]);
-    return 0 === f
+        }, [x, g]),
+        y = new Intl.NumberFormat(b.intl.currentLocale).format(h),
+        O = (0, d.nX)(t.id),
+        _ = (0, d.xC)(t.id),
+        H = l.useMemo(() => 1 + +!!O + +!!_, [O, _]);
+    return 0 === h
         ? null
         : (0, r.jsxs)('tr', {
-              className: p.newMembersNotice,
-              onClick: x,
+              className: f.newMembersNotice,
+              onClick: v,
               children: [
                   (0, r.jsx)('td', {
                       colSpan: 3,
-                      children: (0, r.jsx)(s.Text, {
+                      children: (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'always-white',
-                          children: m.intl.format(m.t['/i5uJy'], {
-                              count: v,
-                              date: h
+                          children: b.intl.format(b.t['/i5uJy'], {
+                              count: y,
+                              date: j
                           })
                       })
                   }),
-                  (0, r.jsx)('td', { colSpan: _ }),
+                  (0, r.jsx)('td', { colSpan: H }),
                   (0, r.jsx)('td', {
                       colSpan: 2,
                       children: (0, r.jsx)('div', {
-                          className: b.actionCell,
-                          children: (0, r.jsx)(s.zxk, {
-                              size: s.zxk.Sizes.SMALL,
-                              color: s.zxk.Colors.TRANSPARENT,
-                              look: s.zxk.Looks.LINK,
-                              className: p.memberNoticeActionButton,
-                              children: (0, r.jsxs)(s.Text, {
+                          className: p.actionCell,
+                          children: (0, r.jsx)(s.zx, {
+                              size: s.zx.Sizes.SMALL,
+                              color: s.zx.Colors.TRANSPARENT,
+                              look: s.zx.Looks.LINK,
+                              className: f.memberNoticeActionButton,
+                              children: (0, r.jsxs)(c.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
-                                  className: p.memberNoticeAction,
+                                  className: f.memberNoticeAction,
                                   children: [
-                                      (0, r.jsx)('div', { children: m.intl.string(m.t.rkyOzM) }),
-                                      (0, r.jsx)(s.tBG, {
+                                      (0, r.jsx)('div', { children: b.intl.string(b.t.rkyOzM) }),
+                                      (0, r.jsx)(c.tBG, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20,
-                                          className: p.memberNoticeActionIcon
+                                          className: f.memberNoticeActionIcon
                                       })
                                   ]
                               })

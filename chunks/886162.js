@@ -71,10 +71,10 @@ function g(e) {
                 }),
                 (0, r.jsx)(o.mzw, {
                     children: (0, r.jsx)(o.zxk, {
-                        submitting: m,
-                        onClick: E,
-                        color: o.zxk.Colors.GREEN,
-                        children: h.intl.string(h.t['+TBKLy'])
+                        variant: 'active',
+                        text: h.intl.string(h.t['+TBKLy']),
+                        loading: m,
+                        onClick: E
                     })
                 })
             ]

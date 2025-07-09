@@ -3,19 +3,19 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(607070),
     c = n(254238),
     u = n(388032),
     d = n(382771);
 function p(e) {
     let { height: t } = e,
-        i = (0, o.e7)([s.Z], () => s.Z.useReducedMotion);
+        i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
         className: d.root,
         children: [
-            (0, r.jsx)(a.Fmz, {
+            (0, r.jsx)(o.Fmz, {
                 importData: () =>
                     n
                         .e('78698')
@@ -27,12 +27,12 @@ function p(e) {
                 shouldAnimate: !i,
                 className: l()(d.art, { [d.hidden]: t <= 280 })
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 className: d.header,
                 variant: 'heading-md/bold',
                 children: u.intl.string(u.t['C+tj1d'])
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: u.intl.format(u.t['nNHd//'], { onCancel: c.s6 })

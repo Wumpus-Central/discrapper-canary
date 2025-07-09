@@ -32,8 +32,8 @@ var i = n(255367),
     A = n(375954),
     M = n(496675),
     _ = n(699516),
-    k = n(594174),
-    L = n(768581),
+    L = n(594174),
+    k = n(768581),
     D = n(176354),
     U = n(5192),
     V = n(709054),
@@ -151,7 +151,7 @@ let Y = (e) => {
                         let l =
                             null == e.id
                                 ? D.ZP.getURL(e.name)
-                                : L.ZP.getEmojiURL({
+                                : k.ZP.getEmojiURL({
                                       id: e.id,
                                       animated: e.animated,
                                       size: 24
@@ -228,7 +228,7 @@ let Y = (e) => {
 function $(e) {
     let { emoji: t, user: n, message: r, channel: l, guildId: o, reactionType: a, onRemoveReactor: s, disableManage: c = !1 } = e,
         d = (0, u.e7)([N.default], () => N.default.getId()),
-        p = (0, u.e7)([k.default], () => k.default.getUser(n.id), [n]),
+        p = (0, u.e7)([L.default], () => L.default.getUser(n.id), [n]),
         g = (0, I.$R)(l),
         j = (0, u.e7)([M.Z], () => M.Z.can(G.Plq.MANAGE_MESSAGES, l) && g) || d === n.id,
         O = (0, u.e7)([w.ZP, C.Z, _.Z], () => U.ZP.getName(o, l.id, n));

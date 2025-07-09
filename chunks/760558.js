@@ -1,35 +1,35 @@
-(l.d(t, { default: () => b }), l(388685));
-var n = l(255367),
-    r = l(73800),
-    s = l(512722),
-    i = l.n(s),
-    o = l(442837),
-    a = l(481060),
-    c = l(179360),
-    d = l(899667),
-    u = l(430824),
-    m = l(314884),
-    x = l(626135),
-    h = l(267642),
-    p = l(395199),
-    g = l(719228),
-    f = l(4434),
-    j = l(981631),
-    C = l(388032),
-    v = l(671593);
+(n.d(t, { default: () => b }), n(388685));
+var l = n(255367),
+    r = n(73800),
+    s = n(512722),
+    i = n.n(s),
+    a = n(442837),
+    o = n(481060),
+    c = n(179360),
+    d = n(899667),
+    u = n(430824),
+    m = n(314884),
+    x = n(626135),
+    h = n(267642),
+    p = n(395199),
+    g = n(719228),
+    f = n(4434),
+    j = n(981631),
+    C = n(388032),
+    v = n(671593);
 let b = (e) => {
-    var t, l;
+    var t, n;
     let { guildBoostSlots: s, selectedGuild: b, locationSection: y, transitionState: S, onClose: N } = e,
-        O = (0, h.vx)(m.Z.boostSlots);
+        E = (0, h.vx)(m.Z.boostSlots);
     (i()(null != s || null != b, 'Must either provide slots or an initial selected guild'), i()(!(null == s ? void 0 : s.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown'));
-    let P = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
-        [E, T] = (0, o.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [L, Z] = r.useState(''),
-        [w, I] = r.useState(P[0]),
-        [k, M] = r.useState(!1),
-        [G, D] = r.useState(b),
-        [U, z] = r.useState(null != s ? s : O.slice(0, 1)),
-        B = r.useMemo(
+    let O = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
+        [P, T] = (0, a.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
+        [Z, w] = r.useState(''),
+        [L, G] = r.useState(O[0]),
+        [I, M] = r.useState(!1),
+        [D, k] = r.useState(b),
+        [U, B] = r.useState(null != s ? s : E.slice(0, 1)),
+        z = r.useMemo(
             () =>
                 null == U
                     ? []
@@ -39,12 +39,12 @@ let b = (e) => {
                       }).filter((e) => null != e),
             [U]
         ),
-        R = r.useMemo(() => {
+        F = r.useMemo(() => {
             var e;
             return (null == U || null == (e = U[0]) ? void 0 : e.premiumGuildSubscription) != null;
         }, [U]),
-        F = () => {
-            (N('SUCCESS' === w),
+        R = () => {
+            (N('SUCCESS' === L),
                 x.default.track(j.rMx.MODAL_DISMISSED, {
                     type: j.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                     location_section: y
@@ -53,30 +53,30 @@ let b = (e) => {
         _ = {
             UNUSED_QUANTITY_SELECT: {
                 body: () => (
-                    i()(null != s || 0 !== O.length, 'Cannot provide no slots if there are no other available slots'),
-                    (0, n.jsxs)('div', {
+                    i()(null != s || 0 !== E.length, 'Cannot provide no slots if there are no other available slots'),
+                    (0, l.jsxs)('div', {
                         className: v.quantitySelectorBody,
                         children: [
-                            (0, n.jsx)(a.X6q, {
+                            (0, l.jsx)(o.X6q, {
                                 variant: 'heading-md/semibold',
                                 className: v.quantitySelectorHeader,
                                 children: C.intl.string(C.t['9FFrra'])
                             }),
-                            (0, n.jsx)(a.Text, {
+                            (0, l.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 className: v.quantitySelectorDescription,
                                 children: C.intl.string(C.t.x5qw5e)
                             }),
-                            (0, n.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: v.quantitySelectorWrapper,
                                 children: [
-                                    (0, n.jsx)(a.FiK, {
+                                    (0, l.jsx)(o.FiK, {
                                         value: U.length,
-                                        onChange: (e) => z(O.slice(0, e)),
+                                        onChange: (e) => B(E.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: O.length
+                                        maxValue: E.length
                                     }),
-                                    (0, n.jsx)(a.Text, {
+                                    (0, l.jsx)(o.Text, {
                                         className: v.quantitySelectorLabel,
                                         variant: 'text-md/normal',
                                         children: C.intl.string(C.t.Vl8TCw)
@@ -87,69 +87,72 @@ let b = (e) => {
                     })
                 ),
                 footer: () =>
-                    (0, n.jsxs)(a.mzw, {
-                        children: [
-                            (0, n.jsx)(a.zxk, {
-                                onClick: () => I('CONFIRM'),
-                                children: C.intl.string(C.t['/uwYdX'])
-                            }),
-                            (0, n.jsx)(a.zxk, {
-                                look: a.zxk.Looks.LINK,
-                                color: a.zxk.Colors.PRIMARY,
-                                onClick: F,
-                                children: C.intl.string(C.t['1BPTsL'])
-                            })
-                        ]
+                    (0, l.jsx)(o.mzw, {
+                        children: (0, l.jsxs)(o.hE2, {
+                            direction: 'horizontal-reverse',
+                            children: [
+                                (0, l.jsx)(o.zxk, {
+                                    variant: 'primary',
+                                    text: C.intl.string(C.t['/uwYdX']),
+                                    onClick: () => G('CONFIRM')
+                                }),
+                                (0, l.jsx)(o.zxk, {
+                                    variant: 'secondary',
+                                    text: C.intl.string(C.t['1BPTsL']),
+                                    onClick: R
+                                })
+                            ]
+                        })
                     })
             },
             GUILD_SELECT: {
                 header: () =>
-                    (0, n.jsx)(g.g, {
-                        isTransfer: R,
-                        query: L,
-                        setQuery: Z
+                    (0, l.jsx)(g.g, {
+                        isTransfer: F,
+                        query: Z,
+                        setQuery: w
                     }),
                 bodyClass: v.selectContent,
                 body: () =>
-                    (0, n.jsx)(g.e, {
-                        onClose: F,
+                    (0, l.jsx)(g.e, {
+                        onClose: R,
                         onSelectGuild: (e) => {
-                            (D(e), I('CONFIRM'));
+                            (k(e), G('CONFIRM'));
                         },
-                        isTransfer: R,
-                        selectedSlotGuilds: B,
-                        query: L
+                        isTransfer: F,
+                        selectedSlotGuilds: z,
+                        query: Z
                     })
             },
             CONFIRM: {
                 body() {
-                    if (null == G) return null;
+                    if (null == D) return null;
                     let e = U.filter((e) => (0, h.tl)(e)).length,
                         t = U.length,
-                        l = B.length;
-                    return R
-                        ? (0, n.jsx)(p.Z.TransferBody, {
-                              fromGuilds: B,
-                              toGuild: G,
+                        n = z.length;
+                    return F
+                        ? (0, l.jsx)(p.Z.TransferBody, {
+                              fromGuilds: z,
+                              toGuild: D,
                               blurb: C.intl.formatToPlainString(C.t.SSA2lp, {
                                   slotCount: t,
-                                  guildCount: l
+                                  guildCount: n
                               }),
                               imageClass: v.transferConfirmImage,
-                              error: k ? T : null,
+                              error: I ? T : null,
                               onDismissError: () => M(!1),
                               slotCount: t,
                               canceledCount: e
                           })
-                        : (0, n.jsx)(p.Z.ApplyBody, {
-                              guild: G,
+                        : (0, l.jsx)(p.Z.ApplyBody, {
+                              guild: D,
                               blurb: C.intl.string(C.t.yTlZV1),
                               warning: C.intl.formatToPlainString(C.t.KPnDlp, {
                                   days: j.o3l,
                                   slotCount: t
                               }),
                               imageClass: v.confirmImage,
-                              error: k ? T : null,
+                              error: I ? T : null,
                               onDismissError: () => M(!1),
                               slotCount: t,
                               canceledCount: e
@@ -157,9 +160,9 @@ let b = (e) => {
                 },
                 footer() {
                     let e = U.length,
-                        t = 'CONFIRM' === P[0] ? F : () => I(P[P.indexOf(w) - 1]),
-                        l = async () => {
-                            if (null != G && (null == U ? void 0 : U.length) !== 0) {
+                        t = 'CONFIRM' === O[0] ? R : () => G(O[O.indexOf(L) - 1]),
+                        n = async () => {
+                            if (null != D && (null == U ? void 0 : U.length) !== 0) {
                                 i()(!U.some((e) => e.isOnCooldown()), 'Cannot use a premium guild subscription slot while on cooldown');
                                 try {
                                     (await Promise.all(
@@ -169,34 +172,34 @@ let b = (e) => {
                                         })
                                     ),
                                         await (0, c.W3)(
-                                            G.id,
+                                            D.id,
                                             U.map((e) => {
                                                 let { id: t } = e;
                                                 return t;
                                             })
                                         ),
-                                        I('SUCCESS'));
+                                        G('SUCCESS'));
                                 } catch (e) {
                                     M(!0);
                                 }
                             }
                         };
-                    return (0, n.jsx)(p.Z.Footer, {
-                        confirmation: R ? C.intl.formatToPlainString(C.t.Oh6mxc, { slotCount: e }) : C.intl.formatToPlainString(C.t['ZU5x5+'], { slotCount: e }),
-                        confirmationLabel: R ? C.intl.formatToPlainString(C.t.fnZRmZ, { slotCount: e }) : C.intl.formatToPlainString(C.t.d0vwWV, { slotCount: e }),
-                        onConfirm: l,
+                    return (0, l.jsx)(p.Z.Footer, {
+                        confirmation: F ? C.intl.formatToPlainString(C.t.Oh6mxc, { slotCount: e }) : C.intl.formatToPlainString(C.t['ZU5x5+'], { slotCount: e }),
+                        confirmationLabel: F ? C.intl.formatToPlainString(C.t.fnZRmZ, { slotCount: e }) : C.intl.formatToPlainString(C.t.d0vwWV, { slotCount: e }),
+                        onConfirm: n,
                         onCancel: t,
-                        isModifyingSubscription: E
+                        isModifyingSubscription: P
                     });
                 }
             },
             SUCCESS: {
                 body: () =>
-                    (0, n.jsx)(f.R7, {
-                        guild: G,
-                        isTransfer: R,
+                    (0, l.jsx)(f.R7, {
+                        guild: D,
+                        isTransfer: F,
                         guildBoostQuantity: U.length,
-                        onClose: F,
+                        onClose: R,
                         didPurchaseOnFractionalPremium: !1
                     })
             }
@@ -207,26 +210,26 @@ let b = (e) => {
             location_section: y
         });
     }, [y]);
-    let A = _[w];
-    return (0, n.jsxs)(a.Y0X, {
+    let A = _[L];
+    return (0, l.jsxs)(o.Y0X, {
         transitionState: S,
         className: v.modal,
-        size: a.CgR.SMALL,
+        size: o.CgR.SMALL,
         parentComponent: 'ApplyGuildBoostModal',
         children: [
             null == (t = A.header) ? void 0 : t.call(A),
-            (0, n.jsx)(a.hzk, {
+            (0, l.jsx)(o.hzk, {
                 className: A.bodyClass,
-                children: (0, n.jsx)(a.qBt, {
-                    step: w,
-                    steps: P,
+                children: (0, l.jsx)(o.qBt, {
+                    step: L,
+                    steps: O,
                     children: A.body()
                 })
             }),
-            null == (l = A.footer) ? void 0 : l.call(A),
-            (0, n.jsx)(a.olH, {
+            null == (n = A.footer) ? void 0 : n.call(A),
+            (0, l.jsx)(o.olH, {
                 className: v.modalCloseButton,
-                onClick: F
+                onClick: R
             })
         ]
     });

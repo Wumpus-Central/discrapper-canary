@@ -2,9 +2,9 @@
 var n = t(255367),
     o = t(73800),
     s = t(512722),
-    l = t.n(s),
+    i = t.n(s),
     c = t(481060),
-    i = t(985002),
+    l = t(985002),
     a = t(880257),
     d = t(957656),
     u = t(916723),
@@ -16,19 +16,19 @@ let h = (e) => {
         m = o.useCallback(() => {
             j(!0);
         }, []),
-        x = o.useCallback(() => {
+        y = o.useCallback(() => {
             j(!1);
         }, []),
-        y = o.useCallback(() => {
+        x = o.useCallback(() => {
             h();
         }, [h]),
         O = (0, a.Z)(),
-        { cancelLinkRequest: g, isCancelLoading: v } = (0, i.G)({
+        { cancelLinkRequest: g, isCancelLoading: v } = (0, l.G)({
             onError: m,
-            onSuccess: y
+            onSuccess: x
         });
     return (
-        l()(O, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
+        i()(O, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
         (0, n.jsx)(d.Z, {
             transitionState: s,
             children: (0, n.jsxs)('form', {
@@ -38,7 +38,7 @@ let h = (e) => {
                 children: [
                     (0, n.jsx)(d.Z.Error, {
                         error: p ? b.intl.string(u.default['6gyAQU']) : void 0,
-                        onDismiss: x
+                        onDismiss: y
                     }),
                     (0, n.jsx)(c.hzk, {
                         children: (0, n.jsx)(d.Z.Header, {
@@ -53,26 +53,28 @@ let h = (e) => {
                         })
                     }),
                     (0, n.jsx)(c.mzw, {
-                        children: (0, n.jsxs)(d.Z.ButtonFooter, {
-                            children: [
-                                (0, n.jsx)(c.zxk, {
-                                    type: 'button',
-                                    disabled: v,
-                                    look: c.zxk.Looks.LINK,
-                                    color: c.zxk.Colors.PRIMARY,
-                                    onClick: h,
-                                    size: c.zxk.Sizes.SMALL,
-                                    children: b.intl.string(u.default.czincX)
-                                }),
-                                (0, n.jsx)(c.zxk, {
-                                    type: 'submit',
-                                    disabled: v || p,
-                                    submitting: v,
-                                    color: c.Ttl.RED,
-                                    size: c.zxk.Sizes.SMALL,
-                                    children: b.intl.string(u.default.mK40bm)
-                                })
-                            ]
+                        children: (0, n.jsx)(d.Z.ButtonFooter, {
+                            children: (0, n.jsxs)(c.hE2, {
+                                direction: 'horizontal-reverse',
+                                children: [
+                                    (0, n.jsx)(c.zxk, {
+                                        variant: 'secondary',
+                                        size: 'sm',
+                                        text: b.intl.string(u.default.czincX),
+                                        type: 'button',
+                                        disabled: v,
+                                        onClick: h
+                                    }),
+                                    (0, n.jsx)(c.zxk, {
+                                        variant: 'critical-primary',
+                                        size: 'sm',
+                                        text: b.intl.string(u.default.mK40bm),
+                                        type: 'submit',
+                                        disabled: v || p,
+                                        loading: v
+                                    })
+                                ]
+                            })
                         })
                     })
                 ]

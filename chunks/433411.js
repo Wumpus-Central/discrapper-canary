@@ -1,78 +1,81 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
-    o = n(906732),
-    c = n(864106),
-    d = n(1585),
-    u = n(580747),
-    m = n(345861),
-    p = n(150039),
-    g = n(993413),
-    h = n(388032),
-    f = n(142436);
-function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: _ = !1, isTryItOutFlow: E = !1 } = e,
-        { analyticsLocations: j } = (0, o.ZP)(),
-        O = null != n,
-        { userAvatarDecoration: C, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, p.$U)(t, n),
-        N = (0, u.Z)('enable_avatar_decoration_uploads'),
-        I = r.useCallback(
+    a = n.n(s),
+    l = n(755721),
+    o = n(481060),
+    c = n(906732),
+    d = n(864106),
+    u = n(1585),
+    m = n(580747),
+    p = n(345861),
+    g = n(150039),
+    h = n(993413),
+    f = n(388032),
+    b = n(142436);
+function x(e) {
+    let { user: t, guild: n, className: s, sectionTitle: p, forcedDivider: x = !1, withTutorial: j = !1, isTryItOutFlow: E = !1 } = e,
+        { analyticsLocations: O } = (0, c.ZP)(),
+        C = null != n,
+        { userAvatarDecoration: v, guildAvatarDecoration: S, pendingAvatarDecoration: T, pendingErrors: N } = (0, g.$U)(t, n),
+        I = (0, m.Z)('enable_avatar_decoration_uploads'),
+        y = r.useCallback(
             () =>
-                (0, d.ps)({
-                    analyticsLocations: j,
+                (0, u.ps)({
+                    analyticsLocations: O,
                     isTryItOutFlow: E,
                     guild: n
                 }),
-            [j, E, n]
+            [O, E, n]
         ),
-        y = E || void 0 !== v ? null != v : (O ? S : C) != null,
-        A = _ ? a.gtL : a.zxk;
-    return (0, i.jsxs)(g.Z, {
+        A = E || void 0 !== T ? null != T : (C ? S : v) != null,
+        P = j ? o.gtL : l.zx;
+    return (0, i.jsxs)(h.Z, {
         className: s,
-        forcedDivider: b,
+        forcedDivider: x,
         hasBackground: !0,
-        title: m,
-        errors: T,
+        title: p,
+        errors: N,
         children: [
             (0, i.jsxs)('div', {
-                className: f.buttonsContainer,
+                className: b.buttonsContainer,
                 children: [
-                    (0, i.jsx)(A, {
-                        size: a.zxk.Sizes.SMALL,
-                        onClick: I,
-                        className: l()({ [f.buttonHighlighted]: _ }),
-                        children: h.intl.string(h.t.BVcYCw)
+                    (0, i.jsx)(P, {
+                        size: l.zx.Sizes.SMALL,
+                        onClick: y,
+                        className: a()({ [b.buttonHighlighted]: j }),
+                        children: f.intl.string(f.t.BVcYCw)
                     }),
-                    y &&
-                        (0, i.jsx)(a.zxk, {
-                            className: f.removeButton,
-                            color: a.zxk.Colors.PRIMARY,
-                            look: a.zxk.Looks.LINK,
-                            size: a.zxk.Sizes.SMALL,
-                            onClick: function () {
-                                (0, p.PO)(null == n ? void 0 : n.id, null);
-                            },
-                            children: (0, c.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.OrokWl)
+                    A &&
+                        (0, i.jsx)('div', {
+                            'data-button-hoisted-classname-wrapper': !0,
+                            className: b.removeButton,
+                            children: (0, i.jsx)(o.zxk, {
+                                variant: 'secondary',
+                                size: 'sm',
+                                text: (0, d.ad)(t, n) ? f.intl.string(f.t.CHf9iI) : f.intl.string(f.t.OrokWl),
+                                onClick: function () {
+                                    (0, g.PO)(null == n ? void 0 : n.id, null);
+                                }
+                            })
                         })
                 ]
             }),
-            t.isStaff() && N && (0, i.jsx)(x, { user: t })
+            t.isStaff() && I && (0, i.jsx)(_, { user: t })
         ]
     });
 }
-let x = (e) => {
+let _ = (e) => {
     let { user: t } = e;
     return (0, i.jsxs)('div', {
-        className: f.overrideButtonsContainer,
+        className: b.overrideButtonsContainer,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(p.Z, {
                 onChange: (e) => {
                     null != e &&
                         (t.avatarDecoration = {

@@ -1,8 +1,8 @@
-n.d(t, { K: () => l });
+n.d(t, { K: () => a });
 var i = n(475468),
     r = n(19780),
     s = n(981631);
-let l = {
+let a = {
     binds: ['mod+shift+alt+v'],
     comboKeysBindGlobal: !0,
     action(e) {

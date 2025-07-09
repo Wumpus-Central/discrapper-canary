@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
+    a = n.n(s),
+    l = n(481060),
     o = n(838436),
     c = n(169957);
 function d(e) {
@@ -11,7 +11,7 @@ function d(e) {
         p = r.useRef(null),
         g = r.useRef(null),
         h = r.useId(),
-        f = (0, i.jsx)(a.rsf, {
+        f = (0, i.jsx)(l.rsf, {
             id: h,
             checked: t,
             onChange: n,
@@ -20,8 +20,8 @@ function d(e) {
             disabled: m
         });
     return (0, i.jsx)('div', {
-        className: l()(c.container, s, { [c.disabled]: m }),
-        children: (0, i.jsx)(a.tEY, {
+        className: a()(c.container, s, { [c.disabled]: m }),
+        children: (0, i.jsx)(l.tEY, {
             within: !0,
             offset: -4,
             focusTarget: p,

@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(479099),
-    a = n(33976);
+    a = n(479099),
+    o = n(33976);
 function s(e) {
     let { appliedTags: t, setAppliedTags: n, wrap: i } = e,
         s =
@@ -14,14 +14,14 @@ function s(e) {
                   }
                 : void 0;
     return (0, r.jsx)('div', {
-        className: l()(a.tags, { [a.wrap]: i }),
+        className: l()(o.tags, { [o.wrap]: i }),
         children: Array.from(t).map((e) =>
             (0, r.jsx)(
-                o.Z,
+                a.Z,
                 {
                     tag: e,
                     onRemove: s,
-                    size: null == s ? o.Z.Sizes.SMALL : o.Z.Sizes.MEDIUM
+                    size: null == s ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
                 },
                 e.id
             )

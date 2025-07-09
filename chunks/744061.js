@@ -1,21 +1,22 @@
-(n.d(t, { Z: () => m }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(692547),
-    o = n(780384),
-    a = n(481060),
-    s = n(367907),
-    c = n(210887),
-    u = n(626135),
-    d = n(981631),
-    p = n(388032),
-    h = n(41281),
-    f = n(73433);
-function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: y, animation: C } = e;
+    a = n(780384),
+    o = n(755721),
+    s = n(481060),
+    c = n(367907),
+    u = n(210887),
+    d = n(626135),
+    p = n(981631),
+    h = n(388032),
+    f = n(41281),
+    m = n(73433);
+function g(e) {
+    let { onClose: t, onConfirm: g, onCancel: b, channel: _, analyticsType: y, popoutText: C, animation: x } = e;
     i.useEffect(() => {
-        u.default.track(
-            d.rMx.OPEN_POPOUT,
+        d.default.track(
+            p.rMx.OPEN_POPOUT,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -40,29 +41,29 @@ function m(e) {
                         }));
                 }
                 return e;
-            })({ type: _ }, (0, s.v_)(b))
+            })({ type: y }, (0, c.v_)(_))
         );
-    }, [_, b]);
-    let x = i.useCallback(() => {
-            (null == m || m(), t());
-        }, [m, t]),
-        v = i.useCallback(() => {
+    }, [y, _]);
+    let v = i.useCallback(() => {
             (null == g || g(), t());
         }, [g, t]),
-        O = i.useRef(null);
+        O = i.useCallback(() => {
+            (null == b || b(), t());
+        }, [b, t]),
+        j = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
-                t = c.Z.theme,
+                t = u.Z.theme,
                 r = !1;
             return (
-                null != C &&
+                null != x &&
                     (async () => {
-                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, o.wj)(t) ? C.dark() : C.light()]);
+                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? x.dark() : x.light()]);
                         r ||
-                            null == O.current ||
+                            null == j.current ||
                             (e = i.loadAnimation({
-                                container: O.current,
+                                container: j.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
@@ -73,67 +74,67 @@ function m(e) {
                     ((r = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
-        }, [C]),
-        (0, r.jsx)(a.VqE, {
+        }, [x]),
+        (0, r.jsx)(s.VqE, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, r.jsxs)('form', {
-                className: h.contentWarningPopout,
-                onSubmit: x,
+                className: f.contentWarningPopout,
+                onSubmit: v,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: h.body,
+                        className: f.body,
                         children: [
-                            null != C &&
+                            null != x &&
                                 (0, r.jsx)('div', {
-                                    className: h.animation,
-                                    ref: O
+                                    className: f.animation,
+                                    ref: j
                                 }),
                             (0, r.jsxs)('div', {
-                                className: h.content,
+                                className: f.content,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: h.header,
-                                        children: p.intl.string(p.t.mY3Y39)
+                                        className: f.header,
+                                        children: h.intl.string(h.t.mY3Y39)
                                     }),
-                                    (0, r.jsx)(a.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         id: 'content-warning-popout-label',
-                                        className: f.markup,
+                                        className: m.markup,
                                         variant: 'text-sm/normal',
-                                        children: y.body
+                                        children: C.body
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: h.buttonWrapper,
+                                        className: f.buttonWrapper,
                                         children: [
                                             (0, r.jsxs)('div', {
-                                                className: h.buttonContainer,
+                                                className: f.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(a.zxk, {
-                                                        className: h.button,
-                                                        color: a.zxk.Colors.PRIMARY,
-                                                        onClick: v,
-                                                        children: p.intl.string(p.t.fsBWmZ)
+                                                    (0, r.jsx)(o.zx, {
+                                                        className: f.button,
+                                                        color: o.zx.Colors.PRIMARY,
+                                                        onClick: O,
+                                                        children: h.intl.string(h.t.fsBWmZ)
                                                     }),
-                                                    (0, r.jsx)(a.Text, {
+                                                    (0, r.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
-                                                        className: h.buttonHint,
-                                                        children: p.intl.format(p.t['0LzVPT'], {})
+                                                        className: f.buttonHint,
+                                                        children: h.intl.format(h.t['0LzVPT'], {})
                                                     })
                                                 ]
                                             }),
                                             (0, r.jsxs)('div', {
-                                                className: h.buttonContainer,
+                                                className: f.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(a.zxk, {
-                                                        className: h.button,
-                                                        onClick: x,
+                                                    (0, r.jsx)(o.zx, {
+                                                        className: f.button,
+                                                        onClick: v,
                                                         type: 'submit',
                                                         autoFocus: !0,
-                                                        children: p.intl.string(p.t.KJnHq6)
+                                                        children: h.intl.string(h.t.KJnHq6)
                                                     }),
-                                                    (0, r.jsx)(a.Text, {
+                                                    (0, r.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
-                                                        className: h.buttonHint,
-                                                        children: p.intl.format(p.t.khjqdH, {})
+                                                        className: f.buttonHint,
+                                                        children: h.intl.format(h.t.khjqdH, {})
                                                     })
                                                 ]
                                             })
@@ -143,18 +144,18 @@ function m(e) {
                             })
                         ]
                     }),
-                    null != y.footer && '' !== y.footer
+                    null != C.footer && '' !== C.footer
                         ? (0, r.jsxs)('div', {
-                              className: h.footer,
+                              className: f.footer,
                               children: [
-                                  (0, r.jsx)(a.d3s, {
+                                  (0, r.jsx)(s.d3s, {
                                       size: 'xs',
                                       color: l.Z.unsafe_rawColors.PRIMARY_400.css,
-                                      className: h.icon
+                                      className: f.icon
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
-                                      children: y.footer
+                                      children: C.footer
                                   })
                               ]
                           })

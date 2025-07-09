@@ -1,13 +1,13 @@
 n.d(t, {
     ED: () => x,
-    fO: () => j,
+    fO: () => E,
     qp: () => O
 });
 var i = n(255367),
     r = n(73800),
     s = n(114858),
-    l = n(442837),
-    a = n(704215),
+    a = n(442837),
+    l = n(704215),
     o = n(266454),
     c = n(703656),
     d = n(664915),
@@ -55,14 +55,14 @@ let x = (e) =>
             )
         ),
     _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
-    E = {
+    j = {
         position: 'right',
         align: 'bottom'
     },
-    j = (e) => {
+    E = (e) => {
         var t,
             n,
-            { onClose: a, onCtaClick: o, targetElementRef: u, isGuildBarScrolling: g, children: h } = e,
+            { onClose: l, onCtaClick: o, targetElementRef: u, isGuildBarScrolling: g, children: h } = e,
             f = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -84,20 +84,20 @@ let x = (e) =>
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
         let O = r.useRef(null),
             C = r.useCallback((e) => {
-                let t = window.innerHeight - ((0, m.t4)() + j.COACHMARK_VERTICAL_OFFSET);
+                let t = window.innerHeight - ((0, m.t4)() + E.COACHMARK_VERTICAL_OFFSET);
                 return e.top <= t;
             }, []),
-            S = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size);
+            v = (0, a.e7)([d.Z], () => d.Z.getExpandedFolders().size);
         (r.useEffect(() => {
             null !== O.current && O.current.updateElementPositionWithPolling();
-        }, [S]),
+        }, [v]),
             r.useEffect(() => {
                 null !== O.current && O.current.updateElementPosition();
             }, [g]));
-        let v = (0, s.TH)().pathname,
+        let S = (0, s.TH)().pathname,
             T = r.useCallback(() => {
-                (_.includes(v) || (0, c.uL)(p.Z5c.ME), o());
-            }, [v, o]);
+                (_.includes(S) || (0, c.uL)(p.Z5c.ME), o());
+            }, [S, o]);
         return (0, i.jsx)(
             m.WS,
             ((t = b(
@@ -105,21 +105,21 @@ let x = (e) =>
                     positionControlRef: O,
                     targetElementRef: u,
                     calculateVisibility: C,
-                    defaultCoachmarkAlign: E.align,
+                    defaultCoachmarkAlign: j.align,
                     popoutElement: (0, i.jsx)(
                         x,
                         b(
                             {
-                                onClose: a,
+                                onClose: l,
                                 onCtaClick: T
                             },
                             f,
-                            E
+                            j
                         )
                     ),
                     spacing: 8
                 },
-                E
+                j
             )),
             (n = n = { children: h }),
             Object.getOwnPropertyDescriptors
@@ -137,7 +137,7 @@ let x = (e) =>
             t)
         );
     };
-j.COACHMARK_VERTICAL_OFFSET = 10;
+E.COACHMARK_VERTICAL_OFFSET = 10;
 let O = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = r.useCallback(() => {
@@ -146,14 +146,14 @@ let O = (e) => {
                 n.current.getBoundingClientRect().bottom > window.innerHeight - e && i();
             }
         }, [n, i]),
-        { shouldShow: l, closeCoachmarkIfOpen: c } = (0, m.M)({
+        { shouldShow: a, closeCoachmarkIfOpen: c } = (0, m.M)({
             onboardingCoachmarkType: 'discover',
             onShowCoachmarkHandler: s
         }),
         d = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
-                ((0, o.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                ((0, o.Q3)(l.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                     dismissAction: g.L.INDIRECT_ACTION,
                     groupName: g.R.VIRTUAL_CURRENCY_ONBOARDING
                 }),
@@ -172,7 +172,7 @@ let O = (e) => {
         }, [d]);
     return t
         ? {
-              shouldShow: l,
+              shouldShow: a,
               questId: h.V6,
               closeCoachmarkIfOpen: c,
               onClose: d,

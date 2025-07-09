@@ -148,7 +148,7 @@ class T extends r.PureComponent {
             }));
     }
 }
-let k = a().throttle(
+let D = a().throttle(
     () => {
         m.Z.increment(
             {
@@ -161,7 +161,7 @@ let k = a().throttle(
     100,
     { trailing: !1 }
 );
-class D extends r.PureComponent {
+class k extends r.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, O.s1)().location;
         this.setState({
@@ -197,7 +197,7 @@ class D extends r.PureComponent {
             sentry_issue_id: o,
             error_level: 'fatal'
         }),
-            k());
+            D());
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -220,4 +220,4 @@ class D extends r.PureComponent {
             }));
     }
 }
-let R = D;
+let R = k;

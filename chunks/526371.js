@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(793030),
+    a = n.n(s),
+    l = n(793030),
     o = n(704215),
     c = n(481060),
     d = n(230711),
@@ -16,8 +16,8 @@ var i = n(255367),
     b = n(921944),
     x = n(603571),
     _ = n(388032),
-    E = n(631587),
-    j = n(394637);
+    j = n(631587),
+    E = n(394637);
 function O() {
     let e = (0, r.useRef)(null),
         [t, n] = (0, r.useState)(!1),
@@ -35,7 +35,7 @@ function O() {
         }, [t]),
         (0, i.jsx)(g.ZP, {
             children: (0, i.jsxs)(c.P3F, {
-                className: l()(E.wrapper, { [E.wrapperHovered]: t }),
+                className: a()(j.wrapper, { [j.wrapperHovered]: t }),
                 onMouseEnter: () => n(!0),
                 onMouseLeave: () => n(!1),
                 onClick: () => {
@@ -43,19 +43,19 @@ function O() {
                 },
                 children: [
                     (0, i.jsxs)('div', {
-                        className: E.hiddenWhileNotHovered,
+                        className: j.hiddenWhileNotHovered,
                         children: [
                             (0, i.jsxs)(c.P3F, {
-                                className: E.dismiss,
+                                className: j.dismiss,
                                 onClick: (e) => {
                                     (e.stopPropagation(), h(b.L.USER_DISMISS));
                                 },
                                 children: [
                                     (0, i.jsx)(c.P$X, {
-                                        className: E.dismissIcon,
+                                        className: j.dismissIcon,
                                         color: 'currentColor'
                                     }),
-                                    (0, i.jsx)(a.xv, {
+                                    (0, i.jsx)(l.xv, {
                                         color: 'currentColor',
                                         variant: 'text-xs/bold',
                                         children: _.intl.string(x.default.AsH93d)
@@ -63,7 +63,7 @@ function O() {
                                 ]
                             }),
                             (0, i.jsx)('iframe', {
-                                className: E.video,
+                                className: j.video,
                                 src: 'https://www.youtube.com/embed/'.concat('h-9SUgIeJnY', '?rel=0&showinfo=0&controls=1&origin=https://').concat(f.$R1),
                                 allowFullScreen: !0,
                                 sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
@@ -71,26 +71,26 @@ function O() {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: E.background,
-                        children: (0, i.jsx)('div', { className: E.backgroundGradient })
+                        className: j.background,
+                        children: (0, i.jsx)('div', { className: j.backgroundGradient })
                     }),
                     (0, i.jsxs)('div', {
-                        className: E.foreground,
+                        className: j.foreground,
                         children: [
                             (0, i.jsx)('img', {
-                                className: E.icon,
-                                src: j,
+                                className: j.icon,
+                                src: E,
                                 alt: ''
                             }),
                             (0, i.jsxs)('div', {
-                                className: E.text,
+                                className: j.text,
                                 children: [
-                                    (0, i.jsx)(a.xv, {
+                                    (0, i.jsx)(l.xv, {
                                         variant: 'text-md/bold',
                                         color: 'always-white',
                                         children: _.intl.string(x.default['7qZdOz'])
                                     }),
-                                    (0, i.jsx)(a.xv, {
+                                    (0, i.jsx)(l.xv, {
                                         variant: 'text-sm/medium',
                                         color: 'always-white',
                                         children: _.intl.string(x.default.orfMLS)
@@ -98,7 +98,7 @@ function O() {
                                 ]
                             }),
                             (0, i.jsx)(c.d4D, {
-                                className: E.arrow,
+                                className: j.arrow,
                                 color: 'black'
                             })
                         ]

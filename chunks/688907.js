@@ -1,17 +1,17 @@
-n.d(t, {
+a.d(t, {
     BH: () => s,
     MH: () => o,
     j4: () => u,
     nC: () => d
 });
-var a = n(442837),
-    r = n(524437),
-    l = n(761781),
-    i = n(695346);
+var n = a(442837),
+    r = a(524437),
+    l = a(761781),
+    i = a(695346);
 function s() {
     return c(
         i.YT.useSetting(),
-        (0, a.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
+        (0, n.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
     );
 }
 function o() {

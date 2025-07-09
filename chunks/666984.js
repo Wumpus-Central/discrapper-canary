@@ -1,81 +1,82 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    a = n(620662),
-    o = n(503438),
-    s = n(829820),
-    l = n(395361),
-    c = n(652853),
-    u = n(475413),
-    d = n(228168),
-    f = n(981631),
-    _ = n(388032),
-    p = n(227832);
-function h(e) {
-    var t, n, h, m;
-    let { user: g, activity: E, onAction: b } = e,
-        { themeType: y } = (0, c.z)(),
-        O = (0, s.Ih)(E, g),
-        v = (0, s.Fe)(E, g);
-    if (!(0, o.Z)(E) || (!(0, a.Z)(E, f.xjy.PLAY) && !(0, a.Z)(E, f.xjy.SYNC))) return null;
-    let I = (e) => {
-            (null == e || e.stopPropagation(), null == b || b({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), O.onClick());
+var i = n(755721),
+    a = n(481060),
+    o = n(620662),
+    s = n(503438),
+    l = n(829820),
+    c = n(395361),
+    u = n(652853),
+    d = n(475413),
+    f = n(228168),
+    _ = n(981631),
+    p = n(388032),
+    h = n(227832);
+function m(e) {
+    var t, n, m, g;
+    let { user: E, activity: b, onAction: y } = e,
+        { themeType: O } = (0, u.z)(),
+        v = (0, l.Ih)(b, E),
+        I = (0, l.Fe)(b, E);
+    if (!(0, s.Z)(b) || (!(0, o.Z)(b, _.xjy.PLAY) && !(0, o.Z)(b, _.xjy.SYNC))) return null;
+    let T = (e) => {
+            (null == e || e.stopPropagation(), null == y || y({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), v.onClick());
         },
-        T = (e) => {
-            (e.stopPropagation(), null == b || b({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), v.onClick());
+        S = (e) => {
+            (e.stopPropagation(), null == y || y({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), I.onClick());
         };
-    return y === d.lY.MODAL_V2
+    return O === f.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(i.DY3, {
-                      text: v.tooltip,
-                      children: (0, r.jsx)(u.tG, {
-                          text: null != (t = v.label) ? t : _.intl.string(_.t.eU3inJ),
-                          disabled: v.disabled,
-                          submitting: v.loading,
-                          size: i.PhG.TINY,
+                  (0, r.jsx)(a.DY3, {
+                      text: I.tooltip,
+                      children: (0, r.jsx)(d.tG, {
+                          text: null != (t = I.label) ? t : p.intl.string(p.t.eU3inJ),
+                          disabled: I.disabled,
+                          submitting: I.loading,
+                          size: i.Ph.TINY,
                           themeColor: 'secondary',
-                          onClick: T
+                          onClick: S
                       })
                   }),
-                  (0, r.jsx)(i.DY3, {
-                      text: O.tooltip,
-                      children: (0, r.jsx)(u.tG, {
-                          text: null != (n = O.label) ? n : _.intl.string(_.t.rRffNz),
-                          disabled: O.disabled,
-                          submitting: O.loading,
-                          size: i.PhG.TINY,
+                  (0, r.jsx)(a.DY3, {
+                      text: v.tooltip,
+                      children: (0, r.jsx)(d.tG, {
+                          text: null != (n = v.label) ? n : p.intl.string(p.t.rRffNz),
+                          disabled: v.disabled,
+                          submitting: v.loading,
+                          size: i.Ph.TINY,
                           themeColor: 'secondary',
-                          onClick: I
+                          onClick: T
                       })
                   })
               ]
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(i.DY3, {
-                      text: O.tooltip,
-                      className: p.primaryButton,
-                      children: (0, r.jsx)(u.tG, {
-                          icon: () => (0, r.jsx)(l.Z, {}),
-                          text: null != (h = O.label) ? h : _.intl.string(_.t.rRffNz),
-                          disabled: O.disabled,
-                          submitting: O.loading,
-                          wrapperClassName: p.primaryButton,
+                  (0, r.jsx)(a.DY3, {
+                      text: v.tooltip,
+                      className: h.primaryButton,
+                      children: (0, r.jsx)(d.tG, {
+                          icon: () => (0, r.jsx)(c.Z, {}),
+                          text: null != (m = v.label) ? m : p.intl.string(p.t.rRffNz),
+                          disabled: v.disabled,
+                          submitting: v.loading,
+                          wrapperClassName: h.primaryButton,
                           themeColor: 'secondary',
                           fullWidth: !0,
-                          onClick: I
+                          onClick: T
                       })
                   }),
-                  (0, r.jsx)(u.ef, {
-                      icon: i.iOO,
-                      tooltipText: null != (m = v.tooltip) ? m : _.intl.string(_.t.eU3inJ),
-                      disabled: v.disabled,
-                      submitting: v.loading,
+                  (0, r.jsx)(d.ef, {
+                      icon: a.iOO,
+                      tooltipText: null != (g = I.tooltip) ? g : p.intl.string(p.t.eU3inJ),
+                      disabled: I.disabled,
+                      submitting: I.loading,
                       themeColor: 'secondary',
                       fullWidth: !0,
-                      onClick: T
+                      onClick: S
                   })
               ]
           });

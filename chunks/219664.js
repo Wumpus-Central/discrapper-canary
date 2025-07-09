@@ -29,9 +29,9 @@ var r = n(255367),
     I = n(404616),
     E = n(510060),
     R = n(983200),
-    k = n(196255),
-    M = n(858543),
-    Z = n(482062),
+    M = n(196255),
+    Z = n(858543),
+    k = n(482062),
     A = n(883728),
     L = n(710352),
     F = n(981631),
@@ -114,9 +114,9 @@ function G(e) {
     i.useEffect(() => {
         null == x || x(b.current, p);
     }, [x, p]);
-    let M = (0, N.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
+    let Z = (0, N.xw)(n, s.z.CREATION_DATE, L.R6.POSTED_DURATION_AGO),
         F = (0, I.NN)(n),
-        H = (0, Z.nX)({
+        H = (0, k.nX)({
             id: t,
             row: g.row,
             column: g.column,
@@ -176,7 +176,7 @@ function G(e) {
                             (0, r.jsxs)('div', {
                                 className: z.rowGroup,
                                 children: [
-                                    (0, r.jsx)(k.Z, {
+                                    (0, r.jsx)(M.Z, {
                                         channel: n,
                                         message: v
                                     }),
@@ -184,7 +184,7 @@ function G(e) {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
                                         className: z.postCreationTimestamp,
-                                        children: M
+                                        children: Z
                                     })
                                 ]
                             }),
@@ -296,7 +296,7 @@ function q(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: z.tagsRow,
-                      children: (0, r.jsx)(M.ZP, {
+                      children: (0, r.jsx)(Z.ZP, {
                           channel: t,
                           tagsClassName: z.tagPill
                       })
@@ -528,7 +528,7 @@ function Q(e) {
             formatInline: !1,
             noStyleAndInteraction: !0
         }),
-        { shouldRenderTagsRow: g } = (0, M.DM)({
+        { shouldRenderTagsRow: g } = (0, Z.DM)({
             channel: t,
             isNew: !1
         }),
@@ -567,7 +567,7 @@ function Q(e) {
             (0, r.jsx)('div', {
                 className: l()(z.textContentFooter, { [z.noTags]: !g }),
                 children: g
-                    ? (0, r.jsx)(M.ZP, {
+                    ? (0, r.jsx)(Z.ZP, {
                           channel: t,
                           tagsClassName: z.tagPill
                       })
@@ -579,7 +579,7 @@ function Q(e) {
 function $(e) {
     let { message: t, containerWidth: n, channel: a } = e,
         [s, o] = (0, E.rI)(n - 2 * E.LT),
-        { shouldRenderTagsRow: c } = (0, M.DM)({
+        { shouldRenderTagsRow: c } = (0, Z.DM)({
             channel: a,
             isNew: !1
         }),
@@ -606,7 +606,7 @@ function $(e) {
             (0, r.jsx)('div', {
                 className: l()(z.textContentFooter, { [z.noTags]: !c }),
                 children: c
-                    ? (0, r.jsx)(M.ZP, {
+                    ? (0, r.jsx)(Z.ZP, {
                           channel: a,
                           tagsClassName: z.tagPill
                       })

@@ -1,141 +1,142 @@
-l.d(n, { A: () => j });
+l.d(n, { A: () => f });
 var t = l(255367);
 l(73800);
 var r = l(442837),
-    i = l(481060),
-    s = l(812206),
-    a = l(370210),
-    o = l(757746),
-    c = l(572004),
-    d = l(601911),
-    u = l(504211),
-    m = l(533159),
-    x = l(981631),
-    h = l(388032),
-    p = l(969878),
-    v = l(409369);
-function j(e) {
-    let { appId: n, skuId: l, transitionState: j, onClose: f, onHeaderTitleClick: b, children: N, footer: S } = e,
-        g = (0, r.e7)(
-            [s.Z, a.Z],
+    i = l(755721),
+    s = l(481060),
+    a = l(812206),
+    o = l(370210),
+    c = l(757746),
+    d = l(572004),
+    u = l(601911),
+    m = l(504211),
+    x = l(533159),
+    h = l(981631),
+    p = l(388032),
+    v = l(969878),
+    j = l(409369);
+function f(e) {
+    let { appId: n, skuId: l, transitionState: f, onClose: b, onHeaderTitleClick: N, children: S, footer: g } = e,
+        O = (0, r.e7)(
+            [a.Z, o.Z],
             () => {
                 var e;
-                return null != (e = s.Z.getApplication(n)) ? e : a.Z.getApplicationRecord(n);
+                return null != (e = a.Z.getApplication(n)) ? e : o.Z.getApplicationRecord(n);
             },
             [n]
         ),
-        { data: k } = (0, o.Z)(l);
-    if (null == g) return null;
-    let O = (0, d.y)(g, 25),
-        { termsOfServiceUrl: I, privacyPolicyUrl: C } = g;
-    return (null == k ? void 0 : k.applicationId) !== n
-        ? (0, t.jsxs)(i.Y0X, {
-              transitionState: j,
-              size: i.CgR.SMALL,
+        { data: I } = (0, c.Z)(l);
+    if (null == O) return null;
+    let C = (0, u.y)(O, 25),
+        { termsOfServiceUrl: y, privacyPolicyUrl: T } = O;
+    return (null == I ? void 0 : I.applicationId) !== n
+        ? (0, t.jsxs)(s.Y0X, {
+              transitionState: f,
+              size: s.CgR.SMALL,
               parentComponent: 'CardDetailsModal',
               children: [
-                  (0, t.jsxs)(i.hzk, {
-                      className: v.content,
+                  (0, t.jsxs)(s.hzk, {
+                      className: j.content,
                       children: [
-                          (0, t.jsx)(i.olH, {
-                              onClick: f,
-                              className: p.modalCloseBtn
+                          (0, t.jsx)(s.olH, {
+                              onClick: b,
+                              className: v.modalCloseBtn
                           }),
-                          (0, t.jsx)(i.Text, {
+                          (0, t.jsx)(s.Text, {
                               variant: 'text-lg/semibold',
                               color: 'header-primary',
-                              className: v.unavailableTitle,
-                              children: h.intl.string(h.t['0Bf80N'])
+                              className: j.unavailableTitle,
+                              children: p.intl.string(p.t['0Bf80N'])
                           }),
-                          (0, t.jsx)(i.Text, {
+                          (0, t.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'header-secondary',
-                              className: v.unavailableBody,
-                              children: h.intl.string(h.t.omH3bm)
+                              className: j.unavailableBody,
+                              children: p.intl.string(p.t.omH3bm)
                           })
                       ]
                   }),
-                  (0, t.jsx)(i.mzw, {
-                      children: (0, t.jsx)(i.zxk, {
-                          className: v.button,
-                          color: i.zxk.Colors.BRAND,
-                          onClick: f,
-                          size: i.zxk.Sizes.LARGE,
-                          children: h.intl.string(h.t.BddRzc)
+                  (0, t.jsx)(s.mzw, {
+                      children: (0, t.jsx)(i.zx, {
+                          className: j.button,
+                          color: i.zx.Colors.BRAND,
+                          onClick: b,
+                          size: i.zx.Sizes.LARGE,
+                          children: p.intl.string(p.t.BddRzc)
                       })
                   })
               ]
           })
-        : (0, t.jsxs)(i.Y0X, {
-              transitionState: j,
-              size: i.CgR.DYNAMIC,
-              className: v.modal,
+        : (0, t.jsxs)(s.Y0X, {
+              transitionState: f,
+              size: s.CgR.DYNAMIC,
+              className: j.modal,
               parentComponent: 'CardDetailsModal',
               children: [
-                  (0, t.jsxs)(i.xBx, {
-                      className: p.modalHeader,
+                  (0, t.jsxs)(s.xBx, {
+                      className: v.modalHeader,
                       children: [
-                          (0, t.jsxs)(i.P3F, {
-                              className: p.modalTitle,
-                              onClick: b,
+                          (0, t.jsxs)(s.P3F, {
+                              className: v.modalTitle,
+                              onClick: N,
                               children: [
-                                  null != O &&
+                                  null != C &&
                                       (0, t.jsx)('img', {
-                                          src: O.href,
+                                          src: C.href,
                                           alt: '',
-                                          className: v.appIcon
+                                          className: j.appIcon
                                       }),
-                                  (0, t.jsx)(i.X6q, {
+                                  (0, t.jsx)(s.X6q, {
                                       variant: 'heading-md/semibold',
-                                      children: g.name
+                                      children: O.name
                                   })
                               ]
                           }),
-                          (0, t.jsx)(i.olH, {
-                              onClick: f,
-                              className: p.modalCloseBtn
+                          (0, t.jsx)(s.olH, {
+                              onClick: b,
+                              className: v.modalCloseBtn
                           })
                       ]
                   }),
-                  N,
-                  (0, t.jsxs)(i.mzw, {
-                      className: v.footer,
+                  S,
+                  (0, t.jsxs)(s.mzw, {
+                      className: j.footer,
                       children: [
-                          null != I || null != C
-                              ? (0, t.jsx)(i.Text, {
+                          null != y || null != T
+                              ? (0, t.jsx)(s.Text, {
                                     color: 'header-primary',
                                     variant: 'text-sm/normal',
-                                    children: (0, t.jsx)(m.Z, {
-                                        termsOfServiceUrl: I,
-                                        privacyPolicyUrl: C
+                                    children: (0, t.jsx)(x.Z, {
+                                        termsOfServiceUrl: y,
+                                        privacyPolicyUrl: T
                                     })
                                 })
-                              : (0, t.jsx)(i.Text, {
+                              : (0, t.jsx)(s.Text, {
                                     color: 'header-primary',
                                     variant: 'text-xs/normal',
-                                    children: h.intl.string(h.t['3ZY+0N'])
+                                    children: p.intl.string(p.t['3ZY+0N'])
                                 }),
                           (0, t.jsxs)('div', {
-                              className: v.footerButtons,
+                              className: j.footerButtons,
                               children: [
-                                  c.wS &&
-                                      (0, t.jsx)(i.zxk, {
-                                          look: i.zxk.Looks.FILLED,
-                                          size: i.zxk.Sizes.ICON,
-                                          color: i.zxk.Colors.PRIMARY,
-                                          'aria-label': h.intl.string(h.t.WqhZsr),
-                                          className: v.linkButton,
-                                          innerClassName: v.innerLinkButton,
+                                  d.wS &&
+                                      (0, t.jsx)(i.zx, {
+                                          look: i.zx.Looks.FILLED,
+                                          size: i.zx.Sizes.ICON,
+                                          color: i.zx.Colors.PRIMARY,
+                                          'aria-label': p.intl.string(p.t.WqhZsr),
+                                          className: j.linkButton,
+                                          innerClassName: j.innerLinkButton,
                                           onClick: () => {
-                                              let e = ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, l));
-                                              ((0, c.JG)(e, () => (0, i.showToast)((0, i.createToast)(h.intl.string(h.t['L/PwZW']), i.ToastType.SUCCESS))), (0, u.X)(n, u.B.DETAILS_MODAL, l));
+                                              let e = ''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, l));
+                                              ((0, d.JG)(e, () => (0, s.showToast)((0, s.createToast)(p.intl.string(p.t['L/PwZW']), s.ToastType.SUCCESS))), (0, m.X)(n, m.B.DETAILS_MODAL, l));
                                           },
-                                          children: (0, t.jsx)(i.xPt, {
+                                          children: (0, t.jsx)(s.xPt, {
                                               size: 'xs',
                                               color: 'currentColor'
                                           })
                                       }),
-                                  S
+                                  g
                               ]
                           })
                       ]

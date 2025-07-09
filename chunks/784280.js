@@ -1,91 +1,92 @@
-(a.d(t, { default: () => g }), a(388685));
+(a.d(t, { default: () => _ }), a(388685));
 var n = a(255367),
     r = a(73800),
     o = a(442837),
-    i = a(481060),
-    l = a(881052),
-    s = a(607070),
-    d = a(745510),
-    c = a(600164),
-    m = a(781792),
-    u = a(430824),
-    f = a(645792),
-    b = a(981631),
-    h = a(388032),
-    x = a(539813);
-function g(e) {
+    i = a(755721),
+    l = a(481060),
+    s = a(881052),
+    d = a(607070),
+    c = a(745510),
+    m = a(600164),
+    u = a(781792),
+    f = a(430824),
+    b = a(645792),
+    h = a(981631),
+    x = a(388032),
+    g = a(539813);
+function _(e) {
     let { guildId: t } = e,
-        a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        [g, _] = r.useState(null),
-        [p, C] = r.useState(''),
-        { createMultipleConfettiAt: k } = r.useContext(d.h),
-        v = (0, o.e7)([s.Z], () => s.Z.useReducedMotion, []),
-        H = async (t) => {
+        a = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        [_, p] = r.useState(null),
+        [C, v] = r.useState(''),
+        { createMultipleConfettiAt: H } = r.useContext(c.h),
+        N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion, []),
+        k = async (t) => {
             let { onClose: a, guildId: n } = e;
-            (t.preventDefault(), _(null));
+            (t.preventDefault(), p(null));
             try {
-                (await (0, m.e)(n, { nick: p }), null == a || a());
+                (await (0, u.e)(n, { nick: C }), null == a || a());
             } catch (e) {
-                _(new l.Hx(e));
+                p(new s.Hx(e));
             }
         },
-        { transitionState: N } = e,
-        j = u.Z.getGuildsArray().filter((e) => e.id !== t && e.features.has(b.oNc.HUB)).length > 0,
-        S = !v && !j && (null == a ? void 0 : a.features.has(b.oNc.HUB)) && (0, f.b)();
+        { transitionState: j } = e,
+        S = f.Z.getGuildsArray().filter((e) => e.id !== t && e.features.has(h.oNc.HUB)).length > 0,
+        w = !N && !S && (null == a ? void 0 : a.features.has(h.oNc.HUB)) && (0, b.b)();
     return (
         r.useEffect(() => {
-            S && k(window.innerWidth / 2, window.innerHeight / 2);
-        }, [k, S]),
-        (0, n.jsxs)(i.Y0X, {
-            className: x.__invalid_modalRoot,
-            transitionState: N,
-            'aria-label': h.intl.formatToPlainString(h.t['d+6kzs'], { guildName: null == a ? void 0 : a.name }),
+            w && H(window.innerWidth / 2, window.innerHeight / 2);
+        }, [H, w]),
+        (0, n.jsxs)(l.Y0X, {
+            className: g.__invalid_modalRoot,
+            transitionState: j,
+            'aria-label': x.intl.formatToPlainString(x.t['d+6kzs'], { guildName: null == a ? void 0 : a.name }),
             parentComponent: 'HubRealNameModal',
             children: [
-                (0, n.jsxs)(i.xBx, {
+                (0, n.jsxs)(l.xBx, {
                     separator: !1,
-                    className: x.formHeaderContainer,
-                    direction: c.Z.Direction.VERTICAL,
+                    className: g.formHeaderContainer,
+                    direction: m.Z.Direction.VERTICAL,
                     children: [
-                        (0, n.jsx)('div', { className: x.formImage }),
-                        (0, n.jsx)(i.X6q, {
+                        (0, n.jsx)('div', { className: g.formImage }),
+                        (0, n.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: x.formHeader,
-                            children: h.intl.format(h.t['d+6kzs'], { guildName: null == a ? void 0 : a.name })
+                            className: g.formHeader,
+                            children: x.intl.format(x.t['d+6kzs'], { guildName: null == a ? void 0 : a.name })
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            className: x.formSubHeader,
-                            children: h.intl.string(h.t.b3L8y8)
+                            className: g.formSubHeader,
+                            children: x.intl.string(x.t.b3L8y8)
                         })
                     ]
                 }),
                 (0, n.jsxs)('form', {
-                    className: x.formContent,
-                    onSubmit: H,
+                    className: g.formContent,
+                    onSubmit: k,
                     children: [
-                        (0, n.jsx)(i.hzk, {
-                            children: (0, n.jsx)(i.xJW, {
-                                title: h.intl.string(h.t.ilDlmZ),
-                                children: (0, n.jsx)(i.oil, {
-                                    placeholder: h.intl.string(h.t.RfWvWF),
+                        (0, n.jsx)(l.hzk, {
+                            children: (0, n.jsx)(l.xJW, {
+                                title: x.intl.string(x.t.ilDlmZ),
+                                children: (0, n.jsx)(l.oil, {
+                                    placeholder: x.intl.string(x.t.RfWvWF),
                                     onChange: (e) => {
-                                        C(e);
+                                        v(e);
                                     },
-                                    error: null == g ? void 0 : g.getFirstFieldErrorMessage('name'),
-                                    value: p
+                                    error: null == _ ? void 0 : _.getFirstFieldErrorMessage('name'),
+                                    value: C
                                 })
                             })
                         }),
-                        (0, n.jsx)(i.mzw, {
-                            className: x.formFooter,
-                            direction: c.Z.Direction.VERTICAL,
-                            children: (0, n.jsx)(i.zxk, {
+                        (0, n.jsx)(l.mzw, {
+                            className: g.formFooter,
+                            direction: m.Z.Direction.VERTICAL,
+                            children: (0, n.jsx)(i.zx, {
                                 type: 'submit',
-                                size: i.zxk.Sizes.LARGE,
-                                color: i.zxk.Colors.BRAND,
-                                children: h.intl.string(h.t.Np4yXV)
+                                size: i.zx.Sizes.LARGE,
+                                color: i.zx.Colors.BRAND,
+                                children: x.intl.string(x.t.Np4yXV)
                             })
                         })
                     ]

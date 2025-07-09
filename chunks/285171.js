@@ -1,51 +1,51 @@
 r.d(t, { default: () => O });
 var n = r(255367),
-    o = r(73800),
-    i = r(442837),
-    l = r(481060),
-    c = r(313201),
+    i = r(73800),
+    o = r(442837),
+    c = r(481060),
+    l = r(313201),
     s = r(237997),
     a = r(451478),
     u = r(358085),
-    f = r(998502),
-    p = r(145597),
-    b = r(981631),
-    d = r(388032);
+    p = r(998502),
+    d = r(145597),
+    f = r(981631),
+    b = r(388032);
 function O(e) {
     var t,
         r,
-        { transitionState: O, onClose: j, contextKey: y } = e,
-        g = (function (e, t) {
+        { transitionState: O, onClose: y, contextKey: j } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
             }
-            return o;
+            return i;
         })(e, ['transitionState', 'onClose', 'contextKey']);
-    let h = (0, c.Dt)(),
-        x = (0, i.e7)([a.Z], () => a.Z.isFocused()),
-        P = y === b.IlC.APP,
-        k = (0, p.getPID)(),
-        m = (0, i.e7)([s.default], () => s.default.isLocked(k));
-    return (o.useEffect(() => {
-        (x || P || m) && (null == j || j());
-    }, [x, j, P, m]),
-    x || m)
+    let g = (0, l.Dt)(),
+        x = (0, o.e7)([a.Z], () => a.Z.isFocused()),
+        P = j === f.IlC.APP,
+        m = (0, d.getPID)(),
+        v = (0, o.e7)([s.default], () => s.default.isLocked(m));
+    return (i.useEffect(() => {
+        (x || P || v) && (null == y || y());
+    }, [x, y, P, v]),
+    x || v)
         ? null
         : (0, n.jsxs)(
-              l.Y0X,
+              c.Y0X,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var r = null != arguments[t] ? arguments[t] : {},
@@ -73,44 +73,46 @@ function O(e) {
               })(
                   {
                       transitionState: O,
-                      'aria-labelledby': h
+                      'aria-labelledby': g
                   },
-                  g
+                  h
               )),
               (r = r =
                   {
-                      size: l.CgR.SMALL,
+                      size: c.CgR.SMALL,
                       parentComponent: 'FocusMainAppModal',
                       children: [
-                          (0, n.jsx)(l.xBx, {
-                              children: (0, n.jsx)(l.X6q, {
+                          (0, n.jsx)(c.xBx, {
+                              children: (0, n.jsx)(c.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: d.intl.string(d.t.DJ8ojI)
+                                  children: b.intl.string(b.t.DJ8ojI)
                               })
                           }),
-                          (0, n.jsx)(l.hzk, {
-                              children: (0, n.jsx)(l.Text, {
+                          (0, n.jsx)(c.hzk, {
+                              children: (0, n.jsx)(c.Text, {
                                   color: 'text-default',
                                   variant: 'text-md/medium',
-                                  children: d.intl.string(d.t['E+Ph7O'])
+                                  children: b.intl.string(b.t['E+Ph7O'])
                               })
                           }),
-                          (0, n.jsxs)(l.mzw, {
-                              children: [
-                                  (0, n.jsx)(l.zxk, {
-                                      onClick: () => {
-                                          (u.isPlatformEmbedded ? f.ZP.focus() : window.focus(), j());
-                                      },
-                                      color: l.zxk.Colors.BRAND,
-                                      children: d.intl.string(d.t.ELRJQk)
-                                  }),
-                                  (0, n.jsx)(l.zxk, {
-                                      onClick: () => (null == j ? void 0 : j()),
-                                      color: l.zxk.Colors.PRIMARY,
-                                      look: l.zxk.Looks.LINK,
-                                      children: d.intl.string(d.t.FgK5QE)
-                                  })
-                              ]
+                          (0, n.jsx)(c.mzw, {
+                              children: (0, n.jsxs)(c.hE2, {
+                                  direction: 'horizontal-reverse',
+                                  children: [
+                                      (0, n.jsx)(c.zxk, {
+                                          variant: 'primary',
+                                          text: b.intl.string(b.t.ELRJQk),
+                                          onClick: () => {
+                                              (u.isPlatformEmbedded ? p.ZP.focus() : window.focus(), y());
+                                          }
+                                      }),
+                                      (0, n.jsx)(c.zxk, {
+                                          variant: 'secondary',
+                                          text: b.intl.string(b.t.FgK5QE),
+                                          onClick: () => (null == y ? void 0 : y())
+                                      })
+                                  ]
+                              })
                           })
                       ]
                   }),

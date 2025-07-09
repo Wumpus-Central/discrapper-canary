@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var i = n(73800),
     r = n(442837),
     s = n(668826),
-    l = n(120421);
-function a(e) {
-    let t = (0, r.e7)([l.Z], () => l.Z.getItemMetadata(e)),
+    a = n(120421);
+function l(e) {
+    let t = (0, r.e7)([a.Z], () => a.Z.getItemMetadata(e)),
         n = (0, i.useMemo)(() => (null != t ? t : {}), [t]),
-        a = (0, i.useRef)(n);
+        l = (0, i.useRef)(n);
     (0, i.useEffect)(() => {
-        a.current = n;
+        l.current = n;
     }, [n]);
     let o = (0, i.useCallback)(
         (t) => {
@@ -38,7 +38,7 @@ function a(e) {
                             }));
                     }
                     return e;
-                })({}, a.current, t)
+                })({}, l.current, t)
             );
         },
         [e]

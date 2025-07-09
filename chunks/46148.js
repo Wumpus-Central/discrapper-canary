@@ -1,56 +1,82 @@
-(n.d(t, { s: () => S }), n(388685));
+(n.d(t, { W: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
     a = n(481060),
-    s = n(266454),
-    c = n(243778),
-    u = n(612659),
-    d = n(819640),
-    h = n(436952),
-    p = n(54480),
-    f = n(680783),
-    g = n(13186),
-    m = n(981631),
-    b = n(921944),
-    _ = n(474936),
-    O = n(388032),
-    y = n(706442),
-    v = n(777091);
-let C = (e, t) => {
+    s = n(515753),
+    c = n(266454),
+    u = n(243778),
+    d = n(612659),
+    h = n(819640),
+    p = n(436952),
+    f = n(54480),
+    g = n(680783),
+    m = n(13186),
+    b = n(981631),
+    _ = n(921944),
+    O = n(474936),
+    y = n(388032),
+    v = n(706442),
+    C = n(777091);
+function j(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r));
+            }));
+    }
+    return e;
+}
+let E = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    j = (e) => ('has-wallpaper-nitro' === e ? O.intl.string(O.t.T9dXPj) : O.intl.string(O.t.zyvzQ0)),
-    E = (e) => {
+    S = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
+    x = (e) => {
         switch (e) {
             case 'non-nitro':
-                return O.intl.string(O.t.VU8fxM);
+                return y.intl.string(y.t.VU8fxM);
             case 'no-wallpaper-nitro':
-                return O.intl.string(O.t.BQBNjY);
+                return y.intl.string(y.t.BQBNjY);
             case 'has-wallpaper-nitro':
-                return O.intl.string(O.t.eZMxlZ);
+                return y.intl.string(y.t.eZMxlZ);
         }
     },
-    S = (e) => {
-        let { children: t, channelId: n, selectedChannelId: S } = e,
-            x = (0, s.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-            P = S === n,
-            { canAccessPicker: N, entryPoint: w } = (0, p.m)({
+    I = i.memo(function (e) {
+        let t = e.channel.id,
+            n = e.selected,
+            I = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            P = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
+            { canAccessPicker: N, entryPoint: w } = (0, f.m)({
                 location: 'ChatWallpaperDMListCoachmark',
-                selectedChannelId: S
+                channelId: t
             }),
-            Z = w === h.FN.CONTEXT_MENU,
-            [T, A] = (0, c.US)(x && Z && P && N && !I ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, u.m)(_.p9.TIER_2),
-            D = (0, f.Z)(n),
+            Z = w === p.FN.CONTEXT_MENU,
+            [T, A] = (0, u.US)(I && Z && n && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            R = (0, d.m)(O.p9.TIER_2),
+            D = (0, g.Z)(t),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             M = (0, i.useRef)(null),
             k = (0, i.useRef)(null),
             U = (0, i.useRef)(null),
-            [G, B] = (0, i.useState)(g.U.TOP);
+            [G, B] = (0, i.useState)(m.U.TOP);
         if (
             ((0, i.useLayoutEffect)(() => {
                 if (null === M.current) return;
@@ -59,19 +85,19 @@ let C = (e, t) => {
                     let r = null == (e = M.current) ? void 0 : e.getBoundingClientRect();
                     if (null == r) return;
                     let i = null != (n = null == (t = U.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
-                    window.innerHeight - r.bottom < i ? B(g.U.BOTTOM) : B(g.U.TOP);
+                    window.innerHeight - r.bottom < i ? B(m.U.BOTTOM) : B(m.U.TOP);
                 };
                 return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
             }, [L]),
             !L)
         )
-            return t;
+            return (0, r.jsx)(s.ZP, j({}, e));
         let F = () => {
-                A(b.L.USER_DISMISS);
+                A(_.L.USER_DISMISS);
             },
-            V = C(R, null != D ? D : null),
-            H = j(V),
-            z = E(V);
+            V = E(R, null != D ? D : null),
+            H = S(V),
+            z = x(V);
         return (0, r.jsx)('div', {
             ref: M,
             children: (0, r.jsx)(a.yRy, {
@@ -81,20 +107,40 @@ let C = (e, t) => {
                 shouldShow: L,
                 onRequestClose: F,
                 renderPopout: () =>
-                    (0, r.jsx)(g.Z, {
+                    (0, r.jsx)(m.Z, {
                         ref: U,
                         onClose: F,
-                        buttonText: O.intl.string(O.t['+IrDzM']),
+                        buttonText: y.intl.string(y.t['+IrDzM']),
                         header: H,
                         art: (0, r.jsx)('img', {
-                            src: v.Z,
+                            src: C.Z,
                             alt: '',
-                            className: y.chatWallpaperDMListCoachmarkArt
+                            className: v.chatWallpaperDMListCoachmarkArt
                         }),
                         body: z,
                         align: G
                     }),
-                children: () => (0, i.cloneElement)(t, { ref: k })
+                children: (t) => {
+                    var n, i;
+                    return (0, r.jsx)(
+                        s.ZP,
+                        ((n = j({}, e)),
+                        (i = i = { ref: k }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                              }),
+                        n)
+                    );
+                }
             })
         });
-    };
+    });

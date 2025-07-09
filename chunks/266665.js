@@ -78,8 +78,8 @@ function Z(e) {
         S = (0, h.pM)(d.id, g.id),
         Z = null == I && !S,
         D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
-        k = (0, j._f)(d.id, g, g.colorStrings),
-        [, A] = (0, a.c)({
+        A = (0, j._f)(d.id, g, g.colorStrings),
+        [, L] = (0, a.c)({
             type: R,
             item: () => (
                 v(g.id),
@@ -95,7 +95,7 @@ function Z(e) {
                 y(n.roleId);
             }
         }),
-        [{ dragSourcePosition: L }, M] = (0, o.L)({
+        [{ dragSourcePosition: k }, M] = (0, o.L)({
             accept: R,
             canDrop: () => Z,
             collect: (e) => {
@@ -115,18 +115,18 @@ function Z(e) {
             : 'dot' === N
               ? (0, r.jsx)(u.FhE, {
                     color: G,
-                    colors: k,
+                    colors: A,
                     background: !1,
                     tooltip: !1
                 })
               : (0, r.jsx)(u.xko, {
                     color: G,
-                    colors: k
+                    colors: A
                 })),
         (0, r.jsxs)(u.njP.Item, {
             className: s()(T.row, {
-                [T.dragBefore]: null !== L && _ < L,
-                [T.dragAfter]: null !== L && _ > L
+                [T.dragBefore]: null !== k && _ < k,
+                [T.dragAfter]: null !== k && _ > k
             }),
             id: g.id,
             selectedItem: f,
@@ -148,7 +148,7 @@ function Z(e) {
             'aria-label': g.name,
             clickableRef: (e) => {
                 var t;
-                A(M(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                L(M(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 l,
@@ -176,22 +176,22 @@ function D(e) {
         [h, x] = i.useState(o.length),
         { scrolledToTop: j, handleScroll: C } = (0, N.V)(),
         { handleDragStart: E, handleDragReset: R, handleDragComplete: D } = (0, y.Z)(o),
-        k = i.useRef(null),
-        A = i.useCallback(
+        A = i.useRef(null),
+        L = i.useCallback(
             (e) => {
                 var t, n;
                 let r = o.findIndex((t) => t.id === e);
-                null == (n = k.current) || null == (t = n.getScrollerNode()) || t.scrollTo({ top: Math.max((r - 2) * 34, 0) });
+                null == (n = A.current) || null == (t = n.getScrollerNode()) || t.scrollTo({ top: Math.max((r - 2) * 34, 0) });
             },
             [o]
         );
     ((0, p.ZP)(() => {
-        A(n);
+        L(n);
     }),
         i.useEffect(() => {
-            (o.length > h && A(n), o.length !== h && x(o.length));
-        }, [o.length, h, x, A, n]));
-    let L = () => {
+            (o.length > h && L(n), o.length !== h && x(o.length));
+        }, [o.length, h, x, L, n]));
+    let k = () => {
         (g.Z.createRole(t.id), a(I.ZI.DISPLAY));
     };
     return (0, r.jsx)(b.ZP.Sidebar, {
@@ -227,7 +227,7 @@ function D(e) {
                                 (0, r.jsx)(
                                     u.P3F,
                                     w(P({ className: T.addRole }, e), {
-                                        onClick: L,
+                                        onClick: k,
                                         children: (0, r.jsx)(u.qJs, {
                                             size: 'custom',
                                             color: 'currentColor',
@@ -241,7 +241,7 @@ function D(e) {
                 }),
                 (0, r.jsx)(u.Den, {
                     className: T.list,
-                    ref: k,
+                    ref: A,
                     onScroll: C,
                     children: (0, r.jsx)(u.njP, {
                         selectedItem: n,

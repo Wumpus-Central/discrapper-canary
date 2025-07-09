@@ -6,8 +6,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(351773),
+    a = n.n(s),
+    l = n(351773),
     o = n(507808),
     c = n(23547),
     d = n(790542),
@@ -22,21 +22,21 @@ let b = {
         END: f.alignRight
     },
     x = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: _, isCoachmarkEnabled: E = !0, linkText: j = h.intl.string(h.t.XRdyj4), cardAlignment: O = b.START, className: C } = e,
-            { balance: S } = (0, d.A)(),
-            [v, T] = r.useState(u.b.DEFAULT),
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: _, isCoachmarkEnabled: j = !0, linkText: E = h.intl.string(h.t.XRdyj4), cardAlignment: O = b.START, className: C } = e,
+            { balance: v } = (0, d.A)(),
+            [S, T] = r.useState(u.b.DEFAULT),
             [N, I] = r.useState(!1),
             [y, A] = r.useState(!1),
             P = r.useRef(null),
             { shouldOpen: R } = (0, c.Mm)({
                 backgroundElementRef: P,
-                isCoachmarkEnabled: E,
+                isCoachmarkEnabled: j,
                 onCloseCallback: g.dG4,
                 onClickPill: g.dG4
             });
         r.useEffect(() => {
-            E && ((0, c.wH)() || R ? (A(!0), I(!1)) : A(!1));
-        }, [E, R]);
+            j && ((0, c.wH)() || R ? (A(!0), I(!1)) : A(!1));
+        }, [j, R]);
         let D = r.useCallback(() => {
                 let e = !N;
                 (e &&
@@ -52,9 +52,9 @@ let b = {
             Z = r.useCallback(() => {
                 N && D();
             }, [N, D]),
-            w = (0, a.Z)(null, Z);
+            w = (0, l.Z)(null, Z);
         return (0, i.jsxs)('div', {
-            className: l()(f.container, C, {
+            className: a()(f.container, C, {
                 [f.hidden]: y,
                 [f.visible]: !y
             }),
@@ -62,8 +62,8 @@ let b = {
                 (0, i.jsx)(p.y, {
                     pillRef: P,
                     anchorPillType: x,
-                    balance: S,
-                    balanceWidgetMode: R ? u.b.DEFAULT : v,
+                    balance: v,
+                    balanceWidgetMode: R ? u.b.DEFAULT : S,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
@@ -72,7 +72,7 @@ let b = {
                 }),
                 N &&
                     (0, i.jsx)('div', {
-                        className: l()(f.cardContainer, O, {
+                        className: a()(f.cardContainer, O, {
                             [f.hidden]: y,
                             [f.visible]: !y
                         }),
@@ -83,7 +83,7 @@ let b = {
                             ctaOnClick: () => {
                                 (D(), s());
                             },
-                            linkText: j
+                            linkText: E
                         })
                     })
             ]

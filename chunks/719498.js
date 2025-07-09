@@ -1,18 +1,18 @@
-r.d(t, { default: () => x });
+r.d(t, { default: () => p });
 var n = r(255367),
     a = r(73800),
     i = r(481060),
-    o = r(933557),
-    c = r(925329),
-    s = r(296023),
+    c = r(933557),
+    s = r(925329),
+    o = r(296023),
     l = r(388032),
     d = r(821084);
-let x = (e) => {
-    let { channel: t, application: x, onClose: p, transitionState: u } = e,
-        m = (0, s.w)(t),
+let p = (e) => {
+    let { channel: t, application: p, onClose: m, transitionState: u } = e,
+        x = (0, o.w)(t),
         b = a.useCallback(
             () => (
-                p(),
+                m(),
                 (0, i.ZDy)(async () => {
                     let { default: e } = await r.e('31907').then(r.bind(r, 366854));
                     return (r) => {
@@ -47,7 +47,7 @@ let x = (e) => {
                             (i = i =
                                 {
                                     channelId: t.id,
-                                    application: x
+                                    application: p
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
@@ -66,9 +66,9 @@ let x = (e) => {
                     };
                 })
             ),
-            [x, t.id, p]
+            [p, t.id, m]
         ),
-        j = (0, o.ZP)(t, !0);
+        j = (0, c.ZP)(t, !0);
     return (0, n.jsxs)(i.Y0X, {
         transitionState: u,
         'aria-label': l.intl.string(l.t.OJknho),
@@ -84,9 +84,9 @@ let x = (e) => {
             (0, n.jsxs)(i.hzk, {
                 className: d.content,
                 children: [
-                    (0, n.jsx)(c.Z, {
-                        game: x,
-                        size: c.Z.Sizes.XLARGE
+                    (0, n.jsx)(s.Z, {
+                        game: p,
+                        size: s.Z.Sizes.XLARGE
                     }),
                     (0, n.jsxs)('div', {
                         className: d.metadata,
@@ -97,7 +97,7 @@ let x = (e) => {
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: x.name
+                                        children: p.name
                                     }),
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-sm/normal',
@@ -106,14 +106,14 @@ let x = (e) => {
                                     })
                                 ]
                             }),
-                            null != m &&
+                            null != x &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)('div', { className: d.divider }),
                                         (0, n.jsx)(i.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: m
+                                            children: x
                                         })
                                     ]
                                 })
@@ -124,16 +124,18 @@ let x = (e) => {
             (0, n.jsxs)(i.mzw, {
                 children: [
                     (0, n.jsx)(i.zxk, {
-                        onClick: b,
-                        color: i.zxk.Colors.RED,
-                        children: l.intl.string(l.t.LLWaxc)
+                        variant: 'critical-primary',
+                        text: l.intl.string(l.t.LLWaxc),
+                        onClick: b
                     }),
-                    (0, n.jsx)(i.zxk, {
-                        onClick: p,
-                        look: i.zxk.Looks.FILLED,
-                        color: i.zxk.Colors.PRIMARY,
+                    (0, n.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: d.cancelButton,
-                        children: l.intl.string(l.t['ETE/oK'])
+                        children: (0, n.jsx)(i.zxk, {
+                            variant: 'secondary',
+                            text: l.intl.string(l.t['ETE/oK']),
+                            onClick: m
+                        })
                     })
                 ]
             })

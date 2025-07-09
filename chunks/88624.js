@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(512722),
     s = n.n(r),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(346951),
     c = n(644744),
     d = n(792423),
@@ -18,7 +18,7 @@ function f() {
         houseMembership: e,
         isClaimed: t,
         isVerified: n
-    } = (0, l.cj)([m.default, u.Z], () => {
+    } = (0, a.cj)([m.default, u.Z], () => {
         let e = m.default.getCurrentUser();
         return (
             s()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
@@ -29,16 +29,16 @@ function f() {
             }
         );
     });
-    return (0, i.jsxs)(a.y5t, {
+    return (0, i.jsxs)(l.y5t, {
         component: (0, i.jsxs)('div', {
             className: h.intro,
             children: [
-                (0, i.jsx)(a.X6q, {
+                (0, i.jsx)(l.X6q, {
                     variant: 'heading-xxl/semibold',
                     className: h.introHeader,
                     children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-lg/normal',
                     children: g.intl.string(g.t['6FaVFB'])
                 })

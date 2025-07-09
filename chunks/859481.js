@@ -1,34 +1,35 @@
-(n.d(t, { z: () => j }), n(704826), n(35282));
+(n.d(t, { z: () => _ }), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    s = n(906732),
-    a = n(263145),
-    o = n(366980),
-    c = n(621319),
-    d = n(770270),
-    u = n(70086),
-    m = n(949640),
-    g = n(981631),
-    p = n(30513),
-    f = n(388032),
-    h = n(919957);
-function x(e) {
+    l = n(755721),
+    s = n(481060),
+    a = n(906732),
+    o = n(263145),
+    c = n(366980),
+    d = n(621319),
+    u = n(770270),
+    m = n(70086),
+    g = n(949640),
+    p = n(981631),
+    f = n(30513),
+    h = n(388032),
+    x = n(919957);
+function b(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)
-        return (0, r.jsx)(l.Text, {
+        return (0, r.jsx)(s.Text, {
             variant: 'text-md/normal',
             color: 'text-danger',
-            className: h.vanityInfo,
-            children: (0, d.i)(null == t ? void 0 : t.code)
+            className: x.vanityInfo,
+            children: (0, u.i)(null == t ? void 0 : t.code)
         });
     if (null != n && n.length > 0) {
-        let e = (0, o.Z)(n);
-        return (0, r.jsx)(l.Text, {
+        let e = (0, c.Z)(n);
+        return (0, r.jsx)(s.Text, {
             variant: 'text-sm/medium',
             color: 'text-secondary',
-            className: h.vanityInfo,
-            children: f.intl.format(f.t['1qTOvr'], {
+            className: x.vanityInfo,
+            children: h.intl.format(h.t['1qTOvr'], {
                 urlText: e,
                 urlValue: e
             })
@@ -36,94 +37,94 @@ function x(e) {
     }
     return null;
 }
-function b(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: o, hasError: d } = e,
-        u = (null == t ? void 0 : t.features.has(g.oNc.VANITY_URL)) === !0,
-        m = i.useCallback(() => {
-            (0, c.Gy)('');
+function j(e) {
+    let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: c, hasError: u } = e,
+        m = (null == t ? void 0 : t.features.has(p.oNc.VANITY_URL)) === !0,
+        g = i.useCallback(() => {
+            (0, d.Gy)('');
         }, []),
-        p = i.useCallback((e) => {
-            (0, c.Gy)(e.replace(/ /g, '-'));
+        f = i.useCallback((e) => {
+            (0, d.Gy)(e.replace(/ /g, '-'));
         }, []);
     return null == n
-        ? (0, r.jsx)(l.$jN, {})
-        : (0, r.jsxs)(l.Zbd, {
+        ? (0, r.jsx)(s.$jN, {})
+        : (0, r.jsxs)(s.Zbd, {
               editable: !0,
-              className: h.editVanityUrlCard,
+              className: x.editVanityUrlCard,
               children: [
                   (0, r.jsxs)('div', {
-                      className: h.formTitleField,
+                      className: x.formTitleField,
                       children: [
-                          (0, r.jsx)(l.X6q, {
+                          (0, r.jsx)(s.X6q, {
                               variant: 'heading-sm/semibold',
                               color: 'text-default',
-                              children: f.intl.string(f.t['6oJyq6'])
+                              children: h.intl.string(h.t['6oJyq6'])
                           }),
                           n.length > 0
-                              ? (0, r.jsx)(l.Text, {
+                              ? (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    children: f.intl.format(f.t.MVWOUV, { uses: s })
+                                    children: h.intl.format(h.t.MVWOUV, { uses: a })
                                 })
                               : null
                       ]
                   }),
-                  (0, r.jsx)(a.Z, {
+                  (0, r.jsx)(o.Z, {
                       prefix: ''.concat('https://discord.gg', '/'),
                       value: n,
-                      onChange: p,
+                      onChange: f,
                       maxLength: 25,
-                      error: d,
-                      disabled: !u
+                      error: u,
+                      disabled: !m
                   }),
-                  null != o && o.length > 0
-                      ? (0, r.jsx)(l.zxk, {
-                            className: h.removeVanityUrlButton,
-                            onClick: m,
-                            look: l.zxk.Looks.LINK,
-                            size: l.zxk.Sizes.MIN,
-                            color: l.zxk.Colors.RED,
-                            children: f.intl.string(f.t['3ggb6O'])
+                  null != c && c.length > 0
+                      ? (0, r.jsx)(l.zx, {
+                            className: x.removeVanityUrlButton,
+                            onClick: g,
+                            look: l.zx.Looks.LINK,
+                            size: l.zx.Sizes.MIN,
+                            color: l.zx.Colors.RED,
+                            children: h.intl.string(h.t['3ggb6O'])
                         })
                       : null
               ]
           });
 }
-function j(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: a, errorDetails: o } = e,
-        { analyticsLocations: c } = (0, s.ZP)(),
-        f = i.useCallback(
+function _(e) {
+    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: s, errorDetails: o } = e,
+        { analyticsLocations: c } = (0, a.ZP)(),
+        d = i.useCallback(
             (e) => {
                 (e.preventDefault(),
                     e.stopPropagation(),
-                    (0, m.E6)({
+                    (0, g.E6)({
                         guild: t,
                         analyticsLocations: c,
-                        analyticsSection: g.jXE.GUILD_SETTINGS_VANITY_URL,
-                        analyticsObject: g.qAy.BUTTON_CTA,
-                        perks: (0, p.WW)(),
-                        targetPremiumGuildTier: g.Eu4.TIER_3
+                        analyticsSection: p.jXE.GUILD_SETTINGS_VANITY_URL,
+                        analyticsObject: p.qAy.BUTTON_CTA,
+                        perks: (0, f.WW)(),
+                        targetPremiumGuildTier: p.Eu4.TIER_3
                     }));
             },
             [c, t]
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, d.p)(t)
-                ? (0, r.jsx)(b, {
+            (0, u.p)(t)
+                ? (0, r.jsx)(j, {
                       guild: t,
                       vanityURLCode: n,
                       vanityURLUses: l,
-                      originalVanityURLCode: a,
+                      originalVanityURLCode: s,
                       hasError: null != o
                   })
-                : (0, r.jsx)(u.P, {
-                      onClick: f,
-                      className: h.upsellButton
+                : (0, r.jsx)(m.P, {
+                      onClick: d,
+                      className: x.upsellButton
                   }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(b, {
                 errorDetails: o,
-                originalVanityURLCode: a
+                originalVanityURLCode: s
             })
         ]
     });

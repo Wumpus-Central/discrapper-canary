@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(772848),
+    a = n.n(l),
+    o = n(772848),
     s = n(535655),
     c = n(973693),
     u = n(912370),
@@ -31,32 +31,32 @@ var r = n(255367),
     A = n(403404),
     w = n(981631),
     R = n(388032),
-    k = n(210408);
-let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    D = 'vc-activities-'.concat((0, a.Z)());
-function L(e) {
+    M = n(210408);
+let D = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
+    L = 'vc-activities-'.concat((0, o.Z)());
+function k(e) {
     var t;
     let n,
-        { channel: l, openInPopout: o, onClick: a } = e,
+        { channel: l, openInPopout: a, onClick: o } = e,
         { fetchState: c, voiceBannerCollection: h } = (function () {
             let e = (0, d.e7)([E.default], () => E.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
             return (
                 i.useEffect(() => {
                     (0, x.XK)({
-                        surface: M,
+                        surface: D,
                         activeState: e
                     });
                 }, [e]),
                 {
                     fetchState: (0, d.e7)([v.Z], () =>
                         v.Z.getFetchState({
-                            surface: M,
+                            surface: D,
                             activeState: e
                         })
                     ),
                     voiceBannerCollection: (0, d.e7)([v.Z], () =>
                         v.Z.getCollections({
-                            surface: M,
+                            surface: D,
                             activeState: e
                         })
                     )[0]
@@ -86,16 +86,16 @@ function L(e) {
                   containerWidth: 584
               })),
           (0, r.jsxs)(p.P3F, {
-              className: k.clickableBanner,
+              className: M.clickableBanner,
               innerRef: C,
               onClick: () => {
-                  (a(),
+                  (o(),
                       (0, y.Z)({
                           context: {
                               type: 'channel',
                               channel: l
                           },
-                          openInPopout: o,
+                          openInPopout: a,
                           analyticsLocation: m.Z.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: g.application.id }
                       }));
@@ -104,15 +104,15 @@ function L(e) {
                   (0, r.jsx)('img', {
                       alt: g.description,
                       src: n,
-                      className: k.poster
+                      className: M.poster
                   }),
-                  (0, r.jsx)('div', { className: k.posterDivider })
+                  (0, r.jsx)('div', { className: M.posterDivider })
               ]
           }));
 }
 let U = i.forwardRef(function (e, t) {
     var n;
-    let { channel: l, isHovered: a, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
+    let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
         y = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { id: x, guild_id: v } = l;
     (i.useEffect(() => {
@@ -122,11 +122,11 @@ let U = i.forwardRef(function (e, t) {
         });
     }, [x, v]),
         i.useEffect(() => {
-            a || s();
-        }, [s, a]));
+            o || s();
+        }, [s, o]));
     let O = (0, h.bp)(),
         { analyticsLocations: E } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-        M = O === w.IlC.POPOUT,
+        D = O === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => P.ux(), 1000);
@@ -136,12 +136,12 @@ let U = i.forwardRef(function (e, t) {
         F = i.useCallback(() => {
             ((0, A.Z)({
                 channel: l,
-                openInPopout: M,
+                openInPopout: D,
                 analyticsLocations: E
             }),
                 u(),
                 b());
-        }, [E, l, b, u, M]),
+        }, [E, l, b, u, D]),
         H = i.useCallback(
             (e) => {
                 (c(),
@@ -158,32 +158,32 @@ let U = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': D,
+                'aria-labelledby': L,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: D,
+                                id: L,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: k.container,
+                        className: M.container,
                         onMouseEnter: H,
                         onMouseLeave: u,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: k.titleContainer,
+                                className: M.titleContainer,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: k.titleLeft,
+                                        className: M.titleLeft,
                                         children: [
                                             (0, r.jsx)(G, {
                                                 size: 'md',
-                                                className: k.titleLeftIcon,
+                                                className: M.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
                                             }),
                                             (0, r.jsx)(p.Text, {
@@ -193,7 +193,7 @@ let U = i.forwardRef(function (e, t) {
                                         ]
                                     }),
                                     (0, r.jsxs)(p.P3F, {
-                                        className: k.titleRight,
+                                        className: M.titleRight,
                                         onClick: F,
                                         children: [
                                             (0, r.jsx)(p.Text, {
@@ -205,21 +205,21 @@ let U = i.forwardRef(function (e, t) {
                                                 width: 12,
                                                 height: 12,
                                                 color: 'var(--interactive-active)',
-                                                className: k.titleRightIcon
+                                                className: M.titleRightIcon
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(L, {
-                                openInPopout: M,
+                            (0, r.jsx)(k, {
+                                openInPopout: D,
                                 channel: l,
                                 onClick: () => {
                                     (b(), s());
                                 }
                             }),
                             (0, r.jsxs)('div', {
-                                className: k.activityContainer,
+                                className: M.activityContainer,
                                 children: [
                                     U.map((e) =>
                                         (0, r.jsx)(
@@ -234,17 +234,17 @@ let U = i.forwardRef(function (e, t) {
                                                     (s(), b());
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                animatedDivClass: k.activitySuggestion,
+                                                animatedDivClass: M.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF
                                             },
                                             e.application.id
                                         )
                                     ),
                                     (0, r.jsx)('div', {
-                                        className: o()(k.wumpusRocketOuterContainer, { [k.wumpusReducedMotion]: y }),
+                                        className: a()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: y }),
                                         children: (0, r.jsx)('div', {
-                                            className: k.wumpusRocketInnerContainer,
-                                            children: (0, r.jsx)(T.Z, { className: k.wumpusRocket })
+                                            className: M.wumpusRocketInnerContainer,
+                                            children: (0, r.jsx)(T.Z, { className: M.wumpusRocket })
                                         })
                                     })
                                 ]

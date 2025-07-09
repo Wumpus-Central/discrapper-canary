@@ -2,8 +2,8 @@
 var r,
     i = n(392711),
     l = n.n(i),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(592125),
     c = n(271383),
     u = n(797316),
@@ -55,8 +55,8 @@ class x {
     updateUserId(e) {
         if (!this.allUserIds.has(e)) return !1;
         let [t, n, r] = this.findOldState(e),
-            [i, l, o] = this.calculateNewState(e, s.Z.getChannel(this.parentId));
-        return (t !== i || n !== l || r !== o) && (this.removeUserId(e, t), this.addUser(e, i, l, o), !0);
+            [i, l, a] = this.calculateNewState(e, s.Z.getChannel(this.parentId));
+        return (t !== i || n !== l || r !== a) && (this.removeUserId(e, t), this.addUser(e, i, l, a), !0);
     }
     addUserId(e) {
         let [t, n, r] = this.calculateNewState(e, s.Z.getChannel(this.parentId));
@@ -77,19 +77,19 @@ class x {
                 usersById: {},
                 userIds: []
             });
-        let o = this.sections[t];
+        let a = this.sections[t];
         if (
-            ((o.usersById[e] = {
+            ((a.usersById[e] = {
                 userId: e,
                 displayName: n,
                 canViewChannel: r
             }),
             i)
         )
-            o.userIds.push(e);
+            a.userIds.push(e);
         else {
-            let t = this.findUserIdSortedPosition(o, e, n);
-            o.userIds.splice(t, 0, e);
+            let t = this.findUserIdSortedPosition(a, e, n);
+            a.userIds.splice(t, 0, e);
         }
         this.version++;
     }
@@ -97,12 +97,12 @@ class x {
         let { userIds: r, usersById: i } = e;
         for (let e = 0; e < r.length; e++) {
             let l = r[e],
-                o = i[l].displayName;
-            if (o === n) {
+                a = i[l].displayName;
+            if (a === n) {
                 if (t < l) return e;
-            } else if (null == o) {
+            } else if (null == a) {
                 if (null != n) return e;
-            } else if (null != n && n < o) return e;
+            } else if (null != n && n < a) return e;
         }
         return r.length;
     }
@@ -124,8 +124,8 @@ class x {
         var n, r;
         let i = c.ZP.getMember(this.guildId, e),
             l = h.default.getUser(e),
-            o = h.default.getCurrentUser(),
-            a = (null == l ? void 0 : l.id) === (null == o ? void 0 : o.id) ? p.Z.getStatus() : d.Z.getStatus(e, this.guildId),
+            a = h.default.getCurrentUser(),
+            o = (null == l ? void 0 : l.id) === (null == a ? void 0 : a.id) ? p.Z.getStatus() : d.Z.getStatus(e, this.guildId),
             s =
                 null != l &&
                 null != t &&
@@ -134,7 +134,7 @@ class x {
                     user: l,
                     context: t
                 }),
-            u = a !== _.Skl.OFFLINE && a !== _.Skl.INVISIBLE && a !== _.Skl.UNKNOWN ? (null != (n = null == i ? void 0 : i.hoistRoleId) ? n : 'online') : 'offline',
+            u = o !== _.Skl.OFFLINE && o !== _.Skl.INVISIBLE && o !== _.Skl.UNKNOWN ? (null != (n = null == i ? void 0 : i.hoistRoleId) ? n : 'online') : 'offline',
             f = null != (r = null == i ? void 0 : i.nick) ? r : b.ZP.getName(l);
         return [u, null == f ? void 0 : f.toLowerCase(), s];
     }
@@ -157,7 +157,7 @@ function j(e) {
     for (let e in C) C[e].guildId === t && (C[e].rebuild(), (n = !0));
     return n;
 }
-class E extends (r = o.ZP.Store) {
+class E extends (r = a.ZP.Store) {
     initialize() {
         (this.waitFor(s.Z, c.ZP, u.Z, d.Z, p.Z, h.default),
             this.syncWith([u.Z], () => {
@@ -183,12 +183,12 @@ class E extends (r = o.ZP.Store) {
         var r, i;
         let l = C[e];
         if (null == l) return !1;
-        let o = null == (r = l.sections[t]) ? void 0 : r.usersById[n];
-        return null != (i = null == o ? void 0 : o.canViewChannel) && i;
+        let a = null == (r = l.sections[t]) ? void 0 : r.usersById[n];
+        return null != (i = null == a ? void 0 : a.canViewChannel) && i;
     }
 }
 y(E, 'displayName', 'ThreadMemberListStore');
-let S = new E(a.Z, {
+let S = new E(o.Z, {
     CONNECTION_OPEN: function () {
         C = {};
     },

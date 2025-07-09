@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(781311), n(539338), n(388685));
+(n.d(t, { Z: () => k }), n(781311), n(539338), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function k(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,8 +73,8 @@ function k(e, t) {
         e
     );
 }
-let A = 'DRAGGABLE_ROLE';
-function L(e) {
+let L = 'DRAGGABLE_ROLE';
+function k(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([N.Z], () => N.Z.getRoleMemberCount(n.id), [n.id]),
         g = (0, d.e7)([O.Z], () => O.Z.getHighestRole(n), [n]),
@@ -146,11 +146,11 @@ function G(e) {
     var t, l, c;
     let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: v, onDragReset: O, onDragComplete: C, disableHover: y, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
         P = (0, E.T)(u, p, d),
-        L = null != P,
+        k = null != P,
         [M, G] = i.useState(!1),
         B = i.useMemo(
             () => ({
-                type: A,
+                type: L,
                 item: () => (
                     v(d.id),
                     {
@@ -158,7 +158,7 @@ function G(e) {
                         position: h
                     }
                 ),
-                canDrag: () => M && !L,
+                canDrag: () => M && !k,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -166,20 +166,20 @@ function G(e) {
                     C(n.roleId);
                 }
             }),
-            [d, v, O, C, L, M, h]
+            [d, v, O, C, k, M, h]
         ),
         [{ isDragging: F }, z] = (0, a.c)(B),
         H = i.useMemo(
             () => ({
-                accept: A,
-                canDrop: () => !L,
+                accept: L,
+                canDrop: () => !k,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
                 },
                 drop: () => ({ roleId: d.id })
             }),
-            [L, d]
+            [k, d]
         ),
         [{ dragSourcePosition: V }, W] = (0, o.L)(H),
         Y = i.useCallback(
@@ -189,7 +189,7 @@ function G(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            k(D({}, t), {
+                            A(D({}, t), {
                                 role: d,
                                 guild: u
                             })
@@ -230,7 +230,7 @@ function G(e) {
         }),
         children: [
             (0, r.jsx)('div', {
-                className: s()(R.dragIcon, Z.dragSpacing, { [R.dragIconHidden]: L || N }),
+                className: s()(R.dragIcon, Z.dragSpacing, { [R.dragIconHidden]: k || N }),
                 onMouseEnter: () => G(!0),
                 onMouseLeave: () => G(!1),
                 children: (0, r.jsx)(m.Vni, {
@@ -281,7 +281,7 @@ function G(e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         m.P3F,
-                        k(D({}, e), {
+                        A(D({}, e), {
                             className: s()(R.memberCountContainer, Z.memberSpacing),
                             onClick: q,
                             children: [
@@ -306,10 +306,10 @@ function G(e) {
                 children: [
                     (0, r.jsx)(m.M0o, {
                         className: s()(R.circleButton, R.editButton),
-                        tooltip: L ? w.intl.string(w.t['HO/oXl']) : w.intl.string(w.t.bt75u7),
+                        tooltip: k ? w.intl.string(w.t['HO/oXl']) : w.intl.string(w.t.bt75u7),
                         color: m.YX$.SECONDARY,
                         size: m.tT7.SIZE_36,
-                        icon: L
+                        icon: k
                             ? (0, r.jsx)(m.tEF, {
                                   size: 'custom',
                                   color: 'currentColor',
@@ -356,7 +356,7 @@ function U(e) {
     if (null != C)
         return (0, r.jsx)(
             h.Z,
-            k(D({}, C), {
+            A(D({}, C), {
                 className: p,
                 enableTooltip: g
             })

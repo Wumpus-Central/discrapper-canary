@@ -1,129 +1,130 @@
-(n.d(e, { Z: () => m }), n(388685));
+(n.d(e, { Z: () => g }), n(388685));
 var r = n(255367),
     s = n(73800),
-    i = n(481060),
-    o = n(442837),
-    c = n(194359),
-    a = n(782568),
-    l = n(726521),
-    u = n(485664),
-    d = n(681678),
-    E = n(699516),
-    h = n(473092),
-    _ = n(991981),
-    N = n(850165),
-    x = n(134612),
-    b = n(388032),
-    p = n(948582),
-    f = n(149355);
-function m(t) {
-    let { senderId: e, channelId: n, hasReported: m, onReport: g, trackAnalyticsEvent: C } = t,
-        I = (0, o.e7)([E.Z], () => E.Z.isBlocked(e)),
-        [A, T] = s.useState(I),
-        S = (0, u.o)(),
-        O = (0, u.Q)(),
-        [j, R] = s.useState(!1),
-        k = (0, _.q)(n),
-        M = s.useMemo(() => (S ? 0 : O ? 2 : 1), [S, O]),
-        v = () => {
-            (T(!0),
-                C(h.NM.USER_TAKEOVER_MODAL_BLOCK),
-                c.Z.blockUser(e, { location: x.DL }).then(() => {
-                    d.Z.showBlockSuccessToast(e, n);
+    i = n(755721),
+    o = n(481060),
+    c = n(442837),
+    a = n(194359),
+    l = n(782568),
+    u = n(726521),
+    d = n(485664),
+    E = n(681678),
+    h = n(699516),
+    _ = n(473092),
+    N = n(991981),
+    x = n(850165),
+    b = n(134612),
+    p = n(388032),
+    f = n(948582),
+    m = n(149355);
+function g(t) {
+    let { senderId: e, channelId: n, hasReported: g, onReport: C, trackAnalyticsEvent: I } = t,
+        A = (0, c.e7)([h.Z], () => h.Z.isBlocked(e)),
+        [T, S] = s.useState(A),
+        O = (0, d.o)(),
+        j = (0, d.Q)(),
+        [R, M] = s.useState(!1),
+        v = (0, N.q)(n),
+        y = s.useMemo(() => (O ? 0 : j ? 2 : 1), [O, j]),
+        z = () => {
+            (S(!0),
+                I(_.NM.USER_TAKEOVER_MODAL_BLOCK),
+                a.Z.blockUser(e, { location: b.DL }).then(() => {
+                    E.Z.showBlockSuccessToast(e, n);
                 }));
         },
-        y = () => {
-            (T(!1), c.Z.unblockUser(e, { location: x.DL }), C(h.NM.USER_TAKEOVER_MODAL_UNBLOCK), d.Z.showUnblockSuccessToast(e, n));
+        L = () => {
+            (S(!1), a.Z.unblockUser(e, { location: b.DL }), I(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), E.Z.showUnblockSuccessToast(e, n));
         },
-        z = async () => {
-            null != k &&
-                (R(!0),
-                await (0, l.J7)(
-                    k,
+        w = async () => {
+            null != v &&
+                (M(!0),
+                await (0, u.J7)(
+                    v,
                     () => {
-                        (d.Z.showReportSuccessToast(e, n), g());
+                        (E.Z.showReportSuccessToast(e, n), C());
                     },
                     () => {
-                        d.Z.showFailedToast();
+                        E.Z.showFailedToast();
                     }
                 ),
-                R(!1),
-                C(h.NM.USER_TAKEOVER_MODAL_REPORT));
+                M(!1),
+                I(_.NM.USER_TAKEOVER_MODAL_REPORT));
         },
-        L = (t) => {
-            0 === t ? ((0, a.Z)(x.EI), C(h.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, a.Z)(x.$l), C(h.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, a.Z)(x.n4), C(h.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        P = (t) => {
+            0 === t ? ((0, l.Z)(b.EI), I(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, l.Z)(b.$l), I(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, l.Z)(b.n4), I(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        w = s.useMemo(() => {
-            switch (M) {
+        D = s.useMemo(() => {
+            switch (y) {
                 case 0:
-                    return b.intl.string(b.t.sZf6c3);
+                    return p.intl.string(p.t.sZf6c3);
                 case 2:
-                    return b.intl.string(b.t.HQ2nKi);
+                    return p.intl.string(p.t.HQ2nKi);
                 default:
-                    return b.intl.string(b.t['65XQam']);
+                    return p.intl.string(p.t['65XQam']);
             }
-        }, [M]);
-    return (0, r.jsx)(N.Z, {
-        heroImageSrc: f,
-        heroImageAlt: b.intl.string(b.t.RVyYCA),
-        header: b.intl.string(b.t['mWO+ys']),
-        description: b.intl.string(b.t.S0XtKC),
+        }, [y]);
+    return (0, r.jsx)(x.Z, {
+        heroImageSrc: m,
+        heroImageAlt: p.intl.string(p.t.RVyYCA),
+        header: p.intl.string(p.t['mWO+ys']),
+        description: p.intl.string(p.t.S0XtKC),
         children: (0, r.jsxs)('div', {
-            className: p.buttonContainer,
+            className: f.buttonContainer,
             children: [
-                (0, r.jsxs)(i.zxk, {
-                    color: i.zxk.Colors.BRAND,
-                    size: i.zxk.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
+                (0, r.jsxs)(i.zx, {
+                    color: i.zx.Colors.BRAND,
+                    size: i.zx.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
                     onClick: () => {
-                        A ? y() : v();
+                        T ? L() : z();
                     },
                     children: [
-                        (0, r.jsx)(i.k$p, {
+                        (0, r.jsx)(o.k$p, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: p.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        A ? b.intl.string(b.t.XyHpKC) : b.intl.string(b.t.l4EmaW)
+                        T ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW)
                     ]
                 }),
-                (0, r.jsxs)(i.zxk, {
-                    color: i.zxk.Colors.PRIMARY,
-                    size: i.zxk.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
-                    onClick: z,
-                    submitting: j,
-                    disabled: m,
+                (0, r.jsxs)(i.zx, {
+                    color: i.zx.Colors.PRIMARY,
+                    size: i.zx.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
+                    onClick: w,
+                    submitting: R,
+                    disabled: g,
                     children: [
-                        (0, r.jsx)(i.U65, {
+                        (0, r.jsx)(o.U65, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: p.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        m ? b.intl.string(b.t.QvwOJy) : b.intl.string(b.t['7fHyEx'])
+                        g ? p.intl.string(p.t.QvwOJy) : p.intl.string(p.t['7fHyEx'])
                     ]
                 }),
-                (0, r.jsxs)(i.zxk, {
-                    color: i.zxk.Colors.PRIMARY,
-                    size: i.zxk.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
-                    onClick: () => L(M),
+                (0, r.jsxs)(i.zx, {
+                    color: i.zx.Colors.PRIMARY,
+                    size: i.zx.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
+                    onClick: () => P(y),
                     children: [
-                        (0, r.jsx)(i.kBi, {
+                        (0, r.jsx)(o.kBi, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: p.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        w
+                        D
                     ]
                 })
             ]

@@ -1,11 +1,11 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
     o = n(313201),
-    c = n(430824),
-    s = n(427679),
+    s = n(430824),
+    c = n(427679),
     d = n(939863),
     u = n(540186),
     h = n(609776),
@@ -14,8 +14,8 @@ var r = n(255367),
     m = n(157925),
     b = n(388032),
     f = n(879656);
-function x(e) {
-    let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: c, error: s, onSave: u, defaultOptions: g, isSlideReady: _ } = e;
+function p(e) {
+    let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: s, error: c, onSave: u, defaultOptions: g, isSlideReady: _ } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -52,8 +52,8 @@ function x(e) {
                 guild: t,
                 channel: n,
                 onSave: u,
-                error: s,
-                loading: c,
+                error: c,
+                loading: s,
                 onClose: o,
                 defaultOptions: g,
                 isSlideReady: _
@@ -61,11 +61,11 @@ function x(e) {
         ]
     });
 }
-function p(e) {
+function x(e) {
     var t,
         n,
         { channel: d, onClose: h, transitionState: b } = e,
-        p = (function (e, t) {
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -85,9 +85,9 @@ function p(e) {
             return i;
         })(e, ['channel', 'onClose', 'transitionState']);
     let v = (0, o.Dt)(),
-        j = (0, l.e7)([c.Z], () => c.Z.getGuild(d.guild_id)),
-        N = i.useMemo(() => s.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: I, error: O, onSave: y } = (0, g.Z)(d, h),
+        j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
+        N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
+        { loading: y, error: I, onSave: O } = (0, g.Z)(d, h),
         {
             modalStep: C,
             setModalStep: E,
@@ -99,8 +99,8 @@ function p(e) {
         } = (0, _.Z)({
             stageInstance: N,
             defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
-            error: O,
-            onSave: y
+            error: I,
+            onSave: O
         });
     return (i.useEffect(() => {
         null == j && h();
@@ -138,7 +138,7 @@ function p(e) {
                       transitionState: b,
                       'aria-labelledby': v
                   },
-                  p
+                  x
               )),
               (n = n =
                   {
@@ -153,14 +153,14 @@ function p(e) {
                                   id: m.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)('div', {
                                       className: f.slideContainer,
-                                      children: (0, r.jsx)(x, {
+                                      children: (0, r.jsx)(p, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
                                           headerId: v,
                                           onClose: h,
-                                          loading: I,
-                                          error: O,
+                                          loading: y,
+                                          error: I,
                                           onSave: P,
                                           defaultOptions: w,
                                           isSlideReady: S === m.lv.STAGE_CHANNEL_SETTINGS
@@ -176,7 +176,7 @@ function p(e) {
                                           guild: j,
                                           channel: d,
                                           stageData: w,
-                                          loading: I,
+                                          loading: y,
                                           onNext: k,
                                           onCancel: h,
                                           onBack: () => E(m.lv.STAGE_CHANNEL_SETTINGS)

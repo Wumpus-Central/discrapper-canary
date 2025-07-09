@@ -1,7 +1,7 @@
 n.d(t, { F: () => p });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
+    l = n(755721),
     s = n(906732),
     a = n(70086),
     o = n(949640),
@@ -36,9 +36,9 @@ function p(e) {
             [f, t]
         );
     return h
-        ? (0, r.jsx)(l.zxk, {
+        ? (0, r.jsx)(l.zx, {
               disabled: !(h && n),
-              color: l.zxk.Colors.BRAND,
+              color: l.zx.Colors.BRAND,
               className: p,
               onClick: () =>
                   (0, o.mw)({

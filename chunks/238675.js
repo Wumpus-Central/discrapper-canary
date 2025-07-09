@@ -4,13 +4,13 @@ a.d(t, {
     sJ: () => o
 });
 var n,
-    l,
-    s = a(544891),
+    s,
+    l = a(544891),
     r = a(981631),
     i = (((n = {}).HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (n.SMITE_RQDATA = 'SmiteRqdata'), (n.RECAPTCHA = 'Recaptcha'), (n.RECAPTCHA_ENTERPRISE = 'RecaptchaEnterprise'), n),
-    o = (((l = {})[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT'), l);
+    o = (((s = {})[(s.EASY = 1)] = 'EASY'), (s[(s.MODERATE = 2)] = 'MODERATE'), (s[(s.DIFFICULT = 3)] = 'DIFFICULT'), (s[(s.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT'), s);
 async function c(e, t) {
-    await s.tn.post({
+    await l.tn.post({
         url: r.ANM.CAPTCHA_TEST,
         body: {
             decider: e,

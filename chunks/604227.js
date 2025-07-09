@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(525654),
-    a = n.n(l),
+    a = n(525654),
+    l = n.n(a),
     o = n(481060),
     c = n(579806),
     d = n(304761),
@@ -13,17 +13,17 @@ var r = n(120356),
     p = n(388032),
     g = n(980832);
 function h() {
-    var e, t, n, r, l;
+    var e, t, n, r, a;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = '416877',
-        b = 'c311b0b2bc53ae6c47106f8cfb63679f4aaf4b51'.substring(0, 7),
+        f = '416949',
+        b = 'c2d799f4ee6e3c9fc402a15b3cddd71c14136d69'.substring(0, 7),
         x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
-        E = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
-        j = null == (l = d.C.getCurrentBuildOverride().overrides) ? void 0 : l.discord_web,
+        j = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
+        E = null == (a = d.C.getCurrentBuildOverride().overrides) ? void 0 : a.discord_web,
         O = (function () {
             var e;
-            let t = null === a() || void 0 === a() || null == (e = a().os) ? void 0 : e.toString();
+            let t = null === l() || void 0 === l() || null == (e = l().os) ? void 0 : e.toString();
             if (null == t || null == c.Z) return null;
             let n = c.Z.os.release,
                 [i, r, s] = m.ZP.parsedOSRelease;
@@ -31,8 +31,8 @@ function h() {
         })(),
         C = [h, f, '('.concat(b, ')')];
     return (
-        null != x && (C.push('Host '.concat(x)), null != E && C.push(E.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
-        C.push('Build Override: '.concat(null != j ? j.id : 'N/A')),
+        null != x && (C.push('Host '.concat(x)), null != j && C.push(j.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
+        C.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
         null != O && C.push(O),
         (0, i.jsx)(u.Z, {
             copyValue: C.join(' '),
@@ -92,7 +92,7 @@ function h() {
                                         ]
                                     }),
                                     ' ',
-                                    null != j &&
+                                    null != E &&
                                         (0, i.jsx)(o.Text, {
                                             tag: 'span',
                                             className: g.line,
@@ -100,7 +100,7 @@ function h() {
                                             color: 'text-muted',
                                             children: (0, i.jsxs)('span', {
                                                 className: g.versionHash,
-                                                children: ['Build Override: ', j.id]
+                                                children: ['Build Override: ', E.id]
                                             })
                                         }),
                                     null != x
@@ -115,10 +115,10 @@ function h() {
                                                           'Host ',
                                                           x,
                                                           ' ',
-                                                          null != E
+                                                          null != j
                                                               ? (0, i.jsxs)('span', {
                                                                     className: g.appArch,
-                                                                    children: [E.toLowerCase(), ' ']
+                                                                    children: [j.toLowerCase(), ' ']
                                                                 })
                                                               : null,
                                                           null != _

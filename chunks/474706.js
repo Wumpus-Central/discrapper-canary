@@ -2,14 +2,14 @@ n.d(t, { f: () => u });
 var i = n(255367),
     r = n(442837),
     s = n(481060),
-    l = n(607070),
-    a = n(987209),
+    a = n(607070),
+    l = n(987209),
     o = n(286961),
     c = n(897942),
     d = n(263562);
 function u() {
-    let e = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-        { claimableRewards: t } = (0, a.wD)(),
+    let e = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
+        { claimableRewards: t } = (0, l.wD)(),
         n = (0, o.Z)(),
         u = null == n ? void 0 : n.planSelection;
     return null == u || null == t || 0 === t.length

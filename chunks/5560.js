@@ -6,9 +6,9 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(512722),
+    s = n.n(o),
     c = n(374470),
     u = n(442837),
     d = n(481060),
@@ -77,10 +77,10 @@ class O extends i.PureComponent {
             origin: { x: n, y: r },
             targetWidth: i,
             targetHeight: l,
-            position: o,
-            offset: a
+            position: a,
+            offset: o
         } = e;
-        (this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== r || this.props.targetWidth !== i || this.props.targetHeight !== l || this.props.position !== o || this.props.offset.x !== a.x || this.props.offset.y !== a.y) && this.updateCache();
+        (this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== r || this.props.targetWidth !== i || this.props.targetHeight !== l || this.props.position !== a || this.props.offset.x !== o.x || this.props.offset.y !== o.y) && this.updateCache();
     }
     updateCache() {
         var e, t;
@@ -117,7 +117,7 @@ class O extends i.PureComponent {
         let { tutorialId: e, autoInvert: t, focused: n, origin: i } = this.props,
             l = (0, g.S)(e);
         if (null == l) return null;
-        let { media: a, textAlign: s, isLongText: c, highPriority: u, spacing: p, arrowAlignment: f = h.cy.TOP, popoutPosition: m } = l,
+        let { media: o, textAlign: s, isLongText: c, highPriority: u, spacing: p, arrowAlignment: f = h.cy.TOP, popoutPosition: m } = l,
             { offsetX: b, offsetY: _ } = this.state,
             C = {
                 left: null != b ? i.x + b : void 0,
@@ -130,13 +130,13 @@ class O extends i.PureComponent {
                     : (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsx)('div', {
-                                  className: o()(y.top, {
+                                  className: a()(y.top, {
                                       [y.animating]: t,
                                       [y.notAnimating]: !t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: o()(y.bottom, {
+                                  className: a()(y.bottom, {
                                       [y.animating]: t,
                                       [y.notAnimating]: !t
                                   })
@@ -160,7 +160,7 @@ class O extends i.PureComponent {
                     {
                         innerRef: this.contentRef,
                         position: m,
-                        renderMedia: a,
+                        renderMedia: o,
                         textAlign: s,
                         spacing: p,
                         isLongText: c,
@@ -182,8 +182,8 @@ class O extends i.PureComponent {
                                 style: C,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)('div', {
-                                    className: o()(y.animationContainer, j(n)),
-                                    children: [O(n), (0, r.jsx)('div', { className: o()(y.innerCircle, j(n)) }), (0, r.jsx)('div', { className: o()(y.outerCircle, j(n)) })]
+                                    className: a()(y.animationContainer, j(n)),
+                                    children: [O(n), (0, r.jsx)('div', { className: a()(y.innerCircle, j(n)) }), (0, r.jsx)('div', { className: a()(y.outerCircle, j(n)) })]
                                 })
                             })
                         );
@@ -222,15 +222,15 @@ let j =
                   ? (0, r.jsx)(r.Fragment, {
                         children: Object.entries(e).map((e) => {
                             let [i, l] = e,
-                                o = t[i];
+                                a = t[i];
                             return (
-                                s()(null != o, 'Missing tutorial definition for '.concat(i)),
+                                s()(null != a, 'Missing tutorial definition for '.concat(i)),
                                 (0, r.jsx)(
                                     O,
                                     x(
                                         {
                                             tutorialId: i,
-                                            tutorialDefinition: o,
+                                            tutorialDefinition: a,
                                             focused: n
                                         },
                                         l

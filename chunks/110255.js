@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(776568),
-    a = n(218035),
+    a = n(776568),
+    o = n(218035),
     s = n(775666),
     c = n(858822),
     u = n(423589),
@@ -12,7 +12,7 @@ var i = n(442837),
     p = n(430824);
 function h(e) {
     let { channel: t, closePopout: n, onSelect: h, navId: f, label: m, location: g, includeGuildMute: b } = e,
-        _ = (0, a.c)(t),
+        _ = (0, o.c)(t),
         y = (0, s.EQ)(t),
         C = (0, i.e7)([p.Z], () => p.Z.getGuild(t.guild_id)),
         x = (0, c.Z)(C),
@@ -22,6 +22,6 @@ function h(e) {
         onClose: n,
         'aria-label': m,
         onSelect: h,
-        children: [(0, r.jsx)(l.kSQ, { children: (0, o.ZP)(t, g) }), b ? (0, r.jsx)(l.kSQ, { children: x }) : null, v ? y : (0, r.jsx)(l.kSQ, { children: _ })]
+        children: [(0, r.jsx)(l.kSQ, { children: (0, a.ZP)(t, g) }), b ? (0, r.jsx)(l.kSQ, { children: x }) : null, v ? y : (0, r.jsx)(l.kSQ, { children: _ })]
     });
 }

@@ -9,7 +9,7 @@ var r,
     l = n(73800),
     a = n(688642),
     o = n(442837),
-    s = n(481060),
+    s = n(755721),
     c = n(558381),
     u = n(410575),
     d = n(498179),
@@ -89,11 +89,11 @@ class S extends (r = l.Component) {
         (null == e || null == n) && (0, c.km)(t);
     }
     renderViewInStoreButton() {
-        return (0, i.jsx)(s.zxk.Link, {
+        return (0, i.jsx)(s.zx.Link, {
             to: this.getStoreListingLocation(),
             className: j.actionButton,
-            color: s.zxk.Colors.GREEN,
-            size: s.zxk.Sizes.SMALL,
+            color: s.zx.Colors.GREEN,
+            size: s.zx.Sizes.SMALL,
             children: O.intl.string(O.t['W+NB9/'])
         });
     }
@@ -185,8 +185,8 @@ class S extends (r = l.Component) {
                             ? this.renderViewInStoreButton()
                             : (0, i.jsx)(d.Z, {
                                   application: n,
-                                  customDisabledColor: s.zxk.Colors.PRIMARY,
-                                  size: s.zxk.Sizes.SMALL,
+                                  customDisabledColor: s.zx.Colors.PRIMARY,
+                                  size: s.zx.Sizes.SMALL,
                                   className: j.actionButton,
                                   source: v.Sbl.MESSAGE_EMBED,
                                   onClick: this.handleActionButtonClick

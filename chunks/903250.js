@@ -1,118 +1,119 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => w });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
-    o = n(481060),
-    c = n(607070),
-    d = n(100527),
-    u = n(906732),
-    m = n(70097),
-    p = n(526167),
-    g = n(357355),
-    h = n(140465),
-    f = n(775412),
-    b = n(51574),
-    x = n(304480),
-    _ = n(104494),
+    a = n.n(s),
+    l = n(442837),
+    o = n(755721),
+    c = n(481060),
+    d = n(607070),
+    u = n(100527),
+    m = n(906732),
+    p = n(70097),
+    g = n(526167),
+    h = n(357355),
+    f = n(140465),
+    b = n(775412),
+    x = n(51574),
+    _ = n(304480),
+    j = n(104494),
     E = n(639119),
-    j = n(105759),
-    O = n(736519),
-    C = n(422034),
+    O = n(105759),
+    C = n(736519),
+    v = n(422034),
     S = n(710220),
-    v = n(635921),
-    T = n(474936),
-    N = n(869783),
-    I = n(388032),
-    y = n(909176),
-    A = n(181960),
-    P = n(313199),
-    R = n(821969);
-let D = (e) => {
+    T = n(635921),
+    N = n(474936),
+    I = n(869783),
+    y = n(388032),
+    A = n(909176),
+    P = n(181960),
+    R = n(313199),
+    D = n(821969);
+let Z = (e) => {
         let t,
             { trialOffer: n, discountOffer: r } = e,
-            s = x.Z.useExperiment({ location: 'OfferPill' });
-        if ((null != n ? (t = !0 === s.enabled ? I.intl.string(I.t.gtNqJS) : I.intl.string(I.t.IBYG5e)) : null != r && (t = I.intl.formatToPlainString(I.t.iiLbvr, { percent: r.discount.amount })), null != t))
+            s = _.Z.useExperiment({ location: 'OfferPill' });
+        if ((null != n ? (t = !0 === s.enabled ? y.intl.string(y.t.gtNqJS) : y.intl.string(y.t.IBYG5e)) : null != r && (t = y.intl.formatToPlainString(y.t.iiLbvr, { percent: r.discount.amount })), null != t))
             return (0, i.jsx)('div', {
-                className: y.premiumOfferPill,
-                children: (0, i.jsx)(o.Text, {
+                className: A.premiumOfferPill,
+                children: (0, i.jsx)(c.Text, {
                     variant: 'text-xs/bold',
                     color: 'always-white',
                     children: t
                 })
             });
     },
-    Z = r.forwardRef((e, t) => {
+    w = r.forwardRef((e, t) => {
         var n, r;
-        let { className: s, buttonClassName: x, subscriptionTier: I, isDarkMode: Z, isEligibleForBogoPromotion: w, videoRef: k } = e,
-            { analyticsLocations: L } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            B = (0, f._O)(),
-            M = (0, _.Ng)(),
-            U = (0, _.Wp)(M, T.Si.TIER_2) ? T.Si.TIER_2 : void 0,
-            V = (0, E.N)(),
-            G = (0, h.Nx)(),
-            F = (0, a.e7)([g.Z], () => g.Z.affinities),
-            H = (0, j.Z)(),
-            z = null != H,
-            Y = Z ? o.Ttl.WHITE : o.Ttl.BRAND,
-            W = F.length > 0,
-            K = (0, b.ZP)({ location: 'PremiumMarketingHeroHeading' }),
-            q = (0, b.J1)(K),
-            X = (0, p.rO)(),
-            Q = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
-        return (0, i.jsx)(u.Gt, {
-            value: L,
+        let { className: s, buttonClassName: _, subscriptionTier: y, isDarkMode: w, isEligibleForBogoPromotion: k, videoRef: L } = e,
+            { analyticsLocations: B } = (0, m.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
+            M = (0, b._O)(),
+            U = (0, j.Ng)(),
+            V = (0, j.Wp)(U, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
+            G = (0, E.N)(),
+            F = (0, f.Nx)(),
+            H = (0, l.e7)([h.Z], () => h.Z.affinities),
+            z = (0, O.Z)(),
+            W = null != z,
+            Y = w ? o.Tt.WHITE : o.Tt.BRAND,
+            K = H.length > 0,
+            q = (0, x.ZP)({ location: 'PremiumMarketingHeroHeading' }),
+            X = (0, x.J1)(q),
+            Q = (0, g.rO)(),
+            J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+        return (0, i.jsx)(m.Gt, {
+            value: B,
             children: (0, i.jsxs)('div', {
-                className: l()(y.container, y.heroHeadingContainer, s),
+                className: a()(A.container, A.heroHeadingContainer, s),
                 ref: t,
                 'data-testid': 'marketing-page-hero-header',
                 children: [
                     (0, i.jsx)('div', {
-                        className: y.container,
+                        className: A.container,
                         children: (0, i.jsxs)('div', {
-                            className: y.marketingPageTextContainer,
+                            className: A.marketingPageTextContainer,
                             children: [
-                                G &&
-                                    (0, i.jsx)(D, {
-                                        trialOffer: V,
-                                        discountOffer: M
+                                F &&
+                                    (0, i.jsx)(Z, {
+                                        trialOffer: G,
+                                        discountOffer: U
                                     }),
-                                (0, i.jsx)(o.X6q, {
-                                    className: y.marketingPageHeading,
+                                (0, i.jsx)(c.X6q, {
+                                    className: A.marketingPageHeading,
                                     variant: 'display-sm',
                                     color: 'header-primary',
-                                    children: q
+                                    children: X
                                 }),
-                                z
-                                    ? (0, i.jsx)(S.Z, { referrer: H })
-                                    : W &&
+                                W
+                                    ? (0, i.jsx)(S.Z, { referrer: z })
+                                    : K &&
                                       (0, i.jsx)('div', {
-                                          className: y.affinityDescriptionContainer,
-                                          children: (0, i.jsx)(C.Z, {
+                                          className: A.affinityDescriptionContainer,
+                                          children: (0, i.jsx)(v.Z, {
                                               textColor: 'text-default',
                                               smallerText: !1,
                                               isApplicationHome: !0
                                           })
                                       }),
-                                B
+                                M
                                     ? (0, i.jsx)('div', {
-                                          className: l()(y.buttonContainer, y.marketingPageCTAContainer, { [y.marketingPageCTAMargin]: !(W || z) }),
-                                          children: (0, i.jsx)(O.Z, {
-                                              className: l()(y.button, x),
+                                          className: a()(A.buttonContainer, A.marketingPageCTAContainer, { [A.marketingPageCTAMargin]: !(K || W) }),
+                                          children: (0, i.jsx)(C.Z, {
+                                              className: a()(A.button, _),
                                               color: Y
                                           })
                                       })
-                                    : (0, i.jsx)(v.PK, {
-                                          subscriptionTier: null != (r = null != I ? I : null == V || null == (n = V.subscription_trial) ? void 0 : n.sku_id) ? r : U,
-                                          inOfferExperience: G,
-                                          containerClassName: l()(y.marketingPageCTAContainer, { [y.marketingPageCTAMargin]: !(W || z) }),
-                                          buttonClassName: x,
+                                    : (0, i.jsx)(T.PK, {
+                                          subscriptionTier: null != (r = null != y ? y : null == G || null == (n = G.subscription_trial) ? void 0 : n.sku_id) ? r : V,
+                                          inOfferExperience: F,
+                                          containerClassName: a()(A.marketingPageCTAContainer, { [A.marketingPageCTAMargin]: !(K || W) }),
+                                          buttonClassName: _,
                                           isApplicationHome: !0,
-                                          isDarkMode: Z,
-                                          isEligibleForBogoPromotion: w
+                                          isDarkMode: w,
+                                          isEligibleForBogoPromotion: k
                                       }),
-                                (0, i.jsx)(v._O, {
+                                (0, i.jsx)(T._O, {
                                     variant: 'text-sm/normal',
                                     withBottomMargin: !1,
                                     isApplicationHome: !0
@@ -121,18 +122,18 @@ let D = (e) => {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: y.heroHeadingV2ArtContainer,
-                        children: (0, i.jsx)(m.Z, {
-                            autoPlay: !Q,
+                        className: A.heroHeadingV2ArtContainer,
+                        children: (0, i.jsx)(p.Z, {
+                            autoPlay: !J,
                             playsInline: !0,
-                            preload: Q ? 'none' : 'auto',
-                            poster: P.Z,
+                            preload: J ? 'none' : 'auto',
+                            poster: R.Z,
                             loop: !0,
-                            className: y.heroHeadingV2Art,
-                            ref: k,
+                            className: A.heroHeadingV2Art,
+                            ref: L,
                             children: (0, i.jsx)('source', {
-                                src: X ? A.Z : R.Z,
-                                type: X ? N.m.MP4 : N.m.WEBM
+                                src: Q ? P.Z : D.Z,
+                                type: Q ? I.m.MP4 : I.m.WEBM
                             })
                         })
                     })

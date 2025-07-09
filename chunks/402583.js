@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(924628),
-    a = n(480294),
+    a = n(924628),
+    l = n(480294),
     o = n(63063),
     c = n(838436),
     d = n(51331),
@@ -12,16 +12,16 @@ var i = n(255367),
     p = n(981631),
     g = n(388032);
 function h() {
-    let e = (0, s.e7)([a.Z], () => a.Z.hasConsented(p.pjP.USAGE_STATISTICS)),
+    let e = (0, s.e7)([l.Z], () => l.Z.hasConsented(p.pjP.USAGE_STATISTICS)),
         t = r.useCallback((e) => {
             e
-                ? (0, l.g)([p.pjP.USAGE_STATISTICS], []).catch(u.S)
+                ? (0, a.g)([p.pjP.USAGE_STATISTICS], []).catch(u.S)
                 : (0, u.V)({
                       header: g.intl.string(g.t.OdPCbG),
                       body: g.intl.string(g.t.MGWabG),
                       confirmText: g.intl.string(g.t['D3+rU1']),
                       cancelText: g.intl.string(g.t.kYpG0t),
-                      onConfirm: () => (0, l.g)([], [p.pjP.USAGE_STATISTICS]).catch(u.S)
+                      onConfirm: () => (0, a.g)([], [p.pjP.USAGE_STATISTICS]).catch(u.S)
                   });
         }, []);
     return (0, i.jsx)(c.U, {

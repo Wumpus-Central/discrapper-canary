@@ -2,19 +2,20 @@ n.d(t, { Z: () => E });
 var i = n(255367),
     r = n(73800),
     s = n(399606),
+    a = n(755721),
     l = n(481060),
-    a = n(906732),
-    o = n(975298),
-    c = n(125529),
-    d = n(879892),
-    u = n(124570),
-    m = n(594174),
-    p = n(709586),
-    g = n(267642),
-    h = n(981631),
-    f = n(388032),
-    b = n(122039);
-function x(e) {
+    o = n(906732),
+    c = n(975298),
+    d = n(125529),
+    u = n(879892),
+    m = n(124570),
+    p = n(594174),
+    g = n(709586),
+    h = n(267642),
+    f = n(981631),
+    b = n(388032),
+    x = n(122039);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -39,7 +40,7 @@ function x(e) {
     }
     return e;
 }
-function _(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,18 +60,18 @@ function _(e, t) {
 }
 let E = function () {
     let e = r.useRef(null),
-        { analyticsLocations: t } = (0, a.ZP)(),
-        E = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        { fractionalState: j } = (0, o.Z)(),
-        O = (0, u.y)('guild_boosting_boost_cta', E, j);
-    function C(n) {
+        { analyticsLocations: t } = (0, o.ZP)(),
+        E = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        { fractionalState: O } = (0, c.Z)(),
+        C = (0, m.y)('guild_boosting_boost_cta', E, O);
+    function v(n) {
         (null != e.current && (0, l.Mr3)(e.current),
-            (0, d.u)({
+            (0, u.u)({
                 analyticsLocation: {
-                    page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                    section: h.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
-                    object: h.qAy.BUTTON_CTA,
-                    objectType: h.Qqv.BUY
+                    page: f.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                    section: f.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
+                    object: f.qAy.BUTTON_CTA,
+                    objectType: f.Qqv.BUY
                 },
                 analyticsLocations: t,
                 guild: n
@@ -80,7 +81,7 @@ let E = function () {
         e.current = await (0, l.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, i.jsx)(e, _(x({}, t), { onSelectGuild: C }));
+                return (t) => (0, i.jsx)(e, j(_({}, t), { onSelectGuild: v }));
             },
             {
                 onCloseRequest: () => {
@@ -89,29 +90,29 @@ let E = function () {
             }
         );
     }
-    let v = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: O });
+    let T = (0, h.aq)({ isBoostManagementDisabledForFractionalPremium: C });
     return (0, i.jsxs)('div', {
-        className: b.wrapper,
+        className: x.wrapper,
         children: [
-            (0, i.jsx)(p.Z, {
-                className: b.boostIcon,
+            (0, i.jsx)(g.Z, {
+                className: x.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, i.jsx)(l.Text, {
-                className: b.copy,
+                className: x.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: f.intl.format(f.t.kqC5vr, {
+                children: b.intl.format(b.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != v,
+                        let n = null != T,
                             r = (0, i.jsx)(
-                                l.zxk,
+                                a.zx,
                                 {
-                                    className: b.cta,
+                                    className: x.cta,
                                     disabled: n,
-                                    color: l.zxk.Colors.LINK,
-                                    look: l.zxk.Looks.LINK,
+                                    color: a.zx.Colors.LINK,
+                                    look: a.zx.Looks.LINK,
                                     onClick: n ? void 0 : S,
                                     children: e
                                 },
@@ -119,11 +120,11 @@ let E = function () {
                             );
                         return n
                             ? (0, i.jsx)(
-                                  c.Z,
+                                  d.Z,
                                   {
-                                      text: v,
-                                      'aria-label': v.toString(),
-                                      children: (e) => (0, i.jsx)('span', _(x({}, e), { children: r }))
+                                      text: T,
+                                      'aria-label': T.toString(),
+                                      children: (e) => (0, i.jsx)('span', j(_({}, e), { children: r }))
                                   },
                                   t
                               )

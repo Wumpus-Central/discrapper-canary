@@ -2,8 +2,8 @@ n.d(t, { N: () => U });
 var i = n(399606),
     r = n(780384),
     s = n(230711),
-    l = n(410030),
-    a = n(594174),
+    a = n(410030),
+    l = n(594174),
     o = n(424218),
     c = n(74538),
     d = n(474936),
@@ -16,12 +16,12 @@ var i = n(399606),
     b = n(633030),
     x = n(97942),
     _ = n(269987),
-    E = n(548629),
-    j = n(507084),
+    j = n(548629),
+    E = n(507084),
     O = n(680313),
     C = n(926433),
-    S = n(302036),
-    v = n(994554),
+    v = n(302036),
+    S = n(994554),
     T = n(1549),
     N = n(13327),
     I = n(59137),
@@ -38,9 +38,9 @@ var i = n(399606),
 let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
     U = (e) => {
         let { styles: t } = e,
-            n = (0, l.ZP)(),
-            r = (0, i.e7)([a.default], () => {
-                let e = a.default.getCurrentUser();
+            n = (0, a.ZP)(),
+            r = (0, i.e7)([l.default], () => {
+                let e = l.default.getCurrentUser();
                 return c.ZP.canUsePremiumProfileCustomization(e);
             }),
             U = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
@@ -105,38 +105,38 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: p.intl.string(p.t.Bv8Pfn),
                 description: p.intl.string(p.t.JMfaTU),
-                imageSource: M(n, j, O),
+                imageSource: M(n, E, O),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: p.intl.string(p.t.ZvulDg),
                 description: p.intl.string(p.t['8GwCPT']),
-                imageSource: M(n, _, E),
+                imageSource: M(n, _, j),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: p.intl.string(p.t['lGcW+f']),
                 description: p.intl.string(p.t['/fDyOz']),
-                imageSource: M(n, C, S),
+                imageSource: M(n, C, v),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: p.intl.string(p.t['1c+xwc']),
                 description: p.intl.string(p.t.hJG8ZG),
-                imageSource: M(n, v, k),
+                imageSource: M(n, S, k),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: p.intl.string(p.t.tzdIwM),
                 description: p.intl.string(p.t.hJG8ZG),
-                imageSource: M(n, v, k),
+                imageSource: M(n, S, k),
                 imageClassName: t.stickersImage
             },
             stickersPremiumPerk: {
                 title: p.intl.string(p.t.tzdIwM),
                 description: p.intl.string(p.t.FXlU29),
-                imageSource: M(n, v, k),
+                imageSource: M(n, S, k),
                 imageClassName: t.stickersImage
             },
             streaming: {

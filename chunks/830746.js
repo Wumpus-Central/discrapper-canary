@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(399606),
     s = n(481060),
-    l = n(594174),
-    a = n(785681),
+    a = n(594174),
+    l = n(785681),
     o = n(780985),
     c = n(631885),
     d = n(552045),
@@ -18,10 +18,10 @@ var r = n(399606),
 let x = () => {
     let e = (0, c.mq)(g.ne.ACTIVE),
         t = (0, o.c)(),
-        n = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
-        x = (0, a.o)(f.intl.string(h.default['5RZ8Tk']), f.intl.string(h.default.bmhCnJ)),
-        _ = (0, a.o)(f.intl.string(h.default.XKnFFh), f.intl.string(h.default['68zfxM'])),
-        E = (0, a.o)(f.intl.string(h.default['Rm/6a2']), f.intl.string(h.default['1xPTwM']));
+        n = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        x = (0, l.o)(f.intl.string(h.default['5RZ8Tk']), f.intl.string(h.default.bmhCnJ)),
+        _ = (0, l.o)(f.intl.string(h.default.XKnFFh), f.intl.string(h.default['68zfxM'])),
+        j = (0, l.o)(f.intl.string(h.default['Rm/6a2']), f.intl.string(h.default['1xPTwM']));
     return void 0 === n
         ? null
         : (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ let x = () => {
                           (0, i.jsx)(p.Z, {
                               icon: s.IkH,
                               header: f.intl.string(h.default.hhOuMT),
-                              description: E
+                              description: j
                           })
                       ]
                   }),

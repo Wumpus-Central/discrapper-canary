@@ -1,10 +1,10 @@
-n.d(t, { K: () => a });
+n.d(t, { K: () => l });
 var i = n(475468),
     r = n(914010),
     s = n(585483),
-    l = n(981631);
-let a = {
+    a = n(981631);
+let l = {
     binds: ['mod+shift+t'],
     comboKeysBindGlobal: !0,
-    action: () => (null != r.Z.getGuildId() && (0, i.K)(l.ME), s.S.safeDispatch(l.CkL.TOGGLE_DM_CREATE), !1)
+    action: () => (null != r.Z.getGuildId() && (0, i.K)(a.ME), s.S.safeDispatch(a.CkL.TOGGLE_DM_CREATE), !1)
 };

@@ -1,101 +1,100 @@
 (n.d(t, { Z: () => m }), n(388685));
 var s = n(255367),
-    r = n(73800),
-    l = n(442837),
+    a = n(73800),
+    r = n(442837),
     i = n(481060),
-    a = n(479531),
+    l = n(479531),
     o = n(393869),
     c = n(25990),
-    x = n(388032),
-    d = n(652297);
+    d = n(388032),
+    x = n(652297);
 function m(e) {
     var t;
-    let { isSlideReady: n, error: m, setEmailToken: u, setError: E, onNext: _, onClose: N } = e,
-        [A, h] = r.useState(!1),
-        [C, p] = r.useState(''),
-        [j, S] = r.useState(!1),
-        k = (0, l.e7)([c.Z], () => c.Z.getErrors()),
-        f = r.useRef(null);
-    r.useEffect(() => {
+    let { isSlideReady: n, error: m, setEmailToken: u, setError: _, onNext: E, onClose: N } = e,
+        [h, A] = a.useState(!1),
+        [p, C] = a.useState(''),
+        [j, f] = a.useState(!1),
+        S = (0, r.e7)([c.Z], () => c.Z.getErrors()),
+        g = a.useRef(null);
+    a.useEffect(() => {
         if (n) {
             var e;
-            null == (e = f.current) || e.focus();
+            null == (e = g.current) || e.focus();
         }
     }, [n]);
-    let g = async (e) => {
-            (e.preventDefault(), E(null), h(!0));
+    let v = async (e) => {
+            (e.preventDefault(), _(null), A(!0));
             try {
-                let { token: e } = await (0, o.w)(C);
-                (u(e), _());
+                let { token: e } = await (0, o.w)(p);
+                (u(e), E());
             } catch (e) {
-                E(new a.Z(e).getAnyErrorMessage());
+                _(new l.Z(e).getAnyErrorMessage());
             } finally {
-                h(!1);
+                A(!1);
             }
         },
-        M = async () => {
+        O = async () => {
             if (!j) {
-                S(!0);
+                f(!0);
                 try {
-                    (await (0, o.i)(!0), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['84yeo6']), i.ToastType.SUCCESS)));
+                    (await (0, o.i)(!0), (0, i.showToast)((0, i.createToast)(d.intl.string(d.t['84yeo6']), i.ToastType.SUCCESS)));
                 } catch (t) {
-                    let e = new a.Z(t).getAnyErrorMessage();
+                    let e = new l.Z(t).getAnyErrorMessage();
                     null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
                 } finally {
-                    S(!1);
+                    f(!1);
                 }
             }
         };
     return (0, s.jsxs)('form', {
-        onSubmit: g,
+        onSubmit: v,
         children: [
             (0, s.jsxs)(i.xBx, {
                 separator: !1,
-                className: d.header,
+                className: x.header,
                 children: [
                     (0, s.jsx)(i.X6q, {
-                        className: d.title,
+                        className: x.title,
                         variant: 'heading-xl/extrabold',
-                        children: x.intl.string(x.t.jMGc4O)
+                        children: d.intl.string(d.t.jMGc4O)
                     }),
                     (0, s.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: d.subtitle,
-                        children: x.intl.string(x.t.SZJow8)
+                        className: x.subtitle,
+                        children: d.intl.string(d.t.SZJow8)
                     }),
                     (0, s.jsx)(i.olH, {
                         onClick: N,
-                        className: d.modalCloseButton
+                        className: x.modalCloseButton
                     })
                 ]
             }),
             (0, s.jsxs)(i.hzk, {
-                className: d.content,
+                className: x.content,
                 children: [
                     (0, s.jsx)(i.xJW, {
-                        title: x.intl.string(x.t['8mZX6O']),
-                        error: null != m ? m : null == k || null == (t = k.email_token) ? void 0 : t[0],
+                        title: d.intl.string(d.t['8mZX6O']),
+                        error: null != m ? m : null == S || null == (t = S.email_token) ? void 0 : t[0],
                         children: (0, s.jsx)(i.oil, {
-                            value: C,
-                            onChange: p,
-                            inputRef: f
+                            value: p,
+                            onChange: C,
+                            inputRef: g
                         })
                     }),
                     (0, s.jsx)(i.Text, {
-                        className: d.help,
+                        className: x.help,
                         variant: 'text-sm/normal',
-                        children: x.intl.format(x.t.P0sak5, { onResend: M })
+                        children: d.intl.format(d.t.P0sak5, { onResend: O })
                     })
                 ]
             }),
             (0, s.jsx)(i.mzw, {
                 children: (0, s.jsx)(i.zxk, {
+                    variant: 'primary',
+                    text: d.intl.string(d.t.PDTjLC),
                     type: 'submit',
-                    color: i.zxk.Colors.BRAND,
-                    size: i.zxk.Sizes.MEDIUM,
-                    submitting: A,
-                    children: x.intl.string(x.t.PDTjLC)
+                    loading: h
                 })
             })
         ]

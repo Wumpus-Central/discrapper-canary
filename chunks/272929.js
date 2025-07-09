@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(264738),
-    a = n(481060),
+    a = n(264738),
+    o = n(481060),
     s = n(871499),
     c = n(388032),
     u = n(46152);
@@ -51,7 +51,7 @@ function p(e, t) {
         e
     );
 }
-let h = (0, o.animated)((e) => {
+let h = (0, a.animated)((e) => {
     let { percentComplete: t } = e;
     return (0, r.jsx)('svg', {
         className: u.countdown,
@@ -92,10 +92,10 @@ function f(e) {
             return i;
         })(e, ['totalCooldownSeconds', 'remainingCooldownSeconds', 'onClick', 'onKeyDown', 'onMouseEnter', 'onMouseLeave', 'isActive', 'isCenterButton', 'ref']);
     let x = n > 0,
-        v = (0, a.q_F)(
+        v = (0, o.q_F)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
-                config: p(d({}, o.config.molasses), { duration: 1000 })
+                config: p(d({}, a.config.molasses), { duration: 1000 })
             },
             'animate-always'
         ),
@@ -112,7 +112,7 @@ function f(e) {
                     isTrayButton: !0,
                     disabled: x,
                     label: O,
-                    iconComponent: a.EO4,
+                    iconComponent: o.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),
                     className: l()(C.className, u.button),
                     onClick: i,

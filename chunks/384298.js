@@ -2,7 +2,7 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
+    a = n(755721),
     o = n(287734),
     s = n(359110),
     l = n(922482),
@@ -26,7 +26,7 @@ function m(e) {
     return g === _.lY.MODAL_V2
         ? (0, r.jsx)(f.tG, {
               text: E ? b() : y(),
-              size: a.PhG.TINY,
+              size: a.Ph.TINY,
               themeColor: 'secondary',
               onClick: O
           })

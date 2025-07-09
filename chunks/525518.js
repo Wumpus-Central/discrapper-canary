@@ -1,36 +1,37 @@
-n.d(t, { B: () => m });
+n.d(t, { B: () => p });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(626135),
-    o = n(572004),
-    s = n(215023),
-    c = n(981631),
-    u = n(388032),
-    d = n(108845);
-function m(e) {
+    l = n(755721),
+    a = n(481060),
+    o = n(626135),
+    s = n(572004),
+    c = n(215023),
+    u = n(981631),
+    d = n(388032),
+    m = n(108845);
+function p(e) {
     let { skuId: t, tab: n } = e,
-        m = i.useCallback(() => {
-            a.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
+        p = i.useCallback(() => {
+            o.default.track(u.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
             let e = ''
                 .concat(location.protocol, '//')
                 .concat(location.host)
-                .concat(c.Z5c.COLLECTIBLES_SHOP)
-                .concat((0, s.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
+                .concat(u.Z5c.COLLECTIBLES_SHOP)
+                .concat((0, c.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
                 .concat(t);
-            (0, o.JG)(e, () => (0, l.showToast)((0, l.createToast)(u.intl.string(u.t['L/PwZW']), l.ToastType.SUCCESS)));
+            (0, s.JG)(e, () => (0, a.showToast)((0, a.createToast)(d.intl.string(d.t['L/PwZW']), a.ToastType.SUCCESS)));
         }, [t, n]);
-    return (0, r.jsx)(l.zxk, {
-        'aria-label': u.intl.string(u.t.WqhZsr),
-        look: l.zxk.Looks.BLANK,
-        size: l.zxk.Sizes.NONE,
-        onClick: m,
-        innerClassName: d.buttonContent,
-        className: d.button,
-        children: (0, r.jsx)(l.xPt, {
+    return (0, r.jsx)(l.zx, {
+        'aria-label': d.intl.string(d.t.WqhZsr),
+        look: l.zx.Looks.BLANK,
+        size: l.zx.Sizes.NONE,
+        onClick: p,
+        innerClassName: m.buttonContent,
+        className: m.button,
+        children: (0, r.jsx)(a.xPt, {
             size: 'md',
             color: 'currentColor',
-            className: d.shareIcon
+            className: m.shareIcon
         })
     });
 }

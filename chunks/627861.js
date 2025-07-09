@@ -31,10 +31,10 @@ var r = n(255367),
     w = n(831506),
     Z = n(77498),
     R = n(283595),
-    k = n(293273),
-    L = n(158776),
-    D = n(885110),
-    M = n(594174),
+    L = n(293273),
+    D = n(158776),
+    M = n(885110),
+    k = n(594174),
     U = n(417363),
     F = n(768581),
     B = n(823379),
@@ -300,14 +300,14 @@ function ep(e) {
 function em(e) {
     var t, n, a, b;
     let { analyticsLocations: v, application: j, channel: I, currentUserId: S, currentUserPresenceActivity: T, hideParty: N, message: P, onView: A, partyStatusElement: w, presenceActivity: R } = e,
-        k = (0, m.ye)(j),
-        { bot: L } = j,
-        D = F.ZP.getApplicationIconURL({
+        L = (0, m.ye)(j),
+        { bot: D } = j,
+        M = F.ZP.getApplicationIconURL({
             id: j.id,
             icon: j.icon,
-            bot: L
+            bot: D
         }),
-        { staticBannerSrc: M, videoBannerSrc: U, bannerAspectRatio: B } = (0, E.E)(j),
+        { staticBannerSrc: k, videoBannerSrc: U, bannerAspectRatio: B } = (0, E.E)(j),
         { enabled: V } = z.t.useExperiment({ location: 'RichPresenceActivityInviteEmbed' }, { autoTrackExposure: !0 }),
         K = !(0, Q.Z)(R, P, j.id),
         Y = ea(P),
@@ -353,7 +353,7 @@ function em(e) {
             currentUserId: S,
             message: P,
             application: j,
-            isEmbeddedApplication: k,
+            isEmbeddedApplication: L,
             isGameLaunchable: en
         }),
         eE = !(null == R || !(0, Q.Z)(R, P, j.id) || !(0, q.Z)(R, et.xjy.SYNC) || !H.isPlatformEmbedded || ec(T, R)),
@@ -454,13 +454,13 @@ function em(e) {
             [j.id, en, eu, null == $ ? void 0 : $.id, eh]
         ),
         eO = (0, y.G)(j),
-        ej = i.useMemo(() => (null != ee ? ee : null != el ? el : null != eO && k ? eO : void 0), [k, ee, el, eO]),
+        ej = i.useMemo(() => (null != ee ? ee : null != el ? el : null != eO && L ? eO : void 0), [L, ee, el, eO]),
         eI = i.useMemo(() => {
             let e = [];
             return (K || null == ex ? K && null != ev && e.push(ev) : e.push(ex), e);
         }, [ev, K, ex]),
         eS = (0, W.dQ)(j.name, null == (t = P.activity) ? void 0 : t.type),
-        eT = k
+        eT = L
             ? (0, _.H)({
                   applicationId: j.id,
                   referrerId: S
@@ -489,10 +489,10 @@ function em(e) {
         return (0, r.jsx)(g.W, {
             header: eS,
             title: j.name,
-            staticBannerSrc: M,
+            staticBannerSrc: k,
             videoBannerSrc: U,
             bannerAspectRatio: B,
-            iconSrc: null != D ? D : void 0,
+            iconSrc: null != M ? M : void 0,
             embedUrl: eT,
             infoUrl: G.Z.getArticleURL(et.BhN.RICH_PRESENCE_INTRODUCTION),
             info: e,
@@ -540,10 +540,10 @@ function em(e) {
     return (0, r.jsx)(g.W, {
         header: eS,
         title: j.name,
-        staticBannerSrc: M,
+        staticBannerSrc: k,
         videoBannerSrc: U,
         bannerAspectRatio: B,
-        iconSrc: null != D ? D : void 0,
+        iconSrc: null != M ? M : void 0,
         embedUrl: eT,
         infoUrl: G.Z.getArticleURL(et.BhN.RICH_PRESENCE_INTRODUCTION),
         info: eR,
@@ -563,21 +563,21 @@ function ef(e) {
         p = (0, b.O)(a),
         m = (0, o.e7)([P.default], () => P.default.getId()),
         f = (0, o.e7)(
-            [L.Z],
+            [D.Z],
             () => {
-                if (null == c.application) return L.Z.findActivity(c.author.id, (e) => e.type === et.IIU.LISTENING);
+                if (null == c.application) return D.Z.findActivity(c.author.id, (e) => e.type === et.IIU.LISTENING);
                 {
                     let e = c.author.id;
-                    return (ea(c) && (e = e === m && s.isPrivate() ? s.getRecipientId() : m), L.Z.getApplicationActivity(e, c.application.id));
+                    return (ea(c) && (e = e === m && s.isPrivate() ? s.getRecipientId() : m), D.Z.getApplicationActivity(e, c.application.id));
                 }
             },
             [c, s, m]
         ),
         _ = (0, o.e7)(
-            [k.Z, D.Z],
+            [L.Z, M.Z],
             () => {
                 var e;
-                return null != (e = k.Z.getApplicationActivity(p.id)) ? e : D.Z.getApplicationActivity(p.id, !0);
+                return null != (e = L.Z.getApplicationActivity(p.id)) ? e : M.Z.getApplicationActivity(p.id, !0);
             },
             [p.id]
         ),
@@ -593,7 +593,7 @@ function ef(e) {
         y = i.useMemo(
             () =>
                 g.map((e) => {
-                    let t = M.default.getUser(e);
+                    let t = k.default.getUser(e);
                     return null != t ? t : $.ag;
                 }),
             [g]

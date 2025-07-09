@@ -14,7 +14,7 @@ var r = t(255367),
     x = t(388032),
     p = t(602268);
 let g = function (e) {
-    let { className: n, guildId: t, tag: i, badge: g, primaryColor: b, secondaryColor: y, isDisabled: j = !1 } = e,
+    let { className: n, guildId: t, tag: i, badge: g, primaryColor: y, secondaryColor: b, isDisabled: j = !1 } = e,
         v = (0, l.e7)([m.Z], () => m.Z.getProps().originalProfile),
         C = null != v && v.tag !== i;
     return (0, r.jsxs)('div', {
@@ -39,8 +39,8 @@ let g = function (e) {
                                 badge: g,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: b,
-                                secondaryTintColor: y
+                                primaryTintColor: y,
+                                secondaryTintColor: b
                             }),
                             disabled: j,
                             value: null != i ? i : '',

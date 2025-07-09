@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var o = n(255367);
 n(73800);
-var r = n(481060),
+var r = n(755721),
     i = n(572691),
     c = n(906732),
     l = n(444141),
@@ -68,7 +68,7 @@ function b(e) {
                         (0, o.jsx)(s.Z, {
                             type: 'text',
                             userId: t.id,
-                            color: r.zxk.Colors.BRAND,
+                            color: r.zx.Colors.BRAND,
                             onClose: i.Z.popAll,
                             autoFocus: !0
                         }),
@@ -86,7 +86,7 @@ function b(e) {
                           (0, o.jsx)(s.Z, {
                               type: 'text',
                               userId: t.id,
-                              color: r.zxk.Colors.BRAND,
+                              color: r.zx.Colors.BRAND,
                               onClose: i.Z.popAll,
                               autoFocus: !0
                           }),
@@ -143,7 +143,7 @@ function b(e) {
                                 type: 'text',
                                 userId: t.id,
                                 analyticsLocation: g,
-                                color: r.zxk.Colors.BRAND,
+                                color: r.zx.Colors.BRAND,
                                 autoFocus: !0
                             }),
                             (0, o.jsx)(s.Z, {

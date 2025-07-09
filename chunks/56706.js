@@ -1,17 +1,17 @@
-(n.d(t, { Z: () => x }), n(388685));
-var a = n(255367),
-    r = n(73800),
-    l = n(481060),
-    i = n(570140),
-    s = n(750180),
-    o = n(358820),
-    c = n(585483),
-    d = n(981631),
-    u = n(616257),
-    m = n(493733);
+(a.d(t, { Z: () => x }), a(388685));
+var n = a(255367),
+    r = a(73800),
+    l = a(481060),
+    i = a(570140),
+    s = a(750180),
+    o = a(358820),
+    c = a(585483),
+    d = a(981631),
+    u = a(616257),
+    m = a(493733);
 function x() {
     let [e, t] = r.useState(30),
-        n = () => {
+        a = () => {
             i.Z.dispatch({
                 type: 'VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME',
                 timeInSeconds: e
@@ -23,74 +23,78 @@ function x() {
                 state: s.O.LOADING
             });
         }, []);
-    return (0, a.jsx)(l.zJl, {
+    return (0, n.jsx)(l.zJl, {
         className: u.panel,
-        children: (0, a.jsxs)('div', {
+        children: (0, n.jsxs)('div', {
             className: m.panelInner,
             children: [
-                (0, a.jsx)(l.Text, {
+                (0, n.jsx)(l.Text, {
                     className: m.panelHeader,
                     variant: 'text-lg/bold',
                     children: 'Voice Filters'
                 }),
-                (0, a.jsxs)('div', {
+                (0, n.jsxs)('div', {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Set number of seconds remaining in countdown'
                         }),
-                        (0, a.jsx)(l.oil, {
+                        (0, n.jsx)(l.oil, {
                             defaultValue: 30,
                             onChange: (e) => {
                                 t(parseInt(e));
                             }
                         }),
-                        (0, a.jsx)(l.zxk, {
-                            size: l.zxk.Sizes.SMALL,
-                            onClick: () => n(),
-                            children: 'Set'
+                        (0, n.jsx)(l.zxk, {
+                            variant: 'primary',
+                            size: 'sm',
+                            text: 'Set',
+                            onClick: () => a()
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
+                (0, n.jsxs)('div', {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Reset to API values'
                         }),
-                        (0, a.jsx)(l.zxk, {
-                            size: l.zxk.Sizes.SMALL,
+                        (0, n.jsx)(l.zxk, {
+                            variant: 'primary',
+                            size: 'sm',
+                            text: 'Reset',
                             onClick: () => {
                                 (0, o.wV)();
-                            },
-                            children: 'Reset'
+                            }
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
+                (0, n.jsxs)('div', {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: "Pretend the native module is loading so when you close your app it'll look as if it crashed on load"
                         }),
-                        (0, a.jsx)(l.zxk, {
-                            size: l.zxk.Sizes.SMALL,
-                            onClick: x,
-                            children: 'Pretend'
+                        (0, n.jsx)(l.zxk, {
+                            variant: 'primary',
+                            size: 'sm',
+                            text: 'Pretend',
+                            onClick: x
                         })
                     ]
                 }),
-                (0, a.jsx)('div', {
+                (0, n.jsx)('div', {
                     className: m.panelRow,
-                    children: (0, a.jsx)(l.zxk, {
-                        size: l.zxk.Sizes.SMALL,
+                    children: (0, n.jsx)(l.zxk, {
+                        variant: 'primary',
+                        size: 'sm',
+                        text: 'Open voice filters panel',
                         onClick: () => {
                             c.S.dispatch(d.CkL.OPEN_VOICE_FILTER_POPOUT);
-                        },
-                        children: 'Open voice filters panel'
+                        }
                     })
                 })
             ]

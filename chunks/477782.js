@@ -1,64 +1,67 @@
-(t.d(n, { default: () => c }), t(388685));
-var i = t(255367),
-    a = t(73800),
-    o = t(481060),
-    l = t(313201),
-    s = t(117984),
-    r = t(388032),
-    d = t(788428);
-function c(e) {
-    let { onClose: n, transitionState: t } = e,
-        c = (0, l.Dt)(),
-        [f, u] = a.useState('');
+(n.d(t, { default: () => d }), n(388685));
+var i = n(255367),
+    a = n(73800),
+    s = n(481060),
+    r = n(313201),
+    l = n(117984),
+    o = n(388032),
+    c = n(788428);
+function d(e) {
+    let { onClose: t, transitionState: n } = e,
+        d = (0, r.Dt)(),
+        [h, u] = a.useState('');
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
-            (e.preventDefault(), (0, s.CM)(f), n());
+            (e.preventDefault(), (0, l.CM)(h), t());
         },
-        children: (0, i.jsxs)(o.Y0X, {
-            transitionState: t,
-            'aria-labelledby': c,
+        children: (0, i.jsxs)(s.Y0X, {
+            transitionState: n,
+            'aria-labelledby': d,
             parentComponent: 'AddFavoriteCategoryModal',
             children: [
-                (0, i.jsxs)(o.hzk, {
+                (0, i.jsxs)(s.hzk, {
                     children: [
-                        (0, i.jsx)(o.X6q, {
-                            id: c,
-                            className: d.header,
+                        (0, i.jsx)(s.X6q, {
+                            id: d,
+                            className: c.header,
                             variant: 'heading-xl/semibold',
-                            children: r.intl.string(r.t['ISN+ND'])
+                            children: o.intl.string(o.t['ISN+ND'])
                         }),
-                        (0, i.jsx)(o.olH, {
-                            onClick: n,
-                            className: d.closeButton
+                        (0, i.jsx)(s.olH, {
+                            onClick: t,
+                            className: c.closeButton
                         }),
-                        (0, i.jsx)(o.xJW, {
-                            title: r.intl.string(r.t.OCAkGB),
-                            className: d.name,
-                            children: (0, i.jsx)(o.oil, {
-                                value: f,
+                        (0, i.jsx)(s.xJW, {
+                            title: o.intl.string(o.t.OCAkGB),
+                            className: c.name,
+                            children: (0, i.jsx)(s.oil, {
+                                value: h,
                                 onChange: u,
                                 maxLength: 100,
-                                placeholder: r.intl.string(r.t.eTVbt7),
-                                className: d.__invalid_inputWrapper,
+                                placeholder: o.intl.string(o.t.eTVbt7),
+                                className: c.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.mzw, {
-                    children: [
-                        (0, i.jsx)(o.zxk, {
-                            type: 'submit',
-                            disabled: '' === f,
-                            children: r.intl.string(r.t['ISN+ND'])
-                        }),
-                        (0, i.jsx)(o.zxk, {
-                            onClick: n,
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.PRIMARY,
-                            children: r.intl.string(r.t['ETE/oK'])
-                        })
-                    ]
+                (0, i.jsx)(s.mzw, {
+                    children: (0, i.jsxs)(s.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, i.jsx)(s.zxk, {
+                                variant: 'primary',
+                                text: o.intl.string(o.t['ISN+ND']),
+                                type: 'submit',
+                                disabled: '' === h
+                            }),
+                            (0, i.jsx)(s.zxk, {
+                                variant: 'secondary',
+                                text: o.intl.string(o.t['ETE/oK']),
+                                onClick: t
+                            })
+                        ]
+                    })
                 })
             ]
         })

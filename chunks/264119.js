@@ -1,52 +1,54 @@
-(n.d(t, { Z: () => a }), n(953529));
+(n.d(t, { Z: () => l }), n(953529));
 var s = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(388032),
+var a = n(481060),
+    r = n(388032),
     i = n(652297);
-function a(e) {
+function l(e) {
     let { email: t, onClose: n } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsxs)(r.xBx, {
+            (0, s.jsxs)(a.xBx, {
                 separator: !1,
                 className: i.header,
                 children: [
-                    (0, s.jsx)(r.X6q, {
+                    (0, s.jsx)(a.X6q, {
                         className: i.title,
                         variant: 'heading-xl/semibold',
-                        children: l.intl.string(l.t['8O+nFx'])
+                        children: r.intl.string(r.t['8O+nFx'])
                     }),
-                    (0, s.jsx)(r.olH, {
+                    (0, s.jsx)(a.olH, {
                         onClick: n,
                         className: i.modalCloseButton
                     })
                 ]
             }),
-            (0, s.jsx)(r.hzk, {
+            (0, s.jsx)(a.hzk, {
                 className: i.content,
-                children: (0, s.jsx)(r.Text, {
+                children: (0, s.jsx)(a.Text, {
                     className: i.description,
                     variant: 'text-md/normal',
-                    children: l.intl.format(l.t.Zvx0Oz, { email: t })
+                    children: r.intl.format(r.t.Zvx0Oz, { email: t })
                 })
             }),
-            (0, s.jsx)(r.hzk, {
+            (0, s.jsx)(a.hzk, {
                 className: i.content,
-                children: (0, s.jsx)(r.Text, {
+                children: (0, s.jsx)(a.Text, {
                     className: i.tooltip,
                     variant: 'text-sm/normal',
-                    children: l.intl.string(l.t.yb7itb)
+                    children: r.intl.string(r.t.yb7itb)
                 })
             }),
-            (0, s.jsx)(r.mzw, {
+            (0, s.jsx)(a.mzw, {
                 className: i.modalFooter,
-                children: (0, s.jsx)(r.zxk, {
+                children: (0, s.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
                     className: i.__invalid_submit,
-                    color: r.zxk.Colors.BRAND,
-                    size: r.zxk.Sizes.MEDIUM,
-                    onClick: n,
-                    children: l.intl.string(l.t.BddRzc)
+                    children: (0, s.jsx)(a.zxk, {
+                        variant: 'primary',
+                        text: r.intl.string(r.t.BddRzc),
+                        onClick: n
+                    })
                 })
             })
         ]

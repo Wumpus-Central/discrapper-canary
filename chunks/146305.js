@@ -31,9 +31,9 @@ var r = n(255367),
     R = n(359191),
     Z = n(84658),
     D = n(142961),
-    k = n(730910),
-    A = n(475013),
-    L = n(213956),
+    A = n(730910),
+    L = n(475013),
+    k = n(213956),
     M = n(702478),
     G = n(60986),
     U = n(247031),
@@ -198,12 +198,12 @@ let ej = {
                     section: eg.pNK.ROLES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ROLES,
                     label: ef.intl.string(ef.t.LPJmLy),
-                    element: A.Z,
+                    element: L.Z,
                     type: o.bT.MINIMAL,
                     ariaLabel: ef.intl.string(ef.t.KXcECw),
                     notice: {
                         stores: [S.Z],
-                        element: A._
+                        element: L._
                     },
                     predicate: () => t.canManageRoles
                 };
@@ -287,7 +287,7 @@ let ej = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
                     label: ef.intl.string(ef.t['suhY+f']),
                     ariaLabel: ef.intl.string(ef.t['suhY+f']),
-                    element: L.Z,
+                    element: k.Z,
                     newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
                     predicate: () => t.canManageGuild && t.guild.features.has(eg.oNc.COMMUNITY)
                 };
@@ -354,7 +354,7 @@ let ej = {
                     newIndicatorDismissibleContentTypes: t.onboardingEnabled ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                     notice: {
                         stores: [R.Z],
-                        element: k.Z
+                        element: A.Z
                     },
                     predicate: () => (0, g.wC)(t.guild.id),
                     decoration: (function (e, t) {

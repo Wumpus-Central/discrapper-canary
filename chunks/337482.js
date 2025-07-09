@@ -1,6 +1,6 @@
 n.d(t, {
     B2: () => s,
-    gN: () => l
+    gN: () => a
 });
 var i = n(585483),
     r = n(981631);
@@ -9,7 +9,7 @@ let s = {
         comboKeysBindGlobal: !0,
         action: () => (i.S.dispatchToLastSubscribed(r.CkL.SCROLL_PAGE_UP), !1)
     },
-    l = {
+    a = {
         binds: ['pagedown'],
         comboKeysBindGlobal: !0,
         action: () => (i.S.dispatchToLastSubscribed(r.CkL.SCROLL_PAGE_DOWN), !1)

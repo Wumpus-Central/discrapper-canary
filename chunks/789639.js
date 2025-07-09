@@ -1,27 +1,27 @@
-n.d(t, { i: () => a });
+n.d(t, { i: () => l });
 var i = n(255367),
     r = n(73800),
     s = n(709014);
-let l = {
+let a = {
         all: {
             name: 'all',
             start: 0,
             duration: 66
         }
     },
-    a = () => {
+    l = () => {
         let e = r.useRef(null),
             t = r.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            a = r.useCallback(() => {
+            l = r.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
             o = r.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying('all');
             }, []),
             c = r.useCallback((t) => {
-                var r, a;
+                var r, l;
                 return (0, i.jsx)(
                     s.L,
                     ((r = (function (e) {
@@ -49,14 +49,14 @@ let l = {
                         }
                         return e;
                     })({}, t)),
-                    (a = a =
+                    (l = l =
                         {
                             src: () => n.e('2199').then(n.t.bind(n, 71307, 19)),
                             ref: e,
-                            markers: l
+                            markers: a
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -64,15 +64,15 @@ let l = {
                                   n.push.apply(n, i);
                               }
                               return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     r)
                 );
             }, []);
         return {
             events: {
-                onMouseEnter: a,
+                onMouseEnter: l,
                 onMouseLeave: o
             },
             play: t,

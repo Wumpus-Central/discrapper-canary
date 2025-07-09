@@ -76,9 +76,10 @@ class m extends s.PureComponent {
                 }),
                 (0, n.jsx)(i.mzw, {
                     children: (0, n.jsx)(i.zxk, {
+                        variant: 'primary',
+                        text: h.intl.string(h.t.i4jeWV),
                         type: 'submit',
-                        onClick: this.handleSubmit,
-                        children: h.intl.string(h.t.i4jeWV)
+                        onClick: this.handleSubmit
                     })
                 })
             ]

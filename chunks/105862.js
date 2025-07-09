@@ -56,13 +56,13 @@ function y(e) {
                     ]
                 }),
                 (0, l.jsx)(a.zxk, {
-                    size: a.zxk.Sizes.MEDIUM,
+                    variant: 'primary',
+                    text: m.intl.string(m.t.Ye51oa),
                     'aria-label': m.intl.formatToPlainString(m.t.xx5Sur, {
                         sectionTitle: m.intl.string(m.t['kw8/ER']),
                         sectionBody: m.intl.string(m.t.GZoV1N)
                     }),
-                    onClick: b,
-                    children: m.intl.string(m.t.Ye51oa)
+                    onClick: b
                 })
             ]
         })

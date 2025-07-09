@@ -1,31 +1,32 @@
-(n.d(a, { default: () => I }), n(388685));
+(n.d(a, { default: () => g }), n(388685));
 var o = n(255367),
     t = n(73800),
     l = n(120356),
     i = n.n(l),
-    d = n(481060),
-    r = n(211266),
-    s = n(313201),
-    c = n(907040),
-    u = n(906411),
-    p = n(345861),
-    v = n(984933),
-    m = n(768581),
-    x = n(956664),
-    b = n(185923),
-    f = n(388032),
-    h = n(853967),
-    j = n(84717);
-function N() {
+    d = n(755721),
+    r = n(481060),
+    s = n(211266),
+    c = n(313201),
+    u = n(907040),
+    p = n(906411),
+    v = n(345861),
+    m = n(984933),
+    x = n(768581),
+    b = n(956664),
+    f = n(185923),
+    h = n(388032),
+    j = n(853967),
+    N = n(84717);
+function C() {
     return [
         {
-            name: f.intl.string(f.t.Sp2NFx),
+            name: h.intl.string(h.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png']
         }
     ];
 }
-async function C(e) {
-    let a = (0, m.gT)({
+async function I(e) {
+    let a = (0, x.gT)({
             id: e.id,
             animated: !1,
             size: 48,
@@ -33,135 +34,135 @@ async function C(e) {
         }),
         n = await fetch(a),
         o = await n.blob();
-    return await (0, x.fD)(o);
+    return await (0, b.fD)(o);
 }
-let I = function (e) {
-    let { guildId: a, onUploadIcon: n, onSelectUnicodeEmoji: l, onClose: m, transitionState: x } = e,
-        I = (0, s.Dt)(),
-        k = v.ZP.getDefaultChannel(a),
-        [g, z] = t.useState('tab-id-role-icon-file-upload'),
-        [_, S] = t.useState(!1),
-        B = (0, r.Z)(N);
+let g = function (e) {
+    let { guildId: a, onUploadIcon: n, onSelectUnicodeEmoji: l, onClose: x, transitionState: b } = e,
+        g = (0, c.Dt)(),
+        z = m.ZP.getDefaultChannel(a),
+        [_, k] = t.useState('tab-id-role-icon-file-upload'),
+        [S, B] = t.useState(!1),
+        E = (0, s.Z)(C);
     return (
         t.useEffect(() => {
-            S(!1);
-        }, [g]),
-        (0, o.jsx)(d.Y0X, {
-            transitionState: x,
-            'aria-labelledby': I,
-            size: d.CgR.MEDIUM,
-            className: h.modalRoot,
+            B(!1);
+        }, [_]),
+        (0, o.jsx)(r.Y0X, {
+            transitionState: b,
+            'aria-labelledby': g,
+            size: r.CgR.MEDIUM,
+            className: j.modalRoot,
             parentComponent: 'CustomRoleIconUploadModal',
             children: (0, o.jsxs)('div', {
-                className: h.contentWrapper,
+                className: j.contentWrapper,
                 children: [
                     (0, o.jsx)('nav', {
-                        className: i()(h.nav, { [h.navUploadSelected]: 'tab-id-role-icon-file-upload' === g }),
+                        className: i()(j.nav, { [j.navUploadSelected]: 'tab-id-role-icon-file-upload' === _ }),
                         children: (0, o.jsxs)('div', {
-                            className: h.navList,
+                            className: j.navList,
                             role: 'tablist',
                             'aria-label': 'Expression Picker',
                             children: [
                                 (0, o.jsx)('div', {
-                                    className: h.navItem,
+                                    className: j.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-file-upload',
-                                    'aria-selected': 'tab-id-role-icon-file-upload' === g,
-                                    children: (0, o.jsx)(d.zxk, {
+                                    'aria-selected': 'tab-id-role-icon-file-upload' === _,
+                                    children: (0, o.jsx)(d.zx, {
                                         onClick: () => {
-                                            z('tab-id-role-icon-file-upload');
+                                            k('tab-id-role-icon-file-upload');
                                         },
                                         'aria-current': 'page',
-                                        className: i()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-file-upload' === g }),
-                                        look: d.zxk.Looks.BLANK,
-                                        size: d.zxk.Sizes.NONE,
-                                        children: f.intl.string(f.t.royWSE)
+                                        className: i()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-file-upload' === _ }),
+                                        look: d.zx.Looks.BLANK,
+                                        size: d.zx.Sizes.NONE,
+                                        children: h.intl.string(h.t.royWSE)
                                     })
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: h.navItem,
+                                    className: j.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-emoji',
-                                    'aria-selected': 'tab-id-role-icon-emoji' === g,
-                                    children: (0, o.jsx)(d.zxk, {
+                                    'aria-selected': 'tab-id-role-icon-emoji' === _,
+                                    children: (0, o.jsx)(d.zx, {
                                         onClick: () => {
-                                            z('tab-id-role-icon-emoji');
+                                            k('tab-id-role-icon-emoji');
                                         },
                                         'aria-current': 'page',
-                                        className: i()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-emoji' === g }),
-                                        look: d.zxk.Looks.BLANK,
-                                        size: d.zxk.Sizes.NONE,
-                                        children: f.intl.string(f.t['/Ny2wc'])
+                                        className: i()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-emoji' === _ }),
+                                        look: d.zx.Looks.BLANK,
+                                        size: d.zx.Sizes.NONE,
+                                        children: h.intl.string(h.t['/Ny2wc'])
                                     })
                                 })
                             ]
                         })
                     }),
-                    'tab-id-role-icon-file-upload' === g
-                        ? (0, o.jsx)(d.hzk, {
+                    'tab-id-role-icon-file-upload' === _
+                        ? (0, o.jsx)(r.hzk, {
                               children: (0, o.jsxs)('div', {
-                                  className: h.uploadContainer,
+                                  className: j.uploadContainer,
                                   children: [
                                       (0, o.jsxs)('div', {
-                                          className: h.uploadIconOuterContainer,
+                                          className: j.uploadIconOuterContainer,
                                           children: [
                                               (0, o.jsx)('img', {
-                                                  src: j,
+                                                  src: N,
                                                   alt: 'sparkles'
                                               }),
                                               (0, o.jsx)('div', {
-                                                  className: h.uploadIconInnerContainer,
-                                                  children: (0, o.jsx)(d.FmF, {
+                                                  className: j.uploadIconInnerContainer,
+                                                  children: (0, o.jsx)(r.FmF, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: h.uploadIcon
+                                                      className: j.uploadIcon
                                                   })
                                               })
                                           ]
                                       }),
                                       (0, o.jsx)('div', {
-                                          className: h.uploadInfo,
-                                          children: f.intl.string(f.t['mz++Qk'])
+                                          className: j.uploadInfo,
+                                          children: h.intl.string(h.t['mz++Qk'])
                                       }),
-                                      (0, o.jsx)(p.Z, {
-                                          size: d.zxk.Sizes.SMALL,
-                                          buttonCTA: f.intl.string(f.t.sdCQY2),
+                                      (0, o.jsx)(v.Z, {
+                                          size: d.zx.Sizes.SMALL,
+                                          buttonCTA: h.intl.string(h.t.sdCQY2),
                                           onChange: (e) => {
-                                              (S(!1), n(e), m());
+                                              (B(!1), n(e), x());
                                           },
                                           onFileSizeError: () => {
-                                              S(!0);
+                                              B(!0);
                                           },
                                           maxFileSizeBytes: 256000,
-                                          filters: B
+                                          filters: E
                                       }),
-                                      _
-                                          ? (0, o.jsx)(d.Text, {
-                                                className: h.uploadError,
+                                      S
+                                          ? (0, o.jsx)(r.Text, {
+                                                className: j.uploadError,
                                                 color: 'text-danger',
                                                 variant: 'text-sm/normal',
-                                                children: f.intl.string(f.t.HFyKsb)
+                                                children: h.intl.string(h.t.HFyKsb)
                                             })
                                           : null
                                   ]
                               })
                           })
                         : null,
-                    'tab-id-role-icon-emoji' === g
-                        ? (0, o.jsx)(c.Z, {
+                    'tab-id-role-icon-emoji' === _
+                        ? (0, o.jsx)(u.Z, {
                               hasTabWrapper: !0,
-                              closePopout: () => m(),
+                              closePopout: () => x(),
                               onSelectEmoji: async (e) => {
                                   let { emoji: a } = e;
-                                  if ((null == a ? void 0 : a.id) != null) (null == a ? void 0 : a.type) === u.B.GUILD && n(await C(a));
+                                  if ((null == a ? void 0 : a.id) != null) (null == a ? void 0 : a.type) === p.B.GUILD && n(await I(a));
                                   else if ((null == a ? void 0 : a.surrogates) != null) {
                                       var o, t;
                                       l(null != (t = null == (o = a.defaultDiversityChild) ? void 0 : o.surrogates) ? t : a.surrogates);
                                   }
-                                  m();
+                                  x();
                               },
-                              pickerIntention: b.Hz.COMMUNITY_CONTENT,
-                              channel: k
+                              pickerIntention: f.Hz.COMMUNITY_CONTENT,
+                              channel: z
                           })
                         : null
                 ]

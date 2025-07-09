@@ -1,35 +1,36 @@
-(n.d(t, { O: () => N }), n(388685));
-var a = n(255367),
-    r = n(73800),
-    l = n(481060),
-    i = n(373071),
-    s = n(637443),
-    o = n(619899),
-    c = n(18868),
-    d = n(281598),
-    u = n(206878),
-    m = n(63874);
-function x(e) {
+(a.d(t, { O: () => T }), a(388685));
+var n = a(255367),
+    r = a(73800),
+    l = a(755721),
+    i = a(481060),
+    s = a(373071),
+    o = a(637443),
+    c = a(619899),
+    d = a(18868),
+    u = a(281598),
+    m = a(206878),
+    x = a(63874);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
+        var a = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(a);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(a).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
                 })
             )),
-            a.forEach(function (t) {
-                var a;
-                ((a = n[t]),
+            n.forEach(function (t) {
+                var n;
+                ((n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: a,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a));
+                        : (e[t] = n));
             }));
     }
     return e;
@@ -44,48 +45,48 @@ let h = [
             value: 'validate'
         }
     ],
-    p = {
+    b = {
         label: '[none selected]',
         value: null
     },
-    b = {
+    f = {
         label: '[preview all]',
         value: null
     },
-    f = () => {
-        (0, l.nfh)(s.g)
-            ? (0, l.Mr3)(s.g)
-            : (0, l.ZDy)(
-                  async () => {
-                      let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, x({}, t));
-                  },
-                  {
-                      modalKey: s.g,
-                      onCloseRequest: () => (0, l.Mr3)(s.g)
-                  }
-              );
-    },
     v = () => {
-        (0, l.nfh)(s.c)
-            ? (0, l.Mr3)(s.c)
-            : (0, l.ZDy)(
+        (0, i.nfh)(o.g)
+            ? (0, i.Mr3)(o.g)
+            : (0, i.ZDy)(
                   async () => {
-                      let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, x({}, t));
+                      let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(a.bind(a, 637443));
+                      return (t) => (0, n.jsx)(e, p({}, t));
                   },
                   {
-                      modalKey: s.c,
-                      onCloseRequest: () => (0, l.Mr3)(s.c)
+                      modalKey: o.g,
+                      onCloseRequest: () => (0, i.Mr3)(o.g)
                   }
               );
     },
     j = () => {
-        let e = (0, i.lb)(),
-            { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, o.N9)(),
-            s = r.useMemo(
+        (0, i.nfh)(o.c)
+            ? (0, i.Mr3)(o.c)
+            : (0, i.ZDy)(
+                  async () => {
+                      let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(a.bind(a, 637443));
+                      return (t) => (0, n.jsx)(e, p({}, t));
+                  },
+                  {
+                      modalKey: o.c,
+                      onCloseRequest: () => (0, i.Mr3)(o.c)
+                  }
+              );
+    },
+    g = () => {
+        let e = (0, s.lb)(),
+            { previewProfileEffectId: t, setPreviewProfileEffectId: a } = (0, c.N9)(),
+            o = r.useMemo(
                 () => [
-                    p,
+                    b,
                     ...e.map((e) => ({
                         label: e.name,
                         value: e.id
@@ -93,60 +94,60 @@ let h = [
                 ],
                 [e]
             );
-        return (0, a.jsxs)('div', {
-            className: m.previewSelector,
+        return (0, n.jsxs)('div', {
+            className: x.previewSelector,
             children: [
-                (0, a.jsx)(l.LZC, { size: 16 }),
-                (0, a.jsxs)('div', {
-                    className: m.headingContainer,
+                (0, n.jsx)(i.LZC, { size: 16 }),
+                (0, n.jsxs)('div', {
+                    className: x.headingContainer,
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, n.jsx)(i.X6q, {
                             variant: 'heading-md/bold',
                             children: 'Preview Profile Effect'
                         }),
-                        (0, a.jsx)(l.zxk, {
-                            look: l.zxk.Looks.BLANK,
-                            size: l.zxk.Sizes.SMALL,
-                            onClick: v,
-                            className: m.instructionsButton,
-                            children: (0, a.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
+                        (0, n.jsx)(l.zx, {
+                            look: l.zx.Looks.BLANK,
+                            size: l.zx.Sizes.SMALL,
+                            onClick: j,
+                            className: x.instructionsButton,
+                            children: (0, n.jsx)(i.idN, { color: i.TVs.colors.BG_BRAND })
                         })
                     ]
                 }),
-                (0, a.jsx)(l.q4e, {
-                    options: s,
+                (0, n.jsx)(i.q4e, {
+                    options: o,
                     value: t,
                     maxVisibleItems: 30,
-                    onChange: (e) => n(e)
+                    onChange: (e) => a(e)
                 })
             ]
         });
     },
-    g = () => {
-        let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
-            { avatarDecorationAssets: n } = (0, o.xq)(),
-            i = r.useMemo(
+    _ = () => {
+        let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, c.N9)(),
+            { avatarDecorationAssets: a } = (0, c.xq)(),
+            l = r.useMemo(
                 () => [
-                    b,
-                    ...n.map((e) => ({
+                    f,
+                    ...a.map((e) => ({
                         label: e.name,
                         value: e.name
                     }))
                 ],
-                [n]
+                [a]
             );
-        return 0 === n.length
+        return 0 === a.length
             ? null
-            : (0, a.jsxs)('div', {
-                  className: m.previewSelector,
+            : (0, n.jsxs)('div', {
+                  className: x.previewSelector,
                   children: [
-                      (0, a.jsx)(l.LZC, { size: 16 }),
-                      (0, a.jsx)(l.X6q, {
+                      (0, n.jsx)(i.LZC, { size: 16 }),
+                      (0, n.jsx)(i.X6q, {
                           variant: 'heading-md/bold',
                           children: 'Preview Avatar Decorations'
                       }),
-                      (0, a.jsx)(l.q4e, {
-                          options: i,
+                      (0, n.jsx)(i.q4e, {
+                          options: l,
                           value: e,
                           maxVisibleItems: 30,
                           onChange: (e) => t(e)
@@ -154,57 +155,57 @@ let h = [
                   ]
               });
     },
-    _ = (e) => {
-        let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: i } = (0, o.xq)(),
-            { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
-            d = r.useMemo(
+    y = (e) => {
+        let { clearAssets: t, clearIgnoredFiles: a } = e,
+            { collectionAssets: s } = (0, c.xq)(),
+            { deleteCollectionAsset: o, clearAssets: d } = (0, c.N9)(),
+            u = r.useMemo(
                 () =>
-                    Object.values(i).map((e) => ({
+                    Object.values(s).map((e) => ({
                         label: e.name,
                         value: e.type
                     })),
-                [i]
+                [s]
             ),
-            u = r.useCallback((e) => s(e), [s]),
-            x = r.useCallback(() => {
-                (c(), t(), n());
-            }, [c, t, n]);
-        return 0 === d.length
+            m = r.useCallback((e) => o(e), [o]),
+            p = r.useCallback(() => {
+                (d(), t(), a());
+            }, [d, t, a]);
+        return 0 === u.length
             ? null
-            : (0, a.jsxs)(a.Fragment, {
+            : (0, n.jsxs)(n.Fragment, {
                   children: [
-                      (0, a.jsx)(l.LZC, { size: 16 }),
-                      (0, a.jsxs)('div', {
-                          className: m.headingContainer,
+                      (0, n.jsx)(i.LZC, { size: 16 }),
+                      (0, n.jsxs)('div', {
+                          className: x.headingContainer,
                           children: [
-                              (0, a.jsx)(l.X6q, {
+                              (0, n.jsx)(i.X6q, {
                                   variant: 'heading-lg/bold',
                                   children: 'Uploaded Assets'
                               }),
-                              (0, a.jsx)(l.zxk, {
-                                  look: l.zxk.Looks.FILLED,
-                                  size: l.zxk.Sizes.TINY,
-                                  onClick: x,
+                              (0, n.jsx)(l.zx, {
+                                  look: l.zx.Looks.FILLED,
+                                  size: l.zx.Sizes.TINY,
+                                  onClick: p,
                                   children: 'Clear All'
                               })
                           ]
                       }),
-                      (0, a.jsx)('ul', {
-                          children: d.map((e) =>
-                              (0, a.jsxs)(
+                      (0, n.jsx)('ul', {
+                          children: u.map((e) =>
+                              (0, n.jsxs)(
                                   'li',
                                   {
-                                      className: m.uploadedFileListItem,
+                                      className: x.uploadedFileListItem,
                                       children: [
-                                          (0, a.jsx)(l.zxk, {
-                                              innerClassName: m.removeFileButtonInnerContents,
-                                              look: l.zxk.Looks.BLANK,
-                                              size: l.zxk.Sizes.ICON,
-                                              onClick: () => u(e.value),
-                                              children: (0, a.jsx)(l.Dio, { color: l.TVs.colors.TEXT_DANGER })
+                                          (0, n.jsx)(l.zx, {
+                                              innerClassName: x.removeFileButtonInnerContents,
+                                              look: l.zx.Looks.BLANK,
+                                              size: l.zx.Sizes.ICON,
+                                              onClick: () => m(e.value),
+                                              children: (0, n.jsx)(i.Dio, { color: i.TVs.colors.TEXT_DANGER })
                                           }),
-                                          (0, a.jsx)(l.Text, {
+                                          (0, n.jsx)(i.Text, {
                                               variant: 'text-md/normal',
                                               children: e.label
                                           })
@@ -217,35 +218,35 @@ let h = [
                   ]
               });
     },
-    y = (e) => {
-        let { ignoredFiles: t, handleClearIgnoredFiles: n } = e;
+    C = (e) => {
+        let { ignoredFiles: t, handleClearIgnoredFiles: a } = e;
         return 0 === t.length
             ? null
-            : (0, a.jsxs)(a.Fragment, {
+            : (0, n.jsxs)(n.Fragment, {
                   children: [
-                      (0, a.jsx)(l.LZC, { size: 16 }),
-                      (0, a.jsxs)('div', {
-                          className: m.headingContainer,
+                      (0, n.jsx)(i.LZC, { size: 16 }),
+                      (0, n.jsxs)('div', {
+                          className: x.headingContainer,
                           children: [
-                              (0, a.jsx)(l.X6q, {
+                              (0, n.jsx)(i.X6q, {
                                   variant: 'heading-lg/bold',
                                   children: 'Ignored Files'
                               }),
-                              (0, a.jsx)(l.zxk, {
-                                  look: l.zxk.Looks.FILLED,
-                                  size: l.zxk.Sizes.TINY,
-                                  onClick: n,
+                              (0, n.jsx)(l.zx, {
+                                  look: l.zx.Looks.FILLED,
+                                  size: l.zx.Sizes.TINY,
+                                  onClick: a,
                                   children: 'Clear'
                               })
                           ]
                       }),
-                      (0, a.jsx)('ul', {
+                      (0, n.jsx)('ul', {
                           children: t.map((e, t) =>
-                              (0, a.jsx)(
+                              (0, n.jsx)(
                                   'li',
                                   {
-                                      className: m.ignoredFileListItem,
-                                      children: (0, a.jsx)(l.Text, {
+                                      className: x.ignoredFileListItem,
+                                      children: (0, n.jsx)(i.Text, {
                                           variant: 'text-md/normal',
                                           children: e
                                       })
@@ -257,78 +258,78 @@ let h = [
                   ]
               });
     },
-    C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, u.g)(),
-            o = Object.entries(s),
-            d = Object.entries(i),
-            x = o.length > 0,
-            h = d.length > 0,
-            p = r.useCallback(
-                (n) => {
-                    (t(), e(n));
+    O = () => {
+        let { validateShopAssetPackage: e, reset: t, validationComplete: a, warnings: s, errors: o } = (0, m.g)(),
+            c = Object.entries(o),
+            u = Object.entries(s),
+            p = c.length > 0,
+            h = u.length > 0,
+            b = r.useCallback(
+                (a) => {
+                    (t(), e(a));
                 },
                 [e, t]
             );
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: p }),
-                n
-                    ? (0, a.jsxs)('div', {
-                          className: m.validationSummary,
+                (0, n.jsx)(d.L, { onDrop: b }),
+                a
+                    ? (0, n.jsxs)('div', {
+                          className: x.validationSummary,
                           children: [
-                              (0, a.jsx)(l.Text, {
+                              (0, n.jsx)(i.Text, {
                                   variant: 'text-md/normal',
-                                  color: x ? 'text-danger' : 'text-default',
-                                  children: ''.concat(o.length, ' errors')
+                                  color: p ? 'text-danger' : 'text-default',
+                                  children: ''.concat(c.length, ' errors')
                               }),
-                              (0, a.jsx)(l.Text, {
+                              (0, n.jsx)(i.Text, {
                                   variant: 'text-md/normal',
                                   color: h ? 'text-feedback-warning' : 'text-default',
-                                  children: ''.concat(d.length, ' warnings')
+                                  children: ''.concat(u.length, ' warnings')
                               }),
-                              (0, a.jsx)(l.zxk, {
-                                  color: l.zxk.Colors.RED,
-                                  look: l.zxk.Looks.OUTLINED,
-                                  size: l.zxk.Sizes.TINY,
+                              (0, n.jsx)(l.zx, {
+                                  color: l.zx.Colors.RED,
+                                  look: l.zx.Looks.OUTLINED,
+                                  size: l.zx.Sizes.TINY,
                                   onClick: t,
                                   children: 'Reset'
                               })
                           ]
                       })
-                    : (0, a.jsx)(l.Text, {
+                    : (0, n.jsx)(i.Text, {
                           variant: 'text-md/normal',
                           children: 'Drop asset folder to validate.'
                       }),
-                (0, a.jsx)(l.LZC, { size: 16 }),
-                x &&
-                    (0, a.jsxs)(a.Fragment, {
+                (0, n.jsx)(i.LZC, { size: 16 }),
+                p &&
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)(l.X6q, {
+                            (0, n.jsx)(i.X6q, {
                                 variant: 'heading-lg/bold',
                                 children: 'Errors'
                             }),
-                            (0, a.jsx)(l.LZC, { size: 8 }),
-                            (0, a.jsx)('ul', {
-                                className: m.validationIssuesList,
-                                children: o.map((e, t) => {
-                                    let [n, r] = e;
-                                    return (0, a.jsxs)(
+                            (0, n.jsx)(i.LZC, { size: 8 }),
+                            (0, n.jsx)('ul', {
+                                className: x.validationIssuesList,
+                                children: c.map((e, t) => {
+                                    let [a, r] = e;
+                                    return (0, n.jsxs)(
                                         'li',
                                         {
                                             children: [
-                                                (0, a.jsx)(l.Text, {
+                                                (0, n.jsx)(i.Text, {
                                                     variant: 'text-md/bold',
                                                     color: 'text-danger',
-                                                    children: n
+                                                    children: a
                                                 }),
                                                 r.length > 0 &&
-                                                    (0, a.jsx)('ul', {
-                                                        className: m.validationIssuesList,
+                                                    (0, n.jsx)('ul', {
+                                                        className: x.validationIssuesList,
                                                         children: r.map((e, t) =>
-                                                            (0, a.jsx)(
+                                                            (0, n.jsx)(
                                                                 'li',
                                                                 {
-                                                                    children: (0, a.jsx)(l.Text, {
+                                                                    children: (0, n.jsx)(i.Text, {
                                                                         variant: 'text-sm/normal',
                                                                         color: 'text-danger',
                                                                         children: e
@@ -340,41 +341,41 @@ let h = [
                                                     })
                                             ]
                                         },
-                                        ''.concat(n, '-').concat(t)
+                                        ''.concat(a, '-').concat(t)
                                     );
                                 })
                             })
                         ]
                     }),
                 h &&
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)(l.X6q, {
+                            (0, n.jsx)(i.X6q, {
                                 variant: 'heading-lg/bold',
                                 children: 'Warnings'
                             }),
-                            (0, a.jsx)(l.LZC, { size: 8 }),
-                            (0, a.jsx)('ul', {
-                                className: m.validationIssuesList,
-                                children: Object.entries(i).map((e, t) => {
-                                    let [n, r] = e;
-                                    return (0, a.jsxs)(
+                            (0, n.jsx)(i.LZC, { size: 8 }),
+                            (0, n.jsx)('ul', {
+                                className: x.validationIssuesList,
+                                children: Object.entries(s).map((e, t) => {
+                                    let [a, r] = e;
+                                    return (0, n.jsxs)(
                                         'li',
                                         {
                                             children: [
-                                                (0, a.jsx)(l.Text, {
+                                                (0, n.jsx)(i.Text, {
                                                     variant: 'text-md/bold',
                                                     color: 'text-feedback-warning',
-                                                    children: n
+                                                    children: a
                                                 }),
                                                 r.length > 0 &&
-                                                    (0, a.jsx)('ul', {
-                                                        className: m.validationIssuesList,
+                                                    (0, n.jsx)('ul', {
+                                                        className: x.validationIssuesList,
                                                         children: r.map((e, t) =>
-                                                            (0, a.jsx)(
+                                                            (0, n.jsx)(
                                                                 'li',
                                                                 {
-                                                                    children: (0, a.jsx)(l.Text, {
+                                                                    children: (0, n.jsx)(i.Text, {
                                                                         variant: 'text-sm/normal',
                                                                         color: 'text-feedback-warning',
                                                                         children: e
@@ -386,7 +387,7 @@ let h = [
                                                     })
                                             ]
                                         },
-                                        ''.concat(n, '-').concat(t)
+                                        ''.concat(a, '-').concat(t)
                                     );
                                 })
                             })
@@ -395,74 +396,74 @@ let h = [
             ]
         });
     },
-    O = () => {
-        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
-            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
+    N = () => {
+        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: a } = (0, c.N9)(),
+            { ignoredFilenames: s, clearAssets: o, clearIgnoredFilenames: m, processAndUpsertAssets: p } = (0, u.hm)(),
             h = r.useCallback(
                 (e) => {
-                    (n(), x(e));
+                    (a(), p(e));
                 },
-                [x, n]
+                [p, a]
             );
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: h }),
-                (0, a.jsx)(l.Text, {
+                (0, n.jsx)(d.L, { onDrop: h }),
+                (0, n.jsx)(i.Text, {
                     variant: 'text-md/normal',
                     children: 'Drop files in this panel to begin preview.'
                 }),
-                (0, a.jsxs)('div', {
-                    className: m.previewToggleContainer,
+                (0, n.jsxs)('div', {
+                    className: x.previewToggleContainer,
                     children: [
-                        (0, a.jsx)(l.rsf, {
+                        (0, n.jsx)(i.rsf, {
                             checked: e,
                             onChange: (e) => t(e)
                         }),
-                        (0, a.jsx)(l.Text, {
+                        (0, n.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             children: 'Enable Preview'
                         }),
-                        (0, a.jsx)(l.zxk, {
-                            look: l.zxk.Looks.BLANK,
-                            size: l.zxk.Sizes.SMALL,
-                            onClick: f,
-                            className: m.instructionsButton,
-                            children: (0, a.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
+                        (0, n.jsx)(l.zx, {
+                            look: l.zx.Looks.BLANK,
+                            size: l.zx.Sizes.SMALL,
+                            onClick: v,
+                            className: x.instructionsButton,
+                            children: (0, n.jsx)(i.idN, { color: i.TVs.colors.BG_BRAND })
                         })
                     ]
                 }),
-                (0, a.jsx)(j, {}),
-                (0, a.jsx)(g, {}),
-                (0, a.jsx)(_, {
-                    clearAssets: s,
-                    clearIgnoredFiles: u
+                (0, n.jsx)(g, {}),
+                (0, n.jsx)(_, {}),
+                (0, n.jsx)(y, {
+                    clearAssets: o,
+                    clearIgnoredFiles: m
                 }),
-                (0, a.jsx)(y, {
-                    ignoredFiles: i,
-                    handleClearIgnoredFiles: u
+                (0, n.jsx)(C, {
+                    ignoredFiles: s,
+                    handleClearIgnoredFiles: m
                 })
             ]
         });
     },
-    N = () => {
+    T = () => {
         let [e, t] = r.useState('preview');
-        return (0, a.jsxs)('div', {
-            className: m.container,
+        return (0, n.jsxs)('div', {
+            className: x.container,
             children: [
-                (0, a.jsx)(l.sY7, {
+                (0, n.jsx)(i.sY7, {
                     options: h,
                     value: e,
                     onChange: (e) => {
-                        let { value: n } = e;
-                        return t(n);
+                        let { value: a } = e;
+                        return t(a);
                     },
-                    className: m.panelModeControl,
-                    optionClassName: m.panelModeControlOption
+                    className: x.panelModeControl,
+                    optionClassName: x.panelModeControlOption
                 }),
-                (0, a.jsx)(l.LZC, { size: 8 }),
-                'preview' === e && (0, a.jsx)(O, {}),
-                'validate' === e && (0, a.jsx)(C, {}),
-                (0, a.jsx)(l.LZC, { size: 16 })
+                (0, n.jsx)(i.LZC, { size: 8 }),
+                'preview' === e && (0, n.jsx)(N, {}),
+                'validate' === e && (0, n.jsx)(O, {}),
+                (0, n.jsx)(i.LZC, { size: 16 })
             ]
         });
     };

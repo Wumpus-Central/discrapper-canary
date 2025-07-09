@@ -46,7 +46,7 @@ function S(e, t) {
     }
 }
 let T = i.memo(function (e) {
-    let { section: t, sectionId: n, guild: l, channel: T, integrations: w, editedIntegration: P, webhooks: Z, editedWebhook: k, isFetchingWebhooks: A, refToScroller: D, errors: R, hasChanges: L } = e,
+    let { section: t, sectionId: n, guild: l, channel: T, integrations: w, editedIntegration: P, webhooks: Z, editedWebhook: A, isFetchingWebhooks: k, refToScroller: D, errors: R, hasChanges: L } = e,
         M = (0, a.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l.id) : null)),
         B = (0, a.cj)([g.ZP], () => g.ZP.getChannels(null == l ? void 0 : l.id)),
         U = (0, a.cj)([f.Z], () =>
@@ -61,21 +61,21 @@ let T = i.memo(function (e) {
                 'id'
             )
         ),
-        z = null != T ? T : M,
-        H = t === N.b4C.APPLICATION ? n : null,
-        [G, F] = i.useState(d.$x),
+        H = null != T ? T : M,
+        G = t === N.b4C.APPLICATION ? n : null,
+        [z, F] = i.useState(d.$x),
         V = i.useCallback(
             () =>
                 L()
                     ? (h.S.dispatch(N.CkL.SHAKE_APP, {
                           duration: 300,
-                          intensity: G
+                          intensity: z
                       }),
-                      F(Math.min(G + d.d7, d.w6)),
+                      F(Math.min(z + d.d7, d.w6)),
                       h.S.dispatch(N.CkL.EMPHASIZE_NOTICE),
                       !1)
                     : (F(d.$x), !0),
-            [L, G]
+            [L, z]
         ),
         K = i.useCallback((e) => !!V() && (c.Z.setSection(e), !0), [V]),
         {
@@ -113,7 +113,7 @@ let T = i.memo(function (e) {
             };
         }, [w, U, W, Z]);
     (i.useEffect(() => {
-        if (!A)
+        if (!k)
             switch (t) {
                 case N.b4C.TWITCH:
                     null == X[N.ABu.TWITCH] && c.Z.setSection(N.b4C.OVERVIEW);
@@ -122,9 +122,9 @@ let T = i.memo(function (e) {
                     null == X[N.ABu.YOUTUBE] && c.Z.setSection(N.b4C.OVERVIEW);
                     break;
                 case N.b4C.APPLICATION:
-                    (null != H && (H in Y || H in q)) || c.Z.setSection(N.b4C.OVERVIEW);
+                    (null != G && (G in Y || G in q)) || c.Z.setSection(N.b4C.OVERVIEW);
             }
-    }, [q, Y, X, H, t, A]),
+    }, [q, Y, X, G, t, k]),
         i.useEffect(() => {
             (null == l ? void 0 : l.id) != null && b.Z.getEntitlementsForGuildFetchState(l.id) === b.M.NOT_FETCHED && m.i1(l.id);
         }, [null == l ? void 0 : l.id]),
@@ -174,12 +174,12 @@ let T = i.memo(function (e) {
             break;
         case N.b4C.APPLICATION:
             var ee;
-            let et = null != H ? (null != (ee = q[Y[H]]) ? ee : q[H]) : null;
+            let et = null != G ? (null != (ee = q[Y[G]]) ? ee : q[G]) : null;
             null != et &&
                 (Q = (0, r.jsx)(j.Z, {
                     guild: l,
                     applicationIntegration: et,
-                    editedWebhook: k,
+                    editedWebhook: A,
                     selectableWebhookChannels: U,
                     errors: R,
                     canNavigate: V
@@ -188,7 +188,7 @@ let T = i.memo(function (e) {
         case N.b4C.CHANNEL_FOLLOWING:
             Q = (0, r.jsx)(v.Z, {
                 followedChannelWebhooks: J,
-                editedWebhook: k,
+                editedWebhook: A,
                 selectableWebhookChannels: U,
                 canNavigate: V,
                 errors: R
@@ -199,7 +199,7 @@ let T = i.memo(function (e) {
                 guild: l,
                 channel: T,
                 customWebhooks: $,
-                editedWebhook: k,
+                editedWebhook: A,
                 selectableWebhookChannels: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -241,8 +241,8 @@ let T = i.memo(function (e) {
                 builtInIntegrations: X,
                 customWebhooks: $,
                 followedChannelWebhooks: J,
-                isLoadingWebhooks: A || null == l,
-                canCreateWebhook: null != z,
+                isLoadingWebhooks: k || null == l,
+                canCreateWebhook: null != H,
                 onManageCustomWebhooks: () => {
                     c.Z.setSection(N.b4C.WEBHOOKS);
                 },
@@ -281,7 +281,7 @@ let T = i.memo(function (e) {
                               activeId: t.toString(),
                               breadcrumbs: [N.b4C.OVERVIEW, t].map((e) => ({
                                   id: e.toString(),
-                                  label: S(e, q[H])
+                                  label: S(e, q[G])
                               })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && K(parseInt(e.id));

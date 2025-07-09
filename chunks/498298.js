@@ -1,12 +1,13 @@
-r.d(t, { default: () => l });
+r.d(t, { default: () => a });
 var n = r(255367),
     o = r(73800),
-    i = r(481060),
-    c = r(388032);
-function l(e) {
+    i = r(755721),
+    c = r(481060),
+    l = r(388032);
+function a(e) {
     var t,
         r,
-        { onConfirm: l } = e,
+        { onConfirm: a } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -26,11 +27,11 @@ function l(e) {
             }
             return o;
         })(e, ['onConfirm']);
-    let a = o.useCallback(() => {
-        (l(), (0, i.pTH)());
-    }, [l]);
+    let p = o.useCallback(() => {
+        (a(), (0, c.pTH)());
+    }, [a]);
     return (0, n.jsxs)(
-        i.Y0X,
+        c.Y0X,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -55,30 +56,30 @@ function l(e) {
                     }));
             }
             return e;
-        })({ size: i.CgR.SMALL }, s)),
+        })({ size: c.CgR.SMALL }, s)),
         (r = r =
             {
                 parentComponent: 'DisableLandingPageWarningModal',
                 children: [
-                    (0, n.jsx)(i.hzk, {
-                        children: (0, n.jsx)(i.Text, {
+                    (0, n.jsx)(c.hzk, {
+                        children: (0, n.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             style: { marginTop: 24 },
-                            children: c.intl.string(c.t.nmBUv7)
+                            children: l.intl.string(l.t.nmBUv7)
                         })
                     }),
-                    (0, n.jsxs)(i.mzw, {
+                    (0, n.jsxs)(c.mzw, {
                         children: [
-                            (0, n.jsx)(i.zxk, {
-                                color: i.Ttl.PRIMARY,
-                                onClick: i.pTH,
-                                children: c.intl.string(c.t['ETE/oK'])
+                            (0, n.jsx)(c.zxk, {
+                                variant: 'secondary',
+                                text: l.intl.string(l.t['ETE/oK']),
+                                onClick: c.pTH
                             }),
-                            (0, n.jsx)(i.zxk, {
-                                color: i.Ttl.RED,
-                                onClick: a,
+                            (0, n.jsx)(i.zx, {
+                                color: i.Tt.RED,
+                                onClick: p,
                                 style: { marginRight: 8 },
-                                children: c.intl.string(c.t.R9GHyc)
+                                children: l.intl.string(l.t.R9GHyc)
                             })
                         ]
                     })

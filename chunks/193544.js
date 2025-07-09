@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     s = n.n(l),
-    a = n(481060),
+    a = n(755721),
     o = n(186523),
     c = n(553826),
     d = n(2150),
@@ -42,10 +42,10 @@ function f(e) {
         title: O ? f : null != (t = null == E ? void 0 : E.title) ? t : f,
         description: O ? '('.concat(null != (n = null == E ? void 0 : E.title) ? n : g.intl.string(g.t.PoWNfX), ')') : null != (l = null == E ? void 0 : E.description) ? l : '',
         highlightColor: O ? d.q.NONE : null == E ? void 0 : E.highlightColor,
-        action: (0, r.jsx)(a.zxk, {
-            look: a.zxk.Looks.LINK,
-            size: a.zxk.Sizes.MIN,
-            color: a.zxk.Colors.LINK,
+        action: (0, r.jsx)(a.zx, {
+            look: a.zx.Looks.LINK,
+            size: a.zx.Sizes.MIN,
+            color: a.zx.Colors.LINK,
             children: g.intl.string(g.t.GEgsAw)
         }),
         loading: y,

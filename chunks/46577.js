@@ -1,64 +1,65 @@
-(r.d(e, { default: () => m }), r(388685));
+(r.d(e, { default: () => w }), r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(442837),
-    o = r(481060),
-    c = r(239091),
-    a = r(410575),
-    s = r(881052),
-    u = r(299206),
-    d = r(430824),
-    b = r(236413),
-    p = r(727072),
-    f = r(36459),
-    g = r(65912),
-    y = r(572456),
-    j = r(273504),
-    O = r(981631),
-    h = r(388032);
-function m(t) {
-    let { rule: e, analyticsContext: r, onSelect: m } = t,
-        w = (0, b.Vb)(e),
-        x = (function (t) {
-            let { editingRule: e, setEditingRule: r } = (0, g.V)();
-            return (0, n.jsx)(o.sNh, {
+    o = r(755721),
+    c = r(481060),
+    a = r(239091),
+    s = r(410575),
+    u = r(881052),
+    d = r(299206),
+    b = r(430824),
+    p = r(236413),
+    f = r(727072),
+    g = r(36459),
+    y = r(65912),
+    j = r(572456),
+    O = r(273504),
+    h = r(981631),
+    m = r(388032);
+function w(t) {
+    let { rule: e, analyticsContext: r, onSelect: w } = t,
+        x = (0, p.Vb)(e),
+        v = (function (t) {
+            let { editingRule: e, setEditingRule: r } = (0, y.V)();
+            return (0, n.jsx)(c.sNh, {
                 id: 'edit-automod-rule',
-                label: h.intl.string(h.t.uQq6Pz),
+                label: m.intl.string(m.t.uQq6Pz),
                 action: () => {
                     r(t);
                 },
                 disabled: null != e
             });
         })(e),
-        v = (function (t) {
-            let { setEditingRule: e } = (0, g.V)(),
-                [r, c] = i.useState(!1),
-                { removeRule: a } = (0, p.pH)(t.guildId),
-                u = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId)),
-                b = async () => {
-                    if (!r && (await (0, y.gK)(t.name))) {
-                        c(!0);
+        P = (function (t) {
+            let { setEditingRule: e } = (0, y.V)(),
+                [r, a] = i.useState(!1),
+                { removeRule: s } = (0, f.pH)(t.guildId),
+                d = (0, l.e7)([b.Z], () => b.Z.getGuild(t.guildId)),
+                p = async () => {
+                    if (!r && (await (0, j.gK)(t.name))) {
+                        a(!0);
                         try {
-                            (await (0, f.mm)(t.id, t.guildId), e(null), a(t.id, t.guildId));
+                            (await (0, g.mm)(t.id, t.guildId), e(null), s(t.id, t.guildId));
                         } catch (e) {
                             var n;
-                            let t = new s.Hx(e);
-                            (0, o.showToast)((0, o.createToast)(null != (n = t.getAnyErrorMessage()) ? n : h.intl.string(h.t.fEptJC), o.ToastType.FAILURE));
+                            let t = new u.Hx(e);
+                            (0, c.showToast)((0, c.createToast)(null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJC), c.ToastType.FAILURE));
                         } finally {
-                            c(!1);
+                            a(!1);
                         }
                     }
                 },
-                m = t.triggerType === j.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(O.oNc.COMMUNITY);
-            return (0, n.jsx)(o.sNh, {
+                w = t.triggerType === O.fX.MENTION_SPAM && (null == d ? void 0 : d.features) != null && d.features.has(h.oNc.COMMUNITY);
+            return (0, n.jsx)(c.sNh, {
                 id: 'delete-automod-rule',
-                label: h.intl.string(h.t['92m/09']),
-                action: m
+                label: m.intl.string(m.t['92m/09']),
+                action: w
                     ? () => {
-                          (0, o.h7j)((t) => {
+                          (0, c.h7j)((t) => {
                               var e, r;
                               return (0, n.jsx)(
-                                  o.ConfirmModal,
+                                  c.ConfirmModal,
                                   ((e = (function (t) {
                                       for (var e = 1; e < arguments.length; e++) {
                                           var r = null != arguments[e] ? arguments[e] : {},
@@ -85,17 +86,17 @@ function m(t) {
                                       return t;
                                   })(
                                       {
-                                          header: h.intl.string(h.t.MmpqMD),
-                                          confirmText: h.intl.string(h.t.BddRzc),
-                                          confirmButtonColor: o.zxk.Colors.BRAND
+                                          header: m.intl.string(m.t.MmpqMD),
+                                          confirmText: m.intl.string(m.t.BddRzc),
+                                          confirmButtonColor: o.zx.Colors.BRAND
                                       },
                                       t
                                   )),
                                   (r = r =
                                       {
-                                          children: (0, n.jsx)(o.Text, {
+                                          children: (0, n.jsx)(c.Text, {
                                               variant: 'text-md/normal',
-                                              children: h.intl.string(h.t.XMdBLy)
+                                              children: m.intl.string(m.t.XMdBLy)
                                           })
                                       }),
                                   Object.getOwnPropertyDescriptors
@@ -114,26 +115,26 @@ function m(t) {
                               );
                           });
                       }
-                    : b
+                    : p
             });
         })(e),
-        P = (0, u.Z)({
+        T = (0, d.Z)({
             id: e.id,
-            label: h.intl.string(h.t.F64hjo)
+            label: m.intl.string(m.t.F64hjo)
         });
-    return (0, n.jsx)(a.Z, {
+    return (0, n.jsx)(s.Z, {
         context: r,
-        object: O.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(o.v2r, {
+        object: h.qAy.CONTEXT_MENU,
+        children: (0, n.jsxs)(c.v2r, {
             navId: 'automod-rule-context',
-            onClose: c.Zy,
-            'aria-label': h.intl.string(h.t.uT36Sk),
-            onSelect: m,
+            onClose: a.Zy,
+            'aria-label': m.intl.string(m.t.uT36Sk),
+            onSelect: w,
             children: [
-                (0, n.jsxs)(o.kSQ, {
-                    children: [x, w && v]
+                (0, n.jsxs)(c.kSQ, {
+                    children: [v, x && P]
                 }),
-                w && (0, n.jsx)(o.kSQ, { children: P })
+                x && (0, n.jsx)(c.kSQ, { children: T })
             ]
         })
     });

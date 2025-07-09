@@ -39,15 +39,15 @@ function P(t) {
         w = (null == h ? void 0 : h.published) === !0 && (null == E ? void 0 : E.isAvailable()) === !0,
         { app: x } = (0, d.Rt)(F),
         { analyticsLocations: R } = (0, u.ZP)(),
-        k = (0, I.Ev)(C, null != r ? r : void 0),
-        U = null == k ? void 0 : k.subscription,
-        D = null == k ? void 0 : k.subscriptionPlan,
+        U = (0, I.Ev)(C, null != r ? r : void 0),
+        k = null == U ? void 0 : U.subscription,
+        D = null == U ? void 0 : U.subscriptionPlan,
         G = (0, I.cr)(C, null != r ? r : void 0),
         B = null == G ? void 0 : G.subscriptionPlan,
         { entitlementsLoaded: M } = (0, I.LM)({ guildId: r });
     null == r && (M = !0);
     let H = (0, p.Z)(),
-        K = null != U && (0, g.Jf)(U, E),
+        K = null != k && (0, g.Jf)(k, E),
         Y = i.useMemo(() => {
             if (!M || null == x || null == y) return c.rf.LOADING;
             if (!w) return c.rf.UNAVAILABLE;

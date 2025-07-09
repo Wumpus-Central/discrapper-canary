@@ -1,16 +1,17 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
-    s = n(367907),
-    c = n(626135),
-    u = n(152376),
-    d = n(981631),
-    p = n(388032),
-    h = n(636184);
-function f(e) {
+    a = n.n(l),
+    o = n(755721),
+    s = n(481060),
+    c = n(367907),
+    u = n(626135),
+    d = n(152376),
+    p = n(981631),
+    h = n(388032),
+    f = n(636184);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,44 +54,44 @@ function m(e, t) {
         e
     );
 }
-function g(e) {
+function b(e) {
     let { channel: t, narrow: n } = e;
     return (
         i.useEffect(() => {
-            c.default.track(d.rMx.CHANNEL_BANNER_VIEWED, m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: 'channel_opt_in' }));
+            u.default.track(p.rMx.CHANNEL_BANNER_VIEWED, g(m({}, (0, c.hH)(t.getGuildId()), (0, c.v_)(t)), { banner_type: 'channel_opt_in' }));
         }, [t]),
         (0, r.jsxs)('div', {
-            className: o()(h.chatHeaderBar, { [h.narrow]: n }),
+            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, r.jsx)(a.Text, {
-                    className: h.chatHeaderBarText,
+                (0, r.jsx)(s.Text, {
+                    className: f.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'text-default',
-                    children: p.intl.string(p.t.iOWmmJ)
+                    children: h.intl.string(h.t.iOWmmJ)
                 }),
-                (0, r.jsxs)(a.zxk, {
-                    size: a.zxk.Sizes.TINY,
-                    className: h.chatHeaderBarButton,
-                    innerClassName: h.chatHeaderBarButtonInner,
-                    color: a.zxk.Colors.BRAND,
+                (0, r.jsxs)(o.zx, {
+                    size: o.zx.Sizes.TINY,
+                    className: f.chatHeaderBarButton,
+                    innerClassName: f.chatHeaderBarButtonInner,
+                    color: o.zx.Colors.BRAND,
                     onClick: () => {
-                        (c.default.track(
-                            d.rMx.CHANNEL_BANNER_CTA_CLICKED,
-                            m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
+                        (u.default.track(
+                            p.rMx.CHANNEL_BANNER_CTA_CLICKED,
+                            g(m({}, (0, c.hH)(t.getGuildId()), (0, c.v_)(t)), {
                                 banner_type: 'channel_opt_in',
                                 cta_type: 'add channel'
                             })
                         ),
-                            (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL }));
+                            (0, d.XQ)(t.guild_id, t.id, !0, { section: p.jXE.CHANNEL }));
                     },
                     children: [
-                        (0, r.jsx)(a.qJs, {
+                        (0, r.jsx)(s.qJs, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 14,
                             height: 14
                         }),
-                        p.intl.string(p.t.ZtIlQk)
+                        h.intl.string(h.t.ZtIlQk)
                     ]
                 })
             ]

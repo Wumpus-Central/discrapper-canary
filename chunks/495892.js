@@ -327,9 +327,10 @@ function T(e) {
             (0, r.jsx)(N, {
                 className: j.actionContainer,
                 children: (0, r.jsx)(s.zxk, {
-                    size: s.zxk.Sizes.SMALL,
-                    onClick: n,
-                    children: t === x.fX.KEYWORD ? b.intl.string(b.t.CumH4u) : b.intl.string(b.t.oRs6mJ)
+                    variant: 'primary',
+                    size: 'sm',
+                    text: t === x.fX.KEYWORD ? b.intl.string(b.t.CumH4u) : b.intl.string(b.t.oRs6mJ),
+                    onClick: n
                 })
             })
         ]

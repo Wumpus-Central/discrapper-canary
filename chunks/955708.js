@@ -1,20 +1,21 @@
 (n.d(e, {
-    default: () => b,
-    x: () => x
+    default: () => p,
+    x: () => b
 }),
     n(388685));
 var r,
     s = n(255367),
     i = n(73800),
-    o = n(481060),
-    c = n(378298),
-    a = n(473092),
-    l = n(684471),
-    u = n(745982),
-    d = n(463439),
-    E = n(388032),
-    h = n(257025);
-function _(t) {
+    o = n(755721),
+    c = n(481060),
+    a = n(378298),
+    l = n(473092),
+    u = n(684471),
+    d = n(745982),
+    E = n(463439),
+    h = n(388032),
+    _ = n(257025);
+function N(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
@@ -39,7 +40,7 @@ function _(t) {
     }
     return t;
 }
-function N(t, e) {
+function x(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -57,100 +58,100 @@ function N(t, e) {
         t
     );
 }
-var x = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
-let b = (t) => {
-    let { warningId: e, warningType: n, senderId: r, modalProps: x, channelId: b } = t,
-        [p, f] = i.useState(0),
-        m = i.useMemo(
+var b = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
+let p = (t) => {
+    let { warningId: e, warningType: n, senderId: r, modalProps: b, channelId: p } = t,
+        [f, m] = i.useState(0),
+        g = i.useMemo(
             () => ({
-                channelId: b,
+                channelId: p,
                 senderId: r,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1
             }),
-            [b, r, e, n]
+            [p, r, e, n]
         );
     i.useEffect(() => {
-        (0, a.KQ)(N(_({}, m), { viewName: a.pb.SAFETY_TAKEOVER_MODAL }));
-    }, [m]);
-    let g = i.useCallback(
+        (0, l.KQ)(x(N({}, g), { viewName: l.pb.SAFETY_TAKEOVER_MODAL }));
+    }, [g]);
+    let C = i.useCallback(
             (t) => {
-                (0, a.qc)(N(_({}, m), { cta: t }));
+                (0, l.qc)(x(N({}, g), { cta: t }));
             },
-            [m]
+            [g]
         ),
-        [C, I] = i.useState(!1);
-    function A(t) {
-        f(t);
+        [I, A] = i.useState(!1);
+    function T(t) {
+        m(t);
     }
-    return (0, s.jsxs)(o.Y0X, {
-        transitionState: x.transitionState,
+    return (0, s.jsxs)(c.Y0X, {
+        transitionState: b.transitionState,
         parentComponent: 'InappropriateConversationModal',
         children: [
             (0, s.jsx)('div', {
-                className: h.container,
-                children: (0, s.jsxs)(o.MyZ, {
+                className: _.container,
+                children: (0, s.jsxs)(c.MyZ, {
                     width: 440,
-                    activeSlide: p,
+                    activeSlide: f,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, s.jsx)(o.Mi4, {
+                        (0, s.jsx)(c.Mi4, {
                             id: 0,
-                            children: (0, s.jsx)(l.Z, {
-                                warningId: e,
-                                senderId: r,
-                                trackAnalyticsEvent: g,
-                                onNavigate: A
-                            })
-                        }),
-                        (0, s.jsx)(o.Mi4, {
-                            id: 1,
                             children: (0, s.jsx)(u.Z, {
                                 warningId: e,
                                 senderId: r,
-                                trackAnalyticsEvent: g
+                                trackAnalyticsEvent: C,
+                                onNavigate: T
                             })
                         }),
-                        (0, s.jsx)(o.Mi4, {
-                            id: 2,
+                        (0, s.jsx)(c.Mi4, {
+                            id: 1,
                             children: (0, s.jsx)(d.Z, {
                                 warningId: e,
                                 senderId: r,
-                                trackAnalyticsEvent: g,
-                                channelId: b,
-                                hasReported: C,
+                                trackAnalyticsEvent: C
+                            })
+                        }),
+                        (0, s.jsx)(c.Mi4, {
+                            id: 2,
+                            children: (0, s.jsx)(E.Z, {
+                                warningId: e,
+                                senderId: r,
+                                trackAnalyticsEvent: C,
+                                channelId: p,
+                                hasReported: I,
                                 onReport: function () {
-                                    I(!0);
+                                    A(!0);
                                 }
                             })
                         })
                     ]
                 })
             }),
-            (0, s.jsxs)(o.mzw, {
-                className: h.footer,
+            (0, s.jsxs)(c.mzw, {
+                className: _.footer,
                 children: [
-                    (0, s.jsx)(o.zxk, {
-                        className: h.footerButton,
-                        look: o.zxk.Looks.LINK,
-                        color: o.zxk.Colors.CUSTOM,
-                        size: o.zxk.Sizes.MIN,
+                    (0, s.jsx)(o.zx, {
+                        className: _.footerButton,
+                        look: o.zx.Looks.LINK,
+                        color: o.zx.Colors.CUSTOM,
+                        size: o.zx.Sizes.MIN,
                         onClick: function () {
-                            (x.onClose(), (0, c.T)(b, [e]), g(a.NM.USER_TAKEOVER_MODAL_DISMISS));
+                            (b.onClose(), (0, a.T)(p, [e]), C(l.NM.USER_TAKEOVER_MODAL_DISMISS));
                         },
-                        children: E.intl.string(E.t.cpT0Cg)
+                        children: h.intl.string(h.t.cpT0Cg)
                     }),
-                    0 !== p &&
-                        (0, s.jsx)(o.zxk, {
-                            className: h.footerButton,
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.CUSTOM,
-                            size: o.zxk.Sizes.MIN,
-                            onClick: () => A(0),
-                            children: E.intl.string(E.t['13/7kZ'])
+                    0 !== f &&
+                        (0, s.jsx)(o.zx, {
+                            className: _.footerButton,
+                            look: o.zx.Looks.LINK,
+                            color: o.zx.Colors.CUSTOM,
+                            size: o.zx.Sizes.MIN,
+                            onClick: () => T(0),
+                            children: h.intl.string(h.t['13/7kZ'])
                         })
                 ]
             })

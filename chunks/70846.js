@@ -1,51 +1,52 @@
-r.d(t, { default: () => d });
-var a = r(255367);
-r(73800);
-var s = r(481060),
-    l = r(313201),
-    n = r(426642),
-    o = r(388032),
-    i = r(458063);
+a.d(t, { default: () => d });
+var r = a(255367);
+a(73800);
+var s = a(481060),
+    l = a(313201),
+    n = a(426642),
+    i = a(388032),
+    o = a(458063);
 let d = (e) => {
-    let { transitionState: t, errors: r, onClose: d } = e,
+    let { transitionState: t, errors: a, onClose: d } = e,
         c = (0, l.Dt)();
-    return (0, a.jsxs)(s.Y0X, {
+    return (0, r.jsxs)(s.Y0X, {
         transitionState: t,
         'aria-labelledby': c,
         parentComponent: 'ImageInputUploadErrorModal',
         children: [
-            (0, a.jsx)(s.xBx, {
+            (0, r.jsx)(s.xBx, {
                 separator: !1,
-                className: i.modalHeader,
-                children: (0, a.jsx)(s.olH, {
+                className: o.modalHeader,
+                children: (0, r.jsx)(s.olH, {
                     onClick: d,
-                    className: i.closeButton
+                    className: o.closeButton
                 })
             }),
-            (0, a.jsxs)(s.hzk, {
-                className: i.modalContent,
+            (0, r.jsxs)(s.hzk, {
+                className: o.modalContent,
                 children: [
-                    (0, a.jsxs)(s.hjN, {
-                        className: i.header,
+                    (0, r.jsxs)(s.hjN, {
+                        className: o.header,
                         children: [
-                            (0, a.jsx)(s.vwX, {
+                            (0, r.jsx)(s.vwX, {
                                 id: c,
-                                className: i.title,
-                                children: o.intl.string(o.t.PanA4O)
+                                className: o.title,
+                                children: i.intl.string(i.t.PanA4O)
                             }),
-                            (0, a.jsx)(s.R94, {
+                            (0, r.jsx)(s.R94, {
                                 type: s.geA.DESCRIPTION,
-                                children: o.intl.string(o.t['8Ql1Aw'])
+                                children: i.intl.string(i.t['8Ql1Aw'])
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', {
-                        className: i.errors,
-                        children: (0, a.jsx)(s.Ttm, { children: r.map((e) => (0, a.jsx)(n.Z, { error: e }, e.filename)) })
+                    (0, r.jsx)('div', {
+                        className: o.errors,
+                        children: (0, r.jsx)(s.Ttm, { children: a.map((e) => (0, r.jsx)(n.Z, { error: e }, e.filename)) })
                     }),
-                    (0, a.jsx)(s.zxk, {
-                        onClick: d,
-                        children: o.intl.string(o.t['NX+WJC'])
+                    (0, r.jsx)(s.zxk, {
+                        variant: 'primary',
+                        text: i.intl.string(i.t['NX+WJC']),
+                        onClick: d
                     })
                 ]
             })

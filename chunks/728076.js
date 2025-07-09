@@ -59,8 +59,8 @@ function b(e, t, n) {
         [x, w] = r.useState(a.C.DEFAULT),
         [v, _] = r.useState(!1),
         [P, C] = r.useState(d.lc.ONE_DAY),
-        [E, k] = r.useState({}),
-        [A, I] = r.useState(!1),
+        [E, A] = r.useState({}),
+        [I, k] = r.useState(!1),
         S = h.filter((e) => (0, u.cS)(e, x)),
         D = h.filter((e) => (0, u.uY)(e, x)),
         R = j.length > 0 && S.length >= d.gY && 0 === D.length,
@@ -68,7 +68,7 @@ function b(e, t, n) {
         B = h.length < d.fw,
         Z = h.length > d.gY,
         U = r.useCallback((e) => {
-            (k((e) => {
+            (A((e) => {
                 let t = m({}, e);
                 return (delete t.question, t);
             }),
@@ -76,7 +76,7 @@ function b(e, t, n) {
         }, []),
         M = r.useCallback((e) => {
             let { text: t, index: n, localCreationAnswerId: r } = e;
-            (k((e) => {
+            (A((e) => {
                 let t = m({}, e);
                 return (delete t['answer-'.concat(r)], t);
             }),
@@ -171,8 +171,8 @@ function b(e, t, n) {
                 h.forEach((n) => {
                     (0, u.uY)(n, x) && ((e = !1), (t['answer-'.concat(n.localCreationAnswerId)] = f.intl.string(f.t['8Qqkc3'])));
                 }),
-                k(t),
-                I(!e),
+                A(t),
+                k(!e),
                 e
             );
         }, [h, j, x]),
@@ -216,8 +216,8 @@ function b(e, t, n) {
         handleSubmitPoll: V,
         submitting: L,
         createPollError: T,
-        shouldFocusOnInvalidField: A,
-        setShouldFocusOnInvalidField: I
+        shouldFocusOnInvalidField: I,
+        setShouldFocusOnInvalidField: k
     };
 }
 function g(e, t) {

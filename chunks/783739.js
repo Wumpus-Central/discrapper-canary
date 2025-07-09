@@ -2,8 +2,8 @@ n.d(t, { Z: () => N });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(975298),
-    a = n(89057),
+    a = n(975298),
+    l = n(89057),
     o = n(724884),
     c = n(290799),
     d = n(362948),
@@ -16,19 +16,19 @@ var i = n(255367),
     b = n(74538),
     x = n(199778),
     _ = n(296533),
-    E = n(901750),
-    j = n(112863),
+    j = n(901750),
+    E = n(112863),
     O = n(701157),
     C = n(912152),
-    S = n(615603),
-    v = n(474936),
+    v = n(615603),
+    S = n(474936),
     T = n(551084);
 function N(e) {
     let { premiumSubscription: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.boostSlots),
         N = r.useMemo(() => Object.values(n), [n]),
         I = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        y = b.ZP.isPremium(I, v.p9.TIER_2),
+        y = b.ZP.isPremium(I, S.p9.TIER_2),
         A = (0, s.e7)([p.Z], () => p.Z.affinities),
         P = (0, s.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
         R = A.length > 0 || P.length > 0,
@@ -37,14 +37,14 @@ function N(e) {
         w = Z.length > 0,
         k = N.length > Z.length,
         L = (0, s.e7)([m.Z], () => m.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: B } = (0, l.Z)({ forceFetch: !0 }),
-        M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && B === v.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && B === v.a$.NONE,
-        V = y && B === v.a$.FP_SUB_PAUSED;
+        { fractionalState: B } = (0, a.Z)({ forceFetch: !0 }),
+        M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && B === S.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && B === S.a$.NONE,
+        V = y && B === S.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.oQ, { className: T.blockedPaymentsWarning }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(l.oQ, { className: T.blockedPaymentsWarning }),
+            (0, i.jsx)(j.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: w,
                 hasBoostPerk: V,
@@ -62,8 +62,8 @@ function N(e) {
                 containerClassName: T.FPContainer,
                 pillClassName: T.FPPill
             }),
-            !R && (0, i.jsx)(j.Z, {}),
-            (null == t ? void 0 : t.isPaused) && B !== v.a$.FP_SUB_PAUSED
+            !R && (0, i.jsx)(E.Z, {}),
+            (null == t ? void 0 : t.isPaused) && B !== S.a$.FP_SUB_PAUSED
                 ? (0, i.jsx)(_.r, {
                       appliedGuildBoosts: L,
                       premiumSubscription: t
@@ -72,7 +72,7 @@ function N(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(S.Z, {
+            (0, i.jsx)(v.Z, {
                 guildBoostSlots: N,
                 fractionalPremiumState: B
             }),

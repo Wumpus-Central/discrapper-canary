@@ -6,8 +6,8 @@
 var i = n(544891),
     r = n(570140),
     s = n(981631),
-    l = n(388032);
-function a(e) {
+    a = n(388032);
+function l(e) {
     return (
         null != e &&
             null != e.body &&
@@ -44,7 +44,7 @@ function a(e) {
 }
 function o(e) {
     let t;
-    throw Error(e.status >= 500 && e.status <= 599 ? l.intl.string(l.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : l.intl.string(l.t.cvJdtr));
+    throw Error(e.status >= 500 && e.status <= 599 ? a.intl.string(a.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : a.intl.string(a.t.cvJdtr));
 }
 function c() {
     return i.tn
@@ -53,7 +53,7 @@ function c() {
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .then(a, (e) => Promise.reject(Error(e.body.message)));
+        .then(l, (e) => Promise.reject(Error(e.body.message)));
 }
 function d(e, t) {
     return i.tn
@@ -66,5 +66,5 @@ function d(e, t) {
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .then(a, o);
+        .then(l, o);
 }

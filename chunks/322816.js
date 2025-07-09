@@ -1,28 +1,29 @@
-(n.d(t, { ZP: () => P }), n(415506), n(388685), n(539338), n(953529));
+(n.d(t, { ZP: () => w }), n(415506), n(388685), n(539338), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     s = n.n(l),
     a = n(149765),
     o = n(442837),
-    c = n(481060),
-    d = n(144991),
-    u = n(496675),
-    m = n(594174),
-    g = n(626135),
-    p = n(233608),
-    f = n(700785),
-    h = n(764260),
-    x = n(631969),
-    b = n(95242),
-    j = n(420966),
-    _ = n(275296),
-    v = n(203377),
-    O = n(981631),
-    C = n(388032),
-    y = n(96878),
-    N = n(877248);
-function I(e) {
+    c = n(755721),
+    d = n(481060),
+    u = n(144991),
+    m = n(496675),
+    g = n(594174),
+    p = n(626135),
+    f = n(233608),
+    h = n(700785),
+    x = n(764260),
+    b = n(631969),
+    j = n(95242),
+    _ = n(420966),
+    v = n(275296),
+    O = n(203377),
+    C = n(981631),
+    y = n(388032),
+    N = n(96878),
+    I = n(877248);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function E(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,86 +66,86 @@ function E(e, t) {
         e
     );
 }
-function S(e) {
+function T(e) {
     let { guild: t, role: n, locked: l } = e,
-        s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        d = i.useMemo(
+        s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        u = i.useMemo(
             () =>
-                f.uB({
+                h.uB({
                     user: s,
                     context: t
                 }),
             [s, t]
         ),
-        u = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: f.Hn }) }), [n]),
-        g = i.useMemo(
+        m = i.useMemo(() => ({ [n.id]: S(E({}, n), { permissions: h.Hn }) }), [n]),
+        p = i.useMemo(
             () =>
-                f.uB({
+                h.uB({
                     user: s,
                     context: t,
-                    roles: u
+                    roles: m
                 }),
-            [s, t, u]
+            [s, t, m]
         ),
-        p = !a.fS(d, g);
+        f = !a.fS(u, p);
     return (0, r.jsx)('div', {
-        className: y.clearButtonWrapper,
-        children: (0, r.jsx)(c.ua7, {
-            text: p ? C.intl.string(C.t['IQ/6Sk']) : null,
+        className: N.clearButtonWrapper,
+        children: (0, r.jsx)(d.ua7, {
+            text: f ? y.intl.string(y.t['IQ/6Sk']) : null,
             position: 'top',
-            color: c.ua7.Colors.RED,
+            color: d.ua7.Colors.RED,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: i } = e;
-                return (0, r.jsx)(c.zxk, {
-                    className: y.clearButton,
-                    size: c.zxk.Sizes.TINY,
-                    look: c.zxk.Looks.LINK,
-                    color: c.zxk.Colors.LINK,
-                    onClick: () => (0, h.TY)(n.id),
+                return (0, r.jsx)(c.zx, {
+                    className: N.clearButton,
+                    size: c.zx.Sizes.TINY,
+                    look: c.zx.Looks.LINK,
+                    color: c.zx.Colors.LINK,
+                    onClick: () => (0, x.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: i,
-                    disabled: a.fS(n.permissions, f.Hn) || p || l,
-                    children: C.intl.string(C.t['UYq7+P'])
+                    disabled: a.fS(n.permissions, h.Hn) || f || l,
+                    children: y.intl.string(y.t['UYq7+P'])
                 });
             }
         })
     });
 }
-function T(e) {
+function P(e) {
     let { guild: t, role: n, specs: i, locked: l } = e;
     if (0 === i.length)
         return (0, r.jsxs)('div', {
-            className: y.noResultsContainer,
+            className: N.noResultsContainer,
             children: [
-                (0, r.jsx)(x.Z, { className: y.noResults }),
-                (0, r.jsx)(c.Text, {
+                (0, r.jsx)(b.Z, { className: N.noResults }),
+                (0, r.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    children: C.intl.string(C.t.DEBGqK)
+                    children: y.intl.string(y.t.DEBGqK)
                 })
             ]
         });
     function s(e) {
-        return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: a.Od(n.permissions, e) }) }) && C.intl.string(C.t['K+D+GB']) : C.intl.string(C.t.nOtPMD);
+        return m.Z.can(e, t) ? !m.Z.can(e, t, null, { [n.id]: S(E({}, n), { permissions: a.Od(n.permissions, e) }) }) && y.intl.string(y.t['K+D+GB']) : y.intl.string(y.t.nOtPMD);
     }
     return (0, r.jsxs)('div', {
-        className: y.permissionsWrapper,
+        className: N.permissionsWrapper,
         children: [
-            (0, r.jsx)(S, {
+            (0, r.jsx)(T, {
                 guild: t,
                 role: n,
                 locked: l
             }),
             i.map((e, t) =>
                 (0, r.jsx)(
-                    d.Z,
+                    u.Z,
                     {
-                        className: y.permissionsForm,
+                        className: N.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
                         locked: l,
                         onChange: (e, t) => {
                             if ('string' == typeof t) throw Error('Unexpected string `allow`');
-                            (0, h.lO)(n.id, e, t);
+                            (0, x.lO)(n.id, e, t);
                         },
                         permissionRender: s
                     },
@@ -154,62 +155,62 @@ function T(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, initialSearchQuery: o } = e,
-        [d, u] = i.useState(null != o ? o : ''),
+        [c, u] = i.useState(null != o ? o : ''),
         m = i
-            .useMemo(() => p.Z.generateGuildPermissionSpec(t), [t])
+            .useMemo(() => f.Z.generateGuildPermissionSpec(t), [t])
             .map((e) =>
-                E(I({}, e), {
+                S(E({}, e), {
                     permissions: e.permissions.filter((e) => {
-                        let t = d.trimStart().toLowerCase();
+                        let t = c.trimStart().toLowerCase();
                         return e.title.toLowerCase().includes(t) || (null != e.description && e.description.toString().toLowerCase().includes(t));
                     })
                 })
             )
             .filter((e) => e.permissions.length > 0),
-        { headerHeight: f, headerRef: h } = (0, b.Z)(0),
-        { scrolledToTop: x, handleScroll: S } = (0, j.V)(),
-        P = i.useRef(!1);
+        { headerHeight: g, headerRef: h } = (0, j.Z)(0),
+        { scrolledToTop: x, handleScroll: b } = (0, _.V)(),
+        T = i.useRef(!1);
     return (
         i.useEffect(() => {
-            P.current || '' === d.trimStart() || (g.default.track(O.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
-        }, [d]),
-        (0, r.jsx)(c.yWw, {
-            className: y.scroller,
-            style: { scrollPaddingTop: f },
-            onScroll: S,
+            T.current || '' === c.trimStart() || (p.default.track(C.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (T.current = !0));
+        }, [c]),
+        (0, r.jsx)(d.yWw, {
+            className: N.scroller,
+            style: { scrollPaddingTop: g },
+            onScroll: b,
             children: (0, r.jsxs)('div', {
-                className: N.contentWidth,
+                className: I.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: s()(N.header, N.stickyHeader, { [N.stickyHeaderElevated]: !x }),
+                        className: s()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !x }),
                         ref: h,
                         children: [
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(_.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: v.ZI.PERMISSIONS,
+                                selectedSection: O.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, r.jsx)('div', {
-                                className: y.noticeContainer,
-                                children: (0, r.jsx)(_.Z, { role: n })
+                                className: N.noticeContainer,
+                                children: (0, r.jsx)(v.Z, { role: n })
                             }),
                             (0, r.jsx)('div', {
-                                className: y.searchContainer,
-                                children: (0, r.jsx)(c.E1j, {
-                                    size: c.E1j.Sizes.MEDIUM,
-                                    query: d,
+                                className: N.searchContainer,
+                                children: (0, r.jsx)(d.E1j, {
+                                    size: d.E1j.Sizes.MEDIUM,
+                                    query: c,
                                     onChange: u,
                                     onClear: () => u(''),
-                                    placeholder: C.intl.string(C.t.OLJAk5),
-                                    'aria-label': C.intl.string(C.t.OLJAk5)
+                                    placeholder: y.intl.string(y.t.OLJAk5),
+                                    'aria-label': y.intl.string(y.t.OLJAk5)
                                 })
                             })
                         ]
                     }),
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(P, {
                         guild: t,
                         role: n,
                         specs: m,

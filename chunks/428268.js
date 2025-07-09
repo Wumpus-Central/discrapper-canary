@@ -1,20 +1,21 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     a = n(692547),
-    o = n(481060),
-    s = n(726542),
-    l = n(231757),
-    c = n(511010),
-    u = n(553795),
-    d = n(979192),
-    f = n(873128),
-    _ = n(463031),
-    p = n(981631),
-    h = n(388032),
-    m = n(767826);
-function g(e, t, n) {
+    o = n(755721),
+    s = n(481060),
+    l = n(726542),
+    c = n(231757),
+    u = n(511010),
+    d = n(553795),
+    f = n(979192),
+    _ = n(873128),
+    p = n(463031),
+    h = n(981631),
+    m = n(388032),
+    g = n(767826);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             }));
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,67 +56,67 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = function (e) {
-    let { guildId: t, leaderboardId: g } = e,
-        { leaderboardsDisabled: b } = (0, d.O)(t, g),
-        O = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.RIOT_GAMES)),
-        v = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
-        I = (0, f.Z)({
+let v = function (e) {
+    let { guildId: t, leaderboardId: E } = e,
+        { leaderboardsDisabled: y } = (0, f.O)(t, E),
+        v = (0, i.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.RIOT_GAMES)),
+        I = (0, i.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.LEAGUE_OF_LEGENDS)),
+        T = (0, _.Z)({
             guildId: t,
-            leaderboardId: g
+            leaderboardId: E
         }),
-        T = g === _.z;
-    if ((!T || (null != O && null != v)) && !b) return null;
-    let S = s.Z.get(p.ABu.RIOT_GAMES),
-        A = T && null == O && null == v,
-        N = T && null != O && null == v,
-        C = T && null == O && null != v,
-        R = N || C;
-    function P() {
-        null != I &&
-            (0, o.ZDy)(async () => {
+        S = E === p.z;
+    if ((!S || (null != v && null != I)) && !y) return null;
+    let A = l.Z.get(h.ABu.RIOT_GAMES),
+        N = S && null == v && null == I,
+        C = S && null != v && null == I,
+        R = S && null == v && null != I,
+        P = C || R;
+    function w() {
+        null != T &&
+            (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('73217').then(n.bind(n, 139964));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        y(E({}, n), {
+                        O(b({}, n), {
                             guildId: t,
-                            leaderboard: I
+                            leaderboard: T
                         })
                     );
             });
     }
-    function w() {
-        return A || R ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : P();
-    }
     function D() {
-        return A ? h.intl.string(h.t.w6VSSE) : R ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
+        return N || P ? (0, c.Z)({ platformType: h.ABu.RIOT_GAMES }) : w();
     }
     function L() {
-        if (b) return null;
-        let e = A
-                ? (0, r.jsx)(o.d3s, { className: m.infoMessageIcon })
-                : (0, r.jsx)(o.aNP, {
+        return N ? m.intl.string(m.t.w6VSSE) : P ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t['0yRXHx']);
+    }
+    function x() {
+        if (y) return null;
+        let e = N
+                ? (0, r.jsx)(s.d3s, { className: g.infoMessageIcon })
+                : (0, r.jsx)(s.aNP, {
                       color: a.Z.colors.STATUS_WARNING,
-                      className: m.infoMessageIcon
+                      className: g.infoMessageIcon
                   }),
-            t = A ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
+            t = N ? m.intl.string(m.t['Ihg/Dg']) : m.intl.string(m.t['J8U+Iy']);
         return (0, r.jsxs)('div', {
-            className: m.updateMessage,
+            className: g.updateMessage,
             children: [
                 e,
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-muted',
                     children: t
@@ -125,21 +126,21 @@ let O = function (e) {
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.Z, { className: m.divider }),
-            L(),
-            (0, r.jsxs)(o.zxk, {
-                className: m.joinLeaderboardButton,
-                innerClassName: m.joinLeaderboardButtonInner,
-                onClick: w,
+            (0, r.jsx)(u.Z, { className: g.divider }),
+            x(),
+            (0, r.jsxs)(o.zx, {
+                className: g.joinLeaderboardButton,
+                innerClassName: g.joinLeaderboardButtonInner,
+                onClick: D,
                 children: [
-                    T &&
-                        !b &&
+                    S &&
+                        !y &&
                         (0, r.jsx)('img', {
                             alt: 'Riot Games',
-                            src: S.icon.whiteSVG,
-                            className: m.riotIcon
+                            src: A.icon.whiteSVG,
+                            className: g.riotIcon
                         }),
-                    D()
+                    L()
                 ]
             })
         ]

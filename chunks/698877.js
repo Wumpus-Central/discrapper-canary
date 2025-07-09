@@ -2,8 +2,8 @@ n.d(t, { O: () => s });
 var r = n(255367),
     i = n(73800),
     l = n(864094),
-    o = n(871499),
-    a = n(388032);
+    a = n(871499),
+    o = n(388032);
 function s(e) {
     let t, n;
     var { hasPermission: s, streamActive: c, isSelfStream: u, centerButton: d, onMouseEnter: p, onMouseLeave: h, renderNUXHighlight: f, buttonRef: m } = e,
@@ -26,8 +26,8 @@ function s(e) {
             }
             return i;
         })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'renderNUXHighlight', 'buttonRef']);
-    let b = d ? o.d : o.Z;
-    t = c ? (u ? a.intl.string(a.t.S5anIS) : a.intl.string(a.t.q3O3Jy)) : s ? a.intl.string(a.t.fjBNo6) : a.intl.string(a.t.uQn9Bw);
+    let b = d ? a.d : a.Z;
+    t = c ? (u ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : s ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
     let { Component: _, events: y, play: C } = (0, l.P)(c ? 'disable' : 'enable');
     return (
         i.useEffect(() => () => C(), [c, C]),

@@ -7,8 +7,8 @@
 var i,
     r = n(73800),
     s = n(442837),
-    l = n(695346),
-    a = n(430824),
+    a = n(695346),
+    l = n(430824),
     o = n(771845),
     c = (((i = {}).SERVER_ORDER = 'server-order'), (i.RECENTLY_JOINED = 'recently-joined'), (i.ACTIVITY_SHARING_ON = 'activity-sharing-on'), (i.ACTIVITY_SHARING_OFF = 'activity-sharing-off'), i);
 let d = {
@@ -31,23 +31,23 @@ function u() {
     let [e, t] = (0, r.useState)(''),
         [n, i] = (0, r.useState)('server-order'),
         c = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
-        u = (0, s.e7)([a.Z], () => a.Z.getGuilds()),
+        u = (0, s.e7)([l.Z], () => l.Z.getGuilds()),
         m = c.map((e) => u[e]),
-        p = l.CW.useSetting(),
+        p = a.CW.useSetting(),
         [g, h] = (0, r.useState)(p),
         f = async (e) => {
             h(e);
             try {
-                await l.CW.updateSetting(e);
+                await a.CW.updateSetting(e);
             } catch (e) {
                 h(p);
             }
         },
         b = 0 !== g.length,
         [x, _] = (0, r.useState)(() => d[n](m, p)),
-        E = x.map((e) => u[e.id]).filter(Boolean);
+        j = x.map((e) => u[e.id]).filter(Boolean);
     return {
-        guilds: '' === e ? E : E.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
+        guilds: '' === e ? j : j.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {

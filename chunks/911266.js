@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    o = n(392711),
     s = n(442837),
     c = n(570140),
     u = n(607070),
@@ -17,7 +17,7 @@ var r = n(255367),
     _ = n(675479);
 let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
-        y = i.useRef((0, a.random)(-6, 24)).current,
+        y = i.useRef((0, o.random)(-6, 24)).current,
         C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
@@ -88,19 +88,19 @@ let y = (e) => {
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.left, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.left, I && _.shy, C && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.right, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.right, I && _.shy, C && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.center, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.center, I && _.shy, C && _.confettiMode]),
                 width: 32
             })
         ]

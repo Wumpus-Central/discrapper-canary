@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(374470),
+    a = n.n(l),
+    o = n(374470),
     s = n(481060),
     c = n(239091),
     u = n(454585),
@@ -54,7 +54,7 @@ class y extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)('div', {
-                          className: o()(f.topic, f.expandable, m.markup),
+                          className: a()(f.topic, f.expandable, m.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -79,10 +79,10 @@ class y extends i.Component {
             g(this, '_mouseUp', !1),
             g(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, a.k)(t)) {
+                if ((0, o.k)(t)) {
                     if (_(t)) return;
                     let e = t.parentNode;
-                    if ((0, a.k)(e) && _(e)) return;
+                    if ((0, o.k)(e) && _(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('65631').then(n.bind(n, 10722));
@@ -103,18 +103,18 @@ class y extends i.Component {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
                     return (n) => {
-                        var l, o;
+                        var l, a;
                         return (0, r.jsx)(
                             e,
                             ((l = b({}, n)),
-                            (o = o =
+                            (a = a =
                                 {
                                     channel: t,
                                     guild: i,
                                     includeTopic: !0
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -122,8 +122,8 @@ class y extends i.Component {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(o)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             l)
                         );

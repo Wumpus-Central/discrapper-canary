@@ -1,54 +1,55 @@
-(t.d(n, { Z: () => p }), t(388685), t(953529));
+(t.d(n, { Z: () => _ }), t(388685), t(953529));
 var r = t(255367),
     i = t(793030),
-    o = t(481060),
-    a = t(434404),
-    s = t(485386),
-    l = t(944888),
-    c = t(234368),
-    d = t(981631),
-    u = t(921944),
-    m = t(808353);
-function p(e) {
-    let { guildId: n, perk: t, markAsDismissed: p } = e,
-        _ = c._[t];
+    o = t(755721),
+    a = t(481060),
+    s = t(434404),
+    l = t(485386),
+    c = t(944888),
+    d = t(234368),
+    u = t(981631),
+    m = t(921944),
+    p = t(808353);
+function _(e) {
+    let { guildId: n, perk: t, markAsDismissed: _ } = e,
+        f = d._[t];
     return (0, r.jsxs)('div', {
-        className: m.container,
+        className: p.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: _.assetUrl,
-                className: m.image
+                src: f.assetUrl,
+                className: p.image
             }),
-            (0, r.jsx)(o.olH, {
-                className: m.close,
-                innerClassName: m.innerClose,
+            (0, r.jsx)(a.olH, {
+                className: p.close,
+                innerClassName: p.innerClose,
                 onClick: () => {
-                    p(u.L.USER_DISMISS);
+                    _(m.L.USER_DISMISS);
                 }
             }),
             (0, r.jsx)(i.xv, {
                 color: 'always-white',
                 variant: 'text-md/semibold',
-                children: _.title
+                children: f.title
             }),
             (0, r.jsx)(i.xv, {
-                className: m.description,
+                className: p.description,
                 color: 'text-muted',
                 variant: 'text-sm/medium',
-                children: _.description
+                children: f.description
             }),
-            (0, r.jsx)(o.zxk, {
-                className: m.button,
+            (0, r.jsx)(o.zx, {
+                className: p.button,
                 onClick: () => {
                     let e = null,
-                        t = s.Z.getRoles(n);
+                        t = l.Z.getRoles(n);
                     if (null != t && 0 !== Object.keys(t).length) {
-                        for (let n of Object.values(t)) (0, l.YB)(n) && (e = n.id);
-                        (a.Z.open(n, d.pNK.ROLES), null !== e && a.Z.selectRole(e), p(u.L.SECONDARY));
+                        for (let n of Object.values(t)) (0, c.YB)(n) && (e = n.id);
+                        (s.Z.open(n, u.pNK.ROLES), null !== e && s.Z.selectRole(e), _(m.L.SECONDARY));
                     }
                 },
-                children: _.cta
+                children: f.cta
             })
         ]
     });

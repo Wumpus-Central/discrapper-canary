@@ -1,62 +1,63 @@
-(n.d(t, { default: () => d }), n(388685));
-var s = n(255367),
-    a = n(73800),
+(n.d(t, { default: () => h }), n(388685));
+var a = n(255367),
+    s = n(73800),
+    i = n(755721),
     o = n(481060),
-    i = n(313201),
-    r = n(273504),
-    l = n(388032),
-    c = n(831242);
-function d(e) {
-    let { initialCustomMessage: t, onSubmit: n, onClose: d, transitionState: h } = e,
-        x = (0, i.Dt)(),
-        [k, m] = a.useState(t);
-    return (0, s.jsxs)(o.Y0X, {
-        transitionState: h,
-        'aria-labelledby': x,
+    r = n(313201),
+    l = n(273504),
+    c = n(388032),
+    d = n(831242);
+function h(e) {
+    let { initialCustomMessage: t, onSubmit: n, onClose: h, transitionState: x } = e,
+        m = (0, r.Dt)(),
+        [u, g] = s.useState(t);
+    return (0, a.jsxs)(o.Y0X, {
+        transitionState: x,
+        'aria-labelledby': m,
         size: o.CgR.SMALL,
         parentComponent: 'AutomodActionBlockMessageModal',
         children: [
-            (0, s.jsxs)(o.hzk, {
-                className: c.actionContentContainer,
+            (0, a.jsxs)(o.hzk, {
+                className: d.actionContentContainer,
                 children: [
-                    (0, s.jsx)(o.X6q, {
-                        id: x,
+                    (0, a.jsx)(o.X6q, {
+                        id: m,
                         color: 'header-primary',
                         variant: 'heading-md/semibold',
-                        className: c.header,
-                        children: l.intl.string(l.t.Df4aUF)
+                        className: d.header,
+                        children: c.intl.string(c.t.Df4aUF)
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, a.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: l.intl.string(l.t.eOWEmJ)
+                        children: c.intl.string(c.t.eOWEmJ)
                     }),
-                    (0, s.jsx)(o.Kx8, {
-                        className: c.customMessageTextArea,
-                        placeholder: l.intl.string(l.t.gDZw7O),
-                        value: k,
-                        onChange: m,
-                        maxLength: r._6
+                    (0, a.jsx)(o.Kx8, {
+                        className: d.customMessageTextArea,
+                        placeholder: c.intl.string(c.t.gDZw7O),
+                        value: u,
+                        onChange: g,
+                        maxLength: l._6
                     })
                 ]
             }),
-            (0, s.jsxs)(o.mzw, {
+            (0, a.jsxs)(o.mzw, {
                 children: [
-                    (0, s.jsx)(o.zxk, {
+                    (0, a.jsx)(o.zxk, {
+                        variant: 'primary',
+                        size: 'sm',
+                        text: c.intl.string(c.t.bt75u7),
                         onClick: () => {
-                            n(k);
-                        },
-                        color: o.zxk.Colors.BRAND,
-                        size: o.zxk.Sizes.SMALL,
-                        children: l.intl.string(l.t.bt75u7)
+                            n(u);
+                        }
                     }),
-                    (0, s.jsx)(o.zxk, {
+                    (0, a.jsx)(i.zx, {
                         onClick: () => {
-                            d();
+                            h();
                         },
-                        color: o.zxk.Colors.TRANSPARENT,
-                        look: o.zxk.Looks.LINK,
-                        children: l.intl.string(l.t['ETE/oK'])
+                        color: i.zx.Colors.TRANSPARENT,
+                        look: i.zx.Looks.LINK,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

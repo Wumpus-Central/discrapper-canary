@@ -4,7 +4,7 @@ t(73800);
 var l = t(512722),
     r = t.n(l),
     s = t(780384),
-    a = t(481060),
+    a = t(755721),
     o = t(410030),
     C = t(807163),
     d = t(74538),
@@ -37,15 +37,15 @@ function j(e) {
             footer: (0, i.jsxs)('div', {
                 className: f.whatYouLoseButtonContainer,
                 children: [
-                    (0, i.jsx)(a.zxk, {
+                    (0, i.jsx)(a.zx, {
                         onClick: () => {
                             v ? (_((0, x.nA)(m, j)), n(p.h8.REVIEW)) : n(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        look: a.zxk.Looks.LINK,
-                        color: (0, s.wj)(l) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
+                    (0, i.jsx)(a.zx, {
+                        look: a.zx.Looks.LINK,
+                        color: (0, s.wj)(l) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
                         onClick: t,
                         children: h.intl.string(h.t.h9tkAA)
                     })

@@ -1,87 +1,88 @@
-e.d(n, { default: () => h });
+e.d(n, { default: () => f });
 var i = e(255367),
     a = e(73800),
-    s = e(481060),
-    c = e(313201),
-    o = e(434404),
-    r = e(703656),
-    l = e(112612),
-    x = e(981631),
-    d = e(176505),
-    u = e(388032),
-    m = e(367503);
-let h = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: h, transitionState: f, onConfirm: b } = t,
-        k = (0, c.Dt)(),
+    s = e(755721),
+    c = e(481060),
+    o = e(313201),
+    r = e(434404),
+    l = e(703656),
+    x = e(112612),
+    d = e(981631),
+    u = e(176505),
+    m = e(388032),
+    h = e(367503);
+let f = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: f, transitionState: b, onConfirm: T } = t,
+        p = (0, o.Dt)(),
         {
-            submitting: T,
-            errorMessage: p,
-            onSubmit: z
-        } = (0, l.Z)({
-            onSubmit: b,
-            onClose: h
+            submitting: z,
+            errorMessage: C,
+            onSubmit: j
+        } = (0, x.Z)({
+            onSubmit: T,
+            onClose: f
         }),
-        C = a.useCallback(() => {
-            (h(), o.Z.close(), (0, r.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_APPLICATIONS)));
-        }, [n, h]);
-    return (0, i.jsxs)(s.Y0X, {
-        className: m.container,
-        transitionState: f,
-        'aria-labelledby': k,
+        S = a.useCallback(() => {
+            (f(), r.Z.close(), (0, l.uL)(d.Z5c.CHANNEL(n, u.oC.MEMBER_APPLICATIONS)));
+        }, [n, f]);
+    return (0, i.jsxs)(c.Y0X, {
+        className: h.container,
+        transitionState: b,
+        'aria-labelledby': p,
         parentComponent: 'EditQuestionWarningModal',
         children: [
-            (0, i.jsxs)(s.hzk, {
-                className: m.content,
+            (0, i.jsxs)(c.hzk, {
+                className: h.content,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
-                        id: k,
-                        children: u.intl.format(u.t.chV4JS, { count: e })
+                        id: p,
+                        children: m.intl.format(m.t.chV4JS, { count: e })
                     }),
-                    (0, i.jsx)(s.Text, {
-                        className: m.descriptionText,
+                    (0, i.jsx)(c.Text, {
+                        className: h.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: u.intl.string(u.t.uNQIt7)
+                        children: m.intl.string(m.t.uNQIt7)
                     }),
-                    (0, i.jsx)(s.P3F, {
-                        className: m.actionText,
-                        onClick: C,
-                        children: (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(c.P3F, {
+                        className: h.actionText,
+                        onClick: S,
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: u.intl.string(u.t.szESVF)
+                            children: m.intl.string(m.t.szESVF)
                         })
                     }),
-                    null != p &&
-                        (0, i.jsx)(s.Text, {
-                            className: m.__invalid_errorText,
+                    null != C &&
+                        (0, i.jsx)(c.Text, {
+                            className: h.__invalid_errorText,
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: p
+                            children: C
                         })
                 ]
             }),
-            (0, i.jsxs)(s.mzw, {
+            (0, i.jsxs)(c.mzw, {
                 children: [
-                    (0, i.jsx)(s.zxk, {
-                        className: m.actionButton,
-                        color: s.zxk.Colors.BRAND,
-                        submitting: T,
-                        onClick: z,
-                        size: s.zxk.Sizes.SMALL,
-                        children: (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(s.zx, {
+                        className: h.actionButton,
+                        color: s.zx.Colors.BRAND,
+                        submitting: z,
+                        onClick: j,
+                        size: s.zx.Sizes.SMALL,
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/semibold',
-                            children: u.intl.string(u.t.LW0aUF)
+                            children: m.intl.string(m.t.LW0aUF)
                         })
                     }),
-                    (0, i.jsx)(s.zxk, {
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: h,
-                        size: s.zxk.Sizes.SMALL,
-                        children: (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(s.zx, {
+                        color: s.zx.Colors.PRIMARY,
+                        onClick: f,
+                        size: s.zx.Sizes.SMALL,
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/semibold',
-                            children: u.intl.string(u.t['ETE/oK'])
+                            children: m.intl.string(m.t['ETE/oK'])
                         })
                     })
                 ]

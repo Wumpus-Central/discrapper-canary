@@ -60,11 +60,11 @@ function O(e) {
                                             ]
                                         }),
                                         (0, r.jsx)(o.zxk, {
+                                            variant: 'primary',
+                                            size: 'sm',
+                                            text: b.intl.string(b.t['4r+amZ']),
                                             fullWidth: !0,
-                                            size: o.PhG.SMALL,
-                                            color: o.Ttl.BRAND,
-                                            onClick: h,
-                                            children: b.intl.string(b.t['4r+amZ'])
+                                            onClick: h
                                         })
                                     ]
                                 }),

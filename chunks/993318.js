@@ -1,20 +1,21 @@
-a.d(t, { AnnouncementModal: () => y });
+a.d(t, { AnnouncementModal: () => v });
 var r = a(255367);
 a(73800);
-var s = a(481060),
-    n = a(442837),
-    c = a(607070),
-    o = a(313201),
-    d = a(70097),
-    i = a(688465),
-    l = a(794231),
-    u = a(388032),
-    b = a(418822),
-    p = a(6210),
-    f = a(313460),
-    h = a(686936),
-    m = a(326238);
-function _(e) {
+var s = a(755721),
+    n = a(481060),
+    c = a(442837),
+    o = a(607070),
+    d = a(313201),
+    i = a(70097),
+    l = a(688465),
+    u = a(794231),
+    b = a(388032),
+    p = a(418822),
+    f = a(6210),
+    h = a(313460),
+    m = a(686936),
+    _ = a(326238);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(a);
@@ -39,21 +40,21 @@ function _(e) {
     }
     return e;
 }
-let g = a(450390),
-    x = (e) => {
+let x = a(450390),
+    j = (e) => {
         var t, a;
         return (0, r.jsx)(
-            s.zxk,
-            ((t = _({}, e)),
+            s.zx,
+            ((t = g({}, e)),
             (a = a =
                 {
-                    'aria-label': u.intl.string(u.t.cpT0Cg),
-                    look: s.zxk.Looks.BLANK,
-                    size: s.zxk.Sizes.NONE,
+                    'aria-label': b.intl.string(b.t.cpT0Cg),
+                    look: s.zx.Looks.BLANK,
+                    size: s.zx.Sizes.NONE,
                     children: (0, r.jsx)('img', {
-                        src: g,
+                        src: x,
                         alt: 'Close Modal',
-                        className: b.closeButtonIcon
+                        className: p.closeButtonIcon
                     })
                 }),
             Object.getOwnPropertyDescriptors
@@ -71,15 +72,15 @@ let g = a(450390),
             t)
         );
     },
-    j = (e) => {
+    C = (e) => {
         let { animatedAssetURL: t, staticAssetURL: a, className: s } = e;
-        return (0, n.e7)([c.Z], () => c.Z.useReducedMotion) || null == t
+        return (0, c.e7)([o.Z], () => o.Z.useReducedMotion) || null == t
             ? (0, r.jsx)('img', {
                   src: a,
                   className: s,
                   alt: ''
               })
-            : (0, r.jsx)(d.Z, {
+            : (0, r.jsx)(i.Z, {
                   autoPlay: !0,
                   loop: !0,
                   className: s,
@@ -89,26 +90,26 @@ let g = a(450390),
                   })
               });
     },
-    C = (e) => {
-        let { header: t, subHeader: a, staticAsset: n, animatedAsset: c } = e;
+    y = (e) => {
+        let { header: t, subHeader: a, staticAsset: s, animatedAsset: c } = e;
         return (0, r.jsxs)('div', {
-            className: b.featureCard,
+            className: p.featureCard,
             children: [
-                (0, r.jsx)(j, {
-                    staticAssetURL: n,
+                (0, r.jsx)(C, {
+                    staticAssetURL: s,
                     animatedAssetURL: c,
-                    className: b.orbAsset
+                    className: p.orbAsset
                 }),
                 (0, r.jsxs)('div', {
-                    className: b.featureCardTextGroup,
+                    className: p.featureCardTextGroup,
                     children: [
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(n.X6q, {
                             variant: 'heading-md/extrabold',
-                            className: b.featureCardTextHeader,
+                            className: p.featureCardTextHeader,
                             children: t
                         }),
                         (0, r.jsx)('div', {
-                            className: b.featureCardTextSubHeader,
+                            className: p.featureCardTextSubHeader,
                             children: a
                         })
                     ]
@@ -116,67 +117,67 @@ let g = a(450390),
             ]
         });
     },
-    y = (e) => {
-        let { onClose: t, ctaOnClick: a, transitionState: n } = e,
-            c = (0, o.Dt)(),
-            { showBetaTag: d } = l.Z.useExperiment({ location: 'virtual_currency_announcement_modal_v2' }),
-            g = [
+    v = (e) => {
+        let { onClose: t, ctaOnClick: a, transitionState: s } = e,
+            c = (0, d.Dt)(),
+            { showBetaTag: o } = u.Z.useExperiment({ location: 'virtual_currency_announcement_modal_v2' }),
+            i = [
                 {
-                    header: u.intl.string(u.t['2Nvn8/']),
-                    subHeader: u.intl.string(u.t.F1lGFx),
-                    staticAsset: h.Z
+                    header: b.intl.string(b.t['2Nvn8/']),
+                    subHeader: b.intl.string(b.t.F1lGFx),
+                    staticAsset: m.Z
                 },
                 {
-                    header: u.intl.string(u.t['1IEs7+']),
-                    subHeader: u.intl.string(u.t.mej05u),
-                    staticAsset: m.Z
+                    header: b.intl.string(b.t['1IEs7+']),
+                    subHeader: b.intl.string(b.t.mej05u),
+                    staticAsset: _.Z
                 }
             ];
-        return (0, r.jsxs)(s.Y0X, {
-            className: b.root,
-            transitionState: n,
+        return (0, r.jsxs)(n.Y0X, {
+            className: p.root,
+            transitionState: s,
             'aria-labelledby': c,
             hideShadow: !0,
             parentComponent: 'AnnouncementModalV2',
             children: [
-                (0, r.jsx)(x, {
-                    className: b.closeButton,
+                (0, r.jsx)(j, {
+                    className: p.closeButton,
                     onClick: t
                 }),
-                (0, r.jsx)(j, {
-                    staticAssetURL: p.Z,
-                    animatedAssetURL: f.Z,
-                    className: b.heroAsset
+                (0, r.jsx)(C, {
+                    staticAssetURL: f.Z,
+                    animatedAssetURL: h.Z,
+                    className: p.heroAsset
                 }),
-                (0, r.jsxs)(s.hzk, {
-                    className: b.content,
+                (0, r.jsxs)(n.hzk, {
+                    className: p.content,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: b.headerContainer,
+                            className: p.headerContainer,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(n.X6q, {
                                     variant: 'display-md',
-                                    className: b.header,
-                                    children: u.intl.string(u.t.XKlAys)
+                                    className: p.header,
+                                    children: b.intl.string(b.t.XKlAys)
                                 }),
-                                d && (0, r.jsx)(i.Z, { className: b.betaBadge })
+                                o && (0, r.jsx)(l.Z, { className: p.betaBadge })
                             ]
                         }),
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(n.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: b.subHeader,
-                            children: u.intl.string(u.t.icWQKi)
+                            className: p.subHeader,
+                            children: b.intl.string(b.t.icWQKi)
                         }),
-                        g.length > 0 &&
+                        i.length > 0 &&
                             (0, r.jsx)('div', {
-                                className: b.featureCardGroup,
-                                children: g.map((e, t) => (0, r.jsx)(C, _({}, e), ''.concat(e.header, '_').concat(t)))
+                                className: p.featureCardGroup,
+                                children: i.map((e, t) => (0, r.jsx)(y, g({}, e), ''.concat(e.header, '_').concat(t)))
                             }),
-                        (0, r.jsx)(s.gtL, {
+                        (0, r.jsx)(n.gtL, {
                             onClick: a,
-                            color: b.buttonColor,
-                            className: b.button,
-                            children: u.intl.string(u.t.ynollp)
+                            color: p.buttonColor,
+                            className: p.button,
+                            children: b.intl.string(b.t.ynollp)
                         })
                     ]
                 })

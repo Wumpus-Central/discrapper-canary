@@ -1,64 +1,67 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(388032),
-    o = n(53134);
-function c(e) {
-    let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: g, disabled: p } = e;
+    s = n(755721),
+    a = n(481060),
+    o = n(388032),
+    c = n(53134);
+function d(e) {
+    let { className: t, enabled: n, previewCTA: i, onPreview: d, onToggle: u, animateStatus: m, firstLine: g, secondLine: p, disabled: f } = e;
     return (0, r.jsxs)('div', {
-        className: l()(t, o.enableContainer),
+        className: l()(t, c.enableContainer),
         children: [
             n
-                ? (0, r.jsx)(s.dz2, {
+                ? (0, r.jsx)(a.dz2, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.activeCircle, { [o.animate]: u })
+                      className: l()(c.activeCircle, { [c.animate]: m })
                   })
-                : (0, r.jsx)(s.vdY, {
+                : (0, r.jsx)(a.vdY, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.editCircle, { [o.animate]: u })
+                      className: l()(c.editCircle, { [c.animate]: m })
                   }),
             (0, r.jsxs)('div', {
-                className: o.enableDescription,
+                className: c.enableDescription,
                 children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        children: m
-                    }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         children: g
+                    }),
+                    (0, r.jsx)(a.Text, {
+                        variant: 'text-sm/normal',
+                        children: p
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: o.buttonContainer,
+                className: c.buttonContainer,
                 children: [
-                    null == c
+                    null == d
                         ? null
-                        : (0, r.jsx)(s.zxk, {
-                              className: o.previewButton,
-                              look: s.zxk.Looks.LINK,
-                              size: s.zxk.Sizes.SMALL,
-                              onClick: c,
-                              disabled: p,
-                              color: s.zxk.Colors.PRIMARY,
-                              children: null != i ? i : a.intl.string(a.t['5U0kLy'])
+                        : (0, r.jsx)('div', {
+                              'data-button-hoisted-classname-wrapper': !0,
+                              className: c.previewButton,
+                              children: (0, r.jsx)(a.zxk, {
+                                  variant: 'secondary',
+                                  size: 'sm',
+                                  text: null != i ? i : o.intl.string(o.t['5U0kLy']),
+                                  onClick: d,
+                                  disabled: f
+                              })
                           }),
-                    (0, r.jsx)(s.zxk, {
-                        disabled: null == d || p,
-                        size: s.zxk.Sizes.SMALL,
-                        color: n ? s.zxk.Colors.RED : s.zxk.Colors.BRAND,
-                        onClick: d,
-                        children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
+                    (0, r.jsx)(s.zx, {
+                        disabled: null == u || f,
+                        size: s.zx.Sizes.SMALL,
+                        color: n ? s.zx.Colors.RED : s.zx.Colors.BRAND,
+                        onClick: u,
+                        children: n ? o.intl.string(o.t.R9GHyc) : o.intl.string(o.t.JFfinp)
                     })
                 ]
             })

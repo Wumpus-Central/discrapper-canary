@@ -2,25 +2,26 @@
 var i = n(255367),
     r = n(73800),
     s = n(913527),
-    l = n.n(s),
-    a = n(481060),
-    o = n(355467),
-    c = n(100527),
-    d = n(906732),
-    u = n(313201),
-    m = n(73346),
-    p = n(584825),
-    g = n(305342),
-    h = n(293810),
-    f = n(388032),
-    b = n(637158);
-let x = (e) => {
+    a = n.n(s),
+    l = n(755721),
+    o = n(481060),
+    c = n(355467),
+    d = n(100527),
+    u = n(906732),
+    m = n(313201),
+    p = n(73346),
+    g = n(584825),
+    h = n(305342),
+    f = n(293810),
+    b = n(388032),
+    x = n(637158);
+let _ = (e) => {
         let [t, n] = r.useState(!1),
             [i, s] = r.useState(null);
         return {
             cancelSubscription: async (t) => {
                 try {
-                    return (n(!0), await o.EO(t, e), !0);
+                    return (n(!0), await c.EO(t, e), !0);
                 } catch (e) {
                     s(e);
                 } finally {
@@ -31,82 +32,82 @@ let x = (e) => {
             submitting: t
         };
     },
-    _ = (e) => {
+    j = (e) => {
         var t;
-        let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: _, onClose: E } = e,
-            j = (0, u.Dt)(),
-            O = (0, p.YB)(s),
-            C = (null == O || null == (t = O.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(O.cover_image_asset.application_id, O.cover_image_asset, 440) : void 0,
-            { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: v, error: T, submitting: N } = x(S),
-            I = async () => {
-                (await v(_.id)) && E();
+        let { transitionState: n, groupListing: r, guildId: s, listing: c, subscription: j, onClose: E } = e,
+            O = (0, m.Dt)(),
+            C = (0, g.YB)(s),
+            v = (null == C || null == (t = C.cover_image_asset) ? void 0 : t.application_id) != null ? (0, p._W)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0,
+            { analyticsLocations: S } = (0, u.ZP)(d.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: T, error: N, submitting: I } = _(S),
+            y = async () => {
+                (await T(j.id)) && E();
             },
-            y = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.CHANNEL),
-            A = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.INTANGIBLE),
-            P = l()(_.currentPeriodEnd).format('MMMM Do, YYYY'),
-            R = f.intl.formatToPlainString(f.t.KsMRPz, {
-                numChannels: y.length,
-                numAdditionalBenefits: A.length,
-                subscriptionEndDate: P
+            A = c.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.CHANNEL),
+            P = c.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.INTANGIBLE),
+            R = a()(j.currentPeriodEnd).format('MMMM Do, YYYY'),
+            D = b.intl.formatToPlainString(b.t.KsMRPz, {
+                numChannels: A.length,
+                numAdditionalBenefits: P.length,
+                subscriptionEndDate: R
             });
-        return (0, i.jsxs)(a.Y0X, {
+        return (0, i.jsxs)(o.Y0X, {
             transitionState: n,
-            className: b.__invalid_modal,
-            'aria-labelledby': j,
+            className: x.__invalid_modal,
+            'aria-labelledby': O,
             parentComponent: 'CancelSubscriptionModal',
             children: [
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: C,
+                            src: v,
                             alt: '',
-                            className: b.headerImage
+                            className: x.headerImage
                         }),
-                        (0, i.jsx)(a.olH, {
+                        (0, i.jsx)(o.olH, {
                             withCircleBackground: !0,
-                            className: b.closeButton,
+                            className: x.closeButton,
                             onClick: E
                         })
                     ]
                 }),
-                null != T ? (0, i.jsx)(a.kzN, { children: T.message }) : null,
-                (0, i.jsxs)(a.hzk, {
-                    className: b.content,
+                null != N ? (0, i.jsx)(o.kzN, { children: N.message }) : null,
+                (0, i.jsxs)(o.hzk, {
+                    className: x.content,
                     children: [
-                        (0, i.jsx)(a.X6q, {
-                            id: j,
+                        (0, i.jsx)(o.X6q, {
+                            id: O,
                             variant: 'text-md/medium',
-                            className: b.title,
-                            children: f.intl.string(f.t.O6l5tL)
+                            className: x.title,
+                            children: b.intl.string(b.t.O6l5tL)
                         }),
-                        (0, i.jsx)(a.Text, {
-                            className: b.description,
+                        (0, i.jsx)(o.Text, {
+                            className: x.description,
                             variant: 'text-sm/normal',
-                            children: R
+                            children: D
                         }),
-                        (0, i.jsx)(g.c, {
-                            listingId: o.id,
+                        (0, i.jsx)(h.c, {
+                            listingId: c.id,
                             guildId: r.guild_id,
-                            className: b.benefits
+                            className: x.benefits
                         })
                     ]
                 }),
-                (0, i.jsxs)(a.mzw, {
-                    className: b.footer,
+                (0, i.jsxs)(o.mzw, {
+                    className: x.footer,
                     children: [
-                        (0, i.jsx)(a.zxk, {
-                            color: a.zxk.Colors.RED,
-                            onClick: I,
-                            submitting: N,
-                            children: f.intl.string(f.t.F6lUDA)
+                        (0, i.jsx)(o.zxk, {
+                            variant: 'critical-primary',
+                            text: b.intl.string(b.t.F6lUDA),
+                            onClick: y,
+                            loading: I
                         }),
-                        (0, i.jsx)(a.zxk, {
-                            look: a.zxk.Looks.LINK,
-                            color: a.zxk.Colors.WHITE,
-                            className: b.goBackButton,
+                        (0, i.jsx)(l.zx, {
+                            look: l.zx.Looks.LINK,
+                            color: l.zx.Colors.WHITE,
+                            className: x.goBackButton,
                             onClick: E,
-                            children: f.intl.string(f.t.EP6EPT)
+                            children: b.intl.string(b.t.EP6EPT)
                         })
                     ]
                 })
@@ -114,9 +115,9 @@ let x = (e) => {
         });
     },
     E = (e) => {
-        (0, a.h7j)((t) =>
+        (0, o.h7j)((t) =>
             (0, i.jsx)(
-                _,
+                j,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

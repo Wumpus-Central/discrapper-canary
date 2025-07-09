@@ -22,15 +22,15 @@ var i = e(255367),
     G = e(356407);
 let y = (t) => {
     let { channel: n, onClose: e, onConfirm: y, transitionState: O } = t,
-        z = (0, s.ZP)(n, !0),
-        S = n.id,
+        S = (0, s.ZP)(n, !0),
+        z = n.id,
         A = n.isForumPost(),
         h = (0, d.e7)([U.Z], () => U.Z.getGuild(n.getGuildId())),
-        f = (0, u.u1)(S),
+        f = (0, u.u1)(z),
         { isSubscriptionGated: v } = (0, T.Z)(n.id),
         R = (0, I.Z)(h, n),
-        [N, H] = l.useState(),
-        x = (0, d.e7)([m.default], () => n.isOwner(m.default.getId()), [n]),
+        [N, x] = l.useState(),
+        H = (0, d.e7)([m.default], () => n.isOwner(m.default.getId()), [n]),
         B = (0, _.q)('DeleteChannelConfirm'),
         b = (0, d.e7)([C.Z], () => C.Z.can(n.isThread() ? L.Plq.MANAGE_THREADS : L.Plq.MANAGE_CHANNELS, n), [n]),
         M = (0, d.e7)(
@@ -41,19 +41,19 @@ let y = (t) => {
             },
             [n.id]
         ),
-        P = A && (b || (x && M < 1)),
-        j = f.length > 0 && (n.type === L.d4z.GUILD_VOICE || n.type === L.d4z.GUILD_STAGE_VOICE);
+        j = A && (b || (H && M < 1)),
+        P = f.length > 0 && (n.type === L.d4z.GUILD_VOICE || n.type === L.d4z.GUILD_STAGE_VOICE);
     if (
         (l.useEffect(() => {
             (async () => {
-                if (!(await (0, o.C)(n.getGuildId(), S))) return H(p.j.DEFAULT);
-                let t = await (0, E.T)(n.getGuildId(), S);
-                if (null != t) return H(t);
+                if (!(await (0, o.C)(n.getGuildId(), z))) return x(p.j.DEFAULT);
+                let t = await (0, E.T)(n.getGuildId(), z);
+                if (null != t) return x(t);
             })();
-        }, [n, S]),
+        }, [n, z]),
         l.useEffect(() => {
-            null != h && h.features.has(L.oNc.COMMUNITY) && (h.rulesChannelId === S ? H(p.j.RULES) : h.publicUpdatesChannelId === S && H(p.j.UPDATES));
-        }, [h, S]),
+            null != h && h.features.has(L.oNc.COMMUNITY) && (h.rulesChannelId === z ? x(p.j.RULES) : h.publicUpdatesChannelId === z && x(p.j.UPDATES));
+        }, [h, z]),
         null == h)
     )
         return null;
@@ -121,8 +121,9 @@ let y = (t) => {
                       }),
                       (0, i.jsx)(a.mzw, {
                           children: (0, i.jsx)(a.zxk, {
-                              onClick: e,
-                              children: D.intl.string(D.t.BddRzc)
+                              variant: 'primary',
+                              text: D.intl.string(D.t.BddRzc),
+                              onClick: e
                           })
                       })
                   ]
@@ -132,29 +133,29 @@ let y = (t) => {
         n.type === L.d4z.GUILD_CATEGORY
             ? {
                   deleteText: D.intl.string(D.t.ifbXnJ),
-                  deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
+                  deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: S })
               }
             : n.isForumPost()
               ? {
-                    deleteText: P ? D.intl.string(D.t.nEOg1N) : D.intl.string(D.t.xwMqDw),
-                    deleteBody: P && x && !b ? D.intl.format(D.t['6/pY29'], { postName: z }) : P ? D.intl.format(D.t.su3voK, { postName: z }) : D.intl.string(D.t.RUHcys)
+                    deleteText: j ? D.intl.string(D.t.nEOg1N) : D.intl.string(D.t.xwMqDw),
+                    deleteBody: j && H && !b ? D.intl.format(D.t['6/pY29'], { postName: S }) : j ? D.intl.format(D.t.su3voK, { postName: S }) : D.intl.string(D.t.RUHcys)
                 }
               : n.isThread()
                 ? {
                       deleteText: D.intl.string(D.t.H7vTe3),
-                      deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
+                      deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: S })
                   }
                 : v && R > 0
                   ? {
                         deleteText: D.intl.string(D.t['8D8Rsb']),
                         deleteBody: D.intl.format(D.t['+qkiT0'], {
-                            channelName: z,
+                            channelName: S,
                             numGuildRoleSubscriptionMembers: R
                         })
                     }
                   : {
                         deleteText: D.intl.string(D.t['8D8Rsb']),
-                        deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
+                        deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: S })
                     };
     return B
         ? (0, i.jsx)(r.u, {
@@ -175,7 +176,7 @@ let y = (t) => {
                       variant: 'critical-primary'
                   }
               ],
-              children: j
+              children: P
                   ? (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
@@ -203,7 +204,7 @@ let y = (t) => {
                               color: 'header-primary',
                               children: Y
                           }),
-                          j
+                          P
                               ? (0, i.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-secondary',
@@ -213,20 +214,22 @@ let y = (t) => {
                               : null
                       ]
                   }),
-                  (0, i.jsxs)(a.mzw, {
-                      children: [
-                          (0, i.jsx)(a.zxk, {
-                              onClick: y,
-                              color: a.zxk.Colors.RED,
-                              children: X
-                          }),
-                          (0, i.jsx)(a.zxk, {
-                              onClick: e,
-                              look: a.zxk.Looks.LINK,
-                              color: a.zxk.Colors.PRIMARY,
-                              children: D.intl.string(D.t['ETE/oK'])
-                          })
-                      ]
+                  (0, i.jsx)(a.mzw, {
+                      children: (0, i.jsxs)(a.hE2, {
+                          direction: 'horizontal-reverse',
+                          children: [
+                              (0, i.jsx)(a.zxk, {
+                                  variant: 'critical-primary',
+                                  text: X,
+                                  onClick: y
+                              }),
+                              (0, i.jsx)(a.zxk, {
+                                  variant: 'secondary',
+                                  text: D.intl.string(D.t['ETE/oK']),
+                                  onClick: e
+                              })
+                          ]
+                      })
                   })
               ]
           });

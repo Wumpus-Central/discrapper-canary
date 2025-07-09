@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(413496), n(433524), n(35282), n(539854), n(642613), n(953529));
+(n.d(t, { Z: () => k }), n(388685), n(413496), n(433524), n(35282), n(539854), n(642613), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -135,21 +135,24 @@ function Z(e) {
                         : null
                 ]
             }),
-            (0, r.jsxs)(c.mzw, {
+            (0, r.jsx)(c.mzw, {
                 className: S.footer,
-                children: [
-                    (0, r.jsx)(c.zxk, {
-                        onClick: h,
-                        look: c.zxk.Looks.LINK,
-                        color: c.zxk.Colors.RED,
-                        submitting: d,
-                        children: E.intl.string(E.t.UPcIa2)
-                    }),
-                    (0, r.jsx)(c.zxk, {
-                        onClick: o,
-                        children: E.intl.string(E.t.i4jeWV)
-                    })
-                ]
+                children: (0, r.jsxs)(c.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(c.zxk, {
+                            variant: 'critical-secondary',
+                            text: E.intl.string(E.t.UPcIa2),
+                            onClick: h,
+                            loading: d
+                        }),
+                        (0, r.jsx)(c.zxk, {
+                            variant: 'primary',
+                            text: E.intl.string(E.t.i4jeWV),
+                            onClick: o
+                        })
+                    ]
+                })
             })
         ]
     });
@@ -210,7 +213,7 @@ class D extends i.PureComponent {
             }));
     }
 }
-class k extends i.PureComponent {
+class A extends i.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
@@ -357,7 +360,7 @@ class k extends i.PureComponent {
             }));
     }
 }
-let A = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
+let L = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = O.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
@@ -366,8 +369,8 @@ let A = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
         theme: p.Z.theme,
         streamerMode: f.Z.hidePersonalInformation
     };
-})(k);
-function L() {
+})(A);
+function k() {
     var e;
     let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], a.isEqual),
         { enabled: n } = v.T.useExperiment(
@@ -377,5 +380,5 @@ function L() {
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, r.jsx)(N.Z, {}) : (0, r.jsx)(A, {});
+    return n ? (0, r.jsx)(N.Z, {}) : (0, r.jsx)(L, {});
 }

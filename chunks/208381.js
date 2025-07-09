@@ -46,13 +46,14 @@ function u(e) {
             }),
             (0, r.jsx)(l.mzw, {
                 children: (0, r.jsx)(l.zxk, {
-                    size: l.PhG.SMALL,
+                    variant: 'primary',
+                    size: 'sm',
+                    text: s.intl.string(s.t.cpT0Cg),
                     fullWidth: !0,
                     onClick: function () {
                         (0, o.qV)();
                     },
-                    autoFocus: !0,
-                    children: s.intl.string(s.t.cpT0Cg)
+                    autoFocus: !0
                 })
             })
         ]

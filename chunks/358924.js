@@ -29,8 +29,8 @@ var r,
     A = n(871118),
     Z = n(707409),
     x = n(359110),
-    L = n(769654),
-    w = n(849171),
+    w = n(769654),
+    L = n(849171),
     R = n(601964),
     D = n(314897),
     k = n(592125),
@@ -334,7 +334,7 @@ let ei = (e) => {
                 onContextMenu: (e) => c(e, r),
                 children: [
                     (0, i.jsx)(u.P3F, {
-                        onClick: () => (0, L.X)(n.id),
+                        onClick: () => (0, w.X)(n.id),
                         'aria-hidden': !0,
                         tabIndex: -1,
                         children: (0, i.jsxs)('div', {
@@ -633,7 +633,7 @@ let ei = (e) => {
                         (0, i.jsxs)('div', {
                             className: Y.embeddedActivityImageOverlay,
                             children: [
-                                (0, i.jsx)(w.OV, {
+                                (0, i.jsx)(L.OV, {
                                     users: p,
                                     guildId: r,
                                     channelId: n.id
@@ -641,7 +641,9 @@ let ei = (e) => {
                                 (0, i.jsx)('div', {
                                     className: Y.embeddedActivityJoinWrapper,
                                     children: (0, i.jsx)(u.zxk, {
-                                        size: u.zxk.Sizes.SMALL,
+                                        variant: 'primary',
+                                        size: 'sm',
+                                        text: W.intl.string(W.t.VJlc0d),
                                         onClick: (e) => {
                                             (e.stopPropagation(),
                                                 (0, g.Z)({
@@ -650,8 +652,7 @@ let ei = (e) => {
                                                     locationObject: f.location,
                                                     analyticsLocations: m
                                                 }));
-                                        },
-                                        children: W.intl.string(W.t.VJlc0d)
+                                        }
                                     })
                                 })
                             ]

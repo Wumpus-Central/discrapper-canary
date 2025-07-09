@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => H,
-    n: () => L
+    n: () => D
 }),
     n(415506),
     n(388685),
@@ -94,7 +94,7 @@ function R(e, t) {
         selectedEmojiAnswersCount: i
     };
 }
-function k(e) {
+function L(e) {
     let { guildId: t, title: n, body: r } = e;
     d.Z.show({
         title: n,
@@ -106,12 +106,12 @@ function k(e) {
         }
     });
 }
-function L(e) {
+function D(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
         i = C.Z.getChannel(t);
     if (null == i) return;
     if (g.Z.isLurking(i.guild_id))
-        return void k({
+        return void L({
             guildId: i.guild_id,
             title: A.intl.string(A.t['7LpysL']),
             body: A.intl.string(A.t['5sHHo6'])
@@ -124,7 +124,7 @@ function L(e) {
         initialAnswerId: a
     });
 }
-function D(e) {
+function M(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
     (0, T.eu)(t, n, (e) => {
         var n;
@@ -137,14 +137,14 @@ function D(e) {
         };
     });
 }
-function M(e) {
+function k(e) {
     let { channelId: t, messageId: n } = e,
         r = O.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function U(e) {
     let { channelId: t, messageId: n, answerIds: r } = e,
-        i = M({
+        i = k({
             channelId: t,
             messageId: n
         }),
@@ -185,7 +185,7 @@ async function F(e) {
         r = C.Z.getChannel(t);
     if (null == r) return;
     if (g.Z.isLurking(r.guild_id))
-        return void k({
+        return void L({
             guildId: r.guild_id,
             title: A.intl.string(A.t.Qic1FB),
             body: A.intl.string(A.t['5sHHo6'])
@@ -197,7 +197,7 @@ async function F(e) {
         });
     let l = (0, T.fU)(t, n);
     i()(null != l, 'Must not be able to vote without existing state!');
-    let a = M({
+    let a = k({
         channelId: t,
         messageId: n
     });
@@ -251,7 +251,7 @@ async function B(e) {
         r = C.Z.getChannel(t);
     if (null != r)
         return g.Z.isLurking(r.guild_id)
-            ? void k({
+            ? void L({
                   guildId: r.guild_id,
                   title: A.intl.string(A.t.B9QnBg),
                   body: A.intl.string(A.t.BVZCTk)
@@ -287,7 +287,7 @@ async function G(e) {
             });
             break;
         case 'cancel':
-            D({
+            M({
                 channelId: t,
                 messageId: n,
                 isEditing: !1
@@ -329,7 +329,7 @@ async function G(e) {
             });
             break;
         case 'showVoterDetails':
-            L({
+            D({
                 channelId: t,
                 messageId: n
             });
@@ -387,7 +387,7 @@ let H = {
             ),
             { tapShouldOpenVotersModal: s } = null != (n = (0, N.Tk)(o)) ? n : {};
         if (!0 === s)
-            return void L({
+            return void D({
                 channelId: l,
                 messageId: a,
                 answerId: r
@@ -436,7 +436,7 @@ let H = {
         });
     },
     handlePollSubmitVote: F,
-    handleUpdateVoteEditingState: D,
+    handleUpdateVoteEditingState: M,
     handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,

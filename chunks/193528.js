@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(772848),
+    a = n.n(s),
+    l = n(772848),
     o = n(866442),
     c = n(692547),
     d = n(481060),
@@ -57,8 +57,8 @@ function x(e, t) {
     );
 }
 function _(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: E, label: j, colorPickerMiddle: O, colorPickerFooter: C, showEyeDropper: S } = e,
-        v = r.useRef(null),
+    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: j, label: E, colorPickerMiddle: O, colorPickerFooter: C, showEyeDropper: v } = e,
+        S = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
         I = (0, p.DP)(s),
@@ -67,13 +67,13 @@ function _(e) {
         P = (0, m.Lq)(I ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
         R = (0, u.Z)(O),
         D = (0, u.Z)(C),
-        [Z, w] = r.useState((0, a.Z)());
+        [Z, w] = r.useState((0, l.Z)());
     return (
         r.useEffect(() => {
-            (R !== O || D !== C) && w((0, a.Z)());
+            (R !== O || D !== C) && w((0, l.Z)());
         }, [C, O, D, R]),
         (0, i.jsx)(d.yRy, {
-            targetElementRef: v,
+            targetElementRef: S,
             positionKey: Z,
             renderPopout: (e) =>
                 (0, i.jsx)(
@@ -84,7 +84,7 @@ function _(e) {
                         suggestedColors: _,
                         middle: O,
                         footer: C,
-                        showEyeDropper: S
+                        showEyeDropper: v
                     })
                 ),
             onRequestClose: n,
@@ -110,21 +110,21 @@ function _(e) {
                         return r;
                     })(e, ['onClick']);
                 return (0, i.jsxs)('div', {
-                    ref: v,
-                    className: l()(f.colorSwatch, { [f.disabled]: E }),
+                    ref: S,
+                    className: a()(f.colorSwatch, { [f.disabled]: j }),
                     children: [
                         (0, i.jsx)(
                             d.P3F,
                             x(b({}, n), {
-                                tabIndex: E ? -1 : 0,
-                                onClick: E ? g.dG4 : t,
+                                tabIndex: j ? -1 : 0,
+                                onClick: j ? g.dG4 : t,
                                 style: {
                                     backgroundColor: y,
                                     borderColor: A
                                 },
                                 className: f.swatch,
                                 'aria-label': h.intl.string(h.t.Qp04hI),
-                                focusProps: { ringTarget: v },
+                                focusProps: { ringTarget: S },
                                 children: (0, i.jsx)(d.vdY, {
                                     size: 'custom',
                                     className: f.editPencilIcon,
@@ -134,7 +134,7 @@ function _(e) {
                                 })
                             })
                         ),
-                        j
+                        E
                     ]
                 });
             }

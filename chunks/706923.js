@@ -1,52 +1,53 @@
-(t.d(n, { default: () => _ }), t(388685));
+(t.d(n, { default: () => f }), t(388685));
 var s = t(255367);
 t(73800);
 var l = t(399606),
-    i = t(481060),
-    o = t(904245),
-    a = t(434404),
-    r = t(592125),
-    c = t(812545),
-    u = t(981631),
-    d = t(388032),
-    g = t(739788);
-function _(e) {
-    let { channelId: n, messageId: t, transitionState: _, onClose: f } = e,
-        h = (0, l.e7)([r.Z], () => r.Z.getChannel(n)),
-        [m, p] = (0, c.Z)(n),
-        F = null == h ? void 0 : h.guild_id;
-    return (0, s.jsx)(i.ConfirmModal, {
-        header: d.intl.string(d.t.aIz1oa),
-        confirmText: d.intl.string(d.t['cY+Ooa']),
-        cancelText: d.intl.string(d.t['ETE/oK']),
-        confirmButtonColor: i.zxk.Colors.BRAND,
-        onConfirm: () => o.Z.crosspostMessage(n, t),
-        transitionState: _,
-        onClose: f,
-        children: (0, s.jsx)(i.Text, {
+    i = t(755721),
+    o = t(481060),
+    a = t(904245),
+    r = t(434404),
+    c = t(592125),
+    u = t(812545),
+    d = t(981631),
+    g = t(388032),
+    _ = t(739788);
+function f(e) {
+    let { channelId: n, messageId: t, transitionState: f, onClose: h } = e,
+        m = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
+        [p, F] = (0, u.Z)(n),
+        S = null == m ? void 0 : m.guild_id;
+    return (0, s.jsx)(o.ConfirmModal, {
+        header: g.intl.string(g.t.aIz1oa),
+        confirmText: g.intl.string(g.t['cY+Ooa']),
+        cancelText: g.intl.string(g.t['ETE/oK']),
+        confirmButtonColor: i.zx.Colors.BRAND,
+        onConfirm: () => a.Z.crosspostMessage(n, t),
+        transitionState: f,
+        onClose: h,
+        children: (0, s.jsx)(o.Text, {
             variant: 'text-md/normal',
-            className: g.spacing,
-            children: p
-                ? (0, s.jsx)(i.$jN, {})
-                : null != m && null != m.guildsFollowing && m.guildsFollowing > 0
+            className: _.spacing,
+            children: F
+                ? (0, s.jsx)(o.$jN, {})
+                : null != p && null != p.guildsFollowing && p.guildsFollowing > 0
                   ? (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(i.Text, {
-                                className: g.spacing,
+                            (0, s.jsx)(o.Text, {
+                                className: _.spacing,
                                 variant: 'text-sm/normal',
-                                children: d.intl.format(d.t.GCGrND, { numGuildsFollowing: m.guildsFollowing })
+                                children: g.intl.format(g.t.GCGrND, { numGuildsFollowing: p.guildsFollowing })
                             }),
-                            (0, s.jsx)(i.Text, {
+                            (0, s.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
-                                children: d.intl.format(d.t.IMhGZ2, {
+                                children: g.intl.format(g.t.IMhGZ2, {
                                     onClick: () => {
-                                        null != F && null != f && (f(), a.Z.open(F, u.pNK.ANALYTICS));
+                                        null != S && null != h && (h(), r.Z.open(S, d.pNK.ANALYTICS));
                                     }
                                 })
                             })
                         ]
                     })
-                  : d.intl.string(d.t['8FpqOj'])
+                  : g.intl.string(g.t['8FpqOj'])
         })
     });
 }

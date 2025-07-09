@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(793030),
-    a = n(302221),
+    a = n(793030),
+    l = n(302221),
     o = n(553896),
     c = n(848572),
     d = n(787528),
@@ -28,10 +28,10 @@ let p = (e, t) =>
         let { id: g, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
             x = u.intl.string(h),
             _ = (0, o.q)(g, f),
-            E = { '--custom-badge-glow-color': (0, a.rj)(t.glowColor, 0.5) };
+            j = { '--custom-badge-glow-color': (0, l.rj)(t.glowColor, 0.5) };
         return (0, i.jsxs)('div', {
             className: m.container,
-            style: E,
+            style: j,
             children: [
                 (0, i.jsx)('div', {}),
                 ' ',
@@ -46,17 +46,17 @@ let p = (e, t) =>
                 (0, i.jsxs)('div', {
                     className: m.textColumn,
                     children: [
-                        (0, i.jsx)(l.xv, {
+                        (0, i.jsx)(a.xv, {
                             variant: 'text-lg/semibold',
                             className: m.badgeText,
                             children: x
                         }),
-                        (0, i.jsx)(l.xv, {
+                        (0, i.jsx)(a.xv, {
                             variant: 'text-md/normal',
                             className: m.badgeText,
                             children: _
                         }),
-                        (0, i.jsx)(l.xv, {
+                        (0, i.jsx)(a.xv, {
                             variant: 'text-xs/normal',
                             children: p(t, n)
                         })

@@ -2,7 +2,7 @@ n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(780384),
-    a = n(481060),
+    a = n(755721),
     o = n(410030),
     s = n(74538),
     l = n(104494),
@@ -99,7 +99,7 @@ let E = (e) => {
                         shouldShowReferralTrialCopy: D,
                         subscriptionTrial: C
                     }),
-            x = null != T ? T : (0, i.wj)(A) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
+            x = null != T ? T : (0, i.wj)(A) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(

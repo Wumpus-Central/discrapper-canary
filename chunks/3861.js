@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(112724),
-    o = n(413458),
-    a = n(351248),
+    a = n(413458),
+    o = n(351248),
     s = n(600164),
     c = n(585483),
     u = n(340295),
@@ -19,7 +19,7 @@ let _ = (0, l.Z)((e) => {
     i.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
     }, [P, Z, R.width, R.height]);
-    let k = i.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, _]);
+    let M = i.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))), [n, _]);
     return (null == w ? void 0 : w.channelId) === O.id
         ? (0, r.jsx)(d.Z, { height: Z })
         : (null == O ? void 0 : O.isGuildVocal()) && !S
@@ -29,7 +29,7 @@ let _ = (0, l.Z)((e) => {
                 hasConnectPermission: j
             })
           : T === m.WtW.VOICE
-            ? (0, r.jsx)(a.Z, {
+            ? (0, r.jsx)(o.Z, {
                   guildId: O.guild_id,
                   width: P,
                   className: b.voiceCallWrapper,
@@ -46,7 +46,7 @@ let _ = (0, l.Z)((e) => {
                         children: (0, r.jsx)(p.Z, {
                             channel: O,
                             className: b.videoGrid,
-                            participants: k,
+                            participants: M,
                             totalNumberOfParticipants: t.length,
                             onClick: C,
                             onDoubleClick: v,
@@ -59,7 +59,7 @@ let _ = (0, l.Z)((e) => {
                     onContextMenuParticipant: x,
                     onSelectParticipant: C,
                     selectedParticipant: l,
-                    filteredParticipants: k,
+                    filteredParticipants: M,
                     participants: t,
                     popoutWindow: A,
                     className: E,

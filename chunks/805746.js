@@ -2,7 +2,7 @@
 var r = n(255367),
     a = n(73800),
     i = n(442837),
-    l = n(481060),
+    l = n(755721),
     o = n(384275),
     s = n(317381),
     c = n(513202),
@@ -52,8 +52,8 @@ let g = (e) => {
               description: _.intl.string(_.t.S51EKi),
               buttonText: g ? _.intl.string(_.t.xXpoGR) : _.intl.string(_.t.JsiUnJ),
               buttonDisabled: !g,
-              buttonColor: g ? l.zxk.Colors.RED : l.zxk.Colors.WHITE,
-              buttonLook: g ? l.zxk.Looks.FILLED : l.zxk.Looks.LINK,
+              buttonColor: g ? l.zx.Colors.RED : l.zx.Colors.WHITE,
+              buttonLook: g ? l.zx.Looks.FILLED : l.zx.Looks.LINK,
               onButtonPress: v
           });
 };

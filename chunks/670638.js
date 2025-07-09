@@ -3,8 +3,8 @@ var r = n(255367),
     s = n(73800),
     o = n(442837),
     i = n(481060),
-    l = n(239091),
-    a = n(479531),
+    a = n(239091),
+    l = n(479531),
     c = n(390322),
     u = n(572004),
     d = n(63063),
@@ -91,9 +91,9 @@ function E(e) {
             }),
                 (0, i.showToast)((0, i.createToast)(O.intl.string(O.t['+5kSoa']), i.ToastType.SUCCESS)));
         }, [E, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent]),
-        M = (e) => (0, i.showToast)((0, i.createToast)(new a.Z(e, e.status).message, i.ToastType.FAILURE)),
-        k = () => (0, h.is)(e.quest.id).catch(M),
-        A = s.useMemo(
+        M = (e) => (0, i.showToast)((0, i.createToast)(new l.Z(e, e.status).message, i.ToastType.FAILURE)),
+        A = () => (0, h.is)(e.quest.id).catch(M),
+        Q = s.useMemo(
             () =>
                 (0, r.jsx)(i.S89, {
                     id: 'delivery',
@@ -103,11 +103,11 @@ function E(e) {
                 }),
             [_, e.quest.id, null == n ? void 0 : n.id]
         ),
-        Q = e.shouldShowDisclosure && e.quest.id !== b.V6;
+        Z = e.shouldShowDisclosure && e.quest.id !== b.V6;
     return (0, r.jsxs)(i.v2r, {
         variant: 'fixed',
         onSelect: () => {
-            null != e.onSelect ? e.onSelect() : (0, l.Zy)();
+            null != e.onSelect ? e.onSelect() : (0, a.Zy)();
         },
         navId: 'quests-entry',
         'aria-label': O.intl.string(O.t.ogxXGh),
@@ -158,7 +158,7 @@ function E(e) {
                                 },
                                 icon: i.qDn
                             }),
-                        Q &&
+                        Z &&
                             (0, r.jsx)(i.sNh, {
                                 id: 'display-disclosure',
                                 label: O.intl.string(O.t.GcsZKC),
@@ -198,7 +198,7 @@ function E(e) {
                     {
                         label: 'Preview Controls',
                         children: [
-                            A,
+                            Q,
                             (0, r.jsx)(i.sNh, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
@@ -208,7 +208,7 @@ function E(e) {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    (R(), k());
+                                    (R(), A());
                                 }
                             }),
                             (0, r.jsx)(i.sNh, {
@@ -241,7 +241,7 @@ function E(e) {
                                         (0, r.jsx)(i.sNh, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: k
+                                            action: A
                                         })
                                     ]
                                 }),
@@ -260,7 +260,7 @@ function E(e) {
     });
 }
 function q(e) {
-    let { children: t, onOpen: n, onClose: o, preventIdle: l, quest: a, questContent: u, questContentPosition: d, sourceQuestContent: p } = e,
+    let { children: t, onOpen: n, onClose: o, preventIdle: a, quest: l, questContent: u, questContentPosition: d, sourceQuestContent: p } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -284,26 +284,26 @@ function q(e) {
         g = s.useRef(null),
         j = s.useCallback(() => {
             (x({
-                questId: a.id,
+                questId: l.id,
                 questContent: u,
                 questContentCTA: m.jZ.OPEN_CONTEXT_MENU,
                 questContentPosition: d,
                 sourceQuestContent: p
             }),
                 null != n && n());
-        }, [n, a.id, u, d, x, p]);
+        }, [n, l.id, u, d, x, p]);
     return (0, r.jsx)(i.yRy, {
         targetElementRef: g,
         onRequestOpen: j,
         onRequestClose: o,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return l
+            return a
                 ? (0, r.jsx)(c.Z, {
                       children: (0, r.jsx)(
                           E,
                           T(N({}, h), {
-                              quest: a,
+                              quest: l,
                               questContent: u,
                               questContentPosition: d,
                               onClose: t,
@@ -314,7 +314,7 @@ function q(e) {
                 : (0, r.jsx)(
                       E,
                       T(N({}, h), {
-                          quest: a,
+                          quest: l,
                           questContent: u,
                           questContentPosition: d,
                           onClose: t,

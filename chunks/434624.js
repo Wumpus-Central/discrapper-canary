@@ -24,12 +24,12 @@ let g = i.memo(function (e) {
             Z = (0, u.y)(w, m.aO),
             R = {};
         if (T && null != P) {
-            var k;
+            var L;
             let { accentColor: e, backgroundColor: r, opacity: i } = P,
-                l = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
+                l = null != (L = (0, o.wK)(null != r ? r : '', i)) ? L : '';
             (N && (R.borderColor = r), (R.background = l), (t = e), (n = e));
         }
-        let L = {
+        let D = {
             minWidth: Z,
             color: t,
             borderColor: n
@@ -50,7 +50,7 @@ let g = i.memo(function (e) {
                 }),
                 (0, r.jsx)('div', {
                     className: A.reactionCount,
-                    style: L,
+                    style: D,
                     children: w
                 })
             ]

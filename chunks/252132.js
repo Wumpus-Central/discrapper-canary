@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(27457),
     l = n(131951),
-    o = n(938243);
-function a(e) {
-    var { aspectRatio: t, blocked: n, ignored: a, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: C, participant: x, width: v } = e,
+    a = n(938243);
+function o(e) {
+    var { aspectRatio: t, blocked: n, ignored: o, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: C, participant: x, width: v } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -28,9 +28,9 @@ function a(e) {
     let j = l.Z.getVideoComponent();
     return (0, r.jsx)('div', {
         style: { width: v },
-        className: o.spaceBetweenTiles,
+        className: a.spaceBetweenTiles,
         children: (0, r.jsxs)('div', {
-            className: o.tileSizer,
+            className: a.tileSizer,
             style: { aspectRatio: t },
             children: [
                 (0, r.jsx)(
@@ -62,7 +62,7 @@ function a(e) {
                     })(
                         {
                             blocked: n,
-                            ignored: a,
+                            ignored: o,
                             channel: s,
                             className: c,
                             focused: u,

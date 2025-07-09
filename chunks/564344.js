@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => S });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(503089),
+    a = n(481060),
+    l = n(503089),
     o = n(254901),
     c = n(18438),
     d = n(778825),
@@ -16,48 +16,48 @@ var i = n(255367),
     b = n(585483),
     x = n(16703),
     _ = n(785145),
-    E = n(981631),
-    j = n(526761),
+    j = n(981631),
+    E = n(526761),
     O = n(726985),
     C = n(388032),
-    S = n(545784);
-function v() {
+    v = n(545784);
+function S() {
     o.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([d.Z], () => d.Z.getGuild()),
         t = (0, x.Z)(),
         n = (0, s.e7)([d.Z, h.Z], () => d.Z.showNotice() || h.Z.showNotice()),
-        v = null != e ? e : t,
+        S = null != e ? e : t,
         T = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         { subsection: N, setSubsection: I } = (0, _.Z)(),
         { hasSearchResults: y, searchResults: A } = (0, g.E)();
     function P(t) {
         if (N !== t) {
             if (n) {
-                (b.S.dispatch(E.CkL.SHAKE_APP, {
+                (b.S.dispatch(j.CkL.SHAKE_APP, {
                     duration: 300,
-                    intensity: a.$x
+                    intensity: l.$x
                 }),
-                    b.S.dispatch(E.CkL.EMPHASIZE_NOTICE));
+                    b.S.dispatch(j.CkL.EMPHASIZE_NOTICE));
                 return;
             }
-            (t === j.NB.GUILD && null == e && null != v && (0, c.Fq)(v), I(t));
+            (t === E.NB.GUILD && null == e && null != S && (0, c.Fq)(S), I(t));
         }
     }
     r.useEffect(() => {
-        null != T && (0, m.Z)(T.id, T.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
-    }, [null == v ? void 0 : v.id, T]);
+        null != T && (0, m.Z)(T.id, T.getAvatarURL(null == S ? void 0 : S.id, 80), { guildId: null == S ? void 0 : S.id });
+    }, [null == S ? void 0 : S.id, T]);
     let R = !0,
         D = !0;
     return (
-        y && 1 === A.length && (A.includes(O.s6.PROFILE_SERVER_PROFILES) ? (P(j.NB.GUILD), (D = !1)) : A.includes(O.s6.PROFILE_USER_PROFILE) && (P(j.NB.USER_PROFILE), (R = !1))),
-        (0, i.jsxs)(l.y5t, {
-            component: (0, i.jsx)(l.X6q, {
+        y && 1 === A.length && (A.includes(O.s6.PROFILE_SERVER_PROFILES) ? (P(E.NB.GUILD), (D = !1)) : A.includes(O.s6.PROFILE_USER_PROFILE) && (P(E.NB.USER_PROFILE), (R = !1))),
+        (0, i.jsxs)(a.y5t, {
+            component: (0, i.jsx)(a.X6q, {
                 variant: 'heading-lg/semibold',
                 children: C.intl.string(C.t['vi7f+v'])
             }),
             children: [
-                (0, i.jsxs)(l.njP, {
-                    className: S.tabBar,
+                (0, i.jsxs)(a.njP, {
+                    className: v.tabBar,
                     type: 'top',
                     look: 'brand',
                     selectedItem: N,
@@ -65,29 +65,29 @@ function v() {
                     children: [
                         D
                             ? (0, i.jsx)(
-                                  l.njP.Item,
+                                  a.njP.Item,
                                   {
-                                      className: S.tabBarItem,
-                                      id: j.NB.USER_PROFILE,
+                                      className: v.tabBarItem,
+                                      id: E.NB.USER_PROFILE,
                                       children: C.intl.string(C.t['2p07FR'])
                                   },
-                                  j.NB.USER_PROFILE
+                                  E.NB.USER_PROFILE
                               )
                             : null,
                         R
                             ? (0, i.jsx)(
-                                  l.njP.Item,
+                                  a.njP.Item,
                                   {
-                                      className: S.tabBarItem,
-                                      id: j.NB.GUILD,
+                                      className: v.tabBarItem,
+                                      id: E.NB.GUILD,
                                       children: C.intl.string(C.t.kPHroa)
                                   },
-                                  j.NB.GUILD
+                                  E.NB.GUILD
                               )
                             : null
                     ]
                 }),
-                N === j.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(p.Z, {})
+                N === E.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {})
             ]
         })
     );

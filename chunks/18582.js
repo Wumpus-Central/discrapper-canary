@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
+    a = n.n(s),
+    l = n(481060),
     o = n(3072),
     c = n(521250);
 function d(e) {
@@ -31,14 +31,14 @@ function d(e) {
         })(e, ['children', 'onClick', 'className', 'tag', 'target', 'isGrass', 'muted', 'disabled']);
     let x = (0, c.Z)(),
         _ = (0, o.hW)(g),
-        E = (0, r.useCallback)(
+        j = (0, r.useCallback)(
             (e) => {
                 (h || _(), null == d || d(e));
             },
             [_, d, h]
         );
     return (0, i.jsx)(
-        a.P3F,
+        l.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -66,8 +66,8 @@ function d(e) {
         })({}, b)),
         (n = n =
             {
-                onClick: f ? void 0 : E,
-                className: l()(x, u),
+                onClick: f ? void 0 : j,
+                className: a()(x, u),
                 tag: m,
                 target: p,
                 children: s

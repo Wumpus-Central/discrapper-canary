@@ -7,8 +7,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(748780),
+    a = n.n(l),
+    o = n(748780),
     s = n(442837),
     c = n(704215),
     u = n(481060),
@@ -76,7 +76,7 @@ function A(e, t) {
     );
 }
 function w(e) {
-    let { className: t, iconUrl: n, icon: l, header: a, completed: s, onClick: c } = e,
+    let { className: t, iconUrl: n, icon: l, header: o, completed: s, onClick: c } = e,
         [d, h] = i.useState(!1),
         f = (0, p.Z)(s);
     return (
@@ -84,7 +84,7 @@ function w(e) {
             null != f && s !== f && (h(!0), setTimeout(() => h(!1), 1000));
         }, [s, f]),
         (0, r.jsxs)(u.P3F, {
-            className: o()(t, N.card, { [N.completed]: s }),
+            className: a()(t, N.card, { [N.completed]: s }),
             onClick: c,
             children: [
                 null != l
@@ -96,15 +96,15 @@ function w(e) {
                       }),
                 (0, r.jsx)(u.Text, {
                     color: 'header-primary',
-                    className: o()(N.cardTextContainer, N.cardHeader),
+                    className: a()(N.cardTextContainer, N.cardHeader),
                     variant: 'text-sm/normal',
-                    children: a
+                    children: o
                 }),
                 s
                     ? (0, r.jsx)(u.dz2, {
                           size: 'md',
                           color: 'currentColor',
-                          className: o()(N.checkmark, { [N.animate]: d })
+                          className: a()(N.checkmark, { [N.animate]: d })
                       })
                     : (0, r.jsx)(x.Z, {
                           className: N.arrow,
@@ -119,12 +119,12 @@ function R(e) {
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && E.default.extractTimestamp(l.id) < Date.now() - I._8R,
         x = (0, s.e7)([_.default], () => (null == l ? void 0 : l.ownerId) === _.default.getId(), [l]),
-        { canInvite: R, canManageGuild: k, canMessage: M } = (0, f.TE)(t, l),
-        D = (0, s.e7)([C.default], () => {
+        { canInvite: R, canManageGuild: M, canMessage: D } = (0, f.TE)(t, l),
+        L = (0, s.e7)([C.default], () => {
             var e, t;
             return (null == (e = C.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = C.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: L, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: F,
             handleMessage: H,
@@ -161,7 +161,7 @@ function R(e) {
                             channelId: I.lds
                         }));
                 }, []),
-                o = i.useCallback(() => {
+                a = i.useCallback(() => {
                     (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: P.Ft.CHANNEL_WELCOME,
                         action: P.j7.PERSONALIZE_SERVER
@@ -171,7 +171,7 @@ function R(e) {
             return {
                 handleInvite: t,
                 handleMessage: l,
-                handlePersonalize: o,
+                handlePersonalize: a,
                 handleDownload: i.useCallback(() => {
                     (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: P.Ft.CHANNEL_WELCOME,
@@ -198,38 +198,38 @@ function R(e) {
                 }, [e])
             };
         })(l),
-        W = !(D || L || U || B),
+        W = !(L || k || U || B),
         { titleAnimatedStyle: Y, opacities: q } = (function (e) {
-            let t = (0, d.Z)(() => new a.Z.Value(0)),
-                n = (0, d.Z)(() => new a.Z.Value(0)),
-                r = (0, d.Z)(() => [new a.Z.Value(0), new a.Z.Value(0), new a.Z.Value(0), new a.Z.Value(0)]);
+            let t = (0, d.Z)(() => new o.Z.Value(0)),
+                n = (0, d.Z)(() => new o.Z.Value(0)),
+                r = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
             return (
                 i.useEffect(() => {
-                    a.Z.stagger(300, [
-                        a.Z.parallel([
-                            a.Z.timing(n, {
+                    o.Z.stagger(300, [
+                        o.Z.parallel([
+                            o.Z.timing(n, {
                                 toValue: 1,
                                 duration: 450
                             }),
-                            a.Z.timing(t, {
+                            o.Z.timing(t, {
                                 toValue: 1,
                                 duration: 450
                             })
                         ]),
-                        a.Z.stagger(100, [
-                            a.Z.timing(r[0], {
+                        o.Z.stagger(100, [
+                            o.Z.timing(r[0], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            a.Z.timing(r[1], {
+                            o.Z.timing(r[1], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            a.Z.timing(r[2], {
+                            o.Z.timing(r[2], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            a.Z.timing(r[3], {
+                            o.Z.timing(r[3], {
                                 toValue: 1,
                                 duration: 300
                             })
@@ -274,24 +274,24 @@ function R(e) {
         (R &&
             J.push(
                 (0, r.jsx)(
-                    a.Z.div,
+                    o.Z.div,
                     {
                         className: N.cardWrapper,
                         style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
-                            completed: L,
+                            completed: k,
                             onClick: F
                         })
                     },
                     'invite'
                 )
             ),
-        k &&
+        M &&
             J.push(
                 (0, r.jsx)(
-                    a.Z.div,
+                    o.Z.div,
                     {
                         className: N.cardWrapper,
                         style: W ? { opacity: q[J.length] } : {},
@@ -305,10 +305,10 @@ function R(e) {
                     'customize'
                 )
             ),
-        M &&
+        D &&
             J.push(
                 (0, r.jsx)(
-                    a.Z.div,
+                    o.Z.div,
                     {
                         className: N.cardWrapper,
                         style: W ? { opacity: q[J.length] } : {},
@@ -325,14 +325,14 @@ function R(e) {
         (0, j.isWeb)() &&
             J.push(
                 (0, r.jsx)(
-                    a.Z.div,
+                    o.Z.div,
                     {
                         className: N.cardWrapper,
                         style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
-                            completed: D,
+                            completed: L,
                             onClick: V
                         })
                     },
@@ -341,7 +341,7 @@ function R(e) {
             ),
         J.push(
             (0, r.jsx)(
-                a.Z.div,
+                o.Z.div,
                 {
                     className: N.cardWrapper,
                     style: W ? { opacity: q[J.length] } : {},
@@ -365,7 +365,7 @@ function R(e) {
             children: (0, r.jsxs)('div', {
                 className: N.inner,
                 children: [
-                    (0, r.jsxs)(a.Z.div, {
+                    (0, r.jsxs)(o.Z.div, {
                         style: Y,
                         children: [
                             (0, r.jsx)(u.X6q, {
@@ -375,7 +375,7 @@ function R(e) {
                             }),
                             (0, r.jsxs)(u.Text, {
                                 color: 'header-secondary',
-                                className: o()({
+                                className: a()({
                                     [N.subtitle]: !0,
                                     [N.noChildren]: 0 === J.length
                                 }),

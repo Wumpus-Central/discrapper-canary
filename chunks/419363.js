@@ -1,8 +1,8 @@
 (n.d(t, {
-    M9: () => a,
+    M9: () => l,
     Zh: () => r,
     e6: () => s,
-    iq: () => l
+    iq: () => a
 }),
     n(704826),
     n(35282));
@@ -17,9 +17,9 @@ function s(e, t) {
     let r = new SpeechSynthesisUtterance(n);
     return ((r.rate = i.Z.speechRate), r);
 }
-function l(e, t) {
+function a(e, t) {
     r && ((e.voice = t), speechSynthesis.speak(e));
 }
-function a() {
+function l() {
     r && speechSynthesis.cancel();
 }

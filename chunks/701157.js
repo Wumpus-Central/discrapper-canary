@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(165630),
+    a = n(481060),
+    l = n(165630),
     o = n(771845),
     c = n(11844),
     d = n(300037),
@@ -11,7 +11,7 @@ var i = n(255367),
     m = n(831613);
 let p = function (e) {
     let { canAddBoosts: t, canApplyBoosts: n } = e,
-        p = (0, s.e7)([a.Z], () => a.Z.affinities),
+        p = (0, s.e7)([l.Z], () => l.Z.affinities),
         g = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         h = r.useMemo(() => {
             let e = p.slice(0, 3).map((e) => e.guildId);
@@ -27,7 +27,7 @@ let p = function (e) {
               className: m.wrapper,
               children: [
                   t &&
-                      (0, i.jsx)(l.X6q, {
+                      (0, i.jsx)(a.X6q, {
                           variant: 'heading-lg/semibold',
                           className: m.header,
                           children: u.intl.string(u.t.r90Wgo)

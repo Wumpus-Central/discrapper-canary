@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     a = n(73800),
-    i = n(481060),
+    i = n(755721),
     l = n(904245),
     o = n(367907),
     s = n(138201),
@@ -25,7 +25,7 @@ let p = (e) => {
               description: m.intl.string(m.t.dK8S09),
               buttonText: p ? m.intl.string(m.t.f3pnLC) : m.intl.string(m.t.ch2xbm),
               buttonDisabled: p,
-              buttonColor: i.zxk.Colors.RED,
+              buttonColor: i.zx.Colors.RED,
               onButtonPress: g
           })
         : null;

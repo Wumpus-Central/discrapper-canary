@@ -81,9 +81,10 @@ let j = function (e) {
         _ = (0, a.e7)([u.default], () => u.default.getId());
     return (0, c.pw)(l)
         ? (0, r.jsx)(o.zxk, {
-              size: o.zxk.Sizes.SMALL,
-              onClick: j,
-              children: f.intl.string(f.t['9Z+aEB'])
+              variant: 'primary',
+              size: 'sm',
+              text: f.intl.string(f.t['9Z+aEB']),
+              onClick: j
           })
         : (0, r.jsxs)(o.P3F, {
               className: h.editWelcomeSection,

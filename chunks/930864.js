@@ -65,8 +65,8 @@ function C(e, t) {
     );
 }
 function x(e) {
-    var { message: t, initialSelectedDestinations: x, forwardOptions: P, onClose: T, onRequestSent: L } = e,
-        N = (function (e, t) {
+    var { message: t, initialSelectedDestinations: x, forwardOptions: P, onClose: T, onRequestSent: N } = e,
+        L = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
@@ -88,7 +88,7 @@ function x(e) {
     let { channel_id: j, id: Z } = t,
         w = r.useMemo(() => (0, u.dL)(j), [j]),
         [D, R] = r.useState(!1),
-        k = (0, a.e7)(
+        F = (0, a.e7)(
             [h.Z],
             () => {
                 var e;
@@ -96,9 +96,9 @@ function x(e) {
             },
             [t]
         ),
-        F = (0, a.e7)([f.Z], () => f.Z.getChannel(j), [j]),
-        M = (0, m.ZF)(),
-        G = (0, m.mh)(),
+        k = (0, a.e7)([f.Z], () => f.Z.getChannel(j), [j]),
+        G = (0, m.ZF)(),
+        M = (0, m.mh)(),
         U = r.useRef(0),
         H = r.useRef(0),
         [W, Q] = r.useState(x),
@@ -118,9 +118,9 @@ function x(e) {
         ),
         J = r.useCallback(
             (e) => {
-                (Y(e), (H.current += 1), '' !== e && G(j, Z));
+                (Y(e), (H.current += 1), '' !== e && M(j, Z));
             },
-            [j, Z, G, Y]
+            [j, Z, M, Y]
         ),
         $ = r.useCallback(() => {
             Y('');
@@ -157,7 +157,7 @@ function x(e) {
         ),
         el = r.useCallback(
             (e) => {
-                (M(j, Z, '' !== B),
+                (G(j, Z, '' !== B),
                     Q((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -168,7 +168,7 @@ function x(e) {
                         return (l.splice(n, 1), (U.current += 1), l);
                     }));
             },
-            [j, V, Z, B, Y, M]
+            [j, V, Z, B, Y, G]
         ),
         er = r.useCallback(
             async function (e) {
@@ -195,7 +195,7 @@ function x(e) {
                     }))
                 )
                     return void R(!1);
-                (d && (0, y.mc)(), null == L || L(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
+                (d && (0, y.mc)(), null == N || N(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let I = await g.Z.sendForwards(E, b, C(v({}, P), { withMessage: i })),
                     O = b.some((e) => {
                         let t = f.Z.getChannel(e);
@@ -237,7 +237,7 @@ function x(e) {
                     forwardOptions: P
                 });
             },
-            [j, P, Z, t, L, en]
+            [j, P, Z, t, N, en]
         ),
         ei = r.useCallback(
             (e) => {
@@ -249,7 +249,7 @@ function x(e) {
             },
             [er, W]
         );
-    if (null == k || null == F) return null;
+    if (null == F || null == k) return null;
     let ea =
             K.length > 0
                 ? (0, l.jsx)(E.F, {
@@ -257,8 +257,8 @@ function x(e) {
                       paddingTop: 16,
                       rowData: K,
                       rowMode: E.G.TOGGLE,
-                      message: k,
-                      originChannel: F,
+                      message: F,
+                      originChannel: k,
                       handleToggleDestination: el,
                       selectedDestinations: W,
                       disableSelection: V
@@ -287,7 +287,7 @@ function x(e) {
                     className: O.modal,
                     'aria-label': S.intl.string(S.t['+SkRRk'])
                 },
-                N
+                L
             ),
             {
                 parentComponent: 'ForwardModal',
@@ -338,7 +338,7 @@ function x(e) {
                     }),
                     ea,
                     (0, l.jsx)(b.n, {
-                        message: k,
+                        message: F,
                         forwardOptions: P,
                         sendLabel: es,
                         canSend: z > 0,

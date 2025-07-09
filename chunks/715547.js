@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var i = n(481060),
+var i = n(755721),
     a = n(655922),
     o = n(420660),
     s = n(652853),
@@ -17,7 +17,7 @@ function d(e) {
     return d === c.lY.MODAL_V2
         ? (0, r.jsx)(l.tG, {
               text: u.intl.string(u.t['I6JG4+']),
-              size: i.PhG.TINY,
+              size: i.Ph.TINY,
               themeColor: 'secondary',
               onClick: _
           })

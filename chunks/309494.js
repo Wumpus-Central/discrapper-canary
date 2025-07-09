@@ -1,25 +1,26 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
+    a = n(755721),
     l = n(481060),
-    a = n(320161),
-    o = n(572004),
-    c = n(51144),
-    d = n(785717),
-    u = n(475413),
-    m = n(388032),
-    p = n(517895);
-function g(e) {
+    o = n(320161),
+    c = n(572004),
+    d = n(51144),
+    u = n(785717),
+    m = n(475413),
+    p = n(388032),
+    g = n(517895);
+function h(e) {
     let { user: t, isHovering: n } = e,
-        { trackUserProfileAction: r } = (0, d.KZ)();
-    return o.wS
-        ? (0, i.jsx)(a.Z, {
-              text: m.intl.string(m.t.y5MwJy),
+        { trackUserProfileAction: r } = (0, u.KZ)();
+    return c.wS
+        ? (0, i.jsx)(o.Z, {
+              text: p.intl.string(p.t.y5MwJy),
               delay: 0,
               'aria-label': !1,
-              copyValue: c.ZP.getUserTag(t, {
+              copyValue: d.ZP.getUserTag(t, {
                   decoration: 'never',
                   identifiable: 'always'
               }),
@@ -27,7 +28,7 @@ function g(e) {
               children: (e) => {
                   var t, r;
                   return (0, i.jsx)(
-                      u.kF,
+                      m.kF,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -55,14 +56,14 @@ function g(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: s()(p.hover, { [p.visible]: n }),
-                              innerClassName: p.hover,
-                              look: l.zxk.Looks.BLANK,
-                              size: l.zxk.Sizes.NONE,
-                              color: p.hoverColor,
+                              className: s()(g.hover, { [g.visible]: n }),
+                              innerClassName: g.hover,
+                              look: a.zx.Looks.BLANK,
+                              size: a.zx.Sizes.NONE,
+                              color: g.hoverColor,
                               themeColor: 'none',
                               grow: !1,
-                              'aria-label': m.intl.string(m.t.y5MwJy),
+                              'aria-label': p.intl.string(p.t.y5MwJy),
                               children: (0, i.jsx)(l.TIy, {
                                   size: 'xs',
                                   color: 'currentColor'

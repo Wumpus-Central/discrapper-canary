@@ -5,7 +5,7 @@ var r = n(325767);
 function s(e) {
     var t,
         n,
-        { width: s = 80, height: l = 20, color: a = 'currentColor', foreground: o } = e,
+        { width: s = 80, height: a = 20, color: l = 'currentColor', foreground: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -55,8 +55,8 @@ function s(e) {
         (n = n =
             {
                 width: s,
-                height: l,
-                viewBox: '0 0 '.concat(s, ' ').concat(l),
+                height: a,
+                viewBox: '0 0 '.concat(s, ' ').concat(a),
                 children: [
                     (0, i.jsx)('pattern', {
                         id: 'pill-frame-pattern',
@@ -65,7 +65,7 @@ function s(e) {
                         children: (0, i.jsx)('path', {
                             d: 'm0 0h8v20h-8zm4 2c-1.1045695 0-2 .8954305-2 2v12c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-12c0-1.1045695-.8954305-2-2-2z',
                             fillRule: 'evenodd',
-                            fill: a,
+                            fill: l,
                             className: o
                         })
                     }),

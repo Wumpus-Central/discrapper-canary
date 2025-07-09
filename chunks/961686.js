@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     content: 'content_ea12e5',
     header: 'header_ea12e5',
     headerShortcut: 'headerShortcut_ea12e5',

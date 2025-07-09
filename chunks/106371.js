@@ -1,5 +1,5 @@
-n.d(t, { Z: () => a });
-let a = (0, n(818083).B)({
+a.d(t, { Z: () => n });
+let n = (0, a(818083).B)({
     kind: 'user',
     id: '2024-08_reaction_push_notifications_user',
     label: 'In App Notifications for Reactions',

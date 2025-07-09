@@ -1,4 +1,4 @@
-(n.d(t, { default: () => j }), n(388685), n(704826), n(35282), n(781311));
+(n.d(t, { default: () => C }), n(388685), n(704826), n(35282), n(781311));
 var l = n(255367),
     r = n(73800),
     o = n(120356),
@@ -6,150 +6,151 @@ var l = n(255367),
     i = n(562075),
     c = n(539202),
     s = n(692547),
-    d = n(481060),
-    u = n(881052),
-    m = n(186523),
-    p = n(246364),
-    b = n(915509),
-    g = n(592286),
-    h = n(388032),
-    x = n(98847);
-let _ = 'MULTIPLE_CHOICE',
-    f = (e) => {
-        let { choice: t, index: n, onChange: o, onClear: s, onReorder: u, isDropHovered: p } = e,
-            b = r.useRef(null),
+    d = n(755721),
+    u = n(481060),
+    m = n(881052),
+    p = n(186523),
+    b = n(246364),
+    g = n(915509),
+    h = n(592286),
+    x = n(388032),
+    _ = n(98847);
+let f = 'MULTIPLE_CHOICE',
+    j = (e) => {
+        let { choice: t, index: n, onChange: o, onClear: s, onReorder: m, isDropHovered: b } = e,
             g = r.useRef(null),
-            [, f, j] = (0, i.c)({
-                type: _,
+            h = r.useRef(null),
+            [, j, C] = (0, i.c)({
+                type: f,
                 item: {
                     choice: t,
                     index: n
                 },
                 end: (e, t) => {
-                    null == e || t.didDrop() || u(e.choice, null, !0);
+                    null == e || t.didDrop() || m(e.choice, null, !0);
                 }
             }),
-            [, C] = (0, c.L)({
-                accept: _,
+            [, y] = (0, c.L)({
+                accept: f,
                 hover: (e, t) => {
                     var l;
                     let { index: r } = e,
-                        o = null == (l = b.current) ? void 0 : l.getBoundingClientRect(),
+                        o = null == (l = g.current) ? void 0 : l.getBoundingClientRect(),
                         a = t.getClientOffset();
                     if (null == o || null == a) return;
                     let i = (o.bottom - o.top) / 2,
                         c = a.y - o.top;
-                    (r < n && c < i) || (r > n && c > i) || u(e.choice, n, !1);
+                    (r < n && c < i) || (r > n && c > i) || m(e.choice, n, !1);
                 },
                 drop: (e) => {
-                    u(e.choice, n, !0);
+                    m(e.choice, n, !0);
                 }
             });
         return (
             r.useLayoutEffect(
                 () => (
-                    f(g),
-                    j(C(b)),
+                    j(h),
+                    C(y(g)),
                     () => {
-                        (f(null), C(null));
+                        (j(null), y(null));
                     }
                 ),
-                [f, C, j]
+                [j, y, C]
             ),
             (0, l.jsxs)('div', {
-                ref: b,
-                className: a()(x.draggableInputContainer, { [x.dragging]: p }),
+                ref: g,
+                className: a()(_.draggableInputContainer, { [_.dragging]: b }),
                 'data-dnd-name': t,
                 children: [
                     (0, l.jsx)('div', {
-                        className: x.radioIconEmptyContainer,
-                        children: (0, l.jsx)(m.Z, {
+                        className: _.radioIconEmptyContainer,
+                        children: (0, l.jsx)(p.Z, {
                             height: 20,
                             width: 20,
-                            className: x.radioIconEmpty
+                            className: _.radioIconEmpty
                         })
                     }),
                     (0, l.jsxs)('div', {
-                        className: x.inputWrapper,
+                        className: _.inputWrapper,
                         children: [
-                            (0, l.jsx)(d.oil, {
+                            (0, l.jsx)(u.oil, {
                                 autoFocus: !0,
                                 onChange: (e) => o(e),
-                                placeholder: h.intl.formatToPlainString(h.t['Ep/pbG'], { index: n + 1 }),
+                                placeholder: x.intl.formatToPlainString(x.t['Ep/pbG'], { index: n + 1 }),
                                 value: t
                             }),
-                            (0, l.jsx)(d.zxk, {
-                                className: x.clearButton,
+                            (0, l.jsx)(d.zx, {
+                                className: _.clearButton,
                                 onClick: s,
-                                look: d.zxk.Looks.BLANK,
-                                size: d.zxk.Sizes.NONE,
-                                children: (0, l.jsx)(d.k$p, {
+                                look: d.zx.Looks.BLANK,
+                                size: d.zx.Sizes.NONE,
+                                children: (0, l.jsx)(u.k$p, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: x.clearIcon
+                                    className: _.clearIcon
                                 })
                             })
                         ]
                     }),
                     (0, l.jsx)('div', {
-                        ref: g,
-                        className: x.dragContainer,
+                        ref: h,
+                        className: _.dragContainer,
                         'data-dnd-name': t,
-                        children: (0, l.jsx)(d.Vni, {
+                        children: (0, l.jsx)(u.Vni, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: x.dragIcon
+                            className: _.dragIcon
                         })
                     })
                 ]
             })
         );
     },
-    j = function (e) {
+    C = function (e) {
         var t, n, o, a;
-        let { field: i, onSave: c, onClose: m } = e,
-            [_, j] = r.useState(null != (t = null == i ? void 0 : i.label) ? t : ''),
+        let { field: i, onSave: c, onClose: d } = e,
+            [p, f] = r.useState(null != (t = null == i ? void 0 : i.label) ? t : ''),
             [C, y] = r.useState(null != (n = null == i ? void 0 : i.choices) ? n : ['']),
             [v, I] = r.useState(null),
-            [O, k] = r.useState(null),
-            N = (e, t) => {
+            [O, N] = r.useState(null),
+            z = (e, t) => {
                 null != v && I(null);
                 let n = e.replace(/(\r\n|\n|\r)/g, ' ');
-                n.length > g.au && (n = n.slice(0, g.au));
+                n.length > h.au && (n = n.slice(0, h.au));
                 let l = [...C];
                 ((l[t] = n), y(l));
             },
-            z = (e, t, n) => {
+            E = (e, t, n) => {
                 if (null == C) return;
                 null != v && I(null);
                 let l = C.indexOf(e),
                     r = [...C];
-                (null != t && t !== l && (r.splice(l, 1), r.splice(t, 0, e), y(r)), n ? null !== t && k(null) : t !== O && k(t));
+                (null != t && t !== l && (r.splice(l, 1), r.splice(t, 0, e), y(r)), n ? null !== t && N(null) : t !== O && N(t));
             },
-            E = (e) => {
+            w = (e) => {
                 null != v && I(null);
                 let t = [...C.slice(0, e), ...C.slice(e + 1)];
                 y(0 === t.length ? [''] : t);
             },
-            w = async () => {
+            k = async () => {
                 null != v && I(null);
-                let e = _.trim();
-                if ('' === e) return void I(h.intl.string(h.t['G+TI4+']));
-                if (0 === C.map((e) => e.trim()).filter((e) => '' !== e).length) return void I(h.intl.string(h.t.jZoHgI));
+                let e = p.trim();
+                if ('' === e) return void I(x.intl.string(x.t['G+TI4+']));
+                if (0 === C.map((e) => e.trim()).filter((e) => '' !== e).length) return void I(x.intl.string(x.t.jZoHgI));
                 let t = {
-                    field_type: p.QJ.MULTIPLE_CHOICE,
+                    field_type: b.QJ.MULTIPLE_CHOICE,
                     label: e,
                     choices: C,
                     required: !0
                 };
                 try {
-                    (await c(t), m());
+                    (await c(t), d());
                 } catch (e) {
-                    I(new u.Hx(e).getAnyErrorMessage());
+                    I(new m.Hx(e).getAnyErrorMessage());
                 }
             };
         return (0, l.jsxs)(
-            b.Z,
+            g.Z,
             ((o = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -178,55 +179,55 @@ let _ = 'MULTIPLE_CHOICE',
             (a = a =
                 {
                     errorText: v,
-                    title: h.intl.string(h.t.ooKh3t),
-                    onConfirm: w,
-                    onCancel: m,
+                    title: x.intl.string(x.t.ooKh3t),
+                    onConfirm: k,
+                    onCancel: d,
                     children: [
-                        (0, l.jsx)(d.oil, {
+                        (0, l.jsx)(u.oil, {
                             autoFocus: !0,
-                            className: x.spacedItem,
+                            className: _.spacedItem,
                             onChange: (e) => {
                                 null != v && I(null);
                                 let t = e.replace(/(\r\n|\n|\r)/g, ' ');
-                                (t.length > g.XN && (t = e.slice(0, g.XN)), j(t));
+                                (t.length > h.XN && (t = e.slice(0, h.XN)), f(t));
                             },
-                            placeholder: h.intl.string(h.t.fqVmbG),
-                            value: _
+                            placeholder: x.intl.string(x.t.fqVmbG),
+                            value: p
                         }),
-                        (0, l.jsx)('div', { className: x.divider }),
+                        (0, l.jsx)('div', { className: _.divider }),
                         C.map((e, t) =>
                             (0, l.jsx)(
-                                f,
+                                j,
                                 {
                                     choice: e,
                                     index: t,
-                                    onChange: (e) => N(e, t),
-                                    onClear: () => E(t),
-                                    onReorder: z,
+                                    onChange: (e) => z(e, t),
+                                    onClear: () => w(t),
+                                    onReorder: E,
                                     isDropHovered: t === O
                                 },
                                 'choice-'.concat(t)
                             )
                         ),
-                        C.length !== g.mb &&
+                        C.length !== h.mb &&
                             (0, l.jsx)('div', {
-                                className: x.addItemContainer,
-                                children: (0, l.jsxs)(d.P3F, {
-                                    className: x.addItemButton,
+                                className: _.addItemContainer,
+                                children: (0, l.jsxs)(u.P3F, {
+                                    className: _.addItemButton,
                                     onClick: () => {
-                                        (null != v && I(null), C.length !== g.mb && y([...C, '']));
+                                        (null != v && I(null), C.length !== h.mb && y([...C, '']));
                                     },
                                     children: [
-                                        (0, l.jsx)(d.oFk, {
+                                        (0, l.jsx)(u.oFk, {
                                             size: 'custom',
                                             height: 17,
                                             width: 17,
                                             color: s.Z.unsafe_rawColors.BLUE_345.css
                                         }),
-                                        (0, l.jsx)(d.Text, {
+                                        (0, l.jsx)(u.Text, {
                                             color: 'text-link',
                                             variant: 'text-md/normal',
-                                            children: h.intl.string(h.t.sVfx9v)
+                                            children: x.intl.string(x.t.sVfx9v)
                                         })
                                     ]
                                 })

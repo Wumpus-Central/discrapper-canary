@@ -14,8 +14,8 @@ var n = r(255367),
     p = r(839392),
     O = r(774073),
     E = r(426482),
-    h = r(644941),
-    x = r(388032),
+    x = r(644941),
+    h = r(388032),
     v = r(263930),
     j = r(276220);
 function b(e) {
@@ -61,7 +61,7 @@ let I = (e) => {
                                 (0, u.ZDy)(() =>
                                     Promise.resolve((e) =>
                                         (0, n.jsx)(
-                                            h.default,
+                                            x.default,
                                             b(
                                                 {
                                                     applicationId: t.applicationId,
@@ -135,7 +135,7 @@ function y(e) {
                         className: v.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: x.intl.string(x.t['6rLyQE'])
+                        children: h.intl.string(h.t['6rLyQE'])
                     }),
                     (0, n.jsx)('div', {
                         className: j.similarGames,

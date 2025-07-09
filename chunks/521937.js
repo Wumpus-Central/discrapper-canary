@@ -1,66 +1,67 @@
-(n.d(t, { v: () => x }), n(388685), n(35282));
-var r = n(255367),
-    a = n(73800),
+(n.d(t, { v: () => m }), n(388685), n(35282));
+var a = n(255367),
+    r = n(73800),
     o = n(120356),
-    l = n.n(o),
-    i = n(593473),
+    i = n.n(o),
+    l = n(593473),
     s = n(114858),
-    c = n(481060),
-    d = n(489863),
-    u = n(511540),
-    f = n(828878),
-    p = n(388032),
-    h = n(949463);
-function x(e) {
+    c = n(755721),
+    d = n(481060),
+    u = n(489863),
+    f = n(511540),
+    p = n(828878),
+    h = n(388032),
+    x = n(949463);
+function m(e) {
     let { onUserCodeAccepted: t, usePrefilledCode: n } = e,
-        [o, x] = a.useState(() => {
-            let { user_code: e } = i.parse(window.location.search);
+        [o, m] = r.useState(() => {
+            let { user_code: e } = l.parse(window.location.search);
             return n && null != e ? e : '';
         }),
-        m = (0, s.TH)(),
-        b = a.useCallback(() => {
-            (0, d.c$)(m, 'user_code_input_unauthorized');
-        }, [m]),
-        { manualSubmit: v, error: _, submitting: C } = (0, u.c)(o, t, b);
-    return (0, r.jsxs)('div', {
-        className: h.content,
+        b = (0, s.TH)(),
+        v = r.useCallback(() => {
+            (0, u.c$)(b, 'user_code_input_unauthorized');
+        }, [b]),
+        { manualSubmit: _, error: g, submitting: C } = (0, f.c)(o, t, v);
+    return (0, a.jsxs)('div', {
+        className: x.content,
         children: [
-            (0, r.jsxs)('div', {
-                className: h.innerContent,
+            (0, a.jsxs)('div', {
+                className: x.innerContent,
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, a.jsx)(d.X6q, {
                         variant: 'heading-xl/extrabold',
-                        className: h.text,
-                        children: p.intl.string(p.t.KYPNUl)
+                        className: x.text,
+                        children: h.intl.string(h.t.KYPNUl)
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: h.text,
-                        children: p.intl.string(p.t.xRHk7e)
+                        className: x.text,
+                        children: h.intl.string(h.t.xRHk7e)
                     }),
-                    (0, r.jsx)(c.oil, {
-                        placeholder: p.intl.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
-                        maxLength: f.A.USER_CODE_LENGTH,
-                        className: h.textInputContainer,
-                        inputClassName: l()(h.textInput, { [h.textInputError]: null != _ }),
+                    (0, a.jsx)(d.oil, {
+                        placeholder: h.intl.formatToPlainString(h.t['0tbz6+'], { number: p.A.USER_CODE_LENGTH }),
+                        maxLength: p.A.USER_CODE_LENGTH,
+                        className: x.textInputContainer,
+                        inputClassName: i()(x.textInput, { [x.textInputError]: null != g }),
                         autoComplete: 'off',
                         autoFocus: !0,
                         value: o,
-                        onChange: x,
-                        error: _
+                        onChange: m,
+                        error: g
                     })
                 ]
             }),
-            (0, r.jsx)(c.zxk, {
+            (0, a.jsx)(c.zx, {
                 fullWidth: !0,
-                color: c.zxk.Colors.BRAND,
-                onClick: v,
+                color: c.zx.Colors.BRAND,
+                onClick: _,
                 submitting: C,
-                disabled: o.length !== f.A.USER_CODE_LENGTH,
-                children: (0, r.jsx)(c.Text, {
+                disabled: o.length !== p.A.USER_CODE_LENGTH,
+                children: (0, a.jsx)(d.Text, {
                     variant: 'text-md/medium',
-                    children: p.intl.string(p.t['3PatS0'])
+                    children: h.intl.string(h.t['3PatS0'])
                 })
             })
         ]

@@ -1,39 +1,39 @@
-(r.d(t, { Z: () => p }), r(388685));
-var n = r(255367),
-    s = r(73800),
-    i = r(120356),
-    l = r.n(i),
-    a = r(481060),
-    o = r(313201),
-    c = r(742458),
-    u = r(766650),
-    d = r(553846),
-    h = r(953100);
+(n.d(t, { Z: () => p }), n(388685));
+var r = n(255367),
+    s = n(73800),
+    i = n(120356),
+    l = n.n(i),
+    a = n(481060),
+    o = n(313201),
+    c = n(742458),
+    u = n(766650),
+    d = n(553846),
+    h = n(953100);
 function p(e) {
-    let { alpha2: t, countryCode: r, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: j, placeholder: v, autoFocus: C, maxLength: N, spellCheck: O, autoComplete: b, autoCapitalize: E, autoCorrect: y, onChange: S, inputClassName: P } = e,
-        T = (0, o.Dt)(),
-        [k, w] = s.useState(!1),
-        A = (0, c.o9)(i, g);
-    return (0, n.jsx)(a.xJW, {
+    let { alpha2: t, countryCode: n, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: j, placeholder: v, autoFocus: C, maxLength: N, spellCheck: O, autoComplete: b, autoCapitalize: y, autoCorrect: E, onChange: S, inputClassName: T } = e,
+        P = (0, o.Dt)(),
+        [w, A] = s.useState(!1),
+        k = (0, c.o9)(i, g);
+    return (0, r.jsx)(a.xJW, {
         title: p,
         error: m,
         className: f,
         required: x,
         tag: 'label',
-        htmlFor: T,
-        children: (0, n.jsxs)('div', {
-            className: l()(h.input, d.input, P, {
+        htmlFor: P,
+        children: (0, r.jsxs)('div', {
+            className: l()(h.input, d.input, T, {
                 [h.error]: null != m,
-                [h.focused]: k
+                [h.focused]: w
             }),
             children: [
-                (0, n.jsx)(u.Z, {
-                    show: A,
+                (0, r.jsx)(u.Z, {
+                    show: k,
                     alpha2: t,
-                    countryCode: r
+                    countryCode: n
                 }),
-                (0, n.jsx)(a.oil, {
-                    id: T,
+                (0, r.jsx)(a.oil, {
+                    id: P,
                     name: 'email',
                     type: i === c.Nz.EMAIL ? 'email' : 'text',
                     value: g,
@@ -42,19 +42,19 @@ function p(e) {
                     'aria-label': p,
                     required: x,
                     onChange: function (e) {
-                        let t = (0, c.o9)(i, e) ? r : '';
+                        let t = (0, c.o9)(i, e) ? n : '';
                         S(e, t);
                     },
                     autoComplete: b,
-                    autoCapitalize: E,
-                    autoCorrect: y,
+                    autoCapitalize: y,
+                    autoCorrect: E,
                     autoFocus: C,
                     maxLength: N,
                     spellCheck: O,
                     className: d.inputWrapper,
                     inputClassName: d.inputField,
-                    onFocus: () => w(!0),
-                    onBlur: () => w(!1)
+                    onFocus: () => A(!0),
+                    onBlur: () => A(!1)
                 })
             ]
         })

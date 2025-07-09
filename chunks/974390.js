@@ -1,7 +1,7 @@
 n.d(t, { h: () => i });
 var r = n(818083),
-    o = n(520278),
-    s = n(46140);
+    s = n(520278),
+    o = n(46140);
 let a = (0, r.B)({
     id: '2025-02_quest_home_static_image',
     kind: 'user',
@@ -21,5 +21,5 @@ let a = (0, r.B)({
     ]
 });
 function i(e, t) {
-    return (0, o.J)(a, s.S7.QUEST_HOME_FORCE_STATIC_IMAGE, e, t);
+    return (0, s.J)(a, o.S7.QUEST_HOME_FORCE_STATIC_IMAGE, e, t);
 }

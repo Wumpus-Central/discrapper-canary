@@ -19,26 +19,26 @@ var i = n(120356),
     N = n(999382),
     f = n(983135),
     S = n(84658),
-    E = n(981631),
-    p = n(388032),
+    p = n(981631),
+    E = n(388032),
     T = n(568614);
 let x = () => [
         {
             emoji: '\uD83E\uDDD9',
-            emojiDescription: p.intl.string(p.t.Jh9uiY),
-            title: p.intl.string(p.t.ATF45u),
+            emojiDescription: E.intl.string(E.t.Jh9uiY),
+            title: E.intl.string(E.t.ATF45u),
             selected: !0
         },
         {
             emoji: '\uD83C\uDFA4',
-            emojiDescription: p.intl.string(p.t['nGt+MT']),
-            title: p.intl.string(p.t['30uo7O']),
+            emojiDescription: E.intl.string(E.t['nGt+MT']),
+            title: E.intl.string(E.t['30uo7O']),
             selected: !1
         },
         {
             emoji: '\uD83D\uDC40',
-            emojiDescription: p.intl.string(p.t.hOMH5u),
-            title: p.intl.string(p.t['5Z5sgo']),
+            emojiDescription: E.intl.string(E.t.hOMH5u),
+            title: E.intl.string(E.t['5Z5sgo']),
             selected: !1
         }
     ],
@@ -50,7 +50,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: p.intl.string(p.t.MXJozM),
+            channel: E.intl.string(E.t.MXJozM),
             selected: !0
         },
         {
@@ -60,7 +60,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: p.intl.string(p.t.Pkj0f3),
+            channel: E.intl.string(E.t.Pkj0f3),
             selected: !0
         },
         {
@@ -70,7 +70,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: p.intl.string(p.t['imVD+v']),
+            channel: E.intl.string(E.t['imVD+v']),
             selected: !1
         },
         {
@@ -80,7 +80,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: p.intl.string(p.t['Pj/Wpq']),
+            channel: E.intl.string(E.t['Pj/Wpq']),
             selected: !0
         }
     ];
@@ -92,20 +92,20 @@ function _(e) {
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-sm/semibold',
                   color: 'header-primary',
-                  children: p.intl.string(p.t.nTI2mZ)
+                  children: E.intl.string(E.t.nTI2mZ)
               })
             : (0, l.jsx)(a.X6q, {
                   variant: 'heading-md/semibold',
-                  children: p.intl.string(p.t.g1OQtr)
+                  children: E.intl.string(E.t.g1OQtr)
               }),
         s = t
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-xxs/normal',
-                  children: p.intl.format(p.t.hGwDPT, {})
+                  children: E.intl.format(E.t.hGwDPT, {})
               })
             : (0, l.jsx)(a.Text, {
                   variant: 'text-xs/normal',
-                  children: p.intl.format(p.t['8XLD3t'], {})
+                  children: E.intl.format(E.t['8XLD3t'], {})
               });
     return (0, l.jsxs)('div', {
         className: r()(T.upsellPreview, T.spacingLarge, { [T.tooltip]: t }),
@@ -152,24 +152,24 @@ function _(e) {
 function j() {
     let e = [
         {
-            message: p.t.FUUXXl,
+            message: E.t.FUUXXl,
             profilePic: 'https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80',
-            adminTitle: p.intl.string(p.t.RZVpur)
+            adminTitle: E.intl.string(E.t.RZVpur)
         },
         {
-            message: p.t.JAXvDQ,
+            message: E.t.JAXvDQ,
             profilePic: 'https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80',
-            adminTitle: p.intl.string(p.t.xyrlg4)
+            adminTitle: E.intl.string(E.t.xyrlg4)
         },
         {
-            message: p.t.Wj9Djo,
+            message: E.t.Wj9Djo,
             profilePic: 'https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80',
-            adminTitle: p.intl.string(p.t['o/LQMj'])
+            adminTitle: E.intl.string(E.t['o/LQMj'])
         },
         {
-            message: p.t.ALsMNT,
+            message: E.t.ALsMNT,
             profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
-            adminTitle: p.intl.string(p.t['uvM+xc'])
+            adminTitle: E.intl.string(E.t['uvM+xc'])
         }
     ];
     return (0, l.jsx)(d.i, { testimonials: e });
@@ -203,22 +203,24 @@ function v() {
                               children: [
                                   (0, l.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
-                                      children: p.intl.string(p.t.GnKOAw)
+                                      children: E.intl.string(E.t.GnKOAw)
                                   }),
                                   (0, l.jsx)(a.Text, {
                                       variant: 'text-md/normal',
-                                      children: p.intl.string(p.t.SJRFJi)
+                                      children: E.intl.string(E.t.SJRFJi)
                                   })
                               ]
                           }),
                           (0, l.jsx)('div', {
                               className: T.upsellButtons,
                               children: (0, l.jsx)(a.zxk, {
+                                  variant: 'primary',
+                                  text: E.intl.string(E.t.RzWDqa),
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
                                           (g.default.track(
-                                              E.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                                              p.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
                                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -267,9 +269,7 @@ function v() {
                                               (0, f.IG)(e, S.PG.LANDING));
                                       }
                                   },
-                                  color: a.zxk.Colors.BRAND,
-                                  disabled: !1,
-                                  children: p.intl.string(p.t.RzWDqa)
+                                  disabled: !1
                               })
                           })
                       ]
@@ -289,11 +289,11 @@ function v() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: p.intl.string(p.t.Z7kqKS)
+                                              children: E.intl.string(E.t.Z7kqKS)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: p.intl.string(p.t.di3UCw)
+                                              children: E.intl.string(E.t.di3UCw)
                                           })
                                       ]
                                   })
@@ -307,11 +307,11 @@ function v() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: p.intl.string(p.t.O4jYEh)
+                                              children: E.intl.string(E.t.O4jYEh)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: p.intl.string(p.t['l/l/Gx'])
+                                              children: E.intl.string(E.t['l/l/Gx'])
                                           })
                                       ]
                                   }),
@@ -322,19 +322,19 @@ function v() {
                                               guildId: e,
                                               welcomeMessage: {
                                                   authorIds: [n.id],
-                                                  message: p.intl.string(p.t.hIWAfn)
+                                                  message: E.intl.string(E.t.hIWAfn)
                                               }
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: p.intl.string(p.t['47zu7O']),
-                                              subtitle: p.intl.string(p.t.amoSNz),
+                                              title: E.intl.string(E.t['47zu7O']),
+                                              subtitle: E.intl.string(E.t.amoSNz),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: p.intl.string(p.t.EZfTKC),
-                                              subtitle: p.intl.string(p.t['/sYelZ']),
+                                              title: E.intl.string(E.t.EZfTKC),
+                                              subtitle: E.intl.string(E.t['/sYelZ']),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
@@ -387,11 +387,11 @@ function v() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: p.intl.string(p.t['3T9aHB'])
+                                              children: E.intl.string(E.t['3T9aHB'])
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: p.intl.string(p.t.dA7Cam)
+                                              children: E.intl.string(E.t.dA7Cam)
                                           })
                                       ]
                                   })

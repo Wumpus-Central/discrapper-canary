@@ -2,26 +2,26 @@ n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(73800),
     s = n(481060),
-    l = n(7093),
-    a = n(101966),
+    a = n(7093),
+    l = n(101966),
     o = n(40347),
     c = n(388032),
     d = n(757020);
 let u = r.lazy(() => n.e('22274').then(n.bind(n, 269792)));
 function m() {
-    let e = (0, a.Z)({ location: 'TenureLevelUpAnimationLazyWrapper' }),
-        t = (0, l.Z)((e) => e.shouldRenderTenureLevelUp),
+    let e = (0, l.Z)({ location: 'TenureLevelUpAnimationLazyWrapper' }),
+        t = (0, a.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, o.Z)();
     return e && t && null != n ? (0, i.jsx)(p, { levelUpData: n }) : null;
 }
 function p(e) {
     let { levelUpData: t } = e,
         n = r.useRef(null),
-        a = r.useCallback(() => {
-            l.Z.setState({ shouldRenderTenureLevelUp: !1 });
+        l = r.useCallback(() => {
+            a.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        r.useEffect(() => a, [a]),
+        r.useEffect(() => l, [l]),
         (0, i.jsx)(s.EqS, {
             containerRef: n,
             children: (0, i.jsxs)('div', {
@@ -36,7 +36,7 @@ function p(e) {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        onClick: a
+                        onClick: l
                     }),
                     (0, i.jsx)(r.Suspense, {
                         fallback: null,

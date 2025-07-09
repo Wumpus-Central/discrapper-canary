@@ -1,6 +1,6 @@
 (n.d(t, {
-    Z: () => P,
-    p: () => R
+    Z: () => w,
+    p: () => P
 }),
     n(953529));
 var r = n(255367),
@@ -9,125 +9,126 @@ var r = n(255367),
     o = n.n(a),
     s = n(442837),
     l = n(780384),
-    c = n(481060),
-    u = n(355467),
-    d = n(37234),
-    f = n(410030),
-    _ = n(174609),
-    p = n(703656),
-    h = n(626135),
-    m = n(74538),
-    g = n(357355),
-    E = n(47280),
-    b = n(639119),
-    y = n(740594),
-    O = n(767714),
-    v = n(302945),
-    I = n(474936),
-    T = n(981631),
-    S = n(388032),
-    A = n(338704),
-    N = n(229191),
-    C = n(308362),
-    R = (function (e) {
+    c = n(755721),
+    u = n(481060),
+    d = n(355467),
+    f = n(37234),
+    _ = n(410030),
+    p = n(174609),
+    h = n(703656),
+    m = n(626135),
+    g = n(74538),
+    E = n(357355),
+    b = n(47280),
+    y = n(639119),
+    O = n(740594),
+    v = n(767714),
+    I = n(302945),
+    T = n(474936),
+    S = n(981631),
+    A = n(388032),
+    N = n(338704),
+    C = n(229191),
+    R = n(308362),
+    P = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
-function P(e) {
-    let { containerContext: t, image: n, title: a, description: R, enableSocialProof: P, analyticsLocationSection: w, upsellViewedTrackingData: D, onClose: L, onDisplay: x, onLearnMore: M, isEmojiPickerOverlay: k = !1 } = e,
-        j = (0, s.e7)([g.Z], () => g.Z.affinities),
-        U = (0, s.e7)([g.Z], () => g.Z.hasFetched);
+function w(e) {
+    let { containerContext: t, image: n, title: a, description: P, enableSocialProof: w, analyticsLocationSection: D, upsellViewedTrackingData: L, onClose: x, onDisplay: M, onLearnMore: k, isEmojiPickerOverlay: j = !1 } = e,
+        U = (0, s.e7)([E.Z], () => E.Z.affinities),
+        G = (0, s.e7)([E.Z], () => E.Z.hasFetched);
     (i.useEffect(() => {
-        !U && P && u.MH();
-    }, [U, P]),
+        !G && w && d.MH();
+    }, [G, w]),
         i.useEffect(() => {
-            (h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, D), null == x || x());
-        }, [x, D]));
-    let G = j.length > 1 && P,
-        B = () => (2 === t ? N.hasTabParentContainer : 1 === t ? N.hasParentContainer : N.noParentContainer),
-        V = () => {
-            (h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: w,
-                location_object: T.qAy.NAVIGATION_LINK
+            (m.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, L), null == M || M());
+        }, [M, L]));
+    let B = U.length > 1 && w,
+        V = () => (2 === t ? C.hasTabParentContainer : 1 === t ? C.hasParentContainer : C.noParentContainer),
+        F = () => {
+            (m.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: D,
+                location_object: S.qAy.NAVIGATION_LINK
             }),
-                null == M || M(),
-                (0, _.Z)(),
-                L(),
-                (0, d.xf)(),
-                (0, p.uL)(T.Z5c.APPLICATION_STORE));
+                null == k || k(),
+                (0, p.Z)(),
+                x(),
+                (0, f.xf)(),
+                (0, h.uL)(S.Z5c.APPLICATION_STORE));
         },
-        F = (0, b.N)(),
-        Z = i.useCallback(() => {
+        Z = (0, y.N)(),
+        H = i.useCallback(() => {
             var e;
-            return null != (e = (0, m.fr)(F)) ? e : S.intl.string(S.t.pj0XBA);
-        }, [F]),
-        H = (0, l.ap)((0, f.ZP)());
-    return (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && k
+            return null != (e = (0, g.fr)(Z)) ? e : A.intl.string(A.t.pj0XBA);
+        }, [Z]),
+        Y = (0, l.ap)((0, _.ZP)());
+    return (0, b.Z)({ location: 'PremiumUpsellPickerOverlay' }) && j
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.ZMr, {
-                      onClick: L,
+                  (0, r.jsx)(u.ZMr, {
+                      onClick: x,
                       isVisible: !0
                   }),
                   (0, r.jsxs)('div', {
-                      className: o()(A.container, B()),
+                      className: o()(N.container, V()),
                       children: [
                           (0, r.jsxs)('div', {
-                              className: A.content,
+                              className: N.content,
                               children: [
-                                  (0, r.jsx)(c.olH, {
-                                      onClick: L,
-                                      className: A.closeButton
+                                  (0, r.jsx)(u.olH, {
+                                      onClick: x,
+                                      className: N.closeButton
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: A.contentContainer,
+                                      className: N.contentContainer,
                                       children: [
                                           (0, r.jsx)('img', {
-                                              className: A.image,
-                                              src: C,
+                                              className: N.image,
+                                              src: R,
                                               alt: 'Nitro Perk'
                                           }),
-                                          (0, r.jsx)(c.X6q, {
-                                              className: A.title,
+                                          (0, r.jsx)(u.X6q, {
+                                              className: N.title,
                                               variant: 'heading-xl/bold',
                                               color: 'header-primary',
                                               children: a
                                           }),
-                                          (0, r.jsx)(c.Text, {
+                                          (0, r.jsx)(u.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-secondary',
-                                              className: A.body,
-                                              children: R
+                                              className: N.body,
+                                              children: P
                                           })
                                       ]
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: A.footer,
+                              className: N.footer,
                               children: (0, r.jsxs)('div', {
-                                  className: A.buttonContainer,
+                                  className: N.buttonContainer,
                                   children: [
-                                      (0, r.jsx)(c.zxk, {
-                                          color: H ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
-                                          look: c.zxk.Looks.LINK,
-                                          onClick: V,
-                                          children: (0, r.jsx)(c.Text, {
+                                      (0, r.jsx)(c.zx, {
+                                          color: Y ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
+                                          look: c.zx.Looks.LINK,
+                                          onClick: F,
+                                          children: (0, r.jsx)(u.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-primary',
-                                              children: S.intl.string(S.t.ZnqyZ2)
+                                              children: A.intl.string(A.t.ZnqyZ2)
                                           })
                                       }),
-                                      (0, r.jsx)(y.Z, {
+                                      (0, r.jsx)(O.Z, {
                                           premiumModalAnalyticsLocation: {
-                                              section: w,
-                                              object: T.qAy.BUTTON_CTA
+                                              section: D,
+                                              object: S.qAy.BUTTON_CTA
                                           },
-                                          subscriptionTier: I.Si.TIER_2,
-                                          color: c.zxk.Colors.CUSTOM,
+                                          subscriptionTier: T.Si.TIER_2,
+                                          color: c.zx.Colors.CUSTOM,
                                           onClick: () => {
-                                              L();
+                                              x();
                                           },
-                                          text: Z(),
+                                          text: H(),
                                           variant: 'expressive'
                                       })
                                   ]
@@ -139,64 +140,64 @@ function P(e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.ZMr, {
-                      onClick: L,
+                  (0, r.jsx)(u.ZMr, {
+                      onClick: x,
                       isVisible: !0
                   }),
                   (0, r.jsxs)('div', {
-                      className: o()(N.container, B()),
+                      className: o()(C.container, V()),
                       children: [
-                          (0, r.jsx)(c.olH, {
-                              onClick: L,
-                              className: N.closeButton
+                          (0, r.jsx)(u.olH, {
+                              onClick: x,
+                              className: C.closeButton
                           }),
                           (0, r.jsxs)('div', {
-                              className: N.contentContainer,
+                              className: C.contentContainer,
                               children: [
                                   (0, r.jsx)('img', {
-                                      className: N.image,
+                                      className: C.image,
                                       width: n.width,
                                       height: n.height,
                                       src: n.url,
                                       alt: 'Nitro Perk'
                                   }),
-                                  (0, r.jsx)(c.X6q, {
-                                      className: o()(N.title, { [N.titleNoSocialProof]: !G }),
+                                  (0, r.jsx)(u.X6q, {
+                                      className: o()(C.title, { [C.titleNoSocialProof]: !B }),
                                       variant: 'heading-xl/bold',
                                       children: a
                                   }),
-                                  G && (0, r.jsx)(v.Z, { affinities: j }),
-                                  (0, r.jsx)(c.Text, {
+                                  B && (0, r.jsx)(I.Z, { affinities: U }),
+                                  (0, r.jsx)(u.Text, {
                                       variant: 'text-sm/medium',
-                                      className: N.body,
-                                      children: R
+                                      className: C.body,
+                                      children: P
                                   })
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: N.ctaContainer,
+                              className: C.ctaContainer,
                               children: [
-                                  (0, r.jsx)(c.zxk, {
-                                      className: N.secondaryCTA,
-                                      size: c.zxk.Sizes.SMALL,
-                                      color: c.zxk.Colors.CUSTOM,
-                                      look: c.zxk.Looks.LINK,
-                                      onClick: V,
-                                      children: S.intl.string(S.t.ZnqyZ2)
+                                  (0, r.jsx)(c.zx, {
+                                      className: C.secondaryCTA,
+                                      size: c.zx.Sizes.SMALL,
+                                      color: c.zx.Colors.CUSTOM,
+                                      look: c.zx.Looks.LINK,
+                                      onClick: F,
+                                      children: A.intl.string(A.t.ZnqyZ2)
                                   }),
-                                  (0, r.jsx)(O.Z, {
+                                  (0, r.jsx)(v.Z, {
                                       showGradient: !0,
                                       premiumModalAnalyticsLocation: {
-                                          section: w,
-                                          object: T.qAy.BUTTON_CTA
+                                          section: D,
+                                          object: S.qAy.BUTTON_CTA
                                       },
-                                      subscriptionTier: I.Si.TIER_2,
-                                      size: c.zxk.Sizes.SMALL,
-                                      color: c.zxk.Colors.CUSTOM,
+                                      subscriptionTier: T.Si.TIER_2,
+                                      size: c.zx.Sizes.SMALL,
+                                      color: c.zx.Colors.CUSTOM,
                                       onClick: () => {
-                                          L();
+                                          x();
                                       },
-                                      textOptions: { textOverride: Z() }
+                                      textOptions: { textOverride: H() }
                                   })
                               ]
                           })

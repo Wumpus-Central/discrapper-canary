@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(392711),
-    l = n(846519),
-    a = n(481060),
+    a = n(846519),
+    l = n(481060),
     o = n(626135),
     c = n(572004),
     d = n(70956),
@@ -15,34 +15,34 @@ let p = d.Z.Millis.SECOND,
     f = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
 function b(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: x = h } = e,
-        [_, E] = r.useState(0),
-        [j, O] = r.useState(!1),
-        [C, S] = r.useState(!1),
-        [v] = r.useState(() => new l.V7()),
-        [T] = r.useState(() => new l.V7());
+        [_, j] = r.useState(0),
+        [E, O] = r.useState(!1),
+        [C, v] = r.useState(!1),
+        [S] = r.useState(() => new a.V7()),
+        [T] = r.useState(() => new a.V7());
     if (
         (r.useEffect(
             () => () => {
-                (v.stop(), T.stop());
+                (S.stop(), T.stop());
             },
-            [v, T]
+            [S, T]
         ),
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
     let N = _ >= f.length - 1,
-        I = N ? a.FGA.RED : a.FGA.GREEN,
-        y = j ? I : a.FGA.PRIMARY,
+        I = N ? l.FGA.RED : l.FGA.GREEN,
+        y = E ? I : l.FGA.PRIMARY,
         A = () => {
-            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), C || E(_ + 1), S(!0), O(!0), v.start(p, () => S(!1)), T.start(g, () => E(0)));
+            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), C || j(_ + 1), v(!0), O(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
         };
-    return (0, i.jsx)(a.ua7, {
+    return (0, i.jsx)(l.ua7, {
         text: (() => {
             var e;
-            if (!j) return t;
+            if (!E) return t;
             let n = (0, s.clamp)(_ - 1, 0, f.length - 1),
                 r = null != (e = f[n]) ? e : f[0];
-            return (0, i.jsx)(a.UkV, {
+            return (0, i.jsx)(l.UkV, {
                 isShaking: N,
                 children: r()
             });
@@ -52,7 +52,7 @@ function b(e) {
         color: y,
         forceOpen: C,
         onAnimationRest: (e, t) => {
-            !C && j && t.phase === u.UkZ.LEAVE && O(!1);
+            !C && E && t.phase === u.UkZ.LEAVE && O(!1);
         },
         children: (e) => {
             var t,
@@ -111,11 +111,11 @@ function b(e) {
                             (null == i || i(), A());
                         },
                         onMouseEnter: () => {
-                            if (!j) {
+                            if (!E) {
                                 null == r || r();
                                 return;
                             }
-                            (v.stop(), S(!1));
+                            (S.stop(), v(!1));
                         }
                     }),
                 Object.getOwnPropertyDescriptors

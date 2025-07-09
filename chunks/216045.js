@@ -1,53 +1,54 @@
-(n.d(t, { Z: () => F }), n(388685));
+(n.d(t, { Z: () => H }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(704215),
     c = n(622535),
-    d = n(481060),
-    u = n(570140),
-    m = n(809206),
-    p = n(497321),
-    g = n(634894),
-    h = n(100527),
-    f = n(906732),
-    b = n(475977),
-    x = n(266454),
-    _ = n(243778),
+    d = n(755721),
+    u = n(481060),
+    m = n(570140),
+    p = n(809206),
+    g = n(497321),
+    h = n(634894),
+    f = n(100527),
+    b = n(906732),
+    x = n(475977),
+    _ = n(266454),
+    j = n(243778),
     E = n(957730),
-    j = n(53691),
-    O = n(267717),
-    C = n(296810),
+    O = n(53691),
+    C = n(267717),
+    v = n(296810),
     S = n(678135),
-    v = n(610794),
-    T = n(935147),
-    N = n(643879),
-    I = n(373230),
-    y = n(726525),
-    A = n(246946),
-    P = n(25990),
-    R = n(594174),
-    D = n(626135),
-    Z = n(74538),
-    w = n(413182),
-    k = n(695346),
-    L = n(265159),
-    B = n(532495),
-    M = n(981631),
-    U = n(921944),
-    V = n(388032),
-    G = n(775274);
-function F() {
+    T = n(610794),
+    N = n(935147),
+    I = n(643879),
+    y = n(373230),
+    A = n(726525),
+    P = n(246946),
+    R = n(25990),
+    D = n(594174),
+    Z = n(626135),
+    w = n(74538),
+    k = n(413182),
+    L = n(695346),
+    B = n(265159),
+    M = n(532495),
+    U = n(981631),
+    V = n(921944),
+    G = n(388032),
+    F = n(775274);
+function H() {
     var e, t;
-    let n = (0, a.e7)([R.default], () => {
-            let e = R.default.getCurrentUser();
-            return (l()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e);
+    let n = (0, l.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
+            return (a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e);
         }),
-        s = (0, a.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        F = (0, a.cj)([P.Z], () => P.Z.getAllPending()),
-        { pendingBio: H, pendingAvatar: z } = F,
+        s = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
+        H = (0, l.cj)([R.Z], () => R.Z.getAllPending()),
+        { pendingBio: z, pendingAvatar: W } = H,
         Y = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -66,49 +67,49 @@ function F() {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(F, ['pendingBio', 'pendingAvatar']),
-        W = (0, N.SD)({
+        })(H, ['pendingBio', 'pendingAvatar']),
+        K = (0, I.SD)({
             userId: n.id,
-            image: z
+            image: W
         }),
-        K = (0, a.e7)([P.Z], () => P.Z.showNotice()),
-        q = k.dN.useSetting() && null != H ? E.ZP.parse(void 0, H).content : H,
-        X = Z.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: Q, newestAnalyticsLocation: J } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
-        $ = (0, I.T)({ location: 'UserSettingsProfileCustomization' }),
-        ee = (0, x.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
-        et = $ && !ee;
+        q = (0, l.e7)([R.Z], () => R.Z.showNotice()),
+        X = L.dN.useSetting() && null != z ? E.ZP.parse(void 0, z).content : z,
+        Q = w.ZP.canUsePremiumProfileCustomization(n),
+        { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, b.ZP)(f.Z.USER_SETTINGS_USER_PROFILE),
+        ee = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
+        et = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        en = ee && !et;
     r.useEffect(() => {
-        et && (0, x.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
-    }, [et]);
-    let [en, ei] = (0, _.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
-        er = en === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
+        en && (0, _.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+    }, [en]);
+    let [ei, er] = (0, j.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
+        es = ei === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     (r.useEffect(() => {
-        er && ei(U.L.TAKE_ACTION);
-    }, [er, ei]),
-        r.useEffect(() => () => u.Z.wait(m.W3), []));
-    let es = 'UserSettingsProfileCustomization';
-    ((0, g.j)({
-        location: es + ' auto on',
+        es && er(V.L.TAKE_ACTION);
+    }, [es, er]),
+        r.useEffect(() => () => m.Z.wait(p.W3), []));
+    let ea = 'UserSettingsProfileCustomization';
+    ((0, h.j)({
+        location: ea + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, g.j)({
-            location: es + ' auto off',
+        (0, h.j)({
+            location: ea + ' auto off',
             autoTrackExposure: !1
         }));
-    let [el, ea] = r.useState(!1),
-        { showRedesign: eo } = w.b.useExperiment({ location: 'profile customization' }),
-        ec = (0, y.q)({ location: 'UserSettingsProfileCustomization' }),
-        ed = !X,
-        eu = r.useRef(null);
+    let [el, eo] = r.useState(!1),
+        { showRedesign: ec } = k.b.useExperiment({ location: 'profile customization' }),
+        ed = (0, A.q)({ location: 'UserSettingsProfileCustomization' }),
+        eu = !Q,
+        em = r.useRef(null);
     return s
-        ? (0, i.jsx)(p.Z, {})
-        : (0, i.jsxs)(f.Gt, {
-              value: Q,
+        ? (0, i.jsx)(g.Z, {})
+        : (0, i.jsxs)(b.Gt, {
+              value: J,
               children: [
-                  (0, i.jsx)(b.Z, {}),
-                  (0, i.jsx)(C.Z, {
-                      showViewFullProfileButton: ec,
+                  (0, i.jsx)(x.Z, {}),
+                  (0, i.jsx)(v.Z, {
+                      showViewFullProfileButton: ed,
                       profilePreview: (0, i.jsx)(
                           S.Z,
                           ((e = (function (e) {
@@ -138,16 +139,16 @@ function F() {
                           })(
                               {
                                   user: n,
-                                  canUsePremiumCustomization: X,
-                                  onUpsellClick: L.Z,
-                                  pendingBio: q
+                                  canUsePremiumCustomization: Q,
+                                  onUpsellClick: B.Z,
+                                  pendingBio: X
                               },
                               Y
                           )),
                           (t = t =
                               {
-                                  pendingAvatar: W,
-                                  showViewFullProfileButton: ec,
+                                  pendingAvatar: K,
+                                  showViewFullProfileButton: ed,
                                   showNameplatePreview: !0
                               }),
                           Object.getOwnPropertyDescriptors
@@ -164,48 +165,48 @@ function F() {
                                 }),
                           e)
                       ),
-                      children: (0, i.jsx)(B.Z, {})
+                      children: (0, i.jsx)(M.Z, {})
                   }),
-                  eo && (0, i.jsx)(v.Z, {}),
+                  ec && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
-                      innerRef: eu,
-                      onChange: (e) => ea(e),
+                      innerRef: em,
+                      onChange: (e) => eo(e),
                       threshold: 0.25,
-                      active: ed,
+                      active: eu,
                       children: (0, i.jsx)('div', {
-                          ref: eu,
-                          children: (0, i.jsx)(T.Z, {
+                          ref: em,
+                          children: (0, i.jsx)(N.Z, {
                               user: n,
-                              shouldShow: ed,
+                              shouldShow: eu,
                               isVisible: el
                           })
                       })
                   }),
-                  ed &&
-                      !K &&
-                      (0, i.jsx)(j.p, {
-                          className: G.floatingNitroUpsell,
-                          showUpsell: ed && !el,
-                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: J }) }),
+                  eu &&
+                      !q &&
+                      (0, i.jsx)(O.p, {
+                          className: F.floatingNitroUpsell,
+                          showUpsell: eu && !el,
+                          text: G.intl.format(G.t.TmfgIy, { onClick: () => (0, C.y)({ analyticsSource: $ }) }),
                           textVariant: 'heading-md/medium',
-                          button: (0, i.jsxs)(d.gtL, {
-                              className: G.floatingNitroButton,
-                              innerClassName: G.floatingNitroButtonInner,
+                          button: (0, i.jsxs)(u.gtL, {
+                              className: F.floatingNitroButton,
+                              innerClassName: F.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  (D.default.track(M.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == eu || null == (e = eu.current) || e.scrollIntoView({ behavior: 'smooth' }));
+                                  (Z.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == em || null == (e = em.current) || e.scrollIntoView({ behavior: 'smooth' }));
                               },
-                              color: d.zxk.Colors.GREEN,
-                              size: d.PhG.MEDIUM,
+                              color: d.zx.Colors.GREEN,
+                              size: d.Ph.MEDIUM,
                               children: [
-                                  (0, i.jsx)(d.SrA, {
+                                  (0, i.jsx)(u.SrA, {
                                       size: 'sm',
                                       color: 'currentColor'
                                   }),
-                                  (0, i.jsx)(d.Text, {
+                                  (0, i.jsx)(u.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: V.intl.string(V.t.uw9zIy)
+                                      children: G.intl.string(G.t.uw9zIy)
                                   })
                               ]
                           })

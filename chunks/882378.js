@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(952265),
-    a = n(481060),
+    a = n(952265),
+    o = n(481060),
     s = n(493773),
     c = n(378298),
     u = n(513646),
@@ -20,7 +20,7 @@ let y = i.memo(function (e) {
         y = (0, u.h)(t.id),
         C = (0, d.o)(t.id),
         x = (0, p.M)(t.id),
-        v = (0, o.f9)(),
+        v = (0, a.f9)(),
         O = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         j = i.useCallback(() => (C ? b.intl.string(b.t['16QyDg']) : null != x ? b.intl.string(b.t.kCN9i4) : null), [C, x]),
         E = i.useMemo(() => (C || null != x) && !v && !O, [C, x, v, O]),
@@ -28,7 +28,7 @@ let y = i.memo(function (e) {
     (i.useEffect(() => {
         (null != x &&
             null != y &&
-            (a.uvj.announce(b.intl.string(b.t.acsXuL)),
+            (o.uvj.announce(b.intl.string(b.t.acsXuL)),
             setTimeout(() => {
                 (0, c.T)(t.id, [x.id]);
             }, 5000),
@@ -41,7 +41,7 @@ let y = i.memo(function (e) {
                 viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
             })),
             C &&
-                (a.uvj.announce(b.intl.string(b.t['1dxCqK'])),
+                (o.uvj.announce(b.intl.string(b.t['1dxCqK'])),
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
                 }, 5000)));
@@ -64,7 +64,7 @@ let y = i.memo(function (e) {
     let P = i.useCallback(() => {
         (null != x && (0, c.T)(t.id, [x.id]),
             null != y &&
-                ((0, a.ZDy)(
+                ((0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                         return (n) => {
@@ -92,16 +92,16 @@ let y = i.memo(function (e) {
     }, [x, y, t]);
     return null == y
         ? null
-        : (0, r.jsx)(a.ua7, {
+        : (0, r.jsx)(o.ua7, {
               forceOpen: E,
               text: S,
-              color: a.FGA.BRAND,
+              color: o.FGA.BRAND,
               position: 'bottom',
               tooltipClassName: _.tooltip,
               tooltipContentClassName: _.tooltipContent,
               children: () =>
                   (0, r.jsx)(m.ZP.Icon, {
-                      icon: a.b7C,
+                      icon: o.b7C,
                       onClick: P,
                       tooltip: b.intl.string(b.t.rpc2qq),
                       tooltipDisabled: null != x

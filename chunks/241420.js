@@ -59,8 +59,9 @@ function g(e) {
             }),
             (0, a.jsx)(r.mzw, {
                 children: (0, a.jsx)(r.zxk, {
-                    onClick: () => i(),
-                    children: d.intl.string(d.t.i4jeWV)
+                    variant: 'primary',
+                    text: d.intl.string(d.t.i4jeWV),
+                    onClick: () => i()
                 })
             })
         ]

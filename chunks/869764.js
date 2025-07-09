@@ -19,8 +19,8 @@ var l = n(255367),
     N = n(768581),
     f = n(630388),
     S = n(526120),
-    E = n(563534),
-    p = n(846121),
+    p = n(563534),
+    E = n(846121),
     T = n(216701),
     x = n(981631),
     O = n(372897),
@@ -118,19 +118,19 @@ function b(e) {
     let { action: n, completed: r } = e,
         { channelId: s, title: m, emoji: I, icon: g } = n,
         { id: N, name: f } = null != I ? I : {},
-        E = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
-        p = (0, c.ZP)(E, !0),
-        T = (0, a.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, E)),
+        p = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
+        E = (0, c.ZP)(p, !0),
+        T = (0, a.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, p)),
         O = i.useMemo(() => {
-            if (null != E) return () => (0, S.gp)(E.guild_id, E.id);
-        }, [E]);
-    if (null == E || !T) return null;
-    let _ = null != (t = (0, d.KS)(E)) ? t : o.VL1;
+            if (null != p) return () => (0, S.gp)(p.guild_id, p.id);
+        }, [p]);
+    if (null == p || !T) return null;
+    let _ = null != (t = (0, d.KS)(p)) ? t : o.VL1;
     return (0, l.jsx)(v, {
         variant: 'channel',
         channelId: s,
         title: m,
-        channelName: p,
+        channelName: E,
         emojiId: N,
         emojiName: f,
         icon: g,
@@ -141,8 +141,8 @@ function b(e) {
 }
 function D(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([E.Z], () => E.Z.getNewMemberActions(t), [t]),
-        r = (0, a.e7)([p.Z], () => p.Z.getCompletedActions(t)),
+        n = (0, a.e7)([p.Z], () => p.Z.getNewMemberActions(t), [t]),
+        r = (0, a.e7)([E.Z], () => E.Z.getCompletedActions(t)),
         c = (0, a.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
         d = (0, a.e7)([I.Z], () => I.Z.getGuild(t));
     i.useEffect(() => {

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(524437),
     s = n(481060),
-    l = n(63063),
-    a = n(78451),
+    a = n(63063),
+    l = n(78451),
     o = n(695346),
     c = n(838436),
     d = n(973005),
@@ -22,13 +22,13 @@ function h() {
         children: [
             (0, i.jsx)(c.H, {
                 header: p.intl.string(p.t.tiCXaG),
-                description: p.intl.format(p.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
+                description: p.intl.format(p.t.RvjRRE, { appealLink: a.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, i.jsx)(s.FXm, {
                 className: g.radioGroup,
                 radioItemClassName: g.radioGroupItem,
                 value: h,
-                options: (0, a.c7)(),
+                options: (0, l.c7)(),
                 onChange: (e) => {
                     let { value: t } = e;
                     return o.Xr.updateSetting(t);

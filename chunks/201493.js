@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(570140),
+    a = n(481060),
+    o = n(570140),
     s = n(45114),
     c = n(147754),
     u = n(306680),
@@ -45,7 +45,7 @@ let j = (e) => {
         () => () => {
             let e = u.ZP.lastMessageId(j.id);
             null != e &&
-                a.Z.wait(() => {
+                o.Z.wait(() => {
                     (0, s.In)(
                         j.id,
                         {
@@ -73,9 +73,9 @@ let j = (e) => {
                 searchResults: f.Z.getSearchResults(j.id, e)
             };
         }),
-        [k, M] = i.useState(A),
-        D = '' !== A,
-        { showHubEventsList: L } = c.Z.useExperiment(
+        [M, D] = i.useState(A),
+        L = '' !== A,
+        { showHubEventsList: k } = c.Z.useExperiment(
             {
                 guildId: null != (t = E.id) ? t : '',
                 location: '6f7fb0_1'
@@ -84,7 +84,7 @@ let j = (e) => {
         ),
         U = {
             mostRecentQuery: A,
-            showHubEventsList: L
+            showHubEventsList: k
         },
         B = i.useRef(U);
     (i.useEffect(() => {
@@ -92,7 +92,7 @@ let j = (e) => {
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            (h.c$(j.id), h.YZ(j.id), t && p.c(j.id), M(e));
+            (h.c$(j.id), h.YZ(j.id), t && p.c(j.id), D(e));
         }, [j.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -103,7 +103,7 @@ let j = (e) => {
         }, [j.id, E.id, S]));
     let F = (0, g.G)(j)
             ? () => {
-                  (0, o.ZDy)(async () => {
+                  (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
                       return (t) => {
                           var n, i;
@@ -160,21 +160,21 @@ let j = (e) => {
               }
             : void 0,
         H = (e) => {
-            0 !== k.trim().length &&
+            0 !== M.trim().length &&
                 e.charCode === v.yXg.ENTER &&
-                (h.Rq(j.id, k),
+                (h.Rq(j.id, M),
                 d.default.track(v.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: j.id,
                     directory_guild_id: E.id
                 }));
         },
         G = () => {
-            (M(''), h.So(j.id));
+            (D(''), h.So(j.id));
         };
-    return D
+    return L
         ? (0, r.jsx)(C.Z, {
-              searchQuery: k,
-              setSearchQuery: M,
+              searchQuery: M,
+              setSearchQuery: D,
               mostRecentQuery: A,
               handleSearchKeyPress: H,
               handleClearSearch: G,
@@ -185,7 +185,7 @@ let j = (e) => {
         : null == T && null == S
           ? (0, r.jsx)('div', {
                 className: O.pageContainer,
-                children: (0, r.jsx)(o.$jN, { className: O.spinner })
+                children: (0, r.jsx)(a.$jN, { className: O.spinner })
             })
           : (null == T ? void 0 : T.length) === 0 && null == S
             ? (0, r.jsx)('div', {
@@ -197,8 +197,8 @@ let j = (e) => {
               })
             : (0, r.jsx)(_.Z, {
                   channel: j,
-                  searchQuery: k,
-                  setSearchQuery: M,
+                  searchQuery: M,
+                  setSearchQuery: D,
                   handleSearchKeyPress: H,
                   handleClearSearch: G,
                   handleCreateOrAddGuild: F,

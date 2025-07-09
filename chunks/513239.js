@@ -1,57 +1,58 @@
-n.d(e, { default: () => m });
+n.d(e, { default: () => x });
 var s = n(255367);
 n(73800);
 var a = n(780384),
-    i = n(481060),
-    c = n(410030),
-    l = n(313201),
-    o = n(388032),
-    r = n(695357),
-    d = n(167969),
-    u = n(557256);
-function m(t) {
+    i = n(755721),
+    c = n(481060),
+    l = n(410030),
+    o = n(313201),
+    r = n(388032),
+    d = n(695357),
+    u = n(167969),
+    m = n(557256);
+function x(t) {
     let { onClose: e, transitionState: n } = t,
-        m = (0, l.Dt)(),
-        x = (0, a.wj)((0, c.ZP)());
-    return (0, s.jsxs)(i.Y0X, {
+        x = (0, o.Dt)(),
+        h = (0, a.wj)((0, l.ZP)());
+    return (0, s.jsxs)(c.Y0X, {
         transitionState: n,
-        'aria-labelledby': m,
-        size: i.CgR.SMALL,
+        'aria-labelledby': x,
+        size: c.CgR.SMALL,
         parentComponent: 'UnavailableGuildProductModal',
         children: [
-            (0, s.jsxs)(i.hzk, {
-                className: r.content,
+            (0, s.jsxs)(c.hzk, {
+                className: d.content,
                 children: [
-                    (0, s.jsx)(i.olH, {
-                        className: r.closeButton,
+                    (0, s.jsx)(c.olH, {
+                        className: d.closeButton,
                         onClick: e
                     }),
                     (0, s.jsx)('img', {
-                        className: r.image,
-                        src: x ? d : u,
+                        className: d.image,
+                        src: h ? u : m,
                         alt: ''
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, s.jsx)(c.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
-                        className: r.title,
-                        children: o.intl.string(o.t.wLrh09)
+                        className: d.title,
+                        children: r.intl.string(r.t.wLrh09)
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, s.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: r.body,
-                        children: o.intl.string(o.t.DW9yJi)
+                        className: d.body,
+                        children: r.intl.string(r.t.DW9yJi)
                     })
                 ]
             }),
-            (0, s.jsx)(i.mzw, {
-                children: (0, s.jsx)(i.zxk, {
-                    className: r.button,
-                    color: i.zxk.Colors.BRAND,
+            (0, s.jsx)(c.mzw, {
+                children: (0, s.jsx)(i.zx, {
+                    className: d.button,
+                    color: i.zx.Colors.BRAND,
                     onClick: e,
-                    size: i.zxk.Sizes.LARGE,
-                    children: o.intl.string(o.t.BddRzc)
+                    size: i.zx.Sizes.LARGE,
+                    children: r.intl.string(r.t.BddRzc)
                 })
             })
         ]

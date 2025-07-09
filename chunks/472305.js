@@ -1,8 +1,8 @@
 e.d(n, {
-    F9: () => l,
+    F9: () => a,
     Qv: () => i,
     pL: () => s
 });
 let s = 'example.com',
     i = (t) => '_discord.'.concat(t),
-    l = (t) => 'https://'.concat(t, '/.well-known/discord');
+    a = (t) => 'https://'.concat(t, '/.well-known/discord');

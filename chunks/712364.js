@@ -112,21 +112,24 @@ class f extends (r = a.PureComponent) {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(l.mzw, {
-                        children: [
-                            (0, i.jsx)(l.zxk, {
-                                type: 'submit',
-                                disabled: d || 0 === g.length,
-                                children: null != n ? n : c.intl.string(c.t['cY+Ooa'])
-                            }),
-                            (0, i.jsx)(l.zxk, {
-                                onClick: this.handleCancel,
-                                disabled: d,
-                                look: l.zxk.Looks.LINK,
-                                color: l.zxk.Colors.PRIMARY,
-                                children: c.intl.string(c.t['ETE/oK'])
-                            })
-                        ]
+                    (0, i.jsx)(l.mzw, {
+                        children: (0, i.jsxs)(l.hE2, {
+                            direction: 'horizontal-reverse',
+                            children: [
+                                (0, i.jsx)(l.zxk, {
+                                    variant: 'primary',
+                                    text: null != n ? n : c.intl.string(c.t['cY+Ooa']),
+                                    type: 'submit',
+                                    disabled: d || 0 === g.length
+                                }),
+                                (0, i.jsx)(l.zxk, {
+                                    variant: 'secondary',
+                                    text: c.intl.string(c.t['ETE/oK']),
+                                    onClick: this.handleCancel,
+                                    disabled: d
+                                })
+                            ]
+                        })
                     })
                 ]
             })

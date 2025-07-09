@@ -9,10 +9,10 @@ var l = n(255367),
     u = n(430824),
     d = n(594174),
     x = n(236373),
-    g = n(230900),
-    m = n(405613),
-    h = n(460838),
-    v = n(388032),
+    m = n(230900),
+    g = n(405613),
+    v = n(460838),
+    h = n(388032),
     f = n(237466);
 function p(e) {
     var t, n;
@@ -21,14 +21,14 @@ function p(e) {
         { channel_id: O, name: N, image: C, description: S } = E,
         T = (0, i.e7)([c.Z], () => c.Z.getChannel(O), [O]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(p), [p]),
-        P = (0, g.cS)(E),
+        P = (0, m.cS)(E),
         Z = (0, i.e7)([d.default], () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()), [j.creatorId]),
         w = (0, i.e7)([o.Z], () => o.Z.isLurking(p), [p]),
         D = (0, s.KS)(T, I);
     return (0, l.jsxs)('div', {
         className: f.content,
         children: [
-            (0, l.jsx)(h.Z, {
+            (0, l.jsx)(v.Z, {
                 className: f.previewCard,
                 guild: I,
                 channel: T,
@@ -36,7 +36,7 @@ function p(e) {
                 creator: Z,
                 name: N,
                 description: S,
-                imageSource: ((n = (0, x.Gb)(j, p, y)), null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, m.Z)(n)),
+                imageSource: ((n = (0, x.Gb)(j, p, y)), null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
                 speakers: [],
@@ -50,7 +50,7 @@ function p(e) {
                 children: [
                     (0, l.jsx)(a.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: v.intl.string(v.t.yBsFEx)
+                        children: h.intl.string(h.t.yBsFEx)
                     }),
                     (0, l.jsx)(a.Text, {
                         color: 'header-secondary',
@@ -58,8 +58,8 @@ function p(e) {
                         className: f.subheader,
                         children:
                             null != location
-                                ? v.intl.string(v.t.KDPFi4)
-                                : v.intl.format(v.t.f55NX1, {
+                                ? h.intl.string(h.t.KDPFi4)
+                                : h.intl.format(h.t.f55NX1, {
                                       channelName: null != (t = null == T ? void 0 : T.name) ? t : '',
                                       channelHook: () => {
                                           var e;

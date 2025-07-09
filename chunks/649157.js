@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(153867),
+    a = n(481060),
+    l = n(153867),
     o = n(706454),
     c = n(388032),
     d = n(353857),
@@ -89,15 +89,15 @@ function m() {
         ),
         g = r.useCallback((e) => {
             let { value: t } = e;
-            (m(t), u.nextTick(() => a.ZP.updateLocale(t)));
+            (m(t), u.nextTick(() => l.ZP.updateLocale(t)));
         }, []);
-    return (0, i.jsx)(l.hjN, {
-        tag: l.RB0.H1,
+    return (0, i.jsx)(a.hjN, {
+        tag: a.RB0.H1,
         title: c.intl.string(c.t.IHMsPj),
-        children: (0, i.jsx)(l.hjN, {
-            children: (0, i.jsx)(l.xJW, {
+        children: (0, i.jsx)(a.hjN, {
+            children: (0, i.jsx)(a.xJW, {
                 title: c.intl.string(c.t['mx+sp6']),
-                children: (0, i.jsx)(l.FXm, {
+                children: (0, i.jsx)(a.FXm, {
                     onChange: g,
                     options: p,
                     value: t

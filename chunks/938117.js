@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(2052),
+    a = n(481060),
+    l = n(2052),
     o = n(594174),
     c = n(74538),
     d = n(716161),
@@ -16,8 +16,8 @@ var i = n(255367),
     b = n(981631),
     x = n(869783),
     _ = n(388032),
-    E = n(635968);
-function j(e) {
+    j = n(635968);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -61,7 +61,7 @@ function O(e, t) {
     );
 }
 function C(e) {
-    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
+    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: v, currentDeviceId: S, smallerBackgroundOptions: T, className: N } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, g.Z)(),
@@ -71,10 +71,10 @@ function C(e) {
     }, []);
     let D = (0, s.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
         Z = r.useMemo(() => Object.values(D).filter((e) => e.type === f.xV.BACKGROUND), [D]),
-        w = (0, a.O)(),
+        w = (0, l.O)(),
         k = {
             isVideoBackgroundSupported: P,
-            onSelectBackgroundOption: S,
+            onSelectBackgroundOption: v,
             selectedBackgroundOption: C
         },
         L = r.useRef(k);
@@ -83,24 +83,24 @@ function C(e) {
     }),
         r.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
-            e ? (0, p.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
-        }, [v]));
+            e ? (0, p.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+        }, [S]));
     let B = (e) => {
-        (S(e),
-            (0, p.FU)(e, v, { location: w.location })
+        (v(e),
+            (0, p.FU)(e, S, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    (A(_.intl.string(_.t.ejrSLS)), (0, p.FU)(null, v, { location: w.location }));
+                    (A(_.intl.string(_.t.ejrSLS)), (0, p.FU)(null, S, { location: w.location }));
                 }));
     };
     return P
-        ? (0, i.jsxs)(l.xJW, {
+        ? (0, i.jsxs)(a.xJW, {
               title: _.intl.string(_.t.lZTUPj),
               className: N,
               children: [
                   null != y
-                      ? (0, i.jsx)(l.kzN, {
-                            className: E.videoBackgroundError,
+                      ? (0, i.jsx)(a.kzN, {
+                            className: j.videoBackgroundError,
                             children: y
                         })
                       : null,
@@ -110,14 +110,14 @@ function C(e) {
                       selectedOption: C,
                       onSelectOption: B,
                       onUpsellClick: () => {
-                          (0, l.ZDy)(async () => {
+                          (0, a.ZDy)(async () => {
                               let { default: e } = await n.e('87200').then(n.bind(n, 592163));
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      O(j({}, n), {
+                                      O(E({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: O(j({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: O(E({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

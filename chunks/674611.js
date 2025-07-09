@@ -13,10 +13,9 @@ function u(e) {
             (0, o.e)(n, t);
         }, [n, t]);
     return (0, r.jsx)(a.zxk, {
-        size: a.zxk.Sizes.MEDIUM,
-        color: a.zxk.Colors.PRIMARY,
+        variant: 'secondary',
+        text: c.intl.string(c.t['4q1ElZ']),
         onClick: d,
-        disabled: !u,
-        children: c.intl.string(c.t['4q1ElZ'])
+        disabled: !u
     });
 }

@@ -43,7 +43,7 @@ function D(e, t, n) {
         e
     );
 }
-function k(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function k(e) {
     }
     return e;
 }
-function A(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function A(e, t) {
         e
     );
 }
-function L(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -98,12 +98,12 @@ function L(e, t) {
 }
 let M = i.forwardRef((e, t) => {
     var { onHeaderClick: i, guildId: l, guild: s } = e,
-        a = L(e, ['onHeaderClick', 'guildId', 'guild']);
+        a = k(e, ['onHeaderClick', 'guildId', 'guild']);
     return null == l
         ? null
         : (0, r.jsx)(
               S.Z,
-              A(k({ ref: t }, a), {
+              L(A({ ref: t }, a), {
                   guildId: l,
                   guild: s,
                   onHeaderClick: () => {
@@ -120,7 +120,7 @@ let M = i.forwardRef((e, t) => {
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
-                                      A(k({}, t), {
+                                      L(A({}, t), {
                                           guildId: l,
                                           user: i
                                       })
@@ -135,7 +135,7 @@ let M = i.forwardRef((e, t) => {
                           null != i &&
                           (0, m.jW)(e, async () => {
                               let { default: e } = await n.e('51529').then(n.bind(n, 228620));
-                              return (n) => (null != t.options.channel ? (0, r.jsx)(e, A(k({}, n), { channel: t.options.channel })) : null);
+                              return (n) => (null != t.options.channel ? (0, r.jsx)(e, L(A({}, n), { channel: t.options.channel })) : null);
                           });
                   },
                   onTargetContextMenu: (e) => {
@@ -148,14 +148,14 @@ let M = i.forwardRef((e, t) => {
                               if (null != i && null != s)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e('51529').then(n.bind(n, 228620));
-                                      return (t) => (0, r.jsx)(e, A(k({}, t), { channel: i }));
+                                      return (t) => (0, r.jsx)(e, L(A({}, t), { channel: i }));
                                   });
                               return (0, m.jW)(e, async () => {
                                   let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          A(k({}, n), {
+                                          L(A({}, n), {
                                               id: t.targetId,
                                               label: P.intl.string(P.t.rCaznZ)
                                           })
@@ -169,7 +169,7 @@ let M = i.forwardRef((e, t) => {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              A(k({}, t), {
+                                              L(A({}, t), {
                                                   guildId: l,
                                                   user: o
                                               })
@@ -193,10 +193,10 @@ function G(e) {
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var { ref: i } = e,
-                    a = L(e, ['ref']);
+                    a = k(e, ['ref']);
                 return (0, r.jsx)(
                     'div',
-                    A(k({ ref: i }, a), {
+                    L(A({ ref: i }, a), {
                         className: w.list,
                         children: t.map((e) => {
                             let t = s === e.id,
@@ -526,11 +526,14 @@ class U extends i.PureComponent {
             D(this, 'renderLoadMore', () => {
                 let { showLoadMore: e, hasOlderLogs: t, hide: n } = this.props;
                 if (e && t && !n)
-                    return (0, r.jsx)(d.zxk, {
-                        color: d.zxk.Colors.PRIMARY,
+                    return (0, r.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: w.loadMore,
-                        onClick: this.handleFetchNextPage,
-                        children: P.intl.string(P.t['Q/LSXl'])
+                        children: (0, r.jsx)(d.zxk, {
+                            variant: 'secondary',
+                            text: P.intl.string(P.t['Q/LSXl']),
+                            onClick: this.handleFetchNextPage
+                        })
                     });
             }),
             D(this, 'handleFilterActionChange', (e) => {

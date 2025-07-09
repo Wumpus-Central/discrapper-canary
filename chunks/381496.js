@@ -1,8 +1,8 @@
-n.d(t, { j: () => l });
+n.d(t, { j: () => a });
 var i = n(544891),
     r = n(570140),
     s = n(981631);
-let l = () =>
+let a = () =>
     i.tn
         .get({
             url: s.ANM.GUILD_AFFINITIES,

@@ -165,9 +165,9 @@ function h(e) {
         }),
         N = c > 1,
         I = w === p.gH.LOADING,
-        [T, k] = l.useState(!1),
-        [Z, L] = l.useState(() => new Set(r.filter((e) => e.default).map((e) => e.value))),
-        [D, R] = l.useState(Z),
+        [T, Z] = l.useState(!1),
+        [k, L] = l.useState(() => new Set(r.filter((e) => e.default).map((e) => e.value))),
+        [D, R] = l.useState(k),
         A = l.useMemo(() => r.some((e) => null != e.emoji), [r]);
     l.useEffect(() => {
         if ((null == x ? void 0 : x.type) === s.re.STRING_SELECT) {
@@ -179,20 +179,20 @@ function h(e) {
         }
     }, [i, P, x]);
     let _ = l.useCallback(() => {
-        D !== Z &&
+        D !== k &&
             S({
                 type: s.re.STRING_SELECT,
-                values: Array.from(Z)
+                values: Array.from(k)
             }) &&
-            R(Z);
-    }, [Z, D, R, S]);
+            R(k);
+    }, [k, D, R, S]);
     l.useEffect(() => {
-        !T && ((Z.size === D.size && Array.from(D).every((e) => Z.has(e))) || _());
-    }, [T, Z, D, _]);
+        !T && ((k.size === D.size && Array.from(D).every((e) => k.has(e))) || _());
+    }, [T, k, D, _]);
     let M = a.UNb;
     N ? (M = a.gzz) : 0 === h && (M = a.s6k);
     let U = (0, a.cYr)({
-        value: Z,
+        value: k,
         onChange: (e) => L(e),
         onSelectInteraction: M
     });
@@ -207,10 +207,10 @@ function h(e) {
                             isProcessing: I,
                             isDisabled: v || w === p.gH.DISABLED || C,
                             className: b.select,
-                            options: r.map((e) => O(m({}, e), { disabled: N && !Z.has(e.value) && Z.size === c })),
+                            options: r.map((e) => O(m({}, e), { disabled: N && !k.has(e.value) && k.size === c })),
                             placeholder: null != o ? o : f.intl.string(f.t.Otr6W1),
-                            onClose: () => k(!1),
-                            onOpen: () => k(!0),
+                            onClose: () => Z(!1),
+                            onOpen: () => Z(!0),
                             maxVisibleItems: 5,
                             closeOnSelect: !N,
                             optionClassName: b.selectOption,
@@ -218,7 +218,7 @@ function h(e) {
                                 (0, n.jsx)(
                                     y,
                                     O(m({}, e), {
-                                        isDisabled: N && !Z.has(e.value) && Z.size === c,
+                                        isDisabled: N && !k.has(e.value) && k.size === c,
                                         isOffset: A
                                     })
                                 ),

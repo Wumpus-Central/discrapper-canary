@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(592125),
     _ = n(699516),
     d = n(594174),
-    A = n(626135),
-    f = n(33194),
+    f = n(626135),
+    A = n(33194),
     E = n(343544),
     I = n(14251),
     g = n(110223),
@@ -24,7 +24,7 @@ function h(e) {
         L = (0, a.e7)([u.Z], () => u.Z.getChannel(t));
     if (
         ((0, c.zq)(() => {
-            p.current || (0, f.g6)(t);
+            p.current || (0, A.g6)(t);
         }),
         null == d.default.getUser(n))
     )
@@ -58,8 +58,8 @@ function h(e) {
         onDismissAndStay: () => {
             ((p.current = !0),
                 x(),
-                (0, f.g6)(t),
-                A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                (0, A.g6)(t),
+                f.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: g.q.CLICK_TO_STAY,
                     channel_id: t,
                     blocked_user_ids: O ? [n] : [],
@@ -71,7 +71,7 @@ function h(e) {
             ((p.current = !0),
                 x(),
                 o.default.disconnect(),
-                A.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                f.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: g.q.CLICK_TO_LEAVE,
                     channel_id: t,
                     blocked_user_ids: O ? [n] : [],

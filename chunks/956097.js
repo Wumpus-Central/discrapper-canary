@@ -2,8 +2,8 @@
 var i,
     r,
     s,
-    l = n(442837),
-    a = n(544891),
+    a = n(442837),
+    l = n(544891),
     o = n(570140),
     c = n(668781),
     d = n(358085),
@@ -13,7 +13,7 @@ var i,
 let g = { status: '' },
     h = [],
     f = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
-class b extends (i = l.ZP.Store) {
+class b extends (i = a.ZP.Store) {
     initialize() {
         (this.updateState(), this.addListener());
     }
@@ -71,7 +71,7 @@ class b extends (i = l.ZP.Store) {
             let t = await this.runCommand('registration', 'show');
             if (((null == t ? void 0 : t.code) === 'MissingRegistration' && (await this.runCommand('registration', 'new'), (t = await this.runCommand('registration', 'show'))), (null == t || null == (e = t.account) ? void 0 : e.type) === 'free' && m.Z.getCurrentConfig({ location: 'configureLicense' }).plus)) {
                 let { key: e } = (
-                    await a.tn.get({
+                    await l.tn.get({
                         url: p.ANM.USER_WARP_LICENSE,
                         oldFormErrors: !0,
                         rejectWithError: !0

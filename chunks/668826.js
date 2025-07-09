@@ -1,5 +1,5 @@
 (n.d(t, {
-    KH: () => a,
+    KH: () => l,
     TD: () => d,
     YM: () => h,
     Z_: () => c,
@@ -13,8 +13,8 @@
 var i = n(544891),
     r = n(570140),
     s = n(120421),
-    l = n(981631);
-function a(e, t) {
+    a = n(981631);
+function l(e, t) {
     return r.Z.dispatch({
         type: 'CLICKER_GAME_ADD_POINTS',
         numPoints: t,
@@ -66,7 +66,7 @@ async function h(e) {
     r.Z.dispatch({ type: 'CLICKER_GAME_REDEEM_PRIZE_START' });
     try {
         (await i.tn.post({
-            url: l.ANM.HOLIDAY_REDEEM_PRIZE,
+            url: a.ANM.HOLIDAY_REDEEM_PRIZE,
             body: { prize_hash: e.id.split('').reduce((e, t) => e + Number.parseInt(t), 0) },
             rejectWithError: !0
         }),

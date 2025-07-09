@@ -35,11 +35,11 @@ function f(e) {
             (0, r.jsx)('div', {
                 className: m.actions,
                 children: (0, r.jsx)(a.zxk, {
-                    color: a.zxk.Colors.PRIMARY,
+                    variant: 'secondary',
+                    text: p.intl.string(p.t.zdBCIi),
                     onClick: () => {
                         s ? (0, u.z$)(t) : (0, u.XP)(i.guild_id, i.id, t.id);
-                    },
-                    children: p.intl.string(p.t.zdBCIi)
+                    }
                 })
             })
         ]

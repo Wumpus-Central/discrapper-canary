@@ -2,8 +2,8 @@ n.d(t, { Y: () => u });
 var i = n(255367),
     r = n(120356),
     s = n.n(r),
-    l = n(756715),
-    a = n(481060),
+    a = n(756715),
+    l = n(481060),
     o = n(388032),
     c = n(669546);
 let d = (e) => {
@@ -26,7 +26,7 @@ function u(e) {
             (0, i.jsxs)('div', {
                 children: [
                     null != o &&
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-xs/bold',
                             className: s()(
                                 c.badge,
@@ -45,7 +45,7 @@ function u(e) {
                             ),
                             children: d(o).toUpperCase()
                         }),
-                    (0, i.jsx)(a.X6q, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
                         className: c.title,
                         children: n
@@ -54,17 +54,17 @@ function u(e) {
             }),
             null != r &&
                 '' !== r &&
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     className: c.headerBody,
                     children: r
                 }),
             null != m &&
-                (0, i.jsx)(l.Anchor, {
+                (0, i.jsx)(a.Anchor, {
                     href: m.link,
                     target: p ? '_blank' : void 0,
                     rel: p ? 'noopener noreferrer' : void 0,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         className: c.footerLink,
                         children: m.text

@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    o = n(399606),
     s = n(704215),
     c = n(481060),
     u = n(493773),
@@ -43,8 +43,8 @@ function C(e) {
 }
 function x(e) {
     let { channel: t } = e,
-        l = (0, a.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
-        [o, d] = (0, i.useState)(!1),
+        l = (0, o.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
+        [a, d] = (0, i.useState)(!1),
         [h, _] = (0, i.useState)(!1),
         y = (0, g.bK)(),
         [x, O] = (0, i.useState)(!1);
@@ -53,12 +53,12 @@ function x(e) {
     }),
         (0, g.Uu)(t),
         (function (e) {
-            let t = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+            let t = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
                 l = [];
             e.hdStreamingBuyerId !== (null == t ? void 0 : t.id) || e.isHDStreamSplashed || l.push(s.z.HD_STREAMING_POTION_MODAL_UPSELL);
-            let [o, u] = (0, p.US)(l);
+            let [a, u] = (0, p.US)(l);
             (0, i.useEffect)(() => {
-                o === s.z.HD_STREAMING_POTION_MODAL_UPSELL &&
+                a === s.z.HD_STREAMING_POTION_MODAL_UPSELL &&
                     (0, c.ZDy)(async () => {
                         let { default: t } = await n.e('88452').then(n.bind(n, 552394));
                         return (n) =>
@@ -73,7 +73,7 @@ function x(e) {
                                 )
                             );
                     });
-            }, [o, u, e]);
+            }, [a, u, e]);
         })(t));
     let j = () => {
         d(!1);
@@ -95,7 +95,7 @@ function x(e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  o &&
+                  a &&
                       (0, r.jsx)(v, {
                           buyer: l,
                           onEnd: j
@@ -115,7 +115,7 @@ function x(e) {
 function v(e) {
     let { onEnd: t, buyer: n } = e,
         l = (0, i.useRef)(null),
-        a = (0, i.useRef)(null),
+        o = (0, i.useRef)(null),
         [s, u] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         let e = l.current;
@@ -132,7 +132,7 @@ function v(e) {
     });
     let [p, f] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        null != a.current && f(a.current.offsetWidth > 245);
+        null != o.current && f(o.current.offsetWidth > 245);
     }, []);
     let { avatarSrc: m, eventHandlers: g } = (0, h.Z)({
         user: n,
@@ -153,8 +153,8 @@ function v(e) {
                 })
             }),
             (0, r.jsxs)('div', {
-                ref: a,
-                className: o()(y.content, { [y.masked]: s }),
+                ref: o,
+                className: a()(y.content, { [y.masked]: s }),
                 children: [
                     (0, r.jsx)(
                         c.qEK,

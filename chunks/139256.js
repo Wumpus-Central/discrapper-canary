@@ -1,9 +1,9 @@
 (n.d(t, {
     $e: () => w,
-    $w: () => D,
+    $w: () => M,
     Og: () => U,
-    ZY: () => M,
-    sc: () => k,
+    ZY: () => k,
+    sc: () => L,
     zs: () => F
 }),
     n(314940),
@@ -258,7 +258,7 @@ function R(e) {
         shouldRenderAccessory: !1
     });
 }
-function k(e) {
+function L(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(c.Z, {
         className: t,
@@ -267,7 +267,7 @@ function k(e) {
         animated: n.animated
     });
 }
-function L(e, t) {
+function D(e, t) {
     return null != e
         ? (0, r.jsx)('div', {
               className: e,
@@ -275,7 +275,7 @@ function L(e, t) {
           })
         : t;
 }
-function D(e) {
+function M(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
         { message: o } = (0, y.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
@@ -284,7 +284,7 @@ function D(e) {
             return e.id === (null == (n = t.attachmentIds) ? void 0 : n[0]);
         });
         if (null != e)
-            return L(
+            return D(
                 n,
                 (0, r.jsx)(R, {
                     className: i,
@@ -293,9 +293,9 @@ function D(e) {
             );
     }
     return null != t.emoji
-        ? L(
+        ? D(
               n,
-              (0, r.jsx)(k, {
+              (0, r.jsx)(L, {
                   className: l,
                   emoji: t.emoji
               })
@@ -304,7 +304,7 @@ function D(e) {
           ? a
           : null;
 }
-function M(e) {
+function k(e) {
     let { isVictor: t, isExpired: n, size: i, className: l } = e,
         { color: a, backgroundColor: c } = (0, o.EQ)({
             isVictor: t,

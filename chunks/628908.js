@@ -1,23 +1,24 @@
-(n.d(t, { default: () => A }), n(388685));
+(n.d(t, { default: () => F }), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(512722),
     a = n.n(i),
     s = n(442837),
-    l = n(481060),
-    c = n(570140),
-    d = n(816814),
-    u = n(23645),
-    p = n(600164),
-    h = n(454585),
-    _ = n(144114),
-    f = n(607018),
-    E = n(325067),
-    S = n(594174),
-    y = n(981631),
-    b = n(815660),
-    m = n(388032),
-    O = n(664460);
+    l = n(755721),
+    c = n(481060),
+    d = n(570140),
+    u = n(816814),
+    p = n(23645),
+    h = n(600164),
+    _ = n(454585),
+    f = n(144114),
+    E = n(607018),
+    S = n(325067),
+    y = n(594174),
+    b = n(981631),
+    m = n(815660),
+    O = n(388032),
+    g = n(664460);
 function N(e, t, n) {
     return (
         t in e
@@ -47,7 +48,7 @@ function M(e) {
     }
     return e;
 }
-let g = (e) => {
+let C = (e) => {
     var t,
         n,
         { label: o, text: i, children: a } = e,
@@ -71,23 +72,23 @@ let g = (e) => {
             return o;
         })(e, ['label', 'text', 'children']);
     return (0, r.jsxs)(
-        p.Z,
-        ((t = M({ direction: p.Z.Direction.VERTICAL }, s)),
+        h.Z,
+        ((t = M({ direction: h.Z.Direction.VERTICAL }, s)),
         (n = n =
             {
                 children: [
-                    (0, r.jsx)(l.vwX, {
+                    (0, r.jsx)(c.vwX, {
                         tag: 'h2',
                         children: o
                     }),
                     null != i
-                        ? (0, r.jsx)(l.Text, {
+                        ? (0, r.jsx)(c.Text, {
                               variant: 'text-md/normal',
-                              className: O.sectionBody,
+                              className: g.sectionBody,
                               children: i
                           })
                         : null,
-                    (0, r.jsx)(p.Z.Child, {
+                    (0, r.jsx)(h.Z.Child, {
                         wrap: !0,
                         children: a
                     })
@@ -108,112 +109,112 @@ let g = (e) => {
         t)
     );
 };
-class C extends o.PureComponent {
+class A extends o.PureComponent {
     renderSMSSection() {
         let { currentUser: e } = this.props,
             t = null != this.props.currentUser.phone,
-            n = e.hasFlag(y.xW$.MFA_SMS),
-            o = e.hasFlag(y.xW$.PARTNER) || e.hasFlag(y.xW$.STAFF);
+            n = e.hasFlag(b.xW$.MFA_SMS),
+            o = e.hasFlag(b.xW$.PARTNER) || e.hasFlag(b.xW$.STAFF);
         return t
-            ? (0, r.jsxs)(g, {
-                  label: m.intl.string(m.t.DZQe29),
-                  text: m.intl.string(m.t.fspJ4O),
+            ? (0, r.jsxs)(C, {
+                  label: O.intl.string(O.t.DZQe29),
+                  text: O.intl.string(O.t.fspJ4O),
                   children: [
-                      (0, r.jsxs)(l.Text, {
+                      (0, r.jsxs)(c.Text, {
                           variant: 'text-md/normal',
-                          className: O.sectionBody,
+                          className: g.sectionBody,
                           children: [
                               (0, r.jsx)('strong', {
-                                  className: O.phoneNumber,
-                                  children: m.intl.format(m.t.PXVoEB, { phoneNumber: e.phone })
+                                  className: g.phoneNumber,
+                                  children: O.intl.format(O.t.PXVoEB, { phoneNumber: e.phone })
                               }),
-                              (0, r.jsx)(l.zxk, {
-                                  look: l.zxk.Looks.LINK,
-                                  color: l.zxk.Colors.LINK,
-                                  size: l.zxk.Sizes.MIN,
-                                  className: O.linkButton,
+                              (0, r.jsx)(l.zx, {
+                                  look: l.zx.Looks.LINK,
+                                  color: l.zx.Colors.LINK,
+                                  size: l.zx.Sizes.MIN,
+                                  className: g.linkButton,
                                   onClick: this.handleChangePhoneNumber,
-                                  children: m.intl.string(m.t.Ulqq6O)
+                                  children: O.intl.string(O.t.Ulqq6O)
                               })
                           ]
                       }),
-                      (0, r.jsx)(l.zxk, {
+                      (0, r.jsx)(c.zxk, {
+                          variant: 'active',
+                          size: 'sm',
+                          text: o ? O.intl.string(O.t.Sq6Q1t) : n ? O.intl.string(O.t.kSbHTE) : O.intl.string(O.t.DZQe29),
                           onClick: this.handleEnableSMS,
-                          disabled: n || o,
-                          color: l.zxk.Colors.GREEN,
-                          size: l.zxk.Sizes.SMALL,
-                          children: o ? m.intl.string(m.t.Sq6Q1t) : n ? m.intl.string(m.t.kSbHTE) : m.intl.string(m.t.DZQe29)
+                          disabled: n || o
                       })
                   ]
               })
-            : (0, r.jsx)(g, {
-                  label: m.intl.string(m.t.DZQe29),
-                  text: m.intl.string(m.t.fspJ4O),
-                  children: (0, r.jsx)(l.zxk, {
+            : (0, r.jsx)(C, {
+                  label: O.intl.string(O.t.DZQe29),
+                  text: O.intl.string(O.t.fspJ4O),
+                  children: (0, r.jsx)(c.zxk, {
+                      variant: 'active',
+                      size: 'sm',
+                      text: o ? O.intl.string(O.t.Sq6Q1t) : O.intl.string(O.t['O5qS/v']),
                       onClick: this.handleEnableSMS,
-                      color: l.zxk.Colors.GREEN,
-                      size: l.zxk.Sizes.SMALL,
-                      disabled: o,
-                      children: o ? m.intl.string(m.t.Sq6Q1t) : m.intl.string(m.t['O5qS/v'])
+                      disabled: o
                   })
               });
     }
     renderBackupCodesSection(e) {
-        return (0, r.jsx)(g, {
-            label: m.intl.string(m.t.qZZUy8),
+        return (0, r.jsx)(C, {
+            label: O.intl.string(O.t.qZZUy8),
             text: e,
-            children: (0, r.jsx)(u.Z, {
+            children: (0, r.jsx)(p.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
                 fileName: 'discord_backup_codes.txt',
-                onDownload: () => c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
-                children: (0, r.jsx)(l.zxk, {
-                    color: l.zxk.Colors.GREEN,
-                    size: l.zxk.Sizes.SMALL,
-                    children: m.intl.string(m.t.qZZUy8)
+                onDownload: () => d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
+                children: (0, r.jsx)(c.zxk, {
+                    variant: 'active',
+                    size: 'sm',
+                    text: O.intl.string(O.t.qZZUy8)
                 })
             })
         });
     }
     renderHeader(e, t) {
-        return (0, r.jsxs)(l.xBx, {
+        return (0, r.jsxs)(c.xBx, {
             separator: !1,
             children: [
-                (0, r.jsxs)(p.Z.Child, {
+                (0, r.jsxs)(h.Z.Child, {
                     grow: 1,
                     shrink: 1,
                     children: [
-                        (0, r.jsx)(l.X6q, {
+                        (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: O.header,
-                            children: h.Z.parse(e)
+                            className: g.header,
+                            children: _.Z.parse(e)
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
-                            className: O.subHeader,
+                            className: g.subHeader,
                             children: t
                         })
                     ]
                 }),
-                (0, r.jsx)(p.Z.Child, {
+                (0, r.jsx)(h.Z.Child, {
                     grow: 0,
-                    children: (0, r.jsx)(l.olH, { onClick: this.handleCloseModal })
+                    children: (0, r.jsx)(c.olH, { onClick: this.handleCloseModal })
                 })
             ]
         });
     }
     renderConfirmModal(e) {
         let { onClose: t } = this.props;
-        return (0, r.jsx)(l.sYh, {
+        return (0, r.jsx)(c.sYh, {
             dismissable: !0,
-            header: m.intl.string(m.t.mwVXnJ),
-            confirmText: m.intl.string(m.t.MwSEo6),
-            cancelText: m.intl.string(m.t['ETE/oK']),
+            header: O.intl.string(O.t.mwVXnJ),
+            confirmText: O.intl.string(O.t.MwSEo6),
+            cancelText: O.intl.string(O.t['ETE/oK']),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
-                (c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t());
+                (d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t());
             },
-            children: (0, r.jsx)(l.Text, {
+            children: (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 color: 'text-default',
                 children: e
@@ -227,40 +228,40 @@ class C extends o.PureComponent {
     renderTotp() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, r.jsxs)(l.Y0X, {
+        return (0, r.jsxs)(c.Y0X, {
             transitionState: e,
-            className: O.modal,
+            className: g.modal,
             parentComponent: 'MFAEnableSuccess',
             children: [
-                this.renderHeader(m.intl.string(m.t['681MPT']), m.intl.format(m.t.pQioMz, {})),
-                (0, r.jsxs)(l.hzk, {
-                    className: O.modalInner,
-                    children: [this.renderSMSSection(), (0, r.jsx)(l.$i$, { className: O.divider }), this.renderBackupCodesSection(m.intl.format(m.t.M0Dogo, {}))]
+                this.renderHeader(O.intl.string(O.t['681MPT']), O.intl.format(O.t.pQioMz, {})),
+                (0, r.jsxs)(c.hzk, {
+                    className: g.modalInner,
+                    children: [this.renderSMSSection(), (0, r.jsx)(c.$i$, { className: g.divider }), this.renderBackupCodesSection(O.intl.format(O.t.M0Dogo, {}))]
                 }),
-                t && this.renderConfirmModal(m.intl.string(m.t.WJFPHB))
+                t && this.renderConfirmModal(O.intl.string(O.t.WJFPHB))
             ]
         });
     }
     renderWebAuthn() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, r.jsxs)(l.Y0X, {
+        return (0, r.jsxs)(c.Y0X, {
             transitionState: e,
-            className: O.modal,
+            className: g.modal,
             parentComponent: 'MFAEnableSuccess',
             children: [
-                this.renderHeader(m.intl.string(m.t.x6ielJ), m.intl.format(m.t.Xb5JGh, {})),
-                (0, r.jsx)(l.hzk, {
-                    className: O.modalInner,
-                    children: this.renderBackupCodesSection(m.intl.format(m.t.p59QLS, {}))
+                this.renderHeader(O.intl.string(O.t.x6ielJ), O.intl.format(O.t.Xb5JGh, {})),
+                (0, r.jsx)(c.hzk, {
+                    className: g.modalInner,
+                    children: this.renderBackupCodesSection(O.intl.format(O.t.p59QLS, {}))
                 }),
-                t && this.renderConfirmModal(m.intl.string(m.t.aoNIXF))
+                t && this.renderConfirmModal(O.intl.string(O.t.aoNIXF))
             ]
         });
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(f.default, M({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: b.M });
+        (0, c.h7j)((t) => (0, r.jsx)(E.default, M({ reason: f.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: m.M });
     }
     constructor(...e) {
         (super(...e),
@@ -276,10 +277,10 @@ class C extends o.PureComponent {
                             return '* '
                                 .concat(n.substr(0, 4), '-')
                                 .concat(n.substr(4), ' ')
-                                .concat(t ? '('.concat(m.intl.string(m.t['ycME+/']), ')') : '');
+                                .concat(t ? '('.concat(O.intl.string(O.t['ycME+/']), ')') : '');
                         })
                         .join('\r\n'),
-                    t = m.intl.formatToPlainString(m.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = O.intl.formatToPlainString(O.t.uYWwh4, { email: this.props.currentUser.email });
                 return ''.concat(t, '\r\n\r\n').concat(e);
             }),
             N(this, 'handleChangePhoneNumber', () => {
@@ -287,18 +288,18 @@ class C extends o.PureComponent {
             }),
             N(this, 'handleEnableSMS', () => {
                 let { currentUser: e } = this.props;
-                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: d.Z.enableSMS }) : d.Z.enableSMS();
+                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: u.Z.enableSMS }) : u.Z.enableSMS();
             }));
     }
 }
-let A = s.ZP.connectStores([S.default, E.Z], () => {
-    let e = S.default.getCurrentUser();
+let F = s.ZP.connectStores([y.default, S.Z], () => {
+    let e = y.default.getCurrentUser();
     return (
         a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'),
         {
             currentUser: e,
-            backupCodes: E.Z.getBackupCodes(),
-            hasSeenBackupPrompt: E.Z.hasSeenBackupPrompt
+            backupCodes: S.Z.getBackupCodes(),
+            hasSeenBackupPrompt: S.Z.hasSeenBackupPrompt
         }
     );
-})(C);
+})(A);

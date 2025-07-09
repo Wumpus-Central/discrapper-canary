@@ -179,10 +179,10 @@ async function D(e, t) {
     let n = e.features;
     return (t ? n.add(I.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(I.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await O.Z.saveGuild(e.id, { features: n }));
 }
-async function k(e, t) {
+async function A(e, t) {
     return await O.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
 }
-function A(e) {
+function L(e) {
     let { guild: t } = e,
         n = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(I.oNc.COMMUNITY),
@@ -234,7 +234,7 @@ function A(e) {
               ]
           });
 }
-function L(e) {
+function k(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
@@ -313,7 +313,7 @@ function M(e) {
         [s, a] = i.useState((0, f.Z)(t) && l),
         d = i.useCallback(
             async (e) => {
-                (a(e), await k(t, e));
+                (a(e), await A(t, e));
             },
             [t]
         );
@@ -363,9 +363,9 @@ function G() {
                 titleClassName: T.headerContainer,
                 children: [
                     (0, r.jsx)(M, { guild: e }),
-                    (0, r.jsx)(A, { guild: e }),
+                    (0, r.jsx)(L, { guild: e }),
                     (0, r.jsx)(R, { guild: e }),
-                    (0, r.jsx)(L, {
+                    (0, r.jsx)(k, {
                         guild: e,
                         mfaLevel: t
                     }),

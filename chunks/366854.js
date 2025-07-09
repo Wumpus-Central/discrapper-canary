@@ -1,15 +1,16 @@
-(r.d(e, { default: () => s }), r(388685));
+(r.d(e, { default: () => p }), r(388685));
 var n = r(255367),
     o = r(73800),
-    i = r(481060),
-    c = r(668781),
-    l = r(787014),
-    a = r(388032);
-let s = function (t) {
+    i = r(755721),
+    c = r(481060),
+    l = r(668781),
+    a = r(787014),
+    s = r(388032);
+let p = function (t) {
     var e,
         r,
-        { channelId: s, application: p, onClose: b } = t,
-        u = (function (t, e) {
+        { channelId: p, application: b, onClose: u } = t,
+        f = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -28,20 +29,20 @@ let s = function (t) {
             }
             return o;
         })(t, ['channelId', 'application', 'onClose']);
-    let [f, O] = o.useState(!1),
-        y = async () => {
+    let [O, y] = o.useState(!1),
+        j = async () => {
             try {
-                (O(!0), await l.ZP.removeLinkedLobby(s), b());
+                (y(!0), await a.ZP.removeLinkedLobby(p), u());
             } catch (t) {
-                (O(!1),
-                    c.Z.show({
-                        title: a.intl.string(a.t.vFzPFh),
-                        body: a.intl.string(a.t['6D5WVl'])
+                (y(!1),
+                    l.Z.show({
+                        title: s.intl.string(s.t.vFzPFh),
+                        body: s.intl.string(s.t['6D5WVl'])
                     }));
             }
         };
     return (0, n.jsx)(
-        i.ConfirmModal,
+        c.ConfirmModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -68,21 +69,21 @@ let s = function (t) {
             return t;
         })(
             {
-                header: a.intl.string(a.t.JmUENj),
-                confirmText: a.intl.string(a.t['cY+Ooa']),
-                cancelText: a.intl.string(a.t['ETE/oK']),
-                confirmButtonColor: i.zxk.Colors.BRAND,
-                onConfirm: y,
-                loading: f,
-                onClose: b
+                header: s.intl.string(s.t.JmUENj),
+                confirmText: s.intl.string(s.t['cY+Ooa']),
+                cancelText: s.intl.string(s.t['ETE/oK']),
+                confirmButtonColor: i.zx.Colors.BRAND,
+                onConfirm: j,
+                loading: O,
+                onClose: u
             },
-            u
+            f
         )),
         (r = r =
             {
-                children: (0, n.jsx)(i.Text, {
+                children: (0, n.jsx)(c.Text, {
                     variant: 'text-sm/normal',
-                    children: a.intl.format(a.t['6l2osr'], { applicationName: p.name })
+                    children: s.intl.format(s.t['6l2osr'], { applicationName: b.name })
                 })
             }),
         Object.getOwnPropertyDescriptors

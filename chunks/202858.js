@@ -7,7 +7,7 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(981631);
-function l(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -32,7 +32,7 @@ function l(e) {
     }
     return e;
 }
-function a(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ function o() {
         (0, r.ZDy)(
             async () => {
                 let { default: t } = await Promise.all([n.e('76540'), n.e('35305')]).then(n.bind(n, 628908));
-                return (n) => (0, i.jsx)(t, a(l({}, n), { isTotp: e }));
+                return (n) => (0, i.jsx)(t, l(a({}, n), { isTotp: e }));
             },
             {
                 onCloseCallback: t,
@@ -70,7 +70,7 @@ let c = {
         (await new Promise((e) => {
             (0, r.ZDy)(async () => {
                 let { default: t } = await Promise.all([n.e('85516'), n.e('23746')]).then(n.bind(n, 837651));
-                return (n) => (0, i.jsx)(t, a(l({}, n), { handleEnableMFASuccess: e }));
+                return (n) => (0, i.jsx)(t, l(a({}, n), { handleEnableMFASuccess: e }));
             });
         }),
             await o());

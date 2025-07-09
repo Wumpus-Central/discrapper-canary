@@ -45,10 +45,9 @@ let d = function (e) {
             (0, r.jsx)(a.mzw, {
                 className: l.modalFooter,
                 children: (0, r.jsx)(a.zxk, {
-                    color: a.zxk.Colors.BRAND,
-                    size: a.zxk.Sizes.MEDIUM,
-                    onClick: t,
-                    children: s.intl.string(s.t.cpT0Cg)
+                    variant: 'primary',
+                    text: s.intl.string(s.t.cpT0Cg),
+                    onClick: t
                 })
             })
         ]

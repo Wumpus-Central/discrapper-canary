@@ -1,49 +1,50 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(926526),
-    o = n(388032),
-    s = n(568410);
-let c = function (e) {
+    l = n(755721),
+    a = n(481060),
+    o = n(926526),
+    s = n(388032),
+    c = n(568410);
+let u = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        c = null == n ? void 0 : n.id;
+        u = null == n ? void 0 : n.id;
     return (
         i.useEffect(() => {
-            null != c && (0, a.Pq)(c);
-        }, [c]),
+            null != u && (0, o.Pq)(u);
+        }, [u]),
         (0, r.jsxs)('div', {
-            className: s.confirmation,
+            className: c.confirmation,
             children: [
                 (0, r.jsx)('div', {
-                    className: s.iconWrapper,
-                    children: (0, r.jsx)(l.wGF, {
+                    className: c.iconWrapper,
+                    children: (0, r.jsx)(a.wGF, {
                         size: 'md',
-                        color: l.TVs.colors.INTERACTIVE_ACTIVE
+                        color: a.TVs.colors.INTERACTIVE_ACTIVE
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: s.statusTextContainer,
+                    className: c.statusTextContainer,
                     children: [
-                        (0, r.jsx)(l.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
+                            children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: o.intl.string(o.t.FdsK4u)
+                            children: s.intl.string(s.t.FdsK4u)
                         })
                     ]
                 }),
-                (0, r.jsx)(l.zxk, {
+                (0, r.jsx)(l.zx, {
                     fullWidth: !0,
                     onClick: t,
-                    look: l.zxk.Looks.FILLED,
-                    color: l.zxk.Colors.RED,
-                    size: l.zxk.Sizes.LARGE,
-                    children: o.intl.string(o.t.g9tK0t)
+                    look: l.zx.Looks.FILLED,
+                    color: l.zx.Colors.RED,
+                    size: l.zx.Sizes.LARGE,
+                    children: s.intl.string(s.t.g9tK0t)
                 })
             ]
         })

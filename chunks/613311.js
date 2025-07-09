@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ep }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841));
+(n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -6,59 +6,60 @@ var r = n(255367),
     o = n(442837),
     s = n(846519),
     c = n(780384),
-    u = n(481060),
-    d = n(570140),
-    p = n(659429),
-    h = n(496929),
-    f = n(558381),
-    g = n(410575),
-    m = n(224336),
-    b = n(730749),
-    _ = n(666743),
-    E = n(115130),
-    O = n(812206),
-    y = n(770146),
-    I = n(600164),
-    v = n(606081),
-    C = n(252618),
-    S = n(100159),
-    N = n(646288),
-    T = n(984370),
-    P = n(706454),
-    j = n(210887),
-    A = n(430824),
-    Z = n(496675),
-    x = n(525395),
+    u = n(755721),
+    d = n(481060),
+    p = n(570140),
+    h = n(659429),
+    f = n(496929),
+    g = n(558381),
+    m = n(410575),
+    b = n(224336),
+    _ = n(730749),
+    E = n(666743),
+    O = n(115130),
+    y = n(812206),
+    I = n(770146),
+    v = n(600164),
+    C = n(606081),
+    S = n(252618),
+    N = n(100159),
+    T = n(646288),
+    P = n(984370),
+    j = n(706454),
+    A = n(210887),
+    Z = n(430824),
+    x = n(496675),
+    w = n(525395),
     L = n(558314),
-    w = n(580130),
-    R = n(55563),
-    D = n(551428),
-    k = n(695103),
-    M = n(451478),
-    U = n(626135),
-    G = n(572004),
-    B = n(630388),
-    V = n(937615),
-    H = n(73346),
-    F = n(3570),
-    z = n(689796),
-    W = n(15470),
-    Y = n(506648),
-    K = n(449275),
-    q = n(445986),
-    X = n(119520),
-    Q = n(450233),
-    J = n(726581),
-    $ = n(74153),
-    ee = n(125930),
-    et = n(178071),
-    en = n(176055),
-    er = n(843445),
-    ei = n(981631),
-    el = n(186901),
-    ea = n(388032),
-    eo = n(281990);
-function es(e, t, n) {
+    R = n(580130),
+    D = n(55563),
+    k = n(551428),
+    M = n(695103),
+    U = n(451478),
+    G = n(626135),
+    B = n(572004),
+    V = n(630388),
+    H = n(937615),
+    F = n(73346),
+    z = n(3570),
+    W = n(689796),
+    Y = n(15470),
+    K = n(506648),
+    q = n(449275),
+    X = n(445986),
+    Q = n(119520),
+    J = n(450233),
+    $ = n(726581),
+    ee = n(74153),
+    et = n(125930),
+    en = n(178071),
+    er = n(176055),
+    ei = n(843445),
+    el = n(981631),
+    ea = n(186901),
+    eo = n(388032),
+    es = n(281990);
+function ec(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -71,7 +72,7 @@ function es(e, t, n) {
         e
     );
 }
-function ec(e) {
+function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -82,12 +83,12 @@ function ec(e) {
                 })
             )),
             r.forEach(function (t) {
-                es(e, t, n[t]);
+                ec(e, t, n[t]);
             }));
     }
     return e;
 }
-function eu(e, t) {
+function ed(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -105,7 +106,7 @@ function eu(e, t) {
         e
     );
 }
-class ed extends i.PureComponent {
+class ep extends i.PureComponent {
     get isChannelType() {
         return null != this.props.channel;
     }
@@ -114,15 +115,15 @@ class ed extends i.PureComponent {
         if (null != l.state) {
             let { analyticsSource: e, analyticsProperties: t } = l.state;
             ((this._analyticsSource = e), (this._extraAnalyticsProperties = t));
-        } else this._analyticsSource = ei.SaU;
-        ((null == t || t.isSlimDirectoryVersion()) && a(), null != e && (n || i || (0, h.yD)(e.applicationId), r && d.Z.wait(() => (0, p.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug());
+        } else this._analyticsSource = el.SaU;
+        ((null == t || t.isSlimDirectoryVersion()) && a(), null != e && (n || i || (0, f.yD)(e.applicationId), r && p.Z.wait(() => (0, h.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug());
     }
     componentDidUpdate(e) {
         let { locale: t, sku: n, shouldFetchStatistics: r, skuId: i, storeListingId: l, slug: a, storeListing: o, fetchStoreListing: s } = this.props;
         if (
             (o !== e.storeListing &&
                 null != o &&
-                (0, F.s)(el.jE.STORE_LISTING, {
+                (0, z.s)(ea.jE.STORE_LISTING, {
                     skuId: i,
                     slug: a
                 }),
@@ -130,7 +131,7 @@ class ed extends i.PureComponent {
             r && !e.shouldFetchStatistics)
         ) {
             if (null == n) throw Error('Unexpected missing sku');
-            d.Z.wait(() => (0, p.$)(n.applicationId));
+            p.Z.wait(() => (0, h.$)(n.applicationId));
         }
         ((i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug());
     }
@@ -140,7 +141,7 @@ class ed extends i.PureComponent {
             analyticsContext: { loadId: e, loadDate: t }
         } = this.props;
         null != t &&
-            U.default.track(ei.rMx.STORE_LISTING_EXITED, {
+            G.default.track(el.rMx.STORE_LISTING_EXITED, {
                 load_id: e,
                 duration_ms: Date.now() - t
             });
@@ -153,10 +154,10 @@ class ed extends i.PureComponent {
             images: 0,
             videos: 0
         });
-        (U.default.track(
-            ei.rMx.STORE_LISTING_VIEWED,
-            ec(
-                eu(ec({}, this._extraAnalyticsProperties), {
+        (G.default.track(
+            el.rMx.STORE_LISTING_VIEWED,
+            eu(
+                ed(eu({}, this._extraAnalyticsProperties), {
                     load_id: r.loadId,
                     has_description: null != t.description && t.description.length > 0,
                     has_staff_review: null != t.staffNotes,
@@ -165,45 +166,45 @@ class ed extends i.PureComponent {
                     location: r.location.page,
                     source: this._analyticsSource
                 }),
-                (0, S.Z)(e, !0)
+                (0, N.Z)(e, !0)
             )
         ),
             (this._trackedViewed = !0));
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, r.jsx)(T.Z, {
+        return (0, r.jsx)(P.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(T.Z.Icon, {
-                                  icon: u.lO_,
-                                  'aria-label': ea.intl.string(ea.t['P1/Erq'])
+                              (0, r.jsx)(P.Z.Icon, {
+                                  icon: d.lO_,
+                                  'aria-label': eo.intl.string(eo.t['P1/Erq'])
                               }),
-                              (0, r.jsx)(T.Z.Title, { children: n.name })
+                              (0, r.jsx)(P.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, r.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(T.Z.Icon, {
-                                    icon: u.SrA,
-                                    'aria-label': ea.intl.string(ea.t.Ipxkoq)
+                                (0, r.jsx)(P.Z.Icon, {
+                                    icon: d.SrA,
+                                    'aria-label': eo.intl.string(eo.t.Ipxkoq)
                                 }),
-                                (0, r.jsx)($.Z, { sku: t })
+                                (0, r.jsx)(ee.Z, { sku: t })
                             ]
                         })
                       : null != t
                         ? (0, r.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(T.Z.Icon, {
-                                      icon: u.lO_,
-                                      'aria-label': ea.intl.string(ea.t['P1/Erq'])
+                                  (0, r.jsx)(P.Z.Icon, {
+                                      icon: d.lO_,
+                                      'aria-label': eo.intl.string(eo.t['P1/Erq'])
                                   }),
-                                  (0, r.jsx)(T.Z.Title, { children: t.name })
+                                  (0, r.jsx)(P.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -218,15 +219,15 @@ class ed extends i.PureComponent {
                 if (null == n || null == r) throw Error('ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined');
                 return t.mimeType.startsWith('video/')
                     ? {
-                          type: ei.s9s.VIDEO,
-                          thumbnailSrc: (0, H._W)(e.id, t, 1024, 'webp'),
-                          src: (0, H._W)(e.id, t),
+                          type: el.s9s.VIDEO,
+                          thumbnailSrc: (0, F._W)(e.id, t, 1024, 'webp'),
+                          src: (0, F._W)(e.id, t),
                           height: r,
                           width: n
                       }
                     : {
-                          type: ei.s9s.IMG,
-                          src: (0, H._W)(e.id, t, 1024),
+                          type: el.s9s.IMG,
+                          src: (0, F._W)(e.id, t, 1024),
                           height: r,
                           width: n
                       };
@@ -234,7 +235,7 @@ class ed extends i.PureComponent {
         }
         if (null != i)
             return {
-                type: ei.s9s.YOUTUBE_VIDEO,
+                type: el.s9s.YOUTUBE_VIDEO,
                 youtubeVideoId: i
             };
         throw Error('Store carousel item must have one of assetId or youtubeVideoId');
@@ -244,48 +245,48 @@ class ed extends i.PureComponent {
             l = t.headerBackground,
             a = (0, c.ap)(i) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
         return null == l || null == a
-            ? (0, r.jsx)('div', { className: eo.noHeaderSpacer })
+            ? (0, r.jsx)('div', { className: es.noHeaderSpacer })
             : (0, r.jsxs)('div', {
-                  className: eo.headerAssets,
+                  className: es.headerAssets,
                   children: [
                       (0, r.jsx)('div', {
-                          className: eo.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, H._W)(e.id, l, 1024, 'png'), ')') }
+                          className: es.headerBackground,
+                          style: { backgroundImage: 'url('.concat((0, F._W)(e.id, l, 1024, 'png'), ')') }
                       }),
                       (0, r.jsx)('img', {
-                          className: eo.headerLogo,
-                          src: (0, H._W)(e.id, a, 1024, 'png'),
+                          className: es.headerLogo,
+                          src: (0, F._W)(e.id, a, 1024, 'png'),
                           alt: n.name
                       })
                   ]
               });
     }
     renderWhyYouMightLikeThis(e, t) {
-        return (0, r.jsx)(J.Z, {
+        return (0, r.jsx)($.Z, {
             sku: e,
             storeListing: t,
-            className: eo.whyYouMightLikeIt
+            className: es.whyYouMightLikeIt
         });
     }
     renderVerifiedGuildInvite(e, t) {
         if (null == e.guild) return null;
         let { channel: n, pageSize: i } = this.props;
-        return (0, r.jsx)(en.Z, {
+        return (0, r.jsx)(er.Z, {
             skuId: t.id,
             guild: e.guild,
-            className: eo.guildInvite,
+            className: es.guildInvite,
             inChannel: null != n,
             pageSize: i
         });
     }
     renderFeatures(e) {
-        return (0, r.jsx)(Y.Z, { sku: e });
+        return (0, r.jsx)(K.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
             ? null
-            : (0, r.jsx)(ee.Z, {
-                  className: eo.systemRequirements,
+            : (0, r.jsx)(et.Z, {
+                  className: es.systemRequirements,
                   systemRequirements: e.systemRequirements,
                   pageSize: this.props.pageSize
               });
@@ -295,31 +296,31 @@ class ed extends i.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     tag: 'h1',
-                    children: ea.intl.format(ea.t.tluX4O, { name: n.name })
+                    children: eo.intl.format(eo.t.tluX4O, { name: n.name })
                 }),
-                (0, r.jsx)(m.Z, {}),
-                (0, r.jsx)(W.Z, {
+                (0, r.jsx)(b.Z, {}),
+                (0, r.jsx)(Y.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: l,
-                    className: eo.description,
+                    className: es.description,
                     assets: t.assets
                 })
             ]
         });
     }
     renderApplicationContentRating(e) {
-        return (0, r.jsx)(z.Z, {
+        return (0, r.jsx)(W.Z, {
             sku: e,
-            className: eo.contentRating
+            className: es.contentRating
         });
     }
     renderApplicationLegalInfo(e) {
-        return (0, r.jsx)(K.Z, {
+        return (0, r.jsx)(q.Z, {
             sku: e,
-            className: eo.legalInfo
+            className: es.legalInfo
         });
     }
     renderJsonLD() {
@@ -327,47 +328,47 @@ class ed extends i.PureComponent {
         if (null == e || null == t || null == n) return null;
         let i = [],
             l = n.getSplashURL(1024);
-        (null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg')));
-        let a = v.Z.Product({
+        (null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, F._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg')));
+        let a = C.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-                image: v.Z.Product.Image(i),
+                image: C.Z.Product.Image(i),
                 sku: e.id
             }),
             o = e.getPrice();
         if (null != o) {
             let { amount: e, currency: t } = o;
-            a.offers = v.Z.Offer({
+            a.offers = C.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, V.T4)(e, t, { style: 'decimal' })
+                price: (0, H.T4)(e, t, { style: 'decimal' })
             });
         }
-        let s = v.Z.ItemPage({ mainEntity: a });
-        return (0, r.jsx)(v.Z, { data: s });
+        let s = C.Z.ItemPage({ mainEntity: a });
+        return (0, r.jsx)(C.Z, { data: s });
     }
     renderSmall(e, t, n) {
         return (0, r.jsxs)('div', {
-            className: a()(eo.listing, eo.listingSmall),
+            className: a()(es.listing, es.listingSmall),
             children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
         });
     }
     renderLarge(e, t, n) {
         return (0, r.jsxs)('div', {
-            className: eo.listing,
+            className: es.listing,
             children: [
                 this.renderHeaderAssets(e, t, n),
                 this.renderCarousel(e, t),
                 (0, r.jsx)('div', {
-                    className: eo.listingLarge,
+                    className: es.listingLarge,
                     children: (0, r.jsxs)('div', {
-                        className: eo.body,
+                        className: es.body,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: eo.leftColumn,
+                                className: es.leftColumn,
                                 children: [this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
                             }),
                             (0, r.jsxs)('div', {
-                                className: eo.rightColumn,
+                                className: es.rightColumn,
                                 children: [this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n)]
                             })
                         ]
@@ -382,10 +383,10 @@ class ed extends i.PureComponent {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, r.jsx)(I.Z, {
-                        align: I.Z.Align.CENTER,
-                        justify: I.Z.Justify.CENTER,
-                        children: (0, r.jsx)(u.$jN, { className: eo.spinner })
+                    (0, r.jsx)(v.Z, {
+                        align: v.Z.Align.CENTER,
+                        justify: v.Z.Justify.CENTER,
+                        children: (0, r.jsx)(d.$jN, { className: es.spinner })
                     })
                 ]
             });
@@ -393,59 +394,59 @@ class ed extends i.PureComponent {
             let n = a
                 ? null
                 : (0, r.jsx)('div', {
-                      className: eo.gatedListing,
+                      className: es.gatedListing,
                       children: this.renderListing()
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(X.Z, { game: e }), n]
+                children: [(0, r.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
             });
         }
         return a
             ? (0, r.jsxs)('div', {
-                  className: eo.listingWrapper,
+                  className: es.listingWrapper,
                   children: [
-                      (0, r.jsx)(C.yY, { location: e.name }),
+                      (0, r.jsx)(S.yY, { location: e.name }),
                       this.renderJsonLD(),
-                      (0, r.jsx)(g.Z, {
-                          section: ei.jXE.NAVIGATION,
+                      (0, r.jsx)(m.Z, {
+                          section: el.jXE.NAVIGATION,
                           children: this.renderHeader(e, t)
                       }),
-                      (0, r.jsx)(g.Z, {
-                          section: ei.jXE.BODY,
+                      (0, r.jsx)(m.Z, {
+                          section: el.jXE.BODY,
                           children: this.renderListing()
                       })
                   ]
               })
             : (0, r.jsxs)('div', {
-                  children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
+                  children: [(0, r.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
               });
     }
     constructor(...e) {
         (super(...e),
-            es(this, 'showCopyLinkTextTimeout', new s.V7()),
-            es(this, '_trackedViewed', !1),
-            es(this, '_analyticsSource', null),
-            es(this, '_extraAnalyticsProperties', null),
-            es(this, 'state', {
+            ec(this, 'showCopyLinkTextTimeout', new s.V7()),
+            ec(this, '_trackedViewed', !1),
+            ec(this, '_analyticsSource', null),
+            ec(this, '_extraAnalyticsProperties', null),
+            ec(this, 'state', {
                 showHeaderPurchaseUnit: !1,
                 showLinkCopied: !1
             }),
-            es(this, 'trackCarouselScroll', (e, t, n) => {
+            ec(this, 'trackCarouselScroll', (e, t, n) => {
                 let { sku: r } = this.props;
                 null != r &&
-                    U.default.track(
-                        ei.rMx.STORE_LISTING_MEDIA_SCROLLED,
-                        eu(ec({}, (0, S.Z)(r)), {
+                    G.default.track(
+                        el.rMx.STORE_LISTING_MEDIA_SCROLLED,
+                        ed(eu({}, (0, N.Z)(r)), {
                             card_index: n,
-                            card_type: e.type === ei.s9s.IMG ? 'image' : 'video'
+                            card_type: e.type === el.s9s.IMG ? 'image' : 'video'
                         })
                     );
             }),
-            es(this, 'copyCurrentUrl', () => {
+            ec(this, 'copyCurrentUrl', () => {
                 var e;
                 let { location: t } = this.props,
                     n = ((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e));
-                (0, G.JG)(n, () =>
+                (0, B.JG)(n, () =>
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
@@ -453,68 +454,68 @@ class ed extends i.PureComponent {
                     })
                 );
             }),
-            es(this, 'handleCreateInstantInvite', () => {
+            ec(this, 'handleCreateInstantInvite', () => {
                 let { channel: e, guild: t } = this.props;
                 null != e &&
                     null != t &&
-                    (0, u.ZDy)(async () => {
+                    (0, d.ZDy)(async () => {
                         let { default: i } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                eu(ec({}, n), {
+                                ed(eu({}, n), {
                                     guild: t,
                                     channel: e,
-                                    source: ei.t4x.GUILD_CHANNELS
+                                    source: el.t4x.GUILD_CHANNELS
                                 })
                             );
                     });
             }),
-            es(this, 'renderInviteLink', () => {
+            ec(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (Z.Z.can(ei.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
-                    ? (0, r.jsx)(u.zxk, {
-                          'aria-label': ea.intl.string(ea.t.zJrgTE),
-                          look: u.zxk.Looks.BLANK,
-                          size: u.zxk.Sizes.NONE,
+                return null != e && null != t && (x.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                    ? (0, r.jsx)(u.zx, {
+                          'aria-label': eo.intl.string(eo.t.zJrgTE),
+                          look: u.zx.Looks.BLANK,
+                          size: u.zx.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
-                          className: eo.link,
-                          children: (0, r.jsx)(u.xPt, {
+                          className: es.link,
+                          children: (0, r.jsx)(d.xPt, {
                               size: 'md',
                               color: 'currentColor',
-                              className: eo.linkIcon
+                              className: es.linkIcon
                           })
                       })
                     : null;
             }),
-            es(this, 'renderCopyLink', () => {
+            ec(this, 'renderCopyLink', () => {
                 let { showLinkCopied: e } = this.state;
                 return this.isChannelType
                     ? this.renderInviteLink()
-                    : (0, r.jsx)(u.ua7, {
-                          text: e ? ea.intl.string(ea.t.uvTCOT) : null,
+                    : (0, r.jsx)(d.ua7, {
+                          text: e ? eo.intl.string(eo.t.uvTCOT) : null,
                           position: 'left',
                           forceOpen: e,
                           children: (t) => {
                               let { onMouseEnter: n, onMouseLeave: i } = t;
-                              return (0, r.jsx)(u.zxk, {
-                                  'aria-label': e ? ea.intl.string(ea.t.uvTCOT) : ea.intl.string(ea.t.WqhZsr),
-                                  look: u.zxk.Looks.BLANK,
-                                  size: u.zxk.Sizes.NONE,
+                              return (0, r.jsx)(u.zx, {
+                                  'aria-label': e ? eo.intl.string(eo.t.uvTCOT) : eo.intl.string(eo.t.WqhZsr),
+                                  look: u.zx.Looks.BLANK,
+                                  size: u.zx.Sizes.NONE,
                                   onClick: this.copyCurrentUrl,
                                   onMouseEnter: n,
                                   onMouseLeave: i,
-                                  className: eo.link,
-                                  children: (0, r.jsx)(u.xPt, {
+                                  className: es.link,
+                                  children: (0, r.jsx)(d.xPt, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: eo.linkIcon
+                                      className: es.linkIcon
                                   })
                               });
                           }
                       });
             }),
-            es(this, 'renderHeaderToolbar', (e, t) => {
+            ec(this, 'renderHeaderToolbar', (e, t) => {
                 let {
                         isInTestMode: n,
                         slug: i,
@@ -523,27 +524,27 @@ class ed extends i.PureComponent {
                     } = this.props,
                     { showHeaderPurchaseUnit: s } = this.state;
                 return (0, r.jsxs)('div', {
-                    className: eo.headerBarListing,
+                    className: es.headerBarListing,
                     children: [
                         (0, r.jsx)('div', {
-                            className: eo.headerSection,
+                            className: es.headerSection,
                             children:
                                 n && null != t
-                                    ? (0, r.jsx)(et.Z, {
-                                          size: et.y.Sizes.MIN,
-                                          dropdownSize: et.y.DropdownSizes.MEDIUM,
-                                          look: et.y.Looks.OUTLINED,
-                                          color: et.y.Colors.RED,
+                                    ? (0, r.jsx)(en.Z, {
+                                          size: en.y.Sizes.MIN,
+                                          dropdownSize: en.y.DropdownSizes.MEDIUM,
+                                          look: en.y.Looks.OUTLINED,
+                                          color: en.y.Colors.RED,
                                           skuId: t.id,
-                                          className: eo.testModeSelectButton,
+                                          className: es.testModeSelectButton,
                                           currentStoreListingId: null != l ? l.id : null,
                                           onStoreListingSelect: (e) => {
                                               null != t &&
-                                                  (0, f.yt)(t.id, {
+                                                  (0, g.yt)(t.id, {
                                                       slug: i,
                                                       analyticsSource: {
                                                           page: o.page,
-                                                          section: ei.jXE.NAVIGATION,
+                                                          section: el.jXE.NAVIGATION,
                                                           object: null
                                                       },
                                                       storeListingId: e.id
@@ -553,15 +554,15 @@ class ed extends i.PureComponent {
                                     : null
                         }),
                         (0, r.jsx)('div', {
-                            className: eo.headerSection,
+                            className: es.headerSection,
                             children: (0, r.jsxs)('div', {
-                                className: a()(eo.headerPurchase, { [eo.active]: s }),
+                                className: a()(es.headerPurchase, { [es.active]: s }),
                                 children: [
-                                    null != t ? (0, N.Z)(t) : null,
+                                    null != t ? (0, T.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
-                                    (0, r.jsx)(Q.Z, {
-                                        messageStyle: Q.G.SHORT,
-                                        className: eo.purchaseError
+                                    (0, r.jsx)(J.Z, {
+                                        messageStyle: J.G.SHORT,
+                                        className: es.purchaseError
                                     })
                                 ]
                             })
@@ -570,12 +571,12 @@ class ed extends i.PureComponent {
                     ]
                 });
             }),
-            es(this, 'renderCarousel', (e, t) => {
+            ec(this, 'renderCarousel', (e, t) => {
                 if (0 === t.carouselItems.length) return null;
                 let { pageSize: n, isFocused: i } = this.props;
-                return (0, r.jsx)(g.Z, {
-                    section: ei.jXE.HERO,
-                    children: (0, r.jsx)(q.Z, {
+                return (0, r.jsx)(m.Z, {
+                    section: el.jXE.HERO,
+                    children: (0, r.jsx)(X.Z, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,
@@ -584,45 +585,45 @@ class ed extends i.PureComponent {
                     })
                 });
             }),
-            es(this, 'renderListing', () => {
+            ec(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, r.jsx)(I.Z, {
-                          align: I.Z.Align.CENTER,
-                          justify: I.Z.Justify.CENTER,
-                          children: (0, r.jsx)(u.$jN, {})
+                    ? (0, r.jsx)(v.Z, {
+                          align: v.Z.Align.CENTER,
+                          justify: v.Z.Justify.CENTER,
+                          children: (0, r.jsx)(d.$jN, {})
                       })
-                    : i === er.b.SMALL
+                    : i === ei.b.SMALL
                       ? this.renderSmall(e, t, n)
                       : this.renderLarge(e, t, n);
             }));
     }
 }
-let ep = (0, b.Z)(
-    (0, _.Z)(
-        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, w.Z], (e) => {
+let eh = (0, _.Z)(
+    (0, E.Z)(
+        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, O.Z, y.Z, w.Z, Z.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error('Needs applicationId or skuId');
-                ((t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = O.Z.getApplication(l)));
+                ((t = i), null != (l = null != (n = D.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l)));
             } else if (null == i) {
                 if (null == l) throw Error('Needs applicationId or skuId');
-                (null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null));
+                (null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? D.Z.get(t) : null));
             }
-            (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
-            let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
+            (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
+            let c = null != l && (M.Z.inTestModeForApplication(l) || O.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? O.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && w.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && w.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),
+                application: null != l ? y.Z.getApplication(l) : null,
+                isFetchingEntitlements: null != l && R.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && R.Z.applicationIdsFetched.has(l),
+                shouldFetchStatistics: o && null != l && w.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
-                isFocused: M.Z.isFocused(),
-                storeListing: D.Z.getStoreListing({
+                isFocused: U.Z.isFocused(),
+                storeListing: k.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,
                     channelId: null != s ? s.id : null,
@@ -630,10 +631,10 @@ let ep = (0, b.Z)(
                 }),
                 isInTestMode: null != l && c,
                 matureAgree: L.Z.didMatureAgree,
-                theme: j.Z.theme,
-                locale: P.default.locale,
-                guild: null != s ? A.Z.getGuild(s.getGuildId()) : null
+                theme: A.Z.theme,
+                locale: j.default.locale,
+                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null
             };
-        })(ed)
+        })(ep)
     )
 );

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(625956);
-function a(e) {
+    a = n(625956);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -68,5 +68,5 @@ let c = (e) => {
             }
             return r;
         })(e, ['value', 'text', 'className', 'lowImportance']);
-    return null != n ? (0, i.jsx)('div', o(a({ className: s()(l.wrapper, r, c && l.lowImportance) }, d), { children: n })) : t > 0 ? (0, i.jsx)('div', o(a({ className: s()(l.wrapper, r, c && l.lowImportance) }, d), { children: t })) : null;
+    return null != n ? (0, i.jsx)('div', o(l({ className: s()(a.wrapper, r, c && a.lowImportance) }, d), { children: n })) : t > 0 ? (0, i.jsx)('div', o(l({ className: s()(a.wrapper, r, c && a.lowImportance) }, d), { children: t })) : null;
 };

@@ -78,36 +78,40 @@ let I = function (e, t, n) {
     S = () => {
         let [e, t] = i.useState(!1),
             n = (0, a.e7)([_.Z], () => _.Z.getGuildId());
-        return (0, r.jsx)(c.zxk, {
+        return (0, r.jsx)('div', {
+            'data-button-hoisted-classname-wrapper': !0,
             className: y.developerPortalCta,
-            onClick: () => {
-                (t(!0),
-                    (function (e) {
-                        x.default.track(v.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-                        let t = null == e ? v.E07.DEVELOPER_PORTAL : v.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
-                            n = (0, l.Z)();
-                        return o.tn
-                            .post({
-                                url: v.ANM.HANDOFF,
-                                body: { key: n },
-                                oldFormErrors: !0,
-                                rejectWithError: !0
-                            })
-                            .then(
-                                (e) => {
-                                    let r = e.body.handoff_token;
-                                    window.open(v.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, r, t));
-                                },
-                                () => {
-                                    window.open(t);
-                                }
-                            );
-                    })(n).then(() => {
-                        t(!1);
-                    }));
-            },
-            submitting: e,
-            children: C.intl.string(C.t.Uskgx8)
+            children: (0, r.jsx)(c.zxk, {
+                variant: 'primary',
+                text: C.intl.string(C.t.Uskgx8),
+                onClick: () => {
+                    (t(!0),
+                        (function (e) {
+                            x.default.track(v.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                            let t = null == e ? v.E07.DEVELOPER_PORTAL : v.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+                                n = (0, l.Z)();
+                            return o.tn
+                                .post({
+                                    url: v.ANM.HANDOFF,
+                                    body: { key: n },
+                                    oldFormErrors: !0,
+                                    rejectWithError: !0
+                                })
+                                .then(
+                                    (e) => {
+                                        let r = e.body.handoff_token;
+                                        window.open(v.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, r, t));
+                                    },
+                                    () => {
+                                        window.open(t);
+                                    }
+                                );
+                        })(n).then(() => {
+                            t(!1);
+                        }));
+                },
+                loading: e
+            })
         });
     },
     T = () => {

@@ -1,6 +1,6 @@
 (n.d(t, {
     Hu: () => Y,
-    oA: () => z,
+    oA: () => F,
     se: () => V
 }),
     n(388685),
@@ -37,11 +37,11 @@ var r = n(255367),
     E = n(39540),
     P = n(958707),
     R = n(152165),
-    k = n(133179),
-    A = n(70722),
+    A = n(133179),
+    k = n(70722),
     M = n(761274),
-    L = n(46140),
-    D = n(65154),
+    D = n(46140),
+    L = n(65154),
     B = n(388032),
     G = n(873270);
 function U(e) {
@@ -74,21 +74,21 @@ function W(e) {
         n = x.ZP.getRunningGames();
     return null != t && (0, Z.Z)(e.id, t.windowHandle) ? 2 : +(null != n.find((t) => (0, Z.Z)(e.id, t.windowHandle)));
 }
-function z(e) {
+function F(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        o = S.Z.supports(D.AN.GO_LIVE_HARDWARE),
+        o = S.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, m] = i.useState(null),
         [C, y] = i.useState(null),
         [w, I] = i.useState(null),
         T = null != w && w.length > 0,
         [E, R] = i.useState(c.vA.WINDOW),
-        [A, U] = i.useState(!1),
-        z = i.useRef(null),
-        F = i.useRef(new u.Xp()),
+        [k, U] = i.useState(!1),
+        F = i.useRef(null),
+        z = i.useRef(new u.Xp()),
         H = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
         V = (function (e, t, n) {
-            let r = (0, j.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
+            let r = (0, j.Zy)({ location: D.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !r) return null;
                 for (let r of n) {
@@ -111,7 +111,7 @@ function z(e) {
         ),
         Y = i.useMemo(() => (null == C ? null : [...C].sort((e, t) => ((null == V ? void 0 : V.source.id) === e.id ? -1 : (null == V ? void 0 : V.source.id) === t.id ? 1 : W(t) - W(e)))), [V, C]);
     i.useEffect(() => {
-        let e = F.current;
+        let e = z.current;
         return (
             (0, N.t)({
                 width: 176,
@@ -137,7 +137,7 @@ function z(e) {
         );
     }, []);
     let X = i.useCallback((e) => {
-            null !== e && ((z.current = e), U(!e.isScrolledToTop()));
+            null !== e && ((F.current = e), U(!e.isScrolledToTop()));
         }, []),
         [J, K] = i.useState(void 0);
     i.useEffect(() => {
@@ -176,7 +176,7 @@ function z(e) {
                 className: s()(G.tile, { [G.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    k.Z,
+                    A.Z,
                     {
                         source: e,
                         selectedSource: t
@@ -192,7 +192,7 @@ function z(e) {
             (0, r.jsxs)('div', {
                 className: G.segmentContainer,
                 children: [
-                    (0, r.jsx)(P.Z, { separator: A }),
+                    (0, r.jsx)(P.Z, { separator: k }),
                     (0, r.jsx)(f.sY7, {
                         options: (function () {
                             let e = [
@@ -230,7 +230,7 @@ function z(e) {
                 ref: X,
                 className: G.sourceScroller,
                 onScroll: function () {
-                    let e = z.current;
+                    let e = F.current;
                     null != e && U(!e.isScrolledToTop());
                 },
                 children: [
@@ -246,7 +246,7 @@ function z(e) {
         ]
     });
 }
-function F(e) {
+function z(e) {
     let { onSelect: t } = e,
         n = i.useCallback(() => {
             t({
@@ -362,14 +362,14 @@ function V(e) {
             },
             [t, o]
         ),
-        p = (0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, A.jR),
+        p = (0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR),
         x = (0, y.isMac)(),
         [g, _] = i.useState(!1),
         v = i.useCallback(() => {
             _(!g);
         }, [g]),
         j = p
-            ? (0, r.jsx)(F, { onSelect: t })
+            ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)('div', {
                   className: G.nativePickerTypes,
                   children: [
@@ -454,7 +454,7 @@ function Y(e) {
         { lastPickerAction: s, lastPickerError: o } = (0, E.Z)(t, n);
     return (
         i.useEffect(() => {
-            (0, y.isLinux)() || ((0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, A.jR)) ? (0, w.T)(l) : (0, w.t)();
+            (0, y.isLinux)() || ((0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR)) ? (0, w.T)(l) : (0, w.t)();
         }, [l]),
         s === I.Uc.Error
             ? (0, r.jsx)(f.Text, {

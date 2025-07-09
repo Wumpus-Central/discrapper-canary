@@ -1,15 +1,15 @@
-n.d(t, {
+a.d(t, {
     Z: () => l,
     q: () => i
 });
-var a = n(570140),
-    r = n(91311);
+var n = a(570140),
+    r = a(91311);
 function l(e, t) {
-    let n = 'boolean' == typeof t ? t : !r.Z.get(e);
-    a.Z.dispatch({
+    let a = 'boolean' == typeof t ? t : !r.Z.get(e);
+    n.Z.dispatch({
         type: 'DEV_TOOLS_DESIGN_TOGGLE_WEB_SET',
         toggle: e,
-        value: n
+        value: a
     });
 }
 function i() {

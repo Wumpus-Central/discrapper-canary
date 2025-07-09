@@ -1,11 +1,11 @@
 n.d(t, { Z: () => c });
 var i,
     s,
-    l,
-    r = n(442837),
+    r,
+    l = n(442837),
     a = n(570140);
 let o = {};
-class d extends (l = r.ZP.Store) {
+class d extends (r = l.ZP.Store) {
     getBranches(e) {
         var t;
         return null != (t = o[e]) ? t : [];

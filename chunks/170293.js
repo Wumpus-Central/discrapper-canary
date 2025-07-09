@@ -1,8 +1,8 @@
-n.d(t, { $: () => l });
+n.d(t, { $: () => a });
 var i = n(668781),
     r = n(743498),
     s = n(388032);
-function l(e) {
+function a(e) {
     i.Z.show({
         title: s.intl.string(s.t.RpjdLy),
         body: s.intl.string(s.t.nOSopa),

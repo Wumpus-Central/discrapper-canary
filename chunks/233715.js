@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(352172);
+    a = n.n(l),
+    o = n(352172);
 function s(e) {
     let { children: t, className: n, flashKey: l } = e,
         [s, c] = i.useState(!1),
@@ -23,7 +23,7 @@ function s(e) {
         ),
         (0, r.jsx)('div', {
             'data-flash': s,
-            className: o()(a.flash, n),
+            className: a()(o.flash, n),
             children: t
         })
     );

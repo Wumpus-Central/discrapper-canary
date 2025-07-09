@@ -59,8 +59,8 @@ let w = (e) => {
             },
             [o, Z]
         );
-        let { onClose: D } = (0, I.Db)(),
-            { categories: F, refreshCategories: M } = (0, x.ZP)(
+        let { onClose: F } = (0, I.Db)(),
+            { categories: D, refreshCategories: M } = (0, x.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
@@ -72,7 +72,7 @@ let w = (e) => {
                 }
             );
         (0, m.P)();
-        let H = (0, y.O)(F),
+        let H = (0, y.O)(D),
             [W, V] = l.useState(),
             U = (0, s.e7)([v.Z], () => {
                 var e;
@@ -114,7 +114,7 @@ let w = (e) => {
                           pageSize: B.kN
                       },
                       children: (0, r.jsx)(w, {
-                          onClose: D,
+                          onClose: F,
                           shouldAddEventListener: t && !J,
                           children: (0, r.jsx)('div', {
                               className: R.shop,
@@ -134,7 +134,7 @@ let w = (e) => {
                                           (0, r.jsx)(L.I, {
                                               isFullScreen: t,
                                               isLayer: J,
-                                              onClose: D,
+                                              onClose: F,
                                               handleTransition: X,
                                               selectedTab: q
                                           }),

@@ -1,15 +1,16 @@
 n.d(t, {
-    V: () => p,
-    k: () => _
+    V: () => h,
+    k: () => p
 });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    a = n(63063),
-    o = n(981631),
-    s = n(388032),
-    l = n(130883);
-function c(e, t, n) {
+var i = n(755721),
+    a = n(481060),
+    o = n(63063),
+    s = n(981631),
+    l = n(388032),
+    c = n(130883);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,37 +51,37 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
+function p(e) {
     let { kind: t } = e;
-    (0, i.ZDy)(async () => {
+    (0, a.ZDy)(async () => {
         let { default: e } = await n.e('7285').then(n.bind(n, 951269));
-        return (n) => (0, r.jsx)(e, f(u({}, n), { kind: t }));
+        return (n) => (0, r.jsx)(e, _(d({}, n), { kind: t }));
     });
 }
-function p() {
-    (0, i.ZDy)(async () => {
+function h() {
+    (0, a.ZDy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
         return (t) =>
             (0, r.jsx)(
                 e,
-                f(u({}, t), {
-                    header: s.intl.string(l.default.odgSTk),
-                    confirmText: s.intl.string(s.t.BddRzc),
-                    confirmButtonColor: i.zxk.Colors.BRAND,
-                    children: (0, r.jsx)(i.Text, {
+                _(d({}, t), {
+                    header: l.intl.string(c.default.odgSTk),
+                    confirmText: l.intl.string(l.t.BddRzc),
+                    confirmButtonColor: i.zx.Colors.BRAND,
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: s.intl.format(l.default.EZfHRk, { helpURL: a.Z.getArticleURL(o.BhN.NSFW_AGE_GATING) })
+                        children: l.intl.format(c.default.EZfHRk, { helpURL: o.Z.getArticleURL(s.BhN.NSFW_AGE_GATING) })
                     })
                 })
             );

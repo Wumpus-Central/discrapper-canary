@@ -1,51 +1,52 @@
-e.d(n, { default: () => u });
+e.d(n, { default: () => x });
 var i = e(255367);
 e(73800);
 var s = e(442837),
-    a = e(481060),
-    o = e(87051),
-    l = e(9156),
-    r = e(621600),
-    c = e(388032),
-    d = e(278502);
-let u = (t) => {
-    let { onClose: n, channelId: e, transitionState: u } = t,
-        x = (0, s.e7)([l.ZP], () => l.ZP.isChannelMuted(null, e));
-    return (0, i.jsxs)(a.Y0X, {
-        transitionState: u,
-        size: a.CgR.SMALL,
-        'aria-label': c.intl.string(c.t.uAmAiI),
+    a = e(755721),
+    o = e(481060),
+    l = e(87051),
+    r = e(9156),
+    c = e(621600),
+    d = e(388032),
+    u = e(278502);
+let x = (t) => {
+    let { onClose: n, channelId: e, transitionState: x } = t,
+        h = (0, s.e7)([r.ZP], () => r.ZP.isChannelMuted(null, e));
+    return (0, i.jsxs)(o.Y0X, {
+        transitionState: x,
+        size: o.CgR.SMALL,
+        'aria-label': d.intl.string(d.t.uAmAiI),
         parentComponent: 'MuteAppNotificationsModal',
         children: [
-            (0, i.jsx)(a.olH, {
-                className: d.closeButton,
+            (0, i.jsx)(o.olH, {
+                className: u.closeButton,
                 onClick: n
             }),
-            (0, i.jsxs)(a.hzk, {
-                className: d.content,
+            (0, i.jsxs)(o.hzk, {
+                className: u.content,
                 children: [
                     (0, i.jsx)('div', {
-                        className: d.iconContainer,
-                        children: x ? (0, i.jsx)(a.owu, { size: 'md' }) : (0, i.jsx)(a.Dkj, { size: 'md' })
+                        className: u.iconContainer,
+                        children: h ? (0, i.jsx)(o.owu, { size: 'md' }) : (0, i.jsx)(o.Dkj, { size: 'md' })
                     }),
-                    (0, i.jsx)(a.X6q, {
-                        className: d.heading,
+                    (0, i.jsx)(o.X6q, {
+                        className: u.heading,
                         variant: 'heading-xl/bold',
-                        children: x ? c.intl.string(c.t['4rg7cH']) : c.intl.string(c.t.uAmAiI)
+                        children: h ? d.intl.string(d.t['4rg7cH']) : d.intl.string(d.t.uAmAiI)
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: d.infoText,
+                    (0, i.jsx)(o.Text, {
+                        className: u.infoText,
                         variant: 'text-md/normal',
                         color: 'text-default',
-                        children: x ? c.intl.string(c.t['5vton5']) : c.intl.string(c.t.mscFJS)
+                        children: h ? d.intl.string(d.t['5vton5']) : d.intl.string(d.t.mscFJS)
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        className: d.button,
-                        color: x ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
+                    (0, i.jsx)(a.zx, {
+                        className: u.button,
+                        color: h ? a.zx.Colors.PRIMARY : a.zx.Colors.RED,
                         onClick: () => {
-                            (o.Z.updateChannelOverrideSettings(null, e, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n());
+                            (l.Z.updateChannelOverrideSettings(null, e, { muted: !h }, h ? c.ZB.Unmuted : c.ZB.Muted), n());
                         },
-                        children: x ? c.intl.string(c.t.YqAjX1) : c.intl.string(c.t['w4m94+'])
+                        children: h ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t['w4m94+'])
                     })
                 ]
             })

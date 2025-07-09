@@ -80,9 +80,9 @@ function j(e) {
             onDragComplete: I,
             onDragReset: E
         }),
-        { customEmoji: D, unicodeEmoji: k } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
+        { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
     return (
-        (0, p.Oq)(C.emoji) || null != D || null != k || (S = f.intl.string(f.t['61wfmp'])),
+        (0, p.Oq)(C.emoji) || null != D || null != A || (S = f.intl.string(f.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
             className: l()(h.optionCard, {
                 [h.hasError]: y || null != S,

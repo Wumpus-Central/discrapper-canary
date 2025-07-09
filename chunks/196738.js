@@ -1,48 +1,47 @@
-n.d(e, { default: () => c });
-var s = n(255367);
+n.d(e, { default: () => r });
+var a = n(255367);
 n(73800);
-var l = n(481060),
-    i = n(313201),
-    a = n(388032),
+var i = n(481060),
+    s = n(313201),
+    l = n(388032),
     o = n(370067);
-function c(t) {
+function r(t) {
     let { onClose: e, transitionState: n } = t,
-        c = (0, i.Dt)();
-    return (0, s.jsxs)(l.Y0X, {
+        r = (0, s.Dt)();
+    return (0, a.jsxs)(i.Y0X, {
         transitionState: n,
-        'aria-labelledby': c,
+        'aria-labelledby': r,
         className: o.modal,
-        size: l.CgR.DYNAMIC,
+        size: i.CgR.DYNAMIC,
         parentComponent: 'UnknownGameModal',
         children: [
-            (0, s.jsxs)(l.hzk, {
+            (0, a.jsxs)(i.hzk, {
                 className: o.content,
                 children: [
-                    (0, s.jsx)(l.olH, {
+                    (0, a.jsx)(i.olH, {
                         className: o.closeButton,
                         onClick: e
                     }),
-                    (0, s.jsx)(l.X6q, {
+                    (0, a.jsx)(i.X6q, {
                         className: o.title,
-                        id: c,
+                        id: r,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: a.intl.string(a.t.C5biFx)
+                        children: l.intl.string(l.t.C5biFx)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, a.jsx)(i.Text, {
                         className: o.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: a.intl.string(a.t['3Dy1Rk'])
+                        children: l.intl.string(l.t['3Dy1Rk'])
                     })
                 ]
             }),
-            (0, s.jsx)(l.mzw, {
-                children: (0, s.jsx)(l.zxk, {
-                    color: l.zxk.Colors.BRAND,
-                    onClick: e,
-                    size: l.zxk.Sizes.MEDIUM,
-                    children: a.intl.string(a.t.BddRzc)
+            (0, a.jsx)(i.mzw, {
+                children: (0, a.jsx)(i.zxk, {
+                    variant: 'primary',
+                    text: l.intl.string(l.t.BddRzc),
+                    onClick: e
                 })
             })
         ]

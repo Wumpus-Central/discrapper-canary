@@ -10,12 +10,12 @@ function c(e) {
         [f, h] = l.useState(!1),
         [m, p] = l.useState(null),
         [g, b] = l.useState(''),
-        j = l.useRef(null);
+        y = l.useRef(null);
     return (
         l.useEffect(() => {
             if (d) {
                 var e;
-                null == (e = j.current) || e.focus();
+                null == (e = y.current) || e.focus();
             }
         }, [d]),
         (0, r.jsxs)('form', {
@@ -43,7 +43,7 @@ function c(e) {
                         title: a.intl.string(a.t.HZPBOT),
                         children: [
                             (0, r.jsx)(s.oil, {
-                                inputRef: j,
+                                inputRef: y,
                                 onChange: b,
                                 placeholder: a.intl.string(a.t.tARzgo),
                                 maxLength: i.gH,

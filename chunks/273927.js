@@ -1,14 +1,14 @@
 (n.d(t, {
-    GF: () => S,
+    GF: () => v,
     ZP: () => T,
-    yo: () => v
+    yo: () => S
 }),
     n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(194359),
     d = n(99690),
@@ -21,19 +21,19 @@ var i = n(255367),
     b = n(726985),
     x = n(981631),
     _ = n(388032),
-    E = n(569834);
-function j(e) {
+    j = n(569834);
+function E(e) {
     let { listType: t, numberOfUsers: n } = e,
         r = 'blocked' === t;
     return (0, i.jsxs)('div', {
-        className: E.header,
+        className: j.header,
         children: [
             (0, i.jsx)('div', {
-                className: E.iconContainer,
+                className: j.iconContainer,
                 children: r ? (0, i.jsx)(o.t6m, {}) : (0, i.jsx)(o.kZF, {})
             }),
             (0, i.jsxs)('div', {
-                className: E.text,
+                className: j.text,
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
@@ -53,8 +53,8 @@ function j(e) {
 function O(e) {
     var t;
     let { userId: n, last: s } = e,
-        g = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
-        h = (0, a.e7)([p.default], () => p.default.getUser(n)),
+        g = (0, l.e7)([m.Z], () => m.Z.isBlocked(n)),
+        h = (0, l.e7)([p.default], () => p.default.getUser(n)),
         [f, b] = r.useState(!1),
         x = r.useCallback(() => {
             (b(!0),
@@ -69,17 +69,17 @@ function O(e) {
     return null == h
         ? null
         : (0, i.jsxs)('div', {
-              className: l()(E.row, { [E.lastRow]: s }),
+              className: a()(j.row, { [j.lastRow]: s }),
               children: [
                   (0, i.jsxs)('div', {
-                      className: E.userInfo,
+                      className: j.userInfo,
                       children: [
                           (0, i.jsx)(d.Z, {
                               user: h,
                               size: o.EFr.SIZE_40
                           }),
                           (0, i.jsxs)('div', {
-                              className: E.text,
+                              className: j.text,
                               children: [
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
@@ -96,29 +96,29 @@ function O(e) {
                       ]
                   }),
                   (0, i.jsx)(o.zxk, {
-                      color: o.Ttl.PRIMARY,
+                      variant: 'secondary',
+                      text: _.intl.string(g ? _.t.XyHpKC : _.t['8wXU9P']),
                       onClick: x,
-                      submitting: f,
-                      children: _.intl.string(g ? _.t.XyHpKC : _.t['8wXU9P'])
+                      loading: f
                   })
               ]
           });
 }
 function C(e) {
     let { setting: t, userIds: n, listType: s } = e,
-        [l, a] = r.useState(5);
+        [a, l] = r.useState(5);
     return (0, i.jsx)(h.U, {
         setting: t,
         children: (0, i.jsxs)('div', {
-            className: E.card,
+            className: j.card,
             children: [
-                (0, i.jsx)(j, {
+                (0, i.jsx)(E, {
                     listType: s,
                     numberOfUsers: n.length
                 }),
                 (0, i.jsx)('div', {
-                    className: E.usersList,
-                    children: n.slice(0, l).map((e, t) =>
+                    className: j.usersList,
+                    children: n.slice(0, a).map((e, t) =>
                         (0, i.jsx)(
                             O,
                             {
@@ -129,18 +129,18 @@ function C(e) {
                         )
                     )
                 }),
-                l < n.length
+                a < n.length
                     ? (0, i.jsx)('div', {
-                          className: E.loadMoreContainer,
+                          className: j.loadMoreContainer,
                           children: (0, i.jsx)(o.P3F, {
                               onClick: () => {
-                                  a((e) => e + 5);
+                                  l((e) => e + 5);
                               },
-                              className: E.loadMoreButton,
+                              className: j.loadMoreButton,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-default',
-                                  children: _.intl.format(_.t.jULEDg, { numberOfUsers: l + 5 < n.length ? 5 : n.length - l })
+                                  children: _.intl.format(_.t.jULEDg, { numberOfUsers: a + 5 < n.length ? 5 : n.length - a })
                               })
                           })
                       })
@@ -149,16 +149,16 @@ function C(e) {
         })
     });
 }
-function S() {
-    let e = (0, a.Wu)([m.Z], () => m.Z.getBlockedIDs());
+function v() {
+    let e = (0, l.Wu)([m.Z], () => m.Z.getBlockedIDs());
     return (0, i.jsx)(C, {
         setting: b.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
     });
 }
-function v() {
-    let e = (0, a.Wu)([m.Z], () => m.Z.getIgnoredIDs());
+function S() {
+    let e = (0, l.Wu)([m.Z], () => m.Z.getIgnoredIDs());
     return (0, i.jsx)(C, {
         setting: b.s6.IGNORED_USERS,
         userIds: e,
@@ -175,8 +175,8 @@ function T() {
                 header: _.intl.string(_.t['3wRorq']),
                 description: _.intl.format(_.t['0aNQo6'], { helpArticle: g.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
-            (0, i.jsx)(S, {}),
-            (0, i.jsx)(v, {})
+            (0, i.jsx)(v, {}),
+            (0, i.jsx)(S, {})
         ]
     });
 }

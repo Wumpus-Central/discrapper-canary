@@ -29,16 +29,16 @@ let f = (e) => {
 };
 function g(e) {
     let { transitionState: t, onClose: n, questContent: l, quest: g } = e,
-        j = f(l),
+        p = f(l),
         _ = s.useMemo(() => {
             var e;
             return (0, c.Fs)({
-                isTargetedDisclosure: null != j,
+                isTargetedDisclosure: null != p,
                 gamePublisher: g.config.messages.gamePublisher,
                 gameTitle: g.config.messages.gameTitle,
                 cosponsorName: null == (e = g.config.cosponsorMetadata) ? void 0 : e.name
             });
-        }, [g, j]);
+        }, [g, p]);
     return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         size: a.CgR.DYNAMIC,
@@ -81,7 +81,7 @@ function g(e) {
                         className: u.upperBodyText,
                         children: _
                     }),
-                    (0, r.jsx)(p, { targetedTraits: j }),
+                    (0, r.jsx)(j, { targetedTraits: p }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
@@ -92,14 +92,15 @@ function g(e) {
             (0, r.jsx)(a.mzw, {
                 className: u.footer,
                 children: (0, r.jsx)(a.zxk, {
-                    onClick: n,
-                    children: m.intl.string(m.t.cpT0Cg)
+                    variant: 'primary',
+                    text: m.intl.string(m.t.cpT0Cg),
+                    onClick: n
                 })
             })
         ]
     });
 }
-function j(e) {
+function p(e) {
     let { location: t, age: n, activity: s } = e;
     return (0, r.jsxs)('ul', {
         className: u.targetList,
@@ -122,11 +123,11 @@ function j(e) {
         ]
     });
 }
-function p(e) {
+function j(e) {
     let { targetedTraits: t } = e;
     return null != t
         ? (0, r.jsx)(
-              j,
+              p,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

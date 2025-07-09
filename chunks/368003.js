@@ -3,11 +3,11 @@ var n = r(255367),
     s = r(73800),
     i = r(404759),
     o = r.n(i),
-    l = r(423650),
-    a = r.n(l),
+    a = r(423650),
+    l = r.n(a),
     u = r(481060),
-    c = r(388032),
-    p = r(843196);
+    p = r(388032),
+    c = r(843196);
 function d(e, t, r) {
     return (
         t in e
@@ -27,15 +27,15 @@ class h extends s.Component {
         return (0, n.jsxs)(s.Fragment, {
             children: [
                 (0, n.jsx)(u.X6q, {
-                    className: p.prompt,
+                    className: c.prompt,
                     variant: 'heading-md/semibold',
                     children: this.props.prompt
                 }),
-                (0, n.jsx)('hr', { className: p.separator }),
+                (0, n.jsx)('hr', { className: c.separator }),
                 (0, n.jsx)(u.Text, {
-                    className: p.selectYourAnswer,
+                    className: c.selectYourAnswer,
                     variant: 'text-xs/normal',
-                    children: c.intl.string(c.t.YeiLeH)
+                    children: p.intl.string(p.t.YeiLeH)
                 }),
                 (0, n.jsx)(u.FXm, {
                     options: this.getQuestionOptions(),
@@ -52,7 +52,7 @@ class h extends s.Component {
                 this,
                 'getQuestionOptions',
                 o()(() =>
-                    a()(
+                    l()(
                         this.props.options.map((e) => ({
                             name: e.copy,
                             value: e.house

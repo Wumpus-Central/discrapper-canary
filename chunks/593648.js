@@ -2,9 +2,9 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(s),
+    l = n(392711),
+    o = n.n(l),
     c = n(442837),
     d = n(524437),
     u = n(481060),
@@ -16,12 +16,12 @@ var i = n(255367),
     b = n(818083),
     x = n(688465),
     _ = n(890022),
-    E = n(688907),
-    j = n(487419),
+    j = n(688907),
+    E = n(487419),
     O = n(197344),
     C = n(476756),
-    S = n(734934),
-    v = n(223683),
+    v = n(734934),
+    S = n(223683),
     T = n(312400),
     N = n(115345),
     I = n(392888),
@@ -42,8 +42,8 @@ var i = n(255367),
     F = n(468788),
     H = n(388032),
     z = n(589848),
-    Y = n(20493);
-function W(e, t, n) {
+    W = n(20493);
+function Y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -67,7 +67,7 @@ function K(e) {
                 })
             )),
             i.forEach(function (t) {
-                W(e, t, n[t]);
+                Y(e, t, n[t]);
             }));
     }
     return e;
@@ -91,13 +91,13 @@ function q(e, t) {
     );
 }
 function X(e) {
-    let { label: t, enabled: n, disabled: r, onPreview: s, onChange: l, tooltip: a } = e;
+    let { label: t, enabled: n, disabled: r, onPreview: s, onChange: a, tooltip: l } = e;
     return (0, i.jsx)(u.j7V, {
         className: z.soundRow,
         value: n,
-        onChange: l,
+        onChange: a,
         disabled: r,
-        tooltipNote: a,
+        tooltipNote: l,
         children: (0, i.jsxs)('div', {
             className: z.notificationSound,
             children: [
@@ -122,10 +122,10 @@ function X(e) {
 }
 function Q(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
-        a = r.useRef(null),
-        o = (0, S.p)(),
+        l = r.useRef(null),
+        o = (0, v.p)(),
         c = r.useCallback((e, t) => {
-            (t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, R.GN)(e)));
+            (t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = (0, R.GN)(e)));
         }, []),
         d = r.useCallback(
             (e, n) => {
@@ -136,7 +136,7 @@ function Q(e) {
         );
     r.useEffect(() => () => {
         var e;
-        null == (e = a.current) || e.stop();
+        null == (e = l.current) || e.stop();
     });
     let m = [
             {
@@ -238,7 +238,7 @@ function Q(e) {
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(u.vwX, {
-                                  className: Y.marginBottom20,
+                                  className: W.marginBottom20,
                                   children: H.intl.string(H.t.fgSHf3)
                               }),
                               (0, i.jsx)(C.Z, {})
@@ -246,7 +246,7 @@ function Q(e) {
                       })
                     : null,
                 (0, i.jsx)(u.vwX, {
-                    className: l()(Y.marginBottom20, Y.marginTop20),
+                    className: a()(W.marginBottom20, W.marginTop20),
                     children: H.intl.string(H.t.MKWyKS)
                 }),
                 (0, i.jsx)(u.j7V, {
@@ -262,16 +262,16 @@ function Q(e) {
                     children: H.intl.string(H.t['2ZhCOT'])
                 }),
                 m.map((e) => {
-                    let { label: r, sound: s, focusModeDisabled: l } = e;
+                    let { label: r, sound: s, focusModeDisabled: a } = e;
                     return (0, i.jsx)(
                         X,
                         {
                             label: r,
-                            disabled: n || !0 === l,
-                            tooltip: l ? H.intl.string(H.t.cIRG0t) : void 0,
+                            disabled: n || !0 === a,
+                            tooltip: a ? H.intl.string(H.t.cIRG0t) : void 0,
                             onChange: (e) => d(s, e),
                             onPreview: (e) => c(s, e),
-                            enabled: !n && !t.includes(s) && !0 !== l
+                            enabled: !n && !t.includes(s) && !0 !== a
                         },
                         s
                     );
@@ -281,7 +281,7 @@ function Q(e) {
     });
 }
 function J() {
-    let e = (0, c.e7)([j.Z], () => j.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = L.default.keys(e).map((t) => {
             let n = e[t];
@@ -297,19 +297,19 @@ function J() {
               children: [
                   (0, i.jsxs)(u.X6q, {
                       variant: 'heading-lg/semibold',
-                      className: l()(z.titleWithBeta, Y.marginBottom20),
+                      className: a()(z.titleWithBeta, W.marginBottom20),
                       children: [H.intl.string(H.t.D9yVAA), (0, i.jsx)(x.Z, {})]
                   }),
                   (0, i.jsx)(u.R94, {
                       type: u.geA.DESCRIPTION,
-                      className: Y.marginBottom20,
+                      className: W.marginBottom20,
                       children: H.intl.string(H.t['0PhAOD'])
                   }),
                   (0, i.jsxs)(u.xJW, {
                       title: H.intl.string(H.t.Q0PsXV),
                       children: [
                           (0, i.jsx)(u.q4e, {
-                              className: null != t ? Y.marginBottom20 : Y.marginBottom40,
+                              className: null != t ? W.marginBottom20 : W.marginBottom40,
                               value: t,
                               onChange: (e) => {
                                   n(e);
@@ -318,13 +318,13 @@ function J() {
                           }),
                           null != t
                               ? (0, i.jsxs)('div', {
-                                    className: Y.marginTop20,
+                                    className: W.marginTop20,
                                     children: [
                                         (0, i.jsxs)(P.F, {
                                             setting: V.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, i.jsx)(u.j7V, {
-                                                    className: Y.marginBottom20,
+                                                    className: W.marginBottom20,
                                                     note: H.intl.string(H.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
@@ -339,14 +339,14 @@ function J() {
                                                     hideBorder: !0,
                                                     children: H.intl.string(H.t.u6dc5O)
                                                 }),
-                                                (0, i.jsx)(u.$i$, { className: l()(Y.marginTop20, Y.marginBottom40) })
+                                                (0, i.jsx)(u.$i$, { className: a()(W.marginTop20, W.marginBottom40) })
                                             ]
                                         }),
                                         (0, i.jsxs)(P.F, {
                                             setting: V.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, i.jsx)(u.j7V, {
-                                                    className: Y.marginBottom20,
+                                                    className: W.marginBottom20,
                                                     note: H.intl.string(H.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
@@ -361,13 +361,13 @@ function J() {
                                                     hideBorder: !0,
                                                     children: H.intl.string(H.t.P8MG6u)
                                                 }),
-                                                (0, i.jsx)(u.$i$, { className: l()(Y.marginTop20, Y.marginBottom40) })
+                                                (0, i.jsx)(u.$i$, { className: a()(W.marginTop20, W.marginBottom40) })
                                             ]
                                         })
                                     ]
                                 })
                               : null,
-                          null != t ? null : (0, i.jsx)(u.$i$, { className: l()(Y.marginTop20, Y.marginBottom40) })
+                          null != t ? null : (0, i.jsx)(u.$i$, { className: a()(W.marginTop20, W.marginBottom40) })
                       ]
                   })
               ]
@@ -388,7 +388,7 @@ class $ extends r.PureComponent {
         p.default.setTTSType(t);
     }
     render() {
-        let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: r, disabledSounds: s, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
+        let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: r, disabledSounds: s, disableAllSounds: l, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
             m = k.isPlatformEmbedded && (0, k.isWindows)(),
             p = o()
                 .range(1, 11)
@@ -403,7 +403,7 @@ class $ extends r.PureComponent {
                 (0, i.jsx)(P.F, {
                     setting: V.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, i.jsx)(u.j7V, {
-                        className: Y.marginBottom20,
+                        className: W.marginBottom20,
                         value: e !== G.qrD.NEVER && !d,
                         onChange: this.handleDesktopChange,
                         note: H.intl.string(H.t.wF9ih4),
@@ -416,7 +416,7 @@ class $ extends r.PureComponent {
                 (0, i.jsx)(P.F, {
                     setting: V.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.j7V, {
-                        className: m ? Y.marginBottom20 : Y.marginBottom40,
+                        className: m ? W.marginBottom20 : W.marginBottom40,
                         value: !n,
                         note: H.intl.string(H.t['9K4qwc']),
                         onChange: this.handleToggleShowUnreadBadge,
@@ -426,7 +426,7 @@ class $ extends r.PureComponent {
                 (0, i.jsx)(P.F, {
                     setting: V.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, i.jsx)(u.j7V, {
-                        className: Y.marginBottom40,
+                        className: W.marginBottom40,
                         value: r,
                         note: H.intl.string(H.t['bd4j4+']),
                         onChange: this.handleToggleShowFlash,
@@ -434,8 +434,8 @@ class $ extends r.PureComponent {
                     })
                 }),
                 (0, i.jsx)(en, {}),
-                (0, i.jsx)(ea, {}),
                 (0, i.jsx)(el, {}),
+                (0, i.jsx)(ea, {}),
                 (0, i.jsx)(P.F, {
                     setting: V.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                     children: (0, i.jsxs)(u.xJW, {
@@ -448,10 +448,10 @@ class $ extends r.PureComponent {
                             }),
                             (0, i.jsx)(u.R94, {
                                 type: u.geA.DESCRIPTION,
-                                className: Y.marginTop8,
+                                className: W.marginTop8,
                                 children: H.intl.string(H.t.Xytv9P)
                             }),
-                            (0, i.jsx)(u.$i$, { className: l()(Y.marginTop40, Y.marginBottom40) })
+                            (0, i.jsx)(u.$i$, { className: a()(W.marginTop40, W.marginBottom40) })
                         ]
                     })
                 }),
@@ -460,7 +460,7 @@ class $ extends r.PureComponent {
                 (0, i.jsx)(u.xJW, {
                     children: (0, i.jsx)(Q, {
                         disabledSounds: s,
-                        disableAllSounds: a,
+                        disableAllSounds: l,
                         notifyMessagesInSelectedChannel: c
                     })
                 }),
@@ -470,13 +470,13 @@ class $ extends r.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            W(this, 'handleToggleShowUnreadBadge', () => {
+            Y(this, 'handleToggleShowUnreadBadge', () => {
                 p.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
-            W(this, 'handleToggleShowFlash', () => {
+            Y(this, 'handleToggleShowFlash', () => {
                 p.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
-            W(this, 'renderTTS', () => {
+            Y(this, 'renderTTS', () => {
                 if (!h.Zh) return null;
                 let e = [
                     {
@@ -500,7 +500,7 @@ class $ extends r.PureComponent {
                             children: [
                                 (0, i.jsx)(u.R94, {
                                     type: u.geA.DESCRIPTION,
-                                    className: Y.marginBottom8,
+                                    className: W.marginBottom8,
                                     children: H.intl.string(H.t['+4dnAw'])
                                 }),
                                 (0, i.jsx)(u.FXm, {
@@ -510,7 +510,7 @@ class $ extends r.PureComponent {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(u.$i$, { className: l()(Y.marginTop40, Y.marginBottom40) })
+                        (0, i.jsx)(u.$i$, { className: a()(W.marginTop40, W.marginBottom40) })
                     ]
                 });
             }));
@@ -536,7 +536,7 @@ function et() {
         ? (0, i.jsx)(P.F, {
               setting: V.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, i.jsx)(u.j7V, {
-                  className: Y.marginBottom20,
+                  className: W.marginBottom20,
                   value: t,
                   onChange: (e) => {
                       g.Z.setAccountFlag(F.c.MENTION_ON_ALL_MESSAGES, e);
@@ -551,7 +551,7 @@ function en() {
     let e = T.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = T.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([Z.ZP], () => Z.ZP.useNewNotifications),
-        [s, a] = r.useState(!1);
+        [s, l] = r.useState(!1);
     return e && (n || t)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -559,11 +559,11 @@ function en() {
                       ? (0, i.jsx)(P.F, {
                             setting: V.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, i.jsx)(u.j7V, {
-                                className: Y.marginBottom40,
+                                className: W.marginBottom40,
                                 value: n,
                                 disabled: s || !n,
                                 note: H.intl.string(H.t.frbLrK),
-                                onChange: () => ei(a),
+                                onChange: () => ei(l),
                                 children: H.intl.string(H.t.z21l8P)
                             })
                         })
@@ -571,7 +571,7 @@ function en() {
                         ? (0, i.jsx)(P.F, {
                               setting: V.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, i.jsx)(u.j7V, {
-                                  className: Y.marginBottom40,
+                                  className: W.marginBottom40,
                                   value: n,
                                   disabled: s || n,
                                   note: 'Turns on the new notification system',
@@ -596,17 +596,19 @@ function en() {
                                       (0, i.jsx)(P.F, {
                                           setting: V.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.zxk, {
-                                              onClick: v.KP,
-                                              children: 'Restore most recent snapshot'
+                                              variant: 'primary',
+                                              text: 'Restore most recent snapshot',
+                                              onClick: S.KP
                                           })
                                       }),
                                       (0, i.jsx)(P.F, {
                                           setting: V.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, i.jsx)(u.zxk, {
+                                              variant: 'primary',
+                                              text: 'Launch Migration',
                                               onClick: () => {
                                                   (0, I.R)(!0);
-                                              },
-                                              children: 'Launch Migration'
+                                              }
                                           })
                                       }),
                                       (0, i.jsx)(P.F, {
@@ -623,7 +625,7 @@ function en() {
                                   ]
                               })
                           }),
-                          (0, i.jsx)(u.$i$, { className: l()(Y.marginTop40, Y.marginBottom40) })
+                          (0, i.jsx)(u.$i$, { className: a()(W.marginTop40, W.marginBottom40) })
                       ]
                   })
               ]
@@ -632,7 +634,7 @@ function en() {
 }
 async function ei(e) {
     e(!0);
-    let t = await (0, v.Tn)();
+    let t = await (0, S.Tn)();
     (0 === t.length
         ? await (0, N.oL)()
         : m.Z.show({
@@ -645,7 +647,7 @@ async function ei(e) {
         e(!1));
 }
 function er(e) {
-    let t = (0, S.p)();
+    let t = (0, v.p)();
     return (0, i.jsx)($, q(K({}, e), { focusMode: t }));
 }
 function es() {
@@ -660,10 +662,10 @@ function es() {
     }));
     return (0, i.jsx)(er, q(K({}, e), { afkTimeout: B.CM.useSetting() }));
 }
-function el() {
+function ea() {
     let e = (0, _._x)('notification_settings'),
-        t = (0, E.BH)(),
-        n = (0, E.nC)(),
+        t = (0, j.BH)(),
+        n = (0, j.nC)(),
         r = (0, c.e7)([f.Z], () => f.Z.currentUserApplicationIds.size > 0);
     if (!e) return null;
     let s = [
@@ -687,11 +689,11 @@ function el() {
         children: [
             (0, i.jsxs)(u.xJW, {
                 title: H.intl.string(H.t.omtoJy),
-                className: Y.marginBottom20,
+                className: W.marginBottom20,
                 children: [
                     (0, i.jsx)(u.R94, {
                         type: u.geA.DESCRIPTION,
-                        className: Y.marginBottom8,
+                        className: W.marginBottom8,
                         children: H.intl.string(H.t.ncS4CA)
                     }),
                     (0, i.jsx)(u.FXm, {
@@ -713,7 +715,7 @@ function el() {
         ]
     });
 }
-function ea() {
+function el() {
     let e = B.fz.useSetting(),
         t = [
             {
@@ -738,7 +740,7 @@ function ea() {
                       children: [
                           (0, i.jsx)(u.R94, {
                               type: u.geA.DESCRIPTION,
-                              className: Y.marginBottom8,
+                              className: W.marginBottom8,
                               children: H.intl.string(H.t.oWF6eX)
                           }),
                           (0, i.jsx)(u.FXm, {
@@ -750,7 +752,7 @@ function ea() {
                           })
                       ]
                   }),
-                  (0, i.jsx)(u.$i$, { className: l()(Y.marginTop40, Y.marginBottom40) })
+                  (0, i.jsx)(u.$i$, { className: a()(W.marginTop40, W.marginBottom40) })
               ]
           })
         : null;

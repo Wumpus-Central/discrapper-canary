@@ -1,32 +1,33 @@
-n.d(t, { default: () => j });
+n.d(t, { default: () => w });
 var r = n(255367),
     o = n(73800),
     a = n(477690),
-    i = n(481060),
-    c = n(208156),
-    l = n(385499),
-    s = n(264165),
-    u = n(885006),
-    d = n(624138),
-    f = n(293979),
-    p = n(674563),
-    b = n(388032),
-    O = n(243114);
-let h = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    m = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    v = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    g = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
-function j(e) {
+    i = n(755721),
+    c = n(481060),
+    l = n(208156),
+    s = n(385499),
+    u = n(264165),
+    d = n(885006),
+    f = n(624138),
+    p = n(293979),
+    b = n(674563),
+    O = n(388032),
+    h = n(243114);
+let m = (0, f.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    v = (0, f.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    g = (0, f.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    j = (0, f.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+function w(e) {
     var t, n, a;
-    let { title: d, onClose: j } = e,
-        { applicationIconURL: w, applicationName: _, queryParams: y, iframeUrl: x } = (0, f.b8)(e),
-        { width: I, height: M } = (0, u.Z)(),
-        N = o.useMemo(() => {
-            let e = Math.min(((M - g - 2 * v) * 16) / 9, m);
-            return Math.max(h, Math.min(I - 2 * v, e));
-        }, [I, M]);
+    let { title: f, onClose: w } = e,
+        { applicationIconURL: _, applicationName: y, queryParams: x, iframeUrl: I } = (0, p.b8)(e),
+        { width: M, height: N } = (0, d.Z)(),
+        A = o.useMemo(() => {
+            let e = Math.min(((N - j - 2 * g) * 16) / 9, v);
+            return Math.max(m, Math.min(M - 2 * g, e));
+        }, [M, N]);
     return (0, r.jsx)(
-        i.Y0X,
+        c.Y0X,
         ((n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -54,67 +55,67 @@ function j(e) {
         })({}, e)),
         (a = a =
             {
-                size: i.CgR.DYNAMIC,
-                className: O.root,
+                size: c.CgR.DYNAMIC,
+                className: h.root,
                 parentComponent: 'InteractionIframeModal',
                 children: (0, r.jsxs)('div', {
-                    style: { width: N },
+                    style: { width: A },
                     children: [
-                        (0, r.jsxs)(i.xBx, {
+                        (0, r.jsxs)(c.xBx, {
                             separator: !1,
-                            className: O.modalHeader,
+                            className: h.modalHeader,
                             children: [
-                                (0, r.jsx)(i.qEK, {
-                                    src: w,
-                                    size: i.EFr.SIZE_32,
-                                    'aria-label': _,
-                                    className: O.applicationIcon
+                                (0, r.jsx)(c.qEK, {
+                                    src: _,
+                                    size: c.EFr.SIZE_32,
+                                    'aria-label': y,
+                                    className: h.applicationIcon
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: O.flexRow,
+                                    className: h.flexRow,
                                     children: [
                                         (0, r.jsxs)('div', {
                                             children: [
-                                                (0, r.jsx)(i.X6q, {
+                                                (0, r.jsx)(c.X6q, {
                                                     variant: 'heading-sm/bold',
-                                                    children: _
+                                                    children: y
                                                 }),
-                                                (0, r.jsx)(i.Text, {
+                                                (0, r.jsx)(c.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'interactive-normal',
-                                                    children: d
+                                                    children: f
                                                 })
                                             ]
                                         }),
-                                        (0, r.jsx)(l.Z, {
-                                            type: p.Hb.BOT,
-                                            className: O.botTag,
+                                        (0, r.jsx)(s.Z, {
+                                            type: b.Hb.BOT,
+                                            className: h.botTag,
                                             verified: null == (t = e.application.bot) ? void 0 : t.verified
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(i.zxk, {
-                                    onClick: j,
-                                    innerClassName: O.closeButton,
-                                    className: O.closeButtonContainer,
-                                    look: i.zxk.Looks.BLANK,
-                                    size: i.zxk.Sizes.NONE,
-                                    'aria-label': b.intl.string(b.t.WAI6xs),
-                                    children: (0, r.jsx)(i.Dio, {
+                                (0, r.jsx)(i.zx, {
+                                    onClick: w,
+                                    innerClassName: h.closeButton,
+                                    className: h.closeButtonContainer,
+                                    look: i.zx.Looks.BLANK,
+                                    size: i.zx.Sizes.NONE,
+                                    'aria-label': O.intl.string(O.t.WAI6xs),
+                                    children: (0, r.jsx)(c.Dio, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: O.closeIcon
+                                        className: h.closeIcon
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(s.Z, {
+                        (0, r.jsx)(u.Z, {
                             aspectRatio: 16 / 9,
-                            children: (0, r.jsx)(c.J, {
-                                url: x,
+                            children: (0, r.jsx)(l.J, {
+                                url: I,
                                 shouldRefocus: !0,
-                                className: O.iframe,
-                                queryParams: y
+                                className: h.iframe,
+                                queryParams: x
                             })
                         })
                     ]

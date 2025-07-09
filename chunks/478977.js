@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(255367),
-    o = n(73800),
-    s = n(866442),
+    s = n(73800),
+    o = n(866442),
     a = n(481060),
     i = n(409667);
 function l(e) {
@@ -49,7 +49,7 @@ function c(e, t) {
 }
 let u = function (e) {
     let { colorKey: t, value: n, onChange: u, title: d } = e,
-        p = o.useRef(null);
+        p = s.useRef(null);
     return (0, r.jsxs)(a.xJW, {
         children: [
             (0, r.jsx)(a.vwX, {
@@ -63,7 +63,7 @@ let u = function (e) {
                         a.Z$W,
                         c(l({}, e), {
                             value: n,
-                            onChange: (e) => u(t, (0, s.Rf)(e))
+                            onChange: (e) => u(t, (0, o.Rf)(e))
                         })
                     ),
                 children: (e) =>

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(997841), n(388685), n(457542));
+(n.d(t, { Z: () => D }), n(997841), n(388685), n(457542));
 var i = n(255367),
     a = n(73800),
     l = n(392711),
@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(406432),
     d = n(169525),
     u = n(786761),
-    m = n(499376),
-    p = n(3148),
+    p = n(499376),
+    m = n(3148),
     f = n(739566),
     h = n(492593),
     g = n(219797),
@@ -90,7 +90,7 @@ let L = (e, t, n, i) => {
             I(
                 k(
                     {},
-                    (0, p.ZP)({
+                    (0, m.ZP)({
                         author:
                             null != n
                                 ? n
@@ -114,7 +114,7 @@ let L = (e, t, n, i) => {
             )
         );
     },
-    D = (e) => {
+    U = (e) => {
         let { message: t } = e,
             { attachments: n } = t;
         if (0 === n.length) return null;
@@ -173,7 +173,7 @@ let L = (e, t, n, i) => {
                         item: {
                             uniqueId: e.id,
                             originalItem: e,
-                            type: (0, m.aw)(e, !0),
+                            type: (0, p.aw)(e, !0),
                             downloadUrl: e.proxy_url,
                             height: e.height,
                             width: e.width,
@@ -208,15 +208,15 @@ let L = (e, t, n, i) => {
             })
         });
     };
-function U(e) {
+function D(e) {
     var t;
     let { flaggedContent: n } = e,
         l = (0, r.e7)([O.default], () => O.default.getCurrentUser()),
         [s, d] = a.useState({}),
-        [u, m] = a.useState(!0),
-        p = (0, r.e7)([w.Z], () => w.Z.getUsername()),
+        [u, p] = a.useState(!0),
+        m = (0, r.e7)([w.Z], () => w.Z.getUsername()),
         g = n[0],
-        y = L(g, s, l, p),
+        y = L(g, s, l, m),
         x = (0, f.ZP)(y),
         E = (0, j.Z)(y, {
             hideSimpleEmbedContent: !1,
@@ -262,7 +262,7 @@ function U(e) {
                             });
                     }).then((t) => d((n) => I(k({}, n), { [e.id]: t })))
                 )
-        ).finally(() => m(!1));
+        ).finally(() => p(!1));
     }, [g.attachments]),
     '' === y.content && 0 === y.attachments.length)
         ? null
@@ -275,7 +275,7 @@ function U(e) {
                         childrenHeader: (0, b.Z)({
                             author: I(k({}, l), {
                                 colorString: '',
-                                nick: null != (t = null == l ? void 0 : l.username) ? t : p
+                                nick: null != (t = null == l ? void 0 : l.username) ? t : m
                             }),
                             message: y,
                             channel: void 0,
@@ -286,7 +286,7 @@ function U(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1
                         }),
-                        childrenAccessories: (0, i.jsx)(D, { message: y }),
+                        childrenAccessories: (0, i.jsx)(U, { message: y }),
                         childrenMessageContent: (0, v.Z)({ message: y }, E.content),
                         hasThread: !1,
                         hasReply: !1,

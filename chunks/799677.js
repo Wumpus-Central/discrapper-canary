@@ -1,50 +1,50 @@
-i.d(e, { default: () => c });
-var n = i(255367);
+i.d(e, { default: () => o });
+var a = i(255367);
 i(73800);
-var a = i(481060),
+var n = i(481060),
     l = i(626135),
     s = i(39604),
     r = i(981631),
     d = i(388032),
-    o = i(931009);
-function c(t) {
-    let { transitionState: e, onClose: i, onBeforeDelete: c, onAfterDelete: h, clip: m } = t;
-    return (0, n.jsxs)(a.Y0X, {
-        size: a.CgR.SMALL,
+    c = i(931009);
+function o(t) {
+    let { transitionState: e, onClose: i, onBeforeDelete: o, onAfterDelete: h, clip: m } = t;
+    return (0, a.jsxs)(n.Y0X, {
+        size: n.CgR.SMALL,
         transitionState: e,
-        className: o.__invalid_modal,
+        className: c.__invalid_modal,
         parentComponent: 'ClipsDeleteModal',
         children: [
-            (0, n.jsxs)(a.hzk, {
-                className: o.modalContent,
+            (0, a.jsxs)(n.hzk, {
+                className: c.modalContent,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: o.header,
+                    (0, a.jsxs)('div', {
+                        className: c.header,
                         children: [
-                            (0, n.jsx)(a.X6q, {
-                                className: o.__invalid_title,
+                            (0, a.jsx)(n.X6q, {
+                                className: c.__invalid_title,
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 children: d.intl.string(d.t.Lzhui4)
                             }),
-                            (0, n.jsx)(a.olH, { onClick: i })
+                            (0, a.jsx)(n.olH, { onClick: i })
                         ]
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, a.jsx)(n.Text, {
                         variant: 'text-md/medium',
                         color: 'text-default',
-                        className: o.__invalid_body,
+                        className: c.__invalid_body,
                         children: d.intl.string(d.t.yxCBqq)
                     })
                 ]
             }),
-            (0, n.jsx)(a.mzw, {
-                children: (0, n.jsx)(a.zxk, {
-                    color: a.zxk.Colors.RED,
+            (0, a.jsx)(n.mzw, {
+                children: (0, a.jsx)(n.zxk, {
+                    variant: 'critical-primary',
+                    text: d.intl.string(d.t.VRWPDg),
                     onClick: function () {
-                        (null == c || c(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED));
-                    },
-                    children: d.intl.string(d.t.VRWPDg)
+                        (null == o || o(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED));
+                    }
                 })
             })
         ]

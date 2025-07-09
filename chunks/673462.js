@@ -59,11 +59,11 @@ let c = r.forwardRef(function (e, t) {
             var t;
             for (let n of ((null == (t = g.current.main) ? void 0 : t.paused) && (j.current = !1), Object.values(g.current))) null != n && (n.currentTime = e);
         }, []),
-        k = r.useCallback(() => {
+        P = r.useCallback(() => {
             var e;
             (null == (e = g.current.main) ? void 0 : e.paused) ? _() : w();
         }, [_, w]),
-        P = r.useCallback((e) => {
+        k = r.useCallback((e) => {
             g.current.main = e;
         }, []),
         O = r.useCallback((e) => {
@@ -85,9 +85,9 @@ let c = r.forwardRef(function (e, t) {
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsx)(o.Z, {
-                      onClick: k,
+                      onClick: P,
                       className: p ? s.hidden : s.displayVideo,
-                      ref: P,
+                      ref: k,
                       src: n,
                       muted: !0,
                       onLoadedData: f,

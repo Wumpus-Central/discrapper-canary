@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(921738),
-    l = n.n(s),
-    a = n(213005),
+    a = n.n(s),
+    l = n(213005),
     o = n(455279),
     c = n(358085),
     d = n(998502),
@@ -64,7 +64,7 @@ class g extends r.PureComponent {
             m(this, 'gs', void 0),
             m(this, '_mounted', !1),
             m(this, 'recordStart', () => {
-                (c.isPlatformEmbedded && !p && ((this.gs = new a.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING }));
+                (c.isPlatformEmbedded && !p && ((this.gs = new l.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING }));
             }),
             m(this, 'recordEnd', () => {
                 (this.cleanUp(), this.setState({ mode: o.c.DEFAULT }));
@@ -74,7 +74,7 @@ class g extends r.PureComponent {
             }),
             m(this, 'handleComboKeys', (e, t, n) => {
                 if ((n.preventDefault(), 'keydown' === n.type)) {
-                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, l()(e), u.CgE.BROWSER]),
+                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, a()(e), u.CgE.BROWSER]),
                         { keyCode: i } = n;
                     (null ==
                         e.find((e) => {

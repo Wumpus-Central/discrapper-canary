@@ -85,11 +85,11 @@ class E extends i.PureComponent {
                         ]
                     }),
                     (0, r.jsx)(a.zxk, {
-                        size: a.zxk.Sizes.SMALL,
+                        variant: 'secondary',
+                        size: 'sm',
+                        text: g.intl.string(g.t.bt75u7),
                         disabled: null != l,
-                        color: a.zxk.Colors.PRIMARY,
-                        onClick: this.handleStartEditing,
-                        children: g.intl.string(g.t.bt75u7)
+                        onClick: this.handleStartEditing
                     })
                 ]
             })
@@ -134,31 +134,31 @@ class E extends i.PureComponent {
                             (0, r.jsxs)(c.Z, {
                                 children: [
                                     (0, r.jsx)(a.zxk, {
+                                        variant: 'critical-secondary',
+                                        size: 'sm',
+                                        text: g.intl.string(g.t.iBUzS0),
                                         disabled: t || this.props.isDefault,
-                                        size: a.zxk.Sizes.SMALL,
-                                        color: a.zxk.Colors.RED,
-                                        look: a.zxk.Looks.OUTLINED,
-                                        onClick: this.handleRemoveLocation,
-                                        children: g.intl.string(g.t.iBUzS0)
+                                        onClick: this.handleRemoveLocation
                                     }),
-                                    (0, r.jsxs)(c.Z, {
+                                    (0, r.jsx)(c.Z, {
                                         justify: c.Z.Justify.END,
-                                        children: [
-                                            (0, r.jsx)(a.zxk, {
-                                                size: a.zxk.Sizes.SMALL,
-                                                color: a.zxk.Colors.PRIMARY,
-                                                look: a.zxk.Looks.LINK,
-                                                onClick: this.handleStopEditing,
-                                                children: g.intl.string(g.t['ETE/oK'])
-                                            }),
-                                            (0, r.jsx)(a.zxk, {
-                                                disabled: e === this.props.path && n === this.props.label && i === this.props.isDefault,
-                                                size: a.zxk.Sizes.SMALL,
-                                                color: a.zxk.Colors.GREEN,
-                                                onClick: this.handleSaveChanges,
-                                                children: g.intl.string(g.t.R3BPHx)
-                                            })
-                                        ]
+                                        children: (0, r.jsxs)(a.hE2, {
+                                            children: [
+                                                (0, r.jsx)(a.zxk, {
+                                                    variant: 'secondary',
+                                                    size: 'sm',
+                                                    text: g.intl.string(g.t['ETE/oK']),
+                                                    onClick: this.handleStopEditing
+                                                }),
+                                                (0, r.jsx)(a.zxk, {
+                                                    variant: 'active',
+                                                    size: 'sm',
+                                                    text: g.intl.string(g.t.R3BPHx),
+                                                    disabled: e === this.props.path && n === this.props.label && i === this.props.isDefault,
+                                                    onClick: this.handleSaveChanges
+                                                })
+                                            ]
+                                        })
                                     })
                                 ]
                             })
@@ -293,10 +293,11 @@ class O extends i.PureComponent {
                 (0, r.jsx)('div', {
                     className: m.buttonRowWrapper,
                     children: (0, r.jsx)(a.zxk, {
+                        variant: 'primary',
+                        size: 'sm',
+                        text: g.intl.string(g.t.pnZ2ur),
                         disabled: !h.isPlatformEmbedded,
-                        onClick: this.handleAddInstallationLocation,
-                        size: a.zxk.Sizes.SMALL,
-                        children: g.intl.string(g.t.pnZ2ur)
+                        onClick: this.handleAddInstallationLocation
                     })
                 })
             ]

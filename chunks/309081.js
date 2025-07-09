@@ -29,7 +29,7 @@ var r = n(255367),
     P = n(957825),
     C = n(388032),
     E = n(687852);
-function k(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function k(e) {
     }
     return e;
 }
-function A(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -73,7 +73,7 @@ function A(e, t) {
     }
     return a;
 }
-let I = {
+let k = {
     offset: {
         top: -4,
         bottom: -4,
@@ -131,7 +131,7 @@ function R(e) {
         x = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         {
             emoji: v,
-            isLoadingMedia: I,
+            isLoadingMedia: k,
             hasUpload: R,
             mediaUrl: N,
             mediaFilename: T
@@ -191,7 +191,7 @@ function R(e) {
             },
             [Z, h]
         ),
-        W = I
+        W = k
             ? (0, r.jsx)(c.$jN, { className: L ? E.spinnerWrapperDefault : E.spinnerWrapperImageOnly })
             : (0, r.jsx)(S, {
                   hasUpload: R,
@@ -218,7 +218,7 @@ function R(e) {
         children: (e) => {
             var { 'aria-controls': t, 'aria-expanded': n } = e;
             return (
-                A(e, ['aria-controls', 'aria-expanded']),
+                I(e, ['aria-controls', 'aria-expanded']),
                 (0, r.jsx)(c.yRy, {
                     targetElementRef: j,
                     animation: c.yRy.Animation.NONE,
@@ -228,10 +228,10 @@ function R(e) {
                         var a,
                             l,
                             { onClick: o, 'aria-controls': i, 'aria-expanded': s } = e,
-                            u = A(e, ['onClick', 'aria-controls', 'aria-expanded']);
+                            u = I(e, ['onClick', 'aria-controls', 'aria-expanded']);
                         return (0, r.jsxs)(
                             c.P3F,
-                            ((a = k({ innerRef: j }, u)),
+                            ((a = A({ innerRef: j }, u)),
                             (l = l =
                                 {
                                     className: H,
@@ -293,7 +293,7 @@ function N(e) {
     });
 }
 let T = a.forwardRef(function (e, t) {
-    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: P, canRemoveAnswer: A, onRemoveAnswer: S, addAnswer: D, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
+    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: P, canRemoveAnswer: I, onRemoveAnswer: S, addAnswer: D, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
         M = a.useRef(null),
         z = (0, m.Dt)(),
         W = (0, m.Dt)(),
@@ -309,7 +309,7 @@ let T = a.forwardRef(function (e, t) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        k(
+                        A(
                             {
                                 channelId: l,
                                 answer: d,
@@ -354,7 +354,7 @@ let T = a.forwardRef(function (e, t) {
     return b === i.C.DEFAULT
         ? (0, r.jsxs)('div', {
               ref: M,
-              className: o()(E.answerRow, { [E.hasDeleteButton]: A }),
+              className: o()(E.answerRow, { [E.hasDeleteButton]: I }),
               children: [
                   (0, r.jsxs)('div', {
                       className: o()(E.defaultTextInputWrapper, { [E.hasError]: H }),
@@ -377,7 +377,7 @@ let T = a.forwardRef(function (e, t) {
                               maxLength: v.WA,
                               'aria-invalid': H,
                               'aria-describedby': H ? z : W,
-                              focusProps: I,
+                              focusProps: k,
                               inputRef: Z
                           }),
                           (0, r.jsx)(N, {
@@ -386,7 +386,7 @@ let T = a.forwardRef(function (e, t) {
                           })
                       ]
                   }),
-                  A &&
+                  I &&
                       (0, r.jsx)(c.P3F, {
                           onClick: () => S(p),
                           className: E.removeAnswerButtonDefault,

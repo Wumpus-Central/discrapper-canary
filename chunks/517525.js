@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685));
+(n.d(t, { Z: () => L }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -102,16 +102,16 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let D = t || i,
             { location: M } = (0, p.O)(),
-            k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-            L = u && !S.ZP.isPremium(k, Z.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, k),
+            L = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+            k = u && !S.ZP.isPremium(L, Z.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, L),
             U = l.useCallback(() => {
-                L &&
+                k &&
                     D &&
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
                         return (t) => (0, r.jsx)(e, w(I({}, t), { analyticsSource: M }));
                     });
-            }, [L, D, M]);
+            }, [k, D, M]);
         if (
             (l.useEffect(() => {
                 !P &&
@@ -136,7 +136,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     f.P3F,
                     w(I({}, e), {
                         onClick: U,
-                        className: a()(_.qualityIndicator, E, g.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: L && D }),
+                        className: a()(_.qualityIndicator, E, g.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: k && D }),
                         children: [
                             D
                                 ? (0, r.jsx)(f.SrA, {
@@ -161,7 +161,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             shape: d
         });
     },
-    k = (e) => {
+    L = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: i = !0, size: u, className: s, premiumIndicator: c } = e,
             [d, p] = l.useState(!1),
             m = (0, b.W3)(t),

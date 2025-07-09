@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(498607),
-    a = n.n(l),
+    a = n(498607),
+    l = n.n(a),
     o = n(692547),
     c = n(481060),
     d = n(220082),
@@ -16,11 +16,11 @@ var r = n(120356),
     f = n(388032),
     b = n(732391);
 function x(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: x, guildId: _, className: E, showPremiumIcon: j = !0, showResetThemeButton: O = !1, forcedDivider: C } = e,
-        S = (0, u.ZP)(t.id, _),
-        { primaryColor: v, secondaryColor: T } = (0, m.Z)({
+    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: a, preventDisabled: x, guildId: _, className: j, showPremiumIcon: E = !0, showResetThemeButton: O = !1, forcedDivider: C } = e,
+        v = (0, u.ZP)(t.id, _),
+        { primaryColor: S, secondaryColor: T } = (0, m.Z)({
             user: t,
-            displayProfile: S,
+            displayProfile: v,
             pendingThemeColors: r,
             isPreview: !0
         }),
@@ -28,15 +28,15 @@ function x(e) {
         I = null != n ? n : t.getAvatarURL(_, 80),
         y = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         A = (0, d.Cf)(I, y, !1);
-    if (null == v || null == T) return null;
+    if (null == S || null == T) return null;
     let P = (e) => {
-        l(a()(e, null == S ? void 0 : S.themeColors) ? void 0 : e);
+        a(l()(e, null == v ? void 0 : v.themeColors) ? void 0 : e);
     };
     return (0, i.jsx)(h.Z, {
         title: f.intl.string(f.t.DMeO2d),
         disabled: !N && !x,
-        className: s()(b.__invalid_profileThemesSection, E),
-        showPremiumIcon: j,
+        className: s()(b.__invalid_profileThemesSection, j),
+        showPremiumIcon: E,
         forcedDivider: C,
         children: (0, i.jsxs)('div', {
             className: b.sectionContainer,
@@ -45,7 +45,7 @@ function x(e) {
                     className: b.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([e, T]),
-                        color: v,
+                        color: S,
                         suggestedColors: A,
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
@@ -60,7 +60,7 @@ function x(e) {
                 (0, i.jsx)('div', {
                     className: b.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
-                        onChange: (e) => P([v, e]),
+                        onChange: (e) => P([S, e]),
                         color: T,
                         suggestedColors: A,
                         showEyeDropper: !0,
@@ -75,13 +75,15 @@ function x(e) {
                 }),
                 O &&
                     null != _ &&
-                    (0, i.jsx)(c.zxk, {
+                    (0, i.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: b.resetButton,
-                        color: c.zxk.Colors.PRIMARY,
-                        look: c.zxk.Looks.LINK,
-                        size: c.zxk.Sizes.SMALL,
-                        onClick: () => P([null, null]),
-                        children: f.intl.string(f.t['L+Gmoa'])
+                        children: (0, i.jsx)(c.zxk, {
+                            variant: 'secondary',
+                            size: 'sm',
+                            text: f.intl.string(f.t['L+Gmoa']),
+                            onClick: () => P([null, null])
+                        })
                     })
             ]
         })

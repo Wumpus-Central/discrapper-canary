@@ -1,4 +1,4 @@
-i.d(n, { default: () => c });
+i.d(n, { default: () => I });
 var e = i(255367);
 i(73800);
 var d = i(481060),
@@ -8,47 +8,47 @@ var d = i(481060),
     _ = i(482241),
     s = i(554747),
     p = i(388032),
-    I = i(572583);
-function c(t) {
-    let { channel: n, transitionState: i, onClose: c } = t,
-        o = (0, a.Dt)(),
-        E = (0, s.qY)(n.id);
-    if (null == E) return null;
+    c = i(572583);
+function I(t) {
+    let { channel: n, transitionState: i, onClose: I } = t,
+        E = (0, a.Dt)(),
+        o = (0, s.qY)(n.id);
+    if (null == o) return null;
     let T = () => {
-        (l.default.selectVoiceChannel(null), c());
+        (l.default.selectVoiceChannel(null), I());
     };
     return (0, e.jsxs)(d.Y0X, {
         transitionState: i,
-        'aria-labelledby': o,
+        'aria-labelledby': E,
         size: d.CgR.SMALL,
         parentComponent: 'EndEventModal',
         children: [
             (0, e.jsxs)(d.hzk, {
-                className: I.content,
+                className: c.content,
                 children: [
                     (0, e.jsx)(r.Z, {
                         children: (0, e.jsx)('div', {
-                            className: I.iconBackground,
+                            className: c.iconBackground,
                             children: (0, e.jsx)(d.Que, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 40,
                                 width: 40,
-                                className: I.icon
+                                className: c.icon
                             })
                         })
                     }),
                     (0, e.jsx)(d.X6q, {
-                        id: o,
+                        id: E,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: I.title,
+                        className: c.title,
                         children: p.intl.string(p.t['4Ao8LC'])
                     }),
                     (0, e.jsx)(d.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: I.subtitle,
+                        className: c.subtitle,
                         children: p.intl.string(p.t['0I0B8f'])
                     })
                 ]
@@ -56,17 +56,20 @@ function c(t) {
             (0, e.jsxs)(d.mzw, {
                 children: [
                     (0, e.jsx)(d.zxk, {
-                        color: d.zxk.Colors.RED,
+                        variant: 'critical-primary',
+                        text: p.intl.string(p.t.mjB9pa),
                         onClick: () => {
-                            (_.Z.endEvent(E.id, E.guild_id), T());
-                        },
-                        children: p.intl.string(p.t.mjB9pa)
+                            (_.Z.endEvent(o.id, o.guild_id), T());
+                        }
                     }),
-                    (0, e.jsx)(d.zxk, {
-                        color: d.zxk.Colors.PRIMARY,
-                        className: I.cancelButton,
-                        onClick: T,
-                        children: p.intl.string(p.t.P60OAQ)
+                    (0, e.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
+                        className: c.cancelButton,
+                        children: (0, e.jsx)(d.zxk, {
+                            variant: 'secondary',
+                            text: p.intl.string(p.t.P60OAQ),
+                            onClick: T
+                        })
                     })
                 ]
             })

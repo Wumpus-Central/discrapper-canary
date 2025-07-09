@@ -1,83 +1,85 @@
-(n.d(t, { default: () => i }), n(388685));
-var r = n(255367),
-    o = n(73800),
-    l = n(481060),
-    s = n(388032),
-    a = n(910282);
-function i(e) {
-    let { onConfirm: t, onClose: n, validationText: i, errorText: c, header: x, className: d, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: j } = e,
-        [k, C] = o.useState(''),
-        [f, b] = o.useState(null),
-        g =
-            o.Children.count(j) > 0
-                ? (0, r.jsx)(l.Zbd, {
-                      type: l.Zbd.Types.WARNING,
-                      className: a.card,
-                      children: (0, r.jsx)(l.Text, {
+(r.d(t, { default: () => o }), r(388685));
+var n = r(255367),
+    a = r(73800),
+    i = r(481060),
+    s = r(388032),
+    l = r(910282);
+function o(e) {
+    let { onConfirm: t, onClose: r, validationText: o, errorText: c, header: d, className: x, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: j } = e,
+        [f, b] = a.useState(''),
+        [C, g] = a.useState(null),
+        v =
+            a.Children.count(j) > 0
+                ? (0, n.jsx)(i.Zbd, {
+                      type: i.Zbd.Types.WARNING,
+                      className: l.card,
+                      children: (0, n.jsx)(i.Text, {
                           color: 'currentColor',
                           variant: 'text-md/normal',
                           children: j
                       })
                   })
                 : null;
-    return (0, r.jsx)(l.Y0X, {
+    return (0, n.jsx)(i.Y0X, {
         transitionState: m,
-        className: d,
+        className: x,
         parentComponent: 'TextEntryConfirm',
-        children: (0, r.jsxs)('form', {
+        children: (0, n.jsxs)('form', {
             onSubmit: function (e) {
-                if ((e.preventDefault(), k.toLowerCase() !== i.toLowerCase())) return void b(c);
-                (null == t || t(), n());
+                if ((e.preventDefault(), f.toLowerCase() !== o.toLowerCase())) return void g(c);
+                (null == t || t(), r());
             },
             children: [
-                (0, r.jsx)(l.xBx, {
+                (0, n.jsx)(i.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(l.X6q, {
+                    children: (0, n.jsx)(i.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: x
+                        children: d
                     })
                 }),
-                (0, r.jsxs)(l.hzk, {
+                (0, n.jsxs)(i.hzk, {
                     children: [
-                        g,
-                        (0, r.jsxs)(l.xJW, {
+                        v,
+                        (0, n.jsxs)(i.xJW, {
                             title: p,
-                            className: a.spacing,
+                            className: l.spacing,
                             children: [
-                                (0, r.jsx)(l.oil, {
+                                (0, n.jsx)(i.oil, {
                                     id: 'text-entry-confirm',
                                     type: 'text',
-                                    value: k,
+                                    value: f,
                                     autoComplete: 'off',
-                                    onChange: C,
+                                    onChange: b,
                                     autoFocus: !0
                                 }),
-                                null != f && '' !== f
-                                    ? (0, r.jsx)(l.Text, {
+                                null != C && '' !== C
+                                    ? (0, n.jsx)(i.Text, {
                                           color: 'text-danger',
                                           variant: 'text-xs/normal',
-                                          className: a.error,
-                                          children: f
+                                          className: l.error,
+                                          children: C
                                       })
                                     : null
                             ]
                         })
                     ]
                 }),
-                (0, r.jsxs)(l.mzw, {
-                    children: [
-                        (0, r.jsx)(l.zxk, {
-                            type: 'submit',
-                            color: l.zxk.Colors.RED,
-                            children: null != h ? h : s.intl.string(s.t['cY+Ooa'])
-                        }),
-                        (0, r.jsx)(l.zxk, {
-                            onClick: n,
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.PRIMARY,
-                            children: null != u ? u : s.intl.string(s.t['ETE/oK'])
-                        })
-                    ]
+                (0, n.jsx)(i.mzw, {
+                    children: (0, n.jsxs)(i.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, n.jsx)(i.zxk, {
+                                variant: 'critical-primary',
+                                text: null != h ? h : s.intl.string(s.t['cY+Ooa']),
+                                type: 'submit'
+                            }),
+                            (0, n.jsx)(i.zxk, {
+                                variant: 'secondary',
+                                text: null != u ? u : s.intl.string(s.t['ETE/oK']),
+                                onClick: r
+                            })
+                        ]
+                    })
                 })
             ]
         })

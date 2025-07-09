@@ -1,7 +1,7 @@
-o.d(t, { m: () => l });
-var n = o(818083),
-    i = o(984134);
-let r = (0, n.B)({
+n.d(t, { m: () => l });
+var o = n(818083),
+    i = n(984134);
+let r = (0, o.B)({
     kind: 'user',
     id: '2025-05_av_survey_taxonomy_refresh',
     label: 'AV survey taxonomy refresh',
@@ -15,13 +15,13 @@ let r = (0, n.B)({
     ]
 });
 function l(e) {
-    let { location: t, autoTrackExposure: o = !0 } = e,
-        { isInHoldout: n } = i.Y.useExperiment({ location: t }, { autoTrackExposure: o });
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { isInHoldout: o } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
     return r.useExperiment(
         { location: t },
         {
-            disable: n,
-            autoTrackExposure: o
+            disable: o,
+            autoTrackExposure: n
         }
     );
 }

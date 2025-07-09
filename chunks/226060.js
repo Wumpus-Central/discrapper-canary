@@ -50,13 +50,14 @@ function g(e) {
                                   }));
                           }
                           return e;
-                      })({}, e)),
-                      (n = n =
+                      })(
                           {
-                              color: o.zxk.Colors.BRAND,
-                              disabled: !0,
-                              children: _.intl.string(_.t.xUi3BA)
-                          }),
+                              variant: 'primary',
+                              text: _.intl.string(_.t.xUi3BA)
+                          },
+                          e
+                      )),
+                      (n = n = { disabled: !0 }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                           : (function (e, t) {
@@ -80,9 +81,9 @@ function g(e) {
                     productId: g.id
                 })
               : (0, r.jsx)(o.zxk, {
-                    color: o.zxk.Colors.PRIMARY,
-                    disabled: !0,
-                    children: _.intl.string(_.t.RcTOGB)
+                    variant: 'secondary',
+                    text: _.intl.string(_.t.RcTOGB),
+                    disabled: !0
                 })
           : (0, r.jsx)(o.gtL, {
                 shineSize: o.gtL.ShineSizes.SMALL,

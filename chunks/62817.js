@@ -2,8 +2,8 @@
 var r,
     i = n(442837),
     l = n(570140),
-    o = n(375954);
-function a(e, t, n) {
+    a = n(375954);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -52,7 +52,7 @@ function b(e, t) {
 }
 class _ extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z);
+        this.waitFor(a.Z);
     }
     getFiles(e) {
         var t;
@@ -68,7 +68,7 @@ class _ extends (r = i.ZP.Store) {
         if (null != e) return f[e];
     }
 }
-a(_, 'displayName', 'UploadStore');
+o(_, 'displayName', 'UploadStore');
 let y = new _(l.Z, {
     CONNECTION_OPEN: function () {
         f = {};
@@ -78,15 +78,15 @@ let y = new _(l.Z, {
     },
     UPLOAD_START: function (e) {
         var t, n, r, i;
-        let { channelId: l, file: o, uploader: a, message: f } = e;
-        if (a._aborted || a._errored) return;
+        let { channelId: l, file: a, uploader: o, message: f } = e;
+        if (o._aborted || o._errored) return;
         let m = null != (t = u[l]) ? t : c;
-        if (((d[o.id] = a), (u[l] = [...m, o]), null == f)) return;
-        p[o.id] = f;
-        let { items: g } = o;
+        if (((d[a.id] = o), (u[l] = [...m, a]), null == f)) return;
+        p[a.id] = f;
+        let { items: g } = a;
         (null != g &&
             (h[f.id] =
-                ((r = s({}, o)),
+                ((r = s({}, a)),
                 (i = i = { items: g }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))

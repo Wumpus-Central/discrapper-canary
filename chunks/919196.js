@@ -108,8 +108,8 @@ function N(e) {
     let { guild: n, applicationIntegration: a, selectableWebhookChannels: c, editedWebhook: N, errors: I, canNavigate: E } = e,
         { application: S, integration: T, webhooks: w } = a,
         [P, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == S.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, S.bot.id, n)], [S.bot, n]),
-        k = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
-        A = i.useCallback(() => {
+        A = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
+        k = i.useCallback(() => {
             E() &&
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
@@ -220,7 +220,7 @@ function N(e) {
                               children: (0, r.jsx)(o.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: k ? v.intl.string(v.t.ahPd2d) : v.intl.string(v.t.axqYMj)
+                                  children: A ? v.intl.string(v.t.ahPd2d) : v.intl.string(v.t.axqYMj)
                               })
                           })
                 ]
@@ -240,12 +240,11 @@ function N(e) {
                         grow: 0,
                         shrink: 0,
                         children: (0, r.jsx)(o.zxk, {
-                            size: o.zxk.Sizes.SMALL,
-                            color: o.zxk.Colors.RED,
-                            look: o.zxk.Looks.FILLED,
+                            variant: 'critical-primary',
+                            size: 'sm',
+                            text: v.intl.string(v.t.ebGf4u),
                             disabled: !Z,
-                            onClick: A,
-                            children: v.intl.string(v.t.ebGf4u)
+                            onClick: k
                         })
                     })
                 ]

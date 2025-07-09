@@ -68,12 +68,16 @@ function j(e) {
             O.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(o.zxk, {
+                          (0, r.jsx)('div', {
+                              'data-button-hoisted-classname-wrapper': !0,
                               className: f.createButton,
-                              size: o.zxk.Sizes.SMALL,
-                              disabled: !Z,
-                              onClick: P,
-                              children: g.intl.string(g.t['nrO/HB'])
+                              children: (0, r.jsx)(o.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: g.intl.string(g.t['nrO/HB']),
+                                  disabled: !Z,
+                                  onClick: P
+                              })
                           }),
                           (0, r.jsx)(m.Z, {
                               webhooks: O,
@@ -100,11 +104,15 @@ function j(e) {
                                   variant: 'heading-md/semibold',
                                   children: g.intl.string(g.t.LzmsWl)
                               }),
-                              (0, r.jsx)(o.zxk, {
+                              (0, r.jsx)('div', {
+                                  'data-button-hoisted-classname-wrapper': !0,
                                   className: f.emptyStateButton,
-                                  disabled: !t,
-                                  onClick: n,
-                                  children: g.intl.string(g.t.lOQqJC)
+                                  children: (0, r.jsx)(o.zxk, {
+                                      variant: 'primary',
+                                      text: g.intl.string(g.t.lOQqJC),
+                                      disabled: !t,
+                                      onClick: n
+                                  })
                               })
                           ]
                       });

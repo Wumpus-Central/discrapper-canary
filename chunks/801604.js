@@ -59,11 +59,11 @@ function S(e) {
         T = (0, c.zX)({ location: 'StreamSettingsSummary' }),
         [E, P] = null != (i = (0, p.Z)(S)) ? i : [C, y],
         R = (0, u.L)(S),
-        k = (0, f.M)(E),
-        A = w === s.vA.CAMERA,
-        M = null != Z || (!!N && (!m || A)),
-        L = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : A,
-        D = M ? void 0 : S === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : S === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
+        A = (0, f.M)(E),
+        k = w === s.vA.CAMERA,
+        M = null != Z || (!!N && (!m || k)),
+        D = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : k,
+        L = M ? void 0 : S === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : S === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
         className: v.root,
         children: [
@@ -99,11 +99,11 @@ function S(e) {
                                         (0, r.jsx)(j, {})
                                     ]
                                 }),
-                            null != D &&
+                            null != L &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: D }), (0, r.jsx)(j, {})]
+                                    children: [(0, r.jsx)('span', { children: L }), (0, r.jsx)(j, {})]
                                 }),
-                            (0, r.jsx)('span', { children: k }),
+                            (0, r.jsx)('span', { children: A }),
                             (0, r.jsx)(j, {}),
                             (0, r.jsx)('span', { children: ''.concat(P, 'fps') }),
                             O &&
@@ -123,7 +123,7 @@ function S(e) {
                                         })
                                     ]
                                 }),
-                            L
+                            D
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(j, {}),

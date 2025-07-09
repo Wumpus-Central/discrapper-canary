@@ -39,10 +39,14 @@ function c(e) {
                 children: i.intl.string(i.t.jmq9GB)
             }),
             d || u
-                ? (0, r.jsx)(a.zxk, {
+                ? (0, r.jsx)('div', {
+                      'data-button-hoisted-classname-wrapper': !0,
                       className: o.cta,
-                      onClick: c,
-                      children: i.intl.string(i.t.rBIGBA)
+                      children: (0, r.jsx)(a.zxk, {
+                          variant: 'primary',
+                          text: i.intl.string(i.t.rBIGBA),
+                          onClick: c
+                      })
                   })
                 : null
         ]

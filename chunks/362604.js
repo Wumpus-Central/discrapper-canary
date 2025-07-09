@@ -1,93 +1,94 @@
-(n.d(t, { Z: () => E }), n(388685), n(472816), n(794429));
+(n.d(t, { Z: () => y }), n(388685), n(472816), n(794429));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    s = n(481060),
-    c = n(834129),
-    u = n(623292),
-    d = n(926491),
-    p = n(419922),
-    m = n(626135),
-    f = n(585483),
-    _ = n(115610),
-    g = n(981631),
-    h = n(388032),
-    b = n(711643);
-function E(e) {
-    let { message: t, channel: l, compact: E } = e,
-        y = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [C, x] = i.useState(null);
+    s = n(755721),
+    c = n(481060),
+    u = n(834129),
+    d = n(623292),
+    p = n(926491),
+    m = n(419922),
+    f = n(626135),
+    _ = n(585483),
+    g = n(115610),
+    h = n(981631),
+    b = n(388032),
+    E = n(711643);
+function y(e) {
+    let { message: t, channel: l, compact: y } = e,
+        C = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [x, v] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            y.length > 0 && x(y[Math.floor(Math.random() * y.length)]);
+            C.length > 0 && v(C[Math.floor(Math.random() * C.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [y]),
+    }, [C]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)('div', {
               children: [
-                  (0, r.jsx)(c.Z, {
-                      className: a()(b.mainContainer, { [b.compact]: E }),
+                  (0, r.jsx)(u.Z, {
+                      className: a()(E.mainContainer, { [E.compact]: y }),
                       icon: n(570111),
-                      compact: E,
+                      compact: y,
                       children: (0, r.jsx)('div', {
-                          className: a()(b.__invalid_content, { [b.compact]: E }),
+                          className: a()(E.__invalid_content, { [E.compact]: y }),
                           children: (0, r.jsx)('div', {
-                              className: a()(b.__invalid_messageContent, { [b.compact]: E }),
-                              children: '' !== t.content ? t.content : h.intl.string(h.t.wnn1DQ)
+                              className: a()(E.__invalid_messageContent, { [E.compact]: y }),
+                              children: '' !== t.content ? t.content : b.intl.string(b.t.wnn1DQ)
                           })
                       })
                   }),
                   (0, r.jsxs)('div', {
-                      className: b.actions,
+                      className: E.actions,
                       children: [
-                          (0, r.jsx)(s.DY3, {
-                              text: h.intl.string(h.t.ASZTf3),
-                              children: (0, r.jsx)(s.zxk, {
-                                  color: s.zxk.Colors.PRIMARY,
+                          (0, r.jsx)(c.DY3, {
+                              text: b.intl.string(b.t.ASZTf3),
+                              children: (0, r.jsx)(s.zx, {
+                                  color: s.zx.Colors.PRIMARY,
                                   onClick: () => {
-                                      (m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (f.default.track(h.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
-                                          (0, u.fE)({
+                                          _.S.dispatch(h.CkL.UPLOAD_FILE),
+                                          (0, d.fE)({
                                               message: t,
                                               channel: l,
                                               shouldMention: !0
                                           }));
                                   },
-                                  children: (0, r.jsx)(s.FmF, {
+                                  children: (0, r.jsx)(c.FmF, {
                                       size: 'md',
                                       color: 'currentColor'
                                   })
                               })
                           }),
-                          (0, r.jsx)(s.DY3, {
-                              text: h.intl.string(h.t.gbrrAw),
-                              children: (0, r.jsx)(s.zxk, {
-                                  color: s.zxk.Colors.PRIMARY,
+                          (0, r.jsx)(c.DY3, {
+                              text: b.intl.string(b.t.gbrrAw),
+                              children: (0, r.jsx)(s.zx, {
+                                  color: s.zx.Colors.PRIMARY,
                                   onClick: () => {
-                                      (m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      (f.default.track(h.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, _.O)(t.id, l));
+                                          (0, g.O)(t.id, l));
                                   },
                                   children:
-                                      null != C
-                                          ? (0, r.jsx)(p.Z, {
+                                      null != x
+                                          ? (0, r.jsx)(m.Z, {
                                                 size: 32,
-                                                sticker: C
+                                                sticker: x
                                             })
-                                          : (0, r.jsx)(s.EO4, {
+                                          : (0, r.jsx)(c.EO4, {
                                                 size: 'md',
                                                 color: 'currentColor'
                                             })

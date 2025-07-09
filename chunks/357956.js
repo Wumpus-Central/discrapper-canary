@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(774078),
-    l = n(55935),
-    a = n(388032);
+    a = n(55935),
+    l = n(388032);
 let o = function (e) {
     let { className: t, cooldown: n } = e,
         o = (0, s.Z)(n);
@@ -12,10 +12,10 @@ let o = function (e) {
         className: t,
         variant: 'text-sm/medium',
         color: 'text-muted',
-        children: (0, l.QX)(o, {
-            days: a.t.WUTPDQ,
-            hours: a.t.c1qodX,
-            minutes: a.t['2+A3dn']
+        children: (0, a.QX)(o, {
+            days: l.t.WUTPDQ,
+            hours: l.t.c1qodX,
+            minutes: l.t['2+A3dn']
         })
     });
 };

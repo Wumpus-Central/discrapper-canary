@@ -1,16 +1,16 @@
 (a.d(t, { default: () => c }), a(388685));
 var n = a(255367),
-    l = a(73800),
-    s = a(481060),
+    s = a(73800),
+    l = a(481060),
     r = a(238675),
     i = a(37291),
     o = a(332915);
 let c = function (e) {
     let { onClose: t, transitionState: a } = e,
-        [c, A] = l.useState(null),
-        [d, u] = l.useState(null),
-        [T, C] = l.useState(null),
-        [h, p] = l.useState(''),
+        [c, A] = s.useState(null),
+        [d, u] = s.useState(null),
+        [T, C] = s.useState(null),
+        [h, p] = s.useState(''),
         f = async () => {
             if (c) {
                 p('');
@@ -24,24 +24,24 @@ let c = function (e) {
                 }
             }
         };
-    return (0, n.jsxs)(s.Y0X, {
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: a,
         parentComponent: 'CaptchaTestModal',
         children: [
-            (0, n.jsxs)(s.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 className: o.header,
                 children: [
-                    (0, n.jsx)(s.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
                         children: 'Captcha Test Tool'
                     }),
-                    (0, n.jsx)(s.olH, { onClick: t })
+                    (0, n.jsx)(l.olH, { onClick: t })
                 ]
             }),
-            (0, n.jsxs)(s.hzk, {
+            (0, n.jsxs)(l.hzk, {
                 className: o.content,
                 children: [
-                    (0, n.jsx)(s.q4e, {
+                    (0, n.jsx)(l.q4e, {
                         value: c,
                         options: i.p,
                         onChange: (e) => {
@@ -49,7 +49,7 @@ let c = function (e) {
                         }
                     }),
                     c === r.fw.HCAPTCHA_RQDATA &&
-                        (0, n.jsx)(s.q4e, {
+                        (0, n.jsx)(l.q4e, {
                             value: d,
                             options: i.Z,
                             onChange: (e) => {
@@ -57,25 +57,26 @@ let c = function (e) {
                             }
                         }),
                     (c === r.fw.HCAPTCHA_RQDATA || c === r.fw.SMITE_RQDATA) &&
-                        (0, n.jsx)(s.XZJ, {
+                        (0, n.jsx)(l.XZJ, {
                             value: null != T && T,
                             onChange: (e, t) => C(t),
-                            children: (0, n.jsx)(s.Text, {
+                            children: (0, n.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 children: 'Should serve invisible?'
                             })
                         })
                 ]
             }),
-            (0, n.jsxs)(s.mzw, {
+            (0, n.jsxs)(l.mzw, {
                 className: o.footer,
                 children: [
-                    (0, n.jsx)(s.zxk, {
+                    (0, n.jsx)(l.zxk, {
+                        variant: 'primary',
+                        text: 'Trigger Captcha',
                         onClick: f,
-                        disabled: !c,
-                        children: 'Trigger Captcha'
+                        disabled: !c
                     }),
-                    '' !== h && (0, n.jsx)(s.pdY, { error: h })
+                    '' !== h && (0, n.jsx)(l.pdY, { error: h })
                 ]
             })
         ]

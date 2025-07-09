@@ -2,8 +2,8 @@
 var i = n(73800),
     r = n(442837),
     s = n(704215),
-    l = n(570140),
-    a = n(972118),
+    a = n(570140),
+    l = n(972118),
     o = n(113434),
     c = n(581883),
     d = n(46140);
@@ -17,11 +17,11 @@ let u = () => {
             }))
                 ? e
                 : new Uint8Array(),
-        n = (0, a.Z)(s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL, t),
-        u = (0, a.Z)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, t),
-        m = (0, a.Z)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, t),
+        n = (0, l.Z)(s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL, t),
+        u = (0, l.Z)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, t),
+        m = (0, l.Z)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, t),
         p = i.useCallback(() => {
-            (n.isDismissed && n.handleToggleDismissState(), u.isDismissed && u.handleToggleDismissState(), m.isDismissed && m.handleToggleDismissState(), l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' }));
+            (n.isDismissed && n.handleToggleDismissState(), u.isDismissed && u.handleToggleDismissState(), m.isDismissed && m.handleToggleDismissState(), a.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' }));
         }, [u, m, n]),
         { handleResetStatusClick: g } = (0, o.kJ)(d.V6);
     return {

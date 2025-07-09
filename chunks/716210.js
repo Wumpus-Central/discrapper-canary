@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(481060),
-    l = n(846027),
-    a = n(921801),
+    a = n(846027),
+    l = n(921801),
     o = n(131951),
     c = n(726985),
     d = n(388032),
@@ -14,11 +14,11 @@ function m(e) {
         n = (0, r.e7)([o.Z], () => o.Z.getEnableSilenceWarning()),
         m = (0, i.jsx)(s.j7V, {
             value: n,
-            onChange: (e) => l.Z.setSilenceWarning(e),
+            onChange: (e) => a.Z.setSilenceWarning(e),
             hideBorder: t,
             children: d.intl.string(d.t.jtiiCw)
         });
-    return (0, i.jsx)(a.F, {
+    return (0, i.jsx)(l.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
         children: t
             ? m

@@ -1,96 +1,97 @@
-(n.d(r, { default: () => E }), n(388685));
+(n.d(r, { default: () => T }), n(388685));
 var e = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(53365),
-    c = n(377176),
-    s = n(388032),
-    l = n(339500);
-function E(t) {
-    let { guildId: r, transitionState: n, onClose: E } = t,
-        [T, _] = i.useState(!1),
-        [A, N] = i.useState(!1),
+    a = n(755721),
+    o = n(481060),
+    c = n(53365),
+    s = n(377176),
+    l = n(388032),
+    E = n(339500);
+function T(t) {
+    let { guildId: r, transitionState: n, onClose: T } = t,
+        [_, A] = i.useState(!1),
+        [N, d] = i.useState(!1),
         u = async () => {
-            _(!0);
+            A(!0);
             try {
-                (await (0, o.zo)(r), E());
+                (await (0, c.zo)(r), T());
             } finally {
-                _(!1);
+                A(!1);
             }
         },
-        d = s.intl.string(s.t['22itmp']);
-    return (0, e.jsxs)(a.Y0X, {
-        className: l.__invalid_container,
-        size: a.CgR.DYNAMIC,
+        I = l.intl.string(l.t['22itmp']);
+    return (0, e.jsxs)(o.Y0X, {
+        className: E.__invalid_container,
+        size: o.CgR.DYNAMIC,
         transitionState: n,
-        'aria-label': d,
+        'aria-label': I,
         parentComponent: 'TermsNotAcceptedErrorModal',
         children: [
-            (0, e.jsxs)(a.hzk, {
-                className: l.content,
+            (0, e.jsxs)(o.hzk, {
+                className: E.content,
                 children: [
                     (0, e.jsxs)('div', {
-                        className: l.header,
+                        className: E.header,
                         children: [
-                            (0, e.jsx)(a.P4T, {
+                            (0, e.jsx)(o.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
-                                className: l.warningIcon
+                                className: E.warningIcon
                             }),
-                            (0, e.jsx)(a.LZC, {
+                            (0, e.jsx)(o.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, e.jsx)(a.X6q, {
+                            (0, e.jsx)(o.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: d
+                                children: I
                             })
                         ]
                     }),
-                    (0, e.jsx)(a.LZC, { size: 12 }),
-                    (0, e.jsx)(a.Text, {
+                    (0, e.jsx)(o.LZC, { size: 12 }),
+                    (0, e.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        className: l.__invalid_body,
-                        children: s.intl.string(s.t.kdbm9P)
+                        className: E.__invalid_body,
+                        children: l.intl.string(l.t.kdbm9P)
                     }),
-                    (0, e.jsx)(a.LZC, { size: 28 }),
-                    (0, e.jsx)(a.XZJ, {
+                    (0, e.jsx)(o.LZC, { size: 28 }),
+                    (0, e.jsx)(o.XZJ, {
                         onChange: () => {
-                            N((t) => !t);
+                            d((t) => !t);
                         },
                         size: 20,
-                        type: a.XZJ.Types.INVERTED,
-                        value: A,
-                        children: (0, e.jsx)(a.Text, {
+                        type: o.XZJ.Types.INVERTED,
+                        value: N,
+                        children: (0, e.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: (0, c.f)()
+                            children: (0, s.f)()
                         })
                     })
                 ]
             }),
-            (0, e.jsxs)(a.mzw, {
+            (0, e.jsxs)(o.mzw, {
                 children: [
-                    (0, e.jsx)(a.zxk, {
-                        color: a.zxk.Colors.BRAND,
-                        disabled: !A,
+                    (0, e.jsx)(o.zxk, {
+                        variant: 'primary',
+                        text: l.intl.string(l.t['cY+Ooa']),
+                        disabled: !N,
                         onClick: u,
-                        submitting: T,
-                        children: s.intl.string(s.t['cY+Ooa'])
+                        loading: _
                     }),
-                    (0, e.jsx)(a.LZC, {
+                    (0, e.jsx)(o.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
-                    (0, e.jsx)(a.zxk, {
-                        color: a.zxk.Colors.PRIMARY,
-                        look: a.zxk.Looks.OUTLINED,
-                        onClick: E,
-                        children: s.intl.string(s.t['ETE/oK'])
+                    (0, e.jsx)(a.zx, {
+                        color: a.zx.Colors.PRIMARY,
+                        look: a.zx.Looks.OUTLINED,
+                        onClick: T,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

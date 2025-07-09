@@ -22,7 +22,7 @@ let p = (e) => {
     l.useEffect(() => {
         v();
     }, [v]);
-    let O = (0, a.Wu)(
+    let y = (0, a.Wu)(
         [C.Z, d.Z],
         () => {
             let e = C.Z.getHighestRole(t);
@@ -85,7 +85,7 @@ let p = (e) => {
                                 multi: !0,
                                 value: g,
                                 onChange: (e) => x(e),
-                                options: O
+                                options: y
                             })
                         })
                     }),
@@ -105,21 +105,24 @@ let p = (e) => {
                     })
                 ]
             }),
-            (0, r.jsxs)(s.mzw, {
-                children: [
-                    (0, r.jsx)(s.zxk, {
-                        onClick: () => {
-                            (c.Z.prune(t.id, p, g), o());
-                        },
-                        children: m.intl.string(m.t['2mIlKS'])
-                    }),
-                    (0, r.jsx)(s.zxk, {
-                        look: s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: o,
-                        children: m.intl.string(m.t['ETE/oK'])
-                    })
-                ]
+            (0, r.jsx)(s.mzw, {
+                children: (0, r.jsxs)(s.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(s.zxk, {
+                            variant: 'primary',
+                            text: m.intl.string(m.t['2mIlKS']),
+                            onClick: () => {
+                                (c.Z.prune(t.id, p, g), o());
+                            }
+                        }),
+                        (0, r.jsx)(s.zxk, {
+                            variant: 'secondary',
+                            text: m.intl.string(m.t['ETE/oK']),
+                            onClick: o
+                        })
+                    ]
+                })
             })
         ]
     });

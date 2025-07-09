@@ -6,8 +6,8 @@ n.d(t, {
 var i,
     r,
     s = n(230711),
-    l = n(100527),
-    a = n(906732),
+    a = n(100527),
+    l = n(906732),
     o = n(300284),
     c = n(526167),
     d = n(63063),
@@ -20,12 +20,12 @@ var i,
     b = n(985443),
     x = n(612253),
     _ = n(872532),
-    E = n(91342),
-    j = n(181708),
+    j = n(91342),
+    E = n(181708),
     O = n(290650),
     C = n(751125),
-    S = n(357003),
-    v = n(904505),
+    v = n(357003),
+    S = n(904505),
     T = n(712626),
     N = n(386014),
     I = n(845571),
@@ -40,7 +40,7 @@ var i,
     L = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
     B = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), (r.VOICE_FILTERS = 'voiceFilters'), r);
 let M = () => {
-    let { analyticsLocations: e } = (0, a.ZP)(l.Z.PREMIUM_MARKETING_BENTO_BOX),
+    let { analyticsLocations: e } = (0, l.ZP)(a.Z.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, o.Z)({
             scrollPosition: p.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -62,9 +62,9 @@ let M = () => {
             title: g.intl.string(g.t['57ngoq']),
             description: g.intl.string(g.t.piFFjY),
             descriptionCta: g.intl.string(g.t.jVcuVV),
-            previewImage: S.Z,
+            previewImage: v.Z,
             onClick: t,
-            videoUrl: S.Z
+            videoUrl: v.Z
         },
         M = {
             name: 'serverProfiles',
@@ -80,7 +80,7 @@ let M = () => {
             title: g.intl.string(g.t.tPY4o6),
             description: g.intl.format(g.t.jRPQUF, { learnMoreLink: i }),
             previewImage: T.Z,
-            videoUrl: n ? v.ZP : N.ZP
+            videoUrl: n ? S.ZP : N.ZP
         },
         V = {
             name: 'showYourStyle',
@@ -110,7 +110,7 @@ let M = () => {
             title: g.intl.string(g.t.zY5PPT),
             description: g.intl.string(g.t.R5Xag4),
             previewImage: h,
-            videoUrl: n ? E.ZP : j.ZP
+            videoUrl: n ? j.ZP : E.ZP
         };
     return {
         whatsNewBoxes: r ? [[L], [B, U]] : [[B], [M, U]],

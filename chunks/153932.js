@@ -1,20 +1,21 @@
-n.d(t, { default: () => y });
+n.d(t, { default: () => N });
 var s = n(255367),
     o = n(73800),
     i = n(990547),
-    r = n(481060),
-    a = n(442837),
-    l = n(194359),
-    c = n(906732),
-    d = n(321488),
-    p = n(417183),
-    m = n(170245),
-    u = n(892001),
-    b = n(974042),
-    h = n(981631),
-    g = n(388032),
-    O = n(511515);
-function f(e) {
+    r = n(755721),
+    a = n(481060),
+    l = n(442837),
+    c = n(194359),
+    d = n(906732),
+    p = n(321488),
+    m = n(417183),
+    u = n(170245),
+    b = n(892001),
+    h = n(974042),
+    g = n(981631),
+    O = n(388032),
+    f = n(511515);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             s = Object.keys(n);
@@ -39,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,59 +58,59 @@ function _(e, t) {
         e
     );
 }
-function j(e) {
+function y(e) {
     let { user: t, status: n, ignoredUser: o } = e;
-    let { analyticsLocations: i } = (0, c.ZP)(),
-        a = (e) => {
-            (e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' }));
+    let { analyticsLocations: i } = (0, d.ZP)(),
+        r = (e) => {
+            (e.stopPropagation(), c.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' }));
         },
-        b = (e) => {
+        l = (e) => {
             (e.stopPropagation(),
-                l.Z.addRelationship({
+                c.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Spam requests modal' }
                 }));
         },
-        f = n === h.Skl.OFFLINE ? h.Skl.UNKNOWN : n,
-        _ = o ? g.intl.string(g.t.pO68Oz) : g.intl.string(g.t['gp+Yt7']);
+        h = n === g.Skl.OFFLINE ? g.Skl.UNKNOWN : n,
+        _ = o ? O.intl.string(O.t.pO68Oz) : O.intl.string(O.t['gp+Yt7']);
     return (0, s.jsx)('div', {
-        className: O.spamRequest,
-        children: (0, s.jsx)(p.Z, {
+        className: f.spamRequest,
+        children: (0, s.jsx)(m.Z, {
             isFocused: !1,
             user: t,
-            className: O.listItem,
-            activeClassName: O.active,
+            className: f.listItem,
+            activeClassName: f.active,
             onClick: () =>
-                (0, u.openUserProfileModal)({
+                (0, b.openUserProfileModal)({
                     userId: t.id,
                     sourceAnalyticsLocations: i
                 }),
             children: (e) =>
                 (0, s.jsxs)('div', {
-                    className: O.listItemContents,
+                    className: f.listItemContents,
                     children: [
-                        (0, s.jsx)(m.Z, {
+                        (0, s.jsx)(u.Z, {
                             user: t,
                             hovered: e,
-                            status: f,
+                            status: h,
                             subText: _,
-                            className: O.userInfo
+                            className: f.userInfo
                         }),
                         (0, s.jsxs)('div', {
-                            className: O.actions,
+                            className: f.actions,
                             children: [
-                                (0, s.jsx)(d.Z, {
-                                    icon: r.dz2,
-                                    actionType: d.Z.ActionTypes.ACCEPT,
-                                    tooltip: g.intl.string(g.t.ZcibdX),
-                                    onClick: b,
+                                (0, s.jsx)(p.Z, {
+                                    icon: a.dz2,
+                                    actionType: p.Z.ActionTypes.ACCEPT,
+                                    tooltip: O.intl.string(O.t.ZcibdX),
+                                    onClick: l,
                                     shouldHighlight: e
                                 }),
-                                (0, s.jsx)(d.Z, {
-                                    icon: r.Dio,
-                                    actionType: d.Z.ActionTypes.DENY,
-                                    tooltip: g.intl.string(g.t.xuio0N),
-                                    onClick: a,
+                                (0, s.jsx)(p.Z, {
+                                    icon: a.Dio,
+                                    actionType: p.Z.ActionTypes.DENY,
+                                    tooltip: O.intl.string(O.t.xuio0N),
+                                    onClick: r,
                                     shouldHighlight: e
                                 })
                             ]
@@ -119,55 +120,55 @@ function j(e) {
         })
     });
 }
-function y(e) {
+function N(e) {
     let { transitionState: t, onClose: n } = e,
-        { rows: c } = (0, a.cj)([b.ZP], () => b.ZP.getState()),
-        d = c.filter(h.pJs.PENDING_IGNORED),
-        p = c.filter(h.pJs.SPAM),
-        m = p.length + d.length;
+        { rows: d } = (0, l.cj)([h.ZP], () => h.ZP.getState()),
+        p = d.filter(g.pJs.PENDING_IGNORED),
+        m = d.filter(g.pJs.SPAM),
+        u = m.length + p.length;
     return (
         o.useEffect(() => {
-            0 === m && n();
-        }, [m, n]),
-        (0, s.jsxs)(r.Y0X, {
+            0 === u && n();
+        }, [u, n]),
+        (0, s.jsxs)(a.Y0X, {
             transitionState: t,
-            className: O.modal,
+            className: f.modal,
             impression: { impressionName: i.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
             parentComponent: 'OtherFriendRequestsModal',
             children: [
-                (0, s.jsxs)(r.xBx, {
+                (0, s.jsxs)(a.xBx, {
                     separator: !1,
-                    className: O.modalHeader,
+                    className: f.modalHeader,
                     children: [
-                        (0, s.jsx)(r.X6q, {
+                        (0, s.jsx)(a.X6q, {
                             variant: 'heading-lg/bold',
-                            className: O.heading,
-                            children: g.intl.string(g.t.kaYqnp)
+                            className: f.heading,
+                            children: O.intl.string(O.t.kaYqnp)
                         }),
-                        (0, s.jsx)(r.Text, {
+                        (0, s.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: g.intl.string(g.t.tRxb4O)
+                            children: O.intl.string(O.t.tRxb4O)
                         })
                     ]
                 }),
-                (0, s.jsxs)(r.hzk, {
-                    className: O.modalContent,
+                (0, s.jsxs)(a.hzk, {
+                    className: f.modalContent,
                     children: [
-                        d.map((e) =>
+                        p.map((e) =>
                             (0, o.createElement)(
-                                j,
-                                _(f({}, e), {
+                                y,
+                                j(_({}, e), {
                                     isFocused: !1,
                                     key: e.key,
                                     ignoredUser: !0
                                 })
                             )
                         ),
-                        p.map((e) =>
+                        m.map((e) =>
                             (0, o.createElement)(
-                                j,
-                                _(f({}, e), {
+                                y,
+                                j(_({}, e), {
                                     isFocused: !1,
                                     key: e.key
                                 })
@@ -175,15 +176,15 @@ function y(e) {
                         )
                     ]
                 }),
-                m > 1 &&
+                u > 1 &&
                     (0, s.jsx)('div', {
-                        className: O.modalFooter,
-                        children: (0, s.jsx)(r.zxk, {
-                            className: O.clearAllButton,
+                        className: f.modalFooter,
+                        children: (0, s.jsx)(r.zx, {
+                            className: f.clearAllButton,
                             onClick: () => {
-                                (l.Z.clearPendingSpamAndIgnored(), n());
+                                (c.Z.clearPendingSpamAndIgnored(), n());
                             },
-                            children: g.intl.string(g.t.O8k7Oz)
+                            children: O.intl.string(O.t.O8k7Oz)
                         })
                     })
             ]

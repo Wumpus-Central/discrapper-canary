@@ -1,16 +1,16 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(180097);
-let a = function (e) {
-    let { className: t, imageClassName: r, boostInCooldown: a, useReducedMotion: o } = e;
+    a = n(180097);
+let l = function (e) {
+    let { className: t, imageClassName: r, boostInCooldown: l, useReducedMotion: o } = e;
     return (0, i.jsx)('div', {
-        className: s()(l.imageWrapper, t, { [l.cooldown]: a }),
+        className: s()(a.imageWrapper, t, { [a.cooldown]: l }),
         children: (0, i.jsx)('img', {
-            className: s()(l.image, r, { [l.cooldownImage]: a }),
-            src: a ? n(971149) : o ? n(908635) : n(83957),
+            className: s()(a.image, r, { [a.cooldownImage]: l }),
+            src: l ? n(971149) : o ? n(908635) : n(83957),
             alt: ''
         })
     });

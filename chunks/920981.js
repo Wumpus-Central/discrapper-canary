@@ -1,3 +1,3 @@
-n.d(t, { H: () => r });
-var a,
-    r = (((a = {}).DEFAULT = 'default'), (a.DEFAULT_WITH_ORB_SHELF = 'default_with_orb_shelf'), (a.ORB_TAB = 'orb_tab'), a);
+a.d(t, { H: () => r });
+var n,
+    r = (((n = {}).DEFAULT = 'default'), (n.DEFAULT_WITH_ORB_SHELF = 'default_with_orb_shelf'), (n.ORB_TAB = 'orb_tab'), n);

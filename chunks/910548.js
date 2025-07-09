@@ -150,10 +150,10 @@ let N = ['TOP_LEFT', 'TOP_RIGHT'],
     }),
     Z = 'falling-leaf',
     R = ['#61D5B2'],
-    k = n(303893),
-    L = n(313226),
-    D = [k, L];
-function M() {
+    L = n(303893),
+    D = n(313226),
+    M = [L, D];
+function k() {
     return n
         .e('77843')
         .then(n.t.bind(n, 931152, 19))
@@ -295,7 +295,7 @@ function U(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === _ ? k : L }
+                    { sprite: 'TOP_LEFT' === _ ? L : D }
                 );
             }
         }, [x, y, _, d]),
@@ -303,7 +303,7 @@ function U(e) {
             children: [
                 (0, i.jsx)(s.Ji, {
                     ref: E,
-                    sprites: D,
+                    sprites: M,
                     colors: R,
                     spriteWidth: 45,
                     spriteHeight: 45
@@ -323,7 +323,7 @@ function U(e) {
                         sceneSegments: S,
                         onScenePlay: j,
                         onSceneComplete: I,
-                        importData: M,
+                        importData: k,
                         pauseWhileUnfocused: !1
                     })
                 })
@@ -388,20 +388,20 @@ function F(e) {
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else S(!0);
         }, [d, N, I]),
-        k = l.useCallback(() => {
+        L = l.useCallback(() => {
             S(!1);
         }, []),
-        L = l.useCallback(() => {
+        D = l.useCallback(() => {
             ((0, g.AI)({ settingsVisible: !0 }), m.Z.open(x.oAB.POGGERMODE), S(!1));
         }, []),
-        D = l.useCallback(
+        M = l.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(Z)) && L();
+                (null == t ? void 0 : t.id.startsWith(Z)) && D();
             },
-            [L]
+            [D]
         );
-    l.useEffect(() => j(D));
-    let M = (0, i.jsx)(p.P3F, {
+    l.useEffect(() => j(M));
+    let k = (0, i.jsx)(p.P3F, {
         className: O.iconWrapper,
         innerRef: T,
         onClick: s,
@@ -411,7 +411,7 @@ function F(e) {
         })
     });
     return (0, i.jsxs)(C.Z, {
-        iconNode: M,
+        iconNode: k,
         timestamp: n.timestamp,
         compact: r,
         children: [
@@ -425,8 +425,8 @@ function F(e) {
                       children: (0, i.jsx)('div', {
                           className: O.cannonWrapper,
                           children: (0, i.jsx)(U, {
-                              onAnimationComplete: k,
-                              onClick: L
+                              onAnimationComplete: L,
+                              onClick: D
                           })
                       })
                   })

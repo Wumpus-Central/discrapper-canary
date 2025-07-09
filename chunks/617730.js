@@ -1,7 +1,7 @@
 n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
-var i = n(481060),
+var i = n(755721),
     l = n(973616),
     s = n(131704),
     a = n(601964),
@@ -98,7 +98,7 @@ function _(e) {
                   (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(g({}, O), { showBigUserIcon: I })),
                   (0, r.jsx)(c.UM, m(g({}, O), { showBigUserIcon: I })),
                   (0, r.jsx)(c.V6, g({}, O)),
-                  (0, r.jsx)(i.zxk, {
+                  (0, r.jsx)(i.zx, {
                       onClick: n,
                       submitting: j,
                       className: p.acceptButton,

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(871499),
-    o = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     var { popoutWindowAlwaysOnTop: t, onToggleStayOnTop: n } = e,
-        a = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,7 +25,7 @@ function a(e) {
             }
             return i;
         })(e, ['popoutWindowAlwaysOnTop', 'onToggleStayOnTop']);
-    let s = t ? o.intl.string(o.t.YdyDMz) : o.intl.string(o.t.ZVGHwM),
+    let s = t ? a.intl.string(a.t.YdyDMz) : a.intl.string(a.t.ZVGHwM),
         c = t ? i.QVc : i.k5M;
     return (0, r.jsx)(
         l.Z,
@@ -59,7 +59,7 @@ function a(e) {
                 label: s,
                 iconComponent: c
             },
-            a
+            o
         )
     );
 }

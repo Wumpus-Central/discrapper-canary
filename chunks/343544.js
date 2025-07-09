@@ -3,30 +3,31 @@ var r = n(255367),
     s = n(73800),
     i = n(120356),
     a = n.n(i),
-    l = n(481060),
-    o = n(511010),
-    c = n(824469),
-    u = n(444812);
+    l = n(755721),
+    o = n(481060),
+    c = n(511010),
+    u = n(824469),
+    d = n(444812);
 function _(e) {
-    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: _, onDismissAndStay: d, onDismissAndLeave: A, leaveButtonText: f, stayButtonText: E, transitionState: I, impression: g } = e;
-    return (0, r.jsxs)(l.Y0X, {
-        transitionState: I,
-        impression: g,
+    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: _, onDismissAndStay: A, onDismissAndLeave: f, leaveButtonText: E, stayButtonText: I, transitionState: m, impression: h } = e;
+    return (0, r.jsxs)(o.Y0X, {
+        transitionState: m,
+        impression: h,
         parentComponent: 'BlockedUserWarningModal',
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: c.headerImage,
-                src: u
+                className: u.headerImage,
+                src: d
             }),
-            (0, r.jsxs)(l.xBx, {
+            (0, r.jsxs)(o.xBx, {
                 separator: !1,
-                className: c.header,
+                className: u.header,
                 children: [
-                    (0, r.jsxs)(l.X6q, {
+                    (0, r.jsxs)(o.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: c.title,
+                        className: u.title,
                         children: [
                             t,
                             null != n &&
@@ -36,34 +37,34 @@ function _(e) {
                         ]
                     }),
                     null != i &&
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
                             children: i
                         })
                 ]
             }),
-            (0, r.jsxs)(l.hzk, {
-                className: c.content,
+            (0, r.jsxs)(o.hzk, {
+                className: u.content,
                 children: [
                     (0, r.jsx)('div', {
-                        className: c.infoGroup,
+                        className: u.infoGroup,
                         children: _.map((e, t) =>
                             (0, r.jsxs)(
                                 s.Fragment,
                                 {
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: a()(c.infoRow, e.className),
+                                            className: a()(u.infoRow, e.className),
                                             children: [
                                                 e.icon,
-                                                (0, r.jsx)(l.Text, {
+                                                (0, r.jsx)(o.Text, {
                                                     variant: 'text-md/medium',
                                                     children: e.text
                                                 })
                                             ]
                                         }),
-                                        t < _.length - 1 && (0, r.jsx)(o.Z, {})
+                                        t < _.length - 1 && (0, r.jsx)(c.Z, {})
                                     ]
                                 },
                                 t
@@ -71,19 +72,19 @@ function _(e) {
                         )
                     }),
                     (0, r.jsxs)('div', {
-                        className: c.buttonGroup,
+                        className: u.buttonGroup,
                         children: [
-                            (0, r.jsx)(l.zxk, {
-                                color: l.zxk.Colors.PRIMARY,
-                                onClick: d,
-                                children: E
+                            (0, r.jsx)(o.zxk, {
+                                variant: 'secondary',
+                                text: I,
+                                onClick: A
                             }),
-                            (0, r.jsx)(l.zxk, {
-                                color: l.zxk.Colors.BRAND,
-                                size: l.zxk.Sizes.MEDIUM,
-                                onClick: A,
-                                className: c.leave,
-                                children: f
+                            (0, r.jsx)(l.zx, {
+                                color: l.zx.Colors.BRAND,
+                                size: l.zx.Sizes.MEDIUM,
+                                onClick: f,
+                                className: u.leave,
+                                children: E
                             })
                         ]
                     })

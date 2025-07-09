@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(35282), n(388685));
+(n.d(t, { Z: () => S }), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(525654),
@@ -6,18 +6,19 @@ var r = n(255367),
     s = n(446431),
     l = n(442837),
     c = n(336317),
-    u = n(481060),
-    d = n(596454),
-    f = n(406128),
-    _ = n(451478),
-    p = n(176354),
-    h = n(63063),
-    m = n(358085),
-    g = n(998502),
-    E = n(151851),
-    b = n(981631),
-    y = n(388032);
-function O(e, t, n) {
+    u = n(755721),
+    d = n(481060),
+    f = n(596454),
+    _ = n(406128),
+    p = n(451478),
+    h = n(176354),
+    m = n(63063),
+    g = n(358085),
+    E = n(998502),
+    b = n(151851),
+    y = n(981631),
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,49 +31,49 @@ function O(e, t, n) {
         e
     );
 }
-function v() {
+function I() {
     let e = window.require('electron').remote.getCurrentWindow();
-    ((g.ZP.minimize = () => e.minimize()),
-        (g.ZP.maximize = () => {
+    ((E.ZP.minimize = () => e.minimize()),
+        (E.ZP.maximize = () => {
             e.isMaximized() ? e.unmaximize() : e.maximize();
         }),
-        (g.ZP.close = () => e.close()));
+        (E.ZP.close = () => e.close()));
 }
-let I = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
-class T extends i.PureComponent {
+let T = l.ZP.connectStores([p.Z], () => ({ focused: p.Z.isFocused() }))(b.Z);
+class S extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null == (e = o().os) ? void 0 : e.family;
-        return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX;
+        return null != t && /^win/i.test(t) ? g.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? g.PlatformTypes.OSX : g.PlatformTypes.LINUX;
     }
     componentDidMount() {
-        v();
+        I();
     }
     render() {
         let e = (0, r.jsx)('div', {
                 children: (0, r.jsxs)('p', {
                     children: [
-                        y.intl.string(y.t['4tRjHB']),
+                        O.intl.string(O.t['4tRjHB']),
                         ' ',
-                        (0, r.jsx)(d.Z, {
-                            src: p.ZP.getURL(c.Z.convert.fromCodePoint('1f44c')),
+                        (0, r.jsx)(f.Z, {
+                            src: h.ZP.getURL(c.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
                         })
                     ]
                 })
             }),
-            t = (0, r.jsx)(u.zxk, {
-                size: u.PhG.LARGE,
+            t = (0, r.jsx)(u.zx, {
+                size: u.Ph.LARGE,
                 onClick: this.handleDownload,
-                children: y.intl.string(y.t['1WjMbG'])
+                children: O.intl.string(O.t['1WjMbG'])
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(s.ql, { children: (0, r.jsx)('html', { className: (0, u.QeD)(b.BRd.DARK) }) }),
-                (0, r.jsx)(I, { type: this.getPlatform() }),
-                (0, r.jsx)(f.Z, {
-                    title: y.intl.string(y.t['3h+n+/']),
+                (0, r.jsx)(s.ql, { children: (0, r.jsx)('html', { className: (0, d.QeD)(y.BRd.DARK) }) }),
+                (0, r.jsx)(T, { type: this.getPlatform() }),
+                (0, r.jsx)(_.Z, {
+                    title: O.intl.string(O.t['3h+n+/']),
                     note: e,
                     action: t
                 })
@@ -81,8 +82,8 @@ class T extends i.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            O(this, 'handleDownload', () => {
-                window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? h.Z.getArticleURL(b.BhN.CORRUPT_INSTALLATION) : b.EYA.DOWNLOAD);
+            v(this, 'handleDownload', () => {
+                window.open(this.getPlatform() === g.PlatformTypes.WINDOWS ? m.Z.getArticleURL(y.BhN.CORRUPT_INSTALLATION) : y.EYA.DOWNLOAD);
             }));
     }
 }

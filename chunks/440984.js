@@ -1,9 +1,9 @@
-(n.d(t, { D: () => E }), n(388685));
+(n.d(t, { D: () => j }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(780384),
-    a = n(481060),
+    a = n(780384),
+    l = n(481060),
     o = n(410030),
     c = n(607070),
     d = n(530618),
@@ -16,10 +16,10 @@ var i = n(255367),
     b = n(583532),
     x = n(982404),
     _ = n(299156);
-function E(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: j, userWasChurned: O = !1, userDiscountOffer: C } = e,
-        S = (0, o.ZP)(),
-        v = (0, l.wj)(S) ? x : _,
+function j(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: j, confettiCanvas: E, userWasChurned: O = !1, userDiscountOffer: C } = e,
+        v = (0, o.ZP)(),
+        S = (0, a.wj)(v) ? x : _,
         T = r.useRef(null),
         [N, I] = r.useState(!1),
         y = (0, p._)(t, h.Xh.PREMIUM_MONTH_TIER_2, C),
@@ -43,10 +43,10 @@ function E(e) {
         }),
         Z = (0, i.jsx)('div', {
             className: b.whatYouLoseButtonContainer,
-            children: (0, i.jsx)(a.zxk, {
-                color: a.zxk.Colors.BRAND,
-                onClick: E,
-                children: f.intl.string(f.t['/r8g/v'])
+            children: (0, i.jsx)(l.zxk, {
+                variant: 'primary',
+                text: f.intl.string(f.t['/r8g/v']),
+                onClick: j
             })
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -54,11 +54,11 @@ function E(e) {
             (0, i.jsx)(g.Z, {
                 premiumType: n,
                 className: b.cancellationHeader,
-                onClose: E
+                onClose: j
             }),
             (0, i.jsx)('div', {
                 ref: T,
-                children: (0, i.jsx)(a.hzk, {
+                children: (0, i.jsx)(l.hzk, {
                     className: b.body,
                     children:
                         null != y
@@ -69,10 +69,10 @@ function E(e) {
                                           children: [
                                               (0, i.jsx)('img', {
                                                   alt: '',
-                                                  src: v,
+                                                  src: S,
                                                   className: b.nitroIcon
                                               }),
-                                              (0, i.jsx)(a.X6q, {
+                                              (0, i.jsx)(l.X6q, {
                                                   variant: 'heading-xl/bold',
                                                   children: O ? f.intl.string(f.t.gOOPaG) : f.intl.string(f.t.PZSyRk)
                                               })
@@ -85,14 +85,14 @@ function E(e) {
                                       Z
                                   ]
                               })
-                            : (0, i.jsx)(a.$jN, {})
+                            : (0, i.jsx)(l.$jN, {})
                 })
             }),
             !R &&
                 N &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: T.current,
-                    confettiCanvas: j,
+                    confettiCanvas: E,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

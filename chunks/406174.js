@@ -1,57 +1,58 @@
-(n.d(t, { Z: () => u }), n(953529));
+(n.d(t, { Z: () => m }), n(953529));
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
+    a = n(755721),
     l = n(481060),
-    a = n(388032),
-    o = n(810918),
-    c = n(772526),
-    d = n(834300);
-function u(e) {
+    o = n(388032),
+    c = n(810918),
+    d = n(772526),
+    u = n(834300);
+function m(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.X6q, {
                 variant: 'heading-md/bold',
-                children: a.intl.string(a.t['KzCF//'])
+                children: o.intl.string(o.t['KzCF//'])
             }),
             (0, i.jsx)(l.LZC, { size: 4 }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: o.sectionDescription,
-                children: a.intl.string(a.t['3D7qCg'])
+                className: c.sectionDescription,
+                children: o.intl.string(o.t['3D7qCg'])
             }),
             (0, i.jsx)(l.LZC, { size: 24 }),
             (0, i.jsxs)('div', {
-                className: s()(c.guildBoostingSubscriptionRow, o.card),
+                className: s()(d.guildBoostingSubscriptionRow, c.card),
                 children: [
                     (0, i.jsx)('img', {
-                        src: d,
+                        src: u,
                         alt: '',
-                        className: o.handImage
+                        className: c.handImage
                     }),
                     (0, i.jsxs)('div', {
-                        className: o.textContainer,
+                        className: c.textContainer,
                         children: [
                             (0, i.jsx)(l.X6q, {
                                 variant: 'heading-xl/semibold',
-                                className: o.header,
-                                children: a.intl.string(a.t['KzCF//'])
+                                className: c.header,
+                                children: o.intl.string(o.t['KzCF//'])
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                className: o.description,
-                                children: a.intl.format(a.t['m+pcOD'], { numSubscriptions: n })
+                                className: c.description,
+                                children: o.intl.format(o.t['m+pcOD'], { numSubscriptions: n })
                             })
                         ]
                     }),
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.CUSTOM,
-                        size: l.zxk.Sizes.SMALL,
-                        className: o.manageSubscriptionsButton,
+                    (0, i.jsx)(a.zx, {
+                        color: a.zx.Colors.CUSTOM,
+                        size: a.zx.Sizes.SMALL,
+                        className: c.manageSubscriptionsButton,
                         onClick: t,
-                        children: a.intl.string(a.t['3a8Xxs'])
+                        children: o.intl.string(o.t['3a8Xxs'])
                     })
                 ]
             })

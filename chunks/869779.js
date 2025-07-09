@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => M }));
+(n.r(t), n.d(t, { default: () => k }));
 var i = n(255367),
     l = n(73800),
     r = n(442837),
@@ -32,7 +32,7 @@ var i = n(255367),
     P = n(981631),
     A = n(388032),
     L = n(511740);
-function k(e) {
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
     h.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
@@ -42,9 +42,9 @@ function k(e) {
         location: n
     });
 }
-class D extends l.PureComponent {
+class M extends l.PureComponent {
     componentDidMount() {
-        k(this.props.section, null, this.props.analyticsLocation);
+        D(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         a.Z.wait(() => (0, o.xv)());
@@ -52,7 +52,7 @@ class D extends l.PureComponent {
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
             { formState: i, section: l, canManageRoles: r, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
-        (s || r || a || o) && (i !== P.QZA.CLOSED || i === t) && (r || l !== P.CoT.PERMISSIONS) && (a || o || l !== P.CoT.INTEGRATIONS) ? l !== n && k(l, n) : (0, c.xf)();
+        (s || r || a || o) && (i !== P.QZA.CLOSED || i === t) && (r || l !== P.CoT.PERMISSIONS) && (a || o || l !== P.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
     }
     render() {
         let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
@@ -171,7 +171,7 @@ class D extends l.PureComponent {
               });
     }
 }
-function M() {
+function k() {
     let { channel: e, analyticsLocation: t } = (0, r.cj)([C.Z], () => C.Z.getProps()),
         n = (0, r.e7)([C.Z], () => C.Z.getFormState()),
         l = (0, r.e7)([C.Z], () => C.Z.getSection()),
@@ -191,7 +191,7 @@ function M() {
             canUnlinkChannel: (0, f.C)(e, S.Z)
         })),
         g = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
-    return (0, i.jsx)(D, {
+    return (0, i.jsx)(M, {
         channel: e,
         category: g,
         canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,

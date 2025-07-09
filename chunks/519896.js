@@ -15,16 +15,16 @@ var t = l(255367),
     v = l(938337);
 function j(e) {
     var n, l;
-    let { appId: j, subscriptionType: f, onClose: b, skuId: N, guildId: S, transitionState: g, onHeaderTitleClick: k } = e,
-        { data: O } = (0, c.H)(N),
-        I = O[0],
-        { data: C } = (0, o.Z)(N),
-        y = r.useMemo(() => {
-            var e;
-            return (null == C ? void 0 : C.thumbnail) != null && null != (e = x.Z.toURLSafe((0, m._W)(j, C.thumbnail, 256))) ? e : void 0;
-        }, [j, null == C ? void 0 : C.thumbnail]),
+    let { appId: j, subscriptionType: f, onClose: b, skuId: N, guildId: S, transitionState: g, onHeaderTitleClick: O } = e,
+        { data: I } = (0, c.H)(N),
+        C = I[0],
+        { data: y } = (0, o.Z)(N),
         T = r.useMemo(() => {
-            let e = null == C ? void 0 : C.benefits;
+            var e;
+            return (null == y ? void 0 : y.thumbnail) != null && null != (e = x.Z.toURLSafe((0, m._W)(j, y.thumbnail, 256))) ? e : void 0;
+        }, [j, null == y ? void 0 : y.thumbnail]),
+        R = r.useMemo(() => {
+            let e = null == y ? void 0 : y.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
                     id: e.id,
@@ -32,33 +32,33 @@ function j(e) {
                     description: e.description,
                     icon: (0, d.n)(j, e.icon)
                 }));
-        }, [j, null == C ? void 0 : C.benefits]),
-        { openModal: R, subscriptionPurchaseButtonState: E } = (0, u.Z)({
+        }, [j, null == y ? void 0 : y.benefits]),
+        { openModal: k, subscriptionPurchaseButtonState: E } = (0, u.Z)({
             skuId: N,
             initialSubscribeForGuild: null != S ? S : void 0
         });
-    return null == C
+    return null == y
         ? null
         : (0, t.jsx)(h.A, {
               appId: j,
               skuId: N,
               transitionState: g,
-              onHeaderTitleClick: null != k ? k : b,
+              onHeaderTitleClick: null != O ? O : b,
               onClose: b,
               footer: (0, t.jsx)(p.pV, {
-                  onClick: R,
+                  onClick: k,
                   appId: j,
                   subscriptionType: f,
                   skuId: N,
-                  subscriptionPlan: I,
+                  subscriptionPlan: C,
                   state: E
               }),
               children: (0, t.jsx)(v.i, {
                   appId: j,
                   skuId: N,
                   benefits:
-                      null != T
-                          ? T.map((e) =>
+                      null != R
+                          ? R.map((e) =>
                                 (0, t.jsx)(
                                     i.Gm,
                                     {
@@ -70,9 +70,9 @@ function j(e) {
                                 )
                             )
                           : void 0,
-                  description: null != (n = C.description) ? n : void 0,
-                  imgSrc: y,
-                  title: null != (l = null == I ? void 0 : I.name) ? l : C.summary,
+                  description: null != (n = y.description) ? n : void 0,
+                  imgSrc: T,
+                  title: null != (l = null == C ? void 0 : C.name) ? l : y.summary,
                   tag: (0, t.jsx)(s.Z, { type: f }),
                   FallbackIcon: a.Vh5
               })

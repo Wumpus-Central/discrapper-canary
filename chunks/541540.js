@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => E }), n(388685), n(415506));
+(n.d(t, { Z: () => j }), n(388685), n(415506));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(533307),
+    a = n(481060),
+    l = n(533307),
     o = n(600164),
     c = n(930114),
     d = n(246946),
@@ -69,16 +69,16 @@ class _ extends r.Component {
     render() {
         let { obscureInput: e } = this.props,
             { codeInput: t, submitting: n, hasError: r, isPromoCode: s } = this.state;
-        return (0, i.jsxs)(l.hjN, {
-            tag: l.RB0.H1,
+        return (0, i.jsxs)(a.hjN, {
+            tag: a.RB0.H1,
             title: g.intl.string(g.t['il+VCg']),
             children: [
-                (0, i.jsx)(l.vwX, { children: g.intl.string(g.t.SeKIoa) }),
+                (0, i.jsx)(a.vwX, { children: g.intl.string(g.t.SeKIoa) }),
                 (0, i.jsx)('form', {
                     onSubmit: this.handleSubmit,
                     children: (0, i.jsxs)(o.Z, {
                         children: [
-                            (0, i.jsx)(l.oil, {
+                            (0, i.jsx)(a.oil, {
                                 type: e ? 'password' : 'text',
                                 value: t,
                                 onChange: this.handleChange,
@@ -86,16 +86,17 @@ class _ extends r.Component {
                                 error: !s && r ? g.intl.string(g.t.Y11a2t) : null,
                                 className: h.codeRedemptionInput
                             }),
-                            (0, i.jsx)(l.zxk, {
+                            (0, i.jsx)(a.zxk, {
+                                variant: 'primary',
+                                text: g.intl.string(g.t.KIpp7O),
                                 type: 'submit',
-                                submitting: n,
-                                children: g.intl.string(g.t.KIpp7O)
+                                loading: n
                             })
                         ]
                     })
                 }),
                 s
-                    ? (0, i.jsx)(l.Text, {
+                    ? (0, i.jsx)(a.Text, {
                           className: h.errorMessage,
                           variant: 'text-sm/normal',
                           children: g.intl.format(g.t.gPt3PD, {
@@ -130,7 +131,7 @@ class _ extends r.Component {
                 if (null == n) return void this.setState({ hasError: !0 });
                 this.setState({ submitting: !0 });
                 try {
-                    let e = await a.Z.resolveGiftCode(n);
+                    let e = await l.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
                     (u.default.track(p.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
@@ -146,7 +147,7 @@ class _ extends r.Component {
             }));
     }
 }
-function E() {
+function j() {
     let e = r.useContext(u.AnalyticsContext),
         t = (0, s.e7)([d.Z], () => d.Z.enabled);
     return (0, i.jsx)(_, {

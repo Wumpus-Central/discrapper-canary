@@ -50,8 +50,8 @@ function R(e) {
         }),
         { staticBannerSrc: O, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
         R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
-        { analyticsLocations: D } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
+        { analyticsLocations: M } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { currentChannelId: k, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
         H = (0, _.ms)({
             context: { type: 'contextless' },
@@ -72,13 +72,13 @@ function R(e) {
                               trackingArea: T.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
-                                      channelId: null != M ? M : void 0,
+                                      channelId: null != k ? k : void 0,
                                       applicationId: t.id,
                                       isStart: null == U,
                                       embeddedActivitiesManager: G,
                                       customId: a,
                                       referrerId: R,
-                                      analyticsLocations: D
+                                      analyticsLocations: M
                                   });
                               },
                               disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
@@ -92,7 +92,7 @@ function R(e) {
                                   (0, m.W)({
                                       appId: t.id,
                                       botId: y,
-                                      analyticsLocations: D,
+                                      analyticsLocations: M,
                                       customId: a,
                                       referrerId: R
                                   });
@@ -101,8 +101,8 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, M, t.id, G, a, R, D, C, K, y]),
-        X = C ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
+        }, [z, V, U, F, k, t.id, G, a, R, M, C, K, y]),
+        X = C ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
         title: h,
         staticBannerSrc: O,
@@ -122,7 +122,7 @@ function R(e) {
         }
     });
 }
-function k(e) {
+function L(e) {
     var t, n, a;
     let { app: c } = e,
         u =
@@ -171,7 +171,7 @@ function k(e) {
         ]
     });
 }
-function L(e) {
+function D(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l } = t,
         c = (0, o.e7)(

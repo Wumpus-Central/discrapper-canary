@@ -1,21 +1,22 @@
-i.d(n, { default: () => p });
+i.d(n, { default: () => h });
 var r = i(255367);
 i(73800);
-var o = i(442837),
-    t = i(481060),
-    e = i(812206),
+var t = i(442837),
+    o = i(755721),
+    e = i(481060),
+    a = i(812206),
     s = i(600164),
-    a = i(922156),
-    c = i(63063),
-    d = i(388032),
-    u = i(841177);
-let p = (l) => {
+    c = i(922156),
+    d = i(63063),
+    u = i(388032),
+    p = i(841177);
+let h = (l) => {
     let { onClose: n, transitionState: i } = l,
-        { error: p, applicationName: h } = (0, o.cj)([a.Z, e.Z], () => {
-            let l = a.Z.getLastError(),
+        { error: h, applicationName: x } = (0, t.cj)([c.Z, a.Z], () => {
+            let l = c.Z.getLastError(),
                 n = null;
             if (null != l && null != l.applicationId) {
-                let i = e.Z.getApplication(l.applicationId);
+                let i = a.Z.getApplication(l.applicationId);
                 null != i && (n = i.name);
             }
             return {
@@ -23,64 +24,65 @@ let p = (l) => {
                 applicationName: n
             };
         });
-    return (0, r.jsxs)(t.Y0X, {
+    return (0, r.jsxs)(e.Y0X, {
         transitionState: i,
-        size: t.CgR.SMALL,
-        'aria-label': d.intl.string(d.t['6kHRYG']),
+        size: e.CgR.SMALL,
+        'aria-label': u.intl.string(u.t['6kHRYG']),
         parentComponent: 'DispatchErrorModal',
         children: [
-            (0, r.jsxs)(t.xBx, {
+            (0, r.jsxs)(e.xBx, {
                 justify: s.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
                     (0, r.jsx)(s.Z.Child, {
                         grow: 1,
-                        children: (0, r.jsx)(t.X6q, {
+                        children: (0, r.jsx)(e.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: d.intl.string(d.t['6kHRYG'])
+                            children: u.intl.string(u.t['6kHRYG'])
                         })
                     }),
                     (0, r.jsx)(s.Z.Child, {
                         grow: 0,
-                        children: (0, r.jsx)(t.olH, { onClick: n })
+                        children: (0, r.jsx)(e.olH, { onClick: n })
                     })
                 ]
             }),
-            (0, r.jsx)(t.hzk, {
+            (0, r.jsx)(e.hzk, {
                 children: (0, r.jsxs)('div', {
-                    className: u.body,
+                    className: p.body,
                     children: [
-                        (0, r.jsx)('div', { children: d.intl.format(d.t['NnE/6O'], { link: 'https://dis.gd/dispatch-error' }) }),
+                        (0, r.jsx)('div', { children: u.intl.format(u.t['NnE/6O'], { link: 'https://dis.gd/dispatch-error' }) }),
                         (0, r.jsx)('div', {
-                            className: u.supportCallToAction,
-                            children: d.intl.string(d.t['o+efY2'])
+                            className: p.supportCallToAction,
+                            children: u.intl.string(u.t['o+efY2'])
                         }),
                         (0, r.jsx)('div', {
-                            className: u.errorLabel,
-                            children: d.intl.string(d.t.BiSnZ2)
+                            className: p.errorLabel,
+                            children: u.intl.string(u.t.BiSnZ2)
                         }),
                         (0, r.jsx)('div', {
-                            className: u.errorDetails,
+                            className: p.errorDetails,
                             children: (0, r.jsxs)('div', {
-                                children: [null != h ? 'Game: '.concat(h, '\n') : null, (null == p ? void 0 : p.applicationId) != null ? 'Game ID: '.concat(p.applicationId, '\n') : null, (null == p ? void 0 : p.branchId) != null && (null == p ? void 0 : p.applicationId) !== (null == p ? void 0 : p.branchId) ? 'Branch ID: '.concat(null == p ? void 0 : p.branchId, '\n') : null, (null == p ? void 0 : p.code) != null ? 'Error Code: '.concat(null == p ? void 0 : p.code, '\n') : null, (null == p ? void 0 : p.uuid) != null ? 'Unique Case ID: '.concat(null == p ? void 0 : p.uuid) : null]
+                                children: [null != x ? 'Game: '.concat(x, '\n') : null, (null == h ? void 0 : h.applicationId) != null ? 'Game ID: '.concat(h.applicationId, '\n') : null, (null == h ? void 0 : h.branchId) != null && (null == h ? void 0 : h.applicationId) !== (null == h ? void 0 : h.branchId) ? 'Branch ID: '.concat(null == h ? void 0 : h.branchId, '\n') : null, (null == h ? void 0 : h.code) != null ? 'Error Code: '.concat(null == h ? void 0 : h.code, '\n') : null, (null == h ? void 0 : h.uuid) != null ? 'Unique Case ID: '.concat(null == h ? void 0 : h.uuid) : null]
                             })
                         })
                     ]
                 })
             }),
-            (0, r.jsxs)(t.mzw, {
+            (0, r.jsxs)(e.mzw, {
                 children: [
-                    (0, r.jsx)(t.zxk, {
+                    (0, r.jsx)(e.zxk, {
+                        variant: 'primary',
+                        text: u.intl.string(u.t.VdyWmJ),
                         onClick: () => {
-                            window.open(c.Z.getSubmitRequestURL());
-                        },
-                        children: d.intl.string(d.t.VdyWmJ)
+                            window.open(d.Z.getSubmitRequestURL());
+                        }
                     }),
-                    (0, r.jsx)(t.zxk, {
-                        look: t.zxk.Looks.LINK,
+                    (0, r.jsx)(o.zx, {
+                        look: o.zx.Looks.LINK,
                         onClick: n,
-                        color: u.closeLink,
-                        children: d.intl.string(d.t.cpT0Cg)
+                        color: p.closeLink,
+                        children: u.intl.string(u.t.cpT0Cg)
                     })
                 ]
             })

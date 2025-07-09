@@ -1,33 +1,34 @@
-t.d(e, { P: () => d });
+t.d(e, { P: () => l });
 var o = t(255367),
     a = t(873546),
-    i = t(481060),
-    s = t(254204);
-function r(n) {
+    i = t(755721),
+    s = t(481060),
+    r = t(254204);
+function c(n) {
     let { icon: e, onClick: t } = n;
-    return (0, o.jsx)(i.zxk, {
-        look: i.zxk.Looks.BLANK,
-        size: i.zxk.Sizes.ICON,
-        className: s.contentHeaderButton,
-        innerClassName: s.iconButtonInner,
+    return (0, o.jsx)(i.zx, {
+        look: i.zx.Looks.BLANK,
+        size: i.zx.Sizes.ICON,
+        className: r.contentHeaderButton,
+        innerClassName: r.iconButtonInner,
         onClick: t,
         children: (0, o.jsx)(e, { size: 'sm' })
     });
 }
-function c(n) {
+function d(n) {
     let { onClose: e, setShowNavigationMobile: t } = n;
     return (0, o.jsxs)('div', {
-        className: s.contentHeader,
+        className: r.contentHeader,
         children: [
             (0, o.jsxs)('div', {
-                className: s.contentHeaderLeft,
+                className: r.contentHeaderLeft,
                 children: [
                     a.tq &&
-                        (0, o.jsx)(r, {
-                            icon: i.yFM,
+                        (0, o.jsx)(c, {
+                            icon: s.yFM,
                             onClick: () => t(!0)
                         }),
-                    (0, o.jsx)(i.X6q, {
+                    (0, o.jsx)(s.X6q, {
                         variant: 'heading-md/normal',
                         color: 'header-secondary',
                         children: 'Content Header'
@@ -35,18 +36,18 @@ function c(n) {
                 ]
             }),
             !a.tq &&
-                (0, o.jsx)(r, {
-                    icon: i.Uz9,
+                (0, o.jsx)(c, {
+                    icon: s.Uz9,
                     onClick: e
                 })
         ]
     });
 }
-function d(n) {
+function l(n) {
     let { onClose: e, setShowNavigationMobile: t } = n;
     return (0, o.jsx)('div', {
-        className: s.content,
-        children: (0, o.jsx)(c, {
+        className: r.content,
+        children: (0, o.jsx)(d, {
             onClose: e,
             setShowNavigationMobile: t
         })

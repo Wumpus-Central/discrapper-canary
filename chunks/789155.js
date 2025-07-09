@@ -1,70 +1,72 @@
-r.d(s, { Z: () => m });
-var t = r(255367);
-r(73800);
-var n = r(780384),
-    i = r(481060),
-    a = r(410030),
-    o = r(388032),
-    l = r(615836),
-    c = r(982404),
-    u = r(299156);
-let m = function (e) {
-    let { churnUserDiscountOffer: s, onDiscountClaim: r, onContinue: m } = e,
-        d = (0, a.ZP)(),
-        p = (0, n.wj)(d) ? c : u;
+t.d(s, { Z: () => d });
+var r = t(255367);
+t(73800);
+var n = t(780384),
+    i = t(755721),
+    a = t(481060),
+    o = t(410030),
+    l = t(388032),
+    c = t(615836),
+    u = t(982404),
+    m = t(299156);
+let d = function (e) {
+    let { churnUserDiscountOffer: s, onDiscountClaim: t, onContinue: d } = e,
+        p = (0, o.ZP)(),
+        x = (0, n.wj)(p) ? u : m;
     return null == s
         ? null
-        : (0, t.jsxs)('div', {
-              className: l.churnFooterContainer,
+        : (0, r.jsxs)('div', {
+              className: c.churnFooterContainer,
               children: [
-                  (0, t.jsx)('div', { className: l.churnFooterGlow }),
-                  (0, t.jsx)('div', { className: l.churnFooterTopBorder }),
-                  (0, t.jsx)('div', {
-                      className: l.churnFooterContent,
-                      children: (0, t.jsxs)('div', {
-                          className: l.churnFooterContentBody,
+                  (0, r.jsx)('div', { className: c.churnFooterGlow }),
+                  (0, r.jsx)('div', { className: c.churnFooterTopBorder }),
+                  (0, r.jsx)('div', {
+                      className: c.churnFooterContent,
+                      children: (0, r.jsxs)('div', {
+                          className: c.churnFooterContentBody,
                           children: [
-                              (0, t.jsx)('img', {
+                              (0, r.jsx)('img', {
                                   alt: '',
-                                  src: p,
-                                  className: l.churnFooterIcon
+                                  src: x,
+                                  className: c.churnFooterIcon
                               }),
-                              (0, t.jsxs)('div', {
-                                  className: l.churnFooterContentBodyInner,
+                              (0, r.jsxs)('div', {
+                                  className: c.churnFooterContentBodyInner,
                                   children: [
-                                      (0, t.jsx)(i.Text, {
+                                      (0, r.jsx)(a.Text, {
                                           variant: 'text-md/medium',
-                                          className: l.churnFooterCopy,
-                                          children: o.intl.format(o.t['2gem09'], {
+                                          className: c.churnFooterCopy,
+                                          children: l.intl.format(l.t['2gem09'], {
                                               percent: s.discount.amount,
                                               numMonths: s.discount.user_usage_limit
                                           })
                                       }),
-                                      (0, t.jsxs)('div', {
-                                          className: l.churnFooterCTAs,
+                                      (0, r.jsxs)('div', {
+                                          className: c.churnFooterCTAs,
                                           children: [
-                                              (0, t.jsxs)(i.gtL, {
-                                                  className: l.churnFooterClaimCTA,
-                                                  innerClassName: l.churnFooterClaimCTAInner,
-                                                  look: i.iLD.OUTLINED,
-                                                  color: i.Ttl.CUSTOM,
-                                                  onClick: () => (null == r ? void 0 : r()),
+                                              (0, r.jsxs)(a.gtL, {
+                                                  className: c.churnFooterClaimCTA,
+                                                  innerClassName: c.churnFooterClaimCTAInner,
+                                                  look: i.iL.OUTLINED,
+                                                  color: i.Tt.CUSTOM,
+                                                  onClick: () => (null == t ? void 0 : t()),
                                                   children: [
-                                                      (0, t.jsx)(i.SrA, {
+                                                      (0, r.jsx)(a.SrA, {
                                                           size: 'xs',
                                                           color: 'currentColor',
-                                                          className: l.churnFooterClaimIcon
+                                                          className: c.churnFooterClaimIcon
                                                       }),
-                                                      (0, t.jsx)(i.Text, {
+                                                      (0, r.jsx)(a.Text, {
                                                           variant: 'text-sm/semibold',
-                                                          className: l.churnFooterClaimCopy,
-                                                          children: o.intl.string(o.t.zrCzVF)
+                                                          className: c.churnFooterClaimCopy,
+                                                          children: l.intl.string(l.t.zrCzVF)
                                                       })
                                                   ]
                                               }),
-                                              (0, t.jsx)(i.zxk, {
-                                                  onClick: () => (null == m ? void 0 : m()),
-                                                  children: o.intl.string(o.t['3PatS0'])
+                                              (0, r.jsx)(a.zxk, {
+                                                  variant: 'primary',
+                                                  text: l.intl.string(l.t['3PatS0']),
+                                                  onClick: () => (null == d ? void 0 : d())
                                               })
                                           ]
                                       })

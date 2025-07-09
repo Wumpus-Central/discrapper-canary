@@ -7,8 +7,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(921801),
+    a = n(481060),
+    l = n(921801),
     o = n(3957),
     c = n(279743),
     d = n(834166),
@@ -39,23 +39,23 @@ function m(e) {
     return e;
 }
 function p(e) {
-    let { header: t, description: n, relatedId: r, disabled: a } = e;
+    let { header: t, description: n, relatedId: r, disabled: l } = e;
     return (0, i.jsxs)('div', {
         className: u.header,
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, i.jsx)(a.X6q, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
                 children: (0, i.jsx)('label', {
                     htmlFor: r,
-                    className: s()(u.title, { [u.disabled]: a }),
+                    className: s()(u.title, { [u.disabled]: l }),
                     children: t
                 })
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: s()(u.description, { [u.disabled]: a }),
+                className: s()(u.description, { [u.disabled]: l }),
                 children: n
             })
         ]
@@ -63,7 +63,7 @@ function p(e) {
 }
 function g(e) {
     let { setting: t, className: n, children: r } = e;
-    return (0, i.jsx)(a.F, {
+    return (0, i.jsx)(l.F, {
         setting: t,
         children: (0, i.jsx)('div', {
             className: s()(u.container, n),
@@ -72,19 +72,19 @@ function g(e) {
     });
 }
 function h(e) {
-    let { setting: t, className: n, children: r, scrollPosition: l, scrollHighlightDelay: m } = e,
-        p = (0, o.a)(l);
-    return (0, i.jsx)(a.F, {
+    let { setting: t, className: n, children: r, scrollPosition: a, scrollHighlightDelay: m } = e,
+        p = (0, o.a)(a);
+    return (0, i.jsx)(l.F, {
         setting: t,
         children: (0, i.jsxs)('div', {
-            className: s()(u.container, n, { [d.settingsBackgroundFlashElement]: null != l }),
+            className: s()(u.container, n, { [d.settingsBackgroundFlashElement]: null != a }),
             ref: p,
             children: [
                 r,
-                null != l
+                null != a
                     ? (0, i.jsx)(c.Z, {
                           animationDelay: m,
-                          scrollPosition: l
+                          scrollPosition: a
                       })
                     : null
             ]

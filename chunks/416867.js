@@ -1,52 +1,53 @@
-n.d(t, { B: () => u });
+n.d(t, { B: () => d });
 var r = n(255367);
 n(73800);
-var s = n(481060),
-    i = n(313201),
-    l = n(192635),
-    o = n(388032),
-    a = n(274970);
-function c(e) {
-    let { transitionState: t, Icon: n, title: c, body: u, onClose: d } = e,
-        f = (0, i.Dt)();
-    return (0, r.jsxs)(s.Y0X, {
-        className: a.container,
+var s = n(755721),
+    i = n(481060),
+    l = n(313201),
+    o = n(192635),
+    a = n(388032),
+    c = n(274970);
+function u(e) {
+    let { transitionState: t, Icon: n, title: u, body: d, onClose: f } = e,
+        p = (0, l.Dt)();
+    return (0, r.jsxs)(i.Y0X, {
+        className: c.container,
         transitionState: t,
-        'aria-labelledby': f,
+        'aria-labelledby': p,
         parentComponent: 'ActionCompletedSuccessModal',
         children: [
-            (0, r.jsxs)(s.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 children: [
-                    (0, r.jsx)(l.Z, { Icon: n }),
-                    (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(s.X6q, {
-                        id: f,
-                        className: a.__invalid_title,
+                    (0, r.jsx)(o.Z, { Icon: n }),
+                    (0, r.jsx)(i.LZC, { size: 24 }),
+                    (0, r.jsx)(i.X6q, {
+                        id: p,
+                        className: c.__invalid_title,
                         variant: 'heading-xl/semibold',
-                        children: c
-                    }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(s.Text, {
-                        className: a.body,
-                        variant: 'text-sm/normal',
                         children: u
+                    }),
+                    (0, r.jsx)(i.LZC, { size: 8 }),
+                    (0, r.jsx)(i.Text, {
+                        className: c.body,
+                        variant: 'text-sm/normal',
+                        children: d
                     })
                 ]
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsx)(s.zxk, {
-                size: s.zxk.Sizes.MEDIUM,
+            (0, r.jsx)(i.LZC, { size: 24 }),
+            (0, r.jsx)(s.zx, {
+                size: s.zx.Sizes.MEDIUM,
                 grow: !1,
-                onClick: d,
-                children: o.intl.string(o.t['NX+WJC'])
+                onClick: f,
+                children: a.intl.string(a.t['NX+WJC'])
             })
         ]
     });
 }
-function u(e) {
-    (0, s.h7j)((t) =>
+function d(e) {
+    (0, i.h7j)((t) =>
         (0, r.jsx)(
-            c,
+            u,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

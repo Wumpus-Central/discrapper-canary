@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(481060),
-    l = n(541716),
-    a = n(752305),
+    a = n(541716),
+    l = n(752305),
     o = n(893718),
     c = n(313201),
     d = n(131704),
@@ -18,15 +18,15 @@ let h = (0, c.hQ)(),
     }),
     b = (0, c.hQ)();
 function x(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: x, currentBio: _, disabled: E = !1 } = e,
-        [j, O] = r.useState(null != d ? d : _),
-        [C, S] = r.useState((0, a.JM)(j)),
-        v = r.useRef(!1);
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: x, currentBio: _, disabled: j = !1 } = e,
+        [E, O] = r.useState(null != d ? d : _),
+        [C, v] = r.useState((0, l.JM)(E)),
+        S = r.useRef(!1);
     return (
         r.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, a.JM)(_);
-                (O(_), S(e));
+                let e = (0, l.JM)(_);
+                (O(_), v(e));
             }
         }, [d, _]),
         (0, i.jsxs)(u.Z, {
@@ -34,7 +34,7 @@ function x(e) {
             titleId: h,
             description: p.intl.string(p.t.Bbw6AQ),
             errors: n,
-            disabled: E,
+            disabled: j,
             children: [
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': b,
@@ -43,20 +43,20 @@ function x(e) {
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== j && (O(t), S(n), c(t));
+                        t !== E && (O(t), v(n), c(t));
                     },
                     placeholder: x,
                     channel: f,
-                    textValue: j,
+                    textValue: E,
                     richValue: C,
-                    type: l.Ie.PROFILE_BIO_INPUT,
+                    type: a.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        v.current = !1;
+                        S.current = !1;
                     },
                     onFocus: () => {
-                        v.current = !0;
+                        S.current = !0;
                     },
-                    focused: v.current,
+                    focused: S.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({

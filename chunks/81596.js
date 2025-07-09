@@ -1,60 +1,61 @@
-(e.d(n, { default: () => x }), e(388685));
+(e.d(n, { default: () => N }), e(388685));
 var i = e(255367),
     r = e(73800),
-    l = e(442837),
-    s = e(481060),
-    o = e(230711),
+    s = e(442837),
+    l = e(755721),
+    o = e(481060),
+    a = e(230711),
     d = e(485267),
     c = e(564990),
-    a = e(353647),
-    E = e(527790),
-    u = e(540440),
-    _ = e(365583),
-    h = e(388032),
-    T = e(807069);
-function x(t) {
-    let { user: n, entry: e, transitionState: x, onAction: N, onClose: R, onOpenGameSettings: f } = t,
-        [p, L] = (0, l.Wu)([a.Z], () => [a.Z.isDeletingEntryHistory, a.Z.deleteOutboxEntryError]);
+    E = e(353647),
+    u = e(527790),
+    _ = e(540440),
+    h = e(365583),
+    T = e(388032),
+    x = e(807069);
+function N(t) {
+    let { user: n, entry: e, transitionState: N, onAction: f, onClose: p, onOpenGameSettings: R } = t,
+        [C, L] = (0, s.Wu)([E.Z], () => [E.Z.isDeletingEntryHistory, E.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => d.Bt, []),
-        (0, i.jsxs)(s.Y0X, {
-            size: s.CgR.SMALL,
-            transitionState: x,
+        (0, i.jsxs)(o.Y0X, {
+            size: o.CgR.SMALL,
+            transitionState: N,
             parentComponent: 'UserProfileActivityDeleteHistoryModal',
             children: [
-                (0, i.jsxs)(s.hzk, {
-                    className: T.content,
+                (0, i.jsxs)(o.hzk, {
+                    className: x.content,
                     children: [
                         null != L
                             ? (0, i.jsxs)('div', {
-                                  className: T.error,
+                                  className: x.error,
                                   children: [
-                                      (0, i.jsx)(s.k$p, { color: s.TVs.colors.STATUS_DANGER }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(o.k$p, { color: o.TVs.colors.STATUS_DANGER }),
+                                      (0, i.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
-                                          children: h.intl.string(h.t.FMbL3t)
+                                          children: T.intl.string(T.t.FMbL3t)
                                       })
                                   ]
                               })
                             : null,
-                        (0, i.jsx)(s.X6q, {
+                        (0, i.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: (0, u.y)(e)
+                            children: (0, _.y)(e)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
-                            children: h.intl.format(h.t.KV72oa, {
+                            children: T.intl.format(T.t.KV72oa, {
                                 settingsHook: (t, n) => {
-                                    let r = (0, _.C)({
+                                    let r = (0, h.C)({
                                         entry: e,
-                                        onOpenGameSettings: f
+                                        onOpenGameSettings: R
                                     });
                                     return (0, i.jsx)(
-                                        s.eee,
+                                        o.eee,
                                         {
                                             onClick: () => {
-                                                (null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : o.Z.open(), R());
+                                                (null == f || f({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : a.Z.open(), p());
                                             },
                                             children: t
                                         },
@@ -63,32 +64,32 @@ function x(t) {
                                 }
                             })
                         }),
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(u.Z, {
                             user: n,
                             entry: e,
-                            className: T.card,
+                            className: x.card,
                             hideContextMenu: !0
                         })
                     ]
                 }),
-                (0, i.jsxs)(s.mzw, {
-                    className: T.footer,
+                (0, i.jsxs)(o.mzw, {
+                    className: x.footer,
                     children: [
-                        (0, i.jsx)(s.zxk, {
-                            disabled: p,
-                            color: s.Ttl.RED,
-                            size: s.PhG.SMALL,
+                        (0, i.jsx)(o.zxk, {
+                            variant: 'critical-primary',
+                            size: 'sm',
+                            text: null != L ? T.intl.string(T.t['5911LS']) : T.intl.string(T.t.VkKicX),
+                            disabled: C,
                             onClick: () => {
-                                (null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R));
-                            },
-                            children: null != L ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
+                                (null == f || f({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, p));
+                            }
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            onClick: R,
-                            size: s.PhG.SMALL,
-                            look: s.iLD.FILLED,
-                            color: s.Ttl.TRANSPARENT,
-                            children: h.intl.string(h.t['ETE/oK'])
+                        (0, i.jsx)(l.zx, {
+                            onClick: p,
+                            size: l.Ph.SMALL,
+                            look: l.iL.FILLED,
+                            color: l.Tt.TRANSPARENT,
+                            children: T.intl.string(T.t['ETE/oK'])
                         })
                     ]
                 })

@@ -1,25 +1,26 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     o = n(481060),
     l = n(565138),
-    s = n(430824),
-    a = n(63063),
+    a = n(430824),
+    s = n(63063),
     d = n(981631),
     c = n(388032),
     u = n(905457),
-    x = n(767688);
-function m(e) {
-    let { guildId: t, title: n, transitionState: m, children: g, buttons: j, onClose: f } = e,
-        p = (0, i.e7)([s.Z], () => s.Z.getGuild(t));
-    if (null == p) return null;
+    m = n(767688);
+function x(e) {
+    let { guildId: t, title: n, transitionState: x, children: g, buttons: j, onClose: p } = e,
+        f = (0, i.e7)([a.Z], () => a.Z.getGuild(t));
+    if (null == f) return null;
     let b = (0, r.jsx)(o.zxk, {
-        onClick: f,
-        children: c.intl.string(c.t.i4jeWV)
+        variant: 'primary',
+        text: c.intl.string(c.t.i4jeWV),
+        onClick: p
     });
     return (0, r.jsxs)(o.Y0X, {
-        transitionState: m,
+        transitionState: x,
         size: o.CgR.SMALL,
         className: u.container,
         parentComponent: 'LeaderboardSettingsBaseModal',
@@ -31,7 +32,7 @@ function m(e) {
                     (0, r.jsx)('div', { className: u.gradientSplash }),
                     (0, r.jsx)('img', {
                         alt: '',
-                        src: x,
+                        src: m,
                         className: u.heroImage
                     }),
                     (0, r.jsx)(o.LZC, { size: 16 }),
@@ -47,18 +48,18 @@ function m(e) {
                         children: [
                             (0, r.jsx)(l.Z, {
                                 size: l.Z.Sizes.SMOL,
-                                guild: p,
+                                guild: f,
                                 className: u.guildIcon
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-secondary',
-                                children: p.name
+                                children: f.name
                             })
                         ]
                     }),
                     (0, r.jsx)(o.olH, {
-                        onClick: f,
+                        onClick: p,
                         innerClassName: u.closeButton,
                         className: u.close
                     })
@@ -75,7 +76,7 @@ function m(e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-secondary',
-                        children: c.intl.format(c.t.zbMH0d, { link: a.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })
+                        children: c.intl.format(c.t.zbMH0d, { link: s.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })
                     })
                 ]
             })

@@ -35,14 +35,14 @@ function O(e) {
             onDragComplete: E,
             onDragReset: T
         }),
-        k = (0, a.cj)([h.Z], () => {
+        A = (0, a.cj)([h.Z], () => {
             var e;
             return null != (e = h.Z.errors[x]) ? e : v;
         }),
-        [A, L] = i.useState(!1),
+        [L, k] = i.useState(!1),
         [M, G] = i.useState(!1),
-        U = null != (t = k.options) ? t : k.optionErrors.filter(g.lm)[0],
-        B = k.config,
+        U = null != (t = A.options) ? t : A.optionErrors.filter(g.lm)[0],
+        B = A.config,
         F = l.options.length >= b.fY,
         z = (0, u.kl)(n.id, Array.from(P), [l]).length - P.size,
         H = i.useRef(null),
@@ -58,7 +58,7 @@ function O(e) {
             }
         }, 0);
     }, [d]),
-    A)
+    L)
         ? (0, r.jsx)(o.tEY, {
               children: (0, r.jsxs)('div', {
                   tabIndex: 0,
@@ -97,7 +97,7 @@ function O(e) {
                       }),
                       (0, r.jsx)(o.P3F, {
                           className: _.collapseButton,
-                          onClick: () => L(!1),
+                          onClick: () => k(!1),
                           children: (0, r.jsx)(m.Z, {
                               direction: m.Z.Directions.DOWN,
                               height: 16,
@@ -157,7 +157,7 @@ function O(e) {
                           onChange: (e) => (0, f.Kk)(n, l.id, { title: e }),
                           placeholder: j.intl.string(j.t.QMCuCg),
                           maxLength: b.iU,
-                          error: k.title
+                          error: A.title
                       }),
                       (0, r.jsx)(C, {
                           prompt: l,
@@ -181,7 +181,7 @@ function O(e) {
                           guild: n,
                           prompt: l,
                           promptIndex: x,
-                          errors: k,
+                          errors: A,
                           singleColumn: I
                       }),
                       null != U ? (0, r.jsx)(o.pdY, { error: U }) : null,
@@ -220,7 +220,7 @@ function O(e) {
                               }),
                               (0, r.jsx)(o.P3F, {
                                   className: _.collapseButton,
-                                  onClick: () => L(!0),
+                                  onClick: () => k(!0),
                                   children: (0, r.jsx)(m.Z, {
                                       direction: m.Z.Directions.UP,
                                       height: 16,

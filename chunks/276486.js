@@ -1,16 +1,17 @@
 n.d(t, {
-    l: () => d,
-    v: () => m
+    l: () => m,
+    v: () => f
 });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(144114),
-    o = n(489813),
-    s = n(815660),
-    a = n(388032),
-    c = n(667084);
-function u(e) {
+var i = n(755721),
+    l = n(481060),
+    o = n(144114),
+    s = n(489813),
+    a = n(815660),
+    c = n(388032),
+    u = n(667084);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,25 +36,25 @@ function u(e) {
     }
     return e;
 }
-function d() {
-    return (0, r.jsx)(o.PU, {
-        className: c.editableRequirementContainer,
-        icon: i.AtH,
-        text: a.intl.string(a.t.woMjLS),
-        footnote: a.intl.string(a.t['jMh+TU']),
+function m() {
+    return (0, r.jsx)(s.PU, {
+        className: u.editableRequirementContainer,
+        icon: l.AtH,
+        text: c.intl.string(c.t.woMjLS),
+        footnote: c.intl.string(c.t['jMh+TU']),
         meetsRequirement: !1,
-        children: (0, r.jsx)(i.ua7, {
-            text: a.intl.string(a.t.mGlP39),
+        children: (0, r.jsx)(l.ua7, {
+            text: c.intl.string(c.t.mGlP39),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    i.zxk,
-                    ((t = u({}, e)),
+                    i.zx,
+                    ((t = d({}, e)),
                     (n = n =
                         {
-                            size: i.zxk.Sizes.SMALL,
+                            size: i.zx.Sizes.SMALL,
                             disabled: !0,
-                            children: a.intl.string(a.t['13ofGh'])
+                            children: c.intl.string(c.t['13ofGh'])
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -73,27 +74,28 @@ function d() {
         })
     });
 }
-function m(e) {
+function f(e) {
     let { isUserVerified: t } = e,
-        d = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
-    return (0, r.jsx)(o.PU, {
-        className: c.editableRequirementContainer,
-        icon: i.AtH,
-        text: d,
-        footnote: a.intl.string(a.t['jMh+TU']),
+        i = t ? c.intl.string(c.t.WWzQtb) : c.intl.string(c.t.woMjLS);
+    return (0, r.jsx)(s.PU, {
+        className: u.editableRequirementContainer,
+        icon: l.AtH,
+        text: i,
+        footnote: c.intl.string(c.t['jMh+TU']),
         meetsRequirement: t,
-        children: (0, r.jsx)(i.zxk, {
-            size: i.zxk.Sizes.SMALL,
+        children: (0, r.jsx)(l.zxk, {
+            variant: 'primary',
+            size: 'sm',
+            text: c.intl.string(c.t['13ofGh']),
             onClick: () => {
-                (0, i.ZDy)(
+                (0, l.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('76540'), n.e('56898')]).then(n.bind(n, 607018));
-                        return (t) => (0, r.jsx)(e, u({ reason: l.L.GUILD_PHONE_REQUIRED }, t));
+                        return (t) => (0, r.jsx)(e, d({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: s.M }
+                    { modalKey: a.M }
                 );
-            },
-            children: a.intl.string(a.t['13ofGh'])
+            }
         })
     });
 }

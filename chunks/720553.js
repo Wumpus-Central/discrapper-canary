@@ -14,17 +14,17 @@ var l = n(990547),
     u = n(946555);
 function p(t) {
     let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: f } = t,
-        M = (0, o.Dt)(),
-        _ = (0, c.q)('MaskedLinkModal'),
+        _ = (0, o.Dt)(),
+        v = (0, c.q)('MaskedLinkModal'),
         {
-            protocol: b,
-            authorityPrefix: j,
+            protocol: j,
+            authorityPrefix: b,
             hostname: T,
-            theRestOfTheUrl: v,
-            shouldTrustUrl: D,
-            setShouldTrustUrl: L,
-            handleConfirm: N,
-            handleCancel: y
+            theRestOfTheUrl: M,
+            shouldTrustUrl: y,
+            setShouldTrustUrl: D,
+            handleConfirm: L,
+            handleCancel: N
         } = (0, x.X)({
             url: e,
             trustUrl: n,
@@ -32,17 +32,17 @@ function p(t) {
             onCancel: k,
             onClose: g
         }),
-        z = () => {
-            (N(),
+        X = () => {
+            (L(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
-                    is_trust_url_selected: D,
+                    is_trust_url_selected: y,
                     action_type: 'confirm'
                 }));
         },
-        I = () => {
-            (y(),
+        E = () => {
+            (N(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
-                    is_trust_url_selected: D,
+                    is_trust_url_selected: y,
                     action_type: 'cancel'
                 }));
         };
@@ -51,7 +51,7 @@ function p(t) {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.MASKED_LINK_MODAL
         }),
-        _
+        v
             ? (0, a.jsxs)(i.u, {
                   size: 'md',
                   transitionState: f,
@@ -61,12 +61,12 @@ function p(t) {
                   actions: [
                       {
                           text: h.intl.string(h.t['/g10LC']),
-                          onClick: I,
+                          onClick: E,
                           variant: 'secondary'
                       },
                       {
                           text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
-                          onClick: z,
+                          onClick: X,
                           variant: 'primary'
                       }
                   ],
@@ -78,7 +78,7 @@ function p(t) {
                                   tag: 'span',
                                   variant: p ? 'text-md/semibold' : 'text-md/normal',
                                   color: p ? 'text-default' : 'text-muted',
-                                  children: [b, j]
+                                  children: [j, b]
                               }),
                               (0, a.jsx)(r.Text, {
                                   tag: 'span',
@@ -90,18 +90,18 @@ function p(t) {
                                   tag: 'span',
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: v
+                                  children: M
                               })
                           ]
                       }),
                       (0, a.jsx)(r.XZJ, {
                           className: u.checkboxMana,
                           type: r.XZJ.Types.INVERTED,
-                          value: D,
-                          onChange: (t, e) => L(e),
+                          value: y,
+                          onChange: (t, e) => D(e),
                           children: (0, a.jsx)(r.Text, {
                               variant: 'text-sm/normal',
-                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
+                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
                           })
                       })
                   ]
@@ -109,13 +109,13 @@ function p(t) {
             : (0, a.jsxs)(r.Y0X, {
                   size: r.CgR.DYNAMIC,
                   transitionState: f,
-                  'aria-labelledby': M,
+                  'aria-labelledby': _,
                   parentComponent: 'MaskedLinkModal',
                   children: [
                       (0, a.jsxs)(r.hzk, {
                           children: [
                               (0, a.jsx)(r.X6q, {
-                                  id: M,
+                                  id: _,
                                   variant: 'heading-xl/bold',
                                   className: u.title,
                                   children: h.intl.string(h.t['3w1QGh'])
@@ -132,7 +132,7 @@ function p(t) {
                                           tag: 'span',
                                           variant: p ? 'text-md/semibold' : 'text-md/normal',
                                           color: p ? 'text-default' : 'text-muted',
-                                          children: [b, j]
+                                          children: [j, b]
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           tag: 'span',
@@ -144,40 +144,40 @@ function p(t) {
                                           tag: 'span',
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: v
+                                          children: M
                                       })
                                   ]
                               }),
                               (0, a.jsx)(r.XZJ, {
                                   className: u.checkbox,
                                   type: r.XZJ.Types.INVERTED,
-                                  value: D,
-                                  onChange: (t, e) => L(e),
+                                  value: y,
+                                  onChange: (t, e) => D(e),
                                   children: (0, a.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
+                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
                                   })
                               })
                           ]
                       }),
-                      (0, a.jsxs)(r.mzw, {
-                          children: [
-                              (0, a.jsx)(r.zxk, {
-                                  type: 'button',
-                                  size: r.zxk.Sizes.MEDIUM,
-                                  color: r.zxk.Colors.BRAND,
-                                  onClick: z,
-                                  children: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC)
-                              }),
-                              (0, a.jsx)(r.zxk, {
-                                  type: 'button',
-                                  size: r.zxk.Sizes.MEDIUM,
-                                  color: r.zxk.Colors.PRIMARY,
-                                  onClick: I,
-                                  look: r.iLD.LINK,
-                                  children: h.intl.string(h.t['/g10LC'])
-                              })
-                          ]
+                      (0, a.jsx)(r.mzw, {
+                          children: (0, a.jsxs)(r.hE2, {
+                              direction: 'horizontal-reverse',
+                              children: [
+                                  (0, a.jsx)(r.zxk, {
+                                      variant: 'primary',
+                                      text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
+                                      type: 'button',
+                                      onClick: X
+                                  }),
+                                  (0, a.jsx)(r.zxk, {
+                                      variant: 'secondary',
+                                      text: h.intl.string(h.t['/g10LC']),
+                                      type: 'button',
+                                      onClick: E
+                                  })
+                              ]
+                          })
                       })
                   ]
               })

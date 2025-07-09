@@ -11,9 +11,9 @@ function d(e) {
     let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: f } = e,
         { blockedPayments: p, setStep: b, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: g, currencyLoading: x, selectedSkuId: v, setSelectedSkuId: j, setSelectedPlanId: y, priceOptions: C, setSubscriptionMetadataRequest: O } = (0, c.JL)(),
         { isGift: S } = (0, s.wD)(),
-        [P, k] = r.useState(!h || !g || x);
+        [P, N] = r.useState(!h || !g || x);
     return (r.useEffect(() => {
-        k(!h || !g || x);
+        N(!h || !g || x);
     }, [x, g, h]),
     r.useEffect(() => {
         null != d && O({ guild_id: d });

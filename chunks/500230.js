@@ -14,10 +14,10 @@ var r = t(255367),
     x = t(388032),
     p = t(602268);
 let g = function (e) {
-    let { className: n, guildId: t, badge: a, primaryColor: g, secondaryColor: b } = e,
-        [y, j] = i.useState(!1),
+    let { className: n, guildId: t, badge: a, primaryColor: g, secondaryColor: y } = e,
+        [b, j] = i.useState(!1),
         v = i.useRef(null),
-        C = i.useMemo(() => m.go.every((e) => e.primary !== g || e.secondary !== b), [g, b]);
+        C = i.useMemo(() => m.go.every((e) => e.primary !== g || e.secondary !== y), [g, y]);
     function N(e) {
         let n = {};
         (void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), u.Z.updateGuildProfile(t, n));
@@ -36,7 +36,7 @@ let g = function (e) {
                         (0, r.jsx)(
                             d.P3F,
                             {
-                                className: l()(p.pickerItem, { [p.pickerItemSelected]: e.primary === g && e.secondary === b }),
+                                className: l()(p.pickerItem, { [p.pickerItemSelected]: e.primary === g && e.secondary === y }),
                                 onClick: () => N(e),
                                 children: (0, r.jsx)(c.v, {
                                     badge: a,
@@ -54,7 +54,7 @@ let g = function (e) {
                         showSecondaryColor: f.ER[a] >= 2,
                         palette: {
                             primary: g,
-                            secondary: b
+                            secondary: y
                         },
                         onPrimaryColorChange: (e) => {
                             N({ primary: (0, s.Rf)(e) });
@@ -62,7 +62,7 @@ let g = function (e) {
                         onSecondaryColorChange: (e) => {
                             N({ secondary: (0, s.Rf)(e) });
                         },
-                        shouldShow: y,
+                        shouldShow: b,
                         onRequestClose: () => j(!1),
                         children: (e) => {
                             var n, t;

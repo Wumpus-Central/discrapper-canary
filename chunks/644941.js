@@ -14,8 +14,8 @@ var n = r(255367),
     p = r(168551),
     O = r(485267),
     E = r(561308),
-    h = r(669764),
-    x = r(706454),
+    x = r(669764),
+    h = r(706454),
     v = r(768581),
     j = r(814225),
     b = r(709054),
@@ -29,8 +29,8 @@ var n = r(255367),
     A = r(38516),
     C = r(891949),
     T = r(252547),
-    M = r(484527),
-    L = r(131033),
+    L = r(484527),
+    M = r(131033),
     R = r(296768),
     D = r(978313),
     G = r(206583),
@@ -68,8 +68,8 @@ function Q(e) {
         f = null == a ? void 0 : a.getIconURL(160, v.$k ? 'webp' : 'png'),
         p = b.default.extractTimestamp(a.id),
         O = o()().diff(o()(p), 'days') <= G.G,
-        h = s.some((e) => (0, E.ig)(e) === c.o.GLOBAL),
-        x = null != (t = r.name) ? t : null == a ? void 0 : a.name;
+        x = s.some((e) => (0, E.ig)(e) === c.o.GLOBAL),
+        h = null != (t = r.name) ? t : null == a ? void 0 : a.name;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)('div', {
@@ -104,7 +104,7 @@ function Q(e) {
                             children: [
                                 (0, n.jsx)(d.X6q, {
                                     variant: 'heading-xl/bold',
-                                    children: x
+                                    children: h
                                 }),
                                 (0, n.jsxs)('div', {
                                     className: l()(K.row, K.gapSm),
@@ -114,7 +114,7 @@ function Q(e) {
                                                 className: K.gameIcon,
                                                 src: f,
                                                 height: 16,
-                                                alt: k.intl.formatToPlainString(k.t['nh+jWl'], { game: x })
+                                                alt: k.intl.formatToPlainString(k.t['nh+jWl'], { game: h })
                                             }),
                                         (0, n.jsx)(d.Text, {
                                             variant: 'text-sm/semibold',
@@ -127,7 +127,7 @@ function Q(e) {
                                                 className: K.newBadge,
                                                 children: k.intl.string(k.t.y2b7CA)
                                             }),
-                                        h &&
+                                        x &&
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [
                                                     (0, n.jsx)(d.Text, {
@@ -195,7 +195,7 @@ function Y(e) {
                         detectedGame: t,
                         trackAction: a
                     }),
-                    (0, n.jsx)(M.Z, {
+                    (0, n.jsx)(L.Z, {
                         detectedGame: t,
                         trackClick: a,
                         onInviteResolved: o,
@@ -205,7 +205,7 @@ function Y(e) {
                         detectedGame: t,
                         trackClick: a
                     }),
-                    (0, n.jsx)(L.Z, { detectedGame: t })
+                    (0, n.jsx)(M.Z, { detectedGame: t })
                 ]
             })
         ]
@@ -216,7 +216,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
         var t;
         let { applicationId: r, source: a, sourceUserId: s, transitionState: o, onClose: c, appContext: v } = e,
             { clientThemesClassName: j } = (0, p.ZP)(),
-            b = (0, u.e7)([x.default], () => x.default.locale),
+            b = (0, u.e7)([h.default], () => h.default.locale),
             S = i.useMemo(() => (0, I.fP)(), []),
             N = (0, u.Wu)([_.Z], () => {
                 var e;
@@ -224,10 +224,10 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
             }),
             [w, A] = i.useState(null),
             C = (0, P.N)(r),
-            [T, M] = i.useState(null),
-            L = (0, f.q)(r),
-            R = (0, u.e7)([h.Z], () => h.Z.getGame(r)),
-            D = null != (t = null == R ? void 0 : R.name) ? t : null == L ? void 0 : L.name,
+            [T, L] = i.useState(null),
+            M = (0, f.q)(r),
+            R = (0, u.e7)([x.Z], () => x.Z.getGame(r)),
+            D = null != (t = null == R ? void 0 : R.name) ? t : null == M ? void 0 : M.name,
             G = (e, t) => {
                 var n;
                 (0, I.UE)({
@@ -286,7 +286,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 officialGuildId: null == T || null == (e = T.guild) ? void 0 : e.id
             });
         }),
-        null == R || null == L)
+        null == R || null == M)
             ? null
             : (0, n.jsx)(d.Y0X, {
                   transitionState: o,
@@ -298,7 +298,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                       children: [
                           (0, n.jsx)(Q, {
                               detectedGame: R,
-                              application: L,
+                              application: M,
                               entries: C,
                               viewId: S,
                               trackAction: G
@@ -309,7 +309,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                   children: [
                                       (0, n.jsx)(F, {
                                           detectedGame: R,
-                                          application: L,
+                                          application: M,
                                           entries: C,
                                           officialGuildInvite: T,
                                           similarGames: N,
@@ -320,7 +320,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                       }),
                                       (0, n.jsx)(Y, {
                                           detectedGame: R,
-                                          setOfficialGuildInvite: M,
+                                          setOfficialGuildInvite: L,
                                           trackAction: G,
                                           onClose: c,
                                           appContext: v

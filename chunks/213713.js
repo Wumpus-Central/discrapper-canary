@@ -1,40 +1,40 @@
-(n.d(t, { Z: () => A }), n(388685));
-var a = n(255367),
-    r = n(73800),
-    l = n(120356),
-    i = n.n(l),
-    s = n(392711),
-    o = n.n(s),
-    c = n(876215),
-    d = n(126313),
-    u = n(442837),
-    m = n(433517),
-    x = n(481060),
-    h = n(570140),
-    p = n(812206),
-    b = n(835473),
-    f = n(246992),
-    v = n(681619),
-    j = n(810568),
-    g = n(168524),
-    _ = n(77498),
-    y = n(823379),
-    C = n(550532),
-    O = n(71585),
-    N = n(146282),
-    T = n(780106),
-    E = n(650613),
-    S = n(789086),
-    P = n(206583),
-    w = n(403542),
-    I = n(616257);
-let k = [
+(a.d(t, { Z: () => Z }), a(388685));
+var n = a(255367),
+    r = a(73800),
+    l = a(120356),
+    i = a.n(l),
+    s = a(392711),
+    o = a.n(s),
+    c = a(876215),
+    d = a(126313),
+    u = a(442837),
+    m = a(433517),
+    x = a(481060),
+    p = a(570140),
+    h = a(812206),
+    b = a(835473),
+    f = a(246992),
+    v = a(681619),
+    j = a(810568),
+    g = a(168524),
+    _ = a(77498),
+    y = a(823379),
+    C = a(550532),
+    O = a(71585),
+    N = a(146282),
+    T = a(780106),
+    E = a(650613),
+    S = a(789086),
+    P = a(206583),
+    w = a(403542),
+    I = a(616257);
+let R = [
     {
         key: 'type',
         cellClassName: i()(w.cell, w.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(x.Text, {
+            return (0, n.jsx)(x.Text, {
                 variant: 'text-md/semibold',
                 children: c.s[t]
             });
@@ -45,8 +45,8 @@ let k = [
         cellClassName: i()(w.cell, w.cellCount),
         render(e) {
             let { entries: t } = e;
-            return (0, a.jsx)('div', {
-                children: (0, a.jsx)(x.Text, {
+            return (0, n.jsx)('div', {
+                children: (0, n.jsx)(x.Text, {
                     variant: 'text-md/normal',
                     children: t.length
                 })
@@ -58,172 +58,177 @@ let k = [
         cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(R, { type: t });
+            return (0, n.jsx)(k, { type: t });
         }
     }
 ];
-function R(e) {
-    var t, n;
+function k(e) {
+    var t, a;
     let { type: r } = e,
         l = (0, u.e7)([N.Z], () => N.Z.getFilters()),
-        i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(r)) && n;
-    return (0, a.jsx)(x.XZJ, {
+        i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
+    return (0, n.jsx)(x.XZJ, {
         value: i,
         onClick: function () {
             i
-                ? h.Z.dispatch({
+                ? p.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: void 0
                   })
-                : h.Z.dispatch({
+                : p.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: { types: new Set([r]) }
                   });
         }
     });
 }
-function A() {
+function Z() {
     var e, t;
-    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
+    let a = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
         l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
-                let n = t[e];
+                let a = t[e];
                 return {
                     key: ''.concat(e),
-                    type: n[0].content_type,
-                    entries: n
+                    type: a[0].content_type,
+                    entries: a
                 };
             });
-        })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
+        })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
         c = (0, u.e7)([N.Z], () => {
             var e;
             return (null == (e = N.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [R, A] = r.useState(''),
-        L = (0, u.e7)(
-            [_.Z, p.Z],
+        [k, Z] = r.useState(''),
+        D = (0, u.e7)(
+            [_.Z, h.Z],
             () => {
-                var e, t, n;
-                return parseInt(R) > 0 ? R : null != (n = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id) ? n : null == (t = p.Z.getApplicationByName(R)) ? void 0 : t.id;
+                var e, t, a;
+                return parseInt(k) > 0 ? k : null != (a = null == (e = _.Z.getGameByName(k)) ? void 0 : e.id) ? a : null == (t = h.Z.getApplicationByName(k)) ? void 0 : t.id;
             },
-            [R]
+            [k]
         ),
-        D = (0, g.Z)({
-            applicationId: L,
+        L = (0, g.Z)({
+            applicationId: D,
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         }),
         M = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
-                let [t, n] = e;
-                return n;
+                let [t, a] = e;
+                return a;
             })
             .map((e) => {
                 let [t] = e;
                 return t;
             }),
-        z = (0, b.Z)(M).filter(y.lm),
-        B = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
-    return (0, a.jsx)('div', {
+        B = (0, b.Z)(M).filter(y.lm),
+        F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+    return (0, n.jsx)('div', {
         className: I.panel,
-        children: (0, a.jsxs)(x.zJl, {
+        children: (0, n.jsxs)(x.zJl, {
             className: w.content,
             children: [
-                (0, a.jsxs)(x.hjN, {
+                (0, n.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(x.vwX, { children: 'Inventory' }),
+                        (0, n.jsx)(x.vwX, { children: 'Inventory' }),
                         s.length > 0 &&
-                            (0, a.jsx)(v.Z, {
-                                columns: k,
+                            (0, n.jsx)(v.Z, {
+                                columns: R,
                                 data: s
                             }),
-                        (0, a.jsx)(x.LZC, { size: 8 }),
-                        (0, a.jsx)(S.Z, {}),
-                        (0, a.jsx)(x.zxk, {
+                        (0, n.jsx)(x.LZC, { size: 8 }),
+                        (0, n.jsx)(S.Z, {}),
+                        (0, n.jsx)(x.zxk, {
+                            variant: 'primary',
+                            text: 'Refresh Now',
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({
+                                p.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
                                     feedId: P.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
-                            submitting: c,
-                            children: 'Refresh Now'
+                            loading: c
                         })
                     ]
                 }),
-                (0, a.jsxs)(x.hjN, {
+                (0, n.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(x.vwX, { children: 'Impression Capping' }),
-                        (0, a.jsx)(x.zxk, {
+                        (0, n.jsx)(x.vwX, { children: 'Impression Capping' }),
+                        (0, n.jsx)(x.zxk, {
+                            variant: 'primary',
+                            text: 'Clear Impressions',
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
-                            },
-                            children: 'Clear Impressions'
+                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
+                            }
                         }),
-                        (0, a.jsx)(x.LZC, { size: 8 }),
-                        (0, a.jsx)(x.zxk, {
+                        (0, n.jsx)(x.LZC, { size: 8 }),
+                        (0, n.jsx)(x.zxk, {
+                            variant: 'primary',
+                            text: 'Log Impressions',
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
-                            },
-                            children: 'Log Impressions'
+                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
+                            }
                         }),
-                        (0, a.jsx)(x.LZC, { size: 8 }),
-                        (0, a.jsx)(x.zxk, {
+                        (0, n.jsx)(x.LZC, { size: 8 }),
+                        (0, n.jsx)(x.zxk, {
+                            variant: 'primary',
+                            text: l ? 'Enable Impression Capping' : 'Disable Impression Capping',
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
-                            },
-                            children: l ? 'Enable Impression Capping' : 'Disable Impression Capping'
+                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
+                            }
                         }),
-                        (0, a.jsx)(x.LZC, { size: 8 }),
-                        (0, a.jsx)(x.zxk, {
+                        (0, n.jsx)(x.LZC, { size: 8 }),
+                        (0, n.jsx)(x.zxk, {
+                            variant: 'primary',
+                            text: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping',
                             fullWidth: !0,
                             onClick: function () {
-                                h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
-                            },
-                            children: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
+                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
+                            }
                         })
                     ]
                 }),
                 !1,
-                (0, a.jsx)(E.Z, {}),
-                (0, a.jsxs)(x.hjN, {
+                (0, n.jsx)(E.Z, {}),
+                (0, n.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(x.vwX, { children: 'Game Profile' }),
-                        (0, a.jsx)(x.oil, {
+                        (0, n.jsx)(x.vwX, { children: 'Game Profile' }),
+                        (0, n.jsx)(x.oil, {
                             placeholder: 'App ID or full name',
-                            onChange: (e) => (0 === e.length || e.length >= 18) && A(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (R === e.currentTarget.value ? null == D || D(e) : A(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
                             },
-                            error: R.length > 0 && null == D ? 'No game profile for '.concat(null != L ? L : R + ' - try by id', '.') : void 0,
-                            style: null != D ? { border: '1px solid green' } : {}
+                            error: k.length > 0 && null == L ? 'No game profile for '.concat(null != D ? D : k + ' - try by id', '.') : void 0,
+                            style: null != L ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: z.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, n.jsx)('ul', { children: B.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
-                (0, a.jsxs)(x.hjN, {
+                (0, n.jsxs)(x.hjN, {
                     children: [
-                        (0, a.jsx)(x.vwX, { children: 'Activity Sharing' }),
-                        (0, a.jsx)(x.Text, {
+                        (0, n.jsx)(x.vwX, { children: 'Activity Sharing' }),
+                        (0, n.jsx)(x.Text, {
                             variant: 'text-md/normal',
                             children: 'Force show game:'
                         }),
-                        (0, a.jsx)(x.PhF, {
+                        (0, n.jsx)(x.PhF, {
                             options: T.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === B,
+                            isSelected: (e) => e === F,
                             select: function (e) {
-                                h.Z.dispatch({
+                                p.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',
                                     gameToShow: e
                                 });
@@ -237,20 +242,20 @@ function A() {
         })
     });
 }
-let Z = (e) => {
+let A = (e) => {
     let { application: t } = e,
-        n = (0, g.Z)({
+        a = (0, g.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         });
-    return (0, a.jsx)(x.P3F, {
-        onClick: n,
+    return (0, n.jsx)(x.P3F, {
+        onClick: a,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, a.jsx)(x.Text, {
+        children: (0, n.jsx)(x.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: t.name

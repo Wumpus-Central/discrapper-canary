@@ -32,8 +32,8 @@ var l = n(255367),
     A = n(271383),
     R = n(430824),
     M = n(341165),
-    k = n(751771),
-    D = n(496675),
+    D = n(751771),
+    k = n(496675),
     L = n(158776),
     U = n(699516),
     V = n(626135),
@@ -354,7 +354,7 @@ function eo(e) {
             var e;
             return null != a ? a : null != (e = w.ZP.getDefaultChannel(r.id, !0, K.Plq.CREATE_INSTANT_INVITE)) ? e : null;
         }, [r.id, a]),
-        ej = !(0, c.e7)([D.Z], () => null != ef && D.Z.can(K.Plq.CREATE_INSTANT_INVITE, ef), [ef]) && !(null == ef ? void 0 : ef.isGuildVocal()),
+        ej = !(0, c.e7)([k.Z], () => null != ef && k.Z.can(K.Plq.CREATE_INSTANT_INVITE, ef), [ef]) && !(null == ef ? void 0 : ef.isGuildVocal()),
         eN = (0, N.Z)(ef),
         e_ = (null == ef ? void 0 : ef.type) === K.d4z.GUILD_VOICE && !ej && !eN,
         { enabled: eE } = O.o.useExperiment(
@@ -474,7 +474,7 @@ function eo(e) {
                         var n;
                         let l,
                             i = eg[0],
-                            r = null != (n = k.Z.getSelectedInviteMetadata(e)) ? n : null;
+                            r = null != (n = D.Z.getSelectedInviteMetadata(e)) ? n : null;
                         switch (e.type) {
                             case B.bm.FRIEND:
                             case B.bm.DM:

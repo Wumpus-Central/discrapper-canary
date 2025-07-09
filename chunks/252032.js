@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(904245),
-    a = n(257559),
+    a = n(904245),
+    o = n(257559),
     s = n(541716),
     c = n(893718),
     u = n(314897),
@@ -55,7 +55,7 @@ function v(e) {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return (j && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve());
+                return (j && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve());
             },
             [E, j, P, t]
         ),
@@ -118,9 +118,9 @@ function v(e) {
               message: n,
               textValue: S,
               richValue: I,
-              onCancel: o.Z.endEditMessage,
-              onChange: o.Z.updateEditMessage,
-              onConfirmDelete: a.Z.confirmDelete,
+              onCancel: a.Z.endEditMessage,
+              onChange: a.Z.updateEditMessage,
+              onConfirmDelete: o.Z.confirmDelete,
               saveMessage: Z,
               validateEdit: x,
               children: N
@@ -128,7 +128,7 @@ function v(e) {
         : null;
 }
 function O(e) {
-    let { textValue: t, richValue: n, message: l, channel: o, onChange: a, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
+    let { textValue: t, richValue: n, message: l, channel: a, onChange: o, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
         [h, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
         b = i.useCallback(() => m(!1), []);
@@ -149,9 +149,9 @@ function O(e) {
                 className: C.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: o,
+                channel: a,
                 type: s.Ie.EDIT,
-                onChange: a,
+                onChange: o,
                 onSubmit: (e) => {
                     let { value: t } = e;
                     return u(t);
@@ -167,7 +167,7 @@ function O(e) {
     );
 }
 function j(e, t, n) {
-    let { message: i, channel: l, compact: o } = e;
+    let { message: i, channel: l, compact: a } = e;
     return n
         ? (0, r.jsx)(v, {
               channel: l,
@@ -176,6 +176,6 @@ function j(e, t, n) {
         : (0, r.jsx)(b.ZP, {
               message: i,
               content: t,
-              compact: null != o && o
+              compact: null != a && a
           });
 }

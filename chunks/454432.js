@@ -2,8 +2,8 @@
 var i = n(73800),
     s = n(442837),
     l = n(493773),
-    r = n(430824),
-    a = n(496675),
+    a = n(430824),
+    r = n(496675),
     o = n(771845),
     c = n(99325),
     d = n(273387),
@@ -12,14 +12,14 @@ let m = (e, t) => {
     let [n, m] = i.useState(!1),
         x = (0, s.e7)([d.Z], () => d.Z.getAdminGuildEntryIds(t)),
         C = (0, s.Wu)(
-            [o.ZP, r.Z, a.Z],
+            [o.ZP, a.Z, r.Z],
             () => {
                 let t = o.ZP.getFlattenedGuildIds(),
                     n = [];
                 return (
                     t.forEach((t) => {
-                        let i = r.Z.getGuild(t);
-                        null != i && a.Z.can(u.Plq.ADMINISTRATOR, i) && i.id !== e && n.push(i);
+                        let i = a.Z.getGuild(t);
+                        null != i && r.Z.can(u.Plq.ADMINISTRATOR, i) && i.id !== e && n.push(i);
                     }),
                     n
                 );

@@ -1,89 +1,93 @@
-(n.d(e, { default: () => u }), n(388685), n(953529));
-var i = n(255367),
-    s = n(73800),
-    l = n(481060),
-    r = n(194359),
-    a = n(313201),
-    o = n(51144),
-    c = n(388032),
-    d = n(992089);
-function u(t) {
-    let { user: e, nickname: n, transitionState: u, onClose: x } = t,
-        p = (0, a.Dt)(),
-        [h, k] = s.useState(!1),
-        [m, g] = s.useState(n),
+(i.d(e, { default: () => x }), i(388685), i(953529));
+var n = i(255367),
+    s = i(73800),
+    r = i(755721),
+    l = i(481060),
+    a = i(194359),
+    o = i(313201),
+    d = i(51144),
+    c = i(388032),
+    u = i(992089);
+function x(t) {
+    let { user: e, nickname: i, transitionState: x, onClose: p } = t,
+        h = (0, o.Dt)(),
+        [m, g] = s.useState(!1),
+        [j, k] = s.useState(i),
         z = s.useRef(null),
-        j = async (t) => {
-            (t.preventDefault(), k(!0));
+        f = async (t) => {
+            (t.preventDefault(), g(!0));
             try {
-                (await r.Z.updateRelationship(e.id, m), x());
+                (await a.Z.updateRelationship(e.id, j), p());
             } catch (t) {
             } finally {
-                k(!1);
+                g(!1);
             }
         },
-        N = null == n ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
-    return (0, i.jsx)(l.Y0X, {
-        transitionState: u,
+        v = null == i ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
+    return (0, n.jsx)(l.Y0X, {
+        transitionState: x,
         size: l.CgR.SMALL,
-        'aria-labelledby': p,
+        'aria-labelledby': h,
         parentComponent: 'AddFriendNicknameModal',
-        children: (0, i.jsxs)('form', {
-            onSubmit: j,
+        children: (0, n.jsxs)('form', {
+            onSubmit: f,
             children: [
-                (0, i.jsx)(l.xBx, {
+                (0, n.jsx)(l.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(l.X6q, {
+                    children: (0, n.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: N
+                        children: v
                     })
                 }),
-                (0, i.jsxs)(l.hzk, {
+                (0, n.jsxs)(l.hzk, {
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            className: d.description,
+                            className: u.description,
                             children: c.intl.string(c.t['NdQ+lJ'])
                         }),
-                        (0, i.jsx)(l.xJW, {
+                        (0, n.jsx)(l.xJW, {
                             title: c.intl.string(c.t.pqG6GR),
-                            children: (0, i.jsx)(l.oil, {
+                            children: (0, n.jsx)(l.oil, {
                                 inputRef: z,
-                                value: null != m ? m : '',
-                                placeholder: o.ZP.getName(e),
-                                onChange: g,
+                                value: null != j ? j : '',
+                                placeholder: d.ZP.getName(e),
+                                onChange: k,
                                 maxLength: 32,
-                                className: d.input,
+                                className: u.input,
                                 autoFocus: !0
                             })
                         }),
-                        (0, i.jsx)(l.zxk, {
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.LINK,
-                            size: l.zxk.Sizes.NONE,
+                        (0, n.jsx)(r.zx, {
+                            look: r.zx.Looks.LINK,
+                            color: r.zx.Colors.LINK,
+                            size: r.zx.Sizes.NONE,
                             onClick: () => {
                                 var t;
-                                (g(null), null == (t = z.current) || t.focus());
+                                (k(null), null == (t = z.current) || t.focus());
                             },
-                            className: d.reset,
+                            className: u.reset,
                             children: c.intl.string(c.t['9qSBvL'])
                         })
                     ]
                 }),
-                (0, i.jsxs)(l.mzw, {
-                    children: [
-                        (0, i.jsx)(l.zxk, {
-                            type: 'submit',
-                            disabled: h,
-                            children: c.intl.string(c.t.R3BPHx)
-                        }),
-                        (0, i.jsx)(l.zxk, {
-                            onClick: x,
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.PRIMARY,
-                            children: c.intl.string(c.t['ETE/oK'])
-                        })
-                    ]
+                (0, n.jsx)(l.mzw, {
+                    children: (0, n.jsxs)(l.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, n.jsx)(l.zxk, {
+                                variant: 'primary',
+                                text: c.intl.string(c.t.R3BPHx),
+                                type: 'submit',
+                                disabled: m
+                            }),
+                            (0, n.jsx)(l.zxk, {
+                                variant: 'secondary',
+                                text: c.intl.string(c.t['ETE/oK']),
+                                onClick: p
+                            })
+                        ]
+                    })
                 })
             ]
         })

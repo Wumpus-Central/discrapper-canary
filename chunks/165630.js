@@ -2,8 +2,8 @@
 var i,
     r = n(442837),
     s = n(570140),
-    l = n(381496),
-    a = n(430824);
+    a = n(381496),
+    l = n(430824);
 function o(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ let c = {},
 d();
 class u extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (c = e), this.waitFor(a.Z));
+        (null != e && (c = e), this.waitFor(l.Z));
     }
     getState() {
         return c;
@@ -46,7 +46,7 @@ class u extends (i = r.ZP.PersistedStore) {
 (o(u, 'displayName', 'GuildAffinitiesStore'), o(u, 'persistKey', 'GuildAffinitiesStore'));
 let m = new u(s.Z, {
     CONNECTION_OPEN: function () {
-        return (Date.now() - c.lastFetched > 86400000 && (0, l.j)(), !1);
+        return (Date.now() - c.lastFetched > 86400000 && (0, a.j)(), !1);
     },
     LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
         let { guildAffinities: t } = e;

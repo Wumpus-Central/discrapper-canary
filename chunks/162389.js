@@ -137,9 +137,10 @@ function y(e) {
                       })
                   })
                 : (0, i.jsx)(c.zxk, {
+                      variant: 'primary',
+                      text: x.intl.string(x.t['/jubeH']),
                       disabled: !r,
-                      onClick: y,
-                      children: x.intl.string(x.t['/jubeH'])
+                      onClick: y
                   })
         ]
     });

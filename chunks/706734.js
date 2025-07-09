@@ -1,83 +1,84 @@
 n.d(t, { Z: () => u });
 var s = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(488889),
+var a = n(481060),
+    r = n(488889),
     i = n(226186),
-    a = n(626135),
+    l = n(626135),
     o = n(981631),
     c = n(308569),
-    x = n(388032),
-    d = n(104772),
+    d = n(388032),
+    x = n(104772),
     m = n(652297);
 function u(e) {
-    let { onNext: t, onClose: n, reason: u, onReasonChange: E, freeTextResponse: _, setFreeTextResponse: N } = e,
-        A = c.zf.map((e) => ({
+    let { onNext: t, onClose: n, reason: u, onReasonChange: _, freeTextResponse: E, setFreeTextResponse: N } = e,
+        h = c.zf.map((e) => ({
             value: e,
-            name: (0, l.S)(e)
+            name: (0, r.S)(e)
         })),
-        h = (0, i.u)('change_email_collect_reasons_slide');
+        A = (0, i.u)('change_email_collect_reasons_slide');
     return (0, s.jsxs)('form', {
         onSubmit: t,
         children: [
-            (0, s.jsxs)(r.xBx, {
+            (0, s.jsxs)(a.xBx, {
                 separator: !1,
                 className: m.header,
                 children: [
-                    (0, s.jsx)(r.X6q, {
+                    (0, s.jsx)(a.X6q, {
                         variant: 'heading-xl/extrabold',
-                        children: x.intl.string(x.t['41NIIi'])
+                        children: d.intl.string(d.t['41NIIi'])
                     }),
-                    (0, s.jsx)(r.olH, {
+                    (0, s.jsx)(a.olH, {
                         onClick: n,
                         className: m.modalCloseButton
                     })
                 ]
             }),
-            (0, s.jsxs)(r.hzk, {
-                className: d.content,
+            (0, s.jsxs)(a.hzk, {
+                className: x.content,
                 children: [
-                    (0, s.jsx)(r.FXm, {
+                    (0, s.jsx)(a.FXm, {
                         radioPosition: 'right',
-                        radioItemClassName: d.radioItem,
-                        size: r.FXm.Sizes.NOT_SET,
+                        radioItemClassName: x.radioItem,
+                        size: a.FXm.Sizes.NOT_SET,
                         value: u,
-                        options: A,
+                        options: h,
                         onChange: (e) => {
                             let { value: t } = e;
-                            (a.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), E(t), N(''), t === c.pw.SOMETHING_ELSE && i.Z.trackExposure({ location: 'change_email_collect_reasons_slide' }));
+                            (l.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), _(t), N(''), t === c.pw.SOMETHING_ELSE && i.Z.trackExposure({ location: 'change_email_collect_reasons_slide' }));
                         }
                     }),
-                    h &&
+                    A &&
                         u === c.pw.SOMETHING_ELSE &&
-                        (0, s.jsx)(r.xJW, {
-                            children: (0, s.jsx)(r.Kx8, {
-                                value: _,
+                        (0, s.jsx)(a.xJW, {
+                            children: (0, s.jsx)(a.Kx8, {
+                                value: E,
                                 maxLength: c.mF,
                                 onChange: N,
-                                className: d.textArea,
-                                placeholder: x.intl.string(x.t.Q8Rk7O)
+                                className: x.textArea,
+                                placeholder: d.intl.string(d.t.Q8Rk7O)
                             })
                         })
                 ]
             }),
-            (0, s.jsxs)(r.mzw, {
+            (0, s.jsx)(a.mzw, {
                 className: m.modalFooter,
-                children: [
-                    (0, s.jsx)(r.zxk, {
-                        color: r.zxk.Colors.BRAND,
-                        disabled: null == u,
-                        size: r.zxk.Sizes.MEDIUM,
-                        onClick: t,
-                        children: x.intl.string(x.t['3PatS0'])
-                    }),
-                    (0, s.jsx)(r.zxk, {
-                        look: r.zxk.Looks.LINK,
-                        color: r.zxk.Colors.PRIMARY,
-                        onClick: n,
-                        children: x.intl.string(x.t['ETE/oK'])
-                    })
-                ]
+                children: (0, s.jsxs)(a.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, s.jsx)(a.zxk, {
+                            variant: 'primary',
+                            text: d.intl.string(d.t['3PatS0']),
+                            disabled: null == u,
+                            onClick: t
+                        }),
+                        (0, s.jsx)(a.zxk, {
+                            variant: 'secondary',
+                            text: d.intl.string(d.t['ETE/oK']),
+                            onClick: n
+                        })
+                    ]
+                })
             })
         ]
     });

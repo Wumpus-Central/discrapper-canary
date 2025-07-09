@@ -1,7 +1,7 @@
 n.d(t, { default: () => C });
 var r = n(255367),
-    o = n(73800),
-    c = n(442837),
+    c = n(73800),
+    o = n(442837),
     i = n(481060),
     a = n(809206),
     s = n(410030),
@@ -12,52 +12,52 @@ var r = n(255367),
     p = n(228624),
     b = n(164946),
     g = n(25990),
-    O = n(594174),
-    m = n(668826),
+    y = n(594174),
+    O = n(668826),
     j = n(120421),
-    y = n(477839),
+    m = n(477839),
     h = n(603571),
-    k = n(388032),
-    x = n(918991),
-    P = n(688401),
-    v = n(609051),
+    x = n(388032),
+    P = n(918991),
+    v = n(688401),
+    k = n(609051),
     w = n(171346);
 function C(e) {
     var t,
         n,
         { analyticsLocations: C } = e,
-        z = (function (e, t) {
+        Z = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                c = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) ((n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
-                    return o;
+                        c = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (c[n] = e[n]));
+                    return c;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) ((n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]));
             }
-            return o;
+            return c;
         })(e, ['analyticsLocations']);
-    let Z = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
-        D = (0, s.ZP)(),
-        { analyticsLocations: E } = (0, l.ZP)(C),
-        M = (0, c.e7)([j.Z], () => j.Z.isRedeemingPrize),
-        S = (0, c.e7)([u.Z], () => u.Z.isFetching),
-        N = (0, p.hv)('ClickerGameRedeemPrizeModal');
+    let z = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
+        E = (0, s.ZP)(),
+        { analyticsLocations: D } = (0, l.ZP)(C),
+        S = (0, o.e7)([j.Z], () => j.Z.isRedeemingPrize),
+        M = (0, o.e7)([u.Z], () => u.Z.isFetching),
+        _ = (0, p.hv)('ClickerGameRedeemPrizeModal');
     return (
-        (0, o.useEffect)(() => {
-            null != Z &&
+        (0, c.useEffect)(() => {
+            null != z &&
                 (async () => {
-                    (await (0, m.YM)(Z),
+                    (await (0, O.YM)(z),
                         (0, f.qg)({
-                            variantsReturnStyle: N,
+                            variantsReturnStyle: _,
                             location: 'ClickerGameRedeemPrizeModal'
                         }));
                 })();
@@ -88,60 +88,63 @@ function C(e) {
                         }));
                 }
                 return e;
-            })({}, z)),
+            })({}, Z)),
             (n = n =
                 {
                     parentComponent: 'ClickerGameRedeemPrizeModal',
                     children: [
                         (0, r.jsx)('img', {
-                            className: x.decorationBackground,
-                            src: 'light' === D ? v : P,
+                            className: P.decorationBackground,
+                            src: 'light' === E ? k : v,
                             alt: ''
                         }),
                         (0, r.jsxs)(i.hzk, {
-                            className: x.content,
+                            className: P.content,
                             children: [
                                 (0, r.jsx)('img', {
-                                    className: x.decoration,
+                                    className: P.decoration,
                                     src: w.Z,
                                     alt: ''
                                 }),
                                 (0, r.jsx)(i.X6q, {
-                                    className: x.header,
+                                    className: P.header,
                                     variant: 'heading-md/bold',
-                                    children: k.intl.string(h.default.B0jZ3t)
+                                    children: x.intl.string(h.default.B0jZ3t)
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-md/normal',
-                                    children: k.intl.string(h.default.aexiND)
+                                    children: x.intl.string(h.default.aexiND)
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(i.mzw, {
-                            children: [
-                                (0, r.jsx)(i.zxk, {
-                                    onClick: () => {
-                                        (z.onClose(),
-                                            (0, d.ps)({
-                                                initialSelectedDecorationId: y.MH,
-                                                analyticsLocations: E,
-                                                onClose: () => {
-                                                    let e = g.Z.getAllPending(),
-                                                        t = (0, b.ED)(e);
-                                                    ((0, a.Mn)(t), (0, a.si)());
-                                                }
-                                            }));
-                                    },
-                                    submitting: M || S,
-                                    children: k.intl.string(k.t.BVcYCw)
-                                }),
-                                (0, r.jsx)(i.zxk, {
-                                    onClick: z.onClose,
-                                    look: i.zxk.Looks.LINK,
-                                    color: i.zxk.Colors.PRIMARY,
-                                    children: k.intl.string(k.t['ETE/oK'])
-                                })
-                            ]
+                        (0, r.jsx)(i.mzw, {
+                            children: (0, r.jsxs)(i.hE2, {
+                                direction: 'horizontal-reverse',
+                                children: [
+                                    (0, r.jsx)(i.zxk, {
+                                        variant: 'primary',
+                                        text: x.intl.string(x.t.BVcYCw),
+                                        onClick: () => {
+                                            (Z.onClose(),
+                                                (0, d.ps)({
+                                                    initialSelectedDecorationId: m.MH,
+                                                    analyticsLocations: D,
+                                                    onClose: () => {
+                                                        let e = g.Z.getAllPending(),
+                                                            t = (0, b.ED)(e);
+                                                        ((0, a.Mn)(t), (0, a.si)());
+                                                    }
+                                                }));
+                                        },
+                                        loading: S || M
+                                    }),
+                                    (0, r.jsx)(i.zxk, {
+                                        variant: 'secondary',
+                                        text: x.intl.string(x.t['ETE/oK']),
+                                        onClick: Z.onClose
+                                    })
+                                ]
+                            })
                         })
                     ]
                 }),

@@ -298,11 +298,12 @@ class J extends r.Component {
                                         ]
                                     }),
                                 (0, i.jsx)(u.zxk, {
-                                    submitting: e,
+                                    variant: 'primary',
+                                    text: this.buttonText,
+                                    loading: e,
                                     onClick: () => {
                                         (this.trackStepAnalytics(), this.handleClick());
-                                    },
-                                    children: this.buttonText
+                                    }
                                 })
                             ]
                         })

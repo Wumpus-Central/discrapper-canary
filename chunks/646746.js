@@ -46,10 +46,10 @@ function E(e) {
         C = null,
         x = null;
     if (A > 0 || y.length > 0) {
-        var P, T, L, N;
+        var P, T, N, L;
         let e = (0, s.countBy)(b, (e) => (0, d.aw)(e, !0)),
-            t = null != (L = e.IMAGE) ? L : 0,
-            n = null != (N = e.VIDEO) ? N : 0;
+            t = null != (N = e.IMAGE) ? N : 0,
+            n = null != (L = e.VIDEO) ? L : 0;
         (t > 0 && n > 0
             ? ((v = m.intl.formatToPlainString(m.t.Lr0Toq, {
                   image_count: t,

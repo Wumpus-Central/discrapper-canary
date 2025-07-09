@@ -3,16 +3,16 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     l = n(51025),
-    o = n(850840),
-    a = n(391690);
+    a = n(850840),
+    o = n(391690);
 function s(t, e, s, c, d) {
-    let u = a.Z.getInstallationPath(t.id, e),
-        p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
+    let u = o.Z.getInstallationPath(t.id, e),
+        p = null != t.eulaId && !a.Z.hasAcceptedEULA(t.eulaId);
     null == u || p
         ? (0, r.ZDy)(async () => {
               let { default: r } = await n.e('226').then(n.bind(n, 472064));
               return (n) => {
-                  var l, o;
+                  var l, a;
                   return (0, i.jsx)(
                       r,
                       ((l = (function (t) {
@@ -40,14 +40,14 @@ function s(t, e, s, c, d) {
                           }
                           return t;
                       })({}, n)),
-                      (o = o =
+                      (a = a =
                           {
                               applicationId: t.id,
                               branchId: e,
                               analyticsLocation: d
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                           : (function (t, e) {
                                 var n = Object.keys(t);
                                 if (Object.getOwnPropertySymbols) {
@@ -55,8 +55,8 @@ function s(t, e, s, c, d) {
                                     n.push.apply(n, i);
                                 }
                                 return n;
-                            })(Object(o)).forEach(function (t) {
-                                Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(o, t));
+                            })(Object(a)).forEach(function (t) {
+                                Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(a, t));
                             }),
                       l)
                   );

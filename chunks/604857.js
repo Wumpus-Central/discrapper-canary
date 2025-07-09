@@ -2,7 +2,7 @@ n.d(t, { Z: () => f });
 var r = n(255367),
     o = n(120356),
     a = n.n(o),
-    i = n(481060),
+    i = n(755721),
     s = n(477415),
     l = n(690786),
     c = n(639777),
@@ -26,8 +26,8 @@ function f(e) {
                     grow: !1,
                     compact: !O
                 }),
-            (0, r.jsx)(i.zxk, {
-                color: O ? i.Ttl.PRIMARY : i.Ttl.BRAND,
+            (0, r.jsx)(i.zx, {
+                color: O ? i.Tt.PRIMARY : i.Tt.BRAND,
                 onClick: b,
                 children: d.intl.string(d.t.cpT0Cg)
             })

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(481060),
-    l = n(607070),
-    a = n(600164),
+    a = n(607070),
+    l = n(600164),
     o = n(122890),
     c = n(110818),
     d = n(523726);
@@ -18,9 +18,9 @@ function u(e) {
             errorScene: c.fe.Scenes.ERROR,
             successScene: c.fe.Scenes.SUCCESS
         }),
-        g = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
+        g = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, i.jsxs)(s.xBx, {
-        align: a.Z.Align.START,
+        align: l.Z.Align.START,
         className: d.header,
         separator: !1,
         children: [

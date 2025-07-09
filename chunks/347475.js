@@ -1,53 +1,54 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
+    a = n(755721),
     l = n(481060),
-    a = n(906732),
-    o = n(646476),
-    c = n(736519),
-    d = n(388032),
-    u = n(944680),
-    m = n(568147),
-    p = n(332796);
-let g = (e) => {
+    o = n(906732),
+    c = n(646476),
+    d = n(736519),
+    u = n(388032),
+    m = n(944680),
+    p = n(568147),
+    g = n(332796);
+let h = (e) => {
     let { className: t, location: n, analyticsLocation: r } = e,
-        { analyticsLocations: g } = (0, a.ZP)(n),
-        h = (0, o.rK)(),
-        { enabled: f } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: h }),
-        b = f && h;
-    return (0, i.jsx)(a.Gt, {
-        value: g,
+        { analyticsLocations: h } = (0, o.ZP)(n),
+        f = (0, c.rK)(),
+        { enabled: b } = c.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: f }),
+        x = b && f;
+    return (0, i.jsx)(o.Gt, {
+        value: h,
         children: (0, i.jsxs)('div', {
-            className: s()(u.container, t),
+            className: s()(m.container, t),
             children: [
                 (0, i.jsxs)('div', {
-                    className: u.textContainer,
+                    className: m.textContainer,
                     children: [
                         (0, i.jsx)(l.X6q, {
                             variant: 'heading-lg/extrabold',
-                            className: u.heading,
-                            children: b ? d.intl.string(d.t.LB3bJC) : d.intl.string(d.t.Ve9Ge3)
+                            className: m.heading,
+                            children: x ? u.intl.string(u.t.LB3bJC) : u.intl.string(u.t.Ve9Ge3)
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/medium',
-                            children: b ? d.intl.string(d.t.u49cn5) : d.intl.string(d.t.yQ06u7)
+                            children: x ? u.intl.string(u.t.u49cn5) : u.intl.string(u.t.yQ06u7)
                         }),
-                        (0, i.jsx)(c.Z, {
-                            className: u.giftCardButton,
+                        (0, i.jsx)(d.Z, {
+                            className: m.giftCardButton,
                             textOptions: {
-                                textOverride: d.intl.string(d.t.Ve9Ge3),
-                                textClassName: u.giftButtonCTA
+                                textOverride: u.intl.string(u.t.Ve9Ge3),
+                                textClassName: m.giftButtonCTA
                             },
-                            color: l.zxk.Colors.CUSTOM,
+                            color: a.zx.Colors.CUSTOM,
                             premiumModalAnalyticsLocation: r
                         })
                     ]
                 }),
                 (0, i.jsx)('img', {
-                    src: b ? p : m,
-                    className: u.bannerImage,
+                    src: x ? g : p,
+                    className: m.bannerImage,
                     alt: 'gift nitro banner'
                 })
             ]

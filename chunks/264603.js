@@ -1,14 +1,14 @@
-n.d(t, { Z: () => h });
-var a = n(255367),
-    r = n(73800),
-    l = n(120356),
-    i = n.n(l),
-    s = n(524437),
-    o = n(481060),
-    c = n(695346),
-    d = n(246992),
-    u = n(616257),
-    m = n(386);
+a.d(t, { Z: () => p });
+var n = a(255367),
+    r = a(73800),
+    l = a(120356),
+    i = a.n(l),
+    s = a(524437),
+    o = a(481060),
+    c = a(695346),
+    d = a(246992),
+    u = a(616257),
+    m = a(386);
 let x = [
     {
         label: 'Unset',
@@ -27,18 +27,18 @@ let x = [
         value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
     }
 ];
-function h() {
+function p() {
     let e = r.useRef(null),
         t = c.JG.useSetting();
-    return (0, a.jsxs)('div', {
+    return (0, n.jsxs)('div', {
         ref: e,
         className: i()(u.panel, m.panel),
         children: [
-            (0, a.jsx)(o.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 children: 'Receive DMs In Game'
             }),
-            (0, a.jsx)(o.PhF, {
+            (0, n.jsx)(o.PhF, {
                 options: x,
                 isSelected: (e) => e === t,
                 select: c.JG.updateSetting,

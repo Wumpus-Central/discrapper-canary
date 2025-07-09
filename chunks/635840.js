@@ -32,18 +32,18 @@ let _ = [
 function C(e) {
     let { application: t, subscriptionId: i, onClose: C } = e,
         [u, N] = a.useState(!1),
-        [x, m] = a.useState(null),
-        [h, S] = a.useState(''),
-        I = a.useCallback(() => {
-            null != x &&
+        [m, x] = a.useState(null),
+        [S, I] = a.useState(''),
+        h = a.useCallback(() => {
+            null != m &&
                 (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
-                    answer: x,
+                    answer: m,
                     application_id: t.id,
-                    reason: h,
+                    reason: S,
                     subscription_id: i
                 }),
                 C());
-        }, [t.id, i, x, C, h]);
+        }, [t.id, i, m, C, S]);
     return (
         a.useEffect(() => {
             l.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: u });
@@ -81,7 +81,7 @@ function C(e) {
                         (0, n.jsx)('div', {
                             className: c.answerChoicesContainer,
                             children: (0, n.jsx)(s.FXm, {
-                                value: x,
+                                value: m,
                                 options: _.map((e) => {
                                     let { nameGetter: t, value: i } = e;
                                     return {
@@ -89,17 +89,17 @@ function C(e) {
                                         value: i
                                     };
                                 }),
-                                onChange: (e) => m(e.value),
+                                onChange: (e) => x(e.value),
                                 withTransparentBackground: !0
                             })
                         }),
-                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === x &&
+                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === m &&
                             (0, n.jsx)(s.oil, {
                                 autoFocus: !0,
                                 className: c.otherField,
                                 placeholder: d.intl.string(d.t.s6tM8f),
-                                value: h,
-                                onChange: S
+                                value: S,
+                                onChange: I
                             })
                     ]
                 }),
@@ -107,10 +107,10 @@ function C(e) {
                     className: c.footer,
                     children: [
                         (0, n.jsx)(s.zxk, {
-                            onClick: I,
-                            color: s.zxk.Colors.BRAND,
-                            disabled: null == x,
-                            children: d.intl.string(d.t.geKm7u)
+                            variant: 'primary',
+                            text: d.intl.string(d.t.geKm7u),
+                            onClick: h,
+                            disabled: null == m
                         }),
                         (0, n.jsx)(s.XZJ, {
                             type: s.XZJ.Types.INVERTED,

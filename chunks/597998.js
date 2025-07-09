@@ -1,7 +1,7 @@
 (n.d(t, {
     ZP: () => M,
-    eJ: () => k,
-    nm: () => L
+    eJ: () => L,
+    nm: () => k
 }),
     n(539854),
     n(997841),
@@ -62,7 +62,7 @@ function D(e) {
     }
     return e;
 }
-let k = (e) => {
+let L = (e) => {
     let { children: t, collapsed: n = !1, className: i } = e;
     return (0, r.jsx)('div', {
         className: o()(i, A.list, n ? A.listCollapse : A.listDefault),
@@ -70,9 +70,9 @@ let k = (e) => {
         children: t
     });
 };
-function L(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: b, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: k } = e,
-        { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
+function k(e) {
+    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: b, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: L } = e,
+        { enabled: k } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
     if (f || b) return null;
     let M = [],
         U = (0, r.jsx)(F, {
@@ -116,7 +116,7 @@ function L(e) {
                       'video'
                   )
               )),
-        k &&
+        L &&
             M.push(
                 (0, r.jsx)(
                     s.DY3,
@@ -131,7 +131,7 @@ function L(e) {
                     'disconnected'
                 )
             ));
-    let V = L ? s.iWm : s.nG3;
+    let V = k ? s.iWm : s.nG3;
     (null != y &&
         M.push(
             (0, r.jsx)(
@@ -247,7 +247,7 @@ let M = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: z, isGuest: W, flipped: H, className: G, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
+    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: L, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: z, isGuest: W, flipped: H, className: G, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -283,7 +283,7 @@ let M = i.forwardRef(function (e, t) {
                 null == N || N(e, K);
             },
             onMouseLeave: (e) => {
-                null == k || k(e, K);
+                null == L || L(e, K);
             },
             onMouseDown: (e) => {
                 null == M || M(e, K);
@@ -355,7 +355,7 @@ let M = i.forwardRef(function (e, t) {
                               )
                             : null;
                     })(),
-                    (0, r.jsx)(L, D({ disabled: f }, v)),
+                    (0, r.jsx)(k, D({ disabled: f }, v)),
                     !U && en
                         ? (0, r.jsx)(s.DY3, {
                               text: Z.intl.string(Z.t['+1H47u']),

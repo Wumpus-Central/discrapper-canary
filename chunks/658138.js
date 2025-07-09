@@ -19,7 +19,7 @@ function h(e) {
         }, [e.id, t]),
         { canAccessPicker: h } = (0, f.m)({
             location: 'useChannelWallpaperItem',
-            selectedChannelId: e.id
+            channelId: e.id
         }),
         _ = e.isPrivate() && h;
     return ((0, c.Z)(

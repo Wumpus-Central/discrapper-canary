@@ -29,8 +29,8 @@ var r = n(913527),
     A = n(388032);
 let Z = [],
     x = null,
-    L = null,
     w = null,
+    L = null,
     R = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, r) {
     let l = _.Z.getGuild(n),
@@ -71,16 +71,16 @@ function D(e, t, n, r) {
 function k() {
     if (!o.Zh) return !1;
     let e = d.default.locale;
-    if (null == w) {
+    if (null == L) {
         var t;
-        w = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
+        L = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
     }
-    let n = w.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
-    L = n.length > 0 ? n[0] : null;
+    let n = L.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    w = n.length > 0 ? n[0] : null;
 }
 async function M(e, t, n, r, i) {
     let l = o.e6(e, n);
-    null !== l && (null == L && k(), t ? await (0, N.NB)() : null == x || x.removeEventListener('end', N.NB), l.addEventListener('end', N.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (x = l), o.iq(l, L));
+    null !== l && (null == w && k(), t ? await (0, N.NB)() : null == x || x.removeEventListener('end', N.NB), l.addEventListener('end', N.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (x = l), o.iq(l, w));
 }
 function U(e, t, n, r, i) {
     M(e, t, i, () => {

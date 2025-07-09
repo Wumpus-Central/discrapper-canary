@@ -1,11 +1,11 @@
 n.d(t, {
-    T: () => o,
-    Z: () => s
+    T: () => s,
+    Z: () => o
 });
 var r = n(255367);
-let o = n(73800).createContext(!1);
-function s(e) {
-    return (0, r.jsx)(o.Provider, {
+let s = n(73800).createContext(!1);
+function o(e) {
+    return (0, r.jsx)(s.Provider, {
         value: !0,
         children: e.children
     });

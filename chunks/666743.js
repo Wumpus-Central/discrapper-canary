@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => a }), n(388685));
+(n.d(t, { Z: () => l }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(314897);
-function l(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function l(e, t, n) {
         e
     );
 }
-function a(e) {
+function l(e) {
     return class extends r.Component {
         componentDidMount() {
             s.default.addChangeListener(this.onStoreChange);
@@ -38,7 +38,7 @@ function a(e) {
                                 })
                             )),
                             i.forEach(function (t) {
-                                l(e, t, n[t]);
+                                a(e, t, n[t]);
                             }));
                     }
                     return e;
@@ -61,8 +61,8 @@ function a(e) {
         }
         constructor(...e) {
             (super(...e),
-                l(this, 'state', { isAuthenticated: s.default.isAuthenticated() }),
-                l(this, 'onStoreChange', () => {
+                a(this, 'state', { isAuthenticated: s.default.isAuthenticated() }),
+                a(this, 'onStoreChange', () => {
                     this.setState({ isAuthenticated: s.default.isAuthenticated() });
                 }));
         }

@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(112724),
-    a = n(358221),
+    a = n(112724),
+    o = n(358221),
     s = n(565799),
     c = n(431328),
     u = n(501655),
@@ -33,41 +33,41 @@ let y = {
 function O(e) {
     return e.type === u.Ui.VOICE;
 }
-let j = (0, o.Z)((e) => {
+let j = (0, a.Z)((e) => {
     var t, n;
-    let { channel: o, width: y, onScroll: j } = e,
+    let { channel: a, width: y, onScroll: j } = e,
         {
             selectedParticipantId: E,
             largeStream: S,
             chatOpen: I
         } = (0, l.cj)(
-            [a.Z],
+            [o.Z],
             () => ({
-                selectedParticipantId: a.Z.getSelectedParticipantId(o.id),
-                largeStream: a.Z.getStageStreamSize(o.id),
-                chatOpen: a.Z.getChatOpen(o.id)
+                selectedParticipantId: o.Z.getSelectedParticipantId(a.id),
+                largeStream: o.Z.getStageStreamSize(a.id),
+                chatOpen: o.Z.getChatOpen(a.id)
             }),
-            [o.id]
+            [a.id]
         ),
-        P = (0, c.Io)(o.id),
-        Z = (0, c.Rk)(o.id, u.pV.AUDIENCE),
-        N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(o.id, E) : null)),
-        T = (0, c.w8)(o.id, u.pV.SPEAKER),
+        P = (0, c.Io)(a.id),
+        Z = (0, c.Rk)(a.id, u.pV.AUDIENCE),
+        N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
+        T = (0, c.w8)(a.id, u.pV.SPEAKER),
         A = T.filter(O),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        k = x(y, I),
-        M = {
-            [u.pV.SPEAKER]: k,
+        M = x(y, I),
+        D = {
+            [u.pV.SPEAKER]: M,
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
-        D = (0, d.Dx)(o.id),
-        [L, U] = (0, d.aP)(o.id, M, D),
-        B = [Math.max(null != (t = L[0]) ? t : 1, 1), Math.max(null != (n = L[1]) ? n : 1, 1), L[2]],
-        { speakerTileWidth: F, speakerTileHeight: H } = C(y, k),
+        L = (0, d.Dx)(a.id),
+        [k, U] = (0, d.aP)(a.id, D, L),
+        B = [Math.max(null != (t = k[0]) ? t : 1, 1), Math.max(null != (n = k[1]) ? n : 1, 1), k[2]],
+        { speakerTileWidth: F, speakerTileHeight: H } = C(y, M),
         G = S ? y - 32 : Math.min(y - 64, 3 * F + 8),
-        V = (e) => e === L.length - 1 || (0 === Z && 1 === e),
+        V = (e) => e === k.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {
@@ -86,7 +86,7 @@ let j = (0, o.Z)((e) => {
                               onClick: () => W(!z),
                               collapsed: z,
                               speakers: A,
-                              channel: o,
+                              channel: a,
                               isStreamLive: w
                           },
                           'speaker-header-'.concat(t)
@@ -102,7 +102,7 @@ let j = (0, o.Z)((e) => {
                                 className: _.header,
                                 onClick: () => q(!Y),
                                 collapsed: Y,
-                                channel: o
+                                channel: a
                             },
                             'audience-header-'.concat(t)
                         )
@@ -121,7 +121,7 @@ let j = (0, o.Z)((e) => {
                         {
                             className: _.focusedRow,
                             children: (0, r.jsx)(g.Z, {
-                                channel: o,
+                                channel: a,
                                 participant: l[0],
                                 width: G
                             })
@@ -135,7 +135,7 @@ let j = (0, o.Z)((e) => {
                         {
                             children: (0, r.jsx)(f.Z, {
                                 tileWidth: F,
-                                channel: o,
+                                channel: a,
                                 participants: l,
                                 selectedParticipant: N
                             })
@@ -147,7 +147,7 @@ let j = (0, o.Z)((e) => {
                     return (0, r.jsx)(
                         p.Z,
                         {
-                            channel: o,
+                            channel: a,
                             participants: l,
                             maxTiles: R
                         },

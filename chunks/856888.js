@@ -1,19 +1,20 @@
-(n.d(t, { Z: () => u }), n(642613), n(388685));
+(n.d(t, { Z: () => m }), n(642613), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
+    a = n(755721),
     l = n(481060),
-    a = n(78839),
-    o = n(851718),
-    c = n(388032),
-    d = n(179867);
-function u(e) {
+    o = n(78839),
+    c = n(851718),
+    d = n(388032),
+    u = n(179867);
+function m(e) {
     let { onGoBack: t } = e,
-        n = (0, s.Wu)([a.Z], () => {
+        n = (0, s.Wu)([o.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == (e = a.Z.getActiveApplicationSubscriptions())
+                    null == (e = o.Z.getActiveApplicationSubscriptions())
                         ? void 0
                         : e.slice().sort((e, t) => {
                               var n, i, r, s;
@@ -22,26 +23,26 @@ function u(e) {
                 ? t
                 : [];
         }),
-        [l, u] = r.useState();
+        [a, l] = r.useState();
     return (
-        null == l &&
-            (l = (0, i.jsx)(m, {
+        null == a &&
+            (a = (0, i.jsx)(p, {
                 onBack: t,
-                title: c.intl.string(c.t['DB/m9f'])
+                title: d.intl.string(d.t['DB/m9f'])
             })),
         (0, i.jsxs)('div', {
             children: [
-                l,
+                a,
                 (0, i.jsx)('div', {
-                    className: d.subscriptionsContainer,
-                    children: (0, i.jsx)(o.Z, {
+                    className: u.subscriptionsContainer,
+                    children: (0, i.jsx)(c.Z, {
                         subscriptions: n,
                         updateHeader: (e, t) => {
-                            u(
-                                (0, i.jsx)(m, {
+                            l(
+                                (0, i.jsx)(p, {
                                     title: e,
                                     onBack: () => {
-                                        (t(), u(void 0));
+                                        (t(), l(void 0));
                                     }
                                 })
                             );
@@ -52,15 +53,15 @@ function u(e) {
         })
     );
 }
-function m(e) {
+function p(e) {
     let { onBack: t, title: n } = e;
     return (0, i.jsxs)('div', {
-        className: d.title,
+        className: u.title,
         children: [
-            (0, i.jsx)(l.zxk, {
-                look: l.zxk.Looks.BLANK,
+            (0, i.jsx)(a.zx, {
+                look: a.zx.Looks.BLANK,
                 onClick: t,
-                size: l.zxk.Sizes.ICON,
+                size: a.zx.Sizes.ICON,
                 children: (0, i.jsx)(l.j9r, { size: 'sm' })
             }),
             (0, i.jsx)(l.X6q, {

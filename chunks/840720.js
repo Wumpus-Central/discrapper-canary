@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
+    a = n.n(s),
+    l = n(481060),
     o = n(305347),
     c = n(172751),
     d = n(131085),
@@ -18,7 +18,7 @@ function m(e) {
             null != e && null != e.offsetWidth && null != e.scrollWidth && x(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, i.jsxs)('div', {
-            className: l()(u.container, t),
+            className: a()(u.container, t),
             children: [
                 (0, i.jsxs)('div', {
                     className: u.guildPrefixContainer,
@@ -33,9 +33,9 @@ function m(e) {
                         }),
                         (0, i.jsx)('div', {
                             className: u.details,
-                            children: (0, i.jsx)(a.ua7, {
+                            children: (0, i.jsx)(l.ua7, {
                                 text: p,
-                                color: a.ua7.Colors.PRIMARY,
+                                color: l.ua7.Colors.PRIMARY,
                                 shouldShow: b,
                                 children: (e) => {
                                     var t, n;

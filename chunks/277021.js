@@ -1,10 +1,10 @@
-o.d(t, { Q: () => r });
-var i = o(544891),
-    n = o(981631);
-async function r() {
+o.d(t, { Q: () => i });
+var a = o(544891),
+    r = o(981631);
+async function i() {
     return (
-        await i.tn.post({
-            url: n.ANM.AGE_ASSURANCE_TEST,
+        await a.tn.post({
+            url: r.ANM.AGE_ASSURANCE_TEST,
             body: {},
             rejectWithError: !1
         })

@@ -1,21 +1,22 @@
-n.d(t, { default: () => f });
+n.d(t, { default: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
+    s = n(755721),
     o = n(481060),
-    s = n(600164),
-    l = n(418632),
+    l = n(600164),
+    a = n(418632),
     c = n(594174),
-    a = n(388032),
-    u = n(165089);
-function d(e) {
+    u = n(388032),
+    d = n(165089);
+function f(e) {
     let { onClose: t } = e,
-        s = (0, i.e7)([c.default], () => c.default.getCurrentUser());
-    function u() {
+        l = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    function d() {
         null == t || t();
     }
-    function d() {
-        (u(),
+    function f() {
+        (d(),
             (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('9343'), n.e('11564')]).then(n.bind(n, 642298));
                 return (t) =>
@@ -49,29 +50,27 @@ function d(e) {
                     );
             }));
     }
-    return (null == s ? void 0 : s.email) == null
+    return (null == l ? void 0 : l.email) == null
         ? (0, r.jsx)(o.zxk, {
-              onClick: d,
-              color: o.zxk.Colors.BRAND,
-              look: o.zxk.Looks.FILLED,
-              children: a.intl.string(a.t.ydw5nZ)
+              variant: 'primary',
+              text: u.intl.string(u.t.ydw5nZ),
+              onClick: f
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.zxk, {
-                      onClick: d,
-                      color: o.zxk.Colors.PRIMARY,
-                      look: o.zxk.Looks.LINK,
-                      children: a.intl.string(a.t.Vm8akJ)
+                      variant: 'secondary',
+                      text: u.intl.string(u.t.Vm8akJ),
+                      onClick: f
                   }),
-                  (0, r.jsx)(l.Z, {
-                      color: o.zxk.Colors.BRAND,
-                      onClick: u
+                  (0, r.jsx)(a.Z, {
+                      color: s.zx.Colors.BRAND,
+                      onClick: d
                   })
               ]
           });
 }
-let f = function (e) {
+let m = function (e) {
     let { onClose: t, transitionState: n } = e;
     return (0, r.jsxs)(o.Y0X, {
         transitionState: n,
@@ -80,23 +79,23 @@ let f = function (e) {
             (0, r.jsx)(o.xBx, {
                 children: (0, r.jsx)(o.vwX, {
                     tag: o.RB0.H4,
-                    children: a.intl.string(a.t.UZLrY2)
+                    children: u.intl.string(u.t.UZLrY2)
                 })
             }),
             (0, r.jsxs)(o.hzk, {
                 children: [
-                    (0, r.jsx)('div', { className: u.imageUnverified }),
+                    (0, r.jsx)('div', { className: d.imageUnverified }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: u.message,
-                        children: a.intl.string(a.t['0LgOKC'])
+                        className: d.message,
+                        children: u.intl.string(u.t['0LgOKC'])
                     })
                 ]
             }),
             (0, r.jsx)(o.mzw, {
-                children: (0, r.jsx)(s.Z, {
-                    justify: s.Z.Justify.END,
-                    children: (0, r.jsx)(d, { onClose: t })
+                children: (0, r.jsx)(l.Z, {
+                    justify: l.Z.Justify.END,
+                    children: (0, r.jsx)(f, { onClose: t })
                 })
             })
         ]

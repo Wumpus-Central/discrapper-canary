@@ -1,41 +1,42 @@
-(n.d(t, { Z: () => M }), n(388685), n(781311));
+(n.d(t, { Z: () => U }), n(388685), n(781311));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(658722),
-    o = n.n(a),
+    a = n.n(s),
+    l = n(658722),
+    o = n.n(l),
     c = n(442837),
     d = n(524437),
     u = n(780384),
-    m = n(481060),
-    p = n(457330),
-    g = n(410030),
-    h = n(726542),
-    f = n(316496),
-    b = n(116841),
-    x = n(335082),
-    _ = n(921801),
+    m = n(755721),
+    p = n(481060),
+    g = n(457330),
+    h = n(410030),
+    f = n(726542),
+    b = n(316496),
+    x = n(116841),
+    _ = n(335082),
+    j = n(921801),
     E = n(553795),
-    j = n(430824),
-    O = n(63063),
-    C = n(358085),
+    O = n(430824),
+    C = n(63063),
+    v = n(358085),
     S = n(362352),
-    v = n(413182),
-    T = n(695346),
-    N = n(726985),
-    I = n(981631),
-    y = n(388032),
-    A = n(187382),
-    P = n(20493);
-function R(e) {
+    T = n(413182),
+    N = n(695346),
+    I = n(726985),
+    y = n(981631),
+    A = n(388032),
+    P = n(187382),
+    R = n(20493);
+function D(e) {
     let t = () => {
-        T.SE.updateSetting(e ? j.Z.getGuildIds() : []);
+        N.SE.updateSetting(e ? O.Z.getGuildIds() : []);
     };
-    (0, m.h7j)((e) => {
+    (0, p.h7j)((e) => {
         var n, r;
         return (0, i.jsx)(
-            m.ConfirmModal,
+            p.ConfirmModal,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -62,19 +63,19 @@ function R(e) {
                 return e;
             })(
                 {
-                    header: y.intl.string(y.t['uUr+GR']),
-                    confirmText: y.intl.string(y.t.gm1Ven),
-                    cancelText: y.intl.string(y.t.p89ACg),
+                    header: A.intl.string(A.t['uUr+GR']),
+                    confirmText: A.intl.string(A.t.gm1Ven),
+                    cancelText: A.intl.string(A.t.p89ACg),
                     onCancel: t,
-                    confirmButtonColor: m.zxk.Colors.BRAND
+                    confirmButtonColor: m.zx.Colors.BRAND
                 },
                 e
             )),
             (r = r =
                 {
-                    children: (0, i.jsx)(m.Text, {
+                    children: (0, i.jsx)(p.Text, {
                         variant: 'text-md/normal',
-                        children: y.intl.string(y.t.EFu2Ki)
+                        children: A.intl.string(A.t.EFu2Ki)
                     })
                 }),
             Object.getOwnPropertyDescriptors
@@ -93,220 +94,220 @@ function R(e) {
         );
     });
 }
-function D() {
-    let e = T.G6.useSetting(),
-        t = T.Wz.useSetting(),
+function Z() {
+    let e = N.G6.useSetting(),
+        t = N.Wz.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
-        r = C.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
+        r = v.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
         s = (e) => {
-            (T.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e));
+            (N.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e));
         },
-        a = (e) => {
-            (T.Wz.updateSetting(e), R(e !== d.E5.OFF));
+        l = (e) => {
+            (N.Wz.updateSetting(e), D(e !== d.E5.OFF));
         },
         o = [
             {
                 value: d.E5.ON,
-                label: y.intl.string(y.t.UzGMHx)
+                label: A.intl.string(A.t.UzGMHx)
             },
             {
                 value: d.E5.ON_FOR_LARGE_GUILDS,
-                label: y.intl.string(y.t.OFqxQU)
+                label: A.intl.string(A.t.OFqxQU)
             },
             {
                 value: d.E5.OFF,
-                label: y.intl.string(y.t.MIgNPD)
+                label: A.intl.string(A.t.MIgNPD)
             }
         ];
-    return (0, i.jsx)(_.F, {
-        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(m.hjN, {
+    return (0, i.jsx)(j.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(p.hjN, {
             children: [
-                (0, i.jsx)(m.vwX, {
-                    tag: m.RB0.H5,
-                    className: P.marginBottom8,
-                    children: y.intl.string(y.t['8ka8lp'])
+                (0, i.jsx)(p.vwX, {
+                    tag: p.RB0.H5,
+                    className: R.marginBottom8,
+                    children: A.intl.string(A.t['8ka8lp'])
                 }),
-                (0, i.jsx)(m.j7V, {
+                (0, i.jsx)(p.j7V, {
                     value: e,
-                    onChange: (e) => T.G6.updateSetting(e),
+                    onChange: (e) => N.G6.updateSetting(e),
                     note: r,
-                    children: y.intl.string(y.t['4q/Ewc'])
+                    children: A.intl.string(A.t['4q/Ewc'])
                 }),
                 n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsxs)(m.xJW, {
-                                  tag: m.RB0.H3,
-                                  title: y.intl.string(y.t.ffGYGx),
+                              (0, i.jsxs)(p.xJW, {
+                                  tag: p.RB0.H3,
+                                  title: A.intl.string(A.t.ffGYGx),
                                   children: [
-                                      (0, i.jsx)(m.Text, {
+                                      (0, i.jsx)(p.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'header-secondary',
-                                          className: P.marginBottom8,
-                                          children: y.intl.format(y.t.aUxRra, { helpdeskArticle: O.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                          className: R.marginBottom8,
+                                          children: A.intl.format(A.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) })
                                       }),
-                                      (0, i.jsx)(m.q4e, {
+                                      (0, i.jsx)(p.q4e, {
                                           options: o,
                                           value: t,
-                                          onChange: (e) => a(e)
+                                          onChange: (e) => l(e)
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(m.$i$, { className: l()(P.marginBottom20, P.marginTop20) })
+                              (0, i.jsx)(p.$i$, { className: a()(R.marginBottom20, R.marginTop20) })
                           ]
                       })
-                    : (0, i.jsx)(m.j7V, {
+                    : (0, i.jsx)(p.j7V, {
                           value: t === d.E5.OFF,
-                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: O.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
-                          children: y.intl.string(y.t.D5GXTU)
+                          children: A.intl.string(A.t.D5GXTU)
                       })
-            ]
-        })
-    });
-}
-function Z() {
-    let e = T.cP.useSetting(),
-        t = T.Ou.useSetting();
-    return (0, i.jsx)(_.F, {
-        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(m.hjN, {
-            className: P.marginBottom40,
-            children: [
-                (0, i.jsx)(m.vwX, {
-                    tag: m.RB0.H5,
-                    className: P.marginBottom8,
-                    children: y.intl.string(y.t.VOszPD)
-                }),
-                (0, i.jsx)(m.j7V, {
-                    value: e,
-                    note: y.intl.string(y.t.Hdh7sb),
-                    onChange: (e) => T.cP.updateSetting(e),
-                    children: y.intl.string(y.t.WEWQQk)
-                }),
-                (0, i.jsx)(m.j7V, {
-                    value: t,
-                    note: y.intl.string(y.t.Czr3Bg),
-                    onChange: (e) => T.Ou.updateSetting(e),
-                    children: y.intl.string(y.t.UUvJVl)
-                })
             ]
         })
     });
 }
 function w() {
-    return (0, i.jsx)(_.F, {
-        setting: N.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(m.hjN, {
-            className: P.marginBottom40,
-            children: (0, i.jsx)(m.ToO, {
-                type: m.ToO.Types.PRIMARY,
-                body: y.intl.format(y.t.xvCsx8, {
-                    termsLink: I.EYA.TERMS,
-                    privacyLink: I.EYA.PRIVACY
+    let e = N.cP.useSetting(),
+        t = N.Ou.useSetting();
+    return (0, i.jsx)(j.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, i.jsxs)(p.hjN, {
+            className: R.marginBottom40,
+            children: [
+                (0, i.jsx)(p.vwX, {
+                    tag: p.RB0.H5,
+                    className: R.marginBottom8,
+                    children: A.intl.string(A.t.VOszPD)
+                }),
+                (0, i.jsx)(p.j7V, {
+                    value: e,
+                    note: A.intl.string(A.t.Hdh7sb),
+                    onChange: (e) => N.cP.updateSetting(e),
+                    children: A.intl.string(A.t.WEWQQk)
+                }),
+                (0, i.jsx)(p.j7V, {
+                    value: t,
+                    note: A.intl.string(A.t.Czr3Bg),
+                    onChange: (e) => N.Ou.updateSetting(e),
+                    children: A.intl.string(A.t.UUvJVl)
+                })
+            ]
+        })
+    });
+}
+function k() {
+    return (0, i.jsx)(j.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(p.hjN, {
+            className: R.marginBottom40,
+            children: (0, i.jsx)(p.ToO, {
+                type: p.ToO.Types.PRIMARY,
+                body: A.intl.format(A.t.xvCsx8, {
+                    termsLink: y.EYA.TERMS,
+                    privacyLink: y.EYA.PRIVACY
                 })
             })
         })
     });
 }
-let k = (e) => {
+let L = (e) => {
     switch (e.type) {
-        case I.ABu.SPOTIFY:
-            return y.intl.format(y.t['5sYPnp'], { name: e.name });
-        case I.ABu.CRUNCHYROLL:
-            return y.intl.format(y.t.Ge29Z2, { name: e.name });
+        case y.ABu.SPOTIFY:
+            return A.intl.format(A.t['5sYPnp'], { name: e.name });
+        case y.ABu.CRUNCHYROLL:
+            return A.intl.format(A.t.Ge29Z2, { name: e.name });
         default:
-            return y.intl.format(y.t.nmMsys, { game: e.name });
+            return A.intl.format(A.t.nmMsys, { game: e.name });
     }
 };
-function L(e) {
+function B(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
-        l = (0, g.ZP)();
+        a = (0, h.ZP)();
     r.useEffect(() => {
         s(t.showActivity);
     }, [t]);
-    let a = h.Z.get(t.type);
+    let l = f.Z.get(t.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(m.j7V, {
-                className: A.switchRowContainer,
+            (0, i.jsx)(p.j7V, {
+                className: P.switchRowContainer,
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    (s(e), p.Z.setShowActivity(t.type, t.id, e));
+                    (s(e), g.Z.setShowActivity(t.type, t.id, e));
                 },
                 children: (0, i.jsxs)('div', {
-                    className: A.activitySwitchRow,
+                    className: P.activitySwitchRow,
                     children: [
                         (0, i.jsx)('img', {
-                            alt: a.name,
-                            className: A.connectionIcon,
-                            src: (0, u.wj)(l) ? a.icon.darkSVG : a.icon.lightSVG
+                            alt: l.name,
+                            className: P.connectionIcon,
+                            src: (0, u.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG
                         }),
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(m.Text, {
+                                (0, i.jsx)(p.Text, {
                                     variant: 'text-md/semibold',
-                                    children: a.name
+                                    children: l.name
                                 }),
-                                (0, i.jsxs)(m.Text, {
+                                (0, i.jsxs)(p.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', k(a), '"']
+                                    children: ['"', L(l), '"']
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, i.jsx)('div', { className: A.divider })
+            (0, i.jsx)('div', { className: P.divider })
         ]
     });
 }
-function B() {
+function M() {
     let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
-        t = r.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
+        t = r.useMemo(() => e.filter((e) => f.Z.isSupported(e.type) && y.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
-        l = r.useMemo(() => {
+        a = r.useMemo(() => {
             let e = n.trim().toLowerCase();
-            return '' === e ? t : t.filter((t) => o()(e, h.Z.get(t.type).name.toLowerCase()));
+            return '' === e ? t : t.filter((t) => o()(e, f.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, i.jsx)(_.F, {
-              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, i.jsxs)(m.hjN, {
-                  className: P.marginBottom40,
+        : (0, i.jsx)(j.F, {
+              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              children: (0, i.jsxs)(p.hjN, {
+                  className: R.marginBottom40,
                   children: [
-                      (0, i.jsx)(m.vwX, {
-                          tag: m.RB0.H5,
-                          className: P.marginBottom8,
-                          children: y.intl.string(y.t['4F2KoK'])
+                      (0, i.jsx)(p.vwX, {
+                          tag: p.RB0.H5,
+                          className: R.marginBottom8,
+                          children: A.intl.string(A.t['4F2KoK'])
                       }),
-                      (0, i.jsx)(m.oil, {
-                          className: A.searchInput,
+                      (0, i.jsx)(p.oil, {
+                          className: P.searchInput,
                           value: n,
                           onChange: s,
-                          placeholder: y.intl.string(y.t.WPrtoa)
+                          placeholder: A.intl.string(A.t.WPrtoa)
                       }),
-                      l.map((e) => (0, i.jsx)(L, { account: e }, e.id))
+                      a.map((e) => (0, i.jsx)(B, { account: e }, e.id))
                   ]
               })
           });
 }
-function M(e) {
+function U(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: r } = v.b.useExperiment({ location: 'activity privacy tab' }),
-        { showPerGuildActivityStatusSetting: s } = (0, b.c)('activity privacy tab'),
-        { showUpdatedSettingsPage: l } = (0, f.D)('activity privacy tab');
-    return s || l
-        ? (0, i.jsx)(x.Z, {})
-        : (0, i.jsxs)(m.hjN, {
+        { showRedesign: r } = T.b.useExperiment({ location: 'activity privacy tab' }),
+        { showPerGuildActivityStatusSetting: s } = (0, x.c)('activity privacy tab'),
+        { showUpdatedSettingsPage: a } = (0, b.D)('activity privacy tab');
+    return s || a
+        ? (0, i.jsx)(_.Z, {})
+        : (0, i.jsxs)(p.hjN, {
               className: t,
-              tag: m.RB0.H1,
-              title: n ? y.intl.string(y.t.Cq98yM) : null,
-              children: [(0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), r && (0, i.jsx)(B, {})]
+              tag: p.RB0.H1,
+              title: n ? A.intl.string(A.t.Cq98yM) : null,
+              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {}), r && (0, i.jsx)(M, {})]
           });
 }

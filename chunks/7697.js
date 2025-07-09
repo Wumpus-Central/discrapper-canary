@@ -23,7 +23,7 @@ function b(e, t, n) {
             let n = g.map((e) => u.default.fromTimestamp(Math.floor(e.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND));
             a.Z.getGuildEventUserCounts(t, e, n);
         }, [e, t, g]));
-    let f = r.useMemo(() => {
+    let j = r.useMemo(() => {
         if (null == n || 0 === g.length || (null == l ? void 0 : l.scheduled_start_time) == null) return !1;
         let e = new Date();
         e.setFullYear(e.getFullYear() + p.hn);
@@ -33,7 +33,7 @@ function b(e, t, n) {
     }, [n, g, null == l ? void 0 : l.scheduled_start_time]);
     return {
         recurrenceStartTimes: g,
-        canViewMoreRecurrences: f,
+        canViewMoreRecurrences: j,
         updateRecurrenceStartTimes: () => {
             if (null == n || null == l) return;
             let e = (0, p.Ho)(n),

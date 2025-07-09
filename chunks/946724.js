@@ -47,8 +47,8 @@ let N = new Set(),
     R = new Set(),
     Z = new Map(),
     D = new Map(),
-    k = new Map();
-function A() {
+    A = new Map();
+function L() {
     if (null == r || null == T) return [];
     let e = c()(h.Z.getRoles(r.id))
         .values()
@@ -72,7 +72,7 @@ function A() {
         ascending: !1
     });
 }
-function L(e) {
+function k(e) {
     let { section: t } = e;
     if (null != r || t !== v.pNK.ROLES) return !1;
     M();
@@ -84,7 +84,7 @@ function M() {
         (S = !1),
         (l = void 0),
         N.clear(),
-        k.clear(),
+        A.clear(),
         (I = v.QZA.OPEN),
         G(
             (P = [
@@ -137,7 +137,7 @@ function G(e) {
                 tertiary_color: null != (l = e.colors.tertiary_color) ? l : null
             };
         }
-        k.set(e.id, {
+        A.set(e.id, {
             currentStyle: t,
             styleColors: n
         });
@@ -145,7 +145,7 @@ function G(e) {
 }
 let U = c().debounce(() => {
     let e = !1;
-    (S && ((S = A().length > 0) || (e = !0)),
+    (S && ((S = L().length > 0) || (e = !0)),
         [...N].forEach((t) => {
             var n;
             c().isEqual(
@@ -216,13 +216,13 @@ function z(e) {
         0 === N.size && (E = !1));
     let i = new Map();
     (N.forEach((e) => {
-        let t = k.get(e);
+        let t = A.get(e);
         null != t && i.set(e, t);
     }),
-        k.clear(),
+        A.clear(),
         G(n),
         i.forEach((e, t) => {
-            k.set(t, e);
+            A.set(t, e);
         }),
         (S = !1),
         (T = [...n]));
@@ -235,7 +235,7 @@ class H extends (s = m.ZP.Store) {
         return E || S || w;
     }
     getRoleStyleData(e) {
-        return k.get(e);
+        return A.get(e);
     }
     get errorMessage() {
         return l;
@@ -262,7 +262,7 @@ class H extends (s = m.ZP.Store) {
         return I;
     }
     getSortDeltas() {
-        return A();
+        return L();
     }
     showNotice() {
         return this.hasChanges();
@@ -284,8 +284,8 @@ let V = new H(
             ? {}
             : {
                   GUILD_SETTINGS_ROLES_INIT: () => M(),
-                  GUILD_SETTINGS_INIT: L,
-                  GUILD_SETTINGS_SET_SECTION: L,
+                  GUILD_SETTINGS_INIT: k,
+                  GUILD_SETTINGS_SET_SECTION: k,
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != T && t.length !== T.length) return !1;
@@ -323,7 +323,7 @@ let V = new H(
                           r = 0 === n ? null : (0, u.Rf)(n),
                           i = F(t);
                       if (null == i) return !1;
-                      let l = k.get(t);
+                      let l = A.get(t);
                       return (
                           null != l &&
                           ((l.currentStyle = 'solid'),
@@ -332,7 +332,7 @@ let V = new H(
                               secondary_color: void 0,
                               tertiary_color: void 0
                           }),
-                          k.set(t, l),
+                          A.set(t, l),
                           B(i, {
                               color: n,
                               colorString: r,
@@ -354,12 +354,12 @@ let V = new H(
                           i = F(t);
                       if (null == i) return !1;
                       let l = (0, f.DX)(n),
-                          s = k.get(t);
+                          s = A.get(t);
                       return (
                           null != s &&
                           ((s.styleColors[r] = n),
                           (s.currentStyle = r),
-                          k.set(t, s),
+                          A.set(t, s),
                           B(i, {
                               color: null != n.primary_color ? n.primary_color : void 0,
                               colors: n,
@@ -402,9 +402,9 @@ let V = new H(
                       let { id: n, currentStyle: r } = e,
                           i = F(n);
                       if (null == i) return !1;
-                      let l = k.get(n);
+                      let l = A.get(n);
                       if (null == l) return !1;
-                      k.set(n, {
+                      A.set(n, {
                           currentStyle: r,
                           styleColors: l.styleColors
                       });
@@ -432,7 +432,7 @@ let V = new H(
                       ((w = !0), R.add(r.id), D.set(r.id, n), U());
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      ((r = null), (P = T = []), Z.clear(), N.clear(), k.clear(), D.clear(), (R = new Set()), (E = !1), (S = !1), (w = !1), (I = v.QZA.CLOSED));
+                      ((r = null), (P = T = []), Z.clear(), N.clear(), A.clear(), D.clear(), (R = new Set()), (E = !1), (S = !1), (w = !1), (I = v.QZA.CLOSED));
                   },
                   GUILD_ROLE_CREATE: z,
                   GUILD_ROLE_UPDATE: z,

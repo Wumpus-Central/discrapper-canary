@@ -29,8 +29,8 @@ var i = n(255367),
     w = n(669083),
     N = n(711553),
     T = n(981631),
-    k = n(647086),
-    D = n(388032),
+    D = n(647086),
+    k = n(388032),
     R = n(506098);
 function A(e, t, n) {
     return (
@@ -145,7 +145,7 @@ class M extends r.PureComponent {
             })(n, ['onDragStart']),
             { guild: l } = o,
             { controller: a, renderBanner: c, bannerVisible: d, communityInfoVisible: g } = this.state,
-            m = (null == l ? void 0 : l.id) === k._ ? u.j : u.E;
+            m = (null == l ? void 0 : l.id) === D._ ? u.j : u.E;
         return (0, i.jsxs)(N.Z, {
             header:
                 null != l
@@ -170,7 +170,7 @@ class M extends r.PureComponent {
                                           {
                                               ref: this.settingsIconRef,
                                               icon: s.ewm,
-                                              label: D.intl.string(D.t['3D5yo6'])
+                                              label: k.intl.string(k.t['3D5yo6'])
                                           },
                                           e
                                       )
@@ -211,7 +211,7 @@ class M extends r.PureComponent {
                 null != l &&
                     (0, i.jsx)('section', {
                         className: R.panels,
-                        'aria-label': D.intl.string(D.t.StREWF),
+                        'aria-label': k.intl.string(k.t.StREWF),
                         children: (0, i.jsx)(f.Z, { guildId: l.id })
                     })
             ]
@@ -254,8 +254,8 @@ function z(e) {
         }),
         w = (0, l.e7)([j.Z], () => j.Z.getVoiceChannelId()),
         N = (0, l.e7)([S.Z], () => S.Z.getGuildVersion(n)),
-        k = (0, l.e7)([m.Z], () => m.Z.version),
-        D = (0, l.e7)([b.default], () => b.default.getGuildChangeSentinel(n)),
+        D = (0, l.e7)([m.Z], () => m.Z.version),
+        k = (0, l.e7)([b.default], () => b.default.getGuildChangeSentinel(n)),
         R = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
         L = null != (t = null == r ? void 0 : r.features.has(T.oNc.COMMUNITY)) && t,
@@ -275,9 +275,9 @@ function z(e) {
         rtcDesyncedVoiceStatesCount: V,
         collapsedChannels: p,
         collapseMuted: u,
-        guildReadStateSentinel: D,
+        guildReadStateSentinel: k,
         permissionVersion: N,
-        categoryCollapseVersion: k,
+        categoryCollapseVersion: D,
         embeddedAppsByChannel: R,
         activeEventsByChannel: A,
         showNewUnreadsBar: L,

@@ -1,9 +1,9 @@
-(n.d(t, { m: () => m }), n(388685));
-var a = n(73800),
-    r = n(544891),
-    l = n(959546),
-    i = n(981631),
-    s = n(474936);
+(a.d(t, { m: () => m }), a(388685));
+var n = a(73800),
+    r = a(544891),
+    l = a(959546),
+    i = a(981631),
+    s = a(474936);
 let o = async () =>
         (
             await r.tn.get({
@@ -41,9 +41,9 @@ let o = async () =>
         });
     },
     m = () => {
-        let [e, t] = a.useState([]),
-            [n, r] = a.useState(!1),
-            l = (0, a.useCallback)(async () => {
+        let [e, t] = n.useState([]),
+            [a, r] = n.useState(!1),
+            l = (0, n.useCallback)(async () => {
                 try {
                     r(!0);
                     let e = await o();
@@ -52,7 +52,7 @@ let o = async () =>
                     r(!1);
                 }
             }, []),
-            i = (0, a.useCallback)(
+            i = (0, n.useCallback)(
                 async (e) => {
                     (await c(e), await l());
                 },
@@ -60,17 +60,17 @@ let o = async () =>
             );
         return {
             grantFractionalPremium: i,
-            deleteFractionalPremium: (0, a.useCallback)(
+            deleteFractionalPremium: (0, n.useCallback)(
                 async (e) => {
                     (await d(e), await l());
                 },
                 [l]
             ),
-            triggerNextEntitlementFulfillment: (0, a.useCallback)(async () => {
+            triggerNextEntitlementFulfillment: (0, n.useCallback)(async () => {
                 (await u(), await l());
             }, [l]),
             refreshEntitlementList: l,
             entitlements: e,
-            loading: n
+            loading: a
         };
     };

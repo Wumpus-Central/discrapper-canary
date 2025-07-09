@@ -1,13 +1,13 @@
-e.d(a, { default: () => r });
+e.d(a, { default: () => o });
 var n = e(255367);
 e(73800);
 var s = e(481060),
-    o = e(388032),
-    i = e(146958);
-function r(t) {
-    let { transitionState: a, onClose: r } = t;
+    i = e(388032),
+    r = e(146958);
+function o(t) {
+    let { transitionState: a, onClose: o } = t;
     return (0, n.jsxs)(s.Y0X, {
-        className: i.modal,
+        className: r.modal,
         transitionState: a,
         size: s.CgR.SMALL,
         parentComponent: 'AutomodRaidFalseAlarmConfirmationModal',
@@ -16,28 +16,27 @@ function r(t) {
                 'aria-hidden': !0,
                 alt: '',
                 src: e(762528),
-                className: i.image
+                className: r.image
             }),
             (0, n.jsxs)(s.hzk, {
-                className: i.content,
+                className: r.content,
                 children: [
                     (0, n.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: i.text,
-                        children: o.intl.string(o.t.pAzfrq)
+                        className: r.text,
+                        children: i.intl.string(i.t.pAzfrq)
                     }),
                     (0, n.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: i.text,
-                        children: o.intl.string(o.t.oxowND)
+                        className: r.text,
+                        children: i.intl.string(i.t.oxowND)
                     }),
                     (0, n.jsx)(s.zxk, {
-                        onClick: r,
-                        color: s.zxk.Colors.BRAND,
-                        look: s.zxk.Looks.FILLED,
-                        children: o.intl.string(o.t.o3ZlOD)
+                        variant: 'primary',
+                        text: i.intl.string(i.t.o3ZlOD),
+                        onClick: o
                     })
                 ]
             })

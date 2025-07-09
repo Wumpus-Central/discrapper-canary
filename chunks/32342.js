@@ -1,95 +1,95 @@
-(n.d(t, { default: () => _ }), n(388685));
-var a = n(255367),
-    s = n(73800),
-    r = n(481060),
-    l = n(782568),
-    i = n(313201),
-    o = n(53365),
-    d = n(377176),
-    c = n(577275),
-    h = n(981631),
-    x = n(829857),
-    m = n(388032),
-    u = n(669906);
+(a.d(t, { default: () => _ }), a(388685));
+var n = a(255367),
+    r = a(73800),
+    s = a(481060),
+    i = a(782568),
+    l = a(313201),
+    o = a(53365),
+    d = a(377176),
+    c = a(577275),
+    x = a(981631),
+    m = a(829857),
+    h = a(388032),
+    u = a(669906);
 function p(e) {
-    let { selectedTeamId: t, onSetSelectedTeamId: n, teamOptions: s } = e;
-    return (0, a.jsx)('div', {
+    let { selectedTeamId: t, onSetSelectedTeamId: a, teamOptions: r } = e;
+    return (0, n.jsx)('div', {
         className: u.teamSetup,
         children:
-            0 === s.length
-                ? (0, a.jsx)(r.Text, {
+            0 === r.length
+                ? (0, n.jsx)(s.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: m.intl.format(m.t.Jyy4pa, {})
+                      children: h.intl.format(h.t.Jyy4pa, {})
                   })
-                : (0, a.jsxs)(a.Fragment, {
+                : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, a.jsx)(r.Text, {
+                          (0, n.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               className: u.teamBodyText,
                               color: 'header-secondary',
-                              children: m.intl.string(m.t.U1Vz29)
+                              children: h.intl.string(h.t.U1Vz29)
                           }),
-                          (0, a.jsx)(r.q4e, {
-                              options: s,
-                              placeholder: m.intl.string(m.t.QXf93N),
+                          (0, n.jsx)(s.q4e, {
+                              options: r,
+                              placeholder: h.intl.string(h.t.QXf93N),
                               value: t,
-                              onChange: n,
-                              'aria-label': m.intl.string(m.t.QXf93N)
+                              onChange: a,
+                              'aria-label': h.intl.string(h.t.QXf93N)
                           })
                       ]
                   })
     });
 }
 function _(e) {
-    let { guildId: t, requireTeamSetup: n, onClose: _, transitionState: g } = e,
-        j = (0, i.Dt)(),
-        [f, b] = s.useState(),
-        [C, T] = s.useState(!1),
-        { teams: y } = (0, c.Z)(),
-        k = y.filter((e) => e.payout_account_status === x.C.ACTIVE),
-        N = s.useMemo(
+    let { guildId: t, requireTeamSetup: a, onClose: _, transitionState: g } = e,
+        j = (0, l.Dt)(),
+        [f, b] = r.useState(),
+        [y, C] = r.useState(!1),
+        { teams: T } = (0, c.Z)(),
+        v = T.filter((e) => e.payout_account_status === m.C.ACTIVE),
+        k = r.useMemo(
             () =>
-                k.map((e) => ({
+                v.map((e) => ({
                     label: e.name,
                     value: e.id
                 })),
-            [k]
+            [v]
         ),
-        v = s.useCallback(() => {
-            (0, l.Z)(h.EYA.DEVELOPER_PORTAL_TEAMS);
+        N = r.useCallback(() => {
+            (0, i.Z)(x.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
-    return (0, a.jsxs)(r.Y0X, {
+    return (0, n.jsxs)(s.Y0X, {
         'aria-labelledby': j,
-        size: r.CgR.DYNAMIC,
+        size: s.CgR.DYNAMIC,
         transitionState: g,
         parentComponent: 'CreatorMonetizationNewOwnerOnboardingModal',
         children: [
-            (0, a.jsx)(r.xBx, {
+            (0, n.jsx)(s.xBx, {
                 separator: !1,
                 className: u.header,
-                children: (0, a.jsx)(r.X6q, {
+                children: (0, n.jsx)(s.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: n ? m.intl.string(m.t.inJKQk) : m.intl.string(m.t.GfObDA)
+                    children: a ? h.intl.string(h.t.inJKQk) : h.intl.string(h.t.GfObDA)
                 })
             }),
-            (0, a.jsxs)(r.hzk, {
+            (0, n.jsxs)(s.hzk, {
                 className: u.content,
                 children: [
-                    n &&
-                        (0, a.jsx)(p, {
+                    a &&
+                        (0, n.jsx)(p, {
                             selectedTeamId: f,
                             onSetSelectedTeamId: b,
-                            teamOptions: N
+                            teamOptions: k
                         }),
-                    (0, a.jsx)(r.XZJ, {
+                    (0, n.jsx)(s.XZJ, {
                         onChange: () => {
-                            T((e) => !e);
+                            C((e) => !e);
                         },
                         size: 20,
-                        type: r.XZJ.Types.INVERTED,
-                        value: C,
-                        children: (0, a.jsx)(r.Text, {
+                        type: s.XZJ.Types.INVERTED,
+                        value: y,
+                        children: (0, n.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             children: (0, d.f)()
@@ -97,22 +97,24 @@ function _(e) {
                     })
                 ]
             }),
-            (0, a.jsx)(r.mzw, {
+            (0, n.jsx)(s.mzw, {
                 className: u.footer,
-                children: (0, a.jsx)('div', {
+                children: (0, n.jsx)('div', {
                     className: u.buttons,
                     children:
-                        n && 0 === N.length
-                            ? (0, a.jsx)(r.zxk, {
-                                  onClick: v,
-                                  children: m.intl.string(m.t.JddVgI)
+                        a && 0 === k.length
+                            ? (0, n.jsx)(s.zxk, {
+                                  variant: 'primary',
+                                  text: h.intl.string(h.t.JddVgI),
+                                  onClick: N
                               })
-                            : (0, a.jsx)(r.zxk, {
-                                  disabled: !C || (n && null == f),
+                            : (0, n.jsx)(s.zxk, {
+                                  variant: 'primary',
+                                  text: h.intl.string(h.t.geKm7u),
+                                  disabled: !y || (a && null == f),
                                   onClick: () => {
                                       (_(), (0, o.df)(t, f));
-                                  },
-                                  children: m.intl.string(m.t.geKm7u)
+                                  }
                               })
                 })
             })

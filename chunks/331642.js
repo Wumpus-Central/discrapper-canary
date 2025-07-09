@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => j }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(692547),
-    a = n(481060),
+    a = n(692547),
+    l = n(481060),
     o = n(596454),
     c = n(594174),
     d = n(74538),
@@ -16,21 +16,21 @@ var i = n(255367),
     b = n(517058);
 function x(e) {
     let { onSelect: t } = e,
-        [n, l] = r.useState(!1),
+        [n, a] = r.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.canUseCustomCallSounds(o),
         m = r.useRef(null);
     function x(e) {
-        u && (l(!1), null == t || t(e));
+        u && (a(!1), null == t || t(e));
     }
-    return (0, i.jsx)(a.yRy, {
+    return (0, i.jsx)(l.yRy, {
         targetElementRef: m,
         shouldShow: n,
         position: 'left',
-        onRequestClose: () => l(!1),
+        onRequestClose: () => a(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(a.VqE, {
+            return (0, i.jsx)(l.VqE, {
                 children: (0, i.jsx)(g.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
@@ -76,10 +76,10 @@ function x(e) {
                     {
                         ref: m,
                         onClick: () => {
-                            l(!n);
+                            a(!n);
                         },
                         text: f.intl.string(f.t.uOe0Aw),
-                        children: (0, i.jsx)(a.vdY, {
+                        children: (0, i.jsx)(l.vdY, {
                             size: 'md',
                             color: 'currentColor',
                             className: b.secondaryIcon
@@ -115,14 +115,14 @@ function _(e) {
     return (0, i.jsx)(h.hU, {
         onClick: n,
         text: r,
-        children: (0, i.jsx)(a.gj8, {
+        children: (0, i.jsx)(l.gj8, {
             size: 'md',
             color: 'currentColor',
             className: b.secondaryIconActive
         })
     });
 }
-function E(e) {
+function j(e) {
     let { sound: t, isGlobal: n, onSelect: r } = e,
         s = null != t,
         c = null == t ? void 0 : t.emojiId,
@@ -140,7 +140,7 @@ function E(e) {
                             emojiName: d,
                             className: b.emoji
                         }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-primary',
                         className: b.soundText,
@@ -151,7 +151,7 @@ function E(e) {
                                   ? f.intl.format(f.t.B6HU6O, {
                                         soundName: t.name,
                                         subtextHook: (e) =>
-                                            (0, i.jsx)(a.Text, {
+                                            (0, i.jsx)(l.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'header-secondary',
                                                 tag: 'span',
@@ -162,7 +162,7 @@ function E(e) {
                     }),
                     s
                         ? (0, i.jsx)(_, { sound: t })
-                        : (0, i.jsx)(a.gj8, {
+                        : (0, i.jsx)(l.gj8, {
                               size: 'md',
                               color: 'currentColor',
                               className: b.secondaryIconDisabled
@@ -178,9 +178,9 @@ function E(e) {
                         (0, i.jsx)(h.hU, {
                             onClick: () => r(null),
                             text: f.intl.string(f.t.jmtcGB),
-                            children: (0, i.jsx)(a.XHJ, {
+                            children: (0, i.jsx)(l.XHJ, {
                                 size: 'md',
-                                color: l.Z.unsafe_rawColors.RED_400.css,
+                                color: a.Z.unsafe_rawColors.RED_400.css,
                                 className: b.secondaryIcon
                             })
                         })

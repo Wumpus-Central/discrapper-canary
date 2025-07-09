@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(846027),
     c = n(906732),
     d = n(921801),
@@ -14,14 +14,14 @@ var r = n(120356),
     g = n(20493);
 function h(e) {
     let { refreshStyles: t = !1 } = e,
-        { sidechainEnabled: n, sidechainStrength: r } = (0, l.cj)([u.Z], () => ({
+        { sidechainEnabled: n, sidechainStrength: r } = (0, a.cj)([u.Z], () => ({
             sidechainEnabled: u.Z.getSidechainCompression(),
             sidechainStrength: u.Z.getSidechainCompressionStrength()
         })),
         { analyticsLocations: h } = (0, c.ZP)(),
         f = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.j7V, {
+                (0, i.jsx)(l.j7V, {
                     className: t ? null : s()(g.marginTop8, g.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e, { analyticsLocations: h }),
@@ -29,9 +29,9 @@ function h(e) {
                     hideBorder: t,
                     children: p.intl.string(p.t['/jwMtr'])
                 }),
-                (0, i.jsx)(a.xJW, {
+                (0, i.jsx)(l.xJW, {
                     title: p.intl.string(p.t.fhEzfn),
-                    children: (0, i.jsx)(a.iRW, {
+                    children: (0, i.jsx)(l.iRW, {
                         initialValue: r,
                         minValue: 1,
                         onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: h })
@@ -43,7 +43,7 @@ function h(e) {
         setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
         children: t
             ? f
-            : (0, i.jsx)(a.hjN, {
+            : (0, i.jsx)(l.hjN, {
                   className: g.marginBottom20,
                   children: f
               })

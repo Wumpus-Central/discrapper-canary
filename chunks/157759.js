@@ -2,7 +2,7 @@
 var r = n(255367),
     a = n(73800),
     i = n(442837),
-    l = n(481060),
+    l = n(755721),
     o = n(668781),
     s = n(367907),
     c = n(434404),
@@ -76,8 +76,8 @@ let h = (e) => {
               description: x.intl.string(x.t['FlcC+/']),
               buttonText: v ? x.intl.string(x.t.aCJlq6) : x.intl.string(x.t['6I1F3t']),
               buttonDisabled: !v,
-              buttonColor: v ? l.zxk.Colors.RED : l.zxk.Colors.WHITE,
-              buttonLook: v ? l.zxk.Looks.FILLED : l.zxk.Looks.LINK,
+              buttonColor: v ? l.zx.Colors.RED : l.zx.Colors.WHITE,
+              buttonLook: v ? l.zx.Looks.FILLED : l.zx.Looks.LINK,
               onButtonPress: O
           })
         : null;

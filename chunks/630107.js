@@ -106,9 +106,10 @@ function v(a) {
                                 children: m.intl.string(m.t.NweJIy)
                             }),
                             (0, s.jsx)(r.zxk, {
+                                variant: 'primary',
+                                text: m.intl.string(m.t.UQvCf3),
                                 fullWidth: !0,
-                                onClick: O,
-                                children: m.intl.string(m.t.UQvCf3)
+                                onClick: O
                             })
                         ]
                     })

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(430824),
-    a = n(594174),
+    a = n(430824),
+    o = n(594174),
     s = n(216572),
     c = n(262746),
     u = n(211640),
@@ -13,8 +13,8 @@ function h(e) {
     let { channel: t, message: n, snapshot: h } = e,
         { moderatorReport: f } = h,
         m = null == f ? void 0 : f.reported_user_id,
-        g = (0, l.e7)([a.default], () => (null != m ? a.default.getUser(m) : null)),
-        b = (0, l.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+        g = (0, l.e7)([o.default], () => (null != m ? o.default.getUser(m) : null)),
+        b = (0, l.e7)([a.Z], () => a.Z.getGuild(t.guild_id));
     (0, s.Cv)(n);
     let _ = (0, c.Z)({
             channel: t,

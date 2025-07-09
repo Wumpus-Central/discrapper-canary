@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(772848),
+    a = n.n(s),
+    l = n(772848),
     o = n(442837),
     c = n(481060),
     d = n(53281),
@@ -15,12 +15,12 @@ var i = n(255367),
 let f = "Make sure you're only uploading text files!",
     b = (e) => {
         var t, n, r;
-        let { effect: s, onClick: a } = e,
+        let { effect: s, onClick: l } = e,
             { deleteConfig: o } = (0, p.n6)();
         return (0, i.jsxs)(c.P3F, {
             className: h.previewCard,
             onClick: () => {
-                a(s);
+                l(s);
             },
             children: [
                 (0, i.jsx)('div', {
@@ -28,19 +28,18 @@ let f = "Make sure you're only uploading text files!",
                     style: { backgroundImage: 'url('.concat(null == (r = s.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(h.previewCardFooter, h.row),
+                    className: a()(h.previewCardFooter, h.row),
                     children: [
                         (0, i.jsx)(c.Text, {
                             variant: 'text-md/bold',
                             children: s.name
                         }),
                         (0, i.jsx)(c.zxk, {
-                            color: c.Ttl.RED,
-                            look: c.iLD.LINK,
+                            variant: 'critical-secondary',
+                            text: 'Delete',
                             onClick: (e) => {
                                 (e.preventDefault(), e.stopPropagation(), o(s.id));
-                            },
-                            children: 'Delete'
+                            }
                         })
                     ]
                 })
@@ -48,7 +47,7 @@ let f = "Make sure you're only uploading text files!",
         });
     },
     x = () => ({
-        id: (0, a.Z)(),
+        id: (0, l.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
@@ -56,35 +55,35 @@ function _() {
     let { profileEffects: e, upsertConfig: t } = (0, p.n6)(),
         [n, s] = r.useState(),
         _ = r.useRef(null),
-        E = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
-        [j, O] = r.useState(''),
+        j = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
+        [E, O] = r.useState(''),
         C = r.useMemo(
             () =>
-                '' === j
-                    ? E
-                    : E.filter((e) => {
-                          let t = j.toLowerCase();
+                '' === E
+                    ? j
+                    : j.filter((e) => {
+                          let t = E.toLowerCase();
                           return e.config.title.toLowerCase().includes(t) || e.config.description.toLowerCase().includes(t);
                       }),
-            [j, E]
+            [E, j]
         ),
-        S = r.useCallback(
+        v = r.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith('text/')) return (0, u.Eo)(f);
                 let [i, r] = n.split(',');
                 if (!i.includes('text/plain')) return (0, u.Eo)(f);
                 let s = JSON.parse(atob(r));
-                ((s.id = (0, a.Z)()), t(s), (0, u.XA)('Profile Effect (maybe??) imported!'));
+                ((s.id = (0, l.Z)()), t(s), (0, u.XA)('Profile Effect (maybe??) imported!'));
             },
             [t]
         ),
-        v = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null) return void (0, u.Eo)('Error uploading file. Try again!');
-                (0, u.Kr)(e.currentTarget.files, S, u.Eo);
+                (0, u.Kr)(e.currentTarget.files, v, u.Eo);
             },
-            [S]
+            [v]
         );
     return (0, i.jsxs)('div', {
         className: h.root,
@@ -120,7 +119,7 @@ function _() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: l()(h.row, h.end, h.section),
+                            className: a()(h.row, h.end, h.section),
                             children: [
                                 (0, i.jsxs)('div', {
                                     className: h.uploadButton,
@@ -132,16 +131,17 @@ function _() {
                                         }),
                                         (0, i.jsx)(d.Z, {
                                             ref: _,
-                                            onChange: v,
+                                            onChange: S,
                                             multiple: !1
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(c.zxk, {
+                                    variant: 'primary',
+                                    text: 'Create New Effect',
                                     onClick: () => {
                                         t(x());
-                                    },
-                                    children: 'Create New Effect'
+                                    }
                                 })
                             ]
                         }),
@@ -154,7 +154,7 @@ function _() {
                                     children: 'All Effects'
                                 }),
                                 (0, i.jsx)('input', {
-                                    value: j,
+                                    value: E,
                                     onChange: (e) => {
                                         O(e.target.value);
                                     }

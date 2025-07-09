@@ -409,8 +409,9 @@ function en(e) {
                           isTrial: c
                       })
                     : (0, r.jsx)(u.zxk, {
-                          disabled: !0,
-                          children: Y.intl.string(Y.t.XqMe3N)
+                          variant: 'primary',
+                          text: Y.intl.string(Y.t.XqMe3N),
+                          disabled: !0
                       }),
                 o
                     ? (0, r.jsx)(U.Z, {
@@ -434,8 +435,9 @@ function er(e) {
         h && (y = g.h8.REVIEW),
         (0, C.id)(_, i, a) && f !== g.h8.SELECT_FREE_SKU && (y = g.h8.SELECT_FREE_SKU),
         (0, r.jsx)(u.zxk, {
-            onClick: () => t(y),
-            children: E
+            variant: 'primary',
+            text: E,
+            onClick: () => t(y)
         })
     );
 }

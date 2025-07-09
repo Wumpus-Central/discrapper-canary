@@ -1,51 +1,52 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(255367),
     a = n(73800),
-    i = n(481060),
-    l = n(600164),
-    o = n(388032),
-    s = n(130883),
-    c = n(18537);
-let d = (e) => {
+    i = n(755721),
+    l = n(481060),
+    o = n(600164),
+    s = n(388032),
+    c = n(130883),
+    d = n(18537);
+let u = (e) => {
     let t,
-        { button: n, submitting: d, disableNext: u, onClick: m, canNavigateBack: p, onBackClicked: _, isModeratorReport: g } = e,
-        b = a.useRef(null),
-        x = null != n && 'cancel' !== n.type,
-        h = p && (null == n ? void 0 : n.type) !== 'done',
-        f = x || h;
+        { button: n, submitting: u, disableNext: m, onClick: p, canNavigateBack: _, onBackClicked: g, isModeratorReport: b } = e,
+        x = a.useRef(null),
+        h = null != n && 'cancel' !== n.type,
+        f = _ && (null == n ? void 0 : n.type) !== 'done',
+        v = h || f;
     if (
         (a.useEffect(() => {
             if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
                 var e;
-                null == (e = b.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !f)
+        !v)
     )
         return null;
-    let v = o.intl.string(o.t.i4jeWV);
+    let j = s.intl.string(s.t.i4jeWV);
     return (
-        (null == n ? void 0 : n.type) === 'submit' ? ((t = i.zxk.Colors.RED), (v = g ? o.intl.string(s.default.ZUyreX) : o.intl.string(o.t['G+vU8/']))) : (null == n ? void 0 : n.type) === 'next' ? (v = o.intl.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((v = o.intl.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
-        (0, r.jsxs)(i.mzw, {
-            direction: l.Z.Direction.HORIZONTAL,
+        (null == n ? void 0 : n.type) === 'submit' ? ((t = i.zx.Colors.RED), (j = b ? s.intl.string(c.default.ZUyreX) : s.intl.string(s.t['G+vU8/']))) : (null == n ? void 0 : n.type) === 'next' ? (j = s.intl.string(s.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((j = s.intl.string(s.t['ETE/oK'])), (t = i.zx.Colors.TRANSPARENT)),
+        (0, r.jsxs)(l.mzw, {
+            direction: o.Z.Direction.HORIZONTAL,
             children: [
-                h &&
-                    (0, r.jsx)(i.zxk, {
-                        onClick: _,
-                        color: i.zxk.Colors.TRANSPARENT,
-                        disabled: d,
-                        children: o.intl.string(o.t['13/7kZ'])
+                f &&
+                    (0, r.jsx)(i.zx, {
+                        onClick: g,
+                        color: i.zx.Colors.TRANSPARENT,
+                        disabled: u,
+                        children: s.intl.string(s.t['13/7kZ'])
                     }),
-                x &&
-                    (0, r.jsx)(i.zxk, {
+                h &&
+                    (0, r.jsx)(i.zx, {
                         onClick: () => {
-                            null != n && m(n);
+                            null != n && p(n);
                         },
                         color: t,
-                        className: c.actionButton,
-                        disabled: d || u,
-                        buttonRef: b,
-                        children: v
+                        className: d.actionButton,
+                        disabled: u || m,
+                        buttonRef: x,
+                        children: j
                     })
             ]
         })

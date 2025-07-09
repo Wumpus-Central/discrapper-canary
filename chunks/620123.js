@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => h }), n(388685));
 var i = n(255367),
     s = n(73800),
-    l = n(442837),
-    r = n(481060),
+    r = n(442837),
+    l = n(481060),
     a = n(16084),
     o = n(55563),
     d = n(388032);
@@ -18,7 +18,7 @@ class c extends s.Component {
     render() {
         let { skus: e, selectedSkuId: t, className: n } = this.props,
             s = null != e && 0 === e.length;
-        return (0, i.jsx)(r.q4e, {
+        return (0, i.jsx)(l.q4e, {
             options:
                 null != e
                     ? e.map((e) => ({
@@ -50,7 +50,7 @@ class c extends s.Component {
                 : (this[t] = n));
     }
 }
-let h = l.ZP.connectStores([o.Z], (e) => {
+let h = r.ZP.connectStores([o.Z], (e) => {
     let { applicationId: t } = e;
     return { skus: o.Z.getForApplication(t) };
 })(c);

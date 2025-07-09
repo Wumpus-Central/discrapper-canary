@@ -25,9 +25,9 @@ function y(e) {
         N = null != (y = null == S || null == (t = S.description) ? void 0 : t.trim()) ? y : void 0,
         I = (null == S ? void 0 : S.headerBackground) != null && null != (j = u.Z.toURLSafe((0, s._W)(P, S.headerBackground, 256))) ? j : void 0,
         T = w.type === m.epS.DURABLE && C,
-        k = w.type === m.epS.DURABLE ? (T ? O.intl.string(O.t.bm82mp) : O.intl.string(O.t['6gprwc'])) : void 0,
-        { price: Z } = w;
-    return null == Z
+        Z = w.type === m.epS.DURABLE ? (T ? O.intl.string(O.t.bm82mp) : O.intl.string(O.t['6gprwc'])) : void 0,
+        { price: k } = w;
+    return null == k
         ? null
         : (0, n.jsx)(p.A, {
               appId: P,
@@ -45,7 +45,7 @@ function y(e) {
                   title: E,
                   description: N,
                   imgSrc: I,
-                  tag: null != k ? (0, n.jsx)(l.V, { text: k }) : void 0,
+                  tag: null != Z ? (0, n.jsx)(l.V, { text: Z }) : void 0,
                   FallbackIcon: o.Prq
               })
           });

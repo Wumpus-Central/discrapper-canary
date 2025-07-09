@@ -1,37 +1,38 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(39604),
-    a = n(176127),
-    o = n(388032),
-    s = n(442693);
-function c(e) {
-    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, r.jsxs)(i.Cys, {
-        tooltipClassName: s.reminderTooltip,
-        tooltipContentClassName: s.tooltipContent,
+var i = n(755721),
+    l = n(481060),
+    a = n(39604),
+    o = n(176127),
+    s = n(388032),
+    c = n(442693);
+function u(e) {
+    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
+    return (0, r.jsxs)(l.Cys, {
+        tooltipClassName: c.reminderTooltip,
+        tooltipContentClassName: c.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: i.FGA.PRIMARY,
+        color: l.FGA.PRIMARY,
         children: [
-            (0, r.jsx)(a.Z, {}),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(o.Z, {}),
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-md/extrabold',
-                children: o.intl.format(o.t['+qxkzM'], { count: c.newClipIds.length })
+                children: s.intl.format(s.t['+qxkzM'], { count: u.newClipIds.length })
             }),
             (0, r.jsxs)('div', {
-                className: s.buttonContainer,
+                className: c.buttonContainer,
                 children: [
-                    (0, r.jsx)(i.zxk, {
-                        color: i.zxk.Colors.TRANSPARENT,
-                        onClick: l.eL,
-                        children: o.intl.string(o.t.WAI6xs)
+                    (0, r.jsx)(i.zx, {
+                        color: i.zx.Colors.TRANSPARENT,
+                        onClick: a.eL,
+                        children: s.intl.string(s.t.WAI6xs)
                     }),
-                    (0, r.jsx)(i.zxk, {
-                        color: i.zxk.Colors.BRAND,
-                        onClick: t,
-                        children: o.intl.string(o.t.tQPBmp)
+                    (0, r.jsx)(l.zxk, {
+                        variant: 'primary',
+                        text: s.intl.string(s.t.tQPBmp),
+                        onClick: t
                     })
                 ]
             })

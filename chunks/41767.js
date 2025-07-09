@@ -1,83 +1,84 @@
-(e.d(n, { default: () => j }), e(388685));
+(e.d(n, { default: () => A }), e(388685));
 var r = e(255367),
     l = e(73800),
-    a = e(481060),
-    i = e(313201),
-    s = e(556012),
-    u = e(590433),
+    a = e(755721),
+    i = e(481060),
+    s = e(313201),
+    u = e(556012),
+    c = e(590433),
     o = e(388032),
-    c = e(996248);
-let d = (t) => {
+    d = e(996248);
+let j = (t) => {
     var n;
     let { duration: e, onSelectDuration: l } = t,
-        i = (0, u.tr)(),
-        s = i.find((t) => t.value === e);
-    return (0, r.jsx)(a.xJW, {
-        className: c.durationSelector,
+        a = (0, c.tr)(),
+        s = a.find((t) => t.value === e);
+    return (0, r.jsx)(i.xJW, {
+        className: d.durationSelector,
         required: !0,
-        children: (0, r.jsx)(a.VcW, {
-            value: null != (n = null == s ? void 0 : s.value) ? n : u.UK.DURATION_60_SEC,
-            options: i,
+        children: (0, r.jsx)(i.VcW, {
+            value: null != (n = null == s ? void 0 : s.value) ? n : c.UK.DURATION_60_SEC,
+            options: a,
             onChange: (t) => {
-                let n = i.find((n) => n.value === t);
+                let n = a.find((n) => n.value === t);
                 null != n && l(n.value);
             },
             placeholder: o.intl.string(o.t.k7yo6u)
         })
     });
 };
-function j(t) {
-    let { action: n, triggerType: e, isEdit: j, onUpdateDuration: A, onClose: E, transitionState: N } = t,
-        _ = (0, i.Dt)(),
-        [S, C] = l.useState(() => (null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : u.UK.DURATION_60_SEC)),
-        h = (0, s.c)(n.type, n, e);
-    if (null == h) return null;
-    let { headerText: L } = h;
-    return (0, r.jsxs)(a.Y0X, {
+function A(t) {
+    let { action: n, triggerType: e, isEdit: A, onUpdateDuration: E, onClose: _, transitionState: N } = t,
+        S = (0, s.Dt)(),
+        [C, h] = l.useState(() => (null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : c.UK.DURATION_60_SEC)),
+        I = (0, u.c)(n.type, n, e);
+    if (null == I) return null;
+    let { headerText: L } = I;
+    return (0, r.jsxs)(i.Y0X, {
         transitionState: N,
-        'aria-labelledby': _,
-        size: a.CgR.SMALL,
+        'aria-labelledby': S,
+        size: i.CgR.SMALL,
         parentComponent: 'AutomodActionUserCommunicationDisabledModal',
         children: [
-            (0, r.jsxs)(a.hzk, {
-                className: c.actionContentContainer,
+            (0, r.jsxs)(i.hzk, {
+                className: d.actionContentContainer,
                 children: [
-                    (0, r.jsx)(a.X6q, {
-                        id: _,
+                    (0, r.jsx)(i.X6q, {
+                        id: S,
                         color: 'header-primary',
                         variant: 'heading-lg/semibold',
-                        className: c.header,
+                        className: d.header,
                         children: L
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
                         children: o.intl.string(o.t.DWGBAg)
                     }),
-                    (0, r.jsx)(d, {
-                        duration: S,
+                    (0, r.jsx)(j, {
+                        duration: C,
                         onSelectDuration: (t) => {
-                            C(t);
+                            h(t);
                         }
                     })
                 ]
             }),
-            (0, r.jsxs)(a.mzw, {
+            (0, r.jsxs)(i.mzw, {
                 children: [
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(i.zxk, {
+                        variant: 'primary',
+                        size: 'sm',
+                        text: A ? o.intl.string(o.t.bt75u7) : o.intl.string(o.t.R3BPHx),
                         onClick: () => {
-                            A(S);
-                        },
-                        color: a.zxk.Colors.BRAND,
-                        size: a.zxk.Sizes.SMALL,
-                        children: j ? o.intl.string(o.t.bt75u7) : o.intl.string(o.t.R3BPHx)
+                            E(C);
+                        }
                     }),
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(a.zx, {
                         onClick: () => {
-                            E();
+                            _();
                         },
-                        color: a.zxk.Colors.TRANSPARENT,
-                        look: a.zxk.Looks.LINK,
+                        color: a.zx.Colors.TRANSPARENT,
+                        look: a.zx.Looks.LINK,
                         children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]

@@ -38,7 +38,7 @@ function _(e) {
         ),
         T = (0, u.dQu)(c.Z.colors.BORDER_SUBTLE),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
-        k = (0, u.q_F)(
+        A = (0, u.q_F)(
             {
                 from: { color: B.spring() },
                 color: T.spring({ opacity: b ? 0.5 : 0.25 }),
@@ -47,7 +47,7 @@ function _(e) {
             },
             'animate-always'
         ),
-        A = (0, u.Yzy)(
+        k = (0, u.Yzy)(
             O,
             {
                 from: {
@@ -80,7 +80,7 @@ function _(e) {
             [x.selected]: i,
             [x.pressed]: R
         }),
-        M = E ? { borderColor: k.color } : {};
+        M = E ? { borderColor: A.color } : {};
     return (0, l.jsx)(o.animated.div, {
         style: M,
         className: L,
@@ -127,7 +127,7 @@ function _(e) {
                         color: c.Z.unsafe_rawColors.WHITE_500.css
                     })
                 }),
-                A(
+                k(
                     (e, n) =>
                         P > 0 &&
                         n &&

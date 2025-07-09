@@ -37,8 +37,8 @@ var r = n(255367),
     T = n(792517),
     D = (n(351483), n(979425)),
     M = n(651183),
-    k = n(623825),
-    L = n(981631),
+    L = n(623825),
+    k = n(981631),
     U = n(354459),
     F = n(65154),
     V = n(388032),
@@ -47,7 +47,7 @@ let H = new m.Z('StreamTile');
 function Y(e) {
     let { participant: t, selected: n, focused: i, idle: a, width: u, premiumIndicator: s } = e,
         c = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        d = (0, k.K)(u),
+        d = (0, L.K)(u),
         [f, m] = l.useState(!1),
         g = (0, o.e7)([I.Z], () => I.Z.getChannel(null == c ? void 0 : c.channelId));
     return (
@@ -65,7 +65,7 @@ function Y(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 n || i ? null : (0, r.jsx)(M.Z, { participant: t }),
-                i || null == c || c.state === L.jm8.ENDED || c.state === L.jm8.FAILED
+                i || null == c || c.state === k.jm8.ENDED || c.state === k.jm8.FAILED
                     ? null
                     : (0, r.jsx)(S.Z, {
                           size: p.ZP.Sizes.SMALL,
@@ -80,7 +80,7 @@ function Y(e) {
     );
 }
 function z(e) {
-    let { participant: t, selected: n, onVideoResize: i, fit: p, inPopout: m, inOverlayPopout: S = !1, width: O, focused: M, wrapperClassName: k, paused: Y = !1 } = e,
+    let { participant: t, selected: n, onVideoResize: i, fit: p, inPopout: m, inOverlayPopout: S = !1, width: O, focused: M, wrapperClassName: L, paused: Y = !1 } = e,
         z = w.Z.getVideoComponent(),
         G = (0, o.e7)([_.default], () => _.default.getId()),
         K = (0, E.Z)(),
@@ -115,13 +115,13 @@ function z(e) {
             selected: n,
             isSelfStream: q.id === G
         });
-    if ((null == Q ? void 0 : Q.state) === L.jm8.ENDED)
+    if ((null == Q ? void 0 : Q.state) === k.jm8.ENDED)
         return (0, r.jsx)(N.Z, {
             selected: n,
             stream: Q,
             width: O
         });
-    if (null != ei || (null == Q ? void 0 : Q.state) === L.jm8.FAILED)
+    if (null != ei || (null == Q ? void 0 : Q.state) === k.jm8.FAILED)
         return (0, r.jsx)(C.Z, {
             avError: ei,
             selected: n,
@@ -192,12 +192,12 @@ function z(e) {
                     b.Z,
                     {
                         onResize: i,
-                        wrapperClassName: a()(W.videoWrapper, k),
+                        wrapperClassName: a()(W.videoWrapper, L),
                         className: W.content,
                         streamId: J,
                         videoComponent: z,
                         fit: p,
-                        paused: Y || (null == Q ? void 0 : Q.state) === L.jm8.PAUSED || en,
+                        paused: Y || (null == Q ? void 0 : Q.state) === k.jm8.PAUSED || en,
                         videoSpinnerContext: et ? f.m.SELF_STREAM : f.m.REMOTE_STREAM,
                         userId: q.id,
                         streamKey: t.id

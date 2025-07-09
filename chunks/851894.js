@@ -2,8 +2,8 @@ n.d(t, { Z: () => R });
 var i = n(255367),
     r = n(73800),
     s = n(512722),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(497321),
@@ -16,12 +16,12 @@ var i = n(255367),
     b = n(621853),
     x = n(246946),
     _ = n(594174),
-    E = n(63063),
-    j = n(74538),
+    j = n(63063),
+    E = n(74538),
     O = n(18438),
     C = n(778825),
-    S = n(856607),
-    v = n(594496),
+    v = n(856607),
+    S = n(594496),
     T = n(856768),
     N = n(981631),
     I = n(388032);
@@ -77,13 +77,13 @@ function P(e) {
 function R(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, p.ZP)(u.Z.USER_SETTINGS_GUILD_PROFILE),
-        s = (0, a.e7)([_.default], () => {
+        s = (0, l.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
-            return (l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
+            return (a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
-        R = (0, a.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
-        D = (0, a.e7)([x.Z], () => x.Z.hidePersonalInformation),
-        Z = (0, a.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        R = (0, l.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
+        D = (0, l.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        Z = (0, l.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         L = (function (e, t) {
             if (null == e) return {};
@@ -125,7 +125,7 @@ function R(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: I.intl.format(I.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(N.BhN.GUILD_PROFILES) })
+                        children: I.intl.format(I.t['/PTB2N'], { helpCenterLink: j.Z.getArticleURL(N.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
@@ -144,15 +144,15 @@ function R(e) {
                                               pendingAvatar: B,
                                               user: s,
                                               guild: t,
-                                              canUsePremiumCustomization: j.ZP.canUsePremiumProfileCustomization(s),
+                                              canUsePremiumCustomization: E.ZP.canUsePremiumProfileCustomization(s),
                                               onUpsellClick: P
                                           })
                                       ),
-                                      children: (0, i.jsx)(v.Z, {})
+                                      children: (0, i.jsx)(S.Z, {})
                                   })
                               ]
                           })
-                        : (0, i.jsx)(S.Z, {})
+                        : (0, i.jsx)(v.Z, {})
                 ]
             })
           : (0, i.jsx)(o.$jN, {});

@@ -16,9 +16,9 @@ var r = n(255367),
     N = n(981631),
     T = n(98078);
 function E(e) {
-    let { transitionState: t, initialSlide: n = I._m.GUILD_TEMPLATES, onSuccess: l, onClose: E, onSlideChange: S, hasJoinButton: C } = e,
-        [O, b] = i.useState(n),
-        g = (0, c.Z)(O),
+    let { transitionState: t, initialSlide: n = I._m.GUILD_TEMPLATES, onSuccess: l, onClose: E, onSlideChange: S, hasJoinButton: O } = e,
+        [C, b] = i.useState(n),
+        g = (0, c.Z)(C),
         [L, D] = i.useState(null),
         [h, A] = i.useState(null),
         [x, v] = i.useState(null),
@@ -27,8 +27,8 @@ function E(e) {
         b(n);
     }, [b, n]),
         i.useEffect(() => {
-            O !== g && S(O);
-        }, [S, O, g]));
+            C !== g && S(C);
+        }, [S, C, g]));
     let y = i.useCallback((e) => {
             (b(I._m.CREATION_INTENT),
                 A(e),
@@ -42,9 +42,9 @@ function E(e) {
         }, []),
         j = i.useCallback(() => b(I._m.JOIN_GUILD), [b]),
         P = i.useCallback(() => {
-            if (O === I._m.CUSTOMIZE_GUILD) return void b(I._m.CREATION_INTENT);
+            if (C === I._m.CUSTOMIZE_GUILD) return void b(I._m.CREATION_INTENT);
             (b(I._m.GUILD_TEMPLATES), A(null));
-        }, [O]),
+        }, [C]),
         M = i.useCallback(
             (e) => {
                 (v(e), l(e));
@@ -64,7 +64,7 @@ function E(e) {
             children: (0, r.jsx)('div', {
                 className: T.container,
                 children: (0, r.jsxs)(s.MyZ, {
-                    activeSlide: O,
+                    activeSlide: C,
                     width: Z,
                     onSlideReady: (e) => D(e),
                     children: [
@@ -74,7 +74,7 @@ function E(e) {
                             impressionProperties: R,
                             children: (0, r.jsx)(p.Z, {
                                 isNewUser: !1,
-                                onJoin: C ? j : void 0,
+                                onJoin: O ? j : void 0,
                                 onChooseTemplate: y,
                                 onClose: E
                             })

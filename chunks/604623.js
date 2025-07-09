@@ -215,14 +215,19 @@ function C(e) {
                         var t, r;
                         return (0, n.jsx)(
                             d.zxk,
-                            ((t = O({}, e)),
+                            ((t = O(
+                                {
+                                    variant: 'primary',
+                                    text: v.intl.string(v.t.R3BPHx)
+                                },
+                                e
+                            )),
                             (r = r =
                                 {
                                     'aria-label': v.intl.string(v.t.R3BPHx),
                                     disabled: !f,
-                                    submitting: c,
-                                    onClick: g,
-                                    children: v.intl.string(v.t.R3BPHx)
+                                    loading: c,
+                                    onClick: g
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

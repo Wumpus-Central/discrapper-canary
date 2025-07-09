@@ -1,24 +1,24 @@
-(t.d(e, { default: () => d }), t(388685));
+(t.d(n, { default: () => d }), t(388685));
 var r = t(255367),
     i = t(73800),
     s = t(481060),
-    o = t(369994),
+    a = t(369994),
     c = t(781208),
     l = t(388032),
-    a = t(122238);
-function d(n) {
-    let { guildId: e, transitionState: t, onClose: d } = n,
+    o = t(122238);
+function d(e) {
+    let { guildId: n, transitionState: t, onClose: d } = e,
         [x, h] = i.useState([]),
-        k = i.useCallback(() => {
-            ((0, o.KK)(e, x), (0, o.C4)(e), d());
-        }, [e, d, x]),
-        u = i.useCallback(
-            (n) => () => {
-                h((e) => (e.includes(n) ? e.filter((e) => e !== n) : [...e, n]));
+        u = i.useCallback(() => {
+            ((0, a.KK)(n, x), (0, a.C4)(n), d());
+        }, [n, d, x]),
+        S = i.useCallback(
+            (e) => () => {
+                h((n) => (n.includes(e) ? n.filter((n) => n !== e) : [...n, e]));
             },
             []
         ),
-        S = i.useCallback(() => {
+        C = i.useCallback(() => {
             open(c.RI);
         }, []);
     return (0, r.jsxs)(s.Y0X, {
@@ -39,50 +39,51 @@ function d(n) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: l.intl.format(l.t.Hg8Ee3, { onClick: S })
+                        children: l.intl.format(l.t.Hg8Ee3, { onClick: C })
                     }),
                     (0, r.jsx)('div', {
-                        className: a.mainCheckboxContainer,
-                        children: c.Ud.map((n) =>
+                        className: o.mainCheckboxContainer,
+                        children: c.Ud.map((e) =>
                             (0, r.jsxs)(
                                 s.P3F,
                                 {
-                                    className: a.checkboxContainer,
-                                    onClick: u(n),
+                                    className: o.checkboxContainer,
+                                    onClick: S(e),
                                     children: [
                                         (0, r.jsx)(s.XZJ, {
                                             type: s.XZJ.Types.INVERTED,
-                                            className: a.checkbox,
-                                            value: x.includes(n),
+                                            className: o.checkbox,
+                                            value: x.includes(e),
                                             displayOnly: !0
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            children: (0, c.$l)(n)
+                                            children: (0, c.$l)(e)
                                         })
                                     ]
                                 },
-                                n
+                                e
                             )
                         )
                     })
                 ]
             }),
-            (0, r.jsxs)(s.mzw, {
-                children: [
-                    (0, r.jsx)(s.zxk, {
-                        onClick: k,
-                        color: s.zxk.Colors.BRAND,
-                        look: s.zxk.Looks.FILLED,
-                        children: l.intl.string(l.t.geKm7u)
-                    }),
-                    (0, r.jsx)(s.zxk, {
-                        onClick: d,
-                        color: s.zxk.Colors.PRIMARY,
-                        look: s.zxk.Looks.LINK,
-                        children: l.intl.string(l.t['ETE/oK'])
-                    })
-                ]
+            (0, r.jsx)(s.mzw, {
+                children: (0, r.jsxs)(s.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(s.zxk, {
+                            variant: 'primary',
+                            text: l.intl.string(l.t.geKm7u),
+                            onClick: u
+                        }),
+                        (0, r.jsx)(s.zxk, {
+                            variant: 'secondary',
+                            text: l.intl.string(l.t['ETE/oK']),
+                            onClick: d
+                        })
+                    ]
+                })
             })
         ]
     });

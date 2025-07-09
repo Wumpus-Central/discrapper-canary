@@ -2,7 +2,7 @@ n.d(t, { Z: () => h });
 var i = n(255367),
     a = n(73800),
     o = n(442837),
-    r = n(481060),
+    r = n(755721),
     l = n(100527),
     c = n(906732),
     s = n(767714),
@@ -35,9 +35,9 @@ function h(e) {
         return null;
     let R = (0, i.jsx)(s.Z, {
         className: x.__invalid_getNitroLink,
-        size: r.zxk.Sizes.SMALL,
-        look: r.zxk.Looks.LINK,
-        color: r.zxk.Colors.LINK,
+        size: r.zx.Sizes.SMALL,
+        look: r.zx.Looks.LINK,
+        color: r.zx.Colors.LINK,
         subscriptionTier: m.Si.TIER_2,
         textOptions: { textOverride: N.intl.format(N.t['944tDg'], {}) },
         showIcon: !1,

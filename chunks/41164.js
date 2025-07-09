@@ -1,4 +1,4 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => m });
 var i = n(255367);
 n(73800);
 var a = n(481060),
@@ -9,9 +9,9 @@ var a = n(481060),
     c = n(726985),
     d = n(388032),
     u = n(688443),
-    m = n(170143);
-let p = (e) => {
-    let { transitionState: t, onClose: n, classificationId: p, source: f } = e,
+    p = n(170143);
+let m = (e) => {
+    let { transitionState: t, onClose: n, classificationId: m, source: f } = e,
         h = (0, r.Z)(),
         g = () => {
             (n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING));
@@ -26,7 +26,7 @@ let p = (e) => {
                 children: [
                     (0, i.jsx)('img', {
                         className: u.image,
-                        src: m,
+                        src: p,
                         alt: ''
                     }),
                     (0, i.jsx)(a.olH, {
@@ -40,19 +40,22 @@ let p = (e) => {
                 children: h
                     ? (0, i.jsx)(a.$jN, {})
                     : (0, i.jsx)(o.Z, {
-                          classificationId: p,
+                          classificationId: m,
                           source: f,
                           onError: g,
                           onClose: g
                       })
             }),
             (0, i.jsx)(a.mzw, {
-                children: (0, i.jsx)(a.zxk, {
+                children: (0, i.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
                     className: u.__invalid_button,
-                    type: 'button',
-                    color: a.zxk.Colors.BRAND,
-                    onClick: g,
-                    children: d.intl.string(d.t.elrEjI)
+                    children: (0, i.jsx)(a.zxk, {
+                        variant: 'primary',
+                        text: d.intl.string(d.t.elrEjI),
+                        type: 'button',
+                        onClick: g
+                    })
                 })
             })
         ]

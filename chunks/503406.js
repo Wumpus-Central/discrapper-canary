@@ -1,85 +1,86 @@
-(n.d(t, { Z: () => N }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var l = n(255367),
     i = n(73800),
     r = n(120356),
-    s = n.n(r),
-    a = n(392711),
-    o = n.n(a),
-    c = n(481060),
-    d = n(231239),
-    u = n(881052),
-    m = n(313201),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    c = n(755721),
+    d = n(481060),
+    u = n(231239),
+    m = n(881052),
+    h = n(313201),
     x = n(703656),
-    h = n(981631),
-    _ = n(388032),
-    g = n(768680);
-let f = (0, m.hQ)(),
-    N = (e) => {
+    _ = n(981631),
+    g = n(388032),
+    f = n(768680);
+let p = (0, h.hQ)(),
+    v = (e) => {
         let { email: t, guildId: n, onClose: r } = e,
-            [a, m] = i.useState(''),
-            [N, p] = i.useState(null),
-            v = i.useCallback(async () => {
+            [s, h] = i.useState(''),
+            [v, N] = i.useState(null),
+            E = i.useCallback(async () => {
                 if (null != n)
                     try {
-                        let e = await d.Z.verifyCode(a, n, t);
-                        e.guild && (null == r || r(), (0, x.uL)(h.Z5c.CHANNEL(e.guild.id)));
+                        let e = await u.Z.verifyCode(s, n, t);
+                        e.guild && (null == r || r(), (0, x.uL)(_.Z5c.CHANNEL(e.guild.id)));
                     } catch (e) {
-                        p(new u.Hx(e));
+                        N(new m.Hx(e));
                     }
-            }, [a, t, n, r]),
-            E = o().throttle(() => {
-                d.Z.sendVerificationEmail(t, !0, n);
+            }, [s, t, n, r]),
+            S = o().throttle(() => {
+                u.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
-            S = async (e) => {
-                null != a && '' !== a && e.charCode === h.yXg.ENTER && (await v());
+            I = async (e) => {
+                null != s && '' !== s && e.charCode === _.yXg.ENTER && (await E());
             };
         return (0, l.jsxs)('div', {
-            className: g.container,
+            className: f.container,
             children: [
-                (0, l.jsx)('div', { className: g.topImage }),
-                (0, l.jsx)(c.X6q, {
-                    className: s()(g.centerText, g.header),
+                (0, l.jsx)('div', { className: f.topImage }),
+                (0, l.jsx)(d.X6q, {
+                    className: a()(f.centerText, f.header),
                     variant: 'heading-xl/semibold',
-                    children: _.intl.string(_.t.SJ3Lxc)
+                    children: g.intl.string(g.t.SJ3Lxc)
                 }),
                 (0, l.jsx)('div', {
-                    className: g.descriptionWidth,
-                    children: (0, l.jsx)(c.Text, {
-                        className: g.centerText,
+                    className: f.descriptionWidth,
+                    children: (0, l.jsx)(d.Text, {
+                        className: f.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: _.intl.format(_.t['b+W0oq'], {
+                        children: g.intl.format(g.t['b+W0oq'], {
                             email: t,
-                            onClick: E
+                            onClick: S
                         })
                     })
                 }),
-                (0, l.jsxs)(c.xJW, {
-                    className: g.formItem,
+                (0, l.jsxs)(d.xJW, {
+                    className: f.formItem,
                     children: [
-                        (0, l.jsx)(c.vwX, {
-                            id: f,
-                            children: _.intl.string(_.t.rpWT1t)
+                        (0, l.jsx)(d.vwX, {
+                            id: p,
+                            children: g.intl.string(g.t.rpWT1t)
                         }),
-                        (0, l.jsx)(c.oil, {
-                            onKeyPress: S,
+                        (0, l.jsx)(d.oil, {
+                            onKeyPress: I,
                             onChange: (e) => {
-                                null != e && '' !== e && m(e);
+                                null != e && '' !== e && h(e);
                             },
-                            error: null == N ? void 0 : N.getAnyErrorMessage(),
-                            'aria-labelledby': f
+                            error: null == v ? void 0 : v.getAnyErrorMessage(),
+                            'aria-labelledby': p
                         })
                     ]
                 }),
-                (0, l.jsx)(c.zxk, {
+                (0, l.jsx)(c.zx, {
                     fullWidth: !0,
-                    onClick: v,
-                    size: c.zxk.Sizes.LARGE,
-                    color: c.zxk.Colors.BRAND,
-                    children: (0, l.jsx)(c.Text, {
-                        className: g.submitText,
+                    onClick: E,
+                    size: c.zx.Sizes.LARGE,
+                    color: c.zx.Colors.BRAND,
+                    children: (0, l.jsx)(d.Text, {
+                        className: f.submitText,
                         variant: 'text-sm/normal',
-                        children: _.intl.string(_.t.geKm7u)
+                        children: g.intl.string(g.t.geKm7u)
                     })
                 })
             ]

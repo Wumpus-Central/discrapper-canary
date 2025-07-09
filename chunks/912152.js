@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(230711),
-    l = n(63063),
-    a = n(74538),
+    a = n(63063),
+    l = n(74538),
     o = n(937615),
     c = n(981631),
     d = n(474936),
@@ -19,10 +19,10 @@ let p = function (e) {
             if (t)
                 return {
                     subtitle: u.intl.string(u.t.W5rDjY),
-                    flavor: u.intl.format(u.t.cUHcaW, { helpdeskArticle: l.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
+                    flavor: u.intl.format(u.t.cUHcaW, { helpdeskArticle: a.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
                 };
             let m = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-                p = a.ZP.getDefaultPrice(m.id, n),
+                p = l.ZP.getDefaultPrice(m.id, n),
                 g = (0, o.og)((0, o.T4)(p.amount, p.currency), m.interval, m.intervalCount);
             return {
                 subtitle: n ? u.intl.string(u.t.bhPzXV) : u.intl.string(u.t.Zs9h9f),

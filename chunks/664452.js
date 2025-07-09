@@ -69,14 +69,14 @@ function y(e) {
         w = (0, p.BT)(C),
         P = (0, m.SG)(T) || N,
         Z = (0, m.sN)(T),
-        [k, A] = i.useState(P),
+        [A, k] = i.useState(P),
         [D, R] = i.useState(Z),
         [L, M] = i.useState(!1),
-        B = k !== P || D !== Z || L,
+        B = A !== P || D !== Z || L,
         U = N && !w;
     if (null == C) return (y(), null);
     function W() {
-        A((e) => !e);
+        k((e) => !e);
     }
     return (0, r.jsxs)(a.Y0X, {
         transitionState: n,
@@ -142,7 +142,7 @@ function y(e) {
                                                 children: (0, r.jsx)(a.rsf, {
                                                     className: j.toggle,
                                                     onChange: W,
-                                                    checked: k,
+                                                    checked: A,
                                                     disabled: U
                                                 })
                                             })
@@ -180,37 +180,38 @@ function y(e) {
                     ]
                 })
             }),
-            (0, r.jsxs)(a.mzw, {
-                children: [
-                    (0, r.jsx)(a.zxk, {
-                        onClick: () => {
-                            (P || Z) && !k && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, D, E);
-                            let { source: e, alertType: n, messageId: i } = _;
-                            (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
-                                guild_id: t,
-                                source: e,
-                                raid_alert_id: i,
-                                raid_alert_type: n,
-                                intervention_type_enabled: (0, m.sO)(k, D),
-                                intervention_type_disabled: (0, m.lk)(k, D),
-                                duration: 60 * E
-                            }),
-                                y());
-                        },
-                        color: a.zxk.Colors.BRAND,
-                        look: a.zxk.Looks.FILLED,
-                        submitting: I,
-                        disabled: !B,
-                        children: x.intl.string(x.t['pwm/z8'])
-                    }),
-                    (0, r.jsx)(a.zxk, {
-                        onClick: y,
-                        color: a.zxk.Colors.PRIMARY,
-                        look: a.zxk.Looks.LINK,
-                        disabled: I,
-                        children: x.intl.string(x.t['ETE/oK'])
-                    })
-                ]
+            (0, r.jsx)(a.mzw, {
+                children: (0, r.jsxs)(a.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(a.zxk, {
+                            variant: 'primary',
+                            text: x.intl.string(x.t['pwm/z8']),
+                            onClick: () => {
+                                (P || Z) && !A && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, A, D, E);
+                                let { source: e, alertType: n, messageId: i } = _;
+                                (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                                    guild_id: t,
+                                    source: e,
+                                    raid_alert_id: i,
+                                    raid_alert_type: n,
+                                    intervention_type_enabled: (0, m.sO)(A, D),
+                                    intervention_type_disabled: (0, m.lk)(A, D),
+                                    duration: 60 * E
+                                }),
+                                    y());
+                            },
+                            loading: I,
+                            disabled: !B
+                        }),
+                        (0, r.jsx)(a.zxk, {
+                            variant: 'secondary',
+                            text: x.intl.string(x.t['ETE/oK']),
+                            onClick: y,
+                            disabled: I
+                        })
+                    ]
+                })
             })
         ]
     });

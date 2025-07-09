@@ -3,12 +3,12 @@ var r = n(255367);
 n(73800);
 var i = n(692547),
     l = n(481060),
-    o = n(311888),
-    a = n(388032),
+    a = n(311888),
+    o = n(388032),
     s = n(538145);
 let c = () =>
     (0, r.jsx)(l.ua7, {
-        text: a.intl.string(a.t.GMZqSk),
+        text: o.intl.string(o.t.GMZqSk),
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
@@ -41,7 +41,7 @@ let c = () =>
                 (n = n =
                     {
                         className: s.container,
-                        children: (0, r.jsx)(o.Z, { color: i.Z.unsafe_rawColors.WHITE_500.css })
+                        children: (0, r.jsx)(a.Z, { color: i.Z.unsafe_rawColors.WHITE_500.css })
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

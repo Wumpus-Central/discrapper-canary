@@ -1,62 +1,60 @@
-t.d(n, { default: () => h });
-var o = t(255367),
-    s = t(73800),
-    i = t(481060),
-    r = t(367907),
-    d = t(313889),
-    a = t(177862),
-    c = t(36459),
-    l = t(981631),
-    x = t(388032),
-    k = t(141758);
-function h(e) {
-    let { automodDecision: n, transitionState: t, onClose: h } = e,
+n.d(e, { default: () => p });
+var i = n(255367),
+    s = n(73800),
+    a = n(481060),
+    r = n(367907),
+    d = n(313889),
+    o = n(177862),
+    c = n(36459),
+    l = n(981631),
+    x = n(388032),
+    h = n(141758);
+function p(t) {
+    let { automodDecision: e, transitionState: n, onClose: p } = t,
         u = s.useCallback(() => {
             ((0, r.yw)(l.rMx.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: a.x2.BUG,
-                decision_id: n.decisionId,
-                message_id: n.messageId,
-                content: n.messageContent
+                feedback_type: o.x2.BUG,
+                decision_id: e.decisionId,
+                message_id: e.messageId,
+                content: e.messageContent
             }),
-                (0, c.Xx)(n.messageId, n.channel, d.d.SUBMIT_FEEDBACK),
-                h());
-        }, [n, h]);
-    return (0, o.jsxs)(i.Y0X, {
-        transitionState: t,
-        size: i.CgR.SMALL,
+                (0, c.Xx)(e.messageId, e.channel, d.d.SUBMIT_FEEDBACK),
+                p());
+        }, [e, p]);
+    return (0, i.jsxs)(a.Y0X, {
+        transitionState: n,
+        size: a.CgR.SMALL,
         parentComponent: 'AutomodSubmitFeedbackModal',
         children: [
-            (0, o.jsx)(i.xBx, {
+            (0, i.jsx)(a.xBx, {
                 separator: !1,
-                children: (0, o.jsx)(i.X6q, {
+                children: (0, i.jsx)(a.X6q, {
                     color: 'header-primary',
                     variant: 'heading-md/semibold',
                     children: x.intl.string(x.t['7bdzNj'])
                 })
             }),
-            (0, o.jsx)(i.hzk, {
-                children: (0, o.jsx)(i.Text, {
+            (0, i.jsx)(a.hzk, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: x.intl.string(x.t.Lbpk6u)
                 })
             }),
-            (0, o.jsxs)(i.mzw, {
+            (0, i.jsxs)(a.mzw, {
                 children: [
-                    (0, o.jsx)('div', {
-                        className: k.button,
-                        children: (0, o.jsx)(i.zxk, {
-                            onClick: u,
-                            color: i.zxk.Colors.BRAND,
-                            look: i.zxk.Looks.FILLED,
-                            children: x.intl.string(x.t.p89ACg)
+                    (0, i.jsx)('div', {
+                        className: h.button,
+                        children: (0, i.jsx)(a.zxk, {
+                            variant: 'primary',
+                            text: x.intl.string(x.t.p89ACg),
+                            onClick: u
                         })
                     }),
-                    (0, o.jsx)(i.zxk, {
-                        onClick: h,
-                        color: i.zxk.Colors.PRIMARY,
-                        look: i.zxk.Looks.LINK,
-                        children: x.intl.string(x.t['ETE/oK'])
+                    (0, i.jsx)(a.zxk, {
+                        variant: 'secondary',
+                        text: x.intl.string(x.t['ETE/oK']),
+                        onClick: p
                     })
                 ]
             })

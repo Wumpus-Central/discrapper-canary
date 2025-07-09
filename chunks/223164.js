@@ -1,8 +1,8 @@
-a.d(n, { default: () => C });
+a.d(n, { default: () => m });
 var t = a(255367),
-    s = a(73800),
-    r = a(120356),
-    i = a.n(r),
+    r = a(73800),
+    s = a(120356),
+    i = a.n(s),
     c = a(481060),
     l = a(313201),
     o = a(454585),
@@ -11,19 +11,19 @@ var t = a(255367),
     u = a(388032),
     x = a(44534),
     p = a(73433);
-function C(e) {
-    let { channel: n, isFromComposer: a, transitionState: r, onClose: C } = e,
-        m = (0, l.Dt)();
+function m(e) {
+    let { channel: n, isFromComposer: a, transitionState: s, onClose: m } = e,
+        C = (0, l.Dt)();
     return (
-        s.useEffect(
+        r.useEffect(
             () => () => {
                 a && d.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
             },
             [a]
         ),
         (0, t.jsxs)(c.Y0X, {
-            transitionState: r,
-            'aria-labelledby': m,
+            transitionState: s,
+            'aria-labelledby': C,
             size: c.CgR.DYNAMIC,
             className: x.container,
             parentComponent: 'ForumChannelGuidelinesModal',
@@ -61,8 +61,9 @@ function C(e) {
                 }),
                 (0, t.jsx)(c.mzw, {
                     children: (0, t.jsx)(c.zxk, {
-                        onClick: C,
-                        children: u.intl.string(u.t['NX+WJC'])
+                        variant: 'primary',
+                        text: u.intl.string(u.t['NX+WJC']),
+                        onClick: m
                     })
                 })
             ]

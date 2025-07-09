@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(930295),
-    o = n(481060),
-    a = n(579185),
+    a = n(481060),
+    o = n(579185),
     s = n(420212),
     c = n(940221);
 function u(e) {
@@ -32,7 +32,7 @@ function u(e) {
     return e;
 }
 function d(e) {
-    var { renderPopout: t, onMouseEnter: n, onMouseLeave: l, closePopout: o, isHovered: a } = e,
+    var { renderPopout: t, onMouseEnter: n, onMouseLeave: l, closePopout: a, isHovered: o } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -54,19 +54,19 @@ function d(e) {
         })(e, ['renderPopout', 'onMouseEnter', 'onMouseLeave', 'closePopout', 'isHovered']);
     return (
         i.useEffect(() => {
-            a || o();
-        }, [o, a]),
+            o || a();
+        }, [a, o]),
         (0, r.jsx)('div', {
             onMouseEnter: n,
             onMouseLeave: l,
-            children: t(u({ closePopout: o }, s))
+            children: t(u({ closePopout: a }, s))
         })
     );
 }
 let p = i.forwardRef(function (e, t) {
     let { renderPopout: n, popoutTargetRef: p, children: h, align: f = 'left', isPopoutBlocked: m, onPopoutOpen: g, onPopoutClose: b, onRequestClose: _ } = e,
         [y, C] = i.useState(!1),
-        { isHovered: x, setIsHovered: v, onMouseEnter: O, onMouseLeave: j, cancelTimers: E } = (0, a.Z)(200, 300);
+        { isHovered: x, setIsHovered: v, onMouseEnter: O, onMouseLeave: j, cancelTimers: E } = (0, o.Z)(200, 300);
     function S(e) {
         'focus' === e.type || y || O();
     }
@@ -86,9 +86,9 @@ let p = i.forwardRef(function (e, t) {
         [v, C]
     );
     let Z = (x && !m) || y;
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
-        animation: o.yRy.Animation.FADE,
+        animation: a.yRy.Animation.FADE,
         shouldShow: Z,
         animationPosition: 'top',
         position: 'top',

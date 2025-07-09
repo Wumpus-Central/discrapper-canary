@@ -1,34 +1,35 @@
-(n.d(t, { W: () => c }), n(953529));
+(n.d(t, { W: () => u }), n(953529));
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
+    l = n(755721),
+    a = n(481060),
     o = n(388032),
-    a = n(392819),
-    s = n(560580);
-function c(e) {
-    let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
-        p = i.useCallback(() => {
-            null == c || c();
-        }, [c]);
+    s = n(392819),
+    c = n(560580);
+function u(e) {
+    let { header: t, description: n, onDismiss: u, buttons: d, dismissible: p = !0 } = e,
+        h = i.useCallback(() => {
+            null == u || u();
+        }, [u]);
     return (0, r.jsxs)('div', {
-        className: a.safetyBanner,
+        className: s.safetyBanner,
         children: [
             (0, r.jsxs)('div', {
-                className: a.shieldAndHeading,
+                className: s.shieldAndHeading,
                 children: [
                     (0, r.jsx)('img', {
-                        className: a.safetyShieldIcon,
-                        src: s,
+                        className: s.safetyShieldIcon,
+                        src: c,
                         alt: ''
                     }),
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(a.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -38,36 +39,36 @@ function c(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: a.buttons,
+                className: s.buttons,
                 children:
-                    null == u
+                    null == d
                         ? void 0
-                        : u.map((e, t) => {
+                        : d.map((e, t) => {
                               var n;
                               return (0, r.jsx)(
-                                  l.zxk,
+                                  l.zx,
                                   {
-                                      size: null != (n = e.size) ? n : l.zxk.Sizes.SMALL,
+                                      size: null != (n = e.size) ? n : l.zx.Sizes.SMALL,
                                       color: e.color,
                                       'aria-label': e.text,
                                       onClick: e.onclick,
-                                      className: a.ctaButton,
+                                      className: s.ctaButton,
                                       children: e.text
                                   },
                                   t
                               );
                           })
             }),
-            d
-                ? (0, r.jsx)(l.P3F, {
-                      className: a.closeButton,
-                      onClick: p,
+            p
+                ? (0, r.jsx)(a.P3F, {
+                      className: s.closeButton,
+                      onClick: h,
                       role: 'button',
                       'aria-label': o.intl.string(o.t.WAI6xs),
-                      children: (0, r.jsx)(l.Dio, {
+                      children: (0, r.jsx)(a.Dio, {
                           size: 'md',
                           color: 'currentColor',
-                          className: a.closeButton
+                          className: s.closeButton
                       })
                   })
                 : null

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(688465),
-    l = n(921944),
-    a = n(388032),
+    a = n(921944),
+    l = n(388032),
     o = n(882051);
 function c(e) {
     let { markAsDismissed: t, onCTA: c } = e;
@@ -20,7 +20,7 @@ function c(e) {
                 children: [
                     (0, i.jsx)(r.P3F, {
                         className: o.closeIcon,
-                        onClick: () => t(l.L.USER_DISMISS),
+                        onClick: () => t(a.L.USER_DISMISS),
                         children: (0, i.jsx)(r.Dio, {})
                     }),
                     (0, i.jsx)('img', {
@@ -34,23 +34,22 @@ function c(e) {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
                                 className: o.heading,
-                                children: [a.intl.string(a.t.MLt8Hx), (0, i.jsx)(s.Z, { className: o.betaTag })]
+                                children: [l.intl.string(l.t.MLt8Hx), (0, i.jsx)(s.Z, { className: o.betaTag })]
                             }),
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: a.intl.string(a.t['l+lSLi'])
+                                children: l.intl.string(l.t['l+lSLi'])
                             })
                         ]
                     }),
                     (0, i.jsx)(r.zxk, {
-                        color: r.zxk.Colors.BRAND,
-                        look: r.zxk.Looks.FILLED,
+                        variant: 'primary',
+                        text: l.intl.string(l.t['9WdoBw']),
                         fullWidth: !0,
                         onClick: () => {
-                            (t(l.L.TAKE_ACTION), c());
-                        },
-                        children: a.intl.string(a.t['9WdoBw'])
+                            (t(a.L.TAKE_ACTION), c());
+                        }
                     })
                 ]
             })

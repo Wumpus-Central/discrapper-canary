@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(230711),
+    a = n(481060),
+    l = n(230711),
     o = n(63063),
     c = n(74538),
     d = n(140465),
@@ -20,25 +20,25 @@ let h = (e) => {
     if (null == r) return null;
     let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
     if ((c.ZP.isBoostOnlySubscription(r) ? (t = p.intl.string(p.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
-    let _ = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
-        E = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
+    let _ = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
+        j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != f ? f : b ? 'always-white' : 'text-default'),
-        (0, i.jsxs)(l.Zbd, {
+        (0, i.jsxs)(a.Zbd, {
             className: s()(g.container, h, { [g.centerText]: b }),
-            type: l.Zbd.Types.CUSTOM,
+            type: a.Zbd.Types.CUSTOM,
             children: [
-                (0, i.jsx)(l.P4T, {
+                (0, i.jsx)(a.P4T, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor',
                     className: s()(g.icon, { [g.lightThemeColorOnly]: b })
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: E
+                    children: j
                         ? p.intl.format(p.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: _

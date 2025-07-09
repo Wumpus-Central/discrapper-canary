@@ -1,124 +1,125 @@
-(n.d(t, { Z: () => m }), n(388685));
+(n.d(t, { Z: () => p }), n(388685));
 var i = n(255367),
     r = n(73800),
-    s = n(481060),
+    s = n(755721),
+    a = n(481060),
     l = n(484614),
-    a = n(313201),
-    o = n(518638),
-    c = n(388032),
-    d = n(302291);
-function u(e) {
+    o = n(313201),
+    c = n(518638),
+    d = n(388032),
+    u = n(302291);
+function m(e) {
     let { onClose: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(s.xBx, {
+            (0, i.jsxs)(a.xBx, {
                 separator: !1,
-                className: d.errorHeader,
+                className: u.errorHeader,
                 children: [
-                    (0, i.jsx)('div', { className: d.errorArt }),
-                    (0, i.jsx)(s.X6q, {
+                    (0, i.jsx)('div', { className: u.errorArt }),
+                    (0, i.jsx)(a.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: c.intl.string(c.t.iufib2)
+                        children: d.intl.string(d.t.iufib2)
                     })
                 ]
             }),
-            (0, i.jsx)(s.hzk, {
-                className: d.errorBody,
-                children: (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.hzk, {
+                className: u.errorBody,
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
-                    className: d.bodyText,
-                    children: c.intl.string(c.t.eAn6z8)
+                    className: u.bodyText,
+                    children: d.intl.string(d.t.eAn6z8)
                 })
             }),
-            (0, i.jsx)(s.mzw, {
-                children: (0, i.jsx)(s.zxk, {
-                    color: s.zxk.Colors.BRAND,
-                    onClick: t,
-                    children: c.intl.string(c.t.cpT0Cg)
+            (0, i.jsx)(a.mzw, {
+                children: (0, i.jsx)(a.zxk, {
+                    variant: 'primary',
+                    text: d.intl.string(d.t.cpT0Cg),
+                    onClick: t
                 })
             })
         ]
     });
 }
-let m = function (e) {
-    let { onClose: t, onClaim: n, code: m, outboundPromotion: p, transitionState: g } = e,
-        [h, f] = r.useState(null),
-        b = (0, a.Dt)();
+let p = function (e) {
+    let { onClose: t, onClaim: n, code: p, outboundPromotion: g, transitionState: h } = e,
+        [f, b] = r.useState(null),
+        x = (0, o.Dt)();
     return (
         r.useEffect(() => {
-            null == m &&
-                (0, o.A2)(p.id)
+            null == p &&
+                (0, c.A2)(g.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
-                        return f(null == e || null == (t = e.body) ? void 0 : t.code);
+                        return b(null == e || null == (t = e.body) ? void 0 : t.code);
                     });
-        }, [m, p.id, n]),
-        (0, i.jsx)(s.Y0X, {
-            transitionState: g,
-            'aria-labelledby': b,
+        }, [p, g.id, n]),
+        (0, i.jsx)(a.Y0X, {
+            transitionState: h,
+            'aria-labelledby': x,
             parentComponent: 'OutboundPromotionRedemptionModal',
             children:
-                null != h
-                    ? (0, i.jsx)(u, { onClose: t })
-                    : null == m
-                      ? (0, i.jsx)(s.hzk, { children: (0, i.jsx)(s.$jN, { className: d.loading }) })
+                null != f
+                    ? (0, i.jsx)(m, { onClose: t })
+                    : null == p
+                      ? (0, i.jsx)(a.hzk, { children: (0, i.jsx)(a.$jN, { className: u.loading }) })
                       : (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsxs)(s.xBx, {
+                                (0, i.jsxs)(a.xBx, {
                                     separator: !1,
-                                    className: d.headerContainer,
+                                    className: u.headerContainer,
                                     children: [
-                                        (0, i.jsx)('div', { className: d.art }),
-                                        (0, i.jsx)(s.X6q, {
+                                        (0, i.jsx)('div', { className: u.art }),
+                                        (0, i.jsx)(a.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            children: c.intl.string(c.t['23BfZm'])
+                                            children: d.intl.string(d.t['23BfZm'])
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(s.hzk, {
+                                (0, i.jsxs)(a.hzk, {
                                     children: [
-                                        (0, i.jsx)(s.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            className: d.bodyText,
-                                            children: p.outboundRedemptionModalBody
+                                            className: u.bodyText,
+                                            children: g.outboundRedemptionModalBody
                                         }),
-                                        (0, i.jsx)(s.$i$, { className: d.formDivider }),
-                                        (0, i.jsxs)(s.hjN, {
-                                            title: c.intl.string(c.t.s9LFQk),
-                                            className: d.formSection,
+                                        (0, i.jsx)(a.$i$, { className: u.formDivider }),
+                                        (0, i.jsxs)(a.hjN, {
+                                            title: d.intl.string(d.t.s9LFQk),
+                                            className: u.formSection,
                                             children: [
                                                 (0, i.jsx)(l.Z, {
-                                                    value: m,
-                                                    buttonColor: s.zxk.Colors.BRAND,
-                                                    buttonLook: s.zxk.Looks.FILLED,
+                                                    value: p,
+                                                    buttonColor: s.zx.Colors.BRAND,
+                                                    buttonLook: s.zx.Looks.FILLED,
                                                     delay: 1000
                                                 }),
-                                                (0, i.jsx)(s.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    className: d.confirmationText,
-                                                    children: c.intl.string(c.t['F+nFTU'])
+                                                    className: u.confirmationText,
+                                                    children: d.intl.string(d.t['F+nFTU'])
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(s.mzw, {
+                                (0, i.jsxs)(a.mzw, {
                                     children: [
-                                        (0, i.jsx)(s.zxk, {
-                                            color: s.zxk.Colors.BRAND,
+                                        (0, i.jsx)(a.zxk, {
+                                            variant: 'primary',
+                                            text: d.intl.string(d.t['+zx47e']),
                                             onClick: () => {
-                                                let e = (0, o.BU)(m, p);
+                                                let e = (0, c.BU)(p, g);
                                                 window.open(e, '_blank');
-                                            },
-                                            children: c.intl.string(c.t['+zx47e'])
+                                            }
                                         }),
-                                        (0, i.jsx)(s.zxk, {
+                                        (0, i.jsx)(s.zx, {
                                             onClick: t,
-                                            look: s.zxk.Looks.LINK,
-                                            color: d.maybeLaterButton,
-                                            children: c.intl.string(c.t.TulDPj)
+                                            look: s.zx.Looks.LINK,
+                                            color: u.maybeLaterButton,
+                                            children: d.intl.string(d.t.TulDPj)
                                         })
                                     ]
                                 })

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(74538),
+    a = n(755721),
+    l = n(74538),
     o = n(773104),
     c = n(104494),
     d = n(639119),
@@ -17,11 +17,11 @@ var r = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: E = '', descriptionCta: j = '', isPremiumGetCta: O, onCtaClick: C, cardVariant: S } = e,
-        v = (0, d.N)(),
-        T = null == v ? void 0 : v.subscription_trial,
+        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: E = '', isPremiumGetCta: O, onCtaClick: C, cardVariant: v } = e,
+        S = (0, d.N)(),
+        T = null == S ? void 0 : S.subscription_trial,
         N = (0, c.Ng)(),
-        I = (0, a.Rt)({
+        I = (0, l.Rt)({
             intervalType: null == T ? void 0 : T.interval,
             intervalCount: null == T ? void 0 : T.interval_count
         }),
@@ -32,7 +32,7 @@ let b = (e) => {
             onTier0TrialOffer: I,
             onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, { percent: null == N ? void 0 : N.discount.amount })
         }),
-        A = (0, m._)(S);
+        A = (0, m._)(v);
     return (0, i.jsxs)('div', {
         className: s()(f.cardDescription, null == A || null == (t = A.description) ? void 0 : t.className),
         children: [
@@ -41,24 +41,24 @@ let b = (e) => {
                 cardVariantStyleInfo: A,
                 titleClassName: b,
                 subtitle: _,
-                description: E
+                description: j
             }),
             O &&
                 (0, i.jsx)(u.Z, {
                     className: x,
-                    look: l.zxk.Looks.BLANK,
-                    color: l.zxk.Colors.CUSTOM,
+                    look: a.zx.Looks.BLANK,
+                    color: a.zx.Colors.CUSTOM,
                     subscriptionTier: g.Si.TIER_2,
                     textOptions: { textOverride: y },
                     showGradient: !0
                 }),
-            0 !== j.length &&
+            0 !== E.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != C &&
-                (0, i.jsx)(l.zxk, {
+                (0, i.jsx)(a.zx, {
                     className: x,
                     onClick: C,
-                    children: j
+                    children: E
                 })
         ]
     });

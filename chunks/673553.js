@@ -2,8 +2,8 @@
 var i = n(670481),
     r = n(607070),
     s = n(819640),
-    l = n(131951),
-    a = n(19780),
+    a = n(131951),
+    l = n(19780),
     o = n(585483),
     c = n(5967),
     d = n(13140),
@@ -24,10 +24,10 @@ let m = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'A
                 ('Tab' === t && o.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
                     ? (e.preventDefault(), o.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          a.Z.isConnected() &&
-                          l.Z.getMode() === u.pM4.PUSH_TO_TALK &&
-                          !l.Z.isSelfMute() &&
-                          Object.values(l.Z.getShortcuts())
+                          l.Z.isConnected() &&
+                          a.Z.getMode() === u.pM4.PUSH_TO_TALK &&
+                          !a.Z.isSelfMute() &&
+                          Object.values(a.Z.getShortcuts())
                               .map(d.d2)
                               .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
                       ) && void (!e.metaKey && !e.ctrlKey && !m.has(t) && o.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS)))

@@ -56,7 +56,7 @@ function T(e) {
     }
     return e;
 }
-function k(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function k(e, t) {
         e
     );
 }
-class D extends r.PureComponent {
+class k extends r.PureComponent {
     handleDisconnect() {
         h.default.selectVoiceChannel(null);
     }
@@ -113,7 +113,7 @@ class D extends r.PureComponent {
                                   children: (e) =>
                                       (0, i.jsx)(
                                           c.P3F,
-                                          k(T({}, e), {
+                                          D(T({}, e), {
                                               innerRef: this.rtcConnectionStatusRef,
                                               children: (0, i.jsx)(v.Z, {
                                                   channelId: o.id,
@@ -208,8 +208,8 @@ function R(e) {
         [u, h, p] = (0, a.Wu)([C.Z], () => [C.Z.getConnectionState(n), C.Z.getLastPing(n), C.Z.getQuality(n)]),
         { changeLeaveCallAndActivityIcons: f } = (0, g.A)({ location: 'Controls' });
     return (0, i.jsx)(
-        D,
-        k(T({}, o), {
+        k,
+        D(T({}, o), {
             context: t,
             lobbyId: n,
             channel: r,

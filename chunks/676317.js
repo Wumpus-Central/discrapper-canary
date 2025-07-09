@@ -1,18 +1,18 @@
-n.d(t, {
+a.d(t, {
     Nb: () => c,
     oA: () => u,
     pr: () => d,
     ze: () => o
 });
-var a = n(442837),
-    r = n(430824),
-    l = n(496675),
-    i = n(981631);
+var n = a(442837),
+    r = a(430824),
+    l = a(496675),
+    i = a(981631);
 let s = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Z,
-        a = t.getGuild(e);
-    return null != a && n.can(i.Plq.MANAGE_GUILD, a);
+        a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Z,
+        n = t.getGuild(e);
+    return null != n && a.can(i.Plq.MANAGE_GUILD, n);
 };
 function o(e) {
     return null != e && s(e);
@@ -21,10 +21,10 @@ function c(e) {
     return s(e);
 }
 function d(e) {
-    return (0, a.e7)([r.Z, l.Z], () => s(e, r.Z, l.Z), [e]);
+    return (0, n.e7)([r.Z, l.Z], () => s(e, r.Z, l.Z), [e]);
 }
 function u(e) {
-    return (0, a.e7)(
+    return (0, n.e7)(
         [r.Z],
         () => {
             let t = r.Z.getGuild(e);

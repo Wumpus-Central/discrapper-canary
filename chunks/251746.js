@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(66999),
     u = n(665906),
@@ -12,8 +12,8 @@ var r = n(255367),
     h = n(388032);
 function f(e) {
     let t = (0, u.Y)(e),
-        n = (0, a.e7)([d.Z], () => d.Z.isInChannel(e.id)),
-        l = (0, a.e7)([d.Z], () => !o().isEmpty(d.Z.getVoiceStatesForChannel(e.id))),
+        n = (0, o.e7)([d.Z], () => d.Z.isInChannel(e.id)),
+        l = (0, o.e7)([d.Z], () => !a().isEmpty(d.Z.getVoiceStatesForChannel(e.id))),
         { needSubscriptionToAccess: f } = (0, c.Z)(e.id),
         m = i.useCallback(() => {
             p.Z.handleVoiceConnect({

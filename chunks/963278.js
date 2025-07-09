@@ -27,10 +27,9 @@ let f = (e) => {
                               children: t.name
                           }),
                           (0, r.jsx)(a.zxk, {
-                              color: a.Ttl.PRIMARY,
-                              look: a.iLD.FILLED,
-                              onClick: () => n('shelf block see all', t.categorySkuId),
-                              children: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name })
+                              variant: 'secondary',
+                              text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
+                              onClick: () => n('shelf block see all', t.categorySkuId)
                           })
                       ]
                   }),

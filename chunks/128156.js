@@ -38,10 +38,10 @@ function P(e) {
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         R = S.length > 0 || null != B,
-        G = Z && null == B && null == D && null != L,
-        V = !M && (R || G),
+        V = Z && null == B && null == D && null != L,
+        G = !M && (R || V),
         F = E.length > 0;
-    if (!V && !F && U)
+    if (!G && !F && U)
         return (0, o.jsx)('div', {
             className: O.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -64,7 +64,7 @@ function P(e) {
                 )
             )
         });
-    if (!V && !F && !U) {
+    if (!G && !F && !U) {
         var Y;
         return k
             ? (0, o.jsx)(h.Uf, { onClose: C })
@@ -79,14 +79,14 @@ function P(e) {
         className: O.scroller,
         fade: !0,
         children: [
-            V
+            G
                 ? (0, o.jsx)(g.Z, {
                       heading: v.intl.string(v.t.J6STd3),
                       children: (0, o.jsxs)('ul', {
                           className: O.cards,
                           children: [
                               !w &&
-                                  G &&
+                                  V &&
                                   (0, o.jsx)('li', {
                                       children: (0, o.jsx)(y.Z, {
                                           user: t,
@@ -122,7 +122,7 @@ function P(e) {
                                   )
                               ),
                               w &&
-                                  G &&
+                                  V &&
                                   (0, o.jsx)('li', {
                                       children: (0, o.jsx)(y.Z, {
                                           user: t,

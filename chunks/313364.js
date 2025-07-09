@@ -37,9 +37,9 @@ function R(e) {
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
-        k = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        A = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        L = i.useCallback(
+        A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        L = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        k = i.useCallback(
             (e) => {
                 null != e &&
                     (0, f.openUserProfileModal)({
@@ -56,7 +56,7 @@ function R(e) {
             null == (e = M.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let U = (0, C.xb)(!1, !1, A);
+    let U = (0, C.xb)(!1, !1, L);
     return (0, r.jsxs)(d.Gt, {
         value: l,
         children: [
@@ -92,7 +92,7 @@ function R(e) {
                                                 children: [
                                                     (0, r.jsx)(v.Z, { guild: n }),
                                                     (0, r.jsx)(_.Z, { guild: n }),
-                                                    k
+                                                    A
                                                         ? (0, r.jsxs)('div', {
                                                               className: P.mainTableContainer,
                                                               children: [
@@ -104,7 +104,7 @@ function R(e) {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
-                                                                      onSelectRow: L,
+                                                                      onSelectRow: k,
                                                                       onResetForNewMembers: G
                                                                   }),
                                                                   U !== C.po.SUCCESS_STILL_INDEXING && (0, r.jsx)(N.Z, { guildId: n.id })

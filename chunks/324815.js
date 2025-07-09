@@ -2,11 +2,11 @@ n.d(t, { Z: () => c });
 var i = n(255367),
     r = n(120356),
     s = n.n(r),
-    l = n(18582),
-    a = n(610902);
+    a = n(18582),
+    l = n(610902);
 let o = {
-    white: a.borderWhite,
-    green: a.borderGreen
+    white: l.borderWhite,
+    green: l.borderGreen
 };
 function c(e) {
     var t,
@@ -32,7 +32,7 @@ function c(e) {
             return r;
         })(e, ['className', 'color', 'onClick', 'disabled', 'children', 'muted']);
     return (0, i.jsx)(
-        l.Z,
+        a.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +61,7 @@ function c(e) {
         (n = n =
             {
                 muted: p,
-                className: s()(u ? a.buttonDisabled : a.buttonEnabled, o[c], r),
+                className: s()(u ? l.buttonDisabled : l.buttonEnabled, o[c], r),
                 onClick: u ? void 0 : d,
                 children: m
             }),

@@ -27,8 +27,8 @@ function A(e) {
         E = (0, p.Dt)(),
         w = (0, b.Z)(),
         N = _.qF.useSetting(),
-        [R, L] = r.useState((0, g.P)(O.default.getCurrentUser())),
-        D = (0, l.O)(),
+        [R, D] = r.useState((0, g.P)(O.default.getCurrentUser())),
+        L = (0, l.O)(),
         { analyticsLocations: x } = (0, u.ZP)(s.Z.CAMERA_PREVIEW),
         j = r.useRef(null);
     (r.useEffect(() => {
@@ -68,7 +68,7 @@ function A(e) {
                                 }));
                         }
                         return e;
-                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, D.location)
+                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, L.location)
                 });
             } catch (e) {}
             (await I(), (0, f.Up)(R));
@@ -100,7 +100,7 @@ function A(e) {
                                 hideDeviceHeader: !0,
                                 hideCameraSettingsLink: !0,
                                 selectedBackgroundOption: R,
-                                onSelectBackgroundOption: L,
+                                onSelectBackgroundOption: D,
                                 hideDeviceSelector: a,
                                 renderCamera: (e) =>
                                     (0, n.jsxs)('div', {
@@ -128,10 +128,11 @@ function A(e) {
                             (() => {
                                 let e = a ? T.intl.string(T.t.KQENho) : T.intl.string(T.t.kgIe9f);
                                 return (0, n.jsx)(i.zxk, {
+                                    variant: 'primary',
+                                    size: 'sm',
+                                    text: e,
                                     onClick: a ? U : M,
-                                    size: i.zxk.Sizes.SMALL,
-                                    autoFocus: !a,
-                                    children: e
+                                    autoFocus: !a
                                 });
                             })(),
                             (0, n.jsx)(i.XZJ, {

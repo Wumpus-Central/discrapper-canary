@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(785681),
+    a = n(481060),
+    l = n(785681),
     o = n(130310),
     c = n(916723),
     d = n(388032),
@@ -12,18 +12,18 @@ var r = n(120356),
     m = n(589608),
     p = n(128216);
 let g = () => {
-    let e = (0, a.o)(d.intl.string(c.default.i4XFEB), d.intl.string(c.default.eHQZuL));
+    let e = (0, l.o)(d.intl.string(c.default.i4XFEB), d.intl.string(c.default.eHQZuL));
     return (0, i.jsxs)('div', {
         className: s()(u.container, m.box, m),
         children: [
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, i.jsx)(a.X6q, {
                         className: u.header,
                         variant: 'heading-md/bold',
-                        children: (0, i.jsx)(l.y5t, { children: d.intl.string(c.default.XJabSE) })
+                        children: (0, i.jsx)(a.y5t, { children: d.intl.string(c.default.XJabSE) })
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: u.description,
                         variant: 'text-sm/medium',
                         color: 'text-muted',

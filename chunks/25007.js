@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(481369),
-    o = n(944103),
-    a = n(946050),
+    a = n(944103),
+    o = n(946050),
     s = n(256413),
     c = n(292853),
     u = n(360205),
@@ -12,7 +12,7 @@ let p = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
         i = (0, s.Z)(t),
         p = (0, l.Z)(),
-        { showUnreadsNotice: h, clearUnreadsNotice: f } = (0, o.Z)(t);
+        { showUnreadsNotice: h, clearUnreadsNotice: f } = (0, a.Z)(t);
     return t.isArchivedLockedThread()
         ? (0, r.jsx)(u.s, {
               channel: t,
@@ -24,7 +24,7 @@ let p = i.memo(function (e) {
                 narrow: n
             })
           : h
-            ? (0, r.jsx)(a.Z, {
+            ? (0, r.jsx)(o.Z, {
                   channel: t,
                   clearUnreadsNotice: f
               })

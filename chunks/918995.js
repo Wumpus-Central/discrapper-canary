@@ -1,10 +1,10 @@
 (n.d(t, { default: () => u }), n(388685));
 var r = n(255367),
-    s = n(73800),
-    i = n(481060),
-    o = n(233787),
-    c = n(388032);
-function a(e, t, n) {
+    i = n(73800),
+    s = n(481060),
+    a = n(233787),
+    o = n(388032);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,26 +17,26 @@ function a(e, t, n) {
         e
     );
 }
-class l extends s.Component {
+class l extends i.Component {
     render() {
         let { transitionState: e } = this.props;
-        return (0, r.jsxs)(o.Z, {
+        return (0, r.jsxs)(a.Z, {
             transitionState: e,
-            'aria-label': c.intl.string(c.t.Nn0Px8),
+            'aria-label': o.intl.string(o.t.Nn0Px8),
             children: [
-                (0, r.jsx)(o.Z.Header, { children: c.intl.string(c.t.Nn0Px8) }),
-                (0, r.jsx)(o.Z.Content, {
-                    type: o.Z.Types.UNCLAIMED,
-                    children: c.intl.string(c.t['7btfmJ'])
+                (0, r.jsx)(a.Z.Header, { children: o.intl.string(o.t.Nn0Px8) }),
+                (0, r.jsx)(a.Z.Content, {
+                    type: a.Z.Types.UNCLAIMED,
+                    children: o.intl.string(o.t['7btfmJ'])
                 }),
-                (0, r.jsx)(o.Z.Footer, {
+                (0, r.jsx)(a.Z.Footer, {
                     secondary: {
                         onClick: this.cancel,
-                        label: c.intl.string(c.t.oEAioK)
+                        label: o.intl.string(o.t.oEAioK)
                     },
                     primary: {
                         onClick: this.claimAccount,
-                        label: c.intl.string(c.t.fiNVio)
+                        label: o.intl.string(o.t.fiNVio)
                     }
                 })
             ]
@@ -44,14 +44,14 @@ class l extends s.Component {
     }
     constructor(...e) {
         (super(...e),
-            a(this, 'cancel', () => {
+            c(this, 'cancel', () => {
                 let { onClose: e } = this.props;
                 null == e || e();
             }),
-            a(this, 'claimAccount', () => {
+            c(this, 'claimAccount', () => {
                 let { onClose: e } = this.props;
                 (null == e || e(),
-                    (0, i.ZDy)(async () => {
+                    (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('60827').then(n.bind(n, 324239));
                         return (t) =>
                             (0, r.jsx)(
@@ -67,7 +67,7 @@ class l extends s.Component {
                                                 })
                                             )),
                                             r.forEach(function (t) {
-                                                a(e, t, n[t]);
+                                                c(e, t, n[t]);
                                             }));
                                     }
                                     return e;

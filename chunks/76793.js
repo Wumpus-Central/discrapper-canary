@@ -2,8 +2,8 @@ n.d(t, { q: () => _ });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(232567),
+    a = n(481060),
+    l = n(232567),
     o = n(700582),
     c = n(906732);
 (n(90641), n(615830));
@@ -23,7 +23,7 @@ function b(e) {
         _ = r.useCallback(() => {
             (0, d.Zn)(t);
         }, [t]),
-        E = r.useCallback(
+        j = r.useCallback(
             () =>
                 (0, m.openUserProfileModal)({
                     userId: t,
@@ -33,7 +33,7 @@ function b(e) {
         );
     return (
         r.useEffect(() => {
-            (0, a.PR)(t);
+            (0, l.PR)(t);
         }, [t]),
         (0, i.jsxs)('div', {
             className: f.section,
@@ -42,38 +42,38 @@ function b(e) {
                     (0, i.jsx)(o.Z, {
                         className: f.avatar,
                         user: b,
-                        size: l.EFr.SIZE_40
+                        size: a.EFr.SIZE_40
                     }),
                 (0, i.jsxs)('div', {
                     className: f.text,
                     children: [
-                        (0, i.jsx)(l.P3F, {
+                        (0, i.jsx)(a.P3F, {
                             className: f.username,
-                            onClick: E,
-                            children: (0, i.jsx)(l.Text, {
+                            onClick: j,
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
                                 children: x
                             })
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
                             children: h.intl.format(h.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
-                (0, i.jsx)(l.P3F, {
+                (0, i.jsx)(a.P3F, {
                     onClick: _,
                     className: f.sectionIconContainer,
-                    children: (0, i.jsx)(l.XHJ, { size: 'xs' })
+                    children: (0, i.jsx)(a.XHJ, { size: 'xs' })
                 })
             ]
         })
     );
 }
 function x(e) {
-    let { className: t, userId: n, verification: s, index: a } = e,
+    let { className: t, userId: n, verification: s, index: l } = e,
         o = (0, d.bo)(s.timestamp),
         c = r.useCallback(() => {
             (0, d.ZU)(n, s.verifiedKey);
@@ -84,24 +84,24 @@ function x(e) {
             (0, i.jsxs)('div', {
                 className: f.text,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: h.intl.format(h.t.N4qBBA, { index: a + 1 })
+                        children: h.intl.format(h.t.N4qBBA, { index: l + 1 })
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: o
                     })
                 ]
             }),
-            (0, i.jsx)(l.P3F, {
+            (0, i.jsx)(a.P3F, {
                 className: f.icon,
                 onClick: c,
-                children: (0, i.jsx)(l.Dio, {
+                children: (0, i.jsx)(a.Dio, {
                     size: 'md',
-                    color: l.TVs.colors.INTERACTIVE_NORMAL
+                    color: a.TVs.colors.INTERACTIVE_NORMAL
                 })
             })
         ]

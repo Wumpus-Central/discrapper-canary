@@ -143,6 +143,10 @@ class C extends s.Z {
     setOutputVolume(e) {
         ((this.outputVolume = e), this.connections.forEach((t) => t.setOutputVolume(e)));
     }
+    getNoiseCancellationStats() {
+        return Promise.reject(Error('getNoiseCancellationStats is not supported on browsers.'));
+    }
+    setNoiseCancellationEnableStats(e) {}
     getAudioInputDevices() {
         return (0, E.Hg)();
     }

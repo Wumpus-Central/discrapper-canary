@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => Y }), n(388685));
+(n.d(t, { Z: () => W }), n(388685));
 var i,
     r,
     s,
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     o = n(442837),
     c = n(570140),
     d = n(317381),
@@ -16,12 +16,12 @@ var i,
     b = n(314897),
     x = n(680089),
     _ = n(592125),
-    E = n(58468),
-    j = n(77498),
+    j = n(58468),
+    E = n(77498),
     O = n(496675),
     C = n(306680),
-    S = n(944486),
-    v = n(9156),
+    v = n(944486),
+    S = n(9156),
     T = n(823379),
     N = n(709054),
     I = n(540126),
@@ -30,8 +30,8 @@ let A = null,
     P = null,
     R = new I.ZP();
 function D() {
-    let e = S.Z.getChannelId(),
-        t = S.Z.getVoiceChannelId();
+    let e = v.Z.getChannelId(),
+        t = v.Z.getVoiceChannelId();
     return ((A = e), (P = t), R.clear());
 }
 function Z(e) {
@@ -63,12 +63,12 @@ function M(e) {
     return R.nonPositionalChannelIdUpdate(t);
 }
 function U() {
-    let e = S.Z.getChannelId(),
-        t = S.Z.getVoiceChannelId(),
+    let e = v.Z.getChannelId(),
+        t = v.Z.getVoiceChannelId(),
         n = A !== e || P !== t;
     return (
         !!n &&
-        (a()([A, P, e, t])
+        (l()([A, P, e, t])
             .uniq()
             .forEach((e) => {
                 null != e && R.nonPositionalChannelIdUpdate(e) && (n = !0);
@@ -96,7 +96,7 @@ function H(e) {
 }
 class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, b.default, x.Z, _.Z, E.Z, d.ZP, j.Z, m.Z, p.ZP, h.Z, O.Z, C.ZP, S.Z, v.ZP, f.Z);
+        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, E.Z, m.Z, p.ZP, h.Z, O.Z, C.ZP, v.Z, S.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;
@@ -128,7 +128,7 @@ class z extends (i = o.ZP.Store) {
               writable: !0
           })
         : (z[r] = s));
-let Y = new z(c.Z, {
+let W = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,
@@ -140,7 +140,7 @@ let Y = new z(c.Z, {
         let { channels: t } = e,
             n = !1;
         return (
-            a()(t)
+            l()(t)
                 .map((e) => {
                     var t;
                     return null == (t = _.Z.getChannel(e.channelId)) ? void 0 : t.guild_id;
@@ -178,7 +178,7 @@ let Y = new z(c.Z, {
         let { channels: t } = e,
             n = !1;
         return (
-            a()(t)
+            l()(t)
                 .map((e) => e.guild_id)
                 .uniq()
                 .forEach((e) => {

@@ -2,8 +2,8 @@ n.d(t, { u: () => f });
 var i = n(255367),
     r = n(73800),
     s = n(512722),
-    l = n.n(s),
-    a = n(399606),
+    a = n.n(s),
+    l = n(399606),
     o = n(481060),
     c = n(594174),
     d = n(933970),
@@ -14,13 +14,13 @@ var i = n(255367),
     h = n(708734);
 function f(e) {
     let { user: t } = e,
-        s = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        s = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         f = r.useCallback(() => {
-            (l()(void 0 !== s, 'User must be logged in to accept a link request'),
+            (a()(void 0 !== s, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
                     return (n) => {
-                        var r, l;
+                        var r, a;
                         return (0, i.jsx)(
                             e,
                             ((r = (function (e) {
@@ -48,13 +48,13 @@ function f(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (l = l =
+                            (a = a =
                                 {
                                     currentUser: s,
                                     otherUser: t
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -62,8 +62,8 @@ function f(e) {
                                           n.push.apply(n, i);
                                       }
                                       return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             r)
                         );

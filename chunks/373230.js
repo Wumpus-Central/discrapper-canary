@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => l,
+    T: () => a,
     c: () => s
 });
 var i = n(818083),
@@ -22,18 +22,18 @@ let s = (0, i.B)({
         }
     ]
 });
-function l(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         i = (0, r.A)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabled: l } = s.useExperiment(
+        { enabled: a } = s.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: i
             }
         );
-    return l;
+    return a;
 }

@@ -1,10 +1,10 @@
-(r.d(t, { Z: () => a }), r(388685));
+(r.d(t, { Z: () => l }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(748780),
     o = r(481060),
-    l = r(502254);
-class a extends s.Component {
+    a = r(502254);
+class l extends s.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
         (t.setValue(1),
@@ -26,7 +26,7 @@ class a extends s.Component {
     render() {
         let { isExiting: e, offset: t } = this.state;
         return (0, n.jsx)(i.Z.div, {
-            className: l.wrapper,
+            className: a.wrapper,
             style: {
                 left: 0,
                 position: e ? 'absolute' : 'relative',
@@ -41,7 +41,7 @@ class a extends s.Component {
                 ]
             },
             children: (0, n.jsx)(o.hzk, {
-                className: l.contentWrapper,
+                className: a.contentWrapper,
                 children: this.props.children
             })
         });

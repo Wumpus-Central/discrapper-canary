@@ -1,55 +1,56 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
-    o = n(481060),
-    s = n(541716),
-    l = n(28546),
-    c = n(970731),
-    u = n(210887),
-    d = n(921944),
-    f = n(957825),
-    _ = n(231338),
-    p = n(388032),
-    h = n(245541),
-    m = n(512668),
-    g = n(179998);
-function E(e) {
+    o = n(755721),
+    s = n(481060),
+    l = n(541716),
+    c = n(28546),
+    u = n(970731),
+    d = n(210887),
+    f = n(921944),
+    _ = n(957825),
+    p = n(231338),
+    h = n(388032),
+    m = n(245541),
+    g = n(512668),
+    E = n(179998);
+function b(e) {
     let { markAsDismissed: t } = e,
-        n = (0, a.e7)([u.Z], () => u.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
-        E = i.useCallback(() => {
-            (0, l.RO)(f.X1.SOUNDBOARD, s.Ie.NORMAL);
+        n = (0, a.e7)([d.Z], () => d.Z.theme) === p.BR.LIGHT ? E.Z : g.Z,
+        b = i.useCallback(() => {
+            (0, c.RO)(_.X1.SOUNDBOARD, l.Ie.NORMAL);
         }, []);
-    return (0, r.jsx)(c.ZP, {
-        className: h.container,
+    return (0, r.jsx)(u.ZP, {
+        className: m.container,
         asset: (0, r.jsxs)('div', {
-            className: h.headerContainer,
+            className: m.headerContainer,
             children: [
                 (0, r.jsx)('img', {
-                    className: h.asset,
+                    className: m.asset,
                     src: n,
                     alt: ''
                 }),
-                (0, r.jsx)(o.zxk, {
-                    className: h.close,
-                    'aria-label': p.intl.string(p.t.cpT0Cg),
-                    look: o.zxk.Looks.BLANK,
-                    size: o.zxk.Sizes.NONE,
-                    onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, r.jsx)(o.Dio, {
+                (0, r.jsx)(o.zx, {
+                    className: m.close,
+                    'aria-label': h.intl.string(h.t.cpT0Cg),
+                    look: o.zx.Looks.BLANK,
+                    size: o.zx.Sizes.NONE,
+                    onClick: () => t(f.L.USER_DISMISS),
+                    children: (0, r.jsx)(s.Dio, {
                         size: 'xs',
-                        className: h.closeIcon,
+                        className: m.closeIcon,
                         color: 'white'
                     })
                 })
             ]
         }),
-        header: p.intl.string(p.t.dDj3ER),
-        content: p.intl.string(p.t['0lZmoa']),
-        buttonCTA: p.intl.string(p.t.RzWDqa),
-        buttonProps: { color: o.Ttl.WHITE },
-        caretPosition: c.DF.BOTTOM_RIGHT,
-        onClick: E,
+        header: h.intl.string(h.t.dDj3ER),
+        content: h.intl.string(h.t['0lZmoa']),
+        buttonCTA: h.intl.string(h.t.RzWDqa),
+        buttonProps: { color: o.Tt.WHITE },
+        caretPosition: u.DF.BOTTOM_RIGHT,
+        onClick: b,
         markAsDismissed: t
     });
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     l = n(570140),
-    o = n(592125),
-    a = n(176505);
+    a = n(592125),
+    o = n(176505);
 function s(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ class d extends (r = i.ZP.PersistedStore) {
 let p = new d(l.Z, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e;
-        if (null == n || t === a.oC.GUILD_HOME) return;
-        let r = o.Z.getChannel(t),
+        if (null == n || t === o.oC.GUILD_HOME) return;
+        let r = a.Z.getChannel(t),
             i = c[n],
             l = u[n];
         ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [l, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== l && delete u[n]);

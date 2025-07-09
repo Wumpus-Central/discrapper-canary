@@ -2,7 +2,7 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
+    a = n(755721),
     o = n(541716),
     s = n(419922),
     c = n(665906),
@@ -31,10 +31,10 @@ let E = (e) => {
             }, [t, n, u]);
         return (0, r.jsx)('div', {
             className: b.welcomeCTA,
-            children: (0, r.jsxs)(a.zxk, {
+            children: (0, r.jsxs)(a.zx, {
                 className: b.welcomeCTAButtonOuter,
                 innerClassName: b.welcomeCTAButton,
-                color: a.Ttl.PRIMARY,
+                color: a.Tt.PRIMARY,
                 onMouseEnter: () => c(!0),
                 onMouseLeave: () => c(!1),
                 onClick: d,

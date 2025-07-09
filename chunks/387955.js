@@ -2,9 +2,9 @@ r.d(t, { Z: () => f });
 var n = r(255367);
 r(73800);
 var i = r(120356),
-    o = r.n(i),
-    s = r(481060),
-    a = r(63063),
+    a = r.n(i),
+    o = r(481060),
+    s = r(63063),
     l = r(773446),
     c = r(572264),
     u = r(981631),
@@ -21,37 +21,37 @@ function f(e) {
                 alt: '',
                 src: g
             }),
-            (0, n.jsx)(s.X6q, {
+            (0, n.jsx)(o.X6q, {
                 className: m.title,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
                 children: d.intl.format(d.t['au+lPj'], { n: t.tag })
             }),
-            (0, n.jsx)(s.Text, {
+            (0, n.jsx)(o.Text, {
                 className: m.subtitleInfo,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
                 children: d.intl.format(d.t['5fwX5+'], {})
             }),
-            (0, n.jsx)(s.Text, {
+            (0, n.jsx)(o.Text, {
                 className: m.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: a.Z.getArticleURL(u.BhN.POMELO_FAQ) })
+                children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) })
             }),
             (0, n.jsxs)('div', {
-                className: o()([m.infoItem, m.infoItemSpacing]),
+                className: a()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
                         className: m.infoIcon,
-                        children: (0, n.jsx)(s.iFz, {
+                        children: (0, n.jsx)(o.iFz, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
                         children: d.intl.format(d.t.SzUaZ2, {})
@@ -59,7 +59,7 @@ function f(e) {
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: o()([m.infoItem, m.infoItemSpacing]),
+                className: a()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
                         className: m.infoIcon,
@@ -68,7 +68,7 @@ function f(e) {
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
                         children: d.intl.format(d.t['UwPc+P'], {})
@@ -85,7 +85,7 @@ function f(e) {
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
                         children: d.intl.format(d.t.okLjjo, { username: t.tag })

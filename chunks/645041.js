@@ -7,20 +7,20 @@ n.d(t, {
 var i = n(442837),
     r = n(704215),
     s = n(675478),
-    l = n(581883),
-    a = n(626135),
+    a = n(581883),
+    l = n(626135),
     o = n(915486),
     c = n(981631),
     d = n(921944),
     u = n(526761);
 function m(e, t) {
-    let n = l.Z.getDismissedGuildContent(t);
+    let n = a.Z.getDismissedGuildContent(t);
     return null != n && (0, o.jl)(n, e);
 }
 function p(e, t) {
-    return (0, i.e7)([l.Z], () => m(e, t));
+    return (0, i.e7)([a.Z], () => m(e, t));
 }
-function g(e, t, n, i, l) {
+function g(e, t, n, i, a) {
     ((0, s.PS)(
         n,
         (i) => {
@@ -31,10 +31,10 @@ function g(e, t, n, i, l) {
         e ? u.fy.INFREQUENT_USER_ACTION : u.fy.FREQUENT_USER_ACTION
     ),
         i &&
-            a.default.track(c.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
+            l.default.track(c.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: r.C[t],
                 guild_id: n,
-                action: null != l ? l : d.L.UNKNOWN
+                action: null != a ? a : d.L.UNKNOWN
             }));
 }
 function h(e, t, n, i) {

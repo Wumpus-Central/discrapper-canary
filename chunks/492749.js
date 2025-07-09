@@ -2,8 +2,8 @@
 var i = n(255367),
     s = n(73800),
     l = n(120356),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     o = n(481060),
     c = n(600164),
     d = n(565138),
@@ -12,8 +12,8 @@ var i = n(255367),
     x = n(388032),
     C = n(275017),
     h = n(36705),
-    g = n(216019);
-function p(e) {
+    p = n(216019);
+function g(e) {
     let { guild: t, onClick: n } = e;
     return (0, i.jsxs)(o.P3F, {
         className: C.clickableGuildRow,
@@ -31,15 +31,15 @@ function p(e) {
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: g
+                src: p
             })
         ]
     });
 }
 function f(e) {
     let { directoryChannelId: t, guild: n } = e,
-        l = (0, a.e7)([u.Z], () => u.Z.getDirectoryEntry(t, n.id)),
-        r = s.useRef(null);
+        l = (0, r.e7)([u.Z], () => u.Z.getDirectoryEntry(t, n.id)),
+        a = s.useRef(null);
     return (0, i.jsxs)('div', {
         className: C.guildRow,
         children: [
@@ -55,7 +55,7 @@ function f(e) {
             }),
             (0, i.jsx)(m.Z, {
                 entry: l,
-                targetElementRef: r,
+                targetElementRef: a,
                 children: (e) => {
                     var t, n;
                     return (0, i.jsx)(
@@ -86,7 +86,7 @@ function f(e) {
                             return e;
                         })(
                             {
-                                ref: r,
+                                ref: a,
                                 size: 'md',
                                 color: 'currentColor'
                             },
@@ -114,7 +114,7 @@ function f(e) {
 }
 function j(e) {
     let t,
-        { directoryChannelId: n, onClose: l, onGuildChosen: a, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: g, loading: j } = e,
+        { directoryChannelId: n, onClose: l, onGuildChosen: r, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: p, loading: j } = e,
         [_, b] = s.useState(0);
     return (
         (t = j
@@ -142,15 +142,15 @@ function j(e) {
                     })
                   : m.map((e) =>
                         (0, i.jsx)(
-                            p,
+                            g,
                             {
                                 guild: e,
-                                onClick: () => a(e)
+                                onClick: () => r(e)
                             },
                             e.id
                         )
                     )
-              : 0 === g.length
+              : 0 === p.length
                 ? (0, i.jsxs)('div', {
                       className: C.emptyContainer,
                       children: [
@@ -167,7 +167,7 @@ function j(e) {
                           })
                       ]
                   })
-                : g.map((e) =>
+                : p.map((e) =>
                       (0, i.jsx)(
                           f,
                           {
@@ -208,12 +208,12 @@ function j(e) {
                             look: 'brand',
                             children: [
                                 (0, i.jsx)(o.njP.Item, {
-                                    className: r()(C.tabBarItem, { [C.selectedTab]: 0 === _ }),
+                                    className: a()(C.tabBarItem, { [C.selectedTab]: 0 === _ }),
                                     id: 0,
                                     children: x.intl.string(x.t.FTe8HR)
                                 }),
                                 (0, i.jsx)(o.njP.Item, {
-                                    className: r()(C.tabBarItem, { [C.selectedTab]: 1 === _ }),
+                                    className: a()(C.tabBarItem, { [C.selectedTab]: 1 === _ }),
                                     id: 1,
                                     children: x.intl.string(x.t.epOump)
                                 })
@@ -234,11 +234,14 @@ function j(e) {
                             className: C.footerTitle,
                             children: x.intl.string(x.t.pgCZRE)
                         }),
-                        (0, i.jsx)(o.zxk, {
+                        (0, i.jsx)('div', {
+                            'data-button-hoisted-classname-wrapper': !0,
                             className: C.footerButton,
-                            color: o.zxk.Colors.PRIMARY,
-                            onClick: d,
-                            children: x.intl.string(x.t.WqJbLi)
+                            children: (0, i.jsx)(o.zxk, {
+                                variant: 'secondary',
+                                text: x.intl.string(x.t.WqJbLi),
+                                onClick: d
+                            })
                         })
                     ]
                 })

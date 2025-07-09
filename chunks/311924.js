@@ -39,10 +39,10 @@ function C() {
         N = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
         [T, E] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
         [P, R] = null != (t = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? t : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
-        [k, A] = null != (n = (0, g.Z)(C)) ? n : [Z, y],
+        [A, k] = null != (n = (0, g.Z)(C)) ? n : [Z, y],
         M = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, T, P, Z]),
-        L = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
-        D = C === _.tI.PRESET_DOCUMENTS,
+        D = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
+        L = C === _.tI.PRESET_DOCUMENTS,
         B = p.Vf.map((e) => {
             let { value: t } = e,
                 n = (0, c.Z)(C, t, _.ws.FPS_30, N, I);
@@ -96,17 +96,17 @@ function C() {
                     className: b.segmentedControl,
                     options: B,
                     look: 'pill',
-                    disabled: D,
+                    disabled: L,
                     value: M,
                     onChange: (e) =>
-                        !D &&
+                        !L &&
                         (function (e) {
                             if (!(0, c.Z)(C, e, y, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                             (w({
                                 type: 'set_resolution',
                                 resolution: e
                             }),
-                                e !== k &&
+                                e !== A &&
                                     w({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM
@@ -118,19 +118,19 @@ function C() {
                 label: j.intl.string(v.default['/ssDMT']),
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
-                    disabled: D,
+                    disabled: L,
                     options: G,
-                    value: L,
+                    value: D,
                     look: 'pill',
                     onChange: (e) =>
-                        !D &&
+                        !L &&
                         (function (e) {
                             if (!(0, c.Z)(C, Z, e, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                             (w({
                                 type: 'set_fps',
                                 fps: e
                             }),
-                                e !== A &&
+                                e !== k &&
                                     w({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM

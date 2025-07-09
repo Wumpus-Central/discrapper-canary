@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var i = n(255367);
 n(73800);
 var r = n(524437),
     s = n(481060),
-    l = n(921801),
-    a = n(695346),
+    a = n(921801),
+    l = n(695346),
     o = n(358085),
     c = n(940276),
     d = n(981631),
@@ -13,7 +13,7 @@ var r = n(524437),
     p = n(388032),
     g = n(154947);
 function h(e) {
-    let { label: t, sublabel: n, id: r, checked: l, onChange: a } = e;
+    let { label: t, sublabel: n, id: r, checked: a, onChange: l } = e;
     return (0, i.jsxs)('div', {
         className: g.settingSwitch,
         children: [
@@ -34,19 +34,19 @@ function h(e) {
             }),
             (0, i.jsx)(s.rsf, {
                 id: r,
-                checked: l,
-                onChange: a
+                checked: a,
+                onChange: l
             })
         ]
     });
 }
 function f() {
-    let e = a.G6.useSetting(),
-        t = a.Wz.useSetting(),
+    let e = l.G6.useSetting(),
+        t = l.Wz.useSetting(),
         n = (e) => {
-            a.Wz.updateSetting(e);
+            l.Wz.updateSetting(e);
         },
-        l = [
+        a = [
             {
                 value: r.E5.ON,
                 name: p.intl.string(p.t.UzGMHx)
@@ -88,7 +88,7 @@ function f() {
                             children: p.intl.string(m.default['/LHVbm'])
                         }),
                         (0, i.jsx)(s.FXm, {
-                            options: l,
+                            options: a,
                             value: t,
                             onChange: (e) => n(e.value)
                         })
@@ -123,9 +123,9 @@ function f() {
     });
 }
 function b() {
-    let e = a.cP.useSetting(),
-        t = a.Ou.useSetting();
-    return (0, i.jsx)(l.F, {
+    let e = l.cP.useSetting(),
+        t = l.Ou.useSetting();
+    return (0, i.jsx)(a.F, {
         setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(s.hjN, {
             className: g.formSection,
@@ -143,23 +143,23 @@ function b() {
                     sublabel: p.intl.string(m.default['8EWsJy']),
                     id: 'allow-friends-to-join-my-game',
                     checked: e,
-                    onChange: (e) => a.cP.updateSetting(e)
+                    onChange: (e) => l.cP.updateSetting(e)
                 }),
                 (0, i.jsx)(h, {
                     label: p.intl.string(m.default.Uz5Ipq),
                     sublabel: p.intl.string(m.default.CZI2GR),
                     id: 'allow-vc-join-without-request',
                     checked: t,
-                    onChange: (e) => a.Ou.updateSetting(e)
+                    onChange: (e) => l.Ou.updateSetting(e)
                 })
             ]
         })
     });
 }
 function x() {
-    let e = a.G6.useSetting(),
+    let e = l.G6.useSetting(),
         t = o.isPlatformEmbedded ? p.intl.string(m.default.UQ9RHB) : p.intl.string(p.t.oKqC4u);
-    return (0, i.jsx)(l.F, {
+    return (0, i.jsx)(a.F, {
         setting: u.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(s.hjN, {
             className: g.formSection,
@@ -178,7 +178,7 @@ function x() {
                         sublabel: t,
                         id: 'share-my-activity',
                         checked: e,
-                        onChange: a.G6.updateSetting
+                        onChange: l.G6.updateSetting
                     })
                 })
             ]
@@ -186,7 +186,7 @@ function x() {
     });
 }
 function _() {
-    return (0, i.jsx)(l.F, {
+    return (0, i.jsx)(a.F, {
         setting: u.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(s.hjN, {
             children: (0, i.jsx)(s.ToO, {
@@ -199,7 +199,7 @@ function _() {
         })
     });
 }
-let E = function (e) {
+let j = function (e) {
     let { className: t } = e;
     return (0, i.jsx)(s.hjN, {
         className: t,

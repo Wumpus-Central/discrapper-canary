@@ -1,15 +1,16 @@
-n.d(t, { default: () => s });
+n.d(t, { default: () => c });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(933557),
-    o = n(388032),
-    a = n(331884);
-function s(e) {
+var i = n(755721),
+    l = n(481060),
+    o = n(933557),
+    a = n(388032),
+    s = n(331884);
+function c(e) {
     var t,
         n,
-        { channel: s, category: c } = e,
-        u = (function (e, t) {
+        { channel: c, category: u } = e,
+        d = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,10 +29,10 @@ function s(e) {
             }
             return i;
         })(e, ['channel', 'category']);
-    let d = (0, l.ZP)(s, !0),
-        h = (0, l.ZP)(c);
+    let h = (0, o.ZP)(c, !0),
+        p = (0, o.ZP)(u);
     return (0, r.jsx)(
-        i.ConfirmModal,
+        l.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,22 +59,22 @@ function s(e) {
             return e;
         })(
             {
-                header: o.intl.string(o.t.YWMtRU),
-                confirmText: o.intl.string(o.t.eW8Gy8),
-                cancelText: o.intl.string(o.t.s4uM3d),
-                confirmButtonColor: i.zxk.Colors.BRAND
+                header: a.intl.string(a.t.YWMtRU),
+                confirmText: a.intl.string(a.t.eW8Gy8),
+                cancelText: a.intl.string(a.t.s4uM3d),
+                confirmButtonColor: i.zx.Colors.BRAND
             },
-            u
+            d
         )),
         (n = n =
             {
-                children: (0, r.jsx)(i.Text, {
+                children: (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    className: a.message,
+                    className: s.message,
                     selectable: !1,
-                    children: o.intl.format(o.t['iKW+jY'], {
-                        channelName: d,
-                        categoryName: h
+                    children: a.intl.format(a.t['iKW+jY'], {
+                        channelName: h,
+                        categoryName: p
                     })
                 })
             }),

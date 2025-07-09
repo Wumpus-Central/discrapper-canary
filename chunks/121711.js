@@ -1,52 +1,53 @@
-n.d(t, { Z: () => K });
+n.d(t, { Z: () => q });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
     o = n(990547),
     s = n(442837),
-    c = n(481060),
-    u = n(607070),
-    d = n(100527),
-    p = n(213609),
-    h = n(335131),
-    f = n(252618),
-    g = n(70097),
-    m = n(114851),
-    b = n(175307),
-    _ = n(17845),
-    E = n(374939),
-    O = n(233374),
-    y = n(611928),
-    I = n(763433),
-    v = n(283293),
-    C = n(507808),
-    S = n(794231),
-    N = n(822857),
-    T = n(775451),
-    P = n(526167),
-    j = n(63063),
-    A = n(113434),
-    Z = n(833435),
-    x = n(150560),
+    c = n(755721),
+    u = n(481060),
+    d = n(607070),
+    p = n(100527),
+    h = n(213609),
+    f = n(335131),
+    g = n(252618),
+    m = n(70097),
+    b = n(114851),
+    _ = n(175307),
+    E = n(17845),
+    O = n(374939),
+    y = n(233374),
+    I = n(611928),
+    v = n(763433),
+    C = n(283293),
+    S = n(507808),
+    N = n(794231),
+    T = n(822857),
+    P = n(775451),
+    j = n(526167),
+    A = n(63063),
+    Z = n(113434),
+    x = n(833435),
+    w = n(150560),
     L = n(558652),
-    w = n(736683),
-    R = n(879438),
-    D = n(251360),
-    k = n(466962),
-    M = n(452081),
-    U = n(46140),
-    G = n(981631),
-    B = n(215023),
-    V = n(388032),
-    H = n(87671),
-    F = n(13299),
-    z = n(428383),
-    W = n(843385);
-function Y(e) {
+    R = n(736683),
+    D = n(879438),
+    k = n(251360),
+    M = n(466962),
+    U = n(452081),
+    G = n(46140),
+    B = n(981631),
+    V = n(215023),
+    H = n(388032),
+    F = n(87671),
+    z = n(13299),
+    W = n(428383),
+    Y = n(843385);
+function K(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, N.WX)({ location: U.dr.QUEST_HOME_DESKTOP }),
-        l = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        { enabled: n } = (0, T.WX)({ location: G.dr.QUEST_HOME_DESKTOP }),
+        l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         o = i.useRef(null);
     if (
         (i.useEffect(() => {
@@ -55,43 +56,43 @@ function Y(e) {
         }, [l]),
         n)
     ) {
-        let e = (0, P.rO)();
-        return (0, r.jsx)(g.Z, {
+        let e = (0, j.rO)();
+        return (0, r.jsx)(m.Z, {
             ref: o,
             autoPlay: !l,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: a()(H.bannerAsset, H.orbsBannerAsset),
+            className: a()(F.bannerAsset, F.orbsBannerAsset),
             onProgress: t,
             'data-mtctest-ignore': 'true',
             controls: !1,
             children: (0, r.jsx)('source', {
-                src: e ? z.Z : W.Z,
+                src: e ? W.Z : Y.Z,
                 type: e ? 'video/mp4' : 'video/webm'
             })
         });
     }
     return (0, r.jsx)('img', {
-        src: F.ZP,
-        className: a()(H.bannerAsset, H.oversizedImg),
+        src: z.ZP,
+        className: a()(F.bannerAsset, F.oversizedImg),
         alt: '',
         onLoad: t
     });
 }
-let K = function () {
-    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, M.z)(),
-        { onScroll: l, scrollPosition: s } = (0, m.M)(),
-        u = x.Z.getState().getUtmCurrentContext(),
-        g = (0, Z._)({ location: U.dr.QUEST_HOME_DESKTOP }) ? w.Z : w.j,
-        P = (0, R.z)((e) => e.registerAssetLoad),
-        F = i.useRef(u);
+let q = function () {
+    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, U.z)(),
+        { onScroll: l, scrollPosition: s } = (0, b.M)(),
+        d = w.Z.getState().getUtmCurrentContext(),
+        m = (0, x._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
+        j = (0, D.z)((e) => e.registerAssetLoad),
+        z = i.useRef(d);
     (i.useEffect(() => {
-        F.current = u;
+        z.current = d;
     }),
         i.useEffect(() => {
-            let { current: t } = F;
-            (0, p.h)({
+            let { current: t } = z;
+            (0, h.h)({
                 name: o.ImpressionNames.QUEST_HOME,
                 type: o.ImpressionTypes.VIEW,
                 properties: {
@@ -103,122 +104,122 @@ let K = function () {
                 }
             });
         }, [e]));
-    let { enabled: z } = (0, N.WX)({ location: U.dr.QUEST_HOME_DESKTOP }),
-        { showBetaTag: W } = S.Z.useExperiment({ location: U.dr.QUEST_HOME_DESKTOP }),
-        K = i.useCallback(() => {
-            if (z) return void window.open(G.EYA.PAID_TERMS_ORBS);
-            window.open(j.Z.getArticleURL(G.BhN.QUESTS_LEARN_MORE));
-        }, [z]);
-    (0, f.Tt)({ location: V.intl.string(V.t.JALI2N) });
-    let q = z ? V.intl.format(V.t.BCBIlp, {}) : V.intl.format(V.t.lmMBf3, {}),
-        X = z ? V.intl.format(V.t.U9FY0N, {}) : V.intl.string(V.t.oWCrBg),
-        Q = i.useRef(null);
-    return (0, r.jsx)(D.k.Provider, {
-        value: { onAssetLoadComplete: P },
+    let { enabled: W } = (0, T.WX)({ location: G.dr.QUEST_HOME_DESKTOP }),
+        { showBetaTag: Y } = N.Z.useExperiment({ location: G.dr.QUEST_HOME_DESKTOP }),
+        q = i.useCallback(() => {
+            if (W) return void window.open(B.EYA.PAID_TERMS_ORBS);
+            window.open(A.Z.getArticleURL(B.BhN.QUESTS_LEARN_MORE));
+        }, [W]);
+    (0, g.Tt)({ location: H.intl.string(H.t.JALI2N) });
+    let X = W ? H.intl.format(H.t.BCBIlp, {}) : H.intl.format(H.t.lmMBf3, {}),
+        Q = W ? H.intl.format(H.t.U9FY0N, {}) : H.intl.string(H.t.oWCrBg),
+        J = i.useRef(null);
+    return (0, r.jsx)(k.k.Provider, {
+        value: { onAssetLoadComplete: j },
         children: (0, r.jsx)('div', {
-            className: H.container,
-            children: z
-                ? (0, r.jsx)(k.t.Provider, {
-                      value: Q,
-                      children: (0, r.jsxs)(v.Z, {
+            className: F.container,
+            children: W
+                ? (0, r.jsx)(M.t.Provider, {
+                      value: J,
+                      children: (0, r.jsxs)(C.Z, {
                           onScroll: l,
-                          ref: Q,
+                          ref: J,
                           children: [
-                              (0, r.jsx)(I.a, {
+                              (0, r.jsx)(v.a, {
                                   selectedTabId: e,
                                   handleTransition: t,
                                   tabs: n,
-                                  icon: c.qDn,
-                                  children: (0, r.jsx)(T.V9, {
-                                      analyticsPage: G.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                      cardAlignment: T.ek.END,
-                                      ctaText: V.intl.string(V.t['J+vlIS']),
+                                  icon: u.qDn,
+                                  children: (0, r.jsx)(P.V9, {
+                                      analyticsPage: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                      cardAlignment: P.ek.END,
+                                      ctaText: H.intl.string(H.t['J+vlIS']),
                                       ctaOnClick: () => {
-                                          ((0, C.Y)({
-                                              pageType: G.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                              sectionType: G.jXE.ORBS_BALANCE_MENU,
-                                              ctaObject: G.qAy.CTA_TO_ORBS_SHOP
+                                          ((0, S.Y)({
+                                              pageType: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                              sectionType: B.jXE.ORBS_BALANCE_MENU,
+                                              ctaObject: B.qAy.CTA_TO_ORBS_SHOP
                                           }),
-                                              (0, h.mK)({
+                                              (0, f.mK)({
                                                   openInLayer: !1,
-                                                  tab: B.AW.ORBS,
+                                                  tab: V.AW.ORBS,
                                                   analyticsLocations: [],
-                                                  analyticsSource: d.Z.ORBS_BALANCE_MENU
+                                                  analyticsSource: p.Z.ORBS_BALANCE_MENU
                                               }));
                                       }
                                   })
                               }),
-                              (0, r.jsxs)(_.Z, {
-                                  title: q,
-                                  description: X,
-                                  betaTag: z && W,
-                                  button: z
+                              (0, r.jsxs)(E.Z, {
+                                  title: X,
+                                  description: Q,
+                                  betaTag: W && Y,
+                                  button: W
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, r.jsx)(c.zxk, {
-                                                    color: c.Ttl.WHITE,
+                                                (0, r.jsx)(u.zxk, {
+                                                    variant: 'overlay-primary',
+                                                    text: H.intl.string(H.t['1Wm129']),
                                                     onClick: () =>
-                                                        (0, h.mK)({
+                                                        (0, f.mK)({
                                                             openInLayer: !1,
-                                                            tab: B.AW.ORBS,
+                                                            tab: V.AW.ORBS,
                                                             analyticsLocations: [],
-                                                            analyticsSource: d.Z.INTRO_TO_ORBS_QUEST_BANNER
-                                                        }),
-                                                    children: V.intl.string(V.t['1Wm129'])
+                                                            analyticsSource: p.Z.INTRO_TO_ORBS_QUEST_BANNER
+                                                        })
                                                 }),
-                                                (0, r.jsx)(c.zxk, {
-                                                    look: c.iLD.LINK,
-                                                    color: c.Ttl.CUSTOM,
-                                                    className: H.orbsTermsButton,
-                                                    onClick: K,
-                                                    children: V.intl.string(V.t['7kTAgI'])
+                                                (0, r.jsx)(c.zx, {
+                                                    look: c.iL.LINK,
+                                                    color: c.Tt.CUSTOM,
+                                                    className: F.orbsTermsButton,
+                                                    onClick: q,
+                                                    children: H.intl.string(H.t['7kTAgI'])
                                                 })
                                             ]
                                         })
-                                      : (0, r.jsx)(b.u, {
-                                            text: V.intl.string(V.t.hvVgAQ),
-                                            onClick: K
+                                      : (0, r.jsx)(_.u, {
+                                            text: H.intl.string(H.t.hvVgAQ),
+                                            onClick: q
                                         }),
-                                  className: a()(H.bannerContainer, { [H.orbsContainer]: z }),
-                                  children: [(0, r.jsx)('div', { className: a()(H.bannerGradient, { [H.orbsGradient]: z }) }), (0, r.jsx)(Y, { onLoadComplete: P })]
+                                  className: a()(F.bannerContainer, { [F.orbsContainer]: W }),
+                                  children: [(0, r.jsx)('div', { className: a()(F.bannerGradient, { [F.orbsGradient]: W }) }), (0, r.jsx)(K, { onLoadComplete: j })]
                               }),
-                              (0, r.jsx)(E.Z, { children: e === A.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
+                              (0, r.jsx)(O.Z, { children: e === Z.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
                           ]
                       })
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsxs)(y.ZP, {
-                              variant: y._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: H.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
+                          (0, r.jsxs)(I.ZP, {
+                              variant: I._6.OVERLAY,
+                              children: [(0, r.jsx)('div', { className: F.dragRegion }), (0, r.jsx)(I.z6, { scrollPosition: s }), (0, r.jsx)(I.aV, { icon: u.qDn })]
                           }),
-                          (0, r.jsx)(k.t.Provider, {
-                              value: Q,
-                              children: (0, r.jsxs)(v.Z, {
+                          (0, r.jsx)(M.t.Provider, {
+                              value: J,
+                              children: (0, r.jsxs)(C.Z, {
                                   onScroll: l,
-                                  ref: Q,
+                                  ref: J,
                                   children: [
-                                      (0, r.jsxs)(_.Z, {
-                                          title: q,
-                                          description: X,
-                                          button: (0, r.jsx)(b.u, {
-                                              text: V.intl.string(V.t.hvVgAQ),
-                                              onClick: K
-                                          }),
-                                          className: a()(H.bannerContainer, { [H.orbsContainer]: z }),
-                                          children: [(0, r.jsx)('div', { className: a()(H.bannerGradient, { [H.orbsGradient]: z }) }), (0, r.jsx)(Y, { onLoadComplete: P })]
-                                      }),
                                       (0, r.jsxs)(E.Z, {
+                                          title: X,
+                                          description: Q,
+                                          button: (0, r.jsx)(_.u, {
+                                              text: H.intl.string(H.t.hvVgAQ),
+                                              onClick: q
+                                          }),
+                                          className: a()(F.bannerContainer, { [F.orbsContainer]: W }),
+                                          children: [(0, r.jsx)('div', { className: a()(F.bannerGradient, { [F.orbsGradient]: W }) }), (0, r.jsx)(K, { onLoadComplete: j })]
+                                      }),
+                                      (0, r.jsxs)(O.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: H.tabs,
-                                                  children: (0, r.jsx)(O.Z, {
+                                                  className: F.tabs,
+                                                  children: (0, r.jsx)(y.Z, {
                                                       tabs: n,
                                                       selectedTab: e,
                                                       onTabSelect: t
                                                   })
                                               }),
-                                              e === A.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
+                                              e === Z.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
                                           ]
                                       })
                                   ]

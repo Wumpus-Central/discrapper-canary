@@ -10,7 +10,7 @@ var r = n(255367),
 function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: h } = e,
         j = i.useRef(null),
-        x = (e) => (t) => {
+        v = (e) => (t) => {
             var n, r;
             let { emoji: i, willClose: l } = t;
             null != i &&
@@ -23,7 +23,7 @@ function u(e) {
                       }),
                 l && e());
         },
-        p =
+        x =
             null == u || null == u.name
                 ? null
                 : () => {
@@ -47,7 +47,7 @@ function u(e) {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(a.Z, {
                     closePopout: t,
-                    onSelectEmoji: x(t),
+                    onSelectEmoji: v(t),
                     pickerIntention: d.Hz.COMMUNITY_CONTENT,
                     channel: h
                 });
@@ -88,7 +88,7 @@ function u(e) {
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: p
+                            renderButtonContents: x
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

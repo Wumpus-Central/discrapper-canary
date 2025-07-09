@@ -1,57 +1,58 @@
-n.d(t, { t: () => u });
+n.d(t, { t: () => m });
 var i = n(255367),
     r = n(73800),
-    s = n(481060),
+    s = n(755721),
+    a = n(481060),
     l = n(243778),
-    a = n(921944),
-    o = n(388032),
-    c = n(460356);
-let d = (e) => {
+    o = n(921944),
+    c = n(388032),
+    d = n(460356);
+let u = (e) => {
         let { markAsDismissed: t } = e;
         return (
-            r.useEffect(() => t(a.L.UNKNOWN), [t]),
-            (0, i.jsx)(s.IGR, {
-                className: c.newBadge,
-                text: o.intl.string(o.t.y2b7CA)
+            r.useEffect(() => t(o.L.UNKNOWN), [t]),
+            (0, i.jsx)(a.IGR, {
+                className: d.newBadge,
+                text: c.intl.string(c.t.y2b7CA)
             })
         );
     },
-    u = (e) => {
-        let { title: t, body: n, img: r, newIndicatorDismissibleContent: a, onClick: u } = e;
+    m = (e) => {
+        let { title: t, body: n, img: r, newIndicatorDismissibleContent: o, onClick: m } = e;
         return (0, i.jsxs)('div', {
-            className: c.container,
+            className: d.container,
             children: [
                 r,
                 (0, i.jsxs)('div', {
-                    className: c.textContainer,
+                    className: d.textContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: c.headerText,
+                            className: d.headerText,
                             children: [
                                 (0, i.jsx)(l.ZP, {
-                                    contentTypes: [a],
+                                    contentTypes: [o],
                                     children: (e) => {
                                         let { visibleContent: t, markAsDismissed: n } = e;
-                                        return t === a ? (0, i.jsx)(d, { markAsDismissed: n }) : null;
+                                        return t === o ? (0, i.jsx)(u, { markAsDismissed: n }) : null;
                                     }
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-md/semibold',
                                     children: t
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             children: n
                         })
                     ]
                 }),
-                (0, i.jsx)(s.zxk, {
-                    size: s.PhG.MEDIUM,
-                    onClick: u,
-                    className: c.reconnectButton,
-                    children: o.intl.string(o.t.vD60Pj)
+                (0, i.jsx)(s.zx, {
+                    size: s.Ph.MEDIUM,
+                    onClick: m,
+                    className: d.reconnectButton,
+                    children: c.intl.string(c.t.vD60Pj)
                 })
             ]
         });

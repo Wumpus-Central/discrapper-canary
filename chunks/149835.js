@@ -1,16 +1,17 @@
-n.d(e, { Z: () => f });
+n.d(e, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    a = n(58642),
-    c = n(283595),
-    o = n(417363),
-    u = n(626135),
-    s = n(630388),
-    d = n(981631),
-    b = n(388032);
-function p(t) {
+    l = n(755721),
+    a = n(481060),
+    c = n(58642),
+    o = n(283595),
+    u = n(417363),
+    s = n(626135),
+    d = n(630388),
+    b = n(981631),
+    p = n(388032);
+function f(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
@@ -35,41 +36,41 @@ function p(t) {
     }
     return t;
 }
-function f(t, e) {
-    let n = (0, i.e7)([o.Z], () => o.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
-        f = (0, i.e7)([c.Z], () => !c.Z.hasRemovedLibraryApplicationThisSession);
+function O(t, e) {
+    let n = (0, i.e7)([u.Z], () => u.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        O = (0, i.e7)([o.Z], () => !o.Z.hasRemovedLibraryApplicationThisSession);
     if (n && !t.isHidden()) return null;
-    function O() {
-        let e = (0, s.x9)(t.getFlags(), d.eHb.HIDDEN);
-        (a.h(t.id, t.branchId, e), u.default.track(d.rMx.APPLICATION_SETTINGS_UPDATED, p({ hidden_enabled: (0, s.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData())));
+    function y() {
+        let e = (0, d.x9)(t.getFlags(), b.eHb.HIDDEN);
+        (c.h(t.id, t.branchId, e), s.default.track(b.rMx.APPLICATION_SETTINGS_UPDATED, f({ hidden_enabled: (0, d.yE)(e, b.eHb.HIDDEN) }, t.getAnalyticsData())));
     }
-    return (0, r.jsx)(l.sNh, {
+    return (0, r.jsx)(a.sNh, {
         id: 'in-library',
-        label: t.isHidden() ? b.intl.string(b.t['0dnEUF']) : b.intl.string(b.t.TuJXLy),
+        label: t.isHidden() ? p.intl.string(p.t['0dnEUF']) : p.intl.string(p.t.TuJXLy),
         action: function () {
             null != t &&
                 null != e &&
-                (t.isHidden() || !f
-                    ? O()
-                    : (0, l.h7j)((t) => {
+                (t.isHidden() || !O
+                    ? y()
+                    : (0, a.h7j)((t) => {
                           var n, i;
                           return (0, r.jsx)(
-                              l.ConfirmModal,
-                              ((n = p(
+                              a.ConfirmModal,
+                              ((n = f(
                                   {
-                                      header: b.intl.string(b.t.oB7isr),
-                                      confirmText: b.intl.string(b.t.OWjIiY),
-                                      cancelText: b.intl.string(b.t['ETE/oK']),
-                                      onConfirm: () => O(),
-                                      confirmButtonColor: l.zxk.Colors.BRAND
+                                      header: p.intl.string(p.t.oB7isr),
+                                      confirmText: p.intl.string(p.t.OWjIiY),
+                                      cancelText: p.intl.string(p.t['ETE/oK']),
+                                      onConfirm: () => y(),
+                                      confirmButtonColor: l.zx.Colors.BRAND
                                   },
                                   t
                               )),
                               (i = i =
                                   {
-                                      children: (0, r.jsx)(l.Text, {
+                                      children: (0, r.jsx)(a.Text, {
                                           variant: 'text-md/normal',
-                                          children: b.intl.format(b.t.HXfjKi, { name: e.name })
+                                          children: p.intl.format(p.t.HXfjKi, { name: e.name })
                                       })
                                   }),
                               Object.getOwnPropertyDescriptors

@@ -50,12 +50,14 @@ let p = (e) => {
                     variant: 'text-md/normal',
                     children: 'staff-only debug: ' + _
                 }),
-            (0, r.jsx)(o.zxk, {
+            (0, r.jsx)('div', {
+                'data-button-hoisted-classname-wrapper': !0,
                 className: u.reload,
-                size: o.zxk.Sizes.MEDIUM,
-                color: o.zxk.Colors.BRAND,
-                onClick: t,
-                children: c.intl.string(c.t['+hivLS'])
+                children: (0, r.jsx)(o.zxk, {
+                    variant: 'primary',
+                    text: c.intl.string(c.t['+hivLS']),
+                    onClick: t
+                })
             })
         ]
     });

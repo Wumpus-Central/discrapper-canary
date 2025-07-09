@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(544891),
+    a = n.n(s),
+    l = n(544891),
     o = n(780384),
     c = n(481060),
     d = n(410030),
@@ -16,29 +16,29 @@ var i = n(255367),
     b = n(981631),
     x = n(388032),
     _ = n(828576),
-    E = n(982404),
-    j = n(299156);
+    j = n(982404),
+    E = n(299156);
 let O = function (e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: O, userDiscountOffer: C } = e,
-        [S, v] = r.useState(!1),
+        [v, S] = r.useState(!1),
         [T, N] = r.useState(!1),
         I = async (e) => {
             try {
                 (N(!0),
-                    v(!1),
-                    await a.tn.post({
+                    S(!1),
+                    await l.tn.post({
                         url: b.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
                     O());
             } catch (e) {
-                v(!0);
+                S(!0);
             }
             N(!1);
         },
         y = (0, d.ZP)(),
-        A = (0, o.wj)(y) ? E : j,
+        A = (0, o.wj)(y) ? j : E,
         P = (0, g._)(t, f.Xh.PREMIUM_MONTH_TIER_2, C),
         R = (0, m.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
@@ -94,7 +94,7 @@ let O = function (e) {
                                       })
                                   })
                               }),
-                              S &&
+                              v &&
                                   (0, i.jsx)('div', {
                                       className: _.redemptionFailedMessage,
                                       children: (0, i.jsx)(c.Text, {
@@ -104,21 +104,22 @@ let O = function (e) {
                                       })
                                   }),
                               (0, i.jsxs)('div', {
-                                  className: l()(_.confirmDiscountButtons, {
-                                      [_.confrimDiscountsButtonsError]: S,
-                                      [_.confrimDiscountsButtonsNoError]: !S
+                                  className: a()(_.confirmDiscountButtons, {
+                                      [_.confrimDiscountsButtonsError]: v,
+                                      [_.confrimDiscountsButtonsNoError]: !v
                                   }),
                                   children: [
-                                      (0, i.jsx)(c.zxk, {
-                                          look: c.iLD.LINK,
-                                          onClick: () => s(),
-                                          children: x.intl.string(x.t.zl7LZm)
+                                      (0, i.jsx)(c.Avr, {
+                                          variant: 'primary',
+                                          text: x.intl.string(x.t.zl7LZm),
+                                          onClick: () => s()
                                       }),
                                       (0, i.jsx)(c.zxk, {
-                                          size: c.PhG.SMALL,
-                                          submitting: T,
-                                          onClick: () => I(C.id),
-                                          children: x.intl.string(x.t.CKSuZG)
+                                          variant: 'primary',
+                                          size: 'sm',
+                                          text: x.intl.string(x.t.CKSuZG),
+                                          loading: T,
+                                          onClick: () => I(C.id)
                                       })
                                   ]
                               })

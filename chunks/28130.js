@@ -87,7 +87,7 @@ function Z(e) {
         )
     });
 }
-function k(e) {
+function D(e) {
     let { guildFeature: t, guild: n } = e;
     if (null == t || null == n) return;
     let r = (0, O._p)(t),
@@ -96,7 +96,7 @@ function k(e) {
     let a = (0, O.nW)(r);
     return l ? P.intl.formatToPlainString(P.t.u3L3TU, { levelName: a }) : P.intl.formatToPlainString(P.t['r/v25e'], { levelName: a });
 }
-function D(e) {
+function k(e) {
     let { guildFeature: t, guild: n } = e;
     return (0, r.jsx)('div', {
         className: R.boostingPill,
@@ -137,7 +137,7 @@ function I(e) {
                 ]
             }),
             c &&
-                (0, r.jsx)(D, {
+                (0, r.jsx)(k, {
                     guild: a,
                     guildFeature: l
                 })
@@ -148,7 +148,7 @@ function L(e) {
     let { label: t, uploadType: n, guild: l, maxFileSizeBytes: a, filters: s, handleOpenImageEditingModal: c, handleFileSizeError: u } = e,
         d = (0, E.GY)(n),
         p = (0, E.C6)(n, { isGIF: !1 }),
-        g = k({
+        g = D({
             guildFeature: p,
             guild: l
         });
@@ -190,7 +190,7 @@ function M(e) {
         { shouldAnimate: a, onMouseEnter: i, onMouseLeave: s } = (0, j.Z)(),
         c = (0, E.Kq)(t),
         u = (0, E.C6)(t, { isGIF: !0 }),
-        d = k({
+        d = D({
             guildFeature: u,
             guild: n
         });
@@ -221,7 +221,7 @@ function M(e) {
     });
 }
 function U(e) {
-    let { transitionState: t, onClose: a, onComplete: i, uploadType: d, maxFileSizeBytes: f, showUpsellHeader: j, filters: O, analyticsLocation: E, analyticsLocations: F = [], imageSpecifications: Z, modalTitle: k = P.intl.string(P.t.DToW4e), uploadOptionTitle: D = P.intl.string(P.t['MsUY/f']), allowRecentAvatarsSelection: I = !0 } = e,
+    let { transitionState: t, onClose: a, onComplete: i, uploadType: d, maxFileSizeBytes: f, showUpsellHeader: j, filters: O, analyticsLocation: E, analyticsLocations: F = [], imageSpecifications: Z, modalTitle: D = P.intl.string(P.t.DToW4e), uploadOptionTitle: k = P.intl.string(P.t['MsUY/f']), allowRecentAvatarsSelection: I = !0 } = e,
         U = (0, s.e7)([A.default], () => A.default.getCurrentUser()),
         B = (0, s.e7)([x.Z], () => x.Z.getGuildId()),
         H = (0, s.e7)([y.Z], () => y.Z.getGuild(B)),
@@ -334,7 +334,7 @@ function U(e) {
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: k
+                        children: D
                     }),
                     (0, r.jsx)(o.olH, {
                         onClick: a,
@@ -354,7 +354,7 @@ function U(e) {
                                 children: [
                                     (0, r.jsx)('li', {
                                         children: (0, r.jsx)(L, {
-                                            label: D,
+                                            label: k,
                                             uploadType: d,
                                             guild: H,
                                             handleOpenImageEditingModal: K,

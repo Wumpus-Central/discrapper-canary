@@ -1,35 +1,36 @@
-(n.d(t, { N: () => C }), n(388685));
+(n.d(t, { N: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(704215),
-    a = n(481060),
-    s = n(782568),
-    c = n(243778),
-    u = n(970731),
-    d = n(594174),
-    p = n(63063),
-    h = n(69589),
-    f = n(981631),
-    m = n(921944),
-    g = n(388032),
-    b = n(201838);
-let _ = (e) => {
+    a = n(704215),
+    o = n(755721),
+    s = n(481060),
+    c = n(782568),
+    u = n(243778),
+    d = n(970731),
+    p = n(594174),
+    h = n(63063),
+    f = n(69589),
+    m = n(981631),
+    g = n(921944),
+    b = n(388032),
+    _ = n(201838);
+let y = (e) => {
         let { user: t, markAsDismissed: n } = e;
         return (0, r.jsxs)('div', {
-            className: b.assetContainer,
+            className: _.assetContainer,
             children: [
-                (0, r.jsx)(h.Z, {
+                (0, r.jsx)(f.Z, {
                     user: t,
                     rank: 1,
-                    avatarSize: a.EFr.SIZE_56
+                    avatarSize: s.EFr.SIZE_56
                 }),
-                (0, r.jsx)(a.P3F, {
-                    className: b.closeIcon,
+                (0, r.jsx)(s.P3F, {
+                    className: _.closeIcon,
                     onClick: () => {
-                        n(m.L.USER_DISMISS);
+                        n(g.L.USER_DISMISS);
                     },
-                    children: (0, r.jsx)(a.Dio, {
+                    children: (0, r.jsx)(s.Dio, {
                         color: 'currentColor',
                         size: 'sm'
                     })
@@ -37,45 +38,45 @@ let _ = (e) => {
             ]
         });
     },
-    y = (e) => {
+    C = (e) => {
         let { user: t, markAsDismissed: n } = e;
-        return (0, r.jsx)(u.ZP, {
-            asset: (0, r.jsx)(_, {
+        return (0, r.jsx)(d.ZP, {
+            asset: (0, r.jsx)(y, {
                 user: t,
                 markAsDismissed: n
             }),
-            header: g.intl.string(g.t.wAtFS0),
-            content: g.intl.string(g.t.qIZICA),
-            buttonCTA: g.intl.string(g.t.hvVgAQ),
+            header: b.intl.string(b.t.wAtFS0),
+            content: b.intl.string(b.t.qIZICA),
+            buttonCTA: b.intl.string(b.t.hvVgAQ),
             onClick: () => {
-                ((0, s.Z)(p.Z.getArticleURL(f.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS));
+                ((0, c.Z)(h.Z.getArticleURL(m.BhN.GUILD_LEADERBOARD)), n(g.L.USER_DISMISS));
             },
             markAsDismissed: n,
-            caretPosition: u.DF.RIGHT_TOP,
+            caretPosition: d.DF.RIGHT_TOP,
             buttonProps: {
-                color: a.zxk.Colors.WHITE,
-                look: a.zxk.Looks.LINK,
-                size: a.zxk.Sizes.MIN
+                color: o.zx.Colors.WHITE,
+                look: o.zx.Looks.LINK,
+                size: o.zx.Sizes.MIN
             }
         });
     };
-function C(e) {
+function x(e) {
     let { children: t } = e,
-        n = [o.z.LEADERBOARD_NUX_COACHMARK],
-        [s, u] = (0, c.US)(n, void 0),
-        p = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        n = [a.z.LEADERBOARD_NUX_COACHMARK],
+        [o, c] = (0, u.US)(n, void 0),
+        d = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         h = i.useRef(null);
-    return s !== o.z.LEADERBOARD_NUX_COACHMARK || null == p
+    return o !== a.z.LEADERBOARD_NUX_COACHMARK || null == d
         ? t
-        : (0, r.jsx)(a.yRy, {
+        : (0, r.jsx)(s.yRy, {
               targetElementRef: h,
               renderPopout: () =>
-                  y({
-                      user: p,
-                      markAsDismissed: u
+                  C({
+                      user: d,
+                      markAsDismissed: c
                   }),
               position: 'left',
-              animation: a.yRy.Animation.TRANSLATE,
+              animation: s.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () =>
                   (0, r.jsx)('div', {

@@ -14,7 +14,7 @@ var l = n(255367),
     g = n(183519);
 let p = a.memo(function (e) {
     let { file: t, audio: n, className: i, waveformSettings: p } = e,
-        [b, y] = a.useState({
+        [y, b] = a.useState({
             width: 0,
             height: 0
         }),
@@ -60,10 +60,10 @@ let p = a.memo(function (e) {
         N = (0, c.ZP)(),
         C = (0, d.Sl)((0, o.wj)(N) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
         S = null == j || null == w,
-        O = (0 === b.width || 0 === b.height || S) && null != t,
-        P = a.useCallback(() => {
+        O = (0 === y.width || 0 === y.height || S) && null != t,
+        E = a.useCallback(() => {
             null != v.current &&
-                y({
+                b({
                     width: v.current.offsetWidth,
                     height: v.current.offsetHeight
                 });
@@ -71,7 +71,7 @@ let p = a.memo(function (e) {
     return (
         a.useEffect(() => {
             if (null != v.current) {
-                let e = new ResizeObserver((0, s.debounce)(P, 50));
+                let e = new ResizeObserver((0, s.debounce)(E, 50));
                 return (
                     e.observe(v.current),
                     () => {
@@ -79,14 +79,14 @@ let p = a.memo(function (e) {
                     }
                 );
             }
-        }, [P]),
+        }, [E]),
         a.useEffect(() => {
             if (null == v.current) return;
             let e = v.current,
                 t = e.getContext('2d');
             if (null == t) return;
             let { width: n, height: l } = e;
-            if (0 !== b.width && 0 !== b.height && null != w && w.length > 0) {
+            if (0 !== y.width && 0 !== y.height && null != w && w.length > 0) {
                 let e = n / w.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
                 (t.clearRect(0, 0, n, l), (t.fillStyle = C.hex));
@@ -97,15 +97,15 @@ let p = a.memo(function (e) {
                     t.fillRect(r, s, e - a, i);
                 }
             }
-        }, [C, b, N, w]),
+        }, [C, y, N, w]),
         (0, l.jsxs)('div', {
             className: r()(g.container, i),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,
                     ref: v,
-                    width: 4 * b.width,
-                    height: 4 * b.height
+                    width: 4 * y.width,
+                    height: 4 * y.height
                 }),
                 O &&
                     (0, l.jsx)('div', {

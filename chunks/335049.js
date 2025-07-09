@@ -170,7 +170,7 @@ function w(e) {
                             children: ['(', f, ')']
                         })
                       : null,
-                  l ? (0, r.jsx)(k, { tooltipText: a }) : null
+                  l ? (0, r.jsx)(A, { tooltipText: a }) : null
               ]
           });
 }
@@ -222,7 +222,7 @@ function P(e) {
                       variant: 'text-md/normal',
                       children: b.name
                   }),
-                  s ? (0, r.jsx)(k, { tooltipText: m }) : null
+                  s ? (0, r.jsx)(A, { tooltipText: m }) : null
               ]
           });
 }
@@ -263,11 +263,11 @@ function Z(e) {
                             variant: 'text-sm/normal',
                             children: _.ZP.getUserTag(a)
                         }),
-                  i ? (0, r.jsx)(k, { tooltipText: l }) : null
+                  i ? (0, r.jsx)(A, { tooltipText: l }) : null
               ]
           });
 }
-function k(e) {
+function A(e) {
     let { tooltipText: t } = e;
     return (0, r.jsx)(u.ua7, {
         text: t,

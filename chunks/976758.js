@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(481060),
-    l = n(846027),
-    a = n(906732),
+    a = n(846027),
+    l = n(906732),
     o = n(313201),
     c = n(131951),
     d = n(36703),
@@ -13,7 +13,7 @@ var r = n(442837),
 let p = (0, o.hQ)(),
     g = (0, o.hQ)();
 function h() {
-    let { analyticsLocations: e } = (0, a.ZP)(),
+    let { analyticsLocations: e } = (0, l.ZP)(),
         { inputVolume: t, outputVolume: n } = (0, r.cj)([c.Z], () => ({
             inputVolume: c.Z.getInputVolume(),
             outputVolume: c.Z.getOutputVolume()
@@ -28,7 +28,7 @@ function h() {
                     titleId: p,
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(t),
-                        asValueChanges: (t) => l.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
+                        asValueChanges: (t) => a.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
                         'aria-labelledby': p
                     })
                 })
@@ -42,7 +42,7 @@ function h() {
                         initialValue: (0, d.P)(n),
                         maxValue: 200,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
-                        asValueChanges: (t) => l.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
+                        asValueChanges: (t) => a.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
                         'aria-labelledby': g
                     })
                 })

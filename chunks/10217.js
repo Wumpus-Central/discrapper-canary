@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -8,25 +8,26 @@ var r = n(255367),
     c = n(442837),
     u = n(846519),
     d = n(212605),
-    p = n(481060),
-    m = n(100527),
-    f = n(906732),
-    b = n(70097),
-    g = n(237617),
-    j = n(318374),
-    y = n(717680),
-    h = n(594174),
-    x = n(962399),
-    v = n(626135),
-    O = n(823379),
-    C = n(709054),
-    P = n(39604),
-    k = n(572720),
-    w = n(981631),
-    N = n(388032),
-    E = n(20484),
-    S = n(954292);
-function Z(e) {
+    p = n(755721),
+    m = n(481060),
+    f = n(100527),
+    b = n(906732),
+    g = n(70097),
+    j = n(237617),
+    y = n(318374),
+    h = n(717680),
+    x = n(594174),
+    v = n(962399),
+    O = n(626135),
+    C = n(823379),
+    P = n(709054),
+    w = n(39604),
+    N = n(572720),
+    E = n(981631),
+    S = n(388032),
+    k = n(20484),
+    Z = n(954292);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +52,7 @@ function Z(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,19 +70,19 @@ function D(e, t) {
         e
     );
 }
-let L = function (e) {
+let I = function (e) {
     var t, n, a;
-    let { clip: o, exporting: s, actionsDisabled: d, isNew: b, onDelete: y, onEdit: x, onShare: P } = e,
-        k = (0, c.Wu)([h.default], () => o.users.map((e) => h.default.getUser(e)).filter(O.lm)),
-        { analyticsLocations: S } = (0, f.ZP)(m.Z.CLIPS_GALLERY_ITEM),
+    let { clip: o, exporting: s, actionsDisabled: d, isNew: p, onDelete: g, onEdit: h, onShare: v } = e,
+        w = (0, c.Wu)([x.default], () => o.users.map((e) => x.default.getUser(e)).filter(C.lm)),
+        { analyticsLocations: N } = (0, b.ZP)(f.Z.CLIPS_GALLERY_ITEM),
         [Z, D] = l.useState(!1),
         L = l.useRef(null),
-        M = (0, g.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
-        z = l.useRef(
+        I = (0, j.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
+        _ = l.useRef(
             new u.sW(500, () => {
                 var e;
                 let t = L.current;
-                null != t && t.paused && ((t.currentTime = M.current), null == (e = L.current) || e.play());
+                null != t && t.paused && ((t.currentTime = I.current), null == (e = L.current) || e.play());
             })
         ),
         R = l.useCallback(() => {
@@ -90,13 +91,13 @@ let L = function (e) {
         }, []),
         A = l.useCallback(() => {
             var e;
-            (D(!0), null == (e = z.current) || e.delay());
+            (D(!0), null == (e = _.current) || e.delay());
         }, []),
         H = l.useCallback(() => {
             var e, t, n;
             D(!1);
             let r = L.current;
-            (null == (e = z.current) || e.cancel(), null != r && (r.pause(), (r.currentTime = null != (n = null == (t = o.editMetadata) ? void 0 : t.start) ? n : 0)));
+            (null == (e = _.current) || e.cancel(), null != r && (r.pause(), (r.currentTime = null != (n = null == (t = o.editMetadata) ? void 0 : t.start) ? n : 0)));
         }, [null == (n = o.editMetadata) ? void 0 : n.start]),
         V = l.useCallback(
             (e) => {
@@ -105,60 +106,60 @@ let L = function (e) {
             },
             [H]
         ),
-        B = new Date(C.default.extractTimestamp(o.id)),
+        B = new Date(P.default.extractTimestamp(o.id)),
         F = B.toLocaleDateString(),
         G = B.toLocaleTimeString([], {
             hour: '2-digit',
             minute: '2-digit'
         }),
         Y = ''.concat(F, ' \u2022 ').concat(G);
-    return (0, r.jsx)(f.Gt, {
-        value: S,
-        children: (0, r.jsxs)(p.kL8, {
+    return (0, r.jsx)(b.Gt, {
+        value: N,
+        children: (0, r.jsxs)(m.kL8, {
             'aria-disabled': d,
-            'aria-label': N.intl.string(N.t.bt75u7),
+            'aria-label': S.intl.string(S.t.bt75u7),
             onClick: d
                 ? void 0
                 : () => {
-                      (x(o), v.default.track(w.rMx.CLIP_GALLERY_CARD_CLICKED));
+                      (h(o), O.default.track(E.rMx.CLIP_GALLERY_CARD_CLICKED));
                   },
-            className: i()(E.clipItem, { [E.disabled]: d }),
+            className: i()(k.clipItem, { [k.disabled]: d }),
             onBlur: V,
             onFocus: A,
             onMouseOver: A,
             onMouseLeave: H,
             children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(T, {
                     clip: o,
-                    isNew: b,
+                    isNew: p,
                     videoRef: L
                 }),
                 (0, r.jsxs)('div', {
-                    className: E.clipFooter,
+                    className: k.clipFooter,
                     children: [
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(M, {
                             clip: o,
                             focused: Z,
                             onFocus: A
                         }),
-                        (0, r.jsx)(p.Text, {
-                            className: E.clipMetadata,
+                        (0, r.jsx)(m.Text, {
+                            className: k.clipMetadata,
                             color: 'text-default',
                             variant: 'text-md/medium',
                             children: o.applicationName
                         }),
-                        (0, r.jsx)(p.Text, {
-                            className: E.clipMetadata,
+                        (0, r.jsx)(m.Text, {
+                            className: k.clipMetadata,
                             color: 'text-default',
                             variant: 'text-md/medium',
                             children: Y
                         }),
                         (0, r.jsxs)('div', {
-                            className: E.usersAndDelete,
+                            className: k.usersAndDelete,
                             children: [
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(y.Z, {
                                     maxUsers: 4,
-                                    users: k,
+                                    users: w,
                                     onFocus: (e) => {
                                         var t, n, r, l;
                                         let a = e.relatedTarget,
@@ -167,14 +168,14 @@ let L = function (e) {
                                     }
                                 }),
                                 Z &&
-                                    (0, r.jsx)(_, {
+                                    (0, r.jsx)(z, {
                                         clip: o,
                                         actionsDisabled: d,
                                         exporting: s,
                                         onBeforeDelete: R,
-                                        onDelete: y,
-                                        onEdit: x,
-                                        onShare: P,
+                                        onDelete: g,
+                                        onEdit: h,
+                                        onShare: v,
                                         onBlur: (e) => {
                                             var t;
                                             (null == (t = e.relatedTarget) ? void 0 : t.parentElement) !== e.currentTarget.parentElement && H();
@@ -188,7 +189,7 @@ let L = function (e) {
         })
     });
 };
-function I(e) {
+function T(e) {
     let { clip: t, isNew: n, videoRef: a } = e,
         i = 0 === t.length,
         [o, c] = l.useMemo(() => {
@@ -199,45 +200,45 @@ function I(e) {
         }, [t.length, t.editMetadata]),
         u = ''.concat(c.seconds()).padStart(2, '0');
     return (0, r.jsxs)('div', {
-        className: E.clipThumbContainer,
+        className: k.clipThumbContainer,
         children: [
-            (0, r.jsx)(M, {
+            (0, r.jsx)(_, {
                 clip: t,
                 videoRef: a
             }),
             (0, r.jsxs)('div', {
-                className: E.clipBadges,
+                className: k.clipBadges,
                 children: [
                     i &&
                         (0, r.jsx)('div', {
-                            className: E.clipProcessingBadge,
-                            children: (0, r.jsx)(p.Text, {
+                            className: k.clipProcessingBadge,
+                            children: (0, r.jsx)(m.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: N.intl.string(N.t['2Fp7OD'])
+                                children: S.intl.string(S.t['2Fp7OD'])
                             })
                         }),
                     !i &&
                         n &&
-                        (0, r.jsxs)(p.Text, {
-                            className: E.clipNewBadge,
+                        (0, r.jsxs)(m.Text, {
+                            className: k.clipNewBadge,
                             variant: 'eyebrow',
                             color: 'always-white',
                             children: [
-                                (0, r.jsx)(p.T$Z, {
+                                (0, r.jsx)(m.T$Z, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: E.newIcon
+                                    className: k.newIcon
                                 }),
-                                N.intl.string(N.t.y2b7CA).toUpperCase()
+                                S.intl.string(S.t.y2b7CA).toUpperCase()
                             ]
                         }),
                     !i &&
                         (0, r.jsxs)('div', {
-                            className: E.clipDurationBadge,
+                            className: k.clipDurationBadge,
                             children: [
-                                o ? (0, r.jsx)(x.Z, { className: E.clipDurationEditIcon }) : null,
-                                (0, r.jsx)(p.Text, {
+                                o ? (0, r.jsx)(v.Z, { className: k.clipDurationEditIcon }) : null,
+                                (0, r.jsx)(m.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
                                     children: ''.concat(c.minutes(), ':').concat(u)
@@ -249,16 +250,16 @@ function I(e) {
         ]
     });
 }
-function T(e) {
+function M(e) {
     var t;
     let { clip: n, focused: a, onFocus: o } = e,
         [s, c] = l.useState(n.name),
         u = !n.name,
-        [m, f] = l.useState(!1),
+        [p, f] = l.useState(!1),
         [b, g] = l.useState(null != (t = n.name) ? t : ''),
         [j, y] = l.useState(!1),
         h = async () => {
-            (y(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1));
+            (y(!0), await (0, w.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1));
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
@@ -266,9 +267,9 @@ function T(e) {
             (c(n.name), g(null != (e = n.name) ? e : ''));
         }
     }, [n.name, s]),
-    m)
-        ? (0, r.jsx)(p.oil, {
-              inputClassName: i()(S['heading-lg/medium'], E.clipTitleInput),
+    p)
+        ? (0, r.jsx)(m.oil, {
+              inputClassName: i()(Z['heading-lg/medium'], k.clipTitleInput),
               onClick: (e) => e.stopPropagation(),
               value: b,
               autoFocus: !0,
@@ -279,125 +280,125 @@ function T(e) {
               onChange: g,
               onBlur: h
           })
-        : (0, r.jsxs)(p.P3F, {
-              className: E.clipTitleInputPlaceholder,
+        : (0, r.jsxs)(m.P3F, {
+              className: k.clipTitleInputPlaceholder,
               onFocus: o,
               onClick: (e) => {
                   (e.stopPropagation(), f(!0));
               },
               children: [
                   u
-                      ? (0, r.jsx)(p.X6q, {
-                            className: E.clipTitle,
+                      ? (0, r.jsx)(m.X6q, {
+                            className: k.clipTitle,
                             color: 'text-muted',
                             variant: 'heading-lg/medium',
-                            children: N.intl.string(N.t['x+/nmJ'])
+                            children: S.intl.string(S.t['x+/nmJ'])
                         })
-                      : (0, r.jsx)(p.X6q, {
-                            className: E.clipTitle,
+                      : (0, r.jsx)(m.X6q, {
+                            className: k.clipTitle,
                             color: 'text-default',
                             variant: 'heading-lg/medium',
                             children: n.name
                         }),
                   a &&
-                      (0, r.jsx)(p.vdY, {
+                      (0, r.jsx)(m.vdY, {
                           size: 'custom',
-                          'aria-label': N.intl.string(N.t.bt75u7),
-                          color: p.TVs.colors.TEXT_MUTED,
+                          'aria-label': S.intl.string(S.t.bt75u7),
+                          color: m.TVs.colors.TEXT_MUTED,
                           height: d.Z.sm,
                           width: d.Z.sm,
-                          className: E.clipTitleIcon
+                          className: k.clipTitleIcon
                       })
               ]
           });
 }
-function M(e) {
+function _(e) {
     let { clip: t, videoRef: n } = e,
-        l = (0, k.l)(t);
+        l = (0, N.l)(t);
     return 0 === t.length
-        ? (0, r.jsx)(p.$jN, {
-              type: p.RAz.SPINNING_CIRCLE_SIMPLE,
-              className: E.clipThumb
+        ? (0, r.jsx)(m.$jN, {
+              type: m.RAz.SPINNING_CIRCLE_SIMPLE,
+              className: k.clipThumb
           })
         : null != l
-          ? (0, r.jsx)(b.Z, {
+          ? (0, r.jsx)(g.Z, {
                 preload: 'metadata',
                 muted: !0,
                 poster: t.thumbnail,
                 src: l,
                 loop: !0,
-                className: E.clipThumb,
+                className: k.clipThumb,
                 ref: n
             })
           : (0, r.jsx)('img', {
                 alt: '',
                 src: t.thumbnail,
-                className: E.clipThumb
+                className: k.clipThumb
             });
 }
-function _(e) {
+function z(e) {
     let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: c, onBlur: u } = e,
-        d = (0, y.Z)(),
-        m = l.useCallback(
+        d = (0, h.Z)(),
+        f = l.useCallback(
             (e) => {
-                (e.stopPropagation(), e.shiftKey ? (i(), (0, P.sS)(t.filepath)) : o(t, i), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' }));
+                (e.stopPropagation(), e.shiftKey ? (i(), (0, w.sS)(t.filepath)) : o(t, i), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' }));
             },
             [o, i, t]
         ),
-        f = l.useCallback(
+        b = l.useCallback(
             (e) => {
-                (e.stopPropagation(), s(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' }));
+                (e.stopPropagation(), s(t), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' }));
             },
             [s, t]
         ),
-        b = l.useCallback(
+        g = l.useCallback(
             (e) => {
-                (e.stopPropagation(), c(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' }));
+                (e.stopPropagation(), c(t), O.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' }));
             },
             [c, t]
         );
     return (0, r.jsxs)('div', {
-        className: E.buttonContainer,
+        className: k.buttonContainer,
         children: [
             null != o &&
-                (0, r.jsx)(p.ua7, {
-                    text: N.intl.string(N.t.oyYWHB),
+                (0, r.jsx)(m.ua7, {
+                    text: S.intl.string(S.t.oyYWHB),
                     children: (e) =>
                         (0, r.jsx)(
-                            p.zxk,
-                            D(Z({}, e), {
+                            p.zx,
+                            L(D({}, e), {
                                 disabled: a,
-                                color: d ? p.zxk.Colors.RED : p.zxk.Colors.PRIMARY,
-                                onClick: m,
-                                className: E.button,
-                                size: p.zxk.Sizes.NONE,
-                                look: p.zxk.Looks.FILLED,
-                                children: (0, r.jsx)(p.XHJ, {
+                                color: d ? p.zx.Colors.RED : p.zx.Colors.PRIMARY,
+                                onClick: f,
+                                className: k.button,
+                                size: p.zx.Sizes.NONE,
+                                look: p.zx.Looks.FILLED,
+                                children: (0, r.jsx)(m.XHJ, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: E.miniIcon
+                                    className: k.miniIcon
                                 })
                             })
                         )
                 }),
-            (0, r.jsx)(p.ua7, {
-                text: N.intl.string(N.t.bt75u7),
+            (0, r.jsx)(m.ua7, {
+                text: S.intl.string(S.t.bt75u7),
                 children: (e) =>
                     (0, r.jsx)(
-                        p.zxk,
-                        D(Z({}, e), {
+                        p.zx,
+                        L(D({}, e), {
                             disabled: a,
-                            color: p.zxk.Colors.PRIMARY,
-                            onClick: f,
-                            className: E.button,
-                            size: p.zxk.Sizes.NONE,
-                            look: p.zxk.Looks.FILLED,
-                            children: (0, r.jsx)(x.Z, { className: E.miniIcon })
+                            color: p.zx.Colors.PRIMARY,
+                            onClick: b,
+                            className: k.button,
+                            size: p.zx.Sizes.NONE,
+                            look: p.zx.Looks.FILLED,
+                            children: (0, r.jsx)(v.Z, { className: k.miniIcon })
                         })
                     )
             }),
-            (0, r.jsx)(p.ua7, {
-                text: N.intl.string(N.t.RDE0SU),
+            (0, r.jsx)(m.ua7, {
+                text: S.intl.string(S.t.RDE0SU),
                 children: (e) => {
                     var { onBlur: t } = e,
                         l = (function (e, t) {
@@ -420,22 +421,22 @@ function _(e) {
                             return l;
                         })(e, ['onBlur']);
                     return (0, r.jsx)(
-                        p.zxk,
-                        D(Z({}, l), {
+                        p.zx,
+                        L(D({}, l), {
                             disabled: a && !n,
                             submitting: n,
-                            color: p.zxk.Colors.BRAND,
+                            color: p.zx.Colors.BRAND,
                             onBlur: (e) => {
                                 (u(e), null == t || t());
                             },
-                            onClick: b,
-                            className: E.button,
-                            size: p.zxk.Sizes.NONE,
-                            look: p.zxk.Looks.FILLED,
-                            children: (0, r.jsx)(p.aAc, {
+                            onClick: g,
+                            className: k.button,
+                            size: p.zx.Sizes.NONE,
+                            look: p.zx.Looks.FILLED,
+                            children: (0, r.jsx)(m.aAc, {
                                 size: 'lg',
                                 color: 'currentColor',
-                                className: E.miniIcon
+                                className: k.miniIcon
                             })
                         })
                     );

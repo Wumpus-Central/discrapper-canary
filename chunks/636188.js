@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(239091),
     d = n(2052),
@@ -16,12 +16,12 @@ var i = n(255367),
     b = n(626135),
     x = n(768581),
     _ = n(709054),
-    E = n(647177),
-    j = n(63985),
+    j = n(647177),
+    E = n(63985),
     O = n(678916),
     C = n(981631),
-    S = n(190378),
-    v = n(486324),
+    v = n(190378),
+    S = n(486324),
     T = n(474936),
     N = n(388032),
     I = n(191908);
@@ -69,9 +69,9 @@ function A(e, t) {
     );
 }
 function P(e) {
-    let { icon: t, onClick: n, text: r, children: s, className: a, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: m } = e;
+    let { icon: t, onClick: n, text: r, children: s, className: l, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: m } = e;
     return (0, i.jsxs)(o.P3F, {
-        className: l()(a, I.backgroundOption, {
+        className: a()(l, I.backgroundOption, {
             [I.backgroundOptionSelected]: c,
             [I.backgroundOptionDisabled]: d
         }),
@@ -109,7 +109,7 @@ function P(e) {
 }
 function R(e) {
     let { option: t, source: n, isAnimated: s } = e,
-        [l, a] = r.useState(!1);
+        [a, l] = r.useState(!1);
     if (
         (r.useEffect(() => {
             new Image().src = n;
@@ -128,15 +128,15 @@ function R(e) {
         canAnimate: !1
     });
     return (0, i.jsx)('img', {
-        onMouseMove: () => a(!0),
-        onMouseLeave: () => a(!1),
+        onMouseMove: () => l(!0),
+        onMouseLeave: () => l(!1),
         className: I.backgroundImageOption,
-        src: l ? n : o,
+        src: a ? n : o,
         alt: t.id
     });
 }
 function D(e) {
-    var { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: x, isVideo: _, hotspotLocation: j } = e,
+    var { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: x, isVideo: _, hotspotLocation: E } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -156,9 +156,9 @@ function D(e) {
             }
             return r;
         })(e, ['option', 'source', 'selected', 'onSelectOption', 'isAnimatedImage', 'isVideo', 'hotspotLocation']);
-    let S = (0, d.O)(),
-        { analyticsLocations: v } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        P = (0, a.e7)([f.Z], () => null != j && f.Z.hasHotspot(j)),
+    let v = (0, d.O)(),
+        { analyticsLocations: S } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
+        P = (0, l.e7)([f.Z], () => null != E && f.Z.hasHotspot(E)),
         D = _
             ? (0, i.jsx)(g.Z, {
                   className: I.backgroundImageOption,
@@ -169,23 +169,23 @@ function D(e) {
               })
             : (0, i.jsx)(R, {
                   isAnimated: x,
-                  option: (0, E.rD)(t) ? t : void 0,
+                  option: (0, j.rD)(t) ? t : void 0,
                   source: r
               });
     function Z() {
-        null != j &&
+        null != E &&
             P &&
-            (h.Kw(j),
+            (h.Kw(E),
             b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: S.location,
-                location_stack: v
+                location: v.location,
+                location_stack: S
             }));
     }
     return (0, i.jsxs)(
         o.P3F,
         A(y({}, O), {
-            className: l()(I.backgroundOption, { [I.backgroundOptionSelected]: s }),
+            className: a()(I.backgroundOption, { [I.backgroundOptionSelected]: s }),
             onClick: () => u(t),
             onContextMenu: (e) =>
                 (0, c.jW)(e, async () => {
@@ -243,9 +243,9 @@ function Z() {
 }
 function w(e) {
     let { onClick: t, tooltipText: n, disabled: r = !1 } = e,
-        s = (0, a.e7)([f.Z], () => f.Z.hasHotspot(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
-    function l() {
-        h.Kw(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        s = (0, l.e7)([f.Z], () => f.Z.hasHotspot(v.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+    function a() {
+        h.Kw(v.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let c = s ? N.intl.string(N.t['5TUJOj']) : n;
     return (0, i.jsxs)(o.DY3, {
@@ -257,8 +257,8 @@ function w(e) {
                 disabled: r,
                 icon: o.FmF,
                 onClick: t,
-                onMouseLeave: l,
-                onBlur: l,
+                onMouseLeave: a,
+                onBlur: a,
                 text: (0, i.jsxs)('div', {
                     className: I.backgroundCustomInlineUpsell,
                     children: [
@@ -304,8 +304,8 @@ function k(e) {
 function L(e) {
     let { onAddBackgroundImage: t, disabled: r } = e,
         s = (0, o.vRw)(),
-        l = r ? N.intl.formatToPlainString(N.t.ykGFeH, { maxCustomBackgrounds: 25 }) : N.intl.string(N.t.Qx0tFR),
-        a = [
+        a = r ? N.intl.formatToPlainString(N.t.ykGFeH, { maxCustomBackgrounds: 25 }) : N.intl.string(N.t.Qx0tFR),
+        l = [
             {
                 name: N.intl.string(N.t.Sp2NFx),
                 extensions: ['jpg', 'jpeg', 'png', 'gif', 'mp4']
@@ -327,8 +327,8 @@ function L(e) {
                                         let { imageUri: n, file: i, isFromTenor: r } = e;
                                         return t(n, i, r);
                                     },
-                                    uploadType: v.pC.VIDEO_BACKGROUND,
-                                    filters: a,
+                                    uploadType: S.pC.VIDEO_BACKGROUND,
+                                    filters: l,
                                     modalTitle: N.intl.string(N.t.yG2pUl),
                                     imageSpecifications: N.intl.string(N.t['72OaxM']),
                                     uploadOptionTitle: N.intl.string(N.t.xsW8u7),
@@ -341,15 +341,15 @@ function L(e) {
                 { contextKey: s }
             );
         },
-        tooltipText: l
+        tooltipText: a
     });
 }
 function B(e) {
-    let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: s, onSelectOption: l, onUpsellClick: a, onAddBackgroundImage: c, smallerOptions: d } = e,
+    let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: s, onSelectOption: a, onUpsellClick: l, onAddBackgroundImage: c, smallerOptions: d } = e,
         u = r.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? _.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
         { analyticsLocations: h } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
-        f = Object.values((0, j.Z)()).sort((e, t) => O.E1[e.id] - O.E1[t.id]);
+        f = Object.values((0, E.Z)()).sort((e, t) => O.E1[e.id] - O.E1[t.id]);
     return (0, i.jsx)(p.Gt, {
         value: h,
         children: (0, i.jsxs)('div', {
@@ -358,14 +358,14 @@ function B(e) {
                 (0, i.jsx)(P, {
                     selected: null == s,
                     icon: o.t6m,
-                    onClick: () => l(null),
+                    onClick: () => a(null),
                     text: N.intl.string(N.t.fUdMeH)
                 }),
                 (0, i.jsx)(P, {
                     className: I.__invalid_backgroundOptionBlurred,
                     selected: s === O.f7,
                     icon: o.yMH,
-                    onClick: () => l(O.f7),
+                    onClick: () => a(O.f7),
                     text: N.intl.string(N.t.LhSyLy),
                     children: (0, i.jsx)('div', { className: I.backgroundOptionBlurBackground })
                 }),
@@ -374,7 +374,7 @@ function B(e) {
                           onAddBackgroundImage: c,
                           disabled: g
                       })
-                    : (0, i.jsx)(k, { onClick: a }),
+                    : (0, i.jsx)(k, { onClick: l }),
                 u.map((e) =>
                     (0, i.jsx)(
                         o.ua7,
@@ -396,8 +396,8 @@ function B(e) {
                                               key: e.id,
                                               option: e,
                                               source: n,
-                                              selected: (0, E.rD)(s) && s.id === e.id,
-                                              onSelectOption: l,
+                                              selected: (0, j.rD)(s) && s.id === e.id,
+                                              onSelectOption: a,
                                               isVideo: (0, x.ay)(e.asset),
                                               isAnimatedImage: (0, x.xR)(e.asset)
                                           })
@@ -422,7 +422,7 @@ function B(e) {
                                         option: e.id,
                                         source: e.source,
                                         selected: s === e.id,
-                                        onSelectOption: l,
+                                        onSelectOption: a,
                                         isVideo: t,
                                         isAnimatedImage: !1,
                                         hotspotLocation: e.hotspotLocation

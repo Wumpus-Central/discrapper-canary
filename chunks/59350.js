@@ -30,8 +30,8 @@ var l = t(255367),
     S = t(594174),
     T = t(823379),
     B = t(51144),
-    k = t(998502),
-    A = t(549817),
+    A = t(998502),
+    k = t(549817),
     R = t(745752),
     D = t(45966),
     L = t(637853),
@@ -107,7 +107,7 @@ function et(e) {
         (0, N.Z)(o.id, o.getAvatarURL(i.id, (0, m.pxk)(ee)), { guildId: i.id });
     });
     let T = (0, b.parseBioReact)(null == S ? void 0 : S.bio),
-        A = k.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
+        k = A.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
     return (0, l.jsxs)('div', {
         className: Q.profile,
         children: [
@@ -129,7 +129,7 @@ function et(e) {
                         ((t = $({}, h)),
                         (r = r =
                             {
-                                children: (0, l.jsx)(A, {
+                                children: (0, l.jsx)(k, {
                                     src: u,
                                     avatarDecoration: g,
                                     size: ee,
@@ -385,7 +385,7 @@ function ei(e) {
         r.useEffect(() => {
             if ((null == o ? void 0 : o.id) != null && !j.Z.isFullServerPreview(o.id))
                 return () => {
-                    ((0, h.Ju)(o.id, V.W.GUILD_ONBOARDING_QUESTION, D.Z.ackIdForGuild(o.id)), A.Z.updateOnboardingResponses(o.id));
+                    ((0, h.Ju)(o.id, V.W.GUILD_ONBOARDING_QUESTION, D.Z.ackIdForGuild(o.id)), k.Z.updateOnboardingResponses(o.id));
                 };
         }, [null == o ? void 0 : o.id]));
     let N = r.useCallback(

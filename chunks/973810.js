@@ -13,10 +13,10 @@ var r = n(255367),
 function m(e) {
     let { mfaChallenge: t, finish: n, setSlide: m, onClose: p } = e,
         [g, b] = l.useState(!1),
-        [j, y] = l.useState(null),
+        [y, j] = l.useState(null),
         { challenge: x } = t.methods.find((e) => 'webauthn' === e.type),
         S = async () => {
-            (b(!0), y(null));
+            (b(!0), j(null));
             let e = a.isPlatformEmbedded && u.ZP.supportsFeature(f.eRX.WEBAUTHN) ? u.ZP.webAuthnAuthenticate(x) : i.U2(JSON.parse(x)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
@@ -25,14 +25,14 @@ function m(e) {
                             data: e
                         });
                     } catch (e) {
-                        e instanceof s.Pd ? y(h.intl.string(h.t.xSCvBQ)) : y(e.message);
+                        e instanceof s.Pd ? j(h.intl.string(h.t.xSCvBQ)) : j(e.message);
                     }
                 };
             try {
                 let n = await e;
                 await t(n);
             } catch (e) {
-                (c.Z.captureException(e), y(h.intl.string(h.t.xSCvBQ)));
+                (c.Z.captureException(e), j(h.intl.string(h.t.xSCvBQ)));
             } finally {
                 b(!1);
             }
@@ -43,11 +43,12 @@ function m(e) {
             (0, r.jsxs)(d.Z.SlideContent, {
                 children: [
                     (0, r.jsx)(o.zxk, {
-                        submitting: g,
-                        onClick: S,
-                        children: h.intl.string(h.t.Xr3Ekp)
+                        variant: 'primary',
+                        text: h.intl.string(h.t.Xr3Ekp),
+                        loading: g,
+                        onClick: S
                     }),
-                    (0, r.jsx)(d.Z.SlideError, { error: j })
+                    (0, r.jsx)(d.Z.SlideError, { error: y })
                 ]
             }),
             (0, r.jsx)(d.Z.SlideFooter, {

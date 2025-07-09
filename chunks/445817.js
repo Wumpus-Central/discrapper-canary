@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(570140),
+    a = n(481060),
+    l = n(570140),
     o = n(2052),
     c = n(932724),
     d = n(716161),
@@ -20,23 +20,23 @@ let x = {
 };
 function _(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: _ } = e,
-        E = p.Z.getCameraComponent(),
-        [j, O] = r.useState((0, c.P)(g.default.getCurrentUser())),
+        j = p.Z.getCameraComponent(),
+        [E, O] = r.useState((0, c.P)(g.default.getCurrentUser())),
         C = r.useRef(!1),
-        S = r.useRef(j),
-        v = (0, o.O)(),
+        v = r.useRef(E),
+        S = (0, o.O)(),
         T = (0, s.e7)([p.Z], () => p.Z.isVideoAvailable());
     return (
         r.useEffect(
             () => () => {
-                C.current && a.Z.wait(() => (0, d.Up)(S.current));
+                C.current && l.Z.wait(() => (0, d.Up)(v.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: j,
+            selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                ((C.current = !0), (S.current = e), O(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4));
+                ((C.current = !0), (v.current = e), O(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4));
             },
             onCancelPreview: _,
             renderCamera: (e) =>
@@ -46,7 +46,7 @@ function _(e) {
                           children: (0, i.jsxs)('div', {
                               className: b.camera,
                               children: [
-                                  (0, i.jsx)(E, {
+                                  (0, i.jsx)(j, {
                                       deviceId: e,
                                       width: x.width,
                                       height: x.height,
@@ -60,12 +60,12 @@ function _(e) {
                           className: b.cameraWrapper,
                           children: [
                               (0, i.jsx)('div', { className: b.previewImage }),
-                              (0, i.jsx)(l.ua7, {
+                              (0, i.jsx)(a.ua7, {
                                   text: T ? null : f.intl.string(f.t['8jSzSU']),
                                   children: (e) => {
                                       var t, r;
                                       return (0, i.jsx)(
-                                          l.zxk,
+                                          a.zxk,
                                           ((t = (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -90,12 +90,17 @@ function _(e) {
                                                       }));
                                               }
                                               return e;
-                                          })({}, e)),
+                                          })(
+                                              {
+                                                  variant: 'primary',
+                                                  text: f.intl.string(f.t.JIf4v7)
+                                              },
+                                              e
+                                          )),
                                           (r = r =
                                               {
                                                   onClick: n,
-                                                  disabled: !T,
-                                                  children: f.intl.string(f.t.JIf4v7)
+                                                  disabled: !T
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

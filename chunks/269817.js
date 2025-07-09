@@ -1,58 +1,58 @@
-s.d(e, { default: () => c });
-var i = s(255367);
-s(73800);
-var n = s(481060),
-    a = s(782568),
-    o = s(313201),
-    l = s(388032),
-    r = s(275209);
-function c(t) {
-    let { url: e, onClose: c, transitionState: d } = t,
-        x = (0, o.Dt)();
-    return (0, i.jsxs)(n.Y0X, {
-        transitionState: d,
-        'aria-labelledby': x,
+n.d(e, { default: () => d });
+var a = n(255367);
+n(73800);
+var i = n(755721),
+    s = n(481060),
+    o = n(782568),
+    r = n(313201),
+    l = n(388032),
+    c = n(275209);
+function d(t) {
+    let { url: e, onClose: d, transitionState: x } = t,
+        m = (0, r.Dt)();
+    return (0, a.jsxs)(s.Y0X, {
+        transitionState: x,
+        'aria-labelledby': m,
         parentComponent: 'LinkNotDiscordModal',
         children: [
-            (0, i.jsx)('img', {
-                className: r.art,
-                src: s(902623),
+            (0, a.jsx)('img', {
+                className: c.art,
+                src: n(902623),
                 alt: ''
             }),
-            (0, i.jsx)(n.hzk, {
-                children: (0, i.jsxs)('div', {
-                    className: r.modalContent,
+            (0, a.jsx)(s.hzk, {
+                children: (0, a.jsxs)('div', {
+                    className: c.modalContent,
                     children: [
-                        (0, i.jsx)(n.X6q, {
-                            id: x,
+                        (0, a.jsx)(s.X6q, {
+                            id: m,
                             variant: 'heading-lg/semibold',
-                            className: r.title,
+                            className: c.title,
                             children: l.intl.string(l.t.biy1X1)
                         }),
-                        (0, i.jsx)(n.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            className: r.body,
+                            className: c.body,
                             children: l.intl.format(l.t.J86cyc, { url: e })
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(n.mzw, {
+            (0, a.jsxs)(s.mzw, {
                 children: [
-                    (0, i.jsx)(n.zxk, {
+                    (0, a.jsx)(s.zxk, {
+                        variant: 'primary',
+                        text: l.intl.string(l.t['xl8R+/']),
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.BRAND,
-                        onClick: c,
-                        children: l.intl.string(l.t['xl8R+/'])
+                        onClick: d
                     }),
-                    (0, i.jsx)(n.zxk, {
+                    (0, a.jsx)(i.zx, {
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.TRANSPARENT,
-                        look: n.zxk.Looks.LINK,
+                        size: i.zx.Sizes.MEDIUM,
+                        color: i.zx.Colors.TRANSPARENT,
+                        look: i.zx.Looks.LINK,
                         onClick: () => {
-                            (0, a.Z)(e, !0);
+                            (0, o.Z)(e, !0);
                         },
                         children: l.intl.string(l.t.gQrLtr)
                     })

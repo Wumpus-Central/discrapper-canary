@@ -16,7 +16,7 @@ var n = r(255367),
     b = r(388032),
     x = r(233966),
     j = r(223223);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -41,7 +41,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function y(e, t) {
         e
     );
 }
-function P(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -78,13 +78,13 @@ function P(e, t) {
     }
     return i;
 }
-let v = () => 80,
+let P = () => 80,
     _ = (e) => {
         var { children: t, className: r, isSelected: i = !1 } = e,
-            l = P(e, ['children', 'className', 'isSelected']);
+            l = v(e, ['children', 'className', 'isSelected']);
         return (0, n.jsx)(
             u.P3F,
-            y(O({ className: o()(x.effectGridItem, r, { [x.selected]: i }) }, l), {
+            O(y({ className: o()(x.effectGridItem, r, { [x.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t
             })
@@ -92,27 +92,27 @@ let v = () => 80,
     },
     E = (e) => {
         var t,
-            { user: r, profileEffect: l, innerRef: o, section: s, isSelected: v } = e,
-            E = P(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
+            { user: r, profileEffect: l, innerRef: o, section: s, isSelected: P } = e,
+            E = v(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
         let C = (0, g.V)(l.id),
             w = (0, a.e7)([d.Z], () => {
                 let e = d.Z.getProduct(l.skuId);
                 return (0, f.G1)(e);
             }),
-            I = (0, f.Yq)(l.skuId),
-            S = i.useRef(null),
-            { accessibilityLabel: N, thumbnailPreviewSrc: Z, title: k } = null != (t = null == C ? void 0 : C.config) ? t : {},
-            D = m.ZP.canUseCollectibles(r),
-            A = s === h.$0.PREMIUM_PURCHASE && !D,
+            S = (0, f.Yq)(l.skuId),
+            I = i.useRef(null),
+            { accessibilityLabel: N, thumbnailPreviewSrc: Z, title: D } = null != (t = null == C ? void 0 : C.config) ? t : {},
+            k = m.ZP.canUseCollectibles(r),
+            A = s === h.$0.PREMIUM_PURCHASE && !k,
             T = (0, p.M)();
         return (0, n.jsxs)(
             _,
-            y(
-                O(
+            O(
+                y(
                     {
-                        className: !A || v || T ? void 0 : x.decorationGridItemChurned,
-                        innerRef: null != o ? o : S,
-                        isSelected: v
+                        className: !A || P || T ? void 0 : x.decorationGridItemChurned,
+                        innerRef: null != o ? o : I,
+                        isSelected: P
                     },
                     E
                 ),
@@ -126,11 +126,11 @@ let v = () => 80,
                         (0, n.jsx)('img', {
                             className: x.presetEffectImg,
                             src: Z,
-                            alt: k
+                            alt: D
                         }),
-                        s === h.$0.PURCHASE || (s === h.$0.PREMIUM_PURCHASE && D)
+                        s === h.$0.PURCHASE || (s === h.$0.PREMIUM_PURCHASE && k)
                             ? null
-                            : I
+                            : S
                               ? (0, n.jsx)(u.lBU, {
                                     className: x.newBadge,
                                     text: (0, n.jsxs)('div', {
@@ -191,7 +191,7 @@ let v = () => 80,
                             (0, n.jsxs)(
                                 _,
                                 {
-                                    style: O({}, p),
+                                    style: y({}, p),
                                     isSelected: !d,
                                     onSelect: () => o(null),
                                     children: [
@@ -240,7 +240,7 @@ let v = () => 80,
                                 E,
                                 {
                                     user: t,
-                                    style: O({}, p),
+                                    style: y({}, p),
                                     section: g,
                                     profileEffect: e,
                                     innerRef: r ? l : void 0,
@@ -254,7 +254,7 @@ let v = () => 80,
                 renderSection: (e, t) => {
                     let { header: r } = a[e];
                     return (0, n.jsx)('div', {
-                        style: y(O({}, t), {
+                        style: O(y({}, t), {
                             height: ''.concat(16, 'px'),
                             position: 'absolute'
                         }),
@@ -266,7 +266,7 @@ let v = () => 80,
                     var r, n;
                     return null != (n = null == (r = a[e].items[t]) ? void 0 : r.id) ? n : null;
                 },
-                getItemHeight: v,
+                getItemHeight: P,
                 removeEdgeItemGutters: !0
             })
         });

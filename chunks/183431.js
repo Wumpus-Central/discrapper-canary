@@ -14,10 +14,9 @@ function u(e) {
             (a.Z.showAgeVerificationGetStartedModal(o.cU.SYSTEM_DM_RETRY_BUTTON), (0, o.Z7)(o.io.RETRY, t));
         }, [t]);
     return (0, r.jsx)(l.zxk, {
-        size: l.zxk.Sizes.MEDIUM,
-        color: l.zxk.Colors.BRAND,
+        variant: 'primary',
+        text: n ? c.intl.string(c.t.KPGVWl) : c.intl.string(c.t['/nicWl']),
         onClick: d,
-        disabled: !u,
-        children: n ? c.intl.string(c.t.KPGVWl) : c.intl.string(c.t['/nicWl'])
+        disabled: !u
     });
 }

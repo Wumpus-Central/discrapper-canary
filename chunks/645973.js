@@ -1,21 +1,22 @@
-n.d(t, { Z: () => u });
-var a = n(255367),
-    r = n(73800),
-    l = n(120356),
-    i = n.n(l),
-    s = n(481060),
-    o = n(90641),
-    c = n(355730),
-    d = n(616257);
+a.d(t, { Z: () => u });
+var n = a(255367),
+    r = a(73800),
+    l = a(120356),
+    i = a.n(l),
+    s = a(481060),
+    o = a(90641),
+    c = a(355730),
+    d = a(616257);
 function u() {
     let e = r.useRef(null);
-    return (0, a.jsx)('div', {
+    return (0, n.jsx)('div', {
         ref: e,
         className: i()(d.panel, c.panel),
-        children: (0, a.jsx)(s.zxk, {
-            size: s.zxk.Sizes.SMALL,
-            onClick: o.Z.clearUploadedKeyVersions,
-            children: 'Reset Uploaded Key Versions Cache'
+        children: (0, n.jsx)(s.zxk, {
+            variant: 'primary',
+            size: 'sm',
+            text: 'Reset Uploaded Key Versions Cache',
+            onClick: o.Z.clearUploadedKeyVersions
         })
     });
 }

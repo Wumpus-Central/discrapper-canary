@@ -34,7 +34,7 @@ function u(e) {
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,7 +52,7 @@ function f(e, t) {
         e
     );
 }
-function p(e) {
+function f(e) {
     let { price: t, selected: n, onClick: r } = e;
     return (0, a.jsxs)(s.P3F, {
         className: i()(x.priceRow, { [x.selected]: n }),
@@ -114,7 +114,7 @@ function _(e) {
                     }),
                     l.map((e, t) =>
                         (0, a.jsx)(
-                            p,
+                            f,
                             {
                                 price: e,
                                 selected: t === i,
@@ -126,11 +126,11 @@ function _(e) {
                 ]
             }),
             (0, a.jsx)(s.zxk, {
-                size: s.zxk.Sizes.MEDIUM,
+                variant: 'primary',
+                text: m.intl.string(m.t['1W7mCg']),
                 onClick: () => {
-                    n(f(u({}, t), { listings: [f(u({}, t.listings[0]), { price_tier: l[i] })] }));
-                },
-                children: m.intl.string(m.t['1W7mCg'])
+                    n(p(u({}, t), { listings: [p(u({}, t.listings[0]), { price_tier: l[i] })] }));
+                }
             })
         ]
     });

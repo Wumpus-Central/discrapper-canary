@@ -2,8 +2,8 @@
 var i,
     r = n(255367),
     s = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(913527),
     c = n.n(o),
     d = n(91192),
@@ -16,12 +16,12 @@ var i,
     b = n(593061),
     x = n(600164),
     _ = n(925329),
-    E = n(267101),
-    j = n(240864),
+    j = n(267101),
+    E = n(240864),
     O = n(942833),
     C = n(400916),
-    S = n(916001),
-    v = n(539290),
+    v = n(916001),
+    S = n(539290),
     T = n(336197),
     N = n(690221),
     I = n(307643),
@@ -42,8 +42,8 @@ var i,
     F = n(244526),
     H = n(981631),
     z = n(474936),
-    Y = n(231338),
-    W = n(388032),
+    W = n(231338),
+    Y = n(388032),
     K = n(468590);
 function q(e, t, n) {
     return (
@@ -95,7 +95,7 @@ function Q(e, t) {
 let J = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
     $ = [H.epS.DURABLE_PRIMARY, H.epS.DURABLE, H.epS.CONSUMABLE],
     ee = [H.PyE.FAILED, H.PyE.REVERSED, H.PyE.CANCELED],
-    et = [Y.gg.APPLE],
+    et = [W.gg.APPLE],
     en = (e) => {
         let { description: t, cost: n } = e;
         return (0, r.jsx)('li', {
@@ -108,16 +108,16 @@ let J = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/reques
     };
 function ei(e) {
     let { value: t, copyText: n, copyFeedbackText: i } = e,
-        [l, a] = s.useState(!1),
+        [a, l] = s.useState(!1),
         [o, c] = s.useState(!1),
         d = () => {
             (0, B.JG)(t, () => {
-                (c(!0), a(!0));
+                (c(!0), l(!0));
             });
         };
     return (0, r.jsx)(p.ua7, {
         forceOpen: o,
-        text: l ? i : n,
+        text: a ? i : n,
         children: (e) => {
             var { onMouseEnter: n, onMouseLeave: i } = e,
                 s = (function (e, t) {
@@ -143,7 +143,7 @@ function ei(e) {
                 p.P3F,
                 Q(X({}, s), {
                     onMouseEnter: () => {
-                        (l && a(!1), 'function' == typeof n && n());
+                        (a && l(!1), 'function' == typeof n && n());
                     },
                     onMouseLeave: () => {
                         (c(!1), 'function' == typeof i && i());
@@ -170,46 +170,46 @@ let er = (e) => {
 };
 function es(e) {
     let { guildId: t, guildProductListingId: n } = e,
-        i = (0, E.hO)(t, n, { requireCurrentGuild: !1 }),
-        l = (0, O.C)(i),
-        a = (0, m.e7)([D.Z], () => D.Z.getGuild(t)),
-        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? W.intl.string(W.t.H11qcX) : l,
+        i = (0, j.hO)(t, n, { requireCurrentGuild: !1 }),
+        a = (0, O.C)(i),
+        l = (0, m.e7)([D.Z], () => D.Z.getGuild(t)),
+        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? Y.intl.string(Y.t.H11qcX) : a,
         c = s.useCallback(async () => {
-            ((null == a ? void 0 : a.features.has(H.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) ? await (0, T.Z)(H.Z5c.GUILD_PRODUCT(t, n)) : await (0, T.Z)(H.Z5c.CHANNEL(t)), (0, g.xf)());
-        }, [a, t, n]);
+            ((null == l ? void 0 : l.features.has(H.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) ? await (0, T.Z)(H.Z5c.GUILD_PRODUCT(t, n)) : await (0, T.Z)(H.Z5c.CHANNEL(t)), (0, g.xf)());
+        }, [l, t, n]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != o &&
                 (0, r.jsx)(er, {
-                    description: W.intl.string(W.t.lXPbJS),
+                    description: Y.intl.string(Y.t.lXPbJS),
                     detail: o
                 }),
-            null != a &&
+            null != l &&
                 (0, r.jsx)(er, {
-                    description: W.intl.string(W.t.Wpn8z8),
+                    description: Y.intl.string(Y.t.Wpn8z8),
                     detail: (0, r.jsx)(N.Z, {
                         onClick: c,
-                        children: a.name
+                        children: l.name
                     })
                 })
         ]
     });
 }
-function el(e) {
+function ea(e) {
     var t, n;
     let { guildId: i, guildProductListingId: s } = e,
-        l = (0, E.hO)(i, s, { requireCurrentGuild: !1 }),
-        a = (0, m.e7)([j.Z], () => j.Z.getGuildProductFetchState(s) === j.M.FETCHING),
-        o = null == l ? void 0 : l.role_id,
+        a = (0, j.hO)(i, s, { requireCurrentGuild: !1 }),
+        l = (0, m.e7)([E.Z], () => E.Z.getGuildProductFetchState(s) === E.M.FETCHING),
+        o = null == a ? void 0 : a.role_id,
         c = (0, m.e7)([R.Z], () => (null != o ? R.Z.getRole(i, o) : void 0), [i, o]),
-        d = (null != (n = null == l || null == (t = l.attachments) ? void 0 : t.length) ? n : 0) > 0,
+        d = (null != (n = null == a || null == (t = a.attachments) ? void 0 : t.length) ? n : 0) > 0,
         u = null != c;
-    return a
+    return l
         ? (0, r.jsx)('div', {
               className: K.guildProductBenefits,
               children: (0, r.jsx)(p.$jN, {})
           })
-        : null != l && (d || u)
+        : null != a && (d || u)
           ? (0, r.jsxs)('div', {
                 className: K.guildProductBenefits,
                 children: [
@@ -220,11 +220,11 @@ function el(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: K.guildProductBenefitLabel,
-                                    children: W.intl.string(W.t.hxawo6)
+                                    children: Y.intl.string(Y.t.hxawo6)
                                 }),
                                 (0, r.jsx)(C.Z, {
                                     guildId: i,
-                                    productId: l.id
+                                    productId: a.id
                                 })
                             ]
                         }),
@@ -236,16 +236,16 @@ function el(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: K.guildProductBenefitLabel,
-                                    children: W.intl.string(W.t.gWBNen)
+                                    children: Y.intl.string(Y.t.gWBNen)
                                 }),
-                                (0, r.jsx)(S.Z, { role: c })
+                                (0, r.jsx)(v.Z, { role: c })
                             ]
                         })
                 ]
             })
           : null;
 }
-class ea extends (i = s.PureComponent) {
+class el extends (i = s.PureComponent) {
     get daysSincePurchase() {
         let { payment: e } = this.props,
             t = null != e.sku ? e.sku.releaseDate : null,
@@ -273,32 +273,32 @@ class ea extends (i = s.PureComponent) {
             case H.PyE.PENDING:
                 return (0, r.jsx)('span', {
                     className: K.statusTagGrey,
-                    children: W.intl.string(W.t.y7F0RU)
+                    children: Y.intl.string(Y.t.y7F0RU)
                 });
             case H.PyE.FAILED:
                 return (0, r.jsx)('span', {
                     className: K.statusTagRed,
-                    children: W.intl.string(W.t.Yo4ru7)
+                    children: Y.intl.string(Y.t.Yo4ru7)
                 });
             case H.PyE.REFUNDED:
                 if (e.amountRefunded !== e.amount)
                     return (0, r.jsx)('span', {
                         className: K.statusTagGreen,
-                        children: W.intl.string(W.t.lYbZz8)
+                        children: Y.intl.string(Y.t.lYbZz8)
                     });
                 return (0, r.jsx)('span', {
                     className: K.statusTagGreen,
-                    children: W.intl.string(W.t.ZBb6ND)
+                    children: Y.intl.string(Y.t.ZBb6ND)
                 });
             case H.PyE.REVERSED:
                 return (0, r.jsx)('span', {
                     className: K.statusTagRed,
-                    children: W.intl.string(W.t.YQv9Li)
+                    children: Y.intl.string(Y.t.YQv9Li)
                 });
             case H.PyE.CANCELED:
                 return (0, r.jsx)('span', {
                     className: K.statusTagRed,
-                    children: W.intl.string(W.t.ttkBh4)
+                    children: Y.intl.string(Y.t.ttkBh4)
                 });
             default:
                 return null;
@@ -319,11 +319,11 @@ class ea extends (i = s.PureComponent) {
             children: (0, r.jsxs)('div', {
                 className: K.paymentInfo,
                 children: [
-                    (0, r.jsx)('div', { children: W.intl.string(W.t['UQim+v']) }),
+                    (0, r.jsx)('div', { children: Y.intl.string(Y.t['UQim+v']) }),
                     (0, r.jsx)(ei, {
                         value: e.id,
-                        copyText: W.intl.string(W.t['Mdk9+P']),
-                        copyFeedbackText: W.intl.string(W.t['7eIrAw'])
+                        copyText: Y.intl.string(Y.t['Mdk9+P']),
+                        copyFeedbackText: Y.intl.string(Y.t['7eIrAw'])
                     })
                 ]
             })
@@ -331,10 +331,10 @@ class ea extends (i = s.PureComponent) {
     }
     renderPaymentBreakdown() {
         let { payment: e, locale: t, application: n } = this.props,
-            { taxInclusive: i, tax: l, amount: o, amountRefunded: c, currency: d } = e,
+            { taxInclusive: i, tax: a, amount: o, amountRefunded: c, currency: d } = e,
             u = null == n ? void 0 : n.guildId;
         return (0, r.jsxs)('div', {
-            className: a()(K.paymentText, K.paymentBreakdown),
+            className: l()(K.paymentText, K.paymentBreakdown),
             children: [
                 null != e.paymentSource
                     ? (0, r.jsx)(F.Z, {
@@ -344,7 +344,7 @@ class ea extends (i = s.PureComponent) {
                           showLabels: !0,
                           showPaymentSourceIcon: !0
                       })
-                    : e.paymentGateway === Y.gg.APPLE_PARTNER
+                    : e.paymentGateway === W.gg.APPLE_PARTNER
                       ? (0, r.jsx)(F.Z, {
                             paymentSource: new P.$z({}),
                             locale: t,
@@ -356,22 +356,22 @@ class ea extends (i = s.PureComponent) {
                 (0, r.jsxs)('ul', {
                     children: [
                         this.renderPaymentIdField(),
-                        !i && l > 0
+                        !i && a > 0
                             ? (0, r.jsxs)(s.Fragment, {
                                   children: [
                                       (0, r.jsx)(en, {
                                           description: e.description,
-                                          cost: (0, G.T4)(o - l, d)
+                                          cost: (0, G.T4)(o - a, d)
                                       }),
                                       (0, r.jsx)(en, {
-                                          description: W.intl.string(W.t.QgWXho),
-                                          cost: (0, G.T4)(l, d)
+                                          description: Y.intl.string(Y.t.QgWXho),
+                                          cost: (0, G.T4)(a, d)
                                       })
                                   ]
                               })
                             : null,
                         (0, r.jsx)(en, {
-                            description: W.intl.string(W.t.txajQE),
+                            description: Y.intl.string(Y.t.txajQE),
                             cost: (0, G.T4)(o, d)
                         }),
                         e.isGuildProductPurchase &&
@@ -385,11 +385,11 @@ class ea extends (i = s.PureComponent) {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(en, {
-                                        description: W.intl.string(W.t['A+I0AA']),
+                                        description: Y.intl.string(Y.t['A+I0AA']),
                                         cost: (0, G.T4)(c, d)
                                     }),
                                     (0, r.jsx)(en, {
-                                        description: W.intl.string(W.t.xER6Wl),
+                                        description: Y.intl.string(Y.t.xER6Wl),
                                         cost: (0, G.T4)(o - c, d)
                                     })
                                 ]
@@ -408,35 +408,35 @@ class ea extends (i = s.PureComponent) {
             { locale: t, payment: n } = this.props,
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
-        let l = 0 === i.length,
-            a = J(t),
+        let a = 0 === i.length,
+            l = J(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
-                ? W.intl.format(W.t['5lvoVV'], { supportURL: a })
-                : l
+                ? Y.intl.format(Y.t['5lvoVV'], { supportURL: l })
+                : a
                   ? n.isPremiumSubscription || n.isPremiumGuildSubscription
-                      ? W.intl.format(W.t.EPYteX, {
+                      ? Y.intl.format(Y.t.EPYteX, {
                             dateLimit: o,
-                            supportURL: a
+                            supportURL: l
                         })
                       : n.isGift
-                        ? W.intl.format(W.t['16eP/P'], {
+                        ? Y.intl.format(Y.t['16eP/P'], {
                               dateLimit: o,
-                              supportURL: a
+                              supportURL: l
                           })
-                        : W.intl.format(W.t['1LDI4O'], {
+                        : Y.intl.format(Y.t['1LDI4O'], {
                               dateLimit: o,
                               playtimeLimit: 2,
-                              supportURL: a
+                              supportURL: l
                           })
                   : n.isCollectible
-                    ? W.intl.string(W.t.s9TZMz)
+                    ? Y.intl.string(Y.t.s9TZMz)
                     : n.isGift
-                      ? W.intl.formatToPlainString(W.t.owlOWV, { dateLimit: o })
+                      ? Y.intl.formatToPlainString(Y.t.owlOWV, { dateLimit: o })
                       : n.isPremiumSubscription || n.isPremiumGuildSubscription
-                        ? W.intl.formatToPlainString(W.t.dk7vyM, { dateLimit: o })
-                        : W.intl.formatToPlainString(W.t.s4Kk0N, {
+                        ? Y.intl.formatToPlainString(Y.t.dk7vyM, { dateLimit: o })
+                        : Y.intl.formatToPlainString(Y.t.s4Kk0N, {
                               dateLimit: o,
                               playtimeLimit: 2
                           })),
@@ -444,7 +444,7 @@ class ea extends (i = s.PureComponent) {
                 children: [
                     (0, r.jsx)(p.H, {
                         className: K.paymentHeader,
-                        children: W.intl.string(W.t['n/27pq'])
+                        children: Y.intl.string(Y.t['n/27pq'])
                     }),
                     (0, r.jsxs)('div', {
                         className: K.paymentText,
@@ -488,11 +488,11 @@ class ea extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)('div', {
                     className: K.refundRules,
-                    children: !n.isCollectible && this.renderRefundCriteria(W.intl.string(W.t.H0RNz8), i, W.intl.formatToPlainString(W.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
+                    children: !n.isCollectible && this.renderRefundCriteria(Y.intl.string(Y.t.H0RNz8), i, Y.intl.formatToPlainString(Y.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                 }),
                 (0, r.jsx)(p.eee, {
                     href: J(t),
-                    children: W.intl.string(W.t.re5nOD)
+                    children: Y.intl.string(Y.t.re5nOD)
                 })
             ]
         });
@@ -500,7 +500,7 @@ class ea extends (i = s.PureComponent) {
     renderDescription() {
         let e,
             t,
-            { compactMode: n, payment: i, application: l, guild: a, stickerPack: o, plan: d } = this.props,
+            { compactMode: n, payment: i, application: a, guild: l, stickerPack: o, plan: d } = this.props,
             { expanded: u } = this.state,
             m = i.sku,
             g = i.subscription,
@@ -515,22 +515,22 @@ class ea extends (i = s.PureComponent) {
                 });
             else if (g.type === H.NYc.GUILD) {
                 if (null != d) {
-                    let e = d.interval === z.rV.YEAR ? W.t.V6UFQE : W.t['6oq129'];
-                    (n.push(W.intl.format(e, { planName: d.name })), (s = d.skuId));
+                    let e = d.interval === z.rV.YEAR ? Y.t.V6UFQE : Y.t['6oq129'];
+                    (n.push(Y.intl.format(e, { planName: d.name })), (s = d.skuId));
                 }
-            } else g.type === H.NYc.APPLICATION && (null != d && (s = d.skuId), null != l ? n.push(W.intl.formatToPlainString(W.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(W.intl.string(W.t['9czSYm'])));
+            } else g.type === H.NYc.APPLICATION && (null != d && (s = d.skuId), null != a ? n.push(Y.intl.formatToPlainString(Y.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(Y.intl.string(Y.t['9czSYm'])));
             ((t = 0 !== n.length ? n.join(', ') : i.description),
                 (e = (0, r.jsx)(_.Z, {
                     className: K.descriptionIcon,
                     guildClassName: K.guildDescriptionIcon,
-                    game: l,
-                    guild: a,
+                    game: a,
+                    guild: l,
                     size: _.Z.Sizes.XSMALL,
                     skuId: null != s ? s : null == m ? void 0 : m.id
                 })));
         } else if (null != m) {
             var f;
-            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? W.intl.string(W.t.O7uLm5) : m.name), null != o)) {
+            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? Y.intl.string(Y.t.O7uLm5) : m.name), null != o)) {
                 let t = (0, y.Zt)(o);
                 e = (0, r.jsx)(A.Z, {
                     disableAnimation: !u,
@@ -552,8 +552,8 @@ class ea extends (i = s.PureComponent) {
                         : (0, r.jsx)(_.Z, {
                               className: K.descriptionIcon,
                               guildClassName: K.guildDescriptionIcon,
-                              game: l,
-                              guild: a,
+                              game: a,
+                              guild: l,
                               size: _.Z.Sizes.XSMALL,
                               skuId: m.id
                           });
@@ -570,7 +570,7 @@ class ea extends (i = s.PureComponent) {
             }),
             x = i.isGift
                 ? (0, r.jsx)(p.ua7, {
-                      text: W.intl.string(W.t.QddTpq),
+                      text: Y.intl.string(Y.t.QddTpq),
                       children: (e) =>
                           (0, r.jsx)(
                               p.OgN,
@@ -614,16 +614,16 @@ class ea extends (i = s.PureComponent) {
                   children: [
                       (0, r.jsx)('div', { className: K.sectionDivider }),
                       e.isSoftDeletedProduct
-                          ? (0, r.jsx)(v.Z, {
+                          ? (0, r.jsx)(S.Z, {
                                 className: K.warningBlock,
-                                buttonPosition: v.E.RIGHT,
-                                notice: W.intl.string(W.t['3AvulJ']),
-                                ctaLabel: W.intl.string(W.t.zoztQE),
+                                buttonPosition: S.E.RIGHT,
+                                notice: Y.intl.string(Y.t['3AvulJ']),
+                                ctaLabel: Y.intl.string(Y.t.zoztQE),
                                 onClick: () => (0, h.Z)(J(n))
                             })
                           : null != i &&
                             null != e.sku &&
-                            (0, r.jsx)(el, {
+                            (0, r.jsx)(ea, {
                                 guildId: i,
                                 guildProductListingId: e.sku.id
                             })
@@ -639,7 +639,7 @@ class ea extends (i = s.PureComponent) {
                 children: [
                     (0, r.jsx)(p.H, {
                         className: K.paymentHeader,
-                        children: W.intl.string(W.t.nyzoFR)
+                        children: Y.intl.string(Y.t.nyzoFR)
                     }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),
@@ -661,7 +661,7 @@ class ea extends (i = s.PureComponent) {
                         X(
                             {
                                 onClick: this.handleExpandInfo,
-                                className: a()(i ? K.payment : K.hoverablePayment, t, { [K.compact]: n }),
+                                className: l()(i ? K.payment : K.hoverablePayment, t, { [K.compact]: n }),
                                 focusProps: { offset: 4 }
                             },
                             e
@@ -767,7 +767,7 @@ class ea extends (i = s.PureComponent) {
 }
 function eo(e) {
     var t, n;
-    let { payment: i, locale: l, compactMode: a, className: o } = e,
+    let { payment: i, locale: a, compactMode: l, className: o } = e,
         c = null != i.sku && $.includes(i.sku.type),
         d = null != i.sku && c ? i.sku.applicationId : null,
         u = null == (t = i.sku) ? void 0 : t.applicationId,
@@ -789,20 +789,20 @@ function eo(e) {
         p && null != u && (0, I.UM)(u);
     }, [u, p]);
     let _ = (0, m.e7)([D.Z], () => D.Z.getGuild(null == h ? void 0 : h.guildId)),
-        E = c ? h : void 0,
-        j = i.subscription,
-        O = (0, m.e7)([w.Z], () => (null != j && j.type !== H.NYc.PREMIUM ? w.Z.get(j.items[0].planId) : null));
-    return (0, r.jsx)(ea, {
+        j = c ? h : void 0,
+        E = i.subscription,
+        O = (0, m.e7)([w.Z], () => (null != E && E.type !== H.NYc.PREMIUM ? w.Z.get(E.items[0].planId) : null));
+    return (0, r.jsx)(el, {
         applicationStatistics: g,
-        application: p ? x : E,
+        application: p ? x : j,
         guild: _,
         stickerPack: null,
         paymentSources: b,
-        locale: l,
-        compactMode: a,
+        locale: a,
+        compactMode: l,
         className: o,
         payment: i,
         plan: O
     });
 }
-q(ea, 'defaultProps', { compactMode: !1 });
+q(el, 'defaultProps', { compactMode: !1 });

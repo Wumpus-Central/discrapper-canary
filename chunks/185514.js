@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(140492),
     r = n(475468),
     s = n(703656),
-    l = n(769654),
-    a = n(944486),
+    a = n(769654),
+    l = n(944486),
     o = n(914010),
     c = n(358085),
     d = n(981631);
@@ -31,9 +31,9 @@ let u = {
             if (null != o.Z.getGuildId()) e = d.ME;
             else {
                 let t = o.Z.getLastSelectedGuildId();
-                null != t && ((e = t), (0, r.K)(t, a.Z.getChannelId(t)));
+                null != t && ((e = t), (0, r.K)(t, l.Z.getChannelId(t)));
             }
-            return (null != e && (0, l.X)(e), !1);
+            return (null != e && (0, a.X)(e), !1);
         }
     },
     g = {

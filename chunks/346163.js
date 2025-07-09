@@ -38,9 +38,9 @@ function h(e) {
               creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY)
           }));
     let D = n && b && !1 === x,
-        k = n && !1 === h,
-        A = (0, g.f)(),
-        L = E && R && b ? f.intl.format(f.t.wbVIUF, {}) : void 0;
+        A = n && !1 === h,
+        L = (0, g.f)(),
+        k = E && R && b ? f.intl.format(f.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             D && N();
@@ -59,11 +59,11 @@ function h(e) {
             isApplicationPending: w,
             hasPreviousApplicationRejection: E,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: L,
-            showAcceptTermsFlow: k,
-            wasRejectedInV1: k && (T || E),
+            reapplyNoticeText: k,
+            showAcceptTermsFlow: A,
+            wasRejectedInV1: A && (T || E),
             requirementsFinePrintText: Z,
-            acceptTermsCheckboxText: A
+            acceptTermsCheckboxText: L
         }
     );
 }

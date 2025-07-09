@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(740492),
-    a = n(984014),
+    a = n(740492),
+    o = n(984014),
     s = n(295510),
     c = n(394059),
     u = n(388032);
 function d(e, t) {
-    let [n, d, p] = (0, a.Z)(e, t),
-        h = (0, i.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    let [n, d, p] = (0, o.Z)(e, t),
+        h = (0, i.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
         ? (0, r.jsx)(l.S89, {
               id: 'self-stream-hide',

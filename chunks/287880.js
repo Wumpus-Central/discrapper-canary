@@ -23,16 +23,16 @@
 var i,
     r,
     s,
-    l = n(943418);
-let a = null != (s = null == (i = window) ? void 0 : i.crypto) ? s : null == (r = window) ? void 0 : r.msCrypto,
+    a = n(943418);
+let l = null != (s = null == (i = window) ? void 0 : i.crypto) ? s : null == (r = window) ? void 0 : r.msCrypto,
     o = 'Uint8Array' in window,
-    c = null != a && 'getRandomValues' in a && o,
+    c = null != l && 'getRandomValues' in l && o,
     d = 'PublicKeyCredential' in window && o;
 function u() {
     var e;
     return (
-        (e = a.getRandomValues(new Uint8Array(20))),
-        l
+        (e = l.getRandomValues(new Uint8Array(20))),
+        a
             .encode(e)
             .toString('utf8')
             .replace(/=/g, '')

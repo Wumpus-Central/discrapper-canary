@@ -33,23 +33,23 @@ function y(e) {
             [p.vh.MEMBERS]: O.intl.string(O.t.sx4E5u),
             [p.vh.CONTENT]: O.intl.string(O.t.fphZb2)
         },
-        k = i.useMemo(
+        A = i.useMemo(
             () =>
                 Object.values(null != Z ? Z : {})
                     .flat()
                     .filter(d.lm),
             [Z]
         ),
-        A = {
+        L = {
             isInEditMode: w,
             setEditingRule: E
         },
-        L = i.useRef(A);
+        k = i.useRef(L);
     (i.useEffect(() => {
-        L.current = A;
+        k.current = L;
     }),
         i.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = L.current;
+            let { isInEditMode: e, setEditingRule: t } = k.current;
             e && t(null);
         }, [P]));
     let M = i.useCallback(
@@ -59,7 +59,7 @@ function y(e) {
                     return null !=
                         (r =
                             null ==
-                            (n = k.find((t) => {
+                            (n = A.find((t) => {
                                 let { id: n } = t;
                                 return n === e;
                             }))
@@ -70,7 +70,7 @@ function y(e) {
                 }
                 return null != t ? p.I6[t].getDefaultRuleName() : null;
             },
-            [k]
+            [A]
         ),
         G = i.useMemo(() => {
             var e, t;
@@ -185,7 +185,7 @@ function y(e) {
                 }),
             (0, r.jsx)(x.Z, {
                 guildId: P,
-                existingRules: k
+                existingRules: A
             }),
             w && (0, r.jsx)('div', { className: C.endSpacer })
         ]

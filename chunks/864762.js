@@ -1,51 +1,51 @@
-(a.d(t, { k: () => c }), a(388685));
-var l = a(73800),
-    r = a(110924),
-    s = a(626135),
-    n = a(798930),
-    o = a(981631);
-function c(e, t) {
-    let [a, c] = l.useState(n.O.LANDING),
-        i = (0, r.Z)(a),
-        [d, x] = l.useState(null),
-        [u, h] = l.useState(null),
-        [m, N] = l.useState(void 0),
-        C = l.useCallback(() => {
-            switch (a) {
+(t.d(a, { k: () => o }), t(388685));
+var r = t(73800),
+    s = t(110924),
+    l = t(626135),
+    n = t(798930),
+    i = t(981631);
+function o(e, a) {
+    let [t, o] = r.useState(n.O.LANDING),
+        c = (0, s.Z)(t),
+        [d, x] = r.useState(null),
+        [u, h] = r.useState(null),
+        [m, N] = r.useState(void 0),
+        C = r.useCallback(() => {
+            switch (t) {
                 case n.O.LANDING:
-                    c(n.O.PRE_CONNECT);
+                    o(n.O.PRE_CONNECT);
                     break;
                 case n.O.DISCORD_CONSENT:
-                    c(n.O.SUCCESS);
+                    o(n.O.SUCCESS);
                     break;
                 case n.O.ERROR:
-                    c(n.O.PRE_CONNECT);
+                    o(n.O.PRE_CONNECT);
             }
-        }, [a]),
-        j = l.useCallback((e) => {
-            (x(null), N(e), c(n.O.ERROR));
+        }, [t]),
+        j = r.useCallback((e) => {
+            (x(null), N(e), o(n.O.ERROR));
         }, []),
-        k = l.useCallback((e) => {
-            (x(e), c(n.O.PRE_CONNECT_WAITING));
+        p = r.useCallback((e) => {
+            (x(e), o(n.O.PRE_CONNECT_WAITING));
         }, []),
-        v = l.useCallback((e) => {
-            (x(null), h(e), c(n.O.DISCORD_CONSENT));
+        v = r.useCallback((e) => {
+            (x(null), h(e), o(n.O.DISCORD_CONSENT));
         }, []);
     return (
-        l.useEffect(() => {
-            a !== i &&
-                s.default.track(o.rMx.ACCOUNT_LINK_STEP, {
+        r.useEffect(() => {
+            t !== c &&
+                l.default.track(i.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,
-                    previous_step: i,
-                    current_step: a,
-                    platform_type: t
+                    previous_step: c,
+                    current_step: t,
+                    platform_type: a
                 });
-        }, [a, i, e, t]),
+        }, [t, c, e, a]),
         {
-            slide: a,
+            slide: t,
             gotoNext: C,
             gotoError: j,
-            handleWaitingForConnection: k,
+            handleWaitingForConnection: p,
             handleAuthToken: v,
             expectedCallbackState: d,
             callbackData: u,

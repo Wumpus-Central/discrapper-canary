@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(255367),
     s = n(73800),
     o = n(481060),
     i = n(377171),
-    l = n(332173);
-let a = s.forwardRef(function (e, t) {
-    let { isInventory: n, style: s, children: a } = e;
+    a = n(332173);
+let l = s.forwardRef(function (e, t) {
+    let { isInventory: n, style: s, children: l } = e;
     return (0, r.jsxs)('div', {
         ref: t,
-        className: l.desktopTooltip,
+        className: a.desktopTooltip,
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +37,7 @@ let a = s.forwardRef(function (e, t) {
         children: [
             (0, r.jsx)(o.d3s, {
                 size: 'custom',
-                className: l.infoIcon,
+                className: a.infoIcon,
                 height: n ? 16 : 12,
                 width: n ? 16 : 12,
                 color: n ? i.Z.TEXT_MUTED : i.Z.WHITE
@@ -45,7 +45,7 @@ let a = s.forwardRef(function (e, t) {
             (0, r.jsx)(o.Text, {
                 color: n ? 'text-muted' : 'always-white',
                 variant: n ? 'text-xs/normal' : 'text-xxs/normal',
-                children: a
+                children: l
             })
         ]
     });

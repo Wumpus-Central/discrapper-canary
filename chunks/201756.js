@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(42170),
     x = n(123846),
     v = n(42551),
-    O = n(981631),
-    y = n(388032),
+    y = n(981631),
+    O = n(388032),
     _ = n(771429),
     H = n(350381);
 function w(e) {
@@ -126,10 +126,10 @@ function Z(e) {
         o = l.useRef(null),
         a = l.useRef(null),
         Z = l.useRef(null),
-        L = l.useRef(null),
         R = l.useRef(null),
+        L = l.useRef(null),
         I = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
-        P = (0, c.e7)([C.Z, d.Z], () => C.Z.can(O.Plq.MANAGE_GUILD, d.Z.getGuild(t)), [t]),
+        P = (0, c.e7)([C.Z, d.Z], () => C.Z.can(y.Plq.MANAGE_GUILD, d.Z.getGuild(t)), [t]),
         { selectedUserIds: M, addUsers: V, clearSelection: E } = (0, f.Z)(t),
         T = I.requireUnusualDmActivity || I.requireCommunicationDisabled || I.requireUnusualAccountActivity || I.requireUsernameQuarantined,
         k = I.selectedRoleIds.size > 0,
@@ -156,7 +156,7 @@ function Z(e) {
                         className: i()(_.tableHeaderCellContainer, H.xsmallCol),
                         children: (0, r.jsx)(u.ua7, {
                             shouldShow: !X,
-                            text: y.intl.string(y.t.tJEY0N),
+                            text: O.intl.string(O.t.tJEY0N),
                             children: (e) =>
                                 (0, r.jsx)(
                                     u.P3F,
@@ -172,7 +172,7 @@ function Z(e) {
                                 )
                         })
                     }),
-                (0, r.jsx)(D, { label: y.intl.string(y.t.Es7n9f) }),
+                (0, r.jsx)(D, { label: O.intl.string(O.t.Es7n9f) }),
                 P
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -185,7 +185,7 @@ function Z(e) {
                                   renderPopout: () =>
                                       (0, r.jsx)(g.Z, {
                                           guildId: t,
-                                          onClose: O.dG4
+                                          onClose: y.dG4
                                       }),
                                   closeOnScroll: !0,
                                   children: (e) => {
@@ -196,7 +196,7 @@ function Z(e) {
                                           w(
                                               {
                                                   ref: o,
-                                                  label: y.intl.string(y.t.xcKP1N),
+                                                  label: O.intl.string(O.t.xcKP1N),
                                                   onFilter: t,
                                                   isFiltered: A,
                                                   isSorted: B,
@@ -216,7 +216,7 @@ function Z(e) {
                                   renderPopout: () =>
                                       (0, r.jsx)(h.Z, {
                                           guildId: t,
-                                          onClose: O.dG4
+                                          onClose: y.dG4
                                       }),
                                   closeOnScroll: !0,
                                   children: (e) => {
@@ -227,7 +227,7 @@ function Z(e) {
                                           w(
                                               {
                                                   ref: a,
-                                                  label: y.intl.string(y.t.sPph4O),
+                                                  label: O.intl.string(O.t.sPph4O),
                                                   onFilter: t,
                                                   isFiltered: U,
                                                   isSorted: F,
@@ -243,11 +243,11 @@ function Z(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(D, {
-                                  label: y.intl.string(y.t.xcKP1N),
+                                  label: O.intl.string(O.t.xcKP1N),
                                   className: H.smallCol
                               }),
                               (0, r.jsx)(D, {
-                                  label: y.intl.string(y.t.sPph4O),
+                                  label: O.intl.string(O.t.sPph4O),
                                   className: H.smallCol
                               })
                           ]
@@ -262,7 +262,7 @@ function Z(e) {
                           renderPopout: () =>
                               (0, r.jsx)(x.Z, {
                                   guildId: t,
-                                  onClose: O.dG4
+                                  onClose: y.dG4
                               }),
                           closeOnScroll: !0,
                           children: (e) => {
@@ -273,7 +273,7 @@ function Z(e) {
                                   w(
                                       {
                                           ref: Z,
-                                          label: y.intl.string(y.t.yn0w19),
+                                          label: O.intl.string(O.t.yn0w19),
                                           onFilter: t,
                                           isFiltered: G,
                                           className: H.smallCol
@@ -285,11 +285,11 @@ function Z(e) {
                       })
                     : P &&
                       (0, r.jsx)(D, {
-                          label: y.intl.string(y.t.yn0w19),
+                          label: O.intl.string(O.t.yn0w19),
                           className: H.smallCol
                       }),
                 (0, r.jsx)(u.yRy, {
-                    targetElementRef: L,
+                    targetElementRef: R,
                     animation: u.yRy.Animation.FADE,
                     position: 'bottom',
                     spacing: 4,
@@ -308,8 +308,8 @@ function Z(e) {
                             D,
                             w(
                                 {
-                                    ref: L,
-                                    label: y.intl.string(y.t['2SZsWV']),
+                                    ref: R,
+                                    label: O.intl.string(O.t['2SZsWV']),
                                     onFilter: t,
                                     isFiltered: k,
                                     className: H.mediumCol
@@ -320,14 +320,14 @@ function Z(e) {
                     }
                 }),
                 (0, r.jsx)(u.ua7, {
-                    text: y.intl.string(y.t['2cRO3d']),
+                    text: O.intl.string(O.t['2cRO3d']),
                     position: 'top',
                     align: 'left',
                     shouldShow: !0,
                     color: u.ua7.Colors.BRAND,
                     children: (e) =>
                         (0, r.jsx)(u.yRy, {
-                            targetElementRef: R,
+                            targetElementRef: L,
                             animation: u.yRy.Animation.FADE,
                             position: 'bottom',
                             spacing: 4,
@@ -342,9 +342,9 @@ function Z(e) {
                             closeOnScroll: !0,
                             children: (t) =>
                                 (0, r.jsx)(D, {
-                                    ref: R,
-                                    label: y.intl.string(y.t['7V375+']),
-                                    'aria-label': y.intl.string(y.t['2cRO3d']),
+                                    ref: L,
+                                    label: O.intl.string(O.t['7V375+']),
+                                    'aria-label': O.intl.string(O.t['2cRO3d']),
                                     onFilter: (n) => {
                                         var r, l;
                                         (null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e));
@@ -366,7 +366,7 @@ function Z(e) {
                         })
                 }),
                 (0, r.jsx)(D, {
-                    label: y.intl.string(y.t['5Q9xGh']),
+                    label: O.intl.string(O.t['5Q9xGh']),
                     className: H.smallCol
                 })
             ]

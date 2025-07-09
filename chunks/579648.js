@@ -43,10 +43,11 @@ let h = (e) => {
                             children: g.intl.format(g.t.a59UeH, {})
                         }),
                         (0, r.jsx)(s.zxk, {
+                            variant: 'primary',
+                            text: g.intl.string(g.t.RWdjPz),
                             onClick: () => {
                                 (i(!0), t(2));
-                            },
-                            children: g.intl.string(g.t.RWdjPz)
+                            }
                         })
                     ]
                 }),

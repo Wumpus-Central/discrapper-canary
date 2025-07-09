@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(692547),
-    l = n(481060),
-    a = n(388032),
+    a = n(481060),
+    l = n(388032),
     o = n(244825);
 function c(e) {
     var t,
@@ -35,18 +35,18 @@ function c(e) {
             (0, i.jsx)('button', {
                 className: o.button,
                 onClick: () => p((e) => !e),
-                children: (0, i.jsxs)(l.Text, {
+                children: (0, i.jsxs)(a.Text, {
                     className: o.seeMore,
                     variant: 'text-sm/medium',
                     color: 'text-brand',
                     children: [
-                        m ? a.intl.string(a.t['JQX/PT']) : a.intl.string(a.t.Fbrd8P),
+                        m ? l.intl.string(l.t['JQX/PT']) : l.intl.string(l.t.Fbrd8P),
                         m
-                            ? (0, i.jsx)(l.u04, {
+                            ? (0, i.jsx)(a.u04, {
                                   color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
-                            : (0, i.jsx)(l.CJ0, {
+                            : (0, i.jsx)(a.CJ0, {
                                   color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
@@ -66,13 +66,13 @@ function c(e) {
     r.useEffect(() => {
         requestAnimationFrame(_);
     }, [_, c, d]);
-    let E = 'auto';
+    let j = 'auto';
     return (
-        null != g && (E = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != g && (j = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(
-                    l.Text,
+                    a.Text,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ function c(e) {
                             className: o.content,
                             lineClamp: m ? void 0 : d,
                             ref: x,
-                            style: { height: E },
+                            style: { height: j },
                             children: c
                         }),
                     Object.getOwnPropertyDescriptors

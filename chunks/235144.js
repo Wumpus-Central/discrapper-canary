@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(846027),
+    a = n(481060),
+    l = n(846027),
     o = n(906732),
     c = n(131951),
     d = n(321614),
@@ -20,7 +20,7 @@ function g() {
         g = r.useCallback(
             (t) => {
                 let { value: n } = t;
-                a.Z.setActiveInputProfile(n, { analyticsLocations: e });
+                l.Z.setActiveInputProfile(n, { analyticsLocations: e });
             },
             [e]
         ),
@@ -44,10 +44,10 @@ function g() {
             let { value: t } = e;
             return n.includes(t);
         });
-    return (0, i.jsx)(l.xJW, {
+    return (0, i.jsx)(a.xJW, {
         title: m.intl.string(m.t.LM3U3t),
         className: p.marginBottom20,
-        children: (0, i.jsx)(l.FXm, {
+        children: (0, i.jsx)(a.FXm, {
             onChange: g,
             options: h,
             value: null != t ? t : u._.CUSTOM

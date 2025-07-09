@@ -1,7 +1,7 @@
 let i, r, l;
 (n.d(e, { Z: () => m }), n(388685));
-var o,
-    a,
+var a,
+    o,
     s,
     c = n(442837),
     d = n(570140),
@@ -12,7 +12,7 @@ var o,
     y = n(358085),
     C = n(209492),
     O = n(981631);
-class g extends (o = c.ZP.Store) {
+class g extends (a = c.ZP.Store) {
     initialize() {
         (y.isPlatformEmbedded && C.S(), (i = {}), (r = new Set()), (l = []));
     }
@@ -25,14 +25,14 @@ class g extends (o = c.ZP.Store) {
     }
 }
 ((s = 'CloudSyncStore'),
-    (a = 'displayName') in g
-        ? Object.defineProperty(g, a, {
+    (o = 'displayName') in g
+        ? Object.defineProperty(g, o, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (g[a] = s));
+        : (g[o] = s));
 let m = new g(d.Z, {
     GAME_CLOUD_SYNC_START: function (t) {
         let { applicationId: e, branchId: n } = t,
@@ -56,14 +56,14 @@ let m = new g(d.Z, {
         );
     },
     GAME_CLOUD_SYNC_CONFLICT: function (t) {
-        let { applicationId: e, branchId: n, next: l, remote: o } = t,
-            a = (0, f.Tu)(e, n);
-        ((i[a] = {
+        let { applicationId: e, branchId: n, next: l, remote: a } = t,
+            o = (0, f.Tu)(e, n);
+        ((i[o] = {
             type: O.TzF.CONFLICT,
             next: l,
-            remote: o
+            remote: a
         }),
-            r.delete(a));
+            r.delete(o));
     },
     GAME_CLOUD_SYNC_ERROR: function (t) {
         let { applicationId: e, branchId: n } = t,

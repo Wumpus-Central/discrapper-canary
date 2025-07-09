@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(774078),
+    a = n(481060),
+    o = n(774078),
     s = n(906732),
     c = n(522651),
     u = n(579185),
@@ -18,7 +18,7 @@ let g = (e) => {
         [O, j] = i.useState(!1),
         E = (0, l.e7)([p.Z], () => p.Z.effectCooldownEndTime),
         S = i.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
-        { seconds: I } = (0, a.Z)(null != E ? E : new Date()),
+        { seconds: I } = (0, o.Z)(null != E ? E : new Date()),
         P = I > 0,
         { parentAnalyticsLocation: Z } = (0, s.ZP)(),
         N = i.useCallback(
@@ -38,10 +38,10 @@ let g = (e) => {
         ),
         w = (_ || O) && (g === f.D.EMOJI || null == g),
         R = i.useRef(null);
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: R,
         shouldShow: w,
-        animation: o.yRy.Animation.FADE,
+        animation: a.yRy.Animation.FADE,
         animationPosition: 'top',
         position: 'bottom',
         align: 'center',

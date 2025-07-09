@@ -31,10 +31,10 @@ var r = n(255367),
     w = n(70956),
     Z = n(823379),
     R = n(506071),
-    k = n(226378),
-    L = n(981631),
-    D = n(701488),
-    M = n(388032),
+    L = n(226378),
+    D = n(981631),
+    M = n(701488),
+    k = n(388032),
     U = n(484608);
 let F = i.memo((e) => {
     let { start: t } = e,
@@ -102,7 +102,7 @@ let B = i.memo(function (e) {
         J = null == Q ? void 0 : Q.details,
         $ = i.useMemo(() => {
             let e = new j.ZP(O);
-            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e);
+            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = M.wT), e);
         }, [O]),
         ee = (0, _.s5)({
             userId: z,
@@ -110,7 +110,7 @@ let B = i.memo(function (e) {
             application: $
         }),
         et = null == W,
-        en = (0, k.NL)({
+        en = (0, L.NL)({
             embeddedActivity: W,
             joinability: ee,
             currentEmbeddedActivity: K,
@@ -119,7 +119,7 @@ let B = i.memo(function (e) {
         er = i.useId(),
         ei = null != Y && Y.isLaunching && Y.componentId === er,
         el = async () => {
-            (P.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            (P.default.track(D.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: O.id,
                 channel_id: w,
                 channel_type: null == H ? void 0 : H.type,
@@ -143,9 +143,9 @@ let B = i.memo(function (e) {
                           componentId: er
                       }));
         },
-        ea = en.disabled ? M.intl.string(M.t.JBnc7O) : M.intl.string(M.t.cX9uLS),
+        ea = en.disabled ? k.intl.string(k.t.JBnc7O) : k.intl.string(k.t.cX9uLS),
         eo = (0, v.G)($, () => {
-            P.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            P.default.track(D.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: O.id,
                 channel_id: w,
                 channel_type: null == H ? void 0 : H.type,
@@ -164,7 +164,7 @@ let B = i.memo(function (e) {
         ep = (0, C.r)(Q),
         em = [
             {
-                label: et ? M.intl.string(M.t.cnBQPD) : M.intl.string(M.t.VJlc0d),
+                label: et ? k.intl.string(k.t.cnBQPD) : k.intl.string(k.t.VJlc0d),
                 trackingArea: x.j_.PLAY,
                 onClick: el,
                 disabledReason: d,
@@ -172,7 +172,7 @@ let B = i.memo(function (e) {
             }
         ];
     return (0, r.jsx)(y.W, {
-        header: M.intl.string(M.t.pkq6Vl),
+        header: k.intl.string(k.t.pkq6Vl),
         title: O.name,
         iconSrc: es,
         embedUrl: (0, E.H)({

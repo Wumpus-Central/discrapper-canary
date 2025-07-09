@@ -1,110 +1,111 @@
-(n.d(t, { Z: () => m }), n(388685));
-var a = n(255367),
-    r = n(73800),
-    l = n(544891),
-    i = n(481060),
-    s = n(317951),
-    o = n(959546),
-    c = n(208220);
-let d = '/users/@me/debug/consumables/',
-    u = {
-        [s.FX]: 'HD Streaming Potion',
-        [s.D1]: 'Confetti Potion'
+(a.d(t, { Z: () => x }), a(388685));
+var n = a(255367),
+    r = a(73800),
+    l = a(544891),
+    i = a(755721),
+    s = a(481060),
+    o = a(317951),
+    c = a(959546),
+    d = a(208220);
+let u = '/users/@me/debug/consumables/',
+    m = {
+        [o.FX]: 'HD Streaming Potion',
+        [o.D1]: 'Confetti Potion'
     };
-function m() {
+function x() {
     let e,
-        [t, n] = (0, r.useState)([]),
-        [m, x] = (0, r.useState)(null),
-        [h, p] = (0, r.useState)(!1);
+        [t, a] = (0, r.useState)([]),
+        [x, p] = (0, r.useState)(null),
+        [h, b] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(
             () => (
                 (async () => {
                     try {
-                        let e = (await l.tn.get(d)).body.entitlements.map((e) => o.Z.createFromServer(e));
-                        n(e);
+                        let e = (await l.tn.get(u)).body.entitlements.map((e) => c.Z.createFromServer(e));
+                        a(e);
                     } catch (e) {
-                        x('Failed to fetch entitlements');
+                        p('Failed to fetch entitlements');
                     }
                 })(),
                 () => {
-                    (n([]), x(null));
+                    (a([]), p(null));
                 }
             ),
             []
         ),
-        (0, a.jsx)('div', {
-            className: c.panel,
+        (0, n.jsx)('div', {
+            className: d.panel,
             children:
-                null != m
-                    ? (0, a.jsx)(i.Text, {
+                null != x
+                    ? (0, n.jsx)(s.Text, {
                           variant: 'text-md/normal',
-                          children: m
+                          children: x
                       })
                     : 0 === t.length
-                      ? (0, a.jsxs)(a.Fragment, {
+                      ? (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, n.jsx)(s.Text, {
                                     variant: 'text-lg/bold',
                                     children: 'Create Entitlements'
                                 }),
-                                (0, a.jsx)(i.zxk, {
+                                (0, n.jsx)(i.zx, {
                                     onClick:
-                                        ((e = s.D1),
+                                        ((e = o.D1),
                                         async () => {
-                                            p(!0);
+                                            b(!0);
                                             try {
-                                                let a = await l.tn.post({
-                                                        url: d,
+                                                let n = await l.tn.post({
+                                                        url: u,
                                                         query: { sku_id: e },
                                                         rejectWithError: !0
                                                     }),
-                                                    r = new o.Z(a.body.entitlement);
-                                                n([...t, r]);
+                                                    r = new c.Z(n.body.entitlement);
+                                                a([...t, r]);
                                             } catch (e) {
-                                                x('Failed to create entitlement');
+                                                p('Failed to create entitlement');
                                             } finally {
-                                                p(!1);
+                                                b(!1);
                                             }
                                         }),
-                                    className: c.button,
-                                    look: i.iLD.OUTLINED,
-                                    color: i.Ttl.PRIMARY,
+                                    className: d.button,
+                                    look: i.iL.OUTLINED,
+                                    color: i.Tt.PRIMARY,
                                     children: 'Create Confetti Entitlement'
                                 }),
-                                h && (0, a.jsx)(i.$jN, {})
+                                h && (0, n.jsx)(s.$jN, {})
                             ]
                         })
-                      : (0, a.jsxs)(a.Fragment, {
+                      : (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, a.jsxs)('div', {
-                                    className: c.title,
+                                (0, n.jsxs)('div', {
+                                    className: d.title,
                                     children: [
-                                        (0, a.jsx)(i.Text, {
+                                        (0, n.jsx)(s.Text, {
                                             variant: 'text-lg/bold',
                                             children: 'Existing Entitlements'
                                         }),
-                                        (0, a.jsx)(i.hh5, {})
+                                        (0, n.jsx)(s.hh5, {})
                                     ]
                                 }),
-                                (0, a.jsx)('ul', {
+                                (0, n.jsx)('ul', {
                                     children: t.map((e) =>
-                                        (0, a.jsx)(
+                                        (0, n.jsx)(
                                             'li',
                                             {
-                                                children: (0, a.jsxs)('div', {
+                                                children: (0, n.jsxs)('div', {
                                                     children: [
-                                                        (0, a.jsx)(i.Text, {
+                                                        (0, n.jsx)(s.Text, {
                                                             selectable: !0,
                                                             variant: 'text-md/normal',
                                                             children: e.id
                                                         }),
-                                                        (0, a.jsxs)(i.Text, {
+                                                        (0, n.jsxs)(s.Text, {
                                                             selectable: !0,
                                                             variant: 'text-md/normal',
-                                                            children: ['Type: ', u[e.skuId]]
+                                                            children: ['Type: ', m[e.skuId]]
                                                         }),
-                                                        (0, a.jsxs)(i.Text, {
+                                                        (0, n.jsxs)(s.Text, {
                                                             selectable: !0,
                                                             variant: 'text-md/normal',
                                                             children: ['Consumed? : ', e.consumed ? 'Yes' : 'No']

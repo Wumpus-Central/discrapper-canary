@@ -2,8 +2,8 @@
 var i,
     r = n(442837),
     s = n(570140),
-    l = n(626135),
-    a = n(477839),
+    a = n(626135),
+    l = n(477839),
     o = n(981631);
 function c(e, t, n) {
     return (
@@ -36,10 +36,10 @@ function d(e) {
 }
 function u(e, t, n) {
     return {
-        pointsByItem: { [a.yN.CLICKER_BUTTON]: 0 },
+        pointsByItem: { [l.yN.CLICKER_BUTTON]: 0 },
         pointsSpent: 0,
         itemContributions: {},
-        purchasedItems: { [a.yN.CLICKER_BUTTON]: { upgrades: {} } },
+        purchasedItems: { [l.yN.CLICKER_BUTTON]: { upgrades: {} } },
         unlockedAchievements: null != n ? n : new Set(),
         lastAction: void 0,
         startTime: Date.now(),
@@ -162,7 +162,7 @@ let x = new b(s.Z, {
     },
     CLICKER_GAME_PURCHASE_ITEM: function (e) {
         let { id: t } = e,
-            n = (0, a.w2)()[t];
+            n = (0, l.w2)()[t];
         if (
             !(f() < n.cost) &&
             ((m.pointsSpent += n.cost),
@@ -172,13 +172,13 @@ let x = new b(s.Z, {
                 type: 'purchase-item',
                 id: t
             }),
-            t === a.yN.COMPLETE_GAME)
+            t === l.yN.COMPLETE_GAME)
         ) {
             var i;
             ((m.endTime = Date.now()),
-                l.default.track(o.rMx.CLICKER_GAME_COMPLETED, {
+                a.default.track(o.rMx.CLICKER_GAME_COMPLETED, {
                     duration: Math.floor((m.endTime - m.startTime) / 1000),
-                    num_clicks: null != (i = m.itemContributions[a.yN.CLICKER_BUTTON]) ? i : 0,
+                    num_clicks: null != (i = m.itemContributions[l.yN.CLICKER_BUTTON]) ? i : 0,
                     total_score: Math.floor(h())
                 }));
         }
@@ -186,10 +186,10 @@ let x = new b(s.Z, {
     CLICKER_GAME_PURCHASE_ITEM_UPGRADE: function (e) {
         var t, n, i;
         let { id: r } = e,
-            s = (0, a.r7)()[r],
-            l = null == (t = m.purchasedItems[s.itemId]) ? void 0 : t.upgrades;
-        if (null == l) return;
-        let o = null != (i = l[r]) ? i : 0,
+            s = (0, l.r7)()[r],
+            a = null == (t = m.purchasedItems[s.itemId]) ? void 0 : t.upgrades;
+        if (null == a) return;
+        let o = null != (i = a[r]) ? i : 0,
             c = h();
         if (
             null != s.predicate &&
@@ -204,8 +204,8 @@ let x = new b(s.Z, {
         let u = s.cost({ numAlreadyPurchased: o });
         f() < u ||
             ((m.pointsSpent += u),
-            (l[r] = null != l[r] ? l[r] + 1 : 1),
-            (m.purchasedItems[s.itemId].upgrades = d({}, l)),
+            (a[r] = null != a[r] ? a[r] + 1 : 1),
+            (m.purchasedItems[s.itemId].upgrades = d({}, a)),
             (m.purchasedItems = d({}, m.purchasedItems)),
             (m.lastAction = {
                 type: 'purchase-item-upgrade',

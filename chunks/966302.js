@@ -365,14 +365,16 @@ function es(e) {
                                 numVideoDevices: C
                             }),
                             F && !O
-                                ? (0, r.jsx)(c.zxk, {
-                                      size: c.zxk.Sizes.SMALL,
-                                      fullWidth: !0,
-                                      look: c.zxk.Looks.LINK,
-                                      color: c.zxk.Colors.PRIMARY,
+                                ? (0, r.jsx)('div', {
+                                      'data-button-hoisted-classname-wrapper': !0,
                                       className: z.previewButton,
-                                      onClick: () => v(!0),
-                                      children: W.intl.string(W.t['8B0UDg'])
+                                      children: (0, r.jsx)(c.zxk, {
+                                          variant: 'secondary',
+                                          size: 'sm',
+                                          text: W.intl.string(W.t['8B0UDg']),
+                                          fullWidth: !0,
+                                          onClick: () => v(!0)
+                                      })
                                   })
                                 : null
                         ]

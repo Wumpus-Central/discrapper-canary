@@ -22,8 +22,8 @@ function P(e) {
         [j, v] = a.useState(!1),
         y = (0, l.vRw)(),
         C = (0, d.Dt)(),
-        { analyticsLocations: k, newestAnalyticsLocation: I } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function Z(e) {
+        { analyticsLocations: I, newestAnalyticsLocation: Z } = (0, s.ZP)(c.Z.GIF_PICKER);
+    async function L(e) {
         let { gifSrc: t } = e;
         if (null == t || j) return;
         v(!0);
@@ -79,14 +79,14 @@ function P(e) {
     a.useEffect(() => {
         p.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: k,
+            location_stack: I,
             location: { page: R }
         });
-    }, [k, R]);
-    let L = b === x.pC.AVATAR || b === x.pC.BANNER,
-        B = (0, f.M)(!L);
+    }, [I, R]);
+    let B = b === x.pC.AVATAR || b === x.pC.BANNER,
+        k = (0, f.M)(!B);
     return (0, i.jsx)(s.Gt, {
-        value: k,
+        value: I,
         children: (0, i.jsxs)(l.Y0X, {
             'aria-labelledby': C,
             transitionState: t,
@@ -94,7 +94,7 @@ function P(e) {
             parentComponent: 'GIFPickerCroppingModal',
             children: [
                 E &&
-                    !B &&
+                    !k &&
                     (0, i.jsx)(_.Z, {
                         type: b,
                         analyticsPage: R,
@@ -119,19 +119,19 @@ function P(e) {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(u.Z, {
-                            contentClassName: r()({ [A.gifPickerContent]: E && B }),
+                            contentClassName: r()({ [A.gifPickerContent]: E && k }),
                             className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
-                            onSelectGIF: Z,
+                            onSelectGIF: L,
                             hideFavorites: !0
                         }),
                         j && (0, i.jsx)(l.$jN, { className: A.spinner })
                     ]
                 }),
                 E &&
-                    B &&
+                    k &&
                     (0, i.jsx)(g.Z, {
                         uploadType: b,
-                        analyticsSource: I,
+                        analyticsSource: Z,
                         showUpsell: !0,
                         className: A.nitroUpsell
                     })

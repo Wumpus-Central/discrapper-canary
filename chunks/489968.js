@@ -1,42 +1,43 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var i = n(255367),
     r = n(608787),
     s = n(793030),
-    l = n(442837),
-    a = n(481060),
-    o = n(607070),
-    c = n(522474),
-    d = n(788983),
-    u = n(668826),
-    m = n(120421),
-    p = n(324815),
-    g = n(763283),
-    h = n(981631),
-    f = n(603571),
-    b = n(388032),
-    x = n(753514),
-    _ = n(450890),
+    a = n(442837),
+    l = n(755721),
+    o = n(481060),
+    c = n(607070),
+    d = n(522474),
+    u = n(788983),
+    m = n(668826),
+    p = n(120421),
+    g = n(324815),
+    h = n(763283),
+    f = n(981631),
+    b = n(603571),
+    x = n(388032),
+    _ = n(753514),
+    j = n(450890),
     E = n(145133);
-let j = (0, r.Un)({
+let O = (0, r.Un)({
     createPromise: () => Promise.all([n.e('3589'), n.e('67544')]).then(n.bind(n, 894308)),
     webpackId: 894308,
     name: 'ClickerGamePopoutWindow'
 });
-function O() {
-    let e = (0, l.e7)([m.Z], () => m.Z.lifetimePoints > 0),
-        t = (0, l.e7)([c.Z], () => c.Z.getWindowOpen(h.KJ3.CLICKER_GAME)),
+function C() {
+    let e = (0, a.e7)([p.Z], () => p.Z.lifetimePoints > 0),
+        t = (0, a.e7)([d.Z], () => d.Z.getWindowOpen(f.KJ3.CLICKER_GAME)),
         r = () => {
-            d.bA(h.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(j, { windowKey: e }), {
+            u.bA(f.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(O, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 768
             });
         },
-        O = () => {
-            o.Z.useReducedMotion
-                ? (0, a.ZDy)(async () => {
+        C = () => {
+            c.Z.useReducedMotion
+                ? (0, o.ZDy)(async () => {
                       let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                       return (t) => {
-                          var n, l;
+                          var n, a;
                           return (0, i.jsx)(
                               e,
                               ((n = (function (e) {
@@ -64,20 +65,20 @@ function O() {
                                   }
                                   return e;
                               })({}, t)),
-                              (l = l =
+                              (a = a =
                                   {
-                                      header: b.intl.string(f.default.SvQ1xM),
-                                      confirmText: b.intl.string(f.default.vLz9lJ),
-                                      cancelText: b.intl.string(f.default['+Mgv5O']),
+                                      header: x.intl.string(b.default.SvQ1xM),
+                                      confirmText: x.intl.string(b.default.vLz9lJ),
+                                      cancelText: x.intl.string(b.default['+Mgv5O']),
                                       onConfirm: r,
-                                      confirmButtonColor: a.zxk.Colors.GREEN,
+                                      confirmButtonColor: l.zx.Colors.GREEN,
                                       children: (0, i.jsx)(s.xv, {
                                           variant: 'text-md/normal',
-                                          children: b.intl.string(f.default['v6v/BQ'])
+                                          children: x.intl.string(b.default['v6v/BQ'])
                                       })
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -85,8 +86,8 @@ function O() {
                                             n.push.apply(n, i);
                                         }
                                         return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(a)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                                     }),
                               n)
                           );
@@ -95,78 +96,78 @@ function O() {
                 : r();
         };
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: _.container,
         children: [
-            (0, i.jsx)('div', { className: x.backgroundOverlay }),
+            (0, i.jsx)('div', { className: _.backgroundOverlay }),
             (0, i.jsxs)('div', {
-                className: x.mainContent,
+                className: _.mainContent,
                 children: [
                     (0, i.jsx)('img', {
-                        src: _,
-                        alt: b.intl.string(f.default['7qZdOz'])
+                        src: j,
+                        alt: x.intl.string(b.default['7qZdOz'])
                     }),
-                    (0, i.jsxs)(p.Z, {
+                    (0, i.jsxs)(g.Z, {
                         muted: !0,
-                        className: x.playButton,
+                        className: _.playButton,
                         color: 'white',
                         disabled: t,
-                        onClick: O,
+                        onClick: C,
                         children: [
-                            (0, i.jsx)(g.Z, {
+                            (0, i.jsx)(h.Z, {
                                 color: 'always-white',
                                 variant: 'text-lg/bold',
-                                children: e ? b.intl.string(f.default.ziFxys) : b.intl.string(f.default.vLz9lJ)
+                                children: e ? x.intl.string(b.default.ziFxys) : x.intl.string(b.default.vLz9lJ)
                             }),
-                            (0, i.jsx)(g.Z, {
+                            (0, i.jsx)(h.Z, {
                                 color: 'always-white',
                                 variant: 'text-xxs/medium',
-                                children: b.intl.string(f.default['10J8k5'])
+                                children: x.intl.string(b.default['10J8k5'])
                             })
                         ]
                     }),
-                    (0, i.jsx)(p.Z, {
+                    (0, i.jsx)(g.Z, {
                         muted: !0,
-                        className: x.resetButton,
+                        className: _.resetButton,
                         color: 'white',
                         disabled: t || !e,
                         onClick: () => {
-                            ((0, u.yW)(), O());
+                            ((0, m.yW)(), C());
                         },
-                        children: (0, i.jsx)(g.Z, {
+                        children: (0, i.jsx)(h.Z, {
                             color: 'always-white',
                             variant: 'text-xs/bold',
-                            children: b.intl.string(f.default['/A+1UF'])
+                            children: x.intl.string(b.default['/A+1UF'])
                         })
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: x.footer,
+                className: _.footer,
                 children: [
-                    (0, i.jsx)(g.Z, {
-                        className: x.availability,
+                    (0, i.jsx)(h.Z, {
+                        className: _.availability,
                         color: 'always-white',
                         variant: 'text-xxs/medium',
-                        children: b.intl.string(f.default.eZleys)
+                        children: x.intl.string(b.default.eZleys)
                     }),
                     (0, i.jsx)('div', {
-                        className: x.footerCenter,
-                        children: (0, i.jsx)(p.Z, {
+                        className: _.footerCenter,
+                        children: (0, i.jsx)(g.Z, {
                             muted: !0,
                             color: 'white',
                             href: 'https://www.youtube.com/watch?v=h-9SUgIeJnY',
                             tag: 'a',
                             target: '_blank',
-                            children: (0, i.jsx)(g.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 color: 'always-white',
                                 variant: 'text-xs/bold',
-                                children: b.intl.string(f.default.CQXsEh)
+                                children: x.intl.string(b.default.CQXsEh)
                             })
                         })
                     }),
                     (0, i.jsx)('img', {
                         src: E,
-                        alt: b.intl.string(f.default.ABYTMz)
+                        alt: x.intl.string(b.default.ABYTMz)
                     })
                 ]
             })

@@ -1,18 +1,19 @@
-n.d(t, { default: () => d });
+n.d(t, { default: () => _ });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(287734),
-    o = n(313201),
-    a = n(471253),
-    c = n(939863),
-    s = n(388032),
-    u = n(717215);
-let d = (e) => {
+var i = n(755721),
+    l = n(481060),
+    o = n(287734),
+    a = n(313201),
+    c = n(471253),
+    s = n(939863),
+    u = n(388032),
+    d = n(717215);
+let _ = (e) => {
     var t,
         n,
-        { channel: d } = e,
-        _ = (function (e, t) {
+        { channel: _ } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -31,9 +32,9 @@ let d = (e) => {
             }
             return i;
         })(e, ['channel']);
-    let f = (0, o.Dt)();
+    let p = (0, a.Dt)();
     return (0, r.jsxs)(
-        i.ConfirmModal,
+        l.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -60,44 +61,44 @@ let d = (e) => {
             return e;
         })(
             {
-                confirmText: s.intl.string(s.t.saZaRU),
-                cancelText: s.intl.string(s.t['ETE/oK']),
+                confirmText: u.intl.string(u.t.saZaRU),
+                cancelText: u.intl.string(u.t['ETE/oK']),
                 onConfirm: () => {
-                    ((0, a.NZ)(d), l.default.disconnect());
+                    ((0, c.NZ)(_), o.default.disconnect());
                 },
-                confirmButtonColor: i.zxk.Colors.RED,
-                bodyClassName: u.body
+                confirmButtonColor: i.zx.Colors.RED,
+                bodyClassName: d.body
             },
-            _
+            f
         )),
         (n = n =
             {
                 children: [
-                    (0, r.jsx)(c.Z, {
-                        className: u.headerIconContainer,
+                    (0, r.jsx)(s.Z, {
+                        className: d.headerIconContainer,
                         children: (0, r.jsx)('div', {
-                            className: u.iconBackground,
-                            children: (0, r.jsx)(i.XzT, {
+                            className: d.iconBackground,
+                            children: (0, r.jsx)(l.XzT, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
                                 height: 40,
-                                className: u.headerIcon
+                                className: d.headerIcon
                             })
                         })
                     }),
-                    (0, r.jsx)(i.X6q, {
-                        id: f,
+                    (0, r.jsx)(l.X6q, {
+                        id: p,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: u.title,
-                        children: s.intl.string(s.t.xrYNBA)
+                        className: d.title,
+                        children: u.intl.string(u.t.xrYNBA)
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: u.subtitle,
-                        children: s.intl.string(s.t.TP1D8v)
+                        className: d.subtitle,
+                        children: u.intl.string(u.t.TP1D8v)
                     })
                 ]
             }),

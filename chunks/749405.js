@@ -48,27 +48,33 @@ function f(e) {
             (0, r.jsxs)('div', {
                 className: h.actions,
                 children: [
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: h.button,
-                        color: l.Ttl.PRIMARY,
-                        size: l.zxk.Sizes.SMALL,
-                        onClick: (e) => {
-                            (e.stopPropagation(), O(f.id));
-                        },
-                        disabled: N,
-                        submitting: I || S,
-                        children: p.intl.string(p.t.B2nygY)
+                        children: (0, r.jsx)(l.zxk, {
+                            variant: 'secondary',
+                            size: 'sm',
+                            text: p.intl.string(p.t.B2nygY),
+                            onClick: (e) => {
+                                (e.stopPropagation(), O(f.id));
+                            },
+                            disabled: N,
+                            loading: I || S
+                        })
                     }),
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: h.button,
-                        color: l.Ttl.BRAND,
-                        size: l.zxk.Sizes.SMALL,
-                        onClick: (e) => {
-                            (e.stopPropagation(), E(f.id));
-                        },
-                        disabled: N,
-                        submitting: y || v || C,
-                        children: p.intl.string(p.t.Kz8Pws)
+                        children: (0, r.jsx)(l.zxk, {
+                            variant: 'primary',
+                            size: 'sm',
+                            text: p.intl.string(p.t.Kz8Pws),
+                            onClick: (e) => {
+                                (e.stopPropagation(), E(f.id));
+                            },
+                            disabled: N,
+                            loading: y || v || C
+                        })
                     })
                 ]
             })

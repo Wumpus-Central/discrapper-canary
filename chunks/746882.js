@@ -1,179 +1,181 @@
-(n.d(t, { default: () => S }), n(388685));
+(n.d(t, { default: () => k }), n(388685));
 var i = n(255367),
     r = n(73800),
-    l = n(512722),
-    s = n.n(l),
-    a = n(913527),
-    o = n.n(a),
+    a = n(512722),
+    l = n.n(a),
+    s = n(913527),
+    o = n.n(s),
     c = n(990547),
     d = n(442837),
-    u = n(481060),
-    f = n(749210),
-    m = n(168107),
+    u = n(755721),
+    f = n(481060),
+    m = n(749210),
+    x = n(168107),
     h = n(480916),
-    x = n(600164),
-    _ = n(313201),
-    E = n(592125),
-    g = n(944486),
-    b = n(594174),
-    N = n(626135),
-    k = n(63063),
-    A = n(771308),
+    _ = n(600164),
+    E = n(313201),
+    g = n(592125),
+    b = n(944486),
+    N = n(594174),
+    A = n(626135),
+    p = n(63063),
+    y = n(771308),
     C = n(758119),
     R = n(622822),
-    p = n(13430),
-    y = n(723359),
+    j = n(13430),
+    z = n(723359),
     L = n(981631),
-    z = n(388032),
-    j = n(951408);
-function S(e) {
-    let { transitionState: t, source: l } = e,
-        a = (0, d.e7)([b.default], () => b.default.getCurrentUser()),
-        S = (0, d.e7)([g.Z, E.Z], () => E.Z.getChannel(g.Z.getChannelId())),
-        [T, v] = r.useState(null),
-        [G, M] = r.useState(null),
-        [I, w] = r.useState(!1),
-        [F, Y] = r.useState(0),
-        Z = r.useRef(null),
+    S = n(388032),
+    T = n(951408);
+function k(e) {
+    let { transitionState: t, source: a } = e,
+        s = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+        k = (0, d.e7)([b.Z, g.Z], () => g.Z.getChannel(b.Z.getChannelId())),
+        [v, G] = r.useState(null),
+        [I, M] = r.useState(null),
+        [w, F] = r.useState(!1),
+        [Y, Z] = r.useState(0),
+        U = r.useRef(null),
         D = r.useRef(null),
-        P = (0, _.Dt)(),
-        U = (0, R.Kt)() && l !== y.L0.FAMILY_CENTER,
-        { verifyAgreementButtonText: B, verifyGateDescription: V } = (0, R.a1)(l),
-        q = l === y.L0.NSFW_SERVER || l === y.L0.NSFW_SERVER_INVITE || l === y.L0.NSFW_SERVER_INVITE_EMBED,
-        W = null != T ? o()().diff(T, 'years') : null;
-    function K() {
-        if (l === y.L0.NSFW_SERVER_INVITE_EMBED) return void (0, C.qV)(l);
-        let e = null == S ? void 0 : S.getGuildId();
-        (f.Z.nsfwReturnToSafety(e), (0, C.qV)(l));
+        P = (0, E.Dt)(),
+        V = (0, R.Kt)() && a !== z.L0.FAMILY_CENTER,
+        { verifyAgreementButtonText: B, verifyGateDescription: q } = (0, R.a1)(a),
+        W = a === z.L0.NSFW_SERVER || a === z.L0.NSFW_SERVER_INVITE || a === z.L0.NSFW_SERVER_INVITE_EMBED,
+        K = null != v ? o()().diff(v, 'years') : null;
+    function O() {
+        if (a === z.L0.NSFW_SERVER_INVITE_EMBED) return void (0, C.qV)(a);
+        let e = null == k ? void 0 : k.getGuildId();
+        (m.Z.nsfwReturnToSafety(e), (0, C.qV)(a));
     }
-    async function O() {
-        s()(null != T, 'Cannot submit null birthday.');
+    async function X() {
+        l()(null != v, 'Cannot submit null birthday.');
         try {
-            return (M(null), w(!0), await (0, A.Av)(T, l));
+            return (M(null), F(!0), await (0, y.Av)(v, a));
         } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, C.C8)(l, t.body.date_of_birth);
+            if (null != t.body && null != t.body.date_of_birth) (0, C.C8)(a, t.body.date_of_birth);
             else {
                 var e;
-                ((null == t || null == (e = t.body) ? void 0 : e.username) != null ? M(z.intl.string(z.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), w(!1));
+                ((null == t || null == (e = t.body) ? void 0 : e.username) != null ? M(S.intl.string(S.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), F(!1));
             }
         }
     }
-    async function X() {
-        if ((s()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void Y(1);
-        await O();
+    async function Q() {
+        if ((l()(null != K, "Cannot submit if we haven't been able to calculate age."), K < 18)) return void Z(1);
+        await X();
     }
-    async function Q(e) {
-        (e.preventDefault(), I || null == T || (await X()));
+    async function J(e) {
+        (e.preventDefault(), w || null == v || (await Q()));
     }
-    async function J() {
-        null == (await O()) && Y(0);
+    async function H() {
+        null == (await X()) && Z(0);
     }
     (r.useEffect(() => {
-        null == a || null == a.nsfwAllowed || U || (0, C.qq)(l);
+        null == s || null == s.nsfwAllowed || V || (0, C.qq)(a);
     }),
         r.useEffect(() => {
-            N.default.track(L.rMx.AGE_GATE_ACTION, {
-                source: l,
-                action: y.Al.AGE_GATE_OPEN
+            A.default.track(L.rMx.AGE_GATE_ACTION, {
+                source: a,
+                action: z.Al.AGE_GATE_OPEN
             });
-        }, [l]));
-    let H = r.useCallback(
+        }, [a]));
+    let $ = r.useCallback(
             (e) => {
-                v(e);
+                G(e);
             },
-            [v]
+            [G]
         ),
-        $ = r.useCallback(() => {
+        ee = r.useCallback(() => {
             var e;
             null == (e = D.current) || e.focus();
         }, [D]),
-        ee = r.useCallback(() => {
-            m.Z.showAgeVerificationGetStartedModal(h.cU.NSFW_AGE_GATE);
+        et = r.useCallback(() => {
+            x.Z.showAgeVerificationGetStartedModal(h.cU.NSFW_AGE_GATE);
         }, []);
-    return U
-        ? (0, i.jsxs)(u.Y0X, {
+    return V
+        ? (0, i.jsxs)(f.Y0X, {
               impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
               transitionState: t,
-              size: u.CgR.SMALL,
+              size: f.CgR.SMALL,
               parentComponent: 'ExistingUserAgeGatePrompt',
               children: [
-                  (0, i.jsx)(u.hzk, {
+                  (0, i.jsx)(f.hzk, {
                       children: (0, i.jsxs)('div', {
-                          className: j.container,
+                          className: T.container,
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
                                   src: n(559325),
-                                  className: j.img
+                                  className: T.img
                               }),
-                              (0, i.jsx)(u.X6q, {
+                              (0, i.jsx)(f.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  className: j.title,
-                                  children: q ? z.intl.string(z.t.xi46lp) : z.intl.string(z.t.ZmwvDQ)
+                                  className: T.title,
+                                  children: W ? S.intl.string(S.t.xi46lp) : S.intl.string(S.t.ZmwvDQ)
                               }),
-                              (0, i.jsx)(u.Text, {
+                              (0, i.jsx)(f.Text, {
                                   color: 'header-secondary',
                                   variant: 'text-sm/normal',
-                                  children: V
+                                  children: q
                               })
                           ]
                       })
                   }),
-                  (0, i.jsxs)(u.mzw, {
-                      justify: x.Z.Justify.BETWEEN,
+                  (0, i.jsxs)(f.mzw, {
+                      justify: _.Z.Justify.BETWEEN,
                       children: [
-                          (0, i.jsx)(u.zxk, {
-                              size: u.PhG.SMALL,
-                              onClick: ee,
-                              children: B
+                          (0, i.jsx)(f.zxk, {
+                              variant: 'primary',
+                              size: 'sm',
+                              text: B,
+                              onClick: et
                           }),
-                          (0, i.jsx)(u.zxk, {
-                              look: u.zxk.Looks.LINK,
-                              size: u.zxk.Sizes.NONE,
-                              color: u.zxk.Colors.PRIMARY,
-                              onClick: K,
-                              children: z.intl.string(z.t.f3Pet7)
+                          (0, i.jsx)(u.zx, {
+                              look: u.zx.Looks.LINK,
+                              size: u.zx.Sizes.NONE,
+                              color: u.zx.Colors.PRIMARY,
+                              onClick: O,
+                              children: S.intl.string(S.t.f3Pet7)
                           })
                       ]
                   })
               ]
           })
-        : 0 === F
+        : 0 === Y
           ? (function () {
-                let e = l === y.L0.FAMILY_CENTER ? z.intl.string(z.t.M7mt7u) : z.intl.string(z.t.F8otRk),
+                let e = a === z.L0.FAMILY_CENTER ? S.intl.string(S.t.M7mt7u) : S.intl.string(S.t.F8otRk),
                     r = (() => {
-                        switch (l) {
-                            case y.L0.FAMILY_CENTER:
-                                return z.intl.string(z.t.mhUrKS);
-                            case y.L0.DEEP_LINK_PROMPT:
-                                return z.intl.format(z.t.iyhg2t, { helpURL: k.Z.getArticleURL(L.BhN.AGE_GATE) });
+                        switch (a) {
+                            case z.L0.FAMILY_CENTER:
+                                return S.intl.string(S.t.mhUrKS);
+                            case z.L0.DEEP_LINK_PROMPT:
+                                return S.intl.format(S.t.iyhg2t, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) });
                             default:
-                                return z.intl.format(z.t.n3QjDA, { helpURL: k.Z.getArticleURL(L.BhN.AGE_GATE) });
+                                return S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) });
                         }
                     })();
-                return (0, i.jsxs)(u.Y0X, {
+                return (0, i.jsxs)(f.Y0X, {
                     transitionState: t,
-                    size: u.CgR.SMALL,
+                    size: f.CgR.SMALL,
                     'aria-labelledby': P,
                     parentComponent: 'ExistingUserAgeGatePrompt',
                     children: [
-                        (0, i.jsxs)(u.hzk, {
+                        (0, i.jsxs)(f.hzk, {
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: j.container,
+                                    className: T.container,
                                     children: [
                                         (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(559325),
-                                            className: j.img
+                                            className: T.img
                                         }),
-                                        (0, i.jsx)(u.X6q, {
+                                        (0, i.jsx)(f.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            className: j.title,
+                                            className: T.title,
                                             id: P,
                                             children: e
                                         }),
-                                        (0, i.jsx)(u.Text, {
+                                        (0, i.jsx)(f.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-sm/normal',
                                             children: r
@@ -181,82 +183,83 @@ function S(e) {
                                     ]
                                 }),
                                 (0, i.jsx)('form', {
-                                    onSubmit: Q,
-                                    children: (0, i.jsx)(p.Z, {
-                                        label: z.intl.string(z.t.rhBeKS),
-                                        wrapperClassName: j.birthday,
+                                    onSubmit: J,
+                                    children: (0, i.jsx)(j.Z, {
+                                        label: S.intl.string(S.t.rhBeKS),
+                                        wrapperClassName: T.birthday,
                                         name: 'date_of_birth',
-                                        onChange: H,
-                                        onPopulated: $,
-                                        error: G,
-                                        value: T,
-                                        ref: Z,
+                                        onChange: $,
+                                        onPopulated: ee,
+                                        error: I,
+                                        value: v,
+                                        ref: U,
                                         autoFocus: !0
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(u.mzw, {
-                            justify: x.Z.Justify.BETWEEN,
+                        (0, i.jsxs)(f.mzw, {
+                            justify: _.Z.Justify.BETWEEN,
                             children: [
-                                (0, i.jsx)(u.zxk, {
+                                (0, i.jsx)(f.zxk, {
+                                    variant: 'primary',
+                                    size: 'sm',
+                                    text: S.intl.string(S.t.uBFuoq),
                                     buttonRef: D,
-                                    submitting: I,
-                                    disabled: null == T,
-                                    size: u.PhG.SMALL,
-                                    onClick: X,
-                                    children: z.intl.string(z.t.uBFuoq)
+                                    loading: w,
+                                    disabled: null == v,
+                                    onClick: Q
                                 }),
-                                (0, i.jsx)(u.zxk, {
-                                    look: u.zxk.Looks.LINK,
-                                    size: u.zxk.Sizes.NONE,
-                                    color: u.zxk.Colors.PRIMARY,
-                                    onClick: K,
-                                    children: z.intl.string(z.t['1MrpWF'])
+                                (0, i.jsx)(u.zx, {
+                                    look: u.zx.Looks.LINK,
+                                    size: u.zx.Sizes.NONE,
+                                    color: u.zx.Colors.PRIMARY,
+                                    onClick: O,
+                                    children: S.intl.string(S.t['1MrpWF'])
                                 })
                             ]
                         })
                     ]
                 });
             })()
-          : (0, i.jsxs)(u.Y0X, {
-                transitionState: u.Dvm.ENTERED,
-                size: u.CgR.SMALL,
+          : (0, i.jsxs)(f.Y0X, {
+                transitionState: f.Dvm.ENTERED,
+                size: f.CgR.SMALL,
                 'aria-labelledby': P,
                 parentComponent: 'ExistingUserAgeGatePrompt',
                 children: [
-                    (0, i.jsx)(u.hzk, {
+                    (0, i.jsx)(f.hzk, {
                         children: (0, i.jsxs)('div', {
-                            className: j.confirmContainer,
+                            className: T.confirmContainer,
                             children: [
-                                (0, i.jsx)(u.X6q, {
+                                (0, i.jsx)(f.X6q, {
                                     variant: 'heading-xl/semibold',
-                                    className: j.confirmTitle,
+                                    className: T.confirmTitle,
                                     id: P,
-                                    children: z.intl.format(z.t.wumolZ, { age: W })
+                                    children: S.intl.format(S.t.wumolZ, { age: K })
                                 }),
-                                (0, i.jsx)(u.Text, {
+                                (0, i.jsx)(f.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: z.intl.format(z.t.n3QjDA, { helpURL: k.Z.getArticleURL(L.BhN.AGE_GATE) })
+                                    children: S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) })
                                 })
                             ]
                         })
                     }),
-                    (0, i.jsxs)(u.mzw, {
-                        className: j.confirmFooter,
+                    (0, i.jsxs)(f.mzw, {
+                        className: T.confirmFooter,
                         children: [
-                            (0, i.jsx)(u.zxk, {
-                                look: u.zxk.Looks.LINK,
-                                size: u.zxk.Sizes.NONE,
-                                color: u.zxk.Colors.PRIMARY,
-                                onClick: () => Y(0),
-                                children: z.intl.string(z.t.cfYCra)
+                            (0, i.jsx)(u.zx, {
+                                look: u.zx.Looks.LINK,
+                                size: u.zx.Sizes.NONE,
+                                color: u.zx.Colors.PRIMARY,
+                                onClick: () => Z(0),
+                                children: S.intl.string(S.t.cfYCra)
                             }),
-                            (0, i.jsx)(u.zxk, {
-                                color: u.zxk.Colors.BRAND,
-                                onClick: J,
-                                children: z.intl.string(z.t['6tahio'])
+                            (0, i.jsx)(f.zxk, {
+                                variant: 'primary',
+                                text: S.intl.string(S.t['6tahio']),
+                                onClick: H
                             })
                         ]
                     })

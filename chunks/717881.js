@@ -5,7 +5,7 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
+    l = n(755721),
     o = n(620662),
     a = n(387903),
     s = n(850827),
@@ -71,8 +71,8 @@ function y(e) {
         applicationStream: o,
         user: a,
         guildId: c,
-        look: l.zxk.Looks.FILLED,
-        color: null != p ? p : l.zxk.Colors.PRIMARY,
+        look: l.zx.Looks.FILLED,
+        color: null != p ? p : l.zx.Colors.PRIMARY,
         channelId: u,
         onAction: d
     });

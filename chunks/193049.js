@@ -1,31 +1,32 @@
-(r.d(t, { default: () => P }), r(388685));
+(r.d(t, { default: () => A }), r(388685));
 var n = r(255367),
     i = r(73800),
-    o = r(512722),
-    s = r.n(o),
-    a = r(990547),
+    a = r(512722),
+    o = r.n(a),
+    s = r(990547),
     l = r(399606),
-    c = r(481060),
-    u = r(232567),
-    d = r(809206),
-    m = r(479531),
-    g = r(484459),
-    f = r(594174),
-    h = r(626135),
-    E = r(51144),
-    p = r(986197),
+    c = r(755721),
+    u = r(481060),
+    d = r(232567),
+    m = r(809206),
+    g = r(479531),
+    f = r(484459),
+    p = r(594174),
+    E = r(626135),
+    h = r(51144),
+    y = r(986197),
     O = r(135200),
-    y = r(346585),
+    b = r(346585),
     S = r(361117),
-    b = r(108793),
-    _ = r(635774),
-    x = r(387955),
+    _ = r(108793),
+    x = r(635774),
+    v = r(387955),
     N = r(801461),
     j = r(448624),
-    v = r(981631),
-    T = r(388032),
-    I = r(367019);
-function C(e) {
+    T = r(981631),
+    I = r(388032),
+    C = r(367019);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -50,39 +51,39 @@ function C(e) {
     }
     return e;
 }
-function P(e) {
+function A(e) {
     let t,
-        { source: r, transitionState: o, onClose: P, oneClickFlow: R = !1 } = e,
-        [w, L] = i.useState(R ? j.A.SUGGESTIONS : j.A.INFO),
-        [M, k] = i.useState(!1),
-        [D, U] = i.useState(null),
-        [Z, G] = i.useState(R ? N.Wq.SUGGESTION : N.Wq.NONE),
-        [W, z] = i.useState(!1),
+        { source: r, transitionState: a, onClose: A, oneClickFlow: w = !1 } = e,
+        [M, L] = i.useState(w ? j.A.SUGGESTIONS : j.A.INFO),
+        [k, D] = i.useState(!1),
+        [U, Z] = i.useState(null),
+        [G, W] = i.useState(w ? N.Wq.SUGGESTION : N.Wq.NONE),
         [F, q] = i.useState(!1),
-        B = i.useRef(null),
-        H = (0, l.e7)([O.Z], () => O.Z.isCurrentUsernameInvalid()),
-        V = (0, l.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
-            return (s()(null != e, 'PomeloModal: user cannot be undefined'), e);
+        [z, B] = i.useState(!1),
+        H = i.useRef(null),
+        V = (0, l.e7)([O.Z], () => O.Z.isCurrentUsernameInvalid()),
+        K = (0, l.e7)([p.default], () => {
+            let e = p.default.getCurrentUser();
+            return (o()(null != e, 'PomeloModal: user cannot be undefined'), e);
         }),
-        { usernameSuggestion: K, usernameSuggestionLoading: X } = (0, S.G)(R ? N.en : void 0);
+        { usernameSuggestion: X, usernameSuggestionLoading: Y } = (0, S.G)(w ? N.en : void 0);
     (i.useEffect(() => {
-        (Z === N.Wq.EDIT_USERNAME && q(!0),
-            h.default.track(v.rMx.POMELO_EDIT_STEP_VIEWED, {
+        (G === N.Wq.EDIT_USERNAME && B(!0),
+            E.default.track(T.rMx.POMELO_EDIT_STEP_VIEWED, {
                 source: r,
-                step: Z
+                step: G
             }));
-    }, [Z, r]),
+    }, [G, r]),
         i.useEffect(() => {
-            F ||
-                W ||
-                null == K ||
-                !(K.length > 0) ||
-                Q((e) => {
+            z ||
+                F ||
+                null == X ||
+                !(X.length > 0) ||
+                $((e) => {
                     var t, r;
                     return (
-                        (t = C({}, e)),
-                        (r = r = { username: K }),
+                        (t = P({}, e)),
+                        (r = r = { username: X }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
@@ -98,15 +99,15 @@ function P(e) {
                         t
                     );
                 });
-        }, [K, F, W]));
-    let [Y, Q] = i.useState({
-            username: (0, y.e$)(V),
-            globalName: E.ZP.getName(V)
+        }, [X, z, F]));
+    let [Q, $] = i.useState({
+            username: (0, b.e$)(K),
+            globalName: h.ZP.getName(K)
         }),
-        $ = (e) => {
-            (U(null), null != e.username && z(!0), Q((t) => C({}, t, e)));
+        J = (e) => {
+            (Z(null), null != e.username && q(!0), $((t) => P({}, t, e)));
         },
-        J = i.useMemo(
+        ee = i.useMemo(
             () => [
                 {
                     slideId: j.A.INFO,
@@ -117,7 +118,7 @@ function P(e) {
                     slideId: j.A.EDIT_SCREEN,
                     next: j.A.FINISH_LATER,
                     back: j.A.INFO,
-                    footerButtons: [Z === N.Wq.PREVIEW ? 'GOT_IT' : 'BACK', Z === N.Wq.PREVIEW ? 'GOT_IT' : Z === N.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
+                    footerButtons: [G === N.Wq.PREVIEW ? 'GOT_IT' : 'BACK', G === N.Wq.PREVIEW ? 'GOT_IT' : G === N.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
                 },
                 {
                     slideId: j.A.FINISH_LATER,
@@ -125,255 +126,260 @@ function P(e) {
                 },
                 {
                     slideId: j.A.SUGGESTIONS,
-                    footerButtons: [Z === N.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
+                    footerButtons: [G === N.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
                 },
                 { slideId: j.A.FINISH_LATER }
             ],
-            [Z]
+            [G]
         ),
-        ee = J.length,
-        et = i.useCallback(async () => {
-            if (Y.globalName.length <= 0) {
-                let e = T.intl.formatToPlainString(T.t.IpijXF, {
+        et = ee.length,
+        er = i.useCallback(async () => {
+            if (Q.globalName.length <= 0) {
+                let e = I.intl.formatToPlainString(I.t.IpijXF, {
                     minNum: 1,
                     maxNum: 32
                 });
-                (U(e),
-                    h.default.track(v.rMx.POMELO_ERRORS, {
+                (Z(e),
+                    E.default.track(T.rMx.POMELO_ERRORS, {
                         reason: e,
                         display_name_error: !0,
                         location: 'modal'
                     }));
                 return;
             }
-            if (E.ZP.getGlobalName(V) === Y.globalName) return void G(N.Wq.EDIT_USERNAME);
+            if (h.ZP.getGlobalName(K) === Q.globalName) return void W(N.Wq.EDIT_USERNAME);
             try {
-                (U(null), k(!0), await (0, d.S2)({ global_name: Y.globalName }), G(N.Wq.EDIT_USERNAME));
+                (Z(null), D(!0), await (0, m.S2)({ global_name: Q.globalName }), W(N.Wq.EDIT_USERNAME));
             } catch (t) {
-                let e = new m.Z(t).getAnyErrorMessage();
-                (h.default.track(v.rMx.POMELO_ERRORS, {
+                let e = new g.Z(t).getAnyErrorMessage();
+                (E.default.track(T.rMx.POMELO_ERRORS, {
                     reason: e,
                     display_name_error: !0,
                     location: 'modal'
                 }),
-                    U(e));
+                    Z(e));
             } finally {
-                k(!1);
+                D(!1);
             }
-        }, [V, Y]),
-        er = i.useCallback(async () => {
+        }, [K, Q]),
+        en = i.useCallback(async () => {
             try {
-                (U(null), k(!0), await p.Z.createPomelo({ username: (0, y.R_)(Y.username) }, R), await (0, u.In)(V.id), G(N.Wq.PREVIEW));
+                (Z(null), D(!0), await y.Z.createPomelo({ username: (0, b.R_)(Q.username) }, w), await (0, d.In)(K.id), W(N.Wq.PREVIEW));
             } catch (r) {
-                let e = new m.Z(r),
-                    t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : T.intl.string(T.t.R0RpRU);
-                (U(t),
-                    h.default.track(v.rMx.POMELO_ERRORS, {
+                let e = new g.Z(r),
+                    t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : I.intl.string(I.t.R0RpRU);
+                (Z(t),
+                    E.default.track(T.rMx.POMELO_ERRORS, {
                         reason: t,
                         username_error: !0,
                         location: 'modal',
-                        one_click_flow: R
+                        one_click_flow: w
                     }));
             } finally {
-                k(!1);
+                D(!1);
             }
-        }, [Y, V.id, R]),
-        en = H || (0, y.NX)(V),
-        ei = i.useCallback(() => {
-            (G(en ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(J[Math.min(ee - 1, w + 1)].slideId));
-        }, [w, J, ee, en]),
+        }, [Q, K.id, w]),
+        ei = V || (0, b.NX)(K),
+        ea = i.useCallback(() => {
+            (W(ei ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(ee[Math.min(et - 1, M + 1)].slideId));
+        }, [M, ee, et, ei]),
         eo = i.useCallback(() => {
-            (U(null), w === j.A.EDIT_SCREEN ? (Z === N.Wq.EDIT_USERNAME ? (en ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : G(N.Wq.EDIT_DISPLAY_NAME)) : Z === N.Wq.EDIT_DISPLAY_NAME ? (G(N.Wq.NONE), L(J[Math.max(0, w - 1)].slideId)) : Z === N.Wq.PREVIEW && G(N.Wq.EDIT_USERNAME)) : L(J[Math.max(0, w - 1)].slideId));
-        }, [J, w, Z, en]),
+            (Z(null), M === j.A.EDIT_SCREEN ? (G === N.Wq.EDIT_USERNAME ? (ei ? (W(N.Wq.NONE), L(ee[Math.max(0, M - 1)].slideId)) : W(N.Wq.EDIT_DISPLAY_NAME)) : G === N.Wq.EDIT_DISPLAY_NAME ? (W(N.Wq.NONE), L(ee[Math.max(0, M - 1)].slideId)) : G === N.Wq.PREVIEW && W(N.Wq.EDIT_USERNAME)) : L(ee[Math.max(0, M - 1)].slideId));
+        }, [ee, M, G, ei]),
         es = i.useCallback(() => {
             L(j.A.FINISH_LATER);
         }, []),
-        ea = i.useMemo(() => (w === j.A.EDIT_SCREEN && Z === N.Wq.EDIT_DISPLAY_NAME ? et : w === j.A.EDIT_SCREEN && Z === N.Wq.EDIT_USERNAME ? er : w === j.A.SUGGESTIONS && Z === N.Wq.SUGGESTION ? er : ei), [w, Z, et, er, ei]),
-        el = i.useMemo(() => {
+        el = i.useMemo(() => (M === j.A.EDIT_SCREEN && G === N.Wq.EDIT_DISPLAY_NAME ? er : M === j.A.EDIT_SCREEN && G === N.Wq.EDIT_USERNAME ? en : M === j.A.SUGGESTIONS && G === N.Wq.SUGGESTION ? en : ea), [M, G, er, en, ea]),
+        ec = i.useMemo(() => {
             var e, t;
-            return A(
-                null != (t = null == (e = J.find((e) => e.slideId === w)) ? void 0 : e.footerButtons) ? t : [],
+            return R(
+                null != (t = null == (e = ee.find((e) => e.slideId === M)) ? void 0 : e.footerButtons) ? t : [],
                 {
-                    handleNext: ea,
+                    handleNext: el,
                     handleBack: eo,
                     handleRemindMeLater: es,
-                    onClose: P
+                    onClose: A
                 },
-                M,
-                X,
-                W
+                k,
+                Y,
+                F
             );
-        }, [eo, es, ea, P, J, w, M, X, W]),
-        ec = i.useMemo(() => (0, y.zV)(V), [V]);
+        }, [eo, es, el, A, ee, M, k, Y, F]),
+        eu = i.useMemo(() => (0, b.zV)(K), [K]);
     return (
         i.useLayoutEffect(() => {
-            (0, g.Z)(V.id, ec);
-        }, [V, ec]),
+            (0, f.Z)(K.id, eu);
+        }, [K, eu]),
         i.useEffect(() => {
             var e, t;
-            switch (Z) {
+            switch (G) {
                 case N.Wq.EDIT_DISPLAY_NAME:
-                    null == (e = B.current) || e.focusDisplayName();
+                    null == (e = H.current) || e.focusDisplayName();
                     break;
                 case N.Wq.EDIT_USERNAME:
                 case N.Wq.SUGGESTION:
-                    null == (t = B.current) || t.focusUsername();
+                    null == (t = H.current) || t.focusUsername();
             }
-        }, [Z]),
-        !W && null == D && (Z === N.Wq.EDIT_USERNAME ? (t = T.intl.formatToPlainString(T.t.AJh8BQ, { source: V.username })) : Z === N.Wq.SUGGESTION && (X || null != K) && (t = T.intl.string(T.t['i/2SgI']))),
-        (0, n.jsxs)(c.Y0X, {
-            className: I.modalRoot,
+        }, [G]),
+        !F && null == U && (G === N.Wq.EDIT_USERNAME ? (t = I.intl.formatToPlainString(I.t.AJh8BQ, { source: K.username })) : G === N.Wq.SUGGESTION && (Y || null != X) && (t = I.intl.string(I.t['i/2SgI']))),
+        (0, n.jsxs)(u.Y0X, {
+            className: C.modalRoot,
             impression: {
-                impressionName: a.ImpressionNames.POMELO_LANDING,
+                impressionName: s.ImpressionNames.POMELO_LANDING,
                 impressionProperties: {
                     source: r,
-                    impression_group: a.ImpressionGroups.POMELO_FLOW,
-                    one_click_flow: R
+                    impression_group: s.ImpressionGroups.POMELO_FLOW,
+                    one_click_flow: w
                 }
             },
-            transitionState: o,
-            size: c.CgR.DYNAMIC,
+            transitionState: a,
+            size: u.CgR.DYNAMIC,
             parentComponent: 'PomeloModal',
             children: [
-                (0, n.jsx)(c.zxk, {
+                (0, n.jsx)(c.zx, {
                     onClick: () => {
-                        w === j.A.SUGGESTIONS || w === j.A.EDIT_SCREEN ? L(j.A.FINISH_LATER) : P();
+                        M === j.A.SUGGESTIONS || M === j.A.EDIT_SCREEN ? L(j.A.FINISH_LATER) : A();
                     },
-                    size: c.zxk.Sizes.MIN,
-                    look: c.zxk.Looks.BLANK,
-                    className: I.closeContainer,
-                    'aria-label': T.intl.string(T.t.cpT0Cg),
-                    children: (0, n.jsx)(c.Dio, {
+                    size: c.zx.Sizes.MIN,
+                    look: c.zx.Looks.BLANK,
+                    className: C.closeContainer,
+                    'aria-label': I.intl.string(I.t.cpT0Cg),
+                    children: (0, n.jsx)(u.Dio, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 15,
                         height: 15,
-                        className: I.close
+                        className: C.close
                     })
                 }),
-                (0, n.jsx)(c.hzk, {
-                    className: I.contentContainer,
-                    children: (0, n.jsxs)(c.MyZ, {
-                        activeSlide: w,
+                (0, n.jsx)(u.hzk, {
+                    className: C.contentContainer,
+                    children: (0, n.jsxs)(u.MyZ, {
+                        activeSlide: M,
                         width: 480,
                         children: [
-                            (0, n.jsx)(c.Mi4, {
+                            (0, n.jsx)(u.Mi4, {
                                 id: j.A.INFO,
-                                children: (0, n.jsx)(x.Z, { user: V })
+                                children: (0, n.jsx)(v.Z, { user: K })
                             }),
-                            (0, n.jsx)(c.Mi4, {
+                            (0, n.jsx)(u.Mi4, {
                                 id: j.A.EDIT_SCREEN,
-                                children: (0, n.jsx)(b.Z, {
-                                    user: V,
-                                    error: D,
-                                    editState: Z,
-                                    userRef: B,
-                                    formValues: Y,
+                                children: (0, n.jsx)(_.Z, {
+                                    user: K,
+                                    error: U,
+                                    editState: G,
+                                    userRef: H,
+                                    formValues: Q,
                                     footerNotice: t,
-                                    onChangeFormValue: $,
-                                    onFocusUsername: () => G(N.Wq.EDIT_USERNAME),
-                                    onFocusDisplayName: () => G(N.Wq.EDIT_DISPLAY_NAME),
-                                    onClose: P
+                                    onChangeFormValue: J,
+                                    onFocusUsername: () => W(N.Wq.EDIT_USERNAME),
+                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
+                                    onClose: A
                                 })
                             }),
-                            (0, n.jsx)(c.Mi4, {
+                            (0, n.jsx)(u.Mi4, {
                                 id: j.A.FINISH_LATER,
-                                children: (0, n.jsx)(_.Z, { onClose: P })
+                                children: (0, n.jsx)(x.Z, { onClose: A })
                             }),
-                            (0, n.jsx)(c.Mi4, {
+                            (0, n.jsx)(u.Mi4, {
                                 id: j.A.SUGGESTIONS,
-                                children: (0, n.jsx)(b.Z, {
-                                    user: V,
-                                    error: D,
-                                    editState: Z,
-                                    userRef: B,
-                                    formValues: Y,
+                                children: (0, n.jsx)(_.Z, {
+                                    user: K,
+                                    error: U,
+                                    editState: G,
+                                    userRef: H,
+                                    formValues: Q,
                                     footerNotice: t,
-                                    onChangeFormValue: $,
-                                    onFocusUsername: () => G(N.Wq.SUGGESTION),
-                                    onFocusDisplayName: () => G(N.Wq.EDIT_DISPLAY_NAME),
-                                    onClose: P,
-                                    usernameSuggestionLoading: X,
-                                    oneClickFlow: R
+                                    onChangeFormValue: J,
+                                    onFocusUsername: () => W(N.Wq.SUGGESTION),
+                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
+                                    onClose: A,
+                                    usernameSuggestionLoading: Y,
+                                    oneClickFlow: w
                                 })
                             })
                         ]
                     })
                 }),
-                el
+                ec
             ]
         })
     );
 }
-let A = (e, t, r, i, o) =>
+let R = (e, t, r, i, a) =>
     0 === e.length
         ? null
-        : (0, n.jsxs)(c.mzw, {
-              className: I.footer,
+        : (0, n.jsxs)(u.mzw, {
+              className: C.footer,
               children: [
                   (0, n.jsxs)('div', {
-                      className: I.inline,
+                      className: C.inline,
                       children: [
                           e.includes('REMIND_ME_LATER') &&
-                              (0, n.jsx)(c.zxk, {
-                                  className: I.unfilledButton,
+                              (0, n.jsx)(c.zx, {
+                                  className: C.unfilledButton,
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  look: c.zxk.Looks.BLANK,
-                                  color: c.zxk.Colors.CUSTOM,
+                                  size: c.zx.Sizes.SMALL,
+                                  look: c.zx.Looks.BLANK,
+                                  color: c.zx.Colors.CUSTOM,
                                   onClick: t.handleRemindMeLater,
-                                  children: T.intl.string(T.t['1mGbXF'])
+                                  children: I.intl.string(I.t['1mGbXF'])
                               }),
                           e.includes('NEXT') &&
-                              (0, n.jsx)(c.zxk, {
+                              (0, n.jsx)(u.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: I.intl.string(I.t.PDTjLC),
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  submitting: r,
-                                  onClick: t.handleNext,
-                                  children: T.intl.string(T.t.PDTjLC)
+                                  loading: r,
+                                  onClick: t.handleNext
                               }),
                           e.includes('SUBMIT') &&
-                              (0, n.jsx)(c.zxk, {
+                              (0, n.jsx)(u.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: I.intl.string(I.t.geKm7u),
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  submitting: r,
-                                  onClick: t.handleNext,
-                                  children: T.intl.string(T.t.geKm7u)
+                                  loading: r,
+                                  onClick: t.handleNext
                               }),
                           e.includes('GET_STARTED') &&
-                              (0, n.jsx)(c.zxk, {
+                              (0, n.jsx)(u.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: I.intl.string(I.t.LhlgY2),
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  onClick: t.handleNext,
-                                  children: T.intl.string(T.t.LhlgY2)
+                                  onClick: t.handleNext
                               }),
                           e.includes('GOT_IT') &&
-                              (0, n.jsx)(c.zxk, {
+                              (0, n.jsx)(u.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: I.intl.string(I.t['NX+WJC']),
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  onClick: t.onClose,
-                                  children: T.intl.string(T.t['NX+WJC'])
+                                  onClick: t.onClose
                               }),
                           e.includes('UPDATE') &&
-                              (0, n.jsx)(c.zxk, {
+                              (0, n.jsx)(u.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: I.intl.string(I.t.VZANAA),
                                   type: 'button',
-                                  size: c.zxk.Sizes.SMALL,
-                                  disabled: i && !o,
-                                  submitting: r,
-                                  onClick: t.handleNext,
-                                  children: T.intl.string(T.t.VZANAA)
+                                  disabled: i && !a,
+                                  loading: r,
+                                  onClick: t.handleNext
                               })
                       ]
                   }),
                   e.includes('BACK') &&
-                      (0, n.jsx)(c.zxk, {
-                          className: I.unfilledButton,
+                      (0, n.jsx)(c.zx, {
+                          className: C.unfilledButton,
                           type: 'button',
-                          size: c.zxk.Sizes.SMALL,
-                          look: c.zxk.Looks.BLANK,
-                          color: c.zxk.Colors.CUSTOM,
+                          size: c.zx.Sizes.SMALL,
+                          look: c.zx.Looks.BLANK,
+                          color: c.zx.Colors.CUSTOM,
                           onClick: t.handleBack,
-                          children: T.intl.string(T.t['13/7kZ'])
+                          children: I.intl.string(I.t['13/7kZ'])
                       })
               ]
           });

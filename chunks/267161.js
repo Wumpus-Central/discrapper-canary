@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(914010),
     Z = n(451478),
     x = n(768581),
-    L = n(998502),
-    w = n(228488),
+    w = n(998502),
+    L = n(228488),
     R = n(950796),
     D = n(981631),
     k = n(741764),
@@ -162,16 +162,16 @@ function z() {
 }
 let W = i.memo(function () {
     i.useLayoutEffect(() => {
-        L.ZP.setMinimumSize(k.J, k.N);
+        w.ZP.setMinimumSize(k.J, k.N);
     }, []);
     let e = (0, h.T)('AppTitleBar'),
         t = !F((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        L.ZP.setMinimumSize(k.J, k.N);
+        w.ZP.setMinimumSize(k.J, k.N);
     }, []);
     let l = (0, o.e7)([N.Z], () => (N.Z.darkSidebar ? D.BRd.DARK : void 0)),
-        a = (0, o.e7)([Z.Z, C.Z], () => (0, w.rB)()),
+        a = (0, o.e7)([Z.Z, C.Z], () => (0, L.rB)()),
         { notificationCenterVariant: u, entrypoint: f } = y.Lk.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null

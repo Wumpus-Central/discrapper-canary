@@ -1,32 +1,33 @@
-(s.d(e, { default: () => m }), s(388685));
+(s.d(e, { default: () => h }), s(388685));
 var r = s(255367);
 s(73800);
-var i = s(481060),
-    n = s(935369),
-    a = s(53365),
-    l = s(388032),
-    o = s(374762),
-    c = s(490962),
-    d = s(221870);
-function x(t) {
+var i = s(755721),
+    n = s(481060),
+    a = s(935369),
+    l = s(53365),
+    o = s(388032),
+    c = s(374762),
+    d = s(490962),
+    x = s(221870);
+function m(t) {
     let { header: e, body: s } = t;
     return (0, r.jsxs)('div', {
-        className: o.bulletItem,
+        className: c.bulletItem,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: o.bulletImage,
-                src: c
+                className: c.bulletImage,
+                src: d
             }),
             (0, r.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(n.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-default',
                         children: e
                     }),
-                    (0, r.jsx)(i.LZC, { size: 4 }),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(n.LZC, { size: 4 }),
+                    (0, r.jsx)(n.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         children: s
@@ -36,98 +37,99 @@ function x(t) {
         ]
     });
 }
-function m(t) {
-    let { guildId: e, demonetized: s, transitionState: c, onClose: m } = t,
-        [h, { loading: u, error: j }] = (0, n.Z)(s ? a.$J : a.hY),
-        g = async () => {
+function h(t) {
+    let { guildId: e, demonetized: s, transitionState: d, onClose: h } = t,
+        [u, { loading: j, error: g }] = (0, a.Z)(s ? l.$J : l.hY),
+        C = async () => {
             try {
-                let t = await h(e);
-                null != t && (null == m || m());
+                let t = await u(e);
+                null != t && (null == h || h());
             } catch (t) {}
         };
-    return (0, r.jsxs)(i.Y0X, {
-        className: o.__invalid_container,
-        size: i.CgR.SMALL,
-        transitionState: c,
-        'aria-label': l.intl.string(l.t.TP4GSk),
+    return (0, r.jsxs)(n.Y0X, {
+        className: c.__invalid_container,
+        size: n.CgR.SMALL,
+        transitionState: d,
+        'aria-label': o.intl.string(o.t.TP4GSk),
         parentComponent: 'CreatorMonetizationAcceptNewTermsModal',
         children: [
-            (0, r.jsx)(i.xBx, {
+            (0, r.jsx)(n.xBx, {
                 separator: !1,
-                className: o.header,
+                className: c.header,
                 children: (0, r.jsx)('div', {
-                    className: o.imageContainer,
+                    className: c.imageContainer,
                     children: (0, r.jsx)('img', {
                         alt: '',
-                        className: o.__invalid_image,
-                        src: d
+                        className: c.__invalid_image,
+                        src: x
                     })
                 })
             }),
-            (0, r.jsx)(i.hzk, {
+            (0, r.jsx)(n.hzk, {
                 children: (0, r.jsxs)('div', {
-                    className: o.content,
+                    className: c.content,
                     children: [
-                        (0, r.jsx)(i.X6q, {
+                        (0, r.jsx)(n.X6q, {
                             variant: 'heading-xl/medium',
                             color: 'header-primary',
-                            children: l.intl.string(l.t.TP4GSk)
+                            children: o.intl.string(o.t.TP4GSk)
                         }),
-                        (0, r.jsx)(i.LZC, { size: 12 }),
-                        (0, r.jsx)(i.Text, {
+                        (0, r.jsx)(n.LZC, { size: 12 }),
+                        (0, r.jsx)(n.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: l.intl.format(l.t.c0IsOD, { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: o.intl.format(o.t.c0IsOD, { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         }),
-                        (0, r.jsx)(i.LZC, { size: 24 }),
-                        (0, r.jsx)(x, {
-                            header: l.intl.string(l.t.UzDaWF),
-                            body: l.intl.string(l.t.IDk8Fx)
+                        (0, r.jsx)(n.LZC, { size: 24 }),
+                        (0, r.jsx)(m, {
+                            header: o.intl.string(o.t.UzDaWF),
+                            body: o.intl.string(o.t.IDk8Fx)
                         }),
-                        (0, r.jsx)(i.LZC, { size: 16 }),
-                        (0, r.jsx)(x, {
-                            header: l.intl.string(l.t['36/RiY']),
-                            body: l.intl.string(l.t.CBzNtr)
+                        (0, r.jsx)(n.LZC, { size: 16 }),
+                        (0, r.jsx)(m, {
+                            header: o.intl.string(o.t['36/RiY']),
+                            body: o.intl.string(o.t.CBzNtr)
                         })
                     ]
                 })
             }),
-            (0, r.jsx)(i.mzw, {
+            (0, r.jsx)(n.mzw, {
                 children: (0, r.jsxs)('div', {
-                    className: o.footer,
+                    className: c.footer,
                     children: [
-                        (0, r.jsx)(i.zxk, {
+                        (0, r.jsx)(n.zxk, {
+                            variant: 'primary',
+                            text: o.intl.string(o.t['pC/ozM']),
                             fullWidth: !0,
-                            onClick: g,
-                            submitting: u,
-                            children: l.intl.string(l.t['pC/ozM'])
+                            onClick: C,
+                            loading: j
                         }),
-                        (0, r.jsx)(i.LZC, { size: 4 }),
-                        (0, r.jsx)(i.zxk, {
-                            color: i.zxk.Colors.CUSTOM,
-                            innerClassName: o.remindMeLater,
-                            look: i.zxk.Looks.LINK,
+                        (0, r.jsx)(n.LZC, { size: 4 }),
+                        (0, r.jsx)(i.zx, {
+                            color: i.zx.Colors.CUSTOM,
+                            innerClassName: c.remindMeLater,
+                            look: i.zx.Looks.LINK,
                             fullWidth: !0,
-                            onClick: m,
-                            children: l.intl.string(l.t.Jj8nUF)
+                            onClick: h,
+                            children: o.intl.string(o.t.Jj8nUF)
                         }),
-                        null == j
+                        null == g
                             ? null
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(i.LZC, { size: 8 }),
-                                      (0, r.jsxs)(i.Text, {
+                                      (0, r.jsx)(n.LZC, { size: 8 }),
+                                      (0, r.jsxs)(n.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'status-danger',
-                                          children: ['Error: ', j.message]
+                                          children: ['Error: ', g.message]
                                       })
                                   ]
                               }),
-                        (0, r.jsx)(i.LZC, { size: 10 }),
-                        (0, r.jsx)(i.Text, {
+                        (0, r.jsx)(n.LZC, { size: 10 }),
+                        (0, r.jsx)(n.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: l.intl.format(l.t['+oNl6+'], { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: o.intl.format(o.t['+oNl6+'], { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         })
                     ]
                 })

@@ -2,12 +2,12 @@ n.d(t, { Z: () => o });
 var i = n(255367),
     r = n(442837),
     s = n(696826),
-    l = n(720734),
-    a = n(594174);
+    a = n(720734),
+    l = n(594174);
 function o(e) {
     let { nameplate: t } = e,
-        n = (0, r.e7)([a.default], () => a.default.getCurrentUser());
-    return (0, i.jsx)(l.m, {
+        n = (0, r.e7)([l.default], () => l.default.getCurrentUser());
+    return (0, i.jsx)(a.m, {
         selfMute: !1,
         selfDeaf: !1,
         serverMute: !1,

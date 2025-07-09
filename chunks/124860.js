@@ -59,10 +59,10 @@ function m(e, t) {
 }
 function p(e) {
     var t, n;
-    let { mfaChallenge: f, mfaFinish: p, onEarlyClose: g, onClose: b, width: j = 440 } = e,
-        [y, x] = l.useState(null != (n = null == (t = f.methods[0]) ? void 0 : t.type) ? n : 'select'),
-        [S, v] = l.useState(y),
-        C = async (e) => {
+    let { mfaChallenge: f, mfaFinish: p, onEarlyClose: g, onClose: b, width: y = 440 } = e,
+        [j, x] = l.useState(null != (n = null == (t = f.methods[0]) ? void 0 : t.type) ? n : 'select'),
+        [S, v] = l.useState(j),
+        O = async (e) => {
             let { mfaType: t, data: n } = e;
             (await p({
                 mfaType: t,
@@ -71,40 +71,40 @@ function p(e) {
             }),
                 null != b && b());
         },
-        O = {
+        C = {
             mfaChallenge: f,
-            finish: C,
+            finish: O,
             setSlide: x,
             onClose: g
         };
     return (0, r.jsxs)(i.MyZ, {
-        activeSlide: y,
-        width: j,
+        activeSlide: j,
+        width: y,
         onSlideReady: v,
         children: [
             (0, r.jsx)(i.Mi4, {
                 id: 'select',
-                children: (0, r.jsx)(a.Z, h({}, O))
+                children: (0, r.jsx)(a.Z, h({}, C))
             }),
             (0, r.jsx)(i.Mi4, {
                 id: 'webauthn',
-                children: (0, r.jsx)(d.Z, h({}, O))
+                children: (0, r.jsx)(d.Z, h({}, C))
             }),
             (0, r.jsx)(i.Mi4, {
                 id: 'totp',
-                children: (0, r.jsx)(u.Z, m(h({}, O), { isSlideReady: 'totp' === S }))
+                children: (0, r.jsx)(u.Z, m(h({}, C), { isSlideReady: 'totp' === S }))
             }),
             (0, r.jsx)(i.Mi4, {
                 id: 'sms',
-                children: (0, r.jsx)(c.Z, m(h({}, O), { isSlideReady: 'sms' === S }))
+                children: (0, r.jsx)(c.Z, m(h({}, C), { isSlideReady: 'sms' === S }))
             }),
             (0, r.jsx)(i.Mi4, {
                 id: 'backup',
-                children: (0, r.jsx)(s.Z, m(h({}, O), { isSlideReady: 'backup' === S }))
+                children: (0, r.jsx)(s.Z, m(h({}, C), { isSlideReady: 'backup' === S }))
             }),
             (0, r.jsx)(i.Mi4, {
                 id: 'password',
-                children: (0, r.jsx)(o.Z, m(h({}, O), { isSlideReady: 'password' === S }))
+                children: (0, r.jsx)(o.Z, m(h({}, C), { isSlideReady: 'password' === S }))
             })
         ]
     });

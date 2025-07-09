@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(399606),
     l = n(481060),
-    o = n(210975),
-    a = n(158776),
+    a = n(210975),
+    o = n(158776),
     s = n(699516),
     c = n(594174),
     u = n(51144),
@@ -15,11 +15,11 @@ function f(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
         f = (0, i.e7)([c.default], () => c.default.getUser(t)),
-        m = (0, i.e7)([a.Z], () => a.Z.getStatus(t)),
-        g = (0, i.e7)([a.Z], () => a.Z.isMobileOnline(t)),
+        m = (0, i.e7)([o.Z], () => o.Z.getStatus(t)),
+        g = (0, i.e7)([o.Z], () => o.Z.isMobileOnline(t)),
         b = (0, i.e7)([s.Z], () => s.Z.getNickname(t)),
         _ = u.ZP.useUserTag(f),
-        y = (0, o.m$)({ channelId: e.channel.id });
+        y = (0, a.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.nn4, { children: p.intl.string(p.t.EJRzg4) }),

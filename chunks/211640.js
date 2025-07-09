@@ -1,45 +1,46 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(442837),
-    l = n(481060),
+    l = n(755721),
+    a = n(481060),
     o = n(257559),
-    a = n(946273),
-    s = n(592125),
-    c = n(375954),
-    u = n(496675),
-    d = n(796263),
-    p = n(130883),
-    h = n(388032);
-function f(e) {
-    let { message: t, user: n, guild: f, channel: m } = e,
-        g = (0, i.e7)([u.Z], () => null != n && null != f && (0, a.CX)(n, f, [u.Z])),
-        { messageReference: b } = t,
-        _ = (0, i.e7)([c.Z], () => (null != b ? c.Z.getMessage(b.channel_id, b.message_id) : null)),
-        y = (0, i.e7)([s.Z], () => (null != _ ? s.Z.getChannel(_.channel_id) : null)),
-        C = (0, i.e7)([s.Z], () => {
+    s = n(946273),
+    c = n(592125),
+    u = n(375954),
+    d = n(496675),
+    p = n(796263),
+    h = n(130883),
+    f = n(388032);
+function m(e) {
+    let { message: t, user: n, guild: m, channel: g } = e,
+        b = (0, i.e7)([d.Z], () => null != n && null != m && (0, s.CX)(n, m, [d.Z])),
+        { messageReference: _ } = t,
+        y = (0, i.e7)([u.Z], () => (null != _ ? u.Z.getMessage(_.channel_id, _.message_id) : null)),
+        C = (0, i.e7)([c.Z], () => (null != y ? c.Z.getChannel(y.channel_id) : null)),
+        x = (0, i.e7)([c.Z], () => {
             var e, t;
-            return null != (t = null == (e = s.Z.getChannel(m.id)) ? void 0 : e.isArchivedThread()) && t;
+            return null != (t = null == (e = c.Z.getChannel(g.id)) ? void 0 : e.isArchivedThread()) && t;
         });
-    if (!g) return null;
-    let x = null == _ ? h.intl.string(p.default['0IZbwM']) : h.intl.string(p.default.Uj6oDw),
-        v = null == _,
-        O = 'delete-message-'.concat(t.id);
+    if (!b) return null;
+    let v = null == y ? f.intl.string(h.default['0IZbwM']) : f.intl.string(h.default.Uj6oDw),
+        O = null == y,
+        j = 'delete-message-'.concat(t.id);
     return (0, r.jsx)(
-        d.Z,
+        p.Z,
         {
-            text: x,
-            icon: l.XHJ,
+            text: v,
+            icon: a.XHJ,
             onClick: () => {
-                null != y &&
-                    null != _ &&
-                    o.Z.confirmDelete(y, _, !1, {
-                        isFlagResolved: C,
-                        moderatorReportChannelId: m.id
+                null != C &&
+                    null != y &&
+                    o.Z.confirmDelete(C, y, !1, {
+                        isFlagResolved: x,
+                        moderatorReportChannelId: g.id
                     });
             },
-            disabled: v,
-            color: l.zxk.Colors.RED
+            disabled: O,
+            color: l.zx.Colors.RED
         },
-        O
+        j
     );
 }

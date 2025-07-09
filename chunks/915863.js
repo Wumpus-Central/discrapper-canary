@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
+    o = n(755721),
     s = n(145131);
 function l(e, t, n) {
     return (
@@ -58,7 +58,7 @@ function f(e) {
     let { className: t, size: n } = e,
         i = u(e, ['className', 'size']);
     return (0, r.jsx)(
-        o.zxk,
+        o.zx,
         c(
             {
                 className: a()(s.button, t),

@@ -5,9 +5,9 @@ n.d(t, {
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(512722),
+    s = n.n(o),
     c = n(990547),
     u = n(442837),
     d = n(692547),
@@ -70,18 +70,18 @@ function P(e, t) {
     );
 }
 let Z = i.memo(function (e) {
-        let { guildId: t, channelId: n, user: i, isPremium: l, isBlocked: o, isIgnored: a } = e;
+        let { guildId: t, channelId: n, user: i, isPremium: l, isBlocked: a, isIgnored: o } = e;
         return (0, r.jsxs)('div', {
             className: S.textContainer,
             children: [
-                o
+                a
                     ? (0, r.jsx)(p.t6m, {
                           size: 'lg',
                           className: S.blockedIcon,
                           color: d.Z.unsafe_rawColors.RED_400.css
                       })
                     : null,
-                a
+                o
                     ? (0, r.jsx)(p.kZF, {
                           size: 'lg',
                           className: S.blockedIcon
@@ -104,7 +104,7 @@ let Z = i.memo(function (e) {
     }),
     N = i.memo(function (e) {
         var t;
-        let { participant: n, guildId: i, channel: l, isPremium: a } = e,
+        let { participant: n, guildId: i, channel: l, isPremium: o } = e,
             { user: s, blocked: c, ignored: u, rtsState: d } = n,
             h = d === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
             f = d === j.xO.REQUESTED_TO_SPEAK || h;
@@ -117,13 +117,13 @@ let Z = i.memo(function (e) {
                             (0, r.jsx)(p.V9, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: o()(S.icon, { [S.invited]: h })
+                                className: a()(S.icon, { [S.invited]: h })
                             }),
                         (0, r.jsx)('img', {
                             src: null != (t = s.getAvatarURL(l.guild_id, 56, !1)) ? t : void 0,
                             alt: s.username,
                             'aria-label': s.username,
-                            className: o()(S.avatar, { [S.faded]: c || u })
+                            className: a()(S.avatar, { [S.faded]: c || u })
                         })
                     ]
                 }),
@@ -131,7 +131,7 @@ let Z = i.memo(function (e) {
                     guildId: i,
                     channelId: l.id,
                     user: s,
-                    isPremium: a,
+                    isPremium: o,
                     isBlocked: c,
                     isIgnored: u
                 })
@@ -141,7 +141,7 @@ let Z = i.memo(function (e) {
     T = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
     A = i.memo(function (e) {
         let { participant: t, channel: l } = e,
-            { user: a, blocked: d } = t,
+            { user: o, blocked: d } = t,
             v = l.getGuildId(),
             O = C.default.getId(),
             { newestAnalyticsLocation: j } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
@@ -150,9 +150,9 @@ let Z = i.memo(function (e) {
                 [x.ZP],
                 () => {
                     var e;
-                    return null != v && (null == (e = x.ZP.getMember(v, a.id)) ? void 0 : e.premiumSince) != null;
+                    return null != v && (null == (e = x.ZP.getMember(v, o.id)) ? void 0 : e.premiumSince) != null;
                 },
-                [v, a.id]
+                [v, o.id]
             ),
             A = i.useRef(null);
         s()(null != v, 'Channel cannot be guildless');
@@ -163,7 +163,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'AudienceTile',
-                        is_tile_owner: a.id === O,
+                        is_tile_owner: o.id === O,
                         tile_type: E.TH.USER
                     }
                 }),
@@ -175,14 +175,14 @@ let Z = i.memo(function (e) {
                                 (0, r.jsx)(
                                     e,
                                     P(I({}, t), {
-                                        user: a,
+                                        user: o,
                                         guildId: v,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
                                         onInteraction: (0, _.u)('GuildChannelUserContextMenu', j, {
-                                            targetUserId: a.id,
+                                            targetUserId: o.id,
                                             tileType: E.TH.USER
                                         })
                                     })
@@ -191,11 +191,11 @@ let Z = i.memo(function (e) {
                         { context: Z }
                     ));
             },
-            [a, O, Z, v, l, j]
+            [o, O, Z, v, l, j]
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: A,
-            user: a,
+            user: o,
             guildId: l.guild_id,
             channelId: l.id,
             clickTrap: !0,
@@ -206,7 +206,7 @@ let Z = i.memo(function (e) {
                         I(
                             {
                                 innerRef: A,
-                                className: o()(S.tileContainer, {
+                                className: a()(S.tileContainer, {
                                     [S.singleIcon]: T || d,
                                     [S.doubleIcon]: T && d
                                 }),

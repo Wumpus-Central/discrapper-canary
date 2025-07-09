@@ -1,38 +1,39 @@
-(n.d(t, { Z: () => m }), n(388685), n(457542));
+(n.d(t, { Z: () => g }), n(388685), n(457542));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
+    a = n(755721),
     o = n(481060),
-    a = n(749210),
-    s = n(493773),
-    c = n(946273),
-    u = n(496675),
-    d = n(993706),
-    p = n(796263),
-    h = n(130883),
-    f = n(388032);
-function m(e) {
-    let { channel: t, user: m, guild: g } = e,
-        b = (0, l.e7)([d.Z], () => null != m && d.Z.isUserBanned(m.id)),
-        _ = null != m && null == b,
-        [y, C] = i.useState(_),
-        x = (0, l.e7)([u.Z], () => null != m && null != g && (0, c.lD)(m, g, [u.Z]));
+    s = n(749210),
+    c = n(493773),
+    u = n(946273),
+    d = n(496675),
+    p = n(993706),
+    h = n(796263),
+    f = n(130883),
+    m = n(388032);
+function g(e) {
+    let { channel: t, user: g, guild: b } = e,
+        _ = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
+        y = null != g && null == _,
+        [C, x] = i.useState(y),
+        v = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
     if (
-        ((0, s.ZP)(() => {
-            _ && a.Z.searchGuildBans(t.guild_id, void 0, [null == m ? void 0 : m.id]).finally(() => C(!1));
+        ((0, c.ZP)(() => {
+            y && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => x(!1));
         }),
-        !x)
+        !v)
     )
         return null;
-    let v = !0 === b ? f.intl.string(h.default.dpfwQ0) : f.intl.string(h.default.ASv23d),
-        O = 'ban-user-'.concat(null == m ? void 0 : m.id);
+    let O = !0 === _ ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
+        j = 'ban-user-'.concat(null == g ? void 0 : g.id);
     return (0, r.jsx)(
-        p.Z,
+        h.Z,
         {
-            text: v,
+            text: O,
             icon: o.pgN,
             onClick: () => {
-                null != m &&
+                null != g &&
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) => {
@@ -67,7 +68,7 @@ function m(e) {
                                 (l = l =
                                     {
                                         guildId: t.guild_id,
-                                        user: m,
+                                        user: g,
                                         modReportId: t.id
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -87,10 +88,10 @@ function m(e) {
                         };
                     });
             },
-            disabled: !0 === b || y,
-            submitting: y,
-            color: o.zxk.Colors.RED
+            disabled: !0 === _ || C,
+            submitting: C,
+            color: a.zx.Colors.RED
         },
-        O
+        j
     );
 }

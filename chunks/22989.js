@@ -17,8 +17,8 @@ var a = n(255367),
     x = n(388032),
     b = n(138339);
 function j(e) {
-    var t, n, j, y, _, w, C, k;
-    let { clip: P, channelId: O, transitionState: S, onClose: N } = e,
+    var t, n, j, y, _, w, C, P;
+    let { clip: k, channelId: O, transitionState: S, onClose: N } = e,
         [E, R] = r.useState(!0),
         [L, T] = r.useState(null),
         [F, D] = r.useState(null),
@@ -27,7 +27,7 @@ function j(e) {
         !(async function () {
             let e;
             try {
-                e = await s.Z.clips.loadClip(P.filepath);
+                e = await s.Z.clips.loadClip(k.filepath);
             } catch (e) {
                 (N(),
                     o.Z.show({
@@ -41,7 +41,7 @@ function j(e) {
                 a = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
             (D(n), T(a));
         })();
-    }, [P.filepath, N]),
+    }, [k.filepath, N]),
         r.useEffect(
             () => () => {
                 null != L && URL.revokeObjectURL(L);
@@ -54,13 +54,13 @@ function j(e) {
             },
             [F]
         ));
-    let [A, Z] = r.useState(null == (_ = null == (t = P.editMetadata) ? void 0 : t.voiceAudio) || _),
-        [B, M] = r.useState(null == (w = null == (n = P.editMetadata) ? void 0 : n.applicationAudio) || w),
+    let [A, Z] = r.useState(null == (_ = null == (t = k.editMetadata) ? void 0 : t.voiceAudio) || _),
+        [B, M] = r.useState(null == (w = null == (n = k.editMetadata) ? void 0 : n.applicationAudio) || w),
         [z, H] = r.useState({
-            start: null != (C = null == (j = P.editMetadata) ? void 0 : j.start) ? C : 0,
-            end: null != (k = null == (y = P.editMetadata) ? void 0 : y.end) ? k : 0
+            start: null != (C = null == (j = k.editMetadata) ? void 0 : j.start) ? C : 0,
+            end: null != (P = null == (y = k.editMetadata) ? void 0 : y.end) ? P : 0
         }),
-        [W, U] = r.useState(P.name),
+        [W, U] = r.useState(k.name),
         V = r.useRef({
             name: W,
             editMetadata: {
@@ -79,13 +79,13 @@ function j(e) {
             applicationAudio: B
         }
     };
-    let X = (0, f.l)(P);
+    let X = (0, f.l)(k);
     r.useEffect(() => {
         async function e() {
             let e = {};
             (null != X && (e = { thumbnail: await (0, p.R)(X, V.current.editMetadata.start) }),
                 (0, d.Tm)(
-                    P.id,
+                    k.id,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -116,7 +116,7 @@ function j(e) {
         return () => {
             e();
         };
-    }, [P.id, X]);
+    }, [k.id, X]);
     let G = r.useRef(null),
         K = r.useMemo(
             () => ({
@@ -162,7 +162,7 @@ function j(e) {
                                               channelId: O,
                                               onSetClipName: U,
                                               clipName: W,
-                                              clip: P,
+                                              clip: k,
                                               onClose: N
                                           })
                                   ]

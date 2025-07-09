@@ -94,15 +94,15 @@ function E(e) {
         D = (e, t) => {
             R((n) => y(C({}, n), { [e]: t }));
         },
-        k = (0, p.ss)(t),
-        A = (0, p.Gp)(),
-        L = i.useCallback(() => {
-            (A &&
+        A = (0, p.ss)(t),
+        L = (0, p.Gp)(),
+        k = i.useCallback(() => {
+            (L &&
                 g.jJ.trackExposure({
                     guildId: t,
                     location: 'b2d9de_1'
                 }),
-                A && k
+                L && A
                     ? (0, d.ZDy)(
                           async () => {
                               let { default: e } = await n.e('9558').then(n.bind(n, 34460));
@@ -120,7 +120,7 @@ function E(e) {
                           { modalKey: N }
                       )
                     : S());
-        }, [t, T, S, l, A, k]),
+        }, [t, T, S, l, L, A]),
         M = b.Lo(Z),
         G = i.useCallback(() => Z.forEach(b.GM), [Z]),
         U = (0, x.mY)(),
@@ -128,12 +128,12 @@ function E(e) {
     return (
         i.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && L(),
+                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.Mr3)(N);
                 }
             ),
-            [B, L]
+            [B, k]
         ),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,7 +157,7 @@ function E(e) {
                             )
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: U ? void 0 : L,
+                            onClick: U ? void 0 : k,
                             className: s()(O.createTierButton, { [O.disabled]: U }),
                             'aria-disabled': U,
                             children: [

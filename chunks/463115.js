@@ -3,8 +3,8 @@ var l = n(255367);
 n(73800);
 var i = n(120356),
     r = n.n(i),
-    s = n(481060),
-    a = n(888592),
+    a = n(481060),
+    s = n(888592),
     o = n(388032),
     c = n(167150);
 let d = (e) => {
@@ -13,29 +13,31 @@ let d = (e) => {
         className: c.container,
         children: [
             (0, l.jsx)('div', { className: c.topImage }),
-            (0, l.jsx)(s.X6q, {
+            (0, l.jsx)(a.X6q, {
                 className: r()(c.centerText, c.header),
                 variant: 'heading-xl/semibold',
                 children: o.intl.string(o.t.OaloU1)
             }),
             (0, l.jsx)('div', {
                 className: c.descriptionWidth,
-                children: (0, l.jsx)(s.Text, {
+                children: (0, l.jsx)(a.Text, {
                     className: c.centerText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: o.intl.format(o.t.Rs7MXF, { school: t })
                 })
             }),
-            (0, l.jsx)(s.zxk, {
-                look: s.zxk.Looks.LINK,
-                size: s.zxk.Sizes.SMALL,
-                color: s.zxk.Colors.LINK,
-                onClick: () => {
-                    n(a.tF.VERIFY_EMAIL);
-                },
+            (0, l.jsx)('div', {
+                'data-button-hoisted-classname-wrapper': !0,
                 className: c.__invalid_resendLink,
-                children: o.intl.string(o.t.Zg63h4)
+                children: (0, l.jsx)(a.Avr, {
+                    variant: 'primary',
+                    size: 'sm',
+                    text: o.intl.string(o.t.Zg63h4),
+                    onClick: () => {
+                        n(s.tF.VERIFY_EMAIL);
+                    }
+                })
             })
         ]
     });

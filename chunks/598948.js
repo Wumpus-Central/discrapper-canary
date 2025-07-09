@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(827657),
     x = n(472596),
     v = n(201756),
-    O = n(66747),
-    y = n(852479),
+    y = n(66747),
+    O = n(852479),
     _ = n(420212),
     H = n(172796);
 let w = {
@@ -40,25 +40,25 @@ let w = {
         tension: 260
     },
     Z = (e) => e.shiftKey || e.key === _.vn.SHIFT,
-    L = (e) => e.metaKey || e.ctrlKey || ['Meta', 'Control'].includes(e.key),
-    R = l.memo(
+    R = (e) => e.metaKey || e.ctrlKey || ['Meta', 'Control'].includes(e.key),
+    L = l.memo(
         function (e) {
             let { members: t, guild: n, className: o, searchState: a, compact: s, onSelectRow: m, onResetForNewMembers: b } = e,
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
                 _ = (0, u.f9)(),
-                R = (0, p.n)(),
+                L = (0, p.n)(),
                 [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
                 E = !_ && I && M;
             (l.useEffect(() => {
-                R || (P(!1), V(!1));
-            }, [R]),
+                L || (P(!1), V(!1));
+            }, [L]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            (Z(e) && P(!0), L(e) && V(!0));
+                            (Z(e) && P(!0), R(e) && V(!0));
                         },
                         t = (e) => {
-                            (Z(e) && P(!1), L(e) && V(!1));
+                            (Z(e) && P(!1), R(e) && V(!1));
                         };
                     return (
                         window.addEventListener('keydown', e),
@@ -98,13 +98,13 @@ let w = {
                             a === x.po.SUCCESS_FULL || a === x.po.LOADING
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(y.Z, {
+                                          (0, r.jsx)(O.Z, {
                                               guild: n,
                                               onSubmit: b
                                           }),
                                           k((e, t) =>
                                               (0, r.jsx)(
-                                                  O.Z,
+                                                  y.Z,
                                                   {
                                                       userId: t,
                                                       guildId: n.id,
@@ -150,7 +150,7 @@ let w = {
             l.useEffect(() => {
                 (0, f.h1)(o.id, v);
             }, [o.id, v]),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(L, {
                 members: g,
                 guild: o,
                 className: i,

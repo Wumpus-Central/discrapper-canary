@@ -2,8 +2,8 @@
 var i = n(73800),
     r = n(442837),
     s = n(607070),
-    l = n(597688),
-    a = n(350327),
+    a = n(597688),
+    l = n(350327),
     o = n(626135),
     c = n(211712),
     d = n(981631);
@@ -27,13 +27,13 @@ function p() {
                 avatarDecorationSkuId: n.avatarDecorationSkuId
             };
         }, [t, e]),
-        h = (0, r.e7)([l.Z], () => {
+        h = (0, r.e7)([a.Z], () => {
             if (null == g) return;
-            let e = l.Z.getProduct(g);
+            let e = a.Z.getProduct(g);
             if (null != e && 0 !== e.items.length) return e.items[0];
         });
     (0, i.useEffect)(() => {
-        (0, a.x3)({
+        (0, l.x3)({
             banner: u,
             themeColors: p,
             avatarDecoration: h

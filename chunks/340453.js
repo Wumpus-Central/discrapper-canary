@@ -3,21 +3,21 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(518950),
-    l = n(998502),
-    a = n(631885),
+    a = n(998502),
+    l = n(631885),
     o = n(329242),
     c = n(514299);
-let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
+let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
 function u(e) {
     var t, n;
-    let { otherUser: l, status: u } = e,
-        m = (0, a.j_)(l.id, u),
+    let { otherUser: a, status: u } = e,
+        m = (0, l.j_)(a.id, u),
         {
             avatarSrc: p,
             avatarDecorationSrc: g,
             eventHandlers: h
         } = (0, s.Z)({
-            user: l,
+            user: a,
             size: r.EFr.SIZE_40,
             animateOnHover: !0
         });
@@ -57,7 +57,7 @@ function u(e) {
                             src: p,
                             avatarDecoration: g,
                             size: r.EFr.SIZE_40,
-                            'aria-label': l.username
+                            'aria-label': a.username
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function u(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: c.userContainerWithTimestamp,
-                        children: (0, i.jsx)(o.Z, { user: l })
+                        children: (0, i.jsx)(o.Z, { user: a })
                     }),
                     (0, i.jsx)(r.Text, {
                         className: c.__invalid_timestamp,

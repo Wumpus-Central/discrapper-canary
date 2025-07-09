@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(519254),
     Z = n(741160),
     x = n(829972),
-    L = n(31932),
-    w = n(642301);
+    w = n(31932),
+    L = n(642301);
 function R(e) {
     null != e && h.Z.open(e.id, C.pNK.BOOST_PERKS, { section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR });
 }
@@ -82,7 +82,7 @@ let M = i.memo(function (e) {
                 location_stack: u
             });
         },
-        U = (0, a.wj)(n) ? x : L,
+        U = (0, a.wj)(n) ? x : w,
         [G, B] = (0, c.US)(t, S.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
@@ -212,7 +212,7 @@ let M = i.memo(function (e) {
                             secondaryButtonCTA: P.intl.string(P.t.f3Pet7),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: w,
+                                src: L,
                                 className: A.fullWidthImage
                             }),
                             onClick: () => {

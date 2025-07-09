@@ -71,7 +71,7 @@ let v = {
     };
 function j(e) {
     var t, n, r;
-    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: S, children: P } = e,
+    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: P, children: S } = e,
         E = (0, o.e7)([p.default], () => p.default.locale),
         N = new Intl.ListFormat(E),
         T = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
@@ -92,8 +92,8 @@ function j(e) {
                 }
             );
         }, [c, h]),
-        k = Z.length,
-        w = (function (e, t, n, r, a) {
+        w = Z.length,
+        D = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return g.intl.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
             let i = t > 0 ? g.t.YR8PSE : g.t.GQjq6e,
@@ -107,22 +107,22 @@ function j(e) {
                 nonMutualGuildCount: l.format(n)
             });
         })(T, A, L, E, I);
-    return 0 === R.length && null == w
+    return 0 === R.length && null == D
         ? null
         : (0, a.jsxs)(a.Fragment, {
               children: [
-                  P,
+                  S,
                   (0, a.jsxs)('div', {
                       className: s()(j, f.wrapper),
                       children: [
                           (0, a.jsx)('div', {
-                              className: s()(f.icons, S),
+                              className: s()(f.icons, P),
                               children:
                                   R.length > 0
                                       ? (0, a.jsxs)(a.Fragment, {
                                             children: [
                                                 R.map((e, t) => {
-                                                    let n = t === R.length - 1 && 0 === k,
+                                                    let n = t === R.length - 1 && 0 === w,
                                                         r = m.ZP.getGuildIconURL({
                                                             id: e.id,
                                                             icon: e.icon,
@@ -156,7 +156,7 @@ function j(e) {
                                                               e.id
                                                           );
                                                 }),
-                                                k > 0
+                                                w > 0
                                                     ? (0, a.jsx)(d.ua7, {
                                                           text: g.intl.formatToPlainString(g.t.m6oRrK, { appNames: N.format(Z.map((e) => e.name)) }),
                                                           position: 'top',
@@ -165,7 +165,7 @@ function j(e) {
                                                                   'div',
                                                                   b(_({}, e), {
                                                                       className: s()(f.moreGuilds, v[O]),
-                                                                      children: ['+', k]
+                                                                      children: ['+', w]
                                                                   })
                                                               )
                                                       })
@@ -180,11 +180,11 @@ function j(e) {
                                             className: f.defaultIcon
                                         })
                           }),
-                          null != w
+                          null != D
                               ? (0, a.jsx)(d.Text, {
                                     variant: y,
                                     color: 'header-secondary',
-                                    children: w
+                                    children: D
                                 })
                               : null
                       ]

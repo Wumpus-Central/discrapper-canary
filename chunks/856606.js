@@ -37,12 +37,12 @@ var i = n(255367),
     P = n(823379),
     A = n(892880),
     L = n(63063),
-    k = n(5192),
-    D = n(233608),
-    M = n(700785),
+    D = n(5192),
+    M = n(233608),
+    k = n(700785),
     B = n(51144),
-    U = n(257017),
-    V = n(188857),
+    V = n(257017),
+    U = n(188857),
     W = n(981631),
     H = n(388032),
     G = n(483112);
@@ -153,7 +153,7 @@ function Y(e) {
                         null != n && (e = n.name);
                     }
                 }
-                U.X(e);
+                V.X(e);
             }
         },
         b = (e) => {
@@ -164,7 +164,7 @@ function Y(e) {
         y = n.isForumLikeChannel() && a.e$(t.deny, W.Plq.SEND_MESSAGES),
         S = a.e$(t.deny, W.Plq.SEND_MESSAGES),
         O = a.e$(t.deny, W.Plq.READ_MESSAGE_HISTORY),
-        T = D.Z.generateChannelPermissionSpec(s, n, v, {
+        T = M.Z.generateChannelPermissionSpec(s, n, v, {
             createPostsDisabled: y,
             sendMessagesDisabled: S,
             readMessageHistoryDisabled: O
@@ -189,8 +189,8 @@ function Y(e) {
             s === g
                 ? null
                 : (0, i.jsx)(d.zxk, {
-                      look: d.zxk.Looks.OUTLINED,
-                      color: d.zxk.Colors.RED,
+                      variant: 'critical-secondary',
+                      text: H.intl.format(H.t.txPV7u, { name: p() }),
                       onClick: () => {
                           let e = p();
                           u.Z.show({
@@ -199,8 +199,7 @@ function Y(e) {
                               cancelText: H.intl.string(H.t['ETE/oK']),
                               onConfirm: () => h.Z.clearPermissionOverwrite(c, g)
                           });
-                      },
-                      children: H.intl.format(H.t.txPV7u, { name: p() })
+                      }
                   })
         ]
     });
@@ -208,7 +207,7 @@ function Y(e) {
 function J(e) {
     let { guildId: t, channelId: n, user: l } = e,
         r = l.getAvatarURL(t, 32),
-        s = k.ZP.getNickname(t, n, l),
+        s = D.ZP.getNickname(t, n, l),
         a = B.ZP.useUserTag(l),
         o = null,
         c = null;
@@ -325,7 +324,7 @@ function Q() {
             },
             [f]
         ),
-        N = (0, V.Z)(f, r),
+        N = (0, U.Z)(f, r),
         O = (0, b.ZP)(),
         T = (0, o.e7)([v.Z], () => v.Z.roleStyle),
         w = l.useCallback(
@@ -374,11 +373,11 @@ function Q() {
             h.Z.updatePermissionOverwrite(t.id, {
                 id: e,
                 type: n,
-                allow: M.Hn,
-                deny: M.Hn
+                allow: k.Hn,
+                deny: k.Hn
             }).then(() => (0, m.Aj)(e));
         };
-    null != r && null == r[x.id] && (r[x.id] = M.we(x.id));
+    null != r && null == r[x.id] && (r[x.id] = k.we(x.id));
     let A = s()(r)
             .filter((e) => e.type === j.BN.ROLE)
             .map((e) => y[e.id])
@@ -407,7 +406,7 @@ function Q() {
                 )
             )
             .value(),
-        k = s()(N)
+        D = s()(N)
             .sortBy((e) => e.username.toLowerCase())
             .map((e) => {
                 let t = e.getAvatarURL(x.id, 24);
@@ -482,7 +481,7 @@ function Q() {
                     });
                 })(),
                 A,
-                k,
+                D,
                 (0, i.jsxs)(l.Fragment, {
                     children: [
                         (0, i.jsx)(d.njP.Separator, {

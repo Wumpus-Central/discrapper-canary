@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685), n(539854));
+(n.d(t, { Z: () => a }), n(388685), n(539854));
 var i = n(658722),
     r = n.n(i);
 function s(e, t, n) {
@@ -14,7 +14,7 @@ function s(e, t, n) {
         e
     );
 }
-class l {
+class a {
     search(e) {
         return new Promise((t) => {
             t(this.getMatchingSettings(e));

@@ -41,14 +41,17 @@ function m(e) {
                                   className: u.smsNumberText,
                                   children: i
                               }),
-                              (0, r.jsx)(o.zxk, {
-                                  size: o.zxk.Sizes.SMALL,
+                              (0, r.jsx)('div', {
+                                  'data-button-hoisted-classname-wrapper': !0,
                                   className: u.__invalid_trailingButton,
-                                  onClick: () => {
-                                      (0, c.JG)(i, () => _(!0));
-                                  },
-                                  color: o.zxk.Colors.PRIMARY,
-                                  children: p ? d.intl.string(d.t['t5VZ8/']) : d.intl.string(d.t.OpuAlJ)
+                                  children: (0, r.jsx)(o.zxk, {
+                                      variant: 'secondary',
+                                      size: 'sm',
+                                      text: p ? d.intl.string(d.t['t5VZ8/']) : d.intl.string(d.t.OpuAlJ),
+                                      onClick: () => {
+                                          (0, c.JG)(i, () => _(!0));
+                                      }
+                                  })
                               })
                           ]
                       })

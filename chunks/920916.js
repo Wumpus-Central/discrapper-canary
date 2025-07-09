@@ -259,9 +259,10 @@ function q(e) {
                             children: _
                         }),
                         (0, r.jsx)(u.zxk, {
-                            submitting: a,
-                            onClick: s,
-                            children: U.intl.string(U.t.MAS7uL)
+                            variant: 'primary',
+                            text: U.intl.string(U.t.MAS7uL),
+                            loading: a,
+                            onClick: s
                         }),
                         (0, R.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         p &&

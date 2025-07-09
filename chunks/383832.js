@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(570140),
-    l = n(71509);
-function a() {
+    a = n(71509);
+function l() {
     (0, r.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('52030'), n.e('56782'), n.e('37908')]).then(n.bind(n, 266653));
@@ -45,7 +45,7 @@ function a() {
                     isMultiAccount: !0
                 });
             },
-            modalKey: l.Ui
+            modalKey: a.Ui
         }
     );
 }

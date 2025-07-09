@@ -1,44 +1,45 @@
-n.d(t, { s: () => o });
+n.d(t, { s: () => s });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(388032),
-    a = n(568410);
-function o(e) {
-    let { onDiscardApplication: t, onContinueApplication: n, guild: o } = e;
+var i = n(755721),
+    l = n(481060),
+    a = n(388032),
+    o = n(568410);
+function s(e) {
+    let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
     return (0, r.jsxs)('div', {
-        className: a.confirmation,
+        className: o.confirmation,
         children: [
             (0, r.jsx)('div', {
-                className: a.iconWrapper,
-                children: (0, r.jsx)(i.Gzi, {
+                className: o.iconWrapper,
+                children: (0, r.jsx)(l.Gzi, {
                     size: 'md',
-                    color: i.TVs.colors.INTERACTIVE_ACTIVE
+                    color: l.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: null != o ? l.intl.formatToPlainString(l.t.f5Jaw8, { guildName: o.name }) : l.intl.string(l.t['0sTyER'])
+                children: null != s ? a.intl.formatToPlainString(a.t.f5Jaw8, { guildName: s.name }) : a.intl.string(a.t['0sTyER'])
             }),
             (0, r.jsxs)('div', {
-                className: a.incompleteButtonsContainer,
+                className: o.incompleteButtonsContainer,
                 children: [
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(i.zx, {
                         fullWidth: !0,
                         onClick: n,
-                        look: i.zxk.Looks.FILLED,
-                        color: i.zxk.Colors.PRIMARY,
-                        size: i.zxk.Sizes.LARGE,
-                        children: l.intl.string(l.t.h3aGmp)
+                        look: i.zx.Looks.FILLED,
+                        color: i.zx.Colors.PRIMARY,
+                        size: i.zx.Sizes.LARGE,
+                        children: a.intl.string(a.t.h3aGmp)
                     }),
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(i.zx, {
                         fullWidth: !0,
                         onClick: t,
-                        look: i.zxk.Looks.FILLED,
-                        color: i.zxk.Colors.RED,
-                        size: i.zxk.Sizes.LARGE,
-                        children: l.intl.string(l.t.OQFlFB)
+                        look: i.zx.Looks.FILLED,
+                        color: i.zx.Colors.RED,
+                        size: i.zx.Sizes.LARGE,
+                        children: a.intl.string(a.t.OQFlFB)
                     })
                 ]
             })

@@ -1,113 +1,114 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => j });
 var r = n(255367),
     l = n(73800),
     a = n(286379),
     i = n(442837),
-    s = n(481060),
-    o = n(565138),
-    c = n(797614),
-    u = n(769654),
-    d = n(695346),
-    b = n(430824),
-    m = n(88658),
-    f = n(401416),
-    g = n(920133),
-    S = n(388032),
-    h = n(227267),
-    p = n(444812);
-function x(e) {
-    let { transitionState: t, guildId: x, onClose: j } = e,
-        D = (0, i.e7)([b.Z], () => b.Z.getGuild(x));
+    s = n(755721),
+    o = n(481060),
+    c = n(565138),
+    u = n(797614),
+    d = n(769654),
+    b = n(695346),
+    m = n(430824),
+    f = n(88658),
+    g = n(401416),
+    S = n(920133),
+    h = n(388032),
+    p = n(227267),
+    x = n(444812);
+function j(e) {
+    let { transitionState: t, guildId: j, onClose: D } = e,
+        _ = (0, i.e7)([m.Z], () => m.Z.getGuild(j));
     return (l.useEffect(() => {
-        ((0, f.Y)(x), (0, g.L)(g.Q.MODAL_VIEWED, x), c.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW }));
-    }, [x]),
-    null == D)
+        ((0, g.Y)(j), (0, S.L)(S.Q.MODAL_VIEWED, j), u.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW }));
+    }, [j]),
+    null == _)
         ? null
-        : (0, r.jsx)(s.Y0X, {
+        : (0, r.jsx)(o.Y0X, {
               transitionState: t,
-              className: h.modal,
+              className: p.modal,
               parentComponent: 'DmSettingsUpsellModal',
               children: (0, r.jsxs)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let t = (0, m.YK)();
-                      (t.add(x), d.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), j(), (0, g.L)(g.Q.MODAL_DISABLED_DMS, x));
+                      let t = (0, f.YK)();
+                      (t.add(j), b.h2.updateSetting(Array.from(t)).then(() => (0, o.showToast)((0, o.createToast)(h.intl.string(h.t.rlYD1d), o.ToastType.SUCCESS))), D(), (0, S.L)(S.Q.MODAL_DISABLED_DMS, j));
                   },
                   children: [
                       (0, r.jsx)('img', {
                           alt: '',
-                          className: h.headerImage,
-                          src: p
+                          className: p.headerImage,
+                          src: x
                       }),
-                      (0, r.jsxs)(s.xBx, {
+                      (0, r.jsxs)(o.xBx, {
                           separator: !1,
-                          className: h.header,
+                          className: p.header,
                           children: [
-                              (0, r.jsx)(s.X6q, {
+                              (0, r.jsx)(o.X6q, {
                                   variant: 'heading-lg/bold',
-                                  className: h.title,
-                                  children: S.intl.string(S.t.w2BvnJ)
+                                  className: p.title,
+                                  children: h.intl.string(h.t.w2BvnJ)
                               }),
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
-                                  className: h.body,
-                                  children: S.intl.format(S.t.Depjkp, { guild_name: D.name })
+                                  className: p.body,
+                                  children: h.intl.format(h.t.Depjkp, { guild_name: _.name })
                               })
                           ]
                       }),
-                      (0, r.jsxs)(s.hzk, {
+                      (0, r.jsxs)(o.hzk, {
                           children: [
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
-                                  className: h.subtitle,
-                                  children: S.intl.string(S.t.KPB2i4)
+                                  className: p.subtitle,
+                                  children: h.intl.string(h.t.KPB2i4)
                               }),
                               (0, r.jsx)('div', {
-                                  className: h.guildContainer,
+                                  className: p.guildContainer,
                                   children: (0, r.jsxs)('div', {
-                                      className: h.guildInfo,
+                                      className: p.guildInfo,
                                       children: [
-                                          (0, r.jsx)(o.Z, {
-                                              guild: D,
-                                              size: o.Z.Sizes.SMALL
+                                          (0, r.jsx)(c.Z, {
+                                              guild: _,
+                                              size: c.Z.Sizes.SMALL
                                           }),
-                                          (0, r.jsx)(s.Text, {
-                                              className: h.guildName,
+                                          (0, r.jsx)(o.Text, {
+                                              className: p.guildName,
                                               variant: 'text-md/semibold',
-                                              children: D.name
+                                              children: _.name
                                           })
                                       ]
                                   })
                               }),
                               (0, r.jsxs)('div', {
-                                  className: h.content,
+                                  className: p.content,
                                   children: [
-                                      (0, r.jsx)(s.zxk, {
-                                          className: h.button,
+                                      (0, r.jsx)(s.zx, {
+                                          className: p.button,
                                           type: 'submit',
-                                          color: s.zxk.Colors.BRAND,
-                                          size: s.zxk.Sizes.MEDIUM,
-                                          children: S.intl.string(S.t.TD7iU1)
+                                          color: s.zx.Colors.BRAND,
+                                          size: s.zx.Sizes.MEDIUM,
+                                          children: h.intl.string(h.t.TD7iU1)
                                       }),
-                                      (0, r.jsx)(s.zxk, {
-                                          className: h.button,
-                                          color: s.zxk.Colors.PRIMARY,
+                                      (0, r.jsx)(s.zx, {
+                                          className: p.button,
+                                          color: s.zx.Colors.PRIMARY,
                                           onClick: () => {
-                                              (j(), (0, g.L)(g.Q.MODAL_DISMISSED, x));
+                                              (D(), (0, S.L)(S.Q.MODAL_DISMISSED, j));
                                           },
-                                          children: S.intl.string(S.t.PsWbcn)
+                                          children: h.intl.string(h.t.PsWbcn)
                                       }),
-                                      (0, r.jsx)(s.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'header-secondary',
-                                          className: h.footer,
-                                          children: S.intl.format(S.t.IzZxXV, {
+                                          className: p.footer,
+                                          children: h.intl.format(h.t.IzZxXV, {
                                               onClick: () => {
-                                                  (j(),
-                                                      (0, u.X)(x),
-                                                      (0, s.ZDy)(async () => {
+                                                  (D(),
+                                                      (0, d.X)(j),
+                                                      (0, o.ZDy)(async () => {
                                                           let { default: e } = await Promise.all([n.e('14006'), n.e('8381'), n.e('95355'), n.e('8895'), n.e('70791'), n.e('25292'), n.e('22878'), n.e('80417'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('8739'), n.e('7839'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('38626'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('23491'), n.e('76540'), n.e('27947'), n.e('61668'), n.e('81872'), n.e('36512'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('40694'), n.e('36006'), n.e('88622'), n.e('94363'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('89795'), n.e('10026'), n.e('24358'), n.e('99014'), n.e('93955')]).then(n.bind(n, 241420));
                                                           return (t) => {
                                                               var n, l;
@@ -138,7 +139,7 @@ function x(e) {
                                                                       }
                                                                       return e;
                                                                   })({}, t)),
-                                                                  (l = l = { guild: D }),
+                                                                  (l = l = { guild: _ }),
                                                                   Object.getOwnPropertyDescriptors
                                                                       ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                                                       : (function (e, t) {
@@ -155,7 +156,7 @@ function x(e) {
                                                               );
                                                           };
                                                       }),
-                                                      (0, g.L)(g.Q.MODAL_GUILD_SETTINGS_CLICKED, x));
+                                                      (0, S.L)(S.Q.MODAL_GUILD_SETTINGS_CLICKED, j));
                                               }
                                           })
                                       })

@@ -1,37 +1,37 @@
-n.d(e, { default: () => o });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    s = n(388032),
-    l = n(915935);
-function o(t) {
-    let { onClose: e, transitionState: n, body: o } = t;
-    return (0, r.jsxs)(i.Y0X, {
-        transitionState: n,
+i.d(e, { default: () => l });
+var n = i(255367);
+i(73800);
+var r = i(481060),
+    s = i(388032),
+    a = i(915935);
+function l(t) {
+    let { onClose: e, transitionState: i, body: l } = t;
+    return (0, n.jsxs)(r.Y0X, {
+        transitionState: i,
         parentComponent: 'ProblemReported',
         children: [
-            (0, r.jsx)(i.xBx, {
+            (0, n.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, r.jsx)(i.vwX, {
+                children: (0, n.jsx)(r.vwX, {
                     tag: 'h2',
-                    className: l.title,
+                    className: a.title,
                     children: s.intl.string(s.t.KTjjrK)
                 })
             }),
-            (0, r.jsx)(i.hzk, {
+            (0, n.jsx)(r.hzk, {
                 children:
-                    'string' == typeof o
-                        ? (0, r.jsx)(i.Text, {
+                    'string' == typeof l
+                        ? (0, n.jsx)(r.Text, {
                               variant: 'text-md/normal',
-                              children: o
+                              children: l
                           })
-                        : o
+                        : l
             }),
-            (0, r.jsx)(i.mzw, {
-                children: (0, r.jsx)(i.zxk, {
-                    color: i.zxk.Colors.BRAND,
-                    onClick: e,
-                    children: s.intl.string(s.t.i4jeWV)
+            (0, n.jsx)(r.mzw, {
+                children: (0, n.jsx)(r.zxk, {
+                    variant: 'primary',
+                    text: s.intl.string(s.t.i4jeWV),
+                    onClick: e
                 })
             })
         ]

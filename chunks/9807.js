@@ -99,11 +99,11 @@ let I = (e) => {
             r = y(e, ['containerClassName', 'className']);
         return (0, a.jsx)(m.ZP, j(C({}, r), { className: s()(n, t) }));
     },
-    S = {
+    P = {
         width: 1280,
         height: 720
     },
-    P = {
+    S = {
         width: 640,
         height: 360
     },
@@ -112,7 +112,7 @@ let I = (e) => {
             n,
             r,
             { item: i, onPlay: l, volume: s, onVolumeChange: o, onMute: p, isMuted: m, autoPlay: h } = e;
-        if (i.type === _.s9s.YOUTUBE_VIDEO) ((t = C({ url: (0, _.n8r)(i.youtubeVideoId) }, S)), (n = C({ url: ''.concat((0, _.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE));
+        if (i.type === _.s9s.YOUTUBE_VIDEO) ((t = C({ url: (0, _.n8r)(i.youtubeVideoId) }, P)), (n = C({ url: ''.concat((0, _.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, S)), (r = u.pn.YOUTUBE));
         else {
             let e = null != i.width ? i.width : 0,
                 r = null != i.height ? i.height : 0;

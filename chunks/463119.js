@@ -70,7 +70,7 @@ function x(e, t) {
         e
     );
 }
-function L(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,7 +89,7 @@ function L(e, t) {
     }
     return i;
 }
-let w = (e) => {
+let L = (e) => {
         let { color: t } = e;
         return (0, r.jsx)(s.IGR, {
             className: A.newBadge,
@@ -110,7 +110,7 @@ let w = (e) => {
     },
     D = (e) => {
         var { selected: t, locationState: n, icon: a, onClick: o, collectibleShopTab: c, onMouseEnter: d, onMouseLeave: p, children: g } = e,
-            m = L(e, ['selected', 'locationState', 'icon', 'onClick', 'collectibleShopTab', 'onMouseEnter', 'onMouseLeave', 'children']);
+            m = w(e, ['selected', 'locationState', 'icon', 'onClick', 'collectibleShopTab', 'onMouseEnter', 'onMouseLeave', 'children']);
         let b = (0, l.JA)('shop'),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: E } = (0, f.ZP)(_),
@@ -159,7 +159,7 @@ let w = (e) => {
             ]
         });
     },
-    k = (e) => (0, r.jsx)(D, x(Z({}, e), { children: (0, r.jsx)(w, {}) })),
+    k = (e) => (0, r.jsx)(D, x(Z({}, e), { children: (0, r.jsx)(L, {}) })),
     M = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -213,7 +213,7 @@ let w = (e) => {
             y,
             I,
             { displayOptions: v } = e,
-            C = L(e, ['displayOptions']);
+            C = w(e, ['displayOptions']);
         let S = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
             [N, T] = i.useState(0),
             [P, R] = i.useState(!1),
@@ -261,7 +261,7 @@ let w = (e) => {
                                         'aria-hidden': !0
                                     })
                             }),
-                            (0, r.jsx)(w, { color: v.badgeColor })
+                            (0, r.jsx)(L, { color: v.badgeColor })
                         ]
                     })
                 )
@@ -269,7 +269,7 @@ let w = (e) => {
     },
     G = (e) => {
         var { displayOptions: t } = e,
-            n = L(e, ['displayOptions']);
+            n = w(e, ['displayOptions']);
         let l = i.useMemo(() => {
             var e;
             let n = null != t.emojiName ? (null == (e = b.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
@@ -286,16 +286,16 @@ let w = (e) => {
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(D, x(Z({}, n, e), { children: (0, r.jsx)(w, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(D, x(Z({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) }))
         });
     },
     B = (e) => {
         var { listScrollerRef: t } = e,
-            n = L(e, ['listScrollerRef']);
+            n = w(e, ['listScrollerRef']);
         let l = i.useRef(null),
             a = (0, _.EQ)({ listScrollerRef: t }),
             { positionControlRef: o, onShopButtonClick: s } = a,
-            c = L(a, ['positionControlRef', 'onShopButtonClick']);
+            c = w(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
             _.Rg,
             x(
@@ -321,7 +321,7 @@ let w = (e) => {
     },
     V = (e) => {
         var { displayOptions: t, dismissContent: n } = e,
-            l = L(e, ['displayOptions', 'dismissContent']);
+            l = w(e, ['displayOptions', 'dismissContent']);
         let a = i.useRef(null),
             o = i.useRef(0);
         i.useLayoutEffect(() => {
@@ -347,7 +347,7 @@ let w = (e) => {
                     x(Z({}, l), {
                         onClick: c,
                         listItemRef: a,
-                        children: (0, r.jsx)(w, {})
+                        children: (0, r.jsx)(L, {})
                     })
                 )
         });

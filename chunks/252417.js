@@ -21,7 +21,7 @@ function y(e) {
     let { user: t, status: y, guildId: g, channelId: P, onSelect: w } = e,
         { theme: N, themeType: Z } = (0, f.z)(),
         S = i.useMemo(() => t.isNonUserBot() || (0, m.W)(t, P), [t, P]),
-        { activities: k, isMobileOnline: C } = (0, l.cj)([p.Z], () => ({
+        { activities: C, isMobileOnline: k } = (0, l.cj)([p.Z], () => ({
             activities: p.Z.getActivities(t.id),
             isMobileOnline: p.Z.isMobileOnline(t.id)
         })),
@@ -101,7 +101,7 @@ function y(e) {
                 size: O,
                 status: S ? x.Skl.UNKNOWN : y,
                 statusBackdropColor: S ? void 0 : (0, a.QFD)(N),
-                isMobile: C,
+                isMobile: k,
                 className: v.avatar
             }),
             (0, n.jsxs)('div', {
@@ -114,7 +114,7 @@ function y(e) {
                     }),
                     (0, n.jsx)(d.Z, {
                         user: t,
-                        activities: k,
+                        activities: C,
                         applicationStream: E,
                         voiceChannel: I
                     })

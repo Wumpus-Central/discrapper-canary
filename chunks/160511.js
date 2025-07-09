@@ -11,10 +11,10 @@ var r = n(255367),
 function f(e) {
     let { mfaChallenge: t, finish: n, setSlide: f, onClose: h, isSlideReady: m } = e,
         [p, g] = l.useState(!1),
-        [b, j] = l.useState(null),
-        [y, x] = l.useState(!1),
+        [b, y] = l.useState(null),
+        [j, x] = l.useState(!1),
         [S, v] = l.useState(null),
-        [C, O] = l.useState(''),
+        [O, C] = l.useState(''),
         w = l.useRef(null);
     (l.useEffect(() => {
         (g(!0),
@@ -26,7 +26,7 @@ function f(e) {
                     rejectWithError: !1
                 })
                 .then((e) => {
-                    j(e.body.phone);
+                    y(e.body.phone);
                 })
                 .catch((e) => {
                     var t, n;
@@ -49,7 +49,7 @@ function f(e) {
                 x(!0),
                 n({
                     mfaType: 'sms',
-                    data: C
+                    data: O
                 })
                     .catch((e) => {
                         var t, n;
@@ -74,17 +74,18 @@ function f(e) {
                                 (0, r.jsx)(o.oil, {
                                     className: d.smsInput,
                                     inputRef: w,
-                                    onChange: O,
+                                    onChange: C,
                                     placeholder: u.intl.string(u.t.tARzgo),
                                     maxLength: 10,
-                                    value: C,
+                                    value: O,
                                     autoComplete: 'one-time-code',
                                     spellCheck: 'false',
-                                    disabled: y
+                                    disabled: j
                                 }),
                                 (0, r.jsx)(o.zxk, {
-                                    size: o.zxk.Sizes.MEDIUM,
-                                    submitting: p,
+                                    variant: 'primary',
+                                    text: u.intl.string(u.t.ZF29Ly),
+                                    loading: p,
                                     onClick: () => {
                                         s.tn
                                             .post({
@@ -94,14 +95,13 @@ function f(e) {
                                                 rejectWithError: !1
                                             })
                                             .then((e) => {
-                                                j(e.body.phone);
+                                                y(e.body.phone);
                                             })
                                             .catch((e) => {
                                                 var t;
                                                 v(e.message || (null == (t = e.body) ? void 0 : t.message));
                                             });
-                                    },
-                                    children: u.intl.string(u.t.ZF29Ly)
+                                    }
                                 })
                             ]
                         }),
@@ -113,8 +113,8 @@ function f(e) {
                 mfaChallenge: t,
                 setSlide: f,
                 showConfirm: !0,
-                disabled: C.length !== i.Gz,
-                submitting: y
+                disabled: O.length !== i.Gz,
+                submitting: j
             })
         ]
     });

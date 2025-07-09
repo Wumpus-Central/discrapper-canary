@@ -235,11 +235,15 @@ function N(e) {
                         variant: 'text-sm/normal',
                         children: x.intl.string(x.t.vWkIIC)
                     }),
-                    (0, r.jsx)(h.zxk, {
+                    (0, r.jsx)('div', {
+                        'data-button-hoisted-classname-wrapper': !0,
                         className: I.tutorialButton,
-                        onClick: t,
-                        size: h.zxk.Sizes.SMALL,
-                        children: x.intl.string(x.t['+IrDzM'])
+                        children: (0, r.jsx)(h.zxk, {
+                            variant: 'primary',
+                            size: 'sm',
+                            text: x.intl.string(x.t['+IrDzM']),
+                            onClick: t
+                        })
                     })
                 ]
             })

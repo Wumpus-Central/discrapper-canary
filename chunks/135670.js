@@ -157,6 +157,10 @@ class c extends r.Z {
     fetchAsyncResources(e) {
         return Promise.resolve();
     }
+    getNoiseCancellationStats() {
+        return Promise.reject(Error('Dummy noise cancellation stats not supported'));
+    }
+    setNoiseCancellationEnableStats(e) {}
     constructor(...e) {
         (super(...e), o(this, 'Video', s), o(this, 'Camera', l));
     }

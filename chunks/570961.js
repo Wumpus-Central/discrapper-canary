@@ -3,10 +3,10 @@
     Kk: () => S,
     NB: () => f,
     en: () => j,
-    fi: () => E,
+    fi: () => p,
     n_: () => O,
     rS: () => T,
-    tS: () => p
+    tS: () => E
 }),
     n(415506),
     n(388685));
@@ -69,18 +69,18 @@ function f() {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
 }
 function S(e, t, n) {
-    p(
+    E(
         e,
         u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? g({}, e, n) : e))
     );
 }
-function E(e, t) {
-    p(
+function p(e, t) {
+    E(
         e,
         u.Z.editedOnboardingPrompts.filter((e) => e.id !== t)
     );
 }
-function p(e, t) {
+function E(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
         (i.Z.dispatch({
@@ -141,18 +141,18 @@ async function T(e, t) {
             }),
             Error('too many prompts in onboarding')
         );
-    let E = [...m, ...f];
+    let p = [...m, ...f];
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
-        (await O(e.id, { prompts: E.map(I.dr) }),
+        (await O(e.id, { prompts: p.map(I.dr) }),
             i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS',
                 guildId: e.id,
-                updates: { prompts: E }
+                updates: { prompts: p }
             }));
     } catch (n) {
-        var p;
-        let { fieldName: e, error: t } = null != (p = new s.Hx(n).getAnyErrorMessageAndField()) ? p : {};
+        var E;
+        let { fieldName: e, error: t } = null != (E = new s.Hx(n).getAnyErrorMessageAndField()) ? E : {};
         throw (
             r.Z.show({
                 title: h.intl.string(h.t.iLdiqa),

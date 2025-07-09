@@ -1,17 +1,17 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(83091);
-let l = (e) => {
-    let { label: t, onClick: n, submitting: l } = e;
+let a = (e) => {
+    let { label: t, onClick: n, submitting: a } = e;
     return (0, i.jsx)(r.P3F, {
-        onClick: l ? void 0 : n,
+        onClick: a ? void 0 : n,
         className: s.button,
         children: (0, i.jsxs)('div', {
             className: s.contentContainer,
             children: [
-                l
+                a
                     ? (0, i.jsx)(r.$jN, {
                           type: r.$jN.Type.PULSING_ELLIPSIS,
                           className: s.__invalid_spinner

@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(43267),
-    o = n(933557),
-    a = n(297700),
+    a = n(933557),
+    o = n(297700),
     s = n(534091),
     c = n(967128),
     u = n(388032),
@@ -22,7 +22,7 @@ let h = () =>
 function f(e) {
     var t;
     let { channel: n } = e,
-        f = null != (t = (0, o.ZP)(n)) ? t : '';
+        f = null != (t = (0, a.ZP)(n)) ? t : '';
     return (0, r.jsxs)('div', {
         id: (0, s.p)(n.id, n.id),
         className: d.headerContainer,
@@ -48,7 +48,7 @@ function f(e) {
                                 className: d.emptyMessageHeader,
                                 children: [
                                     f,
-                                    (0, r.jsx)(a.Z, {
+                                    (0, r.jsx)(o.Z, {
                                         className: d.flowerStar,
                                         size: 24,
                                         children: (0, r.jsx)(i.kmB, {

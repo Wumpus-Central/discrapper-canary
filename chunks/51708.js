@@ -1,71 +1,72 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(100527),
-    s = n(906732),
-    o = n(436774),
-    a = n(104494),
-    c = n(639119),
-    d = n(767714),
-    u = n(74538),
-    f = n(156582),
-    m = n(474936),
-    h = n(676462),
-    p = n(388032),
-    x = n(393095);
-function g(e) {
-    var t, n, g;
-    let { onClose: _ } = e,
-        { analyticsLocations: v } = (0, s.ZP)(l.Z.GO_LIVE_MODAL_V2),
-        j = (0, c.N)(),
-        b = (0, a.Ng)(),
-        S = (null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2 || (0, a.Wp)(b, m.Si.TIER_2),
-        C = p.intl.string(h.default['+f+cqq']);
+var i = n(755721),
+    l = n(481060),
+    s = n(100527),
+    o = n(906732),
+    a = n(436774),
+    c = n(104494),
+    d = n(639119),
+    u = n(767714),
+    f = n(74538),
+    m = n(156582),
+    h = n(474936),
+    p = n(676462),
+    x = n(388032),
+    g = n(393095);
+function _(e) {
+    var t, n, _;
+    let { onClose: v } = e,
+        { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
+        b = (0, d.N)(),
+        S = (0, c.Ng)(),
+        C = (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 || (0, c.Wp)(S, h.Si.TIER_2),
+        y = x.intl.string(p.default['+f+cqq']);
     return (
-        S &&
-            (null != j
-                ? (C = (0, u.Rt)({
-                      intervalType: null == j || null == (n = j.subscription_trial) ? void 0 : n.interval,
-                      intervalCount: null == j || null == (g = j.subscription_trial) ? void 0 : g.interval_count
+        C &&
+            (null != b
+                ? (y = (0, f.Rt)({
+                      intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
+                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count
                   }))
-                : null != b && (C = p.intl.formatToPlainString(p.t.bkQ4bG, { percent: b.discount.amount }))),
+                : null != S && (y = x.intl.formatToPlainString(x.t.bkQ4bG, { percent: S.discount.amount }))),
         (0, r.jsxs)('div', {
-            className: x.root,
+            className: g.root,
             children: [
-                (0, r.jsxs)(i.Text, {
-                    className: x.infoText,
+                (0, r.jsxs)(l.Text, {
+                    className: g.infoText,
                     variant: 'text-xs/normal',
                     color: 'always-white',
                     children: [
-                        (0, r.jsx)(i.mBM, {
+                        (0, r.jsx)(l.mBM, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        p.intl.format(p.t.sLJ3ER, {
+                        x.intl.format(x.t.sLJ3ER, {
                             onNitroClick: function () {
-                                (0, f.E)({
-                                    analyticsLocation: v[0],
-                                    onClose: _
+                                (0, m.E)({
+                                    analyticsLocation: j[0],
+                                    onClose: v
                                 });
                             }
                         })
                     ]
                 }),
-                (0, r.jsx)(d.Z, {
-                    className: x.ctaButton,
-                    iconClassName: x.premiumIcon,
-                    size: i.zxk.Sizes.TINY,
-                    color: i.zxk.Colors.BRAND_INVERTED,
-                    subscriptionTier: m.Si.TIER_2,
-                    buttonShineClassName: x.premiumShine,
-                    iconColor: o.JX.PREMIUM_TIER_2,
+                (0, r.jsx)(u.Z, {
+                    className: g.ctaButton,
+                    iconClassName: g.premiumIcon,
+                    size: i.zx.Sizes.TINY,
+                    color: i.zx.Colors.BRAND_INVERTED,
+                    subscriptionTier: h.Si.TIER_2,
+                    buttonShineClassName: g.premiumShine,
+                    iconColor: a.JX.PREMIUM_TIER_2,
                     onClick: () => {
-                        _();
+                        v();
                     },
                     textOptions: {
-                        subscribeText: C,
-                        textClassName: x.ctaButtonText
+                        subscribeText: y,
+                        textClassName: g.ctaButtonText
                     }
                 })
             ]

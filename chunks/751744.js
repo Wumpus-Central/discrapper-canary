@@ -1,79 +1,80 @@
-(e.d(n, { default: () => b }), e(953529));
+(e.d(n, { default: () => _ }), e(953529));
 var o = e(255367),
     i = e(73800),
     r = e(442837),
-    l = e(481060),
-    s = e(168107),
-    a = e(138201),
-    c = e(331692),
-    d = e(103879),
-    x = e(236289),
-    u = e(800530),
-    m = e(388032),
-    f = e(822566);
-let h = [
+    l = e(755721),
+    s = e(481060),
+    a = e(168107),
+    c = e(138201),
+    d = e(331692),
+    x = e(103879),
+    u = e(236289),
+    m = e(800530),
+    f = e(388032),
+    h = e(822566);
+let b = [
         {
-            title: m.intl.string(m.t['1+E7LC']),
-            description: m.intl.string(m.t.BXiat7)
+            title: f.intl.string(f.t['1+E7LC']),
+            description: f.intl.string(f.t.BXiat7)
         },
         {
-            title: m.intl.string(m.t.iMQXtL),
-            description: m.intl.string(m.t.oQ0vws)
+            title: f.intl.string(f.t.iMQXtL),
+            description: f.intl.string(f.t.oQ0vws)
         },
         {
-            title: m.intl.string(m.t['oY/z1d']),
-            description: m.intl.string(m.t.wtj02d)
+            title: f.intl.string(f.t['oY/z1d']),
+            description: f.intl.string(f.t.wtj02d)
         }
     ],
-    b = function (t) {
-        let { onClose: n, transitionState: e, classificationId: b } = t,
-            _ = (0, r.e7)([x.Z], () => x.Z.getAgeVerificationWebviewUrl()),
-            p = (0, r.e7)([x.Z], () => x.Z.getIsLoadingAgeVerification()),
-            j = i.useCallback(() => {
-                (n(), c.Z.close());
-            }, [n]),
+    _ = function (t) {
+        let { onClose: n, transitionState: e, classificationId: _ } = t,
+            p = (0, r.e7)([u.Z], () => u.Z.getAgeVerificationWebviewUrl()),
+            j = (0, r.e7)([u.Z], () => u.Z.getIsLoadingAgeVerification()),
             N = i.useCallback(() => {
-                (c.Z.success(), j(), c.Z.start_verification_check());
-            }, [j]);
+                (n(), d.Z.close());
+            }, [n]),
+            v = i.useCallback(() => {
+                (d.Z.success(), N(), d.Z.start_verification_check());
+            }, [N]);
         return (
             i.useEffect(() => {
-                '' !== _ &&
-                    s.Z.showAgeVerification({
-                        webviewUrl: _,
-                        onComplete: N,
+                '' !== p &&
+                    a.Z.showAgeVerification({
+                        webviewUrl: p,
+                        onComplete: v,
                         useV1: !0
                     });
-            }, [_, N]),
-            (0, o.jsxs)(l.Y0X, {
+            }, [p, v]),
+            (0, o.jsxs)(s.Y0X, {
                 transitionState: e,
-                className: f.root,
+                className: h.root,
                 parentComponent: 'AutomatedUnderageAppealModal',
                 children: [
-                    (0, o.jsxs)(l.hzk, {
-                        className: f.content,
+                    (0, o.jsxs)(s.hzk, {
+                        className: h.content,
                         children: [
                             (0, o.jsxs)('div', {
-                                className: f.header,
+                                className: h.header,
                                 children: [
-                                    (0, o.jsx)(l.X6q, {
+                                    (0, o.jsx)(s.X6q, {
                                         variant: 'heading-xl/bold',
-                                        children: m.intl.string(m.t['9SDLnp'])
+                                        children: f.intl.string(f.t['9SDLnp'])
                                     }),
-                                    (0, o.jsx)(l.X6q, {
+                                    (0, o.jsx)(s.X6q, {
                                         variant: 'heading-md/normal',
                                         color: 'header-secondary',
-                                        children: m.intl.string(m.t['yvx///'])
+                                        children: f.intl.string(f.t['yvx///'])
                                     })
                                 ]
                             }),
                             (0, o.jsx)('div', {
-                                className: f.listContent,
+                                className: h.listContent,
                                 children: (0, o.jsx)('div', {
-                                    className: f.table,
-                                    children: h.map((t, n) => {
+                                    className: h.table,
+                                    children: b.map((t, n) => {
                                         let { title: e, description: i } = t;
                                         return (0, o.jsx)(
-                                            a.ZP,
+                                            c.ZP,
                                             {
                                                 title: e,
                                                 description: i,
@@ -87,51 +88,52 @@ let h = [
                                 })
                             }),
                             (0, o.jsxs)('div', {
-                                className: f.anotherOption,
+                                className: h.anotherOption,
                                 children: [
-                                    (0, o.jsx)(l.Text, {
+                                    (0, o.jsx)(s.Text, {
                                         variant: 'text-sm/semibold',
-                                        className: f.optionEyebrow,
+                                        className: h.optionEyebrow,
                                         color: 'header-secondary',
-                                        children: m.intl.string(m.t.WPwp1d)
+                                        children: f.intl.string(f.t.WPwp1d)
                                     }),
                                     (0, o.jsx)('div', {
-                                        className: f.table,
-                                        children: (0, o.jsx)(a.ZP, {
-                                            title: m.intl.string(m.t.N9WJMD),
-                                            description: m.intl.string(m.t['NHq38/']),
-                                            buttonText: m.intl.string(m.t['9iy4lJ']),
-                                            buttonColor: l.zxk.Colors.PRIMARY,
+                                        className: h.table,
+                                        children: (0, o.jsx)(c.ZP, {
+                                            title: f.intl.string(f.t.N9WJMD),
+                                            description: f.intl.string(f.t['NHq38/']),
+                                            buttonText: f.intl.string(f.t['9iy4lJ']),
+                                            buttonColor: l.zx.Colors.PRIMARY,
                                             titleVariant: 'text-md/medium',
-                                            onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                            onButtonPress: () => window.open(m.sQ.AGE_VERIFICATION_LINK, '_blank')
                                         })
                                     }),
                                     (0, o.jsx)('div', {
-                                        className: f.learnMore,
-                                        children: (0, o.jsx)(l.X6q, {
+                                        className: h.learnMore,
+                                        children: (0, o.jsx)(s.X6q, {
                                             variant: 'heading-sm/medium',
                                             color: 'text-secondary',
-                                            children: m.intl.format(m.t.ZbWsOD, { learnMoreLink: u.sQ.LEARN_MORE_UU_APPEAL_LINK })
+                                            children: f.intl.format(f.t.ZbWsOD, { learnMoreLink: m.sQ.LEARN_MORE_UU_APPEAL_LINK })
                                         })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, o.jsxs)(l.mzw, {
-                        className: f.footer,
+                    (0, o.jsxs)(s.mzw, {
+                        className: h.footer,
                         children: [
-                            (0, o.jsx)(l.zxk, {
-                                onClick: () => (0, d.FN)(b),
-                                submitting: p,
-                                children: m.intl.string(m.t['54b8V1'])
+                            (0, o.jsx)(s.zxk, {
+                                variant: 'primary',
+                                text: f.intl.string(f.t['54b8V1']),
+                                onClick: () => (0, x.FN)(_),
+                                loading: j
                             }),
-                            (0, o.jsx)(l.zxk, {
-                                color: l.zxk.Colors.TRANSPARENT,
-                                look: l.zxk.Looks.BLANK,
-                                onClick: j,
-                                className: f.cancelButton,
-                                children: m.intl.string(m.t.dKacJy)
+                            (0, o.jsx)(l.zx, {
+                                color: l.zx.Colors.TRANSPARENT,
+                                look: l.zx.Looks.BLANK,
+                                onClick: N,
+                                className: h.cancelButton,
+                                children: f.intl.string(f.t.dKacJy)
                             })
                         ]
                     })

@@ -1,40 +1,40 @@
-a.d(t, { L: () => i });
-var l = a(255367);
-a(73800);
-var r = a(481060),
-    s = a(600164),
-    n = a(424071),
-    o = a(388032),
-    c = a(475286);
-function i(e) {
-    let { onClose: t, img: a, title: i, body: d, content: x } = e;
-    return (0, l.jsxs)(n.Z, {
+t.d(a, { L: () => c });
+var r = t(255367);
+t(73800);
+var s = t(481060),
+    l = t(600164),
+    n = t(424071),
+    i = t(388032),
+    o = t(475286);
+function c(e) {
+    let { onClose: a, img: t, title: c, body: d, content: x } = e;
+    return (0, r.jsxs)(n.Z, {
         children: [
-            (0, l.jsxs)(r.xBx, {
-                direction: s.Z.Direction.VERTICAL,
-                className: c.header,
+            (0, r.jsxs)(s.xBx, {
+                direction: l.Z.Direction.VERTICAL,
+                className: o.header,
                 separator: !1,
                 children: [
-                    (0, l.jsx)('div', {
-                        className: c.illustration,
-                        children: a
+                    (0, r.jsx)('div', {
+                        className: o.illustration,
+                        children: t
                     }),
-                    (0, l.jsx)(r.X6q, {
-                        className: c.title,
+                    (0, r.jsx)(s.X6q, {
+                        className: o.title,
                         variant: 'heading-xl/extrabold',
-                        children: i
+                        children: c
                     }),
-                    (0, l.jsx)(r.olH, {
-                        className: c.closeButton,
-                        onClick: t
+                    (0, r.jsx)(s.olH, {
+                        className: o.closeButton,
+                        onClick: a
                     })
                 ]
             }),
-            (0, l.jsxs)(r.hzk, {
-                className: c.body,
+            (0, r.jsxs)(s.hzk, {
+                className: o.body,
                 paddingFix: !1,
                 children: [
-                    (0, l.jsx)(r.Text, {
+                    (0, r.jsx)(s.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
@@ -43,13 +43,16 @@ function i(e) {
                     x
                 ]
             }),
-            (0, l.jsx)(r.mzw, {
-                className: c.footer,
-                children: (0, l.jsx)(r.zxk, {
-                    className: c.footerButton,
-                    color: r.zxk.Colors.BRAND,
-                    onClick: t,
-                    children: o.intl.string(o.t.i4jeWV)
+            (0, r.jsx)(s.mzw, {
+                className: o.footer,
+                children: (0, r.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
+                    className: o.footerButton,
+                    children: (0, r.jsx)(s.zxk, {
+                        variant: 'primary',
+                        text: i.intl.string(i.t.i4jeWV),
+                        onClick: a
+                    })
                 })
             })
         ]

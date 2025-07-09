@@ -2,8 +2,8 @@
 var i = n(710845),
     r = n(601964),
     s = n(314897),
-    l = n(271383),
-    a = n(485386),
+    a = n(271383),
+    l = n(485386),
     o = n(430824),
     c = n(411198),
     d = n(625137),
@@ -71,12 +71,12 @@ let h = new i.Z('Guilds'),
                 if ('unavailable' === n.data_mode) return;
                 let e = o.Z.getGuild(n.id);
                 if (null != e) {
-                    let i = a.Z.getRoles(n.id),
+                    let i = l.Z.getRoles(n.id),
                         r = 'partial' === n.data_mode ? c.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, d.C5)(n.id, n.roles);
                     this.put(
                         c.rk(c.sp(n, e), {
                             roles: r,
-                            member: l.ZP.getSelfMember(n.id)
+                            member: a.ZP.getSelfMember(n.id)
                         }),
                         t
                     );
@@ -95,7 +95,7 @@ let h = new i.Z('Guilds'),
             this.put(
                 c.rk(i, {
                     roles: (0, d.C5)(e.guild.id, e.guild.roles),
-                    member: l.ZP.getSelfMember(e.guild.id)
+                    member: a.ZP.getSelfMember(e.guild.id)
                 }),
                 t
             );
@@ -105,12 +105,12 @@ let h = new i.Z('Guilds'),
         }
         handleGuildRoleChange(e, t) {
             let n = o.Z.getGuild(e.guildId),
-                i = a.Z.getRoles(e.guildId);
+                i = l.Z.getRoles(e.guildId);
             null != n &&
                 this.put(
                     c.rk(n, {
                         roles: g(p({}, i), { [e.role.id]: e.role }),
-                        member: l.ZP.getSelfMember(e.guildId)
+                        member: a.ZP.getSelfMember(e.guildId)
                     }),
                     t
                 );
@@ -118,9 +118,9 @@ let h = new i.Z('Guilds'),
         handleGuildRoleDelete(e, t) {
             let n = o.Z.getGuild(e.guildId);
             if (null != n) {
-                let i = p({}, a.Z.getRoles(e.guildId));
+                let i = p({}, l.Z.getRoles(e.guildId));
                 delete i[e.roleId];
-                let r = l.ZP.getSelfMember(e.guildId);
+                let r = a.ZP.getSelfMember(e.guildId);
                 (null != r && (r = g(p({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
                     this.put(
                         c.rk(n, {
@@ -137,8 +137,8 @@ let h = new i.Z('Guilds'),
                 null != n &&
                     this.put(
                         c.rk((0, r.kH)(n, e.joinedAt), {
-                            roles: a.Z.getRoles(n.id),
-                            member: l.ZP.getSelfMember(n.id)
+                            roles: l.Z.getRoles(n.id),
+                            member: a.ZP.getSelfMember(n.id)
                         }),
                         t
                     );
@@ -154,7 +154,7 @@ let h = new i.Z('Guilds'),
                             roles: e.roles,
                             userId: e.user.id
                         },
-                        roles: a.Z.getRoles(n.id)
+                        roles: l.Z.getRoles(n.id)
                     }),
                     t
                 );

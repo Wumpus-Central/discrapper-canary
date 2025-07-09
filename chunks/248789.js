@@ -1,18 +1,19 @@
-(n.d(t, { Y: () => _ }), n(388685));
+(n.d(t, { Y: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
-    o = n(442837),
-    a = n(481060),
-    s = n(797614),
-    c = n(699516),
-    u = n(378298),
-    d = n(359119),
-    p = n(473092),
-    h = n(177342),
-    f = n(134612),
-    m = n(388032);
-function g(e) {
+    a = n(442837),
+    o = n(755721),
+    s = n(481060),
+    c = n(797614),
+    u = n(699516),
+    d = n(378298),
+    p = n(359119),
+    h = n(473092),
+    f = n(177342),
+    m = n(134612),
+    g = n(388032);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function g(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,96 +56,96 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { channelId: t, warningId: _, senderId: y } = e,
-        C = i.useCallback(() => {
-            (0, u.T)(t, [_]);
-        }, [t, _]),
-        x = (0, o.e7)([c.Z], () => c.Z.isBlocked(y)),
-        v = i.useMemo(
+function y(e) {
+    let { channelId: t, warningId: y, senderId: C } = e,
+        x = i.useCallback(() => {
+            (0, d.T)(t, [y]);
+        }, [t, y]),
+        v = (0, a.e7)([u.Z], () => u.Z.isBlocked(C)),
+        O = i.useMemo(
             () => ({
                 channelId: t,
-                warningId: _,
-                senderId: y,
-                warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
+                warningId: y,
+                senderId: C,
+                warningType: p.pj.INAPPROPRIATE_CONVERSATION_TIER_2
             }),
-            [t, _, y]
+            [t, y, C]
         );
     i.useEffect(() => {
-        ((0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
-    }, [v]);
-    let O = i.useCallback(
+        ((0, h.KQ)(_(b({}, O), { viewName: h.pb.SAFETY_WARNING_BANNER })), c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
+    }, [O]);
+    let j = i.useCallback(
             (e) => {
-                (0, p.qc)(b(g({}, v), { cta: e }));
+                (0, h.qc)(_(b({}, O), { cta: e }));
             },
-            [v]
+            [O]
         ),
-        j = i.useCallback(() => {
-            ((0, a.ZDy)(
+        E = i.useCallback(() => {
+            ((0, s.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
                         let { transitionState: i, onClose: l } = n;
                         return (0, r.jsx)(e, {
-                            otherUserId: y,
+                            otherUserId: C,
                             channelId: t,
-                            warningId: _,
-                            warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+                            warningId: y,
+                            warningType: p.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: i,
                             onClose: l
                         });
                     };
                 },
-                { modalKey: f.X_ }
+                { modalKey: m.X_ }
             ),
-                O(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS));
-        }, [t, y, _, O]),
-        E = i.useCallback(() => {
-            (C(), O(p.NM.USER_BANNER_BLOCK_CONFIRM));
-        }, [C, O]),
+                j(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS));
+        }, [t, C, y, j]),
         S = i.useCallback(() => {
-            (C(), O(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
-        }, [C, O]),
+            (x(), j(h.NM.USER_BANNER_BLOCK_CONFIRM));
+        }, [x, j]),
         I = i.useCallback(() => {
-            (0, a.ZDy)(async () => {
+            (x(), j(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
+        }, [x, j]),
+        P = i.useCallback(() => {
+            (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
                     let { transitionState: i, onClose: l } = n;
                     return (0, r.jsx)(e, {
                         transitionState: i,
-                        onBlock: E,
-                        onBlockAndReport: S,
+                        onBlock: S,
+                        onBlockAndReport: I,
                         onCancel: () => {
-                            (null == l || l(), O(p.NM.USER_BANNER_BLOCK_CANCEL));
+                            (null == l || l(), j(h.NM.USER_BANNER_BLOCK_CANCEL));
                         },
                         onClose: l,
-                        userId: y,
+                        userId: C,
                         channelId: t
                     });
                 };
             });
-        }, [E, S, y, t, O]);
-    return (0, r.jsx)(h.Q, {
+        }, [S, I, C, t, j]);
+    return (0, r.jsx)(f.Q, {
         channelId: t,
-        warningId: _,
-        senderId: y,
-        warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: m.intl.string(m.t.ZzlB5u),
-        description: m.intl.string(m.t['D1aU+v']),
-        onDismiss: C,
+        warningId: y,
+        senderId: C,
+        warningType: p.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+        header: g.intl.string(g.t.ZzlB5u),
+        description: g.intl.string(g.t['D1aU+v']),
+        onDismiss: x,
         buttons: [
             {
-                text: m.intl.string(m.t.Qyu4UF),
-                color: a.zxk.Colors.BRAND,
-                onclick: j
+                text: g.intl.string(g.t.Qyu4UF),
+                color: o.zx.Colors.BRAND,
+                onclick: E
             },
-            ...(x
+            ...(v
                 ? []
                 : [
                       {
-                          text: m.intl.string(m.t['7q0bNT']),
-                          color: a.zxk.Colors.PRIMARY,
-                          onclick: I
+                          text: g.intl.string(g.t['7q0bNT']),
+                          color: o.zx.Colors.PRIMARY,
+                          onclick: P
                       }
                   ])
         ]

@@ -200,10 +200,11 @@ function N(e) {
                                     children: E
                                 }),
                             (0, r.jsx)(c.zxk, {
-                                size: c.zxk.Sizes.SMALL,
+                                variant: 'primary',
+                                size: 'sm',
+                                text: g.intl.string(g.t['PMsq/f']),
                                 disabled: !_,
-                                type: 'submit',
-                                children: g.intl.string(g.t['PMsq/f'])
+                                type: 'submit'
                             })
                         ]
                     })

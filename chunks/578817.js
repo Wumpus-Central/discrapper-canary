@@ -1,4 +1,4 @@
-n.d(t, { Q: () => l });
+n.d(t, { Q: () => a });
 var i = n(818083),
     r = n(984134);
 let s = (0, i.B)({
@@ -14,7 +14,7 @@ let s = (0, i.B)({
         }
     ]
 });
-function l(e) {
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { isInHoldout: n } = r.Y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return s.getCurrentConfig(

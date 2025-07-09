@@ -23,8 +23,8 @@ var l = n(570140),
     N = n(434404),
     f = n(889369),
     S = n(570961),
-    E = n(84658),
-    p = n(176505),
+    p = n(84658),
+    E = n(176505),
     T = n(290511),
     x = n(388032);
 function O(e) {
@@ -66,12 +66,12 @@ async function j(e, t) {
     });
 }
 function v(e, t) {
-    let n = E.xh.findIndex((e) => e === t);
-    -1 !== n && n !== E.xh.length - 1 && O(E.xh[n + 1]);
+    let n = p.xh.findIndex((e) => e === t);
+    -1 !== n && n !== p.xh.length - 1 && O(p.xh[n + 1]);
 }
 function b(e, t) {
-    let n = E.xh.findIndex((e) => e === t);
-    -1 !== n && 0 !== n && O(E.xh[n - 1]);
+    let n = p.xh.findIndex((e) => e === t);
+    -1 !== n && 0 !== n && O(p.xh[n - 1]);
 }
 async function D(e) {
     let t = h.Z.getGuild(e);
@@ -94,6 +94,6 @@ async function D(e) {
         await (0, d.default)({
             guildId: t.id,
             isPreview: !0,
-            returnChannelId: p.oC.GUILD_HOME
+            returnChannelId: E.oC.GUILD_HOME
         }));
 }

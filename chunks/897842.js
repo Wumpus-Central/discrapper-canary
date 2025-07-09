@@ -1,38 +1,38 @@
-n.d(t, {
+a.d(t, {
     A: () => u,
     default: () => m
 });
-var a = n(255367);
-n(73800);
-var r = n(120356),
-    l = n.n(r),
-    i = n(466377),
-    s = n(481060),
-    o = n(310752),
-    c = n(731994),
-    d = n(792351);
+var n = a(255367);
+a(73800);
+var r = a(120356),
+    l = a.n(r),
+    i = a(466377),
+    s = a(481060),
+    o = a(310752),
+    c = a(731994),
+    d = a(792351);
 let u = 'UPLOAD_ERROR_MODAL_KEY',
     m = (e) => {
-        let { title: t, help: n, transitionState: r } = e;
-        return (0, a.jsx)(i.Y0, {
+        let { title: t, help: a, transitionState: r } = e;
+        return (0, n.jsx)(i.Y0, {
             size: i.Cg.DYNAMIC,
             transitionState: r,
             parentComponent: 'ShopAssetsUploadErrorModal',
-            children: (0, a.jsx)('div', {
+            children: (0, n.jsx)('div', {
                 className: l()(d.uploadModal, d.errorModal),
-                children: (0, a.jsxs)('div', {
+                children: (0, n.jsxs)('div', {
                     className: d.inner,
                     children: [
-                        (0, a.jsx)(o.Z, { icons: c.J6 }),
-                        (0, a.jsx)(s.X6q, {
+                        (0, n.jsx)(o.Z, { icons: c.J6 }),
+                        (0, n.jsx)(s.X6q, {
                             variant: 'heading-lg/bold',
                             children: t
                         }),
-                        (0, a.jsx)('div', {
+                        (0, n.jsx)('div', {
                             className: d.instructions,
-                            children: (0, a.jsx)(s.Text, {
+                            children: (0, n.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
-                                children: n
+                                children: a
                             })
                         })
                     ]

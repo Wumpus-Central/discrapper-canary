@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(723359),
-    l = n(231338);
-function a(e) {
+    a = n(231338);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -34,11 +34,11 @@ let o = {
         (0, r.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('6583'), n.e('1337'), n.e('7729')]).then(n.bind(n, 298237));
-                return (t) => (0, i.jsx)(e, a({}, t));
+                return (t) => (0, i.jsx)(e, l({}, t));
             },
             {
                 modalKey: s.$$,
-                onCloseRequest: l.dG,
+                onCloseRequest: a.dG,
                 onCloseCallback: e
             }
         );
@@ -49,10 +49,10 @@ let o = {
         (0, r.ZDy)(
             async () => {
                 let { default: t } = await n.e('60827').then(n.bind(n, 324239));
-                return (n) => (0, i.jsx)(t, a({ claimRequired: e }, n));
+                return (n) => (0, i.jsx)(t, l({ claimRequired: e }, n));
             },
             {
-                onCloseRequest: e ? l.dG : null,
+                onCloseRequest: e ? a.dG : null,
                 onCloseCallback: t
             }
         );

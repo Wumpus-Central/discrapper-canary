@@ -1,69 +1,69 @@
-o.d(t, { Z: () => l });
-var n = o(311473),
-    i = o(131951),
-    r = o(626135);
+n.d(t, { Z: () => l });
+var o = n(311473),
+    i = n(131951),
+    r = n(626135);
 async function l(e, t) {
-    let { rating: o, category: l, reasonCode: a, reasonDescription: s, variant: c, feedback: u, analyticsData: d } = t,
-        b = i.Z.getSettings(),
-        m = i.Z.getInputDeviceId(),
-        p = i.Z.getInputDevices()[m],
+    let { rating: n, category: l, reasonCode: a, reasonDescription: s, variant: c, feedback: u, analyticsData: d } = t,
+        m = i.Z.getSettings(),
+        b = i.Z.getInputDeviceId(),
+        p = i.Z.getInputDevices()[b],
         _ = i.Z.getOutputDeviceId(),
         f = i.Z.getOutputDevices()[_],
-        h = i.Z.getVideoDeviceId(),
-        g = i.Z.getVideoDevices()[h],
+        g = i.Z.getVideoDeviceId(),
+        h = i.Z.getVideoDevices()[g],
         O = i.Z.getNoiseCancellation(),
         v = i.Z.getMediaEngine().getAudioSubsystem(),
         y = i.Z.getMediaEngine().getAudioLayer(),
-        x = await n.Z.getKrispModel();
+        x = await o.Z.getKrispModel();
     r.default.track(
         e,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var o = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(o);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    o = Object.keys(n);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(o).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(o, e).enumerable;
+                    (o = o.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        ((n = o[t]),
+                    o.forEach(function (t) {
+                        var o;
+                        ((o = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: n,
+                                      value: o,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n));
+                                : (e[t] = o));
                     }));
             }
             return e;
         })(
             {
-                rating: null != o ? o : 'no response',
+                rating: null != n ? n : 'no response',
                 category: l,
                 reason_code: a,
                 reason_description: s,
                 reason_variant: c,
                 feedback: u,
-                audio_input_mode: b.mode,
-                automatic_audio_input_sensitivity_enabled: b.modeOptions.autoThreshold,
-                audio_input_sensitivity: b.modeOptions.threshold,
-                vad_use_advanced_voice_activity: b.modeOptions.vadUseKrisp,
-                echo_cancellation_enabled: b.echoCancellation,
-                noise_suppression_enabled: b.noiseSuppression,
-                automatic_gain_control_enabled: b.automaticGainControl,
-                voice_output_volume: b.outputVolume,
+                audio_input_mode: m.mode,
+                automatic_audio_input_sensitivity_enabled: m.modeOptions.autoThreshold,
+                audio_input_sensitivity: m.modeOptions.threshold,
+                vad_use_advanced_voice_activity: m.modeOptions.vadUseKrisp,
+                echo_cancellation_enabled: m.echoCancellation,
+                noise_suppression_enabled: m.noiseSuppression,
+                automatic_gain_control_enabled: m.automaticGainControl,
+                voice_output_volume: m.outputVolume,
                 noise_cancellation_enabled: O,
                 input_device_name: null == p ? void 0 : p.name,
                 output_device_name: null == f ? void 0 : f.name,
-                video_device_name: null == g ? void 0 : g.name,
+                video_device_name: null == h ? void 0 : h.name,
                 audio_subsystem: v,
                 audio_layer: y,
-                automatic_audio_subsystem: b.automaticAudioSubsystem,
+                automatic_audio_subsystem: m.automaticAudioSubsystem,
                 krisp_nc_model: x
             },
             d

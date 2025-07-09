@@ -37,8 +37,8 @@ var o = n(255367),
     k = n(944043),
     M = n(502762),
     R = n(530),
-    G = n(4517),
-    V = n(179828),
+    V = n(4517),
+    G = n(179828),
     F = n(993160),
     Y = n(574887),
     H = n(693408),
@@ -176,7 +176,7 @@ function Q(e) {
                                                     channelId: ee,
                                                     themeType: q.lY.MODAL_V2
                                                 }),
-                                                (0, o.jsx)(G.Z, {
+                                                (0, o.jsx)(V.Z, {
                                                     location: 'UserProfileModalV2',
                                                     user: n,
                                                     guildId: $,
@@ -299,7 +299,7 @@ function Q(e) {
                                                             })
                                                         }),
                                                         (null == eg ? void 0 : eg.guildId) != null &&
-                                                            (0, o.jsx)(V.Z, {
+                                                            (0, o.jsx)(G.Z, {
                                                                 user: n,
                                                                 currentUser: Q,
                                                                 guildId: eg.guildId,

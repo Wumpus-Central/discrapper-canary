@@ -13,8 +13,8 @@ var r = n(255367),
     h = n(258609),
     p = n(388032),
     v = n(285990),
-    j = n(505913);
-function x(e) {
+    x = n(505913);
+function j(e) {
     let { name: t, subText: n } = e;
     return (0, r.jsxs)('div', {
         className: v.deviceItemName,
@@ -39,7 +39,7 @@ function C(e) {
             let { id: t, name: n, platform: i } = e;
             return {
                 value: t,
-                name: (0, r.jsx)(x, {
+                name: (0, r.jsx)(j, {
                     name: n,
                     platform: i
                 })
@@ -83,10 +83,11 @@ function C(e) {
             }),
             (0, r.jsx)(c.mzw, {
                 children: (0, r.jsx)(c.zxk, {
+                    variant: 'primary',
+                    text: p.intl.string(p.t.FJR4bG),
                     disabled: null == i,
-                    submitting: l,
-                    onClick: n,
-                    children: p.intl.string(p.t.FJR4bG)
+                    loading: l,
+                    onClick: n
                 })
             })
         ]
@@ -115,7 +116,7 @@ function g() {
             (0, r.jsx)(c.hzk, {
                 className: v.emptyArt,
                 children: (0, r.jsx)('img', {
-                    src: j,
+                    src: x,
                     width: '189',
                     height: '177',
                     alt: ''
@@ -127,9 +128,9 @@ function g() {
 function b(e) {
     let t,
         { channel: n, platform: a, transitionState: m, onClose: u } = e,
-        j = (0, s.e7)([h.Z], () => h.Z.getDevicesForPlatform(a), [a]),
-        x = (0, s.e7)([h.Z], () => h.Z.getLastSelectedDeviceByPlatform(a)),
-        b = i.useMemo(() => Object.values(j), [j]),
+        x = (0, s.e7)([h.Z], () => h.Z.getDevicesForPlatform(a), [a]),
+        j = (0, s.e7)([h.Z], () => h.Z.getLastSelectedDeviceByPlatform(a)),
+        b = i.useMemo(() => Object.values(x), [x]),
         y = (0, s.e7)([h.Z], () => h.Z.getFetchingDevices(a)),
         O = (0, s.e7)([h.Z], () => {
             var e;
@@ -138,16 +139,16 @@ function b(e) {
         [N, _] = i.useState(!1),
         [I, w] = i.useState(() => {
             var e, t;
-            return null != (t = null == (e = j[null != O ? O : '']) ? void 0 : e.id) ? t : null;
+            return null != (t = null == (e = x[null != O ? O : '']) ? void 0 : e.id) ? t : null;
         });
     (i.useEffect(() => {
         f.LO(a);
     }, [a]),
         i.useEffect(() => {
-            1 === b.length ? w(b[0].id) : null != x && w(x);
-        }, [b, x]));
+            1 === b.length ? w(b[0].id) : null != j && w(j);
+        }, [b, j]));
     let S = async () => {
-        let e = j[null != I ? I : ''];
+        let e = x[null != I ? I : ''];
         l()(null != e, 'Cannot transfer without selected device');
         try {
             (_(!0), await f.sh(a, e.id, n), u());

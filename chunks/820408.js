@@ -1,70 +1,71 @@
-(n.d(t, { Z: () => j }), n(388685));
+(n.d(t, { Z: () => S }), n(388685));
 var i = n(255367),
     s = n(73800),
-    l = n(481060),
-    r = n(230711),
-    a = n(2052),
-    o = n(434650),
-    d = n(906732),
-    c = n(436774),
-    u = n(690221),
-    h = n(626135),
-    g = n(767714),
-    m = n(474936),
-    x = n(981631),
-    p = n(388032),
-    v = n(749044);
-function j(e) {
+    l = n(755721),
+    r = n(481060),
+    a = n(230711),
+    o = n(2052),
+    d = n(434650),
+    c = n(906732),
+    u = n(436774),
+    h = n(690221),
+    g = n(626135),
+    m = n(767714),
+    x = n(474936),
+    p = n(981631),
+    v = n(388032),
+    j = n(749044);
+function S(e) {
     let { onClose: t } = e,
-        n = (0, a.O)(),
-        { analyticsLocations: j } = (0, d.ZP)(),
-        [S, N] = s.useState(!1),
-        f = s.useCallback(
+        n = (0, o.O)(),
+        { analyticsLocations: S } = (0, c.ZP)(),
+        [N, f] = s.useState(!1),
+        b = s.useCallback(
             (e) => {
-                !S &&
+                !N &&
                     e &&
-                    (h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: m.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+                    (g.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: x.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
                         location: n.location,
-                        location_stack: j
+                        location_stack: S
                     }),
-                    N(!0));
+                    f(!0));
             },
-            [n.location, j, S]
+            [n.location, S, N]
         ),
-        b = (0, o.O)(f, 0.8, !0);
+        C = (0, d.O)(b, 0.8, !0);
     return (0, i.jsxs)('div', {
-        ref: b,
-        className: v.container,
+        ref: C,
+        className: j.container,
         children: [
-            (0, i.jsx)(l.SrA, {
+            (0, i.jsx)(r.SrA, {
                 size: 'md',
-                color: c.JX.PREMIUM_TIER_2,
-                className: v.nitroWheel
+                color: u.JX.PREMIUM_TIER_2,
+                className: j.nitroWheel
             }),
-            (0, i.jsxs)(l.Text, {
-                className: v.text,
+            (0, i.jsxs)(r.Text, {
+                className: j.text,
                 variant: 'text-sm/normal',
                 children: [
-                    p.intl.string(p.t['Pb0O6+']),
+                    v.intl.string(v.t['Pb0O6+']),
                     ' ',
-                    (0, i.jsx)(u.Z, {
+                    (0, i.jsx)(h.Z, {
                         onClick: () => {
-                            (t(), r.Z.open(x.oAB.PREMIUM));
+                            (t(), a.Z.open(p.oAB.PREMIUM));
                         },
-                        children: p.intl.string(p.t.hvVgAQ)
+                        children: v.intl.string(v.t.hvVgAQ)
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: v.nitroButton,
-                children: (0, i.jsx)(g.Z, {
+                className: j.nitroButton,
+                children: (0, i.jsx)(m.Z, {
                     showGradient: !0,
-                    textOptions: { textOverride: p.intl.string(p.t.pj0XBA) },
-                    size: l.zxk.Sizes.SMALL,
-                    shinyButtonClassName: v.nitroButton,
-                    subscriptionTier: m.Si.TIER_2,
-                    premiumModalAnalyticsLocation: { section: x.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
+                    textOptions: { textOverride: v.intl.string(v.t.pj0XBA) },
+                    size: l.zx.Sizes.SMALL,
+                    shinyButtonClassName: j.nitroButton,
+                    subscriptionTier: x.Si.TIER_2,
+                    premiumModalAnalyticsLocation: { section: p.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
                 })
             })
         ]

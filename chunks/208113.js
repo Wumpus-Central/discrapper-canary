@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(481060),
-    l = n(846027),
-    a = n(921801),
+    a = n(846027),
+    l = n(921801),
     o = n(131951),
     c = n(680924),
     d = n(726985),
@@ -54,10 +54,10 @@ function g(e) {
                 );
             })(g, h, f),
             onChange: (e) => {
-                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => l.Z.setAudioSubsystem(e));
+                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => a.Z.setAudioSubsystem(e));
             }
         });
-    return (0, i.jsx)(a.F, {
+    return (0, i.jsx)(l.F, {
         setting: d.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: t
             ? (0, i.jsx)(s.xJW, {

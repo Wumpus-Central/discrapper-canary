@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(780384),
     s = n(410030),
-    l = n(325767);
-function a(e) {
+    a = n(325767);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -60,7 +60,7 @@ let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
             f = c(g, u);
         return (0, i.jsxs)(
             'svg',
-            ((t = a(
+            ((t = l(
                 {
                     style: { overflow: 'visible' },
                     width: '80%',
@@ -69,7 +69,7 @@ let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
                     fill: 'none',
                     xmlns: 'http://www.w3.org/2000/svg'
                 },
-                (0, l.Z)(a({}, m))
+                (0, a.Z)(l({}, m))
             )),
             (n = n =
                 {

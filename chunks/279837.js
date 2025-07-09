@@ -73,20 +73,23 @@ class h extends (s = r.PureComponent) {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(l.mzw, {
-                        children: [
-                            (0, i.jsx)(l.zxk, {
-                                type: 'submit',
-                                disabled: h || 0 === u.length,
-                                children: null != t ? t : o.intl.string(o.t['cY+Ooa'])
-                            }),
-                            (0, i.jsx)(l.zxk, {
-                                onClick: this.handleCancel,
-                                look: l.zxk.Looks.LINK,
-                                color: l.zxk.Colors.PRIMARY,
-                                children: o.intl.string(o.t['ETE/oK'])
-                            })
-                        ]
+                    (0, i.jsx)(l.mzw, {
+                        children: (0, i.jsxs)(l.hE2, {
+                            direction: 'horizontal-reverse',
+                            children: [
+                                (0, i.jsx)(l.zxk, {
+                                    variant: 'primary',
+                                    text: null != t ? t : o.intl.string(o.t['cY+Ooa']),
+                                    type: 'submit',
+                                    disabled: h || 0 === u.length
+                                }),
+                                (0, i.jsx)(l.zxk, {
+                                    variant: 'secondary',
+                                    text: o.intl.string(o.t['ETE/oK']),
+                                    onClick: this.handleCancel
+                                })
+                            ]
+                        })
                     })
                 ]
             })

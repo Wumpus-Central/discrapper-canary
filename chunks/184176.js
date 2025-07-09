@@ -3,17 +3,17 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(767714),
-    l = n(382791),
-    a = n(981631),
+    a = n(382791),
+    l = n(981631),
     o = n(388032),
     c = n(641089),
     d = n(309389);
 let u = () => {
-    let e = { section: a.jXE.REVERSE_TRIAL_BANNER };
+    let e = { section: l.jXE.REVERSE_TRIAL_BANNER };
     return (0, i.jsxs)('div', {
         className: c.banner,
         children: [
-            (0, i.jsx)(l.mn, {
+            (0, i.jsx)(a.mn, {
                 text: o.intl.string(o.t.qYKftb),
                 className: c.pill
             }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(239091),
-    a = n(561472),
+    a = n(239091),
+    o = n(561472),
     s = n(933557),
     c = n(287746),
     u = n(541716),
@@ -34,7 +34,7 @@ function x(e) {
     let S = (0, r.jsx)(f.Z, { channel: x });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(o.Z, {
                 channel: x,
                 draftType: g.d.ChannelMessage
             }),
@@ -48,7 +48,7 @@ function x(e) {
                     guild: O,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, o.jW)(e, async () => {
+                        (0, a.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) => {
                                 var n, i;

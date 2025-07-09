@@ -1,49 +1,49 @@
-(n.d(t, { Z: () => h }), n(642613), n(388685));
-var a = n(255367),
-    r = n(73800),
-    l = n(481060),
-    i = n(138464),
-    s = n(585483),
-    o = n(246992),
-    c = n(981631),
-    d = n(616257),
-    u = n(173166);
+(a.d(t, { Z: () => p }), a(642613), a(388685));
+var n = a(255367),
+    r = a(73800),
+    l = a(481060),
+    i = a(138464),
+    s = a(585483),
+    o = a(246992),
+    c = a(981631),
+    d = a(616257),
+    u = a(173166);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
+        var a = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(a);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(a).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
                 })
             )),
-            a.forEach(function (t) {
-                var a;
-                ((a = n[t]),
+            n.forEach(function (t) {
+                var n;
+                ((n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: a,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a));
+                        : (e[t] = n));
             }));
     }
     return e;
 }
 let x = {
     PremiumSubscriptionAprilMarketingDecoModal: async () => {
-        let { default: e } = await n.e('18327').then(n.bind(n, 731433));
-        return (t) => (0, a.jsx)(e, m({}, t));
+        let { default: e } = await a.e('18327').then(a.bind(a, 731433));
+        return (t) => (0, n.jsx)(e, m({}, t));
     },
     CollectiblesExpiryModal: async () => {
-        let { default: e } = await n.e('77370').then(n.bind(n, 83950));
-        return (t) => (0, a.jsx)(e, m({}, t));
+        let { default: e } = await a.e('77370').then(a.bind(a, 83950));
+        return (t) => (0, n.jsx)(e, m({}, t));
     }
 };
-function h() {
+function p() {
     let e = r.useMemo(
             () =>
                 Object.keys(x)
@@ -54,52 +54,54 @@ function h() {
                     .sort((e, t) => e.label.localeCompare(t.label)),
             []
         ),
-        [t, n] = r.useState(e[0].value);
-    return (0, a.jsx)(l.zJl, {
+        [t, a] = r.useState(e[0].value);
+    return (0, n.jsx)(l.zJl, {
         className: d.panel,
-        children: (0, a.jsxs)('div', {
+        children: (0, n.jsxs)('div', {
             className: u.panelInner,
             children: [
-                (0, a.jsxs)('section', {
+                (0, n.jsxs)('section', {
                     className: u.section,
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, n.jsx)(l.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Open a Modal'
                         }),
-                        (0, a.jsxs)('div', {
+                        (0, n.jsxs)('div', {
                             className: u.inputRow,
                             children: [
-                                (0, a.jsx)(l.PhF, {
+                                (0, n.jsx)(l.PhF, {
                                     className: u.input,
                                     options: e,
                                     isSelected: (e) => t === e,
                                     serialize: (e) => e,
-                                    select: (e) => n(e),
+                                    select: (e) => a(e),
                                     popoutLayerContext: o.O$
                                 }),
-                                (0, a.jsx)(l.zxk, {
-                                    onClick: () => (0, l.ZDy)(x[t]),
-                                    children: 'Open'
+                                (0, n.jsx)(l.zxk, {
+                                    variant: 'primary',
+                                    text: 'Open',
+                                    onClick: () => (0, l.ZDy)(x[t])
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, a.jsxs)('section', {
+                (0, n.jsxs)('section', {
                     className: u.section,
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, n.jsx)(l.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Wow moment'
                         }),
-                        (0, a.jsx)('div', {
+                        (0, n.jsx)('div', {
                             className: u.inputRow,
-                            children: (0, a.jsx)(l.zxk, {
+                            children: (0, n.jsx)(l.zxk, {
+                                variant: 'primary',
+                                text: 'Open',
                                 onClick: () => {
                                     ((0, i.H)(!0), s.S.dispatch(c.CkL.PREMIUM_SUBSCRIPTION_CREATED));
-                                },
-                                children: 'Open'
+                                }
                             })
                         })
                     ]

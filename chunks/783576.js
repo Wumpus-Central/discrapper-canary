@@ -1,60 +1,60 @@
-e.d(s, { default: () => c });
+e.d(n, { default: () => d });
 var i = e(255367);
 e(73800);
-var n = e(481060),
+var s = e(755721),
+    a = e(481060),
     o = e(782568),
     l = e(313201),
-    a = e(388032),
-    r = e(34397);
-function c(t) {
-    let { href: s, onClose: c, transitionState: d } = t,
-        b = (0, l.Dt)();
-    return (0, i.jsxs)(n.Y0X, {
-        transitionState: d,
-        'aria-labelledby': b,
+    r = e(388032),
+    c = e(34397);
+function d(t) {
+    let { href: n, onClose: d, transitionState: b } = t,
+        x = (0, l.Dt)();
+    return (0, i.jsxs)(a.Y0X, {
+        transitionState: b,
+        'aria-labelledby': x,
         parentComponent: 'SuspiciousDownloadModal',
         children: [
             (0, i.jsx)('img', {
-                className: r.art,
+                className: c.art,
                 src: e(902623),
                 alt: ''
             }),
-            (0, i.jsx)(n.hzk, {
+            (0, i.jsx)(a.hzk, {
                 children: (0, i.jsxs)('div', {
-                    className: r.modalContent,
+                    className: c.modalContent,
                     children: [
-                        (0, i.jsx)(n.X6q, {
-                            id: b,
+                        (0, i.jsx)(a.X6q, {
+                            id: x,
                             variant: 'heading-lg/semibold',
-                            className: r.title,
-                            children: a.intl.string(a.t.XtDo9f)
+                            className: c.title,
+                            children: r.intl.string(r.t.XtDo9f)
                         }),
-                        (0, i.jsx)(n.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            className: r.body,
-                            children: a.intl.string(a.t.L9yFkp)
+                            className: c.body,
+                            children: r.intl.string(r.t.L9yFkp)
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(n.mzw, {
+            (0, i.jsxs)(a.mzw, {
                 children: [
-                    (0, i.jsx)(n.zxk, {
+                    (0, i.jsx)(a.zxk, {
+                        variant: 'primary',
+                        text: r.intl.string(r.t.j7Vi2t),
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.BRAND,
-                        onClick: c,
-                        children: a.intl.string(a.t.j7Vi2t)
+                        onClick: d
                     }),
-                    (0, i.jsx)(n.zxk, {
+                    (0, i.jsx)(s.zx, {
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.TRANSPARENT,
-                        look: n.zxk.Looks.LINK,
+                        size: s.zx.Sizes.MEDIUM,
+                        color: s.zx.Colors.TRANSPARENT,
+                        look: s.zx.Looks.LINK,
                         onClick: () => {
-                            (c(), (0, o.Z)(s, !0));
+                            (d(), (0, o.Z)(n, !0));
                         },
-                        children: a.intl.string(a.t['/bHu8/'])
+                        children: r.intl.string(r.t['/bHu8/'])
                     })
                 ]
             })

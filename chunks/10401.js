@@ -2,8 +2,8 @@
 var r,
     i = n(873546),
     l = n(442837),
-    o = n(570140),
-    a = n(38618),
+    a = n(570140),
+    o = n(38618),
     s = n(268967),
     c = n(188785);
 function u(e, t, n) {
@@ -67,7 +67,7 @@ function _() {
 }
 class y extends (r = l.ZP.Store) {
     initialize() {
-        (_(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(a.Z));
+        (_(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(o.Z));
     }
     shouldShow(e) {
         return !(!b || m || c.a || (i.tq && ['writing-messages', 'organize-by-topic'].includes(e))) && (g[e] || !1);
@@ -87,7 +87,7 @@ class y extends (r = l.ZP.Store) {
     }
 }
 u(y, 'displayName', 'TutorialIndicatorStore');
-let C = new y(o.Z, {
+let C = new y(a.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         ((b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _());

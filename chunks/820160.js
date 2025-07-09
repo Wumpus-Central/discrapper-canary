@@ -3,19 +3,19 @@ var i = n(255367);
 n(73800);
 var s = n(481060),
     l = n(813197),
-    r = n(388032),
-    a = n(35398);
+    a = n(388032),
+    r = n(35398);
 function o(e) {
     let { icon: t, onChange: n } = e;
     return (0, i.jsx)(s.tEY, {
         within: !0,
         children: (0, i.jsxs)('div', {
-            className: a.iconContainer,
+            className: r.iconContainer,
             children: [
                 null != t
                     ? (0, i.jsx)('img', {
                           alt: 'Your icon',
-                          className: a.filledIcon,
+                          className: r.filledIcon,
                           src: t
                       })
                     : (0, i.jsxs)('svg', {
@@ -58,7 +58,7 @@ function o(e) {
                     onChange: n,
                     multiple: !1,
                     tabIndex: 0,
-                    'aria-label': r.intl.string(r.t.DWB2YW)
+                    'aria-label': a.intl.string(a.t.DWB2YW)
                 })
             ]
         })

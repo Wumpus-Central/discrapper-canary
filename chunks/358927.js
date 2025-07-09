@@ -1,20 +1,21 @@
-r.d(t, { default: () => p });
+r.d(t, { default: () => s });
 var n = r(255367);
 r(73800);
-var o = r(481060),
-    c = r(63063),
-    i = r(937615),
-    l = r(981631),
-    a = r(388032);
-let p = (e) => {
+var o = r(755721),
+    c = r(481060),
+    i = r(63063),
+    l = r(937615),
+    a = r(981631),
+    p = r(388032);
+let s = (e) => {
     var t, r;
-    let { modalProps: p, onConfirm: s, onCancel: u, newInvoice: b } = e,
-        f = {
-            newCurrencyAndPrice: (0, i.T4)(b.total, b.currency),
-            helpCenterLink: c.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
+    let { modalProps: s, onConfirm: u, onCancel: b, newInvoice: f } = e,
+        O = {
+            newCurrencyAndPrice: (0, l.T4)(f.total, f.currency),
+            helpCenterLink: i.Z.getArticleURL(a.BhN.LOCALIZED_PRICING)
         };
     return (0, n.jsx)(
-        o.ConfirmModal,
+        c.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -41,20 +42,20 @@ let p = (e) => {
             return e;
         })(
             {
-                header: a.intl.string(a.t.eZFTbm),
-                confirmText: a.intl.string(a.t.p89ACg),
-                cancelText: a.intl.string(a.t.gm1Ven),
-                onConfirm: s,
-                onCancel: u,
-                confirmButtonColor: o.zxk.Colors.BRAND
+                header: p.intl.string(p.t.eZFTbm),
+                confirmText: p.intl.string(p.t.p89ACg),
+                cancelText: p.intl.string(p.t.gm1Ven),
+                onConfirm: u,
+                onCancel: b,
+                confirmButtonColor: o.zx.Colors.BRAND
             },
-            p
+            s
         )),
         (r = r =
             {
-                children: (0, n.jsx)(o.Text, {
+                children: (0, n.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    children: a.intl.format(a.t.oZBduL, f)
+                    children: p.intl.format(p.t.oZBduL, O)
                 })
             }),
         Object.getOwnPropertyDescriptors

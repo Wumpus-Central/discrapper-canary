@@ -1,14 +1,14 @@
-(n.d(t, { default: () => E }), n(314940), n(388685));
-var l = n(255367),
-    i = n(73800),
-    s = n(120356),
-    a = n.n(s),
+(n.d(t, { default: () => I }), n(314940), n(388685));
+var i = n(255367),
+    l = n(73800),
+    a = n(120356),
+    s = n.n(a),
     r = n(512722),
     o = n.n(r),
     u = n(954955),
     c = n.n(u),
-    m = n(278074),
-    d = n(442837),
+    d = n(278074),
+    m = n(442837),
     x = n(481060),
     f = n(809206),
     h = n(219496),
@@ -17,21 +17,21 @@ var l = n(255367),
     g = n(180529),
     v = n(25990),
     j = n(594174),
-    C = n(74538),
-    k = n(981631),
-    _ = n(388032),
-    w = n(238861),
-    I = n(953100);
-let N = (e) => {
+    _ = n(74538),
+    C = n(981631),
+    w = n(388032),
+    k = n(238861),
+    N = n(953100);
+let E = (e) => {
     let { usernameStatus: t, showHint: n } = e;
-    return (0, m.EQ)(t)
+    return (0, d.EQ)(t)
         .with(
             {
                 type: h.K.ERROR,
-                message: m.P.select()
+                message: d.P.select()
             },
             (e) =>
-                (0, l.jsx)(x.Text, {
+                (0, i.jsx)(x.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',
                     children: e
@@ -40,10 +40,10 @@ let N = (e) => {
         .with(
             {
                 type: h.K.AVAILABLE,
-                message: m.P.select()
+                message: d.P.select()
             },
             (e) =>
-                (0, l.jsx)(x.Text, {
+                (0, i.jsx)(x.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-feedback-positive',
                     children: e
@@ -51,169 +51,170 @@ let N = (e) => {
         )
         .otherwise(() =>
             n
-                ? (0, l.jsx)(x.Text, {
+                ? (0, i.jsx)(x.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-default',
-                      children: _.intl.string(_.t.z7c4bG)
+                      children: w.intl.string(w.t.z7c4bG)
                   })
                 : null
         );
 };
-function E(e) {
+function I(e) {
     var t;
-    let { transitionState: n, onClose: s } = e,
-        r = (0, d.e7)([j.default], () => {
+    let { transitionState: n, onClose: a } = e,
+        r = (0, m.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return (o()(null != e, 'ChangeUsernameModal: currentUser cannot be undefined'), e);
         }),
-        u = i.useMemo(() => C.ZP.canEditDiscriminator(r) && !r.isPomelo(), [r]),
-        [m, E] = i.useState(!1),
-        [z, R] = i.useState(r.username),
-        [L, y] = i.useState(r.discriminator),
-        [S, P] = i.useState(''),
-        [T, B] = i.useState(!1),
-        F = (0, d.e7)([v.Z], () => v.Z.getErrors()),
-        M = (0, p.n)(),
-        U = r.isPomelo() && M,
-        W = (0, b.a)(z, U, !1, r.username),
-        D = i.useRef(null),
-        A = i.useMemo(() => {
+        u = l.useMemo(() => _.ZP.canEditDiscriminator(r) && !r.isPomelo(), [r]),
+        [d, I] = l.useState(!1),
+        [y, L] = l.useState(r.username),
+        [R, S] = l.useState(r.discriminator),
+        [T, F] = l.useState(''),
+        [P, B] = l.useState(!1),
+        W = (0, m.e7)([v.Z], () => v.Z.getErrors()),
+        z = (0, p.n)(),
+        U = r.isPomelo() && z,
+        M = (0, b.a)(y, U, !1, r.username),
+        q = l.useRef(null),
+        D = l.useMemo(() => {
             var e, t, n;
-            return null != (n = null == F || null == (e = F.username) ? void 0 : e[0]) ? n : null == F || null == (t = F.discriminator) ? void 0 : t[0];
-        }, [F]);
-    i.useEffect(() => {
+            return null != (n = null == W || null == (e = W.username) ? void 0 : e[0]) ? n : null == W || null == (t = W.discriminator) ? void 0 : t[0];
+        }, [W]);
+    l.useEffect(() => {
         if (n === x.Dvm.ENTERED) {
             var e;
-            null == (e = D.current) || e.focus();
+            null == (e = q.current) || e.focus();
         }
     }, [n]);
-    let K = L !== r.discriminator;
-    async function q(e) {
+    let J = R !== r.discriminator;
+    async function K(e) {
         (e.preventDefault(), B(!0));
         let t = await (0, f.Mn)({
-            username: z,
-            discriminator: u ? L : void 0,
-            password: S
+            username: y,
+            discriminator: u ? R : void 0,
+            password: T
         });
-        (B(!1), (null == t ? void 0 : t.ok) && s());
+        (B(!1), (null == t ? void 0 : t.ok) && a());
     }
-    let J = i.useMemo(() => c()(E, 50), []);
-    return (0, l.jsxs)(x.Y0X, {
+    let Z = l.useMemo(() => c()(I, 50), []);
+    return (0, i.jsxs)(x.Y0X, {
         transitionState: n,
         parentComponent: 'ChangeUsernameModal',
         children: [
-            (0, l.jsxs)(x.xBx, {
+            (0, i.jsxs)(x.xBx, {
                 separator: !1,
-                className: w.header,
+                className: k.header,
                 children: [
-                    (0, l.jsx)(x.X6q, {
+                    (0, i.jsx)(x.X6q, {
                         color: 'header-primary',
                         variant: 'heading-xl/bold',
-                        className: w.title,
-                        children: _.intl.string(_.t['m5or5+'])
+                        className: k.title,
+                        children: w.intl.string(w.t['m5or5+'])
                     }),
-                    (0, l.jsx)(x.Text, {
+                    (0, i.jsx)(x.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: w.subtitle,
-                        children: _.intl.string(_.t.SLJvy8)
+                        className: k.subtitle,
+                        children: w.intl.string(w.t.SLJvy8)
                     }),
-                    (0, l.jsx)(x.olH, {
-                        onClick: s,
-                        className: w.modalCloseButton
+                    (0, i.jsx)(x.olH, {
+                        onClick: a,
+                        className: k.modalCloseButton
                     })
                 ]
             }),
-            (0, l.jsxs)('form', {
-                onSubmit: q,
+            (0, i.jsxs)('form', {
+                onSubmit: K,
                 children: [
-                    (0, l.jsxs)(x.hzk, {
-                        className: w.content,
+                    (0, i.jsxs)(x.hzk, {
+                        className: k.content,
                         children: [
-                            (0, l.jsx)(x.xJW, {
-                                title: _.intl.string(_.t.TWzdWl),
-                                error: A,
-                                children: (0, l.jsxs)('div', {
-                                    className: a()(I.input, w.multiInput, {
-                                        [I.error]: null != A,
-                                        [I.focused]: m
+                            (0, i.jsx)(x.xJW, {
+                                title: w.intl.string(w.t.TWzdWl),
+                                error: D,
+                                children: (0, i.jsxs)('div', {
+                                    className: s()(N.input, k.multiInput, {
+                                        [N.error]: null != D,
+                                        [N.focused]: d
                                     }),
                                     children: [
-                                        (0, l.jsx)(x.oil, {
+                                        (0, i.jsx)(x.oil, {
                                             name: 'username',
-                                            'aria-label': _.intl.string(_.t.qqhR3N),
-                                            value: z,
-                                            maxLength: k.l$U,
-                                            onChange: R,
-                                            onFocus: () => J(!0),
-                                            onBlur: () => J(!1),
-                                            inputRef: D,
-                                            className: w.multiInputFirst,
-                                            inputClassName: a()(w.multiInputField, { [w.lowercase]: r.isPomelo() })
+                                            'aria-label': w.intl.string(w.t.qqhR3N),
+                                            value: y,
+                                            maxLength: C.l$U,
+                                            onChange: L,
+                                            onFocus: () => Z(!0),
+                                            onBlur: () => Z(!1),
+                                            inputRef: q,
+                                            className: k.multiInputFirst,
+                                            inputClassName: s()(k.multiInputField, { [k.lowercase]: r.isPomelo() })
                                         }),
                                         !r.isPomelo() &&
-                                            (0, l.jsx)(x.oil, {
+                                            (0, i.jsx)(x.oil, {
                                                 name: 'discriminator',
-                                                'aria-label': _.intl.string(_.t.ozumaG),
+                                                'aria-label': w.intl.string(w.t.ozumaG),
                                                 maxLength: 4,
-                                                value: L,
-                                                onChange: y,
-                                                onFocus: () => J(!0),
-                                                onBlur: () => J(!1),
+                                                value: R,
+                                                onChange: S,
+                                                onFocus: () => Z(!0),
+                                                onBlur: () => Z(!1),
                                                 inputPrefix: '#',
                                                 disabled: !u,
-                                                className: w.multiInputLast,
-                                                inputClassName: w.multiInputField
+                                                className: k.multiInputLast,
+                                                inputClassName: k.multiInputField
                                             })
                                     ]
                                 })
                             }),
-                            K
-                                ? (0, l.jsx)(x.Text, {
+                            J
+                                ? (0, i.jsx)(x.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      className: w.discriminatorChangeWarning,
-                                      children: _.intl.string(_.t.mConUV)
+                                      className: k.discriminatorChangeWarning,
+                                      children: w.intl.string(w.t.mConUV)
                                   })
                                 : null,
                             U
-                                ? (0, l.jsx)(g.Z, {
-                                      show: (null == W ? void 0 : W.type) === h.K.ERROR || m,
+                                ? (0, i.jsx)(g.Z, {
+                                      show: (null == M ? void 0 : M.type) === h.K.ERROR || d,
                                       top: 8,
                                       bottom: 4,
-                                      children: (0, l.jsx)(N, {
-                                          usernameStatus: W,
+                                      children: (0, i.jsx)(E, {
+                                          usernameStatus: M,
                                           showHint: r.isPomelo()
                                       })
                                   })
                                 : null,
-                            (0, l.jsx)(x.xJW, {
-                                className: w.password,
-                                title: _.intl.string(_.t.TmdnJy),
-                                error: null == F || null == (t = F.password) ? void 0 : t[0],
-                                children: (0, l.jsx)(x.oil, {
+                            (0, i.jsx)(x.xJW, {
+                                className: k.password,
+                                title: w.intl.string(w.t.TmdnJy),
+                                error: null == W || null == (t = W.password) ? void 0 : t[0],
+                                children: (0, i.jsx)(x.oil, {
                                     type: 'password',
-                                    value: S,
-                                    onChange: P
+                                    value: T,
+                                    onChange: F
                                 })
                             })
                         ]
                     }),
-                    (0, l.jsxs)(x.mzw, {
+                    (0, i.jsxs)(x.mzw, {
                         children: [
-                            (0, l.jsx)(x.zxk, {
+                            (0, i.jsx)(x.zxk, {
+                                variant: 'primary',
+                                text: w.intl.string(w.t.i4jeWV),
                                 type: 'submit',
-                                color: x.zxk.Colors.BRAND,
-                                size: x.zxk.Sizes.MEDIUM,
-                                submitting: T,
-                                children: _.intl.string(_.t.i4jeWV)
+                                loading: P
                             }),
-                            (0, l.jsx)(x.zxk, {
-                                className: w.cancel,
-                                look: x.zxk.Looks.LINK,
-                                color: x.zxk.Colors.PRIMARY,
-                                onClick: s,
-                                children: _.intl.string(_.t['ETE/oK'])
+                            (0, i.jsx)('div', {
+                                'data-button-hoisted-classname-wrapper': !0,
+                                className: k.cancel,
+                                children: (0, i.jsx)(x.zxk, {
+                                    variant: 'secondary',
+                                    text: w.intl.string(w.t['ETE/oK']),
+                                    onClick: a
+                                })
                             })
                         ]
                     })

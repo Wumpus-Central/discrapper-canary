@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(781311), n(953529), n(539854));
+(n.d(t, { Z: () => k }), n(388685), n(781311), n(953529), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -147,21 +147,24 @@ function Z(e) {
                         : null
                 ]
             }),
-            (0, r.jsxs)(o.mzw, {
+            (0, r.jsx)(o.mzw, {
                 className: T.footer,
-                children: [
-                    (0, r.jsx)(o.zxk, {
-                        onClick: m,
-                        children: S.intl.string(S.t.i4jeWV)
-                    }),
-                    (0, r.jsx)(o.zxk, {
-                        onClick: C,
-                        look: o.zxk.Looks.LINK,
-                        color: o.zxk.Colors.RED,
-                        submitting: g,
-                        children: S.intl.string(S.t.UPcIa2)
-                    })
-                ]
+                children: (0, r.jsxs)(o.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(o.zxk, {
+                            variant: 'primary',
+                            text: S.intl.string(S.t.i4jeWV),
+                            onClick: m
+                        }),
+                        (0, r.jsx)(o.zxk, {
+                            variant: 'critical-secondary',
+                            text: S.intl.string(S.t.UPcIa2),
+                            onClick: C,
+                            loading: g
+                        })
+                    ]
+                })
             })
         ]
     });
@@ -223,7 +226,7 @@ class D extends i.PureComponent {
             }));
     }
 }
-let k = i.forwardRef(function (e, t) {
+let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: s } = e,
         c = (0, a.e7)([b.Z], () => b.Z.hidePersonalInformation, []),
         d = i.useCallback(
@@ -273,7 +276,7 @@ let k = i.forwardRef(function (e, t) {
         ref: t
     });
 });
-function A(e) {
+function L(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, s] = i.useState(null != n ? n : ''),
         [a, c] = i.useState(!1),
@@ -335,14 +338,17 @@ function A(e) {
                             size: o.E1j.Sizes.MEDIUM,
                             isLoading: a
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            color: o.zxk.Colors.BRAND,
-                            onClick: p,
-                            size: o.zxk.Sizes.SMALL,
-                            disabled: a,
-                            submitting: a,
+                        (0, r.jsx)('div', {
+                            'data-button-hoisted-classname-wrapper': !0,
                             className: T.searchButton,
-                            children: S.intl.string(S.t['5h0QOD'])
+                            children: (0, r.jsx)(o.zxk, {
+                                variant: 'primary',
+                                size: 'sm',
+                                text: S.intl.string(S.t['5h0QOD']),
+                                onClick: p,
+                                disabled: a,
+                                loading: a
+                            })
                         })
                     ]
                 })
@@ -351,7 +357,7 @@ function A(e) {
         'bans-header'
     );
 }
-function L() {
+function k() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, a.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
@@ -387,7 +393,7 @@ function L() {
         ),
         Z = i.useMemo(() => P(b, u, _), [b, P, u, _]),
         D = null != b,
-        L = Z.length % 1000 == 0 && Z.length > 0 && D,
+        k = Z.length % 1000 == 0 && Z.length > 0 && D,
         M = 0 === Z.length,
         [G, U] = i.useState({
             currentPage: 1,
@@ -406,9 +412,9 @@ function L() {
         z = i.useCallback(
             (e) => {
                 var t, n, r;
-                (null == (t = N.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > Z.length && L && !p && ((H.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null), B(H.current)), (null != F[e - 1] || L) && U((t) => R(w({}, t), { currentPage: e })));
+                (null == (t = N.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > Z.length && k && !p && ((H.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null), B(H.current)), (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e })));
             },
-            [G.pageSize, Z, L, F, B, p]
+            [G.pageSize, Z, k, F, B, p]
         ),
         H = i.useRef(null);
     i.useEffect(() => {
@@ -423,7 +429,7 @@ function L() {
         : (0, r.jsxs)('div', {
               className: T.container,
               children: [
-                  (0, r.jsx)(A, {
+                  (0, r.jsx)(L, {
                       guildId: C,
                       storedSearchQuery: u
                   }),
@@ -431,13 +437,13 @@ function L() {
                       className: T.scrollerContainer,
                       children: [
                           !M &&
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(A, {
                                   guild: c,
                                   bans: b,
                                   sortedBans: V,
                                   ref: N
                               }),
-                          !L &&
+                          !k &&
                               M &&
                               (0, r.jsxs)(o.ubH, {
                                   theme: O,
@@ -462,7 +468,7 @@ function L() {
                       className: T.__invalid_paginationContainer,
                       children: (0, r.jsx)(o.DsT, {
                           className: T.paginationInput,
-                          totalCount: Z.length + (L ? G.pageSize : 0),
+                          totalCount: Z.length + (k ? G.pageSize : 0),
                           pageSize: G.pageSize,
                           currentPage: G.currentPage,
                           onPageChange: z,

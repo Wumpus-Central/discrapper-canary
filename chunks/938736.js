@@ -6,19 +6,19 @@ n.d(t, {
 var i = n(704215),
     r = n(266454),
     s = n(533525),
-    l = n(796634),
-    a = n(388032);
+    a = n(796634),
+    l = n(388032);
 let o = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e;
         return t
-            ? a.intl.format(a.t['3OYZMT'], { helpdeskArticle: r })
+            ? l.intl.format(l.t['3OYZMT'], { helpdeskArticle: r })
             : n
-              ? a.intl.format(a.t.EkWiZm, {
-                    numFriends: l.Q - i,
+              ? l.intl.format(l.t.EkWiZm, {
+                    numFriends: a.Q - i,
                     helpdeskArticle: r
                 })
-              : a.intl.format(a.t.FjrXCg, {
-                    numFriends: l.Q,
+              : l.intl.format(l.t.FjrXCg, {
+                    numFriends: a.Q,
                     helpdeskArticle: r
                 });
     },
@@ -29,12 +29,12 @@ let o = (e) => {
     },
     d = (e) => {
         let { hasSentAll: t } = e;
-        return t ? a.intl.string(a.t.M47CJS) : a.intl.string(a.t.USo4s7);
+        return t ? l.intl.string(l.t.M47CJS) : l.intl.string(l.t.USo4s7);
     },
     u = (e) => {
         let { helpdeskArticle: t, referralsStatuses: n } = e;
         return o({
-            hasSentAll: n.sent >= l.Q,
+            hasSentAll: n.sent >= a.Q,
             hasSentAtLeastOne: n.sent >= 1,
             numSentUsers: n.sent,
             helpdeskArticle: t

@@ -2,8 +2,8 @@ n.d(t, { M: () => h });
 var i = n(255367),
     r = n(73800),
     s = n(780842),
-    l = n(70097),
-    a = n(312097),
+    a = n(70097),
+    l = n(312097),
     o = n(920155),
     c = n(744399),
     d = n(454028),
@@ -23,13 +23,13 @@ function h(e) {
                 position: 'bottom',
                 align: 'center'
             },
-            badge: E,
-            textLink: j,
+            badge: j,
+            textLink: E,
             onWatchVideo: O,
             onRequestClose: C,
-            popoverRef: S
+            popoverRef: v
         } = e,
-        v = (function (e, t) {
+        S = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -70,7 +70,7 @@ function h(e) {
         A = r.useCallback(() => {
             null !== T.current && T.current.pause();
             let e = N();
-            ((0, a.K)({
+            ((0, l.K)({
                 items: [e],
                 startingIndex: 0,
                 location: 'VideoPopover',
@@ -82,7 +82,7 @@ function h(e) {
         P = (0, i.jsxs)('div', {
             className: g.videoContainer,
             children: [
-                (0, i.jsx)(l.Z, {
+                (0, i.jsx)(a.Z, {
                     ref: T,
                     src: b,
                     width: 240,
@@ -132,13 +132,13 @@ function h(e) {
                     }));
             }
             return e;
-        })({}, v)),
+        })({}, S)),
         (n = n =
             {
                 onRequestClose: I,
                 hasVideo: !0,
                 children: (0, i.jsxs)('div', {
-                    ref: S,
+                    ref: v,
                     children: [
                         (0, i.jsx)(m.u, {
                             onClick: y,
@@ -148,8 +148,8 @@ function h(e) {
                         (0, i.jsx)(p.Y, {
                             title: h,
                             body: f,
-                            badge: E,
-                            textLink: j
+                            badge: j,
+                            textLink: E
                         }),
                         (0, i.jsx)(c.k, { buttons: [x] }),
                         (0, i.jsx)(u.$, { caretConfig: _ })

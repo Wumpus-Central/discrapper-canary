@@ -1,184 +1,185 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => U });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(692547),
-    c = n(481060),
-    u = n(475179),
-    d = n(100527),
-    p = n(906732),
-    h = n(358221),
-    f = n(185935),
-    m = n(522651),
-    g = n(933557),
-    b = n(236091),
-    _ = n(623624),
-    y = n(665149),
-    C = n(984370),
-    x = n(616286),
-    v = n(975146),
-    O = n(430824),
-    j = n(496675),
-    E = n(626135),
-    S = n(431328),
-    I = n(501655),
-    P = n(200498),
-    Z = n(146085),
-    N = n(427679),
-    T = n(592473),
-    A = n(903108),
-    w = n(981631),
-    R = n(474936),
-    k = n(388032),
-    M = n(523335);
-function D(e) {
+    c = n(755721),
+    u = n(481060),
+    d = n(475179),
+    p = n(100527),
+    h = n(906732),
+    f = n(358221),
+    m = n(185935),
+    g = n(522651),
+    b = n(933557),
+    _ = n(236091),
+    y = n(623624),
+    C = n(665149),
+    x = n(984370),
+    v = n(616286),
+    O = n(975146),
+    j = n(430824),
+    E = n(496675),
+    S = n(626135),
+    I = n(431328),
+    P = n(501655),
+    Z = n(200498),
+    N = n(146085),
+    T = n(427679),
+    A = n(592473),
+    w = n(903108),
+    R = n(981631),
+    M = n(474936),
+    D = n(388032),
+    L = n(523335);
+function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: s } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),
-        { chatOpen: c, participantsListOpen: g } = (0, a.cj)(
-            [h.Z],
+        { analyticsLocations: l, newestAnalyticsLocation: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
+        { chatOpen: c, participantsListOpen: u } = (0, o.cj)(
+            [f.Z],
             () => ({
-                chatOpen: h.Z.getChatOpen(t.id),
-                participantsListOpen: h.Z.getParticipantsListOpen(t.id)
+                chatOpen: f.Z.getChatOpen(t.id),
+                participantsListOpen: f.Z.getParticipantsListOpen(t.id)
             }),
             [t.id]
         ),
-        _ = (0, P.B)(t.id),
-        y = (0, S.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: C } = (0, f.Z)({ location: 'StageChannelCallHeader' }),
-        O = C && g;
-    return (0, r.jsxs)(p.Gt, {
+        b = (0, Z.B)(t.id),
+        y = (0, I.Rk)(t.id, P.pV.REQUESTED_TO_SPEAK_ONLY),
+        { hasParticipantsPanel: C } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
+        x = C && u;
+    return (0, r.jsxs)(h.Gt, {
         value: l,
         children: [
-            (0, r.jsx)(b.Z, { channelId: t.id }, 'clips-enabled-indicator'),
-            !i && _
+            (0, r.jsx)(_.Z, { channelId: t.id }, 'clips-enabled-indicator'),
+            !i && b
                 ? (0, r.jsx)('div', {
-                      className: M.button,
-                      children: (0, r.jsx)(T.Z, {
+                      className: L.button,
+                      children: (0, r.jsx)(A.Z, {
                           toggleRequestToSpeakSidebar: () => {
-                              (c && u.Z.updateChatOpen(t.id, !1), g && u.Z.toggleParticipantsList(t.id, !1), (0, m.v)(s, m.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
+                              (c && d.Z.updateChatOpen(t.id, !1), u && d.Z.toggleParticipantsList(t.id, !1), (0, g.v)(s, g.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
                           },
                           showRequestToSpeakSidebar: i,
                           numRequestToSpeak: y
                       })
                   })
                 : null,
-            !g &&
+            !u &&
                 C &&
                 (0, r.jsx)(
-                    v.Z,
+                    O.Z,
                     {
-                        className: o()(M.button, { [M.sidebarOpen]: c }),
+                        className: a()(L.button, { [L.sidebarOpen]: c }),
                         onClick: () => {
-                            (i && n(), u.Z.toggleParticipantsList(t.id, !g));
+                            (i && n(), d.Z.toggleParticipantsList(t.id, !u));
                         }
                     },
                     'participants-list-button'
                 ),
             !c &&
                 (0, r.jsx)('div', {
-                    className: o()(M.button, { [M.sidebarOpen]: O || i }),
-                    children: (0, r.jsx)(x.T, {
+                    className: a()(L.button, { [L.sidebarOpen]: x || i }),
+                    children: (0, r.jsx)(v.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
-                        iconClassName: M.buttonIcon
+                        iconClassName: L.buttonIcon
                     })
                 })
         ]
     });
 }
-function L(e) {
+function U(e) {
     var t;
-    let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: d } = e,
-        p = (0, g.ZP)(n),
-        h = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id)),
-        f = (0, S.Io)(n.id),
-        m = (0, S.Rk)(n.id, I.pV.AUDIENCE),
-        b = (0, a.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
-        x = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        v = null != b && b.features.has(w.oNc.COMMUNITY) ? x < w.TU7 : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
-        P = (0, A.Z)(n),
-        T = (0, a.e7)([j.Z], () => j.Z.can(Z.yP, n)),
-        L = () => {
-            (u.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
-                E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
+    let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: p } = e,
+        h = (0, b.ZP)(n),
+        f = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
+        m = (0, I.Io)(n.id),
+        g = (0, I.Rk)(n.id, P.pV.AUDIENCE),
+        _ = (0, o.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
+        v = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
+        O = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
+        Z = (0, w.Z)(n),
+        A = (0, o.e7)([E.Z], () => E.Z.can(N.yP, n)),
+        U = () => {
+            (d.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
+                S.default.track(R.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: n.guild_id,
-                    type: R.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: T,
-                    action: R.T7.DISMISS
+                    type: M.cd.VIDEO_STAGE_LIMIT,
+                    is_moderator: A,
+                    action: M.T7.DISMISS
                 }));
         },
-        B = {
-            canModerate: T,
-            audienceCount: m,
+        F = {
+            canModerate: A,
+            audienceCount: g,
             channel: n,
-            speakerCount: f
+            speakerCount: m
         },
-        F = i.useRef(B);
+        H = i.useRef(F);
     (i.useEffect(() => {
-        F.current = B;
+        H.current = F;
     }),
         i.useEffect(() => {
-            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = F.current;
-            P &&
-                E.default.track(w.rMx.BOOSTING_UPSELL_VIEWED, {
+            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = H.current;
+            Z &&
+                S.default.track(R.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
-                    type: R.cd.VIDEO_STAGE_LIMIT,
+                    type: M.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
                     listener_count: r + t
                 });
-        }, [P]));
-    let H = (0, r.jsx)(c.f6W, {
-        theme: w.BRd.DARK,
+        }, [Z]));
+    let G = (0, r.jsx)(u.f6W, {
+        theme: R.BRd.DARK,
         children: (e) => {
             var t;
-            return (0, r.jsxs)(y.ZP, {
-                toolbar: (0, r.jsx)(D, {
+            return (0, r.jsxs)(C.ZP, {
+                toolbar: (0, r.jsx)(k, {
                     toggleRequestToSpeakSidebar: l,
-                    showRequestToSpeakSidebar: d,
+                    showRequestToSpeakSidebar: p,
                     channel: n
                 }),
-                onDoubleClick: C.O,
+                onDoubleClick: x.O,
                 transparent: !0,
-                className: o()(e, M.participants),
+                className: a()(e, L.participants),
                 children: [
-                    (0, r.jsx)(y.ZP.Icon, {
-                        icon: c.ewx,
+                    (0, r.jsx)(C.ZP.Icon, {
+                        icon: u.ewx,
                         disabled: !0,
-                        'aria-label': k.intl.string(k.t.EErMzM),
-                        className: M.icon,
-                        color: null != h ? s.Z.colors.HEADER_MUTED.css : void 0
+                        'aria-label': D.intl.string(D.t.EErMzM),
+                        className: L.icon,
+                        color: null != f ? s.Z.colors.HEADER_MUTED.css : void 0
                     }),
-                    (0, r.jsx)(y.ZP.Title, {
-                        className: M.channelName,
-                        wrapperClassName: M.channelNameWrapper,
-                        children: null != (t = null == h ? void 0 : h.topic) ? t : p
+                    (0, r.jsx)(C.ZP.Title, {
+                        className: L.channelName,
+                        wrapperClassName: L.channelNameWrapper,
+                        children: null != (t = null == f ? void 0 : f.topic) ? t : h
                     }),
-                    (0, r.jsx)(y.ZP.Divider, { className: M.divider }),
-                    (0, r.jsxs)(y.ZP.Title, {
+                    (0, r.jsx)(C.ZP.Divider, { className: L.divider }),
+                    (0, r.jsxs)(C.ZP.Title, {
                         children: [
-                            (0, r.jsx)(c.S6n, {
+                            (0, r.jsx)(u.S6n, {
                                 size: 'xs',
                                 color: s.Z.colors.TEXT_LOW_CONTRAST.css
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: M.speakerCount,
-                                children: k.intl.format(k.t.chmM9P, { count: f })
+                                className: L.speakerCount,
+                                children: D.intl.format(D.t.chmM9P, { count: m })
                             }),
-                            (0, r.jsx)(c.BFJ, {
+                            (0, r.jsx)(u.BFJ, {
                                 size: 'xs',
-                                className: M.icon,
+                                className: L.icon,
                                 color: 'currentColor'
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: M.speakerCount,
-                                children: k.intl.format(k.t['+v2pNz'], { count: m })
+                                className: L.speakerCount,
+                                children: D.intl.format(D.t['+v2pNz'], { count: g })
                             })
                         ]
                     })
@@ -186,75 +187,75 @@ function L(e) {
             });
         }
     });
-    return P
+    return Z
         ? (0, r.jsxs)('div', {
               children: [
-                  H,
+                  G,
                   (0, r.jsxs)('div', {
-                      className: M.boostUpsell,
+                      className: L.boostUpsell,
                       children: [
-                          (0, r.jsx)(U, {}),
+                          (0, r.jsx)(B, {}),
                           (0, r.jsxs)('div', {
-                              className: M.text,
+                              className: L.text,
                               children: [
-                                  (0, r.jsx)(c.Text, {
+                                  (0, r.jsx)(u.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: v ? k.intl.string(k.t['T+zF9P']) : k.intl.string(k.t['IZ+SVl'])
+                                      children: O ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
                                   }),
-                                  (0, r.jsx)(c.Text, {
+                                  (0, r.jsx)(u.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-default',
-                                      children: v ? k.intl.string(k.t.Izgpmp) : k.intl.string(k.t['7FHbPD'])
+                                      children: O ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: M.buttons,
-                              children: v
+                              className: L.buttons,
+                              children: O
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(c.zxk, {
-                                                className: M.notNowButton,
-                                                onClick: L,
-                                                look: c.zxk.Looks.BLANK,
-                                                size: c.zxk.Sizes.SMALL,
-                                                children: k.intl.string(k.t.L5eIZ2)
+                                            (0, r.jsx)(c.zx, {
+                                                className: L.notNowButton,
+                                                onClick: U,
+                                                look: c.zx.Looks.BLANK,
+                                                size: c.zx.Sizes.SMALL,
+                                                children: D.intl.string(D.t.L5eIZ2)
                                             }),
-                                            (0, r.jsx)(c.gtL, {
-                                                size: c.zxk.Sizes.SMALL,
+                                            (0, r.jsx)(u.gtL, {
+                                                size: c.zx.Sizes.SMALL,
                                                 onClick: () => {
-                                                    ((0, _.f)({
+                                                    ((0, y.f)({
                                                         guildId: n.guild_id,
-                                                        location: { section: w.jXE.STAGE_VIDEO_LIMIT }
+                                                        location: { section: R.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        E.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        S.default.track(R.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: n.guild_id,
-                                                            type: R.cd.VIDEO_STAGE_LIMIT,
-                                                            is_moderator: T,
-                                                            action: R.T7.BOOST
+                                                            type: M.cd.VIDEO_STAGE_LIMIT,
+                                                            is_moderator: A,
+                                                            action: M.T7.BOOST
                                                         }));
                                                 },
-                                                className: M.boostButton,
-                                                children: k.intl.string(k.t.Uj0md3)
+                                                className: L.boostButton,
+                                                children: D.intl.string(D.t.Uj0md3)
                                             })
                                         ]
                                     })
-                                  : (0, r.jsx)(c.zxk, {
-                                        className: M.notNowButton,
-                                        onClick: L,
-                                        look: c.zxk.Looks.BLANK,
-                                        size: c.zxk.Sizes.SMALL,
-                                        children: k.intl.string(k.t.WAI6xs)
+                                  : (0, r.jsx)(c.zx, {
+                                        className: L.notNowButton,
+                                        onClick: U,
+                                        look: c.zx.Looks.BLANK,
+                                        size: c.zx.Sizes.SMALL,
+                                        children: D.intl.string(D.t.WAI6xs)
                                     })
                           })
                       ]
                   })
               ]
           })
-        : H;
+        : G;
 }
-function U() {
+function B() {
     return (0, r.jsxs)('svg', {
         width: '36',
         height: '36',

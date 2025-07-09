@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(239091),
     u = n(100527),
@@ -66,8 +66,8 @@ function j(e) {
     let { userId: p, channel: _ } = e,
         y = i.useRef(null),
         { analyticsLocations: C } = (0, d.ZP)(u.Z.USERNAME),
-        j = (0, a.e7)([g.default], () => g.default.getUser(p)),
-        E = (0, a.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
+        j = (0, o.e7)([g.default], () => g.default.getUser(p)),
+        E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
         S = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
     function I(e) {
         if (null == j) return null;
@@ -88,7 +88,7 @@ function j(e) {
         Z = null == E ? void 0 : E.colorString;
     return null == j
         ? (0, r.jsx)('span', {
-              className: o()(x.threadCreatorName, x.unknownCreatorName),
+              className: a()(x.threadCreatorName, x.unknownCreatorName),
               children: P
           })
         : (0, r.jsx)(d.Gt, {

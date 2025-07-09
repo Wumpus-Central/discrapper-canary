@@ -1,101 +1,102 @@
-(r.d(t, { default: () => S }), r(388685), r(953529));
+(r.d(t, { default: () => A }), r(388685), r(953529));
 var n = r(255367),
     l = r(73800),
     o = r(990547),
     i = r(442837),
-    a = r(481060),
-    c = r(390885),
-    u = r(594174),
-    s = r(626135),
-    f = r(63063),
-    p = r(771308),
-    m = r(13430),
-    d = r(723359),
-    _ = r(981631),
-    b = r(630724),
-    g = r(388032),
-    y = r(465556);
-function S(e) {
+    a = r(755721),
+    c = r(481060),
+    u = r(390885),
+    s = r(594174),
+    f = r(626135),
+    p = r(63063),
+    m = r(771308),
+    d = r(13430),
+    _ = r(723359),
+    b = r(981631),
+    g = r(630724),
+    y = r(388032),
+    S = r(465556);
+function A(e) {
     let { transitionState: t, onClose: r } = e,
-        [S, A] = l.useState(null),
-        [N, E] = l.useState(null),
-        [O, v] = l.useState(!1),
-        w = l.useRef(null),
-        T = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        C = l.useRef(null);
+        [A, N] = l.useState(null),
+        [E, O] = l.useState(null),
+        [v, w] = l.useState(!1),
+        T = l.useRef(null),
+        C = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        h = l.useRef(null);
     (l.useEffect(() => {
-        (c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' }));
+        (u.Z.flowStep(g.MK.ANY, g.FF.AGE_GATE), f.default.track(b.rMx.OPEN_MODAL, { type: 'Claim Age Gate' }));
     }, []),
         l.useEffect(() => {
-            (null == T ? void 0 : T.nsfwAllowed) != null && r();
-        }, [T, r]));
-    let h = async (e) => {
-            if ((e.preventDefault(), null != S)) {
-                v(!0);
+            (null == C ? void 0 : C.nsfwAllowed) != null && r();
+        }, [C, r]));
+    let j = async (e) => {
+            if ((e.preventDefault(), null != A)) {
+                w(!0);
                 try {
-                    await p.Av(S, _.jXE.CLAIM_ACCOUNT_MODAL);
+                    await m.Av(A, b.jXE.CLAIM_ACCOUNT_MODAL);
                 } catch (e) {
-                    if (null != e.body && null != e.body.date_of_birth) (c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE_UNDERAGE), p.wE(d.L0.CLAIM_ACCOUNT), p.hp(d.L0.CLAIM_ACCOUNT), r());
+                    if (null != e.body && null != e.body.date_of_birth) (u.Z.flowStep(g.MK.ANY, g.FF.AGE_GATE_UNDERAGE), m.wE(_.L0.CLAIM_ACCOUNT), m.hp(_.L0.CLAIM_ACCOUNT), r());
                     else {
                         var t;
-                        (null == e || null == (t = e.body) ? void 0 : t.username) != null ? E(g.intl.string(g.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
+                        (null == e || null == (t = e.body) ? void 0 : t.username) != null ? O(y.intl.string(y.t['TGg/2t'])) : O(null == e ? void 0 : e.body.message);
                     }
                 }
-                v(!1);
+                w(!1);
             }
         },
-        j = l.useCallback(() => {
+        U = l.useCallback(() => {
             var e;
-            null == (e = C.current) || e.focus();
-        }, [C]);
-    return (0, n.jsx)(a.Y0X, {
+            null == (e = h.current) || e.focus();
+        }, [h]);
+    return (0, n.jsx)(c.Y0X, {
         transitionState: t,
-        size: a.CgR.DYNAMIC,
-        'aria-label': g.intl.string(g.t.QpSKo6),
-        className: y.modal,
+        size: c.CgR.DYNAMIC,
+        'aria-label': y.intl.string(y.t.QpSKo6),
+        className: S.modal,
         impression: {
             impressionName: o.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !1 }
         },
         parentComponent: 'NewUserAgeGate',
-        children: (0, n.jsxs)(a.hzk, {
-            className: y.content,
+        children: (0, n.jsxs)(c.hzk, {
+            className: S.content,
             children: [
-                (0, n.jsx)('div', { className: y.image }),
+                (0, n.jsx)('div', { className: S.image }),
                 (0, n.jsxs)('form', {
-                    onSubmit: h,
+                    onSubmit: j,
                     children: [
-                        (0, n.jsx)(a.X6q, {
-                            className: y.title,
+                        (0, n.jsx)(c.X6q, {
+                            className: S.title,
                             variant: 'heading-xl/semibold',
-                            children: g.intl.string(g.t.QpSKo6)
+                            children: y.intl.string(y.t.QpSKo6)
                         }),
-                        (0, n.jsx)(a.Text, {
+                        (0, n.jsx)(c.Text, {
                             color: 'header-secondary',
-                            className: y.description,
+                            className: S.description,
                             variant: 'text-md/normal',
-                            children: g.intl.format(g.t.EcJBEB, { helpURL: f.Z.getArticleURL(_.BhN.AGE_GATE) })
+                            children: y.intl.format(y.t.EcJBEB, { helpURL: p.Z.getArticleURL(b.BhN.AGE_GATE) })
                         }),
-                        (0, n.jsx)(m.Z, {
+                        (0, n.jsx)(d.Z, {
                             required: !0,
                             autoFocus: !0,
-                            wrapperClassName: y.formItem,
-                            label: g.intl.string(g.t.rhBeKS),
+                            wrapperClassName: S.formItem,
+                            label: y.intl.string(y.t.rhBeKS),
                             name: 'birthday',
-                            onChange: (e) => A(e),
-                            onPopulated: j,
-                            error: N,
-                            value: S,
-                            ref: w
+                            onChange: (e) => N(e),
+                            onPopulated: U,
+                            error: E,
+                            value: A,
+                            ref: T
                         }),
-                        (0, n.jsx)(a.zxk, {
-                            buttonRef: C,
+                        (0, n.jsx)(a.zx, {
+                            buttonRef: h,
                             type: 'submit',
-                            size: a.zxk.Sizes.LARGE,
-                            submitting: O,
-                            disabled: null == S,
+                            size: a.zx.Sizes.LARGE,
+                            submitting: v,
+                            disabled: null == A,
                             fullWidth: !0,
-                            children: g.intl.string(g.t.i4jeWV)
+                            children: y.intl.string(y.t.i4jeWV)
                         })
                     ]
                 })

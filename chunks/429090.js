@@ -14,11 +14,11 @@ let i = (0, n(818083).B)({
     ]
 });
 function l(e, t) {
-    var n, l, o, a;
+    var n, l, a, o;
     let s = (0, r.Ig)(e),
         { enabled: c } = i.useExperiment(
             { location: e },
-            ((o = (function (e) {
+            ((a = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -43,13 +43,13 @@ function l(e, t) {
                 }
                 return e;
             })({}, t)),
-            (a = a =
+            (o = o =
                 {
                     disable: s || (null != (n = null == t ? void 0 : t.disable) && n),
                     autoTrackExposure: null == (l = null == t ? void 0 : t.autoTrackExposure) || l
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -57,10 +57,10 @@ function l(e, t) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(o)).forEach(function (e) {
+                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
                   }),
-            o)
+            a)
         );
     return c;
 }

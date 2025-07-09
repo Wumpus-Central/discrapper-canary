@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(809206),
-    a = n(852860),
+    a = n(809206),
+    l = n(852860),
     o = n(321114),
     c = n(164946),
     d = n(350327),
@@ -22,21 +22,21 @@ function b() {
             var e, t, n, i, r;
             b(!0);
             let s = m.Z.getAllPending(),
-                a = (0, c.ED)(s),
+                l = (0, c.ED)(s),
                 f = (0, c.g9)(s),
                 x = (0, c.jE)(s),
                 _ = !0;
-            if (Object.keys(a).length > 0) {
-                let i = await (0, l.Mn)(a);
+            if (Object.keys(l).length > 0) {
+                let i = await (0, a.Mn)(l);
                 if (((_ = _ && null != (t = null == i ? void 0 : i.ok) && t), null == i ? void 0 : i.ok)) {
                     let e = i.body;
                     (void 0 !== s.pendingAvatar &&
                         (0, u.Z)({
                             avatarHash: e.avatar,
-                            avatarId: a.avatarId,
+                            avatarId: l.avatarId,
                             avatarAssetOrigin: null == (n = s.pendingAvatar) ? void 0 : n.assetOrigin
                         }),
-                        (0, l.si)());
+                        (0, a.si)());
                 } else (null == i || null == (e = i.body) ? void 0 : e.username) != null && (0, h.P)();
             }
             if (Object.keys(f).length > 0) {
@@ -45,7 +45,7 @@ function b() {
             }
             if (void 0 !== s.pendingLegacyUsernameDisabled)
                 try {
-                    (await p.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)());
+                    (await p.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, a.iR)());
                 } catch (e) {
                     ((0, g.r)(), (_ = !1));
                 }
@@ -53,18 +53,18 @@ function b() {
                 let { primaryGuildId: e } = x;
                 if (void 0 !== e) {
                     let t = await (0, o.c)(e, null !== e);
-                    ((_ = _ && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, l.OU)() : (0, g.r)());
+                    ((_ = _ && null != (r = null == t ? void 0 : t.ok) && r), (null == t ? void 0 : t.ok) ? (0, a.OU)() : (0, g.r)());
                 }
             }
-            (_ && (0, l.b9)(), b(!1));
+            (_ && (0, a.b9)(), b(!1));
         }, []),
-        E = r.useCallback(() => {
-            (0, l.W3)();
+        j = r.useCallback(() => {
+            (0, a.W3)();
         }, []);
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(l.Z, {
         submitting: n,
         onSave: _,
-        onReset: E,
+        onReset: j,
         disabled: e,
         errorMessage: null != x ? x : void 0
     });

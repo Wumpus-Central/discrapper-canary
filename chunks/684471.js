@@ -1,7 +1,7 @@
 n.d(e, { Z: () => _ });
 var r = n(255367);
 n(73800);
-var s = n(481060),
+var s = n(755721),
     i = n(442837),
     o = n(594174),
     c = n(51144),
@@ -25,18 +25,18 @@ function _(t) {
         children: (0, r.jsxs)('div', {
             className: E.buttonContainer,
             children: [
-                (0, r.jsx)(s.zxk, {
-                    color: s.zxk.Colors.BRAND,
-                    size: s.zxk.Sizes.LARGE,
+                (0, r.jsx)(s.zx, {
+                    color: s.zx.Colors.BRAND,
+                    size: s.zx.Sizes.LARGE,
                     className: E.button,
                     onClick: () => {
                         (_(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION));
                     },
                     children: d.intl.string(d.t['+o4Q7e'])
                 }),
-                (0, r.jsx)(s.zxk, {
-                    color: s.zxk.Colors.PRIMARY,
-                    size: s.zxk.Sizes.LARGE,
+                (0, r.jsx)(s.zx, {
+                    color: s.zx.Colors.PRIMARY,
+                    size: s.zx.Sizes.LARGE,
                     className: E.button,
                     onClick: () => {
                         (_(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS));

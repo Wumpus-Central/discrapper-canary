@@ -24,13 +24,13 @@ function C(e) {
         j,
         { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: k } = N,
-        L = N.state === b.r2o.ACCEPTING,
-        D = null != Z ? (0, m.jD)(Z) : null,
-        M = null != T,
-        U = null != D,
-        F = null != D && D.isGuildVocal(),
-        B = null != D && D.isGuildStageVoice(),
+        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
+        D = N.state === b.r2o.ACCEPTING,
+        M = null != Z ? (0, m.jD)(Z) : null,
+        k = null != T,
+        U = null != M,
+        F = null != M && M.isGuildVocal(),
+        B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
         H = null != (C = null == T ? void 0 : T.features.has(b.oNc.HUB)) && C,
         V = null == T ? void 0 : T.id,
@@ -43,7 +43,7 @@ function C(e) {
         }, [V, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
-            (M ? (I(), (e = 'transition')) : (S(), (e = 'accept')),
+            (k ? (I(), (e = 'transition')) : (S(), (e = 'accept')),
                 (0, o.r$)(
                     {
                         invite: N,
@@ -53,7 +53,7 @@ function C(e) {
                     },
                     z
                 ));
-        }, [N, P, z, M, I, S]);
+        }, [N, P, z, k, I, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(h.Z, {});
         (T = _.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
@@ -103,7 +103,7 @@ function C(e) {
                 })
             })),
         F
-            ? ((O = (0, r.jsx)(p.Z.Channel, { channel: D })),
+            ? ((O = (0, r.jsx)(p.Z.Channel, { channel: M })),
               (v = (0, r.jsxs)('span', {
                   className: y.infoTitle,
                   children: [
@@ -117,14 +117,14 @@ function C(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != k && k > 0)
+            : (null != R && R >= 5) || (null != L && L > 0)
               ? (v = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: k
+                    membersOnline: L
                 }))
               : U &&
                 (v = (0, r.jsx)(p.Z.Channel, {
-                    channel: D,
+                    channel: M,
                     guild: T
                 })),
         (0, r.jsxs)(p.Z, {
@@ -149,9 +149,9 @@ function C(e) {
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: L,
+                            submitting: D,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
+                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : k ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
                     ]
                 }),

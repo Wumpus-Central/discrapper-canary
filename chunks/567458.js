@@ -17,12 +17,12 @@ function s(e) {
                 children: a.intl.string(a.t.rdzeVF)
             }),
             (0, r.jsx)(i.zxk, {
-                color: i.zxk.Colors.BRAND_INVERTED,
+                variant: 'overlay-primary',
+                text: a.intl.string(a.t['NX+WJC']),
                 fullWidth: !0,
                 onClick: () => {
                     t(l.L.AUTO);
-                },
-                children: a.intl.string(a.t['NX+WJC'])
+                }
             })
         ]
     });

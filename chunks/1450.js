@@ -65,11 +65,10 @@ let v = (e) => {
                     variant: 'text-sm/normal',
                     children: y.intl.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                 }),
-                (0, r.jsx)(l.zxk, {
-                    look: l.zxk.Looks.LINK,
-                    color: l.zxk.Colors.LINK,
-                    onClick: e,
-                    children: y.intl.string(y.t['Gb+BJC'])
+                (0, r.jsx)(l.Avr, {
+                    variant: 'primary',
+                    text: y.intl.string(y.t['Gb+BJC']),
+                    onClick: e
                 })
             ]
         });
@@ -94,11 +93,10 @@ let v = (e) => {
                     variant: 'text-sm/normal',
                     children: y.intl.string(y.t.S83wgo)
                 }),
-                (0, r.jsx)(l.zxk, {
-                    look: l.zxk.Looks.LINK,
-                    color: l.zxk.Colors.LINK,
-                    onClick: e,
-                    children: y.intl.string(y.t.bwNjur)
+                (0, r.jsx)(l.Avr, {
+                    variant: 'primary',
+                    text: y.intl.string(y.t.bwNjur),
+                    onClick: e
                 })
             ]
         });

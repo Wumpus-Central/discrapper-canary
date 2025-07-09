@@ -119,7 +119,7 @@ function u(e) {
         ]
     });
 }
-function f(e) {
+function p(e) {
     let { benefit: t } = e;
     return void 0 === t
         ? null
@@ -134,7 +134,7 @@ function f(e) {
               ]
           });
 }
-function p(e) {
+function f(e) {
     let { listing: t } = e;
     return (0, a.jsxs)('div', {
         children: [
@@ -154,7 +154,7 @@ function p(e) {
                 className: m.benefitTypeHeader,
                 children: d.intl.string(d.t.XqWRLi)
             }),
-            t.additional_perks.map((e, t) => (0, a.jsx)(f, { benefit: e.name }, t))
+            t.additional_perks.map((e, t) => (0, a.jsx)(p, { benefit: e.name }, t))
         ]
     });
 }
@@ -167,14 +167,14 @@ function _(e) {
         children: [
             (0, a.jsxs)(l.zJl, {
                 className: m.content,
-                children: [(0, a.jsx)(x, { listing: r }), (0, a.jsx)('div', { className: m.divider }), (0, a.jsx)(p, { listing: r })]
+                children: [(0, a.jsx)(x, { listing: r }), (0, a.jsx)('div', { className: m.divider }), (0, a.jsx)(f, { listing: r })]
             }),
             (0, a.jsx)(l.zxk, {
-                size: l.zxk.Sizes.MEDIUM,
+                variant: 'primary',
+                text: d.intl.string(d.t['1W7mCg']),
                 onClick: () => {
                     n(t);
-                },
-                children: d.intl.string(d.t['1W7mCg'])
+                }
             })
         ]
     });

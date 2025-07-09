@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    o = n(392711),
     s = n(442837),
     c = n(475179),
     u = n(906732),
@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(981631),
     x = n(388032);
 function v(e) {
-    let t = (0, s.e7)([m.Z], () => !(0, a.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+    let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: r, mentionCount: i } = (0, s.cj)(
             [h.ZP],
@@ -38,18 +38,18 @@ function v(e) {
 }
 function O(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: i, mentionCount: l, isTyping: o, voiceChannelIsSelected: a } = v(n);
+        { unreadCount: i, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = v(n);
     return (0, r.jsx)(_.Z, {
         className: t,
         unreadCount: i,
         mentionCount: l,
-        isTyping: o,
-        canBadge: a
+        isTyping: a,
+        canBadge: o
     });
 }
 function j(e) {
     let t;
-    var { channelId: n, className: l, showingClassName: a, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
+    var { channelId: n, className: l, showingClassName: o, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -79,15 +79,15 @@ function j(e) {
             mentionCount: T
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: r } = v(e),
-                [l, o] = i.useState(!1);
+                [l, a] = i.useState(!1);
             return (
                 i.useEffect(() => {
-                    o(t > 0);
+                    a(t > 0);
                     let e = setTimeout(() => {
-                        o(!1);
+                        a(!1);
                     }, b.z);
                     return () => {
-                        (clearTimeout(e), o(!1));
+                        (clearTimeout(e), a(!1));
                     };
                 }, [t]),
                 {
@@ -118,30 +118,30 @@ function j(e) {
         event: C.CkL.FOCUS_CHAT_BUTTON,
         handler: S ? null : R
     });
-    let [k, M] = i.useState(!1),
-        D = i.useCallback(() => {
-            f && M(!0);
+    let [M, D] = i.useState(!1),
+        L = i.useCallback(() => {
+            f && D(!0);
         }, [f]);
     ((0, g.yp)({
         event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: D
+        handler: L
     }),
         i.useEffect(() => {
             let e;
             return (
-                k &&
+                M &&
                     (e = setTimeout(() => {
-                        M(!1);
+                        D(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [k]));
-    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+        }, [M]));
+    let k = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
-        T > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && L.push(x.intl.string(x.t.x5zAGR)),
+        T > 0 && k.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && k.push(x.intl.string(x.t.x5zAGR)),
         (0, r.jsx)(
             y.Z,
             (function (e) {
@@ -173,11 +173,11 @@ function j(e) {
                     buttonRef: I,
                     onClick: A,
                     label: t,
-                    'aria-label': L.join(', '),
+                    'aria-label': k.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
-                    wrapperClassName: o()(l, null != a && { [a]: Z }),
-                    forceTooltipOpen: k
+                    wrapperClassName: a()(l, null != o && { [o]: Z }),
+                    forceTooltipOpen: M
                 },
                 j
             )

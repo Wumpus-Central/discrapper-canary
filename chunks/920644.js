@@ -61,10 +61,11 @@ function f(e) {
             }),
             (0, r.jsx)(l.mzw, {
                 children: (0, r.jsx)(l.zxk, {
-                    size: l.PhG.SMALL,
+                    variant: 'primary',
+                    size: 'sm',
+                    text: d.intl.string(d.t.szzQ6O),
                     fullWidth: !0,
-                    onClick: h,
-                    children: d.intl.string(d.t.szzQ6O)
+                    onClick: h
                 })
             })
         ]

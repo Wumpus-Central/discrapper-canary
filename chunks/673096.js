@@ -2,7 +2,7 @@
 var i,
     r = n(442837),
     s = n(570140);
-function l(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,22 +15,22 @@ function l(e, t, n) {
         e
     );
 }
-let a = [];
+let l = [];
 function o() {
-    a = [];
+    l = [];
 }
 class c extends (i = r.ZP.Store) {
     getSessions() {
-        return a;
+        return l;
     }
 }
-l(c, 'displayName', 'AuthSessionsStore');
+a(c, 'displayName', 'AuthSessionsStore');
 let d = new c(s.Z, {
     LOGOUT: o,
     LOGIN_SUCCESS: o,
     FETCH_AUTH_SESSIONS_SUCCESS: function (e) {
         let { sessions: t } = e;
-        a = t.map((e) => {
+        l = t.map((e) => {
             var t, n;
             return (
                 (t = (function (e) {
@@ -44,7 +44,7 @@ let d = new c(s.Z, {
                                 })
                             )),
                             i.forEach(function (t) {
-                                l(e, t, n[t]);
+                                a(e, t, n[t]);
                             }));
                     }
                     return e;
@@ -68,13 +68,13 @@ let d = new c(s.Z, {
     },
     LOGOUT_AUTH_SESSIONS_SUCCESS: function (e) {
         let { sessionIdHashes: t } = e,
-            n = [...a],
+            n = [...l],
             i = !1;
         for (let e of t) {
             let t = n.findIndex((t) => t.id_hash === e);
             t >= 0 && (n.splice(t, 1), (i = !0));
         }
         if (!i) return !1;
-        a = n;
+        l = n;
     }
 });

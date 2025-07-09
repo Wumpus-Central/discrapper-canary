@@ -1,39 +1,40 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(670044),
+var i = n(755721),
+    l = n(481060),
+    a = n(670044),
     o = n(28391),
-    a = n(526761),
-    s = n(388032),
-    c = n(900907);
-function u(e) {
+    s = n(526761),
+    c = n(388032),
+    u = n(900907);
+function d(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, r.jsxs)('div', {
-        className: c.notice,
+        className: u.notice,
         children: [
-            (0, r.jsx)(l.Z, { id: t.id }),
+            (0, r.jsx)(a.Z, { id: t.id }),
             (0, r.jsx)('div', {
-                className: c.info,
-                children: (0, r.jsx)(i.Text, {
+                className: u.info,
+                children: (0, r.jsx)(l.Text, {
                     variant: 'text-sm/medium',
-                    children: s.intl.format(s.t.P6Y2Nz, {})
+                    children: c.intl.format(c.t.P6Y2Nz, {})
                 })
             }),
             (0, r.jsx)('div', {
-                className: c.buttons,
-                children: (0, r.jsxs)(i.zxk, {
-                    size: i.zxk.Sizes.TINY,
-                    look: i.zxk.Looks.FILLED,
-                    color: i.zxk.Colors.PRIMARY,
-                    className: c.button,
-                    innerClassName: c.buttonInner,
+                className: u.buttons,
+                children: (0, r.jsxs)(i.zx, {
+                    size: i.zx.Sizes.TINY,
+                    look: i.zx.Looks.FILLED,
+                    color: i.zx.Colors.PRIMARY,
+                    className: u.button,
+                    innerClassName: u.buttonInner,
                     onClick: () => {
-                        ((0, o.Z)(t.guild_id, t.id, a.ic.UNREADS_ONLY_MENTIONS), n());
+                        ((0, o.Z)(t.guild_id, t.id, s.ic.UNREADS_ONLY_MENTIONS), n());
                     },
                     children: [
-                        s.intl.string(s.t.KyUKhY),
-                        (0, r.jsx)(i.UEU, {
+                        c.intl.string(c.t.KyUKhY),
+                        (0, r.jsx)(l.UEU, {
                             size: 'xs',
                             color: 'currentColor',
                             style: { marginLeft: 4 }

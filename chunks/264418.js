@@ -2,8 +2,8 @@ n.d(t, { J: () => u });
 var i = n(255367),
     r = n(73800),
     s = n(920155),
-    l = n(744399),
-    a = n(454028),
+    a = n(744399),
+    l = n(454028),
     o = n(966902),
     c = n(237872),
     d = n(562618);
@@ -23,8 +23,8 @@ function u(e) {
             buttons: b,
             textLink: x,
             gradientColor: _,
-            onRequestClose: E,
-            popoverRef: j
+            onRequestClose: j,
+            popoverRef: E
         } = e,
         O = (function (e, t) {
             if (null == e) return {};
@@ -46,11 +46,11 @@ function u(e) {
             return r;
         })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'buttons', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
     let C = r.useCallback(() => {
-            null == E || E();
-        }, [E]),
-        S = r.useCallback(() => {
-            null == E || E();
-        }, [E]);
+            null == j || j();
+        }, [j]),
+        v = r.useCallback(() => {
+            null == j || j();
+        }, [j]);
     return (0, i.jsx)(
         s.m,
         ((t = (function (e) {
@@ -83,13 +83,13 @@ function u(e) {
                 onRequestClose: C,
                 gradientColor: _,
                 children: (0, i.jsxs)('div', {
-                    ref: j,
+                    ref: E,
                     children: [
                         (0, i.jsx)(c.u, {
-                            onClick: S,
+                            onClick: v,
                             colorMix: null != _
                         }),
-                        (0, i.jsx)(a.V, {
+                        (0, i.jsx)(l.V, {
                             asset: h,
                             size: f
                         }),
@@ -99,7 +99,7 @@ function u(e) {
                             badge: g,
                             textLink: x
                         }),
-                        (0, i.jsx)(l.k, { buttons: b }),
+                        (0, i.jsx)(a.k, { buttons: b }),
                         (0, i.jsx)(o.$, { caretConfig: p })
                     ]
                 })

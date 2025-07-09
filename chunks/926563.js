@@ -1,8 +1,8 @@
 n.d(e, { Z: () => p });
 var l = n(255367);
 n(73800);
-var r = n(481060),
-    a = n(680295),
+var a = n(481060),
+    r = n(680295),
     i = n(687158),
     o = n(899007),
     s = n(648052),
@@ -46,12 +46,12 @@ function p(t) {
                         previewText: n,
                         previewEmoji: p,
                         placeholderText: j,
-                        hasEntered: g === r.Dvm.ENTERED,
+                        hasEntered: g === a.Dvm.ENTERED,
                         previewLabel: O
                     })
                 ]
             }),
-            (null == x ? void 0 : x.profileEffectId) != null && (0, l.jsx)(a.Z, { profileEffectId: x.profileEffectId }),
+            (null == x ? void 0 : x.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: x.profileEffectId }),
             (0, l.jsx)('div', {
                 className: b.usernameContainer,
                 inert: !0,

@@ -1,33 +1,34 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(399606),
-    l = n(481060),
-    s = n(601964),
-    a = n(430824),
-    o = n(594174),
-    c = n(723047),
-    d = n(388032);
-function u(e) {
-    let { guildId: t, application: u } = e,
-        m = (0, i.e7)([a.Z], () => a.Z.getGuild(t)),
-        g = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        p = (0, c.mY)();
-    if (null == m || !(0, s.eM)(m, g)) return null;
-    let f = u.team;
+    l = n(755721),
+    s = n(481060),
+    a = n(601964),
+    o = n(430824),
+    c = n(594174),
+    d = n(723047),
+    u = n(388032);
+function m(e) {
+    let { guildId: t, application: m } = e,
+        g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
+        p = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        f = (0, d.mY)();
+    if (null == g || !(0, a.eM)(g, p)) return null;
+    let h = m.team;
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsx)(l.R94, {
-                type: l.R94.Types.DESCRIPTION,
-                disabled: p,
-                children: null != f ? d.intl.format(d.t.erxwWF, { teamName: f.name }) : d.intl.string(d.t.FGzLkJ)
+            (0, r.jsx)(s.R94, {
+                type: s.R94.Types.DESCRIPTION,
+                disabled: f,
+                children: null != h ? u.intl.format(u.t.erxwWF, { teamName: h.name }) : u.intl.string(u.t.FGzLkJ)
             }),
-            (0, r.jsx)(l.LZC, { size: 16 }),
-            (0, r.jsx)(l.zxk, {
-                look: l.zxk.Looks.FILLED,
-                color: null != f ? l.zxk.Colors.PRIMARY : l.zxk.Colors.BRAND,
+            (0, r.jsx)(s.LZC, { size: 16 }),
+            (0, r.jsx)(l.zx, {
+                look: l.zx.Looks.FILLED,
+                color: null != h ? l.zx.Colors.PRIMARY : l.zx.Colors.BRAND,
                 onClick: () => {
-                    (0, l.ZDy)(async () => {
+                    (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('83942').then(n.bind(n, 743582));
                         return (t) => {
                             var n, i;
@@ -58,7 +59,7 @@ function u(e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { application: u }),
+                                (i = i = { application: m }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -76,8 +77,8 @@ function u(e) {
                         };
                     });
                 },
-                disabled: p,
-                children: null != f ? d.intl.string(d.t['/Fjq5O']) : d.intl.string(d.t['6ih+b2'])
+                disabled: f,
+                children: null != h ? u.intl.string(u.t['/Fjq5O']) : u.intl.string(u.t['6ih+b2'])
             })
         ]
     });

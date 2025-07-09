@@ -1,13 +1,13 @@
-n.d(t, { J: () => a });
+n.d(t, { J: () => l });
 var i = n(255367);
 n(73800);
 var r = n(657707),
     s = n(780605),
-    l = n(388032);
-function a(e) {
+    a = n(388032);
+function l(e) {
     var t,
         n,
-        { 'aria-label': a, playing: o } = e,
+        { 'aria-label': l, playing: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -56,7 +56,7 @@ function a(e) {
         })({}, c)),
         (n = n =
             {
-                'aria-label': null != a ? a : o ? l.intl.string(l.t.ZcgDJS) : l.intl.string(l.t.RscU7O),
+                'aria-label': null != l ? l : o ? a.intl.string(a.t.ZcgDJS) : a.intl.string(a.t.RscU7O),
                 icon: o ? r.fpf : r.o1U,
                 variant: 'overlay-secondary',
                 fullWidth: !1,

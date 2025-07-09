@@ -1,14 +1,14 @@
 (n.d(t, {
     XX: () => R,
-    ZP: () => M,
-    ul: () => k
+    ZP: () => D,
+    ul: () => M
 }),
     n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(475179),
     c = n(239091),
     u = n(287734),
@@ -80,28 +80,28 @@ function R(e) {
     let { numUsers: t } = e;
     return (0, r.jsx)('div', {
         className: T.moreContainer,
-        children: (0, r.jsxs)(a.Text, {
+        children: (0, r.jsxs)(o.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
             children: ['+', t]
         })
     });
 }
-function k(e) {
+function M(e) {
     let { numAudience: t, collapsed: n } = e,
         i = n ? t : N.intl.formatToPlainString(N.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
-        className: o()(T.audienceContainer, { [T.audienceContainerCollapsed]: n }),
+        className: a()(T.audienceContainer, { [T.audienceContainerCollapsed]: n }),
         children: [
             (0, r.jsx)('div', {
                 className: T.audienceIconContainer,
-                children: (0, r.jsx)(a.VWR, {
+                children: (0, r.jsx)(o.VWR, {
                     size: 'md',
                     color: 'currentColor',
                     className: T.audienceIcon
                 })
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-sm/medium',
                 children: i
@@ -109,9 +109,9 @@ function k(e) {
         ]
     });
 }
-let M = (0, p.$)(function (e) {
+let D = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: D, deaf: L, video: U, embeddedApplication: B, serverMute: F, serverDeaf: H, nick: G, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: M, localMute: D, localVideoDisabled: L, deaf: k, video: U, embeddedApplication: B, serverMute: F, serverDeaf: H, nick: G, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -154,7 +154,7 @@ let M = (0, p.$)(function (e) {
                 channel: R,
                 onWatch: eg,
                 previewIsOpen: en,
-                location: ea
+                location: eo
             }),
         ey = (e) => {
             let t = P.al.has(null != er ? er : ''),
@@ -162,25 +162,25 @@ let M = (0, p.$)(function (e) {
                     user: p,
                     speaking: z,
                     disconnected: W,
-                    mute: k,
-                    localMute: M,
-                    localVideoDisabled: D,
+                    mute: M,
+                    localMute: D,
+                    localVideoDisabled: L,
                     isStreaming: K,
                     isGuest: Q,
                     video: U,
                     priority: J,
                     ringing: V,
-                    deaf: L,
+                    deaf: k,
                     nick: G,
                     collapsed: l,
                     overlap: l,
                     serverMute: F,
                     serverDeaf: H,
-                    tabIndex: eo,
+                    tabIndex: ea,
                     otherClientSessionType: er,
                     voicePlatform: ei,
                     embeddedApplication: B,
-                    avatarContainerClass: o()({ [T.userAvatar]: !0 }),
+                    avatarContainerClass: a()({ [T.userAvatar]: !0 }),
                     disabled: el && !t,
                     selected: ed,
                     onClick: t ? void 0 : eh,
@@ -193,7 +193,7 @@ let M = (0, p.$)(function (e) {
                 };
             if (el) {
                 var i;
-                return (0, r.jsx)(a.ua7, {
+                return (0, r.jsx)(o.ua7, {
                     text: null != (i = (0, g.Z)(er)) ? i : N.intl.string(N.t.IyYqqa),
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
@@ -220,7 +220,7 @@ let M = (0, p.$)(function (e) {
                     }
                 });
             }
-            return (0, r.jsx)(a.yRy, {
+            return (0, r.jsx)(o.yRy, {
                 targetElementRef: eu,
                 position: 'right',
                 renderPopout: e_,

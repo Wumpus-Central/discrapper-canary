@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(809206),
+    a = n(481060),
+    l = n(809206),
     o = n(634894),
     c = n(100527),
     d = n(906732),
@@ -16,12 +16,12 @@ var i = n(255367),
     b = n(639119),
     x = n(402567),
     _ = n(629654),
-    E = n(53691),
-    j = n(165583),
+    j = n(53691),
+    E = n(165583),
     O = n(267717),
     C = n(643879),
-    S = n(350327),
-    v = n(996073),
+    v = n(350327),
+    S = n(996073),
     T = n(25990),
     N = n(626135),
     I = n(74538),
@@ -43,8 +43,8 @@ function G(e) {
     let { user: G, isVisible: F, shouldShow: H } = e,
         z = I.ZP.isPremium(G),
         {
-            pendingAvatar: Y,
-            pendingThemeColors: W,
+            pendingAvatar: W,
+            pendingThemeColors: Y,
             tryItOutThemeColors: K,
             tryItOutAvatar: q,
             tryItOutBanner: X,
@@ -99,13 +99,13 @@ function G(e) {
         $ = (0, h.Z)(Q),
         { preset: ee, onShuffle: et } = (0, x.Z)(),
         en = r.useRef(null);
-    (0, v.Z)(en, M.Y_.TRY_IT_OUT);
+    (0, S.Z)(en, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ei, newestAnalyticsLocation: er, sourceAnalyticsLocations: es } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        el = (e) => {
+        ea = (e) => {
             if (e) {
-                if (((0, a.I5)(q), (0, S.z5)(K), (0, S.ho)(X), null != J)) {
+                if (((0, l.I5)(q), (0, v.z5)(K), (0, v.ho)(X), null != J)) {
                     let e = m.Z.getProduct(J.skuId);
-                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != p.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, l.cV)(J)) : null != p.Z.getPurchase(J.skuId) && (0, l.cV)(J);
                 }
                 N.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }
@@ -118,7 +118,7 @@ function G(e) {
                 location_stack: es
             });
     }, [es, G, F]);
-    let ea = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === B.Si.TIER_2,
+    let el = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === B.Si.TIER_2,
         eo = (0, f.Ng)(),
         ec = (0, f.Wp)(eo, B.Si.TIER_2),
         ed = 'TryOutPremiumSection';
@@ -144,7 +144,7 @@ function G(e) {
                           layoutClassName: V.tryItOutLayout,
                           previewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(l.SrA, {
+                                  (0, i.jsx)(a.SrA, {
                                       size: 'md',
                                       color: 'currentColor',
                                       className: V.premiumIcon
@@ -166,11 +166,11 @@ function G(e) {
                               children: [
                                   (0, i.jsxs)('div', {
                                       children: [
-                                          (0, i.jsx)(l.X6q, {
+                                          (0, i.jsx)(a.X6q, {
                                               variant: 'heading-xl/extrabold',
                                               children: U.intl.string(U.t['2zGdAQ'])
                                           }),
-                                          (0, i.jsx)(l.Text, {
+                                          (0, i.jsx)(a.Text, {
                                               className: V.description,
                                               variant: 'text-sm/normal',
                                               children: U.intl.string(U.t.xeEC29)
@@ -182,10 +182,10 @@ function G(e) {
                                       user: G,
                                       pendingAvatarSrc: (0, C.SD)({
                                           userId: G.id,
-                                          image: null != q ? q : Y
+                                          image: null != q ? q : W
                                       }),
-                                      pendingColors: null != K ? K : W,
-                                      onThemeColorsChange: S.rf,
+                                      pendingColors: null != K ? K : Y,
+                                      onThemeColorsChange: v.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
@@ -193,13 +193,13 @@ function G(e) {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != X,
-                                      onBannerChange: S.f4,
+                                      onBannerChange: v.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(P.Z, {
                                       className: V.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: S.c_,
+                                      onAvatarChange: v.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: U.intl.string(U.t['7z0D1d']),
                                       sectionTitle: U.intl.string(U.t.vtFfPT)
@@ -225,24 +225,24 @@ function G(e) {
                                       },
                                       'effect'
                                   ),
-                                  !ea &&
-                                      (0, i.jsx)(l.Text, {
+                                  !el &&
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-sm/normal',
                                           children: U.intl.string(U.t['smo74+'])
                                       })
                               ]
                           })
                       }),
-                      !ea &&
-                          (0, i.jsx)(E.p, {
-                              onSubscribeModalClose: el,
+                      !el &&
+                          (0, i.jsx)(j.p, {
+                              onSubscribeModalClose: ea,
                               className: V.floatingUpsell,
                               showUpsell: !0,
                               text: U.intl.format(U.t.TmfgIy, {
                                   onClick: () => {
                                       (0, O.y)({
                                           analyticsSource: er,
-                                          onSubscribeFinish: el
+                                          onSubscribeFinish: ea
                                       });
                                   }
                               }),
@@ -250,11 +250,11 @@ function G(e) {
                               position: 'inline',
                               showShadow: !1
                           }),
-                      ea &&
+                      el &&
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: V.premiumTier2Divider }),
-                                  (0, i.jsx)(j.ZP, {
+                                  (0, i.jsx)(E.ZP, {
                                       type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: B.Si.TIER_2
                                   })

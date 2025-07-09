@@ -1,47 +1,48 @@
-i.d(e, { default: () => c });
+i.d(e, { default: () => d });
 var n = i(255367);
 i(73800);
-var r = i(481060),
-    a = i(313201),
-    s = i(388032),
-    l = i(708121),
-    o = i(365627);
-function c(t) {
-    let { transitionState: e, onClose: i, storeListing: c, subscription: d } = t,
-        u = (0, a.Dt)();
-    return (0, n.jsxs)(r.Y0X, {
+var r = i(755721),
+    a = i(481060),
+    s = i(313201),
+    l = i(388032),
+    o = i(708121),
+    c = i(365627);
+function d(t) {
+    let { transitionState: e, onClose: i, storeListing: d, subscription: u } = t,
+        m = (0, s.Dt)();
+    return (0, n.jsxs)(a.Y0X, {
         transitionState: e,
-        'aria-labelledby': u,
+        'aria-labelledby': m,
         parentComponent: 'SubscriptionRestartedModal',
         children: [
-            (0, n.jsxs)(r.hzk, {
-                className: l.contentContainer,
+            (0, n.jsxs)(a.hzk, {
+                className: o.contentContainer,
                 children: [
                     (0, n.jsx)('img', {
-                        src: o,
+                        src: c,
                         alt: ''
                     }),
-                    (0, n.jsx)(r.X6q, {
-                        className: l.title,
+                    (0, n.jsx)(a.X6q, {
+                        className: o.title,
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        id: u,
-                        children: s.intl.format(s.t['wLFT6+'], { tier: c.summary })
+                        id: m,
+                        children: l.intl.format(l.t['wLFT6+'], { tier: d.summary })
                     }),
-                    (0, n.jsx)(r.Text, {
-                        className: l.subtitle,
+                    (0, n.jsx)(a.Text, {
+                        className: o.subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: s.intl.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
+                        children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd })
                     })
                 ]
             }),
-            (0, n.jsx)(r.mzw, {
-                children: (0, n.jsx)(r.zxk, {
-                    size: r.zxk.Sizes.MEDIUM,
+            (0, n.jsx)(a.mzw, {
+                children: (0, n.jsx)(r.zx, {
+                    size: r.zx.Sizes.MEDIUM,
                     grow: !1,
                     onClick: i,
-                    children: s.intl.string(s.t['JtWl+f'])
+                    children: l.intl.string(l.t['JtWl+f'])
                 })
             })
         ]

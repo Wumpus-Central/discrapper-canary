@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => M }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,30 +8,31 @@ var r = n(255367),
     c = n(692547),
     d = n(215569),
     u = n(780384),
-    m = n(481060),
-    g = n(410030),
-    p = n(367907),
-    f = n(768762),
-    h = n(626135),
-    x = n(585483),
-    b = n(999382),
-    j = n(743475),
-    _ = n(983135),
-    v = n(8426),
-    O = n(969632),
-    C = n(570961),
-    y = n(208665),
-    N = n(359191),
-    I = n(84658),
-    E = n(142961),
-    S = n(232764),
-    T = n(729311),
-    P = n(966301),
-    w = n(976269),
-    R = n(981631),
-    Z = n(388032),
-    D = n(179556);
-function k(e) {
+    m = n(755721),
+    g = n(481060),
+    p = n(410030),
+    f = n(367907),
+    h = n(768762),
+    x = n(626135),
+    b = n(585483),
+    j = n(999382),
+    _ = n(743475),
+    v = n(983135),
+    O = n(8426),
+    C = n(969632),
+    y = n(570961),
+    N = n(208665),
+    I = n(359191),
+    E = n(84658),
+    S = n(142961),
+    T = n(232764),
+    P = n(729311),
+    w = n(966301),
+    R = n(976269),
+    Z = n(981631),
+    D = n(388032),
+    A = n(179556);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +57,7 @@ function k(e) {
     }
     return e;
 }
-function A(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,188 +75,188 @@ function A(e, t) {
         e
     );
 }
-function L() {
-    let e = (0, o.e7)([b.Z], () => b.Z.getGuild());
-    return null == e ? null : (0, r.jsx)(M, { guild: e });
+function M() {
+    let e = (0, o.e7)([j.Z], () => j.Z.getGuild());
+    return null == e ? null : (0, r.jsx)(G, { guild: e });
 }
-function M(e) {
+function G(e) {
     let { guild: t } = e,
         l = t.id,
-        b = (0, o.e7)([N.Z], () => N.Z.getCurrentPage()),
-        L = (0, E.Z)(l),
+        j = (0, o.e7)([I.Z], () => I.Z.getCurrentPage()),
+        M = (0, S.Z)(l),
         {
-            hasChanges: M,
-            hasConfiguredAnythingForCurrentStep: G,
-            hasErrors: U
-        } = (0, o.cj)([N.Z], () => ({
-            hasChanges: N.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: N.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: N.Z.hasErrors()
+            hasChanges: G,
+            hasConfiguredAnythingForCurrentStep: U,
+            hasErrors: B
+        } = (0, o.cj)([I.Z], () => ({
+            hasChanges: I.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: I.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: I.Z.hasErrors()
         })),
-        B = (0, o.e7)([N.Z], () => {
-            let e = (0, I.lg)(b);
-            return null != e && !N.Z.isEducationUpsellDismissed(e);
+        F = (0, o.e7)([I.Z], () => {
+            let e = (0, E.lg)(j);
+            return null != e && !I.Z.isEducationUpsellDismissed(e);
         }),
-        F = (0, g.ZP)(),
-        z = i.useRef(null),
-        [{ spring: H }, V] = (0, m.q_F)(() => ({ spring: 0 }), 'animate-always');
+        z = (0, p.ZP)(),
+        H = i.useRef(null),
+        [{ spring: V }, W] = (0, g.q_F)(() => ({ spring: 0 }), 'animate-always');
     i.useEffect(() => {
         function e() {
-            (V({
+            (W({
                 spring: 1,
                 config: a.config.gentle
             }),
-                V({
+                W({
                     spring: 0,
                     config: a.config.gentle,
                     delay: 1000
                 }));
         }
         return (
-            x.S.subscribe(R.CkL.EMPHASIZE_NOTICE, e),
+            b.S.subscribe(Z.CkL.EMPHASIZE_NOTICE, e),
             () => {
-                x.S.unsubscribe(R.CkL.EMPHASIZE_NOTICE, e);
+                b.S.unsubscribe(Z.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [V]);
-    let W = (0, m.dQu)(c.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        Y = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, u.wj)(F) ? W : Y,
-        X = H.to({
+    }, [W]);
+    let Y = (0, g.dQu)(c.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+        K = (0, g.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        X = (0, u.wj)(z) ? Y : K,
+        q = V.to({
             range: [0, 1],
-            output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_DEFAULT).hex()]
+            output: [(0, g.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, g.dQu)(c.Z.colors.TEXT_DEFAULT).hex()]
         }),
-        q = H.to({
+        Q = V.to({
             range: [0, 1],
-            output: [K, (0, m.dQu)(c.Z.colors.STATUS_DANGER).hex()]
+            output: [X, (0, g.dQu)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (L) {
-        if (b === I.PG.DEFAULT_CHANNELS) return (0, r.jsx)(T.j, {});
-        else if (b === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
-        else if (b === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
+    if (M) {
+        if (j === E.PG.DEFAULT_CHANNELS) return (0, r.jsx)(P.j, {});
+        else if (j === E.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(w.Zm, {});
+        else if (j === E.PG.HOME_SETTINGS) return (0, r.jsx)(R.Z, {});
     }
-    let Q = b === I.xh[I.xh.length - 1],
-        J = async () => {
-            let e = y.Z.advancedMode;
-            if (M)
+    let J = j === E.xh[E.xh.length - 1],
+        $ = async () => {
+            let e = N.Z.advancedMode;
+            if (G)
                 try {
-                    if (b === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, C.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (b === I.PG.CUSTOMIZATION_QUESTIONS) await (0, C.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (b === I.PG.HOME_SETTINGS) {
-                        let e = O.Z.getSettings();
-                        await (0, v.oo)(t.id, e);
+                    if (j === E.PG.DEFAULT_CHANNELS) await (0, _.DO)(t).then(() => (e ? (0, y.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (j === E.PG.CUSTOMIZATION_QUESTIONS) await (0, y.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (j === E.PG.HOME_SETTINGS) {
+                        let e = C.Z.getSettings();
+                        await (0, O.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
                 }
             return !0;
         },
-        $ = async () => {
-            (h.default.track(
-                R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                A(k({}, (0, p.hH)(l)), {
-                    step: I.PG[b],
+        ee = async () => {
+            (x.default.track(
+                Z.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                k(L({}, (0, f.hH)(l)), {
+                    step: E.PG[j],
                     back: !1,
-                    skip: !M
+                    skip: !G
                 })
             ),
-                (0, _.Nb)((0, I.lg)(b)),
-                (await J()) && (0, _.IG)(l, b));
+                (0, v.Nb)((0, E.lg)(j)),
+                (await $()) && (0, v.IG)(l, j));
         },
-        ee = async () => {
-            (h.default.track(
-                R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                A(k({}, (0, p.hH)(l)), {
-                    step: I.PG[b],
+        et = async () => {
+            (x.default.track(
+                Z.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                k(L({}, (0, f.hH)(l)), {
+                    step: E.PG[j],
                     back: !0,
                     skip: !1
                 })
             ),
-                (await J()) && (0, _.Wy)(l, b));
+                (await $()) && (0, v.Wy)(l, j));
         },
-        et = null;
-    B && (b === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : b === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : b === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : b === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
-    let en = (0, r.jsx)(m.zxk, {
-            className: s()(D.button, { [D.hidden]: B }),
-            color: m.zxk.Colors.PRIMARY,
-            look: m.zxk.Looks.OUTLINED,
-            size: m.zxk.Sizes.SMALL,
-            onClick: ee,
-            disabled: B || U,
+        en = null;
+    F && (j === E.PG.SAFETY_CHECK ? (en = (0, r.jsx)(T.j7, {})) : j === E.PG.DEFAULT_CHANNELS ? (en = (0, r.jsx)(T.Io, {})) : j === E.PG.CUSTOMIZATION_QUESTIONS ? (en = (0, r.jsx)(T.cZ, {})) : j === E.PG.HOME_SETTINGS && (en = (0, r.jsx)(T.g6, {})));
+    let er = (0, r.jsx)(m.zx, {
+            className: s()(A.button, { [A.hidden]: F }),
+            color: m.zx.Colors.PRIMARY,
+            look: m.zx.Looks.OUTLINED,
+            size: m.zx.Sizes.SMALL,
+            onClick: et,
+            disabled: F || B,
             children: (0, r.jsxs)('span', {
-                className: D.button,
+                className: A.button,
                 children: [
-                    (0, r.jsx)(f.Z, {
-                        className: D.arrow,
-                        direction: f.Z.Directions.LEFT
+                    (0, r.jsx)(h.Z, {
+                        className: A.arrow,
+                        direction: h.Z.Directions.LEFT
                     }),
-                    Z.intl.string(Z.t['13/7kZ'])
+                    D.intl.string(D.t['13/7kZ'])
                 ]
             })
         }),
-        er = (0, r.jsx)(m.zxk, {
-            className: D.button,
-            color: G ? m.zxk.Colors.BRAND : m.zxk.Colors.PRIMARY,
-            look: m.zxk.Looks.FILLED,
-            size: m.zxk.Sizes.SMALL,
-            onClick: $,
-            disabled: B || U,
+        ei = (0, r.jsx)(m.zx, {
+            className: A.button,
+            color: U ? m.zx.Colors.BRAND : m.zx.Colors.PRIMARY,
+            look: m.zx.Looks.FILLED,
+            size: m.zx.Sizes.SMALL,
+            onClick: ee,
+            disabled: F || B,
             children: (0, r.jsxs)(a.animated.span, {
-                className: D.button,
-                style: { color: X },
+                className: A.button,
+                style: { color: q },
                 children: [
-                    G ? Z.intl.string(Z.t.PDTjLC) : Z.intl.string(Z.t['5WxrcX']),
-                    (0, r.jsx)(f.Z, {
-                        className: D.arrow,
-                        direction: f.Z.Directions.RIGHT
+                    U ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
+                    (0, r.jsx)(h.Z, {
+                        className: A.arrow,
+                        direction: h.Z.Directions.RIGHT
                     })
                 ]
             })
         });
     return (0, r.jsx)(d.W, {
         component: 'div',
-        children: (0, r.jsx)(m.oXn, {
-            className: D.noticeRegion,
+        children: (0, r.jsx)(g.oXn, {
+            className: A.noticeRegion,
             children: (0, r.jsx)(a.animated.div, {
-                className: D.container,
-                style: { backgroundColor: q },
+                className: A.container,
+                style: { backgroundColor: Q },
                 children: (0, r.jsxs)('div', {
-                    className: D.flexContainer,
-                    ref: z,
+                    className: A.flexContainer,
+                    ref: H,
                     children: [
-                        B
+                        F
                             ? (0, r.jsxs)('div', {
-                                  className: D.educationUpsellRoot,
+                                  className: A.educationUpsellRoot,
                                   children: [
                                       (0, r.jsx)('img', {
-                                          className: D.wumpus,
+                                          className: A.wumpus,
                                           src: n(33631),
                                           alt: 'wumpus'
                                       }),
                                       (0, r.jsxs)('div', {
-                                          className: D.educationUpsell,
-                                          children: [et, (0, r.jsx)('div', { className: D.educationUpsellArrow })]
+                                          className: A.educationUpsell,
+                                          children: [en, (0, r.jsx)('div', { className: A.educationUpsellArrow })]
                                       })
                                   ]
                               })
                             : null,
-                        (0, r.jsx)(m.JcV, {
-                            containerRef: z,
+                        (0, r.jsx)(g.JcV, {
+                            containerRef: H,
                             children: (0, r.jsxs)('div', {
-                                className: D.actions,
+                                className: A.actions,
                                 children: [
-                                    en,
+                                    er,
                                     (0, r.jsxs)('div', {
-                                        className: D.next,
+                                        className: A.next,
                                         children: [
-                                            U
-                                                ? (0, r.jsx)(m.Text, {
+                                            B
+                                                ? (0, r.jsx)(g.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'status-warning',
-                                                      children: Z.intl.string(Z.t.DhYsPD)
+                                                      children: D.intl.string(D.t.DhYsPD)
                                                   })
                                                 : null,
-                                            Q ? null : er
+                                            J ? null : ei
                                         ]
                                     })
                                 ]

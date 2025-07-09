@@ -1,29 +1,30 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(970731),
-    a = n(388032),
-    o = n(212314);
-function s(e) {
-    let { guildId: t, markAsDismissed: s } = e;
-    return (0, r.jsx)(l.ZP, {
-        className: o.container,
+var i = n(755721),
+    l = n(481060),
+    a = n(970731),
+    o = n(388032),
+    s = n(212314);
+function c(e) {
+    let { guildId: t, markAsDismissed: c } = e;
+    return (0, r.jsx)(a.ZP, {
+        className: s.container,
         asset: (0, r.jsx)('img', {
-            className: o.image,
+            className: s.image,
             src: n(297806),
             alt: ''
         }),
-        header: a.intl.string(a.t['2l9beX']),
-        headerClassName: o.header,
-        content: a.intl.string(a.t.gdqdND),
-        buttonCTA: a.intl.string(a.t.RzWDqa),
+        header: o.intl.string(o.t['2l9beX']),
+        headerClassName: s.header,
+        content: o.intl.string(o.t.gdqdND),
+        buttonCTA: o.intl.string(o.t.RzWDqa),
         buttonProps: {
-            color: i.Ttl.WHITE,
-            innerClassName: o.primaryButton
+            color: i.Tt.WHITE,
+            innerClassName: s.primaryButton
         },
         onClick: () => {
-            (0, i.ZDy)(async () => {
+            (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('5863'), n.e('95626')]).then(n.bind(n, 751212));
                 return (n) => {
                     var i, l;
@@ -72,11 +73,11 @@ function s(e) {
                 };
             });
         },
-        secondaryButtonCTA: a.intl.string(a.t.TulDPj),
+        secondaryButtonCTA: o.intl.string(o.t.TulDPj),
         secondaryButtonProps: {
-            look: i.iLD.LINK,
-            color: i.Ttl.WHITE
+            look: i.iL.LINK,
+            color: i.Tt.WHITE
         },
-        markAsDismissed: s
+        markAsDismissed: c
     });
 }

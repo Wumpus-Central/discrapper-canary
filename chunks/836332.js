@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
+    a = n.n(s),
+    l = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(70097),
@@ -16,12 +16,12 @@ var i = n(255367),
     b = n(869783),
     x = n(388032),
     _ = n(578504),
-    E = n(839526),
-    j = n(4046),
+    j = n(839526),
+    E = n(4046),
     O = n(423741);
 let C = r.forwardRef((e, t) => {
     var n, s;
-    let { className: C, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: N } = e,
+    let { className: C, isFooterVisible: v, isDarkMode: S, isReducedMotion: T, subscriptionTier: N } = e,
         { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, p.Ng)(),
         A = (0, p.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
@@ -32,15 +32,15 @@ let C = r.forwardRef((e, t) => {
         [w, k] = r.useState(!1);
     return (
         r.useEffect(() => {
-            !S || T || w || null == Z.current || Z.current.play();
-        }, [S, T, w]),
+            !v || T || w || null == Z.current || Z.current.play();
+        }, [v, T, w]),
         (0, i.jsx)(c.Gt, {
             value: I,
             children: (0, i.jsxs)('div', {
                 ref: t,
-                className: l()(_.container, C),
+                className: a()(_.container, C),
                 children: [
-                    (0, i.jsx)(a.X6q, {
+                    (0, i.jsx)(l.X6q, {
                         className: _.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
@@ -51,7 +51,7 @@ let C = r.forwardRef((e, t) => {
                         inOfferExperience: R,
                         containerClassName: _.footerCTAContainer,
                         isApplicationHome: !0,
-                        isDarkMode: v
+                        isDarkMode: S
                     }),
                     (0, i.jsx)('div', {
                         className: _.footerArtContainer,
@@ -59,14 +59,14 @@ let C = r.forwardRef((e, t) => {
                             playsInline: !0,
                             muted: !0,
                             preload: 'auto',
-                            poster: j.Z,
+                            poster: E.Z,
                             className: _.footerArt,
                             onEnded: () => {
                                 k(!0);
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
-                                src: D ? E.Z : O.Z,
+                                src: D ? j.Z : O.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })

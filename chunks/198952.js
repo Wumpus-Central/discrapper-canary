@@ -6,20 +6,20 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(518950),
-    l = n(998502),
-    a = n(916723),
+    a = n(998502),
+    l = n(916723),
     o = n(388032),
     c = n(538631);
-let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
+let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
     u = (e) => {
         var t, n;
-        let { user: l, avatarSize: c = r.EFr.SIZE_48 } = e,
+        let { user: a, avatarSize: c = r.EFr.SIZE_48 } = e,
             {
                 avatarSrc: u,
                 avatarDecorationSrc: m,
                 eventHandlers: p
             } = (0, s.Z)({
-                user: l,
+                user: a,
                 size: c
             });
         return (0, i.jsx)(
@@ -55,7 +55,7 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                         src: u,
                         avatarDecoration: m,
                         size: c,
-                        'aria-label': o.intl.formatToPlainString(a.default.kFj4h4, { name: l.username })
+                        'aria-label': o.intl.formatToPlainString(l.default.kFj4h4, { name: a.username })
                     })
                 }),
             Object.getOwnPropertyDescriptors

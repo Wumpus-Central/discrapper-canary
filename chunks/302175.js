@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(953529));
+(n.d(t, { Z: () => j }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -6,27 +6,28 @@ var r = n(255367),
     s = n(264738),
     l = n(793030),
     c = n(442837),
-    u = n(481060),
-    d = n(434650),
-    f = n(100527),
-    _ = n(906732),
-    p = n(879892),
-    h = n(245004),
-    m = n(430824),
-    g = n(63063),
-    E = n(713081),
-    b = n(905128),
-    y = n(156732),
-    O = n(690786),
-    v = n(639777),
-    I = n(441536),
-    T = n(535396),
-    S = n(981631),
-    A = n(93841),
-    N = n(388032),
-    C = n(840969),
-    R = n(501867);
-function P(e, t, n) {
+    u = n(755721),
+    d = n(481060),
+    f = n(434650),
+    _ = n(100527),
+    p = n(906732),
+    h = n(879892),
+    m = n(245004),
+    g = n(430824),
+    E = n(63063),
+    b = n(713081),
+    y = n(905128),
+    O = n(156732),
+    v = n(690786),
+    I = n(639777),
+    T = n(441536),
+    S = n(535396),
+    A = n(981631),
+    N = n(93841),
+    C = n(388032),
+    R = n(840969),
+    P = n(501867);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +40,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +51,12 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,151 +68,151 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function x(e) {
+function M(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
-        { analyticsLocations: l } = (0, _.ZP)(),
-        c = null != (0, O.Z)(t, n),
-        g = (0, v.Z)(t),
-        [E, b] = i.useState(!1),
-        [T, P] = i.useState(!1),
-        D = T,
-        x = i.useCallback(() => {
-            let e = m.Z.getGuild(t);
+        { analyticsLocations: l } = (0, p.ZP)(),
+        c = null != (0, v.Z)(t, n),
+        E = (0, I.Z)(t),
+        [b, y] = i.useState(!1),
+        [S, w] = i.useState(!1),
+        L = S,
+        M = i.useCallback(() => {
+            let e = g.Z.getGuild(t);
             null != e &&
-                (0, p.u)({
+                (0, h.u)({
                     analyticsLocation: {
-                        page: S.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: S.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
+                        page: A.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: A.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: l,
                     guild: e
                 });
         }, [t, l]),
-        M = i.useCallback(() => {
-            (a(), (0, I.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId));
+        k = i.useCallback(() => {
+            (a(), (0, T.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
-        k = {
+        j = {
             tension: 400,
             friction: 30
         },
-        j = (0, u.q_F)({
-            transform: D ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
+        U = (0, d.q_F)({
+            transform: L ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
-            config: k
+            config: j
         }),
-        U = (0, u.q_F)({
-            y: D ? -25 : 0,
-            config: k
+        G = (0, d.q_F)({
+            y: L ? -25 : 0,
+            config: j
         }),
-        G = (0, u.q_F)({
-            opacity: +!!D,
-            transform: D ? 'translateY(0)' : 'translateY(20px)',
-            config: k
+        B = (0, d.q_F)({
+            opacity: +!!L,
+            transform: L ? 'translateY(0)' : 'translateY(20px)',
+            config: j
         }),
-        B = i.useCallback((e) => {
-            e && b(!0);
+        V = i.useCallback((e) => {
+            e && y(!0);
         }, []),
-        V = (0, d.O)(B),
-        F = (0, y.Z)(n, T);
+        F = (0, f.O)(V),
+        Z = (0, O.Z)(n, S);
     return (0, r.jsxs)('div', {
-        className: o()(R.topPerksCard, R.animatedTopPerksCard, C.powerupCard, { [R.animate]: E }),
-        onMouseEnter: () => P(!0),
-        onMouseLeave: () => P(!1),
+        className: o()(P.topPerksCard, P.animatedTopPerksCard, R.powerupCard, { [P.animate]: b }),
+        onMouseEnter: () => w(!0),
+        onMouseLeave: () => w(!1),
         children: [
             (0, r.jsx)('div', {
-                className: R.intObserver,
-                ref: V
+                className: P.intObserver,
+                ref: F
             }),
             (0, r.jsx)('div', {
-                className: R.topPerksCardImageWrapper,
+                className: P.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(R.topPerksCardImage, C.image),
-                    src: F,
+                    className: o()(P.topPerksCardImage, R.image),
+                    src: Z,
                     alt: '',
-                    style: j
+                    style: U
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: L(w({}, U), { transform: U.y.to((e) => 'translateY('.concat(e, 'px)')) }),
-                className: o()(R.contentContainer, C.contentContainer),
+                style: x(D({}, G), { transform: G.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                className: o()(P.contentContainer, R.contentContainer),
                 children: [
-                    (0, r.jsx)(h.xm, {
+                    (0, r.jsx)(m.xm, {
                         heading: n.title,
                         description: n.description,
-                        label: N.intl.formatToPlainString(A.default.QOacIS, { quantity: n.cost }),
+                        label: C.intl.formatToPlainString(N.default.QOacIS, { quantity: n.cost }),
                         isEnabled: c
                     }),
                     (0, r.jsxs)(s.animated.div, {
-                        style: G,
-                        className: R.buttonsContainer,
+                        style: B,
+                        className: P.buttonsContainer,
                         children: [
-                            (0, r.jsx)(u.zxk, {
+                            (0, r.jsx)(u.zx, {
                                 grow: !0,
-                                onClick: x,
-                                color: u.zxk.Colors.BRAND,
-                                className: R.button,
-                                children: N.intl.string(N.t['oPAx7+'])
+                                onClick: M,
+                                color: u.zx.Colors.BRAND,
+                                className: P.button,
+                                children: C.intl.string(C.t['oPAx7+'])
                             }),
-                            g &&
-                                (0, r.jsx)(u.zxk, {
+                            E &&
+                                (0, r.jsx)(u.zx, {
                                     grow: !0,
-                                    onClick: M,
-                                    color: u.zxk.Colors.PRIMARY,
-                                    className: R.button,
-                                    children: N.intl.string(N.t.GoCQxc)
+                                    onClick: k,
+                                    color: u.zx.Colors.PRIMARY,
+                                    className: P.button,
+                                    children: C.intl.string(C.t.GoCQxc)
                                 })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(u.IGR, {
-                className: R.topPerksCardNew,
-                text: N.intl.string(N.t.y2b7CA)
+            (0, r.jsx)(d.IGR, {
+                className: P.topPerksCardNew,
+                text: C.intl.string(C.t.y2b7CA)
             }),
-            E && (0, r.jsx)('div', { className: R.shineLine })
+            b && (0, r.jsx)('div', { className: P.shineLine })
         ]
     });
 }
-let M = i.forwardRef((e, t) => {
+let k = i.forwardRef((e, t) => {
     var n, a;
     let { guild: o, onClose: s } = e;
     i.useEffect(() => {
-        (b.Z.shouldFetchCatalogForGuild(o.id) && (0, E.Sn)(o.id), b.Z.shouldFetchPowerupsForGuild(o.id) && (0, E.Fm)(o.id));
+        (y.Z.shouldFetchCatalogForGuild(o.id) && (0, b.Sn)(o.id), y.Z.shouldFetchPowerupsForGuild(o.id) && (0, b.Fm)(o.id));
     }, [o.id]);
-    let u = (0, c.e7)([b.Z], () => b.Z.getStateForGuild(o.id)),
-        d = null != (a = null == u || null == (n = u.powerupCatalog) ? void 0 : n[T.Us.PERK]) ? a : [];
+    let u = (0, c.e7)([y.Z], () => y.Z.getStateForGuild(o.id)),
+        d = null != (a = null == u || null == (n = u.powerupCatalog) ? void 0 : n[S.Us.PERK]) ? a : [];
     return 0 === d.length
         ? null
         : (0, r.jsxs)('div', {
               ref: t,
-              className: C.container,
+              className: R.container,
               children: [
                   (0, r.jsx)(l.X6, {
                       variant: 'heading-xxl/extrabold',
-                      children: N.intl.string(A.default.wjI18f)
+                      children: C.intl.string(N.default.wjI18f)
                   }),
                   (0, r.jsx)(l.xv, {
                       variant: 'text-lg/medium',
-                      children: N.intl.format(A.default.S562fn, { helpDeskArticle: g.Z.getArticleURL(S.BhN.GUILD_BOOSTING_FAQ) })
+                      children: C.intl.format(N.default.S562fn, { helpDeskArticle: E.Z.getArticleURL(A.BhN.GUILD_BOOSTING_FAQ) })
                   }),
                   (0, r.jsx)('div', {
-                      className: C.powerupsContainer,
+                      className: R.powerupsContainer,
                       children: d.map((e) =>
                           (0, r.jsx)(
-                              x,
+                              M,
                               {
                                   guildId: o.id,
                                   powerup: e,
@@ -224,5 +225,5 @@ let M = i.forwardRef((e, t) => {
               ]
           });
 });
-M.displayName = 'GuildPowerupsMarketingPowerupCards';
-let k = M;
+k.displayName = 'GuildPowerupsMarketingPowerupCards';
+let j = k;

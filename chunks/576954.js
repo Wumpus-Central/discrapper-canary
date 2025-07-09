@@ -1,84 +1,85 @@
-(n.d(t, { M: () => x }), n(388685));
+(n.d(t, { M: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(286379),
-    o = n(442837),
-    a = n(481060),
-    s = n(194359),
-    c = n(797614),
-    u = n(819557),
-    d = n(138201),
-    p = n(699516),
-    h = n(378298),
-    f = n(359119),
-    m = n(473092),
-    g = n(177342),
-    b = n(134612),
-    _ = n(981631),
-    y = n(388032);
-function C(e) {
+    a = n(442837),
+    o = n(755721),
+    s = n(481060),
+    c = n(194359),
+    u = n(797614),
+    d = n(819557),
+    p = n(138201),
+    h = n(699516),
+    f = n(378298),
+    m = n(359119),
+    g = n(473092),
+    b = n(177342),
+    _ = n(134612),
+    y = n(981631),
+    C = n(388032);
+function x(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
-        { isIgnored: a } = (0, o.cj)([p.Z], () => ({ isIgnored: p.Z.isIgnored(t) }), [t]),
-        c = i.useCallback(() => {
-            ((0, m.qc)({
+        { isIgnored: o } = (0, a.cj)([h.Z], () => ({ isIgnored: h.Z.isIgnored(t) }), [t]),
+        s = i.useCallback(() => {
+            ((0, g.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
-                warningType: f.pj.STRANGER_DANGER,
-                cta: m.NM.USER_MODAL_IGNORE
+                warningType: m.pj.STRANGER_DANGER,
+                cta: g.NM.USER_MODAL_IGNORE
             }),
-                s.Z.ignoreUser(t, 'web_stranger_danger_more', n));
+                c.Z.ignoreUser(t, 'web_stranger_danger_more', n));
         }, [n, l, t]),
         u = i.useCallback(() => {
-            ((0, m.qc)({
+            ((0, g.qc)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
-                warningType: f.pj.STRANGER_DANGER,
-                cta: m.NM.USER_MODAL_UNIGNORE
+                warningType: m.pj.STRANGER_DANGER,
+                cta: g.NM.USER_MODAL_UNIGNORE
             }),
-                s.Z.unignoreUser(t, 'web_stranger_danger_more', n));
+                c.Z.unignoreUser(t, 'web_stranger_danger_more', n));
         }, [n, l, t]);
-    return (0, r.jsx)(d.ZP, {
-        title: y.intl.string(y.t.avyV7O),
-        description: y.intl.string(y.t.naWE6e),
-        buttonText: a ? y.intl.string(y.t['3SrzRU']) : y.intl.string(y.t.avyV7O),
-        onButtonPress: a ? u : c
+    return (0, r.jsx)(p.ZP, {
+        title: C.intl.string(C.t.avyV7O),
+        description: C.intl.string(C.t.naWE6e),
+        buttonText: o ? C.intl.string(C.t['3SrzRU']) : C.intl.string(C.t.avyV7O),
+        onButtonPress: o ? u : s
     });
 }
-function x(e) {
-    let { channelId: t, warningId: x, senderId: v } = e,
-        { isBlocked: O } = (0, o.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(v) }), [v]),
-        j = i.useCallback(() => {
-            (0, h.T)(t, [x]);
-        }, [t, x]),
-        E = (0, b.C2)(),
-        S = i.useCallback(
+function v(e) {
+    let { channelId: t, warningId: v, senderId: O } = e,
+        { isBlocked: j } = (0, a.cj)([h.Z], () => ({ isBlocked: h.Z.isBlocked(O) }), [O]),
+        E = i.useCallback(() => {
+            (0, f.T)(t, [v]);
+        }, [t, v]),
+        S = (0, _.C2)(),
+        I = i.useCallback(
             (e) => () => {
-                (s.Z.blockUser(v, { location: b.zr }).then(() => {
-                    j();
+                (c.Z.blockUser(O, { location: _.zr }).then(() => {
+                    E();
                 }),
-                    (0, m.qc)({
+                    (0, g.qc)({
                         channelId: t,
-                        warningId: x,
-                        senderId: v,
-                        warningType: f.pj.STRANGER_DANGER,
+                        warningId: v,
+                        senderId: O,
+                        warningType: m.pj.STRANGER_DANGER,
                         cta: e
                     }));
             },
-            [j, t, x, v]
+            [E, t, v, O]
         );
     i.useEffect(() => {
-        ((0, m.MC)(_.rMx.SAFETY_WARNING_VIEWED, {
+        ((0, g.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
-            warningId: x,
-            senderId: v,
-            warningType: f.pj.STRANGER_DANGER
+            warningId: v,
+            senderId: O,
+            warningType: m.pj.STRANGER_DANGER
         }),
-            c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
-    }, [t, x, v]);
-    let I = () => {
-            (0, a.ZDy)(async () => {
+            u.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
+    }, [t, v, O]);
+    let P = () => {
+            (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
                     let { transitionState: i, onClose: l } = n;
@@ -86,12 +87,12 @@ function x(e) {
                         transitionState: i,
                         onClose: l,
                         channelId: t,
-                        warningId: x,
-                        senderId: v,
-                        description: y.intl.string(y.t.DJMZX1),
-                        safetyTipRows: E.map((e, t) =>
+                        warningId: v,
+                        senderId: O,
+                        description: C.intl.string(C.t.DJMZX1),
+                        safetyTipRows: S.map((e, t) =>
                             (0, r.jsx)(
-                                u.q,
+                                d.q,
                                 {
                                     index: t,
                                     listType: 'numbered',
@@ -103,23 +104,23 @@ function x(e) {
                         actionRows: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(
-                                    C,
+                                    x,
                                     {
-                                        senderId: v,
+                                        senderId: O,
                                         channelId: t,
-                                        warningId: x
+                                        warningId: v
                                     },
                                     'more-tips-button'
                                 ),
                                 (0, r.jsx)(
-                                    d.ZP,
+                                    p.ZP,
                                     {
-                                        title: y.intl.string(y.t['5QYPOz']),
-                                        description: y.intl.string(y.t.G08MKi),
-                                        buttonText: y.intl.string(y.t['5QYPOz']),
-                                        buttonColor: a.zxk.Colors.RED,
+                                        title: C.intl.string(C.t['5QYPOz']),
+                                        description: C.intl.string(C.t.G08MKi),
+                                        buttonText: C.intl.string(C.t['5QYPOz']),
+                                        buttonColor: o.zx.Colors.RED,
                                         onButtonPress: () => {
-                                            (l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, I));
+                                            (l(), Z(g.NM.USER_MODAL_BLOCK_CONFIRM, g.NM.USER_MODAL_BLOCK_CANCEL, P));
                                         }
                                     },
                                     'block-button'
@@ -130,14 +131,14 @@ function x(e) {
                 };
             });
         },
-        P = (e, i, l) => {
-            (0, a.ZDy)(async () => {
-                let { default: o } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
+        Z = (e, i, l) => {
+            (0, s.ZDy)(async () => {
+                let { default: a } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
                 return (n) => {
-                    var a, s;
+                    var o, s;
                     return (0, r.jsx)(
-                        o,
-                        ((a = (function (e) {
+                        a,
+                        ((o = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -164,21 +165,21 @@ function x(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                userId: v,
-                                confirmBlock: S(e),
+                                userId: O,
+                                confirmBlock: I(e),
                                 onCancel: () => {
                                     (null == l || l(),
-                                        (0, m.qc)({
+                                        (0, g.qc)({
                                             channelId: t,
-                                            warningId: x,
-                                            senderId: v,
-                                            warningType: f.pj.STRANGER_DANGER,
+                                            warningId: v,
+                                            senderId: O,
+                                            warningType: m.pj.STRANGER_DANGER,
                                             cta: i
                                         }));
                                 }
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -187,43 +188,43 @@ function x(e) {
                                   }
                                   return n;
                               })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
-                        a)
+                        o)
                     );
                 };
             });
         };
-    return (0, r.jsx)(g.Q, {
+    return (0, r.jsx)(b.Q, {
         channelId: t,
-        warningId: x,
-        senderId: v,
-        warningType: f.pj.STRANGER_DANGER,
-        header: y.intl.string(y.t.iOkDpK),
-        description: y.intl.string(y.t.ISUbcH),
-        onDismiss: j,
+        warningId: v,
+        senderId: O,
+        warningType: m.pj.STRANGER_DANGER,
+        header: C.intl.string(C.t.iOkDpK),
+        description: C.intl.string(C.t.ISUbcH),
+        onDismiss: E,
         buttons: [
             {
-                text: y.intl.string(y.t['Qk/c4+']),
-                color: a.zxk.Colors.BRAND,
+                text: C.intl.string(C.t['Qk/c4+']),
+                color: o.zx.Colors.BRAND,
                 onclick: () => {
-                    (I(),
-                        (0, m.qc)({
+                    (P(),
+                        (0, g.qc)({
                             channelId: t,
-                            warningId: x,
-                            senderId: v,
-                            warningType: f.pj.STRANGER_DANGER,
-                            cta: m.NM.OPEN_MORE_TIPS
+                            warningId: v,
+                            senderId: O,
+                            warningType: m.pj.STRANGER_DANGER,
+                            cta: g.NM.OPEN_MORE_TIPS
                         }));
                 }
             },
-            ...(O
+            ...(j
                 ? []
                 : [
                       {
-                          text: y.intl.string(y.t.ie0QdH),
-                          color: a.zxk.Colors.RED,
-                          onclick: () => P(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
+                          text: C.intl.string(C.t.ie0QdH),
+                          color: o.zx.Colors.RED,
+                          onclick: () => Z(g.NM.USER_BANNER_BLOCK_CONFIRM, g.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

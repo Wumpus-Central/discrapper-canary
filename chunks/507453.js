@@ -1,15 +1,16 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var l = n(481060),
-    i = n(600164),
-    s = n(388032),
-    o = n(895453);
-let a = {
+var l = n(755721),
+    i = n(481060),
+    s = n(600164),
+    o = n(388032),
+    a = n(895453);
+let c = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
-        return (0, r.jsx)(l.hzk, {
-            className: o.content,
+        return (0, r.jsx)(i.hzk, {
+            className: a.content,
             scrollbarType: n,
             children: t
         });
@@ -18,8 +19,8 @@ let a = {
         let { error: t } = e;
         return null == t
             ? null
-            : (0, r.jsx)(l.Text, {
-                  className: o.error,
+            : (0, r.jsx)(i.Text, {
+                  className: a.error,
                   variant: 'text-sm/normal',
                   color: 'text-danger',
                   children: t
@@ -28,8 +29,8 @@ let a = {
     SlideFooter: function (e) {
         var t,
             n,
-            { mfaChallenge: a, setSlide: c, showConfirm: u = !1 } = e,
-            d = (function (e, t) {
+            { mfaChallenge: c, setSlide: u, showConfirm: d = !1 } = e,
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -48,22 +49,21 @@ let a = {
                 }
                 return l;
             })(e, ['mfaChallenge', 'setSlide', 'showConfirm']);
-        let f = a.methods.length > 1;
-        return f || u
-            ? (0, r.jsxs)(l.mzw, {
-                  className: o.footer,
-                  direction: u && !f ? i.Z.Direction.HORIZONTAL_REVERSE : i.Z.Direction.HORIZONTAL,
+        let h = c.methods.length > 1;
+        return h || d
+            ? (0, r.jsxs)(i.mzw, {
+                  className: a.footer,
+                  direction: d && !h ? s.Z.Direction.HORIZONTAL_REVERSE : s.Z.Direction.HORIZONTAL,
                   children: [
-                      f &&
-                          (0, r.jsx)(l.zxk, {
-                              look: l.zxk.Looks.LINK,
-                              onClick: () => c('select'),
-                              color: l.zxk.Colors.PRIMARY,
-                              children: s.intl.string(s.t.Tot4EB)
+                      h &&
+                          (0, r.jsx)(i.zxk, {
+                              variant: 'secondary',
+                              text: o.intl.string(o.t.Tot4EB),
+                              onClick: () => u('select')
                           }),
-                      u &&
+                      d &&
                           (0, r.jsx)(
-                              l.zxk,
+                              l.zx,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -88,8 +88,8 @@ let a = {
                                           }));
                                   }
                                   return e;
-                              })({ type: 'submit' }, d)),
-                              (n = n = { children: s.intl.string(s.t['cY+Ooa']) }),
+                              })({ type: 'submit' }, f)),
+                              (n = n = { children: o.intl.string(o.t['cY+Ooa']) }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                   : (function (e, t) {
@@ -110,24 +110,24 @@ let a = {
     },
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n } = e;
-        return (0, r.jsxs)(l.xBx, {
-            direction: i.Z.Direction.VERTICAL,
-            className: o.header,
+        return (0, r.jsxs)(i.xBx, {
+            direction: s.Z.Direction.VERTICAL,
+            className: a.header,
             separator: !1,
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(i.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: s.intl.string(s.t.saHocH)
+                    children: o.intl.string(o.t.saHocH)
                 }),
                 null != t &&
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: o.subtitle,
+                        className: a.subtitle,
                         children: t
                     }),
-                (0, r.jsx)(l.olH, {
-                    className: o.closeButton,
+                (0, r.jsx)(i.olH, {
+                    className: a.closeButton,
                     onClick: n
                 })
             ]

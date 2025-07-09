@@ -173,8 +173,9 @@ class B extends s.PureComponent {
     renderFooter() {
         return (0, i.jsx)(h.mzw, {
             children: (0, i.jsx)(h.zxk, {
-                onClick: this.props.onClose,
-                children: D.intl.string(D.t.i4jeWV)
+                variant: 'primary',
+                text: D.intl.string(D.t.i4jeWV),
+                onClick: this.props.onClose
             })
         });
     }

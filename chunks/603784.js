@@ -89,8 +89,8 @@ class T extends i.PureComponent {
 }
 let P = i.forwardRef((e, t) => {
     let n,
-        { log: l, className: o, expanded: f, guildId: _, guild: P, onChannelContextMenu: w, onContentClick: R, onHeaderClick: Z, onTargetContextMenu: D, onUserContextMenu: k, theme: A } = e,
-        L = i.useRef(null),
+        { log: l, className: o, expanded: f, guildId: _, guild: P, onChannelContextMenu: w, onContentClick: R, onHeaderClick: Z, onTargetContextMenu: D, onUserContextMenu: A, theme: L } = e,
+        k = i.useRef(null),
         M = (function () {
             let { changes: e } = l;
             return (l.actionType !== y.vB8.DELETE || l.action === y.rsA.MEMBER_BAN_ADD || l.action === y.rsA.MEMBER_KICK || l.action === y.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(l, e));
@@ -145,7 +145,7 @@ let P = i.forwardRef((e, t) => {
                                         } = l;
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
-                                                targetElementRef: L,
+                                                targetElementRef: k,
                                                 user: e,
                                                 guildId: _,
                                                 newAnalyticsLocations: [m.Z.AVATAR],
@@ -154,7 +154,7 @@ let P = i.forwardRef((e, t) => {
                                                     return (0, r.jsx)(
                                                         d.qEK,
                                                         S(E({}, e), {
-                                                            ref: L,
+                                                            ref: k,
                                                             onClick: (t) => {
                                                                 (t.stopPropagation(), e.onClick(t));
                                                             },
@@ -169,7 +169,7 @@ let P = i.forwardRef((e, t) => {
                                         if (null != n) {
                                             let e = u.Z.get(n);
                                             if (null != e) {
-                                                let t = (0, c.wj)(A) ? e.icon.darkSVG : e.icon.lightSVG;
+                                                let t = (0, c.wj)(L) ? e.icon.darkSVG : e.icon.lightSVG;
                                                 return (0, r.jsx)(d.qEK, {
                                                     className: I.avatar,
                                                     src: t,
@@ -202,7 +202,7 @@ let P = i.forwardRef((e, t) => {
                                                                               T,
                                                                               {
                                                                                   user: l.user,
-                                                                                  onContextMenu: k
+                                                                                  onContextMenu: A
                                                                               },
                                                                               t
                                                                           );

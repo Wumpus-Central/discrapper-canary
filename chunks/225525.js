@@ -1,15 +1,16 @@
-(r.d(e, { default: () => l }), r(388685));
+(r.d(e, { default: () => f }), r(388685));
 var n = r(255367),
     o = r(73800),
-    a = r(481060),
-    i = r(841183),
-    c = r(388032),
-    s = r(336372);
-function l(t) {
+    a = r(755721),
+    i = r(481060),
+    c = r(841183),
+    s = r(388032),
+    l = r(336372);
+function f(t) {
     var e,
         r,
-        { avatarId: l, storageHash: f, avatarDescription: u, onConfirmDelete: p, onClose: b } = t,
-        y = (function (t, e) {
+        { avatarId: f, storageHash: u, avatarDescription: p, onConfirmDelete: b, onClose: y } = t,
+        d = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -28,15 +29,15 @@ function l(t) {
             }
             return o;
         })(t, ['avatarId', 'storageHash', 'avatarDescription', 'onConfirmDelete', 'onClose']);
-    let [d, O] = o.useState(!1),
-        { avatarSrc: m, eventHandlers: v } = (0, i.Z)({
-            avatarId: l,
-            storageHash: f,
-            size: a.EFr.SIZE_120
+    let [O, m] = o.useState(!1),
+        { avatarSrc: v, eventHandlers: j } = (0, c.Z)({
+            avatarId: f,
+            storageHash: u,
+            size: i.EFr.SIZE_120
         }),
-        { onMouseEnter: j, onMouseLeave: g } = v;
+        { onMouseEnter: g, onMouseLeave: x } = j;
     return (0, n.jsxs)(
-        a.ConfirmModal,
+        i.ConfirmModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -63,53 +64,53 @@ function l(t) {
             return t;
         })(
             {
-                bodyClassName: s.modalContent,
-                header: c.intl.string(c.t.rfaLTE),
-                confirmText: c.intl.string(c.t.Lh0uy8),
-                cancelText: c.intl.string(c.t['ETE/oK']),
-                confirmButtonColor: a.zxk.Colors.RED,
-                loading: d,
+                bodyClassName: l.modalContent,
+                header: s.intl.string(s.t.rfaLTE),
+                confirmText: s.intl.string(s.t.Lh0uy8),
+                cancelText: s.intl.string(s.t['ETE/oK']),
+                confirmButtonColor: a.zx.Colors.RED,
+                loading: O,
                 onConfirm: async () => {
-                    O(!0);
+                    m(!0);
                     try {
-                        await p();
+                        await b();
                     } catch (t) {
                     } finally {
-                        O(!1);
+                        m(!1);
                     }
-                    b();
+                    y();
                 },
-                onClose: b
+                onClose: y
             },
-            y
+            d
         )),
         (r = r =
             {
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: c.intl.string(c.t.EKmxKS)
+                        children: s.intl.string(s.t.EKmxKS)
                     }),
                     (0, n.jsx)('div', {
-                        onMouseEnter: j,
-                        onMouseLeave: g,
-                        className: s.avatarContainer,
+                        onMouseEnter: g,
+                        onMouseLeave: x,
+                        className: l.avatarContainer,
                         children: (0, n.jsx)('img', {
-                            src: m,
-                            alt: u,
-                            className: s.avatar
+                            src: v,
+                            alt: p,
+                            className: l.avatar
                         })
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'eyebrow',
                         color: 'text-feedback-positive',
-                        children: c.intl.string(c.t['2Ld8DA'])
+                        children: s.intl.string(s.t['2Ld8DA'])
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-secondary',
-                        children: c.intl.string(c.t.Oe0xqq)
+                        children: s.intl.string(s.t.Oe0xqq)
                     })
                 ]
             }),

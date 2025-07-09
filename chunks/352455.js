@@ -33,16 +33,18 @@ function f(e) {
                 className: h.buttonContainer,
                 children: [
                     (0, r.jsx)(a.zxk, {
-                        size: a.zxk.Sizes.SMALL,
-                        onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], []),
-                        children: p.intl.string(p.t.ebojgI)
+                        variant: 'primary',
+                        size: 'sm',
+                        fullWidth: !0,
+                        text: p.intl.string(p.t.ebojgI),
+                        onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], [])
                     }),
                     (0, r.jsx)(a.zxk, {
-                        color: a.zxk.Colors.PRIMARY,
-                        size: a.zxk.Sizes.SMALL,
-                        onClick: () => n(d.L.DISMISS),
-                        look: a.zxk.Looks.LINK,
-                        children: p.intl.string(p.t.f3Pet7)
+                        variant: 'secondary',
+                        size: 'sm',
+                        fullWidth: !0,
+                        text: p.intl.string(p.t.f3Pet7),
+                        onClick: () => n(d.L.DISMISS)
                     })
                 ]
             })

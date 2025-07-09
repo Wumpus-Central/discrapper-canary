@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(392711),
     s = n.n(r),
-    l = n(481060),
-    a = n(358230),
+    a = n(481060),
+    l = n(358230),
     o = n(905423),
     c = n(984933),
     d = n(914010),
@@ -22,7 +22,7 @@ function b(e, t) {
         },
         ...(e === h.ME
             ? m.Z.getPrivateChannelIds()
-            : (0, a.Z)(e, {
+            : (0, l.Z)(e, {
                   withVoiceChannels: t,
                   withCurrentVoiceChannel: !0
               }).map((e) => e.id))
@@ -30,27 +30,27 @@ function b(e, t) {
 }
 let x = s().throttle(function (e, t) {
     var r, s;
-    let a,
-        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: E = !1 } = t,
-        j = null != (r = o.Z.getState().guildId) ? r : h.ME,
+    let l,
+        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: j = !1 } = t,
+        E = null != (r = o.Z.getState().guildId) ? r : h.ME,
         O = o.Z.getState().channelId,
         C = (function (e, t) {
             let n = [h.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
             return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
-        })(j, e),
-        S = e > 0 ? 0 : C.length - 1,
-        v = b(j, E),
-        T = v.indexOf(O) + e;
-    for (; null != j && '' !== j; ) {
-        if (((a = v[T]), f(j)))
-            for (; null != a && '' !== a; ) {
-                if ('string' == typeof a) {
-                    if (m(j, a)) return (0, g.K)(j, a, !1, _(j, a));
-                } else if ('object' == typeof a && x(a.resourceId, a.type))
+        })(E, e),
+        v = e > 0 ? 0 : C.length - 1,
+        S = b(E, j),
+        T = S.indexOf(O) + e;
+    for (; null != E && '' !== E; ) {
+        if (((l = S[T]), f(E)))
+            for (; null != l && '' !== l; ) {
+                if ('string' == typeof l) {
+                    if (m(E, l)) return (0, g.K)(E, l, !1, _(E, l));
+                } else if ('object' == typeof l && x(l.resourceId, l.type))
                     return (
-                        j !== d.Z.getGuildId() && (0, g.K)(j, null == (s = c.ZP.getDefaultChannel(j)) ? void 0 : s.id),
-                        (0, l.ZDy)(async () => {
+                        E !== d.Z.getGuildId() && (0, g.K)(E, null == (s = c.ZP.getDefaultChannel(E)) ? void 0 : s.id),
+                        (0, a.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e('42743'), n.e('22347'), n.e('56236'), n.e('7549')]).then(n.bind(n, 17671));
                             return (t) =>
                                 (0, i.jsx)(
@@ -98,15 +98,15 @@ let x = s().throttle(function (e, t) {
                                             }
                                             return e;
                                         })({}, t),
-                                        { guildId: j }
+                                        { guildId: E }
                                     )
                                 );
                         })
                     );
-                ((T += e), (a = v[T]));
+                ((T += e), (l = S[T]));
             }
-        if (((S += e), null == (j = C[S]) || '' === j)) break;
-        ((v = b(j, E)), (T = e < 0 ? v.length - 1 : 0));
+        if (((v += e), null == (E = C[v]) || '' === E)) break;
+        ((S = b(E, j)), (T = e < 0 ? S.length - 1 : 0));
     }
     p.S.dispatch(h.CkL.SHAKE_APP, {
         duration: 200,

@@ -1,65 +1,72 @@
-(n.d(t, { R: () => m }), n(388685));
+(n.d(t, { R: () => g }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(704215),
     o = n(211644),
     s = n(266454),
     l = n(243778),
-    c = n(944486),
-    u = n(626135),
-    d = n(436952),
-    f = n(839606),
-    _ = n(54480),
-    p = n(981631),
-    h = n(921944);
-function m(e) {
+    c = n(592125),
+    u = n(944486),
+    d = n(626135),
+    f = n(436952),
+    _ = n(839606),
+    p = n(54480),
+    h = n(981631),
+    m = n(921944);
+function g(e) {
     let { isSettingsOpen: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: m, setLastShownChatWallpaperPickerType: g, lastShownChatWallpaperPickerType: E } = (0, f.B)(),
-        b = (0, i.e7)([c.Z], () => c.Z.getCurrentlySelectedChannelId()),
-        {
-            canAccessPicker: y,
-            entryPoint: O,
-            isChatWallpaperSetterExperimentEnabled: v,
-            isDarkTheme: I,
-            selectedChannel: T
-        } = (0, _.m)({
-            location: 'useChatWallpaperPickerConfig',
-            selectedChannelId: b
+        { activePickerChannelId: n, openPickerForChannel: g, setLastShownChatWallpaperPickerType: E, lastShownChatWallpaperPickerType: b } = (0, _.B)(),
+        y = (0, i.e7)([u.Z], () => u.Z.getCurrentlySelectedChannelId()),
+        { isChatWallpaperEnabled: O, channelType: v } = (0, i.cj)([c.Z], () => {
+            let e = c.Z.getChannel(y);
+            return {
+                isChatWallpaperEnabled: null == e ? void 0 : e.isChatWallpaperEnabled,
+                channelType: null == e ? void 0 : e.type
+            };
         }),
-        S = y && !t,
-        [A, N] = (0, l.US)(S ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
-        C = A === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-        [R, P] = (0, l.US)(C ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
-        w = (0, o.ZP)((e) => e.recentlyShown[0]),
-        D = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
+        {
+            canAccessPicker: I,
+            entryPoint: T,
+            isChatWallpaperSetterExperimentEnabled: S,
+            isDarkTheme: A
+        } = (0, p.m)({
+            location: 'useChatWallpaperPickerConfig',
+            channelId: y
+        }),
+        N = I && !t,
+        [C, R] = (0, l.US)(N ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
+        P = C === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        [w, D] = (0, l.US)(P ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
+        L = (0, o.ZP)((e) => e.recentlyShown[0]),
+        x = (0, s.Nj)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
     if (
         (r.useMemo(() => {
-            v &&
-                (null == T ? void 0 : T.isChatWallpaperEnabled) === !0 &&
-                !D &&
-                R !== a.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
-                u.default.track(p.rMx.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON, {
-                    channel_id: T.id,
-                    channel_type: T.type,
+            S &&
+                !0 === O &&
+                !x &&
+                w !== a.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
+                d.default.track(h.rMx.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON, {
+                    channel_id: y,
+                    channel_type: v,
                     is_settings_open: t,
-                    is_dark_theme: I,
-                    is_overseer_dismissible_content_selected: C,
-                    last_dismissible_content_winner: null != w ? a.z[w] : 'None'
+                    is_dark_theme: A,
+                    is_overseer_dismissible_content_selected: P,
+                    last_dismissible_content_winner: null != L ? a.z[L] : 'None'
                 });
-        }, [v, T, D, R]),
-        !y)
+        }, [O, S, v, y, x, w]),
+        !I)
     )
         return;
-    let L = C && R === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((L && null != b && null == n && E !== f.j.COACHMARK && m(b), n === b)) {
-        let e = L ? f.j.COACHMARK : f.j.DEFAULT;
+    let M = P && w === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((M && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
+        let e = M ? _.j.COACHMARK : _.j.DEFAULT;
         return (
-            E !== e && g(e),
+            b !== e && E(e),
             {
                 pickerType: e,
-                markDismissed: L
+                markDismissed: M
                     ? (e) => {
-                          (P(e), O === d.FN.TOOLBAR && N(h.L.INDIRECT_ACTION));
+                          (D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION));
                       }
                     : void 0
             }

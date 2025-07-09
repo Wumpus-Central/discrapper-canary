@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     a = n(990547),
     l = n(442837),
-    o = n(544891),
-    c = n(481060),
+    c = n(544891),
+    o = n(481060),
     s = n(893776),
     u = n(37234),
     d = n(809206),
@@ -12,8 +12,8 @@ var r = n(255367),
     p = n(714338),
     m = n(213609),
     y = n(429142),
-    h = n(144114),
-    g = n(210887),
+    g = n(144114),
+    h = n(210887),
     b = n(23434),
     E = n(1964),
     v = n(762756),
@@ -65,9 +65,9 @@ function _(e, t) {
     );
 }
 function P() {
-    let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
+    let { action: e, theme: t } = (0, l.cj)([b.Z, h.Z], () => ({
             action: b.Z.getAction(),
-            theme: g.Z.theme
+            theme: h.Z.theme
         })),
         P = E.Z.getVerificationTypes(e),
         [N, R] = i.useState(0),
@@ -84,9 +84,9 @@ function P() {
         {},
         [P.toString()]
     );
-    let k = () => {
+    let C = () => {
             ((0, d.FD)(),
-                (0, c.ZDy)(
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e('35401').then(n.bind(n, 284549));
                         return (t) => (0, r.jsx)(e, A({}, t));
@@ -97,11 +97,11 @@ function P() {
                     }
                 ));
         },
-        C = () => {
-            (0, c.ZDy)(
+        I = () => {
+            (0, o.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                    return (t) => (0, r.jsx)(e, A({ reason: h.L.USER_ACTION_REQUIRED }, t));
+                    return (t) => (0, r.jsx)(e, A({ reason: g.L.USER_ACTION_REQUIRED }, t));
                 },
                 {
                     modalKey: w.M,
@@ -122,7 +122,7 @@ function P() {
         i.useEffect(() => {
             (null == S ? void 0 : S[0]) === O.PUi.PHONE &&
                 (null == P ? void 0 : P[0]) === O.PUi.EMAIL &&
-                (0, c.ZDy)(
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
@@ -138,7 +138,7 @@ function P() {
                     {
                         modalKey: j.HR,
                         Layer: y.ZP,
-                        onCloseCallback: k
+                        onCloseCallback: C
                     }
                 );
         }, [P, S]),
@@ -146,7 +146,7 @@ function P() {
             types: P,
             captchaKey: N,
             onCaptchaVerify: (e) => {
-                o.tn
+                c.tn
                     .post({
                         url: O.ANM.CAPTCHA,
                         body: { captcha_key: e },
@@ -159,10 +159,10 @@ function P() {
             },
             theme: t,
             onClick: (e) => {
-                e === O.PUi.EMAIL_OR_PHONE || e === O.PUi.EMAIL || e === O.PUi.REVERIFY_EMAIL ? k() : C();
+                e === O.PUi.EMAIL_OR_PHONE || e === O.PUi.EMAIL || e === O.PUi.REVERIFY_EMAIL ? C() : I();
             },
             onLogout: () => {
-                (0, c.ZDy)(
+                (0, o.ZDy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>

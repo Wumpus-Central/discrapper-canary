@@ -2,9 +2,9 @@ r.d(t, { Z: () => c });
 var n = r(255367);
 r(73800);
 var i = r(481060),
-    o = r(230711),
-    s = r(981631),
-    a = r(388032),
+    a = r(230711),
+    o = r(981631),
+    s = r(388032),
     l = r(927687);
 function c(e) {
     let { onClose: t } = e;
@@ -15,30 +15,34 @@ function c(e) {
                 className: l.finishTitle,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: a.intl.string(a.t['3C+rbG'])
+                children: s.intl.string(s.t['3C+rbG'])
             }),
             (0, n.jsx)(i.Text, {
                 className: l.subtitleFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: a.intl.string(a.t.TS1L09)
+                children: s.intl.string(s.t.TS1L09)
             }),
             (0, n.jsx)(i.Text, {
                 className: l.promptFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: a.intl.format(a.t.bWE0ZG, {
+                children: s.intl.format(s.t.bWE0ZG, {
                     onClick: () => {
-                        (t(), o.Z.open(s.oAB.ACCOUNT));
+                        (t(), a.Z.open(o.oAB.ACCOUNT));
                     }
                 })
             }),
-            (0, n.jsx)(i.zxk, {
+            (0, n.jsx)('div', {
+                'data-button-hoisted-classname-wrapper': !0,
                 className: l.button,
-                type: 'button',
-                size: i.zxk.Sizes.SMALL,
-                onClick: t,
-                children: a.intl.string(a.t['yD/zkp'])
+                children: (0, n.jsx)(i.zxk, {
+                    variant: 'primary',
+                    size: 'sm',
+                    text: s.intl.string(s.t['yD/zkp']),
+                    type: 'button',
+                    onClick: t
+                })
             })
         ]
     });

@@ -220,6 +220,12 @@ class v extends a.Z {
     getAudioInputDevices() {
         return (0, u.Hg)();
     }
+    getNoiseCancellationStats() {
+        return new Promise((e) => (0, d.zS)().getNoiseCancellationStats((t) => e(JSON.parse(t))));
+    }
+    setNoiseCancellationEnableStats(e) {
+        (0, d.zS)().setNoiseCancellationEnableStats(e);
+    }
     setAudioInputDevice(e) {
         (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
             ? (0, d.zS)().setInputDevice(e)

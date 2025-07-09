@@ -1,78 +1,79 @@
-n.d(t, { default: () => _ });
+n.d(t, { default: () => b });
 var c = n(255367),
     i = n(73800),
     r = n(442837),
     l = n(780384),
-    o = n(481060),
-    s = n(313201),
-    a = n(210887),
-    d = n(450269),
-    u = n(388032),
-    h = n(265582),
-    x = n(112847),
-    m = n(516954);
-function _(e) {
-    let { guildId: t, transitionState: n, onClose: _, onConfirm: k } = e,
-        b = (0, s.Dt)(),
-        g = (0, r.e7)([a.Z], () => a.Z.theme),
-        C = (0, l.wj)(g) ? x : m,
-        { rules: p, rulesAccepted: y } = (0, d.V)(t),
-        E = i.useCallback(() => {
-            (_(), k());
-        }, [_, k]);
-    return (0, c.jsxs)(o.Y0X, {
+    o = n(755721),
+    s = n(481060),
+    a = n(313201),
+    d = n(210887),
+    u = n(450269),
+    h = n(388032),
+    x = n(265582),
+    m = n(112847),
+    _ = n(516954);
+function b(e) {
+    let { guildId: t, transitionState: n, onClose: b, onConfirm: g } = e,
+        k = (0, a.Dt)(),
+        C = (0, r.e7)([d.Z], () => d.Z.theme),
+        p = (0, l.wj)(C) ? m : _,
+        { rules: y, rulesAccepted: E } = (0, u.V)(t),
+        f = i.useCallback(() => {
+            (b(), g());
+        }, [b, g]);
+    return (0, c.jsxs)(s.Y0X, {
         transitionState: n,
-        'aria-labelledby': b,
-        className: h.modal,
+        'aria-labelledby': k,
+        className: x.modal,
         parentComponent: 'GuildSettingsJoinRulesDiscoveryModal',
         children: [
-            (0, c.jsx)(o.olH, {
-                onClick: _,
-                className: h.close
+            (0, c.jsx)(s.olH, {
+                onClick: b,
+                className: x.close
             }),
-            (0, c.jsxs)(o.hzk, {
-                className: h.content,
+            (0, c.jsxs)(s.hzk, {
+                className: x.content,
                 children: [
                     (0, c.jsxs)('div', {
-                        className: h.header,
+                        className: x.header,
                         children: [
                             (0, c.jsx)('img', {
                                 alt: '',
-                                src: C,
+                                src: p,
                                 width: 80
                             }),
-                            (0, c.jsx)(o.X6q, {
+                            (0, c.jsx)(s.X6q, {
                                 variant: 'heading-xxl/semibold',
                                 color: 'header-primary',
-                                id: b,
-                                children: u.intl.string(u.t.Q8OFNz)
+                                id: k,
+                                children: h.intl.string(h.t.Q8OFNz)
                             })
                         ]
                     }),
-                    (0, c.jsx)(o.Text, {
+                    (0, c.jsx)(s.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: h.centeredText,
-                        children: u.intl.string(u.t['WT+829'])
+                        className: x.centeredText,
+                        children: h.intl.string(h.t['WT+829'])
                     }),
                     (0, c.jsx)('div', {
-                        className: h.checkboxContainer,
-                        children: p.map((e) =>
+                        className: x.checkboxContainer,
+                        children: y.map((e) =>
                             (0, c.jsxs)(
-                                o.XZJ,
+                                s.XZJ,
                                 {
-                                    className: h.checkbox,
+                                    className: x.checkbox,
                                     reverse: !0,
                                     value: e.checked,
-                                    align: o.XZJ.Aligns.CENTER,
+                                    align: s.XZJ.Aligns.CENTER,
                                     onChange: e.onCheck,
                                     children: [
-                                        (0, c.jsx)(o.Text, {
+                                        (0, c.jsx)(s.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
                                             children: e.title
                                         }),
-                                        (0, c.jsx)(o.Text, {
+                                        (0, c.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-secondary',
                                             children: e.body
@@ -85,17 +86,17 @@ function _(e) {
                     })
                 ]
             }),
-            (0, c.jsx)(o.mzw, {
-                children: (0, c.jsx)(o.zxk, {
+            (0, c.jsx)(s.mzw, {
+                children: (0, c.jsx)(o.zx, {
                     fullWidth: !0,
-                    disabled: !y,
-                    color: o.zxk.Colors.BRAND,
-                    onClick: E,
-                    size: o.zxk.Sizes.LARGE,
-                    children: (0, c.jsx)(o.Text, {
+                    disabled: !E,
+                    color: o.zx.Colors.BRAND,
+                    onClick: f,
+                    size: o.zx.Sizes.LARGE,
+                    children: (0, c.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'currentColor',
-                        children: u.intl.string(u.t['qjtt/v'])
+                        children: h.intl.string(h.t['qjtt/v'])
                     })
                 })
             })

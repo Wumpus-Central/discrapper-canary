@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => k });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -24,9 +24,9 @@ var r = n(255367),
     E = n(430824),
     S = n(51144),
     I = n(388032),
-    R = n(555405),
-    O = n(710931),
-    P = n(771429),
+    O = n(555405),
+    P = n(710931),
+    R = n(771429),
     y = n(350381);
 function w(e) {
     let t,
@@ -43,12 +43,12 @@ function w(e) {
             ((t = I.t['/wqiSk']), (n = I.t.o47YZm));
     }
     return (0, r.jsxs)('div', {
-        className: R.emptyContainer,
+        className: O.emptyContainer,
         children: [
             (0, r.jsx)(d.dz2, {
                 size: 'md',
                 color: 'currentColor',
-                className: R.checkmark
+                className: O.checkmark
             }),
             (0, r.jsx)(d.X6q, {
                 variant: 'heading-md/medium',
@@ -66,10 +66,10 @@ function A(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, r.jsx)('thead', {
         children: (0, r.jsxs)('tr', {
-            className: P.tableHeaderRow,
+            className: R.tableHeaderRow,
             children: [
                 (0, r.jsx)('th', {
-                    className: R.headerCell,
+                    className: O.headerCell,
                     children: (0, r.jsx)(d.Text, {
                         variant: 'eyebrow',
                         color: 'interactive-normal',
@@ -77,9 +77,9 @@ function A(e) {
                     })
                 }),
                 (0, r.jsx)('th', {
-                    className: a()(R.headerCell, y.mediumCol),
+                    className: a()(O.headerCell, y.mediumCol),
                     children: (0, r.jsxs)(d.P3F, {
-                        className: R.sortItem,
+                        className: O.sortItem,
                         onClick: n,
                         children: [
                             (0, r.jsx)(d.Text, {
@@ -89,18 +89,18 @@ function A(e) {
                             }),
                             t === b.Nw.TIMESTAMP_ASC
                                 ? (0, r.jsx)(C.Z, {
-                                      className: R.sortIcon,
+                                      className: O.sortIcon,
                                       direction: C.Z.Directions.UP
                                   })
                                 : (0, r.jsx)(C.Z, {
-                                      className: R.sortIcon,
+                                      className: O.sortIcon,
                                       direction: C.Z.Directions.DOWN
                                   })
                         ]
                     })
                 }),
                 (0, r.jsx)('th', {
-                    className: a()(R.headerCell, R.moreOptionsCol),
+                    className: a()(O.headerCell, O.moreOptionsCol),
                     children: (0, r.jsx)(d.Text, {
                         variant: 'eyebrow',
                         color: 'interactive-normal',
@@ -259,7 +259,7 @@ let Z = l.memo(function (e) {
                           })
                       }),
                       (0, r.jsx)('td', {
-                          className: R.moreOptionsCol,
+                          className: O.moreOptionsCol,
                           children:
                               g &&
                               (0, r.jsx)(d.ua7, {
@@ -284,7 +284,7 @@ let Z = l.memo(function (e) {
                   ]
               });
     }),
-    k = () => {
+    D = () => {
         let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
             t = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
             n = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
@@ -295,18 +295,18 @@ let Z = l.memo(function (e) {
                     children: (0, r.jsxs)('div', {
                         className: y.memberNameContainer,
                         children: [
-                            (0, r.jsx)('div', { className: a()(R.placeholderAvatar, y.memberAvatar) }),
+                            (0, r.jsx)('div', { className: a()(O.placeholderAvatar, y.memberAvatar) }),
                             (0, r.jsx)('div', {
                                 className: y.memberName,
                                 children: (0, r.jsx)('div', {
-                                    className: R.placeholderText,
+                                    className: O.placeholderText,
                                     style: { width: e }
                                 })
                             }),
                             (0, r.jsx)('div', {
                                 className: y.memberGlobalName,
                                 children: (0, r.jsx)('div', {
-                                    className: R.placeholderTextSmall,
+                                    className: O.placeholderTextSmall,
                                     style: { width: t }
                                 })
                             })
@@ -316,15 +316,15 @@ let Z = l.memo(function (e) {
                 (0, r.jsx)('td', {
                     className: y.mediumCol,
                     children: (0, r.jsx)('div', {
-                        className: R.placeholderText,
+                        className: O.placeholderText,
                         style: { width: n }
                     })
                 }),
-                (0, r.jsx)('td', { className: R.moreOptionsCol })
+                (0, r.jsx)('td', { className: O.moreOptionsCol })
             ]
         });
     };
-function D(e) {
+function k(e) {
     let { guildId: t, currentTab: n } = e,
         i = l.useRef(null),
         a = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
@@ -346,13 +346,13 @@ function D(e) {
     return null == a
         ? null
         : (0, r.jsx)('div', {
-              className: O.mainTableContainer,
+              className: P.mainTableContainer,
               children: (0, r.jsx)(d.Den, {
-                  className: O.horizatonalScroller,
+                  className: P.horizatonalScroller,
                   ref: i,
                   orientation: 'horizontal',
                   children: (0, r.jsxs)('table', {
-                      className: R.table,
+                      className: O.table,
                       children: [
                           (0, r.jsx)(A, {
                               sortOrder: s,
@@ -360,7 +360,7 @@ function D(e) {
                           }),
                           (0, r.jsx)('tbody', {
                               children: o
-                                  ? [, , , , ,].fill(0).map((e, t) => (0, r.jsx)(k, {}, 'placeholder-'.concat(t)))
+                                  ? [, , , , ,].fill(0).map((e, t) => (0, r.jsx)(D, {}, 'placeholder-'.concat(t)))
                                   : 0 === u.length
                                     ? (0, r.jsx)('td', {
                                           colSpan: 3,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var i = n(255367),
     r = n(73800),
     s = n(481060),
-    l = n(906732),
-    a = n(921801),
+    a = n(906732),
+    l = n(921801),
     o = n(695346),
     c = n(569550),
     d = n(726985),
@@ -12,7 +12,7 @@ var i = n(255367),
 function p(e) {
     let { refreshStyles: t = !1 } = e,
         n = o.I0.useSetting(),
-        { analyticsLocations: p } = (0, l.ZP)(),
+        { analyticsLocations: p } = (0, a.ZP)(),
         g = r.useCallback(
             (e) => {
                 ((0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), p), o.I0.updateSetting(e));
@@ -26,7 +26,7 @@ function p(e) {
             hideBorder: t,
             children: u.intl.string(u.t['1CzWUF'])
         });
-    return (0, i.jsx)(a.F, {
+    return (0, i.jsx)(l.F, {
         setting: d.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS,
         children: t
             ? h

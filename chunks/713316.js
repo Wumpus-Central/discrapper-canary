@@ -1,45 +1,46 @@
-n.d(t, { w: () => _ });
+n.d(t, { w: () => p });
 var r = n(255367);
 n(73800);
 var i = n(512722),
     a = n.n(i),
-    o = n(481060),
-    s = n(563132),
-    l = n(698708),
-    c = n(844068),
-    u = n(27034),
-    d = n(388032),
-    f = n(419667);
-function _(e) {
+    o = n(755721),
+    s = n(481060),
+    l = n(563132),
+    c = n(698708),
+    u = n(844068),
+    d = n(27034),
+    f = n(388032),
+    _ = n(419667);
+function p(e) {
     let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: i, application: _ } = (0, s.JL)();
-    (a()(null != i, 'Expected selectedSkuId'), a()(null != _, 'Expected application'));
-    let p = n[i];
-    a()(null != p, 'Expected sku');
-    let h = d.intl.formatToPlainString(d.t.wK0IbG, {
-        applicationName: _.name,
-        itemName: p.name
+        { skusById: n, selectedSkuId: i, application: p } = (0, l.JL)();
+    (a()(null != i, 'Expected selectedSkuId'), a()(null != p, 'Expected application'));
+    let h = n[i];
+    a()(null != h, 'Expected sku');
+    let m = f.intl.formatToPlainString(f.t.wK0IbG, {
+        applicationName: p.name,
+        itemName: h.name
     });
-    return (0, r.jsxs)(u.C3, {
+    return (0, r.jsxs)(d.C3, {
         children: [
+            (0, r.jsx)(u.Z, {}),
             (0, r.jsx)(c.Z, {}),
-            (0, r.jsx)(l.Z, {}),
             (0, r.jsxs)('div', {
-                className: f.confirmation,
+                className: _.confirmation,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-xxl/bold',
-                        className: f.confirmationHeader,
+                        className: _.confirmationHeader,
                         children: 'Success!'
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        children: h
+                        children: m
                     }),
-                    (0, r.jsx)('div', { className: f.divider }),
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)('div', { className: _.divider }),
+                    (0, r.jsx)(o.zx, {
                         onClick: t,
-                        children: d.intl.string(d.t.cpT0Cg)
+                        children: f.intl.string(f.t.cpT0Cg)
                     })
                 ]
             })

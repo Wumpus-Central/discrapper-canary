@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(73800),
     i = n(442837),
     l = n(367907),
-    o = n(906732),
-    a = n(703656),
+    a = n(906732),
+    o = n(703656),
     s = n(626135),
     c = n(730647),
     u = n(289393),
@@ -24,7 +24,7 @@ function h(e) {
                 }),
             [m]
         ),
-        { analyticsLocations: C } = (0, o.ZP)(null != (t = (0, a.DR)()) ? t : []),
+        { analyticsLocations: C } = (0, a.ZP)(null != (t = (0, o.DR)()) ? t : []),
         x = r.useRef(!1);
     r.useEffect(() => {
         g &&

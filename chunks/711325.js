@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var i = n(255367),
     r = n(481060),
     s = n(410030),
-    l = n(583901),
-    a = n(780771),
+    a = n(583901),
+    l = n(780771),
     o = n(981631),
     c = n(572147);
 function d(e) {
@@ -18,11 +18,11 @@ function d(e) {
             }),
             (0, i.jsx)('div', {
                 className: c.themes,
-                children: a.vs.map((e) => {
+                children: l.vs.map((e) => {
                     let r = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
                         s = t === e.name;
                     return (0, i.jsx)(
-                        l.S4,
+                        a.S4,
                         {
                             onSelect: () => n(e),
                             style: { background: r },

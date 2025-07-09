@@ -33,9 +33,9 @@ function m(e) {
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.zxk, {
+                      variant: 'critical-primary',
+                      text: u.intl.string(u.t.FrOFSk),
                       disabled: !h || b || j || _,
-                      look: l.zxk.Looks.FILLED,
-                      color: l.zxk.Colors.RED,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('35282').then(n.bind(n, 157429));
@@ -85,8 +85,7 @@ function m(e) {
                                   );
                               };
                           });
-                      },
-                      children: u.intl.string(u.t.FrOFSk)
+                      }
                   })
               ]
           });

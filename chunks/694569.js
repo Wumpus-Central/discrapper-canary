@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(73800),
     s = n(630388),
-    l = n(88658),
-    a = n(695346),
+    a = n(88658),
+    l = n(695346),
     o = n(546957),
     c = n(838436),
     d = n(51331),
@@ -11,8 +11,8 @@ var i = n(255367),
     m = n(981631),
     p = n(388032);
 function g() {
-    let e = a.xq.useSetting(),
-        t = r.useMemo(() => (0, l.bL)(e), [e]);
+    let e = l.xq.useSetting(),
+        t = r.useMemo(() => (0, a.bL)(e), [e]);
     return (0, i.jsxs)(o.Z, {
         children: [
             (0, i.jsx)(c.U, {
@@ -20,7 +20,7 @@ function g() {
                 children: (0, i.jsx)(d.Z, {
                     title: p.intl.string(p.t['7x9dyM']),
                     value: t.all,
-                    onChange: (e) => a.xq.updateSetting(e ? m.HGf : m.HGf & ~m.SOq.NO_RELATION)
+                    onChange: (e) => l.xq.updateSetting(e ? m.HGf : m.HGf & ~m.SOq.NO_RELATION)
                 })
             }),
             (0, i.jsx)(c.U, {
@@ -28,7 +28,7 @@ function g() {
                 children: (0, i.jsx)(d.Z, {
                     title: p.intl.string(p.t.NfeuZ2),
                     value: t.all || t.mutualFriends,
-                    onChange: (t) => a.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_FRIENDS) : s.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
+                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_FRIENDS) : s.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
                 })
             }),
             (0, i.jsx)(c.U, {
@@ -36,7 +36,7 @@ function g() {
                 children: (0, i.jsx)(d.Z, {
                     title: p.intl.string(p.t.qsMfsL),
                     value: t.all || t.mutualGuilds,
-                    onChange: (t) => a.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_GUILDS) : s.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
+                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_GUILDS) : s.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
                 })
             })
         ]

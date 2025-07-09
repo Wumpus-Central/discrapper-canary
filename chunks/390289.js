@@ -2,8 +2,8 @@
 var r,
     i = n(442837),
     l = n(570140),
-    o = n(314897),
-    a = n(592125),
+    a = n(314897),
+    o = n(592125),
     s = n(430824),
     c = n(944486),
     u = n(9156),
@@ -86,7 +86,7 @@ function Z(e) {
 }
 function N(e) {
     if (!u.ZP.useNewNotifications || O.has(e)) return !1;
-    let t = a.Z.getBasicChannel(e);
+    let t = o.Z.getBasicChannel(e);
     if (null == t || null == t.guild_id || u.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) || T(t.guild_id, t.id) || T(t.guild_id, t.parent_id)) return !1;
     let n = u.ZP.resolveUnreadSetting(t);
     return u.ZP.getChannelUnreadSetting(t.guild_id, t.id) === g.i.UNSET && n !== g.i.ALL_MESSAGES;
@@ -98,7 +98,7 @@ function T(e, t) {
 }
 class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, a.Z));
+        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, o.Z));
     }
     getState() {
         return v;
@@ -109,7 +109,7 @@ class A extends (r = i.ZP.PersistedStore) {
     }
     maybeAutoUpgradeChannel(e) {
         if (!N(e)) return !1;
-        let t = a.Z.getBasicChannel(e);
+        let t = o.Z.getBasicChannel(e);
         return (
             null != t &&
             null != t.guild_id &&
@@ -143,7 +143,7 @@ let w = new A(l.Z, {
         },
         MESSAGE_CREATE: function (e) {
             var t;
-            if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== o.default.getId() || !N(e.channelId)) return !1;
+            if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== a.default.getId() || !N(e.channelId)) return !1;
             let n = Z(e.channelId);
             ((n.lastActionTime = Date.now()), n.numSends++);
         }

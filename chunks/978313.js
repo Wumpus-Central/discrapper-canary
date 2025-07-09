@@ -16,14 +16,14 @@ var n = r(255367),
 function E(e) {
     let { detectedGame: t, trackAction: r } = e,
         [a, E] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [h, x] = i.useState(!0),
+        [x, h] = i.useState(!0),
         [v, j] = i.useState(!1),
         b = i.useRef(null),
         { width: I, height: y } = (0, d.Z)();
     return (i.useEffect(() => {
         let e = b.current;
-        null != e && j(e.scrollHeight - e.clientHeight > 1 || !h);
-    }, [b, I, y, h]),
+        null != e && j(e.scrollHeight - e.clientHeight > 1 || !x);
+    }, [b, I, y, x]),
     null == t.summary)
         ? null
         : (0, n.jsxs)('div', {
@@ -46,7 +46,7 @@ function E(e) {
                       }),
                   (0, n.jsx)(o.xv, {
                       ref: b,
-                      lineClamp: h ? 8 : void 0,
+                      lineClamp: x ? 8 : void 0,
                       variant: 'text-sm/normal',
                       children: a ? t.summaryLocalized : t.summary
                   }),
@@ -54,11 +54,11 @@ function E(e) {
                       (0, n.jsx)(u.P3F, {
                           className: p.clickable,
                           onClick: () => {
-                              (r(h ? m.as.ShowMore : m.as.ShowLess), x(!h));
+                              (r(x ? m.as.ShowMore : m.as.ShowLess), h(!x));
                           },
                           children: (0, n.jsx)(o.xv, {
                               variant: 'text-sm/semibold',
-                              children: h ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t['6MwJo6'])
+                              children: x ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t['6MwJo6'])
                           })
                       }),
                   (0, n.jsx)(g.Z, {

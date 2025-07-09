@@ -1,29 +1,30 @@
-n.d(t, { u: () => s });
+n.d(t, { u: () => c });
 var r = n(255367);
 n(73800);
 var i = n(780384),
-    l = n(481060),
-    a = n(410030),
-    o = n(450552);
-function s(e) {
+    l = n(755721),
+    a = n(481060),
+    o = n(410030),
+    s = n(450552);
+function c(e) {
     let { text: t, onClick: n } = e,
-        s = (0, a.ZP)(),
-        c = (0, i.wj)(s);
-    return (0, r.jsxs)(l.zxk, {
+        c = (0, o.ZP)(),
+        u = (0, i.wj)(c);
+    return (0, r.jsxs)(l.zx, {
         size: 'medium',
-        color: c ? l.Ttl.TRANSPARENT : l.Ttl.WHITE,
-        className: o.button,
+        color: u ? l.Tt.TRANSPARENT : l.Tt.WHITE,
+        className: s.button,
         onClick: n,
-        innerClassName: o.innerButton,
+        innerClassName: s.innerButton,
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-sm/semibold',
                 color: 'header-primary',
                 children: t
             }),
-            (0, r.jsx)(l.Gr1, {
+            (0, r.jsx)(a.Gr1, {
                 size: 'sm',
-                color: l.TVs.colors.HEADER_PRIMARY
+                color: a.TVs.colors.HEADER_PRIMARY
             })
         ]
     });

@@ -2,8 +2,8 @@ n.d(t, { default: () => p });
 var r = n(255367),
     i = n(73800),
     s = n(512722),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(233787),
     c = n(594174),
     u = n(74538),
@@ -33,7 +33,7 @@ class g extends i.Component {
         });
     }
 }
-let p = a.ZP.connectStores([c.default], () => {
+let p = l.ZP.connectStores([c.default], () => {
     let e = c.default.getCurrentUser();
-    return (l()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
+    return (a()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
 })(g);

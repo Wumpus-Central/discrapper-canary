@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        baseRules: () => v,
+        baseRules: () => j,
         customRules: () => P
     }),
     n(35282),
@@ -46,14 +46,14 @@ function h(e) {
 }
 let O = a().defaultRules.link,
     y = { section: f.jXE.SETTINGS_CHANGELOG },
-    j = (e) => {
+    v = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: o = {} } = e,
             s = (0, c.xSt)(),
             a = parseInt(t, 10),
             u = isNaN(a) ? 1 : a;
         return l.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => o[e]))) }, n);
     },
-    v = null != p.Z ? p.Z.defaultRules : null,
+    j = null != p.Z ? p.Z.defaultRules : null,
     P = {
         link: {
             parse(e, t, n) {
@@ -120,7 +120,7 @@ let O = a().defaultRules.link,
         lheading: (e) => ({
             react: (t, n, l) =>
                 (0, r.jsx)(
-                    j,
+                    v,
                     {
                         level: t.level,
                         className: t.className,
@@ -133,7 +133,7 @@ let O = a().defaultRules.link,
         heading: {
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    j,
+                    v,
                     {
                         level: e.level,
                         children: t(e.content, n)
@@ -154,6 +154,6 @@ let O = a().defaultRules.link,
                 );
             }
         },
-        blockQuote: { react: null == v ? void 0 : v.blockQuote.react },
+        blockQuote: { react: null == j ? void 0 : j.blockQuote.react },
         paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
     };

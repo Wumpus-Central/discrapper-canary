@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(544891),
     i = n(570140),
     l = n(981631);
-let o = {
+let a = {
     fetchRegions(e) {
         r.tn
             .get({

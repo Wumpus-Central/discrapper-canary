@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(911969),
-    a = n(581364),
+    a = n(911969),
+    o = n(581364),
     s = n(869765),
     c = n(699516),
     u = n(697451),
@@ -24,8 +24,8 @@ let h = i.memo(function (e) {
         E = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
         S = (0, d.Nk)(h.interaction, f, g, x),
         I = (0, d.NU)(b, x),
-        P = (0, a.t0)(h),
-        Z = (null == P ? void 0 : P.type) === o.B8.APPLICATION_COMMAND ? (null == (n = P.target_user) ? void 0 : n.id) : void 0,
+        P = (0, o.t0)(h),
+        Z = (null == P ? void 0 : P.type) === a.B8.APPLICATION_COMMAND ? (null == (n = P.target_user) ? void 0 : n.id) : void 0,
         N = (0, d.wq)(Z, f.id),
         T = (0, d.JC)(Z, f, y, x),
         A = (0, d.rY)(C, x),
@@ -39,7 +39,7 @@ let h = i.memo(function (e) {
                 referencedAvatarProfile: !1
             });
         }, [x]),
-        k = i.useCallback(
+        M = i.useCallback(
             () =>
                 (0, p.Z)({
                     message: h,
@@ -74,11 +74,11 @@ let h = i.memo(function (e) {
         onClickTargetUsername: T,
         onTargetUserContextMenu: N,
         onPopoutRequestClose: R,
-        renderTargetMessage: k
+        renderTargetMessage: M
     });
 });
 function f(e, t, n) {
-    let { message: i, channel: l, compact: o } = e;
+    let { message: i, channel: l, compact: a } = e;
     return null != i.interaction && '' !== i.interaction.displayName
         ? (0, r.jsx)(
               h,
@@ -110,7 +110,7 @@ function f(e, t, n) {
                   {
                       message: i,
                       channel: l,
-                      compact: o,
+                      compact: a,
                       setPopout: t
                   },
                   n

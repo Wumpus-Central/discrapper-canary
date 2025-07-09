@@ -1,16 +1,17 @@
-(n.d(t, { Z: () => b }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(906732),
-    c = n(785717),
-    u = n(892001),
-    d = n(280885),
-    f = n(388032),
-    _ = n(383994);
-function p(e, t, n) {
+    s = n(755721),
+    l = n(481060),
+    c = n(906732),
+    u = n(785717),
+    d = n(892001),
+    f = n(280885),
+    _ = n(388032),
+    p = n(383994);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +35,12 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             }));
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,65 +52,65 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let E = 57.75,
-    b = i.memo(function (e) {
-        let { user: t, onClose: n, bio: a, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
-            { context: b } = (0, c.KZ)(),
-            { analyticsLocations: y } = (0, l.ZP)(),
-            [O, v] = i.useState(!1),
-            [I, T] = i.useState(!1),
-            S = i.useRef(null),
-            A = (e) => {
-                ((S.current = e), null != e && (v(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && T(!0)));
+let b = 57.75,
+    y = i.memo(function (e) {
+        let { user: t, onClose: n, bio: a, hidePersonalInformation: h, viewFullBioDisabled: g = !1 } = e,
+            { context: y } = (0, u.KZ)(),
+            { analyticsLocations: O } = (0, c.ZP)(),
+            [v, I] = i.useState(!1),
+            [T, S] = i.useState(!1),
+            A = i.useRef(null),
+            N = (e) => {
+                ((A.current = e), null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > b && S(!0)));
             },
-            N = () => {
+            C = () => {
                 (null == n || n(),
-                    (0, u.openUserProfileModal)(
-                        g(h({}, b), {
+                    (0, d.openUserProfileModal)(
+                        E(m({}, y), {
                             userId: t.id,
-                            sourceAnalyticsLocations: y
+                            sourceAnalyticsLocations: O
                         })
                     ));
             },
-            C = (e) => {
-                null == S.current || S.current.contains(e.relatedTarget) || (S.current.scrollTop = 0);
+            R = (e) => {
+                null == A.current || A.current.contains(e.relatedTarget) || (A.current.scrollTop = 0);
             };
-        return p || null == a || '' === a
+        return h || null == a || '' === a
             ? null
             : (0, r.jsxs)('div', {
                   children: [
                       (0, r.jsx)('div', {
-                          ref: A,
-                          className: o()(_.descriptionClamp, I && _.maxBioHeight),
-                          onBlur: C,
-                          children: (0, r.jsx)(d.Z, {
+                          ref: N,
+                          className: o()(p.descriptionClamp, T && p.maxBioHeight),
+                          onBlur: R,
+                          children: (0, r.jsx)(f.Z, {
                               userBio: a,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
                       }),
-                      (O || I) &&
-                          (0, r.jsx)(s.zxk, {
-                              look: s.zxk.Looks.BLANK,
-                              size: s.zxk.Sizes.NONE,
-                              className: _.viewFullBio,
-                              color: o()(_.viewFullBioColor, m && _.viewFullBioDisabled),
-                              onClick: N,
-                              children: (0, r.jsx)(s.Text, {
+                      (v || T) &&
+                          (0, r.jsx)(s.zx, {
+                              look: s.zx.Looks.BLANK,
+                              size: s.zx.Sizes.NONE,
+                              className: p.viewFullBio,
+                              color: o()(p.viewFullBioColor, g && p.viewFullBioDisabled),
+                              onClick: C,
+                              children: (0, r.jsx)(l.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: f.intl.string(f.t.YDiPq6)
+                                  children: _.intl.string(_.t.YDiPq6)
                               })
                           })
                   ]

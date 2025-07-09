@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(704215),
-    l = n(481060),
-    a = n(570140),
+    a = n(481060),
+    l = n(570140),
     o = n(710845),
     c = n(645041),
     d = n(430824),
@@ -17,14 +17,14 @@ let f = new o.Z('GuildTagCoachmark');
 function b(e) {
     function t(t) {
         var n;
-        (a.Z.dispatch({
+        (l.Z.dispatch({
             type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag }
         }),
             null == (n = e.onDismiss) || n.call(e, t));
     }
-    return (0, i.jsx)(l.yRy, {
+    return (0, i.jsx)(a.yRy, {
         targetElementRef: e.targetElementRef,
         position: 'top',
         spacing: 16,
@@ -44,7 +44,7 @@ function b(e) {
 function x(e) {
     function t(t) {
         var n;
-        (a.Z.dispatch({
+        (l.Z.dispatch({
             type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag }
@@ -52,7 +52,7 @@ function x(e) {
             (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, g.L.DISMISS),
             null == (n = e.onDismiss) || n.call(e, t));
     }
-    return (0, i.jsx)(l.yRy, {
+    return (0, i.jsx)(a.yRy, {
         targetElementRef: e.targetElementRef,
         position: 'top',
         spacing: 16,
@@ -87,7 +87,7 @@ function _(e) {
                   children: e.children
               })
         : (f.error('GuildTagCoachmark rendered without guildId or coachmark type.'),
-          (0, i.jsx)(l.yRy, {
+          (0, i.jsx)(a.yRy, {
               position: 'top',
               renderPopout: () => (0, i.jsx)('div', {}),
               targetElementRef: e.targetElementRef,

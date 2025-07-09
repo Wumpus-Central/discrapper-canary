@@ -1,9 +1,9 @@
-n.d(t, { default: () => A });
-var l = n(255367),
-    r = n(73800),
-    i = n(481060),
-    o = n(230711),
-    a = n(782568),
+n.d(e, { default: () => v });
+var r = n(255367),
+    l = n(73800),
+    a = n(481060),
+    i = n(230711),
+    o = n(782568),
     s = n(168107),
     d = n(480916),
     c = n(81643),
@@ -12,166 +12,166 @@ var l = n(255367),
     _ = n(247206),
     I = n(470734),
     f = n(981631),
-    C = n(526761),
-    m = n(388032),
-    h = n(618386),
-    g = n(444812);
-let A = (e) => {
-    let { channelId: t, messageId: A, transitionState: R, onClose: v } = e,
+    m = n(526761),
+    g = n(388032),
+    C = n(618386),
+    h = n(444812);
+let v = (t) => {
+    let { channelId: e, messageId: v, transitionState: A, onClose: R } = t,
         L = (0, u.Z)(),
-        x = (0, c.Jm)(),
-        b = (0, _.m8)(),
-        p = (0, I.pn)('SensitiveContentFilterSetting'),
-        M = r.useMemo(() => x && b, [x, b]),
-        T = r.useCallback(
-            (e) => {
+        p = (0, c.Jm)(),
+        x = (0, _.m8)(),
+        b = (0, I.pn)('SensitiveContentFilterSetting'),
+        y = l.useMemo(() => p && x, [p, x]),
+        T = l.useCallback(
+            (t) => {
                 (0, _.aP)({
-                    action: e,
-                    channelId: t,
-                    messageId: A
+                    action: t,
+                    channelId: e,
+                    messageId: v
                 });
             },
-            [t, A]
+            [e, v]
         ),
-        N = r.useCallback(() => {
-            (v(),
+        M = l.useCallback(() => {
+            (R(),
                 T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                (0, i.ZDy)(async () => {
-                    let { default: e } = await n(788679);
+                (0, a.ZDy)(async () => {
+                    let { default: t } = await n(788679);
                     return (n) =>
-                        (0, l.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        l = Object.keys(n);
+                        (0, r.jsx)(
+                            t,
+                            (function (t) {
+                                for (var e = 1; e < arguments.length; e++) {
+                                    var n = null != arguments[e] ? arguments[e] : {},
+                                        r = Object.keys(n);
                                     ('function' == typeof Object.getOwnPropertySymbols &&
-                                        (l = l.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                             })
                                         )),
-                                        l.forEach(function (t) {
-                                            var l;
-                                            ((l = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: l,
+                                        r.forEach(function (e) {
+                                            var r;
+                                            ((r = n[e]),
+                                                e in t
+                                                    ? Object.defineProperty(t, e, {
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = l));
+                                                    : (t[e] = r));
                                         }));
                                 }
-                                return e;
+                                return t;
                             })(
                                 {
-                                    channelId: t,
-                                    messageId: A
+                                    channelId: e,
+                                    messageId: v
                                 },
                                 n
                             )
                         );
                 }));
-        }, [t, A, v, T]);
-    r.useEffect(() => {
+        }, [e, v, R, T]);
+    l.useEffect(() => {
         (0, _.aP)({
             action: _.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
-            channelId: t,
-            messageId: A
+            channelId: e,
+            messageId: v
         });
-    }, [t, A]);
-    let P = r.useCallback(
+    }, [e, v]);
+    let O = l.useCallback(
         () =>
-            M
-                ? m.intl.format(m.t['TGqx+v'], {
+            y
+                ? g.intl.format(g.t['TGqx+v'], {
                       handleOnHelpUrlHook: () => {
                           (s.Z.openUrl(E.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
                       }
                   })
-                : b
+                : x
                   ? null
-                  : m.intl.format(m.t.Ge0HUl, {
+                  : g.intl.format(g.t.Ge0HUl, {
                         handleFalsePositiveHook: () => {
-                            (N(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
+                            (M(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
                         }
                     }),
-        [M, b, N, T]
+        [y, x, M, T]
     );
-    return (0, l.jsxs)(i.Y0X, {
-        transitionState: R,
-        'aria-label': m.intl.string(m.t.xdm3XF),
+    return (0, r.jsxs)(a.Y0X, {
+        transitionState: A,
+        'aria-label': g.intl.string(g.t.xdm3XF),
         parentComponent: 'ExplicitMediaLearnMoreModal',
         children: [
-            (0, l.jsx)(i.xBx, {
+            (0, r.jsx)(a.xBx, {
                 separator: !1,
-                className: h.modalHeader,
-                children: (0, l.jsx)('img', {
-                    src: g,
-                    alt: m.intl.string(m.t.id3fND),
-                    className: h.headerImg
+                className: C.modalHeader,
+                children: (0, r.jsx)('img', {
+                    src: h,
+                    alt: g.intl.string(g.t.id3fND),
+                    className: C.headerImg
                 })
             }),
-            (0, l.jsxs)(i.hzk, {
-                className: h.modalBody,
+            (0, r.jsxs)(a.hzk, {
+                className: C.modalBody,
                 children: [
-                    (0, l.jsx)(i.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-lg/bold',
-                        className: h.modalInteriorHeader,
-                        children: m.intl.string(m.t.sGW77u)
+                        className: C.modalInteriorHeader,
+                        children: g.intl.string(g.t.sGW77u)
                     }),
-                    (0, l.jsx)(i.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: (function () {
-                            if (M) return m.intl.string(m.t.f3ARDQ);
-                            let e = p ? m.intl.string(m.t.RUw0ZG) : m.intl.string(m.t.XW3vjo),
-                                t = p ? m.intl.string(m.t['E/oQYG']) : m.intl.string(m.t.i4daNj);
-                            return L ? e : t;
+                            if (y) return g.intl.string(g.t.f3ARDQ);
+                            let t = b ? g.intl.string(g.t.RUw0ZG) : g.intl.string(g.t.XW3vjo),
+                                e = b ? g.intl.string(g.t['E/oQYG']) : g.intl.string(g.t.i4daNj);
+                            return L ? t : e;
                         })()
                     }),
-                    (0, l.jsxs)('div', {
-                        className: h.buttonContainer,
+                    (0, r.jsxs)('div', {
+                        className: C.buttonContainer,
                         children: [
-                            M
-                                ? (0, l.jsx)(i.zxk, {
-                                      color: i.zxk.Colors.BRAND,
+                            y
+                                ? (0, r.jsx)(a.zxk, {
+                                      variant: 'primary',
+                                      text: g.intl.string(g.t.KPGVWl),
                                       onClick: function () {
-                                          (v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE));
+                                          (R(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE));
                                       },
-                                      fullWidth: !0,
-                                      children: m.intl.string(m.t.KPGVWl)
+                                      fullWidth: !0
                                   })
                                 : L
-                                  ? (0, l.jsx)(i.zxk, {
-                                        color: i.zxk.Colors.BRAND,
+                                  ? (0, r.jsx)(a.zxk, {
+                                        variant: 'primary',
+                                        text: g.intl.string(g.t['9D+zGR']),
                                         onClick: function () {
-                                            (T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), o.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: C.FY.EXPLICIT_MEDIA_REDACTION_V2 }), v());
+                                            (T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), i.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2 }), R());
                                         },
-                                        fullWidth: !0,
-                                        children: m.intl.string(m.t['9D+zGR'])
+                                        fullWidth: !0
                                     })
-                                  : (0, l.jsx)(i.zxk, {
-                                        color: i.zxk.Colors.BRAND,
+                                  : (0, r.jsx)(a.zxk, {
+                                        variant: 'primary',
+                                        text: g.intl.string(g.t.hvVgAQ),
                                         onClick: () => {
-                                            (0, a.Z)(E.Z.getArticleURL(f.BhN.EXPLICIT_MEDIA_REDACTION));
+                                            (0, o.Z)(E.Z.getArticleURL(f.BhN.EXPLICIT_MEDIA_REDACTION));
                                         },
-                                        fullWidth: !0,
-                                        children: m.intl.string(m.t.hvVgAQ)
+                                        fullWidth: !0
                                     }),
-                            (0, l.jsx)(i.zxk, {
-                                color: i.zxk.Colors.PRIMARY,
+                            (0, r.jsx)(a.zxk, {
+                                variant: 'secondary',
+                                text: g.intl.string(g.t.bmbHPD),
                                 onClick: function () {
-                                    (v(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
+                                    (R(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
                                 },
-                                fullWidth: !0,
-                                children: m.intl.string(m.t.bmbHPD)
+                                fullWidth: !0
                             }),
-                            (0, l.jsx)(i.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: P()
+                                children: O()
                             })
                         ]
                     })

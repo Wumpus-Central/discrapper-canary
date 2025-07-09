@@ -1,14 +1,14 @@
-n.d(t, { Z: () => d });
-var a = n(255367),
-    r = n(73800),
-    l = n(793030),
-    i = n(836459),
-    s = n(396704),
-    o = n(861066),
-    c = n(481060);
+a.d(t, { Z: () => d });
+var n = a(255367),
+    r = a(73800),
+    l = a(793030),
+    i = a(836459),
+    s = a(396704),
+    o = a(861066),
+    c = a(481060);
 function d() {
-    let e = Object.keys(i).map((e) => (0, a.jsx)(u, { riveName: e }, e));
-    return (0, a.jsx)(l.Kq, {
+    let e = Object.keys(i).map((e) => (0, n.jsx)(u, { riveName: e }, e));
+    return (0, n.jsx)(l.Kq, {
         gap: 24,
         padding: 8,
         style: { boxSizing: 'border-box' },
@@ -17,41 +17,41 @@ function d() {
 }
 function u(e) {
     let { riveName: t } = e,
-        n = i[t].riveSrc,
+        a = i[t].riveSrc,
         d = r.useRef(null),
-        u = (0, s.o8)(n);
-    return (0, a.jsxs)(
+        u = (0, s.o8)(a);
+    return (0, n.jsxs)(
         l.Kq,
         {
             gap: 8,
             children: [
-                (0, a.jsx)('label', { children: t }),
-                (0, a.jsxs)(l.Kq, {
+                (0, n.jsx)('label', { children: t }),
+                (0, n.jsxs)(l.Kq, {
                     justify: 'space-between',
                     direction: 'horizontal',
                     align: 'center',
                     children: [
-                        (0, a.jsx)('input', {
+                        (0, n.jsx)('input', {
                             type: 'file',
                             accept: '.riv',
                             onChange: (e) => {
                                 var t;
-                                let a = null == (t = e.target.files) ? void 0 : t[0];
-                                if (null == a) return;
+                                let n = null == (t = e.target.files) ? void 0 : t[0];
+                                if (null == n) return;
                                 let r = new FileReader();
                                 ((r.onload = (e) => {
                                     var t;
-                                    let a = null == (t = e.target) ? void 0 : t.result;
-                                    (0, s.JG)(n, a);
+                                    let n = null == (t = e.target) ? void 0 : t.result;
+                                    (0, s.JG)(a, n);
                                 }),
-                                    r.readAsArrayBuffer(a));
+                                    r.readAsArrayBuffer(n));
                             },
                             ref: d
                         }),
-                        (0, a.jsx)(o.h, {
+                        (0, n.jsx)(o.h, {
                             'aria-label': 'Clear override for '.concat(t),
                             onClick: () => {
-                                (null != d.current && (d.current.value = ''), (0, s.JG)(n, null));
+                                (null != d.current && (d.current.value = ''), (0, s.JG)(a, null));
                             },
                             icon: c.XHJ,
                             variant: 'critical-primary',

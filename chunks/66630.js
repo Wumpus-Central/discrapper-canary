@@ -1,87 +1,88 @@
-(n.d(e, { Z: () => R }), n(388685));
+(n.d(e, { Z: () => B }), n(388685));
 var l = n(255367),
-    r = n(73800),
-    a = n(120356),
-    i = n.n(a),
+    a = n(73800),
+    r = n(120356),
+    i = n.n(r),
     o = n(442837),
-    s = n(481060),
-    u = n(596454),
-    c = n(393238),
-    d = n(493773),
-    m = n(100527),
-    f = n(906732),
-    h = n(318766),
-    b = n(907040),
-    p = n(594174),
-    S = n(626135),
-    j = n(644540),
-    g = n(359588),
-    O = n(368326),
-    x = n(720449),
-    v = n(684269),
-    C = n(397416),
-    _ = n(745579),
-    T = n(74340),
-    P = n(166655),
+    s = n(755721),
+    u = n(481060),
+    c = n(596454),
+    d = n(393238),
+    m = n(493773),
+    f = n(100527),
+    h = n(906732),
+    b = n(318766),
+    p = n(907040),
+    S = n(594174),
+    j = n(626135),
+    g = n(644540),
+    O = n(359588),
+    x = n(368326),
+    v = n(720449),
+    C = n(684269),
+    _ = n(397416),
+    T = n(745579),
+    P = n(74340),
+    y = n(166655),
     N = n(676035),
-    y = n(346565),
-    w = n(562577),
-    E = n(926563),
-    D = n(875425),
-    k = n(981631),
-    I = n(185923),
-    A = n(388032),
-    Z = n(782628);
-let L = 'CLEAR_AFTER';
-function R(t) {
+    w = n(346565),
+    E = n(562577),
+    D = n(926563),
+    I = n(875425),
+    Z = n(981631),
+    A = n(185923),
+    L = n(388032),
+    k = n(782628);
+let R = 'CLEAR_AFTER';
+function B(t) {
     var e, n;
-    let { transitionState: a, onClose: R, sourceAnalyticsContext: B, sourceAnalyticsLocations: M = [], prompt: U = null, showLabelSelectorNewTooltip: z = !1 } = t,
-        Y = (0, O.p)({ location: 'CustomStatusModalWithPreview' }),
-        F = (0, j.P)({ location: 'CustomStatusModalWithPreview' }),
-        H = (0, g.Z)({ location: 'CustomStatusModalWithPreview' }),
-        { analyticsLocations: W } = (0, f.ZP)(M, m.Z.CUSTOM_STATUS_MODAL),
-        K = (0, o.e7)([p.default], () => {
+    let { transitionState: r, onClose: B, sourceAnalyticsContext: M, sourceAnalyticsLocations: U = [], prompt: Y = null, showLabelSelectorNewTooltip: z = !1 } = t,
+        F = (0, x.p)({ location: 'CustomStatusModalWithPreview' }),
+        H = (0, g.P)({ location: 'CustomStatusModalWithPreview' }),
+        W = (0, O.Z)({ location: 'CustomStatusModalWithPreview' }),
+        { analyticsLocations: K } = (0, h.ZP)(U, f.Z.CUSTOM_STATUS_MODAL),
+        V = (0, o.e7)([S.default], () => {
             var t;
-            return null != (t = p.default.getCurrentUser()) ? t : null;
+            return null != (t = S.default.getCurrentUser()) ? t : null;
         }),
-        V = (0, N.a)(),
-        [G, q] = r.useState(null != (e = null == V ? void 0 : V.state) ? e : ''),
-        [X, Q] = r.useState(null != (n = null == V ? void 0 : V.emoji) ? n : null),
-        [$, J] = r.useState((0, v.Z)()),
-        tt = r.useRef(null),
-        te = r.useRef(null),
-        tn = r.useRef(null),
-        [tl, tr] = r.useState(null != V && H ? (0, T.Z)(V) : null),
-        [ta, ti] = r.useState(z),
-        [to, ts] = r.useState(() => (Y && null != U ? U.label() : A.intl.string(A.t['xod36+']))),
-        [tu, tc] = r.useState(to),
-        { ref: td, width: tm } = (0, c.ZP)(to);
-    (r.useEffect(() => {
-        let t = tn.current;
-        if (null == tm || null == t) return;
-        let e = tm - 78;
-        t.textContent = to;
+        G = (0, N.a)(),
+        [q, X] = a.useState(null != (e = null == G ? void 0 : G.state) ? e : ''),
+        [Q, $] = a.useState(null != (n = null == G ? void 0 : G.emoji) ? n : null),
+        [J, tt] = a.useState((0, C.Z)()),
+        te = a.useRef(null),
+        tn = a.useRef(null),
+        tl = a.useRef(null),
+        [ta, tr] = a.useState(null != G && W ? (0, P.Z)(G) : null),
+        [ti, to] = a.useState(z),
+        [ts, tu] = a.useState(() => (F && null != Y ? Y.label() : L.intl.string(L.t['xod36+']))),
+        [tc, td] = a.useState(ts),
+        { ref: tm, width: tf } = (0, d.ZP)(ts);
+    (a.useEffect(() => {
+        let t = tl.current;
+        if (null == tf || null == t) return;
+        let e = tf - 78;
+        t.textContent = ts;
         let n = t.getBoundingClientRect().width;
-        if (n <= e) tc(to);
+        if (n <= e) td(ts);
         else {
-            let t = n / to.length,
+            let t = n / ts.length,
                 l = Math.floor((e - 3 * t) / t);
-            tc(''.concat(to.substring(0, l)).concat('...'));
+            td(''.concat(ts.substring(0, l)).concat('...'));
         }
-    }, [tm, to]),
-        r.useEffect(() => {
-            S.default.track(k.rMx.OPEN_MODAL, {
-                type: m.Z.CUSTOM_STATUS_MODAL,
-                location_stack: W
+    }, [tf, ts]),
+        a.useEffect(() => {
+            j.default.track(Z.rMx.OPEN_MODAL, {
+                type: f.Z.CUSTOM_STATUS_MODAL,
+                location_stack: K
             });
-        }, [W]),
-        (0, d.ZP)(() => {
+        }, [K]),
+        (0, m.ZP)(() => {
             var t, e;
-            (null == (t = tt.current) || t.focus(), null == (e = tt.current) || e.setSelection(G.length, G.length));
+            (null == (t = te.current) || t.focus(), null == (e = te.current) || e.setSelection(q.length, q.length));
         }));
-    let tf = (t) => {
+    let th = (t) => {
             null != t &&
-                Q(
+                $(
                     null != t.id
                         ? {
                               id: t.id,
@@ -95,131 +96,131 @@ function R(t) {
                           }
                 );
         },
-        th = () => {
-            $ !== L &&
-                ((0, x.Z)({
-                    text: G,
-                    emojiInfo: X,
-                    clearAfter: $,
-                    prompt: U,
-                    customStatusLabel: tl,
-                    analyticsLocations: W,
-                    analyticsContext: B
+        tb = () => {
+            J !== R &&
+                ((0, v.Z)({
+                    text: q,
+                    emojiInfo: Q,
+                    clearAfter: J,
+                    prompt: Y,
+                    customStatusLabel: ta,
+                    analyticsLocations: K,
+                    analyticsContext: M
                 }),
-                R());
+                B());
         },
-        tb = () =>
-            null == X
+        tp = () =>
+            null == Q
                 ? null
                 : () =>
-                      (0, l.jsx)(u.Z, {
-                          className: Z.emoji,
-                          emojiId: X.id,
-                          emojiName: X.name,
-                          animated: !!X.animated
+                      (0, l.jsx)(c.Z, {
+                          className: k.emoji,
+                          emojiId: Q.id,
+                          emojiName: Q.name,
+                          animated: !!Q.animated
                       }),
-        tp = Y ? A.intl.string(A.t.rp0aho) : A.intl.string(A.t.UcdRn5),
-        tS = 'custom-status-placeholder-text';
-    return (0, l.jsxs)(s.Y0X, {
-        transitionState: a,
+        tS = F ? L.intl.string(L.t.rp0aho) : L.intl.string(L.t.UcdRn5),
+        tj = 'custom-status-placeholder-text';
+    return (0, l.jsxs)(u.Y0X, {
+        transitionState: r,
         parentComponent: 'CustomStatusModalWithPreview',
         children: [
-            (0, l.jsxs)(s.xBx, {
+            (0, l.jsxs)(u.xBx, {
                 separator: !1,
-                className: Z.header,
+                className: k.header,
                 children: [
                     (0, l.jsx)('div', {
-                        className: Z.headerTitle,
-                        children: (0, l.jsx)(s.X6q, {
+                        className: k.headerTitle,
+                        children: (0, l.jsx)(u.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: A.intl.string(A.t.Zx4jzM)
+                            children: L.intl.string(L.t.Zx4jzM)
                         })
                     }),
                     (0, l.jsx)('div', {
-                        className: Z.headerCloseButton,
-                        children: (0, l.jsx)(s.olH, { onClick: R })
+                        className: k.headerCloseButton,
+                        children: (0, l.jsx)(u.olH, { onClick: B })
                     })
                 ]
             }),
-            (0, l.jsxs)(s.hzk, {
+            (0, l.jsxs)(u.hzk, {
                 children: [
-                    null != K &&
+                    null != V &&
                         (0, l.jsx)('div', {
-                            className: Z.profilePreview,
-                            children: (0, l.jsx)(E.Z, {
-                                user: K,
-                                previewText: G,
-                                previewEmoji: X,
-                                placeHolderText: to,
-                                transitionState: a,
-                                label: tl
+                            className: k.profilePreview,
+                            children: (0, l.jsx)(D.Z, {
+                                user: V,
+                                previewText: q,
+                                previewEmoji: Q,
+                                placeHolderText: ts,
+                                transitionState: r,
+                                label: ta
                             })
                         }),
-                    (0, l.jsxs)(s.hjN, {
-                        className: Z.formGroup,
-                        titleClassName: Z.customStatusInputTitle,
-                        title: tp,
+                    (0, l.jsxs)(u.hjN, {
+                        className: k.formGroup,
+                        titleClassName: k.customStatusInputTitle,
+                        title: tS,
                         children: [
-                            H &&
+                            W &&
                                 (0, l.jsx)('div', {
-                                    className: Z.labelSelectorContainer,
-                                    children: (0, l.jsx)(s.DY3, {
+                                    className: k.labelSelectorContainer,
+                                    children: (0, l.jsx)(u.DY3, {
                                         position: 'right',
-                                        color: s.FGA.BRAND,
-                                        'aria-label': A.intl.string(A.t.y2b7CA),
-                                        shouldShow: ta,
-                                        forceOpen: ta && a === s.Dvm.ENTERED,
-                                        tooltipClassName: Z.labelSelectorTooltip,
-                                        text: A.intl.string(A.t.y2b7CA),
-                                        children: (0, l.jsx)(w.Z, {
-                                            currentValue: tl,
+                                        color: u.FGA.BRAND,
+                                        'aria-label': L.intl.string(L.t.y2b7CA),
+                                        shouldShow: ti,
+                                        forceOpen: ti && r === u.Dvm.ENTERED,
+                                        tooltipClassName: k.labelSelectorTooltip,
+                                        text: L.intl.string(L.t.y2b7CA),
+                                        children: (0, l.jsx)(E.Z, {
+                                            currentValue: ta,
                                             onChange: (t) => {
-                                                let e = t === tl ? null : t;
-                                                (S.default.track(k.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
-                                                    previous_label: tl,
+                                                let e = t === ta ? null : t;
+                                                (j.default.track(Z.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
+                                                    previous_label: ta,
                                                     new_label: e,
-                                                    location_stack: M
+                                                    location_stack: U
                                                 }),
                                                     tr(e),
-                                                    ti(!1),
-                                                    null != e && ts((0, P.Z)(e)));
+                                                    to(!1),
+                                                    null != e && tu((0, y.Z)(e)));
                                             }
                                         })
                                     })
                                 }),
                             (0, l.jsxs)('div', {
-                                className: Z.inputContainer,
-                                ref: td,
+                                className: k.inputContainer,
+                                ref: tm,
                                 children: [
                                     (0, l.jsx)('span', {
-                                        ref: tn,
-                                        className: Z.hiddenPlaceholder,
+                                        ref: tl,
+                                        className: k.hiddenPlaceholder,
                                         'aria-hidden': 'true'
                                     }),
                                     (0, l.jsx)('div', {
-                                        className: i()(Z.emojiButtonContainer, null != tl && Z.emojiButtonContainerWithLabel),
-                                        children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: te,
+                                        className: i()(k.emojiButtonContainer, null != ta && k.emojiButtonContainerWithLabel),
+                                        children: (0, l.jsx)(u.yRy, {
+                                            targetElementRef: tn,
                                             renderPopout: (t) => {
                                                 let { closePopout: e } = t;
-                                                return (0, l.jsx)(b.Z, {
+                                                return (0, l.jsx)(p.Z, {
                                                     closePopout: e,
                                                     onSelectEmoji: (t) => {
                                                         let { emoji: n, willClose: l } = t;
-                                                        (tf(n), l && e());
+                                                        (th(n), l && e());
                                                     },
-                                                    pickerIntention: I.Hz.STATUS,
-                                                    onNavigateAway: R
+                                                    pickerIntention: A.Hz.STATUS,
+                                                    onNavigateAway: B
                                                 });
                                             },
                                             position: 'left',
-                                            animation: s.yRy.Animation.NONE,
+                                            animation: u.yRy.Animation.NONE,
                                             align: 'top',
                                             children: (t, e) => {
-                                                var n, r;
-                                                let { isShown: a } = e;
+                                                var n, a;
+                                                let { isShown: r } = e;
                                                 return (0, l.jsx)(
-                                                    h.Z,
+                                                    b.Z,
                                                     ((n = (function (t) {
                                                         for (var e = 1; e < arguments.length; e++) {
                                                             var n = null != arguments[e] ? arguments[e] : {},
@@ -245,16 +246,16 @@ function R(t) {
                                                         }
                                                         return t;
                                                     })({}, t)),
-                                                    (r = r =
+                                                    (a = a =
                                                         {
-                                                            ref: te,
-                                                            active: a,
-                                                            className: Z.emojiButton,
+                                                            ref: tn,
+                                                            active: r,
+                                                            className: k.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: tb()
+                                                            renderButtonContents: tp()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
-                                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                                                         : (function (t, e) {
                                                               var n = Object.keys(t);
                                                               if (Object.getOwnPropertySymbols) {
@@ -262,8 +263,8 @@ function R(t) {
                                                                   n.push.apply(n, l);
                                                               }
                                                               return n;
-                                                          })(Object(r)).forEach(function (t) {
-                                                              Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(r, t));
+                                                          })(Object(a)).forEach(function (t) {
+                                                              Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(a, t));
                                                           }),
                                                     n)
                                                 );
@@ -271,39 +272,39 @@ function R(t) {
                                         })
                                     }),
                                     (0, l.jsx)(
-                                        s.Kx8,
+                                        u.Kx8,
                                         {
                                             autosize: !0,
-                                            'aria-describedby': tS,
-                                            value: G,
-                                            maxLength: D.s0,
+                                            'aria-describedby': tj,
+                                            value: q,
+                                            maxLength: I.s0,
                                             rows: 1,
                                             showRemainingCharacterCount: !1,
-                                            placeholder: tu,
+                                            placeholder: tc,
                                             onChange: (t) => {
-                                                q(t);
+                                                X(t);
                                             },
                                             onKeyDown: (t) => {
-                                                'Enter' === t.key && th();
+                                                'Enter' === t.key && tb();
                                             },
-                                            className: i()(Z.input, null != tl && Z.inputWithLabel),
-                                            inputRef: tt
+                                            className: i()(k.input, null != ta && k.inputWithLabel),
+                                            inputRef: te
                                         },
-                                        null != tl ? 'with-label' : 'without-label'
+                                        null != ta ? 'with-label' : 'without-label'
                                     ),
-                                    null != tl &&
+                                    null != ta &&
                                         (0, l.jsx)('div', {
-                                            className: Z.inputCustomStatusLabelRow,
-                                            children: (0, l.jsx)(y.Z, { label: tl })
+                                            className: k.inputCustomStatusLabelRow,
+                                            children: (0, l.jsx)(w.Z, { label: ta })
                                         }),
-                                    (0, l.jsx)(s.nn4, {
-                                        id: tS,
-                                        children: ''.concat(A.intl.string(A.t.EVV6ub), ': ').concat(to)
+                                    (0, l.jsx)(u.nn4, {
+                                        id: tj,
+                                        children: ''.concat(L.intl.string(L.t.EVV6ub), ': ').concat(ts)
                                     }),
-                                    (G.length > 0 || null != X) &&
+                                    (q.length > 0 || null != Q) &&
                                         (0, l.jsx)('div', {
-                                            className: i()(Z.clearButtonWrapper, null != tl && Z.buttonContainerWithLabel),
-                                            children: (0, l.jsx)(s.zxk, {
+                                            className: i()(k.clearButtonWrapper, null != ta && k.buttonContainerWithLabel),
+                                            children: (0, l.jsx)(s.zx, {
                                                 focusProps: {
                                                     offset: {
                                                         top: 8,
@@ -312,17 +313,17 @@ function R(t) {
                                                         right: -2
                                                     }
                                                 },
-                                                'aria-label': A.intl.string(A.t.wfYTHR),
-                                                className: Z.clearButton,
+                                                'aria-label': L.intl.string(L.t.wfYTHR),
+                                                className: k.clearButton,
                                                 onClick: () => {
-                                                    (q(''), Q(null));
+                                                    (X(''), $(null));
                                                 },
-                                                look: s.zxk.Looks.BLANK,
-                                                size: s.zxk.Sizes.NONE,
-                                                children: (0, l.jsx)(s.k$p, {
+                                                look: s.zx.Looks.BLANK,
+                                                size: s.zx.Sizes.NONE,
+                                                children: (0, l.jsx)(u.k$p, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: Z.clearIcon
+                                                    className: k.clearIcon
                                                 })
                                             })
                                         })
@@ -332,54 +333,53 @@ function R(t) {
                     })
                 ]
             }),
-            (0, l.jsx)(s.mzw, {
+            (0, l.jsx)(u.mzw, {
                 children: (0, l.jsxs)('div', {
-                    className: Z.footer,
+                    className: k.footer,
                     children: [
                         (0, l.jsx)('div', {
-                            className: Z.clearAfterSelectContainer,
-                            children: (0, l.jsx)(s.q4e, {
-                                maxVisibleItems: D.wS.length + 1,
-                                value: $,
-                                options: F
+                            className: k.clearAfterSelectContainer,
+                            children: (0, l.jsx)(u.q4e, {
+                                maxVisibleItems: I.wS.length + 1,
+                                value: J,
+                                options: H
                                     ? [
                                           {
-                                              value: L,
-                                              key: L,
-                                              label: A.intl.string(A.t.E45wvL),
+                                              value: R,
+                                              key: R,
+                                              label: L.intl.string(L.t.E45wvL),
                                               disabled: !0
                                           },
-                                          ...D.wS.map((t) => ({
+                                          ...I.wS.map((t) => ({
                                               value: t,
                                               key: t,
-                                              label: (0, C.Z)(t, !0)
+                                              label: (0, _.Z)(t, !0)
                                           }))
                                       ]
-                                    : D.wS.map((t) => ({
+                                    : I.wS.map((t) => ({
                                           value: t,
                                           key: t,
-                                          label: (0, C.Z)(t)
+                                          label: (0, _.Z)(t)
                                       })),
-                                onChange: (t) => J(t),
-                                optionClassName: Z.clearAfterSelectOption,
+                                onChange: (t) => tt(t),
+                                optionClassName: k.clearAfterSelectOption,
                                 renderOptionLabel: (t) => {
-                                    let { value: e, label: n, disabled: r } = t;
+                                    let { value: e, label: n, disabled: a } = t;
                                     return (0, l.jsx)('span', {
-                                        className: i()(Z.clearAfterSelectOptionLabel, r ? Z.disabled : void 0),
-                                        children: e === L ? n : (0, _.Z)(e, F)
+                                        className: i()(k.clearAfterSelectOptionLabel, a ? k.disabled : void 0),
+                                        children: e === R ? n : (0, T.Z)(e, H)
                                     });
                                 },
-                                look: s.qQH.CUSTOM,
+                                look: u.qQH.CUSTOM,
                                 popoutWidth: 'auto',
                                 popoutPosition: 'right'
                             })
                         }),
-                        (0, l.jsx)(s.zxk, {
+                        (0, l.jsx)(u.zxk, {
+                            variant: 'primary',
+                            text: L.intl.string(L.t.R3BPHx),
                             type: 'submit',
-                            size: s.zxk.Sizes.MEDIUM,
-                            color: s.zxk.Colors.BRAND,
-                            onClick: th,
-                            children: A.intl.string(A.t.R3BPHx)
+                            onClick: tb
                         })
                     ]
                 })

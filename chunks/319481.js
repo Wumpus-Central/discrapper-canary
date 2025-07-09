@@ -1,13 +1,14 @@
-r.d(e, { default: () => c });
+r.d(e, { default: () => l });
 var n = r(255367);
 r(73800);
-var o = r(481060),
-    i = r(388032);
-function c(t) {
+var o = r(755721),
+    i = r(481060),
+    c = r(388032);
+function l(t) {
     var e,
         r,
-        { onConfirm: c } = t,
-        l = (function (t, e) {
+        { onConfirm: l } = t,
+        u = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -27,7 +28,7 @@ function c(t) {
             return o;
         })(t, ['onConfirm']);
     return (0, n.jsx)(
-        o.ConfirmModal,
+        i.ConfirmModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -54,19 +55,19 @@ function c(t) {
             return t;
         })(
             {
-                header: i.intl.string(i.t['5yTUub']),
-                confirmText: i.intl.string(i.t.TyCVIi),
-                cancelText: i.intl.string(i.t['ETE/oK']),
-                confirmButtonColor: o.zxk.Colors.BRAND,
-                onConfirm: c
+                header: c.intl.string(c.t['5yTUub']),
+                confirmText: c.intl.string(c.t.TyCVIi),
+                cancelText: c.intl.string(c.t['ETE/oK']),
+                confirmButtonColor: o.zx.Colors.BRAND,
+                onConfirm: l
             },
-            l
+            u
         )),
         (r = r =
             {
-                children: (0, n.jsx)(o.Text, {
+                children: (0, n.jsx)(i.Text, {
                     variant: 'text-md/normal',
-                    children: i.intl.string(i.t.dRhrXl)
+                    children: c.intl.string(c.t.dRhrXl)
                 })
             }),
         Object.getOwnPropertyDescriptors

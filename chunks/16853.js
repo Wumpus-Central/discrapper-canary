@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(643560);
-let o = (e) => {
-    let { entry: t, hideEditButton: n, children: o, onRequestOpen: a, onRequestClose: s, targetElementRef: c } = e;
+let a = (e) => {
+    let { entry: t, hideEditButton: n, children: a, onRequestOpen: o, onRequestClose: s, targetElementRef: c } = e;
     return (0, r.jsx)(i.yRy, {
         targetElementRef: c,
-        onRequestOpen: a,
+        onRequestOpen: o,
         onRequestClose: s,
         animation: i.yRy.Animation.NONE,
         position: 'bottom',
@@ -21,6 +21,6 @@ let o = (e) => {
                 hideEditButton: n
             });
         },
-        children: o
+        children: a
     });
 };

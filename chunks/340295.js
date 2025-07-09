@@ -1,38 +1,39 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
+    l = n(755721),
+    a = n(481060),
     o = n(287734),
-    a = n(305325),
-    s = n(281956),
-    c = n(584729),
-    u = n(27457),
-    d = n(546247),
-    p = n(354459),
-    h = n(388032),
-    f = n(761325);
-let m = function (e) {
-    let { participants: t, channel: n, hasConnectPermission: m } = e,
-        g = t.filter(p.Io),
-        b = (0, s.J)(n.guild_id),
-        _ = i.useCallback(() => {
-            b ? (0, a.hk)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, b]),
-        y = 4 === g.length ? 2 : 3;
+    s = n(305325),
+    c = n(281956),
+    u = n(584729),
+    d = n(27457),
+    p = n(546247),
+    h = n(354459),
+    f = n(388032),
+    m = n(761325);
+let g = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: g } = e,
+        b = t.filter(h.Io),
+        _ = (0, c.J)(n.guild_id),
+        y = i.useCallback(() => {
+            _ ? (0, s.hk)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, _]),
+        C = 4 === b.length ? 2 : 3;
     return (0, r.jsxs)('div', {
-        className: f.container,
+        className: m.container,
         children: [
-            (0, r.jsx)(d.Z, {}),
+            (0, r.jsx)(p.Z, {}),
             (0, r.jsx)('div', {
-                className: f.tiles,
-                style: { maxWidth: 168 * y },
-                children: g.slice(0, 5).map((e) =>
+                className: m.tiles,
+                style: { maxWidth: 168 * C },
+                children: b.slice(0, 5).map((e) =>
                     (0, r.jsx)(
-                        u.ZP,
+                        d.ZP,
                         {
                             participant: e,
                             channel: n,
-                            className: f.tile,
+                            className: m.tile,
                             inCall: !0,
                             noVideoRender: !0,
                             inPopout: !1,
@@ -42,42 +43,42 @@ let m = function (e) {
                     )
                 )
             }),
-            (0, r.jsx)(l.X6q, {
-                className: f.channelName,
+            (0, r.jsx)(a.X6q, {
+                className: m.channelName,
                 variant: 'heading-xxl/semibold',
                 children: n.name
             }),
             (0, r.jsx)('div', {
-                className: f.participantsRow,
-                children: (0, r.jsx)(l.Text, {
+                className: m.participantsRow,
+                children: (0, r.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        0 === g.length
-                            ? h.intl.string(h.t.zSqdra)
-                            : 1 === g.length
-                              ? h.intl.formatToPlainString(h.t.BUyJIC, { a: (0, c.Z)(n, g[0]) })
-                              : 2 === g.length
-                                ? h.intl.formatToPlainString(h.t.dcyZf3, {
-                                      a: (0, c.Z)(n, g[0]),
-                                      b: (0, c.Z)(n, g[1])
+                        0 === b.length
+                            ? f.intl.string(f.t.zSqdra)
+                            : 1 === b.length
+                              ? f.intl.formatToPlainString(f.t.BUyJIC, { a: (0, u.Z)(n, b[0]) })
+                              : 2 === b.length
+                                ? f.intl.formatToPlainString(f.t.dcyZf3, {
+                                      a: (0, u.Z)(n, b[0]),
+                                      b: (0, u.Z)(n, b[1])
                                   })
-                                : g.length > 2
-                                  ? h.intl.formatToPlainString(h.t['44/Obm'], {
-                                        a: (0, c.Z)(n, g[0]),
-                                        b: (0, c.Z)(n, g[1]),
-                                        n: g.length - 2
+                                : b.length > 2
+                                  ? f.intl.formatToPlainString(f.t['44/Obm'], {
+                                        a: (0, u.Z)(n, b[0]),
+                                        b: (0, u.Z)(n, b[1]),
+                                        n: b.length - 2
                                     })
                                   : void 0
                 })
             }),
-            (0, r.jsx)(l.zxk, {
-                disabled: !m,
-                className: f.joinButton,
-                color: m ? l.zxk.Colors.WHITE : l.zxk.Colors.PRIMARY,
-                onClick: _,
-                size: l.zxk.Sizes.MEDIUM,
-                children: m ? h.intl.string(h.t['96ANUF']) : h.intl.string(h.t.TVBCKS)
+            (0, r.jsx)(l.zx, {
+                disabled: !g,
+                className: m.joinButton,
+                color: g ? l.zx.Colors.WHITE : l.zx.Colors.PRIMARY,
+                onClick: y,
+                size: l.zx.Sizes.MEDIUM,
+                children: g ? f.intl.string(f.t['96ANUF']) : f.intl.string(f.t.TVBCKS)
             })
         ]
     });

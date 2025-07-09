@@ -3,14 +3,14 @@ var i = n(255367);
 n(73800);
 var r = n(399606),
     s = n(481060),
-    l = n(594174),
-    a = n(51144),
+    a = n(594174),
+    l = n(51144),
     o = n(546791),
     c = n(198952),
     d = n(772998);
 let u = (e) => {
     let { userId: t, timestamp: n, timestampFormatter: u } = e,
-        m = (0, r.e7)([l.default], () => l.default.getUser(t));
+        m = (0, r.e7)([a.default], () => a.default.getUser(t));
     return void 0 === m
         ? null
         : (0, i.jsxs)('div', {
@@ -26,7 +26,7 @@ let u = (e) => {
                           children: [
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-md/semibold',
-                                  children: a.ZP.getName(m)
+                                  children: l.ZP.getName(m)
                               }),
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/medium',

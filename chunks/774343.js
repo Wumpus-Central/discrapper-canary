@@ -1,9 +1,9 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var i,
     r,
     s,
-    l,
     a,
+    l,
     o,
     c = n(442837),
     d = n(570140),
@@ -13,7 +13,7 @@ var i,
     g = n(944486),
     h = n(55589),
     f = n(981631);
-let b = (null != (a = null == (l = window) || null == (s = l.location) ? void 0 : s.pathname) ? a : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
+let b = (null != (l = null == (a = window) || null == (s = a.location) ? void 0 : s.pathname) ? l : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
 function x(e) {
     let { link: t } = e;
     if (b === t) return !1;
@@ -36,7 +36,7 @@ class _ extends (o = c.ZP.Store) {
               writable: !0
           })
         : (_[i] = r));
-let E = new _(d.Z, {
+let j = new _(d.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = h.Z.getPrivateChannelIds(),
             t = g.Z.getChannelId(f.ME);

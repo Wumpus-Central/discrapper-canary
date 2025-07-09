@@ -1,92 +1,93 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
-    s = n(481060),
-    c = n(749210),
-    u = n(168107),
-    d = n(480916),
-    p = n(622822),
-    h = n(986035),
-    f = n(601964),
-    m = n(594174),
-    g = n(63063),
-    b = n(981631),
-    _ = n(723359),
-    y = n(388032),
-    C = n(857651);
-function x(e) {
+    a = n.n(l),
+    o = n(442837),
+    s = n(755721),
+    c = n(481060),
+    u = n(749210),
+    d = n(168107),
+    p = n(480916),
+    h = n(622822),
+    f = n(986035),
+    m = n(601964),
+    g = n(594174),
+    b = n(63063),
+    _ = n(981631),
+    y = n(723359),
+    C = n(388032),
+    x = n(857651);
+function v(e) {
     let { guild: t, channelId: n } = e,
-        l = (0, a.e7)([m.default], () => {
+        l = (0, o.e7)([g.default], () => {
             var e;
-            return (null == (e = m.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
+            return (null == (e = g.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        o = (0, p.Kt)(),
-        { verifyAgreementButtonText: x, verifyGateDescription: v } = (0, p.a1)(null != t && (0, f.Y2)(t) ? _.L0.NSFW_SERVER : _.L0.NSFW_CHANNEL),
+        a = (0, h.Kt)(),
+        { verifyAgreementButtonText: c, verifyGateDescription: v } = (0, h.a1)(null != t && (0, m.Y2)(t) ? y.L0.NSFW_SERVER : y.L0.NSFW_CHANNEL),
         O = i.useCallback(() => {
-            null != t && c.Z.nsfwReturnToSafety(t.id);
+            null != t && u.Z.nsfwReturnToSafety(t.id);
         }, [t]),
         j = i.useCallback(() => {
-            null != t && c.Z.nsfwAgree(t.id);
+            null != t && u.Z.nsfwAgree(t.id);
         }, [t]),
         E = i.useCallback(() => {
-            u.Z.showAgeVerificationGetStartedModal(d.cU.NSFW_GUILD);
+            d.Z.showAgeVerificationGetStartedModal(p.cU.NSFW_GUILD);
         }, []);
-    return o
-        ? (0, r.jsx)(h.Z, {
+    return a
+        ? (0, r.jsx)(f.Z, {
               guildId: null == t ? void 0 : t.id,
               channelId: n,
-              modalType: d.it.NSFW_CHANNEL_AGE_VERIFY,
+              modalType: p.it.NSFW_CHANNEL_AGE_VERIFY,
               onAgree: E,
               onDisagree: O,
-              title: y.intl.string(y.t.ZmwvDQ),
+              title: C.intl.string(C.t.ZmwvDQ),
               description: v,
-              agreement: x,
-              agreementButtonColor: s.zxk.Colors.BRAND,
-              disagreement: y.intl.string(y.t['/g10LC']),
-              imageClassName: C.ageGatedImage
+              agreement: c,
+              agreementButtonColor: s.zx.Colors.BRAND,
+              disagreement: C.intl.string(C.t['/g10LC']),
+              imageClassName: x.ageGatedImage
           })
         : l
-          ? (0, r.jsx)(h.Z, {
+          ? (0, r.jsx)(f.Z, {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
-                modalType: d.it.NSFW_CHANNEL_UNDERAGE,
+                modalType: p.it.NSFW_CHANNEL_UNDERAGE,
                 onAgree: j,
                 onDisagree: O,
-                title: y.intl.string(y.t.NEabBQ),
-                description: y.intl.format(y.t['2kHZen'], { helpURL: g.Z.getArticleURL(b.BhN.NSFW_AGE_GATING) }),
+                title: C.intl.string(C.t.NEabBQ),
+                description: C.intl.format(C.t['2kHZen'], { helpURL: b.Z.getArticleURL(_.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
-                disagreement: y.intl.string(y.t['/g10LC']),
-                imageClassName: C.ageGatedImage
+                disagreement: C.intl.string(C.t['/g10LC']),
+                imageClassName: x.ageGatedImage
             })
-          : (0, r.jsx)(h.Z, {
+          : (0, r.jsx)(f.Z, {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
-                modalType: d.it.NSFW_CHANNEL_VERIFIED,
+                modalType: p.it.NSFW_CHANNEL_VERIFIED,
                 onAgree: j,
                 onDisagree: O,
-                title: y.intl.string(y.t.ZmwvDQ),
-                description: y.intl.string(y.t.E4Cd5O),
-                agreement: y.intl.string(y.t.wVq7ur),
-                disagreement: y.intl.string(y.t['/g10LC'])
+                title: C.intl.string(C.t.ZmwvDQ),
+                description: C.intl.string(C.t.E4Cd5O),
+                agreement: C.intl.string(C.t.wVq7ur),
+                disagreement: C.intl.string(C.t['/g10LC'])
             });
 }
-let v = function (e) {
+let O = function (e) {
     let { guild: t, channelId: n, className: l } = e,
-        a = i.useRef(null);
+        o = i.useRef(null);
     return (
         i.useEffect(() => {
-            let { current: e } = a;
+            let { current: e } = o;
             null == e || e.scrollToBottom();
         }, []),
-        (0, r.jsx)(s.Den, {
-            ref: a,
-            className: C.scroller,
+        (0, r.jsx)(c.Den, {
+            ref: o,
+            className: x.scroller,
             children: (0, r.jsx)('div', {
-                className: o()(l, C.wrapper),
-                children: (0, r.jsx)(x, {
+                className: a()(l, x.wrapper),
+                children: (0, r.jsx)(v, {
                     guild: t,
                     channelId: n
                 })

@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(481060),
-    a = n(388032),
+    a = n(481060),
+    l = n(388032),
     o = n(44616),
     c = n(505944);
 let d = (e) => {
@@ -23,20 +23,20 @@ let d = (e) => {
                 children: [
                     (0, i.jsx)('div', {
                         className: o.backButtonContainer,
-                        children: (0, i.jsxs)(l.P3F, {
+                        children: (0, i.jsxs)(a.P3F, {
                             onClick: n,
                             className: o.backButton,
-                            children: [(0, i.jsx)(l.V7D, { color: 'currentColor' }), a.intl.string(a.t['13/7kZ'])]
+                            children: [(0, i.jsx)(a.V7D, { color: 'currentColor' }), l.intl.string(l.t['13/7kZ'])]
                         })
                     }),
                     (0, i.jsx)('div', {
                         className: o.__invalid_contentContainer,
                         children: (0, i.jsx)('div', {
                             className: o.content,
-                            children: (0, i.jsx)(l.X6q, {
+                            children: (0, i.jsx)(a.X6q, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: a.intl.string(a.t.hqjDX1)
+                                children: l.intl.string(l.t.hqjDX1)
                             })
                         })
                     })

@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(622535),
-    l = n(481060),
-    a = n(100527),
+    a = n(481060),
+    l = n(100527),
     o = n(906732),
     c = n(433811),
     d = n(214852),
@@ -16,41 +16,41 @@ var i = n(255367),
     b = n(781800),
     x = n(981631),
     _ = n(388032),
-    E = n(614729),
-    j = n(865215);
+    j = n(614729),
+    E = n(865215);
 let O = () => {
     (0, d.z)(c.X);
     let e = r.useRef(null),
         t = r.useRef(null),
         [n, O] = r.useState(!1),
-        { analyticsLocations: C } = (0, o.ZP)(a.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [S, v] = r.useState(!1),
+        { analyticsLocations: C } = (0, o.ZP)(l.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [v, S] = r.useState(!1),
         T = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
     return (
         window.history.replaceState({}, '', window.location.pathname),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.yWw, {
-                    className: E.mainPageScroller,
+                (0, i.jsx)(a.yWw, {
+                    className: j.mainPageScroller,
                     ref: e,
                     children: (0, i.jsx)('div', {
-                        className: E.container,
+                        className: j.container,
                         children: (0, i.jsxs)(o.Gt, {
                             value: C,
                             children: [
                                 (0, i.jsx)(g.Z, {
-                                    className: E.heroHeading,
+                                    className: j.heroHeading,
                                     location: h.MQ.HOME
                                 }),
                                 (0, i.jsx)(m.Z, {
                                     variant: h.gM.WHATS_NEW,
-                                    className: E.whatsNew,
+                                    className: j.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     shouldAutoScroll: T
                                 }),
                                 (0, i.jsx)(m.Z, {
-                                    className: E.perksDiscoverability,
+                                    className: j.perksDiscoverability,
                                     variant: h.gM.PERKS_DISCOVERABILITY,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
@@ -60,27 +60,27 @@ let O = () => {
                                     })
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: E.giftNitro,
-                                    location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
+                                    className: j.giftNitro,
+                                    location: l.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {
                                         page: x.ZY5.NITRO_HOME,
                                         section: x.jXE.GIFT_BANNER
                                     }
                                 }),
-                                (0, i.jsx)('div', { className: E.footerSpacing }),
+                                (0, i.jsx)('div', { className: j.footerSpacing }),
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
-                                        e && !S && (u.default.track(x.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: C }), v(!0));
+                                        e && !v && (u.default.track(x.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: C }), S(!0));
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
-                                        className: E.bottomOfPageVisibilitySensor
+                                        className: j.bottomOfPageVisibilitySensor
                                     })
                                 }),
                                 (0, i.jsx)('img', {
-                                    src: j,
-                                    className: E.bottomIllustration,
+                                    src: E,
+                                    className: j.bottomIllustration,
                                     width: 112,
                                     height: 85,
                                     alt: _.intl.string(_.t.X4IxWF)

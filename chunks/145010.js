@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    o = n(481060),
-    a = n(125268),
+    a = n(481060),
+    o = n(125268),
     s = n(673125),
     c = n(984063),
     u = n(390322),
@@ -18,12 +18,12 @@ function m(e) {
         g = i.useRef(null),
         b = (e, t) => {
             (null != e
-                ? (0, a.Bo)({
+                ? (0, o.Bo)({
                       type: c.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : m && (0, a.Bo)(null),
+                : m && (0, o.Bo)(null),
                 null == t || t());
         };
     return (0, r.jsx)(h.Z, {
@@ -72,7 +72,7 @@ function m(e) {
                 (n = n =
                     {
                         buttonRef: g,
-                        iconComponent: o.j9u,
+                        iconComponent: a.j9u,
                         isActive: m || e.isActive,
                         onClick: (t) => {
                             (b(null), e.onClick(t));

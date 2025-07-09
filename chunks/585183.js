@@ -1,35 +1,35 @@
-(a.d(t, { h: () => C }), a(388685));
-var l = a(255367),
-    r = a(73800),
-    s = a(512722),
-    n = a.n(s),
-    o = a(481060),
-    c = a(457330),
-    i = a(600164),
-    d = a(710845),
-    x = a(69580),
-    u = a(424071),
-    h = a(388032),
-    m = a(475286);
+(t.d(a, { h: () => C }), t(388685));
+var r = t(255367),
+    s = t(73800),
+    l = t(512722),
+    n = t.n(l),
+    i = t(481060),
+    o = t(457330),
+    c = t(600164),
+    d = t(710845),
+    x = t(69580),
+    u = t(424071),
+    h = t(388032),
+    m = t(475286);
 let N = new d.Z('TwoWayLinkDiscordConsentWeb');
 function C(e) {
-    let { platformType: t, clientId: a, scopes: s, authToken: d, onContinue: C, onError: j, onClose: k, redirectUri: v } = e,
-        [p, f] = r.useState(!1),
-        b = r.useCallback(
+    let { platformType: a, clientId: t, scopes: l, authToken: d, onContinue: C, onError: j, onClose: p, redirectUri: v } = e,
+        [k, f] = s.useState(!1),
+        b = s.useCallback(
             async (e) => {
-                let a,
-                    l,
-                    { location: r } = e,
-                    { callbackCode: s, callbackState: n } = d;
+                let t,
+                    r,
+                    { location: s } = e,
+                    { callbackCode: l, callbackState: n } = d;
                 try {
-                    a = await c.Z.completeTwoWayLink(t, r, s, n);
+                    t = await o.Z.completeTwoWayLink(a, s, l, n);
                 } catch (e) {
-                    var o;
-                    (N.error(''.concat(t, ' link error:'), e), (l = null == (o = e.body) ? void 0 : o.code));
+                    var i;
+                    (N.error(''.concat(a, ' link error:'), e), (r = null == (i = e.body) ? void 0 : i.code));
                 }
-                null != a ? C() : j(l);
+                null != t ? C() : j(r);
             },
-            [t, d, C, j]
+            [a, d, C, j]
         ),
         {
             header: E,
@@ -37,25 +37,25 @@ function C(e) {
             appDetails: g,
             sendAuthorize: O
         } = (0, x.useOAuth2AuthorizeForm)({
-            clientId: a,
-            scopes: s,
+            clientId: t,
+            scopes: l,
             responseType: 'code',
             callback: b,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: v
         }),
-        R = r.useCallback(() => {
+        y = s.useCallback(() => {
             (n()(null != O, 'sendAuthorize not available'), f(!0), O(!0));
         }, [O]);
-    return (0, l.jsxs)(u.Z, {
+    return (0, r.jsxs)(u.Z, {
         children: [
-            (0, l.jsxs)(o.xBx, {
-                direction: i.Z.Direction.VERTICAL,
+            (0, r.jsxs)(i.xBx, {
+                direction: c.Z.Direction.VERTICAL,
                 className: m.header,
                 separator: !1,
                 children: [
-                    (0, l.jsx)(o.Text, {
+                    (0, r.jsx)(i.Text, {
                         className: m.stepHeader,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
@@ -64,26 +64,29 @@ function C(e) {
                             total: 2
                         })
                     }),
-                    null != k &&
-                        (0, l.jsx)(o.olH, {
+                    null != p &&
+                        (0, r.jsx)(i.olH, {
                             className: m.closeButton,
-                            onClick: k
+                            onClick: p
                         })
                 ]
             }),
-            (0, l.jsxs)(o.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 className: m.consentContent,
                 paddingFix: !1,
                 children: [E, T, g]
             }),
-            (0, l.jsx)(o.mzw, {
+            (0, r.jsx)(i.mzw, {
                 className: m.footer,
-                children: (0, l.jsx)(o.zxk, {
+                children: (0, r.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
                     className: m.footerButton,
-                    color: o.zxk.Colors.BRAND,
-                    submitting: p,
-                    onClick: R,
-                    children: h.intl.string(h.t.ZN4hkZ)
+                    children: (0, r.jsx)(i.zxk, {
+                        variant: 'primary',
+                        text: h.intl.string(h.t.ZN4hkZ),
+                        loading: k,
+                        onClick: y
+                    })
                 })
             })
         ]

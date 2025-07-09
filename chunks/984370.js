@@ -76,9 +76,9 @@ async function g(e) {
 function P(e) {
     let { children: t, className: n, channelId: a, channelType: c, guildId: T, innerClassname: p, transparent: m = !1, toolbar: R, mobileToolbar: P, 'aria-label': C, 'aria-labelledby': y, scrollable: b, role: D, hideSearch: h, showDivider: U, disableDoubleClick: M } = e,
         v = null == a || (0, f.AB)(a) ? null : a,
-        k = (0, l.e7)([I.Z], () => I.Z.isInChannel(v) || !1),
-        L = (0, l.e7)([s.Z], () => null != v && s.Z.getParticipantsListOpen(v)),
-        { enabled: Z, inInbox: j } = d.Z.useExperiment({ location: 'HeaderBar' }),
+        L = (0, l.e7)([I.Z], () => I.Z.isInChannel(v) || !1),
+        Z = (0, l.e7)([s.Z], () => null != v && s.Z.getParticipantsListOpen(v)),
+        { enabled: j, inInbox: k } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: x } = (0, u.Z)({ location: 'HeaderBar' });
     return (0, r.jsx)(S.ZP, {
         className: n,
@@ -93,15 +93,15 @@ function P(e) {
                           R,
                           e ? (0, r.jsx)(E.Z, { className: A.search }, null != T ? T : a) : null,
                           U && (0, r.jsx)(S.ZP.Divider, {}),
-                          Z && !j ? (0, r.jsx)(_.Z, {}) : null,
+                          j && !k ? (0, r.jsx)(_.Z, {}) : null,
                           x &&
-                              k &&
+                              L &&
                               null != v &&
-                              !L &&
+                              !Z &&
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: A.controlButtonWrapper,
-                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(v, !L) })]
+                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(v, !Z) })]
                               })
                       ]
                   });

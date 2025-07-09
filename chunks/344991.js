@@ -60,7 +60,7 @@ function g(e) {
         [w, C] = i.useState(!1),
         [E, N] = i.useState(!1),
         [I, T] = i.useState(new Map(null == h ? void 0 : h.map((e) => [e.value, e]))),
-        [k, Z] = i.useState(new Set(I.keys())),
+        [Z, k] = i.useState(new Set(I.keys())),
         [L, D] = i.useState(() => (null != h ? h : []).map((e) => e.value)),
         [R, A] = i.useState(0);
     i.useEffect(() => {
@@ -68,7 +68,7 @@ function g(e) {
         if (e.every((e) => L.includes(e)) && L.every((t) => e.includes(t))) return;
         D(e);
         let t = new Map(null == h ? void 0 : h.map((e) => [e.value, e]));
-        (T(t), Z(new Set(t.keys())), A((e) => e + 1));
+        (T(t), k(new Set(t.keys())), A((e) => e + 1));
     }, [h, L]);
     let {
             state: _,
@@ -84,18 +84,18 @@ function g(e) {
     i.useEffect(() => {
         if ((null == _ ? void 0 : _.type) === s.re.USER_SELECT || (null == _ ? void 0 : _.type) === s.re.ROLE_SELECT || (null == _ ? void 0 : _.type) === s.re.MENTIONABLE_SELECT || (null == _ ? void 0 : _.type) === s.re.CHANNEL_SELECT) {
             let e = new Map(_.selectedOptions.map((e) => [e.value, e]));
-            (T(e), Z(new Set(e.keys())));
+            (T(e), k(new Set(e.keys())));
         }
     }, [_]);
     let z = i.useCallback(() => {
         M({
             type: v,
             selectedOptions: Array.from(I.values())
-        }) && Z(new Set(I.keys()));
+        }) && k(new Set(I.keys()));
     }, [M, v, I]);
     i.useEffect(() => {
-        !w && !E && ((I.size === k.size && Array.from(I.keys()).every((e) => k.has(e))) || z());
-    }, [w, E, k, I, z]);
+        !w && !E && ((I.size === Z.size && Array.from(I.keys()).every((e) => Z.has(e))) || z());
+    }, [w, E, Z, I, z]);
     let B = 0 === I.size || w,
         W = {
             isProcessing: G,

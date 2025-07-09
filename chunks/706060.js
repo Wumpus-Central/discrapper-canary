@@ -2,13 +2,13 @@
 var i = n(255367),
     r = n(73800),
     s = n(772848),
-    l = n(481060),
-    a = n(259580),
+    a = n(481060),
+    l = n(259580),
     o = n(991346),
     c = n(152049);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
-    return (0, i.jsx)(l.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: n ? 'text-md/bold' : 'text-md/normal',
         children: t
     });
@@ -57,7 +57,7 @@ function u(e) {
             style: { marginLeft: 8 * o },
             className: c.settingNode,
             children: [
-                (0, i.jsxs)(l.P3F, {
+                (0, i.jsxs)(a.P3F, {
                     className: c.headerBar,
                     onClick: g,
                     children: [
@@ -65,8 +65,8 @@ function u(e) {
                             setting: t,
                             hasChildren: n.length > 0
                         }),
-                        (0, i.jsx)(a.Z, {
-                            direction: m ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
+                        (0, i.jsx)(l.Z, {
+                            direction: m ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
@@ -113,7 +113,7 @@ function m() {
     return (0, i.jsxs)('div', {
         className: c.root,
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, i.jsx)(a.X6q, {
                 variant: 'heading-lg/bold',
                 children: 'Settings Tree'
             }),

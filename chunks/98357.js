@@ -1,11 +1,11 @@
-n.d(t, { Z: () => l });
-var a = n(570140),
-    r = n(432877);
+a.d(t, { Z: () => l });
+var n = a(570140),
+    r = a(432877);
 function l(e, t) {
-    let n = 'boolean' == typeof t ? t : !r.ZP.get(e);
-    a.Z.dispatch({
+    let a = 'boolean' == typeof t ? t : !r.ZP.get(e);
+    n.Z.dispatch({
         type: 'DEV_TOOLS_DEV_SETTING_SET',
         toggle: e,
-        value: n
+        value: a
     });
 }

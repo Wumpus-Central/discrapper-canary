@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(953529));
+(n.d(t, { Z: () => U }), n(953529));
 var i = n(255367),
     a = n(73800),
     l = n(286379),
@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(797614),
     d = n(706454),
     u = n(626135),
-    m = n(331692),
-    p = n(531441),
+    p = n(331692),
+    m = n(531441),
     f = n(236289),
     h = n(788080),
     g = n(451284),
@@ -71,7 +71,7 @@ let P = (e) => {
                     classification_type: t,
                     classificationHook: (e, t) => (0, i.jsx)('strong', { children: e }, t)
                 };
-                return null == n ? E.intl.format(E.t.HpvELi, e) : (null == n ? void 0 : n.member_type) === p.wO.OWNER ? E.intl.format(E.t.X1ngSU, w(A({}, e), { guildName: null == n ? void 0 : n.name })) : E.intl.format(E.t.rmpEPD, w(A({}, e), { guildName: null == n ? void 0 : n.name }));
+                return null == n ? E.intl.format(E.t.HpvELi, e) : (null == n ? void 0 : n.member_type) === m.wO.OWNER ? E.intl.format(E.t.X1ngSU, w(A({}, e), { guildName: null == n ? void 0 : n.name })) : E.intl.format(E.t.rmpEPD, w(A({}, e), { guildName: null == n ? void 0 : n.name }));
             }, [t, n]);
         return (0, i.jsx)('div', {
             className: _.classificationHeader,
@@ -229,19 +229,19 @@ let P = (e) => {
             ]
         });
     },
-    D = (e) => {
+    U = (e) => {
         var t;
         let { classificationId: n, source: r, onError: o, onClose: d } = e,
             { classification: E, classificationRequestState: A, isAppealEligible: w, isDsaEligible: C, violationType: S } = (0, y.YG)(n),
             N = (0, s.e7)([f.Z], () => f.Z.getAppealEligibility()),
             k = (0, g.P)(),
-            D = null != E && null != E.flagged_content && E.flagged_content.length > 0,
-            U = (0, x.e)(),
-            Z = !!(null == E ? void 0 : E.is_coppa) && N.includes(p.tG.AGE_VERIFY_ELIGIBLE),
+            U = null != E && null != E.flagged_content && E.flagged_content.length > 0,
+            D = (0, x.e)(),
+            Z = !!(null == E ? void 0 : E.is_coppa) && N.includes(m.tG.AGE_VERIFY_ELIGIBLE),
             M = {
                 accountStanding: k,
                 classificationId: n,
-                hasFlaggedContent: D,
+                hasFlaggedContent: U,
                 isDsaEligible: C,
                 source: r,
                 violationType: S
@@ -252,7 +252,7 @@ let P = (e) => {
         }),
         a.useEffect(() => {
             let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: a, violationType: l } = Y.current;
-            U &&
+            D &&
                 u.default.track(O.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationDetail,
                     account_standing: e.state,
@@ -262,8 +262,8 @@ let P = (e) => {
                     is_dsa_eligible: i,
                     violation_type: l
                 });
-        }, [U]),
-        null == E && A === p.OY.FAILED)
+        }, [D]),
+        null == E && A === m.OY.FAILED)
             ? (o(), null)
             : null == E
               ? null
@@ -292,11 +292,11 @@ let P = (e) => {
                                         account_standing: k.state,
                                         classification_ids: [Number(n)],
                                         source: r,
-                                        is_violative_content_shown: D,
+                                        is_violative_content_shown: U,
                                         is_dsa_eligible: C,
                                         violation_type: S
                                     }),
-                                        Z ? m.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n)));
+                                        Z ? p.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n)));
                                 },
                                 isAppealEligible: w || Z
                             })

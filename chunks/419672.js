@@ -1,67 +1,68 @@
-(n.d(e, { Z: () => b }), n(388685));
+(n.d(e, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
-    s = n(481060),
-    l = n(230711),
-    o = n(63063),
-    a = n(378298),
-    c = n(584656),
-    u = n(993750),
-    d = n(981631),
-    T = n(526761),
-    S = n(388032),
-    _ = n(621164);
-let b = function (t) {
+    s = n(755721),
+    l = n(481060),
+    o = n(230711),
+    a = n(63063),
+    c = n(378298),
+    u = n(584656),
+    d = n(993750),
+    T = n(981631),
+    S = n(526761),
+    _ = n(388032),
+    b = n(621164);
+let x = function (t) {
     let { onClose: e, channelId: n } = t,
-        [b, x] = r.useState(!1),
-        p = r.useCallback(() => {
-            (l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e());
-        }, [e]),
+        [x, p] = r.useState(!1),
         O = r.useCallback(() => {
-            b ||
-                (x(!0),
-                (0, a.Uj)(n)
+            (o.Z.open(T.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: S.FY.DM_SAFETY_ALERTS_V2 }), e());
+        }, [e]),
+        h = r.useCallback(() => {
+            x ||
+                (p(!0),
+                (0, c.Uj)(n)
                     .then(() => {
                         (e(),
-                            (0, c.t)({
-                                text: S.intl.string(S.t.FhgVWl),
+                            (0, u.t)({
+                                text: _.intl.string(_.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
                             }));
                     })
                     .catch(() => {
-                        (x(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE)));
+                        (p(!1), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.R0RpRU), l.ToastType.FAILURE)));
                     }));
-        }, [n, e, b]);
-    return (0, i.jsxs)(u.Z, {
-        style: _.wrapperStyle,
+        }, [n, e, x]);
+    return (0, i.jsxs)(d.Z, {
+        style: b.wrapperStyle,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: S.intl.format(S.t['njJ/Cg'], { learnMoreLink: o.Z.getArticleURL(d.BhN.SAFETY_ALERTS) })
+                children: _.intl.format(_.t['njJ/Cg'], { learnMoreLink: a.Z.getArticleURL(T.BhN.SAFETY_ALERTS) })
             }),
-            (0, i.jsx)(s.zxk, {
-                className: _.settingsButton,
-                onClick: p,
+            (0, i.jsx)(s.zx, {
+                className: b.settingsButton,
+                onClick: O,
                 fullWidth: !0,
-                children: S.intl.string(S.t.qpWnyM)
+                children: _.intl.string(_.t.qpWnyM)
             }),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(s.Text, {
+                children: (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    className: _.reportFalsePositiveText,
-                    children: S.intl.format(S.t['2uYViI'], {
+                    className: b.reportFalsePositiveText,
+                    children: _.intl.format(_.t['2uYViI'], {
                         reportFalsePositiveHook: (t, e) =>
                             (0, i.jsx)(
-                                s.zxk,
+                                s.zx,
                                 {
-                                    className: _.reportFalsePositiveButton,
-                                    size: s.zxk.Sizes.NONE,
-                                    color: s.zxk.Colors.LINK,
-                                    look: s.zxk.Looks.LINK,
-                                    disabled: b,
-                                    onClick: O,
+                                    className: b.reportFalsePositiveButton,
+                                    size: s.zx.Sizes.NONE,
+                                    color: s.zx.Colors.LINK,
+                                    look: s.zx.Looks.LINK,
+                                    disabled: x,
+                                    onClick: h,
                                     children: t
                                 },
                                 e

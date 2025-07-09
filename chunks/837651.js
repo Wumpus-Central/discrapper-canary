@@ -3,8 +3,8 @@ var n = r(255367),
     i = r(73800),
     s = r(481060),
     o = r(816814),
-    c = r(600164),
-    a = r(198993),
+    a = r(600164),
+    c = r(198993),
     l = r(594174),
     d = r(287880),
     u = r(388032),
@@ -24,20 +24,20 @@ function p(e, t, r) {
 }
 let g = (e) => {
     let { image: t, label: r, text: i, children: o } = e;
-    return (0, n.jsxs)(c.Z, {
+    return (0, n.jsxs)(a.Z, {
         className: h.spacing,
         children: [
-            (0, n.jsx)(c.Z, {
+            (0, n.jsx)(a.Z, {
                 grow: 0,
                 shrink: 0,
                 basis: '156px',
-                justify: c.Z.Justify.CENTER,
+                justify: a.Z.Justify.CENTER,
                 className: h.image,
                 children: t
             }),
-            (0, n.jsx)(c.Z, {
-                direction: c.Z.Direction.VERTICAL,
-                justify: c.Z.Justify.CENTER,
+            (0, n.jsx)(a.Z, {
+                direction: a.Z.Direction.VERTICAL,
+                justify: a.Z.Justify.CENTER,
                 children: (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsx)(s.vwX, {
@@ -65,9 +65,9 @@ class f extends i.PureComponent {
             C = (0, d.U0)(null != _ ? _ : '', o),
             E = (0, n.jsx)('form', {
                 onSubmit: this.handleActivate,
-                children: (0, n.jsxs)(c.Z, {
+                children: (0, n.jsxs)(a.Z, {
                     className: h.inputContainer,
-                    align: c.Z.Align.START,
+                    align: a.Z.Align.START,
                     children: [
                         (0, n.jsx)(s.oil, {
                             value: p,
@@ -79,13 +79,14 @@ class f extends i.PureComponent {
                             error: this.state.error,
                             autoFocus: !0
                         }),
-                        (0, n.jsx)(c.Z.Child, {
+                        (0, n.jsx)(a.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, n.jsx)(s.zxk, {
+                                variant: 'primary',
+                                text: u.intl.string(u.t['/a5+YW']),
                                 type: 'submit',
-                                submitting: f,
-                                children: u.intl.string(u.t['/a5+YW'])
+                                loading: f
                             })
                         })
                     ]
@@ -100,7 +101,7 @@ class f extends i.PureComponent {
                 (0, n.jsxs)(s.xBx, {
                     separator: !1,
                     children: [
-                        (0, n.jsxs)(c.Z.Child, {
+                        (0, n.jsxs)(a.Z.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [
@@ -115,7 +116,7 @@ class f extends i.PureComponent {
                                 })
                             ]
                         }),
-                        (0, n.jsx)(c.Z.Child, {
+                        (0, n.jsx)(a.Z.Child, {
                             grow: 0,
                             children: (0, n.jsx)(s.olH, { onClick: i })
                         })
@@ -138,7 +139,7 @@ class f extends i.PureComponent {
                         }),
                         (0, n.jsx)(s.$i$, { className: h.divider }),
                         (0, n.jsx)(g, {
-                            image: (0, n.jsx)(a.ZP, { text: C }),
+                            image: (0, n.jsx)(c.ZP, { text: C }),
                             label: u.intl.string(u.t['91InFx']),
                             text: u.intl.string(u.t.hFeBkp),
                             children: (0, n.jsxs)('div', {

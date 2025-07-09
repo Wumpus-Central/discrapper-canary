@@ -132,6 +132,8 @@ function b(e) {
                   }),
                   (0, r.jsx)(s.mzw, {
                       children: (0, r.jsx)(s.zxk, {
+                          variant: 'primary',
+                          text: p.intl.string(p.t.nAt0rK),
                           onClick: function () {
                               ((0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
                                   raid_lockdown_feedback_type: b,
@@ -140,10 +142,7 @@ function b(e) {
                               }),
                                   l());
                           },
-                          color: s.zxk.Colors.BRAND,
-                          look: s.zxk.Looks.FILLED,
-                          submitting: !1,
-                          children: p.intl.string(p.t.nAt0rK)
+                          loading: !1
                       })
                   })
               ]

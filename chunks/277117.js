@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(657707),
     l = n(442837),
-    o = n(692547),
-    a = n(320582),
+    a = n(692547),
+    o = n(320582),
     s = n(246016),
     c = n(189156),
     u = n(699516),
@@ -31,12 +31,12 @@ var i = n(657707),
     T = n(388032),
     A = n(283189);
 function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: k, onOpenProfile: M } = e,
-        { relationshipType: D, originApplicationId: L } = (0, l.cj)([u.Z], () => ({
+    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: D } = e,
+        { relationshipType: L, originApplicationId: k } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
         })),
-        U = (0, a.vh)(t.id),
+        U = (0, o.vh)(t.id),
         B = (0, s.Y)({ userId: t.id }),
         F = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
         H = (0, l.e7)([h.Z], () => {
@@ -51,7 +51,7 @@ function w(e) {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
-                onOpenProfile: M,
+                onOpenProfile: D,
                 tags: (0, r.jsx)(g.Z, {
                     displayProfile: w,
                     themeType: Z.lY.SIDEBAR
@@ -62,18 +62,18 @@ function w(e) {
                         !F &&
                             (0, r.jsx)(P.Z, {
                                 userId: t.id,
-                                isHovering: k,
-                                onOpenProfile: M
+                                isHovering: M,
+                                onOpenProfile: D
                             })
                     ]
                 })
             }),
-            D === N.OGo.PENDING_INCOMING &&
+            L === N.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,
                         channelId: R.id,
-                        applicationId: L
+                        applicationId: k
                     })
                 }),
             U.map((e) =>
@@ -101,7 +101,7 @@ function w(e) {
                         heading: T.intl.string(T.t.Iyka0d),
                         headingIcon: (0, r.jsx)(i.P4T, {
                             size: 'xxs',
-                            color: o.Z.colors.HEADER_PRIMARY
+                            color: a.Z.colors.HEADER_PRIMARY
                         }),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(c.n, { userId: t.id })
@@ -112,7 +112,7 @@ function w(e) {
                       user: t,
                       currentUser: n,
                       displayProfile: w,
-                      onOpenUserProfileModal: M
+                      onOpenUserProfileModal: D
                   })
                 : (0, r.jsx)(_.Z, {
                       user: t,
@@ -132,7 +132,7 @@ function w(e) {
                             children: (0, r.jsx)(b.Z, {
                                 userBio: w.bio,
                                 animateOnHover: !0,
-                                isHovering: k,
+                                isHovering: M,
                                 userId: t.id
                             })
                         }),

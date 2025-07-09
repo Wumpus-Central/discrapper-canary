@@ -1,23 +1,24 @@
-(n.d(t, { default: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
+(n.d(t, { default: () => w }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(166459),
-    c = n(990169),
-    u = n(476326),
-    d = n(752305),
-    f = n(849522),
-    _ = n(703558),
-    p = n(626135),
-    h = n(358085),
-    m = n(998502),
-    g = n(981631),
-    E = n(388032),
-    b = n(948979),
-    y = n(20493);
-function O(e, t, n) {
+    s = n(755721),
+    l = n(481060),
+    c = n(166459),
+    u = n(990169),
+    d = n(476326),
+    f = n(752305),
+    _ = n(849522),
+    p = n(703558),
+    h = n(626135),
+    m = n(358085),
+    g = n(998502),
+    E = n(981631),
+    b = n(388032),
+    y = n(948979),
+    O = n(20493);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +31,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +42,12 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             }));
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,23 +59,23 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = 104,
-    A = 16;
-function N(e) {
+let A = 104,
+    N = 16;
+function C(e) {
     var t, n, a;
     let { file: s } = e,
-        [l, u] = i.useState(),
+        [l, c] = i.useState(),
         [d, f] = i.useState(!1),
         [_, p] = i.useState({}),
         h = i.useRef(null);
@@ -82,9 +83,9 @@ function N(e) {
         if ((null != h.current && f(!1), null == s)) return;
         let e = URL.createObjectURL(s);
         return (
-            u(e),
+            c(e),
             () => {
-                (u(void 0), URL.revokeObjectURL(e));
+                (c(void 0), URL.revokeObjectURL(e));
             }
         );
     }, [s]),
@@ -95,54 +96,54 @@ function N(e) {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     (1 === t
                         ? p({
-                              width: S,
-                              height: S
+                              width: A,
+                              height: A
                           })
                         : t > 1
                           ? p({
-                                width: S * t,
+                                width: A * t,
                                 height: void 0
                             })
                           : p({
                                 width: void 0,
-                                height: S / t
+                                height: A / t
                             }),
                         f(!0));
                 });
         }, []));
-    let m = (0, c.Z)(h),
-        g = Math.max(16, (A + S - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+    let m = (0, u.Z)(h),
+        g = Math.max(16, (N + A - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)('img', {
         ref: h,
         src: l,
-        className: o()(b.icon, { [b.image]: !d }),
+        className: o()(y.icon, { [y.image]: !d }),
         'aria-hidden': !0,
         alt: '',
         style: {
             width: null != (n = _.width) ? n : 'initial',
-            height: null != (a = _.height) ? a : S,
+            height: null != (a = _.height) ? a : A,
             marginLeft: g,
             marginRight: g,
-            marginTop: null != _.height ? S - _.height - 33 : -33
+            marginTop: null != _.height ? A - _.height - 33 : -33
         }
     });
 }
-class C extends i.Component {
+class R extends i.Component {
     render() {
         var e;
-        return this.props.upload.item.platform !== u.ow.WEB ? null : this.props.upload.isImage ? (0, r.jsx)(N, { file: this.props.upload.item.file }) : (0, r.jsx)('div', { className: o()(b.icon, { [b[null != (e = this.props.upload.classification) ? e : '']]: !0 }) });
+        return this.props.upload.item.platform !== d.ow.WEB ? null : this.props.upload.isImage ? (0, r.jsx)(C, { file: this.props.upload.item.file }) : (0, r.jsx)('div', { className: o()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : '']]: !0 }) });
     }
 }
-class R extends i.Component {
+class P extends i.Component {
     componentDidMount() {
         var e;
         ((null == (e = this.props.upload) ? void 0 : e.showLargeMessageDialog) &&
-            this.props.upload.item.platform === u.ow.WEB &&
-            p.default.track(g.rMx.OPEN_MODAL, {
+            this.props.upload.item.platform === d.ow.WEB &&
+            h.default.track(E.rMx.OPEN_MODAL, {
                 type: 'Upload Large Message',
                 message_content_length: this.props.upload.item.file.size
             }),
-            h.isPlatformEmbedded && m.ZP.focus());
+            m.isPlatformEmbedded && g.ZP.focus());
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -153,32 +154,32 @@ class R extends i.Component {
     }
     render() {
         let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: a } = this.props,
-            { hasSpoiler: l } = this.state;
-        return (0, r.jsxs)(s.Y0X, {
-            'aria-label': E.intl.string(E.t['3AS4UF']),
-            size: s.CgR.DYNAMIC,
+            { hasSpoiler: c } = this.state;
+        return (0, r.jsxs)(l.Y0X, {
+            'aria-label': b.intl.string(b.t['3AS4UF']),
+            size: l.CgR.DYNAMIC,
             transitionState: t,
-            className: b.uploadModal,
+            className: y.uploadModal,
             parentComponent: 'UploadAttachment',
             children: [
                 (0, r.jsxs)('div', {
-                    className: b.inner,
+                    className: y.inner,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: o()(b.file, { [b.expandable]: e.isImage }),
+                            className: o()(y.file, { [y.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(C, { upload: e }),
+                                (0, r.jsx)(R, { upload: e }),
                                 (0, r.jsxs)('div', {
-                                    className: b.description,
+                                    className: y.description,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: b.filename,
-                                            children: e.showLargeMessageDialog ? E.intl.formatToPlainString(E.t.QWQxtL, { maxLength: n }) : e.filename
+                                            className: y.filename,
+                                            children: e.showLargeMessageDialog ? b.intl.formatToPlainString(b.t.QWQxtL, { maxLength: n }) : e.filename
                                         }),
                                         e.showLargeMessageDialog
                                             ? (0, r.jsx)('div', {
-                                                  className: b.subtitle,
-                                                  children: E.intl.string(E.t.Plcu09)
+                                                  className: y.subtitle,
+                                                  children: b.intl.string(b.t.Plcu09)
                                               })
                                             : null
                                     ]
@@ -186,47 +187,47 @@ class R extends i.Component {
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: b.comment,
+                            className: y.comment,
                             children: [
                                 (0, r.jsx)('div', {
-                                    className: b.label,
-                                    children: (0, r.jsx)('span', { children: E.intl.string(E.t.ILJuBg) })
+                                    className: y.label,
+                                    children: (0, r.jsx)('span', { children: b.intl.string(b.t.ILJuBg) })
                                 }),
-                                (0, r.jsx)(s.oil, {
-                                    className: o()(b.channelTextAreaUpload, y.marginTop8),
+                                (0, r.jsx)(l.oil, {
+                                    className: o()(y.channelTextAreaUpload, O.marginTop8),
                                     value: this.state.filename,
                                     onChange: (e) => this.setState({ filename: e }),
                                     onKeyDown: (e) => {
-                                        if (e.which === g.yXg.ENTER) return this.handleSubmit();
+                                        if (e.which === E.yXg.ENTER) return this.handleSubmit();
                                     }
                                 }),
                                 e.isImage
                                     ? (0, r.jsxs)(i.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: b.label,
-                                                  children: (0, r.jsx)('span', { children: E.intl.string(E.t.eOB2eX) })
+                                                  className: y.label,
+                                                  children: (0, r.jsx)('span', { children: b.intl.string(b.t.eOB2eX) })
                                               }),
-                                              (0, r.jsx)(s.oil, {
-                                                  className: o()(b.channelTextAreaUpload, y.marginTop8),
-                                                  placeholder: E.intl.string(E.t.RNH1jo),
+                                              (0, r.jsx)(l.oil, {
+                                                  className: o()(y.channelTextAreaUpload, O.marginTop8),
+                                                  placeholder: b.intl.string(b.t.RNH1jo),
                                                   value: this.state.description,
                                                   onChange: (e) => this.setState({ description: e }),
                                                   onKeyDown: (e) => {
-                                                      if (e.which === g.yXg.ENTER) return this.handleSubmit();
+                                                      if (e.which === E.yXg.ENTER) return this.handleSubmit();
                                                   }
                                               })
                                           ]
                                       })
                                     : null,
                                 !0 !== a &&
-                                    (0, r.jsx)(s.XZJ, {
-                                        className: y.marginBottom20,
-                                        value: l,
+                                    (0, r.jsx)(l.XZJ, {
+                                        className: O.marginBottom20,
+                                        value: c,
                                         onChange: (e, t) => this.setState({ hasSpoiler: t }),
-                                        children: (0, r.jsx)(s.Text, {
+                                        children: (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
-                                            children: E.intl.string(E.t['gsI+xM'])
+                                            children: b.intl.string(b.t['gsI+xM'])
                                         })
                                     })
                             ]
@@ -234,21 +235,21 @@ class R extends i.Component {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: b.footer,
+                    className: y.footer,
                     children: (0, r.jsxs)('div', {
-                        className: o()(b.hasSpoilers, b.footerRightAlign),
+                        className: o()(y.hasSpoilers, y.footerRightAlign),
                         children: [
-                            (0, r.jsx)(s.zxk, {
+                            (0, r.jsx)(s.zx, {
                                 type: 'button',
-                                look: s.zxk.Looks.LINK,
-                                color: s.zxk.Colors.PRIMARY,
+                                look: s.zx.Looks.LINK,
+                                color: s.zx.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                children: (0, r.jsx)('span', { children: E.intl.string(E.t['ETE/oK']) })
+                                children: (0, r.jsx)('span', { children: b.intl.string(b.t['ETE/oK']) })
                             }),
-                            (0, r.jsx)(s.zxk, {
+                            (0, r.jsx)(s.zx, {
                                 type: 'submit',
                                 onClick: this.handleSubmit,
-                                children: (0, r.jsx)('span', { children: E.intl.string(E.t['TY+auL']) })
+                                children: (0, r.jsx)('span', { children: b.intl.string(b.t['TY+auL']) })
                             })
                         ]
                     })
@@ -259,19 +260,19 @@ class R extends i.Component {
     constructor(e) {
         var t, n, r, i, a, o;
         (super(e),
-            O(this, 'cancelAll', () => {
-                (l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose());
+            v(this, 'cancelAll', () => {
+                (c.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose());
             }),
-            O(this, 'cancel', () => {
+            v(this, 'cancel', () => {
                 this.props.onClose();
             }),
-            O(this, 'handleTextChange', (e, t, n) => {
+            v(this, 'handleTextChange', (e, t, n) => {
                 this.setState({
                     textValue: t,
                     richValue: n
                 });
             }),
-            O(this, 'handleSubmit', () => {
+            v(this, 'handleSubmit', () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
                     { filename: r, description: i, hasSpoiler: a } = this.state;
                 (n({
@@ -282,8 +283,8 @@ class R extends i.Component {
                 }),
                     t());
             }));
-        let s = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
-        this.state = T(v({}, (0, d.eK)(s)), {
+        let s = e.ignoreDraft ? '' : p.Z.getDraft(this.props.channelId, e.draftType);
+        this.state = S(I({}, (0, f.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
             filename: null != (a = null == (n = e.upload) ? void 0 : n.filename) ? a : '',
@@ -292,13 +293,13 @@ class R extends i.Component {
         });
     }
 }
-function P(e) {
-    let t = (0, f.Z)();
-    return e.upload.item.platform !== u.ow.WEB
+function w(e) {
+    let t = (0, _.Z)();
+    return e.upload.item.platform !== d.ow.WEB
         ? null
         : (0, r.jsx)(
-              R,
-              T(v({}, e), {
+              P,
+              S(I({}, e), {
                   file: e.upload.item.file,
                   messageMaxLength: t
               })

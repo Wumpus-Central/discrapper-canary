@@ -81,9 +81,9 @@ function S(e, t) {
 function T(e) {
     let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: T, onToggleExpand: w } = e,
         [P, Z] = i.useState(!1),
-        [k] = i.useState(new s.V7());
-    i.useEffect(() => () => k.stop(), [k]);
-    let A = i.useMemo(() => S(n, n.avatar), [n]),
+        [A] = i.useState(new s.V7());
+    i.useEffect(() => () => A.stop(), [A]);
+    let k = i.useMemo(() => S(n, n.avatar), [n]),
         D = i.useCallback(() => {
             let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -231,29 +231,37 @@ function T(e) {
                                                             }
                                                             return i;
                                                         })(e, ['onClick', 'onMouseEnter', 'onMouseLeave', 'onBlur', 'onFocus']);
-                                                    return (0, r.jsx)(
-                                                        c.zxk,
-                                                        I(N({}, s), {
-                                                            'aria-label': '',
-                                                            onClick: () => {
-                                                                (null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => Z(!1)), D());
-                                                            },
-                                                            size: c.zxk.Sizes.SMALL,
-                                                            color: c.zxk.Colors.PRIMARY,
-                                                            look: c.zxk.Looks.FILLED,
-                                                            className: C.copyButton,
-                                                            disabled: null == n.token || '' === n.token,
-                                                            children: _.intl.string(_.t.Ae9rUV)
-                                                        })
-                                                    );
+                                                    return (0, r.jsx)('div', {
+                                                        'data-button-hoisted-classname-wrapper': !0,
+                                                        className: C.copyButton,
+                                                        children: (0, r.jsx)(
+                                                            c.zxk,
+                                                            I(
+                                                                N(
+                                                                    {
+                                                                        variant: 'secondary',
+                                                                        size: 'sm',
+                                                                        text: _.intl.string(_.t.Ae9rUV)
+                                                                    },
+                                                                    s
+                                                                ),
+                                                                {
+                                                                    'aria-label': '',
+                                                                    onClick: () => {
+                                                                        (null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), A.start(1000, () => Z(!1)), D());
+                                                                    },
+                                                                    disabled: null == n.token || '' === n.token
+                                                                }
+                                                            )
+                                                        )
+                                                    });
                                                 }
                                             }),
                                             (0, r.jsx)(c.zxk, {
-                                                onClick: R,
-                                                size: c.zxk.Sizes.SMALL,
-                                                color: c.zxk.Colors.RED,
-                                                look: c.zxk.Looks.LINK,
-                                                children: _.intl.string(_.t.jVrUnJ)
+                                                variant: 'critical-secondary',
+                                                size: 'sm',
+                                                text: _.intl.string(_.t.jVrUnJ),
+                                                onClick: R
                                             })
                                         ]
                                     })
@@ -279,7 +287,7 @@ function T(e) {
                             children: [
                                 (0, r.jsx)(v.Z, {
                                     name: n.name,
-                                    imageSrc: A,
+                                    imageSrc: k,
                                     details: L
                                 }),
                                 (0, r.jsx)(f.Z, {

@@ -1,89 +1,94 @@
-(e.d(c, { default: () => h }), e(953529));
-var t = e(255367);
-e(73800);
-var o = e(481060),
-    a = e(313201),
-    l = e(471253),
-    s = e(939863),
-    i = e(388032),
-    r = e(555501);
-function h(n) {
-    let { transitionState: c, onClose: e, channel: h } = n,
-        d = (0, a.Dt)(),
+(t.d(e, { default: () => d }), t(953529));
+var a = t(255367);
+t(73800);
+var c = t(481060),
+    i = t(313201),
+    s = t(471253),
+    r = t(939863),
+    l = t(388032),
+    o = t(555501);
+function d(n) {
+    let { transitionState: e, onClose: t, channel: d } = n,
+        h = (0, i.Dt)(),
         f = (n) => {
-            ((0, l.RK)(h, n), e());
+            ((0, s.RK)(d, n), t());
         };
-    return (0, t.jsx)(o.Y0X, {
-        size: o.CgR.SMALL,
-        transitionState: c,
-        'aria-labelledby': d,
-        className: r.container,
+    return (0, a.jsx)(c.Y0X, {
+        size: c.CgR.SMALL,
+        transitionState: e,
+        'aria-labelledby': h,
+        className: o.container,
         parentComponent: 'InvitedToSpeakModal',
-        children: (0, t.jsxs)(o.hzk, {
-            className: r.content,
+        children: (0, a.jsxs)(c.hzk, {
+            className: o.content,
             children: [
-                (0, t.jsx)(s.Z, {
-                    children: (0, t.jsx)('div', {
-                        className: r.iconBackground,
-                        children: (0, t.jsx)(o.S6n, {
+                (0, a.jsx)(r.Z, {
+                    children: (0, a.jsx)('div', {
+                        className: o.iconBackground,
+                        children: (0, a.jsx)(c.S6n, {
                             size: 'custom',
                             color: 'currentColor',
                             height: 40,
                             width: 40,
-                            className: r.icon
+                            className: o.icon
                         })
                     })
                 }),
-                (0, t.jsx)(o.X6q, {
-                    className: r.header,
+                (0, a.jsx)(c.X6q, {
+                    className: o.header,
                     variant: 'heading-lg/semibold',
-                    children: i.intl.string(i.t.Ul1RJS)
+                    children: l.intl.string(l.t.Ul1RJS)
                 }),
-                (0, t.jsx)(o.Text, {
+                (0, a.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: r.description,
+                    className: o.description,
                     variant: 'text-sm/normal',
-                    children: i.intl.format(i.t['Z+3bW1'], {
+                    children: l.intl.format(l.t['Z+3bW1'], {
                         stageChannelHook: () =>
-                            (0, t.jsxs)('div', {
-                                className: r.channel,
+                            (0, a.jsxs)('div', {
+                                className: o.channel,
                                 children: [
-                                    (0, t.jsx)(o.ewx, {
+                                    (0, a.jsx)(c.ewx, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         height: 14,
                                         width: 14,
-                                        className: r.channelIcon
+                                        className: o.channelIcon
                                     }),
-                                    (0, t.jsx)(o.Text, {
-                                        className: r.channelName,
+                                    (0, a.jsx)(c.Text, {
+                                        className: o.channelName,
                                         variant: 'text-sm/normal',
-                                        children: h.name
+                                        children: d.name
                                     })
                                 ]
                             })
                     })
                 }),
-                (0, t.jsx)(o.zxk, {
-                    fullWidth: !0,
-                    color: o.zxk.Colors.GREEN,
-                    onClick: () => f(!1),
-                    className: r.button,
-                    children: i.intl.string(i.t.MMlhsr)
+                (0, a.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
+                    className: o.button,
+                    children: (0, a.jsx)(c.zxk, {
+                        variant: 'active',
+                        text: l.intl.string(l.t.MMlhsr),
+                        fullWidth: !0,
+                        onClick: () => f(!1)
+                    })
                 }),
-                (0, t.jsx)(o.zxk, {
-                    fullWidth: !0,
-                    color: o.zxk.Colors.RED,
-                    onClick: () => f(!0),
-                    className: r.button,
-                    children: i.intl.string(i.t.BVN4pK)
+                (0, a.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
+                    className: o.button,
+                    children: (0, a.jsx)(c.zxk, {
+                        variant: 'critical-primary',
+                        text: l.intl.string(l.t.BVN4pK),
+                        fullWidth: !0,
+                        onClick: () => f(!0)
+                    })
                 }),
-                (0, t.jsx)(o.zxk, {
+                (0, a.jsx)(c.zxk, {
+                    variant: 'secondary',
+                    text: l.intl.string(l.t.L5eIZ2),
                     fullWidth: !0,
-                    color: o.zxk.Colors.PRIMARY,
-                    look: o.zxk.Looks.LINK,
-                    onClick: e,
-                    children: i.intl.string(i.t.L5eIZ2)
+                    onClick: t
                 })
             ]
         })

@@ -1,59 +1,61 @@
 (n.d(t, { Z: () => o }), n(953529));
 var s = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(308569),
+var a = n(481060),
+    r = n(308569),
     i = n(388032),
-    a = n(652297);
+    l = n(652297);
 function o(e) {
     let { onNext: t, onClose: n } = e;
     return (0, s.jsxs)('form', {
         onSubmit: t,
         children: [
-            (0, s.jsxs)(r.xBx, {
+            (0, s.jsxs)(a.xBx, {
                 separator: !1,
-                className: a.header,
+                className: l.header,
                 children: [
-                    (0, s.jsx)(r.X6q, {
+                    (0, s.jsx)(a.X6q, {
                         variant: 'heading-xl/extrabold',
                         children: i.intl.string(i.t.hhR7gY)
                     }),
-                    (0, s.jsx)(r.olH, {
+                    (0, s.jsx)(a.olH, {
                         onClick: n,
-                        className: a.modalCloseButton
+                        className: l.modalCloseButton
                     })
                 ]
             }),
-            (0, s.jsxs)(r.hzk, {
-                className: a.content,
+            (0, s.jsxs)(a.hzk, {
+                className: l.content,
                 children: [
-                    (0, s.jsx)(r.Text, {
-                        className: a.description,
+                    (0, s.jsx)(a.Text, {
+                        className: l.description,
                         variant: 'text-md/normal',
-                        children: i.intl.format(i.t.rqWXUV, { hcArticle: l.j1 })
+                        children: i.intl.format(i.t.rqWXUV, { hcArticle: r.j1 })
                     }),
-                    (0, s.jsx)(r.Text, {
-                        className: a.description,
+                    (0, s.jsx)(a.Text, {
+                        className: l.description,
                         variant: 'text-md/normal',
                         children: i.intl.string(i.t['3LW10N'])
                     })
                 ]
             }),
-            (0, s.jsxs)(r.mzw, {
-                className: a.modalFooter,
-                children: [
-                    (0, s.jsx)(r.zxk, {
-                        color: r.zxk.Colors.BRAND,
-                        onClick: n,
-                        children: i.intl.string(i.t['ETE/oK'])
-                    }),
-                    (0, s.jsx)(r.zxk, {
-                        color: r.zxk.Colors.PRIMARY,
-                        look: r.zxk.Looks.LINK,
-                        onClick: t,
-                        children: i.intl.string(i.t.rwTBFh)
-                    })
-                ]
+            (0, s.jsx)(a.mzw, {
+                className: l.modalFooter,
+                children: (0, s.jsxs)(a.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, s.jsx)(a.zxk, {
+                            variant: 'primary',
+                            text: i.intl.string(i.t['ETE/oK']),
+                            onClick: n
+                        }),
+                        (0, s.jsx)(a.zxk, {
+                            variant: 'secondary',
+                            text: i.intl.string(i.t.rwTBFh),
+                            onClick: t
+                        })
+                    ]
+                })
             })
         ]
     });

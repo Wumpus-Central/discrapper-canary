@@ -1,80 +1,80 @@
-(e.d(t, { default: () => Z }), e(388685));
+(e.d(n, { default: () => E }), e(388685));
 var i = e(255367),
     r = e(73800),
     l = e(399606),
-    o = e(481060),
+    a = e(481060),
     s = e(493773),
-    a = e(100527),
-    d = e(906732),
+    d = e(100527),
+    o = e(906732),
     u = e(565138),
     c = e(314897),
     _ = e(271383),
-    g = e(430824),
-    h = e(626135),
-    N = e(715903),
-    I = e(295474),
-    f = e(273504),
-    k = e(981631),
+    h = e(430824),
+    g = e(626135),
+    f = e(715903),
+    N = e(295474),
+    I = e(273504),
+    x = e(981631),
     A = e(372897),
     C = e(388032),
-    x = e(875606);
-function Z(n) {
-    var t;
-    let { onClose: e, transitionState: Z, guildId: E } = n,
-        m = (0, l.e7)([c.default], () => c.default.getId()),
-        R = (0, l.e7)([_.ZP], () => _.ZP.getMember(E, m), [E, m]),
-        p = (0, l.e7)([g.Z], () => g.Z.getGuild(E), [E]),
-        O = null != (t = null == p ? void 0 : p.name) ? t : '',
-        P = (0, N.no)(R),
-        { analyticsLocations: U } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [M, j] = (0, I.ww)({
-            guildId: E,
-            analyticsLocations: U,
+    Z = e(875606);
+function E(t) {
+    var n;
+    let { onClose: e, transitionState: E, guildId: m } = t,
+        k = (0, l.e7)([c.default], () => c.default.getId()),
+        p = (0, l.e7)([_.ZP], () => _.ZP.getMember(m, k), [m, k]),
+        v = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
+        O = null != (n = null == v ? void 0 : v.name) ? n : '',
+        U = (0, f.no)(p),
+        { analyticsLocations: j } = (0, o.ZP)(d.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [P, R] = (0, N.ww)({
+            guildId: m,
+            analyticsLocations: j,
             openWithoutBackstack: !0
         }),
-        v = P.has(A.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
-    j || (v = C.intl.string(C.t.FFj5Dg));
-    let L = j ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
+        M = U.has(A.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
+    R || (M = C.intl.string(C.t.FFj5Dg));
+    let T = R ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
     return ((0, s.ZP)(() => {
-        h.default.track(k.rMx.OPEN_MODAL, {
-            type: f.dc,
-            guild_id: E,
-            other_user_id: m
+        g.default.track(x.rMx.OPEN_MODAL, {
+            type: I.dc,
+            guild_id: m,
+            other_user_id: k
         });
     }),
     r.useEffect(() => {
-        if (null == p) return void e();
-    }, [p, e]),
-    null == p)
+        if (null == v) return void e();
+    }, [v, e]),
+    null == v)
         ? null
-        : (0, i.jsxs)(o.Y0X, {
-              transitionState: Z,
-              size: o.CgR.SMALL,
+        : (0, i.jsxs)(a.Y0X, {
+              transitionState: E,
+              size: a.CgR.SMALL,
               parentComponent: 'AutomodUserProfileQuarantineAlert',
               children: [
-                  (0, i.jsx)(o.xBx, {
+                  (0, i.jsx)(a.xBx, {
                       separator: !1,
                       children: (0, i.jsxs)('div', {
-                          className: x.headerContainer,
+                          className: Z.headerContainer,
                           children: [
                               (0, i.jsxs)('div', {
-                                  className: x.guildIconContainer,
+                                  className: Z.guildIconContainer,
                                   children: [
                                       (0, i.jsx)(u.Z, {
-                                          guild: p,
+                                          guild: v,
                                           size: u.Z.Sizes.LARGER
                                       }),
                                       (0, i.jsx)('div', {
-                                          className: x.statusContainer,
-                                          children: (0, i.jsx)(o.ics, {
+                                          className: Z.statusContainer,
+                                          children: (0, i.jsx)(a.ics, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: x.statusIcon
+                                              className: Z.statusIcon
                                           })
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(o.X6q, {
+                              (0, i.jsx)(a.X6q, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
                                   children: C.intl.format(C.t.kcYdTk, { guildName: O })
@@ -82,33 +82,34 @@ function Z(n) {
                           ]
                       })
                   }),
-                  (0, i.jsx)(o.hzk, {
+                  (0, i.jsx)(a.hzk, {
                       children: (0, i.jsx)('div', {
-                          className: x.descriptionContainer,
-                          children: (0, i.jsx)(o.Text, {
+                          className: Z.descriptionContainer,
+                          children: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: v
+                              children: M
                           })
                       })
                   }),
-                  (0, i.jsxs)(o.mzw, {
-                      children: [
-                          (0, i.jsx)(o.zxk, {
-                              onClick: () => {
-                                  (M(), e());
-                              },
-                              color: o.zxk.Colors.BRAND,
-                              look: o.zxk.Looks.FILLED,
-                              children: L
-                          }),
-                          (0, i.jsx)(o.zxk, {
-                              onClick: e,
-                              color: o.zxk.Colors.PRIMARY,
-                              look: o.zxk.Looks.LINK,
-                              children: C.intl.string(C.t['ETE/oK'])
-                          })
-                      ]
+                  (0, i.jsx)(a.mzw, {
+                      children: (0, i.jsxs)(a.hE2, {
+                          direction: 'horizontal-reverse',
+                          children: [
+                              (0, i.jsx)(a.zxk, {
+                                  variant: 'primary',
+                                  text: T,
+                                  onClick: () => {
+                                      (P(), e());
+                                  }
+                              }),
+                              (0, i.jsx)(a.zxk, {
+                                  variant: 'secondary',
+                                  text: C.intl.string(C.t['ETE/oK']),
+                                  onClick: e
+                              })
+                          ]
+                      })
                   })
               ]
           });

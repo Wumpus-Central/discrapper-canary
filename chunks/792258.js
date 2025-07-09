@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(468194),
-    a = n(399606),
+    a = n(468194),
+    l = n(399606),
     o = n(481060),
     c = n(372769),
     d = n(601964),
@@ -16,22 +16,22 @@ var r = n(120356),
 let f = [18, 18, 16, 16, 14, 12, 10],
     b = (e) => {
         let { guildId: t } = e,
-            n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
+            n = (0, l.e7)([u.Z], () => u.Z.getGuild(t));
         if (void 0 === n) return null;
         let r = n.features.has(m.oNc.VERIFIED) || n.features.has(m.oNc.PARTNERED),
             { name: b } = n,
             x = (0, d.EB)(n, 40, !0),
             _ = null,
-            E = f[f.length - 1];
+            j = f[f.length - 1];
         if (null == n.icon && null != b) {
-            var j;
-            E = null != (j = f[(_ = (0, l.Zg)(b)).length - 1]) ? j : f[f.length - 1];
+            var E;
+            j = null != (E = f[(_ = (0, a.Zg)(b)).length - 1]) ? E : f[f.length - 1];
         }
         return (0, i.jsxs)('div', {
             className: h.container,
             children: [
                 (0, i.jsxs)('div', {
-                    style: { fontSize: E },
+                    style: { fontSize: j },
                     children: [
                         null != _
                             ? (0, i.jsx)('div', {

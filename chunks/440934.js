@@ -66,22 +66,23 @@ function d(e) {
                         })
                     ]
                 }),
-                (0, o.jsxs)(i.mzw, {
-                    children: [
-                        (0, o.jsx)(i.zxk, {
-                            type: 'submit',
-                            color: i.zxk.Colors.BRAND,
-                            size: i.zxk.Sizes.MEDIUM,
-                            submitting: p === a.i.IN_FLIGHT,
-                            children: _.intl.string(_.t.geKm7u)
-                        }),
-                        (0, o.jsx)(i.zxk, {
-                            look: i.zxk.Looks.LINK,
-                            color: i.zxk.Colors.PRIMARY,
-                            onClick: t,
-                            children: _.intl.string(_.t['ETE/oK'])
-                        })
-                    ]
+                (0, o.jsx)(i.mzw, {
+                    children: (0, o.jsxs)(i.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, o.jsx)(i.zxk, {
+                                variant: 'primary',
+                                text: _.intl.string(_.t.geKm7u),
+                                type: 'submit',
+                                loading: p === a.i.IN_FLIGHT
+                            }),
+                            (0, o.jsx)(i.zxk, {
+                                variant: 'secondary',
+                                text: _.intl.string(_.t['ETE/oK']),
+                                onClick: t
+                            })
+                        ]
+                    })
                 })
             ]
         })

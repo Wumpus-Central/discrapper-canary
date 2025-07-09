@@ -1,47 +1,48 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(990547),
-    l = n(481060),
-    s = n(213609),
-    a = n(388905),
-    o = n(760213),
-    c = n(388032),
-    u = n(122605);
-function d(e) {
+    l = n(755721),
+    s = n(481060),
+    a = n(213609),
+    o = n(388905),
+    c = n(760213),
+    u = n(388032),
+    d = n(122605);
+function h(e) {
     let { onDismiss: t } = e;
     return (
-        (0, s.Z)({
+        (0, a.Z)({
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
         }),
-        (0, r.jsxs)(a.ZP, {
-            className: u.chooseAccountAuthBox,
+        (0, r.jsxs)(o.ZP, {
+            className: d.chooseAccountAuthBox,
             children: [
-                (0, r.jsx)(a.Dx, { children: c.intl.string(c.t['bVbB6+']) }),
-                (0, r.jsx)(l.Text, {
-                    className: u.chooseAccountHelpText,
+                (0, r.jsx)(o.Dx, { children: u.intl.string(u.t['bVbB6+']) }),
+                (0, r.jsx)(s.Text, {
+                    className: d.chooseAccountHelpText,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: c.intl.string(c.t['0M5fNz'])
+                    children: u.intl.string(u.t['0M5fNz'])
                 }),
-                (0, r.jsx)(o.Z, {
-                    actionText: c.intl.string(c.t['DSN+h4']),
+                (0, r.jsx)(c.Z, {
+                    actionText: u.intl.string(u.t['DSN+h4']),
                     onAction: (e) => {
-                        e === o.W.LOGIN_REQUIRED && t();
+                        e === c.W.LOGIN_REQUIRED && t();
                     }
                 }),
                 (0, r.jsx)('div', {
-                    className: u.actions,
-                    children: (0, r.jsx)(l.zxk, {
-                        className: u.__invalid_chooseAccountButton,
-                        look: l.zxk.Looks.LINK,
-                        color: l.zxk.Colors.PRIMARY,
+                    className: d.actions,
+                    children: (0, r.jsx)(l.zx, {
+                        className: d.__invalid_chooseAccountButton,
+                        look: l.zx.Looks.LINK,
+                        color: l.zx.Colors.PRIMARY,
                         onClick: t,
-                        size: l.zxk.Sizes.MEDIUM,
-                        children: (0, r.jsx)(l.Text, {
+                        size: l.zx.Sizes.MEDIUM,
+                        children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: c.intl.string(c.t['9g2mqa'])
+                            children: u.intl.string(u.t['9g2mqa'])
                         })
                     })
                 })

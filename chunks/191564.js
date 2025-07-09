@@ -1,4 +1,4 @@
-(r.d(t, { default: () => I }), r(388685));
+(r.d(t, { default: () => S }), r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -16,10 +16,10 @@ var n = r(255367),
     b = r(594174),
     x = r(626135),
     j = r(74538),
-    O = r(934261),
-    y = r(52268),
-    P = r(981631),
-    v = r(474936),
+    y = r(934261),
+    O = r(52268),
+    v = r(981631),
+    P = r(474936),
     _ = r(388032),
     E = r(287975);
 function C(e) {
@@ -33,24 +33,25 @@ function C(e) {
                 children: [
                     !b &&
                         (0, n.jsx)(o.zxk, {
-                            look: o.zxk.Looks.LINK,
-                            color: o.zxk.Colors.PRIMARY,
-                            onClick: s,
-                            children: _.intl.string(_.t['ETE/oK'])
+                            variant: 'secondary',
+                            text: _.intl.string(_.t['ETE/oK']),
+                            onClick: s
                         }),
                     (null != i && (!(0, u.qS)(i) || d)) || null === f
                         ? (0, n.jsx)(o.zxk, {
+                              variant: 'primary',
+                              text: _.intl.string(_.t.Jh8fJy),
                               onClick: l,
-                              disabled: a,
-                              children: _.intl.string(_.t.Jh8fJy)
+                              disabled: a
                           })
                         : d || !(0, u.G1)(r)
                           ? (0, n.jsx)(o.zxk, {
-                                onClick: () => c(null == h ? void 0 : h.skuId),
-                                children: _.intl.string(_.t.fYfGgI)
+                                variant: 'primary',
+                                text: _.intl.string(_.t.fYfGgI),
+                                onClick: () => c(null == h ? void 0 : h.skuId)
                             })
                           : (0, n.jsx)(g.Z, {
-                                subscriptionTier: v.Si.TIER_2,
+                                subscriptionTier: P.Si.TIER_2,
                                 showGradient: b,
                                 textOptions: { textOverride: j.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : b ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O) }
                             })
@@ -68,21 +69,21 @@ function C(e) {
 function w(e) {
     let { user: t, guild: r, categories: l, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
         { pendingProfileEffectId: b } = (0, h.bd)(r),
-        [x, P] = i.useMemo(() => {
+        [x, v] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
-        [v, w] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
-        [I, S] = i.useMemo(() => {
+        [P, w] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
+        [S, I] = i.useMemo(() => {
             var e;
-            let t = x.find((e) => (null == e ? void 0 : e.id) === v),
-                r = null != t || null === v;
-            return [null != (e = null != t ? t : P.find((e) => (null == e ? void 0 : e.id) === v)) ? e : null, r];
-        }, [v, x, P]),
-        { product: N, purchase: Z } = (0, d.Z)(null == I ? void 0 : I.skuId),
-        k = i.useRef(null),
-        D = j.ZP.canUseCollectibles(t),
-        A = v === (void 0 === b ? (null != m ? m : null) : b),
+            let t = x.find((e) => (null == e ? void 0 : e.id) === P),
+                r = null != t || null === P;
+            return [null != (e = null != t ? t : v.find((e) => (null == e ? void 0 : e.id) === P)) ? e : null, r];
+        }, [P, x, v]),
+        { product: N, purchase: Z } = (0, d.Z)(null == S ? void 0 : S.skuId),
+        D = i.useRef(null),
+        k = j.ZP.canUseCollectibles(t),
+        A = P === (void 0 === b ? (null != m ? m : null) : b),
         T = i.useCallback(
             (e) => {
                 w(e);
@@ -119,18 +120,18 @@ function w(e) {
             (0, n.jsxs)(o.hzk, {
                 className: E.modalContent,
                 children: [
-                    (0, n.jsx)(y.Z, {
+                    (0, n.jsx)(O.Z, {
                         user: t,
                         guild: r,
-                        pendingProfileEffect: v,
-                        selectedProfileEffectRef: k,
+                        pendingProfileEffect: P,
+                        selectedProfileEffectRef: D,
                         onSelect: T,
                         onOpenShop: B
                     }),
-                    (0, n.jsx)(O.Z, {
+                    (0, n.jsx)(y.Z, {
                         user: t,
-                        canApplySelectedChange: S,
-                        pendingProfileEffectRecord: I,
+                        canApplySelectedChange: I,
+                        pendingProfileEffectRecord: S,
                         product: N,
                         purchase: Z,
                         guild: r
@@ -140,36 +141,36 @@ function w(e) {
             (0, n.jsx)(C, {
                 user: t,
                 onApply: () => {
-                    ((0, h.s6)(v, m, null == r ? void 0 : r.id), f());
+                    ((0, h.s6)(P, m, null == r ? void 0 : r.id), f());
                 },
                 onClose: f,
                 onOpenShop: B,
                 product: N,
                 purchase: Z,
-                canUseCollectibles: D,
-                selectedProfileEffectId: v,
-                selectedProfileEffectItem: I,
+                canUseCollectibles: k,
+                selectedProfileEffectId: P,
+                selectedProfileEffectItem: S,
                 disableApplyButton: A,
                 analyticsLocations: g
             })
         ]
     });
 }
-function I(e) {
+function S(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
         j = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        { analyticsLocations: O } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
-        y = (0, h.Kg)(j, u);
+        { analyticsLocations: y } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
+        O = (0, h.Kg)(j, u);
     return (
         i.useEffect(() => {
-            x.default.track(P.rMx.OPEN_MODAL, {
-                type: P.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: O
+            x.default.track(v.rMx.OPEN_MODAL, {
+                type: v.jXE.PROFILE_EFFECT_CUSTOMIZATION,
+                location_stack: y
             });
-        }, [O]),
+        }, [y]),
         (0, n.jsx)(c.Gt, {
-            value: O,
+            value: y,
             children: (0, n.jsx)(o.Y0X, {
                 transitionState: t,
                 className: E.modal,
@@ -186,9 +187,9 @@ function I(e) {
                           categories: m,
                           purchases: g,
                           initialSelectedProfileEffectId: a,
-                          currentSavedEffectId: y,
+                          currentSavedEffectId: O,
                           onClose: d,
-                          analyticsLocations: O
+                          analyticsLocations: y
                       })
             })
         })

@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(239091),
     c = n(586902),
     u = n(40851),
@@ -61,7 +61,7 @@ function y(e) {
         y = i.useRef(null),
         { newestAnalyticsLocation: C } = (0, d.ZP)(),
         x = (0, u.bp)(),
-        { reducedMotion: v } = i.useContext(a.Sfi),
+        { reducedMotion: v } = i.useContext(o.Sfi),
         O = (0, c.Z)({ userId: l.id }),
         j = null != l.member ? (0, m.CA)(l.member) : null,
         E = (e) => {
@@ -93,23 +93,23 @@ function y(e) {
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
-            (0, r.jsx)(a.ua7, {
+            (0, r.jsx)(o.ua7, {
                 targetElementRef: y,
                 text: l.userNick,
                 position: 'bottom',
                 children: (n) =>
                     (0, r.jsx)(
-                        a.P3F,
+                        o.P3F,
                         _(b({}, n, e), {
                             innerRef: y,
                             onClick: (t) => {
                                 (t.stopPropagation(), e.onClick(t));
                             },
                             onContextMenu: E,
-                            children: (0, r.jsx)(a.qEK, {
+                            children: (0, r.jsx)(o.qEK, {
                                 src: null != j ? j : l.user.getAvatarURL(t.guild_id, 24),
-                                size: a.EFr.SIZE_24,
-                                className: o()(g.avatar, f),
+                                size: o.EFr.SIZE_24,
+                                className: a()(g.avatar, f),
                                 'aria-label': l.userNick,
                                 isSpeaking: O && !v.enabled
                             })
@@ -139,7 +139,7 @@ function C(e) {
             (0, r.jsx)(
                 'div',
                 {
-                    className: o()(g.speakers, t),
+                    className: a()(g.speakers, t),
                     children: e
                 },
                 n

@@ -1,11 +1,11 @@
-(n.d(t, { Y: () => l }), n(388685));
+(n.d(t, { Y: () => a }), n(388685));
 var i = n(73800),
     r = n(442837),
     s = n(709706);
-function l() {
+function a() {
     let e = (0, r.e7)([s.Z], () => s.Z.getLastReportedLagTimestamp()),
         [t, n] = i.useState(!1),
-        [l, a] = i.useState(!1),
+        [a, l] = i.useState(!1),
         o = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -18,18 +18,18 @@ function l() {
         }, [e]),
         i.useEffect(() => {
             let t = null != e && null == o.current;
-            a(t);
+            l(t);
             let n = null;
             return (
-                t && ((o.current = Date.now()), (n = setTimeout(() => a(!1), 4000))),
+                t && ((o.current = Date.now()), (n = setTimeout(() => l(!1), 4000))),
                 () => {
-                    (clearTimeout(n), a(!1));
+                    (clearTimeout(n), l(!1));
                 }
             );
         }, [e]),
         {
             showSilentLagWarning: t,
-            showLagTooltip: l
+            showLagTooltip: a
         }
     );
 }

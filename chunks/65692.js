@@ -3,33 +3,33 @@ var r = n(73800),
     l = n(250683),
     i = n(512722),
     u = n.n(i),
-    s = n(442837),
-    a = n(974167),
-    o = n(314897),
-    c = n(131951),
+    a = n(442837),
+    s = n(974167),
+    c = n(314897),
+    o = n(131951),
     d = n(19780),
     f = n(760373),
     E = n(65154);
 function g(e) {
     let { userId: t } = e,
-        n = (0, s.e7)([o.default], () => o.default.getId());
+        n = (0, a.e7)([c.default], () => c.default.getId());
     u()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
     let [i, g] = r.useState(null),
         [_, y] = r.useState(!1),
-        m = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
-        S = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(n)),
+        m = (0, a.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
+        S = (0, a.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(n)),
         h = r.useCallback((e) => {
             (g(l.fromByteArray(e)), y(!1));
         }, []),
         p = r.useCallback(
             async (e, t, n, r) => {
-                if (c.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
+                if (o.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
                     var l;
                     null == (l = d.Z.getRTCConnection()) ||
                         l.getMLSPairwiseFingerprint(f.Xj, n, (e) => {
                             h(new Uint8Array(e));
                         });
-                } else h(await (0, a.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(r), n));
+                } else h(await (0, s.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(r), n));
             },
             [h]
         ),

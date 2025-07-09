@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(954709),
     Z = n(644679),
     x = n(403763),
-    L = n(314533),
-    w = n(9029),
+    w = n(314533),
+    L = n(9029),
     R = n(935347),
     D = n(560067),
     k = n(823169),
@@ -83,8 +83,8 @@ var r = n(255367),
     eA = n(479313),
     eZ = n(911560),
     ex = n(703016),
-    eL = n(892001),
-    ew = n(497805),
+    ew = n(892001),
+    eL = n(497805),
     eR = n(332754),
     eD = n(507468),
     ek = n(722589),
@@ -241,7 +241,7 @@ let tl = [
                 { id: n } = t.params;
             return (
                 (0, X.h)(() =>
-                    (0, eL.openUserProfileModal)({
+                    (0, ew.openUserProfileModal)({
                         userId: n,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME]
                     })
@@ -460,7 +460,7 @@ class ts extends i.PureComponent {
             eR.Z.init(),
             eP.Z.initialize(),
             ej.Z.initialize(),
-            ew.Z.initialize(),
+            eL.Z.initialize(),
             eD.Z.init(),
             G.Z.initialize(),
             E.Z.initialize(),
@@ -469,8 +469,8 @@ class ts extends i.PureComponent {
             ep.Z.initialize(),
             ed.Z.initialize(),
             eh.Z.initialize(),
-            L.Z.initialize(),
             w.Z.initialize(),
+            L.Z.initialize(),
             F.Z.initialize(),
             ei.Z.init({
                 hasModalOpen: s.$sL,
@@ -492,7 +492,7 @@ class ts extends i.PureComponent {
             (this.historyUnlisten = eO.Z.addRouteChangeListener(this.handleHistoryChange)));
     }
     componentWillUnmount() {
-        (ev.Z.terminate(), eU.Z.terminate(), eb.Z.terminate(), eg.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), V.ZP.terminate(), eM.Z.terminate(), y.Z.terminate(), e_.Z.terminate(), ef.Z.terminate(), ew.Z.terminate(), O.Z.terminate(), G.Z.terminate(), ea.Z.terminate(), E.Z.terminate(), eE.Z.terminate(), eC.Z.terminate(), eT.Z.terminate(), ep.Z.terminate(), ed.Z.terminate(), eh.Z.terminate(), L.Z.terminate(), w.Z.terminate(), em.Z.terminate(), k.Z.terminate(), H.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), F.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten());
+        (ev.Z.terminate(), eU.Z.terminate(), eb.Z.terminate(), eg.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), V.ZP.terminate(), eM.Z.terminate(), y.Z.terminate(), e_.Z.terminate(), ef.Z.terminate(), eL.Z.terminate(), O.Z.terminate(), G.Z.terminate(), ea.Z.terminate(), E.Z.terminate(), eE.Z.terminate(), eC.Z.terminate(), eT.Z.terminate(), ep.Z.terminate(), ed.Z.terminate(), eh.Z.terminate(), w.Z.terminate(), L.Z.terminate(), em.Z.terminate(), k.Z.terminate(), H.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), F.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten());
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;

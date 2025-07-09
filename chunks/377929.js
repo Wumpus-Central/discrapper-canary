@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(32750),
     u = n(109764),
@@ -67,13 +67,13 @@ function S(e, t) {
 function I(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
-        o = i.useRef(null);
-    function a() {
+        a = i.useRef(null);
+    function o() {
         l((e) => !e);
     }
     let c = j.intl.string(j.t.UKOtz8);
     return (0, r.jsx)(s.yRy, {
-        targetElementRef: o,
+        targetElementRef: a,
         shouldShow: n,
         animation: s.yRy.Animation.NONE,
         position: 'bottom',
@@ -88,8 +88,8 @@ function I(e) {
             return (0, r.jsx)(
                 C.ZP.Icon,
                 S(E({}, e), {
-                    ref: o,
-                    onClick: a,
+                    ref: a,
+                    onClick: o,
                     tooltip: n ? null : c,
                     icon: s.xhG,
                     'aria-label': c,
@@ -116,7 +116,7 @@ function P(e) {
         A = (0, h.Z)(t),
         w = (0, _.Z)(t),
         R = x.vF.useSetting(),
-        k = (0, a.e7)([v.Z], () => !o().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
+        M = (0, o.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
@@ -131,7 +131,7 @@ function P(e) {
                     S,
                     T,
                     E,
-                    R && !k
+                    R && !M
                         ? (0, r.jsx)(s.sNh, {
                               id: 'open',
                               label: j.intl.string(j.t.bX7EaG),

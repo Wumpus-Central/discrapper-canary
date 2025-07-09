@@ -38,9 +38,9 @@ var r = n(255367),
     R = n(388032),
     Z = n(818771);
 let D = (0, b.hQ)(),
-    k = (0, b.hQ)(),
-    A = (0, I.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function L(e) {
+    A = (0, b.hQ)(),
+    L = (0, I.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+function k(e) {
     var t;
     let { emojiId: n, emojiName: i, className: l } = e,
         s = (0, c.e7)([j.ZP], () => (null != n ? j.ZP.getCustomEmojiById(n) : void 0));
@@ -130,7 +130,7 @@ function G(e) {
                           (0, r.jsxs)(
                               M,
                               {
-                                  icon: (0, r.jsx)(L, {
+                                  icon: (0, r.jsx)(k, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
                                       className: Z.rowIcon
@@ -224,19 +224,22 @@ function U(e) {
                         })
                     ]
                 }),
-                (0, r.jsxs)(m.mzw, {
-                    children: [
-                        (0, r.jsx)(m.zxk, {
-                            type: 'submit',
-                            children: R.intl.string(R.t['27a219'])
-                        }),
-                        (0, r.jsx)(m.zxk, {
-                            look: m.zxk.Looks.LINK,
-                            color: m.zxk.Colors.PRIMARY,
-                            onClick: o,
-                            children: R.intl.string(R.t['ETE/oK'])
-                        })
-                    ]
+                (0, r.jsx)(m.mzw, {
+                    children: (0, r.jsxs)(m.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, r.jsx)(m.zxk, {
+                                variant: 'primary',
+                                text: R.intl.string(R.t['27a219']),
+                                type: 'submit'
+                            }),
+                            (0, r.jsx)(m.zxk, {
+                                variant: 'secondary',
+                                text: R.intl.string(R.t['ETE/oK']),
+                                onClick: o
+                            })
+                        ]
+                    })
                 })
             ]
         })
@@ -248,7 +251,7 @@ function B(e) {
         a = (0, _.p9)({
             guildId: n,
             roleId: i.id,
-            size: A
+            size: L
         });
     return (0, r.jsxs)(m.P3F, {
         className: Z.roleRow,
@@ -438,7 +441,7 @@ function H(e) {
             (0, r.jsxs)(m.xBx, {
                 children: [
                     (0, r.jsx)(m.X6q, {
-                        id: k,
+                        id: A,
                         variant: 'heading-md/semibold',
                         children: R.intl.format(R.t.iuPodH, { roleName: c.name })
                     }),
@@ -502,19 +505,22 @@ function H(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(m.mzw, {
-                children: [
-                    (0, r.jsx)(m.zxk, {
-                        type: 'submit',
-                        children: R.intl.string(R.t['1j8So6'])
-                    }),
-                    (0, r.jsx)(m.zxk, {
-                        look: m.zxk.Looks.LINK,
-                        color: m.zxk.Colors.PRIMARY,
-                        onClick: s,
-                        children: R.intl.string(R.t['ETE/oK'])
-                    })
-                ]
+            (0, r.jsx)(m.mzw, {
+                children: (0, r.jsxs)(m.hE2, {
+                    direction: 'horizontal-reverse',
+                    children: [
+                        (0, r.jsx)(m.zxk, {
+                            variant: 'primary',
+                            text: R.intl.string(R.t['1j8So6']),
+                            type: 'submit'
+                        }),
+                        (0, r.jsx)(m.zxk, {
+                            variant: 'secondary',
+                            text: R.intl.string(R.t['ETE/oK']),
+                            onClick: s
+                        })
+                    ]
+                })
             })
         ]
     });
@@ -524,7 +530,7 @@ function V(e) {
         [a, o] = i.useState();
     return (0, r.jsx)(m.Y0X, {
         transitionState: t,
-        'aria-labelledby': null == a ? D : k,
+        'aria-labelledby': null == a ? D : A,
         parentComponent: 'ImportBenefitsModal',
         children: (0, r.jsxs)(m.MyZ, {
             contentDisplay: 'flex',

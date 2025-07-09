@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => O,
-    Z: () => M
+    Z: () => _
 }),
     n(388685),
     n(290780));
@@ -53,7 +53,7 @@ class j extends (i = c.ZP.Store) {
               writable: !0
           })
         : (j[r] = s));
-let M = new j(d.Z, {
+let _ = new j(d.Z, {
     CONNECTION_OPEN: function () {
         x = {};
     },

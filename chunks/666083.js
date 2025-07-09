@@ -1,8 +1,8 @@
 (n.d(t, { default: () => O }), n(388685), n(953529));
 var r = n(255367),
     o = n(73800),
-    l = n(505266),
-    i = n(442837),
+    i = n(505266),
+    l = n(442837),
     a = n(481060),
     s = n(607070),
     c = n(530618),
@@ -26,25 +26,25 @@ function O(e) {
                     var n,
                         r,
                         o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let v = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+    let v = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         x = o.useRef(null),
-        h = o.useRef(new l.qA()),
-        [C, w] = o.useState(null),
+        h = o.useRef(new i.qA()),
+        [w, C] = o.useState(null),
         _ = f.uc.has(g.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.O_, {
-                ref: w,
+            (0, r.jsx)(i.O_, {
+                ref: C,
                 className: j.confettiCanvas,
                 environment: h.current
             }),
@@ -115,10 +115,14 @@ function O(e) {
                                                           powerup: g,
                                                           onClick: y.onClose
                                                       })
-                                                    : (0, r.jsx)(a.zxk, {
+                                                    : (0, r.jsx)('div', {
+                                                          'data-button-hoisted-classname-wrapper': !0,
                                                           className: j.button,
-                                                          onClick: y.onClose,
-                                                          children: m.intl.string(m.t.cpT0Cg)
+                                                          children: (0, r.jsx)(a.zxk, {
+                                                              variant: 'primary',
+                                                              text: m.intl.string(m.t.cpT0Cg),
+                                                              onClick: y.onClose
+                                                          })
                                                       })
                                             ]
                                         })
@@ -132,7 +136,7 @@ function O(e) {
                             !v &&
                                 (0, r.jsx)(c.Z, {
                                     confettiTarget: x.current,
-                                    confettiCanvas: C,
+                                    confettiCanvas: w,
                                     sprites: (0, u.vK)()
                                 })
                         ]

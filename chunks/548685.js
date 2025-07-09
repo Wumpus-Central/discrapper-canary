@@ -30,7 +30,7 @@ let P = (e) => {
         k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         B = h.ZP.canUseCollectibles(k),
         N = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(o, B),
+        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, B),
         M = (0, S.St)(w),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -67,7 +67,7 @@ let P = (e) => {
                                       variant: 'heading-lg/semibold',
                                       children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
-                                  F &&
+                                  D &&
                                       (0, r.jsx)(s.ua7, {
                                           text: j.intl.string(j.t['3taPdn']),
                                           position: 'top',
@@ -147,24 +147,23 @@ let P = (e) => {
                                   I === x.AW.HOME &&
                                       (N
                                           ? (0, r.jsx)(s.zxk, {
-                                                color: s.Ttl.PRIMARY,
+                                                variant: 'secondary',
+                                                text: j.intl.string(j.t.X3tnc3),
                                                 buttonRef: q,
                                                 onClick: () => {
                                                     (G({
                                                         isShuffling: !0,
-                                                        onOutroComplete: D,
+                                                        onOutroComplete: F,
                                                         returnRef: q
                                                     }),
                                                         g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: Y }));
                                                 },
-                                                disabled: U !== v.g.MOUNTED && U !== v.g.FINISHED,
-                                                children: j.intl.string(j.t.X3tnc3)
+                                                disabled: U !== v.g.MOUNTED && U !== v.g.FINISHED
                                             })
                                           : (0, r.jsx)(s.zxk, {
-                                                color: s.Ttl.PRIMARY,
-                                                look: s.iLD.FILLED,
-                                                onClick: () => P('shop all top'),
-                                                children: j.intl.string(j.t.xFcotb)
+                                                variant: 'secondary',
+                                                text: j.intl.string(j.t.xFcotb),
+                                                onClick: () => P('shop all top')
                                             }))
                               ]
                           })

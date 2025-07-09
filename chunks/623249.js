@@ -1,30 +1,31 @@
 (n.d(t, {
-    default: () => E,
-    y: () => w
+    default: () => S,
+    y: () => P
 }),
     n(388685));
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(442837),
     l = n(780384),
-    c = n(481060),
-    u = n(607070),
-    d = n(600164),
-    p = n(210887),
-    m = n(617136),
-    f = n(915750),
-    g = n(113434),
-    x = n(497505),
-    h = n(918701),
-    b = n(475595),
-    j = n(667105),
-    _ = n(981631),
-    v = n(388032),
-    y = n(912621),
-    C = n(708901);
-function O(e) {
+    c = n(755721),
+    u = n(481060),
+    d = n(607070),
+    p = n(600164),
+    m = n(210887),
+    f = n(617136),
+    g = n(915750),
+    x = n(113434),
+    h = n(497505),
+    b = n(918701),
+    j = n(475595),
+    _ = n(667105),
+    v = n(981631),
+    y = n(388032),
+    C = n(912621),
+    O = n(708901);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,131 +50,131 @@ function O(e) {
     }
     return e;
 }
-function E(e) {
+function S(e) {
     var t;
-    let { questId: n, errorHints: s, transitionState: E, onClose: w, sourceQuestContent: P } = e,
-        T = (0, g.sf)(n);
-    null == T && w();
-    let [N, A] = (0, o.useState)(s),
-        R = (0, g.KX)(),
-        k = (0, m.O5)(),
-        B = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        I = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
-        q = (0, j.g2)({
+    let { questId: n, errorHints: o, transitionState: S, onClose: P, sourceQuestContent: T } = e,
+        N = (0, x.sf)(n);
+    null == N && P();
+    let [A, R] = (0, s.useState)(o),
+        B = (0, x.KX)(),
+        k = (0, f.O5)(),
+        q = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
+        I = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        D = (0, _.g2)({
             useReducedMotion: I,
-            className: y.colorTransition
+            className: C.colorTransition
         }),
-        D = N.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        Q = (0, h.Bz)(T),
-        V = (0, i.e7)([p.Z], () => p.Z.getState().theme),
-        L = (0, l.wj)(V) ? _.BRd.DARK : _.BRd.LIGHT,
-        { startConsoleQuest: M, startingConsoleQuest: W } = (0, g.GI)({
-            questId: T.id,
+        Q = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        V = (0, b.Bz)(N),
+        L = (0, i.e7)([m.Z], () => m.Z.getState().theme),
+        M = (0, l.wj)(L) ? v.BRd.DARK : v.BRd.LIGHT,
+        { startConsoleQuest: W, startingConsoleQuest: Z } = (0, x.GI)({
+            questId: N.id,
             beforeRequest: () => {
-                (q.startAnimation(),
+                (D.startAnimation(),
                     k({
-                        questId: T.id,
-                        questContent: x.jn.CONNECTIONS_MODAL,
-                        questContentCTA: m.jZ.DEFIBRILLATOR,
-                        sourceQuestContent: P
+                        questId: N.id,
+                        questContent: h.jn.CONNECTIONS_MODAL,
+                        questContentCTA: f.jZ.DEFIBRILLATOR,
+                        sourceQuestContent: T
                     }));
             },
             afterRequest: (e) => {
-                (q.stopAnimation(), A(e));
+                (D.stopAnimation(), R(e));
             }
         });
-    return (0, r.jsxs)(c.Y0X, {
-        transitionState: E,
-        size: c.CgR.DYNAMIC,
-        className: y.modalRoot,
+    return (0, r.jsxs)(u.Y0X, {
+        transitionState: S,
+        size: u.CgR.DYNAMIC,
+        className: C.modalRoot,
         parentComponent: 'QuestConsoleConnectionErrorsModal',
         children: [
-            (0, r.jsxs)(c.xBx, {
-                direction: d.Z.Direction.VERTICAL,
+            (0, r.jsxs)(u.xBx, {
+                direction: p.Z.Direction.VERTICAL,
                 separator: !1,
-                className: y.modalHeader,
+                className: C.modalHeader,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: y.modalTop,
+                        className: C.modalTop,
                         children: [
                             (0, r.jsx)('div', {
-                                className: y.iconFrame,
+                                className: C.iconFrame,
                                 children: (0, r.jsx)('img', {
-                                    className: y.icon,
+                                    className: C.icon,
                                     alt: '',
-                                    src: C
+                                    src: O
                                 })
                             }),
-                            (0, r.jsx)(c.olH, {
-                                className: y.closeBtn,
-                                onClick: w
+                            (0, r.jsx)(u.olH, {
+                                className: C.closeBtn,
+                                onClick: P
                             })
                         ]
                     }),
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(u.X6q, {
                         variant: 'heading-xl/bold',
-                        children: v.intl.string(v.t.W5lmKi)
+                        children: y.intl.string(y.t.W5lmKi)
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: y.upperBodyText,
-                        children: R.message
+                        className: C.upperBodyText,
+                        children: B.message
                     })
                 ]
             }),
-            (0, r.jsxs)(c.hzk, {
-                className: y.modalContent,
+            (0, r.jsxs)(u.hzk, {
+                className: C.modalContent,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: y.contentHeader,
+                        className: C.contentHeader,
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: v.intl.string(v.t['+/hZMz'])
+                                children: y.intl.string(y.t['+/hZMz'])
                             }),
-                            (0, r.jsxs)(c.P3F, {
-                                className: a()(y.refreshWrapper, { [y.disabled]: W }),
-                                onClick: M,
+                            (0, r.jsxs)(u.P3F, {
+                                className: a()(C.refreshWrapper, { [C.disabled]: Z }),
+                                onClick: W,
                                 children: [
-                                    q.render(),
-                                    (0, r.jsx)(c.Text, {
+                                    D.render(),
+                                    (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
-                                        className: y.colorTransition,
-                                        children: v.intl.string(v.t.wzzjk5)
+                                        className: C.colorTransition,
+                                        children: y.intl.string(y.t.wzzjk5)
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: y.accountsWrapper,
+                        className: C.accountsWrapper,
                         children: [
-                            (0, r.jsx)(S, {
-                                icon: (0, r.jsx)(c.pzj, { size: 'sm' }),
-                                text: v.intl.string(v.t.br3uIi)
+                            (0, r.jsx)(w, {
+                                icon: (0, r.jsx)(u.pzj, { size: 'sm' }),
+                                text: y.intl.string(y.t.br3uIi)
                             }),
-                            (0, r.jsx)(S, {
-                                icon: (0, r.jsx)(c.iWm, { size: 'sm' }),
-                                text: v.intl.string(v.t.XF4wuL),
-                                errors: Q ? void 0 : D.map((e) => e.message),
-                                gameTile: Q
-                                    ? (0, r.jsx)(c.ua7, {
-                                          'aria-label': T.config.messages.gameTitle,
+                            (0, r.jsx)(w, {
+                                icon: (0, r.jsx)(u.iWm, { size: 'sm' }),
+                                text: y.intl.string(y.t.XF4wuL),
+                                errors: V ? void 0 : Q.map((e) => e.message),
+                                gameTile: V
+                                    ? (0, r.jsx)(u.ua7, {
+                                          'aria-label': N.config.messages.gameTitle,
                                           text: () =>
                                               (0, r.jsxs)('div', {
-                                                  className: y.tooltip,
+                                                  className: C.tooltip,
                                                   children: [
-                                                      (0, r.jsx)(c.Text, {
+                                                      (0, r.jsx)(u.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: T.config.messages.gameTitle
+                                                          children: N.config.messages.gameTitle
                                                       }),
-                                                      (0, r.jsx)(c.Text, {
+                                                      (0, r.jsx)(u.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-muted',
-                                                          children: v.intl.string(v.t.STpNEB)
+                                                          children: y.intl.string(y.t.STpNEB)
                                                       })
                                                   ]
                                               }),
@@ -181,12 +182,12 @@ function E(e) {
                                               var t, n;
                                               return (0, r.jsx)(
                                                   'img',
-                                                  ((t = O({}, e)),
+                                                  ((t = E({}, e)),
                                                   (n = n =
                                                       {
-                                                          className: y.gameTile,
-                                                          alt: T.config.messages.gameTitle,
-                                                          src: (0, b.fh)(T, b.eC.GAME_TILE, L).url
+                                                          className: C.gameTile,
+                                                          alt: N.config.messages.gameTitle,
+                                                          src: (0, j.fh)(N, j.eC.GAME_TILE, M).url
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -210,52 +211,51 @@ function E(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(c.mzw, {
-                className: y.footer,
+            (0, r.jsxs)(u.mzw, {
+                className: C.footer,
                 children: [
-                    (0, r.jsx)(c.zxk, {
-                        size: c.PhG.MIN,
-                        onClick: w,
-                        className: y.footerCloseButton,
-                        children: v.intl.string(v.t.cpT0Cg)
+                    (0, r.jsx)(c.zx, {
+                        size: c.Ph.MIN,
+                        onClick: P,
+                        className: C.footerCloseButton,
+                        children: y.intl.string(y.t.cpT0Cg)
                     }),
-                    (0, r.jsx)(c.zxk, {
-                        look: c.iLD.LINK,
-                        color: c.Ttl.PRIMARY,
+                    (0, r.jsx)(u.zxk, {
+                        variant: 'secondary',
+                        text: y.intl.string(y.t['qiS+xs']),
                         onClick: () => {
-                            (w(),
-                                (0, h.V$)(
-                                    { quest: T },
+                            (P(),
+                                (0, b.V$)(
+                                    { quest: N },
                                     {
-                                        content: x.jn.CONNECTIONS_MODAL,
-                                        ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: B,
-                                        sourceQuestContent: P
+                                        content: h.jn.CONNECTIONS_MODAL,
+                                        ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                                        impressionId: q,
+                                        sourceQuestContent: T
                                     }
                                 ));
-                        },
-                        children: v.intl.string(v.t['qiS+xs'])
+                        }
                     })
                 ]
             })
         ]
     });
 }
-function S(e) {
-    let { icon: t, text: n, errors: o = [], gameTile: s } = e,
-        i = o.length > 0,
-        l = i ? c._3e : c.B_b;
+function w(e) {
+    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
+        i = s.length > 0,
+        l = i ? u._3e : u.B_b;
     return (0, r.jsxs)('div', {
-        className: y.connectionRow,
+        className: C.connectionRow,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(y.connectionRowHeader, { [y.connectionRowHeaderError]: i }),
+                className: a()(C.connectionRowHeader, { [C.connectionRowHeaderError]: i }),
                 children: [
                     (0, r.jsxs)('div', {
-                        className: y.connectionRowHeaderContent,
+                        className: C.connectionRowHeaderContent,
                         children: [
                             t,
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-default',
                                 children: n
@@ -263,15 +263,15 @@ function S(e) {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: y.connectionRowHeaderContent,
+                        className: C.connectionRowHeaderContent,
                         children: [
-                            s,
+                            o,
                             (0, r.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
                                 className: a()({
-                                    [y.success]: !i,
-                                    [y.error]: i
+                                    [C.success]: !i,
+                                    [C.error]: i
                                 })
                             })
                         ]
@@ -279,19 +279,19 @@ function S(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: y.errorsContainer,
-                children: o.map((e) =>
+                className: C.errorsContainer,
+                children: s.map((e) =>
                     (0, r.jsxs)(
                         'div',
                         {
-                            className: y.errorRow,
+                            className: C.errorRow,
                             children: [
-                                (0, r.jsx)(c.aNP, {
+                                (0, r.jsx)(u.aNP, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: y.error
+                                    className: C.error
                                 }),
-                                (0, r.jsx)(c.Text, {
+                                (0, r.jsx)(u.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
                                     children: e
@@ -305,9 +305,9 @@ function S(e) {
         ]
     });
 }
-function w(e) {
-    (0, c.ZDy)(async () => {
+function P(e) {
+    (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
-        return (n) => (0, r.jsx)(t, O({}, n, e));
+        return (n) => (0, r.jsx)(t, E({}, n, e));
     });
 }

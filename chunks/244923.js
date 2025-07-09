@@ -14,10 +14,10 @@ let u = function (e) {
             null != e && (await (0, l.i1)(d, (0, c.yb)(t)), await a.tq(t, e, t.currency, (0, s.UX)(t.items, t.currency, t.paymentSourceId), _), n());
         };
     return (0, r.jsx)(i.zxk, {
+        variant: 'active',
+        text: f,
         'data-testid': 'purchase',
         onClick: p,
-        color: i.zxk.Colors.GREEN,
-        submitting: u,
-        children: f
+        loading: u
     });
 };

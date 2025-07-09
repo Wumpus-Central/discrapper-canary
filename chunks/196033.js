@@ -2,8 +2,8 @@ n.d(t, { W: () => p });
 var i = n(73800),
     r = n(115434),
     s = n(264181),
-    l = n(442837),
-    a = n(874703),
+    a = n(442837),
+    l = n(874703),
     o = n(619899),
     c = n(281598),
     d = n(388032),
@@ -12,7 +12,7 @@ var i = n(73800),
 let p = () => {
     let e = (0, o.zL)(c.jE.UPSELL_BANNER),
         t = (0, o.zL)(c.jE.UPSELL_BANNER_POPOUT),
-        n = (0, l.e7)([a.Z], () => a.Z.getMarketingBySurface(r.K.EDIT_PROFILE_SETTINGS)),
+        n = (0, a.e7)([l.Z], () => l.Z.getMarketingBySurface(r.K.EDIT_PROFILE_SETTINGS)),
         p = i.useMemo(
             () =>
                 null != n

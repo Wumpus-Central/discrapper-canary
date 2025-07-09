@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     s = n(37234),
-    l = n(703656),
-    a = n(981631),
+    a = n(703656),
+    l = n(981631),
     o = n(388032),
     c = n(765058),
     d = n(322221);
@@ -27,12 +27,16 @@ function u() {
                 variant: 'text-md/normal',
                 children: o.intl.string(o.t.ZSt4Tk)
             }),
-            (0, i.jsx)(r.zxk, {
+            (0, i.jsx)('div', {
+                'data-button-hoisted-classname-wrapper': !0,
                 className: c.topSpacing,
-                onClick: () => {
-                    ((0, l.uL)(a.Z5c.GUILD_DISCOVERY), s.xf());
-                },
-                children: o.intl.string(o.t.jQ3pqq)
+                children: (0, i.jsx)(r.zxk, {
+                    variant: 'primary',
+                    text: o.intl.string(o.t.jQ3pqq),
+                    onClick: () => {
+                        ((0, a.uL)(l.Z5c.GUILD_DISCOVERY), s.xf());
+                    }
+                })
             })
         ]
     });

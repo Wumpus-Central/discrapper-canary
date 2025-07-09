@@ -29,9 +29,9 @@ var r = n(255367),
     I = n(961675),
     E = n(883429),
     R = n(993259),
-    k = n(109434),
-    M = n(456269),
-    Z = n(228392),
+    M = n(109434),
+    Z = n(456269),
+    k = n(228392),
     A = n(432771),
     L = n(538366),
     F = n(470623),
@@ -96,7 +96,7 @@ let q = {
         borderRadius: 10
     },
     X = (e) => {
-        (0, Z.e5)({ onboardingCTA: e });
+        (0, k.e5)({ onboardingCTA: e });
     };
 class K {
     addStep(e) {
@@ -170,7 +170,7 @@ let J = (e) => {
                       null != i &&
                           (e.preventDefault(),
                           e.stopPropagation(),
-                          (0, Z.qz)(),
+                          (0, k.qz)(),
                           (0, g.ZDy)(async () => {
                               let { default: e } = await n.e('18417').then(n.bind(n, 740696));
                               return (t) => (0, r.jsx)(e, V(G({}, t), { guildId: i }));
@@ -392,9 +392,9 @@ let J = (e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
-            { tagFilter: s } = (0, k.H)(i.id),
+            { tagFilter: s } = (0, M.H)(i.id),
             o = (0, h.e7)([w.Z], () => w.Z.getGuild(i.getGuildId())),
-            m = (0, M.r_)(i),
+            m = (0, Z.r_)(i),
             { transitions: f, setVisible: x } = el(),
             b = es(a),
             j = eu(),
@@ -412,7 +412,7 @@ let J = (e) => {
             }),
             E = !P && !S,
             R = (0, F.AF)(),
-            Z = i.isMediaChannel(),
+            k = i.isMediaChannel(),
             A = (e) => R.getState().setOnboardingExpanded(e);
         return (ei(I, E, O),
         ea({
@@ -437,7 +437,7 @@ let J = (e) => {
                         children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(y.q, {})]
                     })
               : E && m
-                ? Z
+                ? k
                     ? t
                         ? null
                         : (0, r.jsx)(v.Z, { channel: i })

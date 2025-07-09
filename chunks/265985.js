@@ -155,10 +155,14 @@ let j = (e) => {
                         ]
                     });
                 })(),
-                (0, r.jsx)(s.zxk, {
+                (0, r.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
                     className: v.confirmationButton,
-                    onClick: () => t(!0),
-                    children: b.intl.string(b.t['Ph+ecH'])
+                    children: (0, r.jsx)(s.zxk, {
+                        variant: 'primary',
+                        text: b.intl.string(b.t['Ph+ecH']),
+                        onClick: () => t(!0)
+                    })
                 })
             ]
         });

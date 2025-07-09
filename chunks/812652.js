@@ -74,10 +74,10 @@ function C(e) {
 function y(e) {
     var t, n, v;
     let { onClose: y, onSelect: O } = e,
-        [{ notifyFriends: Z, hidePreview: w, muteStreamAudio: I, preset: N, resolution: T, fps: E, sourceType: P, audioSourceId: R }, k] = (0, m.E_)(),
-        A = (0, o.zX)({ location: 'StreamOptionsMenu' }),
+        [{ notifyFriends: Z, hidePreview: w, muteStreamAudio: I, preset: N, resolution: T, fps: E, sourceType: P, audioSourceId: R }, A] = (0, m.E_)(),
+        k = (0, o.zX)({ location: 'StreamOptionsMenu' }),
         M = (0, f.Z)(),
-        [L, D] = null != (n = (0, p.Z)(x.tI.PRESET_VIDEO)) ? n : [x.LY.RESOLUTION_720, x.ws.FPS_30],
+        [D, L] = null != (n = (0, p.Z)(x.tI.PRESET_VIDEO)) ? n : [x.LY.RESOLUTION_720, x.ws.FPS_30],
         [B, G] = null != (v = (0, p.Z)(x.tI.PRESET_DOCUMENTS)) ? v : [x.LY.RESOLUTION_SOURCE, x.ws.FPS_15];
     return (0, r.jsxs)(l.v2r, {
         'aria-label': _.intl.string(_.t['+1H47u']),
@@ -105,8 +105,8 @@ function y(e) {
                                     switch (e) {
                                         case x.tI.PRESET_VIDEO:
                                             return _.intl.format(g.default.G5O1Mz, {
-                                                resolution: (0, u.M)(L),
-                                                frameRate: D
+                                                resolution: (0, u.M)(D),
+                                                frameRate: L
                                             });
                                         case x.tI.PRESET_DOCUMENTS:
                                             return _.intl.format(g.default['8tcFLy'], {
@@ -120,7 +120,7 @@ function y(e) {
                                     }
                                 })(t),
                                 action: () =>
-                                    k({
+                                    A({
                                         type: 'set_preset',
                                         preset: t
                                     })
@@ -153,7 +153,7 @@ function y(e) {
                                             action: () =>
                                                 (function (e) {
                                                     if (!(0, c.Z)(N, e, E, a.default.getCurrentUser(), M)) return (y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
-                                                    k({
+                                                    A({
                                                         type: 'set_resolution',
                                                         resolution: e
                                                     });
@@ -177,7 +177,7 @@ function y(e) {
                                         action: () =>
                                             (function (e) {
                                                 if (!(0, c.Z)(N, T, e, a.default.getCurrentUser(), M)) return (y(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
-                                                k({
+                                                A({
                                                     type: 'set_fps',
                                                     fps: e
                                                 });
@@ -195,7 +195,7 @@ function y(e) {
                 checked: I,
                 label: _.intl.string(g.default['b0+Ira']),
                 action: () =>
-                    k({
+                    A({
                         type: 'set_mute_audio',
                         value: !I
                     })
@@ -206,14 +206,14 @@ function y(e) {
                     label: _.intl.string(g.default.YSdHV1),
                     subtext:
                         null ==
-                        (t = A.find((e) => {
+                        (t = k.find((e) => {
                             let { id: t } = e;
                             return R === t;
                         }))
                             ? void 0
                             : t.name,
                     subtextLineClamp: 1,
-                    children: A.map((e) => {
+                    children: k.map((e) => {
                         let { id: t, name: n } = e;
                         return (0, r.jsx)(
                             l.k5B,
@@ -223,7 +223,7 @@ function y(e) {
                                 checked: R === t,
                                 label: n,
                                 action: () =>
-                                    k({
+                                    A({
                                         type: 'set_audio_source',
                                         audioSourceId: t
                                     })
@@ -241,7 +241,7 @@ function y(e) {
                         checked: w,
                         label: _.intl.string(g.default.H3Qjqa),
                         action: () =>
-                            k({
+                            A({
                                 type: 'set_hide_preview',
                                 hidePreview: !w
                             })
@@ -251,7 +251,7 @@ function y(e) {
                         checked: Z,
                         label: _.intl.string(g.default.SiHtX1),
                         action: () =>
-                            k({
+                            A({
                                 type: 'set_notify_friends',
                                 value: !Z
                             })

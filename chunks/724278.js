@@ -155,13 +155,13 @@ function G(e) {
             },
             [n]
         ),
-        k = (0, C.Z)(p, n.id),
-        A = (0, h.Z)(n);
+        A = (0, C.Z)(p, n.id),
+        R = (0, h.Z)(n);
     l.useEffect(() => {
         (v.Z.getGuildEventUserCounts(t.id, n.id, null != p ? [p] : []), v.Z.getGuildEventsForCurrentUser(t.id));
     }, [t.id, n.id, p]);
-    let R = (0, x.KV)(n.recurrence_rule),
-        B = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, T.lh)(k, S, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;
+    let k = (0, x.KV)(n.recurrence_rule),
+        B = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, T.lh)(A, S, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;
     return (0, i.jsxs)('div', {
         ref: g,
         children: [
@@ -204,15 +204,15 @@ function G(e) {
                             onClick: u
                         }),
                     !_ &&
-                        null != A &&
+                        null != R &&
                         (0, i.jsx)(
                             O,
                             {
-                                creator: A,
+                                creator: R,
                                 guildId: t.id,
                                 channelId: null == r ? void 0 : r.id
                             },
-                            A.id
+                            R.id
                         ),
                     null != n.description &&
                         (0, i.jsx)('div', {
@@ -225,11 +225,11 @@ function G(e) {
                         })
                 ]
             }),
-            null != R && (0, i.jsx)('hr', { className: D.divider }),
-            null != R &&
+            null != k && (0, i.jsx)('hr', { className: D.divider }),
+            null != k &&
                 (0, i.jsx)(L.Z, {
                     guildId: t.id,
-                    recurrenceRule: R,
+                    recurrenceRule: k,
                     guildEventId: n.id,
                     onRecurrenceClick: m,
                     hideScroller: !0,

@@ -1,21 +1,22 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(580685),
     s = n(793030),
     a = n(442837),
-    o = n(481060),
-    c = n(944163),
-    d = n(65361),
-    u = n(798476),
-    m = n(434404),
-    g = n(999382),
-    p = n(548522),
-    f = n(651390),
-    h = n(981631),
-    x = n(388032),
-    b = n(870751);
-let j = {
+    o = n(755721),
+    c = n(481060),
+    d = n(944163),
+    u = n(65361),
+    m = n(798476),
+    g = n(434404),
+    p = n(999382),
+    f = n(548522),
+    h = n(651390),
+    x = n(981631),
+    b = n(388032),
+    j = n(870751);
+let _ = {
     id: '0',
     name: '',
     description: '',
@@ -34,83 +35,83 @@ let j = {
     badgeColorPrimary: null,
     badgeColorSecondary: null
 };
-function _(e) {
+function v(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: _ } = (0, a.cj)([g.Z], () => ({
-            guild: g.Z.getGuild(),
-            guildProfile: g.Z.getGuildProfile()
+        { guild: n, guildProfile: v } = (0, a.cj)([p.Z], () => ({
+            guild: p.Z.getGuild(),
+            guildProfile: p.Z.getGuildProfile()
         })),
-        v = null == n ? void 0 : n.id,
-        O = (0, a.e7)([c.Z], () => c.Z.get(v)),
-        { fetchGuildProfile: C } = (0, d.u)(v),
-        y = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
-        N = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        O = null == n ? void 0 : n.id,
+        C = (0, a.e7)([d.Z], () => d.Z.get(O)),
+        { fetchGuildProfile: y } = (0, u.u)(O),
+        N = (null == v ? void 0 : v.visibility) == null || !l.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
+        I = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
-        null != v && C();
-    }, [v, C]);
-    let I = i.useMemo(() => (null == n || null == _ ? j : _), [n, _]),
-        E = i.useCallback(() => {
-            (null == n ? void 0 : n.id) != null && (N ? m.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC }) : m.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
-        }, [null == n ? void 0 : n.id, N]),
+        null != O && y();
+    }, [O, y]);
+    let E = i.useMemo(() => (null == n || null == v ? _ : v), [n, v]),
         S = i.useCallback(() => {
-            m.Z.setSection(h.pNK.PROFILE);
+            (null == n ? void 0 : n.id) != null && (I ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC }) : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
+        }, [null == n ? void 0 : n.id, I]),
+        T = i.useCallback(() => {
+            g.Z.setSection(x.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let T = null != t ? t : null == O ? void 0 : O.formFields;
+    let P = null != t ? t : null == C ? void 0 : C.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.X6, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
-                children: x.intl.string(x.t.AHJddH)
+                children: b.intl.string(b.t.AHJddH)
             }),
             (0, r.jsx)(s.xv, {
                 tag: 'p',
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: b.applicationBody,
-                children: x.intl.string(x.t.Z7TCtb)
+                className: j.applicationBody,
+                children: b.intl.string(b.t.Z7TCtb)
             }),
-            (0, r.jsx)(f.c, { guildId: n.id }),
+            (0, r.jsx)(h.c, { guildId: n.id }),
             (0, r.jsx)('div', {
-                className: b.form,
+                className: j.form,
                 children:
-                    null != T
-                        ? (0, r.jsx)(p.y, {
+                    null != P
+                        ? (0, r.jsx)(f.y, {
                               guild: n,
-                              formFields: T
+                              formFields: P
                           })
-                        : (0, r.jsx)(o.$jN, {})
+                        : (0, r.jsx)(c.$jN, {})
             }),
-            (0, r.jsx)('div', { className: b.divider }),
-            (0, r.jsxs)(o.hjN, {
-                className: b.twoColumnContainer,
+            (0, r.jsx)('div', { className: j.divider }),
+            (0, r.jsxs)(c.hjN, {
+                className: j.twoColumnContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: b.column,
+                        className: j.column,
                         children: [
-                            (0, r.jsx)(o.j7V, {
-                                onChange: E,
-                                value: N,
+                            (0, r.jsx)(c.j7V, {
+                                onChange: S,
+                                value: I,
                                 hideBorder: !0,
-                                disabled: y,
-                                children: x.intl.string(x.t['N/0239'])
+                                disabled: N,
+                                children: b.intl.string(b.t['N/0239'])
                             }),
                             (0, r.jsx)(s.xv, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                children: x.intl.string(x.t['3TSZYG'])
+                                children: b.intl.string(b.t['3TSZYG'])
                             }),
-                            y &&
+                            N &&
                                 (0, r.jsx)(s.xv, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: x.intl.format(x.t.Bk0VOj, {
+                                    children: b.intl.format(b.t.Bk0VOj, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
-                                                o.eee,
+                                                c.eee,
                                                 {
-                                                    onClick: S,
+                                                    onClick: T,
                                                     children: e
                                                 },
                                                 t
@@ -120,19 +121,19 @@ function _(e) {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: b.column,
+                        className: j.column,
                         children: (0, r.jsxs)('div', {
-                            className: b.previewWrapper,
+                            className: j.previewWrapper,
                             children: [
-                                (0, r.jsx)('div', { className: b.gradient }),
-                                (0, r.jsx)(u.ZP, {
-                                    className: b.preview,
-                                    profile: I,
-                                    CTAOverride: (0, r.jsx)(o.zxk, {
-                                        className: b.previewButton,
-                                        size: o.zxk.Sizes.SMALL,
+                                (0, r.jsx)('div', { className: j.gradient }),
+                                (0, r.jsx)(m.ZP, {
+                                    className: j.preview,
+                                    profile: E,
+                                    CTAOverride: (0, r.jsx)(o.zx, {
+                                        className: j.previewButton,
+                                        size: o.zx.Sizes.SMALL,
                                         fullWidth: !0,
-                                        children: x.intl.string(x.t['7XdMW1'])
+                                        children: b.intl.string(b.t['7XdMW1'])
                                     }),
                                     disableGuildNameClick: !0
                                 })

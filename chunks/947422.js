@@ -1,41 +1,42 @@
-n.d(e, { default: () => b });
+n.d(e, { default: () => d });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    l = n(313201),
-    i = n(77880),
-    c = n(388032),
-    a = n(344785),
-    s = n(298860);
-let u = (t) => {
-    let { text: e, icon: n, foreground: l } = t;
+var o = n(755721),
+    l = n(481060),
+    i = n(313201),
+    c = n(77880),
+    a = n(388032),
+    s = n(344785),
+    u = n(298860);
+let b = (t) => {
+    let { text: e, icon: n, foreground: o } = t;
     return (0, r.jsxs)('div', {
-        className: a.bulletContainer,
+        className: s.bulletContainer,
         children: [
             (0, r.jsx)('div', {
-                className: a.iconContainer,
+                className: s.iconContainer,
                 children: (0, r.jsx)(n, {
-                    color: null != l ? l : 'currentColor',
-                    className: a.bulletIcon,
+                    color: null != o ? o : 'currentColor',
+                    className: s.bulletIcon,
                     size: 'custom',
                     height: 40,
                     width: 40
                 })
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: a.bulletText,
+                className: s.bulletText,
                 children: e
             })
         ]
     });
 };
-function b(t) {
+function d(t) {
     var e,
         n,
-        { transitionState: b, onClose: d } = t,
-        p = (function (t, e) {
+        { transitionState: d, onClose: p } = t,
+        f = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -54,10 +55,10 @@ function b(t) {
             }
             return o;
         })(t, ['transitionState', 'onClose']);
-    let f = (0, l.Dt)(),
-        { changeLeaveCallAndActivityIcons: g } = (0, i.A)({ location: 'StageChannelWelcomeModal' });
+    let g = (0, i.Dt)(),
+        { changeLeaveCallAndActivityIcons: j } = (0, c.A)({ location: 'StageChannelWelcomeModal' });
     return (0, r.jsx)(
-        o.Y0X,
+        l.Y0X,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
@@ -84,48 +85,48 @@ function b(t) {
             return t;
         })(
             {
-                transitionState: b,
-                'aria-labelledby': f
+                transitionState: d,
+                'aria-labelledby': g
             },
-            p
+            f
         )),
         (n = n =
             {
-                size: o.CgR.SMALL,
+                size: l.CgR.SMALL,
                 parentComponent: 'StageChannelWelcomeModal',
                 children: (0, r.jsxs)('div', {
-                    className: a.content,
+                    className: s.content,
                     children: [
                         (0, r.jsx)('img', {
-                            src: s,
-                            alt: c.intl.string(c.t['5DRw+/']),
-                            className: a.illustration
+                            src: u,
+                            alt: a.intl.string(a.t['5DRw+/']),
+                            className: s.illustration
                         }),
-                        (0, r.jsx)(o.X6q, {
-                            id: f,
+                        (0, r.jsx)(l.X6q, {
+                            id: g,
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
-                            className: a.headerTitle,
-                            children: c.intl.string(c.t.UVuXCg)
+                            className: s.headerTitle,
+                            children: a.intl.string(a.t.UVuXCg)
                         }),
-                        (0, r.jsx)(u, {
-                            text: c.intl.string(c.t.sBDfo6),
-                            icon: o.nRN,
-                            foreground: a.red
+                        (0, r.jsx)(b, {
+                            text: a.intl.string(a.t.sBDfo6),
+                            icon: l.nRN,
+                            foreground: s.red
                         }),
-                        (0, r.jsx)(u, {
-                            text: c.intl.string(c.t.x58YtL),
-                            icon: g ? o.PBZ : o.gkL
+                        (0, r.jsx)(b, {
+                            text: a.intl.string(a.t.x58YtL),
+                            icon: j ? l.PBZ : l.gkL
                         }),
-                        (0, r.jsx)(u, {
-                            text: c.intl.string(c.t.XtVqlZ),
-                            icon: o.V9
+                        (0, r.jsx)(b, {
+                            text: a.intl.string(a.t.XtVqlZ),
+                            icon: l.V9
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            color: o.zxk.Colors.BRAND,
-                            className: a.button,
-                            onClick: d,
-                            children: c.intl.string(c.t.obLqZ2)
+                        (0, r.jsx)(o.zx, {
+                            color: o.zx.Colors.BRAND,
+                            className: s.button,
+                            onClick: p,
+                            children: a.intl.string(a.t.obLqZ2)
                         })
                     ]
                 })

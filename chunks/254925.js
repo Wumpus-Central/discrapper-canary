@@ -18,8 +18,8 @@ var r = t(255367),
     x = t(494620),
     p = t(434404),
     g = t(999382),
-    b = t(70086),
-    y = t(835887),
+    y = t(70086),
+    b = t(835887),
     j = t(388661),
     v = t(500230),
     C = t(58909),
@@ -122,7 +122,7 @@ let O = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKU
                         primaryColor: F,
                         secondaryColor: B
                     }),
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(b.Z, {
                         className: k.section,
                         selectedBadge: U,
                         guildId: w.id
@@ -205,7 +205,7 @@ let O = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKU
                                       })
                                     : (0, r.jsx)('div', {
                                           className: k.boostingLinkContainer,
-                                          children: (0, r.jsx)(b.P, {
+                                          children: (0, r.jsx)(y.P, {
                                               onClick: () => {
                                                   ((0, h.Z)(w.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), p.Z.close());
                                               }

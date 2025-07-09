@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    l = n(168179),
-    a = n(147282);
+    a = n(168179),
+    l = n(147282);
 let o = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 240,
         n = t / 2 - 12;
@@ -20,10 +20,10 @@ function c(e) {
                       '--custom-caret-offset-y': ['left', 'right'].includes(r) ? ''.concat(o(d), 'px') : '0px'
                   }
                 : void 0,
-        m = s()(a.caret, a['caret--'.concat(r)], a['caret--'.concat(c)], n);
+        m = s()(l.caret, l['caret--'.concat(r)], l['caret--'.concat(c)], n);
     return (0, i.jsx)('div', {
         className: m,
         style: u,
-        children: (0, i.jsx)(l.v, {})
+        children: (0, i.jsx)(a.v, {})
     });
 }

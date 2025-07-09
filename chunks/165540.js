@@ -2,10 +2,10 @@ n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(704215),
-    c = n(481060),
+    c = n(755721),
     u = n(566620),
     d = n(499254),
     p = n(541099),
@@ -25,7 +25,7 @@ var r = n(255367),
 let S = i.forwardRef(function (e, t) {
         var n, l;
         let { type: f, animateRef: m } = e,
-            b = (0, a.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === f),
+            b = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === f),
             { Component: y, events: C, play: x } = (0, g.Z)('ChannelAppLauncherButton');
         i.useImperativeHandle(
             m,
@@ -44,10 +44,10 @@ let S = i.forwardRef(function (e, t) {
                 color: 'currentColor'
             });
         return (0, r.jsx)('div', {
-            className: o()(E.buttonContainer, v.t4),
+            className: a()(E.buttonContainer, v.t4),
             ref: t,
             children: (0, r.jsx)(
-                c.zxk,
+                c.zx,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,10 +74,10 @@ let S = i.forwardRef(function (e, t) {
                     return e;
                 })(
                     {
-                        look: c.zxk.Looks.BLANK,
-                        size: c.zxk.Sizes.NONE,
+                        look: c.zx.Looks.BLANK,
+                        size: c.zx.Sizes.NONE,
                         tabIndex: 0,
-                        className: o()(E.button, { [E.buttonActive]: b }),
+                        className: a()(E.button, { [E.buttonActive]: b }),
                         onClick: S,
                         'aria-label': j.intl.string(j.t.erHFxM),
                         'aria-expanded': b,
@@ -112,7 +112,7 @@ let S = i.forwardRef(function (e, t) {
         });
     }),
     I = i.memo(function (e) {
-        let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: o } = e,
+        let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
             s = i.useRef(null),
             c = (0, m.R)({
                 channel: t,
@@ -120,7 +120,7 @@ let S = i.forwardRef(function (e, t) {
             }),
             u = (0, x.Z)({ type: n }),
             d = (0, b.Q)(t.id),
-            h = (0, a.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
+            h = (0, o.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
             { visible: g } = (0, C.xL)();
         return c
             ? (0, r.jsxs)('div', {
@@ -139,7 +139,7 @@ let S = i.forwardRef(function (e, t) {
                       }),
                       u
                           ? (0, r.jsx)(f.Z, {
-                                positionTargetRef: d && !h && g ? o : s,
+                                positionTargetRef: d && !h && g ? a : s,
                                 channel: t
                             })
                           : null

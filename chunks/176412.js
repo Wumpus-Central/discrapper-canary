@@ -11,7 +11,7 @@ var i,
     a = n.n(o),
     u = n(442837),
     c = n(25209),
-    d = n(481060),
+    d = n(755721),
     s = n(2052),
     p = n(542094),
     f = n(513202),
@@ -118,10 +118,10 @@ function C(e) {
             fetchesApplication: E,
             onConfirmActivityLaunchChecksAlertOpen: g
         }),
-        D = d.Ttl.BRAND,
+        D = d.Tt.BRAND,
         M = null != o ? o : A.intl.string(A.t.zKX8Nj);
     return (
-        S === p.JS.JOIN ? ((D = d.Ttl.GREEN), (M = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((D = d.Ttl.RED), (M = A.intl.string(A.t['Hi1/aW']))),
+        S === p.JS.JOIN ? ((D = d.Tt.GREEN), (M = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((D = d.Tt.RED), (M = A.intl.string(A.t['Hi1/aW']))),
         {
             onActivityItemSelected: T,
             activityAction: S,

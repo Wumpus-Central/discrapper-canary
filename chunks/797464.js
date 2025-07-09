@@ -1,89 +1,90 @@
-(e.d(n, { default: () => m }), e(388685));
-var a = e(255367),
-    o = e(73800),
-    l = e(120356),
-    s = e.n(l),
-    i = e(481060),
-    r = e(313201),
-    d = e(388032),
-    c = e(957684);
-function m(t) {
-    let { transitionState: n, onConfirm: e, onClose: l, onDismiss: m } = t,
-        [u, h] = o.useState(!1),
-        [g, x] = o.useState(!0),
-        [p, b] = o.useState(!0),
-        C = (0, r.Dt)(),
-        k = () => {
-            (m(), l());
+(n.d(a, { default: () => u }), n(388685));
+var e = n(255367),
+    l = n(73800),
+    o = n(120356),
+    s = n.n(o),
+    i = n(755721),
+    r = n(481060),
+    d = n(313201),
+    c = n(388032),
+    m = n(957684);
+function u(t) {
+    let { transitionState: a, onConfirm: n, onClose: o, onDismiss: u } = t,
+        [g, h] = l.useState(!1),
+        [x, p] = l.useState(!0),
+        [b, C] = l.useState(!0),
+        j = (0, d.Dt)(),
+        y = () => {
+            (u(), o());
         };
-    return (0, a.jsxs)(i.Y0X, {
-        transitionState: n,
-        'aria-labelledby': C,
-        size: i.CgR.SMALL,
+    return (0, e.jsxs)(r.Y0X, {
+        transitionState: a,
+        'aria-labelledby': j,
+        size: r.CgR.SMALL,
         parentComponent: 'HamModal',
         children: [
-            (0, a.jsxs)(i.hzk, {
-                className: c.modalContent,
+            (0, e.jsxs)(r.hzk, {
+                className: m.modalContent,
                 children: [
-                    (0, a.jsx)(i.olH, {
-                        onClick: k,
-                        className: c.closeButton
+                    (0, e.jsx)(r.olH, {
+                        onClick: y,
+                        className: m.closeButton
                     }),
-                    (0, a.jsx)(i.X6q, {
-                        id: C,
+                    (0, e.jsx)(r.X6q, {
+                        id: j,
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        className: c.__invalid_modalTitle,
-                        children: d.intl.string(d.t['6rP+BQ'])
+                        className: m.__invalid_modalTitle,
+                        children: c.intl.string(c.t['6rP+BQ'])
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, e.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: c.modalBody,
-                        children: d.intl.string(d.t['1LuCnZ'])
+                        className: m.modalBody,
+                        children: c.intl.string(c.t['1LuCnZ'])
                     }),
-                    (0, a.jsx)(i.j7V, {
+                    (0, e.jsx)(r.j7V, {
                         hideBorder: !0,
                         onChange: (t) => {
-                            x(t);
+                            p(t);
                         },
-                        className: s()(c.modalBody, c.toggle),
-                        value: g,
-                        children: d.intl.string(d.t['zLb+u7'])
+                        className: s()(m.modalBody, m.toggle),
+                        value: x,
+                        children: c.intl.string(c.t['zLb+u7'])
                     })
                 ]
             }),
-            (0, a.jsxs)(i.mzw, {
+            (0, e.jsxs)(r.mzw, {
                 children: [
-                    (0, a.jsx)(i.zxk, {
+                    (0, e.jsx)(r.zxk, {
+                        variant: 'primary',
+                        text: c.intl.string(c.t['cY+Ooa']),
                         type: 'submit',
-                        color: i.zxk.Colors.BRAND,
                         onClick: () => {
-                            u || (h(!0), e(g, p), h(!1), l());
+                            g || (h(!0), n(x, b), h(!1), o());
                         },
-                        submitting: u,
-                        children: d.intl.string(d.t['cY+Ooa'])
+                        loading: g
                     }),
-                    (0, a.jsx)(i.zxk, {
+                    (0, e.jsx)(i.zx, {
                         type: 'submit',
-                        color: i.zxk.Colors.TRANSPARENT,
+                        color: i.zx.Colors.TRANSPARENT,
                         grow: !0,
-                        look: i.iLD.LINK,
-                        onClick: k,
-                        submitting: u,
-                        className: c.cancelButton,
-                        children: d.intl.string(d.t['ETE/oK'])
+                        look: i.iL.LINK,
+                        onClick: y,
+                        submitting: g,
+                        className: m.cancelButton,
+                        children: c.intl.string(c.t['ETE/oK'])
                     }),
-                    (0, a.jsx)(i.XZJ, {
-                        value: p,
-                        type: i.XZJ.Types.INVERTED,
-                        onChange: (t, n) => {
-                            b(n);
+                    (0, e.jsx)(r.XZJ, {
+                        value: b,
+                        type: r.XZJ.Types.INVERTED,
+                        onChange: (t, a) => {
+                            C(a);
                         },
-                        children: (0, a.jsx)(i.Text, {
+                        children: (0, e.jsx)(r.Text, {
                             tag: 'span',
                             variant: 'text-sm/normal',
-                            children: d.intl.string(d.t.KX8WJi)
+                            children: c.intl.string(c.t.KX8WJi)
                         })
                     })
                 ]

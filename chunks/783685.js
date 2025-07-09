@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => d }), n(388685));
 var l = n(255367),
     i = n(73800),
-    r = n(481060),
+    r = n(755721),
     a = n(626135),
     o = n(827498),
     s = n(915346),
@@ -26,10 +26,10 @@ function d(e) {
             } catch (e) {}
             (clearTimeout(h.current), f(!1));
         }, [t, n, p]);
-    return (0, l.jsx)(r.zxk, {
+    return (0, l.jsx)(r.zx, {
         type: 'submit',
         size: d,
-        color: r.zxk.Colors.PRIMARY,
+        color: r.zx.Colors.PRIMARY,
         submitting: m,
         onClick: v,
         'aria-label': u.intl.string(u.t.AUM8hY),

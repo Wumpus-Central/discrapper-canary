@@ -1,21 +1,22 @@
-(r.d(t, { default: () => O }), r(388685));
+(r.d(t, { default: () => g }), r(388685));
 var n = r(255367),
     s = r(73800),
     i = r(990547),
-    a = r(481060),
-    o = r(37234),
+    a = r(755721),
+    o = r(481060),
+    c = r(37234),
     l = r(700582),
-    c = r(213609),
-    d = r(600164),
-    u = r(434404),
-    m = r(706454),
-    f = r(768581),
-    p = r(5192),
-    _ = r(51144),
-    x = r(981631),
-    h = r(72766),
-    b = r(388032),
-    E = r(68976);
+    d = r(213609),
+    u = r(600164),
+    m = r(434404),
+    f = r(706454),
+    p = r(768581),
+    _ = r(5192),
+    x = r(51144),
+    h = r(981631),
+    b = r(72766),
+    E = r(388032),
+    j = r(68976);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -41,7 +42,7 @@ function N(e) {
     }
     return e;
 }
-function j(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,208 +60,210 @@ function j(e, t) {
         e
     );
 }
-let T = function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.default.locale;
-    return 'https://'.concat(x.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000168511');
+let O = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.default.locale;
+    return 'https://'.concat(h.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000168511');
 };
-function O(e) {
-    let { guild: t, toUser: m, fromUser: O, onClose: g, transitionState: R } = e,
-        [I, y] = s.useState(!1),
-        k = t.features.has(x.oNc.VERIFIED) || t.features.has(x.oNc.PARTNERED),
-        v = k ? b.intl.string(b.t.wDkfrK) : null,
-        w = k ? b.intl.format(b.t.A37vwM, { ticketUrl: T() }) : null,
-        P = t.features.has(x.oNc.CREATOR_MONETIZABLE) || t.features.has(x.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
-    async function S(e) {
-        await u.Z.transferOwnership(t.id, m.id, h.X.EMAIL, e);
+function g(e) {
+    let { guild: t, toUser: f, fromUser: g, onClose: y, transitionState: R } = e,
+        [I, v] = s.useState(!1),
+        w = t.features.has(h.oNc.VERIFIED) || t.features.has(h.oNc.PARTNERED),
+        S = w ? E.intl.string(E.t.wDkfrK) : null,
+        P = w ? E.intl.format(E.t.A37vwM, { ticketUrl: O() }) : null,
+        A = t.features.has(h.oNc.CREATOR_MONETIZABLE) || t.features.has(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+    async function k(e) {
+        await m.Z.transferOwnership(t.id, f.id, b.X.EMAIL, e);
     }
-    async function A() {
-        await u.Z.sendTransferOwnershipPincode(t.id, !0);
+    async function C() {
+        await m.Z.sendTransferOwnershipPincode(t.id, !0);
     }
-    async function C(e) {
-        (e.preventDefault(), g());
+    async function D(e) {
+        (e.preventDefault(), y());
         try {
-            O.mfaEnabled || null == O.email
-                ? (await u.Z.transferOwnership(t.id, m.id, O.mfaEnabled ? h.X.MFA : null), (0, o.xf)())
-                : (await u.Z.sendTransferOwnershipPincode(t.id),
-                  (0, a.ZDy)(async () => {
+            g.mfaEnabled || null == g.email
+                ? (await m.Z.transferOwnership(t.id, f.id, g.mfaEnabled ? b.X.MFA : null), (0, c.xf)())
+                : (await m.Z.sendTransferOwnershipPincode(t.id),
+                  (0, o.ZDy)(async () => {
                       let { default: e } = await r.e('94566').then(r.bind(r, 965072));
                       return (t) =>
                           (0, n.jsx)(
                               e,
-                              j(N({}, t), {
-                                  onFormSubmit: S,
-                                  onResend: A,
-                                  onSuccess: o.xf,
-                                  headerText: b.intl.string(b.t.Z5s7PD),
-                                  confirmButtonText: b.intl.string(b.t.Z5s7PD),
-                                  confirmButtonColor: a.zxk.Colors.RED,
+                              T(N({}, t), {
+                                  onFormSubmit: k,
+                                  onResend: C,
+                                  onSuccess: c.xf,
+                                  headerText: E.intl.string(E.t.Z5s7PD),
+                                  confirmButtonText: E.intl.string(E.t.Z5s7PD),
+                                  confirmButtonColor: a.zx.Colors.RED,
                                   impressionName: i.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE
                               })
                           );
                   }));
         } catch (e) {
-            e.body.code === x.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
-                (0, a.h7j)((e) =>
+            e.body.code === h.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
+                (0, o.h7j)((e) =>
                     (0, n.jsx)(
-                        a.ConfirmModal,
-                        j(N({}, e), {
-                            header: b.intl.string(b.t['m+nQlp']),
-                            confirmText: b.intl.string(b.t['NX+WJC']),
-                            confirmButtonColor: a.zxk.Colors.BRAND,
-                            children: (0, n.jsx)(a.Text, {
+                        o.ConfirmModal,
+                        T(N({}, e), {
+                            header: E.intl.string(E.t['m+nQlp']),
+                            confirmText: E.intl.string(E.t['NX+WJC']),
+                            confirmButtonColor: a.zx.Colors.BRAND,
+                            children: (0, n.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: b.intl.format(b.t.wG747e, { server_subscription_owner_transfer_article: x.T23 })
+                                children: E.intl.format(E.t.wG747e, { server_subscription_owner_transfer_article: h.T23 })
                             })
                         })
                     )
                 );
         }
     }
-    (0, c.Z)({
+    (0, d.Z)({
         type: i.ImpressionTypes.MODAL,
         name: i.ImpressionNames.GUILD_TRANSFER_OWNERSHIP
     });
-    let D = p.ZP.getNickname(t.id, void 0, m),
-        Z = m.hasAvatarForGuild(t.id),
-        L = () =>
+    let Z = _.ZP.getNickname(t.id, void 0, f),
+        L = f.hasAvatarForGuild(t.id),
+        F = () =>
             (0, n.jsxs)('span', {
-                className: E.guildTransfer,
+                className: j.guildTransfer,
                 children: [
                     null != t.icon
-                        ? (0, n.jsx)(a.qEK, {
-                              src: f.ZP.getGuildIconURL({
+                        ? (0, n.jsx)(o.qEK, {
+                              src: p.ZP.getGuildIconURL({
                                   id: t.id,
                                   icon: t.icon,
                                   size: 16
                               }),
-                              size: a.EFr.SIZE_16,
-                              className: E.miniGuildIcon,
+                              size: o.EFr.SIZE_16,
+                              className: j.miniGuildIcon,
                               'aria-hidden': !0
                           })
                         : null,
-                    (0, n.jsx)(a.Text, {
-                        className: E.guildName,
+                    (0, n.jsx)(o.Text, {
+                        className: j.guildName,
                         variant: 'text-sm/bold',
                         children: t.name
                     })
                 ]
             });
-    return (0, n.jsx)(a.Y0X, {
+    return (0, n.jsx)(o.Y0X, {
         transitionState: R,
         parentComponent: 'TransferOwnership',
         children: (0, n.jsxs)('form', {
-            onSubmit: C,
+            onSubmit: D,
             children: [
-                (0, n.jsx)(a.xBx, {
+                (0, n.jsx)(o.xBx, {
                     separator: !1,
-                    children: (0, n.jsx)(a.X6q, {
+                    children: (0, n.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        className: E.header,
-                        children: b.intl.string(b.t.Z5s7PD)
+                        className: j.header,
+                        children: E.intl.string(E.t.Z5s7PD)
                     })
                 }),
-                (0, n.jsxs)(a.hzk, {
+                (0, n.jsxs)(o.hzk, {
                     children: [
-                        (0, n.jsx)(a.R94, {
-                            type: a.R94.Types.DESCRIPTION,
-                            className: E.subHeader,
+                        (0, n.jsx)(o.R94, {
+                            type: o.R94.Types.DESCRIPTION,
+                            className: j.subHeader,
                             children:
-                                null != D || Z
-                                    ? b.intl.format(b.t.E90vgo, {
-                                          GuildHook: L,
-                                          user: (0, _.W5)(m),
+                                null != Z || L
+                                    ? E.intl.format(E.t.E90vgo, {
+                                          GuildHook: F,
+                                          user: (0, x.W5)(f),
                                           AKAHook: function () {
                                               return (0, n.jsxs)('span', {
-                                                  className: E.akaTransfer,
+                                                  className: j.akaTransfer,
                                                   children: [
-                                                      (0, n.jsx)(a.IGR, {
-                                                          text: b.intl.string(b.t.l1QVfn),
+                                                      (0, n.jsx)(o.IGR, {
+                                                          text: E.intl.string(E.t.l1QVfn),
                                                           disableColor: !0,
-                                                          className: E.akaBadge
+                                                          className: j.akaBadge
                                                       }),
-                                                      Z
-                                                          ? (0, n.jsx)(a.qEK, {
-                                                                src: m.getAvatarURL(t.id, 16, !0),
-                                                                size: a.EFr.SIZE_16,
-                                                                className: E.miniAvatar,
+                                                      L
+                                                          ? (0, n.jsx)(o.qEK, {
+                                                                src: f.getAvatarURL(t.id, 16, !0),
+                                                                size: o.EFr.SIZE_16,
+                                                                className: j.miniAvatar,
                                                                 'aria-hidden': !0
                                                             })
                                                           : null,
-                                                      (0, n.jsx)(a.Text, {
-                                                          className: E.nickname,
+                                                      (0, n.jsx)(o.Text, {
+                                                          className: j.nickname,
                                                           variant: 'text-sm/normal',
-                                                          children: null != D ? D : _.ZP.getName(m)
+                                                          children: null != Z ? Z : x.ZP.getName(f)
                                                       })
                                                   ]
                                               });
                                           }
                                       })
-                                    : b.intl.format(b.t['2XLnGx'], {
-                                          GuildHook: L,
-                                          user: (0, _.W5)(m)
+                                    : E.intl.format(E.t['2XLnGx'], {
+                                          GuildHook: F,
+                                          user: (0, x.W5)(f)
                                       })
                         }),
-                        (0, n.jsxs)(d.Z, {
-                            className: E.fromToWrapper,
-                            justify: d.Z.Justify.CENTER,
+                        (0, n.jsxs)(u.Z, {
+                            className: j.fromToWrapper,
+                            justify: u.Z.Justify.CENTER,
                             children: [
                                 (0, n.jsx)('div', {
-                                    className: E.from,
+                                    className: j.from,
                                     children: (0, n.jsx)(l.Z, {
-                                        user: O,
-                                        size: a.EFr.SIZE_80
+                                        user: g,
+                                        size: o.EFr.SIZE_80
                                     })
                                 }),
                                 (0, n.jsx)('div', {
-                                    className: E.to,
+                                    className: j.to,
                                     children: (0, n.jsx)(l.Z, {
-                                        user: m,
-                                        size: a.EFr.SIZE_80
+                                        user: f,
+                                        size: o.EFr.SIZE_80
                                     })
                                 })
                             ]
                         }),
-                        P &&
-                            (0, n.jsx)(a.R94, {
-                                type: a.R94.Types.DESCRIPTION,
-                                className: E.roleSubscriptionText,
-                                children: b.intl.format(b.t.LAlucX, { server_subscription_owner_transfer_article: x.T23 })
+                        A &&
+                            (0, n.jsx)(o.R94, {
+                                type: o.R94.Types.DESCRIPTION,
+                                className: j.roleSubscriptionText,
+                                children: E.intl.format(E.t.LAlucX, { server_subscription_owner_transfer_article: h.T23 })
                             }),
-                        (0, n.jsx)(a.j7V, {
-                            disabled: k,
-                            tooltipNote: v,
+                        (0, n.jsx)(o.j7V, {
+                            disabled: w,
+                            tooltipNote: S,
                             hideBorder: !0,
                             value: I,
                             onChange: function (e) {
-                                y(e);
+                                v(e);
                             },
-                            children: (0, n.jsx)(a.R94, {
-                                type: a.R94.Types.DESCRIPTION,
-                                children: b.intl.format(b.t.xm6ACA, { username: (0, _.W5)(m) })
+                            children: (0, n.jsx)(o.R94, {
+                                type: o.R94.Types.DESCRIPTION,
+                                children: E.intl.format(E.t.xm6ACA, { username: (0, x.W5)(f) })
                             })
                         }),
-                        (0, n.jsx)(a.R94, {
-                            className: E.protectedText,
-                            type: a.R94.Types.DEFAULT,
-                            children: w
+                        (0, n.jsx)(o.R94, {
+                            className: j.protectedText,
+                            type: o.R94.Types.DEFAULT,
+                            children: P
                         })
                     ]
                 }),
-                (0, n.jsxs)(a.mzw, {
-                    children: [
-                        (0, n.jsx)(a.zxk, {
-                            type: 'submit',
-                            disabled: !I,
-                            color: a.zxk.Colors.RED,
-                            children: b.intl.string(b.t.Z5s7PD)
-                        }),
-                        (0, n.jsx)(a.zxk, {
-                            look: a.zxk.Looks.LINK,
-                            color: a.zxk.Colors.PRIMARY,
-                            onClick: g,
-                            children: b.intl.string(b.t['ETE/oK'])
-                        })
-                    ]
+                (0, n.jsx)(o.mzw, {
+                    children: (0, n.jsxs)(o.hE2, {
+                        direction: 'horizontal-reverse',
+                        children: [
+                            (0, n.jsx)(o.zxk, {
+                                variant: 'critical-primary',
+                                text: E.intl.string(E.t.Z5s7PD),
+                                type: 'submit',
+                                disabled: !I
+                            }),
+                            (0, n.jsx)(o.zxk, {
+                                variant: 'secondary',
+                                text: E.intl.string(E.t['ETE/oK']),
+                                onClick: y
+                            })
+                        ]
+                    })
                 })
             ]
         })

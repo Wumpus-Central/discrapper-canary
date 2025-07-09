@@ -1,8 +1,8 @@
-(n.r(t),
-    n.d(t, {
+(a.r(t),
+    a.d(t, {
         transitionToGlobalDiscovery: () =>
             function e(t) {
-                var n, p, b;
+                var a, h, b;
                 let f = t.tab;
                 switch ((d.Z.setState({ selectedTab: f }), f)) {
                     case u.GlobalDiscoveryTab.SERVERS:
@@ -11,25 +11,25 @@
                             null != v
                                 ? l.Z.setState({
                                       selectedTab: v,
-                                      entrypoint: null != (n = t.entrypoint) ? n : h.Qq.UNKNOWN
+                                      entrypoint: null != (a = t.entrypoint) ? a : p.Qq.UNKNOWN
                                   })
-                                : l.Z.setState({ entrypoint: null != (p = t.entrypoint) ? p : h.Qq.UNKNOWN }),
+                                : l.Z.setState({ entrypoint: null != (h = t.entrypoint) ? h : p.Qq.UNKNOWN }),
                             (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case u.GlobalDiscoveryTab.APPS:
                         if (null != t.newSessionState) {
-                            let n = (0, r.PM)(),
+                            let a = (0, r.PM)(),
                                 { guildId: l, entrypoint: i } = t.newSessionState;
                             if (
-                                (a.z8.setState({
-                                    sessionId: n,
+                                (n.z8.setState({
+                                    sessionId: a,
                                     guildId: null != l ? l : null,
                                     entrypoint: i,
                                     trackedOpenedFromExternalEntrypoint: !1
                                 }),
                                 c.default.track(m.rMx.APP_DIRECTORY_OPENED, {
                                     source: null == i ? void 0 : i.name,
-                                    session_id: n,
+                                    session_id: a,
                                     guild_id: l,
                                     user_id: null == (b = o.default.getCurrentUser()) ? void 0 : b.id
                                 }),
@@ -37,21 +37,21 @@
                             )
                                 return e(
                                     (function () {
-                                        let { lastItem: e } = a.aQ.getState();
+                                        let { lastItem: e } = n.aQ.getState();
                                         if (null != e)
                                             switch (e.type) {
-                                                case a.m_.APPLICATION:
+                                                case n.m_.APPLICATION:
                                                     return {
                                                         tab: u.GlobalDiscoveryTab.APPS,
                                                         applicationId: e.applicationId,
                                                         section: e.section
                                                     };
-                                                case a.m_.CATEGORY:
+                                                case n.m_.CATEGORY:
                                                     return {
                                                         tab: u.GlobalDiscoveryTab.APPS,
                                                         categoryId: Number(e.categoryId)
                                                     };
-                                                case a.m_.SEARCH:
+                                                case n.m_.SEARCH:
                                                     var t;
                                                     return {
                                                         tab: u.GlobalDiscoveryTab.APPS,
@@ -86,21 +86,21 @@
                 }
             }
     }),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
-    n(388685),
-    n(415506));
-var a = n(258971),
-    r = n(726115),
-    l = n(859921),
-    i = n(341907),
-    s = n(703656),
-    o = n(594174),
-    c = n(626135),
-    d = n(836768),
-    u = n(49898),
-    m = n(981631),
-    x = n(979007),
-    h = n(128449);
+    a(65234),
+    a(111804),
+    a(490233),
+    a(97749),
+    a(388685),
+    a(415506));
+var n = a(258971),
+    r = a(726115),
+    l = a(859921),
+    i = a(341907),
+    s = a(703656),
+    o = a(594174),
+    c = a(626135),
+    d = a(836768),
+    u = a(49898),
+    m = a(981631),
+    x = a(979007),
+    p = a(128449);

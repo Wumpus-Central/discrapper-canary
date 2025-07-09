@@ -1,9 +1,9 @@
 (n.d(t, {
     Q2: () => V,
-    Rv: () => Y,
+    Rv: () => W,
     U6: () => F,
     UD: () => G,
-    ZP: () => W,
+    ZP: () => Y,
     oT: () => z
 }),
     n(415506),
@@ -11,8 +11,8 @@
 var i,
     r = n(2818),
     s = n(186070),
-    l = n(185514),
-    a = n(395878),
+    a = n(185514),
+    l = n(395878),
     o = n(321697),
     c = n(775774),
     d = n(570408),
@@ -25,12 +25,12 @@ var i,
     b = n(561716),
     x = n(239748),
     _ = n(337482),
-    E = n(679080),
-    j = n(777019),
+    j = n(679080),
+    E = n(777019),
     O = n(523147),
     C = n(400332),
-    S = n(908552),
-    v = n(189509),
+    v = n(908552),
+    S = n(189509),
     T = n(673553),
     N = n(280492),
     I = n(746887),
@@ -82,19 +82,19 @@ function H() {
     });
 }
 let z = {
-    [M.EkH.SERVER_NEXT]: S.nq,
-    [M.EkH.SERVER_PREV]: S.X3,
-    [M.EkH.CHANNEL_NEXT]: l.tQ,
-    [M.EkH.CHANNEL_PREV]: l.x5,
-    [M.EkH.NAVIGATE_BACK]: l.Nx,
-    [M.EkH.NAVIGATE_FORWARD]: l.On,
+    [M.EkH.SERVER_NEXT]: v.nq,
+    [M.EkH.SERVER_PREV]: v.X3,
+    [M.EkH.CHANNEL_NEXT]: a.tQ,
+    [M.EkH.CHANNEL_PREV]: a.x5,
+    [M.EkH.NAVIGATE_BACK]: a.Nx,
+    [M.EkH.NAVIGATE_FORWARD]: a.On,
     [M.EkH.UNREAD_NEXT]: w.pd,
     [M.EkH.UNREAD_PREV]: w.wk,
     [M.EkH.MENTION_CHANNEL_NEXT]: w.Nv,
     [M.EkH.MENTION_CHANNEL_PREV]: w.uX,
-    [M.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
+    [M.EkH.TOGGLE_PREVIOUS_GUILD]: a.$c,
     [M.EkH.JUMP_TO_GUILD]: m.u,
-    [M.EkH.SUBMIT]: v.z,
+    [M.EkH.SUBMIT]: S.z,
     [M.EkH.TEXTAREA_FOCUS]: T.U,
     [M.EkH.MARK_CHANNEL_READ]: p.f,
     [M.EkH.MARK_SERVER_READ]: g.l,
@@ -112,9 +112,9 @@ let z = {
     [M.EkH.SCROLL_UP]: _.B2,
     [M.EkH.SCROLL_DOWN]: _.gN,
     [M.EkH.QUICKSWITCHER_SHOW]: b.$,
-    [M.EkH.CREATE_DM_GROUP]: a.K,
-    [M.EkH.SEARCH_EMOJIS]: E.S,
-    [M.EkH.SEARCH_GIFS]: j.O,
+    [M.EkH.CREATE_DM_GROUP]: l.K,
+    [M.EkH.SEARCH_EMOJIS]: j.S,
+    [M.EkH.SEARCH_GIFS]: E.O,
     [M.EkH.SEARCH_STICKERS]: C.U,
     [M.EkH.TOGGLE_HOTKEYS]: R._,
     [M.EkH.JUMP_TO_FIRST_UNREAD]: h.O,
@@ -131,7 +131,7 @@ let z = {
     [M.EkH.OPEN_APP_DIRECTORY]: f.T,
     [M.EkH.BROWSER_DEVTOOLS]: c.p
 };
-function Y() {
+function W() {
     let e = [
             {
                 description: U.intl.string(U.t.bx4Uy8),
@@ -382,4 +382,4 @@ function Y() {
         e
     );
 }
-let W = 12633 == n.j ? z : null;
+let Y = 12633 == n.j ? z : null;

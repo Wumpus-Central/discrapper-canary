@@ -4,16 +4,16 @@ r(73800);
 var o = r(481060),
     s = r(313201),
     c = r(930180),
-    l = r(320596),
-    i = r(388032),
+    i = r(320596),
+    l = r(388032),
     a = r(891430);
 function d(e) {
     let { blockedUsersCount: t, ignoredUsersCount: r } = e;
-    return t > 0 && r > 0 ? i.intl.format(i.t.Uzdyho, { number: t + r }) : r > 0 ? i.intl.format(i.t.wvygk5, { number: r }) : i.intl.format(i.t.HviVAw, { number: t });
+    return t > 0 && r > 0 ? l.intl.format(l.t.Uzdyho, { number: t + r }) : r > 0 ? l.intl.format(l.t.wvygk5, { number: r }) : l.intl.format(l.t.HviVAw, { number: t });
 }
 function u(e) {
     let { blockedUsersCount: t, ignoredUsersCount: r } = e;
-    return t > 0 && r > 0 ? i.intl.string(i.t['P/KFX1']) : r > 0 ? i.intl.format(i.t.Ri3o39, { number: r }) : i.intl.format(i.t['28qZMT'], { number: t });
+    return t > 0 && r > 0 ? l.intl.string(l.t['P/KFX1']) : r > 0 ? l.intl.format(l.t.Ri3o39, { number: r }) : l.intl.format(l.t['28qZMT'], { number: t });
 }
 function b(e) {
     var t,
@@ -105,7 +105,7 @@ function b(e) {
                         children: [...h, ...g].map((e) => {
                             let { user: t, id: r, speaker: o } = e;
                             return (0, n.jsx)(
-                                l.Ie,
+                                i.Ie,
                                 {
                                     user: t,
                                     speaker: o,
@@ -116,25 +116,27 @@ function b(e) {
                             );
                         })
                     }),
-                    (0, n.jsxs)(o.mzw, {
+                    (0, n.jsx)(o.mzw, {
                         className: a.footer,
-                        children: [
-                            (0, n.jsx)(o.zxk, {
-                                onClick: () => {
-                                    (m(b), j());
-                                },
-                                color: o.zxk.Colors.BRAND,
-                                children: i.intl.string(i.t.mbD50N)
-                            }),
-                            (0, n.jsx)(o.zxk, {
-                                onClick: () => {
-                                    j();
-                                },
-                                color: o.zxk.Colors.PRIMARY,
-                                look: o.zxk.Looks.LINK,
-                                children: i.intl.string(i.t.CZGqeX)
-                            })
-                        ]
+                        children: (0, n.jsxs)(o.hE2, {
+                            direction: 'horizontal-reverse',
+                            children: [
+                                (0, n.jsx)(o.zxk, {
+                                    variant: 'primary',
+                                    text: l.intl.string(l.t.mbD50N),
+                                    onClick: () => {
+                                        (m(b), j());
+                                    }
+                                }),
+                                (0, n.jsx)(o.zxk, {
+                                    variant: 'secondary',
+                                    text: l.intl.string(l.t.CZGqeX),
+                                    onClick: () => {
+                                        j();
+                                    }
+                                })
+                            ]
+                        })
                     })
                 ]
             }),

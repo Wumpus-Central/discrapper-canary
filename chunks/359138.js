@@ -2,8 +2,8 @@
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(747545),
+    a = n(481060),
+    l = n(747545),
     o = n(131951),
     c = n(388032),
     d = n(959963);
@@ -28,18 +28,18 @@ function m() {
                           height: u.height,
                           disabled: !n
                       }),
-                      (0, i.jsx)(a.S, {})
+                      (0, i.jsx)(l.S, {})
                   ]
               })
           })
         : (0, i.jsx)('div', {
               className: d.cameraWrapper,
-              children: (0, i.jsx)(l.ua7, {
+              children: (0, i.jsx)(a.ua7, {
                   text: p ? null : c.intl.string(c.t['8jSzSU']),
                   children: (e) => {
                       var t, n;
                       return (0, i.jsx)(
-                          l.zxk,
+                          a.zxk,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -64,12 +64,17 @@ function m() {
                                       }));
                               }
                               return e;
-                          })({}, e)),
+                          })(
+                              {
+                                  variant: 'primary',
+                                  text: c.intl.string(c.t.JIf4v7)
+                              },
+                              e
+                          )),
                           (n = n =
                               {
                                   onClick: () => m(!0),
-                                  disabled: !p,
-                                  children: c.intl.string(c.t.JIf4v7)
+                                  disabled: !p
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

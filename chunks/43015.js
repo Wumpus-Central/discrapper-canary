@@ -1,12 +1,12 @@
 n.d(t, {
-    $Z: () => a,
+    $Z: () => l,
     L$: () => o,
-    fw: () => l
+    fw: () => a
 });
 var i = n(544891),
     r = n(570140),
     s = n(981631);
-async function l() {
+async function a() {
     var e;
     let t = await i.tn.get({
         url: s.ANM.AUTH_SESSIONS,
@@ -22,7 +22,7 @@ async function l() {
         t
     );
 }
-function a() {
+function l() {
     r.Z.dispatch({
         type: 'FETCH_AUTH_SESSIONS_SUCCESS',
         sessions: []

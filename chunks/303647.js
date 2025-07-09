@@ -1,27 +1,27 @@
-(a.d(t, { default: () => h }), a(388685), a(953529));
+(a.d(e, { default: () => h }), a(388685), a(953529));
 var n = a(255367),
     i = a(73800),
     l = a(481060),
-    s = a(479531),
-    r = a(600164),
+    r = a(479531),
+    s = a(600164),
     c = a(99325),
     o = a(75666),
     d = a(388032),
     u = a(685554);
-function h(e) {
-    var t, a;
-    let { transitionState: h, onClose: m, entry: p } = e,
-        [x, b] = i.useState(null != (t = p.description) ? t : ''),
+function h(t) {
+    var e, a;
+    let { transitionState: h, onClose: m, entry: p } = t,
+        [x, b] = i.useState(null != (e = p.description) ? e : ''),
         [g, I] = i.useState(null != (a = p.primaryCategoryId) ? a : o.AR.UNCATEGORIZED),
-        [j, k] = i.useState(!1),
-        [C, N] = i.useState(null),
-        _ = async () => {
-            if ((N(null), x !== p.description || g !== p.primaryCategoryId)) {
-                k(!0);
+        [j, y] = i.useState(!1),
+        [_, f] = i.useState(null),
+        k = async () => {
+            if ((f(null), x !== p.description || g !== p.primaryCategoryId)) {
+                y(!0);
                 try {
-                    (await (0, c.Dr)(p.channelId, p.guildId, x, g), k(!1), m());
-                } catch (e) {
-                    (k(!1), N(new s.Z(e)));
+                    (await (0, c.Dr)(p.channelId, p.guildId, x, g), y(!1), m());
+                } catch (t) {
+                    (y(!1), f(new r.Z(t)));
                 }
             }
         };
@@ -31,7 +31,7 @@ function h(e) {
         parentComponent: 'UpdateEntryModal',
         children: [
             (0, n.jsxs)(l.xBx, {
-                direction: r.Z.Direction.VERTICAL,
+                direction: s.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
@@ -64,7 +64,7 @@ function h(e) {
                             maxLength: 200,
                             placeholder: d.intl.string(d.t.VzuITE),
                             onChange: b,
-                            error: null == C ? void 0 : C.getAnyErrorMessage()
+                            error: null == _ ? void 0 : _.getAnyErrorMessage()
                         })
                     }),
                     (0, n.jsx)(l.xJW, {
@@ -82,12 +82,12 @@ function h(e) {
                 ]
             }),
             (0, n.jsx)(l.mzw, {
-                justify: r.Z.Justify.BETWEEN,
+                justify: s.Z.Justify.BETWEEN,
                 children: (0, n.jsx)(l.zxk, {
-                    color: l.zxk.Colors.BRAND,
-                    onClick: _,
-                    submitting: j,
-                    children: d.intl.string(d.t.R3BPHx)
+                    variant: 'primary',
+                    text: d.intl.string(d.t.R3BPHx),
+                    onClick: k,
+                    loading: j
                 })
             })
         ]

@@ -24,8 +24,8 @@ var r = n(255367),
     E = n(131085),
     S = n(388032),
     I = n(145870),
-    R = n(157092);
-function O(e) {
+    O = n(157092);
+function P(e) {
     let { icon: t, label: n, onClick: l, disabled: i } = e;
     return (0, r.jsxs)(d.P3F, {
         className: a()(I.actionButton, { [I.disabled]: i }),
@@ -46,7 +46,7 @@ function O(e) {
         ]
     });
 }
-function P(e) {
+function R(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
         { analyticsLocations: i } = (0, u.ZP)(),
         s = () => {
@@ -60,11 +60,11 @@ function P(e) {
         className: I.infoContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: R.memberNameContainer,
+                className: O.memberNameContainer,
                 children: [
                     (0, r.jsx)(d.P3F, {
                         onClick: s,
-                        className: a()(I.clickable, R.memberAvatar),
+                        className: a()(I.clickable, O.memberAvatar),
                         children: (0, r.jsx)(d.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -72,10 +72,10 @@ function P(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: R.memberNameAndTagContainer,
+                        className: O.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: R.memberNameTextContainer,
+                                className: O.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(d.P3F, {
                                         onClick: s,
@@ -91,8 +91,8 @@ function P(e) {
                                         contextGuildId: n,
                                         badgeSize: E.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: R.memberClanTag,
-                                        containerClassName: R.memberClanTagContainer
+                                        className: O.memberClanTag,
+                                        containerClassName: O.memberClanTagContainer
                                     })
                                 ]
                             }),
@@ -110,7 +110,7 @@ function P(e) {
                 ]
             }),
             (0, r.jsx)(d.P3F, {
-                className: R.closeAction,
+                className: O.closeAction,
                 onClick: () => x.Z.setSelectedGuildJoinRequest(n, null),
                 children: (0, r.jsx)(d.Dio, {
                     size: 'md',
@@ -126,19 +126,19 @@ function y(e) {
     return (0, r.jsxs)('div', {
         className: I.actionRow,
         children: [
-            (0, r.jsx)(O, {
+            (0, r.jsx)(P, {
                 icon: d.owK,
                 label: S.intl.string(S.t.BzjDQE),
                 onClick: i,
                 disabled: o
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(P, {
                 icon: d.k$p,
                 label: S.intl.string(S.t.hDtbs7),
                 onClick: a,
                 disabled: o
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(P, {
                 icon: d.kBi,
                 label: S.intl.string(S.t.KQeYoK),
                 onClick: s,
@@ -310,7 +310,7 @@ function M(e) {
                           (0, r.jsxs)('div', {
                               className: I.cardContainer,
                               children: [
-                                  (0, r.jsx)(P, {
+                                  (0, r.jsx)(R, {
                                       user: o,
                                       guildId: t,
                                       joinRequest: n

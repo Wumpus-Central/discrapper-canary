@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(73800),
     i = n(442837),
     l = n(570140),
-    o = n(911969),
-    a = n(110924),
+    a = n(911969),
+    o = n(110924),
     s = n(213459),
     c = n(812206),
     u = n(835473),
@@ -12,7 +12,7 @@ var r = n(73800),
     h = n(973616),
     f = n(594174),
     m = n(981631);
-let g = [o.yU.PRIMARY_ENTRY_POINT, o.yU.CHAT, o.yU.MESSAGE, o.yU.USER];
+let g = [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER];
 function b(e) {
     var t, n, b;
     let { context: _ } = e,
@@ -26,7 +26,7 @@ function b(e) {
             var e;
             return d.Z.isFetchingProfile(null != (e = null == C ? void 0 : C.id) ? e : m.lds);
         }),
-        v = (0, a.Z)(x),
+        v = (0, o.Z)(x),
         O = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
         j = (0, i.e7)([d.Z], () => {
             var e;
@@ -58,7 +58,7 @@ function b(e) {
                 allowApplicationState: !0
             }
         ),
-        I = S.commands.filter((e) => e.type === o.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
+        I = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
         P = S.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         Z = S.loading,
         N =

@@ -5,9 +5,9 @@
     n(388685),
     n(314940));
 var r = n(255367),
-    o = n(73800),
-    s = n(512722),
-    a = n.n(s),
+    s = n(73800),
+    o = n(512722),
+    a = n.n(o),
     i = n(278074),
     l = n(754700),
     c = n(887003),
@@ -34,7 +34,7 @@ var r = n(255367),
     N = n(815183),
     A = n(899457),
     R = n(409667);
-function k(e, t, n) {
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function k(e, t, n) {
         e
     );
 }
-function B(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,12 +58,12 @@ function B(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                B(e, t, n[t]);
             }));
     }
     return e;
 }
-function I(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,8 +81,8 @@ function I(e, t) {
         e
     );
 }
-let q = ['png', 'gif', 'webp'],
-    D = [...q, 'jpg', 'jpeg'],
+let I = ['png', 'gif', 'webp'],
+    D = [...I, 'jpg', 'jpeg'],
     Q = Array.from(new Set([...D, 'gif', 'mp4', 'webm']));
 function V(e) {
     var t, n;
@@ -97,13 +97,13 @@ function V(e) {
 }
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: o = null } = e;
+        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: s = null } = e;
     return {
         userId: '123',
         questId: '1193992107035983872',
         enrolledAt: r,
         completedAt: n,
-        claimedAt: o,
+        claimedAt: s,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: t,
@@ -181,15 +181,15 @@ let M = '1193992107035983872',
         targetedContent: []
     };
 function Z() {
-    var e, t, s, u, k, V, M, Z;
-    let [U, H] = o.useState(W),
-        z = o.useCallback((e) => {
-            H(I(B({}, e), { preview: !0 }));
+    var e, t, o, u, B, V, M, Z;
+    let [U, H] = s.useState(W),
+        z = s.useCallback((e) => {
+            H(q(k({}, e), { preview: !0 }));
         }, []),
-        [F, X] = o.useState(A.a.UNENROLLED),
-        [K, Y] = o.useState(!1),
-        [G, J] = o.useState(!1),
-        [$, ee] = o.useState(null),
+        [F, X] = s.useState(A.a.UNENROLLED),
+        [K, Y] = s.useState(!1),
+        [G, J] = s.useState(!1),
+        [$, ee] = s.useState(null),
         et =
             ((Z = U.config),
             (0, i.EQ)(Z)
@@ -199,12 +199,12 @@ function Z() {
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e) {
             var n, r;
             z(
-                I(B({}, U), {
+                q(k({}, U), {
                     config:
                         ((n = U.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => I(B({}, e), { assets: B({}, e.assets, r) }))
+                            .with({ configVersion: 2 }, (e) => q(k({}, e), { assets: k({}, e.assets, r) }))
                             .exhaustive())
                 })
             );
@@ -214,45 +214,45 @@ function Z() {
         let n = U.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let o = B({}, r.assets);
+        let s = k({}, r.assets);
         switch (e) {
             case 'videoPlayerVideo':
-                o.video = { url: t };
+                s.video = { url: t };
                 break;
             case 'videoPlayerVideoLowRes':
-                o.videoLowRes = { url: t };
+                s.videoLowRes = { url: t };
                 break;
             case 'videoPlayerThumbnail':
-                o.video = I(B({}, o.video), { thumbnail: t });
+                s.video = q(k({}, s.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
-        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { assets: o }) }) }) }) }));
+        z(q(k({}, U), { config: q(k({}, U.config), { taskConfigV2: q(k({}, U.config.taskConfigV2), { tasks: q(k({}, n), { [l.X.WATCH_VIDEO]: q(k({}, r), { assets: s }) }) }) }) }));
     }
-    function eo(e, t) {
-        var n, r, o;
+    function es(e, t) {
+        var n, r, s;
         z(
-            I(B({}, U), {
-                config: I(B({}, U.config), {
-                    videoMetadata: I(B({}, U.config.videoMetadata), {
-                        messages: null != (o = null == (n = U.config.videoMetadata) ? void 0 : n.messages) ? o : {},
-                        assets: I(B({}, null == (r = U.config.videoMetadata) ? void 0 : r.assets), { [e]: t })
+            q(k({}, U), {
+                config: q(k({}, U.config), {
+                    videoMetadata: q(k({}, U.config.videoMetadata), {
+                        messages: null != (s = null == (n = U.config.videoMetadata) ? void 0 : n.messages) ? s : {},
+                        assets: q(k({}, null == (r = U.config.videoMetadata) ? void 0 : r.assets), { [e]: t })
                     })
                 })
             })
         );
     }
-    function es(e, t) {
+    function eo(e, t) {
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e) {
             var n, r;
             z(
-                I(B({}, U), {
+                q(k({}, U), {
                     config:
                         ((n = U.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => I(B({}, e), { messages: B({}, e.messages, r) }))
+                            .with({ configVersion: 2 }, (e) => q(k({}, e), { messages: k({}, e.messages, r) }))
                             .exhaustive())
                 })
             );
@@ -262,26 +262,26 @@ function Z() {
         let n = U.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let o = I(B({}, r.messages), { [e]: t });
-        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: I(B({}, U.config.taskConfigV2), { tasks: I(B({}, n), { [l.X.WATCH_VIDEO]: I(B({}, r), { messages: o }) }) }) }) }));
+        let s = q(k({}, r.messages), { [e]: t });
+        z(q(k({}, U), { config: q(k({}, U.config), { taskConfigV2: q(k({}, U.config.taskConfigV2), { tasks: q(k({}, n), { [l.X.WATCH_VIDEO]: q(k({}, r), { messages: s }) }) }) }) }));
     }
     function ei(e, t, n) {
         if ('name' === e || 'nameWithArticle' === e) {
-            var r, o;
+            var r, s;
             z(
-                I(B({}, U), {
+                q(k({}, U), {
                     config:
                         ((r = U.config),
-                        (o = { [e]: t }),
+                        (s = { [e]: t }),
                         (0, i.EQ)(r)
-                            .with({ configVersion: 2 }, (e) => I(B({}, e), { rewardsConfig: I(B({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? I(B({}, e), { messages: B({}, e.messages, o) }) : e)) }) }))
+                            .with({ configVersion: 2 }, (e) => q(k({}, e), { rewardsConfig: q(k({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? q(k({}, e), { messages: k({}, e.messages, s) }) : e)) }) }))
                             .exhaustive())
                 })
             );
         }
     }
     function el(e, t) {
-        z(I(B({}, U), { config: I(B({}, U.config), { colors: I(B({}, U.config.colors), { [e]: t }) }) }));
+        z(q(k({}, U), { config: q(k({}, U.config), { colors: q(k({}, U.config.colors), { [e]: t }) }) }));
     }
     function ec() {
         (0, f.Xv)(U.config)
@@ -294,11 +294,11 @@ function Z() {
                   sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL
               });
     }
-    let eu = o.useMemo(() => {
+    let eu = s.useMemo(() => {
             for (let [e, t] of Object.entries(U.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * p.Z.Seconds.MINUTE;
         }, [U.config.taskConfigV2.tasks]),
-        ed = o.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
+        ed = s.useMemo(() => l.X.WATCH_VIDEO in U.config.taskConfigV2.tasks, [U.config.taskConfigV2.tasks]);
     a()(!1 !== U.preview && null != U.preview, 'Preview config must have property preview: true');
     let ep = U.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)('div', {
@@ -341,7 +341,7 @@ function Z() {
                     taskDuration: eu,
                     taskConfigV2: U.config.taskConfigV2,
                     onSelect: function (e) {
-                        z(I(B({}, U), { config: I(B({}, U.config), { taskConfigV2: e }) }));
+                        z(q(k({}, U), { config: q(k({}, U.config), { taskConfigV2: e }) }));
                     }
                 })
             }),
@@ -356,19 +356,19 @@ function Z() {
                     (0, r.jsx)(w.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: es,
+                        onMessageChange: eo,
                         initialValue: U.config.messages.questName
                     }),
                     (0, r.jsx)(w.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: es,
+                        onMessageChange: eo,
                         initialValue: U.config.messages.gameTitle
                     }),
                     (0, r.jsx)(w.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
-                        onMessageChange: es,
+                        onMessageChange: eo,
                         initialValue: U.config.messages.gamePublisher
                     }),
                     ed &&
@@ -443,7 +443,7 @@ function Z() {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: en,
-                        filters: [...q, 'svg'],
+                        filters: [...I, 'svg'],
                         initialValue: U.config.assets.logotype
                     }),
                     ed &&
@@ -473,16 +473,16 @@ function Z() {
                                 (0, r.jsx)(S.Z, {
                                     title: 'Quest Bar Preview Video (optional)',
                                     assetKey: 'questBarPreviewVideo',
-                                    onFileChange: eo,
+                                    onFileChange: es,
                                     filters: Q,
                                     initialValue: null == (t = U.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo
                                 }),
                                 (0, r.jsx)(S.Z, {
                                     title: 'Quest Home Video (optional)',
                                     assetKey: 'questHomeVideo',
-                                    onFileChange: eo,
+                                    onFileChange: es,
                                     filters: Q,
-                                    initialValue: null == (s = U.config.videoMetadata) ? void 0 : s.assets.questHomeVideo
+                                    initialValue: null == (o = U.config.videoMetadata) ? void 0 : o.assets.questHomeVideo
                                 })
                             ]
                         })
@@ -522,16 +522,16 @@ function Z() {
                                                     if ('asset' === e) {
                                                         var r;
                                                         z(
-                                                            I(B({}, U), {
+                                                            q(k({}, U), {
                                                                 config:
                                                                     ((r = U.config),
                                                                     (0, i.EQ)(r)
                                                                         .with({ configVersion: 2 }, (e) =>
-                                                                            I(B({}, e), {
-                                                                                rewardsConfig: I(B({}, e.rewardsConfig), {
+                                                                            q(k({}, e), {
+                                                                                rewardsConfig: q(k({}, e.rewardsConfig), {
                                                                                     rewards: e.rewardsConfig.rewards.map((e, r) =>
                                                                                         r === n
-                                                                                            ? I(B({}, e), {
+                                                                                            ? q(k({}, e), {
                                                                                                   asset: t,
                                                                                                   skuId: ''
                                                                                               })
@@ -552,9 +552,9 @@ function Z() {
                                         children: [
                                             (0, r.jsx)(d.vwX, { children: 'Claim Modal' }),
                                             (0, r.jsx)(d.zxk, {
-                                                color: d.Ttl.BRAND,
-                                                onClick: ec,
-                                                children: 'Open Reward Modal'
+                                                variant: 'primary',
+                                                text: 'Open Reward Modal',
+                                                onClick: ec
                                             })
                                         ]
                                     })
@@ -599,14 +599,14 @@ function Z() {
                         onChange: function (e) {
                             switch ((X(e), e)) {
                                 case A.a.UNENROLLED:
-                                    z(I(B({}, U), { userStatus: null }));
+                                    z(q(k({}, U), { userStatus: null }));
                                     break;
                                 case A.a.ENROLLED:
-                                    z(I(B({}, U), { userStatus: L({ enrolledAt: new Date().toISOString() }) }));
+                                    z(q(k({}, U), { userStatus: L({ enrolledAt: new Date().toISOString() }) }));
                                     break;
                                 case A.a.COMPLETED_25:
                                     z(
-                                        I(B({}, U), {
+                                        q(k({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.25 * eu
@@ -616,7 +616,7 @@ function Z() {
                                     break;
                                 case A.a.COMPLETED_50:
                                     z(
-                                        I(B({}, U), {
+                                        q(k({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.5 * eu
@@ -626,7 +626,7 @@ function Z() {
                                     break;
                                 case A.a.COMPLETED_75:
                                     z(
-                                        I(B({}, U), {
+                                        q(k({}, U), {
                                             userStatus: L({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.75 * eu
@@ -636,7 +636,7 @@ function Z() {
                                     break;
                                 case A.a.COMPLETED_100:
                                     z(
-                                        I(B({}, U), {
+                                        q(k({}, U), {
                                             userStatus: L({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
@@ -647,7 +647,7 @@ function Z() {
                                     break;
                                 case A.a.CLAIMED:
                                     z(
-                                        I(B({}, U), {
+                                        q(k({}, U), {
                                             userStatus: L({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
@@ -719,7 +719,7 @@ function Z() {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(d.vwX, { children: 'Channel Call Header' }),
-                            (null == (k = U.userStatus) ? void 0 : k.claimedAt) != null &&
+                            (null == (B = U.userStatus) ? void 0 : B.claimedAt) != null &&
                                 (0, r.jsx)(d.Text, {
                                     color: 'text-secondary',
                                     variant: 'text-sm/normal',
@@ -791,6 +791,8 @@ function Z() {
                             children: [
                                 (0, r.jsx)(d.vwX, { children: 'Video Player' }),
                                 (0, r.jsx)(d.zxk, {
+                                    variant: 'primary',
+                                    text: 'Open Video Player Modal',
                                     onClick: () => {
                                         (0, d.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('66816'), n.e('32249'), n.e('63942')]).then(n.bind(n, 536687));
@@ -798,7 +800,7 @@ function Z() {
                                                 var n;
                                                 return (0, r.jsx)(
                                                     e,
-                                                    I(B({}, t), {
+                                                    q(k({}, t), {
                                                         openStartClockTime: performance.now(),
                                                         videoSessionId: 'fake-quest-session-id',
                                                         questId: null != (n = U.id) ? n : 'fake-quest-id',
@@ -809,8 +811,7 @@ function Z() {
                                                 );
                                             };
                                         });
-                                    },
-                                    children: 'Open Video Player Modal'
+                                    }
                                 })
                             ]
                         })
@@ -819,7 +820,7 @@ function Z() {
         ]
     });
 }
-class U extends o.Component {
+class U extends s.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -835,9 +836,9 @@ class U extends o.Component {
                           children: 'Something broke in the Quest preview tool :('
                       }),
                       (0, r.jsx)(d.zxk, {
-                          color: d.Ttl.PRIMARY,
-                          onClick: this.handleResetState,
-                          children: 'Reset'
+                          variant: 'secondary',
+                          text: 'Reset',
+                          onClick: this.handleResetState
                       }),
                       null != e.message &&
                           (0, r.jsx)(d.Zbd, {
@@ -853,11 +854,11 @@ class U extends o.Component {
     }
     constructor(...e) {
         (super(...e),
-            k(this, 'state', {
+            B(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            k(this, 'handleResetState', () => {
+            B(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1

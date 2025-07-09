@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => F }), n(388685));
+(n.d(t, { Z: () => B }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -29,11 +29,10 @@ var r,
     w = n(592125),
     Z = n(158776),
     T = n(55589),
-    A = n(515753),
-    R = n(981631),
-    D = n(388032),
-    L = n(555614);
-function M(e, t, n) {
+    A = n(981631),
+    R = n(388032),
+    D = n(555614);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +45,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,12 +56,12 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                L(e, t, n[t]);
             }));
     }
     return e;
 }
-function U(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,12 +79,12 @@ function U(e, t) {
         e
     );
 }
-let G = l.memo(function () {
+let U = l.memo(function () {
     return (0, i.jsxs)('svg', {
         width: '184',
         height: '428',
         viewBox: '0 0 184 428',
-        className: L.empty,
+        className: D.empty,
         children: [
             (0, i.jsx)('rect', {
                 x: 40,
@@ -228,7 +227,7 @@ let G = l.memo(function () {
         ]
     });
 });
-class B extends (r = l.Component) {
+class G extends (r = l.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -301,18 +300,18 @@ class B extends (r = l.Component) {
                     children: (r) =>
                         (0, i.jsx)(
                             h.aVo,
-                            k(
+                            M(
                                 {
                                     fade: !0,
                                     innerRole: o,
-                                    innerAriaLabel: D.intl.string(D.t.YUU0RE),
+                                    innerAriaLabel: R.intl.string(R.t.YUU0RE),
                                     innerTag: 'ul',
                                     ref: (e) => {
                                         var t;
                                         ((this._list = e), (this.props.listRef.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     },
                                     onScroll: this.handleScroll,
-                                    className: L.scroller,
+                                    className: D.scroller,
                                     sectionHeight: this.getSectionHeight,
                                     paddingTop: t,
                                     paddingBottom: 8,
@@ -331,15 +330,15 @@ class B extends (r = l.Component) {
     }
     constructor(...e) {
         (super(...e),
-            M(this, 'state', {
+            L(this, 'state', {
                 initialized: !1,
                 preRenderedChildren: 0,
                 totalRowCount: 0,
                 nonNullChildren: []
             }),
-            M(this, '_list', null),
-            M(this, 'hasReportedAnalytics', !1),
-            M(this, 'reportAnalytics', () => {
+            L(this, '_list', null),
+            L(this, 'hasReportedAnalytics', !1),
+            L(this, 'reportAnalytics', () => {
                 var e;
                 if (this.hasReportedAnalytics) return;
                 let t = null == (e = this._list) ? void 0 : e.getScrollerState();
@@ -358,50 +357,46 @@ class B extends (r = l.Component) {
                     };
                 ((this.hasReportedAnalytics = !0),
                     m.ZP.trackWithMetadata(
-                        R.rMx.DM_LIST_VIEWED,
-                        U(k({}, u, (0, _.X)()), {
+                        A.rMx.DM_LIST_VIEWED,
+                        k(M({}, u, (0, _.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c
                         })
                     ));
             }),
-            M(this, 'getSectionHeight', (e) => {
+            L(this, 'getSectionHeight', (e) => {
                 let { showDMHeader: t } = this.props;
                 return 0 === e ? 0 : 24 * !!t;
             }),
-            M(
+            L(
                 this,
                 'handleScroll',
                 a()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && p.Z.updateChannelListScroll(R.ME, e.scrollTop);
+                        null != e && p.Z.updateChannelListScroll(A.ME, e.scrollTop);
                     }
                     void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
                 }, 100)
             ),
-            M(this, 'renderDM', (e, t) => {
+            L(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: r, selectedChannelId: l } = this.props,
                     { totalRowCount: o, preRenderedChildren: a } = this.state,
                     s = r[n[t]];
                 return null == s
                     ? null
                     : (0, i.jsx)(
-                          y.s,
+                          y.W,
                           {
-                              channelId: s.id,
-                              selectedChannelId: l,
-                              children: (0, i.jsx)(A.ZP, {
-                                  channel: s,
-                                  selected: s.id === l,
-                                  'aria-posinset': a + t + 1,
-                                  'aria-setsize': o
-                              })
+                              channel: s,
+                              selected: s.id === l,
+                              'aria-posinset': a + t + 1,
+                              'aria-setsize': o
                           },
                           s.id
                       );
             }),
-            M(this, 'renderChild', (e) => {
+            L(this, 'renderChild', (e) => {
                 let { nonNullChildren: t, totalRowCount: n } = this.state,
                     r = t[e];
                 return l.isValidElement(r)
@@ -411,31 +406,31 @@ class B extends (r = l.Component) {
                       })
                     : r;
             }),
-            M(this, 'renderRow', (e) => {
+            L(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: r } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === r.length ? (0, i.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === r.length ? (0, i.jsx)(U, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
-            M(this, 'renderSection', (e) => {
+            L(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
                           v.Z,
                           {
-                              className: L.privateChannelsHeaderContainer,
+                              className: D.privateChannelsHeaderContainer,
                               children: [
                                   (0, i.jsx)('span', {
-                                      className: L.headerText,
-                                      children: D.intl.string(D.t.YUU0RE)
+                                      className: D.headerText,
+                                      children: R.intl.string(R.t.YUU0RE)
                                   }),
                                   (0, i.jsx)(S.Z, {
                                       location: 'PrivateChannelsList-CreateDMButton',
-                                      tooltip: D.intl.string(D.t['6Urw1t']),
+                                      tooltip: R.intl.string(R.t['6Urw1t']),
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
-                                      className: L.privateChannelRecipientsInviteButtonIconContainer,
-                                      iconClassName: L.privateChannelRecipientsInviteButtonIcon,
+                                      className: D.privateChannelRecipientsInviteButtonIconContainer,
+                                      iconClassName: D.privateChannelRecipientsInviteButtonIcon,
                                       icon: h.BRu,
                                       subscribeToGlobalHotkey: !0
                                   })
@@ -445,7 +440,7 @@ class B extends (r = l.Component) {
                       )
                     : null;
             }),
-            M(this, 'getRowHeight', (e, t) => {
+            L(this, 'getRowHeight', (e, t) => {
                 let { privateChannelIds: n, density: r } = this.props,
                     { nonNullChildren: i } = this.state,
                     o = 44;
@@ -460,8 +455,8 @@ class B extends (r = l.Component) {
             }));
     }
 }
-M(B, 'defaultProps', { padding: 8 });
-let F = (e) => {
+L(G, 'defaultProps', { padding: 8 });
+let B = (e) => {
     var t;
     let { density: n } = (0, h.TCT)(),
         { version: r, theme: o, children: a, showDMHeader: d } = e,
@@ -479,13 +474,13 @@ let F = (e) => {
     (0, E.z)(j.R);
     let { analyticsLocations: y } = (0, b.ZP)(g.Z.CONTACTS_LIST),
         v = (0, u.cj)([f.Z, N.Z, w.Z], () => ({
-            theme: N.Z.darkSidebar ? R.BRd.DARK : o,
+            theme: N.Z.darkSidebar ? A.BRd.DARK : o,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != r ? ''.concat(r, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
         S = l.useRef(null),
         Z = null != (t = e.listScrollerRef) ? t : S,
-        A = l.useCallback(
+        R = l.useCallback(
             (e) => {
                 let t = Z.current,
                     n = document.querySelector(e);
@@ -525,24 +520,24 @@ let F = (e) => {
                 }),
             [Z]
         ),
-        M = (0, C.Dt)(),
-        G = (0, c.ZP)({
-            id: 'private-channels-'.concat(M),
+        U = (0, C.Dt)(),
+        B = (0, c.ZP)({
+            id: 'private-channels-'.concat(U),
             isEnabled: v.keyboardModeEnabled,
             scrollToStart: D,
             scrollToEnd: L,
             defaultFocused: (p + +!!d).toString(),
-            setFocus: A
+            setFocus: R
         });
     return (0, i.jsx)(b.Gt, {
         value: y,
         children: (0, i.jsx)(s.bG, {
-            navigator: G,
+            navigator: B,
             children: (0, i.jsx)(
-                B,
-                k(
-                    U(
-                        k(
+                G,
+                M(
+                    k(
+                        M(
                             {
                                 density: n,
                                 channels: _,

@@ -1,57 +1,58 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(512722),
     l = n.n(i),
     a = n(399606),
-    o = n(481060),
-    s = n(671533),
-    c = n(240864),
-    u = n(613810),
-    d = n(596211),
-    p = n(388032),
-    m = n(165674);
-function f(e) {
-    var t, n, i, f;
-    let { guildId: _, productId: g } = e,
-        h = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(g)),
-        b = (null != (f = null == h || null == (t = h.attachments) ? void 0 : t.length) ? f : 0) > 1,
-        E = null == h || null == (i = h.attachments) || null == (n = i[0]) ? void 0 : n.id;
-    return b
-        ? (0, r.jsxs)(o.zxk, {
+    o = n(755721),
+    s = n(481060),
+    c = n(671533),
+    u = n(240864),
+    d = n(613810),
+    p = n(596211),
+    m = n(388032),
+    f = n(165674);
+function _(e) {
+    var t, n, i, _;
+    let { guildId: g, productId: h } = e,
+        b = (0, a.e7)([u.Z], () => u.Z.getGuildProduct(h)),
+        E = (null != (_ = null == b || null == (t = b.attachments) ? void 0 : t.length) ? _ : 0) > 1,
+        y = null == b || null == (i = b.attachments) || null == (n = i[0]) ? void 0 : n.id;
+    return E
+        ? (0, r.jsxs)(o.zx, {
               onClick: function () {
-                  u.Z.open({
-                      guildId: _,
-                      productId: g
+                  d.Z.open({
+                      guildId: g,
+                      productId: h
                   });
               },
-              innerClassName: m.textWithIcon,
+              innerClassName: f.textWithIcon,
               children: [
-                  (0, r.jsx)('div', { children: p.intl.string(p.t.UyuiUF) }),
-                  (0, r.jsx)(o.LZC, {
+                  (0, r.jsx)('div', { children: m.intl.string(m.t.UyuiUF) }),
+                  (0, r.jsx)(s.LZC, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, r.jsx)(s.Z, {
+                  (0, r.jsx)(c.Z, {
                       width: 16,
                       height: 16,
-                      direction: s.Z.Directions.RIGHT
+                      direction: c.Z.Directions.RIGHT
                   })
               ]
           })
-        : (l()(null != E, 'No attachment'),
-          (0, r.jsxs)(d.Z, {
-              guildId: _,
-              productId: g,
-              attachmentId: E,
-              innerClassName: m.textWithIcon,
+        : (l()(null != y, 'No attachment'),
+          (0, r.jsxs)(p.Z, {
+              guildId: g,
+              productId: h,
+              attachmentId: y,
+              innerClassName: f.textWithIcon,
               children: [
-                  (0, r.jsx)('div', { children: p.intl.string(p.t.t9bE9f) }),
-                  (0, r.jsx)(o.LZC, {
+                  (0, r.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),
+                  (0, r.jsx)(s.LZC, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, r.jsx)(o._8t, {
+                  (0, r.jsx)(s._8t, {
                       size: 'xs',
                       color: 'currentColor'
                   })

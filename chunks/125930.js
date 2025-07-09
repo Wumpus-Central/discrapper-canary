@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
+    o = n(755721),
     s = n(770146),
     c = n(600164),
     u = n(424218),
@@ -22,8 +22,8 @@ class _ extends i.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: i } = this.props,
             l = n === h.b.LARGE;
-        return (0, r.jsx)(o.zxk, {
-            size: l ? o.zxk.Sizes.MIN : o.zxk.Sizes.LARGE,
+        return (0, r.jsx)(o.zx, {
+            size: l ? o.zx.Sizes.MIN : o.zx.Sizes.LARGE,
             fullWidth: !l,
             color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
             className: a()({

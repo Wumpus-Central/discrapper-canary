@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(615287),
-    l = n(32300),
-    a = n(371651),
+    a = n(32300),
+    l = n(371651),
     o = n(3506),
     c = n(794704);
 function d(e) {
@@ -33,8 +33,8 @@ function d(e) {
     return e;
 }
 function u(e) {
-    let t = (0, l.XE)('user_settings'),
-        n = (0, r.e7)([a.default], () => a.default.getForcedRenderMode()),
+    let t = (0, a.XE)('user_settings'),
+        n = (0, r.e7)([l.default], () => l.default.getForcedRenderMode()),
         u = n === s.R5.OUT_OF_PROCESS_V3 || n === s.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return t || u ? (0, i.jsx)(c.Z, d({}, e)) : (0, i.jsx)(o.Z, d({}, e));
 }

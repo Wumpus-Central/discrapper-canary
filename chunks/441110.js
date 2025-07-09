@@ -56,15 +56,18 @@ let f = function (e) {
                               })
                           ]
                       }),
-                      (0, r.jsx)(l.zxk, {
-                          size: l.zxk.Sizes.SMALL,
-                          color: l.zxk.Colors.BRAND,
+                      (0, r.jsx)('div', {
+                          'data-button-hoisted-classname-wrapper': !0,
                           className: g.ctaButton,
-                          fullWidth: !0,
-                          onClick: () => {
-                              (i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, a.q)(n.author, b.id));
-                          },
-                          children: m.intl.format(m.t['+xsVS0'], { username: n.author.username })
+                          children: (0, r.jsx)(l.zxk, {
+                              variant: 'primary',
+                              size: 'sm',
+                              text: m.intl.format(m.t['+xsVS0'], { username: n.author.username }),
+                              fullWidth: !0,
+                              onClick: () => {
+                                  (i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, a.q)(n.author, b.id));
+                              }
+                          })
                       })
                   ]
               })

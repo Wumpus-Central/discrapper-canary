@@ -1,67 +1,68 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(528963),
-    s = n(143740),
-    c = n(212342),
-    u = n(388032),
-    d = n(745641);
-let p = (e) => {
+    a = n(755721),
+    o = n(481060),
+    s = n(528963),
+    c = n(143740),
+    u = n(212342),
+    d = n(388032),
+    p = n(745641);
+let m = (e) => {
     let { channelId: t, messageId: n } = e,
-        p = (0, l.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
-        m = i.useCallback(() => {
-            (o.Z.dismissPublishBump(n), (0, s.Z)(t, n));
-        }, [t, n]),
+        m = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
         f = i.useCallback(() => {
-            o.Z.dismissPublishBump(n);
-        }, [n]),
+            (s.Z.dismissPublishBump(n), (0, c.Z)(t, n));
+        }, [t, n]),
         _ = i.useCallback(() => {
-            o.Z.permanentlyHidePublishBump(t);
+            s.Z.dismissPublishBump(n);
+        }, [n]),
+        g = i.useCallback(() => {
+            s.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return p
+    return m
         ? (0, r.jsxs)('div', {
-              className: d.container,
+              className: p.container,
               children: [
                   (0, r.jsxs)('div', {
-                      className: d.bumpBox,
+                      className: p.bumpBox,
                       children: [
-                          (0, r.jsx)(a.MqZ, {
+                          (0, r.jsx)(o.MqZ, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: d.icon
+                              className: p.icon
                           }),
-                          (0, r.jsx)(a.X6q, {
+                          (0, r.jsx)(o.X6q, {
                               variant: 'heading-sm/normal',
-                              className: d.tagline,
-                              children: u.intl.string(u.t.hasZoa)
+                              className: p.tagline,
+                              children: d.intl.string(d.t.hasZoa)
                           }),
-                          (0, r.jsx)(a.zxk, {
-                              color: a.zxk.Colors.LINK,
-                              look: a.zxk.Looks.LINK,
-                              size: a.zxk.Sizes.MIN,
-                              className: d.publish,
-                              onClick: m,
-                              children: u.intl.string(u.t['MFGE5+'])
-                          }),
-                          (0, r.jsx)(a.P3F, {
+                          (0, r.jsx)(a.zx, {
+                              color: a.zx.Colors.LINK,
+                              look: a.zx.Looks.LINK,
+                              size: a.zx.Sizes.MIN,
+                              className: p.publish,
                               onClick: f,
-                              children: (0, r.jsx)(a.k$p, {
+                              children: d.intl.string(d.t['MFGE5+'])
+                          }),
+                          (0, r.jsx)(o.P3F, {
+                              onClick: _,
+                              children: (0, r.jsx)(o.k$p, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: d.closeIcon
+                                  className: p.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       color: 'text-muted',
-                      className: d.hidePermanently,
+                      className: p.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, r.jsx)(a.P3F, {
-                          onClick: _,
-                          children: u.intl.string(u.t.efSkDg)
+                      children: (0, r.jsx)(o.P3F, {
+                          onClick: g,
+                          children: d.intl.string(d.t.efSkDg)
                       })
                   })
               ]

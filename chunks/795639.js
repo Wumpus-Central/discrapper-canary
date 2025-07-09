@@ -1,4 +1,4 @@
-(n.d(t, { _: () => P }), n(781311), n(953529));
+(n.d(t, { _: () => I }), n(781311), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -7,31 +7,32 @@ var r = n(255367),
     o = n.n(s),
     c = n(94171),
     d = n(399606),
-    u = n(481060),
-    m = n(166459),
-    h = n(607070),
-    g = n(541716),
-    f = n(273031),
-    x = n(859235),
-    p = n(313201),
-    b = n(70097),
-    j = n(374794),
-    v = n(470623),
-    _ = n(983200),
-    C = n(127654),
-    y = n(124252),
-    O = n(388032),
-    w = n(554010);
-let N = [
+    u = n(755721),
+    m = n(481060),
+    h = n(166459),
+    g = n(607070),
+    f = n(541716),
+    x = n(273031),
+    p = n(859235),
+    b = n(313201),
+    j = n(70097),
+    v = n(374794),
+    _ = n(470623),
+    C = n(983200),
+    y = n(127654),
+    O = n(124252),
+    w = n(388032),
+    N = n(554010);
+let T = [
         {
             name: 'Media Post Thumbnail',
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ],
-    T = (0, p.hQ)();
-function S(e) {
+    S = (0, b.hQ)();
+function P(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        a = (0, _.tu)({
+        a = (0, C.tu)({
             numAttachments: t.length,
             containerWidth: n,
             containerHeight: i
@@ -45,14 +46,14 @@ function S(e) {
                     style: a[t],
                     children:
                         !0 === e.isVideo
-                            ? (0, r.jsx)(b.Z, {
+                            ? (0, r.jsx)(j.Z, {
                                   src: e.src,
-                                  className: w.thumbnail,
+                                  className: N.thumbnail,
                                   'aria-hidden': !0
                               })
                             : (0, r.jsx)('img', {
                                   src: e.src,
-                                  className: w.thumbnail,
+                                  className: N.thumbnail,
                                   'aria-hidden': !0,
                                   alt: null != (n = null == e ? void 0 : e.alt) ? n : ''
                               })
@@ -62,40 +63,40 @@ function S(e) {
         })
     });
 }
-let P = (e) => {
+let I = (e) => {
     var t;
     let { parentChannel: a } = e,
-        { textAreaState: s } = (0, v.xH)((e) => {
+        { textAreaState: s } = (0, _.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
-        p = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        b = (0, y.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
-        _ = i.useMemo(() => b.find((e) => e.isThumbnail), [b]),
-        P = null != b && b.length > 0,
-        I = i.useMemo(() => {
-            let e = (null == b ? void 0 : b.length) > 1 ? 1.15 : 1;
+        b = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
+        j = (0, O.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
+        C = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
+        I = null != j && j.length > 0,
+        E = i.useMemo(() => {
+            let e = (null == j ? void 0 : j.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e
             };
-        }, [b]),
-        E = i.useCallback(
+        }, [j]),
+        R = i.useCallback(
             (e) => {
-                (null != _ && m.Z.remove(a.id, _.id, g.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, C.d)(e.currentTarget.files, a, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                (null != C && h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, y.d)(e.currentTarget.files, a, f.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
                     (e.currentTarget.value = null));
             },
-            [a, _]
+            [a, C]
         ),
-        R = (e) => {
+        M = (e) => {
             (e.stopPropagation(),
-                (null == _ ? void 0 : _.upload) != null &&
-                    (0, u.ZDy)(async () => {
-                        let e = _.upload;
+                (null == C ? void 0 : C.upload) != null &&
+                    (0, m.ZDy)(async () => {
+                        let e = C.upload;
                         o()(null != e, 'upload should not be null');
                         let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                         return (n) => {
@@ -131,10 +132,10 @@ let P = (e) => {
                                     {
                                         upload: e,
                                         channelId: a.id,
-                                        draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
+                                        draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
                                         onSubmit: (t) => {
                                             let { name: n, description: r, spoiler: i } = t;
-                                            m.Z.update(a.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                                            h.Z.update(a.id, e.id, f.Ie.CREATE_FORUM_POST.drafts.type, {
                                                 filename: n,
                                                 description: r,
                                                 spoiler: i
@@ -159,37 +160,37 @@ let P = (e) => {
                         };
                     }));
         },
-        k = (0, r.jsx)(j.Z, {
-            color: u.Ttl.CUSTOM,
-            className: w.uploadFileInputContainer,
-            innerClassName: w.uploadThumbnailContainer,
-            onChange: E,
+        Z = (0, r.jsx)(v.Z, {
+            color: u.Tt.CUSTOM,
+            className: N.uploadFileInputContainer,
+            innerClassName: N.uploadThumbnailContainer,
+            onChange: R,
             multiple: !1,
             'aria-hidden': !0,
-            filters: N,
-            'aria-describedby': T,
-            'aria-label': P ? O.intl.string(O.t.MxJI3d) : O.intl.string(O.t.CbiofX),
-            children: P
+            filters: T,
+            'aria-describedby': S,
+            'aria-label': I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
+            children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(S, {
-                              mediaAttachments: b,
-                              containerWidth: I.width,
-                              containerHeight: I.height
+                          (0, r.jsx)(P, {
+                              mediaAttachments: j,
+                              containerWidth: E.width,
+                              containerHeight: E.height
                           }),
                           (0, r.jsxs)('div', {
-                              className: l()(w.changeThumbnailLabelContainer, { [w.changeThumbnailLabelOverflow]: (null == b ? void 0 : b.length) > 2 }),
+                              className: l()(N.changeThumbnailLabelContainer, { [N.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2 }),
                               children: [
-                                  (0, r.jsx)(u.Text, {
+                                  (0, r.jsx)(m.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-secondary',
-                                      children: O.intl.string(O.t.MxJI3d)
+                                      children: w.intl.string(w.t.MxJI3d)
                                   }),
-                                  null == _ &&
-                                      (0, r.jsx)(u.vdY, {
+                                  null == C &&
+                                      (0, r.jsx)(m.vdY, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: w.editIcon
+                                          className: N.editIcon
                                       })
                               ]
                           })
@@ -197,59 +198,59 @@ let P = (e) => {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(u.FmF, {
+                          (0, r.jsx)(m.FmF, {
                               size: 'custom',
                               width: 39,
                               height: 39,
                               color: 'currentColor',
-                              className: w.uploadIcon
+                              className: N.uploadIcon
                           }),
-                          (0, r.jsx)(u.Text, {
+                          (0, r.jsx)(m.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: O.intl.string(O.t.CbiofX)
+                              children: w.intl.string(w.t.CbiofX)
                           })
                       ]
                   })
         });
     return (0, r.jsx)('div', {
-        className: w.thumbnailContainer,
-        style: I,
+        className: N.thumbnailContainer,
+        style: E,
         children:
-            null != _
-                ? (0, r.jsx)(x.Z, {
+            null != C
+                ? (0, r.jsx)(p.Z, {
                       actions: (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(f.Z, {
-                                  className: w.action,
-                                  tooltip: O.intl.string(O.t.Y8ujqq),
-                                  onClick: R,
-                                  children: (0, r.jsx)(u.vdY, {
+                              (0, r.jsx)(x.Z, {
+                                  className: N.action,
+                                  tooltip: w.intl.string(w.t.Y8ujqq),
+                                  onClick: M,
+                                  children: (0, r.jsx)(m.vdY, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
                               }),
-                              (0, r.jsx)(f.Z, {
-                                  className: w.action,
-                                  tooltip: O.intl.string(O.t.vN7REx),
-                                  onClick: () => m.Z.remove(a.id, _.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                              (0, r.jsx)(x.Z, {
+                                  className: N.action,
+                                  tooltip: w.intl.string(w.t.vN7REx),
+                                  onClick: () => h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
-                                  children: (0, r.jsx)(u.XHJ, {
+                                  children: (0, r.jsx)(m.XHJ, {
                                       size: 'md',
                                       color: 'currentColor'
                                   })
                               })
                           ]
                       }),
-                      draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
-                      id: _.id,
+                      draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
+                      id: C.id,
                       channelId: a.id,
-                      handleEditModal: R,
-                      keyboardModeEnabled: p,
-                      size: x.q.SMALL,
-                      className: w.attachmentListItem,
-                      children: k
+                      handleEditModal: M,
+                      keyboardModeEnabled: b,
+                      size: p.q.SMALL,
+                      className: N.attachmentListItem,
+                      children: Z
                   })
-                : k
+                : Z
     });
 };

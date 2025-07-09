@@ -1,15 +1,15 @@
 n.d(t, {
     $0: () => s.$0,
-    DS: () => l.D,
+    DS: () => a.D,
     E_: () => s.E_,
-    lD: () => a
+    lD: () => l
 });
 var i = n(255367),
     r = n(481060),
     s = n(820759);
 n(246652);
-var l = n(774572);
-let a = (e) => {
+var a = n(774572);
+let l = (e) => {
     let { href: t } = e;
     return (0, i.jsx)(r.eee, {
         href: t,

@@ -140,10 +140,9 @@ function x(e) {
             (0, r.jsx)(c.mzw, {
                 className: R.errorModalFooter,
                 children: (0, r.jsx)(c.zxk, {
-                    color: c.zxk.Colors.BRAND,
-                    size: c.zxk.Sizes.MEDIUM,
-                    onClick: t,
-                    children: C.intl.string(C.t.cpT0Cg)
+                    variant: 'primary',
+                    text: C.intl.string(C.t.cpT0Cg),
+                    onClick: t
                 })
             })
         ]
@@ -202,10 +201,14 @@ function M(e) {
                                   expirationDate: s
                               })
                           }),
-                          (0, r.jsx)(c.zxk, {
+                          (0, r.jsx)('div', {
+                              'data-button-hoisted-classname-wrapper': !0,
                               className: R.cta,
-                              onClick: l,
-                              children: C.intl.string(C.t['eQX+go'])
+                              children: (0, r.jsx)(c.zxk, {
+                                  variant: 'primary',
+                                  text: C.intl.string(C.t['eQX+go']),
+                                  onClick: l
+                              })
                           })
                       ]
                   })
@@ -279,10 +282,14 @@ function k(e) {
                                 className: R.text,
                                 children: d
                             }),
-                            (0, r.jsx)(c.zxk, {
+                            (0, r.jsx)('div', {
+                                'data-button-hoisted-classname-wrapper': !0,
                                 className: R.cta2,
-                                onClick: l,
-                                children: C.intl.string(C.t.LnsQGR)
+                                children: (0, r.jsx)(c.zxk, {
+                                    variant: 'primary',
+                                    text: C.intl.string(C.t.LnsQGR),
+                                    onClick: l
+                                })
                             })
                         ]
                     })

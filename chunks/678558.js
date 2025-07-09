@@ -1,27 +1,28 @@
-(n.d(t, { Z: () => w }), n(388685));
+(n.d(t, { Z: () => D }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(481060),
-    c = n(179360),
-    u = n(40851),
-    d = n(906732),
-    f = n(975298),
-    _ = n(125529),
-    p = n(124570),
-    h = n(404380),
-    m = n(594174),
-    g = n(314884),
-    E = n(78839),
-    b = n(267642),
-    y = n(879892),
-    O = n(981631),
-    v = n(474936),
-    I = n(388032),
-    T = n(412439);
-function S(e, t, n) {
+    l = n(755721),
+    c = n(481060),
+    u = n(179360),
+    d = n(40851),
+    f = n(906732),
+    _ = n(975298),
+    p = n(125529),
+    h = n(124570),
+    m = n(404380),
+    g = n(594174),
+    E = n(314884),
+    b = n(78839),
+    y = n(267642),
+    O = n(879892),
+    v = n(981631),
+    I = n(474936),
+    T = n(388032),
+    S = n(412439);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +35,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,12 +46,12 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                A(e, t, n[t]);
             }));
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,29 +63,29 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function P(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,87 +94,87 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: S, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
-        U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
-        { analyticsLocations: G } = (0, d.ZP)(),
-        B = (0, u.bp)() === O.IlC.POPOUT,
-        [V, F] = i.useState(!1),
-        Z = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        { fractionalState: H } = (0, f.Z)(),
-        Y = (0, p.y)('guild_boosting_subscribe_button', Z, H),
-        W = (0, s.e7)([g.Z], () => g.Z.hasFetched);
+let D = (e) => {
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: M, withHighlight: k = !1, icon: j, intent: U } = e,
+        G = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+        { analyticsLocations: B } = (0, f.ZP)(),
+        V = (0, d.bp)() === v.IlC.POPOUT,
+        [F, Z] = i.useState(!1),
+        H = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        { fractionalState: Y } = (0, _.Z)(),
+        W = (0, h.y)('guild_boosting_subscribe_button', H, Y),
+        K = (0, s.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
-        W || (0, c.X8)();
-    }, [W]);
-    let K = (0, b.vx)(g.Z.boostSlots),
-        z = null != N ? Math.max((0, b.KK)(a, N), 1) : 1,
-        q = (0, b.aq)({ isBoostManagementDisabledForFractionalPremium: Y }),
-        X = async () => {
-            (F(!0),
-                await (0, y.u)({
-                    analyticsLocations: G,
+        K || (0, u.X8)();
+    }, [K]);
+    let z = (0, y.vx)(E.Z.boostSlots),
+        q = null != C ? Math.max((0, y.KK)(a, C), 1) : 1,
+        X = (0, y.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
+        Q = async () => {
+            (Z(!0),
+                await (0, O.u)({
+                    analyticsLocations: B,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
-                    numberOfBoostsToAdd: z,
-                    onClose: P,
-                    closeLayer: w,
-                    inPopout: B,
-                    applicationId: L,
-                    handleSubscribeModalClose: x,
-                    intent: j
+                    numberOfBoostsToAdd: q,
+                    onClose: w,
+                    closeLayer: D,
+                    inPopout: V,
+                    applicationId: x,
+                    handleSubscribeModalClose: M,
+                    intent: U
                 }),
-                F(!1));
+                Z(!1));
         },
-        Q = E.Z.getPremiumTypeSubscription(),
-        J = (0, r.jsxs)('div', {
-            className: T.button,
-            children: [k, null != S ? S : I.intl.string(I.t.gKmQ1N)]
+        J = b.Z.getPremiumTypeSubscription(),
+        $ = (0, r.jsxs)('div', {
+            className: S.button,
+            children: [j, null != A ? A : T.intl.string(T.t.gKmQ1N)]
         }),
-        $ = (0, h.o)('GuildBoostingSubscribeButton', Z, H),
-        ee = !1;
-    return ((ee = null !== Q && !(K.length > 0) && (null == Q ? void 0 : Q.isPausedOrPausePending) && (H === v.a$.NONE || $)) &&
-        ((J = (0, r.jsxs)('div', {
-            className: T.button,
+        ee = (0, m.o)('GuildBoostingSubscribeButton', H, Y),
+        et = !1;
+    return ((et = null !== J && !(z.length > 0) && (null == J ? void 0 : J.isPausedOrPausePending) && (Y === I.a$.NONE || ee)) &&
+        (($ = (0, r.jsxs)('div', {
+            className: S.button,
             children: [
-                (0, r.jsx)(l.mBM, {
+                (0, r.jsx)(c.mBM, {
                     size: 'xs',
-                    className: T.buttonIcon
+                    className: S.buttonIcon
                 }),
                 ' ',
-                J
+                $
             ]
         })),
-        (U.disabled = !0)),
-    null != q)
-        ? (0, r.jsx)(_.Z, {
-              text: q,
+        (G.disabled = !0)),
+    null != X)
+        ? (0, r.jsx)(p.Z, {
+              text: X,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(
-                      l.gtL,
-                      C(
-                          A(
-                              C(A({}, e), {
+                      c.gtL,
+                      R(
+                          N(
+                              R(N({}, e), {
                                   disabled: !0,
-                                  size: l.zxk.Sizes.SMALL,
-                                  pauseAnimation: D
+                                  size: l.zx.Sizes.SMALL,
+                                  pauseAnimation: L
                               }),
-                              U
+                              G
                           ),
-                          { children: J }
+                          { children: $ }
                       )
                   )
           })
         : (0, r.jsx)(
-              l.gtL,
-              C(A({ size: l.zxk.Sizes.SMALL }, U), {
-                  className: o()(U.className, { [T.buttonHighlighted]: M }),
-                  submitting: V,
-                  onClick: X,
-                  pauseAnimation: D,
-                  children: J
+              c.gtL,
+              R(N({ size: l.zx.Sizes.SMALL }, G), {
+                  className: o()(G.className, { [S.buttonHighlighted]: k }),
+                  submitting: F,
+                  onClick: Q,
+                  pauseAnimation: L,
+                  children: $
               })
           );
 };

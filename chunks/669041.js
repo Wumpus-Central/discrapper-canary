@@ -62,10 +62,9 @@ function h(e) {
         (0, r.jsx)(o.mzw, {
             className: d.modalFooter,
             children: (0, r.jsx)(o.zxk, {
-                color: o.zxk.Colors.BRAND,
-                size: o.zxk.Sizes.MEDIUM,
-                onClick: n,
-                children: u.intl.string(u.t.cpT0Cg)
+                variant: 'primary',
+                text: u.intl.string(u.t.cpT0Cg),
+                onClick: n
             })
         });
     return (0, r.jsxs)(o.Y0X, {

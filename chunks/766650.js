@@ -1,26 +1,26 @@
-(r.d(t, { Z: () => h }), r(388685));
-var n = r(255367),
-    s = r(73800),
-    i = r(120356),
-    l = r.n(i),
-    a = r(264738),
-    o = r(481060),
-    c = r(144114),
-    u = r(317175),
-    d = r(764731);
+(n.d(t, { Z: () => h }), n(388685));
+var r = n(255367),
+    s = n(73800),
+    i = n(120356),
+    l = n.n(i),
+    a = n(264738),
+    o = n(481060),
+    c = n(144114),
+    u = n(317175),
+    d = n(764731);
 function h(e) {
-    let { show: t, alpha2: r, countryCode: i } = e,
+    let { show: t, alpha2: n, countryCode: i } = e,
         h = s.useRef(null),
         p = s.useRef(null),
         [m, f] = s.useState(0),
         [x, g] = s.useState(!1);
     s.useEffect(() => {
         function e() {
-            var e, r;
-            f(t && null != (r = null == (e = p.current) ? void 0 : e.getBoundingClientRect().width) ? r : 0);
+            var e, n;
+            f(t && null != (n = null == (e = p.current) ? void 0 : e.getBoundingClientRect().width) ? n : 0);
         }
         return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
-    }, [t, r, i]);
+    }, [t, n, i]);
     let j = (0, o.q_F)({
             width: ''.concat(m, 'px'),
             onStart: () => {
@@ -33,11 +33,11 @@ function h(e) {
         v = (e) => {
             c.Z.setCountryCode(e);
         };
-    return (0, n.jsx)(o.yRy, {
+    return (0, r.jsx)(o.yRy, {
         targetElementRef: h,
         position: 'top',
         renderPopout: (e) =>
-            (0, n.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, {
                 className: d.popout,
                 onClick: (t) => {
                     (v(t), e.closePopout());
@@ -45,39 +45,39 @@ function h(e) {
             }),
         children: (e) => {
             var s, c;
-            return (0, n.jsx)('div', {
+            return (0, r.jsx)('div', {
                 className: l()(d.outerContainer, { [d.hidden]: !(t || x) }),
                 ref: h,
-                children: (0, n.jsx)(a.animated.div, {
+                children: (0, r.jsx)(a.animated.div, {
                     className: d.container,
                     style: j,
-                    children: (0, n.jsxs)('div', {
+                    children: (0, r.jsxs)('div', {
                         className: d.innerContainer,
                         ref: p,
                         children: [
-                            (0, n.jsxs)(
+                            (0, r.jsxs)(
                                 o.P3F,
                                 ((s = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
-                                        var r = null != arguments[t] ? arguments[t] : {},
-                                            n = Object.keys(r);
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
                                         ('function' == typeof Object.getOwnPropertySymbols &&
-                                            (n = n.concat(
-                                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 })
                                             )),
-                                            n.forEach(function (t) {
-                                                var n;
-                                                ((n = r[t]),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                ((r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: n,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = n));
+                                                        : (e[t] = r));
                                             }));
                                     }
                                     return e;
@@ -85,23 +85,23 @@ function h(e) {
                                 (c = c =
                                     {
                                         className: d.countryCode,
-                                        children: [r, ' ', i]
+                                        children: [n, ' ', i]
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(c))
                                     : (function (e, t) {
-                                          var r = Object.keys(e);
+                                          var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var n = Object.getOwnPropertySymbols(e);
-                                              r.push.apply(r, n);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
                                           }
-                                          return r;
+                                          return n;
                                       })(Object(c)).forEach(function (e) {
                                           Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(c, e));
                                       }),
                                 s)
                             ),
-                            (0, n.jsx)('div', { className: d.separator })
+                            (0, r.jsx)('div', { className: d.separator })
                         ]
                     })
                 })

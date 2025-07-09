@@ -2,12 +2,12 @@
 var i,
     r,
     s,
-    l = n(442837),
-    a = n(570140),
+    a = n(442837),
+    l = n(570140),
     o = n(911969);
 let c = !1,
     d = [];
-class u extends (i = l.ZP.Store) {
+class u extends (i = a.ZP.Store) {
     hasFetchedCredentials() {
         return c;
     }
@@ -27,7 +27,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (u[r] = s));
-let m = new u(a.Z, {
+let m = new u(l.Z, {
     LOGOUT: function () {
         ((d = []), (c = !1));
     },

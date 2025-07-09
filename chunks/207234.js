@@ -5,16 +5,16 @@ n.d(t, {
 var i = n(392711),
     r = n.n(i),
     s = n(475468),
-    l = n(821020),
-    a = n(592125),
+    a = n(821020),
+    l = n(592125),
     o = n(944486),
     c = n(585483),
     d = n(981631);
 let u = () => {
-        let { notificationCenterVariant: e } = l.Lk.getCurrentConfig({ location: 'TOGGLE_INBOX' });
+        let { notificationCenterVariant: e } = a.Lk.getCurrentConfig({ location: 'TOGGLE_INBOX' });
         if ('sidebar' !== e) return;
         let t = o.Z.getChannelId(),
-            n = a.Z.getChannel(t);
+            n = l.Z.getChannel(t);
         return window.location.pathname.startsWith(d.Z5c.NOTIFICATIONS_INBOX()) && null != n ? (0, s.K)(n.guild_id, t) : (0, s.z)(d.Z5c.NOTIFICATIONS_INBOX(null != t ? t : void 0));
     },
     m = {

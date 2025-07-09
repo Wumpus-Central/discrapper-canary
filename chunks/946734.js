@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(884338),
     u = n(100527),
@@ -44,23 +44,23 @@ class E {
     renderNicknamePairs() {
         return this.getNicknameGuildPairs().map((e, t) => {
             let [n, l] = e,
-                o = (0, r.jsx)(s.P3F, {
+                a = (0, r.jsx)(s.P3F, {
                     tag: 'span',
                     onClick: this.handleClick,
                     children: n
                 });
             return (
                 l.length > 0 &&
-                    (o = (0, r.jsx)(s.DY3, {
+                    (a = (0, r.jsx)(s.DY3, {
                         className: O.tooltip,
                         text: l.join(', '),
                         position: 'bottom',
-                        children: o
+                        children: a
                     })),
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [0 !== t ? ', ' : null, o]
+                        children: [0 !== t ? ', ' : null, a]
                     },
                     t
                 )
@@ -77,7 +77,7 @@ class E {
                 'generateNicknameGuildPairs',
                 (0, _.oH)((e) => {
                     var t;
-                    return o()(m.ZP.getNicknameGuildsMapping(null != (t = null == e ? void 0 : e.id) ? t : this.userId))
+                    return a()(m.ZP.getNicknameGuildsMapping(null != (t = null == e ? void 0 : e.id) ? t : this.userId))
                         .toPairs()
                         .map((e) => {
                             let [t, n] = e;
@@ -135,12 +135,12 @@ function S(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, h.gc)(n),
-        o = Array(l.length).fill(null),
+        a = Array(l.length).fill(null),
         { analyticsLocations: f } = (0, d.ZP)(u.Z.AKA),
         m = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: r } = e,
-                l = (0, a.e7)([b.default], () => b.default.getUser(t), [t]),
-                [o] = i.useState(
+                l = (0, o.e7)([b.default], () => b.default.getUser(t), [t]),
+                [a] = i.useState(
                     () =>
                         new E({
                             user: l,
@@ -150,13 +150,13 @@ function S(e) {
                         })
                 );
             return (
-                o.updateData({
+                a.updateData({
                     userId: t,
                     user: l,
                     channelId: n,
                     analyticsLocations: r
                 }),
-                o
+                a
             );
         })({
             userId: n,
@@ -177,28 +177,28 @@ function S(e) {
                   l.length > 0
                       ? (0, r.jsx)(c.ZP, {
                             size: 16,
-                            users: o,
+                            users: a,
                             showUserPopout: !1,
                             renderUser: (e, t, n) => {
                                 var i;
-                                let o = m.user,
-                                    a = l[n];
-                                return null == a || null == o
+                                let a = m.user,
+                                    o = l[n];
+                                return null == o || null == a
                                     ? null
                                     : (0, r.jsx)(
                                           s.DY3,
                                           {
-                                              text: null == (i = g.Z.getGuild(a)) ? void 0 : i.name,
+                                              text: null == (i = g.Z.getGuild(o)) ? void 0 : i.name,
                                               position: 'bottom',
                                               children: (0, r.jsx)('img', {
                                                   alt: '',
                                                   className: O.avatar,
                                                   onClick: m.handleClick,
-                                                  src: o.getAvatarURL(a, 16),
+                                                  src: a.getAvatarURL(o, 16),
                                                   'aria-hidden': !0
                                               })
                                           },
-                                          a[1]
+                                          o[1]
                                       );
                             },
                             renderMoreUsers: m.renderMoreAvatars,

@@ -15,10 +15,10 @@ let h = !1,
     N = [],
     f = !1,
     S = [];
-function E() {
+function p() {
     ((h = !1), (g = null), (S = []), (f = !1), null != (g = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((N = d.Z.getOnboardingPrompts(g)), (f = d.Z.isAdvancedMode(g))));
 }
-class p extends (r = o.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, d.Z);
     }
@@ -42,21 +42,21 @@ class p extends (r = o.ZP.Store) {
     }
 }
 ((i = 'GuildSettingsOnboardingPromptsStore'),
-    (l = 'displayName') in p
-        ? Object.defineProperty(p, l, {
+    (l = 'displayName') in E
+        ? Object.defineProperty(E, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (p[l] = i));
-let T = new p(c.Z, {
-    GUILD_SETTINGS_INIT: E,
-    GUILD_SETTINGS_SET_SECTION: E,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: E,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: E,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: E,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
+        : (E[l] = i));
+let T = new E(c.Z, {
+    GUILD_SETTINGS_INIT: p,
+    GUILD_SETTINGS_SET_SECTION: p,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: p,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: p,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: p,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var t;
         ((S = null != (t = e.errors) ? t : []), (h = !1));

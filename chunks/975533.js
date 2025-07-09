@@ -55,7 +55,7 @@ function x(e, t, n) {
     let s = o.size > 0;
     y.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(s, t), l);
 }
-let L = {
+let w = {
     [P.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {},
         keyEvents: {}
@@ -66,7 +66,7 @@ let L = {
     },
     [P.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            y.Z.getMode(t.context) === P.pM4.PUSH_TO_TALK && ((L[P.kg4.PUSH_TO_TALK].isPressed = e), x(e, !1, t));
+            y.Z.getMode(t.context) === P.pM4.PUSH_TO_TALK && ((w[P.kg4.PUSH_TO_TALK].isPressed = e), x(e, !1, t));
         },
         keyEvents: {
             keyup: !0,
@@ -76,7 +76,7 @@ let L = {
     },
     [P.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e, t) {
-            (y.Z.getMode() === P.pM4.PUSH_TO_TALK || T.Z.getCurrentConfig({ location: 'keybinds' }).onPTTKeybind) && ((L[P.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), x(e, !0, t));
+            (y.Z.getMode() === P.pM4.PUSH_TO_TALK || T.Z.getCurrentConfig({ location: 'keybinds' }).onPTTKeybind) && ((w[P.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), x(e, !0, t));
         },
         keyEvents: {
             keyup: !0,
@@ -86,7 +86,7 @@ let L = {
     },
     [P.kg4.VAD_PRIORITY]: {
         onTrigger(e, t) {
-            y.Z.getMode() === P.pM4.VOICE_ACTIVITY && T.Z.getCurrentConfig({ location: 'keybinds' }).separateKeybind && ((L[P.kg4.VAD_PRIORITY].isPressed = e), x(e, !0, t));
+            y.Z.getMode() === P.pM4.VOICE_ACTIVITY && T.Z.getCurrentConfig({ location: 'keybinds' }).separateKeybind && ((w[P.kg4.VAD_PRIORITY].isPressed = e), x(e, !0, t));
         },
         keyEvents: {
             keyup: !0,
@@ -96,7 +96,7 @@ let L = {
     },
     [P.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            y.Z.getMode() === P.pM4.VOICE_ACTIVITY && ((L[P.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
+            y.Z.getMode() === P.pM4.VOICE_ACTIVITY && ((w[P.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
         },
         keyEvents: {
             keyup: !0,
@@ -275,12 +275,12 @@ let L = {
         }
     }
 };
-class w extends u.Z {
+class L extends u.Z {
     _initialize() {
         (r.Z.wait(() =>
             r.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-                keybinds: L
+                keybinds: w
             })
         ),
             r.Z.subscribe('AUDIO_SET_MODE', this.resetPTTState),
@@ -296,4 +296,4 @@ class w extends u.Z {
             }, A.Yn.DEFAULT));
     }
 }
-let R = new w();
+let R = new L();

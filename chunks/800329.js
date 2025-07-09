@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(218867),
+    a = n.n(l),
+    o = n(218867),
     s = n(183155);
 let c = 16 / 9;
 function u(e, t) {
@@ -69,11 +69,11 @@ function p(e) {
                                       );
                                   }) - 1;
                         let l = u(r, t),
-                            o = Math.ceil(e / l);
+                            a = Math.ceil(e / l);
                         return {
                             tileWidth: r,
                             columns: Math.max(1, l),
-                            rows: o
+                            rows: a
                         };
                     })(e, t, n);
                     return {
@@ -89,7 +89,7 @@ function p(e) {
         I = S * O + (S - 1) * 8 <= b,
         P = Math.floor(O / c) + 8,
         Z = Math.max(0, x - P * j) / 2;
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         fade: !0,
         className: n,
         listPadding: [h + Z, 0, f + Z - 8, 8],
@@ -110,7 +110,7 @@ function p(e) {
                                       'div',
                                       {
                                           style: v,
-                                          className: o()(s.tile, {
+                                          className: a()(s.tile, {
                                               [s.padColumn]: I,
                                               [s.noVerticalMargin]: l >= (j - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1

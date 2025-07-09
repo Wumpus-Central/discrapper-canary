@@ -1,20 +1,21 @@
-n.d(t, { N: () => E });
+n.d(t, { N: () => O });
 var r = n(255367);
 n(73800);
 var i = n(704215),
     l = n(740111),
-    a = n(481060),
-    o = n(963249),
-    s = n(703656),
-    c = n(626135),
-    u = n(63063),
-    d = n(382791),
-    p = n(474936),
-    h = n(981631),
-    f = n(388032),
-    g = n(892012),
-    m = n(74316);
-function b(e) {
+    a = n(755721),
+    o = n(481060),
+    s = n(963249),
+    c = n(703656),
+    u = n(626135),
+    d = n(63063),
+    p = n(382791),
+    h = n(474936),
+    f = n(981631),
+    g = n(388032),
+    m = n(892012),
+    b = n(74316);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +40,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,128 +58,128 @@ function _(e, t) {
         e
     );
 }
-function E(e) {
-    var t, n, E, O;
-    let y,
-        { content: I, renderModalProps: v, analyticsLocations: C, analyticsLocation: S, isLightTheme: N } = e,
-        T = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
-        { onClose: P } = v,
-        j = null != (O = null == (t = I.button) ? void 0 : t.copy) ? O : f.intl.string(f.t.YScQSE),
-        A = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
-    switch (null == (E = I.button) ? void 0 : E.buttonAction) {
+function O(e) {
+    var t, n, O, y;
+    let I,
+        { content: v, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
+        P = 'AnnouncementModalVariant1_'.concat(i.z[Number(v.dismissKey)]),
+        { onClose: j } = C,
+        A = null != (y = null == (t = v.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
+        Z = (null == (n = v.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
+    switch (null == (O = v.button) ? void 0 : O.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
-            y = () => {
-                ((0, s.uL)(h.Z5c.APPLICATION_STORE), P());
+            I = () => {
+                ((0, c.uL)(f.Z5c.APPLICATION_STORE), j());
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
-            y = () =>
-                (0, o.Z)({
-                    subscriptionTier: p.Si.TIER_1,
-                    analyticsLocations: C,
-                    analyticsObject: _(b({}, S), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.Qqv.TIER_1
+            I = () =>
+                (0, s.Z)({
+                    subscriptionTier: h.Si.TIER_1,
+                    analyticsLocations: S,
+                    analyticsObject: E(_({}, N), {
+                        object: f.qAy.BUTTON_CTA,
+                        objectType: f.Qqv.TIER_1
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && j();
                     }
                 });
             break;
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:
-            y = () =>
-                (0, o.Z)({
-                    subscriptionTier: p.Si.TIER_2,
-                    analyticsLocations: C,
-                    analyticsObject: _(b({}, S), {
-                        object: h.qAy.BUTTON_CTA,
-                        objectType: h.Qqv.TIER_2
+            I = () =>
+                (0, s.Z)({
+                    subscriptionTier: h.Si.TIER_2,
+                    analyticsLocations: S,
+                    analyticsObject: E(_({}, N), {
+                        object: f.qAy.BUTTON_CTA,
+                        objectType: f.Qqv.TIER_2
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && j();
                     }
                 });
     }
-    let Z =
-            '' !== I.helpArticleId
+    let x =
+            '' !== v.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               '\xA0',
-                              (0, r.jsx)(a.eee, {
-                                  className: g.termsApplyAnchor,
-                                  href: u.Z.getArticleURL(I.helpArticleId),
-                                  children: f.intl.string(f.t['sBp+u7'])
+                              (0, r.jsx)(o.eee, {
+                                  className: m.termsApplyAnchor,
+                                  href: d.Z.getArticleURL(v.helpArticleId),
+                                  children: g.intl.string(g.t['sBp+u7'])
                               })
                           ]
                       })
                 : void 0,
-        x = {
+        w = {
             type: 'video',
-            src: N ? I.heroArtVideoLinkLightTheme : I.videoLink
+            src: T ? v.heroArtVideoLinkLightTheme : v.videoLink
         };
-    (null != I.heroArtVideoSubtitles &&
-        (x.subtitles = I.heroArtVideoSubtitles.map((e) => ({
+    (null != v.heroArtVideoSubtitles &&
+        (w.subtitles = v.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== I.heroArtImageLinkDarkTheme || '' !== I.heroArtImageLinkLightTheme) &&
-            (x = {
+        ('' !== v.heroArtImageLinkDarkTheme || '' !== v.heroArtImageLinkLightTheme) &&
+            (w = {
                 type: 'image',
-                src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
+                src: T ? v.heroArtImageLinkLightTheme : v.heroArtImageLinkDarkTheme
             }));
     let L =
-        '' !== I.modalTopPill
+        '' !== v.modalTopPill
             ? () =>
-                  (0, r.jsx)(d.mn, {
-                      text: I.modalTopPill,
-                      className: g.modalTopPill
+                  (0, r.jsx)(p.mn, {
+                      text: v.modalTopPill,
+                      className: m.modalTopPill
                   })
             : void 0;
     return {
-        renderModalProps: v,
-        header: I.header,
+        renderModalProps: C,
+        header: v.header,
         modalTopExtra: L,
-        subHeader: I.subheader,
-        subHeaderExtra: Z,
-        body: I.body,
-        heroArt: x,
-        featureCards: I.featureCards.map((e) => ({
+        subHeader: v.subheader,
+        subHeaderExtra: x,
+        body: v.body,
+        heroArt: w,
+        featureCards: v.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: T,
+        changeLogId: P,
         button: () => {
             let e = Date.now();
-            return (0, r.jsxs)(a.gtL, {
-                className: g.button,
-                innerClassName: g.innerButton,
-                wrapperClassName: g.tier2Gradient,
-                size: a.zxk.Sizes.SMALL,
+            return (0, r.jsxs)(o.gtL, {
+                className: m.button,
+                innerClassName: m.innerButton,
+                wrapperClassName: m.tier2Gradient,
+                size: a.zx.Sizes.SMALL,
                 onClick: () => {
-                    (c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: T,
-                        cta_type: A,
+                    (u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
+                        change_log_id: P,
+                        cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: T
+                        target: P
                     }),
-                        y());
+                        I());
                 },
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
-                        className: g.nitroIconSubHeader,
-                        src: m
+                        className: m.nitroIconSubHeader,
+                        src: b
                     }),
-                    j
+                    A
                 ]
             });
         },
-        modalDismissibleContent: '' !== I.dismissKey ? Number(I.dismissKey) : void 0
+        modalDismissibleContent: '' !== v.dismissKey ? Number(v.dismissKey) : void 0
     };
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ep }), n(388685));
+(n.d(t, { Z: () => eh }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,46 +10,47 @@ var r = n(255367),
     d = n(442837),
     p = n(704215),
     h = n(952265),
-    f = n(481060),
-    g = n(493683),
-    m = n(529103),
-    b = n(607070),
-    _ = n(213609),
-    E = n(463119),
-    O = n(377171),
-    y = n(243778),
-    I = n(488634),
-    v = n(899740),
-    C = n(28476),
-    S = n(880257),
-    N = n(631885),
-    T = n(849862),
-    P = n(522558),
-    j = n(795448),
-    A = n(441623),
-    Z = n(457396),
-    x = n(108989),
+    f = n(755721),
+    g = n(481060),
+    m = n(493683),
+    b = n(529103),
+    _ = n(607070),
+    E = n(213609),
+    O = n(463119),
+    y = n(377171),
+    I = n(243778),
+    v = n(488634),
+    C = n(899740),
+    S = n(28476),
+    N = n(880257),
+    T = n(631885),
+    P = n(849862),
+    j = n(522558),
+    A = n(795448),
+    Z = n(441623),
+    x = n(457396),
+    w = n(108989),
     L = n(51596),
-    w = n(905423),
-    R = n(155409),
-    D = n(210887),
-    k = n(695346),
-    M = n(283595),
-    U = n(923834),
-    G = n(55563),
-    B = n(774343),
-    V = n(626135),
-    H = n(814225),
-    F = n(515753),
-    z = n(831218),
-    W = n(339149),
-    Y = n(981631),
-    K = n(675654),
-    q = n(474936),
-    X = n(388032),
-    Q = n(916723),
-    J = n(416350);
-function $(e) {
+    R = n(905423),
+    D = n(155409),
+    k = n(210887),
+    M = n(695346),
+    U = n(283595),
+    G = n(923834),
+    B = n(55563),
+    V = n(774343),
+    H = n(626135),
+    F = n(814225),
+    z = n(515753),
+    W = n(831218),
+    Y = n(339149),
+    K = n(981631),
+    q = n(675654),
+    X = n(474936),
+    Q = n(388032),
+    J = n(916723),
+    $ = n(416350);
+function ee(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +75,7 @@ function $(e) {
     }
     return e;
 }
-function ee(e, t) {
+function et(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +93,7 @@ function ee(e, t) {
         e
     );
 }
-function et(e, t) {
+function en(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -111,61 +112,61 @@ function et(e, t) {
     }
     return i;
 }
-let en = (e) => {
+let er = (e) => {
         var { selected: t } = e,
-            n = et(e, ['selected']);
+            n = en(e, ['selected']);
         let l = (0, c.JA)('friends'),
-            a = (0, T.If)(),
-            o = (0, d.e7)([A.Z], () => A.Z.canShowFriendsTabBadge()),
-            u = (0, d.e7)([b.Z], () => b.Z.useReducedMotion),
-            { enabled: p } = P.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
+            a = (0, P.If)(),
+            o = (0, d.e7)([Z.Z], () => Z.Z.canShowFriendsTabBadge()),
+            u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
+            { enabled: p } = j.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             h = o && p;
         i.useEffect(() => {
             h &&
-                (0, _.h)({
+                (0, E.h)({
                     name: s.ImpressionNames.GIFT_INTENT_BADGE,
                     type: s.ImpressionTypes.VIEW,
-                    properties: { gift_intent_type: q.hX.FRIEND_ANNIVERSARY }
+                    properties: { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }
                 });
         }, [h]);
-        let [g, E] = i.useState(!1);
+        let [f, m] = i.useState(!1);
         return (0, r.jsxs)('div', {
-            className: J.friendsButtonContainer,
+            className: $.friendsButtonContainer,
             children: [
                 (0, r.jsx)(
-                    F.Qj,
-                    ee(
-                        $(
+                    z.Qj,
+                    et(
+                        ee(
                             {
                                 onClick: () => {
-                                    h && (V.default.track(Y.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: q.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(Y.pJs.ALL), (0, j.Gk)());
+                                    h && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), b.Z.setSection(K.pJs.ALL), (0, A.Gk)());
                                 },
-                                interactiveClassName: h ? J.friendsBadge : void 0,
+                                interactiveClassName: h ? $.friendsBadge : void 0,
                                 selected: t,
-                                route: Y.Z5c.FRIENDS,
-                                icon: f.iFz,
-                                text: X.intl.string(X.t.TdEu5e),
+                                route: K.Z5c.FRIENDS,
+                                icon: g.iFz,
+                                text: Q.intl.string(Q.t.TdEu5e),
                                 onMouseEnter: () => {
-                                    E(!0);
+                                    m(!0);
                                 },
                                 onMouseLeave: () => {
-                                    E(!1);
+                                    m(!1);
                                 }
                             },
                             n,
                             l
                         ),
-                        { children: a > 0 ? (0, r.jsx)(f.mAB, { count: a }) : null }
+                        { children: a > 0 ? (0, r.jsx)(g.mAB, { count: a }) : null }
                     )
                 ),
                 h &&
                     !u &&
-                    (0, r.jsx)(x.Z, {
-                        className: J.confetti,
+                    (0, r.jsx)(w.Z, {
+                        className: $.confetti,
                         wind: 0,
-                        sprites: K.CA,
-                        spriteColors: K.Br,
-                        firing: g,
+                        sprites: q.CA,
+                        spriteColors: q.Br,
+                        firing: f,
                         confettiConfig: {
                             opacity: {
                                 type: 'static',
@@ -183,67 +184,67 @@ let en = (e) => {
             ]
         });
     },
-    er = (e) => {
+    ei = (e) => {
         var { selected: t, hideGameUpdateProgressIndicator: n } = e,
-            i = et(e, ['selected', 'hideGameUpdateProgressIndicator']);
+            i = en(e, ['selected', 'hideGameUpdateProgressIndicator']);
         let l = (0, c.JA)('library');
         return (0, r.jsx)(
-            F.Qj,
-            ee(
-                $(
+            z.Qj,
+            et(
+                ee(
                     {
                         selected: t,
-                        route: Y.Z5c.APPLICATION_LIBRARY,
-                        icon: f.vqy,
-                        text: X.intl.string(X.t.cw57am)
+                        route: K.Z5c.APPLICATION_LIBRARY,
+                        icon: g.vqy,
+                        text: Q.intl.string(Q.t.cw57am)
                     },
                     i,
                     l
                 ),
-                { children: (0, r.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) }) }
+                { children: (0, r.jsx)(Y.Z, { className: a()($.downloadProgressCircle, { [$.hideGameUpdateProgressIndicator]: n }) }) }
             )
         );
     },
-    ei = () => {
-        let e = (0, v.q)();
-        return e > 0 ? (0, r.jsx)(f.mAB, { count: e }) : null;
+    el = () => {
+        let e = (0, C.q)();
+        return e > 0 ? (0, r.jsx)(g.mAB, { count: e }) : null;
     },
-    el = (e) => {
+    ea = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: i } = (0, I._)();
-        if (!(0, C.a)()) return null;
-        let l = null == i ? void 0 : () => g.Z.preload(Y.ME, i);
+            { channelId: i } = (0, v._)();
+        if (!(0, S.a)()) return null;
+        let l = null == i ? void 0 : () => m.Z.preload(K.ME, i);
         return (0, r.jsx)(
-            F.Qj,
-            ee(
-                $(
+            z.Qj,
+            et(
+                ee(
                     {
                         selected: t,
-                        route: Y.Z5c.MESSAGE_REQUESTS,
-                        icon: f._XJ,
-                        text: X.intl.string(X.t.e7GWjY),
+                        route: K.Z5c.MESSAGE_REQUESTS,
+                        icon: g._XJ,
+                        text: Q.intl.string(Q.t.e7GWjY),
                         onClick: l
                     },
                     n
                 ),
-                { children: (0, r.jsx)(ei, {}) }
+                { children: (0, r.jsx)(el, {}) }
             )
         );
     },
-    ea = (e) => {
+    eo = (e) => {
         let { selected: t } = e,
-            n = X.intl.string(Q.default.Rkdixs),
+            n = Q.intl.string(J.default.Rkdixs),
             l = (0, c.JA)('family-center'),
             [a, o] = i.useState(!0);
         return (0, r.jsx)(
-            F.Qj,
-            ee(
-                $(
+            z.Qj,
+            et(
+                ee(
                     {
                         selected: t,
-                        route: Y.Z5c.FAMILY_CENTER,
-                        icon: f.BFJ,
+                        route: K.Z5c.FAMILY_CENTER,
+                        icon: g.BFJ,
                         text: n,
                         onMouseEnter: () => {
                             o(!0);
@@ -251,115 +252,115 @@ let en = (e) => {
                         onMouseLeave: () => {
                             o(!1);
                         },
-                        interactiveClassName: J.familyCenterLinkButton
+                        interactiveClassName: $.familyCenterLinkButton
                     },
                     l
                 ),
-                { children: (0, r.jsx)(eo, { isParentHovered: a }) }
+                { children: (0, r.jsx)(es, { isParentHovered: a }) }
             )
         );
     },
-    eo = (e) => {
+    es = (e) => {
         let { isParentHovered: t } = e,
-            i = (0, N.gU)();
+            i = (0, T.gU)();
         return t
-            ? (0, r.jsx)(F.PZ, {
+            ? (0, r.jsx)(z.PZ, {
                   onClick: () => {
                       (0, h.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
-                          return (t) => (0, r.jsx)(e, $({}, t));
+                          return (t) => (0, r.jsx)(e, ee({}, t));
                       });
                   },
-                  'aria-label': X.intl.string(X.t.cpT0Cg)
+                  'aria-label': Q.intl.string(Q.t.cpT0Cg)
               })
             : i > 0
               ? (0, r.jsx)('div', {
-                    className: J.familyCenterPendingBadge,
-                    children: (0, r.jsx)(f.mAB, { count: i })
+                    className: $.familyCenterPendingBadge,
+                    children: (0, r.jsx)(g.mAB, { count: i })
                 })
-              : (0, r.jsx)(y.ZP, {
+              : (0, r.jsx)(I.ZP, {
                     contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
-                            ? (0, r.jsx)(f.IGR, {
-                                  text: X.intl.string(X.t.y2b7CA),
-                                  color: O.Z.BG_BRAND
+                            ? (0, r.jsx)(g.IGR, {
+                                  text: Q.intl.string(Q.t.y2b7CA),
+                                  color: y.Z.BG_BRAND
                               })
                             : null;
                     }
                 });
     },
-    es = () => (0, L.$Z)('DM_SEARCH');
-function ec(e) {
+    ec = () => (0, L.$Z)('DM_SEARCH');
+function eu(e) {
     switch (e) {
-        case Y.Z5c.APPLICATION_LIBRARY:
-            return Y.ZY5.LIBRARY;
-        case Y.Z5c.FRIENDS:
-            return Y.ZY5.FRIENDS_LIST;
-        case Y.Z5c.COLLECTIBLES_SHOP:
-            return Y.ZY5.COLLECTIBLES_SHOP;
+        case K.Z5c.APPLICATION_LIBRARY:
+            return K.ZY5.LIBRARY;
+        case K.Z5c.FRIENDS:
+            return K.ZY5.FRIENDS_LIST;
+        case K.Z5c.COLLECTIBLES_SHOP:
+            return K.ZY5.COLLECTIBLES_SHOP;
     }
-    return e.startsWith(Y.Z5c.APPLICATION_STORE) ? (e === Y.Z5c.APPLICATION_STORE ? Y.ZY5.STORE_DIRECTORY_HOME : e.startsWith(Y.Z5c.APPLICATION_STORE) ? Y.ZY5.STORE_DIRECTORY_BROWSE : Y.ZY5.STORE_LISTING) : Y.ZY5.DM_CHANNEL;
+    return e.startsWith(K.Z5c.APPLICATION_STORE) ? (e === K.Z5c.APPLICATION_STORE ? K.ZY5.STORE_DIRECTORY_HOME : e.startsWith(K.Z5c.APPLICATION_STORE) ? K.ZY5.STORE_DIRECTORY_BROWSE : K.ZY5.STORE_LISTING) : K.ZY5.DM_CHANNEL;
 }
-let eu = i.memo(function (e) {
+let ed = i.memo(function (e) {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: l, premiumTabSelected: o, shouldShowNitroTab: s, shouldShowMessageRequestsRow: c, shouldShowFamilyCenterRow: d, selectedChannelId: p, path: h } = e,
         g = i.useRef(null),
         m = i.useRef(null),
         b = i.useRef(null);
     return (0, r.jsxs)('nav', {
-        className: J.privateChannels,
-        'aria-label': X.intl.string(X.t.ZH9aPz),
+        className: $.privateChannels,
+        'aria-label': Q.intl.string(Q.t.ZH9aPz),
         children: [
-            (0, r.jsx)(R.Z, {
+            (0, r.jsx)(D.Z, {
                 childRef: g,
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
                 children: (0, r.jsx)('div', {
                     ref: g,
-                    className: a()(J.searchBar, { [J.themedHeaderMobile]: u.tq }),
-                    children: (0, r.jsx)(f.zxk, {
+                    className: a()($.searchBar, { [$.themedHeaderMobile]: u.tq }),
+                    children: (0, r.jsx)(f.zx, {
                         grow: !0,
-                        color: f.zxk.Colors.PRIMARY,
-                        size: f.zxk.Sizes.SMALL,
+                        color: f.zx.Colors.PRIMARY,
+                        size: f.zx.Sizes.SMALL,
                         fullWidth: !0,
-                        onClick: es,
-                        children: X.intl.string(X.t.LzcpeX)
+                        onClick: ec,
+                        children: Q.intl.string(Q.t.LzcpeX)
                     })
                 })
             }),
             (0, r.jsxs)(
-                z.Z,
-                ee($({}, e), {
+                W.Z,
+                et(ee({}, e), {
                     version: h,
                     selectedChannelId: p,
                     showDMHeader: !0,
                     listScrollerRef: b,
                     children: [
-                        (0, r.jsx)(en, { selected: null != h ? h === Y.Z5c.FRIENDS : l === Y.Z5c.FRIENDS }, 'friends'),
+                        (0, r.jsx)(er, { selected: null != h ? h === K.Z5c.FRIENDS : l === K.Z5c.FRIENDS }, 'friends'),
                         n && t
                             ? (0, r.jsx)(
-                                  er,
+                                  ei,
                                   {
-                                      selected: null == h ? null != l && l.startsWith(Y.Z5c.APPLICATION_LIBRARY) : h.startsWith(Y.Z5c.APPLICATION_LIBRARY),
-                                      hideGameUpdateProgressIndicator: l === Y.Z5c.APPLICATION_LIBRARY
+                                      selected: null == h ? null != l && l.startsWith(K.Z5c.APPLICATION_LIBRARY) : h.startsWith(K.Z5c.APPLICATION_LIBRARY),
+                                      hideGameUpdateProgressIndicator: l === K.Z5c.APPLICATION_LIBRARY
                                   },
                                   'library'
                               )
                             : null,
-                        c ? (0, r.jsx)(el, { selected: null == h ? null != l && l.startsWith(Y.Z5c.MESSAGE_REQUESTS) : h === Y.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
+                        c ? (0, r.jsx)(ea, { selected: null == h ? null != l && l.startsWith(K.Z5c.MESSAGE_REQUESTS) : h === K.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                         s
                             ? (0, r.jsx)(
-                                  Z.g,
+                                  x.g,
                                   {
-                                      selected: null == h ? o : h.startsWith(Y.Z5c.APPLICATION_STORE),
-                                      route: Y.Z5c.APPLICATION_STORE,
+                                      selected: null == h ? o : h.startsWith(K.Z5c.APPLICATION_STORE),
+                                      route: K.Z5c.APPLICATION_STORE,
                                       locationState: {
                                           analyticsSource: {
-                                              page: ec(l),
-                                              section: Y.jXE.NAVIGATION,
-                                              object: Y.qAy.NAVIGATION_LINK
+                                              page: eu(l),
+                                              section: K.jXE.NAVIGATION,
+                                              object: K.qAy.NAVIGATION_LINK
                                           }
                                       }
                                   },
@@ -367,63 +368,63 @@ let eu = i.memo(function (e) {
                               )
                             : null,
                         (0, r.jsx)(
-                            E.i,
+                            O.i,
                             {
-                                selected: h === Y.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(Y.Z5c.COLLECTIBLES_SHOP)),
+                                selected: h === K.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: m,
                                 listScrollerRef: b,
                                 locationState: {
                                     analyticsSource: {
-                                        page: ec(l),
-                                        section: Y.jXE.NAVIGATION,
-                                        object: Y.qAy.NAVIGATION_LINK
+                                        page: eu(l),
+                                        section: K.jXE.NAVIGATION,
+                                        object: K.qAy.NAVIGATION_LINK
                                     }
                                 }
                             },
                             'discord-shop'
                         ),
-                        d ? (0, r.jsx)(ea, { selected: (null != l && l.startsWith(Y.Z5c.FAMILY_CENTER)) || (null != h && h.startsWith(Y.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
-                        (0, r.jsx)(ed, {}, 'section-divider-top')
+                        d ? (0, r.jsx)(eo, { selected: (null != l && l.startsWith(K.Z5c.FAMILY_CENTER)) || (null != h && h.startsWith(K.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
+                        (0, r.jsx)(ep, {}, 'section-divider-top')
                     ]
                 })
             )
         ]
     });
 });
-function ed() {
-    return (0, r.jsx)('div', { className: J.sectionDivider });
-}
 function ep() {
-    let e = (0, d.e7)([B.Z], () => B.Z.getHomeLink()),
+    return (0, r.jsx)('div', { className: $.sectionDivider });
+}
+function eh() {
+    let e = (0, d.e7)([V.Z], () => V.Z.getHomeLink()),
         t = (0, d.e7)(
-            [G.Z],
+            [B.Z],
             () => {
-                if (e === Y.Z5c.APPLICATION_STORE) return !0;
-                let t = (0, H.ZK)(e);
+                if (e === K.Z5c.APPLICATION_STORE) return !0;
+                let t = (0, F.ZK)(e);
                 if (null != t) {
                     var n, r;
-                    return null != (r = null == (n = G.Z.get(t)) ? void 0 : n.premium) && r;
+                    return null != (r = null == (n = B.Z.get(t)) ? void 0 : n.premium) && r;
                 }
                 return !1;
             },
             [e]
         ),
-        n = !k.bm.useSetting(),
-        { theme: i } = (0, d.cj)([D.Z], () => ({ theme: D.Z.theme })),
-        l = (0, d.e7)([M.Z], () => M.Z.hasLibraryApplication()),
-        a = (0, d.e7)([U.Z], () => U.Z.getCurrentPath()),
-        [s, c] = (0, w.Z)((e) => {
+        n = !M.bm.useSetting(),
+        { theme: i } = (0, d.cj)([k.Z], () => ({ theme: k.Z.theme })),
+        l = (0, d.e7)([U.Z], () => U.Z.hasLibraryApplication()),
+        a = (0, d.e7)([G.Z], () => G.Z.getCurrentPath()),
+        [s, c] = (0, R.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        u = (0, Z.i)({ selected: null == c ? t : c.startsWith(Y.Z5c.APPLICATION_STORE) }),
-        p = (0, C.a)(),
+        u = (0, x.i)({ selected: null == c ? t : c.startsWith(K.Z5c.APPLICATION_STORE) }),
+        p = (0, S.a)(),
         h = (function () {
-            let e = k.Ex.useSetting(),
-                t = (0, S.Z)();
+            let e = M.Ex.useSetting(),
+                t = (0, N.Z)();
             return !0 === e && !0 === t;
         })();
-    return (0, r.jsx)(eu, {
+    return (0, r.jsx)(ed, {
         theme: i,
         showLibrary: n,
         hasLibraryApplication: l,

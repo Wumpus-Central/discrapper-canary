@@ -1,86 +1,88 @@
 (n.d(t, {
-    Z: () => g,
-    s: () => f
+    Z: () => b,
+    s: () => g
 }),
     n(388685));
 var i,
     r = n(255367),
     l = n(73800),
     o = n(442837),
-    a = n(481060),
-    s = n(749210),
-    c = n(313201),
-    u = n(823379),
-    d = n(41776),
-    h = n(981631),
-    p = n(388032),
-    m = n(695256),
-    f = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
-let g = (e) => {
-    let { type: t, guild: i, closePopout: f, ctaRef: g } = e,
-        b = (0, c.Dt)(),
-        [j, O] = l.useState(!1),
-        y = (0, o.e7)([d.Z], () => d.Z.isLurking(i.id), [i.id]);
+    a = n(755721),
+    s = n(481060),
+    c = n(749210),
+    u = n(313201),
+    d = n(823379),
+    h = n(41776),
+    p = n(981631),
+    m = n(388032),
+    f = n(695256),
+    g = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
+let b = (e) => {
+    let { type: t, guild: i, closePopout: g, ctaRef: b } = e,
+        j = (0, u.Dt)(),
+        [O, y] = l.useState(!1),
+        v = (0, o.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
     l.useEffect(() => {
-        j && !y && f();
-    }, [j, y, f]);
-    let v = null,
-        T = p.intl.string(p.t.d7b1p6);
+        O && !v && g();
+    }, [O, v, g]);
+    let T = null,
+        x = m.intl.string(m.t.d7b1p6);
     switch (t) {
         case 0:
-            v = p.intl.string(p.t.Xiwf1d);
+            T = m.intl.string(m.t.Xiwf1d);
             break;
         case 1:
-            v = p.intl.string(p.t.GXvlU1);
+            T = m.intl.string(m.t.GXvlU1);
             break;
         default:
-            return (0, u.vE)(t);
+            return (0, d.vE)(t);
     }
-    if (null == v) return null;
-    let x = async () => {
-        O(!0);
+    if (null == T) return null;
+    let S = async () => {
+        y(!0);
         try {
-            (await s.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), f());
+            (await c.Z.joinGuild(i.id, { source: p.vtS.CHAT_INPUT_BLOCKER }), g());
         } catch (e) {
-            O(!1);
+            y(!1);
         }
     };
-    return (0, r.jsxs)(a.VqE, {
-        className: m.container,
-        'aria-labelledby': b,
+    return (0, r.jsxs)(s.VqE, {
+        className: f.container,
+        'aria-labelledby': j,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: m.image,
+                className: f.image,
                 src: n(64395)
             }),
             (0, r.jsxs)('div', {
-                className: m.content,
+                className: f.content,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: b,
-                        children: v
-                    }),
-                    (0, r.jsx)(a.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-sm/normal',
+                        id: j,
                         children: T
                     }),
+                    (0, r.jsx)(s.Text, {
+                        color: 'header-secondary',
+                        variant: 'text-sm/normal',
+                        children: x
+                    }),
                     (0, r.jsxs)('div', {
-                        className: m.buttonContainer,
+                        className: f.buttonContainer,
                         children: [
-                            (0, r.jsx)(a.zxk, {
-                                buttonRef: g,
-                                onClick: x,
-                                submitting: j,
-                                children: p.intl.string(p.t['9VLmlZ'])
+                            (0, r.jsx)(s.zxk, {
+                                variant: 'primary',
+                                text: m.intl.string(m.t['9VLmlZ']),
+                                buttonRef: b,
+                                onClick: S,
+                                loading: O
                             }),
-                            (0, r.jsx)(a.zxk, {
-                                onClick: f,
-                                look: a.zxk.Looks.BLANK,
-                                className: m.cancel,
-                                children: p.intl.string(p.t['2m+Sqq'])
+                            (0, r.jsx)(a.zx, {
+                                onClick: g,
+                                look: a.zx.Looks.BLANK,
+                                className: f.cancel,
+                                children: m.intl.string(m.t['2m+Sqq'])
                             })
                         ]
                     })
