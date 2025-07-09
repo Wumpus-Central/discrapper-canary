@@ -2,7 +2,7 @@ n.d(t, { Z: () => u });
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    s = n(906734),
+    s = n(594928),
     a = n(74538),
     l = n(993413),
     o = n(388032),
@@ -10,7 +10,7 @@ var r = n(481060),
     d = n(401609);
 function u(e) {
     let { user: t, className: n } = e,
-        u = (0, s.F)({ location: 'DisplayNameStylesSection' }),
+        u = s.J.useExperiment({ location: 'DisplayNameStylesSection' }).enabled,
         m = a.ZP.canUsePremiumProfileCustomization(t);
     return u
         ? (0, i.jsx)(l.Z, {

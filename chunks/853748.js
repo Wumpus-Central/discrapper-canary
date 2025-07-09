@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(264738),
+    a = n.n(o),
+    i = n(264738),
     s = n(873546),
     c = n(481060),
     u = n(774078),
@@ -13,12 +13,12 @@ var r = n(255367),
     f = n(585616);
 function h(e) {
     let { endDate: t } = e,
-        { days: n, hours: l, minutes: o, seconds: i } = (0, u.Z)(t),
-        a = (function (e, t, n, r) {
+        { days: n, hours: l, minutes: o, seconds: a } = (0, u.Z)(t),
+        i = (function (e, t, n, r) {
             let l = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
                 o = [];
             return (e > 0 && o.push(l(e, d.intl.string(d.t.QJyuxc))), (t > 0 || o.length > 0) && o.push(l(t, d.intl.string(d.t['1LyF1t']))), (n > 0 || o.length > 0) && o.push(l(n, d.intl.string(d.t.n7dksL))), o.push(l(r, d.intl.string(d.t['6m/6nJ']))), o.join(':'));
-        })(n, l, o, i);
+        })(n, l, o, a);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
         className: p.countdown,
@@ -26,7 +26,7 @@ function h(e) {
         children: (0, r.jsx)('div', {
             role: 'timer',
             'aria-relevant': 'all',
-            children: a
+            children: i
         })
     });
 }
@@ -40,8 +40,8 @@ let b = l.memo(function (e) {
                 friction: 12
             }
         });
-    return (0, r.jsxs)(a.animated.div, {
-        className: i()([p.countDownWrapper, o && p.fullScreenWrapper, s.tq && p.mobileWrapper]),
+    return (0, r.jsxs)(i.animated.div, {
+        className: a()([p.countDownWrapper, o && p.fullScreenWrapper, s.tq && p.mobileWrapper]),
         role: 'status',
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -84,13 +84,13 @@ let b = l.memo(function (e) {
             (0, r.jsx)(h, { endDate: t }),
             (0, r.jsx)('img', {
                 src: g.Z,
-                className: i()(p.sparkles, p.left),
+                className: a()(p.sparkles, p.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
                 src: f.Z,
-                className: i()(p.sparkles, p.right),
+                className: a()(p.sparkles, p.right),
                 alt: '',
                 'aria-hidden': !0
             })

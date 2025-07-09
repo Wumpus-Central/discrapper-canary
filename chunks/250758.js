@@ -145,7 +145,7 @@ function P(e, t) {
                 [_.dCx.FILTER_PINNED, !0]
             ]);
         })(t),
-        l = (0, o.nB)(n).filter((e) => null != e.token && null != r.get(e.token));
+        l = (0, o.nB)(n).filter((e) => null != e.token && !0 === r.get(e.token));
     return {
         group: _.rtL.SEARCH_OPTIONS,
         results: l

@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(685816),
+    a = n.n(o),
+    i = n(685816),
     s = n(755721),
     c = n(481060),
     u = n(626135),
@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(953655),
     C = n(548685),
     O = n(580914),
-    E = n(963278),
-    v = n(921120),
+    v = n(963278),
+    E = n(921120),
     S = n(384067),
     x = n(215023),
     y = n(981631),
@@ -28,8 +28,8 @@ let P = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: o, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
             { noCache: p, includeUnpublished: b } = (0, m.Z)(),
-            v = (0, d.sp)(),
-            x = null != (t = null == v ? void 0 : v.sessionId) ? t : '';
+            E = (0, d.sp)(),
+            x = null != (t = null == E ? void 0 : E.sessionId) ? t : '';
         l.useEffect(() => {
             (0, f.n)({
                 sessionId: x,
@@ -109,7 +109,7 @@ let P = (e) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
-                case a.z.HERO:
+                case i.z.HERO:
                     l = (0, r.jsx)(
                         O.Z,
                         {
@@ -121,7 +121,7 @@ let P = (e) => {
                         t
                     );
                     break;
-                case a.z.FEATURED:
+                case i.z.FEATURED:
                     l = (0, r.jsx)(
                         _.Z,
                         {
@@ -132,7 +132,7 @@ let P = (e) => {
                         t
                     );
                     break;
-                case a.z.FEED:
+                case i.z.FEED:
                     let u = e.sortedSkuIds;
                     l = (0, r.jsx)(
                         C.Z,
@@ -146,7 +146,7 @@ let P = (e) => {
                         t
                     );
                     break;
-                case a.z.WIDE_BANNER:
+                case i.z.WIDE_BANNER:
                     l = (0, r.jsx)(
                         S.Z,
                         {
@@ -157,9 +157,9 @@ let P = (e) => {
                         t
                     );
                     break;
-                case a.z.SHELF:
+                case i.z.SHELF:
                     l = (0, r.jsx)(
-                        E.Z,
+                        v.Z,
                         {
                             handleTransition: n,
                             shelf: e,
@@ -174,7 +174,7 @@ let P = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: i()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
+                    className: a()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -183,19 +183,19 @@ let P = (e) => {
         return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => k(e, t)) });
     },
     L = (e) => {
-        let { isFullScreen: t, scrollerRef: n, handleTransition: o, tab: a, transitionState: g } = e,
+        let { isFullScreen: t, scrollerRef: n, handleTransition: o, tab: i, transitionState: g } = e,
             f = (0, p.R)('CollectiblesFeedShop'),
             h = (0, b.R)(),
             m = (0, d.sp)(),
             [_, C] = l.useState(x.IV),
-            [O, E] = l.useState(!1);
+            [O, v] = l.useState(!1);
         return (
             l.useEffect(() => {
                 if (null != n.current) {
                     let e = () => {
                             if (null == n.current) return;
                             let e = n.current.getDistanceFromBottom();
-                            _ >= f ? E(e < 20) : e <= 200 && C((e) => e + x.IV);
+                            _ >= f ? v(e < 20) : e <= 200 && C((e) => e + x.IV);
                         },
                         t = n.current.getScrollerNode();
                     return (
@@ -205,21 +205,21 @@ let P = (e) => {
                         }
                     );
                 }
-            }, [n, _, f, C, E]),
+            }, [n, _, f, C, v]),
             (0, r.jsxs)('div', {
                 className: T.shop,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: i()(T.content, T.mainContent),
+                        className: a()(T.content, T.mainContent),
                         children: [
                             (0, r.jsx)(P, {
                                 handleTransition: o,
                                 numVisibleItems: _,
                                 isFetchingCategories: h,
-                                tab: a,
+                                tab: i,
                                 isFullScreen: t
                             }),
-                            a !== x.AW.CATALOG &&
+                            i !== x.AW.CATALOG &&
                                 _ >= f &&
                                 (0, r.jsxs)('div', {
                                     className: T.endOfFeed,
@@ -234,8 +234,8 @@ let P = (e) => {
                                                 (o('shop all button', void 0, !0),
                                                     u.default.track(y.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
-                                                        page_type: a,
-                                                        page_category: a === x.AW.HOME || null == m ? void 0 : m.pageCategory,
+                                                        page_type: i,
+                                                        page_category: i === x.AW.HOME || null == m ? void 0 : m.pageCategory,
                                                         cta_name: 'shop the whole shop button'
                                                     }));
                                             },
@@ -252,11 +252,11 @@ let P = (e) => {
                     !t &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(v.Z, {
+                                (0, r.jsx)(E.Z, {
                                     peaking: O,
                                     transitioning: g === x.f7.OUT
                                 }),
-                                (0, r.jsx)(v.Z, {
+                                (0, r.jsx)(E.Z, {
                                     style: { left: 1850 },
                                     peaking: O,
                                     transitioning: g === x.f7.OUT

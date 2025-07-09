@@ -508,6 +508,10 @@ let z = {
         setChromiumSwitches(e) {
             I.gpuSettings.setChromiumSwitches(e);
         },
+        getOptionalUpdates: async () => await I.settings.get('OPTIN_OPTIONAL_UPDATES', !1),
+        async setOptionalUpdates(e) {
+            await I.settings.set('OPTIN_OPTIONAL_UPDATES', e);
+        },
         getGPUDriverVersions() {
             return (0, h.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions ? this.getDiscordUtils().getGPUDriverVersions() : Promise.resolve(Object.freeze({}));
         },

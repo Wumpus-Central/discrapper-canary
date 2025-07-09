@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => v }), n(388685));
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(755721),
+    a = n.n(o),
+    i = n(755721),
     s = n(481060),
     c = n(381585),
     u = n(870289),
@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(763891),
     C = n(215023),
     O = n(388032),
-    E = n(484920);
-function v(e) {
-    let { isFullScreen: t, scrollerRef: n, tab: o, sortedCategories: v, setCategoryRef: S } = e,
+    v = n(484920);
+function E(e) {
+    let { isFullScreen: t, scrollerRef: n, tab: o, sortedCategories: E, setCategoryRef: S } = e,
         { handlePageChange: x, currentPage: y } = (0, b.h)({
             scrollerRef: n,
-            sortedCategories: v
+            sortedCategories: E
         });
     (0, d.A)();
     let j = (0, u.F)('CollectiblesBrowse'),
@@ -32,34 +32,34 @@ function v(e) {
     }, [j, P]);
     let L = (0, d.S)((e) => e.hasDefaultFilters());
     return (0, r.jsx)('div', {
-        className: i()(E.pageWrapper, { [E.pageWrapperFilter]: j }),
+        className: a()(v.pageWrapper, { [v.pageWrapperFilter]: j }),
         children: (0, r.jsxs)('main', {
-            className: i()(E.page, { [E.pageFilter]: j }),
+            className: a()(v.page, { [v.pageFilter]: j }),
             children: [
                 (0, r.jsxs)('div', {
-                    className: i()(E.inventory, {
-                        [E.inventoryNoFilter]: !j,
-                        [E.pageFullscreen]: t
+                    className: a()(v.inventory, {
+                        [v.inventoryNoFilter]: !j,
+                        [v.pageFullscreen]: t
                     }),
                     children: [
                         j &&
                             (0, r.jsxs)('div', {
-                                className: E.controls,
+                                className: v.controls,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: E.controlsLeftSide,
+                                        className: v.controlsLeftSide,
                                         children: (0, r.jsx)(p.Z, {})
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: E.controlsRightSide,
+                                        className: v.controlsRightSide,
                                         children: [
                                             (0, r.jsx)(f.ZP, {}),
-                                            (0, r.jsx)(a.zx, {
+                                            (0, r.jsx)(i.zx, {
                                                 onClick: () => P((e) => !e),
-                                                look: a.iL.OUTLINED,
-                                                color: a.Tt.PRIMARY,
+                                                look: i.iL.OUTLINED,
+                                                color: i.Tt.PRIMARY,
                                                 children: (0, r.jsxs)('div', {
-                                                    className: E.filterButton,
+                                                    className: v.filterButton,
                                                     children: [
                                                         O.intl.string(T ? O.t.fYtm6e : O.t.TeTYEx),
                                                         (0, r.jsx)(s.gXV, {
@@ -97,7 +97,7 @@ function v(e) {
                                     newValue: { pageIndex: y },
                                     children: (0, r.jsx)(g.Z, {
                                         isFullScreen: t,
-                                        sortedCategories: v,
+                                        sortedCategories: E,
                                         setCategoryRef: S,
                                         currentPage: y,
                                         handlePageChange: x
@@ -107,7 +107,7 @@ function v(e) {
                 }),
                 T &&
                     (0, r.jsx)(s.Ttm, {
-                        className: E.filterBar,
+                        className: v.filterBar,
                         children: (0, r.jsx)(h.Z, {})
                     })
             ]

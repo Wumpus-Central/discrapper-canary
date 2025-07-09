@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(979554),
-    i = n(399606),
-    a = n(780384),
+    a = n(399606),
+    i = n(780384),
     s = n(481060),
     c = n(410030),
     u = n(594174),
@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(81136),
     C = n(215023),
     O = n(388032),
-    E = n(484920),
-    v = n(558513),
+    v = n(484920),
+    E = n(558513),
     S = n(662128),
     x = n(676790),
     y = n(665195),
@@ -32,15 +32,15 @@ function I(e) {
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: R, includeUnpublished: w } = (0, _.Z)(),
-        Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        F = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        F = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [D, M] = l.useState(1),
         H = () => {
             var e;
             null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
-        V = (0, a.ap)(W),
+        V = (0, i.ap)(W),
         [U, G, z] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
@@ -50,21 +50,21 @@ function I(e) {
                 case C.AW.NAMEPLATES:
                     return [O.intl.string(O.t.V68Fq6), V ? T.Z : j.Z, o.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFppq), V ? S.Z : v.Z, o.Z.BUNDLE];
+                    return [O.intl.string(O.t.FYFppq), V ? S.Z : E.Z, o.Z.BUNDLE];
             }
         }, [B, V]),
-        Y = (0, g.a)(),
-        q = l.useMemo(
+        q = (0, g.a)(),
+        Y = l.useMemo(
             () =>
-                Y(
+                q(
                     F.filter((e) => {
                         var t;
                         return e.type === z || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [F, z, Y]
+            [F, z, q]
         ),
-        K = (0, f.l)(q);
+        K = (0, f.l)(Y);
     return (l.useEffect(() => {
         (0, h.n)({
             sessionId: A,
@@ -92,14 +92,14 @@ function I(e) {
               children: [
                   (0, r.jsx)('div', {
                       style: { backgroundImage: 'url('.concat(G, ')') },
-                      className: E.bannerContainer,
+                      className: v.bannerContainer,
                       children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
                           children: U
                       })
                   }),
                   (0, r.jsx)('div', {
-                      className: E.products,
+                      className: v.products,
                       children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
@@ -125,7 +125,7 @@ function I(e) {
                   }),
                   K.length > 40 &&
                       (0, r.jsx)('div', {
-                          className: E.paginationContainer,
+                          className: v.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
                                   currentPage: D,

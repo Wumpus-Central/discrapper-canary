@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(399606),
-    i = n(481060),
-    a = n(381585),
+    a = n(481060),
+    i = n(381585),
     s = n(597688),
     c = n(370039),
     u = n(82892),
@@ -17,8 +17,8 @@ var r = n(255367),
 function _(e) {
     var t;
     let { isFetchingCategories: n, isFullScreen: _, scrollerRef: C, tab: O } = e,
-        E = (0, a.sp)(),
-        v = null != (t = null == E ? void 0 : E.sessionId) ? t : '',
+        v = (0, i.sp)(),
+        E = null != (t = null == v ? void 0 : v.sessionId) ? t : '',
         { noCache: S, includeUnpublished: x } = (0, b.Z)(),
         y = (0, u.x)(),
         { skus: j, currentPage: T, totalCount: P, isFetchingResults: L } = (0, p.a)(),
@@ -32,14 +32,14 @@ function _(e) {
     l.useEffect(() => {
         n ||
             (0, g.n)({
-                sessionId: v,
+                sessionId: E,
                 checkpoint: g.a.SHOP_RENDERED,
                 tab: O,
                 isFullScreen: _,
                 unpublishedCategoriesShown: x,
                 cacheDisabled: S
             });
-    }, [v, _, x, S, n, O]);
+    }, [E, _, x, S, n, O]);
     let A = l.useRef(null),
         { setQueryPageSize: R, setQueryPageOffset: w, queryPageSize: Z } = (0, d.S)();
     l.useEffect(() => {
@@ -63,7 +63,7 @@ function _(e) {
                         return null == n
                             ? null
                             : (0, r.jsx)(
-                                  a.k0,
+                                  i.k0,
                                   {
                                       newValue: { tilePosition: t },
                                       children: (0, r.jsx)(
@@ -86,7 +86,7 @@ function _(e) {
                 (0, r.jsx)('div', {
                     className: m.paginationContainer,
                     children: (0, r.jsx)('div', {
-                        children: (0, r.jsx)(i.DsT, {
+                        children: (0, r.jsx)(a.DsT, {
                             currentPage: T,
                             totalCount: P,
                             pageSize: Z,

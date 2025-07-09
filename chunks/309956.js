@@ -1,46 +1,48 @@
-(n.d(t, { B: () => p }), n(388685), n(539854));
+(n.d(t, { B: () => g }), n(388685), n(539854));
 var r = n(73800),
     l = n(114858),
     o = n(335818),
-    i = n(822857),
-    a = n(870289),
+    a = n(822857),
+    i = n(870289),
     s = n(501431),
-    c = n(215023),
-    u = n(981631);
-let d = {
-        [c.AW.AVATAR_DECORATIONS]: o.G.AVATAR_DECORATION,
-        [c.AW.PROFILE_EFFECTS]: o.G.PROFILE_EFFECT,
-        [c.AW.NAMEPLATES]: o.G.NAMEPLATE,
-        [c.AW.BUNDLES]: o.G.BUNDLE
+    c = n(149705),
+    u = n(215023),
+    d = n(981631);
+let p = {
+        [u.AW.AVATAR_DECORATIONS]: o.G.AVATAR_DECORATION,
+        [u.AW.PROFILE_EFFECTS]: o.G.PROFILE_EFFECT,
+        [u.AW.NAMEPLATES]: o.G.NAMEPLATE,
+        [u.AW.BUNDLES]: o.G.BUNDLE
     },
-    p = (e, t, n) => {
-        let { enabled: o } = (0, i.WX)({ location: 'useShopViewTransition' }),
-            p = (0, a.F)('CollectiblesBrowse'),
-            { setItemTypeFilter: g, reset: f } = (0, s.S)();
+    g = (e, t, n) => {
+        let { enabled: o } = (0, a.WX)({ location: 'useShopViewTransition' }),
+            g = (0, i.F)('CollectiblesBrowse'),
+            { setItemTypeFilter: f, reset: h } = (0, s.S)(),
+            { clear: b } = (0, c.a)();
         r.useEffect(() => {
-            let e = d[t];
-            null != e && (f(), g(e));
-        }, [t, g, f]);
-        let h = r.useMemo(() => (t !== c.AW.ORBS || o ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, o, p]),
-            [b, m] = r.useState(h),
-            [_, C] = r.useState(c.f7.VISIBLE);
+            let e = p[t];
+            null != e && (h(), f(e));
+        }, [t, f, h]);
+        let m = r.useMemo(() => (t !== u.AW.ORBS || o ? ((0, u.RE)(t) && g ? u.AW.CATALOG : t) : u.AW.HOME), [t, o, g]),
+            [_, C] = r.useState(m),
+            [O, v] = r.useState(u.f7.VISIBLE);
         r.useEffect(() => {
-            (m(h), _ !== c.f7.VISIBLE && C(c.f7.VISIBLE));
-        }, [h, _]);
-        let O = (e) => new Promise((t) => setTimeout(t, e)),
-            E = (0, l.k6)(),
-            v = r.useCallback(
+            (C(m), O !== u.f7.VISIBLE && v(u.f7.VISIBLE));
+        }, [m, O]);
+        let E = (e) => new Promise((t) => setTimeout(t, e)),
+            S = (0, l.k6)(),
+            x = r.useCallback(
                 async (t, r) => {
-                    if ((f(), b === t)) return;
-                    (r && (C(c.f7.OUT), await O(1.1 * c.lb)), (0, c.RE)(t) && g(d[t]));
-                    let l = p && ![c.AW.HOME, c.AW.ORBS].includes(t) ? c.AW.CATALOG : t;
-                    (m(l), r && C(c.f7.IN), n || E.push(u.Z5c.COLLECTIBLES_SHOP_WITH_TAB(l), { shallow: !0 }), null != e.current && e.current.scrollTo({ to: 0 }), C(c.f7.VISIBLE));
+                    if ((b(), h(), _ === t)) return;
+                    (r && (v(u.f7.OUT), await E(1.1 * u.lb)), (0, u.RE)(t) && f(p[t]));
+                    let l = g && ![u.AW.HOME, u.AW.ORBS].includes(t) ? u.AW.CATALOG : t;
+                    (C(l), r && v(u.f7.IN), n || S.push(d.Z5c.COLLECTIBLES_SHOP_WITH_TAB(l), { shallow: !0 }), null != e.current && e.current.scrollTo({ to: 0 }), v(u.f7.VISIBLE));
                 },
-                [E, n, e, p, g, f, b]
+                [S, n, e, g, f, h, _, b]
             );
         return {
-            selectedTab: b,
-            transitionState: _,
-            transitionToTab: v
+            selectedTab: _,
+            transitionState: O,
+            transitionToTab: x
         };
     };

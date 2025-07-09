@@ -2,8 +2,8 @@ n.d(t, { q: () => C });
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(180650),
+    a = n.n(o),
+    i = n(180650),
     s = n(622535),
     c = n(755721),
     u = n(481060),
@@ -18,15 +18,15 @@ var r = n(255367),
 let C = (e) => {
     var t, n, o, C;
     let O,
-        { category: E, subblock: v, badgeText: S, handleTransition: x } = e;
-    null != v && (O = null == (t = g.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
-    let y = null != (n = null != O ? O : null == E ? void 0 : E.skuId) ? n : '',
+        { category: v, subblock: E, badgeText: S, handleTransition: x } = e;
+    null != E && (O = null == (t = g.Z.getCategoryByStoreListingId(null == E ? void 0 : E.categoryStoreListingId)) ? void 0 : t.skuId);
+    let y = null != (n = null != O ? O : null == v ? void 0 : v.skuId) ? n : '',
         { handleCardVisibilityChange: j } = (0, f.E)(y, 'home', 'marketing featured block'),
-        { featuredBlockBanner: T } = (0, h.YG)(E, v),
+        { featuredBlockBanner: T } = (0, h.YG)(v, E),
         P = l.useRef(null),
-        L = y === a.T.NAMEPLATES_V3,
+        L = y === i.T.NAMEPLATES_V3,
         I = L ? 'NAMEPLATES VOL.3' : null,
-        k = null == v ? void 0 : v.bodyText,
+        k = null == E ? void 0 : E.bodyText,
         B = (0, p.sp)();
     return (0, r.jsx)(s.$, {
         innerRef: P,
@@ -62,8 +62,8 @@ let C = (e) => {
                         null != I &&
                             (0, r.jsx)(u.X6q, {
                                 lineClamp: 2,
-                                className: i()(_.featuredBlockTitleText, { [_.featuredBlockTitleTextNameplate]: L }),
-                                style: { color: null != (o = null == v ? void 0 : v.bannerTextColor) ? o : 'white' },
+                                className: a()(_.featuredBlockTitleText, { [_.featuredBlockTitleTextNameplate]: L }),
+                                style: { color: null != (o = null == E ? void 0 : E.bannerTextColor) ? o : 'white' },
                                 variant: 'heading-xl/semibold',
                                 children: I
                             }),
@@ -71,7 +71,7 @@ let C = (e) => {
                             (0, r.jsx)(u.X6q, {
                                 lineClamp: null != I ? 2 : 4,
                                 className: _.featuredBlockBodyText,
-                                style: { color: null != (C = null == v ? void 0 : v.bannerTextColor) ? C : 'white' },
+                                style: { color: null != (C = null == E ? void 0 : E.bannerTextColor) ? C : 'white' },
                                 variant: 'heading-md/medium',
                                 children: k
                             })

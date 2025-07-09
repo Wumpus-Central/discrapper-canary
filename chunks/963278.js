@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var l = n(120356),
     o = n.n(l),
-    i = n(442837),
-    a = n(481060),
+    a = n(442837),
+    i = n(481060),
     s = n(594174),
     c = n(381585),
     u = n(597688),
@@ -13,7 +13,7 @@ var l = n(120356),
     g = n(806734);
 let f = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+        f = (0, a.e7)([s.default], () => s.default.getCurrentUser());
     return null == f
         ? null
         : (0, r.jsxs)('div', {
@@ -22,11 +22,11 @@ let f = (e) => {
                   (0, r.jsxs)('div', {
                       className: g.blockHeader,
                       children: [
-                          (0, r.jsx)(a.X6q, {
+                          (0, r.jsx)(i.X6q, {
                               variant: 'heading-lg/semibold',
                               children: t.name
                           }),
-                          (0, r.jsx)(a.zxk, {
+                          (0, r.jsx)(i.zxk, {
                               variant: 'secondary',
                               text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n('shelf block see all', t.categorySkuId)
@@ -38,8 +38,8 @@ let f = (e) => {
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
                               let o = u.Z.getCategoryForProduct(e),
-                                  i = u.Z.getProduct(e);
-                              return null == o || null == i
+                                  a = u.Z.getProduct(e);
+                              return null == o || null == a
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -52,7 +52,7 @@ let f = (e) => {
                                             children: (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    product: i,
+                                                    product: a,
                                                     category: o,
                                                     user: f,
                                                     tab: l
