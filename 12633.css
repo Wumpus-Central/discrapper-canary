@@ -49774,10 +49774,18 @@ html.disable-forced-colors * {
     color: var(--interactive-hover)
 }
 
+.badgeContainer__8fea4 {
+    position: relative
+}
+
+.badgeContainer__8fea4,
 .container__8fea4 {
-    align-items: center;
     display: flex;
     justify-content: center
+}
+
+.container__8fea4 {
+    align-items: center
 }
 
 .paletteIcon__8fea4 {
