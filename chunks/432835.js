@@ -47,5 +47,5 @@ let d = new u(
             );
         }
     },
-    o.IZ.cachedIsEnabled()
+    o.IZ.cachedIsEnabled() ? 'libdiscore' : 'typescript'
 );

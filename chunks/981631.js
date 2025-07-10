@@ -6,99 +6,99 @@
     $VG: () => g.$V,
     $Y6: () => tg,
     $pe: () => ts,
-    A2N: () => rS,
-    ABu: () => tX,
-    ADE: () => n_,
-    AEg: () => nO,
+    A2N: () => rA,
+    ABu: () => tQ,
+    ADE: () => np,
+    AEg: () => nv,
     ANM: () => eS,
     AQB: () => ew,
-    AeJ: () => nM,
+    AeJ: () => nk,
     Ai1: () => g.Ai,
     AlD: () => g.Al,
-    AzA: () => rO,
+    AzA: () => rv,
     B1h: () => g.B1,
     B9o: () => tu,
-    BFP: () => t$,
+    BFP: () => t0,
     BRd: () => g.BR,
-    BVn: () => rz,
+    BVn: () => rq,
     BZL: () => g.BZ,
-    BhN: () => nV,
+    BhN: () => nF,
     BiE: () => eq,
-    Bjg: () => nF,
+    Bjg: () => nZ,
     BmY: () => ea,
     BpS: () => ec,
-    CgE: () => rE,
-    CkL: () => tK,
+    CgE: () => rb,
+    CkL: () => tz,
     CoT: () => N,
     Cyb: () => g.Cy,
-    DJE: () => n6,
+    DJE: () => n8,
     DJj: () => eL,
     DZw: () => eR,
-    E07: () => tv,
+    E07: () => tI,
     EKQ: () => g.EK,
-    EOG: () => nX,
+    EOG: () => nQ,
     ETv: () => g.ET,
-    EYA: () => tO,
+    EYA: () => tv,
     EkH: () => O,
     Etm: () => g.Et,
-    Eu4: () => nn,
+    Eu4: () => nr,
     FD8: () => ek,
-    FQ1: () => rD,
+    FQ1: () => rL,
     Fc: () => tt,
     FoC: () => q,
     FsG: () => E.Fs,
     GI0: () => ez,
-    GNZ: () => nx,
+    GNZ: () => nM,
     GOo: () => e6,
-    GQo: () => nq,
+    GQo: () => nX,
     GU0: () => ep,
     GZQ: () => g.GZ,
     H0J: () => g.H0,
-    HGf: () => n1,
+    HGf: () => n2,
     HN8: () => eB,
     HeQ: () => g.He,
-    Hqc: () => ny,
-    HsE: () => rp,
+    Hqc: () => nO,
+    HsE: () => rh,
     IE4: () => V,
     IIU: () => e5,
-    IWh: () => rL,
+    IWh: () => rx,
     IXf: () => e7,
     I_8: () => em,
-    IlC: () => n4,
+    IlC: () => n5,
     Ilk: () => g.Il,
-    IyS: () => rx,
+    IyS: () => rM,
     J0y: () => z,
     J6R: () => ej,
     JjL: () => g.Jj,
     JkL: () => tb,
-    Jn9: () => rY,
+    Jn9: () => rW,
     JuI: () => eW,
-    JwP: () => nc,
-    K3D: () => rw,
-    KA4: () => tA,
-    KFR: () => nC,
-    KJ3: () => rN,
+    JwP: () => nu,
+    K3D: () => rD,
+    KA4: () => tN,
+    KFR: () => nR,
+    KJ3: () => rC,
     KsC: () => A,
     L4X: () => eV,
     LAt: () => to,
-    LPv: () => tz,
+    LPv: () => tq,
     LYt: () => th,
-    Lg6: () => rA,
-    M7m: () => tQ,
+    Lg6: () => rN,
+    M7m: () => tJ,
     MAM: () => g.MA,
     ME: () => eh,
-    McO: () => rX,
-    MoX: () => r_,
+    McO: () => rQ,
+    MoX: () => rp,
     NYc: () => g.NY,
-    NYg: () => nU,
-    N_j: () => nQ,
+    NYg: () => nG,
+    N_j: () => nJ,
     NgX: () => I,
-    O0b: () => nl,
+    O0b: () => nc,
     O0n: () => eo,
     O42: () => E.O4,
-    O8q: () => n2,
+    O8q: () => n3,
     OBS: () => W,
-    OBo: () => ns,
+    OBo: () => nl,
     OGo: () => ed,
     OL7: () => g.OL,
     OMz: () => g.OM,
@@ -108,240 +108,241 @@
     Odu: () => $,
     PEY: () => e1,
     PNu: () => ex,
-    POd: () => rc,
+    POd: () => ru,
     PRK: () => eJ,
-    PUi: () => nL,
+    PUi: () => nx,
     Plq: () => g.Pl,
     PrB: () => L,
     PrS: () => tm,
-    PsQ: () => tZ,
+    PsQ: () => tH,
     PyE: () => g.Py,
-    QCD: () => nz,
-    QIO: () => tR,
+    QCD: () => nq,
+    QIO: () => tP,
     QKv: () => F,
     QL: () => g.QL,
-    QR$: () => ru,
+    QR$: () => rd,
     QZA: () => y,
     Qa3: () => g.Q,
-    Qqv: () => tj,
-    R5N: () => nh,
+    Qqv: () => tU,
+    R5N: () => nm,
     R7I: () => tE,
-    REU: () => rh,
+    REU: () => rm,
     RG5: () => g.RG,
     RK: () => g.RK,
-    RYY: () => tJ,
+    RYY: () => t$,
     RcX: () => tf,
-    Rg9: () => nP,
+    Rg9: () => nw,
     S7T: () => g.S7,
-    S9g: () => nI,
-    SOq: () => n0,
-    SRg: () => nb,
-    SaU: () => tU,
-    Sap: () => t9,
-    Sbl: () => tw,
+    S9g: () => nT,
+    SOq: () => n1,
+    SRg: () => ny,
+    SaU: () => tG,
+    Sap: () => ne,
+    Sbl: () => tD,
     Sc2: () => eO,
     Skl: () => g.Sk,
-    T23: () => rK,
+    T23: () => rz,
     TC2: () => g.TC,
-    TNx: () => tS,
+    TNx: () => tA,
     TPd: () => o.T,
     TU7: () => tc,
-    TaA: () => rn,
-    TzF: () => nK,
+    TaA: () => rr,
+    TzF: () => nz,
     U66: () => g.U6,
     U9i: () => g.U9,
     ULH: () => R,
-    Ucd: () => rZ,
+    Ucd: () => rH,
     Uk1: () => g.Uk,
-    UkZ: () => rk,
+    UkZ: () => rj,
     Usc: () => H,
     Uvt: () => l.U,
     V$x: () => c.V,
     V6Z: () => g.V6,
     V7H: () => ti,
-    VD2: () => nj,
+    VD2: () => nU,
     VKK: () => eF,
-    V_K: () => tW,
+    V_K: () => tK,
     VqG: () => g.Vq,
     Vzj: () => g.Vz,
-    WND: () => na,
+    WND: () => no,
     WtW: () => e4,
-    Wyy: () => t5,
+    Wyy: () => t6,
     X5t: () => g.X5,
     X6Q: () => g.X6,
     X7u: () => g.X7,
     XAJ: () => ev,
-    XKF: () => nJ,
+    XKF: () => n$,
     XmY: () => e$,
     Xyh: () => e2,
     YeM: () => el,
     Ypu: () => ei,
     Z5c: () => eA,
     Z8P: () => eD,
-    Z9p: () => nd,
+    Z9p: () => nf,
     ZUi: () => Z,
-    ZY5: () => tL,
+    ZY5: () => tx,
     ZfP: () => C,
     Zuq: () => g.Zu,
     _1z: () => en,
-    _8R: () => rV,
+    _8R: () => rF,
     _s_: () => T,
     _vf: () => er,
-    a5g: () => tY,
+    a5g: () => tW,
     aIL: () => ey,
-    aIt: () => ra,
+    aIt: () => ro,
     aO5: () => g.aO,
-    aZC: () => tq,
-    aib: () => tC,
-    ane: () => nD,
-    apO: () => n9,
-    b2L: () => ne,
-    b4C: () => rU,
-    b8q: () => tx,
+    aZC: () => tX,
+    aib: () => tR,
+    ane: () => nL,
+    apO: () => re,
+    b2L: () => nt,
+    b4C: () => rG,
+    b8q: () => tM,
     bL: () => eC,
-    c2C: () => nw,
+    c2C: () => nD,
     d4z: () => o.d,
-    dAT: () => tH,
-    dCx: () => t8,
+    dAT: () => tY,
+    dCx: () => t7,
     dG4: () => g.dG,
     dGM: () => e9,
     dGm: () => g.yA,
     dN1: () => eX,
-    dYL: () => tN,
-    e3s: () => n5,
-    eBq: () => n3,
-    eHb: () => nW,
-    eRX: () => t6,
+    dYL: () => tC,
+    e3s: () => n6,
+    eBq: () => n4,
+    eHb: () => nK,
+    eRX: () => t8,
     eWB: () => tr,
-    ecB: () => nN,
+    ecB: () => nC,
     eez: () => td,
     en1: () => eU,
-    epS: () => ro,
+    epS: () => rs,
     epw: () => tn,
-    evJ: () => tP,
-    f07: () => n8,
+    evJ: () => tw,
+    f07: () => n7,
     fK7: () => g.fK,
     fMv: () => E.fM,
     fo$: () => ta,
     frH: () => g.fr,
-    fzT: () => t1,
-    gLR: () => rW,
+    fzT: () => t2,
+    gLR: () => rK,
     gg$: () => g.gg,
-    gkr: () => rd,
+    gkr: () => rf,
     hBH: () => s.h,
-    hCA: () => rF,
-    hUK: () => nu,
-    hVg: () => nv,
+    hCA: () => rZ,
+    hUK: () => nd,
+    hVg: () => nI,
     hes: () => B,
-    hiG: () => rQ,
+    hiG: () => rJ,
     i$l: () => g.i$,
-    iC$: () => rg,
-    iEv: () => re,
+    iC$: () => rE,
+    iEv: () => rt,
     iLy: () => K,
     ihW: () => E.ih,
     ipw: () => et,
-    ivE: () => nZ,
+    ivE: () => nH,
     j3N: () => eM,
     j8d: () => g.j8,
-    jXE: () => tM,
-    jm8: () => rR,
-    jsM: () => rf,
-    jwA: () => nA,
+    jXE: () => tk,
+    jm8: () => rP,
+    jsM: () => r_,
+    jwA: () => nN,
     kEZ: () => j,
-    kGb: () => rs,
-    kNB: () => ri,
+    kGb: () => rl,
+    kNB: () => ra,
     kVF: () => M,
     kg4: () => v,
     kod: () => eb,
     l$U: () => eH,
-    l4R: () => rl,
-    l9w: () => rC,
+    l4R: () => rc,
+    l9w: () => rR,
     lTL: () => g.lT,
     ldS: () => g.ld,
     lds: () => eE,
     lxg: () => eu,
     mBz: () => eQ,
     mFx: () => e_,
-    n8r: () => nH,
-    nkL: () => nB,
-    o3l: () => ni,
-    oAB: () => tG,
-    oCV: () => nr,
+    n8r: () => nY,
+    nkL: () => nV,
+    o3l: () => na,
+    oAB: () => tB,
+    oCV: () => ni,
     oNc: () => U,
     o_z: () => eg,
     p3w: () => tp,
-    p6O: () => t2,
+    p6O: () => t3,
     pAY: () => t_,
     pJs: () => P,
     pKx: () => g.pK,
     pM4: () => x,
     pNK: () => S,
-    pTL: () => rH,
-    pjP: () => n$,
-    pmI: () => t3,
-    q5t: () => tD,
-    q9n: () => nG,
-    qAy: () => tk,
-    qWG: () => rG,
-    qXD: () => rm,
-    qc2: () => rr,
+    pTL: () => rY,
+    pjP: () => n0,
+    pmI: () => t4,
+    q5t: () => tL,
+    q9n: () => nB,
+    qAy: () => tj,
+    qWG: () => rB,
+    qXD: () => rg,
+    qc2: () => ri,
     qhL: () => te,
     qrD: () => w,
     r2o: () => k,
-    rMx: () => np,
-    rnv: () => tI,
-    rsA: () => nT,
-    rtL: () => t7,
+    rMx: () => nh,
+    rnv: () => tT,
+    rsA: () => nS,
+    rtL: () => t9,
     rxP: () => g.rx,
-    s9s: () => ry,
+    s9s: () => rO,
     sFg: () => es,
-    sHY: () => rt,
+    sHY: () => rn,
     scU: () => ty,
-    si2: () => rP,
-    t4x: () => tF,
+    si2: () => rw,
+    t4x: () => tZ,
     tG9: () => eG,
     tHP: () => eP,
     tPV: () => eY,
     tPk: () => g.tP,
     t_t: () => ee,
-    tuJ: () => no,
+    tuJ: () => ns,
     u34: () => b,
-    uRl: () => tV,
+    uRl: () => tF,
     uaV: () => c.u,
-    udG: () => ng,
-    vB8: () => nS,
-    vID: () => nE,
-    vTt: () => nt,
-    vbS: () => t0,
-    vpv: () => tT,
-    vtS: () => tB,
+    udG: () => nE,
+    vB8: () => nA,
+    vID: () => nb,
+    vTt: () => nn,
+    vbS: () => t1,
+    vpv: () => tS,
+    vtS: () => tV,
     vuo: () => eZ,
-    vxO: () => n7,
-    w2V: () => rT,
+    vxO: () => n9,
+    w2V: () => rS,
     wC$: () => Q,
-    wI2: () => rI,
+    wI2: () => rT,
     wZ8: () => ef,
-    wli: () => rM,
-    x0X: () => nY,
-    x8Z: () => rv,
-    xAR: () => rB,
+    wli: () => rk,
+    x0X: () => nW,
+    x8Z: () => rI,
+    xAR: () => rV,
     xGv: () => tl,
     xPJ: () => X,
-    xW$: () => nm,
+    xW$: () => ng,
     xjy: () => eN,
     xmn: () => G,
     xr4: () => g.xr,
-    yXg: () => nk,
+    yXg: () => nj,
     yXt: () => g.yX,
     yYS: () => g.yY,
     yb: () => Y,
-    ylB: () => rj,
-    yqN: () => nf,
+    ylB: () => rU,
+    yqN: () => n_,
     ys_: () => e3,
+    z7k: () => tO,
     zMe: () => g.zM,
-    zUn: () => nR,
-    zYc: () => rb,
-    zo9: () => rq
+    zUn: () => nP,
+    zYc: () => ry,
+    zo9: () => rX
 }),
     n(388685),
     n(743606));
@@ -1610,7 +1611,8 @@ let e7 = 128,
     tE = 650,
     tb = 'DEVICE_TOKEN',
     ty = 'DEVICE_VOIP_TOKEN',
-    tO = Object.freeze({
+    tO = 'first_run_date_key',
+    tv = Object.freeze({
         API_DOCS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/docs/intro'),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/docs/game-and-server-management/alpha-and-beta-testing'),
         API_DOCS_APPLICATION_SKUS_INDEX: (e) => ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/developers/applications/').concat(e, '/skus'),
@@ -1647,24 +1649,24 @@ let e7 = 128,
         SAFETY_CENTER: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/safetycenter'),
         VOICE_FILTERS_BLOG: 'https://discord.com/blog/voice-filters'
     }),
-    tv = Object.freeze({
+    tI = Object.freeze({
         DEVELOPER_PORTAL: '/developers',
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => '/developers/servers/'.concat(e),
         DEVELOPER_PORTAL_TEAMS: '/developers/teams',
         DEVELOPER_PORTAL_EDIT_PAYOUTS: (e) => '/developers/teams/'.concat(e, '/payout-settings')
     }),
-    tI = 10,
-    tT = 25,
-    tS = /^FILTER_/,
-    tA = /^ANSWER_/,
-    tN = 32;
-var tC = (function (e) {
+    tT = 10,
+    tS = 25,
+    tA = /^FILTER_/,
+    tN = /^ANSWER_/,
+    tC = 32;
+var tR = (function (e) {
         return ((e.GUILD = 'GUILD'), (e.FAVORITES = 'FAVORITES'), (e.CHANNEL = 'CHANNEL'), (e.GUILD_CHANNEL = 'GUILD_CHANNEL'), (e.CHAT_SIDEBAR = 'CHAT_SIDEBAR'), (e.GIF = 'GIF'), (e.GUILD_DISCOVERY = 'GUILD_DISCOVERY'), (e.GUILD_DISCOVERY_TAG = 'GUILD_DISCOVERY_TAG'), (e.GUILD_DISCOVERY_TOPIC = 'GUILD_DISCOVERY_TOPIC'), (e.STICKER = 'STICKER'), (e.STICKER_SHOP = 'STICKER_SHOP'), (e.INSTANT_INVITE = 'INSTANT_INVITE'), (e.EMOJI = 'EMOJI'), (e.EMOJI_REACTION = 'EMOJI_REACTION'), (e.EMOJI_AUTO_SUGGESTION = 'EMOJI_AUTO_SUGGESTION'), (e.DMS = 'DMS'), (e.THREAD = 'THREAD'), (e.SOUNDBOARD = 'SOUNDBOARD'), e);
     })({}),
-    tR = (function (e) {
+    tP = (function (e) {
         return ((e.NEWEST = 'newest'), (e.OLDEST = 'oldest'), (e.MOST_RELEVANT = 'most_relevant'), e);
     })({}),
-    tP = (function (e) {
+    tw = (function (e) {
         return (
             (e[(e.UNKNOWN_ACCOUNT = 10001)] = 'UNKNOWN_ACCOUNT'),
             (e[(e.UNKNOWN_APPLICATION = 10002)] = 'UNKNOWN_APPLICATION'),
@@ -1847,7 +1849,7 @@ var tC = (function (e) {
             e
         );
     })({}),
-    tw = (function (e) {
+    tD = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = 'Guild Create Invite Suggestion'),
             (e.ADD_FRIENDS_TO_DM = 'Add Friends to DM'),
@@ -1930,10 +1932,10 @@ var tC = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tL = (function (e) {
         return ((e.JOIN = 'join'), (e.ASK_TO_JOIN = 'ask to join'), (e.LAUNCH = 'launch'), (e.SPECTATE = 'spectate'), e);
     })({}),
-    tL = (function (e) {
+    tx = (function (e) {
         return (
             (e.AUTH = 'Auth'),
             (e.STORE_LISTING = 'Store Listing'),
@@ -2020,8 +2022,8 @@ var tC = (function (e) {
             e
         );
     })({});
-let tx = 'help_center_cta';
-var tM = (function (e) {
+let tM = 'help_center_cta';
+var tk = (function (e) {
         return (
             (e.HERO = 'Hero'),
             (e.BODY = 'Body'),
@@ -2414,7 +2416,7 @@ var tM = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tj = (function (e) {
         return (
             (e.TOOLTIP = 'Tooltip'),
             (e.CARD = 'Card'),
@@ -2563,14 +2565,14 @@ var tM = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tU = (function (e) {
         return ((e.GIFT = 'gift'), (e.BUY = 'buy'), (e.BOX_ART = 'box_art'), (e.PERK = 'perk'), (e.NONE = 'none'), (e.TIER_1 = 'tier_1'), (e.TIER_2 = 'tier_2'), (e.TIER_3 = 'tier_3'), (e.TRIAL = 'trial'), (e.FPS = 'fps'), (e.RESOLUTION = 'resolution'), (e.ACTIVITY = 'activity'), (e.REACTION = 'reaction'), (e.CANT_ADD_OR_REMOVE = 'cant_add_or_remove'), (e.REACTION_OVERFLOW = 'reaction_overflow'), (e.NITRO_STANDARD = 'nitro_standard'), (e.NITRO_BASIC = 'nitro_basic'), (e.NITRO_SKU_SELECTION = 'nitro_sku_selection'), (e.ACK_AUTOMATIC = 'ack_automatic'), (e.ACK_SEMI_AUTOMATIC = 'ack_semi_automatic'), (e.ACK_MANUAL = 'ack_manual'), e);
     })({});
-let tU = {
+let tG = {
         page: 'Direct',
         object: 'Web URL'
     },
-    tG = Object.freeze({
+    tB = Object.freeze({
         TEXT_PLAYGROUND: 'Text Playground',
         DESIGN_SYSTEMS: 'Design System',
         DESIGN_SYSTEMS_COLORS: 'Design System',
@@ -2691,28 +2693,28 @@ let tU = {
         SECURE_FRAMES_VERIFIED_DEVICES: 'Secure Frames Verified Devices',
         WEB_SETTING_TREE_TOOL: 'Web Setting Tree Tool'
     });
-var tB = (function (e) {
+var tV = (function (e) {
         return ((e.APPLICATION_STORE = 'Application Store Verified Guild Invite - Lurker'), (e.CHAT_INPUT_BLOCKER = 'Chat Input Blocker - Lurker Mode'), (e.NOTICE_BAR = 'Notice - Lurker Mode'), (e.MOBILE_GUILD_DISCOVERY = 'iOS Guild Discovery - Lurker'), (e.DIRECTORY_ENTRY = 'Directory Channel Entry'), (e.DIRECTORY_EVENTS = 'Directory Channel Events'), (e.POLL_ALERT = 'Poll Alert'), (e.ICYMI = 'ICYMI'), e);
     })({}),
-    tV = (function (e) {
+    tF = (function (e) {
         return ((e.QR_CODE = 'QR Code Login'), (e.MOBILE_WEB_HANDOFF = 'Mobile Web Handoff'), (e.DEFAULT = 'The default username password Login'), (e.MFA = 'MFA Login'), (e.PASSWORDLESS_CONDITIONAL_UI = 'Passwordless Conditional UI'), e);
     })({}),
-    tF = (function (e) {
+    tZ = (function (e) {
         return ((e.INVITE_NOTICE = 'Invite Notice'), (e.SETTINGS_INVITE = 'Settings Invite'), (e.CONTEXT_MENU = 'Context Menu'), (e.WELCOME_MESSAGE = 'Welcome Message'), (e.GUILD_CHANNELS = 'Guild Channels'), (e.GUILD_HEADER = 'Guild Header'), (e.GUILD_EVENTS = 'Guild Events'), (e.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (e.GUILD_CREATE = 'Guild Create'), (e.STREAM_INVITE = 'Stream Invite'), (e.GUILD_PROGRESS = 'Guild Progress'), (e.CHANNEL_WELCOME = 'Channel Welcome CTA'), (e.CHANNEL_CALL = 'Channel Call'), (e.ACTIVITY_INVITE = 'Activity Invite'), (e.INVITE_SYSTEM_MESSAGE = 'Invite System Message'), (e.HUB_DIRECTORY = 'Hub Directory Channel'), (e.HUB_SIDEBAR = 'Hub Sidebar'), (e.STAGE_CHANNEL = 'Stage Channel'), (e.GROUP_DM = 'Group DM Invite Create'), (e.GUILD_HOME = 'Guild Home'), (e.ACTIVITY_ENTRY_POINT_TILE = 'Activity Entry Point Tile'), (e.ADD_FRIENDS_MODAL = 'Add Friends Modal'), (e.ADD_FRIENDS_WIDGET = 'Add Friends Widget'), (e.ADD_FRIENDS_MODAL_SEARCH = 'Add Friends Modal Search'), (e.PROFILE_CTA = 'Profile CTA'), e);
     })({}),
-    tZ = (function (e) {
+    tH = (function (e) {
         return ((e.GUILD_BANNER_NOTICE = 'Guild Banner Notice'), (e.GUILD_MFA_WARNING = 'Guild MFA Warning'), (e.GUILD_SUBSCRIPTION_NOTICE = 'Guild Subscription Notice'), (e.QUICK_SWITCHER_NOTICE = 'Quick Switcher Notice'), (e.INVITE_NOTICE = 'Invite Notice'), (e.GRACE_PERIOD_NOTICE = 'Grace Period Notice'), (e.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE = 'Enable Public Guild Upsell Notice'), (e.HUB_LINK_NOTICE = 'Hub Link Notice'), (e.CHANNEL_OPT_IN = 'Channel Opt-In Customize'), (e.ROLE_SUBSCRIPTION_MWEB_PURCHASE_NOTICE = 'Role Subscription MWeb Purchase Notice'), (e.GUILD_ONBOARDING_UPSELL_NOTICE = 'Guild Onboarding Upsell Notice'), (e.CLIPS_EDUCATION = 'Clips Education Channel Notice'), (e.LINKED_ROLES_ADMIN_NUX = 'Linked Roles Admin Nux Channel Notice'), (e.SUMMARIES_NOTICE = 'Summaries Channel Notice'), (e.SUMMARIES_ENABLED_NOTICE = 'Summaries Enabled Notice'), (e.CLAN_ADMIN_UPSELL = 'Clan Admin Upsell'), e);
     })({}),
-    tH = (function (e) {
+    tY = (function (e) {
         return ((e.APPLICATION = 'Application'), (e.SERVER_INVITE = 'Server Invite'), (e.GDM_INVITE = 'GDM Invite'), (e.FRIEND_INVITE = 'Friend Invite'), (e.SPOTIFY = 'Spotify'), (e.STREAM = 'Stream'), e);
     })({}),
-    tY = (function (e) {
+    tW = (function (e) {
         return ((e.DIRECT_MESSAGE = 'Direct Message'), (e.SMS = 'SMS'), (e.EMAIL = 'Email'), e);
     })({}),
-    tW = (function (e) {
+    tK = (function (e) {
         return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.SAFE = 2)] = 'SAFE'), (e[(e.AGE_RESTRICTED = 3)] = 'AGE_RESTRICTED'), e);
     })({}),
-    tK = (function (e) {
+    tz = (function (e) {
         return (
             (e.IFRAME_MOUNT = 'IFRAME_MOUNT'),
             (e.IFRAME_UNMOUNT = 'IFRAME_UNMOUNT'),
@@ -2813,17 +2815,17 @@ var tB = (function (e) {
             e
         );
     })({}),
-    tz = (function (e) {
+    tq = (function (e) {
         return ((e.TOGGLE_REACTION_POPOUT = 'TOGGLE_REACTION_POPOUT'), (e.ANIMATE_CHAT_AVATAR = 'ANIMATE_CHAT_AVATAR'), (e.VOICE_MESSAGE_SEND = 'VOICE_MESSAGE_SEND'), e);
     })({});
-let tq = 50;
-var tX = (function (e) {
+let tX = 50;
+var tQ = (function (e) {
         return ((e.TWITCH = 'twitch'), (e.YOUTUBE = 'youtube'), (e.SKYPE = 'skype'), (e.STEAM = 'steam'), (e.LEAGUE_OF_LEGENDS = 'leagueoflegends'), (e.BATTLENET = 'battlenet'), (e.BLUESKY = 'bluesky'), (e.BUNGIE = 'bungie'), (e.REDDIT = 'reddit'), (e.TWITTER = 'twitter'), (e.TWITTER_LEGACY = 'twitter_legacy'), (e.SPOTIFY = 'spotify'), (e.FACEBOOK = 'facebook'), (e.XBOX = 'xbox'), (e.SAMSUNG = 'samsung'), (e.CONTACTS = 'contacts'), (e.INSTAGRAM = 'instagram'), (e.MASTODON = 'mastodon'), (e.SOUNDCLOUD = 'soundcloud'), (e.GITHUB = 'github'), (e.PLAYSTATION = 'playstation'), (e.PLAYSTATION_STAGING = 'playstation-stg'), (e.EPIC_GAMES = 'epicgames'), (e.RIOT_GAMES = 'riotgames'), (e.ROBLOX = 'roblox'), (e.PAYPAL = 'paypal'), (e.EBAY = 'ebay'), (e.TIKTOK = 'tiktok'), (e.CRUNCHYROLL = 'crunchyroll'), (e.DOMAIN = 'domain'), (e.AMAZON_MUSIC = 'amazon-music'), e);
     })({}),
-    tQ = (function (e) {
+    tJ = (function (e) {
         return ((e.DESKTOP = 'desktop'), (e.XBOX = 'xbox'), (e.SAMSUNG = 'samsung'), (e.IOS = 'ios'), (e.ANDROID = 'android'), (e.EMBEDDED = 'embedded'), (e.PS4 = 'ps4'), (e.PS5 = 'ps5'), e);
     })({}),
-    tJ = (function (e) {
+    t$ = (function (e) {
         return ((e[(e.PRIVATE = 0)] = 'PRIVATE'), (e[(e.PUBLIC = 1)] = 'PUBLIC'), e);
     })({});
 Object.freeze({
@@ -2831,47 +2833,47 @@ Object.freeze({
     GAME_INVITE_FRAGMENT: '/_discord/join?secret=',
     AUTHORIZATION_CANCEL_FRAGMENT: '/_discord/auth?cancel=true'
 });
-let t$ = new Set(['facebook', 'contacts']),
-    t0 = new Set(['spotify', 'xbox', 'playstation', 'playstation-stg', 'crunchyroll']),
-    t1 = Object.freeze({
+let t0 = new Set(['facebook', 'contacts']),
+    t1 = new Set(['spotify', 'xbox', 'playstation', 'playstation-stg', 'crunchyroll']),
+    t2 = Object.freeze({
         DESKTOP: ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/download'),
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     }),
-    t2 = 10070709,
-    t3 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
-    t4 = (0, u._i)(a.Z.BRAND_500);
-i()(null != t4, 'Brand color could not be parsed');
-let t5 = t4;
-var t6 = (function (e) {
+    t3 = 10070709,
+    t4 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
+    t5 = (0, u._i)(a.Z.BRAND_500);
+i()(null != t5, 'Brand color could not be parsed');
+let t6 = t5;
+var t8 = (function (e) {
         return ((e.VOICE_LEGACY_SUBSYSTEM = 'voice_legacy_subsystem'), (e.DEBUG_LOGGING = 'debug_logging'), (e.POPOUT_WINDOWS = 'popout_windows'), (e.ELEVATED_HOOK = 'elevated_hook'), (e.CREATE_HOST_ON_ATTACH = 'create_host_on_attach'), (e.USER_DATA_CACHE = 'user_data_cache'), (e.WEBAUTHN = 'webauthn'), e);
     })({}),
-    t8 = (function (e) {
+    t7 = (function (e) {
         return ((e.FILTER_FROM = 'FILTER_FROM'), (e.FILTER_MENTIONS = 'FILTER_MENTIONS'), (e.ANSWER_USERNAME_FROM = 'ANSWER_USERNAME_FROM'), (e.ANSWER_USERNAME_MENTIONS = 'ANSWER_USERNAME_MENTIONS'), (e.FILTER_HAS = 'FILTER_HAS'), (e.ANSWER_HAS = 'ANSWER_HAS'), (e.FILTER_FILE_TYPE = 'FILTER_FILE_TYPE'), (e.ANSWER_FILE_TYPE = 'ANSWER_FILE_TYPE'), (e.FILTER_FILE_NAME = 'FILTER_FILE_NAME'), (e.ANSWER_FILE_NAME = 'ANSWER_FILE_NAME'), (e.FILTER_BEFORE = 'FILTER_BEFORE'), (e.ANSWER_BEFORE = 'ANSWER_BEFORE'), (e.FILTER_AFTER = 'FILTER_AFTER'), (e.ANSWER_AFTER = 'ANSWER_AFTER'), (e.FILTER_ON = 'FILTER_ON'), (e.ANSWER_ON = 'ANSWER_ON'), (e.FILTER_IN = 'FILTER_IN'), (e.ANSWER_IN = 'ANSWER_IN'), (e.FILTER_PINNED = 'FILTER_PINNED'), (e.ANSWER_PINNED = 'ANSWER_PINNED'), e);
     })({}),
-    t7 = (function (e) {
+    t9 = (function (e) {
         return ((e.HISTORY = 'HISTORY'), (e.SEARCH_OPTIONS = 'SEARCH_OPTIONS'), (e.DATES = 'DATES'), e);
     })({}),
-    t9 = (function (e) {
+    ne = (function (e) {
         return ((e.EMPTY = 'EMPTY'), (e.FILTER = 'FILTER'), (e.FILTER_ALL = 'FILTER_ALL'), e);
     })({});
-let ne = 'YYYY-MM-DD',
-    nt = 'PrivateChannelRecipientsInvitePopout';
-var nn = (function (e) {
+let nt = 'YYYY-MM-DD',
+    nn = 'PrivateChannelRecipientsInvitePopout';
+var nr = (function (e) {
     return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_3 = 3)] = 'TIER_3'), e);
 })({});
-let nr = Object.freeze({
+let ni = Object.freeze({
         0: 0,
         1: 2,
         2: 7,
         3: 14
     }),
-    ni = 7,
-    na = 0;
-var no = (function (e) {
+    na = 7,
+    no = 0;
+var ns = (function (e) {
     return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.GIFT = 1)] = 'GIFT'), (e[(e.SALE = 2)] = 'SALE'), (e[(e.PREMIUM_TIER_1 = 3)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 4)] = 'PREMIUM_TIER_2'), (e[(e.MOBILE = 5)] = 'MOBILE'), (e[(e.PREMIUM_TIER_0 = 6)] = 'PREMIUM_TIER_0'), (e[(e.MOBILE_PREMIUM_TIER_2 = 7)] = 'MOBILE_PREMIUM_TIER_2'), e);
 })({});
-let ns = Object.freeze({
+let nl = Object.freeze({
     fonts: [
         {
             src: 'url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)',
@@ -2879,21 +2881,21 @@ let ns = Object.freeze({
         }
     ]
 });
-var nl = (function (e) {
+var nc = (function (e) {
     return ((e[(e.UNPAID = 0)] = 'UNPAID'), (e[(e.ACTIVE = 1)] = 'ACTIVE'), (e[(e.PAST_DUE = 2)] = 'PAST_DUE'), (e[(e.CANCELED = 3)] = 'CANCELED'), (e[(e.ENDED = 4)] = 'ENDED'), (e[(e.ACCOUNT_HOLD = 6)] = 'ACCOUNT_HOLD'), (e[(e.BILLING_RETRY = 7)] = 'BILLING_RETRY'), (e[(e.PAUSED = 8)] = 'PAUSED'), (e[(e.PAUSE_PENDING = 9)] = 'PAUSE_PENDING'), e);
 })({});
-let nc = {
+let nu = {
     ALL_PAUSE: new Set([9, 8]),
     ALL_PAUSEABLE: new Set([1, 8]),
     INACTIVE: new Set([0, 4, 6, 7])
 };
-var nu = (function (e) {
+var nd = (function (e) {
         return ((e[(e.OPEN = 1)] = 'OPEN'), (e[(e.PAID = 2)] = 'PAID'), (e[(e.VOID = 3)] = 'VOID'), (e[(e.UNCOLLECTIBLE = 4)] = 'UNCOLLECTIBLE'), e);
     })({}),
-    nd = (function (e) {
+    nf = (function (e) {
         return ((e.USER = 'USER'), (e.GLOBAL = 'GLOBAL'), (e.ROLE = 'ROLE'), (e.CHANNEL = 'CHANNEL'), (e.EMOJI = 'EMOJI'), (e.EMOJI_PREMIUM_UPSELL = 'EMOJI_PREMIUM_UPSELL'), (e.SLASH = 'SLASH'), (e.CHOICE = 'CHOICE'), (e.STICKER = 'STICKER'), (e.CHOICE_LOADING = 'CHOICE_LOADING'), (e.LABEL = 'LABEL'), e);
     })({});
-let nf = Object.freeze({
+let n_ = Object.freeze({
     FONT_SIZE_DEFAULT: 16,
     FONT_SIZE_MIN: 12,
     FONT_SIZE_MAX: 24,
@@ -2904,10 +2906,10 @@ let nf = Object.freeze({
     ZOOM_MAX: 200,
     ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200]
 });
-var n_ = (function (e) {
+var np = (function (e) {
         return ((e.OVERLAY_UNLOCKED = 'overlay_unlocked'), (e.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (e.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), e);
     })({}),
-    np = (function (e) {
+    nh = (function (e) {
         return (
             (e.APP_OPENED = 'app_opened'),
             (e.APP_CRASHED = 'app_crashed'),
@@ -3319,7 +3321,6 @@ var n_ = (function (e) {
             (e.PREMIUM_MARKETING_PERK_CARD_FLIPPED = 'premium_marketing_perk_card_flipped'),
             (e.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED = 'premium_marketing_what_is_new_card_hovered'),
             (e.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED = 'premium_marketing_perks_see_all_clicked'),
-            (e.BOGO_ELIGIBILITY_RESULT = 'bogo_eligibility_result'),
             (e.STORE_DIRECTORY_VIEWED = 'store_directory_viewed'),
             (e.STORE_DIRECTORY_BROWSE_VIEWED = 'store_directory_browse_viewed'),
             (e.STORE_DIRECTORY_FILTER_UPDATED = 'store_directory_filter_updated'),
@@ -4212,19 +4213,19 @@ var n_ = (function (e) {
             e
         );
     })({}),
-    nh = (function (e) {
+    nm = (function (e) {
         return ((e.CANARY = 'canary'), (e.PTB = 'ptb'), (e.STABLE = 'stable'), e);
     })({}),
-    nm = (function (e) {
+    ng = (function (e) {
         return ((e[(e.STAFF = 1)] = 'STAFF'), (e[(e.COLLABORATOR = 1125899906842624)] = 'COLLABORATOR'), (e[(e.RESTRICTED_COLLABORATOR = 2251799813685248)] = 'RESTRICTED_COLLABORATOR'), (e[(e.PARTNER = 2)] = 'PARTNER'), (e[(e.HYPESQUAD = 4)] = 'HYPESQUAD'), (e[(e.BUG_HUNTER_LEVEL_1 = 8)] = 'BUG_HUNTER_LEVEL_1'), (e[(e.BUG_HUNTER_LEVEL_2 = 16384)] = 'BUG_HUNTER_LEVEL_2'), (e[(e.HYPESQUAD_ONLINE_HOUSE_1 = 64)] = 'HYPESQUAD_ONLINE_HOUSE_1'), (e[(e.HYPESQUAD_ONLINE_HOUSE_2 = 128)] = 'HYPESQUAD_ONLINE_HOUSE_2'), (e[(e.HYPESQUAD_ONLINE_HOUSE_3 = 256)] = 'HYPESQUAD_ONLINE_HOUSE_3'), (e[(e.PREMIUM_EARLY_SUPPORTER = 512)] = 'PREMIUM_EARLY_SUPPORTER'), (e[(e.VERIFIED_BOT = 65536)] = 'VERIFIED_BOT'), (e[(e.VERIFIED_DEVELOPER = 131072)] = 'VERIFIED_DEVELOPER'), (e[(e.CERTIFIED_MODERATOR = 262144)] = 'CERTIFIED_MODERATOR'), (e[(e.BOT_HTTP_INTERACTIONS = 524288)] = 'BOT_HTTP_INTERACTIONS'), (e[(e.SPAMMER = 1048576)] = 'SPAMMER'), (e[(e.DISABLE_PREMIUM = 2097152)] = 'DISABLE_PREMIUM'), (e[(e.ACTIVE_DEVELOPER = 4194304)] = 'ACTIVE_DEVELOPER'), (e[(e.PROVISIONAL_ACCOUNT = 8388608)] = 'PROVISIONAL_ACCOUNT'), (e[(e.MFA_SMS = 16)] = 'MFA_SMS'), (e[(e.PREMIUM_PROMO_DISMISSED = 32)] = 'PREMIUM_PROMO_DISMISSED'), (e[(e.HAS_UNREAD_URGENT_MESSAGES = 8192)] = 'HAS_UNREAD_URGENT_MESSAGES'), (e[(e.QUARANTINED = 17592186044416)] = 'QUARANTINED'), e);
     })({}),
-    ng = (function (e) {
+    nE = (function (e) {
         return ((e[(e.EMBEDDED_RELEASED = 2)] = 'EMBEDDED_RELEASED'), (e[(e.EMBEDDED_IAP = 8)] = 'EMBEDDED_IAP'), (e[(e.APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE = 64)] = 'APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE'), (e[(e.GAME_PROFILE_DISABLED = 128)] = 'GAME_PROFILE_DISABLED'), (e[(e.CONTEXTLESS_ACTIVITY = 512)] = 'CONTEXTLESS_ACTIVITY'), (e[(e.SOCIAL_LAYER_INTEGRATION_LIMITED = 1024)] = 'SOCIAL_LAYER_INTEGRATION_LIMITED'), (e[(e.GATEWAY_PRESENCE = 4096)] = 'GATEWAY_PRESENCE'), (e[(e.GATEWAY_PRESENCE_LIMITED = 8192)] = 'GATEWAY_PRESENCE_LIMITED'), (e[(e.GATEWAY_GUILD_MEMBERS = 16384)] = 'GATEWAY_GUILD_MEMBERS'), (e[(e.GATEWAY_GUILD_MEMBERS_LIMITED = 32768)] = 'GATEWAY_GUILD_MEMBERS_LIMITED'), (e[(e.EMBEDDED = 131072)] = 'EMBEDDED'), (e[(e.GATEWAY_MESSAGE_CONTENT = 262144)] = 'GATEWAY_MESSAGE_CONTENT'), (e[(e.GATEWAY_MESSAGE_CONTENT_LIMITED = 524288)] = 'GATEWAY_MESSAGE_CONTENT_LIMITED'), (e[(e.EMBEDDED_FIRST_PARTY = 1048576)] = 'EMBEDDED_FIRST_PARTY'), (e[(e.APPLICATION_COMMAND_BADGE = 8388608)] = 'APPLICATION_COMMAND_BADGE'), (e[(e.SOCIAL_LAYER_INTEGRATION = 134217728)] = 'SOCIAL_LAYER_INTEGRATION'), (e[(e.PROMOTED = 536870912)] = 'PROMOTED'), (e[(e.PARTNER = 1073741824)] = 'PARTNER'), e);
     })({}),
-    nE = (function (e) {
+    nb = (function (e) {
         return ((e.MFA_WARNING = 'MFA_WARNING'), (e.INVITE = 'INVITE'), (e.QUICKSWITCHER = 'QUICKSWITCHER'), (e.GUILD_BOOSTING = 'PREMIUM_GUILD_SUBSCRIPTIONS'), (e.GUILD_BOOSTING_GRACE_PERIOD = 'PREMIUM_GUILD_GRACE_PERIOD'), (e.PUBLIC_UPSELL = 'PUBLIC_UPSELL'), (e.MAX_MEMBER_COUNT_100 = 'MAX_MEMBER_COUNT_100'), (e.MAX_MEMBER_COUNT_250 = 'MAX_MEMBER_COUNT_250'), (e.MAX_MEMBER_COUNT = 'MAX_MEMBER_COUNT'), (e.STAGE_CHANNEL_EVENT = 'STAGE_CHANNEL_EVENT'), (e.HUB_LINK = 'HUB_LINK'), (e.GUILD_BANNER = 'GUILD_BANNER'), (e.CHANNEL_OPT_IN = 'CHANNEL_OPT_IN'), (e.ROLE_SUBSCRIPTION_MWEB_PURCHASE = 'ROLE_SUBSCRIPTION_MWEB_PURCHASE'), (e.COMMANDS_MIGRATION = 'COMMANDS_MIGRATION'), (e.APPLICATION_SUBSCRIPTION_EXPIRATION = 'APPLICATION_SUBSCRIPTION_EXPIRATION'), (e.HUB_STUDY_ROOM = 'HUB_STUDY_ROOM'), (e.GUILD_ONBOARDING_UPSELL = 'GUILD_ONBOARDING_UPSELL'), (e.CLIPS_EDUCATION = 'CLIPS_EDUCATION'), (e.LINKED_ROLES_ADMIN = 'LINKED_ROLES_ADMIN'), (e.SUMMARIES = 'SUMMARIES'), (e.SUMMARIES_ENABLED = 'SUMMARIES_ENABLED'), (e.CLAN_ADMIN_UPSELL = 'CLAN_ADMIN_UPSELL'), e);
     })({});
-let nb = Object.freeze({
+let ny = Object.freeze({
         STORAGE_MANIFEST: (e, t) => ''.concat(e, '/storage/').concat(t, '/MANIFEST'),
         INSTALL_DIR: (e) => ''.concat(e, '/content'),
         ROOT_PATTERN: ['**/*'],
@@ -4236,17 +4237,17 @@ let nb = Object.freeze({
             linux: 'linux'
         }
     }),
-    ny = 86400000;
-var nO = (function (e) {
+    nO = 86400000;
+var nv = (function (e) {
         return ((e.NORMAL = 'normal'), (e.MINIMUM = 'minimum'), (e.NO_CHAT = 'no-chat'), (e.FULL_SCREEN = 'full-screen'), e);
     })({}),
-    nv = (function (e) {
+    nI = (function (e) {
         return ((e.THEATRE = 'theatre'), (e.FULL_SCREEN = 'full-screen'), (e.PIP = 'pip'), (e.POPOUT = 'popout'), (e.PORTRAIT = 'portrait'), (e.LANDSCAPE = 'landscape'), (e.MINIMIZED = 'minimized'), e);
     })({}),
-    nI = (function (e) {
+    nT = (function (e) {
         return ((e.USER_SETTINGS = 'USER_SETTINGS'), (e.CHANNEL_SETTINGS = 'CHANNEL_SETTINGS'), (e.GUILD_SETTINGS = 'GUILD_SETTINGS'), (e.RTC_DEBUG = 'RTC_DEBUG'), (e.COLLECTIBLES_SHOP = 'COLLECTIBLES_SHOP'), e);
     })({});
-let nT = Object.freeze({
+let nS = Object.freeze({
     ALL: null,
     GUILD_UPDATE: 1,
     CHANNEL_CREATE: 10,
@@ -4326,19 +4327,19 @@ let nT = Object.freeze({
     GUILD_MEMBER_VERIFICATION_UPDATE: 210,
     GUILD_PROFILE_UPDATE: 211
 });
-var nS = (function (e) {
+var nA = (function (e) {
         return ((e.ALL = 'ALL'), (e.CREATE = 'CREATE'), (e.UPDATE = 'UPDATE'), (e.DELETE = 'DELETE'), e);
     })({}),
-    nA = (function (e) {
+    nN = (function (e) {
         return ((e.USER = '1'), (e.ROLE = '0'), e);
     })({}),
-    nN = (function (e) {
+    nC = (function (e) {
         return ((e[(e.ROLE = 1)] = 'ROLE'), (e[(e.USER = 2)] = 'USER'), (e[(e.CHANNEL = 3)] = 'CHANNEL'), e);
     })({}),
-    nC = (function (e) {
+    nR = (function (e) {
         return ((e.ALL = 'ALL'), (e.UNKNOWN = 'UNKNOWN'), (e.GUILD = 'GUILD'), (e.CHANNEL = 'CHANNEL'), (e.CHANNEL_OVERWRITE = 'CHANNEL_OVERWRITE'), (e.USER = 'USER'), (e.ROLE = 'ROLE'), (e.INVITE = 'INVITE'), (e.WEBHOOK = 'WEBHOOK'), (e.EMOJI = 'EMOJI'), (e.INTEGRATION = 'INTEGRATION'), (e.STAGE_INSTANCE = 'STAGE_INSTANCE'), (e.GUILD_SCHEDULED_EVENT = 'GUILD_SCHEDULED_EVENT'), (e.GUILD_SCHEDULED_EVENT_EXCEPTION = 'GUILD_SCHEDULED_EVENT_EXCEPTION'), (e.THREAD = 'THREAD'), (e.STICKER = 'STICKER'), (e.APPLICATION_COMMAND = 'APPLICATION_COMMAND'), (e.AUTO_MODERATION_RULE = 'AUTO_MODERATION_RULE'), (e.ONBOARDING_PROMPT = 'ONBOARDING_PROMPT'), (e.GUILD_ONBOARDING = 'GUILD_ONBOARDING'), (e.GUILD_HOME = 'GUILD_HOME'), (e.GUILD_SOUNDBOARD = 'GUILD_SOUNDBOARD'), (e.HOME_SETTINGS = 'HOME_SETTINGS'), (e.VOICE_CHANNEL_STATUS = 'VOICE_CHANNEL_STATUS'), (e.GUILD_MEMBER_VERIFICATION = 'GUILD_MEMBER_VERIFICATION'), (e.GUILD_PROFILE = 'GUILD_PROFILE'), e);
     })({}),
-    nR = (function (e) {
+    nP = (function (e) {
         return (
             (e.NAME = 'name'),
             (e.DESCRIPTION = 'description'),
@@ -4479,33 +4480,33 @@ var nS = (function (e) {
             e
         );
     })({});
-let nP = 50;
-var nw = (function (e) {
+let nw = 50;
+var nD = (function (e) {
         return ((e.AGREEMENTS = 'AGREEMENTS'), (e.REQUIRE_CAPTCHA = 'REQUIRE_CAPTCHA'), (e.REQUIRE_VERIFIED_EMAIL = 'REQUIRE_VERIFIED_EMAIL'), (e.REQUIRE_VERIFIED_PHONE = 'REQUIRE_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL = 'REQUIRE_REVERIFIED_EMAIL'), (e.REQUIRE_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_SAFETY_FLOWS = 'REQUIRE_SAFETY_FLOWS'), e);
     })({}),
-    nD = (function (e) {
+    nL = (function (e) {
         return ((e.UPDATE_PASSWORD = 'update_password'), e);
     })({}),
-    nL = (function (e) {
+    nx = (function (e) {
         return ((e.CAPTCHA = 'captcha'), (e.EMAIL_OR_PHONE = 'email_or_phone'), (e.PHONE = 'phone'), (e.EMAIL = 'email'), (e.REVERIFY_PHONE = 'reverify_phone'), (e.REVERIFY_EMAIL = 'reverify_email'), e);
     })({});
-let nx = 512;
-var nM = (function (e) {
+let nM = 512;
+var nk = (function (e) {
         return ((e[(e.PRIMARY = 0)] = 'PRIMARY'), (e[(e.SECONDARY = 2)] = 'SECONDARY'), (e[(e.WHEEL = 4)] = 'WHEEL'), (e[(e.BACK = 8)] = 'BACK'), (e[(e.FORWARD = 16)] = 'FORWARD'), e);
     })({}),
-    nk = (function (e) {
+    nj = (function (e) {
         return ((e[(e.BACKSPACE = 8)] = 'BACKSPACE'), (e[(e.TAB = 9)] = 'TAB'), (e[(e.ENTER = 13)] = 'ENTER'), (e[(e.ESCAPE = 27)] = 'ESCAPE'), (e[(e.SPACE = 32)] = 'SPACE'), (e[(e.END = 35)] = 'END'), (e[(e.HOME = 36)] = 'HOME'), (e[(e.ARROW_LEFT = 37)] = 'ARROW_LEFT'), (e[(e.ARROW_UP = 38)] = 'ARROW_UP'), (e[(e.ARROW_RIGHT = 39)] = 'ARROW_RIGHT'), (e[(e.ARROW_DOWN = 40)] = 'ARROW_DOWN'), (e[(e.DELETE = 46)] = 'DELETE'), (e[(e.DIGIT_0 = 48)] = 'DIGIT_0'), (e[(e.DIGIT_1 = 49)] = 'DIGIT_1'), (e[(e.DIGIT_2 = 50)] = 'DIGIT_2'), (e[(e.DIGIT_3 = 51)] = 'DIGIT_3'), (e[(e.DIGIT_4 = 52)] = 'DIGIT_4'), (e[(e.DIGIT_5 = 53)] = 'DIGIT_5'), (e[(e.DIGIT_6 = 54)] = 'DIGIT_6'), (e[(e.DIGIT_7 = 55)] = 'DIGIT_7'), (e[(e.DIGIT_8 = 56)] = 'DIGIT_8'), (e[(e.DIGIT_9 = 57)] = 'DIGIT_9'), (e[(e.A = 65)] = 'A'), (e[(e.B = 66)] = 'B'), (e[(e.D = 68)] = 'D'), (e[(e.E = 69)] = 'E'), (e[(e.H = 72)] = 'H'), (e[(e.I = 73)] = 'I'), (e[(e.K = 75)] = 'K'), (e[(e.N = 78)] = 'N'), (e[(e.P = 80)] = 'P'), (e[(e.S = 83)] = 'S'), (e[(e.U = 85)] = 'U'), (e[(e.COMMA = 188)] = 'COMMA'), e);
     })({}),
-    nj = (function (e) {
+    nU = (function (e) {
         return ((e.TOP_LEFT = 'top-left'), (e.TOP_RIGHT = 'top-right'), (e.BOTTOM_LEFT = 'bottom-left'), (e.BOTTOM_RIGHT = 'bottom-right'), e);
     })({}),
-    nU = (function (e) {
+    nG = (function (e) {
         return ((e.VIDEO = 'VIDEO'), (e.ACTIVITY = 'ACTIVITY'), (e.FRAME = 'FRAME'), e);
     })({}),
-    nG = (function (e) {
+    nB = (function (e) {
         return ((e.GIF = 'GIF'), (e.STICKER = 'STICKER'), e);
     })({});
-let nB = Object.freeze({
+let nV = Object.freeze({
     GIF: {
         type: 'GIF',
         command: 'gif',
@@ -4519,7 +4520,7 @@ let nB = Object.freeze({
         commandId: '-9'
     }
 });
-var nV = (function (e) {
+var nF = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = '204392448'),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = '205082178'),
@@ -4705,25 +4706,25 @@ var nV = (function (e) {
             e
         );
     })({}),
-    nF = (function (e) {
+    nZ = (function (e) {
         return ((e.INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'), e);
     })({});
-let nZ = (e) => 'https://www.youtube.com/embed/'.concat(e),
-    nH = (e) => 'https://img.youtube.com/vi/'.concat(e, '/maxresdefault.jpg'),
-    nY = 'https://discordapp.com/mweb-handoff';
-var nW = (function (e) {
+let nH = (e) => 'https://www.youtube.com/embed/'.concat(e),
+    nY = (e) => 'https://img.youtube.com/vi/'.concat(e, '/maxresdefault.jpg'),
+    nW = 'https://discordapp.com/mweb-handoff';
+var nK = (function (e) {
         return ((e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.PRIVATE = 2)] = 'PRIVATE'), (e[(e.OVERLAY_DISABLED = 4)] = 'OVERLAY_DISABLED'), (e[(e.ENTITLED = 8)] = 'ENTITLED'), (e[(e.PREMIUM = 16)] = 'PREMIUM'), (e[(e.OVERLAY_V3_DISABLED = 32)] = 'OVERLAY_V3_DISABLED'), e);
     })({}),
-    nK = (function (e) {
+    nz = (function (e) {
         return ((e.DONE = 'DONE'), (e.PLANNING = 'PLANNING'), (e.PREPARING = 'PREPARING'), (e.PUSHING = 'PUSHING'), (e.PULLING = 'PULLING'), (e.CONFLICT = 'CONFLICT'), (e.ERROR = 'ERROR'), e);
     })({}),
-    nz = (function (e) {
+    nq = (function (e) {
         return ((e.PULL = 'PULL'), (e.PUSH = 'PUSH'), (e.CONFLICT = 'CONFLICT'), (e.NONE = 'NONE'), e);
     })({}),
-    nq = (function (e) {
+    nX = (function (e) {
         return ((e.DISCORD = 'discord'), (e.STEAM = 'steam'), (e.TWITCH = 'twitch'), (e.UPLAY = 'uplay'), (e.BATTLENET = 'battlenet'), (e.ORIGIN = 'origin'), (e.GOG = 'gog'), (e.EPIC = 'epic'), (e.NVIDIA_GDN_APP = 'nvidia_gdn_app'), e);
     })({});
-let nX = Object.freeze({
+let nQ = Object.freeze({
         discord: 'Discord',
         steam: 'Steam',
         uplay: 'Uplay',
@@ -4734,74 +4735,74 @@ let nX = Object.freeze({
         epic: 'Epic',
         nvidia_gdn_app: 'NVIDIA Cloud Gaming Application'
     }),
-    nQ = 6016,
-    nJ = 3384;
-var n$ = (function (e) {
+    nJ = 6016,
+    n$ = 3384;
+var n0 = (function (e) {
         return ((e.USAGE_STATISTICS = 'usage_statistics'), (e.PERSONALIZATION = 'personalization'), e);
     })({}),
-    n0 = (function (e) {
+    n1 = (function (e) {
         return ((e[(e.MUTUAL_FRIENDS = 2)] = 'MUTUAL_FRIENDS'), (e[(e.MUTUAL_GUILDS = 4)] = 'MUTUAL_GUILDS'), (e[(e.NO_RELATION = 8)] = 'NO_RELATION'), e);
     })({});
-let n1 = 14,
-    n2 = 6,
-    n3 = 30;
-var n4 = (function (e) {
+let n2 = 14,
+    n3 = 6,
+    n4 = 30;
+var n5 = (function (e) {
     return ((e.OVERLAY = 'OVERLAY'), (e.APP = 'APP'), (e.POPOUT = 'POPOUT'), e);
 })({});
-let n5 = __OVERLAY__ ? 'OVERLAY' : 'APP';
-var n6 = (function (e) {
+let n6 = __OVERLAY__ ? 'OVERLAY' : 'APP';
+var n8 = (function (e) {
         return ((e.COMPLETE = 'complete'), (e.TRANSITION = 'transition'), e);
     })({}),
-    n8 = (function (e) {
+    n7 = (function (e) {
         return ((e.QUEUED = 'queued'), (e.PLANNING = 'planning'), (e.ALLOCATING_DISK = 'allocating_disk'), (e.PATCHING = 'patching'), (e.FINALIZING = 'finalizing'), (e.PAUSING = 'pausing'), (e.VERIFYING = 'verifying'), (e.REPAIRING = 'repairing'), (e.POST_INSTALL_SCRIPTS = 'running_install_scripts'), (e.UNINSTALLING = 'uninstalling'), e);
     })({}),
-    n7 = (function (e) {
+    n9 = (function (e) {
         return ((e.INSTALL_REQUIRED = 'install_required'), (e.INSTALLING = 'installing'), (e.UP_TO_DATE = 'up_to_date'), (e.UPDATE_REQUIRED = 'update_required'), (e.UPDATING = 'updating'), (e.REPAIRING = 'repairing'), (e.UNINSTALLING = 'uninstalling'), e);
     })({}),
-    n9 = (function (e) {
+    re = (function (e) {
         return ((e.PLAY = 'play'), (e.INSTALL = 'install'), (e.UPDATE = 'update'), (e.PAUSE = 'pause'), (e.MOVE_UP = 'move_up'), (e.RESUME = 'resume'), e);
     })({}),
-    re = (function (e) {
+    rt = (function (e) {
         return ((e.NAME = 'name'), (e.PLATFORM = 'platform'), (e.ACTIONS = 'actions'), (e.LAST_PLAYED = 'last_played'), e);
     })({}),
-    rt = (function (e) {
+    rn = (function (e) {
         return ((e.ASCENDING = 'asc'), (e.DESCENDING = 'desc'), e);
     })({}),
-    rn = (function (e) {
+    rr = (function (e) {
         return ((e.WINDOWS = '1'), (e.MACOS = '2'), (e.LINUX = '3'), e);
     })({}),
-    rr = (function (e) {
+    ri = (function (e) {
         return ((e[(e.PURCHASE = 1)] = 'PURCHASE'), (e[(e.PREMIUM_SUBSCRIPTION = 2)] = 'PREMIUM_SUBSCRIPTION'), (e[(e.DEVELOPER_GIFT = 3)] = 'DEVELOPER_GIFT'), (e[(e.TEST_MODE_PURCHASE = 4)] = 'TEST_MODE_PURCHASE'), (e[(e.FREE_PURCHASE = 5)] = 'FREE_PURCHASE'), (e[(e.USER_GIFT = 6)] = 'USER_GIFT'), (e[(e.PREMIUM_PURCHASE = 7)] = 'PREMIUM_PURCHASE'), (e[(e.APPLICATION_SUBSCRIPTION = 8)] = 'APPLICATION_SUBSCRIPTION'), (e[(e.FREE_STAFF_PURCHASE = 9)] = 'FREE_STAFF_PURCHASE'), (e[(e.QUEST_REWARD = 10)] = 'QUEST_REWARD'), (e[(e.FRACTIONAL_REDEMPTION = 11)] = 'FRACTIONAL_REDEMPTION'), (e[(e.VIRTUAL_CURRENCY_REDEMPTION = 12)] = 'VIRTUAL_CURRENCY_REDEMPTION'), e);
     })({}),
-    ri = (function (e) {
+    ra = (function (e) {
         return ((e[(e.QUEST_REWARD = 1)] = 'QUEST_REWARD'), (e[(e.DEVELOPER_GIFT = 2)] = 'DEVELOPER_GIFT'), (e[(e.INVOICE = 3)] = 'INVOICE'), (e[(e.REVERSE_TRIAL = 4)] = 'REVERSE_TRIAL'), (e[(e.FRACTIONAL_PREMIUM_GIVEBACK = 8)] = 'FRACTIONAL_PREMIUM_GIVEBACK'), e);
     })({}),
-    ra = (function (e) {
+    ro = (function (e) {
         return ((e.ESRB = '1'), (e.PEGI = '2'), e);
     })({}),
-    ro = (function (e) {
+    rs = (function (e) {
         return ((e[(e.DURABLE_PRIMARY = 1)] = 'DURABLE_PRIMARY'), (e[(e.DURABLE = 2)] = 'DURABLE'), (e[(e.CONSUMABLE = 3)] = 'CONSUMABLE'), (e[(e.BUNDLE = 4)] = 'BUNDLE'), (e[(e.SUBSCRIPTION = 5)] = 'SUBSCRIPTION'), (e[(e.SUBSCRIPTION_GROUP = 6)] = 'SUBSCRIPTION_GROUP'), e);
     })({}),
-    rs = (function (e) {
+    rl = (function (e) {
         return ((e[(e.FULL = 1)] = 'FULL'), (e[(e.EARLY_ACCESS = 2)] = 'EARLY_ACCESS'), (e[(e.VIP_ACCESS = 3)] = 'VIP_ACCESS'), e);
     })({}),
-    rl = (function (e) {
+    rc = (function (e) {
         return ((e[(e.PREMIUM_PURCHASE = 1)] = 'PREMIUM_PURCHASE'), (e[(e.HAS_FREE_PREMIUM_CONTENT = 2)] = 'HAS_FREE_PREMIUM_CONTENT'), (e[(e.AVAILABLE = 4)] = 'AVAILABLE'), (e[(e.PREMIUM_AND_DISTRIBUTION = 8)] = 'PREMIUM_AND_DISTRIBUTION'), (e[(e.STICKER_PACK = 16)] = 'STICKER_PACK'), (e[(e.GUILD_ROLE = 32)] = 'GUILD_ROLE'), (e[(e.AVAILABLE_FOR_SUBSCRIPTION_GIFTING = 64)] = 'AVAILABLE_FOR_SUBSCRIPTION_GIFTING'), (e[(e.APPLICATION_GUILD_SUBSCRIPTION = 128)] = 'APPLICATION_GUILD_SUBSCRIPTION'), (e[(e.APPLICATION_USER_SUBSCRIPTION = 256)] = 'APPLICATION_USER_SUBSCRIPTION'), e);
     })({}),
-    rc = (function (e) {
+    ru = (function (e) {
         return ((e[(e.PREMIUM = 1)] = 'PREMIUM'), (e[(e.BOOST = 2)] = 'BOOST'), (e[(e.ACTIVITY_IAP = 3)] = 'ACTIVITY_IAP'), (e[(e.GUILD_ROLE = 4)] = 'GUILD_ROLE'), (e[(e.GUILD_PRODUCT = 5)] = 'GUILD_PRODUCT'), (e[(e.APPLICATION = 6)] = 'APPLICATION'), (e[(e.COLLECTIBLES = 7)] = 'COLLECTIBLES'), e);
     })({}),
-    ru = (function (e) {
+    rd = (function (e) {
         return ((e.WIN32 = 'win32'), (e.WIN64 = 'win64'), (e.MACOS = 'macos'), (e.LINUX = 'linux'), e);
     })({}),
-    rd = (function (e) {
+    rf = (function (e) {
         return ((e.HOUSE_1 = 'HOUSE_1'), (e.HOUSE_2 = 'HOUSE_2'), (e.HOUSE_3 = 'HOUSE_3'), e);
     })({});
-let rf = 'RANDOM_HYPESQUAD_HOUSE';
-var r_ = (function (e) {
+let r_ = 'RANDOM_HYPESQUAD_HOUSE';
+var rp = (function (e) {
     return ((e[(e.KEYBOARD_KEY = 0)] = 'KEYBOARD_KEY'), (e[(e.MOUSE_BUTTON = 1)] = 'MOUSE_BUTTON'), (e[(e.KEYBOARD_MODIFIER_KEY = 2)] = 'KEYBOARD_MODIFIER_KEY'), (e[(e.GAMEPAD_BUTTON = 3)] = 'GAMEPAD_BUTTON'), e);
 })({});
-let rp = Object.freeze({
+let rh = Object.freeze({
         esc: 9,
         f1: 67,
         f2: 68,
@@ -4920,7 +4921,7 @@ let rp = Object.freeze({
         'track back': 173,
         'track skip': 171
     }),
-    rh = Object.freeze({
+    rm = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -5035,10 +5036,10 @@ let rp = Object.freeze({
         down: 81,
         up: 82
     });
-var rm = (function (e) {
+var rg = (function (e) {
     return ((e[(e.Left = 0)] = 'Left'), (e[(e.Right = 1)] = 'Right'), (e[(e.Center = 2)] = 'Center'), (e[(e.Back = 3)] = 'Back'), (e[(e.Forward = 4)] = 'Forward'), e);
 })({});
-let rg = Object.freeze({
+let rE = Object.freeze({
     a: 65,
     s: 83,
     d: 68,
@@ -5167,85 +5168,85 @@ let rg = Object.freeze({
     '\\': 220,
     "'": 222
 });
-var rE = (function (e) {
+var rb = (function (e) {
         return ((e[(e.WINDOWS = 1)] = 'WINDOWS'), (e[(e.MACOS = 2)] = 'MACOS'), (e[(e.LINUX = 3)] = 'LINUX'), (e[(e.BROWSER = 4)] = 'BROWSER'), e);
     })({}),
-    rb = (function (e) {
+    ry = (function (e) {
         return ((e.EMPTY_MESSAGE = 'EMPTY_MESSAGE'), (e.MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG'), (e.RATE_LIMITED = 'RATE_LIMITED'), (e.SHOUTING_CANCELLED = 'SHOUTING_CANCELLED'), (e.SLOWMODE_COOLDOWN = 'SLOWMODE_COOLDOWN'), e);
     })({}),
-    ry = (function (e) {
+    rO = (function (e) {
         return ((e[(e.IMG = 1)] = 'IMG'), (e[(e.YOUTUBE_VIDEO = 2)] = 'YOUTUBE_VIDEO'), (e[(e.VIDEO = 3)] = 'VIDEO'), e);
     })({}),
-    rO = (function (e) {
+    rv = (function (e) {
         return ((e.NOW_PLAYING = '1'), (e.RECENTLY_PLAYED = '2'), (e.EVER_PLAYED = '3'), (e.FLAVOR_TEXT = '4'), (e.RECENT_RELEASE_DATE = '6'), (e.RELEASE_DATE = '7'), (e.EARLY_ACCESS = '8'), (e.HAS_FREE_PREMIUM_CONTENT = '9'), e);
     })({}),
-    rv = (function (e) {
+    rI = (function (e) {
         return ((e.APPLICATION_LIBRARY_BADGE = 'application_library_badge_18_11_02'), (e.SERVER_DISCOVERY_BADGE = 'server_discovery_badge_19_02_11'), (e.E3_SERVER_DISCOVERY_BADGE = 'e3_server_discovery_badge_19_06_08'), e);
     })({}),
-    rI = (function (e) {
+    rT = (function (e) {
         return ((e.TRENDING_GIFS = 'Trending'), (e.FAVORITES = 'Favorites'), (e.TRENDING_CATEGORY = 'Category'), (e.SEARCH = 'Search'), (e.SEARCH_SUGGESTION = 'Search Suggestion'), e);
     })({});
-let rT = new Set([g.pK.USD, g.pK.CAD, g.pK.EUR, g.pK.AUD, g.pK.GBP, g.pK.PHP, g.pK.MYR, g.pK.VND, g.pK.KRW, g.pK.IDR]);
-var rS = (function (e) {
+let rS = new Set([g.pK.USD, g.pK.CAD, g.pK.EUR, g.pK.AUD, g.pK.GBP, g.pK.PHP, g.pK.MYR, g.pK.VND, g.pK.KRW, g.pK.IDR]);
+var rA = (function (e) {
     return ((e.ALWAYS = 'ALWAYS'), (e.ON_CLICK = 'ON_CLICK'), (e.IF_MODERATOR = 'IF_MODERATOR'), e);
 })({});
-let rA = [];
-var rN = (function (e) {
+let rN = [];
+var rC = (function (e) {
         return ((e.CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (e.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (e.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (e.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), (e.ACTIVITY_POPOUT = 'DISCORD_ACTIVITY_POPOUT'), (e.OVERLAY_POPOUT = 'DISCORD_OVERLAY_POPOUT'), (e.CLICKER_GAME = 'DISCORD_CLICKER_GAME'), (e.DEVTOOLS_POPOUT = 'DISCORD_DEVTOOLS_POPOUT'), e);
     })({}),
-    rC = (function (e) {
+    rR = (function (e) {
         return ((e.LOADED = 'loaded'), (e.UNLOADED = 'unloaded'), e);
     })({}),
-    rR = (function (e) {
+    rP = (function (e) {
         return ((e.CONNECTING = 'CONNECTING'), (e.ACTIVE = 'ACTIVE'), (e.RECONNECTING = 'RECONNECTING'), (e.ENDED = 'ENDED'), (e.PAUSED = 'PAUSED'), (e.FAILED = 'FAILED'), e);
     })({}),
-    rP = (function (e) {
+    rw = (function (e) {
         return ((e.USER_REQUESTED = 'user_requested'), (e.STREAM_FULL = 'stream_full'), (e.UNAUTHORIZED = 'unauthorized'), (e.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), e);
     })({}),
-    rw = (function (e) {
+    rD = (function (e) {
         return ((e.SOUND = 'SOUND'), (e.VIDEO = 'VIDEO'), e);
     })({}),
-    rD = (function (e) {
+    rL = (function (e) {
         return ((e.PLAYING = 'playing'), (e.PAUSED = 'paused'), e);
     })({}),
-    rL = (function (e) {
+    rx = (function (e) {
         return ((e.NONE = 'none'), (e.WIFI = 'wifi'), (e.CELLULAR = 'cellular'), (e.UNKNOWN = 'unknown'), (e.ETHERNET = 'ethernet'), (e.BLUETOOTH = 'bluetooth'), (e.WIMAX = 'wimax'), (e.OTHER = 'other'), e);
     })({}),
-    rx = (function (e) {
+    rM = (function (e) {
         return ((e.UNKNOWN = 'unknown'), (e.SLOW_TWO_G = 'slow-2g'), (e.TWO_G = '2g'), (e.THREE_G = '3g'), (e.FOUR_G = '4g'), (e.FIVE_G = '5g'), e);
     })({});
-let rM = 'discodoEasterEgg';
-var rk = (function (e) {
+let rk = 'discodoEasterEgg';
+var rj = (function (e) {
         return ((e.INITIAL = 'initial'), (e.ENTER = 'enter'), (e.UPDATE = 'update'), (e.LEAVE = 'leave'), e);
     })({}),
-    rj = (function (e) {
+    rU = (function (e) {
         return ((e[(e.INCOMING = 1)] = 'INCOMING'), (e[(e.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), e);
     })({}),
-    rU = (function (e) {
+    rG = (function (e) {
         return ((e[(e.APPLICATION = 0)] = 'APPLICATION'), (e[(e.OVERVIEW = 1)] = 'OVERVIEW'), (e[(e.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (e[(e.TWITCH = 3)] = 'TWITCH'), (e[(e.YOUTUBE = 4)] = 'YOUTUBE'), (e[(e.WEBHOOKS = 5)] = 'WEBHOOKS'), (e[(e.LOBBIES_LINKED = 6)] = 'LOBBIES_LINKED'), e);
     })({});
-let rG = 2500,
-    rB = 0,
-    rV = 2592000000;
-var rF = (function (e) {
+let rB = 2500,
+    rV = 0,
+    rF = 2592000000;
+var rZ = (function (e) {
         return ((e.USERS = 'users'), (e.ROLES = 'roles'), (e.EVERYONE = 'everyone'), e);
     })({}),
-    rZ = (function (e) {
+    rH = (function (e) {
         return ((e[(e.AUTO = 1)] = 'AUTO'), (e[(e.FULL = 2)] = 'FULL'), e);
     })({});
-let rH = 100,
-    rY = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var rW = (function (e) {
+let rY = 100,
+    rW = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var rK = (function (e) {
     return ((e[(e.NULL = 0)] = 'NULL'), (e[(e.DISABLED = 1)] = 'DISABLED'), (e[(e.ENABLED = 2)] = 'ENABLED'), e);
 })({});
-let rK = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
-var rz = (function (e) {
+let rz = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
+var rq = (function (e) {
         return ((e[(e.CLIPS_ENABLED = 1)] = 'CLIPS_ENABLED'), (e[(e.ALLOW_VOICE_RECORDING = 2)] = 'ALLOW_VOICE_RECORDING'), (e[(e.ALLOW_ANY_VIEWER_CLIPS = 4)] = 'ALLOW_ANY_VIEWER_CLIPS'), e);
     })({}),
-    rq = (function (e) {
+    rX = (function (e) {
         return ((e.LOADING = 'LOADING'), (e.ERROR = 'ERROR'), (e.READY = 'READY'), e);
     })({});
-let rX = Object.freeze({
+let rQ = Object.freeze({
         APPLICATIONS: (e) => (null == e ? null : ['applications', e]),
         APP_PREMIUM_BUTTON: (e) => (null == e ? null : ['premium-button', e]),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null == e || null == t ? null : ['custom-activity-links', e, t]),
@@ -5254,4 +5255,4 @@ let rX = Object.freeze({
         SUBSCRIPTION_PLANS: (e) => (null == e ? null : ['subscription-plans', e]),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null == e ? null : ['useParentSkuData', e])
     }),
-    rQ = 4096;
+    rJ = 4096;

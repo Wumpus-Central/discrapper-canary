@@ -292,18 +292,33 @@ function ea(e, t, n) {
             query: e,
             limit: n,
             boosters: (0, O.Cq)(c.h8.USER)
-        });
-    return o()(r.concat(i))
-        .sort(c.qU)
-        .map((e) => {
-            let { record: t, comparator: n } = e;
-            return {
-                text: n,
-                channel: t
-            };
-        })
-        .take(n)
-        .value();
+        }),
+        a = o()(r.concat(i))
+            .sort(c.qU)
+            .map((e) => {
+                let { record: t, comparator: n } = e;
+                return {
+                    text: n,
+                    channel: t
+                };
+            })
+            .value();
+    if ('' === e.trim()) {
+        let e = g.Z.getChannelId(),
+            t = _.Z.getChannel(e);
+        if (null != t && t.isPrivate()) {
+            let n = a.findIndex((t) => {
+                let { channel: n } = t;
+                return n.id === e;
+            });
+            (-1 !== n && a.splice(n, 1),
+                a.unshift({
+                    text: t.name,
+                    channel: t
+                }));
+        }
+    }
+    return a.slice(0, n);
 }
 function eo(e, t, n) {
     let r = O.ZP.queryChannels({
