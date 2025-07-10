@@ -1994,6 +1994,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     align-items: baseline
 }
 
+.stack_dbd263[data-wrap=true] {
+    flex-wrap: wrap
+}
+
 .stack_dbd263[data-justify=start] {
     justify-content: flex-start
 }
