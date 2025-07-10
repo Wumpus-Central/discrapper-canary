@@ -500,23 +500,24 @@ async function ef() {
 async function e_(e, t, n) {
     try {
         s.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
-        let r = await a.tn.post({
-            url: $.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
-            query: { channel_id: t },
-            attachments: [
-                {
-                    name: 'file',
-                    file: n
-                }
-            ],
-            rejectWithError: !0
-        });
+        let r = null != t ? { channel_id: t } : void 0,
+            i = await a.tn.post({
+                url: $.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
+                query: r,
+                attachments: [
+                    {
+                        name: 'file',
+                        file: n
+                    }
+                ],
+                rejectWithError: !0
+            });
         return (
             s.Z.dispatch({
                 type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS',
-                attachment: r.body.attachment
+                attachment: i.body.attachment
             }),
-            r.body.attachment
+            i.body.attachment
         );
     } catch (e) {
         return (s.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new _.Z(e));

@@ -1,10 +1,11 @@
 (n.d(t, { Z: () => p }), n(388685));
-var r = n(668757),
-    i = n(147913),
-    a = n(818083),
-    o = n(353926),
-    s = n(894276);
-function l(e, t, n) {
+var r = n(843991),
+    i = n(668757),
+    a = n(147913),
+    o = n(818083),
+    s = n(353926),
+    l = n(894276);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,30 +18,25 @@ function l(e, t, n) {
         e
     );
 }
-let c = null;
-function u(e, t) {
-    if (e.size !== t.size) return !1;
-    for (let n of e) if (!t.has(n)) return !1;
-    return !0;
-}
+let u = null;
 function d() {
-    if (!(0, r.X6)()) return;
+    if (!(0, i.X6)()) return;
     let e = new Set(),
-        t = (0, r.Md)();
+        t = (0, i.Md)();
     if (
-        (s.o$.forEach((t) => {
+        (l.o$.forEach((t) => {
             var n;
             (null == (n = t._discordExperiment) ? void 0 : n.getCurrentConfig({ location: 'default' }).enabled) && e.add(t.id);
         }),
-        null === c || !u(c, e))
+        null === u || !(0, r.O)(u, e))
     ) {
         let n = Array.from(e);
-        (t.flushToCache(n), (c = e));
+        (t.flushToCache(n), (u = e));
     }
 }
 function f() {
-    s.o$.forEach((e) => {
-        let t = (0, a.B)({
+    l.o$.forEach((e) => {
+        let t = (0, o.B)({
             kind: 'user',
             id: e.id,
             label: 'libdiscore '.concat(e.feature, ' Migration'),
@@ -61,13 +57,13 @@ function f() {
         e.setDiscordExperiment(t);
     });
 }
-class _ extends i.Z {
+class _ extends a.Z {
     _initialize() {
         (f(), d());
     }
     _terminate() {}
     constructor(...e) {
-        (super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(o.Z, d)));
+        (super(...e), c(this, 'actions', {}), c(this, 'stores', new Map().set(s.Z, d)));
     }
 }
 let p = new _();

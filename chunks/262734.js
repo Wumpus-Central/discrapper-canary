@@ -1,60 +1,63 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
-    s = n(988980),
-    c = n(835473),
-    u = n(871499),
-    d = n(510839),
-    p = n(214143),
-    h = n(610278),
-    f = n(408491),
-    g = n(981631),
-    m = n(918559),
-    b = n(388032),
-    _ = n(574682);
-let E = {
-    [m.MI.NO_CHAT]: _.noChat,
-    [m.MI.RESIZABLE]: _.resizable
+    s = n(350810),
+    c = n(988980),
+    u = n(835473),
+    d = n(871499),
+    p = n(510839),
+    h = n(214143),
+    f = n(610278),
+    g = n(408491),
+    m = n(981631),
+    b = n(918559),
+    _ = n(388032),
+    E = n(574682);
+let O = {
+    [b.MI.NO_CHAT]: E.noChat,
+    [b.MI.RESIZABLE]: E.resizable
 };
-function O(e) {
+function y(e) {
     let { frame: t } = e,
-        n = (0, c.q)(t.applicationId),
-        l = i.useRef(null),
-        O = i.useRef(null),
-        [y, I] = i.useState({
+        n = (0, u.q)(t.applicationId),
+        l = (0, s.Z)(),
+        y = i.useRef(null),
+        I = i.useRef(null),
+        [v, C] = i.useState({
             width: 0,
             height: 0
         }),
-        v = i.useCallback(() => {
-            (0, d.eU)({
+        S = i.useCallback(() => {
+            (0, p.eU)({
                 applicationId: t.applicationId,
-                layoutMode: f.U.PIP
+                layoutMode: g.U.PIP
             });
         }, [t.applicationId]),
-        C = i.useCallback(() => {
-            (0, d.xT)({ applicationId: t.applicationId });
+        N = i.useCallback(() => {
+            (0, p.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
     (i.useLayoutEffect(() => {
-        if (null == O.current) return;
+        if (null == I.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            I({
-                width: null != (n = null == (e = O.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = O.current) ? void 0 : t.clientHeight) ? r : 0
+            C({
+                width: null != (n = null == (e = I.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = I.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
-        return (e.observe(O.current), () => e.disconnect());
+        return (e.observe(I.current), () => e.disconnect());
     }, []),
         i.useEffect(() => {
             let e = (e) => {
-                null == l.current ||
-                    l.current.contains(e.target) ||
-                    (0, d.eU)({
+                null == y.current ||
+                    y.current.contains(e.target) ||
+                    l ||
+                    (0, p.eU)({
                         applicationId: t.applicationId,
-                        layoutMode: f.U.PIP
+                        layoutMode: g.U.PIP
                     });
             };
             return (
@@ -63,43 +66,43 @@ function O(e) {
                     document.removeEventListener('mousedown', e);
                 }
             );
-        }, [t.applicationId]));
-    let S = y.width / Math.max(y.height, 1) < m.I0,
-        N = 0,
-        T = 0,
-        P = (0, s.Z)(null == n ? void 0 : n.id);
-    if (!P) {
-        let e = y.width,
-            t = y.height;
-        S ? ((t = y.width / m.I0) > y.height && (e = (t = y.height) * m.I0), (T = (y.height - t) / 2)) : ((e = Math.min(y.height * m.I0)) > y.width && (t = (e = y.width) / m.I0), (N = (y.width - e) / 2));
+        }, [t.applicationId, l]));
+    let T = v.width / Math.max(v.height, 1) < b.I0,
+        P = 0,
+        j = 0,
+        A = (0, c.Z)(null == n ? void 0 : n.id);
+    if (!A) {
+        let e = v.width,
+            t = v.height;
+        T ? ((t = v.width / b.I0) > v.height && (e = (t = v.height) * b.I0), (j = (v.height - t) / 2)) : ((e = Math.min(v.height * b.I0)) > v.width && (t = (e = v.width) / b.I0), (P = (v.width - e) / 2));
     }
-    let j = m.MI.NO_CHAT;
+    let Z = b.MI.NO_CHAT;
     if (null == n) return null;
-    let A = (0, h.ro)(t);
+    let x = (0, f.ro)(t);
     return (0, r.jsx)(o.f6W, {
-        theme: g.BRd.DARK,
+        theme: m.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(_.wrapper, E[j], e),
-                ref: l,
+                className: a()(E.wrapper, O[Z], e),
+                ref: y,
                 style: {},
                 children: [
                     (0, r.jsx)('div', {
-                        className: _.contextlessHeader,
+                        className: E.contextlessHeader,
                         children: (0, r.jsxs)('div', {
-                            className: _.buttonSection,
+                            className: E.buttonSection,
                             children: [
-                                (0, r.jsx)(u.d, {
+                                (0, r.jsx)(d.d, {
                                     isTrayButton: !0,
-                                    label: b.intl.string(b.t.brPQ5e),
-                                    onClick: v,
+                                    label: _.intl.string(_.t.brPQ5e),
+                                    onClick: S,
                                     iconComponent: o.dOc,
                                     themeable: !0
                                 }),
-                                (0, r.jsx)(u.d, {
+                                (0, r.jsx)(d.d, {
                                     isTrayButton: !0,
-                                    label: b.intl.string(b.t.cpT0Cg),
-                                    onClick: C,
+                                    label: _.intl.string(_.t.cpT0Cg),
+                                    onClick: N,
                                     iconComponent: o.Dio,
                                     themeable: !0
                                 })
@@ -107,19 +110,19 @@ function O(e) {
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: _.activityPanelContainer,
+                        className: E.activityPanelContainer,
                         children: (0, r.jsx)('div', {
-                            className: a()(_.activityContainer, { [_.activityContainerNoMargin]: P }),
+                            className: a()(E.activityContainer, { [E.activityContainerNoMargin]: A }),
                             style: {
-                                paddingLeft: N,
-                                paddingRight: N,
-                                paddingTop: T,
-                                paddingBottom: T
+                                paddingLeft: P,
+                                paddingRight: P,
+                                paddingTop: j,
+                                paddingBottom: j
                             },
-                            ref: O,
-                            children: (0, r.jsx)(p.Z, {
-                                className: _.iframe,
-                                embedId: A
+                            ref: I,
+                            children: (0, r.jsx)(h.Z, {
+                                className: E.iframe,
+                                embedId: x
                             })
                         })
                     })

@@ -161,15 +161,20 @@ let G = {
             let { socket: t } = e,
                 i = t.application;
             if (null == i.id) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            let { channel: l, guild: o } = (0, L.T)(),
-                s = (0, g.ZP)({
+            let { channel: l, guild: o, frame: c } = (0, L.T)(),
+                u = (0, g.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id
                 }),
-                c = null != s ? E.Z.getWindow(s) : void 0;
-            (null == c ? void 0 : c.closed) && (c = void 0);
-            let u = null != c ? k.IlC.POPOUT : k.IlC.APP;
-            ((0, j.Pr)({}, null == c ? void 0 : c.document),
+                d = null != u ? E.Z.getWindow(u) : void 0;
+            (null == d ? void 0 : d.closed) && (d = void 0);
+            let p = null != d ? k.IlC.POPOUT : k.IlC.APP;
+            if (((0, j.Pr)({}, null == d ? void 0 : d.document), null != c)) {
+                if (c.applicationId !== i.id) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'Application is not currently mounted.');
+                let e = I.Z.getApplicationActivity(i.id);
+                if (null != e) (0, s.h7)(e, !1, p);
+                else throw new A.Z({ errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
+            } else
                 (0, a.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
@@ -226,8 +231,8 @@ let G = {
                             );
                         };
                     },
-                    { contextKey: u === k.IlC.POPOUT ? a.u1M : a.z1l }
-                ));
+                    { contextKey: p === k.IlC.POPOUT ? a.u1M : a.z1l }
+                );
         }
     },
     [k.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(k.Etm.INITIATE_IMAGE_UPLOAD, {
@@ -240,7 +245,6 @@ let G = {
                 r = n.application.id;
             if (null == r) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
             let i = null == (t = (0, w.Z)()) ? void 0 : t.id;
-            if (null == i) throw new A.Z({ errorCode: k.lTL.UNKNOWN_ERROR }, 'Unable to find selected channel');
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
@@ -295,11 +299,10 @@ let G = {
             if (null == i) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let l = (0, w.Z)();
-            if (null == l) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
             if (!P.Z.isDiscordCdnUrl(r)) throw new A.Z({ errorCode: k.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, b.Z)({
                 applicationId: i,
-                channelId: l.id,
+                channelId: null == l ? void 0 : l.id,
                 mediaUrl: r
             });
         }

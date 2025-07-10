@@ -3,14 +3,14 @@
     Hl: () => L,
     NJ: () => A,
     R8: () => F,
-    Sq: () => R,
+    Sq: () => I,
     Wg: () => M,
     Zn: () => P,
-    c2: () => k,
+    c2: () => w,
     eE: () => Z,
     iE: () => D,
-    iK: () => w,
-    lv: () => I,
+    iK: () => k,
+    lv: () => R,
     nR: () => T,
     q0: () => s.a,
     x0: () => j,
@@ -33,9 +33,9 @@ var r = n(399834),
     f = n(599552),
     g = n.n(f),
     m = n(544611),
-    y = n.n(m),
-    b = n(803068),
-    S = n.n(b),
+    S = n.n(m),
+    y = n(803068),
+    b = n.n(y),
     x = n(561099),
     _ = n.n(x),
     v = n(655000),
@@ -80,7 +80,7 @@ function C(e, t) {
         case 'delete-word':
             return p()(t);
         case 'backspace':
-            return S()(t);
+            return b()(t);
         case 'backspace-word':
             return d()(t);
         case 'backspace-to-start-of-line':
@@ -94,17 +94,17 @@ function P(e, t) {
         case 'transpose-characters':
             return O()(t);
         case 'move-selection-to-start-of-block':
-            return y()(t);
+            return S()(t);
         case 'move-selection-to-end-of-block':
             return g()(t);
         default:
             return t;
     }
 }
-function R(e) {
+function I(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function I(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
         l = r.getFirstBlock(),
@@ -153,32 +153,32 @@ function N(e) {
         n = e.getSelection();
     return (null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t);
 }
-function k(e, t) {
-    let n = R(t);
+function w(e, t) {
+    let n = I(t);
     return j(e, t, 0, n.length);
 }
-function w(e, t) {
+function k(e, t) {
     let n = t.getSelection();
     return ((n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), r.EditorState.forceSelection(t, n));
 }
 function A(e) {
-    return w(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return k(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function Z(e) {
-    return w(0, e);
+    return k(0, e);
 }
 function F(e) {
     let t = e.getSelection();
     return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t));
 }
 function M(e) {
-    let t = R(e),
+    let t = I(e),
         n = e.getSelection();
     return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));
 }
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        n = R(e);
+        n = I(e);
     if (n.length > t) {
         let l = e.getSelection();
         ((e = j('', e, t, n.length)), l.getAnchorOffset() > t && (l = l.set('anchorOffset', t)), l.getFocusOffset() > t && (l = l.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, l)));
@@ -206,5 +206,5 @@ function D(e) {
     s < e.scrollLeft ? (e.scrollLeft = s - 10) : s > e.scrollLeft + e.offsetWidth && (e.scrollLeft = s - e.offsetWidth + 3);
 }
 function H(e) {
-    return 0 === R(e).length;
+    return 0 === I(e).length;
 }

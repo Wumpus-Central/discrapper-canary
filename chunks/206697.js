@@ -13,23 +13,23 @@ var r = n(255367),
     f = n(981631),
     g = n(474936),
     m = n(388032),
-    y = n(491350),
-    b = n(492764),
-    S = n(235810);
+    S = n(491350),
+    y = n(492764),
+    b = n(235810);
 function x() {
     return (0, p.Z)()
         ? (0, r.jsx)('div', {
-              className: y.emptyContainer,
+              className: S.emptyContainer,
               children: (0, r.jsxs)('div', {
-                  className: y.emptyInner,
+                  className: S.emptyInner,
                   children: [
                       (0, r.jsx)('img', {
-                          src: b,
-                          className: y.image,
+                          src: y,
+                          className: S.image,
                           alt: ''
                       }),
                       (0, r.jsx)(o.X6q, {
-                          className: y.header,
+                          className: S.header,
                           variant: 'heading-xl/semibold',
                           color: 'text-default',
                           children: m.intl.string(m.t.erEf2t)
@@ -43,18 +43,18 @@ function x() {
               })
           })
         : (0, r.jsxs)('div', {
-              className: y.emptyContainer,
+              className: S.emptyContainer,
               children: [
                   (0, r.jsxs)('div', {
-                      className: y.emptyInner,
+                      className: S.emptyInner,
                       children: [
                           (0, r.jsx)('img', {
-                              src: S,
-                              className: y.image,
+                              src: b,
+                              className: S.image,
                               alt: ''
                           }),
                           (0, r.jsx)(o.X6q, {
-                              className: y.header,
+                              className: S.header,
                               variant: 'heading-xl/semibold',
                               color: 'text-default',
                               children: m.intl.string(m.t.w4DRbW)
@@ -113,7 +113,7 @@ function _() {
             onClick: t
         });
     return (0, r.jsxs)('div', {
-        className: y.upsellContainer,
+        className: S.upsellContainer,
         children: [
             (0, r.jsx)(s.SrA, {
                 size: 'md',
@@ -122,13 +122,13 @@ function _() {
             (0, r.jsx)(a.xv, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                className: y.upsellText,
+                className: S.upsellText,
                 children: p
             }),
             (0, r.jsx)(d.Z, {
-                className: y.upsellButton,
+                className: S.upsellButton,
                 size: i.Ph.TINY,
-                shinyButtonClassName: y.upsellButton,
+                shinyButtonClassName: S.upsellButton,
                 subscriptionTier: g.Si.TIER_2,
                 premiumModalAnalyticsLocation: { section: f.jXE.FOR_LATER_POPOUT_UPSELL }
             })

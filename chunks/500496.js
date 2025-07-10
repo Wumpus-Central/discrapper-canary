@@ -1,16 +1,16 @@
 n.d(t, {
     Tz: () => o,
     cE: () => l,
-    j0: () => a
+    j0: () => s
 });
-var r = n(818083),
-    i = n(987338);
-let l = (0, r.B)({
+var i = n(818083),
+    r = n(987338);
+let l = (0, i.B)({
     kind: 'guild',
     id: '2025-06_server_content_level_setting',
     label: 'Guild content level setting',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -29,7 +29,7 @@ function o(e) {
         { autoTrackExposure: !0 }
     ).enabled;
 }
-function a(e) {
+function s(e) {
     let { guildId: t, location: n } = e;
     return l.getCurrentConfig(
         {

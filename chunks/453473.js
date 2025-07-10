@@ -1,6 +1,6 @@
 (n.d(t, {
-    K: () => U,
-    P: () => B
+    K: () => B,
+    P: () => U
 }),
     n(388685));
 var r = n(255367),
@@ -17,9 +17,9 @@ var r = n(255367),
     f = n(481060),
     g = n(239091),
     m = n(494404),
-    y = n(724757),
-    b = n(213609),
-    S = n(294218),
+    S = n(724757),
+    y = n(213609),
+    b = n(294218),
     x = n(373662),
     _ = n(695346),
     v = n(496675),
@@ -28,12 +28,12 @@ var r = n(255367),
     j = n(70956),
     C = n(324701),
     P = n(575016),
-    R = n(768943),
-    I = n(686478),
+    I = n(768943),
+    R = n(686478),
     T = n(664559),
     N = n(767893),
-    k = n(206697),
-    w = n(74551),
+    w = n(206697),
+    k = n(74551),
     A = n(981631),
     Z = n(388032),
     F = n(585693);
@@ -97,34 +97,34 @@ function H(e) {
                     icon: f.plf,
                     title: Z.intl.string(Z.t['2pAkDA'])
                 }),
-                (0, r.jsx)(U, { closePopout: t })
+                (0, r.jsx)(B, { closePopout: t })
             ]
         })
     });
 }
-function U(e) {
+function B(e) {
     let { closePopout: t } = e,
         n = (0, T.Z)();
-    return ((0, b.Z)(
+    return ((0, y.Z)(
         {
             type: d.ImpressionTypes.POPOUT,
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: R.Z.getOverdueMessageReminderCount()
+                overdue_count: I.Z.getOverdueMessageReminderCount()
             }
         },
         {},
         [n.length]
     ),
     0 === n.length)
-        ? (0, r.jsx)(k.w, {})
+        ? (0, r.jsx)(w.w, {})
         : (0, r.jsx)(G, {
               savedMessageKeys: n,
               closePopout: t
           });
 }
-function B(e) {
+function U(e) {
     let { onOpen: t, onClose: n, children: s, popoutPosition: a, popoutAlign: i } = e,
         [o, c] = l.useState(!1),
         u = l.useRef(null),
@@ -135,7 +135,7 @@ function B(e) {
             (c(!o), o ? null == n || n() : null == t || t());
         }, [n, t, o]);
     l.useEffect(() => (E.S.subscribe(A.CkL.TOGGLE_FOR_LATER, h), () => void E.S.unsubscribe(A.CkL.TOGGLE_FOR_LATER, h)), [h]);
-    let g = (0, p.e7)([R.Z], () => R.Z.hasOverdueReminder(), []);
+    let g = (0, p.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         targetElementRef: u,
         animation: f.yRy.Animation.NONE,
@@ -157,7 +157,7 @@ function B(e) {
 function G(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         s = l.useRef(null),
-        a = (0, y.Z)('for-later', s),
+        a = (0, S.Z)('for-later', s),
         [i, o] = l.useState(new Date());
     return (
         l.useEffect(() => {
@@ -235,7 +235,7 @@ function z(e) {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
-                        type: null != t.saveData.dueAt ? I._l.REMINDER : I._l.BOOKMARK,
+                        type: null != t.saveData.dueAt ? R._l.REMINDER : R._l.BOOKMARK,
                         due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
                     }));
             },
@@ -252,14 +252,14 @@ function z(e) {
                       'aria-label': Z.intl.string(Z.t['+TSRGB'])
                   }),
                   null != t.saveData.dueAt
-                      ? (0, r.jsx)(w.Z, {
+                      ? (0, r.jsx)(k.Z, {
                             reminder: t,
                             throttledNow: s
                         })
                       : null,
                   (0, r.jsx)(N.Z, { channel: i }),
                   (0, r.jsx)(
-                      S.Z,
+                      b.Z,
                       {
                           message: t.message,
                           channel: i,
@@ -313,7 +313,7 @@ function z(e) {
 }
 function q(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: l } = e,
-        s = (0, p.e7)([R.Z], () => R.Z.getSavedMessage(t.channelId, t.messageId));
+        s = (0, p.e7)([I.Z], () => I.Z.getSavedMessage(t.channelId, t.messageId));
     return null == s
         ? null
         : (0, r.jsx)(z, {

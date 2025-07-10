@@ -453,6 +453,10 @@ let i = {
     KrispExperimentManager: {
         actions: ['POST_CONNECTION_OPEN', 'RTC_CONNECTION_STATE'],
         inlineRequire: () => n(891812).Z
+    },
+    FramesManager: {
+        actions: ['RPC_APP_DISCONNECTED'],
+        inlineRequire: () => n(460093).Z
     }
 };
 (0, r.j)(i);

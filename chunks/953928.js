@@ -4,5 +4,8 @@ e.exports = {
     queryShortcut: 'queryShortcut__55c99',
     queryText: 'queryText__55c99',
     keyCombo: 'keyCombo__55c99',
-    focused: 'focused__55c99'
+    focused: 'focused__55c99',
+    inChannelOptionContainer: 'inChannelOptionContainer__55c99',
+    inChannelOption: 'inChannelOption__55c99',
+    channelName: 'channelName__55c99'
 };

@@ -48,7 +48,6 @@ function o(e) {
                     })(
                         {
                             applicationId: t,
-                            channelId: o,
                             mediaUrl: s
                         },
                         n

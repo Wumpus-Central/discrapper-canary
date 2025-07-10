@@ -58,23 +58,24 @@ let v = new Set([y.Fu, y.JT]),
                 (0, b.bu)(t.transport);
                 let r = o.ZP.getCurrentEmbeddedActivity();
                 try {
+                    var i;
                     let e = new URL(n),
-                        t = e.toString();
+                        o = e.toString();
                     if (g.isPlatformEmbedded) {
                         let e = (0, a.R)() ? O.KJ3.ACTIVITY_POPOUT : null;
                         p.Z.focus(e, !0);
                     }
-                    let i = d.Z.getApplication(null == r ? void 0 : r.applicationId),
-                        o = (0, u.p)(null == r ? void 0 : r.location),
-                        c = (null == i ? void 0 : i.id) !== void 0 ? S.get(i.id) : void 0;
-                    if (void 0 !== c && c.trustedUntilEpochMs >= Date.now() && c.trustedHosts.has(e.host)) return ((0, l.Z)(t), Promise.resolve({ opened: !0 }));
+                    let c = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
+                        h = (0, u.p)(null == r ? void 0 : r.location),
+                        m = (null == c ? void 0 : c.id) !== void 0 ? S.get(c.id) : void 0;
+                    if (void 0 !== m && m.trustedUntilEpochMs >= Date.now() && m.trustedHosts.has(e.host)) return ((0, l.Z)(o), Promise.resolve({ opened: !0 }));
                     return new Promise((e) =>
                         (0, f.q)(
                             {
-                                href: t,
+                                href: o,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
-                                    ((0, l.Z)(t), e({ opened: !0 }));
+                                    ((0, l.Z)(o), e({ opened: !0 }));
                                 },
                                 onCancel: () => {
                                     e({ opened: !1 });
@@ -83,8 +84,8 @@ let v = new Set([y.Fu, y.JT]),
                             void 0,
                             void 0,
                             (0, s.z)({
-                                application: i,
-                                channelId: o
+                                application: c,
+                                channelId: h
                             })
                         )
                     );

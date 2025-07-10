@@ -1,18 +1,27 @@
-n.d(t, { T: () => c });
-var r = n(159300),
-    i = n(430824),
-    l = n(496675),
-    a = n(996106),
-    o = n(561205),
-    s = n(981631);
-function c() {
-    let e = (0, o.Z)();
-    if (null == e) throw new a.Z({ errorCode: s.lTL.INVALID_CHANNEL }, 'Invalid channel');
-    let t = i.Z.getGuild(e.getGuildId());
-    if (null == t) throw new a.Z({ errorCode: s.lTL.INVALID_CHANNEL }, 'Invalid guild '.concat(e.getGuildId()));
-    if (!(0, r.b)(l.Z, t, e)) throw new a.Z({ errorCode: s.lTL.INVALID_PERMISSIONS }, 'No invite permissions for '.concat(e.id));
+n.d(t, { T: () => u });
+var r = n(591472),
+    i = n(159300),
+    l = n(430824),
+    a = n(496675),
+    o = n(996106),
+    s = n(561205),
+    c = n(981631);
+function u() {
+    let e = r.Z.getConnectedFrame();
+    if (null != e)
+        return {
+            frame: e,
+            channel: void 0,
+            guild: void 0
+        };
+    let t = (0, s.Z)();
+    if (null == t) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, 'Invalid channel');
+    let n = l.Z.getGuild(t.getGuildId());
+    if (null == n) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, 'Invalid guild '.concat(t.getGuildId()));
+    if (!(0, i.b)(a.Z, n, t)) throw new o.Z({ errorCode: c.lTL.INVALID_PERMISSIONS }, 'No invite permissions for '.concat(t.id));
     return {
-        channel: e,
-        guild: t
+        frame: void 0,
+        channel: t,
+        guild: n
     };
 }
