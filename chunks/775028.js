@@ -149,8 +149,8 @@ let L = r.memo(function () {
             U = (0, N.t4)(i.id, n.id, r.id),
             G = (0, N.EH)(i.id, r.id),
             W = (0, o.e7)([y.Z], () => y.Z.getActiveThreadCount(i.id, n.id)),
-            F = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
-            z = (e) => {
+            z = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
+            F = (e) => {
                 if (!U) return (e.stopPropagation(), I(i.id, n.id, r.id), !0);
             },
             q = (e) => {
@@ -262,7 +262,7 @@ let L = r.memo(function () {
                                     e
                                 ),
                                 {
-                                    onClick: z,
+                                    onClick: F,
                                     onContextMenu: q,
                                     children: [
                                         (0, l.jsxs)('div', {
@@ -291,7 +291,7 @@ let L = r.memo(function () {
                                                                   className: S.premiumIcon
                                                               })
                                                             : null,
-                                                        F
+                                                        z
                                                             ? (0, l.jsx)(u.IGR, {
                                                                   text: E.intl.string(E.t.y2b7CA),
                                                                   color: c.Z.unsafe_rawColors.BRAND_260.css,

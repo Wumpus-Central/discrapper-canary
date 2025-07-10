@@ -8,8 +8,6 @@ e.exports = {
     educationUpsellArrow: 'educationUpsellArrow__4a4f2',
     actions: 'actions__4a4f2',
     next: 'next__4a4f2',
-    button: 'button__4a4f2',
     hidden: 'hidden__4a4f2',
-    arrow: 'arrow__4a4f2',
     noticeRegion: 'noticeRegion__4a4f2'
 };

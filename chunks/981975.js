@@ -127,7 +127,7 @@ function R(e) {
             locked: l
         });
     else if (M.length > 0) {
-        var z;
+        var H;
         let e = null;
         (M.length < 10 &&
             (e = (0, r.jsx)(d.zx, {
@@ -150,7 +150,7 @@ function R(e) {
             })),
             (F = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((z = () => (0, x.d_)(n.id, [])),
+                    ((H = () => (0, x.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
@@ -168,7 +168,7 @@ function R(e) {
                                         size: d.zx.Sizes.TINY,
                                         look: d.zx.Looks.LINK,
                                         color: d.zx.Colors.LINK,
-                                        onClick: z,
+                                        onClick: H,
                                         disabled: l,
                                         children: N.intl.string(N.t.ntW1cX)
                                     })

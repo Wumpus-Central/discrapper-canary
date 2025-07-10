@@ -1,18 +1,19 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
     o = n(23536),
     s = n(40851),
-    c = n(731290),
-    u = n(306680),
-    d = n(594174),
-    p = n(585483),
-    h = n(665149),
-    f = n(981631),
-    m = n(388032);
-function g(e) {
+    c = n(622822),
+    u = n(731290),
+    d = n(306680),
+    p = n(594174),
+    h = n(585483),
+    f = n(665149),
+    m = n(981631),
+    g = n(388032);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function g(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,50 +56,50 @@ function b(e, t) {
         e
     );
 }
-let _ = function (e) {
+let y = function (e) {
     let { channel: t } = e,
         n = (0, l.e7)(
-            [c.Z, d.default],
+            [u.Z, p.default],
             () => {
-                let e = d.default.getCurrentUser();
-                return null == e || (t.isNSFW() && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
+                let e = p.default.getCurrentUser();
+                return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
             },
             [t]
         ),
-        [_, y] = i.useState(!1),
-        C = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
-        x = (0, s.Aq)(),
-        v = i.useRef(null),
-        O = i.useCallback(() => {
-            n || y((e) => !e);
+        [y, C] = i.useState(!1),
+        x = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
+        v = (0, s.Aq)(),
+        O = i.useRef(null),
+        j = i.useCallback(() => {
+            n || C((e) => !e);
         }, [n]);
-    function j(e) {
-        (null == e ? void 0 : e.shiftKey) || x.dispatch(f.CkL.POPOUT_CLOSE);
+    function E(e) {
+        (null == e ? void 0 : e.shiftKey) || v.dispatch(m.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                p.S.subscribe(f.CkL.TOGGLE_CHANNEL_PINS, O),
+                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, j),
                 () => {
-                    p.S.unsubscribe(f.CkL.TOGGLE_CHANNEL_PINS, O);
+                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, j);
                 }
             ),
-            [O]
+            [j]
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: v,
-            shouldShow: _,
+            targetElementRef: O,
+            shouldShow: y,
             animation: a.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => y(!1),
+            onRequestClose: () => C(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
                     o.Z,
-                    b(g({}, e), {
-                        onJump: j,
+                    _(b({}, e), {
+                        onJump: E,
                         channel: t
                     })
                 );
@@ -107,16 +108,16 @@ let _ = function (e) {
             children: (e, t) => {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
-                    h.JO,
-                    b(g({}, e), {
-                        ref: v,
-                        onClick: O,
-                        tooltip: i ? null : m.intl.string(m.t['mp1N//']),
+                    f.JO,
+                    _(b({}, e), {
+                        ref: O,
+                        onClick: j,
+                        tooltip: i ? null : g.intl.string(g.t['mp1N//']),
                         icon: a.qQX,
                         iconSize: 20,
-                        'aria-label': m.intl.string(m.t['mp1N//']),
+                        'aria-label': g.intl.string(g.t['mp1N//']),
                         disabled: n,
-                        showBadge: C,
+                        showBadge: x,
                         selected: i
                     })
                 );

@@ -51,8 +51,8 @@ function j(e) {
                     e.ok || 429 !== e.status || j(x.intl.string(x.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        N = x.intl.formatToPlainString(x.t.m0zYbW, { username: I }),
-        T =
+        T = x.intl.formatToPlainString(x.t.m0zYbW, { username: I }),
+        N =
             null != l && '' !== l
                 ? (0, r.jsx)(c.Text, {
                       className: v.error,
@@ -77,11 +77,11 @@ function j(e) {
                           (0, r.jsx)(c.Text, {
                               className: v.text,
                               variant: 'text-md/medium',
-                              children: N
+                              children: T
                           })
                       ]
                   }),
-                  T
+                  N
               ]
           })
         : (0, r.jsxs)('div', {
@@ -95,9 +95,9 @@ function j(e) {
                       className: v.button,
                       onClick: Z,
                       disabled: !!l,
-                      children: N
+                      children: T
                   }),
-                  T
+                  N
               ]
           });
 }

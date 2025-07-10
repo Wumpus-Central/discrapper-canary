@@ -47,65 +47,67 @@ function v(e) {
             });
     }, [x, o, j, y, n, E]);
     let w = l.useRef(null),
-        { setQueryPageSize: Z, setQueryPageOffset: F, queryPageSize: D } = (0, g.S)();
-    l.useEffect(() => {
-        if (null != w.current) {
-            let e = new ResizeObserver(() => {
-                null != w.current && Z(Math.floor(5 * getComputedStyle(w.current).gridTemplateColumns.split(/\s+/).length));
-            });
-            return (e.observe(w.current), () => e.disconnect());
-        }
-    }, [Z]);
-    let M = n || k || null == T,
+        { setQueryPageSize: Z, setQueryPageOffset: F, queryPageSize: D } = (0, g.S)(),
+        M = n || k || null == T,
         H = !M && 0 === R.length;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)('div', {
-                className: a()(O.products, { [O.productsEmpty]: H }),
-                ref: w,
-                children: [
-                    M && [...Array(D)].map((e, t) => (0, r.jsx)(b.K, {}, t)),
-                    H && (0, r.jsx)(C.Z, {}),
-                    !M &&
-                        R.map((e, t) => {
-                            let n = d.Z.getCategory(e.categorySkuId);
-                            return null == n
-                                ? null
-                                : (0, r.jsx)(
-                                      u.k0,
-                                      {
-                                          newValue: { tilePosition: t },
-                                          children: (0, r.jsx)(
-                                              m.Z,
-                                              {
-                                                  product: e,
-                                                  user: T,
-                                                  category: n,
-                                                  tab: E
-                                              },
-                                              e.skuId
-                                          )
-                                      },
-                                      e.skuId
-                                  );
-                        })
-                ]
-            }),
-            I > D &&
-                (0, r.jsx)('div', {
-                    className: O.paginationContainer,
-                    children: (0, r.jsx)('div', {
-                        children: (0, r.jsx)(s.DsT, {
-                            currentPage: L,
-                            totalCount: I,
-                            pageSize: D,
-                            onPageChange: (e) => {
-                                (F((e - 1) * D), B());
-                            },
-                            disablePaginationGap: !0
+    return (
+        l.useEffect(() => {
+            if (null != w.current && !H) {
+                let e = new ResizeObserver(() => {
+                    null != w.current && Z(Math.floor(5 * getComputedStyle(w.current).gridTemplateColumns.split(/\s+/).length));
+                });
+                return (e.observe(w.current), () => e.disconnect());
+            }
+        }, [Z, H]),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsxs)('div', {
+                    className: a()(O.products, { [O.productsEmpty]: H }),
+                    ref: w,
+                    children: [
+                        M && [...Array(D)].map((e, t) => (0, r.jsx)(b.K, {}, t)),
+                        H && (0, r.jsx)(C.Z, {}),
+                        !M &&
+                            R.map((e, t) => {
+                                let n = d.Z.getCategory(e.categorySkuId);
+                                return null == n
+                                    ? null
+                                    : (0, r.jsx)(
+                                          u.k0,
+                                          {
+                                              newValue: { tilePosition: t },
+                                              children: (0, r.jsx)(
+                                                  m.Z,
+                                                  {
+                                                      product: e,
+                                                      user: T,
+                                                      category: n,
+                                                      tab: E
+                                                  },
+                                                  e.skuId
+                                              )
+                                          },
+                                          e.skuId
+                                      );
+                            })
+                    ]
+                }),
+                I > D &&
+                    (0, r.jsx)('div', {
+                        className: O.paginationContainer,
+                        children: (0, r.jsx)('div', {
+                            children: (0, r.jsx)(s.DsT, {
+                                currentPage: L,
+                                totalCount: I,
+                                pageSize: D,
+                                onPageChange: (e) => {
+                                    (F((e - 1) * D), B());
+                                },
+                                disablePaginationGap: !0
+                            })
                         })
                     })
-                })
-        ]
-    });
+            ]
+        })
+    );
 }

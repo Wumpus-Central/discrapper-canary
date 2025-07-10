@@ -1,75 +1,80 @@
 n.d(t, {
-    I8: () => O,
-    Kt: () => E,
-    Yt: () => b,
-    a1: () => y,
-    bN: () => h
+    I8: () => S,
+    Kt: () => y,
+    Yt: () => E,
+    a1: () => O,
+    aC: () => A,
+    bN: () => g
 });
 var r = n(81643),
     i = n(974814),
-    l = n(500496),
-    a = n(601964),
-    o = n(592125),
-    s = n(430824),
+    a = n(500496),
+    o = n(601964),
+    s = n(592125),
+    l = n(430824),
     c = n(594174),
     u = n(709054),
     d = n(758119),
-    p = n(723359),
-    m = n(981631),
-    f = n(388032);
-let _ = new Date('06/16/2020'),
-    g = [m.V_K.AGE_RESTRICTED, m.V_K.EXPLICIT];
-function h() {
+    f = n(723359),
+    _ = n(981631),
+    p = n(388032);
+let h = new Date('06/16/2020'),
+    m = [_.V_K.AGE_RESTRICTED, _.V_K.EXPLICIT];
+function g() {
     let e = c.default.getCurrentUser();
-    return null != e && u.default.extractTimestamp(e.id) > _.getTime() && null == e.nsfwAllowed;
+    return null != e && u.default.extractTimestamp(e.id) > h.getTime() && null == e.nsfwAllowed;
 }
-function b(e) {
-    return g.includes(e.nsfwLevel);
+function E(e) {
+    return m.includes(e.nsfwLevel);
 }
-function E() {
+function b() {
+    let e = (0, i.H1)({ location: 'age-gate-utils' }),
+        t = (0, r.sf)();
+    return e && t;
+}
+function y() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),
         t = (0, r.L5)();
     return e && t;
 }
-function y(e) {
+function O(e) {
     let t = (0, r.l6)(),
-        n = e === p.L0.NSFW_SERVER || e === p.L0.NSFW_SERVER_INVITE || e === p.L0.NSFW_SERVER_INVITE_EMBED;
+        n = e === f.L0.NSFW_SERVER || e === f.L0.NSFW_SERVER_INVITE || e === f.L0.NSFW_SERVER_INVITE_EMBED;
     return t
         ? {
-              verifyAgreementButtonText: f.intl.string(f.t.PBG51t),
-              verifyGateDescription: n ? f.intl.format(f.t['7uIWQE'], {}) : f.intl.format(f.t.x1coPj, {})
+              verifyAgreementButtonText: p.intl.string(p.t.PBG51t),
+              verifyGateDescription: n ? p.intl.format(p.t['7uIWQE'], {}) : p.intl.format(p.t.x1coPj, {})
           }
         : {
-              verifyAgreementButtonText: f.intl.string(f.t['5B+npK']),
-              verifyGateDescription: n ? f.intl.string(f.t.akjk0d) : f.intl.string(f.t['u/xqhY'])
+              verifyAgreementButtonText: p.intl.string(p.t['5B+npK']),
+              verifyGateDescription: n ? p.intl.string(p.t.akjk0d) : p.intl.string(p.t['u/xqhY'])
           };
 }
-let x = () => {
+let v = () => {
         let e = c.default.getCurrentUser();
         if (null == e) return !1;
-        let t = (function () {
-            let e = (0, i.H1)({ location: 'age-gate-utils' }),
-                t = (0, r.sf)();
-            return e && t;
-        })();
+        let t = b();
         return null == e.nsfwAllowed || t;
     },
-    C = (e) => {
-        if (!x() || null == e) return !1;
-        let t = s.Z.getGuild(e);
+    I = (e) => {
+        if (!v() || null == e) return !1;
+        let t = l.Z.getGuild(e);
         return (
             null != t &&
-            (0, a.Y2)(t) &&
-            (0, l.Tz)({
+            (0, o.Y2)(t) &&
+            (0, a.Tz)({
                 guildId: e,
                 location: 'age-gate-utils'
             })
         );
     },
-    v = (e) => {
-        var t;
-        return !!x() && null != e && (null == (t = o.Z.getChannel(e)) ? void 0 : t.isNSFW());
-    };
-function O(e, t, n) {
-    return C(e) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_SERVER) : v(t) ? void (0, d.mN)(null != n ? n : p.L0.NSFW_CHANNEL) : void 0;
+    T = (e) => !!v() && null != e && A(s.Z.getChannel(e));
+function S(e, t, n) {
+    return I(e) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_SERVER) : T(t) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_CHANNEL) : void 0;
+}
+function A(e) {
+    if (null == e) return !1;
+    let t = e.guild_id,
+        n = l.Z.getGuild(t);
+    return e.isNSFW() || (null != n && (0, o.Y2)(n));
 }

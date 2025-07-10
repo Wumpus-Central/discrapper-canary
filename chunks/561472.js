@@ -1,59 +1,60 @@
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(998698),
-    o = n(933557),
-    s = n(703558),
-    c = n(731290),
-    u = n(607744),
-    d = n(819640),
-    p = n(496675),
-    h = n(699516),
-    f = n(594174),
-    m = n(585483),
-    g = n(127654),
-    b = n(205822),
-    _ = n(731994),
-    y = n(981631),
-    C = n(388032);
-let x = function (e) {
-    let { className: t, style: n, channel: x, draftType: v } = e,
-        [O, j] = i.useState(!0),
-        E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        S = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
-        I = null != (0, l.e7)([a.Z], () => a.Z.getActiveCommand(x.id)),
-        P = x.getGuildId(),
-        Z = v === s.d.FirstThreadMessage,
-        N = (0, l.e7)([f.default], () => {
+    a = n(622822),
+    o = n(998698),
+    s = n(933557),
+    c = n(703558),
+    u = n(731290),
+    d = n(607744),
+    p = n(819640),
+    h = n(496675),
+    f = n(699516),
+    m = n(594174),
+    g = n(585483),
+    b = n(127654),
+    _ = n(205822),
+    y = n(731994),
+    C = n(981631),
+    x = n(388032);
+let v = function (e) {
+    let { className: t, style: n, channel: v, draftType: O } = e,
+        [j, E] = i.useState(!0),
+        S = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        I = (0, l.e7)([h.Z], () => null != v && h.Z.can(C.Plq.ATTACH_FILES, v), [v]),
+        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(v.id)),
+        Z = v.getGuildId(),
+        T = O === c.d.FirstThreadMessage,
+        N = (0, l.e7)([m.default], () => {
             var e;
-            return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
+            return !0 == !(null == (e = m.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
-        T = (0, l.e7)([c.Z], () => c.Z.didAgree(P)) && !N,
-        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != P && (!x.isNSFW() || T) && S && u.Z.canChatInGuild(P))), [S, T, x, P, E]),
-        w = Z ? (y.TPd.GUILD_THREADS_ONLY.has(x.type) ? C.intl.string(C.t.RBBLhI) : C.intl.string(C.t.gUx4en)) : O ? C.intl.format(C.t.dYP2FR, { destination: (0, o.F6)(x, f.default, h.Z, !0) }) : C.intl.string(C.t.h76ulJ);
-    return I || !A
+        A = (0, l.e7)([u.Z], () => u.Z.didAgree(Z)) && !N,
+        w = i.useMemo(() => !S && ((v.isPrivate() && !v.isManaged()) || (null != Z && (!(0, a.aC)(v) || A) && I && d.Z.canChatInGuild(Z))), [I, A, v, Z, S]),
+        R = T ? (C.TPd.GUILD_THREADS_ONLY.has(v.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : j ? x.intl.format(x.t.dYP2FR, { destination: (0, s.F6)(v, m.default, f.Z, !0) }) : x.intl.string(x.t.h76ulJ);
+    return P || !w
         ? null
-        : (0, r.jsx)(b.Z, {
+        : (0, r.jsx)(_.Z, {
               className: t,
               style: n,
-              title: w,
-              description: Z ? C.intl.string(C.t.lpgkzs) : C.intl.string(C.t.usQh4O),
-              icons: _.J6,
+              title: R,
+              description: T ? x.intl.string(x.t.lpgkzs) : x.intl.string(x.t.usQh4O),
+              icons: y.J6,
               onDrop: (e) => {
-                  if (I) return !1;
-                  A &&
-                      null != x &&
-                      ((0, g.d)(e, x, v, {
-                          requireConfirm: O,
+                  if (P) return !1;
+                  w &&
+                      null != v &&
+                      ((0, b.d)(e, v, O, {
+                          requireConfirm: j,
                           showLargeMessageDialog: !1
                       }),
-                      m.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS));
+                      g.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => j(!0),
+              onDragClear: () => E(!0),
               onDragOver: (e) => {
-                  if (I) return !1;
-                  Z || e.shiftKey !== O || j(!e.shiftKey);
+                  if (P) return !1;
+                  T || e.shiftKey !== j || E(!e.shiftKey);
               }
           });
 };

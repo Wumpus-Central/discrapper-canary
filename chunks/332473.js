@@ -1,16 +1,16 @@
 n.d(t, {
-    b: () => a,
+    b: () => s,
     e: () => o
 });
-var r = n(399606),
-    i = n(594174),
+var i = n(399606),
+    r = n(594174),
     l = n(918505);
-let o = () => c(i.default.getCurrentUser(), (0, l.JH)()),
-    a = () =>
-        c(
-            (0, r.e7)([i.default], () => i.default.getCurrentUser()),
+let o = () => a(r.default.getCurrentUser(), (0, l.JH)()),
+    s = () =>
+        a(
+            (0, i.e7)([r.default], () => r.default.getCurrentUser()),
             (0, l.o9)()
         );
-function c(e, t) {
+function a(e, t) {
     return !(null == e || e.isPomelo()) && !!e.hasVerifiedEmailOrPhone() && !!t;
 }

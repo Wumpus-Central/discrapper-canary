@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(619915),
     P = n(988980),
     Z = n(16609),
-    N = n(952561),
-    T = n(563218),
+    T = n(952561),
+    N = n(563218),
     A = n(884338),
     w = n(617552),
     R = n(719296),
@@ -45,7 +45,7 @@ let F = A.u8.SIZE_32,
 function G(e) {
     var t, n, l;
     let { maxHeight: G, connectedLocation: V, renderExternalHeader: z } = e,
-        W = (0, N.Z)(),
+        W = (0, T.Z)(),
         Y = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
         q = (0, Z.p)(V),
         K = (0, o.e7)([y.Z], () => y.Z.getChannel(q)),
@@ -234,7 +234,7 @@ function G(e) {
                                     paddingBottom: eu
                                 },
                                 ref: el,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(N.Z, {
                                     className: B.iframe,
                                     embedId: (0, R.Z)(V.id, W.id)
                                 })

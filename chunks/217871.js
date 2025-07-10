@@ -158,7 +158,7 @@ let O = i.memo(function (e) {
         i.useEffect(() => {
             (I.multiplier > 1 || I.value > 0) && (P.current = I);
         }, [I]);
-        let { multiplier: Z, value: N } = i.useMemo(
+        let { multiplier: Z, value: T } = i.useMemo(
             () => ({
                 value: E ? I.value : P.current.value,
                 multiplier: E ? I.multiplier : P.current.multiplier
@@ -176,7 +176,7 @@ let O = i.memo(function (e) {
                     className: v.combo,
                     style: S,
                     children: (0, r.jsx)(j, {
-                        value: N,
+                        value: T,
                         multiplier: Z
                     })
                 })

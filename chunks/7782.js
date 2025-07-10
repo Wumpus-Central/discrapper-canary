@@ -102,7 +102,7 @@ let Z = (e) => {
                   ]
               });
     },
-    N = (e) => {
+    T = (e) => {
         var t;
         let { relationshipType: n, userId: i, showingBanner: l } = e,
             a = null == (t = v.default.getUser(i)) ? void 0 : t.bot,
@@ -205,7 +205,7 @@ let Z = (e) => {
                 return null;
         }
     },
-    T = (e) => {
+    N = (e) => {
         let { channelId: t, otherUserId: n } = e,
             l = i.useCallback(() => {
                 (0, s.showToast)((0, s.createToast)(I.intl.string(I.t.a2j0ho), s.ToastType.FAILURE));
@@ -264,7 +264,7 @@ let Z = (e) => {
                 s || u
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(T, {
+                              (0, r.jsx)(N, {
                                   channelId: n.id,
                                   otherUserId: t
                               }),
@@ -273,7 +273,7 @@ let Z = (e) => {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(N, {
+                              (0, r.jsx)(T, {
                                   relationshipType: c,
                                   userId: t,
                                   showingBanner: i

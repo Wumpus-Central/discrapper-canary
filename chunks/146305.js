@@ -39,8 +39,8 @@ var r = n(255367),
     U = n(247031),
     B = n(787561),
     F = n(579648),
-    z = n(460461),
-    H = n(29605),
+    H = n(460461),
+    z = n(29605),
     V = n(365307),
     W = n(324330),
     Y = n(495300),
@@ -212,7 +212,7 @@ let ej = {
                     section: eg.pNK.EMOJI,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
                     label: ef.intl.string(ef.t.sMOuub),
-                    element: H.ZP,
+                    element: z.ZP,
                     predicate: () => t.canManageGuildExpressions
                 };
             case eg.pNK.STICKERS:
@@ -387,10 +387,10 @@ let ej = {
                         children: [ef.intl.string(ef.t.kGlQGB), ' ', (0, r.jsx)(c.Z, {})]
                     }),
                     ariaLabel: ef.intl.string(ef.t.kGlQGB),
-                    element: z.Z,
+                    element: H.Z,
                     notice: {
                         stores: [T.Z],
-                        element: z.J
+                        element: H.J
                     },
                     type: o.bT.CUSTOM,
                     predicate() {

@@ -14,7 +14,5 @@ e.exports = {
     channelName: 'channelName__1ea09',
     separator: 'separator__1ea09',
     checkbox: 'checkbox__1ea09',
-    checkboxInner: 'checkboxInner__1ea09',
-    lockedPill: 'lockedPill__1ea09',
-    lockedPillInner: 'lockedPillInner__1ea09'
+    checkboxInner: 'checkboxInner__1ea09'
 };

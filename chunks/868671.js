@@ -30,8 +30,8 @@ function v(e) {
         } = e,
         [j, E] = r.useState(!1),
         { requestId: S, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
-        N = (0, i.e7)([p.Z], () => p.Z.hidden),
-        T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
+        T = (0, i.e7)([p.Z], () => p.Z.hidden),
+        N = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(O), [O]),
         R = (0, h.E)(w),
@@ -41,7 +41,7 @@ function v(e) {
             if (null == I || 0 === I.length || null == S || !M) return [t, n, x];
             let r = j ? I.length : Z ? 4 : 3,
                 i = I.slice(0, r);
-            e = N
+            e = T
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
@@ -73,7 +73,7 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, I, j, t, O, S, n, x, N, M, Z]),
+        }, [v, I, j, t, O, S, n, x, T, M, Z]),
         B = r.useRef(0),
         F = r.useRef(I),
         H = r.useRef(void 0),
@@ -103,8 +103,8 @@ function v(e) {
                     if (null == S || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null != (t = null == (e = F.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, B.current);
-                    !N &&
-                        T &&
+                    !T &&
+                        N &&
                         M &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
@@ -123,7 +123,7 @@ function v(e) {
                             }));
                 }
             ),
-            [S, v, O, N, T, M]
+            [S, v, O, T, N, M]
         ),
         {
             groups: D,

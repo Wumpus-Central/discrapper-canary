@@ -41,8 +41,8 @@ function _(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: j = !1, isRichPresenceInvite: E = !1, iconClassName: S, look: I, size: P, buttonText: Z, color: N } = e,
-        T = (function (e, t) {
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: j = !1, isRichPresenceInvite: E = !1, iconClassName: S, look: I, size: P, buttonText: Z, color: T } = e,
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -79,7 +79,7 @@ function y(e) {
               look: I,
               size: P,
               buttonText: Z,
-              color: null != N ? N : void 0
+              color: null != T ? T : void 0
           })
         : null != M && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, r.jsx)(
@@ -148,10 +148,10 @@ function y(e) {
                         iconClassName: S,
                         look: I,
                         size: P,
-                        color: N,
+                        color: T,
                         buttonText: Z
                     },
-                    T
+                    N
                 )
             )
           : null;

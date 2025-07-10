@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(817608),
     P = n(569471),
     Z = n(346479),
-    N = n(592125),
-    T = n(934415),
+    T = n(592125),
+    N = n(934415),
     A = n(572004),
     w = n(456269),
     R = n(109590),
@@ -132,12 +132,12 @@ function V(e) {
         [E, L] = i.useState(3),
         [V, z] = i.useState(!n),
         [W, Y] = (0, f.Z)(!1, 2000),
-        q = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
+        q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
         { firstMessage: K } = (0, R.cl)(q),
         X = (0, o.e7)([P.Z], () => P.Z.hasJoined(t)),
         { disableReactionUpdates: Q, disableReactionCreates: J, isLurking: $, isGuest: ee, isPendingMember: et } = (0, _.Z)(q),
         en = (0, S.nw)(q),
-        er = (0, o.e7)([N.Z], () => N.Z.getChannel(s)),
+        er = (0, o.e7)([T.Z], () => T.Z.getChannel(s)),
         ei = (0, w.Bs)(er),
         el = (0, o.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ea = i.useCallback(
@@ -179,7 +179,7 @@ function V(e) {
                 postId: q.id,
                 location: { section: D.jXE.CHANNEL_HEADER }
             }),
-                (0, A.JG)((0, T.EO)(q, er), () => Y(!0)));
+                (0, A.JG)((0, N.EO)(q, er), () => Y(!0)));
         },
         ep = () => {
             d.Z.jumpToMessage({

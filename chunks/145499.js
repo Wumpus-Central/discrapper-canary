@@ -198,13 +198,13 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     U = d.slice(C, R),
                     B = U.length > 0,
                     F = Z < m.tier,
-                    z = w(d.length, t),
-                    H = b && !F && z === m.tier && R !== U.length,
-                    V = H || U.length > 0,
+                    H = w(d.length, t),
+                    z = b && !F && H === m.tier && R !== U.length,
+                    V = z || U.length > 0,
                     W = R - C,
                     Y = n(872732),
                     K = G - U.length,
-                    X = H ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
+                    X = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
                     q = [];
                 for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
                 let Q = t.premiumTier < m.tier && j >= I.oCV[m.tier],
@@ -220,8 +220,8 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                           (J = S.intl.string(S.t.g7lkra)),
                           t.premiumTier + 1 !== m.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
                         : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
-                let et = z === x + 1 && z > Z,
-                    en = H || et || x > Z;
+                let et = H === x + 1 && H > Z,
+                    en = z || et || x > Z;
                 return (
                     et
                         ? (l = (0, r.jsx)(g.Z, {
@@ -237,7 +237,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                   objectType: (0, _.ge)(m.tier)
                               }
                           }))
-                        : H && (l = (0, r.jsx)(A, { guild: t })),
+                        : z && (l = (0, r.jsx)(A, { guild: t })),
                     (0, r.jsxs)(
                         y.Z,
                         {
@@ -270,7 +270,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                         ]
                                     }),
                                 !F &&
-                                    !H &&
+                                    !z &&
                                     0 === U.length &&
                                     (0, r.jsx)('div', {
                                         className: s()(T.emptyTierWrapper, T.unusedTierWrapper),

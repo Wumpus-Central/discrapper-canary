@@ -1,4 +1,4 @@
-n.d(t, { h: () => N });
+n.d(t, { h: () => T });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -67,10 +67,10 @@ function Z(e, t) {
         e
     );
 }
-function N(e) {
+function T(e) {
     let { channel: t, guild: n, width: i, inPopout: l, handleClose: a, userParticipantCount: o } = e;
     return i < 250
-        ? (0, r.jsx)(T, {
+        ? (0, r.jsx)(N, {
               channel: t,
               guild: n,
               width: i,
@@ -94,7 +94,7 @@ function N(e) {
                 inPopout: l
             });
 }
-function T(e) {
+function N(e) {
     let { channel: t, inPopout: n, handleClose: i } = e,
         { analyticsLocations: l } = (0, b.ZP)(g.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
         { enabled: o } = p.c.useExperiment({ location: 'ActivityShelfButtonTile' }, { autoTrackExposure: !0 }),

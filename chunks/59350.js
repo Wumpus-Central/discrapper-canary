@@ -40,8 +40,8 @@ var l = t(255367),
     U = t(521941),
     G = t(614328),
     W = t(104265),
-    F = t(588632),
-    z = t(290511),
+    z = t(588632),
+    F = t(290511),
     q = t(981631),
     X = t(176505),
     V = t(490897),
@@ -260,7 +260,7 @@ function el(e) {
                         : null
                 ]
             }),
-            (0, l.jsx)(F.Z, {
+            (0, l.jsx)(z.Z, {
                 options: b,
                 value: v,
                 onChange: (e) => {
@@ -392,7 +392,7 @@ function ei(e) {
         (e) => {
             if (null == o) return null;
             switch (e.type) {
-                case z.FN.MULTIPLE_CHOICE:
+                case F.FN.MULTIPLE_CHOICE:
                     return (0, l.jsx)(
                         er,
                         {
@@ -401,7 +401,7 @@ function ei(e) {
                         },
                         e.id
                     );
-                case z.FN.DROPDOWN:
+                case F.FN.DROPDOWN:
                     return (0, l.jsx)(
                         el,
                         {

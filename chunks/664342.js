@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -83,7 +83,7 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(N, P(I({}, e), { channel: t }));
+            return (0, r.jsx)(T, P(I({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -101,7 +101,7 @@ function Z(e) {
         }
     });
 }
-function N(e) {
+function T(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         _ = (0, c.Z)(t, 'Sidebar Overflow'),
         y = (0, d.Z)(t),
@@ -111,8 +111,8 @@ function N(e) {
         I = (0, u.Z)(t),
         P = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
-        N = (0, s.Z)(t),
-        T = (0, o.Z)(t),
+        T = (0, s.Z)(t),
+        N = (0, o.Z)(t),
         A = (0, b.Z)({
             id: t.id,
             label: S.intl.string(S.t.DQ797u)
@@ -167,15 +167,15 @@ function N(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, j, I, N]
+                children: [w, j, I, T]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [T, A]
+                children: [N, A]
             })
         ]
     });
 }
-function T(e) {
+function N(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

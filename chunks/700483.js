@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(829750),
     P = n(189771),
     Z = n(294629),
-    N = n(793319),
-    T = n(987329),
+    T = n(793319),
+    N = n(987329),
     A = n(560688),
     w = n(390322),
     R = n(871499),
@@ -86,7 +86,7 @@ let ec = i.memo(function (e) {
         children: [
             (0, r.jsxs)('div', {
                 className: eo.buttonSection,
-                children: [(0, r.jsx)(eh, { channelId: t.id }), n ? (0, r.jsx)(es, { channel: t }) : null, (0, r.jsx)(T.Z, { channel: t })]
+                children: [(0, r.jsx)(eh, { channelId: t.id }), n ? (0, r.jsx)(es, { channel: t }) : null, (0, r.jsx)(N.Z, { channel: t })]
             }),
             (0, r.jsx)(ed, { channel: t })
         ]
@@ -118,7 +118,7 @@ function ed(e) {
         S = (0, W.B)(t.id),
         I = f(g),
         { parentAnalyticsLocation: P } = (0, h.ZP)(),
-        N = i.useRef(null);
+        T = i.useRef(null);
     if (!b)
         return (0, r.jsx)(s.zx, {
             size: s.zx.Sizes.MEDIUM,
@@ -143,7 +143,7 @@ function ed(e) {
                 ]
             })
         });
-    let T = () =>
+    let N = () =>
         (function (e) {
             let { channel: t, appContext: n } = e;
             if (((0, _.v)(p.Z.VOICE_CONTROL_TRAY, _.d.DISCONNECT), (0, ee.Z)(t))) return void (0, G.Us)(t, n);
@@ -154,7 +154,7 @@ function ed(e) {
         });
     return (j || I) && null != m
         ? (0, r.jsx)(c.yRy, {
-              targetElementRef: N,
+              targetElementRef: T,
               renderPopout: (e) => {
                   let { closePopout: i } = e;
                   return (0, r.jsx)(w.Z, {
@@ -182,9 +182,9 @@ function ed(e) {
                   let { onClick: n } = e,
                       { isShown: i } = t;
                   return (0, r.jsx)(M.Z, {
-                      ref: N,
+                      ref: T,
                       label: ea.intl.string(ea.t.c6qKws),
-                      onClick: T,
+                      onClick: N,
                       onPopoutClick: n,
                       popoutOpen: i
                   });
@@ -193,11 +193,11 @@ function ed(e) {
         : (C && !S) || O
           ? (0, r.jsx)(M.Z, {
                 label: ea.intl.string(ea.t.SMKyio),
-                onClick: T
+                onClick: N
             })
           : (0, r.jsx)(M.Z, {
                 label: ea.intl.string(ea.t.c6qKws),
-                onClick: T
+                onClick: N
             });
 }
 function ep(e) {
@@ -285,7 +285,7 @@ let ef = i.memo(function (e) {
                 hasPermission: v,
                 enabled: _,
                 cameraUnavailable: p,
-                onChange: N.r,
+                onChange: T.r,
                 onCameraUnavailable: A.Z,
                 channelLimitReached: j,
                 channelLimit: O,
@@ -347,7 +347,7 @@ let ef = i.memo(function (e) {
                 className: eo.buttonSection,
                 children: [
                     M && !l && G
-                        ? (0, r.jsx)(N.NZ, {
+                        ? (0, r.jsx)(T.NZ, {
                               channel: t,
                               currentUser: E,
                               exitFullScreen: () => null,
@@ -360,7 +360,7 @@ let ef = i.memo(function (e) {
                     M && (0, r.jsx)(es, { channel: t }),
                     M && u && l && (0, r.jsx)(eu, { channel: t }),
                     M && !l && (0, r.jsx)(ep, { channel: t }),
-                    (0, r.jsx)(T.Z, { channel: t })
+                    (0, r.jsx)(N.Z, { channel: t })
                 ]
             }),
             (0, r.jsx)(ed, { channel: t })

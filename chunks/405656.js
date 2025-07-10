@@ -208,13 +208,13 @@ function N(e, t) {
             n = n.concat(
                 e.results.map((e) => {
                     let n = e.text;
-                    if (t.type === m.Sap.FILTER_ALL) {
+                    if ((null != e.channel && e.text.includes(' ') && (n = '"'.concat(n, '"')), t.type === m.Sap.FILTER_ALL)) {
                         var i;
                         r = null != (i = e.group) ? i : r;
                         let t = o.ZP[r];
                         (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
                     }
-                    return (t.type === m.Sap.FILTER && t.filter === m.dCx.FILTER_IN && null != e.channel && e.text.includes(' ') && (n = '"'.concat(n, '"')), n);
+                    return n;
                 })
             );
         }),

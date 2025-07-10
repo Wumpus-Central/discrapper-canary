@@ -31,8 +31,8 @@ var r = n(255367),
     I = n(979651),
     P = n(927923),
     Z = n(70722),
-    N = n(388032),
-    T = n(587382);
+    T = n(388032),
+    N = n(587382);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,7 +79,7 @@ function w(e, t) {
 function R(e) {
     let { numUsers: t } = e;
     return (0, r.jsx)('div', {
-        className: T.moreContainer,
+        className: N.moreContainer,
         children: (0, r.jsxs)(o.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
@@ -89,16 +89,16 @@ function R(e) {
 }
 function M(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : N.intl.formatToPlainString(N.t['+v2pNz'], { count: t });
+        i = n ? t : T.intl.formatToPlainString(T.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
-        className: a()(T.audienceContainer, { [T.audienceContainerCollapsed]: n }),
+        className: a()(N.audienceContainer, { [N.audienceContainerCollapsed]: n }),
         children: [
             (0, r.jsx)('div', {
-                className: T.audienceIconContainer,
+                className: N.audienceIconContainer,
                 children: (0, r.jsx)(o.VWR, {
                     size: 'md',
                     color: 'currentColor',
-                    className: T.audienceIcon
+                    className: N.audienceIcon
                 })
             }),
             (0, r.jsx)(o.Text, {
@@ -180,7 +180,7 @@ let D = (0, p.$)(function (e) {
                     otherClientSessionType: er,
                     voicePlatform: ei,
                     embeddedApplication: B,
-                    avatarContainerClass: a()({ [T.userAvatar]: !0 }),
+                    avatarContainerClass: a()({ [N.userAvatar]: !0 }),
                     disabled: el && !t,
                     selected: ed,
                     onClick: t ? void 0 : eh,
@@ -194,7 +194,7 @@ let D = (0, p.$)(function (e) {
             if (el) {
                 var i;
                 return (0, r.jsx)(o.ua7, {
-                    text: null != (i = (0, g.Z)(er)) ? i : N.intl.string(N.t.IyYqqa),
+                    text: null != (i = (0, g.Z)(er)) ? i : T.intl.string(T.t.IyYqqa),
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
                             l = (function (e, t) {
@@ -239,7 +239,7 @@ let D = (0, p.$)(function (e) {
             });
         },
         eC = (0, r.jsx)('div', {
-            className: T.draggable,
+            className: N.draggable,
             'data-dnd-name': R.name,
             onMouseEnter: el
                 ? void 0

@@ -1,9 +1,9 @@
-(i.d(t, { Z: () => s }), i(35282));
-var r = i(593473),
-    l = i(114858),
-    n = i(215023);
-let s = () => {
-    let e = (0, l.TH)(),
-        { tab: t } = (0, r.parse)(e.search);
-    if (Object.values(n.AW).includes(t)) return t;
+(r.d(t, { Z: () => a }), r(35282));
+var n = r(593473),
+    i = r(114858),
+    l = r(215023);
+let a = () => {
+    let e = (0, i.TH)(),
+        { tab: t } = (0, n.parse)(e.search);
+    if (Object.values(l.AW).includes(t)) return t;
 };

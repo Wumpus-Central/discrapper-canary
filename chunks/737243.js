@@ -26,8 +26,8 @@ let h = i.memo(function (e) {
         I = (0, d.NU)(b, x),
         P = (0, o.t0)(h),
         Z = (null == P ? void 0 : P.type) === a.B8.APPLICATION_COMMAND ? (null == (n = P.target_user) ? void 0 : n.id) : void 0,
-        N = (0, d.wq)(Z, f.id),
-        T = (0, d.JC)(Z, f, y, x),
+        T = (0, d.wq)(Z, f.id),
+        N = (0, d.JC)(Z, f, y, x),
         A = (0, d.rY)(C, x),
         w = (0, d.Xn)(_, x),
         R = i.useCallback(() => {
@@ -71,8 +71,8 @@ let h = i.memo(function (e) {
         onClickCommand: w,
         onUserContextMenu: E,
         onClickTargetAvatar: A,
-        onClickTargetUsername: T,
-        onTargetUserContextMenu: N,
+        onClickTargetUsername: N,
+        onTargetUserContextMenu: T,
         onPopoutRequestClose: R,
         renderTargetMessage: M
     });

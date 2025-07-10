@@ -142,7 +142,7 @@ function k(e) {
         [A, k] = i.useState(c),
         [M, G] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [U, B] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
-        { loading: F, error: z, updateSubscriptionsSettings: H } = (0, C.QV)(),
+        { loading: F, error: H, updateSubscriptionsSettings: z } = (0, C.QV)(),
         { imageCTA: V, imageAriaLabel: W, setFilename: Y } = (0, N.Z)(null == a ? void 0 : a.cover_image_asset),
         K = (0, b.Dt)(),
         X = (0, b.Dt)(),
@@ -184,9 +184,9 @@ function k(e) {
     return (0, r.jsxs)('div', {
         className: w.container,
         children: [
-            null != z &&
+            null != H &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(E.Z, { children: z.getAnyErrorMessage() }), (0, r.jsx)(p.LZC, { size: 16 })]
+                    children: [(0, r.jsx)(E.Z, { children: H.getAnyErrorMessage() }), (0, r.jsx)(p.LZC, { size: 16 })]
                 }),
             l
                 ? null
@@ -350,7 +350,7 @@ function k(e) {
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                (x !== a.description && (e.description = x), null != A && A.startsWith('data:') && (e.cover_image = A), m !== s && (e.full_server_gate = m === S.e3.ALL_CHANNELS), M !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = M), U !== a.server_shop_tab_order && (e.server_shop_tab_order = U), d().isEmpty(e) || H(n.id, e));
+                                (x !== a.description && (e.description = x), null != A && A.startsWith('data:') && (e.cover_image = A), m !== s && (e.full_server_gate = m === S.e3.ALL_CHANNELS), M !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = M), U !== a.server_shop_tab_order && (e.server_shop_tab_order = U), d().isEmpty(e) || z(n.id, e));
                             },
                             saveButtonTooltip: $ ? void 0 : P.intl.string(P.t['6HRvio'])
                         })

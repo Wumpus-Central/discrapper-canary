@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => k }), t(539854));
+(t.d(n, { Z: () => R }), t(539854));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
@@ -6,30 +6,31 @@ var l = t(255367),
     o = t(239091),
     s = t(561472),
     c = t(36311),
-    d = t(367907),
-    u = t(188471),
-    m = t(541716),
-    h = t(526120),
-    p = t(563534),
-    f = t(736052),
-    g = t(665149),
-    x = t(442336),
-    _ = t(910611),
-    C = t(41776),
-    j = t(703656),
-    b = t(6025),
-    v = t(592125),
-    y = t(703558),
-    O = t(731290),
-    I = t(430824),
-    N = t(375954),
-    Z = t(594174),
-    w = t(933557),
-    P = t(287746),
-    E = t(981631),
-    S = t(388032),
-    T = t(560460);
-function B(e) {
+    d = t(622822),
+    u = t(367907),
+    m = t(188471),
+    h = t(541716),
+    p = t(526120),
+    f = t(563534),
+    g = t(736052),
+    x = t(665149),
+    _ = t(442336),
+    C = t(910611),
+    j = t(41776),
+    b = t(703656),
+    v = t(6025),
+    y = t(592125),
+    O = t(703558),
+    I = t(731290),
+    N = t(430824),
+    Z = t(375954),
+    w = t(594174),
+    P = t(933557),
+    E = t(287746),
+    S = t(981631),
+    T = t(388032),
+    B = t(560460);
+function A(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -54,7 +55,7 @@ function B(e) {
     }
     return e;
 }
-function A(e, n) {
+function k(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -72,55 +73,55 @@ function A(e, n) {
         e
     );
 }
-function k(e) {
-    let { channelId: n, baseChannelId: k, channelViewSource: R = 'Split View', isResourceChannelView: D } = e,
-        L = (0, i.e7)([v.Z], () => v.Z.getChannel(n)),
-        M = (0, i.e7)([I.Z], () => I.Z.getGuild(null == L ? void 0 : L.getGuildId())),
-        H = (0, i.e7)([Z.default], () => Z.default.getCurrentUser()),
-        U = (0, i.e7)([O.Z], () => O.Z.didAgree(null == L ? void 0 : L.guild_id)),
-        G = (null == H ? void 0 : H.nsfwAllowed) === !0,
-        W = (0, w.ZP)(L),
-        F = (0, i.e7)([C.Z], () => (null == M ? void 0 : M.id) != null && C.Z.isLurking(M.id), [M]),
-        z = (0, f.Z)(n),
-        q = (0, i.e7)([p.Z], () => {
+function R(e) {
+    let { channelId: n, baseChannelId: R, channelViewSource: D = 'Split View', isResourceChannelView: L } = e,
+        M = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
+        H = (0, i.e7)([N.Z], () => N.Z.getGuild(null == M ? void 0 : M.getGuildId())),
+        U = (0, i.e7)([w.default], () => w.default.getCurrentUser()),
+        G = (0, i.e7)([I.Z], () => I.Z.didAgree(null == M ? void 0 : M.guild_id)),
+        W = (null == U ? void 0 : U.nsfwAllowed) === !0,
+        z = (0, P.ZP)(M),
+        F = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
+        q = (0, g.Z)(n),
+        X = (0, i.e7)([f.Z], () => {
             var e;
-            return null == (e = p.Z.getResourceForChannel(null == M ? void 0 : M.id, n)) ? void 0 : e.title;
+            return null == (e = f.Z.getResourceForChannel(null == H ? void 0 : H.id, n)) ? void 0 : e.title;
         }),
-        X = r.useRef(!1);
+        V = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            null == L || X.current || ((X.current = !0), (0, d.yw)(E.rMx.CHANNEL_OPENED, A(B({}, (0, d.$H)(L.id)), { channel_view: R })), (0, u.a)(E.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: L.id }));
-        }, [L, R]),
-        null == L || null == M)
+            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, k(A({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
+        }, [M, D]),
+        null == M || null == H)
     )
         return null;
-    let V = [];
-    return (F || V.push((0, l.jsx)(x.Z, { channel: L }, 'notifications')),
-    V.push(
+    let J = [];
+    return (F || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
+    J.push(
         (0, l.jsx)(
-            g.ZP.Icon,
+            x.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => b.Z.closeChannelSidebar(k)
+                tooltip: T.intl.string(T.t.cpT0Cg),
+                onClick: () => v.Z.closeChannelSidebar(R)
             },
             'close'
         )
     ),
-    !L.isNSFW() || (G && U))
+    !(0, d.aC)(M) || (W && G))
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(s.Z, {
-                      channel: L,
-                      draftType: y.d.ChannelMessage
+                      channel: M,
+                      draftType: O.d.ChannelMessage
                   }),
-                  (0, l.jsx)(g.ZP, {
-                      toolbar: V,
-                      'aria-label': S.intl.string(S.t.BIYAqa),
-                      children: (0, _.ud)({
-                          channel: L,
-                          channelName: z ? q : W,
-                          guild: M,
+                  (0, l.jsx)(x.ZP, {
+                      toolbar: J,
+                      'aria-label': T.intl.string(T.t.BIYAqa),
+                      children: (0, C.ud)({
+                          channel: M,
+                          channelName: q ? X : z,
+                          guild: H,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
@@ -128,31 +129,31 @@ function k(e) {
                                   return (n) =>
                                       (0, l.jsx)(
                                           e,
-                                          A(B({}, n), {
-                                              channel: L,
-                                              guild: M
+                                          k(A({}, n), {
+                                              channel: M,
+                                              guild: H
                                           })
                                       );
                               });
                           },
                           handleClick: () => {
-                              let e = N.Z.getMessages(L.id);
-                              if (D) {
-                                  ((0, j.uL)(E.Z5c.CHANNEL(L.guild_id, L.id)), (0, h.C3)(L.guild_id, null));
+                              let e = Z.Z.getMessages(M.id);
+                              if (L) {
+                                  ((0, b.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null));
                                   return;
                               }
-                              (0, j.XU)(L.guild_id, L.id, e.jumpTargetId);
+                              (0, b.XU)(M.guild_id, M.id, e.jumpTargetId);
                           }
                       })
                   }),
                   (0, l.jsx)('div', {
-                      className: T.chat,
+                      className: B.chat,
                       children: (0, l.jsx)(
-                          P.Z,
+                          E.Z,
                           {
-                              channel: L,
-                              guild: M,
-                              chatInputType: m.Ie.SIDEBAR
+                              channel: M,
+                              guild: H,
+                              chatInputType: h.Ie.SIDEBAR
                           },
                           n
                       )
@@ -160,7 +161,7 @@ function k(e) {
               ]
           })
         : (0, l.jsx)(c.Z, {
-              guild: M,
-              channelId: L.id
+              guild: H,
+              channelId: M.id
           });
 }

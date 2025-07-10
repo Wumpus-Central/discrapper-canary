@@ -409,16 +409,16 @@ function k() {
             [C]
         ),
         F = i.useMemo(() => s().chunk(Z, G.pageSize), [G.pageSize, Z]),
-        z = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 var t, n, r;
-                (null == (t = N.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > Z.length && k && !p && ((H.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null), B(H.current)), (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e })));
+                (null == (t = N.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > Z.length && k && !p && ((z.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null), B(z.current)), (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e })));
             },
             [G.pageSize, Z, k, F, B, p]
         ),
-        H = i.useRef(null);
+        z = i.useRef(null);
     i.useEffect(() => {
-        B(H.current);
+        B(z.current);
     }, [B]);
     let V = i.useMemo(() => {
         var e;
@@ -471,7 +471,7 @@ function k() {
                           totalCount: Z.length + (k ? G.pageSize : 0),
                           pageSize: G.pageSize,
                           currentPage: G.currentPage,
-                          onPageChange: z,
+                          onPageChange: H,
                           maxVisiblePages: 9
                       })
                   })

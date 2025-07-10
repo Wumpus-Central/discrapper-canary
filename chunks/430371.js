@@ -68,7 +68,7 @@ let S = 16 / 9,
 function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: M, showParticipants: D = !0, className: k, width: L, height: U, layout: B, idle: F } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: Z, participants: T, filteredParticipants: N, popoutWindow: A, inCall: w, channel: R, selectedParticipant: M, showParticipants: D = !0, className: k, width: L, height: U, layout: B, idle: F } = e,
         H = null != A,
         G = h.Z.getVideoComponent(),
         V = p.default.getId(),
@@ -153,8 +153,8 @@ function P(e) {
         ex = i.useCallback((e) => {
             (W(e), K(!1));
         }, []),
-        ev = en ? [] : (0, _.n3)(N, M, V),
-        { visibleParticipants: eO, participantTileWidth: ej } = (0, y.ZB)(L, T);
+        ev = en ? [] : (0, _.n3)(T, M, V),
+        { visibleParticipants: eO, participantTileWidth: ej } = (0, y.ZB)(L, N);
     return (0, r.jsxs)('div', {
         className: a()(O.root, v.flexCenter, k),
         children: [

@@ -64,7 +64,7 @@ function j(e, t) {
 }
 let E = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: E, channel: S, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
+    let { baseMessage: n, referencedMessage: E, channel: S, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: Z, setPopout: T, isReplySpineClickable: N, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
         M = (0, c.p)(),
@@ -140,14 +140,14 @@ let E = i.memo(function (e) {
         ),
         B = (0, C.wq)(null == w ? void 0 : w.author.id, S.id),
         F = (0, C.$3)(n, w),
-        H = (0, C.Wl)(w, S, P, N),
-        G = (0, C.rY)(Z, N),
+        H = (0, C.Wl)(w, S, P, T),
+        G = (0, C.rY)(Z, T),
         V = i.useCallback(() => {
-            N({
+            T({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1
             });
-        }, [N]),
+        }, [T]),
         z = (0, b.Uj)(n);
     return (0, r.jsx)(_.Z, {
         repliedAuthor: R,
@@ -167,7 +167,7 @@ let E = i.memo(function (e) {
         onClickReply: F,
         onContextMenu: B,
         onPopoutRequestClose: V,
-        isReplySpineClickable: T,
+        isReplySpineClickable: N,
         showReplySpine: A
     });
 });

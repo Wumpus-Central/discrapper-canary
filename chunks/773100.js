@@ -26,9 +26,6 @@ e.exports = {
     iconWrapper: 'iconWrapper_d2b0e4',
     icon: 'icon_d2b0e4',
     actionItemEditButton: 'actionItemEditButton_d2b0e4',
-    resourceChannelEditButton: 'resourceChannelEditButton_d2b0e4',
-    actionItemEditButtonInner: 'actionItemEditButtonInner_d2b0e4',
-    resourceChannelEditButtonInner: 'resourceChannelEditButtonInner_d2b0e4',
     addActionItem: 'addActionItem_d2b0e4',
     sectionHeader: 'sectionHeader_d2b0e4',
     boostIndicator: 'boostIndicator_d2b0e4',
@@ -49,7 +46,6 @@ e.exports = {
     suggestedChannel: 'suggestedChannel_d2b0e4',
     suggestedChannelIcon: 'suggestedChannelIcon_d2b0e4',
     suggestedChannelText: 'suggestedChannelText_d2b0e4',
-    suggestedChannelButton: 'suggestedChannelButton_d2b0e4',
     suggestedSeparator: 'suggestedSeparator_d2b0e4',
     suggestedChannelsDismiss: 'suggestedChannelsDismiss_d2b0e4',
     suggestedChannelsDismissCheck: 'suggestedChannelsDismissCheck_d2b0e4'

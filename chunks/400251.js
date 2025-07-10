@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => A,
-    m: () => N
+    m: () => T
 }),
     n(388685),
     n(953529));
@@ -90,7 +90,7 @@ function Z(e, t) {
     }
     return i;
 }
-let N = (e) => {
+let T = (e) => {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
@@ -109,7 +109,7 @@ let N = (e) => {
         ]
     });
 };
-function T(e) {
+function N(e) {
     let { entry: t } = e,
         [l, o] = i.useState(!1),
         s = i.useRef(null),
@@ -211,9 +211,9 @@ let A = (e) => {
             }))
                 ? t
                 : void 0,
-        N = j.intl.string(j.t.VJlc0d);
+        T = j.intl.string(j.t.VJlc0d);
     return (
-        x && (N = j.intl.string(j.t.cqWE2d)),
+        x && (T = j.intl.string(j.t.cqWE2d)),
         (0, r.jsxs)('div', {
             className: E.card,
             onContextMenu: (e) => {
@@ -315,11 +315,11 @@ let A = (e) => {
                             className: E.joinButton,
                             color: x ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN,
                             onClick: v,
-                            children: N
+                            children: T
                         })
                     ]
                 }),
-                (0, r.jsx)(T, { entry: l })
+                (0, r.jsx)(N, { entry: l })
             ]
         })
     );

@@ -47,7 +47,7 @@ function v(e) {
         E.current = I;
     });
     let Z = i.useRef(S),
-        { currentDocument: N, rootNode: T } = i.useMemo(() => {
+        { currentDocument: T, rootNode: N } = i.useMemo(() => {
             let e = null != p && j ? p.document : document,
                 t = v.document.getElementById('app-mount');
             return {
@@ -66,32 +66,32 @@ function v(e) {
         ),
         M = i.useCallback(
             (e) => {
-                null != T &&
+                null != N &&
                     e === y.AEg.FULL_SCREEN &&
                     (R(e, Z.current),
                     (0, _.Pr)((e) => {
                         Z.current = e;
-                    }, N));
+                    }, T));
             },
-            [N, R, T]
+            [T, R, N]
         ),
         D = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(O, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
+                null != N && ((0, d.v)(O, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(N)) : M(e));
             },
-            [R, M, T, O]
+            [R, M, N, O]
         );
     i.useEffect(() => {
         let e = () => {
-            null != T && ((0, _.rB)(T, N) || S !== y.AEg.FULL_SCREEN || D(S)());
+            null != N && ((0, _.rB)(N, T) || S !== y.AEg.FULL_SCREEN || D(S)());
         };
         return (
-            N.addEventListener(_.NO, e),
+            T.addEventListener(_.NO, e),
             () => {
-                N.removeEventListener(_.NO, e);
+                T.removeEventListener(_.NO, e);
             }
         );
-    }, [N, S, D, T]);
+    }, [T, S, D, N]);
     let k = {
             channel: t,
             maybeLeaveFullScreen: M
@@ -137,15 +137,15 @@ function v(e) {
         );
     }, [S, j]),
     i.useEffect(() => {
-        null != T && E.current === y.WtW.VIDEO && I === y.WtW.VOICE && (0, _.Pr)(T, N);
-    }, [N, I, E, T]),
+        null != N && E.current === y.WtW.VIDEO && I === y.WtW.VOICE && (0, _.Pr)(N, T);
+    }, [T, I, E, N]),
     i.useEffect(() => {
         !P && j && x();
     }, [P, j]),
     w)
         ? (0, r.jsx)(h.Z, {
               themeable: !1,
-              node: T,
+              node: N,
               guestWindow: p,
               className: C.rightTrayIcon,
               onClick: D(S)

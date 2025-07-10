@@ -123,8 +123,8 @@ let S = function (e) {
         I = (0, g.Dt)(),
         P = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         Z = null == P ? void 0 : P.name,
-        N = (0, m.cO)(P),
-        [T, A] = i.useState(null != Z ? Z : ''),
+        T = (0, m.cO)(P),
+        [N, A] = i.useState(null != Z ? Z : ''),
         [w, R] = i.useState(void 0),
         M = void 0 !== w,
         { analyticsLocations: D } = (0, h.ZP)(S, p.Z.GROUP_DM_EDIT_MODAL),
@@ -137,8 +137,8 @@ let S = function (e) {
             old_icon_set: (null == P ? void 0 : P.icon) != null
         };
     return (i.useEffect(() => {
-        a(T !== Z || M);
-    }, [T, Z, M, a]),
+        a(N !== Z || M);
+    }, [N, Z, M, a]),
     (0, d.ZP)(
         () => (
             _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, k), { action: 'opened' })),
@@ -154,14 +154,14 @@ let S = function (e) {
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = T !== Z,
+                      let r = N !== Z,
                           i = void 0 !== w;
                       if (
                           (_.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
                               j(O({}, k), {
                                   action: 'saved',
-                                  new_name_set: '' !== T,
+                                  new_name_set: '' !== N,
                                   new_icon_set: (i ? w : null == P ? void 0 : P.icon) != null,
                                   name_changed: r,
                                   icon_changed: i
@@ -170,7 +170,7 @@ let S = function (e) {
                           r || i)
                       ) {
                           let e = {};
-                          (r && (e.name = T), i && (e.icon = w), u.Z.updateChannel(t, e, S).catch(y.g6));
+                          (r && (e.name = N), i && (e.icon = w), u.Z.updateChannel(t, e, S).catch(y.g6));
                       }
                       n();
                   },
@@ -208,8 +208,8 @@ let S = function (e) {
                                   }),
                                   (0, r.jsx)(c.oil, {
                                       'aria-label': x.intl.string(x.t.GEGW3N),
-                                      placeholder: null != N ? N : '',
-                                      value: T,
+                                      placeholder: null != T ? T : '',
+                                      value: N,
                                       onChange: A,
                                       autoFocus: !0
                                   })
@@ -222,7 +222,7 @@ let S = function (e) {
                                       variant: 'primary',
                                       text: x.intl.string(x.t.R3BPHx),
                                       type: 'submit',
-                                      disabled: T === Z && !M
+                                      disabled: N === Z && !M
                                   }),
                                   (0, r.jsx)(s.zx, {
                                       onClick: f,

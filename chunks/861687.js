@@ -481,7 +481,7 @@ class ev extends d.Z {
                 .catch((e) => {
                     this.logger.warn(e);
                 }),
-                this._trackMLSFailures());
+                this._trackMLSFailures({ recovered: !1 }));
             let n = j.Z.shouldIncludePreferredRegion() ? j.Z.getPreferredRegion() : null,
                 i = x.Z.getSettings(),
                 a = L.Z.getChannel(this.channelId),
@@ -1189,7 +1189,7 @@ class ev extends d.Z {
         let r = (0, _.zO)();
         null == (n = this._connection) ||
             n.prepareMLSCommitTransition(e, t, (n, i, a) => {
-                (n ? (this._handleSecureFramesRosterChange(a, e), this._maybeSendSecureFramesTransitionReady(e), this._recoverMLSFailures()) : (this.logger.warn('Failed to process MLS commit for transition ID '.concat(e)), this._flagMLSInvalidCommitWelcome(e), this._handleSecureFramesInit(i)),
+                (n ? (this._trackMLSFailures({ recovered: !0 }), (this._mlsSessionResetStartTime = void 0), this._handleSecureFramesRosterChange(a, e), this._maybeSendSecureFramesTransitionReady(e)) : (this.logger.warn('Failed to process MLS commit for transition ID '.concat(e)), (this._mlsSessionResetStartTime = (0, _.zO)()), this._flagMLSInvalidCommitWelcome(e), this._handleSecureFramesInit(i)),
                     this._storeSecureFrameTransitionData(e, {
                         protocolVersion: i,
                         commitReceivedTime: r,
@@ -1205,7 +1205,7 @@ class ev extends d.Z {
         let r = (0, _.zO)();
         null == (n = this._connection) ||
             n.processMLSWelcome(e, t, (n, i, a) => {
-                (n ? (this._handleSecureFramesRosterChange(a, e), this._maybeSendSecureFramesTransitionReady(e), this._recoverMLSFailures()) : (this._flagMLSInvalidCommitWelcome(e), this._sendMLSKeyPackage()),
+                (n ? (this._trackMLSFailures({ recovered: !0 }), (this._mlsSessionResetStartTime = void 0), this._handleSecureFramesRosterChange(a, e), this._maybeSendSecureFramesTransitionReady(e)) : ((this._mlsSessionResetStartTime = (0, _.zO)()), this._flagMLSInvalidCommitWelcome(e), this._sendMLSKeyPackage()),
                     this._storeSecureFrameTransitionData(e, {
                         protocolVersion: i,
                         welcomeReceivedTime: r,
@@ -1225,39 +1225,38 @@ class ev extends d.Z {
     }
     _handleMLSFailure(e, t) {
         let n = ''.concat(e, ':').concat(t),
-            r = n in this._mlsFailures ? this._mlsFailures[n][2] : 0;
-        ((this._mlsFailures[n] = [e, t, r + 1]), this._alertMLSFailureDebouced(e, t));
+            r = this._mlsFailures.get(n);
+        (null != r
+            ? (r.count++, null != this._mlsSessionResetStartTime && r.countDuringReset++)
+            : this._mlsFailures.set(n, {
+                  source: e,
+                  reason: t,
+                  count: 1,
+                  countDuringReset: +(null != this._mlsSessionResetStartTime),
+                  firstOccurrence: (0, _.zO)()
+              }),
+            this._alertMLSFailureDebouced(e, t));
     }
-    _recoverMLSFailures() {
-        for (let [e, [t, n, r]] of Object.entries(this._mlsFailures)) {
-            let i = e in this._mlsFailuresRecovered ? this._mlsFailuresRecovered[e][2] : 0;
-            this._mlsFailuresRecovered[e] = [t, n, i + r];
-        }
-    }
-    _trackMLSFailures() {
-        let e = [
-                ...Object.values(this._mlsFailuresRecovered).map((e) => {
-                    let [t, n, r] = e;
-                    return [t, n, r, !0];
-                }),
-                ...Object.values(this._mlsFailures).map((e) => {
-                    let [t, n, r] = e;
-                    return [t, n, r, !1];
-                })
-            ],
-            t = this.getMediaSessionId();
-        for (let [n, r, i, a] of e)
+    _trackMLSFailures(e) {
+        let { recovered: t } = e,
+            n = this.getMediaSessionId(),
+            r = null != this._mlsSessionResetStartTime ? (0, _.zO)() - this._mlsSessionResetStartTime : void 0;
+        for (let { source: e, reason: i, count: a, countDuringReset: o, firstOccurrence: s } of this._mlsFailures.values())
             G.default.track(
                 eo.rMx.MLS_FAILURES,
                 ed(ec({}, this._getAnalyticsProperties()), {
-                    media_session_id: t,
+                    media_session_id: n,
                     parent_media_session_id: this.parentMediaSessionId,
-                    failure_source: n,
-                    failure_reason: r,
-                    failure_count: i,
-                    failure_was_recovered: a
+                    failure_source: e,
+                    failure_reason: i,
+                    failure_count: a,
+                    failure_was_recovered: t,
+                    time_since_first_occurrence: (0, _.zO)() - s,
+                    time_since_last_reset: r,
+                    failure_count_during_reset: o
                 })
             );
+        this._mlsFailures.clear();
     }
     _alertMLSFailure(e, t) {
         let n = U.default.getCurrentUser();
@@ -1355,14 +1354,14 @@ class ev extends d.Z {
             el(this, '_secureFramesState', void 0),
             el(this, '_userIds', void 0),
             el(this, '_secureFramesRosterMap', new Map()),
-            el(this, '_mlsFailuresRecovered', void 0),
-            el(this, '_mlsFailures', void 0),
+            el(this, '_mlsFailures', new Map()),
             el(this, '_secureFramesTransitionStates', new Map()),
             el(this, '_secureFramesNextTransitionState', void 0),
             el(this, '_secureFramesMaxConcurrentTransitions', 0),
             el(this, '_secureFramesTransitionPrepareCount', 0),
             el(this, '_secureFramesTransitionExecuteCount', 0),
             el(this, '_secureFramesLastBecameAloneTime', void 0),
+            el(this, '_mlsSessionResetStartTime', void 0),
             el(this, '_numNoiseCancellationChanges', 0),
             el(this, '_fetchAsyncResourcesPromise', void 0),
             el(this, '_lastSentSpeakingStatus', void 0),
@@ -1506,8 +1505,7 @@ class ev extends d.Z {
             (this._secureFramesState = null),
             (this._userIds = new Set([e])),
             this._secureFramesRosterMap.clear(),
-            (this._mlsFailuresRecovered = {}),
-            (this._mlsFailures = {}),
+            this._mlsFailures.clear(),
             (this._mediaEngineConnectionId = null),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0));

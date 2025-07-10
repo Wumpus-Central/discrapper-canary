@@ -101,9 +101,9 @@ function D(e) {
         U = null == W ? void 0 : W.welcomeMessage,
         z = (0, C.Z)(a.id),
         G = !z && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
-        F = (0, d.Z)('(max-width: 1300px)'),
-        q = m - N.PrS - T,
-        V = (B && q < k) || F || G;
+        q = (0, d.Z)('(max-width: 1300px)'),
+        F = m - N.PrS - T,
+        V = (B && F < k) || q || G;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
         else if (null != W) {
@@ -148,7 +148,7 @@ function D(e) {
                                               className: P.maxWidthWrapper,
                                               children: (0, l.jsx)(h.Z, {
                                                   guild: a,
-                                                  titleClassName: F ? P.emptyHeaderTitle : void 0
+                                                  titleClassName: q ? P.emptyHeaderTitle : void 0
                                               })
                                           }),
                                           (0, l.jsxs)('div', {

@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(268350),
     P = n(695346),
     Z = n(592125),
-    N = n(703558),
-    T = n(375954),
+    T = n(703558),
+    N = n(375954),
     A = n(496675),
     w = n(117530),
     R = n(459273),
@@ -83,7 +83,7 @@ function q(e) {
                       children: [
                           (0, r.jsx)(f.Z, {
                               channel: l,
-                              draftType: N.d.FirstThreadMessage
+                              draftType: T.d.FirstThreadMessage
                           }),
                           (0, r.jsx)(K, { parentChannelId: t }),
                           (0, r.jsx)(X, {
@@ -99,9 +99,9 @@ function q(e) {
 function K(e) {
     let { parentChannelId: t } = e,
         n = i.useCallback(() => {
-            let e = N.Z.getThreadSettings(t),
-                n = N.Z.getDraft(t, N.d.FirstThreadMessage).trim(),
-                r = w.Z.getUploads(t, N.d.FirstThreadMessage);
+            let e = T.Z.getThreadSettings(t),
+                n = T.Z.getDraft(t, T.d.FirstThreadMessage).trim(),
+                r = w.Z.getUploads(t, T.d.FirstThreadMessage);
             if (((null == e ? void 0 : e.name) != null && (null == e ? void 0 : e.name) !== '') || 0 !== n.length || 0 !== r.length)
                 return void p.Z.show({
                     title: G.intl.string(G.t['6kDZh4']),
@@ -184,14 +184,14 @@ function X(e) {
                 i.useEffect(() => {
                     function n(n) {
                         var i;
-                        let l = N.Z.getDraft(e.id, N.d.FirstThreadMessage);
-                        ((0 === l.length || !0 === n) && r((0, y.eK)(l)), t(null != (i = N.Z.getThreadSettings(e.id)) ? i : {}));
+                        let l = T.Z.getDraft(e.id, T.d.FirstThreadMessage);
+                        ((0 === l.length || !0 === n) && r((0, y.eK)(l)), t(null != (i = T.Z.getThreadSettings(e.id)) ? i : {}));
                     }
                     return (
                         n(!0),
-                        N.Z.addChangeListener(n),
+                        T.Z.addChangeListener(n),
                         () => {
-                            N.Z.removeChangeListener(n);
+                            T.Z.removeChangeListener(n);
                         }
                     );
                 }, [e.id, t]),
@@ -232,7 +232,7 @@ function X(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                        (h(!0), null == e && (e = a.textValue), (e = e.trim()), (null == i || 0 === i.length) && (i = null == (o = S.Z.getStickerPreview(t.id, Y.drafts.type)) ? void 0 : o.map((e) => e.id)), (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, N.d.FirstThreadMessage)));
+                        (h(!0), null == e && (e = a.textValue), (e = e.trim()), (null == i || 0 === i.length) && (i = null == (o = S.Z.getStickerPreview(t.id, Y.drafts.type)) ? void 0 : o.map((e) => e.id)), (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, T.d.FirstThreadMessage)));
                         let m = null != (s = r.name) ? s : '',
                             g = null == n && 0 === m.length,
                             b = '' === e && (null == i || 0 === i.length) && 0 === l.length;
@@ -445,7 +445,7 @@ function $(e) {
         g = i.useCallback(() => f(!1), []),
         b = i.useCallback(
             (e, n, r) => {
-                (u.Z.saveDraft(t.id, n, N.d.FirstThreadMessage),
+                (u.Z.saveDraft(t.id, n, T.d.FirstThreadMessage),
                     l(
                         (e) => (
                             '' !== n && e.textValue !== n ? d.Z.startTyping(t.id) : '' === n && d.Z.stopTyping(t.id),
@@ -506,7 +506,7 @@ function $(e) {
 }
 function ee(e) {
     let { parentChannel: t, parentMessageId: n } = e,
-        i = (0, o.e7)([T.Z], () => (null == n ? null : T.Z.getMessage(t.id, n))),
+        i = (0, o.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
         l = P.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {

@@ -17,13 +17,13 @@ var i = n(873546),
     E = n(208450),
     O = n(975146),
     I = n(979651),
-    T = n(358085),
-    p = n(998502),
+    p = n(358085),
+    T = n(998502),
     S = n(665149),
     N = n(981631),
     f = n(176505),
-    A = n(220705);
-function m(e) {
+    m = n(220705);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,22 +67,22 @@ function R(e, t) {
     );
 }
 async function g(e) {
-    if (!e && (0, T.isMac)() && T.isPlatformEmbedded) {
+    if (!e && (0, p.isMac)() && p.isPlatformEmbedded) {
         var t, n, r;
         let e = null != (r = await (null == (t = (n = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) ? void 0 : t.call(n))) ? r : 'Maximize';
-        'Minimize' === e ? p.ZP.minimize() : 'Maximize' === e && p.ZP.maximize();
+        'Minimize' === e ? T.ZP.minimize() : 'Maximize' === e && T.ZP.maximize();
     }
 }
 function P(e) {
-    let { children: t, className: n, channelId: a, channelType: c, guildId: T, innerClassname: p, transparent: m = !1, showToolbar: R = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
-        L = null == a || (0, f.AB)(a) ? null : a,
-        Z = (0, l.e7)([I.Z], () => I.Z.isInChannel(L) || !1),
-        j = (0, l.e7)([s.Z], () => null != L && s.Z.getParticipantsListOpen(L)),
+    let { children: t, className: n, channelId: a, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: R = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
+        Z = null == a || (0, f.AB)(a) ? null : a,
+        L = (0, l.e7)([I.Z], () => I.Z.isInChannel(Z) || !1),
+        j = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
         { enabled: k, inInbox: x } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: F } = (0, u.Z)({ location: 'HeaderBar' });
     return (0, r.jsx)(S.ZP, {
         className: n,
-        innerClassName: p,
+        innerClassName: T,
         toolbar: (function () {
             if (null == P) return null;
             let e = null != a && !U;
@@ -91,22 +91,22 @@ function P(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           P,
-                          e ? (0, r.jsx)(E.Z, { className: A.search }, null != T ? T : a) : null,
+                          e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : a) : null,
                           M && (0, r.jsx)(S.ZP.Divider, {}),
                           k && !x ? (0, r.jsx)(_.Z, {}) : null,
                           F &&
-                              Z &&
-                              null != L &&
+                              L &&
+                              null != Z &&
                               !j &&
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
-                                  className: A.controlButtonWrapper,
-                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(L, !j) })]
+                                  className: m.controlButtonWrapper,
+                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(Z, !j) })]
                               })
                       ]
                   });
         })(),
-        transparent: m,
+        transparent: A,
         showToolbar: R,
         onDoubleClick: () => g(v),
         'aria-label': y,
@@ -151,7 +151,7 @@ function y(e) {
     let { analyticsLocations: i } = (0, c.ZP)(a.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(P, R(m({}, n), { className: n.className })) : (0, r.jsx)(C, R(m({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(P, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
     });
 }
 ((y.Title = S.ZP.Title), (y.Icon = S.ZP.Icon), (y.Divider = S.ZP.Divider), (y.Caret = S.ZP.Caret));

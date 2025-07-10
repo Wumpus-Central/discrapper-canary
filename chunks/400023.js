@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(375954),
     P = n(496675),
     Z = n(306680),
-    N = n(62817),
-    T = n(594174),
+    T = n(62817),
+    N = n(594174),
     A = n(459273),
     w = n(255269),
     R = n(47481),
@@ -104,7 +104,7 @@ function z(e, t) {
 let W = i.memo(
         function (e) {
             var t, n;
-            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: O, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: D, isChatInputBottomAligned: W } = e,
+            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: O, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: T, showingQuarantineBanner: N, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: D, isChatInputBottomAligned: W } = e,
                 [Y, q] = i.useState(null != (n = j.Z.isAtBottom(g.id)) && n),
                 K = i.useMemo(
                     () =>
@@ -134,7 +134,7 @@ let W = i.memo(
                     hasUnreads: E,
                     focusId: S,
                     placeholderHeight: K.totalHeight,
-                    canLoadMore: null == N,
+                    canLoadMore: null == T,
                     handleScrollToBottom: i.useCallback(() => q(!0), [q]),
                     handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
                     additionalMessagePadding: 48 * !!W
@@ -163,8 +163,8 @@ let W = i.memo(
                     loadMore: X.loadMore,
                     scrollManager: X,
                     specs: K,
-                    filterAfterTimestamp: null != N ? N : J,
-                    showingQuarantineBanner: T,
+                    filterAfterTimestamp: null != T ? T : J,
+                    showingQuarantineBanner: N,
                     hideSummaries: w,
                     jumpToPresent: () => {
                         if (b.hasPresent()) {
@@ -272,7 +272,7 @@ let W = i.memo(
                                                             $,
                                                             (0, r.jsx)('div', {
                                                                 className: a()({
-                                                                    [H.scrollerSpacer]: !T,
+                                                                    [H.scrollerSpacer]: !N,
                                                                     [H.empty]: 0 === b.length && !b.loadingMore,
                                                                     [H.emptyForum]: 1 === b.length && !b.loadingMore && g.isForumPost() && (null == (t = b.first()) ? void 0 : t.isFirstMessageInForumPost(g))
                                                                 })
@@ -364,7 +364,7 @@ let W = i.memo(
                         [e.id]
                     ),
                     { enabled: a } = y.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-                    o = null != (n = null == (t = T.default.getUser(O.default.getId())) ? void 0 : t.hasFlag(B.xW$.SPAMMER)) && n,
+                    o = null != (n = null == (t = N.default.getUser(O.default.getId())) ? void 0 : t.hasFlag(B.xW$.SPAMMER)) && n,
                     s = (0, p.ts)(e),
                     u = (0, _.Z)('use_topic_dividers_in_chat'),
                     d = (0, c.Wu)(
@@ -424,7 +424,7 @@ let W = i.memo(
                         messages: F,
                         channelStream: H,
                         permissionVersion: C,
-                        uploads: (0, c.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
+                        uploads: (0, c.e7)([T.Z], () => T.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != Y,
                         canChat: j,

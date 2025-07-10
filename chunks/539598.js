@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(937615),
-    a = n(884697),
+    a = n(937615),
+    l = n(884697),
     o = n(200615),
     s = n(981631),
     c = n(388032),
@@ -21,9 +21,9 @@ function d() {
 }
 function m(e) {
     let { product: t } = e,
-        n = (0, a.ql)(t, s.tuJ.PREMIUM_TIER_2);
+        n = (0, l.ql)(t, s.tuJ.PREMIUM_TIER_2);
     if (null == n) return null;
-    let m = (0, l.qr)(n.amount, n.currency);
+    let m = (0, a.qr)(n.amount, n.currency);
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
@@ -33,7 +33,7 @@ function m(e) {
                 children: (e) => {
                     var t,
                         n,
-                        l = d(
+                        a = d(
                             {},
                             (function (e) {
                                 if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -71,7 +71,7 @@ function m(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             },
-                            l
+                            a
                         )),
                         (n = n = { className: u.nitroIcon }),
                         Object.getOwnPropertyDescriptors

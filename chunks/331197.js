@@ -26,7 +26,7 @@ function j(e) {
         {
             Component: P,
             play: Z,
-            events: { onMouseEnter: N, onMouseLeave: T }
+            events: { onMouseEnter: T, onMouseLeave: N }
         } = (0, o.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
@@ -142,10 +142,10 @@ function j(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    (G(), N());
+                    (G(), T());
                 },
                 onMouseLeave: () => {
-                    null == E && (V(), T());
+                    null == E && (V(), N());
                 },
                 isActive: F || E === v.D.SOUNDBOARD,
                 color: F || E === v.D.SOUNDBOARD ? 'primaryDark' : void 0

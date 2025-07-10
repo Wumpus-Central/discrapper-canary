@@ -26,7 +26,7 @@ var r = n(255367),
     I = n(981631),
     P = n(388032),
     Z = n(11847);
-function N(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function N(e) {
     }
     return e;
 }
-let T = [],
+let N = [],
     A = E.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: o, status: u, activities: d } = e,
@@ -61,14 +61,14 @@ function w(e) {
         O = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
         Z = i.useRef(null),
-        T = (e) => {
+        N = (e) => {
             (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
                         e,
-                        ((i = N({}, n)),
+                        ((i = T({}, n)),
                         (l = l =
                             {
                                 user: t,
@@ -135,7 +135,7 @@ function w(e) {
                 })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
                 S.Z,
-                N(
+                T(
                     {
                         ref: Z,
                         user: t,
@@ -148,7 +148,7 @@ function w(e) {
                         activities: d,
                         applicationStream: E,
                         channel: o,
-                        onContextMenu: T,
+                        onContextMenu: N,
                         selected: M,
                         isMobile: x,
                         nick: O,
@@ -191,11 +191,11 @@ function M(e) {
                     _.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : I.Skl.OFFLINE,
-                              activities: null != (l = b.Z.getActivities(t.id)) ? l : T
+                              activities: null != (l = b.Z.getActivities(t.id)) ? l : N
                           })
                         : (n[t.id] = {
                               status: I.Skl.OFFLINE,
-                              activities: T
+                              activities: N
                           });
                 }
                 let a = [];

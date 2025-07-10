@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(456100),
     P = n(566620),
     Z = n(127255),
-    N = n(5200),
-    T = n(558317),
+    T = n(5200),
+    N = n(558317),
     A = n(403404),
     w = n(981631),
     R = n(388032),
@@ -223,7 +223,7 @@ let U = i.forwardRef(function (e, t) {
                                 children: [
                                     U.map((e) =>
                                         (0, r.jsx)(
-                                            N.Y,
+                                            T.Y,
                                             {
                                                 context: {
                                                     channel: l,
@@ -233,7 +233,7 @@ let U = i.forwardRef(function (e, t) {
                                                 onClick: () => {
                                                     (s(), b());
                                                 },
-                                                aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                aspectRatio: T.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: M.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF
                                             },
@@ -244,7 +244,7 @@ let U = i.forwardRef(function (e, t) {
                                         className: a()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: y }),
                                         children: (0, r.jsx)('div', {
                                             className: M.wumpusRocketInnerContainer,
-                                            children: (0, r.jsx)(T.Z, { className: M.wumpusRocket })
+                                            children: (0, r.jsx)(N.Z, { className: M.wumpusRocket })
                                         })
                                     })
                                 ]

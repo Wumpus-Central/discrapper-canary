@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(868671),
     P = n(82295),
     Z = n(91218),
-    N = n(313201),
-    T = n(623624),
+    T = n(313201),
+    N = n(623624),
     A = n(518738),
     w = n(570096),
     R = n(850020),
@@ -132,7 +132,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             S = i.useRef(null),
             [I, P] = i.useState(!1),
             Z = null != O ? new Date(O) : null,
-            N = i.useCallback(
+            T = i.useCallback(
                 (e) => {
                     (0, m.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
@@ -165,7 +165,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != C &&
                         (e.stopPropagation(),
-                        (0, T.f)({
+                        (0, N.f)({
                             guildId: C,
                             location: {
                                 section: q.jXE.MEMBER_LIST,
@@ -197,7 +197,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                         {
                             ref: S,
                             className: X.member,
-                            onContextMenu: N,
+                            onContextMenu: T,
                             shouldAnimateStatus: et,
                             user: u,
                             currentUser: p,
@@ -335,7 +335,7 @@ class eo extends i.Component {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
         return (0, r.jsx)(f.Wdt, {
             children: (l) =>
-                (0, r.jsx)(N.FG, {
+                (0, r.jsx)(T.FG, {
                     children: (o) =>
                         (0, r.jsx)('aside', {
                             className: a()(X.membersWrap, X.hiddenMembers),

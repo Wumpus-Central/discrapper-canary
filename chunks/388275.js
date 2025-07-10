@@ -23,14 +23,14 @@ function y(e) {
         x = (0, _.y)(S),
         P = (0, g.Ad)(),
         T = (0, i.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
-        [N, L] = r.useState(() => (0, u.eK)(T)),
-        { textValue: j, richValue: Z } = N,
+        [L, N] = r.useState(() => (0, u.eK)(T)),
+        { textValue: j, richValue: Z } = L,
         [w, D] = r.useState(!1),
         R = r.useCallback(() => D(!0), []),
-        F = r.useCallback(() => D(!1), []),
-        k = r.useCallback(
+        k = r.useCallback(() => D(!1), []),
+        F = r.useCallback(
             (e, n, l) => {
-                (L({
+                (N({
                     textValue: n,
                     richValue: l
                 }),
@@ -71,13 +71,13 @@ function y(e) {
                         children: [
                             (0, l.jsx)(d.Z, {
                                 innerClassName: b.messageInput,
-                                onChange: k,
+                                onChange: F,
                                 placeholder: E.intl.string(E.t.ZroO3N),
                                 channel: C,
                                 textValue: j,
                                 richValue: Z,
                                 type: c.Ie.FORWARD_MESSAGE_INPUT,
-                                onBlur: F,
+                                onBlur: k,
                                 onFocus: R,
                                 focused: w,
                                 onSubmit: M,

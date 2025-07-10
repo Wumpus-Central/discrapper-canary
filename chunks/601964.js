@@ -86,5 +86,5 @@ function m(e, t) {
     return (0, r.t8)(e, 'joinedAt', 'string' == typeof t ? new Date(t) : t);
 }
 function g(e) {
-    return e.nsfwLevel === s.V_K.EXPLICIT || e.nsfwLevel === s.V_K.AGE_RESTRICTED;
+    return null != e && (e.ownerConfiguredContentLevel === s.V_K.EXPLICIT || e.ownerConfiguredContentLevel === s.V_K.AGE_RESTRICTED);
 }

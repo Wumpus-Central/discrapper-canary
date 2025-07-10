@@ -45,7 +45,7 @@ var r = n(255367),
     U = n(388032),
     B = n(808574),
     F = n(588866);
-function z(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function z(e) {
     }
     return e;
 }
-let H = d().throttle(h.OQ, 1000),
+let z = d().throttle(h.OQ, 1000),
     V = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1 } = e,
             [o, c] = i.useState(n.name),
@@ -91,7 +91,7 @@ let H = d().throttle(h.OQ, 1000),
                             var t, i;
                             return (0, r.jsx)(
                                 'div',
-                                ((t = z({}, e)),
+                                ((t = H({}, e)),
                                 (i = i =
                                     {
                                         className: s()(B.emojiImage, { [B.emojiDisabled]: !n.available }),
@@ -389,10 +389,10 @@ let H = d().throttle(h.OQ, 1000),
             x && $();
         }, [x]),
             i.useEffect(() => {
-                H(e.id);
+                z(e.id);
             }, [e.id]),
             i.useEffect(() => {
-                null != h && h < c && H(e.id);
+                null != h && h < c && z(e.id);
             }, [c, h, e.id]));
         let K = i.useCallback(
                 () =>
@@ -429,7 +429,7 @@ let H = d().throttle(h.OQ, 1000),
             ee = async (e) => {
                 R.current = await (0, p.ZDy)(async () => {
                     let { default: t } = await n.e('16169').then(n.bind(n, 935333));
-                    return (n) => (0, r.jsx)(t, z({ processFiles: () => J(e) }, n));
+                    return (n) => (0, r.jsx)(t, H({ processFiles: () => J(e) }, n));
                 });
             },
             et = (0, v.l)(e);

@@ -10,6 +10,5 @@ e.exports = {
     warning: 'warning__28e57',
     statusText: 'statusText__28e57',
     cta: 'cta__28e57',
-    ctaInner: 'ctaInner__28e57',
     inlineSwitch: 'inlineSwitch__28e57'
 };

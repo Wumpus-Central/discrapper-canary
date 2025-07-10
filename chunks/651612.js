@@ -71,7 +71,7 @@ function y(e) {
     (j > 0 && I.push(b.intl.formatToPlainString(b.t['3l1GOz'], { mentionCount: j })), O > 0 && I.push(b.intl.string(b.t.x5zAGR)));
     let P = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         Z = j > 0 ? j : O,
-        N = Z > 0;
+        T = Z > 0;
     return (0, r.jsxs)('div', {
         className: _.wrapper,
         children: [
@@ -116,7 +116,7 @@ function y(e) {
                     y
                 )
             ),
-            N
+            T
                 ? (0, r.jsx)(s.Z, {
                       hasMentions: j > 0,
                       truncatedCount: Z > 99 ? '99+' : Z,

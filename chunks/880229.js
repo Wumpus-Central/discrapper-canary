@@ -375,7 +375,7 @@ function F(e) {
               children: R.intl.string(R.t.u09gKi)
           });
 }
-function z(e) {
+function H(e) {
     let { onClose: t, guildId: n, onSelect: i } = e,
         l = (0, c.e7)([y.Z], () => y.Z.getGuild(n));
     return null == l
@@ -405,7 +405,7 @@ function z(e) {
               ]
           });
 }
-function H(e) {
+function z(e) {
     let { onClose: t, guildId: n, role: l, onCancel: s, onImport: a } = e,
         o = i.useRef(l);
     null != l && (o.current = l);
@@ -539,7 +539,7 @@ function V(e) {
             children: [
                 (0, r.jsx)(m.Mi4, {
                     id: 0,
-                    children: (0, r.jsx)(z, {
+                    children: (0, r.jsx)(H, {
                         onClose: l,
                         guildId: n,
                         onSelect: o
@@ -547,7 +547,7 @@ function V(e) {
                 }),
                 (0, r.jsx)(m.Mi4, {
                     id: 1,
-                    children: (0, r.jsx)(H, {
+                    children: (0, r.jsx)(z, {
                         onClose: l,
                         guildId: n,
                         role: a,

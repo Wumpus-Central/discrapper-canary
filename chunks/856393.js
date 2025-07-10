@@ -30,8 +30,8 @@ var r = n(255367),
     I = n(703656),
     P = n(493754),
     Z = n(937995),
-    N = n(880831),
-    T = n(73563),
+    T = n(880831),
+    N = n(73563),
     A = n(800965),
     w = n(107169),
     R = n(891551),
@@ -206,14 +206,14 @@ function ep(e) {
                     hasConnectPermission: E
                 })),
         (0, r.jsx)(
-            T.Z,
+            N.Z,
             ((t = el(
                 {
                     style: {
                         height: 'calc(100% - '.concat(M, ')'),
                         paddingTop: M
                     },
-                    disableGradients: !j || (0 === Z && T.e.TOP),
+                    disableGradients: !j || (0 === Z && N.e.TOP),
                     renderBottomCenter: () =>
                         j
                             ? (0, r.jsx)(b.Gt, {
@@ -248,7 +248,7 @@ function ep(e) {
                         !R || y || P
                             ? null
                             : (0, r.jsx)(C.ZP, {
-                                  children: (0, r.jsx)(N.Z, {
+                                  children: (0, r.jsx)(T.Z, {
                                       className: a()(ei.chatToasts, { [ei.rtsSidebarOpen]: d }),
                                       channelId: c.id
                                   })
@@ -287,7 +287,7 @@ function eh(e) {
         j = null != p && !p.closed,
         { analyticsLocations: E } = (0, b.ZP)(g.Z.STAGE_CHANNEL_CALL),
         I = (0, m.bp)(),
-        { chatOpen: P, participantsListOpen: N } = (0, s.cj)(
+        { chatOpen: P, participantsListOpen: T } = (0, s.cj)(
             [_.Z],
             () => ({
                 chatOpen: _.Z.getChatOpen(t.id),
@@ -295,7 +295,7 @@ function eh(e) {
             }),
             [t.id]
         ),
-        T = (0, s.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
+        N = (0, s.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: A } = (0, O.Z)({ location: 'StageChannelCall' });
     (0, f.ZP)(() => {
         null == c.K.get(ea) &&
@@ -322,7 +322,7 @@ function eh(e) {
                                 (0, r.jsx)('div', {
                                     className: a()(ei.callContainer, e, {
                                         [ei.sidebarVisible]: l,
-                                        [ei.sidebarOrChatVisible]: l || P || N
+                                        [ei.sidebarOrChatVisible]: l || P || T
                                     }),
                                     children: (0, r.jsx)(Z.ZP, {
                                         timeout: 2000,
@@ -354,10 +354,10 @@ function eh(e) {
                                     D &&
                                     (0, r.jsx)(x.Z, {
                                         channel: t,
-                                        guild: T,
+                                        guild: N,
                                         maxWidth: M
                                     }),
-                                N &&
+                                T &&
                                     A &&
                                     D &&
                                     (0, r.jsx)(v.Z, {

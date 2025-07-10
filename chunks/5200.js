@@ -42,10 +42,10 @@ function x(e) {
         Z = l.useCallback(() => {
             P(!0);
         }, [P]),
-        N = l.useCallback(() => {
+        T = l.useCallback(() => {
             P(!1);
         }, [P]),
-        T = l.useMemo(
+        N = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
                     className: b.overlayBadge,
@@ -93,9 +93,9 @@ function x(e) {
         look: c.zx.Looks.BLANK,
         size: c.zx.Sizes.NONE,
         onFocus: Z,
-        onBlur: N,
+        onBlur: T,
         onMouseEnter: Z,
-        onMouseLeave: N,
+        onMouseLeave: T,
         innerClassName: b.activityItemButtonInnerClass,
         children: (0, i.jsx)(u.AMe, {
             config: y,
@@ -121,7 +121,7 @@ function x(e) {
                                     imageClassName: b.activitySuggestionImage,
                                     imageNotFoundClassName: b.brokenImageIconWrapper
                                 }),
-                                T,
+                                N,
                                 A
                             ]
                         })

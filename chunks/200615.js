@@ -1,16 +1,16 @@
 n.d(t, { F: () => u });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(906732),
+    a = n(481060),
+    l = n(906732),
     o = n(963249),
     s = n(474936),
     c = n(831485);
 let u = (e) => {
     let { text: t } = e,
-        { analyticsLocations: n } = (0, a.ZP)(),
+        { analyticsLocations: n } = (0, l.ZP)(),
         u = i.useRef(null);
-    return (0, r.jsx)(l.P3F, {
+    return (0, r.jsx)(a.P3F, {
         className: c.subscribeNow,
         innerRef: u,
         onClick: () => {

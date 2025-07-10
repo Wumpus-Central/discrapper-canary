@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(544989),
     P = n(228168),
     Z = n(388032),
-    N = n(638414),
-    T = n(283189);
+    T = n(638414),
+    N = n(283189);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -98,7 +98,7 @@ function w(e) {
                         children: [
                             (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
                             (0, r.jsxs)('header', {
-                                className: N.header,
+                                className: T.header,
                                 children: [
                                     (0, r.jsx)(C.Z, {
                                         user: t,
@@ -116,7 +116,7 @@ function w(e) {
                                 ]
                             }),
                             (0, r.jsxs)('div', {
-                                className: T.body,
+                                className: N.body,
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
@@ -129,7 +129,7 @@ function w(e) {
                                         })
                                     }),
                                     (0, r.jsxs)(j.Z.Overlay, {
-                                        className: T.overlay,
+                                        className: N.overlay,
                                         children: [
                                             (0, r.jsx)(O.Z, {
                                                 heading: Z.intl.string(Z.t['61W33d']),
@@ -154,12 +154,12 @@ function w(e) {
                     }),
                     !w &&
                         (0, r.jsx)('footer', {
-                            className: N.footer,
+                            className: T.footer,
                             children: (0, r.jsx)(a.zx, {
                                 fullWidth: !0,
                                 size: a.zx.Sizes.LARGE,
                                 look: a.zx.Looks.BLANK,
-                                color: N.footerButtonColor,
+                                color: T.footerButtonColor,
                                 onClick: () => {
                                     (F(),
                                         (0, m.pQ)(

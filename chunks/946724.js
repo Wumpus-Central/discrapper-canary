@@ -188,7 +188,7 @@ function F(e) {
         return n === e;
     });
 }
-function z(e) {
+function H(e) {
     let { guildId: t } = e;
     if (null == r || t !== r.id || I === v.QZA.SUBMITTING) return !1;
     r = _.Z.getProps().guild;
@@ -227,7 +227,7 @@ function z(e) {
         (S = !1),
         (T = [...n]));
 }
-class H extends (s = m.ZP.Store) {
+class z extends (s = m.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, p.Z, h.Z);
     }
@@ -277,8 +277,8 @@ class H extends (s = m.ZP.Store) {
         return D;
     }
 }
-C(H, 'displayName', 'GuildSettingsRolesStore');
-let V = new H(
+C(z, 'displayName', 'GuildSettingsRolesStore');
+let V = new z(
         g.Z,
         __OVERLAY__
             ? {}
@@ -434,10 +434,10 @@ let V = new H(
                   GUILD_SETTINGS_CLOSE: function () {
                       ((r = null), (P = T = []), Z.clear(), N.clear(), A.clear(), D.clear(), (R = new Set()), (E = !1), (S = !1), (w = !1), (I = v.QZA.CLOSED));
                   },
-                  GUILD_ROLE_CREATE: z,
-                  GUILD_ROLE_UPDATE: z,
+                  GUILD_ROLE_CREATE: H,
+                  GUILD_ROLE_UPDATE: H,
                   GUILD_ROLE_DELETE: function (e) {
-                      return (R.has(e.roleId) && (R.delete(e.roleId), Z.delete(e.roleId), D.delete(e.roleId), (w = !1)), z(e));
+                      return (R.has(e.roleId) && (R.delete(e.roleId), Z.delete(e.roleId), D.delete(e.roleId), (w = !1)), H(e));
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                       I = v.QZA.SUBMITTING;

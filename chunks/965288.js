@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => A,
-    y: () => T
+    y: () => N
 });
 var r = n(255367),
     i = n(73800),
@@ -102,7 +102,7 @@ let Z = i.memo(function (e) {
             ]
         });
     }),
-    N = i.memo(function (e) {
+    T = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: o } = e,
             { user: s, blocked: c, ignored: u, rtsState: d } = n,
@@ -138,7 +138,7 @@ let Z = i.memo(function (e) {
             ]
         });
     }),
-    T = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
+    N = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
     A = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
@@ -146,7 +146,7 @@ let Z = i.memo(function (e) {
             O = C.default.getId(),
             { newestAnalyticsLocation: j } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
-            T = (0, u.e7)(
+            N = (0, u.e7)(
                 [x.ZP],
                 () => {
                     var e;
@@ -207,19 +207,19 @@ let Z = i.memo(function (e) {
                             {
                                 innerRef: A,
                                 className: a()(S.tileContainer, {
-                                    [S.singleIcon]: T || d,
-                                    [S.doubleIcon]: T && d
+                                    [S.singleIcon]: N || d,
+                                    [S.doubleIcon]: N && d
                                 }),
                                 onContextMenu: w
                             },
                             e
                         ),
                         {
-                            children: (0, r.jsx)(N, {
+                            children: (0, r.jsx)(T, {
                                 participant: t,
                                 guildId: v,
                                 channel: l,
-                                isPremium: T
+                                isPremium: N
                             })
                         }
                     )

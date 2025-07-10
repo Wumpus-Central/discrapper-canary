@@ -213,16 +213,16 @@ function I(e) {
             if (l.joinType === j.A.APPLY && !(null == (e = l.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void Z(C.intl.string(C.t.HGVrIy));
             i((e) => t(() => B(e)));
         }, [D, B, l, T, A]),
-        z = l.joinType === j.A.DISCOVERABLE && l.settingsView === _.U.ELIGIBLE_DISABLED,
-        H = null != I.description && E.primaryCategoryId !== O.o3 && E.keywords.length > 0;
+        H = l.joinType === j.A.DISCOVERABLE && l.settingsView === _.U.ELIGIBLE_DISABLED,
+        z = null != I.description && E.primaryCategoryId !== O.o3 && E.keywords.length > 0;
     return (0, r.jsx)(a.Z, {
-        message: z ? C.intl.string(C.t.V2G2Ym) : void 0,
-        onSaveText: z ? C.intl.string(C.t['qjtt/v']) : void 0,
+        message: H ? C.intl.string(C.t.V2G2Ym) : void 0,
+        onSaveText: H ? C.intl.string(C.t['qjtt/v']) : void 0,
         submitting: P,
         errorMessage: R,
         onReset: L,
         onSave: F,
-        disabled: z && !H
+        disabled: H && !z
     });
 }
 function E() {

@@ -27,8 +27,8 @@ var i = n(657707),
     I = n(530),
     P = n(827313),
     Z = n(228168),
-    N = n(981631),
-    T = n(388032),
+    T = n(981631),
+    N = n(388032),
     A = n(283189);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: D } = e,
@@ -68,7 +68,7 @@ function w(e) {
                     ]
                 })
             }),
-            k === N.OGo.PENDING_INCOMING &&
+            k === T.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,
@@ -98,7 +98,7 @@ function w(e) {
                 (0, r.jsx)(S.Z.Overlay, {
                     className: A.card,
                     children: (0, r.jsx)(j.Z, {
-                        heading: T.intl.string(T.t.Iyka0d),
+                        heading: N.intl.string(N.t.Iyka0d),
                         headingIcon: (0, r.jsx)(i.P4T, {
                             size: 'xxs',
                             color: a.Z.colors.HEADER_PRIMARY
@@ -127,7 +127,7 @@ function w(e) {
                         (null == w ? void 0 : w.bio) != null &&
                         (null == w ? void 0 : w.bio) !== '' &&
                         (0, r.jsx)(j.Z, {
-                            heading: T.intl.string(T.t['61W33d']),
+                            heading: N.intl.string(N.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, {
                                 userBio: w.bio,
@@ -144,12 +144,12 @@ function w(e) {
                         }),
                     B.length > 0 &&
                         (0, r.jsx)(j.Z, {
-                            heading: T.intl.string(T.t['Uv/eT0']),
+                            heading: N.intl.string(N.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(C.Z, { applicationIds: B })
                         }),
                     (0, r.jsx)(j.Z, {
-                        heading: t.bot ? T.intl.string(T.t['A//N4u']) : T.intl.string(T.t.a6XYDw),
+                        heading: t.bot ? N.intl.string(N.t['A//N4u']) : N.intl.string(N.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(v.Z, { userId: t.id })
                     })

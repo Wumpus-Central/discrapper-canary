@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(51144),
     P = n(649739),
     Z = n(262317),
-    N = n(981631),
-    T = n(524484),
+    T = n(981631),
+    N = n(524484),
     A = n(50259);
 let w = i.memo((e) => {
     var t, n, i;
@@ -53,7 +53,7 @@ let w = i.memo((e) => {
         ),
         G = (0, p.Z)(null != H ? [H.applicationId] : []),
         V = (0, P.Hr)('voice_users_eligibility_check', !1),
-        z = (0, o.e7)([v.Z, O.Z], () => (R ? O.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === N.IIU.PLAYING),
+        z = (0, o.e7)([v.Z, O.Z], () => (R ? O.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === T.IIU.PLAYING),
         W = (0, o.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
     null != W && P.ZP.trackExposure({ location: 'voice_users' });
     let [Y, q] = (0, o.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
@@ -62,7 +62,7 @@ let w = i.memo((e) => {
         Q = (0, o.e7)([S.Z], () => S.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
         J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
-        shakeLocation: T.oZ.VOICE_USER,
+        shakeLocation: N.oZ.VOICE_USER,
         isShaking: U,
         children: (0, r.jsx)(
             Z.ZP,
@@ -107,7 +107,7 @@ let w = i.memo((e) => {
                     priority: L,
                     embeddedApplication: G[0],
                     isStreaming: null != Y && Y.channelId === g.id,
-                    isWatching: null != q && q.state !== N.jm8.ENDED,
+                    isWatching: null != q && q.state !== T.jm8.ENDED,
                     isGuest: B,
                     isSelf: _.default.getId() === s.id,
                     application: V ? W : void 0
@@ -134,11 +134,11 @@ let R = [],
         let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: O, children: j } = e,
             [E, S] = i.useState(null),
             [I, P] = i.useState(!1),
-            T = i.useRef(null),
+            N = i.useRef(null),
             M = (0, m.Es)(l.id, null != c ? c : R),
             D = i.useRef(
                 new s.sW(50, () => {
-                    (S(T.current), (T.current = null));
+                    (S(N.current), (N.current = null));
                 })
             ),
             k = i.useRef(
@@ -148,7 +148,7 @@ let R = [],
             ),
             L = i.useCallback(
                 (e) => {
-                    t && (P(!0), k.current.cancel(), (T.current = e), D.current.delay());
+                    t && (P(!0), k.current.cancel(), (N.current = e), D.current.delay());
                 },
                 [t]
             ),
@@ -195,7 +195,7 @@ let R = [],
                             sessionId: null != (i = s.sessionId) ? i : '',
                             channel: l,
                             collapsed: u,
-                            canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
+                            canDrag: n && x.Z.can(T.Plq.MOVE_MEMBERS, l),
                             showPreview: L,
                             hidePreview: U,
                             previewIsOpen: I,

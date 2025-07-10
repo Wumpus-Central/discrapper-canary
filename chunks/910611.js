@@ -31,8 +31,8 @@ var r = n(255367),
     I = n(99843),
     P = n(372564),
     Z = n(984370),
-    N = n(217314),
-    T = n(981631),
+    T = n(217314),
+    N = n(981631),
     A = n(921944),
     w = n(388032),
     R = n(100658);
@@ -107,7 +107,7 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-secondary',
-                                      children: w.intl.format(w.t['16agur'], { helpdeskArticle: j.Z.getArticleURL(T.BhN.LINKED_LOBBIES) })
+                                      children: w.intl.format(w.t['16agur'], { helpdeskArticle: j.Z.getArticleURL(N.BhN.LINKED_LOBBIES) })
                                   }),
                                   (0, r.jsx)(c.P3F, {
                                       className: R.linkedLobbyEducationTooltipCloseClickContainer,
@@ -165,34 +165,34 @@ function L(e) {
         { prefix: _, level: y } = (function (e, t) {
             var n, r;
             switch (e) {
-                case T.d4z.DM:
+                case N.d4z.DM:
                     return {
                         prefix: w.intl.string(w.t.EJRzg4),
                         level: 1
                     };
-                case T.d4z.GROUP_DM:
+                case N.d4z.GROUP_DM:
                     return {
                         prefix: w.intl.string(w.t['e5y+go']),
                         level: 1
                     };
-                case T.d4z.GUILD_DIRECTORY:
+                case N.d4z.GUILD_DIRECTORY:
                     return {
                         prefix: null != (n = null == t ? void 0 : t.name) ? n : '',
                         level: 1
                     };
-                case T.d4z.GUILD_ANNOUNCEMENT:
-                case T.d4z.GUILD_TEXT:
-                case T.d4z.GUILD_FORUM:
-                case T.d4z.GUILD_MEDIA:
-                case T.d4z.GUILD_STAGE_VOICE:
-                case T.d4z.GUILD_VOICE:
+                case N.d4z.GUILD_ANNOUNCEMENT:
+                case N.d4z.GUILD_TEXT:
+                case N.d4z.GUILD_FORUM:
+                case N.d4z.GUILD_MEDIA:
+                case N.d4z.GUILD_STAGE_VOICE:
+                case N.d4z.GUILD_VOICE:
                     return {
                         prefix: null != (r = null == t ? void 0 : t.name) ? r : '',
                         level: 1
                     };
-                case T.d4z.ANNOUNCEMENT_THREAD:
-                case T.d4z.PUBLIC_THREAD:
-                case T.d4z.PRIVATE_THREAD:
+                case N.d4z.ANNOUNCEMENT_THREAD:
+                case N.d4z.PUBLIC_THREAD:
+                case N.d4z.PRIVATE_THREAD:
                     return {
                         prefix: w.intl.string(w.t['7Xm5QE']),
                         level: 2
@@ -216,14 +216,14 @@ function L(e) {
             ]
         });
     switch (t.type) {
-        case T.d4z.DM:
-            return (0, r.jsx)(N.Z, {
+        case N.d4z.DM:
+            return (0, r.jsx)(T.Z, {
                 level: y,
                 channel: t,
                 handleClick: u,
                 handleContextMenu: d
             });
-        case T.d4z.GROUP_DM:
+        case N.d4z.GROUP_DM:
             if (t.isManaged()) return x;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -238,15 +238,15 @@ function L(e) {
                     )
                 ]
             });
-        case T.d4z.GUILD_ANNOUNCEMENT:
-        case T.d4z.GUILD_TEXT:
-        case T.d4z.GUILD_FORUM:
-        case T.d4z.GUILD_MEDIA:
+        case N.d4z.GUILD_ANNOUNCEMENT:
+        case N.d4z.GUILD_TEXT:
+        case N.d4z.GUILD_FORUM:
+        case N.d4z.GUILD_MEDIA:
             return null != t.linkedLobby
                 ? (0, r.jsxs)(k, {
                       channel: t,
                       children: [
-                          F(b, t.type === T.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),
+                          F(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),
                           (0, r.jsx)(Z.Z.Title, {
                               level: y,
                               onContextMenu: d,
@@ -257,7 +257,7 @@ function L(e) {
                   })
                 : (0, r.jsxs)(i.Fragment, {
                       children: [
-                          F(b, t.type === T.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),
+                          F(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),
                           (0, r.jsx)(Z.Z.Title, {
                               level: y,
                               onContextMenu: d,
@@ -267,7 +267,7 @@ function L(e) {
                           null != g ? g() : null
                       ]
                   });
-        case T.d4z.GUILD_VOICE:
+        case N.d4z.GUILD_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     F(b, w.intl.string(w.t.BVZqJi)),
@@ -279,7 +279,7 @@ function L(e) {
                     })
                 ]
             });
-        case T.d4z.GUILD_STAGE_VOICE:
+        case N.d4z.GUILD_STAGE_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     F(b, w.intl.string(w.t.EErMzM)),
@@ -291,9 +291,9 @@ function L(e) {
                     })
                 ]
             });
-        case T.d4z.ANNOUNCEMENT_THREAD:
-        case T.d4z.PUBLIC_THREAD:
-        case T.d4z.PRIVATE_THREAD:
+        case N.d4z.ANNOUNCEMENT_THREAD:
+        case N.d4z.PUBLIC_THREAD:
+        case N.d4z.PRIVATE_THREAD:
             let O = null;
             if (!s && null != l) {
                 let e = (0, h.KS)(l, o);
@@ -311,7 +311,7 @@ function L(e) {
                     ]
                 });
             }
-            let j = (null == l ? void 0 : l.type) != null && T.TPd.GUILD_THREADS_ONLY.has(l.type);
+            let j = (null == l ? void 0 : l.type) != null && N.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     O,
@@ -328,8 +328,8 @@ function L(e) {
                     })
                 ]
             });
-        case T.d4z.GUILD_DIRECTORY:
-            let E = (null == o ? void 0 : o.features.has(T.oNc.HUB)) ? w.intl.formatToPlainString(w.t.Dy2aho, { guildName: n }) : n;
+        case N.d4z.GUILD_DIRECTORY:
+            let E = (null == o ? void 0 : o.features.has(N.oNc.HUB)) ? w.intl.formatToPlainString(w.t.Dy2aho, { guildName: n }) : n;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     null !== b
@@ -385,15 +385,15 @@ let U = (e) => {
 };
 function B(e, t) {
     switch (e.type) {
-        case T.d4z.DM:
+        case N.d4z.DM:
             return (0, r.jsxs)(r.Fragment, {
                 children: [(0, r.jsx)(U, { channel: e }), (0, r.jsx)(S.Z, { channel: e }, e.id)]
             });
-        case T.d4z.GUILD_ANNOUNCEMENT:
-        case T.d4z.GUILD_TEXT:
-        case T.d4z.GUILD_VOICE:
-        case T.d4z.GUILD_STAGE_VOICE:
-        case T.d4z.GROUP_DM:
+        case N.d4z.GUILD_ANNOUNCEMENT:
+        case N.d4z.GUILD_TEXT:
+        case N.d4z.GUILD_VOICE:
+        case N.d4z.GUILD_STAGE_VOICE:
+        case N.d4z.GROUP_DM:
             return null != t
                 ? (0, r.jsx)(
                       P.Z,
@@ -426,7 +426,7 @@ function H(e) {
         a = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         s = (0, g.D)(),
         u = i.useRef(null);
-    if ((a !== T.I_8 && !s) || null == t) return null;
+    if ((a !== N.I_8 && !s) || null == t) return null;
     let d = () => {
         (0, b.XU)(t.id, n.id);
     };

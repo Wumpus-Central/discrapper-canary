@@ -35,8 +35,8 @@ var r,
     I = n(367907),
     P = n(906732),
     Z = n(43267),
-    N = n(933557),
-    T = n(600164),
+    T = n(933557),
+    N = n(600164),
     A = n(313201),
     w = n(429090),
     R = n(912114),
@@ -136,10 +136,10 @@ let ed = (0, A.hQ)(),
     ep = (0, A.hQ)();
 function eh(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsxs)(T.Z, {
-        align: T.Z.Align.CENTER,
-        justify: T.Z.Justify.CENTER,
-        direction: T.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(N.Z, {
+        align: N.Z.Align.CENTER,
+        justify: N.Z.Justify.CENTER,
+        direction: N.Z.Direction.VERTICAL,
         className: o()(el.errorState, t),
         children: [(0, i.jsx)('div', { className: o()(el.errorStateIcon, ea.marginBottom20) }), n]
     });
@@ -147,7 +147,7 @@ function eh(e) {
 let ef = (e) => {
         var t;
         let { channel: n, onClose: r } = e,
-            l = null != (t = (0, N.ZP)(n)) ? t : '',
+            l = null != (t = (0, T.ZP)(n)) ? t : '',
             a = (0, p.e7)([V.ZP], () => {
                 var e;
                 return null != (e = V.ZP.lastMessageId(n.id)) ? e : n.id;
@@ -379,8 +379,8 @@ class eg extends (r = l.PureComponent) {
         let e = null != this.scrollerRef.current && this.state.separator,
             t = this.isNotFriends() ? ei.intl.string(ei.t.Xjlbvr) : ei.intl.string(ei.t.CdNhGR);
         return (0, i.jsxs)(f.xBx, {
-            direction: T.Z.Direction.VERTICAL,
-            align: T.Z.Align.STRETCH,
+            direction: N.Z.Direction.VERTICAL,
+            align: N.Z.Align.STRETCH,
             className: el.header,
             separator: e,
             children: [
@@ -825,7 +825,7 @@ function eb(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, P.ZP)(S.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, w.a)(S.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, N.pT)(Array.from(t), Y.default, z.Z);
+    let c = (0, T.pT)(Array.from(t), Y.default, z.Z);
     return (0, i.jsxs)('div', {
         className: el.customizationContainer,
         children: [

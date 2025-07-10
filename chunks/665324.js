@@ -93,7 +93,7 @@ function F() {
               })
           });
 }
-function z(e) {
+function H(e) {
     let { children: t } = e;
     return (0, r.jsx)(m.X6q, {
         className: M.tableHeader,
@@ -102,7 +102,7 @@ function z(e) {
         children: t
     });
 }
-function H(e) {
+function z(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
         l = I.Z.getGuild(i),
         s = null != l ? (0, P.nL)(l) : 0;
@@ -302,7 +302,7 @@ function Y(e) {
                               className: M.tableTitle,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
-                              children: (0, r.jsx)(H, {
+                              children: (0, r.jsx)(z, {
                                   guildId: t.id,
                                   currentTier: u,
                                   availableSounds: g
@@ -318,7 +318,7 @@ function Y(e) {
                               children: [
                                   (0, r.jsxs)('div', {
                                       className: M.tableHeaders,
-                                      children: [(0, r.jsx)(z, { children: k.intl.string(k.t.sMOuub) }), (0, r.jsx)(z, { children: k.intl.string(k.t.lLFvlZ) }), (0, r.jsx)(z, { children: k.intl.string(k.t['85qMS0']) })]
+                                      children: [(0, r.jsx)(H, { children: k.intl.string(k.t.sMOuub) }), (0, r.jsx)(H, { children: k.intl.string(k.t.lLFvlZ) }), (0, r.jsx)(H, { children: k.intl.string(k.t['85qMS0']) })]
                                   }),
                                   l.map((e) =>
                                       (0, r.jsx)(

@@ -26,8 +26,8 @@ var r = n(255367),
     I = n(937995),
     P = n(618158),
     Z = n(358221),
-    N = n(362721),
-    T = n(887012),
+    T = n(362721),
+    N = n(887012),
     A = n(613548),
     w = n(221888),
     R = n(339340),
@@ -120,7 +120,7 @@ function V(e) {
 function z(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
-        a = (0, T.Z)(l, !0),
+        a = (0, N.Z)(l, !0),
         o = (0, b.qY)(l.id),
         c = null != o ? (0, _.DK)(o) : null,
         u = null != o;
@@ -190,11 +190,11 @@ function W(e) {
         y = (0, f.ZP)(t),
         S = (0, m.KS)(t),
         [P] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
-        T = L.intl.string(L.t.BVZqJi);
-    t.isDM() ? (T = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (T = L.intl.string(L.t['e5y+go']));
+        N = L.intl.string(L.t.BVZqJi);
+    t.isDM() ? (N = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (N = L.intl.string(L.t['e5y+go']));
     let w = (0, o.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         D = t.isGuildVoice() && u && null != w && w.length > 0,
-        G = (0, N.ZP)(t),
+        G = (0, T.ZP)(t),
         V = D
             ? (0, r.jsx)(s.ua7, {
                   text: L.intl.string(L.t.Mgpxi4),
@@ -260,7 +260,7 @@ function W(e) {
                                 ? (0, r.jsx)(C.ZP.Icon, {
                                       icon: S,
                                       disabled: !0,
-                                      'aria-label': T
+                                      'aria-label': N
                                   })
                                 : null,
                             (0, r.jsx)(C.ZP.Title, {

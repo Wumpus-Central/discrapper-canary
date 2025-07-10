@@ -35,8 +35,8 @@ let Z = function (e, t, n) {
             (n) => {
                 if (!Z.current || n.target !== n.currentTarget) return;
                 let r = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
-                    N = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-                    T = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+                    T = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
+                    N = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
                     A = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
                     R = b.Z.getMessage(t, e),
@@ -48,7 +48,7 @@ let Z = function (e, t, n) {
                         r && (P(M) || R.canDeleteOwnMessage(D)) && (n.preventDefault(), (0, S.$Z)(M, R, n));
                         break;
                     case 'c':
-                        ((0, x.isMac)() ? A : T) && y.wS && (n.preventDefault(), (0, y.JG)(R.content));
+                        ((0, x.isMac)() ? A : N) && y.wS && (n.preventDefault(), (0, y.JG)(R.content));
                         break;
                     case 'e':
                         r && !M.isSystemDM() && (0, O.Z)(R, D) && (n.preventDefault(), (0, S.Hd)(M, R));
@@ -94,7 +94,7 @@ let Z = function (e, t, n) {
                         }
                         break;
                     case 'enter':
-                        N && (n.preventDefault(), (0, S.B8)(M, R));
+                        T && (n.preventDefault(), (0, S.B8)(M, R));
                         break;
                     case 'escape':
                         f.Z.isEditing(M.id, R.id) ? i.Z.endEditMessage(M.id) : C.S.dispatch(I.CkL.TEXTAREA_FOCUS);

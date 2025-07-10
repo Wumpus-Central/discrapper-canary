@@ -59,7 +59,7 @@ function v(e) {
             },
             [E, j, P, t]
         ),
-        N = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t, n;
                 return (0, i.createElement)(
@@ -123,7 +123,7 @@ function v(e) {
               onConfirmDelete: o.Z.confirmDelete,
               saveMessage: Z,
               validateEdit: x,
-              children: N
+              children: T
           })
         : null;
 }

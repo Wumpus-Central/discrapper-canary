@@ -18,8 +18,8 @@ function b(e) {
         S = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
         [I, P] = i.useState(!1),
         Z = (0, d.ZP)(),
-        N = (0, s.wj)(Z) || t ? g : m,
-        { width: T = 0, ref: A } = (0, u.ZP)(),
+        T = (0, s.wj)(Z) || t ? g : m,
+        { width: N = 0, ref: A } = (0, u.ZP)(),
         { width: w = 0, ref: R } = (0, u.ZP)();
     return (0, r.jsxs)(c.DY3, {
         text: (0, r.jsx)(h.X, {
@@ -53,7 +53,7 @@ function b(e) {
                     [f.labelChecked]: t,
                     [f.labelUnchecked]: !t && !b
                 }),
-                style: O ? { width: t ? T : T + w } : void 0,
+                style: O ? { width: t ? N : N + w } : void 0,
                 children: [
                     t
                         ? (0, r.jsx)(c.ZX5, {
@@ -63,7 +63,7 @@ function b(e) {
                         : null,
                     (0, r.jsx)('img', {
                         ref: A,
-                        src: N,
+                        src: T,
                         alt: _
                     }),
                     (0, r.jsx)('span', {

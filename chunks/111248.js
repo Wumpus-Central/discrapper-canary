@@ -48,7 +48,7 @@ function _(e) {
             },
             [S]
         ),
-        N = i.useCallback(
+        T = i.useCallback(
             (e, t) => {
                 v(t);
             },
@@ -61,7 +61,7 @@ function _(e) {
             id: 0,
             width: I,
             ref: O,
-            onMove: N,
+            onMove: T,
             onResize: Z,
             maxX: t,
             maxY: l,

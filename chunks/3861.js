@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(354459),
     b = n(363987);
 let _ = (0, l.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: O, hasConnectPermission: j, className: E, inCall: S, showParticipants: I = !0, width: P, height: Z, idle: N, mode: T, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: O, hasConnectPermission: j, className: E, inCall: S, showParticipants: I = !0, width: P, height: Z, idle: T, mode: N, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
     i.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
     }, [P, Z, R.width, R.height]);
@@ -28,7 +28,7 @@ let _ = (0, l.Z)((e) => {
                 participants: t,
                 hasConnectPermission: j
             })
-          : T === m.WtW.VOICE
+          : N === m.WtW.VOICE
             ? (0, r.jsx)(o.Z, {
                   guildId: O.guild_id,
                   width: P,
@@ -63,7 +63,7 @@ let _ = (0, l.Z)((e) => {
                     participants: t,
                     popoutWindow: A,
                     className: E,
-                    idle: N,
+                    idle: T,
                     height: Z,
                     width: P,
                     layout: y,

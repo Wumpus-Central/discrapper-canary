@@ -1,6 +1,6 @@
 (n.d(t, {
     NZ: () => eS,
-    ZP: () => eT,
+    ZP: () => eN,
     r: () => eE
 }),
     n(388685));
@@ -31,8 +31,8 @@ var r = n(255367),
     I = n(575175),
     P = n(522651),
     Z = n(795318),
-    N = n(243778),
-    T = n(258609),
+    T = n(243778),
+    N = n(258609),
     A = n(446226),
     w = n(569545),
     R = n(74299),
@@ -207,7 +207,7 @@ function eS(e) {
         children: [
             (() => {
                 if (x && 0 === f.length)
-                    return (0, r.jsx)(N.ZP, {
+                    return (0, r.jsx)(T.ZP, {
                         contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                         bypassAutoDismiss: !0,
                         children: (e) => {
@@ -239,7 +239,7 @@ function eS(e) {
                                 handleGoLive: C,
                                 appContext: h,
                                 onClose: i,
-                                onInteraction: eN('ManageStreamsMenu')
+                                onInteraction: eT('ManageStreamsMenu')
                             })
                         });
                     },
@@ -320,11 +320,11 @@ let eP = i.memo(function (e) {
     i.useEffect(() => {
         E() !== S && f(!0);
     }, [S, E]);
-    let N = i.useCallback(() => {
+    let T = i.useCallback(() => {
             if (null != _) (0, g.g)((0, w.V9)(_));
             else for (let e of C) (0, g.g)((0, w.V9)(e));
         }, [C, _]),
-        T = (e, i) => {
+        N = (e, i) => {
             let c = {
                 isTrayButton: !1,
                 centerButton: !0,
@@ -350,7 +350,7 @@ let eP = i.memo(function (e) {
                             streamActive: !0,
                             color: 'disconnect',
                             onClick: () => {
-                                ((0, P.v)(o, P.d.STOP_WATCHING), N());
+                                ((0, P.v)(o, P.d.STOP_WATCHING), T());
                             },
                             onPopoutClick: C.length > 1 ? i : null,
                             isSelfStream: !1
@@ -387,7 +387,7 @@ let eP = i.memo(function (e) {
                 handleGoLive: e_.VqG,
                 hideSelfOptions: !0,
                 onClose: n,
-                onInteraction: eN('ManageStreamsMenu')
+                onInteraction: eT('ManageStreamsMenu')
             });
         },
         position: 'top',
@@ -399,7 +399,7 @@ let eP = i.memo(function (e) {
             return (0, r.jsx)(c.animated.div, {
                 style: Z,
                 ref: j,
-                children: T(i, n)
+                children: N(i, n)
             });
         }
     });
@@ -453,10 +453,10 @@ function eZ(e) {
         ]
     });
 }
-function eN(e) {
+function eT(e) {
     return (0, Z.u)(e, x.Z.VOICE_CONTROL_TRAY, { entrypoint: ey.A5.CARET });
 }
-let eT = function (e) {
+let eN = function (e) {
     var t;
     let { channel: n, className: l, onDisconnectCall: o, exitFullScreen: c, idleProps: d } = e,
         h = i.useRef(null),
@@ -467,10 +467,10 @@ let eT = function (e) {
         }),
         { cameraUnavailable: C, enabled: O } = (0, el.Z)(),
         P = (0, es.Z)(n),
-        { suppress: Z, selfMute: N, mute: w } = (0, ec.Z)(n),
+        { suppress: Z, selfMute: T, mute: w } = (0, ec.Z)(n),
         { canGoLive: M } = (0, u.cj)([en.Z], () => ({ canGoLive: (0, R.Z)(en.Z) })),
         D = (0, A.Z)(),
-        k = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
+        k = (0, u.e7)([N.Z], () => null != N.Z.getAwaitingRemoteSessionInfo()),
         U = null != D,
         B = (0, u.e7)([er.Z], () => {
             var e;
@@ -501,7 +501,7 @@ let eT = function (e) {
                               renderOutputVolume: !0,
                               renderDeafen: !0,
                               minimal: !0,
-                              onInteraction: eN('AudioDeviceMenu')
+                              onInteraction: eT('AudioDeviceMenu')
                           })
                       )
                   );
@@ -532,7 +532,7 @@ let eT = function (e) {
                                                   children: (0, r.jsx)($.R, {
                                                       onClose: t,
                                                       location: x.Z.VOICE_CONTROL_TRAY,
-                                                      onInteraction: eN('AudioDeviceMenu')
+                                                      onInteraction: eT('AudioDeviceMenu')
                                                   })
                                               });
                                           },
@@ -547,7 +547,7 @@ let eT = function (e) {
                                                   ref: eu,
                                                   centerButton: !0,
                                                   onPopoutClick: U ? null : n,
-                                                  selfMute: N,
+                                                  selfMute: T,
                                                   serverMute: w,
                                                   suppress: Z,
                                                   popoutOpen: i,
@@ -566,7 +566,7 @@ let eT = function (e) {
                                                       children: (0, r.jsx)(S.Z, {
                                                           onClose: t,
                                                           minimal: !0,
-                                                          onInteraction: eN('VideoDeviceMenu')
+                                                          onInteraction: eT('VideoDeviceMenu')
                                                       })
                                                   });
                                               },

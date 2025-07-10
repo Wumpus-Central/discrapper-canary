@@ -111,8 +111,8 @@ function P(e) {
         }),
         P = (0, u.Z)(t),
         Z = (0, d.Z)(t),
-        N = (0, p.Z)(t, 'Toolbar Overflow'),
-        T = (0, m.Z)(t),
+        T = (0, p.Z)(t, 'Toolbar Overflow'),
+        N = (0, m.Z)(t),
         A = (0, h.Z)(t),
         w = (0, _.Z)(t),
         R = x.vF.useSetting(),
@@ -124,12 +124,12 @@ function P(e) {
         onSelect: i,
         children: [
             (0, r.jsxs)(s.kSQ, {
-                children: [N, A]
+                children: [T, A]
             }),
             (0, r.jsxs)(s.kSQ, {
                 children: [
                     S,
-                    T,
+                    N,
                     E,
                     R && !M
                         ? (0, r.jsx)(s.sNh, {
