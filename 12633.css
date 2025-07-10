@@ -45077,7 +45077,8 @@ img.thumbnail__0f2e8 {
     align-items: center;
     border-right: none;
     cursor: pointer;
-    display: flex
+    display: flex;
+    margin-right: var(--space-xs)
 }
 
 .attachment_af3b89 {
