@@ -1,4 +1,4 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(215569),
@@ -6,58 +6,58 @@ var r = n(255367),
     s = n(481060),
     a = n(852860),
     c = n(313201),
-    u = n(944163),
-    d = n(266395),
+    d = n(944163),
+    u = n(266395),
     m = n(187565),
     f = n(200305),
     h = n(592286),
     p = n(388032),
-    b = n(916199);
+    x = n(916199);
 let g = () =>
         (0, r.jsx)(a.Z, {
             submitting: !1,
             message: p.intl.string(p.t['8g514e']),
             onReset: () => {
-                (0, d.PE)(!1);
+                (0, u.PE)(!1);
             },
             onResetText: p.intl.string(p.t['ETE/oK']),
             onSave: () => {
-                ((0, d.PE)(!1), (0, s.Mr3)(h.Pn));
+                ((0, u.PE)(!1), (0, s.Mr3)(h.Pn));
             },
             onSaveText: p.intl.string(p.t['Xt+UaW']),
             onSaveButtonColor: o.Tt.RED
         }),
-    x = (e) => {
+    b = (e) => {
         let { transitionState: t, guildId: n, onClose: o, onComplete: a, inviteKey: h, isPreview: p = !1 } = e,
-            x = (0, d.rb)((e) => e.shouldShowWarning),
-            { verificationForm: j, hasFetched: v } = (0, m.ng)(n, p, h),
-            _ = (0, c.Dt)();
+            b = (0, u.rb)((e) => e.shouldShowWarning),
+            { verificationForm: v, hasFetched: _ } = (0, m.ng)(n, p, h),
+            j = (0, c.Dt)();
         return (i.useEffect(() => {
-            v && j === u.t && o();
-        }, [v, o, j]),
-        j === u.t)
+            _ && v === d.t && o();
+        }, [_, o, v]),
+        v === d.t)
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)(s.Y0X, {
                           transitionState: t,
-                          'aria-labelledby': _,
+                          'aria-labelledby': j,
                           size: s.CgR.DYNAMIC,
-                          className: b.container,
+                          className: x.container,
                           hideShadow: !0,
                           parentComponent: 'MemberVerificationModal',
                           children: [
                               (0, r.jsx)('div', {
-                                  className: b.closeButton,
+                                  className: x.closeButton,
                                   children: (0, r.jsx)(s.olH, {
-                                      className: b.closeButtonInner,
-                                      innerClassName: b.closeButtonInner,
+                                      className: x.closeButtonInner,
+                                      innerClassName: x.closeButtonInner,
                                       onClick: () => o(!1)
                                   })
                               }),
                               (0, r.jsx)(f.Z, {
-                                  verificationForm: j,
-                                  headerId: _,
+                                  verificationForm: v,
+                                  headerId: j,
                                   guildId: n,
                                   onClose: o,
                                   onComplete: a,
@@ -67,9 +67,9 @@ let g = () =>
                       }),
                       (0, r.jsx)(l.W, {
                           children:
-                              !0 === x &&
+                              !0 === b &&
                               (0, r.jsx)(s.oXn, {
-                                  className: b.notice,
+                                  className: x.notice,
                                   children: (0, r.jsx)(g, {})
                               })
                       })

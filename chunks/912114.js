@@ -128,7 +128,7 @@ let S = function (e) {
         [w, R] = i.useState(void 0),
         M = void 0 !== w,
         { analyticsLocations: D } = (0, h.ZP)(S, p.Z.GROUP_DM_EDIT_MODAL),
-        L = {
+        k = {
             channel_id: t,
             channel_type: null == P ? void 0 : P.type,
             location: S,
@@ -141,9 +141,9 @@ let S = function (e) {
     }, [T, Z, M, a]),
     (0, d.ZP)(
         () => (
-            _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'opened' })),
+            _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, k), { action: 'opened' })),
             () => {
-                _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'dismissed' }));
+                _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, k), { action: 'dismissed' }));
             }
         )
     ),
@@ -159,7 +159,7 @@ let S = function (e) {
                       if (
                           (_.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
-                              j(O({}, L), {
+                              j(O({}, k), {
                                   action: 'saved',
                                   new_name_set: '' !== T,
                                   new_icon_set: (i ? w : null == P ? void 0 : P.icon) != null,

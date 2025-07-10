@@ -42,8 +42,8 @@ var r = n(255367),
     U = n(574254),
     G = n(374129),
     B = n(639351),
-    F = n(74538),
-    V = n(584729),
+    V = n(74538),
+    F = n(584729),
     H = n(334374),
     z = n(849171),
     W = n(607187),
@@ -116,8 +116,8 @@ let eo = [J.fO.ACTIVITY],
             [eU] = (0, g.Z)(U.type === J.fO.ACTIVITY ? [U.applicationId] : []),
             eG = (0, a.e7)([y.Z], () => y.Z.getEnabled()),
             eB = (0, a.e7)([D.Z], () => null != ek && D.Z.isLocalVideoDisabled(ek, (0, m.Z)(U.type)), [ek, U.type]),
-            eF = (0, a.e7)([D.Z], () => (null != ek ? D.Z.getVideoToggleState(ek, (0, m.Z)(U.type)) : Q.ZUi.NONE), [ek, U.type]),
-            eV = eF === Q.ZUi.AUTO_PROBING,
+            eV = (0, a.e7)([D.Z], () => (null != ek ? D.Z.getVideoToggleState(ek, (0, m.Z)(U.type)) : Q.ZUi.NONE), [ek, U.type]),
+            eF = eV === Q.ZUi.AUTO_PROBING,
             { speaking: eH, ringing: ez, hasVideo: eW } = (0, X.Z)(U, eL),
             eK = (function (e, t, n) {
                 var r, i, l, o;
@@ -159,7 +159,7 @@ let eo = [J.fO.ACTIVITY],
                 };
             })(eL, U, ep.getGuildId()),
             eY = U.type === J.fO.STREAM && ek === eL,
-            eq = F.ZP.isPremium(eM);
+            eq = V.ZP.isPremium(eM);
         i.useEffect(() => {
             if (eY && !eq && null != ep.hdStreamingUntil && new Date(ep.hdStreamingUntil) > new Date()) {
                 let e = setTimeout(
@@ -255,7 +255,7 @@ let eo = [J.fO.ACTIVITY],
                     width: ef,
                     blocked: eC,
                     ignored: ej,
-                    noVideoRender: ey || eV,
+                    noVideoRender: ey || eF,
                     pulseSpeakingIndicator: ex,
                     inOverlayPopout: eP
                 })),
@@ -389,11 +389,11 @@ let eo = [J.fO.ACTIVITY],
                                                       {
                                                           idle: eN,
                                                           platform: eQ,
-                                                          title: (0, V.Z)(ep, U),
+                                                          title: (0, F.Z)(ep, U),
                                                           blocked: eC,
                                                           ignored: ej,
                                                           localVideoDisabled: eB,
-                                                          videoToggleState: eF,
+                                                          videoToggleState: eV,
                                                           hideAudioIcon: eY,
                                                           onContextMenu: tt,
                                                           onToggleMute: e2,

@@ -9,14 +9,11 @@ e.exports = {
     draggableInputContainer: 'draggableInputContainer__0651b',
     inputWrapper: 'inputWrapper__0651b',
     clearButton: 'clearButton__0651b',
-    clearIcon: 'clearIcon__0651b',
     dragContainer: 'dragContainer__0651b',
     dragIcon: 'dragIcon__0651b',
     divider: 'divider__0651b',
     errorText: 'errorText__0651b',
     spacedItem: 'spacedItem__0651b',
-    button: 'button__0651b',
-    cancelButton: 'cancelButton__0651b',
     radioIconEmptyContainer: 'radioIconEmptyContainer__0651b',
     radioIconEmpty: 'radioIconEmpty__0651b'
 };

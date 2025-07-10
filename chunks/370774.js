@@ -1,63 +1,98 @@
-(e.d(n, {
-    D: () => g,
-    YH: () => c,
-    fW: () => I,
-    j4: () => D,
-    s: () => T
-}),
-    e(467055));
-var i = e(73800);
-if (12633 == e.j) var l = e(995638);
+if (
+    (e.d(n, {
+        D: () => D,
+        O4: () => O,
+        YH: () => E,
+        bl: () => m,
+        j4: () => L,
+        s: () => U
+    }),
+    12633 == e.j)
+)
+    var i = e(995638);
+if (12633 == e.j) var l = e(89616);
 var r = e(114858),
     d = e(442837),
     a = e(230711),
+    _ = e(455199),
     s = e(592125),
-    _ = e(430824);
+    u = e(430824);
 e(375954);
-var u = e(306680);
+var p = e(306680);
 e(594174);
-var p = e(709054),
-    o = e(982183),
-    E = e(981631);
-function c(t) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z,
-        e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.ZP;
-    if (!i.hasUnread(t.channel_id)) return !1;
-    let l = e.getChannel(t.channel_id);
-    if (null == l) return !1;
-    let r = n.getGuild(l.guild_id);
-    if (null == r || null == r.joinedAt) return !1;
-    let d = i.ackMessageId(l.id);
-    if (null == d) {
-        let t = n.getGuild(l.guild_id);
-        null != t && null != t.joinedAt && (d = p.default.fromTimestamp(t.joinedAt.getTime()));
+var o = e(70956),
+    I = e(709054),
+    c = e(854454),
+    T = e(982183),
+    g = e(981631);
+function E(t) {
+    let { messageId: n, channelId: e, guildId: i, ReadStateStore_: l = p.ZP, GuildStore_: r = u.Z } = t;
+    if (!l.hasUnread(e)) return !1;
+    let d = r.getGuild(i);
+    if (null == d || null == d.joinedAt) return !1;
+    let a = l.ackMessageId(e);
+    if (null == a) {
+        let t = r.getGuild(i);
+        null != t && null != t.joinedAt && (a = I.default.fromTimestamp(t.joinedAt.getTime()));
     }
-    return p.default.compare(t.id, d) > 0;
+    return I.default.compare(n, a) > 0;
 }
-function I(t) {
-    let n = (0, d.cj)([s.Z, u.ZP, _.Z], () =>
-        Object.fromEntries(
-            t.map((t) => [
-                t.message.id,
-                (function (t) {
-                    if (c(t)) return o.KZ.UNREAD;
-                    let n = (0, l.default)(new Date(), t.timestamp);
-                    return 0 === n ? o.KZ.TODAY : 1 === n ? o.KZ.YESTERDAY : o.KZ.OLDER;
-                })(t.message)
-            ])
-        )
-    );
-    return i.useCallback((t) => n[t], [n]);
+function m(t) {
+    let { id: n } = t,
+        e = (0, i.default)(new Date(), I.default.extractTimestamp(n));
+    return 0 === e ? T.KZ.TODAY : 1 === e ? T.KZ.YESTERDAY : T.KZ.OLDER;
 }
-function T(t) {
-    let n = new Date(new Date().setHours(0, 0, 0, 0));
-    return t.OLDER ? null : t.YESTERDAY ? p.default.fromTimestamp(new Date(n.setDate(n.getDate() - 1)).getTime()) : t.TODAY ? p.default.fromTimestamp(n.getTime()) : null;
+function U(t) {
+    let n = (0, l.Z)(),
+        e = new Date(n.getTime() - o.Z.Millis.DAY);
+    return t.OLDER ? '0' : t.YESTERDAY ? I.default.fromTimestamp(e.getTime()) : t.TODAY || t.UNREAD ? I.default.fromTimestamp(n.getTime()) : '0';
 }
-function g() {
+function D() {
     let { pathname: t } = (0, r.TH)();
-    return t.startsWith(E.Z5c.NOTIFICATIONS_INBOX());
+    return t.startsWith(g.Z5c.NOTIFICATIONS_INBOX());
 }
-function D(t) {
-    a.Z.open(E.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
+function L(t) {
+    a.Z.open(g.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
+}
+function O() {
+    let t = (0, d.Wu)([c.ZP], () => {
+            var t;
+            return null != (t = c.ZP.getNotifyingChannelIds()) ? t : [];
+        }),
+        n = (0, d.Wu)([p.ZP], () => t.filter((t) => p.ZP.hasUnread(t) && !p.ZP.isEstimated(t)), [t]),
+        e = (0, d.Wu)([_.ZP], () => {
+            var t;
+            return null != (t = _.ZP.getSettingsFilteredMentions()) ? t : [];
+        });
+    return {
+        unreadRecentMentionsCount: (0, d.e7)(
+            [p.ZP, s.Z, u.Z],
+            () => {
+                var t, n;
+                return null !=
+                    (n =
+                        null == e ||
+                        null ==
+                            (t = e.filter((t) => {
+                                let n = s.Z.getChannel(t.channel_id);
+                                return (
+                                    null != n &&
+                                    E({
+                                        messageId: t.id,
+                                        channelId: t.channel_id,
+                                        guildId: n.guild_id,
+                                        ReadStateStore_: p.ZP,
+                                        GuildStore_: u.Z
+                                    })
+                                );
+                            }))
+                            ? void 0
+                            : t.length)
+                    ? n
+                    : 0;
+            },
+            [e]
+        ),
+        unreadChannelIds: n
+    };
 }

@@ -32,11 +32,11 @@ function I(e) {
         U = (0, a.ZP)(n),
         G = (0, i.e7)([p.Z], () => !p.Z.can(j.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
-        F = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        V = (0, O.ZP)({
+        V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
+        F = (0, O.ZP)({
             channel: n,
             locked: G,
-            video: B || F,
+            video: B || V,
             selected: I
         }),
         H = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
@@ -70,10 +70,10 @@ function I(e) {
             children: (0, o.NGo)(z)
         });
     let K = null != (t = null == N ? void 0 : N.length) ? t : 0;
-    return null != w && w && V
+    return null != w && w && F
         ? (0, r.jsx)(v.Z, {
               userCount: K,
-              video: B || F,
+              video: B || V,
               channel: n
           })
         : P && (0, m.a)(N) && W

@@ -63,7 +63,7 @@ let p = 90 * a.Z.Millis.DAY,
     };
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(o.Z), null != e)) {
+        if ((this.waitFor(o.ZP), null != e)) {
             var t;
             (((f = e).localItemAcks = (function (e) {
                 let t = {};

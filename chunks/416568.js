@@ -38,8 +38,8 @@ var r = n(255367),
     U = n(605951),
     G = n(474109),
     B = n(741616),
-    F = n(187835),
-    V = n(118122),
+    V = n(187835),
+    F = n(118122),
     H = n(193154),
     z = n(602147),
     W = n(222059),
@@ -272,12 +272,12 @@ function ed(e) {
             (0, r.jsx)(q.Z, {}),
             i
                 ? null
-                : (0, r.jsx)(V.Z, {
+                : (0, r.jsx)(F.Z, {
                       disableTooltip: o.length > 0,
                       lastTargetNode: s[s.length - 1]
                   }),
             i ? null : t,
-            n ? null : (0, r.jsx)(F.Z, {})
+            n ? null : (0, r.jsx)(V.Z, {})
         ]
     });
 }
@@ -296,10 +296,10 @@ function eh(e) {
         R = i.useRef(!1),
         [D] = i.useState(() => new f.V7()),
         B = i.useRef(null),
-        F = i.useRef(null),
-        V = (0, u.OP)(),
-        { ref: H } = V,
-        W = eo(V, ['ref']),
+        V = i.useRef(null),
+        F = (0, u.OP)(),
+        { ref: H } = F,
+        W = eo(F, ['ref']),
         K = (0, m.mFp)(),
         [q, J] = i.useState(!1),
         $ = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
@@ -322,7 +322,7 @@ function eh(e) {
                 ee.dG4,
                 () => {
                     var e, t;
-                    (null == (e = B.current) || e.calculateState(), null == (t = F.current) || t.calculateState());
+                    (null == (e = B.current) || e.calculateState(), null == (t = V.current) || t.calculateState());
                 },
                 e
             );
@@ -507,7 +507,7 @@ function eh(e) {
                         ),
                         (0, r.jsx)(G.Z, {
                             reverse: !0,
-                            ref: F,
+                            ref: V,
                             isVisible: eh.isItemVisible,
                             onJumpTo: eh.handleJumpToGuild,
                             className: o()(en.unreadMentionsIndicatorBottom, {

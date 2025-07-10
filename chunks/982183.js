@@ -1,42 +1,51 @@
-e.d(n, {
-    $J: () => u,
-    F7: () => o,
-    KZ: () => E,
-    V5: () => c,
-    Vv: () => T,
+n.d(t, {
+    $J: () => s,
+    AQ: () => c,
+    F7: () => f,
+    KZ: () => _,
+    V5: () => p,
+    Vp: () => d,
+    Vv: () => m,
+    W9: () => u,
     by: () => g,
-    fL: () => I,
-    ib: () => p,
-    yG: () => _
+    fL: () => h,
+    ib: () => l,
+    yG: () => o
 });
-var i,
-    l,
-    r,
-    d = e(70956),
-    a = e(411198),
-    s = e(388032);
-let _ = 'notifications_inbox_guild_id',
-    u = 88,
-    p = d.Z.Millis.WEEK,
-    o = (0, a.yS)({
-        id: _,
-        name: s.intl.string(s.t.HcoRu7),
+var r = n(70956),
+    i = n(411198),
+    a = n(388032);
+let o = 'notifications_inbox_guild_id',
+    s = 88,
+    l = r.Z.Millis.WEEK,
+    c = 50,
+    u = 10,
+    d = 500,
+    f = (0, i.yS)({
+        id: o,
+        name: a.intl.string(a.t.HcoRu7),
         description: '',
         icon: void 0,
         features: []
     });
-var E = 12633 == e.j ? (((i = {}).UNREAD = 'UNREAD'), (i.TODAY = 'TODAY'), (i.YESTERDAY = 'YESTERDAY'), (i.OLDER = 'OLDER'), i) : null,
-    c = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
-    I = 12633 == e.j ? (((r = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (r.MENTION = 'MENTION'), (r.BOOKMARK = 'BOOKMARK'), r) : null;
-let T = {
-        UNREAD: s.t.sRUdBw,
-        TODAY: s.t.F4jZQk,
-        YESTERDAY: s.t.gnv4pK,
-        OLDER: s.t.exrPZm
+var _ = (function (e) {
+        return ((e.UNREAD = 'UNREAD'), (e.TODAY = 'TODAY'), (e.YESTERDAY = 'YESTERDAY'), (e.OLDER = 'OLDER'), e);
+    })({}),
+    p = (function (e) {
+        return ((e.ALL = 'all'), (e.ANNOUNCEMENTS = 'announcements'), (e.MENTIONS = 'mentions'), (e.BOOKMARKS = 'bookmarks'), e);
+    })({}),
+    h = (function (e) {
+        return ((e.ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (e.MENTION = 'MENTION'), (e.BOOKMARK = 'BOOKMARK'), e);
+    })({});
+let m = {
+        UNREAD: a.t.sRUdBw,
+        TODAY: a.t.F4jZQk,
+        YESTERDAY: a.t.gnv4pK,
+        OLDER: a.t.exrPZm
     },
     g = {
-        all: s.intl.string(s.t.iWyjNj),
-        bookmarks: s.intl.string(s.t['+rlGYW']),
-        announcements: s.intl.string(s.t.jR39HB),
-        mentions: s.intl.string(s.t['GRZF9/'])
+        all: a.intl.string(a.t.iWyjNj),
+        bookmarks: a.intl.string(a.t['+rlGYW']),
+        announcements: a.intl.string(a.t.jR39HB),
+        mentions: a.intl.string(a.t['GRZF9/'])
     };

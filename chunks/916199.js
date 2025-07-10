@@ -16,7 +16,7 @@ e.exports = {
     divider: 'divider_b962dc',
     submitButton: 'submitButton_b962dc',
     formItem: 'formItem_b962dc',
-    resendButton: 'resendButton_b962dc',
+    resendButtonContainer: 'resendButtonContainer_b962dc',
     notice: 'notice_b962dc',
     disclaimerFooter: 'disclaimerFooter_b962dc',
     guildProfile: 'guildProfile_b962dc',

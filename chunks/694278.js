@@ -1,88 +1,88 @@
-(n.d(t, { default: () => p }), n(388685));
-var r = n(255367),
-    a = n(73800),
-    o = n(481060),
-    i = n(881052),
-    l = n(434404),
-    c = n(78451),
-    s = n(915509),
-    d = n(981631),
-    u = n(388032),
-    b = n(20493);
+(r.d(t, { default: () => p }), r(388685));
+var n = r(255367),
+    a = r(73800),
+    i = r(481060),
+    o = r(881052),
+    l = r(434404),
+    c = r(78451),
+    s = r(915509),
+    d = r(981631),
+    u = r(388032),
+    b = r(20493);
 function p(e) {
-    var t, n;
-    let { guild: p, onClose: m, hideColors: _ } = e,
-        [g, y] = a.useState(p.verificationLevel),
-        [x, h] = a.useState(null),
-        f = p.features.has(d.oNc.COMMUNITY),
-        j = (0, c.IF)(f, _).filter((e) => !e.disabled),
-        C = a.useCallback(async () => {
-            null != x && h(null);
+    var t, r;
+    let { guild: p, onClose: m, hideColors: y } = e,
+        [_, g] = a.useState(p.verificationLevel),
+        [x, f] = a.useState(null),
+        h = p.features.has(d.oNc.COMMUNITY),
+        j = (0, c.IF)(h, y).filter((e) => !e.disabled),
+        v = a.useCallback(async () => {
+            null != x && f(null);
             try {
-                (await l.Z.saveGuild(p.id, { verificationLevel: g }), l.Z.updateGuild({ verificationLevel: g }), m());
+                (await l.Z.saveGuild(p.id, { verificationLevel: _ }), l.Z.updateGuild({ verificationLevel: _ }), m());
             } catch (e) {
-                h(new i.Hx(e).getAnyErrorMessage());
+                f(new o.Hx(e).getAnyErrorMessage());
             }
-        }, [x, p.id, g, m]);
-    return (0, r.jsx)(
+        }, [x, p.id, _, m]);
+    return (0, n.jsx)(
         s.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        ((n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r));
+                                : (e[t] = n));
                     }));
             }
             return e;
         })({}, e)),
-        (n = n =
+        (r = r =
             {
                 title: u.intl.string(u.t.DpRdYG),
                 errorText: x,
-                onConfirm: C,
+                onConfirm: v,
                 onCancel: m,
-                children: (0, r.jsxs)(o.hjN, {
+                children: (0, n.jsxs)(i.hjN, {
                     children: [
-                        (0, r.jsx)(o.R94, {
-                            type: o.R94.Types.DESCRIPTION,
+                        (0, n.jsx)(i.R94, {
+                            type: i.R94.Types.DESCRIPTION,
                             className: b.marginBottom20,
                             children: u.intl.format(u.t.iuRk2t, {})
                         }),
-                        (0, r.jsx)(o.FXm, {
-                            value: g,
+                        (0, n.jsx)(i.FXm, {
+                            value: _,
                             options: j,
-                            onChange: (e) => y(e.value)
+                            onChange: (e) => g(e.value)
                         })
                     ]
                 })
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         t)
     );

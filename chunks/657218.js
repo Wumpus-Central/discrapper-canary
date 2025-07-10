@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(459273),
     M = n(838440),
     D = n(127654),
-    L = n(241309),
-    k = n(928477),
+    k = n(241309),
+    L = n(928477),
     U = n(456077),
     B = n(488131),
     F = n(602034),
@@ -201,7 +201,7 @@ function X(e) {
                 }
             );
         })(t, f),
-        C = (0, k.vH)(t),
+        C = (0, L.vH)(t),
         {
             nameError: x,
             messageError: v,
@@ -236,7 +236,7 @@ function X(e) {
                         let m = null != (s = r.name) ? s : '',
                             g = null == n && 0 === m.length,
                             b = '' === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((c(g ? (0, L.V_)() : null), d(b ? (0, L.T4)() : null), g || b))
+                        if ((c(g ? (0, k.V_)() : null), d(b ? (0, k.T4)() : null), g || b))
                             return (
                                 h(!1),
                                 {
@@ -265,7 +265,7 @@ function X(e) {
                             await f(e, i, l);
                         } catch (e) {
                             return (
-                                (null == (u = e.body) ? void 0 : u.code) === H.evJ.AUTOMOD_TITLE_BLOCKED && c((0, L.Gx)(e.body, t)),
+                                (null == (u = e.body) ? void 0 : u.code) === H.evJ.AUTOMOD_TITLE_BLOCKED && c((0, k.Gx)(e.body, t)),
                                 h(!1),
                                 {
                                     shouldClear: !1,
@@ -294,7 +294,7 @@ function X(e) {
             textAreaState: b,
             location: l
         }),
-        P = (0, k.oD)(p, C) ? c.qtY : c.or_;
+        P = (0, L.oD)(p, C) ? c.qtY : c.or_;
     return (0, r.jsx)('div', {
         className: V.chat,
         onMouseDown: d,
@@ -370,7 +370,7 @@ function X(e) {
 }
 function Q(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: i, privateThreadMode: l } = e,
-        a = (0, k.oD)(n, l),
+        a = (0, L.oD)(n, l),
         o = (0, r.jsx)('div', {
             className: V.privateThreadFormTitle,
             children: (0, r.jsx)('span', {
@@ -381,7 +381,7 @@ function Q(e) {
         s = (0, r.jsx)(c.XZJ, {
             className: V.checkbox,
             type: c.XZJ.Types.INVERTED,
-            disabled: l === k.Jw.PrivateOnly,
+            disabled: l === L.Jw.PrivateOnly,
             value: a,
             onChange: (e, t) => i({ isPrivate: t }),
             children: (0, r.jsx)(c.Text, {
@@ -390,7 +390,7 @@ function Q(e) {
                 children: G.intl.string(G.t.TRPp3t)
             })
         });
-    return t || l === k.Jw.Disabled
+    return t || l === L.Jw.Disabled
         ? null
         : (0, r.jsxs)(c.hjN, {
               title: o,
@@ -412,8 +412,8 @@ function J(e) {
     var t;
     let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: a, error: o, disabled: s } = e,
         u = null != (t = l.name) ? t : '',
-        p = (0, L.Op)(o, { content: u }),
-        h = (0, k.Od)(n, i),
+        p = (0, k.Op)(o, { content: u }),
+        h = (0, L.Od)(n, i),
         f = null != i,
         m = (0, v.Dt)();
     return (0, r.jsx)(c.hjN, {
@@ -474,7 +474,7 @@ function $(e) {
             handler: g
         }));
     let y = (0, o.e7)([A.Z], () => A.Z.can(H.Plq.ATTACH_FILES, t)),
-        v = (0, L.Op)(p, { content: n.textValue });
+        v = (0, k.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(x.Z, {

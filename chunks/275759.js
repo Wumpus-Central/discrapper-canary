@@ -1,11 +1,11 @@
 (n.d(t, {
-    FI: () => O,
-    O1: () => m,
-    SJ: () => h,
-    Ur: () => y,
-    kQ: () => b,
-    n_: () => E,
-    xp: () => g
+    FI: () => y,
+    O1: () => h,
+    SJ: () => p,
+    Ur: () => b,
+    kQ: () => E,
+    n_: () => g,
+    xp: () => m
 }),
     n(65234),
     n(111804),
@@ -18,25 +18,23 @@ var r = n(512722),
     i = n.n(r),
     a = n(392711),
     o = n.n(a);
-n(442837);
-var s = n(627420);
-n(704215);
-var l = n(277800);
+(n(442837), n(704215));
+var s = n(277800);
 n(266454);
-var c = n(485386),
-    u = n(430824);
+var l = n(485386),
+    c = n(430824);
 n(496675);
-var d = n(591759),
-    f = n(856651),
-    _ = n(981631),
-    p = n(388032);
-let h = ['426537812993638400', '1042836142560645130', '296023718839451649', '979802510766268446', '1031611223235637258', '512333785338216465'];
-var m = (function (e) {
+var u = n(591759),
+    d = n(856651),
+    f = n(981631),
+    _ = n(388032);
+let p = ['426537812993638400', '1042836142560645130', '296023718839451649', '979802510766268446', '1031611223235637258', '512333785338216465'];
+var h = (function (e) {
     return ((e[(e.AND = 0)] = 'AND'), (e[(e.OR = 1)] = 'OR'), e);
 })({});
-function g(e) {
+function m(e) {
     var t;
-    let { searchParams: n } = null != (t = d.Z.toURLSafe(e)) ? t : { searchParams: new URLSearchParams() },
+    let { searchParams: n } = null != (t = u.Z.toURLSafe(e)) ? t : { searchParams: new URLSearchParams() },
         { code: r, state: a, error: o, error_description: s } = Object.fromEntries(n);
     return (
         i()(!Array.isArray(r), 'Received multiple query param values for code'),
@@ -51,129 +49,129 @@ function g(e) {
         }
     );
 }
-function E(e) {
+function g(e) {
     let { connectionType: t, connectionMetadataField: n, operator: r, operatorText: i, value: a } = e,
         o = null,
-        l = Math.round(Number(a));
+        s = Math.round(Number(a));
     switch (r) {
-        case f.iO.EQUAL:
-            ((o = p.t.H97H4e), t === _.ABu.PAYPAL && n === f.PC.PAYPAL_VERIFIED && (o = p.t['N95b+f']));
+        case d.iO.EQUAL:
+            ((o = _.t.H97H4e), t === f.ABu.PAYPAL && n === d.PC.PAYPAL_VERIFIED && (o = _.t['N95b+f']));
             break;
-        case f.iO.NOT_EQUAL:
-            o = p.t['D9B/q6'];
+        case d.iO.NOT_EQUAL:
+            o = _.t['D9B/q6'];
             break;
-        case f.iO.LESS_THAN:
-            ((o = p.t['3ru8/P']), (l = Math.max(0, l - 1)));
+        case d.iO.LESS_THAN:
+            ((o = _.t['3ru8/P']), (s = Math.max(0, s - 1)));
             break;
-        case f.iO.GREATER_THAN:
-            ((o = p.t.wCVDHh), (l = Math.max(0, l + 1)));
+        case d.iO.GREATER_THAN:
+            ((o = _.t.wCVDHh), (s = Math.max(0, s + 1)));
             break;
         case void 0:
         case null:
             return null;
     }
-    if ((null != i && (o = i), o instanceof s._H && null != r))
+    if ((null != i && (o = i), null != o && null != r))
         switch (t) {
-            case _.ABu.REDDIT:
+            case f.ABu.REDDIT:
                 switch (n) {
-                    case f.PC.CREATED_AT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEh, { days: l }) });
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }) });
                         break;
-                    case f.PC.REDDIT_TOTAL_KARMA:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.P2JAER, { karma: l }) });
+                    case d.PC.REDDIT_TOTAL_KARMA:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.P2JAER, { karma: s }) });
                         break;
-                    case f.PC.REDDIT_GOLD:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t['+/5TCw']) });
+                    case d.PC.REDDIT_GOLD:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t['+/5TCw']) });
                         break;
-                    case f.PC.REDDIT_MOD:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t['9rPbEh']) });
+                    case d.PC.REDDIT_MOD:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t['9rPbEh']) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case _.ABu.STEAM:
+            case f.ABu.STEAM:
                 switch (n) {
-                    case f.PC.CREATED_AT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEh, { days: l }) });
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }) });
                         break;
-                    case f.PC.STEAM_GAME_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.H9eLoa, { count: l }) });
+                    case d.PC.STEAM_GAME_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.H9eLoa, { count: s }) });
                         break;
-                    case f.PC.STEAM_ITEM_COUNT_TF2:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.MceZJy, { count: l }) });
+                    case d.PC.STEAM_ITEM_COUNT_TF2:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.MceZJy, { count: s }) });
                         break;
-                    case f.PC.STEAM_ITEM_COUNT_DOTA2:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.dMnRam, { count: l }) });
+                    case d.PC.STEAM_ITEM_COUNT_DOTA2:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.dMnRam, { count: s }) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case _.ABu.TWITTER:
+            case f.ABu.TWITTER:
                 switch (n) {
-                    case f.PC.CREATED_AT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEh, { days: l }) });
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }) });
                         break;
-                    case f.PC.TWITTER_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.xRygZG) });
+                    case d.PC.TWITTER_VERIFIED:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.xRygZG) });
                         break;
-                    case f.PC.TWITTER_FOLLOWERS_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.bkajam, { count: l }) });
+                    case d.PC.TWITTER_FOLLOWERS_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.bkajam, { count: s }) });
                         break;
-                    case f.PC.TWITTER_STATUSES_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.MI7NKi, { count: l }) });
+                    case d.PC.TWITTER_STATUSES_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.MI7NKi, { count: s }) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case _.ABu.PAYPAL:
+            case f.ABu.PAYPAL:
                 switch (n) {
-                    case f.PC.CREATED_AT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEh, { days: l }) });
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }) });
                         break;
-                    case f.PC.PAYPAL_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.slSQuL) });
+                    case d.PC.PAYPAL_VERIFIED:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.slSQuL) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case _.ABu.EBAY:
+            case f.ABu.EBAY:
                 switch (n) {
-                    case f.PC.CREATED_AT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEh, { days: l }) });
+                    case d.PC.CREATED_AT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: s }) });
                         break;
-                    case f.PC.EBAY_TOP_RATED_SELLER:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.TEEYwc) });
+                    case d.PC.EBAY_TOP_RATED_SELLER:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.TEEYwc) });
                         break;
-                    case f.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.rl9Vg4, { value: l }) });
+                    case d.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.rl9Vg4, { value: s }) });
                         break;
-                    case f.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.QP5W1d, { count: l }) });
+                    case d.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.QP5W1d, { count: s }) });
                         break;
-                    case f.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t['6ZFYdH'], { count: l }) });
+                    case d.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t['6ZFYdH'], { count: s }) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case _.ABu.TIKTOK:
+            case f.ABu.TIKTOK:
                 switch (n) {
-                    case f.PC.TIKTOK_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.uv7et7) });
+                    case d.PC.TIKTOK_VERIFIED:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.uv7et7) });
                         break;
-                    case f.PC.TIKTOK_FOLLOWER_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.qIPDR0, { count: l }) });
+                    case d.PC.TIKTOK_FOLLOWER_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.qIPDR0, { count: s }) });
                         break;
-                    case f.PC.TIKTOK_FOLLOWING_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.zRta4e, { count: l }) });
+                    case d.PC.TIKTOK_FOLLOWING_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.zRta4e, { count: s }) });
                         break;
-                    case f.PC.TIKTOK_LIKES_COUNT:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.formatToPlainString(p.t.ar0WW1, { count: l }) });
+                    case d.PC.TIKTOK_LIKES_COUNT:
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.ar0WW1, { count: s }) });
                         break;
                     default:
                         return null;
@@ -184,29 +182,29 @@ function E(e) {
         }
     return o;
 }
-function b(e, t) {
+function E(e, t) {
     return Object.values(t).some((e) => {
         var t;
         return (null == (t = e.tags) ? void 0 : t.guild_connections) === null;
     });
 }
-function y(e) {
+function b(e) {
     var t, n;
-    let { guildMember: r, guild: a, guildRoles: s, channel: d, onlyChannelConnectionRoles: f = !1 } = e;
-    if (null == r || (null == a && null != d && (a = u.Z.getGuild(d.getGuildId())), null == a)) return null;
+    let { guildMember: r, guild: a, guildRoles: u, channel: d, onlyChannelConnectionRoles: f = !1 } = e;
+    if (null == r || (null == a && null != d && (a = c.Z.getGuild(d.getGuildId())), null == a)) return null;
     let { id: _ } = a;
-    null == s && (s = c.Z.getRoles(_));
+    null == u && (u = l.Z.getRoles(_));
     let p = r.roles
-            .map((e) => s[e])
+            .map((e) => u[e])
             .filter((e) => {
                 var t;
                 return (null == e || null == (t = e.tags) ? void 0 : t.guild_connections) === null;
             })
             .sort((e, t) => (i()(null != e && null != t, 'roleA or roleB is null'), t.position - e.position)),
-        h = o().intersection(p, (0, l.Z)(d));
+        h = o().intersection(p, (0, s.Z)(d));
     return h.length > 0 ? (null != (t = h[0]) ? t : null) : f ? null : null != (n = p[0]) ? n : null;
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e || '' === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())

@@ -38,8 +38,8 @@ var r = n(255367),
     U = n(9156),
     G = n(979651),
     B = n(934415),
-    F = n(63063),
-    V = n(98597),
+    V = n(63063),
+    F = n(98597),
     H = n(648501),
     z = n(473403),
     W = n(830993),
@@ -96,7 +96,7 @@ function et(e, t) {
         e
     );
 }
-class en extends V.ZP {
+class en extends F.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -162,7 +162,7 @@ class en extends V.ZP {
                       return (0, r.jsx)(c.P3F, {
                           className: o()(J.iconItem, J.alwaysShown),
                           onClick: () => {
-                              (0, N.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(F.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
+                              (0, N.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(V.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
                           },
                           'aria-label': Q.intl.string(Q.t.gpF6QU),
                           onMouseEnter: n,

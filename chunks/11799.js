@@ -28,9 +28,9 @@ let h = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: S, everyoneFilter: x } = (0, i.cj)([a.Z], () => ({
-                everyoneFilter: a.Z.everyoneFilter,
-                roleFilter: a.Z.roleFilter
+            { roleFilter: S, everyoneFilter: x } = (0, i.cj)([a.ZP], () => ({
+                everyoneFilter: a.ZP.everyoneFilter,
+                roleFilter: a.ZP.roleFilter
             }));
         (r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             r.useEffect(() => {

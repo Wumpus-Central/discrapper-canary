@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => k,
+    Q: () => L,
     Z: () => F
 });
 var r = n(255367),
@@ -60,7 +60,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function L(e, t) {
         e
     );
 }
-let k = 16 / 9,
+let L = 16 / 9,
     U = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: a, user: o, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
             h = i.useRef(null),
@@ -93,7 +93,7 @@ let k = 16 / 9,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
-                    L(
+                    k(
                         D(
                             {
                                 innerRef: h,
@@ -106,7 +106,7 @@ let k = 16 / 9,
                                 T.Z,
                                 {
                                     participant: n,
-                                    aspectRatio: k,
+                                    aspectRatio: L,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
@@ -148,7 +148,7 @@ let k = 16 / 9,
             T.Z,
             {
                 participant: n,
-                aspectRatio: k,
+                aspectRatio: L,
                 fit: n.type === R.fO.USER ? v.L.COVER : void 0,
                 blocked: g,
                 ignored: _,
@@ -200,7 +200,7 @@ let k = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            L(D({}, n), {
+                                            k(D({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
@@ -235,7 +235,7 @@ let k = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        L(D({}, t), {
+                                        k(D({}, t), {
                                             user: x,
                                             guildId: y,
                                             channel: l,

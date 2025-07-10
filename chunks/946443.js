@@ -33,8 +33,8 @@ function P(e) {
     let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
         k = i.useRef(null),
         [U, G] = (0, E.ZP)(k),
-        { loadState: B, channels: F } = U,
-        { maybeLoadMore: V, markAllRead: H } = G;
+        { loadState: B, channels: V } = U,
+        { maybeLoadMore: F, markAllRead: H } = G;
     ((t = k),
         (n = U),
         (l = G),
@@ -92,7 +92,7 @@ function P(e) {
     let z = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         W = (0, m.Us)({ location: 'Unreads' }),
         K = (0, g.Z)('unreads', k);
-    if (0 === F.length) {
+    if (0 === V.length) {
         return (0, r.jsxs)('div', {
             className: o()(I.container, { [I.widerInbox]: W }),
             children: [
@@ -187,9 +187,9 @@ function P(e) {
                             )),
                             (n = n =
                                 {
-                                    onScroll: B === E.jd.Done ? void 0 : V,
+                                    onScroll: B === E.jd.Done ? void 0 : F,
                                     className: I.scroller,
-                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(F, G, A), B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
+                                    children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(V, G, A), B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

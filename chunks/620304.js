@@ -102,10 +102,10 @@ function Z(e) {
         U = i.useRef(null),
         G = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
         B = (0, C.Z)(null == G ? void 0 : G.id, t.id),
-        F = (0, y.W)(t.id, 'GuildPowerupsSidebarDisplay'),
-        V = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
+        V = (0, y.W)(t.id, 'GuildPowerupsSidebarDisplay'),
+        F = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
         H = [];
-    B && F && V && H.push(u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK);
+    B && V && F && H.push(u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK);
     let [z, W] = (0, f.US)(H);
     return (0, r.jsx)(d.yRy, {
         targetElementRef: U,

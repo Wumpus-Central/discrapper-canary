@@ -29,8 +29,11 @@ function v(e) {
         B = l.useCallback(() => {
             var e;
             null == v || null == (e = v.current) || e.scrollToTop({ animate: !0 });
-        }, [v]),
-        A = (0, p.a)(),
+        }, [v]);
+    l.useEffect(() => {
+        B();
+    }, [P[0], B]);
+    let A = (0, p.a)(),
         R = l.useMemo(() => A(N), [A, N]);
     l.useEffect(() => {
         n ||

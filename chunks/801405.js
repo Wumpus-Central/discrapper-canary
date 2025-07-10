@@ -92,16 +92,16 @@ function v(e) {
             }
         );
     }, [N, S, D, T]);
-    let L = {
+    let k = {
             channel: t,
             maybeLeaveFullScreen: M
         },
-        k = i.useRef(L);
+        L = i.useRef(k);
     return (i.useEffect(() => {
-        k.current = L;
+        L.current = k;
     }),
     i.useEffect(() => {
-        let { channel: e, maybeLeaveFullScreen: t } = k.current;
+        let { channel: e, maybeLeaveFullScreen: t } = L.current;
         return (
             m.default.track(
                 y.rMx.VIDEO_LAYOUT_TOGGLED,

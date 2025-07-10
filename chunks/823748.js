@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(677601),
     M = n(541716),
     D = n(236091),
-    L = n(663993),
-    k = n(252618),
+    k = n(663993),
+    L = n(252618),
     U = n(201493),
     B = n(266454),
     F = n(174130),
@@ -87,8 +87,8 @@ var r = n(255367),
     eR = n(402130),
     eM = n(524329),
     eD = n(995532),
-    eL = n(738643),
-    ek = n(433355),
+    ek = n(738643),
+    eL = n(433355),
     eU = n(592125),
     eB = n(703558),
     eF = n(486472),
@@ -165,7 +165,7 @@ function ta(e, t) {
         e
     );
 }
-let to = (0, L.Un)({
+let to = (0, k.Un)({
     createPromise: () => Promise.all([n.e('22173'), n.e('71879')]).then(n.bind(n, 346975)),
     webpackId: 346975,
     renderLoader: () =>
@@ -443,7 +443,7 @@ class ts extends i.PureComponent {
             b = null == t ? void 0 : t.name;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(k.yY, {
+                (0, r.jsx)(L.yY, {
                     location: b,
                     subsection: null != n ? n : void 0
                 }),
@@ -785,10 +785,10 @@ let tc = (0, j.Z)(ts),
         }, [R, c, O, j]);
         let M = (0, p.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
             D = (0, p.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            L = null != M && !(0, Z.Z)(null == c ? void 0 : c.id) && D === e5.Ez.PANEL,
-            k = (0, p.e7)([eX.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eX.Z.getVoiceStatesForChannel(c.id)), [c]),
-            U = null != c && c.isPrivate() && !L && x,
-            F = (null == c ? void 0 : c.isGuildVocal()) || U || k,
+            k = null != M && !(0, Z.Z)(null == c ? void 0 : c.id) && D === e5.Ez.PANEL,
+            L = (0, p.e7)([eX.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eX.Z.getVoiceStatesForChannel(c.id)), [c]),
+            U = null != c && c.isPrivate() && !k && x,
+            F = (null == c ? void 0 : c.isGuildVocal()) || U || L,
             H = (0, p.e7)([G.Z], () => G.Z.getFrameLayoutMode() === e9.U.FOCUSED),
             { welcomeModalChannelId: z } = (0, d.TH)(),
             W = (0, p.e7)([em.Z], () => null != c && em.Z.isLurking(c.guild_id), [c]),
@@ -797,17 +797,17 @@ let tc = (0, j.Z)(ts),
             K = (0, p.e7)([w.Z], () => (null != c ? w.Z.getSelectedParticipant(c.id) : null)),
             Q = (0, p.e7)([eK.default], () => eK.default.getCurrentUser()),
             J = (0, eh.Z)(null == y ? void 0 : y.id),
-            $ = (0, eL.Z)(z, null == y ? void 0 : y.id),
+            $ = (0, ek.Z)(z, null == y ? void 0 : y.id),
             { section: ee, channelSidebarState: et } = (0, p.cj)(
-                [ek.ZP],
+                [eL.ZP],
                 () => ({
-                    section: ek.ZP.getSection(o, null == c ? void 0 : c.isDM()),
-                    channelSidebarState: ek.ZP.getSidebarState(o)
+                    section: eL.ZP.getSection(o, null == c ? void 0 : c.isDM()),
+                    channelSidebarState: eL.ZP.getSidebarState(o)
                 }),
                 [o, c]
             ),
             en = null == y ? void 0 : y.id,
-            er = (0, p.e7)([ek.ZP], () => ek.ZP.getGuildSidebarState(en), [en]),
+            er = (0, p.e7)([eL.ZP], () => eL.ZP.getGuildSidebarState(en), [en]),
             ei = (0, p.e7)([eq.Z], () => eq.Z.getGuildId()) === e8.I_8,
             el = (0, eg.D)(),
             ea = (0, eQ.ZP)(c),
@@ -867,7 +867,7 @@ let tc = (0, j.Z)(ts),
                         guild: y,
                         searchId: (0, p.e7)([eW.Z], () => eW.Z.getCurrentSearchId()),
                         showCall: !C && F,
-                        showActivityPanel: L,
+                        showActivityPanel: k,
                         showFramePanel: H,
                         nsfwAgree: (0, p.e7)([eH.Z], () => eH.Z.didAgree(null == c ? void 0 : c.guild_id)),
                         isMobile: (0, p.e7)([eV.Z], () => (null == c ? void 0 : c.type) === e8.d4z.DM && eV.Z.isMobileOnline(c.getRecipientId()), [c]),
@@ -886,7 +886,7 @@ let tc = (0, j.Z)(ts),
                     isFavorites: ei,
                     showHeaderGuildBreadcrumb: ei || el,
                     premiumIndicatorEnabled: !1,
-                    hasTextActivityInPanelMode: L,
+                    hasTextActivityInPanelMode: k,
                     embeddedActivity: M
                 }
             )

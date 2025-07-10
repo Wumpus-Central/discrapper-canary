@@ -1,50 +1,51 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(255367),
     i = n(73800),
-    l = n(755721),
-    a = n(481060),
-    o = n(926526),
-    s = n(388032),
-    c = n(568410);
-let u = function (e) {
+    l = n(481060),
+    a = n(926526),
+    o = n(388032),
+    s = n(568410);
+let c = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        u = null == n ? void 0 : n.id;
+        c = null == n ? void 0 : n.id;
     return (
         i.useEffect(() => {
-            null != u && (0, o.Pq)(u);
-        }, [u]),
+            null != c && (0, a.Pq)(c);
+        }, [c]),
         (0, r.jsxs)('div', {
-            className: c.confirmation,
+            className: s.confirmation,
             children: [
                 (0, r.jsx)('div', {
-                    className: c.iconWrapper,
-                    children: (0, r.jsx)(a.wGF, {
+                    className: s.iconWrapper,
+                    children: (0, r.jsx)(l.wGF, {
                         size: 'md',
-                        color: a.TVs.colors.INTERACTIVE_ACTIVE
+                        color: l.TVs.colors.INTERACTIVE_ACTIVE
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: c.statusTextContainer,
+                    className: s.statusTextContainer,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
+                            children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: s.intl.string(s.t.FdsK4u)
+                            children: o.intl.string(o.t.FdsK4u)
                         })
                     ]
                 }),
-                (0, r.jsx)(l.zx, {
-                    fullWidth: !0,
-                    onClick: t,
-                    look: l.zx.Looks.FILLED,
-                    color: l.zx.Colors.RED,
-                    size: l.zx.Sizes.LARGE,
-                    children: s.intl.string(s.t.g9tK0t)
+                (0, r.jsx)('div', {
+                    className: s.buttonContainer,
+                    children: (0, r.jsx)(l.zxk, {
+                        fullWidth: !0,
+                        onClick: t,
+                        variant: 'critical-primary',
+                        size: 'md',
+                        text: o.intl.string(o.t.g9tK0t)
+                    })
                 })
             ]
         })

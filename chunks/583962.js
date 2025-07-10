@@ -102,7 +102,7 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         }, [t.id, M, d]);
         let G = D ? '100%' : ''.concat(Math.min(100, (d / P.oCV[L]) * 100), '%'),
             { current: B } = i.useRef(G),
-            [F] = (0, h.q_F)(
+            [V] = (0, h.q_F)(
                 () => ({
                     from: { width: M === d ? B : '0%' },
                     to: { width: G },
@@ -111,7 +111,7 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 'respect-motion-settings',
                 [M, d, B, G]
             ),
-            V = t.premiumTier < L && M >= P.oCV[L],
+            F = t.premiumTier < L && M >= P.oCV[L],
             H = (0, I.Z)(t),
             z = w.intl.formatToPlainString(w.t['2oNfMT'], { levelName: (0, C.e9)(L) }),
             W = w.intl.format(w.t.dhKnYm, {
@@ -137,7 +137,7 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                     : null;
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(h.ua7, {
-                text: V ? w.intl.formatToPlainString(Z.default['9CtPjo'], { perk: (0, C.nW)(L) }) : D ? w.intl.string(w.t['Y+V9go']) : w.intl.formatToPlainString(w.t.UyDKl5, { levelName: (0, C.nW)(L) }),
+                text: F ? w.intl.formatToPlainString(Z.default['9CtPjo'], { perk: (0, C.nW)(L) }) : D ? w.intl.string(w.t['Y+V9go']) : w.intl.formatToPlainString(w.t.UyDKl5, { levelName: (0, C.nW)(L) }),
                 position: 'top',
                 delay: 200,
                 hideOnClick: !0,
@@ -209,7 +209,7 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 children: [
                                                     (0, r.jsx)(a.animated.div, {
                                                         className: T.progressBar,
-                                                        style: F
+                                                        style: V
                                                     }),
                                                     D
                                                         ? (0, r.jsx)('span', {

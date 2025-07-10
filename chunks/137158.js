@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,13 +8,12 @@ var r = n(255367),
     c = n(539202),
     d = n(793030),
     u = n(692547),
-    m = n(755721),
-    g = n(481060),
-    p = n(838221),
-    f = n(246364),
-    h = n(388032),
-    x = n(664305);
-function b(e) {
+    m = n(481060),
+    g = n(838221),
+    p = n(246364),
+    f = n(388032),
+    h = n(664305);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,29 +38,29 @@ function b(e) {
     }
     return e;
 }
-function j(e) {
+function b(e) {
     let { type: t } = e,
         n = i.useMemo(() => {
             switch (t) {
-                case f.QJ.MULTIPLE_CHOICE:
+                case p.QJ.MULTIPLE_CHOICE:
                     return {
-                        icon: g.jE$,
-                        text: h.intl.string(h.t.ooKh3t)
+                        icon: m.jE$,
+                        text: f.intl.string(f.t.ooKh3t)
                     };
-                case f.QJ.PARAGRAPH:
+                case p.QJ.PARAGRAPH:
                     return {
-                        icon: g.OvV,
-                        text: h.intl.string(h.t.gG0JBA)
+                        icon: m.OvV,
+                        text: f.intl.string(f.t.gG0JBA)
                     };
-                case f.QJ.TEXT_INPUT:
+                case p.QJ.TEXT_INPUT:
                     return {
-                        icon: (0, g.GSL)(p.Z),
-                        text: h.intl.string(h.t.w6Q9w8)
+                        icon: (0, m.GSL)(g.Z),
+                        text: f.intl.string(f.t.w6Q9w8)
                     };
-                case f.QJ.TERMS:
+                case p.QJ.TERMS:
                     return {
-                        icon: g.snC,
-                        text: h.intl.string(h.t['3pz9t7'])
+                        icon: m.snC,
+                        text: f.intl.string(f.t['3pz9t7'])
                     };
                 default:
                     return null;
@@ -70,7 +69,7 @@ function j(e) {
     return null == n
         ? null
         : (0, r.jsxs)('div', {
-              className: x.typeTag,
+              className: h.typeTag,
               children: [
                   (0, r.jsx)(n.icon, {
                       size: 'xs',
@@ -84,171 +83,124 @@ function j(e) {
               ]
           });
 }
-function _(e) {
-    let { title: t, children: n, onEdit: i, onRemove: l, canRemove: a, actionsLocation: o, fieldStyle: c, field: d } = e;
-    return (0, r.jsxs)('div', {
-        className: x.backgroundContainer,
-        children: [
-            c === f.it.REGULAR
+function j(e) {
+    let { title: t, children: n, fieldStyle: i, field: l } = e;
+    return (0, r.jsx)('div', {
+        className: h.backgroundContainer,
+        children:
+            i === p.it.REGULAR
                 ? (0, r.jsxs)('div', {
-                      className: x.containerPadding,
+                      className: h.containerPadding,
                       children: [
-                          (0, r.jsx)(g.vwX, {
+                          (0, r.jsx)(m.vwX, {
                               tag: 'h3',
-                              className: x.containerTitle,
+                              className: h.containerTitle,
                               children: t
                           }),
                           n
                       ]
                   })
                 : (0, r.jsxs)('div', {
-                      className: x.compactContainer,
+                      className: h.compactContainer,
                       children: [
-                          (0, r.jsx)(g.vwX, {
+                          (0, r.jsx)(m.vwX, {
                               tag: 'h3',
-                              className: x.compactTitle,
+                              className: h.compactTitle,
                               children: t
                           }),
-                          (0, r.jsx)(j, { type: d.field_type })
+                          (0, r.jsx)(b, { type: l.field_type })
                       ]
-                  }),
-            'footer' === o &&
-                (0, r.jsxs)(g.hjN, {
-                    className: x.containerFooter,
-                    children: [
-                        (0, r.jsx)(g.ua7, {
-                            text: h.intl.string(h.t.FoxyPT),
-                            shouldShow: !a,
-                            children: (e) => {
-                                var t, n;
-                                return (0, r.jsx)(
-                                    m.zx,
-                                    ((t = b({}, e)),
-                                    (n = n =
-                                        {
-                                            className: s()(x.removeButton, x.button),
-                                            size: m.zx.Sizes.SMALL,
-                                            look: m.zx.Looks.BLANK,
-                                            onClick: l,
-                                            disabled: !a,
-                                            children: h.intl.string(h.t.N86XcH)
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(n)).forEach(function (e) {
-                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                          }),
-                                    t)
-                                );
-                            }
-                        }),
-                        (0, r.jsx)(m.zx, {
-                            className: x.button,
-                            size: m.zx.Sizes.SMALL,
-                            color: m.zx.Colors.PRIMARY,
-                            onClick: i,
-                            children: h.intl.string(h.t.bt75u7)
-                        })
-                    ]
-                })
-        ]
+                  })
     });
 }
-let v = 'FORM_FIELD';
-function O(e) {
-    let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: m } = e,
-        p = (0, a.debounce)(async (e, t, n) => {
+let _ = 'FORM_FIELD';
+function v(e) {
+    let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: g } = e,
+        f = (0, a.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
-        h = i.useRef(null),
-        [, j] = (0, o.c)({
-            type: v,
+        b = i.useRef(null),
+        [, v] = (0, o.c)({
+            type: _,
             item: {
                 index: t,
                 field: n
             },
             end: (e, t) => {
-                null == e || t.didDrop() || p(e.field, null, !0);
+                null == e || t.didDrop() || f(e.field, null, !0);
             }
         }),
         [, O] = (0, c.L)({
-            accept: v,
+            accept: _,
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
-                    l = null == (r = h.current) ? void 0 : r.getBoundingClientRect(),
+                    l = null == (r = b.current) ? void 0 : r.getBoundingClientRect(),
                     s = n.getClientOffset();
                 if (null == l || null == s) return;
                 let a = (l.bottom - l.top) / 2,
                     o = s.y - l.top;
-                (i < t && o < a) || (i > t && o < a) || i === t || p(e.field, t, !1);
+                (i < t && o < a) || (i > t && o < a) || i === t || f(e.field, t, !1);
             },
             drop: (e) => {
-                p(e.field, t, !0);
+                f(e.field, t, !0);
             }
         });
     return (
         i.useLayoutEffect(
             () => (
-                j(O(h)),
+                v(O(b)),
                 () => {
-                    (O(null), j(null));
+                    (O(null), v(null));
                 }
             ),
-            [j, O]
+            [v, O]
         ),
         (0, r.jsxs)('div', {
-            ref: h,
+            ref: b,
             'data-dnd-name': 'field-'.concat(t),
-            className: s()(x.dragContainer, { [x.dropHovered]: l }),
+            className: s()(h.dragContainer, { [h.dropHovered]: l }),
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(x.dragIconContainer, { [x.compact]: m === f.it.COMPACT }),
-                    children: (0, r.jsx)(g.Vni, {
+                    className: s()(h.dragIconContainer, { [h.compact]: g === p.it.COMPACT }),
+                    children: (0, r.jsx)(m.Vni, {
                         size: 'xs',
-                        className: x.dragIcon,
+                        className: h.dragIcon,
                         color: u.Z.unsafe_rawColors.PRIMARY_400.css
                     })
                 }),
-                (0, r.jsx)(_, b({}, e))
+                (0, r.jsx)(j, x({}, e))
             ]
         })
     );
 }
-function C(e) {
+function O(e) {
     return (0, r.jsxs)('div', {
-        className: s()(x.formFieldContainer, { [x.compact]: e.fieldStyle === f.it.COMPACT }),
+        className: s()(h.formFieldContainer, { [h.compact]: e.fieldStyle === p.it.COMPACT }),
         children: [
             (0, r.jsx)('div', {
-                className: x.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(O, b({}, e)) : (0, r.jsx)(_, b({}, e))
+                className: h.spacingContainer,
+                children: e.isDragEnabled ? (0, r.jsx)(v, x({}, e)) : (0, r.jsx)(j, x({}, e))
             }),
             'side' === e.actionsLocation &&
                 (0, r.jsxs)('div', {
-                    className: s()(x.actionButtonsContainer, {
-                        [x.compact]: e.fieldStyle === f.it.COMPACT,
-                        [x.canRemove]: e.canRemove
+                    className: s()(h.actionButtonsContainer, {
+                        [h.compact]: e.fieldStyle === p.it.COMPACT,
+                        [h.canRemove]: e.canRemove
                     }),
                     children: [
-                        (0, r.jsx)(g.P3F, {
-                            className: x.actionButton,
+                        (0, r.jsx)(m.P3F, {
+                            className: h.actionButton,
                             onClick: e.onEdit,
-                            'aria-label': h.intl.string(h.t.bt75u7),
-                            children: (0, r.jsx)(g.vdY, { size: 'xs' })
+                            'aria-label': f.intl.string(f.t.bt75u7),
+                            children: (0, r.jsx)(m.vdY, { size: 'xs' })
                         }),
                         e.canRemove &&
-                            (0, r.jsx)(g.P3F, {
-                                className: x.actionButton,
+                            (0, r.jsx)(m.P3F, {
+                                className: h.actionButton,
                                 onClick: e.onRemove,
-                                'aria-label': h.intl.string(h.t.N86XcH),
-                                children: (0, r.jsx)(g.XHJ, { size: 'xs' })
+                                'aria-label': f.intl.string(f.t.N86XcH),
+                                children: (0, r.jsx)(m.XHJ, { size: 'xs' })
                             })
                     ]
                 })

@@ -119,12 +119,12 @@ function j(e) {
         handler: S ? null : R
     });
     let [M, D] = i.useState(!1),
-        L = i.useCallback(() => {
+        k = i.useCallback(() => {
             f && D(!0);
         }, [f]);
     ((0, g.yp)({
         event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: L
+        handler: k
     }),
         i.useEffect(() => {
             let e;
@@ -138,10 +138,10 @@ function j(e) {
                 }
             );
         }, [M]));
-    let k = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
-        T > 0 && k.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && k.push(x.intl.string(x.t.x5zAGR)),
+        T > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && L.push(x.intl.string(x.t.x5zAGR)),
         (0, r.jsx)(
             y.Z,
             (function (e) {
@@ -173,7 +173,7 @@ function j(e) {
                     buttonRef: I,
                     onClick: A,
                     label: t,
-                    'aria-label': k.join(', '),
+                    'aria-label': L.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
                     wrapperClassName: a()(l, null != o && { [o]: Z }),

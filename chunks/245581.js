@@ -1,22 +1,22 @@
-n.d(t, { Z: () => a });
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    i = n(313201),
-    u = n(268999);
-function a(e) {
-    let { transitionState: t, title: n, subtitle: a, children: s } = e,
-        c = (0, i.Dt)();
-    return (0, r.jsxs)(l.Y0X, {
+r.d(t, { Z: () => s });
+var n = r(255367);
+r(73800);
+var l = r(481060),
+    i = r(313201),
+    u = r(268999);
+function s(e) {
+    let { transitionState: t, title: r, subtitle: s, children: a } = e,
+        o = (0, i.Dt)();
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: t,
-        'aria-labelledby': c,
+        'aria-labelledby': o,
         parentComponent: 'SecureFramesVerificationModal',
         children: [
-            (0, r.jsx)('div', {
+            (0, n.jsx)('div', {
                 className: u.shieldIconContainer,
-                children: (0, r.jsx)('div', {
+                children: (0, n.jsx)('div', {
                     className: u.shieldIcon,
-                    children: (0, r.jsx)(l.tQf, {
+                    children: (0, n.jsx)(l.tQf, {
                         size: 'custom',
                         width: 55,
                         height: 55,
@@ -24,22 +24,22 @@ function a(e) {
                     })
                 })
             }),
-            (0, r.jsxs)(l.hzk, {
+            (0, n.jsxs)(l.hzk, {
                 className: u.content,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         className: u.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: n
+                        children: r
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, n.jsx)(l.Text, {
                         className: u.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: a
+                        children: s
                     }),
-                    s
+                    a
                 ]
             })
         ]

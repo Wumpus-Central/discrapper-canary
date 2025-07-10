@@ -1,21 +1,21 @@
-(n.d(t, { P: () => a }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
-var r = n(73800),
-    l = n(442837),
-    i = n(974167),
-    u = n(651941);
-function a(e) {
-    let { userId: t, keyToOmit: n } = e,
-        a = r.useMemo(() => {
-            if (null == n) return null;
-            let e = new Uint8Array(n);
+(r.d(t, { P: () => s }), r(410992), r(227481), r(730884), r(20464), r(341884), r(364341), r(629680), r(505025), r(918970), r(121784), r(644351), r(146733));
+var n = r(73800),
+    l = r(442837),
+    i = r(974167),
+    u = r(651941);
+function s(e) {
+    let { userId: t, keyToOmit: r } = e,
+        s = n.useMemo(() => {
+            if (null == r) return null;
+            let e = new Uint8Array(r);
             return (0, i.MK)(e);
-        }, [n]);
+        }, [r]);
     return (0, l.e7)(
         [u.Z],
         () => {
             let e = u.Z.getUserVerifiedKeys(t);
-            return null == e ? 0 : Object.keys(e).filter((e) => e !== a).length;
+            return null == e ? 0 : Object.keys(e).filter((e) => e !== s).length;
         },
-        [a, t]
+        [s, t]
     );
 }

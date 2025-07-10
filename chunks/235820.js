@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(570140),
-    l = n(981631);
+    a = n(981631);
 let o = {
     setGuildFilter(e) {
         let { guildFilter: t, roleFilter: n, everyoneFilter: r } = e;
@@ -22,23 +22,24 @@ let o = {
         });
     },
     fetchRecentMentions(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.DJj,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.DJj,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-            a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
-        (i.Z.dispatch({
-            type: 'LOAD_RECENT_MENTIONS',
-            guildId: n
-        }),
+            s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
+        return (
+            i.Z.dispatch({
+                type: 'LOAD_RECENT_MENTIONS',
+                guildId: n
+            }),
             r.tn
                 .get({
-                    url: l.ANM.MENTIONS,
+                    url: a.ANM.MENTIONS,
                     query: {
                         before: e,
                         limit: t,
                         guild_id: n,
                         roles: o,
-                        everyone: a
+                        everyone: s
                     },
                     retries: 2,
                     oldFormErrors: !0,
@@ -51,17 +52,18 @@ let o = {
                             type: 'LOAD_RECENT_MENTIONS_SUCCESS',
                             messages: n,
                             isAfter: null != e,
-                            hasMoreAfter: n.length >= l.DJj
+                            hasMoreAfter: n.length >= a.DJj
                         });
                     },
                     () => {
                         i.Z.dispatch({ type: 'LOAD_RECENT_MENTIONS_FAILURE' });
                     }
-                ));
+                )
+        );
     },
     deleteRecentMention(e) {
         (r.tn.del({
-            url: l.ANM.MENTIONS_MESSAGE_ID(e),
+            url: a.ANM.MENTIONS_MESSAGE_ID(e),
             retries: 2,
             oldFormErrors: !0,
             rejectWithError: !0

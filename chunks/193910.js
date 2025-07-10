@@ -56,8 +56,8 @@ function T() {
 function A(e) {
     let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
         { analyticsLocations: D } = (0, p.ZP)(),
-        L = (0, g.Dt)({ channel: t });
-    function k() {
+        k = (0, g.Dt)({ channel: t });
+    function L() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
@@ -287,7 +287,7 @@ function A(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: k
+                                action: L
                             },
                             'THREAD'
                         );
@@ -319,7 +319,7 @@ function A(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: L
+                                children: k
                             },
                             'scheduled_message'
                         );

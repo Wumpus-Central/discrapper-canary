@@ -1,6 +1,6 @@
 (n.d(t, {
-    e: () => x,
-    i: () => C
+    e: () => v,
+    i: () => O
 }),
     n(35282),
     n(388685));
@@ -13,127 +13,212 @@ var r = n(255367),
     c = n(481060),
     u = n(596454),
     d = n(739566),
-    p = n(834129),
-    m = n(222677),
-    f = n(585483),
-    _ = n(339085),
-    g = n(981631),
-    h = n(388032),
-    b = n(841935);
-let E = /^<(a?):(\w+):(\d+)>/;
-function y(e) {
+    p = n(590956),
+    m = n(834129),
+    f = n(222677),
+    _ = n(768581),
+    g = n(585483),
+    h = n(339085),
+    b = n(981631),
+    E = n(388032),
+    y = n(841935);
+let x = /^<(a?):(\w+):(\d+)>/;
+function C(e) {
     let t = i.useMemo(() => {
         var t;
-        return null == (t = E.exec(e)) ? void 0 : t[3];
+        return null == (t = x.exec(e)) ? void 0 : t[3];
     }, [e]);
-    return (0, s.e7)([_.ZP], () => (null == t ? null : _.ZP.getCustomEmojiById(t)));
+    return (0, s.e7)([h.ZP], () => (null == t ? null : h.ZP.getCustomEmojiById(t)));
 }
-function x(e) {
+function v(e) {
     let { message: t, className: n } = e,
         [l, o] = i.useState(!1),
         s = t.getChannelId(),
-        d = y(t.content),
+        d = C(t.content),
         p = i.useCallback(() => {
             null != d &&
-                (0, m.rU)(
+                (0, f.rU)(
                     s,
                     t.id,
                     {
                         id: d.id,
                         name: d.name
                     },
-                    m.TW.MESSAGE
+                    f.TW.MESSAGE
                 );
         }, [s, d, t.id]);
     return null == d
         ? null
-        : (0, r.jsx)(c.P3F, {
-              className: a()(n, b.ctaReactionButton),
-              onClick: p,
-              onMouseEnter: () => o(!0),
-              onMouseLeave: () => o(!1),
-              children: (0, r.jsx)(c.Text, {
-                  variant: 'text-sm/semibold',
-                  color: 'text-secondary',
-                  className: b.ctaText,
-                  children: h.intl.format(h.t.z5Rnl5, {
-                      renderedEmoji:
-                          null == d
-                              ? null
-                              : (0, r.jsx)(u.Z, {
-                                    emojiName: d.name,
-                                    size: 'default',
-                                    emojiId: d.id,
-                                    animated: d.animated,
-                                    isInteracting: l,
-                                    channelId: s,
-                                    messageId: t.id,
-                                    className: b.ctaEmoji
-                                })
-                  })
-              })
+        : (0, r.jsx)(c.ua7, {
+              'aria-label': !1,
+              text: (0, r.jsx)(u.Z, {
+                  emojiName: d.name,
+                  size: 'jumbo',
+                  emojiId: d.id,
+                  animated: d.animated,
+                  isInteracting: !0,
+                  channelId: s,
+                  messageId: t.id
+              }),
+              children: (e) => {
+                  var i,
+                      m,
+                      { onMouseEnter: f, onMouseLeave: _ } = e,
+                      g = (function (e, t) {
+                          if (null == e) return {};
+                          var n,
+                              r,
+                              i = (function (e, t) {
+                                  if (null == e) return {};
+                                  var n,
+                                      r,
+                                      i = {},
+                                      l = Object.keys(e);
+                                  for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                  return i;
+                              })(e, t);
+                          if (Object.getOwnPropertySymbols) {
+                              var l = Object.getOwnPropertySymbols(e);
+                              for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                          }
+                          return i;
+                      })(e, ['onMouseEnter', 'onMouseLeave']);
+                  return (0, r.jsx)(
+                      c.P3F,
+                      ((i = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              ('function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      ((r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r));
+                                  }));
+                          }
+                          return e;
+                      })({}, g)),
+                      (m = m =
+                          {
+                              className: a()(n, y.ctaReactionButton),
+                              onClick: p,
+                              onMouseEnter: () => {
+                                  (o(!0), null == f || f());
+                              },
+                              onMouseLeave: () => {
+                                  (o(!1), null == _ || _());
+                              },
+                              children: (0, r.jsx)(c.Text, {
+                                  variant: 'text-sm/semibold',
+                                  color: 'text-secondary',
+                                  className: y.ctaText,
+                                  children: E.intl.format(E.t.z5Rnl5, {
+                                      renderedEmoji: (0, r.jsx)(u.Z, {
+                                          emojiName: d.name,
+                                          size: 'default',
+                                          emojiId: d.id,
+                                          animated: d.animated,
+                                          isInteracting: l,
+                                          channelId: s,
+                                          messageId: t.id,
+                                          className: y.ctaEmoji
+                                      })
+                                  })
+                              })
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(m))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(m)).forEach(function (e) {
+                                Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(m, e));
+                            }),
+                      i)
+                  );
+              }
           });
 }
-function C(e) {
+function O(e) {
     var t;
-    let { message: n, channel: l, compact: a, usernameHook: s } = e,
-        [m, _] = i.useState(!1),
-        E = (0, d.ZP)(n),
-        x = s(E),
-        C = y(n.content),
+    let { message: n, compact: l, usernameHook: a } = e,
+        [s, u] = i.useState(!1),
+        f = (0, d.ZP)(n),
+        h = a(f),
+        x = C(n.content),
         v = i.useCallback(() => {
-            null != C &&
-                f.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
-                    plainText: ':'.concat(C.name, ':'),
+            null != x &&
+                g.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+                    plainText: ':'.concat(x.name, ':'),
                     addSpace: !0
                 });
-        }, [C]);
-    return (0, r.jsx)(p.Z, {
+        }, [x]),
+        O = i.useMemo(() => {
+            var e;
+            return null == x
+                ? null
+                : {
+                      src: _.ZP.getEmojiURL({
+                          id: x.id,
+                          animated: x.animated,
+                          size: 48
+                      }),
+                      emojiId: x.id,
+                      name: ':'.concat(null != (e = x.originalName) ? e : x.name, ':'),
+                      animated: x.animated
+                  };
+        }, [x]);
+    return (0, r.jsx)(m.Z, {
         iconNode: (0, r.jsx)(o.EO4, {
             size: 'refresh_sm',
             color: 'currentColor'
         }),
-        iconContainerClassName: b.iconContainer,
+        iconContainerClassName: y.iconContainer,
         timestamp: n.timestamp,
-        compact: a,
-        contentClassName: b.content,
-        children: (0, r.jsx)(c.Text, {
-            tag: 'span',
-            variant: 'text-md/normal',
-            color: 'text-secondary',
+        compact: l,
+        contentClassName: y.content,
+        children: (0, r.jsx)('span', {
             children:
-                null == C
-                    ? h.intl.format(h.t.k6Jc9f, {
-                          username: E.nick,
-                          usernameHook: x
+                null == x || null == O
+                    ? E.intl.format(E.t.k6Jc9f, {
+                          username: f.nick,
+                          usernameHook: h
                       })
-                    : h.intl.format(h.t.uoCHWV, {
-                          username: E.nick,
-                          usernameHook: x,
-                          emoji: (0, r.jsxs)(c.P3F, {
-                              className: b.clickableEmoji,
+                    : E.intl.format(E.t.IihHBw, {
+                          username: f.nick,
+                          usernameHook: h,
+                          emojiPreview: (0, r.jsx)(p.Y, {
+                              node: O,
+                              isInteracting: s
+                          }),
+                          emojiName: (0, r.jsx)(c.P3F, {
+                              className: y.clickableEmoji,
                               tag: 'span',
                               onClick: v,
-                              onMouseEnter: () => _(!0),
-                              onMouseLeave: () => _(!1),
-                              children: [
-                                  (0, r.jsx)(u.Z, {
-                                      emojiName: C.name,
-                                      size: 'default',
-                                      emojiId: C.id,
-                                      animated: C.animated,
-                                      isInteracting: m,
-                                      channelId: l.id,
-                                      messageId: n.id,
-                                      className: b.clickableEmojiPreview
-                                  }),
-                                  (0, r.jsx)(c.Text, {
-                                      tag: 'span',
-                                      variant: 'text-md/medium',
-                                      color: 'text-primary',
-                                      children: ':'.concat(null != (t = C.originalName) ? t : C.name, ':')
-                                  })
-                              ]
+                              onMouseEnter: () => u(!0),
+                              onMouseLeave: () => u(!1),
+                              children: (0, r.jsx)(c.Text, {
+                                  tag: 'span',
+                                  variant: 'text-md/medium',
+                                  color: 'text-primary',
+                                  children: ':'.concat(null != (t = x.originalName) ? t : x.name, ':')
+                              })
                           })
                       })
         })

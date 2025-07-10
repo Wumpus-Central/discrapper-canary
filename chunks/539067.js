@@ -1,35 +1,35 @@
-(n.d(t, { y: () => s }), n(388685));
-var r = n(73800),
-    l = n(442837),
-    i = n(19780),
-    u = n(630759),
-    a = n(760373);
-function s(e) {
+(r.d(t, { y: () => a }), r(388685));
+var n = r(73800),
+    l = r(442837),
+    i = r(19780),
+    u = r(630759),
+    s = r(760373);
+function a(e) {
     let { userId: t } = e,
-        n = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
-        [s, c] = r.useState(!0),
-        [o, d] = r.useState(!1),
-        [f, E] = r.useState(!1),
-        g = r.useCallback(async (e, t) => {
-            c(!0);
+        r = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
+        [a, o] = n.useState(!0),
+        [c, d] = n.useState(!1),
+        [f, E] = n.useState(!1),
+        y = n.useCallback(async (e, t) => {
+            o(!0);
             try {
-                let n = a.GB,
-                    r = await (0, u.uX)(n),
-                    l = await (0, u.J6)(e, t, n);
-                (d(r), E(l));
+                let r = s.GB,
+                    n = await (0, u.uX)(r),
+                    l = await (0, u.J6)(e, t, r);
+                (d(n), E(l));
             } catch (e) {
                 (d(!1), E(!1));
             } finally {
-                c(!1);
+                o(!1);
             }
         }, []);
     return (
-        r.useEffect(() => {
-            null == n ? (d(!1), E(!1), c(!1)) : g(t, n);
-        }, [n, g, t]),
+        n.useEffect(() => {
+            null == r ? (d(!1), E(!1), o(!1)) : y(t, r);
+        }, [r, y, t]),
         {
-            loading: s,
-            isCurrentUserKeyPersistent: o,
+            loading: a,
+            isCurrentUserKeyPersistent: c,
             isOtherUserKeyPersistent: f
         }
     );

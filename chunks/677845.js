@@ -29,7 +29,7 @@ function S(e) {
         { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
         M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
         D = (0, b.bt)(P.id, t),
-        L = i.useCallback(() => {
+        k = i.useCallback(() => {
             (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
             });
@@ -41,7 +41,7 @@ function S(e) {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [P.id, R]);
-    let k = (0, o.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, w, P), [w, P]),
+    let L = (0, o.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, w, P), [w, P]),
         U = (null == w ? void 0 : w.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
         F = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
@@ -72,7 +72,7 @@ function S(e) {
             name: l.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
                 total_participants: T,
-                can_invite: k,
+                can_invite: L,
                 is_afk_channel: U,
                 channel_user_limit: P.userLimit
             }
@@ -85,7 +85,7 @@ function S(e) {
             (!(M >= 2) || !F || G || H || V
                 ? B &&
                   1 === M &&
-                  k &&
+                  L &&
                   (F && !G
                       ? z.push((e) =>
                             (0, r.jsx)(C.h, {
@@ -93,7 +93,7 @@ function S(e) {
                                 guild: w,
                                 width: e,
                                 inPopout: A,
-                                handleClose: L,
+                                handleClose: k,
                                 userParticipantCount: M
                             })
                         )
@@ -111,7 +111,7 @@ function S(e) {
                           guild: w,
                           width: e,
                           inPopout: A,
-                          handleClose: L,
+                          handleClose: k,
                           userParticipantCount: M
                       })
                   )));

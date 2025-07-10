@@ -4,5 +4,5 @@ e.exports = {
     animationContainer: 'animationContainer__8177b',
     header: 'header__8177b',
     container: 'container__8177b',
-    button: 'button__8177b'
+    buttonContainer: 'buttonContainer__8177b'
 };

@@ -1,16 +1,13 @@
-(n.d(t, { Z: () => m }), n(388685));
-var r = n(255367);
-n(73800);
-var i = n(525654),
-    a = n.n(i),
-    o = n(481060),
-    s = n(570140),
-    l = n(468026),
-    c = n(317770),
-    u = n(63063),
-    d = n(981631),
-    f = n(388032);
-function _(e, t, n) {
+(n.d(t, { Z: () => _ }), n(388685));
+var r = n(525654),
+    i = n.n(r),
+    a = n(570140),
+    o = n(240872),
+    s = n(317770),
+    l = n(63063),
+    c = n(981631),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,52 +20,28 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            }));
-    }
-    return e;
-}
-class h extends c.Z {
+class f extends s.Z {
     _initialize() {
-        s.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        a.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     _terminate() {
-        s.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        a.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     constructor(...e) {
         (super(...e),
-            _(this, 'handlePermission', (e) => {
+            d(this, 'handlePermission', (e) => {
                 let { kind: t, granted: n } = e,
-                    i = 'Firefox' === a().name ? d.BhN.ENABLE_MIC_FIREFOX : d.BhN.ENABLE_MIC_CHROME;
+                    r = 'Firefox' === i().name ? c.BhN.ENABLE_MIC_FIREFOX : c.BhN.ENABLE_MIC_CHROME;
                 if (!n) {
                     let e = 'audio' !== t;
-                    (0, o.h7j)((t) =>
-                        (0, r.jsx)(
-                            l.default,
-                            p(
-                                {
-                                    title: e ? f.intl.string(f.t.OqloHx) : f.intl.string(f.t['kI+OOT']),
-                                    body: e ? f.intl.string(f.t.l3P7Ky) : f.intl.string(f.t.l3jwOT),
-                                    onConfirm: () => window.open(u.Z.getArticleURL(i), '_blank'),
-                                    confirmText: f.intl.string(f.t.psXQHB)
-                                },
-                                t
-                            )
-                        )
-                    );
+                    o.Z.show({
+                        title: e ? u.intl.string(u.t.OqloHx) : u.intl.string(u.t['kI+OOT']),
+                        body: e ? u.intl.string(u.t.l3P7Ky) : u.intl.string(u.t.l3jwOT),
+                        onConfirm: () => window.open(l.Z.getArticleURL(r), '_blank'),
+                        confirmText: u.intl.string(u.t.psXQHB)
+                    });
                 }
             }));
     }
 }
-let m = new h();
+let _ = new f();

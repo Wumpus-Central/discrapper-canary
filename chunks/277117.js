@@ -32,7 +32,7 @@ var i = n(657707),
     A = n(283189);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: D } = e,
-        { relationshipType: L, originApplicationId: k } = (0, l.cj)([u.Z], () => ({
+        { relationshipType: k, originApplicationId: L } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
         })),
@@ -68,12 +68,12 @@ function w(e) {
                     ]
                 })
             }),
-            L === N.OGo.PENDING_INCOMING &&
+            k === N.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,
                         channelId: R.id,
-                        applicationId: k
+                        applicationId: L
                     })
                 }),
             U.map((e) =>

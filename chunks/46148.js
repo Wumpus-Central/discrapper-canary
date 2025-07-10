@@ -92,12 +92,12 @@ let E = (e, t) => {
             !L)
         )
             return (0, r.jsx)(s.ZP, j({}, e));
-        let F = () => {
+        let V = () => {
                 A(_.L.USER_DISMISS);
             },
-            V = E(R, null != D ? D : null),
-            H = S(V),
-            z = x(V);
+            F = E(R, null != D ? D : null),
+            H = S(F),
+            z = x(F);
         return (0, r.jsx)('div', {
             ref: M,
             children: (0, r.jsx)(a.yRy, {
@@ -105,11 +105,11 @@ let E = (e, t) => {
                 align: G,
                 position: 'right',
                 shouldShow: L,
-                onRequestClose: F,
+                onRequestClose: V,
                 renderPopout: () =>
                     (0, r.jsx)(m.Z, {
                         ref: U,
-                        onClose: F,
+                        onClose: V,
                         buttonText: y.intl.string(y.t['+IrDzM']),
                         header: H,
                         art: (0, r.jsx)('img', {

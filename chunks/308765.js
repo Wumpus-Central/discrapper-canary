@@ -457,6 +457,11 @@ let i = {
     FramesManager: {
         actions: ['RPC_APP_DISCONNECTED'],
         inlineRequire: () => n(460093).Z
+    },
+    NotificationsInboxAutoLoadManager: {
+        inlineRequire: () => n(363040).Z,
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0
     }
 };
 (0, r.j)(i);

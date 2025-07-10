@@ -1,4 +1,8 @@
-n.d(t, { S: () => i });
+(n.d(t, {
+    S: () => i,
+    a: () => l
+}),
+    n(388685));
 var r = n(73800),
     s = n(237617),
     o = n(266338);
@@ -28,4 +32,15 @@ function i(e, t) {
         }, [n, l]),
         i
     );
+}
+function l() {
+    let [e, t] = (0, r.useState)(!1);
+    return {
+        ref: i(
+            (0, r.useCallback)((e) => {
+                t(e.isIntersecting);
+            }, [])
+        ),
+        inViewport: e
+    };
 }

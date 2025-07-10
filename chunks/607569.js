@@ -1,233 +1,231 @@
-(n.d(t, { default: () => C }), n(388685), n(704826), n(35282), n(781311));
-var l = n(255367),
-    r = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    i = n(562075),
+(n.d(t, { default: () => y }), n(388685), n(704826), n(35282), n(781311));
+var r = n(255367),
+    l = n(73800),
+    a = n(120356),
+    i = n.n(a),
+    o = n(562075),
     c = n(539202),
     s = n(692547),
-    d = n(755721),
-    u = n(481060),
-    m = n(881052),
+    d = n(481060),
+    u = n(881052),
     p = n(186523),
-    b = n(246364),
+    m = n(246364),
     g = n(915509),
-    h = n(592286),
-    x = n(388032),
-    _ = n(98847);
+    b = n(592286),
+    h = n(388032),
+    x = n(98847);
 let f = 'MULTIPLE_CHOICE',
     j = (e) => {
-        let { choice: t, index: n, onChange: o, onClear: s, onReorder: m, isDropHovered: b } = e,
-            g = r.useRef(null),
-            h = r.useRef(null),
-            [, j, C] = (0, i.c)({
+        let { choice: t, index: n, onChange: a, onClear: s, onReorder: u, isDropHovered: m } = e,
+            g = l.useRef(null),
+            b = l.useRef(null),
+            [, j, y] = (0, o.c)({
                 type: f,
                 item: {
                     choice: t,
                     index: n
                 },
                 end: (e, t) => {
-                    null == e || t.didDrop() || m(e.choice, null, !0);
+                    null == e || t.didDrop() || u(e.choice, null, !0);
                 }
             }),
-            [, y] = (0, c.L)({
+            [, _] = (0, c.L)({
                 accept: f,
                 hover: (e, t) => {
-                    var l;
-                    let { index: r } = e,
-                        o = null == (l = g.current) ? void 0 : l.getBoundingClientRect(),
-                        a = t.getClientOffset();
-                    if (null == o || null == a) return;
-                    let i = (o.bottom - o.top) / 2,
-                        c = a.y - o.top;
-                    (r < n && c < i) || (r > n && c > i) || m(e.choice, n, !1);
+                    var r;
+                    let { index: l } = e,
+                        a = null == (r = g.current) ? void 0 : r.getBoundingClientRect(),
+                        i = t.getClientOffset();
+                    if (null == a || null == i) return;
+                    let o = (a.bottom - a.top) / 2,
+                        c = i.y - a.top;
+                    (l < n && c < o) || (l > n && c > o) || u(e.choice, n, !1);
                 },
                 drop: (e) => {
-                    m(e.choice, n, !0);
+                    u(e.choice, n, !0);
                 }
             });
         return (
-            r.useLayoutEffect(
+            l.useLayoutEffect(
                 () => (
-                    j(h),
-                    C(y(g)),
+                    j(b),
+                    y(_(g)),
                     () => {
-                        (j(null), y(null));
+                        (j(null), _(null));
                     }
                 ),
-                [j, y, C]
+                [j, _, y]
             ),
-            (0, l.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 ref: g,
-                className: a()(_.draggableInputContainer, { [_.dragging]: b }),
+                className: i()(x.draggableInputContainer, { [x.dragging]: m }),
                 'data-dnd-name': t,
                 children: [
-                    (0, l.jsx)('div', {
-                        className: _.radioIconEmptyContainer,
-                        children: (0, l.jsx)(p.Z, {
+                    (0, r.jsx)('div', {
+                        className: x.radioIconEmptyContainer,
+                        children: (0, r.jsx)(p.Z, {
                             height: 20,
                             width: 20,
-                            className: _.radioIconEmpty
+                            className: x.radioIconEmpty
                         })
                     }),
-                    (0, l.jsxs)('div', {
-                        className: _.inputWrapper,
+                    (0, r.jsxs)('div', {
+                        className: x.inputWrapper,
                         children: [
-                            (0, l.jsx)(u.oil, {
+                            (0, r.jsx)(d.oil, {
                                 autoFocus: !0,
-                                onChange: (e) => o(e),
-                                placeholder: x.intl.formatToPlainString(x.t['Ep/pbG'], { index: n + 1 }),
+                                onChange: (e) => a(e),
+                                placeholder: h.intl.formatToPlainString(h.t['Ep/pbG'], { index: n + 1 }),
                                 value: t
                             }),
-                            (0, l.jsx)(d.zx, {
-                                className: _.clearButton,
-                                onClick: s,
-                                look: d.zx.Looks.BLANK,
-                                size: d.zx.Sizes.NONE,
-                                children: (0, l.jsx)(u.k$p, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: _.clearIcon
+                            (0, r.jsx)('div', {
+                                className: x.clearButton,
+                                children: (0, r.jsx)(d.hU, {
+                                    icon: d.k$p,
+                                    size: 'sm',
+                                    'aria-label': h.intl.string(h.t.VkKicX),
+                                    variant: 'icon-only',
+                                    onClick: s
                                 })
                             })
                         ]
                     }),
-                    (0, l.jsx)('div', {
-                        ref: h,
-                        className: _.dragContainer,
+                    (0, r.jsx)('div', {
+                        ref: b,
+                        className: x.dragContainer,
                         'data-dnd-name': t,
-                        children: (0, l.jsx)(u.Vni, {
+                        children: (0, r.jsx)(d.Vni, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: _.dragIcon
+                            className: x.dragIcon
                         })
                     })
                 ]
             })
         );
     },
-    C = function (e) {
-        var t, n, o, a;
-        let { field: i, onSave: c, onClose: d } = e,
-            [p, f] = r.useState(null != (t = null == i ? void 0 : i.label) ? t : ''),
-            [C, y] = r.useState(null != (n = null == i ? void 0 : i.choices) ? n : ['']),
-            [v, I] = r.useState(null),
-            [O, N] = r.useState(null),
-            z = (e, t) => {
-                null != v && I(null);
+    y = function (e) {
+        var t, n, a, i;
+        let { field: o, onSave: c, onClose: p } = e,
+            [f, y] = l.useState(null != (t = null == o ? void 0 : o.label) ? t : ''),
+            [_, v] = l.useState(null != (n = null == o ? void 0 : o.choices) ? n : ['']),
+            [C, I] = l.useState(null),
+            [O, E] = l.useState(null),
+            w = (e, t) => {
+                null != C && I(null);
                 let n = e.replace(/(\r\n|\n|\r)/g, ' ');
-                n.length > h.au && (n = n.slice(0, h.au));
-                let l = [...C];
-                ((l[t] = n), y(l));
+                n.length > b.au && (n = n.slice(0, b.au));
+                let r = [..._];
+                ((r[t] = n), v(r));
             },
-            E = (e, t, n) => {
-                if (null == C) return;
-                null != v && I(null);
-                let l = C.indexOf(e),
-                    r = [...C];
-                (null != t && t !== l && (r.splice(l, 1), r.splice(t, 0, e), y(r)), n ? null !== t && N(null) : t !== O && N(t));
+            k = (e, t, n) => {
+                if (null == _) return;
+                null != C && I(null);
+                let r = _.indexOf(e),
+                    l = [..._];
+                (null != t && t !== r && (l.splice(r, 1), l.splice(t, 0, e), v(l)), n ? null !== t && E(null) : t !== O && E(t));
             },
-            w = (e) => {
-                null != v && I(null);
-                let t = [...C.slice(0, e), ...C.slice(e + 1)];
-                y(0 === t.length ? [''] : t);
+            N = (e) => {
+                null != C && I(null);
+                let t = [..._.slice(0, e), ..._.slice(e + 1)];
+                v(0 === t.length ? [''] : t);
             },
-            k = async () => {
-                null != v && I(null);
-                let e = p.trim();
-                if ('' === e) return void I(x.intl.string(x.t['G+TI4+']));
-                if (0 === C.map((e) => e.trim()).filter((e) => '' !== e).length) return void I(x.intl.string(x.t.jZoHgI));
+            P = async () => {
+                null != C && I(null);
+                let e = f.trim();
+                if ('' === e) return void I(h.intl.string(h.t['G+TI4+']));
+                if (0 === _.map((e) => e.trim()).filter((e) => '' !== e).length) return void I(h.intl.string(h.t.jZoHgI));
                 let t = {
-                    field_type: b.QJ.MULTIPLE_CHOICE,
+                    field_type: m.QJ.MULTIPLE_CHOICE,
                     label: e,
-                    choices: C,
+                    choices: _,
                     required: !0
                 };
                 try {
-                    (await c(t), d());
+                    (await c(t), p());
                 } catch (e) {
-                    I(new m.Hx(e).getAnyErrorMessage());
+                    I(new u.Hx(e).getAnyErrorMessage());
                 }
             };
-        return (0, l.jsxs)(
+        return (0, r.jsxs)(
             g.Z,
-            ((o = (function (e) {
+            ((a = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        l = Object.keys(n);
+                        r = Object.keys(n);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (l = l.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        l.forEach(function (t) {
-                            var l;
-                            ((l = n[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: l,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = l));
+                                    : (e[t] = r));
                         }));
                 }
                 return e;
             })({}, e)),
-            (a = a =
+            (i = i =
                 {
-                    errorText: v,
-                    title: x.intl.string(x.t.ooKh3t),
-                    onConfirm: k,
-                    onCancel: d,
+                    errorText: C,
+                    title: h.intl.string(h.t.ooKh3t),
+                    onConfirm: P,
+                    onCancel: p,
                     children: [
-                        (0, l.jsx)(u.oil, {
+                        (0, r.jsx)(d.oil, {
                             autoFocus: !0,
-                            className: _.spacedItem,
+                            className: x.spacedItem,
                             onChange: (e) => {
-                                null != v && I(null);
+                                null != C && I(null);
                                 let t = e.replace(/(\r\n|\n|\r)/g, ' ');
-                                (t.length > h.XN && (t = e.slice(0, h.XN)), f(t));
+                                (t.length > b.XN && (t = e.slice(0, b.XN)), y(t));
                             },
-                            placeholder: x.intl.string(x.t.fqVmbG),
-                            value: p
+                            placeholder: h.intl.string(h.t.fqVmbG),
+                            value: f
                         }),
-                        (0, l.jsx)('div', { className: _.divider }),
-                        C.map((e, t) =>
-                            (0, l.jsx)(
+                        (0, r.jsx)('div', { className: x.divider }),
+                        _.map((e, t) =>
+                            (0, r.jsx)(
                                 j,
                                 {
                                     choice: e,
                                     index: t,
-                                    onChange: (e) => z(e, t),
-                                    onClear: () => w(t),
-                                    onReorder: E,
+                                    onChange: (e) => w(e, t),
+                                    onClear: () => N(t),
+                                    onReorder: k,
                                     isDropHovered: t === O
                                 },
                                 'choice-'.concat(t)
                             )
                         ),
-                        C.length !== h.mb &&
-                            (0, l.jsx)('div', {
-                                className: _.addItemContainer,
-                                children: (0, l.jsxs)(u.P3F, {
-                                    className: _.addItemButton,
+                        _.length !== b.mb &&
+                            (0, r.jsx)('div', {
+                                className: x.addItemContainer,
+                                children: (0, r.jsxs)(d.P3F, {
+                                    className: x.addItemButton,
                                     onClick: () => {
-                                        (null != v && I(null), C.length !== h.mb && y([...C, '']));
+                                        (null != C && I(null), _.length !== b.mb && v([..._, '']));
                                     },
                                     children: [
-                                        (0, l.jsx)(u.oFk, {
+                                        (0, r.jsx)(d.oFk, {
                                             size: 'custom',
                                             height: 17,
                                             width: 17,
                                             color: s.Z.unsafe_rawColors.BLUE_345.css
                                         }),
-                                        (0, l.jsx)(u.Text, {
+                                        (0, r.jsx)(d.Text, {
                                             color: 'text-link',
                                             variant: 'text-md/normal',
-                                            children: x.intl.string(x.t.sVfx9v)
+                                            children: h.intl.string(h.t.sVfx9v)
                                         })
                                     ]
                                 })
@@ -235,17 +233,17 @@ let f = 'MULTIPLE_CHOICE',
                     ]
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var l = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, l);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
-            o)
+            a)
         );
     };

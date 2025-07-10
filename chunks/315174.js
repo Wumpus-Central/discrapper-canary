@@ -332,7 +332,7 @@ let M = i.memo(function (e) {
         U = !M && (0, y.Z)(v),
         G = !M && T,
         B = (0, O.xR)(j) && D && !g,
-        [F, V] = i.useState(!1),
+        [V, F] = i.useState(!1),
         H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
@@ -341,9 +341,9 @@ let M = i.memo(function (e) {
     (i.useEffect(() => {
         if (B && n && !H.current && Y)
             return (
-                V(!0),
+                F(!0),
                 (K.current = setTimeout(() => {
-                    V(!1);
+                    F(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -411,7 +411,7 @@ let M = i.memo(function (e) {
                                       guild: v,
                                       controller: l,
                                       guildBanner: j,
-                                      animate: F
+                                      animate: V
                                   })
                                 : null,
                             (0, r.jsx)(k, { controller: l })
@@ -421,9 +421,9 @@ let M = i.memo(function (e) {
                         ? (0, r.jsx)('div', {
                               className: x.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  (V(!0), clearTimeout(K.current));
+                                  (F(!0), clearTimeout(K.current));
                               },
-                              onMouseLeave: () => V(!1),
+                              onMouseLeave: () => F(!1),
                               style: { height: E }
                           })
                         : null

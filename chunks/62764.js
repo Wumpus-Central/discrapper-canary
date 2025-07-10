@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(109590),
     M = n(228392),
     D = n(981631),
-    L = n(388032),
-    k = n(130883),
+    k = n(388032),
+    L = n(130883),
     U = n(184844),
     B = n(92254);
 function F(e) {
@@ -121,7 +121,7 @@ function G(e) {
                       width: 16,
                       height: 16
                   }),
-                  l ? L.intl.string(k.default['2Y4vkp']) : L.intl.string(k.default.YIbR4u)
+                  l ? k.intl.string(L.default['2Y4vkp']) : k.intl.string(L.default.YIbR4u)
               ]
           })
         : null;
@@ -129,7 +129,7 @@ function G(e) {
 function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: O, width: j } = (0, h.ZP)(),
-        [E, k] = i.useState(3),
+        [E, L] = i.useState(3),
         [V, z] = i.useState(!n),
         [W, Y] = (0, f.Z)(!1, 2000),
         q = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
@@ -165,7 +165,7 @@ function V(e) {
     let [eo, es] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (k(Math.floor((j - 280) / 58)), es(!1));
+            null != j && (L(Math.floor((j - 280) / 58)), es(!1));
         }, [j]),
         null == q || null == K)
     )
@@ -251,7 +251,7 @@ function V(e) {
                                           useChatFontScaling: !1,
                                           className: a()(U.addReactButton, { [U.hasNoReactions]: !ec }),
                                           isForumToolbar: !0,
-                                          children: !ec && L.intl.string(L.t.xpOyTE)
+                                          children: !ec && k.intl.string(k.t.xpOyTE)
                                       })
                               ]
                           }),
@@ -261,7 +261,7 @@ function V(e) {
                             en
                                 ? (0, r.jsx)(G, { channel: q })
                                 : (0, r.jsx)(u.ua7, {
-                                      text: L.intl.string(L.t.F7oeDg),
+                                      text: k.intl.string(k.t.F7oeDg),
                                       children: (e) =>
                                           (0, r.jsxs)(
                                               c.zx,
@@ -276,13 +276,13 @@ function V(e) {
                                                           size: 'xs',
                                                           color: 'currentColor'
                                                       }),
-                                                      X ? L.intl.string(L.t['7OkUzs']) : L.intl.string(L.t['3aOv+v'])
+                                                      X ? k.intl.string(k.t['7OkUzs']) : k.intl.string(k.t['3aOv+v'])
                                                   ]
                                               })
                                           )
                                   }),
                             (0, r.jsx)(u.ua7, {
-                                text: L.intl.string(L.t.WqhZsr),
+                                text: k.intl.string(k.t.WqhZsr),
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         c.zx,
@@ -306,14 +306,14 @@ function V(e) {
                                                           width: 16,
                                                           height: 16
                                                       }),
-                                                W ? L.intl.string(L.t['t5VZ8/']) : null
+                                                W ? k.intl.string(k.t['t5VZ8/']) : null
                                             ]
                                         })
                                     )
                             }),
                             !n &&
                                 (0, r.jsx)(u.ua7, {
-                                    text: L.intl.string(L.t.nFP4oa),
+                                    text: k.intl.string(k.t.nFP4oa),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.zx,

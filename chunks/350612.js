@@ -5,7 +5,6 @@ e.exports = {
     clearButton: 'clearButton_f7c056',
     rulesContainer: 'rulesContainer_f7c056',
     rulesTextAreaInput: 'rulesTextAreaInput_f7c056',
-    clearIcon: 'clearIcon_f7c056',
     dragContainer: 'dragContainer_f7c056',
     dragIcon: 'dragIcon_f7c056',
     exampleRulesTitle: 'exampleRulesTitle_f7c056',

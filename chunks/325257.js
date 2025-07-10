@@ -88,7 +88,7 @@ function M(e, t) {
 }
 let k = i.memo(function (e) {
     var t, n, l, f, k;
-    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: F, route: V, guild: H, animatable: z, selected: W = !1, unread: K = !1, mediaState: Y, unavailable: q = !1, badge: X = 0, isMentionLowImportance: Q, contextMenu: J = M, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
+    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: V, route: F, guild: H, animatable: z, selected: W = !1, unread: K = !1, mediaState: Y, unavailable: q = !1, badge: X = 0, isMentionLowImportance: Q, contextMenu: J = M, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
         { id: eo, parentId: ea } = U,
         es = null != (t = e.upperBadge) ? t : q ? (0, w.Ny)() : null != Y ? (0, w.Or)(Y) : void 0,
         ec = null != (n = e.lowerBadge) ? n : void 0;
@@ -106,7 +106,7 @@ let k = i.memo(function (e) {
                 }
             ),
             end() {
-                (null == F || F(), (0, g.V1)(C.ZP.getCompatibleGuildFolders()));
+                (null == V || V(), (0, g.V1)(C.ZP.getCompatibleGuildFolders()));
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -118,14 +118,14 @@ let k = i.memo(function (e) {
         [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
     i.useEffect(() => () => ev.cancel(), [ev]);
     let eC = i.useCallback(() => {
-            if (null != V) return void (0, _.uL)(V, { state: L });
+            if (null != F) return void (0, _.uL)(F, { state: L });
             (0, O.X)(eo, { state: L });
-        }, [eo, V]),
+        }, [eo, F]),
         ej = i.useCallback(() => {
-            if (null != V || null == H || q || !et) return;
+            if (null != F || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
             null != e && p.Z.preload(H.id, e);
-        }, [V, H, q, et]),
+        }, [F, H, q, et]),
         eE = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eS = i.useCallback(
             (e) => {

@@ -126,13 +126,11 @@ let R = () => {
                 variant: 'text-sm/normal',
                 children: b
             }),
-            (0, r.jsx)(c.zx, {
-                className: f.button,
-                look: c.zx.Looks.OUTLINED,
-                color: c.zx.Colors.WHITE,
-                size: c.zx.Sizes.NONE,
+            (0, r.jsx)(s.zxk, {
+                variant: 'overlay-primary',
+                size: 'sm',
                 onClick: h,
-                children: D
+                text: D
             })
         ]
     });

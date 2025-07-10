@@ -111,7 +111,7 @@ function M(e) {
 }
 let D = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: M, localMute: D, localVideoDisabled: L, deaf: k, video: U, embeddedApplication: B, serverMute: F, serverDeaf: H, nick: G, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: M, localMute: D, localVideoDisabled: k, deaf: L, video: U, embeddedApplication: B, serverMute: F, serverDeaf: H, nick: G, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -164,13 +164,13 @@ let D = (0, p.$)(function (e) {
                     disconnected: W,
                     mute: M,
                     localMute: D,
-                    localVideoDisabled: L,
+                    localVideoDisabled: k,
                     isStreaming: K,
                     isGuest: Q,
                     video: U,
                     priority: J,
                     ringing: V,
-                    deaf: k,
+                    deaf: L,
                     nick: G,
                     collapsed: l,
                     overlap: l,

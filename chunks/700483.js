@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(871499),
     M = n(88479),
     D = n(386000),
-    L = n(25827),
-    k = n(314897),
+    k = n(25827),
+    L = n(314897),
     U = n(131951),
     B = n(496675),
     F = n(944486),
@@ -112,7 +112,7 @@ function ed(e) {
         g = (0, o.e7)([v.ZP], () => v.ZP.getGuildScheduledEvent(null == m ? void 0 : m.guild_scheduled_event_id)),
         b = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: C } = (0, Z.Z)(t),
-        x = k.default.getId(),
+        x = L.default.getId(),
         [O] = (0, er.Z)(t),
         j = q.ZP.isModerator(x, t.id),
         S = (0, W.B)(t.id),
@@ -252,10 +252,10 @@ let ef = i.memo(function (e) {
         E = (0, o.e7)([H.default], () => H.default.getCurrentUser()),
         R = (0, o.e7)([U.Z], () => (0, x.Z)(U.Z)),
         M = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
-        k = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
+        L = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, X.PK)(t.id),
         G = O > 0,
-        V = (j && !B) || (null != k && k.user.id !== (null == E ? void 0 : E.id)),
+        V = (j && !B) || (null != L && L.user.id !== (null == E ? void 0 : E.id)),
         z = (0, y.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
@@ -279,7 +279,7 @@ let ef = i.memo(function (e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
-            return (0, r.jsx)(L.C, {
+            return (0, r.jsx)(k.C, {
                 ref: Y,
                 centerButton: !0,
                 hasPermission: v,

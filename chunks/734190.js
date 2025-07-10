@@ -164,7 +164,7 @@ let T = i.memo(function (e) {
         B = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        F = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 let i = g.Z.getChannel(t.id);
                 null != i &&
@@ -175,7 +175,7 @@ let T = i.memo(function (e) {
             },
             [t.id]
         ),
-        V = null == R ? 0 : R.length,
+        F = null == R ? 0 : R.length,
         H = (0, a.JA)(t.id),
         { role: z } = H,
         W = (function (e, t) {
@@ -235,7 +235,7 @@ let T = i.memo(function (e) {
                         [I.withGuildIcon]: A
                     }),
                     onMouseDown: B,
-                    onContextMenu: F,
+                    onContextMenu: V,
                     children: [
                         !L || U || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(
@@ -257,9 +257,9 @@ let T = i.memo(function (e) {
                                         (0, r.jsxs)('div', {
                                             className: I.children,
                                             children: [
-                                                V > 0 && t.userLimit > 0
+                                                F > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(y.Z, {
-                                                          userCount: V,
+                                                          userCount: F,
                                                           video: D,
                                                           channel: t
                                                       })

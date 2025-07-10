@@ -27,7 +27,7 @@ var r = n(255367),
 let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(h.Kqy),
     w = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: w, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': F, 'aria-posinset': V } = e,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: w, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': F } = e,
             { id: H, name: z, children: W } = t,
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
@@ -117,8 +117,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       onKeyDown: en,
                                       treeItemProps: ei,
                                       folderButtonContent: B,
-                                      'aria-setsize': F,
-                                      'aria-posinset': V
+                                      'aria-setsize': V,
+                                      'aria-posinset': F
                                   })
                         })
                     }),

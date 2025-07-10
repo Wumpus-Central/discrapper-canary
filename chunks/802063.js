@@ -1,24 +1,24 @@
-n.d(t, { i: () => s });
-var r = n(73800),
-    l = n(442837),
-    i = n(19780),
-    u = n(959457),
-    a = n(630759);
-function s(e) {
-    let { channelId: t, userId: n, nickname: s, onAlertOpen: c } = e,
-        o = (function (e) {
+r.d(t, { i: () => a });
+var n = r(73800),
+    l = r(442837),
+    i = r(19780),
+    u = r(959457),
+    s = r(630759);
+function a(e) {
+    let { channelId: t, userId: r, nickname: a, onAlertOpen: o } = e,
+        c = (function (e) {
             let { userId: t } = e;
-            return (0, l.e7)([i.Z, u.Z], () => (0, a.UB)(t, [i.Z, u.Z]));
-        })({ userId: n }),
-        d = r.useRef(null);
-    r.useEffect(() => {
-        o && null == d.current
+            return (0, l.e7)([i.Z, u.Z], () => (0, s.UB)(t, [i.Z, u.Z]));
+        })({ userId: r }),
+        d = n.useRef(null);
+    n.useEffect(() => {
+        c && null == d.current
             ? (d.current = setTimeout(() => {
-                  (c(),
-                      (0, a.lg)({
-                          userId: n,
+                  (o(),
+                      (0, s.lg)({
+                          userId: r,
                           channelId: t,
-                          nickname: s
+                          nickname: a
                       }));
               }, 1000))
             : (clearTimeout(d.current), (d.current = null));
@@ -26,5 +26,5 @@ function s(e) {
         return () => {
             clearTimeout(e);
         };
-    }, [t, o, s, c, n]);
+    }, [t, c, a, o, r]);
 }

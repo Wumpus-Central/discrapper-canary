@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(981631),
     M = n(474936),
     D = n(388032),
-    L = n(523335);
-function k(e) {
+    k = n(523335);
+function L(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
         { analyticsLocations: l, newestAnalyticsLocation: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: c, participantsListOpen: u } = (0, o.cj)(
@@ -55,7 +55,7 @@ function k(e) {
             (0, r.jsx)(_.Z, { channelId: t.id }, 'clips-enabled-indicator'),
             !i && b
                 ? (0, r.jsx)('div', {
-                      className: L.button,
+                      className: k.button,
                       children: (0, r.jsx)(A.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               (c && d.Z.updateChatOpen(t.id, !1), u && d.Z.toggleParticipantsList(t.id, !1), (0, g.v)(s, g.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
@@ -70,7 +70,7 @@ function k(e) {
                 (0, r.jsx)(
                     O.Z,
                     {
-                        className: a()(L.button, { [L.sidebarOpen]: c }),
+                        className: a()(k.button, { [k.sidebarOpen]: c }),
                         onClick: () => {
                             (i && n(), d.Z.toggleParticipantsList(t.id, !u));
                         }
@@ -79,12 +79,12 @@ function k(e) {
                 ),
             !c &&
                 (0, r.jsx)('div', {
-                    className: a()(L.button, { [L.sidebarOpen]: x || i }),
+                    className: a()(k.button, { [k.sidebarOpen]: x || i }),
                     children: (0, r.jsx)(v.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
-                        iconClassName: L.buttonIcon
+                        iconClassName: k.buttonIcon
                     })
                 })
         ]
@@ -136,28 +136,28 @@ function U(e) {
         children: (e) => {
             var t;
             return (0, r.jsxs)(C.ZP, {
-                toolbar: (0, r.jsx)(k, {
+                toolbar: (0, r.jsx)(L, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: p,
                     channel: n
                 }),
                 onDoubleClick: x.O,
                 transparent: !0,
-                className: a()(e, L.participants),
+                className: a()(e, k.participants),
                 children: [
                     (0, r.jsx)(C.ZP.Icon, {
                         icon: u.ewx,
                         disabled: !0,
                         'aria-label': D.intl.string(D.t.EErMzM),
-                        className: L.icon,
+                        className: k.icon,
                         color: null != f ? s.Z.colors.HEADER_MUTED.css : void 0
                     }),
                     (0, r.jsx)(C.ZP.Title, {
-                        className: L.channelName,
-                        wrapperClassName: L.channelNameWrapper,
+                        className: k.channelName,
+                        wrapperClassName: k.channelNameWrapper,
                         children: null != (t = null == f ? void 0 : f.topic) ? t : h
                     }),
-                    (0, r.jsx)(C.ZP.Divider, { className: L.divider }),
+                    (0, r.jsx)(C.ZP.Divider, { className: k.divider }),
                     (0, r.jsxs)(C.ZP.Title, {
                         children: [
                             (0, r.jsx)(u.S6n, {
@@ -167,18 +167,18 @@ function U(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: L.speakerCount,
+                                className: k.speakerCount,
                                 children: D.intl.format(D.t.chmM9P, { count: m })
                             }),
                             (0, r.jsx)(u.BFJ, {
                                 size: 'xs',
-                                className: L.icon,
+                                className: k.icon,
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: L.speakerCount,
+                                className: k.speakerCount,
                                 children: D.intl.format(D.t['+v2pNz'], { count: g })
                             })
                         ]
@@ -192,11 +192,11 @@ function U(e) {
               children: [
                   G,
                   (0, r.jsxs)('div', {
-                      className: L.boostUpsell,
+                      className: k.boostUpsell,
                       children: [
                           (0, r.jsx)(B, {}),
                           (0, r.jsxs)('div', {
-                              className: L.text,
+                              className: k.text,
                               children: [
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-md/medium',
@@ -211,12 +211,12 @@ function U(e) {
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: L.buttons,
+                              className: k.buttons,
                               children: O
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zx, {
-                                                className: L.notNowButton,
+                                                className: k.notNowButton,
                                                 onClick: U,
                                                 look: c.zx.Looks.BLANK,
                                                 size: c.zx.Sizes.SMALL,
@@ -236,13 +236,13 @@ function U(e) {
                                                             action: M.T7.BOOST
                                                         }));
                                                 },
-                                                className: L.boostButton,
+                                                className: k.boostButton,
                                                 children: D.intl.string(D.t.Uj0md3)
                                             })
                                         ]
                                     })
                                   : (0, r.jsx)(c.zx, {
-                                        className: L.notNowButton,
+                                        className: k.notNowButton,
                                         onClick: U,
                                         look: c.zx.Looks.BLANK,
                                         size: c.zx.Sizes.SMALL,

@@ -66,15 +66,15 @@ function y(e) {
         R = null == y ? void 0 : y.getGuildId(),
         M = (0, a.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
         D = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        L = null == t || j ? o.ejJ : o.gQj,
-        k = null != t ? b.intl.string(b.t['OzOM/v']) : b.intl.string(b.t['6F9ivr']);
+        k = null == t || j ? o.ejJ : o.gQj,
+        L = null != t ? b.intl.string(b.t['OzOM/v']) : b.intl.string(b.t['6F9ivr']);
     return null != D && E
         ? (0, r.jsx)(m.Z, {
               onClick: () => {
                   (null != w && (0, d.v)(w, d.d.INVITE), s.h7(D, !1, A));
               },
-              iconComponent: L,
-              label: k,
+              iconComponent: k,
+              label: L,
               iconClassName: S,
               look: I,
               size: P,
@@ -143,8 +143,8 @@ function y(e) {
                                     guildScheduledEvent: O
                                 }));
                         },
-                        iconComponent: L,
-                        label: k,
+                        iconComponent: k,
+                        label: L,
                         iconClassName: S,
                         look: I,
                         size: P,

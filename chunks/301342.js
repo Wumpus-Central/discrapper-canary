@@ -141,21 +141,21 @@ let P = i.memo(function (e) {
                 }
                 return i;
             })(k, ['role', 'tabIndex']),
-            F = i.useRef(null),
             V = i.useRef(null),
+            F = i.useRef(null),
             H = (0, r.jsxs)('li', {
                 className: t,
                 'data-dnd-name': l.name,
                 children: [
                     (0, r.jsx)(u.tEY, {
-                        focusTarget: F,
-                        ringTarget: V,
+                        focusTarget: V,
+                        ringTarget: F,
                         offset: {
                             left: 4,
                             right: 4
                         },
                         children: (0, r.jsxs)('div', {
-                            ref: V,
+                            ref: F,
                             className: o()(E.iconVisibility, E.wrapper, {
                                 [E.collapsed]: A,
                                 [E.muted]: T,
@@ -168,7 +168,7 @@ let P = i.memo(function (e) {
                                     x(
                                         S(
                                             {
-                                                innerRef: F,
+                                                innerRef: V,
                                                 className: E.mainContent,
                                                 tabIndex: G
                                             },

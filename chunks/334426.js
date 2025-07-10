@@ -16,9 +16,7 @@ class d extends (l = o.ZP.Store) {
         e !== s && ((s = e), this.emitChange());
     }
     setInboxReadState(e, t) {
-        var n;
-        let r = null != (n = null == t ? void 0 : t.timestamp.getTime()) ? n : null;
-        (e !== u || r !== c) && ((u = e), (c = r), this.emitChange());
+        (e !== u || t !== c) && ((u = e), (c = t), this.emitChange());
     }
 }
 ((i = 'NotificationsInboxCaughtUpBannerStore'),
