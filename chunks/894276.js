@@ -1,6 +1,7 @@
 n.d(t, {
-    I: () => o,
-    o: () => s
+    IZ: () => o,
+    j_: () => s,
+    o$: () => l
 });
 var r = n(668757);
 function i(e, t, n) {
@@ -28,4 +29,5 @@ class a {
     }
 }
 let o = new a('2025-05_libdiscore_notestore', 'NoteStore'),
-    s = [o];
+    s = new a('2025-07_libdiscore_guildstore', 'GuildStore'),
+    l = [o, s];

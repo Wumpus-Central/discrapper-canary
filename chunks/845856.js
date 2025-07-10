@@ -47,47 +47,47 @@ class _ extends r.yh {
     length() {
         return this.derived.length;
     }
-    constructor(e) {
-        let t = {};
-        if (null != e) {
-            let n = !1,
+    constructor(e, t = !1) {
+        let n = {};
+        if (!t) {
+            let t = !1,
                 r = {
                     reset: (e) => {
-                        let t = {};
-                        ('function' == typeof e ? e((t = {}), this.root) : null != e && (t = e),
-                            this[s](t, {
-                                length: null == e ? 0 : Object.keys(t).length,
+                        let n = {};
+                        ('function' == typeof e ? e((n = {}), this.root) : null != e && (n = e),
+                            this[s](n, {
+                                length: null == e ? 0 : Object.keys(n).length,
                                 memoized: {}
                             }),
-                            (n = !0));
+                            (t = !0));
                     },
                     get: (e) => this.root[e],
-                    set: (e, t) => {
+                    set: (e, n) => {
                         let r = this.root[e];
-                        if (('function' == typeof t && (t = t(r)), void 0 !== r && (0, a.$E)(r, t))) return;
-                        this.root[e] = t;
+                        if (('function' == typeof n && (n = n(r)), void 0 !== r && (0, a.$E)(r, n))) return;
+                        this.root[e] = n;
                         let { derived: i } = this;
-                        (void 0 === r && i.length++, (i.memoized = {}), (n = !0));
+                        (void 0 === r && i.length++, (i.memoized = {}), (t = !0));
                     },
                     remove: (e) => {
-                        let t = c.call(this.root, e);
-                        if (t) {
+                        let n = c.call(this.root, e);
+                        if (n) {
                             delete this.root[e];
-                            let { derived: t } = this;
-                            (t.length--, (t.memoized = {}), (n = !0));
+                            let { derived: n } = this;
+                            (n.length--, (n.memoized = {}), (t = !0));
                         }
-                        return t;
+                        return n;
                     }
                 };
             for (let i in e) {
                 let a = e[i],
                     o = (e) => {
-                        if (((n = !1), a(e, r), !n)) return !1;
+                        if (((t = !1), a(e, r), !t)) return !1;
                     };
-                t[i] = o;
+                n[i] = o;
             }
         }
-        (super(i.Z, t),
+        (super(i.Z, n),
             o(this, 'actionsHandledByLibdiscore', void 0),
             o(this, 'derived', {
                 length: 0,
@@ -95,6 +95,6 @@ class _ extends r.yh {
             }),
             o(this, 'nextVersion', 0),
             o(this, 'root', {}),
-            (this.actionsHandledByLibdiscore = null == e));
+            (this.actionsHandledByLibdiscore = t));
     }
 }

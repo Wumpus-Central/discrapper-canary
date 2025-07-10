@@ -1,21 +1,13 @@
 n.d(t, {
-    _: () => a,
-    g: () => o
+    _: () => i,
+    g: () => a
 });
-var r = n(411198),
-    i = n(981631);
-let a = '373',
-    o = (0, r.Jh)({
-        id: a,
+var r = n(411198);
+let i = '373',
+    a = (0, r.z$)({
+        id: i,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',
-        ownerId: '234',
-        verificationLevel: i.sFg.NONE,
-        region: '',
         joinedAt: new Date(),
-        defaultMessageNotifications: 0,
-        mfaLevel: i.BpS.NONE,
-        explicitContentFilter: 0,
-        maxMembers: 500000,
-        nsfwLevel: i.V_K.DEFAULT
+        maxMembers: 500000
     });

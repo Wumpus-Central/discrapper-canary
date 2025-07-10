@@ -243,7 +243,7 @@ let w = s.memo(function (e) {
         c.Text,
         {
             variant: 'text-md/semibold',
-            color: 'text-default',
+            color: 'header-primary',
             tag: 'span',
             className: O.header,
             children: n

@@ -1,4 +1,4 @@
-(n.d(t, { u: () => h }), n(388685));
+(n.d(t, { u: () => m }), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(481060),
@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(746622),
     u = n(388032),
     d = n(162337);
-let h = (e) => {
+let m = (e) => {
         let { setImage: t } = e,
             [n, s] = l.useState(null);
         return (0, r.jsx)('div', {
@@ -21,19 +21,29 @@ let h = (e) => {
                         color: a.TVs.colors.HEADER_MUTED,
                         className: d.imagePlusIcon
                     }),
-                    (0, r.jsx)(a.Text, {
-                        variant: 'text-md/medium',
-                        children: u.intl.format(u.t['Ks2/3d'], {
-                            selectFileHook: (e, n) =>
-                                (0, r.jsx)(
-                                    m,
-                                    {
-                                        translatedContent: e,
-                                        setUserImage: t
-                                    },
-                                    n
-                                )
-                        })
+                    (0, r.jsxs)('div', {
+                        className: d.textContainer,
+                        children: [
+                            (0, r.jsx)(a.Text, {
+                                variant: 'text-md/medium',
+                                children: u.intl.format(u.t['Ks2/3d'], {
+                                    selectFileHook: (e, n) =>
+                                        (0, r.jsx)(
+                                            p,
+                                            {
+                                                translatedContent: e,
+                                                setUserImage: t
+                                            },
+                                            n
+                                        )
+                                })
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                variant: 'text-xs/normal',
+                                color: 'text-tertiary',
+                                children: u.intl.string(u.t.UTE8Cw)
+                            })
+                        ]
                     }),
                     null !== n &&
                         (0, r.jsx)(c.H, {
@@ -49,7 +59,7 @@ let h = (e) => {
             })
         });
     },
-    m = (e) => {
+    p = (e) => {
         let { setUserImage: t, translatedContent: n } = e;
         return (0, r.jsx)(a.P3F, {
             focusProps: { within: !0 },

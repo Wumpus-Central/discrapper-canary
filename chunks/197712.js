@@ -31,10 +31,10 @@ var r = n(392711),
 async function i(e) {
     let { file: t, image: r, cropDimensions: i, cropOriginCoordinates: s, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
         {
-            sourceX: h,
-            sourceY: m,
+            sourceX: m,
+            sourceY: p,
             sourceWidth: g,
-            sourceHeight: p
+            sourceHeight: h
         } = (0, l.GS)({
             image: r,
             cropDimensions: i,
@@ -43,9 +43,9 @@ async function i(e) {
             imageRotation: c
         }),
         f = await t.arrayBuffer(),
-        v = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
-        x = new Promise((e, t) => {
-            v.onmessage = (n) => {
+        x = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
+        v = new Promise((e, t) => {
+            x.onmessage = (n) => {
                 let { data: r } = n;
                 if (r.type === a.u.CROP_GIF_COMPLETE) {
                     var l;
@@ -61,25 +61,25 @@ async function i(e) {
                                 t.readAsDataURL(l));
                         }))
                     ),
-                        v.terminate());
-                } else r.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF', { cause: null == r ? void 0 : r.error })), v.terminate());
+                        x.terminate());
+                } else r.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF', { cause: null == r ? void 0 : r.error })), x.terminate());
             };
         });
     return (
-        v.postMessage({
+        x.postMessage({
             type: a.u.CROP_GIF_START,
             gif: new Uint8Array(f),
-            x: 0 | h,
-            y: 0 | m,
+            x: 0 | m,
+            y: 0 | p,
             width: 0 | g,
-            height: 0 | p,
+            height: 0 | h,
             imageRotation: 0 | c,
             resizeWidth: u,
             resizeHeight: d
         }),
         {
-            result: x,
-            cancelFn: () => v.terminate()
+            result: v,
+            cancelFn: () => x.terminate()
         }
     );
 }

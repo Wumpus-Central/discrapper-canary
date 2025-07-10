@@ -23,30 +23,29 @@ class u extends a.fE {
         return this.get(e);
     }
 }
-(s(u, 'displayName', 'NoteStore'), l.info('libdiscore enabled: '.concat(o.I.cachedIsEnabled())));
+(s(u, 'displayName', 'NoteStore'), l.info('libdiscore enabled: '.concat(o.IZ.cachedIsEnabled())));
 let d = new u(
-    o.I.cachedIsEnabled()
-        ? void 0
-        : {
-              CONNECTION_OPEN: (e, t) => t.reset(),
-              OVERLAY_INITIALIZE: (e, t) => t.reset(),
-              USER_NOTE_UPDATE: (e, t) => {
-                  t.set(
-                      e.id,
-                      (0, r.bk)(c, {
-                          loading: !1,
-                          note: e.note
-                      })
-                  );
-              },
-              USER_NOTE_LOAD_START: (e, t) => {
-                  t.set(
-                      e.userId,
-                      (0, r.bk)(c, {
-                          loading: !0,
-                          note: null
-                      })
-                  );
-              }
-          }
+    {
+        CONNECTION_OPEN: (e, t) => t.reset(),
+        OVERLAY_INITIALIZE: (e, t) => t.reset(),
+        USER_NOTE_UPDATE: (e, t) => {
+            t.set(
+                e.id,
+                (0, r.bk)(c, {
+                    loading: !1,
+                    note: e.note
+                })
+            );
+        },
+        USER_NOTE_LOAD_START: (e, t) => {
+            t.set(
+                e.userId,
+                (0, r.bk)(c, {
+                    loading: !0,
+                    note: null
+                })
+            );
+        }
+    },
+    o.IZ.cachedIsEnabled()
 );

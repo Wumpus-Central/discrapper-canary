@@ -28,7 +28,7 @@ function d() {
     let e = new Set(),
         t = (0, r.Md)();
     if (
-        (s.o.forEach((t) => {
+        (s.o$.forEach((t) => {
             var n;
             (null == (n = t._discordExperiment) ? void 0 : n.getCurrentConfig({ location: 'default' }).enabled) && e.add(t.id);
         }),
@@ -39,7 +39,7 @@ function d() {
     }
 }
 function f() {
-    s.o.forEach((e) => {
+    s.o$.forEach((e) => {
         let t = (0, a.B)({
             kind: 'user',
             id: e.id,

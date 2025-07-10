@@ -1,4 +1,4 @@
-(n.d(t, { q: () => b }), n(388685));
+(n.d(t, { q: () => j }), n(467055), n(388685));
 var r = n(255367),
     l = n(73800),
     a = n(442837),
@@ -8,102 +8,131 @@ var r = n(255367),
     c = n(889564),
     u = n(430824),
     d = n(496675),
-    h = n(267642),
-    m = n(598117),
-    g = n(981631),
-    p = n(388032),
-    f = n(588687);
-let v = (e) => ({
+    m = n(771845),
+    p = n(823379),
+    g = n(267642),
+    h = n(598117),
+    f = n(981631),
+    x = n(388032),
+    v = n(588687);
+let b = (e) => ({
         label: e.name,
         value: e.id
     }),
-    x = (e) => d.Z.can(g.Plq.CREATE_GUILD_EXPRESSIONS, e),
-    b = (e) => {
-        let { onChange: t, selected: n, onError: d, labelledBy: b } = e,
-            _ = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
-            { selectedGuild: j, selectedGuildEmojis: O } = (0, a.cj)([u.Z, s.ZP], () => ({
-                selectedGuild: null != n ? u.Z.getGuild(n) : void 0,
-                selectedGuildEmojis: null != n ? s.ZP.getGuildEmojiOrUndefined(n) : void 0
-            })),
-            N = l.useMemo(() => Object.values(_).filter(x).map(v), [_]),
-            E = l.useCallback(
+    _ = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    j = (e) => {
+        let { onChange: t, selected: n, onError: d, labelledBy: j, isEmojiAnimated: O } = e,
+            N = (0, a.cj)([u.Z, m.ZP], () =>
+                Object.fromEntries(
+                    m.ZP.getFlattenedGuildIds()
+                        .map((e) => u.Z.getGuild(e))
+                        .filter(p.lm)
+                        .map((e) => [e.id, e])
+                )
+            ),
+            E = (0, a.cj)(
+                [s.ZP],
+                () =>
+                    Object.fromEntries(
+                        Object.entries(N).map((e) => {
+                            let [t, n] = e;
+                            return [
+                                t,
+                                (function (e) {
+                                    var t;
+                                    let { guild: n, emojis: r, isEmojiAnimated: l } = e,
+                                        a = null != (t = null == r ? void 0 : r.filter((e) => e.animated === l && !(0, c.Kt)(e, n.id)).length) ? t : 0;
+                                    return (0, g.y4)(n) - a;
+                                })({
+                                    guild: n,
+                                    emojis: s.ZP.getGuildEmojiOrUndefined(t),
+                                    isEmojiAnimated: O
+                                })
+                            ];
+                        })
+                    ),
+                [N, O]
+            ),
+            C = l.useMemo(() => Object.values(N).filter(_).map(b), [N]),
+            y = l.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
-                    let n = _[t.value];
+                    let n = N[t.value];
                     return null == n
                         ? null
                         : (0, r.jsxs)('div', {
-                              className: f.value,
+                              className: v.value,
                               children: [
                                   (0, r.jsx)(o.Z, {
                                       guild: n,
                                       size: o.Z.Sizes.SMALLER,
                                       active: !0,
-                                      className: f.icon
+                                      className: v.icon
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       variant: 'text-sm/normal',
-                                      className: f.text,
+                                      className: v.text,
                                       children: t.label
                                   })
                               ]
                           });
                 },
-                [_]
+                [N]
             ),
-            I = l.useCallback(
+            D = l.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
-                    let t = _[e.value];
+                    let t = N[e.value];
                     return null == t
                         ? null
                         : (0, r.jsxs)('div', {
-                              className: f.option,
+                              className: v.option,
                               children: [
                                   (0, r.jsx)(o.Z, {
                                       guild: t,
                                       size: o.Z.Sizes.MEDIUM,
                                       active: !0,
-                                      className: f.icon
+                                      className: v.icon
                                   }),
-                                  (0, r.jsx)(i.Text, {
-                                      variant: 'text-sm/medium',
-                                      color: 'header-muted',
-                                      className: f.text,
-                                      children: e.label
+                                  (0, r.jsxs)('div', {
+                                      className: v.optionLabelContainer,
+                                      children: [
+                                          (0, r.jsx)(i.Text, {
+                                              variant: 'text-sm/medium',
+                                              className: v.text,
+                                              children: e.label
+                                          }),
+                                          (0, r.jsx)(i.Text, {
+                                              variant: 'text-xs/normal',
+                                              color: 'text-tertiary',
+                                              className: v.text,
+                                              children: x.intl.format(x.t.WkK72t, { count: E[e.value] })
+                                          })
+                                      ]
                                   })
                               ]
                           });
                 },
-                [_]
+                [E, N]
             );
         return (
             l.useEffect(() => {
-                N.length < 1
-                    ? d(m.ze.NO_PERMISSIONS)
-                    : null != j &&
-                        null != O &&
-                        1 >
-                            (function (e, t) {
-                                let n = t.filter((t) => !(0, c.Kt)(t, e.id)).length;
-                                return (0, h.y4)(e) - n;
-                            })(j, O)
-                      ? d(g.evJ.TOO_MANY_EMOJI)
-                      : d(null);
-            }, [N, d, j, O]),
+                var e;
+                C.length < 1 ? d(h.ze.NO_PERMISSIONS) : null != n && (null != (e = null == E ? void 0 : E[n]) ? e : 0) < 1 ? d(f.evJ.TOO_MANY_EMOJI) : d(null);
+            }, [C, t, d, n, E]),
             (0, r.jsx)(i.q4e, {
-                className: f.guildSelector,
+                className: v.guildSelector,
                 onChange: t,
-                options: N,
+                options: C,
                 popoutPosition: 'top',
                 popoutWidth: 240,
-                renderOptionLabel: I,
-                renderOptionValue: E,
+                renderOptionLabel: D,
+                renderOptionValue: y,
                 value: n,
-                'aria-labelledby': b,
-                placeholder: N.length < 1 ? p.intl.string(p.t.jHpxws) : p.intl.string(p.t['4mqeQE']),
-                isDisabled: N.length < 1
+                'aria-labelledby': j,
+                placeholder: C.length < 1 ? x.intl.string(x.t.jHpxws) : x.intl.string(x.t['4mqeQE']),
+                isDisabled: C.length < 1
             })
         );
     };

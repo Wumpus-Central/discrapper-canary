@@ -9,17 +9,17 @@ var l = n(120356),
     c = n(430824),
     u = n(70956),
     d = n(388032),
-    h = n(882714),
-    m = n(986449);
+    m = n(882714),
+    p = n(986449);
 let g = 6 * u.Z.Millis.SECOND;
-function p(e) {
+function h(e) {
     let { emoji: t, guildId: n } = e,
         l = (0, i.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getGuild(n)) ? void 0 : e.name;
         });
     return (0, r.jsxs)('div', {
-        className: a()(m.toast, h.toast),
+        className: a()(p.toast, m.toast),
         children: [
             (0, r.jsx)(o.Z, {
                 emojiId: t.id,
@@ -63,7 +63,7 @@ function f(e) {
     (0, s.showToast)(
         (0, s.createToast)('', s.ToastType.CUSTOM, {
             position: s.ToastPosition.TOP,
-            component: (0, r.jsx)(p, {
+            component: (0, r.jsx)(h, {
                 emoji: t,
                 guildId: n
             }),

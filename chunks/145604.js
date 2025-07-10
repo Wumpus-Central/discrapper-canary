@@ -128,7 +128,8 @@ class Q extends i.PureComponent {
                             game_platform: this.props.gamePlatform,
                             game_id: this.props.gameId,
                             stage_instance_id: null == n ? void 0 : n.id,
-                            guild_scheduled_event_id: null == r ? void 0 : r.id
+                            guild_scheduled_event_id: null == r ? void 0 : r.id,
+                            was_moved: D.Z.getWasMoved()
                         },
                         (0, u.oG)(h, d),
                         (0, u.kO)(h, d, I)

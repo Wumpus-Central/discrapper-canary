@@ -21,7 +21,7 @@ async function d() {
 }
 function f() {
     let e = [];
-    (s.o.forEach((t) => {
+    (s.o$.forEach((t) => {
         t.cachedIsEnabled() && e.push(t.feature);
     }),
         o.default.track(l.rMx.LIBDISCORE_LOADED, {

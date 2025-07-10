@@ -89,11 +89,13 @@ function v(e) {
                     let i = (function (e, t, n) {
                         let r = Array.from(O.KW.values())
                             .map((e) => {
-                                if (null == t.unlockedPowerups[e]) return t.allPowerups[e];
+                                if (null != t.unlockedPowerups[e]) return;
+                                let r = t.allPowerups[e];
+                                if (null != r && !(n < r.cost)) return t.allPowerups[e];
                             })
                             .filter(d.lm);
                         if (0 !== r.length) {
-                            if (1 === r.length && n >= r[0].cost && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
+                            if (1 === r.length && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
                                     type: m.J.PERKS_PURCHASABLE,
                                     powerups: r,
@@ -101,19 +103,14 @@ function v(e) {
                                         (0, u.Qd)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e, !0, t);
                                     }
                                 };
-                            if (r.length > 1) {
-                                let t = null != r.find((e) => n >= e.cost),
-                                    i = n >= r.reduce((e, t) => e + t.cost, 0),
-                                    l = t && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK : i && !(0, u.OY)(o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK : void 0;
-                                if (null == l) return;
+                            if (r.length > 1 && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e))
                                 return {
                                     type: m.J.PERKS_PURCHASABLE,
                                     powerups: r,
                                     markAsDismissed: (t) => {
-                                        (0, u.Qd)(l, e, !0, t);
+                                        (0, u.Qd)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e, !0, t);
                                     }
                                 };
-                            }
                         }
                     })(e, t, l);
                     if (null != i) return i;

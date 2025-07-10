@@ -323,7 +323,7 @@ let B = r.memo(function (e) {
             ]
         });
     });
-function U(e) {
+function z(e) {
     let t = L(Object.values((0, o.Wu)([_.Z], () => _.Z.getWidgetsForLayout(P.$S))), e);
     return [
         t,
@@ -338,7 +338,7 @@ function U(e) {
         }
     ];
 }
-function z(e) {
+function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t ? ''.concat(e.toFixed(2), 'ms') : new Date(e).toLocaleTimeString();
 }
@@ -450,7 +450,7 @@ function V() {
                                                         ' - ',
                                                         null != (r = null == a ? void 0 : a.toString()) ? r : 'null',
                                                         ' @ ',
-                                                        z(t, !0)
+                                                        U(t, !0)
                                                     ]
                                                 })
                                             })
@@ -564,7 +564,7 @@ let H = r.memo(function (e) {
                                                                     children: ''
                                                                         .concat(a, ':')
                                                                         .concat((0, v.sS)(a), ' @ ')
-                                                                        .concat(z(r))
+                                                                        .concat(U(r))
                                                                 },
                                                                 ''.concat(e.pid, '-').concat(a, '-').concat(r)
                                                             );
@@ -637,8 +637,8 @@ let H = r.memo(function (e) {
         });
     }),
     X = r.memo(function () {
-        let [e, t] = U(S.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = U(S.Odu.PERFORMANCE_DEBUG),
+        let [e, t] = z(S.Odu.CLICK_ZONE_DEBUG),
+            [a, r] = z(S.Odu.PERFORMANCE_DEBUG),
             l = (0, o.e7)([j.ZP], () => j.ZP.hasRenderDebugMode(b.G.ClickZones)),
             i = (0, o.e7)([j.ZP], () => j.ZP.hasRenderDebugMode(b.G.WidgetAreas)),
             s = (0, o.e7)([j.ZP], () => j.ZP.hasRenderDebugMode(b.G.DisabledGPUBoost)),
