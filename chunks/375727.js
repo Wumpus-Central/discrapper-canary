@@ -103,6 +103,37 @@ let D = new m.Z('EmojiStudio'),
                 (0, r.jsxs)('aside', {
                     className: y.aside,
                     children: [
+                        (0, r.jsxs)('div', {
+                            className: y.preview,
+                            children: [
+                                (0, r.jsx)('label', { children: C.intl.string(C.t.JmuIb2) }),
+                                (0, r.jsxs)('ul', {
+                                    children: [
+                                        (0, r.jsx)('li', {
+                                            children: (0, r.jsxs)('div', {
+                                                className: y.reactions,
+                                                children: [
+                                                    (0, r.jsx)(w, {
+                                                        src: G,
+                                                        alt: C.intl.string(C.t['zS0K+v'])
+                                                    }),
+                                                    (0, r.jsx)('span', { children: '8' })
+                                                ]
+                                            })
+                                        }),
+                                        (0, r.jsx)('li', {
+                                            children: (0, r.jsx)('div', {
+                                                className: y.jumbo,
+                                                children: (0, r.jsx)(w, {
+                                                    src: G,
+                                                    alt: C.intl.string(C.t['tE41+f'])
+                                                })
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
                         (0, r.jsx)(u.xJW, {
                             title: C.intl.string(C.t.m0YV7O),
                             required: !0,
@@ -141,37 +172,6 @@ let D = new m.Z('EmojiStudio'),
                                         })
                                 ]
                             })
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: y.preview,
-                            children: [
-                                (0, r.jsx)('label', { children: C.intl.string(C.t.JmuIb2) }),
-                                (0, r.jsxs)('ul', {
-                                    children: [
-                                        (0, r.jsx)('li', {
-                                            children: (0, r.jsxs)('div', {
-                                                className: y.reactions,
-                                                children: [
-                                                    (0, r.jsx)(w, {
-                                                        src: G,
-                                                        alt: C.intl.string(C.t['zS0K+v'])
-                                                    }),
-                                                    (0, r.jsx)('span', { children: '8' })
-                                                ]
-                                            })
-                                        }),
-                                        (0, r.jsx)('li', {
-                                            children: (0, r.jsx)('div', {
-                                                className: y.jumbo,
-                                                children: (0, r.jsx)(w, {
-                                                    src: G,
-                                                    alt: C.intl.string(C.t['tE41+f'])
-                                                })
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
                         }),
                         (0, r.jsxs)('div', {
                             className: y.foot,

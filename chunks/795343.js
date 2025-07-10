@@ -29,12 +29,13 @@ function v(e) {
         B = l.useCallback(() => {
             var e;
             null == v || null == (e = v.current) || e.scrollToTop({ animate: !0 });
-        }, [v]);
+        }, [v]),
+        A = null == P ? void 0 : P.join('');
     l.useEffect(() => {
         B();
-    }, [P[0], B]);
-    let A = (0, p.a)(),
-        R = l.useMemo(() => A(N), [A, N]);
+    }, [A, B]);
+    let R = (0, p.a)(),
+        w = l.useMemo(() => R(N), [R, N]);
     l.useEffect(() => {
         n ||
             (0, h.n)({
@@ -46,29 +47,29 @@ function v(e) {
                 cacheDisabled: y
             });
     }, [x, o, j, y, n, E]);
-    let w = l.useRef(null),
-        { setQueryPageSize: Z, setQueryPageOffset: F, queryPageSize: D } = (0, g.S)(),
-        M = n || k || null == T,
-        H = !M && 0 === R.length;
+    let Z = l.useRef(null),
+        { setQueryPageSize: F, setQueryPageOffset: D, queryPageSize: M } = (0, g.S)(),
+        H = n || k || null == T,
+        W = !H && 0 === w.length;
     return (
         l.useEffect(() => {
-            if (null != w.current && !H) {
+            if (null != Z.current && !W) {
                 let e = new ResizeObserver(() => {
-                    null != w.current && Z(Math.floor(5 * getComputedStyle(w.current).gridTemplateColumns.split(/\s+/).length));
+                    null != Z.current && F(Math.floor(5 * getComputedStyle(Z.current).gridTemplateColumns.split(/\s+/).length));
                 });
-                return (e.observe(w.current), () => e.disconnect());
+                return (e.observe(Z.current), () => e.disconnect());
             }
-        }, [Z, H]),
+        }, [F, W]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: a()(O.products, { [O.productsEmpty]: H }),
-                    ref: w,
+                    className: a()(O.products, { [O.productsEmpty]: W }),
+                    ref: Z,
                     children: [
-                        M && [...Array(D)].map((e, t) => (0, r.jsx)(b.K, {}, t)),
-                        H && (0, r.jsx)(C.Z, {}),
-                        !M &&
-                            R.map((e, t) => {
+                        H && [...Array(M)].map((e, t) => (0, r.jsx)(b.K, {}, t)),
+                        W && (0, r.jsx)(C.Z, {}),
+                        !H &&
+                            w.map((e, t) => {
                                 let n = d.Z.getCategory(e.categorySkuId);
                                 return null == n
                                     ? null
@@ -92,16 +93,16 @@ function v(e) {
                             })
                     ]
                 }),
-                I > D &&
+                I > M &&
                     (0, r.jsx)('div', {
                         className: O.paginationContainer,
                         children: (0, r.jsx)('div', {
                             children: (0, r.jsx)(s.DsT, {
                                 currentPage: L,
                                 totalCount: I,
-                                pageSize: D,
+                                pageSize: M,
                                 onPageChange: (e) => {
-                                    (F((e - 1) * D), B());
+                                    D((e - 1) * M);
                                 },
                                 disablePaginationGap: !0
                             })

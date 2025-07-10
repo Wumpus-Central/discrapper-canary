@@ -85,8 +85,9 @@ let V = (e) => {
             X = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
             Q = (0, E.Qo)(q, X),
             { enabled: J, variant: $ } = v.p1.useExperiment({ location: 'NitroTabButton' }),
-            { enabled: ee } = v.pd.useExperiment({ location: 'NitroTabButton' }),
-            et = (0, l.JA)('nitro'),
+            { enabled: ee } = v.pd.useExperiment({ location: 'NitroTabButton' });
+        (v.VL.useConfig({ location: 'NitroTabButton' }), v.CF.useConfig({ location: 'NitroTabButton' }));
+        let et = (0, l.JA)('nitro'),
             en = (0, T.N)(),
             er = (0, N.Ng)(),
             ei = (0, I.W)(),

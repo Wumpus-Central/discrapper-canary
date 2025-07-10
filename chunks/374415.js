@@ -17,6 +17,7 @@ function s(e) {
         gap: 8,
         justify: s,
         align: l,
+        wrap: !0,
         padding: c,
         className: u,
         children: (0, r.jsx)(o.u.Provider, {

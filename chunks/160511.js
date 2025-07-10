@@ -1,101 +1,101 @@
-(n.d(t, { Z: () => f }), n(388685), n(457542));
-var r = n(255367),
-    l = n(73800),
+(n.d(t, { Z: () => h }), n(388685), n(457542));
+var l = n(255367),
+    r = n(73800),
     i = n(658550),
     s = n(544891),
-    o = n(481060),
-    a = n(507453),
-    c = n(981631),
-    u = n(388032),
-    d = n(895453);
-function f(e) {
-    let { mfaChallenge: t, finish: n, setSlide: f, onClose: h, isSlideReady: m } = e,
-        [p, g] = l.useState(!1),
-        [b, y] = l.useState(null),
-        [j, x] = l.useState(!1),
-        [S, v] = l.useState(null),
-        [O, C] = l.useState(''),
-        w = l.useRef(null);
-    (l.useEffect(() => {
-        (g(!0),
+    a = n(481060),
+    o = n(507453),
+    d = n(981631),
+    c = n(388032),
+    u = n(895453);
+function h(e) {
+    let { mfaChallenge: t, finish: n, setSlide: h, onClose: f, isSlideReady: m } = e,
+        [g, x] = r.useState(!1),
+        [p, j] = r.useState(null),
+        [b, y] = r.useState(!1),
+        [S, v] = r.useState(null),
+        [C, Z] = r.useState(''),
+        w = r.useRef(null);
+    (r.useEffect(() => {
+        (x(!0),
             s.tn
                 .post({
-                    url: c.ANM.LOGIN_SMS_SEND,
+                    url: d.ANM.LOGIN_SMS_SEND,
                     body: { ticket: t.ticket },
                     oldFormErrors: !0,
                     rejectWithError: !1
                 })
                 .then((e) => {
-                    y(e.body.phone);
+                    j(e.body.phone);
                 })
                 .catch((e) => {
                     var t, n;
                     v(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                 })
                 .finally(() => {
-                    g(!1);
+                    x(!1);
                 }));
     }, [t.ticket]),
-        l.useEffect(() => {
+        r.useEffect(() => {
             if (m) {
                 var e;
                 null == (e = w.current) || e.focus();
             }
         }, [m]));
-    let Z = null == b ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t['8r6h7+'], { phoneNumber: b });
-    return (0, r.jsxs)('form', {
+    let k = null == p ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t['8r6h7+'], { phoneNumber: p });
+    return (0, l.jsxs)('form', {
         onSubmit: (e) => {
             (e.preventDefault(),
-                x(!0),
+                y(!0),
                 n({
                     mfaType: 'sms',
-                    data: O
+                    data: C
                 })
                     .catch((e) => {
                         var t, n;
                         v(null != (n = e.message) ? n : null == (t = e.body) ? void 0 : t.message);
                     })
                     .finally(() => {
-                        x(!1);
+                        y(!1);
                     }));
         },
         children: [
-            (0, r.jsx)(a.Z.SlideHeader, {
-                subtitle: Z,
-                onClose: h
+            (0, l.jsx)(o.Z.SlideHeader, {
+                subtitle: k,
+                onClose: f
             }),
-            (0, r.jsx)(a.Z.SlideContent, {
-                children: (0, r.jsxs)(o.xJW, {
-                    title: u.intl.string(u.t.HZPBOT),
+            (0, l.jsx)(o.Z.SlideContent, {
+                children: (0, l.jsxs)(a.xJW, {
+                    title: c.intl.string(c.t.HZPBOT),
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: d.smsInputContainer,
+                        (0, l.jsxs)('div', {
+                            className: u.smsInputContainer,
                             children: [
-                                (0, r.jsx)(o.oil, {
-                                    className: d.smsInput,
+                                (0, l.jsx)(a.oil, {
+                                    className: u.smsInput,
                                     inputRef: w,
-                                    onChange: C,
-                                    placeholder: u.intl.string(u.t.tARzgo),
+                                    onChange: Z,
+                                    placeholder: c.intl.string(c.t.tARzgo),
                                     maxLength: 10,
-                                    value: O,
+                                    value: C,
                                     autoComplete: 'one-time-code',
                                     spellCheck: 'false',
-                                    disabled: j
+                                    disabled: b
                                 }),
-                                (0, r.jsx)(o.zxk, {
-                                    variant: 'primary',
-                                    text: u.intl.string(u.t.ZF29Ly),
-                                    loading: p,
+                                (0, l.jsx)(a.zxk, {
+                                    variant: 'secondary',
+                                    text: c.intl.string(c.t.ZF29Ly),
+                                    loading: g,
                                     onClick: () => {
                                         s.tn
                                             .post({
-                                                url: c.ANM.LOGIN_SMS_SEND,
+                                                url: d.ANM.LOGIN_SMS_SEND,
                                                 body: { ticket: t.ticket },
                                                 oldFormErrors: !0,
                                                 rejectWithError: !1
                                             })
                                             .then((e) => {
-                                                y(e.body.phone);
+                                                j(e.body.phone);
                                             })
                                             .catch((e) => {
                                                 var t;
@@ -105,16 +105,16 @@ function f(e) {
                                 })
                             ]
                         }),
-                        (0, r.jsx)(a.Z.SlideError, { error: S })
+                        (0, l.jsx)(o.Z.SlideError, { error: S })
                     ]
                 })
             }),
-            (0, r.jsx)(a.Z.SlideFooter, {
+            (0, l.jsx)(o.Z.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: f,
+                setSlide: h,
                 showConfirm: !0,
-                disabled: O.length !== i.Gz,
-                submitting: j
+                disabled: C.length !== i.Gz,
+                submitting: b
             })
         ]
     });
