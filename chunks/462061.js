@@ -107,7 +107,7 @@ function D(e) {
         $ = z && (q || B),
         ee = u < 124 ? C : N,
         { avatarSrc: et, avatarDecorationSrc: en } = (0, v.Z)({
-            user: H,
+            userId: H.id,
             guildId: n.guild_id,
             size: ee,
             animateOnHover: !$

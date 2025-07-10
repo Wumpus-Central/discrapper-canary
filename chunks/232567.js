@@ -1,8 +1,9 @@
 (n.d(t, {
-    In: () => b,
+    $k: () => b,
+    In: () => y,
     Lr: () => m,
     PR: () => E,
-    Sr: () => y,
+    Sr: () => O,
     k: () => h,
     mB: () => g
 }),
@@ -88,7 +89,16 @@ function E(e) {
                   )
               );
 }
-async function b(e) {
+function b(e) {
+    return (
+        s.Z.dispatch({
+            type: 'USER_UPDATE',
+            user: e
+        }),
+        d.default.getUser(e.id)
+    );
+}
+async function y(e) {
     let { type: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: c, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         f = arguments.length > 2 ? arguments[2] : void 0,
         h = Date.now();
@@ -144,7 +154,7 @@ async function b(e) {
         );
     }
 }
-async function y(e, t) {
+async function O(e, t) {
     s.Z.dispatch({
         type: 'MUTUAL_FRIENDS_FETCH_START',
         userId: e

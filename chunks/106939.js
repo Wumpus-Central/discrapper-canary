@@ -272,8 +272,8 @@ function K() {
         K)
     )
         return null;
-    let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        J = H[Q];
+    let J = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
+        Q = H[J];
     return (0, i.jsx)(f.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -283,19 +283,19 @@ function K() {
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
                 (0, i.jsx)(W, {
                     theme: D,
-                    section: Q,
+                    section: J,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
                 (0, i.jsx)(u.njP.Panel, {
-                    id: Q,
+                    id: J,
                     'aria-labelledby': F,
                     className: G.contentPanel,
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: G.sideNavContent,
-                            children: J()
+                            children: Q()
                         })
                     })
                 })

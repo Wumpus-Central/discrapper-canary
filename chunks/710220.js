@@ -69,7 +69,7 @@ function p(e) {
     let { referrer: t } = e,
         n = a.Z.useExperiment({ location: 'UserTrialOfferAttribution' }),
         { avatarSrc: p, eventHandlers: g } = (0, s.Z)({
-            user: t,
+            userId: null == t ? void 0 : t.id,
             size: l.EF.SIZE_32,
             animateOnHover: !0
         });

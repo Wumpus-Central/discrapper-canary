@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Q }), n(388685), n(539854), n(457542));
+(n.d(t, { Z: () => J }), n(388685), n(539854), n(457542));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -150,17 +150,17 @@ function W(e) {
         [W, Y] = r.useState(!1),
         [K, q] = r.useState([]),
         X = (0, j.rR)(o.type),
-        Q = _.Z.get(X);
+        J = _.Z.get(X);
     r.useEffect(() => {
         (x(o.friendSync), S(o.visibility), I(o.metadataVisibility), A(o.showActivity));
     }, [o]);
-    let J = {
+    let Q = {
             inProgressVisibility: P,
             inProgressMetadataVisibility: U
         },
-        $ = r.useRef(J);
+        $ = r.useRef(Q);
     (r.useEffect(() => {
-        $.current = J;
+        $.current = Q;
     }),
         r.useEffect(() => {
             if (!1 === o.verified) return;
@@ -428,7 +428,7 @@ function W(e) {
                     },
                     children: (0, i.jsx)(m.Text, {
                         variant: 'text-sm/semibold',
-                        children: V.intl.format(V.t['6u6J0t'], { platform: Q.name })
+                        children: V.intl.format(V.t['6u6J0t'], { platform: J.name })
                     })
                 })),
             (null == (t = _.Z.get(o.type)) ? void 0 : t.hasMetadata) === !0 &&
@@ -651,7 +651,7 @@ function X(e) {
         })
     );
 }
-let Q = () => {
+let J = () => {
     let e = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
         t = (0, l.e7)([N.Z], () => N.Z.isFetching()),
         n = (0, l.e7)([N.Z], () => N.Z.getAccounts()),

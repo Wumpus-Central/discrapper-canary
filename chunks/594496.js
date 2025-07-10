@@ -111,8 +111,8 @@ function R(e) {
         K = E.ZP.canUsePremiumProfileCustomization(Z),
         q = (0, c.gd)(w, null == W ? void 0 : W.avatar),
         X = (0, c.f$)(L, null == Y ? void 0 : Y.banner),
-        Q = (0, S.p)(U, null == Y ? void 0 : Y.themeColors),
-        J = null != (t = null == Y ? void 0 : Y.bio) ? t : '',
+        J = (0, S.p)(U, null == Y ? void 0 : Y.themeColors),
+        Q = null != (t = null == Y ? void 0 : Y.bio) ? t : '',
         $ = null != (n = null == Y ? void 0 : Y.pronouns) ? n : '',
         ee = (e, t, n) => {
             n(null != e ? e : null != t ? null : void 0);
@@ -260,7 +260,7 @@ function R(e) {
                             (0, S.ce)(e, null == Y ? void 0 : Y.themeColors);
                         },
                         guildId: null == H ? void 0 : H.id,
-                        showResetThemeButton: Q
+                        showResetThemeButton: J
                     }),
                     (0, i.jsx)(
                         d.Z,
@@ -288,10 +288,10 @@ function R(e) {
                                     })
                                 ]
                             }),
-                            onBioChange: (e) => (0, S.qN)(e, J),
+                            onBioChange: (e) => (0, S.qN)(e, Q),
                             errors: null != (R = null == V ? void 0 : V.bio) ? R : null == z ? void 0 : z.bio,
                             pendingBio: B,
-                            currentBio: J,
+                            currentBio: Q,
                             disabled: !K
                         },
                         'about'

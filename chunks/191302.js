@@ -135,7 +135,7 @@ function v(e) {
         null != o.current && f(o.current.offsetWidth > 245);
     }, []);
     let { avatarSrc: m, eventHandlers: g } = (0, h.Z)({
-        user: n,
+        userId: n.id,
         size: c.EFr.SIZE_32,
         animateOnHover: !0
     });

@@ -80,7 +80,7 @@ function N(e) {
             }
         }),
         { avatarSrc: B, eventHandlers: F } = (0, m.Z)({
-            user: l,
+            userId: l.id,
             size: p.EFr.SIZE_48,
             animateOnHover: !0
         }),

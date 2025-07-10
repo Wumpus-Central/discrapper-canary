@@ -164,7 +164,7 @@ function H(e) {
             avatarDecorationSrc: d,
             eventHandlers: p
         } = (0, O.Z)({
-            user: a,
+            userId: null == a ? void 0 : a.id,
             guildId: o,
             size: 12
         }),

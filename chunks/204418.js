@@ -42,7 +42,7 @@ let u = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                 avatarSrc: g,
                 eventHandlers: E
             } = (0, a.Z)({
-                user: t,
+                userId: t.id,
                 guildId: n,
                 size: d,
                 showPending: !0,

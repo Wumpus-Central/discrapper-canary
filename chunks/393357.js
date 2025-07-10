@@ -17,11 +17,11 @@ function x(e) {
     let { guildId: n, powerupSkuId: t } = e,
         x = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
         b = (0, o.e7)([l.Z], () => l.Z.hasLoadedExperiments),
-        g = (0, p.Z)(n),
-        v = (0, d.At)(),
+        v = (0, p.Z)(n),
+        g = (0, d.At)(),
         h = (0, m.V)('GuildPowerupsPage'),
-        j = !b || null == g || null == x,
-        C = (0, a.ZP)(null != v ? v : []);
+        j = !b || null == v || null == x,
+        C = (0, a.ZP)(null != g ? g : []);
     return ((0, s.Z)(
         {
             type: i.ImpressionTypes.VIEW,
@@ -32,7 +32,7 @@ function x(e) {
     ),
     j)
         ? null
-        : g || h
+        : v || h
           ? (0, r.jsx)(_.Z, {
                 guildId: n,
                 powerupSkuId: t

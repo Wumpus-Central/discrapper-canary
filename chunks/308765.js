@@ -284,7 +284,7 @@ let i = {
     },
     VoiceChannelNotificationsManager: {
         actions: ['VOICE_CHANNEL_SELECT'],
-        inlineRequire: () => n(538215).Z
+        inlineRequire: () => n(298579).Z
     },
     VoiceFilterLoopbackManager: {
         actions: ['RTC_CONNECTION_STATE', 'VOICE_FILTER_LOOPBACK_TOGGLE', 'VOICE_FILTER_APPLIED', 'AUDIO_TOGGLE_SELF_MUTE', 'AUDIO_SET_TEMPORARY_SELF_MUTE', 'AUDIO_SET_SELF_MUTE'],

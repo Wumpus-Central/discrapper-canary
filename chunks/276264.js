@@ -290,7 +290,7 @@ let V = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 avatarSrc: eA,
                 eventHandlers: eN
             } = (0, S.Z)({
-                user: y,
+                userId: ed,
                 size: c.EFr.SIZE_32,
                 animateOnHover: !(n || em),
                 guildId: V

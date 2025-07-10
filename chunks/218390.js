@@ -51,8 +51,8 @@ var i = n(255367),
     K = n(382791),
     q = n(823188),
     X = n(504865),
-    Q = n(179984),
-    J = n(386733),
+    J = n(179984),
+    Q = n(386733),
     $ = n(474936),
     ee = n(981631),
     et = n(388032),
@@ -414,9 +414,9 @@ let ep = function () {
                     className: en.__invalid_container,
                     children: [
                         (0, i.jsx)(ed, {}),
-                        A && (0, i.jsx)(J.Z, { isInSettings: !0 }),
+                        A && (0, i.jsx)(Q.Z, { isInSettings: !0 }),
                         (0, i.jsx)(em, {}),
-                        (0, i.jsx)(Q.Z, {
+                        (0, i.jsx)(J.Z, {
                             className: en.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: et.intl.string(et.t.dnVvQU),

@@ -94,7 +94,7 @@ function R(e) {
             avatarSrc: Y,
             eventHandlers: W
         } = (0, E.Z)({
-            user: t,
+            userId: t.id,
             guildId: null != n ? n.guildId : a,
             size: F,
             animateOnHover: A

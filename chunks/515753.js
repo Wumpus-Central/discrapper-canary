@@ -53,8 +53,8 @@ var i = n(255367),
     K = n(998502),
     q = n(981631),
     X = n(388032),
-    Q = n(425154);
-function J(e) {
+    J = n(425154);
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -130,9 +130,9 @@ let et = K.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
         return (0, i.jsx)(
             p.P3F,
             $(
-                J(
+                Q(
                     {
-                        className: a()(Q.closeButton, { [Q.closeButtonPlated]: null != t }),
+                        className: a()(J.closeButton, { [J.closeButtonPlated]: null != t }),
                         style: n
                     },
                     e
@@ -147,11 +147,11 @@ let et = K.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                         }
                     },
                     children: (0, i.jsx)('div', {
-                        className: a()({ [Q.innerCloseButtonPlated]: null != t }),
+                        className: a()({ [J.innerCloseButtonPlated]: null != t }),
                         children: (0, i.jsx)(p.Dio, {
                             size: 'md',
                             color: 'currentColor',
-                            className: a()(Q.closeIcon, { [Q.closeIconPlated]: null != t })
+                            className: a()(J.closeIcon, { [J.closeIconPlated]: null != t })
                         })
                     })
                 }
@@ -162,45 +162,45 @@ let et = K.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
         (0, i.jsx)(p.r7p, {
             size: 'xs',
             color: 'currentColor',
-            className: Q.favoriteIcon
+            className: J.favoriteIcon
         }),
     es = () =>
         (0, i.jsx)(p.kZF, {
             size: 'xs',
             color: 'currentColor',
-            className: Q.favoriteIcon
+            className: J.favoriteIcon
         }),
     ea = () =>
         (0, i.jsx)(p.t6m, {
             size: 'xs',
             color: 'currentColor',
-            className: Q.favoriteIcon
+            className: J.favoriteIcon
         }),
     el = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: l, text: o, children: d, locationState: m, onClick: g, className: h, role: f, 'aria-posinset': b, 'aria-setsize': x, listItemRef: _ } = e,
             j = ee(e, ['route', 'selected', 'icon', 'iconClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         return (0, i.jsx)(N.Z, {
-            className: a()(Q.channel, { [Q.fullWidth]: u.tq }, h),
+            className: a()(J.channel, { [J.fullWidth]: u.tq }, h),
             onClick: g,
             role: f,
-            focusProps: J({ within: !0 }, en),
+            focusProps: Q({ within: !0 }, en),
             'aria-posinset': b,
             'aria-setsize': x,
             ref: _,
             children: (0, i.jsx)(p.vjx, {
                 as: 'div',
                 selected: n,
-                className: a()(l, Q.interactive, Q.linkButton, { [Q.interactiveSelected]: n }),
+                className: a()(l, J.interactive, J.linkButton, { [J.interactiveSelected]: n }),
                 children: (0, i.jsxs)(
                     c.rU,
                     $(
-                        J(
+                        Q(
                             {
                                 to: {
                                     pathname: t,
                                     state: m
                                 },
-                                className: Q.link
+                                className: J.link
                             },
                             j
                         ),
@@ -210,11 +210,11 @@ let et = K.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
                                         size: 'refresh_sm',
-                                        className: a()(Q.linkButtonIcon, s),
+                                        className: a()(J.linkButtonIcon, s),
                                         color: 'currentColor'
                                     }),
                                     name: o,
-                                    innerClassName: Q.avatarWithText
+                                    innerClassName: J.avatarWithText
                                 }),
                                 d
                             ]
@@ -236,7 +236,7 @@ function eo(e) {
             avatarDecorationSrc: eg,
             eventHandlers: eh
         } = (0, M.Z)({
-            user: u,
+            userId: null == u ? void 0 : u.id,
             size: p.EFr.SIZE_32,
             animateOnHover: !(l || K || eo)
         }),
@@ -295,7 +295,7 @@ function eo(e) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  $(J({}, n), {
+                                  $(Q({}, n), {
                                       channel: t,
                                       selected: l
                                   })
@@ -308,7 +308,7 @@ function eo(e) {
                       return (n) =>
                           (0, i.jsx)(
                               e,
-                              $(J({}, n), {
+                              $(Q({}, n), {
                                   user: u,
                                   channel: t,
                                   channelSelected: l
@@ -326,7 +326,7 @@ function eo(e) {
                     return (t) =>
                         (0, i.jsx)(
                             e,
-                            J(
+                            Q(
                                 {
                                     header: r,
                                     body: s,
@@ -340,12 +340,12 @@ function eo(e) {
         eG = () =>
             t.isSystemDM()
                 ? (0, i.jsx)('div', {
-                      className: Q.subtext,
+                      className: J.subtext,
                       children: (0, C.Z)(t.id) ? X.intl.string(X.t.FL5T09) : X.intl.string(X.t.NnY5lZ)
                   })
                 : t.isMultiUserDM()
                   ? (0, i.jsx)('div', {
-                        className: Q.subtext,
+                        className: J.subtext,
                         children: X.intl.format(X.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
                   : (0, x.Z)({
@@ -361,8 +361,8 @@ function eo(e) {
                           voiceChannel: A,
                           applicationStream: _,
                           animateEmoji: K || eo,
-                          textClassName: Q.activityStatusText,
-                          iconClassName: eT ? Q.mutedIcon : void 0
+                          textClassName: J.activityStatusText,
+                          iconClassName: eT ? J.mutedIcon : void 0
                       })
                     : null,
         eF = () => {
@@ -379,7 +379,7 @@ function eo(e) {
                 else
                     return (0, i.jsx)(
                         et,
-                        $(J({}, eh), {
+                        $(Q({}, eh), {
                             src: (0, S.x)(t),
                             'aria-hidden': !0,
                             size: e,
@@ -393,7 +393,7 @@ function eo(e) {
                 u.isSystemUser() || (n = (0, f.Z)(b) ? q.Skl.STREAMING : Z),
                 (0, i.jsx)(
                     et,
-                    $(J({}, eh), {
+                    $(Q({}, eh), {
                         size: p.EFr.SIZE_32,
                         src: ep,
                         avatarDecoration: eg,
@@ -415,7 +415,7 @@ function eo(e) {
                           userId: null == u ? void 0 : u.id,
                           inline: !0,
                           disableGuildProfile: !0,
-                          className: a()(Q.clanTag, { [Q.clanTagMuted]: eT })
+                          className: a()(J.clanTag, { [J.clanTagMuted]: eT })
                       })
                   ]
               })
@@ -427,9 +427,9 @@ function eo(e) {
             var { role: n } = e,
                 r = ee(e, ['role']);
             return (0, i.jsxs)(N.Z, {
-                className: a()(Q.channel, Q.dm),
+                className: a()(J.channel, J.dm),
                 role: n,
-                focusProps: $(J({}, en), {
+                focusProps: $(Q({}, en), {
                     focusTarget: ed,
                     ringTarget: em
                 }),
@@ -443,11 +443,11 @@ function eo(e) {
                 'aria-setsize': Y,
                 'aria-posinset': W,
                 children: [
-                    eA && eN ? (0, i.jsx)('div', { className: a()(Q.unreadPill, { [Q.muted]: eT }) }) : null,
+                    eA && eN ? (0, i.jsx)('div', { className: a()(J.unreadPill, { [J.muted]: eT }) }) : null,
                     (0, i.jsxs)(p.vjx, {
-                        className: a()(Q.interactive, {
-                            [Q.interactiveSystemDM]: ex && eb,
-                            [Q.interactiveSelected]: l
+                        className: a()(J.interactive, {
+                            [J.interactiveSystemDM]: ex && eb,
+                            [J.interactiveSelected]: l
                         }),
                         as: 'div',
                         onClick: eM,
@@ -464,11 +464,11 @@ function eo(e) {
                             (0, i.jsx)(
                                 c.rU,
                                 $(
-                                    J(
+                                    Q(
                                         {
                                             innerRef: ed,
                                             to: q.Z5c.CHANNEL(q.ME, t.id),
-                                            className: a()(Q.link, { [Q.linkPlated]: eP }),
+                                            className: a()(J.link, { [J.linkPlated]: eP }),
                                             'aria-label': (0, v.ZP)({
                                                 channel: t,
                                                 unread: eN
@@ -484,12 +484,12 @@ function eo(e) {
                                             muted: eT,
                                             subText: eG(),
                                             name: (0, i.jsx)(I.Z, {
-                                                tooltipClassName: Q.overflowTooltip,
+                                                tooltipClassName: J.overflowTooltip,
                                                 children: eH
                                             }),
                                             decorators: t.isSystemDM()
                                                 ? (0, i.jsx)(E.Z, {
-                                                      className: Q.decorator,
+                                                      className: J.decorator,
                                                       type: E.Z.Types.SYSTEM_DM,
                                                       verified: !0
                                                   })
@@ -561,7 +561,7 @@ let ec =
               return t.isMultiUserDM()
                   ? (0, i.jsx)(
                         eo,
-                        J(
+                        Q(
                             {
                                 channel: t,
                                 selected: n,
@@ -574,7 +574,7 @@ let ec =
                     )
                   : (0, i.jsx)(
                         eo,
-                        J(
+                        Q(
                             {
                                 channel: t,
                                 selected: n,

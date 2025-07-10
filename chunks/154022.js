@@ -104,11 +104,11 @@ function K(e) {
             }),
             (0, i.jsx)(v.F, {
                 setting: D.s6.ACCESSIBILITY_LINK_DECORATIONS,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(J, {})
             }),
             (0, i.jsx)(v.F, {
                 setting: D.s6.ACCESSIBILITY_ROLE_STYLE,
-                children: (0, i.jsx)(J, {})
+                children: (0, i.jsx)(Q, {})
             }),
             (0, i.jsx)(v.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
@@ -258,7 +258,7 @@ function X() {
         ]
     });
 }
-function Q() {
+function J() {
     let e = (0, c.e7)([h.Z], () => h.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(u.xJW, {
         className: M.marginTop20,
@@ -272,7 +272,7 @@ function Q() {
         })
     });
 }
-function J() {
+function Q() {
     let e = (0, c.e7)([h.Z], () => h.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [

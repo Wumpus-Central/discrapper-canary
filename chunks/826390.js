@@ -1,55 +1,96 @@
-i.d(n, { default: () => m });
+(i.d(n, { default: () => E }), i(539854));
 var e = i(255367),
     a = i(73800),
+    r = i(82659),
     s = i(481060),
     c = i(313201),
-    r = i(434404),
-    l = i(703656),
-    o = i(246364),
-    x = i(981631),
-    d = i(176505),
-    h = i(388032),
-    k = i(367503);
-let m = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: i, onClose: m, transitionState: f, onConfirm: p } = t,
-        u = (0, c.Dt)(),
-        C = a.useCallback(
+    l = i(724723),
+    o = i(434404),
+    x = i(703656),
+    d = i(246364),
+    h = i(981631),
+    k = i(176505),
+    m = i(388032),
+    u = i(367503);
+let E = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: i, onClose: E, transitionState: g, onConfirm: C } = t,
+        f = (0, l.q)('PendingJoinRequestsWarningModal'),
+        p = (0, c.Dt)(),
+        T = a.useCallback(
             (t) => {
-                (m(), p(t));
+                (E(), C(t));
             },
-            [m, p]
+            [E, C]
         ),
-        E = a.useCallback(() => {
-            (m(), r.Z.close(), (0, l.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY)));
-        }, [n, m]),
-        j = i > 200;
+        j = a.useCallback(() => {
+            (E(), o.Z.close(), (0, x.uL)(h.Z5c.CHANNEL(n, k.oC.MEMBER_SAFETY)));
+        }, [n, E]),
+        v = i > 200;
+    if (f) {
+        let t = [
+            {
+                text: m.intl.string(m.t['ETE/oK']),
+                onClick: E,
+                variant: 'secondary'
+            },
+            {
+                text: m.intl.string(m.t.Gfg0ra),
+                onClick: () => T(d.wB.REJECTED),
+                variant: 'critical-primary'
+            }
+        ];
+        return (
+            v ||
+                t.push({
+                    text: m.intl.string(m.t.VWqCvL),
+                    onClick: () => T(d.wB.APPROVED),
+                    variant: 'primary'
+                }),
+            (0, e.jsx)(r.u, {
+                title: m.intl.formatToPlainString(m.t.chV4JS, { count: i }),
+                onClose: E,
+                subtitle: v ? m.intl.string(m.t.EPoNRk) : m.intl.string(m.t['8+nq/P']),
+                transitionState: g,
+                actions: t,
+                children: (0, e.jsx)(s.P3F, {
+                    className: u.actionText,
+                    onClick: j,
+                    children: (0, e.jsx)(s.Text, {
+                        variant: 'text-md/normal',
+                        color: 'text-link',
+                        children: m.intl.string(m.t.szESVF)
+                    })
+                })
+            })
+        );
+    }
     return (0, e.jsxs)(s.Y0X, {
-        className: k.container,
-        transitionState: f,
-        'aria-labelledby': u,
+        className: u.container,
+        transitionState: g,
+        'aria-labelledby': p,
         parentComponent: 'PendingJoinRequestsWarningModal',
         children: [
             (0, e.jsxs)(s.hzk, {
-                className: k.content,
+                className: u.content,
                 children: [
                     (0, e.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: u,
-                        children: h.intl.format(h.t.chV4JS, { count: i })
+                        id: p,
+                        children: m.intl.format(m.t.chV4JS, { count: i })
                     }),
                     (0, e.jsx)(s.Text, {
-                        className: k.descriptionText,
+                        className: u.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: j ? h.intl.string(h.t.EPoNRk) : h.intl.string(h.t['8+nq/P'])
+                        children: v ? m.intl.string(m.t.EPoNRk) : m.intl.string(m.t['8+nq/P'])
                     }),
                     (0, e.jsx)(s.P3F, {
-                        className: k.actionText,
-                        onClick: E,
+                        className: u.actionText,
+                        onClick: j,
                         children: (0, e.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: h.intl.string(h.t.szESVF)
+                            children: m.intl.string(m.t.szESVF)
                         })
                     })
                 ]
@@ -61,19 +102,19 @@ let m = function (t) {
                     children: [
                         (0, e.jsx)(s.zxk, {
                             variant: 'secondary',
-                            onClick: m,
-                            text: h.intl.string(h.t['ETE/oK'])
+                            onClick: E,
+                            text: m.intl.string(m.t['ETE/oK'])
                         }),
                         (0, e.jsx)(s.zxk, {
                             variant: 'critical-primary',
-                            onClick: () => C(o.wB.REJECTED),
-                            text: h.intl.string(h.t.Gfg0ra)
+                            onClick: () => T(d.wB.REJECTED),
+                            text: m.intl.string(m.t.Gfg0ra)
                         }),
-                        !j &&
+                        !v &&
                             (0, e.jsx)(s.zxk, {
                                 variant: 'primary',
-                                onClick: () => C(o.wB.APPROVED),
-                                text: h.intl.string(h.t.VWqCvL)
+                                onClick: () => T(d.wB.APPROVED),
+                                text: m.intl.string(m.t.VWqCvL)
                             })
                     ]
                 })

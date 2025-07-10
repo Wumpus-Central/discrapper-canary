@@ -19,7 +19,7 @@ let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                 avatarDecorationSrc: m,
                 eventHandlers: p
             } = (0, s.Z)({
-                user: a,
+                userId: null == a ? void 0 : a.id,
                 size: c
             });
         return (0, i.jsx)(

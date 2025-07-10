@@ -119,31 +119,33 @@ function y(e, t) {
           };
 }
 function O(e, t) {
-    var n, r, a, o, l, c;
-    let d = (0, s.q)(null == e ? void 0 : e.application_id);
+    var n, r, a, o, l, c, d, f;
+    let _ = (0, s.q)(null == e ? void 0 : e.application_id);
     if (null == e)
         return {
             largeImage: void 0,
             smallImage: void 0
         };
-    let f = null == e || null == (n = e.assets) ? void 0 : n.large_image,
-        _ =
-            null != f
-                ? {
-                      src: (0, u.xF)(e.application_id, f, [h.Si.LARGE, h.Si.LARGE]),
-                      text: null == (a = e.assets) || null == (r = a.large_text) ? void 0 : r.trim()
-                  }
-                : void 0,
-        p = (0, i.Z)(e) || null == e || null == (o = e.assets) ? void 0 : o.small_image,
+    let p = null == e || null == (n = e.assets) ? void 0 : n.large_image,
         m =
             null != p
                 ? {
                       src: (0, u.xF)(e.application_id, p, [h.Si.LARGE, h.Si.LARGE]),
-                      text: null == (c = e.assets) || null == (l = c.small_text) ? void 0 : l.trim()
+                      text: null == (a = e.assets) || null == (r = a.large_text) ? void 0 : r.trim(),
+                      url: null == (o = e.assets) ? void 0 : o.large_url
+                  }
+                : void 0,
+        g = (0, i.Z)(e) || null == e || null == (l = e.assets) ? void 0 : l.small_image,
+        b =
+            null != g
+                ? {
+                      src: (0, u.xF)(e.application_id, g, [h.Si.LARGE, h.Si.LARGE]),
+                      text: null == (d = e.assets) || null == (c = d.small_text) ? void 0 : c.trim(),
+                      url: null == (f = e.assets) ? void 0 : f.small_url
                   }
                 : void 0;
     return {
-        largeImage: null != _ ? _ : E(null != t ? t : d),
-        smallImage: m
+        largeImage: null != m ? m : E(null != t ? t : _),
+        smallImage: b
     };
 }

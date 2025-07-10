@@ -18,8 +18,8 @@ var r = t(255367),
     f = t(93841),
     x = t(388032),
     b = t(503945);
-function g() {
-    return (g =
+function v() {
+    return (v =
         Object.assign ||
         function (e) {
             for (var n = 1; n < arguments.length; n++) {
@@ -29,7 +29,7 @@ function g() {
             return e;
         }).apply(this, arguments);
 }
-function v(e) {
+function g(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -125,7 +125,7 @@ function E(e) {
     return (0, r.jsx)(
         s.zx,
         h(
-            v(
+            g(
                 {
                     className: b.primaryButton,
                     innerClassName: b.buttonInner,
@@ -144,7 +144,7 @@ function E(e) {
 function N(e) {
     var { guildId: n, powerup: t, compact: o, onError: u } = e,
         m = j(e, ['guildId', 'powerup', 'compact', 'onError']);
-    let { onActivate: _, isLoading: g, error: E, onShowDeactivate: N } = (0, p.ZP)(n, t),
+    let { onActivate: _, isLoading: v, error: E, onShowDeactivate: N } = (0, p.ZP)(n, t),
         Z = null != (0, d.Z)(n, t),
         { disabled: O, reason: I } = (0, c.Z)(n, t, Z);
     return (
@@ -176,8 +176,8 @@ function N(e) {
                 (0, r.jsx)(
                     s.zx,
                     h(
-                        v(
-                            h(v({}, e), {
+                        g(
+                            h(g({}, e), {
                                 className: b.secondaryButton,
                                 innerClassName: b.buttonInner,
                                 wrapperClassName: a()(b.secondaryButton, { [b.buttonWrapper]: !0 === m.grow }),
@@ -185,7 +185,7 @@ function N(e) {
                                 'aria-label': x.intl.string(Z ? f.default.TZsu1d : f.default.gSxlHR),
                                 disabled: O,
                                 onClick: Z ? N : _,
-                                submitting: g
+                                submitting: v
                             }),
                             m
                         ),
@@ -239,12 +239,12 @@ function O(e) {
     });
 }
 function I(e) {
-    var n = g(
+    var n = v(
         {},
         (function (e) {
             if (null == e) throw TypeError('Cannot destructure ' + e);
             return e;
         })(e)
     );
-    return (0, u.Z)(n.guildId) ? (0, r.jsx)(O, v({}, n)) : (0, r.jsx)(Z, v({}, n));
+    return (0, u.Z)(n.guildId) ? (0, r.jsx)(O, g({}, n)) : (0, r.jsx)(Z, g({}, n));
 }

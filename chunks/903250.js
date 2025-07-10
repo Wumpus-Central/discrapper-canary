@@ -60,8 +60,8 @@ let Z = (e) => {
             K = H.length > 0,
             q = (0, x.ZP)({ location: 'PremiumMarketingHeroHeading' }),
             X = (0, x.J1)(q),
-            Q = (0, g.rO)(),
-            J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+            J = (0, g.rO)(),
+            Q = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, i.jsx)(m.Gt, {
             value: B,
             children: (0, i.jsxs)('div', {
@@ -124,16 +124,16 @@ let Z = (e) => {
                     (0, i.jsx)('div', {
                         className: A.heroHeadingV2ArtContainer,
                         children: (0, i.jsx)(p.Z, {
-                            autoPlay: !J,
+                            autoPlay: !Q,
                             playsInline: !0,
-                            preload: J ? 'none' : 'auto',
+                            preload: Q ? 'none' : 'auto',
                             poster: R.Z,
                             loop: !0,
                             className: A.heroHeadingV2Art,
                             ref: L,
                             children: (0, i.jsx)('source', {
-                                src: Q ? P.Z : D.Z,
-                                type: Q ? I.m.MP4 : I.m.WEBM
+                                src: J ? P.Z : D.Z,
+                                type: J ? I.m.MP4 : I.m.WEBM
                             })
                         })
                     })

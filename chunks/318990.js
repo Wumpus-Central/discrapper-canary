@@ -11,7 +11,7 @@ function d() {
     let e = (0, l.e7)([o.Z], () => o.Z.affinities.slice(0, 3)),
         t = e[0],
         { avatarSrc: n, eventHandlers: d } = (0, s.Z)({
-            user: t,
+            userId: null == t ? void 0 : t.id,
             size: a.EFr.SIZE_24,
             animateOnHover: !0
         }),

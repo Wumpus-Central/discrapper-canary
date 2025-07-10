@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-let l = 10000,
+let l = 30000,
     c = 0.1;
 class u {
     clearTimeoutTimer() {
@@ -35,7 +35,7 @@ class u {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (!(0, a.M)(o.dr.QUESTS_BAR) || null === this.startTime || this.questId !== e) return;
         t || this.clearTimeoutTimer();
-        let n = Math.round(performance.now() - this.startTime);
+        let n = t ? l : Math.round(performance.now() - this.startTime);
         ((this.startTime = null),
             Math.random() > c ||
                 i.Z.distribution(

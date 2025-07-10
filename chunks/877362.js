@@ -14,8 +14,8 @@ var r = t(255367),
     f = t(343649),
     x = t(742409),
     b = t(518950),
-    g = t(271383),
-    v = t(485386),
+    v = t(271383),
+    g = t(485386),
     h = t(430824),
     j = t(594174),
     C = t(709586),
@@ -31,15 +31,15 @@ function y(e) {
     var n, t, i;
     let { guildId: u } = e,
         N = (0, s.e7)([h.Z], () => h.Z.getGuild(u)),
-        y = (0, s.e7)([v.Z], () =>
-            Object.values(v.Z.getRoles(u)).find((e) => {
+        y = (0, s.e7)([g.Z], () =>
+            Object.values(g.Z.getRoles(u)).find((e) => {
                 var n;
                 return (null == e || null == (n = e.tags) ? void 0 : n.premium_subscriber) !== void 0;
             })
         ),
         R = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
         T = null == R ? void 0 : R.id,
-        L = (0, s.e7)([g.ZP], () => (null != T ? g.ZP.getMember(u, T) : void 0), [T, u]),
+        L = (0, s.e7)([v.ZP], () => (null != T ? v.ZP.getMember(u, T) : void 0), [T, u]),
         A = (null == L ? void 0 : L.premiumSince) != null,
         k = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         {
@@ -47,7 +47,7 @@ function y(e) {
             avatarSrc: U,
             eventHandlers: M
         } = (0, b.Z)({
-            user: R,
+            userId: null == R ? void 0 : R.id,
             guildId: u,
             size: d.EFr.SIZE_40,
             animateOnHover: !k

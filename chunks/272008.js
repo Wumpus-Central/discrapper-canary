@@ -476,10 +476,12 @@ async function Y(e) {
                     url: O.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == o ? void 0 : o.uuid, m.uuid),
                     rejectWithError: !1
                 })
-            ).body;
+            ).body,
+            b = E.quest,
+            y = null != b ? (0, g.q6)(b) : void 0;
         (a.Z.dispatch({
             type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
-            quest: (0, g.q6)(E.quest),
+            quest: y,
             adDecisionData: {
                 ad_id: null == (t = E.ad_identifiers) ? void 0 : t.ad_id,
                 adset_id: null == (n = E.ad_identifiers) ? void 0 : n.adset_id,
@@ -494,8 +496,7 @@ async function Y(e) {
             placement: e
         }),
             p.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
-            _.Z.startTracking(E.quest.id),
-            u.default.track(O.rMx.QUEST_DECISION_RECEIVED, A(T({}, (0, c.Z)()), { quest_id: E.quest.id })));
+            null != y && (_.Z.startTracking(y.id), u.default.track(O.rMx.QUEST_DECISION_RECEIVED, A(T({}, (0, c.Z)()), { quest_id: y.id }))));
     } catch (t) {
         (p.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
             u.default.track(

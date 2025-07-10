@@ -29,7 +29,7 @@ var r = n(255367),
     w = n(592125),
     Z = n(720202),
     T = n(430824),
-    A = n(538397),
+    A = n(804932),
     R = n(987889),
     D = n(586694),
     L = n(981631),
@@ -90,7 +90,7 @@ function V(e) {
             avatarSrc: C,
             eventHandlers: S
         } = (0, P.Z)({
-            user: t.author,
+            userId: t.author.id,
             size: u.EFr.SIZE_32,
             guildId: null == f ? void 0 : f.id,
             animateOnHover: !0

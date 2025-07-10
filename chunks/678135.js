@@ -27,7 +27,7 @@ function A(e) {
     let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: T, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: R, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, pendingLegacyUsernameDisabled: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, showViewFullProfileButton: F = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, u.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: K, avatarDecorationSrc: z } = (0, f.Z)({
-            user: t,
+            userId: null == t ? void 0 : t.id,
             guildId: null == n ? void 0 : n.id,
             avatarDecorationOverride: C,
             avatarOverride: A,

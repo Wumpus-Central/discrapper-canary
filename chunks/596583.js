@@ -29,7 +29,7 @@ let b = (e, t) => {
     N = (e) => {
         let { user: t, trialCreationResult: r, onClose: i } = e,
             { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
-                user: t,
+                userId: null == t ? void 0 : t.id,
                 size: d.EFr.SIZE_56
             }),
             o = m.ZP.getName(t),

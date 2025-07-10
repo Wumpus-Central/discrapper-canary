@@ -117,8 +117,8 @@ function G() {
         K = (0, O.v4)({ location: 'settings' }),
         q = (0, o.Q)(),
         X = (0, j.Zy)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        Q = (0, r.e7)([T.Z], () => T.Z.hasLibraryApplication()),
-        J = (0, r.e7)([v.default], () => v.default.hasTOTPEnabled()),
+        J = (0, r.e7)([T.Z], () => T.Z.hasLibraryApplication()),
+        Q = (0, r.e7)([v.default], () => v.default.hasTOTPEnabled()),
         $ = D.Sb.useSetting(),
         ee = (0, h.Z)(),
         { hypeSquadRemoved: et } = p.Z.useExperiment({ location: 'settings' }),
@@ -160,8 +160,8 @@ function G() {
                 paymentsBlocked: q,
                 isEligibleForQuests: X,
                 isStricterMessageRequestsEnabled: ee,
-                hasLibraryApplication: Q,
-                hasTOTPEnabled: J,
+                hasLibraryApplication: J,
+                hasTOTPEnabled: Q,
                 developerMode: $,
                 isAdultUser: en,
                 hasSecureFramesVerifiedUserIds: ei,
@@ -175,7 +175,7 @@ function G() {
                 isInputProfileCustom: ed,
                 isGoreContentFilteringEnabled: eu
             }),
-        [$, G, er, es, Q, ei, J, et, L, en, X, K, Y, z, U, W, ee, B, q, H, R, S, ea, el, eo, ec, ed, eu]
+        [$, G, er, es, J, ei, Q, et, L, en, X, K, Y, z, U, W, ee, B, q, H, R, S, ea, el, eo, ec, ed, eu]
     );
 }
 function F(e) {

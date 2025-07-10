@@ -49,7 +49,7 @@ function C(e) {
             eventHandlers: v,
             isAnimating: O
         } = (0, m.Z)({
-            user: b,
+            userId: null == b ? void 0 : b.id,
             size: l.EFr.SIZE_80,
             animateOnHover: !0
         });
