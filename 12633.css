@@ -33174,11 +33174,11 @@ body .headerAnimation_b54a5b {
 }
 
 .cardElementContainer_ceece4.visible_ceece4 {
-    height: 324px
+    min-height: 324px
 }
 
 .customPaymentElementContainer_ceece4.visible_ceece4 {
-    height: 160px
+    min-height: 160px
 }
 
 .addressElementContainer_ceece4.visible_ceece4 {
