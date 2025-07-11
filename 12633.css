@@ -42449,6 +42449,11 @@ html:not(.chat-input) .inputInner_b1f01d {
     gap: 6px
 }
 
+.link_d9ba3e:hover {
+    -webkit-text-decoration-color: var(--text-default);
+    text-decoration-color: var(--text-default)
+}
+
 :where(.contentImage__42bf5) {
     border-radius: var(--radius-xs);
     object-fit: contain
