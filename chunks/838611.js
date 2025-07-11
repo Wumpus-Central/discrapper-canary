@@ -2,7 +2,7 @@
 var r = n(392711),
     i = n(147913),
     a = n(948154),
-    o = n(854454);
+    o = n(787879);
 function s(e, t, n) {
     return (
         t in e
@@ -31,8 +31,8 @@ class c extends i.Z {
             s(
                 this,
                 'stores',
-                new Map().set(o.ZP, () => {
-                    !this.isInitialLoadComplete && o.ZP.canLoadMore(null, !0) && ((this.isInitialLoadComplete = !0), this.debouncedLoadUnreadMessages());
+                new Map().set(o.Z, () => {
+                    !this.isInitialLoadComplete && o.Z.canLoadMore(null, !0) && ((this.isInitialLoadComplete = !0), this.debouncedLoadUnreadMessages());
                 })
             ),
             (this.debouncedLoadUnreadMessages = (0, r.debounce)(this.loadUnreadMessages, l)));
