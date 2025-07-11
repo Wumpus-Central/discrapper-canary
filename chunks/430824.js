@@ -123,5 +123,5 @@ let p = new _(
             c !== s.joinedAt && null != c && t.set(n, (0, a.kH)(s, c));
         }
     },
-    i.j_.cachedIsEnabled() ? 'libdiscore' : 'typescript'
+    i.j_.getCachedKvStoreMode()
 );

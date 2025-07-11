@@ -18,7 +18,7 @@ function h(e) {
             title: h,
             body: f,
             assetUrl: b,
-            button: x,
+            action: x,
             caretConfig: _ = {
                 position: 'bottom',
                 align: 'center'
@@ -47,7 +47,7 @@ function h(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['title', 'body', 'assetUrl', 'button', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
+        })(e, ['title', 'body', 'assetUrl', 'action', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
     let T = r.useRef(null),
         N = r.useCallback(
             () => ({
@@ -144,14 +144,18 @@ function h(e) {
                             onClick: y,
                             colorMix: !0
                         }),
-                        (0, i.jsx)(d.V, { asset: P }),
+                        (0, i.jsx)(d.V, {
+                            asset: P,
+                            size: 'video'
+                        }),
                         (0, i.jsx)(p.Y, {
                             title: h,
                             body: f,
                             badge: j,
-                            textLink: E
+                            textLink: E,
+                            hasBottomMargin: null != x
                         }),
-                        (0, i.jsx)(c.k, { buttons: [x] }),
+                        null != x ? (0, i.jsx)(c.k, { actions: [x] }) : null,
                         (0, i.jsx)(u.$, { caretConfig: _ })
                     ]
                 })

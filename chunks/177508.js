@@ -1003,10 +1003,8 @@ function er() {
         [D, w] = r.useState(!1),
         [M, U] = r.useState(!1),
         [V, G] = r.useState(!1),
-        F = r.useRef(null),
-        H = r.useRef(null),
-        z = r.useRef(null),
-        W = r.useRef(null),
+        [F, H] = r.useState(!1),
+        [z, W] = r.useState(!1),
         Y = r.useRef(null),
         K = r.useRef(null),
         q = r.useRef(null),
@@ -1020,8 +1018,14 @@ function er() {
         ei = r.useRef(null),
         er = r.useRef(null),
         es = r.useRef(null),
-        ea = r.useCallback(() => {
-            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), T(!1), I(!1), A(!1), R(!1), w(!1), U(!1), G(!1));
+        ea = r.useRef(null),
+        el = r.useRef(null),
+        eo = r.useRef(null),
+        ec = r.useRef(null),
+        ed = r.useRef(null),
+        eu = r.useRef(null),
+        em = r.useCallback(() => {
+            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), T(!1), I(!1), A(!1), R(!1), w(!1), U(!1), G(!1), H(!1), W(!1));
         }, []);
     return (0, i.jsxs)('div', {
         className: Z.section,
@@ -1031,9 +1035,9 @@ function er() {
                 children: 'Popovers'
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: F,
+                targetElementRef: Y,
                 shouldShow: e,
-                onRequestClose: ea,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1046,17 +1050,17 @@ function er() {
                     alt: 'Small placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Button',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: H,
+                targetElementRef: K,
                 shouldShow: n,
-                onRequestClose: ea,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1068,17 +1072,34 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Button',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: z,
+                targetElementRef: q,
                 shouldShow: a,
-                onRequestClose: ea,
+                onRequestClose: em,
+                caretConfig: {
+                    position: 'bottom',
+                    align: 'center'
+                },
+                title: 'Header',
+                body: 'Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod.',
+                actions: [
+                    {
+                        text: 'Button',
+                        onClick: em
+                    }
+                ]
+            }),
+            (0, i.jsx)(C.J2, {
+                targetElementRef: X,
+                shouldShow: o,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1090,10 +1111,10 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Button',
-                        onClick: ea
+                        onClick: em
                     }
                 ],
                 textLink: {
@@ -1103,9 +1124,9 @@ function er() {
                 }
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: W,
-                shouldShow: o,
-                onRequestClose: ea,
+                targetElementRef: J,
+                shouldShow: d,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1117,23 +1138,39 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Primary',
-                        onClick: ea,
+                        onClick: em,
                         variant: 'primary'
                     },
                     {
                         text: 'Secondary',
-                        onClick: ea,
+                        onClick: em,
                         variant: 'secondary'
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: Y,
-                shouldShow: d,
-                onRequestClose: ea,
+                targetElementRef: Q,
+                shouldShow: m,
+                onRequestClose: em,
+                caretConfig: {
+                    position: 'bottom',
+                    align: 'center'
+                },
+                title: 'No Actions',
+                body: 'This popover has no action buttons, just content to display.',
+                asset: (0, i.jsx)('img', {
+                    src: k.Z,
+                    alt: 'Medium placeholder'
+                }),
+                badge: 'new'
+            }),
+            (0, i.jsx)(C.J2, {
+                targetElementRef: $,
+                shouldShow: g,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'top',
                     align: 'end'
@@ -1145,17 +1182,17 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Got it',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: K,
-                shouldShow: m,
-                onRequestClose: ea,
+                targetElementRef: ee,
+                shouldShow: f,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'left',
                     align: 'start'
@@ -1167,17 +1204,17 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'early_access',
-                buttons: [
+                actions: [
                     {
                         text: 'Close',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: q,
-                shouldShow: g,
-                onRequestClose: ea,
+                targetElementRef: et,
+                shouldShow: x,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'custom',
@@ -1190,17 +1227,17 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'beta',
-                buttons: [
+                actions: [
                     {
                         text: 'Amazing!',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: X,
-                shouldShow: f,
-                onRequestClose: ea,
+                targetElementRef: en,
+                shouldShow: j,
+                onRequestClose: em,
                 position: 'right',
                 caretConfig: {
                     position: 'left',
@@ -1213,17 +1250,17 @@ function er() {
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Perfect!',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: J,
-                shouldShow: x,
-                onRequestClose: ea,
+                targetElementRef: ei,
+                shouldShow: O,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1236,17 +1273,17 @@ function er() {
                 }),
                 gradientColor: 'purple',
                 badge: 'new',
-                buttons: [
+                actions: [
                     {
                         text: 'Looks Great!',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: Q,
-                shouldShow: j,
-                onRequestClose: ea,
+                targetElementRef: er,
+                shouldShow: N,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1259,17 +1296,17 @@ function er() {
                 }),
                 gradientColor: 'blue',
                 badge: 'beta',
-                buttons: [
+                actions: [
                     {
                         text: 'Nice!',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: $,
-                shouldShow: O,
-                onRequestClose: ea,
+                targetElementRef: es,
+                shouldShow: y,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1286,17 +1323,17 @@ function er() {
                     link: 'https://discord.com/nitro',
                     external: !0
                 },
-                buttons: [
+                actions: [
                     {
                         text: 'Get Nitro',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: ee,
-                shouldShow: N,
-                onRequestClose: ea,
+                targetElementRef: ea,
+                shouldShow: P,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1309,17 +1346,17 @@ function er() {
                 }),
                 badge: 'new',
                 gradientColor: 'purple',
-                buttons: [
+                actions: [
                     {
                         text: 'Try it now',
-                        onClick: ea
+                        onClick: em
                     }
                 ]
             }),
             (0, i.jsx)(C.Mb, {
-                targetElementRef: et,
-                shouldShow: y,
-                onRequestClose: ea,
+                targetElementRef: el,
+                shouldShow: D,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1329,15 +1366,15 @@ function er() {
                 assetUrl: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 badge: 'new',
                 gradientColor: 'blue',
-                button: {
+                action: {
                     text: 'Learn More',
-                    onClick: ea
+                    onClick: em
                 }
             }),
             (0, i.jsx)(v.e, {
-                targetElementRef: en,
-                shouldShow: P,
-                onRequestClose: ea,
+                targetElementRef: eo,
+                shouldShow: M,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1351,7 +1388,7 @@ function er() {
                             alt: 'Medium placeholder'
                         }),
                         badge: 'new',
-                        button: { text: 'Next' },
+                        action: { text: 'Next' },
                         gradientColor: 'blue'
                     },
                     {
@@ -1361,7 +1398,7 @@ function er() {
                             src: B.Z,
                             alt: 'Quest Rewards'
                         }),
-                        button: { text: 'Next' },
+                        action: { text: 'Next' },
                         gradientColor: 'blue'
                     },
                     {
@@ -1371,7 +1408,7 @@ function er() {
                             src: k.Z,
                             alt: 'Medium placeholder'
                         }),
-                        button: { text: 'Get Started' },
+                        action: { text: 'Get Started' },
                         gradientColor: 'blue',
                         textLink: {
                             text: 'Learn More',
@@ -1383,9 +1420,9 @@ function er() {
                 onStepChange: (e) => {}
             }),
             (0, i.jsx)(C.J2, {
-                targetElementRef: ei,
-                shouldShow: D,
-                onRequestClose: ea,
+                targetElementRef: ec,
+                shouldShow: V,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1398,18 +1435,18 @@ function er() {
                 }),
                 badge: 'new',
                 gradientColor: 'nitro-pink',
-                buttons: [
+                actions: [
                     {
                         text: 'Subscribe to Nitro',
-                        onClick: ea,
+                        onClick: em,
                         variant: 'expressive'
                     }
                 ]
             }),
             (0, i.jsx)(v.e, {
-                targetElementRef: er,
-                shouldShow: M,
-                onRequestClose: ea,
+                targetElementRef: ed,
+                shouldShow: F,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1423,7 +1460,7 @@ function er() {
                             alt: 'Medium placeholder'
                         }),
                         badge: 'new',
-                        button: { text: 'Continue' },
+                        action: { text: 'Continue' },
                         gradientColor: 'purple'
                     },
                     {
@@ -1433,7 +1470,7 @@ function er() {
                             src: B.Z,
                             alt: 'Features'
                         }),
-                        button: { text: 'Almost There' },
+                        action: { text: 'Almost There' },
                         gradientColor: 'blue'
                     },
                     {
@@ -1443,7 +1480,7 @@ function er() {
                             src: k.Z,
                             alt: 'Medium placeholder'
                         }),
-                        button: {
+                        action: {
                             text: 'Get Started',
                             variant: 'expressive'
                         },
@@ -1458,9 +1495,9 @@ function er() {
                 onStepChange: (e) => {}
             }),
             (0, i.jsx)(C.Mb, {
-                targetElementRef: es,
-                shouldShow: V,
-                onRequestClose: ea,
+                targetElementRef: eu,
+                shouldShow: z,
+                onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
                     align: 'center'
@@ -1469,9 +1506,9 @@ function er() {
                 body: 'Watch this video with our expressive button design!',
                 assetUrl: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 badge: 'new',
-                button: {
+                action: {
                     text: 'Experience More',
-                    onClick: ea,
+                    onClick: em,
                     variant: 'expressive'
                 }
             }),
@@ -1493,18 +1530,25 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Small Content',
-                                buttonRef: F,
+                                buttonRef: Y,
                                 onClick: () => {
-                                    (ea(), t(!0));
+                                    (em(), t(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Medium Content',
-                                buttonRef: H,
+                                buttonRef: K,
                                 onClick: () => {
-                                    (ea(), s(!0));
+                                    (em(), s(!0));
                                 }
+                            }),
+                            (0, i.jsx)(S.zxk, {
+                                buttonRef: q,
+                                onClick: () => {
+                                    (em(), l(!0));
+                                },
+                                text: 'No Asset'
                             })
                         ]
                     })
@@ -1528,18 +1572,25 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'External Link',
-                                buttonRef: z,
+                                buttonRef: X,
                                 onClick: () => {
-                                    (ea(), l(!0));
+                                    (em(), c(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Two Actions',
-                                buttonRef: W,
+                                buttonRef: J,
                                 onClick: () => {
-                                    (ea(), c(!0));
+                                    (em(), u(!0));
                                 }
+                            }),
+                            (0, i.jsx)(S.zxk, {
+                                buttonRef: Q,
+                                onClick: () => {
+                                    (em(), p(!0));
+                                },
+                                text: 'No Actions'
                             })
                         ]
                     })
@@ -1563,33 +1614,33 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Custom Caret API',
-                                buttonRef: Y,
+                                buttonRef: $,
                                 onClick: () => {
-                                    (ea(), u(!0));
+                                    (em(), h(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Left Side Caret',
-                                buttonRef: K,
+                                buttonRef: ee,
                                 onClick: () => {
-                                    (ea(), p(!0));
+                                    (em(), b(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Custom Offset',
-                                buttonRef: q,
+                                buttonRef: et,
                                 onClick: () => {
-                                    (ea(), h(!0));
+                                    (em(), _(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Left Center',
-                                buttonRef: X,
+                                buttonRef: en,
                                 onClick: () => {
-                                    (ea(), b(!0));
+                                    (em(), E(!0));
                                 }
                             })
                         ]
@@ -1614,25 +1665,25 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Purple Gradient',
-                                buttonRef: J,
+                                buttonRef: ei,
                                 onClick: () => {
-                                    (ea(), _(!0));
+                                    (em(), T(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Blue Gradient',
-                                buttonRef: Q,
+                                buttonRef: er,
                                 onClick: () => {
-                                    (ea(), E(!0));
+                                    (em(), I(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Nitro Pink Gradient',
-                                buttonRef: $,
+                                buttonRef: es,
                                 onClick: () => {
-                                    (ea(), T(!0));
+                                    (em(), A(!0));
                                 }
                             })
                         ]
@@ -1657,17 +1708,17 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Voice Filters',
-                                buttonRef: ee,
+                                buttonRef: ea,
                                 onClick: () => {
-                                    (ea(), I(!0));
+                                    (em(), R(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Video Media Viewer',
-                                buttonRef: et,
+                                buttonRef: el,
                                 onClick: () => {
-                                    (ea(), A(!0));
+                                    (em(), w(!0));
                                 }
                             })
                         ]
@@ -1691,9 +1742,9 @@ function er() {
                         children: (0, i.jsx)(S.zxk, {
                             variant: 'primary',
                             text: 'Multi-Step',
-                            buttonRef: en,
+                            buttonRef: eo,
                             onClick: () => {
-                                (ea(), R(!0));
+                                (em(), U(!0));
                             }
                         })
                     })
@@ -1717,25 +1768,25 @@ function er() {
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Expressive Popover',
-                                buttonRef: ei,
+                                buttonRef: ec,
                                 onClick: () => {
-                                    (ea(), w(!0));
+                                    (em(), G(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Expressive Multi-Step',
-                                buttonRef: er,
+                                buttonRef: ed,
                                 onClick: () => {
-                                    (ea(), U(!0));
+                                    (em(), H(!0));
                                 }
                             }),
                             (0, i.jsx)(S.zxk, {
                                 variant: 'primary',
                                 text: 'Expressive Video',
-                                buttonRef: es,
+                                buttonRef: eu,
                                 onClick: () => {
-                                    (ea(), G(!0));
+                                    (em(), W(!0));
                                 }
                             })
                         ]

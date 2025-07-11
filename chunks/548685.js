@@ -26,12 +26,12 @@ var r = n(255367),
     T = n(806734);
 let P = (e) => {
     var t;
-    let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: I } = e,
-        k = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        N = h.ZP.canUseCollectibles(k),
-        B = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
-        { sortType: A, setSortType: R, sortedItems: w, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, N),
-        M = (0, S.St)(w),
+    let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: k } = e,
+        I = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
+        B = h.ZP.canUseCollectibles(I),
+        N = (0, _.s)('useShopHomeSorting') && k === x.AW.HOME,
+        { sortType: A, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, B),
+        M = (0, S.St)(R),
         H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, i.e7)([p.Z], () => p.Z.isFocused()),
         V = !H && W,
@@ -43,16 +43,16 @@ let P = (e) => {
             (e) => {
                 (G({
                     isShuffling: !1,
-                    onOutroComplete: () => R(e)
+                    onOutroComplete: () => w(e)
                 }),
                     g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     }));
             },
-            [G, R, q]
+            [G, w, q]
         );
-    return null == k
+    return null == I
         ? null
         : (0, r.jsxs)('div', {
               className: a()(T.popularPicksSection, T.centeredSection),
@@ -65,7 +65,7 @@ let P = (e) => {
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: k === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
                                   D &&
                                       (0, r.jsx)(s.ua7, {
@@ -128,7 +128,7 @@ let P = (e) => {
                           (0, r.jsxs)('div', {
                               className: T.headerRight,
                               children: [
-                                  B &&
+                                  N &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
@@ -144,8 +144,8 @@ let P = (e) => {
                                               })
                                           ]
                                       }),
-                                  I === x.AW.HOME &&
-                                      (B
+                                  k === x.AW.HOME &&
+                                      (N
                                           ? (0, r.jsx)(s.zxk, {
                                                 variant: 'secondary',
                                                 text: j.intl.string(j.t.X3tnc3),
@@ -191,8 +191,8 @@ let P = (e) => {
                                         children: (0, r.jsx)(v.Z, {
                                             product: e,
                                             category: l,
-                                            user: k,
-                                            tab: I,
+                                            user: I,
+                                            tab: k,
                                             className: n
                                         })
                                     },

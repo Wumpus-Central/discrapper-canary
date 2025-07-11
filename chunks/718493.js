@@ -4,6 +4,7 @@ b.a(_, async function (_, a) {
             b.d(e, {
                 BlockedDomainsStore: () => c.dJ,
                 ExperimentCacher: () => c.vz,
+                WasmCacheableExperimentConfig: () => c.qJ,
                 __wbg_abort_410ec47a64ac6117: () => c.nM,
                 __wbg_abort_775ef1d17fc65868: () => c.Zk,
                 __wbg_append_8c7dd8d641a5f01b: () => c.pC,
@@ -72,9 +73,9 @@ b.a(_, async function (_, a) {
                 __wbg_value_cd1ffa7b1ab794f1: () => c.xb,
                 __wbg_warn_2159aed0435b2f46: () => c.fw,
                 __wbindgen_cb_drop: () => c.G6,
-                __wbindgen_closure_wrapper1324: () => c.wS,
-                __wbindgen_closure_wrapper638: () => c.hC,
-                __wbindgen_closure_wrapper692: () => c.I$,
+                __wbindgen_closure_wrapper1319: () => c.bu,
+                __wbindgen_closure_wrapper628: () => c.ok,
+                __wbindgen_closure_wrapper682: () => c.gL,
                 __wbindgen_debug_string: () => c.fY,
                 __wbindgen_init_externref_table: () => c.xQ,
                 __wbindgen_is_function: () => c.o$,
@@ -92,8 +93,8 @@ b.a(_, async function (_, a) {
                 rustMultiply: () => c.rs
             }));
         var c = b(981),
-            d = _([c]);
-        ((c = (d.then ? (await d)() : d)[0]), a());
+            n = _([c]);
+        ((c = (n.then ? (await n)() : n)[0]), a());
     } catch (_) {
         a(_);
     }

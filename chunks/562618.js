@@ -18,10 +18,10 @@ let d = (e) => {
 };
 function u(e) {
     var t;
-    let { title: n, body: r, badge: o, className: u, textLink: m } = e,
-        p = null == (t = null == m ? void 0 : m.external) || t;
+    let { title: n, body: r, badge: o, className: u, textLink: m, hasBottomMargin: p = !1 } = e,
+        g = null == (t = null == m ? void 0 : m.external) || t;
     return (0, i.jsxs)('div', {
-        className: s()(c.header, u),
+        className: s()(c.header, u, { [c.hasActions]: p }),
         children: [
             (0, i.jsxs)('div', {
                 children: [
@@ -62,8 +62,8 @@ function u(e) {
             null != m &&
                 (0, i.jsx)(a.Anchor, {
                     href: m.link,
-                    target: p ? '_blank' : void 0,
-                    rel: p ? 'noopener noreferrer' : void 0,
+                    target: g ? '_blank' : void 0,
+                    rel: g ? 'noopener noreferrer' : void 0,
                     children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         className: c.footerLink,

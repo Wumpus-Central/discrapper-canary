@@ -4,7 +4,8 @@ n.d(t, {
     QQ: () => g,
     QY: () => y,
     Vj: () => m,
-    Vs: () => C,
+    Vs: () => v,
+    h7: () => C,
     j8: () => h,
     oO: () => _,
     qt: () => b,
@@ -157,7 +158,14 @@ function x(e) {
         searchId: e
     });
 }
-function C(e, t, n) {
+function C(e, t) {
+    r.Z.dispatch({
+        type: 'SEARCH_ADD_HISTORY',
+        searchId: e,
+        query: t
+    });
+}
+function v(e, t, n) {
     r.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

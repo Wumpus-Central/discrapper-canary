@@ -7,7 +7,7 @@ var r = n(120356),
     l = n(374415),
     o = n(669546);
 function c(e) {
-    let { buttons: t, className: n } = e;
+    let { actions: t, className: n } = e;
     return (0, i.jsx)('div', {
         className: s()(o.actionBar, n),
         children: (0, i.jsx)(l.h, {

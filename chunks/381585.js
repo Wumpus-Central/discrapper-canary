@@ -1,47 +1,47 @@
-r.d(t, {
-    k0: () => o,
+n.d(t, {
+    k0: () => i,
     sp: () => a
 });
-var n = r(255367),
-    i = r(73800);
-let l = i.createContext(null);
+var r = n(255367),
+    l = n(73800);
+let o = l.createContext(null);
 function a() {
-    return i.useContext(l);
+    return l.useContext(o);
 }
-function o(e) {
-    let { newValue: t, children: r } = e,
-        o = a(),
-        s = i.useMemo(
+function i(e) {
+    let { newValue: t, children: n } = e,
+        i = a(),
+        s = l.useMemo(
             () =>
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         ('function' == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                ((n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n));
+                                        : (e[t] = r));
                             }));
                     }
                     return e;
-                })({}, o, t),
-            [o, t]
+                })({}, i, t),
+            [i, t]
         );
-    return (0, n.jsx)(l.Provider, {
+    return (0, r.jsx)(o.Provider, {
         value: s,
-        children: r
+        children: n
     });
 }

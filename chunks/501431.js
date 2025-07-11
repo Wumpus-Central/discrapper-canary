@@ -60,32 +60,29 @@ function p(e, t) {
     return (n.has(t) ? n.delete(t) : n.add(t), n);
 }
 let g = {
+        sortType: i.E.RECENCY,
+        sortDirection: a.F.DESC
+    },
+    f = {
         itemTypeFilters: new Set(),
         colorFilters: new Set(),
         themeFilters: new Set(),
         orbEligible: !1,
-        sort: {
-            sortType: i.E.RECENCY,
-            sortDirection: a.F.DESC
-        },
+        sort: g,
         searchQuery: '',
         queryPageSize: 20,
         queryPageOffset: 0,
         isFetchingResults: !1,
         fullScreenOpen: !1
     },
-    f = {
-        sortType: i.E.RELEVANCE,
-        sortDirection: a.F.DESC
-    },
     h = {
-        sortType: i.E.RECENCY,
+        sortType: i.E.RELEVANCE,
         sortDirection: a.F.DESC
     },
     b = (0, l.U)(
         (0, o.XR)((e, t) =>
-            d(u({}, g), {
-                hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === h.sortType && t().sort.sortDirection === h.sortDirection,
+            d(u({}, f), {
+                hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === g.sortType && t().sort.sortDirection === g.sortDirection,
                 hasFilters: () => {
                     let { itemTypeFilters: e, colorFilters: n, themeFilters: r, orbEligible: l, searchQuery: o } = t();
                     return [e, n, r].some((e) => e.size > 0) || l || '' !== o;
@@ -93,28 +90,28 @@ let g = {
                 onToggleItemType: (t) => {
                     e((e) => ({
                         itemTypeFilters: p(e.itemTypeFilters, t),
-                        sort: e.hasFilters() ? e.sort : h,
+                        sort: e.hasFilters() ? e.sort : g,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleColor: (t) => {
                     e((e) => ({
                         colorFilters: p(e.colorFilters, t),
-                        sort: e.hasFilters() ? e.sort : f,
+                        sort: e.hasFilters() ? e.sort : h,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleTheme: (t) => {
                     e((e) => ({
                         themeFilters: p(e.themeFilters, t),
-                        sort: e.hasFilters() ? e.sort : f,
+                        sort: e.hasFilters() ? e.sort : h,
                         queryPageOffset: 0
                     }));
                 },
                 onToggleOrbEligible: () => {
                     e((e) => ({
                         orbEligible: !e.orbEligible,
-                        sort: e.hasFilters() ? e.sort : h,
+                        sort: e.hasFilters() ? e.sort : g,
                         queryPageOffset: 0
                     }));
                 },
@@ -129,7 +126,7 @@ let g = {
                 },
                 onSetSearchQuery: (t) => {
                     e((e) => {
-                        let n = e.hasFilters() ? e.sort : f;
+                        let n = e.hasFilters() || '' === t ? e.sort : h;
                         return d(u({}, e), {
                             searchQuery: t,
                             sort: n,
@@ -157,7 +154,7 @@ let g = {
                     });
                 },
                 reset: () => {
-                    e(u({}, g));
+                    e(u({}, f));
                 },
                 setFullScreenOpen: (t) => {
                     e({ fullScreenOpen: t });
@@ -215,7 +212,7 @@ let g = {
                 o = b.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
-                        !e && t && b.setState({ sort: h });
+                        !e && t && b.setState({ sort: g });
                     }
                 );
             return () => {

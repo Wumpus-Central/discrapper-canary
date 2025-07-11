@@ -157,8 +157,10 @@ class j extends s.Z {
                         let e = d.Z.getActiveStreamForUser(t, r);
                         if (null != e && e.channelId === n) {
                             if (!a && e.state !== v.jm8.ENDED) {
-                                let t = new i.V7();
-                                (t.start(C, () => (0, o.aP)((0, y.V9)(e), !1)), (A[(0, y.V9)(e)] = t));
+                                var s;
+                                let t = (0, y.V9)(e),
+                                    n = null != (s = A[t]) ? s : new i.V7();
+                                (n.start(C, () => (0, o.aP)(t, !1)), (A[t] = n));
                             }
                             if (a && e.state === v.jm8.ENDED) {
                                 D((0, y.V9)(e));

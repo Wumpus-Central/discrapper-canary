@@ -20,7 +20,7 @@ function u(e) {
             badge: g,
             asset: h,
             size: f = 'md',
-            buttons: b,
+            actions: b,
             textLink: x,
             gradientColor: _,
             onRequestClose: j,
@@ -44,7 +44,7 @@ function u(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'buttons', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
+        })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'actions', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
     let C = r.useCallback(() => {
             null == j || j();
         }, [j]),
@@ -89,17 +89,20 @@ function u(e) {
                             onClick: v,
                             colorMix: null != _
                         }),
-                        (0, i.jsx)(l.V, {
-                            asset: h,
-                            size: f
-                        }),
+                        null != h
+                            ? (0, i.jsx)(l.V, {
+                                  asset: h,
+                                  size: f
+                              })
+                            : null,
                         (0, i.jsx)(d.Y, {
                             title: u,
                             body: m,
                             badge: g,
-                            textLink: x
+                            textLink: x,
+                            hasBottomMargin: null != b
                         }),
-                        (0, i.jsx)(a.k, { buttons: b }),
+                        null != b && b.length > 0 ? (0, i.jsx)(a.k, { actions: b }) : null,
                         (0, i.jsx)(o.$, { caretConfig: p })
                     ]
                 })

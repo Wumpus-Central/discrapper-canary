@@ -33,9 +33,9 @@ function E(e) {
             },
             [n, j, u, P, m]
         ),
-        I = (0, p.F)('CollectiblesContent'),
-        { searchError: k } = (0, g.a)();
-    return I && null != k
+        k = (0, p.F)('CollectiblesContent'),
+        { searchError: I } = (0, g.a)();
+    return k && null != I
         ? (0, r.jsx)(C.Z, {})
         : null != y
           ? (0, r.jsx)(b.Z, {

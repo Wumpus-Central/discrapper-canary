@@ -29,5 +29,6 @@ e.exports = {
     filterBar: 'filterBar__6db1d',
     filterButton: 'filterButton__6db1d',
     controlsRightSide: 'controlsRightSide__6db1d',
-    controlsLeftSide: 'controlsLeftSide__6db1d'
+    controlsLeftSide: 'controlsLeftSide__6db1d',
+    sortBy: 'sortBy__6db1d'
 };

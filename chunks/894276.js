@@ -1,10 +1,14 @@
-n.d(t, {
-    IZ: () => o,
-    j_: () => s,
-    o$: () => l
-});
-var r = n(668757);
-function i(e, t, n) {
+(n.d(t, {
+    IZ: () => d,
+    Re: () => s,
+    j_: () => f
+}),
+    n(953529),
+    n(539854));
+var r = n(512722),
+    i = n.n(r),
+    a = n(668757);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,17 +21,61 @@ function i(e, t, n) {
         e
     );
 }
-class a {
-    cachedIsEnabled() {
-        return (0, r.X6)() && (0, r.Md)().isExperimentIdEnabled(this.id);
+let s = [],
+    l = Symbol('unknown');
+class c {
+    getCachedConfig() {
+        return (this.cachedConfig === l && ((0, a.X6)() ? (this.cachedConfig = (0, a.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)), this.cachedConfig);
     }
-    setDiscordExperiment(e) {
-        this._discordExperiment = e;
+    setExperiment(e) {
+        this.inner = e;
     }
-    constructor(e, t) {
-        (i(this, 'id', void 0), i(this, 'feature', void 0), i(this, '_discordExperiment', void 0), (this.id = e), (this.feature = t), (this.id = e), (this.feature = t), (this._discordExperiment = null));
+    getCurrentConfig() {
+        return (i()(null != this.inner, 'experiment must be set before calling getCurrentConfig'), this.inner.getCurrentConfig({ location: 'default' }));
+    }
+    constructor(e) {
+        (o(this, 'id', void 0), o(this, 'inner', void 0), o(this, 'cachedConfig', void 0), (this.id = e), (this.inner = null), (this.cachedConfig = l), s.push(this));
     }
 }
-let o = new a('2025-05_libdiscore_notestore', 'NoteStore'),
-    s = new a('2025-07_libdiscore_guildstore', 'GuildStore'),
-    l = [o, s];
+class u extends c {
+    getCachedKvStoreMode() {
+        var e;
+        let t = this.getCachedConfig();
+        switch (null != (e = null == t ? void 0 : t.treatmentId) ? e : -1) {
+            case 1:
+                return 'typescript-libdiscore-dual-read';
+            case 2:
+                return 'libdiscore';
+            default:
+                return 'typescript';
+        }
+    }
+    isEnabled() {
+        let e = this.getCachedConfig();
+        return void 0 !== e && e.treatmentId > 0;
+    }
+    getLabel() {
+        return 'libdiscore KVStore['.concat(this.storeName, '] Migration');
+    }
+    getTreatments() {
+        return [
+            {
+                treatmentId: 0,
+                label: 'Use typescript as the source of truth'
+            },
+            {
+                treatmentId: 1,
+                label: 'Typescript <-> libdiscore Dual Read, Typescript is the source of truth'
+            },
+            {
+                treatmentId: 2,
+                label: 'Use libdiscore as the source of truth'
+            }
+        ];
+    }
+    constructor(e, t) {
+        (super(e), o(this, 'storeName', void 0), (this.storeName = t));
+    }
+}
+let d = new u('2025-05_libdiscore_notestore', 'NoteStore'),
+    f = new u('2025-07_libdiscore_guildstore', 'GuildStore');

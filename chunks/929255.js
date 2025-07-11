@@ -53,7 +53,16 @@ function E(e) {
                                     (0, r.jsxs)('div', {
                                         className: v.controlsRightSide,
                                         children: [
-                                            (0, r.jsx)(f.ZP, {}),
+                                            (0, r.jsxs)('div', {
+                                                className: v.sortBy,
+                                                children: [
+                                                    (0, r.jsx)(s.Text, {
+                                                        variant: 'text-md/semibold',
+                                                        children: O.intl.string(O.t.uaX709)
+                                                    }),
+                                                    (0, r.jsx)(f.Z, {})
+                                                ]
+                                            }),
                                             (0, r.jsx)(i.zx, {
                                                 onClick: () => P((e) => !e),
                                                 look: i.iL.OUTLINED,

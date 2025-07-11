@@ -59,7 +59,7 @@ let P = (e) => {
                     isFullScreen: u
                 }
             ),
-            I = l.useCallback(() => {
+            k = l.useCallback(() => {
                 L();
             }, [L]);
         if (
@@ -79,7 +79,7 @@ let P = (e) => {
             null != j)
         )
             return (0, r.jsx)(h.Z, {
-                onRetry: I,
+                onRetry: k,
                 errorOrigin: h.i.SHOP_PAGE,
                 errorMessage: j.message
             });
@@ -105,7 +105,7 @@ let P = (e) => {
                     })
                 ]
             });
-        let k = (e, t) => {
+        let I = (e, t) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
@@ -180,7 +180,7 @@ let P = (e) => {
                 t
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => k(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => I(e, t)) });
     },
     L = (e) => {
         let { isFullScreen: t, scrollerRef: n, handleTransition: o, tab: i, transitionState: g } = e,

@@ -99,7 +99,7 @@ function L(e, t) {
 let x = (e) => {
     let { emojiDescriptors: t, emojiSize: a, onSelect: C, onSelectSoundmoji: P, onInspect: L, surrogateCodePoint: x, getEmojiItemProps: M, getEmojiRowProps: k, isScrolling: j, isUsingKeyboardNavigation: U, rowIndex: G, allowAnimatedEmoji: B, showEmojiFavoriteTooltip: V, channelGuildId: F, category: Z, selectedItemClassName: H, channelId: Y, messageId: W, isBurstReaction: K, inNitroLockedSection: z, handleScrollUpOnSectionCollapse: q } = e,
         { enabled: X } = O.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-        Q = (0, d.h)({
+        { enabled: Q } = (0, d.q)({
             location: 'emoji_picker_list_row',
             autoTrackExposure: !1
         }),

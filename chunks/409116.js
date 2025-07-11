@@ -1,92 +1,92 @@
-r.d(t, { F: () => p });
-var n = r(255367);
-r(73800);
-var i = r(120356),
-    l = r.n(i),
-    a = r(481060),
-    o = r(937615),
-    s = r(884697),
-    c = r(388032),
-    u = r(864356);
+n.d(t, { F: () => p });
+var r = n(255367);
+n(73800);
+var l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    i = n(937615),
+    s = n(884697),
+    c = n(388032),
+    u = n(864356);
 function d() {
     return (d =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var r = arguments[t];
-                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         }).apply(this, arguments);
 }
 let p = (e) => {
     let {
-            price: { amount: t, currency: r },
-            nitroIconType: i,
+            price: { amount: t, currency: n },
+            nitroIconType: l,
             nitroIconSize: p = 'md',
-            className: v,
-            discount: b = s.f_,
-            variant: f = 'heading-md/semibold'
+            className: g,
+            discount: f = s.f_,
+            variant: h = 'heading-md/semibold'
         } = e,
-        m = (0, o.qr)(t, r),
-        h =
-            b !== s.f_ && b.discountPercentage >= 5
-                ? (0, n.jsxs)(n.Fragment, {
+        b = (0, i.qr)(t, n),
+        m =
+            f !== s.f_ && f.discountPercentage >= 5
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          m,
-                          (0, n.jsx)(a.Text, {
-                              variant: f,
+                          b,
+                          (0, r.jsx)(a.Text, {
+                              variant: h,
                               color: 'text-feedback-positive',
                               className: u.discount,
-                              children: ' (-'.concat(b.discountPercentage, '%)')
+                              children: ' (-'.concat(f.discountPercentage, '%)')
                           })
                       ]
                   })
-                : (0, n.jsx)(a.Text, {
-                      variant: f,
-                      children: m
+                : (0, r.jsx)(a.Text, {
+                      variant: h,
+                      children: b
                   });
-    return (0, n.jsxs)(a.X6q, {
-        variant: f,
-        className: l()(u.container, v),
+    return (0, r.jsxs)(a.X6q, {
+        variant: h,
+        className: o()(u.container, g),
         children: [
-            'tooltip' === i
-                ? (0, n.jsx)(a.ua7, {
+            'tooltip' === l
+                ? (0, r.jsx)(a.ua7, {
                       text: c.intl.string(c.t.MPFyJy),
                       'aria-label': c.intl.string(c.t.X3Ekj4),
                       children: (e) => {
                           var t,
-                              r,
-                              i = d(
+                              n,
+                              l = d(
                                   {},
                                   (function (e) {
                                       if (null == e) throw TypeError('Cannot destructure ' + e);
                                       return e;
                                   })(e)
                               );
-                          return (0, n.jsx)(
+                          return (0, r.jsx)(
                               a.SrA,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
-                                      var r = null != arguments[t] ? arguments[t] : {},
-                                          n = Object.keys(r);
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
                                       ('function' == typeof Object.getOwnPropertySymbols &&
-                                          (n = n.concat(
-                                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          n.forEach(function (t) {
-                                              var n;
-                                              ((n = r[t]),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              ((r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: n,
+                                                            value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = n));
+                                                      : (e[t] = r));
                                           }));
                                   }
                                   return e;
@@ -95,33 +95,33 @@ let p = (e) => {
                                       size: p,
                                       color: 'currentColor'
                                   },
-                                  i
+                                  l
                               )),
-                              (r = r = { className: u.nitroIcon }),
+                              (n = n = { className: u.nitroIcon }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                   : (function (e, t) {
-                                        var r = Object.keys(e);
+                                        var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var n = Object.getOwnPropertySymbols(e);
-                                            r.push.apply(r, n);
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
                                         }
-                                        return r;
-                                    })(Object(r)).forEach(function (e) {
-                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                        return n;
+                                    })(Object(n)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                     }),
                               t)
                           );
                       }
                   })
-                : 'default' === i
-                  ? (0, n.jsx)(a.SrA, {
+                : 'default' === l
+                  ? (0, r.jsx)(a.SrA, {
                         size: p,
                         color: 'currentColor',
                         className: u.nitroIcon
                     })
                   : null,
-            h
+            m
         ]
     });
 };

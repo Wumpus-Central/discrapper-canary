@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(979554),
@@ -26,23 +26,23 @@ var r = n(255367),
     T = n(283727),
     P = n(266058),
     L = n(719138);
-function I(e) {
+function k(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: I, scrollerRef: k, tab: N } = e,
-        B = (0, d.sp)(),
-        A = null != (t = null == B ? void 0 : B.sessionId) ? t : '',
-        { noCache: R, includeUnpublished: w } = (0, _.Z)(),
+    let { isFetchingCategories: n, isFullScreen: k, scrollerRef: I, tab: B } = e,
+        N = (0, d.sp)(),
+        A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
+        { noCache: w, includeUnpublished: R } = (0, _.Z)(),
         Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         F = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [D, M] = l.useState(1),
         H = () => {
             var e;
-            null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
+            null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
         V = (0, i.ap)(W),
         [U, G, z] = l.useMemo(() => {
-            switch (N) {
+            switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [O.intl.string(O.t.dRZYND), V ? y.Z : x.Z, o.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
@@ -52,7 +52,7 @@ function I(e) {
                 case C.AW.BUNDLES:
                     return [O.intl.string(O.t.FYFppq), V ? S.Z : E.Z, o.Z.BUNDLE];
             }
-        }, [N, V]),
+        }, [B, V]),
         q = (0, g.a)(),
         Y = l.useMemo(
             () =>
@@ -69,10 +69,10 @@ function I(e) {
         (0, h.n)({
             sessionId: A,
             checkpoint: h.a.SHOP_MOUNTED,
-            tab: N,
-            isFullScreen: I,
-            unpublishedCategoriesShown: w,
-            cacheDisabled: R
+            tab: B,
+            isFullScreen: k,
+            unpublishedCategoriesShown: R,
+            cacheDisabled: w
         });
     }, []),
     l.useEffect(() => {
@@ -80,12 +80,12 @@ function I(e) {
             (0, h.n)({
                 sessionId: A,
                 checkpoint: h.a.SHOP_RENDERED,
-                tab: N,
-                isFullScreen: I,
-                unpublishedCategoriesShown: w,
-                cacheDisabled: R
+                tab: B,
+                isFullScreen: k,
+                unpublishedCategoriesShown: R,
+                cacheDisabled: w
             });
-    }, [A, I, w, R, n, N]),
+    }, [A, k, R, w, n, B]),
     n || null == Z)
         ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
@@ -114,7 +114,7 @@ function I(e) {
                                                 product: e,
                                                 user: Z,
                                                 category: n,
-                                                tab: N
+                                                tab: B
                                             },
                                             e.skuId
                                         )

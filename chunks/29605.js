@@ -380,11 +380,10 @@ let z = d().throttle(h.OQ, 1000),
                 return [n, r];
             }, [f, e.id]),
             V = Math.max(D - G.length, D - F.length),
-            Y =
-                (0, O.h)({
-                    location: 'guild_settings',
-                    autoTrackExposure: !0
-                }) && V > 0;
+            { enabled: Y } = (0, O.q)({
+                location: 'guild_settings',
+                autoTrackExposure: !0
+            });
         (i.useEffect(() => {
             x && $();
         }, [x]),
@@ -469,7 +468,8 @@ let z = d().throttle(h.OQ, 1000),
                                               (0, r.jsx)(p.zxk, {
                                                   variant: 'primary',
                                                   text: U.intl.string(U.t.DU0dy8),
-                                                  onClick: K
+                                                  onClick: K,
+                                                  disabled: 0 === V
                                               }),
                                               (0, r.jsx)(p.Text, {
                                                   variant: 'text-xs/normal',
