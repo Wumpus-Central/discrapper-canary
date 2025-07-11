@@ -2395,22 +2395,33 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .buttonChildrenWrapper__6af3a {
-    align-items: center;
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
-    overflow: hidden;
     position: relative;
     width: 100%
 }
 
-.buttonChildren__6af3a {
+.buttonChildren__6af3a,
+.buttonChildrenWrapper__6af3a {
     align-items: center;
     display: flex;
+    overflow: hidden
+}
+
+.buttonChildren__6af3a {
     gap: var(--space-4);
-    opacity: 1;
-    transition: opacity .2s ease-out, transform .2s ease-out
+    text-overflow: ellipsis;
+    transition: opacity .2s ease-out, transform .2s ease-out;
+    white-space: nowrap
+}
+
+.icon__6af3a {
+    flex-shrink: 0
+}
+
+.buttonChildren__6af3a {
+    opacity: 1
 }
 
 .buttonChildren__6af3a.loading__6af3a {
@@ -2768,6 +2779,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .expressiveWrapper__6af3a {
     --__glow-amount: 8px;
     display: flex;
+    max-width: 100%;
     position: relative;
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -2776,7 +2788,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .fullWidth__6af3a {
     flex: 1;
-    width: auto
+    width: 100%
 }
 
 .rounded__6af3a {
