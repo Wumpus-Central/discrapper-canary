@@ -14110,6 +14110,7 @@ svg.radioIcon_c1e9c4 {
     text-decoration: underline
 }
 
+.root,
 :root {
     --__spoiler-background-color--hidden: var(--spoiler-hidden-background);
     --__spoiler-background-color--hidden--hover: var(--spoiler-hidden-background-hover);
