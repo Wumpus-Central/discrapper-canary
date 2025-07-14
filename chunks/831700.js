@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(846519),
+    s = n(442837),
+    a = n(846519),
     c = n(481060),
     u = n(475179),
     d = n(239091),
@@ -158,7 +158,7 @@ class en extends F.ZP {
             : (0, r.jsx)(c.ua7, {
                   text: Q.intl.string(Q.t.gpF6QU),
                   children: (t) => {
-                      let { onMouseEnter: n, onMouseLeave: i, onFocus: l, onBlur: a } = t;
+                      let { onMouseEnter: n, onMouseLeave: i, onFocus: l, onBlur: s } = t;
                       return (0, r.jsx)(c.P3F, {
                           className: o()(J.iconItem, J.alwaysShown),
                           onClick: () => {
@@ -168,7 +168,7 @@ class en extends F.ZP {
                           onMouseEnter: n,
                           onMouseLeave: i,
                           onFocus: l,
-                          onBlur: a,
+                          onBlur: s,
                           children: (0, r.jsx)(c.hh5, {
                               size: 'xs',
                               color: 'currentColor',
@@ -179,7 +179,7 @@ class en extends F.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: O, showTutorial: y, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: E, withGuildIcon: S } = this.props,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: O, showTutorial: y, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: E, withGuildIcon: S } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: N } = this.state,
             w = (0, I.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
@@ -238,8 +238,8 @@ class en extends F.ZP {
                                                             connected: n,
                                                             unread: n ? i : void 0,
                                                             resolvedUnreadSetting: l,
-                                                            mentionCount: a,
-                                                            locked: s,
+                                                            mentionCount: s,
+                                                            locked: a,
                                                             subtitle: this.renderSubtitle(),
                                                             onClick: () => {
                                                                 (this.handleClick(), null == u || u());
@@ -252,7 +252,7 @@ class en extends F.ZP {
                                                             'aria-label': (0, m.ZP)({
                                                                 channel: e,
                                                                 unread: i,
-                                                                mentionCount: a,
+                                                                mentionCount: s,
                                                                 userCount: T,
                                                                 embeddedActivitiesCount: C.length,
                                                                 isSubscriptionGated: j
@@ -310,7 +310,7 @@ class en extends F.ZP {
             }),
             $(this, 'ref', i.createRef()),
             $(this, 'channelItemRef', i.createRef()),
-            $(this, 'activitiesHideTimeout', new s.V7()),
+            $(this, 'activitiesHideTimeout', new a.V7()),
             $(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
@@ -369,8 +369,8 @@ class en extends F.ZP {
             }),
             $(this, 'renderPopout', () => {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: i, selected: l, guild: o } = this.props,
-                    { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
-                if (a && !n && !i && !s) {
+                    { shouldShowActivities: s, shouldShowGuildVerificationPopout: a } = this.state;
+                if (s && !n && !i && !a) {
                     let n = T.SE.getSetting().includes(o.id);
                     return (0, r.jsx)(W.Z, {
                         onAction: this.closePopout,
@@ -381,7 +381,7 @@ class en extends F.ZP {
                         shouldShowSettingNudge: n
                     });
                 }
-                if (s)
+                if (a)
                     return (0, r.jsx)(x.Z, {
                         type: x.R.VOICE,
                         guildId: e.guild_id,
@@ -395,7 +395,7 @@ class en extends F.ZP {
                     return (0, r.jsx)(c.ua7, {
                         text: Q.intl.string(Q.t.ZXxLQk),
                         children: (t) => {
-                            let { onMouseEnter: i, onMouseLeave: l, onFocus: a, onBlur: s } = t;
+                            let { onMouseEnter: i, onMouseLeave: l, onFocus: s, onBlur: a } = t;
                             return (0, r.jsx)(c.P3F, {
                                 className: o()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
@@ -404,8 +404,8 @@ class en extends F.ZP {
                                 'aria-label': Q.intl.string(Q.t.ZXxLQk),
                                 onMouseEnter: i,
                                 onMouseLeave: l,
-                                onFocus: a,
-                                onBlur: s,
+                                onFocus: s,
+                                onBlur: a,
                                 children: (0, r.jsx)(c.kBi, {
                                     size: 'xs',
                                     color: 'currentColor',
@@ -423,13 +423,13 @@ class en extends F.ZP {
 }
 let er = (0, h.B)((0, p.Q)(en));
 function ei(e) {
-    let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, selected: o, collapsed: s, voiceStates: c } = e,
-        u = (0, a.cj)([k.ZP], () => ({
+    let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, selected: o, collapsed: a, voiceStates: c } = e,
+        u = (0, s.cj)([k.ZP], () => ({
             unread: k.ZP.hasUnread(n.id),
             mentionCount: k.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([U.ZP], () => U.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([R.Z, L.Z, M.Z], () => {
+        d = (0, s.e7)([U.ZP], () => U.ZP.resolveUnreadSetting(n)),
+        h = (0, s.cj)([R.Z, L.Z, M.Z], () => {
             let e = R.Z.getChannel(n.parent_id),
                 r = L.Z.getCheck(n.guild_id);
             return {
@@ -441,18 +441,18 @@ function ei(e) {
                 unverifiedAccount: !r.canChat
             };
         }),
-        p = (0, a.e7)([G.Z], () => G.Z.hasVideo(n.id)),
+        p = (0, s.e7)([G.Z], () => G.Z.hasVideo(n.id)),
         g = (0, f.ZP)(n),
         m = (0, _.ZP)(n),
         b = (0, S.qY)(n.id),
         { isSubscriptionGated: O, needSubscriptionToAccess: y } = (0, E.Z)(n.id),
         C = (0, v.Z)(),
-        j = (0, a.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
+        j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
         I = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
-            isChannelCollapsed: s,
+            isChannelCollapsed: a,
             voiceStates: c,
             isSubscriptionGated: O,
             needSubscriptionToAccess: y,

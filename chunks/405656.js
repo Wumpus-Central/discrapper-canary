@@ -1,17 +1,18 @@
 (n.d(t, {
     $G: () => T,
     BU: () => C,
-    Fr: () => x,
-    Fz: () => L,
+    Fr: () => k,
+    Fz: () => x,
     Ko: () => y,
-    Pe: () => k,
-    R6: () => M,
-    WU: () => D,
-    X3: () => j,
+    Pe: () => M,
+    R6: () => j,
+    WU: () => L,
+    X3: () => U,
     cl: () => R,
     g9: () => S,
+    j2: () => P,
     jW: () => I,
-    kG: () => w,
+    kG: () => D,
     qc: () => A,
     zV: () => N
 }),
@@ -227,31 +228,34 @@ function C(e) {
 function R(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let P = new a.ZP();
-function w(e) {
-    return P.tokenize(e);
+function P(e, t) {
+    return D(e).some((e) => e.type === t);
 }
-function D() {
-    return P.clearCache();
+let w = new a.ZP();
+function D(e) {
+    return w.tokenize(e);
 }
-function L(e) {
+function L() {
+    return w.clearCache();
+}
+function x(e) {
     return null != e ? O[e] : null;
 }
-function x(e, t) {
+function k(e, t) {
     let n = m.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!m.KA4.test(t.type));
 }
-function k() {
-    ((0, o.WK)(), P.reset(), i()(o.ZP).forOwn((e, t) => P.addRule(b({ type: t }, e))));
+function M() {
+    ((0, o.WK)(), w.reset(), i()(o.ZP).forOwn((e, t) => w.addRule(b({ type: t }, e))));
 }
-function M(e) {
+function j(e) {
     if (e === m.aib.GUILD) return !0;
     {
         let t = (0, l.a)({ location: 'isChannelFilterSupported' });
         return e === m.aib.DMS && t && !f.Z.hidePersonalInformation;
     }
 }
-function j(e) {
+function U(e) {
     var t, n;
     if (e.isGroupDM()) {
         let t = (0, s.F6)(e, _.default, d.Z);

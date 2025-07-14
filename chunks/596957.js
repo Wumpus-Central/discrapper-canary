@@ -72,7 +72,7 @@ function x(e, t) {
 }
 let w = [];
 function L() {
-    u.Z.setSection(P.pJs.ADD_FRIEND);
+    u.Z.transitionToSection(P.pJs.ADD_FRIEND, { explicit: !0 });
 }
 function R() {
     (0, c.ZDy)(async () => {
@@ -182,8 +182,8 @@ let k = function (e) {
             }
         }, [z, u]),
         q = i.useMemo(() => z.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [z]),
-        X = u === P.pJs.PENDING && q > 0 && q >= T.yf,
-        Q = i.useCallback(
+        Q = u === P.pJs.PENDING && q > 0 && q >= T.yf,
+        X = i.useCallback(
             (e) => {
                 (e.stopPropagation(), d.Z.confirmClearPendingRelationships(q));
             },
@@ -215,13 +215,13 @@ let k = function (e) {
                                       id: t,
                                       title: n
                                   }),
-                                  X &&
+                                  Q &&
                                       (0, r.jsx)(s.zx, {
                                           look: s.iL.LINK,
                                           color: s.Tt.LINK,
                                           className: A.clearButton,
                                           size: s.zx.Sizes.TINY,
-                                          onClick: Q,
+                                          onClick: X,
                                           'aria-label': j.intl.string(j.t.O8k7Oz),
                                           children: j.intl.string(j.t.O8k7Oz)
                                       })
@@ -241,7 +241,7 @@ let k = function (e) {
                           n
                       );
             },
-            [K, u, t, X, Q]
+            [K, u, t, Q, X]
         );
     if (
         (i.useEffect(() => {

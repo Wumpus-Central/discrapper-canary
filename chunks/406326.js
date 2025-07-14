@@ -1,13 +1,16 @@
-n.d(t, { Z: () => d });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    l = n(778877),
-    a = n(63063),
-    o = n(981631),
-    s = n(388032),
-    c = n(107242);
-function u(e) {
+n.d(t, { Z: () => m });
+var r = n(255367),
+    i = n(73800),
+    l = n(442837),
+    a = n(481060),
+    o = n(778877),
+    s = n(768119),
+    c = n(63063),
+    u = n(405656),
+    d = n(981631),
+    p = n(388032),
+    h = n(107242);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,63 +35,63 @@ function u(e) {
     }
     return e;
 }
-function d(e) {
+function m(e) {
     let { searchMode: t, onSearchModeChange: n } = e;
     return (0, r.jsxs)('header', {
-        className: c.searchHeader,
+        className: h.searchHeader,
         children: [
-            (0, r.jsx)(p, u({}, e)),
-            (0, r.jsxs)(i.njP, {
+            (0, r.jsx)(g, f({}, e)),
+            (0, r.jsxs)(a.njP, {
                 orientation: 'horizontal',
-                className: c.searchHeaderTabList,
+                className: h.searchHeaderTabList,
                 selectedItem: t,
                 onItemSelect: n,
                 children: [
-                    (0, r.jsx)(i.njP.Item, {
-                        id: o.QIO.NEWEST,
-                        children: s.intl.string(s.t.rLjqbW)
+                    (0, r.jsx)(a.njP.Item, {
+                        id: d.QIO.NEWEST,
+                        children: p.intl.string(p.t.rLjqbW)
                     }),
-                    (0, r.jsx)(i.njP.Item, {
-                        id: o.QIO.OLDEST,
-                        children: s.intl.string(s.t.a1BaUl)
+                    (0, r.jsx)(a.njP.Item, {
+                        id: d.QIO.OLDEST,
+                        children: p.intl.string(p.t.a1BaUl)
                     }),
-                    (0, r.jsx)(i.njP.Item, {
-                        id: o.QIO.MOST_RELEVANT,
-                        children: s.intl.string(s.t.FtR97u)
+                    (0, r.jsx)(a.njP.Item, {
+                        id: d.QIO.MOST_RELEVANT,
+                        children: p.intl.string(p.t.FtR97u)
                     })
                 ]
             })
         ]
     });
 }
-function p(e) {
+function g(e) {
     let t,
-        { isSearching: n, isIndexing: l, documentsIndexed: a } = e;
-    (l || n) &&
+        { isSearching: n, isIndexing: i, documentsIndexed: l } = e;
+    (i || n) &&
         (t = (0, r.jsx)('div', {
-            className: c.spinnerWrapper,
-            children: (0, r.jsx)(i.$jN, {
-                type: i.$jN.Type.SPINNING_CIRCLE,
-                className: c.spinner,
-                itemClassName: c.spinnerPath
+            className: h.spinnerWrapper,
+            children: (0, r.jsx)(a.$jN, {
+                type: a.$jN.Type.SPINNING_CIRCLE,
+                className: h.spinner,
+                itemClassName: h.spinnerPath
             })
         }));
-    let o = l && !n;
+    let o = i && !n;
     return (0, r.jsxs)('div', {
-        className: c.totalResults,
+        className: h.totalResults,
         role: 'status',
         children: [
             o
-                ? (0, r.jsx)(i.ua7, {
-                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: a }),
+                ? (0, r.jsx)(a.ua7, {
+                      text: p.intl.formatToPlainString(p.t['4Y3O+P'], { count: l }),
                       children: (n) => {
                           var i, l;
                           return (0, r.jsxs)(
                               'div',
-                              ((i = u({ className: c.totalResultsWrapper }, n)),
+                              ((i = f({ className: h.totalResultsWrapper }, n)),
                               (l = l =
                                   {
-                                      children: [(0, r.jsx)(h, u({}, e)), t]
+                                      children: [(0, r.jsx)(b, f({}, e)), t]
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -106,54 +109,63 @@ function p(e) {
                           );
                       }
                   })
-                : (0, r.jsx)(h, u({}, e)),
+                : (0, r.jsx)(b, f({}, e)),
             o ? null : t
         ]
     });
 }
-function h(e) {
-    let { isSearching: t, isIndexing: n, totalResults: u, searchId: d } = e,
-        p = (0, l.U)({ location: 'TotalResultsText' });
+function b(e) {
+    let { isSearching: t, isIndexing: n, totalResults: i, searchId: l } = e,
+        s = (0, o.U)({ location: 'TotalResultsText' });
     if (t)
-        return (0, r.jsx)(i.Text, {
+        return (0, r.jsx)(a.Text, {
             variant: 'text-md/medium',
             color: 'header-secondary',
-            children: s.intl.string(s.t.uixzLS)
+            children: p.intl.string(p.t.uixzLS)
         });
-    if (n)
-        return (0, r.jsx)(i.Text, {
-            variant: 'text-md/medium',
-            color: 'text-muted',
-            children: (0, r.jsx)(i.eee, {
-                className: c.helpdeskLink,
-                href: a.Z.getArticleURL(o.BhN.SEARCH_INDEXING),
-                children: s.intl.string(s.t['G3EA+/'])
-            })
-        });
-    if (d === o.aib.DMS && p) {
-        let e = u.toLocaleString();
-        return (0, r.jsxs)('div', {
-            className: c.totalResultsWithSubtitle,
-            children: [
-                (0, r.jsx)(i.Text, {
-                    variant: 'text-md/medium',
-                    color: 'header-primary',
-                    children: s.intl.format(s.t.ZGVL3t, { count: e })
-                }),
-                (0, r.jsx)(i.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-secondary',
-                    children: s.intl.string(s.t.tc619f)
-                })
-            ]
-        });
-    }
     {
-        let e = u.toLocaleString();
-        return (0, r.jsx)(i.Text, {
+        if (n)
+            return (0, r.jsx)(a.Text, {
+                variant: 'text-md/medium',
+                color: 'text-muted',
+                children: (0, r.jsx)(a.eee, {
+                    className: h.helpdeskLink,
+                    href: c.Z.getArticleURL(d.BhN.SEARCH_INDEXING),
+                    children: p.intl.string(p.t['G3EA+/'])
+                })
+            });
+        if (l === d.aib.DMS && s)
+            return (0, r.jsx)(_, {
+                totalResults: i,
+                searchId: l
+            });
+        let e = i.toLocaleString();
+        return (0, r.jsx)(a.Text, {
             variant: 'text-md/medium',
             color: 'header-primary',
-            children: s.intl.format(s.t.ZGVL3t, { count: e })
+            children: p.intl.format(p.t.ZGVL3t, { count: e })
         });
     }
+}
+function _(e) {
+    let { totalResults: t, searchId: n } = e,
+        o = t.toLocaleString(),
+        c = (0, l.e7)([s.Z], () => s.Z.getSearchResultsQueryString(n)),
+        f = i.useMemo(() => (0, u.j2)(null != c ? c : '', d.dCx.FILTER_IN), [c]);
+    return (0, r.jsxs)('div', {
+        className: h.totalResultsWithSubtitle,
+        children: [
+            (0, r.jsx)(a.Text, {
+                variant: 'text-md/medium',
+                color: 'header-primary',
+                children: p.intl.format(p.t.ZGVL3t, { count: o })
+            }),
+            !f &&
+                (0, r.jsx)(a.Text, {
+                    variant: 'text-xs/medium',
+                    color: 'text-secondary',
+                    children: p.intl.string(p.t.tc619f)
+                })
+        ]
+    });
 }

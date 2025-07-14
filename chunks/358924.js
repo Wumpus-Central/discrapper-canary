@@ -49,7 +49,7 @@ let K = {
         LARGE: 160
     },
     q = [14, 14, 12, 12, 10, 8, 6],
-    X = function (e) {
+    Q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -57,7 +57,7 @@ let K = {
             children: e
         });
     },
-    Q = function (e) {
+    X = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(Y.textContent, t),
@@ -86,7 +86,7 @@ class ee extends l.Component {
             { timestamps: n } = t;
         return null == n || !(0, _.Z)(t) || (0, E.Z)(t)
             ? null
-            : Q(
+            : X(
                   (0, b.Z)(t)
                       ? (0, i.jsx)(J, { timestamps: n })
                       : (0, i.jsx)(Z.ZP, {
@@ -134,7 +134,7 @@ class ee extends l.Component {
                               })
                           }),
                     (0, i.jsxs)('div', {
-                        children: [X(null != l && '' !== l ? l : W.intl.string(W.t['2TbM/P'])), null != a ? Q(a) : null, this.renderTimePlayed()]
+                        children: [Q(null != l && '' !== l ? l : W.intl.string(W.t['2TbM/P'])), null != a ? X(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -372,7 +372,7 @@ let ei = (e) => {
                         focusProps: { ringTarget: p },
                         children: (0, i.jsxs)('div', {
                             className: Y.voiceSectionDetails,
-                            children: [X(n.name, Y.voiceSectionText), Q(h, Y.voiceSectionText)]
+                            children: [Q(n.name, Y.voiceSectionText), X(h, Y.voiceSectionText)]
                         })
                     }),
                     (0, i.jsx)(F.Z, {
@@ -398,7 +398,7 @@ let ei = (e) => {
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        children: [X(n), Q(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))]
+                        children: [Q(n), X(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))]
                     }),
                     (0, i.jsx)(F.Z, {
                         partySize: r,
@@ -418,7 +418,7 @@ let ei = (e) => {
                     (0, i.jsx)(G.Z, { className: Y.xboxSectionIcon }),
                     (0, i.jsxs)('div', {
                         className: Y.__invalid_xboxSectionDetails,
-                        children: [X(t), Q(W.intl.string(W.t['JG9r+/']))]
+                        children: [Q(t), X(W.intl.string(W.t['JG9r+/']))]
                     })
                 ]
             })
@@ -456,7 +456,7 @@ let ei = (e) => {
                           })
                         : (0, i.jsx)('div', {}),
                     (0, i.jsxs)('div', {
-                        children: [null != r ? X(r) : null, null != l ? Q(l) : null]
+                        children: [null != r ? Q(r) : null, null != l ? X(l) : null]
                     }),
                     (0, i.jsx)(F.Z, {
                         minAvatarsShown: d ? 2 : 1,
@@ -509,7 +509,7 @@ let ei = (e) => {
                             className: Y.twitchSectionIcon
                         }),
                         (0, i.jsxs)('div', {
-                            children: [X(c), null != d ? Q(d) : null]
+                            children: [Q(c), null != d ? X(d) : null]
                         }),
                         null != l
                             ? (0, i.jsx)(u.qEK, {
@@ -559,7 +559,7 @@ let ei = (e) => {
                             className: Y.applicationStreamingAvatar
                         }),
                         (0, i.jsxs)('div', {
-                            children: [X(H.ZP.getName(l)), Q(g)]
+                            children: [Q(H.ZP.getName(l)), X(g)]
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL })
                     ]

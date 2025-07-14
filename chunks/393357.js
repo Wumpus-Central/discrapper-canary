@@ -7,20 +7,20 @@ var i = t(990547),
     s = t(213609),
     l = t(353926),
     c = t(443002),
-    d = t(703656),
-    u = t(430824),
+    u = t(703656),
+    d = t(430824),
     m = t(742139),
     p = t(639777),
     _ = t(504392),
     f = t(981631);
 function x(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        x = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
-        b = (0, o.e7)([l.Z], () => l.Z.hasLoadedExperiments),
-        v = (0, p.Z)(n),
-        g = (0, d.At)(),
+        x = (0, o.e7)([d.Z], () => d.Z.getGuild(n)),
+        v = (0, o.e7)([l.Z], () => l.Z.hasLoadedExperiments),
+        b = (0, p.Z)(n),
+        g = (0, u.At)(),
         h = (0, m.V)('GuildPowerupsPage'),
-        j = !b || null == v || null == x,
+        j = !v || null == b || null == x,
         C = (0, a.ZP)(null != g ? g : []);
     return ((0, s.Z)(
         {
@@ -32,7 +32,7 @@ function x(e) {
     ),
     j)
         ? null
-        : v || h
+        : b || h
           ? (0, r.jsx)(_.Z, {
                 guildId: n,
                 powerupSkuId: t

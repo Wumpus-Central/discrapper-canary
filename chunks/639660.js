@@ -6,21 +6,21 @@ var r = t(255367),
     s = t(243778),
     l = t(430824),
     c = t(232062),
-    d = t(618460),
-    u = t(105529),
+    u = t(618460),
+    d = t(105529),
     m = t(800869),
     p = t(309945),
     _ = t(234368),
     f = t(981631),
     x = t(93841),
-    b = t(388032),
-    v = t(106180);
+    v = t(388032),
+    b = t(106180);
 function g() {
     return (0, r.jsx)('div', {
-        className: v.staffContainer,
+        className: b.staffContainer,
         children: (0, r.jsx)(i.xv, {
             variant: 'text-sm/medium',
-            children: b.intl.string(x.default.l9n4QU)
+            children: v.intl.string(x.default.l9n4QU)
         })
     });
 }
@@ -33,34 +33,34 @@ function h(e) {
         h = (0, c.W)(n, 'GuildPowerupNotificationContainer'),
         j = [];
     (j.push(a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), h && j.push(a.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let C = (0, d.Z)(n),
-        [E, N] = (0, s.US)(j),
-        Z =
+    let C = (0, u.Z)(n),
+        [E, Z] = (0, s.US)(j),
+        N =
             C.length > 0
                 ? (0, r.jsx)(p.Z, {
                       guildId: n,
                       powerups: C
                   })
                 : E === a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
-                  ? (0, r.jsx)(m.Z, { markAsDismissed: N })
+                  ? (0, r.jsx)(m.Z, { markAsDismissed: Z })
                   : E === a.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL
-                    ? (0, r.jsx)(u.Z, {
+                    ? (0, r.jsx)(d.Z, {
                           guildId: n,
                           perk: _.r.ENHANCED_ROLE_COLORS,
-                          markAsDismissed: N
+                          markAsDismissed: Z
                       })
                     : void 0;
-    return null != Z || t
+    return null != N || t
         ? (0, r.jsxs)('div', {
-              className: v.container,
+              className: b.container,
               children: [
                   (0, r.jsx)(i.xv, {
                       variant: 'eyebrow',
                       color: 'text-secondary',
-                      children: b.intl.string(x.default['3FRira'])
+                      children: v.intl.string(x.default['3FRira'])
                   }),
                   t && (0, r.jsx)(g, {}),
-                  Z
+                  N
               ]
           })
         : null;

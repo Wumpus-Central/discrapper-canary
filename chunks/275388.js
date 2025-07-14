@@ -6,9 +6,9 @@ var r = n(255367),
     i = n(772848),
     l = n(481060),
     o = n(396639),
-    a = n(981631);
-let s = 'orb-checkout-payment-modal-key',
-    c = () => (0, l.VXO)(s),
+    s = n(981631);
+let a = 'orb-checkout-payment-modal-key',
+    c = () => (0, l.VXO)(a),
     u = (e) => {
         var { skuId: t, analyticsLocations: c = [], analyticsSourceLocation: u, onCloseCallback: d, onCheckoutSuccess: h } = e,
             p = (function (e, t) {
@@ -96,15 +96,15 @@ let s = 'orb-checkout-payment-modal-key',
                 onCloseCallback: d,
                 onCloseRequest() {
                     (f ||
-                        (0, o._Y)(a.rMx.PAYMENT_FLOW_CANCELED, {
+                        (0, o._Y)(s.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: g,
                             skuId: t,
                             analyticsLocations: c,
                             analyticsSourceLocation: u
                         }),
-                        (0, l.Mr3)(s));
+                        (0, l.Mr3)(a));
                 },
-                modalKey: s
+                modalKey: a
             }
         );
     };

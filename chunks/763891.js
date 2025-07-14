@@ -1,34 +1,34 @@
-(n.d(t, { Z: () => k }), n(388685));
-var r = n(255367),
-    l = n(73800),
-    o = n(979554),
-    i = n(399606),
-    a = n(780384),
-    s = n(481060),
-    c = n(410030),
-    u = n(594174),
-    d = n(381585),
-    p = n(597688),
-    g = n(370039),
-    f = n(937510),
-    h = n(303952),
-    b = n(38900),
-    m = n(709999),
-    _ = n(81136),
-    C = n(215023),
-    O = n(388032),
-    v = n(484920),
-    E = n(558513),
-    S = n(662128),
-    x = n(676790),
-    y = n(665195),
-    j = n(42742),
-    T = n(283727),
-    P = n(266058),
-    L = n(719138);
+(r.d(t, { Z: () => k }), r(388685));
+var n = r(255367),
+    l = r(73800),
+    o = r(979554),
+    i = r(399606),
+    a = r(780384),
+    s = r(481060),
+    c = r(410030),
+    u = r(594174),
+    d = r(381585),
+    p = r(597688),
+    g = r(370039),
+    f = r(937510),
+    h = r(303952),
+    b = r(38900),
+    m = r(709999),
+    _ = r(81136),
+    C = r(215023),
+    O = r(388032),
+    v = r(484920),
+    E = r(558513),
+    S = r(662128),
+    y = r(676790),
+    x = r(665195),
+    j = r(42742),
+    T = r(283727),
+    P = r(266058),
+    L = r(719138);
 function k(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: k, scrollerRef: I, tab: B } = e,
+    let { isFetchingCategories: r, isFullScreen: k, scrollerRef: I, tab: B } = e,
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: w, includeUnpublished: R } = (0, _.Z)(),
@@ -44,7 +44,7 @@ function k(e) {
         [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
-                    return [O.intl.string(O.t.dRZYND), V ? y.Z : x.Z, o.Z.AVATAR_DECORATION];
+                    return [O.intl.string(O.t.dRZYND), V ? x.Z : y.Z, o.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
                     return [O.intl.string(O.t['1cNjt7']), V ? L.Z : P.Z, o.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
@@ -76,7 +76,7 @@ function k(e) {
         });
     }, []),
     l.useEffect(() => {
-        n ||
+        r ||
             (0, h.n)({
                 sessionId: A,
                 checkpoint: h.a.SHOP_RENDERED,
@@ -85,35 +85,35 @@ function k(e) {
                 unpublishedCategoriesShown: R,
                 cacheDisabled: w
             });
-    }, [A, k, R, w, n, B]),
-    n || null == Z)
-        ? (0, r.jsx)(b.Z, {})
-        : (0, r.jsxs)(r.Fragment, {
+    }, [A, k, R, w, r, B]),
+    r || null == Z)
+        ? (0, n.jsx)(b.Z, {})
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, r.jsx)('div', {
+                  (0, n.jsx)('div', {
                       style: { backgroundImage: 'url('.concat(z, ')') },
                       className: v.bannerContainer,
-                      children: (0, r.jsx)(s.X6q, {
+                      children: (0, n.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
                           children: U
                       })
                   }),
-                  (0, r.jsx)('div', {
+                  (0, n.jsx)('div', {
                       className: v.products,
                       children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
-                          let n = p.Z.getCategory(e.categorySkuId);
-                          return null == n
+                          let r = p.Z.getCategory(e.categorySkuId);
+                          return null == r
                               ? null
-                              : (0, r.jsx)(
+                              : (0, n.jsx)(
                                     d.k0,
                                     {
                                         newValue: { tilePosition: t },
-                                        children: (0, r.jsx)(
+                                        children: (0, n.jsx)(
                                             m.Z,
                                             {
                                                 product: e,
                                                 user: Z,
-                                                category: n,
+                                                category: r,
                                                 tab: B
                                             },
                                             e.skuId
@@ -124,10 +124,10 @@ function k(e) {
                       })
                   }),
                   K.length > 40 &&
-                      (0, r.jsx)('div', {
+                      (0, n.jsx)('div', {
                           className: v.paginationContainer,
-                          children: (0, r.jsx)('div', {
-                              children: (0, r.jsx)(s.DsT, {
+                          children: (0, n.jsx)('div', {
+                              children: (0, n.jsx)(s.DsT, {
                                   currentPage: F,
                                   totalCount: K.length,
                                   pageSize: 40,

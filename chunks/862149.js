@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(793030),
-    a = n(803595);
-function s() {
+    s = n(803595);
+function a() {
     let e = (e) => {
             let { className: t } = e;
-            return (0, r.jsx)('div', { className: l()(a.line, t) });
+            return (0, r.jsx)('div', { className: l()(s.line, t) });
         },
-        t = () => (0, r.jsx)('div', { className: a.avatar }),
+        t = () => (0, r.jsx)('div', { className: s.avatar }),
         n = () =>
             (0, r.jsxs)(o.Kq, {
                 direction: 'horizontal',
@@ -20,7 +20,7 @@ function s() {
                     (0, r.jsx)(t, {}),
                     (0, r.jsxs)(o.Kq, {
                         gap: 4,
-                        children: [(0, r.jsx)(e, { className: a.lineMedium }), (0, r.jsx)(e, { className: a.lineShort }), (0, r.jsx)(e, { className: a.lineLong })]
+                        children: [(0, r.jsx)(e, { className: s.lineMedium }), (0, r.jsx)(e, { className: s.lineShort }), (0, r.jsx)(e, { className: s.lineLong })]
                     })
                 ]
             });
@@ -32,7 +32,7 @@ function s() {
                     paddingTop: 8,
                     paddingBottom: 8
                 },
-                children: (0, r.jsx)(e, { className: a.lineShort })
+                children: (0, r.jsx)(e, { className: s.lineShort })
             }),
             Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(n, {}, t))
         ]

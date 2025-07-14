@@ -1,116 +1,158 @@
-(n.d(t, { I: () => N }), n(388685), n(539854));
-var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    a = n(636977),
-    s = n(442837),
-    c = n(481060),
-    u = n(37234),
-    d = n(425493),
-    p = n(410030),
-    g = n(857595),
-    f = n(607070),
-    h = n(984370),
-    b = n(341907),
-    m = n(507808),
-    _ = n(822857),
-    C = n(775451),
-    O = n(594174),
-    v = n(471731),
-    E = n(335131),
-    S = n(870289),
-    x = n(534517),
-    y = n(304742),
-    j = n(554067),
-    T = n(215023),
-    P = n(981631),
-    L = n(388032),
-    k = n(774457);
+(r.d(t, { I: () => N }), r(388685), r(539854));
+var n = r(255367),
+    l = r(73800),
+    o = r(120356),
+    i = r.n(o),
+    a = r(636977),
+    s = r(442837),
+    c = r(481060),
+    u = r(37234),
+    d = r(425493),
+    p = r(410030),
+    g = r(857595),
+    f = r(607070),
+    h = r(984370),
+    b = r(341907),
+    m = r(507808),
+    _ = r(822857),
+    C = r(775451),
+    O = r(594174),
+    v = r(471731),
+    E = r(335131),
+    S = r(870289),
+    y = r(534517),
+    x = r(304742),
+    j = r(554067),
+    T = r(215023),
+    P = r(981631),
+    L = r(388032),
+    k = r(774457);
 function I(e) {
-    let { tab: t, displayText: n, selected: l, handleTransition: o } = e;
-    return (0, r.jsx)(h.Z.Title, {
+    let { tab: t, displayText: r, selected: l, handleTransition: o } = e;
+    return (0, n.jsx)(h.Z.Title, {
         onClick: () => o(t),
         wrapperClassName: k.tabWrapper,
         className: i()(k.tab, { [k.selected]: l }),
-        children: n
+        children: r
     });
 }
 function B(e) {
-    let { tab: t, selected: n, displayText: o, handleTransition: i } = e,
-        [a, s] = l.useState(!1),
-        u = l.useRef(null),
-        [d, p] = l.useState(0),
-        h = l.useRef(!1),
-        b = (e) => {
-            (clearTimeout(d),
-                p(
+    let { tab: t, selected: r, displayText: o, handleTransition: a } = e,
+        [s, u] = l.useState(!1),
+        d = l.useRef(null),
+        [p, b] = l.useState(0),
+        m = l.useRef(!1),
+        _ = (e) => {
+            (clearTimeout(p),
+                b(
                     setTimeout(() => {
-                        s(e);
+                        u(e);
                     }, 100)
                 ),
-                e && (h.current = f.Z.keyboardModeEnabled));
+                e && (m.current = f.Z.keyboardModeEnabled));
+        },
+        C = (e) => {
+            ('Enter' === e.key || ' ' === e.key) && (e.preventDefault(), _(!0));
         };
-    return (0, r.jsx)('div', {
+    return (0, n.jsx)('div', {
         className: k.tabWithMenuContainer,
-        onMouseEnter: () => b(!0),
-        onMouseLeave: () => b(!1),
-        children: (0, r.jsx)(c.yRy, {
-            targetElementRef: u,
-            shouldShow: a,
+        onMouseEnter: () => _(!0),
+        onMouseLeave: () => _(!1),
+        children: (0, n.jsx)(c.yRy, {
+            targetElementRef: d,
+            shouldShow: s,
             position: 'bottom',
             align: 'left',
-            onRequestOpen: () => b(!0),
+            onRequestOpen: () => _(!0),
             onRequestClose: () => {
                 var e;
-                (h.current && !f.Z.keyboardModeEnabled && (0, g.Qj)(), b(!1), null == (e = u.current) || e.focus());
+                (m.current && !f.Z.keyboardModeEnabled && (0, g.Qj)(), _(!1), null == (e = d.current) || e.focus());
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(y.Z, {
-                    handleTransition: i,
+                return (0, n.jsx)(x.Z, {
+                    handleTransition: a,
                     onClose: t
                 });
             },
-            children: () =>
-                (0, r.jsxs)('div', {
-                    ref: u,
-                    className: k.tabWithMenu,
-                    onKeyDown: (e) => {
-                        ('Enter' === e.key || ' ' === e.key) && (b(!0), e.preventDefault());
-                    },
-                    children: [
-                        (0, r.jsx)(
-                            I,
-                            {
-                                tab: t,
-                                displayText: o,
-                                selected: n,
-                                handleTransition: i
-                            },
-                            t
-                        ),
-                        a
-                            ? (0, r.jsx)(c.u04, {
-                                  size: 'sm',
-                                  color: 'currentColor'
-                              })
-                            : (0, r.jsx)(c.CJ0, {
-                                  size: 'sm',
-                                  color: 'currentColor'
-                              })
-                    ]
-                })
+            children: (e, l) => {
+                var s, u;
+                let { isShown: p } = l;
+                return (0, n.jsx)(
+                    h.Z.Title,
+                    ((s = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var r = null != arguments[t] ? arguments[t] : {},
+                                n = Object.keys(r);
+                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                (n = n.concat(
+                                    Object.getOwnPropertySymbols(r).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    })
+                                )),
+                                n.forEach(function (t) {
+                                    var n;
+                                    ((n = r[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: n,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = n));
+                                }));
+                        }
+                        return e;
+                    })({}, e)),
+                    (u = u =
+                        {
+                            ref: d,
+                            onClick: () => a(t),
+                            onKeyDown: C,
+                            wrapperClassName: k.tabWrapper,
+                            className: i()(k.tab, { [k.selected]: r }),
+                            children: (0, n.jsxs)('span', {
+                                className: k.tabWithChevron,
+                                children: [
+                                    o,
+                                    p
+                                        ? (0, n.jsx)(c.u04, {
+                                              size: 'sm',
+                                              color: 'currentColor'
+                                          })
+                                        : (0, n.jsx)(c.CJ0, {
+                                              size: 'sm',
+                                              color: 'currentColor'
+                                          })
+                                ]
+                            })
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(u)).forEach(function (e) {
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
+                          }),
+                    s)
+                );
+            }
         })
     });
 }
 function N(e) {
-    let { isFullScreen: t, isLayer: n, onClose: o, selectedTab: g, handleTransition: f } = e,
-        y = (0, p.ZP)(),
+    let { isFullScreen: t, isLayer: r, onClose: o, selectedTab: g, handleTransition: f } = e,
+        x = (0, p.ZP)(),
         N = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
         { enabled: w } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
-        R = (0, x.S)('collectibles_shop_header_bar'),
+        R = (0, y.S)('collectibles_shop_header_bar'),
         Z = [
             {
                 tab: T.AW.HOME,
@@ -126,7 +168,7 @@ function N(e) {
             tab: T.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
         });
-    let D = n ? E.DR : o,
+    let D = r ? E.DR : o,
         F = g === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
         M = l.useCallback(() => {
             (t && (D(), (0, u.Ou)()),
@@ -138,41 +180,41 @@ function N(e) {
                 (0, b.navigateToQuestHome)({ fromContent: a.j.ORBS_BALANCE_MENU }));
         }, [D, t, F]),
         H = (0, S.F)('collectibles_shop_header_bar');
-    return (0, r.jsx)(c.f6W, {
-        theme: y,
+    return (0, n.jsx)(c.f6W, {
+        theme: x,
         children: (e) =>
-            (0, r.jsxs)(h.Z, {
+            (0, n.jsxs)(h.Z, {
                 disableDoubleClick: !0,
                 className: i()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),
                 innerClassname: w ? k.headerBarInner : void 0,
-                toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
+                toolbar: t || !A ? null : (0, n.jsx)(l.Fragment, {}),
                 children: [
-                    (0, r.jsxs)(c.P3F, {
+                    (0, n.jsxs)(c.P3F, {
                         className: k.shopHomeLink,
                         onClick: () => f(T.AW.HOME),
                         'aria-label': L.intl.string(L.t.pWG4zc) + ' home',
-                        children: [(0, r.jsx)(v.Z, { className: k.discordLogo }), (0, r.jsx)(h.Z.Title, { children: L.intl.string(L.t.pWG4zc) })]
+                        children: [(0, n.jsx)(v.Z, { className: k.discordLogo }), (0, n.jsx)(h.Z.Title, { children: L.intl.string(L.t.pWG4zc) })]
                     }),
-                    (0, r.jsx)('div', {
+                    (0, n.jsx)('div', {
                         className: k.tabs,
                         children: Z.map((e) => {
-                            let { tab: t, displayText: n } = e;
+                            let { tab: t, displayText: r } = e;
                             return t === T.AW.CATALOG && R
-                                ? (0, r.jsx)(
+                                ? (0, n.jsx)(
                                       B,
                                       {
                                           tab: t,
                                           selected: (0, T.RE)(g) || g === t,
-                                          displayText: n,
+                                          displayText: r,
                                           handleTransition: f
                                       },
                                       t
                                   )
-                                : (0, r.jsx)(
+                                : (0, n.jsx)(
                                       I,
                                       {
                                           tab: t,
-                                          displayText: n,
+                                          displayText: r,
                                           selected: g === t,
                                           handleTransition: f
                                       },
@@ -181,16 +223,16 @@ function N(e) {
                         })
                     }),
                     (w || t || H) &&
-                        (0, r.jsxs)('div', {
+                        (0, n.jsxs)('div', {
                             className: k.alignedRightContent,
                             children: [
                                 H &&
-                                    (0, r.jsx)(j.Z, {
+                                    (0, n.jsx)(j.Z, {
                                         handleTransition: f,
                                         selectedTab: g
                                     }),
                                 w &&
-                                    (0, r.jsx)(C.V9, {
+                                    (0, n.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
                                         analyticsPage: F,
                                         cardAlignment: C.V9.CardAlignment.END,
@@ -199,7 +241,7 @@ function N(e) {
                                         className: k.balanceWidgetMenu
                                     }),
                                 t &&
-                                    (0, r.jsx)(d.Z, {
+                                    (0, n.jsx)(d.Z, {
                                         closeAction: D,
                                         keybind: 'ESC'
                                     })

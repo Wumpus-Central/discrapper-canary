@@ -45,30 +45,32 @@ function h(e) {
 }
 let m = 24,
     g = (e) => {
-        let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: s, id: l, muted: u = !1, level: d = 1, ref: f } = e,
-            p = (0, r.jsx)(c.y5t, {
-                forceLevel: d,
+        let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: s, onKeyDown: l, id: u, muted: d = !1, level: f = 1, ref: p } = e,
+            h = (0, r.jsx)(c.y5t, {
+                forceLevel: f,
                 children: (0, r.jsx)(c.X6q, {
                     variant: 'text-md/medium',
-                    color: u ? 'header-secondary' : void 0,
+                    color: d ? 'header-secondary' : void 0,
                     className: o()(t, _.title, { [_.titleClickable]: null != s }),
-                    id: l,
+                    id: u,
                     children: i
                 })
             });
         return null != s
             ? (0, r.jsx)(c.P3F, {
-                  innerRef: f,
+                  innerRef: p,
                   onClick: s,
                   onContextMenu: a,
+                  onKeyDown: l,
                   className: o()(n, _.titleWrapper),
-                  children: p
+                  children: h
               })
             : (0, r.jsx)('div', {
-                  ref: f,
+                  ref: p,
                   className: o()(n, _.titleWrapper),
                   onContextMenu: a,
-                  children: p
+                  onKeyDown: l,
+                  children: h
               });
     },
     E = i.forwardRef(function (e, t) {

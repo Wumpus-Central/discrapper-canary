@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(388032),
     j = n(767905),
     v = n(683999),
-    _ = n(602512),
-    C = n(184476);
+    C = n(602512),
+    _ = n(184476);
 let y = {
         mass: 1,
         tension: 250,
@@ -217,7 +217,7 @@ let y = {
                     ]
                 }),
                 (0, r.jsx)('img', {
-                    src: C,
+                    src: _,
                     alt: b.intl.string(b.t.gAlJzc),
                     width: u.TJ,
                     height: u.TJ
@@ -225,7 +225,7 @@ let y = {
             ]
         });
     };
-function T(e) {
+function S(e) {
     let { guild: t } = e,
         [n, a] = (0, d.R)('report-to-mod-education-dismissed', !1),
         [o, u] = (0, d.R)('report-to-mod-education-expanded', !1),
@@ -241,7 +241,7 @@ function T(e) {
                   ? (0, r.jsxs)(s.animated.div, {
                         style: e,
                         onClick: () => u(!o),
-                        className: l()(_.container, j.container, v.mainCard),
+                        className: l()(C.container, j.container, v.mainCard),
                         children: [
                             (0, r.jsxs)('div', {
                                 className: j.inline,

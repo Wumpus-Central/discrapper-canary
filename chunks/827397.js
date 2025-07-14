@@ -1,19 +1,23 @@
-t.d(n, { Z: () => l });
+t.d(n, { Z: () => c });
 var r = t(73800),
-    i = t(481060),
-    o = t(434404),
-    a = t(535396),
-    s = t(981631);
-function l(e, n) {
+    i = t(494497),
+    o = t(481060),
+    a = t(434404),
+    s = t(535396),
+    l = t(981631);
+function c(e, n) {
     let t = r.useCallback(
         (t) => {
-            if ((t.stopPropagation(), n.type !== a.Us.LEVEL))
-                switch (((0, i.Mr3)(a.H2), n.skuId)) {
-                    case a.IN:
-                        o.Z.open(e, s.pNK.TAG, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+            if ((t.stopPropagation(), n.type !== s.Us.LEVEL))
+                switch (((0, o.Mr3)(s.H2), n.skuId)) {
+                    case s.IN:
+                        a.Z.open(e, l.pNK.TAG, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case a.If:
-                        o.Z.open(e, s.pNK.ROLES, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case s.If:
+                        a.Z.open(e, l.pNK.ROLES, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+                        return;
+                    case i.A:
+                        a.Z.open(e, l.pNK.BOOST_PERKS, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:
                         return;
@@ -21,5 +25,5 @@ function l(e, n) {
         },
         [e, n]
     );
-    return n.type === a.Us.PERK ? t : void 0;
+    return n.type === s.Us.PERK ? t : void 0;
 }

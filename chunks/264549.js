@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     c = n(714338),
     u = n(585483),
     d = n(981631),
@@ -156,9 +156,9 @@ class m extends i.PureComponent {
     }
     render() {
         let { renderSecondary: e, offsetX: t, offsetY: n, animating: i, scale: l } = this.state,
-            a = [this.renderPrimary()];
+            s = [this.renderPrimary()];
         return (
-            e && a.push(this.renderSecondary(t, n)),
+            e && s.push(this.renderSecondary(t, n)),
             (0, r.jsx)('div', {
                 className: o()(h.container, { [h.animate]: i }),
                 style: {
@@ -166,7 +166,7 @@ class m extends i.PureComponent {
                     left: this.props.left,
                     transform: 'scale('.concat(l, ')')
                 },
-                children: a
+                children: s
             })
         );
     }
@@ -177,9 +177,9 @@ class m extends i.PureComponent {
             p(this, 'state', {
                 animating: !1,
                 renderSecondary: !1,
-                scale: s().random(0.6, 1, !0),
-                offsetX: s().random(0, 140, !1) - 70,
-                offsetY: s().random(0, 140, !1) - 70
+                scale: a().random(0.6, 1, !0),
+                offsetX: a().random(0, 140, !1) - 70,
+                offsetY: a().random(0, 140, !1) - 70
             }),
             p(this, 'done', () => {
                 this.props.onAnimationComplete(this.props.componentId);
@@ -234,8 +234,8 @@ class b extends i.PureComponent {
                             m,
                             {
                                 componentId: i,
-                                top: s().random(n - 100, n + 100, !1),
-                                left: s().random(t - 200, t + 200, !1),
+                                top: a().random(n - 100, n + 100, !1),
+                                left: a().random(t - 200, t + 200, !1),
                                 onAnimationComplete: this.removeExplosion
                             },
                             i

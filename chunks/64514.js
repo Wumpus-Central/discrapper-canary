@@ -35,6 +35,7 @@ class h extends l.Z {
             p(this, 'focusedOrForegrounded', (0, u.H)()),
             p(this, 'heartbeatInterval', new r.Xp()),
             p(this, 'schedulerStarted', !1),
+            p(this, 'lastHeartbeatTimestamp', 0),
             p(this, 'maybeStartHeartbeat', () => {
                 this.heartbeatInterval.isStarted() || (this.trackHeartbeat(), this.heartbeatInterval.start(5 * o.Z.Millis.MINUTE, this.trackHeartbeat));
             }),
@@ -57,17 +58,23 @@ class h extends l.Z {
                         t.heartbeatInterval.stop());
                     return;
                 }
-                let n = (0, c.Gy)();
-                a.default.track(d.rMx.CLIENT_AD_HEARTBEAT, {
-                    client_ad_session_id: n.uuid,
-                    client_heartbeat_initialization_timestamp: n.createdAtTimestamp,
+                let n = performance.now(),
+                    r = n - t.lastHeartbeatTimestamp,
+                    i = 5 * o.Z.Millis.MINUTE;
+                if (!e && t.lastHeartbeatTimestamp > 0 && r < i) return;
+                let l = (0, c.Gy)();
+                (a.default.track(d.rMx.CLIENT_AD_HEARTBEAT, {
+                    client_ad_session_id: l.uuid,
+                    client_heartbeat_initialization_timestamp: l.createdAtTimestamp,
                     client_heartbeat_version: 2
-                });
+                }),
+                    (t.lastHeartbeatTimestamp = n));
             }),
             p(this, 'stopAnalyticHeartbeat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'DEFAULT';
                 t.schedulerStarted &&
                     ((t.schedulerStarted = !1),
+                    (t.lastHeartbeatTimestamp = 0),
                     s.Z.addBreadcrumb({
                         category: 'ad',
                         message: 'Stopping ad session heartbeat: '.concat(e)

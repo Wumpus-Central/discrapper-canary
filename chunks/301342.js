@@ -9,8 +9,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(91192),
-    s = n(442837),
+    s = n(91192),
+    a = n(442837),
     c = n(755721),
     u = n(481060),
     d = n(211739),
@@ -76,9 +76,9 @@ function I(e) {
 let P = i.memo(function (e) {
         let t,
             { channel: l, connectChannelDragSource: p, connectChannelDropTarget: y, disableManageChannels: v, position: P, sortingPosition: N, hideIcon: w, children: Z } = e,
-            T = (0, s.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
-            A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
-            R = (0, s.e7)([_.Z], () => _.Z.can(C.Plq.MANAGE_CHANNELS, l));
+            T = (0, a.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            A = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
+            R = (0, a.e7)([_.Z], () => _.Z.can(C.Plq.MANAGE_CHANNELS, l));
         t = null != N ? (P > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
         let D = i.useCallback(() => {
                 A ? (0, d.mJ)(l.id) : (0, d.c4)(l.id);
@@ -120,7 +120,7 @@ let P = i.memo(function (e) {
                             );
                     });
             }, [l]),
-            k = (0, a.JA)(l.id),
+            k = (0, s.JA)(l.id),
             { role: U, tabIndex: G } = k,
             B = (function (e, t) {
                 if (null == e) return {};
@@ -275,7 +275,7 @@ let P = i.memo(function (e) {
     }),
     Z = i.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([y.Z], () => y.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, a.e7)([y.Z], () => y.Z.isVoiceCategoryCollapsed(t.guild.id)),
             l = i.useCallback(() => {
                 n ? (0, v.s)(t.guild.id) : (0, v.M)(t.guild.id);
             }, [t.guild.id, n]);
@@ -300,7 +300,7 @@ let P = i.memo(function (e) {
     }),
     T = i.memo(function (e) {
         let { category: t, channel: n } = e,
-            i = (0, s.e7)([y.Z], () => y.Z.isVoiceCategoryCollapsed(t.guild.id));
+            i = (0, a.e7)([y.Z], () => y.Z.isVoiceCategoryCollapsed(t.guild.id));
         return i || null == n || n.record.type === C.d4z.GUILD_CATEGORY
             ? i
                 ? (0, r.jsx)('li', {

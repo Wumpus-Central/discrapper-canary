@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    a = n(481060),
-    s = n(377171),
+    s = n(481060),
+    a = n(377171),
     c = n(276952),
     u = n(682662),
     d = n(593364),
@@ -36,7 +36,7 @@ function E(e) {
         T =
             w === m.jP.LEGACY
                 ? Z
-                    ? (0, r.jsx)(a.fWl, {
+                    ? (0, r.jsx)(s.fWl, {
                           style: {
                               height: 12,
                               width: 12,
@@ -44,13 +44,13 @@ function E(e) {
                               left: -2,
                               position: 'relative'
                           },
-                          color: s.Z.STATUS_DANGER
+                          color: a.Z.STATUS_DANGER
                       })
                     : null
                 : P > 0
                   ? (0, d.N)(P)
                   : null,
-        A = w === m.jP.LEGACY ? a.xx7 : a.Dkj,
+        A = w === m.jP.LEGACY ? s.xx7 : s.Dkj,
         R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         D = i.useMemo(() => {
             if (w === m.jP.SIDEBAR) return y.Z5c.NOTIFICATIONS_INBOX(null != R ? R : void 0);
@@ -66,11 +66,11 @@ function E(e) {
                 disabled: w === m.jP.LEGACY
             }),
             (0, r.jsx)(O.Z, {
-                children: (0, r.jsx)(a.aRk, {
+                children: (0, r.jsx)(s.aRk, {
                     selected: I || E,
                     lowerBadge: T,
                     children: (0, r.jsx)(
-                        a.LYs,
+                        s.LYs,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

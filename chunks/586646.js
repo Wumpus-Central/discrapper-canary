@@ -1,30 +1,30 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(255367),
     l = n(73800),
     i = n(442837),
     o = n(481060),
-    a = n(19780),
-    s = n(571826),
+    s = n(19780),
+    a = n(571826),
     c = n(630759),
     u = n(301107),
     d = n(785792),
-    f = n(190054),
-    h = n(760373),
+    h = n(190054),
+    f = n(760373),
     p = n(388032),
     g = n(764229);
-function y(e) {
+function O(e) {
     let { channelId: t } = e,
-        n = (0, i.e7)([a.Z], () => {
+        n = (0, i.e7)([s.Z], () => {
             var e;
-            return null == (e = a.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
+            return null == (e = s.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
         }),
-        y = (0, u.W)({
+        O = (0, u.W)({
             fingerprintBase64: n,
-            chunkSize: h.y6,
-            desiredLength: h.YP
+            chunkSize: f.y6,
+            desiredLength: f.YP
         }),
-        O = l.useCallback(() => {
-            (0, s.PM)({ channelId: t });
+        N = l.useCallback(() => {
+            (0, a.PM)({ channelId: t });
         }, [t]);
     return (0, r.jsxs)('div', {
         className: g.container,
@@ -56,18 +56,18 @@ function y(e) {
                         color: 'header-primary',
                         children: p.intl.string(p.t.cTQI5u)
                     }),
-                    null != y &&
-                        (0, r.jsx)(f.H, {
-                            chunks: y,
+                    null != O &&
+                        (0, r.jsx)(h.H, {
+                            chunks: O,
                             color: o.TVs.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: O
+                            onCopy: N
                         })
                 ]
             }),
             (0, r.jsx)(d.b, {
                 className: g.code,
-                chunks: y,
-                columns: h.WK
+                chunks: O,
+                columns: f.WK
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',

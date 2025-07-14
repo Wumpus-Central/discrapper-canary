@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    a = n(596454),
-    s = n(99690),
+    s = n(596454),
+    a = n(99690),
     c = n(906732),
     u = n(812206),
     d = n(336197),
@@ -32,16 +32,16 @@ var r = n(255367),
     A = n(756688),
     R = n(886765);
 function D(e) {
-    var t, n, i, l, a;
+    var t, n, i, l, s;
     let { item: c } = e,
         u = null == (t = c.message) ? void 0 : t.content;
     if (null == u) return (0, r.jsx)('div', {});
-    let d = null != (a = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id)) ? a : new m.Z(null == (l = c.message) ? void 0 : l.author),
+    let d = null != (s = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id)) ? s : new m.Z(null == (l = c.message) ? void 0 : l.author),
         p = h.Z.parse(u);
     return (0, r.jsxs)('div', {
         className: T.messagePreviewContainer,
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(a.Z, {
                 user: d,
                 size: o.EFr.SIZE_24
             }),
@@ -100,9 +100,9 @@ function k(e) {
 }
 let U = i.memo(function (e) {
         var t;
-        let { item: l, ackedBeforeId: s } = e,
+        let { item: l, ackedBeforeId: a } = e,
             { analyticsLocations: u } = (0, c.ZP)(),
-            p = (0, x.I)(l, s),
+            p = (0, x.I)(l, a),
             g = i.useCallback(async () => {
                 if ((p || (0, v.wt)(l), null != l.item_enum && l.item_enum === C.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
@@ -179,7 +179,7 @@ let U = i.memo(function (e) {
             { emoji_id: Z, emoji_name: A } = l,
             R =
                 null != Z || null != A
-                    ? (0, r.jsx)(a.Z, {
+                    ? (0, r.jsx)(s.Z, {
                           className: T.emoji,
                           emojiId: Z,
                           emojiName: A

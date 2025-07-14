@@ -54,10 +54,10 @@ function h(e) {
             },
             [t, p]
         ),
-        [v, _] = i.useState(!1),
-        C = i.useRef(v);
+        [v, C] = i.useState(!1),
+        _ = i.useRef(v);
     (i.useLayoutEffect(() => {
-        C.current = v;
+        _.current = v;
     }, [v]),
         i.useLayoutEffect(() => {
             let e = g.current;
@@ -72,11 +72,11 @@ function h(e) {
                     }
                 );
             function n() {
-                _(!0);
+                C(!0);
             }
             function r(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
-                    (_(!1),
+                    (C(!1),
                     requestAnimationFrame(() => {
                         let e = c.current;
                         null !== e && null == x((0, s.P1)(e, o)) && b((0, s.P1)(t, 'data-grid-id'));
@@ -84,7 +84,7 @@ function h(e) {
             }
             function i() {
                 let e = g.current;
-                if (C.current || null == e) return;
+                if (_.current || null == e) return;
             }
             function a() {
                 h.current = !0;

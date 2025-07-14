@@ -3,8 +3,8 @@ var r = n(255367),
     l = n(73800),
     i = n(120356),
     o = n.n(i),
-    a = n(481060),
-    s = n(572004),
+    s = n(481060),
+    a = n(572004),
     c = n(388032),
     u = n(798665);
 function d(e) {
@@ -28,23 +28,23 @@ function d(e) {
             }
             return l;
         })(e, ['chunks', 'className', 'onCopy']);
-    let f = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [h, p] = l.useState(!1),
+    let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
+        [f, p] = l.useState(!1),
         g = l.useCallback(() => {
-            (0, s.JG)(f, () => {
+            (0, a.JG)(h, () => {
                 (p(!0), null == i || i());
             });
-        }, [i, f]),
-        y = h ? a.owK : a.TIy;
-    return (0, r.jsx)(a.P3F, {
+        }, [i, h]),
+        O = f ? s.owK : s.TIy;
+    return (0, r.jsx)(s.P3F, {
         className: o()(u.container, n),
         onClick: g,
-        children: (0, r.jsx)(a.ua7, {
-            text: h ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ),
+        children: (0, r.jsx)(s.ua7, {
+            text: f ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    y,
+                    O,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function d(e) {
                     (n = n =
                         {
                             size: 'xxs',
-                            color: h ? a.TVs.colors.TEXT_FEEDBACK_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                            color: f ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

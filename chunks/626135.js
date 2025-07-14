@@ -144,6 +144,10 @@ let B = {
         throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.is_pending]
     },
+    [m.rMx.FRIENDS_LIST_CLICKED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.tab_opened]
+    },
     [m.rMx.FRIENDS_LIST_VIEWED]: {
         throttlePeriod: D,
         throttleKeys: (e) => [e.tab_opened]

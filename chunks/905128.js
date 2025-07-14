@@ -3,7 +3,7 @@ var r,
     i = n(442837),
     a = n(570140),
     o = n(430824),
-    s = n(474936),
+    s = n(535396),
     l = n(981631);
 function c(e, t, n) {
     return (
@@ -77,7 +77,7 @@ function E(e) {
     var t;
     let n = o.Z.getGuild(e),
         r = (null == n ? void 0 : n.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.features.has(e)) && (r += t);
+    for (let [e, t] of Object.entries(s.Hk)) (null == n ? void 0 : n.features.has(e)) && (null == t.includedInLevel || n.premiumTier < t.includedInLevel) && (r += t.boostPrice);
     return r;
 }
 function b(e) {

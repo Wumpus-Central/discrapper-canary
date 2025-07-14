@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    a = n(481060),
-    s = n(377171),
+    s = n(481060),
+    a = n(377171),
     c = n(243778),
     u = n(645041),
     d = n(823379),
@@ -40,17 +40,17 @@ function v(e) {
                     p = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
                 return u.length > 0 && d < h
                     ? {
-                          trailing: (0, r.jsx)(a.P4T, {
-                              color: a.TVs.colors.STATUS_WARNING,
+                          trailing: (0, r.jsx)(s.P4T, {
+                              color: s.TVs.colors.STATUS_WARNING,
                               size: 'sm'
                           }),
                           showUnread: !0
                       }
                     : l !== p && l - p > 0
                       ? {
-                            trailing: (0, r.jsx)(a.mAB, {
+                            trailing: (0, r.jsx)(s.mAB, {
                                 count: l - p,
-                                color: s.Z.BACKGROUND_ACCENT
+                                color: a.Z.BACKGROUND_ACCENT
                             }),
                             showUnread: !0
                         }
@@ -63,7 +63,7 @@ function v(e) {
         v = (function (e, t) {
             let [n, r] = (0, c.US)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 { available: l } = (0, b.Z)(e),
-                a = i.useMemo(() => {
+                s = i.useMemo(() => {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
                         let n = h.Oe.find((e) => {
@@ -115,7 +115,7 @@ function v(e) {
                     })(e, t, l);
                     if (null != i) return i;
                 }, [e, t, n, l]),
-                [s, p] = (0, c.bf)(null != a ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
+                [a, p] = (0, c.bf)(null != s ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
             return i.useMemo(() => {
                 if (null != t) {
                     if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
@@ -123,7 +123,7 @@ function v(e) {
                             type: m.J.PERKS_AVAILABLE,
                             markAsDismissed: r
                         };
-                    if (s === o.z.GUILD_POWERUP_NOTIFICATION && null != a) {
+                    if (a === o.z.GUILD_POWERUP_NOTIFICATION && null != s) {
                         var e, i;
                         return (
                             (e = (function (e) {
@@ -150,11 +150,11 @@ function v(e) {
                                         }));
                                 }
                                 return e;
-                            })({}, a)),
+                            })({}, s)),
                             (i = i =
                                 {
                                     markAsDismissed: (e) => {
-                                        (p(e), a.markAsDismissed(e));
+                                        (p(e), s.markAsDismissed(e));
                                     }
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -173,7 +173,7 @@ function v(e) {
                         );
                     }
                 }
-            }, [t, n, r, a, s, p]);
+            }, [t, n, r, s, a, p]);
         })(e, n);
     if (null !== n && (null != p || y || null != v))
         return {

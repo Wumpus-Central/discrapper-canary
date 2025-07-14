@@ -3156,6 +3156,7 @@ var np = (function (e) {
             (e.GUILD_VIEWED = 'guild_viewed'),
             (e.GUILD_VIEWED_CLICKSTREAM = 'guild_viewed_clickstream'),
             (e.WAVE_CTA_CLICKED = 'wave_cta_clicked'),
+            (e.FRIENDS_LIST_CLICKED = 'friends_list_clicked'),
             (e.FRIENDS_LIST_VIEWED = 'friends_list_viewed'),
             (e.FRIENDS_LIST_VIEWED_CLICKSTREAM = 'friends_list_viewed_clickstream'),
             (e.FRIEND_ADD_VIEWED = 'friend_add_viewed'),

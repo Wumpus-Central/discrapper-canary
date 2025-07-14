@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(442837),
     l = n(481060),
     o = n(230711),
-    a = n(695346),
-    s = n(771845),
+    s = n(695346),
+    a = n(771845),
     c = n(88658),
     u = n(782896),
     d = n(981631),
@@ -36,8 +36,8 @@ function m(e) {
 }
 function b(e) {
     let { onClosePopout: t } = e,
-        n = a.G6.useSetting(),
-        o = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
+        n = s.G6.useSetting(),
+        o = (0, i.e7)([a.ZP], () => a.ZP.getFlattenedGuildIds()),
         d = (0, c._o)(),
         f = o.filter((e) => !d.has(e));
     return 0 === o.length

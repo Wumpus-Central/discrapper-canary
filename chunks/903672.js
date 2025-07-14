@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(524437),
+    s = n(442837),
+    a = n(524437),
     c = n(481060),
     u = n(235820),
     d = n(494404),
@@ -42,7 +42,7 @@ function T(e, t, n) {
 }
 function A(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        f = (0, a.e7)([O.Z, v.Z], () => O.Z.getChannel(v.Z.getChannelId())),
+        f = (0, s.e7)([O.Z, v.Z], () => O.Z.getChannel(v.Z.getChannelId())),
         {
             messages: m,
             hasMore: _,
@@ -50,7 +50,7 @@ function A(e) {
             guildFilter: j,
             roleFilter: S,
             everyoneFilter: x
-        } = (0, a.cj)([C.ZP], () => ({
+        } = (0, s.cj)([C.ZP], () => ({
             messages: C.ZP.getMentions(),
             hasMore: C.ZP.hasMore,
             loading: C.ZP.loading,
@@ -78,7 +78,7 @@ function A(e) {
     let k = i.useCallback(
         () =>
             (0, r.jsx)(I.Z, {
-                tab: s.X.MENTIONS,
+                tab: a.X.MENTIONS,
                 setTab: t,
                 badgeState: l,
                 closePopout: c,
@@ -129,7 +129,7 @@ function D(e) {
     let l = O.Z.getChannel(t.channel_id);
     if (null == l) return null;
     let o = y.Z.didAgree(l.getGuildId()),
-        a = !!(0, f.aC)(l) && !o;
+        s = !!(0, f.aC)(l) && !o;
     return (0, r.jsxs)('div', {
         className: w.container,
         children: [
@@ -163,7 +163,7 @@ function D(e) {
                             message: t,
                             channel: l,
                             className: w.message,
-                            hideAccessories: a,
+                            hideAccessories: s,
                             compact: _.jU.getSetting(),
                             animateAvatar: !1,
                             focusProps: Z,

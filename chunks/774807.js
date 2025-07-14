@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     o = n(455199),
-    a = n(70956),
-    s = n(709054),
+    s = n(70956),
+    a = n(709054),
     c = n(497089);
 function u(e, t, n) {
     return (
@@ -53,7 +53,7 @@ function h(e, t) {
         e
     );
 }
-let p = 90 * a.Z.Millis.DAY,
+let p = 90 * s.Z.Millis.DAY,
     f = {
         tab: null,
         localItemAcks: {},
@@ -81,7 +81,7 @@ class g extends (r = i.ZP.PersistedStore) {
         return null != (e = f.tab) ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != f.localItemAcks[e.local_id] || s.default.age(e.id) > p);
+        return null != e.local_id && (null != f.localItemAcks[e.local_id] || a.default.age(e.id) > p);
     }
     hasNewMentions() {
         return f.hasNewMentions;

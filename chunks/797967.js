@@ -134,12 +134,12 @@ let g = (e) => {
         });
     };
 function m(e) {
-    let { defaultColor: t, colors: r, value: a, onChange: i, disabled: d = !1, customPickerPosition: m = 'bottom', secondaryValue: j, onChangeGradientColors: y, isGradient: O = !1 } = e,
-        h = o.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
-        C = o.useRef(null),
+    let { defaultColor: t, colors: r, value: a, onChange: i, disabled: d = !1, customPickerPosition: m = 'bottom', secondaryValue: j, onChangeGradientColors: v, isGradient: O = !1 } = e,
+        y = o.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
+        h = o.useRef(null),
         x = o.useRef(null),
-        v = o.useRef(null),
-        [P, w] = o.useState(() => (h(a) ? a : null)),
+        C = o.useRef(null),
+        [P, w] = o.useState(() => (y(a) ? a : null)),
         [k, S] = o.useState({
             start: a,
             end: null != j ? j : c.p6O
@@ -149,38 +149,38 @@ function m(e) {
             showEnd: !1
         });
     o.useEffect(() => {
-        (w(h(a) ? a : null),
+        (w(y(a) ? a : null),
             S({
                 start: a,
                 end: null != j ? j : c.p6O
             }));
-    }, [a, h, j]);
-    let D = o.useCallback(
+    }, [a, y, j]);
+    let R = o.useCallback(
             (e) => {
                 (null == i || i(e), w(null));
             },
             [i, w]
         ),
-        N = o.useCallback(
+        D = o.useCallback(
             (e) => {
                 (null == i || i(e), w(e));
             },
             [i, w]
         ),
-        R = o.useCallback(
+        N = o.useCallback(
             (e, t) => {
                 (S({
                     start: e,
                     end: t
                 }),
-                    null == y || y([e, t]));
+                    null == v || v([e, t]));
             },
-            [y]
+            [v]
         ),
-        B = o.useCallback((e, t) => {
+        Z = o.useCallback((e, t) => {
             E((r) => b(f({}, r), { [e]: t }));
         }, []),
-        Z = o.useCallback(() => {
+        B = o.useCallback(() => {
             var e, t, r, o, a;
             let i = { background: 'linear-gradient(90deg, '.concat((0, l.Rf)(null != (e = k.start) ? e : c.p6O), ' 0%, ').concat((0, l.Rf)(k.end), ' 100%)') },
                 s = (0, n.jsxs)('div', {
@@ -217,35 +217,35 @@ function m(e) {
                               color: null != (o = k.start) ? o : c.p6O,
                               showPopout: I.showStart,
                               position: m,
-                              onRequestClose: () => B('showStart', !1),
-                              onShowPopout: () => B('showStart', !0),
-                              onColorChange: (e) => R(e, k.end),
+                              onRequestClose: () => Z('showStart', !1),
+                              onShowPopout: () => Z('showStart', !0),
+                              onColorChange: (e) => N(e, k.end),
                               disabled: d
                           }),
                           (0, n.jsx)(_, {
                               isStart: !1,
-                              buttonRef: v,
+                              buttonRef: C,
                               color: null != (a = k.end) ? a : 0,
                               showPopout: I.showEnd,
                               position: m,
-                              onRequestClose: () => B('showEnd', !1),
-                              onShowPopout: () => B('showEnd', !0),
+                              onRequestClose: () => Z('showEnd', !1),
+                              onShowPopout: () => Z('showEnd', !0),
                               onColorChange: (e) => {
                                   var t;
-                                  return R(null != (t = k.start) ? t : c.p6O, e);
+                                  return N(null != (t = k.start) ? t : c.p6O, e);
                               },
                               disabled: d
                           })
                       ]
                   });
-        }, [m, d, k, I, R, B]),
+        }, [m, d, k, I, N, Z]),
         T = o.useCallback(
             () =>
                 (0, n.jsx)(s.Z$W, {
-                    onChange: N,
+                    onChange: D,
                     value: P
                 }),
-            [N, P]
+            [D, P]
         ),
         G = o.useCallback(
             (e) => {
@@ -253,15 +253,15 @@ function m(e) {
                 return d
                     ? t
                     : (0, n.jsx)(s.yRy, {
-                          targetElementRef: C,
+                          targetElementRef: h,
                           renderPopout: T,
                           position: m,
                           children: (e) =>
                               (0, n.jsx)(s.ua7, {
-                                  targetElementRef: C,
+                                  targetElementRef: h,
                                   text: u.intl.string(u.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (r) => (0, n.jsx)('div', b(f({ ref: C }, r, e), { children: t }))
+                                  children: (r) => (0, n.jsx)('div', b(f({ ref: h }, r, e), { children: t }))
                               })
                       });
             },
@@ -285,10 +285,10 @@ function m(e) {
         b(f({}, e), {
             renderDefaultButton: L,
             renderCustomButton: G,
-            renderGradientCustomButton: Z,
+            renderGradientCustomButton: B,
             isGradient: O,
             customColor: P,
-            onChange: O ? R : D
+            onChange: O ? N : R
         })
     );
 }

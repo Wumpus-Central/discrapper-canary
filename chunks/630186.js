@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: () => a,
+    Z: () => s,
     _: () => o
 });
 var r = n(726542),
-    l = n(973616),
-    i = n(388032);
+    i = n(973616),
+    a = n(388032);
 let o = 'twitch:';
-class a extends l.ZP {
+class s extends i.ZP {
     getIconURL() {
         return r.Z.get('twitch').icon.lightPNG;
     }
     constructor(e) {
-        (super(e), (this.id = ''.concat(o).concat(e.url)), (this.name = i.intl.string(i.t.JIPtgo)));
+        (super(e), (this.id = ''.concat(o).concat(e.url)), (this.name = a.intl.string(a.t.JIPtgo)));
     }
 }

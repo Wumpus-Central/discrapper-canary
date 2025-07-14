@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    a = n(433517),
-    s = n(481060),
+    s = n(433517),
+    a = n(481060),
     c = n(339149),
     u = n(864682),
     d = n(550385),
@@ -55,7 +55,7 @@ function R(e) {
         };
     if (null == h) return null;
     let k = Z.intl.string(Z.t.YUU0RE);
-    y && (k = a.K.get(P.wli) ? Z.intl.string(Z.t.nkq1l5) : Z.intl.string(Z.t.Be8Q5O));
+    y && (k = s.K.get(P.wli) ? Z.intl.string(Z.t.nkq1l5) : Z.intl.string(Z.t.Be8Q5O));
     let U = null;
     !o &&
         b &&
@@ -64,13 +64,13 @@ function R(e) {
             determineOwnVisibility: !1
         }));
     let G = o || _ || L,
-        B = (0, r.jsx)(s.aRk, {
+        B = (0, r.jsx)(a.aRk, {
             selected: !0,
             lowerBadge: p > 0 ? (0, I.Ne)(p) : null,
             upperBadge: U,
-            lowerBadgeSize: { width: (0, s.OVM)(p) },
+            lowerBadgeSize: { width: (0, a.OVM)(p) },
             children: (0, r.jsx)(
-                s.LYs,
+                a.LYs,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -102,9 +102,9 @@ function R(e) {
                         onClick: () => {
                             if (!__OVERLAY__ && (null != C && clearTimeout(C), j(setTimeout(M, 500)), R(N + 1), 15 === N)) {
                                 M();
-                                let e = !a.K.get(P.wli);
-                                (a.K.set(P.wli, e),
-                                    e && a.K.set(w.O5, !0),
+                                let e = !s.K.get(P.wli);
+                                (s.K.set(P.wli, e),
+                                    e && s.K.set(w.O5, !0),
                                     e ? (0, f.GN)('discodo') : (0, f.GN)('user_leave'),
                                     v(!0),
                                     setTimeout(() => {
@@ -162,7 +162,7 @@ function R(e) {
                         className: T.pill
                     }),
                     (0, r.jsx)(x.Z, {
-                        color: s.ua7.Colors.PRIMARY,
+                        color: a.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: k,
                         selected: o,
@@ -183,15 +183,15 @@ function D() {
         }),
         n = (0, p.If)(),
         i = Object.keys(N.nG),
-        { unviewedTrialCount: l, unviewedDiscountCount: a } = (0, o.cj)([_.Z], () => ({
+        { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([_.Z], () => ({
             unviewedTrialCount: _.Z.getUnacknowledgedOffers(i).length,
             unviewedDiscountCount: _.Z.getUnacknowledgedDiscountOffers().length
         })),
-        s = l + a,
+        a = l + s,
         u = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         d = (0, h.q)(),
-        f = n + s + d,
-        g = f === s && s > 0 && n + d === 0,
+        f = n + a + d,
+        g = f === a && a > 0 && n + d === 0,
         E = O.Z.getHomeLink();
     return (
         g && (E = P.Z5c.APPLICATION_STORE),

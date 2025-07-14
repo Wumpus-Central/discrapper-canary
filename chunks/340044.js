@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(393903),
-    s = n(448986),
+    s = n(393903),
+    a = n(448986),
     c = n(731722),
     u = n(172751),
     d = n(842747);
@@ -33,17 +33,17 @@ let h = i.memo(function (e) {
         })(e, ['children', 'isOverlay', 'contextGuildId']);
     let [g, m] = i.useState({ maskImage: 'none' }),
         b = i.useRef(null),
-        _ = (0, s.Z)(() => {
+        _ = (0, a.Z)(() => {
             var e, t, n, r;
             let i = null != (n = null == (e = O.current) ? void 0 : e.getBoundingClientRect()) ? n : null,
                 l = null != (r = null == (t = b.current) ? void 0 : t.getBoundingClientRect()) ? r : null;
             if (h || null == i || null == l) return void m({ maskImage: 'none' });
             let o = l.right - i.right,
-                a = l.width - o;
-            if (a > l.width) return void m({ maskImage: 'none' });
-            m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
+                s = l.width - o;
+            if (s > l.width) return void m({ maskImage: 'none' });
+            m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(s, 'px)') });
         }),
-        O = (0, a.y)(_),
+        O = (0, s.y)(_),
         y = (0, c.yF)(f.userId, p);
     return (0, r.jsxs)('div', {
         className: o()(d.container, h && d.isOverlayContainer),

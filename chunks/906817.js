@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(997638),
-    a = n(362658),
-    s = n(216306),
+    s = n(362658),
+    a = n(216306),
     c = n(155409),
     u = n(540126),
     d = n(301342),
@@ -51,13 +51,13 @@ function b(e, t) {
 }
 let _ = i.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: b, selectedChannelId: _, disableManageChannels: O } = e,
-        { isFavoritesPerk: y } = (0, a.z)('ChannelListSection'),
+        { isFavoritesPerk: y } = (0, s.z)('ChannelListSection'),
         v = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            (null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t));
+            (null != _ && r.includes(_) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t));
         }, [n.id, _, m, b]),
         { density: C } = (0, l.TCT)(),
         j = 'compact' === C ? 8 : h.$k;

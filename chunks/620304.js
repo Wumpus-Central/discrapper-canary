@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(264738),
-    s = n(793030),
+    s = n(264738),
+    a = n(793030),
     c = n(442837),
     u = n(704215),
     d = n(481060),
@@ -148,7 +148,7 @@ function Z(e) {
                             className: P.contentContainer,
                             children: [
                                 (0, r.jsx)('div', { className: P.progressContainer }),
-                                (0, r.jsx)(a.animated.div, {
+                                (0, r.jsx)(s.animated.div, {
                                     className: o()(P.progress, { [P.progressLow]: D <= 5 }),
                                     style: L
                                 }),
@@ -158,13 +158,13 @@ function Z(e) {
                                         (0, r.jsxs)('div', {
                                             className: P.textContentContainer,
                                             children: [
-                                                (0, r.jsx)(s.xv, {
+                                                (0, r.jsx)(a.xv, {
                                                     className: P.text,
                                                     variant: 'text-xs/semibold',
                                                     children: I.intl.string(x.default.NI6IhY)
                                                 }),
                                                 t.premiumSubscriberCount >= Z &&
-                                                    (0, r.jsx)(s.xv, {
+                                                    (0, r.jsx)(a.xv, {
                                                         className: P.text,
                                                         variant: 'text-xs/semibold',
                                                         children: '\uD83C\uDF89'
@@ -174,7 +174,7 @@ function Z(e) {
                                         (0, r.jsxs)('div', {
                                             className: P.textContentContainer,
                                             children: [
-                                                (0, r.jsx)(s.xv, {
+                                                (0, r.jsx)(a.xv, {
                                                     className: o()(P.text, P.boostCountText),
                                                     variant: 'text-xs/semibold',
                                                     children: k

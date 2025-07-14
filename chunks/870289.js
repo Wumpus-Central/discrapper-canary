@@ -1,7 +1,7 @@
-n.d(t, { F: () => i });
-var r = n(818083),
-    l = n(987338);
-let o = (0, r.B)({
+r.d(t, { F: () => i });
+var n = r(818083),
+    l = r(987338);
+let o = (0, n.B)({
         kind: 'user',
         id: '2025-06_collectibles_browse',
         label: 'Collectibles Browse Experiment',

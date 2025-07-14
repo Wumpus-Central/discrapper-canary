@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(990547),
     o = n(91192),
-    a = n(481060),
-    s = n(724757),
+    s = n(481060),
+    a = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
@@ -12,7 +12,7 @@ var r = n(255367),
 function p(e) {
     let { initialized: t, items: n, loading: p, loadMore: f } = e,
         g = i.useRef(null),
-        m = (0, s.Z)('for-you', g);
+        m = (0, a.Z)('for-you', g);
     (0, c.Z)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -57,7 +57,7 @@ function p(e) {
                                   return i;
                               })(e, ['ref']);
                           return (0, r.jsxs)(
-                              a.Den,
+                              s.Den,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ function p(e) {
                               (i = i =
                                   {
                                       onScroll: b,
-                                      children: [(0, r.jsx)(d.U, { items: n }), p ? (0, r.jsx)(a.$jN, { className: h.spinner }) : null]
+                                      children: [(0, r.jsx)(d.U, { items: n }), p ? (0, r.jsx)(s.$jN, { className: h.spinner }) : null]
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -114,5 +114,5 @@ function p(e) {
                       }
                   })
               })
-        : (0, r.jsx)(a.$jN, { className: h.loadingPlaceholder });
+        : (0, r.jsx)(s.$jN, { className: h.loadingPlaceholder });
 }

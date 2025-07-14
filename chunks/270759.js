@@ -57,10 +57,10 @@ let Z = function (e) {
         L = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
-        (null != t && h.Z.setInitialSection(t), 0 === R[N.OGo.FRIEND] && 0 === R[N.OGo.PENDING_INCOMING] && 0 === R[N.OGo.PENDING_OUTGOING] && 0 === R[N.OGo.BLOCKED] && h.Z.setSection(N.pJs.ADD_FRIEND));
+        (null != t && h.Z.setInitialSection(t), 0 === R[N.OGo.FRIEND] && 0 === R[N.OGo.PENDING_INCOMING] && 0 === R[N.OGo.PENDING_OUTGOING] && 0 === R[N.OGo.BLOCKED] && h.Z.transitionToSection(N.pJs.ADD_FRIEND));
     }, [t, R]);
     let D = (e) => {
-            h.Z.setSection(e);
+            h.Z.transitionToSection(e, { explicit: !0 });
         },
         k = (0, g.Dt)(),
         M = (0, g.Dt)(),

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(740442),
     o = n(442837),
-    a = n(524437),
-    s = n(481060),
+    s = n(524437),
+    a = n(481060),
     c = n(100527),
     u = n(906732),
     d = n(602478),
@@ -28,7 +28,7 @@ function S(e) {
         [D, L] = [
             (0, o.e7)([g.Z], () => {
                 var e, t;
-                return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.currentTab) ? t : a.X.UNREADS;
+                return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.currentTab) ? t : s.X.UNREADS;
             }),
             i.useCallback((e) => {
                 f.hW.updateAsync(
@@ -56,7 +56,7 @@ function S(e) {
                     );
                 }, []);
             return {
-                showTutorial: !t && e === a.X.UNREADS,
+                showTutorial: !t && e === s.X.UNREADS,
                 setSeenTutorial: n
             };
         })(D),
@@ -71,7 +71,7 @@ function S(e) {
         F = (0, o.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && B && V,
         { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
-        D !== a.X.BOOKMARKS || B || V || L(a.X.MENTIONS);
+        D !== s.X.BOOKMARKS || B || V || L(s.X.MENTIONS);
     });
     let z = i.useCallback(
         (e) => {
@@ -81,45 +81,45 @@ function S(e) {
     );
     return (0, r.jsx)(u.Gt, {
         value: T,
-        children: (0, r.jsx)(s.yRy, {
+        children: (0, r.jsx)(a.yRy, {
             targetElementRef: N,
-            animation: s.yRy.Animation.NONE,
+            animation: a.yRy.Animation.NONE,
             position: I,
             align: P,
             autoInvert: !1,
             shouldShow: A,
             onRequestClose: U,
             renderPopout: function () {
-                return (0, r.jsx)(s.VqE, {
+                return (0, r.jsx)(a.VqE, {
                     'aria-label': E.intl.string(E.t.GSmTKC),
                     className: Z,
                     children:
-                        D === a.X.FOR_YOU
+                        D === s.X.FOR_YOU
                             ? (0, r.jsx)(_.Z, {
                                   setTab: L,
                                   badgeState: x,
                                   closePopout: U
                               })
-                            : D === a.X.MENTIONS
+                            : D === s.X.MENTIONS
                               ? (0, r.jsx)(O.Z, {
                                     setTab: L,
                                     onJump: z,
                                     badgeState: x,
                                     closePopout: U
                                 })
-                              : H && D === a.X.GAME_INVITES
+                              : H && D === s.X.GAME_INVITES
                                 ? (0, r.jsx)(C.Z, {
                                       setTab: L,
                                       badgeState: x,
                                       closePopout: U
                                   })
-                                : B && V && D === a.X.BOOKMARKS
+                                : B && V && D === s.X.BOOKMARKS
                                   ? (0, r.jsx)(b.Z, {
                                         setTab: L,
                                         badgeState: x,
                                         closePopout: U
                                     })
-                                  : D === a.X.SCHEDULED
+                                  : D === s.X.SCHEDULED
                                     ? (0, r.jsx)(y._, {
                                           setTab: L,
                                           closePopout: U

@@ -17,14 +17,14 @@ var r = n(255367),
     b = n(541716),
     j = n(67158),
     v = n(893718),
-    _ = n(472243),
-    C = n(284182),
+    C = n(472243),
+    _ = n(284182),
     y = n(795639),
     O = n(957730),
     w = n(25015),
     N = n(252032),
-    T = n(216572),
-    S = n(913663),
+    S = n(216572),
+    T = n(913663),
     P = n(268350),
     I = n(456077),
     E = n(488131),
@@ -100,7 +100,7 @@ function ea(e, t) {
 let el = b.Ie.CREATE_FORUM_POST;
 function es(e) {
     let { parentChannel: t, isSearchLoading: n, numResults: a, onChange: s, canCreatePost: o, inputRef: d } = e,
-        u = !(0, T.HL)(t) && o,
+        u = !(0, S.HL)(t) && o,
         {
             textAreaState: m,
             formOpen: g,
@@ -118,9 +118,9 @@ function es(e) {
         v = i.useCallback(() => {
             j.bumpDispatchPriority();
         }, [j]),
-        _ = (0, h.e7)([k.Z], () => k.Z.can(ee.Plq.ATTACH_FILES, t)),
+        C = (0, h.e7)([k.Z], () => k.Z.can(ee.Plq.ATTACH_FILES, t)),
         w = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
-        N = g && _ && u,
+        N = g && C && u,
         I = (null == t ? void 0 : t.isMediaChannel()) === !0,
         M = (function (e, t) {
             let n = (0, K.AF)(),
@@ -155,7 +155,7 @@ function es(e) {
                     let { content: s } = O.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        r = null == (o = S.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
+                        r = null == (o = T.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
                     if (((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)), null != i && i.length > 0 && e.isMediaChannel())) {
                         let e = i.findIndex((e) => !0 === e.isThumbnail);
@@ -193,8 +193,8 @@ function es(e) {
                                 shouldRefocus: !1
                             }
                         );
-                    let { content: p, stickers: b, uploads: j, hasNameError: v, hasMessageError: _ } = a(t, i, l);
-                    if ((s(v ? (0, H.V_)() : null), o(_ ? (0, H.T4)() : null), v || _))
+                    let { content: p, stickers: b, uploads: j, hasNameError: v, hasMessageError: C } = a(t, i, l);
+                    if ((s(v ? (0, H.V_)() : null), o(C ? (0, H.T4)() : null), v || C))
                         return {
                             shouldClear: !1,
                             shouldRefocus: !0
@@ -229,9 +229,9 @@ function es(e) {
                             }
                         );
                     } catch (t) {
-                        var C, y;
+                        var _, y;
                         return (
-                            (null == (C = t.body) ? void 0 : C.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED ? s((0, H.Gx)(t.body, e)) : (null == (y = t.body) ? void 0 : y.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, H.Gx)(t.body, e)),
+                            (null == (_ = t.body) ? void 0 : _.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED ? s((0, H.Gx)(t.body, e)) : (null == (y = t.body) ? void 0 : y.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, H.Gx)(t.body, e)),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !0
@@ -294,7 +294,7 @@ function es(e) {
                         (0, r.jsxs)('div', {
                             className: er.form,
                             children: [
-                                N && I && (0, r.jsx)(C.Z, { parentChannel: t }),
+                                N && I && (0, r.jsx)(_.Z, { parentChannel: t }),
                                 g &&
                                     (0, r.jsx)(ep, {
                                         className: er.horizontalPadding,
@@ -351,7 +351,7 @@ let eo = i.memo(function (e) {
             b = i.useMemo(
                 () =>
                     n && !l
-                        ? (0, r.jsx)(e_, {})
+                        ? (0, r.jsx)(eC, {})
                         : n || l || (0 !== o.textValue.trim().length && o.textValue.trim() !== h)
                           ? !l && (s.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || L.Z.getUploads(t.id, Z.d.FirstThreadMessage).length > 0) && d
                               ? (0, r.jsx)(f.vdY, {
@@ -415,9 +415,9 @@ let eo = i.memo(function (e) {
             b = (0, K.AF)(),
             j = null != t.topic && 0 !== t.topic.length,
             v = G.Z.hasSeen(t.id),
-            _ = (0, V.ql)(t),
-            C = (0, h.e7)([F.default], () => F.default.getCurrentUser());
-        (o()(null != C, 'current user cannot be null'),
+            C = (0, V.ql)(t),
+            _ = (0, h.e7)([F.default], () => F.default.getCurrentUser());
+        (o()(null != _, 'current user cannot be null'),
             (0, D.yp)({
                 event: ee.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
@@ -446,7 +446,7 @@ let eo = i.memo(function (e) {
                       })
                     : (0, r.jsx)(f.Kx8, {
                           value: g,
-                          placeholder: a ? (u || (x.textValue.length > 0 && x.textValue.trim() !== _) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
+                          placeholder: a ? (u || (x.textValue.length > 0 && x.textValue.trim() !== C) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
                           flex: !0,
                           autosize: u,
                           rows: 1,
@@ -458,7 +458,7 @@ let eo = i.memo(function (e) {
                               b.getState().setName(n);
                               let r = 0 === n.trim().length,
                                   i = 0 === x.textValue.trim().length,
-                                  a = x.textValue.trim() === _;
+                                  a = x.textValue.trim() === C;
                               (r && (i || a) && b.getState().setHasClickedForm(!1), u || U.Z.updateForumSearchQuery(t.id, n));
                           },
                           onFocus: () => {
@@ -610,10 +610,10 @@ let eu = i.memo(function (e) {
                 }),
             [t.guild_id, t.id]
         );
-        let _ = i.useCallback(() => {
+        let C = i.useCallback(() => {
                 j.getState().setBodyFocused(!0);
             }, [j]),
-            C = i.useCallback(() => {
+            _ = i.useCallback(() => {
                 j.getState().setBodyFocused(!1);
             }, [j]),
             y = i.useCallback(
@@ -635,11 +635,11 @@ let eu = i.memo(function (e) {
             );
         ((0, D.yp)({
             event: ee.CkL.TEXTAREA_FOCUS,
-            handler: _
+            handler: C
         }),
             (0, D.yp)({
                 event: ee.CkL.TEXTAREA_BLUR,
-                handler: C
+                handler: _
             }));
         let w = (0, H.Op)(m, { content: x.textValue });
         return (0, r.jsx)('div', {
@@ -653,7 +653,7 @@ let eu = i.memo(function (e) {
                               textValue: x.textValue
                           })
                         : (0, r.jsx)('div', {
-                              onClick: _,
+                              onClick: C,
                               children: (0, r.jsx)(v.Z, {
                                   type: el,
                                   setEditorRef: d,
@@ -787,7 +787,7 @@ let ep = i.memo(function (e) {
                                 (0, r.jsxs)('div', {
                                     className: er.wrappedControls,
                                     children: [
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             type: el,
                                             textValue: l.textValue,
                                             className: er.characterCount
@@ -835,7 +835,7 @@ let ep = i.memo(function (e) {
 });
 function eb(e) {
     let { parentChannel: t, canCreatePost: n, disabled: i, disableIfInvalid: a = !1 } = e,
-        l = (0, T.HL)(t),
+        l = (0, S.HL)(t),
         {
             submitting: s,
             name: o,
@@ -913,15 +913,15 @@ function ev(e) {
         { containerRef: x, containerWidth: p } = (0, Q.Z)(),
         b = i.useRef(null),
         j = i.useRef(null),
-        [v, _] = i.useState(!0),
-        C = (0, V.Vm)(t),
+        [v, C] = i.useState(!0),
+        _ = (0, V.Vm)(t),
         [y, O] = i.useState(0);
     return (i.useLayoutEffect(() => {
         var e;
         let t = b.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0],
             r = null == t || null == n || n.clientHeight > t.clientHeight;
-        if ((r !== v && _(r), r && null != x.current && null != n && null != n.children)) {
+        if ((r !== v && C(r), r && null != x.current && null != n && null != n.children)) {
             let { left: e, top: t } = x.current.getBoundingClientRect(),
                 r = 0;
             for (let i of n.children) {
@@ -931,8 +931,8 @@ function ev(e) {
             }
             O(r);
         }
-    }, [C, v, x, p]),
-    0 === C.length)
+    }, [_, v, x, p]),
+    0 === _.length)
         ? null
         : (0, r.jsxs)('div', {
               className: er.tagsContainer,
@@ -981,7 +981,7 @@ function ev(e) {
                                               i
                                           ),
                                           {
-                                              children: C.map((e) =>
+                                              children: _.map((e) =>
                                                   (0, r.jsx)(
                                                       J.Z,
                                                       {
@@ -1059,7 +1059,7 @@ function ev(e) {
               ]
           });
 }
-function e_(e) {
+function eC(e) {
     let { style: t, className: n } = e;
     return (0, r.jsx)('div', {
         className: n,

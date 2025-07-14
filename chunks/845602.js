@@ -1,6 +1,6 @@
 (r.d(t, {
-    E: () => C,
-    Z: () => h
+    E: () => h,
+    Z: () => y
 }),
     r(388685));
 var n = r(255367),
@@ -19,9 +19,9 @@ var n = r(255367),
     _ = r(981631),
     m = r(131085),
     j = r(388032),
-    y = r(606217),
+    v = r(606217),
     O = r(183375);
-function h() {
+function y() {
     var e;
     let t = o.useMemo(() => Math.floor(Math.random() * g.tl.length), []),
         [r, a] = o.useState({
@@ -37,10 +37,10 @@ function h() {
             animateGradient: !0
         });
     return (0, n.jsxs)('div', {
-        className: y.container,
+        className: v.container,
         children: [
             (0, n.jsx)('div', {
-                className: y.messageContainer,
+                className: v.messageContainer,
                 children: (0, n.jsx)(f.l, {
                     avatar: c.Z,
                     username: 'Cherry',
@@ -109,14 +109,14 @@ function h() {
         ]
     });
 }
-function C(e) {
+function h(e) {
     let { guildId: t } = e,
         [r, a] = o.useState(m.x_.HEART);
     return (0, n.jsxs)('div', {
-        className: y.container,
+        className: v.container,
         children: [
             (0, n.jsx)('div', {
-                className: y.messageContainer,
+                className: v.messageContainer,
                 children: (0, n.jsx)(f.l, {
                     avatar: u.Z,
                     username: 'Roka',

@@ -7,8 +7,8 @@ var r,
     i = n(379649),
     l = n(710845),
     o = n(314897),
-    a = n(592125),
-    s = n(866960),
+    s = n(592125),
+    a = n(866960),
     c = n(19780),
     u = n(979651),
     d = n(626135),
@@ -52,7 +52,7 @@ class m {
                     if (e.isGroupDM()) return 'group_dm';
                 }
                 return null;
-            })(a.Z.getChannel(f));
+            })(s.Z.getChannel(f));
         d.default.track(h.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: l,
@@ -63,9 +63,9 @@ class m {
             channel_id: f,
             channel_type: m,
             spinning_user_id: t,
-            connection_type: s.Z.getType(),
-            effective_connection_speed: s.Z.getEffectiveConnectionSpeed(),
-            service_provider: s.Z.getServiceProvider()
+            connection_type: a.Z.getType(),
+            effective_connection_speed: a.Z.getEffectiveConnectionSpeed(),
+            service_provider: a.Z.getServiceProvider()
         });
     }
     constructor(e) {

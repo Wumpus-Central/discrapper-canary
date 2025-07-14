@@ -1,7 +1,7 @@
-n.d(t, { $: () => o });
-var r = n(818083),
-    l = n(987338);
-let o = (0, r.B)({
+r.d(t, { $: () => o });
+var n = r(818083),
+    l = r(987338);
+let o = (0, n.B)({
     kind: 'user',
     id: '2025-06_mobile_shop_card_v2',
     label: 'Mobile Shop Card V2',

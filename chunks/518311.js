@@ -685,7 +685,7 @@ class eg extends (r = l.PureComponent) {
                 (t.has(e) ? C.Z.removeUser(e) : (C.Z.addUser(e), n.length > 0 && C.Z.clear(null == r ? void 0 : r.id)), this.forceFocus());
             }),
             eo(this, 'handleAddFriendNavigation', () => {
-                ((0, D.uL)(er.Z5c.FRIENDS), _.Z.setSection(er.pJs.ADD_FRIEND), this.props.onClose());
+                (_.Z.transitionToSection(er.pJs.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
             }),
             eo(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;

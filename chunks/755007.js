@@ -1,21 +1,21 @@
-n.d(t, { Z: () => u });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    o = n.n(l),
-    i = n(481060),
-    a = n(960919),
-    s = n(388032),
-    c = n(595392);
+r.d(t, { Z: () => u });
+var n = r(255367);
+r(73800);
+var i = r(120356),
+    l = r.n(i),
+    a = r(481060),
+    o = r(960919),
+    s = r(388032),
+    c = r(595392);
 function u(e) {
-    let { orbAmount: t, className: n } = e;
-    return (0, r.jsxs)(i.Text, {
+    let { orbAmount: t, className: r } = e;
+    return (0, n.jsxs)(a.Text, {
         variant: 'text-md/semibold',
-        className: o()(c.orbPriceTag, n),
+        className: l()(c.orbPriceTag, r),
         children: [
-            (0, r.jsx)(i.nn4, { children: s.intl.format(s.t['a/Y8PD'], { orbAmount: t }) }),
-            (0, r.jsx)(a.Z, { shouldUseThemeColor: !0 }),
-            (0, r.jsx)('span', {
+            (0, n.jsx)(a.nn4, { children: s.intl.format(s.t['a/Y8PD'], { orbAmount: t }) }),
+            (0, n.jsx)(o.Z, { shouldUseThemeColor: !0 }),
+            (0, n.jsx)('span', {
                 'aria-hidden': !0,
                 children: t
             })

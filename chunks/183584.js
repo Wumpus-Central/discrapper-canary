@@ -1,5 +1,5 @@
 (n.d(t, {
-    IN: () => s,
+    IN: () => a,
     oZ: () => c
 }),
     n(255367),
@@ -11,7 +11,7 @@ var i = n(237997);
 (n(998502), n(487029));
 var o = n(710111);
 (n(981631), n(388032));
-let a = {
+let s = {
     width: o.FW.width,
     height: o.FW.height,
     resizable: !1,
@@ -25,7 +25,7 @@ let a = {
     backgroundColor: '#00000000',
     titleBarStyle: null
 };
-function s(e, t) {
+function a(e, t) {
     let n = l.ZP.isOverlayV3EnabledForPID(t),
         o = i.default.disableClickableRegions;
     (n ||
@@ -59,4 +59,4 @@ function c(e) {
             pid: e
         });
 }
-(o.FW.padding, a.width, a.height);
+(o.FW.padding, s.width, s.height);

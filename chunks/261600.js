@@ -1,38 +1,51 @@
-n.d(t, { U: () => h });
+n.d(t, { U: () => p });
 var r = n(255367),
-    l = n(73800),
-    i = n(399606),
+    i = n(73800),
+    a = n(399606),
     o = n(481060),
-    a = n(592125),
-    s = n(922482),
+    s = n(592125),
+    l = n(922482),
     c = n(750154),
     u = n(427679),
     d = n(388032);
-function f(e) {
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
     var t, n;
     let { activity: f } = e,
-        { channelId: h } = null != (t = (0, c.rq)(f)) ? t : {},
-        p = (0, i.e7)([u.Z], () => u.Z.getStageInstanceByChannel(h), [h]),
-        g = l.useRef(null),
-        y = l.useCallback(() => {
-            let e = a.Z.getChannel(h);
-            null != e && s.Cq(e);
-        }, [h]),
-        O = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
-        b = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: O });
+        { channelId: _ } = null != (t = (0, c.rq)(f)) ? t : {},
+        p = (0, a.e7)([u.Z], () => u.Z.getStageInstanceByChannel(_), [_]),
+        h = i.useRef(null),
+        m = i.useCallback(() => {
+            let e = s.Z.getChannel(_);
+            null != e && l.Cq(e);
+        }, [_]),
+        g = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
+        E = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: g });
     return (0, r.jsx)('div', {
-        ref: g,
+        ref: h,
         children: (0, r.jsx)(o.P3F, {
-            onClick: y,
-            focusProps: { ringTarget: g },
+            onClick: m,
+            focusProps: { ringTarget: h },
             children: (0, r.jsx)(o.X6q, {
                 variant: 'heading-sm/semibold',
-                children: b
+                children: E
             })
         })
     });
 }
-class h {
+class p {
     shouldShow(e) {
         return (0, c.JE)(e);
     }
@@ -43,14 +56,6 @@ class h {
         };
     }
     constructor() {
-        var e;
-        (e = 'body') in this
-            ? Object.defineProperty(this, e, {
-                  value: f,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (this[e] = f);
+        f(this, 'body', _);
     }
 }

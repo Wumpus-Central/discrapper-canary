@@ -10,6 +10,7 @@ e.exports = {
     headerContainer: 'headerContainer__98cbd',
     description: 'description__98cbd',
     image: 'image__98cbd',
+    labelContainerEnd: 'labelContainerEnd__98cbd',
     inline: 'inline__98cbd',
     price: 'price__98cbd',
     inlineBoost: 'inlineBoost__98cbd',

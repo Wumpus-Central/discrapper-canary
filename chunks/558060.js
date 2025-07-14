@@ -1,82 +1,82 @@
-n.d(t, { Z: () => d });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    o = n.n(l),
-    i = n(884697),
-    a = n(754433),
-    s = n(409116),
-    c = n(981631),
-    u = n(561197);
+r.d(t, { Z: () => d });
+var n = r(255367);
+r(73800);
+var i = r(120356),
+    l = r.n(i),
+    a = r(884697),
+    o = r(754433),
+    s = r(409116),
+    c = r(981631),
+    u = r(561197);
 function d(e) {
-    var t, n;
-    let { product: l, isPremiumUser: d, discount: p, className: g, hideStrikethroughPrice: f = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
-        m = (0, i.ql)(l, c.tuJ.DEFAULT);
-    if (null == m) return null;
-    if (m.amount <= 0)
-        return (0, r.jsx)('div', {
-            className: o()(u.priceTagsContainer, g),
-            children: (0, r.jsx)(s.F, { price: m })
+    var t, r;
+    let { product: i, isPremiumUser: d, discount: p, className: v, hideStrikethroughPrice: b = !1, nitroIconType: f, nitroIconSize: m = 'md' } = e,
+        h = (0, a.ql)(i, c.tuJ.DEFAULT);
+    if (null == h) return null;
+    if (h.amount <= 0)
+        return (0, n.jsx)('div', {
+            className: l()(u.priceTagsContainer, v),
+            children: (0, n.jsx)(s.F, { price: h })
         });
-    let _ = (0, i.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        C =
-            (0, i.x6)(l) && d
+    let g = (0, a.ql)(i, c.tuJ.PREMIUM_TIER_2),
+        y =
+            (0, a.x6)(i) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
-                          var n = null != arguments[t] ? arguments[t] : {},
-                              r = Object.keys(n);
+                          var r = null != arguments[t] ? arguments[t] : {},
+                              n = Object.keys(r);
                           ('function' == typeof Object.getOwnPropertySymbols &&
-                              (r = r.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                              (n = n.concat(
+                                  Object.getOwnPropertySymbols(r).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                   })
                               )),
-                              r.forEach(function (t) {
-                                  var r;
-                                  ((r = n[t]),
+                              n.forEach(function (t) {
+                                  var n;
+                                  ((n = r[t]),
                                       t in e
                                           ? Object.defineProperty(e, t, {
-                                                value: r,
+                                                value: n,
                                                 enumerable: !0,
                                                 configurable: !0,
                                                 writable: !0
                                             })
-                                          : (e[t] = r));
+                                          : (e[t] = n));
                               }));
                       }
                       return e;
-                  })({}, m)),
-                  (n = n = { amount: p.original }),
+                  })({}, h)),
+                  (r = r = { amount: p.original }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                       : (function (e, t) {
-                            var n = Object.keys(e);
+                            var r = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
-                                var r = Object.getOwnPropertySymbols(e);
-                                n.push.apply(n, r);
+                                var n = Object.getOwnPropertySymbols(e);
+                                r.push.apply(r, n);
                             }
-                            return n;
-                        })(Object(n)).forEach(function (e) {
-                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            return r;
+                        })(Object(r)).forEach(function (e) {
+                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                         }),
                   t)
-                : m,
-        O = d && null != _;
-    return (0, r.jsxs)('div', {
-        className: o()(u.priceTagsContainer, g),
+                : h,
+        O = d && null != g;
+    return (0, n.jsxs)('div', {
+        className: l()(u.priceTagsContainer, v),
         children: [
-            f
+            b
                 ? null
-                : (0, r.jsx)(a.y, {
-                      price: C,
+                : (0, n.jsx)(o.y, {
+                      price: y,
                       className: u.price
                   }),
-            (0, r.jsx)(s.F, {
-                price: O ? _ : C,
+            (0, n.jsx)(s.F, {
+                price: O ? g : y,
                 discount: p,
                 className: u.price,
-                nitroIconType: O ? h : void 0,
-                nitroIconSize: b
+                nitroIconType: O ? f : void 0,
+                nitroIconSize: m
             })
         ]
     });

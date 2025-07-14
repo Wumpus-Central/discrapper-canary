@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X });
+n.d(t, { Z: () => Q });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -83,7 +83,7 @@ function q(e) {
         onLoad: t
     });
 }
-let X = function () {
+let Q = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
@@ -114,8 +114,8 @@ let X = function () {
             window.open(A.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [W]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
-    let X = W ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
-        Q = W ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
+    let Q = W ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
+        X = W ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
         J = i.useRef(null);
     return (0, r.jsx)(M.k.Provider, {
         value: { onAssetLoadComplete: j },
@@ -153,8 +153,8 @@ let X = function () {
                                   })
                               }),
                               (0, r.jsxs)(E.Z, {
-                                  title: X,
-                                  description: Q,
+                                  title: Q,
+                                  description: X,
                                   betaTag: W && Y,
                                   button: W
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -203,8 +203,8 @@ let X = function () {
                                   ref: J,
                                   children: [
                                       (0, r.jsxs)(E.Z, {
-                                          title: X,
-                                          description: Q,
+                                          title: Q,
+                                          description: X,
                                           button: (0, r.jsx)(_.u, {
                                               text: F.intl.string(F.t.hvVgAQ),
                                               onClick: K

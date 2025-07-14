@@ -22,14 +22,14 @@ let b = i.memo(function (e) {
             return { guidelinesOpen: t };
         }, o.X),
         v = (0, m.r_)(t),
-        [_, C] = i.useState(!1),
+        [C, _] = i.useState(!1),
         y = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== _ && C(t);
+                t !== C && _(t);
             },
-            [_]
+            [C]
         );
     i.useLayoutEffect(() => {
         setTimeout(a, 350);
@@ -107,7 +107,7 @@ let b = i.memo(function (e) {
                                       })
                                   })
                               }),
-                              _ &&
+                              C &&
                                   (0, r.jsxs)('div', {
                                       className: x.showMore,
                                       children: [

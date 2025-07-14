@@ -34,7 +34,7 @@ function b(e) {
             return o;
         })(e, ['guildId', 'powerup']);
     let [m, j] = o.useState(void 0),
-        y = o.useMemo(() => {
+        v = o.useMemo(() => {
             switch (g.skuId) {
                 case p.IN:
                     return (0, n.jsx)(d.E, { guildId: b });
@@ -124,10 +124,10 @@ function b(e) {
                                     })
                                 ]
                             }),
-                            null != y &&
+                            null != v &&
                                 (0, n.jsx)('div', {
                                     className: f.exampleImage,
-                                    children: y
+                                    children: v
                                 })
                         ]
                     }),

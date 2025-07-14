@@ -6,17 +6,17 @@ var r = t(255367),
     s = t(434404),
     l = t(485386),
     c = t(944888),
-    d = t(234368),
-    u = t(981631),
+    u = t(234368),
+    d = t(981631),
     m = t(921944),
     p = t(808353);
 function _(e) {
     let { guildId: n, perk: t, markAsDismissed: _ } = e,
-        f = d._[t],
+        f = u._[t],
         x = async () => {
             let e = null;
             for (let t of Object.values(l.Z.getRoles(n))) (0, c.YB)(t) && (e = t.id);
-            (await s.Z.open(n, u.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), _(m.L.SECONDARY));
+            (await s.Z.open(n, d.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), _(m.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
         className: p.container,

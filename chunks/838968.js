@@ -1,23 +1,24 @@
 t.d(n, {
-    Z: () => x,
-    u: () => f
+    Z: () => v,
+    u: () => x
 });
 var r = t(255367);
 t(73800);
 var i = t(120356),
     o = t.n(i),
     a = t(481060),
-    s = t(477415),
-    l = t(690786),
-    c = t(192371),
+    s = t(975951),
+    l = t(322043),
+    c = t(717259),
+    u = t(192371),
     d = t(279604),
-    u = t(93841),
-    m = t(388032),
-    p = t(117172);
-function _(e) {
+    m = t(93841),
+    p = t(388032),
+    _ = t(117172);
+function f(e) {
     let { dateString: n } = e;
     return (0, r.jsxs)('div', {
-        className: p.inline,
+        className: _.inline,
         children: [
             (0, r.jsx)(a.P4T, {
                 size: 'xs',
@@ -26,72 +27,78 @@ function _(e) {
             (0, r.jsx)(a.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: m.intl.formatToMarkdownString(u.default['ol/ao6'], { dateString: (0, c.Z)(n) })
+                children: p.intl.formatToMarkdownString(m.default['ol/ao6'], { dateString: (0, u.Z)(n) })
             })
         ]
     });
 }
-function f(e) {
-    let { guildId: n, powerup: t, className: i } = e,
-        s = (0, l.Z)(n, t);
+function x(e) {
+    var n;
+    let { guildId: t, powerup: i, className: l } = e,
+        u = (0, c.Z)(t, i),
+        { activatedEntitlement: d, activatedLevelPowerup: x } = (0, s.Z)(t, i),
+        v = !u,
+        b = v ? _.labelContainer : _.labelContainerEnd,
+        g = u ? p.intl.formatToPlainString(m.default.WRRYUV, { perkName: null != (n = null == x ? void 0 : x.title) ? n : p.intl.string(p.t.BfF6EB) }) : null != d ? p.intl.string(m.default.FFLkm5) : void 0;
     return (0, r.jsxs)('div', {
-        className: o()(p.labelContainer, i),
+        className: o()(b, l),
         children: [
-            (0, r.jsxs)('div', {
-                className: o()(p.inline, p.inlineBoost),
-                children: [
-                    (0, r.jsx)(a.$Eu, {
-                        size: 'sm',
-                        color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
-                    }),
-                    (0, r.jsx)(a.Text, {
-                        className: p.price,
-                        tag: 'div',
-                        variant: 'heading-md/semibold',
-                        color: 'text-secondary',
-                        children: m.intl.formatToPlainString(m.t.t2Wbo6, { required: t.cost })
+            v &&
+                (0, r.jsxs)('div', {
+                    className: o()(_.inline, _.inlineBoost),
+                    children: [
+                        (0, r.jsx)(a.$Eu, {
+                            size: 'sm',
+                            color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
+                        }),
+                        (0, r.jsx)(a.Text, {
+                            className: _.price,
+                            tag: 'div',
+                            variant: 'heading-md/semibold',
+                            color: 'text-secondary',
+                            children: p.intl.formatToPlainString(p.t.t2Wbo6, { required: i.cost })
+                        })
+                    ]
+                }),
+            (null == d ? void 0 : d.ends_at) != null
+                ? (0, r.jsx)(f, { dateString: d.ends_at })
+                : null != g
+                  ? (0, r.jsxs)('div', {
+                        className: _.inline,
+                        children: [
+                            (0, r.jsx)(a.owK, {
+                                size: 'xs',
+                                color: a.TVs.colors.STATUS_POSITIVE
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                color: 'text-feedback-positive',
+                                variant: 'text-sm/bold',
+                                children: g
+                            })
+                        ]
                     })
-                ]
-            }),
-            null != s &&
-                ((null == s ? void 0 : s.ends_at) != null
-                    ? (0, r.jsx)(_, { dateString: s.ends_at })
-                    : (0, r.jsxs)('div', {
-                          className: p.inline,
-                          children: [
-                              (0, r.jsx)(a.owK, {
-                                  size: 'xs',
-                                  color: a.TVs.colors.STATUS_POSITIVE
-                              }),
-                              (0, r.jsx)(a.Text, {
-                                  color: 'text-feedback-positive',
-                                  variant: 'text-sm/bold',
-                                  children: m.intl.string(u.default.FFLkm5)
-                              })
-                          ]
-                      }))
+                  : null
         ]
     });
 }
-function x(e) {
+function v(e) {
     let { guildId: n, powerup: t, className: i, onHover: c, children: u } = e,
-        m = (0, s.Z)(n, t),
-        _ = (0, l.Z)(n, t),
-        f = null != _ || m,
-        x = (null == _ ? void 0 : _.ends_at) != null,
-        { onShowMore: b } = (0, d.ZP)(n, t);
+        { activatedEntitlement: m } = (0, s.Z)(n, t),
+        p = (0, l.Z)(n, t),
+        f = (null == m ? void 0 : m.ends_at) != null,
+        { onShowMore: x } = (0, d.ZP)(n, t);
     return (0, r.jsx)('div', {
-        className: p.parentContainer,
+        className: _.parentContainer,
         children: (0, r.jsx)(a.kL8, {
             'aria-label': t.title,
-            onClick: b,
+            onClick: x,
             onMouseOver: () => (null == c ? void 0 : c(!0)),
             onMouseLeave: () => (null == c ? void 0 : c(!1)),
             className: o()(
-                p.container,
+                _.container,
                 {
-                    [p.active]: f,
-                    [p.warning]: x
+                    [_.active]: p,
+                    [_.warning]: f
                 },
                 i
             ),

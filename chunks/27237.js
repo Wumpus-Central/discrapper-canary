@@ -6,15 +6,15 @@ var r = t(255367),
     s = t(793030),
     l = t(481060),
     c = t(808189),
-    d = t(477415),
-    u = t(690786),
+    u = t(477415),
+    d = t(322043),
     m = t(838968),
     p = t(262212),
     _ = t(279604),
     f = t(279475),
     x = t(981631),
-    b = t(93841),
-    v = t(388032),
+    v = t(93841),
+    b = t(388032),
     g = t(568413),
     h = t(117172);
 function j(e) {
@@ -81,7 +81,7 @@ function C(e) {
                 children: (0, r.jsx)(s.xv, {
                     color: o,
                     variant: 'text-sm/medium',
-                    children: v.intl.string(b.default.nIj3LS)
+                    children: b.intl.string(v.default.nIj3LS)
                 })
             })
         ]
@@ -90,13 +90,12 @@ function C(e) {
 function E(e) {
     let n,
         { guildId: t, index: o, powerup: a, nextPowerup: l } = e,
-        c = (0, d.Z)(t, a),
-        x = (0, d.Z)(t, l),
-        b = null != (0, u.Z)(t, a) || c,
-        v = null != (0, u.Z)(t, l) || x,
-        [E, N] = i.useState(void 0);
-    ((0, _.KT)(E), (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'));
-    let Z = (0, f.d)(b);
+        c = (0, u.Z)(t, a),
+        x = (0, d.Z)(t, a),
+        v = (0, d.Z)(t, l),
+        [b, E] = i.useState(void 0);
+    ((0, _.KT)(b), (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'));
+    let Z = (0, f.d)(x);
     return (0, r.jsxs)(m.Z, {
         guildId: t,
         powerup: a,
@@ -104,7 +103,7 @@ function E(e) {
         children: [
             (0, r.jsx)(j, {
                 position: n,
-                active: b,
+                active: x,
                 nextActive: null != l ? v : void 0
             }),
             (0, r.jsxs)('div', {
@@ -116,7 +115,7 @@ function E(e) {
                         children: a.title
                     }),
                     (0, r.jsx)(C, {
-                        isActive: b,
+                        isActive: x,
                         index: o
                     }),
                     !c &&
@@ -133,7 +132,7 @@ function E(e) {
                     children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: a,
-                        onError: N
+                        onError: E
                     })
                 })
         ]

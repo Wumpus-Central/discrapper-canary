@@ -4,8 +4,8 @@ n(73800);
 var i = n(399606),
     l = n(524437),
     o = n(481060),
-    a = n(494404),
-    s = n(377171),
+    s = n(494404),
+    a = n(377171),
     c = n(317632),
     u = n(602478),
     d = n(2818),
@@ -21,7 +21,7 @@ function b(e) {
         { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
         E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         S = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
-    return (0, r.jsxs)(a.h4, {
+    return (0, r.jsxs)(s.h4, {
         className: m.header,
         children: [
             (0, r.jsxs)('div', {
@@ -61,7 +61,7 @@ function b(e) {
                                 g.intl.string(g.t['En+D+v']),
                                 (null == _ ? void 0 : _.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
-                                          color: s.Z.STATUS_DANGER,
+                                          color: a.Z.STATUS_DANGER,
                                           className: m.iconBadge
                                       })
                                     : null
@@ -87,7 +87,7 @@ function b(e) {
                                       g.intl.string(g.t.apq3cX),
                                       E > 0
                                           ? (0, r.jsx)(o.fWl, {
-                                                color: s.Z.STATUS_DANGER,
+                                                color: a.Z.STATUS_DANGER,
                                                 className: m.iconBadge
                                             })
                                           : null
