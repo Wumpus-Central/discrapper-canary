@@ -29,7 +29,7 @@ class h extends i.Z {
         if (null == e || e === _._ || e === f.I_8) return;
         let t = a.Z.getGuild(e);
         null != t &&
-            (u.s.trackExposure({
+            (u.sT.trackExposure({
                 guildId: t.id,
                 location: 'GuildPowerupsManager'
             }),

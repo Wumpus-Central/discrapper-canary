@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(592125),
     j = n(594174),
     E = n(823379),
-    S = n(324081),
-    x = n(240126),
+    x = n(324081),
+    S = n(240126),
     I = n(791914),
     P = n(981631),
     N = n(388032),
@@ -61,7 +61,7 @@ function A() {
     return n
         ? (0, r.jsx)(h.$jN, { className: w.loadingPlaceholder })
         : 0 === t.length
-          ? (0, r.jsx)(x.Z, {
+          ? (0, r.jsx)(S.Z, {
                 Icon: h.T39,
                 header: N.intl.string(N.t.aJQZfX),
                 tip: N.intl.string(N.t.rCN4pK)
@@ -173,7 +173,7 @@ function R(e) {
                 {
                     className: w.channelRow,
                     children: [
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(x.Z, {
                             channel: n,
                             gotoChannel: () => (0, g.uL)(P.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null

@@ -33,11 +33,11 @@ var r = n(255367),
     A = n(544753),
     k = n(853030),
     M = n(560749),
-    D = n(311924),
-    L = n(485299),
+    L = n(311924),
+    D = n(485299),
     B = n(615161),
-    G = n(289989),
-    U = n(328242),
+    U = n(289989),
+    G = n(328242),
     W = n(565574),
     F = n(286420),
     z = n(51708),
@@ -237,7 +237,7 @@ function Q(e) {
                           onSelectChannel: eO
                       })
                     : ep
-                      ? (0, r.jsx)(L.Z, { hideBackButton: null != a })
+                      ? (0, r.jsx)(D.Z, { hideBackButton: null != a })
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(h.xBx, {
@@ -262,8 +262,8 @@ function Q(e) {
                                     className: K.content,
                                     children:
                                         ei && eC !== f.vA.CAMERA
-                                            ? (0, r.jsx)(G.Z, { onSourceSelect: eZ })
-                                            : (0, r.jsx)(U.Z, {
+                                            ? (0, r.jsx)(U.Z, { onSourceSelect: eZ })
+                                            : (0, r.jsx)(G.Z, {
                                                   onClick: function (e) {
                                                       function t() {
                                                           var t;
@@ -297,7 +297,7 @@ function Q(e) {
                                 })
                             ]
                         }),
-                eb && (0, r.jsx)(D.Z, {}),
+                eb && (0, r.jsx)(L.Z, {}),
                 ev && eI
             ]
         })

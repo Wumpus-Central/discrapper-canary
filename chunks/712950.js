@@ -1,24 +1,24 @@
 n.d(t, {
-    g: () => i,
-    p: () => a
+    g: () => r,
+    p: () => c
 });
-var r = n(399606),
+var a = n(399606),
     o = n(581883),
-    l = n(592204);
-let i = () => {
+    i = n(592204);
+let r = () => {
         var e, t, n;
-        let l = (0, r.cj)([o.Z], () => {
+        let i = (0, a.cj)([o.Z], () => {
             var e, t;
             return null != (t = null == (e = o.Z.settings.textAndImages) ? void 0 : e.keywordFilterSettings) ? t : {};
         });
         return {
-            profanity: null == (e = l.profanity) ? void 0 : e.value,
-            sexualContent: null == (t = l.sexualContent) ? void 0 : t.value,
-            slurs: null == (n = l.slurs) ? void 0 : n.value
+            profanity: null == (e = i.profanity) ? void 0 : e.value,
+            sexualContent: null == (t = i.sexualContent) ? void 0 : t.value,
+            slurs: null == (n = i.slurs) ? void 0 : n.value
         };
     },
-    a = () => {
+    c = () => {
         var e;
-        let { profanity: t, sexualContent: n, slurs: r } = i();
-        return !!(0, l.Xo)({ location: 'use-should-filter-keywords' }) && null != (e = t || n || r) && e;
+        let { profanity: t, sexualContent: n, slurs: a } = r();
+        return !!(0, i.Xo)({ location: 'use-should-filter-keywords' }) && null != (e = t || n || a) && e;
     };

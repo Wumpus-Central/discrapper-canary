@@ -7,6 +7,5 @@ e.exports = {
     caughtUpContent: 'caughtUpContent_ea5470',
     caughtUpText: 'caughtUpText_ea5470',
     caughtUpCloseIcon: 'caughtUpCloseIcon_ea5470',
-    headerButton: 'headerButton_ea5470',
     filterHeaderWrap: 'filterHeaderWrap_ea5470'
 };

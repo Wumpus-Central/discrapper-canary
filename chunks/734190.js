@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(207055),
     j = n(981631),
     E = n(124368),
-    S = n(388032),
-    x = n(915887),
+    x = n(388032),
+    S = n(915887),
     I = n(768107),
     P = n(995453);
 function N(e) {
@@ -200,16 +200,16 @@ let T = i.memo(function (e) {
         K = i.useRef(null),
         Y =
             M > 0
-                ? S.intl.formatToPlainString(S.t['ZL7+Iy'], {
+                ? x.intl.formatToPlainString(x.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: M
                   })
                 : L
-                  ? S.intl.formatToPlainString(S.t.YlVvmZ, { channelName: t.name })
-                  : S.intl.formatToPlainString(S.t['0nZpiI'], { channelName: t.name });
+                  ? x.intl.formatToPlainString(x.t.YlVvmZ, { channelName: t.name })
+                  : x.intl.formatToPlainString(x.t['0nZpiI'], { channelName: t.name });
     return (0, r.jsxs)('li', {
         role: z,
-        className: o()(x.containerDefault, { [x.selected]: l }),
+        className: o()(S.containerDefault, { [S.selected]: l }),
         children: [
             (0, r.jsx)(Z, { withGuildIcon: A }),
             T
@@ -228,7 +228,7 @@ let T = i.memo(function (e) {
                     right: 4
                 },
                 children: (0, r.jsxs)('div', {
-                    className: o()(x.iconVisibility, I.wrapper, I.typeThread, {
+                    className: o()(S.iconVisibility, I.wrapper, I.typeThread, {
                         [I.modeSelected]: l,
                         [I.modeMuted]: !l && U,
                         [I.modeUnreadImportant]: !U && !l && L,

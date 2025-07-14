@@ -25,8 +25,8 @@ var r = n(255367),
     C = n(791914),
     j = n(147522),
     E = n(809780),
-    S = n(981631),
-    x = n(388032),
+    x = n(981631),
+    S = n(388032),
     I = n(128406);
 function P(e) {
     var t, n, l, s, P, w, Z;
@@ -59,9 +59,9 @@ function P(e) {
                 null != e && P.markChannelRead(e);
             };
             return (
-                _.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                _.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    _.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    _.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [P, s.channels]),
@@ -78,7 +78,7 @@ function P(e) {
             );
         }, [w]),
         i.useEffect(() => {
-            b.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            b.default.track(x.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         i.useEffect(
             () => (
@@ -104,15 +104,15 @@ function P(e) {
                 }),
                 (0, r.jsx)(v.Z, {
                     Icon: h.xx7,
-                    header: x.intl.string(x.t['6XMM+P']),
-                    tip: (null == (Z = a().os) ? void 0 : Z.family) === 'OS X' ? x.intl.string(x.t.w9uDOT) : x.intl.string(x.t.BiUJCw)
+                    header: S.intl.string(S.t['6XMM+P']),
+                    tip: (null == (Z = a().os) ? void 0 : Z.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
                 })
             ]
         });
     }
     return (0, r.jsxs)('div', {
         className: o()(I.container, 'group-spacing-'.concat(z), { [I.widerInbox]: W }),
-        'aria-label': x.intl.string(x.t.sRUdBw),
+        'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, r.jsx)(C.Z, {
                 tab: d.X.UNREADS,
@@ -228,12 +228,12 @@ function N(e) {
                     (0, r.jsx)(h.X6q, {
                         className: I.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
-                        children: x.intl.string(x.t.vZPktL)
+                        children: S.intl.string(S.t.vZPktL)
                     }),
                     (0, r.jsx)(h.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: x.intl.string(x.t.vWkIIC)
+                        children: S.intl.string(S.t.vWkIIC)
                     }),
                     (0, r.jsx)('div', {
                         'data-button-hoisted-classname-wrapper': !0,
@@ -241,7 +241,7 @@ function N(e) {
                         children: (0, r.jsx)(h.zxk, {
                             variant: 'primary',
                             size: 'sm',
-                            text: x.intl.string(x.t['+IrDzM']),
+                            text: S.intl.string(S.t['+IrDzM']),
                             onClick: t
                         })
                     })
@@ -264,8 +264,8 @@ function w(e) {
             (0, r.jsx)(v.Z, {
                 Icon: h.xx7,
                 disableStars: !0,
-                header: x.intl.string(x.t['KG/ynZ']),
-                tip: x.intl.string(x.t.cvcKzc)
+                header: S.intl.string(S.t['KG/ynZ']),
+                tip: S.intl.string(S.t.cvcKzc)
             })
         ]
     });

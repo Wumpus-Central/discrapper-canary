@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r,
     l,
     i,
@@ -25,7 +25,7 @@ function d(e, t, n) {
     let r = c[(e = null != e ? e : 'null')];
     return null != r ? t(r) : n;
 }
-class h extends (i = o.ZP.Store) {
+class f extends (i = o.ZP.Store) {
     getConnectionState(e) {
         return d(
             e,
@@ -87,15 +87,15 @@ class h extends (i = o.ZP.Store) {
     }
 }
 ((l = 'OverlayRTCConnectionStore'),
-    (r = 'displayName') in h
-        ? Object.defineProperty(h, r, {
+    (r = 'displayName') in f
+        ? Object.defineProperty(f, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[r] = l));
-let f = new h(s.Z, {
+        : (f[r] = l));
+let h = new f(s.Z, {
     OVERLAY_INITIALIZE: function (e) {
         c = e.rtcConnectionStates;
     },

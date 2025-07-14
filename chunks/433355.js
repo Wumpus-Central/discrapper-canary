@@ -1,6 +1,6 @@
 n.d(t, {
     D5: () => P,
-    ZP: () => z,
+    ZP: () => K,
     uZ: () => v
 });
 var r,
@@ -160,29 +160,26 @@ function Z(e) {
 function H() {
     let e = p.Z.getCurrentSearchId(),
         t = (0, s.a)({ location: 'handleSyncSearchStore' });
-    if (e !== E.aib.DMS || !t) {
-        if (A === p.Z.isActive()) return !1;
-        A = p.Z.isActive();
+    if (e === E.aib.DMS && t) {
+        let t = l.Z.hasSearchState(e);
+        if (A === t) return !1;
+        A = t;
+    } else {
+        let e = p.Z.isActive();
+        if (A === e) return !1;
+        A = e;
     }
 }
 function Y() {
-    let e = p.Z.getCurrentSearchId(),
-        t = (0, s.a)({ location: 'handleSyncSearchMessageStore' });
-    if (e !== E.aib.DMS || !t) return;
-    let n = l.Z.isSearchStateActive(e);
-    if (A === n) return !1;
-    A = n;
-}
-function W() {
     i.tq && I && ((I = !1), (T = !1));
 }
-class K extends (r = a.ZP.PersistedStore) {
+class W extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
             ((I = null != (t = e.isMembersOpen) && t), (T = null != (n = e.isSummariesOpen) && n), (S = null == (r = e.isProfileOpen) || r), (N = null != (i = e.sidebars) ? i : {}), (C = null != (a = e.guildSidebars) ? a : {}));
         }
-        (this.syncWith([p.Z], H), this.syncWith([l.Z], Y), this.syncWith([_.Z], F));
+        (this.syncWith([l.Z, p.Z], H), this.syncWith([_.Z], F), this.waitFor(p.Z, l.Z));
     }
     getState() {
         return {
@@ -219,8 +216,8 @@ class K extends (r = a.ZP.PersistedStore) {
         return null == r ? null : r.type === c.tI.VIEW_THREAD || r.type === c.tI.VIEW_CHANNEL ? (null == (t = r.details) ? void 0 : t.initialMessageId) : null;
     }
 }
-(O(K, 'displayName', 'ChannelSectionStore'), O(K, 'persistKey', 'ChannelSectionStore2'));
-let z = new K(o.Z, {
+(O(W, 'displayName', 'ChannelSectionStore'), O(W, 'persistKey', 'ChannelSectionStore2'));
+let K = new W(o.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: D,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: x,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: L,
@@ -230,7 +227,7 @@ let z = new K(o.Z, {
     SIDEBAR_CLOSE: Z,
     SIDEBAR_CLOSE_GUILD: M,
     CHANNEL_DELETE: G,
-    CHANNEL_SELECT: W,
+    CHANNEL_SELECT: Y,
     THREAD_CREATE: V,
     THREAD_DELETE: B
 });

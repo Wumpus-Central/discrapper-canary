@@ -270,7 +270,7 @@ function z(e) {
                 c.zx,
                 G(j({}, e), {
                     className: i,
-                    size: c.zx.Sizes.NONE,
+                    size: c.zx.Sizes.MEDIUM,
                     onClick: t,
                     disabled: n,
                     children: x.intl.string(x.t['1Qm829'])
@@ -324,7 +324,7 @@ function X(e) {
                 children: [
                     (0, r.jsx)(c.zx, {
                         className: k.backButton,
-                        size: c.zx.Sizes.NONE,
+                        size: c.zx.Sizes.MEDIUM,
                         look: c.zx.Looks.BLANK,
                         onClick: o,
                         children: x.intl.string(x.t['13/7kZ'])
@@ -337,7 +337,7 @@ function X(e) {
                           })
                         : (0, r.jsx)(b.Z, {
                               className: k.subscribeButton,
-                              size: c.zx.Sizes.NONE,
+                              size: c.zx.Sizes.MEDIUM,
                               subscriptionTier: D.Si.TIER_2,
                               showGradient: !0,
                               premiumModalAnalyticsLocation: {
@@ -432,6 +432,7 @@ function Q(e) {
                                       innerClassName: k.resetButtonContent,
                                       look: c.zx.Looks.FILLED,
                                       color: c.zx.Colors.CUSTOM,
+                                      size: c.zx.Sizes.MEDIUM,
                                       onClick: H,
                                       children: [(0, r.jsx)(u.Oe7, { size: 'xs' }), x.intl.string(x.t.yBZMsb)]
                                   })

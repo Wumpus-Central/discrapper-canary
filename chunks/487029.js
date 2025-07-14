@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(213609),
     u = n(675478),
     d = n(19780),
-    h = n(709054),
-    f = n(208049),
+    f = n(709054),
+    h = n(208049),
     p = n(763296),
     g = n(242291),
     O = n(174470),
@@ -27,7 +27,7 @@ function m(e) {
                     l = [...e, x.X8],
                     i = (e, l) => {
                         var i, o;
-                        for (let s of null != (o = null == (i = t.get(e)) ? void 0 : i.sort((e, t) => h.default.compare(e.soundId, t.soundId))) ? o : []) {
+                        for (let s of null != (o = null == (i = t.get(e)) ? void 0 : i.sort((e, t) => f.default.compare(e.soundId, t.soundId))) ? o : []) {
                             let e = n.has(s.soundId);
                             ((e && l) || (!e && !l)) && s.available && r.push(s);
                         }
@@ -47,7 +47,7 @@ function m(e) {
             [Z, n.id, j]
         );
     (l.useEffect(() => {
-        (f.w(), u.DZ.loadIfNecessary());
+        (h.w(), u.DZ.loadIfNecessary());
     }, []),
         l.useEffect(() => {
             0 === S.length && 0 === P.length && j();

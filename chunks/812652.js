@@ -77,8 +77,8 @@ function y(e) {
         [{ notifyFriends: Z, hidePreview: w, muteStreamAudio: I, preset: N, resolution: T, fps: E, sourceType: P, audioSourceId: R }, A] = (0, m.E_)(),
         k = (0, o.zX)({ location: 'StreamOptionsMenu' }),
         M = (0, f.Z)(),
-        [D, L] = null != (n = (0, p.Z)(x.tI.PRESET_VIDEO)) ? n : [x.LY.RESOLUTION_720, x.ws.FPS_30],
-        [B, G] = null != (v = (0, p.Z)(x.tI.PRESET_DOCUMENTS)) ? v : [x.LY.RESOLUTION_SOURCE, x.ws.FPS_15];
+        [L, D] = null != (n = (0, p.Z)(x.tI.PRESET_VIDEO)) ? n : [x.LY.RESOLUTION_720, x.ws.FPS_30],
+        [B, U] = null != (v = (0, p.Z)(x.tI.PRESET_DOCUMENTS)) ? v : [x.LY.RESOLUTION_SOURCE, x.ws.FPS_15];
     return (0, r.jsxs)(l.v2r, {
         'aria-label': _.intl.string(_.t['+1H47u']),
         navId: 'stream-options',
@@ -105,13 +105,13 @@ function y(e) {
                                     switch (e) {
                                         case x.tI.PRESET_VIDEO:
                                             return _.intl.format(g.default.G5O1Mz, {
-                                                resolution: (0, u.M)(D),
-                                                frameRate: L
+                                                resolution: (0, u.M)(L),
+                                                frameRate: D
                                             });
                                         case x.tI.PRESET_DOCUMENTS:
                                             return _.intl.format(g.default['8tcFLy'], {
                                                 resolution: (0, u.M)(B),
-                                                frameRate: G
+                                                frameRate: U
                                             });
                                         case x.tI.PRESET_CUSTOM:
                                             return;

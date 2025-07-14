@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -45,7 +45,7 @@ function E(e) {
     }
     return e;
 }
-let S = i.memo(function (e) {
+let x = i.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             l = i.useRef(null),
             [[o, a], c] = i.useState([0, 0]),
@@ -82,10 +82,10 @@ let S = i.memo(function (e) {
         return (0, r.jsx)(s.animated.div, {
             ref: l,
             style: f,
-            children: (0, r.jsx)(x, E({}, e))
+            children: (0, r.jsx)(S, E({}, e))
         });
     }),
-    x = i.memo(function (e) {
+    S = i.memo(function (e) {
         let { channel: t, onJump: n, deleteChannel: l, toggle: o } = e,
             s = (0, c.e7)([g.Z], () => g.Z.getChannel(t.channelId));
         if (

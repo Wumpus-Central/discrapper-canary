@@ -59,7 +59,7 @@ function d(e) {
         ]
     });
 }
-let h = [
+let f = [
         {
             x: 0.5,
             y: 0.05
@@ -93,7 +93,7 @@ let h = [
             y: 0.2
         }
     ],
-    f = h.length;
+    h = f.length;
 function p(e, t, n) {
     let r = e * t;
     return e > 0.5 ? r - n : e < 0.5 ? r : r - n / 2;
@@ -119,7 +119,7 @@ let g = (e, t) => {
                 y: 0
             }),
             w = Math.abs(A.x) + Math.abs(A.y) > 0,
-            Z = l.useMemo(() => o().chunk(C, f), [C]),
+            Z = l.useMemo(() => o().chunk(C, h), [C]),
             D = l.useCallback(
                 (e, t) => {
                     null == T.current[P] ? (T.current[P] = []) : (T.current[P][t] = e);
@@ -128,7 +128,7 @@ let g = (e, t) => {
             ),
             k = l.useCallback(
                 (e, t) => {
-                    ((S.current = t), x(f * e + t));
+                    ((S.current = t), x(h * e + t));
                 },
                 [x]
             ),
@@ -161,11 +161,11 @@ let g = (e, t) => {
             }, []),
             B = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == E || E(f * P + S.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == E || E(h * P + S.current));
                 },
                 [E, P]
             ),
-            V = l.useMemo(
+            G = l.useMemo(
                 () =>
                     (0, i.throttle)((e) => {
                         if (null == I.current) return;
@@ -193,7 +193,7 @@ let g = (e, t) => {
                     }, 16),
                 [b, L, M, k, P, n, t]
             ),
-            G = l.useCallback(
+            V = l.useCallback(
                 (e) => {
                     if (!m) return;
                     let t = P + (e.deltaY > 0 ? 1 : -1);
@@ -204,8 +204,8 @@ let g = (e, t) => {
             F = l.useMemo(
                 () =>
                     Z[P].map((e, l) => {
-                        let i = h[l];
-                        if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(h.length));
+                        let i = f[l];
+                        if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(f.length));
                         let o = p(i.x, t, O),
                             s = p(i.y, n, N);
                         return (0, r.jsx)(
@@ -228,8 +228,8 @@ let g = (e, t) => {
             );
         return (0, r.jsx)(s.P3F, {
             className: u.chatWheelMouseInput,
-            onMouseMove: V,
-            onWheel: G,
+            onMouseMove: G,
+            onWheel: V,
             onClick: B,
             children: (0, r.jsxs)('div', {
                 ref: I,

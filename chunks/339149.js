@@ -53,7 +53,7 @@ function E(e) {
     }
     return e;
 }
-let S = {
+let x = {
     [y.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
@@ -109,7 +109,7 @@ let S = {
             })
     }
 };
-class x extends l.PureComponent {
+class S extends l.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === y.vxO.UPDATING || e.type === y.vxO.REPAIRING || e.type === y.vxO.INSTALLING) {
@@ -135,7 +135,7 @@ class x extends l.PureComponent {
                 if (null == l || null == o || null == i) return null;
                 let a = (e[e.length - 1] / t) * 1000,
                     c = 0 !== a ? Math.max(1, (o - l) / a) : null,
-                    u = S[s],
+                    u = x[s],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -166,7 +166,7 @@ class I extends (r = l.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? v.intl.string(v.t.cw57am)
-            : (0, i.jsx)(x, {
+            : (0, i.jsx)(S, {
                   application: e,
                   state: t,
                   isPaused: n

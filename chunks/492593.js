@@ -66,8 +66,8 @@ let g = function (e) {
             childrenButtons: j,
             childrenMessageContent: P,
             childrenAccessories: x,
-            messageRef: C,
-            focusProps: w = {
+            messageRef: w,
+            focusProps: C = {
                 offset: {
                     left: 4,
                     right: 4
@@ -76,8 +76,8 @@ let g = function (e) {
             hasThread: S,
             isSystemMessage: E,
             hasReply: N,
-            author: Z,
-            onMouseEnter: T,
+            author: T,
+            onMouseEnter: Z,
             onMouseLeave: R
         } = e,
         _ = (function (e, t) {
@@ -99,13 +99,13 @@ let g = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let I = (0, u.ZP)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.authorId) && (0, c.S2)(Z),
+    let I = (0, u.ZP)(null == T ? void 0 : T.guildId, null == T ? void 0 : T.authorId) && (0, c.S2)(T),
         [k, M] = o.useState(!1),
         D = o.useCallback(
             (e) => {
-                (M(!0), null == T || T(e));
+                (M(!0), null == Z || Z(e));
             },
-            [T]
+            [Z]
         ),
         A = o.useCallback(
             (e) => {
@@ -120,7 +120,7 @@ let g = function (e) {
             },
             children: (0, r.jsx)(
                 s.tEY,
-                m(p({}, w), {
+                m(p({}, C), {
                     children: (0, r.jsxs)(
                         'div',
                         m(
@@ -138,7 +138,7 @@ let g = function (e) {
                                         [d.isSystemMessage]: E,
                                         [d.hasReply]: N
                                     }),
-                                    ref: C
+                                    ref: w
                                 },
                                 _
                             ),

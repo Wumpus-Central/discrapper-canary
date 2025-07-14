@@ -10,5 +10,5 @@ e.exports = {
     footerContent: 'footerContent__083ae',
     collapsedFooterContent: 'collapsedFooterContent__083ae',
     buttonContainer: 'buttonContainer__083ae',
-    hideDetailsButtonInner: 'hideDetailsButtonInner__083ae'
+    hideDetailsButtonContainer: 'hideDetailsButtonContainer__083ae'
 };

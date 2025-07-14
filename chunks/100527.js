@@ -85,6 +85,7 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT = 'guild powerups - guild settings role edit'),
         (e.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM = 'guild powerups - guild settings premium'),
         (e.GUILD_POWERUPS_GUILD_SETTINGS_TAGS = 'guild powerups - guild settings tag edit'),
+        (e.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL = 'guild powerups - guild settings vanity url'),
         (e.GUILD_POWERUPS_CHANNEL_LIST_ROW = 'guild powerups - channel list row'),
         (e.GUILD_POWERUPS_COACHMARK_LEVEL_UP = 'guild powerups - coachmark - level up'),
         (e.GUILD_POWERUPS_COACHMARK_NEW_PERKS = 'guild powerups - coachmark - new perks'),

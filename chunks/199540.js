@@ -86,8 +86,8 @@ function b(e) {
             onHoverChange: C,
             onKeyDown: j,
             treeItemProps: { onFocus: E },
-            'aria-setsize': S,
-            'aria-posinset': x
+            'aria-setsize': x,
+            'aria-posinset': S
         } = e,
         I = (function (e, t) {
             if (null == e) return {};
@@ -160,8 +160,8 @@ function b(e) {
             (n = n =
                 {
                     role: 'treeitem',
-                    'aria-setsize': S,
-                    'aria-posinset': x,
+                    'aria-setsize': x,
+                    'aria-posinset': S,
                     'aria-expanded': o,
                     'aria-owns': _,
                     children: (0, r.jsxs)(a.aRk, {

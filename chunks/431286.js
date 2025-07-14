@@ -1,4 +1,4 @@
-(n.d(t, { t: () => S }), n(388685));
+(n.d(t, { t: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -21,16 +21,16 @@ var r = n(255367),
     C = n(921944),
     j = n(46140);
 let E = 'orb-announcement-modal-key';
-function S() {
+function x() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, o.cj)([O.Z], () => ({ onboardingModalOpenedPrior: O.Z.onboardingModalOpenedPrior })),
-        { enabled: S } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
-        [x, I] = (0, h.US)(S ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
+        { enabled: x } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
+        [S, I] = (0, h.US)(x ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
         P = (0, c.s9z)(c.JQI);
     i.useEffect(() => {
-        if (x !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL) return;
+        if (S !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL) return;
         let i = g.default.getCurrentUser();
-        !(!S || t || (0, m.EO)(i)) &&
+        !(!x || t || (0, m.EO)(i)) &&
             (e ||
                 P ||
                 (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
@@ -76,5 +76,5 @@ function S() {
                         }
                     }
                 )));
-    }, [x, S, t, I, e, P]);
+    }, [S, x, t, I, e, P]);
 }

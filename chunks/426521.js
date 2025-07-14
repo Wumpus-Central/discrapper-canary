@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(497089),
     j = n(178480),
     E = n(418316),
-    S = n(382865),
-    x = n(526146),
+    x = n(382865),
+    S = n(526146),
     I = n(400565),
     P = n(148789),
     N = n(11825),
@@ -102,7 +102,7 @@ let U = i.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: a } = e,
             { analyticsLocations: u } = (0, c.ZP)(),
-            p = (0, x.I)(l, a),
+            p = (0, S.I)(l, a),
             g = i.useCallback(async () => {
                 if ((p || (0, v.wt)(l), null != l.item_enum && l.item_enum === C.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
@@ -172,7 +172,7 @@ let U = i.memo(function (e) {
                   applicationId: l.applicationId
               }));
         let b = null != l.local_id,
-            S = (0, E.Z)({
+            x = (0, E.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e })
             }),
@@ -191,7 +191,7 @@ let U = i.memo(function (e) {
                 (0, r.jsxs)(o.kL8, {
                     className: T.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': S,
+                    'aria-label': x,
                     onClick: g,
                     children: [
                         p ? null : (0, r.jsx)('div', { className: T.unread }),
@@ -203,7 +203,7 @@ let U = i.memo(function (e) {
                                 (0, r.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: p ? 'text-muted' : 'text-default',
-                                    children: ['string' != typeof S ? S : h.Z.parse(S), R]
+                                    children: ['string' != typeof x ? x : h.Z.parse(x), R]
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(D, { item: l }) : null,
                                 null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
@@ -225,7 +225,7 @@ let U = i.memo(function (e) {
         let { items: t } = e,
             n = g.d$.useSetting();
         return (
-            (0, S.c)(t),
+            (0, x.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

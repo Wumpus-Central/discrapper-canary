@@ -41,8 +41,8 @@ function C() {
         [P, R] = null != (t = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? t : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
         [A, k] = null != (n = (0, g.Z)(C)) ? n : [Z, y],
         M = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, T, P, Z]),
-        D = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
-        L = C === _.tI.PRESET_DOCUMENTS,
+        L = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
+        D = C === _.tI.PRESET_DOCUMENTS,
         B = p.Vf.map((e) => {
             let { value: t } = e,
                 n = (0, c.Z)(C, t, _.ws.FPS_30, N, I);
@@ -54,7 +54,7 @@ function C() {
                 className: n ? void 0 : b.premiumOption
             };
         }),
-        G = p.YX.map((e) => {
+        U = p.YX.map((e) => {
             let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, I);
             return {
                 value: e,
@@ -96,10 +96,10 @@ function C() {
                     className: b.segmentedControl,
                     options: B,
                     look: 'pill',
-                    disabled: L,
+                    disabled: D,
                     value: M,
                     onChange: (e) =>
-                        !L &&
+                        !D &&
                         (function (e) {
                             if (!(0, c.Z)(C, e, y, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                             (w({
@@ -118,12 +118,12 @@ function C() {
                 label: j.intl.string(v.default['/ssDMT']),
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
-                    disabled: L,
-                    options: G,
-                    value: D,
+                    disabled: D,
+                    options: U,
+                    value: L,
                     look: 'pill',
                     onChange: (e) =>
-                        !L &&
+                        !D &&
                         (function (e) {
                             if (!(0, c.Z)(C, Z, e, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                             (w({

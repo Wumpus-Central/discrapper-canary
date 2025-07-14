@@ -338,13 +338,15 @@ function G(e) {
                 p.oO(t, e, n);
             },
             [t, o.isSearching]
-        );
+        ),
+        x = i.useDeferredValue(d),
+        v = i.useDeferredValue(o);
     return (0, r.jsx)(H, {
         searchId: t,
-        search: o,
+        search: v,
         searchAnalyticsId: u,
         searchType: s,
-        searchResults: d,
+        searchResults: x,
         ignoreCount: h,
         blockCount: f,
         renderEmbeds: _.NA.useSetting(),

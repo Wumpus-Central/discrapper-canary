@@ -68,8 +68,8 @@ function E(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, l.Wu)([f.Z], () => f.Z.getGuildsArray()),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        S = i.useMemo(() => s.some((e) => (0, p.eM)(e, E)), [s, E]),
-        x = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
+        x = i.useMemo(() => s.some((e) => (0, p.eM)(e, E)), [s, E]),
+        S = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
         { analyticsLocations: I } = (0, a.ZP)(),
         P = (0, r.jsx)(b.Z, {
             showPill: !1,
@@ -86,7 +86,7 @@ function E(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: x,
+            selected: S,
             onContextMenu: j,
             tooltip: y.intl.string(y.t.l5WIbW),
             icon: o.oFk
@@ -96,7 +96,7 @@ function E(e) {
         : (0, r.jsx)('div', {
               className: v.tutorialContainer,
               children: (0, r.jsxs)(h.Z, {
-                  tutorialId: S ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: x ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: C,
                   position: 'right',
                   children: [

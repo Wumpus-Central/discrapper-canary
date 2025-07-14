@@ -1,4 +1,4 @@
-(n.d(t, { k: () => S }), n(388685));
+(n.d(t, { k: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(740442),
@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(264233),
     j = n(981631),
     E = n(388032);
-function S(e) {
-    let { onOpen: t, onClose: n, children: S, badgeState: x, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: Z } = e,
+function x(e) {
+    let { onOpen: t, onClose: n, children: x, badgeState: S, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: Z } = e,
         { analyticsLocations: T } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [A, R] = i.useState(!1),
         [D, L] = [
@@ -97,26 +97,26 @@ function S(e) {
                         D === s.X.FOR_YOU
                             ? (0, r.jsx)(_.Z, {
                                   setTab: L,
-                                  badgeState: x,
+                                  badgeState: S,
                                   closePopout: U
                               })
                             : D === s.X.MENTIONS
                               ? (0, r.jsx)(O.Z, {
                                     setTab: L,
                                     onJump: z,
-                                    badgeState: x,
+                                    badgeState: S,
                                     closePopout: U
                                 })
                               : H && D === s.X.GAME_INVITES
                                 ? (0, r.jsx)(C.Z, {
                                       setTab: L,
-                                      badgeState: x,
+                                      badgeState: S,
                                       closePopout: U
                                   })
                                 : B && V && D === s.X.BOOKMARKS
                                   ? (0, r.jsx)(b.Z, {
                                         setTab: L,
-                                        badgeState: x,
+                                        badgeState: S,
                                         closePopout: U
                                     })
                                   : D === s.X.SCHEDULED
@@ -128,7 +128,7 @@ function S(e) {
                                           fallback: (0, r.jsx)(v.h, {
                                               setTab: L,
                                               closePopout: U,
-                                              badgeState: x
+                                              badgeState: S
                                           }),
                                           children: (0, r.jsx)(v.Z, {
                                               setTab: L,
@@ -136,7 +136,7 @@ function S(e) {
                                               showTutorial: M,
                                               setSeenTutorial: k,
                                               closePopout: U,
-                                              badgeState: x
+                                              badgeState: S
                                           })
                                       })
                 });
@@ -146,7 +146,7 @@ function S(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return S(G, n, e, F);
+                return x(G, n, e, F);
             }
         })
     });

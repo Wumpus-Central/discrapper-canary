@@ -8,8 +8,8 @@ var r = n(268146),
     c = n(592125),
     u = n(430824),
     d = n(131951),
-    h = n(944486),
-    f = n(594174),
+    f = n(944486),
+    h = n(594174),
     p = n(358085),
     g = n(451467),
     O = n(537413),
@@ -18,8 +18,8 @@ var r = n(268146),
     b = n(761274);
 async function x(e, t) {
     var n, x, E, m, v, C, I, T, j, S;
-    let P = f.default.getCurrentUser(),
-        _ = h.Z.getVoiceChannelId(),
+    let P = h.default.getCurrentUser(),
+        _ = f.Z.getVoiceChannelId(),
         A = c.Z.getChannel(_),
         R = null == A ? void 0 : A.getGuildId(),
         w = null == (n = u.Z.getGuild(R)) ? void 0 : n.premiumTier;
@@ -29,16 +29,16 @@ async function x(e, t) {
     if (!d.Z.getUseSystemScreensharePicker() && !(await o.Z.hasPermission(b.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
     let { preset: D, resolution: k, fps: M, soundshareEnabled: U } = a.Z.getState(),
         L = null != (E = null == t ? void 0 : t.preset) ? E : D,
-        [B, V] = null != (m = (0, O.Z)(L, P, w)) ? m : [],
-        G = null != (v = null != B ? B : null == t ? void 0 : t.resolution) ? v : k,
-        F = null != (C = null != V ? V : null == t ? void 0 : t.fps) ? C : M,
+        [B, G] = null != (m = (0, O.Z)(L, P, w)) ? m : [],
+        V = null != (v = null != B ? B : null == t ? void 0 : t.resolution) ? v : k,
+        F = null != (C = null != G ? G : null == t ? void 0 : t.fps) ? C : M,
         W = null != (I = null == t ? void 0 : t.previewDisabled) ? I : s.I0.getSetting(),
         K = null != (T = null == t ? void 0 : t.soundshareEnabled) ? T : U;
     return (
-        (0, g.Z)(L, G, F, P, w, A) || ((L = y.tI.PRESET_VIDEO), (G = y.LY.RESOLUTION_720), (F = y.ws.FPS_30)),
+        (0, g.Z)(L, V, F, P, w, A) || ((L = y.tI.PRESET_VIDEO), (V = y.LY.RESOLUTION_720), (F = y.ws.FPS_30)),
         (0, l.Rc)({
             preset: L,
-            resolution: G,
+            resolution: V,
             frameRate: F,
             soundshareEnabled: K
         }),

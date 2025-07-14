@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(630759),
     u = n(301107),
     d = n(785792),
-    h = n(190054),
-    f = n(760373),
+    f = n(190054),
+    h = n(760373),
     p = n(388032),
     g = n(764229);
 function O(e) {
@@ -20,8 +20,8 @@ function O(e) {
         }),
         O = (0, u.W)({
             fingerprintBase64: n,
-            chunkSize: f.y6,
-            desiredLength: f.YP
+            chunkSize: h.y6,
+            desiredLength: h.YP
         }),
         N = l.useCallback(() => {
             (0, a.PM)({ channelId: t });
@@ -57,7 +57,7 @@ function O(e) {
                         children: p.intl.string(p.t.cTQI5u)
                     }),
                     null != O &&
-                        (0, r.jsx)(h.H, {
+                        (0, r.jsx)(f.H, {
                             chunks: O,
                             color: o.TVs.colors.INTERACTIVE_NORMAL.css,
                             onCopy: N
@@ -67,7 +67,7 @@ function O(e) {
             (0, r.jsx)(d.b, {
                 className: g.code,
                 chunks: O,
-                columns: f.WK
+                columns: h.WK
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',

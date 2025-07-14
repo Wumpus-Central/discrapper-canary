@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(835473),
     j = n(413523),
     E = n(933557),
-    S = n(194082),
-    x = n(550532),
+    x = n(194082),
+    S = n(550532),
     I = n(436774),
     P = n(594190),
     N = n(925329),
@@ -130,9 +130,9 @@ class ec extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(S.ZP, {
-                          look: S.ZP.Looks.GRAY,
-                          size: S.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(x.ZP, {
+                          look: x.ZP.Looks.GRAY,
+                          size: x.ZP.Sizes.SMALL,
                           className: el.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -275,9 +275,9 @@ let eu = (0, g.Z)(function (e) {
         [g, _] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
         v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         j = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
-        S = (0, c.e7)([H.Z, W.Z, F.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0)),
+        x = (0, c.e7)([H.Z, W.Z, F.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0)),
         [I] = (0, C.Z)([null != (l = null != _ && null != _.id ? _.id : null != u && null != u.id ? u.id : null != j ? j.applicationId : void 0) ? l : '']),
-        N = (0, c.e7)([x.Z], () => x.Z.getFakeGameData()),
+        N = (0, c.e7)([S.Z], () => S.Z.getFakeGameData()),
         T = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
         A = (0, y.Z)() && null != T && (0, b.R)(),
         D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
@@ -302,7 +302,7 @@ let eu = (0, g.Z)(function (e) {
                 useReducedMotion: v,
                 isStreaming: U,
                 channel: p,
-                canStream: S,
+                canStream: x,
                 stream: g,
                 streamMetadata: _,
                 channelName: $,

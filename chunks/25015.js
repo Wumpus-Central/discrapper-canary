@@ -14,11 +14,11 @@ var r = n(255367),
     f = n(875231);
 let b = o.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
 function h(e, t) {
-    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: C = !1, previewLinkTarget: w = !1, viewingChannelId: S } = t,
+    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: w = !1, previewLinkTarget: C = !1, viewingChannelId: S } = t,
         E = (0, i.p)(),
         N = l.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        Z = (0, p.o)({ location: 'useMessageRenderedContent' }),
-        [T, R] = o.useState(!1),
+        T = (0, p.o)({ location: 'useMessageRenderedContent' }),
+        [Z, R] = o.useState(!1),
         _ = o.useCallback((e) => {
             e && R(!0);
         }, []);
@@ -42,7 +42,7 @@ function h(e, t) {
                     }
                 });
             }
-            return Z.enabled
+            return T.enabled
                 ? {
                       content: (0, r.jsx)(o.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
@@ -56,7 +56,7 @@ function h(e, t) {
                               children: (0, r.jsx)(b, { content: e.content })
                           })
                       }),
-                      hasSpoilerEmbeds: T
+                      hasSpoilerEmbeds: Z
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: h,
@@ -66,12 +66,12 @@ function h(e, t) {
                       allowHeading: j,
                       allowList: P,
                       allowLinks: x,
-                      allowDevLinks: C,
-                      previewLinkTarget: w,
+                      allowDevLinks: w,
+                      previewLinkTarget: C,
                       shouldFilterKeywords: E,
                       viewingChannelId: S,
                       allowGameMentions: N
                   });
-        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, w, E, C, S, Z.enabled, N, T])
+        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, C, E, w, S, T.enabled, N, Z])
     );
 }

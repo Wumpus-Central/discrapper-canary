@@ -76,7 +76,7 @@ function G(e, t) {
         e
     );
 }
-function k(e) {
+let k = l.memo(function (e) {
     var t;
     let { search: n, searchId: i, renderEmbeds: s, scrollTo: _, searchResults: A, blockCount: m, ignoreCount: f, onPageChange: T, onClick: g } = e,
         { offset: O, totalResults: N, isSearching: p, showBlockedResults: S } = n,
@@ -205,7 +205,7 @@ function k(e) {
                 })
         ]
     });
-}
+});
 function F(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;

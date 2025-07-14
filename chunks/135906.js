@@ -23,7 +23,9 @@ let i = {
         poggermode_enabled: 'poggermode_enabled',
         poggermode_applause: 'poggermode_applause',
         poggermode_achievement_unlock: 'poggermode_achievement_unlock',
-        stage_waiting: 'stage_waiting'
+        stage_waiting: 'stage_waiting',
+        camera_off: 'camera_off',
+        camera_on: 'camera_on'
     },
     [r.YC.RETRO]: { message1: 'bit_message1' },
     [r.YC.BUBBLE]: { message1: 'bop_message1' },

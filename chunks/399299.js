@@ -33,11 +33,11 @@ var r = n(255367),
     A = n(233037),
     k = n(810013),
     M = n(537135),
-    D = n(641115),
-    L = n(143135),
+    L = n(641115),
+    D = n(143135),
     B = n(70722),
-    G = n(981631),
-    U = n(526761),
+    U = n(981631),
+    G = n(526761),
     W = n(388032),
     F = n(14383),
     z = n(347226);
@@ -49,7 +49,7 @@ function H(e) {
         m = (0, o.Wu)([u.Z], () => f.map((e) => (null != e.id ? u.Z.getApplication(e.id) : null)).filter(w.lm), [f]),
         x = null;
     if ((null != t ? (x = t.name) : null != s && (x = s.name), null == x)) return null;
-    let g = (0, L.Z)(s, t, f),
+    let g = (0, D.Z)(s, t, f),
         _ = i
             ? m.find((e) => {
                   let { id: t } = e;
@@ -147,7 +147,7 @@ function X(e) {
         }),
         l = g.eo.useSetting(),
         a = i.useCallback((e, t) => {
-            (g.eo.updateSetting(t), Z.default.track(G.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
+            (g.eo.updateSetting(t), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
         }, []);
     return n >= 2 && n <= B.tB
         ? (0, r.jsx)(c.xJW, {
@@ -166,21 +166,22 @@ function X(e) {
 }
 function J(e) {
     let { enabled: t, onChange: n, screen: l } = e,
-        o = i.useCallback(
+        a = i.useCallback(
             (e, t) => {
                 n(t);
             },
             [n]
-        );
+        ),
+        d = (0, o.e7)([S.Z], () => S.Z.getUseSystemScreensharePicker() && (0, N.isLinux)());
     return (0, r.jsx)(c.xJW, {
         className: s()(z.modalContent, F.checkboxRow),
         children: (0, r.jsx)(c.XZJ, {
             value: t,
             type: c.XZJ.Types.INVERTED,
-            onChange: o,
+            onChange: a,
             children: (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',
-                children: l ? W.intl.string(W.t['5Adrtb']) : W.intl.string(W.t.gRpbRE)
+                children: l || d ? W.intl.string(W.t['5Adrtb']) : W.intl.string(W.t.gRpbRE)
             })
         })
     });
@@ -207,7 +208,7 @@ function K(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: a, sourceChanged: c, selectedGuildId: u, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: g, onClose: j, onChangeSelectedFPS: b, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: N, onChangeAudioDevice: E, onChangeGuild: M, onChangeSound: L, onChangePreviewDisabled: B } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: a, sourceChanged: c, selectedGuildId: u, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: g, onClose: j, onChangeSelectedFPS: b, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: N, onChangeAudioDevice: E, onChangeGuild: M, onChangeSound: D, onChangePreviewDisabled: B } = e,
         z = (0, o.e7)([C.Z, v.Z], () => v.Z.getChannel(C.Z.getVoiceChannelId())),
         q = (0, o.e7)([T.Z], () => T.Z.GPUDriversOutdated),
         Q = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
@@ -238,7 +239,7 @@ function q(e) {
                           null != t && null == ee
                               ? (0, r.jsx)(J, {
                                     enabled: x,
-                                    onChange: L,
+                                    onChange: D,
                                     screen: t.id.startsWith('screen')
                                 })
                               : null
@@ -259,18 +260,18 @@ function q(e) {
                   }),
             null != u && en && er ? (0, r.jsx)(X, { guildId: u }) : null,
             q ? (0, r.jsx)(Y, { text: W.intl.string(W.t.q65tS0) }) : null,
-            Q ? (0, r.jsx)(Y, { text: W.intl.format(W.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(G.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            Q ? (0, r.jsx)(Y, { text: W.intl.format(W.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             ei &&
                 (0, r.jsx)(_.Z, {
                     look: _.z.WARNING,
                     className: F.hardwareWarning,
                     children: W.intl.format(W.t.zCLXws, {
                         onClick: () => {
-                            (j(), d.Z.open(G.oAB.VOICE, U.gP, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
+                            (j(), d.Z.open(U.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
                         }
                     })
                 }),
-            (0, r.jsx)(D.Z, {
+            (0, r.jsx)(L.Z, {
                 selectedPreset: s,
                 selectedFPS: n,
                 selectedResolution: a,

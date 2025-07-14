@@ -8,8 +8,8 @@ var l,
     c = n(933557),
     u = n(592125),
     d = n(430824),
-    h = n(293273),
-    f = n(158776),
+    f = n(293273),
+    h = n(158776),
     p = n(699516),
     g = n(594174),
     O = n(55589),
@@ -75,12 +75,12 @@ function I() {
     ((x = null), null != r && (r.destroy(), (r = null)), null != E && E());
 }
 function T() {
-    let e = null != x && null != x.application_id ? h.Z.getApplicationActivity(x.application_id) : null;
+    let e = null != x && null != x.application_id ? f.Z.getApplicationActivity(x.application_id) : null;
     if (null != x && (null == e || null == e.party || null == e.party.id)) return I();
 }
 class j extends (l = i.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z);
+        this.waitFor(f.Z);
     }
     getActivity() {
         return x;
@@ -139,7 +139,7 @@ let S = new j(o.Z, {
                                             return {
                                                 type: a.h8.USER,
                                                 sent: m.includes(t.id),
-                                                status: f.Z.getStatus(t.id),
+                                                status: h.Z.getStatus(t.id),
                                                 data: e
                                             };
                                         }

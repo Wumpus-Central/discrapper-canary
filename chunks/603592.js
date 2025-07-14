@@ -11,7 +11,7 @@ var r = n(255367),
     h = n(329922);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: v, showPill: C = !0, className: j, 'aria-label': E, children: S, onMouseEnter: x, onMouseLeave: I, onMouseDown: P } = e,
+    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: v, showPill: C = !0, className: j, 'aria-label': E, children: x, onMouseEnter: S, onMouseLeave: I, onMouseDown: P } = e,
         N = (0, s.Ie)(p),
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
@@ -63,7 +63,7 @@ let p = i.forwardRef(function (e, t) {
                             {
                                 innerRef: t,
                                 onMouseEnter: () => {
-                                    (null == x || x(), Z(!0));
+                                    (null == S || S(), Z(!0));
                                 },
                                 onMouseLeave: () => {
                                     (null == I || I(), Z(!1));
@@ -103,7 +103,7 @@ let p = i.forwardRef(function (e, t) {
                     )
                 })
             }),
-            S
+            x
         ]
     });
 });

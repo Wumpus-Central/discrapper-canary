@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(358221),
     j = n(706590),
     E = n(940777),
-    S = n(41776),
-    x = n(821020),
+    x = n(41776),
+    S = n(821020),
     I = n(770858),
     P = n(905423),
     N = n(822857),
@@ -237,9 +237,9 @@ function eu(e) {
         s = o.startsWith(ee.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
         a = (0, h.Wu)([D.Z, R.ZP], () => D.Z.getGuildIds().filter((e) => R.ZP.isCurrentUserGuest(e))),
         u = i.concat(a),
-        { entrypoint: d } = x.Lk.useExperiment({ location: 'GuildsBar' });
+        { entrypoint: d } = S.Lk.useExperiment({ location: 'GuildsBar' });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(W.u, {}), d === x.u3.SERVER_RAIL_TOP && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(K.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(B.Z, {}), u.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)), (0, r.jsx)(J.Z, { onActivate: n })]
+        children: [(0, r.jsx)(W.u, {}), d === S.u3.SERVER_RAIL_TOP && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(K.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(B.Z, {}), u.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)), (0, r.jsx)(J.Z, { onActivate: n })]
     });
 }
 function ed(e) {
@@ -287,7 +287,7 @@ function eh(e) {
             let e = L.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        d = (0, h.e7)([S.Z], () => S.Z.lurkingGuildIds()),
+        d = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
         p = i.useMemo(() => (n ? [] : d), [d, n]),
         b = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         [O, j] = i.useState(!1),
@@ -418,15 +418,15 @@ function eh(e) {
         }),
         { shouldShow: ev, questId: eC, onDiscoveryButtonClick: ej } = ey,
         eE = eo(ey, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        eS = e_ && ev,
-        ex = (0, r.jsx)(z.Z, {
+        ex = e_ && ev,
+        eS = (0, r.jsx)(z.Z, {
             ref: eO,
-            questId: eS ? eC : void 0,
+            questId: ex ? eC : void 0,
             selected: eg,
             className: en.discoveryIcon,
-            onClick: eS ? ej : void 0
+            onClick: ex ? ej : void 0
         }),
-        eI = eS
+        eI = ex
             ? (0, r.jsx)(
                   w.MP,
                   el(
@@ -437,12 +437,12 @@ function eh(e) {
                           },
                           eE
                       ),
-                      { children: ex }
+                      { children: eS }
                   )
               )
-            : ex,
-        { entrypoint: eP } = x.Lk.useExperiment({ location: 'GuildsBar' }),
-        eN = eP === x.u3.SERVER_RAIL_BOTTOM;
+            : eS,
+        { entrypoint: eP } = S.Lk.useExperiment({ location: 'GuildsBar' }),
+        eN = eP === S.u3.SERVER_RAIL_BOTTOM;
     return (0, r.jsx)(v.Gt, {
         value: ep,
         children: (0, r.jsx)(m.f6W, {

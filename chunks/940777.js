@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(979651),
     j = n(709054),
     E = n(853856),
-    S = n(593214),
-    x = n(919755),
+    x = n(593214),
+    S = n(919755),
     I = n(110977),
     P = n(603274),
     N = n(981631),
@@ -63,7 +63,7 @@ let A = {
 function R() {
     var e, t;
     let l = (0, s.Ie)('favorites'),
-        { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
+        { favoriteAdded: R, clearFavoriteAdded: D } = (0, x.up)(),
         [L, M] = i.useState(!1),
         { favoriteServerMuted: k, favoriteChannels: U } = (0, a.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
@@ -72,7 +72,7 @@ function R() {
         G = (0, a.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
         B = (0, a.e7)([y.Z], () => y.Z.getChannel(G)),
         V = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, x.Z)(U),
+        { badge: F, unread: H } = (0, S.Z)(U),
         z = (function (e) {
             let t = (0, a.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],

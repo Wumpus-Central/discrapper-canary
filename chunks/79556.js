@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(430824),
     j = n(496675),
     E = n(306680),
-    S = n(9156),
-    x = n(594174),
+    x = n(9156),
+    S = n(594174),
     I = n(109446),
     P = n(98597),
     N = n(648501),
@@ -95,9 +95,9 @@ class k extends P.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: f, isSubscriptionGated: b, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: S } = this.props,
-            x = (0, _.jW)({ location: 'text_channel' }).entrypoints,
-            I = S && null != C && C.length > 0,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: f, isSubscriptionGated: b, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: x } = this.props,
+            S = (0, _.jW)({ location: 'text_channel' }).entrypoints,
+            I = x && null != C && C.length > 0,
             P = (0, m.D)(y),
             N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
@@ -149,8 +149,8 @@ class k extends P.ZP {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             this.renderChannelInfo(),
-                                            x && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
-                                            !x &&
+                                            S && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
+                                            !S &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [this.renderInviteButton(), this.renderEditButton()]
                                                 })
@@ -226,7 +226,7 @@ class k extends P.ZP {
                             );
                     });
                 if (t.type === T.d4z.DM) {
-                    let i = x.default.getUser(t.getRecipientId());
+                    let i = S.default.getUser(t.getRecipientId());
                     null != i &&
                         (0, u.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -272,7 +272,7 @@ function G(e) {
             ackMessageId: E.ZP.ackMessageId(t.id),
             isLowImportanceMention: E.ZP.getIsMentionLowImportance(t.id)
         })),
-        g = (0, s.e7)([S.ZP], () => S.ZP.resolveUnreadSetting(t)),
+        g = (0, s.e7)([x.ZP], () => x.ZP.resolveUnreadSetting(t)),
         m = (0, s.cj)([v.Z, j.Z], () => {
             let e = v.Z.getChannel(t.parent_id);
             return {
@@ -282,11 +282,11 @@ function G(e) {
         }),
         _ = (0, s.e7)([O.Z], () => O.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: C, isSubscriptionGated: I } = (0, b.Z)(t.id),
-        P = (0, s.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
+        P = (0, s.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
         w = (0, s.e7)(
-            [x.default],
+            [S.default],
             () => {
-                let e = x.default.getCurrentUser();
+                let e = S.default.getCurrentUser();
                 return null != e && (!(0, f.aC)(t) || e.nsfwAllowed);
             },
             [t]

@@ -1,28 +1,26 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var o = n(442837),
-    l = n(755721),
-    i = n(481060),
-    a = n(493773),
-    s = n(367907),
-    c = n(111028),
-    u = n(91218),
-    d = n(829883),
-    p = n(623624),
-    m = n(973542),
-    g = n(703656),
-    f = n(592125),
-    b = n(485386),
-    h = n(944486),
-    O = n(709586),
-    y = n(626135),
-    v = n(524444),
-    j = n(981631),
-    P = n(176505),
-    x = n(388032),
-    C = n(854422);
-function w(e) {
+    l = n(481060),
+    i = n(493773),
+    a = n(367907),
+    s = n(111028),
+    c = n(91218),
+    u = n(829883),
+    d = n(623624),
+    p = n(973542),
+    m = n(703656),
+    g = n(592125),
+    f = n(485386),
+    b = n(944486),
+    h = n(626135),
+    O = n(524444),
+    y = n(981631),
+    v = n(176505),
+    j = n(388032),
+    P = n(854422);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +45,7 @@ function w(e) {
     }
     return e;
 }
-function S(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,89 +63,81 @@ function S(e, t) {
         e
     );
 }
-let E = (e) => {
+let C = (e) => {
     let { roleIcon: t, guild: n } = e,
-        { name: E } = t;
-    (0, a.ZP)(() => {
-        y.default.track(
-            j.rMx.OPEN_POPOUT,
-            w(
+        { name: C } = t;
+    (0, i.ZP)(() => {
+        h.default.track(
+            y.rMx.OPEN_POPOUT,
+            x(
                 {
                     type: 'Role Icon Popout',
                     guild_id: n.id
                 },
-                (0, s.v_)(f.Z.getChannel(h.Z.getChannelId(n.id)))
+                (0, a.v_)(g.Z.getChannel(b.Z.getChannelId(n.id)))
             )
         );
     });
-    let N = (0, o.e7)([b.Z], () => (null != t.roleId ? b.Z.getRole(n.id, t.roleId) : void 0)),
-        Z = (0, m.Z)(N),
-        T = Z ? x.intl.formatToPlainString(x.t.t0928f, { name: E }) : x.intl.formatToPlainString(x.t.UDDkGx, { name: E }),
-        R = S(w({}, t), {
-            src: null == t.src ? t.src : (0, d.o)(t.src, 40),
+    let S = (0, o.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
+        E = (0, p.Z)(S),
+        N = E ? j.intl.formatToPlainString(j.t.t0928f, { name: C }) : j.intl.formatToPlainString(j.t.UDDkGx, { name: C }),
+        T = w(x({}, t), {
+            src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
-        _ = Z
+        Z = E
             ? () => {
-                  (0, g.uL)(j.Z5c.CHANNEL(n.id, P.oC.ROLE_SUBSCRIPTIONS));
+                  (0, m.uL)(y.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
-                  (0, p.f)({
+                  (0, d.f)({
                       guildId: n.id,
-                      location: { section: j.jXE.ROLE_ICON_POPOUT }
+                      location: { section: y.jXE.ROLE_ICON_POPOUT }
                   });
               };
-    return (0, r.jsx)(i.VqE, {
-        children: (0, r.jsx)(v.W_, {
+    return (0, r.jsx)(l.VqE, {
+        children: (0, r.jsx)(O.W_, {
             children: (0, r.jsxs)('div', {
-                className: C.popoutContainer,
+                className: P.popoutContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: C.mainContent,
+                        className: P.mainContent,
                         children: [
                             (0, r.jsx)('div', {
-                                className: C.roleIconContainer,
+                                className: P.roleIconContainer,
                                 children: (0, r.jsx)(
-                                    u.Z,
-                                    S(w({}, R), {
+                                    c.Z,
+                                    w(x({}, T), {
                                         enableTooltip: !1,
-                                        className: C.__invalid_roleIcon,
+                                        className: P.__invalid_roleIcon,
                                         enableHeight: !1
                                     })
                                 )
                             }),
                             (0, r.jsxs)('div', {
-                                className: C.truncatingText,
+                                className: P.truncatingText,
                                 children: [
-                                    (0, r.jsx)(i.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: 'heading-md/semibold',
-                                        className: C.roleName,
-                                        children: (0, r.jsx)(c.Z, { children: E })
+                                        className: P.roleName,
+                                        children: (0, r.jsx)(s.Z, { children: C })
                                     }),
-                                    (0, r.jsx)(i.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
-                                        children: T
+                                        children: N
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, r.jsxs)(l.zx, {
-                        size: l.zx.Sizes.SMALL,
-                        color: l.zx.Colors.PRIMARY,
-                        className: C.ctaButton,
-                        innerClassName: C.ctaButtonContent,
+                    (0, r.jsx)(l.zxk, {
+                        size: 'sm',
+                        variant: 'secondary',
+                        text: j.intl.string(j.t['H930+P']),
+                        onClick: Z,
+                        icon: l.$Eu,
                         fullWidth: !0,
-                        onClick: _,
-                        autoFocus: !0,
-                        children: [
-                            (0, r.jsx)(O.Z, {
-                                width: 14,
-                                height: 14,
-                                className: C.boosterBadge
-                            }),
-                            x.intl.string(x.t['H930+P'])
-                        ]
+                        autoFocus: !0
                     })
                 ]
             })

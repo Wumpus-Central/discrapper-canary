@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685), n(361932), n(187205));
+(n.d(t, { Z: () => A }), n(361932), n(187205), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,25 +9,27 @@ var r = n(255367),
 (n(100527), n(906732));
 var u = n(377171),
     d = n(315174),
-    h = n(768943),
-    p = n(592125),
-    f = n(430824),
-    g = n(306680),
-    m = n(709054),
-    b = n(821020),
-    _ = n(948154),
-    O = n(787879),
-    y = n(370774),
-    v = n(334426),
-    C = n(862149),
-    j = n(207913),
-    E = n(553984),
-    S = n(333834),
-    x = n(982183),
-    I = n(981631),
-    P = n(388032),
-    N = n(21678);
-let w = {
+    h = n(340541),
+    p = n(768943),
+    f = n(592125),
+    g = n(430824),
+    m = n(306680),
+    b = n(709054),
+    _ = n(821020),
+    O = n(948154),
+    y = n(725739),
+    v = n(787879),
+    C = n(370774),
+    j = n(334426),
+    E = n(862149),
+    x = n(207913),
+    S = n(553984),
+    I = n(333834),
+    P = n(982183),
+    N = n(981631),
+    w = n(388032),
+    Z = n(21678);
+let T = {
     controller: new s.Controller({
         value: 1,
         immediate: !0
@@ -36,56 +38,56 @@ let w = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: x.$J,
+    bannerVisibleHeight: P.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
-function Z(e) {
+function A(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        [s, u] = i.useState(x.V5.ALL),
-        v = (0, a.e7)([O.Z], () => O.Z.oldestDisplayedMessageId),
-        C = (0, a.Wu)([O.Z], () => O.Z.getInboxMessages()),
-        j = (0, a.Wu)([g.ZP, f.Z], () =>
-            C.filter(
+        { selectedFilter: s } = (0, y.Z)(),
+        u = (0, a.e7)([v.Z], () => v.Z.oldestDisplayedMessageId),
+        j = (0, a.Wu)([v.Z], () => v.Z.getInboxMessages()),
+        E = (0, a.Wu)([m.ZP, g.Z], () =>
+            j.filter(
                 (e) =>
-                    !(0, y.YH)({
+                    !(0, C.YH)({
                         messageId: e.id,
                         channelId: e.channelId,
                         guildId: e.guildId,
-                        ReadStateStore_: g.ZP,
-                        GuildStore_: f.Z
-                    }) && m.default.compare(e.id, v) > 0
+                        ReadStateStore_: m.ZP,
+                        GuildStore_: g.Z
+                    }) && b.default.compare(e.id, u) > 0
             )
         ),
-        I = (0, a.Wu)([g.ZP, f.Z], () =>
-            C.filter((e) =>
-                (0, y.YH)({
+        x = (0, a.Wu)([m.ZP, g.Z], () =>
+            j.filter((e) =>
+                (0, C.YH)({
                     messageId: e.id,
                     channelId: e.channelId,
                     guildId: e.guildId,
-                    ReadStateStore_: g.ZP,
-                    GuildStore_: f.Z
+                    ReadStateStore_: m.ZP,
+                    GuildStore_: g.Z
                 })
             )
         ),
-        P = i.useCallback(
+        N = i.useCallback(
             (e) => {
-                s !== x.V5.BOOKMARKS && _.Z.loadMoreInbox(e);
+                s !== P.V5.BOOKMARKS && O.Z.loadMoreInbox(e);
             },
             [s]
         ),
-        { hasLoadedEver: Z, hasNotifyingChannels: M } = (0, a.cj)([O.Z], () => ({
-            hasLoadedEver: O.Z.hasLoadedEver,
-            hasNotifyingChannels: null != O.Z.getNotifyingChannelIds()
+        { hasLoadedEver: w, hasNotifyingChannels: A } = (0, a.cj)([v.Z], () => ({
+            hasLoadedEver: v.Z.hasLoadedEver,
+            hasNotifyingChannels: null != v.Z.getNotifyingChannelIds()
         }));
     i.useEffect(() => {
-        M && !Z && P();
-    }, [M, Z, P]);
-    let k = (0, a.Wu)([h.Z], () => h.Z.getSavedMessages()),
-        U = i.useMemo(
+        A && !w && N();
+    }, [A, w, N]);
+    let U = (0, a.Wu)([p.Z], () => p.Z.getSavedMessages()),
+        G = i.useMemo(
             () =>
-                k.flatMap((e) => {
+                U.flatMap((e) => {
                     var t;
                     let { message: n } = e;
                     return null == n
@@ -94,20 +96,21 @@ function Z(e) {
                               {
                                   id: n.id,
                                   channelId: n.channel_id,
-                                  guildId: null == (t = p.Z.getChannel(n.channel_id)) ? void 0 : t.guild_id,
-                                  kind: x.fL.BOOKMARK,
+                                  guildId: null == (t = f.Z.getChannel(n.channel_id)) ? void 0 : t.guild_id,
+                                  kind: P.fL.BOOKMARK,
                                   message: n
                               }
                           ];
                 }),
-            [k]
+            [U]
         ),
-        G = T(j, s),
-        B = T(I, s),
-        { filterStyle: V } = b.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
-        F = V === b.v8.DROPDOWN && s !== x.V5.ALL;
+        B = R(E, s),
+        V = R(x, s),
+        { filterStyle: F } = _.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
+        { entrypoints: H } = (0, h._k)({ location: 'NotificationsInboxSidebar' }),
+        z = F === _.v8.DROPDOWN && s !== P.V5.ALL;
     return (0, r.jsxs)('nav', {
-        className: o()(N.container, { [N.panelSpacing]: l }),
+        className: o()(Z.container, { [Z.panelSpacing]: l }),
         children: [
             (0, r.jsx)(
                 d.ZP,
@@ -138,9 +141,9 @@ function Z(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: x.F7
+                        guild: P.F7
                     },
-                    w
+                    T
                 )),
                 (n = n =
                     {
@@ -148,13 +151,7 @@ function Z(e) {
                             direction: 'horizontal',
                             gap: 4,
                             style: { marginRight: -4 },
-                            children:
-                                V === b.v8.DROPDOWN &&
-                                (0, r.jsx)(E.p, {
-                                    selectedFilter: s,
-                                    setSelectedFilter: u,
-                                    className: N.headerButton
-                                })
+                            children: F === _.v8.DROPDOWN && !H && (0, r.jsx)(S.p, {})
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -171,51 +168,47 @@ function Z(e) {
                       }),
                 t)
             ),
-            V === b.v8.TABS &&
-                (0, r.jsx)(E.Z, {
-                    selectedFilter: s,
-                    setSelectedFilter: u
-                }),
-            s === x.V5.ALL && (0, r.jsx)(D, { hideBanner: !Z || s !== x.V5.ALL }),
-            F && (0, r.jsx)(L, { filter: s }),
-            (0, r.jsx)(S.Z, {
-                className: N.messageList,
-                renderMessageGroup: R,
-                messages: s === x.V5.BOOKMARKS ? U : G,
-                unreadMessages: s === x.V5.BOOKMARKS ? [] : B,
+            F === _.v8.TABS && (0, r.jsx)(S.Z, {}),
+            s === P.V5.ALL && (0, r.jsx)(M, { hideBanner: !w || s !== P.V5.ALL }),
+            z && (0, r.jsx)(k, { filter: s }),
+            (0, r.jsx)(I.Z, {
+                className: Z.messageList,
+                renderMessageGroup: L,
+                messages: s === P.V5.BOOKMARKS ? G : B,
+                unreadMessages: s === P.V5.BOOKMARKS ? [] : V,
                 listName: 'notifications-inbox',
-                renderLoadingState: A,
-                ignoreGrouping: s === x.V5.BOOKMARKS,
-                loadMore: P
+                renderLoadingState: D,
+                ignoreGrouping: s === P.V5.BOOKMARKS,
+                loadMore: N
             })
         ]
     });
 }
-function T(e, t) {
+function R(e, t) {
     return i.useMemo(
         () =>
             0 === e.length
                 ? []
                 : e.filter((e) => {
                       let { id: n, channelId: r, kind: i } = e;
-                      if (m.default.age(n) > x.ib) return !1;
-                      if (t === x.V5.ALL) return !0;
-                      if (t === x.V5.MENTIONS) return i === x.fL.MENTION;
-                      if (t === x.V5.ANNOUNCEMENTS) {
-                          let e = p.Z.getChannel(r);
-                          return (null == e ? void 0 : e.type) === I.d4z.GUILD_ANNOUNCEMENT;
+                      if (b.default.age(n) > P.ib) return !1;
+                      if (t === P.V5.ALL) return !0;
+                      if (t === P.V5.MENTIONS) return i === P.fL.MENTION;
+                      if (t === P.V5.ANNOUNCEMENTS) {
+                          let e = f.Z.getChannel(r);
+                          return (null == e ? void 0 : e.type) === N.d4z.GUILD_ANNOUNCEMENT;
                       }
                       return !1;
                   }),
         [e, t]
     );
 }
-function A() {
-    return (0, r.jsx)(C.Z, {});
+function D() {
+    return (0, r.jsx)(E.Z, {});
 }
-function R(e, t, n) {
+function L(e, t, n) {
     return (0, r.jsx)(
-        j.Z,
+        x.Z,
         {
             message: e[0],
             goToSidebar: t,
@@ -225,20 +218,20 @@ function R(e, t, n) {
         e[0].id
     );
 }
-function D(e) {
+function M(e) {
     let { hideBanner: t } = e,
-        n = (0, a.e7)([v.Z], () => v.Z.shouldHide),
+        n = (0, a.e7)([j.Z], () => j.Z.shouldHide),
         [l, s] = (0, i.useState)(!1);
     return (0, r.jsx)('div', {
-        className: o()(N.caughtUpContainer, { [N.hide]: n || t }),
+        className: o()(Z.caughtUpContainer, { [Z.hide]: n || t }),
         children: (0, r.jsxs)('div', {
-            className: N.caughtUpContent,
+            className: Z.caughtUpContent,
             children: [
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-feedback-positive',
-                    className: N.caughtUpText,
-                    children: P.intl.string(P.t['6XMM+P'])
+                    className: Z.caughtUpText,
+                    children: w.intl.string(w.t['6XMM+P'])
                 }),
                 (0, r.jsx)(c.W6s, {
                     size: 'sm',
@@ -248,23 +241,23 @@ function D(e) {
                     size: 'sm',
                     onMouseEnter: () => s(!0),
                     onMouseLeave: () => s(!1),
-                    className: N.caughtUpCloseIcon,
+                    className: Z.caughtUpCloseIcon,
                     color: l ? u.Z.CONTROL_ICON_SECONDARY_HOVER : u.Z.ICON_TERTIARY,
-                    onClickCapture: () => v.Z.dismiss()
+                    onClickCapture: () => j.Z.dismiss()
                 })
             ]
         })
     });
 }
-function L(e) {
+function k(e) {
     let { filter: t } = e;
     return (0, r.jsx)(
         c.X6q,
         {
             color: 'text-primary',
             variant: 'text-sm/semibold',
-            className: N.filterHeaderWrap,
-            children: x.by[t]
+            className: Z.filterHeaderWrap,
+            children: P.by[t]
         },
         'filter-header'
     );

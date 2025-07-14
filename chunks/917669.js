@@ -29,7 +29,5 @@ e.exports = {
     invitesRefresh: 'invitesRefresh_f37cb1',
     guildDropdown: 'guildDropdown_f37cb1',
     guildBadgeAndName: 'guildBadgeAndName_f37cb1',
-    inviteButton: 'inviteButton_f37cb1',
-    settingsButton: 'settingsButton_f37cb1',
-    settingsButtonIcon: 'settingsButtonIcon_f37cb1'
+    inviteButton: 'inviteButton_f37cb1'
 };

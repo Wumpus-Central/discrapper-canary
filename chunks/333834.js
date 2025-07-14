@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(787879),
     j = n(370774),
     E = n(334426),
-    S = n(982183),
-    x = n(981631),
+    x = n(982183),
+    S = n(981631),
     I = n(144717),
     P = n(388032),
     N = n(709701);
@@ -43,7 +43,7 @@ function Z(e) {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: N.messagesGroupHeader,
-                    children: (0, s.capitalize)(P.intl.string(S.Vv[t]).toLowerCase())
+                    children: (0, s.capitalize)(P.intl.string(x.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(p.CJ0, {
                     size: 'xxs',
@@ -53,7 +53,7 @@ function Z(e) {
         })
     });
 }
-let T = [S.KZ.UNREAD, S.KZ.TODAY, S.KZ.YESTERDAY, S.KZ.OLDER];
+let T = [x.KZ.UNREAD, x.KZ.TODAY, x.KZ.YESTERDAY, x.KZ.OLDER];
 function A() {
     let { analyticsLocations: e } = (0, m.ZP)(g.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)('div', {
@@ -74,7 +74,7 @@ function A() {
                         }),
                         (0, r.jsx)(p.Text, {
                             variant: 'text-sm/medium',
-                            color: x.tPk.TEXT_MUTED,
+                            color: S.tPk.TEXT_MUTED,
                             style: { textAlign: 'center' },
                             children: P.intl.string(I.default['O+racX'])
                         })
@@ -116,10 +116,10 @@ function R(e) {
             null == (e = R.current) || e.scrollPageDown({ animate: !0 });
         }
         return (
-            b.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t),
-            b.S.subscribe(x.CkL.SCROLL_PAGE_UP, e),
+            b.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, t),
+            b.S.subscribe(S.CkL.SCROLL_PAGE_UP, e),
             () => {
-                (b.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e));
+                (b.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, e));
             }
         );
     }, []);
@@ -154,31 +154,31 @@ function R(e) {
     }, [M, k, H]);
     let W = i.useMemo(() => {
             let e = {
-                    [S.KZ.UNREAD]: [],
-                    [S.KZ.TODAY]: [],
-                    [S.KZ.YESTERDAY]: [],
-                    [S.KZ.OLDER]: []
+                    [x.KZ.UNREAD]: [],
+                    [x.KZ.TODAY]: [],
+                    [x.KZ.YESTERDAY]: [],
+                    [x.KZ.OLDER]: []
                 },
                 r = {
-                    [S.KZ.UNREAD]: [],
-                    [S.KZ.TODAY]: [],
-                    [S.KZ.YESTERDAY]: [],
-                    [S.KZ.OLDER]: []
+                    [x.KZ.UNREAD]: [],
+                    [x.KZ.TODAY]: [],
+                    [x.KZ.YESTERDAY]: [],
+                    [x.KZ.OLDER]: []
                 },
                 i = {
-                    [S.KZ.UNREAD]: {},
-                    [S.KZ.TODAY]: {},
-                    [S.KZ.YESTERDAY]: {},
-                    [S.KZ.OLDER]: {}
+                    [x.KZ.UNREAD]: {},
+                    [x.KZ.TODAY]: {},
+                    [x.KZ.YESTERDAY]: {},
+                    [x.KZ.OLDER]: {}
                 };
             return (
                 (t.length > 0 || n.length > 0) &&
                     (a().each(n, (e) => {
-                        e.kind === S.fL.MENTION ? r[S.KZ.UNREAD].push(e) : e.channelId in i[S.KZ.UNREAD] ? i[S.KZ.UNREAD][e.channelId].push(e) : (i[S.KZ.UNREAD][e.channelId] = [e]);
+                        e.kind === x.fL.MENTION ? r[x.KZ.UNREAD].push(e) : e.channelId in i[x.KZ.UNREAD] ? i[x.KZ.UNREAD][e.channelId].push(e) : (i[x.KZ.UNREAD][e.channelId] = [e]);
                     }),
                     a().each(t, (e) => {
                         let t = (0, j.bl)(e);
-                        e.kind === S.fL.MENTION ? r[t].push(e) : e.channelId in i[t] ? i[t][e.channelId].push(e) : (i[t][e.channelId] = [e]);
+                        e.kind === x.fL.MENTION ? r[t].push(e) : e.channelId in i[t] ? i[t][e.channelId].push(e) : (i[t][e.channelId] = [e]);
                     }),
                     a().each(T, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
@@ -222,7 +222,7 @@ function R(e) {
                                           t
                                       )
                                   ),
-                                  B[t] && e.push(...W[t].map((e) => h(e, L === O.jP.SIDEBAR, t === S.KZ.UNREAD))));
+                                  B[t] && e.push(...W[t].map((e) => h(e, L === O.jP.SIDEBAR, t === x.KZ.UNREAD))));
                           }),
                 e
             );

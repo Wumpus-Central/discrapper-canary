@@ -20,7 +20,7 @@ function b(e) {
         C = (0, p.Us)({ location: 'RecentsHeader' }),
         { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
         E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        S = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
+        x = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
     return (0, r.jsxs)(s.h4, {
         className: m.header,
         children: [
@@ -99,7 +99,7 @@ function b(e) {
                                   'aria-label': g.intl.string(g.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,
                                   className: m.tab,
-                                  children: 0 === S ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: S })
+                                  children: 0 === x ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: x })
                               })
                             : null,
                         C

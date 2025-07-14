@@ -20,7 +20,7 @@ function f(e) {
         : p.intl.format(l, { username: t });
 }
 function g(e) {
-    var t, n, r, g, m, b, _, O, y, v, C, j, E, S, x;
+    var t, n, r, g, m, b, _, O, y, v, C, j, E, x, S;
     let { item: I, renderApplication: P } = e,
         N = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : h.lds,
         w = u.ZP.getName(a.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -47,8 +47,8 @@ function g(e) {
                 U = null == (E = o.Z.getGuild(null == M ? void 0 : M.guild_id)) ? void 0 : E.name,
                 G = (0, l.Z2)(null != M ? M : void 0);
             return (0, c.Ew)(U) || (0, c.Ew)(k) || !G
-                ? null != (S = I.body)
-                    ? S
+                ? null != (x = I.body)
+                    ? x
                     : ''
                 : p.intl.format(p.t.AyvfXV, {
                       event_name: k,
@@ -101,5 +101,5 @@ function g(e) {
                 applicationName: () => P(Z)
             });
     }
-    return null != (x = I.body) ? x : '';
+    return null != (S = I.body) ? S : '';
 }

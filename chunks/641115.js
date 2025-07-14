@@ -147,28 +147,28 @@ function k(e) {
     );
 }
 function M(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: l, selectedFPS: s, onResolutionChange: o, onFPSChange: x, onPresetChange: A, targetGuildPremiumTier: M, captureDeviceSelected: D } = e,
-        L = (0, c.e7)([b.default], () => {
+    let { onClose: t, selectedPreset: n, selectedResolution: l, selectedFPS: s, onResolutionChange: o, onFPSChange: x, onPresetChange: A, targetGuildPremiumTier: M, captureDeviceSelected: L } = e,
+        D = (0, c.e7)([b.default], () => {
             let e = b.default.getCurrentUser();
             return (a()(null != e, 'StreamSettings: user cannot be undefined'), e);
         }),
         B = (0, c.e7)([j.Z, v.Z], () => v.Z.getChannel(j.Z.getVoiceChannelId())),
-        G = S.ZP.canStreamQuality(S.U2.MID, L),
-        { location: U } = (0, m.O)(),
+        U = S.ZP.canStreamQuality(S.U2.MID, D),
+        { location: G } = (0, m.O)(),
         W = (0, h.Zq)({ autoTrackExposure: !1 }),
         F = (0, g.B4)(),
         z = b.default.getUser(null == B ? void 0 : B.hdStreamingBuyerId),
         H = null != B && null != B.hdStreamingUntil && new Date(B.hdStreamingUntil) > new Date() && null != z,
-        V = !G && !W,
+        V = !U && !W,
         [Y, X] = i.useState(!1),
-        J = D ? O.z8 : O.WC,
-        K = P(E({}, U), { section: Z.jXE.STREAM_SETTINGS }),
+        J = L ? O.z8 : O.WC,
+        K = P(E({}, G), { section: Z.jXE.STREAM_SETTINGS }),
         q = (0, r.jsx)(d.hE, {
             buttons: J.map((e) =>
                 k({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, C.Z)(n, e.value, s, L, M, B),
+                    needsPremium: !(0, C.Z)(n, e.value, s, D, M, B),
                     needsDemo: F && e.value !== O.LY.RESOLUTION_720,
                     analyticsLocation: K,
                     onClick: () => o(e.value),
@@ -182,7 +182,7 @@ function M(e) {
                 k({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, C.Z)(n, l, e.value, L, M, B),
+                    needsPremium: !(0, C.Z)(n, l, e.value, D, M, B),
                     needsDemo: F && e.value === O.ws.FPS_60,
                     analyticsLocation: K,
                     onClick: () => x(e.value),
@@ -196,7 +196,7 @@ function M(e) {
                 value: O.tI.PRESET_VIDEO,
                 label: w.intl.string(w.t.HcwHc3)
             },
-            ...(D
+            ...(L
                 ? []
                 : [
                       {

@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(318713),
     j = n(47930),
     E = n(123145),
-    S = n(25015),
-    x = n(178480),
+    x = n(25015),
+    S = n(178480),
     I = n(703656),
     P = n(518950),
     N = n(131704),
@@ -89,14 +89,14 @@ function F(e) {
         {
             avatarDecorationSrc: v,
             avatarSrc: C,
-            eventHandlers: S
+            eventHandlers: x
         } = (0, P.Z)({
             userId: t.author.id,
             size: u.EFr.SIZE_32,
             guildId: null == f ? void 0 : f.id,
             animateOnHover: !0
         }),
-        x = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == f,
+        S = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == f,
         I = (0, j.x)({
             channel: n,
             message: t,
@@ -122,8 +122,8 @@ function F(e) {
             u.tEY,
             V(B({}, l), {
                 children: (0, r.jsxs)('div', {
-                    onMouseLeave: S.onMouseLeave,
-                    onMouseEnter: S.onMouseEnter,
+                    onMouseLeave: x.onMouseLeave,
+                    onMouseEnter: x.onMouseEnter,
                     className: G.messageContainer,
                     children: [
                         a && (0, r.jsx)('div', { className: G.unreadDot }),
@@ -133,7 +133,7 @@ function F(e) {
                                 width: 'fit-content',
                                 marginTop: '4px'
                             },
-                            children: x
+                            children: S
                                 ? (0, r.jsx)(L.q, {
                                       'aria-label': 'User Avatar',
                                       src: C,
@@ -165,7 +165,7 @@ function F(e) {
                                         justifyContent: 'space-between'
                                     },
                                     children: [
-                                        x
+                                        S
                                             ? (0, r.jsxs)('div', {
                                                   className: G.usernameOuterContainer,
                                                   children: [
@@ -227,7 +227,7 @@ function F(e) {
                                                 [G.unread]: a,
                                                 [G.selected]: s
                                             }),
-                                            children: [p, !x && ' \xB7 '.concat(_)]
+                                            children: [p, !S && ' \xB7 '.concat(_)]
                                         })
                                     ]
                                 }),
@@ -276,7 +276,7 @@ function H(e) {
 }
 function z(e) {
     let { message: t } = e,
-        n = (0, x.a3)(t.timestamp.getTime());
+        n = (0, S.a3)(t.timestamp.getTime());
     return (0, r.jsx)(C.Z, {
         timestamp: t.timestamp,
         className: G.timestamp,
@@ -289,7 +289,7 @@ function W(e) {
     let { message: t, channel: n, isUnread: l, isSelected: s } = e,
         { previewContent: a, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: s } = (0, S.Z)(t, {
+                { content: s } = (0, x.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,

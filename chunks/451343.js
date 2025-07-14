@@ -11,6 +11,8 @@ var r = {
     './call_ringing_beat.mp3': '271527',
     './call_ringing_snow_halation.mp3': '988363',
     './call_ringing_snowsgiving.mp3': '36644',
+    './camera_off.mp3': '401949',
+    './camera_on.mp3': '200438',
     './clip_error.mp3': '45594',
     './clip_save.mp3': '121420',
     './ddr-down.mp3': '87962',

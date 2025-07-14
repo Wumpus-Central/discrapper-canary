@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(642613));
+(n.d(t, { Z: () => x }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -33,12 +33,12 @@ function E(e) {
         onClick: t
     });
 }
-function S(e) {
+function x(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: v, loading: j, loadMore: S } = (0, p.y6)(),
-        x = (0, s.e7)([u.Z], () => u.Z.localItems),
+        { initialized: c, items: v, loading: j, loadMore: x } = (0, p.y6)(),
+        S = (0, s.e7)([u.Z], () => u.Z.localItems),
         I = (0, g.Us)({ location: 'ForYou' }),
-        P = i.useMemo(() => [...[...v, ...x].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, x]),
+        P = i.useMemo(() => [...[...v, ...S].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, S]),
         N = v.length > 0 ? v[0] : null,
         w = m.d$.useSetting(),
         Z = i.useMemo(() => {
@@ -69,7 +69,7 @@ function S(e) {
                 initialized: c,
                 items: P,
                 loading: j,
-                loadMore: S
+                loadMore: x
             })
         ]
     });

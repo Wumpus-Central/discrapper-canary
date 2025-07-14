@@ -27,8 +27,8 @@ var r = n(255367),
     C = n(267642),
     j = n(624138),
     E = n(667815),
-    S = n(531572),
-    x = n(651138),
+    x = n(531572),
+    S = n(651138),
     I = n(18857),
     P = n(981631),
     N = n(921944),
@@ -92,9 +92,9 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             j = (0, C.FZ)(l),
             D = null == j,
             L = null != j ? j : l,
-            M = (0, c.e7)([S.Z], () => {
+            M = (0, c.e7)([x.Z], () => {
                 var e;
-                return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = x.Z.getCountForGuild(t.id)) ? e : 0;
             }),
             U = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
@@ -167,7 +167,7 @@ let D = (0, j.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                         onClick: H,
                                         className: o()(T.container, { [T.containerWithMargin]: n }),
                                         onContextMenu: (e) => {
-                                            U && (0, p.vq)(e, (e) => (0, r.jsx)(x.default, R(A({}, e), { guild: t })));
+                                            U && (0, p.vq)(e, (e) => (0, r.jsx)(S.default, R(A({}, e), { guild: t })));
                                         },
                                         children: [
                                             (0, r.jsx)(h.nn4, { children: e['aria-label'] }),

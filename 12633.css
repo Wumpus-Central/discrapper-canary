@@ -2262,6 +2262,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     box-sizing: border-box;
     overflow-y: hidden;
     padding-left: var(--custom-modal-padding);
+    padding-right: var(--custom-modal-padding)
+}
+
+.has-webkit-scrollbar .bodyInner__53cea {
     padding-right: calc(var(--custom-modal-padding) - var(--space-16))
 }
 
@@ -5308,9 +5312,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .input__0f084:not([readOnly]):focus:hover {
     border-color: var(--text-link)
 }
-
-.inputDefault__0f084,
-.inputMini__0f084 {}
 
 .disabled__0f084 {
     cursor: not-allowed;

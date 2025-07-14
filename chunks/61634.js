@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(106351),
     i = n(442837),
     l = n(595519),
@@ -24,13 +24,13 @@ function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : b.Z;
     return null != e && e.type !== r.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(j.S7T.VIEW_CHANNEL, e);
 }
-function S(e) {
+function x(e) {
     var t;
     let n = (0, i.e7)([y.ZP], () => y.ZP.isMuted(e)),
         r = (0, c.k5)(e),
         j = (0, i.Wu)([o.ZP, _.Z], () => o.ZP.getEmbeddedActivitiesForGuild(e).filter((e) => !(0, a.BA)([...e.userIds], _.Z.getBlockedOrIgnoredIDs()))),
-        S = (0, s.p)(null == (t = j[0]) ? void 0 : t.location),
-        x = (0, l.NX)(S),
+        x = (0, s.p)(null == (t = j[0]) ? void 0 : t.location),
+        S = (0, l.NX)(x),
         {
             guildHasVoice: I,
             guildHasVideo: P,
@@ -74,7 +74,7 @@ function S(e) {
                 y = !1,
                 v = !1,
                 E = !1,
-                S = !1;
+                x = !1;
             if (!f && n)
                 return {
                     audio: m,
@@ -82,7 +82,7 @@ function S(e) {
                     screenshare: E,
                     liveStage: y,
                     activeEvent: _,
-                    activity: S,
+                    activity: x,
                     isCurrentUserConnected: !1
                 };
             let Z = C.default.keys(d.Z.getStageInstancesByGuild(e)).some((e) => {
@@ -94,7 +94,7 @@ function S(e) {
                 R = (0, a.aK)(p.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
                 D = f && N,
                 L = (() => {
-                    if (x) return j.length > 0;
+                    if (S) return j.length > 0;
                     for (let e of j) {
                         let t = g.Z.getChannel((0, s.p)(e.location));
                         if (null != t && (0, h.vd)(t.type)) return !0;
@@ -103,18 +103,18 @@ function S(e) {
                 })(),
                 M = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                f ? ((m = !0), (_ = (null == r ? void 0 : r.channel_id) === c), (y = T), (v = D), (E = A), (S = M)) : ((m = I), (_ = null != r), (y = Z), (v = P), (E = R), (S = L)),
+                f ? ((m = !0), (_ = (null == r ? void 0 : r.channel_id) === c), (y = T), (v = D), (E = A), (x = M)) : ((m = I), (_ = null != r), (y = Z), (v = P), (E = R), (x = L)),
                 {
                     audio: m,
                     video: v,
                     screenshare: E,
                     liveStage: y,
                     activeEvent: _,
-                    activity: S,
+                    activity: x,
                     isCurrentUserConnected: f || T
                 }
             );
         },
-        [e, n, N, w, x, j, r, I, P]
+        [e, n, N, w, S, j, r, I, P]
     );
 }

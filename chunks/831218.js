@@ -21,8 +21,8 @@ var r,
     C = n(313201),
     j = n(860144),
     E = n(214852),
-    S = n(518311),
-    x = n(355298),
+    x = n(518311),
+    S = n(355298),
     I = n(869404),
     P = n(333984),
     N = n(210887),
@@ -424,7 +424,7 @@ class G extends (r = l.Component) {
                                       className: D.headerText,
                                       children: R.intl.string(R.t.YUU0RE)
                                   }),
-                                  (0, i.jsx)(S.Z, {
+                                  (0, i.jsx)(x.Z, {
                                       location: 'PrivateChannelsList-CreateDMButton',
                                       tooltip: R.intl.string(R.t['6Urw1t']),
                                       tooltipPosition: 'top',
@@ -464,10 +464,10 @@ let B = (e) => {
         m = w.Z.getMutablePrivateChannels(),
         _ = (0, I.k1)(m),
         O = (0, u.Wu)(
-            [T.Z, x.Z, P.Z],
+            [T.Z, S.Z, P.Z],
             () => {
                 let e = T.Z.getPrivateChannelIds();
-                return (0, I.tU)(e, [x.Z, P.Z]);
+                return (0, I.tU)(e, [S.Z, P.Z]);
             },
             []
         );
@@ -478,8 +478,8 @@ let B = (e) => {
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != r ? ''.concat(r, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
-        S = l.useRef(null),
-        Z = null != (t = e.listScrollerRef) ? t : S,
+        x = l.useRef(null),
+        Z = null != (t = e.listScrollerRef) ? t : x,
         R = l.useCallback(
             (e) => {
                 let t = Z.current,

@@ -9,14 +9,14 @@ var l = n(120356),
     c = n(593210);
 let u = function (e) {
     let { className: t, hasVideo: n, text: l, hasConnectedChannel: u, textVariant: d = 'text-md/medium' } = e,
-        h = n ? a.intl.string(a.t.IlHdW1) : a.intl.string(a.t.WsOisr);
+        f = n ? a.intl.string(a.t.IlHdW1) : a.intl.string(a.t.WsOisr);
     return (0, r.jsx)(s.Z, {
         className: i()(t, c.hoverableStatus),
         hoverText: u
             ? (0, r.jsx)(o.Text, {
                   variant: d,
                   color: 'currentColor',
-                  children: h
+                  children: f
               })
             : null,
         children: (0, r.jsx)(o.Text, {

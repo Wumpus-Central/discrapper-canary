@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -27,9 +27,9 @@ function E(e) {
     var t, n;
     let { onClick: h, selectedOverride: p = !1, popoutProps: g, ref: _ } = e,
         v = (0, l.Ie)('notifications-inbox'),
-        [E, S] = i.useState(!1),
-        x = (0, b.D)(),
-        I = p || x,
+        [E, x] = i.useState(!1),
+        S = (0, b.D)(),
+        I = p || S,
         { unreadRecentMentionsCount: P, unreadChannelIds: N } = (0, b.O4)(),
         { notificationCenterVariant: w } = m.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
         Z = j(),
@@ -101,8 +101,8 @@ function E(e) {
                                 onClick: h,
                                 to: D,
                                 selected: I || E,
-                                onMouseEnter: () => S(!0),
-                                onMouseLeave: () => S(!1),
+                                onMouseEnter: () => x(!0),
+                                onMouseLeave: () => x(!1),
                                 children: (0, r.jsx)(A, {
                                     size: 'custom',
                                     color: 'currentColor',
@@ -130,7 +130,7 @@ function E(e) {
         ]
     });
 }
-function S() {
+function x() {
     let e = i.useRef(null),
         { notificationCenterVariant: t } = m.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
         n = j();

@@ -86,10 +86,10 @@ function k(e) {
         W = (0, _.O5)(),
         [G, F] = s.useState(!1),
         K = s.useCallback(() => F(!0), []),
-        $ = s.useCallback(() => F(!1), []),
-        J = (0, u.e7)([j.default], () => j.default.getCurrentUser()),
-        X = (0, u.e7)([T.Z], () => T.Z.getState().theme),
-        Y = (0, o.wj)(X) ? y.BRd.DARK : y.BRd.LIGHT,
+        X = s.useCallback(() => F(!1), []),
+        $ = (0, u.e7)([j.default], () => j.default.getCurrentUser()),
+        J = (0, u.e7)([T.Z], () => T.Z.getState().theme),
+        Y = (0, o.wj)(J) ? y.BRd.DARK : y.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: ee, isQuestInQuestBar: et } = (0, u.cj)(
             [A.Z, d.Z, C.Z],
             () => {
@@ -97,10 +97,10 @@ function k(e) {
                 let t = d.Z.getParticipants(Q),
                     n =
                         null != k &&
-                        null != J &&
+                        null != $ &&
                         ((e = A.Z),
                         t.some((t) => {
-                            if (t.type !== P.fO.STREAM || t.user.id !== J.id) return !1;
+                            if (t.type !== P.fO.STREAM || t.user.id !== $.id) return !1;
                             let n = (0, S.Um)(t.stream, e);
                             return null != n && (0, v._D)(n, k);
                         })),
@@ -110,7 +110,7 @@ function k(e) {
                     isQuestInQuestBar: (null == l ? void 0 : l.id) === (null == k ? void 0 : k.id)
                 };
             },
-            [Q, J, k]
+            [Q, $, k]
         ),
         en = null != k ? b.r.build(k.config) : null,
         el = null == en ? void 0 : en.application.id,
@@ -119,14 +119,14 @@ function k(e) {
             () => {
                 let e = E.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(k) && e.includes(el)) return !0;
-                let t = null != J ? A.Z.findActivity(J.id, (e) => e.type !== y.IIU.CUSTOM_STATUS) : null;
+                let t = null != $ ? A.Z.findActivity($.id, (e) => e.type !== y.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(k) && (0, v._D)(t, k));
             },
-            [k, el, J]
+            [k, el, $]
         ),
         er = !0 === H || ee || es,
         ei = (0, u.e7)([C.Z], () => null != k && C.Z.isEnrolling(k.id), [k]),
-        eu = (0, u.e7)([d.Z], () => ((null == J ? void 0 : J.id) == null ? null : d.Z.getParticipant(Q, J.id)) != null, [Q, J]),
+        eu = (0, u.e7)([d.Z], () => ((null == $ ? void 0 : $.id) == null ? null : d.Z.getParticipant(Q, $.id)) != null, [Q, $]),
         eo = (0, p.B6)(null == k ? void 0 : k.config.expiresAt),
         ea = (0, p.B6)(null == en ? void 0 : en.rewardsExpireAt),
         ec = s.useCallback(() => {
@@ -201,8 +201,8 @@ function k(e) {
         className: i()(V.wrapper, { [V.wrapperAccepted]: ej }),
         onFocus: K,
         onMouseEnter: K,
-        onBlur: $,
-        onMouseLeave: $,
+        onBlur: X,
+        onMouseLeave: X,
         children: [
             !ej &&
                 (0, l.jsxs)('div', {
@@ -365,7 +365,7 @@ let B = function (e) {
                               if (!(0, P.I)(l))
                                   for (let e of n.getActivities(l.user.id)) {
                                       let n = (0, v.ZZ)(t, e);
-                                      if (null != n && (null == (r = n.userStatus) ? void 0 : r.claimedAt) == null && ((0, v.Nj)({ quest: n }) || (0, v.$J)(n))) return n;
+                                      if (null != n && (null == (r = n.userStatus) ? void 0 : r.claimedAt) == null) return n;
                                   }
                       }
                       return null;

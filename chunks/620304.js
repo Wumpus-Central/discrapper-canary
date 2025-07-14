@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(554549),
     j = n(441536),
     E = n(447908),
-    S = n(921944),
-    x = n(93841),
+    x = n(921944),
+    S = n(93841),
     I = n(388032),
     P = n(27053);
 function N(e) {
@@ -119,7 +119,7 @@ function Z(e) {
         position: 'right',
         align: 'top',
         shouldShow: null != z,
-        onRequestClose: () => W(S.L.INDIRECT_ACTION),
+        onRequestClose: () => W(x.L.INDIRECT_ACTION),
         animation: d.yRy.Animation.TRANSLATE,
         children: (e) =>
             (0, r.jsx)('div', {
@@ -161,7 +161,7 @@ function Z(e) {
                                                 (0, r.jsx)(a.xv, {
                                                     className: P.text,
                                                     variant: 'text-xs/semibold',
-                                                    children: I.intl.string(x.default.NI6IhY)
+                                                    children: I.intl.string(S.default.NI6IhY)
                                                 }),
                                                 t.premiumSubscriberCount >= Z &&
                                                     (0, r.jsx)(a.xv, {
@@ -178,8 +178,8 @@ function Z(e) {
                                                     className: o()(P.text, P.boostCountText),
                                                     variant: 'text-xs/semibold',
                                                     children: k
-                                                        ? I.intl.formatToPlainString(x.default['Ehpq+/'], { appliedBoostCount: R })
-                                                        : I.intl.formatToPlainString(x.default['/rbPDg'], {
+                                                        ? I.intl.formatToPlainString(S.default['Ehpq+/'], { appliedBoostCount: R })
+                                                        : I.intl.formatToPlainString(S.default['/rbPDg'], {
                                                               appliedBoostCount: R,
                                                               maxBoostCount: Z
                                                           })

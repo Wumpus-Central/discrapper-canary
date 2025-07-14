@@ -40,11 +40,11 @@ var r = n(255367),
     A = n(133179),
     k = n(70722),
     M = n(761274),
-    D = n(46140),
-    L = n(65154),
+    L = n(46140),
+    D = n(65154),
     B = n(388032),
-    G = n(873270);
-function U(e) {
+    U = n(873270);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,18 +77,18 @@ function W(e) {
 function F(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        o = S.Z.supports(L.AN.GO_LIVE_HARDWARE),
+        o = S.Z.supports(D.AN.GO_LIVE_HARDWARE),
         [a, m] = i.useState(null),
         [C, y] = i.useState(null),
         [w, I] = i.useState(null),
         T = null != w && w.length > 0,
         [E, R] = i.useState(c.vA.WINDOW),
-        [k, U] = i.useState(!1),
+        [k, G] = i.useState(!1),
         F = i.useRef(null),
         z = i.useRef(new u.Xp()),
         H = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
         V = (function (e, t, n) {
-            let r = (0, j.Zy)({ location: D.dr.STREAM_SOURCE_SELECT });
+            let r = (0, j.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !r) return null;
                 for (let r of n) {
@@ -137,7 +137,7 @@ function F(e) {
         );
     }, []);
     let X = i.useCallback((e) => {
-            null !== e && ((F.current = e), U(!e.isScrolledToTop()));
+            null !== e && ((F.current = e), G(!e.isScrolledToTop()));
         }, []),
         [J, K] = i.useState(void 0);
     i.useEffect(() => {
@@ -156,13 +156,13 @@ function F(e) {
     if (null == q)
         return !1 === J
             ? (0, r.jsxs)(f.Text, {
-                  className: G.errorMessage,
+                  className: U.errorMessage,
                   variant: 'text-md/normal',
                   color: 'text-danger',
                   children: [B.intl.string(B.t['kW5h/f']), (0, r.jsx)('br', {}), B.intl.string(B.t['5Jvu1d'])]
               })
             : (0, r.jsx)(h.Z, {
-                  className: G.spinner,
+                  className: U.spinner,
                   justify: h.Z.Justify.CENTER,
                   align: h.Z.Align.CENTER,
                   children: (0, r.jsx)(f.$jN, {})
@@ -173,7 +173,7 @@ function F(e) {
         return (0, r.jsx)(
             f.P3F,
             {
-                className: s()(G.tile, { [G.selected]: l }),
+                className: s()(U.tile, { [U.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
                     A.Z,
@@ -190,7 +190,7 @@ function F(e) {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: G.segmentContainer,
+                className: U.segmentContainer,
                 children: [
                     (0, r.jsx)(P.Z, { separator: k }),
                     (0, r.jsx)(f.sY7, {
@@ -221,24 +221,24 @@ function F(e) {
                             let { value: t } = e;
                             return R(t);
                         },
-                        className: G.segmentControl,
-                        optionClassName: G.segmentControlOption
+                        className: U.segmentControl,
+                        optionClassName: U.segmentControlOption
                     })
                 ]
             }),
             (0, r.jsxs)(f.Den, {
                 ref: X,
-                className: G.sourceScroller,
+                className: U.sourceScroller,
                 onScroll: function () {
                     let e = F.current;
-                    null != e && U(!e.isScrolledToTop());
+                    null != e && G(!e.isScrolledToTop());
                 },
                 children: [
                     E === c.vA.WINDOW && null != V && (0, r.jsx)(b.Z, { quest: V.quest }),
                     (0, r.jsx)(p.Z, {
                         layout: p.Z.Layout.WRAP,
                         columns: 2,
-                        className: G.sourceContainer,
+                        className: U.sourceContainer,
                         children: Q
                     })
                 ]
@@ -260,11 +260,11 @@ function z(e) {
         'aria-checked': !1,
         onClick: n,
         tabIndex: 0,
-        className: s()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
+        className: s()(U.nativeSourceSingleTypeButton, U.nativePickerRadioItem),
         children: (0, r.jsxs)('div', {
-            className: G.nativeSourceSingleTypeButtonInner,
+            className: U.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(R.Z, { className: U.nativeSourceSingleTypeImage }),
                 (0, r.jsx)(f.Text, {
                     variant: 'text-md/medium',
                     color: 'none',
@@ -288,9 +288,9 @@ function H(e) {
         'aria-checked': !1,
         onClick: c,
         tabIndex: 0,
-        className: s()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
+        className: s()(U.nativeSourceTypeButton, U.nativePickerRadioItem),
         children: (0, r.jsxs)('div', {
-            className: G.nativeSourceTypeButtonInner,
+            className: U.nativeSourceTypeButtonInner,
             children: [
                 (0, r.jsx)(o, { size: 'lg' }),
                 (0, r.jsx)(f.Text, {
@@ -316,13 +316,13 @@ function V(e) {
                 });
                 (l(e),
                     c(
-                        U(
+                        G(
                             {},
                             e.reduce((e, t) => {
                                 var n, r;
                                 let [i, l] = t;
                                 return (
-                                    (n = U({}, e)),
+                                    (n = G({}, e)),
                                     (r = r = { ['camera:' + i]: l.name }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -371,7 +371,7 @@ function V(e) {
         j = p
             ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)('div', {
-                  className: G.nativePickerTypes,
+                  className: U.nativePickerTypes,
                   children: [
                       (0, r.jsx)(H, {
                           onSelect: t,
@@ -399,10 +399,10 @@ function V(e) {
                   ]
               });
     return (0, r.jsxs)('div', {
-        className: G.nativePickerScroll,
+        className: U.nativePickerScroll,
         children: [
             (0, r.jsx)(f.Text, {
-                className: G.nativePickerLabel,
+                className: U.nativePickerLabel,
                 variant: 'text-md/semibold',
                 color: 'interactive-normal',
                 children: B.intl.string(B.t.XyYoFR)
@@ -411,14 +411,14 @@ function V(e) {
             0 === n.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: s()(G.nativePickerCaptureSection, g ? null : G.nativePickerCollapsed),
+                      className: s()(U.nativePickerCaptureSection, g ? null : U.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
                               onClick: v,
-                              className: G.nativePickerLabel,
+                              className: U.nativePickerLabel,
                               children: [
                                   (0, r.jsx)(f.Text, {
-                                      className: G.nativeCaptureDevicesText,
+                                      className: U.nativeCaptureDevicesText,
                                       variant: 'text-md/semibold',
                                       color: 'interactive-normal',
                                       children: B.intl.string(B.t.rO0Vi4)
@@ -426,21 +426,21 @@ function V(e) {
                                   (0, r.jsx)(f.CJ0, {
                                       size: 'sm',
                                       color: 'currentColor',
-                                      className: G.captureDevicesToggleIndicator
+                                      className: U.captureDevicesToggleIndicator
                                   })
                               ]
                           }),
                           (0, r.jsx)(f.FXm, {
-                              className: G.nativePickerCaptureList,
+                              className: U.nativePickerCaptureList,
                               onChange: h,
-                              radioItemClassName: G.nativePickerRadioItem,
+                              radioItemClassName: U.nativePickerRadioItem,
                               options: n.map((e) => {
                                   let [t, n] = e;
                                   return {
                                       name: n.name,
                                       value: 'camera:' + n.id,
                                       icon: f.Odl,
-                                      radioItemIconClassName: G.hideRadioCheckbox
+                                      radioItemIconClassName: U.hideRadioCheckbox
                                   };
                               })
                           })
@@ -458,14 +458,14 @@ function Y(e) {
         }, [l]),
         s === I.Uc.Error
             ? (0, r.jsx)(f.Text, {
-                  className: G.errorMessage,
+                  className: U.errorMessage,
                   variant: 'text-md/normal',
                   color: 'text-danger',
                   children: null != o && o.length > 0 ? o : B.intl.string(B.t.CKsXk5)
               })
             : (0, r.jsx)(R.Z, {
                   animated: !0,
-                  className: G.nativePickerGuide
+                  className: U.nativePickerGuide
               })
     );
 }

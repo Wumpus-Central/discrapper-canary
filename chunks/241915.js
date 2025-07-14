@@ -312,9 +312,9 @@ h(S, 'defaultProps', {
     roundCorners: !0
 });
 let A = (e) => {
-        let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: o, maxY: l, onWindowMove: c, onWindowResize: u, dockedRect: d, pictureInPictureComponents: _, appContext: h, roundCorners: g, resizeConfig: E } = e,
-            [b, O] = a.useState(!1),
-            v = a.useMemo(
+        let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: o, maxY: l, onWindowMove: c, onWindowResize: u, dockedRect: d, pictureInPictureComponents: _, appContext: h, roundCorners: g, resizeConfig: E, className: b } = e,
+            [O, v] = a.useState(!1),
+            I = a.useMemo(
                 () =>
                     null == t
                         ? null
@@ -325,18 +325,18 @@ let A = (e) => {
                           }),
                 [n, t, r, _]
             ),
-            I = a.useCallback(() => {
-                O(!0);
-            }, []),
             T = a.useCallback(() => {
-                O(!1);
+                v(!0);
             }, []),
-            A = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
-            N = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
+            A = a.useCallback(() => {
+                v(!1);
+            }, []),
+            N = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
+            C = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
         return null == t
             ? (0, i.jsx)('div', { className: p.pictureInPicture })
             : (0, i.jsx)('div', {
-                  className: s()(p.pictureInPicture, { [p.dragging]: b }),
+                  className: s()(p.pictureInPicture, { [p.dragging]: O }, b),
                   children: (0, i.jsx)(S, {
                       appContext: h,
                       position: t.position,
@@ -344,8 +344,8 @@ let A = (e) => {
                       hidden: t.hidden,
                       onMove: c,
                       onResize: u,
-                      onDragStart: I,
-                      onDragEnd: T,
+                      onDragStart: T,
+                      onDragEnd: A,
                       maxX: o,
                       maxY: l,
                       width: r,
@@ -355,8 +355,8 @@ let A = (e) => {
                       edgeOffsetLeft: y.left,
                       edgeOffsetRight: y.top,
                       roundCorners: g,
-                      resizeConfig: A || N ? void 0 : E,
-                      children: v
+                      resizeConfig: N || C ? void 0 : E,
+                      children: I
                   })
               });
     },
