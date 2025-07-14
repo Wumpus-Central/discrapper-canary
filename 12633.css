@@ -59183,7 +59183,6 @@ code {
     --custom-guild-shop-preview-pill-shadow-light: -4px 5px #d7dce8;
     --custom-guild-shop-gradient-start: #686bff;
     --custom-guild-shop-gradient-end: #c356fd;
-    --custom-guild-role-connections-modal-close-button-margin: 12px;
     --custom-clips-enabled-indicator-medium-break-point: 920px;
     --custom-clips-enabled-indicator-badge-icon-dimension-override: 20px;
     --custom-client-themes-editor-content-width: calc(var(--custom-theme-selection-selection-size)*3 + var(--custom-theme-selection-group-column-gap)*2);
