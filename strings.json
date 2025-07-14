@@ -20449,6 +20449,7 @@
   "1qTOvr": "This server is now accessible to everyone at [!!{urlText}!!](!!{urlText}!!)",
   "toKjAA": "your-url-here",
   "koklFB": "Bring others to your server easily with your own customized invite link.  Heads up though, anyone with the link can join and you'll need at least one text channel that is open to all server members. [Learn more.](Learn more.)",
+  "J/v84O": "Easily invite others to your server with your own customized URL. When enabled, anyone with the link can join and you'll need at least one text channel that is open to all server members. [Learn more.](Learn more.)",
   "MVWOUV": "{uses, plural, =0 {0 uses} one {1 use} other {!!{uses}!! uses} }",
   "PCgG39": "Email verification link has expired.",
   "5wquiI": "We've detected something out of the ordinary going on.\\nTo continue using Discord, **we will need you to verify your account.**",
