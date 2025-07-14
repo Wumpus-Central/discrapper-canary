@@ -1,11 +1,11 @@
-(n.d(t, { Z: () => r }), n(35282));
-var a = n(848697);
+(n.d(t, { Z: () => i }), n(35282));
+var r = n(848697);
 let o = {
-        LATIN12: a.latin12CompactTimeStamp,
-        LATIN24: a.latin24CompactTimeStamp,
-        ASIAN: a.asianCompactTimeStamp
+        LATIN12: r.latin12CompactTimeStamp,
+        LATIN24: r.latin24CompactTimeStamp,
+        ASIAN: r.asianCompactTimeStamp
     },
-    i = /(AM|PM)$/;
-function r(e) {
-    return null != e.match(i) ? o.LATIN24 : e.length <= 5 ? o.LATIN12 : o.ASIAN;
+    l = /(AM|PM)$/;
+function i(e) {
+    return null != e.match(l) ? o.LATIN24 : e.length <= 5 ? o.LATIN12 : o.ASIAN;
 }

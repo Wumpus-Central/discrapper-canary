@@ -87,8 +87,8 @@ let x = a.ZP.connectStores([m.Z, s.ZP, I.Z, g.Z, y.Z, v.Z, O.Z, f.Z, E.ZP, _.Z],
         w = (0, c.p)(null == P ? void 0 : P.location),
         L = null != P && !(0, u.Z)(w, y.Z, v.Z),
         x = s.ZP.getActivityPanelMode(),
-        M = L && x === A.Ez.PANEL,
-        k = null != P && null != w && (null == (t = f.Z.getSelectedParticipant(w)) ? void 0 : t.type) === N.fO.ACTIVITY,
+        k = L && x === A.Ez.PANEL,
+        M = null != P && null != w && (null == (t = f.Z.getSelectedParticipant(w)) ? void 0 : t.type) === N.fO.ACTIVITY,
         j = _.Z.getConnectedFrame(),
         U = _.Z.getFrameLayoutMode() === C.U.FOCUSED,
         G = I.Z.windowSize();
@@ -103,7 +103,7 @@ let x = a.ZP.connectStores([m.Z, s.ZP, I.Z, g.Z, y.Z, v.Z, O.Z, f.Z, E.ZP, _.Z],
                   };
     }
     let B = h ? S.IlC.POPOUT : S.IlC.APP;
-    p = (null != P && R) || (h && L) ? null : h || !b || L ? (null != P && M ? (null != (n = O.Z.pipActivityWindow) ? n : O.Z.pipVideoWindow) : null != j && U ? (null != (i = null != (r = O.Z.pipFrameWindow) ? r : O.Z.pipVideoWindow) ? i : O.Z.pipActivityWindow) : null != (o = null != (a = O.Z.pipVideoWindow) ? a : O.Z.pipActivityWindow) ? o : O.Z.pipFrameWindow) : null;
+    p = (null != P && R) || (h && L) ? null : h || !b || L ? (null != P && k ? (null != (n = O.Z.pipActivityWindow) ? n : O.Z.pipVideoWindow) : null != j && U ? (null != (i = null != (r = O.Z.pipFrameWindow) ? r : O.Z.pipVideoWindow) ? i : O.Z.pipActivityWindow) : null != (o = null != (a = O.Z.pipVideoWindow) ? a : O.Z.pipActivityWindow) ? o : O.Z.pipFrameWindow) : null;
     let V = Array.from(O.Z.pipWindows.values()),
         F = O.Z.pipWidth(N.cL.VIDEO),
         Z = V.find((e) => e.component === S.NYg.VIDEO),
@@ -112,7 +112,7 @@ let x = a.ZP.connectStores([m.Z, s.ZP, I.Z, g.Z, y.Z, v.Z, O.Z, f.Z, E.ZP, _.Z],
         W = v.Z.getVoiceChannelId(),
         K = v.Z.getChannelId() === W,
         z = null != W && f.Z.getChatOpen(W),
-        q = M || k,
+        q = k || M,
         X = q && null != P && (0, l.q)(P.applicationId),
         Q = !q && null != p && K && z;
     return {

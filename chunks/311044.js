@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var o = n(255367),
     r = n(73800),
     i = n(481060),
@@ -12,9 +12,9 @@ var o = n(255367),
     p = n(252417),
     m = n(264481),
     b = n(714905);
-function _(e) {
-    let { user: t, guildId: n, channelId: _, onClose: x } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
+function x(e) {
+    let { user: t, guildId: n, channelId: x, onClose: y } = e,
+        { analyticsLocations: _ } = (0, l.ZP)(),
         { context: h, trackUserProfileAction: g } = (0, s.KZ)(),
         { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(t),
         v = (0, c.Z)();
@@ -56,10 +56,10 @@ function _(e) {
                                     user: r,
                                     status: i,
                                     guildId: n,
-                                    channelId: _,
+                                    channelId: x,
                                     onSelect: () => {
                                         var e, t;
-                                        (null == x || x(),
+                                        (null == y || y(),
                                             g({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
@@ -90,7 +90,7 @@ function _(e) {
                                                 (t = t =
                                                     {
                                                         userId: r.id,
-                                                        sourceAnalyticsLocations: y
+                                                        sourceAnalyticsLocations: _
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

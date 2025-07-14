@@ -6,7 +6,7 @@
     J0: () => P,
     K8: () => L,
     RE: () => T,
-    Vt: () => k,
+    Vt: () => M,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
@@ -16,7 +16,7 @@
     kN: () => w,
     lb: () => A,
     o0: () => U,
-    o8: () => M,
+    o8: () => k,
     pv: () => R,
     rL: () => m,
     xg: () => G,
@@ -160,14 +160,14 @@ let I = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
     D = new Date('2025-02-15T23:59:00-08:00'),
     L = 3,
     x = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
-var M = (function (e) {
+var k = (function (e) {
     return ((e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e);
 })({});
-let k = {
+let M = {
         ORB_PROFILE_BADGE: '1342211853484429445',
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY
     },
-    j = new Set(Object.values(k)),
+    j = new Set(Object.values(M)),
     U = (e) => j.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     B = [
@@ -178,10 +178,6 @@ let k = {
         {
             sortType: d.E.RECENCY,
             sortDirection: u.F.DESC
-        },
-        {
-            sortType: d.E.RECENCY,
-            sortDirection: u.F.ASC
         },
         {
             sortType: d.E.PRICE,

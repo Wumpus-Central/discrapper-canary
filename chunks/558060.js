@@ -1,25 +1,26 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var l = n(120356),
     o = n.n(l),
-    a = n(884697),
-    i = n(409116),
-    s = n(981631),
-    c = n(561197);
-function u(e) {
+    i = n(884697),
+    a = n(754433),
+    s = n(409116),
+    c = n(981631),
+    u = n(561197);
+function d(e) {
     var t, n;
-    let { product: l, isPremiumUser: u, discount: d, className: p, hideStrikethroughPrice: g = !1, nitroIconType: f, nitroIconSize: h = 'md' } = e,
-        b = (0, a.ql)(l, s.tuJ.DEFAULT);
-    if (null == b) return null;
-    if (b.amount <= 0)
+    let { product: l, isPremiumUser: d, discount: p, className: g, hideStrikethroughPrice: f = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
+        m = (0, i.ql)(l, c.tuJ.DEFAULT);
+    if (null == m) return null;
+    if (m.amount <= 0)
         return (0, r.jsx)('div', {
-            className: o()(c.priceTagsContainer, p),
-            children: (0, r.jsx)(i.F, { price: b })
+            className: o()(u.priceTagsContainer, g),
+            children: (0, r.jsx)(s.F, { price: m })
         });
-    let m = (0, a.ql)(l, s.tuJ.PREMIUM_TIER_2),
-        _ =
-            (0, a.x6)(l) && u
+    let _ = (0, i.ql)(l, c.tuJ.PREMIUM_TIER_2),
+        C =
+            (0, i.x6)(l) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
@@ -44,8 +45,8 @@ function u(e) {
                               }));
                       }
                       return e;
-                  })({}, b)),
-                  (n = n = { amount: d.original }),
+                  })({}, m)),
+                  (n = n = { amount: p.original }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                       : (function (e, t) {
@@ -59,23 +60,23 @@ function u(e) {
                             Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                         }),
                   t)
-                : b,
-        C = u && null != m;
+                : m,
+        O = d && null != _;
     return (0, r.jsxs)('div', {
-        className: o()(c.priceTagsContainer, p),
+        className: o()(u.priceTagsContainer, g),
         children: [
-            g
+            f
                 ? null
-                : (0, r.jsx)(i.F, {
-                      price: _,
-                      className: o()(c.price, c.striked)
+                : (0, r.jsx)(a.y, {
+                      price: C,
+                      className: u.price
                   }),
-            (0, r.jsx)(i.F, {
-                price: C ? m : _,
-                discount: d,
-                className: c.price,
-                nitroIconType: C ? f : void 0,
-                nitroIconSize: h
+            (0, r.jsx)(s.F, {
+                price: O ? _ : C,
+                discount: p,
+                className: u.price,
+                nitroIconType: O ? h : void 0,
+                nitroIconSize: b
             })
         ]
     });

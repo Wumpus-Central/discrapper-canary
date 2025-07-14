@@ -69,7 +69,7 @@ let s = 'orb-checkout-payment-modal-key',
                                 analyticsLocations: c,
                                 analyticsSourceLocation: u,
                                 onCheckoutSuccess: (e) => {
-                                    ((f = !0), h(e));
+                                    (f || h(e), (f = !0));
                                 }
                             },
                             p,

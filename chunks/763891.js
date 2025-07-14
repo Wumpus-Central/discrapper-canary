@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(979554),
-    a = n(399606),
-    i = n(780384),
+    i = n(399606),
+    a = n(780384),
     s = n(481060),
     c = n(410030),
     u = n(594174),
@@ -32,16 +32,16 @@ function k(e) {
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: w, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        F = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [D, M] = l.useState(1),
+        Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        D = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [F, M] = l.useState(1),
         H = () => {
             var e;
             null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
-        V = (0, i.ap)(W),
-        [U, G, z] = l.useMemo(() => {
+        V = (0, a.ap)(W),
+        [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [O.intl.string(O.t.dRZYND), V ? y.Z : x.Z, o.Z.AVATAR_DECORATION];
@@ -57,12 +57,12 @@ function k(e) {
         Y = l.useMemo(
             () =>
                 q(
-                    F.filter((e) => {
+                    D.filter((e) => {
                         var t;
-                        return e.type === z || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
+                        return e.type === G || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
                     })
                 ),
-            [F, z, q]
+            [D, G, q]
         ),
         K = (0, f.l)(Y);
     return (l.useEffect(() => {
@@ -91,7 +91,7 @@ function k(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(G, ')') },
+                      style: { backgroundImage: 'url('.concat(z, ')') },
                       className: v.bannerContainer,
                       children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
@@ -100,7 +100,7 @@ function k(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: v.products,
-                      children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
+                      children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -128,7 +128,7 @@ function k(e) {
                           className: v.paginationContainer,
                           children: (0, r.jsx)('div', {
                               children: (0, r.jsx)(s.DsT, {
-                                  currentPage: D,
+                                  currentPage: F,
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {

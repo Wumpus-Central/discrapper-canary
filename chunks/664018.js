@@ -1,11 +1,11 @@
 n.d(t, {
     D: () => o,
-    E: () => i
+    E: () => a
 });
 var r,
     l = n(818083),
     o = (((r = {})[(r.CONTROL = 0)] = 'CONTROL'), (r[(r.TRANSFORMATION = 1)] = 'TRANSFORMATION'), (r[(r.NO_MOVEMENT = 2)] = 'NO_MOVEMENT'), r);
-let a = (0, l.B)({
+let i = (0, l.B)({
         kind: 'user',
         id: '2024-03_shop_card_hover_animation',
         label: 'Shop card hover animation experiment',
@@ -23,4 +23,4 @@ let a = (0, l.B)({
             }
         ]
     }),
-    i = (e) => a.useExperiment({ location: e });
+    a = (e) => i.useExperiment({ location: e });

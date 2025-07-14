@@ -1,81 +1,74 @@
-(n.d(t, { default: () => d }), n(388685));
-var s = n(255367),
-    r = n(73800),
-    i = n(481060),
-    a = n(388032),
-    l = n(78349);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
+a.d(t, { default: () => l });
+var n = a(255367);
+a(73800);
+var i = a(82659),
+    s = a(481060),
+    r = a(724723),
+    o = a(388032),
+    c = a(78349);
+function l(e) {
+    let { transitionState: t, header: l, body: d, confirmText: x, onClose: h, onConfirm: p } = e,
+        u = r.Z.useExperiment({ location: 'VideoDevicesWarningModal' }, { autoTrackExposure: !0 }).enabled,
+        m = () => {
+            (h(), null == p || p());
+        };
+    return u
+        ? (0, n.jsx)(i.u, {
+              title: l,
+              subtitle: d,
+              transitionState: t,
+              onClose: h,
+              actions: [
+                  {
+                      text: x,
+                      onClick: m,
+                      variant: 'primary'
+                  }
+              ]
+          })
+        : (0, n.jsxs)(s.Y0X, {
+              transitionState: t,
+              'aria-label': l,
+              parentComponent: 'VideoDevicesWarningModal',
+              children: [
+                  (0, n.jsxs)(s.hzk, {
+                      className: c.content,
+                      children: [
+                          (0, n.jsx)('img', {
+                              src: a(568533),
+                              alt: l
+                          }),
+                          (0, n.jsx)(s.X6q, {
+                              variant: 'heading-xl/semibold',
+                              className: c.header,
+                              children: l
+                          }),
+                          (0, n.jsx)(s.Text, {
+                              variant: 'text-md/normal',
+                              children: d
+                          })
+                      ]
+                  }),
+                  (0, n.jsx)(s.mzw, {
+                      className: c.footer,
+                      children: (0, n.jsxs)(s.hE2, {
+                          direction: 'horizontal-reverse',
+                          children: [
+                              (0, n.jsx)(s.zxk, {
+                                  variant: 'primary',
+                                  size: 'sm',
+                                  text: x,
+                                  onClick: m
+                              }),
+                              (0, n.jsx)(s.zxk, {
+                                  variant: 'secondary',
+                                  size: 'sm',
+                                  text: o.intl.string(o.t.cpT0Cg),
+                                  onClick: h
+                              })
+                          ]
+                      })
+                  })
+              ]
+          });
 }
-class c extends r.PureComponent {
-    render() {
-        let { transitionState: e, header: t, body: r, confirmText: o } = this.props;
-        return (0, s.jsxs)(i.Y0X, {
-            transitionState: e,
-            'aria-label': t,
-            parentComponent: 'VideoDevicesWarningModal',
-            children: [
-                (0, s.jsxs)(i.hzk, {
-                    className: l.content,
-                    children: [
-                        (0, s.jsx)('img', {
-                            src: n(568533),
-                            alt: t
-                        }),
-                        (0, s.jsx)(i.X6q, {
-                            variant: 'heading-xl/semibold',
-                            className: l.header,
-                            children: t
-                        }),
-                        (0, s.jsx)(i.Text, {
-                            variant: 'text-md/normal',
-                            children: r
-                        })
-                    ]
-                }),
-                (0, s.jsx)(i.mzw, {
-                    className: l.footer,
-                    children: (0, s.jsxs)(i.hE2, {
-                        direction: 'horizontal-reverse',
-                        children: [
-                            (0, s.jsx)(i.zxk, {
-                                variant: 'primary',
-                                size: 'sm',
-                                text: o,
-                                onClick: this.handleConfirm
-                            }),
-                            (0, s.jsx)(i.zxk, {
-                                variant: 'secondary',
-                                size: 'sm',
-                                text: a.intl.string(a.t.cpT0Cg),
-                                onClick: this.handleDismiss
-                            })
-                        ]
-                    })
-                })
-            ]
-        });
-    }
-    constructor(...e) {
-        (super(...e),
-            o(this, 'handleConfirm', () => {
-                let { onConfirm: e, onClose: t } = this.props;
-                (null == t || t(), null == e || e());
-            }),
-            o(this, 'handleDismiss', () => {
-                let { onDismiss: e, onClose: t } = this.props;
-                (null == t || t(), null == e || e());
-            }));
-    }
-}
-let d = c;

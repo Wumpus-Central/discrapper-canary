@@ -1,5 +1,5 @@
 (n.d(t, {
-    $K: () => O,
+    $K: () => x,
     IG: () => v,
     Nb: () => _,
     Ts: () => j,
@@ -17,8 +17,8 @@ var l = n(570140),
     d = n(17181),
     u = n(962086),
     m = n(225675),
-    I = n(592125),
-    h = n(430824),
+    h = n(592125),
+    I = n(430824),
     g = n(823379),
     N = n(434404),
     f = n(889369),
@@ -26,8 +26,8 @@ var l = n(570140),
     p = n(84658),
     E = n(176505),
     T = n(290511),
-    x = n(388032);
-function O(e) {
+    O = n(388032);
+function x(e) {
     l.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
@@ -42,12 +42,12 @@ function _(e) {
 }
 async function j(e, t) {
     let n = a.Z.getEnabled(e),
-        s = Array.from(f.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
+        s = Array.from(f.Z.editedDefaultChannelIds).filter((e) => null != h.Z.getChannel(e)),
         [o, d] = (0, c.d9)(e, [...s]);
     if (n && t === T.Un.ONBOARDING_DEFAULT && (d.length < T.md || o.length < T.X))
         return void i.Z.show({
-            title: x.intl.string(x.t.iLdiqa),
-            body: x.intl.string(x.t.JOT74e)
+            title: O.intl.string(O.t.iLdiqa),
+            body: O.intl.string(O.t.JOT74e)
         });
     try {
         await (0, S.n_)(e, { mode: t });
@@ -55,7 +55,7 @@ async function j(e, t) {
         var u;
         let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
         i.Z.show({
-            title: x.intl.string(x.t.iLdiqa),
+            title: O.intl.string(O.t.iLdiqa),
             body: [e, t].filter(g.lm).join(': ')
         });
     }
@@ -67,14 +67,14 @@ async function j(e, t) {
 }
 function v(e, t) {
     let n = p.xh.findIndex((e) => e === t);
-    -1 !== n && n !== p.xh.length - 1 && O(p.xh[n + 1]);
+    -1 !== n && n !== p.xh.length - 1 && x(p.xh[n + 1]);
 }
 function b(e, t) {
     let n = p.xh.findIndex((e) => e === t);
-    -1 !== n && 0 !== n && O(p.xh[n - 1]);
+    -1 !== n && 0 !== n && x(p.xh[n - 1]);
 }
 async function D(e) {
-    let t = h.Z.getGuild(e);
+    let t = I.Z.getGuild(e);
     null != t &&
         (N.Z.close(),
         (0, u.iD)(t.id, {

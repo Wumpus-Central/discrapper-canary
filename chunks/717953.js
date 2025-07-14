@@ -78,14 +78,14 @@ function v(e) {
         D = (0, f.Sl)(g.Il.WHITE).hex,
         L = (0, f.Sl)(g.Il.RED_430).hex,
         x = C ? D : void 0,
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             (T && S(), null == v || v());
         }, [T, S, v]);
     return (0, r.jsxs)('div', {
         className: y.badgeContainer,
         children: [
             (0, r.jsxs)(h.S4, {
-                onSelect: a ? void 0 : M,
+                onSelect: a ? void 0 : k,
                 isSelected: !1,
                 showSelectionCircle: C,
                 name: b.intl.string(E.default.KSBBpK),

@@ -166,11 +166,11 @@ function x(e) {
     let { guildId: t, channelId: n } = e;
     null != t ? L(t) : (0, d.a)({ location: 'SearchStore' }) ? L(h.aib.DMS) : L(n);
 }
-function M(e) {
+function k(e) {
     let { searchId: t } = e;
     L(t);
 }
-function k(e) {
+function M(e) {
     let { searchId: t } = e;
     null == t ? (s.K.remove(O), (T = {})) : (delete T[t], s.K.set(O, { history: T }));
 }
@@ -308,10 +308,10 @@ let Y = new H(l.Z, {
     SEARCH_EDITOR_STATE_CHANGE: A,
     SEARCH_SET_SHOW_BLOCKED_RESULTS: G,
     SEARCH_SET_SHOW_NO_RESULTS_ALT: B,
-    SEARCH_SCREEN_OPEN: M,
+    SEARCH_SCREEN_OPEN: k,
     CHANNEL_SELECT: x,
     CHANNEL_TOGGLE_MEMBERS_SECTION: F,
-    SEARCH_CLEAR_HISTORY: k,
+    SEARCH_CLEAR_HISTORY: M,
     SEARCH_REMOVE_HISTORY: j,
     SEARCH_ADD_HISTORY: R,
     LOGOUT: V

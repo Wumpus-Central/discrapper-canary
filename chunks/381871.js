@@ -19,20 +19,20 @@ var r = n(255367),
     C = n(74538),
     x = n(401062),
     v = n(696900),
-    O = n(456631),
-    j = n(963838),
+    j = n(456631),
+    O = n(963838),
     E = n(535879),
     S = n(310892),
     I = n(12168),
     P = n(353368),
     Z = n(981631),
-    T = n(354459),
-    N = n(185923),
+    N = n(354459),
+    T = n(185923),
     A = n(474936),
     w = n(526761),
     R = n(388032),
     M = n(934680);
-let D = N.Hz.CHAT,
+let D = T.Hz.CHAT,
     k = {
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
@@ -41,7 +41,7 @@ let D = N.Hz.CHAT,
 function U(e) {
     var t;
     let { channel: n, closePopout: m, onFocus: y } = e,
-        N = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         U = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         B = C.ZP.canUseFancyVoiceChannelReactions(U),
         F = (0, a.e7)([v.Z], () => v.Z.getState().animationType),
@@ -57,10 +57,10 @@ function U(e) {
                         intention: D
                     })
             )
-            .slice(0, T.e5),
-        W = (null != (t = O.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, T.e5 - 1).some((t) => t.name === e.name));
+            .slice(0, N.e5),
+        W = (null != (t = j.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, N.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && z.splice(z.length - 1, 1, W[0]);
-    let Y = (0, j.Iu)(F),
+    let Y = (0, O.Iu)(F),
         q = (e) => {
             (c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -99,13 +99,13 @@ function U(e) {
             guild_id: J
         });
     }, [Q, J]);
-    let $ = N ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    let $ = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         ee = F === P.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
         contentTypes: $,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
-                l = N && t === o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                l = T && t === o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, r.jsx)(s.yRy, {
                 targetElementRef: G,
                 position: 'left',

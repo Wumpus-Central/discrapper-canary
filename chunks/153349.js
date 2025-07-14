@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(496675),
     x = n(158776),
     v = n(471253),
-    O = n(431328),
-    j = n(145834),
+    j = n(431328),
+    O = n(145834),
     E = n(590415),
     S = n(614173),
     I = n(618896),
     P = n(231338),
     Z = n(388032),
-    T = n(916396);
-function N(e) {
+    N = n(916396);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -79,7 +79,7 @@ let w = i.memo(function (e) {
             });
         return (0, r.jsxs)(g.ZP, {
             toolbar: i,
-            className: a()(T.headerContainer, { [T.chatOpen]: n }),
+            className: a()(N.headerContainer, { [N.chatOpen]: n }),
             children: [
                 (0, r.jsx)(g.ZP.Icon, {
                     icon: d.V9,
@@ -93,10 +93,10 @@ let w = i.memo(function (e) {
     R = i.memo(function (e) {
         let { channel: t, participant: l, tempDisableOnInit: o = !1 } = e,
             g = i.useRef(null),
-            [C, O] = i.useState(o);
+            [C, j] = i.useState(o);
         (0, f.ZP)(() => {
             if (!C) return;
-            let e = setTimeout(() => O(!1), 1000);
+            let e = setTimeout(() => j(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = t.getGuildId();
@@ -122,7 +122,7 @@ let w = i.memo(function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        A(N({}, n), {
+                        A(T({}, n), {
                             user: l.user,
                             guildId: S,
                             channel: t,
@@ -132,7 +132,7 @@ let w = i.memo(function (e) {
             });
         };
         return (0, r.jsxs)('div', {
-            className: T.participantRowContainer,
+            className: N.participantRowContainer,
             children: [
                 (0, r.jsx)(_.Z, {
                     targetElementRef: g,
@@ -147,10 +147,10 @@ let w = i.memo(function (e) {
                         return (0, r.jsxs)(
                             d.P3F,
                             A(
-                                N(
+                                T(
                                     {
                                         innerRef: g,
-                                        className: T.participantMemberContainer,
+                                        className: N.participantMemberContainer,
                                         onContextMenu: U
                                     },
                                     e
@@ -159,24 +159,24 @@ let w = i.memo(function (e) {
                                     children: [
                                         (0, r.jsx)(h.Z, {
                                             size: d.EFr.SIZE_40,
-                                            className: T.participantAvatar,
+                                            className: N.participantAvatar,
                                             user: l.user,
                                             isMobile: I,
                                             status: P
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: T.participantTextContainer,
+                                            className: N.participantTextContainer,
                                             children: [
                                                 (0, r.jsx)(d.PUh, {
                                                     name: l.userNick,
                                                     color: null != (t = null == w ? void 0 : w.colorString) ? t : void 0,
                                                     roleColors: R,
-                                                    className: T.participantName
+                                                    className: N.participantName
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: (0, j.$)(l)
+                                                    children: (0, O.$)(l)
                                                 })
                                             ]
                                         })
@@ -191,8 +191,8 @@ let w = i.memo(function (e) {
                     children: (e) =>
                         (0, r.jsx)(
                             u.zx,
-                            A(N({}, e), {
-                                innerClassName: T.buttonContainer,
+                            A(T({}, e), {
+                                innerClassName: N.buttonContainer,
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
                                 onClick: k,
@@ -209,8 +209,8 @@ let w = i.memo(function (e) {
                     children: (e) =>
                         (0, r.jsx)(
                             u.zx,
-                            A(N({}, e), {
-                                innerClassName: a()(T.buttonContainer, T.buttonMargin),
+                            A(T({}, e), {
+                                innerClassName: a()(N.buttonContainer, N.buttonMargin),
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
                                 onClick: L,
@@ -228,7 +228,7 @@ let w = i.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, S.h)(t.id);
         return (0, r.jsx)(d.j7V, {
-            className: T.toggle,
+            className: N.toggle,
             onChange: i,
             value: n,
             children: Z.intl.string(Z.t.GYCh0d)
@@ -236,17 +236,17 @@ let w = i.memo(function (e) {
     }),
     D = i.memo(function () {
         return (0, r.jsxs)('div', {
-            className: T.emptyStateContainer,
+            className: N.emptyStateContainer,
             children: [
                 (0, r.jsx)(I.Z, {}),
                 (0, r.jsx)(d.Text, {
-                    className: T.emptyStateTitle,
+                    className: N.emptyStateTitle,
                     variant: 'text-lg/semibold',
                     color: 'header-primary',
                     children: Z.intl.string(Z.t['7R24mZ'])
                 }),
                 (0, r.jsx)(d.Text, {
-                    className: T.emptyStateBody,
+                    className: N.emptyStateBody,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: Z.intl.string(Z.t.Rpr2s7)
@@ -256,17 +256,17 @@ let w = i.memo(function (e) {
     });
 function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        l = (0, O.Fd)(t.id),
+        l = (0, j.Fd)(t.id),
         o = [+!!(0, c.e7)([C.Z], () => C.Z.can(P.Pl.MANAGE_CHANNELS, t) || C.Z.can(P.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
-        className: a()(T.container, { [T.chatOpen]: i }),
+        className: a()(N.container, { [N.chatOpen]: i }),
         children: [
             (0, r.jsx)(w, {
                 toggleRequestToSpeakSidebar: n,
                 chatOpen: i
             }),
             (0, r.jsx)(d.aVo, {
-                className: T.contentContainer,
+                className: N.contentContainer,
                 sections: o,
                 sectionHeight: function (e) {
                     return 40 * (1 === e);
@@ -308,7 +308,7 @@ function k(e) {
                         ? (0, r.jsx)(
                               d.Text,
                               {
-                                  className: T.listTitle,
+                                  className: N.listTitle,
                                   variant: 'text-xs/bold',
                                   color: 'header-secondary',
                                   children: l.length > 0 ? Z.intl.formatToPlainString(Z.t['5z7q5e'], { numHands: l.length }) : Z.intl.string(Z.t.TYZgzc)

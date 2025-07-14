@@ -1,8 +1,9 @@
 (n.d(t, {
+    I: () => u,
     W9: () => s,
     Xz: () => l,
     gK: () => c,
-    rX: () => u
+    rX: () => d
 }),
     n(953529));
 var r = n(570140),
@@ -63,10 +64,25 @@ function c(e) {
         { id: t }
     );
 }
-function u(e, t) {
-    r.Z.dispatch({
-        type: 'EXPERIMENT_OVERRIDE_BUCKET',
-        experimentId: e,
-        experimentBucket: t
-    });
+var u = (function (e) {
+    return ((e.LEGACY = 'legacy'), (e.APEX = 'apex'), e);
+})({});
+function d(e, t, n) {
+    'legacy' === e
+        ? r.Z.dispatch({
+              type: 'EXPERIMENT_OVERRIDE_BUCKET',
+              experimentId: t,
+              experimentBucket: null != n ? n : null
+          })
+        : 'apex' === e &&
+          (null == n
+              ? r.Z.dispatch({
+                    type: 'APEX_EXPERIMENT_OVERRIDE_DELETE',
+                    experimentName: t
+                })
+              : r.Z.dispatch({
+                    type: 'APEX_EXPERIMENT_OVERRIDE_CREATE',
+                    experimentName: t,
+                    variantId: n
+                }));
 }

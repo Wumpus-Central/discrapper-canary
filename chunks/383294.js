@@ -24,9 +24,9 @@ var r = t(255367),
     S = t(981631),
     N = t(215023),
     B = t(388032),
-    I = t(696693),
-    Z = t(557256),
-    E = t(582425),
+    Z = t(696693),
+    E = t(557256),
+    I = t(582425),
     P = t(345554),
     T = t(88490),
     w = t(466674);
@@ -37,7 +37,7 @@ function L() {
         u = a.useRef(null),
         p = (0, b.ZP)(),
         m = (0, d.apv)(p),
-        _ = m ? P.Z : E.Z,
+        _ = m ? P.Z : I.Z,
         h = m ? w.Z : T.Z;
     a.useEffect(() => {
         if (!n && !e) {
@@ -54,17 +54,17 @@ function L() {
         }
     });
     return (0, r.jsxs)(s.animated.div, {
-        className: I.videoLayers,
+        className: Z.videoLayers,
         style: x,
         children: [
-            !c && (0, r.jsx)('div', { className: I.videoPlaceholder }),
+            !c && (0, r.jsx)('div', { className: Z.videoPlaceholder }),
             (0, r.jsx)(g.Z, {
                 ref: u,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: o()(I.videoAsset, { [I.hidden]: n }),
+                className: o()(Z.videoAsset, { [Z.hidden]: n }),
                 controls: !1,
                 children: (0, r.jsx)('source', {
                     src: h,
@@ -75,7 +75,7 @@ function L() {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: o()(I.videoAsset, { [I.hidden]: !n }),
+                className: o()(Z.videoAsset, { [Z.hidden]: !n }),
                 controls: !1,
                 onLoadedData: () => l(!0),
                 onEnded: () => {
@@ -94,19 +94,19 @@ function A(e) {
     return (0, r.jsxs)(d.Y0X, {
         transitionState: n,
         size: d.CgR.DYNAMIC,
-        className: I.modal,
+        className: Z.modal,
         parentComponent: 'QuestsOrbsRewardModal',
         children: [
             (0, r.jsx)('div', {
-                className: I.header,
+                className: Z.header,
                 children: (0, r.jsx)(d.olH, {
-                    className: I.closeBtn,
+                    className: Z.closeBtn,
                     onClick: c
                 })
             }),
             'loading' === o
                 ? (0, r.jsx)('div', {
-                      className: I.spinnerContainer,
+                      className: Z.spinnerContainer,
                       children: (0, r.jsx)(d.$jN, { type: d.RAz.SPINNING_CIRCLE })
                   })
                 : 'success' === o
@@ -115,15 +115,15 @@ function A(e) {
                             (0, r.jsx)(L, {}),
                             (0, r.jsx)(d.X6q, {
                                 variant: 'heading-lg/medium',
-                                className: I.title,
+                                className: Z.title,
                                 children: B.intl.format(B.t['8l9H0t'], {
                                     balanceHook: () =>
                                         (0, r.jsxs)('span', {
-                                            className: I.orbsBalance,
+                                            className: Z.orbsBalance,
                                             children: [
                                                 (0, r.jsx)(O.Z, {
                                                     shouldUseThemeColor: !0,
-                                                    className: I.orbsBalanceIcon
+                                                    className: Z.orbsBalanceIcon
                                                 }),
                                                 t
                                             ]
@@ -132,37 +132,37 @@ function A(e) {
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                className: I.subtext,
+                                className: Z.subtext,
                                 children: B.intl.string(B.t.EDUOIC)
                             }),
                             (0, r.jsx)(l.zx, {
-                                className: I.ctaBtn,
+                                className: Z.ctaBtn,
                                 onClick: a,
                                 children: B.intl.string(B.t.WYchdX)
                             }),
                             (0, r.jsx)(l.zx, {
                                 look: l.iL.LINK,
                                 color: l.Tt.CUSTOM,
-                                className: I.orbsTermsButton,
+                                className: Z.orbsTermsButton,
                                 onClick: () => window.open(S.EYA.PAID_TERMS_ORBS),
                                 children: B.intl.string(B.t['7kTAgI'])
                             })
                         ]
                     })
                   : (0, r.jsxs)('div', {
-                        className: I.errorContainer,
+                        className: Z.errorContainer,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                className: I.errorImage,
-                                src: Z
+                                className: Z.errorImage,
+                                src: E
                             }),
                             (0, r.jsxs)('div', {
-                                className: I.errorContentContainer,
+                                className: Z.errorContentContainer,
                                 children: [
                                     (0, r.jsx)(d.X6q, {
                                         variant: 'heading-xl/medium',
-                                        className: I.errorHeader,
+                                        className: Z.errorHeader,
                                         children: B.intl.string(B.t.tWYWJy)
                                     }),
                                     (0, r.jsx)(d.Text, {
@@ -173,7 +173,7 @@ function A(e) {
                                 ]
                             }),
                             (0, r.jsx)(l.zx, {
-                                className: I.ctaBtn,
+                                className: Z.ctaBtn,
                                 onClick: c,
                                 children: B.intl.string(B.t.cpT0Cg)
                             })

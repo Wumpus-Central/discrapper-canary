@@ -1,23 +1,22 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(755721),
-    a = n(481060),
-    o = n(813197),
-    c = n(999382),
-    d = n(486324),
-    u = n(388032),
-    m = n(137991),
-    g = n(381109);
-function p(e) {
-    let { profile: t, handleIconChange: l, canManageGuild: c } = e,
-        g = i.useCallback(() => {
+    s = n(481060),
+    a = n(813197),
+    o = n(999382),
+    c = n(486324),
+    d = n(388032),
+    u = n(137991),
+    m = n(381109);
+function g(e) {
+    let { profile: t, handleIconChange: l, canManageGuild: o } = e,
+        m = i.useCallback(() => {
             l(null);
         }, [l]),
-        p = i.useCallback(
+        g = i.useCallback(
             (e, t) => {
-                (0, a.ZDy)(async () => {
+                (0, s.ZDy)(async () => {
                     let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
@@ -48,7 +47,7 @@ function p(e) {
                                 return e;
                             })(
                                 {
-                                    uploadType: d.pC.GUILD_ICON,
+                                    uploadType: c.pC.GUILD_ICON,
                                     imageUri: e,
                                     file: t,
                                     onCrop: (e) => {
@@ -62,67 +61,72 @@ function p(e) {
                 }, {});
             },
             [l]
-        ),
-        f = i.useMemo(() => ({ within: !0 }), []);
+        );
     return (0, r.jsxs)('div', {
-        className: m.buttons,
+        className: u.buttons,
         children: [
-            (0, r.jsxs)(s.zx, {
-                focusProps: f,
-                tabIndex: -1,
-                size: s.zx.Sizes.SMALL,
-                color: s.zx.Colors.BRAND,
-                disabled: !c,
-                children: [
-                    u.intl.string(u.t.r3Jdsb),
-                    (0, r.jsx)(o.ZP, {
-                        tabIndex: 0,
-                        onChange: p
-                    })
-                ]
+            (0, r.jsx)(s.tEY, {
+                within: !0,
+                children: (0, r.jsxs)('div', {
+                    className: u.iconInput,
+                    children: [
+                        (0, r.jsx)(s.zxk, {
+                            tabIndex: -1,
+                            size: 'sm',
+                            variant: 'primary',
+                            disabled: !o,
+                            text: d.intl.string(d.t.r3Jdsb)
+                        }),
+                        (0, r.jsx)(a.ZP, {
+                            tabIndex: 0,
+                            onChange: g,
+                            disabled: !o
+                        })
+                    ]
+                })
             }),
             null != t.icon
-                ? (0, r.jsx)(a.zxk, {
+                ? (0, r.jsx)(s.zxk, {
                       variant: 'critical-secondary',
                       size: 'sm',
-                      text: u.intl.string(u.t.x8AlTk),
-                      onClick: g,
-                      disabled: !c
+                      text: d.intl.string(d.t.x8AlTk),
+                      onClick: m,
+                      disabled: !o
                   })
                 : null
         ]
     });
 }
-function f(e) {
+function p(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
-        s = (0, l.e7)([c.Z], () => c.Z.getError('icon'));
+        a = (0, l.e7)([o.Z], () => o.Z.getError('icon'));
     return (0, r.jsxs)('section', {
-        className: m.container,
+        className: u.container,
         children: [
-            (0, r.jsxs)(a.hjN, {
-                className: g.section,
+            (0, r.jsxs)(s.hjN, {
+                className: m.section,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: g.sectionHeader,
+                        className: m.sectionHeader,
                         children: [
-                            (0, r.jsx)(a.vwX, { children: u.intl.string(u.t.FkQnxM) }),
-                            (0, r.jsx)(a.R94, {
+                            (0, r.jsx)(s.vwX, { children: d.intl.string(d.t.FkQnxM) }),
+                            (0, r.jsx)(s.R94, {
                                 type: 'description',
-                                children: u.intl.string(u.t.KjkA0d)
+                                children: d.intl.string(d.t.KjkA0d)
                             })
                         ]
                     }),
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(g, {
                         profile: t,
                         canManageGuild: n,
                         handleIconChange: i
                     })
                 ]
             }),
-            null != s
+            null != a
                 ? (0, r.jsx)('div', {
-                      className: m.iconError,
-                      children: s
+                      className: u.iconError,
+                      children: a
                   })
                 : null
         ]

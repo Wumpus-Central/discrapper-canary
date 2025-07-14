@@ -47,10 +47,10 @@ function w(e, t, n) {
 let D = 3000,
     L = 800,
     x = {};
-function M(e) {
+function k(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function k() {
+function M() {
     (Object.values(x).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
@@ -59,7 +59,7 @@ function k() {
 }
 function j(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
-    let n = M(e);
+    let n = k(e);
     if (null != x[n]) {
         let { timeout: r, setAt: i } = x[n];
         return (U(e, t, i), clearTimeout(r), delete x[n], !0);
@@ -123,13 +123,13 @@ let B = (e, t) => {
     }
 };
 function V(e) {
-    return null == x[M(e)];
+    return null == x[k(e)];
 }
 function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(V) : e.filter(V);
     i.forEach((e) => {
-        let t = M(e);
+        let t = k(e);
         null == x[t] &&
             (d.Z.increment({ name: s.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
             (x[t] = {
@@ -143,7 +143,7 @@ function F(e, t) {
     r
         ? setTimeout(() => {
               B(
-                  i.filter((e) => null != x[M(e)]),
+                  i.filter((e) => null != x[k(e)]),
                   a
               );
           }, Math.random() * L)
@@ -436,7 +436,7 @@ class eo extends c.Z {
                 SIDEBAR_VIEW_CHANNEL: et,
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
-                LOGOUT: k,
+                LOGOUT: M,
                 SEARCH_FINISH: Q,
                 MOD_VIEW_SEARCH_FINISH: Q,
                 CHANNEL_SELECT: en,

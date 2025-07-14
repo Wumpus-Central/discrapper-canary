@@ -18,8 +18,8 @@ function d(e) {
         x = null;
     return (
         h.forEach((e) => {
-            var i, v, O;
-            let j, E;
+            var i, v, j;
+            let O, E;
             if (null != g && g.length > 0) {
                 let t = a.default.extractTimestamp(e.id);
                 for (let e = 0; (i = e < (null == g ? void 0 : g.length)), i; e++) {
@@ -51,36 +51,36 @@ function d(e) {
                 P = null,
                 Z = (0, s.DQ)(e);
             y = y || Z;
-            let T = (function (e, t, n) {
+            let N = (function (e, t, n) {
                 if (r.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if (t.ignored) return u.ys_.MESSAGE_GROUP_IGNORED;
                 else if ((0, s.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
             })(p, e, Z && m);
-            (null !== T &&
+            (null !== N &&
                 ([P, I] =
                     ((E = v = I),
-                    null == v || v.type !== T
-                        ? ((j = {
-                              type: T,
+                    null == v || v.type !== N
+                        ? ((O = {
+                              type: N,
                               content: [],
                               key: e.id
                           }),
-                          _.push(j))
-                        : (E = (j = v).content[j.content.length - 1]),
-                    [j, E])),
+                          _.push(O))
+                        : (E = (O = v).content[O.content.length - 1]),
+                    [O, E])),
             f === e.id && null != C)
                 ? (null != I && I.type === u.ys_.DIVIDER
                       ? (I.unreadId = e.id)
                       : null !== P
-                        ? ((O = P),
+                        ? ((j = P),
                           e.isFirstMessageInForumPost(p) ||
-                              O.content.push({
+                              j.content.push({
                                   type: u.ys_.DIVIDER,
                                   unreadId: e.id
                               }),
-                          (O.hasUnread = !0))
+                          (j.hasUnread = !0))
                         : e.isFirstMessageInForumPost(p) ||
                           _.push({
                               type: u.ys_.DIVIDER,
@@ -95,12 +95,12 @@ function d(e) {
                           unreadId: e.id
                       }),
                   (C = null));
-            let N = (0, c.f)(e, p);
-            null != N &&
+            let T = (0, c.f)(e, p);
+            null != T &&
                 _.push({
                     type: u.ys_.MESSAGE,
-                    content: N,
-                    groupId: N.id
+                    content: T,
+                    groupId: T.id
                 });
             let A = (null == I ? void 0 : I.type) === u.ys_.MESSAGE ? d : I;
             (0, o.J)(p, A, e) && (n = e.id);

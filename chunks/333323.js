@@ -8,8 +8,8 @@ var l = t(255367),
     o = t(749210),
     d = t(131388),
     u = t(367907),
-    h = t(644080),
-    m = t(984370),
+    m = t(644080),
+    h = t(984370),
     f = t(6025),
     g = t(433355),
     p = t(626135),
@@ -73,17 +73,17 @@ function A(e, n) {
 let k = _.q + 300 + 64,
     M = r.memo(function (e) {
         let { guild: n } = e;
-        return (0, l.jsxs)(m.Z, {
+        return (0, l.jsxs)(h.Z, {
             channelId: O.oC.GUILD_HOME,
             guildId: n.id,
             className: i()(P.title, P.background),
             innerClassname: P.headerBarInner,
             children: [
-                (0, l.jsx)(m.Z.Icon, {
+                (0, l.jsx)(h.Z.Icon, {
                     icon: c.Vy8,
                     'aria-hidden': !0
                 }),
-                (0, l.jsxs)(m.Z.Title, {
+                (0, l.jsxs)(h.Z.Title, {
                     children: [(0, l.jsx)(c.nn4, { children: n.name }), w.intl.string(w.t.VbpLyc)]
                 })
             ]
@@ -91,7 +91,7 @@ let k = _.q + 300 + 64,
     });
 function D(e) {
     var n, t;
-    let { guild: a, width: m } = e,
+    let { guild: a, width: h } = e,
         w = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
         [D, L] = r.useState(!1),
         [T, R] = r.useState(N.$Y6),
@@ -102,7 +102,7 @@ function D(e) {
         z = (0, C.Z)(a.id),
         G = !z && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
         q = (0, d.Z)('(max-width: 1300px)'),
-        F = m - N.PrS - T,
+        F = h - N.PrS - T,
         V = (B && F < k) || q || G;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
@@ -146,7 +146,7 @@ function D(e) {
                                       children: [
                                           (0, l.jsx)('div', {
                                               className: P.maxWidthWrapper,
-                                              children: (0, l.jsx)(h.Z, {
+                                              children: (0, l.jsx)(m.Z, {
                                                   guild: a,
                                                   titleClassName: q ? P.emptyHeaderTitle : void 0
                                               })
@@ -187,7 +187,7 @@ function D(e) {
                   }),
                   B
                       ? (0, l.jsx)(_.Z, {
-                            pageWidth: m,
+                            pageWidth: h,
                             onSidebarResize: (e, n) => {
                                 (L(n), R(e));
                             }

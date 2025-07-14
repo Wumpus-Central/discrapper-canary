@@ -57,14 +57,14 @@ function g(e) {
         !I)
     )
         return;
-    let M = P && w === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((M && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
-        let e = M ? _.j.COACHMARK : _.j.DEFAULT;
+    let k = P && w === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((k && null != y && null == n && b !== _.j.COACHMARK && g(y), n === y)) {
+        let e = k ? _.j.COACHMARK : _.j.DEFAULT;
         return (
             b !== e && E(e),
             {
                 pickerType: e,
-                markDismissed: M
+                markDismissed: k
                     ? (e) => {
                           (D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION));
                       }

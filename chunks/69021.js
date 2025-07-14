@@ -64,14 +64,14 @@ function f() {
             isLoggingOverlayEvents: h,
             isLoggingAnalyticsEvents: j,
             isAnalyticsDebuggerEnabled: v,
-            isTracingRequests: E,
-            isForcedCanary: S,
+            isTracingRequests: S,
+            isForcedCanary: E,
             isSourceMapsEnabled: P,
             isIdleStatusIndicatorEnabled: m,
             isAxeEnabled: x,
             preventPopoutClose: w,
             onlyShowPreviewAppCollections: k,
-            disableAppCollectionsCache: Z
+            disableAppCollectionsCache: D
         } = (0, i.cj)([u.default, d.default, s.Z], () => {
             var e;
             return {
@@ -92,9 +92,9 @@ function f() {
                 disableAppCollectionsCache: u.default.disableAppCollectionsCache
             };
         }),
-        { horizontalSpacing: D, verticalSpacing: A, maxHorizontalSpacing: C, maxVerticalSpacing: I } = (0, c.i)(),
-        { setHorizontalSpacing: T, setVerticalSpacing: N } = c.i.getState(),
-        _ = p.zY.useSetting(),
+        { horizontalSpacing: Z, verticalSpacing: A, maxHorizontalSpacing: C, maxVerticalSpacing: I } = (0, c.i)(),
+        { setHorizontalSpacing: T, setVerticalSpacing: _ } = c.i.getState(),
+        N = p.zY.useSetting(),
         R = [];
     return (
         t &&
@@ -140,9 +140,9 @@ function f() {
                                 {
                                     id: 'tracing-requests',
                                     label: 'Tracing Requests',
-                                    checked: E,
+                                    checked: S,
                                     action: () => {
-                                        (0, a.y)({ trace: !E });
+                                        (0, a.y)({ trace: !S });
                                     }
                                 },
                                 'tracing-requests'
@@ -152,9 +152,9 @@ function f() {
                                 {
                                     id: 'forced-canary',
                                     label: 'Forced Canary',
-                                    checked: S,
+                                    checked: E,
                                     action: () => {
-                                        (0, a.y)({ canary: !S });
+                                        (0, a.y)({ canary: !E });
                                     }
                                 },
                                 'forced-canary'
@@ -164,9 +164,9 @@ function f() {
                                 {
                                     id: 'always-deliver',
                                     label: 'Ads auto-targeting',
-                                    checked: _,
+                                    checked: N,
                                     action: () => {
-                                        p.zY.updateSetting(!_);
+                                        p.zY.updateSetting(!N);
                                     }
                                 },
                                 'always-deliver'
@@ -236,9 +236,9 @@ function f() {
                                 {
                                     id: 'disable-collections-cache',
                                     label: 'Disable Collections Cache',
-                                    checked: Z,
+                                    checked: D,
                                     action: () => {
-                                        (0, a.y)({ disableAppCollectionsCache: !Z });
+                                        (0, a.y)({ disableAppCollectionsCache: !D });
                                     }
                                 },
                                 'disable-collections-cache'
@@ -348,7 +348,7 @@ function f() {
                                     l._wy,
                                     O(y({}, e), {
                                         ref: t,
-                                        value: D,
+                                        value: Z,
                                         minValue: 0,
                                         maxValue: C,
                                         onChange: (e) => T(e),
@@ -374,7 +374,7 @@ function f() {
                                         value: A,
                                         minValue: 0,
                                         maxValue: I,
-                                        onChange: (e) => N(e),
+                                        onChange: (e) => _(e),
                                         'aria-label': 'Horizontal Spacing',
                                         renderValue: (e) => ''.concat(Math.round(e), 'px')
                                     })

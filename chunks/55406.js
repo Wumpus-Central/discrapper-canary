@@ -6,11 +6,11 @@ let r;
     }),
     n(35282),
     n(704826));
-var l = n(159635),
-    o = n.n(l),
+var o = n(159635),
+    l = n.n(o),
     i = n(800927),
-    s = n(945884),
-    a = n(594199),
+    a = n(945884),
+    s = n(594199),
     c = n(454585);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,27 +55,27 @@ function d(e, t) {
         e
     );
 }
-let p = o().defaultRules.lheading,
-    m = o().defaultRules.heading,
-    g = o().defaultRules.link,
-    f = o().defaultRules.image,
-    b = o().defaultRules.list,
-    h = o().defaultRules.blockQuote,
-    O = o().defaultRules.paragraph,
+let p = l().defaultRules.lheading,
+    m = l().defaultRules.heading,
+    g = l().defaultRules.link,
+    f = l().defaultRules.image,
+    b = l().defaultRules.list,
+    h = l().defaultRules.blockQuote,
+    O = l().defaultRules.paragraph,
     y = /\{(.+?)}/,
     v = /^\$(\w+?)\$/;
 r = n(235375);
 let j = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
-            let l = y.exec(e[1]),
+            let o = y.exec(e[1]),
                 i = e[1].replace(y, '');
             return (
                 t && (i = i.toUpperCase()),
                 {
-                    className: null != l ? l[1] : null,
+                    className: null != o ? o[1] : null,
                     level: '=' === e[2] ? 1 : 2,
-                    content: o().parseInline(n, i, r)
+                    content: l().parseInline(n, i, r)
                 }
             );
         };
@@ -86,7 +86,7 @@ let j = (e) => {
             link: u({}, g, 'function' == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link),
             list: u({}, b, 'function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list),
             interpolation: {
-                order: a.ZP.order,
+                order: s.ZP.order,
                 match: (e) => v.exec(e),
                 parse(e, t, n) {
                     let r = n.interpolations[e[1]];
@@ -110,10 +110,10 @@ let j = (e) => {
     x = (e) => ({ lheading: u(d(u({}, p), { parse: j({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
     C = (e) =>
         d(u({}, P(e)), {
-            newline: u({}, o().defaultRules.newline),
-            text: a.ZP,
+            newline: u({}, l().defaultRules.newline),
+            text: s.ZP,
             list: i.Z,
-            subtext: s.Z
+            subtext: a.Z
         });
 function w(e) {
     return u({}, P(e));

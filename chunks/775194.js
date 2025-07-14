@@ -4,8 +4,8 @@ r(73800);
 var a = r(392711),
     i = r.n(a),
     l = r(481060),
-    s = r(481250),
-    o = r(513547),
+    o = r(481250),
+    s = r(513547),
     c = r(388032),
     d = r(442122),
     u = r(20493);
@@ -27,7 +27,7 @@ function p(e) {
     let r = i().map(t, (e, t) => {
         if (void 0 !== e && 'buffers' !== t)
             return (0, n.jsx)(
-                o.ck,
+                s.ck,
                 {
                     label: t,
                     value: e
@@ -38,7 +38,7 @@ function p(e) {
     return (
         r.push(
             (0, n.jsx)(
-                o.ck,
+                s.ck,
                 {
                     label: 'Frames Per Second',
                     value: t.recentEncodedFrames / (t.recentDurationMs / 1000)
@@ -50,7 +50,7 @@ function p(e) {
             tag: l.RB0.H2,
             title: c.intl.string(c.t.MKrFKC),
             children: [
-                (0, s.a)(r),
+                (0, o.a)(r),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
@@ -65,7 +65,7 @@ function p(e) {
                                     'key' !== r &&
                                     t.push(
                                         (0, n.jsx)(
-                                            o.ck,
+                                            s.ck,
                                             {
                                                 label: r,
                                                 value: a
@@ -80,7 +80,7 @@ function p(e) {
                                     className: u.marginBottom40,
                                     title: 'Buffer: '.concat(e.key),
                                     titleClassName: d.title,
-                                    children: (0, s.a)(t)
+                                    children: (0, o.a)(t)
                                 },
                                 'Buffer: '.concat(e.key)
                             );

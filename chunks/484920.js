@@ -9,8 +9,9 @@ e.exports = {
     controls: 'controls__6db1d',
     pageWrapper: 'pageWrapper__6db1d',
     pageWrapperFilter: 'pageWrapperFilter__6db1d',
+    inventoryWrapper: 'inventoryWrapper__6db1d',
     inventory: 'inventory__6db1d',
-    inventoryNoFilter: 'inventoryNoFilter__6db1d',
+    inventoryFilter: 'inventoryFilter__6db1d',
     pageFullscreen: 'pageFullscreen__6db1d',
     categoryWrapper: 'categoryWrapper__6db1d',
     cardsContainer: 'cardsContainer__6db1d',
@@ -30,5 +31,6 @@ e.exports = {
     filterButton: 'filterButton__6db1d',
     controlsRightSide: 'controlsRightSide__6db1d',
     controlsLeftSide: 'controlsLeftSide__6db1d',
+    divider: 'divider__6db1d',
     sortBy: 'sortBy__6db1d'
 };

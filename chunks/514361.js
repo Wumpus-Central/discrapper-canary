@@ -81,7 +81,7 @@ let L = () => {
             r = t;
         }
     },
-    M = () => {
+    k = () => {
         if (!u.Z.shouldSync('appearance') || (0, v.zu)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
@@ -92,7 +92,7 @@ let L = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class k extends (a = o.ZP.PersistedStore) {
+class M extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x));
     }
@@ -124,17 +124,17 @@ class k extends (a = o.ZP.PersistedStore) {
             ]));
     }
 }
-(S(k, 'displayName', 'ClientThemesBackgroundStore'), S(k, 'persistKey', 'ClientThemesBackgroundStore'));
-let j = new k(l.Z, {
+(S(M, 'displayName', 'ClientThemesBackgroundStore'), S(M, 'persistKey', 'ClientThemesBackgroundStore'));
+let j = new M(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,
     CLIENT_THEMES_EDITOR_CLOSE: D,
     CHANNEL_SELECT: w,
     LOGOUT: D,
-    CACHE_LOADED: M,
-    OVERLAY_INITIALIZE: M,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: M,
-    UNSYNCED_USER_SETTINGS_UPDATE: M,
-    USER_SETTINGS_PROTO_UPDATE: M
+    CACHE_LOADED: k,
+    OVERLAY_INITIALIZE: k,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: k,
+    UNSYNCED_USER_SETTINGS_UPDATE: k,
+    USER_SETTINGS_PROTO_UPDATE: k
 });

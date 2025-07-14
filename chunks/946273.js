@@ -9,22 +9,22 @@
     n(997841),
     n(388685));
 var r = n(442837),
-    l = n(271383),
-    o = n(430824),
+    o = n(271383),
+    l = n(430824),
     i = n(496675),
-    s = n(594174),
-    a = n(630388),
+    a = n(594174),
+    s = n(630388),
     c = n(709054),
     u = n(372897),
     d = n(981631);
 let p = (e, t) => {
     var n;
-    let i = (0, r.e7)([l.ZP], () => {
+    let i = (0, r.e7)([o.ZP], () => {
             var n, r;
-            return (0, a.yE)(null != (r = null == (n = l.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, u.q.DID_REJOIN);
+            return (0, s.yE)(null != (r = null == (n = o.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, u.q.DID_REJOIN);
         }),
-        d = (0, r.e7)([o.Z], () => {
-            let t = o.Z.getGuild(e);
+        d = (0, r.e7)([l.Z], () => {
+            let t = l.Z.getGuild(e);
             return (
                 null != t &&
                 (function (e) {
@@ -34,9 +34,9 @@ let p = (e, t) => {
                 })(t)
             );
         }),
-        p = (0, r.e7)([s.default], () => {
+        p = (0, r.e7)([a.default], () => {
             var e;
-            return null == (e = s.default.getUser(t)) ? void 0 : e.bot;
+            return null == (e = a.default.getUser(t)) ? void 0 : e.bot;
         });
     return (
         (n = { maxDaysOld: 7 }),
@@ -45,14 +45,14 @@ let p = (e, t) => {
             () =>
                 (function (e, t, n) {
                     let { maxDaysOld: r, minDaysOld: i = 0 } = t,
-                        s = o.Z.getGuild(e),
-                        a = null == s ? void 0 : s.joinedAt;
+                        a = l.Z.getGuild(e),
+                        s = null == a ? void 0 : a.joinedAt;
                     if (null != n) {
-                        let t = l.ZP.getMember(e, n);
-                        a = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
+                        let t = o.ZP.getMember(e, n);
+                        s = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
                     }
-                    if (null == a) return !1;
-                    let c = Date.now() - a.getTime();
+                    if (null == s) return !1;
+                    let c = Date.now() - s.getTime();
                     return (null == r || c <= 86400000 * r) && c >= 86400000 * i;
                 })(e, n, t),
             [n, e, t]
@@ -63,7 +63,7 @@ let p = (e, t) => {
     );
 };
 function m(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, o.ZP];
     return null != t && g(e, t, [n]) && null != r.getMember(t.id, e.id);
 }
 function g(e, t) {
@@ -71,7 +71,7 @@ function g(e, t) {
     return null != t && n.canManageUser(d.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
 }
 function f(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, l.ZP];
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, o.ZP];
     return null != t && b(e, t, [n]) && null != r.getMember(t.id, e.id);
 }
 function b(e, t) {

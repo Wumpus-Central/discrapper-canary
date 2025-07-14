@@ -17,8 +17,8 @@ var r = n(255367),
     h = n(45570),
     j = n(308512),
     v = n(594791),
-    E = n(393431),
-    S = n(69021),
+    S = n(393431),
+    E = n(69021),
     P = n(981631),
     m = n(388032);
 let x = (0, s.Z)(
@@ -27,14 +27,14 @@ let x = (0, s.Z)(
             [u, x] = i.useState(!1),
             w = (0, h.Z)(),
             k = (0, j.Z)(),
-            Z = (0, O.Z)(),
-            D = (0, y.Z)(),
-            A = (0, E.Z)(),
+            D = (0, O.Z)(),
+            Z = (0, y.Z)(),
+            A = (0, S.Z)(),
             C = (0, v.Z)(),
             I = (0, f.Z)(),
-            T = (0, S.Z)(),
-            { analyticsLocations: N } = (0, d.ZP)(),
-            _ = i.useMemo(() => (0, g.j)(), []);
+            T = (0, E.Z)(),
+            { analyticsLocations: _ } = (0, d.ZP)(),
+            N = i.useMemo(() => (0, g.j)(), []);
         async function R() {
             try {
                 (x(!0), await (0, p.bF)(), window.location.reload(!0));
@@ -49,9 +49,9 @@ let x = (0, s.Z)(
                     case P.oAB.STREAMER_MODE:
                         return k;
                     case P.oAB.APPEARANCE:
-                        return Z;
-                    case P.oAB.ACCESSIBILITY:
                         return D;
+                    case P.oAB.ACCESSIBILITY:
+                        return Z;
                     case P.oAB.VOICE:
                         return A;
                     case P.oAB.TEXT:
@@ -71,7 +71,7 @@ let x = (0, s.Z)(
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, r.jsx)(d.Gt, {
-            value: N,
+            value: _,
             children: (0, r.jsxs)(l.v2r, {
                 navId: 'user-settings-cog',
                 onClose: a.Zy,
@@ -119,7 +119,7 @@ let x = (0, s.Z)(
                                             : (function (e, t) {
                                                   let n = Object.values(P.oAB).filter((t) => t === e)[0];
                                                   null != n && o.Z.open(n, void 0, { analyticsLocations: t });
-                                              })(i, N)
+                                              })(i, _)
                                 }
                             )),
                             (n = n = { children: B(i) }),
@@ -139,12 +139,12 @@ let x = (0, s.Z)(
                             s
                         );
                     }),
-                    e.user.isStaff() && _.length > 0
+                    e.user.isStaff() && N.length > 0
                         ? (0, r.jsx)(l.sNh, {
                               label: 'Build Overrides',
                               id: 'build_overrides',
                               children: (0, r.jsx)(l.kSQ, {
-                                  children: _.map((e) =>
+                                  children: N.map((e) =>
                                       (0, r.jsx)(
                                           l.k5B,
                                           {

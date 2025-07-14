@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => j });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -11,13 +11,16 @@ var r = n(255367),
     f = n(254494),
     _ = n(593618),
     p = n(594174),
-    h = n(74538),
-    m = n(697426),
-    g = n(526617),
-    E = n(474936),
-    b = n(388032),
-    y = n(865006);
-function O(e, t, n) {
+    h = n(626135),
+    m = n(74538),
+    g = n(697426),
+    E = n(526617),
+    b = n(981631),
+    y = n(957825),
+    O = n(474936),
+    v = n(388032),
+    I = n(865006);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +33,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +44,12 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                T(e, t, n[t]);
             }));
     }
     return e;
 }
-function I(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,29 +61,29 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function A(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,29 +92,29 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let N = [8, 8, 8, 8],
-    C = 40;
-function R(e) {
+let P = [8, 8, 8, 8],
+    w = 40;
+function D(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
-        s = S(e, ['icon', 'isSelected', 'onClick', 'listItemProps']);
+        s = C(e, ['icon', 'isSelected', 'onClick', 'listItemProps']);
     return (0, r.jsx)(
         c.P3F,
-        T(v({}, a, s), {
+        N(S({}, a, s), {
             onClick: i,
-            className: o()(y.categoryIcon, { [y.selected]: n }),
+            className: o()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
-                className: y.categoryIconIcon,
+                className: I.categoryIconIcon,
                 color: 'currentColor'
             })
         })
     );
 }
-function P(e, t, n, i, a, o) {
+function L(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
-        case m.bg.FAVORITES:
+        case g.bg.FAVORITES:
             return (0, r.jsx)(
-                R,
-                T(v({}, i), {
+                D,
+                N(S({}, i), {
                     icon: c.r7p,
                     onClick: t,
                     isSelected: n,
@@ -119,10 +122,10 @@ function P(e, t, n, i, a, o) {
                 }),
                 e.key
             );
-        case m.bg.RECENTLY_HEARD:
+        case g.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                R,
-                T(v({}, i), {
+                D,
+                N(S({}, i), {
                     icon: c.T39,
                     onClick: t,
                     isSelected: n,
@@ -130,10 +133,10 @@ function P(e, t, n, i, a, o) {
                 }),
                 e.key
             );
-        case m.bg.FREQUENTLY_USED:
+        case g.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                R,
-                T(v({}, i), {
+                D,
+                N(S({}, i), {
                     icon: c.IeX,
                     onClick: t,
                     isSelected: n,
@@ -141,11 +144,11 @@ function P(e, t, n, i, a, o) {
                 }),
                 e.key
             );
-        case m.bg.GUILD:
+        case g.bg.GUILD:
             return (0, r.jsx)(
                 c.P3F,
-                T(v({}, a, i), {
-                    className: y.category,
+                N(S({}, a, i), {
+                    className: I.category,
                     onClick: t,
                     children: (0, r.jsx)(u.Z, {
                         guild: e.categoryInfo.guild,
@@ -155,10 +158,10 @@ function P(e, t, n, i, a, o) {
                 }),
                 e.key
             );
-        case m.bg.DEFAULTS:
+        case g.bg.DEFAULTS:
             return (0, r.jsx)(
-                R,
-                T(v({}, i), {
+                D,
+                N(S({}, i), {
                     icon: c.gw7,
                     onClick: t,
                     isSelected: n,
@@ -170,74 +173,85 @@ function P(e, t, n, i, a, o) {
             return null;
     }
 }
-function w(e) {
+function x(e) {
     switch (e.categoryInfo.type) {
-        case m.bg.FAVORITES:
-            return b.intl.string(b.t.k8fFjo);
-        case m.bg.RECENTLY_HEARD:
-            return b.intl.string(b.t['8i/+SE']);
-        case m.bg.FREQUENTLY_USED:
-            return b.intl.string(b.t['+cGVV1']);
-        case m.bg.GUILD:
+        case g.bg.FAVORITES:
+            return v.intl.string(v.t.k8fFjo);
+        case g.bg.RECENTLY_HEARD:
+            return v.intl.string(v.t['8i/+SE']);
+        case g.bg.FREQUENTLY_USED:
+            return v.intl.string(v.t['+cGVV1']);
+        case g.bg.GUILD:
             return (0, r.jsx)(_.K, {
                 guild: e.categoryInfo.guild,
                 includeActivity: !1
             });
-        case m.bg.DEFAULTS:
-            return b.intl.string(b.t.Rtvk9f);
+        case g.bg.DEFAULTS:
+            return v.intl.string(v.t.Rtvk9f);
     }
 }
-function D(e) {
+function k(e) {
     switch (e.categoryInfo.type) {
-        case m.bg.FAVORITES:
-            return b.intl.string(b.t.k8fFjo);
-        case m.bg.RECENTLY_HEARD:
-            return b.intl.string(b.t['8i/+SE']);
-        case m.bg.FREQUENTLY_USED:
-            return b.intl.string(b.t['+cGVV1']);
-        case m.bg.GUILD:
+        case g.bg.FAVORITES:
+            return v.intl.string(v.t.k8fFjo);
+        case g.bg.RECENTLY_HEARD:
+            return v.intl.string(v.t['8i/+SE']);
+        case g.bg.FREQUENTLY_USED:
+            return v.intl.string(v.t['+cGVV1']);
+        case g.bg.GUILD:
             return e.categoryInfo.guild.name;
-        case m.bg.DEFAULTS:
-            return b.intl.string(b.t.Rtvk9f);
+        case g.bg.DEFAULTS:
+            return v.intl.string(v.t.Rtvk9f);
     }
 }
-function L(e) {
+function M(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)('soundboard_guild_'.concat(n));
     return (0, r.jsx)(c.ua7, {
-        text: w(t),
-        'aria-label': D(t),
+        text: x(t),
+        'aria-label': k(t),
         position: 'right',
-        children: (e) => P(t, i, a, e, l, o)
+        children: (e) => L(t, i, a, e, l, o)
     });
 }
-function x(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: o = N, guildId: s, inExpressionPicker: c } = e,
+function j(e) {
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: o = P, guildId: s, inExpressionPicker: c } = e,
         u = i.useRef(null),
         _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        m = (0, h.I5)(_, E.p9.TIER_2),
-        b = i.useCallback(
+        g = (0, m.I5)(_, O.p9.TIER_2),
+        v = i.useCallback(
             (e, t, n, i) => {
-                let o = a && (0, g.O)(e.categoryInfo, m, s);
-                return (0, r.jsx)(L, {
+                let o = a && (0, E.O)(e.categoryInfo, g, s),
+                    l = () => {
+                        (h.default.track(b.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                            location: { page: b.ZY5.SOUNDBOARD_POPOUT },
+                            guild_id: null != s ? s : null,
+                            num_expressions: e.items.length,
+                            tab: y.X1.SOUNDBOARD,
+                            sticker_pack_id: null,
+                            pack_id: null
+                        }),
+                            n());
+                    };
+                return (0, r.jsx)(M, {
                     category: e,
                     categoryIndex: t,
-                    onClick: n,
+                    onClick: l,
                     isSelected: i,
                     isNitroLocked: o
                 });
             },
-            [s, a, m]
+            [s, a, g]
         );
     return (0, r.jsx)(f.Z, {
-        className: c ? y.expressionPickerCategoryList : y.categoryList,
+        className: c ? I.expressionPickerCategoryList : I.categoryList,
         categoryListRef: u,
         expressionsListRef: t,
         store: d.Wq,
         categories: n,
         listPadding: o,
-        renderCategoryListItem: b,
+        renderCategoryListItem: v,
         rowCount: n.length,
-        categoryHeight: C
+        categoryHeight: w
     });
 }

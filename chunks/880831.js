@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => N,
+    Z: () => T,
     z: () => Z
 }),
     n(388685));
@@ -23,14 +23,14 @@ var r = n(255367),
     C = n(419922),
     x = n(375954),
     v = n(699516),
-    O = n(768581),
-    j = n(70956),
+    j = n(768581),
+    O = n(70956),
     E = n(823379),
     S = n(981631),
     I = n(217702),
     P = n(955525);
-let Z = 10 * j.Z.Millis.SECOND;
-function T(e) {
+let Z = 10 * O.Z.Millis.SECOND;
+function N(e) {
     var t;
     let { message: n } = e,
         { isBlocked: l, isIgnored: o } = (0, c.cj)(
@@ -43,7 +43,7 @@ function T(e) {
         ),
         s = (0, b.Uj)(n),
         d = i.useContext(f.Z),
-        [x, j] = i.useState(!1),
+        [x, O] = i.useState(!1),
         E = (0, m.p)(),
         S = i.useCallback(
             (e) => {
@@ -65,8 +65,8 @@ function T(e) {
                   }).content
                 : null,
         {
-            contentPlaceholder: T,
-            renderedContent: N,
+            contentPlaceholder: N,
+            renderedContent: T,
             trailingIcon: A,
             leadingIcon: w
         } = (0, _.f)(n, Z, l, o, P.messageContent, {
@@ -93,22 +93,22 @@ function T(e) {
     return (0, r.jsxs)(u.P3F, {
         className: P.toast,
         onMouseEnter: () => {
-            j(!0);
+            O(!0);
         },
         onMouseLeave: () => {
-            j(!1);
+            O(!1);
         },
         onClick: S,
         children: [
             (0, r.jsxs)('div', {
                 className: a()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
-                children: [null != M ? null : w, null != (t = null != N ? N : M) ? t : (0, r.jsx)('span', { children: T }), null != M ? null : A]
+                children: [null != M ? null : w, null != (t = null != T ? T : M) ? t : (0, r.jsx)('span', { children: N }), null != M ? null : A]
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src:
                     (null == s ? void 0 : s.guildMemberAvatar) != null && null != d
-                        ? (0, O.JM)({
+                        ? (0, j.JM)({
                               guildId: d,
                               userId: n.author.id,
                               avatar: s.guildMemberAvatar
@@ -119,7 +119,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function T(e) {
     let { channelId: t, className: n } = e,
         [l, p] = i.useState(!1),
         { toastsHidden: h, toastMessages: f } = (function (e) {
@@ -232,7 +232,7 @@ function N(e) {
                         ref: (e) => _(t.message.id, null != e ? e.offsetHeight : null),
                         className: P.toastWrapper,
                         style: e,
-                        children: (0, r.jsx)(T, { message: t.message })
+                        children: (0, r.jsx)(N, { message: t.message })
                     })
                 )
             })

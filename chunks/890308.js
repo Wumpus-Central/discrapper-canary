@@ -111,12 +111,12 @@
             }
             return A.join('');
         }
-        function M(e) {
+        function k(e) {
             return N(e, function (e) {
                 return E.test(e) ? L(e.slice(4).toLowerCase()) : e;
             });
         }
-        function k(e) {
+        function M(e) {
             return N(e, function (e) {
                 return b.test(e) ? 'xn--' + x(e) : e;
             });
@@ -130,8 +130,8 @@
                 },
                 decode: L,
                 encode: x,
-                toASCII: k,
-                toUnicode: M
+                toASCII: M,
+                toUnicode: k
             }),
             'function' == typeof define && 'object' == typeof define.amd && define.amd)
         )

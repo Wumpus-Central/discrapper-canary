@@ -1,8 +1,8 @@
-n.d(t, { p: () => i });
-var a = n(592204),
-    o = n(712950);
-let i = () => {
+n.d(t, { p: () => o });
+var r = n(592204),
+    i = n(712950);
+let o = () => {
     var e;
-    let { profanity: t, sexualContent: n, slurs: i } = (0, o.g)();
-    return !!(0, a.Xo)({ location: 'use-should-filter-keywords' }) && null != (e = t || n || i) && e;
+    let { profanity: t, sexualContent: n, slurs: o } = (0, i.g)();
+    return !!(0, r.Xo)({ location: 'use-should-filter-keywords' }) && null != (e = t || n || o) && e;
 };

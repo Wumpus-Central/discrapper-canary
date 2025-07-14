@@ -3,8 +3,8 @@ var n = r(255367),
     a = r(73800),
     i = r(392711),
     l = r.n(i),
-    s = r(442837),
-    o = r(481060),
+    o = r(442837),
+    s = r(481060),
     c = r(600164),
     d = r(19780),
     u = r(226961),
@@ -24,8 +24,8 @@ var n = r(255367),
 class R extends a.PureComponent {
     render() {
         var e, t;
-        let { transport: r, mediaSessionId: a, hidePersonalInformation: i, hostname: s } = this.props;
-        if (null == r) return (0, n.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE });
+        let { transport: r, mediaSessionId: a, hidePersonalInformation: i, hostname: o } = this.props;
+        if (null == r) return (0, n.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
         let d =
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -52,7 +52,7 @@ class R extends a.PureComponent {
                     }
                     return e;
                 })({}, r)),
-                (t = t = { hostname: s }),
+                (t = t = { hostname: o }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {
@@ -125,15 +125,15 @@ class R extends a.PureComponent {
                     );
                 })(e.displayName, e.bitrate, e.lost)
             );
-        return (0, n.jsxs)(o.hjN, {
-            tag: o.RB0.H2,
+        return (0, n.jsxs)(s.hjN, {
+            tag: s.RB0.H2,
             title: E.intl.string(E.t.wU9INz) + (null != a ? ' - ' + a : ''),
             className: P.allowSelection,
-            children: [(0, v.a)(u), 0 === g.length ? null : (0, n.jsx)(o.$i$, { className: j.marginBottom20 }), (0, v.a)(g)]
+            children: [(0, v.a)(u), 0 === g.length ? null : (0, n.jsx)(s.$i$, { className: j.marginBottom20 }), (0, v.a)(g)]
         });
     }
 }
-let Z = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
+let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     var t;
     let { context: r, index: n } = e,
         a = u.ZP.getAllStats(r)[n],

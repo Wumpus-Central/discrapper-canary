@@ -297,7 +297,7 @@ let L = (e) => {
             { positionControlRef: o, onShopButtonClick: s } = a,
             c = w(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
-            _.Rg,
+            _.Pk,
             x(
                 Z(
                     {

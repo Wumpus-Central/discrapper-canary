@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,7 +76,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -124,7 +124,7 @@ function G(e) {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
                           f.Z,
-                          M(
+                          k(
                               {
                                   ref: c,
                                   selected: o,
@@ -143,7 +143,7 @@ function G(e) {
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  j(M({}, t), {
+                                                  j(k({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -237,7 +237,7 @@ function B(e) {
         children: (0, r.jsx)(
             'div',
             j(
-                M(
+                k(
                     {
                         className: D.rolePopout,
                         ref: d
@@ -288,7 +288,7 @@ function V(e) {
             (0, r.jsxs)(
                 O.Z,
                 j(
-                    M(
+                    k(
                         {
                             ref: R,
                             className: D.roleMention,

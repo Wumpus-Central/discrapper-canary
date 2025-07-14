@@ -1,21 +1,20 @@
 (n.d(t, {
     Tj: () => m,
-    WG: () => u,
+    WG: () => c,
     ZD: () => h,
     pD: () => d
 }),
-    n(539854),
-    n(953529));
-var i = n(990547);
-n(804098);
-var r = n(544891),
+    n(953529),
+    n(539854));
+var i = n(990547),
+    r = n(544891),
     l = n(729345),
     a = n(210887);
 n(358085);
 var o = n(573261),
     s = n(981631),
-    c = n(388032);
-async function u() {
+    u = n(388032);
+async function c() {
     return (
         await r.tn.get({
             url: s.ANM.BUG_REPORTS,
@@ -30,34 +29,34 @@ function d(e) {
 function m() {
     return [
         {
-            title: c.intl.string(c.t.VwIij4),
-            description: c.intl.format(c.t.DOP8yc, {}),
+            title: u.intl.string(u.t.VwIij4),
+            description: u.intl.format(u.t.DOP8yc, {}),
             emoji: '801497159479722084',
             value: 0
         },
         {
-            title: c.intl.string(c.t.rYfJoq),
-            description: c.intl.format(c.t['+LEfDA'], {}),
+            title: u.intl.string(u.t.rYfJoq),
+            description: u.intl.format(u.t['+LEfDA'], {}),
             emoji: '410336837563973632',
             value: 1
         },
         {
-            title: c.intl.string(c.t.Ia0skZ),
-            description: c.intl.format(c.t.D4rbgY, {}),
+            title: u.intl.string(u.t.Ia0skZ),
+            description: u.intl.format(u.t.D4rbgY, {}),
             emoji: '841420679643529296',
             value: 2
         },
         {
-            title: c.intl.string(c.t.KGsyFx),
-            description: c.intl.format(c.t.Kmg64O, {}),
+            title: u.intl.string(u.t.KGsyFx),
+            description: u.intl.format(u.t.Kmg64O, {}),
             emoji: '827645852352512021',
             value: 3
         }
     ];
 }
 async function h(e, t, n) {
-    var r, c;
-    let u = [
+    var r, u;
+    let c = [
         {
             name: 'name',
             value: e.name
@@ -76,60 +75,60 @@ async function h(e, t, n) {
         }
     ];
     ('' !== e.description &&
-        u.push({
+        c.push({
             name: 'description',
             value: e.description
         }),
         '' !== e.url &&
-            u.push({
+            c.push({
                 name: 'external_url',
                 value: e.url
             }),
         null != e.buildOverride &&
-            u.push({
+            c.push({
                 name: 'build_override',
                 value: e.buildOverride
             }));
     let d = null == (r = e.feature) ? void 0 : r.asana_inbox_id;
     null != d &&
         '' !== d &&
-        u.push({
+        c.push({
             name: 'asana_inbox_id',
             value: ''.concat(d)
         });
-    let m = null == (c = e.feature) ? void 0 : c.name;
+    let m = null == (u = e.feature) ? void 0 : u.name;
     (null != m &&
         '' !== m &&
-        u.push({
+        c.push({
             name: 'feature_name',
             value: m
         }),
         t.overridePlatformInformation &&
-            (u.push({
+            (c.push({
                 name: 'device',
                 value: t.device
             }),
-            u.push({
+            c.push({
                 name: 'os',
                 value: t.operatingSystem
             }),
-            u.push({
+            c.push({
                 name: 'os_version',
                 value: t.operatingSystemVersion
             }),
-            u.push({
+            c.push({
                 name: 'client_version',
                 value: t.clientVersion
             }),
-            u.push({
+            c.push({
                 name: 'client_build_number',
                 value: t.clientBuildNumber
             }),
-            u.push({
+            c.push({
                 name: 'release_channel',
                 value: window.GLOBAL_ENV.RELEASE_CHANNEL
             }),
-            u.push({
+            c.push({
                 name: 'locale',
                 value: t.locale
             })),
@@ -138,7 +137,7 @@ async function h(e, t, n) {
         return await o.Z.post({
             url: s.ANM.BUG_REPORTS,
             attachments: n,
-            fields: u,
+            fields: c,
             trackedActionData: {
                 event: i.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {

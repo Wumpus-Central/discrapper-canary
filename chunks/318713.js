@@ -1,108 +1,108 @@
 n.d(t, { Z: () => f });
-var a = n(255367),
+var r = n(255367),
     o = n(73800),
-    i = n(120356),
-    r = n.n(i),
-    c = n(481060),
-    l = n(55935),
-    s = n(543388),
+    l = n(120356),
+    i = n.n(l),
+    a = n(481060),
+    s = n(55935),
+    c = n(543388),
     u = n(223021),
     d = n(388032),
-    m = n(848697);
-let p = o.memo(function (e) {
-        let { children: t, className: n, compact: i = !1, timestamp: p, timestampFormat: f, isVisibleOnlyOnHover: g = !1, cozyAlt: b = !1, isInline: h = !0, id: T, isEdited: y = !1, application: C, tooltipPosition: v } = e,
-            x = o.useMemo(() => new Date(p), [p]),
-            O = o.useMemo(() => (0, l.Hg)(x), [x]),
-            I = o.useMemo(() => (null != f ? (0, l.vc)(x, f) : i ? (0, l.vc)(x, 'LT') : (0, l.Y4)(x, !0)), [x, f, i]),
-            E = o.useMemo(() => (i ? (0, u.Z)(I) : null), [i, I]),
-            S = o.useMemo(() => (y ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: O }) : O), [y, O]);
-        return (0, a.jsx)('span', {
-            className: r()(n, E, {
-                [m.timestamp]: !0,
-                [m.timestampVisibleOnHover]: g,
-                [m.timestampInline]: h,
-                [m.alt]: b
+    p = n(848697);
+let m = o.memo(function (e) {
+        let { children: t, className: n, compact: l = !1, timestamp: m, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: h = !1, isInline: O = !0, id: y, isEdited: v = !1, application: j, tooltipPosition: P } = e,
+            x = o.useMemo(() => new Date(m), [m]),
+            C = o.useMemo(() => (0, s.Hg)(x), [x]),
+            w = o.useMemo(() => (null != f ? (0, s.vc)(x, f) : l ? (0, s.vc)(x, 'LT') : (0, s.Y4)(x, !0)), [x, f, l]),
+            S = o.useMemo(() => (l ? (0, u.Z)(w) : null), [l, w]),
+            E = o.useMemo(() => (v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [v, C]);
+        return (0, r.jsx)('span', {
+            className: i()(n, S, {
+                [p.timestamp]: !0,
+                [p.timestampVisibleOnHover]: b,
+                [p.timestampInline]: O,
+                [p.alt]: h
             }),
             children:
-                null == C
-                    ? (0, a.jsx)(c.ua7, {
-                          text: () => (0, l.vc)(x, 'LLLL'),
-                          'aria-label': S,
-                          tooltipClassName: m.timestampTooltip,
-                          position: v,
+                null == j
+                    ? (0, r.jsx)(a.ua7, {
+                          text: () => (0, s.vc)(x, 'LLLL'),
+                          'aria-label': E,
+                          tooltipClassName: p.timestampTooltip,
+                          position: P,
                           delay: 750,
                           children: (e) =>
-                              (0, a.jsx)(_, {
+                              (0, r.jsx)(g, {
                                   tooltipProps: e,
-                                  timeFormatted: I,
+                                  timeFormatted: w,
                                   timestamp: x,
-                                  id: T,
-                                  compact: i,
+                                  id: y,
+                                  compact: l,
                                   children: t
                               })
                       })
-                    : (0, a.jsx)(s.Z, {
-                          application: C,
+                    : (0, r.jsx)(c.Z, {
+                          application: j,
                           timestamp: x,
-                          compact: i,
-                          children: (0, a.jsx)(_, {
-                              timeFormatted: I,
+                          compact: l,
+                          children: (0, r.jsx)(g, {
+                              timeFormatted: w,
                               timestamp: x,
-                              id: T,
-                              compact: i,
+                              id: y,
+                              compact: l,
                               children: t
                           })
                       })
         });
     }),
-    _ = o.memo(function (e) {
+    g = o.memo(function (e) {
         var t, n;
-        let { tooltipProps: o, timeFormatted: i, children: r, compact: c, timestamp: l, id: s } = e;
-        return (0, a.jsx)(
+        let { tooltipProps: o, timeFormatted: l, children: i, compact: a, timestamp: s, id: c } = e;
+        return (0, r.jsx)(
             'time',
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        a = Object.keys(n);
+                        r = Object.keys(n);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (a = a.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        a.forEach(function (t) {
-                            var a;
-                            ((a = n[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            ((r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: a,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = a));
+                                    : (e[t] = r));
                         }));
                 }
                 return e;
             })({}, o)),
             (n = n =
                 {
-                    id: s,
-                    dateTime: l.toISOString(),
+                    id: c,
+                    dateTime: s.toISOString(),
                     children:
-                        null != r
-                            ? r
-                            : (0, a.jsxs)(a.Fragment, {
+                        null != i
+                            ? i
+                            : (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, a.jsx)('i', {
-                                          className: m.separator,
+                                      (0, r.jsx)('i', {
+                                          className: p.separator,
                                           'aria-hidden': !0,
-                                          children: c ? '[' : ' \u2014 '
+                                          children: a ? '[' : ' \u2014 '
                                       }),
-                                      i,
-                                      c &&
-                                          (0, a.jsxs)('i', {
-                                              className: m.separator,
+                                      l,
+                                      a &&
+                                          (0, r.jsxs)('i', {
+                                              className: p.separator,
                                               'aria-hidden': !0,
                                               children: [']', ' ']
                                           })
@@ -114,8 +114,8 @@ let p = o.memo(function (e) {
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var a = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, a);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
                       return n;
                   })(Object(n)).forEach(function (e) {
@@ -124,4 +124,4 @@ let p = o.memo(function (e) {
             t)
         );
     }),
-    f = p;
+    f = m;

@@ -12,8 +12,8 @@ var a = l(255367),
     h = l(592125),
     x = l(984933),
     p = l(430824),
-    v = l(768581),
-    g = l(969632),
+    g = l(768581),
+    v = l(969632),
     j = l(580357),
     C = l(388032),
     k = l(70164);
@@ -44,13 +44,13 @@ function _(e) {
                       };
             })(f)
         ),
-        w = (0, s.e7)([g.Z], () => {
+        w = (0, s.e7)([v.Z], () => {
             var e;
-            return null == (e = g.Z.getResourceChannel(null == f ? void 0 : f.channelId)) ? void 0 : e.icon;
+            return null == (e = v.Z.getResourceChannel(null == f ? void 0 : f.channelId)) ? void 0 : e.icon;
         }),
-        H = (0, s.Wu)([g.Z], () => {
+        H = (0, s.Wu)([v.Z], () => {
             var e, n;
-            return (null != (n = null == (e = g.Z.getSettings()) ? void 0 : e.resourceChannels) ? n : []).map((e) => e.channelId);
+            return (null != (n = null == (e = v.Z.getSettings()) ? void 0 : e.resourceChannels) ? n : []).map((e) => e.channelId);
         }),
         P = G.length < u.n || null == R,
         T = t.useCallback(() => {
@@ -104,7 +104,7 @@ function _(e) {
             () =>
                 null == w || null == R
                     ? null
-                    : v.ZP.getResourceChannelIconURL({
+                    : g.ZP.getResourceChannelIconURL({
                           channelId: R.value,
                           icon: w
                       }),
@@ -246,11 +246,10 @@ function _(e) {
                         (0, a.jsx)('div', {
                             className: k.rightButtons,
                             children: (0, a.jsxs)(o.hE2, {
-                                direction: 'horizontal-reverse',
+                                size: 'sm',
                                 children: [
                                     (0, a.jsx)(o.zxk, {
                                         variant: 'secondary',
-                                        size: 'sm',
                                         text: C.intl.string(C.t['ETE/oK']),
                                         onClick: _
                                     }),

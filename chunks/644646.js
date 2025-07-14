@@ -48,7 +48,7 @@ let I = function (e) {
         ),
         L = i.useRef(null),
         x = i.useRef(I),
-        M = (0, p.Bg)(a.config);
+        k = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
             if (null != L.current) {
@@ -59,7 +59,7 @@ let I = function (e) {
                 (I && !x.current ? L.current.play() : !I && x.current && ((L.current.currentTime = 0), L.current.pause()), (x.current = I));
             }
         }, [I, P, R]),
-        (t = M
+        (t = k
             ? (0, r.jsx)(b.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>

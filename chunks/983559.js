@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(867176),
     x = n(451834),
     v = n(502762),
-    O = n(952124),
-    j = n(544989),
+    j = n(952124),
+    O = n(544989),
     E = n(481932),
     S = n(664794),
     I = n(4517),
     P = n(277117),
     Z = n(52639),
-    T = n(228168),
-    N = n(388032),
+    N = n(228168),
+    T = n(388032),
     A = n(638414);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -99,7 +99,7 @@ function R(e) {
                     ref: F,
                     user: t,
                     displayProfile: D,
-                    themeType: T.lY.SIDEBAR,
+                    themeType: N.lY.SIDEBAR,
                     themeOverride: k,
                     children: [
                         null != G.interactionType &&
@@ -109,15 +109,15 @@ function R(e) {
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
-                                (0, r.jsxs)(j.Z, {
+                                (0, r.jsxs)(O.Z, {
                                     children: [
                                         (0, r.jsx)(E.Z, {
                                             user: t,
-                                            themeType: T.lY.SIDEBAR,
+                                            themeType: N.lY.SIDEBAR,
                                             shouldShowTooltip: null === G.interactionType
                                         }),
                                         t.bot
-                                            ? (0, r.jsx)(O.Z, { user: t })
+                                            ? (0, r.jsx)(j.Z, { user: t })
                                             : (0, r.jsx)(S.Z, {
                                                   type: 'banner',
                                                   user: t
@@ -130,7 +130,7 @@ function R(e) {
                                         (0, r.jsx)(C.Z, {
                                             user: t,
                                             displayProfile: D,
-                                            themeType: T.lY.SIDEBAR,
+                                            themeType: N.lY.SIDEBAR,
                                             animateOnHover: !H,
                                             className: A.banner
                                         }),
@@ -143,14 +143,14 @@ function R(e) {
                                             user: t,
                                             displayProfile: D,
                                             channelId: R.id,
-                                            themeType: T.lY.SIDEBAR,
+                                            themeType: N.lY.SIDEBAR,
                                             onOpenProfile: M ? void 0 : z
                                         }),
                                         (0, r.jsx)(I.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
                                             channelId: R.id,
-                                            themeType: T.lY.SIDEBAR,
+                                            themeType: N.lY.SIDEBAR,
                                             disableToolbar: t.bot
                                         })
                                     ]
@@ -189,7 +189,7 @@ function R(e) {
                                                 )
                                             ));
                                     },
-                                    children: N.intl.string(N.t['+Xp3ho'])
+                                    children: T.intl.string(T.t['+Xp3ho'])
                                 })
                             }),
                         (null == D ? void 0 : D.profileEffectId) != null &&

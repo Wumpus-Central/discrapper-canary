@@ -4,11 +4,11 @@
     F$: () => L,
     Ov: () => G,
     R2: () => U,
-    Sm: () => N,
-    fK: () => k,
+    Sm: () => C,
+    fK: () => M,
     fi: () => B,
-    jr: () => M,
-    mK: () => C,
+    jr: () => k,
+    mK: () => N,
     oK: () => P,
     oc: () => D,
     p8: () => V,
@@ -34,8 +34,9 @@ var d = n(703656),
     E = n(251728),
     b = n(303952),
     y = n(578976),
-    O = n(411700),
-    v = n(981631);
+    O = n(411700);
+n(215023);
+var v = n(981631);
 function I(e, t, n) {
     return (
         t in e
@@ -87,11 +88,11 @@ function A(e, t) {
 }
 (n(597688), n(328347), n(874703), n(52030));
 let N = (e) => {
-        s.Z.dispatch(T({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
+        var { openInLayer: t = !0, tab: n } = e;
+        (C(S(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP));
     },
     C = (e) => {
-        var { openInLayer: t = !0, tab: n } = e;
-        (N(S(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP));
+        s.Z.dispatch(T({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
     },
     R = () => {
         (s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)());
@@ -182,7 +183,7 @@ let N = (e) => {
             );
         }
     },
-    M = async (e, t) => {
+    k = async (e, t) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_FETCH',
             skuId: e
@@ -210,7 +211,7 @@ let N = (e) => {
                 }));
         }
     },
-    k = async (e) => {
+    M = async (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CLAIM',
             skuId: e

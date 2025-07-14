@@ -50,8 +50,8 @@ var r = n(255367),
     D = n(341298),
     L = n(703656),
     x = n(973616),
-    M = n(598077),
-    k = n(314897),
+    k = n(598077),
+    M = n(314897),
     j = n(176354),
     U = n(630388),
     G = n(700785),
@@ -304,11 +304,11 @@ function eE(e) {
         D,
         { clientId: ee, responseType: ea, redirectUri: el, codeChallenge: eu, codeChallengeMethod: ef, state: e_, nonce: eh, prompt: em, authorizations: eE, scopes: eb, permissions: ey, guildId: eO, channelId: ev, integrationType: eI, disableGuildSelect: eT = !1, showLogout: eS = !1, cancelCompletesFlow: eA = !0, isTrustedName: eN = !1, isEmbeddedFlow: eC = !1, callback: eR, callbackWithoutPost: eP, onClose: ew, disclosures: eD, isExternalStandaloneOAuthPage: eL = !1 } = e,
         ex = null != eI ? (null == eE ? void 0 : eE.get(eI)) : void 0,
-        eM = (0, s.TH)(),
-        ek = (0, _.e7)([w.Z], () => w.Z.hasLoadedExperiments);
+        ek = (0, s.TH)(),
+        eM = (0, _.e7)([w.Z], () => w.Z.hasLoadedExperiments);
     i.useEffect(() => {
-        k.default.isAuthenticated() && !ek && y.Z.getExperiments();
-    }, [ek]);
+        M.default.isAuthenticated() && !eM && y.Z.getExperiments();
+    }, [eM]);
     let [ej, eU] = i.useState(null),
         [eG, eB] = i.useState(null),
         [eV, eF] = i.useState(null),
@@ -319,7 +319,7 @@ function eE(e) {
         [eX, eQ] = i.useState(null != ev ? ev : null),
         [eJ, e$] = i.useState(G.Hn),
         [e0, e1] = i.useState(!1),
-        e2 = i.useMemo(() => ((null == ej ? void 0 : ej.user) != null ? new M.Z(ej.user) : null), [null == ej ? void 0 : ej.user]),
+        e2 = i.useMemo(() => ((null == ej ? void 0 : ej.user) != null ? new k.Z(ej.user) : null), [null == ej ? void 0 : ej.user]),
         e3 = i.useMemo(() => (null == eK ? void 0 : eK.find((e) => e.id === ez)), [eK, ez]),
         [e4, e5] = i.useState(null),
         e6 = i.useMemo(() => {
@@ -361,17 +361,17 @@ function eE(e) {
                 (tl(!t), to(e));
             } catch (n) {
                 let { status: e, body: t } = n;
-                if (401 === e) return void (0, F.c$)(eM, 'oauth2_error_failed_disclosures');
+                if (401 === e) return void (0, F.c$)(ek, 'oauth2_error_failed_disclosures');
                 eF(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
             } finally {
                 ti.current = !1;
             }
         };
         if (null == eD) {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eM, 'oauth2_error_not_authenticated');
+            if (!M.default.isAuthenticated()) return void (0, F.c$)(ek, 'oauth2_error_not_authenticated');
             e();
         }
-    }, [ee, eM, eD, to, eF, tl, eB]);
+    }, [ee, ek, eD, to, eF, tl, eB]);
     let tc = i.useCallback(
             async (e) => {
                 if (null != eP) {
@@ -441,7 +441,7 @@ function eE(e) {
         ),
         tu = i.useRef(!1),
         td = i.useCallback(async () => {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eM, 'oauth2_error_not_authenticated');
+            if (!M.default.isAuthenticated()) return void (0, F.c$)(ek, 'oauth2_error_not_authenticated');
             if (!ti.current && !tu.current) {
                 tu.current = !0;
                 try {
@@ -467,13 +467,13 @@ function eE(e) {
                         }));
                 } catch (n) {
                     let { status: e, body: t } = n;
-                    if (401 === e) return void (0, F.c$)(eM, 'oauth2_error_unauthorized');
+                    if (401 === e) return void (0, F.c$)(ek, 'oauth2_error_unauthorized');
                     eF(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
                 } finally {
                     tu.current = !1;
                 }
             }
-        }, [eM, ex, ee, tt, ea, el, eu, ef, e_, eh, e4, em, tc, ts]),
+        }, [ek, ex, ee, tt, ea, el, eu, ef, e_, eh, e4, em, tc, ts]),
         tf = i.useMemo(() => {
             var e;
             return null != e8 && e6
@@ -502,12 +502,12 @@ function eE(e) {
             }));
     }, [ee, e4, tr, tt, eG]),
         i.useEffect(() => {
-            if (null == eG && (!e6 || null != e8) && ek)
+            if (null == eG && (!e6 || null != e8) && eM)
                 if (null != ex) {
                     var e;
                     (e5(null != (e = ex.integration_type) ? e : c.Y.GUILD_INSTALL), eB('AUTHORIZE_SCOPES'));
                 } else tf.length > 1 ? eB('SELECT_INSTALL_TYPE') : (1 === tf.length ? e5(tf[0]) : null != eI ? e5(eI) : e5(c.Y.GUILD_INSTALL), eB('AUTHORIZE_SCOPES'));
-        }, [ex, tf, e8, e6, eI, eG, ek]),
+        }, [ex, tf, e8, e6, eI, eG, eM]),
         i.useEffect(() => {
             if (null == e4 || null != ej || null != eV) return;
             e4 === c.Y.USER_INSTALL && (eq(null), eQ(null));
@@ -688,7 +688,7 @@ function eE(e) {
                 bot: ej.bot,
                 accountScopes: tn,
                 showLogout: eS || !1,
-                location: eM,
+                location: ek,
                 scopes: tt
             })),
         tv &&

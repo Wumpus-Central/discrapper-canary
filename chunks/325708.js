@@ -60,32 +60,32 @@ function _(e) {
             [_]
         ),
         v = 5 === t ? f.at : f.Co,
-        O = (0, f.WL)({
+        j = (0, f.WL)({
             maxWidth: n,
             minWidth: v
         }),
-        j = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
+        O = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         E = (0, s.clamp)(y, v, n),
-        S = O ? E : E + j;
+        S = j ? E : E + O;
     l.useEffect(() => {
-        null == r || r(E, O);
-    }, [E, r, O]);
+        null == r || r(E, j);
+    }, [E, r, j]);
     let I = null != p ? p : l.Fragment;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            !O && (0, i.jsx)('div', { style: { minWidth: S } }),
+            !j && (0, i.jsx)('div', { style: { minWidth: S } }),
             (0, i.jsx)(I, {
                 children: (0, i.jsxs)('div', {
                     className: o()(m.chatLayerWrapper, { [m.hidden]: !1 }),
                     children: [
                         (0, i.jsx)('div', {
                             className: o()(m.chatTarget, {
-                                [m.floating]: O,
-                                [m.notFloating]: !O
+                                [m.floating]: j,
+                                [m.notFloating]: !j
                             }),
                             style: { width: S }
                         }),
-                        !O &&
+                        !j &&
                             (0, i.jsx)(b, {
                                 minWidth: v,
                                 maxWidth: n,
@@ -95,7 +95,7 @@ function _(e) {
                             }),
                         (0, i.jsx)('div', {
                             ref: g,
-                            className: o()(m.container, { [m.floating]: O }),
+                            className: o()(m.container, { [m.floating]: j }),
                             style: { width: E },
                             children: a
                         })

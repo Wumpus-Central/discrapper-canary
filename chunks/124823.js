@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(867176),
     x = n(280885),
     v = n(900927),
-    O = n(678738),
-    j = n(502762),
+    j = n(678738),
+    O = n(502762),
     E = n(530),
     S = n(679332),
     I = n(544989),
     P = n(228168),
     Z = n(388032),
-    T = n(638414),
-    N = n(283189);
+    N = n(638414),
+    T = n(283189);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,7 +87,7 @@ function w(e) {
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
-            children: (0, r.jsxs)(j.Z, {
+            children: (0, r.jsxs)(O.Z, {
                 ref: U,
                 user: t,
                 displayProfile: R,
@@ -98,7 +98,7 @@ function w(e) {
                         children: [
                             (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
                             (0, r.jsxs)('header', {
-                                className: T.header,
+                                className: N.header,
                                 children: [
                                     (0, r.jsx)(C.Z, {
                                         user: t,
@@ -116,7 +116,7 @@ function w(e) {
                                 ]
                             }),
                             (0, r.jsxs)('div', {
-                                className: N.body,
+                                className: T.body,
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
@@ -128,10 +128,10 @@ function w(e) {
                                             themeType: P.lY.SIDEBAR
                                         })
                                     }),
-                                    (0, r.jsxs)(j.Z.Overlay, {
-                                        className: N.overlay,
+                                    (0, r.jsxs)(O.Z.Overlay, {
+                                        className: T.overlay,
                                         children: [
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(j.Z, {
                                                 heading: Z.intl.string(Z.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(x.Z, {
@@ -141,7 +141,7 @@ function w(e) {
                                                     isHovering: B
                                                 })
                                             }),
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(j.Z, {
                                                 heading: Z.intl.string(Z.t['A//N4u']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(v.Z, { userId: t.id })
@@ -154,12 +154,12 @@ function w(e) {
                     }),
                     !w &&
                         (0, r.jsx)('footer', {
-                            className: T.footer,
+                            className: N.footer,
                             children: (0, r.jsx)(a.zx, {
                                 fullWidth: !0,
                                 size: a.zx.Sizes.LARGE,
                                 look: a.zx.Looks.BLANK,
-                                color: T.footerButtonColor,
+                                color: N.footerButtonColor,
                                 onClick: () => {
                                     (F(),
                                         (0, m.pQ)(

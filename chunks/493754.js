@@ -89,8 +89,8 @@ function C(e) {
 }
 function x(e) {
     var t,
-        { stream: n, applicationId: i, channel: a, exitFullScreen: u, appContext: x, analyticsLocation: v, className: O } = e,
-        j = (function (e, t) {
+        { stream: n, applicationId: i, channel: a, exitFullScreen: u, appContext: x, analyticsLocation: v, className: j } = e,
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -124,7 +124,7 @@ function x(e) {
                     y(
                         _(
                             {
-                                size: null != (t = j.size) ? t : c.zx.Sizes.SMALL,
+                                size: null != (t = O.size) ? t : c.zx.Sizes.SMALL,
                                 color: b.buttonColor,
                                 onClick: () => {
                                     (o()(null != I, 'guild cannot be null'),
@@ -140,9 +140,9 @@ function x(e) {
                                             guildScheduledEvent: P
                                         }));
                                 },
-                                className: l()(O, b.textButton)
+                                className: l()(j, b.textButton)
                             },
-                            j
+                            O
                         ),
                         { children: Z }
                     )
@@ -151,7 +151,7 @@ function x(e) {
                     channel: a,
                     stream: n,
                     appContext: x,
-                    className: l()(O, b.iconButton),
+                    className: l()(j, b.iconButton),
                     exitFullScreen: u,
                     analyticsLocation: v,
                     guildScheduledEvent: P

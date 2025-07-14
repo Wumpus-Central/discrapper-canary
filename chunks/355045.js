@@ -40,7 +40,7 @@ let N = function (e) {
         ),
         L = i.useMemo(() => (0, y.vx)(R).length > 0, [R]),
         x = (0, h.Z)(e.guild.id).total;
-    function M() {
+    function k() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: T.Si.TIER_2,
@@ -54,7 +54,7 @@ let N = function (e) {
             onClose: (e) => e && t()
         });
     }
-    function k() {
+    function M() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: T.Si.TIER_2,
@@ -144,7 +144,7 @@ let N = function (e) {
                               innerClassName: o()(A.__invalid_guildBoostCtaContent, A.guildBoostCtaGiftContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
-                              onClick: k,
+                              onClick: M,
                               size: c.zx.Sizes.LARGE,
                               children: [
                                   (0, r.jsx)(u.OgN, {
@@ -160,7 +160,7 @@ let N = function (e) {
                               innerClassName: o()(A.__invalid_guildBoostCtaContent, A.__invalid_guildBoostCtaSubscribeContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
-                              onClick: M,
+                              onClick: k,
                               size: c.zx.Sizes.LARGE,
                               children: S.intl.string(S.t.Q43TvL)
                           })

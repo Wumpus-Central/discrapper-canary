@@ -1,12 +1,16 @@
 n.d(t, {
-    U2: () => i,
-    pn: () => a
+    BW: () => a,
+    U2: () => o,
+    pn: () => s
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-05_sensitive_content_gore',
     label: 'Sensitive content filters for gore',
     defaultConfig: { enabled: !1 },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -15,11 +19,11 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function o(e) {
+    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }
-function a(e) {
-    let { enabled: t } = r.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function s(e) {
+    let { enabled: t } = a.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

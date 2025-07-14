@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(433355),
     x = n(699516),
     v = n(594174),
-    O = n(768581),
-    j = n(525541),
+    j = n(768581),
+    O = n(525541),
     E = n(981631),
     S = n(228168),
     I = n(388032),
@@ -37,7 +37,7 @@ let Z = (e) => {
                                   let { guild: n } = e,
                                       i =
                                           null != n
-                                              ? O.ZP.getGuildIconURL({
+                                              ? j.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
                                                     size: 24
@@ -102,7 +102,7 @@ let Z = (e) => {
                   ]
               });
     },
-    T = (e) => {
+    N = (e) => {
         var t;
         let { relationshipType: n, userId: i, showingBanner: l } = e,
             a = null == (t = v.default.getUser(i)) ? void 0 : t.bot,
@@ -205,7 +205,7 @@ let Z = (e) => {
                 return null;
         }
     },
-    N = (e) => {
+    T = (e) => {
         let { channelId: t, otherUserId: n } = e,
             l = i.useCallback(() => {
                 (0, s.showToast)((0, s.createToast)(I.intl.string(I.t.a2j0ho), s.ToastType.FAILURE));
@@ -264,7 +264,7 @@ let Z = (e) => {
                 s || u
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(N, {
+                              (0, r.jsx)(T, {
                                   channelId: n.id,
                                   otherUserId: t
                               }),
@@ -273,13 +273,13 @@ let Z = (e) => {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(T, {
+                              (0, r.jsx)(N, {
                                   relationshipType: c,
                                   userId: t,
                                   showingBanner: i
                               }),
                               !i &&
-                                  (0, r.jsx)(j.Z, {
+                                  (0, r.jsx)(O.Z, {
                                       otherUserId: t,
                                       channel: n,
                                       navigateAwayOnReportSuccess: d

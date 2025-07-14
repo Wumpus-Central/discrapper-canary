@@ -1,10 +1,10 @@
-(r.r(t), r.d(t, { default: () => s }));
+(r.r(t), r.d(t, { default: () => o }));
 var n = r(255367);
 r(73800);
 var a = r(238246),
     i = r(153731),
     l = r(388032);
-function s(e) {
+function o(e) {
     let { windowKey: t } = e;
     return (0, n.jsx)(a.Z, {
         withTitleBar: !0,

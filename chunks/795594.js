@@ -40,8 +40,8 @@ var r = n(255367),
     D = n(600164),
     L = n(240991),
     x = n(713938),
-    M = n(973616),
-    k = n(881998),
+    k = n(973616),
+    M = n(881998),
     j = n(592125),
     U = n(944486),
     G = n(246946),
@@ -242,7 +242,7 @@ let ec = (e) => {
     ef = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: g } = e,
             b = a.id,
-            I = i.useMemo(() => M.ZP.createFromServer(a), [a]),
+            I = i.useMemo(() => k.ZP.createFromServer(a), [a]),
             T = (0, F.yE)(I.flags, $.udG.EMBEDDED),
             S = (0, _.e7)(
                 [q.Z],
@@ -254,16 +254,16 @@ let ec = (e) => {
             ),
             A = C.w.useExperiment({ location: 'oauth2_authorize' }),
             P = a.bot,
-            k = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
+            M = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
             { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, _.cj)([B.ZP], () =>
-                null == k
+                null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1
                       }
                     : {
-                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, k),
-                          dmChannelMuted: B.ZP.isChannelMuted(null, k)
+                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: B.ZP.isChannelMuted(null, M)
                       }
             ),
             [Z, W] = i.useState(!1),
@@ -458,7 +458,7 @@ let ec = (e) => {
             },
             eh = i.useCallback(async () => {
                 u()(null != P, 'dm channel mute setting requires having a bot user');
-                let e = k;
+                let e = M;
                 (null == e && (e = await y.Z.ensurePrivateChannel(P.id)),
                     G
                         ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, H.ZB.Unmuted)
@@ -476,7 +476,7 @@ let ec = (e) => {
                                       )
                                   );
                           }));
-            }, [k, P, G, a.id]),
+            }, [M, P, G, a.id]),
             em = () =>
                 A.enabled
                     ? (0, r.jsxs)('div', {
@@ -573,7 +573,7 @@ let ec = (e) => {
     e_ = (0, d.U)(() => ({ searchQuery: '' })),
     ep = () => {
         let e = (0, _.e7)([G.Z], () => G.Z.hidePersonalInformation),
-            t = (0, _.e7)([k.Z], () => k.Z.getNonChildrenApps()),
+            t = (0, _.e7)([M.Z], () => M.Z.getNonChildrenApps()),
             n = (0, _.e7)([W.default], () => W.default.locale),
             a = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
             o = (0, _.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),

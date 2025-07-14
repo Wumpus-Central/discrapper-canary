@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var l = n(120356),
     o = n.n(l),
-    a = n(481060),
-    i = n(937615),
+    i = n(481060),
+    a = n(937615),
     s = n(884697),
     c = n(388032),
     u = n(864356);
@@ -28,30 +28,45 @@ let p = (e) => {
             discount: f = s.f_,
             variant: h = 'heading-md/semibold'
         } = e,
-        b = (0, i.qr)(t, n),
+        b = (0, a.qr)(t, n),
         m =
             f !== s.f_ && f.discountPercentage >= 5
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          b,
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(i.nn4, {
+                              children: c.intl.format(c.t.niC6DA, {
+                                  price: b,
+                                  discountPercentage: f.discountPercentage
+                              })
+                          }),
+                          (0, r.jsx)('span', {
+                              'aria-hidden': !0,
+                              children: b
+                          }),
+                          (0, r.jsxs)(i.Text, {
                               variant: h,
                               color: 'text-feedback-positive',
                               className: u.discount,
-                              children: ' (-'.concat(f.discountPercentage, '%)')
+                              'aria-hidden': !0,
+                              children: ['(-', f.discountPercentage, '%)']
                           })
                       ]
                   })
-                : (0, r.jsx)(a.Text, {
-                      variant: h,
-                      children: b
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)(i.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
+                          (0, r.jsx)('span', {
+                              'aria-hidden': !0,
+                              children: b
+                          })
+                      ]
                   });
-    return (0, r.jsxs)(a.X6q, {
+    return (0, r.jsxs)(i.Text, {
         variant: h,
         className: o()(u.container, g),
         children: [
             'tooltip' === l
-                ? (0, r.jsx)(a.ua7, {
+                ? (0, r.jsx)(i.ua7, {
                       text: c.intl.string(c.t.MPFyJy),
                       'aria-label': c.intl.string(c.t.X3Ekj4),
                       children: (e) => {
@@ -65,7 +80,7 @@ let p = (e) => {
                                   })(e)
                               );
                           return (0, r.jsx)(
-                              a.SrA,
+                              i.SrA,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -115,7 +130,7 @@ let p = (e) => {
                       }
                   })
                 : 'default' === l
-                  ? (0, r.jsx)(a.SrA, {
+                  ? (0, r.jsx)(i.SrA, {
                         size: p,
                         color: 'currentColor',
                         className: u.nitroIcon

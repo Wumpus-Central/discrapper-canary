@@ -1,55 +1,62 @@
-t.d(e, { P: () => l });
-var o = t(255367),
-    a = t(873546),
-    i = t(755721),
-    s = t(481060),
-    r = t(254204);
-function c(n) {
-    let { icon: e, onClick: t } = n;
-    return (0, o.jsx)(i.zx, {
-        look: i.zx.Looks.BLANK,
-        size: i.zx.Sizes.ICON,
-        className: r.contentHeaderButton,
-        innerClassName: r.iconButtonInner,
-        onClick: t,
-        children: (0, o.jsx)(e, { size: 'sm' })
+n.d(t, { Z: () => f });
+var a = n(255367),
+    i = n(73800),
+    o = n(873546),
+    r = n(755721),
+    s = n(481060),
+    l = n(36361),
+    d = n(254204);
+function c(e) {
+    let { icon: t, onClick: n } = e;
+    return (0, a.jsx)(r.zx, {
+        look: r.zx.Looks.BLANK,
+        size: r.zx.Sizes.ICON,
+        className: d.contentHeaderButton,
+        innerClassName: d.iconButtonInner,
+        onClick: n,
+        children: (0, a.jsx)(t, { size: 'sm' })
     });
 }
-function d(n) {
-    let { onClose: e, setShowNavigationMobile: t } = n;
-    return (0, o.jsxs)('div', {
-        className: r.contentHeader,
+function u(e) {
+    let { title: t, onClose: n, setShowNavigationMobile: i } = e;
+    return (0, a.jsxs)('div', {
+        className: d.contentHeader,
         children: [
-            (0, o.jsxs)('div', {
-                className: r.contentHeaderLeft,
+            (0, a.jsxs)('div', {
+                className: d.contentHeaderLeft,
                 children: [
-                    a.tq &&
-                        (0, o.jsx)(c, {
+                    o.tq &&
+                        (0, a.jsx)(c, {
                             icon: s.yFM,
-                            onClick: () => t(!0)
+                            onClick: () => i(!0)
                         }),
-                    (0, o.jsx)(s.X6q, {
+                    (0, a.jsx)(s.X6q, {
                         variant: 'heading-md/normal',
                         color: 'header-secondary',
-                        children: 'Content Header'
+                        children: t
                     })
                 ]
             }),
-            !a.tq &&
-                (0, o.jsx)(c, {
+            !o.tq &&
+                (0, a.jsx)(c, {
                     icon: s.Uz9,
-                    onClick: e
+                    onClick: n
                 })
         ]
     });
 }
-function l(n) {
-    let { onClose: e, setShowNavigationMobile: t } = n;
-    return (0, o.jsx)('div', {
-        className: r.content,
-        children: (0, o.jsx)(d, {
-            onClose: e,
-            setShowNavigationMobile: t
-        })
+let f = i.memo(function (e) {
+    let { onClose: t, setShowNavigationMobile: n, setting: i } = e,
+        o = i.data.useTitle();
+    return (0, a.jsxs)('div', {
+        className: d.content,
+        children: [
+            (0, a.jsx)(u, {
+                title: o,
+                onClose: t,
+                setShowNavigationMobile: n
+            }),
+            (0, a.jsx)(l.Z, { node: i })
+        ]
     });
-}
+});

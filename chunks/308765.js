@@ -459,7 +459,7 @@ let i = {
         inlineRequire: () => n(460093).Z
     },
     NotificationsInboxAutoLoadManager: {
-        inlineRequire: () => n(363040).Z,
+        inlineRequire: () => n(838611).Z,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0
     }

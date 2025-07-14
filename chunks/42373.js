@@ -1,145 +1,166 @@
-(n.d(t, { Z: () => _ }), n(953529));
+(n.d(t, { Z: () => O }), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
     a = n.n(s),
     l = n(392711),
-    o = n(780384),
-    c = n(755721),
-    d = n(481060),
-    u = n(410030),
-    m = n(70097),
-    p = n(626135),
-    g = n(526167),
-    h = n(572995),
-    f = n(981631),
-    b = n(869783),
-    x = n(888723);
-let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: j, videoUrl: E, shouldLoadVideo: O, index: C, customVideoStyle: v, isReducedMotion: S, onClick: T, badgeText: N, size: I } = e,
-        y = (0, g.rO)(),
-        A = r.useRef(null),
-        P = r.useRef(0),
-        R = (function (e) {
-            let t;
-            switch (e) {
-                case h.NA.EMOJIS:
-                    t = x.emojisBackground;
-                    break;
-                case h.NA.REFERRAL_PROGRAM:
-                    t = x.referralProgramBackground;
-                    break;
-                case h.NA.NO_LIMITS:
-                    t = x.noLimitsBackground;
-                    break;
-                case h.NA.NEW_APP_STYLES:
-                    t = x.newStylesBackground;
-                    break;
-                case h.NA.YOUR_SPACE:
-                    t = x.yourSpaceBackground;
-                    break;
-                case h.NA.SERVER_PROFILES:
-                    t = x.serverProfilesBackground;
-                    break;
-                case h.NA.SHOW_YOUR_STYLE:
-                    t = x.yourStyleBackground;
-                    break;
-                case h.NA.PERMADECOS:
-                    t = x.permadecosBackground;
-                    break;
-                case h.NA.VOICE_FILTERS:
-                    t = x.voiceFiltersBackground;
-            }
-            return t;
-        })(t),
-        D = (0, u.ZP)(),
-        Z = (0, o.wj)(D),
-        w = Z ? c.Tt.WHITE : c.Tt.BRAND,
-        k = (0, l.debounce)(() => {
-            p.default.track(f.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
-        }, 800),
-        L = () => {
-            null == A.current || S || ((A.current.currentTime = P.current), A.current.play());
-        },
-        B = () => {
-            null == A.current || S || ((P.current = A.current.currentTime), A.current.pause());
-        },
-        M = () =>
-            (0, i.jsxs)('div', {
-                className: a()(x.textBox, x[''.concat(I)]),
-                children: [
-                    (0, i.jsxs)('div', {
-                        children: [
-                            null != N &&
-                                (0, i.jsx)('div', {
-                                    className: x.badge,
-                                    children: (0, i.jsx)(d.X6q, {
-                                        variant: 'eyebrow',
-                                        color: 'always-white',
-                                        children: N
-                                    })
-                                }),
-                            (0, i.jsx)(d.X6q, {
-                                variant: I === h.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
-                                color: 'header-primary',
-                                className: a()(x.header, x[''.concat(I)]),
-                                children: n
+    o = n(680018),
+    c = n(780384),
+    d = n(755721),
+    u = n(481060),
+    m = n(410030),
+    p = n(70097),
+    g = n(626135),
+    h = n(526167),
+    f = n(572995),
+    b = n(981631),
+    x = n(869783),
+    _ = n(888723),
+    j = n(790895);
+let E = (e) => {
+        let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: r, enablePremiumBrandRefreshDesign: s } = e,
+            l = (0, m.ZP)(),
+            u = (0, c.wj)(l),
+            p = u ? d.Tt.WHITE : d.Tt.BRAND,
+            g = () => {
+                (r(), n());
+            };
+        return s
+            ? (0, i.jsx)(o.z, {
+                  variant: 'secondary',
+                  onClick: g,
+                  text: t
+              })
+            : (0, i.jsx)(d.zx, {
+                  look: d.iL.OUTLINED,
+                  color: p,
+                  className: a()(_.bentoBoxButton, u ? _.bentoBoxButtonWhite : _.bentoBoxButtonBrand),
+                  onClick: g,
+                  children: t
+              });
+    },
+    O = (e) => {
+        let t,
+            { name: n, title: s, description: o, descriptionCta: c, previewImage: d, videoUrl: m, shouldLoadVideo: O, index: C, customVideoStyle: v, isReducedMotion: S, onClick: T, badgeText: N, size: I, enablePremiumBrandRefreshDesign: y } = e,
+            A = (0, h.rO)(),
+            P = r.useRef(null),
+            R = r.useRef(0),
+            D = (function (e) {
+                let t;
+                switch (e) {
+                    case f.NA.EMOJIS:
+                        t = _.emojisBackground;
+                        break;
+                    case f.NA.REFERRAL_PROGRAM:
+                        t = _.referralProgramBackground;
+                        break;
+                    case f.NA.NO_LIMITS:
+                        t = _.noLimitsBackground;
+                        break;
+                    case f.NA.NEW_APP_STYLES:
+                        t = _.newStylesBackground;
+                        break;
+                    case f.NA.YOUR_SPACE:
+                        t = _.yourSpaceBackground;
+                        break;
+                    case f.NA.SERVER_PROFILES:
+                        t = _.serverProfilesBackground;
+                        break;
+                    case f.NA.SHOW_YOUR_STYLE:
+                        t = _.yourStyleBackground;
+                        break;
+                    case f.NA.PERMADECOS:
+                        t = _.permadecosBackground;
+                        break;
+                    case f.NA.VOICE_FILTERS:
+                        t = _.voiceFiltersBackground;
+                }
+                return t;
+            })(n),
+            Z = (0, l.debounce)(() => {
+                g.default.track(b.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
+            }, 800),
+            w = () => {
+                null == P.current || S || ((P.current.currentTime = R.current), P.current.play());
+            },
+            k = () => {
+                null == P.current || S || ((R.current = P.current.currentTime), P.current.pause());
+            },
+            L = y ? j : _;
+        t = y ? (I === f.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : I === f.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
+        let B = () =>
+                (0, i.jsxs)('div', {
+                    className: a()(L.textBox, L[''.concat(I)]),
+                    children: [
+                        (0, i.jsxs)('div', {
+                            children: [
+                                null != N &&
+                                    (0, i.jsx)('div', {
+                                        className: L.badge,
+                                        children: (0, i.jsx)(u.X6q, {
+                                            variant: 'eyebrow',
+                                            color: 'always-white',
+                                            children: N
+                                        })
+                                    }),
+                                (0, i.jsx)(u.X6q, {
+                                    variant: t,
+                                    color: 'header-primary',
+                                    className: a()(L.header, !y && L[''.concat(I)]),
+                                    children: s
+                                })
+                            ]
+                        }),
+                        (0, i.jsx)(u.Text, {
+                            variant: 'text-md/medium',
+                            color: y ? 'text-primary' : 'text-muted',
+                            className: L.description,
+                            children: o
+                        }),
+                        null != c &&
+                            null != T &&
+                            (0, i.jsx)(E, {
+                                descriptionCta: c,
+                                onClick: T,
+                                debouncedOnClickAnalytics: Z,
+                                enablePremiumBrandRefreshDesign: y
                             })
-                        ]
-                    }),
-                    (0, i.jsx)(d.Text, {
-                        variant: 'text-md/medium',
-                        color: 'text-muted',
-                        className: x.description,
-                        children: s
-                    }),
-                    null != _ &&
-                        null != T &&
-                        (0, i.jsx)(c.zx, {
-                            look: c.iL.OUTLINED,
-                            color: w,
-                            className: a()(x.bentoBoxButton, Z ? x.bentoBoxButtonWhite : x.bentoBoxButtonBrand),
-                            onClick: () => {
-                                (k(), T());
-                            },
-                            children: _
-                        })
-                ]
-            }),
-        U = () =>
-            (0, i.jsx)('div', {
-                className: a()(x.boxArtContainer, x[''.concat(I)]),
-                children: (0, i.jsx)(
-                    m.Z,
-                    {
-                        playsInline: !0,
-                        preload: O ? 'auto' : 'none',
-                        muted: !0,
-                        poster: j,
-                        loop: !0,
-                        className: a()(x.boxVideo, x[''.concat(I)], { [v]: null != v }),
-                        ref: A,
-                        children: (0, i.jsx)('source', {
-                            src: E,
-                            type: y ? b.m.MP4 : b.m.WEBM
-                        })
-                    },
-                    E
-                )
-            });
-    return (0, i.jsx)('div', {
-        className: a()(R, x.boxContainer, x[''.concat(I)]),
-        onMouseEnter: L,
-        onFocus: L,
-        onBlur: B,
-        onMouseLeave: B,
-        children:
-            C % 2 != 0
-                ? (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(M, {}), (0, i.jsx)(U, {})]
-                  })
-                : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(U, {}), (0, i.jsx)(M, {})]
-                  })
-    });
-};
+                    ]
+                }),
+            M = () =>
+                (0, i.jsx)('div', {
+                    className: a()(L.boxArtContainer, L[''.concat(I)]),
+                    children: (0, i.jsx)(
+                        p.Z,
+                        {
+                            playsInline: !0,
+                            preload: O ? 'auto' : 'none',
+                            muted: !0,
+                            poster: d,
+                            loop: !0,
+                            className: a()(L.boxVideo, { [v]: null != v }),
+                            ref: P,
+                            children: (0, i.jsx)('source', {
+                                src: m,
+                                type: A ? x.m.MP4 : x.m.WEBM
+                            })
+                        },
+                        m
+                    )
+                });
+        return (0, i.jsx)('div', {
+            className: a()(y ? j.backgroundColor : D, L.boxContainer, L[''.concat(I)]),
+            onMouseEnter: w,
+            onFocus: w,
+            onBlur: k,
+            onMouseLeave: k,
+            children:
+                C % 2 != 0
+                    ? (0, i.jsxs)(i.Fragment, {
+                          children: [(0, i.jsx)(B, {}), (0, i.jsx)(M, {})]
+                      })
+                    : (0, i.jsxs)(i.Fragment, {
+                          children: [(0, i.jsx)(M, {}), (0, i.jsx)(B, {})]
+                      })
+        });
+    };

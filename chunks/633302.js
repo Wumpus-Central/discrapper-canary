@@ -147,10 +147,10 @@ function x(e) {
     }
     return t;
 }
-function M(e) {
+function k(e) {
     return m.test(e);
 }
-function k(e) {
+function M(e) {
     return e.replace(_, (e, t) => H(t, e));
 }
 function j(e) {
@@ -172,7 +172,7 @@ let U = String.fromCodePoint(917631),
     B = RegExp('^[\\u{E0061}-\\u{E007A}]$', 'u');
 function V(e, t) {
     var n;
-    if (!0 !== t && !M(e))
+    if (!0 !== t && !k(e))
         return [
             {
                 type: 'text',
@@ -212,7 +212,7 @@ function F(e) {
         .join('');
 }
 function Z(e) {
-    if (!M(e)) return null;
+    if (!k(e)) return null;
     let t = V(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
@@ -244,8 +244,8 @@ let K = {
     getCategories: w,
     getByName: D,
     getByCategory: x,
-    contentHasUnicodeOrEmoji: M,
-    translateInlineEmojiToSurrogates: k,
+    contentHasUnicodeOrEmoji: k,
+    translateInlineEmojiToSurrogates: M,
     maybeTranslateSurrogatesToInlineEmoji: Z,
     findInlineEmojisFromSurrogates: V,
     translateSurrogatesToInlineEmoji: F,

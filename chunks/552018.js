@@ -11,7 +11,8 @@ class c extends o.C {
     create(e) {
         let t = {
             type: 0,
-            filters: []
+            filters: [],
+            isSunsetRule: !1
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -37,6 +38,9 @@ class c extends o.C {
                 case 3:
                     a.override = f.internalBinaryRead(e, e.uint32(), n, a.override);
                     break;
+                case 4:
+                    a.isSunsetRule = e.bool();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -49,7 +53,7 @@ class c extends o.C {
     internalBinaryWrite(e, t, n) {
         0 !== e.type && t.tag(1, r.TD.Varint).int32(e.type);
         for (let i = 0; i < e.filters.length; i++) p.internalBinaryWrite(e.filters[i], t.tag(2, r.TD.LengthDelimited).fork(), n).join();
-        e.override && f.internalBinaryWrite(e.override, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+        (e.override && f.internalBinaryWrite(e.override, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), !1 !== e.isSunsetRule && t.tag(4, r.TD.Varint).bool(e.isSunsetRule));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
@@ -73,6 +77,12 @@ class c extends o.C {
                 name: 'override',
                 kind: 'message',
                 T: () => f
+            },
+            {
+                no: 4,
+                name: 'is_sunset_rule',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }

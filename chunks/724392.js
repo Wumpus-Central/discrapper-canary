@@ -3,8 +3,8 @@ var n = r(255367),
     a = r(73800),
     i = r(442837),
     l = r(481060),
-    s = r(226961),
-    o = r(481250),
+    o = r(226961),
+    s = r(481250),
     c = r(388032);
 class d extends a.PureComponent {
     render() {
@@ -14,12 +14,12 @@ class d extends a.PureComponent {
             : (0, n.jsx)(l.hjN, {
                   tag: l.RB0.H2,
                   title: c.intl.string(c.t['3u0gIC']),
-                  children: (0, o.V)(e, t)
+                  children: (0, s.V)(e, t)
               });
     }
 }
-let u = i.ZP.connectStores([s.ZP], (e) => {
+let u = i.ZP.connectStores([o.ZP], (e) => {
     let { context: t, index: r } = e,
-        n = s.ZP.getAllStats(t)[r];
+        n = o.ZP.getAllStats(t)[r];
     return { outbound: null != n ? n.rtp.outbound : null };
 })(d);

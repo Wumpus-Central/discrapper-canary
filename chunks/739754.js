@@ -4,11 +4,11 @@ n.d(t, {
     st: () => O
 });
 var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    s = n(710251),
-    a = n(442837),
+    o = n(73800),
+    l = n(120356),
+    i = n.n(l),
+    a = n(710251),
+    s = n(442837),
     c = n(481060),
     u = n(292419),
     d = n(282397),
@@ -38,25 +38,25 @@ function h(e) {
     };
 }
 function O(e) {
-    let { className: t, icon: n, text: l, color: o } = e;
+    let { className: t, icon: n, text: o, color: l } = e;
     return (0, r.jsxs)('div', {
         className: i()(f.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
-                color: o,
+                color: l,
                 scaleFontToUserSetting: !0,
-                children: l
+                children: o
             })
         ]
     });
 }
-let y = l.memo(function (e) {
-    let { message: t, className: n, component: o } = e,
-        i = (0, s.Z)(),
-        c = (0, a.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
-    l.useEffect(() => {
+let y = o.memo(function (e) {
+    let { message: t, className: n, component: l } = e,
+        i = (0, a.Z)(),
+        c = (0, s.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+    o.useEffect(() => {
         let e = null;
         if (t.hasFlag(m.iLy.LOADING) && null != c) {
             let n = (0, p.ow)(t.id) - Date.now();
@@ -67,7 +67,7 @@ let y = l.memo(function (e) {
         };
     }, [i, c, t]);
     let f = null;
-    if (null == o)
+    if (null == l)
         f = (function (e, t) {
             switch ((0, p.t$)(t, e)) {
                 case p.rQ.SENDING:
@@ -81,7 +81,7 @@ let y = l.memo(function (e) {
             }
         })(c, t);
     else {
-        let e = (0, u.SD)(c, t, o);
+        let e = (0, u.SD)(c, t, l);
         null != e && (f = h(e));
     }
     if (null == f) return null;

@@ -10,8 +10,8 @@ var n = r(255367),
     a = r(73800),
     i = r(112456),
     l = r.n(i),
-    s = r(226961),
-    o = r(706619),
+    o = r(226961),
+    s = r(706619),
     c = r(206314);
 let d = {
     accelerateRate: 'Accelerate Rate',
@@ -266,7 +266,7 @@ let b = {
                 time: Date.now()
             }),
             t.length > 600 && t.shift(),
-            (0, n.jsx)(o.Z, {
+            (0, n.jsx)(s.Z, {
                 dataPoints: t,
                 width: e.width,
                 height: e.height
@@ -278,9 +278,9 @@ function j(e) {
     let { label: i, value: l, section: u } = e,
         m = null != (r = C[i]) ? r : E,
         p =
-            s.Pz[i] &&
+            o.Pz[i] &&
             (Array.isArray(l) && l.length > 0 && 'number' == typeof l[0].value
-                ? (0, n.jsx)(o.Z, {
+                ? (0, n.jsx)(s.Z, {
                       dataPoints: l,
                       width: 300,
                       height: 100

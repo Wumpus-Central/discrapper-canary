@@ -1,23 +1,17 @@
 (n.d(t, {
-    M7: () => m,
-    R9: () => I,
-    UY: () => b,
-    k2: () => h,
-    v: () => y
+    R9: () => g,
+    UY: () => _,
+    k2: () => u,
+    v: () => p
 }),
     n(73800));
-var r = n(691324),
-    i = n(180650),
-    a = n(44315),
-    o = n(215023),
-    s = n(388032),
-    l = n(497414),
-    c = n(252802),
-    u = n(452823),
-    d = n(744709),
-    f = n(39934),
-    _ = n(12981);
-function p(e, t, n) {
+var r = n(215023),
+    i = n(497414),
+    a = n(252802),
+    o = n(452823),
+    s = n(744709),
+    l = n(39934);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,28 +24,16 @@ function p(e, t, n) {
         e
     );
 }
-var h = (function (e) {
+var u = (function (e) {
     return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.TOOLTIP = 1)] = 'TOOLTIP'), (e[(e.COACHTIP = 2)] = 'COACHTIP'), (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (e[(e.BADGE = 4)] = 'BADGE'), (e[(e.COACHMARK = 5)] = 'COACHMARK'), e);
 })({});
-let m = (e) =>
-    e === i.T.TIDE
-        ? {
-              label: () => s.intl.string(s.t['h/uBCQ']),
-              iconSrc: _.Z,
-              style: {
-                  background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
-                  boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
-                  color: (0, a.Lq)(r.I.WHITE_100)
-              }
-          }
-        : null;
-class g {
+class d {
     constructor({ src: e, style: t, animated: n }) {
         var r = this;
-        (p(this, 'src', void 0),
-            p(this, 'style', void 0),
-            p(this, 'animated', void 0),
-            p(this, 'getSrc', function () {
+        (c(this, 'src', void 0),
+            c(this, 'style', void 0),
+            c(this, 'animated', void 0),
+            c(this, 'getSrc', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return 'string' == typeof r.src ? r.src : e ? r.src.dark : r.src.light;
             }),
@@ -60,9 +42,9 @@ class g {
             (this.animated = n));
     }
 }
-let E = {
-        ROBERT: new g({
-            src: u.Z,
+let f = {
+        ROBERT: new d({
+            src: o.Z,
             style: {
                 position: 'absolute',
                 width: '400px',
@@ -70,8 +52,8 @@ let E = {
                 zIndex: 10
             }
         }),
-        SHY: new g({
-            src: d.Z,
+        SHY: new d({
+            src: s.Z,
             style: {
                 position: 'absolute',
                 width: '600px',
@@ -79,8 +61,8 @@ let E = {
                 top: 'calc(50vh - 300px)'
             }
         }),
-        STORM: new g({
-            src: f.Z,
+        STORM: new d({
+            src: l.Z,
             style: {
                 position: 'absolute',
                 width: '850px',
@@ -88,10 +70,10 @@ let E = {
                 top: 'calc(50vh - 425px)'
             }
         }),
-        ORB_PURCHASE: new g({
+        ORB_PURCHASE: new d({
             src: {
-                dark: l.Z,
-                light: c.Z
+                dark: i.Z,
+                light: a.Z
             },
             animated: !0,
             style: {
@@ -104,9 +86,9 @@ let E = {
             }
         })
     },
-    b = (e) => {
+    _ = (e) => {
         let { purchaseType: t, skuId: n } = e;
-        if (t === o.o8.ORB) return E.ORB_PURCHASE;
+        if (t === r.o8.ORB) return f.ORB_PURCHASE;
         switch (n) {
             case '1267521289330102344':
             case '1267521289355268154':
@@ -120,23 +102,23 @@ let E = {
             case '1266493591207940133':
             case '1266493591275044903':
             case '1220432740638523543':
-                return E.STORM;
+                return f.STORM;
             case '1220513977683935373':
             case '1220432647453409384':
             case '1220432697718083614':
-                return E.SHY;
+                return f.SHY;
             default:
                 return null;
         }
     },
-    y = (e) => ('1262491137386614805' === e ? E.ROBERT : null),
-    O = {
+    p = (e) => ('1262491137386614805' === e ? f.ROBERT : null),
+    h = {
         '1333866045236314327': '1333866045261480007',
         '1333866045261480007': '1333866045236314327',
         '1333866045282451527': '1333866045303423026',
         '1333866045303423026': '1333866045282451527'
     },
-    v = {
+    m = {
         '1217624148080332820': '1217626219651006495',
         '1217626219651006495': '1217624148080332820',
         '1217625289681801316': '1217625572168044604',
@@ -144,7 +126,7 @@ let E = {
         '1217625794382401577': '1217626024540508170',
         '1217626024540508170': '1217625794382401577'
     },
-    I = (e, t) => {
-        let n = O[e];
-        return (null == n && t && (n = v[e]), null != n ? n : null);
+    g = (e, t) => {
+        let n = h[e];
+        return (null == n && t && (n = m[e]), null != n ? n : null);
     };

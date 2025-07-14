@@ -1,32 +1,44 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    s = n(594928),
-    a = n(74538),
-    l = n(993413),
-    o = n(388032),
-    c = n(698282),
-    d = n(401609);
-function u(e) {
+    s = n(906732),
+    a = n(594928),
+    l = n(829716),
+    o = n(74538),
+    c = n(993413),
+    d = n(388032),
+    u = n(698282),
+    m = n(401609);
+function p(e) {
     let { user: t, className: n } = e,
-        u = s.J.useExperiment({ location: 'DisplayNameStylesSection' }).enabled,
-        m = a.ZP.canUsePremiumProfileCustomization(t);
-    return u
-        ? (0, i.jsx)(l.Z, {
-              title: o.intl.string(c.default['86GtGB']),
+        p = a.J.useExperiment({ location: 'DisplayNameStylesSection' }).enabled,
+        g = o.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: h } = (0, s.ZP)(),
+        f = null != t.displayNameStyles;
+    return p
+        ? (0, i.jsx)(c.Z, {
+              title: d.intl.string(u.default['86GtGB']),
               className: n,
-              showPremiumIcon: m,
+              showPremiumIcon: g,
               children: (0, i.jsxs)('div', {
-                  className: d.buttonsContainer,
+                  className: m.buttonsContainer,
                   children: [
                       (0, i.jsx)(r.zxk, {
                           variant: 'primary',
                           size: 'sm',
-                          text: o.intl.string(c.default.vJqrIi),
-                          onClick: () => {}
+                          text: d.intl.string(u.default.vJqrIi),
+                          onClick: () => {
+                              (0, l.I)({ analyticsLocations: h });
+                          }
                       }),
-                      !1
+                      f &&
+                          (0, i.jsx)(r.zxk, {
+                              variant: 'secondary',
+                              size: 'sm',
+                              text: d.intl.string(u.default.ymq8WV),
+                              onClick: () => {}
+                          })
                   ]
               })
           })

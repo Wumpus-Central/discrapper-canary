@@ -14,7 +14,7 @@ let c = n(17702),
         return (0, r.jsx)('img', {
             className: l()(s.orbIconSVG, d, { [s.loading]: i }),
             src: p,
-            alt: 'Orb Icon',
+            alt: '',
             style: void 0 !== t ? { height: t } : void 0
         });
     };

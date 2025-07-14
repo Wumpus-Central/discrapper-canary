@@ -129,9 +129,9 @@ class H extends (i = l.Component) {
         null != this._combokeys && this._combokeys.reset();
     }
     render() {
-        let { focused: e, forcedColors: t, children: n, windowKey: i, isFullScreen: l, withTitleBar: o, guestWindow: a, clientThemesClassName: u, contentClassName: h } = this.props;
+        let { focused: e, forcedColors: t, children: n, windowKey: i, isFullScreen: l, withTitleBar: o, guestWindow: a, clientThemesClassName: u, contentClassName: h, hideModals: p = !1 } = this.props;
         (0, L.getPlatform)();
-        let p = i === U.$J ? D.Z : k.Z;
+        let f = i === U.$J ? D.Z : k.Z;
         return (0, r.jsx)(d.VK, {
             children: (0, r.jsx)(
                 T.w,
@@ -144,7 +144,7 @@ class H extends (i = l.Component) {
                                 (0, r.jsx)(G, {
                                     guestWindow: a,
                                     className: u,
-                                    children: (0, r.jsxs)(p, {
+                                    children: (0, r.jsxs)(f, {
                                         children: [
                                             (0, r.jsx)(Z.Co, {}),
                                             (0, r.jsx)(g.Wu, {
@@ -169,7 +169,7 @@ class H extends (i = l.Component) {
                                                                     })
                                                                 ]
                                                             }),
-                                                            (0, r.jsx)(m.nKe, {}),
+                                                            !p && (0, r.jsx)(m.nKe, {}),
                                                             (0, r.jsx)(b.Z, {}),
                                                             (0, r.jsx)(N.Un, {})
                                                         ]

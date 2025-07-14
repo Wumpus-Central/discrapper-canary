@@ -22,7 +22,7 @@ var p = e(306680);
 e(594174);
 var o = e(70956),
     I = e(709054),
-    c = e(854454),
+    c = e(787879),
     T = e(982183),
     g = e(981631);
 function E(t) {
@@ -55,9 +55,9 @@ function L(t) {
     a.Z.open(g.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
 }
 function O() {
-    let t = (0, d.Wu)([c.ZP], () => {
+    let t = (0, d.Wu)([c.Z], () => {
             var t;
-            return null != (t = c.ZP.getNotifyingChannelIds()) ? t : [];
+            return null != (t = c.Z.getNotifyingChannelIds()) ? t : [];
         }),
         n = (0, d.Wu)([p.ZP], () => t.filter((t) => p.ZP.hasUnread(t) && !p.ZP.isEstimated(t)), [t]),
         e = (0, d.Wu)([_.ZP], () => {

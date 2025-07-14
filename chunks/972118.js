@@ -1,50 +1,66 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var i = n(675478),
-    r = n(709054),
-    s = n(915486),
-    a = n(883904),
-    l = n(428967),
-    o = n(266454),
-    c = n(605236),
-    d = n(644916);
-function u(e, t) {
-    (0, a.pR)(t ? null : e);
-}
+    r = n(914010),
+    s = n(709054),
+    a = n(915486),
+    l = n(883904),
+    o = n(428967),
+    c = n(266454),
+    d = n(605236),
+    u = n(644916);
 function m(e, t) {
-    if ((0, l.lg)(e)) {
-        let t = (0, d.t)(e),
-            { isDismissed: n } = (0, c.H4)(e);
+    (0, l.pR)(t ? null : e);
+}
+function p(e, t) {
+    if ((0, o.lg)(e)) {
+        let t = (0, u.t)(e),
+            { isDismissed: n } = (0, d.H4)(e);
         return {
             isDismissed: n,
             handleToggleDismissState: function () {
-                (u(e, n), n ? (0, i.Z1)(e) : (0, c.Bn)(e, t));
+                (m(e, n), n ? (0, i.Z1)(e) : (0, d.Bn)(e, t));
             }
         };
     }
-    if ((0, l.I0)(e)) {
-        let { isDismissed: t } = (0, o.Ob)(e, r.default.fromTimestamp(Date.now()));
+    if ((0, o.I0)(e)) {
+        let { isDismissed: t } = (0, c.Ob)(e, s.default.fromTimestamp(Date.now()));
         return {
             isDismissed: t,
             handleToggleDismissState: function () {
-                (u(e, t), t ? (0, i.Z1)(e) : (0, c.po)(e, r.default.fromTimestamp(Date.now() + c.wx)));
+                (m(e, t), t ? (0, i.Z1)(e) : (0, d.po)(e, s.default.fromTimestamp(Date.now() + d.wx)));
             }
         };
     }
-    if ((0, l.OQ)(e)) {
-        let { isDismissed: t } = (0, c.Fo)(e);
+    if ((0, o.OQ)(e)) {
+        let { isDismissed: t } = (0, d.Fo)(e);
         return {
             isDismissed: t,
             handleToggleDismissState: function () {
-                (u(e, t), t ? (0, i.Z1)(e) : (0, c.z2)(e));
+                (m(e, t), t ? (0, i.Z1)(e) : (0, d.z2)(e));
+            }
+        };
+    }
+    if ((0, o.Vc)(e)) {
+        let t = r.Z.getGuildId();
+        if (null == t)
+            return {
+                isDismissed: !1,
+                handleToggleDismissState: () => {}
+            };
+        let n = (0, d.XY)(e, t);
+        return {
+            isDismissed: n,
+            handleToggleDismissState: function () {
+                null != t && (m(e, n), n ? (0, d.ZF)(e, t) : (0, d.XM)(e, t));
             }
         };
     }
     {
-        let n = (0, s.jl)(t, e);
+        let n = (0, a.jl)(t, e);
         return {
             isDismissed: n,
             handleToggleDismissState: function () {
-                (u(e, n), n ? (0, i.w9)(e) : (0, i.nm)(e));
+                (m(e, n), n ? (0, i.w9)(e) : (0, i.nm)(e));
             }
         };
     }

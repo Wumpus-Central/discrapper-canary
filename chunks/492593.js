@@ -1,10 +1,10 @@
 (n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    s = n(573385),
-    a = n(481060),
+    o = n(73800),
+    l = n(120356),
+    i = n.n(l),
+    a = n(573385),
+    s = n(481060),
     c = n(606318),
     u = n(402235),
     d = n(848697);
@@ -55,7 +55,7 @@ let g = function (e) {
     var {
             className: t,
             compact: n = !1,
-            contentOnly: o = !1,
+            contentOnly: l = !1,
             zalgo: g = !0,
             preview: f = !1,
             disableInteraction: b = !1,
@@ -76,50 +76,50 @@ let g = function (e) {
             hasThread: S,
             isSystemMessage: E,
             hasReply: N,
-            author: T,
-            onMouseEnter: Z,
+            author: Z,
+            onMouseEnter: T,
             onMouseLeave: R
         } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
-                    return l;
+                        o = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
-            return l;
+            return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let I = (0, u.ZP)(null == T ? void 0 : T.guildId, null == T ? void 0 : T.authorId) && (0, c.S2)(T),
-        [k, M] = l.useState(!1),
-        D = l.useCallback(
+    let I = (0, u.ZP)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.authorId) && (0, c.S2)(Z),
+        [k, M] = o.useState(!1),
+        D = o.useCallback(
             (e) => {
-                (M(!0), null == Z || Z(e));
+                (M(!0), null == T || T(e));
             },
-            [Z]
+            [T]
         ),
-        A = l.useCallback(
+        A = o.useCallback(
             (e) => {
                 (M(!1), null == R || R(e));
             },
             [R]
         ),
-        L = (0, r.jsx)(s.d.Provider, {
+        L = (0, r.jsx)(a.d.Provider, {
             value: {
                 animate: k,
                 setAnimate: M
             },
             children: (0, r.jsx)(
-                a.tEY,
+                s.tEY,
                 m(p({}, w), {
                     children: (0, r.jsxs)(
                         'div',
@@ -129,7 +129,7 @@ let g = function (e) {
                                     className: i()(t, {
                                         [d.gradient]: I,
                                         [d.wrapper]: !0,
-                                        [d.contentOnly]: o,
+                                        [d.contentOnly]: l,
                                         [d.compact]: n,
                                         [d.preview]: f,
                                         [d.cozy]: !n,
@@ -167,5 +167,5 @@ let g = function (e) {
                 })
             )
         });
-    return b ? (0, r.jsx)(a.Rny, { children: L }) : L;
+    return b ? (0, r.jsx)(s.Rny, { children: L }) : L;
 };

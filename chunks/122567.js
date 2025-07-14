@@ -1,9 +1,4 @@
-(n.d(t, { y: () => r }), n(73800));
-let r = (0, n(392711).throttle)(i, 300, {
-    leading: !0,
-    trailing: !0
-});
-function i(e) {
+function r(e) {
     var t, n, r;
     let { listRef: i, searchQuery: a, nitroLockedSectionStates: o, scrollTop: s } = e;
     if ('' !== a)
@@ -33,3 +28,4 @@ function i(e) {
         }
     );
 }
+(n.d(t, { y: () => r }), n(73800));

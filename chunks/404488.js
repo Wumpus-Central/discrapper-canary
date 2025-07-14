@@ -15,10 +15,10 @@ function u(e) {
     let { pageWidth: n, onSidebarResize: t } = e,
         u = (0, r.e7)([s.ZP], () => s.ZP.getSidebarState(o.oC.GUILD_HOME));
     if (null == u || null == u.channelId) return null;
-    let h = n - c.PrS - d;
+    let m = n - c.PrS - d;
     return (0, l.jsx)(a.Z, {
         sidebarType: a.y.HomeSidebar,
-        maxWidth: h,
+        maxWidth: m,
         onWidthChange: t,
         children: (0, l.jsx)(i.Z, {
             channelId: u.channelId,

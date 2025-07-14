@@ -1,43 +1,45 @@
 (n.d(t, {
-    $2: () => m,
-    sZ: () => b,
-    vF: () => O
+    $2: () => b,
+    sZ: () => v,
+    vF: () => T
 }),
     n(413496),
     n(433524),
-    n(35282),
-    n(953529));
+    n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
     o = n(755721),
     s = n(481060),
-    l = n(594174),
-    c = n(572004),
-    u = n(499533),
-    d = n(492435),
-    f = n(389494),
-    _ = n(353926),
-    p = n(405548);
-let h = RegExp('^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$', 'i');
-function m(e) {
-    return h.test(e);
-}
-function g(e) {
-    let t = e.match(h);
-    return null == t || t.length < 2 ? null : t[1];
-}
-function E(e) {
-    let t = e.match(h);
-    return null == t || t.length < 3 ? null : parseInt(t[2], 10);
-}
-function b(e, t) {
-    return null != t ? 'dev://experiment/'.concat(e, '/').concat(t) : 'dev://experiment/'.concat(e);
+    l = n(314897),
+    c = n(594174),
+    u = n(572004),
+    d = n(499533),
+    f = n(492435),
+    _ = n(389494),
+    p = n(667344),
+    h = n(453032),
+    m = n(493075),
+    g = n(405548);
+let E = RegExp('^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$', 'i');
+function b(e) {
+    return E.test(e);
 }
 function y(e) {
+    let t = e.match(E);
+    return null == t || t.length < 2 ? null : t[1];
+}
+function O(e) {
+    let t = e.match(E);
+    return null == t || t.length < 3 ? null : parseInt(t[2], 10);
+}
+function v(e, t) {
+    return null != t ? 'dev://experiment/'.concat(e, '/').concat(t) : 'dev://experiment/'.concat(e);
+}
+function I(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, c.JG)(t, () =>
+            (0, u.JG)(t, () =>
                 (0, s.showToast)({
                     id: 'experiment-link-copied',
                     message: 'Copied experiment link',
@@ -46,7 +48,7 @@ function y(e) {
             );
         }, [t]);
     return (0, r.jsx)(s.P3F, {
-        className: p.copyLinkButton,
+        className: g.copyLinkButton,
         onClick: n,
         children: (0, r.jsx)(s.xPt, {
             size: 'sm',
@@ -54,48 +56,53 @@ function y(e) {
         })
     });
 }
-function O(e) {
+function T(e) {
     let { url: t } = e,
-        n = g(t),
-        i = E(t),
-        c = (0, a.e7)([_.Z], () => _.Z.getRegisteredExperiments()),
-        h = (0, a.e7)([_.Z], () => (null == n ? null : _.Z.getLoadedUserExperiment(n))),
-        m = (0, a.cj)([_.Z], () => _.Z.getAllExperimentOverrideDescriptors()),
-        b = (0, a.e7)([l.default], () => {
-            let e = l.default.getCurrentUser();
+        n = y(t),
+        u = O(t),
+        { experiments: E, overridesInfo: b } = (0, m.s)(),
+        { experiments: v, overridesInfo: T } = (0, p.Q)(),
+        S = i.useMemo(() => (null == n ? null : null != E[n] ? E[n] : v[n]), [E, v, n]),
+        A = i.useMemo(() => {
+            if (null == n);
+            else if (null != b[n]) return b[n];
+            else if (null != T[n]) return T[n];
+        }, [b, T, n]),
+        N = l.default.getId(),
+        C = (0, h.a)(S, N),
+        R = i.useMemo(() => (null == C || null == S ? null : S.system === f.I.LEGACY ? d.Z.getExperimentBucketName(C.bucket) : S.system === f.I.APEX ? 'Variant '.concat(C.variantId) : null), [C, S]),
+        P = (0, a.e7)([c.default], () => {
+            let e = c.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         });
-    if (null == n) return null;
-    let O = c[n],
-        v = m[n];
-    if (null == O) return null;
-    let I = (0, f.a)(O.buckets, O.description).find((e) => e.value === i),
-        T = +(null != I),
-        S = null != v && null != I && v.bucket === I.value,
-        A = () => {
-            null != I && (S ? (0, d.rX)(n, null) : (0, d.rX)(n, I.value));
+    if (null == n || null == S) return null;
+    let w = (0, _.a)(S.variants).find((e) => e.value === u),
+        D = +(null != w),
+        L = null != A && null != w && A.variantId === w.value,
+        x = () => {
+            null != w && (L ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
         },
-        N = (0, r.jsx)(y, { url: t }),
-        C = null;
-    return (1 === T && null != I
-        ? (C = (0, r.jsx)(s.Text, {
+        k = (0, r.jsx)(I, { url: t }),
+        M = null;
+    return (1 === D && null != w
+        ? (M = (0, r.jsx)(s.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
-              children: I.label
+              children: w.label
           }))
-        : null != h &&
-          (C = (0, r.jsxs)(s.Text, {
+        : null != C &&
+          (M = (0, r.jsxs)(s.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
-              children: ['Server Config: ', u.Z.getExperimentBucketName(h.bucket)]
+              children: ['Server Config: ', R]
           })),
-    b)
+    P)
         ? (0, r.jsxs)('div', {
-              className: p.root,
+              className: g.root,
               children: [
                   (0, r.jsx)('div', {
                       children: (0, r.jsx)('div', {
-                          className: p.header,
+                          className: g.header,
                           children: (0, r.jsxs)(s.Kqy, {
                               direction: 'horizontal',
                               align: 'start',
@@ -108,12 +115,12 @@ function O(e) {
                                       children: [
                                           (0, r.jsx)(s.Text, {
                                               variant: 'text-md/semibold',
-                                              children: O.title
+                                              children: S.title
                                           }),
-                                          C
+                                          M
                                       ]
                                   }),
-                                  N
+                                  k
                               ]
                           })
                       })
@@ -124,7 +131,7 @@ function O(e) {
                       gap: 4,
                       justify: 'space-between',
                       children:
-                          null != I
+                          null != w
                               ? (0, r.jsx)(s.Kqy, {
                                     direction: 'horizontal',
                                     align: 'center',
@@ -132,17 +139,17 @@ function O(e) {
                                     justify: 'end',
                                     children: (0, r.jsx)(o.zx, {
                                         fullWidth: !0,
-                                        onClick: A,
-                                        color: S ? o.zx.Colors.RED : o.zx.Colors.BRAND,
-                                        children: S ? 'Clear Treatment '.concat(I.value) : 'Apply Treatment '.concat(I.value)
+                                        onClick: x,
+                                        color: L ? o.zx.Colors.RED : o.zx.Colors.BRAND,
+                                        children: L ? 'Clear Treatment '.concat(w.value) : 'Apply Treatment '.concat(w.value)
                                     })
                                 })
                               : (0, r.jsx)('div', {
-                                    className: p.experimentOverride,
-                                    children: (0, r.jsx)(f.y, {
-                                        experiment: O,
+                                    className: g.experimentOverride,
+                                    children: (0, r.jsx)(_.y, {
+                                        experiment: S,
                                         experimentId: n,
-                                        overrideDescriptor: v
+                                        overrideInfo: A
                                     })
                                 })
                   })

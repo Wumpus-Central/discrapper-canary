@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(442837),
+    i = n.n(o),
+    a = n(442837),
     s = n(481060),
     c = n(782568),
     u = n(607070),
@@ -27,21 +27,21 @@ var r = n(255367),
 let P = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: k } = e,
-        I = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
+        I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         B = h.ZP.canUseCollectibles(I),
         N = (0, _.s)('useShopHomeSorting') && k === x.AW.HOME,
-        { sortType: A, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(o, B),
+        { sortType: A, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(o, B),
         M = (0, S.St)(R),
-        H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
-        W = (0, i.e7)([p.Z], () => p.Z.isFocused()),
+        H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
         V = !H && W,
-        { animationPhase: U, startAnimation: G } = (0, E.y)(),
-        z = (0, b.sp)(),
-        q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
+        { animationPhase: U, startAnimation: z } = (0, E.y)(),
+        G = (0, b.sp)(),
+        q = null != (t = null == G ? void 0 : G.sessionId) ? t : '',
         Y = l.useRef(null),
         K = l.useCallback(
             (e) => {
-                (G({
+                (z({
                     isShuffling: !1,
                     onOutroComplete: () => w(e)
                 }),
@@ -50,12 +50,12 @@ let P = (e) => {
                         sort_type: e
                     }));
             },
-            [G, w, q]
+            [z, w, q]
         );
     return null == I
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(T.popularPicksSection, T.centeredSection),
+              className: i()(T.popularPicksSection, T.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: T.blockHeader,
@@ -67,7 +67,7 @@ let P = (e) => {
                                       variant: 'heading-lg/semibold',
                                       children: k === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
-                                  D &&
+                                  F &&
                                       (0, r.jsx)(s.ua7, {
                                           text: j.intl.string(j.t['3taPdn']),
                                           position: 'top',
@@ -151,9 +151,9 @@ let P = (e) => {
                                                 text: j.intl.string(j.t.X3tnc3),
                                                 buttonRef: Y,
                                                 onClick: () => {
-                                                    (G({
+                                                    (z({
                                                         isShuffling: !0,
-                                                        onOutroComplete: F,
+                                                        onOutroComplete: D,
                                                         returnRef: Y
                                                     }),
                                                         g.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q }));

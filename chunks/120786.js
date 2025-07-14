@@ -70,15 +70,10 @@ let _ = () => {
                     className: h.linkContainer,
                     children: [
                         void 0 !== l &&
-                            (0, i.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, i.jsxs)(c.Text, {
-                                        variant: 'text-xs/normal',
-                                        className: h.linkPreText,
-                                        children: [l, '\xA0']
-                                    }),
-                                    ' '
-                                ]
+                            (0, i.jsxs)(c.Text, {
+                                variant: 'text-xs/normal',
+                                className: h.linkPreText,
+                                children: [l, '\xA0']
                             }),
                         (0, i.jsx)(c.eee, {
                             target: '_blank',

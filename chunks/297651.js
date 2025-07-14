@@ -2,18 +2,18 @@ n.d(t, { E: () => p });
 var r = n(73800),
     l = n(442837),
     o = n(626135),
-    a = n(74538),
-    i = n(381585),
+    i = n(74538),
+    a = n(381585),
     s = n(597688),
     c = n(884697),
     u = n(82892),
     d = n(981631);
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
-        p = (0, i.sp)(),
+        p = (0, a.sp)(),
         g = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         f = (0, u.x)(),
-        h = a.ZP.canUseCollectibles(f),
+        h = i.ZP.canUseCollectibles(f),
         b = r.useRef(null),
         m = r.useCallback(() => {
             let r = null != g ? (0, c.Vw)(g, h, !1) : null,

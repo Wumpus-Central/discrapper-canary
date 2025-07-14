@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(531675);
 function v(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: v } = e,
-        { analyticsLocations: O } = (0, o.ZP)(a.Z.VOICE_CONTROL_TRAY),
-        j = (0, h.Ou)(t),
+        { analyticsLocations: j } = (0, o.ZP)(a.Z.VOICE_CONTROL_TRAY),
+        O = (0, h.Ou)(t),
         E = i.useRef(null),
         S = (0, u.Z)(),
         { isSharedCanvasEnabled: I } = f.Z.useExperiment({
@@ -30,14 +30,14 @@ function v(e) {
         }),
         { enableViewerClipping: P } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
         Z = (0, s.Z)(m.Z),
-        T = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
-        [N, A] = (0, c.US)(T, void 0, !0),
-        w = N === l.z.CONSUMABLE_HD_POTION_UPSELL;
+        N = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
+        [T, A] = (0, c.US)(N, void 0, !0),
+        w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
     if (null == t || null != S) return null;
     let R = P && Z,
         M = I && n;
     return (0, r.jsxs)(o.Gt, {
-        value: O,
+        value: j,
         children: [
             (0, r.jsxs)('div', {
                 className: x.voiceEffectsActionBar,
@@ -49,7 +49,7 @@ function v(e) {
                             channel: t,
                             markAsDismissed: A
                         }),
-                    j &&
+                    O &&
                         (0, r.jsx)(y.Z, {
                             ref: E,
                             channel: t,
@@ -60,7 +60,7 @@ function v(e) {
                     M && (0, r.jsx)(C.Z, {})
                 ]
             }),
-            v && (R || w || j || M) && (0, r.jsx)('div', { className: x.divider })
+            v && (R || w || O || M) && (0, r.jsx)('div', { className: x.divider })
         ]
     });
 }

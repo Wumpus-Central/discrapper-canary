@@ -26,22 +26,22 @@ function v(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: x },
             channelId: v,
-            guildId: O
+            guildId: j
         } = e,
-        [j, E] = r.useState(!1),
+        [O, E] = r.useState(!1),
         { requestId: S, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
-        T = (0, i.e7)([p.Z], () => p.Z.hidden),
-        N = (0, i.e7)([c.Z], () => c.Z.isFocused()),
+        N = (0, i.e7)([p.Z], () => p.Z.hidden),
+        T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
-        w = (0, i.e7)([s.Z], () => s.Z.getGuild(O), [O]),
+        w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
         M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
         [D, k, L, U] = r.useMemo(() => {
             let e;
             if (null == I || 0 === I.length || null == S || !M) return [t, n, x];
-            let r = j ? I.length : Z ? 4 : 3,
+            let r = O ? I.length : Z ? 4 : 3,
                 i = I.slice(0, r);
-            e = T
+            e = N
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
@@ -61,19 +61,19 @@ function v(e) {
                         return (
                             u.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: v,
-                                guild_id: O,
+                                guild_id: j,
                                 expanded: t
                             }),
                             t
                         );
                     });
                 },
-                expanded: j,
+                expanded: O,
                 expandedCount: I.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, I, j, t, O, S, n, x, T, M, Z]),
+        }, [v, I, O, t, j, S, n, x, N, M, Z]),
         B = r.useRef(0),
         F = r.useRef(I),
         H = r.useRef(void 0),
@@ -103,8 +103,8 @@ function v(e) {
                     if (null == S || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null != (t = null == (e = F.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, B.current);
-                    !T &&
-                        N &&
+                    !N &&
+                        T &&
                         M &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
@@ -112,7 +112,7 @@ function v(e) {
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: v,
-                            guild_id: O,
+                            guild_id: j,
                             all_item_ids: n,
                             impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
@@ -123,7 +123,7 @@ function v(e) {
                             }));
                 }
             ),
-            [S, v, O, T, N, M]
+            [S, v, j, N, T, M]
         ),
         {
             groups: D,

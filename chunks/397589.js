@@ -1,10 +1,10 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
-    l = n(73800),
-    o = n(481060),
+    o = n(73800),
+    l = n(481060),
     i = n(782568),
-    s = n(592125),
-    a = n(594174),
+    a = n(592125),
+    s = n(594174),
     c = n(63063),
     u = n(5192),
     d = n(992970),
@@ -18,41 +18,41 @@ var r = n(255367),
 let y = (e) => {
     var t;
     let { message: n } = e,
-        y = l.useRef(null),
+        y = o.useRef(null),
         v = (0, p.p7)('Message Header') && n.hasPotions(),
-        j = s.Z.getChannel(n.getChannelId()),
+        j = a.Z.getChannel(n.getChannelId()),
         P = null == (t = n.potions) ? void 0 : t[0],
-        x = l.useMemo(() => {
+        x = o.useMemo(() => {
             var e;
             if (null == P) return null;
-            let t = a.default.getUser(P.used_by);
+            let t = s.default.getUser(P.used_by);
             return null != (e = (0, u.y)(null == j ? void 0 : j.getGuildId(), null == j ? void 0 : j.id, t)) ? e : null == t ? void 0 : t.globalName;
         }, [P, j]),
-        C = l.useCallback(() => {
+        C = o.useCallback(() => {
             if (null != y.current && (0, f.Uw)(n)) {
-                let { x: e, y: t, width: r, height: l } = y.current.getBoundingClientRect();
+                let { x: e, y: t, width: r, height: o } = y.current.getBoundingClientRect();
                 (0, m.Z)(
                     n,
                     {
                         x: e,
                         y: t,
                         w: r,
-                        h: l
+                        h: o
                     },
                     !0,
                     d.LL.UserTriggered
                 );
             }
         }, [n]),
-        w = l.useCallback(() => {
+        w = o.useCallback(() => {
             (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
     return v && null != x && (null == P ? void 0 : P.type) === g.B.CONFETTI
-        ? (0, r.jsx)(o.P3F, {
+        ? (0, r.jsx)(l.P3F, {
               onFocus: C,
               onClick: w,
               'aria-label': h.intl.string(h.t.Mp5k6O),
-              children: (0, r.jsx)(o.ua7, {
+              children: (0, r.jsx)(l.ua7, {
                   text: h.intl.formatToPlainString(h.t['FE++aG'], { user: x }),
                   children: (e) => {
                       var t, n;
@@ -92,13 +92,13 @@ let y = (e) => {
                           (n = n =
                               {
                                   children: [
-                                      (0, r.jsx)(o.l22, {
+                                      (0, r.jsx)(l.l22, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 12,
                                           height: 12
                                       }),
-                                      (0, r.jsx)(o.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-xs/bold',
                                           color: 'currentColor',
                                           children: h.intl.string(h.t['8Rrro6'])

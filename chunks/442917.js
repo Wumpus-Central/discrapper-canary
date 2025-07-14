@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(703656),
     L = n(937995),
     x = n(618158),
-    M = n(922745),
-    k = n(197016),
+    k = n(922745),
+    M = n(197016),
     j = n(800965),
     U = n(445062),
     G = n(7188),
@@ -230,7 +230,7 @@ class ep extends i.PureComponent {
                 children: (e) => {
                     var t;
                     return (0, r.jsx)(
-                        M.Z,
+                        k.Z,
                         e_(
                             ed(
                                 {
@@ -304,7 +304,7 @@ class ep extends i.PureComponent {
                 });
             }),
             eu(this, 'renderDisconnectButton', () =>
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(M.Z, {
                     className: el.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT)
                 })

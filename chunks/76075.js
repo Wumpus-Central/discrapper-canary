@@ -1,116 +1,90 @@
-n.d(t, { default: () => g });
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    o = n(481060),
-    l = n(313201),
-    a = n(271383),
-    c = n(430824),
-    s = n(594174),
-    u = n(693546),
-    d = n(305325),
-    f = n(937111),
-    p = n(702286),
-    m = n(523924),
-    b = n(388032);
-let g = function (e) {
-    var t,
-        n,
-        { guildId: g, transitionState: j } = e,
-        y = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-            }
-            return i;
-        })(e, ['guildId', 'transitionState']);
-    let h = (0, l.Dt)(),
-        v = (0, i.e7)([f.Z], () => f.Z.getRequest(g), [g]),
-        O = (0, i.e7)([c.Z], () => c.Z.getGuild(g), [g]),
-        x = (0, i.e7)([s.default], () => {
-            var e;
-            return null == (e = s.default.getCurrentUser()) ? void 0 : e.id;
+e.d(t, { default: () => v });
+var i = e(255367);
+e(73800);
+var l = e(442837),
+    a = e(82659),
+    o = e(481060),
+    r = e(313201),
+    s = e(724723),
+    d = e(271383),
+    c = e(430824),
+    u = e(594174),
+    m = e(693546),
+    f = e(305325),
+    x = e(937111),
+    h = e(702286),
+    p = e(523924),
+    g = e(388032),
+    j = e(568410);
+let v = function (n) {
+    let { guildId: t, transitionState: e, onClose: v } = n,
+        R = (0, s.q)('MemberVerificationRejectedModal'),
+        C = (0, r.Dt)(),
+        _ = (0, l.e7)([x.Z], () => x.Z.getRequest(t), [t]),
+        b = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        Z = (0, l.e7)([u.default], () => {
+            var n;
+            return null == (n = u.default.getCurrentUser()) ? void 0 : n.id;
         }),
-        P = (0, i.e7)([a.ZP], () => (null != x ? a.ZP.getMember(g, x) : null), [x, g]),
-        w = async () => {
-            if (null == P ? void 0 : P.isPending) {
+        T = (0, l.e7)([d.ZP], () => (null != Z ? d.ZP.getMember(t, Z) : null), [Z, t]),
+        y = () => {
+            (v(), null == T && (0, h.Z)());
+        },
+        P = async () => {
+            if (null == T ? void 0 : T.isPending) {
                 try {
-                    await u.Z.removeGuildJoinRequest(g);
-                } catch (e) {
-                    throw e;
+                    await m.Z.removeGuildJoinRequest(t);
+                } catch (n) {
+                    throw n;
                 }
-                (y.onClose(), (0, d.hk)(g));
-            } else u.Z.resetGuildJoinRequest(g);
+                (v(), (0, f.hk)(t));
+            } else m.Z.resetGuildJoinRequest(t);
         };
-    return (0, r.jsx)(o.Y0X, {
-        size: o.CgR.DYNAMIC,
-        transitionState: j,
-        'aria-labelledby': h,
-        parentComponent: 'MemberVerificationRejectedModal',
-        children: (0, r.jsx)(
-            m.Z,
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            ((r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = r));
-                        }));
-                }
-                return e;
-            })({}, y)),
-            (n = n =
-                {
-                    headerId: h,
-                    reapplyText: b.intl.string(b.t.I1LYVl),
-                    onReapply: w,
-                    confirmText: b.intl.string(b.t.BddRzc),
-                    onWithdrawApplication: () => {
-                        (y.onClose(), null == P && (0, p.Z)());
-                    },
-                    rejectionReason: null == v ? void 0 : v.rejectionReason,
-                    guild: O
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t)
-        )
-    });
+    return R
+        ? (0, i.jsx)(a.u, {
+              transitionState: e,
+              onClose: v,
+              title: (null == b ? void 0 : b.name) != null ? g.intl.formatToPlainString(g.t['P+/gzM'], { guildName: b.name }) : g.intl.string(g.t.gBPcuL),
+              actions: [
+                  {
+                      text: g.intl.string(g.t.I1LYVl),
+                      variant: 'secondary',
+                      onClick: P
+                  },
+                  {
+                      text: g.intl.string(g.t.BddRzc),
+                      variant: 'critical-primary',
+                      onClick: y
+                  }
+              ],
+              children:
+                  (null == _ ? void 0 : _.rejectionReason) != null && (null == _ ? void 0 : _.rejectionReason) !== ''
+                      ? (0, i.jsxs)(o.Text, {
+                            variant: 'text-md/medium',
+                            color: 'header-secondary',
+                            children: [
+                                (0, i.jsx)('span', {
+                                    className: j.rejectionReasonLabel,
+                                    children: g.intl.string(g.t.cf1psb)
+                                }),
+                                (0, i.jsx)('span', { children: null == _ ? void 0 : _.rejectionReason })
+                            ]
+                        })
+                      : null
+          })
+        : (0, i.jsx)(o.Y0X, {
+              size: o.CgR.DYNAMIC,
+              transitionState: e,
+              'aria-labelledby': C,
+              parentComponent: 'MemberVerificationRejectedModal',
+              children: (0, i.jsx)(p.Z, {
+                  headerId: C,
+                  reapplyText: g.intl.string(g.t.I1LYVl),
+                  onReapply: P,
+                  confirmText: g.intl.string(g.t.BddRzc),
+                  onWithdrawApplication: y,
+                  rejectionReason: null == _ ? void 0 : _.rejectionReason,
+                  guild: b
+              })
+          });
 };

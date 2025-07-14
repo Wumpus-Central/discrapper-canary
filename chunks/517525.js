@@ -158,7 +158,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             text: F,
             className: a()(x, _.qualityIndicatorBadge, { [_.qualityIndicatorBadgePremium]: D && R }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
-            shape: d
+            shape: g.eE[d]
         });
     },
     L = (e) => {

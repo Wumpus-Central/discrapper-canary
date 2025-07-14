@@ -786,11 +786,13 @@ function eI() {
           });
 }
 function ey() {
-    let e = (0, p.e7)([J.ZP], () => J.ZP.getOverlayKeybind()),
-        t = !(0, er.supportsLegacy)(),
-        n = !(0, er.supportsOutOfProcess)(),
-        [r, s] = (0, p.Wu)([N.ZP], () => [N.ZP.canShowAdminWarning, N.ZP.getVisibleGame()], []),
-        a = null != s && s.elevated && r;
+    var e;
+    let t = (0, p.e7)([J.ZP], () => J.ZP.getOverlayKeybind()),
+        n = !(0, er.supportsLegacy)(),
+        r = !(0, er.supportsOutOfProcess)(),
+        [s, a] = (0, p.Wu)([N.ZP], () => [N.ZP.canShowAdminWarning, N.ZP.getVisibleGame()], []),
+        l = null != a && a.elevated && s,
+        o = (0, J.s4)(null != (e = null == t ? void 0 : t.shortcut) ? e : []);
     return (0, i.jsx)(e_, {
         children: (0, i.jsx)('div', {
             className: ed.keybindMainContainer,
@@ -805,22 +807,29 @@ function ey() {
                                 color: 'header-primary',
                                 children: ec.intl.string(ec.t.VsAZcH)
                             }),
-                            a &&
+                            l &&
                                 (0, i.jsx)(h.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-feedback-warning',
                                     className: ed.keybindAdminWarning,
                                     children: ec.intl.string(ec.t.NsowVV)
+                                }),
+                            o &&
+                                (0, i.jsx)(h.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'text-feedback-warning',
+                                    className: ed.keybindAdminWarning,
+                                    children: ec.intl.string(ec.t.UNoTw8)
                                 })
                         ]
                     }),
                     (0, i.jsx)('div', {
                         className: ed.keybindRecorderContainer,
                         children: (0, i.jsx)(j.Z, {
-                            disabled: t && n,
-                            defaultValue: null != e ? e.shortcut : [],
-                            onChange: function (t) {
-                                (d()(null != e, 'Keybind should never be undefined'), b.Z.setKeybind(eg(ep({}, e), { shortcut: t })));
+                            disabled: n && r,
+                            defaultValue: null != t ? t.shortcut : [],
+                            onChange: function (e) {
+                                (d()(null != t, 'Keybind should never be undefined'), b.Z.setKeybind(eg(ep({}, t), { shortcut: e })));
                             }
                         })
                     })

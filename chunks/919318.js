@@ -1,128 +1,127 @@
-(t.d(n, { ZP: () => L }), t(388685), t(953529));
+(t.d(n, { ZP: () => D }), t(388685), t(953529));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
     i = t.n(a),
     s = t(442837),
-    c = t(755721),
-    o = t(481060),
-    d = t(904245),
-    u = t(368844),
-    h = t(73315),
+    c = t(481060),
+    o = t(904245),
+    d = t(368844),
+    u = t(73315),
     m = t(454585),
-    f = t(406432),
-    g = t(169525),
-    p = t(524444),
-    x = t(703656),
-    b = t(6025),
-    j = t(695346),
-    C = t(592125),
-    _ = t(984933),
-    v = t(375954),
-    I = t(496675),
-    Z = t(451478),
-    y = t(768581),
-    N = t(526120),
-    O = t(689981),
-    w = t(825334),
-    P = t(981631),
-    E = t(388032),
-    S = t(79341),
-    A = t(73433),
-    k = t(931057);
-function M(e) {
+    h = t(406432),
+    f = t(169525),
+    g = t(524444),
+    p = t(703656),
+    x = t(6025),
+    b = t(695346),
+    j = t(592125),
+    C = t(984933),
+    _ = t(375954),
+    v = t(496675),
+    I = t(451478),
+    Z = t(768581),
+    y = t(526120),
+    N = t(689981),
+    O = t(825334),
+    w = t(981631),
+    P = t(388032),
+    E = t(79341),
+    S = t(73433),
+    A = t(931057);
+function k(e) {
     let n,
         t,
         { firstMedia: r, channelId: a } = e,
-        c = (0, s.e7)([C.Z], () => C.Z.getChannel(a)),
-        [o, d] = (0, g.hL)({
+        c = (0, s.e7)([j.Z], () => j.Z.getChannel(a)),
+        [o, d] = (0, f.hL)({
             media: r,
             channel: c
         }),
-        u = (0, g.MC)(d),
-        m = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
-        x = (0, f.d$)(r.src),
-        b = j.QK.useSetting(),
-        { src: _, width: v, height: I, alt: y } = r;
+        m = (0, f.MC)(d),
+        p = (0, s.e7)([I.Z], () => I.Z.isFocused()),
+        x = (0, h.d$)(r.src),
+        C = b.QK.useSetting(),
+        { src: _, width: v, height: Z, alt: y } = r;
     return (
-        I > v ? (t = 72) : (n = 72),
+        Z > v ? (t = 72) : (n = 72),
         (0, l.jsxs)('div', {
-            className: S.media,
+            className: E.media,
             children: [
-                (0, p.Yi)({
+                (0, g.Yi)({
                     src: _,
                     maxHeight: n,
                     maxWidth: t,
                     width: v,
-                    height: I,
-                    alt: null != y && o && null != u ? u : y,
-                    autoPlay: b,
-                    animated: x && !o && m,
-                    containerClassName: S.thumbnailContainer,
-                    imageClassName: i()({ [S.obscured]: o }),
+                    height: Z,
+                    alt: null != y && o && null != m ? m : y,
+                    autoPlay: C,
+                    animated: x && !o && p,
+                    containerClassName: E.thumbnailContainer,
+                    imageClassName: i()({ [E.obscured]: o }),
                     analyticsSource: 'ResourceChannelMedia'
                 }),
                 o &&
-                    (0, l.jsx)(h.Z, {
+                    (0, l.jsx)(u.Z, {
                         obscureReason: d,
-                        iconClassname: S.obscuredTag
+                        iconClassname: E.obscuredTag
                     })
             ]
         })
     );
 }
-function D(e) {
+function M(e) {
     let { resource: n } = e,
-        t = (0, s.e7)([C.Z], () => C.Z.getChannel(n.channelId)),
-        a = (0, s.e7)([v.Z], () => v.Z.getMessages(n.channelId)),
-        c = (0, s.e7)([I.Z], () => I.Z.can(P.Plq.VIEW_CHANNEL, t)),
+        t = (0, s.e7)([j.Z], () => j.Z.getChannel(n.channelId)),
+        a = (0, s.e7)([_.Z], () => _.Z.getMessages(n.channelId)),
+        u = (0, s.e7)([v.Z], () => v.Z.can(w.Plq.VIEW_CHANNEL, t)),
         h = a.first(),
-        f = (0, O.Z)(h),
-        g = (0, u.zy)(h, !1),
+        f = (0, N.Z)(h),
+        g = (0, d.zy)(h, !1),
         p = (null == g ? void 0 : g.length) > 0 ? g[0] : null,
-        x = null != t && null == a.first() && !a.loadingMore && !a.ready && !a.hasFetched && c;
+        b = null != t && null == a.first() && !a.loadingMore && !a.ready && !a.hasFetched && u;
     if (
         (r.useEffect(() => {
-            x &&
-                d.Z.fetchMessages({
+            b &&
+                o.Z.fetchMessages({
                     channelId: n.channelId,
                     after: n.channelId,
                     limit: 5
                 });
-        }, [n.channelId, x]),
+        }, [n.channelId, b]),
         null == t || null == t.guild_id)
     )
         return null;
-    let j = y.ZP.getResourceChannelIconURL({
+    let C = Z.ZP.getResourceChannelIconURL({
             channelId: t.id,
             icon: n.icon
         }),
-        _ = null == n.description || 0 === n.description.length;
-    return (0, l.jsxs)(o.P3F, {
-        className: S.row,
+        I = null == n.description || 0 === n.description.length;
+    return (0, l.jsxs)(c.P3F, {
+        className: E.row,
         onClick: (e) => {
             null != t &&
                 (e.shiftKey
-                    ? (0, N.C3)(t.guild_id, t.id)
-                    : b.Z.openResourceChannelAsSidebar({
+                    ? (0, y.C3)(t.guild_id, t.id)
+                    : x.Z.openResourceChannelAsSidebar({
                           guildId: t.guild_id,
                           channelId: t.id
                       }));
         },
         children: [
             (0, l.jsxs)('div', {
-                className: S.content,
+                className: E.content,
                 children: [
-                    (0, l.jsx)(o.Text, {
-                        className: S.title,
+                    (0, l.jsx)(c.Text, {
+                        className: E.title,
                         variant: 'text-md/bold',
                         color: 'header-primary',
                         children: n.title
                     }),
-                    _ &&
+                    I &&
                         null != f &&
-                        (0, l.jsx)(o.Text, {
-                            className: S.messageContent,
+                        (0, l.jsx)(c.Text, {
+                            className: E.messageContent,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             lineClamp: 3,
@@ -131,9 +130,9 @@ function D(e) {
                                 channelId: t.id
                             })
                         }),
-                    !_ &&
-                        (0, l.jsx)(o.Text, {
-                            className: i()(S.messageContent, A.markup),
+                    !I &&
+                        (0, l.jsx)(c.Text, {
+                            className: i()(E.messageContent, S.markup),
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             lineClamp: 3,
@@ -144,12 +143,12 @@ function D(e) {
                         })
                 ]
             }),
-            null != n.icon && null != j
+            null != n.icon && null != C
                 ? (0, l.jsx)('div', {
-                      className: S.media,
+                      className: E.media,
                       children: (0, l.jsx)('img', {
-                          src: j,
-                          className: S.__invalid_thumbnail,
+                          src: C,
+                          className: E.__invalid_thumbnail,
                           width: 72,
                           height: 72,
                           alt: '',
@@ -157,8 +156,8 @@ function D(e) {
                       })
                   })
                 : null,
-            null == j && null != p
-                ? (0, l.jsx)(M, {
+            null == C && null != p
+                ? (0, l.jsx)(k, {
                       firstMedia: p,
                       channelId: n.channelId
                   })
@@ -166,45 +165,49 @@ function D(e) {
         ]
     });
 }
-function L(e) {
+function D(e) {
     let { guild: n, isNewMember: t } = e,
-        r = (0, w.Z)(n.id);
+        r = (0, O.Z)(n.id);
     return 0 === r.length
         ? t
             ? null
             : (0, l.jsxs)('div', {
-                  className: S.emptyContainer,
+                  className: E.emptyContainer,
                   children: [
-                      (0, l.jsx)(o.X6q, {
+                      (0, l.jsx)(c.X6q, {
                           variant: 'heading-xl/bold',
                           color: 'header-primary',
-                          children: E.intl.string(E.t.owvC9f)
+                          children: P.intl.string(P.t.owvC9f)
                       }),
                       (0, l.jsx)('img', {
-                          className: S.emptyStateImage,
-                          src: k,
+                          className: E.emptyStateImage,
+                          src: A,
                           alt: ''
                       }),
-                      (0, l.jsx)(c.zx, {
-                          className: S.emptyStateButton,
-                          onClick: () => {
-                              let e = _.ZP.getDefaultChannel(n.id);
-                              null != e && (0, x.uL)(P.Z5c.CHANNEL(n.id, e.id));
-                          },
-                          fullWidth: !0,
-                          children: E.intl.string(E.t['3iCBUl'])
+                      (0, l.jsx)('div', {
+                          className: E.emptyStateButton,
+                          children: (0, l.jsx)(c.zxk, {
+                              size: 'md',
+                              variant: 'primary',
+                              onClick: () => {
+                                  let e = C.ZP.getDefaultChannel(n.id);
+                                  null != e && (0, p.uL)(w.Z5c.CHANNEL(n.id, e.id));
+                              },
+                              fullWidth: !0,
+                              text: P.intl.string(P.t['3iCBUl'])
+                          })
                       })
                   ]
               })
         : (0, l.jsxs)('div', {
-              className: S.container,
+              className: E.container,
               children: [
-                  (0, l.jsx)(o.X6q, {
+                  (0, l.jsx)(c.X6q, {
                       variant: 'heading-lg/bold',
                       color: 'header-primary',
-                      children: E.intl.string(E.t.xwY4LS)
+                      children: P.intl.string(P.t.xwY4LS)
                   }),
-                  r.map((e) => (0, l.jsx)(D, { resource: e }, e.channelId))
+                  r.map((e) => (0, l.jsx)(M, { resource: e }, e.channelId))
               ]
           });
 }

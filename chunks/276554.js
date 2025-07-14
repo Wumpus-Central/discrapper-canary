@@ -1,4 +1,4 @@
-n.d(t, { R: () => l });
+n.d(t, { R: () => o });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_social_proofing_message_nitro_badge',
@@ -26,7 +26,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function l(e, t) {
+function o(e, t) {
     let n = r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
     return n.enabled && (!n.hideNitroBadgeWhenRoleBadgePresent || (n.hideNitroBadgeWhenRoleBadgePresent && !e));
 }

@@ -255,10 +255,10 @@ function L(e) {
 function x(e) {
     E.nativeVoiceFilterModuleState = e.state;
 }
-function M() {
+function k() {
     E.error = 'ERROR_ACTIVATING_VOICE_FILTER';
 }
-function k() {
+function M() {
     E.error = null;
 }
 function j() {
@@ -275,7 +275,7 @@ let U = new N(s.Z, {
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: C,
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: L,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: x,
-    VOICE_FILTER_APPLY_FAILED: M,
-    VOICE_FILTER_REQUEST_SWITCH: k,
+    VOICE_FILTER_APPLY_FAILED: k,
+    VOICE_FILTER_REQUEST_SWITCH: M,
     VOICE_FILTER_LAGGING: j
 });

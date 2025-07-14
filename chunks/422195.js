@@ -79,10 +79,10 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     D = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
     L = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
     x = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    M = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    k = [P, P, P, P],
+    k = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    M = [P, P, P, P],
     j = (w + D) * 2 + P,
-    U = x + 2 * M,
+    U = x + 2 * k,
     G = 7,
     B = (e) => {
         let { activeIndex: t, stickerPickerCategories: n, categoryListRef: a, firstStandardStickerCategoryOffsetTop: s, setShouldRenderShortcut: d } = e,
@@ -148,14 +148,14 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             'recent'
                         );
                     let x = t === a,
-                        M = n[a],
-                        k = n[a + 1],
-                        j = null != k && M.type === b.Ih.GUILD && k.type !== b.Ih.GUILD,
-                        U = M.type === b.Ih.PACK,
+                        k = n[a],
+                        M = n[a + 1],
+                        j = null != M && k.type === b.Ih.GUILD && M.type !== b.Ih.GUILD,
+                        U = k.type === b.Ih.PACK,
                         G = '',
                         B = null;
-                    if (M.type === b.Ih.GUILD || M.type === b.Ih.EMPTY_GUILD_UPSELL) {
-                        let e = p.Z.getGuild(M.id);
+                    if (k.type === b.Ih.GUILD || k.type === b.Ih.EMPTY_GUILD_UPSELL) {
+                        let e = p.Z.getGuild(k.id);
                         null != e &&
                             ((f = e.id),
                             (G = e.name),
@@ -164,7 +164,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 isSelected: x
                             })));
                     } else if (U) {
-                        let e = E.Z.getStickerPack(M.id);
+                        let e = E.Z.getStickerPack(k.id);
                         null != e &&
                             ((G = e.name),
                             (B = (0, r.jsx)(O.Z, {
@@ -195,11 +195,11 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                         [S.firstPartyCategorySelected]: !m && x && U
                                                     }),
                                                     onClick: () => {
-                                                        (M.type === b.Ih.PACK &&
+                                                        (k.type === b.Ih.PACK &&
                                                             h.default.track(v.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                                                 location: null == _ ? void 0 : _.location,
                                                                 tab: I.X1.STICKER,
-                                                                sticker_pack_id: M.id,
+                                                                sticker_pack_id: k.id,
                                                                 guild_id: f
                                                             }),
                                                             s());
@@ -212,7 +212,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 j ? (0, r.jsx)('hr', { className: S.guildCategorySeparator }, 'separator') : null
                             ]
                         },
-                        M.id
+                        k.id
                     );
                 },
                 [t, _, m, n]
@@ -288,7 +288,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             categoryListRef: a,
             expressionsListRef: t,
             store: d.ZN,
-            listPadding: k,
+            listPadding: M,
             onScroll: v,
             renderCategoryListItem: y,
             rowCount: f.length,

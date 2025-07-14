@@ -1,9 +1,9 @@
-(n.r(t), n.d(t, { default: () => F }), n(388685));
+(n.r(t), n.d(t, { default: () => D }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(772848),
+    i = n.n(o),
+    a = n(772848),
     s = n(399606),
     c = n(952265),
     u = n(481060),
@@ -47,20 +47,20 @@ let Z = (e) => {
             t
         );
     },
-    F = function (e) {
+    D = function (e) {
         let { isFullScreen: t = !0, tab: n = N.AW.HOME } = e;
         (0, b.z)(h.f);
-        let o = (0, p.Z)((0, i.Z)()),
+        let o = (0, p.Z)((0, a.Z)()),
             c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
             w = l.useRef(null),
-            { closeIntroToOrbsClaimedCoachmark: F } = (0, _.Z)({ location: 'CollectiblesShop' });
+            { closeIntroToOrbsClaimedCoachmark: D } = (0, _.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                F();
+                D();
             },
-            [o, F]
+            [o, D]
         );
-        let { onClose: D } = (0, I.Db)(),
+        let { onClose: F } = (0, I.Db)(),
             { categories: M, refreshCategories: H } = (0, x.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -75,18 +75,18 @@ let Z = (e) => {
         (0, m.P)();
         let W = (0, y.O)(M),
             [V, U] = l.useState(),
-            G = (0, s.e7)([E.Z], () => {
+            z = (0, s.e7)([E.Z], () => {
                 var e;
                 return null == (e = E.Z.getCategory(V)) ? void 0 : e.name;
             }),
-            [z, q] = l.useState();
+            [G, q] = l.useState();
         (0, L.Kp)();
         let Y = l.useCallback((e, t) => {
                 (q(e), U(t));
             }, []),
-            { selectedTab: K, transitionState: X, transitionToTab: Q } = (0, j.B)(w, n, t),
-            { handleScroll: J } = (0, f.z)(w, o, K);
-        ((0, S.q3)(o, K, G, X, z),
+            { selectedTab: K, transitionState: X, transitionToTab: J } = (0, j.B)(w, n, t),
+            { handleScroll: Q } = (0, f.z)(w, o, K);
+        ((0, S.q3)(o, K, z, X, G),
             (0, S.EB)(K, c),
             (0, B.Z)(),
             l.useEffect(() => {
@@ -112,11 +112,11 @@ let Z = (e) => {
                   children: (0, r.jsx)(v.k0, {
                       newValue: {
                           sessionId: o,
-                          pageCategory: G,
+                          pageCategory: z,
                           pageSize: N.kN
                       },
                       children: (0, r.jsx)(Z, {
-                          onClose: D,
+                          onClose: F,
                           shouldAddEventListener: t && !$,
                           children: (0, r.jsx)('div', {
                               className: R.shop,
@@ -125,9 +125,9 @@ let Z = (e) => {
                               children: (0, r.jsx)(u.Den, {
                                   className: R.shopScroll,
                                   ref: w,
-                                  onScroll: J,
+                                  onScroll: Q,
                                   children: (0, r.jsxs)('div', {
-                                      className: a()(R.shopViewWrapper, {
+                                      className: i()(R.shopViewWrapper, {
                                           [R.visible]: X === N.f7.VISIBLE,
                                           [R.in]: X === N.f7.IN,
                                           [R.out]: X === N.f7.OUT
@@ -136,8 +136,8 @@ let Z = (e) => {
                                           (0, r.jsx)(k.I, {
                                               isFullScreen: t,
                                               isLayer: $,
-                                              onClose: D,
-                                              handleTransition: Q,
+                                              onClose: F,
+                                              handleTransition: J,
                                               selectedTab: K
                                           }),
                                           (0, r.jsx)(P.Z, {
@@ -145,7 +145,7 @@ let Z = (e) => {
                                               isFullScreen: t,
                                               scrollerRef: w,
                                               refreshCategories: H,
-                                              transitionToTab: Q,
+                                              transitionToTab: J,
                                               transitionState: X,
                                               sortedCategories: W,
                                               updateAnalyticsState: Y

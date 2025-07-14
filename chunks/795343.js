@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(399606),
+    i = n.n(o),
+    a = n(399606),
     s = n(481060),
     c = n(594174),
     u = n(381585),
@@ -23,9 +23,9 @@ function v(e) {
         S = (0, u.sp)(),
         x = null != (t = null == S ? void 0 : S.sessionId) ? t : '',
         { noCache: y, includeUnpublished: j } = (0, _.Z)(),
-        T = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        T = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         { skus: P, currentPage: L, totalCount: k, isFetchingResults: I } = (0, f.a)(),
-        B = (0, i.Wu)([d.Z], () => d.Z.getProductsBySkus(P)),
+        B = (0, a.Wu)([d.Z], () => d.Z.getProductsBySkus(P)),
         N = l.useCallback(() => {
             var e;
             null == v || null == (e = v.current) || e.scrollToTop({ animate: !0 });
@@ -48,22 +48,22 @@ function v(e) {
             });
     }, [x, o, j, y, n, E]);
     let Z = l.useRef(null),
-        { setQueryPageSize: F, setQueryPageOffset: D, queryPageSize: M } = (0, g.S)(),
+        { setQueryPageSize: D, setQueryPageOffset: F, queryPageSize: M } = (0, g.S)(),
         H = n || I || null == T,
         W = !H && 0 === R.length;
     return (
         l.useEffect(() => {
             if (null != Z.current && !W) {
                 let e = new ResizeObserver(() => {
-                    null != Z.current && F(Math.floor(5 * getComputedStyle(Z.current).gridTemplateColumns.split(/\s+/).length));
+                    null != Z.current && D(Math.floor(5 * getComputedStyle(Z.current).gridTemplateColumns.split(/\s+/).length));
                 });
                 return (e.observe(Z.current), () => e.disconnect());
             }
-        }, [F, W]),
+        }, [D, W]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: a()(O.products, { [O.productsEmpty]: W }),
+                    className: i()(O.products, { [O.productsEmpty]: W }),
                     ref: Z,
                     children: [
                         H && [...Array(M)].map((e, t) => (0, r.jsx)(b.K, {}, t)),
@@ -102,7 +102,7 @@ function v(e) {
                                 totalCount: k,
                                 pageSize: M,
                                 onPageChange: (e) => {
-                                    D((e - 1) * M);
+                                    F((e - 1) * M);
                                 },
                                 disablePaginationGap: !0
                             })

@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(131704),
     x = n(881998),
     v = n(984933),
-    O = n(496675),
-    j = n(594174),
+    j = n(496675),
+    O = n(594174),
     E = n(51144),
     S = n(7782),
     I = n(967128),
     P = n(320781),
     Z = n(269203),
-    T = n(86863),
-    N = n(558756),
+    N = n(86863),
+    T = n(558756),
     A = n(753898),
     w = n(734386),
     R = n(184279),
@@ -55,11 +55,11 @@ function V(e) {
     let { channel: h, showingBanner: f } = e,
         C = (0, p.ZP)(h),
         { type: v } = h,
-        P = (0, l.e7)([j.default], () => (h.isPrivate() ? j.default.getUser(h.getRecipientId()) : null)),
+        P = (0, l.e7)([O.default], () => (h.isPrivate() ? O.default.getUser(h.getRecipientId()) : null)),
         w = E.ZP.useUserTag(P),
-        { canManageRoles: M, canReadMessageHistory: D } = (0, l.cj)([O.Z], () => ({
-            canManageRoles: O.Z.can(L.Plq.MANAGE_ROLES, h),
-            canReadMessageHistory: O.Z.can(L.Plq.READ_MESSAGE_HISTORY, h)
+        { canManageRoles: M, canReadMessageHistory: D } = (0, l.cj)([j.Z], () => ({
+            canManageRoles: j.Z.can(L.Plq.MANAGE_ROLES, h),
+            canReadMessageHistory: j.Z.can(L.Plq.READ_MESSAGE_HISTORY, h)
         })),
         k = (0, l.e7)([_.Z], () => (v === L.d4z.DM ? _.Z.getMutualGuilds(h.getRecipientId()) : null), [h, v]),
         { systemDMRedesignEnabled: V } = b.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = h.isSystemDM()) && t }),
@@ -95,12 +95,12 @@ function V(e) {
                   (e = (0, r.jsxs)('div', {
                       className: F.buttonContainer,
                       children: [
-                          (0, r.jsx)(N.W, {
+                          (0, r.jsx)(T.W, {
                               className: F.button,
                               channel: h,
                               user: P
                           }),
-                          (0, r.jsx)(T.n, {
+                          (0, r.jsx)(N.n, {
                               className: F.button,
                               user: P,
                               application: z,

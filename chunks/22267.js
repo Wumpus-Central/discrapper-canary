@@ -29,8 +29,8 @@ let v = {
             D = null != n ? (0, E.EU)(n) : a,
             L = (0, s.e7)([m.Z], () => (null != t ? m.Z.getStatus(t.id) : c.Skl.ONLINE)),
             x = w ? '#706F74' : '#aaaab2',
-            M = i.useRef(null),
-            k = v[R];
+            k = i.useRef(null),
+            M = v[R];
         return (0, r.jsxs)('div', {
             className: o()(I, b.nameplatePreview, {
                 [b.nameplatePurchased]: P && !S,
@@ -46,7 +46,7 @@ let v = {
                             nameplate: D,
                             hovered: S,
                             placement: _.i.PREVIEW,
-                            content: N ? void 0 : M
+                            content: N ? void 0 : k
                         },
                         null == n ? void 0 : n.id
                     ),
@@ -57,11 +57,11 @@ let v = {
                             ? (0, r.jsx)('div', {
                                   className: o()(b.avatarContainer, !N && b.avatarVisible),
                                   children: (0, r.jsx)(u.Z, {
-                                      ref: M,
+                                      ref: k,
                                       avatar: (0, r.jsx)(d.Z, {
                                           user: t,
                                           guildId: null,
-                                          avatarSize: k,
+                                          avatarSize: M,
                                           status: A ? L : void 0,
                                           'aria-hidden': !0
                                       }),
@@ -79,7 +79,7 @@ let v = {
                             children: [
                                 (0, r.jsx)(c.qEK, {
                                     src: w ? y : O,
-                                    size: k,
+                                    size: M,
                                     'aria-hidden': !0,
                                     status: c.Skl.ONLINE,
                                     statusColor: x,

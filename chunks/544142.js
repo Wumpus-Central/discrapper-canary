@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,32 +61,32 @@ function O(e, t) {
         e
     );
 }
-function j(e) {
+function O(e) {
     var t, l;
     let { userId: p, channel: _ } = e,
         y = i.useRef(null),
         { analyticsLocations: C } = (0, d.ZP)(u.Z.USERNAME),
-        j = (0, o.e7)([g.default], () => g.default.getUser(p)),
+        O = (0, o.e7)([g.default], () => g.default.getUser(p)),
         E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
         S = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
     function I(e) {
-        if (null == j) return null;
+        if (null == O) return null;
         (0, c.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    O(v({}, t), {
-                        user: j,
+                    j(v({}, t), {
+                        user: O,
                         guildId: _.guild_id,
                         channel: _
                     })
                 );
         });
     }
-    let P = null != (l = null != (t = null == E ? void 0 : E.nick) ? t : b.ZP.getName(j)) ? l : '???',
+    let P = null != (l = null != (t = null == E ? void 0 : E.nick) ? t : b.ZP.getName(O)) ? l : '???',
         Z = null == E ? void 0 : E.colorString;
-    return null == j
+    return null == O
         ? (0, r.jsx)('span', {
               className: a()(x.threadCreatorName, x.unknownCreatorName),
               children: P
@@ -95,7 +95,7 @@ function j(e) {
               value: C,
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: y,
-                  user: j,
+                  user: O,
                   guildId: _.guild_id,
                   channelId: _.id,
                   roleId: null == E ? void 0 : E.colorRoleId,
@@ -103,7 +103,7 @@ function j(e) {
                   children: (e) =>
                       (0, r.jsx)(
                           s.P3F,
-                          O(v({}, e), {
+                          j(v({}, e), {
                               innerRef: y,
                               tag: 'span',
                               className: x.threadCreatorName,
@@ -133,7 +133,7 @@ function E(e) {
                           children: C.intl.format(C.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
-                                      j,
+                                      O,
                                       {
                                           userId: t.ownerId,
                                           channel: t

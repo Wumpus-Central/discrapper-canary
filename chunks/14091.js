@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(768119),
     x = n(944486),
     v = n(585483),
-    O = n(72006),
-    j = n(965996),
+    j = n(72006),
+    O = n(965996),
     E = n(652399),
     S = n(970850),
     I = n(861262),
     P = n(251285),
     Z = n(406326),
-    T = n(994463),
-    N = n(611004),
+    N = n(994463),
+    T = n(611004),
     A = n(619753),
     w = n(902733),
     R = n(981631),
@@ -49,7 +49,7 @@ function L(e, t, n) {
 }
 function U(e) {
     let t = null != e ? C.Z.getEditorState(e) : null;
-    return null != t ? O.Sq(t) : null;
+    return null != t ? j.Sq(t) : null;
 }
 class B extends i.Component {
     componentDidMount() {
@@ -238,7 +238,7 @@ class H extends i.PureComponent {
                 let e = this.props.searchType === R.aib.GUILD ? D.intl.string(D.t.AXPbZm) : D.intl.string(D.t.Q0JJjo);
                 return (0, r.jsxs)(F, {
                     children: [
-                        (0, r.jsx)(T.Z, {}),
+                        (0, r.jsx)(N.Z, {}),
                         (0, r.jsx)('div', {
                             className: (k.emptyResultsText, k.stillIndexing),
                             children: e
@@ -383,11 +383,11 @@ function V(e) {
         h = (0, c.e7)([g.Z], () => g.Z.getLastSearchAnalyticsId()),
         { searchResults: f, ignoreCount: m, blockCount: y } = (0, P.G)(a),
         { searchMode: x, setSearchMode: v } = (0, S.Z)({ searchId: o }),
-        O = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 v(e);
                 let t = U(o);
-                N.Z.fetchCrossDMMessages({
+                T.Z.fetchCrossDMMessages({
                     searchContext: a,
                     selectedPageIndex: 0,
                     queryString: null != t ? t : '',
@@ -396,11 +396,11 @@ function V(e) {
             },
             [a, o, v]
         ),
-        j = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 var t;
                 (d(e),
-                    N.Z.fetchCrossDMMessages({
+                    T.Z.fetchCrossDMMessages({
                         searchContext: a,
                         queryString: null != (t = U(o)) ? t : '',
                         selectedPageIndex: e,
@@ -422,8 +422,8 @@ function V(e) {
         theme: t,
         isFeedbackVisible: n,
         dismissFeedbackEntrypoint: l,
-        onPageChange: j,
-        onSearchModeChange: O,
+        onPageChange: O,
+        onSearchModeChange: j,
         searchMode: x
     });
 }
@@ -433,7 +433,7 @@ function z(e) {
         l = (0, m.U)({ location: 'SearchResults' }),
         a = i.useRef(null),
         [o, s] = i.useState(!1),
-        { enabled: c, force: u } = (0, j.f)({ location: 'SearchResults' });
+        { enabled: c, force: u } = (0, O.f)({ location: 'SearchResults' });
     (i.useEffect(() => {
         c && u && s(!0);
     }, [u, c]),

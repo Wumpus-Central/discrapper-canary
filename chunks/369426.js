@@ -2,6 +2,7 @@ var r = {
     button: 'button__6af3a',
     buttonChildrenWrapper: 'buttonChildrenWrapper__6af3a',
     buttonChildren: 'buttonChildren__6af3a',
+    icon: 'icon__6af3a',
     loading: 'loading__6af3a',
     spinnerWrapper: 'spinnerWrapper__6af3a',
     fadeIn: 'fadeIn__6af3a',

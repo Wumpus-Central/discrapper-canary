@@ -1,13 +1,13 @@
 n.d(t, {
-    T: () => a,
-    v: () => i
+    T: () => i,
+    v: () => a
 });
 var r = n(255367);
 n(73800);
 var l = n(481060);
 let o = 'collectibles shop product details modal',
-    a = (e) => {
-        let { product: t, category: a, shouldCheckoutWithOrbs: i, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
+    i = (e) => {
+        let { product: t, category: i, shouldCheckoutWithOrbs: a, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
         (0, l.ZDy)(
             async () => {
                 let { default: e } = await n.e('2026').then(n.bind(n, 702370));
@@ -43,8 +43,8 @@ let o = 'collectibles shop product details modal',
                         (o = o =
                             {
                                 product: t,
-                                category: a,
-                                shouldCheckoutWithOrbs: i,
+                                category: i,
+                                shouldCheckoutWithOrbs: a,
                                 analyticsSource: s,
                                 analyticsLocations: c,
                                 returnRef: u,
@@ -69,6 +69,6 @@ let o = 'collectibles shop product details modal',
             { modalKey: o }
         );
     },
-    i = () => {
+    a = () => {
         (0, l.Mr3)(o);
     };

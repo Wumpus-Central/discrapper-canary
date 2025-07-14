@@ -2,8 +2,8 @@
 var r = n(255367),
     l = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(636977),
+    i = n.n(o),
+    a = n(636977),
     s = n(442837),
     c = n(481060),
     u = n(37234),
@@ -32,13 +32,13 @@ function I(e) {
     return (0, r.jsx)(h.Z.Title, {
         onClick: () => o(t),
         wrapperClassName: k.tabWrapper,
-        className: a()(k.tab, { [k.selected]: l }),
+        className: i()(k.tab, { [k.selected]: l }),
         children: n
     });
 }
 function B(e) {
-    let { tab: t, selected: n, displayText: o, handleTransition: a } = e,
-        [i, s] = l.useState(!1),
+    let { tab: t, selected: n, displayText: o, handleTransition: i } = e,
+        [a, s] = l.useState(!1),
         u = l.useRef(null),
         [d, p] = l.useState(0),
         h = l.useRef(!1),
@@ -57,7 +57,7 @@ function B(e) {
         onMouseLeave: () => b(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: u,
-            shouldShow: i,
+            shouldShow: a,
             position: 'bottom',
             align: 'left',
             onRequestOpen: () => b(!0),
@@ -68,7 +68,7 @@ function B(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(y.Z, {
-                    handleTransition: a,
+                    handleTransition: i,
                     onClose: t
                 });
             },
@@ -86,11 +86,11 @@ function B(e) {
                                 tab: t,
                                 displayText: o,
                                 selected: n,
-                                handleTransition: a
+                                handleTransition: i
                             },
                             t
                         ),
-                        i
+                        a
                             ? (0, r.jsx)(c.u04, {
                                   size: 'sm',
                                   color: 'currentColor'
@@ -126,24 +126,24 @@ function N(e) {
             tab: T.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
         });
-    let F = n ? E.DR : o,
-        D = g === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
+    let D = n ? E.DR : o,
+        F = g === T.AW.ORBS ? P.ZY5.SHOP_ORBS_TAB : P.ZY5.COLLECTIBLES_SHOP,
         M = l.useCallback(() => {
-            (t && (F(), (0, u.Ou)()),
+            (t && (D(), (0, u.Ou)()),
                 (0, m.Y)({
-                    pageType: D,
+                    pageType: F,
                     sectionType: P.jXE.ORBS_BALANCE_MENU,
                     ctaObject: P.qAy.CTA_TO_QUEST_HOME
                 }),
-                (0, b.navigateToQuestHome)({ fromContent: i.j.ORBS_BALANCE_MENU }));
-        }, [F, t, D]),
+                (0, b.navigateToQuestHome)({ fromContent: a.j.ORBS_BALANCE_MENU }));
+        }, [D, t, F]),
         H = (0, S.F)('collectibles_shop_header_bar');
     return (0, r.jsx)(c.f6W, {
         theme: y,
         children: (e) =>
             (0, r.jsxs)(h.Z, {
                 disableDoubleClick: !0,
-                className: a()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),
+                className: i()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),
                 innerClassname: w ? k.headerBarInner : void 0,
                 toolbar: t || !A ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
@@ -192,7 +192,7 @@ function N(e) {
                                 w &&
                                     (0, r.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
-                                        analyticsPage: D,
+                                        analyticsPage: F,
                                         cardAlignment: C.V9.CardAlignment.END,
                                         ctaText: L.intl.string(L.t.VC4Mq6),
                                         ctaOnClick: M,
@@ -200,7 +200,7 @@ function N(e) {
                                     }),
                                 t &&
                                     (0, r.jsx)(d.Z, {
-                                        closeAction: F,
+                                        closeAction: D,
                                         keybind: 'ESC'
                                     })
                             ]

@@ -2,14 +2,14 @@ n.d(t, { e: () => c });
 var r = n(255367),
     l = n(409116),
     o = n(755007),
-    a = n(231338),
-    i = n(858022);
+    i = n(231338),
+    a = n(858022);
 function s(e) {
     let { price: t, isPremiumUser: n, discount: s, hasSufficientOrbs: c } = e;
-    return t.currency === a.pK.DISCORD_ORB
+    return t.currency === i.pK.DISCORD_ORB
         ? (0, r.jsx)(o.Z, {
               orbAmount: t.amount,
-              className: c ? void 0 : i.disabled
+              className: c ? void 0 : a.disabled
           })
         : (0, r.jsx)(l.F, {
               price: t,
@@ -21,7 +21,7 @@ function s(e) {
 function c(e) {
     let { displayPrices: t, isPremiumUser: n, discount: l, hasSufficientOrbs: o } = e;
     return (0, r.jsx)('div', {
-        className: i.priceLine,
+        className: a.priceLine,
         children: t.map((e, t) =>
             (0, r.jsx)(
                 s,

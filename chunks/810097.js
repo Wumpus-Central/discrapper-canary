@@ -102,7 +102,7 @@ function N(e) {
                     }),
                 w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         },
-        M = () => {
+        k = () => {
             (L(I),
                 n === m.n_.AVATAR ? T({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : T({ action: 'PRESS_REPLY_ACTIVITY' }),
                 null == D ||
@@ -146,7 +146,7 @@ function N(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {
-                    onClick: M,
+                    onClick: k,
                     className: E.button,
                     'aria-label': A[n](),
                     'aria-haspopup': 'dialog',

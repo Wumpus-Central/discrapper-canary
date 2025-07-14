@@ -247,12 +247,12 @@ function x(e) {
     for (let t of i) o.has(t) || (r = T(e.guildId).updateMember(t) || r);
     return r;
 }
-function M(e) {
+function k(e) {
     let { guildId: t } = e,
         n = u.default.getId();
     return null != n && T(null != t ? t : g.ME).updateVoiceState(n);
 }
-function k() {
+function M() {
     return a().reduce(I, (e, t) => t.updateUsers() || e, !1);
 }
 function j(e) {
@@ -278,7 +278,7 @@ function B() {
 }
 class V extends (r = o.ZP.Store) {
     initialize() {
-        (B(), this.waitFor(u.default, _.default, f.ZP, p.Z), this.syncWith([_.default], k));
+        (B(), this.waitFor(u.default, _.default, f.ZP, p.Z), this.syncWith([_.default], M));
     }
     getVoiceStates(e) {
         return T(null != e ? e : g.ME).getVoiceStates();
@@ -308,7 +308,7 @@ E(V, 'displayName', 'SortedVoiceStateStore');
 let F = new V(l.Z, {
     CONNECTION_OPEN: w,
     OVERLAY_INITIALIZE: D,
-    VOICE_CHANNEL_SELECT: M,
+    VOICE_CHANNEL_SELECT: k,
     VOICE_STATE_UPDATES: L,
     GUILD_MEMBER_UPDATE: j,
     GUILD_CREATE: U,

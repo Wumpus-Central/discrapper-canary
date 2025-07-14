@@ -124,7 +124,7 @@ function E(e) {
                         (clearInterval(E.current), (E.current = null), (b.current = 0));
                         return;
                     }
-                    (p(), b.current++);
+                    (b.current++, p());
                 }, 200)));
         }, [p]);
     return (

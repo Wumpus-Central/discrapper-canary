@@ -191,6 +191,10 @@ class D extends (r = l.ZP.PersistedStore) {
         var t, n, r;
         return null == e ? null : null == (r = this.settings.guilds) || null == (n = r.guilds) || null == (t = n[e]) ? void 0 : t.dismissedGuildContent;
     }
+    getGuildDismissedContentState(e) {
+        var t, n, r;
+        return null == (r = this.settings.guilds) || null == (n = r.guilds) || null == (t = n[e]) ? void 0 : t.guildDismissibleContentStates;
+    }
     getGuildsProto() {
         var e, t;
         return null != (t = null == (e = this.settings.guilds) ? void 0 : e.guilds) ? t : null;

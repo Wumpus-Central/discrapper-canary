@@ -85,10 +85,10 @@ function Z(e) {
     let D = Math.min((R / Z) * 100, 100),
         [L, M] = (0, d.q_F)(
             () => ({
-                width: R === t.premiumSubscriberCount ? ''.concat(D, '%') : '0%',
+                width: R === t.premiumSubscriberCount ? 'calc('.concat(D, '% - 4px)') : '0%',
                 config: {
-                    tension: 285,
-                    damping: 10,
+                    tension: 250,
+                    damping: 5,
                     mass: 1
                 }
             }),
@@ -96,7 +96,7 @@ function Z(e) {
             [R, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
-        M({ width: ''.concat(D, '%') });
+        M({ width: 'calc('.concat(D, '% - 4px)') });
     }, [D, M]);
     let k = R >= Z,
         U = i.useRef(null),
@@ -147,12 +147,10 @@ function Z(e) {
                         children: (0, r.jsxs)('div', {
                             className: P.contentContainer,
                             children: [
-                                (0, r.jsx)('div', {
-                                    className: P.progressContainer,
-                                    children: (0, r.jsx)(a.animated.div, {
-                                        className: o()(P.progress, { [P.progressLow]: D <= 5 }),
-                                        style: L
-                                    })
+                                (0, r.jsx)('div', { className: P.progressContainer }),
+                                (0, r.jsx)(a.animated.div, {
+                                    className: o()(P.progress, { [P.progressLow]: D <= 5 }),
+                                    style: L
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: P.textContainer,

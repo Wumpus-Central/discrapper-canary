@@ -10,8 +10,8 @@ r(73800);
 var a = r(120356),
     i = r.n(a),
     l = r(481060),
-    s = r(304680),
-    o = r(763520),
+    o = r(304680),
+    s = r(763520),
     c = r(600164),
     d = r(352978),
     u = r(131951),
@@ -103,7 +103,7 @@ function b(e, t, r, a, b) {
                                           streamId: l,
                                           videoComponent: u.Z.getMediaEngine().Video,
                                           paused: !1,
-                                          videoSpinnerContext: o.m.REPLAY_VIDEO_STREAM,
+                                          videoSpinnerContext: s.m.REPLAY_VIDEO_STREAM,
                                           userId: r
                                       })
                                   })
@@ -128,7 +128,7 @@ function b(e, t, r, a, b) {
                                     (0, n.jsx)(l.q4e, {
                                         value: m.ZP.getSimulcastDebugOverride(a, t),
                                         onChange: (e) => {
-                                            s.MS(a, t, e);
+                                            o.MS(a, t, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,

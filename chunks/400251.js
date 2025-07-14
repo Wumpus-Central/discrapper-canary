@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => A,
-    m: () => T
+    m: () => N
 }),
     n(388685),
     n(953529));
@@ -24,8 +24,8 @@ var r = n(255367),
     C = n(411198),
     x = n(683818),
     v = n(16853),
-    O = n(981631),
-    j = n(388032),
+    j = n(981631),
+    O = n(388032),
     E = n(901593),
     S = n(883760);
 function I(e) {
@@ -90,7 +90,7 @@ function Z(e, t) {
     }
     return i;
 }
-let T = (e) => {
+let N = (e) => {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
@@ -104,12 +104,12 @@ let T = (e) => {
                 variant: 'text-sm/semibold',
                 color: 'header-primary',
                 className: E.addServerText,
-                children: j.intl.string(j.t.H9jxS0)
+                children: O.intl.string(O.t.H9jxS0)
             })
         ]
     });
 };
-function N(e) {
+function T(e) {
     let { entry: t } = e,
         [l, o] = i.useState(!1),
         s = i.useRef(null),
@@ -120,7 +120,7 @@ function N(e) {
             children: [
                 u
                     ? (0, r.jsx)(c.ua7, {
-                          text: j.intl.string(j.t.XnuOvL),
+                          text: O.intl.string(O.t.XnuOvL),
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
@@ -135,7 +135,7 @@ function N(e) {
                                                   return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
                                               }));
                                       },
-                                      'aria-label': j.intl.string(j.t.XnuOvL),
+                                      'aria-label': O.intl.string(O.t.XnuOvL),
                                       children: (0, r.jsx)(c.vdY, {
                                           size: 'xs',
                                           color: 'currentColor',
@@ -156,7 +156,7 @@ function N(e) {
                         var { onClick: t } = e,
                             n = Z(e, ['onClick']);
                         return (0, r.jsx)(c.ua7, {
-                            text: j.intl.string(j.t.UKOtz8),
+                            text: O.intl.string(O.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
@@ -168,7 +168,7 @@ function N(e) {
                                         onClick: (e) => {
                                             (null == i || i(), t(e));
                                         },
-                                        'aria-label': j.intl.string(j.t.UKOtz8),
+                                        'aria-label': O.intl.string(O.t.UKOtz8),
                                         children: (0, r.jsx)(c.xhG, {
                                             size: 'md',
                                             color: 'currentColor',
@@ -192,7 +192,7 @@ let A = (e) => {
         v = async () => {
             h(!0);
             try {
-                x ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: O.vtS.DIRECTORY_ENTRY });
+                x ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: j.vtS.DIRECTORY_ENTRY });
             } finally {
                 h(!1);
             }
@@ -211,9 +211,9 @@ let A = (e) => {
             }))
                 ? t
                 : void 0,
-        T = j.intl.string(j.t.VJlc0d);
+        N = O.intl.string(O.t.VJlc0d);
     return (
-        x && (T = j.intl.string(j.t.cqWE2d)),
+        x && (N = O.intl.string(O.t.cqWE2d)),
         (0, r.jsxs)('div', {
             className: E.card,
             onContextMenu: (e) => {
@@ -292,7 +292,7 @@ let A = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: j.intl.format(j.t['LC+S+v'], { membersOnline: l.approximatePresenceCount })
+                                                children: O.intl.format(O.t['LC+S+v'], { membersOnline: l.approximatePresenceCount })
                                             })
                                         ]
                                     }),
@@ -304,7 +304,7 @@ let A = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'header-secondary',
-                                                children: j.intl.format(j.t.zRl6XV, { count: l.approximateMemberCount })
+                                                children: O.intl.format(O.t.zRl6XV, { count: l.approximateMemberCount })
                                             })
                                         ]
                                     })
@@ -315,11 +315,11 @@ let A = (e) => {
                             className: E.joinButton,
                             color: x ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN,
                             onClick: v,
-                            children: T
+                            children: N
                         })
                     ]
                 }),
-                (0, r.jsx)(N, { entry: l })
+                (0, r.jsx)(T, { entry: l })
             ]
         })
     );

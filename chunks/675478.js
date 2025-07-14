@@ -6,12 +6,13 @@
     T6: () => S,
     Z1: () => M,
     aj: () => R,
-    bE: () => j,
+    bE: () => U,
     fy: () => E.fy,
     hW: () => N,
+    m9: () => x,
     nm: () => D,
-    sr: () => k,
-    w9: () => x
+    sr: () => j,
+    w9: () => k
 }),
     n(415506),
     n(388685),
@@ -334,7 +335,16 @@ async function L(e, t) {
         E.fy.INFREQUENT_USER_ACTION
     );
 }
-function x(e) {
+async function x(e, t, n) {
+    return await P(
+        t,
+        (t) => {
+            t.guildDismissibleContentStates[e] = O({}, t.guildDismissibleContentStates[e], n);
+        },
+        E.fy.INFREQUENT_USER_ACTION
+    );
+}
+function k(e) {
     return N.updateAsync(
         'userContent',
         (t) => {
@@ -351,7 +361,7 @@ function M(e) {
         lastDismissedObjectId: '0'
     });
 }
-function k() {
+function j() {
     return N.updateAsync(
         'userContent',
         (e) => {
@@ -360,7 +370,7 @@ function k() {
         E.fy.INFREQUENT_USER_ACTION
     );
 }
-function j() {
+function U() {
     return N.updateAsync(
         'userContent',
         (e) => {

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => i });
 var r = n(255367);
 n(73800);
 var l = n(481060),
     o = n(215023);
-let a = (e) => {
-    let { product: t, analyticsLocations: a, overrideTitle: i, overrideDescription: s, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: p, purchaseType: g = o.o8.FIAT } = e;
+let i = (e) => {
+    let { product: t, analyticsLocations: i, overrideTitle: a, overrideDescription: s, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: p, purchaseType: g = o.o8.FIAT } = e;
     (0, l.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
@@ -38,8 +38,8 @@ let a = (e) => {
                     })(
                         {
                             product: t,
-                            analyticsLocations: a,
-                            overrideTitle: i,
+                            analyticsLocations: i,
+                            overrideTitle: a,
                             overrideDescription: s,
                             shouldShowPromotionalExperience: c,
                             shouldCheckoutWithOrbs: u,

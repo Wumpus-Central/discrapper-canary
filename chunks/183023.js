@@ -39,8 +39,8 @@ var r = n(255367),
     D = n(703656),
     L = n(944486),
     x = n(914010),
-    M = n(594174),
-    k = n(626135),
+    k = n(594174),
+    M = n(626135),
     j = n(768581),
     U = n(900849),
     G = n(74538),
@@ -301,7 +301,7 @@ let Q = 32,
     er = (e) => {
         var t, n, a;
         let { node: c, sourceType: E, expressionSourceApplication: O, expressionSourceGuild: T, joinedEmojiSourceGuildRecord: S, closePopout: R, onToggleShowMoreEmojis: D, guildEmoji: L, demoMode: j = !1, nonce: U } = e,
-            K = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
+            K = (0, l.e7)([k.default], () => k.default.getCurrentUser()),
             z = (0, l.e7)([x.Z], () => x.Z.getGuildId()),
             q = G.ZP.isPremium(K),
             X = null != z && (z === (null == T ? void 0 : T.id) || z === (null == S ? void 0 : S.id)),
@@ -356,7 +356,7 @@ let Q = 32,
                 shouldHideRoleSubscriptionCTA: eo,
                 onOpenPremiumSettings: () => {
                     (R(),
-                        k.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
+                        M.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: ee.page,
                             location_section: ee.section
                         }),
@@ -460,7 +460,7 @@ let Q = 32,
                 var e, t;
                 let n = null != T && !Q && J && (null != (t = null == T || null == (e = T.emojis) ? void 0 : e.length) ? t : 0) > 1,
                     i = () => {
-                        n && (null == D || D(), em || j || k.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef), eg(!em));
+                        n && (null == D || D(), em || j || M.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef), eg(!em));
                     },
                     a = () => {
                         let e = Y.intl.string(Y.t.pnsAS0);

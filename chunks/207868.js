@@ -23,7 +23,7 @@ let y = i.memo(function (e) {
         C = (0, o.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
         { needSubscriptionToAccess: x } = (0, d.Z)(t.id),
         v = (0, p.$R)(t),
-        O = i.useCallback(() => {
+        j = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: l,
@@ -33,12 +33,12 @@ let y = i.memo(function (e) {
         }, [t, l, x]);
     return (i.useEffect(
         () => (
-            m.S.subscribe(b.CkL.CALL_START, O),
+            m.S.subscribe(b.CkL.CALL_START, j),
             () => {
-                m.S.unsubscribe(b.CkL.CALL_START, O);
+                m.S.unsubscribe(b.CkL.CALL_START, j);
             }
         ),
-        [O]
+        [j]
     ),
     p.tM.useExperiment(
         {
@@ -54,7 +54,7 @@ let y = i.memo(function (e) {
         t.isVocalThread())
         ? (0, r.jsx)(g.ZP.Icon, {
               icon: s.Csw,
-              onClick: O,
+              onClick: j,
               tooltip: y ? _.intl.string(_.t.fdEeb2) : _.intl.string(_.t.focH1t)
           })
         : null;

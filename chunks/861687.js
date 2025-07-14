@@ -31,8 +31,8 @@ var r = n(654861),
     D = n(314897),
     L = n(592125),
     x = n(131951),
-    M = n(19780),
-    k = n(226961),
+    k = n(19780),
+    M = n(226961),
     j = n(936349),
     U = n(594174),
     G = n(626135),
@@ -367,23 +367,19 @@ class ev extends d.Z {
         let t = this.token;
         if (null == t) throw Error('RTCConnection._handleConnect(...): Token is missing.');
         (this.logger.info('Connected to RTC server.'),
-            this._fetchAsyncResourcesPromise
-                .catch((e) => {
-                    H.Z.captureException(e);
-                })
-                .finally(() => {
-                    (e.identify({
-                        serverId: this.trueServerId,
-                        channelId: this.trueChannelId,
-                        userId: this.userId,
-                        sessionId: this.sessionId,
-                        token: t,
-                        maxDaveProtocolVersion: x.Z.getSupportedSecureFramesProtocolVersion(),
-                        video: x.Z.supports(es.AN.VIDEO),
-                        streamParameters: x.Z.getVideoStreamParameters(this.context)
-                    }),
-                        this.setState(eo.hes.AUTHENTICATING));
-                }));
+            this._fetchAsyncResourcesPromise.finally(() => {
+                (e.identify({
+                    serverId: this.trueServerId,
+                    channelId: this.trueChannelId,
+                    userId: this.userId,
+                    sessionId: this.sessionId,
+                    token: t,
+                    maxDaveProtocolVersion: x.Z.getSupportedSecureFramesProtocolVersion(),
+                    video: x.Z.supports(es.AN.VIDEO),
+                    streamParameters: x.Z.getVideoStreamParameters(this.context)
+                }),
+                    this.setState(eo.hes.AUTHENTICATING));
+            }));
     }
     _handleDisconnect(e, t, n, r) {
         var i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, I, T, S;
@@ -401,7 +397,7 @@ class ev extends d.Z {
                     })
                 ),
                 (this._encountered_socket_failure = !0)),
-            M.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null == (l = this._connection) || l.wasRemoteDisconnected()));
+            k.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null == (l = this._connection) || l.wasRemoteDisconnected()));
         let A = 'Force Close' !== r;
         if (A) {
             let e = this._backoff.fail(this.reconnect);
@@ -554,14 +550,19 @@ class ev extends d.Z {
                     var e, t;
                     return null != (t = await (null == (e = this._systemResources) ? void 0 : e.getBatteryLevelStats())) ? t : { batteryUsageRounded: null };
                 })(),
-                P.Z.getKrispModel()
+                P.Z.getKrispModel(),
+                x.Z.getKrispEnableStats() ? x.Z.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null)
             ]).then((e) => {
-                let [{ batteryUsageRounded: t }, n] = e;
+                let [{ batteryUsageRounded: t }, n, r] = e;
                 G.default.track(
                     eo.rMx.VOICE_DISCONNECT,
                     ed(ec({}, s), {
                         battery_usage: t,
-                        krisp_nc_model: n
+                        krisp_nc_model: n,
+                        duration_low_noise_detected_ms: null == r ? void 0 : r.lowNoiseMs,
+                        duration_medium_noise_detected_ms: null == r ? void 0 : r.mediumNoiseMs,
+                        duration_high_noise_detected_ms: null == r ? void 0 : r.highNoiseMs,
+                        duration_noise_cancellation_voice_detected_ms: null == r ? void 0 : r.talkTimeMs
                     })
                 );
             }),
@@ -1456,7 +1457,9 @@ class ev extends d.Z {
                 null == (t = this._videoQuality) || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
-            (this._fetchAsyncResourcesPromise = x.Z.fetchAsyncResources()),
+            (this._fetchAsyncResourcesPromise = x.Z.fetchAsyncResources().catch((e) => {
+                H.Z.captureException(e);
+            })),
             (this.userId = e),
             (this.sessionId = t),
             (this.guildId = n),
@@ -1540,7 +1543,7 @@ class ev extends d.Z {
         ((this._remoteVideoSinkWants = Q.Yy),
             ea.w.on(ea.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             ea.w.on(ea.e.WindowVisibilityChanged, this.windowVisibilityChanged),
-            k.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), g.TC(!1)) : (this._recordingEnabled = !1),
+            M.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), g.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new J.Z()),
             F.Z.addOnlineCallback(this._handleNetworkOnline),
             F.Z.addOfflineCallback(this._handleNetworkOffline),

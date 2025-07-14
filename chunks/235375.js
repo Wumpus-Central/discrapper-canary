@@ -6,11 +6,11 @@
     n(35282),
     n(388685));
 var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    s = n(159635),
-    a = n.n(s),
+    o = n(73800),
+    l = n(120356),
+    i = n.n(l),
+    a = n(159635),
+    s = n.n(a),
     c = n(481060),
     u = n(37234),
     d = n(230711),
@@ -44,30 +44,30 @@ function h(e) {
     }
     return e;
 }
-let O = a().defaultRules.link,
+let O = s().defaultRules.link,
     y = { section: f.jXE.SETTINGS_CHANGELOG },
     v = (e) => {
-        let { level: t, children: n, className: r = null, styleSheet: o = {} } = e,
-            s = (0, c.xSt)(),
-            a = parseInt(t, 10),
-            u = isNaN(a) ? 1 : a;
-        return l.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => o[e]))) }, n);
+        let { level: t, children: n, className: r = null, styleSheet: l = {} } = e,
+            a = (0, c.xSt)(),
+            s = parseInt(t, 10),
+            u = isNaN(s) ? 1 : s;
+        return o.createElement('h'.concat(a + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => l[e]))) }, n);
     },
     j = null != p.Z ? p.Z.defaultRules : null,
     P = {
         link: {
             parse(e, t, n) {
-                var r, l;
-                let o,
+                var r, o;
+                let l,
                     i = e[2],
-                    s = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    a = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
+                    a = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
+                    s = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
                     p = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
-                    (o =
-                        s || a
+                    (l =
+                        a || s
                             ? (e) => {
-                                  (g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), s ? d.Z.open(f.oAB.PREMIUM) : a && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault());
+                                  (g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), a ? d.Z.open(f.oAB.PREMIUM) : s && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault());
                               }
                             : p
                               ? (e) => {
@@ -87,9 +87,9 @@ let O = a().defaultRules.link,
                                         ));
                                 }),
                     (r = h({}, O.parse(e, t, n))),
-                    (l = l = { callToAction: o }),
+                    (o = o = { callToAction: l }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -97,8 +97,8 @@ let O = a().defaultRules.link,
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                           }),
                     r
                 );
@@ -107,7 +107,7 @@ let O = a().defaultRules.link,
                 (0, r.jsx)(
                     c.eee,
                     {
-                        href: a().sanitizeUrl(e.target),
+                        href: s().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: '_blank',
@@ -118,16 +118,16 @@ let O = a().defaultRules.link,
                 )
         },
         lheading: (e) => ({
-            react: (t, n, l) =>
+            react: (t, n, o) =>
                 (0, r.jsx)(
                     v,
                     {
                         level: t.level,
                         className: t.className,
                         styleSheet: e,
-                        children: n(t.content, l)
+                        children: n(t.content, o)
                     },
-                    l.key
+                    o.key
                 )
         }),
         heading: {
@@ -142,15 +142,15 @@ let O = a().defaultRules.link,
                 )
         },
         image: {
-            react(e, t, l) {
-                let o = n(595173)('./'.concat(e.target));
+            react(e, t, o) {
+                let l = n(595173)('./'.concat(e.target));
                 return (0, r.jsx)(
                     'img',
                     {
                         alt: e.alt,
-                        src: o
+                        src: l
                     },
-                    l.key
+                    o.key
                 );
             }
         },

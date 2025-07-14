@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(643632),
     x = n(388032),
     v = n(941188);
-function O(e) {
+function j(e) {
     let { onClick: t, className: n } = e,
         i = c.S6n;
     return (0, r.jsx)(d.Z, {
@@ -38,7 +38,7 @@ function O(e) {
         className: n
     });
 }
-function j(e) {
+function O(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: i } = (0, y.Z)(t.id);
     return (0, r.jsxs)('div', {
@@ -117,12 +117,12 @@ function E(e) {
                           })
                         : null,
                     l
-                        ? (0, r.jsx)(O, {
+                        ? (0, r.jsx)(j, {
                               className: a()({ [v.eventPrompt]: !0 }),
                               onClick: n
                           })
                         : null,
-                    (0, r.jsx)(j, { channel: t })
+                    (0, r.jsx)(O, { channel: t })
                 ]
             })
         ]

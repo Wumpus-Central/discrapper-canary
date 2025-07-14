@@ -2,9 +2,9 @@ n.d(t, {
     L6: () => V,
     Rc: () => G,
     WH: () => R,
-    aP: () => k,
+    aP: () => M,
     dV: () => B,
-    g: () => M,
+    g: () => k,
     iV: () => x,
     n9: () => j,
     pR: () => L,
@@ -126,16 +126,16 @@ function x(e, t) {
         a = g.Z.getVoiceChannelId();
     (i && a === r) || (0, u.Z)(e);
 }
-function M(e) {
+function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    (k(e, t),
+    (M(e, t),
         s.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
             appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
         }));
 }
-function k(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     s.Z.dispatch({
         type: 'STREAM_CLOSE',
@@ -201,5 +201,5 @@ function B(e, t) {
 function V() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
-    null != t && M((0, c.V9)(t), e);
+    null != t && k((0, c.V9)(t), e);
 }

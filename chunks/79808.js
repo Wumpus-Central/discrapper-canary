@@ -1,27 +1,29 @@
-(t.d(e, { Z: () => x }), t(388685));
-var o = t(255367),
-    a = t(73800),
-    i = t(120356),
-    s = t.n(i),
-    r = t(873546),
-    c = t(636298),
-    d = t(404975),
-    l = t(178167),
-    u = t(254204);
-function x(n) {
-    let { onClose: e } = n,
-        [t, i] = (0, a.useState)(!0);
-    return (0, o.jsxs)('div', {
-        className: s()(u.container, {
-            [u.mobile]: r.tq,
-            [u.mobileNavigationOpen]: t
+(n.d(t, { Z: () => f }), n(388685));
+var a = n(255367),
+    i = n(73800),
+    o = n(120356),
+    r = n.n(o),
+    s = n(873546),
+    l = n(636298),
+    d = n(404975),
+    c = n(178167),
+    u = n(254204);
+function f(e) {
+    let { onClose: t, config: n, initialSetting: o } = e,
+        [f, m] = i.useState(!0),
+        [h, x] = i.useState(o);
+    return (0, a.jsxs)('div', {
+        className: r()(u.container, {
+            [u.mobile]: s.tq,
+            [u.mobileNavigationOpen]: f
         }),
         children: [
-            (0, o.jsx)(l.d, { onClose: e }),
-            (0, o.jsx)(d.P, {}),
-            (0, o.jsx)(c.P, {
-                onClose: e,
-                setShowNavigationMobile: i
+            (0, a.jsx)(c.d, { onClose: t }),
+            (0, a.jsx)(d.P, {}),
+            (0, a.jsx)(l.Z, {
+                onClose: t,
+                setShowNavigationMobile: m,
+                setting: h
             })
         ]
     });

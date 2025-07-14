@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(856985),
     x = n(868643),
     v = n(245216),
-    O = n(223606),
-    j = n(188597),
+    j = n(223606),
+    O = n(188597),
     E = n(41776),
     S = n(980463),
     I = n(328908),
     P = n(992970),
     Z = n(135793),
-    T = n(576645),
-    N = n(84040),
+    N = n(576645),
+    T = n(84040),
     A = n(222677),
     w = n(995774),
     R = n(931651),
@@ -183,8 +183,8 @@ function ef(e) {
             canPublish: b,
             canReact: y,
             canConfigureJoin: C,
-            canReply: O,
-            canStartThread: j,
+            canReply: j,
+            canStartThread: O,
             canViewThread: A,
             canForward: w,
             isExpanded: R,
@@ -213,15 +213,15 @@ function ef(e) {
                     }),
                     [t, y]
                 ),
-                O = (0, M.U)(t, n),
-                j = (0, L.NE)(t, n),
+                j = (0, M.U)(t, n),
+                O = (0, L.NE)(t, n),
                 S = (0, L.Ek)(n),
                 I = (0, u.e7)([E.Z], () => null != t.guild_id && E.Z.isLurking(t.guild_id), [t]),
                 P = (0, u.e7)([H.ZP], () => null != t.guild_id && H.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 Z = s.id === p,
-                T = (C || n.canDeleteOwnMessage(p)) && h && !ei.V$x.UNDELETABLE.has(n.type);
-            n.type === ei.uaV.AUTO_MODERATION_ACTION && (T = T && C);
-            let N = (0, X.a4)(n),
+                N = (C || n.canDeleteOwnMessage(p)) && h && !ei.V$x.UNDELETABLE.has(n.type);
+            n.type === ei.uaV.AUTO_MODERATION_ACTION && (N = N && C);
+            let T = (0, X.a4)(n),
                 A = (0, J.Z)(n, t, C),
                 w = !t.isSystemDM() && (0, Q.Z)(n, p) && h && !g,
                 { disableReactionCreates: R } = (0, $.Z)({
@@ -246,10 +246,10 @@ function ef(e) {
                 message: n,
                 canPin: A,
                 canEdit: w,
-                canDelete: T,
-                canReport: N,
-                canReply: O,
-                canStartThread: j,
+                canDelete: N,
+                canReport: T,
+                canReply: j,
+                canStartThread: O,
                 canViewThread: S,
                 canForward: K,
                 canCopy: Y.wS,
@@ -283,12 +283,12 @@ function ef(e) {
         e_ = n.hasFlag(ei.iLy.CROSSPOSTED),
         [ey, eC] = (0, g.cv)(w ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ex = ey === d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [ev, eO] = i.useState(!1),
-        ej = i.useCallback(() => {
-            eO(!0);
+        [ev, ej] = i.useState(!1),
+        eO = i.useCallback(() => {
+            ej(!0);
         }, []),
         eE = i.useCallback(() => {
-            eO(!1);
+            ej(!1);
         }, []),
         eS = i.useCallback(
             (e, t) => {
@@ -298,10 +298,10 @@ function ef(e) {
         ),
         { canShowReactionsOnMessageHover: eI } = _.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     _.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
-    let eP = (0, N.Z)(t),
-        eZ = (0, T.Nt)(),
-        eT = eP && eZ && !n.hasPotions(),
-        eN = i.useCallback(
+    let eP = (0, T.Z)(t),
+        eZ = (0, N.Nt)(),
+        eN = eP && eZ && !n.hasPotions(),
+        eT = i.useCallback(
             (e) => {
                 try {
                     (0, S.qc)(t.id, n.id, e);
@@ -382,7 +382,7 @@ function ef(e) {
                                     'pin'
                                 )
                               : null,
-                          j && w
+                          O && w
                               ? (0, r.jsx)(
                                     ee.sF,
                                     {
@@ -393,7 +393,7 @@ function ef(e) {
                                     'thread'
                                 )
                               : null,
-                          O && h
+                          j && h
                               ? (0, r.jsx)(
                                     ee.sF,
                                     {
@@ -429,7 +429,7 @@ function ef(e) {
                               channel: t,
                               message: n
                           }),
-                          eT
+                          eN
                               ? (0, r.jsx)(
                                     ee.sF,
                                     {
@@ -440,7 +440,7 @@ function ef(e) {
                                                 (0, Z.s)({
                                                     channelId: t.id,
                                                     message: n,
-                                                    onRedeem: eN,
+                                                    onRedeem: eT,
                                                     onClose: I.Qy,
                                                     source: P.YD.MessageExpandingButtons
                                                 }));
@@ -452,7 +452,7 @@ function ef(e) {
                       ]
                   })
                 : null,
-            O && !h
+            j && !h
                 ? (0, r.jsx)(
                       ee.sF,
                       {
@@ -481,14 +481,14 @@ function ef(e) {
                           label: eo.intl.string(eo.t.I3ltXF),
                           icon: v.Z,
                           onClick: () => eS(t, n),
-                          onTooltipShow: ej,
+                          onTooltipShow: eO,
                           onTooltipHide: eE,
                           showNewBadge: !ev && ex
                       },
                       'forward'
                   )
                 : null,
-            j && !w
+            O && !w
                 ? (0, r.jsx)(
                       ee.sF,
                       {
@@ -499,7 +499,7 @@ function ef(e) {
                       'thread'
                   )
                 : null,
-            !j && A
+            !O && A
                 ? (0, r.jsx)(
                       ee.sF,
                       {
@@ -597,8 +597,8 @@ function ef(e) {
 }
 function em(e) {
     let { channel: t, message: n } = e,
-        i = (0, u.e7)([O.Z], () => null != O.Z.getMessage(n.id), [n.id]),
-        l = null == n.interaction || (null != n.interactionData && (0, j.$s)(n.interactionData));
+        i = (0, u.e7)([j.Z], () => null != j.Z.getMessage(n.id), [n.id]),
+        l = null == n.interaction || (null != n.interactionData && (0, O.$s)(n.interactionData));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !i &&

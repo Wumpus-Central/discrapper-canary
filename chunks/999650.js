@@ -114,23 +114,23 @@ function x() {
             .map((e) => e.toString())
     );
 }
-function M(e, t) {
+function k(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function k(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return M(l()().startOf(e).add(t, e), e);
+    return k(l()().startOf(e).add(t, e), e);
 }
 function j(e, t, n) {
-    return M(l()(e, t).local(), n);
+    return k(l()(e, t).local(), n);
 }
 function U() {
     return {
-        [N.intl.string(N.t.HYiVER)]: () => k('day'),
-        [N.intl.string(N.t.cu86KC)]: () => k('day', -1),
-        [N.intl.string(N.t['FvBj//'])]: () => k('week'),
-        [N.intl.string(N.t['20uWCw'])]: () => k('month'),
-        [N.intl.string(N.t['dXC/ho'])]: () => k('year')
+        [N.intl.string(N.t.HYiVER)]: () => M('day'),
+        [N.intl.string(N.t.cu86KC)]: () => M('day', -1),
+        [N.intl.string(N.t['FvBj//'])]: () => M('week'),
+        [N.intl.string(N.t['20uWCw'])]: () => M('month'),
+        [N.intl.string(N.t['dXC/ho'])]: () => M('year')
     };
 }
 let G = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',

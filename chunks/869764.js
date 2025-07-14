@@ -13,8 +13,8 @@ var l = n(255367),
     d = n(471445),
     u = n(592125),
     m = n(271383),
-    I = n(430824),
-    h = n(496675),
+    h = n(430824),
+    I = n(496675),
     g = n(186523),
     N = n(768581),
     f = n(630388),
@@ -22,8 +22,8 @@ var l = n(255367),
     p = n(563534),
     E = n(846121),
     T = n(216701),
-    x = n(981631),
-    O = n(372897),
+    O = n(981631),
+    x = n(372897),
     _ = n(388032),
     j = n(411114);
 function v(e) {
@@ -48,8 +48,8 @@ function v(e) {
             return i;
         })(e, ['title', 'emojiId', 'emojiName', 'icon', 'completed', 'Icon', 'onClick']);
     let m = 'channel' === u.variant ? u.channelId : null,
-        I = 'static' === u.variant ? u.subtitle : u.channelName,
-        h =
+        h = 'static' === u.variant ? u.subtitle : u.channelName,
+        I =
             null != m
                 ? N.ZP.getNewMemberActionIconURL({
                       channelId: m,
@@ -60,9 +60,9 @@ function v(e) {
         className: s()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
-            null != h
+            null != I
                 ? (0, l.jsx)('img', {
-                      src: h,
+                      src: I,
                       className: j.icon,
                       width: 32,
                       height: 32,
@@ -89,11 +89,11 @@ function v(e) {
                         color: 'header-primary',
                         children: t
                     }),
-                    null != I
+                    null != h
                         ? (0, l.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: I
+                              children: h
                           })
                         : null
                 ]
@@ -116,12 +116,12 @@ function v(e) {
 function b(e) {
     var t;
     let { action: n, completed: r } = e,
-        { channelId: s, title: m, emoji: I, icon: g } = n,
-        { id: N, name: f } = null != I ? I : {},
+        { channelId: s, title: m, emoji: h, icon: g } = n,
+        { id: N, name: f } = null != h ? h : {},
         p = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
         E = (0, c.ZP)(p, !0),
-        T = (0, a.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, p)),
-        O = i.useMemo(() => {
+        T = (0, a.e7)([I.Z], () => I.Z.can(O.Plq.VIEW_CHANNEL, p)),
+        x = i.useMemo(() => {
             if (null != p) return () => (0, S.gp)(p.guild_id, p.id);
         }, [p]);
     if (null == p || !T) return null;
@@ -136,7 +136,7 @@ function b(e) {
         icon: g,
         completed: r,
         Icon: _,
-        onClick: O
+        onClick: x
     });
 }
 function D(e) {
@@ -144,10 +144,10 @@ function D(e) {
         n = (0, a.e7)([p.Z], () => p.Z.getNewMemberActions(t), [t]),
         r = (0, a.e7)([E.Z], () => E.Z.getCompletedActions(t)),
         c = (0, a.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
-        d = (0, a.e7)([I.Z], () => I.Z.getGuild(t));
+        d = (0, a.e7)([h.Z], () => h.Z.getGuild(t));
     i.useEffect(() => {
         var e;
-        null == r && (null == c ? void 0 : c.flags) != null && (0, f.yE)(null != (e = c.flags) ? e : 0, O.q.STARTED_HOME_ACTIONS) && (0, S.Fg)(t);
+        null == r && (null == c ? void 0 : c.flags) != null && (0, f.yE)(null != (e = c.flags) ? e : 0, x.q.STARTED_HOME_ACTIONS) && (0, S.Fg)(t);
     }, [r, t, null == c ? void 0 : c.flags]);
     let u = i.useCallback(() => {
         null != d && null != d.rulesChannelId && (0, S.gp)(d.id, d.rulesChannelId);

@@ -52,7 +52,8 @@ class m extends o.C {
             owningTeamName: '',
             cachedNotificationChannelId: '0',
             exposureTracking: 0,
-            enableEditRawJsonUi: !1
+            enableEditRawJsonUi: !1,
+            winningVariantId: 0
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -136,6 +137,9 @@ class m extends o.C {
                 case 23:
                     a.enableEditRawJsonUi = e.bool();
                     break;
+                case 24:
+                    a.winningVariantId = e.int32();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -154,7 +158,7 @@ class m extends o.C {
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);
             t.join();
         }
-        ('' !== e.owningTeamName && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamName), '0' !== e.cachedNotificationChannelId && t.tag(21, r.TD.Bit64).fixed64(e.cachedNotificationChannelId), 0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking), !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi));
+        ('' !== e.owningTeamName && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamName), '0' !== e.cachedNotificationChannelId && t.tag(21, r.TD.Bit64).fixed64(e.cachedNotificationChannelId), 0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking), !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi), 0 !== e.winningVariantId && t.tag(24, r.TD.Varint).int32(e.winningVariantId));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
@@ -294,6 +298,12 @@ class m extends o.C {
                 name: 'enable_edit_raw_json_ui',
                 kind: 'scalar',
                 T: 8
+            },
+            {
+                no: 24,
+                name: 'winning_variant_id',
+                kind: 'scalar',
+                T: 5
             }
         ]);
     }

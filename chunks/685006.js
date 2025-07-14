@@ -22,13 +22,13 @@ var r = n(255367),
     C = n(981631),
     x = n(314734),
     v = n(522271);
-let O = (0, o.U)(() => ({ visible: !1 })),
-    j = (e) => {
+let j = (0, o.U)(() => ({ visible: !1 })),
+    O = (e) => {
         (0, s.j)(() => {
-            O.setState({ visible: e });
+            j.setState({ visible: e });
         });
     },
-    E = O;
+    E = j;
 function S(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: a, application: o, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
@@ -45,13 +45,13 @@ function S(e) {
                       source: g._b.TEXT
                   }));
         }, [c, f]),
-        O = null != x && x.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
-        E = !a && null != o && !0 === O;
+        j = null != x && x.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
+        E = !a && null != o && !0 === j;
     return (i.useEffect(
         () => (
-            j(E),
+            O(E),
             () => {
-                j(!1);
+                O(!1);
             }
         ),
         [E]
@@ -85,7 +85,7 @@ function I(e) {
             application: n,
             showAppLauncherPopup: u
         }),
-        O = (0, f.J)({
+        j = (0, f.J)({
             context: t,
             application: n,
             isEmbeddedApp: m,
@@ -96,13 +96,13 @@ function I(e) {
             setIsExecutingLaunchInteraction: _,
             analyticsLocations: C
         }),
-        j = h ? c.zx.Colors.RED : c.zx.Colors.BRAND;
+        O = h ? c.zx.Colors.RED : c.zx.Colors.BRAND;
     return (0, r.jsx)(c.zx, {
         className: a()(v.entryPointAppCommandButton, x.Id),
         size: c.zx.Sizes.SMALL,
-        color: j,
+        color: O,
         submitting: d,
-        onClick: O,
+        onClick: j,
         buttonRef: o,
         children: p
     });

@@ -8,17 +8,17 @@ var l = t(255367),
     o = t(353926),
     d = t(931261),
     u = t(333323),
-    h = t(430824);
-let m = (0, s.Z)(u.Z),
+    m = t(430824);
+let h = (0, s.Z)(u.Z),
     f = function (e) {
         let { guildId: n } = e,
-            t = (0, a.e7)([h.Z], () => h.Z.getGuild(n), [n]),
+            t = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
             s = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
             u = (0, d.g)(n);
         return (r.useEffect(() => {
             if (s && !u) return void i.Z.escapeToDefaultChannel(n);
         }, [n, s, u]),
         null != t && u)
-            ? (0, l.jsx)(m, { guild: t })
+            ? (0, l.jsx)(h, { guild: t })
             : (0, l.jsx)(c.Z, { channelId: void 0 });
     };

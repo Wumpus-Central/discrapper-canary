@@ -23,8 +23,8 @@ function m(e) {
         });
     if (!b) return null;
     let v = null == y ? f.intl.string(h.default['0IZbwM']) : f.intl.string(h.default.Uj6oDw),
-        O = null == y,
-        j = 'delete-message-'.concat(t.id);
+        j = null == y,
+        O = 'delete-message-'.concat(t.id);
     return (0, r.jsx)(
         p.Z,
         {
@@ -38,9 +38,9 @@ function m(e) {
                         moderatorReportChannelId: g.id
                     });
             },
-            disabled: O,
+            disabled: j,
             color: l.zx.Colors.RED
         },
-        j
+        O
     );
 }

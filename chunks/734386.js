@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(434404),
     x = n(454585),
     v = n(485386),
-    O = n(430824),
-    j = n(496675),
+    j = n(430824),
+    O = n(496675),
     E = n(594174),
     S = n(700785),
     I = n(51144),
     P = n(396769),
     Z = n(967128),
-    T = n(318374),
-    N = n(981631),
+    N = n(318374),
+    T = n(981631),
     A = n(388032),
     w = n(279078),
     R = n(73433);
@@ -37,9 +37,9 @@ function M(e) {
         o = (0, m.ZP)(t, !0),
         M = t.guild_id,
         D = (0, d.e7)([v.Z], () => (null != M ? v.Z.getRoles(M) : void 0)),
-        k = (0, d.e7)([E.default, O.Z], () => {
+        k = (0, d.e7)([E.default, j.Z], () => {
             var e;
-            return E.default.getUser(null == (e = O.Z.getGuild(M)) ? void 0 : e.ownerId);
+            return E.default.getUser(null == (e = j.Z.getGuild(M)) ? void 0 : e.ownerId);
         }),
         L = i.useMemo(
             () =>
@@ -60,7 +60,7 @@ function M(e) {
                             forceRoles: { [e.id]: e },
                             context: t
                         });
-                        return c.e$(n, N.Plq.ADMINISTRATOR) || c.e$(n, N.Plq.VIEW_CHANNEL);
+                        return c.e$(n, T.Plq.ADMINISTRATOR) || c.e$(n, T.Plq.VIEW_CHANNEL);
                     })
                     .value(),
             [t, M, L]
@@ -78,19 +78,19 @@ function M(e) {
                     .filter((e) => {
                         var n;
                         let r = S.BT({
-                                permission: N.Plq.ADMINISTRATOR,
+                                permission: T.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
                             i = null != (n = t.permissionOverwrites[e.id]) ? n : S.Hn,
-                            l = c.e$(i.allow, N.Plq.VIEW_CHANNEL);
+                            l = c.e$(i.allow, T.Plq.VIEW_CHANNEL);
                         return r || l;
                     })
                     .value();
             },
             [t, k]
         ),
-        F = j.Z.can(N.Plq.MANAGE_CHANNELS, t) || j.Z.can(N.Plq.MANAGE_ROLES, t),
+        F = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
         H = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(Z.ZP, {
         channelId: t.id,
@@ -137,7 +137,7 @@ function M(e) {
                 children: [
                     (function () {
                         if (1 !== B.length || U.length > 0)
-                            return (0, r.jsx)(T.Z, {
+                            return (0, r.jsx)(N.Z, {
                                 guildId: t.guild_id,
                                 className: w.avatars,
                                 maxUsers: 5,
@@ -171,7 +171,7 @@ function M(e) {
                     })(),
                     U.map((e, n) => {
                         var i, l;
-                        let o = null != (l = e.colorString) ? l : (0, u.Rf)(N.p6O),
+                        let o = null != (l = e.colorString) ? l : (0, u.Rf)(T.p6O),
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
                         return F
                             ? (0, r.jsx)(
@@ -183,7 +183,7 @@ function M(e) {
                                       disabled: !F,
                                       verified: s,
                                       onClick: () => {
-                                          (C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id));
+                                          (C.Z.open(t.guild_id, T.pNK.MEMBERS), C.Z.selectRole(e.id));
                                       }
                                   },
                                   e.id

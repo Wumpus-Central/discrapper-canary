@@ -3,8 +3,8 @@ var n = r(255367),
     a = r(73800),
     i = r(442837),
     l = r(481060),
-    s = r(271383),
-    o = r(19780),
+    o = r(271383),
+    s = r(19780),
     c = r(226961),
     d = r(594174),
     u = r(51144),
@@ -14,9 +14,9 @@ class h extends a.PureComponent {
     render() {
         let { streams: e, context: t, userId: r, mediaEngineConnectionId: a, videoStreams: i } = this.props;
         if (null == r || null == e || 0 === e.length) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
-        let c = o.Z.getGuildId(),
+        let c = s.Z.getGuildId(),
             h = d.default.getUser(r),
-            y = s.ZP.getNick(c, r),
+            y = o.ZP.getNick(c, r),
             f = null == h ? p.intl.string(p.t.SJmZam) : ''.concat(p.intl.string(p.t.SJmZam), ' \u2014 ').concat(null != y ? y : u.ZP.getName(h));
         return (0, n.jsx)(l.hjN, {
             tag: l.RB0.H2,
@@ -32,8 +32,8 @@ let y = i.ZP.connectStores([c.ZP], (e) => {
     if (null == i) throw Error('Unrecognized section format');
     let l = null;
     if (null != a && null != a.rtp.inbound) {
-        var s;
-        l = null != (s = a.rtp.inbound[i]) ? s : [];
+        var o;
+        l = null != (o = a.rtp.inbound[i]) ? o : [];
     }
     return {
         mediaEngineConnectionId: null == a ? void 0 : a.mediaEngineConnectionId,

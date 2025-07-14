@@ -47,84 +47,88 @@ async function C(e, t) {
     }
 }
 let w = i.memo(function (e) {
-    let { withTitleBar: t, windowKey: n } = e;
-    return !(function (e, t) {
-        let n = (0, o.e7)([d.Z], () => d.Z.getWindow(e)),
-            r = i.useRef(null),
-            u = i.useRef(null),
-            s = i.useRef(null),
-            b = (0, o.e7)([p.default], () => {
-                let e = p.default.getFocusedPID();
-                return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
-            }),
-            [h, g] = i.useState(b),
-            [S, O] = i.useState(!1),
-            w = i.useCallback(() => {
-                let e = (0, v.getPID)(),
-                    n = null != f.Z.getVoiceChannelId();
-                (a.Z.track(E.rMx.OVERLAY_INITIALIZED, {
-                    voice_widget_connected: n,
-                    text_widget_connected: I.ZP.isPinned(E.Odu.TEXT),
-                    overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
-                    unpinned_widget_types: _.Z.getAllUnpinnedPinnedWidgets(t)
+    let { withTitleBar: t, windowKey: n } = e,
+        u = (function (e, t) {
+            let n = (0, o.e7)([d.Z], () => d.Z.getWindow(e)),
+                r = i.useRef(null),
+                u = i.useRef(null),
+                s = i.useRef(null),
+                b = (0, o.e7)([p.default], () => {
+                    let e = p.default.getFocusedPID();
+                    return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
-                    a.Z.successfullyShown(e));
-            }, [t]);
-        (0, c.Ng)(() => {
-            let e = (e) => {
-                let t = null != n ? n : window;
-                e.data === I.Il &&
-                    t.requestAnimationFrame(() => {
-                        t.requestAnimationFrame(() => {
-                            window.parent.postMessage(I.A8, '*');
-                        });
-                    });
-            };
-            return (
-                window.addEventListener('message', e),
-                () => {
-                    window.removeEventListener('message', e);
-                }
-            );
-        });
-        let P = i.useCallback(
-            (e, t) => {
-                null == r.current &&
-                    ((s.current = () => {
-                        (null != r.current && e.cancelAnimationFrame(r.current), null != u.current && e.clearTimeout(u.current));
+                [h, g] = i.useState(b),
+                [S, O] = i.useState(!1),
+                w = i.useCallback(() => {
+                    let e = (0, v.getPID)(),
+                        n = null != f.Z.getVoiceChannelId();
+                    (a.Z.track(E.rMx.OVERLAY_INITIALIZED, {
+                        voice_widget_connected: n,
+                        text_widget_connected: I.ZP.isPinned(E.Odu.TEXT),
+                        overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
+                        unpinned_widget_types: _.Z.getAllUnpinnedPinnedWidgets(t)
                     }),
-                    (r.current = e.requestAnimationFrame(async () => {
-                        try {
-                            await C(e, t);
-                        } catch (e) {
-                            a.Z.setOverlayCrashed((0, v.getPID)(), e);
-                            return;
-                        }
-                        u.current = e.setTimeout(() => {
-                            (g(!0), O(!0), w(), (s.current = null));
-                        }, 100);
-                    })));
-            },
-            [w]
-        );
-        return (
-            i.useEffect(() => {
-                (!h || null == n) && b && b && null != n && P(n, e);
-            }, [P, h, b, e, n]),
+                        a.Z.successfullyShown(e));
+                }, [t]);
             (0, c.Ng)(() => {
-                h && null != n && P(n, e);
-            }),
-            (0, c.zq)(() => {
-                null != s.current && s.current();
-            }),
-            S
-        );
-    })(n, S.$S)
-        ? null
-        : (0, r.jsx)(s.Z, {
+                let e = (e) => {
+                    let t = null != n ? n : window;
+                    e.data === I.Il &&
+                        t.requestAnimationFrame(() => {
+                            t.requestAnimationFrame(() => {
+                                window.parent.postMessage(I.A8, '*');
+                            });
+                        });
+                };
+                return (
+                    window.addEventListener('message', e),
+                    () => {
+                        window.removeEventListener('message', e);
+                    }
+                );
+            });
+            let P = i.useCallback(
+                (e, t) => {
+                    null == r.current &&
+                        ((s.current = () => {
+                            (null != r.current && e.cancelAnimationFrame(r.current), null != u.current && e.clearTimeout(u.current));
+                        }),
+                        (r.current = e.requestAnimationFrame(async () => {
+                            try {
+                                await C(e, t);
+                            } catch (e) {
+                                a.Z.setOverlayCrashed((0, v.getPID)(), e);
+                                return;
+                            }
+                            u.current = e.setTimeout(() => {
+                                (g(!0), O(!0), w(), (s.current = null));
+                            }, 100);
+                        })));
+                },
+                [w]
+            );
+            return (
+                i.useEffect(() => {
+                    (!h || null == n) && b && b && null != n && P(n, e);
+                }, [P, h, b, e, n]),
+                (0, c.Ng)(() => {
+                    h && null != n && P(n, e);
+                }),
+                (0, c.zq)(() => {
+                    null != s.current && s.current();
+                }),
+                S
+            );
+        })(n, S.$S),
+        b = (0, v.getPID)(),
+        h = (0, o.e7)([p.default], () => p.default.isInputLocked(b), [b]);
+    return u
+        ? (0, r.jsx)(s.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
+              hideModals: h,
               children: (0, r.jsx)(g.Z, {})
-          });
+          })
+        : null;
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -30,12 +30,12 @@ let y = {
     },
     x = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
-function O(e) {
+function j(e) {
     return e.type === u.Ui.VOICE;
 }
-let j = (0, a.Z)((e) => {
+let O = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: y, onScroll: j } = e,
+    let { channel: a, width: y, onScroll: O } = e,
         {
             selectedParticipantId: E,
             largeStream: S,
@@ -51,10 +51,10 @@ let j = (0, a.Z)((e) => {
         ),
         P = (0, c.Io)(a.id),
         Z = (0, c.Rk)(a.id, u.pV.AUDIENCE),
-        T = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
-        N = (0, c.w8)(a.id, u.pV.SPEAKER),
-        A = N.filter(O),
-        w = null != N.find((e) => e.type === u.Ui.STREAM),
+        N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
+        T = (0, c.w8)(a.id, u.pV.SPEAKER),
+        A = T.filter(j),
+        w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
         M = x(y, I),
         D = {
@@ -137,7 +137,7 @@ let j = (0, a.Z)((e) => {
                                 tileWidth: F,
                                 channel: a,
                                 participants: l,
-                                selectedParticipant: T
+                                selectedParticipant: N
                             })
                         },
                         'speakers-'.concat(t, '-').concat(n)
@@ -165,6 +165,6 @@ let j = (0, a.Z)((e) => {
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!V(e)),
         className: _.scroller,
         chunkSize: 60,
-        onScroll: j
+        onScroll: O
     });
 });

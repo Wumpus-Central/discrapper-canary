@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(981631),
     x = n(354459),
     v = n(363987),
-    O = n(999976);
-function j(e) {
+    j = n(999976);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ let S = 16 / 9,
 function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: Z, participants: T, filteredParticipants: N, popoutWindow: A, inCall: w, channel: R, selectedParticipant: M, showParticipants: D = !0, className: k, width: L, height: U, layout: B, idle: F } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: M, showParticipants: D = !0, className: k, width: L, height: U, layout: B, idle: F } = e,
         H = null != A,
         G = h.Z.getVideoComponent(),
         V = p.default.getId(),
@@ -108,7 +108,7 @@ function P(e) {
             {
                 value: +!!en,
                 delay: eh || !en ? 0 : 100,
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
                 onStart: () => Q(!0),
                 onChange: () => f.S.dispatch(C.CkL.REMEASURE_TARGET),
                 onRest: () => {
@@ -120,21 +120,21 @@ function P(e) {
         eb = (0, s.q_F)(
             {
                 value: +!!en,
-                config: E(j({}, o.config.stiff), { clamp: !0 })
+                config: E(O({}, o.config.stiff), { clamp: !0 })
             },
             em
         ),
         e_ = (0, s.q_F)(
             {
                 value: ed,
-                config: E(j({}, o.config.stiff), { clamp: !0 })
+                config: E(O({}, o.config.stiff), { clamp: !0 })
             },
             (er === en && eb.value.idle && !ea) || eo || ef ? 'animate-never' : 'animate-always'
         ),
         ey = (0, s.q_F)(
             {
                 value: n,
-                config: E(j({}, o.config.stiff), { clamp: !0 })
+                config: E(O({}, o.config.stiff), { clamp: !0 })
             },
             em
         ),
@@ -142,7 +142,7 @@ function P(e) {
             M,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
-                config: E(j({}, o.config.stiff), { clamp: !0 }),
+                config: E(O({}, o.config.stiff), { clamp: !0 }),
                 initial: null,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
@@ -153,22 +153,22 @@ function P(e) {
         ex = i.useCallback((e) => {
             (W(e), K(!1));
         }, []),
-        ev = en ? [] : (0, _.n3)(T, M, V),
-        { visibleParticipants: eO, participantTileWidth: ej } = (0, y.ZB)(L, N);
+        ev = en ? [] : (0, _.n3)(N, M, V),
+        { visibleParticipants: ej, participantTileWidth: eO } = (0, y.ZB)(L, T);
     return (0, r.jsxs)('div', {
-        className: a()(O.root, v.flexCenter, k),
+        className: a()(j.root, v.flexCenter, k),
         children: [
             (0, r.jsxs)('div', {
-                className: O.tileWrapper,
+                className: j.tileWrapper,
                 style: { opacity: ee && q ? 0 : 1 },
                 children: [
                     (0, r.jsxs)(o.animated.div, {
-                        className: O.videoFrame,
+                        className: j.videoFrame,
                         style: { top: eb.value.to((e) => (-e * I) / 2) },
                         children: [
                             (0, r.jsx)(o.animated.div, {
                                 style: { width: e_.value },
-                                className: O.videoWrapper,
+                                className: j.videoWrapper,
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
                                     style: { aspectRatio: ec },
@@ -204,7 +204,7 @@ function P(e) {
                             }),
                             el
                                 ? (0, r.jsx)(o.animated.div, {
-                                      className: a()(O.actionRow, { [O.idle]: F }),
+                                      className: a()(j.actionRow, { [j.idle]: F }),
                                       style: { bottom: ey.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: R.id,
@@ -216,7 +216,7 @@ function P(e) {
                         ]
                     }),
                     (0, r.jsx)(o.animated.div, {
-                        className: O.participantsWrapperAnimated,
+                        className: j.participantsWrapperAnimated,
                         style: {
                             translateY: eg.value.to((e) => (e * I) / 2),
                             opacity: eg.value,
@@ -227,8 +227,8 @@ function P(e) {
                             onClick: l,
                             onContextMenu: P,
                             onDoubleClick: Z,
-                            participants: eO,
-                            participantTileWidth: ej,
+                            participants: ej,
+                            participantTileWidth: eO,
                             selectedParticipantId: M.id,
                             inCall: w,
                             popoutWindow: A,

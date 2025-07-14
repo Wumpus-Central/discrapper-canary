@@ -2,14 +2,14 @@ n.d(t, { Z: () => u });
 var r = n(255367),
     l = n(73800),
     o = n(335818),
-    a = n(481060),
-    i = n(501431),
+    i = n(481060),
+    a = n(501431),
     s = n(149705),
     c = n(388032);
 function u() {
-    let { itemTypeFilters: e, searchQuery: t } = (0, i.S)((e) => e),
+    let { itemTypeFilters: e, searchQuery: t } = (0, a.S)((e) => e),
         { totalCount: n, isFetchingResults: u } = (0, s.a)(),
-        d = (0, i.S)((e) => e.hasFilters()),
+        d = (0, a.S)((e) => e.hasFilters()),
         p = l.useCallback(
             () =>
                 d
@@ -32,7 +32,7 @@ function u() {
                     : '',
             [e, n, d, t, u]
         );
-    return (0, r.jsx)(a.X6q, {
+    return (0, r.jsx)(i.X6q, {
         variant: 'heading-lg/semibold',
         children: p()
     });

@@ -3,9 +3,10 @@ var r,
     i = n(442837),
     a = n(377108),
     o = n(570140),
-    s = n(981631),
-    l = n(388032);
-function c(e, t, n) {
+    s = n(868814),
+    l = n(981631),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,18 +47,18 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = {
+let p = {
         MP4: 'mp4',
         TINYMP4: 'tinymp4',
         NANOMP4: 'nanomp4',
@@ -65,43 +66,45 @@ let _ = {
         TINYWEBM: 'tinywebm',
         NANOWEBM: 'nanowebm'
     },
-    p = {
+    h = {
         FIXED_HEIGHT_MP4: 'fixed_height.mp4',
         FIXED_HEIGHT_SMALL_MP4: 'fixed_height_small.mp4',
         FIXED_WIDTH_MP4: 'fixed_width.mp4',
         FIXED_WIDTH_SMALL_MP4: 'fixed_width_small.mp4',
         DOWNSIZED_SMALL_MP4: 'downsized_small.mp4',
         ORIGINAL_MP4: 'original.mp4'
-    },
-    h = _.MP4,
-    m = null,
-    g = '',
+    };
+function m() {
+    let { optimizationsEnabled: e } = s.Z.getCurrentConfig({ location: 'GIFPickerViewStore' }, { autoTrackExposure: !0 });
+    return e ? p.WEBM : p.MP4;
+}
+let g = null,
     E = '',
-    b = [],
+    b = '',
     y = [],
-    O = h,
+    O = [],
     v = [],
     I = [];
 function T(e) {
-    m = e.analyticsID;
+    g = e.analyticsID;
 }
 function S(e) {
-    '' === (g = e.query) && ((E = ''), (b = []), (v = []));
+    '' === (E = e.query) && ((b = ''), (y = []), (v = []));
 }
 function A(e) {
     switch (e) {
-        case p.FIXED_HEIGHT_MP4:
-        case p.FIXED_HEIGHT_SMALL_MP4:
-        case p.FIXED_WIDTH_MP4:
-        case p.FIXED_WIDTH_SMALL_MP4:
-        case p.DOWNSIZED_SMALL_MP4:
-        case p.ORIGINAL_MP4:
-        case _.MP4:
-        case _.TINYMP4:
-        case _.NANOMP4:
-        case _.WEBM:
-        case _.TINYWEBM:
-        case _.NANOWEBM:
+        case h.FIXED_HEIGHT_MP4:
+        case h.FIXED_HEIGHT_SMALL_MP4:
+        case h.FIXED_WIDTH_MP4:
+        case h.FIXED_WIDTH_SMALL_MP4:
+        case h.DOWNSIZED_SMALL_MP4:
+        case h.ORIGINAL_MP4:
+        case p.MP4:
+        case p.TINYMP4:
+        case p.NANOMP4:
+        case p.WEBM:
+        case p.TINYWEBM:
+        case p.NANOWEBM:
             return !0;
         default:
             return !1;
@@ -111,9 +114,9 @@ function N(e) {
     return e.replace(/^https?:/, '');
 }
 function C(e) {
-    if (null != e.query && g === E) return !1;
-    (null != e.query && (E = e.query),
-        (b = e.items.map((e) => {
+    if (null != e.query && E === b) return !1;
+    (null != e.query && (b = e.query),
+        (y = e.items.map((e) => {
             let { width: t, height: n, src: r, gif_src: i, url: o, id: s } = e;
             return {
                 width: t,
@@ -122,32 +125,32 @@ function C(e) {
                 gifSrc: N(i),
                 url: o,
                 id: s,
-                format: A(O) ? a.EO.VIDEO : a.EO.IMAGE
+                format: A(m()) ? a.EO.VIDEO : a.EO.IMAGE
             };
         })));
 }
 function R(e) {
     let { query: t } = e;
     if (null == t) return !1;
-    ((E = t), (b = []));
+    ((b = t), (y = []));
 }
 function P(e) {
     let t = e.trendingCategories;
-    y = [
+    O = [
         ...(null != e.trendingGIFPreview
             ? [
                   {
-                      type: s.wI2.TRENDING_GIFS,
-                      name: l.intl.string(l.t.H6zNFx),
+                      type: l.wI2.TRENDING_GIFS,
+                      name: c.intl.string(c.t.H6zNFx),
                       src: N(e.trendingGIFPreview.src),
                       format: a.EO.IMAGE
                   }
               ]
             : []),
         ...t.map((e) =>
-            f(u({}, e), {
+            _(d({}, e), {
                 src: N(e.src),
-                type: s.wI2.TRENDING_CATEGORY,
+                type: l.wI2.TRENDING_CATEGORY,
                 format: a.EO.VIDEO
             })
         )
@@ -163,22 +166,22 @@ function D(e) {
 }
 class L extends (r = i.ZP.Store) {
     getAnalyticsID() {
-        return m;
-    }
-    getQuery() {
         return g;
     }
-    getResultQuery() {
+    getQuery() {
         return E;
     }
-    getResultItems() {
+    getResultQuery() {
         return b;
     }
-    getTrendingCategories() {
+    getResultItems() {
         return y;
     }
-    getSelectedFormat() {
+    getTrendingCategories() {
         return O;
+    }
+    getSelectedFormat() {
+        return m();
     }
     getSuggestions() {
         return v;
@@ -187,7 +190,7 @@ class L extends (r = i.ZP.Store) {
         return I;
     }
 }
-c(L, 'displayName', 'GIFPickerViewStore');
+u(L, 'displayName', 'GIFPickerViewStore');
 let x = new L(o.Z, {
     GIF_PICKER_INITIALIZE: T,
     GIF_PICKER_QUERY: S,

@@ -66,12 +66,12 @@ function d(e) {
 let p = i.forwardRef(function (e, t) {
     let { renderPopout: n, popoutTargetRef: p, children: h, align: f = 'left', isPopoutBlocked: m, onPopoutOpen: g, onPopoutClose: b, onRequestClose: _ } = e,
         [y, C] = i.useState(!1),
-        { isHovered: x, setIsHovered: v, onMouseEnter: O, onMouseLeave: j, cancelTimers: E } = (0, o.Z)(200, 300);
+        { isHovered: x, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
     function S(e) {
-        'focus' === e.type || y || O();
+        'focus' === e.type || y || j();
     }
     function I() {
-        y || j();
+        y || O();
     }
     function P(e) {
         (E(), C(!y), y ? null == b || b() : null == g || g(), (!x || y) && e());
@@ -105,7 +105,7 @@ let p = i.forwardRef(function (e, t) {
                     {
                         isHovered: Z,
                         onFocus: () => C(!0),
-                        onMouseEnter: O,
+                        onMouseEnter: j,
                         onMouseLeave: I,
                         renderPopout: n
                     },

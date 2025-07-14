@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => A,
-    y: () => N
+    y: () => T
 });
 var r = n(255367),
     i = n(73800),
@@ -22,8 +22,8 @@ var r = n(255367),
     C = n(314897),
     x = n(271383),
     v = n(709586),
-    O = n(5192),
-    j = n(590415),
+    j = n(5192),
+    O = n(590415),
     E = n(354459),
     S = n(387147);
 function I(e) {
@@ -91,7 +91,7 @@ let Z = i.memo(function (e) {
                     className: S.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
-                    children: O.ZP.getName(t, n, i)
+                    children: j.ZP.getName(t, n, i)
                 }),
                 l
                     ? (0, r.jsx)(v.Z, {
@@ -102,12 +102,12 @@ let Z = i.memo(function (e) {
             ]
         });
     }),
-    T = i.memo(function (e) {
+    N = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: o } = e,
             { user: s, blocked: c, ignored: u, rtsState: d } = n,
-            h = d === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = d === j.xO.REQUESTED_TO_SPEAK || h;
+            h = d === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = d === O.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -138,15 +138,15 @@ let Z = i.memo(function (e) {
             ]
         });
     }),
-    N = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
+    T = () => (0, r.jsx)('div', { className: S.tileBaseContainer }),
     A = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
-            O = C.default.getId(),
-            { newestAnalyticsLocation: j } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
+            j = C.default.getId(),
+            { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
-            N = (0, u.e7)(
+            T = (0, u.e7)(
                 [x.ZP],
                 () => {
                     var e;
@@ -163,7 +163,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'AudienceTile',
-                        is_tile_owner: o.id === O,
+                        is_tile_owner: o.id === j,
                         tile_type: E.TH.USER
                     }
                 }),
@@ -181,7 +181,7 @@ let Z = i.memo(function (e) {
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', j, {
+                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', O, {
                                             targetUserId: o.id,
                                             tileType: E.TH.USER
                                         })
@@ -191,7 +191,7 @@ let Z = i.memo(function (e) {
                         { context: Z }
                     ));
             },
-            [o, O, Z, v, l, j]
+            [o, j, Z, v, l, O]
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: A,
@@ -207,19 +207,19 @@ let Z = i.memo(function (e) {
                             {
                                 innerRef: A,
                                 className: a()(S.tileContainer, {
-                                    [S.singleIcon]: N || d,
-                                    [S.doubleIcon]: N && d
+                                    [S.singleIcon]: T || d,
+                                    [S.doubleIcon]: T && d
                                 }),
                                 onContextMenu: w
                             },
                             e
                         ),
                         {
-                            children: (0, r.jsx)(T, {
+                            children: (0, r.jsx)(N, {
                                 participant: t,
                                 guildId: v,
                                 channel: l,
-                                isPremium: N
+                                isPremium: T
                             })
                         }
                     )

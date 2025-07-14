@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(348238),
     x = n(981631),
     v = n(388032);
-function O(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function j(e, t) {
 }
 let E = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: E, channel: S, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: Z, setPopout: T, isReplySpineClickable: N, showReplySpine: A } = e,
+    let { baseMessage: n, referencedMessage: E, channel: S, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
         M = (0, c.p)(),
@@ -116,12 +116,12 @@ let E = i.memo(function (e) {
                         shouldFilterKeywords: M
                     },
                     n = e.isFirstMessageInForumPost(S)
-                        ? j(O({}, t), {
+                        ? O(j({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0
                           })
-                        : j(O({}, t), {
+                        : O(j({}, t), {
                               formatInline: !0,
                               allowHeading: D,
                               allowList: D
@@ -140,14 +140,14 @@ let E = i.memo(function (e) {
         ),
         B = (0, C.wq)(null == w ? void 0 : w.author.id, S.id),
         F = (0, C.$3)(n, w),
-        H = (0, C.Wl)(w, S, P, T),
-        G = (0, C.rY)(Z, T),
+        H = (0, C.Wl)(w, S, P, N),
+        G = (0, C.rY)(Z, N),
         V = i.useCallback(() => {
-            T({
+            N({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1
             });
-        }, [T]),
+        }, [N]),
         z = (0, b.Uj)(n);
     return (0, r.jsx)(_.Z, {
         repliedAuthor: R,
@@ -167,7 +167,7 @@ let E = i.memo(function (e) {
         onClickReply: F,
         onContextMenu: B,
         onPopoutRequestClose: V,
-        isReplySpineClickable: N,
+        isReplySpineClickable: T,
         showReplySpine: A
     });
 });

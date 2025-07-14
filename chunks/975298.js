@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(642613), n(583741), n(388685), n(415506));
+(n.d(t, { Z: () => S }), n(642613), n(583741), n(388685), n(415506));
 var r = n(73800),
     i = n(512722),
     a = n.n(i),
@@ -101,7 +101,10 @@ let I = (e) => {
         fetched: c
     };
 };
-function T() {
+function T(e, t) {
+    return null != t && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e);
+}
+function S() {
     let {
             forceFetch: e,
             excludeReverseTrial: t,
@@ -118,10 +121,9 @@ function T() {
         s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
         l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
         h = (0, c.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
-        m = null !== i && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e),
-        [E, b] = r.useState(
+        [m, E] = r.useState(
             I({
-                isFetching: m || p.Z.fetchingAllEntitlements,
+                isFetching: T(e, i) || p.Z.fetchingAllEntitlements,
                 entitlements: a,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
@@ -132,7 +134,7 @@ function T() {
         );
     return (
         (0, d.ZP)(() => {
-            m && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
+            T(e, i) && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
         }),
         r.useEffect(() => {
             let e = I({
@@ -143,8 +145,8 @@ function T() {
                 fetchedAllEntitlements: s,
                 excludeReverseTrialFromCountdown: n
             });
-            b((t) => ((0, o.isEqual)(t, e) ? t : e));
+            E((t) => ((0, o.isEqual)(t, e) ? t : e));
         }, [i, a, h, l, s, n]),
-        E
+        m
     );
 }

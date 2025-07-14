@@ -1,6 +1,6 @@
 n.d(t, {
-    G_: () => h,
-    g: () => g
+    G_: () => f,
+    g: () => h
 });
 var i = n(255367),
     r = n(73800),
@@ -10,8 +10,9 @@ var i = n(255367),
     o = n(572995),
     c = n(42373),
     d = n(388032),
-    u = n(888723);
-function m(e) {
+    u = n(888723),
+    m = n(790895);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -36,19 +37,20 @@ function m(e) {
     }
     return e;
 }
-function p(e) {
-    let { className: t, boxLayout: n, title: r, shouldLoadVideo: s, isReducedMotion: d, includeSideGradient: p = !1, startLeftAligned: g = !1 } = e;
+function g(e) {
+    let { className: t, boxLayout: n, title: r, shouldLoadVideo: s, isReducedMotion: d, includeSideGradient: g = !1, startLeftAligned: h = !1, enablePremiumBrandRefreshDesign: f } = e,
+        b = f ? m : u;
     return (0, i.jsxs)('div', {
-        className: a()(u.boxBackdrop, t),
+        className: a()(b.boxBackdrop, t),
         children: [
             (0, i.jsx)(l.X6q, {
-                className: u.bentoHeader,
+                className: b.bentoSectionHeader,
                 variant: 'display-md',
                 color: 'header-primary',
                 children: r
             }),
             (0, i.jsx)('div', {
-                className: u.bentoBoxesGrid,
+                className: b.bentoBoxesGrid,
                 children: n.map((e, t) => {
                     let n;
                     switch (e.length) {
@@ -66,12 +68,13 @@ function p(e) {
                             var r, a;
                             return (0, i.jsx)(
                                 c.Z,
-                                ((r = m({ index: t + +!!g }, e)),
+                                ((r = p({ index: t + +!!h }, e)),
                                 (a = a =
                                     {
                                         size: n,
                                         shouldLoadVideo: s,
-                                        isReducedMotion: d
+                                        isReducedMotion: d,
+                                        enablePremiumBrandRefreshDesign: f
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -92,32 +95,33 @@ function p(e) {
                     });
                 })
             }),
-            p && (0, i.jsx)('div', { className: u.bentoSideGradient })
+            g && (0, i.jsx)('div', { className: u.bentoSideGradient })
         ]
     });
 }
-let g = r.memo(function (e) {
+let h = r.memo(function (e) {
         let { whatsNewBoxes: t } = (0, o.ZP)();
         return (0, i.jsx)(
-            p,
-            m(
+            g,
+            p(
                 {
                     boxLayout: t,
-                    title: d.intl.string(d.t.LRmNAg)
+                    title: d.intl.string(d.t.LRmNAg),
+                    startLeftAligned: e.enablePremiumBrandRefreshDesign
                 },
                 e
             )
         );
     }),
-    h = r.memo(function (e) {
+    f = r.memo(function (e) {
         let { bestOfBoxes: t } = (0, o.ZP)();
         return (0, i.jsx)(
-            p,
-            m(
+            g,
+            p(
                 {
                     boxLayout: t,
                     title: d.intl.string(d.t.EnzW2N),
-                    includeSideGradient: !0,
+                    includeSideGradient: !e.enablePremiumBrandRefreshDesign,
                     startLeftAligned: !0
                 },
                 e

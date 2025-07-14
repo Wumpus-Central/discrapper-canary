@@ -4,8 +4,8 @@
     Fr: () => x,
     Fz: () => L,
     Ko: () => y,
-    Pe: () => M,
-    R6: () => k,
+    Pe: () => k,
+    R6: () => M,
     WU: () => D,
     X3: () => j,
     cl: () => R,
@@ -241,10 +241,10 @@ function x(e, t) {
     let n = m.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!m.KA4.test(t.type));
 }
-function M() {
+function k() {
     ((0, o.WK)(), P.reset(), i()(o.ZP).forOwn((e, t) => P.addRule(b({ type: t }, e))));
 }
-function k(e) {
+function M(e) {
     if (e === m.aib.GUILD) return !0;
     {
         let t = (0, l.a)({ location: 'isChannelFilterSupported' });

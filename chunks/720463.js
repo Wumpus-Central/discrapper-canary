@@ -1,6 +1,6 @@
 n.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => T,
-    E: () => S
+    E: () => T,
+    WrappedBalanceWidgetEarnedOrbsCoachmarkModal: () => I
 });
 var i = n(255367),
     r = n(73800),
@@ -14,70 +14,71 @@ var i = n(255367),
     m = n(790542),
     p = n(317257),
     g = n(970815),
-    h = n(622562),
-    f = n(937860),
-    b = n(335346),
-    x = n(981631),
-    _ = n(388032),
-    j = n(806539),
-    E = n(293401),
-    O = n(447489),
-    C = n(484885);
-let v = () => {
+    h = n(543936),
+    f = n(622562),
+    b = n(937860),
+    x = n(335346),
+    _ = n(981631),
+    j = n(388032),
+    E = n(806539),
+    O = n(293401),
+    C = n(447489),
+    v = n(484885);
+let S = () => {
         let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
         return (0, i.jsx)('div', {
-            className: E.centerContent,
+            className: O.centerContent,
             children: e
                 ? (0, i.jsx)('img', {
-                      src: O.Z,
-                      className: E.orbAsset,
+                      src: C.Z,
+                      className: O.orbAsset,
                       alt: 'Orb'
                   })
                 : (0, i.jsxs)(d.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: E.orbAsset,
+                      className: O.orbAsset,
                       children: [
                           (0, i.jsx)('source', {
-                              src: C.Z,
+                              src: v.Z,
                               type: 'video/webm'
                           }),
                           (0, i.jsx)('img', {
-                              src: O.Z,
-                              className: E.orbAsset,
+                              src: C.Z,
+                              className: O.orbAsset,
                               alt: 'Orb'
                           })
                       ]
                   })
         });
     },
-    S = (e) => {
-        let { descriptionText: t = _.intl.string(_.t['6If1Cw']), onClose: n = () => {} } = e;
+    T = (e) => {
+        let { descriptionText: t = j.intl.string(j.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, i.jsxs)('div', {
-            className: a()(E.container, j.baseCardOutline),
+            className: a()(O.container, E.baseCardOutline),
             children: [
-                (0, i.jsx)(f.s, { onClick: n }),
-                (0, i.jsx)(b.V, {
+                (0, i.jsx)(b.s, { onClick: n }),
+                (0, i.jsx)(x.V, {
                     rightOffset: 20,
                     invertTail: !0,
-                    tailSpineClassName: E.coachmarkTailSpine,
-                    tailTargetInnerClassName: E.coachmarkTailTargetInner
+                    tailSpineClassName: O.coachmarkTailSpine,
+                    tailTargetInnerClassName: O.coachmarkTailTargetInner
                 }),
-                (0, i.jsx)(v, {}),
+                (0, i.jsx)(S, {}),
                 (0, i.jsx)('div', {
-                    className: E.contentContainer,
+                    className: O.contentContainer,
                     children: (0, i.jsxs)('div', {
-                        className: E.textContainer,
+                        className: O.textContainer,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
-                                className: E.coachmarkTitle,
-                                children: _.intl.string(_.t['D/nzVl'])
+                                className: O.coachmarkTitle,
+                                children: j.intl.string(j.t['D/nzVl'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
-                                className: E.coachmarkDescription,
+                                className: O.coachmarkDescription,
                                 children: t
                             })
                         ]
@@ -86,7 +87,7 @@ let v = () => {
             ]
         });
     };
-function T(e) {
+function N(e) {
     var { backgroundElementRef: t, onClickPill: n, onClose: s, onCloseCallback: a } = e;
     !(function (e, t) {
         if (null != e) {
@@ -114,10 +115,10 @@ function T(e) {
         c = r.useCallback(async () => {
             (await o(), n());
         }, [n, o]);
-    return (0, i.jsxs)(h.E9, {
-        className: E.coachmarkModalContainer,
+    return (0, i.jsxs)(f.E9, {
+        className: O.coachmarkModalContainer,
         backgroundElementRef: t,
-        onGetBoundingRect: x.dG4,
+        onGetBoundingRect: _.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -134,7 +135,40 @@ function T(e) {
                 balance: l,
                 balanceWidgetMode: p.b.DEFAULT
             }),
-            (0, i.jsx)(S, { onClose: o })
+            (0, i.jsx)(T, { onClose: o })
         ]
+    });
+}
+function I(e) {
+    return (0, i.jsx)(h.x, {
+        errorSource: 'ORBS_EARNED_ORBS_COACHMARK_MODAL',
+        children: (0, i.jsx)(
+            N,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
+                    ('function' == typeof Object.getOwnPropertySymbols &&
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        i.forEach(function (t) {
+                            var i;
+                            ((i = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: i,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = i));
+                        }));
+                }
+                return e;
+            })({}, e)
+        )
     });
 }

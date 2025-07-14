@@ -5,8 +5,5 @@ e.exports = {
     testimonialHeroContainer: 'testimonialHeroContainer__3e7e2',
     animatedContainer: 'animatedContainer__3e7e2',
     testimonial: 'testimonial__3e7e2',
-    testimonialsControls: 'testimonialsControls__3e7e2',
-    testimonialControl: 'testimonialControl__3e7e2',
-    testimonialControlIcon: 'testimonialControlIcon__3e7e2',
-    testimonialControlInner: 'testimonialControlInner__3e7e2'
+    testimonialsControls: 'testimonialsControls__3e7e2'
 };

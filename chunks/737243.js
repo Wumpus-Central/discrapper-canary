@@ -12,7 +12,7 @@ var r = n(255367),
 let h = i.memo(function (e) {
     var t, n;
     let { message: h, channel: f, compact: m = !1, interactionUsernameProfile: g, interactionAvatarProfile: b, interactionData: _, referencedUsernameProfile: y, referencedAvatarProfile: C, setPopout: x } = e,
-        { isInteractionUserBlocked: v, isInteractionUserIgnored: O } = (0, l.cj)(
+        { isInteractionUserBlocked: v, isInteractionUserIgnored: j } = (0, l.cj)(
             [c.Z],
             () => ({
                 isInteractionUserBlocked: c.Z.isBlockedForMessage(h),
@@ -20,14 +20,14 @@ let h = i.memo(function (e) {
             }),
             [h]
         ),
-        j = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
+        O = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
         E = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
         S = (0, d.Nk)(h.interaction, f, g, x),
         I = (0, d.NU)(b, x),
         P = (0, o.t0)(h),
         Z = (null == P ? void 0 : P.type) === a.B8.APPLICATION_COMMAND ? (null == (n = P.target_user) ? void 0 : n.id) : void 0,
-        T = (0, d.wq)(Z, f.id),
-        N = (0, d.JC)(Z, f, y, x),
+        N = (0, d.wq)(Z, f.id),
+        T = (0, d.JC)(Z, f, y, x),
         A = (0, d.rY)(C, x),
         w = (0, d.Xn)(_, x),
         R = i.useCallback(() => {
@@ -49,18 +49,18 @@ let h = i.memo(function (e) {
                     referencedAvatarProfile: C,
                     referencedUsernameProfile: y,
                     replyReference: h.messageReference,
-                    replyMessage: j,
+                    replyMessage: O,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [f, m, h, C, j, y, x]
+            [f, m, h, C, O, y, x]
         );
     return (0, r.jsx)(u.Z, {
         message: h,
         channel: f,
         compact: m,
         isInteractionUserBlocked: v,
-        isInteractionUserIgnored: O,
+        isInteractionUserIgnored: j,
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: _,
@@ -71,8 +71,8 @@ let h = i.memo(function (e) {
         onClickCommand: w,
         onUserContextMenu: E,
         onClickTargetAvatar: A,
-        onClickTargetUsername: N,
-        onTargetUserContextMenu: T,
+        onClickTargetUsername: T,
+        onTargetUserContextMenu: N,
         onPopoutRequestClose: R,
         renderTargetMessage: M
     });

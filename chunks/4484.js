@@ -29,12 +29,12 @@ var r = n(255367),
     P = n(981631),
     w = n(117335);
 let D = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: V, onResize: F, onFocus: Z, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: X, hideAutocomplete: Q, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
+    let { value: n, type: a, channel: D, className: L, id: x, disabled: k, submitting: M, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: V, onResize: F, onFocus: Z, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: X, hideAutocomplete: Q, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
         ep = i.useRef(null),
         eh = i.useRef(null),
         em = i.useRef(!0),
         eg = i.useRef(!0),
-        eE = M || k,
+        eE = k || M,
         eb = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -212,7 +212,7 @@ let D = i.forwardRef(function (e, t) {
                     readOnly: eE,
                     spellCheck: $,
                     autoFocus: !en,
-                    canFocus: !M,
+                    canFocus: !k,
                     onChange: eP,
                     onFocus: Z,
                     onBlur: H,

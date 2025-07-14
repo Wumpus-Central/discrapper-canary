@@ -391,7 +391,7 @@ class to extends r.PureComponent {
                 guildId: null != (a = this.props.selectedGuildId) ? a : null,
                 onDismiss: s,
                 targetElementRef: this.avatarWithPopoutRef,
-                children: () => this.renderAvatarWithPopout({ focusSectionProps: e })
+                children: this.renderAvatarWithPopout({ focusSectionProps: e })
             });
         }
         return (0, i.jsxs)(i.Fragment, {

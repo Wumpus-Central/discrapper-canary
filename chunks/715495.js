@@ -169,7 +169,6 @@ function O() {
                             className: _.themePicker,
                             children: [
                                 t && (0, i.jsx)(d.i, {}),
-                                ' ',
                                 s &&
                                     (0, i.jsx)(f.Z, {
                                         selected: null == u || null == (e = u.palette) ? void 0 : e.name,

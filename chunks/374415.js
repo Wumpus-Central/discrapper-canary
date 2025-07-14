@@ -4,24 +4,24 @@ var r = n(255367),
     a = n(793030),
     o = n(974223);
 function s(e) {
-    let { size: t = 'md', direction: n = 'horizontal', justify: s, align: l, padding: c, className: u, children: d, fullWidth: f = !1 } = e,
-        _ = i.useMemo(
+    let { size: t = 'md', direction: n = 'horizontal', justify: s, align: l, padding: c, className: u, children: d, wrap: f = !0, fullWidth: _ = !1 } = e,
+        p = i.useMemo(
             () => ({
                 size: t,
-                fullWidth: f
+                fullWidth: _
             }),
-            [t, f]
+            [t, _]
         );
     return (0, r.jsx)(a.Kq, {
         direction: n,
         gap: 8,
         justify: s,
         align: l,
-        wrap: !0,
+        wrap: f,
         padding: c,
         className: u,
         children: (0, r.jsx)(o.u.Provider, {
-            value: _,
+            value: p,
             children: d
         })
     });

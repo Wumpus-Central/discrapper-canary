@@ -1,8 +1,8 @@
-(n.d(t, { O: () => a }), n(388685), n(539854));
+(n.d(t, { O: () => i }), n(388685), n(539854));
 var r = n(73800),
     l = n(399606),
     o = n(1870);
-let a = (e) => {
+let i = (e) => {
     let t = (0, l.e7)([o.Z], () => o.Z.purchases);
     return (0, r.useMemo)(() => {
         let n = [],

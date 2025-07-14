@@ -36,7 +36,7 @@ function S() {
                 (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
                 (0, s.ZD)(
                     async () => {
-                        let { AnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
+                        let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
                         return function (t) {
                             let { onClose: n, transitionState: i } = t,
                                 o = async () => {
