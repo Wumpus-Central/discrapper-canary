@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var l = n(73800),
-    i = n(252618),
+    a = n(252618),
     r = n(358085),
-    s = n(388032);
-function a() {
+    i = n(388032);
+function o() {
     return (
         l.useEffect(() => {
             r.isPlatformEmbedded ||
-                (0, i.EM)({
-                    messages: [s.intl.string(s.t.KIX3cn), s.intl.string(s.t['UbO+8v']), s.intl.string(s.t.MbySu7)],
+                (0, a.EM)({
+                    messages: [i.intl.string(i.t.KIX3cn), i.intl.string(i.t['UbO+8v']), i.intl.string(i.t.MbySu7)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0

@@ -1,8 +1,4 @@
 e.exports = {
-    modalRoot: 'modalRoot__4a43b',
-    header: 'header__4a43b',
-    headerTitle: 'headerTitle__4a43b',
-    modalContent: 'modalContent__4a43b',
     searchBar: 'searchBar__4a43b',
     rowDivider: 'rowDivider__4a43b',
     rowContainer: 'rowContainer__4a43b',
@@ -13,9 +9,6 @@ e.exports = {
     rowName: 'rowName__4a43b',
     rowSubName: 'rowSubName__4a43b',
     rowRight: 'rowRight__4a43b',
-    footer: 'footer__4a43b',
-    copySendBar: 'copySendBar__4a43b',
-    copyButton: 'copyButton__4a43b',
-    acronym: 'acronym__4a43b',
-    img: 'img__4a43b'
+    previewImage: 'previewImage__4a43b',
+    acronym: 'acronym__4a43b'
 };

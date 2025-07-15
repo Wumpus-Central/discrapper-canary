@@ -1,29 +1,29 @@
-(r.d(t, { U: () => b }), r(388685));
-var n = r(255367),
-    s = r(704215),
-    l = r(755721),
-    a = r(481060),
-    o = r(243778),
-    i = r(970731),
-    c = r(2818),
-    u = r(921944),
-    d = r(388032),
-    h = r(327298),
-    p = r(235810);
+(n.d(t, { U: () => b }), n(388685));
+var r = n(255367),
+    s = n(704215),
+    l = n(755721),
+    a = n(481060),
+    o = n(243778),
+    i = n(970731),
+    c = n(2818),
+    u = n(921944),
+    d = n(388032),
+    h = n(327298),
+    p = n(235810);
 let f = s.z.FOR_LATER_POPOUT_COACHMARK,
     g = () =>
-        (0, n.jsx)('div', {
+        (0, r.jsx)('div', {
             className: h.imageContainer,
-            children: (0, n.jsx)('img', {
+            children: (0, r.jsx)('img', {
                 className: h.image,
                 src: p,
                 alt: ''
             })
         }),
     m = (e) =>
-        (0, n.jsx)(i.ZP, {
+        (0, r.jsx)(i.ZP, {
             className: h.container,
-            asset: (0, n.jsx)(g, {}),
+            asset: (0, r.jsx)(g, {}),
             header: d.intl.string(d.t.qPbFKy),
             content: d.intl.string(d.t.URrJq6),
             buttonCTA: d.intl.string(d.t['NX+WJC']),
@@ -36,18 +36,18 @@ let f = s.z.FOR_LATER_POPOUT_COACHMARK,
             caretPosition: i.DF.TOP_RIGHT
         });
 function b(e) {
-    let { location: t, children: r, targetElementRef: s } = e,
+    let { location: t, children: n, targetElementRef: s } = e,
         { enabled: l, inInbox: i } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
         [u, d] = (0, o.US)(l && t === (i ? 'inbox-button' : 'bookmarks-button') ? [f] : [], void 0);
     return u !== f
-        ? r
-        : (0, n.jsx)(a.yRy, {
+        ? n
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: s,
               renderPopout: () => m(d),
               position: 'bottom',
               align: 'right',
               animation: a.yRy.Animation.TRANSLATE,
               shouldShow: !0,
-              children: () => r
+              children: () => n
           });
 }

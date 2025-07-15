@@ -7,4 +7,4 @@ function r(e) {
               colors: e.colors
           };
 }
-n.d(t, { b: () => r });
+(n.d(t, { b: () => r }), n(688619));

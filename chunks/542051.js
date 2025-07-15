@@ -1,44 +1,44 @@
-(r.d(t, {
+(n.d(t, {
     M: () => m,
     Z: () => y
 }),
-    r(415506),
-    r(781311),
-    r(388685));
-var n,
-    s = r(255367),
-    l = r(73800),
-    a = r(120356),
-    o = r.n(a),
-    i = r(481060),
-    c = r(405656),
-    u = r(388032),
-    d = r(953928);
-function h(e, t, r) {
+    n(415506),
+    n(781311),
+    n(388685));
+var r,
+    s = n(255367),
+    l = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    i = n(481060),
+    c = n(405656),
+    u = n(388032),
+    d = n(953928);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                h(e, t, r[t]);
+            r.forEach(function (t) {
+                h(e, t, n[t]);
             }));
     }
     return e;
@@ -49,14 +49,14 @@ function f(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
@@ -64,24 +64,24 @@ function f(e, t) {
 function g(e) {
     (e.stopPropagation(), e.preventDefault());
 }
-function m(e, t, r) {
+function m(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
         tabIndex: -1,
-        'aria-selected': r
+        'aria-selected': n
     };
 }
-class b extends (n = l.PureComponent) {
+class b extends (r = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: h, searchFavorites: g } = this.props;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: h, searchFavorites: g } = this.props;
         if (e || h) return null;
-        let b = -1 === n;
+        let b = -1 === r;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
                     i.P3F,
-                    f(p({ className: o()(d.queryContainer, { [d.focused]: b }) }, m(r, -1, b)), {
+                    f(p({ className: o()(d.queryContainer, { [d.focused]: b }) }, m(n, -1, b)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
@@ -104,7 +104,7 @@ class b extends (n = l.PureComponent) {
                 g &&
                     (0, s.jsxs)(
                         i.P3F,
-                        f(p({ className: o()(d.queryContainer, { [d.focused]: b }) }, m(r, -1, b)), {
+                        f(p({ className: o()(d.queryContainer, { [d.focused]: b }) }, m(n, -1, b)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
@@ -128,32 +128,32 @@ class b extends (n = l.PureComponent) {
         });
     }
     renderResults(e) {
-        let { numResults: t, renderNoResults: r, renderInitialState: n, renderResult: s, renderCustomResults: l } = this.props;
-        if (e) return n();
-        if (0 === t) return r();
+        let { numResults: t, renderNoResults: n, renderInitialState: r, renderResult: s, renderCustomResults: l } = this.props;
+        if (e) return r();
+        if (0 === t) return n();
         if (null != s) return Array.from({ length: t }).map((e, t) => s(t));
         if (null != l) return l();
         throw Error('SearchResultsPopout.renderResults: Flow should never allow this...');
     }
     render() {
-        let { query: e, focusedIndex: t, navId: r, width: n } = this.props,
+        let { query: e, focusedIndex: t, navId: n, width: r } = this.props,
             l = '' === e.trim();
         return (0, s.jsxs)('div', {
             className: d.container,
-            style: { width: n },
+            style: { width: r },
             onMouseDown: g,
             role: 'listbox',
-            id: r,
+            id: n,
             tabIndex: -1,
-            'aria-activedescendant': ''.concat(r, '-').concat(t),
+            'aria-activedescendant': ''.concat(n, '-').concat(t),
             children: [this.renderQuery(l), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(l)]
         });
     }
     constructor(...e) {
         (super(...e),
             h(this, 'renderSearchInSelectedChannelAutocomplete', () => {
-                let { navId: e, channel: t, showSearchInSelectedChannel: r, focusedIndex: n, onSelectSearchInSelectedChannel: l, renderChannel: a } = this.props;
-                if (!r || null == t) return null;
+                let { navId: e, channel: t, showSearchInSelectedChannel: n, focusedIndex: r, onSelectSearchInSelectedChannel: l, renderChannel: a } = this.props;
+                if (!n || null == t) return null;
                 let o = (0, c.X3)(t),
                     h = a(
                         null,
@@ -166,7 +166,7 @@ class b extends (n = l.PureComponent) {
                     );
                 return (0, s.jsx)(
                     i.P3F,
-                    f(p({}, m(e, -1, -1 === n)), {
+                    f(p({}, m(e, -1, -1 === r)), {
                         className: d.inChannelOptionContainer,
                         onClick: l,
                         children: (0, s.jsx)(i.Text, {
