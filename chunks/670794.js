@@ -5,65 +5,67 @@ var e = i(255367),
     s = i(481060),
     u = i(194359),
     r = i(51144),
-    c = i(388032),
-    o = i(992089);
+    o = i(388032),
+    c = i(992089);
 function p(t) {
     let { user: n, nickname: i, transitionState: p, onClose: d } = t,
         [x, h] = l.useState(!1),
-        [f, g] = l.useState(i),
-        m = l.useRef(null),
-        k = async (t) => {
-            (null == t || t.preventDefault(), h(!0));
+        [m, f] = l.useState(i),
+        g = l.useRef(null),
+        b = async (t) => {
+            (t.preventDefault(), h(!0));
             try {
-                (await u.Z.updateRelationship(n.id, f), d());
+                (await u.Z.updateRelationship(n.id, m), d());
             } catch (t) {
             } finally {
                 h(!1);
             }
         },
-        v = null == i ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
-    return (0, e.jsxs)(a.u, {
-        title: v,
-        transitionState: p,
-        subtitle: c.intl.string(c.t['NdQ+lJ']),
-        onClose: d,
-        actions: [
-            {
-                text: c.intl.string(c.t['ETE/oK']),
-                onClick: d,
-                variant: 'secondary'
-            },
-            {
-                text: c.intl.string(c.t.R3BPHx),
-                onClick: () => k(),
-                variant: 'primary',
-                disabled: x
-            }
-        ],
-        children: [
-            (0, e.jsx)('form', {
-                onSubmit: k,
-                children: (0, e.jsx)(s.xJW, {
-                    title: c.intl.string(c.t.pqG6GR),
+        v = null == i ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t['8pOYUF']);
+    return (0, e.jsx)('form', {
+        onSubmit: b,
+        children: (0, e.jsxs)(a.u, {
+            title: v,
+            transitionState: p,
+            subtitle: o.intl.string(o.t['NdQ+lJ']),
+            onClose: d,
+            actions: [
+                {
+                    text: o.intl.string(o.t['ETE/oK']),
+                    onClick: d,
+                    variant: 'secondary'
+                },
+                {
+                    text: o.intl.string(o.t.R3BPHx),
+                    onSubmit: b,
+                    variant: 'primary',
+                    disabled: x,
+                    type: 'submit'
+                }
+            ],
+            children: [
+                (0, e.jsx)(s.xJW, {
+                    title: o.intl.string(o.t.pqG6GR),
                     children: (0, e.jsx)(s.oil, {
-                        inputRef: m,
-                        value: null != f ? f : '',
+                        inputRef: g,
+                        value: null != m ? m : '',
                         placeholder: r.ZP.getName(n),
-                        onChange: g,
+                        onChange: f,
                         maxLength: 32,
-                        className: o.input,
+                        className: c.input,
                         autoFocus: !0
                     })
+                }),
+                (0, e.jsx)(s.Avr, {
+                    onClick: () => {
+                        var t;
+                        (f(null), null == (t = g.current) || t.focus());
+                    },
+                    text: o.intl.string(o.t['9qSBvL']),
+                    textVariant: 'text-sm/medium',
+                    type: 'button'
                 })
-            }),
-            (0, e.jsx)(s.Avr, {
-                onClick: () => {
-                    var t;
-                    (g(null), null == (t = m.current) || t.focus());
-                },
-                text: c.intl.string(c.t['9qSBvL']),
-                textVariant: 'text-sm/medium'
-            })
-        ]
+            ]
+        })
     });
 }

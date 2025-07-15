@@ -1,10 +1,10 @@
 r.d(t, {
-    A: () => i,
-    s: () => o
+    A: () => o,
+    s: () => i
 });
 var n = r(818083),
     l = r(987338);
-let i = (0, n.B)({
+let o = (0, n.B)({
         kind: 'user',
         id: '2025-04_shop_home_sorting',
         label: 'Shop Home Sorting',
@@ -18,4 +18,4 @@ let i = (0, n.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }).showShopHomeSorting;
+    i = (e) => o.useExperiment({ location: e }).showShopHomeSorting;

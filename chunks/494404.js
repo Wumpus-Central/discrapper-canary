@@ -1,5 +1,5 @@
 (r.d(t, {
-    ZP: () => L,
+    ZP: () => M,
     h4: () => N,
     nH: () => k
 }),
@@ -166,15 +166,15 @@ function A(e) {
                 }
             );
         }, []));
-    let L = s.useCallback(() => {
+    let M = s.useCallback(() => {
             var e;
             let t = null == (e = k.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 250 && l && !o && (null == p || p());
         }, [l, p, o]),
-        M = [],
-        F = !0;
+        F = [],
+        L = !0;
     null == r || (o && 0 === r.length)
-        ? (M = [
+        ? (F = [
               (0, n.jsx)(
                   'div',
                   {
@@ -185,11 +185,11 @@ function A(e) {
               )
           ])
         : 0 === r.length
-          ? M.push((0, n.jsx)(s.Fragment, { children: b() }, 'empty-state'))
-          : ((F = !1),
-            (M = []),
+          ? F.push((0, n.jsx)(s.Fragment, { children: b() }, 'empty-state'))
+          : ((L = !1),
+            (F = []),
             i().each(r, (e) => {
-                M.push(...y(e));
+                F.push(...y(e));
             }));
     let D = null;
     null != r &&
@@ -221,7 +221,7 @@ function A(e) {
                 }));
     let H = null == S ? void 0 : S(),
         B =
-            F && null != H
+            L && null != H
                 ? (0, n.jsx)('div', {
                       className: R.footer,
                       children: (0, n.jsx)(g.Z, {
@@ -248,7 +248,7 @@ function A(e) {
             children: [
                 (0, n.jsxs)(h.Den, {
                     className: a()(R.messagesPopout, x),
-                    onScroll: G ? L : void 0,
+                    onScroll: G ? M : void 0,
                     ref: k,
                     children: [
                         (0, n.jsx)(c.bG, {
@@ -295,7 +295,7 @@ function A(e) {
                                             }
                                             return e;
                                         })({ ref: s }, l)),
-                                        (r = r = { children: M }),
+                                        (r = r = { children: F }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                             : (function (e, t) {
@@ -321,7 +321,7 @@ function A(e) {
         })
     });
 }
-function L(e) {
+function M(e) {
     let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: o, loading: i, loadMore: c, onJump: d, canCloseAllMessages: h = !1, renderHeader: f, renderEmptyState: g, renderMessage: O, getProTip: j, scrollerClassName: v, className: _, onCloseMessage: E, listName: I } = e,
         P = (0, u.e7)([x.Z], () => {
             let e = null != l ? x.Z.getMessages(l.id) : null;

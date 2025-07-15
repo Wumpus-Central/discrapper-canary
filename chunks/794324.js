@@ -21,24 +21,17 @@ let f = (e) => {
             i = (0, c.zL)(u.jE.HERO_BANNER_ANIMATED),
             a = (0, l.n)(null == e ? void 0 : e.categorySkuId);
         return r.useMemo(() => {
-            var r, o, s, l, c;
-            let u = (0, d.ZS)(e.categorySkuId),
-                f = null != n || null != i,
-                _ = null != n && null == i,
-                p =
-                    null != e.responsive || null != e.backgroundStyle
-                        ? {
-                              responsive: e.responsive,
-                              backgroundStyle: e.backgroundStyle
-                          }
-                        : void 0;
+            var r, o, s, l, c, u;
+            let f = (0, d.ZS)(e.categorySkuId),
+                _ = null != n || null != i;
             return {
-                isPreviewingStaticBanner: _,
-                bannerOverrides: u,
-                bannerStyleOverrides: f ? void 0 : null != p ? p : a,
+                isPreviewingStaticBanner: null != n && null == i,
+                bannerOverrides: f,
+                bannerStyleOverrides: _ ? void 0 : null != (l = e.bannerConfig) ? l : a,
+                logoStyleOverrides: _ ? void 0 : e.logoConfig,
                 heroLogo: null != t ? t : e.logoUrl,
-                heroBannerStatic: null != (l = null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static) ? l : e.fallbackBannerUrl,
-                heroBannerAnimated: null != (c = null != i ? i : null == u || null == (o = u.heroBanner) ? void 0 : o.animationSource) ? c : null == (s = e.bannerAsset) ? void 0 : s.animated
+                heroBannerStatic: null != (c = null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static) ? c : e.fallbackBannerUrl,
+                heroBannerAnimated: null != (u = null != i ? i : null == f || null == (o = f.heroBanner) ? void 0 : o.animationSource) ? u : null == (s = e.bannerAsset) ? void 0 : s.animated
             };
         }, [t, n, i, e, a]);
     },

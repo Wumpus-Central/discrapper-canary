@@ -10,9 +10,6 @@ e.exports = {
     rolesHeader: 'rolesHeader_d03e0c',
     emojiQuestionContainer: 'emojiQuestionContainer_d03e0c',
     emojiQuestionText: 'emojiQuestionText_d03e0c',
-    footerButtons: 'footerButtons_d03e0c',
-    removeButton: 'removeButton_d03e0c',
-    rightButtons: 'rightButtons_d03e0c',
     notice: 'notice_d03e0c',
     noticeMessage: 'noticeMessage_d03e0c',
     noticeIcon: 'noticeIcon_d03e0c'

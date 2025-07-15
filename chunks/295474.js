@@ -1,77 +1,77 @@
 (n.d(t, {
-    Ux: () => C,
-    gS: () => g,
-    ww: () => T
+    Ux: () => T,
+    gS: () => S,
+    ww: () => N
 }),
     n(997841));
-var i = n(73800),
-    r = n(399606),
+var r = n(73800),
+    i = n(399606),
     l = n(230711),
-    o = n(18438),
-    s = n(314897),
-    a = n(271383),
-    c = n(430824),
-    d = n(496675),
-    u = n(914010),
+    a = n(18438),
+    o = n(314897),
+    c = n(271383),
+    s = n(430824),
+    u = n(496675),
+    d = n(914010),
     _ = n(715903),
-    h = n(981631),
-    E = n(372897),
-    I = n(526761),
+    E = n(981631),
+    I = n(372897),
+    O = n(526761),
     p = n(388032);
-function C(e) {
-    return (0, r.e7)(
-        [s.default, a.ZP],
+function T(e) {
+    return (0, i.e7)(
+        [o.default, c.ZP],
         () => {
             if (null == e) return !1;
-            let t = s.default.getId();
-            return (0, _.EY)(a.ZP.getMember(e, t));
+            let t = o.default.getId();
+            return (0, _.EY)(c.ZP.getMember(e, t));
         },
         [e]
     );
 }
-function g(e) {
-    return (0, r.cj)(
-        [s.default, a.ZP, u.Z, c.Z],
+function S(e) {
+    return (0, i.cj)(
+        [o.default, c.ZP, d.Z, s.Z],
         () => {
             let t = {
                     nick: void 0,
                     bio: void 0
                 },
-                n = u.Z.getGuildId(),
-                i = null != e ? e : n,
-                r = c.Z.getGuild(i);
-            if (null == r || null == i) return t;
-            let l = s.default.getId(),
-                o = a.ZP.getMember(i, l),
-                d = (0, _.Ow)(null == o ? void 0 : o.flags);
-            if (0 === d.size) return t;
-            if (d.has(E.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+                n = d.Z.getGuildId(),
+                r = null != e ? e : n,
+                i = s.Z.getGuild(r);
+            if (null == i || null == r) return t;
+            let l = o.default.getId(),
+                a = c.ZP.getMember(r, l),
+                u = (0, _.Ow)(null == a ? void 0 : a.flags);
+            if (0 === u.size) return t;
+            if (u.has(I.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
-                    var h;
-                    t.nick = [p.intl.formatToPlainString(p.t.WBUh3N, { guildName: null != (h = r.name) ? h : '' })];
+                    var E;
+                    t.nick = [p.intl.formatToPlainString(p.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
                 } else t.nick = [p.intl.string(p.t.EPZCrK)];
-            return (d.has(E.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [p.intl.string(p.t.dZh1v7)]), t);
+            return (u.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [p.intl.string(p.t.dZh1v7)]), t);
         },
         [e]
     );
 }
-function T(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: a, openWithoutBackstack: u } = e,
-        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        E = (0, r.e7)([d.Z], () => null != _ && d.Z.can(h.Plq.CHANGE_NICKNAME, _), [_]);
+function N(e) {
+    let { guildId: t, scrollPosition: n, analyticsLocation: o, analyticsLocations: c, openWithoutBackstack: d } = e,
+        _ = (0, i.e7)([s.Z], () => s.Z.getGuild(t), [t]),
+        I = (0, i.e7)([u.Z], () => null != _ && u.Z.can(E.Plq.CHANGE_NICKNAME, _), [_]);
     return [
-        i.useCallback(() => {
+        r.useCallback(() => {
             if (null == _) return;
-            let e = h.oAB.PROFILE_CUSTOMIZATION,
-                t = I.NB.GUILD;
-            (E ? (0, o.Fq)(_) : (t = I.NB.USER_PROFILE),
+            let e = E.oAB.PROFILE_CUSTOMIZATION,
+                t = O.NB.GUILD;
+            (I ? (0, a.Fq)(_) : (t = O.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
-                    analyticsLocation: s,
-                    analyticsLocations: a,
-                    openWithoutBackstack: u
+                    analyticsLocation: o,
+                    analyticsLocations: c,
+                    openWithoutBackstack: d
                 }));
-        }, [E, n, s, a, u, _]),
-        E
+        }, [I, n, o, c, d, _]),
+        I
     ];
 }

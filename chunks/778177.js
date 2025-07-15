@@ -32,9 +32,9 @@ var n = r(255367),
     w = r(585483),
     Z = r(63063),
     A = r(405656),
-    L = r(51144),
-    M = r(854709),
-    F = r(652399),
+    M = r(51144),
+    F = r(854709),
+    L = r(652399),
     D = r(14091),
     H = r(981631),
     B = r(388032),
@@ -117,7 +117,7 @@ let Q = h()('2015-05-15').local(),
         let c = k.default.getUser(o.id),
             u = _.Z.getChannel(e),
             d = (null == u ? void 0 : u.isPrivate()) ? C.Z.getNickname(o.id) : null,
-            h = null != (l = null != (s = E.ZP.getNick(e, o.id)) ? s : d) ? l : L.ZP.getName(o),
+            h = null != (l = null != (s = E.ZP.getNick(e, o.id)) ? s : d) ? l : M.ZP.getName(o),
             p = null != (a = null == c ? void 0 : c.getAvatarURL(e, 20)) ? a : o.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
         return [
             (0, n.jsx)(
@@ -141,7 +141,7 @@ let Q = h()('2015-05-15').local(),
                 'span',
                 {
                     className: U.displayUsername,
-                    children: L.ZP.getUserTag(o, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: M.ZP.getUserTag(o, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(o.id)
             )
@@ -194,7 +194,7 @@ let Q = h()('2015-05-15').local(),
                             ? null
                             : (0, n.jsx)('span', {
                                   className: U.searchResultDMUserName,
-                                  children: L.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                                  children: M.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
                               });
                     }
                     if (null != i)
@@ -430,7 +430,7 @@ class ee extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: l === H.I_8 && (0, M.X)(),
+            searchFavorites: l === H.I_8 && (0, F.X)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: a,
             onSelectSearchInSelectedChannel: this.handleSearchInChannel,
@@ -446,7 +446,7 @@ class ee extends s.PureComponent {
                 selectedIndex: -1
             }),
             G(this, 'handleDateChange', (e) => {
-                ((0, F.bh)({
+                ((0, L.bh)({
                     searchId: this.props.searchId,
                     searchQuery: R.Z.getQuery(this.props.searchId),
                     searchQueryString: (0, D.$)(this.props.searchId),
@@ -505,7 +505,7 @@ class ee extends s.PureComponent {
                     let e = r.find((e) => (null == e ? void 0 : e.group) === H.rtL.HISTORY);
                     if (null != e) {
                         let r = t - (a - e.results.length);
-                        (0, F.$z)({
+                        (0, L.$z)({
                             searchId: this.props.searchId,
                             searchHistoryIndex: r,
                             searchHistoryTotalResults: e.results.length
@@ -518,7 +518,7 @@ class ee extends s.PureComponent {
                         { token: n, group: s } = l.result,
                         i = null != n ? n : r,
                         c = (0, S._m)(l.group) ? l.group : null != s && (0, S._m)(s) ? s : null;
-                    (0, F.bh)({
+                    (0, L.bh)({
                         searchId: this.props.searchId,
                         searchQuery: R.Z.getQuery(this.props.searchId),
                         searchQueryString: (0, D.$)(this.props.searchId),

@@ -1,8 +1,8 @@
 (r.d(t, { Z: () => I }), r(388685));
 var n = r(255367),
     l = r(73800),
-    i = r(979554),
-    o = r(399606),
+    o = r(979554),
+    i = r(399606),
     a = r(780384),
     s = r(481060),
     c = r(410030),
@@ -32,8 +32,8 @@ function I(e) {
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: w, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        D = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [F, M] = l.useState(1),
         H = () => {
             var e;
@@ -44,13 +44,13 @@ function I(e) {
         [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case O.AW.AVATAR_DECORATIONS:
-                    return [C.intl.string(C.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
+                    return [C.intl.string(C.t.dRZYND), V ? x.Z : y.Z, o.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
-                    return [C.intl.string(C.t['1cNjt7']), V ? L.Z : P.Z, i.Z.PROFILE_EFFECT];
+                    return [C.intl.string(C.t['1cNjt7']), V ? L.Z : P.Z, o.Z.PROFILE_EFFECT];
                 case O.AW.NAMEPLATES:
-                    return [C.intl.string(C.t.V68Fq6), V ? T.Z : j.Z, i.Z.NAMEPLATE];
+                    return [C.intl.string(C.t.V68Fq6), V ? T.Z : j.Z, o.Z.NAMEPLATE];
                 case O.AW.BUNDLES:
-                    return [C.intl.string(C.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
+                    return [C.intl.string(C.t.FYFppq), V ? S.Z : E.Z, o.Z.BUNDLE];
             }
         }, [B, V]),
         q = (0, f.a)(),
@@ -59,7 +59,7 @@ function I(e) {
                 q(
                     D.filter((e) => {
                         var t;
-                        return e.type === G || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
+                        return e.type === G || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
                     })
                 ),
             [D, G, q]

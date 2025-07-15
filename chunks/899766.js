@@ -1,8 +1,8 @@
 (r.d(t, { J: () => h }), r(539854));
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    o = r.n(i),
+    o = r(120356),
+    i = r.n(o),
     a = r(108542),
     s = r(873546),
     c = r(435935),
@@ -12,12 +12,12 @@ var n = r(255367),
     f = r(698921);
 function g(e) {
     let { endDate: t } = e,
-        { days: r, hours: l, minutes: i, seconds: o } = (0, d.Z)(t),
+        { days: r, hours: l, minutes: o, seconds: i } = (0, d.Z)(t),
         a = (function (e, t, r, n) {
             let l = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
-                i = [];
-            return (e > 0 && i.push(l(e, p.intl.string(p.t.QJyuxc))), (t > 0 || i.length > 0) && i.push(l(t, p.intl.string(p.t['1LyF1t']))), (r > 0 || i.length > 0) && i.push(l(r, p.intl.string(p.t.n7dksL))), i.push(l(n, p.intl.string(p.t['6m/6nJ']))), i.join(':'));
-        })(r, l, i, o);
+                o = [];
+            return (e > 0 && o.push(l(e, p.intl.string(p.t.QJyuxc))), (t > 0 || o.length > 0) && o.push(l(t, p.intl.string(p.t['1LyF1t']))), (r > 0 || o.length > 0) && o.push(l(r, p.intl.string(p.t.n7dksL))), o.push(l(n, p.intl.string(p.t['6m/6nJ']))), o.join(':'));
+        })(r, l, o, i);
     return (0, n.jsx)(u.Text, {
         variant: 'heading-md/medium',
         className: f.countdown,
@@ -32,7 +32,7 @@ function g(e) {
 }
 let h = l.memo(function (e) {
     let { record: t, isVisible: r, isFullScreen: l } = e,
-        i = (0, u.q_F)({
+        o = (0, u.q_F)({
             transform: 'translateX(-50%) '.concat(r ? 'translateY(-75%)' : 'translateY(0%)'),
             opacity: +!!r,
             config: {
@@ -41,7 +41,7 @@ let h = l.memo(function (e) {
             }
         });
     return (0, n.jsxs)(a.animated.div, {
-        className: o()([f.countDownWrapper, l && f.fullScreenWrapper, s.tq && f.mobileWrapper]),
+        className: i()([f.countDownWrapper, l && f.fullScreenWrapper, s.tq && f.mobileWrapper]),
         role: 'status',
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -69,7 +69,7 @@ let h = l.memo(function (e) {
             return e;
         })(
             {},
-            i,
+            o,
             null != t.bannerUrl &&
                 '' !== t.bannerUrl && {
                     backgroundImage: 'url('.concat(t.bannerUrl, ')'),

@@ -2,8 +2,8 @@ r.d(t, { F: () => p });
 var n = r(255367);
 r(73800);
 var l = r(120356),
-    i = r.n(l),
-    o = r(481060),
+    o = r.n(l),
+    i = r(481060),
     a = r(937615),
     s = r(884697),
     c = r(388032),
@@ -33,7 +33,7 @@ let p = (e) => {
             g !== s.f_ && g.discountPercentage >= 5
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(o.nn4, {
+                          (0, n.jsx)(i.nn4, {
                               children: c.intl.format(c.t.niC6DA, {
                                   price: b,
                                   discountPercentage: g.discountPercentage
@@ -43,7 +43,7 @@ let p = (e) => {
                               'aria-hidden': !0,
                               children: b
                           }),
-                          (0, n.jsxs)(o.Text, {
+                          (0, n.jsxs)(i.Text, {
                               variant: h,
                               color: 'text-feedback-positive',
                               className: u.discount,
@@ -54,19 +54,19 @@ let p = (e) => {
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(o.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
+                          (0, n.jsx)(i.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
                               children: b
                           })
                       ]
                   });
-    return (0, n.jsxs)(o.Text, {
+    return (0, n.jsxs)(i.Text, {
         variant: h,
-        className: i()(u.container, f),
+        className: o()(u.container, f),
         children: [
             'tooltip' === l
-                ? (0, n.jsx)(o.ua7, {
+                ? (0, n.jsx)(i.ua7, {
                       text: c.intl.string(c.t.MPFyJy),
                       'aria-label': c.intl.string(c.t.X3Ekj4),
                       children: (e) => {
@@ -80,7 +80,7 @@ let p = (e) => {
                                   })(e)
                               );
                           return (0, n.jsx)(
-                              o.SrA,
+                              i.SrA,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
@@ -130,7 +130,7 @@ let p = (e) => {
                       }
                   })
                 : 'default' === l
-                  ? (0, n.jsx)(o.SrA, {
+                  ? (0, n.jsx)(i.SrA, {
                         size: p,
                         color: 'currentColor',
                         className: u.nitroIcon

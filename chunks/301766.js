@@ -1,14 +1,12 @@
 (n.d(t, {
-    Q0: () => c,
-    ZP: () => u,
-    kH: () => l
+    Q0: () => l,
+    ZP: () => c,
+    kH: () => s
 }),
-    n(388685),
-    n(415506));
+    n(388685));
 var r = n(81825),
-    i = n(981631),
-    a = n(474936);
-function o(e, t, n) {
+    i = n(474936);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,72 +19,53 @@ function o(e, t, n) {
         e
     );
 }
-class s extends r.Z {
+class o extends r.Z {
     static createFromServer(e) {
         let t = {};
-        null != e.prices &&
-            (t = Object.keys(e.prices).reduce((t, n) => {
-                if (null == e.prices) return t;
-                let r = e.prices[n];
-                return (
-                    (t[n] = {
-                        countryPrices: {
-                            countryCode: r.country_prices.country_code,
-                            prices: r.country_prices.prices.map((t) => l(t, e.tax_inclusive))
-                        },
-                        paymentSourcePrices: Object.entries(r.payment_source_prices).reduce((t, n) => {
-                            let [r, i] = n;
-                            return ((t[r] = i.map((t) => l(t, e.tax_inclusive))), t);
-                        }, {})
-                    }),
-                    t
-                );
-            }, {}));
-        let n = {
-            id: e.id,
-            name: e.name,
-            interval: e.interval,
-            intervalCount: e.interval_count,
-            taxInclusive: e.tax_inclusive,
-            skuId: e.sku_id,
-            currency: e.currency,
-            price: e.price,
-            prices: t
-        };
         return (
-            null != e.fallback_price &&
-                0 !== e.fallback_price &&
-                Object.assign(n, {
-                    fallbackPrice: e.fallback_price,
-                    fallbackCurrency: e.fallback_currency
-                }),
-            new s(n)
+            null != e.prices &&
+                (t = Object.keys(e.prices).reduce((t, n) => {
+                    if (null == e.prices) return t;
+                    let r = e.prices[n];
+                    return (
+                        (t[n] = {
+                            countryPrices: {
+                                countryCode: r.country_prices.country_code,
+                                prices: r.country_prices.prices.map((t) => s(t, e.tax_inclusive))
+                            },
+                            paymentSourcePrices: Object.entries(r.payment_source_prices).reduce((t, n) => {
+                                let [r, i] = n;
+                                return ((t[r] = i.map((t) => s(t, e.tax_inclusive))), t);
+                            }, {})
+                        }),
+                        t
+                    );
+                }, {})),
+            new o({
+                id: e.id,
+                name: e.name,
+                interval: e.interval,
+                intervalCount: e.interval_count,
+                taxInclusive: e.tax_inclusive,
+                skuId: e.sku_id,
+                currency: e.currency,
+                price: e.price,
+                prices: t
+            })
         );
     }
     get premiumSubscriptionType() {
         switch (this.skuId) {
-            case a.Si.LEGACY:
-            case a.Si.TIER_2:
-                return a.p9.TIER_2;
-            case a.Si.TIER_1:
-                return a.p9.TIER_1;
-            case a.Si.TIER_0:
-                return a.p9.TIER_0;
+            case i.Si.LEGACY:
+            case i.Si.TIER_2:
+                return i.p9.TIER_2;
+            case i.Si.TIER_1:
+                return i.p9.TIER_1;
+            case i.Si.TIER_0:
+                return i.p9.TIER_0;
             default:
                 return null;
         }
-    }
-    get isGiftableCurrency() {
-        return i.w2V.has(this.currency);
-    }
-    get giftPrice() {
-        if (this.isGiftableCurrency) return this.price;
-        if ('number' == typeof this.fallbackPrice) return this.fallbackPrice;
-        throw Error('Missing fallback price for non-giftable currency');
-    }
-    getPrice() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e ? this.giftPrice : this.price;
     }
     toServerData() {
         let e = {};
@@ -111,17 +90,15 @@ class s extends r.Z {
                 currency: this.currency,
                 price: this.price,
                 prices: e,
-                price_tier: this.price,
-                fallback_price: this.fallbackPrice,
-                fallback_currency: this.fallbackCurrency
+                price_tier: this.price
             }
         );
     }
     constructor(e) {
-        (super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), o(this, 'fallbackPrice', void 0), o(this, 'fallbackCurrency', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.prices = e.prices), e.fallbackPrice && ((this.fallbackPrice = e.fallbackPrice), (this.fallbackCurrency = e.fallbackCurrency)));
+        (super(), a(this, 'id', void 0), a(this, 'name', void 0), a(this, 'interval', void 0), a(this, 'intervalCount', void 0), a(this, 'taxInclusive', void 0), a(this, 'skuId', void 0), a(this, 'currency', void 0), a(this, 'price', void 0), a(this, 'prices', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.prices = e.prices));
     }
 }
-function l(e, t) {
+function s(e, t) {
     return {
         amount: e.amount,
         currency: e.currency,
@@ -129,7 +106,7 @@ function l(e, t) {
         taxInclusive: t
     };
 }
-function c(e) {
-    return [a.Xh.NONE_MONTH, a.Xh.NONE_3_MONTH, a.Xh.NONE_6_MONTH, a.Xh.NONE_YEAR].includes(e);
+function l(e) {
+    return [i.Xh.NONE_MONTH, i.Xh.NONE_3_MONTH, i.Xh.NONE_6_MONTH, i.Xh.NONE_YEAR].includes(e);
 }
-let u = s;
+let c = o;

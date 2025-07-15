@@ -1,8 +1,8 @@
 r.d(t, { Z: () => E });
 var n = r(255367),
     l = r(73800),
-    i = r(180650),
-    o = r(442837),
+    o = r(180650),
+    i = r(442837),
     a = r(607070),
     s = r(594174),
     c = r(960048),
@@ -22,14 +22,14 @@ function E(e) {
     let { tab: t, isFullScreen: r, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: E, advancedScroller: x } = e,
         j = S();
     y(j);
-    let T = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
+    let T = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         { setCategoryRef: P, handleScrollToCategory: L } = (0, h.xV)(s.current),
         I = l.useCallback(
             async (e, t, n) => {
                 m(e, t);
                 let l = n && !r && !T,
-                    o = t === i.T.ORB ? C.AW.ORBS : C.AW.CATALOG;
-                (await u(o, l), null != t && L(t));
+                    i = t === o.T.ORB ? C.AW.ORBS : C.AW.CATALOG;
+                (await u(i, l), null != t && L(t));
             },
             [r, T, u, L, m]
         ),
@@ -60,16 +60,16 @@ function E(e) {
                   advancedScroller: x
               });
 }
-let S = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+let S = () => (0, i.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
     y = (e) => {
-        let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
+        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: r, includeUnpublished: n } = (0, m.Z)();
         l.useEffect(() => {
-            var l, i;
+            var l, o;
             null != e &&
                 c.Z.captureMessage(e, {
                     tags: {
-                        isStaff: null != (i = null == t || null == (l = t.isStaff()) ? void 0 : l.toString()) ? i : 'unknown',
+                        isStaff: null != (o = null == t || null == (l = t.isStaff()) ? void 0 : l.toString()) ? o : 'unknown',
                         disableCache: r.toString(),
                         includeUnpublished: n.toString()
                     }

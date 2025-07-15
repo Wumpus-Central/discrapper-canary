@@ -8,8 +8,8 @@
     r(49124));
 var n = r(73800),
     l = r(97519),
-    i = r(296574),
-    o = r(497598),
+    o = r(296574),
+    i = r(497598),
     a = r(792091),
     s = r(653654),
     c = r(149705);
@@ -62,15 +62,15 @@ function p(e, t) {
 }
 let f = {
         sortType: a.E.RECENCY,
-        sortDirection: o.F.DESC
+        sortDirection: i.F.DESC
     },
     g = {
         sortType: a.E.POPULARITY,
-        sortDirection: o.F.DESC
+        sortDirection: i.F.DESC
     },
     h = {
         sortType: a.E.RELEVANCE,
-        sortDirection: o.F.DESC
+        sortDirection: i.F.DESC
     },
     b = {
         itemTypeFilters: new Set(),
@@ -91,12 +91,12 @@ let f = {
         return t.size > 0 || r.size > 0 || '' !== n.trim() ? h : l.size > 0 ? g : f;
     },
     _ = (0, l.U)(
-        (0, i.XR)((e, t) =>
+        (0, o.XR)((e, t) =>
             d(u({}, b), {
                 hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === f.sortType && t().sort.sortDirection === f.sortDirection,
                 hasFilters: () => {
-                    let { itemTypeFilters: e, colorFilters: r, themeFilters: n, orbEligible: l, searchQuery: i } = t();
-                    return [e, r, n].some((e) => e.size > 0) || l || '' !== i;
+                    let { itemTypeFilters: e, colorFilters: r, themeFilters: n, orbEligible: l, searchQuery: o } = t();
+                    return [e, r, n].some((e) => e.size > 0) || l || '' !== o;
                 },
                 hasRelevanceFilters: () => {
                     let { colorFilters: e, themeFilters: r, searchQuery: n } = t();
@@ -196,7 +196,7 @@ let f = {
         )
     ),
     O = (e) => {
-        let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: i, searchQuery: o, queryPageSize: a, queryPageOffset: s } = e;
+        let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: o, searchQuery: i, queryPageSize: a, queryPageOffset: s } = e;
         return {
             item_types: Array.from(t),
             colors: Array.from(r),
@@ -204,9 +204,9 @@ let f = {
             orbs_eligible: !!l || void 0,
             offset: s,
             limit: a,
-            sort_type: i.sortType,
-            sort_direction: i.sortDirection,
-            search: '' !== o ? o : void 0
+            sort_type: o.sortType,
+            sort_direction: o.sortDirection,
+            search: '' !== i ? i : void 0
         };
     },
     C = (e) => {
@@ -231,16 +231,16 @@ let f = {
                         let t = await (0, s.y)(n);
                         e(C(t));
                     } catch (e) {
-                        var i;
-                        t(null != (i = null == e ? void 0 : e.message) ? i : 'Unknown error');
+                        var o;
+                        t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
                     } finally {
                         l(!1);
                     }
                 })();
             };
             n(O(_.getState()));
-            let i = _.subscribe(O, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-                o = _.subscribe(
+            let o = _.subscribe(O, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+                i = _.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
                         if (!e && t) {
@@ -250,7 +250,7 @@ let f = {
                     }
                 );
             return () => {
-                (i(), o());
+                (o(), i());
             };
         }, [e, t, r, l]);
     };

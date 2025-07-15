@@ -1,8 +1,8 @@
 (r.d(t, { Z: () => v }), r(35282), r(388685));
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    o = r.n(i),
+    o = r(120356),
+    i = r.n(o),
     a = r(399606),
     s = r(481060),
     c = r(594174),
@@ -19,7 +19,7 @@ var n = r(255367),
     C = r(484920);
 function v(e) {
     var t;
-    let { isFetchingCategories: r, isFullScreen: i, scrollerRef: v, tab: E } = e,
+    let { isFetchingCategories: r, isFullScreen: o, scrollerRef: v, tab: E } = e,
         S = (0, u.sp)(),
         y = null != (t = null == S ? void 0 : S.sessionId) ? t : '',
         { noCache: x, includeUnpublished: j } = (0, _.Z)(),
@@ -42,11 +42,11 @@ function v(e) {
                 sessionId: y,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: E,
-                isFullScreen: i,
+                isFullScreen: o,
                 unpublishedCategoriesShown: j,
                 cacheDisabled: x
             });
-    }, [y, i, j, x, r, E]);
+    }, [y, o, j, x, r, E]);
     let Z = l.useRef(null),
         { setQueryPageSize: D, setQueryPageOffset: F, queryPageSize: M } = (0, f.S)(),
         H = r || k || null == T,
@@ -63,7 +63,7 @@ function v(e) {
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: o()(C.products, { [C.productsEmpty]: W }),
+                    className: i()(C.products, { [C.productsEmpty]: W }),
                     ref: Z,
                     children: [
                         H && [...Array(M)].map((e, t) => (0, n.jsx)(b.K, {}, t)),

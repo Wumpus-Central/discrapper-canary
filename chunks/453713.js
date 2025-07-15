@@ -1,8 +1,8 @@
 r.d(t, { P: () => S });
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    o = r.n(i),
+    o = r(120356),
+    i = r.n(o),
     a = r(404759),
     s = r.n(a),
     c = r(91192),
@@ -66,13 +66,13 @@ function C(e, t) {
             var r,
                 n,
                 l = {},
-                i = Object.keys(e);
-            for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
+                o = Object.keys(e);
+            for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
+        var o = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
     }
     return l;
 }
@@ -85,16 +85,16 @@ let v = s()((e) => {
         return t ? p.TVs.unsafe_rawColors.PRIMARY_700.css : p.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     E = (e) => {
-        let { variantGroupProduct: t, variant: r, variantIndex: i, totalVariants: a, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: E } = e,
+        let { variantGroupProduct: t, variant: r, variantIndex: o, totalVariants: a, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: E } = e,
             { isPurchased: S } = (0, h.L)(r),
-            y = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
+            y = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(o)),
             { onFocus: x } = y,
             j = C(y, ['onFocus']),
             T = l.useCallback(
                 (e) => {
-                    (e.preventDefault(), e.stopPropagation(), (0, g.$)(t, i), x());
+                    (e.preventDefault(), e.stopPropagation(), (0, g.$)(t, o), x());
                 },
-                [x, t, i]
+                [x, t, o]
             );
         return (0, n.jsx)(p.ua7, {
             text: b.intl.string(b.t['6cfuDg']),
@@ -127,13 +127,13 @@ let v = s()((e) => {
                         },
                         className: m.colorVariant,
                         children: (0, n.jsx)('div', {
-                            className: o()(m.colorSwatch, {
+                            className: i()(m.colorSwatch, {
                                 [m.open]: !E,
-                                [m.selected]: i === s
+                                [m.selected]: o === s
                             }),
                             style: {
                                 backgroundColor: r.variantValue,
-                                zIndex: a - i
+                                zIndex: a - o
                             },
                             children: S
                                 ? (0, n.jsx)(p.kSu, {
@@ -148,7 +148,7 @@ let v = s()((e) => {
     },
     S = (e) => {
         var t, r;
-        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: a, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: g, alternativeBackgroundColor: h } = e,
+        let { variantGroupProduct: l, className: o, previewingVariantIndexProps: a, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: g, alternativeBackgroundColor: h } = e,
             v = a.previewingVariantIndex,
             S = null == (t = l.variants) ? void 0 : t[g],
             y = null !== v ? (null == (r = l.variants) ? void 0 : r[v]) : void 0,
@@ -165,7 +165,7 @@ let v = s()((e) => {
                     return (0, n.jsxs)(
                         'div',
                         O(_({ ref: r }, c), {
-                            className: o()(m.variantsPanel, i, {
+                            className: i()(m.variantsPanel, o, {
                                 [m.minimalState]: d,
                                 [m.alternativeColor]: h
                             }),
@@ -178,7 +178,7 @@ let v = s()((e) => {
                                         null == (t = l.variants)
                                             ? void 0
                                             : t.map((e, t) => {
-                                                  var r, i;
+                                                  var r, o;
                                                   return (0, n.jsx)(
                                                       E,
                                                       {
@@ -186,7 +186,7 @@ let v = s()((e) => {
                                                           variant: e,
                                                           variantIndex: t,
                                                           selectedVariantIndex: g,
-                                                          totalVariants: null != (i = null == (r = l.variants) ? void 0 : r.length) ? i : 0,
+                                                          totalVariants: null != (o = null == (r = l.variants) ? void 0 : r.length) ? o : 0,
                                                           onEnter: () => a.handleEntering(t),
                                                           onLeave: a.handleLeaving,
                                                           minimal: d

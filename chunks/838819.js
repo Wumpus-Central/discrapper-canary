@@ -1,8 +1,8 @@
 (r.r(t), r.d(t, { default: () => F }), r(388685));
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    o = r.n(i),
+    o = r(120356),
+    i = r.n(o),
     a = r(772848),
     s = r(399606),
     c = r(952265),
@@ -36,22 +36,22 @@ var n = r(255367),
 let Z = [N.AW.HOME, N.AW.ORBS],
     D = (e) => {
         let { children: t, shouldAddEventListener: r, onClose: n } = e,
-            i = (0, c.f9)();
+            o = (0, c.f9)();
         return (
             l.useEffect(() => {
-                if (!r || i) return;
+                if (!r || o) return;
                 let e = (e) => {
                     e.key === w.mR.Escape && n();
                 };
                 return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
-            }, [r, i, n]),
+            }, [r, o, n]),
             t
         );
     },
     F = function (e) {
         let { isFullScreen: t = !0, tab: r = N.AW.HOME } = e;
         (0, b.z)(h.f);
-        let i = (0, p.Z)((0, a.Z)()),
+        let o = (0, p.Z)((0, a.Z)()),
             c = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
             w = l.useRef(null),
             { closeIntroToOrbsClaimedCoachmark: F } = (0, _.Z)({ location: 'CollectiblesShop' });
@@ -59,7 +59,7 @@ let Z = [N.AW.HOME, N.AW.ORBS],
             () => () => {
                 F();
             },
-            [i, F]
+            [o, F]
         );
         let { onClose: M } = (0, k.Db)(),
             { currentTab: H, hasFilters: W } = (0, T.S)(),
@@ -70,7 +70,7 @@ let Z = [N.AW.HOME, N.AW.ORBS],
                     logPerf: !0
                 },
                 {
-                    sessionId: i,
+                    sessionId: o,
                     tab: V,
                     isFullScreen: t
                 }
@@ -88,8 +88,8 @@ let Z = [N.AW.HOME, N.AW.ORBS],
                 (J(e), Y(t));
             }, []),
             { selectedTab: $, transitionState: ee, transitionToTab: et } = (0, j.B)(w, V, t),
-            { handleScroll: er } = (0, g.z)(w, i, $);
-        ((0, S.q3)(i, $, K, ee, X),
+            { handleScroll: er } = (0, g.z)(w, o, $);
+        ((0, S.q3)(o, $, K, ee, X),
             (0, S.EB)($, c),
             (0, B.Z)(),
             l.useEffect(() => {
@@ -97,16 +97,16 @@ let Z = [N.AW.HOME, N.AW.ORBS],
             }, [t]));
         let en = (0, s.e7)([O.Z], () => O.Z.getLayers().includes(A.S9g.COLLECTIBLES_SHOP)),
             el = l.useRef(null),
-            ei = l.useRef(null);
+            eo = l.useRef(null);
         (0, u.Tbt)(el);
-        let { setFullScreenOpen: eo, fullScreenOpen: ea } = (0, T.S)();
+        let { setFullScreenOpen: ei, fullScreenOpen: ea } = (0, T.S)();
         l.useEffect(() => {
-            if (t) return (eo(!0), () => eo(!1));
+            if (t) return (ei(!0), () => ei(!1));
             if (!t) {
                 var e;
-                null == (e = ei.current) || e.focus();
+                null == (e = eo.current) || e.focus();
             }
-        }, [t, eo]);
+        }, [t, ei]);
         let { analyticsLocations: es } = (0, S.MV)($);
         return ea && !t
             ? null
@@ -114,7 +114,7 @@ let Z = [N.AW.HOME, N.AW.ORBS],
                   value: es,
                   children: (0, n.jsx)(v.k0, {
                       newValue: {
-                          sessionId: i,
+                          sessionId: o,
                           pageCategory: K,
                           pageSize: N.kN
                       },
@@ -123,10 +123,10 @@ let Z = [N.AW.HOME, N.AW.ORBS],
                           shouldAddEventListener: t && !en,
                           children: (0, n.jsx)('div', {
                               className: R.shop,
-                              ref: t ? el : ei,
+                              ref: t ? el : eo,
                               tabIndex: -1,
                               children: (0, n.jsxs)('div', {
-                                  className: o()(R.shopViewWrapper, {
+                                  className: i()(R.shopViewWrapper, {
                                       [R.visible]: ee === N.f7.VISIBLE,
                                       [R.in]: ee === N.f7.IN,
                                       [R.out]: ee === N.f7.OUT

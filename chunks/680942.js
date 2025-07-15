@@ -1,8 +1,8 @@
 r.d(t, { Z: () => C });
 var n = r(255367),
     l = r(73800),
-    i = r(979554),
-    o = r(755721),
+    o = r(979554),
+    i = r(755721),
     a = r(481060),
     s = r(906732),
     c = r(333867),
@@ -17,7 +17,7 @@ var n = r(255367),
     _ = r(388032),
     O = r(846165);
 let C = (e) => {
-    let { product: t, selectedVariantIndex: r, returnRef: C, onSuccess: v, tooltipDelay: E, color: S = o.Tt.BRAND } = e,
+    let { product: t, selectedVariantIndex: r, returnRef: C, onSuccess: v, tooltipDelay: E, color: S = i.Tt.BRAND } = e,
         { analyticsLocations: y } = (0, s.ZP)(),
         x = l.useRef(null),
         j = (0, f.hv)('CollectiblesShopGiftButton'),
@@ -31,7 +31,7 @@ let C = (e) => {
               children: (e) => {
                   var l, s;
                   return (0, n.jsx)(
-                      o.zx,
+                      i.zx,
                       ((l = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -62,8 +62,8 @@ let C = (e) => {
                               buttonRef: x,
                               className: O.giftButton,
                               color: S,
-                              look: o.zx.Looks.FILLED,
-                              size: o.Ph.ICON,
+                              look: i.zx.Looks.FILLED,
+                              size: i.Ph.ICON,
                               innerClassName: O.giftButtonInner,
                               onClick: (e) => {
                                   (e.stopPropagation(),
@@ -72,7 +72,7 @@ let C = (e) => {
                                           sku_id: t.skuId,
                                           page_section: null == T ? void 0 : T.pageSection,
                                           page_category: null == T ? void 0 : T.pageCategory,
-                                          tile_type: i.Z[t.type],
+                                          tile_type: o.Z[t.type],
                                           tile_position: String(null == T ? void 0 : T.tilePosition),
                                           cta_name: 'gift button',
                                           page_type: P || 'home'

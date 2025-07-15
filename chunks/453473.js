@@ -36,8 +36,8 @@ var n = r(255367),
     w = r(74551),
     Z = r(981631),
     A = r(388032),
-    L = r(585693);
-function M(e) {
+    M = r(585693);
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -62,7 +62,7 @@ function M(e) {
     }
     return e;
 }
-function F(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,7 +91,7 @@ function H(e) {
     return (0, n.jsx)(f.VqE, {
         'aria-label': A.intl.string(A.t['2pAkDA']),
         children: (0, n.jsxs)('div', {
-            className: L.popoutContainer,
+            className: M.popoutContainer,
             children: [
                 (0, n.jsx)(m.h4, {
                     icon: f.plf,
@@ -192,14 +192,14 @@ function G(e) {
                         })(e, ['ref']);
                     return (0, n.jsx)(
                         f.h21,
-                        F(
-                            M(
+                        L(
+                            F(
                                 {
                                     ref: (e) => {
                                         var t;
                                         ((l.current = e), (s.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     },
-                                    className: L.messagesScroller
+                                    className: M.messagesScroller
                                 },
                                 a
                             ),
@@ -244,10 +244,10 @@ function z(e) {
         c = (0, p.e7)([j.Z], () => !!((null == o ? void 0 : o.type) === Z.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || j.Z.can(Z.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, n.jsxs)('div', {
-              className: L.messageContainer,
+              className: M.messageContainer,
               children: [
                   (0, n.jsx)(f.P3F, {
-                      className: L.clickableMessageBackground,
+                      className: M.clickableMessageBackground,
                       onClick: i,
                       'aria-label': A.intl.string(A.t['+TSRGB'])
                   }),
@@ -263,7 +263,7 @@ function z(e) {
                       {
                           message: t.message,
                           channel: o,
-                          className: L.message,
+                          className: M.message,
                           compact: O.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: D,
@@ -272,7 +272,7 @@ function z(e) {
                       t.message.id
                   ),
                   (0, n.jsx)(x.ZP, {
-                      className: L.hoverBar,
+                      className: M.hoverBar,
                       children: (0, n.jsx)(W, {
                           savedMessage: t,
                           jumpToMessage: i
@@ -281,10 +281,10 @@ function z(e) {
               ]
           })
         : (0, n.jsxs)('div', {
-              className: a()(L.messageContainer, L.deletedMessage),
+              className: a()(M.messageContainer, M.deletedMessage),
               children: [
                   (0, n.jsx)('div', {
-                      className: L.deleteIcon,
+                      className: M.deleteIcon,
                       children: (0, n.jsx)(f.P4T, {
                           size: 'xxs',
                           color: f.TVs.colors.INTERACTIVE_ACTIVE
@@ -296,7 +296,7 @@ function z(e) {
                       children: null != t.saveData.dueAt ? A.intl.string(A.t['wuQm+v']) : A.intl.string(A.t.o572FR)
                   }),
                   (0, n.jsx)(x.ZP, {
-                      className: L.hoverBar,
+                      className: M.hoverBar,
                       children: (0, n.jsx)(
                           x.sF,
                           {
@@ -352,7 +352,7 @@ function W(e) {
                                   return (r) =>
                                       (0, n.jsx)(
                                           e,
-                                          F(M({}, r), {
+                                          L(F({}, r), {
                                               label: A.intl.string(A.t.roMu1N),
                                               message: t.message
                                           })
@@ -395,7 +395,7 @@ function W(e) {
                                   return (r) =>
                                       (0, n.jsx)(
                                           e,
-                                          F(M({}, r), {
+                                          L(F({}, r), {
                                               label: A.intl.string(A.t.mJ3P0N),
                                               message: t.message
                                           })
