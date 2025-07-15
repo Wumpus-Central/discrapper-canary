@@ -22,7 +22,7 @@ function _(e) {
             joinRequest: C,
             isModmin: x,
             guildId: v,
-            maxMembers: j
+            maxMembers: O
         } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
             let e = p.Z.getRequest(y),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -33,9 +33,9 @@ function _(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
-        E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: S, rejectRequest: I, submitting: P } = (0, f.s)(null == C ? void 0 : C.guildId, null == C ? void 0 : C.userId, null == C ? void 0 : C.joinRequestId);
+        j = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
+        E = null != O && (null != j ? j : 0) >= O,
+        { approveRequest: S, rejectRequest: P, submitting: I } = (0, f.s)(null == C ? void 0 : C.guildId, null == C ? void 0 : C.userId, null == C ? void 0 : C.joinRequestId);
     return null != C && C.applicationStatus === h.wB.SUBMITTED && x
         ? (0, r.jsxs)('div', {
               className: b.buttons,
@@ -81,7 +81,7 @@ function _(e) {
                               )),
                               (n = n =
                                   {
-                                      loading: P,
+                                      loading: I,
                                       onClick: S,
                                       disabled: E
                                   }),
@@ -105,8 +105,8 @@ function _(e) {
                       variant: 'critical-primary',
                       size: 'sm',
                       text: g.intl.string(g.t.hDtbs7),
-                      onClick: I,
-                      disabled: P || C.applicationStatus !== h.wB.SUBMITTED
+                      onClick: P,
+                      disabled: I || C.applicationStatus !== h.wB.SUBMITTED
                   }),
                   n &&
                       (0, r.jsx)(l.zxk, {

@@ -20,14 +20,14 @@ var r = n(512722),
     m = n(904245),
     f = n(881052),
     _ = n(367907),
-    g = n(41776),
-    h = n(58873),
+    h = n(41776),
+    g = n(58873),
     b = n(566006),
     E = n(869765),
     y = n(314897),
-    C = n(592125),
-    v = n(703558),
-    x = n(607744),
+    x = n(592125),
+    C = n(703558),
+    v = n(607744),
     O = n(375954),
     j = n(117530),
     I = n(553803),
@@ -94,7 +94,7 @@ function R(e, t) {
         selectedEmojiAnswersCount: i
     };
 }
-function D(e) {
+function k(e) {
     let { guildId: t, title: n, body: r } = e;
     d.Z.show({
         title: n,
@@ -108,10 +108,10 @@ function D(e) {
 }
 function L(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
-        i = C.Z.getChannel(t);
+        i = x.Z.getChannel(t);
     if (null == i) return;
-    if (g.Z.isLurking(i.guild_id))
-        return void D({
+    if (h.Z.isLurking(i.guild_id))
+        return void k({
             guildId: i.guild_id,
             title: A.intl.string(A.t['7LpysL']),
             body: A.intl.string(A.t['5sHHo6'])
@@ -124,7 +124,7 @@ function L(e) {
         initialAnswerId: a
     });
 }
-function M(e) {
+function D(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
     (0, T.eu)(t, n, (e) => {
         var n;
@@ -137,14 +137,14 @@ function M(e) {
         };
     });
 }
-function k(e) {
+function M(e) {
     let { channelId: t, messageId: n } = e,
         r = O.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function U(e) {
     let { channelId: t, messageId: n, answerIds: r } = e,
-        i = k({
+        i = M({
             channelId: t,
             messageId: n
         }),
@@ -182,22 +182,22 @@ async function U(e) {
 }
 async function F(e) {
     let { channelId: t, messageId: n } = e,
-        r = C.Z.getChannel(t);
+        r = x.Z.getChannel(t);
     if (null == r) return;
-    if (g.Z.isLurking(r.guild_id))
-        return void D({
+    if (h.Z.isLurking(r.guild_id))
+        return void k({
             guildId: r.guild_id,
             title: A.intl.string(A.t.Qic1FB),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    if (!x.Z.canChatInGuild(r.guild_id))
+    if (!v.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
             title: A.intl.string(A.t.p245ws),
             body: A.intl.string(A.t['U/uodn'])
         });
     let l = (0, T.fU)(t, n);
     i()(null != l, 'Must not be able to vote without existing state!');
-    let a = k({
+    let a = M({
         channelId: t,
         messageId: n
     });
@@ -248,10 +248,10 @@ async function F(e) {
 }
 async function B(e) {
     let { channelId: t, messageId: n } = e,
-        r = C.Z.getChannel(t);
+        r = x.Z.getChannel(t);
     if (null != r)
-        return g.Z.isLurking(r.guild_id)
-            ? void D({
+        return h.Z.isLurking(r.guild_id)
+            ? void k({
                   guildId: r.guild_id,
                   title: A.intl.string(A.t.B9QnBg),
                   body: A.intl.string(A.t.BVZCTk)
@@ -287,7 +287,7 @@ async function G(e) {
             });
             break;
         case 'cancel':
-            M({
+            D({
                 channelId: t,
                 messageId: n,
                 isEditing: !1
@@ -436,11 +436,11 @@ let H = {
         });
     },
     handlePollSubmitVote: F,
-    handleUpdateVoteEditingState: M,
+    handleUpdateVoteEditingState: D,
     handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
-            c = j.Z.getUploads(t.id, v.d.Poll),
+            c = j.Z.getUploads(t.id, C.d.Poll),
             u = r.map((e) => {
                 var t, n;
                 let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),
@@ -469,7 +469,7 @@ let H = {
             (await m.Z.sendPollMessage(t.id, d, {
                 attachmentsToUpload: c,
                 onAttachmentUploadError: (e, n, r) => {
-                    (0, h.A)({
+                    (0, g.A)({
                         file: e,
                         guildId: t.getGuildId(),
                         analyticsLocations: [],

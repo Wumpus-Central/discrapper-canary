@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -30,16 +30,16 @@ let y = {
     },
     x = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
-function j(e) {
+function O(e) {
     return e.type === u.Ui.VOICE;
 }
-let O = (0, a.Z)((e) => {
+let j = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: y, onScroll: O } = e,
+    let { channel: a, width: y, onScroll: j } = e,
         {
             selectedParticipantId: E,
             largeStream: S,
-            chatOpen: I
+            chatOpen: P
         } = (0, l.cj)(
             [o.Z],
             () => ({
@@ -49,14 +49,14 @@ let O = (0, a.Z)((e) => {
             }),
             [a.id]
         ),
-        P = (0, c.Io)(a.id),
+        I = (0, c.Io)(a.id),
         Z = (0, c.Rk)(a.id, u.pV.AUDIENCE),
         N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
         T = (0, c.w8)(a.id, u.pV.SPEAKER),
-        A = T.filter(j),
+        A = T.filter(O),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        M = x(y, I),
+        M = x(y, P),
         D = {
             [u.pV.SPEAKER]: M,
             [u.pV.AUDIENCE]: R,
@@ -75,12 +75,12 @@ let O = (0, a.Z)((e) => {
         renderSection: (e) => {
             let { section: t } = e;
             return 1 === t
-                ? 0 === P
+                ? 0 === I
                     ? null
                     : (0, r.jsx)(
                           m.Z,
                           {
-                              participantCount: P,
+                              participantCount: I,
                               label: b.intl.string(b.t.CduOk5),
                               className: _.header,
                               onClick: () => W(!z),
@@ -165,6 +165,6 @@ let O = (0, a.Z)((e) => {
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!V(e)),
         className: _.scroller,
         chunkSize: 60,
-        onScroll: O
+        onScroll: j
     });
 });

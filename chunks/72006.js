@@ -1,86 +1,86 @@
-(n.d(t, {
+(r.d(t, {
     FZ: () => N,
-    Hl: () => L,
-    NJ: () => A,
-    R8: () => F,
-    Sq: () => P,
+    Hl: () => F,
+    NJ: () => Z,
+    R8: () => L,
+    Sq: () => R,
     Wg: () => M,
     Zn: () => I,
-    c2: () => w,
-    eE: () => Z,
+    c2: () => k,
+    eE: () => A,
     iE: () => D,
-    iK: () => k,
-    lv: () => R,
+    iK: () => w,
+    lv: () => P,
     nR: () => T,
-    q0: () => s.a,
-    x0: () => j,
+    q0: () => l.a,
+    x0: () => E,
     xb: () => H,
     yd: () => C
 }),
-    n(388685),
-    n(539854));
-var r = n(399834),
-    l = n(598335),
-    s = n.n(l),
-    a = n(596464),
-    i = n.n(a),
-    o = n(476363),
-    c = n.n(o),
-    u = n(963782),
-    d = n.n(u),
-    h = n(904112),
-    p = n.n(h),
-    f = n(599552),
-    g = n.n(f),
-    m = n(544611),
-    S = n.n(m),
-    y = n(803068),
-    b = n.n(y),
-    x = n(561099),
-    _ = n.n(x),
-    v = n(655000),
-    O = n.n(v);
-function E(e, t, n, l) {
-    let s = l.getCurrentContent(),
+    r(388685),
+    r(539854));
+var n = r(399834),
+    s = r(598335),
+    l = r.n(s),
+    a = r(596464),
+    o = r.n(a),
+    i = r(476363),
+    c = r.n(i),
+    u = r(963782),
+    d = r.n(u),
+    h = r(904112),
+    p = r.n(h),
+    f = r(599552),
+    g = r.n(f),
+    m = r(544611),
+    b = r.n(m),
+    y = r(803068),
+    S = r.n(y),
+    x = r(561099),
+    O = r.n(x),
+    j = r(655000),
+    v = r.n(j);
+function _(e, t, r, s) {
+    let l = s.getCurrentContent(),
         a = null;
-    null != e && (a = (s = s.createEntity(...e)).getLastCreatedEntityKey());
-    let i = s.getFirstBlock(),
-        o = new r.SelectionState({
-            anchorKey: i.getKey(),
+    null != e && (a = (l = l.createEntity(...e)).getLastCreatedEntityKey());
+    let o = l.getFirstBlock(),
+        i = new n.SelectionState({
+            anchorKey: o.getKey(),
             anchorOffset: t,
-            focusKey: i.getKey(),
-            focusOffset: n
+            focusKey: o.getKey(),
+            focusOffset: r
         });
-    return ((s = r.Modifier.applyEntity(s, o, a)), r.EditorState.set(l, { currentContent: s }));
+    return ((l = n.Modifier.applyEntity(l, i, a)), n.EditorState.set(s, { currentContent: l }));
 }
-function j(e, t, n, l) {
-    let s,
+function E(e, t, r, s) {
+    let l,
         a,
-        o = t.getCurrentContent(),
-        c = o.getFirstBlock(),
+        i = t.getCurrentContent(),
+        c = i.getFirstBlock(),
         u = c.getText();
-    'number' == typeof n
-        ? (n > u.length && (n = u.length),
-          null != l && l > u.length && (l = u.length),
-          (s = new r.SelectionState({
+    'number' == typeof r
+        ? (r > u.length && (r = u.length),
+          null != s && s > u.length && (s = u.length),
+          (l = new n.SelectionState({
               anchorKey: c.getKey(),
-              anchorOffset: n,
+              anchorOffset: r,
               focusKey: c.getKey(),
-              focusOffset: null != l && 0 !== l ? l : n
+              focusOffset: null != s && 0 !== s ? s : r
           })))
-        : (s = t.getSelection());
+        : (l = t.getSelection());
     let d = t.getCurrentInlineStyle(),
-        h = i()(o, s);
-    return (s.isCollapsed() ? ((o = r.Modifier.insertText(o, s, e, d, h)), (a = 'insert-characters')) : ((o = r.Modifier.replaceText(o, s, e, d, h)), (a = 'replace-characters')), r.EditorState.push(t, o, a));
+        h = o()(i, l);
+    return (l.isCollapsed() ? ((i = n.Modifier.insertText(i, l, e, d, h)), (a = 'insert-characters')) : ((i = n.Modifier.replaceText(i, l, e, d, h)), (a = 'replace-characters')), n.EditorState.push(t, i, a));
 }
 function C(e, t) {
     switch (e) {
         case 'delete':
-            return _()(t);
+            return O()(t);
         case 'delete-word':
             return p()(t);
         case 'backspace':
-            return b()(t);
+            return S()(t);
         case 'backspace-word':
             return d()(t);
         case 'backspace-to-start-of-line':
@@ -92,103 +92,103 @@ function C(e, t) {
 function I(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return O()(t);
+            return v()(t);
         case 'move-selection-to-start-of-block':
-            return S()(t);
+            return b()(t);
         case 'move-selection-to-end-of-block':
             return g()(t);
         default:
             return t;
     }
 }
-function P(e) {
+function R(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function R(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        r = t.getCurrentContent(),
-        l = r.getFirstBlock(),
-        s = l.getText(),
+function P(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        n = t.getCurrentContent(),
+        s = n.getFirstBlock(),
+        l = s.getText(),
         a = [];
     return (
-        l.findEntityRanges(
+        s.findEntityRanges(
             (e) => null !== e.getEntity(),
             (e, t) => {
-                let n = r.getEntity(l.getEntityAt(e)).getType(),
-                    i = s.substring(e, t);
+                let r = n.getEntity(s.getEntityAt(e)).getType(),
+                    o = l.substring(e, t);
                 a.push({
                     processed: !1,
-                    type: n,
+                    type: r,
                     start: e,
                     end: t,
-                    text: i
+                    text: o
                 });
             }
         ),
         e.forEach((e) => {
-            let r = !1;
+            let n = !1;
             if (
-                (a.forEach((n) => {
-                    let { type: l, start: s, end: a } = e,
-                        i = e.getFullMatch();
-                    !n.processed && (n.type === l && n.start === s && n.text === i ? ((n.processed = !0), (r = !0)) : ((s >= n.start && s < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = E(null, n.start, n.end, t))));
+                (a.forEach((r) => {
+                    let { type: s, start: l, end: a } = e,
+                        o = e.getFullMatch();
+                    !r.processed && (r.type === s && r.start === l && r.text === o ? ((r.processed = !0), (n = !0)) : ((l >= r.start && l < r.end) || (a > r.start && a <= r.end)) && ((r.processed = !0), (t = _(null, r.start, r.end, t))));
                 }),
-                r)
+                n)
             )
                 return;
-            let l = n[e.type];
-            t = E([e.type, null != l && l.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
+            let s = r[e.type];
+            t = _([e.type, null != s && s.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
         }),
         a.forEach((e) => {
-            e.processed || (t = E(null, e.start, e.end, t));
+            e.processed || (t = _(null, e.start, e.end, t));
         }),
         t
     );
 }
 function T(e) {
-    return r.EditorState.createEmpty(new r.CompositeDecorator(e));
+    return n.EditorState.createEmpty(new n.CompositeDecorator(e));
 }
 function N(e) {
-    let t = r.EditorState.push(e, r.ContentState.createFromText('')),
-        n = e.getSelection();
-    return (null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t);
-}
-function w(e, t) {
-    let n = P(t);
-    return j(e, t, 0, n.length);
+    let t = n.EditorState.push(e, n.ContentState.createFromText('')),
+        r = e.getSelection();
+    return (null != r && r.hasFocus && (t = n.EditorState.moveFocusToEnd(t)), t);
 }
 function k(e, t) {
-    let n = t.getSelection();
-    return ((n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), r.EditorState.forceSelection(t, n));
+    let r = R(t);
+    return E(e, t, 0, r.length);
 }
-function A(e) {
-    return k(e.getCurrentContent().getFirstBlock().getText().length, e);
+function w(e, t) {
+    let r = t.getSelection();
+    return ((r = (r = r.set('focusOffset', e)).set('anchorOffset', e)), n.EditorState.forceSelection(t, r));
 }
 function Z(e) {
-    return k(0, e);
+    return w(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
-function F(e) {
-    let t = e.getSelection();
-    return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t));
-}
-function M(e) {
-    let t = P(e),
-        n = e.getSelection();
-    return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));
+function A(e) {
+    return w(0, e);
 }
 function L(e) {
+    let t = e.getSelection();
+    return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), n.EditorState.forceSelection(e, t));
+}
+function M(e) {
+    let t = R(e),
+        r = e.getSelection();
+    return ((r = (r = r.set('focusOffset', t.length)).set('isBackward', !1)), n.EditorState.forceSelection(e, r));
+}
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        n = P(e);
-    if (n.length > t) {
-        let l = e.getSelection();
-        ((e = j('', e, t, n.length)), l.getAnchorOffset() > t && (l = l.set('anchorOffset', t)), l.getFocusOffset() > t && (l = l.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, l)));
+        r = R(e);
+    if (r.length > t) {
+        let s = e.getSelection();
+        ((e = E('', e, t, r.length)), s.getAnchorOffset() > t && (s = s.set('anchorOffset', t)), s.getFocusOffset() > t && (s = s.set('focusOffset', t)), (e = n.EditorState.forceSelection(e, s)));
     }
     return e;
 }
 function D(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
-    let n = t.getRangeAt(0);
+    let r = t.getRangeAt(0);
     if (
         !(function (e, t) {
             for (; null != e; ) {
@@ -196,15 +196,15 @@ function D(e) {
                 e = e.parentNode;
             }
             return !1;
-        })(n.commonAncestorContainer, e)
+        })(r.commonAncestorContainer, e)
     )
         return;
-    let r = n.getClientRects()[0],
-        l = e.getClientRects()[0];
-    if (null == r || null == l) return;
-    let s = r.left - l.left + e.scrollLeft;
-    s < e.scrollLeft ? (e.scrollLeft = s - 10) : s > e.scrollLeft + e.offsetWidth && (e.scrollLeft = s - e.offsetWidth + 3);
+    let n = r.getClientRects()[0],
+        s = e.getClientRects()[0];
+    if (null == n || null == s) return;
+    let l = n.left - s.left + e.scrollLeft;
+    l < e.scrollLeft ? (e.scrollLeft = l - 10) : l > e.scrollLeft + e.offsetWidth && (e.scrollLeft = l - e.offsetWidth + 3);
 }
 function H(e) {
-    return 0 === P(e).length;
+    return 0 === R(e).length;
 }

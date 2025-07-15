@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => P }), n(388685));
 var r = n(237997),
     i = n(998502),
     l = n(576027),
@@ -10,17 +10,18 @@ var r = n(237997),
     d = n(266572),
     p = n(177698),
     h = n(121826),
-    f = n(753335),
-    g = n(567481),
-    m = n(498164),
-    b = n(885381),
-    _ = n(111097),
-    E = n(908711),
-    O = n(197941),
-    y = n(462414),
-    I = n(662194),
-    v = n(188861);
-function C(e) {
+    f = n(109815),
+    g = n(753335),
+    m = n(567481),
+    b = n(498164),
+    _ = n(885381),
+    E = n(111097),
+    O = n(908711),
+    y = n(197941),
+    I = n(462414),
+    v = n(662194),
+    C = n(188861);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,14 +46,14 @@ function C(e) {
     }
     return e;
 }
-let S = C({}, l.A, u.Z, d.Z, h.Z, f.Z, g.Z, m.Z, b.Z, _.Z, O.Z, I.Z, y.Z, p.Z, E.Z),
-    N = C({}, a.Z, s.M, c.n),
-    T = {
+let N = S({}, l.A, u.Z, d.Z, h.Z, g.Z, f.Z, m.Z, b.Z, _.Z, E.Z, y.Z, v.Z, I.Z, p.Z, O.Z),
+    T = S({}, a.Z, s.M, c.n),
+    P = {
         server: o.Z,
-        commands: S,
-        events: N,
+        commands: N,
+        events: T,
         stores: [r.default],
-        transports: [v.Z],
+        transports: [C.Z],
         registerTransportsForEmbeddedPlatform: function () {
             i.ZP.ensureModule('discord_rpc').then(() => {
                 for (let e of [n(178318).Z, n(967351).Z]) o.Z.registerTransport(e);

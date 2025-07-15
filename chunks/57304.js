@@ -69,8 +69,8 @@ let y = function (e) {
         [y, C] = i.useState(!1),
         x = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         v = (0, s.Aq)(),
-        j = i.useRef(null),
-        O = i.useCallback(() => {
+        O = i.useRef(null),
+        j = i.useCallback(() => {
             n || C((e) => !e);
         }, [n]);
     function E(e) {
@@ -79,15 +79,15 @@ let y = function (e) {
     return (
         i.useEffect(
             () => (
-                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, O),
+                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, j),
                 () => {
-                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, O);
+                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, j);
                 }
             ),
-            [O]
+            [j]
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: j,
+            targetElementRef: O,
             shouldShow: y,
             animation: a.yRy.Animation.NONE,
             position: 'bottom',
@@ -110,8 +110,8 @@ let y = function (e) {
                 return (0, r.jsx)(
                     f.JO,
                     _(b({}, e), {
-                        ref: j,
-                        onClick: O,
+                        ref: O,
+                        onClick: j,
                         tooltip: i ? null : g.intl.string(g.t['mp1N//']),
                         icon: a.qQX,
                         iconSize: 20,

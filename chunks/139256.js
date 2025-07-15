@@ -1,9 +1,9 @@
 (n.d(t, {
     $e: () => w,
-    $w: () => M,
+    $w: () => D,
     Og: () => U,
-    ZY: () => k,
-    sc: () => D,
+    ZY: () => M,
+    sc: () => k,
     zs: () => F
 }),
     n(314940),
@@ -21,14 +21,14 @@ var r = n(255367),
     m = n(695346),
     f = n(186523),
     _ = n(553826),
-    g = n(506071),
-    h = n(203143),
+    h = n(506071),
+    g = n(203143),
     b = n(79390),
     E = n(839963),
     y = n(294608),
-    C = n(65145),
-    v = n(981631),
-    x = n(388032),
+    x = n(65145),
+    C = n(981631),
+    v = n(388032),
     O = n(56228);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,7 +76,7 @@ function I(e, t) {
 function S(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('ul', {
-        'aria-label': x.intl.string(x.t.sJpqBQ),
+        'aria-label': v.intl.string(v.t.sJpqBQ),
         className: t,
         children: n
     });
@@ -84,7 +84,7 @@ function S(e) {
 function T(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('div', {
-        'aria-label': x.intl.string(x.t.sJpqBQ),
+        'aria-label': v.intl.string(v.t.sJpqBQ),
         role: 'group',
         className: t,
         children: n
@@ -118,7 +118,7 @@ function N(e) {
         I(
             j(
                 {
-                    'aria-label': x.intl.string(x.t.sJpqBQ),
+                    'aria-label': v.intl.string(v.t.sJpqBQ),
                     ref: l
                 },
                 a
@@ -132,7 +132,7 @@ function N(e) {
 }
 function P(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: l, children: o } = e,
-        { pollAnswerRef: c } = (0, C.dv)();
+        { pollAnswerRef: c } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'checkbox',
         className: a()(t, O.enabled),
@@ -144,7 +144,7 @@ function P(e) {
 }
 function A(e) {
     let { className: t, children: n, onClick: i, isSelected: l, hasSelectedAnyAnswer: o, isFirstAnswer: c } = e,
-        { pollAnswerRef: u } = (0, C.dv)();
+        { pollAnswerRef: u } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'radio',
         className: a()(t, O.enabled),
@@ -208,7 +208,7 @@ function Z(e) {
         p = (0, y.$B)(n.style),
         m = !0 === n.isSelected,
         f = i.useCallback(() => {
-            h.Z.handlePollAnswerTapped({
+            g.Z.handlePollAnswerTapped({
                 channelId: u,
                 messageId: d,
                 answerId: n.answerId
@@ -243,7 +243,7 @@ function Z(e) {
 function R(e) {
     var t;
     let { attachment: n, className: i } = e,
-        l = (0, g.n)(),
+        l = (0, h.n)(),
         a = m.QK.useSetting();
     return (0, r.jsx)(p.ZP, {
         className: i,
@@ -258,7 +258,7 @@ function R(e) {
         shouldRenderAccessory: !1
     });
 }
-function D(e) {
+function k(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(c.Z, {
         className: t,
@@ -275,7 +275,7 @@ function L(e, t) {
           })
         : t;
 }
-function M(e) {
+function D(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
         { message: o } = (0, y.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
@@ -295,7 +295,7 @@ function M(e) {
     return null != t.emoji
         ? L(
               n,
-              (0, r.jsx)(D, {
+              (0, r.jsx)(k, {
                   className: l,
                   emoji: t.emoji
               })
@@ -304,7 +304,7 @@ function M(e) {
           ? a
           : null;
 }
-function k(e) {
+function M(e) {
     let { isVictor: t, isExpired: n, size: i, className: l } = e,
         { color: a, backgroundColor: c } = (0, o.EQ)({
             isVictor: t,
@@ -317,7 +317,7 @@ function k(e) {
                 },
                 () => ({
                     color: d.Z.BUTTON_POSITIVE_BACKGROUND,
-                    backgroundColor: (0, u.Lq)(v.Ilk.WHITE_500)
+                    backgroundColor: (0, u.Lq)(C.Ilk.WHITE_500)
                 })
             )
             .with(
@@ -331,8 +331,8 @@ function k(e) {
                 })
             )
             .otherwise(() => ({
-                color: (0, u.Lq)(v.Ilk.BRAND_500),
-                backgroundColor: (0, u.Lq)(v.Ilk.WHITE_500)
+                color: (0, u.Lq)(C.Ilk.BRAND_500),
+                backgroundColor: (0, u.Lq)(C.Ilk.WHITE_500)
             }));
     return (0, r.jsx)(s.owK, {
         size: 'custom',
@@ -378,7 +378,7 @@ function F(e) {
                 size: 'custom',
                 width: l,
                 height: l,
-                color: (0, u.Lq)(v.Ilk.WHITE_500)
+                color: (0, u.Lq)(C.Ilk.WHITE_500)
             })
     });
 }

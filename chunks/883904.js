@@ -7,10 +7,11 @@ n.d(t, {
     pR: () => c
 });
 var r = n(570140);
-let i = (e) => {
+let i = (e, t) => {
         r.Z.dispatch({
             type: 'DCF_HANDLE_DC_SHOWN',
-            dismissibleContent: e
+            dismissibleContent: e,
+            guildId: t
         });
     },
     a = (e) => {

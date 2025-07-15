@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(893718),
     x = n(303628),
     v = n(313201),
-    j = n(967128),
-    O = n(665149),
+    O = n(967128),
+    j = n(665149),
     E = n(294218),
     S = n(913663),
-    I = n(268350),
-    P = n(695346),
+    P = n(268350),
+    I = n(695346),
     Z = n(592125),
     N = n(703558),
     T = n(375954),
@@ -117,19 +117,19 @@ function X(e) {
                 });
             (0, B.NK)(t);
         }, [t]);
-    return (0, r.jsxs)(O.ZP, {
-        toolbar: (0, r.jsx)(O.ZP.Icon, {
+    return (0, r.jsxs)(j.ZP, {
+        toolbar: (0, r.jsx)(j.ZP.Icon, {
             icon: c.Dio,
             tooltip: V.intl.string(V.t.cpT0Cg),
             onClick: n
         }),
         children: [
-            (0, r.jsx)(O.ZP.Icon, {
+            (0, r.jsx)(j.ZP.Icon, {
                 icon: c.or_,
                 disabled: !0,
                 'aria-label': V.intl.string(V.t['7Xm5QE'])
             }),
-            (0, r.jsx)(O.ZP.Title, { children: V.intl.string(V.t['4WNcpq']) })
+            (0, r.jsx)(j.ZP.Title, { children: V.intl.string(V.t['4WNcpq']) })
         ]
     });
 }
@@ -206,7 +206,7 @@ function Q(e) {
         {
             isGeneratingAI: x,
             enableAIFeatures: v,
-            renderAiGenerateButton: O
+            renderAiGenerateButton: j
         } = (0, F.U)({
             parentChannel: t,
             parentMessageId: n,
@@ -216,7 +216,7 @@ function Q(e) {
         }),
         {
             nameError: E,
-            messageError: P,
+            messageError: I,
             submit: Z,
             submitting: T
         } = (function (e) {
@@ -286,7 +286,7 @@ function Q(e) {
                             );
                         }
                         return (
-                            (0, I.qB)(t.id, q.drafts.type),
+                            (0, P.qB)(t.id, q.drafts.type),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -326,7 +326,7 @@ function Q(e) {
                         children: (0, r.jsxs)('div', {
                             className: z.scrollerInner,
                             children: [
-                                (0, r.jsxs)(j.ZP, {
+                                (0, r.jsxs)(O.ZP, {
                                     channelId: 'create-thread-null',
                                     children: [
                                         (0, r.jsx)('div', {
@@ -342,7 +342,7 @@ function Q(e) {
                                             disabled: T,
                                             isGeneratingAI: x,
                                             enableAIFeatures: v,
-                                            renderAiGenerateButton: O
+                                            renderAiGenerateButton: j
                                         }),
                                         t.type === G.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(J, {
@@ -369,7 +369,7 @@ function Q(e) {
                                 textAreaState: b,
                                 setTextAreaState: _,
                                 submit: Z,
-                                error: P
+                                error: I
                             }),
                             (0, r.jsx)(h.ZP, {
                                 channel: t,
@@ -531,7 +531,7 @@ function ee(e) {
 function et(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         i = (0, o.e7)([T.Z], () => (null == n ? null : T.Z.getMessage(t.id, n))),
-        l = P.jU.useSetting();
+        l = I.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {
               className: z.messagePreview,

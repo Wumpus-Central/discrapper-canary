@@ -27,12 +27,12 @@ function b(e) {
             return d.Z.isFetchingProfile(null != (e = null == C ? void 0 : C.id) ? e : m.lds);
         }),
         v = (0, o.Z)(x),
-        j = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
-        O = (0, i.e7)([d.Z], () => {
+        O = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
+        j = (0, i.e7)([d.Z], () => {
             var e;
             return null !== C ? (null == (e = d.Z.getUserProfile(null == C ? void 0 : C.id)) ? void 0 : e.application) : void 0;
         }),
-        E = null != j ? j : null == O ? void 0 : O.id;
+        E = null != O ? O : null == j ? void 0 : j.id;
     (r.useEffect(() => {
         if (null == E) {
             var e;
@@ -58,8 +58,8 @@ function b(e) {
                 allowApplicationState: !0
             }
         ),
-        I = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
-        P = S.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        P = S.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === E)[0],
+        I = S.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         Z = S.loading,
         N =
             null ==
@@ -72,16 +72,16 @@ function b(e) {
         T = r.useMemo(() => (null != N ? h.ZP.createFromServer(N) : void 0), [N]),
         A = (0, u.q)(null == T ? E : void 0),
         w = null != (n = null != T ? T : A) ? n : void 0,
-        R = null == w || (Z && 0 === P.length);
+        R = null == w || (Z && 0 === I.length);
     return {
         application: w,
         isInitialLoading: R,
         isAppDM: null != (b = null == C ? void 0 : C.bot) && b,
-        primaryEntryPointCommand: I,
+        primaryEntryPointCommand: P,
         isProfileFetching: x,
         wasProfileFetching: null != v ? v : null,
         applicationId: E,
         channelId: y.id,
-        commands: P
+        commands: I
     };
 }

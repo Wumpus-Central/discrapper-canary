@@ -6,8 +6,8 @@
         openAppWithQuest: () => Z,
         openDisclosureModal: () => j,
         openQuestInGameRewardModal: () => x,
-        openQuestMinorEnrollmentBlockModal: () => M,
-        openQuestOrbsRewardModal: () => k,
+        openQuestMinorEnrollmentBlockModal: () => k,
+        openQuestOrbsRewardModal: () => M,
         openQuestsNitroRewardModal: () => L,
         openQuestsRewardCodeModal: () => D,
         openVideoQuestModal: () => V
@@ -138,7 +138,7 @@ function x(e, t, i) {
             );
     });
 }
-function k(e, t) {
+function M(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('66317'), n.e('94784')]).then(n.bind(n, 383294));
         return (n) =>
@@ -151,7 +151,7 @@ function k(e, t) {
             );
     });
 }
-function M(e, t, i) {
+function k(e, t, i) {
     (0, s.ZDy)(async () => {
         let { default: a } = await n.e('58641').then(n.bind(n, 828664));
         return (n) =>

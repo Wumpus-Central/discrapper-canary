@@ -13,7 +13,7 @@ let m = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: p, compact: m = !1 } = e,
         f = p.state === o.Y.LOADED ? p.message : void 0,
         _ = (0, a.p)(),
-        g = i.useMemo(
+        h = i.useMemo(
             () =>
                 (null == f ? void 0 : f.content) != null && '' !== f.content
                     ? (0, c.ZP)(f, {
@@ -23,7 +23,7 @@ let m = i.memo(function (e) {
                     : null,
             [f, _]
         ),
-        { isReplyAuthorBlocked: h, isReplyAuthorIgnored: b } = (0, l.cj)(
+        { isReplyAuthorBlocked: g, isReplyAuthorIgnored: b } = (0, l.cj)(
             [s.Z],
             () => ({
                 isReplyAuthorBlocked: null != f && s.Z.isBlockedForMessage(f),
@@ -39,9 +39,9 @@ let m = i.memo(function (e) {
         baseMessage: t,
         channel: n,
         referencedMessage: p,
-        content: g,
+        content: h,
         compact: m,
-        isReplyAuthorBlocked: h,
+        isReplyAuthorBlocked: g,
         isReplyAuthorIgnored: b,
         isReplySpineClickable: !1,
         showReplySpine: !0

@@ -12,11 +12,11 @@ var r = n(73800),
     m = n(158222),
     f = n(312146),
     _ = n(487554),
-    g = n(874748),
-    h = n(981631);
+    h = n(874748),
+    g = n(981631);
 function b(e, t) {
     let n = (0, f.p$)(),
-        b = (0, g.LR)(e),
+        b = (0, h.LR)(e),
         E = (0, i.e7)(
             [c.ZP, o.default],
             () => {
@@ -26,10 +26,10 @@ function b(e, t) {
             [b]
         ),
         y = (0, i.e7)([l.Z], () => null != b && (null == b ? void 0 : b.channelId) != null && l.Z.isChannelGated(b.guildId, b.channelId), [b]),
-        C = t.hasFlag(h.iLy.IS_CROSSPOST),
+        x = t.hasFlag(g.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: v,
-            guild: x,
+            rawMediaPostEmbedData: C,
+            guild: v,
             parentChannel: O,
             user: j,
             selectedGuildId: I,
@@ -57,9 +57,9 @@ function b(e, t) {
         ),
         T = r.useMemo(() => {
             var e, t;
-            let n = (0, g.ku)({
-                mediaPostEmbedData: v,
-                guild: x,
+            let n = (0, h.ku)({
+                mediaPostEmbedData: C,
+                guild: v,
                 parentChannel: O,
                 user: j,
                 selectedGuildId: I,
@@ -106,14 +106,14 @@ function b(e, t) {
                             Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                         }),
                   e);
-        }, [v, x, O, j, I, S]);
+        }, [C, v, O, j, I, S]);
     return (
         r.useEffect(() => {
             if ((null == b ? void 0 : b.threadId) != null) {
                 let e = _.Z.getEmbedFetchState(b.threadId);
-                !0 !== n || e !== _.M.NOT_FETCHED || (E && !1 === y) || (!E && C) || (0, m.xP)(null == b ? void 0 : b.threadId);
+                !0 !== n || e !== _.M.NOT_FETCHED || (E && !1 === y) || (!E && x) || (0, m.xP)(null == b ? void 0 : b.threadId);
             }
-        }, [b, n, E, y, C]),
+        }, [b, n, E, y, x]),
         T
     );
 }

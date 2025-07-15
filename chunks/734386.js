@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(434404),
     x = n(454585),
     v = n(485386),
-    j = n(430824),
-    O = n(496675),
+    O = n(430824),
+    j = n(496675),
     E = n(594174),
     S = n(700785),
-    I = n(51144),
-    P = n(396769),
+    P = n(51144),
+    I = n(396769),
     Z = n(967128),
     N = n(318374),
     T = n(981631),
@@ -37,9 +37,9 @@ function M(e) {
         o = (0, m.ZP)(t, !0),
         M = t.guild_id,
         D = (0, d.e7)([v.Z], () => (null != M ? v.Z.getRoles(M) : void 0)),
-        k = (0, d.e7)([E.default, j.Z], () => {
+        k = (0, d.e7)([E.default, O.Z], () => {
             var e;
-            return E.default.getUser(null == (e = j.Z.getGuild(M)) ? void 0 : e.ownerId);
+            return E.default.getUser(null == (e = O.Z.getGuild(M)) ? void 0 : e.ownerId);
         }),
         L = i.useMemo(
             () =>
@@ -90,7 +90,7 @@ function M(e) {
             },
             [t, k]
         ),
-        F = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
+        F = j.Z.can(T.Plq.MANAGE_CHANNELS, t) || j.Z.can(T.Plq.MANAGE_ROLES, t),
         H = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(Z.ZP, {
         channelId: t.id,
@@ -111,7 +111,7 @@ function M(e) {
                 ? (0, r.jsxs)('div', {
                       className: w.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(I.Z, {
                               label: A.intl.string(A.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(p.BFJ, {
@@ -119,7 +119,7 @@ function M(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(I.Z, {
                               label: A.intl.string(A.t['3gUsJS']),
                               onClick: function () {
                                   h.ZP.open(t.id);
@@ -144,7 +144,7 @@ function M(e) {
                                 users: B
                             });
                         let e = B[0],
-                            n = I.ZP.getName(e);
+                            n = P.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: w.avatars,
                             children: [

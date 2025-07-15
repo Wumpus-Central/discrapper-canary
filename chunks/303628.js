@@ -136,21 +136,21 @@ function P(e) {
         };
         return (u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e));
     }, [t, n]);
-    let k = i.useCallback(() => {
+    let M = i.useCallback(() => {
         I.focusFirstVisibleItem();
     }, [I]);
     (0, g.yp)({
         event: y.CkL.FOCUS_ATTACHMENT_AREA,
-        handler: k
+        handler: M
     });
-    let M = {
+    let k = {
             isApplicationCommand: C,
             previousUploadOptions: L,
             uploadOptions: D
         },
-        j = i.useRef(M);
+        j = i.useRef(k);
     return (i.useEffect(() => {
-        j.current = M;
+        j.current = k;
     }),
     i.useEffect(() => {
         let { isApplicationCommand: e, previousUploadOptions: r, uploadOptions: i } = j.current;

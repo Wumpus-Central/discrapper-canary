@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(846027),
-    a = n(131951),
+    a = n(846027),
+    o = n(131951),
     s = n(321614),
     c = n(345655),
     u = n(388032);
@@ -15,8 +15,8 @@ function d(e) {
             [c._.STUDIO]: u.intl.string(u.t.VZPR0d),
             [c._.CUSTOM]: u.intl.string(u.t['N/PQjo'])
         },
-        d = (0, i.e7)([a.Z], () => a.Z.getActiveInputProfile()),
-        p = t.map((t) =>
+        d = (0, i.e7)([o.Z], () => o.Z.getActiveInputProfile()),
+        f = t.map((t) =>
             (0, r.jsx)(
                 l.k5B,
                 {
@@ -24,7 +24,7 @@ function d(e) {
                     group: 'input-profiles',
                     label: n[t],
                     checked: t === (null != d ? d : c._.CUSTOM),
-                    action: () => o.Z.setActiveInputProfile(t, { analyticsLocations: e })
+                    action: () => a.Z.setActiveInputProfile(t, { analyticsLocations: e })
                 },
                 t
             )
@@ -33,6 +33,6 @@ function d(e) {
         id: 'input-profiles',
         label: u.intl.string(u.t.LM3U3t),
         subtext: n[null != d ? d : c._.CUSTOM],
-        children: p
+        children: f
     });
 }

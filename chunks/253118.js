@@ -12,7 +12,7 @@ function c(e) {
         m = (0, a.ZP)(c),
         f = m.nick,
         _ = u(m),
-        g = () => {
+        h = () => {
             if (null == c.messageReference) return;
             let { channel_id: e, message_id: t } = c.messageReference;
             l.Z.jumpToMessage({
@@ -21,7 +21,7 @@ function c(e) {
                 flash: !0
             });
         },
-        h = {
+        g = {
             iconNode: (0, r.jsx)(i.qQX, {
                 size: 'sm',
                 color: 'currentColor'
@@ -53,7 +53,7 @@ function c(e) {
                     }));
             }
             return e;
-        })({}, h)),
+        })({}, g)),
         (n = n =
             {
                 timestamp: c.timestamp,
@@ -64,13 +64,13 @@ function c(e) {
                             ? s.intl.format(s.t.lD5tur, {
                                   usernameHook: _,
                                   username: f,
-                                  messageOnClick: g
+                                  messageOnClick: h
                               })
                             : s.intl.format(s.t.yIDvPD, {
                                   usernameHook: _,
                                   username: f,
                                   pinsActionOnClick: d,
-                                  messageOnClick: g
+                                  messageOnClick: h
                               })
                         : null == d
                           ? s.intl.format(s.t.vfkjq6, {

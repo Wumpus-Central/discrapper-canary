@@ -75,7 +75,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function k(e, t) {
         e
     );
 }
-let M = 190,
+let k = 190,
     j = 178,
     U = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     G = (e) => {
@@ -100,7 +100,7 @@ let M = 190,
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            k(L({}, t), {
+                            M(L({}, t), {
                                 channel: d,
                                 message: i,
                                 onRedeem: a,
@@ -173,11 +173,11 @@ function V(e) {
             }
             return 0;
         }, [E, R, s]),
-        k = (0, i.useMemo)(() => (0 === x ? 1 : u ? 2 : 3 * (null == _)), [u, _, x]);
+        M = (0, i.useMemo)(() => (0 === x ? 1 : u ? 2 : 3 * (null == _)), [u, _, x]);
     return (0, r.jsx)(F, {
         channel: t,
         buttonPurchaseState: x,
-        buttonDisabledState: k,
+        buttonDisabledState: M,
         price: p,
         onActionClick: L,
         loading: P,
@@ -440,7 +440,7 @@ let F = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     l.zx,
-                    k(L({}, e), {
+                    M(L({}, e), {
                         onClick: o,
                         disabled: s,
                         children: (0, r.jsx)('div', {
@@ -460,7 +460,7 @@ let F = (e) => {
                     (0, r.jsx)(c.Eep, {
                         src: w,
                         width: j,
-                        height: M
+                        height: k
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/normal',

@@ -50,8 +50,8 @@ let L = {
         minWidth: R.Rv[R.cL.VIDEO],
         maxWidth: R.$i[R.cL.VIDEO]
     },
-    k = [];
-class M extends i.PureComponent {
+    M = [];
+class k extends i.PureComponent {
     render() {
         let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: s, dockedRect: l, appContext: c, roundCorners: u } = this.props;
         return (0, r.jsx)(g.Z, {
@@ -92,7 +92,7 @@ let j = s.ZP.connectStores([E.Z, c.ZP, S.Z, b.Z, v.Z, T.Z, I.Z, p.Z, y.ZP, h.Z],
         D = null != O && !(0, f.Z)(w, v.Z, T.Z),
         L = c.ZP.getActivityPanelMode(),
         x = D && L === C.Ez.PANEL,
-        M = null != O && null != w && (null == (t = p.Z.getSelectedParticipant(w)) ? void 0 : t.type) === R.fO.ACTIVITY,
+        k = null != O && null != w && (null == (t = p.Z.getSelectedParticipant(w)) ? void 0 : t.type) === R.fO.ACTIVITY,
         j = h.Z.getConnectedFrame(),
         U = h.Z.getFrameLayoutMode() === P.U.FOCUSED,
         G = S.Z.windowSize();
@@ -116,12 +116,12 @@ let j = s.ZP.connectStores([E.Z, c.ZP, S.Z, b.Z, v.Z, T.Z, I.Z, p.Z, y.ZP, h.Z],
         W = T.Z.getVoiceChannelId(),
         K = T.Z.getChannelId() === W,
         z = null != W && p.Z.getChatOpen(W),
-        q = x || M,
+        q = x || k,
         X = q && null != O && (0, u.q)(O.applicationId),
         Q = !q && null != l && K && z;
     return {
         selectedPIPWindow: l,
-        pipWindows: 0 === H.length ? k : H,
+        pipWindows: 0 === H.length ? M : H,
         pipWidth: F,
         maxX: G.width - (Q ? Y : 0),
         maxY: G.height,
@@ -130,4 +130,4 @@ let j = s.ZP.connectStores([E.Z, c.ZP, S.Z, b.Z, v.Z, T.Z, I.Z, p.Z, y.ZP, h.Z],
         appContext: B,
         roundCorners: !X
     };
-})(M);
+})(k);

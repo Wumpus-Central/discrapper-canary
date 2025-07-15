@@ -21,10 +21,10 @@ let y = (e) => {
         C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
-        j = i.useRef(null),
         O = i.useRef(null),
+        j = i.useRef(null),
         [E, S] = i.useState(!1),
-        I = i.useMemo(() => !n && !C && !x, [C, n, x]);
+        P = i.useMemo(() => !n && !C && !x, [C, n, x]);
     if (
         (i.useEffect(() => {
             (n || S(!1), n && C && S(!0));
@@ -32,14 +32,14 @@ let y = (e) => {
         i.useEffect(() => {
             !x &&
                 (E ||
-                    (!1 === n && ((v.current = 0), null != j.current && (clearTimeout(j.current), (j.current = null))),
+                    (!1 === n && ((v.current = 0), null != O.current && (clearTimeout(O.current), (O.current = null))),
                     (v.current = Date.now()),
-                    (j.current = setTimeout(() => {
+                    (O.current = setTimeout(() => {
                         let e = v.current;
                         if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !C) {
-                            if (null != O.current) {
+                            if (null != j.current) {
                                 var r;
-                                let { x: e, y: n, width: i, height: l } = null == (r = O.current) ? void 0 : r.getBoundingClientRect();
+                                let { x: e, y: n, width: i, height: l } = null == (r = j.current) ? void 0 : r.getBoundingClientRect();
                                 (0, g.Z)(
                                     t,
                                     {
@@ -63,14 +63,14 @@ let y = (e) => {
         !(0, m.p7)('Message Confetti Peak') || !(0, b.Uw)(t))
     )
         return null;
-    let P = (0, b.Eq)(t);
-    if (null == P) return null;
+    let I = (0, b.Eq)(t);
+    if (null == I) return null;
     if (l)
         return (0, r.jsx)('span', {
             className: _.hidden,
             'aria-hidden': 'true'
         });
-    let Z = P.emoji[0],
+    let Z = I.emoji[0],
         N =
             null == Z.id
                 ? p.ZP.getURL(Z.name)
@@ -81,26 +81,26 @@ let y = (e) => {
                       forcePNG: !0
                   });
     return (0, r.jsxs)('div', {
-        ref: O,
+        ref: j,
         className: _.emojiWrapper,
         style: { right: ''.concat(256 + y, 'px') },
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.left, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.left, P && _.shy, C && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.right, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.right, P && _.shy, C && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.center, I && _.shy, C && _.confettiMode]),
+                className: a()([_.emoji, _.center, P && _.shy, C && _.confettiMode]),
                 width: 32
             })
         ]

@@ -1,22 +1,22 @@
 (n.d(t, {
-    Y: () => _,
-    a: () => v
+    Y: () => b,
+    a: () => h
 }),
     n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(846027),
     u = n(906732),
     d = n(131951),
-    p = n(626135),
-    f = n(981631),
+    f = n(626135),
+    p = n(981631),
     m = n(65154),
     g = n(521361);
-function b(e) {
+function _(e) {
     let { label: t, Icon: n } = e;
     return (0, r.jsxs)('div', {
         className: g.selectedDevice,
@@ -36,33 +36,33 @@ function b(e) {
         ]
     });
 }
-function _() {
+function b() {
     let { analyticsLocations: e } = (0, u.ZP)(),
-        { canSetInputDevice: t, inputDeviceId: n } = (0, a.cj)([d.Z], () => ({
+        { canSetInputDevice: t, inputDeviceId: n } = (0, o.cj)([d.Z], () => ({
             canSetInputDevice: d.Z.supports(m.AN.AUDIO_INPUT_DEVICE),
             inputDeviceId: d.Z.getInputDeviceId()
         })),
-        l = (0, a.e7)([d.Z], () => d.Z.getInputDevices()),
-        _ = i.useCallback(
+        l = (0, o.e7)([d.Z], () => d.Z.getInputDevices()),
+        b = i.useCallback(
             (t) => {
                 var n;
                 (c.Z.setInputDevice(t, { analyticsLocations: e }),
-                    p.default.track(f.rMx.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED, {
+                    f.default.track(p.rMx.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED, {
                         input_mode: t,
                         active_voice_filter_id: null != (n = d.Z.getActiveVoiceFilter()) ? n : null
                     }));
             },
             [e]
         ),
-        v = i.useCallback(() => {
+        h = i.useCallback(() => {
             var e;
-            p.default.track(f.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, { active_voice_filter_id: null != (e = d.Z.getActiveVoiceFilter()) ? e : null });
+            f.default.track(p.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, { active_voice_filter_id: null != (e = d.Z.getActiveVoiceFilter()) ? e : null });
         }, []);
     return (0, r.jsx)(s.q4e, {
         value: n,
-        onOpen: v,
-        onChange: _,
-        options: o().map(l, (e) => {
+        onOpen: h,
+        onChange: b,
+        options: a().map(l, (e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -75,24 +75,24 @@ function _() {
         popoutPosition: 'top',
         renderOptionValue: (e) => {
             let [t] = e;
-            return (0, r.jsx)(b, {
+            return (0, r.jsx)(_, {
                 label: t.label,
                 Icon: s.S6n
             });
         }
     });
 }
-function v() {
+function h() {
     let { analyticsLocations: e } = (0, u.ZP)(),
-        { canSetOutputDevice: t, outputDeviceId: n } = (0, a.cj)([d.Z], () => ({
+        { canSetOutputDevice: t, outputDeviceId: n } = (0, o.cj)([d.Z], () => ({
             canSetOutputDevice: d.Z.supports(m.AN.AUDIO_OUTPUT_DEVICE),
             outputDeviceId: d.Z.getOutputDeviceId()
         })),
-        i = (0, a.e7)([d.Z], () => d.Z.getOutputDevices());
+        i = (0, o.e7)([d.Z], () => d.Z.getOutputDevices());
     return (0, r.jsx)(s.q4e, {
         value: n,
         onChange: (t) => c.Z.setOutputDevice(t, { analyticsLocations: e }),
-        options: o().map(i, (e) => {
+        options: a().map(i, (e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -105,7 +105,7 @@ function v() {
         popoutPosition: 'top',
         renderOptionValue: (e) => {
             let [t] = e;
-            return (0, r.jsx)(b, {
+            return (0, r.jsx)(_, {
                 label: t.label,
                 Icon: s.VWR
             });

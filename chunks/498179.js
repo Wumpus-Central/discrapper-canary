@@ -52,17 +52,17 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: _, hideNotLaunchable: g, tooltipPosition: h, onClick: b, className: E, source: y, hover: C, innerClassName: v } = e,
-        x = {
+    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: _, hideNotLaunchable: h, tooltipPosition: g, onClick: b, className: E, source: y, hover: x, innerClassName: C } = e,
+        v = {
             fullWidth: n,
             size: m,
             color: f,
             customDisabledColor: _,
-            tooltipPosition: h,
+            tooltipPosition: g,
             onClick: b,
             className: E,
-            hover: C,
-            innerClassName: v
+            hover: x,
+            innerClassName: C
         },
         O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
         j = null != O ? O.sku.id : null,
@@ -71,7 +71,7 @@ function m(e) {
     return null != O && (0, s.Je)(O)
         ? (0, r.jsx)(
               u.Z,
-              p(d({}, x), {
+              p(d({}, v), {
                   libraryApplication: O,
                   source: y
               })
@@ -80,8 +80,8 @@ function m(e) {
           ? (0, r.jsx)('div', { children: 'deprecated!' })
           : (0, r.jsx)(
                 c.Z,
-                p(d({}, x), {
-                    hideNotLaunchable: g,
+                p(d({}, v), {
+                    hideNotLaunchable: h,
                     applicationId: t.id
                 })
             );

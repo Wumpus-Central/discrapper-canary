@@ -94,8 +94,8 @@ let b = 20,
     };
 function O(e) {
     let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: O, isActive: v, onMouseEnter: I, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': P, 'aria-expanded': w, 'aria-haspopup': D, 'aria-controls': L, noHover: x } = e,
-        k = (0, c.Yzy)(null != E, g(h({}, y), { keys: (e) => (e ? 'children' : 'icon') })),
-        M = (e) => {
+        M = (0, c.Yzy)(null != E, g(h({}, y), { keys: (e) => (e ? 'children' : 'icon') })),
+        k = (e) => {
             let { component: t } = e;
             return null != R
                 ? (0, r.jsxs)('div', {
@@ -138,7 +138,7 @@ function O(e) {
             }
         },
         children: [
-            k((e, t, n) => {
+            M((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
@@ -146,7 +146,7 @@ function O(e) {
                           {
                               style: e,
                               className: o()(_.buttonWrapper, a),
-                              children: M({ component: E })
+                              children: k({ component: E })
                           },
                           i
                       )
@@ -156,7 +156,7 @@ function O(e) {
                             {
                                 style: e,
                                 className: o()(_.buttonWrapper, a),
-                                children: M({
+                                children: k({
                                     component: (0, r.jsx)(m, {
                                         className: o()(_.icon, p, { [_.pulseIcon]: N }),
                                         color: 'currentColor'

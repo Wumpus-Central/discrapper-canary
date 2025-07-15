@@ -35,8 +35,8 @@ function v(e) {
             useForcedColors: D,
             systemForcedColors: L,
             useReducedMotion: x,
-            alwaysShowLinkDecorations: k,
-            confettiMode: M
+            alwaysShowLinkDecorations: M,
+            confettiMode: k
         } = (0, s.cj)([m.default, c.Z, g.Z, E.Z, p.Z, h.Z], () => {
             var e;
             return {
@@ -84,10 +84,10 @@ function v(e) {
             useForcedColors: D,
             systemForcedColors: L,
             useReducedMotion: x,
-            alwaysShowLinkDecorations: k,
+            alwaysShowLinkDecorations: M,
             hardwareAccelerationEnabled: v,
             rootClassName: o()({
-                'confetti-mode': M,
+                'confetti-mode': k,
                 'refresh-fast-follow-avatars': B && !H,
                 'refresh-fast-follow-guild-bg': V,
                 'refresh-fast-follow-distinct-borders': F,

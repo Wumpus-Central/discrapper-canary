@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(74538),
     x = n(401062),
     v = n(696900),
-    j = n(456631),
-    O = n(963838),
+    O = n(456631),
+    j = n(963838),
     E = n(535879),
     S = n(310892),
-    I = n(12168),
-    P = n(353368),
+    P = n(12168),
+    I = n(353368),
     Z = n(981631),
     N = n(354459),
     T = n(185923),
@@ -58,9 +58,9 @@ function U(e) {
                     })
             )
             .slice(0, N.e5),
-        W = (null != (t = j.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, N.e5 - 1).some((t) => t.name === e.name));
+        W = (null != (t = O.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, N.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && z.splice(z.length - 1, 1, W[0]);
-    let Y = (0, O.Iu)(F),
+    let Y = (0, j.Iu)(F),
         q = (e) => {
             (c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -100,7 +100,7 @@ function U(e) {
         });
     }, [Q, J]);
     let $ = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-        ee = F === P.q.PREMIUM;
+        ee = F === I.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
         contentTypes: $,
         children: (e) => {
@@ -128,7 +128,7 @@ function U(e) {
                         })
                     }),
                 children: () =>
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(P.Z, {
                         ref: G,
                         title: R.intl.string(R.t.Nn8lPz),
                         channel: n,

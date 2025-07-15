@@ -24,7 +24,7 @@ class c extends l.Component {
             var n;
             null == (n = this.inputRef.current) || n.focus();
         }
-        null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && d(this.props.value, this.props, this.state) && this.setState({ value: this.props.value });
+        null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && E(this.props.value, this.props, this.state) && this.setState({ value: this.props.value });
     }
     render() {
         let e,
@@ -94,7 +94,7 @@ class c extends l.Component {
                     null == t || t(e));
             }),
             u(this, 'handleBlur', (e) => {
-                if (d('', this.props, this.state)) {
+                if (E('', this.props, this.state)) {
                     this.setState({ focused: !1 });
                     let { onBlur: t } = this.props;
                     null == t || t(e);
@@ -116,7 +116,7 @@ class c extends l.Component {
             }));
     }
 }
-function d() {
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,

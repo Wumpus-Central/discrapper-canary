@@ -1,81 +1,81 @@
-(n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
+(n.d(t, { BO: () => s }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
 var r = n(73800),
-    a = n(348327),
-    o = n.n(a),
+    o = n(348327),
+    a = n.n(o),
     i = n(392711),
     l = n(823379),
     c = n(886118);
 let u = new Worker(new URL('/assets/' + n.u('56558'), n.b));
-function d(e, t, n, a) {
-    let d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        s = r.useRef(null),
-        _ = r.useRef(null),
-        f = r.useRef(n),
-        { searchStringGenerator: p } = a,
+function s(e, t, n, o) {
+    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        d = r.useRef(null),
+        f = r.useRef(null),
+        _ = r.useRef(n),
+        { searchStringGenerator: p } = o,
         b = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [n, a] = r.useState(e),
+                [n, o] = r.useState(e),
                 i = r.useRef(e);
             return (
                 r.useEffect(() => {
                     i.current = e;
                 }, [e]),
                 r.useEffect(() => {
-                    a((e) => {
+                    o((e) => {
                         let t = i.current;
-                        return o()(e, t) ? e : t;
+                        return a()(e, t) ? e : t;
                     });
                 }, t),
                 n
             );
-        })(t.map(p), [t, p, ...d]),
+        })(t.map(p), [t, p, ...s]),
         m = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [n, a] = r.useState(e),
+                [n, o] = r.useState(e),
                 i = r.useRef(e);
             return (
                 r.useEffect(() => {
                     i.current = e;
                 }, [e]),
                 r.useEffect(() => {
-                    a((e) => {
+                    o((e) => {
                         let t = i.current;
-                        return o()(e, t) ? e : t;
+                        return a()(e, t) ? e : t;
                     });
                 }, t),
                 n
             );
         })(t, [t]);
     r.useEffect(() => {
-        f.current = n;
+        _.current = n;
     }, [n]);
-    let h = r.useMemo(() => {
-        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0 } = a;
+    let v = r.useMemo(() => {
+        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0 } = o;
         return (
-            (_.current = (0, i.throttle)(
+            (f.current = (0, i.throttle)(
                 async (e, t, n) => {
-                    if ('' === e.trim()) return void f.current(t);
-                    s.current = (0, i.uniqueId)();
+                    if ('' === e.trim()) return void _.current(t);
+                    d.current = (0, i.uniqueId)();
                     let r = await (function (e, t, n, r) {
-                        var a;
-                        let o = null != (a = r.promiseUuid) ? a : (0, i.uniqueId)(),
-                            { searchType: d = c.S.FUZZY, sortType: s = c.E.NONE, jaroWinklerSearchThreshold: _ = 0.85 } = r;
+                        var o;
+                        let a = null != (o = r.promiseUuid) ? o : (0, i.uniqueId)(),
+                            { searchType: s = c.S.FUZZY, sortType: d = c.E.NONE, jaroWinklerSearchThreshold: f = 0.85 } = r;
                         return new Promise((r) => {
-                            let a = (t) => {
+                            let o = (t) => {
                                 let {
                                     data: { id: n, foundItemIndexes: i }
                                 } = t;
-                                o === n && (r(i.map((t) => e[t]).filter(l.lm)), null == u || u.removeEventListener('message', a));
+                                a === n && (r(i.map((t) => e[t]).filter(l.lm)), null == u || u.removeEventListener('message', o));
                             };
-                            (null == u || u.addEventListener('message', a),
+                            (null == u || u.addEventListener('message', o),
                                 null == u ||
                                     u.postMessage({
-                                        id: o,
+                                        id: a,
                                         searchTerm: t,
                                         searchStrings: n,
-                                        searchType: d,
-                                        sortType: s,
-                                        jaroWinklerSearchThreshold: _
+                                        searchType: s,
+                                        sortType: d,
+                                        jaroWinklerSearchThreshold: f
                                     }));
                         });
                     })(
@@ -106,9 +106,9 @@ function d(e, t, n, a) {
                                     }));
                             }
                             return e;
-                        })({ promiseUuid: s.current }, a)
+                        })({ promiseUuid: d.current }, o)
                     );
-                    null != s.current && f.current(r);
+                    null != d.current && _.current(r);
                 },
                 e,
                 {
@@ -116,19 +116,19 @@ function d(e, t, n, a) {
                     trailing: n
                 }
             )),
-            _.current
+            f.current
         );
-    }, [a]);
+    }, [o]);
     return (
         r.useEffect(() => {
-            h(e, m, b);
-        }, [h, e, m, b, ...d]),
+            v(e, m, b);
+        }, [v, e, m, b, ...s]),
         r.useEffect(
             () => () => {
-                (null != _.current && _.current.cancel(), (_.current = null), (s.current = null));
+                (null != f.current && f.current.cancel(), (f.current = null), (d.current = null));
             },
-            [b, n, a]
+            [b, n, o]
         ),
-        h
+        v
     );
 }

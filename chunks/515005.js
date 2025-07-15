@@ -95,7 +95,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
     P = (0, l.Mg)(v.__invalid_stickerPickerPreviewPadding),
     w = 250,
     D = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: I, gutterWidth: S, inspectedStickerPosition: C, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: k, rowIndex: M, stickerClassName: j, stickerDescriptors: U, stickerPadding: G = P, stickerSize: B = R, ownedStickerPacks: V, enlargeOnInteraction: F = !1, channel: Z, currentUser: H, checkSendability: Y = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: I, gutterWidth: S, inspectedStickerPosition: C, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: M, rowIndex: k, stickerClassName: j, stickerDescriptors: U, stickerPadding: G = P, stickerSize: B = R, ownedStickerPacks: V, enlargeOnInteraction: F = !1, channel: Z, currentUser: H, checkSendability: Y = !0 } = e,
             { location: W } = (0, d.O)(),
             K = B + 2 * G,
             z = i.useMemo(
@@ -124,7 +124,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         className: v.row,
                         style: z
                     },
-                    null == I ? void 0 : I(M)
+                    null == I ? void 0 : I(k)
                 ),
                 {
                     children: U.map((e) => {
@@ -134,7 +134,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                             S = (t) => {
                                 if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0) return;
                                 let n = t.altKey;
-                                (n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id), null == k || k(e, n));
+                                (n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id), null == M || M(e, n));
                             },
                             R = (0, s.throttle)(() => {
                                 (null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0 || f || null == x || x(e);
@@ -150,7 +150,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));
                                     }));
                             },
-                            U = null != (d = null == l ? void 0 : l(e.columnIndex, M)) ? d : {},
+                            U = null != (d = null == l ? void 0 : l(e.columnIndex, k)) ? d : {},
                             { ref: G, tabIndex: K, onFocus: z } = U,
                             J = N(U, ['ref', 'tabIndex', 'onFocus']);
                         switch (e.type) {

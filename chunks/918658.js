@@ -26,8 +26,8 @@ var i = n(255367),
     R = n(889695),
     m = n(981631),
     A = n(176505),
-    P = n(302463),
-    y = n(293810),
+    y = n(302463),
+    P = n(293810),
     b = n(388032),
     D = n(800515);
 function v(e) {
@@ -150,8 +150,8 @@ function M() {
                               (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: b.intl.formatToPlainString(b.t.eummvb, {
-                                      maxTiers: y.fF,
-                                      maxProducts: P.dD
+                                      maxTiers: P.fF,
+                                      maxProducts: y.dD
                                   }),
                                   children: (0, i.jsx)(d.P4T, {
                                       size: 'xs',

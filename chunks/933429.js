@@ -30,8 +30,8 @@ var i,
     R = n(528011),
     m = n(487419),
     A = n(715903),
-    P = n(223606),
-    y = n(160404),
+    y = n(223606),
+    P = n(160404),
     b = n(41776),
     D = n(332473),
     v = n(30684),
@@ -84,8 +84,8 @@ var i,
     eR = n(981631),
     em = n(188785),
     eA = n(474936),
-    eP = n(46140),
-    ey = n(231338),
+    ey = n(46140),
+    eP = n(231338),
     eb = n(65154);
 function eD(e, t, n) {
     return (
@@ -199,7 +199,7 @@ let eB = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
         [eR.kVF.VIEWING_ROLES]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return y.Z.isViewingRoles(t);
+                return P.Z.isViewingRoles(t);
             }
         },
         [eR.kVF.INVITED_TO_SPEAK]: {
@@ -450,7 +450,7 @@ let eB = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
                     r = null != t && null != t.paymentSourceId ? eE.Z.getPaymentSource(t.paymentSourceId) : null,
-                    o = null != r && ey.Uk.has(r.type),
+                    o = null != r && eP.Uk.has(r.type),
                     s = null != t && t.status === eR.O0b.PAST_DUE && !i && o && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eV(eR.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT) && s;
             },
@@ -472,13 +472,13 @@ let eB = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
                     n = null != t ? $.Z.getGuild(t) : null;
-                return (null != t && null != P.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.features.has(eR.oNc.COMMUNITY)) && !eV(eR.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
+                return (null != t && null != y.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.features.has(eR.oNc.COMMUNITY)) && !eV(eR.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
             },
             metadata: (e) => {
                 let { selectedGuildId: t } = e,
                     n = { dismissUntil: l()().add(2, 'hours').toDate() };
                 if (null != t) {
-                    let e = P.Z.getMentionRaidDetected(t);
+                    let e = y.Z.getMentionRaidDetected(t);
                     null != e && (n.decisionId = e.decisionId);
                 }
                 return n;
@@ -497,7 +497,7 @@ let eB = [eR.kVF.QUARANTINED, eR.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eR.kVF.VI
                 if (null == e) return !1;
                 let t = (0, f.V9)(e),
                     n = w.Z.getStreamHeartbeatFailure(t);
-                return null != n && Date.now() - n.firstFailedAt >= eP.Ot;
+                return null != n && Date.now() - n.firstFailedAt >= ey.Ot;
             },
             metadata: () => {
                 let e = H.Z.getCurrentUserActiveStream();

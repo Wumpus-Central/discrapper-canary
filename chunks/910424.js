@@ -3,19 +3,19 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(572691),
-    a = n(287734),
+    a = n(572691),
+    o = n(287734),
     s = n(872810),
     c = n(40851),
     u = n(102172),
     d = n(199902),
-    p = n(592125),
-    f = n(585483),
+    f = n(592125),
+    p = n(585483),
     m = n(915863),
     g = n(981631),
-    b = n(388032),
-    _ = n(128746);
-function v(e) {
+    _ = n(388032),
+    b = n(128746);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function v(e) {
     }
     return e;
 }
-function h(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,16 +69,16 @@ function y(e) {
                     return t !== O.ownerId;
                 }).length > 0
         })),
-        I = (0, i.e7)([p.Z], () => p.Z.getChannel(null == O ? void 0 : O.channelId)),
-        [P, C] = (0, u.wq)(I),
+        I = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
+        [C, P] = (0, u.wq)(I),
         E = (0, c.Aq)(),
         w = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
         T = (e) => {
-            null != O && (null == j || j(), a.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
+            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == O) return null;
-    let N = (0, u.P9)(C);
-    t ? (N = b.intl.string(b.t.XvBdeX)) : w && (N = b.intl.string(b.t.JH1SJy));
+    let N = (0, u.P9)(P);
+    t ? (N = _.intl.string(_.t.XvBdeX)) : w && (N = _.intl.string(_.t.JH1SJy));
     let Z = {
         color: n,
         look: y
@@ -87,10 +87,10 @@ function y(e) {
         children: [
             (0, r.jsxs)(
                 m.Z,
-                h(
-                    v(
+                v(
+                    h(
                         {
-                            disabled: t || w || !P,
+                            disabled: t || w || !C,
                             onClick: () => T(!1)
                         },
                         Z
@@ -101,7 +101,7 @@ function y(e) {
                             (0, r.jsx)(l.hGI, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: _.streamIcon
+                                className: b.streamIcon
                             }),
                             N
                         ]
@@ -111,13 +111,13 @@ function y(e) {
             ),
             x && !w
                 ? (0, r.jsx)(l.ua7, {
-                      text: b.intl.string(b.t.wCrzur),
+                      text: _.intl.string(_.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
-                              h(
-                                  v(
-                                      h(v({}, e), {
+                              v(
+                                  h(
+                                      v(h({}, e), {
                                           onClick: () => {
                                               var t;
                                               (null == (t = e.onClick) || t.call(e), T(!0));
@@ -126,12 +126,12 @@ function y(e) {
                                       Z
                                   ),
                                   {
-                                      className: _.iconButton,
-                                      size: _.iconButtonSize,
+                                      className: b.iconButton,
+                                      size: b.iconButtonSize,
                                       children: (0, r.jsx)(l.OgY, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: _.iconSize
+                                          className: b.iconSize
                                       })
                                   }
                               )

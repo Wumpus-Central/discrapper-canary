@@ -18,7 +18,7 @@ let m = (e) => {
         _ = i.useCallback(() => {
             s.Z.dismissPublishBump(n);
         }, [n]),
-        g = i.useCallback(() => {
+        h = i.useCallback(() => {
             s.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return m
@@ -61,7 +61,7 @@ let m = (e) => {
                       className: p.hidePermanently,
                       variant: 'text-sm/normal',
                       children: (0, r.jsx)(o.P3F, {
-                          onClick: g,
+                          onClick: h,
                           children: d.intl.string(d.t.efSkDg)
                       })
                   })

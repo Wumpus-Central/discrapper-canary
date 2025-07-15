@@ -9,7 +9,7 @@ var r = n(255367),
 let u = (e) => {
     let { invite: t, stageInstance: n, guild: u, message: d, isMember: p, onTransitionToInviteChannel: m, onAcceptInstantInvite: f } = e,
         { analyticsLocations: _ } = (0, o.ZP)(a.Z.INVITE_EMBED),
-        g = i.useCallback(() => {
+        h = i.useCallback(() => {
             let e = 'noop';
             (p ? (m(), (e = 'transition')) : (f(), (e = 'accept')),
                 (0, l.r$)(
@@ -27,7 +27,7 @@ let u = (e) => {
             isEmbed: !0,
             stageInstance: n,
             guild: u,
-            onClick: g
+            onClick: h
         })
     });
 };

@@ -10,7 +10,7 @@ function o(e) {
         m = (0, i.Sw)(s, o),
         f = c(p),
         _ = u(null != m ? m : void 0),
-        g = a.intl.format(a.t['32QI5+'], {
+        h = a.intl.format(a.t['32QI5+'], {
             actorName: p.nick,
             actorHook: f,
             targetName: null == m ? void 0 : m.nick,
@@ -20,6 +20,6 @@ function o(e) {
         icon: n(474019),
         timestamp: t.timestamp,
         compact: d,
-        children: g
+        children: h
     });
 }

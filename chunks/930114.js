@@ -12,9 +12,9 @@ var i = n(481060),
 function p(e) {
     let { processedCode: t, channelContext: p, customGiftMessage: m, giftInfo: f } = e,
         _ = !1,
-        g = null,
-        h = l.default.getCurrentUser(),
-        b = (0, s.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
+        h = null,
+        g = l.default.getCurrentUser(),
+        b = (0, s.yd)(null == g ? void 0 : g.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('47016')]).then(n.bind(n, 409858));
@@ -54,7 +54,7 @@ function p(e) {
                             emojiName: null == f || null == (i = f.emoji) ? void 0 : i.name,
                             soundId: null == f || null == (l = f.sound) ? void 0 : l.id,
                             onComplete: (e, t) => {
-                                ((g = e), t && ((_ = t), e.isSubscription && null == a.Z.getPremiumSubscription(!1) && (0, c.H)(!0)));
+                                ((h = e), t && ((_ = t), e.isSubscription && null == a.Z.getPremiumSubscription(!1) && (0, c.H)(!0)));
                             }
                         },
                         n
@@ -65,7 +65,7 @@ function p(e) {
         {
             onCloseCallback: () => {
                 var e;
-                _ && null != g && !b && g.isSubscription && (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                _ && null != h && !b && h.isSubscription && (null == h || null == (e = h.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

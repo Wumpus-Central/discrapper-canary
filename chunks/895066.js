@@ -348,7 +348,7 @@ class p {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    k = {
+                                    M = {
                                         passthroughCount: null != (l = t.passthroughCount) ? l : 0,
                                         decryptSuccessCount: null != (c = t.decryptSuccessCount) ? c : 0,
                                         decryptFailureCount: null != (d = t.decryptFailureCount) ? d : 0,
@@ -363,7 +363,7 @@ class p {
                                         a = N - e.packetsLost,
                                         o = 0,
                                         s = e.mosBuckets,
-                                        l = null != (m = e.decryptFailureBeforeSuccessCount) ? m : k.decryptSuccessCount > 0 ? k.decryptFailureCount : void 0;
+                                        l = null != (m = e.decryptFailureBeforeSuccessCount) ? m : M.decryptSuccessCount > 0 ? M.decryptFailureCount : void 0;
                                     (r > 0 && a >= 0 && ((o = this.calculateMos(S + D, i().clamp(a / (r + a), 0, 1))), s[Math.floor(o)]++),
                                         (this.inboundStats[n] = u(
                                             {
@@ -381,7 +381,7 @@ class p {
                                                 frameOpStats: x,
                                                 decryptFailureBeforeSuccessCount: l
                                             },
-                                            k
+                                            M
                                         )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
@@ -410,7 +410,7 @@ class p {
                                             bufferStats: L,
                                             frameOpStats: x
                                         },
-                                        k
+                                        M
                                     )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: performance.now(),

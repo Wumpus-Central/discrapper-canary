@@ -38,7 +38,7 @@ function m(e) {
                             children: (0, r.jsx)(d.Z, {
                                 userName: m,
                                 displayNameStyles: t.displayNameStyles,
-                                effectDisplayType: u.Fb.ANIMATED
+                                effectDisplayType: u.F.ANIMATED
                             })
                         })
                     ),

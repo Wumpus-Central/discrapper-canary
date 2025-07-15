@@ -268,13 +268,13 @@ let R = {
     D = (0, _.Z)([A, R]),
     L = l._p(w),
     x = l._p(D),
-    k = {
+    M = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    M = new (o())(k),
-    j = new (o())(k);
+    k = new (o())(M),
+    j = new (o())(M);
 function U(e, t, n) {
     let r = [],
         i = {
@@ -284,7 +284,7 @@ function U(e, t, n) {
             isSlate: !0
         },
         a = n ? x : L,
-        o = n ? j : M,
+        o = n ? j : k,
         s = o.get(e);
     if (null != s) return s;
     let l =

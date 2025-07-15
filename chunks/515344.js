@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => y,
-    z: () => C
+    z: () => x
 });
 var r = n(73800),
     i = n(442837),
@@ -15,8 +15,8 @@ var r = n(73800),
     m = n(135431),
     f = n(433534),
     _ = n(914498),
-    g = n(981631),
-    h = n(49898),
+    h = n(981631),
+    g = n(49898),
     b = n(388032);
 function E(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
@@ -33,7 +33,7 @@ function E(e) {
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
-                return null != e && (e.isPrivate() || u.Z.can(g.Plq.SEND_MESSAGES, e));
+                return null != e && (e.isPrivate() || u.Z.can(h.Plq.SEND_MESSAGES, e));
             },
             []
         ),
@@ -57,7 +57,7 @@ function y(e, t) {
                 ? () => {
                       if ((null == t || t(), i)) return void (0, a.X)(e.id);
                       (0, o.transitionToGlobalDiscovery)({
-                          tab: h.GlobalDiscoveryTab.APPS,
+                          tab: g.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
                           newSessionState: { entrypoint: { name: s.xF.APPLICATION_MESSAGE_EMBED } }
                       });
@@ -78,7 +78,7 @@ function y(e, t) {
         [e.id, i, n, c, u, d, l, t, p]
     );
 }
-function C(e) {
+function x(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
         i = y(e);
     return r.useMemo(

@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => j,
-    u: () => x
+    u: () => v
 }),
     n(190126),
     n(368063),
@@ -22,13 +22,13 @@ var r,
     m = n(206295),
     f = n(70097),
     _ = n(314897),
-    g = n(572004),
-    h = n(914498),
+    h = n(572004),
+    g = n(914498),
     b = n(217702),
     E = n(388032),
     y = n(383195);
-function C() {
-    return (C =
+function x() {
+    return (x =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -38,7 +38,7 @@ function C() {
             return e;
         }).apply(this, arguments);
 }
-function v(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function v(e) {
     }
     return e;
 }
-var x = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
@@ -79,37 +79,37 @@ function O(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: x, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: D, onClickContent: L, onClickBanner: M } = e;
-    D = {
-        id: null != (n = null == (t = D) ? void 0 : t.id) ? n : '0',
-        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : h.Un.UNKNOWN,
+    let { title: v, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: k, onClickContent: L, onClickBanner: D } = e;
+    k = {
+        id: null != (n = null == (t = k) ? void 0 : t.id) ? n : '0',
+        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
         referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : _.default.getId(),
         activityCustomId: null == t ? void 0 : t.activityCustomId,
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
-    let { primaryColor: k, secondaryColor: U } = (0, m.Z)(null != A ? A : T),
-        F = 'linear-gradient(45deg, '.concat(k, ', ').concat(U, ')'),
+    let { primaryColor: M, secondaryColor: U } = (0, m.Z)(null != A ? A : T),
+        F = 'linear-gradient(45deg, '.concat(M, ', ').concat(U, ')'),
         B = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         G = l.useRef(!1),
         H = (0, d.O)(
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
-                    (null == D || null == (t = D.onView) || t.call(D), (0, h.GF)(D.id, D.linkType, D.referrerId, D.activityCustomId), (G.current = !0));
+                    (null == k || null == (t = k.onView) || t.call(k), (0, g.GF)(k.id, k.linkType, k.referrerId, k.activityCustomId), (G.current = !0));
                 }
             },
             void 0
         ),
         V =
-            g.wS && null != w
+            h.wS && null != w
                 ? (0, i.jsx)(c.zx, {
                       look: c.zx.Looks.BLANK,
                       size: c.zx.Sizes.ICON,
                       'aria-label': E.intl.string(E.t.WqhZsr),
                       className: y.linkIcon,
                       onClick: () => {
-                          ((0, g.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, h.Yu)(D.id, D.linkType));
+                          ((0, h.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, g.Yu)(k.id, k.linkType));
                       },
                       children: (0, i.jsx)(u.xPt, {
                           size: 'xs',
@@ -142,15 +142,15 @@ function j(e) {
         $ = l.useMemo(() => {
             if (null != L)
                 return (e) => {
-                    (L(e), (0, h.KX)(D.id, D.linkType, h.j_.CONTENT, D.referrerId, D.activityCustomId));
+                    (L(e), (0, g.KX)(k.id, k.linkType, g.j_.CONTENT, k.referrerId, k.activityCustomId));
                 };
-        }, [L, D]),
+        }, [L, k]),
         ee = l.useMemo(() => {
-            if (null != M)
+            if (null != D)
                 return (e) => {
-                    (M(e), (0, h.KX)(D.id, D.linkType, h.j_.BANNER, D.referrerId, D.activityCustomId));
+                    (D(e), (0, g.KX)(k.id, k.linkType, g.j_.BANNER, k.referrerId, k.activityCustomId));
                 };
-        }, [M, D]);
+        }, [D, k]);
     return (0, i.jsxs)('div', {
         ref: H,
         className: y.embed,
@@ -220,7 +220,7 @@ function j(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: y.contentTitle,
-                                                        children: x
+                                                        children: v
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: y.contentInfoWrapper,
@@ -253,7 +253,7 @@ function j(e) {
                                                 submitting: o,
                                                 children: m,
                                                 onClick(e) {
-                                                    (l(e), (0, h.KX)(D.id, D.linkType, s, D.referrerId, D.activityCustomId));
+                                                    (l(e), (0, g.KX)(k.id, k.linkType, s, k.referrerId, k.activityCustomId));
                                                 }
                                             };
                                         return d
@@ -262,19 +262,19 @@ function j(e) {
                                                   {
                                                       text: a,
                                                       children: (e) => {
-                                                          var t = C(
+                                                          var t = x(
                                                               {},
                                                               (function (e) {
                                                                   if (null == e) throw TypeError('Cannot destructure ' + e);
                                                                   return e;
                                                               })(e)
                                                           );
-                                                          return (0, i.jsx)(c.zx, v({}, f, t));
+                                                          return (0, i.jsx)(c.zx, C({}, f, t));
                                                       }
                                                   },
                                                   n
                                               )
-                                            : (0, i.jsx)(c.zx, v({}, f), n);
+                                            : (0, i.jsx)(c.zx, C({}, f), n);
                                     })
                                 })
                         ]

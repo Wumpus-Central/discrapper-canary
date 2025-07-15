@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -13,15 +13,15 @@ var i = n(442837),
     m = n(981631),
     f = n(388032),
     _ = n(273254);
-function g(e) {
+function h(e) {
     let t,
         n,
-        g,
-        { author: h, banned: b, channelId: E } = e,
+        h,
+        { author: g, banned: b, channelId: E } = e,
         y = (0, i.e7)([s.default], () => s.default.getId()),
-        C = p.ZP.useName(h),
-        v = y === h.id,
-        x = (0, i.e7)([c.Z, u.Z], () => {
+        x = p.ZP.useName(g),
+        C = y === g.id,
+        v = (0, i.e7)([c.Z, u.Z], () => {
             let e = c.Z.getChannel(E);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
@@ -33,17 +33,17 @@ function g(e) {
             return u.Z.can(m.Plq.SEND_MESSAGES, e);
         });
     return (
-        v
-            ? ((t = f.intl.string(f.t['F/OLvL'])), (g = f.intl.string(f.t.C89OLC)))
-            : ((g = f.intl.string(f.t['YVub5+'])),
+        C
+            ? ((t = f.intl.string(f.t['F/OLvL'])), (h = f.intl.string(f.t.C89OLC)))
+            : ((h = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != C && x
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: C })),
+                  : null != x && v
+                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: x })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {
-                              let { id: e } = h,
-                                  t = '@'.concat(p.ZP.getUserTag(h, { decoration: 'never' }));
+                              let { id: e } = g,
+                                  t = '@'.concat(p.ZP.getUserTag(g, { decoration: 'never' }));
                               (d.S.dispatchToLastSubscribed(m.CkL.INSERT_TEXT, {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
@@ -55,7 +55,7 @@ function g(e) {
                     : (t = f.intl.string(f.t['SMJr+f']))),
         (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(a.Z.Header, { text: g }),
+                (0, r.jsx)(a.Z.Header, { text: h }),
                 (0, r.jsxs)(a.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {

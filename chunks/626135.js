@@ -117,8 +117,8 @@ let S = { location: {} },
     D = 900000,
     L = 3600000,
     x = 86400000,
-    k = 0.001,
-    M = performance.now(),
+    M = 0.001,
+    k = performance.now(),
     j = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
 a.extendSuperProperties({ launch_signature: j });
 let U = [];
@@ -236,12 +236,12 @@ let B = {
     [m.rMx.RPC_COMMAND_SENT]: {
         throttlePeriod: x,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: k
+        throttlePercent: M
     },
     [m.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
         throttlePeriod: x,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: k
+        throttlePercent: M
     },
     [m.rMx.ACTIVITY_HANDSHAKE]: {
         throttlePeriod: x,
@@ -394,7 +394,7 @@ function K(e) {
         let { source: e } = a;
         a = y({}, I(a, ['source']), F(e));
     }
-    ((a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = Z()), (a.rendered_locale = E.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - M) / 1000)));
+    ((a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = Z()), (a.rendered_locale = E.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - k) / 1000)));
     let o = p.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = N;

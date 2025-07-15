@@ -19,11 +19,11 @@ var r = n(255367),
     C = n(359110),
     x = n(585483),
     v = n(407908),
-    j = n(739830),
-    O = n(488131),
+    O = n(739830),
+    j = n(488131),
     E = n(981631),
     S = n(388032);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,13 +83,13 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(N, P(I({}, e), { channel: t }));
+            return (0, r.jsx)(N, I(P({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 y.ZP.Icon,
-                P(I({}, e), {
+                I(P({}, e), {
                     ref: o,
                     onClick: s,
                     tooltip: n ? null : c,
@@ -106,10 +106,10 @@ function N(e) {
         _ = (0, c.Z)(t, 'Sidebar Overflow'),
         y = (0, d.Z)(t),
         v = (0, f.Z)(t),
-        j = (0, m.Z)(t),
-        O = (0, a.Z)(t),
-        I = (0, u.Z)(t),
-        P = (0, h.Z)(t.id),
+        O = (0, m.Z)(t),
+        j = (0, a.Z)(t),
+        P = (0, u.Z)(t),
+        I = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
         N = (0, s.Z)(t),
         T = (0, o.Z)(t),
@@ -138,10 +138,10 @@ function N(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [v, j]
+                children: [v, O]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z, y, P]
+                children: [Z, y, I]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -167,7 +167,7 @@ function N(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, O, I, N]
+                children: [w, j, P, N]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [T, A]
@@ -179,13 +179,13 @@ function T(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(j.Z, { channel: t }),
+            t.isForumPost() ? null : (0, r.jsx)(O.Z, { channel: t }),
             (0, r.jsx)(v.Z, { channel: t }),
             (0, r.jsx)(Z, { channel: t }),
             (0, r.jsx)(y.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, O.vN)((0, _.e)(t), null != n ? n : t.parent_id)
+                onClick: () => (0, j.vN)((0, _.e)(t), null != n ? n : t.parent_id)
             })
         ]
     });

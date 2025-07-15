@@ -12,14 +12,14 @@ var r = n(255367),
     m = n(271383),
     f = n(485386),
     _ = n(430824),
-    g = n(594174),
-    h = n(700785),
+    h = n(594174),
+    g = n(700785),
     b = n(709054),
     E = n(962086),
     y = n(160404),
-    C = n(225675),
-    v = n(981631),
-    x = n(388032),
+    x = n(225675),
+    C = n(981631),
+    v = n(388032),
     O = n(318135);
 function j(e) {
     var t;
@@ -30,14 +30,14 @@ function j(e) {
 }
 function I(e) {
     let { guildId: t } = e,
-        n = (0, u.e7)([g.default], () => g.default.getCurrentUser()),
+        n = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
         l = (0, u.e7)([_.Z], () => _.Z.getGuild(t)),
         o = (0, u.e7)([f.Z], () => f.Z.getRoles(t)),
         { impersonateType: I, viewingRoles: S } = (0, u.cj)([y.Z], () => ({
             impersonateType: y.Z.getImpersonateType(t),
             viewingRoles: y.Z.getViewingRoles(t)
         })),
-        T = I === C.z.SERVER_SHOP,
+        T = I === x.z.SERVER_SHOP,
         N = (0, u.e7)([m.ZP], () => (null != n ? m.ZP.getTrueMember(t, n.id) : null)),
         [P, A] = (0, d.A7R)(null == S ? [] : b.default.keys(S)),
         w = i.useRef(l);
@@ -71,27 +71,27 @@ function I(e) {
                               var t;
                               return !T || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == Z ? void 0 : Z.id) === e.id || h.r6(l, n.id, Z, e))
+                          .filter((e) => (null == Z ? void 0 : Z.id) === e.id || g.r6(l, n.id, Z, e))
                     : [],
             [l, n, T, Z, o]
         );
     if (null == n || null == l || null == N) return null;
-    let D = {};
+    let k = {};
     return (N.roles.forEach((e) => {
         let t = o[e];
-        null != t && (D[t.id] = t);
+        null != t && (k[t.id] = t);
     }),
     c.e$(
-        h.I0({
-            forceRoles: D,
+        g.I0({
+            forceRoles: k,
             context: l
         }),
-        c.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES)
+        c.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
     ) || (0, p.eM)(l, n))
         ? (0, r.jsx)('div', {
               className: O.container,
               children: (0, r.jsx)(d.hQY, {
-                  placeholder: x.intl.string(x.t.Sojqsr),
+                  placeholder: v.intl.string(v.t.Sojqsr),
                   value: P,
                   onChange: A,
                   autoFocus: !0,
@@ -134,6 +134,6 @@ function I(e) {
           })
         : (0, r.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: x.intl.string(x.t.MNSTbW)
+              children: v.intl.string(v.t.MNSTbW)
           });
 }

@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(271383),
     x = n(944486),
     v = n(594174),
-    j = n(585483),
-    O = n(51144),
+    O = n(585483),
+    j = n(51144),
     E = n(566620),
     S = n(317381),
-    I = n(619915),
-    P = n(988980),
+    P = n(619915),
+    I = n(988980),
     Z = n(16609),
     N = n(952561),
     T = n(563218),
@@ -49,8 +49,8 @@ function G(e) {
         Y = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
         q = (0, Z.p)(V),
         K = (0, o.e7)([y.Z], () => y.Z.getChannel(q)),
-        X = (0, I.gb)(Y),
-        Q = (0, I.uF)(X),
+        X = (0, P.gb)(Y),
+        Q = (0, P.uF)(X),
         J = i.useCallback(() => {
             (0, E.tg)(k.Ez.PIP);
         }, []),
@@ -80,7 +80,7 @@ function G(e) {
     let es = ea.width / Math.max(ea.height, 1) < k.I0,
         ec = 0,
         eu = 0,
-        ed = (0, P.Z)(null == W ? void 0 : W.id);
+        ed = (0, I.Z)(null == W ? void 0 : W.id);
     if (!ed) {
         let e = ea.width,
             t = ea.height;
@@ -183,7 +183,7 @@ function G(e) {
         var t;
         if (null == e || void 0 === e || e === A.ag) return null;
         let n = em.get(e.id),
-            i = null != (t = null == n ? void 0 : n.nick) ? t : O.ZP.getName(e);
+            i = null != (t = null == n ? void 0 : n.nick) ? t : j.ZP.getName(e);
         return (0, r.jsx)(
             c.DY3,
             {
@@ -298,10 +298,10 @@ function G(e) {
                               maxHeight: G,
                               resizableNode: $,
                               onResize: (e) => {
-                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
+                                  (O.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
                               },
                               onResizeEnd: (e) => {
-                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
+                                  (O.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
                               }
                           })
                         : null

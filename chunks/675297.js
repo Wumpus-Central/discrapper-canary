@@ -13,12 +13,12 @@ var i = n(399606),
     m = n(676651),
     f = n(623488),
     _ = n(942833),
-    g = n(391181),
-    h = n(964793),
+    h = n(391181),
+    g = n(964793),
     b = n(226060),
     E = n(981631);
 function y(e) {
-    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: C = !0, hideRoleTag: v = !1, lineClamp: x = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
+    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: x = !0, hideRoleTag: C = !1, lineClamp: v = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
         N = (0, i.e7)([c.Z], () => c.Z.getGuild(n), [n]),
         P = (0, i.e7)([s.Z], () => {
             var e;
@@ -28,15 +28,15 @@ function y(e) {
         w = (0, _.C)(t),
         Z = (0, d.SO)(N),
         { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
-        D = (0, _.k)(t);
+        k = (0, _.k)(t);
     if (null == N || R) return null;
     let L = () =>
-            (0, h.e)({
+            (0, g.e)({
                 guildId: n,
                 guildProductListingId: t.id,
                 analyticsLocation: y
             }),
-        M = (0, r.jsx)(g.m, {
+        D = (0, r.jsx)(h.m, {
             product: t,
             guildId: n,
             showEditProduct: Z,
@@ -66,7 +66,7 @@ function y(e) {
             imageUrl: A,
             name: t.name,
             description: t.description,
-            formattedPrice: D,
+            formattedPrice: k,
             role: P,
             ctaComponent: (0, r.jsx)(b.Z, {
                 guildId: n,
@@ -74,13 +74,13 @@ function y(e) {
                 sourceAnalyticsLocations: y
             }),
             productType: w,
-            shouldShowFullDescriptionButton: C,
+            shouldShowFullDescriptionButton: x,
             onShowFullDescription: L,
             onTapCard: L,
-            actionMenu: M,
+            actionMenu: D,
             showOpaqueBackground: T,
-            hideRoleTag: v,
-            lineClamp: x,
+            hideRoleTag: C,
+            lineClamp: v,
             cardWidth: O,
             cardHeight: j,
             thumbnailHeight: I,

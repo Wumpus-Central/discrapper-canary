@@ -13,8 +13,8 @@ var i = n(657707),
     m = n(768921);
 function f(e) {
     let { message: t, channel: n, author: f, compact: _ } = e,
-        { nick: g } = (0, s.Sw)(f, n),
-        h = (0, c.l)({
+        { nick: h } = (0, s.Sw)(f, n),
+        g = (0, c.l)({
             user: f,
             channelId: n.id,
             guildId: void 0,
@@ -23,8 +23,8 @@ function f(e) {
         b = (0, l.q)(t.applicationId);
     if (null == b) return null;
     let E = p.intl.format(p.t.m7Lwam, {
-        username: g,
-        usernameHook: h,
+        username: h,
+        usernameHook: g,
         gameName: b.name,
         gameIconHook: (e) =>
             (0, r.jsxs)('span', {

@@ -5,7 +5,7 @@ var n = r(255367),
     l = r(442837),
     i = r(755721),
     s = r(481060),
-    c = r(461745),
+    c = r(794433),
     d = r(185413),
     u = r(971628),
     b = r(600164),
@@ -91,7 +91,7 @@ function C(e) {
                         ? delete r[n]
                         : (r[n] = {
                               display: {
-                                  type: c.Fj.MEMBER,
+                                  type: c.F.MEMBER,
                                   label: e.name,
                                   avatar: e.avatarURL
                               },

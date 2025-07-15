@@ -13,15 +13,15 @@ var i = n(120356),
     m = n(341907),
     f = n(46140),
     _ = n(981631),
-    g = n(388032),
-    h = n(355060),
+    h = n(388032),
+    g = n(355060),
     b = n(87181);
 function E(e) {
     let { questId: t } = e;
     return (0, r.jsx)('div', {
-        className: h.buttonContainer,
+        className: g.buttonContainer,
         children: (0, r.jsx)(o.zx, {
-            className: h.button,
+            className: g.button,
             color: o.Tt.BRAND,
             onClick: () => {
                 ((0, m.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
@@ -62,7 +62,7 @@ function E(e) {
                         )
                     ));
             },
-            children: g.intl.string(g.t.GURBQk)
+            children: h.intl.string(h.t.GURBQk)
         })
     });
 }
@@ -75,34 +75,34 @@ function y(e) {
             ref: (e) => {
                 n.current = e;
             },
-            className: l()(h.container, {
-                [h.wide]: 'lg' === i,
-                [h.tall]: 'lg' !== i
+            className: l()(g.container, {
+                [g.wide]: 'lg' === i,
+                [g.tall]: 'lg' !== i
             }),
             children: [
                 (0, r.jsxs)('div', {
-                    className: h.contentContainer,
+                    className: g.contentContainer,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
-                            children: g.intl.string(g.t.vnP31d)
+                            children: h.intl.string(h.t.vnP31d)
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-default',
-                            className: h.__invalid_mobileWebCopy,
-                            children: g.intl.string(g.t.nuWSYW)
+                            className: g.__invalid_mobileWebCopy,
+                            children: h.intl.string(h.t.nuWSYW)
                         }),
                         (0, r.jsx)(E, { questId: t })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: h.imgContainer,
+                    className: g.imgContainer,
                     children: (0, r.jsx)('img', {
                         src: b,
                         alt: '',
-                        className: h.missingQuestImage
+                        className: g.missingQuestImage
                     })
                 })
             ]

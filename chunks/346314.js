@@ -88,76 +88,76 @@ function y(e, t) {
     return i;
 }
 function O(e) {
-    let { roleStyle: t, name: n, color: a, roleName: l, roleColors: c, dotAlignment: d = 'left', className: h, animateRoleGradient: g, variant: E } = e,
-        b = i.useContext(u.d),
-        [y, O] = i.useState(!1),
-        v = i.useCallback(() => {
-            O(!0);
-        }, []),
+    let { roleStyle: t, name: n, color: a, roleName: l, roleColors: c, dotAlignment: d = 'left', className: h, nameTextClassName: g, animateRoleGradient: E, variant: b } = e,
+        y = i.useContext(u.d),
+        [O, v] = i.useState(!1),
         I = i.useCallback(() => {
-            O(!1);
+            v(!0);
         }, []),
-        T = 'username' === t,
-        S = 'dot' === t,
-        A = null != c && null != c.primaryColor && null != c.secondaryColor,
-        N = T && A,
+        T = i.useCallback(() => {
+            v(!1);
+        }, []),
+        S = 'username' === t,
+        A = 'dot' === t,
+        N = null != c && null != c.primaryColor && null != c.secondaryColor,
+        C = S && N,
         {
-            gradientStyle: C,
-            gradientClassname: R,
-            gradientGlowClassname: P
+            gradientStyle: R,
+            gradientClassname: P,
+            gradientGlowClassname: w
         } = (0, f.Ic)({
             primaryColor: null == c ? void 0 : c.primaryColor,
             secondaryColor: null == c ? void 0 : c.secondaryColor,
             tertiaryColor: null == c ? void 0 : c.tertiaryColor,
             roleStyle: 'username',
-            animateGradient: g || y || (null == b ? void 0 : b.animate)
+            animateGradient: E || O || (null == y ? void 0 : y.animate)
         }),
-        w = (0, f.EJ)(n),
-        D = {
-            className: o()(p.name, {
-                [p.username]: T,
-                [R]: N
-            }),
-            children: w
-        },
+        D = (0, f.EJ)(n),
         L = {
-            className: o()(p.nameGlow, P),
+            className: o()(p.name, g, {
+                [p.username]: S,
+                [P]: C
+            }),
+            children: D
+        },
+        x = {
+            className: o()(p.nameGlow, w),
             children: n
         },
-        x = S
+        M = A
             ? (0, r.jsx)(_.F, {
                   color: a,
-                  colors: A ? c : null,
+                  colors: N ? c : null,
                   name: l,
                   className: 'left' === d ? p.roleDotLeft : p.roleDotRight,
-                  hoverOverride: g || y || (null == b ? void 0 : b.animate)
+                  hoverOverride: E || O || (null == y ? void 0 : y.animate)
               })
             : null;
     return (0, r.jsxs)('span', {
         className: o()(h, p.container),
-        onMouseEnter: v,
-        onMouseLeave: I,
+        onMouseEnter: I,
+        onMouseLeave: T,
         children: [
-            'left' === d && x,
+            'left' === d && M,
             (0, r.jsxs)('span', {
                 className: p.nameContainer,
-                style: m({ color: T && !A && null != a ? a : void 0 }, N ? C : {}),
+                style: m({ color: S && !N && null != a ? a : void 0 }, C ? R : {}),
                 children: [
-                    null != E
+                    null != b
                         ? (0, r.jsx)(
                               s.xv,
                               m(
                                   {
                                       tag: 'span',
                                       color: 'currentColor',
-                                      variant: E
+                                      variant: b
                                   },
-                                  D
+                                  L
                               )
                           )
-                        : (0, r.jsx)('span', m({}, D)),
-                    N &&
-                        (null != E
+                        : (0, r.jsx)('span', m({}, L)),
+                    C &&
+                        (null != b
                             ? (0, r.jsx)(
                                   s.xv,
                                   m(
@@ -165,15 +165,15 @@ function O(e) {
                                           tag: 'span',
                                           color: 'currentColor',
                                           'aria-hidden': !0,
-                                          variant: E
+                                          variant: b
                                       },
-                                      L
+                                      x
                                   )
                               )
-                            : (0, r.jsx)('span', m({ 'aria-hidden': !0 }, L)))
+                            : (0, r.jsx)('span', m({ 'aria-hidden': !0 }, x)))
                 ]
             }),
-            'right' === d && x
+            'right' === d && M
         ]
     });
 }

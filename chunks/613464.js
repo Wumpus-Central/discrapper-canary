@@ -7,56 +7,56 @@ var r = n(255367),
     o = n(481060),
     u = n(749210),
     c = n(110924),
-    d = n(410030),
-    E = n(616780),
+    E = n(410030),
+    d = n(616780),
     _ = n(100527),
     A = n(906732),
-    m = n(527379),
-    f = n(687158),
-    T = n(184301),
-    g = n(502762),
-    I = n(271383),
-    h = n(594174),
-    O = n(189357),
-    N = n(718617),
-    p = n(327250),
-    R = n(50767);
+    T = n(527379),
+    I = n(687158),
+    g = n(184301),
+    m = n(502762),
+    f = n(271383),
+    O = n(594174),
+    N = n(189357),
+    h = n(718617),
+    R = n(327250),
+    p = n(50767);
 function S(e) {
     let { userId: t, guildId: n, onClose: i, className: S, infoPanelClassName: C, style: b } = e,
-        v = (0, O.m)(n),
-        D = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
-        x = (0, a.e7)([I.ZP], () => I.ZP.getMember(n, t), [n, t]),
-        [L, M] = l.useState(null == D || null == x),
-        U = (0, c.Z)(x),
-        j = l.useRef(null),
-        { analyticsLocations: P } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
-        y = (0, f.ZP)(t, n),
-        w = (0, d.ZP)();
+        D = (0, N.m)(n),
+        v = (0, a.e7)([O.default], () => O.default.getUser(t), [t]),
+        U = (0, a.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
+        [L, M] = l.useState(null == v || null == U),
+        x = (0, c.Z)(U),
+        P = l.useRef(null),
+        { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
+        y = (0, I.ZP)(t, n),
+        w = (0, E.ZP)();
     return (l.useEffect(() => {
-        v || i();
-    }, [v, i]),
+        D || i();
+    }, [D, i]),
     l.useEffect(() => {
-        null == U || null != x || L || i();
-    }, [L, x, i, U]),
+        null == x || null != U || L || i();
+    }, [L, U, i, x]),
     l.useEffect(() => {
-        null != D && null != x && M(!1);
-    }, [D, x]),
+        null != v && null != U && M(!1);
+    }, [v, U]),
     l.useEffect(() => {
-        let e = null == x;
+        let e = null == U;
         return (
-            !L && e && (j.current = window.setTimeout(i, 500)),
+            !L && e && (P.current = window.setTimeout(i, 500)),
             () => {
-                null != j.current && window.clearTimeout(j.current);
+                null != P.current && window.clearTimeout(P.current);
             }
         );
-    }, [L, x, i]),
-    (0, E.$)({ [n]: [t] }),
+    }, [L, U, i]),
+    (0, d.$)({ [n]: [t] }),
     l.useEffect(() => {
         !(async function () {
             let e = [
                 u.Z.requestMembersById(n, [t]),
-                (0, m.nb)(n, [t]),
-                (0, T.Z)(t, void 0, {
+                (0, T.nb)(n, [t]),
+                (0, g.Z)(t, void 0, {
                     guildId: n,
                     dispatchWait: !0
                 })
@@ -64,10 +64,10 @@ function S(e) {
             (await Promise.all(e), M(!1));
         })();
     }, [n, t]),
-    v)
-        ? L || null == D || null == x
+    D)
+        ? L || null == v || null == U
             ? (0, r.jsx)('div', {
-                  className: s()(R.sidebarContainer, R.loadingContainer, S),
+                  className: s()(p.sidebarContainer, p.loadingContainer, S),
                   style: b,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
@@ -75,26 +75,26 @@ function S(e) {
                   })
               })
             : (0, r.jsx)(A.Gt, {
-                  value: P,
+                  value: j,
                   children: (0, r.jsx)('div', {
-                      className: s()(R.sidebarContainer, S),
+                      className: s()(p.sidebarContainer, S),
                       style: b,
-                      children: (0, r.jsx)(g.Z, {
-                          user: D,
+                      children: (0, r.jsx)(m.Z, {
+                          user: v,
                           displayProfile: y,
                           themeType: null,
                           themeOverride: w,
                           forceShowPremium: !0,
-                          className: R.profileThemedContainer,
+                          className: p.profileThemedContainer,
                           children: (0, r.jsxs)('div', {
-                              className: R.innerContainer,
+                              className: p.innerContainer,
                               children: [
-                                  (0, r.jsx)(p.ZP, {
+                                  (0, r.jsx)(R.ZP, {
                                       userId: t,
                                       guildId: n,
                                       onClose: i
                                   }),
-                                  (0, r.jsx)(N.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: i,

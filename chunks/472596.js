@@ -1,10 +1,10 @@
 n.d(t, {
-    RE: () => E,
+    RE: () => d,
     RN: () => A,
-    po: () => f,
+    po: () => I,
     vN: () => _,
-    xb: () => T,
-    zq: () => m
+    xb: () => g,
+    zq: () => T
 });
 var r,
     l = n(73800),
@@ -14,8 +14,8 @@ var r,
     o = n(485386),
     u = n(430824),
     c = n(594174),
-    d = n(91047);
-let E = (e, t) => {
+    E = n(91047);
+let d = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
     (0, a.openUserProfileModal)({
         userId: r,
@@ -32,7 +32,7 @@ function _(e, t, n, r) {
             let s = c.default.getUser(e.userId);
             null != s &&
                 (l.stopPropagation(),
-                (0, d.nm)(l, {
+                (0, E.nm)(l, {
                     user: s,
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : i,
@@ -51,7 +51,7 @@ function A(e, t, n) {
             let i = c.default.getUser(e.userId);
             null != i &&
                 (l.stopPropagation(),
-                (0, d._j)(l, {
+                (0, E._j)(l, {
                     user: i,
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : r,
@@ -62,7 +62,7 @@ function A(e, t, n) {
         [e, n, r, t]
     );
 }
-function m(e) {
+function T(e) {
     return (0, i.e7)(
         [u.Z, o.Z],
         () => {
@@ -74,7 +74,7 @@ function m(e) {
         [e]
     );
 }
-var f = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
-function T(e, t, n) {
+var I = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
+function g(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }

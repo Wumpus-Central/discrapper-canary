@@ -1,7 +1,7 @@
 n.d(t, {
     Cn: () => _,
-    R6: () => h,
-    Ue: () => g
+    R6: () => g,
+    Ue: () => h
 });
 var r = n(255367),
     i = n(73800),
@@ -55,7 +55,7 @@ function _(e) {
                 : m.intl.string(m.t['2VLV0d'])
     });
 }
-function g(e) {
+function h(e) {
     var t;
     let { message: i, channel: l, compact: a } = e,
         { guild: s, joinRequest: c, usernameHook: u, guildNameClick: d } = f(i, l),
@@ -76,7 +76,7 @@ function g(e) {
                 : m.intl.string(m.t.FVF6qa)
     });
 }
-function h(e) {
+function g(e) {
     var t;
     let { message: i, channel: l, compact: a } = e,
         { guild: s, joinRequest: c, usernameHook: u, guildNameClick: d } = f(i, l),

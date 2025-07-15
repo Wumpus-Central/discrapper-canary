@@ -22,17 +22,17 @@ function j(e) {
         { decoration: n, label: i, isSelected: j } = e,
         S = (0, f.N)(),
         E = (0, d.Ng)(),
-        P = (0, u.Vi)(),
-        x = (0, o.e7)([v.Z], () => v.Z.isLocalizedPromoEnabled) && null == S && null == n,
+        x = (0, u.Vi)(),
+        P = (0, o.e7)([v.Z], () => v.Z.isLocalizedPromoEnabled) && null == S && null == n,
         C = (null == S ? void 0 : S.trial_id) === O.a7,
         _ = [];
-    P && _.push(a.z.BOGO_2025_NITRO_TAB_BADGE);
+    x && _.push(a.z.BOGO_2025_NITRO_TAB_BADGE);
     let [w, N] = (0, c.US)(_, void 0, !0);
     return (
         s.useEffect(() => {
             !0 === j && w === a.z.BOGO_2025_NITRO_TAB_BADGE && N(h.L.AUTO_DISMISS);
         }, [N, j, w]),
-        (t = P
+        (t = x
             ? (0, r.jsx)(p.Z, {})
             : null != E
               ? (0, r.jsx)(b.GN, {
@@ -43,7 +43,7 @@ function j(e) {
               : null == S || C
                 ? null != n
                     ? n
-                    : x
+                    : P
                       ? (0, r.jsx)(g.k, { entryPoint: g.U.SettingsMenu })
                       : (0, r.jsx)(m.Z, { isSelected: j })
                 : (0, r.jsx)(b.$H, {
@@ -53,14 +53,14 @@ function j(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: l()(y.premiumLabel, { [y.selected]: (j || x) && !P }),
+                    className: l()(y.premiumLabel, { [y.selected]: (j || P) && !x }),
                     children: [i, t]
                 }),
                 (0, r.jsx)('div', {
                     className: l()(y.background, {
-                        [y.auPromo]: x && !j,
-                        [y.auPromoSelected]: x && j,
-                        [y.selectedBackground]: !x && !P && j
+                        [y.auPromo]: P && !j,
+                        [y.auPromoSelected]: P && j,
+                        [y.selectedBackground]: !P && !x && j
                     })
                 })
             ]

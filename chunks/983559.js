@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(867176),
     x = n(451834),
     v = n(502762),
-    j = n(952124),
-    O = n(544989),
+    O = n(952124),
+    j = n(544989),
     E = n(481932),
     S = n(664794),
-    I = n(4517),
-    P = n(277117),
+    P = n(4517),
+    I = n(277117),
     Z = n(52639),
     N = n(228168),
     T = n(388032),
@@ -109,7 +109,7 @@ function R(e) {
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
-                                (0, r.jsxs)(O.Z, {
+                                (0, r.jsxs)(j.Z, {
                                     children: [
                                         (0, r.jsx)(E.Z, {
                                             user: t,
@@ -117,7 +117,7 @@ function R(e) {
                                             shouldShowTooltip: null === G.interactionType
                                         }),
                                         t.bot
-                                            ? (0, r.jsx)(j.Z, { user: t })
+                                            ? (0, r.jsx)(O.Z, { user: t })
                                             : (0, r.jsx)(S.Z, {
                                                   type: 'banner',
                                                   user: t
@@ -146,7 +146,7 @@ function R(e) {
                                             themeType: N.lY.SIDEBAR,
                                             onOpenProfile: M ? void 0 : z
                                         }),
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(P.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
                                             channelId: R.id,
@@ -155,7 +155,7 @@ function R(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(I.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: D,

@@ -12,8 +12,8 @@ var r = n(255367),
     m = n(594174),
     f = n(838440),
     _ = n(779139),
-    g = n(981631),
-    h = n(388032),
+    h = n(981631),
+    g = n(388032),
     b = n(429495);
 let E = (e) => {
         let { channel: t, message: n } = e,
@@ -45,7 +45,7 @@ let E = (e) => {
                         sticker: u,
                         size: 28
                     }),
-                    h.intl.string(h.t['7Tj6HR'])
+                    g.intl.string(g.t['7Tj6HR'])
                 ]
             })
         });
@@ -57,11 +57,11 @@ let E = (e) => {
                 var e;
                 let r = m.default.getCurrentUser(),
                     l = (0, c.xl)(n),
-                    a = p.Z.can(g.Plq.SEND_MESSAGES, n),
+                    a = p.Z.can(h.Plq.SEND_MESSAGES, n),
                     o = null != i && null != r && (null == (e = u.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     f = d.Z.getGuild(i),
-                    _ = null != f && (f.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                    _ = null != f && (f.systemChannelFlags & h.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
                 return a && !l && !o && !s && _;
             });
         return null != i && a

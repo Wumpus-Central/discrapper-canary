@@ -94,7 +94,7 @@ function d(e) {
         m = (0, o.ZP)(i),
         f = t(m),
         _ = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
-        g = c.intl.format(c.t['47CZc3'], {
+        h = c.intl.format(c.t['47CZc3'], {
             username: m.nick,
             usernameHook: f,
             webhookName: a,
@@ -113,6 +113,6 @@ function d(e) {
         icon: n(570111),
         timestamp: d,
         compact: l,
-        children: g
+        children: h
     });
 }

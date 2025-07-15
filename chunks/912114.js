@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(981631),
     x = n(388032),
     v = n(285580);
-function j(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -120,34 +120,34 @@ function E(e) {
 }
 let S = function (e) {
     let { channelId: t, onClose: n, transitionState: l, setHasPendingChanges: a, closeOrShowDiscardChangesAlert: f, location: S } = e,
-        I = (0, g.Dt)(),
-        P = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
-        Z = null == P ? void 0 : P.name,
-        N = (0, m.cO)(P),
+        P = (0, g.Dt)(),
+        I = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
+        Z = null == I ? void 0 : I.name,
+        N = (0, m.cO)(I),
         [T, A] = i.useState(null != Z ? Z : ''),
         [w, R] = i.useState(void 0),
         M = void 0 !== w,
         { analyticsLocations: D } = (0, h.ZP)(S, p.Z.GROUP_DM_EDIT_MODAL),
         k = {
             channel_id: t,
-            channel_type: null == P ? void 0 : P.type,
+            channel_type: null == I ? void 0 : I.type,
             location: S,
             location_stack: D,
             old_name_set: '' !== Z,
-            old_icon_set: (null == P ? void 0 : P.icon) != null
+            old_icon_set: (null == I ? void 0 : I.icon) != null
         };
     return (i.useEffect(() => {
         a(T !== Z || M);
     }, [T, Z, M, a]),
     (0, d.ZP)(
         () => (
-            _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, k), { action: 'opened' })),
+            _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, k), { action: 'opened' })),
             () => {
-                _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, k), { action: 'dismissed' }));
+                _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, k), { action: 'dismissed' }));
             }
         )
     ),
-    null == P)
+    null == I)
         ? null
         : (0, r.jsx)(h.Gt, {
               value: D,
@@ -159,10 +159,10 @@ let S = function (e) {
                       if (
                           (_.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
-                              O(j({}, k), {
+                              j(O({}, k), {
                                   action: 'saved',
                                   new_name_set: '' !== T,
-                                  new_icon_set: (i ? w : null == P ? void 0 : P.icon) != null,
+                                  new_icon_set: (i ? w : null == I ? void 0 : I.icon) != null,
                                   name_changed: r,
                                   icon_changed: i
                               })
@@ -176,7 +176,7 @@ let S = function (e) {
                   },
                   children: (0, r.jsxs)(c.Y0X, {
                       transitionState: l,
-                      'aria-labelledby': I,
+                      'aria-labelledby': P,
                       className: v.modal,
                       parentComponent: 'GdmEditModal',
                       children: [
@@ -185,7 +185,7 @@ let S = function (e) {
                               className: v.header,
                               children: [
                                   (0, r.jsx)(c.X6q, {
-                                      id: I,
+                                      id: P,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
                                       children: x.intl.string(x.t['5Q9+/P'])
@@ -200,7 +200,7 @@ let S = function (e) {
                               className: v.modalContent,
                               children: [
                                   (0, r.jsx)(E, {
-                                      channel: P,
+                                      channel: I,
                                       previewIcon: w,
                                       onIconChange: (e) => R(e.imageUri),
                                       onIconRemove: () => R(null),

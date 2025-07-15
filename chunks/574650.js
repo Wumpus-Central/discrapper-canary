@@ -54,14 +54,14 @@ let f =
                   m = (0, o.TH)(),
                   A = (null == (e = (0, o.LX)(m.pathname, C.Z5c.CHANNEL(null == f ? void 0 : f.id, g.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
               if (null == f || !(0, I.Dc)(f) || A) return null;
-              let P = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
-                  y = null,
+              let y = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
+                  P = null,
                   b = null,
                   D = null,
                   v = [O.notice, S.notice];
-              switch (P) {
+              switch (y) {
                   case E.wB.SUBMITTED:
-                      ((y = T.intl.string(T.t['5iLvS0'])),
+                      ((P = T.intl.string(T.t['5iLvS0'])),
                           (b = T.intl.string(T.t.mqtdmZ)),
                           (D = () => {
                               (0, c.h7j)((e) => {
@@ -103,7 +103,7 @@ let f =
                           }));
                       break;
                   case E.wB.REJECTED:
-                      ((y = T.intl.string(T.t.lk30cX)),
+                      ((P = T.intl.string(T.t.lk30cX)),
                           (b = T.intl.string(T.t['8RrsHh'])),
                           (D = () => {
                               (0, c.ZDy)(async () => {
@@ -114,7 +114,7 @@ let f =
                           v.push(O.error));
                       break;
                   default:
-                      ((y = T.intl.string(T.t.G5YKXF)),
+                      ((P = T.intl.string(T.t.G5YKXF)),
                           (b = T.intl.string(T.t['r8/DT0'])),
                           (D = () => {
                               (0, h.hk)(f.id);
@@ -126,7 +126,7 @@ let f =
                       (0, i.jsx)(c.Text, {
                           className: O.header,
                           variant: 'text-sm/normal',
-                          children: y
+                          children: P
                       }),
                       (0, i.jsx)(c.zxk, {
                           variant: 'overlay-primary',

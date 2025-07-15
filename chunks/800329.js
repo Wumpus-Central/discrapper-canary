@@ -31,8 +31,8 @@ function p(e) {
         x = _ - (h + f),
         {
             tileStyle: v,
-            tileWidth: j,
-            rows: O,
+            tileWidth: O,
+            rows: j,
             columns: E
         } = i.useMemo(
             () =>
@@ -86,9 +86,9 @@ function p(e) {
             [y, C, x]
         ),
         S = E + 1,
-        I = S * j + (S - 1) * 8 <= b,
-        P = Math.floor(j / c) + 8,
-        Z = Math.max(0, x - P * O) / 2;
+        P = S * O + (S - 1) * 8 <= b,
+        I = Math.floor(O / c) + 8,
+        Z = Math.max(0, x - I * j) / 2;
     return (0, r.jsx)(o.Z, {
         fade: !0,
         className: n,
@@ -111,13 +111,13 @@ function p(e) {
                                       {
                                           style: v,
                                           className: a()(s.tile, {
-                                              [s.padColumn]: I,
-                                              [s.noVerticalMargin]: l >= (O - 1) * E,
+                                              [s.padColumn]: P,
+                                              [s.noVerticalMargin]: l >= (j - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1
                                           }),
                                           children: (0, r.jsx)('div', {
                                               className: s.tileSizer,
-                                              children: e(j)
+                                              children: e(O)
                                           })
                                       },
                                       null != (i = null == p ? void 0 : p(l)) ? i : l
@@ -127,9 +127,9 @@ function p(e) {
                 e
             );
         },
-        rowCount: O,
-        rowCountBySection: [O],
-        rowHeight: P,
+        rowCount: j,
+        rowCountBySection: [j],
+        rowHeight: I,
         onResize: g
     });
 }

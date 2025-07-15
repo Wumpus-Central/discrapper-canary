@@ -12,13 +12,13 @@ var r,
     m = n(594190),
     f = n(592745),
     _ = n(757266),
-    g = n(417363),
-    h = n(358085),
+    h = n(417363),
+    g = n(358085),
     b = n(346329),
     E = n(981631),
     y = n(388032),
-    C = n(637214);
-function v(e, t, n) {
+    x = n(637214);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function x(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                C(e, t, n[t]);
             }));
     }
     return e;
@@ -67,21 +67,21 @@ function O(e, t) {
 }
 class j extends (r = l.PureComponent) {
     get analyticsLocation() {
-        return O(x({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
+        return O(v({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, i.jsxs)(u.P3F, {
                   'aria-label': y.intl.string(y.t.KTPVLC),
-                  className: C.dropdownArrowHitbox,
+                  className: x.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, i.jsx)('div', { className: C.arrowSeparator }),
+                      (0, i.jsx)('div', { className: x.arrowSeparator }),
                       (0, i.jsx)(u.CJ0, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.dropdownArrow
+                          className: x.dropdownArrow
                       })
                   ]
               })
@@ -90,32 +90,32 @@ class j extends (r = l.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: r, size: l, customDisabledColor: a, tooltipPosition: o } = this.props;
         return (0, i.jsxs)('div', {
-            className: C.disabledButtonWrapper,
+            className: x.disabledButtonWrapper,
             children: [
                 (0, i.jsx)(c.zx, {
                     className: n,
                     fullWidth: r,
                     size: l,
-                    color: null != a ? a : C.disabledButtonColor,
+                    color: null != a ? a : x.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
                 (0, i.jsx)(u.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, i.jsx)('div', x({ className: C.disabledButtonOverlay }, e))
+                    children: (e) => (0, i.jsx)('div', v({ className: x.disabledButtonOverlay }, e))
                 })
             ]
         });
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: r, isLaunchable: l, isLaunching: a, isRunning: s, isShiny: d, hideNotLaunchable: p } = this.props;
-        if (!l) return p ? null : this.renderDisabledButton(y.intl.string(y.t['359PbW']), h.isPlatformEmbedded ? y.intl.string(y.t.NASLa2) : y.intl.string(y.t.o1bhkJ));
+        if (!l) return p ? null : this.renderDisabledButton(y.intl.string(y.t['359PbW']), g.isPlatformEmbedded ? y.intl.string(y.t.NASLa2) : y.intl.string(y.t.o1bhkJ));
         if (s) return this.renderDisabledButton(y.intl.string(y.t['3elwAA']));
         let m = d ? u.gtL : c.zx;
         return (0, i.jsxs)(m, {
-            className: o()(C.playButton, e),
-            innerClassName: C.playButtonContents,
+            className: o()(x.playButton, e),
+            innerClassName: x.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != r ? r : c.zx.Colors.GREEN,
@@ -123,7 +123,7 @@ class j extends (r = l.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, i.jsx)('div', {
-                    className: C.buttonText,
+                    className: x.buttonText,
                     children: y.intl.string(y.t['359PbW'])
                 }),
                 this.renderDropdown()
@@ -132,7 +132,7 @@ class j extends (r = l.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            v(this, 'handleDropdownClick', (e) => {
+            C(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: l } = this.props;
                 if ((null == r || r(e), null == t)) throw Error('Unexpected missing libraryApplication');
@@ -143,7 +143,7 @@ class j extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                O(x({}, n), {
+                                O(v({}, n), {
                                     libraryApplication: t,
                                     onPlay: this.handleClick
                                 })
@@ -152,7 +152,7 @@ class j extends (r = l.PureComponent) {
                     { onClose: l }
                 );
             }),
-            v(this, 'handleClick', () => {
+            C(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: r } = this.props;
                 b.playApplication(e, t, {
                     analyticsParams: {
@@ -167,12 +167,12 @@ class j extends (r = l.PureComponent) {
 function I(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, p.O)(),
-        [l, a] = (0, s.Wu)([_.Z, f.Z, g.Z], () => [_.Z.isConnected(t) || f.Z.isLaunchable(t) || (null != n && g.Z.isLaunchable(n.id, n.branchId)), f.Z.launchingGames.has(t)], [t, n]),
+        [l, a] = (0, s.Wu)([_.Z, f.Z, h.Z], () => [_.Z.isConnected(t) || f.Z.isLaunchable(t) || (null != n && h.Z.isLaunchable(n.id, n.branchId)), f.Z.launchingGames.has(t)], [t, n]),
         o = (0, s.e7)([m.ZP], () => new Set(m.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
-        c = (0, s.e7)([g.Z], () => (null != n ? g.Z.getState(n.id, n.branchId) : null), [n]);
+        c = (0, s.e7)([h.Z], () => (null != n ? h.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         j,
-        O(x({}, e), {
+        O(v({}, e), {
             analyticsContext: r,
             isLaunchable: l,
             isLaunching: a,
@@ -181,7 +181,7 @@ function I(e) {
         })
     );
 }
-v(j, 'defaultProps', {
+C(j, 'defaultProps', {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     tooltipPosition: 'top',

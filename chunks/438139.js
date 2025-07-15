@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(846519),
-    o = n(388032);
-function a(e, t, n) {
+    a = n(388032);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             }));
     }
     return e;
@@ -113,16 +113,16 @@ function d(e) {
                     }
                     return i;
                 })(t, ['timestamps']),
-                { hours: l, minutes: a, seconds: u } = this.state,
+                { hours: l, minutes: o, seconds: u } = this.state,
                 d = {
                     hours: this.renderTime(l, !0),
-                    minutes: this.renderTime(a),
+                    minutes: this.renderTime(o),
                     seconds: this.renderTime(u)
                 };
-            return null != n.end ? (0, r.jsx)(e, c(s({}, i), { message: o.intl.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexc, d) })) : null;
+            return null != n.end ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t.M9Fexc, d) })) : null;
         }
         constructor(e) {
-            (super(e), a(this, '_interval', void 0), (this._interval = new l.Xp()), (this.state = s({}, this.getUpdatedTime())));
+            (super(e), o(this, '_interval', void 0), (this._interval = new l.Xp()), (this.state = s({}, this.getUpdatedTime())));
         }
     };
 }

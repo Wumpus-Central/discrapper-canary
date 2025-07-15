@@ -1,48 +1,48 @@
-(n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854));
-var r = n(392711),
-    l = n.n(r),
-    i = n(697741);
-let s = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function a(e) {
+(n.d(t, { nC: () => u }), n(388685), n(704826), n(35282), n(539854));
+var i = n(392711),
+    r = n.n(i),
+    l = n(697741);
+let o = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
+function s(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
-function o(e) {
+function a(e) {
     return e.toLowerCase();
 }
-function u(e) {
-    return s.has(e);
-}
 function c(e) {
-    return 0 === e.length;
+    return o.has(e);
 }
 function d(e) {
-    let t = new Set(l()(e.split(/\W+/)).map(a).reject(c).map(o).reject(u).map(i.$).value());
+    return 0 === e.length;
+}
+function u(e) {
+    let t = new Set(r()(e.split(/\W+/)).map(s).reject(d).map(a).reject(c).map(l.$).value());
     return (e) =>
         (function e(t, n) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n));
             else if ('string' == typeof t.content && 'codeBlock' !== t.type) {
                 let e = [],
-                    r = '';
+                    i = '';
                 (t.content.split(/(\W+)/g).forEach((t) => {
-                    var l;
-                    !c((l = o(a((l = t))))) && !u(l) && n.has((0, i.$)(l))
-                        ? (r.length > 0 &&
+                    var r;
+                    !d((r = a(s((r = t))))) && !c(r) && n.has((0, l.$)(r))
+                        ? (i.length > 0 &&
                               e.push({
                                   type: 'text',
-                                  content: r
+                                  content: i
                               }),
                           e.push({
                               type: 'highlight',
                               content: t
                           }),
-                          (r = ''))
-                        : (r += t);
+                          (i = ''))
+                        : (i += t);
                 }),
                     e.length > 0 &&
-                        (r.length > 0 &&
+                        (i.length > 0 &&
                             e.push({
                                 type: 'text',
-                                content: r
+                                content: i
                             }),
                         'text' === t.type
                             ? (t.content = e)

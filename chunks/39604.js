@@ -1,11 +1,11 @@
 (n.d(t, {
     C1: () => H,
     Gh: () => Y,
-    N0: () => M,
+    N0: () => k,
     T1: () => j,
     Tm: () => W,
     UW: () => J,
-    _Q: () => k,
+    _Q: () => M,
     eL: () => K,
     eU: () => G,
     em: () => x,
@@ -120,7 +120,7 @@ async function x(e) {
                 )
             ));
 }
-function k(e) {
+function M(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     (a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
@@ -128,7 +128,7 @@ function k(e) {
     }),
         n && b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, D(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t })));
 }
-function M(e) {
+function k(e) {
     (a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { remindersEnabled: e }

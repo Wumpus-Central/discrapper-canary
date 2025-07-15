@@ -1,4 +1,4 @@
-(n.d(t, { T: () => O }), n(388685), n(539854));
+(n.d(t, { T: () => j }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,7 +36,7 @@ function v(e) {
         isTyping: t
     };
 }
-function j(e) {
+function O(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: i, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = v(n);
     return (0, r.jsx)(_.Z, {
@@ -47,10 +47,10 @@ function j(e) {
         canBadge: o
     });
 }
-function O(e) {
+function j(e) {
     let t;
     var { channelId: n, className: l, showingClassName: o, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
-        O = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,9 +70,9 @@ function O(e) {
             return i;
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
-        { disabled: S } = O,
-        I = i.useRef(null),
-        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        { disabled: S } = j,
+        P = i.useRef(null),
+        I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: N,
@@ -98,12 +98,12 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            ((0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P));
-        }, [n, P, h, m, _, E]),
+            ((0, p.v)(E, p.d.CHAT, !I), null == h || h(), !I && m && (null == _ || _()), c.Z.updateChatOpen(n, !I));
+        }, [n, I, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, r.jsx)(j, {
+                return (0, r.jsx)(O, {
                     className: t,
                     channelId: n
                 });
@@ -112,7 +112,7 @@ function O(e) {
         ),
         R = i.useCallback(() => {
             var e;
-            null == (e = I.current) || e.focus();
+            null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
         event: C.CkL.FOCUS_CHAT_BUTTON,
@@ -138,7 +138,7 @@ function O(e) {
                 }
             );
         }, [M]));
-    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : I ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
         T > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
         N > 0 && L.push(x.intl.string(x.t.x5zAGR)),
@@ -170,7 +170,7 @@ function O(e) {
                 return e;
             })(
                 {
-                    buttonRef: I,
+                    buttonRef: P,
                     onClick: A,
                     label: t,
                     'aria-label': L.join(', '),
@@ -179,7 +179,7 @@ function O(e) {
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
                     forceTooltipOpen: M
                 },
-                O
+                j
             )
         )
     );

@@ -12,14 +12,14 @@ var r,
     m = n(230711),
     f = n(745510),
     _ = n(549006),
-    g = n(64078),
-    h = n(29270),
+    h = n(64078),
+    g = n(29270),
     b = n(709586),
     E = n(267642),
     y = n(739566),
-    C = n(834129),
-    v = n(981631),
-    x = n(388032),
+    x = n(834129),
+    C = n(981631),
+    v = n(388032),
     O = n(573510);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -150,10 +150,10 @@ let N = ['TOP_LEFT', 'TOP_RIGHT'],
     }),
     Z = 'falling-leaf',
     R = ['#61D5B2'],
-    D = n(303893),
+    k = n(303893),
     L = n(313226),
-    M = [D, L];
-function k() {
+    D = [k, L];
+function M() {
     return n
         .e('77843')
         .then(n.t.bind(n, 931152, 19))
@@ -182,10 +182,10 @@ function U(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: g, confettiCanvas: h } = l.useContext(f.h),
+        { createMultipleConfettiAt: h, confettiCanvas: g } = l.useContext(f.h),
         [b, E] = l.useState(null),
-        y = (0, s.uR)(h, b),
-        C = (function (e, t) {
+        y = (0, s.uR)(g, b),
+        x = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -201,8 +201,8 @@ function U(e) {
                     return 'enter';
             }
         })(d, _),
-        v = N.includes(_),
-        x = v && 'exit' === d,
+        C = N.includes(_),
+        v = C && 'exit' === d,
         j = l.useCallback((e) => {
             m(e);
         }, []),
@@ -230,7 +230,7 @@ function U(e) {
                             y: r.top + i.y
                         };
                     })(u.current, _, a);
-                g(t.x, t.y, {
+                h(t.x, t.y, {
                     velocity: {
                         type: 'static-random',
                         minValue: {
@@ -244,9 +244,9 @@ function U(e) {
                     }
                 });
             }
-        }, [g, _, d, a]),
+        }, [h, _, d, a]),
         l.useEffect(() => {
-            if (v && 'leaf_fall' === d) {
+            if (C && 'leaf_fall' === d) {
                 let e = w[_].leafRotationDirection;
                 y.createConfetti(
                     {
@@ -295,15 +295,15 @@ function U(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === _ ? D : L }
+                    { sprite: 'TOP_LEFT' === _ ? k : L }
                 );
             }
-        }, [v, y, _, d]),
+        }, [C, y, _, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
                     ref: E,
-                    sprites: M,
+                    sprites: D,
                     colors: R,
                     spriteWidth: 45,
                     spriteHeight: 45
@@ -318,12 +318,12 @@ function U(e) {
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: A,
-                        className: o()(O.easterEggAnimation, { [O.easterEggAnimationHideLeaf]: x }),
-                        nextScene: C,
+                        className: o()(O.easterEggAnimation, { [O.easterEggAnimationHideLeaf]: v }),
+                        nextScene: x,
                         sceneSegments: S,
                         onScenePlay: j,
                         onSceneComplete: I,
-                        importData: k,
+                        importData: M,
                         pauseWhileUnfocused: !1
                     })
                 })
@@ -336,16 +336,16 @@ function F(e) {
         { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
-                case v.uaV.GUILD_BOOST_TIER_1:
-                    return v.Eu4.TIER_1;
-                case v.uaV.GUILD_BOOST_TIER_2:
-                    return v.Eu4.TIER_2;
-                case v.uaV.GUILD_BOOST_TIER_3:
-                    return v.Eu4.TIER_3;
+                case C.uaV.GUILD_BOOST_TIER_1:
+                    return C.Eu4.TIER_1;
+                case C.uaV.GUILD_BOOST_TIER_2:
+                    return C.Eu4.TIER_2;
+                case C.uaV.GUILD_BOOST_TIER_3:
+                    return C.Eu4.TIER_3;
             }
             return null;
         })(n),
-        u = (0, h.Z)(n),
+        u = (0, g.Z)(n),
         { createMultipleConfettiAt: d, addClickListener: j } = l.useContext(f.h),
         [I, S] = l.useState(!1),
         T = l.useRef(null),
@@ -356,24 +356,24 @@ function F(e) {
     t =
         null == c || null == a
             ? u > 1
-                ? x.intl.format(x.t.yfC9dn, {
+                ? v.intl.format(v.t.yfC9dn, {
                       username: A,
                       usernameHook: w,
                       numSubscriptions: u
                   })
-                : x.intl.format(x.t['57St//'], {
+                : v.intl.format(v.t['57St//'], {
                       username: A,
                       usernameHook: w
                   })
             : u > 1
-              ? x.intl.format(x.t.PO9uJC, {
+              ? v.intl.format(v.t.PO9uJC, {
                     username: A,
                     usernameHook: w,
                     numSubscriptions: u,
                     guildName: a.name,
                     newTierName: (0, E.nW)(c)
                 })
-              : x.intl.format(x.t.cUfTTE, {
+              : v.intl.format(v.t.cUfTTE, {
                     username: A,
                     usernameHook: w,
                     guildName: a.name,
@@ -388,20 +388,20 @@ function F(e) {
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else S(!0);
         }, [d, N, I]),
-        D = l.useCallback(() => {
+        k = l.useCallback(() => {
             S(!1);
         }, []),
         L = l.useCallback(() => {
-            ((0, g.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), S(!1));
+            ((0, h.AI)({ settingsVisible: !0 }), m.Z.open(C.oAB.POGGERMODE), S(!1));
         }, []),
-        M = l.useCallback(
+        D = l.useCallback(
             (e, t) => {
                 (null == t ? void 0 : t.id.startsWith(Z)) && L();
             },
             [L]
         );
-    l.useEffect(() => j(M));
-    let k = (0, i.jsx)(p.P3F, {
+    l.useEffect(() => j(D));
+    let M = (0, i.jsx)(p.P3F, {
         className: O.iconWrapper,
         innerRef: T,
         onClick: s,
@@ -410,8 +410,8 @@ function F(e) {
             onMouseEnter: R
         })
     });
-    return (0, i.jsxs)(C.Z, {
-        iconNode: k,
+    return (0, i.jsxs)(x.Z, {
+        iconNode: M,
         timestamp: n.timestamp,
         compact: r,
         children: [
@@ -425,7 +425,7 @@ function F(e) {
                       children: (0, i.jsx)('div', {
                           className: O.cannonWrapper,
                           children: (0, i.jsx)(U, {
-                              onAnimationComplete: D,
+                              onAnimationComplete: k,
                               onClick: L
                           })
                       })

@@ -22,59 +22,57 @@ var r = n(255367),
     j = n(46140);
 let E = 'orb-announcement-modal-key';
 function x() {
-    let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
-        { onboardingModalOpenedPrior: t } = (0, o.cj)([O.Z], () => ({ onboardingModalOpenedPrior: O.Z.onboardingModalOpenedPrior })),
-        { enabled: x } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
-        [S, I] = (0, h.US)(x ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
-        P = (0, c.s9z)(c.JQI);
+    let { enabled: e } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
+        t = (0, o.e7)([O.Z], () => O.Z.onboardingModalOpenedPrior),
+        { user: x } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
+        S = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
+        I = (0, c.s9z)(c.JQI),
+        P = t || (0, m.EO)(x) || S || I,
+        [N, w] = (0, h.US)(e && !P ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent);
     i.useEffect(() => {
-        if (S !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL) return;
-        let i = g.default.getCurrentUser();
-        !(!x || t || (0, m.EO)(i)) &&
-            (e ||
-                P ||
-                (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
-                (0, a.ZD)(
-                    async () => {
-                        let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
-                        return function (t) {
-                            let { onClose: n, transitionState: i } = t,
-                                o = async () => {
-                                    (await n(), I(C.L.USER_DISMISS));
-                                };
-                            return (0, r.jsx)(e, {
-                                transitionState: i,
-                                onClose: o,
-                                ctaOnClick: () => {
-                                    (I(C.L.TAKE_ACTION),
-                                        (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                            dismissAction: C.L.INDIRECT_ACTION,
-                                            groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
-                                        }),
-                                        (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                            dismissAction: C.L.INDIRECT_ACTION,
-                                            groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
-                                        }),
-                                        (0, b.Y)({
-                                            pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
-                                            sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                            ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST
-                                        }),
-                                        (0, p.navigateToQuestHome)({
-                                            questId: j.V6,
-                                            fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
-                                        }),
-                                        n());
-                                }
-                            });
-                        };
-                    },
-                    {
-                        modalKey: E,
-                        onCloseRequest: () => {
-                            (I(C.L.USER_DISMISS), (0, c.Mr3)(E));
-                        }
+        N === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
+            (0, a.ZD)(
+                async () => {
+                    let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
+                    return function (t) {
+                        let { onClose: n, transitionState: i } = t,
+                            o = async () => {
+                                (await n(), w(C.L.USER_DISMISS));
+                            };
+                        return (0, r.jsx)(e, {
+                            transitionState: i,
+                            onClose: o,
+                            ctaOnClick: () => {
+                                (w(C.L.TAKE_ACTION),
+                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
+                                        dismissAction: C.L.INDIRECT_ACTION,
+                                        groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
+                                    }),
+                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                                        dismissAction: C.L.INDIRECT_ACTION,
+                                        groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
+                                    }),
+                                    (0, b.Y)({
+                                        pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
+                                        sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
+                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST
+                                    }),
+                                    (0, p.navigateToQuestHome)({
+                                        questId: j.V6,
+                                        fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
+                                    }),
+                                    n());
+                            }
+                        });
+                    };
+                },
+                {
+                    modalKey: E,
+                    onCloseRequest: () => {
+                        (w(C.L.USER_DISMISS), (0, c.Mr3)(E));
                     }
-                )));
-    }, [S, x, t, I, e, P]);
+                }
+            ));
+    }, [N, e, t, w, S, I]);
 }

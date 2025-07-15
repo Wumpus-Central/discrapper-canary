@@ -3,22 +3,22 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(922482),
-    o = n(979651),
-    a = n(915863),
+    a = n(979651),
+    o = n(915863),
     s = n(388032),
     c = n(558803);
 let u = (e) => {
-    let { guildId: t, channelId: n, color: u, look: d, onAction: p } = e,
-        f = (0, i.e7)([o.Z], () => o.Z.isInChannel(n), [n]);
+    let { guildId: t, channelId: n, color: u, look: d, onAction: f } = e,
+        p = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
     return (0, r.jsx)(
-        a.Z,
+        o.Z,
         {
             className: c.button,
             color: u,
             look: d,
-            disabled: f,
+            disabled: p,
             onClick: () => {
-                (null == p || p(), l.AC(t, n));
+                (null == f || f(), l.AC(t, n));
             },
             fullWidth: !0,
             children: s.intl.string(s.t.ZYO5OD)

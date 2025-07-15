@@ -25,7 +25,7 @@ function l(e) {
     }
     return e;
 }
-function o(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -43,7 +43,7 @@ function o(e, t) {
         e
     );
 }
-let i = {
+let o = {
         skus: [],
         currentPage: 0,
         totalCount: 0,
@@ -52,19 +52,19 @@ let i = {
         isFetchingResults: !1
     },
     a = (0, n.U)((e) =>
-        o(l({}, i), {
+        i(l({}, o), {
             onSetResponse: (t) => {
                 let r = Math.floor(t.pageOffset / t.pageLimit) + 1;
-                e(o(l({}, t), { currentPage: r }));
+                e(i(l({}, t), { currentPage: r }));
             },
             setSearchError: (t) => {
-                e(o(l({}, i), { searchError: t }));
+                e(i(l({}, o), { searchError: t }));
             },
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });
             },
             clear: () => {
-                e(l({}, i));
+                e(l({}, o));
             }
         })
     );

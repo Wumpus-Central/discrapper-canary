@@ -1,36 +1,36 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(603263),
-    l = n(977885),
-    s = n(416638),
+    i = n(977885),
+    l = n(416638),
     a = n(652399),
-    i = n(981631),
-    o = n(862825);
-let c = {
+    o = n(981631),
+    c = n(862825);
+let s = {
     fetchCrossDMMessages: function (e) {
-        let { searchContext: t, selectedPageIndex: n, queryString: c, searchMode: u } = e,
-            d = (0, s.WJ)(t);
+        let { searchContext: t, selectedPageIndex: n, queryString: s, searchMode: u } = e,
+            d = (0, l.WJ)(t);
         (r.Gn(d),
             r.QY(d, !1),
-            r.h7(d, c),
-            l.Z.clearSearchState(d),
-            l.Z.fetchMessages({
+            r.h7(d, s),
+            i.Z.clearSearchState(d),
+            i.Z.fetchMessages({
                 searchContext: t,
-                searchTabs: [o.sR.MESSAGES],
-                searchQueryString: c,
+                searchTabs: [c.sR.MESSAGES],
+                searchQueryString: s,
                 searchMode: u,
                 getId: () => d,
-                getLimit: () => i.vpv,
+                getLimit: () => o.vpv,
                 onFetchStart: (e) => {
-                    let { searchQueryString: n, searchQuery: l } = e;
-                    (r.Vs(d, n, l),
+                    let { searchQueryString: i, searchQuery: l } = e;
+                    (r.Vs(d, i, l, n * o.vpv),
                         (0, a.tI)({
                             searchType: t.type,
                             searchId: d,
                             query: l,
-                            queryString: n
+                            queryString: i
                         }));
                 },
-                pagination: { offset: n * i.vpv },
+                pagination: { offset: n * o.vpv },
                 trackExactTotalHits: !0
             }));
     }

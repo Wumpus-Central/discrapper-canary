@@ -20,7 +20,7 @@ function h(e) {
         j = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         S = g.ZP.useName(n, null, j),
         E = (0, c.Kz)(i),
-        P = s.useMemo(() => {
+        x = s.useMemo(() => {
             var e, t;
             return (0, u.e5)(
                 ((e = (function (e) {
@@ -79,7 +79,7 @@ function h(e) {
                 e)
             );
         }, [j, O]),
-        x = {
+        P = {
             nick: S,
             colorString: null != (t = i.colorString) ? t : void 0
         };
@@ -90,9 +90,9 @@ function h(e) {
                 className: l()(e, m.container, y),
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: x,
+                    author: P,
                     roleIcon: E,
-                    message: P,
+                    message: x,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

@@ -1,11 +1,11 @@
 n.d(t, { Z: () => s });
 var r = n(255367),
     l = n(73800),
-    i = n(461745),
+    i = n(794433),
     a = n(932197);
 let s = l.forwardRef(function (e, t) {
     let { query: n, onQueryChange: l, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: b, isReady: y, 'aria-labelledby': f, 'aria-controls': p } = e;
-    return (0, r.jsx)(i.ZP, {
+    return (0, r.jsx)(i.Z, {
         autoFocus: !0,
         className: a.searchBar,
         maxHeight: 100,
@@ -18,7 +18,7 @@ let s = l.forwardRef(function (e, t) {
         placeholder: 0 === m.length ? h : '',
         query: n,
         ref: t,
-        size: i.ZP.Sizes.MEDIUM,
+        size: i.Z.Sizes.MEDIUM,
         tags: m,
         sections: x,
         focusAfterReady: b,

@@ -13,7 +13,7 @@
     M5: () => A.M5,
     MY: () => eJ,
     N1: () => eA,
-    PK: () => eM,
+    PK: () => ek,
     PV: () => ev,
     Px: () => el,
     Qo: () => eQ,
@@ -41,7 +41,7 @@
     fr: () => ez,
     gB: () => e3,
     gq: () => es,
-    gy: () => ek,
+    gy: () => eM,
     if: () => eq,
     jP: () => ei,
     jp: () => eN,
@@ -125,7 +125,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -137,12 +137,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -228,7 +228,7 @@ function Y(e) {
                 planId: e,
                 currency: null != a ? a : 'unknown'
             },
-            extra: M(x({}, r), { isGift: n })
+            extra: k(x({}, r), { isGift: n })
         }),
         o
     );
@@ -505,8 +505,8 @@ function ec(e) {
         w = null == (a = null != (i = null == y ? void 0 : y.taxInclusive) ? i : null == (r = _.latestInvoice) ? void 0 : r.taxInclusive) || a,
         L = P.cb + (g ? eE(_.additionalPlans) : 0),
         x = A ? (w ? D.intl.format(D.t['cd+hqK'], { price: m }) : D.intl.format(D.t.NUkcpK, { price: m })) : D.intl.string(D.t.zYx3Y2),
-        k = A ? (w ? D.intl.format(D.t.VsKcFB, { price: m }) : D.intl.format(D.t.hJ5xER, { price: m })) : D.intl.string(D.t['8rSipK']),
-        M = A
+        M = A ? (w ? D.intl.format(D.t.VsKcFB, { price: m }) : D.intl.format(D.t.hJ5xER, { price: m })) : D.intl.string(D.t['8rSipK']),
+        k = A
             ? w
                 ? D.intl.format(D.t['jRy6/P'], {
                       price: m,
@@ -566,7 +566,7 @@ function ec(e) {
                           })
                         : D.intl.format(D.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case C.O0b.PAUSED:
-                    if (v) return k;
+                    if (v) return M;
                     return D.intl.format(D.t['6RTdZG'], { resumeDate: _.pauseEndsAt });
                 case C.O0b.PAST_DUE:
                     return D.intl.format(D.t['d+0vws'], {
@@ -576,7 +576,7 @@ function ec(e) {
                         }
                     });
                 default:
-                    return k;
+                    return M;
             }
         case P.Xh.PREMIUM_MONTH_TIER_2:
         case P.Xh.PREMIUM_YEAR_TIER_2:
@@ -618,7 +618,7 @@ function ec(e) {
                           })
                         : D.intl.format(D.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case C.O0b.PAUSED:
-                    if (v) return M;
+                    if (v) return k;
                     return D.intl.format(D.t['6RTdZG'], { resumeDate: _.pauseEndsAt });
                 case C.O0b.BILLING_RETRY:
                     return D.intl.format(D.t['IlJ/HR'], { endDate: o()(_.currentPeriodStart).add(P.A5, 'days').toDate() });
@@ -647,7 +647,7 @@ function ec(e) {
                                     regularPrice: T,
                                     numMonths: null != (f = null == b ? void 0 : b.duration) ? f : P.rt
                                 })
-                        : M;
+                        : k;
             }
         default:
             throw Error('Invalid planId '.concat(p));
@@ -1035,14 +1035,14 @@ function ex(e) {
                     });
     }
 }
-function ek(e, t, n) {
+function eM(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = null != t ? Y(e.id, !1, r, t) : H(e.id, !1, r),
         a = (0, N.T4)(i.amount, i.currency);
     return (e.currency !== w.pK.USD && !0 === n && (a = a.concat('*')), a);
 }
-function eM(e, t, n) {
-    let r = ek(e, t, n);
+function ek(e, t, n) {
+    let r = eM(e, t, n);
     return (0, N.og)(r, e.interval, e.intervalCount);
 }
 function ej(e, t) {
@@ -1306,7 +1306,7 @@ function e0(e, t, n, r) {
         l = (null != (o = null == (a = e.renewalMutations) ? void 0 : a.items) ? o : e.items).map((e) =>
             r.has(e.planId)
                 ? ((s = !0),
-                  M(x({}, e), {
+                  k(x({}, e), {
                       quantity: n,
                       planId: t
                   }))
@@ -1339,7 +1339,7 @@ function e3(e) {
                 let r = E.Z.get(e.planId);
                 i()(null != r, 'Missing plan');
                 let a = E.Z.getForSkuAndInterval(r.skuId, t.interval, t.intervalCount);
-                return (i()(null != a, 'Missing planForInterval'), M(x({}, e), { planId: a.id }));
+                return (i()(null != a, 'Missing planForInterval'), k(x({}, e), { planId: a.id }));
             })));
     }
     return e;
@@ -1487,12 +1487,12 @@ function tL(e) {
 function tx(e) {
     return e === P.Rt ? P.FL : P.ff;
 }
-function tk(e) {
+function tM(e) {
     if (e === P.rV.YEAR) return D.intl.string(D.t.tfqrho);
     if (e === P.rV.MONTH) return D.intl.string(D.t.FPybU1);
     throw Error('Invalid interval type: '.concat(e));
 }
-function tM(e) {
+function tk(e) {
     return null != e && !e.isProvisional && !e.bot;
 }
 function tj(e) {
@@ -1517,7 +1517,7 @@ let tG = Object.freeze({
     isPremiumAtLeast: A.yd,
     isPremium: A.I5,
     isPremiumExactly: A.M5,
-    isPremiumEligible: tM,
+    isPremiumEligible: tk,
     getPrice: Y,
     getDefaultPrice: H,
     getInterval: J,
@@ -1529,7 +1529,7 @@ let tG = Object.freeze({
     getPremiumPlanOptions: e_,
     getUpgradeEligibilities: em,
     getReverseTrialWeeks: tL,
-    formatInterval: tk,
+    formatInterval: tM,
     getPlanDescription: ec,
     isPremiumSku: ef,
     getClosestUpgrade: eg,

@@ -1,22 +1,22 @@
 (r.d(t, { Z: () => P }), r(388685));
 var n = r(255367),
     l = r(73800),
-    o = r(120356),
-    i = r.n(o),
+    i = r(120356),
+    o = r.n(i),
     a = r(442837),
     s = r(481060),
     c = r(782568),
     u = r(607070),
     d = r(594174),
     p = r(451478),
-    g = r(626135),
-    f = r(63063),
+    f = r(626135),
+    g = r(63063),
     h = r(74538),
     b = r(381585),
     m = r(597688),
     _ = r(315066),
-    C = r(243126),
-    O = r(38900),
+    O = r(243126),
+    C = r(38900),
     v = r(709999),
     E = r(328626),
     S = r(619899),
@@ -26,11 +26,11 @@ var n = r(255367),
     T = r(806734);
 let P = (e) => {
     var t;
-    let { isLoading: r, sortedSkuIds: o, handleTransition: P, numVisibleItems: L, tab: k } = e,
-        I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        B = h.ZP.canUseCollectibles(I),
-        N = (0, _.s)('useShopHomeSorting') && k === y.AW.HOME,
-        { sortType: A, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(o, B),
+    let { isLoading: r, sortedSkuIds: i, handleTransition: P, numVisibleItems: L, tab: I } = e,
+        k = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        B = h.ZP.canUseCollectibles(k),
+        N = (0, _.s)('useShopHomeSorting') && I === y.AW.HOME,
+        { sortType: A, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, O.N)(i, B),
         M = (0, S.St)(R),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -45,17 +45,17 @@ let P = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => w(e)
                 }),
-                    g.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     }));
             },
             [z, w, q]
         );
-    return null == I
+    return null == k
         ? null
         : (0, n.jsxs)('div', {
-              className: i()(T.popularPicksSection, T.centeredSection),
+              className: o()(T.popularPicksSection, T.centeredSection),
               children: [
                   (0, n.jsxs)('div', {
                       className: T.blockHeader,
@@ -65,7 +65,7 @@ let P = (e) => {
                               children: [
                                   (0, n.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: k === y.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: I === y.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
                                   F &&
                                       (0, n.jsx)(s.ua7, {
@@ -103,7 +103,7 @@ let P = (e) => {
                                                   })({}, e)),
                                                   (r = r =
                                                       {
-                                                          onClick: () => (0, c.Z)(f.Z.getArticleURL(x.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          onClick: () => (0, c.Z)(g.Z.getArticleURL(x.BhN.DATA_USED_FOR_RECOMMENDED)),
                                                           className: T.informationIcon,
                                                           children: (0, n.jsx)(s.d3s, { size: 'sm' })
                                                       }),
@@ -144,7 +144,7 @@ let P = (e) => {
                                               })
                                           ]
                                       }),
-                                  k === y.AW.HOME &&
+                                  I === y.AW.HOME &&
                                       (N
                                           ? (0, n.jsx)(s.zxk, {
                                                 variant: 'secondary',
@@ -156,7 +156,7 @@ let P = (e) => {
                                                         onOutroComplete: D,
                                                         returnRef: Y
                                                     }),
-                                                        g.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q }));
+                                                        f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q }));
                                                 },
                                                 disabled: U !== E.g.MOUNTED && U !== E.g.FINISHED
                                             })
@@ -172,7 +172,7 @@ let P = (e) => {
                   (0, n.jsx)('div', {
                       className: T.feed,
                       children: r
-                          ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(O.K, {}, t + 1)) })
+                          ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(C.K, {}, t + 1)) })
                           : M.slice(0, L).map((e, t) => {
                                 let r,
                                     l = m.Z.getCategoryForProduct(e.skuId);
@@ -191,8 +191,8 @@ let P = (e) => {
                                         children: (0, n.jsx)(v.Z, {
                                             product: e,
                                             category: l,
-                                            user: I,
-                                            tab: k,
+                                            user: k,
+                                            tab: I,
                                             className: r
                                         })
                                     },

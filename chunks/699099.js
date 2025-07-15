@@ -1,4 +1,4 @@
-(t.d(s, { default: () => P }), t(388685));
+(t.d(s, { default: () => T }), t(388685));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -7,7 +7,7 @@ var l = t(255367),
     c = t(755721),
     i = t(481060),
     o = t(24124),
-    d = t(461745),
+    d = t(794433),
     h = t(622822),
     m = t(212819),
     _ = t(43267),
@@ -188,7 +188,7 @@ class I extends r.Component {
             }));
     }
 }
-function P(e) {
+function T(e) {
     let { transitionState: s, onClose: t } = e,
         {
             results: a,
@@ -261,16 +261,16 @@ function P(e) {
             },
             [a, g]
         ),
-        P = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 p(e);
             },
             [p]
         ),
-        T = () => {
-            Z('');
+        Z = () => {
+            P('');
         },
-        Z = (e) => {
+        P = (e) => {
             (_(e), (0, o.rh)(e));
         };
     return null == c
@@ -297,15 +297,15 @@ function P(e) {
                                       className: b.marginBottom8,
                                       children: L.intl.format(L.t['2tN7io'], { name: c.name })
                                   }),
-                                  (0, l.jsx)(d.ZP, {
-                                      size: d.ZP.Sizes.MEDIUM,
+                                  (0, l.jsx)(d.Z, {
+                                      size: d.Z.Sizes.MEDIUM,
                                       query: h,
                                       selectedSection: 0,
                                       selectedRow: x,
                                       sections: [a.length],
                                       className: b.marginTop4,
                                       onSelect: (e, s) => {
-                                          null == s ? T() : A(s);
+                                          null == s ? Z() : A(s);
                                       },
                                       onSelectionChange: (e, s) => {
                                           var t;
@@ -316,10 +316,10 @@ function P(e) {
                                                       end: 48 * s + 48
                                                   }));
                                       },
-                                      onQueryChange: Z,
+                                      onQueryChange: P,
                                       placeholder: L.intl.string(L.t.IJExws),
                                       autoFocus: !0,
-                                      onClear: T
+                                      onClear: Z
                                   })
                               ]
                           })
@@ -346,7 +346,7 @@ function P(e) {
                                         result: r,
                                         sending: null != r.data.record.id && g.includes(r.data.record.id),
                                         selected: t === x,
-                                        onMouseEnter: P,
+                                        onMouseEnter: T,
                                         onInvite: A
                                     },
                                     r.data.record.id

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -13,15 +13,15 @@ var i = n(120356),
     m = n(674563),
     f = n(388032),
     _ = n(126759);
-function g(e) {
+function h(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        g = (0, s.ZP)(t),
-        h = i(g),
+        h = (0, s.ZP)(t),
+        g = i(h),
         {
             avatarSrc: b,
             eventHandlers: { onMouseEnter: E, onMouseLeave: y }
         } = (0, u.m)(!0),
-        C =
+        x =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
                       hour: 'numeric',
@@ -70,13 +70,13 @@ function g(e) {
                         children:
                             t.type === p.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? f.intl.format(f.t['+m8eDw'], {
-                                      username: g.nick,
-                                      usernameHook: h,
-                                      time: C
+                                      username: h.nick,
+                                      usernameHook: g,
+                                      time: x
                                   })
                                 : f.intl.format(f.t.BHeke3, {
-                                      username: g.nick,
-                                      usernameHook: h
+                                      username: h.nick,
+                                      usernameHook: g
                                   })
                     })
                 ]

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(997841), n(388685));
+(n.d(t, { Z: () => j }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -35,11 +35,11 @@ function v(e) {
         g = (0, l.e7)([p.Z], () => p.Z.getGuild(f), [f]),
         b = t.type === y.d4z.GUILD_ANNOUNCEMENT,
         v = null != g && g.features.has(y.oNc.NEWS),
-        O = b && v,
+        j = b && v,
         {
             editingMessage: E,
             editingTextValue: S,
-            editingRichValue: I
+            editingRichValue: P
         } = (0, l.cj)(
             [d.Z],
             () => ({
@@ -49,21 +49,21 @@ function v(e) {
             }),
             [s]
         ),
-        P = (0, l.e7)([u.default], () => u.default.getId()),
+        I = (0, l.e7)([u.default], () => u.default.getId()),
         Z = i.useCallback(
             (e, n, r) => {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return (O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve());
+                return (j && (s === I || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve());
             },
-            [E, O, P, t]
+            [E, j, I, t]
         ),
         N = i.useCallback(
             (e) => {
                 var t, n;
                 return (0, i.createElement)(
-                    j,
+                    O,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -111,13 +111,13 @@ function v(e) {
             },
             [c]
         );
-    return null != S && null != I
+    return null != S && null != P
         ? (0, r.jsx)(_.Z, {
               ref: void 0,
               channel: t,
               message: n,
               textValue: S,
-              richValue: I,
+              richValue: P,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
               onConfirmDelete: o.Z.confirmDelete,
@@ -127,7 +127,7 @@ function v(e) {
           })
         : null;
 }
-function j(e) {
+function O(e) {
     let { textValue: t, richValue: n, message: l, channel: a, onChange: o, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
         [h, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
@@ -166,7 +166,7 @@ function j(e) {
         )
     );
 }
-function O(e, t, n) {
+function j(e, t, n) {
     let { message: i, channel: l, compact: a } = e;
     return n
         ? (0, r.jsx)(v, {

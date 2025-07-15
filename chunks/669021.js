@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-class g extends i.Component {
+class h extends i.Component {
     renderMedia() {
         let { src: e, className: t, title: n } = this.props,
             { imageLoading: i } = this.state;
@@ -94,7 +94,7 @@ class g extends i.Component {
             }));
     }
 }
-class h extends i.Component {
+class g extends i.Component {
     componentWillUnmount() {
         this.videoTimeout.stop();
     }
@@ -120,7 +120,7 @@ class h extends i.Component {
         let { playing: e, slideImages: t, image: n, title: i, splashClassName: l } = this.props;
         return null == t
             ? (0, r.jsx)(
-                  g,
+                  h,
                   {
                       className: a()(f.splash, l),
                       src: n,
@@ -169,7 +169,7 @@ class h extends i.Component {
             }),
             _(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
-                    { video: t, image: n, title: l, playing: o, muted: c, splashClassName: p, splashPlaceholderClassName: _, renderMediaOverlay: h } = this.props,
+                    { video: t, image: n, title: l, playing: o, muted: c, splashClassName: p, splashPlaceholderClassName: _, renderMediaOverlay: g } = this.props,
                     b = c ? d.OyP : d.gj8;
                 return (0, r.jsxs)(i.Fragment, {
                     children: [
@@ -193,7 +193,7 @@ class h extends i.Component {
                                 o && e
                                     ? null
                                     : (0, r.jsx)(
-                                          g,
+                                          h,
                                           {
                                               className: a()(f.splashPlaceholder, _),
                                               src: n,
@@ -205,7 +205,7 @@ class h extends i.Component {
                         (0, r.jsx)(d.P3F, {
                             className: a()(f.muteContainer, {
                                 [f.muteContainerPlaying]: o && e,
-                                [f.muteContainerMediaOverlay]: null != h
+                                [f.muteContainerMediaOverlay]: null != g
                             }),
                             onClick: this.handleToggleMute,
                             children: o && e ? (0, r.jsx)(b, { className: f.mute }) : null
@@ -222,7 +222,7 @@ class h extends i.Component {
                     { currentIndex: o } = this.state;
                 return i
                     ? (0, r.jsx)(
-                          g,
+                          h,
                           {
                               className: a()(f.splash, l),
                               src: e[o],
@@ -231,7 +231,7 @@ class h extends i.Component {
                           o
                       )
                     : (0, r.jsx)(
-                          g,
+                          h,
                           {
                               className: a()(f.splash, l),
                               src: t,
@@ -242,4 +242,4 @@ class h extends i.Component {
             }));
     }
 }
-let b = h;
+let b = g;

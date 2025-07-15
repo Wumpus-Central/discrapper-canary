@@ -14,13 +14,13 @@ var i = n(481060),
     f = n(861477);
 function _(e) {
     let { compact: t, message: n, channel: _ } = e,
-        g = (0, c.ZP)(n),
-        h = (0, u.l)({
+        h = (0, c.ZP)(n),
+        g = (0, u.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: _.guild_id,
             messageId: n.id
-        })(g),
+        })(h),
         b = (0, a.j)('HDStreamingUpgradedMessage'),
         E = () => (0, o.k)(_, 'HDStreamingUpgradedMessage'),
         y = b ? E : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
@@ -33,8 +33,8 @@ function _(e) {
                     timestamp: n.timestamp,
                     compact: t,
                     children: m.intl.format(m.t['u0qJ4+'], {
-                        actorName: g.nick,
-                        actorHook: h
+                        actorName: h.nick,
+                        actorHook: g
                     })
                 })
             }),

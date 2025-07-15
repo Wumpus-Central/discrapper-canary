@@ -3,7 +3,7 @@
     PI: () => A,
     WD: () => L,
     aM: () => x,
-    ui: () => k
+    ui: () => M
 }),
     n(388685),
     n(642613),
@@ -262,7 +262,7 @@ function x() {
     var e;
     return null == (e = L()) ? void 0 : e.getId();
 }
-function k(e) {
+function M(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
         d = w(e.questOrQuests),
         f = i.useRef(null),

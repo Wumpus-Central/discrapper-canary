@@ -1,143 +1,123 @@
-i.d(e, { default: () => C });
-var s = i(255367),
-    n = i(73800),
-    o = i(704215),
-    a = i(481060),
-    r = i(607070),
-    l = i(266454),
-    d = i(749681),
-    c = i(661824),
-    b = i(626135),
-    m = i(258971),
-    x = i(981631),
-    u = i(921944),
-    h = i(49898),
-    _ = i(388032),
-    I = i(676305);
-function C(t) {
-    let { guildId: e, transitionState: C, onClose: j, analyticsType: p = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+n.d(i, { default: () => p });
+var s = n(255367),
+    e = n(73800),
+    o = n(704215),
+    a = n(667202),
+    r = n(481060),
+    l = n(607070),
+    c = n(266454),
+    b = n(749681),
+    d = n(661824),
+    m = n(626135),
+    x = n(258971),
+    u = n(981631),
+    I = n(921944),
+    _ = n(49898),
+    C = n(388032),
+    h = n(676305);
+function p(t) {
+    let { guildId: i, transitionState: p, onClose: N, analyticsType: j = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
-        n.useEffect(() => {
-            b.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: o.z[p],
-                guild_id: e
+        e.useEffect(() => {
+            m.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                type: o.z[j],
+                guild_id: i
             });
-        }, [e, p]),
-        (0, s.jsxs)(a.Y0X, {
-            transitionState: C,
-            size: a.CgR.DYNAMIC,
-            parentComponent: 'AppDirectoryUpsellModal',
-            children: [
-                (0, s.jsxs)(a.hzk, {
-                    className: I.modalContent,
-                    children: [
-                        (0, s.jsx)(a.Fmz, {
-                            autoplay: !0,
-                            shouldAnimate: !r.Z.useReducedMotion,
-                            importData: () => i.e('94792').then(i.t.bind(i, 972951, 19)),
-                            className: I.animation
-                        }),
-                        (0, s.jsx)(a.X6q, {
-                            variant: 'heading-xl/semibold',
-                            children: _.intl.string(_.t['2tv5YG'])
-                        }),
-                        (0, s.jsx)(a.Text, {
-                            variant: 'text-md/medium',
-                            className: I.subheader,
-                            color: 'text-muted',
-                            children: _.intl.string(_.t.pgwlDw)
-                        }),
-                        (0, s.jsxs)('ul', {
-                            className: I.listContainer,
-                            children: [
-                                (0, s.jsxs)('li', {
-                                    className: I.listItem,
-                                    children: [
-                                        (0, s.jsx)(a.$2U, {
-                                            color: 'currentColor',
-                                            className: I.wandIcon
-                                        }),
-                                        (0, s.jsx)(a.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-default',
-                                            children: _.intl.string(_.t['0vKo5O'])
-                                        })
-                                    ]
-                                }),
-                                (0, s.jsx)(c.Z, { className: I.divider }),
-                                (0, s.jsxs)('li', {
-                                    className: I.listItem,
-                                    children: [
-                                        (0, s.jsx)(a.wGt, {
-                                            color: 'currentColor',
-                                            className: I.robotIcon
-                                        }),
-                                        (0, s.jsx)(a.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-default',
-                                            children: _.intl.string(_.t.CprEDA)
-                                        })
-                                    ]
-                                }),
-                                (0, s.jsx)(c.Z, { className: I.divider }),
-                                (0, s.jsxs)('li', {
-                                    className: I.listItem,
-                                    children: [
-                                        (0, s.jsx)(a.EO4, {
-                                            color: 'currentColor',
-                                            className: I.smileIcon
-                                        }),
-                                        (0, s.jsx)(a.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-default',
-                                            children: _.intl.string(_.t.wQJMPD)
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                }),
-                (0, s.jsx)(a.mzw, {
-                    className: I.modalFooter,
-                    children: (0, s.jsxs)(a.hE2, {
-                        direction: 'horizontal-reverse',
-                        children: [
-                            (0, s.jsx)(a.zxk, {
-                                variant: 'primary',
-                                text: _.intl.string(_.t['5e8Mrq']),
-                                onClick: () => {
-                                    (j(),
-                                        (0, l.Q3)(p, {
-                                            forceTrack: !0,
-                                            dismissAction: u.L.PRIMARY,
-                                            guildId: e
-                                        }),
-                                        (0, d.transitionToGlobalDiscovery)({
-                                            tab: h.GlobalDiscoveryTab.APPS,
-                                            newSessionState: {
-                                                guildId: e,
-                                                entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
-                                            }
-                                        }));
-                                }
+        }, [i, j]),
+        (0, s.jsx)(a.I, {
+            title: C.intl.string(C.t['2tv5YG']),
+            subtitle: C.intl.string(C.t.pgwlDw),
+            transitionState: p,
+            size: 'sm',
+            graphic: (0, s.jsx)(r.Fmz, {
+                autoplay: !0,
+                shouldAnimate: !l.Z.useReducedMotion,
+                importData: () => n.e('94792').then(n.t.bind(n, 972951, 19)),
+                className: h.animation
+            }),
+            onClose: N,
+            actions: [
+                {
+                    variant: 'secondary',
+                    text: C.intl.string(C.t.L5eIZ2),
+                    onClick: () => {
+                        (N(),
+                            (0, c.Q3)(j, {
+                                forceTrack: !0,
+                                dismissAction: I.L.SECONDARY,
+                                guildId: i
+                            }));
+                    }
+                },
+                {
+                    variant: 'primary',
+                    text: C.intl.string(C.t['5e8Mrq']),
+                    onClick: () => {
+                        (N(),
+                            (0, c.Q3)(j, {
+                                forceTrack: !0,
+                                dismissAction: I.L.PRIMARY,
+                                guildId: i
                             }),
-                            (0, s.jsx)(a.zxk, {
-                                variant: 'secondary',
-                                text: _.intl.string(_.t.L5eIZ2),
-                                onClick: () => {
-                                    (j(),
-                                        (0, l.Q3)(p, {
-                                            forceTrack: !0,
-                                            dismissAction: u.L.SECONDARY,
-                                            guildId: e
-                                        }));
+                            (0, b.transitionToGlobalDiscovery)({
+                                tab: _.GlobalDiscoveryTab.APPS,
+                                newSessionState: {
+                                    guildId: i,
+                                    entrypoint: { name: x.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
                                 }
+                            }));
+                    }
+                }
+            ],
+            children: (0, s.jsxs)('ul', {
+                className: h.listContainer,
+                children: [
+                    (0, s.jsxs)('li', {
+                        className: h.listItem,
+                        children: [
+                            (0, s.jsx)(r.$2U, {
+                                color: 'currentColor',
+                                className: h.wandIcon
+                            }),
+                            (0, s.jsx)(r.Text, {
+                                variant: 'text-sm/medium',
+                                color: 'text-default',
+                                children: C.intl.string(C.t['0vKo5O'])
+                            })
+                        ]
+                    }),
+                    (0, s.jsx)(d.Z, { className: h.divider }),
+                    (0, s.jsxs)('li', {
+                        className: h.listItem,
+                        children: [
+                            (0, s.jsx)(r.wGt, {
+                                color: 'currentColor',
+                                className: h.robotIcon
+                            }),
+                            (0, s.jsx)(r.Text, {
+                                variant: 'text-sm/medium',
+                                color: 'text-default',
+                                children: C.intl.string(C.t.CprEDA)
+                            })
+                        ]
+                    }),
+                    (0, s.jsx)(d.Z, { className: h.divider }),
+                    (0, s.jsxs)('li', {
+                        className: h.listItem,
+                        children: [
+                            (0, s.jsx)(r.EO4, {
+                                color: 'currentColor',
+                                className: h.smileIcon
+                            }),
+                            (0, s.jsx)(r.Text, {
+                                variant: 'text-sm/medium',
+                                color: 'text-default',
+                                children: C.intl.string(C.t.wQJMPD)
                             })
                         ]
                     })
-                })
-            ]
+                ]
+            })
         })
     );
 }

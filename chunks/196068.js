@@ -25,14 +25,14 @@ let m = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, E.a0)(),
         m = (0, o.e7)([p.default], () => g.ZP.isPremiumExactly(p.default.getCurrentUser(), N.p9.TIER_2)),
-        { enabled: A, getNitroCTA: P } = h.g.useExperiment(
+        { enabled: A, getNitroCTA: y } = h.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
                 autoTrackExposure: !1,
                 disable: m
             }
         ),
-        { location: y } = (0, d.O)(),
+        { location: P } = (0, d.O)(),
         { analyticsLocations: b } = (0, u.ZP)(),
         D = r.useCallback(() => {
             var e, t;
@@ -64,7 +64,7 @@ let m = (e) => {
                                 }));
                         }
                         return e;
-                    })({}, y)),
+                    })({}, P)),
                     (t = t =
                         {
                             object: S.qAy.BUTTON_CTA,
@@ -84,13 +84,13 @@ let m = (e) => {
                           }),
                     e)
             });
-        }, [b, y]),
+        }, [b, P]),
         v = r.useCallback(() => {
             (c.Z.open(S.oAB.INVENTORY), I.ZP.dismissOutboundPromotionNotice());
         }, []),
         U = r.useCallback(() => {
-            (C.default.track(S.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), P ? D() : v());
-        }, [P, D, v]);
+            (C.default.track(S.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), y ? D() : v());
+        }, [y, D, v]);
     if (null == n) return null;
     let M = (e) =>
         (0, i.jsxs)(a.qXd, {
@@ -108,7 +108,7 @@ let m = (e) => {
                     className: R.premiumIcon
                 }),
                 A
-                    ? P
+                    ? y
                         ? (0, i.jsxs)(l.xv, {
                               variant: 'text-sm/normal',
                               className: R.text,
@@ -121,7 +121,7 @@ let m = (e) => {
                     onClick: () => {
                         (U(), null !== e && e(O.L.TAKE_ACTION));
                     },
-                    children: P ? f.intl.string(f.t.pj0XBA) : f.intl.string(f.t.jVcuVV)
+                    children: y ? f.intl.string(f.t.pj0XBA) : f.intl.string(f.t.jVcuVV)
                 })
             ]
         });

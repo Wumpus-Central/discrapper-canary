@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(63063),
     x = n(5192),
     v = n(823961),
-    j = n(981631),
-    O = n(37113),
+    O = n(981631),
+    j = n(37113),
     E = n(388032),
     S = n(15322),
-    I = n(574169);
-function P(e) {
+    P = n(574169);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function N(e) {
         A = (0, u.e7)([y.default], () => y.default.getCurrentUser()),
         w = null != T.find((e) => e.ownerId === (null == A ? void 0 : A.id)),
         R = (0, u.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
-        M = w && null != R && R.resolution !== O.LY.RESOLUTION_1440 && R.frameRate !== O.ws.FPS_60,
+        M = w && null != R && R.resolution !== j.LY.RESOLUTION_1440 && R.frameRate !== j.ws.FPS_60,
         [D, k] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         k(!0);
@@ -93,14 +93,14 @@ function N(e) {
             ? E.intl.format(E.t['6LrV9f'], {
                   username: H,
                   num: z,
-                  helpCenterLink: C.Z.getArticleURL(j.BhN.HD_STREAMING_POTION)
+                  helpCenterLink: C.Z.getArticleURL(O.BhN.HD_STREAMING_POTION)
               })
             : l.id === A.id
               ? E.intl.string(E.t.IjKvNT)
               : !0 === w
                 ? E.intl.format(E.t.JkWoqK, {
                       username: H,
-                      helpCenterLink: C.Z.getArticleURL(j.BhN.HD_STREAMING_POTION)
+                      helpCenterLink: C.Z.getArticleURL(O.BhN.HD_STREAMING_POTION)
                   })
                 : E.intl.formatToPlainString(E.t.vNbVXF, { username: H }),
         Y = M ? E.intl.string(E.t.o7NIjY) : G ? E.intl.string(E.t.r6xhBw) : E.intl.string(E.t.yKw8Dg);
@@ -114,7 +114,7 @@ function N(e) {
                       children: [
                           (0, r.jsx)(
                               p.qEK,
-                              P(
+                              I(
                                   {
                                       src: B,
                                       'aria-label': l.username,
@@ -125,7 +125,7 @@ function N(e) {
                           ),
                           (0, r.jsx)('img', {
                               className: S.potion,
-                              src: I,
+                              src: P,
                               alt: ''
                           })
                       ]
@@ -149,7 +149,7 @@ function N(e) {
                                   if (G) return void o();
                                   ((0, p.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('52657')]).then(n.bind(n, 60594));
-                                      return (t) => (0, r.jsx)(e, P({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
+                                      return (t) => (0, r.jsx)(e, I({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
                                       o());
                               },

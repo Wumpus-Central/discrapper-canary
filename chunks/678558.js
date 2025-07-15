@@ -95,7 +95,7 @@ function w(e, t) {
     return i;
 }
 let D = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: k, withHighlight: M = !1, icon: j, intent: U } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: M, withHighlight: k = !1, icon: j, intent: U } = e,
         G = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: B } = (0, f.ZP)(),
         V = (0, d.bp)() === v.IlC.POPOUT,
@@ -122,7 +122,7 @@ let D = (e) => {
                     closeLayer: D,
                     inPopout: V,
                     applicationId: x,
-                    handleSubscribeModalClose: k,
+                    handleSubscribeModalClose: M,
                     intent: U
                 }),
                 Z(!1));
@@ -170,7 +170,7 @@ let D = (e) => {
         : (0, r.jsx)(
               c.gtL,
               R(N({ size: l.zx.Sizes.SMALL }, G), {
-                  className: o()(G.className, { [S.buttonHighlighted]: M }),
+                  className: o()(G.className, { [S.buttonHighlighted]: k }),
                   submitting: F,
                   onClick: Q,
                   pauseAnimation: L,

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(390322),
     x = n(871499),
     v = n(127379),
-    j = n(388032);
-function O(e) {
-    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
-        { parentAnalyticsLocation: I } = (0, u.ZP)(),
+    O = n(388032);
+function j(e) {
+    let { channel: t, themeable: j, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
+        { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
-            Component: P,
+            Component: I,
             play: Z,
             events: { onMouseEnter: N, onMouseLeave: T }
         } = (0, o.j)(),
@@ -75,7 +75,7 @@ function O(e) {
                             },
                             t
                         )),
-                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', I) }),
+                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', P) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,7 +94,7 @@ function O(e) {
             });
     }
     function W() {
-        ((0, d.v)(I, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
+        ((0, d.v)(P, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
     }
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
@@ -135,9 +135,9 @@ function O(e) {
             (0, r.jsx)(x.d, {
                 ref: Y,
                 isTrayButton: !0,
-                themeable: O,
-                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
-                iconComponent: P,
+                themeable: j,
+                label: w ? O.intl.string(O.t['Ox4/zc']) : R ? O.intl.string(O.t['+YBKYG']) : M ? O.intl.string(O.t.X1lQlp) : void 0,
+                iconComponent: I,
                 disabled: D,
                 onContextMenu: z,
                 onClick: W,

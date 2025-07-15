@@ -20,18 +20,18 @@ function f(e) {
             }),
             [t]
         ),
-        g = (0, o.p)(),
-        h = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, a.$)(h);
+        h = (0, o.p)(),
+        g = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, a.$)(g);
     let b = i.useMemo(
         () =>
             null != t.content && '' !== t.content
                 ? (0, s.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: g
+                      shouldFilterKeywords: h
                   }).content
                 : null,
-        [t, g]
+        [t, h]
     );
     return (0, r.jsxs)('div', {
         className: m.threadMessageAccessory,

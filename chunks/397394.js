@@ -3,7 +3,7 @@
     Lk: () => Z,
     Mx: () => V,
     Xg: () => H,
-    ZP: () => M,
+    ZP: () => k,
     _0: () => B,
     _Z: () => G,
     c7: () => j,
@@ -95,14 +95,14 @@ function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -111,7 +111,7 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function M(e) {
+function k(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
         (0, h.Tt)({ location: C.intl.string(C.t['3S249/']) }),
@@ -139,7 +139,7 @@ function M(e) {
     );
 }
 function j(e) {
-    return (0, r.jsx)(M, L(w({}, e), { headerClassName: R.headerSuccess }));
+    return (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerSuccess }));
 }
 function U(e) {
     var { guild: t, application: n } = e,
@@ -303,7 +303,7 @@ function F(e) {
 function Z(e) {
     return (0, r.jsx)('div', {
         className: R.errorWrapper,
-        children: (0, r.jsx)(M, L(w({}, e), { headerClassName: R.headerFailure }))
+        children: (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerFailure }))
     });
 }
 function H() {

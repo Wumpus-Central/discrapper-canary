@@ -194,11 +194,11 @@ function A(e) {
         D = null != s ? s : w,
         L = (0, u.Z)('(max-width: 456px)'),
         x = i.useRef(null),
-        k = i.useContext(f.h9);
+        M = i.useContext(f.h9);
     i.useEffect(() => {
-        null != x.current && (k ? x.current.pause() : x.current.play());
-    }, [k]);
-    let M = null != (t = P.onContextMenu) ? t : v,
+        null != x.current && (M ? x.current.pause() : x.current.play());
+    }, [M]);
+    let k = null != (t = P.onContextMenu) ? t : v,
         j = null == v && !C,
         U = null != v && !C,
         G = C && null != v,
@@ -206,7 +206,7 @@ function A(e) {
             I,
             y(E({}, P), {
                 grow: !1,
-                onContextMenu: M,
+                onContextMenu: k,
                 iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
                 className: o()(L || R ? g : null, l && m.active, m.centerButton, S[w], j && m.fullRegionButton, G && m.attachedButton)
             })

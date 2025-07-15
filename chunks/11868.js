@@ -27,8 +27,8 @@ var i = n(255367),
     R = n(405613),
     m = n(95291),
     A = n(742593),
-    P = n(217804),
-    y = n(139712),
+    y = n(217804),
+    P = n(139712),
     b = n(765305),
     D = n(388032),
     v = n(690606);
@@ -61,7 +61,7 @@ let U = (e, t) => (n) => {
                 },
                 [n]
             ),
-            E = (0, P.u)(l, o),
+            E = (0, y.u)(l, o),
             I = r.useCallback(
                 (e) => {
                     a && null != l && (e.stopPropagation(), (0, d.Bk)(l));
@@ -170,7 +170,7 @@ let U = (e, t) => (n) => {
                         color: a.zx.Colors.PRIMARY,
                         look: E ? a.zx.Looks.OUTLINED : a.zx.Looks.FILLED,
                         onClick: (e) => {
-                            (e.stopPropagation(), (0, y.Z)(n, r, t));
+                            (e.stopPropagation(), (0, P.Z)(n, r, t));
                         },
                         children: [
                             E
@@ -211,8 +211,8 @@ let U = (e, t) => (n) => {
             }, [a, n, E]);
         if (null == n || !I) return null;
         let O = (0, T.xt)(n),
-            P = (0, T.Z2)(n),
-            y = n.entity_type === b.WX.EXTERNAL;
+            y = (0, T.Z2)(n),
+            P = n.entity_type === b.WX.EXTERNAL;
         return (0, i.jsx)(h.Z, {
             className: o()({ [v.clickable]: a }),
             children: (0, i.jsxs)(c.P3F, {
@@ -244,14 +244,14 @@ let U = (e, t) => (n) => {
                             }),
                             (0, i.jsx)(j, {
                                 isActive: O,
-                                isEnded: P,
+                                isEnded: y,
                                 isMember: a,
                                 guildId: n.guild_id,
                                 guildScheduledEventId: n.id,
                                 recurrenceId: E,
                                 onAcceptInstantInvite: u,
                                 onTransitionToInviteChannel: _,
-                                isExternal: y
+                                isExternal: P
                             })
                         ]
                     })

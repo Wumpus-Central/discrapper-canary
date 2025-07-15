@@ -6,7 +6,7 @@ var i = n(27457),
     a = n(938243);
 function o(e) {
     var { aspectRatio: t, blocked: n, ignored: o, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: C, participant: x, width: v } = e,
-        j = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,7 +25,7 @@ function o(e) {
             }
             return i;
         })(e, ['aspectRatio', 'blocked', 'ignored', 'channel', 'className', 'focused', 'children', 'inCall', 'inPopout', 'noBorder', 'onClick', 'onContextMenu', 'onDoubleClick', 'onVideoResize', 'paused', 'pulseSpeakingIndicator', 'participant', 'width']);
-    let O = l.Z.getVideoComponent();
+    let j = l.Z.getVideoComponent();
     return (0, r.jsx)('div', {
         style: { width: v },
         className: a.spaceBetweenTiles,
@@ -76,10 +76,10 @@ function o(e) {
                             participant: x,
                             paused: y,
                             pulseSpeakingIndicator: C,
-                            videoComponent: O,
+                            videoComponent: j,
                             width: v
                         },
-                        j
+                        O
                     )
                 ),
                 d

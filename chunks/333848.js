@@ -1,49 +1,49 @@
-(t.d(n, { Z: () => p }), t(415506));
-var i = t(990547),
-    r = t(283693),
-    l = t(570140),
-    a = t(408987),
-    o = t(9156),
-    c = t(621600),
-    _ = t(573261),
-    d = t(87051),
-    u = t(981631),
-    s = t(526761);
-let p = {
+(n.d(t, { Z: () => m }), n(415506));
+var r = n(990547),
+    i = n(283693),
+    l = n(570140),
+    a = n(408987),
+    o = n(9156),
+    s = n(621600),
+    c = n(573261),
+    u = n(87051),
+    d = n(981631),
+    p = n(526761);
+let m = {
     createChannel(e) {
-        let { guildId: n, type: t, name: p, permissionOverwrites: E = [], bitrate: h, userLimit: b, parentId: f, skuId: g, branchId: T } = e;
+        let { guildId: t, type: n, name: m, permissionOverwrites: f = [], bitrate: _, userLimit: h, parentId: g, skuId: b, branchId: E } = e;
         l.Z.dispatch({
             type: 'CREATE_CHANNEL_MODAL_SUBMIT',
-            guildId: n,
-            channelType: t
+            guildId: t,
+            channelType: n
         });
-        let A = {
-            type: t,
-            name: p,
-            permission_overwrites: E
+        let y = {
+            type: n,
+            name: m,
+            permission_overwrites: f
         };
-        if ((null != h && h !== u.epw && (A.bitrate = h), null != b && b > 0 && (A.user_limit = b), null != f && (A.parent_id = f), t === u.d4z.GUILD_STORE)) {
-            if (null == g) throw Error('Unexpected missing SKU');
-            ((A.sku_id = g), (A.branch_id = T));
+        if ((null != _ && _ !== d.epw && (y.bitrate = _), null != h && h > 0 && (y.user_limit = h), null != g && (y.parent_id = g), n === d.d4z.GUILD_STORE)) {
+            if (null == b) throw Error('Unexpected missing SKU');
+            ((y.sku_id = b), (y.branch_id = E));
         }
-        return _.Z.post({
-            url: u.ANM.GUILD_CHANNELS(n),
-            body: A,
+        return c.Z.post({
+            url: d.ANM.GUILD_CHANNELS(t),
+            body: y,
             oldFormErrors: !0,
             trackedActionData: {
-                event: i.NetworkActionNames.CHANNEL_CREATE,
+                event: r.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) => {
-                    var n, t;
-                    return (0, r.iG)({
-                        is_private: E.length > 0,
-                        channel_id: null == e || null == (n = e.body) ? void 0 : n.id,
-                        channel_type: null == e || null == (t = e.body) ? void 0 : t.type
+                    var t, n;
+                    return (0, i.iG)({
+                        is_private: f.length > 0,
+                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
+                        channel_type: null == e || null == (n = e.body) ? void 0 : n.type
                     });
                 }
             },
             rejectWithError: !1
         }).then(
-            (e) => (o.ZP.isOptInEnabled(n) && d.Z.updateChannelOverrideSettings(n, e.body.id, { flags: s.ic.OPT_IN_ENABLED }, c.ZB.OptedIn), a.Z.checkGuildTemplateDirty(n), e),
+            (e) => (o.ZP.isOptInEnabled(t) && u.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, s.ZB.OptedIn), a.Z.checkGuildTemplateDirty(t), e),
             (e) => {
                 throw (
                     l.Z.dispatch({
@@ -55,23 +55,23 @@ let p = {
             }
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, n, t, l) =>
-        _.Z.post({
-            url: u.ANM.GUILD_CHANNELS(e),
+    createRoleSubscriptionTemplateChannel: (e, t, n, l) =>
+        c.Z.post({
+            url: d.ANM.GUILD_CHANNELS(e),
             body: {
-                name: n,
-                type: t,
+                name: t,
+                type: n,
                 topic: l
             },
             oldFormErrors: !0,
             trackedActionData: {
-                event: i.NetworkActionNames.CHANNEL_CREATE,
+                event: r.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) => {
-                    var n, t;
-                    return (0, r.iG)({
+                    var t, n;
+                    return (0, i.iG)({
                         is_private: !0,
-                        channel_id: null == e || null == (n = e.body) ? void 0 : n.id,
-                        channel_type: null == e || null == (t = e.body) ? void 0 : t.type
+                        channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
+                        channel_type: null == e || null == (n = e.body) ? void 0 : n.type
                     });
                 }
             },

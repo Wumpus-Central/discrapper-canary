@@ -121,8 +121,8 @@ function R(e) {
     let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: v = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
         [w, D] = i.useState(''),
         [L] = i.useState(!0),
-        [x, k] = i.useState(null),
-        M = i.useId(),
+        [x, M] = i.useState(null),
+        k = i.useId(),
         j = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = document.querySelector('['.concat(I, '="').concat(x, '"]')),
@@ -156,7 +156,7 @@ function R(e) {
             []
         ),
         Z = i.useCallback((e, t) => {
-            k(t);
+            M(t);
             let n = document.querySelector(e),
                 r = j.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -181,19 +181,19 @@ function R(e) {
                     role: 'combobox',
                     'aria-label': b,
                     'aria-expanded': L,
-                    'aria-controls': L ? M : void 0,
-                    'aria-owns': M,
+                    'aria-controls': L ? k : void 0,
+                    'aria-owns': k,
                     'aria-haspopup': 'listbox',
                     className: o()(m.combobox, u),
                     children: [
-                        (0, r.jsx)(f.E, {
+                        (0, r.jsx)(f.E1, {
                             autoFocus: S,
-                            size: f.E.Sizes.MEDIUM,
+                            size: f.E1.Sizes.MEDIUM,
                             placeholder: t,
                             query: w,
                             onChange: D,
                             onKeyDown: i,
-                            onBlur: () => k(null),
+                            onBlur: () => M(null),
                             onClear: () => D(''),
                             className: o()({ [m.searchWithScrollbar]: P }),
                             inputProps: {
@@ -231,7 +231,7 @@ function R(e) {
                                               y(E({}, s), {
                                                   style: { maxHeight: A * (T + 6) },
                                                   'aria-multiselectable': v,
-                                                  id: M,
+                                                  id: k,
                                                   ref: j,
                                                   className: o()(m.list, g, { [m.scroller]: P }),
                                                   sections: [U.length],

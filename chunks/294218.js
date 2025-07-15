@@ -23,8 +23,8 @@ var i = n(255367),
     R = n(145807),
     m = n(56744),
     A = n(981631),
-    P = n(30804);
-function y(e) {
+    y = n(30804);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -117,18 +117,18 @@ let D = r.memo(function (e) {
         ee = (0, C.Gx)(r);
     return (0, i.jsx)(
         p.Z,
-        y(
+        P(
             {
                 compact: l,
                 className: o()(D, {
-                    [P.ephemeral]: (0, E.Pv)(r),
-                    [P.disableInteraction]: G
+                    [y.ephemeral]: (0, E.Pv)(r),
+                    [y.disableInteraction]: G
                 }),
                 disableInteraction: G,
                 childrenRepliedMessage: (0, m.Z)(r, L, z, Y, l),
                 childrenExecutedCommand: (0, R.Z)(r, L, l),
                 childrenHeader: (0, N.Z)(
-                    b(y({}, e), {
+                    b(P({}, e), {
                         guildId: L.guild_id,
                         author: q,
                         roleIcon: J
@@ -136,7 +136,7 @@ let D = r.memo(function (e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, H),
                 childrenMessageContent: (0, S.Z)(e, W),
-                childrenSystemMessage: (0, f.Z)(b(y({}, e), { disableInteraction: G })),
+                childrenSystemMessage: (0, f.Z)(b(P({}, e), { disableInteraction: G })),
                 onContextMenu: v,
                 onClick: U,
                 hasThread: w && null != X && r.hasFlag(A.iLy.HAS_THREAD),

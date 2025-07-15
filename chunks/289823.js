@@ -29,7 +29,7 @@ function _(e) {
         })
     });
 }
-function g(e) {
+function h(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         l = (0, c.vjg)(c.Skl.ONLINE);
     return t
@@ -56,7 +56,7 @@ function g(e) {
             })
           : null;
 }
-function h(e) {
+function g(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
         className: p.circularImage,
@@ -116,7 +116,7 @@ let b = {
     E = function (e) {
         var t,
             { backSrc: n, frontSrc: l, size: s, isTyping: f, status: _, style: E, className: y } = e,
-            C = (function (e, t) {
+            x = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -135,15 +135,15 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: v } = c.ny6[s],
+        let { size: C } = c.ny6[s],
             {
-                statusCoords: x,
+                statusCoords: v,
                 frontAvatarOffsetPx: O,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(v, '-').concat(f);
+                let t = ''.concat(C, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,7 +160,7 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [v, f, s]),
+            }, [C, f, s]),
             S = ((t = null != _), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: v,
-                    height: v
+                    width: C,
+                    height: C
                 },
                 E
             ),
-            'aria-label': C['aria-label'],
-            'aria-hidden': C['aria-hidden'],
+            'aria-label': x['aria-label'],
+            'aria-hidden': x['aria-hidden'],
             className: a()(p.container, y),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: v,
-                    width: v,
+                    height: C,
+                    width: C,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -215,7 +215,7 @@ let b = {
                                 top: O,
                                 left: O
                             },
-                            children: (0, r.jsx)(h, {
+                            children: (0, r.jsx)(g, {
                                 src: l,
                                 size: j,
                                 isTyping: f,
@@ -224,8 +224,8 @@ let b = {
                         })
                     ]
                 }),
-                (0, r.jsx)(g, {
-                    statusCoords: x,
+                (0, r.jsx)(h, {
+                    statusCoords: v,
                     status: _,
                     isTyping: f
                 })

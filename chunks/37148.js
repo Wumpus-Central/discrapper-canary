@@ -92,14 +92,17 @@ function h(e) {
         { headingId: g } = (0, u.v)(),
         E = null != t,
         b = f ? p : _,
-        y = (0, r.jsx)('div', {
-            className: d.headerGraphic,
-            children: (0, r.jsx)('img', {
-                src: n,
-                alt: '',
-                draggable: !1
-            })
-        }),
+        y =
+            'string' == typeof n
+                ? (0, r.jsx)('div', {
+                      className: d.headerGraphic,
+                      children: (0, r.jsx)('img', {
+                          src: n,
+                          alt: '',
+                          draggable: !1
+                      })
+                  })
+                : n,
         O = (0, r.jsx)(s.X6, {
             id: g,
             variant: null != a ? a : 'heading-lg/semibold',

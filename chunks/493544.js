@@ -129,14 +129,14 @@ h(j, 'defaultProps', {
     paddingBottom: 60
 });
 var E = (((r = {}).MINIMAL = 'minimal'), (r.CUSTOM = 'custom'), (r.DEFAULT = 'default'), (r.WIDE = 'wide'), (r.SCROLLABLE_CUSTOM = 'scrollableCustom'), r);
-let P = Object.freeze({
+let x = Object.freeze({
     minimal: 'contentColumnMinimal',
     custom: 'contentColumnCustom',
     default: 'contentColumnDefault',
     wide: 'contentColumnWide',
     scrollableCustom: 'contentColumnCustom'
 });
-function x(e) {
+function P(e) {
     let { isMobile: t, mobileSidebarOpen: n, closeAction: r } = e,
         s = l.useRef(null);
     return null == r
@@ -189,7 +189,7 @@ let C = function (e) {
     l.useLayoutEffect(() => {
         null != E.current && _ !== s && E.current.scrollTo({ to: 0 });
     }, [s, _, E]);
-    let T = (0, i.jsx)(x, {
+    let T = (0, i.jsx)(P, {
         isMobile: d.tq,
         mobileSidebarOpen: O,
         closeAction: o
@@ -281,7 +281,7 @@ let C = function (e) {
                                     I()
                                 ]
                             });
-                        let r = P[null != v ? v : 'default'];
+                        let r = x[null != v ? v : 'default'];
                         return (0, i.jsxs)(f.W, {
                             component: 'div',
                             className: a()(m.contentRegion, { [m.hidden]: d.tq && !0 === O }),

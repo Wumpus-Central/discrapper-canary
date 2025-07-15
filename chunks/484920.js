@@ -32,5 +32,10 @@ e.exports = {
     controlsRightSide: 'controlsRightSide__6db1d',
     controlsLeftSide: 'controlsLeftSide__6db1d',
     divider: 'divider__6db1d',
-    sortBy: 'sortBy__6db1d'
+    controlsRightSideResponsive: 'controlsRightSideResponsive__6db1d',
+    responsiveFilterButton: 'responsiveFilterButton__6db1d',
+    filterOverlay: 'filterOverlay__6db1d',
+    filterOverlayContent: 'filterOverlayContent__6db1d',
+    sortBy: 'sortBy__6db1d',
+    filterButtonActive: 'filterButtonActive__6db1d'
 };

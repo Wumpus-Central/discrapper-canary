@@ -10,7 +10,7 @@ let E = [200, 500],
     l = () => (0, c.U)() - 0,
     u = [],
     I = {},
-    d = (t) => {
+    R = (t) => {
         let e = u[u.length - 1],
             a = I[t.interactionId];
         if (a || u.length < 10 || (e && t.duration > e.latency)) {
@@ -29,7 +29,7 @@ let E = [200, 500],
                 }));
         }
     },
-    R = () => {
+    d = () => {
         let t = Math.min(u.length - 1, Math.floor(l() / 50));
         return u[t];
     },
@@ -40,9 +40,9 @@ let E = [200, 500],
             let s = (0, n.I)('INP'),
                 I = (t) => {
                     t.forEach((t) => {
-                        (t.interactionId && d(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || d(t)));
+                        (t.interactionId && R(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t)));
                     });
-                    let e = R();
+                    let e = d();
                     e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
                 N = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });

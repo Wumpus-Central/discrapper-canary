@@ -2,20 +2,20 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(108542),
+    a = n.n(l),
+    o = n(108542),
     s = n(442837),
     c = n(481060),
     u = n(846027),
     d = n(110924),
-    p = n(460181),
-    f = n(131951),
+    f = n(460181),
+    p = n(131951),
     m = n(743498),
     g = n(56848),
-    b = n(378441),
-    _ = n(388032),
-    v = n(270217);
-function h(e) {
+    _ = n(378441),
+    b = n(388032),
+    h = n(270217);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -78,14 +78,14 @@ let O = (e) => 1 - Math.pow(1 - e, 4),
 function I(e) {
     var t;
     let {} = e,
-        { activeVoice: n } = (0, b.o)(),
+        { activeVoice: n } = (0, _.o)(),
         l = (0, d.Z)(n),
         I = (0, g.z)(n),
-        { toggleLoopback: P, isLoopbackEnabled: C } = (function () {
-            let { activeVoice: e } = (0, b.o)(),
-                t = (0, s.e7)([f.Z], () => f.Z.getVoiceFilterPlaybackEnabled()),
+        { toggleLoopback: C, isLoopbackEnabled: P } = (function () {
+            let { activeVoice: e } = (0, _.o)(),
+                t = (0, s.e7)([p.Z], () => p.Z.getVoiceFilterPlaybackEnabled()),
                 n = i.useCallback(() => {
-                    ((0, p.GN)(t ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!t));
+                    ((0, f.GN)(t ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!t));
                 }, [t]);
             return (
                 i.useEffect(
@@ -103,7 +103,7 @@ function I(e) {
                 }
             );
         })(),
-        E = C ? c.Iy5 : c.X_q,
+        E = P ? c.Iy5 : c.X_q,
         w = i.useCallback(() => (0, m.v6)(null), []),
         T = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
         N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
@@ -268,28 +268,28 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        Y = _.intl.string(C ? _.t.esVyo6 : _.t.UQqFCA);
-    return (0, r.jsxs)(a.animated.div, {
-        className: v.voiceFilterHero,
+        Y = b.intl.string(P ? b.t.esVyo6 : b.t.UQqFCA);
+    return (0, r.jsxs)(o.animated.div, {
+        className: h.voiceFilterHero,
         'aria-hidden': L,
         style: R,
         children: [
             (0, r.jsx)('div', {
-                className: o()([v.bgGradient, v.bgGradientHighlight])
+                className: a()([h.bgGradient, h.bgGradientHighlight])
             }),
             F((e) =>
-                (0, r.jsx)(a.animated.div, {
-                    className: v.bgGradient,
+                (0, r.jsx)(o.animated.div, {
+                    className: h.bgGradient,
                     style: e
                 })
             ),
             (0, r.jsx)('div', {
-                className: v.iconWrapper,
+                className: h.iconWrapper,
                 children: V((e, t) =>
                     (0, r.jsx)(
-                        a.animated.img,
+                        o.animated.img,
                         {
-                            className: v.activeVoiceIcon,
+                            className: h.activeVoiceIcon,
                             style: e,
                             alt: '',
                             src: t
@@ -299,60 +299,60 @@ function I(e) {
                 )
             }),
             (0, r.jsx)('div', {
-                className: v.descriptionWrapper,
+                className: h.descriptionWrapper,
                 children: B((e, t) =>
-                    (0, r.jsxs)(a.animated.div, {
-                        className: v.description,
+                    (0, r.jsxs)(o.animated.div, {
+                        className: h.description,
                         style: e,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                className: v.offWhiteText,
-                                children: _.intl.string(_.t.WW5DAA)
+                                className: h.offWhiteText,
+                                children: b.intl.string(b.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: null != t ? _.intl.string(t) : ''
+                                children: null != t ? b.intl.string(t) : ''
                             })
                         ]
                     })
                 )
             }),
             (0, r.jsxs)('div', {
-                className: v.buttonWrapper,
+                className: h.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
                         'aria-label': Y,
-                        tooltipClassName: v.tooltip,
-                        tooltipContentClassName: v.tooltipContent,
+                        tooltipClassName: h.tooltip,
+                        tooltipContentClassName: h.tooltipContent,
                         shouldShow: D,
                         text: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
-                                    className: v.tooltipHeader,
+                                    className: h.tooltipHeader,
                                     children: Y
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: _.intl.string(C ? _.t.Sg6cfn : _.t.ZKhtw8)
+                                    children: b.intl.string(P ? b.t.Sg6cfn : b.t.ZKhtw8)
                                 })
                             ]
                         }),
                         children: (e) =>
-                            (0, r.jsx)(a.animated.div, {
-                                className: v.buttonWrapper,
+                            (0, r.jsx)(o.animated.div, {
+                                className: h.buttonWrapper,
                                 style: U[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
-                                        h(
+                                        v(
                                             {
-                                                className: o()(v.button, { [v.loopbackEnabled]: C }),
+                                                className: a()(h.button, { [h.loopbackEnabled]: P }),
                                                 'aria-hidden': L,
                                                 focusProps: { enabled: D },
                                                 tabIndex: D ? 0 : -1
@@ -360,7 +360,7 @@ function I(e) {
                                             e
                                         ),
                                         {
-                                            onClick: () => P(),
+                                            onClick: () => C(),
                                             children: (0, r.jsx)(E, {
                                                 size: 'custom',
                                                 width: 20,
@@ -374,17 +374,17 @@ function I(e) {
                     }),
                     (0, r.jsx)(c.ua7, {
                         shouldShow: D,
-                        text: _.intl.string(_.t.UvMx7O),
+                        text: b.intl.string(b.t.UvMx7O),
                         children: (e) =>
-                            (0, r.jsx)(a.animated.div, {
-                                className: v.buttonWrapper,
+                            (0, r.jsx)(o.animated.div, {
+                                className: h.buttonWrapper,
                                 style: U[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
-                                        h(
+                                        v(
                                             {
-                                                className: v.button,
+                                                className: h.button,
                                                 'aria-hidden': L,
                                                 focusProps: { enabled: D },
                                                 tabIndex: D ? 0 : -1

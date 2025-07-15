@@ -19,13 +19,13 @@ var r = n(73800),
     C = n(585483),
     x = n(358085),
     v = n(709054),
-    j = n(418476),
-    O = n(901461),
+    O = n(418476),
+    j = n(901461),
     E = n(432376),
     S = n(996861),
-    I = n(981631);
-function P(e) {
-    return _.Z.can(I.Plq.MANAGE_MESSAGES, e);
+    P = n(981631);
+function I(e) {
+    return _.Z.can(P.Plq.MANAGE_MESSAGES, e);
 }
 let Z = function (e, t, n) {
     let Z = r.useRef(n);
@@ -45,16 +45,16 @@ let Z = function (e, t, n) {
                 let D = p.default.getId();
                 switch (n.key.toLowerCase()) {
                     case 'backspace':
-                        r && (P(M) || R.canDeleteOwnMessage(D)) && (n.preventDefault(), (0, S.$Z)(M, R, n));
+                        r && (I(M) || R.canDeleteOwnMessage(D)) && (n.preventDefault(), (0, S.$Z)(M, R, n));
                         break;
                     case 'c':
                         ((0, x.isMac)() ? A : T) && y.wS && (n.preventDefault(), (0, y.JG)(R.content));
                         break;
                     case 'e':
-                        r && !M.isSystemDM() && (0, j.Z)(R, D) && (n.preventDefault(), (0, S.Hd)(M, R));
+                        r && !M.isSystemDM() && (0, O.Z)(R, D) && (n.preventDefault(), (0, S.Hd)(M, R));
                         break;
                     case 'p':
-                        (r || w) && !M.isSystemDM() && !(0, O.Z)(R) && (P(M) || M.isPrivate()) && (n.preventDefault(), (0, S.rY)(M, R, n));
+                        (r || w) && !M.isSystemDM() && !(0, j.Z)(R) && (I(M) || M.isPrivate()) && (n.preventDefault(), (0, S.rY)(M, R, n));
                         break;
                     case '+':
                         (r || w) &&
@@ -65,14 +65,14 @@ let Z = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && _.Z.can(I.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && _.Z.can(P.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && m.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, c.RG)(e)
                                     });
                                 return !r && n;
                             })(M) &&
-                            (n.preventDefault(), C.S.dispatchKeyed(I.LPv.TOGGLE_REACTION_POPOUT, R.id, { emojiPicker: !0 }));
+                            (n.preventDefault(), C.S.dispatchKeyed(P.LPv.TOGGLE_REACTION_POPOUT, R.id, { emojiPicker: !0 }));
                         break;
                     case 'r':
                         (r || w) && (0, s.o)(M, R) && (n.preventDefault(), (0, S.HH)(M, R, n));
@@ -88,7 +88,7 @@ let Z = function (e, t, n) {
                         break;
                     case 't':
                         if (r && (0, c.ki)(M, R)) (n.preventDefault(), (0, u.R6)(M, R, 'Message Shortcut'));
-                        else if (R.hasFlag(I.iLy.HAS_THREAD)) {
+                        else if (R.hasFlag(P.iLy.HAS_THREAD)) {
                             let e = h.Z.getChannel(v.default.castMessageIdAsChannelId(R.id));
                             null != e && (r || w) && (n.preventDefault(), (0, u.ok)(e, w));
                         }
@@ -97,7 +97,7 @@ let Z = function (e, t, n) {
                         N && (n.preventDefault(), (0, S.B8)(M, R));
                         break;
                     case 'escape':
-                        f.Z.isEditing(M.id, R.id) ? i.Z.endEditMessage(M.id) : C.S.dispatch(I.CkL.TEXTAREA_FOCUS);
+                        f.Z.isEditing(M.id, R.id) ? i.Z.endEditMessage(M.id) : C.S.dispatch(P.CkL.TEXTAREA_FOCUS);
                 }
             },
             [e, t]

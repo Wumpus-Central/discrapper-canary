@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     s = n(73800),
     i = n(442837),
-    l = n(461745),
+    l = n(481060),
     o = n(663389),
     a = n(5967),
     c = n(996733),
@@ -29,15 +29,14 @@ function d(e) {
         }, [g]),
         (0, r.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, r.jsx)(l.ZP, {
+            children: (0, r.jsx)(l.E1j, {
                 ref: p,
-                size: l.ZP.Sizes.MEDIUM,
+                size: l.E1j.Sizes.MEDIUM,
                 query: n,
                 onClear: f,
-                onQueryChange: c.yN,
+                onChange: c.yN,
                 placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,
-                preventEscapePropagation: !1,
                 inputProps: {
                     'aria-label': u.intl.string(u.t.pk9BWV),
                     'aria-expanded': !0,

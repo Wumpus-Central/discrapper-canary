@@ -1,45 +1,45 @@
-(r.d(t, { default: () => f }), r(388685));
+(r.d(t, { default: () => p }), r(388685));
 var a = r(255367),
-    i = r(73800),
-    s = r(481060),
+    s = r(73800),
+    i = r(481060),
     n = r(100527),
     l = r(906732),
     o = r(626135),
-    C = r(281494),
-    d = r(687555),
+    d = r(281494),
+    C = r(687555),
     c = r(596583),
-    x = r(981631);
-let f = (e) => {
+    u = r(981631);
+let p = (e) => {
     let t,
-        { transitionState: r, onClose: f, sourceAnalyticsLocations: p } = e,
-        [u, h] = i.useState(1),
-        [m, j] = i.useState(new Set()),
-        [_, g] = i.useState(new Map()),
-        { analyticsLocations: L } = (0, l.ZP)([...p, n.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    switch (u) {
+        { transitionState: r, onClose: p, sourceAnalyticsLocations: h } = e,
+        [f, x] = s.useState(1),
+        [g, m] = s.useState(new Set()),
+        [_, j] = s.useState(new Map()),
+        { analyticsLocations: y } = (0, l.ZP)([...h, n.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    switch (f) {
         case 1:
-            t = (0, a.jsx)(d.Z, {
+            t = (0, a.jsx)(C.Z, {
                 onShare: async (e) => {
                     try {
-                        o.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
-                        let t = await (0, C.jy)(e.map((e) => e.id));
-                        (h(2), j(new Set(e)), g(t));
+                        o.default.track(u.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: y });
+                        let t = await (0, d.jy)(e.map((e) => e.id));
+                        (x(2), m(new Set(e)), j(t));
                     } catch (e) {}
                 },
-                onClose: f
+                onClose: p
             });
             break;
         case 2:
             t = (0, a.jsx)(c.Z, {
-                selectedUsers: m,
+                selectedUsers: g,
                 trialCreationResult: _,
-                onClose: f
+                onClose: p
             });
             break;
         default:
-            f();
+            p();
     }
-    return (0, a.jsx)(s.Y0X, {
+    return (0, a.jsx)(i.Y0X, {
         transitionState: r,
         parentComponent: 'ReferralProgramShareModal',
         children: t

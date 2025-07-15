@@ -24,12 +24,12 @@ var r = n(255367),
     C = n(699516),
     x = n(914010),
     v = n(594174),
-    j = n(768581),
-    O = n(63063),
+    O = n(768581),
+    j = n(63063),
     E = n(374386),
     S = n(946734),
-    I = n(99843),
-    P = n(372564),
+    P = n(99843),
+    I = n(372564),
     Z = n(984370),
     N = n(217314),
     T = n(981631),
@@ -85,7 +85,7 @@ function k(e) {
         l = (0, u.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
         [a, o] = (0, f.US)([s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == l) return null;
-    let d = j.ZP.getApplicationIconURL({
+    let d = O.ZP.getApplicationIconURL({
             id: l.id,
             icon: l.icon,
             size: 14
@@ -107,7 +107,7 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-secondary',
-                                      children: w.intl.format(w.t['16agur'], { helpdeskArticle: O.Z.getArticleURL(T.BhN.LINKED_LOBBIES) })
+                                      children: w.intl.format(w.t['16agur'], { helpdeskArticle: j.Z.getArticleURL(T.BhN.LINKED_LOBBIES) })
                                   }),
                                   (0, r.jsx)(c.P3F, {
                                       className: R.linkedLobbyEducationTooltipCloseClickContainer,
@@ -229,7 +229,7 @@ function L(e) {
                 children: [
                     (0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }),
                     (0, r.jsx)(
-                        I.Z,
+                        P.Z,
                         {
                             channel: t,
                             legacyIconClassName: R.avatar
@@ -294,10 +294,10 @@ function L(e) {
         case T.d4z.ANNOUNCEMENT_THREAD:
         case T.d4z.PUBLIC_THREAD:
         case T.d4z.PRIVATE_THREAD:
-            let j = null;
+            let O = null;
             if (!s && null != l) {
                 let e = (0, h.KS)(l, o);
-                j = (0, r.jsxs)(i.Fragment, {
+                O = (0, r.jsxs)(i.Fragment, {
                     children: [
                         F(e, w.intl.string(w.t.Pnajj4)),
                         (0, r.jsx)(Z.Z.Title, {
@@ -311,18 +311,18 @@ function L(e) {
                     ]
                 });
             }
-            let O = (null == l ? void 0 : l.type) != null && T.TPd.GUILD_THREADS_ONLY.has(l.type);
+            let j = (null == l ? void 0 : l.type) != null && T.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    j,
-                    F(O ? null : b, w.intl.string(w.t['7Xm5QE'])),
+                    O,
+                    F(j ? null : b, w.intl.string(w.t['7Xm5QE'])),
                     (0, r.jsx)(Z.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: u,
                         className: a()({
                             [R.cursorPointer]: s,
-                            [R.forumPostTitle]: O
+                            [R.forumPostTitle]: j
                         }),
                         children: x
                     })
@@ -396,7 +396,7 @@ function B(e, t) {
         case T.d4z.GROUP_DM:
             return null != t
                 ? (0, r.jsx)(
-                      P.Z,
+                      I.Z,
                       {
                           channel: e,
                           guild: t

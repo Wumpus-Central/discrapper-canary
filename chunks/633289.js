@@ -114,11 +114,11 @@ let S = new u.Z('ApexExperimentStore'),
     D = 'apexTrackedExposures',
     L = 1,
     x = 7 * _.Z.Millis.DAY,
-    k = {},
-    M = {};
+    M = {},
+    k = {};
 function j(e) {
-    let t = M[e];
-    return (null == t && ((t = a().v3(e)), (M[e] = t)), t);
+    let t = k[e];
+    return (null == t && ((t = a().v3(e)), (k[e] = t)), t);
 }
 class U extends (r = o.ZP.PersistedStore) {
     initialize(e) {
@@ -132,7 +132,7 @@ class U extends (r = o.ZP.PersistedStore) {
                 isOverride: !0
             };
         }
-        k = this.loadTrackedExposures();
+        M = this.loadTrackedExposures();
     }
     getState() {
         return {
@@ -231,8 +231,8 @@ class U extends (r = o.ZP.PersistedStore) {
                 exposure_location: n,
                 unit_type: r
             }),
-            (k[o] = Date.now()),
-            this.saveTrackedExposures(k));
+            (M[o] = Date.now()),
+            this.saveTrackedExposures(M));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds('user')) {
@@ -243,8 +243,8 @@ class U extends (r = o.ZP.PersistedStore) {
                     exposure_location: e,
                     unit_type: 'user'
                 }),
-                (k[n] = Date.now()),
-                this.saveTrackedExposures(k));
+                (M[n] = Date.now()),
+                this.saveTrackedExposures(M));
         }
     }
     evaluationIds(e) {
@@ -253,7 +253,7 @@ class U extends (r = o.ZP.PersistedStore) {
             .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
-        let t = k[e];
+        let t = M[e];
         return null == t || Date.now() - t > x;
     }
     loadTrackedExposures() {
@@ -289,7 +289,7 @@ class U extends (r = o.ZP.PersistedStore) {
         ((R = {}), (P = {}));
     }
     clearAllTrackedExposures() {
-        k = {};
+        M = {};
     }
     getHash(e) {
         return j(e);

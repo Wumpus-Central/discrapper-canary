@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => b }), n(415506), n(388685));
+(n.d(t, { Z: () => _ }), n(415506), n(388685));
 var r,
     i,
     l = n(255367),
-    o = n(73800),
-    a = n(379649),
+    a = n(73800),
+    o = n(379649),
     s = n(846519),
     c = n(388032);
 function u(e, t, n) {
@@ -35,53 +35,53 @@ function d(e) {
     }
     return e;
 }
-var p = (((r = p || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), r),
-    f = (((i = f || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
+var f = (((r = f || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), r),
+    p = (((i = p || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
 let m = (e) => (t, n) => (null == n ? '' : c.intl.format(e(), d({ time: t }, n))),
     g = {
         ACTIVITY_FEED: {
             START: {
-                [a.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
-                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['03mIHR'], { time: e }),
-                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.eNoooa, { time: e }),
-                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['2rUo/v'], { time: e })
+                [o.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
+                [o.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['03mIHR'], { time: e }),
+                [o.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.eNoooa, { time: e }),
+                [o.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['2rUo/v'], { time: e })
             },
             END: {
-                [a.J6.SECONDS]: () => c.intl.string(c.t.EluAd3),
-                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.BZxG8f, { time: e }),
-                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.cRMUp6, { time: e }),
-                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['yP1T8/'], { time: e }),
-                [a.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.AWkdqa, { time: e }),
-                [a.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.upamAw, { time: e }),
-                [a.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t.vfMC2t, { time: e })
+                [o.J6.SECONDS]: () => c.intl.string(c.t.EluAd3),
+                [o.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.BZxG8f, { time: e }),
+                [o.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.cRMUp6, { time: e }),
+                [o.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['yP1T8/'], { time: e }),
+                [o.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.AWkdqa, { time: e }),
+                [o.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.upamAw, { time: e }),
+                [o.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t.vfMC2t, { time: e })
             }
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [a.J6.SECONDS]: m(() => c.t.Bf3PRU),
-                [a.J6.MINUTES]: m(() => c.t['A9P+dX']),
-                [a.J6.HOURS]: m(() => c.t.KwVzfn),
-                [a.J6.DAYS]: m(() => c.t.hbUpBA)
+                [o.J6.SECONDS]: m(() => c.t.Bf3PRU),
+                [o.J6.MINUTES]: m(() => c.t['A9P+dX']),
+                [o.J6.HOURS]: m(() => c.t.KwVzfn),
+                [o.J6.DAYS]: m(() => c.t.hbUpBA)
             },
             END: {
-                [a.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.C3MTOD, { seconds: e }),
-                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['GqQ/Y2'], { minutes: e }),
-                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.c5zfWV, { hours: e }),
-                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.amjnaG, { days: e })
+                [o.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.C3MTOD, { seconds: e }),
+                [o.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['GqQ/Y2'], { minutes: e }),
+                [o.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.c5zfWV, { hours: e }),
+                [o.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.amjnaG, { days: e })
             }
         },
         USER_ACTIVITY: {
             START: {
-                [a.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
-                [a.J6.MINUTES]: function (e, t) {
+                [o.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
+                [o.J6.MINUTES]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? c.intl.formatToPlainString(c.t['03mIHR'], { time: e }) : c.intl.formatToPlainString(c.t['vQml+P'], { time: e });
                 },
-                [a.J6.HOURS]: function (e, t) {
+                [o.J6.HOURS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? c.intl.formatToPlainString(c.t.eNoooa, { time: e }) : c.intl.formatToPlainString(c.t['4Wq+6+'], { time: e });
                 },
-                [a.J6.DAYS]: function (e, t) {
+                [o.J6.DAYS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? c.intl.formatToPlainString(c.t['2rUo/v'], { time: e }) : c.intl.formatToPlainString(c.t['jN3/fX'], { time: e });
                 }
@@ -89,29 +89,29 @@ let m = (e) => (t, n) => (null == n ? '' : c.intl.format(e(), d({ time: t }, n))
         },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
-                [a.J6.NONE]: () => c.intl.string(c.t.LqDiCg),
-                [a.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.xDIDBA, { time: e }),
-                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.KGqJcX, { time: e }),
-                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.OLchUF, { time: e })
+                [o.J6.NONE]: () => c.intl.string(c.t.LqDiCg),
+                [o.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.xDIDBA, { time: e }),
+                [o.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.KGqJcX, { time: e }),
+                [o.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.OLchUF, { time: e })
             }
         },
         GAME_LIBRARY_LAST_PLAYED: {
             END: {
-                [a.J6.NONE]: () => c.intl.string(c.t.EoWLrq),
-                [a.J6.SECONDS]: () => c.intl.string(c.t.QTHa8f),
-                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.SVEfcX, { time: e }),
-                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t['0Gbusb'], { time: e }),
-                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.hnPZZ2, { time: e }),
-                [a.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.L3fTpK, { time: e }),
-                [a.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.xAFWQU, { time: e }),
-                [a.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t['9Yr3NT'], { time: e })
+                [o.J6.NONE]: () => c.intl.string(c.t.EoWLrq),
+                [o.J6.SECONDS]: () => c.intl.string(c.t.QTHa8f),
+                [o.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.SVEfcX, { time: e }),
+                [o.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t['0Gbusb'], { time: e }),
+                [o.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.hnPZZ2, { time: e }),
+                [o.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.L3fTpK, { time: e }),
+                [o.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.xAFWQU, { time: e }),
+                [o.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t['9Yr3NT'], { time: e })
             }
         }
     };
-function b(e) {
+function _(e) {
     var t, n;
     return (
-        (n = class extends (t = o.PureComponent) {
+        (n = class extends (t = a.PureComponent) {
             componentDidMount() {
                 this.timer.start(10000, this.update);
             }
@@ -130,7 +130,7 @@ function b(e) {
                 return (null != e ? (i = r - e) : null != t && (i = r - t), Math.abs(i) / 1000 / 60);
             }
             getTimeUnit(e, t, n) {
-                let r = (0, a.jU)(e, (e) =>
+                let r = (0, o.jU)(e, (e) =>
                     (function (e, t, n) {
                         let r = g[n];
                         if (null != r) {
@@ -150,7 +150,7 @@ function b(e) {
             render() {
                 var t, n;
                 let r = this.props,
-                    { location: i, messageProps: o, isApplicationStreaming: s } = r,
+                    { location: i, messageProps: a, isApplicationStreaming: s } = r,
                     c = (function (e, t) {
                         if (null == e) return {};
                         var n,
@@ -171,17 +171,17 @@ function b(e) {
                         return i;
                     })(r, ['location', 'messageProps', 'isApplicationStreaming']),
                     { time: u } = this.state,
-                    p = this.getType();
-                if (null == p) return null;
-                let f = this.getTimeUnit(u, i, p),
-                    m = g[i][p];
+                    f = this.getType();
+                if (null == f) return null;
+                let p = this.getTimeUnit(u, i, f),
+                    m = g[i][f];
                 if (null == m) return null;
-                let b = m[f],
-                    _ = Math.floor((0, a.A3)(u, f));
+                let _ = m[p],
+                    b = Math.floor((0, o.A3)(u, p));
                 return (0, l.jsx)(
                     e,
                     ((t = d({}, c)),
-                    (n = n = { children: null == b ? void 0 : b(_, o, s) }),
+                    (n = n = { children: null == _ ? void 0 : _(b, a, s) }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -206,8 +206,8 @@ function b(e) {
                     }));
             }
         }),
-        u(n, 'Locations', p),
-        u(n, 'Types', f),
+        u(n, 'Locations', f),
+        u(n, 'Types', p),
         n
     );
 }

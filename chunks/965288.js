@@ -22,11 +22,11 @@ var r = n(255367),
     C = n(314897),
     x = n(271383),
     v = n(709586),
-    j = n(5192),
-    O = n(590415),
+    O = n(5192),
+    j = n(590415),
     E = n(354459),
     S = n(387147);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,7 +91,7 @@ let Z = i.memo(function (e) {
                     className: S.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
-                    children: j.ZP.getName(t, n, i)
+                    children: O.ZP.getName(t, n, i)
                 }),
                 l
                     ? (0, r.jsx)(v.Z, {
@@ -106,8 +106,8 @@ let Z = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: o } = e,
             { user: s, blocked: c, ignored: u, rtsState: d } = n,
-            h = d === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = d === O.xO.REQUESTED_TO_SPEAK || h;
+            h = d === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = d === j.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -143,8 +143,8 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
-            j = C.default.getId(),
-            { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
+            O = C.default.getId(),
+            { newestAnalyticsLocation: j } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
             T = (0, u.e7)(
                 [x.ZP],
@@ -163,7 +163,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'AudienceTile',
-                        is_tile_owner: o.id === j,
+                        is_tile_owner: o.id === O,
                         tile_type: E.TH.USER
                     }
                 }),
@@ -174,14 +174,14 @@ let Z = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    P(I({}, t), {
+                                    I(P({}, t), {
                                         user: o,
                                         guildId: v,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', O, {
+                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', j, {
                                             targetUserId: o.id,
                                             tileType: E.TH.USER
                                         })
@@ -191,7 +191,7 @@ let Z = i.memo(function (e) {
                         { context: Z }
                     ));
             },
-            [o, j, Z, v, l, O]
+            [o, O, Z, v, l, j]
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: A,
@@ -202,8 +202,8 @@ let Z = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    P(
-                        I(
+                    I(
+                        P(
                             {
                                 innerRef: A,
                                 className: a()(S.tileContainer, {

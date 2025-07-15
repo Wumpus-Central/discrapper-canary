@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => p,
-    Z: () => v
+    Z: () => C
 }),
     n(539854),
     n(388685));
@@ -17,8 +17,8 @@ var r,
 let m = {},
     f = {},
     _ = {},
-    g = 10 * u.Z.Millis.MINUTE;
-function h(e) {
+    h = 10 * u.Z.Millis.MINUTE;
+function g(e) {
     return 'guild:'.concat(e);
 }
 function b(e) {
@@ -26,7 +26,7 @@ function b(e) {
 }
 let E = new s.h(
         (e) => {
-            let t = [h(e.guild_id)];
+            let t = [g(e.guild_id)];
             return (e.published && t.push(b(e.guild_id)), t);
         },
         (e) =>
@@ -36,7 +36,7 @@ let E = new s.h(
             })(e)
     ),
     y = [];
-class C extends (r = o.ZP.Store) {
+class x extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = m[e]) ? t : 0;
@@ -46,7 +46,7 @@ class C extends (r = o.ZP.Store) {
     }
     getGuildProductsForGuild(e, t) {
         let { publishedOnly: n } = t;
-        return null == e ? y : E.values(n ? b(e) : h(e));
+        return null == e ? y : E.values(n ? b(e) : g(e));
     }
     getGuildProductFetchState(e) {
         var t;
@@ -54,26 +54,26 @@ class C extends (r = o.ZP.Store) {
     }
     isGuildProductsCacheExpired(e) {
         var t;
-        return Date.now() - (null != (t = _[e]) ? t : 0) > g;
+        return Date.now() - (null != (t = _[e]) ? t : 0) > h;
     }
 }
 ((a = 'GuildProductsStore'),
-    (l = 'displayName') in C
-        ? Object.defineProperty(C, l, {
+    (l = 'displayName') in x
+        ? Object.defineProperty(x, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[l] = a));
-let v = new C(c.Z, {
+        : (x[l] = a));
+let C = new x(c.Z, {
     CONNECTION_OPEN: function () {
         (E.clear(), (m = {}), (f = {}), (_ = {}));
     },
     GUILD_PRODUCTS_FETCH: function (e) {
         let { guildId: t } = e;
         ((m[t] = 1),
-            [...E.values(h(t))].forEach((e) => {
+            [...E.values(g(t))].forEach((e) => {
                 E.delete(e.id);
             }));
     },

@@ -114,8 +114,8 @@ let m = (e) => {
                     'empty-member-'.concat(e)
                 )
             );
-        let g = Math.max(Math.min(c - f.length, 99), 0);
-        if (1 === g) {
+        let h = Math.max(Math.min(c - f.length, 99), 0);
+        if (1 === h) {
             let e = n[l];
             f.push(
                 (0, r.jsx)(
@@ -134,10 +134,10 @@ let m = (e) => {
                 className: p.partyMembers,
                 children: [
                     f,
-                    g > 1
+                    h > 1
                         ? (0, r.jsxs)('div', {
                               className: p.partyMemberOverflow,
-                              children: ['+', g]
+                              children: ['+', h]
                           })
                         : null
                 ]

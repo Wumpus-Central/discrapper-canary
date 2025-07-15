@@ -13,10 +13,10 @@ function m(e) {
     let { questId: t } = e,
         { quests: n, excludedQuests: m, isFetchingCurrentQuests: f } = (0, a.J2)({ fetchPolicy: 'cache-or-network' }),
         _ = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
-        g = i.useMemo(() => m.find((e) => e.id === t), [t, m]);
+        h = i.useMemo(() => m.find((e) => e.id === t), [t, m]);
     return f
         ? (0, r.jsx)(l.$jN, { className: p.spinner })
-        : null != g
+        : null != h
           ? (0, r.jsx)(u.W, { questId: t })
           : null == _
             ? (0, r.jsx)(d.o, {

@@ -1,43 +1,43 @@
-n.d(t, {
+r.d(t, {
     AT: () => g,
-    fC: () => S,
+    fC: () => b,
     gr: () => m,
     hQ: () => f
 });
-var r,
-    l = n(73800),
-    s = n(913527),
-    a = n.n(s),
-    i = n(442837),
-    o = n(493683),
-    c = n(336197),
-    u = n(131704),
-    d = n(592125),
-    h = n(981631),
-    p = n(388032),
-    f = (((r = {})[(r.LONG = 0)] = 'LONG'), (r[(r.SHORT = 1)] = 'SHORT'), r);
+var n,
+    s = r(73800),
+    l = r(913527),
+    a = r.n(l),
+    o = r(442837),
+    i = r(493683),
+    c = r(336197),
+    u = r(131704),
+    d = r(592125),
+    h = r(981631),
+    p = r(388032),
+    f = (((n = {})[(n.LONG = 0)] = 'LONG'), (n[(n.SHORT = 1)] = 'SHORT'), n);
 function g(e) {
-    let { dueAt: t, now: n, type: r } = e;
+    let { dueAt: t, now: r, type: n } = e;
     if (null == t)
         return {
             string: '',
             isOverdue: !1
         };
-    let l = 0 === r ? p.t.TjNWND : p.t.H4gnX1,
-        s = 0 === r ? p.t.haia19 : p.t['Uq7Y+/'],
-        i = n > t;
+    let s = 0 === n ? p.t.TjNWND : p.t.H4gnX1,
+        l = 0 === n ? p.t.haia19 : p.t['Uq7Y+/'],
+        o = r > t;
     return {
-        dueInText: p.intl.formatToPlainString(i ? s : l, {
+        dueInText: p.intl.formatToPlainString(o ? l : s, {
             duration: a()
-                .duration(t.getTime() - n.getTime(), 'millisecond')
+                .duration(t.getTime() - r.getTime(), 'millisecond')
                 .humanize()
         }),
-        isOverdue: i
+        isOverdue: o
     };
 }
 function m(e) {
-    let t = (0, i.e7)([d.Z], () => d.Z.getChannel(e.saveData.channelId));
-    return l.useMemo(
+    let t = (0, o.e7)([d.Z], () => d.Z.getChannel(e.saveData.channelId));
+    return s.useMemo(
         () =>
             null != t
                 ? t
@@ -52,12 +52,12 @@ function m(e) {
         [t, e]
     );
 }
-async function S(e, t) {
+async function b(e, t) {
     if ((null == t ? void 0 : t.type) === h.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
-            let t = await o.Z.fetchChannel(e.saveData.channelId);
+            let t = await i.Z.fetchChannel(e.saveData.channelId);
             if (null == t.recipients || t.recipients.length > 1) return;
-            await o.Z.ensurePrivateChannel(t.recipients.map((e) => e.id));
+            await i.Z.ensurePrivateChannel(t.recipients.map((e) => e.id));
         } catch (e) {}
     (0, c.Z)(h.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId), { openChannel: !0 });
 }

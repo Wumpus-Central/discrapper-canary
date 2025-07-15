@@ -3,9 +3,9 @@
     F8: () => y,
     Fo: () => N,
     H4: () => A,
-    JO: () => k,
+    JO: () => M,
     ME: () => D,
-    Ow: () => M,
+    Ow: () => k,
     UJ: () => C,
     XM: () => T,
     XY: () => R,
@@ -143,7 +143,7 @@ function R(e, t) {
     return null != n && null != n[e] && !0 === n[e].dismissed;
 }
 function P(e, t, n) {
-    !((0, _.cI)(e) || f.Z.hasUserHitDCCap(e)) &&
+    !((0, _.cI)(e) || f.Z.hasUserHitDCCap(e, null == t ? void 0 : t.guildId)) &&
         (n ||
             (i.Z.dispatch({
                 type: 'DCF_EVENT_LOGGED',
@@ -156,7 +156,7 @@ function P(e, t, n) {
                 onAdded: () => {
                     var n;
                     let [i, a] = (0, _.Aq)();
-                    ((0, d.cm)(e),
+                    ((0, d.cm)(e, null == t ? void 0 : t.guildId),
                         s.default.track(E.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: r.z[e],
                             content_count: i,
@@ -194,10 +194,10 @@ async function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     (w(e, n), await O(e, t), D(e, n));
 }
-async function k(e, t, n) {
+async function M(e, t, n) {
     (w(e, n), await I(e, t), D(e, n));
 }
-async function M(e) {
+async function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     (w(e, t), await v(e), D(e, t));
 }

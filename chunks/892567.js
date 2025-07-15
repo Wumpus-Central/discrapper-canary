@@ -1,40 +1,52 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(120356),
     a = n.n(i),
     o = n(522942),
-    s = n(594928),
-    l = n(821795),
-    c = n(7284),
-    u = n(482695);
-function d(e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = l.Fb.STATIC } = e,
-        o = s.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
-        d = (0, c.j)({ displayNameStyles: n });
+    s = n(866442),
+    l = n(442837),
+    c = n(607070),
+    u = n(594928),
+    d = n(821795),
+    f = n(7284),
+    _ = n(482695);
+function p(e) {
+    let { userName: t, displayNameStyles: n, effectDisplayType: i = d.F.STATIC } = e,
+        o = u.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
+        p = (0, f.j)({ displayNameStyles: n }),
+        {
+            useReducedMotion: m,
+            saturation: g,
+            desaturateUserColors: E
+        } = (0, l.cj)([c.Z], () => ({
+            useReducedMotion: c.Z.useReducedMotion,
+            saturation: c.Z.saturation,
+            desaturateUserColors: c.Z.desaturateUserColors
+        }));
     if (!o || null == n) return t;
-    let _ = n.colors.length > 0 ? (0, l.fk)(n.colors[0]) : '';
-    if (i === l.Fb.PLAIN)
+    let b = n.colors.map((e) => (0, s.ho)(e, !1, E ? g : null));
+    if (i === d.F.PLAIN)
         return (0, r.jsx)('span', {
-            className: d,
+            className: p,
             children: t
         });
-    let p = f(n.effectId);
+    let y = h(n.effectId);
     return (0, r.jsx)('div', {
-        className: a()(p, d, { [u.animated]: i === l.Fb.ANIMATED }),
-        style: { color: _ },
+        className: a()(y, p, { [_.animated]: i === d.F.ANIMATED && !m }),
+        style: { color: b.length > 0 ? b[0] : void 0 },
         children: t
     });
 }
-function f(e) {
+function h(e) {
     switch (e) {
         case o.m.GRADIENT:
-            return u.gradient;
+            return _.gradient;
         case o.m.NEON:
-            return u.neon;
+            return _.neon;
         case o.m.TOON:
-            return u.toon;
+            return _.toon;
         case o.m.POP:
-            return u.pop;
+            return _.pop;
         case o.m.SOLID:
         default:
             return '';

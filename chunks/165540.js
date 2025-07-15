@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(685006),
     x = n(61356),
     v = n(314734),
-    j = n(921944),
-    O = n(388032),
+    O = n(921944),
+    j = n(388032),
     E = n(560163);
 let S = i.forwardRef(function (e, t) {
         var n, l;
@@ -37,9 +37,9 @@ let S = i.forwardRef(function (e, t) {
             [C]
         );
         let S = i.useCallback(() => {
-                (b ? d.yT(h.ti.DISMISSED) : ((0, _.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
+                (b ? d.yT(h.ti.DISMISSED) : ((0, _.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
             }, [b, f, x]),
-            I = (0, r.jsx)(y, {
+            P = (0, r.jsx)(y, {
                 size: 'refresh_sm',
                 color: 'currentColor'
             });
@@ -79,7 +79,7 @@ let S = i.forwardRef(function (e, t) {
                         tabIndex: 0,
                         className: a()(E.button, { [E.buttonActive]: b }),
                         onClick: S,
-                        'aria-label': O.intl.string(O.t.erHFxM),
+                        'aria-label': j.intl.string(j.t.erHFxM),
                         'aria-expanded': b,
                         'aria-haspopup': 'dialog',
                         focusProps: {
@@ -94,7 +94,7 @@ let S = i.forwardRef(function (e, t) {
                     },
                     C
                 )),
-                (l = l = { children: I }),
+                (l = l = { children: P }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -111,7 +111,7 @@ let S = i.forwardRef(function (e, t) {
             )
         });
     }),
-    I = i.memo(function (e) {
+    P = i.memo(function (e) {
         let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
             s = i.useRef(null),
             c = (0, m.R)({

@@ -24,10 +24,10 @@ function S(e) {
         R = (0, l.e7)([u.Z], () => (null != f ? u.Z.getChannelId(f) : null), [f]),
         m = null != f ? f : null,
         A = (0, l.e7)([d.Z], () => (null != m ? d.Z.getGuild(m) : null), [m]),
-        { shouldShowIncidentActions: P, incidentData: y, isUnderLockdown: b } = (0, E.mI)(m),
+        { shouldShowIncidentActions: y, incidentData: P, isUnderLockdown: b } = (0, E.mI)(m),
         D = (0, a.n2)(null != (t = null == A ? void 0 : A.id) ? t : C.lds),
         v = r.useCallback(() => null != A && (0, c._X)(A.id), [A]);
-    if (null == A || null == y || !P) return null;
+    if (null == A || null == P || !y) return null;
     let U = (e) => {
             if (e && D && R !== g.oC.MEMBER_SAFETY && v())
                 return void h.default.track(C.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
@@ -37,7 +37,7 @@ function S(e) {
             (0, o.ZDy)(async () => {
                 let e = {
                         source: I.Zu.NAGBAR,
-                        alertType: (0, p.T1)(y)
+                        alertType: (0, p.T1)(P)
                     },
                     { default: t } = await n.e('58175').then(n.bind(n, 664452));
                 return (n) => {
@@ -96,8 +96,8 @@ function S(e) {
             guild: A,
             size: s.Z.Sizes.MINI
         }),
-        L = (0, p.OY)(y, A.name);
-    if (null != (null != (S = y.dmsDisabledUntil) ? S : y.invitesDisabledUntil) && b)
+        L = (0, p.OY)(P, A.name);
+    if (null != (null != (S = P.dmsDisabledUntil) ? S : P.invitesDisabledUntil) && b)
         return (0, i.jsxs)(o.qXd, {
             className: O.notice,
             color: o.DM8.NEUTRAL,
@@ -124,7 +124,7 @@ function S(e) {
                 })
             ]
         });
-    let Z = (0, p.CG)(y) ? T.intl.formatToPlainString(T.t.tZTx2N, { guildName: A.name }) : (0, p.kk)(y) ? T.intl.formatToPlainString(T.t['1bSmxs'], { guildName: A.name }) : T.intl.formatToPlainString(T.t.W87xDA, { guildName: A.name }),
+    let Z = (0, p.CG)(P) ? T.intl.formatToPlainString(T.t.tZTx2N, { guildName: A.name }) : (0, p.kk)(P) ? T.intl.formatToPlainString(T.t['1bSmxs'], { guildName: A.name }) : T.intl.formatToPlainString(T.t.W87xDA, { guildName: A.name }),
         k = D && R === g.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(o.qXd, {
         className: O.notice,

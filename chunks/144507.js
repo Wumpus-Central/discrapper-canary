@@ -1,6 +1,6 @@
 n.d(t, {
-    $D: () => g,
-    H2: () => h,
+    $D: () => h,
+    H2: () => g,
     MO: () => _,
     X$: () => f,
     d5: () => p
@@ -34,7 +34,7 @@ function _(e) {
     let t = (0, u.Bt)(null == e ? void 0 : e.id),
         n = (0, l.Ob)(e),
         r = (0, l.gS)(null == e ? void 0 : e.id),
-        s = g(e),
+        s = h(e),
         d = (0, i.e7)([c.default], () => {
             let t = c.default.getCurrentUser();
             return null != e && (0, o.eM)(e, t);
@@ -54,9 +54,9 @@ function _(e) {
               shouldRestrictUpdatingRoleSubscriptionSettings: f
           });
 }
-function g(e) {
-    return (0, i.e7)([s.Z], () => h(e), [e]);
-}
 function h(e) {
+    return (0, i.e7)([s.Z], () => g(e), [e]);
+}
+function g(e) {
     return null != e && s.Z.can(d.Plq.ADMINISTRATOR, e);
 }

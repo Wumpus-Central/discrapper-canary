@@ -42,7 +42,7 @@ function R(e) {
             let r = (0, d.iC)(a, n);
             return null != y ? (null != (e = r.find((e) => e.id === y)) ? e : null) : void 0 !== P ? P : null == D ? null : null != (t = r.find((e) => (0, v.sr)(e, D))) ? t : null;
         }),
-        { product: k, purchase: M } = (0, f.Z)(null == L ? void 0 : L.skuId),
+        { product: M, purchase: k } = (0, f.Z)(null == L ? void 0 : L.skuId),
         j = O.ZP.canUseCollectibles(t),
         U = i.useRef(null),
         G = (0, p.Z)(c),
@@ -66,17 +66,17 @@ function R(e) {
         ),
         H = (0, h.M)(),
         Y = () =>
-            (null != M && (!(0, d.qS)(M) || j)) || null === L
+            (null != k && (!(0, d.qS)(k) || j)) || null === L
                 ? (0, r.jsx)(s.zxk, {
                       variant: 'primary',
                       text: N.intl.string(N.t.Jh8fJy),
                       onClick: F,
                       disabled: B
                   })
-                : null == M && (j || !(0, d.G1)(k))
+                : null == k && (j || !(0, d.G1)(M))
                   ? (0, r.jsx)(o.zx, {
                         className: C.modalFooterShopButton,
-                        onClick: () => Z(null == k ? void 0 : k.skuId),
+                        onClick: () => Z(null == M ? void 0 : M.skuId),
                         children: N.intl.string(N.t.fYfGgI)
                     })
                   : (0, r.jsx)(g.Z, {
@@ -130,9 +130,9 @@ function R(e) {
                             onClick: _
                         }),
                     H &&
-                        (0, d.G1)(k) &&
+                        (0, d.G1)(M) &&
                         (0, r.jsx)(m.Z, {
-                            product: k,
+                            product: M,
                             onSecondaryClick: _
                         })
                 ]

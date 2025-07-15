@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(665149),
     x = n(984370),
     v = n(616286),
-    j = n(975146),
-    O = n(430824),
+    O = n(975146),
+    j = n(430824),
     E = n(496675),
     S = n(626135),
-    I = n(431328),
-    P = n(501655),
+    P = n(431328),
+    I = n(501655),
     Z = n(200498),
     N = n(146085),
     T = n(427679),
@@ -46,7 +46,7 @@ function L(e) {
             [t.id]
         ),
         b = (0, Z.B)(t.id),
-        y = (0, I.Rk)(t.id, P.pV.REQUESTED_TO_SPEAK_ONLY),
+        y = (0, P.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: C } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         x = C && u;
     return (0, r.jsxs)(h.Gt, {
@@ -68,7 +68,7 @@ function L(e) {
             !u &&
                 C &&
                 (0, r.jsx)(
-                    j.Z,
+                    O.Z,
                     {
                         className: a()(k.button, { [k.sidebarOpen]: c }),
                         onClick: () => {
@@ -95,11 +95,11 @@ function U(e) {
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: p } = e,
         h = (0, b.ZP)(n),
         f = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
-        m = (0, I.Io)(n.id),
-        g = (0, I.Rk)(n.id, P.pV.AUDIENCE),
-        _ = (0, o.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
+        m = (0, P.Io)(n.id),
+        g = (0, P.Rk)(n.id, I.pV.AUDIENCE),
+        _ = (0, o.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
         v = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
-        j = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
+        O = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
         Z = (0, w.Z)(n),
         A = (0, o.e7)([E.Z], () => E.Z.can(N.yP, n)),
         U = () => {
@@ -201,18 +201,18 @@ function U(e) {
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: j ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
+                                      children: O ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
                                   }),
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-default',
-                                      children: j ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
+                                      children: O ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
                               className: k.buttons,
-                              children: j
+                              children: O
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zx, {

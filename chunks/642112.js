@@ -4,8 +4,8 @@ var r = a(573736),
 function n(t, e, a = 250, c, s, E, l) {
     var u, I;
     if (!E.exception || !E.exception.values || !l || !(0, r.V9)(l.originalException, Error)) return;
-    let d = E.exception.values.length > 0 ? E.exception.values[E.exception.values.length - 1] : void 0;
-    d &&
+    let R = E.exception.values.length > 0 ? E.exception.values[E.exception.values.length - 1] : void 0;
+    R &&
         (E.exception.values =
             ((u = (function t(e, a, _, n, c, s, E, l) {
                 if (s.length >= _ + 1) return s;
@@ -28,7 +28,7 @@ function n(t, e, a = 250, c, s, E, l) {
                         }),
                     u
                 );
-            })(t, e, s, l.originalException, c, E.exception.values, d, 0)),
+            })(t, e, s, l.originalException, c, E.exception.values, R, 0)),
             (I = a),
             u.map((t) => (t.value && (t.value = (0, _.$G)(t.value, I)), t))));
 }

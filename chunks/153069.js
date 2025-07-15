@@ -1,14 +1,14 @@
-(s.d(t, { Z: () => E }), s(35282), s(704826));
+(s.d(t, { Z: () => O }), s(35282), s(704826));
 var n,
     r = s(255367),
-    o = s(73800),
-    i = s(120356),
-    a = s.n(i),
+    i = s(73800),
+    o = s(120356),
+    a = s.n(o),
     l = s(442837),
     c = s(755721),
     d = s(481060),
-    u = s(893776),
-    h = s(479495),
+    h = s(893776),
+    u = s(479495),
     p = s(254942),
     m = s(388905),
     f = s(379760),
@@ -20,11 +20,11 @@ var n,
     j = s(314897),
     w = s(896797),
     y = s(585483),
-    P = s(981631),
-    v = s(388032),
+    v = s(981631),
+    P = s(388032),
     R = s(472645),
     A = s(20493);
-function N(e, t, s) {
+function T(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function N(e, t, s) {
         e
     );
 }
-function S(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(s);
@@ -48,20 +48,20 @@ function S(e) {
                 })
             )),
             n.forEach(function (t) {
-                N(e, t, s[t]);
+                T(e, t, s[t]);
             }));
     }
     return e;
 }
-class T extends (n = o.PureComponent) {
+class S extends (n = i.PureComponent) {
     componentDidMount() {
         window.addEventListener('keydown', this.handleTabOrEnter);
     }
     componentDidUpdate(e, t) {
         let { authenticated: s, transitionTo: n } = this.props;
-        if ((s && !e.authenticated && n(P.Z5c.APP), t.errors !== this.state.errors)) {
-            var r, o, i;
-            this.hasError('password') ? null == (r = this.passwordRef) || r.focus() : this.hasError('email') || this.hasError('login') ? null == (o = this.loginRef) || o.focus() : this.hasError('code') && (null == (i = this.codeRef) || i.focus());
+        if ((s && !e.authenticated && n(v.Z5c.APP), t.errors !== this.state.errors)) {
+            var r, i, o;
+            this.hasError('password') ? null == (r = this.passwordRef) || r.focus() : this.hasError('email') || this.hasError('login') ? null == (i = this.loginRef) || i.focus() : this.hasError('code') && (null == (o = this.codeRef) || o.focus());
         }
     }
     componentWillUnmount() {
@@ -74,13 +74,13 @@ class T extends (n = o.PureComponent) {
         var e;
         let { country: t } = this.props,
             s = !this.hasError('email') && this.hasError('password'),
-            n = (0, r.jsxs)(o.Fragment, {
+            n = (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)(
                         m.Dx,
                         {
                             className: a()(A.marginBottom8, R.title),
-                            children: v.intl.string(v.t.bPP34e)
+                            children: P.intl.string(P.t.bPP34e)
                         },
                         'title'
                     ),
@@ -88,7 +88,7 @@ class T extends (n = o.PureComponent) {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         className: R.subtitle,
-                        children: v.intl.string(v.t.rvx0T0)
+                        children: P.intl.string(P.t.rvx0T0)
                     })
                 ]
             });
@@ -103,7 +103,7 @@ class T extends (n = o.PureComponent) {
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
                             className: A.marginBottom20,
-                            label: v.intl.string(v.t.tUjnxs),
+                            label: P.intl.string(P.t.tUjnxs),
                             error: null != (e = this.renderError('login')) ? e : this.renderError('email'),
                             onChange: (e, t) =>
                                 this.setState({
@@ -120,7 +120,7 @@ class T extends (n = o.PureComponent) {
                             required: !0
                         }),
                         (0, r.jsx)(m.II, {
-                            label: v.intl.string(v.t['CIGa+/']),
+                            label: P.intl.string(P.t['CIGa+/']),
                             error: this.renderError('password'),
                             onChange: (e) => this.setState({ password: e }),
                             name: 'password',
@@ -137,7 +137,7 @@ class T extends (n = o.PureComponent) {
                             look: c.zx.Looks.LINK,
                             color: c.zx.Colors.LINK,
                             className: A.marginTop4,
-                            children: v.intl.string(v.t.wWIufn)
+                            children: P.intl.string(P.t.wWIufn)
                         })
                     ]
                 })
@@ -163,10 +163,9 @@ class T extends (n = o.PureComponent) {
                         (0, r.jsx)('div', {
                             'data-theme': n,
                             className: a()(e, R.navRow),
-                            children: (0, r.jsx)(I, {
+                            children: (0, r.jsx)(E, {
                                 loginStatus: t,
                                 closeLogin: s,
-                                themeClass: e,
                                 handleLogin: this.handleLogin
                             })
                         })
@@ -194,9 +193,9 @@ class T extends (n = o.PureComponent) {
     }
     renderDisabledAccount() {
         let { authBoxClassName: e, theme: t } = this.props,
-            s = this.props.loginStatus === P.u34.ACCOUNT_DISABLED,
-            n = s ? v.intl.string(v.t['j3rC+f']) : v.intl.string(v.t.ZFWofn),
-            o = s ? v.intl.string(v.t['6eNTWV']) : v.intl.string(v.t.pCBti4);
+            s = this.props.loginStatus === v.u34.ACCOUNT_DISABLED,
+            n = s ? P.intl.string(P.t['j3rC+f']) : P.intl.string(P.t.ZFWofn),
+            i = s ? P.intl.string(P.t['6eNTWV']) : P.intl.string(P.t.pCBti4);
         return (0, r.jsxs)(m.ZP, {
             tag: 'form',
             onSubmit: this.handleReset,
@@ -209,19 +208,19 @@ class T extends (n = o.PureComponent) {
                 }),
                 (0, r.jsx)(m.DK, {
                     className: A.marginBottom20,
-                    children: o
+                    children: i
                 }),
                 (0, r.jsxs)(m.gO, {
                     children: [
                         (0, r.jsx)(d.zxk, {
                             variant: 'primary',
-                            text: v.intl.string(v.t.JhDw5u),
+                            text: P.intl.string(P.t.JhDw5u),
                             type: 'submit',
                             fullWidth: !0
                         }),
                         (0, r.jsx)('div', {
                             className: a()(A.marginTop8, R.needAccount),
-                            children: v.intl.format(v.t.js2rr6, { onClick: this.handleCancelAccountDeletion })
+                            children: P.intl.format(P.t.js2rr6, { onClick: this.handleCancelAccountDeletion })
                         })
                     ]
                 })
@@ -231,12 +230,12 @@ class T extends (n = o.PureComponent) {
     renderResetPhonePassword() {
         let { resetPasswordPhoneToken: e } = this.state;
         return (0, r.jsx)(
-            h.Z,
-            S(
+            u.Z,
+            N(
                 {
                     resetToken: e,
                     onLoginSuccess: (e) => {
-                        (this.setState({ errors: {} }), u.Z.switchAccountToken(e));
+                        (this.setState({ errors: {} }), h.Z.switchAccountToken(e));
                     }
                 },
                 this.props
@@ -252,8 +251,8 @@ class T extends (n = o.PureComponent) {
             children: (0, r.jsx)('div', {
                 className: A.marginTop20,
                 children: (0, r.jsx)(f.Z, {
-                    title: v.intl.string(v.t['+xqy3d']),
-                    subtitle: v.intl.format(v.t.ef4uZ2, { onResendClick: this.handleResendCode }),
+                    title: P.intl.string(P.t['+xqy3d']),
+                    subtitle: P.intl.format(P.t.ef4uZ2, { onResendClick: this.handleResendCode }),
                     error: t,
                     onSubmit: this.handlePasswordReset,
                     onCancel: void 0
@@ -265,51 +264,51 @@ class T extends (n = o.PureComponent) {
         let { loginStatus: e } = this.props;
         if (null != this.state.resetPasswordPhoneToken) return this.renderResetPhonePassword();
         switch (e) {
-            case P.u34.LOGGING_IN_MFA_SMS:
-            case P.u34.MFA_SMS_STEP:
-            case P.u34.LOGGING_IN_MFA:
-            case P.u34.MFA_STEP:
+            case v.u34.LOGGING_IN_MFA_SMS:
+            case v.u34.MFA_SMS_STEP:
+            case v.u34.LOGGING_IN_MFA:
+            case v.u34.MFA_STEP:
                 return this.renderMFA();
-            case P.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
-            case P.u34.ACCOUNT_DISABLED:
+            case v.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
+            case v.u34.ACCOUNT_DISABLED:
                 return this.renderDisabledAccount();
-            case P.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+            case v.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
                 return this.renderPhonePasswordRecovery();
-            case P.u34.LOGGING_IN:
-            case P.u34.NONE:
+            case v.u34.LOGGING_IN:
+            case v.u34.NONE:
             default:
                 return this.renderDefault();
         }
     }
     constructor(e) {
         (super(e),
-            N(this, 'loginRef', void 0),
-            N(this, 'passwordRef', void 0),
-            N(this, 'codeRef', void 0),
-            N(this, 'handleAuthToken', async (e) => {
-                (this.setState({ errors: {} }), await u.Z.loginToken(e, !1));
+            T(this, 'loginRef', void 0),
+            T(this, 'passwordRef', void 0),
+            T(this, 'codeRef', void 0),
+            T(this, 'handleAuthToken', async (e) => {
+                (this.setState({ errors: {} }), await h.Z.loginToken(e, !1));
             }),
-            N(this, 'handleTabOrEnter', (e) => {
+            T(this, 'handleTabOrEnter', (e) => {
                 if ('Tab' === e.key && !e.shiftKey && e.target === this.loginRef) {
                     var t;
                     (null == (t = this.passwordRef) || t.focus(), e.stopPropagation(), e.preventDefault());
                 }
                 'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
             }),
-            N(this, 'setLoginRef', (e) => {
+            T(this, 'setLoginRef', (e) => {
                 this.loginRef = e;
             }),
-            N(this, 'setPasswordRef', (e) => {
+            T(this, 'setPasswordRef', (e) => {
                 this.passwordRef = e;
             }),
-            N(this, 'setCodeRef', (e) => {
+            T(this, 'setCodeRef', (e) => {
                 this.codeRef = e;
             }),
-            N(this, 'getFullLogin', () => {
+            T(this, 'getFullLogin', () => {
                 let { loginPrefix: e, login: t } = this.state;
                 return e + t;
             }),
-            N(this, 'renderError', (e) => {
+            T(this, 'renderError', (e) => {
                 let { errors: t } = this.state;
                 if (this.hasError(e)) {
                     let s = t[e];
@@ -317,21 +316,21 @@ class T extends (n = o.PureComponent) {
                 }
                 return null;
             }),
-            N(this, 'handleForgotPassword', async (e) => {
+            T(this, 'handleForgotPassword', async (e) => {
                 var t;
                 (null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus());
                 let s = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    if ((y.S.dispatch(P.CkL.WAVE_EMPHASIZE), !(await u.Z.forgotPassword(s)))) return;
+                    if ((y.S.dispatch(v.CkL.WAVE_EMPHASIZE), !(await h.Z.forgotPassword(s)))) return;
                     (0, d.h7j)((e) => {
                         var t, n;
                         return (0, r.jsx)(
                             d.ConfirmModal,
-                            ((t = S(
+                            ((t = N(
                                 {
-                                    header: v.intl.string(v.t.f5Pi7O),
-                                    confirmText: v.intl.string(v.t.BddRzc),
+                                    header: P.intl.string(P.t.f5Pi7O),
+                                    confirmText: P.intl.string(P.t.BddRzc),
                                     confirmButtonColor: c.zx.Colors.BRAND
                                 },
                                 e
@@ -339,7 +338,7 @@ class T extends (n = o.PureComponent) {
                             (n = {
                                 children: (0, r.jsx)(d.Text, {
                                     variant: 'text-md/normal',
-                                    children: v.intl.format(v.t['6u5hQ0'], { email: s })
+                                    children: P.intl.format(P.t['6u5hQ0'], { email: s })
                                 })
                             }),
                             (n = null != n ? n : {}),
@@ -363,11 +362,11 @@ class T extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            N(this, 'handleLogin', async (e) => {
+            T(this, 'handleLogin', async (e) => {
                 let { password: t, undelete: s } = this.state;
                 (null == e || e.preventDefault(), this.setState({ errors: {} }));
                 try {
-                    await u.Z.login({
+                    await h.Z.login({
                         login: this.getFullLogin(),
                         password: t,
                         undelete: s,
@@ -378,7 +377,7 @@ class T extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            N(this, 'handlePasswordReset', async (e) => {
+            T(this, 'handlePasswordReset', async (e) => {
                 this.setState({
                     phoneVerifyError: null,
                     errors: {}
@@ -390,21 +389,21 @@ class T extends (n = o.PureComponent) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
             }),
-            N(this, 'handleTokenSubmitMFA', (e) => {
+            T(this, 'handleTokenSubmitMFA', (e) => {
                 let { mfaType: t, data: s, ticket: n } = e;
-                return u.Z.loginMFAv2({
+                return h.Z.loginMFAv2({
                     code: s,
                     ticket: n,
                     mfaType: t,
                     isMultiAccount: !0
                 });
             }),
-            N(this, 'handleResendCode', () => {
+            T(this, 'handleResendCode', () => {
                 _.Z.resendCode(this.getFullLogin());
             }),
-            N(this, 'handleReset', (e) => {
+            T(this, 'handleReset', (e) => {
                 (null == e || e.preventDefault(),
-                    u.Z.loginReset(!0),
+                    h.Z.loginReset(!0),
                     this.setState({
                         password: '',
                         loginPrefix: '',
@@ -416,7 +415,7 @@ class T extends (n = o.PureComponent) {
                         errors: {}
                     }));
             }),
-            N(this, 'handleCancelAccountDeletion', () => {
+            T(this, 'handleCancelAccountDeletion', () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
             }),
             (this.state = {
@@ -432,37 +431,34 @@ class T extends (n = o.PureComponent) {
             }));
     }
 }
-function I(e) {
-    let { loginStatus: t, closeLogin: s, themeClass: n, handleLogin: o } = e;
+function E(e) {
+    let { loginStatus: t, closeLogin: s, handleLogin: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.zx, {
-                type: 'button',
-                look: c.zx.Looks.LINK,
-                color: c.zx.Colors.PRIMARY,
+            (0, r.jsx)(d.Avr, {
+                variant: 'secondary',
+                size: 'md',
                 onClick: s,
-                size: c.zx.Sizes.SMALL,
-                className: a()(n, R.backButton),
-                children: v.intl.string(v.t['13/7kZ'])
+                text: P.intl.string(P.t['13/7kZ'])
             }),
             (0, r.jsx)('div', {
                 'data-button-hoisted-classname-wrapper': !0,
                 className: R.continueButton,
                 children: (0, r.jsx)(d.zxk, {
                     variant: 'primary',
-                    text: v.intl.string(v.t['3PatS0']),
-                    loading: t === P.u34.LOGGING_IN,
-                    onClick: o
+                    text: P.intl.string(P.t['3PatS0']),
+                    loading: t === v.u34.LOGGING_IN,
+                    onClick: n
                 })
             })
         ]
     });
 }
-N(T, 'defaultProps', {
+T(S, 'defaultProps', {
     transitionTo: (e) => s.g.location.assign(e),
     replaceWith: (e) => s.g.location.replace(e)
 });
-let E = function (e) {
+let O = function (e) {
     let t = (0, l.cj)([w.Z, j.default, x.Z, C.Z], () => ({
         authenticated: j.default.isAuthenticated(),
         loginStatus: j.default.getLoginStatus(),
@@ -472,5 +468,5 @@ let E = function (e) {
         country: x.Z.getCountryCode(),
         theme: C.Z.theme
     }));
-    return (0, r.jsx)(T, S({}, e, t));
+    return (0, r.jsx)(S, N({}, e, t));
 };

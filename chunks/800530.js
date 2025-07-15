@@ -2,15 +2,15 @@ n.d(t, {
     Cg: () => f,
     Cp: () => N,
     Cs: () => O,
-    EY: () => v,
-    I5: () => g,
+    EY: () => C,
+    I5: () => h,
     JQ: () => j,
     RY: () => y,
-    Sv: () => C,
+    Sv: () => x,
     TX: () => T,
-    ZW: () => x,
+    ZW: () => v,
     bK: () => E,
-    n0: () => h,
+    n0: () => g,
     o6: () => P,
     oE: () => S,
     qS: () => I,
@@ -45,9 +45,9 @@ class m {}
 class f {}
 (p(f, 'CLASSIFICATION_ID', 'classification_id'), p(f, 'INCIDENT_TIMESTAMP', 'incident_time'));
 var _ = (((r = {}).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link'), r);
-class g {}
-(p(g, 'ICON_TYPE', 'icon_type'), p(g, 'HEADER', 'header'), p(g, 'BODY', 'body'), p(g, 'CTAS', 'ctas'), p(g, 'TIMESTAMP', 'timestamp'), p(g, 'THEME', 'theme'), p(g, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), p(g, 'LEARN_MORE_LINK', 'learn_more_link'), p(g, 'CLASSIFICATION_ID', 'classification_id'));
-var h = (((i = {})[(i.ViewViolationDetail = 0)] = 'ViewViolationDetail'), (i[(i.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'), (i[(i.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'), (i[(i.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'), (i[(i.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'), (i[(i.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'), (i[(i.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'), (i[(i.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'), i),
+class h {}
+(p(h, 'ICON_TYPE', 'icon_type'), p(h, 'HEADER', 'header'), p(h, 'BODY', 'body'), p(h, 'CTAS', 'ctas'), p(h, 'TIMESTAMP', 'timestamp'), p(h, 'THEME', 'theme'), p(h, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), p(h, 'LEARN_MORE_LINK', 'learn_more_link'), p(h, 'CLASSIFICATION_ID', 'classification_id'));
+var g = (((i = {})[(i.ViewViolationDetail = 0)] = 'ViewViolationDetail'), (i[(i.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'), (i[(i.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'), (i[(i.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'), (i[(i.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'), (i[(i.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'), (i[(i.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'), (i[(i.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'), i),
     b = (((l = {})[(l.SystemDM = 0)] = 'SystemDM'), (l[(l.StandingTab = 1)] = 'StandingTab'), (l[(l.AppealIngestion = 2)] = 'AppealIngestion'), l);
 Object.freeze({
     SPEED_BUMP: d.jXE.APPEAL_INGESTION_SPEED_BUMP,
@@ -59,9 +59,9 @@ Object.freeze({
 });
 var E = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
 let y = [0, 1, 2, 3],
-    C = 372,
-    v = 279,
-    x = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
+    x = 372,
+    C = 279,
+    v = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
 var O = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);
 let j = {
     'speed-bump': {

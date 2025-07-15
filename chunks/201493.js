@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(781311));
+(n.d(t, { Z: () => j }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,35 +19,35 @@ var r = n(255367),
     C = n(408310),
     x = n(75666),
     v = n(981631),
-    j = n(400816);
-let O = (e) => {
+    O = n(400816);
+let j = (e) => {
     var t;
-    let { channel: O, guild: E } = e,
+    let { channel: j, guild: E } = e,
         {
             currentCategoryId: S,
-            directoryEntries: I,
-            categoryCounts: P,
+            directoryEntries: P,
+            categoryCounts: I,
             allEntriesCount: Z,
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
-            let e = m.Z.getCurrentCategoryId(O.id),
-                t = m.Z.getDirectoryEntries(O.id, e === x.AR.ALL ? null : e),
-                n = m.Z.getDirectoryCategoryCounts(O.id);
+            let e = m.Z.getCurrentCategoryId(j.id),
+                t = m.Z.getDirectoryEntries(j.id, e === x.AR.ALL ? null : e),
+                n = m.Z.getDirectoryCategoryCounts(j.id);
             return {
                 currentCategoryId: e,
                 directoryEntries: t,
                 categoryCounts: n,
-                allEntriesCount: m.Z.getDirectoryAllEntriesCount(O.id),
+                allEntriesCount: m.Z.getDirectoryAllEntriesCount(j.id),
                 isLoading: m.Z.isFetching()
             };
         });
     i.useEffect(
         () => () => {
-            let e = u.ZP.lastMessageId(O.id);
+            let e = u.ZP.lastMessageId(j.id);
             null != e &&
                 o.Z.wait(() => {
                     (0, s.In)(
-                        O.id,
+                        j.id,
                         {
                             object: v.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
                             objectType: v.Qqv.ACK_AUTOMATIC
@@ -58,19 +58,19 @@ let O = (e) => {
                     );
                 });
         },
-        [O.id]
+        [j.id]
     );
-    let T = i.useMemo(() => (null != I ? (0, y.v)(Object.values(I), S) : null), [I, S]),
+    let T = i.useMemo(() => (null != P ? (0, y.v)(Object.values(P), S) : null), [P, S]),
         {
             mostRecentQuery: A,
             searchFetching: w,
             searchResults: R
         } = (0, l.cj)([f.Z], () => {
-            let { mostRecentQuery: e, fetching: t } = f.Z.getSearchState(O.id);
+            let { mostRecentQuery: e, fetching: t } = f.Z.getSearchState(j.id);
             return {
                 mostRecentQuery: e,
                 searchFetching: t,
-                searchResults: f.Z.getSearchResults(O.id, e)
+                searchResults: f.Z.getSearchResults(j.id, e)
             };
         }),
         [M, D] = i.useState(A),
@@ -92,16 +92,16 @@ let O = (e) => {
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            (h.c$(O.id), h.YZ(O.id), t && p.c(O.id), D(e));
-        }, [O.id]),
+            (h.c$(j.id), h.YZ(j.id), t && p.c(j.id), D(e));
+        }, [j.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
-                directory_channel_id: O.id,
+                directory_channel_id: j.id,
                 directory_guild_id: E.id,
                 primary_category_id: S
             });
-        }, [O.id, E.id, S]));
-    let F = (0, g.G)(O)
+        }, [j.id, E.id, S]));
+    let F = (0, g.G)(j)
             ? () => {
                   (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
@@ -138,7 +138,7 @@ let O = (e) => {
                                   {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
-                                      directoryChannelId: O.id,
+                                      directoryChannelId: j.id,
                                       currentCategoryId: S === x.AR.ALL ? null : S
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -162,14 +162,14 @@ let O = (e) => {
         H = (e) => {
             0 !== M.trim().length &&
                 e.charCode === v.yXg.ENTER &&
-                (h.Rq(O.id, M),
+                (h.Rq(j.id, M),
                 d.default.track(v.rMx.GUILD_DIRECTORY_SEARCH, {
-                    directory_channel_id: O.id,
+                    directory_channel_id: j.id,
                     directory_guild_id: E.id
                 }));
         },
         G = () => {
-            (D(''), h.So(O.id));
+            (D(''), h.So(j.id));
         };
     return k
         ? (0, r.jsx)(C.Z, {
@@ -184,19 +184,19 @@ let O = (e) => {
           })
         : null == T && null == S
           ? (0, r.jsx)('div', {
-                className: j.pageContainer,
-                children: (0, r.jsx)(a.$jN, { className: j.spinner })
+                className: O.pageContainer,
+                children: (0, r.jsx)(a.$jN, { className: O.spinner })
             })
           : (null == T ? void 0 : T.length) === 0 && null == S
             ? (0, r.jsx)('div', {
-                  className: j.pageContainer,
+                  className: O.pageContainer,
                   children: (0, r.jsx)(b.Z, {
                       guild: E,
                       onAddGuild: F
                   })
               })
             : (0, r.jsx)(_.Z, {
-                  channel: O,
+                  channel: j,
                   searchQuery: M,
                   setSearchQuery: D,
                   handleSearchKeyPress: H,
@@ -204,10 +204,10 @@ let O = (e) => {
                   handleCreateOrAddGuild: F,
                   currentCategoryId: S,
                   handleSelectCategory: (e) => {
-                      h.Su(O.id, e);
+                      h.Su(j.id, e);
                   },
                   directoryEntries: T,
-                  categoryCounts: P,
+                  categoryCounts: I,
                   allEntriesCount: Z,
                   isLoading: N
               });

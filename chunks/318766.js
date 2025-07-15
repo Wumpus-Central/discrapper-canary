@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => k,
+    Z: () => M,
     u: () => D
 }),
     n(388685));
@@ -111,8 +111,8 @@ function x(e) {
         '--custom-emoji-sprite-col': e % R
     };
 }
-let k = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: k = !1, ref: M } = e,
+let M = function (e) {
+    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: M = !1, ref: k } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         V = j || S,
@@ -135,10 +135,10 @@ let k = function (e) {
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         er = (0, m.V2)({ location: 'EmojiButton' }),
-        [ei, ea] = (0, _.US)(k && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        [ei, ea] = (0, _.US)(M && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
         eo = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et,
         es = i.useRef(null),
-        el = null != M ? M : es;
+        el = null != k ? k : es;
     return (0, r.jsx)(d.yRy, {
         targetElementRef: el,
         renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: ea }),

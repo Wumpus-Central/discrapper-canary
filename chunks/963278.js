@@ -1,26 +1,26 @@
-r.d(t, { Z: () => f });
+r.d(t, { Z: () => g });
 var n = r(255367);
 r(73800);
 var l = r(120356),
-    o = r.n(l),
-    i = r(442837),
+    i = r.n(l),
+    o = r(442837),
     a = r(481060),
     s = r(594174),
     c = r(381585),
     u = r(597688),
     d = r(709999),
     p = r(388032),
-    g = r(806734);
-let f = (e) => {
+    f = r(806734);
+let g = (e) => {
     let { shelf: t, handleTransition: r, tab: l } = e,
-        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return null == f
+        g = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    return null == g
         ? null
         : (0, n.jsxs)('div', {
-              className: o()(g.shelfBlockContainer, g.centeredSection),
+              className: i()(f.shelfBlockContainer, f.centeredSection),
               children: [
                   (0, n.jsxs)('div', {
-                      className: g.blockHeader,
+                      className: f.blockHeader,
                       children: [
                           (0, n.jsx)(a.X6q, {
                               variant: 'heading-lg/semibold',
@@ -34,12 +34,12 @@ let f = (e) => {
                       ]
                   }),
                   (0, n.jsx)('div', {
-                      className: g.feed,
+                      className: f.feed,
                       children: (0, n.jsx)(n.Fragment, {
                           children: t.rankedSkuIds.map((e, r) => {
-                              let o = u.Z.getCategoryForProduct(e),
-                                  i = u.Z.getProduct(e);
-                              return null == o || null == i
+                              let i = u.Z.getCategoryForProduct(e),
+                                  o = u.Z.getProduct(e);
+                              return null == i || null == o
                                   ? null
                                   : (0, n.jsx)(
                                         c.k0,
@@ -52,9 +52,9 @@ let f = (e) => {
                                             children: (0, n.jsx)(
                                                 d.Z,
                                                 {
-                                                    product: i,
-                                                    category: o,
-                                                    user: f,
+                                                    product: o,
+                                                    category: i,
+                                                    user: g,
                                                     tab: l
                                                 },
                                                 e

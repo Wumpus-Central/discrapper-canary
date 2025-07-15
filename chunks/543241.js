@@ -16,9 +16,9 @@
     kI: () => P,
     nV: () => q,
     q5: () => H,
-    to: () => M,
+    to: () => k,
     wC: () => Z,
-    y$: () => k
+    y$: () => M
 }),
     n(290780),
     n(539854),
@@ -202,7 +202,7 @@ let P = function (e, t) {
             location: n
         });
     },
-    k = (e) => {
+    M = (e) => {
         var t, n, r;
         let { emoji: i, emojiSuggestions: o, searchQuery: l, isLocked: c, location: u, intention: d, index: f } = e,
             _ = null != (r = i.uniqueName) ? r : i.name,
@@ -234,7 +234,7 @@ let P = function (e, t) {
                           .filter((e) => null != e)
         });
     },
-    M = (e, t) => {
+    k = (e, t) => {
         s.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_EMPTY, {
             search_type: S.aib.EMOJI,
             query: t,

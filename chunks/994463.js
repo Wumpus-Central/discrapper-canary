@@ -1,11 +1,11 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
-    l = n(73800),
-    i = n(525654),
-    s = n.n(i),
-    a = n(748780),
-    o = n(782682);
-function u(e, t, n) {
+    i = n(73800),
+    l = n(525654),
+    a = n.n(l),
+    o = n(748780),
+    s = n(782682);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     let t = (e) =>
         e.interpolate({
             inputRange: [0, 1],
@@ -28,12 +28,12 @@ function c(e) {
         transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }]
     };
 }
-class d extends l.Component {
+class d extends i.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
-        'Firefox' !== s().name &&
-            (a.Z.animate(e, {
+        'Firefox' !== a().name &&
+            (o.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,
                 toValueMax: 95,
@@ -42,7 +42,7 @@ class d extends l.Component {
                 tension: 1,
                 shouldLoop: this.shouldLoop
             }),
-            a.Z.animate(t, {
+            o.Z.animate(t, {
                 loop: !0,
                 toValueMin: -59,
                 toValueMax: 75,
@@ -57,11 +57,11 @@ class d extends l.Component {
     }
     render() {
         return (0, r.jsxs)('div', {
-            className: o.searchIndexAnimation,
+            className: s.searchIndexAnimation,
             children: [
-                (0, r.jsx)('div', { className: o.searchIndexBackground }),
+                (0, r.jsx)('div', { className: s.searchIndexBackground }),
                 (0, r.jsxs)('svg', {
-                    className: o.searchIndexForeground,
+                    className: s.searchIndexForeground,
                     width: '320',
                     height: '280',
                     children: [
@@ -83,9 +83,9 @@ class d extends l.Component {
                                         (0, r.jsx)('mask', {
                                             id: 'search-index-foreground-mask-b',
                                             fill: '#fff',
-                                            children: (0, r.jsx)(a.Z.use, {
-                                                style: c(this.state),
-                                                className: o.mask,
+                                            children: (0, r.jsx)(o.Z.use, {
+                                                style: u(this.state),
+                                                className: s.mask,
                                                 xlinkHref: '#search-index-foreground-mask-a'
                                             })
                                         }),
@@ -409,9 +409,9 @@ class d extends l.Component {
                                         })
                                     ]
                                 }),
-                                (0, r.jsxs)(a.Z.g, {
-                                    className: o.magnifyingGlass,
-                                    style: c(this.state),
+                                (0, r.jsxs)(o.Z.g, {
+                                    className: s.magnifyingGlass,
+                                    style: u(this.state),
                                     children: [
                                         (0, r.jsx)('path', {
                                             fill: '#C9D2F0',
@@ -465,12 +465,12 @@ class d extends l.Component {
     }
     constructor(...e) {
         (super(...e),
-            u(this, 'state', {
-                x: new a.Z.Value(0),
-                y: new a.Z.Value(0)
+            c(this, 'state', {
+                x: new o.Z.Value(0),
+                y: new o.Z.Value(0)
             }),
-            u(this, '_isMounted', !1),
-            u(this, 'shouldLoop', () => this._isMounted));
+            c(this, '_isMounted', !1),
+            c(this, 'shouldLoop', () => this._isMounted));
     }
 }
-let E = d;
+let p = d;

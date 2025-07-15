@@ -22,10 +22,10 @@ let x = () => {
 };
 function v(e) {
     let { channel: t, appContext: n, popoutOpen: a, popoutWindow: p, currentWindow: v } = e,
-        { parentAnalyticsLocation: j } = (0, c.ZP)(),
-        O = n === y.IlC.POPOUT,
+        { parentAnalyticsLocation: O } = (0, c.ZP)(),
+        j = n === y.IlC.POPOUT,
         E = i.useRef(null),
-        { currentLayout: S, mode: I } = (0, l.cj)(
+        { currentLayout: S, mode: P } = (0, l.cj)(
             [u.Z],
             () => {
                 let e = u.Z.getMode(t.id),
@@ -42,22 +42,22 @@ function v(e) {
             },
             [t, n]
         ),
-        P = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
+        I = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
     i.useEffect(() => {
-        E.current = I;
+        E.current = P;
     });
     let Z = i.useRef(S),
         { currentDocument: N, rootNode: T } = i.useMemo(() => {
-            let e = null != p && O ? p.document : document,
+            let e = null != p && j ? p.document : document,
                 t = v.document.getElementById('app-mount');
             return {
                 currentWindow: v,
                 currentDocument: e,
                 rootNode: t
             };
-        }, [p, O, v]),
-        A = a && !O,
-        w = I === y.WtW.VIDEO && P && !A,
+        }, [p, j, v]),
+        A = a && !j,
+        w = P === y.WtW.VIDEO && I && !A,
         R = i.useCallback(
             (e, r) => {
                 r !== e && (o.Z.updateLayout(t.id, r, n), r === y.AEg.FULL_SCREEN && t.isPrivate() && g.S.dispatch(y.CkL.TEXTAREA_BLUR));
@@ -77,9 +77,9 @@ function v(e) {
         ),
         D = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
+                null != T && ((0, d.v)(O, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
             },
-            [R, M, T, j]
+            [R, M, T, O]
         );
     i.useEffect(() => {
         let e = () => {
@@ -129,19 +129,19 @@ function v(e) {
                             }));
                     }
                     return e;
-                })({ video_layout: O ? 'popout' : S }, (0, s.AB)(e.id))
+                })({ video_layout: j ? 'popout' : S }, (0, s.AB)(e.id))
             ),
             () => {
-                (O && (0, b.isMac)()) || t(S);
+                (j && (0, b.isMac)()) || t(S);
             }
         );
-    }, [S, O]),
+    }, [S, j]),
     i.useEffect(() => {
-        null != T && E.current === y.WtW.VIDEO && I === y.WtW.VOICE && (0, _.Pr)(T, N);
-    }, [N, I, E, T]),
+        null != T && E.current === y.WtW.VIDEO && P === y.WtW.VOICE && (0, _.Pr)(T, N);
+    }, [N, P, E, T]),
     i.useEffect(() => {
-        !P && O && x();
-    }, [P, O]),
+        !I && j && x();
+    }, [I, j]),
     w)
         ? (0, r.jsx)(h.Z, {
               themeable: !1,

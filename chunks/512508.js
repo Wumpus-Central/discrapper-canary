@@ -13,7 +13,7 @@ var r = n(255367),
     s = n.n(a),
     c = n(442837),
     u = n(481060),
-    d = n(461745),
+    d = n(794433),
     C = n(933557),
     m = n(471445),
     b = n(91218),
@@ -99,7 +99,7 @@ function P(e) {
     let t = ''.concat(!e.name.includes(j.CR) ? '@' : '').concat(e.name);
     return {
         tag: {
-            type: d.Fj.ROLE,
+            type: d.F.ROLE,
             label: t
         },
         row: {
@@ -114,7 +114,7 @@ function M(e) {
     let t = (0, C.F6)(e, y.default, v.Z);
     return {
         tag: {
-            type: d.Fj.CHANNEL,
+            type: d.F.CHANNEL,
             label: t
         },
         row: {
@@ -332,10 +332,10 @@ function k(e) {
             (0, r.jsxs)('div', {
                 className: _.searchBox,
                 children: [
-                    (0, r.jsx)(d.ZP, {
+                    (0, r.jsx)(d.Z, {
                         tags: J,
                         maxHeight: 98,
-                        size: d.ZP.Sizes.MEDIUM,
+                        size: d.Z.Sizes.MEDIUM,
                         query: y,
                         ref: U,
                         onRemoveTag: (e) => {

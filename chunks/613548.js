@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(651183),
     x = n(853476),
     v = n(390322),
-    j = n(616286),
-    O = n(975146),
+    O = n(616286),
+    j = n(975146),
     E = n(597998),
     S = n(606304),
-    I = n(358221),
-    P = n(355827),
+    P = n(358221),
+    I = n(355827),
     Z = n(185935),
     N = n(354459),
     T = n(388032),
@@ -74,10 +74,10 @@ function R(e, t) {
 }
 function M(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([S.Z, I.Z], () => {
+        i = (0, c.Wu)([S.Z, P.Z], () => {
             let e = Date.now();
             return s()(S.Z.getSpeakers())
-                .map((e) => I.Z.getParticipant(t, e))
+                .map((e) => P.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, y.ZP)(e))
                 .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
@@ -121,12 +121,12 @@ function D(e) {
             userParticipantCount: S,
             participantsListOpen: T
         } = (0, c.cj)(
-            [I.Z],
+            [P.Z],
             () => ({
-                selectedParticipant: I.Z.getSelectedParticipant(s),
-                voiceParticipantsHidden: I.Z.getVoiceParticipantsHidden(s),
-                userParticipantCount: I.Z.getUserParticipantCount(s),
-                participantsListOpen: I.Z.getParticipantsListOpen(s)
+                selectedParticipant: P.Z.getSelectedParticipant(s),
+                voiceParticipantsHidden: P.Z.getVoiceParticipantsHidden(s),
+                userParticipantCount: P.Z.getUserParticipantCount(s),
+                participantsListOpen: P.Z.getParticipantsListOpen(s)
             }),
             [s]
         ),
@@ -200,11 +200,11 @@ function D(e) {
                     {
                         targetElementRef: l,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(P.Z, { channel: t }) }),
+                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(I.Z, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                O.Z,
+                                j.Z,
                                 R(w({}, e), {
                                     buttonRef: l,
                                     isActive: n,
@@ -222,7 +222,7 @@ function D(e) {
         L &&
             F.push(
                 (0, r.jsx)(
-                    O.Z,
+                    j.Z,
                     {
                         className: a()(A.button, { [A.lastButton]: n }),
                         onClick: () => d.Z.toggleParticipantsList(t.id, !T)
@@ -233,7 +233,7 @@ function D(e) {
         D &&
             F.push(
                 (0, r.jsx)(
-                    j.T,
+                    O.T,
                     {
                         channelId: t.id,
                         className: a()(A.button, { [A.lastButton]: T }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,84 +8,86 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(172751),
-    _ = n(359135),
-    p = n(516817),
-    h = n(210887),
-    m = n(158776),
-    g = n(5192),
-    E = n(579407),
-    b = n(538566),
-    y = n(460400),
-    O = n(943549);
-let v = {
+    f = n(7284),
+    _ = n(172751),
+    p = n(359135),
+    h = n(516817),
+    m = n(210887),
+    g = n(158776),
+    E = n(5192),
+    b = n(579407),
+    y = n(538566),
+    O = n(460400),
+    v = n(943549);
+let I = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
         default: c.EFr.SIZE_32
     },
-    I = (e) => {
-        let { user: t, nameplate: n, nameplateData: a, className: I, innerClassName: T, isHighlighted: S, showStatus: A, showPlaceholderUser: N, pendingGlobalName: C, nameplatePreviewSize: R = 'default', isPurchased: P = !1 } = e,
-            w = (0, s.e7)([h.Z], () => (0, l.wj)(h.Z.theme)),
-            D = null != n ? (0, E.EU)(n) : a,
-            L = (0, s.e7)([m.Z], () => (null != t ? m.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            x = w ? '#706F74' : '#aaaab2',
+    T = (e) => {
+        let { user: t, nameplate: n, nameplateData: a, className: T, innerClassName: S, isHighlighted: A, showStatus: N, showPlaceholderUser: C, pendingGlobalName: R, nameplatePreviewSize: P = 'default', isPurchased: w = !1 } = e,
+            D = (0, s.e7)([m.Z], () => (0, l.wj)(m.Z.theme)),
+            L = null != n ? (0, b.EU)(n) : a,
+            x = (0, s.e7)([g.Z], () => (null != t ? g.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            M = D ? '#706F74' : '#aaaab2',
             k = i.useRef(null),
-            M = v[R];
+            j = (0, f.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles }),
+            U = I[P];
         return (0, r.jsxs)('div', {
-            className: o()(I, b.nameplatePreview, {
-                [b.nameplatePurchased]: P && !S,
-                [b.large]: 'large' === R,
-                [b.xlarge]: 'xlarge' === R
+            className: o()(T, y.nameplatePreview, {
+                [y.nameplatePurchased]: w && !A,
+                [y.large]: 'large' === P,
+                [y.xlarge]: 'xlarge' === P
             }),
-            style: { color: w ? 'white' : 'black' },
+            style: { color: D ? 'white' : 'black' },
             children: [
-                null != D &&
+                null != L &&
                     (0, r.jsx)(
-                        p.Z,
+                        h.Z,
                         {
-                            nameplate: D,
-                            hovered: S,
-                            placement: _.i.PREVIEW,
-                            content: N ? void 0 : k
+                            nameplate: L,
+                            hovered: A,
+                            placement: p.i.PREVIEW,
+                            content: C ? void 0 : k
                         },
                         null == n ? void 0 : n.id
                     ),
                 (0, r.jsxs)('div', {
-                    className: b.overlayContainer,
+                    className: y.overlayContainer,
                     children: [
                         null != t
                             ? (0, r.jsx)('div', {
-                                  className: o()(b.avatarContainer, !N && b.avatarVisible),
+                                  className: o()(y.avatarContainer, !C && y.avatarVisible),
                                   children: (0, r.jsx)(u.Z, {
                                       ref: k,
                                       avatar: (0, r.jsx)(d.Z, {
                                           user: t,
                                           guildId: null,
-                                          avatarSize: M,
-                                          status: A ? L : void 0,
+                                          avatarSize: U,
+                                          status: N ? x : void 0,
                                           'aria-hidden': !0
                                       }),
-                                      decorators: (0, r.jsx)(f.ZP, {
+                                      decorators: (0, r.jsx)(_.ZP, {
                                           userId: t.id,
-                                          className: b.tagChiplet
+                                          className: y.tagChiplet
                                       }),
-                                      name: null != C && '' !== C ? C : g.ZP.getName(null, null, t),
-                                      innerClassName: T
+                                      name: null != R && '' !== R ? R : E.ZP.getName(null, null, t),
+                                      innerClassName: o()(S, j)
                                   })
                               })
                             : null,
                         (0, r.jsxs)('div', {
-                            className: o()(b.avatarContainer, N && b.avatarVisible),
+                            className: o()(y.avatarContainer, C && y.avatarVisible),
                             children: [
                                 (0, r.jsx)(c.qEK, {
-                                    src: w ? y : O,
-                                    size: M,
+                                    src: D ? O : v,
+                                    size: U,
                                     'aria-hidden': !0,
                                     status: c.Skl.ONLINE,
-                                    statusColor: x,
-                                    className: b.avatar
+                                    statusColor: M,
+                                    className: y.avatar
                                 }),
-                                (0, r.jsx)('div', { className: b.placeholderUsername })
+                                (0, r.jsx)('div', { className: y.placeholderUsername })
                             ]
                         })
                     ]

@@ -1,7 +1,7 @@
 (n.d(t, {
-    U: () => P,
-    default: () => Z,
-    t: () => k
+    U: () => k,
+    default: () => P,
+    t: () => Z
 }),
     n(953529),
     n(388685),
@@ -16,7 +16,7 @@ var r = n(255367),
     a = n(755721),
     s = n(481060),
     o = n(741361),
-    c = n(461745),
+    c = n(794433),
     d = n(600164),
     u = n(313201),
     m = n(131704),
@@ -55,7 +55,7 @@ let M = (0, u.hQ)();
 function L(e, t) {
     return t ? e.slice(1) : e;
 }
-function P(e) {
+function k(e) {
     let t,
         { guild: n, channel: a, permission: s, pendingAdditions: o, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
         [x, y] = l.useState(!1),
@@ -70,14 +70,14 @@ function P(e) {
     let N = v.iI(O, a, n, s, w),
         {
             placeholderText: M,
-            hintText: P,
-            renderEmptyText: Z
+            hintText: k,
+            renderEmptyText: P
         } = {
             placeholderText: R.intl.string(R.t.iezLLi),
             hintText: R.intl.string(R.t['rwFx8/']),
             renderEmptyText: (e) => R.intl.format(R.t.ErpIY2, { query: e })
         };
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(Z, {
         pendingAdditions: o,
         query: f,
         onQueryChange: function (e) {
@@ -118,13 +118,13 @@ function P(e) {
                     let n;
                     (e.rowType === S.aC.ROLE || e.rowType === S.aC.ADMINISTRATOR
                         ? (n = {
-                              type: c.Fj.ROLE,
+                              type: c.F.ROLE,
                               label: e.name,
                               color: e.colorString
                           })
                         : (e.rowType === S.aC.MEMBER || e.rowType === S.aC.OWNER) &&
                           (n = {
-                              type: c.Fj.MEMBER,
+                              type: c.F.MEMBER,
                               label: e.name,
                               avatar: e.avatarURL
                           }),
@@ -164,13 +164,13 @@ function P(e) {
         roles: t,
         members: N,
         placeholderText: M,
-        hintText: P,
-        renderEmptyText: Z,
+        hintText: k,
+        renderEmptyText: P,
         isStageChannel: u,
         description: m
     });
 }
-function k(e) {
+function Z(e) {
     let t,
         { listClassName: n, pendingAdditions: l, query: i, onQueryChange: a, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: y, isReady: f, description: p } = e;
     return (0, r.jsxs)('div', {
@@ -204,7 +204,7 @@ function k(e) {
         ]
     });
 }
-function Z(e) {
+function P(e) {
     let { transitionState: t, onClose: n, channelId: c, newChannel: u, inSettings: h } = e,
         [b, g] = l.useState(!1),
         [j, v] = l.useState({}),
@@ -272,7 +272,7 @@ function Z(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(k, {
                 guild: w,
                 channel: E,
                 permission: E.accessPermissions,

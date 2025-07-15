@@ -123,7 +123,7 @@ function S(e) {
     );
 }
 function T(e) {
-    let { listClassName: t, pendingAdditions: n, query: i, onQueryChange: s, onClickRow: u, onRemovePendingAddition: T, roles: w = [], members: R = [], users: O = [], guilds: C = [], placeholderText: N, disabledText: M, hintText: L, searchTitleText: P, renderEmptyText: k, focusSearchAfterReady: Z, isReady: A, maxCount: z, hideRowLabel: I = !1 } = e,
+    let { listClassName: t, pendingAdditions: n, query: i, onQueryChange: s, onClickRow: u, onRemovePendingAddition: T, roles: w = [], members: R = [], users: O = [], guilds: C = [], placeholderText: N, disabledText: M, hintText: L, searchTitleText: k, renderEmptyText: Z, focusSearchAfterReady: P, isReady: A, maxCount: z, hideRowLabel: I = !1 } = e,
         B = l.useRef(null),
         D = l.useRef(null),
         $ = [w.length, R.length, O.length, C.length],
@@ -177,10 +177,10 @@ function T(e) {
                 (0, r.jsxs)('div', {
                     className: a()(p.searchBox, { [p.scrollSeparator]: U }),
                     children: [
-                        null != P &&
+                        null != k &&
                             (0, r.jsx)(o.vwX, {
                                 tag: o.RB0.H5,
-                                children: P
+                                children: k
                             }),
                         (0, r.jsx)(b.Z, {
                             ref: B,
@@ -196,7 +196,7 @@ function T(e) {
                                 T(Y[e]);
                             },
                             placeholder: N,
-                            focusAfterReady: Z,
+                            focusAfterReady: P,
                             isReady: A,
                             'aria-labelledby': g,
                             'aria-controls': j
@@ -395,7 +395,7 @@ function T(e) {
                               (0, r.jsx)(x.Z, { className: p.noResultIcon }),
                               (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/normal',
-                                  children: k(i)
+                                  children: Z(i)
                               })
                           ]
                       })

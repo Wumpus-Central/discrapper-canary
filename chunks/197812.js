@@ -159,10 +159,10 @@ function x(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return a.is.fun(e) ? e.apply(void 0, n) : e;
 }
-var k = function (e, t) {
+var M = function (e, t) {
         return !0 === e || !!(t && e && (a.is.fun(e) ? e(t) : a.toArray(e).includes(t)));
     },
-    M = function (e, t, n) {
+    k = function (e, t, n) {
         return e && (a.is.fun(e) ? e(t, n) : a.is.arr(e) ? e[t] : o({}, e));
     },
     j = function (e, t) {
@@ -264,7 +264,7 @@ function W(e, t) {
         var c,
             u,
             d = !1,
-            f = k(r.cancel, n);
+            f = M(r.cancel, n);
         function _() {
             (i.resumeQueue.add(p), u.cancel(), (c = u.time - a.Globals.now()));
         }
@@ -291,7 +291,7 @@ function W(e, t) {
                 l(e);
             }
         }
-        f ? h() : ((c = x(r.delay || 0, n)), (d = k(r.pause, n)) ? (i.resumeQueue.add(p), s.pause()) : (s.resume(), p()));
+        f ? h() : ((c = x(r.delay || 0, n)), (d = M(r.pause, n)) ? (i.resumeQueue.add(p), s.pause()) : (s.resume(), p()));
     });
 }
 var K = function (e, t) {
@@ -927,13 +927,13 @@ var er = (function (e) {
                 t.config && !T && A(S, x(t.config, r), t.config !== o.config ? x(o.config, r) : void 0);
                 var R = f.getAnimated(this);
                 if (!R || a.is.und(m)) return n(q(this, !0));
-                var P = a.is.und(t.reset) ? l && !t.default : !a.is.und(E) && k(t.reset, r),
+                var P = a.is.und(t.reset) ? l && !t.default : !a.is.und(E) && M(t.reset, r),
                     w = P ? E : this.get(),
                     D = Y(m),
                     L = a.is.num(D) || a.is.arr(D) || a.isAnimatedString(D),
-                    M = !T && (!L || k(o.immediate || t.immediate, r));
+                    k = !T && (!L || M(o.immediate || t.immediate, r));
                 if (O)
-                    if (M) R = this._updateNode(D);
+                    if (k) R = this._updateNode(D);
                     else {
                         var j = this._getNodeType(m);
                         if (j !== R.constructor) throw Error('Cannot animate between ' + R.constructor.name + ' and ' + j.name + ', as the "to" prop suggests');
@@ -946,7 +946,7 @@ var er = (function (e) {
                     ((O || F) && (G = !(V = a.isEqual(Y(w), D))), (a.isEqual(S.decay, N) && a.isEqual(S.velocity, C)) || (G = !0));
                 }
                 if ((V && this.is(ec) && (i.changed && !P ? (G = !0) : G || this._stop()), !T)) {
-                    ((G || a.getFluidConfig(d)) && ((i.values = R.getPayload()), (i.toValues = v ? null : U == f.AnimatedString ? [1] : a.toArray(D))), (i.immediate = M), (i.onStart = ep(c('onStart'), r)), (i.onChange = ep(c('onChange'), r)));
+                    ((G || a.getFluidConfig(d)) && ((i.values = R.getPayload()), (i.toValues = v ? null : U == f.AnimatedString ? [1] : a.toArray(D))), (i.immediate = k), (i.onStart = ep(c('onStart'), r)), (i.onChange = ep(c('onChange'), r)));
                     var Z = i.onRest,
                         H = P && !t.onRest ? Z[0] || a.noop : eh(ep(c('onRest'), r), this);
                     if (G) {
@@ -1384,7 +1384,7 @@ var eD = function () {
                 update: function (t) {
                     return (
                         a.each(e(), function (e, n) {
-                            e.update(M(t, n, e));
+                            e.update(k(t, n, e));
                         }),
                         this
                     );
@@ -1401,7 +1401,7 @@ var eD = function () {
                                                 (n.next = 2),
                                                 Promise.all(
                                                     e().map(function (e, n) {
-                                                        var r = M(t, n, e);
+                                                        var r = k(t, n, e);
                                                         return e.start(r);
                                                     })
                                                 )
@@ -1530,7 +1530,7 @@ function ex(e, t, n) {
     });
     return r || 3 == arguments.length ? [y, g.start, g.stop] : y;
 }
-function ek(e, t) {
+function eM(e, t) {
     var n = a.is.fun(e),
         r = ex(1, n ? e : [e], n ? t || [] : t),
         i = r[0][0],
@@ -1538,14 +1538,14 @@ function ek(e, t) {
         s = r[2];
     return n || 2 == arguments.length ? [i, o, s] : i;
 }
-function eM(e, t, n) {
+function ek(e, t, n) {
     var r = a.is.fun(t) && t;
     r && !n && (n = []);
     var o = [],
         s = ex(
             e,
             function (e, n) {
-                return ((o[e] = n), M(t, e, n));
+                return ((o[e] = n), k(t, e, n));
             },
             n || [{}]
         );
@@ -1563,7 +1563,7 @@ function eM(e, t, n) {
             (s[1] = p.useCallbackOne(function (e) {
                 var t = a.is.obj(e) && e.reverse;
                 return l(function (n, r) {
-                    var i = M(e, n, r),
+                    var i = k(e, n, r),
                         a = o[n + (t ? 1 : -1)];
                     return (a && (i.to = a.springs), i);
                 });
@@ -1761,13 +1761,13 @@ function eF(e, t) {
     return a.is.und(i) ? e : a.is.fun(i) ? e.map(i) : a.toArray(i);
 }
 function eZ(e) {
-    return (0, e.children)(ek(g(e, ['children'])));
+    return (0, e.children)(eM(g(e, ['children'])));
 }
 function eH(e) {
     var t = e.items,
         n = e.children,
         r = g(e, ['items', 'children']),
-        i = eM(t.length, r);
+        i = ek(t.length, r);
     return t.map(function (e, t) {
         var r = n(e, t);
         return a.is.fun(r) ? r(i[t]) : r;
@@ -1913,7 +1913,7 @@ var eq = function () {
     (t.to = eK),
     (t.update = eq),
     (t.useChain = O),
-    (t.useSpring = ek),
+    (t.useSpring = eM),
     (t.useSprings = ex),
-    (t.useTrail = eM),
+    (t.useTrail = ek),
     (t.useTransition = eV));

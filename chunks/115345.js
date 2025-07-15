@@ -53,7 +53,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,7 +86,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,7 +108,7 @@ function U(e, t) {
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => j(k({}, n), { [e]: t }));
+                s((n) => j(M({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
             getDebug: () => F(Object.values(u), t)
@@ -265,7 +265,7 @@ function Y(e) {
     return () => {
         y.default.track(
             P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            j(k({}, n), {
+            j(M({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
                     .filter((e) => e.mode === R.AR.UseGreyDot)

@@ -1,5 +1,5 @@
 (n.d(t, {
-    O: () => g,
+    O: () => R,
     Z: () => b
 }),
     n(35282));
@@ -7,16 +7,16 @@ var r = n(255367);
 n(73800);
 var i = n(873546),
     l = n(442837),
-    o = n(475179),
-    a = n(100527),
+    a = n(475179),
+    o = n(100527),
     c = n(906732),
     s = n(358221),
     u = n(185935),
     d = n(2818),
     _ = n(954551),
     E = n(208450),
-    O = n(975146),
-    I = n(979651),
+    I = n(975146),
+    O = n(979651),
     p = n(358085),
     T = n(998502),
     S = n(665149),
@@ -48,7 +48,7 @@ function A(e) {
     }
     return e;
 }
-function R(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,17 +66,17 @@ function R(e, t) {
         e
     );
 }
-async function g(e) {
+async function R(e) {
     if (!e && (0, p.isMac)() && p.isPlatformEmbedded) {
         var t, n, r;
         let e = null != (r = await (null == (t = (n = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) ? void 0 : t.call(n))) ? r : 'Maximize';
         'Minimize' === e ? T.ZP.minimize() : 'Maximize' === e && T.ZP.maximize();
     }
 }
-function P(e) {
-    let { children: t, className: n, channelId: a, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: R = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
-        Z = null == a || (0, f.AB)(a) ? null : a,
-        L = (0, l.e7)([I.Z], () => I.Z.isInChannel(Z) || !1),
+function C(e) {
+    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: g = !0, toolbar: C, mobileToolbar: P, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
+        Z = null == o || (0, f.AB)(o) ? null : o,
+        L = (0, l.e7)([O.Z], () => O.Z.isInChannel(Z) || !1),
         j = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
         { enabled: k, inInbox: x } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: F } = (0, u.Z)({ location: 'HeaderBar' });
@@ -84,14 +84,14 @@ function P(e) {
         className: n,
         innerClassName: T,
         toolbar: (function () {
-            if (null == P) return null;
-            let e = null != a && !U;
+            if (null == C) return null;
+            let e = null != o && !U;
             return i.tq
-                ? C
+                ? P
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          P,
-                          e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : a) : null,
+                          C,
+                          e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : o) : null,
                           M && (0, r.jsx)(S.ZP.Divider, {}),
                           k && !x ? (0, r.jsx)(_.Z, {}) : null,
                           F &&
@@ -101,14 +101,14 @@ function P(e) {
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: m.controlButtonWrapper,
-                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(Z, !j) })]
+                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(I.Z, { onClick: () => a.Z.toggleParticipantsList(Z, !j) })]
                               })
                       ]
                   });
         })(),
         transparent: A,
-        showToolbar: R,
-        onDoubleClick: () => g(v),
+        showToolbar: g,
+        onDoubleClick: () => R(v),
         'aria-label': y,
         'aria-labelledby': b,
         role: h,
@@ -116,14 +116,14 @@ function P(e) {
         children: t
     });
 }
-function C(e) {
-    let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: o, disableDoubleClick: a } = e;
+function P(e) {
+    let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: a, disableDoubleClick: o } = e;
     return (0, r.jsx)(S.ZP, {
         className: n,
-        onDoubleClick: () => g(a),
+        onDoubleClick: () => R(o),
         'aria-label': i,
         'aria-labelledby': l,
-        role: o,
+        role: a,
         children: t
     });
 }
@@ -148,10 +148,10 @@ function y(e) {
             }
             return i;
         })(e, ['isAuthenticated']);
-    let { analyticsLocations: i } = (0, c.ZP)(a.Z.HEADER_BAR);
+    let { analyticsLocations: i } = (0, c.ZP)(o.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(P, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(C, g(A({}, n), { className: n.className })) : (0, r.jsx)(P, g(A({}, n), { className: n.className }))
     });
 }
 ((y.Title = S.ZP.Title), (y.Icon = S.ZP.Icon), (y.Divider = S.ZP.Divider), (y.Caret = S.ZP.Caret));

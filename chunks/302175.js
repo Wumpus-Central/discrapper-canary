@@ -79,7 +79,7 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         { analyticsLocations: l } = (0, p.ZP)(),
         c = null != (0, v.Z)(t, n),
@@ -87,7 +87,7 @@ function k(e) {
         [b, y] = i.useState(!1),
         [S, w] = i.useState(!1),
         L = S,
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             let e = g.Z.getGuild(t);
             null != e &&
                 (0, h.u)({
@@ -100,7 +100,7 @@ function k(e) {
                     guild: e
                 });
         }, [t, l]),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             (a(), (0, T.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
         j = {
@@ -161,7 +161,7 @@ function k(e) {
                         children: [
                             (0, r.jsx)(u.zx, {
                                 grow: !0,
-                                onClick: k,
+                                onClick: M,
                                 color: u.zx.Colors.BRAND,
                                 className: P.button,
                                 children: C.intl.string(C.t['oPAx7+'])
@@ -169,7 +169,7 @@ function k(e) {
                             E &&
                                 (0, r.jsx)(u.zx, {
                                     grow: !0,
-                                    onClick: M,
+                                    onClick: k,
                                     color: u.zx.Colors.PRIMARY,
                                     className: P.button,
                                     children: C.intl.string(C.t.GoCQxc)
@@ -186,7 +186,7 @@ function k(e) {
         ]
     });
 }
-let M = i.forwardRef((e, t) => {
+let k = i.forwardRef((e, t) => {
     var n, a;
     let { guild: o, onClose: s } = e;
     i.useEffect(() => {
@@ -212,7 +212,7 @@ let M = i.forwardRef((e, t) => {
                       className: R.powerupsContainer,
                       children: d.map((e) =>
                           (0, r.jsx)(
-                              k,
+                              M,
                               {
                                   guildId: o.id,
                                   powerup: e,
@@ -225,5 +225,5 @@ let M = i.forwardRef((e, t) => {
               ]
           });
 });
-M.displayName = 'GuildPowerupsMarketingPowerupCards';
-let j = M;
+k.displayName = 'GuildPowerupsMarketingPowerupCards';
+let j = k;

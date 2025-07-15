@@ -20,7 +20,7 @@ var r,
 let j = new Set(),
     S = {},
     E = {};
-function P(e, t) {
+function x(e, t) {
     let n = S[e];
     if (null != n && null != t && n.has(t)) {
         var r;
@@ -41,7 +41,7 @@ function P(e, t) {
             );
     }
 }
-function x(e) {
+function P(e) {
     var t;
     if (null != S[e]) return;
     let n = p.ZP.getChannels(e)[p.sH].map((e) => e.channel.id),
@@ -70,13 +70,13 @@ class _ extends (r = l.ZP.Store) {
     }
     getNewChannelIds(e) {
         var t;
-        return (null != e && null == S[e] && x(e), null != e && null != (t = S[e]) ? t : j);
+        return (null != e && null == S[e] && P(e), null != e && null != (t = S[e]) ? t : j);
     }
     shouldIndicateNewChannel(e, t) {
         var n;
         if (null == e) return !1;
         let r = b.Z.getGuild(e);
-        return null != r && !!r.features.has(y.oNc.COMMUNITY) && (null != e && null == S[e] && x(e), (null == (n = S[e]) ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
+        return null != r && !!r.features.has(y.oNc.COMMUNITY) && (null != e && null == S[e] && P(e), (null == (n = S[e]) ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
     }
 }
 ((i = 'NewChannelsStore'),
@@ -97,15 +97,15 @@ let w = new _(o.Z, {
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
-        return null != t && (null == S[t] || E[t] < Date.now() - h.Z.Millis.HOUR ? (x(t), !0) : (null != n && P(t, n), !1));
+        return null != t && (null == S[t] || E[t] < Date.now() - h.Z.Millis.HOUR ? (P(t), !0) : (null != n && x(t, n), !1));
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: r } = e;
-        return null != t && r === c.tI.VIEW_CHANNEL && (P(t, n), !1);
+        return null != t && r === c.tI.VIEW_CHANNEL && (x(t, n), !1);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { guildId: t, baseChannelId: n } = e;
-        return null != t && (P(t, n), !1);
+        return null != t && (x(t, n), !1);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;

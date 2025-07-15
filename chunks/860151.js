@@ -9,13 +9,13 @@ var s = n(120356),
     a = n(644646),
     c = n(817447);
 let d = function (e) {
-    let { className: t, autoplay: n, quest: s, questContent: d, taskDetails: E, location: S, sourceQuestContent: T } = e,
-        m = (0, o.DD)({
+    let { className: t, autoplay: n, quest: s, questContent: d, taskDetails: E, location: S, sourceQuestContent: m } = e,
+        T = (0, o.DD)({
             quest: s,
             taskDetails: E,
             location: S,
             questContent: d,
-            sourceQuestContent: T
+            sourceQuestContent: m
         }),
         A = (0, u.h)({
             location: S,
@@ -31,14 +31,14 @@ let d = function (e) {
                 quest: s,
                 questContent: d,
                 location: S,
-                sourceQuestContent: T
+                sourceQuestContent: m
             }),
             (0, l.jsx)('div', {
                 className: c.copy,
                 children: (0, l.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-default',
-                    children: m
+                    children: T
                 })
             })
         ]

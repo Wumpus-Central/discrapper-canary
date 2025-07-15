@@ -1,8 +1,8 @@
 (n.d(t, {
-    $x: () => P,
+    $x: () => x,
     ZP: () => N,
     d7: () => C,
-    w6: () => x
+    w6: () => P
 }),
     n(539854),
     n(361932),
@@ -77,8 +77,8 @@ let E = Object.freeze({
         onPreventNavigation: null,
         sidebarOpen: !0
     }),
-    P = 1.4,
-    x = 15,
+    x = 1.4,
+    P = 15,
     C = 2;
 function _(e) {
     var t, n;
@@ -115,7 +115,7 @@ class w extends s.PureComponent {
     }
     componentDidUpdate(e) {
         let { section: t } = e;
-        t !== this.props.section && (this._intensity = P);
+        t !== this.props.section && (this._intensity = x);
     }
     componentWillUnmount() {
         ((this._unmounted = !0),
@@ -137,10 +137,10 @@ class w extends s.PureComponent {
                   duration: 300,
                   intensity: this._intensity
               }),
-              (this._intensity = Math.min(this._intensity + C, x)),
+              (this._intensity = Math.min(this._intensity + C, P)),
               p.S.dispatch(m.CkL.EMPHASIZE_NOTICE),
               !1)
-            : ((this._intensity = P), !0);
+            : ((this._intensity = x), !0);
     }
     renderSidebar(e) {
         let { section: t, title: n, showUserSettingsSearch: s } = this.props,
@@ -219,7 +219,7 @@ class w extends s.PureComponent {
     constructor(...e) {
         (super(...e),
             y(this, '_unmounted', !1),
-            y(this, '_intensity', P),
+            y(this, '_intensity', x),
             y(this, '_subscribedStores', []),
             y(this, 'scrollerRef', s.createRef()),
             y(this, 'state', S(j({}, E), { sidebarOpen: this.props.section !== m.oAB.SUBSCRIPTIONS && this.props.section !== m.oAB.PROFILE_CUSTOMIZATION })),
@@ -259,7 +259,7 @@ class w extends s.PureComponent {
                 }
             }),
             y(this, 'handleNoticeStoreUpdate', () => {
-                this._unmounted || ((this._intensity = P), this.forceUpdate());
+                this._unmounted || ((this._intensity = x), this.forceUpdate());
             }),
             y(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
                 let { section: s, label: i = null, ariaLabel: a, onClick: c, variant: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: v } = e,

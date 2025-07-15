@@ -91,7 +91,7 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: k = !1, className: M, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
             V = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
         let F = i.useRef(null),
             Z = i.useRef(null),
@@ -100,7 +100,7 @@ function g(e, t, n) {
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
-            className: M,
+            className: k,
             specs: a,
             orientation: 'vertical',
             dir: b
@@ -187,9 +187,9 @@ function g(e, t, n) {
                         {
                             ref: K,
                             onScroll: el,
-                            className: o()(M, {
+                            className: o()(k, {
                                 [e]: !0,
-                                [t]: k,
+                                [t]: M,
                                 [u.scrolling]: Y
                             }),
                             style: (0, c.uT)(j)

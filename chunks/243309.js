@@ -36,18 +36,18 @@ function l(t) {
     let I = s.m9.setTimeout(() => {
             (c.X && o.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, r.XU)(t).description), u());
         }, E.WU),
-        d = t.end.bind(t);
+        R = t.end.bind(t);
     t.end = function () {
         return t
             ? (u().then(
                   () => {
-                      d();
+                      R();
                   },
                   () => {
-                      d();
+                      R();
                   }
               ),
               t)
-            : d();
+            : R();
     };
 }

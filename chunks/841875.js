@@ -1,46 +1,50 @@
-r.d(t, { Z: () => C });
+r.d(t, { Z: () => O });
 var n = r(255367),
     l = r(73800),
-    o = r(120356),
-    i = r.n(o),
+    i = r(120356),
+    o = r.n(i),
     a = r(990705),
     s = r(335818),
     c = r(255835),
     u = r(755721),
     d = r(481060),
     p = r(410030),
-    g = r(822857),
-    f = r(501431),
+    f = r(822857),
+    g = r(501431),
     h = r(215023),
     b = r(231338),
     m = r(388032),
     _ = r(590305);
-function C() {
-    let { onToggleOrbEligible: e, orbEligible: t, reset: r, hasFilters: l } = (0, f.S)(),
-        o = l(),
-        { enabled: i } = (0, g.WX)({ location: 'Shop' });
+function O() {
+    let { onToggleOrbEligible: e, orbEligible: t, reset: r, hasFilters: l } = (0, g.S)(),
+        i = l(),
+        { enabled: a } = (0, f.WX)({ location: 'Shop' });
     return (0, n.jsxs)('div', {
         className: _.filterBar,
         children: [
             (0, n.jsxs)('div', {
-                className: _.filterCheckboxes,
+                className: o()(_.filterSection, _.itemType),
                 children: [
                     (0, n.jsx)(d.Text, {
                         variant: 'text-md/semibold',
+                        className: _.filterTitle,
                         children: m.intl.string(m.t.Qk6r1d)
                     }),
-                    h.xg.map((e) => (0, n.jsx)(O, { filter: e }, e)),
-                    i &&
-                        (0, n.jsx)(v, {
-                            onChange: () => e(),
-                            text: m.intl.string(m.t.AHHHgI),
-                            value: t
+                    h.xg.map((e) => (0, n.jsx)(C, { filter: e }, e)),
+                    a &&
+                        (0, n.jsx)(d.XZJ, {
+                            value: t,
+                            onChange: e,
+                            children: (0, n.jsx)(d.Text, {
+                                variant: 'text-md/normal',
+                                children: m.intl.string(m.t.AHHHgI)
+                            })
                         })
                 ]
             }),
-            (0, n.jsx)(E, {}),
-            (0, n.jsx)(x, {}),
-            o &&
+            (0, n.jsx)(v, {}),
+            (0, n.jsx)(y, {}),
+            i &&
                 (0, n.jsx)(u.zx, {
                     color: u.Tt.PRIMARY,
                     className: _.resetButton,
@@ -50,7 +54,7 @@ function C() {
         ]
     });
 }
-let O = (e) => {
+let C = (e) => {
         var t;
         let { filter: r } = e,
             l = {
@@ -59,33 +63,17 @@ let O = (e) => {
                 [s.G.NAMEPLATE]: m.intl.string(m.t.V68Fq6),
                 [s.G.BUNDLE]: m.intl.string(m.t.FYFppq)
             },
-            { itemTypeFilters: o, onToggleItemType: i } = (0, f.S)();
-        return (0, n.jsx)('div', {
-            children: (0, n.jsx)(v, {
-                onChange: () => i(r),
-                text: null != (t = l[r]) ? t : '',
-                value: o.has(r)
+            { itemTypeFilters: i, onToggleItemType: o } = (0, g.S)();
+        return (0, n.jsx)(d.XZJ, {
+            value: i.has(r),
+            onChange: () => o(r),
+            children: (0, n.jsx)(d.Text, {
+                variant: 'text-md/normal',
+                children: null != (t = l[r]) ? t : ''
             })
         });
     },
-    v = (e) => {
-        let { onChange: t, text: r, value: l } = e;
-        return (0, n.jsxs)(d.P3F, {
-            className: _.filterCheckbox,
-            onClick: t,
-            children: [
-                (0, n.jsx)('div', {
-                    className: _.checkbox,
-                    children: (0, n.jsx)(d.XZJ, { value: l })
-                }),
-                (0, n.jsx)(d.Text, {
-                    variant: 'text-md/normal',
-                    children: r
-                })
-            ]
-        });
-    },
-    E = () => {
+    v = () => {
         let e = l.useMemo(
                 () => [
                     {
@@ -147,40 +135,41 @@ let O = (e) => {
                 []
             );
         return (0, n.jsxs)('div', {
-            className: _.colorSwatches,
+            className: _.filterSection,
             children: [
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/semibold',
+                    className: _.filterTitle,
                     children: m.intl.string(m.t.K1xGoK)
                 }),
-                (0, n.jsx)(S, { colors: e }),
-                (0, n.jsx)(S, { colors: t })
+                (0, n.jsx)(E, { colors: e }),
+                (0, n.jsx)(E, { colors: t })
             ]
         });
     },
-    S = (e) => {
+    E = (e) => {
         let { colors: t } = e,
-            { colorFilters: r, onToggleColor: l } = (0, f.S)();
+            { colorFilters: r, onToggleColor: l } = (0, g.S)();
         return (0, n.jsx)('div', {
             className: _.colorSwatchRow,
             children: t.map((e) => {
-                let { color: t, label: o, enum: i } = e;
+                let { color: t, label: i, enum: o } = e;
                 return (0, n.jsx)(
-                    y,
+                    S,
                     {
                         color: t,
-                        label: o,
-                        enum: i,
-                        isToggled: r.has(i),
+                        label: i,
+                        enum: o,
+                        isToggled: r.has(o),
                         onToggleColor: l
                     },
-                    i
+                    o
                 );
             })
         });
     },
-    y = (e) => {
-        let { color: t, label: r, enum: l, isToggled: o, onToggleColor: a } = e;
+    S = (e) => {
+        let { color: t, label: r, enum: l, isToggled: i, onToggleColor: a } = e;
         return (0, n.jsx)(
             d.ua7,
             {
@@ -194,14 +183,14 @@ let O = (e) => {
                             onMouseLeave: c,
                             onFocus: s,
                             onBlur: c,
-                            className: i()(_.circle, { [_.circleToggled]: o }),
+                            className: o()(_.circle, { [_.circleToggled]: i }),
                             style: { backgroundColor: t },
                             'aria-label': r,
                             onClick: () => {
                                 a(l);
                             },
                             children:
-                                o &&
+                                i &&
                                 (0, n.jsx)('div', {
                                     className: _.checkIcon,
                                     children: (0, n.jsx)(d.sV5, {
@@ -217,10 +206,10 @@ let O = (e) => {
             r
         );
     },
-    x = () => {
-        let { themeFilters: e, onToggleTheme: t } = (0, f.S)(),
+    y = () => {
+        let { themeFilters: e, onToggleTheme: t } = (0, g.S)(),
             r = (0, p.ZP)() === b.BR.DARK,
-            o = l.useCallback(
+            i = l.useCallback(
                 (t) => {
                     if (e.has(t) || r) return 'always-white';
                 },
@@ -313,10 +302,11 @@ let O = (e) => {
                 [a]
             );
         return (0, n.jsxs)('div', {
-            className: _.themesSection,
+            className: _.filterSection,
             children: [
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/semibold',
+                    className: _.filterTitle,
                     children: m.intl.string(m.t.t1Ztrq)
                 }),
                 (0, n.jsx)('div', {
@@ -326,12 +316,12 @@ let O = (e) => {
                         return (0, n.jsxs)(
                             d.P3F,
                             {
-                                className: i()(_.theme, { [_.themeToggled]: e.has(s) }),
+                                className: o()(_.theme, { [_.themeToggled]: e.has(s) }),
                                 onClick: () => t(s),
                                 children: [
                                     a,
                                     (0, n.jsx)(d.Text, {
-                                        color: o(s),
+                                        color: i(s),
                                         variant: 'text-sm/medium',
                                         children: l
                                     })

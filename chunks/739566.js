@@ -106,38 +106,43 @@ function E(e, t) {
     });
 }
 function b(e) {
-    var t, n, r, i, a;
-    let { user: o, channel: s, guild: l, guildRoles: c, member: u, userName: d, friendNickname: _ } = e,
-        p = null == o ? '???' : null != d ? d : f.ZP.getName(o);
-    return (null == o ? void 0 : o.id) == null || null == s
+    var t, n, r, i, a, o;
+    let { user: s, channel: l, guild: c, guildRoles: u, member: d, userName: _, friendNickname: p } = e,
+        h = null == s ? '???' : null != _ ? _ : f.ZP.getName(s),
+        m = null != (n = null == s ? void 0 : s.displayNameStyles) ? n : void 0;
+    return (null == s ? void 0 : s.id) == null || null == l
         ? {
-              nick: p,
+              nick: h,
               colorString: void 0,
-              colorStrings: void 0
+              colorStrings: void 0,
+              displayNameStyles: m
           }
-        : (null == l ? void 0 : l.id) == null
+        : (null == c ? void 0 : c.id) == null
           ? {
-                nick: null != _ ? _ : p,
+                nick: null != p ? p : h,
                 colorString: void 0,
-                colorStrings: void 0
+                colorStrings: void 0,
+                displayNameStyles: m
             }
-          : null == u
+          : null == d
             ? {
-                  nick: p,
+                  nick: h,
                   colorString: void 0,
-                  colorStrings: void 0
+                  colorStrings: void 0,
+                  displayNameStyles: m
               }
             : {
-                  nick: null != (n = u.nick) ? n : p,
-                  colorString: null != (r = u.colorString) ? r : void 0,
-                  colorStrings: null != (i = u.colorStrings) ? i : void 0,
-                  colorRoleName: null != u.colorRoleId && null != l ? (null == c || null == (t = c[u.colorRoleId]) ? void 0 : t.name) : void 0,
-                  colorRoleId: u.colorRoleId,
-                  iconRoleId: u.iconRoleId,
-                  guildMemberAvatar: u.avatar,
-                  guildMemberAvatarDecoration: u.avatarDecoration,
-                  primaryGuild: null != (a = o.primaryGuild) ? a : void 0,
-                  guildId: l.id,
-                  authorId: o.id
+                  nick: null != (r = d.nick) ? r : h,
+                  colorString: null != (i = d.colorString) ? i : void 0,
+                  colorStrings: null != (a = d.colorStrings) ? a : void 0,
+                  colorRoleName: null != d.colorRoleId && null != c ? (null == u || null == (t = u[d.colorRoleId]) ? void 0 : t.name) : void 0,
+                  colorRoleId: d.colorRoleId,
+                  iconRoleId: d.iconRoleId,
+                  guildMemberAvatar: d.avatar,
+                  guildMemberAvatarDecoration: d.avatarDecoration,
+                  primaryGuild: null != (o = s.primaryGuild) ? o : void 0,
+                  guildId: c.id,
+                  authorId: s.id,
+                  displayNameStyles: m
               };
 }

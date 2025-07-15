@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(926491),
     L = n(457040),
     x = n(740492),
-    k = n(574254),
-    M = n(585483),
+    M = n(574254),
+    k = n(585483),
     j = n(5967),
     U = n(28546),
     G = n(957825),
@@ -219,7 +219,7 @@ function en(e) {
         { renderWindow: ep, windowDispatch: eh } = i.useContext(O.ZP),
         em = (0, f.e7)([D.Z], () => !D.Z.hasLoadedStickerPacks),
         eg = (0, R.V2)({ location: 'expression_picker' }),
-        eE = (0, f.e7)([k.Z], () => k.Z.isOpen()),
+        eE = (0, f.e7)([M.Z], () => M.Z.isOpen()),
         eb = null != ea,
         ey = (0, p.Jw)(null != ea ? ea : ''),
         eO = (null == (t = Q.gifs) ? void 0 : t.allowSending) && !c.tq && null != x,
@@ -242,7 +242,7 @@ function en(e) {
                 }
                 (0, U._Q)();
                 let r = null == (t = (0, j.uB)(e)) ? void 0 : t.activeElement;
-                (null == r || 'BODY' === r.tagName) && M.S.dispatchToLastSubscribed(B.CkL.TEXTAREA_FOCUS);
+                (null == r || 'BODY' === r.tagName) && k.S.dispatchToLastSubscribed(B.CkL.TEXTAREA_FOCUS);
             },
             [ei, ey, eb, eE]
         ),
@@ -257,9 +257,9 @@ function en(e) {
             ep.addEventListener('mousedown', eS),
             ep.addEventListener('contextmenu', eS),
             eh.subscribe(B.CkL.POPOUT_CLOSE, eA),
-            M.S.subscribe(B.CkL.CLOSE_GIF_PICKER, e),
+            k.S.subscribe(B.CkL.CLOSE_GIF_PICKER, e),
             () => {
-                (ep.removeEventListener('mousedown', eS), ep.removeEventListener('contextmenu', eS), eh.unsubscribe(B.CkL.POPOUT_CLOSE, eA), M.S.unsubscribe(B.CkL.CLOSE_GIF_PICKER, e));
+                (ep.removeEventListener('mousedown', eS), ep.removeEventListener('contextmenu', eS), eh.unsubscribe(B.CkL.POPOUT_CLOSE, eA), k.S.unsubscribe(B.CkL.CLOSE_GIF_PICKER, e));
             }
         );
     }, [ef, eA, eS, ep, eh]),
@@ -300,11 +300,11 @@ function en(e) {
         eD = i.useCallback((e, t) => (null == q ? void 0 : q(e, 'soundboard_picker', t)), [q]),
         eL = (null == (s = Q.soundmoji) ? void 0 : s.allowSending) === !0 && null != q,
         ex = 'left' === en ? 'right' : 'left',
-        ek = null != er ? er : 'left' === en ? W.positionLayerDefaultAlignLeft : W.positionLayerDefaultAlignRight;
+        eM = null != er ? er : 'left' === en ? W.positionLayerDefaultAlignLeft : W.positionLayerDefaultAlignRight;
     return (0, r.jsx)(b.Z, {
         section: B.jXE.EXPRESSION_PICKER,
         children: (0, r.jsx)(C.W5, {
-            className: o()(W.positionLayer, ek),
+            className: o()(W.positionLayer, eM),
             targetRef: l,
             position: J,
             align: en,

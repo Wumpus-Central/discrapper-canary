@@ -1,8 +1,8 @@
 (r.d(t, { Db: () => s }), r(35282), r(65234), r(111804), r(490233), r(97749), r(388685));
 var n = r(73800),
     l = r(114858),
-    o = r(37234),
-    i = r(703656),
+    i = r(37234),
+    o = r(703656),
     a = r(981631);
 function s() {
     let { search: e } = (0, l.TH)(),
@@ -37,11 +37,11 @@ function s() {
         {
             onClose: n.useCallback(() => {
                 if (0 === s) {
-                    ((0, i.op)(), (0, o.jN)(a.S9g.USER_SETTINGS));
+                    ((0, o.op)(), (0, i.jN)(a.S9g.USER_SETTINGS));
                     return;
                 }
-                if ((0, i.uv)()) return void (0, i.op)();
-                (0, i.uL)(a.Z5c.APP);
+                if ((0, o.uv)()) return void (0, o.op)();
+                (0, o.uL)(a.Z5c.APP);
             }, [s]),
             source: s
         },

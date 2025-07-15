@@ -18,14 +18,14 @@ var r = n(255367),
     m = n(353254),
     f = n(695346),
     _ = n(271383),
-    g = n(594174),
-    h = n(671533),
+    h = n(594174),
+    g = n(671533),
     b = n(51144),
     E = n(506071),
     y = n(696014),
-    C = n(847033),
-    v = n(544978),
-    x = n(893182),
+    x = n(847033),
+    C = n(544978),
+    v = n(893182),
     O = n(388032),
     j = n(414521);
 function I(e) {
@@ -43,8 +43,8 @@ function I(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, r.jsx)(h.Z, {
-                direction: h.Z.Directions.RIGHT,
+            (0, r.jsx)(g.Z, {
+                direction: g.Z.Directions.RIGHT,
                 className: j.showMoreArrow
             })
         ]
@@ -86,11 +86,11 @@ function T(e) {
     var t, n;
     let { guild: l, subscriptionsSettings: d } = e,
         m = l.id,
-        { nickname: f, nickcolor: h } = (0, o.cj)(
-            [_.ZP, g.default],
+        { nickname: f, nickcolor: g } = (0, o.cj)(
+            [_.ZP, h.default],
             () => {
                 var e, t;
-                let n = g.default.getCurrentUser();
+                let n = h.default.getCurrentUser();
                 a()(null != n, 'user cannot be null');
                 let r = _.ZP.getMember(m, n.id);
                 return {
@@ -104,8 +104,8 @@ function T(e) {
         N = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: R } = (0, C.m)(),
-        D = Z === v.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
+        { selectedTab: Z, isPhantomPreview: R } = (0, x.m)(),
+        k = Z === C.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
         L = N
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -119,14 +119,14 @@ function T(e) {
                       }),
                       E &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, x.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, v.Z)({ guildId: m }) })]
                           })
                   ]
               })
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-default',
-                  children: R ? D : O.intl.string(O.t['NY/FIS'])
+                  children: R ? k : O.intl.string(O.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -168,7 +168,7 @@ function T(e) {
                                         return (0, r.jsx)(
                                             'span',
                                             {
-                                                style: { color: h },
+                                                style: { color: g },
                                                 children: e
                                             },
                                             t

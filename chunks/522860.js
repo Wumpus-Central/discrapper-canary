@@ -11,20 +11,20 @@ function c(e) {
     let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
         f = (0, a.ZP)(n),
         _ = null == (t = n.call) ? void 0 : t.duration,
-        g = p(f),
-        h = s.intl.format(s.t.FKXvaG, {
+        h = p(f),
+        g = s.intl.format(s.t.FKXvaG, {
             username: f.nick,
             activityName: null != u ? u.name : 'unknown',
             onJoinStream: d,
-            usernameHook: g
+            usernameHook: h
         });
     return (
         null != _ &&
-            (h = s.intl.format(s.t.NEFxtb, {
+            (g = s.intl.format(s.t.NEFxtb, {
                 username: f.nick,
                 duration: _.humanize(),
                 channelName: c.name,
-                usernameHook: g
+                usernameHook: h
             })),
         (0, r.jsx)(o.Z, {
             iconNode:
@@ -38,7 +38,7 @@ function c(e) {
                     : (0, r.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: m,
-            children: h
+            children: g
         })
     );
 }

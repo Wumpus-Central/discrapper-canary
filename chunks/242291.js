@@ -3,8 +3,8 @@
     GN: () => P,
     M2: () => L,
     Nq: () => C,
-    SZ: () => M,
-    aC: () => k,
+    SZ: () => k,
+    aC: () => M,
     lF: () => G,
     pI: () => A,
     sR: () => x,
@@ -84,7 +84,7 @@ function x(e) {
     }
     return a;
 }
-function k(e, t) {
+function M(e, t) {
     (0, l.PS)(
         e,
         (n) => {
@@ -99,7 +99,7 @@ function k(e, t) {
         l.fy.INFREQUENT_USER_ACTION
     );
 }
-function M(e, t, n) {
+function k(e, t, n) {
     (0, l.PS)(
         e,
         (r) => {

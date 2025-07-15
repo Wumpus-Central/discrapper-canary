@@ -15,9 +15,9 @@ var i = n(120356),
 function _(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         _ = (0, s.ZP)(t),
-        g = i(_),
+        h = i(_),
         {
-            avatarSrc: h,
+            avatarSrc: g,
             eventHandlers: { onMouseEnter: b, onMouseLeave: E }
         } = (0, u.m)(!0);
     return (0, r.jsx)('div', {
@@ -25,7 +25,7 @@ function _(e) {
         onMouseLeave: E,
         children: (0, r.jsx)(d.Z, {
             className: l()(f.mainContainer, { [f.compact]: n }),
-            iconNode: n ? null : (0, r.jsx)(u.S, { src: h }),
+            iconNode: n ? null : (0, r.jsx)(u.S, { src: g }),
             iconContainerClassName: f.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
@@ -58,7 +58,7 @@ function _(e) {
                         className: l()(f.__invalid_messageContent, { [f.compact]: n }),
                         children: m.intl.format(m.t.qntXNT, {
                             username: _.nick,
-                            usernameHook: g
+                            usernameHook: h
                         })
                     })
                 ]

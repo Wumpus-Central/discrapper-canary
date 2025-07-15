@@ -50,7 +50,7 @@ function _(e) {
             return null;
     }
 }
-function g(e) {
+function h(e) {
     let { iconType: t } = e,
         n = {
             default: (0, r.jsx)(o.MqZ, {
@@ -66,7 +66,7 @@ function g(e) {
           })
         : null;
 }
-function h(e) {
+function g(e) {
     let { children: t, theme: n } = e,
         i = {
             default: d.defaultFooterContainer,
@@ -92,7 +92,7 @@ function b(e) {
                           (0, r.jsxs)('div', {
                               className: d.headerRow,
                               children: [
-                                  (0, r.jsx)(g, { iconType: i.icon }),
+                                  (0, r.jsx)(h, { iconType: i.icon }),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
                                       children: i.header
@@ -116,7 +116,7 @@ function b(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(h, {
+                  (0, r.jsx)(g, {
                       theme: i.theme,
                       children:
                           null == (t = i.ctas)

@@ -7,8 +7,6 @@ e.exports = {
     hasActionMaxWidth: 'hasActionMaxWidth__920b8',
     userActions: 'userActions__920b8',
     username: 'username__920b8',
-    userActionMenu: 'userActionMenu__920b8',
-    overflowMenuIcon: 'overflowMenuIcon__920b8',
     textOverflow: 'textOverflow__920b8',
     hintText: 'hintText__920b8'
 };

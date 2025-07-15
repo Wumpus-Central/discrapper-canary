@@ -1,5 +1,5 @@
 (n.d(t, {
-    Q8: () => k,
+    Q8: () => M,
     ZP: () => j
 }),
     n(388685),
@@ -116,7 +116,7 @@ let N = new p.Z('ChoosePaymentSourceType'),
     D = new Map([[b.HeQ.PAYSAFE_CARD, new Set(['DE'])]]),
     L = '40c266_1',
     x = 1000;
-function k(e) {
+function M(e) {
     let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: r } = f.ZP.getCurrentConfig({ location: L }, { autoTrackExposure: !1 }),
         i = null != e ? e : 'ALL';
     r.length > 0 && null != n && null != e && (i = r.includes(e) ? e : n);
@@ -135,7 +135,7 @@ function k(e) {
         }
     );
 }
-class M extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         var e;
         ((0, u.GE)(),
@@ -221,9 +221,9 @@ class M extends i.PureComponent {
             g = [],
             E = [],
             b = void 0 === s || this.arePaymentRequestWalletsLoading();
-        if (l) g.push(...this.createPaymentButtons(k('ALL').countryPaymentMethods));
+        if (l) g.push(...this.createPaymentButtons(M('ALL').countryPaymentMethods));
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = k(s);
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = M(s);
             (g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(t)));
         }
         let I = (0, r.jsxs)('div', {
@@ -285,4 +285,4 @@ let j = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
     ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
     localizedPromo: g.Z.localizedPricingPromo
-}))(M);
+}))(k);

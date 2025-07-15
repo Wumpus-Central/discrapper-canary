@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(585483),
     x = n(403182),
     v = n(127654),
-    j = n(752305),
-    O = n(951211),
+    O = n(752305),
+    j = n(951211),
     E = n(800513),
     S = n(981631),
-    I = n(921944),
-    P = n(489887),
+    P = n(921944),
+    I = n(489887),
     Z = n(388032),
     N = n(725776);
 let T = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
@@ -36,7 +36,7 @@ function A() {
     return (
         i.useEffect(
             () => () => {
-                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
+                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: P.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -63,13 +63,13 @@ function w(e) {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function F() {
-        (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M('/', (0, j.JM)('/')));
+        (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M('/', (0, O.JM)('/')));
     }
     function H() {
         D();
     }
     function G() {
-        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
+        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: P.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -119,7 +119,7 @@ function w(e) {
                         );
                     };
                 },
-                { modalKey: P.$z }
+                { modalKey: I.$z }
             ));
     }
     function V() {
@@ -179,7 +179,7 @@ function w(e) {
                     ]
                 });
                 switch (e.type) {
-                    case O.r.UPLOAD_A_FILE:
+                    case j.r.UPLOAD_A_FILE:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -189,7 +189,7 @@ function w(e) {
                             },
                             'upload-file'
                         );
-                    case O.r.UPLOAD_TEXT_AS_FILE:
+                    case j.r.UPLOAD_TEXT_AS_FILE:
                         if ('' === R) return null;
                         return (0, r.jsx)(
                             s.sNh,
@@ -200,7 +200,7 @@ function w(e) {
                             },
                             'upload-text-as-file'
                         );
-                    case O.r.CLIPS:
+                    case j.r.CLIPS:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -210,7 +210,7 @@ function w(e) {
                             },
                             'clips'
                         );
-                    case O.r.POLL:
+                    case j.r.POLL:
                         let a = U(t, R);
                         return (0, r.jsx)(
                             s.sNh,
@@ -223,7 +223,7 @@ function w(e) {
                             },
                             'poll'
                         );
-                    case O.r.INVITE_TO_PLAY_GAME:
+                    case j.r.INVITE_TO_PLAY_GAME:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -244,7 +244,7 @@ function w(e) {
                             },
                             'play'
                         );
-                    case O.r.INVITE_TO_LISTEN:
+                    case j.r.INVITE_TO_LISTEN:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -265,7 +265,7 @@ function w(e) {
                             },
                             'listen'
                         );
-                    case O.r.INVITE_TO_WATCH:
+                    case j.r.INVITE_TO_WATCH:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -286,7 +286,7 @@ function w(e) {
                             },
                             'watch'
                         );
-                    case O.r.CREATE_THREAD:
+                    case j.r.CREATE_THREAD:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -296,7 +296,7 @@ function w(e) {
                             },
                             'THREAD'
                         );
-                    case O.r.SLASH_COMMAND:
+                    case j.r.SLASH_COMMAND:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -306,7 +306,7 @@ function w(e) {
                             },
                             'SLASH_COMMAND'
                         );
-                    case O.r.ACTIVITY:
+                    case j.r.ACTIVITY:
                         return (0, r.jsx)(
                             s.sNh,
                             {
@@ -317,7 +317,7 @@ function w(e) {
                             },
                             'activity'
                         );
-                    case O.r.SCHEDULED_MESSAGE:
+                    case j.r.SCHEDULED_MESSAGE:
                         return (0, r.jsx)(
                             s.sNh,
                             {

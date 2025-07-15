@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -12,8 +12,8 @@ var r = n(255367),
     m = n(594174),
     f = n(626135),
     _ = n(709054),
-    g = n(838440),
-    h = n(981631),
+    h = n(838440),
+    g = n(981631),
     b = n(18485);
 function E(e) {
     let { assets: t, currentUser: n, message: r } = e,
@@ -22,7 +22,7 @@ function E(e) {
 }
 function y(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
-        [_, h] = i.useState(!1),
+        [_, g] = i.useState(!1),
         y = i.useMemo(
             () =>
                 E({
@@ -32,7 +32,7 @@ function y(e) {
                 }),
             [d, t, l]
         ),
-        C = i.useMemo(
+        x = i.useMemo(
             () =>
                 E({
                     assets: u,
@@ -41,8 +41,8 @@ function y(e) {
                 }),
             [u, t, l]
         ),
-        v = i.useCallback(async () => {
-            let { valid: e } = await (0, g.v)({
+        C = i.useCallback(async () => {
+            let { valid: e } = await (0, h.v)({
                 type: s.Ie.FORM,
                 content: '',
                 channel: n
@@ -121,9 +121,9 @@ function y(e) {
         className: b.CTAMessageButtonOuter,
         innerClassName: b.CTAMessageButton,
         color: a.Tt.PRIMARY,
-        onMouseEnter: () => h(!0),
-        onMouseLeave: () => h(!1),
-        onClick: v,
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
+        onClick: C,
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
@@ -131,11 +131,11 @@ function y(e) {
                 sticker: y,
                 size: 28
             }),
-            C
+            x
         ]
     });
 }
-function C(e) {
+function x(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
@@ -145,7 +145,7 @@ function C(e) {
                 let i = t.guild_id;
                 if (null == r || null == i) return !1;
                 let l = (0, u.xl)(t),
-                    a = p.Z.can(h.Plq.SEND_MESSAGES, t),
+                    a = p.Z.can(g.Plq.SEND_MESSAGES, t),
                     o = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
                     s = n.author.bot;
                 return a && !l && !o && !s;

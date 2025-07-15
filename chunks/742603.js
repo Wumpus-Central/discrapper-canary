@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(665149),
     x = n(984370),
     v = n(910611),
-    j = n(454585),
-    O = n(134483),
+    O = n(454585),
+    j = n(134483),
     E = n(210975),
     S = n(809244),
-    I = n(937995),
-    P = n(618158),
+    P = n(937995),
+    I = n(618158),
     Z = n(358221),
     N = n(362721),
     T = n(887012),
@@ -84,7 +84,7 @@ function G(e) {
     let { focusedParticipant: t, channel: n } = e,
         i = (0, u.bp)(),
         l = (0, o.e7)([Z.Z], () => Z.Z.getLayout(n.id, i));
-    return (0, r.jsx)(P.Z, {
+    return (0, r.jsx)(I.Z, {
         children: (0, r.jsx)(w.Z, {
             className: U.participants,
             participant: t,
@@ -186,10 +186,10 @@ function W(e) {
             }),
             [t.id]
         ),
-        _ = i.useContext(I.h9),
+        _ = i.useContext(P.h9),
         y = (0, f.ZP)(t),
         S = (0, m.KS)(t),
-        [P] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
+        [I] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         T = L.intl.string(L.t.BVZqJi);
     t.isDM() ? (T = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (T = L.intl.string(L.t['e5y+go']));
     let w = (0, o.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -211,7 +211,7 @@ function W(e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       className: a()(U.channelStatus, B.markup, { [U.hoverable]: G }),
-                                      children: j.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
+                                      children: O.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
                                   }),
                                   G &&
                                       (0, r.jsx)(s.vdY, {
@@ -289,14 +289,14 @@ function W(e) {
                                 guild: l
                             }),
                             (0, r.jsx)(z, {
-                                focusedApplication: P,
+                                focusedApplication: I,
                                 focusedParticipant: b,
                                 channel: t
                             })
                         ]
                     })
             }),
-            (0, r.jsx)(O.Z, { channelId: t.id })
+            (0, r.jsx)(j.Z, { channelId: t.id })
         ]
     });
 }

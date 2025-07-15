@@ -1,10 +1,10 @@
 (n.d(t, {
-    AH: () => k,
+    AH: () => M,
     Ag: () => Y,
     CS: () => P,
     EW: () => Z,
     OR: () => H,
-    QB: () => M,
+    QB: () => k,
     T0: () => F,
     Wf: () => B,
     cT: () => z,
@@ -222,7 +222,7 @@ async function x(e) {
         });
     }
 }
-async function k(e, t) {
+async function M(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, _._3)({
@@ -258,7 +258,7 @@ async function k(e, t) {
         }
     }
 }
-async function M(e, t, n) {
+async function k(e, t, n) {
     if (!m.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',

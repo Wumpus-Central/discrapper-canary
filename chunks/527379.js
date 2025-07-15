@@ -3,7 +3,7 @@ n.d(t, {
     YO: () => p,
     _X: () => _,
     _o: () => m,
-    nb: () => g,
+    nb: () => h,
     zO: () => d
 });
 var r = n(570140),
@@ -65,7 +65,7 @@ function _(e) {
         n = a.Z.getGuild(e);
     return !!t && null != n && (n.features.has(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || n.features.has(c.oNc.COMMUNITY) || n.features.has(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, l.uL)(c.Z5c.CHANNEL(e, u.oC.MEMBER_SAFETY)) : i.Z.open(n.id, c.pNK.MEMBERS), !0);
 }
-async function g(e, t) {
+async function h(e, t) {
     let n = await (0, s._2)(e, t);
     return 0 === n.length
         ? []

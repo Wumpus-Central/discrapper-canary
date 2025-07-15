@@ -2,25 +2,25 @@ r.d(t, { Z: () => d });
 var n = r(255367);
 r(73800);
 var l = r(120356),
-    o = r.n(l),
-    i = r(884697),
+    i = r.n(l),
+    o = r(884697),
     a = r(754433),
     s = r(409116),
     c = r(981631),
     u = r(561197);
 function d(e) {
     var t, r;
-    let { product: l, isPremiumUser: d, discount: p, className: g, hideStrikethroughPrice: f = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
-        m = (0, i.ql)(l, c.tuJ.DEFAULT);
+    let { product: l, isPremiumUser: d, discount: p, className: f, hideStrikethroughPrice: g = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
+        m = (0, o.ql)(l, c.tuJ.DEFAULT);
     if (null == m) return null;
     if (m.amount <= 0)
         return (0, n.jsx)('div', {
-            className: o()(u.priceTagsContainer, g),
+            className: i()(u.priceTagsContainer, f),
             children: (0, n.jsx)(s.F, { price: m })
         });
-    let _ = (0, i.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        C =
-            (0, i.x6)(l) && d
+    let _ = (0, o.ql)(l, c.tuJ.PREMIUM_TIER_2),
+        O =
+            (0, o.x6)(l) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var r = null != arguments[t] ? arguments[t] : {},
@@ -61,21 +61,21 @@ function d(e) {
                         }),
                   t)
                 : m,
-        O = d && null != _;
+        C = d && null != _;
     return (0, n.jsxs)('div', {
-        className: o()(u.priceTagsContainer, g),
+        className: i()(u.priceTagsContainer, f),
         children: [
-            f
+            g
                 ? null
                 : (0, n.jsx)(a.y, {
-                      price: C,
+                      price: O,
                       className: u.price
                   }),
             (0, n.jsx)(s.F, {
-                price: O ? _ : C,
+                price: C ? _ : O,
                 discount: p,
                 className: u.price,
-                nitroIconType: O ? h : void 0,
+                nitroIconType: C ? h : void 0,
                 nitroIconSize: b
             })
         ]

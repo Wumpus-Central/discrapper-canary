@@ -36,7 +36,7 @@ function d(e) {
 function p(e) {
     var t,
         n,
-        { message: i, channel: p, content: m, className: f, compact: _, popoutProps: g, hideTimestamp: h = !1, withFooter: b = !1 } = e,
+        { message: i, channel: p, content: m, className: f, compact: _, popoutProps: h, hideTimestamp: g = !1, withFooter: b = !1 } = e,
         E = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -80,10 +80,10 @@ function p(e) {
                                 author: y,
                                 guildId: null == p ? void 0 : p.guild_id,
                                 compact: _,
-                                hideTimestamp: h,
+                                hideTimestamp: g,
                                 className: l()(u.header, { [u.compact]: _ })
                             },
-                            null != g ? g : {}
+                            null != h ? h : {}
                         )
                     ),
                     compact: _,

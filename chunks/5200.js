@@ -24,8 +24,8 @@ function x(e) {
     var t;
     let { context: n, activityItem: r, onClick: a, aspectRatio: C = 0, animatedDivClass: x, commandOrigin: v } = e,
         {
-            onActivityItemSelected: j,
-            imageBackground: O,
+            onActivityItemSelected: O,
+            imageBackground: j,
             activityAction: E,
             labelType: S
         } = (0, d.ZP)({
@@ -38,13 +38,13 @@ function x(e) {
             assetNames: _,
             commandOrigin: v
         }),
-        [I, P] = l.useState(!1),
+        [P, I] = l.useState(!1),
         Z = l.useCallback(() => {
-            P(!0);
-        }, [P]),
+            I(!0);
+        }, [I]),
         N = l.useCallback(() => {
-            P(!1);
-        }, [P]),
+            I(!1);
+        }, [I]),
         T = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
@@ -88,7 +88,7 @@ function x(e) {
             }
         }, [E]);
     return (0, i.jsx)(c.zx, {
-        onClick: j,
+        onClick: O,
         color: 'transparent',
         look: c.zx.Looks.BLANK,
         size: c.zx.Sizes.NONE,
@@ -100,7 +100,7 @@ function x(e) {
         children: (0, i.jsx)(u.AMe, {
             config: y,
             from: { value: 0 },
-            to: { value: +!!I },
+            to: { value: +!!P },
             children: (e) => {
                 let { value: t } = e;
                 return (0, i.jsx)(u.f6W, {
@@ -116,7 +116,7 @@ function x(e) {
                             },
                             children: [
                                 (0, i.jsx)(p.Z, {
-                                    imageBackground: O,
+                                    imageBackground: j,
                                     applicationName: r.application.name,
                                     imageClassName: b.activitySuggestionImage,
                                     imageNotFoundClassName: b.brokenImageIconWrapper
