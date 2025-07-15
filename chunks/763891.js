@@ -1,8 +1,8 @@
 (r.d(t, { Z: () => I }), r(388685));
 var n = r(255367),
     l = r(73800),
-    o = r(979554),
-    i = r(399606),
+    i = r(979554),
+    o = r(399606),
     a = r(780384),
     s = r(481060),
     c = r(410030),
@@ -32,9 +32,9 @@ function I(e) {
         N = (0, d.sp)(),
         A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
         { noCache: w, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, M] = l.useState(1),
+        Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        F = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [D, M] = l.useState(1),
         H = () => {
             var e;
             null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
@@ -44,25 +44,25 @@ function I(e) {
         [U, z, G] = l.useMemo(() => {
             switch (B) {
                 case O.AW.AVATAR_DECORATIONS:
-                    return [C.intl.string(C.t.dRZYND), V ? x.Z : y.Z, o.Z.AVATAR_DECORATION];
+                    return [C.intl.string(C.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
-                    return [C.intl.string(C.t['1cNjt7']), V ? L.Z : P.Z, o.Z.PROFILE_EFFECT];
+                    return [C.intl.string(C.t['1cNjt7']), V ? L.Z : P.Z, i.Z.PROFILE_EFFECT];
                 case O.AW.NAMEPLATES:
-                    return [C.intl.string(C.t.V68Fq6), V ? T.Z : j.Z, o.Z.NAMEPLATE];
+                    return [C.intl.string(C.t.V68Fq6), V ? T.Z : j.Z, i.Z.NAMEPLATE];
                 case O.AW.BUNDLES:
-                    return [C.intl.string(C.t.FYFppq), V ? S.Z : E.Z, o.Z.BUNDLE];
+                    return [C.intl.string(C.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
             }
         }, [B, V]),
         q = (0, f.a)(),
         Y = l.useMemo(
             () =>
                 q(
-                    D.filter((e) => {
+                    F.filter((e) => {
                         var t;
-                        return e.type === G || (e.type === o.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
+                        return e.type === G || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === G)) === !0);
                     })
                 ),
-            [D, G, q]
+            [F, G, q]
         ),
         K = (0, g.l)(Y);
     return (l.useEffect(() => {
@@ -100,7 +100,7 @@ function I(e) {
                   }),
                   (0, n.jsx)('div', {
                       className: v.products,
-                      children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
+                      children: K.slice(40 * (D - 1), 40 * D).map((e, t) => {
                           let r = p.Z.getCategory(e.categorySkuId);
                           return null == r
                               ? null
@@ -128,7 +128,7 @@ function I(e) {
                           className: v.paginationContainer,
                           children: (0, n.jsx)('div', {
                               children: (0, n.jsx)(s.DsT, {
-                                  currentPage: F,
+                                  currentPage: D,
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {

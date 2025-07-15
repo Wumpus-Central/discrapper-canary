@@ -24,7 +24,7 @@ let b = () =>
             [_, E] = (0, a.useState)(!1),
             R = (0, a.useMemo)(() => f(h, _), [h, _]),
             [j, v] = (0, a.useState)(!1),
-            [P, S] = (0, a.useState)(!1),
+            [S, P] = (0, a.useState)(!1),
             [A, w] = (0, a.useState)(0.9 * s.D2),
             L = null === l;
         ((0, a.useEffect)(() => {
@@ -32,12 +32,12 @@ let b = () =>
                 !j &&
                 (v(!0),
                 setTimeout(() => {
-                    S(!0);
+                    P(!0);
                 }, 500));
         }, [L, v, j]),
             (0, a.useEffect)(() => {
-                P && !L && v(!1);
-            }, [L, P]));
+                S && !L && v(!1);
+            }, [L, S]));
         let k = L || j,
             D = j ? null : l,
             [N, U] = (0, a.useState)(null),

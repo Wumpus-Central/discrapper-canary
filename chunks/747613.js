@@ -142,22 +142,22 @@ let j = (e) => {
         );
     },
     U = (e) => {
-        let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: s } = e,
-            d = (0, m.Z)('diversity'),
-            f = (0, _.q_F)({
+        let { id: t, selectedSurrogate: n, onClick: a } = e,
+            o = (0, m.Z)('diversity'),
+            s = (0, _.q_F)({
                 height: (M + 2 * x) * (E.gw.length + 1),
                 from: { height: M },
                 config: { duration: w }
             });
         i.useEffect(() => {
-            d.focusFirstVisibleItem();
-        }, [d]);
-        let p = ['', ...E.gw];
+            o.focusFirstVisibleItem();
+        }, [o]);
+        let d = ['', ...E.gw];
         return (
-            l().remove(p, (e) => e === n),
-            p.unshift(n),
+            l().remove(d, (e) => e === n),
+            d.unshift(n),
             (0, r.jsx)(u.bG, {
-                navigator: d,
+                navigator: o,
                 children: (0, r.jsx)(u.SJ, {
                     children: (e) => {
                         var { ref: n } = e,
@@ -167,10 +167,10 @@ let j = (e) => {
                             N(S({}, i), {
                                 id: t,
                                 ref: n,
-                                className: o()(I.diversitySelectorOptions, { [I.diversitySelectorOptionsHasTabWrapper]: s }),
-                                style: f,
+                                className: I.diversitySelectorOptions,
+                                style: s,
                                 role: 'listbox',
-                                children: p.map((e, t) =>
+                                children: d.map((e, t) =>
                                     (0, r.jsx)(
                                         j,
                                         {
@@ -191,7 +191,7 @@ let j = (e) => {
         );
     },
     G = (e) => {
-        let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: o } = e,
+        let { searchBarRef: t, selectedSurrogate: n, className: a } = e,
             s = b.ZP.getURL(L + n),
             [l, c] = i.useState(!1),
             u = (0, h.Z)(null, () => c(!1)),
@@ -208,7 +208,7 @@ let j = (e) => {
             };
         return (0, r.jsxs)('div', {
             ref: u,
-            className: a,
+            className: o()(I.diversitySelector, a),
             children: [
                 (0, r.jsx)(_.P3F, {
                     innerRef: d,
@@ -229,7 +229,6 @@ let j = (e) => {
                           onKeyDown: m,
                           children: (0, r.jsx)(U, {
                               id: D,
-                              hasTabWrapper: o,
                               selectedSurrogate: n,
                               onClick: g
                           })

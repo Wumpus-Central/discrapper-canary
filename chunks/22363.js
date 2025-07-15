@@ -1,51 +1,49 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
     o = n(646574),
     s = n(543241),
-    l = n(747613),
-    c = n(533432),
-    u = n(149203),
-    d = n(185923),
-    f = n(539490);
-let _ = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: O, renderHeader: v } = e,
-        I = (0, r.jsxs)(r.Fragment, {
+    l = n(912648),
+    c = n(747613),
+    u = n(533432),
+    d = n(149203),
+    f = n(185923),
+    _ = n(539490);
+let p = (e) => {
+    let { channel: t, accessory: n, pickerIntention: i, headerClassName: p, emojiListRef: h, onKeyDown: m, onFocus: g, autoFocus: E, searchBarRef: b, diversitySurrogate: y, isBurstReaction: O, onBurstReactionToggle: v, renderHeader: I, showAddEmojiButton: T } = e,
+        S = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(c.Z, {
-                    emojiListRef: _,
-                    gridNavigatorId: u.Vr,
-                    onKeyDown: p,
-                    className: f.searchBar,
-                    ref: g,
+                (0, r.jsx)(u.Z, {
+                    emojiListRef: h,
+                    gridNavigatorId: d.Vr,
+                    onKeyDown: m,
+                    className: _.searchBar,
+                    ref: b,
                     isFullRow: !1,
-                    onFocus: h,
-                    autoFocus: m,
-                    defaultSearchPlaceholder: (0, s.nV)(n, y)
+                    onFocus: g,
+                    autoFocus: E,
+                    defaultSearchPlaceholder: (0, s.nV)(i, O)
                 }),
-                n === d.Hz.REACTION
-                    ? (0, r.jsx)('div', {
-                          className: f.burstToggle,
-                          children: (0, r.jsx)(o.Z, {
-                              checked: y,
-                              onClick: O
-                          })
+                T && (0, r.jsx)(l.Z, { channel: t }),
+                i === f.Hz.REACTION
+                    ? (0, r.jsx)(o.Z, {
+                          checked: O,
+                          onClick: v
                       })
                     : null,
-                null != t
-                    ? t
-                    : (0, r.jsx)(l.Z, {
-                          searchBarRef: g,
-                          className: f.diversitySelector,
-                          hasTabWrapper: E,
-                          selectedSurrogate: b
+                null != n
+                    ? n
+                    : (0, r.jsx)(c.Z, {
+                          searchBarRef: b,
+                          className: _.diversitySelector,
+                          selectedSurrogate: y
                       })
             ]
         });
     return (0, r.jsx)('div', {
-        className: a()(f.header, i),
-        children: null != v ? v(I) : I
+        className: a()(_.header, p),
+        children: null != I ? I(S) : S
     });
 };

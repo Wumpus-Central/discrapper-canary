@@ -1,8 +1,8 @@
 (r.d(t, { Z: () => E }), r(388685));
 var n = r(255367),
     l = r(73800),
-    o = r(120356),
-    i = r.n(o),
+    i = r(120356),
+    o = r.n(i),
     a = r(755721),
     s = r(481060),
     c = r(381585),
@@ -19,7 +19,7 @@ var n = r(255367),
     C = r(388032),
     v = r(95368);
 function E(e) {
-    let { isFullScreen: t, scrollerRef: r, tab: o, sortedCategories: a, setCategoryRef: c, advancedScroller: p } = e;
+    let { isFullScreen: t, scrollerRef: r, tab: i, sortedCategories: a, setCategoryRef: c, advancedScroller: p } = e;
     (0, d.A)();
     let f = (0, u.F)('CollectiblesBrowse'),
         [g, b] = l.useState(f),
@@ -35,9 +35,9 @@ function E(e) {
             f || b(!1);
         }, [f, b]),
         (0, n.jsx)('div', {
-            className: i()(v.pageWrapper, { [v.pageWrapperFilter]: f }),
+            className: o()(v.pageWrapper, { [v.pageWrapperFilter]: f }),
             children: (0, n.jsxs)('main', {
-                className: i()(v.page, { [v.pageFilter]: f }),
+                className: o()(v.page, { [v.pageFilter]: f }),
                 children: [
                     null != p
                         ? p(
@@ -46,7 +46,7 @@ function E(e) {
                                   isSmallScreen: m,
                                   filterBarOpen: g,
                                   setFilterBarOpen: b,
-                                  tab: o,
+                                  tab: i,
                                   scrollerRef: r,
                                   sortedCategories: a,
                                   setCategoryRef: c
@@ -57,7 +57,7 @@ function E(e) {
                               isSmallScreen: m,
                               filterBarOpen: g,
                               setFilterBarOpen: b,
-                              tab: o,
+                              tab: i,
                               scrollerRef: r,
                               sortedCategories: a,
                               setCategoryRef: c
@@ -74,7 +74,7 @@ function E(e) {
     );
 }
 let S = (e) => {
-    let { isFullScreen: t, isSmallScreen: r, filterBarOpen: o, setFilterBarOpen: E, tab: S, scrollerRef: y, sortedCategories: x, setCategoryRef: j } = e,
+    let { isFullScreen: t, isSmallScreen: r, filterBarOpen: i, setFilterBarOpen: E, tab: S, scrollerRef: y, sortedCategories: x, setCategoryRef: j } = e,
         T = (0, u.F)('CollectiblesBrowse'),
         P = l.useRef(null),
         L = (0, d.S)((e) => e.hasDefaultFilters()),
@@ -85,18 +85,18 @@ let S = (e) => {
         B = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (!r || !o) return;
+            if (!r || !i) return;
             let e = (e) => {
                 let t = e.target;
                 null === P.current || null === B.current || P.current.contains(t) || B.current.contains(t) || E(!1);
             };
             return (document.addEventListener('mousedown', e), () => document.removeEventListener('mousedown', e));
-        }, [r, o, E]),
+        }, [r, i, E]),
         (0, n.jsxs)('div', {
             className: v.inventoryWrapper,
             children: [
                 (0, n.jsxs)('div', {
-                    className: i()(v.inventory, {
+                    className: o()(v.inventory, {
                         [v.inventoryFilter]: T,
                         [v.pageFullscreen]: t
                     }),
@@ -110,7 +110,7 @@ let S = (e) => {
                                         children: (0, n.jsx)(p.Z, {})
                                     }),
                                     (0, n.jsxs)('div', {
-                                        className: i()(v.controlsRightSide, { [v.controlsRightSideResponsive]: r }),
+                                        className: o()(v.controlsRightSide, { [v.controlsRightSideResponsive]: r }),
                                         children: [
                                             (0, n.jsxs)('div', {
                                                 className: v.sortBy,
@@ -128,14 +128,14 @@ let S = (e) => {
                                                     onClick: () => E((e) => !e),
                                                     look: a.iL.OUTLINED,
                                                     color: a.Tt.PRIMARY,
-                                                    className: i()({
+                                                    className: o()({
                                                         [v.responsiveFilterButton]: r,
-                                                        [v.filterButtonActive]: o
+                                                        [v.filterButtonActive]: i
                                                     }),
                                                     children: (0, n.jsxs)('div', {
                                                         className: v.filterButton,
                                                         children: [
-                                                            C.intl.string(o ? C.t.fYtm6e : C.t.TeTYEx),
+                                                            C.intl.string(i ? C.t.fYtm6e : C.t.TeTYEx),
                                                             (0, n.jsx)(s.gXV, {
                                                                 size: 'xs',
                                                                 color: 'var(--button-outline-primary-text)'
@@ -146,7 +146,7 @@ let S = (e) => {
                                             })
                                         ]
                                     }),
-                                    o &&
+                                    i &&
                                         r &&
                                         (0, n.jsx)('div', {
                                             className: v.filterOverlay,
@@ -190,7 +190,7 @@ let S = (e) => {
                                 })
                     ]
                 }),
-                o && !r && (0, n.jsx)('div', { className: v.divider })
+                i && !r && (0, n.jsx)('div', { className: v.divider })
             ]
         })
     );

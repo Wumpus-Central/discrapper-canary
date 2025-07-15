@@ -1,84 +1,84 @@
-(n.d(t, { Z: () => C }), n(388685));
-var i = n(255367);
+(n.d(t, { Z: () => T }), n(388685));
+var r = n(255367);
 n(73800);
-var r = n(442837),
+var i = n(442837),
     l = n(481060),
-    o = n(300284),
-    s = n(314897),
-    a = n(271383),
-    c = n(715903),
-    d = n(295474),
-    u = n(372897),
+    a = n(300284),
+    o = n(314897),
+    c = n(271383),
+    s = n(715903),
+    u = n(295474),
+    d = n(372897),
     _ = n(526761),
-    h = n(388032);
-function E(e) {
+    E = n(388032);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i));
+                        : (e[t] = r));
             }));
     }
     return e;
 }
-function I(e) {
-    let { guildId: t, analyticsLocations: n, analyticsLocation: r } = e,
-        [o, s] = (0, d.ww)({
+function O(e) {
+    let { guildId: t, analyticsLocations: n, analyticsLocation: i } = e,
+        [a, o] = (0, u.ww)({
             guildId: t,
             analyticsLocations: n,
-            analyticsLocation: r,
+            analyticsLocation: i,
             openWithoutBackstack: !0
         }),
-        a = s ? h.intl.string(h.t['6ndMcn']) : h.intl.string(h.t['0eiu6O']),
-        c = s ? h.intl.string(h.t.S09nw8) : h.intl.string(h.t.tEttXV);
-    return (0, i.jsxs)(l.qXd, {
+        c = o ? E.intl.string(E.t['6ndMcn']) : E.intl.string(E.t['0eiu6O']),
+        s = o ? E.intl.string(E.t.S09nw8) : E.intl.string(E.t.tEttXV);
+    return (0, r.jsxs)(l.qXd, {
         color: l.DM8.DANGER,
         children: [
-            a,
-            (0, i.jsx)(l.EyT, {
-                onClick: o,
-                children: c
+            c,
+            (0, r.jsx)(l.EyT, {
+                onClick: a,
+                children: s
             })
         ]
     });
 }
 function p() {
-    let e = (0, o.Z)({ scrollPosition: _.Y_.GUILD_TAG });
-    return (0, i.jsxs)(l.qXd, {
+    let e = (0, a.Z)({ scrollPosition: _.Y_.GUILD_TAG });
+    return (0, r.jsxs)(l.qXd, {
         color: l.DM8.DANGER,
         children: [
-            h.intl.string(h.t.ZqlecX),
-            (0, i.jsx)(l.EyT, {
+            E.intl.string(E.t.ZqlecX),
+            (0, r.jsx)(l.EyT, {
                 onClick: e,
-                children: h.intl.string(h.t.SJehVV)
+                children: E.intl.string(E.t.SJehVV)
             })
         ]
     });
 }
-function C(e) {
-    let t = (0, r.e7)(
-        [s.default, a.ZP],
+function T(e) {
+    let t = (0, i.e7)(
+        [o.default, c.ZP],
         () => {
             if (null == e.guildId) return new Set();
-            let t = s.default.getId();
-            return (0, c.no)(a.ZP.getMember(e.guildId, t));
+            let t = o.default.getId();
+            return (0, s.no)(c.ZP.getMember(e.guildId, t));
         },
         [e.guildId]
     );
-    return t.has(u.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(u.q.AUTOMOD_QUARANTINED_BIO) ? (0, i.jsx)(I, E({}, e)) : t.has(u.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, i.jsx)(p, {}) : (0, i.jsx)(I, E({}, e));
+    return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO) ? (0, r.jsx)(O, I({}, e)) : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, r.jsx)(p, {}) : (0, r.jsx)(O, I({}, e));
 }

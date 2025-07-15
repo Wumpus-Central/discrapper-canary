@@ -1,25 +1,25 @@
 (n.d(t, {
-    C: () => l,
+    C: () => s,
     x: () => r
 }),
     n(388685));
-var a = n(570140),
+var l = n(570140),
     i = n(93127);
 function r(e) {
-    let { omitUserIds: t, guild: n, channel: r, applicationId: l, inviteTargetType: s } = e;
+    let { omitUserIds: t, guild: n, channel: r, applicationId: s, inviteTargetType: a } = e;
     return (0, i._)().then(() => {
-        a.Z.dispatch({
+        l.Z.dispatch({
             type: 'LOAD_INVITE_SUGGESTIONS',
             omitUserIds: null != t ? t : new Set(),
             guild: n,
             channel: r,
-            applicationId: l,
-            inviteTargetType: s
+            applicationId: s,
+            inviteTargetType: a
         });
     });
 }
-function l(e) {
-    a.Z.dispatch({
+function s(e) {
+    l.Z.dispatch({
         type: 'INVITE_SUGGESTIONS_SEARCH',
         query: e
     });

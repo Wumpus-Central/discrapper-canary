@@ -65,8 +65,8 @@ function j() {
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: r } = t;
                 if (!(0, d.O)()) return;
-                let { videoEnabled: i } = e;
-                if (i !== n && r) return n ? 'camera_on' : 'camera_off';
+                let { videoEnabled: i, inVoiceChannel: l } = e;
+                if (i !== n && l && r) return n ? 'camera_on' : 'camera_off';
             }
         ),
         null

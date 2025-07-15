@@ -1,4 +1,4 @@
-r.d(t, { R: () => o });
-var n = r(442837),
-    l = r(597688);
-let o = () => (0, n.e7)([l.Z], () => l.Z.isFetchingCategories);
+n.d(t, { R: () => a });
+var r = n(442837),
+    i = n(597688);
+let a = () => (0, r.e7)([i.Z], () => i.Z.isFetchingCategories);

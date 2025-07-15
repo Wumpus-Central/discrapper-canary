@@ -55,6 +55,9 @@ class o extends (n = a.ZP.Store) {
     getCurrentBalance() {
         return this.balance;
     }
+    handleBalanceStateReset() {
+        ((this._balance = null), (this._fetchBalanceError = null), (this._isFetchingBalance = !1));
+    }
     handleBalanceFetch(e) {
         let {} = e;
         ((this._isFetchingBalance = !0), (this._fetchBalanceError = null));
@@ -112,6 +115,7 @@ class o extends (n = a.ZP.Store) {
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET: (e) => this.handleOnboardingModalReset(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN: (e) => this.handleEarnedOrbsCoachmarkOpen(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE: (e) => this.handleEarnedOrbsCoachmarkClose(e),
+            LOGIN_SUCCESS: () => this.handleBalanceStateReset(),
             VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY: (e) => {
                 this.setBalancePillOverlay(e.balancePillOverlay);
             }

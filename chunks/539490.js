@@ -10,6 +10,5 @@ e.exports = {
     categoryList: 'categoryList_c0e32c',
     bodyWrapper: 'bodyWrapper_c0e32c',
     emojiPickerListWrapper: 'emojiPickerListWrapper_c0e32c',
-    inspector: 'inspector_c0e32c',
-    burstToggle: 'burstToggle_c0e32c'
+    inspector: 'inspector_c0e32c'
 };

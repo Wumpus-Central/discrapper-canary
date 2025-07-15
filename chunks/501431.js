@@ -8,8 +8,8 @@
     r(49124));
 var n = r(73800),
     l = r(97519),
-    o = r(296574),
-    i = r(497598),
+    i = r(296574),
+    o = r(497598),
     a = r(792091),
     s = r(653654),
     c = r(149705);
@@ -62,15 +62,15 @@ function p(e, t) {
 }
 let f = {
         sortType: a.E.RECENCY,
-        sortDirection: i.F.DESC
+        sortDirection: o.F.DESC
     },
     g = {
         sortType: a.E.POPULARITY,
-        sortDirection: i.F.DESC
+        sortDirection: o.F.DESC
     },
     h = {
         sortType: a.E.RELEVANCE,
-        sortDirection: i.F.DESC
+        sortDirection: o.F.DESC
     },
     b = {
         itemTypeFilters: new Set(),
@@ -79,7 +79,7 @@ let f = {
         orbEligible: !1,
         sort: f,
         searchQuery: '',
-        queryPageSize: 20,
+        queryPageSize: 0,
         queryPageOffset: 0,
         isFetchingResults: !1,
         fullScreenOpen: !1,
@@ -91,12 +91,12 @@ let f = {
         return t.size > 0 || r.size > 0 || '' !== n.trim() ? h : l.size > 0 ? g : f;
     },
     _ = (0, l.U)(
-        (0, o.XR)((e, t) =>
+        (0, i.XR)((e, t) =>
             d(u({}, b), {
                 hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === f.sortType && t().sort.sortDirection === f.sortDirection,
                 hasFilters: () => {
-                    let { itemTypeFilters: e, colorFilters: r, themeFilters: n, orbEligible: l, searchQuery: o } = t();
-                    return [e, r, n].some((e) => e.size > 0) || l || '' !== o;
+                    let { itemTypeFilters: e, colorFilters: r, themeFilters: n, orbEligible: l, searchQuery: i } = t();
+                    return [e, r, n].some((e) => e.size > 0) || l || '' !== i;
                 },
                 hasRelevanceFilters: () => {
                     let { colorFilters: e, themeFilters: r, searchQuery: n } = t();
@@ -170,6 +170,9 @@ let f = {
                     e((e) => {
                         let r = new Set([t]),
                             n = d(u({}, e), {
+                                colorFilters: new Set(),
+                                themeFilters: new Set(),
+                                orbEligible: !1,
                                 itemTypeFilters: r,
                                 queryPageOffset: 0
                             });
@@ -178,13 +181,20 @@ let f = {
                 },
                 clearFilters: () => {
                     e({
-                        itemTypeFilters: new Set(),
                         colorFilters: new Set(),
-                        themeFilters: new Set()
+                        themeFilters: new Set(),
+                        itemTypeFilters: new Set(),
+                        orbEligible: !1
                     });
                 },
                 reset: () => {
-                    e(u({}, b));
+                    let { queryPageSize: r, queryPageOffset: n } = t();
+                    e(
+                        d(u({}, b), {
+                            queryPageSize: r,
+                            queryPageOffset: n
+                        })
+                    );
                 },
                 setFullScreenOpen: (t) => {
                     e({ fullScreenOpen: t });
@@ -196,7 +206,7 @@ let f = {
         )
     ),
     O = (e) => {
-        let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: o, searchQuery: i, queryPageSize: a, queryPageOffset: s } = e;
+        let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: i, searchQuery: o, queryPageSize: a, queryPageOffset: s } = e;
         return {
             item_types: Array.from(t),
             colors: Array.from(r),
@@ -204,9 +214,9 @@ let f = {
             orbs_eligible: !!l || void 0,
             offset: s,
             limit: a,
-            sort_type: o.sortType,
-            sort_direction: o.sortDirection,
-            search: '' !== i ? i : void 0
+            sort_type: i.sortType,
+            sort_direction: i.sortDirection,
+            search: '' !== o ? o : void 0
         };
     },
     C = (e) => {
@@ -222,24 +232,25 @@ let f = {
         };
     },
     v = () => {
-        let { onSetResponse: e, setSearchError: t, clear: r, setIsFetchingResults: l } = (0, c.a)();
+        let { onSetResponse: e, setSearchError: t, setIsFetchingResults: r } = (0, c.a)();
         n.useEffect(() => {
             let n = (n) => {
-                (async () => {
-                    (r(), l(!0));
+                let l = async () => {
+                    r(!0);
                     try {
                         let t = await (0, s.y)(n);
                         e(C(t));
                     } catch (e) {
-                        var o;
-                        t(null != (o = null == e ? void 0 : e.message) ? o : 'Unknown error');
+                        var l;
+                        t(null != (l = null == e ? void 0 : e.message) ? l : 'Unknown error');
                     } finally {
-                        l(!1);
+                        r(!1);
                     }
-                })();
+                };
+                0 !== n.limit && l();
             };
             n(O(_.getState()));
-            let o = _.subscribe(O, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+            let l = _.subscribe(O, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
                 i = _.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
@@ -250,7 +261,7 @@ let f = {
                     }
                 );
             return () => {
-                (o(), i());
+                (l(), i());
             };
-        }, [e, t, r, l]);
+        }, [e, t, r]);
     };

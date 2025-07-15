@@ -1,8 +1,8 @@
 r.d(t, { f: () => g });
 var n = r(534517),
     l = r(909688),
-    o = r(880398),
-    i = r(345778),
+    i = r(880398),
+    o = r(345778),
     a = r(315066),
     s = r(587792),
     c = r(228624),
@@ -10,4 +10,4 @@ var n = r(534517),
     d = r(91641),
     p = r(166350),
     f = r(987338);
-let g = new d.E([p.NR, p.ZI, p.Ob, p.uc, p.m1, u.Jg, u.zk, u.xs, u.d3, u.nS, u.OP, c.k, s.g, l.j, a.A, n.B, o.$, i.R], f.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+let g = new d.E([p.NR, p.ZI, p.Ob, p.uc, p.m1, u.Jg, u.zk, u.xs, u.d3, u.nS, u.OP, c.k, s.g, l.j, a.A, n.B, i.$, o.R], f.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

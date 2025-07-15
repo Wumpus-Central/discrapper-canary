@@ -1,8 +1,8 @@
 (r.d(t, { Z: () => I }), r(388685));
 var n = r(255367),
     l = r(73800),
-    o = r(120356),
-    i = r.n(o),
+    i = r(120356),
+    o = r.n(i),
     a = r(685816),
     s = r(755721),
     c = r(481060),
@@ -27,7 +27,7 @@ var n = r(255367),
     P = r(806734);
 let L = (e) => {
         var t;
-        let { handleTransition: r, numVisibleItems: o, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
+        let { handleTransition: r, numVisibleItems: i, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
             { noCache: p, includeUnpublished: m } = (0, _.Z)(),
             [S, x] = l.useState(!1),
             j = (0, d.sp)(),
@@ -102,7 +102,7 @@ let L = (e) => {
                     (0, n.jsx)(C.Z, {
                         isLoading: L,
                         handleTransition: r,
-                        numVisibleItems: o,
+                        numVisibleItems: i,
                         tab: c
                     })
                 ]
@@ -142,7 +142,7 @@ let L = (e) => {
                         {
                             isLoading: L || s,
                             handleTransition: r,
-                            numVisibleItems: o,
+                            numVisibleItems: i,
                             sortedSkuIds: d,
                             tab: c
                         },
@@ -184,7 +184,7 @@ let L = (e) => {
             return (0, n.jsx)(
                 'div',
                 {
-                    className: i()(P.blockContainer, { [P.topBlockContainer]: 0 === t }),
+                    className: o()(P.blockContainer, { [P.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -193,7 +193,7 @@ let L = (e) => {
         return (0, n.jsx)(n.Fragment, { children: k.map((e, t) => A(e, t)) });
     },
     I = (e) => {
-        let { isFullScreen: t, scrollerRef: r, handleTransition: o, tab: a, transitionState: f } = e,
+        let { isFullScreen: t, scrollerRef: r, handleTransition: i, tab: a, transitionState: f } = e,
             g = (0, p.R)('CollectiblesFeedShop'),
             h = (0, m.R)(),
             b = (0, d.sp)(),
@@ -220,10 +220,10 @@ let L = (e) => {
                 className: P.shop,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: i()(P.content, P.mainContent),
+                        className: o()(P.content, P.mainContent),
                         children: [
                             (0, n.jsx)(L, {
-                                handleTransition: o,
+                                handleTransition: i,
                                 numVisibleItems: _,
                                 isFetchingCategories: h,
                                 tab: a,
@@ -241,7 +241,7 @@ let L = (e) => {
                                         (0, n.jsx)(s.zx, {
                                             className: P.endOfFeedButton,
                                             onClick: () => {
-                                                (o('shop all button', void 0, !0),
+                                                (i('shop all button', void 0, !0),
                                                     u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                                                         page_type: a,
