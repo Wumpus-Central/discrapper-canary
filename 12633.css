@@ -22197,6 +22197,14 @@ div.modalHeader_c28af8 {
     justify-content: center
 }
 
+.premiumBrandRefreshContainer__61733 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-md);
+    display: flex;
+    padding: var(--space-12) var(--space-16)
+}
+
 .v2Container__61733 {
     background: none;
     justify-content: left
