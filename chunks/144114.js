@@ -5,15 +5,15 @@ n.d(t, {
 var r,
     i = n(990547),
     l = n(544891),
-    a = n(570140),
+    o = n(570140),
     s = n(314897),
-    o = n(573261),
+    a = n(573261),
     c = n(815660),
     d = n(981631),
     u = (((r = {}).USER_ACTION_REQUIRED = 'user_action_required'), (r.USER_SETTINGS_UPDATE = 'user_settings_update'), (r.GUILD_PHONE_REQUIRED = 'guild_phone_required'), (r.MFA_PHONE_UPDATE = 'mfa_phone_update'), (r.CONTACT_SYNC = 'contact_sync'), r);
 let m = {
     setCountryCode(e) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'PHONE_SET_COUNTRY_CODE',
             countryCode: e
         });
@@ -100,7 +100,7 @@ let m = {
             l = {},
             u = s.default.getFingerprint();
         (null != u && '' !== u && (l['X-Fingerprint'] = u), r && (l.authorization = ''));
-        let m = await o.Z.post({
+        let m = await a.Z.post({
             url: d.ANM.VERIFY_PHONE,
             headers: l,
             body: {
@@ -113,7 +113,7 @@ let m = {
         });
         return (
             n &&
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'MODAL_POP',
                     key: c.M
                 }),

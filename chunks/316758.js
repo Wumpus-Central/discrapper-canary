@@ -1,5 +1,5 @@
 n.d(t, {
-    IV: () => i,
+    IV: () => o,
     P: () => c,
     fH: () => s,
     xt: () => u
@@ -7,21 +7,21 @@ n.d(t, {
 var r = n(166459),
     a = n(476326),
     l = n(703558),
-    o = n(398805);
-async function i(e, t, n) {
-    let r = (0, o.Yk)(t, n),
+    i = n(398805);
+async function o(e, t, n) {
+    let r = (0, i.Yk)(t, n),
         a = await fetch(n);
     return (s(e, t, new File([await a.blob()], r, { type: 'image/gif' })), n);
 }
 function s(e, t, n) {
-    let o = {
+    let i = {
         id: t,
         channelId: e,
         file: n,
         platform: a.ow.WEB
     };
     r.Z.addFile({
-        file: o,
+        file: i,
         channelId: e,
         draftType: l.d.Poll
     });

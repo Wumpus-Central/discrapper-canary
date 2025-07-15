@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
-    o = n(73800),
-    l = n(481060),
+    l = n(73800),
+    o = n(481060),
     i = n(782568),
     a = n(592125),
     s = n(594174),
@@ -18,41 +18,41 @@ var r = n(255367),
 let y = (e) => {
     var t;
     let { message: n } = e,
-        y = o.useRef(null),
+        y = l.useRef(null),
         v = (0, p.p7)('Message Header') && n.hasPotions(),
         j = a.Z.getChannel(n.getChannelId()),
         P = null == (t = n.potions) ? void 0 : t[0],
-        x = o.useMemo(() => {
+        x = l.useMemo(() => {
             var e;
             if (null == P) return null;
             let t = s.default.getUser(P.used_by);
             return null != (e = (0, u.y)(null == j ? void 0 : j.getGuildId(), null == j ? void 0 : j.id, t)) ? e : null == t ? void 0 : t.globalName;
         }, [P, j]),
-        w = o.useCallback(() => {
+        w = l.useCallback(() => {
             if (null != y.current && (0, f.Uw)(n)) {
-                let { x: e, y: t, width: r, height: o } = y.current.getBoundingClientRect();
+                let { x: e, y: t, width: r, height: l } = y.current.getBoundingClientRect();
                 (0, m.Z)(
                     n,
                     {
                         x: e,
                         y: t,
                         w: r,
-                        h: o
+                        h: l
                     },
                     !0,
                     d.LL.UserTriggered
                 );
             }
         }, [n]),
-        C = o.useCallback(() => {
+        C = l.useCallback(() => {
             (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
     return v && null != x && (null == P ? void 0 : P.type) === g.B.CONFETTI
-        ? (0, r.jsx)(l.P3F, {
+        ? (0, r.jsx)(o.P3F, {
               onFocus: w,
               onClick: C,
               'aria-label': h.intl.string(h.t.Mp5k6O),
-              children: (0, r.jsx)(l.ua7, {
+              children: (0, r.jsx)(o.ua7, {
                   text: h.intl.formatToPlainString(h.t['FE++aG'], { user: x }),
                   children: (e) => {
                       var t, n;
@@ -92,13 +92,13 @@ let y = (e) => {
                           (n = n =
                               {
                                   children: [
-                                      (0, r.jsx)(l.l22, {
+                                      (0, r.jsx)(o.l22, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 12,
                                           height: 12
                                       }),
-                                      (0, r.jsx)(l.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-xs/bold',
                                           color: 'currentColor',
                                           children: h.intl.string(h.t['8Rrro6'])

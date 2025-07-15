@@ -1,5 +1,5 @@
 (n.d(t, {
-    e: () => v,
+    e: () => x,
     i: () => O
 }),
     n(35282),
@@ -22,19 +22,19 @@ var r = n(255367),
     b = n(981631),
     E = n(388032),
     y = n(841935);
-let x = /^<(a?):(\w+):(\d+)>/;
-function C(e) {
+let C = /^<(a?):(\w+):(\d+)>/;
+function v(e) {
     let t = i.useMemo(() => {
         var t;
-        return null == (t = x.exec(e)) ? void 0 : t[3];
+        return null == (t = C.exec(e)) ? void 0 : t[3];
     }, [e]);
     return (0, s.e7)([h.ZP], () => (null == t ? null : h.ZP.getCustomEmojiById(t)));
 }
-function v(e) {
+function x(e) {
     let { message: t, className: n } = e,
         [l, o] = i.useState(!1),
         s = t.getChannelId(),
-        d = C(t.content),
+        d = v(t.content),
         p = i.useCallback(() => {
             null != d &&
                 (0, f.rU)(
@@ -158,18 +158,20 @@ function v(e) {
 function O(e) {
     var t;
     let { message: n, compact: l, usernameHook: a } = e,
-        [s, u] = i.useState(!1),
-        f = (0, d.ZP)(n),
-        h = a(f),
-        x = C(n.content),
-        v = i.useCallback(() => {
+        s = n.content,
+        [u, f] = i.useState(!1),
+        h = (0, d.ZP)(n),
+        C = a(h),
+        x = v(s),
+        O = i.useCallback(() => {
             null != x &&
                 g.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                     plainText: ':'.concat(x.name, ':'),
+                    rawText: s,
                     addSpace: !0
                 });
-        }, [x]),
-        O = i.useMemo(() => {
+        }, [x, s]),
+        j = i.useMemo(() => {
             var e;
             return null == x
                 ? null
@@ -195,24 +197,24 @@ function O(e) {
         contentClassName: y.content,
         children: (0, r.jsx)('span', {
             children:
-                null == x || null == O
+                null == x || null == j
                     ? E.intl.format(E.t.k6Jc9f, {
-                          username: f.nick,
-                          usernameHook: h
+                          username: h.nick,
+                          usernameHook: C
                       })
                     : E.intl.format(E.t.IihHBw, {
-                          username: f.nick,
-                          usernameHook: h,
+                          username: h.nick,
+                          usernameHook: C,
                           emojiPreview: (0, r.jsx)(p.Y, {
-                              node: O,
-                              isInteracting: s
+                              node: j,
+                              isInteracting: u
                           }),
                           emojiName: (0, r.jsx)(c.P3F, {
                               className: y.clickableEmoji,
                               tag: 'span',
-                              onClick: v,
-                              onMouseEnter: () => u(!0),
-                              onMouseLeave: () => u(!1),
+                              onClick: O,
+                              onMouseEnter: () => f(!0),
+                              onMouseLeave: () => f(!1),
                               children: (0, r.jsx)(c.Text, {
                                   tag: 'span',
                                   variant: 'text-md/medium',

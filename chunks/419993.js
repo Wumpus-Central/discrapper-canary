@@ -111,7 +111,7 @@ class T extends (r = a.Component) {
                         (0, i.jsx)(c.t, {
                             children: (0, i.jsx)(P, {
                                 type: 'text',
-                                className: s()(m.inputDefault, h.textArea, g.scrollbarDefault, v, {
+                                className: s()(m.input, h.textArea, g.scrollbarDefault, v, {
                                     [m.error]: w,
                                     [m.disabled]: n,
                                     [h.resizeable]: b

@@ -44,7 +44,7 @@ function h(e, t) {
     (o && !i.has(t) ? (i.add(t), (r = !0), (n = !0)) : o || (n = i.delete(t)), 0 === i.size && n ? delete l[e] : n && (l[e] = i));
     let u = new Set(c[e]),
         d = a.Z.isIgnored(t);
-    return (d && !u.has(t) ? (u.add(t), (r = !0), (n = !0)) : d || (n = u.delete(t)), 0 === u.size && n ? delete c[e] : n && (c[e] = u), r && s.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n);
+    return (d && !u.has(t) ? (u.add(t), (r = !0), (n = !0)) : d || (n = u.delete(t)), 0 === u.size && n ? delete c[e] : n && (c[e] = u), r && s.ZP.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n);
 }
 class m extends r.ZP.Store {
     initialize() {

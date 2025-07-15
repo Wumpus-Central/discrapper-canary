@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
-var o = n(442837),
-    l = n(481060),
+var l = n(442837),
+    o = n(481060),
     i = n(493773),
     a = n(367907),
     s = n(111028),
@@ -78,14 +78,14 @@ let C = (e) => {
             )
         );
     });
-    let S = (0, o.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
+    let S = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
         E = (0, p.Z)(S),
         N = E ? j.intl.formatToPlainString(j.t.t0928f, { name: C }) : j.intl.formatToPlainString(j.t.UDDkGx, { name: C }),
-        T = w(x({}, t), {
+        Z = w(x({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
-        Z = E
+        R = E
             ? () => {
                   (0, m.uL)(y.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
               }
@@ -95,7 +95,7 @@ let C = (e) => {
                       location: { section: y.jXE.ROLE_ICON_POPOUT }
                   });
               };
-    return (0, r.jsx)(l.VqE, {
+    return (0, r.jsx)(o.VqE, {
         children: (0, r.jsx)(O.W_, {
             children: (0, r.jsxs)('div', {
                 className: P.popoutContainer,
@@ -107,7 +107,7 @@ let C = (e) => {
                                 className: P.roleIconContainer,
                                 children: (0, r.jsx)(
                                     c.Z,
-                                    w(x({}, T), {
+                                    w(x({}, Z), {
                                         enableTooltip: !1,
                                         className: P.__invalid_roleIcon,
                                         enableHeight: !1
@@ -117,12 +117,12 @@ let C = (e) => {
                             (0, r.jsxs)('div', {
                                 className: P.truncatingText,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(o.X6q, {
                                         variant: 'heading-md/semibold',
                                         className: P.roleName,
                                         children: (0, r.jsx)(s.Z, { children: C })
                                     }),
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
                                         children: N
                                     })
@@ -130,12 +130,12 @@ let C = (e) => {
                             })
                         ]
                     }),
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)(o.zxk, {
                         size: 'sm',
                         variant: 'secondary',
                         text: j.intl.string(j.t['H930+P']),
-                        onClick: Z,
-                        icon: l.$Eu,
+                        onClick: R,
+                        icon: o.$Eu,
                         fullWidth: !0,
                         autoFocus: !0
                     })

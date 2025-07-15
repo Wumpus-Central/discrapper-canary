@@ -135,8 +135,6 @@ class H extends i.PureComponent {
         }
     }
     render() {
-        let { searchAnalyticsId: e, searchType: t, searchResults: n, searchId: i } = this.props,
-            { offset: l, hasError: a, totalResults: o, isHistoricalIndexing: s, isSearching: c } = this.props.search;
         return (0, r.jsxs)('section', {
             className: k.searchResultsWrap,
             'aria-label': D.intl.string(D.t.zkoeq6),
@@ -147,19 +145,7 @@ class H extends i.PureComponent {
                     className: k.scroller,
                     children: this.renderContent()
                 }),
-                this.renderFooter(),
-                (0, r.jsx)(B, {
-                    searchId: i,
-                    searchType: t,
-                    searchAnalyticsId: e,
-                    searchResults: n,
-                    searchOffset: l,
-                    searchLimit: R.vpv,
-                    searchHasError: a,
-                    searchTotalResults: o,
-                    searchIsIndexing: s,
-                    isSearching: c
-                })
+                this.renderFooter()
             ]
         });
     }
@@ -341,22 +327,38 @@ function G(e) {
         ),
         x = i.useDeferredValue(d),
         v = i.useDeferredValue(o);
-    return (0, r.jsx)(H, {
-        searchId: t,
-        search: v,
-        searchAnalyticsId: u,
-        searchType: s,
-        searchResults: x,
-        ignoreCount: h,
-        blockCount: f,
-        renderEmbeds: _.NA.useSetting(),
-        developerMode: _.Sb.useSetting(),
-        theme: l,
-        isFeedbackVisible: n,
-        dismissFeedbackEntrypoint: a,
-        onPageChange: y,
-        onSearchModeChange: b,
-        searchMode: m
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(H, {
+                searchId: t,
+                search: v,
+                searchAnalyticsId: u,
+                searchType: s,
+                searchResults: x,
+                ignoreCount: h,
+                blockCount: f,
+                renderEmbeds: _.NA.useSetting(),
+                developerMode: _.Sb.useSetting(),
+                theme: l,
+                isFeedbackVisible: n,
+                dismissFeedbackEntrypoint: a,
+                onPageChange: y,
+                onSearchModeChange: b,
+                searchMode: m
+            }),
+            (0, r.jsx)(B, {
+                searchId: t,
+                searchType: s,
+                searchAnalyticsId: u,
+                searchResults: d,
+                searchOffset: o.offset,
+                searchLimit: R.vpv,
+                searchHasError: o.hasError,
+                searchTotalResults: o.totalResults,
+                searchIsIndexing: o.isHistoricalIndexing,
+                isSearching: o.isSearching
+            })
+        ]
     });
 }
 function V(e) {
@@ -411,22 +413,38 @@ function V(e) {
             },
             [a, o, x]
         );
-    return (0, r.jsx)(H, {
-        searchId: R.aib.DMS,
-        search: p,
-        searchAnalyticsId: h,
-        searchType: R.aib.DMS,
-        searchResults: f,
-        ignoreCount: m,
-        blockCount: y,
-        renderEmbeds: _.NA.useSetting(),
-        developerMode: _.Sb.useSetting(),
-        theme: t,
-        isFeedbackVisible: n,
-        dismissFeedbackEntrypoint: l,
-        onPageChange: O,
-        onSearchModeChange: j,
-        searchMode: x
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(H, {
+                searchId: R.aib.DMS,
+                search: p,
+                searchAnalyticsId: h,
+                searchType: R.aib.DMS,
+                searchResults: f,
+                ignoreCount: m,
+                blockCount: y,
+                renderEmbeds: _.NA.useSetting(),
+                developerMode: _.Sb.useSetting(),
+                theme: t,
+                isFeedbackVisible: n,
+                dismissFeedbackEntrypoint: l,
+                onPageChange: O,
+                onSearchModeChange: j,
+                searchMode: x
+            }),
+            (0, r.jsx)(B, {
+                searchId: R.aib.DMS,
+                searchType: R.aib.DMS,
+                searchAnalyticsId: h,
+                searchResults: f,
+                searchOffset: p.offset,
+                searchLimit: R.vpv,
+                searchHasError: p.hasError,
+                searchTotalResults: p.totalResults,
+                searchIsIndexing: p.isHistoricalIndexing,
+                isSearching: p.isSearching
+            })
+        ]
     });
 }
 function z(e) {

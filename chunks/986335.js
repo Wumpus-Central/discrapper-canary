@@ -12,6 +12,5 @@ e.exports = {
     authorizedSuccessExternal: 'authorizedSuccessExternal_b76614',
     authorizedSuccessExternalCopy: 'authorizedSuccessExternalCopy_b76614',
     authorizedSuccessExternalIcon: 'authorizedSuccessExternalIcon_b76614',
-    authorizedExternalCta: 'authorizedExternalCta_b76614',
-    authorizedExternalCtaInner: 'authorizedExternalCtaInner_b76614'
+    authorizedExternalCta: 'authorizedExternalCta_b76614'
 };

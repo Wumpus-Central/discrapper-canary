@@ -1,13 +1,13 @@
 n.d(t, {
-    o: () => I,
-    p: () => v
+    o: () => v,
+    p: () => O
 });
 var r,
     i = n(255367),
     a = n(73800),
     o = n(120356),
     s = n.n(o),
-    l = n(264738),
+    l = n(108542),
     c = n(84735),
     u = n(15127),
     d = n(481060),
@@ -86,11 +86,7 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let O = {
-    DEFAULT: p.inputDefault,
-    MINI: p.inputMini
-};
-function v(e) {
+function O(e) {
     let { error: t } = e,
         n = (0, d.Yzy)(t, {
             config: {
@@ -149,7 +145,7 @@ function v(e) {
         })
     });
 }
-class I extends (r = a.Component) {
+class v extends (r = a.Component) {
     componentDidMount() {
         var e, t, n, r;
         (null == (e = (t = this.context).setHasValue) || e.call(t, (null != this.props.defaultValue && '' !== this.props.defaultValue) || (null != this.props.value && '' !== this.props.value)), null == (n = (r = this.context).setIsFocused) || n.call(r, !1));
@@ -163,49 +159,43 @@ class I extends (r = a.Component) {
     render() {
         var e, t;
         let n = this.props,
-            { className: r, inputClassName: a, inputPrefix: o, disabled: l, size: u, editable: d, inputRef: f, prefixElement: _, focusProps: h } = n,
-            g = b(n, ['className', 'inputClassName', 'inputPrefix', 'disabled', 'size', 'editable', 'inputRef', 'prefixElement', 'focusProps']),
-            y = null != (t = g['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId;
+            { className: r, inputClassName: a, disabled: o, editable: l, inputRef: u, prefixElement: d, focusProps: f } = n,
+            _ = b(n, ['className', 'inputClassName', 'disabled', 'editable', 'inputRef', 'prefixElement', 'focusProps']),
+            h = null != (t = _['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId;
         return (0, i.jsxs)('div', {
             className: s()(p.inputWrapper, r),
             children: [
-                null != _ && _,
-                null != o
-                    ? (0, i.jsx)('span', {
-                          className: p.inputPrefix,
-                          children: o
-                      })
-                    : null,
+                null != d && d,
                 (0, i.jsx)(
                     c.t,
-                    E(m({}, h), {
+                    E(m({}, f), {
                         children: (0, i.jsx)(
                             'input',
                             E(
                                 m(
                                     {
-                                        className: s()(u, a, {
+                                        className: s()(p.input, a, {
                                             [p.error]: this.hasError(),
-                                            [p.disabled]: l,
-                                            [p.editable]: d
+                                            [p.disabled]: o,
+                                            [p.editable]: l
                                         }),
-                                        disabled: l,
-                                        readOnly: !1 === d || void 0
+                                        disabled: o,
+                                        readOnly: !1 === l || void 0
                                     },
-                                    g
+                                    _
                                 ),
                                 {
-                                    'aria-labelledby': y,
+                                    'aria-labelledby': h,
                                     onChange: this.onChange,
                                     onBlur: this.onBlur,
                                     onFocus: this.onFocus,
-                                    ref: f
+                                    ref: u
                                 }
                             )
                         )
                     })
                 ),
-                (0, i.jsx)(v, { error: this.getError() })
+                (0, i.jsx)(O, { error: this.getError() })
             ]
         });
     }
@@ -244,11 +234,9 @@ class I extends (r = a.Component) {
             (this.state = { dirty: null != (t = e.defaultDirty) && t }));
     }
 }
-(h(I, 'Sizes', O),
-    h(I, 'contextType', u.q3),
-    h(I, 'defaultProps', {
+(h(v, 'contextType', u.q3),
+    h(v, 'defaultProps', {
         name: '',
-        size: O.DEFAULT,
         disabled: !1,
         type: 'text',
         placeholder: '',

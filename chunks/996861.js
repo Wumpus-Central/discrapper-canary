@@ -1,17 +1,17 @@
 (n.d(t, {
     $Z: () => Z,
-    B8: () => T,
+    B8: () => I,
     F4: () => _,
     HH: () => x,
-    Hd: () => I,
-    Xl: () => N,
-    dF: () => R,
-    eM: () => C,
+    Hd: () => T,
+    Xl: () => A,
+    dF: () => C,
+    eM: () => R,
     fB: () => P,
     gK: () => M,
-    mG: () => A,
+    mG: () => w,
     qe: () => D,
-    rY: () => w,
+    rY: () => N,
     ts: () => L,
     zW: () => E
 }),
@@ -32,8 +32,8 @@ var c = n(623292),
     g = n(592125),
     b = n(626135),
     p = n(934415),
-    O = n(572004),
-    m = n(585483),
+    m = n(572004),
+    O = n(585483),
     y = n(709054),
     h = n(111618),
     v = n(50284),
@@ -44,32 +44,32 @@ function E(e) {
     null != t && s.Z.open(t, S.pNK.ENGAGEMENT);
 }
 function _(e, t, n) {
-    (0, O.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
+    (0, m.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
 }
 function P(e, t) {
     (b.default.track(S.rMx.MESSAGE_LINK_COPIED, {
         message_id: t.id,
         channel: t.channel_id
     }),
-        (0, O.JG)((0, p.wR)(e.guild_id, e.id, t.id)));
+        (0, m.JG)((0, p.wR)(e.guild_id, e.id, t.id)));
 }
 function Z(e, t, n) {
     t.state === S.yb.SEND_FAILED || n.shiftKey ? i.Z.deleteMessage(e.id, t.id, t.state === S.yb.SEND_FAILED) : l.Z.confirmDelete(e, t);
 }
-function I(e, t) {
+function T(e, t) {
     i.Z.startEditMessage(e.id, t.id, t.content);
 }
-function T(e, t) {
+function I(e, t) {
     (0, v.Z)(e.id, t.id);
 }
-function w(e, t, n) {
+function N(e, t, n) {
     if (!1 === t.pinned) return void (n.shiftKey ? r.Z.pinMessage(e, t.id) : l.Z.confirmPin(e, t));
     n.shiftKey ? r.Z.unpinMessage(e, t.id) : l.Z.confirmUnpin(e, t);
 }
-function N(e, t) {
+function A(e, t) {
     (0, a.Z)(e.id, t.id);
 }
-function A(e, t) {
+function w(e, t) {
     (0, j.Z)(e, t, void 0, h.Z.getOptions(t.id));
 }
 function x(e, t, n) {
@@ -81,7 +81,7 @@ function x(e, t, n) {
         shouldMention: !n.shiftKey && !i,
         showMentionToggle: !r && !i
     }),
-        m.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
+        O.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
 }
 function M(e, t) {
     (0, d.R6)(e, t, 'Message');
@@ -90,13 +90,13 @@ function D(e, t) {
     let n = g.Z.getChannel(y.default.castMessageIdAsChannelId(t.id));
     null != n && (0, d.ok)(n);
 }
-function R(e, t) {
+function C(e, t) {
     (0, u.z)({
         channelId: e.id,
         messageId: t.id
     });
 }
-function C(e, t) {
+function R(e, t) {
     (0, u.x)({
         channelId: e.id,
         messageId: t.id

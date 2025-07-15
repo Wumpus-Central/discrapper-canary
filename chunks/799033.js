@@ -13,8 +13,8 @@ var r = a(157079),
     l = a(789112),
     u = a(263449),
     I = a(305625),
-    d = a(64685),
-    R = a(873567),
+    R = a(64685),
+    d = a(873567),
     N = a(101284),
     f = a(886115),
     A = a(370541),
@@ -73,17 +73,17 @@ function P(t, e) {
                 t
             )
         ),
-        (0, d.cf)((t) => {
+        (0, R.cf)((t) => {
             if (t.response) {
                 let e = L.get(t.response);
                 e && t.endTimestamp && h.set(e, t.endTimestamp);
             }
         }),
-        (0, d.Uf)((t) => {
+        (0, R.Uf)((t) => {
             let e = (0, n.m)(t, m, v, y);
             if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
                 let a = C(t.fetchData.url),
-                    r = a ? (0, R.en)(a).host : void 0;
+                    r = a ? (0, d.en)(a).host : void 0;
                 e.setAttributes({
                     'http.url': a,
                     'server.address': r
@@ -95,28 +95,28 @@ function P(t, e) {
             (0, r.UK)((t) => {
                 let e = (function (t, e, a, _) {
                     let n = t.xhr,
-                        d = n && n[r.xU];
-                    if (!n || n.__sentry_own_request__ || !d) return;
-                    let N = (0, i.z)() && e(d.url);
+                        R = n && n[r.xU];
+                    if (!n || n.__sentry_own_request__ || !R) return;
+                    let N = (0, i.z)() && e(R.url);
                     if (t.endTimestamp && N) {
                         let t = n.__sentry_xhr_span_id__;
                         if (!t) return;
                         let e = _[t];
-                        e && void 0 !== d.status_code && ((0, c.Q0)(e, d.status_code), e.end(), delete _[t]);
+                        e && void 0 !== R.status_code && ((0, c.Q0)(e, R.status_code), e.end(), delete _[t]);
                         return;
                     }
-                    let f = C(d.url),
-                        p = f ? (0, R.en)(f).host : void 0,
+                    let f = C(R.url),
+                        p = f ? (0, d.en)(f).host : void 0,
                         L = !!(0, o.HN)(),
                         h =
                             N && L
                                 ? (0, s.qp)({
-                                      name: `${d.method} ${d.url}`,
+                                      name: `${R.method} ${R.url}`,
                                       attributes: {
                                           type: 'xhr',
-                                          'http.method': d.method,
+                                          'http.method': R.method,
                                           'http.url': f,
-                                          url: d.url,
+                                          url: R.url,
                                           'server.address': p,
                                           [E.S3]: 'auto.http.browser',
                                           [E.$J]: 'http.client'
@@ -127,7 +127,7 @@ function P(t, e) {
                     let O = (0, u.s3)();
                     return (
                         n.setRequestHeader &&
-                            a(d.url) &&
+                            a(R.url) &&
                             O &&
                             (function (t, e, a) {
                                 let r = (0, u.nZ)(),
@@ -142,10 +142,10 @@ function P(t, e) {
                                     },
                                     E = a && (0, i.z)() ? (0, o.Hb)(a) : (0, A.$p)(_, n, c);
                                 var l = t,
-                                    d = E,
-                                    R = (0, T.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(_, e)));
+                                    R = E,
+                                    d = (0, T.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(_, e)));
                                 try {
-                                    (l.setRequestHeader('sentry-trace', d), R && l.setRequestHeader(T.bU, R));
+                                    (l.setRequestHeader('sentry-trace', R), d && l.setRequestHeader(T.bU, d));
                                 } catch (t) {}
                             })(n, O, (0, i.z)() && L ? h : void 0),
                         h

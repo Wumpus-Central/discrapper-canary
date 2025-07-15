@@ -1,109 +1,113 @@
-(n.d(e, { default: () => j }), n(388685));
-var l = n(255367),
-    i = n(73800),
+(n.d(e, { default: () => S }), n(388685));
+var s = n(255367),
+    a = n(73800),
     r = n(650557),
-    c = n(442837),
-    s = n(481060),
+    i = n(442837),
+    c = n(481060),
     o = n(239091),
-    a = n(857595),
+    l = n(857595),
     u = n(607070),
-    d = n(877794),
-    b = n(695346),
-    p = n(626135),
-    f = n(358085),
-    h = n(998502),
-    g = n(887490),
+    p = n(877794),
+    f = n(695346),
+    g = n(626135),
+    d = n(358085),
+    b = n(998502),
+    x = n(887490),
+    h = n(517440),
     y = n(981631),
-    O = n(388032);
-function j(t) {
-    var e, n, j, m, E, S, k, x, C;
-    let { text: N, editor: P, target: v, onHeightUpdate: L, onSelect: T } = t,
-        Z = i.useCallback(() => {
+    m = n(388032);
+function S(t) {
+    var e, n, S, j, E, T, O, k, C;
+    let { text: N, editor: v, target: A, onHeightUpdate: P, onSelect: L } = t,
+        w = a.useCallback(() => {
             (0, o.Zy)(() => {
-                (r.F3.focus(P), setTimeout(() => g.bN.focus(P), 0));
+                (r.F3.focus(v), setTimeout(() => x.bN.focus(v), 0));
             });
-        }, [P]),
-        [D, w] = (0, d.Z)({
+        }, [v]),
+        [I, Z] = (0, p.Z)({
             text: N,
-            target: v,
-            onHeightUpdate: L
+            target: A,
+            onHeightUpdate: P
         }),
-        _ = (0, c.e7)([u.Z], () => u.Z.isSubmitButtonEnabled),
-        A = b.Xk.useSetting();
-    if (!f.isPlatformEmbedded) return null;
-    let G = null != (k = null == (n = P.chatInputType) || null == (e = n.commands) ? void 0 : e.enabled) && k,
-        M = null != (x = null == (m = P.chatInputType) || null == (j = m.stickers) ? void 0 : j.autoSuggest) && x,
-        H = null != (C = null == (S = P.chatInputType) || null == (E = S.submit) ? void 0 : E.button) && C,
-        R = G || M,
-        X =
+        _ = (0, h.Z)(v),
+        D = (0, i.e7)([u.Z], () => u.Z.isSubmitButtonEnabled),
+        M = f.Xk.useSetting();
+    if (!d.isPlatformEmbedded) return null;
+    let F = null != (O = null == (n = v.chatInputType) || null == (e = n.commands) ? void 0 : e.enabled) && O,
+        R = null != (k = null == (j = v.chatInputType) || null == (S = j.stickers) ? void 0 : S.autoSuggest) && k,
+        U = null != (C = null == (T = v.chatInputType) || null == (E = T.submit) ? void 0 : E.button) && C,
+        G = F || R,
+        H =
             '' !== N
                 ? [
-                      (0, l.jsx)(
-                          s.sNh,
+                      (0, s.jsx)(
+                          c.sNh,
                           {
                               id: 'copy',
-                              label: O.intl.string(O.t.OpuAlJ),
-                              hint: (0, f.isMac)() ? '\u2318C' : 'Ctrl+C',
-                              action: () => setTimeout(() => h.ZP.copy(), 0)
+                              label: m.intl.string(m.t.OpuAlJ),
+                              hint: (0, d.isMac)() ? '\u2318C' : 'Ctrl+C',
+                              action: () => setTimeout(() => b.ZP.copy(), 0)
                           },
                           'copy'
                       ),
-                      (0, l.jsx)(
-                          s.sNh,
+                      (0, s.jsx)(
+                          c.sNh,
                           {
                               id: 'cut',
-                              label: O.intl.string(O.t.pNPVhY),
-                              hint: (0, f.isMac)() ? '\u2318X' : 'Ctrl+X',
-                              action: () => setTimeout(() => h.ZP.cut(), 0)
+                              label: m.intl.string(m.t.pNPVhY),
+                              hint: (0, d.isMac)() ? '\u2318X' : 'Ctrl+X',
+                              action: () => setTimeout(() => b.ZP.cut(), 0)
                           },
                           'cut'
                       )
                   ]
                 : null,
-        I = (0, l.jsx)(s.S89, {
+        W = (0, s.jsx)(c.S89, {
             id: 'command-suggestions',
-            label: O.intl.string(O.t['9rJKFx']),
-            checked: A,
+            label: m.intl.string(m.t['9rJKFx']),
+            checked: M,
             action: () => {
-                let t = !A;
-                (b.Xk.updateSetting(t),
-                    p.default.track(y.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                let t = !M;
+                (f.Xk.updateSetting(t),
+                    g.default.track(y.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
                         location: { object: y.qAy.CONTEXT_MENU }
                     }));
             }
         });
-    return (0, l.jsxs)(s.v2r, {
+    return (0, s.jsxs)(c.v2r, {
         navId: 'textarea-context',
-        onClose: Z,
-        'aria-label': O.intl.string(O.t.NWlDSE),
-        onSelect: T,
+        onClose: w,
+        'aria-label': m.intl.string(m.t.NWlDSE),
+        onSelect: L,
         children: [
-            R &&
-                (0, l.jsx)(s.sNh, {
+            G &&
+                (0, s.jsx)(c.sNh, {
                     id: 'suggestions',
-                    label: O.intl.string(O.t.zgxg7u),
-                    children: G && I
+                    label: m.intl.string(m.t.zgxg7u),
+                    children: F && W
                 }),
-            H &&
-                (0, l.jsx)(s.S89, {
+            U &&
+                (0, s.jsx)(c.S89, {
                     id: 'submit-button',
-                    label: O.intl.string(O.t.G8XDys),
-                    checked: _,
+                    label: m.intl.string(m.t.G8XDys),
+                    checked: D,
                     action: () => {
-                        (0, a.eN)();
+                        (0, l.eN)();
                     }
                 }),
-            (0, l.jsx)(s.kSQ, { children: D }),
-            (0, l.jsx)(s.kSQ, { children: w }),
-            (0, l.jsxs)(s.kSQ, {
+            (0, s.jsx)(c.kSQ, { children: I }),
+            (0, s.jsxs)(c.kSQ, {
+                children: [Z, _]
+            }),
+            (0, s.jsxs)(c.kSQ, {
                 children: [
-                    X,
-                    (0, l.jsx)(s.sNh, {
+                    H,
+                    (0, s.jsx)(c.sNh, {
                         id: 'paste',
-                        label: O.intl.string(O.t.lMUxVl),
-                        hint: (0, f.isMac)() ? '\u2318V' : 'Ctrl+V',
-                        action: () => setTimeout(() => h.ZP.paste(), 0)
+                        label: m.intl.string(m.t.lMUxVl),
+                        hint: (0, d.isMac)() ? '\u2318V' : 'Ctrl+V',
+                        action: () => setTimeout(() => b.ZP.paste(), 0)
                     })
                 ]
             })

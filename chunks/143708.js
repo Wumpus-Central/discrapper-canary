@@ -19,9 +19,9 @@ function g(e) {
         g,
         { author: h, banned: b, channelId: E } = e,
         y = (0, i.e7)([s.default], () => s.default.getId()),
-        x = p.ZP.useName(h),
-        C = y === h.id,
-        v = (0, i.e7)([c.Z, u.Z], () => {
+        C = p.ZP.useName(h),
+        v = y === h.id,
+        x = (0, i.e7)([c.Z, u.Z], () => {
             let e = c.Z.getChannel(E);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
@@ -33,13 +33,13 @@ function g(e) {
             return u.Z.can(m.Plq.SEND_MESSAGES, e);
         });
     return (
-        C
+        v
             ? ((t = f.intl.string(f.t['F/OLvL'])), (g = f.intl.string(f.t.C89OLC)))
             : ((g = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != x && v
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: x })),
+                  : null != C && x
+                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: C })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = h,

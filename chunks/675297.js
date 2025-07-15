@@ -18,7 +18,7 @@ var i = n(399606),
     b = n(226060),
     E = n(981631);
 function y(e) {
-    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: x = !0, hideRoleTag: C = !1, lineClamp: v = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
+    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: C = !0, hideRoleTag: v = !1, lineClamp: x = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
         N = (0, i.e7)([c.Z], () => c.Z.getGuild(n), [n]),
         P = (0, i.e7)([s.Z], () => {
             var e;
@@ -28,9 +28,9 @@ function y(e) {
         w = (0, _.C)(t),
         Z = (0, d.SO)(N),
         { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
-        L = (0, _.k)(t);
+        D = (0, _.k)(t);
     if (null == N || R) return null;
-    let D = () =>
+    let L = () =>
             (0, h.e)({
                 guildId: n,
                 guildProductListingId: t.id,
@@ -66,7 +66,7 @@ function y(e) {
             imageUrl: A,
             name: t.name,
             description: t.description,
-            formattedPrice: L,
+            formattedPrice: D,
             role: P,
             ctaComponent: (0, r.jsx)(b.Z, {
                 guildId: n,
@@ -74,13 +74,13 @@ function y(e) {
                 sourceAnalyticsLocations: y
             }),
             productType: w,
-            shouldShowFullDescriptionButton: x,
-            onShowFullDescription: D,
-            onTapCard: D,
+            shouldShowFullDescriptionButton: C,
+            onShowFullDescription: L,
+            onTapCard: L,
             actionMenu: M,
             showOpaqueBackground: T,
-            hideRoleTag: C,
-            lineClamp: v,
+            hideRoleTag: v,
+            lineClamp: x,
             cardWidth: O,
             cardHeight: j,
             thumbnailHeight: I,

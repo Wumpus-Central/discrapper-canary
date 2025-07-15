@@ -38,14 +38,14 @@ let _ = {},
         ((_[n] = r), g++);
     },
     y = (e) => _[e],
-    x = (e) => {
+    C = (e) => {
         (null != _[e] && delete _[e], g++);
     };
-function C(e) {
+function v(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return (E(t, n), !0);
 }
-function v(e) {
+function x(e) {
     var t;
     let { channelId: n, messages: r } = e,
         i = null == (t = s.Z.getChannel(n)) ? void 0 : t.getGuildId();
@@ -99,26 +99,26 @@ let j = new O(l.Z, {
     CONNECTION_OPEN: function (e) {
         return 0 !== Object.keys(_).length && ((_ = {}), g++, !0);
     },
-    LOAD_MESSAGES_SUCCESS: v,
-    LOCAL_MESSAGES_LOADED: v,
+    LOAD_MESSAGES_SUCCESS: x,
+    LOCAL_MESSAGES_LOADED: x,
     MESSAGE_CREATE: function (e) {
         let { guildId: t, message: n } = e;
         if (null == t || n.type !== m.uaV.AUTO_MODERATION_ACTION) return !1;
         let r = (0, o.e5)(n);
         return !!(0, p.nY)(r) && !!(0, p.OP)(r) && ((b[t] = r.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: C,
-    MESSAGE_EDIT_FAILED_AUTOMOD: C,
+    MESSAGE_SEND_FAILED_AUTOMOD: v,
+    MESSAGE_EDIT_FAILED_AUTOMOD: v,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return (x(t), !0);
+        return (C(t), !0);
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
         if ((null == t ? void 0 : t.body) == null || t.body.code === m.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
         let n = t.body.id;
         if (null == n) return !1;
-        x(n);
+        C(n);
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: r } = e;

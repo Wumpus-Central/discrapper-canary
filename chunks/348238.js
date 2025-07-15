@@ -2,7 +2,7 @@
     $3: () => V,
     Go: () => B,
     JC: () => w,
-    NU: () => D,
+    NU: () => L,
     Nk: () => A,
     R9: () => R,
     RN: () => U,
@@ -11,7 +11,7 @@
     Xn: () => z,
     bb: () => H,
     qo: () => M,
-    rY: () => L,
+    rY: () => D,
     sR: () => F,
     tn: () => G,
     wq: () => k
@@ -36,9 +36,9 @@ var r = n(255367),
     b = n(585483),
     E = n(5967),
     y = n(630388),
-    x = n(358085),
-    C = n(51144),
-    v = n(91047),
+    C = n(358085),
+    v = n(51144),
+    x = n(91047),
     O = n(50284),
     j = n(804063),
     I = n(981631);
@@ -53,7 +53,7 @@ function T(e, t, n) {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let l = '@'.concat(C.ZP.getUserTag(i, { decoration: 'never' })),
+            let l = '@'.concat(v.ZP.getUserTag(i, { decoration: 'never' })),
                 a = '<@'.concat(e, '>');
             (b.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                 plainText: l,
@@ -91,10 +91,10 @@ function Z(e) {
 function R(e, t) {
     return Z(S('avatarProfile', e, t));
 }
-function L(e, t) {
+function D(e, t) {
     return Z(S('referencedAvatarProfile', e, t));
 }
-function D(e, t) {
+function L(e, t) {
     return Z(S('interactionAvatarProfile', e, t));
 }
 function M(e, t, a, o) {
@@ -105,7 +105,7 @@ function M(e, t, a, o) {
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!x.isPlatformEmbedded) {
+            if (!C.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -121,7 +121,7 @@ function M(e, t, a, o) {
                 (0, l.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('93375'), n.e('16705'), n.e('37220'), n.e('10443')]).then(n.bind(n, 225138));
+                        let { default: e } = await Promise.all([n.e('93375'), n.e('16705'), n.e('37220'), n.e('41629')]).then(n.bind(n, 225138));
                         return (n) => {
                             var l, a;
                             return (0, r.jsx)(
@@ -188,7 +188,7 @@ function k(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, v.Pv)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, x.Pv)(n, r, i));
         },
         [e, t]
     );
@@ -201,7 +201,7 @@ function U(e, t, n) {
             null != i &&
                 null != l &&
                 (r.stopPropagation(),
-                (0, v._j)(r, {
+                (0, x._j)(r, {
                     user: i,
                     channel: l,
                     moderationAlertId: n
@@ -215,7 +215,7 @@ function F(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, v.xS)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, x.xS)(n, r, i.guild_id));
         },
         [e, t]
     );
@@ -263,20 +263,20 @@ function G(e) {
             )),
         [E, y] = i.useState(a);
     g.current = E || g.current;
-    let x = i.useCallback(
+    let C = i.useCallback(
             (e) => {
                 (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !0), h(e), y(!0)));
             },
             [E, _, s, h]
         ),
-        C = i.useCallback(() => {
+        v = i.useCallback(() => {
             (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, _, !1), y(!1));
         }, [_]);
     return {
         hasHovered: g.current,
         isHovered: E,
-        handleMouseEnter: x,
-        handleMouseLeave: C
+        handleMouseEnter: C,
+        handleMouseLeave: v
     };
 }
 function H(e, t) {

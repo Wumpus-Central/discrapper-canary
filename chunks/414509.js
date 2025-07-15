@@ -1,6 +1,6 @@
 (n.d(t, {
-    B: () => m,
-    Z: () => b
+    Fd: () => E,
+    ZP: () => v
 }),
     n(388685));
 var r = n(147913),
@@ -26,9 +26,10 @@ function d(e, t, n) {
     );
 }
 n(334431);
-let f = +s.Z.Millis.HOUR,
-    _ = 3 * s.Z.Millis.DAY;
-function p(e) {
+let f = 3 * s.Z.Millis.DAY,
+    _ = 2 * s.Z.Millis.DAY,
+    p = +s.Z.Millis.HOUR;
+function h(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let n = i.Z.getChannel(t);
@@ -37,7 +38,7 @@ function p(e) {
             r = n.recipients.filter((e) => o.Z.isIgnored(e));
         (e.length > 0 || r.length > 0) &&
             !n.blockedUserWarningDismissed &&
-            !g(t) &&
+            !y(t) &&
             (0, c.O)({
                 channelId: t,
                 blockedUserIds: e,
@@ -45,26 +46,36 @@ function p(e) {
             });
     }
 }
-function h(e) {
+function m(e) {
     let { state: t } = e;
 }
-function m(e) {
-    return (0, l.Iu)(e) > Date.now() - f;
+function g() {
+    var e;
+    return (null != (e = (0, l.km)()) ? e : 0) > Date.now() - p;
 }
-function g(e) {
-    return (0, l.Iu)(e) > Date.now() - _;
+function E(e) {
+    return g() || Array.from(e).every((e) => b(e, !0));
 }
-class E extends r.Z {
+function b(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return !!(!n && g()) || (null != (t = (0, l._$)(e)) ? t : 0) > Date.now() - _;
+}
+function y(e) {
+    var t;
+    return (null != (t = (0, l.YF)(e)) ? t : 0) > Date.now() - f;
+}
+class O extends r.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
         let n = a.Z.getChannelId();
-        e === n && null != i.Z.getChannel(e) && (m(e) || (0, u.H)(n, t));
+        e === n && null != i.Z.getChannel(e) && (b(t) || (0, u.H)(n, t));
     }
     constructor(...e) {
         (super(...e),
             d(this, 'actions', {
-                CHANNEL_SELECT: p,
-                APP_STATE_UPDATE: h
+                CHANNEL_SELECT: h,
+                APP_STATE_UPDATE: m
             }));
     }
 }
-let b = new E();
+let v = new O();

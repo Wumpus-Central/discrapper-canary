@@ -14,12 +14,12 @@ e.exports = {
     username: 'username_b99f57',
     systemTag: 'systemTag_b99f57',
     centeredRowContainer: 'centeredRowContainer_b99f57',
-    footerAction: 'footerAction_b99f57',
     footerIcon: 'footerIcon_b99f57',
-    buttonStyle: 'buttonStyle_b99f57',
+    footerAction: 'footerAction_b99f57',
     spanCorrection: 'spanCorrection_b99f57',
     alertsEnabledSubHeader: 'alertsEnabledSubHeader_b99f57',
     alertsEnabledSubHeaderAvatarUsername: 'alertsEnabledSubHeaderAvatarUsername_b99f57',
     dotSeparatedRow: 'dotSeparatedRow_b99f57',
+    footerRow: 'footerRow_b99f57',
     dot: 'dot_b99f57'
 };

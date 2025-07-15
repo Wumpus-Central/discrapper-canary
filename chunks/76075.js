@@ -6,8 +6,8 @@ var l = e(442837),
     o = e(481060),
     r = e(313201),
     s = e(724723),
-    d = e(271383),
-    c = e(430824),
+    c = e(271383),
+    d = e(430824),
     u = e(594174),
     m = e(693546),
     f = e(305325),
@@ -21,12 +21,12 @@ let v = function (n) {
         R = (0, s.q)('MemberVerificationRejectedModal'),
         C = (0, r.Dt)(),
         _ = (0, l.e7)([x.Z], () => x.Z.getRequest(t), [t]),
-        b = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        b = (0, l.e7)([d.Z], () => d.Z.getGuild(t), [t]),
         Z = (0, l.e7)([u.default], () => {
             var n;
             return null == (n = u.default.getCurrentUser()) ? void 0 : n.id;
         }),
-        T = (0, l.e7)([d.ZP], () => (null != Z ? d.ZP.getMember(t, Z) : null), [Z, t]),
+        T = (0, l.e7)([c.ZP], () => (null != Z ? c.ZP.getMember(t, Z) : null), [Z, t]),
         y = () => {
             (v(), null == T && (0, h.Z)());
         },

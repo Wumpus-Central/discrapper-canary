@@ -77,5 +77,5 @@ class u extends c {
         (super(e), o(this, 'storeName', void 0), (this.storeName = t));
     }
 }
-let d = new u('2025-05_libdiscore_notestore', 'NoteStore'),
-    f = new u('2025-07_libdiscore_guildstore', 'GuildStore');
+let d = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
+    f = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');

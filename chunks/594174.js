@@ -1,7 +1,7 @@
 (n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => v,
-        default: () => eD,
+        default: () => eL,
         mergeUser: () => C,
         transformUser: () => A,
         users: () => y
@@ -214,21 +214,27 @@ function k(e) {
 }
 function M(e) {
     let { user: t } = e;
-    t.id !== h.default.getId() && C(t);
+    if (!N(t)) return !1;
+    C(t);
 }
 function j(e) {
-    let { user: t } = e;
-    C(t);
+    let { userProfile: t } = e;
+    if (!N(t.user)) return !1;
+    C(t.user);
 }
 function U(e) {
     let { user: t } = e;
     C(t);
 }
 function G(e) {
+    let { user: t } = e;
+    C(t);
+}
+function B(e) {
     let { messages: t } = e;
     return (t.forEach((e) => w(e, !0)), !1);
 }
-function B(e) {
+function V(e) {
     let { pins: t } = e;
     return (
         t.forEach((e) => {
@@ -238,33 +244,33 @@ function B(e) {
         !1
     );
 }
-function V(e) {
+function F(e) {
     let { mostRecentMessages: t } = e;
     return (null == t || t.forEach((e) => w(e, !1)), !1);
 }
-function F(e) {
-    let { messages: t } = e;
-    return (t.forEach((e) => G({ messages: e })), !1);
-}
 function Z(e) {
+    let { messages: t } = e;
+    return (t.forEach((e) => B({ messages: e })), !1);
+}
+function H(e) {
     let { firstMessages: t, owners: n } = e;
     (null != t && t.forEach((e) => w(e, !0)), null != n && n.forEach((e) => C(e.user, !0)));
 }
-function H(e) {
+function Y(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
         (null != t && w(t, !0), null != n && w(n, !0), null != r && null != r.user && C(r.user, !0));
     });
 }
-function Y(e) {
+function W(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
         null != t && w(t, !0);
     });
 }
-function W(e) {
+function K(e) {
     let { guildScheduledEventUsers: t, guildId: n } = e;
     t.forEach((e) => {
         let { user: t, member: r } = e;
@@ -274,17 +280,17 @@ function W(e) {
         null != i && I(t.id, n, i);
     });
 }
-function K(e) {
+function z(e) {
     let { items: t } = e;
     t.forEach((e) => {
         null != e.other_user && C(e.other_user);
     });
 }
-function z(e) {
+function q(e) {
     let { item: t } = e;
     null != t.other_user && C(t.other_user);
 }
-function q(e) {
+function X(e) {
     let { message: t } = e;
     if ((w(t, !0), null != t.flags && _.yE(t.flags, g.iLy.URGENT))) {
         let e = y[h.default.getId()];
@@ -292,25 +298,25 @@ function q(e) {
     }
     return !1;
 }
-function X(e) {
+function Q(e) {
     let {
         channel: { rawRecipients: t }
     } = e;
     return (null != t && t.forEach((e) => C(e)), !1);
 }
-function Q(e) {
+function J(e) {
     let { channels: t } = e;
     for (let { rawRecipients: e } of t) null != e && e.forEach((e) => C(e));
     return !1;
 }
-let J = ['username', 'avatar', 'global_name', 'discriminator', 'bot', 'primary_guild'];
-function $(e) {
+let $ = ['username', 'avatar', 'global_name', 'discriminator', 'bot', 'primary_guild'];
+function ee(e) {
     let { updates: t } = e;
     return t
         .map((e) => {
             let t = y[e.user.id];
             if (null == t) return !1;
-            let n = J.reduce((n, i) => {
+            let n = $.reduce((n, i) => {
                 if (e.user.hasOwnProperty(i)) {
                     let a = t.set((0, r.camelCase)(i), e.user[i]);
                     ((n = n || a !== t), (t = a));
@@ -321,25 +327,25 @@ function $(e) {
         })
         .some((e) => e);
 }
-function ee(e) {
-    let { bans: t } = e;
-    t.forEach((e) => C(e.user));
-}
 function et(e) {
     let { bans: t } = e;
     t.forEach((e) => C(e.user));
 }
 function en(e) {
-    return C(e.user);
+    let { bans: t } = e;
+    t.forEach((e) => C(e.user));
 }
 function er(e) {
-    return !!e.isMember && C(e.user);
+    return C(e.user);
 }
 function ei(e) {
+    return !!e.isMember && C(e.user);
+}
+function ea(e) {
     let t = C(e.user);
     return I(e.user.id, e.guildId, e.avatar) || t;
 }
-function ea(e) {
+function eo(e) {
     let { ops: t } = e;
     for (let e of t)
         if ('INSERT' === e.op || 'UPDATE' === e.op) {
@@ -350,7 +356,7 @@ function ea(e) {
         }
     return !1;
 }
-function eo(e) {
+function es(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t)
@@ -361,18 +367,18 @@ function eo(e) {
             }, !1) || n;
     return n;
 }
-function es(e) {
+function el(e) {
     let t = !1;
     for (let n of e.members) (C(n.user) && (t = !0), I(n.user.id, e.guildId, n.avatar) && (t = !0));
     return t;
 }
-function el(e) {
+function ec(e) {
     var t;
     let n = !1;
     for (let r of null != (t = e.users) ? t : []) Object.hasOwn(y, r.id) || (n = C(r) || n);
     return n;
 }
-function ec(e) {
+function eu(e) {
     let { members: t } = e,
         n = !1;
     return (
@@ -382,7 +388,7 @@ function ec(e) {
         n
     );
 }
-function eu(e) {
+function ed(e) {
     let { addedMembers: t } = e,
         n = !1;
     return (
@@ -393,7 +399,7 @@ function eu(e) {
         n
     );
 }
-function ed(e) {
+function ef(e) {
     let { guild: t } = e;
     t.members.forEach((e) => {
         let {
@@ -411,108 +417,108 @@ function ed(e) {
             I(n, t.id, s));
     });
 }
-function ef(e) {
+function e_(e) {
     return C(e.relationship.user);
 }
-function e_(e) {
+function ep(e) {
     return C(e.gameRelationship.user);
 }
-function ep(e) {
+function eh(e) {
     let { relationships: t } = e;
     return t.reduce((e, t) => C(t.user) || e, !1);
 }
-function eh(e) {
+function em(e) {
     return C(e.suggestion.suggested_user);
 }
-function em(e) {
+function eg(e) {
     let { suggestions: t } = e;
     return t.reduce((e, t) => C(t.suggested_user) || e, !1);
 }
-function eg(e) {
+function eE(e) {
     let { users: t } = e;
     t.forEach((e) => {
         null == y[e.id] && (y[e.id] = new f.Z(e));
     });
 }
-function eE(e) {
+function eb(e) {
     let { giftCode: t } = e;
     return null != t.user && C(t.user);
 }
-function eb(e) {
+function ey(e) {
     let { appliedBoosts: t } = e;
     t.forEach((e) => {
         let { user: t } = e;
         null != t && C(t);
     });
 }
-function ey(e) {
+function eO(e) {
     let { request: t } = e,
         { user: n, actioned_by_user: r } = t,
         i = !1;
     return (null != n && (i = i || C(n)), null != r && (i = i || C(r)), i);
 }
-function eO(e) {
+function ev(e) {
     let { users: t, familyCenterTeenActivity: n } = e,
         { users: r } = n;
     return [...t, ...r].reduce((e, t) => C(t) || e, !1);
-}
-function ev(e) {
-    let { users: t } = e;
-    return t.reduce((e, t) => C(t) || e, !1);
 }
 function eI(e) {
     let { users: t } = e;
     return t.reduce((e, t) => C(t) || e, !1);
 }
 function eT(e) {
+    let { users: t } = e;
+    return t.reduce((e, t) => C(t) || e, !1);
+}
+function eS(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return;
     let { users: n } = t;
     return n.reduce((e, t) => C(t) || e, !1);
 }
-function eS(e) {
+function eA(e) {
     let { familyCenterTeenActivity: t } = e,
         { users: n } = t;
     return n.reduce((e, t) => C(t) || e, !1);
 }
-function eA(e) {
+function eN(e) {
     let { members: t } = e,
         n = h.default.getId();
     return t.reduce((e, t) => (t.member.user.id === n ? e : C(t.member.user) || e), !1);
 }
-function eN(e) {
+function eC(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
         null != e.message && w(e.message, !0);
     }, !1);
 }
-function eC(e) {
+function eR(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, a.Z)(t) && C(t.member.user)) || e, !1);
 }
-function eR(e) {
+function eP(e) {
     let {} = e,
         t = y[h.default.getId()];
     return null != t && ((y[h.default.getId()] = t.set('ageVerificationStatus', i.F$.CLIENT_ONLY_PENDING)), !0);
 }
-function eP(e) {
+function ew(e) {
     let { status: t } = e,
         n = y[h.default.getId()];
     return null != n && n.ageVerificationStatus === i.F$.CLIENT_ONLY_PENDING && ((y[h.default.getId()] = n.set('ageVerificationStatus', t)), !0);
 }
-class ew extends m.Z {
+class eD extends m.Z {
     initialize() {
         this.waitFor(h.default, u.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: ew.LATEST_SNAPSHOT_VERSION,
+            version: eD.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(p.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(ew.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) y[e.id] = new f.Z(e);
         if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
@@ -555,68 +561,69 @@ class ew extends m.Z {
         super({
             CONNECTION_OPEN: D,
             CONNECTION_OPEN_SUPPLEMENTAL: L,
-            UPDATE_CLIENT_PREMIUM_TYPE: U,
+            UPDATE_CLIENT_PREMIUM_TYPE: G,
             OVERLAY_INITIALIZE: k,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
             USER_UPDATE: M,
-            CURRENT_USER_UPDATE: j,
-            PRESENCE_UPDATES: $,
-            SEARCH_FINISH: F,
-            MOD_VIEW_SEARCH_FINISH: F,
-            LOAD_MESSAGES_SUCCESS: G,
-            LOAD_MESSAGES_AROUND_SUCCESS: G,
-            LOAD_RECENT_MENTIONS_SUCCESS: G,
-            LOAD_PINNED_MESSAGES_SUCCESS: B,
-            THREAD_LIST_SYNC: V,
-            MESSAGE_CREATE: q,
-            MESSAGE_UPDATE: q,
-            GUILD_SETTINGS_LOADED_BANS: ee,
-            GUILD_SETTINGS_LOADED_BANS_BATCH: et,
-            GUILD_CREATE: ed,
-            GUILD_BAN_ADD: en,
-            GUILD_BAN_REMOVE: en,
-            CHANNEL_RECIPIENT_ADD: er,
-            CHANNEL_RECIPIENT_REMOVE: er,
-            GUILD_JOIN_REQUEST_CREATE: ey,
-            GUILD_JOIN_REQUEST_UPDATE: ey,
-            GUILD_MEMBER_ADD: ei,
-            GUILD_MEMBER_UPDATE: ei,
-            GUILD_MEMBERS_CHUNK_BATCH: eo,
-            GUILD_MEMBER_LIST_UPDATE: ea,
-            THREAD_MEMBER_LIST_UPDATE: ec,
-            THREAD_MEMBERS_UPDATE: eu,
-            CHANNEL_CREATE: X,
-            CHANNEL_UPDATES: Q,
-            RELATIONSHIP_ADD: ef,
-            GAME_RELATIONSHIP_ADD: e_,
-            LOAD_RELATIONSHIPS_SUCCESS: ep,
-            FRIEND_SUGGESTION_CREATE: eh,
-            LOAD_FRIEND_SUGGESTIONS_SUCCESS: em,
-            AUDIT_LOG_FETCH_SUCCESS: eg,
-            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eg,
-            GIFT_CODE_RESOLVE_SUCCESS: eE,
-            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eb,
-            LOAD_THREADS_SUCCESS: Z,
-            LOAD_ARCHIVED_THREADS_SUCCESS: Z,
-            LOAD_FORUM_POSTS: H,
-            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: W,
-            LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: K,
-            NOTIFICATION_CENTER_ITEM_CREATE: z,
-            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: Y,
-            PASSIVE_UPDATE_V2: es,
-            LOCAL_MESSAGES_LOADED: el,
-            FAMILY_CENTER_INITIAL_LOAD: eO,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ev,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eT,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eS,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eI,
-            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eA,
-            LOAD_ICYMI_HYDRATED: eN,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eC,
-            INITIATE_AGE_VERIFICATION: eR,
-            CLOSE_AGE_VERIFICATION_MODAL: eP
+            USER_PROFILE_FETCH_SUCCESS: j,
+            CURRENT_USER_UPDATE: U,
+            PRESENCE_UPDATES: ee,
+            SEARCH_FINISH: Z,
+            MOD_VIEW_SEARCH_FINISH: Z,
+            LOAD_MESSAGES_SUCCESS: B,
+            LOAD_MESSAGES_AROUND_SUCCESS: B,
+            LOAD_RECENT_MENTIONS_SUCCESS: B,
+            LOAD_PINNED_MESSAGES_SUCCESS: V,
+            THREAD_LIST_SYNC: F,
+            MESSAGE_CREATE: X,
+            MESSAGE_UPDATE: X,
+            GUILD_SETTINGS_LOADED_BANS: et,
+            GUILD_SETTINGS_LOADED_BANS_BATCH: en,
+            GUILD_CREATE: ef,
+            GUILD_BAN_ADD: er,
+            GUILD_BAN_REMOVE: er,
+            CHANNEL_RECIPIENT_ADD: ei,
+            CHANNEL_RECIPIENT_REMOVE: ei,
+            GUILD_JOIN_REQUEST_CREATE: eO,
+            GUILD_JOIN_REQUEST_UPDATE: eO,
+            GUILD_MEMBER_ADD: ea,
+            GUILD_MEMBER_UPDATE: ea,
+            GUILD_MEMBERS_CHUNK_BATCH: es,
+            GUILD_MEMBER_LIST_UPDATE: eo,
+            THREAD_MEMBER_LIST_UPDATE: eu,
+            THREAD_MEMBERS_UPDATE: ed,
+            CHANNEL_CREATE: Q,
+            CHANNEL_UPDATES: J,
+            RELATIONSHIP_ADD: e_,
+            GAME_RELATIONSHIP_ADD: ep,
+            LOAD_RELATIONSHIPS_SUCCESS: eh,
+            FRIEND_SUGGESTION_CREATE: em,
+            LOAD_FRIEND_SUGGESTIONS_SUCCESS: eg,
+            AUDIT_LOG_FETCH_SUCCESS: eE,
+            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eE,
+            GIFT_CODE_RESOLVE_SUCCESS: eb,
+            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ey,
+            LOAD_THREADS_SUCCESS: H,
+            LOAD_ARCHIVED_THREADS_SUCCESS: H,
+            LOAD_FORUM_POSTS: Y,
+            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: K,
+            LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: z,
+            NOTIFICATION_CENTER_ITEM_CREATE: q,
+            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: W,
+            PASSIVE_UPDATE_V2: el,
+            LOCAL_MESSAGES_LOADED: ec,
+            FAMILY_CENTER_INITIAL_LOAD: ev,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eI,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eS,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eT,
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN,
+            LOAD_ICYMI_HYDRATED: eC,
+            EMBEDDED_ACTIVITY_UPDATE_V2: eR,
+            INITIATE_AGE_VERIFICATION: eP,
+            CLOSE_AGE_VERIFICATION_MODAL: ew
         });
     }
 }
-(b(ew, 'displayName', 'UserStore'), b(ew, 'LATEST_SNAPSHOT_VERSION', 1));
-let eD = new ew();
+(b(eD, 'displayName', 'UserStore'), b(eD, 'LATEST_SNAPSHOT_VERSION', 1));
+let eL = new eD();

@@ -17,14 +17,14 @@ var i = n(442837),
     g = n(993706),
     b = n(982168),
     p = n(216572),
-    O = n(914010),
-    m = n(594174),
+    m = n(914010),
+    O = n(594174),
     y = n(970257),
     h = n(921944),
     v = n(388032),
     j = n(130883);
 function S(e) {
-    let t = (0, i.e7)([O.Z], () => O.Z.getGuildId()),
+    let t = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
         n = (0, p.Q_)(t);
     return (0, y.a4)(e)
         ? (0, r.jsx)(a.sNh, {
@@ -73,7 +73,7 @@ function _(e) {
 }
 function P(e) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.get('iar_testing')),
-        n = (0, i.e7)([m.default], () => m.default.getCurrentUser());
+        n = (0, i.e7)([O.default], () => O.default.getCurrentUser());
     return (0, y.a4)(e) && null != n && n.isStaff() && t
         ? (0, r.jsx)(a.sNh, {
               id: 'staff-test-message-report',

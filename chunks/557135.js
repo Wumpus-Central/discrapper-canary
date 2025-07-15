@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(415506));
+(n.d(t, { Z: () => v }), n(415506), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -60,7 +60,7 @@ let v = {
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (S = !0), S || v || s || (!(P.size > 0) && !(w.size > 0)))
+        return ((0, l.Fd)(new Set([...P, ...w])) && (S = !0), S || v || s || (!(P.size > 0) && !(w.size > 0)))
             ? !T && !v && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.ZDy)(async () => {

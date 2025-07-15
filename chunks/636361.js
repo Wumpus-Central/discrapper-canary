@@ -8,7 +8,7 @@ let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
     s = (0, i._I)((t = {}) => ({
         name: 'InboundFilters',
         processEvent: (e, a, i) => {
-            var s, l, u, I, d;
+            var s, l, u, I, R;
             return ((s = e),
             (l = (function (t = {}, e = {}) {
                 return {
@@ -47,7 +47,7 @@ Event: ${(0, _.jH)(s)}`),
                         r.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
 Event: ${(0, _.jH)(s)}`),
                     0)
-                  : (d = s).type || !d.exception || !d.exception.values || 0 === d.exception.values.length || d.message || d.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
+                  : (R = s).type || !R.exception || !R.exception.values || 0 === R.exception.values.length || R.message || R.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
                     ? !(function (t, e) {
                           if ('transaction' !== t.type || !e || !e.length) return !1;
                           let a = t.transaction;

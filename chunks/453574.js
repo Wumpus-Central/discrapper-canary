@@ -1,4 +1,4 @@
-a.d(e, { l: () => d });
+a.d(e, { l: () => R });
 var r = a(157079),
     _ = a(151122),
     n = a(233517),
@@ -10,7 +10,7 @@ var r = a(157079),
     l = a(899517),
     u = a(394798),
     I = a(454463);
-let d = (0, _._I)((t = {}) => {
+let R = (0, _._I)((t = {}) => {
     let e = {
         failedRequestStatusCodes: [[500, 599]],
         failedRequestTargets: [/.*/],
@@ -36,7 +36,7 @@ let d = (0, _._I)((t = {}) => {
                                         c,
                                         s,
                                         E = ((_ = e), (!(o = r) && _ instanceof Request) || (_ instanceof Request && _.bodyUsed) ? _ : new Request(_, o));
-                                    T() && (([t, c] = R('Cookie', E)), ([i, s] = R('Set-Cookie', a)));
+                                    T() && (([t, c] = d('Cookie', E)), ([i, s] = d('Set-Cookie', a)));
                                     let l = A({
                                         url: E.url,
                                         method: E.method,
@@ -103,7 +103,7 @@ let d = (0, _._I)((t = {}) => {
         }
     };
 });
-function R(t, e) {
+function d(t, e) {
     let a,
         r = (function (t) {
             let e = {};

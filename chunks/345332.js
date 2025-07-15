@@ -55,6 +55,11 @@ function d(e) {
                 className: u.icon,
                 color: s.TVs.colors.HEADER_PRIMARY.css
             });
+        case c.pC.AI:
+            return (0, r.jsx)(s.$2U, {
+                className: u.icon,
+                color: s.TVs.colors.HEADER_PRIMARY.css
+            });
         default:
             return null;
     }

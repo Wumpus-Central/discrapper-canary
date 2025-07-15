@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(430824),
     d = n(496675),
     m = n(771845),
-    p = n(823379),
-    g = n(267642),
+    g = n(823379),
+    p = n(267642),
     h = n(598117),
     f = n(981631),
     x = n(388032),
@@ -26,7 +26,7 @@ let b = (e) => ({
                 Object.fromEntries(
                     m.ZP.getFlattenedGuildIds()
                         .map((e) => u.Z.getGuild(e))
-                        .filter(p.lm)
+                        .filter(g.lm)
                         .map((e) => [e.id, e])
                 )
             ),
@@ -42,7 +42,7 @@ let b = (e) => ({
                                     var t;
                                     let { guild: n, emojis: r, isEmojiAnimated: l } = e,
                                         a = null != (t = null == r ? void 0 : r.filter((e) => e.animated === l && !(0, c.Kt)(e, n.id)).length) ? t : 0;
-                                    return (0, g.y4)(n) - a;
+                                    return (0, p.y4)(n) - a;
                                 })({
                                     guild: n,
                                     emojis: s.ZP.getGuildEmojiOrUndefined(t),

@@ -1,11 +1,11 @@
-n.d(t, { W: () => r });
-var a = n(255367),
-    i = n(657707),
-    o = n(206403);
-function r(e) {
+n.d(t, { W: () => o });
+var i = n(255367),
+    a = n(657707),
+    s = n(206403);
+function o(e) {
     let { node: t } = e;
-    return (0, a.jsx)(o.x, {
+    return (0, i.jsx)(s.x, {
         title: 'useTitle' in t.data && 'function' == typeof t.data.useTitle ? t.data.useTitle() : '',
-        secondaryTrailingElement: (0, a.jsx)(i.LJT, {})
+        secondaryTrailingElement: (0, i.jsx)(a.LJT, {})
     });
 }

@@ -24,12 +24,12 @@ function h(e) {
         L = (0, a.e7)([u.Z], () => u.Z.getChannel(t));
     if (
         ((0, c.zq)(() => {
-            p.current || (0, A.g6)(t);
+            p.current || (0, A.nC)(n);
         }),
         null == d.default.getUser(n))
     )
         return null;
-    let j = [
+    let C = [
             {
                 icon: (0, I.r)([n], null == L ? void 0 : L.guild_id),
                 text: (0, I.a)([n], 1, null == L ? void 0 : L.guild_id, t),
@@ -44,7 +44,7 @@ function h(e) {
                 className: S.row
             }
         ],
-        C = O
+        j = O
             ? (0, r.jsxs)(r.Fragment, {
                   children: [N.intl.string(N.t.cpgfFh), (0, r.jsx)('br', {}), N.intl.string(N.t.UKQ4Cg)]
               })
@@ -53,12 +53,12 @@ function h(e) {
               });
     return (0, r.jsx)(E.Z, {
         headerText: N.intl.string(N.t['1/gpFh']),
-        descriptionText: C,
-        infoRows: j,
+        descriptionText: j,
+        infoRows: C,
         onDismissAndStay: () => {
             ((p.current = !0),
                 x(),
-                (0, A.g6)(t),
+                (0, A.nC)(n),
                 f.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: g.q.CLICK_TO_STAY,
                     channel_id: t,

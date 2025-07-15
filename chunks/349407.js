@@ -33,7 +33,7 @@ function o(e) {
 }
 function s(e) {
     (0, i.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e('85516'), n.e('51343'), n.e('61366')]).then(n.bind(n, 598576));
+        let { default: t } = await Promise.all([n.e('24913'), n.e('51343'), n.e('61366')]).then(n.bind(n, 598576));
         return (n) => (0, r.jsx)(t, o({ analyticsLocation: e }, n));
     });
 }

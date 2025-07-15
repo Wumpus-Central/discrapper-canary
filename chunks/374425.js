@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(477690),
@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    C = (e) => {
+let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: h.cd.STICKER_IN_MESSAGE_HOVER,
@@ -69,12 +69,12 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 is_custom: (0, m.z)(e.type)
             });
     },
-    v = (e) => {
+    x = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: l } = e,
             s = i.useRef(null),
             [d, m] = i.useState(!0),
             [g, h] = i.useState(String(Date.now())),
-            [v] = (0, p.XW)(t, l),
+            [x] = (0, p.XW)(t, l),
             { analyticsLocations: O } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             j = (0, r.jsxs)('span', {
                 className: b.stickerName,
@@ -84,7 +84,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         color: 'currentColor',
                         className: b.stickerIcon
                     }),
-                    (null != v ? v : t).name
+                    (null != x ? x : t).name
                 ]
             });
         return (0, r.jsx)(c.Gt, {
@@ -115,7 +115,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             text: (0, u.Y)(j),
                             'aria-label': !1,
                             onTooltipShow: () => {
-                                C(v);
+                                v(x);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
@@ -129,8 +129,8 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: x,
-                                            sticker: null != v ? v : t
+                                            size: C,
+                                            sticker: null != x ? x : t
                                         })
                                     })
                                 )

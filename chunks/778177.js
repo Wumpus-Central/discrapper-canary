@@ -23,8 +23,8 @@ var r = n(255367),
     E = n(592125),
     j = n(271383),
     C = n(699516),
-    P = n(250758),
-    I = n(944486),
+    I = n(250758),
+    P = n(944486),
     R = n(914010),
     T = n(246946),
     N = n(594174),
@@ -624,13 +624,13 @@ class V extends l.PureComponent {
 }
 let Y = l.forwardRef((e, t) => {
     let n = (0, O.U)({ location: 'SearchPopout' }),
-        [l, s, a, i] = (0, f.Wu)([R.Z, I.Z, P.Z, E.Z], () => {
+        [l, s, a, i] = (0, f.Wu)([R.Z, P.Z, I.Z, E.Z], () => {
             let e = R.Z.getGuildId(),
-                t = I.Z.getChannelId(),
+                t = P.Z.getChannelId(),
                 r = E.Z.getChannel(t),
                 l = null != e ? e : n ? M.aib.DMS : t;
             o()(null != l, 'SearchPopout.getStateFromStores - invalid searchId');
-            let s = P.Z.getState(l),
+            let s = I.Z.getState(l),
                 a = A.BU(s.autocompletes);
             return [l, s, a, r];
         });

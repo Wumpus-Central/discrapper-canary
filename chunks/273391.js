@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(481060),
     d = n(710845),
     m = n(197712),
-    p = n(511004),
-    g = n(598117),
+    g = n(511004),
+    p = n(598117),
     h = n(388032),
     f = n(917093);
 function x(e) {
@@ -91,7 +91,7 @@ let b = new d.Z('ImageEditor'),
             W = U && !G,
             [B, F] = l.useState(null);
         l.useEffect(() => {
-            (0, p.Z)();
+            (0, g.Z)();
         }, []);
         let H = l.useCallback(
                 (e) => {
@@ -192,8 +192,8 @@ let b = new d.Z('ImageEditor'),
                 let r = Date.now(),
                     l = D.current,
                     i = {
-                        height: g.eT,
-                        width: g.eT
+                        height: p.eT,
+                        width: p.eT
                     },
                     o = null;
                 if ((null != q.current && (q.current(), (q.current = null)), G))
@@ -206,8 +206,8 @@ let b = new d.Z('ImageEditor'),
                                     cropOriginCoordinates: d.current,
                                     maxDimensions: i,
                                     imageRotation: k,
-                                    resizeWidth: g.eT,
-                                    resizeHeight: g.eT
+                                    resizeWidth: p.eT,
+                                    resizeHeight: p.eT
                                 },
                                 w,
                                 I
@@ -215,7 +215,7 @@ let b = new d.Z('ImageEditor'),
                             { result: r, cancelFn: a } = await (0, m.$p)(n);
                         ((q.current = a), (e = await r));
                     } catch (e) {
-                        (b.error('Error cropping GIF', e), (o = g.ze.GIF_CROPPING));
+                        (b.error('Error cropping GIF', e), (o = p.ze.GIF_CROPPING));
                     } finally {
                         var c;
                         (null == (c = q.current) || c.call(q), (q.current = null));
@@ -279,7 +279,7 @@ let b = new d.Z('ImageEditor'),
                             onLoad: Q,
                             onError: () => {
                                 a({
-                                    error: g.ze.IMAGE_LOAD,
+                                    error: p.ze.IMAGE_LOAD,
                                     loading: !1
                                 });
                             },
@@ -454,9 +454,9 @@ let C = (e, t, n) => {
             height: r,
             width: l
         },
-        s = Math.floor(a < 1 ? g.eT * a : g.eT / a),
-        o = a < 1 ? s : g.eT,
-        c = a > 1 ? s : g.eT;
+        s = Math.floor(a < 1 ? p.eT * a : p.eT / a),
+        o = a < 1 ? s : p.eT,
+        c = a > 1 ? s : p.eT;
     return v(x({}, e), {
         cropDimensions: i,
         resizeHeight: o,

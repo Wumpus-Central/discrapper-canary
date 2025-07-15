@@ -1,4 +1,4 @@
-(n.d(t, { i: () => e8 }), n(539854), n(388685));
+(n.d(t, { i: () => e6 }), n(539854), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(990547),
@@ -122,9 +122,9 @@ let e$ = () => {
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(R.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eq.intl.string(eq.t.y2b7CA) }) : null;
     },
-    e6 = eZ.Z,
-    e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e7, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
+    e8 = eZ.Z,
+    e6 = (e) => {
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: R, isOverlaySupported: V, isClipsBetaTagShowing: e6 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e7, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -560,7 +560,7 @@ let e$ = () => {
                 searchableTitles: [eq.intl.string(eq.t.z2jK6e)],
                 label: eq.intl.string(eq.t.z2jK6e),
                 ariaLabel: eq.intl.string(eq.t.z2jK6e),
-                icon: e8 ? (0, i.jsx)(O.Z, {}) : void 0,
+                icon: e6 ? (0, i.jsx)(O.Z, {}) : void 0,
                 element: C.Z,
                 predicate: () => !e2,
                 url: eW.Z5c.SETTINGS('clips')
@@ -1414,7 +1414,7 @@ let e$ = () => {
                 section: eW.oAB.LINUX,
                 searchableTitles: [eq.intl.string(eq.t['7pPjTU'])],
                 label: eq.intl.string(eq.t['7pPjTU']),
-                element: e6,
+                element: e8,
                 predicate: () => J.isPlatformEmbedded && (0, J.isLinux)()
             },
             [eH.s6.STREAMER_MODE]: {

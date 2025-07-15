@@ -286,25 +286,17 @@ function V() {
     return (0, r.jsx)(Z, { message: C.intl.string(C.t['/B7kX1']) });
 }
 function F(e) {
-    let { application: t, onClose: n, message: a } = e,
-        o = i.useCallback(() => {
+    let { application: t, onClose: n } = e,
+        a = i.useCallback(() => {
             (null == n || n(), v.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id }));
         }, [n, t.id]);
     return (0, r.jsx)('div', {
         className: R.buttonsContainer,
-        children: (0, r.jsxs)(f.zx, {
+        children: (0, r.jsx)(f.zx, {
             color: f.zx.Colors.BRAND,
-            onClick: o,
+            onClick: a,
             className: R.authorizedExternalCta,
-            innerClassName: R.authorizedExternalCtaInner,
-            children: [
-                a,
-                ' ',
-                (0, r.jsx)(_.rgF, {
-                    color: _.TVs.unsafe_rawColors.WHITE_500.css,
-                    size: 'xs'
-                })
-            ]
+            children: C.intl.string(C.t['31Bci4'])
         })
     });
 }

@@ -40,7 +40,6 @@ function p(e) {
                 {
                     autoFocus: !0,
                     className: _.jumpToPageInlineInput,
-                    size: c.o.Sizes.MINI,
                     value: null == p ? '' : ''.concat(p),
                     onChange: g,
                     onBlur: () => {

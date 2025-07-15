@@ -10,7 +10,7 @@ n.d(t, {
     Vk: () => m,
     _6: () => y,
     aj: () => _,
-    dc: () => x,
+    dc: () => C,
     fX: () => a.f,
     hu: () => p,
     jj: () => i.j,
@@ -37,4 +37,4 @@ let s = 1000,
     b = 50,
     E = 20,
     y = 150,
-    x = 'automod-profile-quarantine-alert';
+    C = 'automod-profile-quarantine-alert';

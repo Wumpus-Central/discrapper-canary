@@ -201,25 +201,6 @@ class D extends m.Z {
                 h
             ));
     }
-    handleEdit(e, t) {
-        var { channelId: n, messageId: r } = e,
-            i = S(e, ['channelId', 'messageId']);
-        let o = new AbortController();
-        a.tn.patch(
-            {
-                url: b.ANM.MESSAGE(n, r),
-                body: i,
-                retries: 1,
-                oldFormErrors: !0,
-                signal: o.signal,
-                rejectWithError: !0,
-                onRequestCreated: () => {
-                    this.requests.set(r, o);
-                }
-            },
-            this.createResponseHandler(r, t)
-        );
-    }
     handleCommand(e, t) {
         let n,
             { applicationId: r, guildId: s, channelId: l, data: c, nonce: u, attachments: d, maxSizeCallback: _, analytics_location: p, sectionName: m, source: y } = e,
@@ -266,7 +247,32 @@ class D extends m.Z {
         );
     }
     constructor(e = 5) {
-        (super(new l.Z('MessageQueue')), O(this, 'maxSize', void 0), O(this, 'requests', void 0), O(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map()));
+        (super(new l.Z('MessageQueue')),
+            O(this, 'maxSize', void 0),
+            O(this, 'requests', void 0),
+            O(this, 'analyticsTimeouts', void 0),
+            O(this, 'handleEdit', void 0),
+            (this.maxSize = e),
+            (this.requests = new Map()),
+            (this.analyticsTimeouts = new Map()),
+            (this.handleEdit = (e, t) => {
+                var { channelId: n, messageId: r, isCrossposted: i } = e,
+                    o = S(e, ['channelId', 'messageId', 'isCrossposted']);
+                let s = new AbortController(),
+                    l = this.createResponseHandler(r, t),
+                    c = {
+                        url: b.ANM.MESSAGE(n, r),
+                        body: o,
+                        retries: 1,
+                        oldFormErrors: !0,
+                        signal: s.signal,
+                        rejectWithError: !0,
+                        onRequestCreated: () => {
+                            this.requests.set(r, s);
+                        }
+                    };
+                (i && (c.failImmediatelyWhenRateLimited = !0), a.tn.patch(c, l));
+            }));
     }
 }
 let L = new D();

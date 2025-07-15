@@ -249,18 +249,23 @@ function er(e, t) {
             n = O.ZP.queryChannelUsers(w(R({}, o), { channelId: t }));
             break;
         case A.aib.DMS:
-            n = O.ZP.queryUsers(e, r, !0, i, () => !0);
+            n = O.ZP.queryUsers({
+                query: e,
+                limit: r,
+                request: i,
+                boosters: (0, O.Cq)(c.h8.USER)
+            });
             break;
         default:
             return [];
     }
     let s = y.default.getCurrentUser(),
         l = e.toLowerCase().replace(/^@/, ''),
-        c = null != s && e.length > 0 && (N.intl.string(N.t.Qf3ptr).startsWith(l) || A.ME.substr(1).startsWith(l)),
-        u = n
+        u = null != s && e.length > 0 && (N.intl.string(N.t.Qf3ptr).startsWith(l) || A.ME.substr(1).startsWith(l)),
+        f = n
             .filter((e) => {
                 let { record: t } = e;
-                return !h.Z.isBlockedOrIgnored(t.id) && (!c || t.id !== (null == s ? void 0 : s.id));
+                return !h.Z.isBlockedOrIgnored(t.id) && (!u || t.id !== (null == s ? void 0 : s.id));
             })
             .map((e) => {
                 let { record: t } = e;
@@ -270,12 +275,12 @@ function er(e, t) {
                 };
             });
     return (
-        c &&
-            u.unshift({
+        u &&
+            f.unshift({
                 text: A.ME,
                 user: s
             }),
-        u
+        f
     );
 }
 function ei() {

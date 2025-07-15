@@ -102,12 +102,12 @@ let _ = (e) => {
         let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: g = !1, onClick: h } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: y, participant_count: x } = n,
-            C = null != (t = n.members) ? t : [],
-            v = g ? C.slice(0, 3) : C,
-            O = y - v.length;
+        let { topic: E, speaker_count: y, participant_count: C } = n,
+            v = null != (t = n.members) ? t : [],
+            x = g ? v.slice(0, 3) : v,
+            O = y - x.length;
         return (
-            g && (O += C.length - v.length),
+            g && (O += v.length - x.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -143,7 +143,7 @@ let _ = (e) => {
                                     (0, r.jsx)(s.X6q, {
                                         className: a()(f.__invalid_label, f.listeners),
                                         variant: 'heading-sm/semibold',
-                                        children: x
+                                        children: C
                                     })
                                 ]
                             })
@@ -179,11 +179,11 @@ let _ = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(f.members, { [f.embed]: g }),
                         children: [
-                            v.length > 0 &&
+                            x.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: f.speakers,
                                     children: [
-                                        v.map((e) =>
+                                        x.map((e) =>
                                             (0, r.jsx)(
                                                 _,
                                                 {

@@ -23,9 +23,9 @@ var r = n(255367),
     b = n(51144),
     E = n(506071),
     y = n(696014),
-    x = n(847033),
-    C = n(544978),
-    v = n(893182),
+    C = n(847033),
+    v = n(544978),
+    x = n(893182),
     O = n(388032),
     j = n(414521);
 function I(e) {
@@ -104,9 +104,9 @@ function T(e) {
         N = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: R } = (0, x.m)(),
-        L = Z === C.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
-        D = N
+        { selectedTab: Z, isPhantomPreview: R } = (0, C.m)(),
+        D = Z === v.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
+        L = N
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(T, {
@@ -119,14 +119,14 @@ function T(e) {
                       }),
                       E &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, v.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, x.Z)({ guildId: m }) })]
                           })
                   ]
               })
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-default',
-                  children: R ? L : O.intl.string(O.t['NY/FIS'])
+                  children: R ? D : O.intl.string(O.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -177,7 +177,7 @@ function T(e) {
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 9 }),
-                            D
+                            L
                         ]
                     })
                 ]

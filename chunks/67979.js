@@ -112,7 +112,7 @@ function O(e) {
             return (0, r.jsx)(
                 l.P,
                 g(h({ innerRef: O }, i), {
-                    className: o()(_.inputDefault, f.container, {
+                    className: o()(_.input, f.container, {
                         [_.disabled]: b,
                         [f.disabled]: b
                     }),

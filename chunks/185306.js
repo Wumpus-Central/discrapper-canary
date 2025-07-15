@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367),
     a = n(73800),
     l = n(120356),
-    o = n.n(l),
-    i = n(263568),
+    i = n.n(l),
+    o = n(263568),
     s = n(481060),
     c = n(388032),
     u = n(564755);
@@ -52,15 +52,15 @@ function f(e, t) {
 }
 function m(e) {
     let { label: t, isSelected: n, onClick: a, children: l } = e,
-        i = (0, s.xUy)({
+        o = (0, s.xUy)({
             isSelected: n,
             label: t
         });
     return (0, r.jsx)(
         s.P3F,
-        f(d({}, i), {
+        f(d({}, o), {
             onClick: a,
-            className: o()(u.option, n && u.optionSelected),
+            className: i()(u.option, n && u.optionSelected),
             children: l
         })
     );
@@ -68,7 +68,7 @@ function m(e) {
 let p = function (e) {
     let { selectedLayoutType: t, onSelectedLayoutType: n } = e,
         l = (0, s.arW)({ orientation: 'horizontal' }),
-        { ref: o } = l,
+        { ref: i } = l,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -91,12 +91,12 @@ let p = function (e) {
         b = a.useMemo(
             () => [
                 {
-                    name: i.C.DEFAULT,
+                    name: o.C.DEFAULT,
                     label: c.intl.string(c.t.GhK6X1),
                     icon: s.jE$
                 },
                 {
-                    name: i.C.IMAGE_ONLY_ANSWERS,
+                    name: o.C.IMAGE_ONLY_ANSWERS,
                     label: c.intl.string(c.t.an4GKS),
                     icon: s.XBm
                 }
@@ -113,7 +113,7 @@ let p = function (e) {
                 {
                     className: u.container,
                     'aria-label': c.intl.string(c.t.e9hWx8),
-                    ref: o
+                    ref: i
                 },
                 p
             ),

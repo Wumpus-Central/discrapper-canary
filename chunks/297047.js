@@ -5,8 +5,8 @@
     n(388685));
 var r = n(255367);
 n(73800);
-var o = n(442837),
-    l = n(481060),
+var l = n(442837),
+    o = n(481060),
     i = n(144144),
     a = n(592125),
     s = n(496675),
@@ -25,7 +25,7 @@ function g(e, t) {
         null != t && i.Z.startTyping(t));
 }
 function f(e, t, n) {
-    let [i, u] = (0, o.Wu)(
+    let [i, u] = (0, l.Wu)(
             [c.Z, a.Z, s.Z],
             () => {
                 let e = c.Z.getChannelId(t),
@@ -37,7 +37,7 @@ function f(e, t, n) {
         d = n === p.IlC.POPOUT;
     return !u || d
         ? null
-        : (0, r.jsx)(l.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'mention',
               label: m.intl.string(m.t.P8tvKC),
               action: function () {

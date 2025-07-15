@@ -116,7 +116,7 @@ let b = {
     E = function (e) {
         var t,
             { backSrc: n, frontSrc: l, size: s, isTyping: f, status: _, style: E, className: y } = e,
-            x = (function (e, t) {
+            C = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -135,15 +135,15 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: C } = c.ny6[s],
+        let { size: v } = c.ny6[s],
             {
-                statusCoords: v,
+                statusCoords: x,
                 frontAvatarOffsetPx: O,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(C, '-').concat(f);
+                let t = ''.concat(v, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,7 +160,7 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [C, f, s]),
+            }, [v, f, s]),
             S = ((t = null != _), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: C,
-                    height: C
+                    width: v,
+                    height: v
                 },
                 E
             ),
-            'aria-label': x['aria-label'],
-            'aria-hidden': x['aria-hidden'],
+            'aria-label': C['aria-label'],
+            'aria-hidden': C['aria-hidden'],
             className: a()(p.container, y),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: C,
-                    width: C,
+                    height: v,
+                    width: v,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -225,7 +225,7 @@ let b = {
                     ]
                 }),
                 (0, r.jsx)(g, {
-                    statusCoords: v,
+                    statusCoords: x,
                     status: _,
                     isTyping: f
                 })

@@ -1,12 +1,12 @@
 (n.d(t, {
-    Z: () => o,
-    d: () => i
+    Z: () => s,
+    d: () => a
 }),
     n(415506),
     n(388685));
-var a = n(281215);
-let i = '$root';
-class o {
+var i = n(281215);
+let a = '$root';
+class s {
     get(e) {
         return this.items[e];
     }
@@ -21,11 +21,11 @@ class o {
                       writable: !0
                   })
                 : (this[t] = n));
-        let o = {},
-            r = (e, t) => {
-                if (null != o[e.key]) throw Error("Duplicate setting key '".concat(e.key, "'"));
-                if ((null != t && e.linkToParent(t), (o[e.key] = e), e.isLayoutType())) for (let t of e) r(t, e);
+        let s = {},
+            o = (e, t) => {
+                if (null != s[e.key]) throw Error("Duplicate setting key '".concat(e.key, "'"));
+                if ((null != t && e.linkToParent(t), (s[e.key] = e), e.isLayoutType())) for (let t of e) o(t, e);
             };
-        (r(new a.ZP(a.Jq.ROOT, i, { layout: e })), (this.items = Object.freeze(o)));
+        (o(new i.ZP(i.Jq.ROOT, a, { layout: e })), (this.items = Object.freeze(s)));
     }
 }

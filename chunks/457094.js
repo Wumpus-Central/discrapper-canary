@@ -170,7 +170,7 @@ let e9 = (0, m.l)((e) => {
                         impressionSource: n.source
                     })
                 ),
-            (0, r.jsxs)(g.Z, {
+            (0, r.jsx)(g.Z, {
                 deepLinkType: e4.jE.USER_SETTINGS,
                 path: t.pathname,
                 paramsBuilder: function (e, t) {
@@ -182,7 +182,7 @@ let e9 = (0, m.l)((e) => {
                         fingerprint: t
                     };
                 },
-                children: [(0, r.jsx)(a.l_, { to: eH.Z.defaultRoute }), ';']
+                children: (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute })
             })
         );
     }),

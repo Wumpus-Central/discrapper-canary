@@ -1,34 +1,34 @@
-n.d(t, { Y: () => r });
-var a = n(255367),
-    i = n(793030),
-    o = n(878282);
-function r(e) {
-    let { title: t, subtitle: n, icon: r, type: s = 'primary' } = e;
-    return 'secondary' === s
-        ? (0, a.jsx)('div', {
-              className: o.header,
-              children: (0, a.jsx)(i.X6, {
+n.d(t, { Y: () => o });
+var i = n(255367),
+    a = n(793030),
+    s = n(878282);
+function o(e) {
+    let { title: t, subtitle: n, icon: o, type: r = 'primary' } = e;
+    return 'secondary' === r
+        ? (0, i.jsx)('div', {
+              className: s.header,
+              children: (0, i.jsx)(a.X6, {
                   variant: 'heading-md/semibold',
                   color: 'text-secondary',
                   children: t
               })
           })
-        : (0, a.jsxs)('div', {
-              className: o.header,
+        : (0, i.jsxs)('div', {
+              className: s.header,
               children: [
-                  (0, a.jsxs)('div', {
-                      className: o.headerTitle,
+                  (0, i.jsxs)('div', {
+                      className: s.headerTitle,
                       children: [
-                          (0, a.jsx)(i.X6, {
+                          (0, i.jsx)(a.X6, {
                               variant: 'heading-xl/normal',
                               color: 'header-primary',
                               children: t
                           }),
-                          null != r && r
+                          null != o && o
                       ]
                   }),
                   null != n &&
-                      (0, a.jsx)(i.xv, {
+                      (0, i.jsx)(a.xv, {
                           variant: 'text-md/normal',
                           color: 'text-secondary',
                           children: n

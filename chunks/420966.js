@@ -41,7 +41,7 @@ function h(e) {
             [f.id, t.id]
         ),
         _ = (0, o.pM)(t.id, f.id),
-        v = (0, u.Z)(f);
+        v = (0, u.Z)(t.id, f);
     i.useEffect(() => {
         _ && x(m.ZI.PERMISSIONS);
     }, [_, x]);

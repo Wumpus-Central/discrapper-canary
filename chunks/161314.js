@@ -17,9 +17,9 @@ var r = n(255367),
     b = n(430824),
     E = n(626135),
     y = n(76535),
-    x = n(866104),
-    C = n(886176),
-    v = n(981631),
+    C = n(866104),
+    v = n(886176),
+    x = n(981631),
     O = n(388032),
     j = n(24665);
 function I(e) {
@@ -31,7 +31,7 @@ function I(e) {
         N = (0, _.ue)(n, { publishedOnly: !0 }),
         P = i.useCallback(async () => {
             (E.default.track(
-                v.rMx.GUILD_SHOP_EMBED_CLICKED,
+                x.rMx.GUILD_SHOP_EMBED_CLICKED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function I(e) {
                     return e;
                 })({}, (0, p.hH)(n))
             ),
-                await (0, g.Z)(v.Z5c.SERVER_SHOP(n)));
+                await (0, g.Z)(x.Z5c.SERVER_SHOP(n)));
         }, [n]);
     (0, m.Z)(
         {
@@ -78,12 +78,12 @@ function I(e) {
           : (0, r.jsxs)('div', {
                 className: j.guildShopEmbed,
                 children: [
-                    (0, r.jsx)(x.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
+                    (0, r.jsx)(C.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
                         className: j.serverShopLabel,
                         children: [
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(v.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: s.Z.INTERACTIVE_NORMAL
@@ -142,7 +142,7 @@ function I(e) {
                                 children: (0, r.jsxs)('div', {
                                     className: j.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

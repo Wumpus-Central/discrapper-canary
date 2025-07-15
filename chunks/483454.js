@@ -234,10 +234,10 @@ let T = [u.h8.PAYMENT_ELEMENT],
                   className: g.loadingContainer,
                   children: (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE_SIMPLE })
               })
-            : (0, r.jsxs)(a.Elements, {
+            : (0, r.jsx)(a.Elements, {
                   stripe: (0, f.d2)(),
                   options: b({}, i),
-                  children: [(0, r.jsx)(N, b({}, n)), ';']
+                  children: (0, r.jsx)(N, b({}, n))
               });
     },
     R = (e) => {

@@ -12,8 +12,8 @@ var r = n(255367),
     g = n(572456),
     b = n(434404),
     p = n(981631),
-    O = n(273504),
-    m = n(388032),
+    m = n(273504),
+    O = n(388032),
     y = n(466745);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,25 +58,25 @@ function v(e, t) {
         e
     );
 }
-let j = O.fX.KEYWORD;
+let j = m.fX.KEYWORD;
 function S(e, t) {
     let { perGuildMaxCount: n } = c.I6[j],
         { isLoading: S, saveRule: E, errorMessage: _ } = (0, d.w)(),
         { createNewEditingRule: P } = (0, d.V)(),
-        [Z, I] = i.useState(!1),
-        [T, w] = (0, s.I2)(t),
-        { rulesByTriggerType: N, updateRule: A } = (0, s.pH)(t),
+        [Z, T] = i.useState(!1),
+        [I, N] = (0, s.I2)(t),
+        { rulesByTriggerType: A, updateRule: w } = (0, s.pH)(t),
         x = i.useMemo(() => {
             var e;
-            return null != (e = N[j]) ? e : [];
-        }, [N]),
+            return null != (e = A[j]) ? e : [];
+        }, [A]),
         M = 0 === x.length,
         D = n > x.length && !M;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
-    let R = e.split(' '),
-        C = R.length;
+    let C = e.split(' '),
+        R = C.length;
     try {
-        (0, o.km)(R, O.RH);
+        (0, o.km)(C, m.RH);
     } catch (e) {
         return null;
     }
@@ -102,20 +102,20 @@ function S(e, t) {
                     keywordFilter: [...(null != (r = null == (n = t.triggerMetadata) ? void 0 : n.keywordFilter) ? r : []), e]
                 })
             });
-            (await E(i, x), A(i), null != _ ? (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.wH6L0t), l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(m.intl.string(m.t['0rdYm5']), l.ToastType.SUCCESS)));
+            (await E(i, x), w(i), null != _ ? (0, l.showToast)((0, l.createToast)(O.intl.string(O.t.wH6L0t), l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(O.intl.string(O.t['0rdYm5']), l.ToastType.SUCCESS)));
         },
         G = (0, r.jsx)(l.sNh, {
             id: 'automod-rules-loading',
-            label: m.intl.string(m.t.ZTNur6)
+            label: O.intl.string(O.t.ZTNur6)
         });
     return (
-        T ||
+        I ||
             (G = (0, r.jsxs)(r.Fragment, {
                 children: [
                     M &&
                         (0, r.jsx)(l.sNh, {
                             id: 'add-first-rule',
-                            label: m.intl.string(m.t.f72Zqa),
+                            label: O.intl.string(O.t.f72Zqa),
                             action: L,
                             disabled: S
                         }),
@@ -154,7 +154,7 @@ function S(e, t) {
                                 (0, r.jsx)(l.Clw, {}),
                                 (0, r.jsx)(l.sNh, {
                                     id: 'add-another-rule',
-                                    label: m.intl.string(m.t['0K5jDA']),
+                                    label: O.intl.string(O.t['0K5jDA']),
                                     action: L,
                                     disabled: S
                                 })
@@ -164,9 +164,9 @@ function S(e, t) {
             })),
         (0, r.jsx)(l.sNh, {
             id: 'guild-automod-add-selection',
-            label: m.intl.formatToPlainString(m.t.Kkjv1t, { keywordCount: C }),
+            label: O.intl.formatToPlainString(O.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
-                Z || (I(!0), w());
+                Z || (T(!0), N());
             },
             children: G
         })

@@ -3,7 +3,7 @@ var r = t(255367),
     a = t(73800),
     c = t(120356),
     o = t.n(c),
-    s = t(264738),
+    s = t(108542),
     i = t(442837),
     l = t(755721),
     d = t(481060),
@@ -310,8 +310,7 @@ function R(e) {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
                       }),
                 n)
-            ),
-            ';'
+            )
         ]
     });
 }

@@ -17,13 +17,13 @@ var r,
     b = n(55563),
     E = n(981631);
 let y = 'DetectedOffPlatformPremiumPerksStore',
-    x = {},
     C = {},
-    v = [];
+    v = {},
+    x = [];
 function O() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(C)) {
-        if (v.includes(t)) continue;
+    for (let { skuId: t, applicationId: n } of o().values(v)) {
+        if (x.includes(t)) continue;
         let r = f.Z.getApplication(n);
         if (null == r) {
             f.Z.isFetchingApplication(n) || f.Z.didFetchingApplicationFail(n) || m.ZP.fetchApplication(n);
@@ -35,8 +35,8 @@ function O() {
             continue;
         }
         h.Z.applicationIdsFetching.has(r.id) || h.Z.isEntitledToSku(g.default.getCurrentUser(), t, r.id, r.id) || !i.available
-            ? null != x[t] && (delete x[t], (e = !0))
-            : ((x[t] = {
+            ? null != C[t] && (delete C[t], (e = !0))
+            : ((C[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -47,10 +47,10 @@ function O() {
 class j extends (r = s.ZP.Store) {
     initialize() {
         var e;
-        (this.waitFor(_.ZP, b.Z, h.Z), (v = null != (e = c.K.get(y)) ? e : v));
+        (this.waitFor(_.ZP, b.Z, h.Z), (x = null != (e = c.K.get(y)) ? e : x));
     }
     getDetectedOffPlatformPremiumPerks() {
-        return o().values(x);
+        return o().values(C);
     }
 }
 ((l = 'DetectedOffPlatformPremiumPerksStore'),
@@ -64,7 +64,7 @@ class j extends (r = s.ZP.Store) {
         : (j[i] = l));
 let I = new j(u.Z, {
     LOGOUT: function () {
-        ((x = {}), (C = {}));
+        ((C = {}), (v = {}));
     },
     SKU_FETCH_SUCCESS: O,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: O,
@@ -72,8 +72,8 @@ let I = new j(u.Z, {
     APPLICATION_FETCH_SUCCESS: O,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete x[t], v.includes(t))) return !1;
-        (v.push(t), c.K.set(y, v));
+        if ((delete C[t], x.includes(t))) return !1;
+        (x.push(t), c.K.set(y, x));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -81,10 +81,10 @@ let I = new j(u.Z, {
             if (null != t && n !== E.GQo.DISCORD)
                 for (let { skuId: n, applicationId: r } of E.Lg6)
                     r !== t ||
-                        v.includes(n) ||
-                        (null == C[n] &&
+                        x.includes(n) ||
+                        (null == v[n] &&
                             (h.Z.applicationIdsFetched.has(r) || h.Z.applicationIdsFetching.has(r) || null != h.Z.getForSku(n) || d.yD(r),
-                            (C[n] = {
+                            (v[n] = {
                                 skuId: n,
                                 applicationId: r
                             }),

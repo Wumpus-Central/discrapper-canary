@@ -1,6 +1,6 @@
-n.d(t, { P: () => o });
-var a = n(255367),
-    i = n(254204);
-function o() {
-    return (0, a.jsx)('div', { className: i.sidebar });
+n.d(t, { P: () => s });
+var i = n(255367),
+    a = n(254204);
+function s() {
+    return (0, i.jsx)('div', { className: a.sidebar });
 }

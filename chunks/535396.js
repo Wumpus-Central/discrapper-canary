@@ -91,7 +91,7 @@ let u = '1340102344645283891',
         },
         [s.oNc.VANITY_URL]: {
             perkIcon: a.Ro.VANITY,
-            description: l.intl.string(l.t.adNGjY)
+            description: l.intl.string(l.t['5XZKy8'])
         },
         [s.oNc.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.Ro.UPLOAD,

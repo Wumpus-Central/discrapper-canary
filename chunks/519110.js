@@ -12,8 +12,8 @@ var r = n(255367),
     g = n(268350),
     b = n(217590),
     p = n(453070),
-    O = n(926491),
-    m = n(378233),
+    m = n(926491),
+    O = n(378233),
     y = n(981631),
     h = n(388032);
 function v(e) {
@@ -66,10 +66,10 @@ function E(e) {
     let { type: t, id: n, name: E, isInExpressionPicker: _ = !1 } = e,
         { location: P } = (0, s.O)(),
         Z = i.useMemo(() => j(v({}, P), { section: _ ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, _]),
-        I = (0, p.Go)(),
-        T = (0, l.e7)([O.Z], () => (t === f.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
-        w = null != T && I.includes(T.id),
-        N = (0, l.e7)([u.ZP], () => {
+        T = (0, p.Go)(),
+        I = (0, l.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
+        N = null != I && T.includes(I.id),
+        A = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
                 else if (null != E) {
@@ -78,42 +78,42 @@ function E(e) {
                 }
             }
         }),
-        A = (0, c.C1)(null, N);
-    return null != T && t === f.S.STICKER
-        ? (0, m.J8)(T) && !(0, m.V9)(T)
+        w = (0, c.C1)(null, A);
+    return null != I && t === f.S.STICKER
+        ? (0, O.J8)(I) && !(0, O.V9)(I)
             ? null
-            : w
+            : N
               ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, g.hW)(T.id),
+                    action: () => (0, g.hW)(I.id),
                     label: h.intl.string(h.t.XhzKyM)
                 })
               : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, b.cQ)({
-                            sticker: T,
+                            sticker: I,
                             location: j(v({}, Z), { object: y.qAy.STICKER })
                         }),
-                            (0, g.SA)(null == T ? void 0 : T.id));
+                            (0, g.SA)(null == I ? void 0 : I.id));
                     },
                     label: h.intl.string(h.t.kWmiPT)
                 })
-        : null != N && t === f.S.EMOJI
-          ? A
+        : null != A && t === f.S.EMOJI
+          ? w
               ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, o.Xe)(N),
+                    action: () => (0, o.Xe)(A),
                     label: h.intl.string(h.t.Ay49KC)
                 })
               : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, c.J1)({
-                            emoji: N,
+                            emoji: A,
                             location: j(v({}, Z), { object: y.qAy.EMOJI })
                         }),
-                            (0, o.$K)(N));
+                            (0, o.$K)(A));
                     },
                     label: h.intl.string(h.t['nNsr6+'])
                 })

@@ -212,7 +212,6 @@ function O(e) {
                         'aria-label': x.intl.string(x.t['FTmi9/']),
                         type: 'number',
                         className: b.numericalRuleInput,
-                        size: u.oil.Sizes.MINI,
                         value: C,
                         onChange: (e) => {
                             if ((y(e), null == c)) return;

@@ -13,8 +13,8 @@ var i = n(120356),
     g = n(496675),
     b = n(768581),
     p = n(176354),
-    O = n(981631),
-    m = n(185923),
+    m = n(981631),
+    O = n(185923),
     y = n(388032),
     h = n(933070);
 function v(e) {
@@ -116,14 +116,14 @@ function _(e, t) {
             !p.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: m.Hz.REACTION
+                intention: O.Hz.REACTION
             })
         );
     });
     n.length > 4 && (n.length = 4);
     let i = f.nc.useSetting(),
         l = (0, d.$R)(t),
-        b = (0, a.e7)([g.Z], () => i && l && (t.isPrivate() || g.Z.can(O.Plq.ADD_REACTIONS, t)), [t, l, i]),
+        b = (0, a.e7)([g.Z], () => i && l && (t.isPrivate() || g.Z.can(m.Plq.ADD_REACTIONS, t)), [t, l, i]),
         y = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };

@@ -27,8 +27,8 @@ var r = n(255367),
     E = n(585483),
     j = n(70956),
     C = n(324701),
-    P = n(575016),
-    I = n(768943),
+    I = n(575016),
+    P = n(768943),
     R = n(686478),
     T = n(664559),
     N = n(767893),
@@ -111,7 +111,7 @@ function B(e) {
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: I.Z.getOverdueMessageReminderCount()
+                overdue_count: P.Z.getOverdueMessageReminderCount()
             }
         },
         {},
@@ -135,7 +135,7 @@ function U(e) {
             (c(!o), o ? null == n || n() : null == t || t());
         }, [n, t, o]);
     l.useEffect(() => (E.S.subscribe(A.CkL.TOGGLE_FOR_LATER, h), () => void E.S.unsubscribe(A.CkL.TOGGLE_FOR_LATER, h)), [h]);
-    let g = (0, p.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
+    let g = (0, p.e7)([P.Z], () => P.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         targetElementRef: u,
         animation: f.yRy.Animation.NONE,
@@ -225,11 +225,11 @@ function G(e) {
 }
 function z(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
-        i = (0, P.gr)(t),
+        i = (0, I.gr)(t),
         o = l.useCallback(
             async (e) => {
                 var r;
-                (await (0, P.fC)(t, i),
+                (await (0, I.fC)(t, i),
                     e.shiftKey || n(),
                     O.default.track(A.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
@@ -313,7 +313,7 @@ function z(e) {
 }
 function q(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: l } = e,
-        s = (0, p.e7)([I.Z], () => I.Z.getSavedMessage(t.channelId, t.messageId));
+        s = (0, p.e7)([P.Z], () => P.Z.getSavedMessage(t.channelId, t.messageId));
     return null == s
         ? null
         : (0, r.jsx)(z, {

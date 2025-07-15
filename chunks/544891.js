@@ -227,15 +227,27 @@ function O(e, t) {
         });
     } else null != n && n.retryAfterTimestamp < Date.now() && (h.verbose('cleanupRequestEntry: rate limit for ', e.url, 'expired'), y(e.url));
 }
-let v = (e, t) => {
-    let n = Math.round((t.retryAfterTimestamp - Date.now()) / 1000);
-    return e({
+let v = (e, t, n) => {
+    let r = Math.round((t.retryAfterTimestamp - Date.now()) / 1000);
+    (e({
         status: 429,
         body: {
             message: t.latestErrorMessage,
-            retry_after: n
+            retry_after: r
         }
-    });
+    }),
+        null != n &&
+            n({
+                ok: !0,
+                hasErr: !1,
+                status: 429,
+                body: {
+                    message: t.latestErrorMessage,
+                    retry_after: r
+                },
+                text: '',
+                headers: {}
+            }));
 };
 function I(e, t, n) {
     return new Promise((r, i) => {
@@ -245,7 +257,7 @@ function I(e, t, n) {
                 rejectWithError: !1
             });
         let a = b.get(t.url);
-        if (null != a && t.failImmediatelyWhenRateLimited) return v(i, a);
+        if (null != a && t.failImmediatelyWhenRateLimited) return v(i, a, n);
         null != a ? (h.verbose('makeRequest: queueing request for ', t.url), a.queue.push(E.bind(null, e, t, r, i, n))) : E(e, t, r, i, n);
     });
 }

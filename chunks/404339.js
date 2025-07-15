@@ -99,7 +99,7 @@ function h(e) {
               onDismissAndStay: () => {
                   (_(),
                       l(),
-                      (0, u.g6)(t),
+                      (0, u.dI)(new Set([...r, ...i])),
                       c.default.track(A.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                           action: f.q.CLICK_TO_JOIN,
                           channel_id: t,

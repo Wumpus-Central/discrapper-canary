@@ -17,7 +17,7 @@ var r = n(255367),
     b = n(489887),
     E = n(388032),
     y = n(271629);
-function x() {
+function C() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
@@ -32,10 +32,10 @@ function x() {
         })
     });
 }
-function C(e) {
+function v(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(x, {});
+    if (n) t = (0, r.jsx)(C, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(d.Z, {
@@ -51,7 +51,7 @@ function C(e) {
           })
         : null;
 }
-function v(e) {
+function x(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -163,12 +163,12 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: a()(y.container, { [y.containerWithImage]: u }, t),
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(v, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                v,
+                x,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -217,23 +217,23 @@ function j(e) {
         d = n.embeds[0],
         p = i.useMemo(() => (0, g.Z)(d), [d]),
         h = (0, o.aF)(null != (t = null == p ? void 0 : p.questionText) ? t : '', b.Dv),
-        x = (0, m.ZP)(n),
-        C = (0, f.l)({
+        C = (0, m.ZP)(n),
+        v = (0, f.l)({
             user: n.author,
             channelId: l.id,
             guildId: l.guild_id,
             messageId: n.id
         }),
-        v = n.messageReference,
+        x = n.messageReference,
         j = i.useCallback(() => {
-            null != v &&
+            null != x &&
                 u.Z.jumpToMessage({
-                    channelId: v.channel_id,
-                    messageId: v.message_id,
+                    channelId: x.channel_id,
+                    messageId: x.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, v]);
+        }, [n.id, x]);
     return null == p
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -243,8 +243,8 @@ function j(e) {
                       timestamp: n.timestamp,
                       compact: a,
                       children: E.intl.format(E.t['VJcK4+'], {
-                          username: x.nick,
-                          usernameHook: C(x),
+                          username: C.nick,
+                          usernameHook: v(C),
                           title: h,
                           titleOnClick: j
                       })

@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    l = n(627050),
+    l = n(73800),
+    o = n(627050),
     i = n(905405),
     a = n(626135),
     s = n(750030),
@@ -12,21 +12,21 @@ var r = n(255367),
     m = n(981631),
     g = n(388032),
     f = n(875231);
-let b = o.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
+let b = l.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
 function h(e, t) {
     let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: w = !1, previewLinkTarget: C = !1, viewingChannelId: S } = t,
         E = (0, i.p)(),
-        N = l.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        T = (0, p.o)({ location: 'useMessageRenderedContent' }),
-        [Z, R] = o.useState(!1),
-        _ = o.useCallback((e) => {
-            e && R(!0);
+        N = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        Z = (0, p.o)({ location: 'useMessageRenderedContent' }),
+        [R, T] = l.useState(!1),
+        I = l.useCallback((e) => {
+            e && T(!0);
         }, []);
     return (
-        o.useEffect(() => {
-            R(!1);
+        l.useEffect(() => {
+            T(!1);
         }, [e.content]),
-        o.useMemo(() => {
+        l.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
             if (e.isUnsupported)
                 return {
@@ -42,21 +42,21 @@ function h(e, t) {
                     }
                 });
             }
-            return T.enabled
+            return Z.enabled
                 ? {
-                      content: (0, r.jsx)(o.Suspense, {
+                      content: (0, r.jsx)(l.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
                                   viewingChannelId: S,
                                   guildId: (0, s.k)(e),
-                                  setHasSpoilerEmbeds: _
+                                  setHasSpoilerEmbeds: I
                               },
                               children: (0, r.jsx)(b, { content: e.content })
                           })
                       }),
-                      hasSpoilerEmbeds: Z
+                      hasSpoilerEmbeds: R
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: h,
@@ -72,6 +72,6 @@ function h(e, t) {
                       viewingChannelId: S,
                       allowGameMentions: N
                   });
-        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, C, E, w, S, T.enabled, N, Z])
+        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, C, E, w, S, Z.enabled, N, R])
     );
 }

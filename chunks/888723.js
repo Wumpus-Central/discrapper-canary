@@ -3,7 +3,6 @@ n.r(
         boxBackdrop: 'boxBackdrop_abac7b',
         bentoBoxesGrid: 'bentoBoxesGrid_abac7b',
         referralProgramBackground: 'referralProgramBackground_abac7b',
-        newStylesBackground: 'newStylesBackground_abac7b',
         serverProfilesBackground: 'serverProfilesBackground_abac7b',
         yourStyleBackground: 'yourStyleBackground_abac7b',
         yourSpaceBackground: 'yourSpaceBackground_abac7b',

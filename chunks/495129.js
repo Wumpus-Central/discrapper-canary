@@ -18,9 +18,9 @@ var i = n(120356),
     b = n(594174),
     E = n(938475),
     y = n(5192),
-    x = n(981631),
-    C = n(388032),
-    v = n(653072);
+    C = n(981631),
+    v = n(388032),
+    x = n(653072);
 function O(e) {
     var t, n, i, O, j, I, S, T, N, P;
     let { message: A, channel: w } = e,
@@ -44,15 +44,15 @@ function O(e) {
                 }))
                 ? void 0
                 : O.rawValue,
-        L = (0, a.e7)([h.Z], () => h.Z.getGuild(Z)),
-        D = (0, a.e7)([g.Z], () => g.Z.getChannel(R)),
+        D = (0, a.e7)([h.Z], () => h.Z.getGuild(Z)),
+        L = (0, a.e7)([g.Z], () => g.Z.getChannel(R)),
         M = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         k = (0, a.e7)([], () => A.author.id === (null == M ? void 0 : M.id)),
         U = null == (S = w.recipients) ? void 0 : S.find((e) => e !== A.author.id),
         F = (0, a.e7)([b.default], () => (null != U ? b.default.getUser(U) : null)),
         B = (0, p.ZP)(A),
         G = (0, y._T)(w.getGuildId(), w.id, F),
-        H = (0, a.Wu)([E.ZP], () => (null != D ? E.ZP.getVoiceStatesForChannel(D) : []), [D]),
+        H = (0, a.Wu)([E.ZP], () => (null != L ? E.ZP.getVoiceStatesForChannel(L) : []), [L]),
         V = H.some((e) => e.user.id === (null == M ? void 0 : M.id)),
         z =
             null == (P = A.embeds[0]) ||
@@ -66,15 +66,15 @@ function O(e) {
                 : T.rawValue,
         W = null != z ? z.split(',') : [],
         K = (0, a.Wu)([b.default], () => W.map((e) => b.default.getUser(e)).filter(Boolean)),
-        Y = k && null != F ? C.intl.formatToPlainString(C.t['er/cHx'], { username: G }) : C.intl.formatToPlainString(C.t.noNjkZ, { username: B.nick }),
-        X = null != L && null != D,
+        Y = k && null != F ? v.intl.formatToPlainString(v.t['er/cHx'], { username: G }) : v.intl.formatToPlainString(v.t.noNjkZ, { username: B.nick }),
+        X = null != D && null != L,
         q = null;
-    ((q = X ? (k || V ? C.intl.format(C.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != D ? D : void 0 }, t) }) : C.intl.format(C.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != D ? D : void 0 }, t) })) : C.intl.string(C.t['tHT/Vl'])), 0 === H.length && (q = k ? C.intl.string(C.t.IE2uZW) : C.intl.string(C.t.QVhmGx)));
-    let Q = k ? C.intl.string(C.t['00XIbm']) : C.intl.string(C.t['7CrE9/']);
+    ((q = X ? (k || V ? v.intl.format(v.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) }) : v.intl.format(v.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) })) : v.intl.string(v.t['tHT/Vl'])), 0 === H.length && (q = k ? v.intl.string(v.t.IE2uZW) : v.intl.string(v.t.QVhmGx)));
+    let Q = k ? v.intl.string(v.t['00XIbm']) : v.intl.string(v.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
-                className: v.card,
+                className: x.card,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/semibold',
@@ -88,7 +88,7 @@ function O(e) {
                     }),
                     H.length > 0
                         ? (0, r.jsx)('div', {
-                              className: v.participants,
+                              className: x.participants,
                               children: (0, r.jsx)(f.Z, {
                                   guildId: Z,
                                   partySize: {
@@ -101,7 +101,7 @@ function O(e) {
                               })
                           })
                         : (0, r.jsx)('div', {
-                              className: l()(v.participants, v.disabled),
+                              className: l()(x.participants, x.disabled),
                               children: (0, r.jsx)(f.Z, {
                                   guildId: Z,
                                   partySize: {
@@ -116,22 +116,22 @@ function O(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: v.actions,
+                className: x.actions,
                 children: [
                     (0, r.jsxs)(o.zx, {
                         color: o.zx.Colors.BRAND,
                         onClick: () => {
-                            null != R && null != Z && ((0, _.uL)(x.Z5c.CHANNEL(Z, R)), u.default.selectVoiceChannel(R));
+                            null != R && null != Z && ((0, _.uL)(C.Z5c.CHANNEL(Z, R)), u.default.selectVoiceChannel(R));
                         },
-                        className: v.button,
-                        innerClassName: v.buttonInner,
+                        className: x.button,
+                        innerClassName: x.buttonInner,
                         disabled: V || !X,
                         children: [
                             (0, r.jsx)(s.gj8, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            C.intl.string(C.t.zIeJq6)
+                            v.intl.string(v.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zx, {
@@ -139,7 +139,7 @@ function O(e) {
                         onClick: () => {
                             c.Z.sendMessage(w.id, d.ZP.parse(w, '\uD83D\uDC4B'));
                         },
-                        className: v.button,
+                        className: x.button,
                         children: Q
                     })
                 ]

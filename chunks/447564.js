@@ -21,9 +21,9 @@ var r = n(255367),
     b = n(82950),
     E = n(981631),
     y = n(388032),
-    x = n(668275),
-    C = n(99713);
-function v(e) {
+    C = n(668275),
+    v = n(99713);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ let O = (e, t) => {
         (0, s.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
-                return (n) => (0, r.jsx)(t, v({ channel: e }, n));
+                return (n) => (0, r.jsx)(t, x({ channel: e }, n));
             },
             { modalKey: I }
         ));
@@ -73,15 +73,15 @@ function S(e) {
         n = (0, f.T$)(t),
         [a, o] = (0, i.useState)(!1),
         { price: d, fetchingPrice: g, error: h } = (0, f.R2)(_.FX),
-        { entitlement: b, fetchedEntitlement: y, error: x } = (0, f.t6)(_.FX),
-        C = h || x,
-        { analyticsLocations: v } = (0, u.ZP)([c.Z.HD_STREAMING_POTION_MODAL]),
+        { entitlement: b, fetchedEntitlement: y, error: C } = (0, f.t6)(_.FX),
+        v = h || C,
+        { analyticsLocations: x } = (0, u.ZP)([c.Z.HD_STREAMING_POTION_MODAL]),
         O = null != b && !b.consumed;
     (0, i.useEffect)(
         () => () => {
-            C && (0, m.SN)(_.FX);
+            v && (0, m.SN)(_.FX);
         },
-        [b, t, a, C]
+        [b, t, a, v]
     );
     let j = (0, i.useCallback)(() => {
             ((0, m.Zu)(t.id), (0, s.pTH)());
@@ -89,11 +89,11 @@ function S(e) {
         I = (0, i.useCallback)(() => {
             (0, p.Z)({
                 skuId: _.FX,
-                analyticsLocations: v,
+                analyticsLocations: x,
                 onComplete: j,
                 variantsReturnStyle: l.v.INDIVIDUAL_PRODUCTS
             });
-        }, [v, j]),
+        }, [x, j]),
         S = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == b ? void 0 : b.type) === E.qc2.DEVELOPER_GIFT ? 1 : 2 * !!O) : 3), [t.isHDStreamSplashed, n, null == b ? void 0 : b.type, O]),
         N = (0, i.useMemo)(() => S(), [S]);
     return (0, r.jsx)(T, {
@@ -115,7 +115,7 @@ let T = (e) => {
               : (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: x.modal,
+                            className: C.modal,
                             children: [(0, r.jsx)(N, {}), (0, r.jsx)(P, { channel: t })]
                         }),
                         (0, r.jsx)(A, {
@@ -128,7 +128,7 @@ let T = (e) => {
     },
     N = () =>
         (0, r.jsx)('img', {
-            className: x.image,
+            className: C.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
             alt: y.intl.string(y.t.DdigcX)
         }),
@@ -137,10 +137,10 @@ let T = (e) => {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: x.body,
+                    className: C.body,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: x.heading,
+                            className: C.heading,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: 'heading-lg/bold',
@@ -165,9 +165,9 @@ let T = (e) => {
                         })
                     ]
                 }),
-                (0, r.jsx)('div', { className: x.divider }),
+                (0, r.jsx)('div', { className: C.divider }),
                 (0, r.jsxs)('div', {
-                    className: x.applyingTo,
+                    className: C.applyingTo,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: 'eyebrow',
@@ -182,7 +182,7 @@ let T = (e) => {
     A = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e;
         return (0, r.jsxs)('div', {
-            className: x.footer,
+            className: C.footer,
             children: [
                 (0, r.jsx)(s.zxk, {
                     variant: 'secondary',
@@ -208,13 +208,13 @@ let T = (e) => {
                 4: y.intl.string(y.t.utRdl5)
             }[t];
             return (0, r.jsx)(s.ua7, {
-                tooltipContentClassName: x.tooltip,
+                tooltipContentClassName: C.tooltip,
                 text: e,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
                         o.zx,
-                        ((t = v({}, e)),
+                        ((t = x({}, e)),
                         (n = n =
                             {
                                 disabled: !0,
@@ -245,7 +245,7 @@ let T = (e) => {
         return (0, r.jsx)(o.zx, {
             onClick: i,
             children: (0, r.jsxs)('div', {
-                className: x.buttonCopy,
+                className: C.buttonCopy,
                 children: [
                     (0, r.jsx)(s.hh5, {
                         color: a.Z.colors.WHITE,
@@ -258,12 +258,12 @@ let T = (e) => {
     },
     Z = () =>
         (0, r.jsx)('div', {
-            className: x.anomaly,
+            className: C.anomaly,
             children: (0, r.jsxs)('div', {
-                className: x.error,
+                className: C.error,
                 children: [
                     (0, r.jsx)(s.Eep, {
-                        src: C,
+                        src: v,
                         width: 178,
                         height: 190
                     }),
@@ -276,9 +276,9 @@ let T = (e) => {
         }),
     R = () =>
         (0, r.jsx)('div', {
-            className: x.anomaly,
+            className: C.anomaly,
             children: (0, r.jsx)('div', {
-                className: x.spinner,
+                className: C.spinner,
                 children: (0, r.jsx)(s.$jN, {})
             })
         });

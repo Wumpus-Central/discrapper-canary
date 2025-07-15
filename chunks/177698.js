@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
+(n.d(t, { Z: () => E }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -57,112 +57,98 @@ function _(e, t) {
         e
     );
 }
-function E(e, t) {
-    function n() {
-        (0, i.Mr3)(e) &&
-            (0, i.h7j)((e) =>
-                (0, r.jsx)(
-                    s.j,
-                    _(b({}, e), {
-                        children: (0, r.jsx)(c.Lk, {
-                            message: m.intl.string(m.t['4LKmNz']),
-                            onClose: e.onClose
-                        })
-                    })
-                )
-            );
-    }
-    return (
-        null == t || t.addEventListener('abort', n),
-        {
-            cleanup: function () {
-                null == t || t.removeEventListener('abort', n);
-            }
-        }
-    );
-}
-let O = (0, h.Z)(
+let E = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: y, codeChallenge: I, codeChallengeMethod: v, state: C, guildId: S, channelId: N, prompt: T, disableGuildSelect: P, disclosures: j, integrationType: A, pid: Z, signal: x } = e,
-            w = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(N),
-            L = null != A ? (null == u ? void 0 : u.get(A)) : void 0,
-            R = null != (t = null == L ? void 0 : L.application) ? t : a.Z.getApplication(n);
+        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: E, redirectUri: O, codeChallenge: y, codeChallengeMethod: I, state: v, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: Z } = e,
+            x = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
+            w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
+            L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let a = (0, f.jU)(Z),
-                L = i.z1l;
-            null != R &&
+            let a = (0, f.jU)(A),
+                w = i.z1l;
+            null != L &&
             null !=
                 (0, l.ZP)({
-                    application: R,
-                    channelId: N
+                    application: L,
+                    channelId: S
                 })
-                ? (L = i.u1M)
-                : a.context === g.IlC.POPOUT && (L = i.u1M);
-            let D = !1,
-                k = (l) => {
+                ? (w = i.u1M)
+                : a.context === g.IlC.POPOUT && (w = i.u1M);
+            let R = !1,
+                D = (l) => {
                     let { clientId: o, location: u } = l;
                     if (null == o || o === n) {
-                        if (((D = !0), null == u)) {
+                        if (((R = !0), null == u)) {
                             (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'OAuth2 Error: No location provided')), a.lock());
                             return;
                         }
-                        if (null == y || null == R) {
-                            (e(u), a.lock());
-                            return;
-                        }
-                        if (null == new URL(u).searchParams.get('error')) {
-                            let t = 'OAuth2AuthorizeExternalSuccess_'.concat(n, '_').concat(S, '_').concat(N),
-                                { cleanup: l } = E(t, x);
-                            (0, i.h7j)(
-                                (e) =>
-                                    (0, r.jsx)(
-                                        s.j,
-                                        _(b({}, e), {
-                                            footer: (0, r.jsx)(c.qN, {
-                                                application: R,
-                                                onClose: e.onClose,
-                                                message: m.intl.format(m.t.toiFdH, { appName: R.name })
-                                            }),
-                                            children: (0, r.jsx)(c._0, { application: R })
-                                        })
-                                    ),
-                                {
-                                    modalKey: t,
-                                    onCloseCallback: () => {
-                                        (l(), e(u), a.lock());
-                                    }
-                                },
-                                L
-                            );
-                        } else {
-                            let t = 'OAuth2AuthorizeExternalError_'.concat(n, '_').concat(S, '_').concat(N),
-                                { cleanup: l } = E(t, x);
-                            (0, i.h7j)(
-                                (e) =>
-                                    (0, r.jsx)(
-                                        s.j,
-                                        _(b({}, e), {
-                                            footer: (0, r.jsx)(c.qN, {
-                                                application: R,
-                                                onClose: e.onClose,
-                                                message: m.intl.string(m.t.llRef3)
-                                            }),
-                                            children: (0, r.jsx)(c.Mx, {})
-                                        })
-                                    ),
-                                {
-                                    modalKey: t,
-                                    onCloseCallback: () => {
-                                        (l(), e(u), a.lock());
-                                    }
-                                },
-                                L
-                            );
-                        }
+                        if ((e(u), null == O || null == L)) return void a.lock();
+                        null == new URL(u).searchParams.get('error')
+                            ? (0, i.h7j)(
+                                  (e) =>
+                                      (0, r.jsx)(
+                                          s.j,
+                                          _(b({}, e), {
+                                              footer: (0, r.jsx)(c.qN, {
+                                                  application: L,
+                                                  onClose: e.onClose
+                                              }),
+                                              children: (0, r.jsx)(c._0, { application: L })
+                                          })
+                                      ),
+                                  {
+                                      onCloseCallback: () => {
+                                          a.lock();
+                                      }
+                                  },
+                                  w
+                              )
+                            : (0, i.h7j)(
+                                  (e) =>
+                                      (0, r.jsx)(
+                                          s.j,
+                                          _(b({}, e), {
+                                              footer: (0, r.jsx)(c.qN, {
+                                                  application: L,
+                                                  onClose: e.onClose
+                                              }),
+                                              children: (0, r.jsx)(c.Mx, {})
+                                          })
+                                      ),
+                                  {
+                                      onCloseCallback: () => {
+                                          a.lock();
+                                      }
+                                  },
+                                  w
+                              );
                     }
                 },
-                { cleanup: M } = E(w, x);
+                { cleanup: k } = (function (e, t) {
+                    function n() {
+                        (0, i.Mr3)(e) &&
+                            (0, i.h7j)((e) =>
+                                (0, r.jsx)(
+                                    s.j,
+                                    _(b({}, e), {
+                                        children: (0, r.jsx)(c.Lk, {
+                                            message: m.intl.string(m.t['4LKmNz']),
+                                            onClose: e.onClose
+                                        })
+                                    })
+                                )
+                            );
+                    }
+                    return (
+                        null == t || t.addEventListener('abort', n),
+                        {
+                            cleanup: function () {
+                                null == t || t.removeEventListener('abort', n);
+                            }
+                        }
+                    );
+                })(x, Z);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -171,29 +157,29 @@ let O = (0, h.Z)(
                             authorizations: u,
                             clientId: n,
                             scopes: null != d ? d : [],
-                            disclosures: null != j ? j : [],
-                            callback: k,
-                            responseType: O,
-                            redirectUri: y,
-                            codeChallenge: I,
-                            codeChallengeMethod: v,
-                            state: C,
+                            disclosures: null != P ? P : [],
+                            callback: D,
+                            responseType: E,
+                            redirectUri: O,
+                            codeChallenge: y,
+                            codeChallengeMethod: I,
+                            state: v,
                             permissions: h,
-                            guildId: S,
-                            channelId: N,
-                            prompt: T,
-                            disableGuildSelect: 'boolean' == typeof P ? P : 'true' === P,
-                            integrationType: A,
+                            guildId: C,
+                            channelId: S,
+                            prompt: N,
+                            disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
+                            integrationType: j,
                             cancelCompletesFlow: !0
                         })
                     ),
                 {
-                    modalKey: w,
+                    modalKey: x,
                     onCloseCallback: () => {
-                        (M(), D || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock()));
+                        (k(), R || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock()));
                     }
                 },
-                L
+                w
             );
         });
     },

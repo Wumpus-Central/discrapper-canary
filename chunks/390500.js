@@ -37,15 +37,12 @@ let c = function (e) {
                         })
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    className: s.buttonContainer,
-                    children: (0, r.jsx)(l.zxk, {
-                        fullWidth: !0,
-                        onClick: t,
-                        variant: 'critical-primary',
-                        size: 'md',
-                        text: o.intl.string(o.t.g9tK0t)
-                    })
+                (0, r.jsx)(l.zxk, {
+                    fullWidth: !0,
+                    onClick: t,
+                    variant: 'critical-primary',
+                    size: 'md',
+                    text: o.intl.string(o.t.g9tK0t)
                 })
             ]
         })

@@ -57,9 +57,6 @@ let E = (e) => {
                     case f.NA.NO_LIMITS:
                         t = _.noLimitsBackground;
                         break;
-                    case f.NA.NEW_APP_STYLES:
-                        t = _.newStylesBackground;
-                        break;
                     case f.NA.YOUR_SPACE:
                         t = _.yourSpaceBackground;
                         break;

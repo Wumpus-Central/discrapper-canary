@@ -1,6 +1,6 @@
 (n.d(t, {
     J: () => I,
-    Z: () => L
+    Z: () => D
 }),
     n(388685));
 var r,
@@ -65,24 +65,24 @@ function y(e, t) {
         e
     );
 }
-let x = {
+let C = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
         lastSeen: null
     },
-    C = x,
-    v = {},
+    v = C,
+    x = {},
     O = null,
     j = !1,
     I = 86400000;
 var S = (((i = S || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
 let T = new Set(Object.values(S));
 function N() {
-    return null == C.lastFetched || Date.now() - C.lastFetched >= I;
+    return null == v.lastFetched || Date.now() - v.lastFetched >= I;
 }
 function P() {
-    !j && (N() || null != C.surveyOverride) && ((j = !0), (0, d.wk)(C.surveyOverride, !0));
+    !j && (N() || null != v.surveyOverride) && ((j = !0), (0, d.wk)(v.surveyOverride, !0));
 }
 function A(e) {
     var t;
@@ -121,7 +121,7 @@ function A(e) {
                     c = (null == s ? void 0 : s.id) === a.ownerId,
                     u = f.Z.can(h.Plq.ADMINISTRATOR, a);
                 if ((t.includes('is_owner') && !c) || (t.includes('is_admin') && !u)) continue;
-                null == (v = null != v ? v : {})[e.key] && (v[e.key] = e);
+                null == (x = null != x ? x : {})[e.key] && (x[e.key] = e);
                 let d = _.Z.getGuildId(),
                     m = null != d && d === a.id;
                 if ((!t.includes('is_viewing') || m) && !i) return !0;
@@ -132,9 +132,9 @@ function A(e) {
 }
 function w(e) {
     let { survey: t } = e;
-    ((j = !1), (C.lastFetched = Date.now()), null == C.hiddenSurveys && (C.hiddenSurveys = {}));
+    ((j = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {}));
     let n = null != t,
-        r = n && null == C.hiddenSurveys[t.key],
+        r = n && null == v.hiddenSurveys[t.key],
         i = n && A(t);
     var l = 0;
     let o = c.K.get(h.z7k);
@@ -142,7 +142,7 @@ function w(e) {
 }
 function Z() {
     if (null != O && (A(O) || ((O = null), 0))) return !1;
-    let e = Object.values((v = null != v ? v : {}))[0];
+    let e = Object.values((x = null != x ? x : {}))[0];
     null != e && A(e)
         ? w({
               type: 'SURVEY_FETCHED',
@@ -152,19 +152,19 @@ function Z() {
 }
 class R extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        ((C = null != e ? e : x), this.syncWith([_.Z], Z));
+        ((v = null != e ? e : C), this.syncWith([_.Z], Z));
     }
     getState() {
-        return C;
+        return v;
     }
     getCurrentSurvey() {
         return N() ? null : O;
     }
     getSurveyOverride() {
-        return C.surveyOverride;
+        return v.surveyOverride;
     }
     getLastSeenTimestamp() {
-        return C.lastSeen;
+        return v.lastSeen;
     }
 }
 (b(R, 'displayName', 'SurveyStore'),
@@ -183,24 +183,24 @@ class R extends (r = s.ZP.PersistedStore) {
             return y(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         }
     ]));
-let L = new R(u.Z, {
+let D = new R(u.Z, {
     CONNECTION_OPEN: P,
     CONNECTION_RESUMED: P,
     SURVEY_FETCHED: w,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        ((C.hiddenSurveys[t] = !0), (O = null), (v = null != v ? v : {}), delete v[t]);
+        ((v.hiddenSurveys[t] = !0), (O = null), (x = null != x ? x : {}), delete x[t]);
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;
-        ((C.surveyOverride = t), null != t && delete C.hiddenSurveys[t], (0, d.wk)(C.surveyOverride, !0));
+        ((v.surveyOverride = t), null != t && delete v.hiddenSurveys[t], (0, d.wk)(v.surveyOverride, !0));
     },
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},
     LOGOUT: function () {
-        C.hiddenSurveys = {};
+        v.hiddenSurveys = {};
     },
     SURVEY_SEEN: function () {
-        C.lastSeen = Date.now();
+        v.lastSeen = Date.now();
     }
 });

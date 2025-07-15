@@ -17,9 +17,9 @@ var r = n(255367),
     b = n(709054),
     E = n(962086),
     y = n(160404),
-    x = n(225675),
-    C = n(981631),
-    v = n(388032),
+    C = n(225675),
+    v = n(981631),
+    x = n(388032),
     O = n(318135);
 function j(e) {
     var t;
@@ -37,7 +37,7 @@ function I(e) {
             impersonateType: y.Z.getImpersonateType(t),
             viewingRoles: y.Z.getViewingRoles(t)
         })),
-        T = I === x.z.SERVER_SHOP,
+        T = I === C.z.SERVER_SHOP,
         N = (0, u.e7)([m.ZP], () => (null != n ? m.ZP.getTrueMember(t, n.id) : null)),
         [P, A] = (0, d.A7R)(null == S ? [] : b.default.keys(S)),
         w = i.useRef(l);
@@ -76,22 +76,22 @@ function I(e) {
             [l, n, T, Z, o]
         );
     if (null == n || null == l || null == N) return null;
-    let L = {};
+    let D = {};
     return (N.roles.forEach((e) => {
         let t = o[e];
-        null != t && (L[t.id] = t);
+        null != t && (D[t.id] = t);
     }),
     c.e$(
         h.I0({
-            forceRoles: L,
+            forceRoles: D,
             context: l
         }),
-        c.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
+        c.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES)
     ) || (0, p.eM)(l, n))
         ? (0, r.jsx)('div', {
               className: O.container,
               children: (0, r.jsx)(d.hQY, {
-                  placeholder: v.intl.string(v.t.Sojqsr),
+                  placeholder: x.intl.string(x.t.Sojqsr),
                   value: P,
                   onChange: A,
                   autoFocus: !0,
@@ -134,6 +134,6 @@ function I(e) {
           })
         : (0, r.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: v.intl.string(v.t.MNSTbW)
+              children: x.intl.string(x.t.MNSTbW)
           });
 }
