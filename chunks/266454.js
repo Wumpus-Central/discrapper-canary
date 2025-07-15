@@ -14,7 +14,7 @@ var r = n(442837),
 function u(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (!n && (0, c.B)(e)) return !0;
+    if (!n && (0, c.Bh)(e)) return !0;
     let r = null == (t = a.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != r && (0, s.jl)(r, e);
 }
@@ -27,7 +27,7 @@ async function f(e) {
 }
 function _(e, t) {
     var n, r;
-    if ((0, c.B)(e))
+    if ((0, c.Bh)(e))
         return {
             isDismissed: !0,
             lastDismissedSnowflakeId: null

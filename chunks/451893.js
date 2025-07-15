@@ -58,12 +58,12 @@ let o = [
 ];
 function s(e) {
     let { className: t, children: n, containerRef: s, faderSize: a, faderEdgeThreshold: c } = e,
-        d = i.useRef(null),
-        [u, m] = i.useState(0),
+        u = i.useRef(null),
+        [d, m] = i.useState(0),
         [f, h] = i.useState(0),
         [p, x] = i.useState(0),
         g = i.useCallback(() => {
-            null != d.current && (m(d.current.getDistanceFromTop()), h(d.current.getDistanceFromBottom()), x(d.current.getScrollerState().offsetHeight));
+            null != u.current && (m(u.current.getDistanceFromTop()), h(u.current.getDistanceFromBottom()), x(u.current.getScrollerState().offsetHeight));
         }, []);
     i.useEffect(() => {
         if ((g(), null == s.current)) return;
@@ -76,12 +76,12 @@ function s(e) {
                 e.disconnect();
             }
         );
-    }, [d, s, g]);
+    }, [u, s, g]);
     let b = i.useMemo(() => {
-        if (0 === u && 0 === f) return {};
+        if (0 === d && 0 === f) return {};
         let e = [];
-        if ((e.push('to bottom'), u > 0)) {
-            let t = c > 0 ? 1 - Math.min(c, u) / c : 1;
+        if ((e.push('to bottom'), d > 0)) {
+            let t = c > 0 ? 1 - Math.min(c, d) / c : 1;
             for (let n = 0; n < o.length; n++) {
                 let { position: r, alpha: i } = o[n],
                     l = (r * a).toFixed(2);
@@ -98,9 +98,9 @@ function s(e) {
             }
         }
         return { maskImage: 'linear-gradient('.concat(e.join(','), ')') };
-    }, [f, u, c, a, p]);
+    }, [f, d, c, a, p]);
     return (0, r.jsx)(l.xVE, {
-        ref: d,
+        ref: u,
         style: b,
         className: t,
         onScroll: g,

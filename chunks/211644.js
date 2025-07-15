@@ -1,12 +1,15 @@
 (n.d(t, {
-    Aq: () => R,
-    Kl: () => w,
-    ZP: () => D,
-    bn: () => C,
-    cI: () => N,
-    f0: () => S,
-    gE: () => A,
-    mc: () => P
+    Aq: () => L,
+    Do: () => P,
+    Kl: () => k,
+    ZP: () => M,
+    bn: () => D,
+    cI: () => w,
+    cv: () => S,
+    f0: () => N,
+    gE: () => C,
+    mc: () => x,
+    og: () => R
 }),
     n(388685),
     n(290780));
@@ -117,23 +120,27 @@ let u = new (n(499303).I)(),
     T = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > d;
-        if (I(e) && !t) return (u.unschedule(), y(e, O(e)));
-        if ((null != e.shownFatigableCandidate && !t) || u.scheduled()) return e;
-        let n = new Date().getTime();
-        return (
-            (null == e.shownFatigableCandidate && n - e.lastWinnerTime < f) ||
-                u.schedule(() => {
-                    (0, i.j)(() => {
-                        p.setState((e) => {
-                            let t = h(e);
-                            return y(t, v(t));
-                        });
-                    });
-                }, 250),
-            e
-        );
+        return I(e) && !t
+            ? (u.unschedule(), y(e, O(e)))
+            : ((null != e.shownFatigableCandidate && !t) ||
+                  u.scheduled() ||
+                  A(e) ||
+                  u.schedule(() => {
+                      (0, i.j)(() => {
+                          p.setState((e) => {
+                              let t = h(e);
+                              return y(t, v(t));
+                          });
+                      });
+                  }, 250),
+              e);
     },
-    S = (e) => {
+    S = () => A(p.getState()),
+    A = (e) => {
+        let t = new Date().getTime();
+        return null == e.shownFatigableCandidate && t - e.lastWinnerTime < f;
+    },
+    N = (e) => {
         let t = a.O.has(e.content);
         (0, i.j)(() => {
             p.setState((n) => {
@@ -142,7 +149,7 @@ let u = new (n(499303).I)(),
             });
         });
     },
-    A = (e, t) => {
+    C = (e, t) => {
         (0, i.j)(() => {
             p.setState((n) => {
                 let r = h(n);
@@ -150,13 +157,21 @@ let u = new (n(499303).I)(),
             });
         });
     },
-    N = (e) => p.getState().currentlyShown.has(e),
-    C = (e) => p((t) => t.currentlyShown.has(e)),
     R = () => {
+        var e;
+        return null != (e = p.getState().recentlyShown[0]) ? e : null;
+    },
+    P = () => {
+        var e, t;
+        return null != (t = null == (e = p.getState().shownFatigableCandidate) ? void 0 : e.content) ? t : null;
+    },
+    w = (e) => p.getState().currentlyShown.has(e),
+    D = (e) => p((t) => t.currentlyShown.has(e)),
+    L = () => {
         let e = [...p.getState().currentlyShown].filter((e) => !a.O.has(e)).length;
         return [p.getState().currentlyShown.size, e];
     },
-    P = () => {
+    x = () => {
         ((0, i.j)(() => {
             p.setState(() => {
                 let e = _();
@@ -165,7 +180,7 @@ let u = new (n(499303).I)(),
         }),
             u.unschedule());
     },
-    w = () => p.getState().postConnectionOpen;
-function D(e, t) {
+    k = () => p.getState().postConnectionOpen;
+function M(e, t) {
     return p(e, t);
 }

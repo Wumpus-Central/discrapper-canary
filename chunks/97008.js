@@ -24,7 +24,7 @@ class s {
             let { channelId: n } = t,
                 o = this.toDataUrl(e, s, l),
                 u = await (0, a.Bo)(o, c, 'image/png');
-            return new r.n(
+            return new r.nH(
                 {
                     file: u,
                     platform: i.ow.WEB,

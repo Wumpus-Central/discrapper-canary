@@ -16,8 +16,8 @@ var r,
     s = n(658666),
     a = n(384632),
     c = n(430824),
-    d = n(411198),
-    u = n(863249),
+    u = n(411198),
+    d = n(863249),
     m = n(944163),
     f = n(246364),
     h = n(983736),
@@ -27,17 +27,17 @@ var r,
 function b(e, t, n) {
     let [r, o] = i.useState(!1),
         c = (0, l.e7)([m.Z], () => m.Z.get(e)),
-        d = (0, l.e7)([s.Z], () => s.Z.pendingState);
+        u = (0, l.e7)([s.Z], () => s.Z.pendingState);
     i.useEffect(() => {
-        t || u.ZP.fetchVerificationForm(e, n).finally(() => o(!0));
+        t || d.ZP.fetchVerificationForm(e, n).finally(() => o(!0));
     }, [e, n, t]);
     let h = i.useMemo(() => {
         var e, n;
         let r;
-        if (!t || null == d) return null;
-        if (d.joinType === a.A.APPLY) r = null != d.pendingVerificationFields ? [...d.pendingVerificationFields] : void 0;
-        else if (null != d.termRules) {
-            let e = d.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
+        if (!t || null == u) return null;
+        if (u.joinType === a.A.APPLY) r = null != u.pendingVerificationFields ? [...u.pendingVerificationFields] : void 0;
+        else if (null != u.termRules) {
+            let e = u.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
             r = [
                 {
                     field_type: f.QJ.TERMS,
@@ -55,7 +55,7 @@ function b(e, t, n) {
                   formFields: r,
                   guild: null == c ? void 0 : c.guild
               };
-    }, [t, d, c]);
+    }, [t, u, c]);
     return {
         hasFetched: r,
         verificationForm: null != h ? h : c
@@ -64,7 +64,7 @@ function b(e, t, n) {
 function v(e, t, n) {
     let r = (0, l.e7)([c.Z], () => c.Z.getGuild(e)),
         s = (0, l.e7)([o.Z], () => o.Z.getGuild());
-    return i.useMemo(() => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, d.Rj)(t) : null), [n, s, e, r, t]);
+    return i.useMemo(() => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, u.Rj)(t) : null), [n, s, e, r, t]);
 }
 function _(e) {
     let t = !(null == e ? void 0 : e.isClaimed()),

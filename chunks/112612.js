@@ -1,23 +1,23 @@
-(e.d(n, { Z: () => r }), e(388685));
+(e.d(n, { Z: () => c }), e(388685));
 var i = e(73800),
     a = e(881052);
-function r(t) {
+function c(t) {
     let { onSubmit: n, onClose: e } = t,
-        [r, s] = i.useState(!1),
-        [c, l] = i.useState(null),
-        o = i.useCallback(async () => {
-            if (!r) {
-                (s(!0), l(null));
+        [c, r] = i.useState(!1),
+        [o, s] = i.useState(null),
+        l = i.useCallback(async () => {
+            if (!c) {
+                (r(!0), s(null));
                 try {
                     (await n(), e());
                 } catch (t) {
-                    (l(new a.Hx(t).getAnyErrorMessage()), s(!1));
+                    (s(new a.Hx(t).getAnyErrorMessage()), r(!1));
                 }
             }
-        }, [e, n, r]);
+        }, [e, n, c]);
     return {
-        submitting: r,
-        errorMessage: c,
-        onSubmit: o
+        submitting: c,
+        errorMessage: o,
+        onSubmit: l
     };
 }

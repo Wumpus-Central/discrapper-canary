@@ -46,7 +46,7 @@ function c(e) {
 }
 let u = 86400000,
     d = '???',
-    f = (e) => ''.concat(e[0], '...'),
+    f = (e) => ''.concat(e[0], '\u2026'),
     _ = (e) => '@'.concat(e),
     p = {
         mode: 'full',
@@ -153,7 +153,7 @@ function C() {
 let R = {
     getName: g,
     useName: E,
-    isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
+    isNameConcealed: (e) => 2 === e.length && e.endsWith('\u2026'),
     getUserTag: A,
     useUserTag: function (e, t) {
         return S(

@@ -1,9 +1,7 @@
 (n.d(t, {
     B: () => l,
-    Fm: () => d,
-    Lc: () => u,
-    U4: () => c,
-    hn: () => f,
+    Lc: () => c,
+    hn: () => u,
     zz: () => o
 }),
     n(953529),
@@ -87,22 +85,7 @@ function l(e) {
     let o = s({ spoiler: e.spoiler });
     return ((a.filename = ''.concat(o).concat(null != i ? i : e.filename)), (a.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (a.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (a.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((a.is_clip = !0), (a.title = e.clip.name), (a.application_id = e.clip.applicationId), (a.clip_created_at = (0, r.U)(e.clip.id)), (a.clip_participant_ids = (0, r.Z)(e.clip.users))), a);
 }
-function c(e, t, n) {
-    let r = new XMLHttpRequest();
-    return new Promise((i, a) => {
-        (r.open('GET', e, !0),
-            (r.responseType = 'blob'),
-            r.setRequestHeader('Range', 'bytes='.concat(t, '-').concat(n)),
-            (r.onabort = (e) => a(e)),
-            (r.onerror = (e) => a(e)),
-            (r.ontimeout = (e) => a(e)),
-            (r.onload = () => {
-                206 === r.status ? i(r.response) : a(Error('Range request failed'));
-            }),
-            r.send());
-    });
-}
-function u(e) {
+function c(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
         (t.open('GET', e, !0),
@@ -117,23 +100,7 @@ function u(e) {
             t.send());
     });
 }
-function d(e) {
-    return new Promise((t, n) => {
-        let r = new XMLHttpRequest();
-        (r.open('HEAD', e, !0),
-            (r.onload = () => {
-                if (r.status >= 200 && r.status < 300) {
-                    let e = r.getResponseHeader('Content-Length');
-                    null != e && '' !== e ? t(parseInt(e, 10)) : n(Error('Content-Length header is missing'));
-                } else n(Error('HTTP request failed with status code '.concat(r.status)));
-            }),
-            (r.onerror = n),
-            (r.onabort = n),
-            (r.ontimeout = n),
-            r.send());
-    });
-}
-function f(e) {
+function u(e) {
     var t, n, r, i, o, s;
     let l,
         { uri: c, i: u, overrideFilename: d, overrideType: f } = e,

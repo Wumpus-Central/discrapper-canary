@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(893776),
     a = n(809206),
     c = n(607070),
-    d = n(220082),
-    u = n(65361),
+    u = n(220082),
+    d = n(65361),
     m = n(798476),
     f = n(166184),
     h = n(314897),
@@ -29,7 +29,7 @@ var r = n(255367),
     R = n(419851),
     T = n(246403);
 let S = (e) => {
-        let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c, hasManualFormFields: d, isMember: u } = e;
+        let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c, hasManualFormFields: u, isMember: d } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
             children: [
@@ -45,7 +45,7 @@ let S = (e) => {
                     id: t,
                     variant: 'heading-xl/semibold',
                     className: F.header,
-                    children: d && !u ? P.intl.string(P.t['qQYF6+']) : P.intl.string(P.t.MhcDLy)
+                    children: u && !d ? P.intl.string(P.t['qQYF6+']) : P.intl.string(P.t.MhcDLy)
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
@@ -112,17 +112,17 @@ let S = (e) => {
         let { guildId: n, formState: i, updateFormState: o, isPreview: s = !1, disableVerification: a = !1 } = e,
             c = (0, l.e7)([_.Z], () => _.Z.get(n));
         if (null == c) return null;
-        let d = null != (t = null != i ? i : null == c ? void 0 : c.formFields) ? t : [],
-            u = s ? y.W : y.r;
-        return (0, r.jsx)(u, {
+        let u = null != (t = null != i ? i : null == c ? void 0 : c.formFields) ? t : [],
+            d = s ? y.W : y.r;
+        return (0, r.jsx)(d, {
             guildId: n,
-            formFields: d,
+            formFields: u,
             updateFormFields: o,
             disableVerification: a
         });
     },
     A = (e) => {
-        let { guildId: t, headerId: n, formState: i, updateFormState: l, guildName: s, hasManualFormFields: a, disableVerification: c, isPreview: d = !1 } = e;
+        let { guildId: t, headerId: n, formState: i, updateFormState: l, guildName: s, hasManualFormFields: a, disableVerification: c, isPreview: u = !1 } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
             children: [
@@ -141,7 +141,7 @@ let S = (e) => {
                     guildId: t,
                     formState: i,
                     updateFormState: l,
-                    isPreview: d,
+                    isPreview: u,
                     disableVerification: c
                 })
             ]
@@ -151,7 +151,7 @@ let S = (e) => {
         var t, n, s, y;
         let { verificationForm: R, headerId: T, guildId: w, onClose: k, onComplete: D, isPreview: q = !1 } = e,
             Z = (0, O.N0)(w, null == R ? void 0 : R.guild, q),
-            { guildProfile: L, fetchGuildProfile: B } = (0, u.u)(w),
+            { guildProfile: L, fetchGuildProfile: B } = (0, d.u)(w),
             U = (0, l.e7)([x.ZP, h.default], () => x.ZP.isMember(w, h.default.getId())),
             [H, z] = i.useState(!1);
         i.useEffect(() => {
@@ -171,7 +171,7 @@ let S = (e) => {
             })),
             ea = null != es ? es : null == R || null == (t = R.guild) ? void 0 : t.approximate_presence_count,
             ec = null != eo ? eo : null == R || null == (n = R.guild) ? void 0 : n.approximate_member_count,
-            ed = null != G && G;
+            eu = null != G && G;
         (i.useEffect(() => {
             null != R && V(R.formFields);
         }, [R]),
@@ -182,11 +182,11 @@ let S = (e) => {
                         guild_id: w
                     });
             }, [w]));
-        let eu = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-            { currentStep: em, setCurrentStep: ef } = (0, O.k3)(eu);
+        let ed = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+            { currentStep: em, setCurrentStep: ef } = (0, O.k3)(ed);
         (0, O.lk)(W);
-        let eh = null == eu ? void 0 : eu.verified,
-            ep = null == eu ? void 0 : eu.isPhoneVerified(),
+        let eh = null == ed ? void 0 : ed.verified,
+            ep = null == ed ? void 0 : ed.isPhoneVerified(),
             { invalidFormFields: ex, hasInvalidTermsFormField: eg } = i.useMemo(
                 () => ({
                     invalidFormFields: W.some((e) => !(0, C.OA)(e)),
@@ -196,7 +196,7 @@ let S = (e) => {
             ),
             eb = i.useMemo(() => {
                 if (null == D || ex) return !0;
-                if (ed || (null == eu ? void 0 : eu.isStaff())) return !1;
+                if (eu || (null == ed ? void 0 : ed.isStaff())) return !1;
                 switch (null == Z ? void 0 : Z.verificationLevel) {
                     case I.sFg.VERY_HIGH:
                         return !ep;
@@ -208,7 +208,7 @@ let S = (e) => {
                     default:
                         return !1;
                 }
-            }, [D, ex, ed, eu, null == Z ? void 0 : Z.verificationLevel, ep, eh]),
+            }, [D, ex, eu, ed, null == Z ? void 0 : Z.verificationLevel, ep, eh]),
             ev = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             e_ = i.useRef(null),
             ej = (function (e) {
@@ -222,14 +222,14 @@ let S = (e) => {
                             : void 0,
                     n = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
                     r = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWEST).hex(),
-                    [i, l, s] = (0, d.Cf)(t, n, !1);
+                    [i, l, s] = (0, u.Cf)(t, n, !1);
                 return 'linear-gradient(-45deg, '.concat(i, ', ').concat(null != s ? s : r, ')');
             })(Z),
             eC = (function (e) {
                 let t = (0, o.dQu)(o.TVs.colors.BORDER_SUBTLE).hex();
                 return 'linear-gradient(-45deg, '.concat(t, ', ').concat(e, ')');
             })(null != (y = null == L ? void 0 : L.brandColorPrimary) ? y : '');
-        if (null == Z) return null;
+        if (null == Z) return (0, r.jsx)(o.$jN, {});
         let eO = async () => {
                 (K(!0), er(null), el(null));
                 try {
@@ -249,7 +249,7 @@ let S = (e) => {
             eN = async () => {
                 var e, t, n, r;
                 (K(!0), Y(null));
-                let i = null != eu ? x.ZP.getMember(w, eu.id) : null;
+                let i = null != ed ? x.ZP.getMember(w, ed.id) : null;
                 if (null != i && !i.isPending) {
                     null == k || k(!0);
                     return;
@@ -310,30 +310,27 @@ let S = (e) => {
             ey = null != L;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsxs)('div', {
                     className: F.guildSidebar,
-                    children: (0, r.jsxs)('div', {
-                        className: F.sidebarCard,
-                        children: [
-                            (0, r.jsx)('div', {
-                                style: { background: ey ? eC : ej },
-                                className: F.sidebarGradientOverlay
-                            }),
-                            ey
-                                ? (0, r.jsx)(m.ZP, {
-                                      profile: L,
-                                      className: F.guildProfile,
-                                      disableCTA: !0,
-                                      disableGuildNameClick: !0
-                                  })
-                                : (0, r.jsx)(f.Z, {
-                                      className: F.guildProfile,
-                                      guild: Z,
-                                      presenceCount: ea,
-                                      memberCount: ec
-                                  })
-                        ]
-                    })
+                    children: [
+                        (0, r.jsx)('div', {
+                            style: { background: ey ? eC : ej },
+                            className: F.sidebarGradientOverlay
+                        }),
+                        ey
+                            ? (0, r.jsx)(m.ZP, {
+                                  profile: L,
+                                  className: F.guildProfile,
+                                  disableCTA: !0,
+                                  disableGuildNameClick: !0
+                              })
+                            : (0, r.jsx)(f.Z, {
+                                  className: F.guildProfile,
+                                  guild: Z,
+                                  presenceCount: ea,
+                                  memberCount: ec
+                              })
+                    ]
                 }),
                 (0, r.jsx)('div', {
                     className: F.modal,
@@ -379,7 +376,7 @@ let S = (e) => {
                                                     isPreview: q,
                                                     useReducedMotion: ev,
                                                     hasManualFormFields: G,
-                                                    disableVerification: ed
+                                                    disableVerification: eu
                                                 });
                                         }
                                     })()

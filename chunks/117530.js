@@ -51,7 +51,7 @@ let O = (e) => {
             body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: f.dN1 })
         });
     (a().forEach(t, (e) => {
-        let t = new c.n(e, n, r, o.length);
+        let t = new c.nH(e, n, r, o.length);
         (t.upload(), o.push(t));
     }),
         b(n, i, o));
@@ -87,7 +87,7 @@ function T(e) {
 function S(e) {
     let { channelId: t, id: n, file: r, draftType: i } = e,
         a = [...g(t, i)].filter((e) => e.id !== n),
-        o = new c.n(r, t);
+        o = new c.nH(r, t);
     (o.upload(), a.push(o), b(t, i, a));
 }
 function A(e) {

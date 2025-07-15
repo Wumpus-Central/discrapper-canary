@@ -85,12 +85,12 @@ let p = () => {
                                 guildId: e,
                                 inviteKey: a,
                                 onComplete: c,
-                                onClose: function () {
+                                onClose: async function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                     if (!e)
                                         if (s.rb.getState().hasUnsubmittedChanges) return void (0, s.PE)(!0);
                                         else p();
-                                    n.onClose();
+                                    await n.onClose();
                                 }
                             })
                         );

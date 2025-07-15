@@ -1,6 +1,7 @@
 n.d(t, {
-    B: () => f,
-    i: () => d
+    Bh: () => f,
+    G5: () => _,
+    ig: () => d
 });
 var r = n(399606),
     i = n(704215),
@@ -46,14 +47,12 @@ function d(e) {
         userId: a.default.getId(),
         newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden
     }));
-    if (n) return e;
-    let i = null != t ? s.default.age(t) : 0;
-    return e.filter((e) => {
-        var t;
-        return i > (null != (t = c[e]) ? t : u);
-    });
+    return n ? e : e.filter((e) => _(t, e));
 }
 function f(e) {
-    var t;
-    return !l.Z.newUserMinAgeRequiredOverridden && (null != a.default.getId() ? s.default.age(a.default.getId()) : 0) < (null != (t = c[e]) ? t : u);
+    return !l.Z.newUserMinAgeRequiredOverridden && !_(a.default.getId(), e);
+}
+function _(e, t) {
+    var n;
+    return null != e && s.default.age(e) >= (null != (n = c[t]) ? n : u);
 }

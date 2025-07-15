@@ -137,7 +137,7 @@ class b extends r.EventEmitter {
     async cancelItem(e) {
         E.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
         let t = this.files.find((t) => t.id === e);
-        if (null == t || t.status === l.m.CANCELED) return;
+        if (null == t || t.status === l.mw.CANCELED) return;
         let n = this.files.indexOf(t);
         ((this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = g(h({}, this._file), { items: this.files })), await (0, s.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel());
     }

@@ -1,8 +1,4 @@
 e.exports = {
-    modal: 'modal__0651b',
-    description: 'description__0651b',
-    body: 'body__0651b',
-    modalContent: 'modalContent__0651b',
     addItemContainer: 'addItemContainer__0651b',
     addItemButton: 'addItemButton__0651b',
     dragging: 'dragging__0651b',

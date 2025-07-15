@@ -1,6 +1,6 @@
 a.d(e, {
-    A: () => R,
-    R: () => d
+    A: () => d,
+    R: () => R
 });
 var r = a(101284),
     _ = a(622916),
@@ -13,19 +13,19 @@ var r = a(101284),
     l = a(789112),
     u = a(793373),
     I = a(152228);
-let R = {
+let d = {
     idleTimeout: 1000,
     finalTimeout: 30000,
     childSpanTimeout: 15000
 };
-function d(t, e = {}) {
+function R(t, e = {}) {
     let a,
         N = new Map(),
         f = !1,
         A = 'externalFinish',
         T = !e.disableAutoFinish,
         p = [],
-        { idleTimeout: L = R.idleTimeout, finalTimeout: h = R.finalTimeout, childSpanTimeout: O = R.childSpanTimeout, beforeSpanEnd: P } = e,
+        { idleTimeout: L = d.idleTimeout, finalTimeout: h = d.finalTimeout, childSpanTimeout: O = d.childSpanTimeout, beforeSpanEnd: P } = e,
         g = (0, n.s3)();
     if (!g || !(0, c.z)()) return new l.b();
     let D = (0, n.nZ)(),

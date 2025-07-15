@@ -68,7 +68,7 @@ function y(e, t) {
             return null == (e = s.Z.settings.userContent) ? void 0 : e.dismissedContents;
         }),
         a = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
-        o = (0, h.i)(e),
+        o = (0, h.ig)(e),
         c = null;
     return (
         s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) ? (c = o.find((e) => null == n || !(0, u.jl)(n, e))) : null != n && (c = o.find((e) => !(0, u.jl)(n, e))),
@@ -97,7 +97,7 @@ function O(e, t, n) {
         o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
         c = null;
     if (null != e) {
-        let n = !(0, h.B)(e);
+        let n = !(0, h.Bh)(e);
         s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) ? (c = n && (null == a || a < t) ? e : null) : null != a && (c = n && a < t ? e : null);
     }
     return [
@@ -126,7 +126,7 @@ function v(e, t, n) {
         c = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
         u = null;
     if (null != e) {
-        let n = !(0, h.B)(e),
+        let n = !(0, h.Bh)(e),
             r = void 0 === o ? 0 : o + t.cooldownDurationMs,
             i = Date.now(),
             a = null == t.showAfterTimestamp || (i >= t.showAfterTimestamp && (null != o ? o : 0) <= t.showAfterTimestamp);

@@ -219,7 +219,7 @@ class D extends m.Z {
         if (null != d) {
             ((O.data.attachments = []), (n = []));
             let e = d;
-            O.data.attachments = e.map((e, t) => (i()(e.status === E.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
+            O.data.attachments = e.map((e, t) => (i()(e.status === E.mw.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
         }
         let v = new AbortController();
         a.tn.post(
