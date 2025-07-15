@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+(n.d(t, { Z: () => p }), n(781311));
 var r = n(979590),
     i = n.n(r),
     a = n(866442),
@@ -99,6 +99,6 @@ class p extends o.Z {
         );
     }
     constructor(e) {
-        (super(), s(this, 'storeListingId', void 0), s(this, 'skuId', void 0), s(this, 'name', void 0), s(this, 'summary', void 0), s(this, 'banner', void 0), s(this, 'bannerAsset', void 0), s(this, 'unpublishedAt', void 0), s(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset));
+        (super(), s(this, 'storeListingId', void 0), s(this, 'skuId', void 0), s(this, 'name', void 0), s(this, 'summary', void 0), s(this, 'banner', void 0), s(this, 'bannerAsset', void 0), s(this, 'unpublishedAt', void 0), s(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary.trim()), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset));
     }
 }

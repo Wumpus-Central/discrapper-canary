@@ -171,12 +171,13 @@ let F = {
                                                                     color: 'header-primary',
                                                                     children: [K.title, L === A.AW.ORBS && Y && (0, n.jsx)(h.Z, {})]
                                                                 }),
-                                                            (0, n.jsx)(d.Text, {
-                                                                variant: L === A.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
-                                                                className: L === A.AW.ORBS ? Z.orbsSubHeaderText : (null == J ? void 0 : J.showDarkBannerText) ? Z.subHeaderTextDark : Z.subHeaderText,
-                                                                style: null != K.bannerTextColor ? { color: K.bannerTextColor } : void 0,
-                                                                children: K.summary
-                                                            })
+                                                            '' !== K.summary &&
+                                                                (0, n.jsx)(d.Text, {
+                                                                    variant: L === A.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
+                                                                    className: L === A.AW.ORBS ? Z.orbsSubHeaderText : (null == J ? void 0 : J.showDarkBannerText) ? Z.subHeaderTextDark : Z.subHeaderText,
+                                                                    style: null != K.bannerTextColor ? { color: K.bannerTextColor } : void 0,
+                                                                    children: K.summary
+                                                                })
                                                         ]
                                                     })
                                                 ]

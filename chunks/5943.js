@@ -4,6 +4,5 @@ e.exports = {
     marketingPageTextContainer: 'marketingPageTextContainer__3849c',
     buttonContainer: 'buttonContainer__3849c',
     gradientBackground: 'gradientBackground__3849c',
-    affinitiesContainer: 'affinitiesContainer__3849c',
     referrerAttributionContainer: 'referrerAttributionContainer__3849c'
 };

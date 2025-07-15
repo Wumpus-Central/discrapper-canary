@@ -63,6 +63,9 @@ let o = {
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });
             },
+            clearError: () => {
+                e({ searchError: null });
+            },
             clear: () => {
                 e(l({}, o));
             }

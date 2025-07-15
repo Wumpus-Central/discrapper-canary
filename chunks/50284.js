@@ -1,37 +1,37 @@
-(n.d(t, { Z: () => I }), n(642613), n(583741));
-var r = n(544891),
-    i = n(710845),
+(n.d(t, { Z: () => E }), n(642613), n(583741));
+var i = n(544891),
+    r = n(710845),
     l = n(569471),
-    a = n(346479),
-    o = n(592125),
-    c = n(375954),
-    s = n(306680),
-    u = n(594174),
-    d = n(709054),
+    o = n(346479),
+    s = n(592125),
+    a = n(375954),
+    c = n(306680),
+    d = n(594174),
+    u = n(709054),
     _ = n(981631);
-let E = new i.Z('markUnread');
-async function I(e, t) {
-    let n = u.default.getCurrentUser();
+let h = new r.Z('markUnread');
+async function E(e, t) {
+    let n = d.default.getCurrentUser();
     if (null == n) return;
-    let i = c.Z.getMessages(e),
-        I = i
+    let r = a.Z.getMessages(e),
+        E = r
             .toArray()
-            .filter((e) => 0 > d.default.compare(e.id, t))
-            .sort((e, t) => d.default.compare(e.id, t.id))
+            .filter((e) => 0 > u.default.compare(e.id, t))
+            .sort((e, t) => u.default.compare(e.id, t.id))
             .reverse()[0],
-        O = null == I ? d.default.atPreviousMillisecond(t) : I.id,
+        I = null == E ? u.default.atPreviousMillisecond(t) : E.id,
         p = 0;
-    i.forAll((e) => {
-        d.default.compare(e.id, O) > 0 && (0, s.Ex)(e, n) && p++;
+    r.forAll((e) => {
+        u.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && p++;
     });
-    let T = o.Z.getChannel(e);
-    (null != T && T.isThread() && (T.isArchivedThread() && (await a.Z.unarchiveThread(T, !1)), l.Z.hasJoined(e) || (await a.Z.joinThread(T, 'Mark Unread'))),
-        E.log('Marking unread', {
+    let C = s.Z.getChannel(e);
+    (null != C && C.isThread() && (C.isArchivedThread() && (await o.Z.unarchiveThread(C, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(C, 'Mark Unread'))),
+        h.log('Marking unread', {
             channelId: e,
             messageId: t
         }),
-        r.tn.post({
-            url: _.ANM.MESSAGE_ACK(e, O),
+        i.tn.post({
+            url: _.ANM.MESSAGE_ACK(e, I),
             body: {
                 manual: !0,
                 mention_count: p

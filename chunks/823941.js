@@ -116,12 +116,13 @@ function D(e) {
                       style: { maxWidth: null == _ ? void 0 : _.logoMaxWidth }
                   })
                 : (0, r.jsx)(c.LZC, { size: N }),
-            (0, r.jsx)(c.Text, {
-                className: o()(A.summary, { [A.blackSummary]: T }),
-                style: null != t.bannerTextColor ? { color: t.bannerTextColor } : void 0,
-                variant: 'text-md/normal',
-                children: t.skuId === s.T.DISXCORE ? (0, r.jsx)(P, { category: t }) : t.summary
-            }),
+            '' !== t.summary &&
+                (0, r.jsx)(c.Text, {
+                    className: o()(A.summary, { [A.blackSummary]: T }),
+                    style: null != t.bannerTextColor ? { color: t.bannerTextColor } : void 0,
+                    variant: 'text-md/normal',
+                    children: t.skuId === s.T.DISXCORE ? (0, r.jsx)(P, { category: t }) : t.summary
+                }),
             !i &&
                 (0, r.jsx)(O.Z, {
                     category: t,
