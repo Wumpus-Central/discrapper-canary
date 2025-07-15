@@ -17,8 +17,8 @@ var r = n(255367),
     y = n(349033),
     S = n(999650),
     x = n(933557),
-    O = n(471445),
-    j = n(266076),
+    j = n(471445),
+    O = n(266076),
     v = n(778877),
     _ = n(592125),
     E = n(271383),
@@ -147,16 +147,16 @@ let Q = h()('2015-05-15').local(),
             )
         ];
     },
-    X = (e, t, n, s) => {
-        let { channel: l, text: o } = n;
-        if (null == l) return (0, r.jsx)('strong', { children: o });
-        let i = _.Z.getChannel(l.parent_id);
+    X = (e, t, n, s, l) => {
+        let { channel: o, text: i } = n;
+        if (null == o) return (0, r.jsx)('strong', { children: i });
+        let c = _.Z.getChannel(o.parent_id);
         return (0, r.jsxs)('div', {
             className: a()(U.resultChannel, s),
             children: [
                 (() => {
-                    if (l.isDM()) {
-                        let e = l.getRecipientId(),
+                    if (o.isDM()) {
+                        let e = o.getRecipientId(),
                             t = k.default.getUser(e);
                         if (null == t) return null;
                         let n = t.getAvatarURL(null, 20);
@@ -168,41 +168,46 @@ let Q = h()('2015-05-15').local(),
                         });
                     }
                     {
-                        if (l.isGroupDM())
-                            return (0, r.jsx)(j.Z, {
+                        if (o.isGroupDM())
+                            return (0, r.jsx)(O.Z, {
                                 'aria-hidden': !0,
                                 className: U.searchResultGDMChannelIcon,
-                                channel: l,
+                                channel: o,
                                 size: g.EFr.SIZE_20,
                                 experimentLocation: 'search_popout'
                             });
-                        let e = (0, O.KS)(l);
+                        let e = (0, j.KS)(o);
                         return null == e ? null : (0, r.jsx)(e, { className: U.searchResultChannelIcon });
                     }
                 })(),
-                l.isDM() || l.isGroupDM()
-                    ? (0, r.jsx)('span', {
-                          className: U.searchResultDMChannelName,
-                          children: (0, x.F6)(l, k.default, C.Z)
-                      })
-                    : (0, r.jsx)('strong', { children: (0, x.F6)(l, k.default, C.Z) }),
-                (() => {
-                    if (l.isDM()) {
-                        let e = l.getRecipientId(),
-                            t = k.default.getUser(e);
-                        return null == t
-                            ? null
-                            : (0, r.jsx)('span', {
-                                  className: U.searchResultDMUserName,
-                                  children: M.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
-                              });
-                    }
-                    if (null != i)
-                        return (0, r.jsx)('span', {
-                            className: U.searchResultChannelCategory,
-                            children: (0, x.F6)(i, k.default, C.Z)
-                        });
-                })()
+                (0, r.jsxs)('div', {
+                    className: l,
+                    children: [
+                        o.isDM() || o.isGroupDM()
+                            ? (0, r.jsx)('span', {
+                                  className: U.searchResultDMChannelName,
+                                  children: (0, x.F6)(o, k.default, C.Z)
+                              })
+                            : (0, r.jsx)('strong', { children: (0, x.F6)(o, k.default, C.Z) }),
+                        (() => {
+                            if (o.isDM()) {
+                                let e = o.getRecipientId(),
+                                    t = k.default.getUser(e);
+                                return null == t
+                                    ? null
+                                    : (0, r.jsx)('span', {
+                                          className: U.searchResultDMUserName,
+                                          children: M.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                                      });
+                            }
+                            if (null != c)
+                                return (0, r.jsx)('span', {
+                                    className: U.searchResultChannelCategory,
+                                    children: (0, x.F6)(c, k.default, C.Z)
+                                });
+                        })()
+                    ]
+                })
             ]
         });
     },

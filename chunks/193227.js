@@ -134,7 +134,7 @@ function T(e) {
                     cacheDisabled: _
                 });
         }, [b, a, v, _, g, x.length]));
-    let T = (0, p.F)('CollectiblesBrowse');
+    let T = (0, p.FF)('CollectiblesBrowse');
     return g
         ? (0, n.jsx)(m.Z, {})
         : (0, n.jsxs)('div', {

@@ -248,15 +248,14 @@ let F = (e) => {
                         type: 'text',
                         content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
-                let _ = (0, l.Gr)(d),
-                    p = (0, c.zI)(null == u ? void 0 : u.id, d) && !_;
+                let _ = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
                 return {
                     type: 'mention',
                     channelId: n.channelId,
                     guildId: null != u ? u.id : null,
                     roleId: s,
                     roleColor: d.color,
-                    roleColors: p
+                    roleColors: _
                         ? {
                               primaryColor: null == (r = d.colors) ? void 0 : r.primary_color,
                               secondaryColor: null == (i = d.colors) ? void 0 : i.secondary_color,

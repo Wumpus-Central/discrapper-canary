@@ -108,7 +108,7 @@ let F = {
             es = (0, P.l)(ea).slice(0, 4),
             ec = (0, N.St)(es),
             eu = L === A.AW.ORBS ? R.intl.string(R.t['1CdL8f']) : R.intl.formatToPlainString(R.t.wvKYCg, { category_name: K.name }),
-            ed = (0, x.F)('CollectiblesContent');
+            ed = (0, x.FF)('CollectiblesContent');
         return null != z && (r || K !== F)
             ? (0, n.jsxs)('div', {
                   ref: U,

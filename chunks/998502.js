@@ -225,6 +225,14 @@ let z = {
                 );
             } catch (e) {}
         },
+        setRobloxSubgameDetectionConfig(e, t) {
+            var n, r;
+            null == (n = (r = this.getDiscordUtils()).setRobloxSubgameDetectionConfig) || n.call(r, e, t);
+        },
+        checkForRobloxSubgameUpdate() {
+            var e, t;
+            null == (e = (t = this.getDiscordUtils()).checkForRobloxSubgameUpdate) || e.call(t);
+        },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(Y)));
         },

@@ -136,7 +136,8 @@ class X extends i.PureComponent {
                     )
                 ));
         }
-        if (e.runningGame !== x && null != x && !x.isLauncher) {
+        let B = null != x && null != x.distributor && null != x.sku && null != e.runningGame && e.runningGame.distributor === x.distributor && x.sku === e.runningGame.sku;
+        if (e.runningGame !== x && null != x && !x.isLauncher && !B) {
             let e = Z.Z.getGameByName(x.name),
                 c = _.ZP.getOverrideForGame(x),
                 u = w.Z.getGuildIds(),

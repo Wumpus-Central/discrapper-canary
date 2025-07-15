@@ -15,5 +15,7 @@ function a(e) {
     return null != e && null != e.colorStrings && null != e.colorStrings.primaryColor && null != e.colorStrings.secondaryColor;
 }
 function o(e) {
-    return null != e.colors && 0 === e.colors.primary_color && null == e.colors.secondary_color && null == e.colors.tertiary_color;
+    let t = 0 === e.color,
+        n = null != e.colors && 0 === e.colors.primary_color && null == e.colors.secondary_color && null == e.colors.tertiary_color;
+    return t || n;
 }

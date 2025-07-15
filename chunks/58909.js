@@ -1,59 +1,59 @@
-t.d(n, { Z: () => b });
-var r = t(255367);
-t(73800);
-var i = t(120356),
-    a = t.n(i),
-    l = t(442837),
-    s = t(481060),
-    d = t(204418),
-    o = t(731722),
-    c = t(172751),
-    u = t(446094),
-    m = t(430824),
-    f = t(594174),
-    h = t(5192),
-    x = t(742409),
-    p = t(195196),
-    g = t(388032),
-    y = t(816123);
-function b(e) {
-    var n, t;
+n.d(t, { Z: () => y });
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    a = n.n(i),
+    s = n(442837),
+    l = n(481060),
+    d = n(204418),
+    o = n(731722),
+    c = n(172751),
+    u = n(446094),
+    h = n(430824),
+    f = n(594174),
+    m = n(5192),
+    p = n(742409),
+    x = n(195196),
+    g = n(388032),
+    b = n(816123);
+function y(e) {
+    var t, n;
     let { guildId: i } = e,
-        b = (0, l.e7)([m.Z], () => m.Z.getGuild(i)),
-        j = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        y = (0, s.e7)([h.Z], () => h.Z.getGuild(i)),
+        j = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         { onAdoptTag: v, isAdopting: C } = (0, u.Z)(i),
-        N = (null == j || null == (n = j.primaryGuild) ? void 0 : n.identityGuildId) === i && (null == j || null == (t = j.primaryGuild) ? void 0 : t.identityEnabled) === !0;
-    if (null != j && null != b && (0, o.jq)(b))
+        N = (null == j || null == (t = j.primaryGuild) ? void 0 : t.identityGuildId) === i && (null == j || null == (n = j.primaryGuild) ? void 0 : n.identityEnabled) === !0;
+    if (null != j && null != y && (0, o.jq)(y))
         return (0, r.jsxs)('div', {
-            className: y.container,
+            className: b.container,
             children: [
-                (0, r.jsx)(s.Text, {
-                    className: y.section,
+                (0, r.jsx)(l.Text, {
+                    className: b.section,
                     variant: 'text-xs/medium',
                     color: 'text-muted',
-                    children: N ? g.intl.string(p.default['6xBCpK']) : g.intl.string(p.default.eSRKe3)
+                    children: N ? g.intl.string(x.default['6xBCpK']) : g.intl.string(x.default.eSRKe3)
                 }),
-                (0, r.jsx)('div', { className: y.divider }),
+                (0, r.jsx)('div', { className: b.divider }),
                 (0, r.jsxs)('div', {
-                    className: a()(y.section, y.body),
+                    className: a()(b.section, b.body),
                     children: [
-                        (0, r.jsx)(x.l, {
+                        (0, r.jsx)(p.l, {
                             avatar: (0, r.jsx)(d.Z, {
                                 user: j,
                                 guildId: i,
-                                avatarSize: s.EFr.SIZE_40,
+                                avatarSize: l.EFr.SIZE_40,
                                 'aria-hidden': !0
                             }),
                             decorations: (0, r.jsx)(c.m0, {
-                                guildId: b.id,
-                                guildBadge: b.profile.badge,
-                                guildTag: b.profile.tag,
+                                guildId: y.id,
+                                guildBadge: y.profile.badge,
+                                guildTag: y.profile.tag,
                                 inline: !1
                             }),
-                            username: h.ZP.getName(i, null, j),
+                            username: m.ZP.getName(i, null, j),
                             message: g.intl.string(g.t['6OSasb'])
                         }),
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(l.zxk, {
                             variant: 'primary',
                             text: g.intl.string(g.t.cQDYRk),
                             onClick: v,

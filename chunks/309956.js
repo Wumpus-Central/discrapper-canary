@@ -15,7 +15,7 @@ let d = {
     },
     p = (e, t, r) => {
         let { enabled: i } = (0, o.WX)({ location: 'useShopViewTransition' }),
-            p = (0, a.F)('CollectiblesBrowse'),
+            p = (0, a.FF)('CollectiblesBrowse'),
             { setItemTypeFilter: f, reset: g, setCurrentTab: h } = (0, s.S)(),
             b = n.useMemo(() => (t !== c.AW.ORBS || i ? ((0, c.RE)(t) && p ? c.AW.CATALOG : t) : c.AW.HOME), [t, i, p]),
             [m, _] = n.useState(b),

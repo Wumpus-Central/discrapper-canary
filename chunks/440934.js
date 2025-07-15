@@ -1,98 +1,88 @@
 (t.r(n),
     t.d(n, {
-        default: () => d,
-        openInteractionModal: () => u
+        default: () => p,
+        openInteractionModal: () => b
     }));
 var o = t(255367);
 t(73800);
-var i = t(481060),
-    r = t(970184),
-    a = t(471073),
-    c = t(293979),
-    l = t(954654),
-    _ = t(388032),
-    s = t(994186);
-function d(e) {
-    let { title: n, onClose: t, transitionState: d } = e,
-        { components: u, applicationIconURL: m, applicationName: f, submissionState: p, error: b, validators: h, onSubmit: I } = (0, c.X9)(e, t);
+var i = t(257465),
+    r = t(369585),
+    a = t(103866),
+    c = t(37148),
+    l = t(481060),
+    _ = t(970184),
+    s = t(471073),
+    d = t(293979),
+    u = t(954654),
+    m = t(388032),
+    f = t(994186);
+function p(e) {
+    let { title: n, onClose: t, transitionState: p } = e,
+        { components: b, applicationIconURL: I, applicationName: h, submissionState: x, error: g, validators: C, onSubmit: y } = (0, d.X9)(e, t);
     return (0, o.jsx)('form', {
         onSubmit: (e) => {
-            (e.preventDefault(), I());
+            (e.preventDefault(), y());
         },
-        children: (0, o.jsxs)(i.Y0X, {
-            transitionState: d,
-            parentComponent: 'InteractionModal',
+        children: (0, o.jsxs)(i.IX, {
+            transitionState: p,
+            onClose: t,
             children: [
-                (0, o.jsxs)(i.xBx, {
-                    separator: !1,
-                    children: [
-                        (0, o.jsx)(i.qEK, {
-                            src: m,
-                            size: i.EFr.SIZE_24,
-                            'aria-label': f,
-                            className: s.applicationIcon
-                        }),
-                        (0, o.jsx)(i.X6q, {
-                            variant: 'heading-xl/bold',
-                            color: 'header-primary',
-                            children: n
-                        }),
-                        (0, o.jsx)(i.olH, {
-                            onClick: t,
-                            className: s.closeButton
-                        })
-                    ]
+                (0, o.jsx)(c.x, {
+                    leading: (0, o.jsx)(l.qEK, {
+                        src: I,
+                        size: l.EFr.SIZE_24,
+                        'aria-label': h,
+                        className: f.applicationIcon
+                    }),
+                    title: n,
+                    titleTextVariant: 'heading-xl/semibold'
                 }),
-                (0, o.jsxs)(i.hzk, {
+                (0, o.jsxs)(a.f, {
                     children: [
-                        null != b && '' !== b
-                            ? (0, o.jsx)(i.Wn, {
-                                  messageType: i.QYI.ERROR,
-                                  className: s.submissionWarning,
-                                  children: b
+                        null != g && '' !== g
+                            ? (0, o.jsx)(l.Wn, {
+                                  messageType: l.QYI.ERROR,
+                                  className: f.submissionWarning,
+                                  children: g
                               })
                             : null,
-                        (0, o.jsx)(i.Wn, {
-                            messageType: i.QYI.WARNING,
-                            className: s.submissionWarning,
-                            children: _.intl.format(_.t['dSTy//'], { applicationName: f })
+                        (0, o.jsx)(l.Wn, {
+                            messageType: l.QYI.WARNING,
+                            className: f.submissionWarning,
+                            children: m.intl.format(m.t['dSTy//'], { applicationName: h })
                         }),
-                        (0, o.jsx)(i.hjN, {
-                            children: (0, o.jsx)(r.Il, {
+                        (0, o.jsx)(l.hjN, {
+                            children: (0, o.jsx)(_.Il, {
                                 modal: e,
-                                validators: h,
-                                children: (0, l.xX)(u)
+                                validators: C,
+                                children: (0, u.xX)(b)
                             })
                         })
                     ]
                 }),
-                (0, o.jsx)(i.mzw, {
-                    children: (0, o.jsxs)(i.hE2, {
-                        direction: 'horizontal-reverse',
-                        children: [
-                            (0, o.jsx)(i.zxk, {
-                                variant: 'primary',
-                                text: _.intl.string(_.t.geKm7u),
-                                type: 'submit',
-                                loading: p === a.i.IN_FLIGHT
-                            }),
-                            (0, o.jsx)(i.zxk, {
-                                variant: 'secondary',
-                                text: _.intl.string(_.t['ETE/oK']),
-                                type: 'button',
-                                onClick: t
-                            })
-                        ]
-                    })
+                (0, o.jsx)(r.G, {
+                    actions: [
+                        {
+                            variant: 'secondary',
+                            text: m.intl.string(m.t['ETE/oK']),
+                            onClick: t
+                        },
+                        {
+                            variant: 'primary',
+                            text: m.intl.string(m.t.geKm7u),
+                            loading: x === s.i.IN_FLIGHT,
+                            onClick: y
+                        }
+                    ]
                 })
             ]
         })
     });
 }
-function u(e) {
-    (0, i.h7j)((n) =>
+function b(e) {
+    (0, l.h7j)((n) =>
         (0, o.jsx)(
-            d,
+            p,
             (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},

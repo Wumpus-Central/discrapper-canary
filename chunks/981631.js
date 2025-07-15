@@ -3356,6 +3356,7 @@ var np = (function (e) {
             (e.GIFT_INTENT_BADGE_CLICKED = 'gift_intent_badge_clicked'),
             (e.GIFT_INTENT_ACTION_BUTTON_CLICKED = 'gift_intent_action_button_clicked'),
             (e.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED = 'gift_intent_card_secondary_cta_clicked'),
+            (e.GIFT_INFO_OPTIONS_MISSING = 'gift_info_options_missing'),
             (e.GIFT_PROMOTION_REWARD_SELECTED = 'gift_promotion_reward_selected'),
             (e.SLASH_COMMAND_USED = 'slash_command_used'),
             (e.KEYBOARD_SHORTCUT_USED = 'keyboard_shortcut_used'),
@@ -4734,7 +4735,7 @@ var nK = (function (e) {
         return ((e.PULL = 'PULL'), (e.PUSH = 'PUSH'), (e.CONFLICT = 'CONFLICT'), (e.NONE = 'NONE'), e);
     })({}),
     nX = (function (e) {
-        return ((e.DISCORD = 'discord'), (e.STEAM = 'steam'), (e.TWITCH = 'twitch'), (e.UPLAY = 'uplay'), (e.BATTLENET = 'battlenet'), (e.ORIGIN = 'origin'), (e.GOG = 'gog'), (e.EPIC = 'epic'), (e.NVIDIA_GDN_APP = 'nvidia_gdn_app'), e);
+        return ((e.DISCORD = 'discord'), (e.STEAM = 'steam'), (e.TWITCH = 'twitch'), (e.UPLAY = 'uplay'), (e.BATTLENET = 'battlenet'), (e.ORIGIN = 'origin'), (e.GOG = 'gog'), (e.EPIC = 'epic'), (e.NVIDIA_GDN_APP = 'nvidia_gdn_app'), (e.ROBLOX = 'roblox'), e);
     })({});
 let nQ = Object.freeze({
         discord: 'Discord',
@@ -4745,7 +4746,8 @@ let nQ = Object.freeze({
         gog: 'GOG',
         twitch: 'Twitch',
         epic: 'Epic',
-        nvidia_gdn_app: 'NVIDIA Cloud Gaming Application'
+        nvidia_gdn_app: 'NVIDIA Cloud Gaming Application',
+        roblox: 'Roblox'
     }),
     nJ = 6016,
     n$ = 3384;

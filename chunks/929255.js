@@ -21,7 +21,7 @@ var n = r(255367),
 function E(e) {
     let { isFullScreen: t, scrollerRef: r, tab: i, sortedCategories: a, setCategoryRef: c, advancedScroller: p } = e;
     (0, d.A)();
-    let f = (0, u.F)('CollectiblesBrowse'),
+    let f = (0, u.FF)('CollectiblesBrowse'),
         [g, b] = l.useState(f),
         [m, _] = l.useState(!1);
     return (
@@ -75,7 +75,7 @@ function E(e) {
 }
 let S = (e) => {
     let { isFullScreen: t, isSmallScreen: r, filterBarOpen: i, setFilterBarOpen: E, tab: S, scrollerRef: y, sortedCategories: x, setCategoryRef: j } = e,
-        T = (0, u.F)('CollectiblesBrowse'),
+        T = (0, u.FF)('CollectiblesBrowse'),
         P = l.useRef(null),
         L = (0, d.S)((e) => e.hasDefaultFilters()),
         { handlePageChange: I, currentPage: k } = (0, b.h)({

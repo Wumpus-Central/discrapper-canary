@@ -57,11 +57,12 @@ class l {
         return new l(
             s(a({}, e), {
                 assetDark: e.asset_dark,
-                assetLight: e.asset_light
+                assetLight: e.asset_light,
+                refTargetBackground: e.ref_target_background
             })
         );
     }
     constructor(e) {
-        (i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'assetDark', void 0), i(this, 'assetLight', void 0), i(this, 'version', void 0), (this.type = r.Z.COACHMARK), (this.title = e.title), (this.body = e.body), (this.assetDark = e.assetDark), (this.assetLight = e.assetLight), (this.version = e.version));
+        (i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'assetDark', void 0), i(this, 'assetLight', void 0), i(this, 'version', void 0), i(this, 'refTargetBackground', void 0), (this.type = r.Z.COACHMARK), (this.title = e.title), (this.body = e.body), (this.assetDark = e.assetDark), (this.assetLight = e.assetLight), (this.version = e.version), (this.refTargetBackground = e.refTargetBackground));
     }
 }

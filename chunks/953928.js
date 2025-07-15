@@ -7,5 +7,6 @@ e.exports = {
     focused: 'focused__55c99',
     inChannelOptionContainer: 'inChannelOptionContainer__55c99',
     inChannelOption: 'inChannelOption__55c99',
-    channelName: 'channelName__55c99'
+    searchResultNameContainer: 'searchResultNameContainer__55c99',
+    channelContainer: 'channelContainer__55c99'
 };

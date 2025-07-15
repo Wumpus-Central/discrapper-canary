@@ -17,8 +17,8 @@ var r = n(255367),
     y = n(977885),
     S = n(778877),
     x = n(903488),
-    O = n(592125),
-    j = n(768119),
+    j = n(592125),
+    O = n(768119),
     v = n(944486),
     _ = n(585483),
     E = n(72006),
@@ -224,8 +224,8 @@ class D extends s.PureComponent {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
                 let n = v.Z.getChannelId(),
-                    r = O.Z.getChannel(n);
-                if (((null == r ? void 0 : r.isThread()) && (r = O.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r)) return void this.focusEditor();
+                    r = j.Z.getChannel(n);
+                if (((null == r ? void 0 : r.isThread()) && (r = j.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r)) return void this.focusEditor();
                 let { searchId: s, searchType: l } = this.props,
                     a = (0, S.a)({ location: 'SearchBar_handleFocusSearch' }),
                     o = this.props.searchId === w.aib.DMS && a;
@@ -415,11 +415,11 @@ function B(e) {
 }
 function U(e) {
     let { className: t, keyboardModeEnabled: n, editorState: l } = e,
-        a = (0, u.e7)([j.Z], () => j.Z.getCurrentSearchId()),
+        a = (0, u.e7)([O.Z], () => O.Z.getCurrentSearchId()),
         o = (0, T.k)(a),
-        i = (0, u.e7)([j.Z], () => j.Z.isActive(a)),
-        c = (0, u.e7)([j.Z], () => j.Z.hasResults(a)),
-        d = (0, u.e7)([j.Z], () => null != a && j.Z.isSearching(a));
+        i = (0, u.e7)([O.Z], () => O.Z.isActive(a)),
+        c = (0, u.e7)([O.Z], () => O.Z.hasResults(a)),
+        d = (0, u.e7)([O.Z], () => null != a && O.Z.isSearching(a));
     H({
         isSearchActive: i,
         searchId: a,
@@ -446,9 +446,9 @@ function U(e) {
 }
 function G(e) {
     let { className: t } = e,
-        n = (0, u.e7)([j.Z], () => j.Z.getCurrentSearchId()),
+        n = (0, u.e7)([O.Z], () => O.Z.getCurrentSearchId()),
         l = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        a = (0, u.e7)([j.Z], () => (null != n ? j.Z.getEditorState(n) : null)),
+        a = (0, u.e7)([O.Z], () => (null != n ? O.Z.getEditorState(n) : null)),
         o = s.useMemo(() => (null != a ? a : E.nR(I.Jl(f.ZP))), [a]),
         i = (0, S.U)({ location: 'Search' });
     return n === w.aib.DMS && i

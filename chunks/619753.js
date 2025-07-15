@@ -247,7 +247,7 @@ function B(e) {
         G = i.useCallback((e) => {
             if (e === N.Z.getChannelId()) return;
             let t = O.Z.getChannel(e);
-            null != t && I.Z.can(R.Plq.VIEW_CHANNEL, t) && (0, x.Kh)(t.id);
+            null != t && (I.Z.can(R.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, x.Kh)(t.id);
         }, []),
         H = null != a ? (0, m.F6)(a, P.default, S.Z, !1) : '???',
         V = k && null != a.guild_id ? (null == (t = j.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,

@@ -33,7 +33,7 @@ function E(e) {
             },
             [r, T, u, L, m]
         ),
-        k = (0, p.F)('CollectiblesContent'),
+        k = (0, p.FF)('CollectiblesContent'),
         { searchError: B } = (0, f.a)();
     return k && null != B
         ? (0, n.jsx)(O.Z, {})

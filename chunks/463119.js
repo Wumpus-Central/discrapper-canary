@@ -320,34 +320,57 @@ let L = (e) => {
         );
     },
     V = (e) => {
-        var { displayOptions: t, dismissContent: n } = e,
-            l = w(e, ['displayOptions', 'dismissContent']);
-        let a = i.useRef(null),
-            o = i.useRef(0);
+        var t,
+            n,
+            { displayOptions: l, dismissContent: a } = e,
+            c = w(e, ['displayOptions', 'dismissContent']);
+        let u = i.useRef(null),
+            p = i.useRef(0),
+            h = (0, d.ZP)(),
+            f = (0, o.wj)(h),
+            g = l.entryPointBackgroundAssets,
+            m = l.entrypointBackgroundStyle,
+            b = f ? (null == g ? void 0 : g.srcDarkHovered) : null == g ? void 0 : g.srcLightHovered,
+            _ = f ? (null == m || null == (t = m.hovered) ? void 0 : t.dark) : null == m || null == (n = m.hovered) ? void 0 : n.light,
+            E = null != _ ? { background: _ } : void 0;
         i.useLayoutEffect(() => {
-            o.current += 1;
+            p.current += 1;
         }, []);
-        let c = i.useCallback(() => {
-            n(P.L.TAKE_ACTION);
-        }, [n]);
+        let O = i.useCallback(() => {
+            a(P.L.TAKE_ACTION);
+        }, [a]);
         return (0, r.jsx)(s.yRy, {
-            targetElementRef: a,
-            renderPopout: () => (0, r.jsx)(I.Z, { displayOptions: t }),
+            targetElementRef: u,
+            renderPopout: () => (0, r.jsx)(I.Z, { displayOptions: l }),
             position: 'right',
             align: 'top',
             shouldShow: !0,
             spacing: 12,
-            positionKey: String(o.current),
+            positionKey: String(p.current),
             animation: s.yRy.Animation.TRANSLATE,
             closeOnScroll: !0,
-            onRequestClose: () => n(P.L.USER_DISMISS),
+            onRequestClose: () => a(P.L.USER_DISMISS),
             children: (e) =>
-                (0, r.jsx)(
+                (0, r.jsxs)(
                     D,
-                    x(Z({}, l), {
-                        onClick: c,
-                        listItemRef: a,
-                        children: (0, r.jsx)(L, {})
+                    x(Z({}, c), {
+                        onClick: O,
+                        listItemRef: u,
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: A.marketingButtonBackground,
+                                style: E,
+                                children:
+                                    null != b &&
+                                    (0, r.jsx)('img', {
+                                        src: b,
+                                        className: A.marketingButtonBackgroundImage,
+                                        alt: '',
+                                        'aria-hidden': !0
+                                    })
+                            }),
+                            (0, r.jsx)(L, {})
+                        ]
                     })
                 )
         });

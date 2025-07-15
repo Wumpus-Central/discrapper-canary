@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(695346),
     S = n(592125),
     x = n(768119),
-    O = n(944486),
-    j = n(585483),
+    j = n(944486),
+    O = n(585483),
     v = n(72006),
     _ = n(965996),
     E = n(652399),
@@ -126,10 +126,10 @@ let B = (e) => {
 };
 class U extends s.PureComponent {
     componentDidMount() {
-        j.S.subscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        O.S.subscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        j.S.unsubscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        O.S.unsubscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -168,7 +168,7 @@ class U extends s.PureComponent {
                 });
             }),
             L(this, 'selectChannel', (e) => {
-                e !== O.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
+                e !== j.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
             }),
             L(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
@@ -330,16 +330,16 @@ function G(e) {
             },
             [t, o.isSearching]
         ),
-        O = s.useDeferredValue(d),
-        j = s.useDeferredValue(o);
+        j = s.useDeferredValue(d),
+        O = s.useDeferredValue(o);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(U, {
                 searchId: t,
-                search: j,
+                search: O,
                 searchAnalyticsId: u,
                 searchType: i,
-                searchResults: O,
+                searchResults: j,
                 ignoreCount: p,
                 blockCount: f,
                 renderEmbeds: y.NA.useSetting(),
@@ -400,7 +400,7 @@ function W(e) {
             },
             [a, o, g]
         ),
-        O = s.useCallback(
+        j = s.useCallback(
             (e) => {
                 var t;
                 N.Z.fetchCrossDMMessages({
@@ -427,7 +427,7 @@ function W(e) {
                 theme: t,
                 isFeedbackVisible: n,
                 dismissFeedbackEntrypoint: l,
-                onPageChange: O,
+                onPageChange: j,
                 onSearchModeChange: S,
                 searchMode: f
             }),

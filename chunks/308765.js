@@ -340,6 +340,11 @@ let i = {
         inlineRequire: () => n(529726).Z,
         neverLoadBeforeConnectionOpen: !0
     },
+    RobloxSubgameManager: {
+        actions: ['RUNNING_GAMES_CHANGE', 'POST_CONNECTION_OPEN'],
+        inlineRequire: () => n(277358).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
     DetectableGamesManager: {
         actions: ['POST_CONNECTION_OPEN'],
         inlineRequire: () => n(114957).Z,
