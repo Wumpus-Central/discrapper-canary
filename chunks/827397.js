@@ -1,15 +1,15 @@
-t.d(n, { Z: () => c });
-var r = t(73800),
-    i = t(494497),
-    o = t(481060),
-    a = t(434404),
-    s = t(535396),
-    l = t(981631);
-function c(e, n) {
-    let t = r.useCallback(
-        (t) => {
-            if ((t.stopPropagation(), n.type !== s.Us.LEVEL))
-                switch (((0, o.Mr3)(s.H2), n.skuId)) {
+n.d(t, { Z: () => c });
+var r = n(73800),
+    i = n(494497),
+    o = n(481060),
+    a = n(434404),
+    s = n(535396),
+    l = n(981631);
+function c(e, t) {
+    let n = r.useCallback(
+        (n) => {
+            if ((n.stopPropagation(), t.type !== s.Us.LEVEL))
+                switch (((0, o.Mr3)(s.H2), t.skuId)) {
                     case s.IN:
                         a.Z.open(e, l.pNK.TAG, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
@@ -23,7 +23,7 @@ function c(e, n) {
                         return;
                 }
         },
-        [e, n]
+        [e, t]
     );
-    return n.type === s.Us.PERK ? t : void 0;
+    return t.type === s.Us.PERK ? n : void 0;
 }

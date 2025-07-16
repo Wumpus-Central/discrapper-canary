@@ -1,35 +1,35 @@
-(t.d(n, { ZP: () => E }), t(388685));
-var r = t(255367),
-    i = t(73800),
-    o = t(120356),
-    a = t.n(o),
-    s = t(793030),
-    l = t(481060),
-    c = t(808189),
-    u = t(477415),
-    d = t(322043),
-    m = t(838968),
-    p = t(262212),
-    _ = t(279604),
-    f = t(279475),
-    x = t(981631),
-    v = t(93841),
-    b = t(388032),
-    g = t(568413),
-    h = t(117172);
+(n.d(t, { ZP: () => C }), n(388685));
+var r = n(255367),
+    i = n(73800),
+    o = n(120356),
+    a = n.n(o),
+    s = n(793030),
+    l = n(481060),
+    c = n(808189),
+    d = n(973772),
+    u = n(838968),
+    p = n(262212),
+    m = n(279604),
+    _ = n(279475),
+    f = n(535396),
+    x = n(981631),
+    b = n(93841),
+    v = n(388032),
+    g = n(568413),
+    h = n(117172);
 function j(e) {
-    let n,
-        { active: t, nextActive: i, position: o } = e;
+    let t,
+        { active: n, nextActive: i, position: o } = e;
     return (
-        (n = t && !1 !== i ? 'full' : t && !1 === i ? 'half' : 'none'),
+        (t = n && !1 !== i ? 'full' : n && !1 === i ? 'half' : 'none'),
         (0, r.jsxs)('div', {
             className: g.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: a()(g.progress, g[o], g[n]) }),
+                (0, r.jsx)('div', { className: a()(g.progress, g[o], g[t]) }),
                 (0, r.jsx)('div', {
                     className: a()(g.boostContainer, h.boostProgressBackground, {
-                        [g.boostContainerActive]: t,
-                        [h.active]: t
+                        [g.boostContainerActive]: n,
+                        [h.active]: n
                     }),
                     children: (0, r.jsx)(l.$Eu, {
                         size: 'sm',
@@ -40,17 +40,17 @@ function j(e) {
         })
     );
 }
-function C(e) {
-    let { isActive: n, index: t } = e,
-        o = (0, f.d)(n),
-        a = (0, f.u)(n),
+function E(e) {
+    let { isActive: t, index: n } = e,
+        o = (0, _.d)(t),
+        a = (0, _.u)(t),
         l = i.useMemo(() => {
-            let e = c.C[t];
+            let e = c.C[n];
             if (null == e) return [];
-            let n = e.tier === x.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
-            return null == n
+            let t = e.tier === x.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
+            return null == t
                 ? void 0
-                : n.map((e, n) =>
+                : t.map((e, t) =>
                       (0, r.jsxs)(
                           'div',
                           {
@@ -68,10 +68,10 @@ function C(e) {
                                   })
                               ]
                           },
-                          'perk-'.concat(t, '-').concat(n)
+                          'perk-'.concat(n, '-').concat(t)
                       )
                   );
-        }, [t, a, o]);
+        }, [n, a, o]);
     return (0, r.jsxs)('div', {
         className: g.perkRowContainer,
         children: [
@@ -81,58 +81,59 @@ function C(e) {
                 children: (0, r.jsx)(s.xv, {
                     color: o,
                     variant: 'text-sm/medium',
-                    children: b.intl.string(v.default.nIj3LS)
+                    children: v.intl.string(b.default.nIj3LS)
                 })
             })
         ]
     });
 }
-function E(e) {
-    let n,
-        { guildId: t, index: o, powerup: a, nextPowerup: l } = e,
-        c = (0, u.Z)(t, a),
-        x = (0, d.Z)(t, a),
-        v = (0, d.Z)(t, l),
-        [b, E] = i.useState(void 0);
-    ((0, _.KT)(b), (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'));
-    let Z = (0, f.d)(x);
-    return (0, r.jsxs)(m.Z, {
+function C(e) {
+    let { guildId: t, index: n, powerup: o, nextPowerup: a } = e,
+        l = (0, d.Z)(t, o),
+        c = (0, d.Z)(t, a),
+        x = l.type !== f.A3.INACTIVE,
+        b = c.type !== f.A3.INACTIVE,
+        v = l.type === f.A3.TIER_OVERRIDE_ACTIVATED,
+        [C, N] = i.useState(void 0);
+    (0, m.KT)(C);
+    let I = (0, _.d)(x);
+    return (0, r.jsxs)(u.Z, {
         guildId: t,
-        powerup: a,
+        powerup: o,
         className: g.card,
         children: [
             (0, r.jsx)(j, {
-                position: n,
+                position: 0 === n ? 'start' : null == a ? 'end' : 'middle',
                 active: x,
-                nextActive: null != l ? v : void 0
+                nextActive: null != a ? b : void 0
             }),
             (0, r.jsxs)('div', {
                 className: h.contentContainer,
                 children: [
                     (0, r.jsx)(s.X6, {
                         variant: 'heading-md/bold',
-                        color: Z,
-                        children: a.title
+                        color: I,
+                        children: o.title
                     }),
-                    (0, r.jsx)(C, {
+                    (0, r.jsx)(E, {
                         isActive: x,
-                        index: o
+                        index: n
                     }),
-                    !c &&
-                        (0, r.jsx)(m.u, {
+                    !v &&
+                        (0, r.jsx)(u.u, {
                             className: g.footer,
                             guildId: t,
-                            powerup: a
+                            powerup: o
                         })
                 ]
             }),
-            !c &&
+            !v &&
                 (0, r.jsx)('div', {
                     className: h.buttonContainer,
                     children: (0, r.jsx)(p.ZP, {
                         guildId: t,
-                        powerup: a,
-                        onError: E
+                        powerup: o,
+                        onError: N
                     })
                 })
         ]

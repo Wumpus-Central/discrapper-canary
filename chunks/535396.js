@@ -1,4 +1,5 @@
 (n.d(t, {
+    A3: () => A,
     Cp: () => m,
     Fq: () => h,
     H2: () => y,
@@ -113,3 +114,6 @@ let u = '1340102344645283891',
         }
     },
     S = { [r.A]: s.Eu4.TIER_3 };
+var A = (function (e) {
+    return ((e.INACTIVE = 'inactive'), (e.POWERUP_ACTIVATED = 'powerup_activated'), (e.LEVEL_ACTIVATED = 'level_activated'), (e.TIER_OVERRIDE_ACTIVATED = 'tier_override_activated'), e);
+})({});

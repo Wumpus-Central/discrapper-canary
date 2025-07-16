@@ -1,17 +1,14 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(780384),
     a = n(755721),
     o = n(410030),
-    s = n(74538),
-    l = n(104494),
-    c = n(639119),
-    u = n(767714),
-    d = n(474936),
-    f = n(388032),
-    _ = n(136021);
-function p(e, t, n) {
+    s = n(639119),
+    l = n(767714),
+    c = n(70466),
+    u = n(136021);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +21,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,23 +32,23 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                d(e, t, n[t]);
             }));
     }
     return e;
 }
-function m(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function g(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -60,65 +57,39 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let E = (e) => {
-        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: a, subscriptionTrial: o } = e;
-        return t && a
-            ? f.intl.string(f.t.bXTClZ)
-            : t && (n === d.Si.TIER_2 || i)
-              ? (0, s.Rt)({
-                    intervalType: null == o ? void 0 : o.interval,
-                    intervalCount: null == o ? void 0 : o.interval_count
-                })
-              : t
-                ? f.intl.formatToPlainString(f.t.nTmm2t, { freeTrialText: r })
-                : void 0;
-    },
-    b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
-    y = (e) => {
-        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: T } = e,
-            S = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
-        let A = (0, o.ZP)(),
-            N = (0, c.N)(),
-            C = null == N ? void 0 : N.subscription_trial,
-            R = (0, s.a5)({
-                intervalType: null == C ? void 0 : C.interval,
-                intervalCount: null == C ? void 0 : C.interval_count
-            }),
-            P = (0, l.Ng)(),
-            w = null != C && n === C.sku_id,
-            D = (null == N ? void 0 : N.trial_id) === d.a7,
-            L = p
-                ? f.intl.string(f.t.J61px8)
-                : null != P
-                  ? b(n, y, g, P.discount.amount)
-                  : E({
-                        showTrialCTA: w,
-                        subscriptionTier: n,
-                        trialDurationCopy: R,
-                        isPersistentCTA: g,
-                        shouldShowReferralTrialCopy: D,
-                        subscriptionTrial: C
-                    }),
-            x = null != T ? T : (0, i.wj)(A) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
-        return (0, r.jsx)(
-            u.Z,
-            h(
-                {
-                    color: x,
-                    textOptions: h(
-                        {
-                            textOverride: L,
-                            textClassName: w ? _.freeTrialText : void 0
-                        },
-                        t
-                    ),
-                    onlyShineOnHover: !0,
-                    subscriptionTier: n,
-                    showGradient: O,
-                    confirmationFooter: v,
-                    paymentModalBanner: I
-                },
-                S
-            )
-        );
-    };
+let h = (e) => {
+    var { textOptions: t, subscriptionTier: n, hasActivePromotion: d = !1, isPersistentCTA: p = !1, useShorterCTA: h = !1, showGradient: m, confirmationFooter: g, paymentModalBanner: E, color: b } = e,
+        y = _(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
+    let O = (0, o.ZP)(),
+        { buttonText: v, marketingSubscriptionTierSkuId: I } = (0, c.G)({
+            hasActivePromotion: d,
+            subscriptionTier: n,
+            useShorterCTA: h,
+            isPersistentCTA: p
+        }),
+        T = (0, s.N)(),
+        S = null == T ? void 0 : T.subscription_trial,
+        A = null != S && I === S.sku_id,
+        N = null != b ? b : (0, i.wj)(O) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
+    return (0, r.jsx)(
+        l.Z,
+        f(
+            {
+                color: N,
+                textOptions: f(
+                    {
+                        textOverride: v,
+                        textClassName: A ? u.freeTrialText : void 0
+                    },
+                    t
+                ),
+                onlyShineOnHover: !0,
+                subscriptionTier: I,
+                showGradient: m,
+                confirmationFooter: g,
+                paymentModalBanner: E
+            },
+            y
+        )
+    );
+};

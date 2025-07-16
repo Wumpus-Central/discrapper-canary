@@ -107,14 +107,14 @@ let b = (e) => ({
                                               variant: 'text-xs/normal',
                                               color: 'text-tertiary',
                                               className: v.text,
-                                              children: x.intl.format(x.t.WkK72t, { count: E[e.value] })
+                                              children: x.intl.format(O ? x.t.SLhH39 : x.t.WkK72t, { count: E[e.value] })
                                           })
                                       ]
                                   })
                               ]
                           });
                 },
-                [E, N]
+                [E, N, O]
             );
         return (
             l.useEffect(() => {

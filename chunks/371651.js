@@ -266,18 +266,12 @@ function et(e, t) {
             let e = a.enabledOOP && H(),
                 t = a.enabledLegacy && Z(),
                 n = s ? l.gl.OutOfProcessLimitedInteraction : l.gl.OutOfProcess;
-            return N(S({}, a), {
-                overlayMethod: e ? n : t ? (0, O.qT)(i).overlayMethod : l.gl.Disabled,
-                source: _.d.FULL_SCREEN_TYPE
-            });
+            return N(S({}, a), { overlayMethod: e ? n : t ? (0, O.qT)(i).overlayMethod : l.gl.Disabled });
         }
         case c.Jx.FULLSCREEN: {
             let e = (0, O.qT)(i),
                 t = e.enabledLegacy && Z();
-            return N(S({}, e), {
-                overlayMethod: t ? e.overlayMethod : l.gl.Disabled,
-                source: _.d.FULL_SCREEN_TYPE
-            });
+            return N(S({}, e), { overlayMethod: t ? e.overlayMethod : l.gl.Disabled });
         }
         case c.Jx.UNKNOWN:
             return {

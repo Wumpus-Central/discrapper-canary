@@ -1,36 +1,36 @@
-(t.d(n, { Z: () => _ }), t(388685), t(953529));
-var r = t(255367),
-    i = t(793030),
-    o = t(755721),
-    a = t(481060),
-    s = t(434404),
-    l = t(485386),
-    c = t(944888),
-    u = t(234368),
-    d = t(981631),
-    m = t(921944),
-    p = t(808353);
+(n.d(t, { Z: () => _ }), n(388685), n(953529));
+var r = n(255367),
+    i = n(793030),
+    o = n(755721),
+    a = n(481060),
+    s = n(434404),
+    l = n(485386),
+    c = n(944888),
+    d = n(234368),
+    u = n(981631),
+    p = n(921944),
+    m = n(808353);
 function _(e) {
-    let { guildId: n, perk: t, markAsDismissed: _ } = e,
-        f = u._[t],
+    let { guildId: t, perk: n, markAsDismissed: _ } = e,
+        f = d._[n],
         x = async () => {
             let e = null;
-            for (let t of Object.values(l.Z.getRoles(n))) (0, c.YB)(t) && (e = t.id);
-            (await s.Z.open(n, d.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), _(m.L.SECONDARY));
+            for (let n of Object.values(l.Z.getRoles(t))) (0, c.YB)(n) && (e = n.id);
+            (await s.Z.open(t, u.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), _(p.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
-        className: p.container,
+        className: m.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: f.assetUrl,
-                className: p.image
+                className: m.image
             }),
             (0, r.jsx)(a.olH, {
-                className: p.close,
-                innerClassName: p.innerClose,
+                className: m.close,
+                innerClassName: m.innerClose,
                 onClick: () => {
-                    _(m.L.USER_DISMISS);
+                    _(p.L.USER_DISMISS);
                 }
             }),
             (0, r.jsx)(i.xv, {
@@ -39,13 +39,13 @@ function _(e) {
                 children: f.title
             }),
             (0, r.jsx)(i.xv, {
-                className: p.description,
+                className: m.description,
                 color: 'text-muted',
                 variant: 'text-sm/medium',
                 children: f.description
             }),
             (0, r.jsx)(o.zx, {
-                className: p.button,
+                className: m.button,
                 onClick: x,
                 children: f.cta
             })

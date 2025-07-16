@@ -1,24 +1,23 @@
-t.d(n, {
-    Z: () => v,
-    u: () => x
+n.d(t, {
+    Z: () => x,
+    u: () => f
 });
-var r = t(255367);
-t(73800);
-var i = t(120356),
-    o = t.n(i),
-    a = t(481060),
-    s = t(975951),
-    l = t(322043),
-    c = t(717259),
-    u = t(192371),
-    d = t(279604),
-    m = t(93841),
-    p = t(388032),
-    _ = t(117172);
-function f(e) {
-    let { dateString: n } = e;
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(973772),
+    l = n(192371),
+    c = n(279604),
+    d = n(535396),
+    u = n(93841),
+    p = n(388032),
+    m = n(117172);
+function _(e) {
+    let { dateString: t } = e;
     return (0, r.jsxs)('div', {
-        className: _.inline,
+        className: m.inline,
         children: [
             (0, r.jsx)(a.P4T, {
                 size: 'xs',
@@ -27,44 +26,43 @@ function f(e) {
             (0, r.jsx)(a.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: p.intl.formatToMarkdownString(m.default['ol/ao6'], { dateString: (0, u.Z)(n) })
+                children: p.intl.formatToMarkdownString(u.default['ol/ao6'], { dateString: (0, l.Z)(t) })
             })
         ]
     });
 }
-function x(e) {
-    var n;
-    let { guildId: t, powerup: i, className: l } = e,
-        u = (0, c.Z)(t, i),
-        { activatedEntitlement: d, activatedLevelPowerup: x } = (0, s.Z)(t, i),
-        v = !u,
-        b = v ? _.labelContainer : _.labelContainerEnd,
-        g = u ? p.intl.formatToPlainString(m.default.WRRYUV, { perkName: null != (n = null == x ? void 0 : x.title) ? n : p.intl.string(p.t.BfF6EB) }) : null != d ? p.intl.string(m.default.FFLkm5) : void 0;
+function f(e) {
+    var t, n, i;
+    let { guildId: l, powerup: c, className: f } = e,
+        x = (0, s.Z)(l, c),
+        b = x.type !== d.A3.LEVEL_ACTIVATED,
+        v = b ? m.labelContainer : m.labelContainerEnd,
+        g = x.type === d.A3.LEVEL_ACTIVATED ? p.intl.formatToPlainString(u.default.WRRYUV, { perkName: null != (i = null == (t = x.sourcePowerup) ? void 0 : t.title) ? i : p.intl.string(p.t.BfF6EB) }) : x.type === d.A3.POWERUP_ACTIVATED ? p.intl.string(u.default.FFLkm5) : void 0;
     return (0, r.jsxs)('div', {
-        className: o()(b, l),
+        className: o()(v, f),
         children: [
-            v &&
+            b &&
                 (0, r.jsxs)('div', {
-                    className: o()(_.inline, _.inlineBoost),
+                    className: o()(m.inline, m.inlineBoost),
                     children: [
                         (0, r.jsx)(a.$Eu, {
                             size: 'sm',
                             color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                         }),
                         (0, r.jsx)(a.Text, {
-                            className: _.price,
+                            className: m.price,
                             tag: 'div',
                             variant: 'heading-md/semibold',
                             color: 'text-secondary',
-                            children: p.intl.formatToPlainString(p.t.t2Wbo6, { required: i.cost })
+                            children: p.intl.formatToPlainString(p.t.t2Wbo6, { required: c.cost })
                         })
                     ]
                 }),
-            (null == d ? void 0 : d.ends_at) != null
-                ? (0, r.jsx)(f, { dateString: d.ends_at })
+            (null == (n = x.sourceEntitlement) ? void 0 : n.ends_at) != null
+                ? (0, r.jsx)(_, { dateString: x.sourceEntitlement.ends_at })
                 : null != g
                   ? (0, r.jsxs)('div', {
-                        className: _.inline,
+                        className: m.inline,
                         children: [
                             (0, r.jsx)(a.owK, {
                                 size: 'xs',
@@ -81,28 +79,29 @@ function x(e) {
         ]
     });
 }
-function v(e) {
-    let { guildId: n, powerup: t, className: i, onHover: c, children: u } = e,
-        { activatedEntitlement: m } = (0, s.Z)(n, t),
-        p = (0, l.Z)(n, t),
-        f = (null == m ? void 0 : m.ends_at) != null,
-        { onShowMore: x } = (0, d.ZP)(n, t);
+function x(e) {
+    var t;
+    let { guildId: n, powerup: i, className: l, onHover: u, children: p } = e,
+        _ = (0, s.Z)(n, i),
+        f = _.type !== d.A3.INACTIVE,
+        x = (null == (t = _.sourceEntitlement) ? void 0 : t.ends_at) != null,
+        { onShowMore: b } = (0, c.ZP)(n, i);
     return (0, r.jsx)('div', {
-        className: _.parentContainer,
+        className: m.parentContainer,
         children: (0, r.jsx)(a.kL8, {
-            'aria-label': t.title,
-            onClick: x,
-            onMouseOver: () => (null == c ? void 0 : c(!0)),
-            onMouseLeave: () => (null == c ? void 0 : c(!1)),
+            'aria-label': i.title,
+            onClick: b,
+            onMouseOver: () => (null == u ? void 0 : u(!0)),
+            onMouseLeave: () => (null == u ? void 0 : u(!1)),
             className: o()(
-                _.container,
+                m.container,
                 {
-                    [_.active]: p,
-                    [_.warning]: f
+                    [m.active]: f,
+                    [m.warning]: x
                 },
-                i
+                l
             ),
-            children: u
+            children: p
         })
     });
 }

@@ -1,46 +1,46 @@
-t.d(n, { Z: () => g });
-var r = t(255367);
-t(73800);
-var i = t(793030),
-    o = t(442837),
-    a = t(755721),
-    s = t(481060),
-    l = t(678558),
-    c = t(343649),
-    u = t(430824),
-    d = t(63063),
-    m = t(317169),
-    p = t(639660),
-    _ = t(767218),
-    f = t(981631),
-    x = t(93841),
-    v = t(388032),
-    b = t(466649);
+n.d(t, { Z: () => g });
+var r = n(255367);
+n(73800);
+var i = n(793030),
+    o = n(442837),
+    a = n(755721),
+    s = n(481060),
+    l = n(678558),
+    c = n(343649),
+    d = n(430824),
+    u = n(63063),
+    p = n(317169),
+    m = n(639660),
+    _ = n(767218),
+    f = n(981631),
+    x = n(93841),
+    b = n(388032),
+    v = n(466649);
 function g(e) {
-    let { guildId: n } = e,
-        t = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
-        { available: g, spent: h, total: j } = (0, m.Z)(n);
-    if (null != t)
+    let { guildId: t } = e,
+        n = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
+        { available: g, spent: h, total: j } = (0, p.Z)(t);
+    if (null != n)
         return (0, r.jsxs)('div', {
-            className: b.container,
+            className: v.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: b.headerContainer,
+                    className: v.headerContainer,
                     children: [
                         (0, r.jsx)(i.xv, {
                             variant: 'eyebrow',
                             color: 'text-secondary',
-                            children: v.intl.string(x.default.hjvcLC)
+                            children: b.intl.string(x.default.hjvcLC)
                         }),
                         (0, r.jsx)(i.xv, {
-                            className: b.learnMore,
+                            className: v.learnMore,
                             variant: 'text-xs/semibold',
-                            children: v.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(f.BhN.GUILD_BOOSTING_FAQ) })
+                            children: b.intl.format(x.default.fXE30d, { helpDeskArticle: u.Z.getArticleURL(f.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: b.contentContainer,
+                    className: v.contentContainer,
                     children: [
                         (0, r.jsx)(_.Z, {
                             count: g,
@@ -57,8 +57,8 @@ function g(e) {
                     ]
                 }),
                 (0, r.jsx)(l.Z, {
-                    className: b.boostButton,
-                    guild: t,
+                    className: v.boostButton,
+                    guild: n,
                     analyticsLocation: {
                         page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
                         section: f.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
@@ -67,12 +67,12 @@ function g(e) {
                     size: a.Ph.LARGE,
                     intent: c.P.NONE,
                     icon: (0, r.jsx)(s.$Eu, {
-                        className: b.boostButtonIcon,
+                        className: v.boostButtonIcon,
                         size: 'sm',
                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })
                 }),
-                (0, r.jsx)(p.Z, { guildId: n })
+                (0, r.jsx)(m.Z, { guildId: t })
             ]
         });
 }

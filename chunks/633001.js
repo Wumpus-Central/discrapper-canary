@@ -148,7 +148,8 @@ function M(e) {
 let B = r.memo(function (e) {
         let { trackedGame: t } = e,
             a = (0, o.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
-            r = (0, o.e7)([y.Z], () => y.Z.getGameForPID(t.pid));
+            r = (0, o.e7)([y.Z], () => y.Z.getGameForPID(t.pid)),
+            l = (0, o.e7)([h.ZP], () => (null == a ? null : h.ZP.getGameOverlayStatus(a)));
         return (0, n.jsxs)('div', {
             className: I.panelGroup,
             children: [
@@ -193,26 +194,57 @@ let B = r.memo(function (e) {
                     color: 'text-default',
                     children: ['successfullyShown: ', t.successfullyShown ? 'Yes' : 'No']
                 }),
-                (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['source: ', t.source]
+                (0, n.jsxs)('div', {
+                    className: I.panelGroup,
+                    children: [
+                        (0, n.jsxs)(d.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-default',
+                            children: ['source: ', t.source]
+                        }),
+                        (0, n.jsxs)(d.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-default',
+                            children: ['legacyEnabled: ', t.legacyEnabled ? 'Yes' : 'No']
+                        }),
+                        (0, n.jsxs)(d.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-default',
+                            children: ['oopEnabled: ', t.oopEnabled ? 'Yes' : 'No']
+                        }),
+                        (0, n.jsxs)(d.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-default',
+                            children: ['overlayMethod: ', (0, v.P_)(t.overlayMethod)]
+                        })
+                    ]
                 }),
-                (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['legacyEnabled: ', t.legacyEnabled ? 'Yes' : 'No']
-                }),
-                (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['oopEnabled: ', t.oopEnabled ? 'Yes' : 'No']
-                }),
-                (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['overlayMethod: ', (0, v.P_)(t.overlayMethod)]
-                }),
+                null != l &&
+                    (0, n.jsxs)('div', {
+                        className: I.panelGroup,
+                        children: [
+                            (0, n.jsxs)(d.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-default',
+                                children: ['raw source: ', l.source]
+                            }),
+                            (0, n.jsxs)(d.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-default',
+                                children: ['raw enabledLegacy: ', l.enabledLegacy ? 'Yes' : 'No']
+                            }),
+                            (0, n.jsxs)(d.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-default',
+                                children: ['raw enabledOOP: ', l.enabledOOP ? 'Yes' : 'No']
+                            }),
+                            (0, n.jsxs)(d.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-default',
+                                children: ['raw overlayMethod: ', (0, v.P_)(l.overlayMethod)]
+                            })
+                        ]
+                    }),
                 (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-default',
@@ -250,16 +282,18 @@ let B = r.memo(function (e) {
             s = (0, o.e7)([C.default], () => C.default.DEV_isInputLocked(t), [t]),
             c = (0, o.e7)([C.default], () => C.default.isReady(t), [t]);
         return (0, n.jsxs)('div', {
+            className: I.panelGroup,
             children: [
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-primary',
                     children: ''.concat(t)
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: 'Screen Type Resolution: '.concat(
+                    children: [
+                        'Screen Type Resolution: ',
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
@@ -267,12 +301,13 @@ let B = r.memo(function (e) {
                             let n = a.screenTypeResolutionTimestamp - a.startTrackingTimestamp;
                             return ''.concat(n.toFixed(2), 'ms');
                         })(t)
-                    )
+                    ]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: 'Window Creation: '.concat(
+                    children: [
+                        'Window Creation: ',
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
@@ -280,12 +315,13 @@ let B = r.memo(function (e) {
                             let n = a.moduleTrackingTimestamp - a.screenTypeResolutionTimestamp;
                             return ''.concat(n.toFixed(2), 'ms');
                         })(t)
-                    )
+                    ]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: 'Rendering: '.concat(
+                    children: [
+                        'Rendering: ',
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
@@ -293,32 +329,32 @@ let B = r.memo(function (e) {
                             let n = a.overlayRenderingTimestamp - a.moduleTrackingTimestamp;
                             return ''.concat(n.toFixed(2), 'ms');
                         })(t)
-                    )
+                    ]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-primary',
-                    children: 'Bridge Status: '.concat(a.get(Number(t)))
+                    children: ['Bridge Status: ', a.get(Number(t))]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-primary',
-                    children: 'isInputLocked: '.concat(l)
+                    children: ['isInputLocked: ', l]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-primary',
-                    children: 'isInputLockedV3: '.concat(i)
+                    children: ['isInputLockedV3: ', i]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-primary',
-                    children: 'isInputLockedV2: '.concat(s)
+                    children: ['isInputLockedV2: ', s]
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, n.jsxs)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-primary',
-                    children: 'isReady: '.concat(c)
+                    children: ['isReady: ', c]
                 })
             ]
         });

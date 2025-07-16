@@ -22,7 +22,6 @@ e.exports = {
     marketingPageCTAMargin: 'marketingPageCTAMargin__81281',
     marketingPageTextContainer: 'marketingPageTextContainer__81281',
     marketingPageHeading: 'marketingPageHeading__81281',
-    premiumOfferPill: 'premiumOfferPill__81281',
     subButton: 'subButton__81281',
     whiteSubButton: 'whiteSubButton__81281',
     tier2Gradient: 'tier2Gradient__81281',

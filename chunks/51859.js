@@ -1,67 +1,68 @@
-(t.d(n, { Z: () => f }), t(388685), t(953529));
-var r = t(255367),
-    i = t(73800),
-    o = t(793030),
-    a = t(481060),
-    s = t(322043),
-    l = t(838968),
-    c = t(262212),
-    u = t(795338),
-    d = t(279604),
-    m = t(279475),
-    p = t(388032),
-    _ = t(117172);
-function f(e) {
-    let { guildId: n, powerup: t } = e,
-        [f, x] = i.useState(void 0);
-    (0, d.KT)(f);
-    let [v, b] = i.useState(!1),
-        g = (0, s.Z)(n, t),
-        h = (0, m.d)(g);
+(n.d(t, { Z: () => x }), n(388685), n(953529));
+var r = n(255367),
+    i = n(73800),
+    o = n(793030),
+    a = n(481060),
+    s = n(973772),
+    l = n(838968),
+    c = n(262212),
+    d = n(795338),
+    u = n(279604),
+    p = n(279475),
+    m = n(535396),
+    _ = n(388032),
+    f = n(117172);
+function x(e) {
+    let { guildId: t, powerup: n } = e,
+        [x, b] = i.useState(void 0);
+    (0, u.KT)(x);
+    let [v, g] = i.useState(!1),
+        h = (0, s.Z)(t, n).type !== m.A3.INACTIVE,
+        j = (0, p.d)(h);
     return (0, r.jsxs)(l.Z, {
-        onHover: (e) => b(e),
-        guildId: n,
-        powerup: t,
+        onHover: (e) => g(e),
+        guildId: t,
+        powerup: n,
         children: [
-            (0, r.jsx)(u.m, {
-                className: _.image,
-                powerup: t,
+            (0, r.jsx)(d.m, {
+                className: f.image,
+                powerup: n,
                 isHovering: v
             }),
             (0, r.jsxs)('div', {
-                className: _.contentContainer,
+                className: f.contentContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: _.headerContainer,
+                        className: f.headerContainer,
                         children: (0, r.jsx)(o.X6, {
-                            color: h,
+                            color: j,
                             variant: 'heading-md/bold',
-                            children: t.title
+                            children: n.title
                         })
                     }),
                     (0, r.jsx)(o.xv, {
-                        className: _.description,
-                        color: h,
+                        className: f.description,
+                        color: j,
                         variant: 'text-sm/medium',
-                        children: t.description
+                        children: n.description
                     }),
                     (0, r.jsx)(l.u, {
-                        guildId: n,
-                        powerup: t
+                        guildId: t,
+                        powerup: n
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: _.buttonContainer,
+                className: f.buttonContainer,
                 children: (0, r.jsx)(c.ZP, {
-                    guildId: n,
-                    powerup: t,
-                    onError: x
+                    guildId: t,
+                    powerup: n,
+                    onError: b
                 })
             }),
             (0, r.jsx)(a.IGR, {
-                className: _.new,
-                text: p.intl.string(p.t.y2b7CA)
+                className: f.new,
+                text: _.intl.string(_.t.y2b7CA)
             })
         ]
     });

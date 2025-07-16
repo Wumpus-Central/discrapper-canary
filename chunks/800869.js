@@ -1,21 +1,21 @@
-t.d(n, { Z: () => d });
-var r = t(255367),
-    i = t(793030),
-    o = t(481060),
-    a = t(921944),
-    s = t(93841),
-    l = t(388032),
-    c = t(305063),
-    u = t(719119);
-function d(e) {
-    let { markAsDismissed: n } = e;
+n.d(t, { Z: () => u });
+var r = n(255367),
+    i = n(793030),
+    o = n(481060),
+    a = n(921944),
+    s = n(93841),
+    l = n(388032),
+    c = n(305063),
+    d = n(719119);
+function u(e) {
+    let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
         className: c.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 className: c.image,
-                src: u
+                src: d
             }),
             (0, r.jsx)(i.xv, {
                 color: 'always-white',
@@ -31,7 +31,7 @@ function d(e) {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {
-                    n(a.L.USER_DISMISS);
+                    t(a.L.USER_DISMISS);
                 }
             })
         ]

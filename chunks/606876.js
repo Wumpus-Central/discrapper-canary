@@ -1,68 +1,68 @@
-(n.d(t, { Z: () => d }), n(388685));
-var r = n(255367),
-    o = n(73800),
-    a = n(481060),
-    i = n(927160),
-    l = n(203377),
-    s = n(93841),
-    c = n(388032),
-    u = n(606055);
-function d() {
+(r.d(t, { Z: () => u }), r(388685));
+var n = r(255367),
+    o = r(73800),
+    a = r(481060),
+    i = r(927160),
+    s = r(203377),
+    l = r(93841),
+    c = r(388032),
+    d = r(606055);
+function u() {
     let [e, t] = o.useState('');
-    return (0, r.jsxs)('div', {
-        className: u.container,
+    return (0, n.jsxs)('div', {
+        className: d.container,
         children: [
-            (0, r.jsxs)('div', {
-                className: u.demo,
+            (0, n.jsxs)('div', {
+                className: d.demo,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: u.previewCard,
+                    (0, n.jsxs)('div', {
+                        className: d.previewCard,
                         children: [
-                            (0, r.jsx)('div', {
-                                className: u.avatar,
-                                children: (0, r.jsx)(a.gw7, {
+                            (0, n.jsx)('div', {
+                                className: d.avatar,
+                                children: (0, n.jsx)(a.gw7, {
                                     size: 'custom',
                                     width: 24,
                                     height: 24
                                 })
                             }),
-                            (0, r.jsxs)('div', {
-                                className: u.previewCardMessage,
+                            (0, n.jsxs)('div', {
+                                className: d.previewCardMessage,
                                 children: [
-                                    (0, r.jsxs)('div', {
-                                        className: u.messageHeaderSkeleton,
-                                        children: [(0, r.jsx)('div', { className: u.usernameSkeleton }), (0, r.jsx)('div', { className: u.timestampSkeleton })]
+                                    (0, n.jsxs)('div', {
+                                        className: d.messageHeaderSkeleton,
+                                        children: [(0, n.jsx)('div', { className: d.usernameSkeleton }), (0, n.jsx)('div', { className: d.timestampSkeleton })]
                                     }),
-                                    (0, r.jsxs)('div', {
-                                        className: u.previewCardUrl,
+                                    (0, n.jsxs)('div', {
+                                        className: d.previewCardUrl,
                                         children: [
-                                            (0, r.jsx)(a.Text, {
+                                            (0, n.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-tertiary',
-                                                className: u.baseUrl,
-                                                children: ''.concat(l.mf, '/')
+                                                className: d.baseUrl,
+                                                children: ''.concat(s.mf, '/')
                                             }),
-                                            (0, r.jsx)(a.Text, {
+                                            (0, n.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-link',
-                                                className: u.vanityCode,
+                                                className: d.vanityCode,
                                                 children: e
                                             })
                                         ]
                                     }),
-                                    (0, r.jsxs)('div', {
-                                        className: u.messageEmbed,
+                                    (0, n.jsxs)('div', {
+                                        className: d.messageEmbed,
                                         children: [
-                                            (0, r.jsx)('div', { className: u.messageEmbedHeaderSkeleton }),
-                                            (0, r.jsxs)('div', {
-                                                className: u.messageEmbedContent,
+                                            (0, n.jsx)('div', { className: d.messageEmbedHeaderSkeleton }),
+                                            (0, n.jsxs)('div', {
+                                                className: d.messageEmbedContent,
                                                 children: [
-                                                    (0, r.jsx)('div', { className: u.messageEmbedContentIconSkeleton }),
-                                                    (0, r.jsxs)('div', {
-                                                        className: u.messageEmbedContentLines,
-                                                        children: [(0, r.jsx)('div', { className: u.messageEmbedContenPrimaryLineSkeleton }), (0, r.jsx)('div', { className: u.messageEmbedContentSecondaryLineSkeleton })]
+                                                    (0, n.jsx)('div', { className: d.messageEmbedContentIconSkeleton }),
+                                                    (0, n.jsxs)('div', {
+                                                        className: d.messageEmbedContentLines,
+                                                        children: [(0, n.jsx)('div', { className: d.messageEmbedContenPrimaryLineSkeleton }), (0, n.jsx)('div', { className: d.messageEmbedContentSecondaryLineSkeleton })]
                                                     }),
-                                                    (0, r.jsx)('div', { className: u.messageEmbedContentActionSkeleton })
+                                                    (0, n.jsx)('div', { className: d.messageEmbedContentActionSkeleton })
                                                 ]
                                             })
                                         ]
@@ -71,18 +71,18 @@ function d() {
                             })
                         ]
                     }),
-                    (0, r.jsx)(i.Z, {
+                    (0, n.jsx)(i.Z, {
                         value: e,
                         onChange: t,
-                        className: u.vanityUrlInput
+                        className: d.vanityUrlInput
                     })
                 ]
             }),
-            (0, r.jsx)(a.Text, {
+            (0, n.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-tertiary',
-                className: u.disclaimer,
-                children: c.intl.string(s.default.u5iNb2)
+                className: d.disclaimer,
+                children: c.intl.string(l.default.u5iNb2)
             })
         ]
     });

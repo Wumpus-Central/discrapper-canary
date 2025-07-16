@@ -36,7 +36,7 @@ var i = n(255367),
     L = n(981631),
     B = n(388032),
     M = n(781793),
-    U = n(651117),
+    U = n(536135),
     V = n(865215);
 let G = (e) => {
         let { inOfferExperience: t } = e;
@@ -119,7 +119,7 @@ let G = (e) => {
             })
         });
         return (0, i.jsxs)('div', {
-            className: a()(U.container, U.settingsContainer),
+            className: U.container,
             'data-cy': 'tier-0-marketing-page',
             children: [
                 (0, i.jsx)(A.Z, {

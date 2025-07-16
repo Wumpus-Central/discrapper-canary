@@ -18,8 +18,8 @@ var r = n(255367),
     b = n(713081),
     y = n(905128),
     O = n(156732),
-    v = n(690786),
-    I = n(639777),
+    v = n(639777),
+    I = n(973772),
     T = n(441536),
     S = n(535396),
     A = n(981631),
@@ -82,12 +82,12 @@ function x(e, t) {
 function M(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         { analyticsLocations: l } = (0, p.ZP)(),
-        c = null != (0, v.Z)(t, n),
-        E = (0, I.Z)(t),
+        c = (0, I.Z)(t, n).type !== S.A3.INACTIVE,
+        E = (0, v.Z)(t),
         [b, y] = i.useState(!1),
-        [S, w] = i.useState(!1),
-        L = S,
-        M = i.useCallback(() => {
+        [w, L] = i.useState(!1),
+        M = w,
+        k = i.useCallback(() => {
             let e = g.Z.getGuild(t);
             null != e &&
                 (0, h.u)({
@@ -100,53 +100,53 @@ function M(e) {
                     guild: e
                 });
         }, [t, l]),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             (a(), (0, T.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
-        j = {
+        U = {
             tension: 400,
             friction: 30
         },
-        U = (0, d.q_F)({
-            transform: L ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
+        G = (0, d.q_F)({
+            transform: M ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
-            config: j
-        }),
-        G = (0, d.q_F)({
-            y: L ? -25 : 0,
-            config: j
+            config: U
         }),
         B = (0, d.q_F)({
-            opacity: +!!L,
-            transform: L ? 'translateY(0)' : 'translateY(20px)',
-            config: j
+            y: M ? -25 : 0,
+            config: U
         }),
-        V = i.useCallback((e) => {
+        V = (0, d.q_F)({
+            opacity: +!!M,
+            transform: M ? 'translateY(0)' : 'translateY(20px)',
+            config: U
+        }),
+        F = i.useCallback((e) => {
             e && y(!0);
         }, []),
-        F = (0, f.O)(V),
-        Z = (0, O.Z)(n, S);
+        Z = (0, f.O)(F),
+        H = (0, O.Z)(n, w);
     return (0, r.jsxs)('div', {
         className: o()(P.topPerksCard, P.animatedTopPerksCard, R.powerupCard, { [P.animate]: b }),
-        onMouseEnter: () => w(!0),
-        onMouseLeave: () => w(!1),
+        onMouseEnter: () => L(!0),
+        onMouseLeave: () => L(!1),
         children: [
             (0, r.jsx)('div', {
                 className: P.intObserver,
-                ref: F
+                ref: Z
             }),
             (0, r.jsx)('div', {
                 className: P.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
                     className: o()(P.topPerksCardImage, R.image),
-                    src: Z,
+                    src: H,
                     alt: '',
-                    style: U
+                    style: G
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: x(D({}, G), { transform: G.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: x(D({}, B), { transform: B.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: o()(P.contentContainer, R.contentContainer),
                 children: [
                     (0, r.jsx)(m.xm, {
@@ -156,12 +156,12 @@ function M(e) {
                         isEnabled: c
                     }),
                     (0, r.jsxs)(s.animated.div, {
-                        style: B,
+                        style: V,
                         className: P.buttonsContainer,
                         children: [
                             (0, r.jsx)(u.zx, {
                                 grow: !0,
-                                onClick: M,
+                                onClick: k,
                                 color: u.zx.Colors.BRAND,
                                 className: P.button,
                                 children: C.intl.string(C.t['oPAx7+'])
@@ -169,7 +169,7 @@ function M(e) {
                             E &&
                                 (0, r.jsx)(u.zx, {
                                     grow: !0,
-                                    onClick: k,
+                                    onClick: j,
                                     color: u.zx.Colors.PRIMARY,
                                     className: P.button,
                                     children: C.intl.string(C.t.GoCQxc)

@@ -112,8 +112,8 @@ var i = n(255367),
     e0 = n(374023),
     e1 = n(51144),
     e3 = n(998502),
-    e8 = n(578817),
-    e6 = n(870569),
+    e6 = n(578817),
+    e8 = n(870569),
     e2 = n(345243),
     e5 = n(115530),
     e7 = n(981631),
@@ -509,7 +509,7 @@ class td extends r.PureComponent {
                 this.handleOpenSettings();
             }),
             ti(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, e8.Q)('Account').jumpToVoice && eU.Z.isConnected() ? e7.oAB.VOICE : e7.oAB.ACCOUNT,
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, e6.Q)('Account').jumpToVoice && eU.Z.isConnected() ? e7.oAB.VOICE : e7.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 x.Z.open(e, t, n);
@@ -829,7 +829,7 @@ function tp(e) {
         renderPopout: h === u.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK ? () => (0, i.jsx)(eu.Z, { markAsDismissed: b }) : h === u.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE ? () => (0, i.jsx)(em.Z, { markAsDismissed: b }) : h === u.z.SOUNDBOARD_VOLUME_EDUCATION ? () => (0, i.jsx)(eg.Z, { markAsDismissed: b }) : h === u.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK ? () => (0, i.jsx)(eb.Z, {}) : () => (0, i.jsx)(i.Fragment, {}),
         children: () =>
             (0, i.jsx)(
-                e6.Z,
+                e8.Z,
                 ts(
                     tr(
                         {
@@ -940,7 +940,7 @@ function tg(e) {
             ref: v,
             className: a()(tn.micButtonParent, { [tn.hasColorGlow]: en }),
             children: [
-                (0, i.jsx)(e6.Z, {
+                (0, i.jsx)(e8.Z, {
                     tooltipText: F,
                     tooltipColor: m,
                     tooltipForceOpen: p,
@@ -1034,7 +1034,7 @@ function tg(e) {
                                                     }));
                                             let c = () =>
                                                 (0, i.jsx)(
-                                                    e6.Z,
+                                                    e8.Z,
                                                     tr(
                                                         {
                                                             ref: S,
@@ -1119,7 +1119,7 @@ function th(e) {
     );
     return (0, i.jsx)(A.Gt, {
         value: _,
-        children: (0, i.jsx)(e6.Z, {
+        children: (0, i.jsx)(e8.Z, {
             plated: null != d,
             tooltipText: (0, k.Z)(t, n, s),
             onMouseEnter: h,

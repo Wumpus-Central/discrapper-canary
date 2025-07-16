@@ -1,30 +1,18 @@
-e.exports = {
-    container: 'container_c880e8',
-    settingsContainer: 'settingsContainer_c880e8',
-    settingsHeroNoBackground: 'settingsHeroNoBackground_c880e8',
-    noTopPaddingOverride: 'noTopPaddingOverride_c880e8',
-    settingsHeroBogoHeight: 'settingsHeroBogoHeight_c880e8',
-    premiumTierCardsContainer: 'premiumTierCardsContainer_c880e8',
-    premiumTierCardsContainerSettings: 'premiumTierCardsContainerSettings_c880e8 premiumTierCardsContainer_c880e8',
-    premiumTierCardsContainerFullscreen: 'premiumTierCardsContainerFullscreen_c880e8 premiumTierCardsContainer_c880e8',
-    promoBannerContainer: 'promoBannerContainer_c880e8',
-    giftPromoCard: 'giftPromoCard_c880e8',
-    perkCardsContainerSpacingSettings: 'perkCardsContainerSpacingSettings_c880e8',
-    planComparisonTable: 'planComparisonTable_c880e8',
-    planComparisonTableApplicationHome: 'planComparisonTableApplicationHome_c880e8',
-    planComparisonTableContainer: 'planComparisonTableContainer_c880e8',
-    bottomIllustration: 'bottomIllustration_c880e8',
-    existingSubscriberSpacing: 'existingSubscriberSpacing_c880e8',
-    footerSpacing: 'footerSpacing_c880e8',
-    zIndex1: 'zIndex1_c880e8',
-    trialMarketingMargin: 'trialMarketingMargin_c880e8',
-    whatsNewSection: 'whatsNewSection_c880e8',
-    bestOfNitroSection: 'bestOfNitroSection_c880e8',
-    bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_c880e8',
-    scroller: 'scroller_c880e8',
-    containerBackground: 'containerBackground_c880e8',
-    responsiveContainer: 'responsiveContainer_c880e8',
-    heroHeadingV2Container: 'heroHeadingV2Container_c880e8',
-    heroHeaderSideGradient: 'heroHeaderSideGradient_c880e8',
-    heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_c880e8'
-};
+n.r(
+    (e.exports = {
+        container: 'container_c880e8',
+        containerBackground: 'containerBackground_c880e8',
+        responsiveContainer: 'responsiveContainer_c880e8',
+        sectionsContainer: 'sectionsContainer_c880e8',
+        heroHeadingContainer: 'heroHeadingContainer_c880e8',
+        promoBannerContainer: 'promoBannerContainer_c880e8',
+        whatsNewSectionContainer: 'whatsNewSectionContainer_c880e8',
+        bestOfNitroSectionContainer: 'bestOfNitroSectionContainer_c880e8',
+        premiumTierCardsContainer: 'premiumTierCardsContainer_c880e8',
+        planComparisonTableContainer: 'planComparisonTableContainer_c880e8',
+        bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_c880e8',
+        scroller: 'scroller_c880e8',
+        heroHeaderSideGradient: 'heroHeaderSideGradient_c880e8',
+        heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_c880e8'
+    })
+);
