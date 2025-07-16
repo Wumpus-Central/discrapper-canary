@@ -3,7 +3,7 @@
     $w: () => D,
     Og: () => U,
     ZY: () => M,
-    sc: () => k,
+    sc: () => L,
     zs: () => F
 }),
     n(314940),
@@ -258,7 +258,7 @@ function R(e) {
         shouldRenderAccessory: !1
     });
 }
-function k(e) {
+function L(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(c.Z, {
         className: t,
@@ -267,7 +267,7 @@ function k(e) {
         animated: n.animated
     });
 }
-function L(e, t) {
+function k(e, t) {
     return null != e
         ? (0, r.jsx)('div', {
               className: e,
@@ -284,7 +284,7 @@ function D(e) {
             return e.id === (null == (n = t.attachmentIds) ? void 0 : n[0]);
         });
         if (null != e)
-            return L(
+            return k(
                 n,
                 (0, r.jsx)(R, {
                     className: i,
@@ -293,9 +293,9 @@ function D(e) {
             );
     }
     return null != t.emoji
-        ? L(
+        ? k(
               n,
-              (0, r.jsx)(k, {
+              (0, r.jsx)(L, {
                   className: l,
                   emoji: t.emoji
               })

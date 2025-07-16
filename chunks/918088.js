@@ -113,14 +113,14 @@ function N(e, t) {
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
         R = (0, s.EY)(Z),
-        k = (0, c.b)(Z),
-        L = !b && I && !N && m && !R && !k;
+        L = (0, c.b)(Z),
+        k = !b && I && !N && m && !R && !L;
     return {
         poll: o,
         canTapAnswers: A,
         canRemoveVote: N && m && !_,
         canShowVoteCounts: P,
-        canSubmitVote: L,
+        canSubmitVote: k,
         expirationLabel: f,
         hasSelectedAnswer: I,
         hasVoted: N,
@@ -150,7 +150,7 @@ function P(e, t) {
         A = g.layout_type,
         w = N(e, t, { formattedExpirationLabel: p });
     if (null == w) return;
-    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: k, canSubmitVote: L, expirationLabel: D = O.intl.string(O.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
+    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: L, canSubmitVote: k, expirationLabel: D = O.intl.string(O.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
         Y = (0, b.cZ)(H),
         X = O.intl.formatToPlainString(O.t.XRkuoa, { count: Y.toLocaleString() }),
         q = Math.max(
@@ -221,7 +221,7 @@ function P(e, t) {
         }),
         J = (0, r.EQ)({
             isExpired: B,
-            canSubmitVote: L,
+            canSubmitVote: k,
             hasVoted: U,
             isEditingVote: F,
             canRemoveVote: R,
@@ -257,7 +257,7 @@ function P(e, t) {
             .otherwise(() => ({
                 label: O.intl.string(O.t.JwkNU1),
                 presentation: 'button',
-                enabled: L,
+                enabled: k,
                 type: 'submit'
             })),
         $ = (0, h.isIOS)() ? O.intl.string(O.t.PVATMz) : O.intl.string(O.t.cHfFqq),
@@ -336,7 +336,7 @@ function P(e, t) {
         canTapAnswers: Z,
         canSelectMultipleAnswers: en,
         hasSelectedAnswer: M,
-        canShowVoteCounts: k,
+        canShowVoteCounts: L,
         hasVoted: U,
         isExpired: B,
         myAvatarUrl: T,

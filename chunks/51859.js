@@ -18,7 +18,7 @@ function x(e) {
     (0, u.KT)(x);
     let [v, g] = i.useState(!1),
         h = (0, s.Z)(t, n).type !== m.A3.INACTIVE,
-        j = (0, p.d)(h);
+        E = (0, p.d)(h);
     return (0, r.jsxs)(l.Z, {
         onHover: (e) => g(e),
         guildId: t,
@@ -35,14 +35,14 @@ function x(e) {
                     (0, r.jsx)('div', {
                         className: f.headerContainer,
                         children: (0, r.jsx)(o.X6, {
-                            color: j,
+                            color: E,
                             variant: 'heading-md/bold',
                             children: n.title
                         })
                     }),
                     (0, r.jsx)(o.xv, {
                         className: f.description,
-                        color: j,
+                        color: E,
                         variant: 'text-sm/medium',
                         children: n.description
                     }),

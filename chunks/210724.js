@@ -7,7 +7,7 @@ var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
-    i = n(108542),
+    i = n(71347),
     l = n(442837),
     c = n(481060),
     u = n(110924),
@@ -265,8 +265,8 @@ function q(e) {
             }
         }, [K, ea, X, o.id, Q, G.trackingCtx.content]),
         s.useEffect(() => {
-            K && ea && !X && !F && q && f.Z.stopTracking(o.id);
-        }, [K, ea, X, F, q, o.id]));
+            ((!D || I) && f.Z.clearTracking(), K && ea && !X && !F && q && f.Z.stopTracking(o.id));
+        }, [D, I, K, ea, X, F, q, o.id]));
     let eS = (0, j.h)({
         location: T.dr.QUESTS_BAR,
         questConfig: o.config

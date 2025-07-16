@@ -2,21 +2,21 @@
 var r = n(255367),
     a = n(73800),
     i = n(481060),
-    l = n(454585),
-    o = n(273744),
+    o = n(454585),
+    l = n(273744),
     s = n(388032),
     c = n(232890),
     d = n(20493);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: _, character_limit: g, pattern: b },
+                data: { title: u, subtitle: m, placeholder: p, rows: _, character_limit: b, pattern: g },
                 onChange: x,
                 initialText: h,
                 isRequired: f
             } = e,
             v = a.useRef(
-                l.Z.reactParserFor(
+                o.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -41,8 +41,8 @@ let u = (e) => {
                                 }));
                         }
                         return e;
-                    })({}, l.Z.defaultRules)),
-                    (n = n = { link: o.s }),
+                    })({}, o.Z.defaultRules)),
+                    (n = n = { link: l.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -66,7 +66,7 @@ let u = (e) => {
         }, [h]);
         let O = a.useCallback(
             (e) => {
-                let t = null != b ? new RegExp(b) : null;
+                let t = null != g ? new RegExp(g) : null;
                 null == t || t.test(e)
                     ? null != e &&
                       (I(null),
@@ -81,7 +81,7 @@ let u = (e) => {
                           isValid: !1
                       }));
             },
-            [x, b]
+            [x, g]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,
@@ -102,7 +102,7 @@ let u = (e) => {
                         })
                     }),
                 (0, r.jsx)(i.Kx8, {
-                    maxLength: g,
+                    maxLength: b,
                     onChange: O,
                     value: j,
                     error: y,

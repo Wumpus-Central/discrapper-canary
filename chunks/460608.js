@@ -43,13 +43,13 @@ function v(e) {
     }, [t, g]);
     let h = i.useMemo(() => (g.length > 0 ? { [t]: g } : {}), [t, g]);
     (0, c.$)(h);
-    let j = (0, s.e7)([m.Z], () => {
+    let E = (0, s.e7)([m.Z], () => {
         var e;
         return null == (e = m.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
     });
     return (i.useEffect(() => {
-        j !== n.length && (0, l.C0)(t);
-    }, [t, j, n.length]),
+        E !== n.length && (0, l.C0)(t);
+    }, [t, E, n.length]),
     0 === v.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {

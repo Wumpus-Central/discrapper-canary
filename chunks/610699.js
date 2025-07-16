@@ -31,7 +31,7 @@ var r = n(255367),
     w = n(245335),
     Z = n(388032),
     R = n(582909);
-function k(e) {
+function L(e) {
     let { members: t, membersOnline: n, textColor: i } = e,
         l = [];
     return (
@@ -80,7 +80,7 @@ function k(e) {
         })
     );
 }
-function L(e) {
+function k(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: l } = e;
     if (null != t && null != n) {
         let e = (0, x.KS)(t, n);
@@ -146,18 +146,18 @@ function D(e) {
                 return b.id === t;
             });
         }),
-        k = v.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
-        L = (0, c.e7)([j.Z], () => null != k && j.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
+        L = v.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        k = (0, c.e7)([j.Z], () => null != L && j.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, L), [L]),
         { analyticsLocations: D } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
             [p.ZP],
             () =>
-                null != k
-                    ? p.ZP.getEmbeddedActivitiesForChannel(k.id)
+                null != L
+                    ? p.ZP.getEmbeddedActivitiesForChannel(L.id)
                           .filter((e) => e.applicationId === b.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [k, b.id]
+            [L, b.id]
         ),
         F = (0, c.Wu)([I.default], () => U.map((e) => I.default.getUser(e)).filter((e) => null != e), [U]),
         B = i.useCallback(() => {
@@ -182,8 +182,8 @@ function D(e) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
         x = (0, N.Qs)(a.guild);
     }
-    let V = (H && !L) || (H && T);
-    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), L || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == C)
+    let V = (H && !k) || (H && T);
+    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), k || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == C)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -191,7 +191,7 @@ function D(e) {
                   app: C,
                   activityUsers: F,
                   isMember: H,
-                  channel: k,
+                  channel: L,
                   guild: x,
                   members: _,
                   membersOnline: h,
@@ -268,7 +268,7 @@ function M(e) {
                 info: (0, r.jsxs)('div', {
                     className: R.infoWrapper,
                     children: [
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(k, {
                             channel: s,
                             guild: c,
                             hasEnded: !p,
@@ -281,7 +281,7 @@ function M(e) {
                                   guildId: c.id,
                                   activityText: Z.intl.string(Z.t.BMTj29)
                               })
-                            : (0, r.jsx)(k, {
+                            : (0, r.jsx)(L, {
                                   members: u,
                                   membersOnline: d,
                                   textColor: 'none'

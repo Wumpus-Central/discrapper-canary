@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var a = n(392711),
     i = n(481060),
-    l = n(388032),
-    o = n(130883),
+    o = n(388032),
+    l = n(130883),
     s = n(646727);
 let c = (e) => {
     let t = (0, a.flatMap)(e.history, (e) => {
@@ -26,7 +26,7 @@ let c = (e) => {
                       className: s.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: e.isModeratorReport ? l.intl.string(o.default['6mx/DA']) : l.intl.string(l.t['+3V9Tk'])
+                      children: e.isModeratorReport ? o.intl.string(l.default['6mx/DA']) : o.intl.string(o.t['+3V9Tk'])
                   }),
                   t.map((e, t) =>
                       (0, r.jsxs)(

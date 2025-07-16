@@ -32,7 +32,7 @@ var r = n(255367),
     Z = n(723359);
 function R(e) {
     let { code: t, message: n, getAcceptInviteContext: R } = e,
-        { invite: k, inviteError: L } = (0, l.cj)(
+        { invite: L, inviteError: k } = (0, l.cj)(
             [y.Z],
             () => ({
                 invite: y.Z.getInvite(t),
@@ -40,20 +40,20 @@ function R(e) {
             }),
             [t]
         ),
-        D = null == k;
+        D = null == L;
     i.useEffect(() => {
         D && a.ZP.resolveInvite(t);
     }, [t, D]);
     let M =
-            null != k
-                ? k
+            null != L
+                ? L
                 : {
                       state: w.r2o.RESOLVING,
                       code: ''
                   },
         { analyticsLocations: U } = (0, u.ZP)(),
         F = (0, d.v)(),
-        B = (0, l.e7)([E.Z], () => ((null == k ? void 0 : k.guild) != null ? E.Z.getGuild(k.guild.id) : null), [k]),
+        B = (0, l.e7)([E.Z], () => ((null == L ? void 0 : L.guild) != null ? E.Z.getGuild(L.guild.id) : null), [L]),
         G = (0, l.e7)([b.default], () => b.default.getId()),
         H = (0, l.e7)(
             [m.ZP],
@@ -67,8 +67,8 @@ function R(e) {
             null != M.channel && a.ZP.transitionToInviteSync(M);
         },
         z = () => {
-            if (null == B && (null == k ? void 0 : k.guild) != null) {
-                let e = x.Qs(k.guild);
+            if (null == B && (null == L ? void 0 : L.guild) != null) {
+                let e = x.Qs(L.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
             (0, h.yU)()
@@ -108,7 +108,7 @@ function R(e) {
         case w.r2o.ERROR:
             W = (0, r.jsx)(v.Z, {
                 author: n.author,
-                inviteError: L
+                inviteError: k
             });
             break;
         default:

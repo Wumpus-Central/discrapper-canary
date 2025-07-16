@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(823379),
     Z = n(506071),
     R = n(226378),
-    k = n(981631),
-    L = n(701488),
+    L = n(981631),
+    k = n(701488),
     D = n(388032),
     M = n(484608);
 let U = i.memo((e) => {
@@ -101,7 +101,7 @@ let F = i.memo(function (e) {
         Q = null == q ? void 0 : q.details,
         J = i.useMemo(() => {
             let e = new O.ZP(v);
-            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.wT), e);
+            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e);
         }, [v]),
         $ = (0, _.s5)({
             userId: V,
@@ -118,7 +118,7 @@ let F = i.memo(function (e) {
         en = i.useId(),
         er = null != K && K.isLaunching && K.componentId === en,
         ei = async () => {
-            (N.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            (N.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: v.id,
                 channel_id: A,
                 channel_type: null == G ? void 0 : G.type,
@@ -144,7 +144,7 @@ let F = i.memo(function (e) {
         },
         el = et.disabled ? D.intl.string(D.t.JBnc7O) : D.intl.string(D.t.cX9uLS),
         ea = (0, C.G)(J, () => {
-            N.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            N.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: v.id,
                 channel_id: A,
                 channel_type: null == G ? void 0 : G.type,

@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(471253),
     Z = n(565799),
     R = n(590415),
-    k = n(911560),
-    L = n(488131),
+    L = n(911560),
+    k = n(488131),
     D = n(814820),
     M = n(314897),
     U = n(523746),
@@ -139,7 +139,7 @@ function eR(e) {
         onClickMessage: d
     });
 }
-function ek(e) {
+function eL(e) {
     let { message: t, compact: n, channel: i } = e,
         l = (0, en.l)({
             user: t.author,
@@ -153,7 +153,7 @@ function ek(e) {
         usernameHook: l
     });
 }
-let eL = Object.freeze({
+let ek = Object.freeze({
         [eN.uaV.DEFAULT]: void 0,
         [eN.uaV.REPLY]: void 0,
         [eN.uaV.CHAT_INPUT_COMMAND]: void 0,
@@ -427,9 +427,9 @@ let eL = Object.freeze({
                         var n;
                         let r = null == (n = t.messageReference) ? void 0 : n.channel_id;
                         if (null != r) {
-                            await k.Z.loadThread(r);
+                            await L.Z.loadThread(r);
                             let t = F.Z.getChannel(r);
-                            null != t && (0, L.ok)(t, e.shiftKey);
+                            null != t && (0, k.ok)(t, e.shiftKey);
                         }
                     },
                     [t]
@@ -493,8 +493,8 @@ let eL = Object.freeze({
                   })
                 : null;
         },
-        [eN.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: ek,
-        [eN.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: ek,
+        [eN.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eL,
+        [eN.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eL,
         [eN.uaV.GUILD_INCIDENT_REPORT_RAID]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 l = (0, en.l)({
@@ -723,7 +723,7 @@ let eL = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 });
-            return (0, r.jsx)(b.i, {
+            return (0, r.jsx)(b.iq, {
                 message: t,
                 channel: n,
                 compact: i,
@@ -755,7 +755,7 @@ let eL = Object.freeze({
     eD = i.memo(function (e) {
         let { message: t, channel: n, compact: i, disableInteraction: l } = e,
             { type: a } = t,
-            o = eL[a];
+            o = ek[a];
         if (null == o) {
             var s;
             return ((s = Error('unknown message type '.concat(t.type))), X.Z.captureException(s), new g.Z('SystemMessage').error('', s), null);

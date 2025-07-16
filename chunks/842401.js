@@ -3,25 +3,25 @@ var r = n(255367);
 n(73800);
 var a = n(481060),
     i = n(99690),
-    l = n(388032),
-    o = n(178816);
+    o = n(388032),
+    l = n(178816);
 let s = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: l.container,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: o.header,
+                className: l.header,
                 variant: 'heading-sm/semibold',
-                children: l.intl.string(l.t['Rsth7+'])
+                children: o.intl.string(o.t['Rsth7+'])
             }),
             (0, r.jsx)('div', {
-                className: o.userContainer,
+                className: l.userContainer,
                 children: (0, r.jsxs)('div', {
-                    className: o.userInfo,
+                    className: l.userInfo,
                     children: [
                         (0, r.jsx)(i.Z, {
-                            className: o.userIcon,
+                            className: l.userIcon,
                             user: t,
                             size: a.EFr.SIZE_40
                         }),

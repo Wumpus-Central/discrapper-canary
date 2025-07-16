@@ -82,7 +82,7 @@ let T = i.memo(function (e) {
     let P,
         { channel: A, messageId: w, interactionData: Z } = e,
         { analyticsLocations: R } = (0, u.ZP)(),
-        { onCopy: k, copyRef: L } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
+        { onCopy: L, copyRef: k } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
         D = (0, o.e7)([g.Z], () => g.Z.getGuild(A.guild_id), [A.guild_id]);
     if (
         (i.useEffect(() => {
@@ -129,7 +129,7 @@ let T = i.memo(function (e) {
                             );
                         return t;
                     }
-                    let k = C.value;
+                    let L = C.value;
                     if (null != C.value)
                         switch (C.type) {
                             case c.jw.USER: {
@@ -210,11 +210,11 @@ let T = i.memo(function (e) {
                                 break;
                             default: {
                                 let e = null == w || null == (u = w.choices) ? void 0 : u.find((e) => e.value === C.value);
-                                null != e && (k = null != (d = e.name_localized) ? d : e.name);
+                                null != e && (L = null != (d = e.name_localized) ? d : e.name);
                             }
                         }
                     return (
-                        null == g && (g = S(null == k ? void 0 : k.toString())),
+                        null == g && (g = S(null == L ? void 0 : L.toString())),
                         [
                             (0, r.jsxs)(
                                 i.Fragment,
@@ -260,12 +260,12 @@ let T = i.memo(function (e) {
         onCopy: (e) => {
             var t, n, r;
             let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : '';
-            i.startsWith('/') && i.endsWith('\n') && k(e, Z);
+            i.startsWith('/') && i.endsWith('\n') && L(e, Z);
         },
         children: [
             (0, r.jsx)('div', {
                 className: C.tooltip,
-                ref: L,
+                ref: k,
                 children: P
             }),
             (0, r.jsx)('div', { className: C.tooltipPointer })

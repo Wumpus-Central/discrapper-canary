@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(77498),
     Z = n(283595),
     R = n(293273),
-    k = n(158776),
-    L = n(885110),
+    L = n(158776),
+    k = n(885110),
     D = n(594174),
     M = n(417363),
     U = n(768581),
@@ -302,11 +302,11 @@ function ed(e) {
     var t, n, a, g;
     let { analyticsLocations: C, application: O, channel: j, currentUserId: I, currentUserPresenceActivity: S, hideParty: T, message: N, onView: P, partyStatusElement: A, presenceActivity: Z } = e,
         R = (0, m.ye)(O),
-        { bot: k } = O,
-        L = U.ZP.getApplicationIconURL({
+        { bot: L } = O,
+        k = U.ZP.getApplicationIconURL({
             id: O.id,
             icon: O.icon,
-            bot: k
+            bot: L
         }),
         { staticBannerSrc: D, videoBannerSrc: M, bannerAspectRatio: F } = (0, b.E)(O),
         { enabled: G } = H.t.useExperiment({ location: 'RichPresenceActivityInviteEmbed' }, { autoTrackExposure: !0 }),
@@ -488,7 +488,7 @@ function ed(e) {
             videoBannerSrc: M,
             onClickBanner: ev,
             bannerAspectRatio: F,
-            iconSrc: null != L ? L : void 0,
+            iconSrc: null != k ? k : void 0,
             info: e,
             actions: eO,
             onClickContent: ev,
@@ -539,7 +539,7 @@ function ed(e) {
         videoBannerSrc: M,
         onClickBanner: ev,
         bannerAspectRatio: F,
-        iconSrc: null != L ? L : void 0,
+        iconSrc: null != k ? k : void 0,
         info: eA,
         actions: eO,
         onClickContent: ev,
@@ -557,21 +557,21 @@ function ep(e) {
         p = (0, g.O)(a),
         m = (0, o.e7)([N.default], () => N.default.getId()),
         f = (0, o.e7)(
-            [k.Z],
+            [L.Z],
             () => {
-                if (null == c.application) return k.Z.findActivity(c.author.id, (e) => e.type === $.IIU.LISTENING);
+                if (null == c.application) return L.Z.findActivity(c.author.id, (e) => e.type === $.IIU.LISTENING);
                 {
                     let e = c.author.id;
-                    return (ei(c) && (e = e === m && s.isPrivate() ? s.getRecipientId() : m), k.Z.getApplicationActivity(e, c.application.id));
+                    return (ei(c) && (e = e === m && s.isPrivate() ? s.getRecipientId() : m), L.Z.getApplicationActivity(e, c.application.id));
                 }
             },
             [c, s, m]
         ),
         _ = (0, o.e7)(
-            [R.Z, L.Z],
+            [R.Z, k.Z],
             () => {
                 var e;
-                return null != (e = R.Z.getApplicationActivity(p.id)) ? e : L.Z.getApplicationActivity(p.id, !0);
+                return null != (e = R.Z.getApplicationActivity(p.id)) ? e : k.Z.getApplicationActivity(p.id, !0);
             },
             [p.id]
         ),

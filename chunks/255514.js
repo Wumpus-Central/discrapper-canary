@@ -2,8 +2,8 @@
 var r = n(255367),
     a = n(73800),
     i = n(741086),
-    l = n(481060),
-    o = n(600164),
+    o = n(481060),
+    l = n(600164),
     s = n(155647),
     c = n(185625),
     d = n(273389),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(816342),
     p = n(15667),
     _ = n(76264),
-    g = n(805746),
-    b = n(822686),
+    b = n(805746),
+    g = n(822686),
     x = n(356110),
     h = n(730719),
     f = n(996701),
@@ -32,8 +32,8 @@ var r = n(255367),
     M = n(157759),
     w = n(521332),
     A = n(905434),
-    D = n(196627),
-    R = n(289809),
+    R = n(196627),
+    D = n(289809),
     B = n(739319),
     L = n(842401),
     z = n(375790),
@@ -86,32 +86,32 @@ let K = (e) => {
         er = q(t, 'checkbox'),
         ea = q(t, 'text_line_resource'),
         ei = X(t, 'external_link'),
-        el = X(t, 'free_text'),
-        eo = X(t, 'dropdown'),
+        eo = X(t, 'free_text'),
+        el = X(t, 'dropdown'),
         es = q(t, 'text'),
         ec = i.s.REPORT_TO_MOD.has(n.name),
         [ed, eu] = a.useState(!1),
         [em, ep] = a.useState(!1),
-        [e_, eg] = a.useState(''),
-        [eb, ex] = a.useState(() => ({})),
+        [e_, eb] = a.useState(''),
+        [eg, ex] = a.useState(() => ({})),
         [eh, ef] = a.useState(() => ({})),
         ev = a.useMemo(() => ('message' === n.name ? n.record.channel_id : void 0), [n]),
         ej = a.useCallback(
             (e) => ({
                 nodeRef: t.id,
                 destination: e,
-                textInput: null != el || null != eo ? eh : void 0,
+                textInput: null != eo || null != el ? eh : void 0,
                 multiSelect:
                     null != er
                         ? {
                               name: er.name,
-                              state: eb
+                              state: eg
                           }
                         : void 0
             }),
-            [t, el, eo, er, eb, eh]
+            [t, eo, el, er, eg, eh]
         ),
-        eC = a.useMemo(() => (0, c.VP)(el, eo, er, eh, eb), [el, eo, er, eh, eb]),
+        eC = a.useMemo(() => (0, c.VP)(eo, el, er, eh, eg), [eo, el, er, eh, eg]),
         ey = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = H({}, eh);
@@ -156,13 +156,13 @@ let K = (e) => {
             }
         }, [er]));
     let eO = (e) => {
-            e === U.evJ.INVALID_FORM_BODY ? eg(G.intl.string(G.t.VjAAuL)) : ec ? eg(G.intl.string(W.default.psKFdH)) : eg(G.intl.string(G.t.h6D8V1));
+            e === U.evJ.INVALID_FORM_BODY ? eb(G.intl.string(G.t.VjAAuL)) : ec ? eb(G.intl.string(W.default.psKFdH)) : eb(G.intl.string(G.t.h6D8V1));
         },
         eT = () => {
             let t = ['', e.successNodeId];
             $(ej(t))
                 .then(() => {
-                    (eg(''), eI(t));
+                    (eb(''), eI(t));
                 })
                 .catch((e) => {
                     var t;
@@ -180,12 +180,12 @@ let K = (e) => {
     return (0, r.jsxs)('div', {
         className: F.container,
         children: [
-            (0, r.jsxs)(l.xBx, {
+            (0, r.jsxs)(o.xBx, {
                 separator: !1,
-                direction: o.Z.Direction.VERTICAL,
+                direction: l.Z.Direction.VERTICAL,
                 className: F.header,
                 children: [
-                    (0, r.jsx)(D.Z, { element: q(t, 'success') }),
+                    (0, r.jsx)(R.Z, { element: q(t, 'success') }),
                     (0, r.jsx)(O.Z, {
                         node: t,
                         isModeratorReport: ec
@@ -193,11 +193,11 @@ let K = (e) => {
                     (0, r.jsx)(Z.Z, { node: t })
                 ]
             }),
-            (0, r.jsxs)(l.hzk, {
+            (0, r.jsxs)(o.hzk, {
                 className: F.body,
                 children: [
                     null != ea && (0, r.jsx)(B.Z, { element: ea }),
-                    null != es && (0, r.jsx)(R.Z, { element: es }),
+                    null != es && (0, r.jsx)(D.Z, { element: es }),
                     null != q(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name || 'report_to_mod_message' === n.name) && (0, r.jsx)(S.Z, { message: n.record }),
                     null != q(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(L.Z, { user: n.record }) : null,
                     null != q(t, 'guild_preview') && 'guild' === n.name ? (0, r.jsx)(y.Z, { guild: n.record }) : null,
@@ -239,7 +239,7 @@ let K = (e) => {
                                     }),
                                 null != q(t, 'delete_message') &&
                                     ('message' === n.name || 'report_to_mod_message' === n.name) &&
-                                    (0, r.jsx)(b.Z, {
+                                    (0, r.jsx)(g.Z, {
                                         message: n.record,
                                         reportId: et
                                     }),
@@ -251,7 +251,7 @@ let K = (e) => {
                                     }),
                                 null != q(t, 'deauthorize_app') &&
                                     'application' === n.name &&
-                                    (0, r.jsx)(g.Z, {
+                                    (0, r.jsx)(b.Z, {
                                         application: n.record,
                                         reportId: et
                                     }),
@@ -283,24 +283,24 @@ let K = (e) => {
                         (0, r.jsx)(P.Z, {
                             element: er,
                             onChange: (e, t) => {
-                                let n = H({}, eb);
-                                (e in eb ? delete n[e] : (n[e] = t), ex(n));
+                                let n = H({}, eg);
+                                (e in eg ? delete n[e] : (n[e] = t), ex(n));
                             },
-                            state: eb
-                        }),
-                    V.includes(n.name) &&
-                        null != eo &&
-                        eo.length > 0 &&
-                        (0, r.jsx)(x.Z, {
-                            elements: eo,
-                            onChange: ey,
-                            state: eh
+                            state: eg
                         }),
                     V.includes(n.name) &&
                         null != el &&
                         el.length > 0 &&
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(x.Z, {
                             elements: el,
+                            onChange: ey,
+                            state: eh
+                        }),
+                    V.includes(n.name) &&
+                        null != eo &&
+                        eo.length > 0 &&
+                        (0, r.jsx)(v.Z, {
+                            elements: eo,
                             onChange: ey,
                             state: eh
                         }),
@@ -317,7 +317,7 @@ let K = (e) => {
                     (0, r.jsx)(h.Z, {
                         errorMessage: e_,
                         onClose: () => {
-                            eg('');
+                            eb('');
                         }
                     })
                 ]
@@ -343,7 +343,7 @@ let K = (e) => {
                 onBackClicked: e.onNavigateBack,
                 canNavigateBack: Y.length > 0
             }),
-            (0, r.jsx)(l.olH, {
+            (0, r.jsx)(o.olH, {
                 className: F.closeButton,
                 onClick: J
             })

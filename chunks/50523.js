@@ -37,11 +37,11 @@ function x(e) {
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         R = (0, i.e7)([g.ZP], () => g.ZP.getCurrentEmbeddedActivity()),
-        k = (0, b.Z)(),
-        L = w === E.jy.CAN_LAUNCH,
+        L = (0, b.Z)(),
+        k = w === E.jy.CAN_LAUNCH,
         D = null != C ? C : v.customId,
         M = [];
-    (L &&
+    (k &&
         M.push({
             label: null == Z ? y.intl.string(y.t.RscU7O) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
@@ -50,7 +50,7 @@ function x(e) {
                     channelId: null != A ? A : void 0,
                     applicationId: x.id,
                     isStart: null == Z,
-                    embeddedActivitiesManager: k,
+                    embeddedActivitiesManager: L,
                     customId: D,
                     referrerId: j,
                     analyticsLocations: P
@@ -59,7 +59,7 @@ function x(e) {
             disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
         }),
         N &&
-            !L &&
+            !k &&
             M.push({
                 label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,

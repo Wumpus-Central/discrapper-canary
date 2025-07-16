@@ -31,15 +31,15 @@ function h(e) {
             return (null == (e = l.Z.getGuild(t)) ? void 0 : e.features.has(f.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
         h = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
-        j = [];
-    (j.push(a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), h && j.push(a.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let E = (0, d.Z)(t),
-        [C, N] = (0, s.US)(j),
+        E = [];
+    (E.push(a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), h && E.push(a.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    let j = (0, d.Z)(t),
+        [C, N] = (0, s.US)(E),
         I =
-            E.length > 0
+            j.length > 0
                 ? (0, r.jsx)(m.Z, {
                       guildId: t,
-                      powerups: E
+                      powerups: j
                   })
                 : C === a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
                   ? (0, r.jsx)(p.Z, { markAsDismissed: N })

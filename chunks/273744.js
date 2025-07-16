@@ -3,8 +3,8 @@ var r,
     a,
     i = n(255367);
 n(73800);
-var l = n(159635),
-    o = n.n(l),
+var o = n(159635),
+    l = n.n(o),
     s = n(481060);
 let c =
     ((r = (function (e) {
@@ -31,7 +31,7 @@ let c =
                 }));
         }
         return e;
-    })({}, o().defaultRules.link)),
+    })({}, l().defaultRules.link)),
     (a = a =
         {
             react: function (e, t, n) {

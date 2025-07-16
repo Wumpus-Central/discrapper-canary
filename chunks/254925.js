@@ -26,11 +26,11 @@ var r = n(255367),
     N = n(742409),
     S = n(981631),
     I = n(921944),
-    P = n(131085),
-    E = n(195196),
+    E = n(131085),
+    P = n(195196),
     Z = n(388032),
     T = n(602268);
-let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKULL, P.x_.MOON, P.x_.LIGHTNING, P.x_.COMPASS, P.x_.TOADSTOOL],
+let R = [E.x_.LEAF, E.x_.SWORD, E.x_.HEART, E.x_.FIRE, E.x_.WATER_DROP, E.x_.SKULL, E.x_.MOON, E.x_.LIGHTNING, E.x_.COMPASS, E.x_.TOADSTOOL],
     _ = [
         {
             primary: '#ff1c90',
@@ -86,8 +86,8 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
         }
     ],
     O = function () {
-        var e, t, n, P;
-        (0, Z.useSyncMessages)(E.messagesLoader);
+        var e, t, n, E;
+        (0, Z.useSyncMessages)(P.messagesLoader);
         let O = (0, s.e7)([g.Z], () => g.Z.getGuild()),
             k = (0, s.e7)([g.Z], () => g.Z.getGuildProfile()),
             { fetchGuildProfile: w, fetchStatus: G } = (0, h.u)(null == O ? void 0 : O.id);
@@ -117,7 +117,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                         className: T.section,
                         guildId: O.id,
                         isDisabled: F,
-                        tag: null != (P = k.tag) ? P : '',
+                        tag: null != (E = k.tag) ? E : '',
                         badge: D,
                         primaryColor: B,
                         secondaryColor: U
@@ -141,7 +141,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                 (0, r.jsx)(d.X6q, {
                     className: T.title,
                     variant: 'heading-lg/semibold',
-                    children: Z.intl.string(E.default.mf2OwM)
+                    children: Z.intl.string(P.default.mf2OwM)
                 }),
                 (0, r.jsxs)('div', {
                     className: T.container,
@@ -155,7 +155,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-secondary',
-                                            children: Z.intl.format(E.default['655Un5'], {
+                                            children: Z.intl.format(P.default['655Un5'], {
                                                 onClickServerProfile: () => {
                                                     x.Z.setSection(S.pNK.PROFILE);
                                                 },
@@ -169,7 +169,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                                 className: T.privateProfileWarning,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: Z.intl.format(E.default.CRbkIy, { onClickEditSetting: () => x.Z.setSection(S.pNK.PROFILE, S.KsC.PROFILE_VISIBILITY) })
+                                                    children: Z.intl.format(P.default.CRbkIy, { onClickEditSetting: () => x.Z.setSection(S.pNK.PROFILE, S.KsC.PROFILE_VISIBILITY) })
                                                 })
                                             })
                                     ]
@@ -183,7 +183,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                                   children: (0, r.jsx)(d.Text, {
                                                       variant: 'text-md/semibold',
                                                       color: 'header-primary',
-                                                      children: Z.intl.string(E.default['1zams7'])
+                                                      children: Z.intl.string(P.default['1zams7'])
                                                   })
                                               }),
                                               (0, r.jsx)(d.rsf, {

@@ -7,13 +7,13 @@
 var r = n(73800),
     a = n(823379),
     i = n(568315),
-    l = n(83126),
-    o = n(617191),
+    o = n(83126),
+    l = n(617191),
     s = n(82554);
 let c = {
     [s.zR.SAFETY_DM_SPAM_FILTER]: i.Z,
-    [s.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: o.Z,
-    [s.zR.SAFETY_LANGUAGE_FILTER]: l.Z
+    [s.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: l.Z,
+    [s.zR.SAFETY_LANGUAGE_FILTER]: o.Z
 };
 function d(e) {
     return r.useMemo(

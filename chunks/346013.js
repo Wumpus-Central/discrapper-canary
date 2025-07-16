@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(981631),
     Z = n(959517),
     R = n(388032),
-    k = n(70249),
-    L = n(527455);
+    L = n(70249),
+    k = n(527455);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -135,19 +135,19 @@ function U(e) {
         eg = z.coverImage,
         eb = null != eg && (0, E.d$)(eg);
     return (0, r.jsxs)('div', {
-        className: k.postPreviewContainer,
+        className: L.postPreviewContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: k.thumbnailContainer,
+                className: L.thumbnailContainer,
                 onMouseEnter: ed,
                 onMouseLeave: ep,
                 children: [
                     !J &&
                         (!0 === z.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)('img', {
-                                  src: L,
+                                  src: k,
                                   alt: R.intl.string(R.t.rIbh8P),
-                                  className: a()(k.thumbnail, { [k.spoiler]: z.shouldSpoiler }),
+                                  className: a()(L.thumbnail, { [L.spoiler]: z.shouldSpoiler }),
                                   onContextMenu: K,
                                   onError: () => $(!0)
                               })
@@ -156,8 +156,8 @@ function U(e) {
                                   backgroundSrc: ''.concat(eg, '?format=png'),
                                   alt: R.intl.string(R.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: a()(k.thumbnail, { [k.spoiler]: z.shouldSpoiler }),
-                                  imageChildClassName: k.thumbnailImage,
+                                  className: a()(L.thumbnail, { [L.spoiler]: z.shouldSpoiler }),
+                                  imageChildClassName: L.thumbnailImage,
                                   onContextMenu: K,
                                   onError: () => $(!0)
                               })),
@@ -165,9 +165,9 @@ function U(e) {
                         (0, r.jsx)(d.P3F, {
                             onClick: em,
                             children: (0, r.jsx)('div', {
-                                className: k.thumbnailOverlay,
+                                className: L.thumbnailOverlay,
                                 children: (0, r.jsxs)('div', {
-                                    className: k.thumbnailOverlayCta,
+                                    className: L.thumbnailOverlayCta,
                                     children: [
                                         (0, r.jsx)(P.Z, { color: s.Z.WHITE }),
                                         (0, r.jsx)(d.Text, {
@@ -182,27 +182,27 @@ function U(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: k.descriptionContainer,
+                className: L.descriptionContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: k.descriptionHeader,
+                        className: L.descriptionHeader,
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-default',
-                                className: k.descriptionHeaderText,
+                                className: L.descriptionHeaderText,
                                 children: z.title
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: a()(k.descriptionHeaderText, k.descriptionSubtitle),
+                                className: a()(L.descriptionHeaderText, L.descriptionSubtitle),
                                 children: z.subtitle
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: k.descriptionFooter,
+                        className: L.descriptionFooter,
                         children: [
                             null != z.authorId &&
                                 null != e_ &&
@@ -233,20 +233,20 @@ function U(e) {
                                         })
                                 }),
                             (0, r.jsxs)('div', {
-                                className: k.descriptionFooterContainer,
+                                className: L.descriptionFooterContainer,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: k.descriptionFooterChannelName,
+                                        className: L.descriptionFooterChannelName,
                                         children: [
                                             null != z.channelName &&
                                                 (0, r.jsx)(d.EAQ, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: k.mediaChannelIcon
+                                                    className: L.mediaChannelIcon
                                                 }),
                                             (0, r.jsx)(d.P3F, {
                                                 onClick: em,
-                                                className: k.channelName,
+                                                className: L.channelName,
                                                 children: (0, r.jsx)(d.X6q, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
@@ -259,7 +259,7 @@ function U(e) {
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
-                                            className: k.descriptionFooterAuthorContainer,
+                                            className: L.descriptionFooterAuthorContainer,
                                             children: R.intl.format(R.t.voIDKS, {
                                                 authorName: z.authorName,
                                                 authorNameHook: () =>
@@ -268,7 +268,7 @@ function U(e) {
                                                               name: z.authorName,
                                                               color: ei,
                                                               roleColors: eo,
-                                                              className: k.authorName
+                                                              className: L.authorName
                                                           })
                                                         : (0, r.jsx)(
                                                               v.Z,
@@ -289,7 +289,7 @@ function U(e) {
                                                                               name: z.authorName,
                                                                               color: ei,
                                                                               roleColors: eo,
-                                                                              className: k.authorName
+                                                                              className: L.authorName
                                                                           })
                                                                       )
                                                               },
@@ -312,7 +312,7 @@ function U(e) {
                                 : (0, r.jsx)(d.gtL, {
                                       pauseAnimation: ee,
                                       onClick: em,
-                                      className: a()(k.__invalid_ctaButtonContent, k.subscribeButton),
+                                      className: a()(L.__invalid_ctaButtonContent, L.subscribeButton),
                                       color: u.zx.Colors.CUSTOM,
                                       children: (0, r.jsx)(d.Text, {
                                           variant: 'text-sm/medium',

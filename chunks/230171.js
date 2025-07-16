@@ -102,7 +102,7 @@ function R(e) {
                 e
             );
         }, [z, V, U, F, M, t.id, G, a, R, D, x, K, y]),
-        X = x ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
+        X = x ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
         title: g,
         staticBannerSrc: O,
@@ -123,7 +123,7 @@ function R(e) {
         }
     });
 }
-function k(e) {
+function L(e) {
     var t, n, a;
     let { app: c } = e,
         u =
@@ -172,7 +172,7 @@ function k(e) {
         ]
     });
 }
-function L(e) {
+function k(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(

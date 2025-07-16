@@ -2,8 +2,8 @@
 var r = n(255367),
     a = n(73800),
     i = n(442837),
-    l = n(755721),
-    o = n(481060),
+    o = n(755721),
+    l = n(481060),
     s = n(230711),
     c = n(493773),
     d = n(367907),
@@ -11,23 +11,23 @@ var r = n(255367),
     m = n(592125),
     p = n(155647),
     _ = n(185625),
-    g = n(981631),
-    b = n(388032),
+    b = n(981631),
+    g = n(388032),
     x = n(305086);
 function h(e) {
-    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: l } = e,
-        [o, s] = a.useState(!1);
+    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: o } = e,
+        [l, s] = a.useState(!1);
     return (
         (0, c.ZP)(() => {
-            l(_.M4.SETTINGS_UPSELLS_VIEWED);
+            o(_.M4.SETTINGS_UPSELLS_VIEWED);
         }),
         (0, r.jsx)(u.ZP, {
             title: t,
             description: n,
-            buttonText: o ? b.intl.string(b.t['h+WsPT']) : b.intl.string(b.t.A8t4NT),
-            buttonDisabled: o,
+            buttonText: l ? g.intl.string(g.t['h+WsPT']) : g.intl.string(g.t.A8t4NT),
+            buttonDisabled: l,
             onButtonPress: () => {
-                (i(), s(!0), l(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED));
+                (i(), s(!0), o(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED));
             }
         })
     );
@@ -42,43 +42,43 @@ function f(e) {
         : (0, r.jsxs)('div', {
               className: x.container,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       variant: 'text-sm/semibold',
                       className: x.header,
-                      children: b.intl.string(b.t['1yxTIC'])
+                      children: g.intl.string(g.t['1yxTIC'])
                   }),
                   (0, r.jsx)('div', {
                       className: x.upsellsContainer,
                       children: j.map((e, n) => {
-                          let { getTitle: a, getDescription: i, onApply: l } = e;
+                          let { getTitle: a, getDescription: i, onApply: o } = e;
                           return (0, r.jsx)(
                               h,
                               {
                                   title: a(),
                                   description: i(),
-                                  onButtonClick: l,
+                                  onButtonClick: o,
                                   trackSettingsUpsellsAction: C(t[n])
                               },
                               n
                           );
                       })
                   }),
-                  (0, r.jsx)(l.zx, {
+                  (0, r.jsx)(o.zx, {
                       className: x.navLinkButton,
                       onClick: () => {
-                          (s.Z.open(g.oAB.CONTENT_AND_SOCIAL),
+                          (s.Z.open(b.oAB.CONTENT_AND_SOCIAL),
                               a(),
-                              d.ZP.trackWithMetadata(g.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+                              d.ZP.trackWithMetadata(b.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: c,
                                   report_type: u.name,
                                   report_subtype: f,
                                   action: _.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
                               }));
                       },
-                      look: l.zx.Looks.LINK,
-                      color: l.zx.Colors.LINK,
-                      size: l.zx.Sizes.NONE,
-                      children: b.intl.string(b.t.olebGx)
+                      look: o.zx.Looks.LINK,
+                      color: o.zx.Colors.LINK,
+                      size: o.zx.Sizes.NONE,
+                      children: g.intl.string(g.t.olebGx)
                   })
               ]
           });

@@ -1,345 +1,351 @@
-(s.d(t, {
-    Z: () => D,
-    f: () => R
+(n.d(t, {
+    Z: () => A,
+    f: () => D
 }),
-    s(388685));
-var n = s(255367),
-    l = s(73800),
-    a = s(120356),
-    i = s.n(a),
-    r = s(913527),
-    o = s.n(r),
-    c = s(481060),
-    u = s(100527),
-    d = s(906732),
-    m = s(407477),
-    p = s(978003),
-    g = s(39154),
-    h = s(245216),
-    C = s(79390),
-    x = s(869765),
-    P = s(403132),
-    O = s(378233),
-    j = s(768581),
-    v = s(55935),
-    N = s(823379),
-    f = s(453687),
-    E = s(930282),
-    y = s(123145),
-    S = s(223021),
-    T = s(217702),
-    M = s(981631),
-    I = s(388032),
-    _ = s(848697),
-    L = s(73433);
-function b(e) {
-    let { width: t = 12, height: s = 8, color: l = 'currentColor', className: a, foreground: i } = e;
-    return (0, n.jsx)('svg', {
+    n(388685));
+var s = n(255367),
+    a = n(73800),
+    r = n(120356),
+    l = n.n(r),
+    i = n(913527),
+    o = n.n(i),
+    c = n(481060),
+    u = n(100527),
+    m = n(906732),
+    d = n(407477),
+    p = n(387188),
+    g = n(978003),
+    h = n(39154),
+    j = n(245216),
+    x = n(79390),
+    f = n(869765),
+    C = n(403132),
+    O = n(378233),
+    v = n(768581),
+    b = n(55935),
+    y = n(823379),
+    P = n(453687),
+    E = n(930282),
+    N = n(123145),
+    S = n(223021),
+    I = n(217702),
+    T = n(981631),
+    M = n(388032),
+    k = n(848697),
+    L = n(73433);
+function w(e) {
+    let { width: t = 12, height: n = 8, color: a = 'currentColor', className: r, foreground: l } = e;
+    return (0, s.jsx)('svg', {
+        className: r,
+        width: t,
+        height: n,
+        viewBox: '0 0 12 8',
+        children: (0, s.jsx)('path', {
+            d: 'M0.809739 3.59646L5.12565 0.468433C5.17446 0.431163 5.23323 0.408043 5.2951 0.401763C5.35698 0.395482 5.41943 0.406298 5.4752 0.432954C5.53096 0.45961 5.57776 0.50101 5.61013 0.552343C5.64251 0.603676 5.65914 0.662833 5.6581 0.722939V2.3707C10.3624 2.3707 11.2539 5.52482 11.3991 7.21174C11.4028 7.27916 11.3848 7.34603 11.3474 7.40312C11.3101 7.46021 11.2554 7.50471 11.1908 7.53049C11.1262 7.55626 11.0549 7.56204 10.9868 7.54703C10.9187 7.53201 10.857 7.49695 10.8104 7.44666C8.72224 5.08977 5.6581 5.63359 5.6581 5.63359V7.28135C5.65831 7.34051 5.64141 7.39856 5.60931 7.44894C5.5772 7.49932 5.53117 7.54004 5.4764 7.5665C5.42163 7.59296 5.3603 7.60411 5.29932 7.59869C5.23834 7.59328 5.18014 7.57151 5.13128 7.53585L0.809739 4.40892C0.744492 4.3616 0.691538 4.30026 0.655067 4.22975C0.618596 4.15925 0.599609 4.08151 0.599609 4.00269C0.599609 3.92386 0.618596 3.84612 0.655067 3.77562C0.691538 3.70511 0.744492 3.64377 0.809739 3.59646Z',
+            className: l,
+            fill: a
+        })
+    });
+}
+function _(e) {
+    let { width: t = 18, height: n = 18, className: a, foreground: r } = e;
+    return (0, s.jsx)('svg', {
         className: a,
         width: t,
-        height: s,
-        viewBox: '0 0 12 8',
-        children: (0, n.jsx)('path', {
-            d: 'M0.809739 3.59646L5.12565 0.468433C5.17446 0.431163 5.23323 0.408043 5.2951 0.401763C5.35698 0.395482 5.41943 0.406298 5.4752 0.432954C5.53096 0.45961 5.57776 0.50101 5.61013 0.552343C5.64251 0.603676 5.65914 0.662833 5.6581 0.722939V2.3707C10.3624 2.3707 11.2539 5.52482 11.3991 7.21174C11.4028 7.27916 11.3848 7.34603 11.3474 7.40312C11.3101 7.46021 11.2554 7.50471 11.1908 7.53049C11.1262 7.55626 11.0549 7.56204 10.9868 7.54703C10.9187 7.53201 10.857 7.49695 10.8104 7.44666C8.72224 5.08977 5.6581 5.63359 5.6581 5.63359V7.28135C5.65831 7.34051 5.64141 7.39856 5.60931 7.44894C5.5772 7.49932 5.53117 7.54004 5.4764 7.5665C5.42163 7.59296 5.3603 7.60411 5.29932 7.59869C5.23834 7.59328 5.18014 7.57151 5.13128 7.53585L0.809739 4.40892C0.744492 4.3616 0.691538 4.30026 0.655067 4.22975C0.618596 4.15925 0.599609 4.08151 0.599609 4.00269C0.599609 3.92386 0.618596 3.84612 0.655067 3.77562C0.691538 3.70511 0.744492 3.64377 0.809739 3.59646Z',
-            className: i,
-            fill: l
-        })
-    });
-}
-function A(e) {
-    let { width: t = 18, height: s = 18, className: l, foreground: a } = e;
-    return (0, n.jsx)('svg', {
-        className: l,
-        width: t,
-        height: s,
+        height: n,
         viewBox: '0 0 18 18',
-        children: (0, n.jsx)('path', {
+        children: (0, s.jsx)('path', {
             fill: '#3ba55c',
             d: 'M0 8h14.2l-3.6-3.6L12 3l6 6-6 6-1.4-1.4 3.6-3.6H0',
-            className: a
+            className: r
         })
     });
 }
-function R(e, t, s, l, a, r) {
+function D(e, t, n, a, r, i) {
     let o,
         u,
-        d,
         m,
-        x = (0, g.Z)(e),
-        { trailingIconClass: P, leadingIconClass: j, iconSize: v } = r,
-        N = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        f = (0, O.cv)(x).length > 0,
-        y = null != x.interaction,
-        S = x.hasFlag(M.iLy.IS_VOICE_MESSAGE),
-        T = x.isPoll(),
-        b = x.type === M.uaV.POLL_RESULT;
+        d,
+        f = (0, h.Z)(e),
+        { trailingIconClass: C, leadingIconClass: v, iconSize: b } = i,
+        y = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        P = (0, O.cv)(f).length > 0,
+        N = null != f.interaction,
+        S = f.hasFlag(T.iLy.IS_VOICE_MESSAGE),
+        I = f.isPoll(),
+        w = f.type === T.uaV.POLL_RESULT;
     if (
-        ((0, p.Z)(e) &&
-            (m = (0, n.jsx)(h.Z, {
+        ((0, g.Z)(e) &&
+            (d = (0, s.jsx)(j.Z, {
                 size: 'custom',
-                className: j,
-                width: v,
-                height: v
+                className: v,
+                width: b,
+                height: b
             })),
-        s)
+        n)
     )
-        o = I.intl.string(I.t.XAkOo6);
-    else if (l) o = I.intl.string(I.t.G7p6v7);
-    else if (x.type === M.uaV.CHANNEL_PINNED_MESSAGE) o = I.intl.string(I.t.sCfDDg);
-    else if (N)
-        if (T) {
-            var A, R;
-            u = (0, n.jsx)('div', {
-                className: i()(_.repliedTextContent, L.markup),
-                children: null == x || null == (R = x.poll) || null == (A = R.question) ? void 0 : A.text
+        o = M.intl.string(M.t.XAkOo6);
+    else if (a) o = M.intl.string(M.t.G7p6v7);
+    else if (f.type === T.uaV.CHANNEL_PINNED_MESSAGE) o = M.intl.string(M.t.sCfDDg);
+    else if (f.type === T.uaV.EMOJI_ADDED)
+        u = (0, s.jsx)(p.Zh, {
+            message: f,
+            rendered: t
+        });
+    else if (y)
+        if (I) {
+            var _, D;
+            u = (0, s.jsx)('div', {
+                className: l()(k.repliedTextContent, L.markup),
+                children: null == f || null == (D = f.poll) || null == (_ = D.question) ? void 0 : _.text
             });
         } else
-            b
-                ? (o = (0, C.N4)(x))
-                : f
-                  ? (o = I.intl.string(I.t.kHdYCQ))
-                  : y
-                    ? (o = I.intl.string(I.t['E+6SSU']))
+            w
+                ? (o = (0, x.N4)(f))
+                : P
+                  ? (o = M.intl.string(M.t.kHdYCQ))
+                  : N
+                    ? (o = M.intl.string(M.t['E+6SSU']))
                     : S
-                      ? (o = I.intl.string(I.t['XC3A5+']))
-                      : x.hasFlag(M.iLy.IS_COMPONENTS_V2)
-                        ? (o = I.intl.string(I.t.Xxat6e))
-                        : ((o = I.intl.string(I.t['6hGo0d'])),
-                          (d = (0, n.jsx)(c.XBm, {
+                      ? (o = M.intl.string(M.t['XC3A5+']))
+                      : f.hasFlag(T.iLy.IS_COMPONENTS_V2)
+                        ? (o = M.intl.string(M.t.Xxat6e))
+                        : ((o = M.intl.string(M.t['6hGo0d'])),
+                          (m = (0, s.jsx)(c.XBm, {
                               size: 'custom',
                               color: 'currentColor',
-                              className: P,
-                              width: v,
-                              height: v
+                              className: C,
+                              width: b,
+                              height: b
                           })));
     else
-        u = (0, n.jsx)(E.ZP, {
-            message: x,
+        u = (0, s.jsx)(E.ZP, {
+            message: f,
             content: t,
-            className: a,
+            className: r,
             compact: !0
         });
     return (
-        f
-            ? (d = (0, n.jsx)(c.B7q, {
+        P
+            ? (m = (0, s.jsx)(c.B7q, {
                   size: 'custom',
                   color: 'currentColor',
-                  className: P,
-                  width: v,
-                  height: v
+                  className: C,
+                  width: b,
+                  height: b
               }))
-            : y
-              ? (d = (0, n.jsx)(c.SsZ, {
+            : N
+              ? (m = (0, s.jsx)(c.SsZ, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: P,
-                    width: v,
-                    height: v
+                    className: C,
+                    width: b,
+                    height: b
                 }))
               : S
-                ? (d = (0, n.jsx)(c.S6n, {
+                ? (m = (0, s.jsx)(c.S6n, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: P,
-                      width: (19 / 24) * v,
-                      height: v
+                      className: C,
+                      width: (19 / 24) * b,
+                      height: b
                   }))
-                : (x.attachments.length > 0 || x.embeds.length > 0) &&
-                  !b &&
-                  (d = (0, n.jsx)(c.XBm, {
+                : (f.attachments.length > 0 || f.embeds.length > 0) &&
+                  !w &&
+                  (m = (0, s.jsx)(c.XBm, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: P,
-                      width: v,
-                      height: v
+                      className: C,
+                      width: b,
+                      height: b
                   })),
         {
             contentPlaceholder: o,
             renderedContent: u,
-            trailingIcon: d,
-            leadingIcon: m
+            trailingIcon: m,
+            leadingIcon: d
         }
     );
 }
-function D(e) {
+function A(e) {
     let t,
-        { repliedAuthor: s, baseAuthor: a, baseMessage: r, referencedMessage: p, renderPopout: g, isReplySpineClickable: h, showReplySpine: C } = e,
-        { canShowReactionsOnMessageHover: O } = m.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [E, L] = l.useState(!1),
-        D = l.useMemo(() => (null != g && p.state === x.Y.LOADED ? (e) => g(e, p.message) : void 0), [p, g]),
-        k = l.useCallback(() => L((e) => !e), []),
-        w = (function (e, t, s) {
-            let { referencedMessage: a, channel: r, compact: o, isReplyAuthorBlocked: m, repliedAuthor: p, showAvatarPopout: g, onClickAvatar: h, onContextMenu: C, onPopoutRequestClose: P } = e,
-                { analyticsLocations: O } = (0, d.ZP)(u.Z.AVATAR),
-                v = l.useRef(null);
-            if (o || a.state !== x.Y.LOADED || m)
-                return s === M.uaV.CONTEXT_MENU_COMMAND
-                    ? (0, n.jsx)('div', {
-                          className: _.replyChatIconContainer,
-                          children: (0, n.jsx)(c.kBi, { size: 'xs' })
+        { repliedAuthor: n, baseAuthor: r, baseMessage: i, referencedMessage: p, renderPopout: g, isReplySpineClickable: h, showReplySpine: j } = e,
+        { canShowReactionsOnMessageHover: x } = d.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
+        [O, E] = a.useState(!1),
+        L = a.useMemo(() => (null != g && p.state === f.Y.LOADED ? (e) => g(e, p.message) : void 0), [p, g]),
+        A = a.useCallback(() => E((e) => !e), []),
+        R = (function (e, t, n) {
+            let { referencedMessage: r, channel: i, compact: o, isReplyAuthorBlocked: d, repliedAuthor: p, showAvatarPopout: g, onClickAvatar: h, onContextMenu: j, onPopoutRequestClose: x } = e,
+                { analyticsLocations: C } = (0, m.ZP)(u.Z.AVATAR),
+                O = a.useRef(null);
+            if (o || r.state !== f.Y.LOADED || d)
+                return n === T.uaV.CONTEXT_MENU_COMMAND
+                    ? (0, s.jsx)('div', {
+                          className: k.replyChatIconContainer,
+                          children: (0, s.jsx)(c.kBi, { size: 'xs' })
                       })
-                    : (0, n.jsx)('div', {
-                          className: _.replyBadge,
-                          children: (0, n.jsx)(b, { className: _.replyIcon })
+                    : (0, s.jsx)('div', {
+                          className: k.replyBadge,
+                          children: (0, s.jsx)(w, { className: k.replyIcon })
                       });
-            if (a.message.type === M.uaV.USER_JOIN || a.message.type === M.uaV.ROLE_SUBSCRIPTION_PURCHASE || a.message.type === M.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || a.message.type === M.uaV.GUILD_GAMING_STATS_PROMPT) return (0, n.jsx)(A, { className: _.userJoinSystemMessageIcon });
-            if (a.message.type === M.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, n.jsx)(c.Prq, {
+            if (r.message.type === T.uaV.USER_JOIN || r.message.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || r.message.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || r.message.type === T.uaV.GUILD_GAMING_STATS_PROMPT) return (0, s.jsx)(_, { className: k.userJoinSystemMessageIcon });
+            if (r.message.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+                return (0, s.jsx)(c.Prq, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.ticketIcon
+                    className: k.ticketIcon
                 });
-            if (a.message.type === M.uaV.POLL_RESULT)
-                return (0, n.jsx)(c.QDj, {
-                    className: _.repliedTextContentLeadingIcon,
-                    width: T.WW,
-                    height: T.WW,
+            if (r.message.type === T.uaV.POLL_RESULT)
+                return (0, s.jsx)(c.QDj, {
+                    className: k.repliedTextContentLeadingIcon,
+                    width: I.WW,
+                    height: I.WW,
                     size: 'custom'
                 });
-            let N = () => {
+            let b = () => {
                 var e, t;
                 return (
-                    (e = a.message.author),
-                    (t = r.guild_id),
-                    (0, n.jsx)('img', {
+                    (e = r.message.author),
+                    (t = i.guild_id),
+                    (0, s.jsx)('img', {
                         alt: '',
                         src:
                             (null == p ? void 0 : p.guildMemberAvatar) != null && null != t
-                                ? (0, j.JM)({
+                                ? (0, v.JM)({
                                       guildId: t,
                                       userId: e.id,
                                       avatar: p.guildMemberAvatar
                                   })
                                 : e.getAvatarURL(t, 16),
                         onClick: h,
-                        onContextMenu: C,
-                        className: i()({
-                            [_.replyAvatar]: !0,
-                            [_.clickable]: null != h
+                        onContextMenu: j,
+                        className: l()({
+                            [k.replyAvatar]: !0,
+                            [k.clickable]: null != h
                         }),
-                        ref: v
+                        ref: O
                     })
                 );
             };
             return null != t && null != g
-                ? (0, n.jsx)(d.Gt, {
-                      value: O,
-                      children: (0, n.jsx)(c.yRy, {
-                          targetElementRef: v,
+                ? (0, s.jsx)(m.Gt, {
+                      value: C,
+                      children: (0, s.jsx)(c.yRy, {
+                          targetElementRef: O,
                           renderPopout: t,
                           shouldShow: g,
                           position: 'right',
-                          onRequestClose: P,
-                          children: N
+                          onRequestClose: x,
+                          children: b
                       })
                   })
-                : (0, n.jsx)(d.Gt, {
-                      value: O,
-                      children: N()
+                : (0, s.jsx)(m.Gt, {
+                      value: C,
+                      children: b()
                   });
-        })(e, D, r.type),
-        V = (function (e, t) {
-            let { baseMessage: s, channel: l, referencedMessage: a, showUsernamePopout: i, onClickUsername: r, onContextMenu: o, onPopoutRequestClose: c } = e,
-                u = (null == a ? void 0 : a.state) === x.Y.LOADED ? a.message : void 0;
-            return null == u || u.type === M.uaV.USER_JOIN || u.type === M.uaV.ROLE_SUBSCRIPTION_PURCHASE || u.type === M.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || u.type === M.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || u.type === M.uaV.GUILD_GAMING_STATS_PROMPT || u.type === M.uaV.POLL_RESULT
+        })(e, L, i.type),
+        Z = (function (e, t) {
+            let { baseMessage: n, channel: a, referencedMessage: r, showUsernamePopout: l, onClickUsername: i, onContextMenu: o, onPopoutRequestClose: c } = e,
+                u = (null == r ? void 0 : r.state) === f.Y.LOADED ? r.message : void 0;
+            return null == u || u.type === T.uaV.USER_JOIN || u.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || u.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || u.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || u.type === T.uaV.GUILD_GAMING_STATS_PROMPT || u.type === T.uaV.POLL_RESULT
                 ? null
-                : (0, n.jsx)(y.Z, {
+                : (0, s.jsx)(N.Z, {
                       message: u,
-                      channel: l,
+                      channel: a,
                       compact: !0,
-                      withMentionPrefix: (0, P.Z)(s, u),
-                      showPopout: i,
+                      withMentionPrefix: (0, C.Z)(n, u),
+                      showPopout: l,
                       renderPopout: t,
-                      onClick: r,
+                      onClick: i,
                       onContextMenu: o,
                       onPopoutRequestClose: c,
                       isRepliedMessage: !0
                   });
-        })(e, D),
-        U = (function (e, t, s) {
-            let { content: l, referencedMessage: a, isReplyAuthorBlocked: r, isReplyAuthorIgnored: o, onClickReply: u } = e,
-                d = a.state !== x.Y.DELETED ? u : void 0;
-            switch (a.state) {
-                case x.Y.LOADED: {
+        })(e, L),
+        U = (function (e, t, n) {
+            let { content: a, referencedMessage: r, isReplyAuthorBlocked: i, isReplyAuthorIgnored: o, onClickReply: u } = e,
+                m = r.state !== f.Y.DELETED ? u : void 0;
+            switch (r.state) {
+                case f.Y.LOADED: {
                     let {
                         contentPlaceholder: e,
                         renderedContent: u,
-                        trailingIcon: m,
+                        trailingIcon: d,
                         leadingIcon: p
-                    } = R(a.message, l, r, o, _.repliedTextContent, {
-                        trailingIconClass: _.repliedTextContentTrailingIcon,
-                        leadingIconClass: _.repliedTextContentLeadingIcon,
-                        iconSize: T.WW
+                    } = D(r.message, a, i, o, k.repliedTextContent, {
+                        trailingIconClass: k.repliedTextContentTrailingIcon,
+                        leadingIconClass: k.repliedTextContentLeadingIcon,
+                        iconSize: I.WW
                     });
-                    return (0, n.jsxs)(n.Fragment, {
+                    return (0, s.jsxs)(s.Fragment, {
                         children: [
                             p,
-                            (0, n.jsx)(c.P3F, {
-                                className: i()(_.repliedTextPreview, _.clickable, { [_.repliedMessageClickableSpineHovered]: t }),
-                                onClick: d,
-                                onMouseEnter: s,
-                                onMouseLeave: s,
-                                children: (0, n.jsx)(c.nuw, {
+                            (0, s.jsx)(c.P3F, {
+                                className: l()(k.repliedTextPreview, k.clickable, { [k.repliedMessageClickableSpineHovered]: t }),
+                                onClick: m,
+                                onMouseEnter: n,
+                                onMouseLeave: n,
+                                children: (0, s.jsx)(c.nuw, {
                                     children:
                                         null != u
                                             ? u
-                                            : (0, n.jsx)('span', {
-                                                  className: _.repliedTextPlaceholder,
+                                            : (0, s.jsx)('span', {
+                                                  className: k.repliedTextPlaceholder,
                                                   children: e
                                               })
                                 })
                             }),
-                            m
+                            d
                         ]
                     });
                 }
-                case x.Y.NOT_LOADED:
-                    return (0, n.jsx)(c.P3F, {
-                        className: i()(_.repliedTextPreview, _.clickable),
-                        onClick: d,
-                        children: (0, n.jsx)('span', {
-                            className: _.repliedTextPlaceholder,
-                            children: I.intl.string(I.t['1i+hMj'])
+                case f.Y.NOT_LOADED:
+                    return (0, s.jsx)(c.P3F, {
+                        className: l()(k.repliedTextPreview, k.clickable),
+                        onClick: m,
+                        children: (0, s.jsx)('span', {
+                            className: k.repliedTextPlaceholder,
+                            children: M.intl.string(M.t['1i+hMj'])
                         })
                     });
-                case x.Y.DELETED:
-                    return (0, n.jsx)('div', {
-                        className: _.repliedTextPreview,
-                        children: (0, n.jsx)('span', {
-                            className: _.repliedTextPlaceholder,
-                            children: I.intl.string(I.t.mE3KJC)
+                case f.Y.DELETED:
+                    return (0, s.jsx)('div', {
+                        className: k.repliedTextPreview,
+                        children: (0, s.jsx)('span', {
+                            className: k.repliedTextPlaceholder,
+                            children: M.intl.string(M.t.mE3KJC)
                         })
                     });
                 default:
-                    (0, N.vE)(a);
+                    (0, y.vE)(r);
             }
-        })(e, E, k),
-        Z = l.useMemo(() => (e.compact ? (0, S.Z)((0, v.vc)(o()(), 'LT')) : null), [e.compact]);
-    null != s &&
-        null != a &&
-        (t = I.intl.formatToPlainString(I.t.RhbQ2N, {
-            author: null == a ? void 0 : a.nick,
-            repliedAuthor: null == s ? void 0 : s.nick
+        })(e, O, A),
+        V = a.useMemo(() => (e.compact ? (0, S.Z)((0, b.vc)(o()(), 'LT')) : null), [e.compact]);
+    null != n &&
+        null != r &&
+        (t = M.intl.formatToPlainString(M.t.RhbQ2N, {
+            author: null == r ? void 0 : r.nick,
+            repliedAuthor: null == n ? void 0 : n.nick
         }));
-    let G = r.type === M.uaV.CONTEXT_MENU_COMMAND;
-    return (0, n.jsxs)('div', {
-        id: (0, f.Gq)(r),
-        className: i()(_.repliedMessage, Z, G ? _.contextCommandMessage : { [_.messageSpine]: !O || (!h && C) }),
+    let z = i.type === T.uaV.CONTEXT_MENU_COMMAND;
+    return (0, s.jsxs)('div', {
+        id: (0, P.Gq)(i),
+        className: l()(k.repliedMessage, V, z ? k.contextCommandMessage : { [k.messageSpine]: !x || (!h && j) }),
         'aria-label': t,
         children: [
-            O &&
+            x &&
                 h &&
-                C &&
-                (0, n.jsx)(c.P3F, {
+                j &&
+                (0, s.jsx)(c.P3F, {
                     tag: 'div',
-                    'aria-label': I.intl.string(I.t.dpjpOj),
-                    className: i()(_.repliedMessageClickableSpine, { [_.repliedMessageContentHovered]: E }),
+                    'aria-label': M.intl.string(M.t.dpjpOj),
+                    className: l()(k.repliedMessageClickableSpine, { [k.repliedMessageContentHovered]: O }),
                     onClick: e.onClickReply,
-                    onMouseEnter: k,
-                    onMouseLeave: k
+                    onMouseEnter: A,
+                    onMouseLeave: A
                 }),
-            w,
-            V,
+            R,
+            Z,
             U
         ]
     });

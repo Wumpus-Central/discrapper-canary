@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(981631),
     Z = n(674563),
     R = n(388032),
-    k = n(126759);
-function L(e) {
+    L = n(126759);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,7 +76,7 @@ function D(e, t) {
     );
 }
 function M() {
-    return (0, r.jsx)('div', { className: k.dot });
+    return (0, r.jsx)('div', { className: L.dot });
 }
 function U(e) {
     let { message: t, compact: n } = e,
@@ -184,10 +184,10 @@ function G(e) {
             ]
         }),
         subheader: (0, r.jsxs)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children: [
                 (0, r.jsx)('div', {
-                    className: k.alertsEnabledSubHeader,
+                    className: L.alertsEnabledSubHeader,
                     children:
                         null != c &&
                         null != a &&
@@ -208,10 +208,10 @@ function G(e) {
                                         (0, r.jsxs)(
                                             f.P3F,
                                             D(
-                                                L(
+                                                k(
                                                     {
                                                         innerRef: _,
-                                                        className: k.alertsEnabledSubHeaderAvatarUsername
+                                                        className: L.alertsEnabledSubHeaderAvatarUsername
                                                     },
                                                     e
                                                 ),
@@ -219,7 +219,7 @@ function G(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             'div',
-                                                            D(L({}, p), {
+                                                            D(k({}, p), {
                                                                 children: (0, r.jsx)(f.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,
@@ -286,7 +286,7 @@ function H(e) {
             ]
         }),
         subheader: (0, r.jsxs)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children: [
                 null != a &&
                     (0, r.jsx)(f.Text, {
@@ -323,15 +323,15 @@ function H(e) {
                 : null,
         footerButtons: v
             ? (0, r.jsxs)('div', {
-                  className: k.footerRow,
+                  className: L.footerRow,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: k.footerAction,
+                          className: L.footerAction,
                           children: [
                               (0, r.jsx)(f.b7C, {
                                   size: 'xs',
                                   color: c.Z.BRAND,
-                                  className: k.footerIcon
+                                  className: L.footerIcon
                               }),
                               (0, r.jsx)(f.Avr, {
                                   variant: 'primary',
@@ -346,7 +346,7 @@ function H(e) {
                       }),
                       (0, r.jsx)(M, {}),
                       (0, r.jsx)('div', {
-                          className: k.footerAction,
+                          className: L.footerAction,
                           children: (0, r.jsx)(f.Avr, {
                               variant: 'primary',
                               textVariant: 'text-xs/medium',
@@ -381,7 +381,7 @@ function V(e) {
             ]
         }),
         subheader: (0, r.jsx)('div', {
-            className: k.dotSeparatedRow,
+            className: L.dotSeparatedRow,
             children:
                 null != o &&
                 (0, r.jsx)(f.Text, {
@@ -396,10 +396,10 @@ function V(e) {
             children: R.intl.string(R.t.SWIWER)
         }),
         footerButtons: (0, r.jsxs)('div', {
-            className: k.footerRow,
+            className: L.footerRow,
             children: [
                 (0, r.jsx)('div', {
-                    className: k.footerAction,
+                    className: L.footerAction,
                     children: (0, r.jsx)(f.Avr, {
                         variant: 'primary',
                         textVariant: 'text-xs/medium',
@@ -416,7 +416,7 @@ function V(e) {
                 }),
                 (0, r.jsx)(M, {}),
                 (0, r.jsx)('div', {
-                    className: k.footerAction,
+                    className: L.footerAction,
                     children: (0, r.jsx)(f.Avr, {
                         variant: 'primary',
                         textVariant: 'text-xs/medium',
@@ -434,21 +434,21 @@ function V(e) {
 function z(e) {
     let { compact: t, header: n, subheader: i, content: l, footerButtons: o } = e;
     return (0, r.jsxs)('div', {
-        className: a()(k.embedCard, { [k.compact]: t }),
+        className: a()(L.embedCard, { [L.compact]: t }),
         children: [
             (0, r.jsxs)('div', {
-                className: k.cardContent,
+                className: L.cardContent,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: k.cardHeaderContianer,
+                        className: L.cardHeaderContianer,
                         children: [
                             (0, r.jsx)('div', {
-                                className: k.cardHeader,
+                                className: L.cardHeader,
                                 children: n
                             }),
                             null != i &&
                                 (0, r.jsx)('div', {
-                                    className: k.subheader,
+                                    className: L.subheader,
                                     children: i
                                 })
                         ]
@@ -458,7 +458,7 @@ function z(e) {
             }),
             null != o &&
                 (0, r.jsx)('div', {
-                    className: a()(k.centeredRowContainer, k.cardFooter, { [k.compact]: t }),
+                    className: a()(L.centeredRowContainer, L.cardFooter, { [L.compact]: t }),
                     children: o
                 })
         ]
@@ -476,37 +476,37 @@ function W(e) {
         onMouseEnter: s,
         onMouseLeave: c,
         children: (0, r.jsx)(A.Z, {
-            className: a()(k.mainContainer, { [k.compact]: n }),
+            className: a()(L.mainContainer, { [L.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(P.S, { src: o }),
-            iconContainerClassName: k.iconContainer,
+            iconContainerClassName: L.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: a()(k.content, { [k.compact]: n }),
+                className: a()(L.content, { [L.compact]: n }),
                 children: [
                     (0, r.jsx)(T.nD, {
                         message: i,
-                        messageClassname: k.spanCorrection,
-                        className: a()(k.usernameContainer, k.spanCorrection, { [k.compact]: n }),
+                        messageClassname: L.spanCorrection,
+                        className: a()(L.usernameContainer, L.spanCorrection, { [L.compact]: n }),
                         username: (0, r.jsxs)('div', {
-                            className: k.spanCorrection,
+                            className: L.spanCorrection,
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: k.username,
+                                    className: L.username,
                                     children: R.intl.string(R.t.hG1StL)
                                 }),
                                 (0, r.jsx)(h.Z, {
                                     type: Z.Hb.SYSTEM_DM,
-                                    className: k.systemTag
+                                    className: L.systemTag
                                 }),
                                 p &&
                                     (0, r.jsx)(f.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-primary',
                                         tag: 'span',
-                                        className: k.spanCorrection,
+                                        className: L.spanCorrection,
                                         children: R.intl.string(R.t.ufawc3)
                                     })
                             ]
@@ -514,7 +514,7 @@ function W(e) {
                         compact: n,
                         showTimestamp: !0
                     }),
-                    (0, r.jsx)('div', { className: k.flexLineBreak }),
+                    (0, r.jsx)('div', { className: L.flexLineBreak }),
                     (0, r.jsx)(U, {
                         message: i,
                         compact: n

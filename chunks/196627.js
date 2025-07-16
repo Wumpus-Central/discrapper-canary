@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var a = n(990761);
 let i = n(848304),
-    l = (e) => {
+    o = (e) => {
         let { element: t } = e;
         return (null == t ? void 0 : t.type) !== 'success'
             ? null

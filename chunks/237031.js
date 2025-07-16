@@ -1,21 +1,21 @@
 r.d(t, {
-    T: () => a,
-    v: () => o
+    T: () => o,
+    v: () => a
 });
 var n = r(255367);
 r(73800);
-var i = r(481060);
-let l = 'collectibles shop product details modal',
-    a = (e) => {
-        let { product: t, category: a, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
-        (0, i.ZDy)(
+var l = r(481060);
+let i = 'collectibles shop product details modal',
+    o = (e) => {
+        let { product: t, category: o, shouldCheckoutWithOrbs: a, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
+        (0, l.ZDy)(
             async () => {
                 let { default: e } = await r.e('2026').then(r.bind(r, 702370));
                 return (r) => {
-                    var i, l;
+                    var l, i;
                     return (0, n.jsx)(
                         e,
-                        ((i = (function (e) {
+                        ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -40,18 +40,18 @@ let l = 'collectibles shop product details modal',
                             }
                             return e;
                         })({}, r)),
-                        (l = l =
+                        (i = i =
                             {
                                 product: t,
-                                category: a,
-                                shouldCheckoutWithOrbs: o,
+                                category: o,
+                                shouldCheckoutWithOrbs: a,
                                 analyticsSource: s,
                                 analyticsLocations: c,
                                 returnRef: u,
                                 tab: d
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -59,16 +59,16 @@ let l = 'collectibles shop product details modal',
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        i)
+                        l)
                     );
                 };
             },
-            { modalKey: l }
+            { modalKey: i }
         );
     },
-    o = () => {
-        (0, i.Mr3)(l);
+    a = () => {
+        (0, l.Mr3)(i);
     };

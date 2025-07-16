@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(255367),
     a = n(73800),
     i = n(481060),
-    l = n(454585),
-    o = n(273744),
+    o = n(454585),
+    l = n(273744),
     s = n(334077);
 let c = (e) => {
     var t, n;
@@ -11,7 +11,7 @@ let c = (e) => {
             node: { info: c }
         } = e,
         d = a.useRef(
-            l.Z.reactParserFor(
+            o.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,8 +36,8 @@ let c = (e) => {
                             }));
                     }
                     return e;
-                })({}, l.Z.defaultRules)),
-                (n = n = { link: o.s }),
+                })({}, o.Z.defaultRules)),
+                (n = n = { link: l.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {

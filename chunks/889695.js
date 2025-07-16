@@ -76,14 +76,14 @@ function I(e) {
             [l, n, T, Z, o]
         );
     if (null == n || null == l || null == N) return null;
-    let k = {};
+    let L = {};
     return (N.roles.forEach((e) => {
         let t = o[e];
-        null != t && (k[t.id] = t);
+        null != t && (L[t.id] = t);
     }),
     c.e$(
         g.I0({
-            forceRoles: k,
+            forceRoles: L,
             context: l
         }),
         c.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)

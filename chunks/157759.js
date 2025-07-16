@@ -2,8 +2,8 @@
 var r = n(255367),
     a = n(73800),
     i = n(442837),
-    l = n(755721),
-    o = n(668781),
+    o = n(755721),
+    l = n(668781),
     s = n(367907),
     c = n(434404),
     d = n(330010),
@@ -11,16 +11,16 @@ var r = n(255367),
     m = n(592125),
     p = n(430824),
     _ = n(496675),
-    g = n(944486),
-    b = n(981631),
+    b = n(944486),
+    g = n(981631),
     x = n(388032);
 let h = (e) => {
     let { application: t, reportId: n } = e,
         [h, f] = a.useState(!1),
         [v, j] = a.useState(!1),
-        C = (0, i.e7)([g.Z, m.Z], () => {
+        C = (0, i.e7)([b.Z, m.Z], () => {
             var e;
-            return null == (e = m.Z.getChannel(g.Z.getChannelId())) ? void 0 : e.guild_id;
+            return null == (e = m.Z.getChannel(b.Z.getChannelId())) ? void 0 : e.guild_id;
         }),
         [y, I] = a.useState(null);
     (a.useEffect(() => {
@@ -49,7 +49,7 @@ let h = (e) => {
         }, [C, t.id]));
     let O = a.useCallback(() => {
             (j(!1),
-                s.ZP.trackWithMetadata(b.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
+                s.ZP.trackWithMetadata(g.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: C,
                     application_id: t.id,
                     report_id: n
@@ -57,7 +57,7 @@ let h = (e) => {
                 null != C &&
                     null != y &&
                     c.Z.disableIntegration(C, y.id).catch(() => {
-                        o.Z.show({
+                        l.Z.show({
                             title: x.intl.string(x.t.wYqMmJ),
                             body: x.intl.string(x.t.A4Mnsr)
                         });
@@ -66,8 +66,8 @@ let h = (e) => {
         T = (0, i.e7)([_.Z, p.Z], () => {
             let e = p.Z.getGuild(C);
             if (null == e) return !1;
-            let n = _.Z.can(b.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || _.Z.canManageUser(b.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = _.Z.can(g.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || _.Z.canManageUser(g.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
     return null != t && null != C && h && T
@@ -76,8 +76,8 @@ let h = (e) => {
               description: x.intl.string(x.t['FlcC+/']),
               buttonText: v ? x.intl.string(x.t.aCJlq6) : x.intl.string(x.t['6I1F3t']),
               buttonDisabled: !v,
-              buttonColor: v ? l.zx.Colors.RED : l.zx.Colors.WHITE,
-              buttonLook: v ? l.zx.Looks.FILLED : l.zx.Looks.LINK,
+              buttonColor: v ? o.zx.Colors.RED : o.zx.Colors.WHITE,
+              buttonLook: v ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
               onButtonPress: O
           })
         : null;

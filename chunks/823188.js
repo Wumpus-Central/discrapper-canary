@@ -33,8 +33,8 @@ var l = n(120356),
     E = n(33052),
     N = n(104494),
     b = n(639119),
-    S = n(784238),
-    _ = n(346497),
+    _ = n(784238),
+    S = n(346497),
     R = n(382791),
     Z = n(63802),
     y = n(52741),
@@ -308,13 +308,13 @@ function q(e) {
         f = null == g || null == (t = g.subscription_trial) ? void 0 : t.sku_id,
         I = (0, j.Nx)(),
         v = (0, N.Ng)(),
-        S = null != g ? O.C.PREMIUM_TRIAL : null != v ? O.C.PREMIUM_DISCOUNT : null,
+        _ = null != g ? O.C.PREMIUM_TRIAL : null != v ? O.C.PREMIUM_DISCOUNT : null,
         R = (0, T.Vi)(),
         Z = !m && I,
         w = null == (n = (0, P.Z)()) ? void 0 : n.planSelection,
         M = null == w || null == (i = w.getBackgroundImageUrl) ? void 0 : i.call(w),
         L = null == w || null == (l = w.getCardImageUrl) ? void 0 : l.call(w),
-        H = (0, _.W)();
+        H = (0, S.W)();
     return (0, r.jsxs)('div', {
         className: a()(U.card, U.tier2, U.tier2ApplicationHomeBackground, d, {
             [U.withTier2Rim]: Z,
@@ -361,7 +361,7 @@ function q(e) {
                             (0, r.jsx)(y.Z, {
                                 isGift: m,
                                 premiumTier: O.p9.TIER_2,
-                                offerType: S,
+                                offerType: _,
                                 offerTierMatchesCard: f === O.Si.TIER_2 || (0, N.Wp)(v, O.Si.TIER_2),
                                 showYearlyPrice: o,
                                 priceOptions: p,
@@ -389,7 +389,7 @@ function q(e) {
 }
 function K(e) {
     var t, n, i, l;
-    let { showWumpus: d, ctaButton: m, showYearlyPrice: C, featureSet: p = 0, className: f, isGift: I = !1, isModal: v = !1, priceOptions: S, showPromotionalGiftBanner: w = !1 } = e,
+    let { showWumpus: d, ctaButton: m, showYearlyPrice: C, featureSet: p = 0, className: f, isGift: I = !1, isModal: v = !1, priceOptions: _, showPromotionalGiftBanner: w = !1 } = e,
         M = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         H = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
         A = (0, b.N)(),
@@ -404,7 +404,7 @@ function K(e) {
         K = null == (n = (0, P.Z)()) ? void 0 : n.planSelection,
         Y = null == K || null == (i = K.getBackgroundImageUrl) ? void 0 : i.call(K),
         Q = null == K || null == (l = K.getCardImageUrl) ? void 0 : l.call(K),
-        $ = (0, _.W)(),
+        $ = (0, S.W)(),
         J = (0, o.ap)((0, u.ZP)()),
         ee = J ? R.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE : R.VE.PREMIUM_TIER_2_WHITE_FILL,
         et = (0, R.A1)(F, k, V, A, G),
@@ -477,7 +477,7 @@ function K(e) {
                                 offerType: W,
                                 offerTierMatchesCard: G === O.Si.TIER_2 || (0, N.Wp)(V, O.Si.TIER_2),
                                 showYearlyPrice: C,
-                                priceOptions: S,
+                                priceOptions: _,
                                 headingVariant: 'heading-md/normal',
                                 headingColor: 'always-white'
                             })
@@ -505,7 +505,7 @@ function Q(e) {
     let { innerRef: t, hasActiveTier2PremiumPromotion: n, className: i } = e,
         { analyticsLocations: l } = (0, m.ZP)(d.Z.PREMIUM_MARKETING_TIER_CARD),
         s = Y(t),
-        o = (0, r.jsx)(S.Z, {
+        o = (0, r.jsx)(_.Z, {
             color: void 0,
             showIcon: !1,
             subscriptionTier: O.Si.TIER_0,
@@ -513,7 +513,7 @@ function Q(e) {
             textOptions: { textClassName: U.v2SubButtonText },
             buttonShineClassName: U.buttonShine
         }),
-        u = (0, r.jsx)(S.Z, {
+        u = (0, r.jsx)(_.Z, {
             color: void 0,
             showIcon: !1,
             subscriptionTier: O.Si.TIER_2,

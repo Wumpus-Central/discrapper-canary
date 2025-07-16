@@ -20,17 +20,17 @@ function x(e) {
         v = (0, m.Z)(t),
         g = (0, d.At)(),
         h = (0, p.V)('GuildPowerupsPage'),
-        j = !b || null == v || null == x,
-        E = (0, a.ZP)(null != g ? g : []);
+        E = !b || null == v || null == x,
+        j = (0, a.ZP)(null != g ? g : []);
     return ((0, s.Z)(
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: E.analyticsLocations }
+            properties: { location_stack: j.analyticsLocations }
         },
-        { disableTrack: j }
+        { disableTrack: E }
     ),
-    j)
+    E)
         ? null
         : v || h
           ? (0, r.jsx)(_.Z, {

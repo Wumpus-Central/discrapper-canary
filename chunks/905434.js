@@ -3,12 +3,12 @@ var r = n(255367);
 n(73800);
 var a = n(481060),
     i = n(565138),
-    l = n(430824),
-    o = n(388032),
+    o = n(430824),
+    l = n(388032),
     s = n(680006);
 let c = (e) => {
     let { stageInstance: t } = e,
-        n = l.Z.getGuild(t.guild_id);
+        n = o.Z.getGuild(t.guild_id);
     return null == n
         ? null
         : (0, r.jsxs)('div', {
@@ -17,7 +17,7 @@ let c = (e) => {
                   (0, r.jsx)(a.X6q, {
                       className: s.header,
                       variant: 'heading-sm/semibold',
-                      children: o.intl.string(o.t['InbJ8/'])
+                      children: l.intl.string(l.t['InbJ8/'])
                   }),
                   (0, r.jsxs)('div', {
                       className: s.guildContainer,

@@ -9,9 +9,9 @@ var i = n(255367),
     d = n(313201),
     u = n(455708),
     f = n(222062),
-    g = n(530329),
-    p = n(626135),
-    _ = n(488499),
+    _ = n(530329),
+    g = n(626135),
+    p = n(488499),
     m = n(58384),
     N = n(981631),
     x = n(486324),
@@ -22,8 +22,8 @@ function P(e) {
         [j, v] = a.useState(!1),
         y = (0, l.vRw)(),
         C = (0, d.Dt)(),
-        { analyticsLocations: I, newestAnalyticsLocation: Z } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function L(e) {
+        { analyticsLocations: I, newestAnalyticsLocation: L } = (0, s.ZP)(c.Z.GIF_PICKER);
+    async function Z(e) {
         let { gifSrc: t } = e;
         if (null == t || j) return;
         v(!0);
@@ -77,14 +77,14 @@ function P(e) {
             ));
     }
     a.useEffect(() => {
-        p.default.track(N.rMx.OPEN_MODAL, {
+        g.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
             location: { page: R }
         });
     }, [I, R]);
     let B = b === x.pC.AVATAR || b === x.pC.BANNER,
-        k = (0, f.M)(!B);
+        w = (0, f.M)(!B);
     return (0, i.jsx)(s.Gt, {
         value: I,
         children: (0, i.jsxs)(l.Y0X, {
@@ -94,8 +94,8 @@ function P(e) {
             parentComponent: 'GIFPickerCroppingModal',
             children: [
                 E &&
-                    !k &&
-                    (0, i.jsx)(_.Z, {
+                    !w &&
+                    (0, i.jsx)(p.Z, {
                         type: b,
                         analyticsPage: R,
                         analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
@@ -119,19 +119,19 @@ function P(e) {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(u.Z, {
-                            contentClassName: r()({ [A.gifPickerContent]: E && k }),
+                            contentClassName: r()({ [A.gifPickerContent]: E && w }),
                             className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
-                            onSelectGIF: L,
+                            onSelectGIF: Z,
                             hideFavorites: !0
                         }),
                         j && (0, i.jsx)(l.$jN, { className: A.spinner })
                     ]
                 }),
                 E &&
-                    k &&
-                    (0, i.jsx)(g.Z, {
+                    w &&
+                    (0, i.jsx)(_.Z, {
                         uploadType: b,
-                        analyticsSource: Z,
+                        analyticsSource: L,
                         showUpsell: !0,
                         className: A.nitroUpsell
                     })

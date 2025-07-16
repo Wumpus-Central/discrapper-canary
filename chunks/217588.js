@@ -31,7 +31,7 @@ var r = n(255367),
     w = n(388032),
     Z = n(673206),
     R = n(239594);
-function k(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
     }
     return e;
 }
-function L(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -140,7 +140,7 @@ let B = (e) => {
             let { channel: e } = h.current;
             v.default.track(
                 P.rMx.OPEN_POPOUT,
-                k(
+                L(
                     {
                         type: P.jXE.STICKER_POPOUT,
                         guild_id: e.getGuildId(),
@@ -219,7 +219,7 @@ let B = (e) => {
                 }),
                 [l.guild_id]
             ),
-            { current: Y } = i.useRef(k({ guild_id: l.getGuildId() }, (0, p.v_)(l))),
+            { current: Y } = i.useRef(L({ guild_id: l.getGuildId() }, (0, p.v_)(l))),
             X = {
                 stickerSourceGuild: B,
                 refreshPositionKey: E
@@ -256,7 +256,7 @@ let B = (e) => {
             e();
         }, [S, j]),
         (0, d.ZP)(() => {
-            v.default.track(P.rMx.OPEN_POPOUT, k({ type: ee }, Y));
+            v.default.track(P.rMx.OPEN_POPOUT, L({ type: ee }, Y));
         }),
         S)
             ? (0, r.jsxs)(b.W_, {
@@ -358,7 +358,7 @@ let B = (e) => {
                                                           children: t.map((e) =>
                                                               (0, r.jsx)(
                                                                   c.ua7,
-                                                                  L(k({ text: e.name }, b.b_), {
+                                                                  k(L({ text: e.name }, b.b_), {
                                                                       children: (t) => {
                                                                           var { onMouseEnter: n, onMouseLeave: i } = t,
                                                                               l = (function (e, t) {
@@ -382,8 +382,8 @@ let B = (e) => {
                                                                               })(t, ['onMouseEnter', 'onMouseLeave']);
                                                                           return (0, r.jsx)(
                                                                               'div',
-                                                                              L(
-                                                                                  k(
+                                                                              k(
+                                                                                  L(
                                                                                       {
                                                                                           className: a()(R.otherEmoji, { [Z.nonInteractingSticker]: null != z && z !== e.id }),
                                                                                           onMouseEnter: () => {

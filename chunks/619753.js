@@ -31,8 +31,8 @@ var r = n(255367),
     w = n(101695),
     Z = n(683101),
     R = n(981631),
-    k = n(388032),
-    L = n(378869);
+    L = n(388032),
+    k = n(378869);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -184,13 +184,13 @@ let U = i.memo(function (e) {
             _ > 0 || h > 0
                 ? (0, r.jsxs)(s.P3F, {
                       tag: 'div',
-                      className: L.resultsBlocked,
+                      className: k.resultsBlocked,
                       onClick: () => u.QY(l, !j),
                       children: [
-                          (0, r.jsx)('div', { className: L.resultsBlockedImage }),
+                          (0, r.jsx)('div', { className: k.resultsBlockedImage }),
                           (0, r.jsx)('div', {
-                              className: L.__invalid_resultsBlockedText,
-                              children: j ? (_ > 0 && h > 0 ? k.intl.formatToPlainString(k.t['OvJs9/'], { count: _ + h }) : _ > 0 ? k.intl.formatToPlainString(k.t['n/1QFR'], { count: _ }) : k.intl.formatToPlainString(k.t.ypezTE, { count: h })) : _ > 0 && h > 0 ? k.intl.formatToPlainString(k.t.EJHRcX, { count: _ + h }) : _ > 0 ? k.intl.formatToPlainString(k.t.HTE8JC, { count: _ }) : k.intl.formatToPlainString(k.t.e7f8r6, { count: h })
+                              className: k.__invalid_resultsBlockedText,
+                              children: j ? (_ > 0 && h > 0 ? L.intl.formatToPlainString(L.t['OvJs9/'], { count: _ + h }) : _ > 0 ? L.intl.formatToPlainString(L.t['n/1QFR'], { count: _ }) : L.intl.formatToPlainString(L.t.ypezTE, { count: h })) : _ > 0 && h > 0 ? L.intl.formatToPlainString(L.t.EJHRcX, { count: _ + h }) : _ > 0 ? L.intl.formatToPlainString(L.t.HTE8JC, { count: _ }) : L.intl.formatToPlainString(L.t.e7f8r6, { count: h })
                           })
                       ]
                   })
@@ -214,12 +214,12 @@ function F(e) {
     let l = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i, {
-                className: L.parentChannelNameIcon,
+                className: k.parentChannelNameIcon,
                 size: 'xxs',
                 color: 'currentColor'
             }),
             (0, r.jsx)(s.Text, {
-                className: L.parentChannelNameText,
+                className: k.parentChannelNameText,
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
                 children: t.name
@@ -228,20 +228,20 @@ function F(e) {
     });
     return (0, v.Em)(t.type)
         ? (0, r.jsx)(s.P3F, {
-              className: a()(L.parentChannelName, L.parentChannelNameClickable),
+              className: a()(k.parentChannelName, k.parentChannelNameClickable),
               onClick: (e) => {
                   (e.stopPropagation(), n(t.id));
               },
               children: l
           })
         : (0, r.jsx)('div', {
-              className: L.parentChannelName,
+              className: k.parentChannelName,
               children: l
           });
 }
 function B(e) {
     var t, n, l;
-    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: y, renderEmbeds: v, offset: T, jumpToMessage: A, listNavigator: w, favoriteSearch: k } = e,
+    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: y, renderEmbeds: v, offset: T, jumpToMessage: A, listNavigator: w, favoriteSearch: L } = e,
         U = C.cC.useSetting(),
         B = (0, h.p)(),
         G = i.useCallback((e) => {
@@ -250,7 +250,7 @@ function B(e) {
             null != t && (I.Z.can(R.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, x.Kh)(t.id);
         }, []),
         H = null != a ? (0, m.F6)(a, P.default, S.Z, !1) : '???',
-        V = k && null != a.guild_id ? (null == (t = j.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
+        V = L && null != a.guild_id ? (null == (t = j.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
         z = (null == a ? void 0 : a.parent_id) != null ? O.Z.getChannel(a.parent_id) : null,
         W = null != (n = null == z ? void 0 : z.name) ? n : null,
         K = null != (l = (0, f.KS)(a)) ? l : s.VL1,
@@ -276,16 +276,16 @@ function B(e) {
         value: (0, g.Z)(U, Y),
         children: (0, r.jsxs)('ul', {
             role: 'group',
-            className: L.searchResultGroup,
+            className: k.searchResultGroup,
             'aria-label': $,
             children: [
                 (0, r.jsx)(s.P3F, {
                     onClick: () => G(a.id),
                     children: (0, r.jsxs)('div', {
-                        className: L.channelNameContainer,
+                        className: k.channelNameContainer,
                         children: [
                             (0, r.jsx)(K, {
-                                className: L.channelNameIcon,
+                                className: k.channelNameIcon,
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
@@ -297,8 +297,8 @@ function B(e) {
                                         'span',
                                         M(D({}, e), {
                                             ref: q,
-                                            className: L.channelNameText,
-                                            children: [k && null !== V && ''.concat(V, ' : '), X]
+                                            className: k.channelNameText,
+                                            children: [L && null !== V && ''.concat(V, ' : '), X]
                                         })
                                     )
                             }),

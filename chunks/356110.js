@@ -2,8 +2,8 @@
 var r = n(255367),
     a = n(73800),
     i = n(481060),
-    l = n(843716),
-    o = n(20493);
+    o = n(843716),
+    l = n(20493);
 let s = (e) => {
         let { element: t, onChange: n, initialOption: s } = e,
             [c, d] = a.useState('');
@@ -21,18 +21,18 @@ let s = (e) => {
         return (0, r.jsxs)(
             'div',
             {
-                className: o.marginBottom8,
+                className: l.marginBottom8,
                 children: [
                     null != m &&
                         (0, r.jsx)('div', {
-                            className: o.marginBottom8,
+                            className: l.marginBottom8,
                             children: (0, r.jsxs)(i.Text, {
                                 variant: 'text-sm/bold',
                                 children: [
                                     m,
                                     t.should_submit_data &&
                                         (0, r.jsx)('span', {
-                                            className: l.required,
+                                            className: o.required,
                                             children: '*'
                                         })
                                 ]
@@ -52,15 +52,15 @@ let s = (e) => {
         let { elements: t, onChange: n, state: a } = e,
             i = t.map((e) => {
                 var t, i;
-                let l = e.name;
+                let o = e.name;
                 return (0, r.jsx)(
                     s,
                     {
                         element: e,
-                        initialOption: null != (i = null == a || null == (t = a[l]) ? void 0 : t.value) ? i : void 0,
-                        onChange: (e) => n(l, e)
+                        initialOption: null != (i = null == a || null == (t = a[o]) ? void 0 : t.value) ? i : void 0,
+                        onChange: (e) => n(o, e)
                     },
-                    l
+                    o
                 );
             });
         return (0, r.jsx)('div', { children: i });

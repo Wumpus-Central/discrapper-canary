@@ -3,25 +3,25 @@ var r = n(255367);
 n(73800);
 var a = n(481060),
     i = n(565138),
-    l = n(388032),
-    o = n(179979);
+    o = n(388032),
+    l = n(179979);
 let s = (e) => {
     let { guild: t } = e;
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: l.container,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: o.header,
+                className: l.header,
                 variant: 'heading-sm/semibold',
-                children: l.intl.string(l.t['0ox7Hh'])
+                children: o.intl.string(o.t['0ox7Hh'])
             }),
             (0, r.jsx)('div', {
-                className: o.guildContainer,
+                className: l.guildContainer,
                 children: (0, r.jsxs)('div', {
-                    className: o.guildInfo,
+                    className: l.guildInfo,
                     children: [
                         (0, r.jsx)('div', {
-                            className: o.guildIcon,
+                            className: l.guildIcon,
                             children: (0, r.jsx)(i.Z, {
                                 guild: t,
                                 size: i.Z.Sizes.LARGE

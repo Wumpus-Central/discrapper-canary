@@ -3,15 +3,15 @@ var r = n(255367);
 n(73800);
 var a = n(481060),
     i = n(565138),
-    l = n(592125),
-    o = n(430824),
+    o = n(592125),
+    l = n(430824),
     s = n(388032),
     c = n(548304);
 let d = (e) => {
     let { entry: t } = e,
-        n = l.Z.getChannel(t.channelId);
+        n = o.Z.getChannel(t.channelId);
     if (null == n) return null;
-    let d = o.Z.getGuild(n.guild_id);
+    let d = l.Z.getGuild(n.guild_id);
     return null == d
         ? null
         : (0, r.jsxs)('div', {
