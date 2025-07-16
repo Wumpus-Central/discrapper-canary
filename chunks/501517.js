@@ -1,16 +1,16 @@
-e.d(n, { Z: () => l });
-var i = e(544891),
-    r = e(981631);
+n.d(t, { Z: () => l });
+var i = n(544891),
+    r = n(981631);
 let l = {
-    resolveFlag: (t) =>
+    resolveFlag: (e) =>
         i.tn.post({
-            url: r.ANM.MODERATOR_REPORT_CLOSE(t),
+            url: r.ANM.MODERATOR_REPORT_CLOSE(e),
             body: {},
             rejectWithError: !0
         }),
-    reopenModReport: (t) =>
+    reopenModReport: (e) =>
         i.tn.put({
-            url: r.ANM.REPORT_TO_MOD_REOPEN(t),
+            url: r.ANM.REPORT_TO_MOD_REOPEN(e),
             rejectWithError: !0
         })
 };

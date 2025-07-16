@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -23,12 +23,11 @@ var r = n(255367),
     C = n(292140),
     S = n(525296),
     N = n(981631),
-    T = n(674563),
-    P = n(46140),
-    j = n(388032),
-    A = n(370168);
-let Z = 15 * E.Z.Millis.MINUTE,
-    x = (0, S.Z)(function (e) {
+    T = n(46140),
+    P = n(388032),
+    j = n(370168);
+let A = 15 * E.Z.Millis.MINUTE,
+    Z = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
             c = (0, r.jsx)(I.Z, {
@@ -49,7 +48,7 @@ let Z = 15 * E.Z.Millis.MINUTE,
                 let e = f
                     .filter((e) => {
                         var t, n;
-                        return (null == (t = e.game) ? void 0 : t.name) != null && (null == (n = e.game) ? void 0 : n.type) === T.wW.DEPRECATED_GAME;
+                        return (null == (t = e.game) ? void 0 : t.name) != null && (0, _.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type);
                     })
                     .map((e) => e.game.name);
                 _.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
@@ -60,7 +59,7 @@ let Z = 15 * E.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [m, b, E, O, f]),
-            P = s()(S, Z);
+            T = s()(S, A);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: o,
@@ -106,9 +105,9 @@ let Z = 15 * E.Z.Millis.MINUTE,
                           (i = i =
                               {
                                   ref: o,
-                                  onMouseEnter: P,
+                                  onMouseEnter: T,
                                   'aria-haspopup': 'menu',
-                                  className: A.itemCard,
+                                  className: j.itemCard,
                                   active: l,
                                   children: (0, r.jsxs)('div', {
                                       children: [c, d]
@@ -132,8 +131,8 @@ let Z = 15 * E.Z.Millis.MINUTE,
               })
             : null;
     }),
-    w = a().throttle(() => f._(), 300000);
-function L() {
+    x = a().throttle(() => f._(), 300000);
+function w() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -150,12 +149,12 @@ function L() {
         o = (0, c.e7)([p.Z], () => p.Z.quests);
     (i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && w();
+            n && !l && x();
         }, [n, l]));
     let s = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, h.MM)(o, P.l$);
+                r = (0, h.MM)(o, T.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
@@ -172,7 +171,7 @@ function L() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            x,
+                            Z,
                             {
                                 party: t,
                                 quest: s.get(t.id)
@@ -181,23 +180,23 @@ function L() {
                         );
                     })
                   : (0, r.jsxs)('div', {
-                        className: A.emptyCard,
+                        className: j.emptyCard,
                         children: [
                             (0, r.jsx)(u.X6q, {
                                 variant: 'heading-md/semibold',
-                                className: A.emptyHeader,
-                                children: j.intl.string(j.t['ngJ/5u'])
+                                className: j.emptyHeader,
+                                children: P.intl.string(P.t['ngJ/5u'])
                             }),
                             (0, r.jsx)(u.Text, {
                                 color: 'none',
-                                className: A.emptyText,
+                                className: j.emptyText,
                                 variant: 'text-sm/normal',
-                                children: j.intl.string(j.t['99ZWxc'])
+                                children: P.intl.string(P.t['99ZWxc'])
                             })
                         ]
                     }))
         : (0, r.jsx)('div', {
-              className: A.emptyCard,
+              className: j.emptyCard,
               children: (0, r.jsx)(u.$jN, {})
           });
 }

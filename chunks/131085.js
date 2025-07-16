@@ -5,7 +5,7 @@ n.d(t, {
     x_: () => r
 });
 var r = (function (e) {
-    return ((e[(e.SWORD = 0)] = 'SWORD'), (e[(e.WATER_DROP = 1)] = 'WATER_DROP'), (e[(e.SKULL = 2)] = 'SKULL'), (e[(e.TOADSTOOL = 3)] = 'TOADSTOOL'), (e[(e.MOON = 4)] = 'MOON'), (e[(e.LIGHTNING = 5)] = 'LIGHTNING'), (e[(e.LEAF = 6)] = 'LEAF'), (e[(e.HEART = 7)] = 'HEART'), (e[(e.FIRE = 8)] = 'FIRE'), (e[(e.COMPASS = 9)] = 'COMPASS'), (e[(e.CROSSHAIRS = 10)] = 'CROSSHAIRS'), (e[(e.FLOWER = 11)] = 'FLOWER'), (e[(e.FORCE = 12)] = 'FORCE'), (e[(e.GEM = 13)] = 'GEM'), (e[(e.LAVA = 14)] = 'LAVA'), (e[(e.PSYCHIC = 15)] = 'PSYCHIC'), (e[(e.SMOKE = 16)] = 'SMOKE'), (e[(e.SNOW = 17)] = 'SNOW'), (e[(e.SOUND = 18)] = 'SOUND'), (e[(e.SUN = 19)] = 'SUN'), (e[(e.WIND = 20)] = 'WIND'), e);
+    return ((e[(e.SWORD = 0)] = 'SWORD'), (e[(e.WATER_DROP = 1)] = 'WATER_DROP'), (e[(e.SKULL = 2)] = 'SKULL'), (e[(e.TOADSTOOL = 3)] = 'TOADSTOOL'), (e[(e.MOON = 4)] = 'MOON'), (e[(e.LIGHTNING = 5)] = 'LIGHTNING'), (e[(e.LEAF = 6)] = 'LEAF'), (e[(e.HEART = 7)] = 'HEART'), (e[(e.FIRE = 8)] = 'FIRE'), (e[(e.COMPASS = 9)] = 'COMPASS'), (e[(e.CROSSHAIRS = 10)] = 'CROSSHAIRS'), (e[(e.FLOWER = 11)] = 'FLOWER'), (e[(e.FORCE = 12)] = 'FORCE'), (e[(e.GEM = 13)] = 'GEM'), (e[(e.LAVA = 14)] = 'LAVA'), (e[(e.PSYCHIC = 15)] = 'PSYCHIC'), (e[(e.SMOKE = 16)] = 'SMOKE'), (e[(e.SNOW = 17)] = 'SNOW'), (e[(e.SOUND = 18)] = 'SOUND'), (e[(e.SUN = 19)] = 'SUN'), (e[(e.WIND = 20)] = 'WIND'), (e[(e.BUNNY = 21)] = 'BUNNY'), (e[(e.DOG = 22)] = 'DOG'), (e[(e.FROG = 23)] = 'FROG'), (e[(e.GOAT = 24)] = 'GOAT'), (e[(e.CAT = 25)] = 'CAT'), e);
 })({});
 let i = [
     {
@@ -83,7 +83,12 @@ let a = {
     17: 2,
     18: 2,
     19: 2,
-    20: 2
+    20: 2,
+    21: 1,
+    22: 2,
+    23: 2,
+    24: 1,
+    25: 1
 };
 var o = (function (e) {
     return ((e[(e.SIZE_12 = 12)] = 'SIZE_12'), (e[(e.SIZE_16 = 16)] = 'SIZE_16'), (e[(e.SIZE_24 = 24)] = 'SIZE_24'), (e[(e.SIZE_32 = 32)] = 'SIZE_32'), (e[(e.SIZE_36 = 36)] = 'SIZE_36'), e);

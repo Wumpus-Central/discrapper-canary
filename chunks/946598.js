@@ -14,6 +14,7 @@ var r = {
     headerLayout: 'headerLayout__53cea',
     headerGradient: 'headerGradient__53cea',
     headerGraphic: 'headerGraphic__53cea',
+    lottie: 'lottie__53cea',
     headerLeading: 'headerLeading__53cea',
     headerLeadingSpacer: 'headerLeadingSpacer__53cea',
     headerTrailing: 'headerTrailing__53cea',

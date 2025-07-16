@@ -305,7 +305,7 @@ function u(e) {
             },
             [O, u, f, m, d, v, p]
         ),
-        I = r.useCallback(
+        w = r.useCallback(
             (e) => {
                 null != u.current &&
                     v({
@@ -323,7 +323,7 @@ function u(e) {
             },
             [O, u, m, d, v, f, p]
         ),
-        w = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 null != u.current &&
                     v({
@@ -354,8 +354,8 @@ function u(e) {
         trackQuestVideoBufferingStarted: D,
         trackQuestVideoBufferingEnded: T,
         trackWatchTimeAnalytics: N,
-        trackQuestVideoFullscreenChanged: I,
+        trackQuestVideoFullscreenChanged: w,
         trackQuestVideoError: k,
-        trackQuestVideoVolumeChanged: w
+        trackQuestVideoVolumeChanged: I
     };
 }

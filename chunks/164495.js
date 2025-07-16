@@ -121,8 +121,8 @@ let E = (e) => {
         var t,
             n,
             o,
-            { quest: d, useReducedMotion: p, isExpanded: m, className: b, ctaLabel: v, onClick: O, questContent: E = f.jn.QUEST_BAR_V2, sourceQuestContent: S } = e,
-            w = (function (e, t) {
+            { quest: d, useReducedMotion: p, isExpanded: m, className: x, ctaLabel: b, onClick: j, questContent: O = f.jn.QUEST_BAR_V2, sourceQuestContent: E } = e,
+            S = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -141,16 +141,15 @@ let E = (e) => {
                 }
                 return s;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick', 'questContent', 'sourceQuestContent']);
-        let P = (0, h.hf)({
+        let w = (0, h.hf)({
                 quest: d,
-                questContent: E,
-                sourceQuestContent: S
+                questContent: O,
+                sourceQuestContent: E
             }),
-            T = (0, x.up)(j.dr.QUESTS_BAR),
-            N = s.useCallback(
+            P = s.useCallback(
                 (e) => {
                     var t;
-                    (null == O || O(e),
+                    (null == j || j(e),
                         (0, g.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, u.mK)({
                                   openInLayer: !1,
@@ -158,9 +157,9 @@ let E = (e) => {
                                   analyticsLocations: [],
                                   analyticsSource: c.Z.QUEST_HOME_PAGE
                               })
-                            : P());
+                            : w());
                 },
-                [O, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, P]
+                [j, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, w]
             );
         return (0, r.jsx)(
             l.gtL,
@@ -168,14 +167,14 @@ let E = (e) => {
                 {
                     fullWidth: !0,
                     size: i.zx.Sizes.SMALL,
-                    onClick: N,
+                    onClick: P,
                     pauseAnimation: p || !m,
-                    className: a()(y.cta, b),
+                    className: a()(y.cta, x),
                     buttonShineClassName: y.shine
                 },
-                w
+                S
             )),
-            (n = n = { children: null != v ? v : T }),
+            (n = n = { children: null != b ? b : v.intl.string(v.t.cfY4PD) }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

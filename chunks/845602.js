@@ -1,6 +1,6 @@
 (r.d(t, {
     E: () => y,
-    Z: () => v
+    Z: () => C
 }),
     r(388685));
 var n = r(255367),
@@ -10,8 +10,8 @@ var n = r(255367),
     s = r(866442),
     l = r(481060),
     c = r(957537),
-    d = r(839008),
-    u = r(797967),
+    u = r(839008),
+    d = r(797967),
     p = r(755641),
     m = r(742409),
     f = r(369509),
@@ -20,15 +20,15 @@ var n = r(255367),
     b = r(131085),
     j = r(388032),
     x = r(606217),
-    C = r(183375);
-function v() {
+    v = r(183375);
+function C() {
     var e;
     let t = o.useMemo(() => Math.floor(Math.random() * _.tl.length), []),
         [r, a] = o.useState({
             primary_color: _.tl[t].start,
             secondary_color: _.tl[t].end
         }),
-        { gradientStyle: d, gradientClassname: p } = (0, l.Icv)({
+        { gradientStyle: u, gradientClassname: p } = (0, l.Icv)({
             primaryColor: (0, s.Rf)(r.primary_color),
             secondaryColor: (0, s.Rf)(r.secondary_color),
             tertiaryColor: void 0,
@@ -44,12 +44,12 @@ function v() {
                 children: (0, n.jsx)(m.l, {
                     avatar: c.Z,
                     username: 'Cherry',
-                    usernameStyle: d,
-                    usernameClassName: i()(p, C.animateGradient),
+                    usernameStyle: u,
+                    usernameClassName: i()(p, v.animateGradient),
                     message: j.intl.string(j.t['6OSasb'])
                 })
             }),
-            (0, n.jsx)(u.default, {
+            (0, n.jsx)(d.default, {
                 defaultColor: g.p6O,
                 colors: _.tl,
                 value: r.primary_color,
@@ -118,7 +118,7 @@ function y(e) {
             (0, n.jsx)('div', {
                 className: x.messageContainer,
                 children: (0, n.jsx)(m.l, {
-                    avatar: d.Z,
+                    avatar: u.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
                     message: j.intl.string(j.t['6OSasb']),

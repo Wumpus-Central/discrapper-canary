@@ -2607,25 +2607,34 @@ function ep(e) {
     });
 }
 function eg(e) {
-    let { transitionState: t, onClose: n } = e;
+    let { transitionState: t, onClose: s } = e,
+        [a, l] = r.useState(!1);
     return (0, i.jsx)(b.I, {
         transitionState: t,
-        onClose: n,
-        graphic: w,
+        onClose: s,
+        graphic: a ? { lottie: () => n.e('94792').then(n.t.bind(n, 972951, 19)) } : { src: w },
         title: 'Expressive Modal',
         subtitle: 'This is an expressive modal with a header image',
         actions: [
             {
                 variant: 'secondary',
                 text: 'Cancel',
-                onClick: n
+                onClick: s
             },
             {
                 variant: 'primary',
                 text: 'Submit',
-                onClick: n
+                onClick: s
             }
-        ]
+        ],
+        children: (0, i.jsx)(S.XZJ, {
+            value: a,
+            onChange: (e, t) => l(t),
+            children: (0, i.jsx)(S.Text, {
+                variant: 'text-md/medium',
+                children: 'Show animated graphic'
+            })
+        })
     });
 }
 function eh(e) {

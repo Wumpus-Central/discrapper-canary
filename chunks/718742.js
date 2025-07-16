@@ -97,7 +97,7 @@ function g(e) {
               onClose: t,
               size: 'sm',
               gradientColor: 'blue',
-              graphic: v,
+              graphic: { src: v },
               title: null != C ? C : y.intl.string(y.t.FpoiHR),
               subtitle: null != O ? O : y.intl.string(y.t['/CidxM']),
               children: _

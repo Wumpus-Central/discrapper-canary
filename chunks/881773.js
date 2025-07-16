@@ -158,7 +158,7 @@ let y = l.forwardRef(function (e, t) {
 });
 function _(e) {
     var t, n;
-    let { videoRef: o, playerState: E, animSpring: h, visible: _, seekForwardEnabled: x, hideCaptionBtn: D, handlePlaybackBtnClick: T, handleTranscriptBtnClick: P, handleCaptionBtnClick: N, handleFullScreenBtnClick: k, handleSeekBackBtnClick: I, handleSeekForwardBtnClick: w, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
+    let { videoRef: o, playerState: E, animSpring: h, visible: _, seekForwardEnabled: x, hideCaptionBtn: D, handlePlaybackBtnClick: T, handleTranscriptBtnClick: P, handleCaptionBtnClick: N, handleFullScreenBtnClick: k, handleSeekBackBtnClick: w, handleSeekForwardBtnClick: I, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
         R = (0, f.km)((e) => e.volume),
         M = (0, f.km)((e) => e.setVolume),
         V = (0, f.km)((e) => e.muted),
@@ -205,10 +205,10 @@ function _(e) {
                         Q || (e.preventDefault(), T());
                         break;
                     case b.Y1.SEEK_BACK:
-                        I();
+                        w();
                         break;
                     case b.Y1.SEEK_FORWARD:
-                        w();
+                        I();
                         break;
                     case b.Y1.CAPTION:
                         N();
@@ -220,7 +220,7 @@ function _(e) {
                         et();
                 }
             },
-            [N, k, T, I, w, et, Q]
+            [N, k, T, w, I, et, Q]
         );
     (l.useEffect(() => {
         null != J.current && J.current.focus();
@@ -267,7 +267,7 @@ function _(e) {
                         iconComponent: v.d,
                         animationTime: h,
                         visible: _,
-                        onClick: I,
+                        onClick: w,
                         ariaLabel: O.intl.string(O.t.r9s3Ul),
                         tooltipLabel: O.intl.string(O.t.r9s3Ul),
                         shortcut: b.Y1.SEEK_BACK
@@ -276,7 +276,7 @@ function _(e) {
                         iconComponent: g.o,
                         animationTime: h,
                         visible: _,
-                        onClick: w,
+                        onClick: I,
                         disabled: !x,
                         ariaLabel: x ? O.intl.string(O.t.zWDcND) : O.intl.string(O.t.xXh3y8),
                         tooltipLabel: x ? O.intl.string(O.t.zWDcND) : O.intl.string(O.t.xXh3y8),

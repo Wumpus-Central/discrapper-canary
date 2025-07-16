@@ -1,12 +1,12 @@
-g.d(v, { Q: () => n });
-var B = g(255367);
-g(73800);
-var t = g(331595),
-    f = g(84502);
-let C = ['#3f581a', '#7fb134', '#bcef42', '#f0f0f0'],
-    e = ['#008456', '#6be473', '#f0f0f0'],
-    r = [0.05, 0.35, 0.7, 1],
-    Q = [
+v.d(g, { Q: () => n });
+var t = v(255367);
+v(73800);
+var B = v(331595),
+    e = v(84502);
+let f = ['#3f581a', '#7fb134', '#bcef42', '#f0f0f0'],
+    r = ['#008456', '#6be473', '#f0f0f0'],
+    C = [0.05, 0.35, 0.7, 1],
+    h = [
         {
             base: 8,
             tint: 1
@@ -25,7 +25,7 @@ let C = ['#3f581a', '#7fb134', '#bcef42', '#f0f0f0'],
         }
     ],
     w = [0.15, 0.6, 1],
-    h = [
+    Q = [
         {
             base: 3,
             tint: 1
@@ -40,66 +40,66 @@ let C = ['#3f581a', '#7fb134', '#bcef42', '#f0f0f0'],
         }
     ],
     n = (A) => {
-        var v,
-            g,
-            { width: n = 24, height: D = 24, primaryTintColor: o, secondaryTintColor: M } = A,
-            E = (function (A, v) {
+        var g,
+            v,
+            { width: n = 24, height: D = 24, primaryTintColor: o, secondaryTintColor: l } = A,
+            i = (function (A, g) {
                 if (null == A) return {};
-                var g,
-                    B,
-                    t = (function (A, v) {
+                var v,
+                    t,
+                    B = (function (A, g) {
                         if (null == A) return {};
-                        var g,
-                            B,
-                            t = {},
-                            f = Object.keys(A);
-                        for (B = 0; B < f.length; B++) ((g = f[B]), v.indexOf(g) >= 0 || (t[g] = A[g]));
-                        return t;
-                    })(A, v);
+                        var v,
+                            t,
+                            B = {},
+                            e = Object.keys(A);
+                        for (t = 0; t < e.length; t++) ((v = e[t]), g.indexOf(v) >= 0 || (B[v] = A[v]));
+                        return B;
+                    })(A, g);
                 if (Object.getOwnPropertySymbols) {
-                    var f = Object.getOwnPropertySymbols(A);
-                    for (B = 0; B < f.length; B++) ((g = f[B]), !(v.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (t[g] = A[g]));
+                    var e = Object.getOwnPropertySymbols(A);
+                    for (t = 0; t < e.length; t++) ((v = e[t]), !(g.indexOf(v) >= 0) && Object.prototype.propertyIsEnumerable.call(A, v) && (B[v] = A[v]));
                 }
-                return t;
+                return B;
             })(A, ['width', 'height', 'primaryTintColor', 'secondaryTintColor']);
-        let { primaryColorsTransformed: s, secondaryColorsTransformed: i } = (0, f.s)({
-            primaryBaseColors: C,
+        let { primaryColorsTransformed: s, secondaryColorsTransformed: M } = (0, e.s)({
+            primaryBaseColors: f,
             primaryTintColor: o,
-            primaryTintLuminances: r,
-            primaryLuminanceWeights: Q,
-            secondaryBaseColors: e,
-            secondaryTintColor: M,
+            primaryTintLuminances: C,
+            primaryLuminanceWeights: h,
+            secondaryBaseColors: r,
+            secondaryTintColor: l,
             secondaryTintLuminances: w,
-            secondaryLuminanceWeights: h
+            secondaryLuminanceWeights: Q
         });
-        return (0, B.jsxs)(
+        return (0, t.jsxs)(
             'svg',
-            ((v = (function (A) {
-                for (var v = 1; v < arguments.length; v++) {
-                    var g = null != arguments[v] ? arguments[v] : {},
-                        B = Object.keys(g);
+            ((g = (function (A) {
+                for (var g = 1; g < arguments.length; g++) {
+                    var v = null != arguments[g] ? arguments[g] : {},
+                        t = Object.keys(v);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (B = B.concat(
-                            Object.getOwnPropertySymbols(g).filter(function (A) {
-                                return Object.getOwnPropertyDescriptor(g, A).enumerable;
+                        (t = t.concat(
+                            Object.getOwnPropertySymbols(v).filter(function (A) {
+                                return Object.getOwnPropertyDescriptor(v, A).enumerable;
                             })
                         )),
-                        B.forEach(function (v) {
-                            var B;
-                            ((B = g[v]),
-                                v in A
-                                    ? Object.defineProperty(A, v, {
-                                          value: B,
+                        t.forEach(function (g) {
+                            var t;
+                            ((t = v[g]),
+                                g in A
+                                    ? Object.defineProperty(A, g, {
+                                          value: t,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (A[v] = B));
+                                    : (A[g] = t));
                         }));
                 }
                 return A;
-            })({}, (0, t.Z)(E))),
-            (g = g =
+            })({}, (0, B.Z)(i))),
+            (v = v =
                 {
                     width: n,
                     height: D,
@@ -107,168 +107,168 @@ let C = ['#3f581a', '#7fb134', '#bcef42', '#f0f0f0'],
                     fill: 'none',
                     xmlns: 'http://www.w3.org/2000/svg',
                     children: [
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 1H7v4h2V1ZM11 7V6h-1V5H6v1H5v1H1v2h4v1h1v1h1v4h2v-4h1v-1h1V9h4V7h-4Z',
                             fill: s[2]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 0H3v1h1V0ZM6 5H5v1h1V5ZM11 5h-1v1h1V5ZM13 0h-1v1h1V0ZM14 1h-1v1h1V1ZM15 2h-1v1h1V2ZM16 3h-1v1h1V3ZM9 0H7v1h2V0Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 1H7v1h2V1Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 3H7v1h2V3ZM9 4H7v1h2V4Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 12H7v1h2v-1Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 14H7v1h2v-1ZM9 11H7v1h2v-1Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 6H7v1h2V6ZM9 9H7v1h2V9ZM10 7H9v2h1V7Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M12 7h-1v2h1V7Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M7 7H6v2h1V7Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M6 6H5v2h1V6Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M3 1H2v1h1V1Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M3 1v1H2v1H1v1h3V1H3Z',
-                            fill: i[1]
+                            fill: M[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 1H3v1h1V1ZM3 2H2v1h1V2Z',
-                            fill: i[2]
+                            fill: M[2]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 3H1v1h3V3Z',
-                            fill: i[0]
+                            fill: M[0]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M12 12v3h1v-1h1v-1h1v-1h-3ZM1 12v1h1v1h1v1h1v-3H1Z',
-                            fill: i[1]
+                            fill: M[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 12H1v1h3v-1Z',
-                            fill: i[2]
+                            fill: M[2]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M3 13v2h1v-2H3Z',
-                            fill: i[0]
+                            fill: M[0]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M14 3V2h-1V1h-1v3h3V3h-1Z',
-                            fill: i[1]
+                            fill: M[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M13 1h-1v1h1V1Z',
-                            fill: i[2]
+                            fill: M[2]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M13 7h-1v1h1V7Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M15 8h-3v1h3V8Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M15 3h-3v1h3V3Z',
-                            fill: i[0]
+                            fill: M[0]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M2 2H1v1h1V2ZM7 1H6v4h1V1ZM10 1H9v4h1V1ZM16 7h-1v2h1V7ZM15 6h-4v1h4V6ZM15 9h-4v1h4V9ZM1 7H0v2h1V7ZM5 6H1v1h4V6Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 7H1v2h1V8h2V7Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M5 9H1v1h4V9ZM1 3H0v1h1V3ZM4 15H3v1h1v-1ZM6 10H5v1h1v-1Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M4 8H3v1h1V8ZM5 7H4v2h1V7Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M5 7H4v2h1V7Z',
                             fill: s[0]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M10 10H6v1h4v-1Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M10 5H6v1h4V5Z',
                             fill: s[3]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M11 10h-1v1h1v-1Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M11 9h-1v1h1V9Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M13 15h-1v1h1v-1ZM14 14h-1v1h1v-1ZM15 13h-1v1h1v-1ZM16 12h-1v1h1v-1ZM9 15H7v1h2v-1ZM3 14H2v1h1v-1ZM2 13H1v1h1v-1ZM7 11H6v4h1v-4ZM10 11H9v4h1v-4ZM4 4H1v1h4V1H4v3ZM12 4V1h-1v4h4V4h-3Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M1 11v1h3v3h1v-4H1ZM11 11v4h1v-3h3v-1h-4ZM1 12H0v1h1v-1Z',
                             fill: '#000'
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M13 14h-1v1h1v-1ZM14 13h-1v1h1v-1ZM15 12h-1v1h1v-1Z',
-                            fill: i[0]
+                            fill: M[0]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M13 12h-1v1h1v-1Z',
-                            fill: i[2]
+                            fill: M[2]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 7H7v2h2V7Z',
                             fill: s[1]
                         }),
-                        (0, B.jsx)('path', {
+                        (0, t.jsx)('path', {
                             d: 'M9 4H7v1h2V4ZM9 11H7v1h2v-1ZM12 7h-1v2h1V7Z',
                             fill: s[0]
                         })
                     ]
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(v, Object.getOwnPropertyDescriptors(g))
-                : (function (A, v) {
-                      var g = Object.keys(A);
+                ? Object.defineProperties(g, Object.getOwnPropertyDescriptors(v))
+                : (function (A, g) {
+                      var v = Object.keys(A);
                       if (Object.getOwnPropertySymbols) {
-                          var B = Object.getOwnPropertySymbols(A);
-                          g.push.apply(g, B);
+                          var t = Object.getOwnPropertySymbols(A);
+                          v.push.apply(v, t);
                       }
-                      return g;
-                  })(Object(g)).forEach(function (A) {
-                      Object.defineProperty(v, A, Object.getOwnPropertyDescriptor(g, A));
+                      return v;
+                  })(Object(v)).forEach(function (A) {
+                      Object.defineProperty(g, A, Object.getOwnPropertyDescriptor(v, A));
                   }),
-            v)
+            g)
         );
     };

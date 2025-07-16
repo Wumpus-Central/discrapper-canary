@@ -1,5 +1,4 @@
 t.exports = {
-    animation: 'animation_bdbb1b',
     icon: 'icon_bdbb1b',
     wandIcon: 'wandIcon_bdbb1b icon_bdbb1b',
     robotIcon: 'robotIcon_bdbb1b icon_bdbb1b',

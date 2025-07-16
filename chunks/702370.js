@@ -538,51 +538,55 @@ let eL = (e) => {
     eM = (e) => {
         let { user: t, nameplate: n } = e,
             i = (0, y.w$)();
-        return (0, r.jsxs)('div', {
+        return (0, r.jsx)('div', {
             className: ek.nameplateRightPanePreviewContainer,
-            children: [
-                (0, r.jsx)(eD, {
-                    user: i.mallow,
-                    innerClassName: ek.userBlue
-                }),
-                (0, r.jsxs)(v.Text, {
-                    variant: 'text-sm/semibold',
-                    className: ek.namplateRightPanePreviewSectionGroup,
-                    children: [eS.intl.string(eS.t['yzW/fX']), ' - 3']
-                }),
-                (0, r.jsx)(eD, {
-                    user: i.phibi,
-                    innerClassName: ek.userPink
-                }),
-                (0, r.jsx)('div', {
-                    className: ek.nameplateRightPanePreviewAvatarContainer,
-                    children: (0, r.jsx)(eP.Z, {
-                        className: ek.nameplatePreview,
-                        innerClassName: ek.userPink,
-                        user: t,
-                        nameplate: n,
-                        showStatus: !0,
-                        isHighlighted: !0
+            role: 'img',
+            'aria-label': eS.intl.string(eS.t.SZeUdX),
+            children: (0, r.jsxs)(v.Rny, {
+                children: [
+                    (0, r.jsx)(eD, {
+                        user: i.mallow,
+                        innerClassName: ek.userBlue
+                    }),
+                    (0, r.jsxs)(v.Text, {
+                        variant: 'text-sm/semibold',
+                        className: ek.namplateRightPanePreviewSectionGroup,
+                        children: [eS.intl.string(eS.t['yzW/fX']), ' - 3']
+                    }),
+                    (0, r.jsx)(eD, {
+                        user: i.phibi,
+                        innerClassName: ek.userPink
+                    }),
+                    (0, r.jsx)('div', {
+                        className: ek.nameplateRightPanePreviewAvatarContainer,
+                        children: (0, r.jsx)(eP.Z, {
+                            className: ek.nameplatePreview,
+                            innerClassName: ek.userPink,
+                            user: t,
+                            nameplate: n,
+                            showStatus: !0,
+                            isHighlighted: !0
+                        })
+                    }),
+                    (0, r.jsx)(eD, {
+                        user: i.locke,
+                        innerClassName: ek.userPink
+                    }),
+                    (0, r.jsxs)(v.Text, {
+                        variant: 'text-sm/semibold',
+                        className: ek.namplateRightPanePreviewSectionGroup,
+                        children: [eS.intl.string(eS.t['NG43//']), ' - 12']
+                    }),
+                    (0, r.jsx)(eD, {
+                        user: i.boom,
+                        innerClassName: ek.userGreen
+                    }),
+                    (0, r.jsx)(eD, {
+                        user: i.cherry,
+                        innerClassName: ek.userGreen
                     })
-                }),
-                (0, r.jsx)(eD, {
-                    user: i.locke,
-                    innerClassName: ek.userPink
-                }),
-                (0, r.jsxs)(v.Text, {
-                    variant: 'text-sm/semibold',
-                    className: ek.namplateRightPanePreviewSectionGroup,
-                    children: [eS.intl.string(eS.t['NG43//']), ' - 12']
-                }),
-                (0, r.jsx)(eD, {
-                    user: i.boom,
-                    innerClassName: ek.userGreen
-                }),
-                (0, r.jsx)(eD, {
-                    user: i.cherry,
-                    innerClassName: ek.userGreen
-                })
-            ]
+                ]
+            })
         });
     },
     ez = (e) => {
@@ -639,7 +643,8 @@ let eL = (e) => {
                                       hideMessageInput: !h,
                                       hideExampleButton: !0,
                                       hideCustomStatus: !0,
-                                      hideBioSection: c
+                                      hideBioSection: c,
+                                      interactive: !1
                                   })
                               ),
                               c && (0, r.jsx)(eU, { user: n })
@@ -669,37 +674,41 @@ let eL = (e) => {
     eU = (e) => {
         let { user: t } = e,
             n = eF({ author: t });
-        return (0, r.jsx)(v.Rny, {
-            children: (0, r.jsxs)(v.Zbd, {
-                className: ek.chatPreview,
-                outline: !0,
-                'aria-hidden': !0,
-                children: [
-                    (0, r.jsx)(
-                        I.Z,
-                        {
-                            className: ek.mockMessage,
-                            author: (0, O.ZH)(n),
-                            message: n
-                        },
-                        n.id
-                    ),
-                    (0, r.jsxs)('div', {
-                        className: ek.mockInput,
-                        children: [
-                            (0, r.jsx)(v.oFk, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: ek.mockInputButton
-                            }),
-                            (0, r.jsx)(v.EO4, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: ek.mockInputButton
-                            })
-                        ]
-                    })
-                ]
+        return (0, r.jsx)('div', {
+            role: 'img',
+            'aria-label': eS.intl.string(eS.t['TN+ZvL']),
+            children: (0, r.jsx)(v.Rny, {
+                children: (0, r.jsxs)(v.Zbd, {
+                    className: ek.chatPreview,
+                    outline: !0,
+                    'aria-hidden': !0,
+                    children: [
+                        (0, r.jsx)(
+                            I.Z,
+                            {
+                                className: ek.mockMessage,
+                                author: (0, O.ZH)(n),
+                                message: n
+                            },
+                            n.id
+                        ),
+                        (0, r.jsxs)('div', {
+                            className: ek.mockInput,
+                            children: [
+                                (0, r.jsx)(v.oFk, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: ek.mockInputButton
+                                }),
+                                (0, r.jsx)(v.EO4, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: ek.mockInputButton
+                                })
+                            ]
+                        })
+                    ]
+                })
             })
         });
     },

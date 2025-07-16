@@ -1,48 +1,42 @@
-n.d(i, { default: () => p });
-var s = n(255367),
-    e = n(73800),
-    o = n(704215),
-    a = n(667202),
-    r = n(481060),
-    l = n(607070),
-    c = n(266454),
-    b = n(749681),
-    d = n(661824),
-    m = n(626135),
-    x = n(258971),
-    u = n(981631),
-    I = n(921944),
-    _ = n(49898),
-    C = n(388032),
-    h = n(676305);
-function p(t) {
-    let { guildId: i, transitionState: p, onClose: N, analyticsType: j = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+e.d(i, { default: () => h });
+var s = e(255367),
+    n = e(73800),
+    r = e(704215),
+    o = e(667202),
+    l = e(481060),
+    c = e(266454),
+    a = e(749681),
+    b = e(661824),
+    d = e(626135),
+    m = e(258971),
+    x = e(981631),
+    I = e(921944),
+    u = e(49898),
+    _ = e(388032),
+    C = e(676305);
+function h(t) {
+    let { guildId: i, transitionState: h, onClose: p, analyticsType: v = r.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
-        e.useEffect(() => {
-            m.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: o.z[j],
+        n.useEffect(() => {
+            d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                type: r.z[v],
                 guild_id: i
             });
-        }, [i, j]),
-        (0, s.jsx)(a.I, {
-            title: C.intl.string(C.t['2tv5YG']),
-            subtitle: C.intl.string(C.t.pgwlDw),
-            transitionState: p,
+        }, [i, v]),
+        (0, s.jsx)(o.I, {
+            title: _.intl.string(_.t['2tv5YG']),
+            subtitle: _.intl.string(_.t.pgwlDw),
+            transitionState: h,
             size: 'sm',
-            graphic: (0, s.jsx)(r.Fmz, {
-                autoplay: !0,
-                shouldAnimate: !l.Z.useReducedMotion,
-                importData: () => n.e('94792').then(n.t.bind(n, 972951, 19)),
-                className: h.animation
-            }),
-            onClose: N,
+            graphic: { lottie: () => e.e('94792').then(e.t.bind(e, 972951, 19)) },
+            onClose: p,
             actions: [
                 {
                     variant: 'secondary',
-                    text: C.intl.string(C.t.L5eIZ2),
+                    text: _.intl.string(_.t.L5eIZ2),
                     onClick: () => {
-                        (N(),
-                            (0, c.Q3)(j, {
+                        (p(),
+                            (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.SECONDARY,
                                 guildId: i
@@ -51,68 +45,68 @@ function p(t) {
                 },
                 {
                     variant: 'primary',
-                    text: C.intl.string(C.t['5e8Mrq']),
+                    text: _.intl.string(_.t['5e8Mrq']),
                     onClick: () => {
-                        (N(),
-                            (0, c.Q3)(j, {
+                        (p(),
+                            (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.PRIMARY,
                                 guildId: i
                             }),
-                            (0, b.transitionToGlobalDiscovery)({
-                                tab: _.GlobalDiscoveryTab.APPS,
+                            (0, a.transitionToGlobalDiscovery)({
+                                tab: u.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: i,
-                                    entrypoint: { name: x.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
+                                    entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
                                 }
                             }));
                     }
                 }
             ],
             children: (0, s.jsxs)('ul', {
-                className: h.listContainer,
+                className: C.listContainer,
                 children: [
                     (0, s.jsxs)('li', {
-                        className: h.listItem,
+                        className: C.listItem,
                         children: [
-                            (0, s.jsx)(r.$2U, {
+                            (0, s.jsx)(l.$2U, {
                                 color: 'currentColor',
-                                className: h.wandIcon
+                                className: C.wandIcon
                             }),
-                            (0, s.jsx)(r.Text, {
+                            (0, s.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-default',
-                                children: C.intl.string(C.t['0vKo5O'])
+                                children: _.intl.string(_.t['0vKo5O'])
                             })
                         ]
                     }),
-                    (0, s.jsx)(d.Z, { className: h.divider }),
+                    (0, s.jsx)(b.Z, { className: C.divider }),
                     (0, s.jsxs)('li', {
-                        className: h.listItem,
+                        className: C.listItem,
                         children: [
-                            (0, s.jsx)(r.wGt, {
+                            (0, s.jsx)(l.wGt, {
                                 color: 'currentColor',
-                                className: h.robotIcon
+                                className: C.robotIcon
                             }),
-                            (0, s.jsx)(r.Text, {
+                            (0, s.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-default',
-                                children: C.intl.string(C.t.CprEDA)
+                                children: _.intl.string(_.t.CprEDA)
                             })
                         ]
                     }),
-                    (0, s.jsx)(d.Z, { className: h.divider }),
+                    (0, s.jsx)(b.Z, { className: C.divider }),
                     (0, s.jsxs)('li', {
-                        className: h.listItem,
+                        className: C.listItem,
                         children: [
-                            (0, s.jsx)(r.EO4, {
+                            (0, s.jsx)(l.EO4, {
                                 color: 'currentColor',
-                                className: h.smileIcon
+                                className: C.smileIcon
                             }),
-                            (0, s.jsx)(r.Text, {
+                            (0, s.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-default',
-                                children: C.intl.string(C.t.wQJMPD)
+                                children: _.intl.string(_.t.wQJMPD)
                             })
                         ]
                     })
