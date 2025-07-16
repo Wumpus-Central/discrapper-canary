@@ -45,7 +45,7 @@ function p(e, t, n, p) {
         O = (e) => {
             (o.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, m({ hostname: N }, (0, g.v)())), u.ZP.copy(e), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t['L/PwZW']), l.ToastType.SUCCESS)));
         },
-        x = (n, i) => {
+        S = (n, i) => {
             let l = !0 === i ? e.replace('tel:', 'sms:') : e;
             (o.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, m({ hostname: N }, (0, g.v)())),
                 (0, c.q)(
@@ -57,11 +57,11 @@ function p(e, t, n, p) {
                     n
                 ));
         },
-        S = [],
+        x = [],
         D = e.match(E);
     if (null != D) {
         let e = f.intl.string('mailto' === D[1] ? f.t.ZYLVKi : f.t['3zozoa']);
-        (S.push(
+        (x.push(
             (0, i.jsx)(
                 l.sNh,
                 {
@@ -75,13 +75,13 @@ function p(e, t, n, p) {
             )
         ),
             'tel' === D[1] &&
-                S.push(
+                x.push(
                     (0, i.jsx)(
                         l.sNh,
                         {
                             id: 'native-send-sms',
                             label: f.intl.string(f.t['+wbjMT']),
-                            action: (e) => x(e, !0)
+                            action: (e) => S(e, !0)
                         },
                         'native-send-sms'
                     )
@@ -99,13 +99,13 @@ function p(e, t, n, p) {
             },
             'copy-native-link'
         ),
-        ...S,
+        ...x,
         (0, i.jsx)(
             l.sNh,
             {
                 id: 'open-native-link',
                 label: f.intl.string(f.t.wuRE8P),
-                action: (e) => x(e)
+                action: (e) => S(e)
             },
             'open-native-link'
         )

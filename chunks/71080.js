@@ -162,6 +162,11 @@ function _(e, t, n, c) {
             })(),
             flag: s.Plq.MANAGE_MESSAGES
         },
+        [s.Plq.PIN_MESSAGES.toString()]: {
+            title: l.intl.string(l.t.Y5BI39),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t['gmbD8/'] : l.t['0l2EjI'],
+            flag: s.Plq.PIN_MESSAGES
+        },
         [s.Plq.READ_MESSAGE_HISTORY.toString()]: {
             title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t['0RQwtr']) : l.intl.string(l.t.l9ufaW),
             description: (() => {

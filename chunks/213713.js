@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => Z }), a(388685));
+(a.d(t, { Z: () => A }), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -82,7 +82,7 @@ function k(e) {
         }
     });
 }
-function Z() {
+function A() {
     var e, t;
     let a = (0, u.e7)([O.Z], () => O.Z.getFeed(P.YN.GLOBAL_FEED)),
         l = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
@@ -102,7 +102,7 @@ function Z() {
             var e;
             return (null == (e = O.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [k, Z] = r.useState(''),
+        [k, A] = r.useState(''),
         D = (0, u.e7)(
             [_.Z, h.Z],
             () => {
@@ -204,14 +204,14 @@ function Z() {
                         (0, n.jsx)(x.vwX, { children: 'Game Profile' }),
                         (0, n.jsx)(x.oil, {
                             placeholder: 'App ID or full name',
-                            onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && A(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (k === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == L || L(e) : A(e.currentTarget.value));
                             },
                             error: k.length > 0 && null == L ? 'No game profile for '.concat(null != D ? D : k + ' - try by id', '.') : void 0,
                             style: null != L ? { border: '1px solid green' } : {}
                         }),
-                        (0, n.jsx)('ul', { children: F.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, n.jsx)('ul', { children: F.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, n.jsxs)(x.hjN, {
@@ -242,7 +242,7 @@ function Z() {
         })
     });
 }
-let A = (e) => {
+let Z = (e) => {
     let { application: t } = e,
         a = (0, g.Z)({
             applicationId: t.id,

@@ -63,8 +63,8 @@ function y(e) {
     let { guildId: t, transitionState: n, onClose: y, analyticsData: _ } = e,
         C = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         N = !!(null == C ? void 0 : C.features.has(h.oNc.INVITES_DISABLED)),
-        [I] = i.useState(!1),
-        [E, S] = i.useState(f.Fl),
+        [E] = i.useState(!1),
+        [I, S] = i.useState(f.Fl),
         T = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
         w = (0, p.BT)(C),
         P = (0, m.SG)(T) || N,
@@ -111,7 +111,7 @@ function y(e) {
                             select: (e) => {
                                 (S(e), M(!0));
                             },
-                            isSelected: (e) => e === E,
+                            isSelected: (e) => e === I,
                             serialize: (e) => String(e)
                         }),
                         (0, r.jsxs)('div', {
@@ -188,7 +188,7 @@ function y(e) {
                             variant: 'primary',
                             text: x.intl.string(x.t['pwm/z8']),
                             onClick: () => {
-                                (P || Z) && !A && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, A, D, E);
+                                (P || Z) && !A && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, A, D, I);
                                 let { source: e, alertType: n, messageId: i } = _;
                                 (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                     guild_id: t,
@@ -197,18 +197,18 @@ function y(e) {
                                     raid_alert_type: n,
                                     intervention_type_enabled: (0, m.sO)(A, D),
                                     intervention_type_disabled: (0, m.lk)(A, D),
-                                    duration: 60 * E
+                                    duration: 60 * I
                                 }),
                                     y());
                             },
-                            loading: I,
+                            loading: E,
                             disabled: !B
                         }),
                         (0, r.jsx)(a.zxk, {
                             variant: 'secondary',
                             text: x.intl.string(x.t['ETE/oK']),
                             onClick: y,
-                            disabled: I
+                            disabled: E
                         })
                     ]
                 })

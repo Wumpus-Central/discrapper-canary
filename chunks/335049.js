@@ -22,8 +22,8 @@ var r = n(255367),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
-    I = n(555781);
-function E(e) {
+    E = n(555781);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,7 +77,7 @@ function T(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        S(E({}, t), {
+                        S(I({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Mu7)
                         })
@@ -148,24 +148,24 @@ function w(e) {
         ? null
         : (0, r.jsxs)('div', {
               onContextMenu: h,
-              className: I.identifier,
+              className: E.identifier,
               children: [
                   (0, r.jsx)(p, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: o()(I.channelIcon, I.image)
+                      className: o()(E.channelIcon, E.image)
                   }),
                   (0, r.jsx)(u.Text, {
-                      className: I.roleName,
+                      className: E.roleName,
                       color: 'header-primary',
                       variant: 'text-md/normal',
                       children: m
                   }),
                   null != f
                       ? (0, r.jsxs)(u.Text, {
-                            className: I.tag,
+                            className: E.tag,
                             variant: 'text-sm/normal',
                             children: ['(', f, ')']
                         })
@@ -192,7 +192,7 @@ function P(e) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                S(E({}, t), {
+                                S(I({}, t), {
                                     guild: l,
                                     role: b
                                 })
@@ -205,19 +205,19 @@ function P(e) {
         ? null
         : (0, r.jsxs)('div', {
               onContextMenu: x,
-              className: I.identifier,
+              className: E.identifier,
               children: [
                   null != g
-                      ? (0, r.jsx)(f.Z, E({ className: o()(I.__invalid_icon, I.image) }, g))
+                      ? (0, r.jsx)(f.Z, I({ className: o()(E.__invalid_icon, E.image) }, g))
                       : (0, r.jsx)(u.lZ8, {
                             size: 'custom',
                             width: 23,
                             height: 23,
-                            className: o()(I.shield, I.image),
+                            className: o()(E.shield, E.image),
                             color: null != (t = b.colorString) ? t : (0, c.Rf)(C.p6O)
                         }),
                   (0, r.jsx)(u.Text, {
-                      className: I.roleName,
+                      className: E.roleName,
                       color: 'header-primary',
                       variant: 'text-md/normal',
                       children: b.name
@@ -242,16 +242,16 @@ function Z(e) {
         ? null
         : (0, r.jsxs)('div', {
               onContextMenu: o,
-              className: I.identifier,
+              className: E.identifier,
               children: [
                   (0, r.jsx)(u.qEK, {
-                      className: I.image,
+                      className: E.image,
                       src: a.getAvatarURL(t.id, 24),
                       'aria-label': a.username,
                       size: u.EFr.SIZE_24
                   }),
                   (0, r.jsx)(u.Text, {
-                      className: I.roleName,
+                      className: E.roleName,
                       color: 'header-primary',
                       variant: 'text-md/normal',
                       children: null != s ? s : a.username
@@ -259,7 +259,7 @@ function Z(e) {
                   c
                       ? null
                       : (0, r.jsx)(u.Text, {
-                            className: I.tag,
+                            className: E.tag,
                             variant: 'text-sm/normal',
                             children: _.ZP.getUserTag(a)
                         }),
@@ -274,7 +274,7 @@ function A(e) {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                S(E({ className: I.lockIcon }, e), {
+                S(I({ className: E.lockIcon }, e), {
                     children: (0, r.jsx)(u.mBM, {
                         size: 'xs',
                         color: 'currentColor'

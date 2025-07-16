@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => O,
-    Z: () => _
+    Z: () => M
 }),
     n(388685),
     n(290780));
@@ -22,13 +22,13 @@ var i,
     v = n(699516),
     N = n(594174),
     O = (((l = {}).LOADING = 'LOADING'), (l.LOADED_HAS_MORE = 'LOADED_HAS_MORE'), (l.LOADED_FINISHED = 'LOADING_FINISHED'), (l.FAILED = 'FAILED'), l);
-let x = {};
-function S(e) {
+let S = {};
+function x(e) {
     let { channel: t } = e;
-    delete x[t.id];
+    delete S[t.id];
 }
 function D() {
-    o().forEach(x, (e) => {
+    o().forEach(S, (e) => {
         (e.items.forEach((e) => {
             let { message: t } = e;
             (t.set('blocked', v.Z.isBlockedForMessage(t)), t.set('ignored', v.Z.isIgnoredForMessage(t)));
@@ -36,36 +36,36 @@ function D() {
             (e.items = e.items.slice()));
     });
 }
-class j extends (i = c.ZP.Store) {
+class _ extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, E.Z, m.ZP, p.Z, N.default, h.default);
     }
     getPins(e) {
-        return x[e];
+        return S[e];
     }
 }
 ((s = 'ChannelPinsStore'),
-    (r = 'displayName') in j
-        ? Object.defineProperty(j, r, {
+    (r = 'displayName') in _
+        ? Object.defineProperty(_, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (j[r] = s));
-let _ = new j(d.Z, {
+        : (_[r] = s));
+let M = new _(d.Z, {
     CONNECTION_OPEN: function () {
-        x = {};
+        S = {};
     },
     LOAD_PINNED_MESSAGES: function (e) {
         var t, n;
         let { channelId: i, reset: l } = e;
-        if (!l && null != x[i]) {
-            x[i].state = 'LOADING';
+        if (!l && null != S[i]) {
+            S[i].state = 'LOADING';
             return;
         }
         let r = null != (n = null == (t = f.Z.getChannel(i)) ? void 0 : t.getGuildId()) ? n : void 0;
-        x[i] = {
+        S[i] = {
             id: i,
             items: [],
             state: 'LOADING',
@@ -74,7 +74,7 @@ let _ = new j(d.Z, {
     },
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { channelId: t, pins: n, hasMore: i } = e,
-            l = x[t];
+            l = S[t];
         if (null == l) return !1;
         let r = n.map((e) => {
             let { pinned_at: t, message: n } = e;
@@ -87,22 +87,22 @@ let _ = new j(d.Z, {
     },
     LOAD_PINNED_MESSAGES_FAILURE: function (e) {
         let { channelId: t } = e,
-            n = x[t];
+            n = S[t];
         if (null == n) return !1;
         n.state = 'FAILED';
     },
-    CHANNEL_DELETE: S,
-    THREAD_DELETE: S,
+    CHANNEL_DELETE: x,
+    THREAD_DELETE: x,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        x = o()(x)
+        S = o()(S)
             .filter((e) => e.guildId !== t.id)
             .keyBy('id')
             .value();
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e,
-            i = x[n];
+            i = S[n];
         if (
             null == i ||
             0 ===
@@ -112,11 +112,11 @@ let _ = new j(d.Z, {
                 }).length
         )
             return !1;
-        ((i.items = i.items.slice()), (x[n] = i));
+        ((i.items = i.items.slice()), (S[n] = i));
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e,
-            i = x[n];
+            i = S[n];
         if (null == i) return !1;
         i.items = i.items.filter((e) => {
             let { message: n } = e;
@@ -127,7 +127,7 @@ let _ = new j(d.Z, {
         let t = e.message.id,
             n = e.message.channel_id;
         if (null == n) return !1;
-        let i = x[n];
+        let i = S[n];
         if (null == i) return !1;
         if (null == e.message.author) {
             let l = o().findIndex(i.items, (e) => {
@@ -143,7 +143,7 @@ let _ = new j(d.Z, {
                     pinnedAt: r,
                     message: a
                 }),
-                    (x[n].items = e));
+                    (S[n].items = e));
             }
             return;
         }
@@ -173,7 +173,7 @@ let _ = new j(d.Z, {
     RELATIONSHIP_UPDATE: D,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
-            i = x[n];
+            i = S[n];
         if (null == i) return !1;
         let l = o().findIndex(i.items, (e) => {
             let { message: n } = e;

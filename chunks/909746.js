@@ -25,7 +25,7 @@
     nm: () => e_,
     oD: () => k,
     pA: () => en,
-    pY: () => B,
+    pY: () => Z,
     pi: () => et,
     rK: () => el,
     uB: () => ee,
@@ -114,8 +114,8 @@ function w(e, t) {
 }
 let G = new A.Z('AuditLogUtils'),
     z = [E.J6.DAYS, E.J6.HOURS, E.J6.MINUTES, E.J6.SECONDS],
-    Z = () => ({ [L.zUn.REASON]: () => j.t['2IW3Cw'] }),
-    B = () =>
+    B = () => ({ [L.zUn.REASON]: () => j.t['2IW3Cw'] }),
+    Z = () =>
         y(
             {
                 [L.zUn.NAME]: () => j.t.CkDiND,
@@ -162,7 +162,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: () => j.t.E1fc4u,
                 [L.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: () => j.t.XbwtSE
             },
-            Z()
+            B()
         ),
     F = () => ({
         [L.zUn.NAME]: eb(j.t.f8Rh0d, j.t.ebD4Qk),
@@ -199,7 +199,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.BYPASSES_VERIFICATION]: eU(j.t.NBPBur, j.t.zATosr),
                 [L.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => j.t.YbouFB
             },
-            Z()
+            B()
         ),
     H = () =>
         y(
@@ -215,10 +215,10 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.ICON_HASH]: () => j.t['iEE79/'],
                 [L.zUn.UNICODE_EMOJI]: () => j.t.KiLMMz
             },
-            Z()
+            B()
         ),
     k = () =>
-        w(y({}, Z()), {
+        w(y({}, B()), {
             [L.zUn.TITLE]: eb(j.t.sNpuy8, j.t['3Ukc/v']),
             [L.zUn.DESCRIPTION]: eb(j.t.PP1q09, j.t.z7pYLi),
             [L.zUn.OPTIONS]: () => j.t['3G5C9/'],
@@ -226,14 +226,14 @@ let G = new A.Z('AuditLogUtils'),
             [L.zUn.REQUIRED]: eU(j.t['0MPAMz'], j.t.pwsXio)
         }),
     K = () =>
-        w(y({}, Z()), {
+        w(y({}, B()), {
             [L.zUn.DEFAULT_CHANNEL_IDS]: () => j.t['8M+D2t'],
             [L.zUn.ENABLE_DEFAULT_CHANNELS]: eU(j.t['EYd/lp'], j.t['36OZeX']),
             [L.zUn.ENABLE_ONBOARDING_PROMPTS]: eU(j.t.V3u8PT, j.t.r66lc3),
             [L.zUn.ENABLED]: eU(j.t.SODVIi, j.t.u8HY5e)
         }),
     W = () =>
-        w(y({}, Z()), {
+        w(y({}, B()), {
             [L.zUn.WELCOME_MESSAGE]: () => j.t.dKQ1xc,
             [L.zUn.NEW_MEMBER_ACTIONS]: () => j.t.jDUInp,
             [L.zUn.RESOURCE_CHANNELS]: () => j.t.SIX0mp
@@ -248,7 +248,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.TEMPORARY]: eU(j.t.MWp6Hx, j.t.omiqTE),
                 [L.zUn.FLAGS]: eL({ [o.$.IS_GUEST_INVITE]: j.t.XYZMbG })
             },
-            Z()
+            B()
         ),
     Y = () => ({
         [L.zUn.CHANNEL_ID]: eb(j.t.jhPpra, j.t.ar4qYG),
@@ -256,7 +256,7 @@ let G = new A.Z('AuditLogUtils'),
         [L.zUn.AVATAR_HASH]: () => j.t.KB52Ul,
         [L.zUn.REASON]: () => j.t['2IW3Cw']
     }),
-    J = () => y({ [L.zUn.NAME]: eb(j.t.ahU1o6, j.t['wxs+vb']) }, Z()),
+    J = () => y({ [L.zUn.NAME]: eb(j.t.ahU1o6, j.t['wxs+vb']) }, B()),
     X = () =>
         y(
             {
@@ -264,7 +264,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.TAGS]: eb(j.t['zwL+S0'], j.t.VYfKAw),
                 [L.zUn.DESCRIPTION]: eb(j.t.XeYKWF, j.t.PSfeIi)
             },
-            Z()
+            B()
         ),
     Q = () =>
         y(
@@ -276,7 +276,7 @@ let G = new A.Z('AuditLogUtils'),
                 }),
                 [L.zUn.EXPIRE_GRACE_PERIOD]: () => j.t.iovXMT
             },
-            Z()
+            B()
         ),
     $ = () =>
         y(
@@ -287,7 +287,7 @@ let G = new A.Z('AuditLogUtils'),
                     [P.j8.PUBLIC]: j.t['pK/WGx']
                 })
             },
-            Z()
+            B()
         ),
     ee = () =>
         y(
@@ -314,7 +314,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.LOCATION]: eD(j.t.GaMBHx, j.t.PsICk5),
                 [L.zUn.IMAGE_HASH]: eD(j.t.S3vcRE, j.t.KQu47O)
             },
-            Z()
+            B()
         ),
     et = () =>
         y(
@@ -328,7 +328,7 @@ let G = new A.Z('AuditLogUtils'),
                     }
                 }
             },
-            Z()
+            B()
         ),
     en = () =>
         y(
@@ -341,10 +341,10 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.RATE_LIMIT_PER_USER]: eb(j.t['7lirhI'], j.t.j4CCJS),
                 [L.zUn.FLAGS]: () => j.t.sSAQtr
             },
-            Z()
+            B()
         ),
     er = (e) => {
-        let t = y({}, Z());
+        let t = y({}, B());
         return (
             null == e ||
                 e.forEach((e) => {
@@ -374,7 +374,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.AUTO_MODERATION_ADD_ALLOW_LIST]: () => j.t['FvvR+P'],
                 [L.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST]: () => j.t.p5nSv7
             },
-            Z()
+            B()
         ),
     ei = () =>
         y(
@@ -384,7 +384,7 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.EMOJI_NAME]: ev(j.t.IIanaW, j.t.z4w4U1, j.t.V8Tfyc),
                 [L.zUn.EMOJI_ID]: ev(j.t.ainxMD, j.t['2NPsYm'], j.t['8crtnp'])
             },
-            Z()
+            B()
         ),
     es = () =>
         y(
@@ -392,9 +392,9 @@ let G = new A.Z('AuditLogUtils'),
                 [L.zUn.VERIFICATION_ENABLED]: (e) => (!0 === e.newValue ? j.t.fnkzDQ : j.t.WYT6kZ),
                 [L.zUn.MANUAL_APPROVAL_ENABLED]: (e) => (!0 === e.newValue ? j.t.jzSvVV : j.t.WxyOtr)
             },
-            Z()
+            B()
         ),
-    ea = () => y({ [L.zUn.STATUS]: () => j.t.HyCSnJ }, Z()),
+    ea = () => y({ [L.zUn.STATUS]: () => j.t.HyCSnJ }, B()),
     eo = () => ({
         [L.zUn.DESCRIPTION]: () => j.t.nsUZKS,
         [L.zUn.BRAND_COLOR_PRIMARY]: () => j.t.qe9mgI,
@@ -982,6 +982,8 @@ function eg(e) {
             return j.t.NUKUb2;
         case L.rsA.GUILD_PROFILE_UPDATE:
             return j.t.Ed6hFx;
+        case L.rsA.GUILD_MIGRATE_PIN_PERMISSION:
+            return j.t['3Ne7MD'];
         default:
             return null;
     }
@@ -1104,6 +1106,8 @@ function eO(e, t) {
             return j.intl.string(j.t.UMQ7W1);
         case L.Plq.USE_EXTERNAL_APPS:
             return j.intl.string(j.t.TtA5rK);
+        case L.Plq.PIN_MESSAGES:
+            return j.intl.string(j.t.Y5BI39);
     }
     return null;
 }

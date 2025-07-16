@@ -62,6 +62,7 @@ function E(e) {
                               sortedCategories: a,
                               setCategoryRef: c
                           }),
+                    g && !m && (0, n.jsx)('div', { className: v.divider }),
                     g &&
                         !m &&
                         (0, n.jsx)(s.Ttm, {
@@ -92,106 +93,102 @@ let S = (e) => {
             };
             return (document.addEventListener('mousedown', e), () => document.removeEventListener('mousedown', e));
         }, [r, i, E]),
-        (0, n.jsxs)('div', {
+        (0, n.jsx)('div', {
             className: v.inventoryWrapper,
-            children: [
-                (0, n.jsxs)('div', {
-                    className: o()(v.inventory, {
-                        [v.inventoryFilter]: T,
-                        [v.pageFullscreen]: t
-                    }),
-                    children: [
-                        T &&
-                            (0, n.jsxs)('div', {
-                                className: v.controls,
-                                children: [
-                                    (0, n.jsx)('div', {
-                                        className: v.controlsLeftSide,
-                                        children: (0, n.jsx)(p.Z, {})
-                                    }),
-                                    (0, n.jsxs)('div', {
-                                        className: o()(v.controlsRightSide, { [v.controlsRightSideResponsive]: r }),
-                                        children: [
-                                            (0, n.jsxs)('div', {
-                                                className: v.sortBy,
-                                                children: [
-                                                    (0, n.jsx)(s.Text, {
-                                                        variant: 'text-md/semibold',
-                                                        children: C.intl.string(C.t.uaX709)
-                                                    }),
-                                                    (0, n.jsx)(g.Z, {})
-                                                ]
-                                            }),
-                                            (0, n.jsx)('div', {
-                                                ref: B,
-                                                children: (0, n.jsx)(a.zx, {
-                                                    onClick: () => E((e) => !e),
-                                                    look: a.iL.OUTLINED,
-                                                    color: a.Tt.PRIMARY,
-                                                    className: o()({
-                                                        [v.responsiveFilterButton]: r,
-                                                        [v.filterButtonActive]: i
-                                                    }),
-                                                    children: (0, n.jsxs)('div', {
-                                                        className: v.filterButton,
-                                                        children: [
-                                                            C.intl.string(i ? C.t.fYtm6e : C.t.TeTYEx),
-                                                            (0, n.jsx)(s.gXV, {
-                                                                size: 'xs',
-                                                                color: 'var(--button-outline-primary-text)'
-                                                            })
-                                                        ]
-                                                    })
+            children: (0, n.jsxs)('div', {
+                className: o()(v.inventory, {
+                    [v.inventoryFilter]: T,
+                    [v.pageFullscreen]: t
+                }),
+                children: [
+                    T &&
+                        (0, n.jsxs)('div', {
+                            className: v.controls,
+                            children: [
+                                (0, n.jsx)('div', {
+                                    className: v.controlsLeftSide,
+                                    children: (0, n.jsx)(p.Z, {})
+                                }),
+                                (0, n.jsxs)('div', {
+                                    className: o()(v.controlsRightSide, { [v.controlsRightSideResponsive]: r }),
+                                    children: [
+                                        (0, n.jsxs)('div', {
+                                            className: v.sortBy,
+                                            children: [
+                                                (0, n.jsx)(s.Text, {
+                                                    variant: 'text-md/semibold',
+                                                    children: C.intl.string(C.t.uaX709)
+                                                }),
+                                                (0, n.jsx)(g.Z, {})
+                                            ]
+                                        }),
+                                        (0, n.jsx)('div', {
+                                            ref: B,
+                                            children: (0, n.jsx)(a.zx, {
+                                                onClick: () => E((e) => !e),
+                                                color: a.Tt.PRIMARY,
+                                                className: o()({
+                                                    [v.responsiveFilterButton]: r,
+                                                    [v.filterButtonActive]: i
+                                                }),
+                                                children: (0, n.jsxs)('div', {
+                                                    className: v.filterButton,
+                                                    children: [
+                                                        C.intl.string(i ? C.t.fYtm6e : C.t.TeTYEx),
+                                                        (0, n.jsx)(s.gXV, {
+                                                            size: 'xs',
+                                                            color: 'var(--button-outline-primary-text)'
+                                                        })
+                                                    ]
                                                 })
                                             })
-                                        ]
-                                    }),
-                                    i &&
-                                        r &&
-                                        (0, n.jsx)('div', {
-                                            className: v.filterOverlay,
-                                            ref: P,
-                                            children: (0, n.jsx)(s.Den, {
-                                                className: v.filterOverlayContent,
-                                                children: (0, n.jsx)(h.Z, {})
-                                            })
                                         })
-                                ]
-                            }),
-                        T && !L
-                            ? (0, n.jsx)(
-                                  m.Z,
-                                  {
-                                      isFullScreen: t,
-                                      scrollerRef: y,
-                                      tab: S
-                                  },
-                                  S
-                              )
-                            : (0, O.RE)(S)
-                              ? (0, n.jsx)(
-                                    _.Z,
-                                    {
-                                        isFullScreen: t,
-                                        scrollerRef: y,
-                                        tab: S
-                                    },
-                                    S
-                                )
-                              : (0, n.jsx)(c.k0, {
-                                    newValue: { pageIndex: k },
-                                    children: (0, n.jsx)(f.Z, {
-                                        isFullScreen: t,
-                                        sortedCategories: x,
-                                        setCategoryRef: j,
-                                        currentPage: k,
-                                        handlePageChange: I
+                                    ]
+                                }),
+                                i &&
+                                    r &&
+                                    (0, n.jsx)('div', {
+                                        className: v.filterOverlay,
+                                        ref: P,
+                                        children: (0, n.jsx)(s.Den, {
+                                            className: v.filterOverlayContent,
+                                            children: (0, n.jsx)(h.Z, {})
+                                        })
                                     })
+                            ]
+                        }),
+                    T && !L
+                        ? (0, n.jsx)(
+                              m.Z,
+                              {
+                                  isFullScreen: t,
+                                  scrollerRef: y,
+                                  tab: S
+                              },
+                              S
+                          )
+                        : (0, O.RE)(S)
+                          ? (0, n.jsx)(
+                                _.Z,
+                                {
+                                    isFullScreen: t,
+                                    scrollerRef: y,
+                                    tab: S
+                                },
+                                S
+                            )
+                          : (0, n.jsx)(c.k0, {
+                                newValue: { pageIndex: k },
+                                children: (0, n.jsx)(f.Z, {
+                                    isFullScreen: t,
+                                    sortedCategories: x,
+                                    setCategoryRef: j,
+                                    currentPage: k,
+                                    handlePageChange: I
                                 })
-                    ]
-                }),
-                i && !r && (0, n.jsx)('div', { className: v.divider })
-            ]
+                            })
+                ]
+            })
         })
     );
 };

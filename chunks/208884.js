@@ -4,12 +4,12 @@
     WV: () => N,
     WW: () => s,
     _u: () => R,
-    aW: () => T,
-    kv: () => M,
+    aW: () => g,
+    kv: () => I,
     s4: () => o,
-    uu: () => I,
+    uu: () => M,
     vq: () => _,
-    xU: () => g,
+    xU: () => T,
     zO: () => A
 }),
     n(539854),
@@ -153,6 +153,11 @@ function s(t) {
             title: r.intl.string(r.t['6lU9xM']),
             description: r.t['RXMG//'],
             flag: l.Pl.MANAGE_MESSAGES
+        },
+        [l.Pl.PIN_MESSAGES.toString()]: {
+            title: r.intl.string(r.t.Y5BI39),
+            description: r.t['LN/K39'],
+            flag: l.Pl.PIN_MESSAGES
         },
         [l.Pl.READ_MESSAGE_HISTORY.toString()]: {
             title: r.intl.string(r.t.l9ufaW),
@@ -310,8 +315,9 @@ function o(t) {
                     permissions: S(i, t)
                 });
             })(n),
-            ((i = [l.Pl.SEND_MESSAGES, l.Pl.SEND_MESSAGES_IN_THREADS, l.Pl.CREATE_PUBLIC_THREADS, l.Pl.CREATE_PRIVATE_THREADS, l.Pl.EMBED_LINKS, l.Pl.ATTACH_FILES, l.Pl.ADD_REACTIONS, l.Pl.USE_EXTERNAL_EMOJIS, l.Pl.USE_EXTERNAL_STICKERS, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.MENTION_EVERYONE, l.Pl.MANAGE_MESSAGES, l.Pl.MANAGE_THREADS, l.Pl.READ_MESSAGE_HISTORY, l.Pl.SEND_TTS_MESSAGES, l.Pl.SEND_VOICE_MESSAGES, l.Pl.SEND_POLLS]),
+            ((i = [l.Pl.SEND_MESSAGES, l.Pl.SEND_MESSAGES_IN_THREADS, l.Pl.CREATE_PUBLIC_THREADS, l.Pl.CREATE_PRIVATE_THREADS, l.Pl.EMBED_LINKS, l.Pl.ATTACH_FILES, l.Pl.ADD_REACTIONS, l.Pl.USE_EXTERNAL_EMOJIS, l.Pl.USE_EXTERNAL_STICKERS, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.MENTION_EVERYONE, l.Pl.MANAGE_MESSAGES, l.Pl.PIN_MESSAGES, l.Pl.MANAGE_THREADS, l.Pl.READ_MESSAGE_HISTORY, l.Pl.SEND_TTS_MESSAGES, l.Pl.SEND_VOICE_MESSAGES, l.Pl.SEND_POLLS]),
             t.inSoundmojiExperiment || (i = i.filter((t) => t !== l.Pl.USE_EXTERNAL_SOUNDS)),
+            t.inPinPermissionExperiment || (i = i.filter((t) => t !== l.Pl.PIN_MESSAGES)),
             e({
                 title: r.intl.string(r.t.cKobOz),
                 permissions: S(i, n)
@@ -374,11 +380,12 @@ function P(t, i) {
     };
 }
 function _(t, i, n) {
-    let E = [l.Pl.SEND_MESSAGES, l.Pl.SEND_MESSAGES_IN_THREADS, l.Pl.CREATE_PUBLIC_THREADS, l.Pl.CREATE_PRIVATE_THREADS, l.Pl.EMBED_LINKS, l.Pl.ATTACH_FILES, l.Pl.ADD_REACTIONS, l.Pl.USE_EXTERNAL_EMOJIS, l.Pl.USE_EXTERNAL_STICKERS, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.MENTION_EVERYONE, l.Pl.MANAGE_MESSAGES, l.Pl.MANAGE_THREADS, l.Pl.READ_MESSAGE_HISTORY, l.Pl.SEND_TTS_MESSAGES, l.Pl.SEND_VOICE_MESSAGES, l.Pl.SEND_POLLS];
+    let E = [l.Pl.SEND_MESSAGES, l.Pl.SEND_MESSAGES_IN_THREADS, l.Pl.CREATE_PUBLIC_THREADS, l.Pl.CREATE_PRIVATE_THREADS, l.Pl.EMBED_LINKS, l.Pl.ATTACH_FILES, l.Pl.ADD_REACTIONS, l.Pl.USE_EXTERNAL_EMOJIS, l.Pl.USE_EXTERNAL_STICKERS, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.MENTION_EVERYONE, l.Pl.MANAGE_MESSAGES, l.Pl.PIN_MESSAGES, l.Pl.MANAGE_THREADS, l.Pl.READ_MESSAGE_HISTORY, l.Pl.SEND_TTS_MESSAGES, l.Pl.SEND_VOICE_MESSAGES, l.Pl.SEND_POLLS];
     return (
         n.inSoundmojiExperiment || (E = E.filter((t) => t !== l.Pl.USE_EXTERNAL_SOUNDS)),
         (n.showPrivateThreads && n.showCreateThreads) || (E = E.filter((t) => t !== l.Pl.CREATE_PRIVATE_THREADS)),
         n.showCreateThreads || (E = E.filter((t) => t !== l.Pl.CREATE_PUBLIC_THREADS)),
+        n.inPinPermissionExperiment || (E = E.filter((t) => t !== l.Pl.PIN_MESSAGES)),
         {
             title: i,
             description: n.sectionDescription,
@@ -392,7 +399,7 @@ function N(t, i) {
         permissions: S([l.Pl.CONNECT, l.Pl.SPEAK, l.Pl.STREAM, l.Pl.USE_SOUNDBOARD, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.USE_VAD, l.Pl.PRIORITY_SPEAKER, l.Pl.MUTE_MEMBERS, l.Pl.DEAFEN_MEMBERS, l.Pl.MOVE_MEMBERS, l.Pl.SET_VOICE_CHANNEL_STATUS], t)
     };
 }
-function T(t, i, n) {
+function g(t, i, n) {
     let E = [l.Pl.SEND_MESSAGES, l.Pl.EMBED_LINKS, l.Pl.ATTACH_FILES, l.Pl.ADD_REACTIONS, l.Pl.USE_EXTERNAL_EMOJIS, l.Pl.USE_EXTERNAL_STICKERS, l.Pl.USE_EXTERNAL_SOUNDS, l.Pl.MENTION_EVERYONE, l.Pl.MANAGE_MESSAGES, l.Pl.READ_MESSAGE_HISTORY, l.Pl.SEND_TTS_MESSAGES, l.Pl.SEND_VOICE_MESSAGES, l.Pl.SEND_POLLS];
     return (
         n.inSoundmojiExperiment || (E = E.filter((t) => t !== l.Pl.USE_EXTERNAL_SOUNDS)),
@@ -403,7 +410,7 @@ function T(t, i, n) {
         }
     );
 }
-function g(t, i) {
+function T(t, i) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
     return {
         title: i,
@@ -416,13 +423,13 @@ function a(t, i, n) {
         permissions: S(n ? [l.Pl.CONNECT, l.Pl.STREAM, l.Pl.MUTE_MEMBERS, l.Pl.MOVE_MEMBERS] : [l.Pl.CONNECT, l.Pl.MUTE_MEMBERS, l.Pl.MOVE_MEMBERS], t)
     };
 }
-function M(t, i) {
+function I(t, i) {
     return {
         title: i,
         permissions: S([l.Pl.REQUEST_TO_SPEAK, l.Pl.MENTION_EVERYONE], t)
     };
 }
-function I(t, i) {
+function M(t, i) {
     return {
         title: i,
         permissions: S([l.Pl.CREATE_EVENTS, l.Pl.MANAGE_EVENTS], t)

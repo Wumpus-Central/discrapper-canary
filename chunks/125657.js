@@ -24,19 +24,19 @@ function y(e) {
         _ = (0, o.e7)([h.Z], () => h.Z.getRoles(n.id)),
         { application: C } = y,
         N = null != C.bot ? new g.Z(C.bot) : null,
-        I = (0, o.e7)([f.ZP], () => (null != N ? f.ZP.getMember(n.id, N.id) : null), [N, n]),
-        E = null == N ? void 0 : N.id;
+        E = (0, o.e7)([f.ZP], () => (null != N ? f.ZP.getMember(n.id, N.id) : null), [N, n]),
+        I = null == N ? void 0 : N.id;
     i.useEffect(() => {
-        null != E && s.Z.requestMembersById(n.id, E);
-    }, [n.id, E]);
+        null != I && s.Z.requestMembersById(n.id, I);
+    }, [n.id, I]);
     let S = i.useMemo(() => {
         var e, t, r;
         let i = _[(0, b.lV)(n)],
-            o = null != (t = null == I || null == (e = I.roles) ? void 0 : e.map((e) => _[e]).filter(x.lm)) ? t : [],
+            o = null != (t = null == E || null == (e = E.roles) ? void 0 : e.map((e) => _[e]).filter(x.lm)) ? t : [],
             a = null != (r = null == i ? void 0 : i.permissions) ? r : j.Hn;
         for (let e of o) a = l.IH(a, e.permissions);
         return a;
-    }, [n, _, I]);
+    }, [n, _, E]);
     return null == N
         ? null
         : (0, r.jsx)(a.Zbd, {
@@ -99,7 +99,7 @@ function y(e) {
                                       : null
                               ]
                           });
-                      })(N, n, null != (t = null == I ? void 0 : I.roles) ? t : [], S)
+                      })(N, n, null != (t = null == E ? void 0 : E.roles) ? t : [], S)
                   ]
               })
           });

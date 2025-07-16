@@ -22,8 +22,8 @@ var r = n(255367),
     _ = n(5192),
     C = n(709054),
     N = n(360606),
-    I = n(905753),
-    E = n(399860),
+    E = n(905753),
+    I = n(399860),
     S = n(335049),
     T = n(617012),
     w = n(981631),
@@ -116,13 +116,13 @@ function D(e) {
         }, [l, p, x]),
         w = i.useCallback(
             (e, t) => {
-                n({}, [(0, E.rE)(e, t)]);
+                n({}, [(0, I.rE)(e, t)]);
             },
             [n]
         ),
         P = i.useCallback(
             (e, t, r) => {
-                let i = (0, E.rE)(e, t);
+                let i = (0, I.rE)(e, t);
                 null != p[i] &&
                     n(
                         {
@@ -143,7 +143,7 @@ function D(e) {
             .map((e) => e.id);
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
     }, [l, p, y, S]);
-    let A = (0, c.e7)([I.Z], () => I.Z.getApplicationId()),
+    let A = (0, c.e7)([E.Z], () => E.Z.getApplicationId()),
         k = (0, c.e7)([N.default], () =>
             null == A
                 ? void 0
@@ -186,11 +186,11 @@ function R(e) {
         _ = f.id === a.id || f.id === (0, b.bD)(a.id),
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
         N = !f.canWrite || !v,
-        I = x.default.getId();
-    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? P.intl.string(P.t['1VF/09']) : P.intl.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.intl.string(P.t.mcAijY))) : (o = null != s ? P.intl.string(P.t.tybdam) : P.intl.string(P.t.z2hjk5));
-    let E = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
+        E = x.default.getId();
+    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === E ? P.intl.string(P.t['1VF/09']) : P.intl.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.intl.string(P.t.mcAijY))) : (o = null != s ? P.intl.string(P.t.tybdam) : P.intl.string(P.t.z2hjk5));
+    let I = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
     i.useEffect(() => {
-        if (E) {
+        if (I) {
             var e;
             y.default.track(
                 w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
@@ -200,7 +200,7 @@ function R(e) {
                 })
             );
         }
-    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, E]);
+    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, I]);
     let D = i.useRef(null),
         R = (0, r.jsx)(d.ua7, {
             tooltipClassName: Z.tooltip,
@@ -216,7 +216,7 @@ function R(e) {
                         children: (0, r.jsx)(T.Z, {
                             isDisabled: N,
                             currentValue: f.permission,
-                            onChange: E
+                            onChange: I
                                 ? (e) => {
                                       (g.Z.dismissToggleTooltip(a.id, j), c(e));
                                   }
@@ -245,7 +245,7 @@ function R(e) {
             align: 'center',
             animation: d.yRy.Animation.TRANSLATE,
             onRequestClose: () => g.Z.dismissToggleTooltip(a.id, j),
-            shouldShow: E,
+            shouldShow: I,
             closeOnScroll: !0,
             children: () => R
         });

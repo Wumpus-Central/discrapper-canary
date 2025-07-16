@@ -54,7 +54,7 @@ function k(e) {
     }
     return e;
 }
-function Z(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,9 +72,9 @@ function Z(e, t) {
         e
     );
 }
-let A = {
+let Z = {
         [S.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            Z(
+            A(
                 k(
                     {
                         type: S.Odu.CLICK_ZONE_DEBUG,
@@ -94,7 +94,7 @@ let A = {
                 { pinned: !0 }
             ),
         [S.Odu.PERFORMANCE_DEBUG]: (e) =>
-            Z(
+            A(
                 k(
                     {
                         type: S.Odu.PERFORMANCE_DEBUG,
@@ -366,7 +366,7 @@ function z(e) {
         () => {
             if (null != t) (0, u.E9)(t.id);
             else {
-                let t = A[e];
+                let t = Z[e];
                 if (null == t) return;
                 let a = t(P.$S);
                 (0, u.A4)(a);
@@ -411,7 +411,7 @@ let G = r.memo(function (e) {
     );
     return (0, n.jsx)(
         d.Text,
-        Z(k({}, a), {
+        A(k({}, a), {
             variant: 'text-md/semibold',
             color: 'text-primary',
             children: r
@@ -474,7 +474,7 @@ function V() {
                                         var r;
                                         return (0, n.jsx)(
                                             'div',
-                                            Z(k({}, e), {
+                                            A(k({}, e), {
                                                 children: (0, n.jsxs)(d.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: l === x.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
@@ -569,7 +569,7 @@ let H = r.memo(function (e) {
                 children: (a) =>
                     (0, n.jsx)(
                         'div',
-                        Z(k({}, a), {
+                        A(k({}, a), {
                             children: (0, n.jsxs)(d.zJl, {
                                 className: i()(I.panelGroup, I.scroller),
                                 children: [
@@ -703,7 +703,7 @@ let H = r.memo(function (e) {
                     children: (e) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, e), {
+                            A(k({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: l,
                                     onChange: () => x(),
@@ -726,7 +726,7 @@ let H = r.memo(function (e) {
                     children: (e) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, e), {
+                            A(k({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: i,
                                     onChange: () => p(),
@@ -749,7 +749,7 @@ let H = r.memo(function (e) {
                     children: (e) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, e), {
+                            A(k({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: s,
                                     onChange: () => h(),
@@ -772,7 +772,7 @@ let H = r.memo(function (e) {
                     children: (e) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, e), {
+                            A(k({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: c,
                                     onChange: () => f(),
@@ -796,7 +796,7 @@ let H = r.memo(function (e) {
                     children: (a) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, a), {
+                            A(k({}, a), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: null != e,
                                     onChange: () => t(),
@@ -819,7 +819,7 @@ let H = r.memo(function (e) {
                     children: (e) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, e), {
+                            A(k({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: null != a,
                                     onChange: () => r(),
@@ -851,7 +851,7 @@ let H = r.memo(function (e) {
                         children: (e) =>
                             (0, n.jsx)(
                                 'div',
-                                Z(k({}, e), {
+                                A(k({}, e), {
                                     children: (0, n.jsxs)('div', {
                                         className: I.panelGroup,
                                         children: [
@@ -882,7 +882,7 @@ let H = r.memo(function (e) {
                     children: (t) =>
                         (0, n.jsx)(
                             'div',
-                            Z(k({}, t), {
+                            A(k({}, t), {
                                 children: (0, n.jsxs)('div', {
                                     className: I.panelGroup,
                                     children: [
@@ -924,14 +924,14 @@ let H = r.memo(function (e) {
                     label: x.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                     value: x.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
                 }
-            ].map((t) => Z(k({}, t), { label: ''.concat(t.label, ' ').concat(e === t.value ? '(current)' : '') }));
+            ].map((t) => A(k({}, t), { label: ''.concat(t.label, ' ').concat(e === t.value ? '(current)' : '') }));
         return (0, n.jsx)(d.ua7, {
             position: 'left',
             text: 'Override the overlay render mode',
             children: (e) =>
                 (0, n.jsx)(
                     'div',
-                    Z(k({}, e), {
+                    A(k({}, e), {
                         className: I.panelGroup,
                         children: (0, n.jsx)(d.PhF, {
                             serialize: (e) => e,

@@ -81,6 +81,7 @@
     KsC: () => A,
     L4X: () => eV,
     LAt: () => to,
+    LCk: () => r$,
     LPv: () => tq,
     LYt: () => th,
     Lg6: () => rN,
@@ -502,6 +503,7 @@ var o = n(106351),
             (e.PREMIUM_TIER_3_OVERRIDE = 'PREMIUM_TIER_3_OVERRIDE'),
             (e.REPORT_TO_MOD_PILOT = 'REPORT_TO_MOD_PILOT'),
             (e.TIERLESS_BOOSTING_SYSTEM_MESSAGE = 'TIERLESS_BOOSTING_SYSTEM_MESSAGE'),
+            (e.PIN_PERMISSION_MIGRATION_COMPLETE = 'PIN_PERMISSION_MIGRATION_COMPLETE'),
             e
         );
     })({});
@@ -1393,7 +1395,8 @@ let eh = '@me',
         SAFETY_FLOWS_TASK: '/safety-flows/task',
         SAFETY_FLOWS_RESEND_VERIFICATION_CODE: '/safety-flows/resend/email/reverification/pincode',
         VOICE_FILTERS_CATALOG: '/voice-filters/catalog',
-        APEX_EXPERIMENTS_METADATA: '/apex/experiments/metadata'
+        APEX_EXPERIMENTS_METADATA: '/apex/experiments/metadata',
+        GUILD_MIGRATE_PIN_PERMISSION: (e) => '/guilds/'.concat(e, '/migrate-pin-permission')
     }),
     eT = Object.freeze({
         INDEX: '/',
@@ -4340,7 +4343,8 @@ let nS = Object.freeze({
     GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: 201,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: 202,
     GUILD_MEMBER_VERIFICATION_UPDATE: 210,
-    GUILD_PROFILE_UPDATE: 211
+    GUILD_PROFILE_UPDATE: 211,
+    GUILD_MIGRATE_PIN_PERMISSION: 212
 });
 var nA = (function (e) {
         return ((e.ALL = 'ALL'), (e.CREATE = 'CREATE'), (e.UPDATE = 'UPDATE'), (e.DELETE = 'DELETE'), e);
@@ -5271,4 +5275,5 @@ let rQ = Object.freeze({
         SUBSCRIPTION_PLANS: (e) => (null == e ? null : ['subscription-plans', e]),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null == e ? null : ['useParentSkuData', e])
     }),
-    rJ = 4096;
+    rJ = 4096,
+    r$ = 1768248000000;

@@ -111,8 +111,8 @@ function S(e) {
             },
             [S, i, U, M]
         ),
-        Z = null != (n = null == M ? void 0 : M.offset) ? n : 0,
-        B = (0, o.e7)(
+        B = null != (n = null == M ? void 0 : M.offset) ? n : 0,
+        Z = (0, o.e7)(
             [d.Z],
             () => {
                 if (null == P.result) return [];
@@ -152,7 +152,7 @@ function S(e) {
                       isSearching: !0,
                       isIndexing: !1,
                       isHistoricalIndexing: !1,
-                      offset: Z,
+                      offset: B,
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
@@ -163,13 +163,13 @@ function S(e) {
                       isSearching: !1,
                       isIndexing: null != (t = P.result.doing_deep_historical_index) && t,
                       isHistoricalIndexing: null != (n = P.result.doing_deep_historical_index) && n,
-                      offset: Z,
+                      offset: B,
                       totalResults: null != (r = P.result.total_results) ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   };
-        }, [P.result, Z]);
+        }, [P.result, B]);
     return null == j || null == y || null == F
         ? null
         : (0, r.jsxs)('div', {
@@ -185,7 +185,7 @@ function S(e) {
                       ref: v,
                       onScroll: G,
                       children: (0, r.jsx)(T.Z, {
-                          searchResults: B,
+                          searchResults: Z,
                           search: F,
                           searchId: i,
                           renderEmbeds: !0,

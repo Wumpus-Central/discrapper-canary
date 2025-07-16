@@ -1,12 +1,12 @@
 (n.d(t, {
     I6: () => f,
-    V9: () => S,
+    V9: () => O,
     Z6: () => j,
     jp: () => p,
     r5: () => d,
     vT: () => c,
     vh: () => E,
-    yU: () => O
+    yU: () => S
 }),
     n(388685),
     n(997841),
@@ -90,10 +90,10 @@ let g = {
         content: [f[o.fX.SERVER_POLICY], f[o.fX.MENTION_SPAM], f[o.fX.ML_SPAM], f[o.fX.DEFAULT_KEYWORD_LIST], f[o.fX.KEYWORD]]
     },
     d = (e, t) => f[e].flags.has(t);
-function S(e) {
+function O(e) {
     return Array.from(f[e].availableActionTypes);
 }
-function O(e, t) {
+function S(e, t) {
     let { id: n, eventType: r, triggerType: l, actions: i } = e,
         a = f[l];
     if (t.filter((e) => n !== e.id && e.triggerType === l).length > a.perGuildMaxCount) throw Error('You have exceeded the maximum number of rules of type '.concat(l));

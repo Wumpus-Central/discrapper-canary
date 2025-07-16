@@ -31,8 +31,8 @@ var _ = a(392750),
     I = a(272193),
     R = a(685560),
     k = a(735959),
-    Z = a(572444),
-    A = a(246992),
+    A = a(572444),
+    Z = a(246992),
     D = a(484662),
     L = a(496025),
     M = a(442954),
@@ -276,7 +276,7 @@ function ei(e) {
                     id: 'krisp_tester',
                     name: 'Krisp Tester',
                     group: ee.v0.AUDIO_VIDEO,
-                    render: () => (0, n.jsx)(Z.Z, {})
+                    render: () => (0, n.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
@@ -307,7 +307,7 @@ function ei(e) {
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
-        (0, n.jsxs)(A.Gk, {
+        (0, n.jsxs)(Z.Gk, {
             children: [
                 (0, n.jsxs)(x.ZP, {
                     className: er.headerBar,
@@ -355,7 +355,7 @@ function ei(e) {
                 }),
                 (0, n.jsx)(i, {}),
                 o(),
-                (0, n.jsx)(A.Br, { className: en.layerContainer })
+                (0, n.jsx)(Z.Br, { className: en.layerContainer })
             ]
         })
     );

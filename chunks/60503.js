@@ -6,6 +6,5 @@ e.exports = {
     navBarSectionContent: 'navBarSectionContent__88ef1',
     sectionClickable: 'sectionClickable__88ef1',
     sectionUnderline: 'sectionUnderline__88ef1',
-    fadeIn: 'fadeIn__88ef1',
     underlineAppear: 'underlineAppear__88ef1'
 };

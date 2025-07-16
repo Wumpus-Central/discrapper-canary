@@ -109,8 +109,8 @@ function O() {
         k = r.useCallback(() => {
             null != s && (0, p.i)(s, null);
         }, [s]),
-        Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
-        A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
+        A = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
+        Z = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsx)(o.X6, {
@@ -156,13 +156,13 @@ function O() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: Z,
+                                initialValue: A,
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
                                 onValueChange: f
                             },
-                            'opacity-'.concat(Z)
+                            'opacity-'.concat(A)
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: 'The most prominent color in the wallpaper. This will be used to adjust the color tokens.',
@@ -267,13 +267,13 @@ function O() {
                             m.iRW,
                             {
                                 className: _.slider,
-                                initialValue: A,
+                                initialValue: Z,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
                                 onValueChange: R
                             },
-                            'tokenMixAmount-'.concat(A)
+                            'tokenMixAmount-'.concat(Z)
                         ),
                         (0, n.jsx)(m.ua7, {
                             text: 'The color used for hyperlinks.',

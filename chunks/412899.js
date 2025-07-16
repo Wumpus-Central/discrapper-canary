@@ -101,8 +101,8 @@ function z(e, t) {
     }
     return l;
 }
-let Z = () => Promise.resolve();
-function B(e) {
+let B = () => Promise.resolve();
+function Z(e) {
     let { userRoles: t, position: n } = e,
         l = z(e, ['userRoles', 'position']),
         i = (0, p.Dt)();
@@ -158,7 +158,7 @@ let F = l.forwardRef(function (e, t) {
         M = (0, _.e7)([f.Z], () => f.Z.roleStyle),
         x = (0, b._f)(h, m, m.colorStrings),
         P = (null == (i = m.tags) ? void 0 : i.guild_connections) === null,
-        Z = l.useCallback(
+        B = l.useCallback(
             (e) => {
                 (0, I.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
@@ -174,8 +174,8 @@ let F = l.forwardRef(function (e, t) {
             },
             [m.id]
         ),
-        B = (0, T.dQu)(A.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (a = m.colorString) ? a : B,
+        Z = (0, T.dQu)(A.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        F = null != (a = m.colorString) ? a : Z,
         V = null != (o = (0, d.wK)(F, 0.6)) ? o : void 0,
         H = A.Z.unsafe_rawColors.WHITE_500.css,
         k = (0, d._i)(F);
@@ -212,7 +212,7 @@ let F = l.forwardRef(function (e, t) {
                         ref: t,
                         className: s()(y.role, g),
                         style: K,
-                        onContextMenu: Z,
+                        onContextMenu: B,
                         onMouseDown: C,
                         'aria-label': m.name,
                         tabIndex: v
@@ -264,7 +264,7 @@ function V(e) {
         targetElementRef: o,
         renderPopout: (t) => {
             let { position: n } = t;
-            return (0, r.jsx)(B, G(w({}, e), { position: null != n ? n : 'top' }));
+            return (0, r.jsx)(Z, G(w({}, e), { position: null != n ? n : 'top' }));
         },
         position: 'top',
         align: 'center',
@@ -370,14 +370,14 @@ function k(e) {
     }, [d, A, b]);
     let x = L.default.getCurrentUser();
     o()(null != x, 'MemberRolesList: currentUser cannot be undefined');
-    let B = !I && U.Z.can(P.Plq.MANAGE_ROLES, i),
+    let Z = !I && U.Z.can(P.Plq.MANAGE_ROLES, i),
         k = M.e9(i, x.id),
         K = l.useMemo(() => 'roles-'.concat((0, u.Z)()), []),
         W = (0, E.ZP)({
             id: K,
             isEnabled: !0,
-            scrollToStart: Z,
-            scrollToEnd: Z,
+            scrollToStart: B,
+            scrollToEnd: B,
             wrap: !0
         }),
         q = b.map((e) => {
@@ -387,7 +387,7 @@ function k(e) {
                 {
                     className: m,
                     role: e,
-                    canRemove: (null == (t = e.tags) ? void 0 : t.guild_connections) === null ? n.id === x.id : B && M.r6(i, x.id, k, e),
+                    canRemove: (null == (t = e.tags) ? void 0 : t.guild_connections) === null ? n.id === x.id : Z && M.r6(i, x.id, k, e),
                     onRemove: () => N(e),
                     ref: (t) => {
                         var n;
@@ -400,7 +400,7 @@ function k(e) {
             );
         });
     return (
-        null != R && 0 !== D ? (t = (0, r.jsx)(V, G(w({}, e), { numRolesHidden: D }))) : B && (t = (0, r.jsx)(H, G(w({}, e), { handleAddRole: h }))),
+        null != R && 0 !== D ? (t = (0, r.jsx)(V, G(w({}, e), { numRolesHidden: D }))) : Z && (t = (0, r.jsx)(H, G(w({}, e), { handleAddRole: h }))),
         (0, r.jsx)(c.bG, {
             navigator: W,
             children: (0, r.jsx)(c.SJ, {

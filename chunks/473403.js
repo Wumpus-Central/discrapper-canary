@@ -195,8 +195,8 @@ let x = (e) => {
                           subtitleColor: w,
                           channel: { type: G },
                           onMouseEnter: z,
-                          onMouseLeave: Z,
-                          'aria-label': B,
+                          onMouseLeave: B,
+                          'aria-label': Z,
                           children: F,
                           guild: V,
                           channelTypeOverride: H,
@@ -253,7 +253,7 @@ let x = (e) => {
                                       ee
                                   ),
                                   {
-                                      'aria-label': B,
+                                      'aria-label': Z,
                                       focusProps: { enabled: !1 },
                                       children: [
                                           (0, r.jsxs)('div', {
@@ -343,7 +343,7 @@ let x = (e) => {
                           onMouseDown: (e) => (null == N ? void 0 : N(e, i)),
                           onContextMenu: (e) => (null == L ? void 0 : L(e, i)),
                           onMouseEnter: z,
-                          onMouseLeave: Z,
+                          onMouseLeave: B,
                           children: [c || !g ? null : (0, r.jsx)('div', { className: s()(S.unread, X ? S.unreadImportant : void 0) }), null != (n = null == M ? void 0 : M(ea)) ? n : ea]
                       })
                   });

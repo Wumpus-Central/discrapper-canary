@@ -112,7 +112,7 @@ function h(e) {
                 })
             ]
         }),
-        Z = {
+        B = {
             key: t.id,
             className: a()(
                 m.pill,
@@ -132,25 +132,25 @@ function h(e) {
             onMouseEnter: () => v && L(!0),
             onMouseLeave: () => v && L(!1)
         },
-        B = (0, o.JA)('forum-tag-'.concat(t.id));
+        Z = (0, o.JA)('forum-tag-'.concat(t.id));
     return x
         ? (0, l.jsx)(
               c.P3F,
               O(
                   f(
-                      O(f({}, B), {
+                      O(f({}, Z), {
                           innerRef: y,
                           focusProps: { ringTarget: y },
                           'aria-label': null != S ? S : g.intl.formatToPlainString(g.t.iyRTLi, { tagName: C }),
                           role: 'button',
                           'aria-pressed': p
                       }),
-                      Z
+                      B
                   ),
                   { children: z }
               )
           )
-        : (0, l.jsx)('div', O(f({}, Z), { children: z }));
+        : (0, l.jsx)('div', O(f({}, B), { children: z }));
 }
 function R(e) {
     let { tags: t, count: n, size: r = 1 } = e,

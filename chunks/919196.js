@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685), n(539854), n(953529));
+(n.d(t, { Z: () => E }), n(388685), n(539854), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(243814),
@@ -104,9 +104,9 @@ function N(e) {
         t)
     );
 }
-function I(e) {
+function E(e) {
     var t;
-    let { guild: n, applicationIntegration: s, selectableWebhookChannels: d, editedWebhook: I, errors: E, canNavigate: S } = e,
+    let { guild: n, applicationIntegration: s, selectableWebhookChannels: d, editedWebhook: E, errors: I, canNavigate: S } = e,
         { application: T, integration: w, webhooks: P } = s,
         [Z, A] = (0, o.Wu)([m.Z], () => [m.Z.can(v.Plq.MANAGE_ROLES, n), null == T.bot || m.Z.canManageUser(v.Plq.MANAGE_GUILD, T.bot.id, n)], [T.bot, n]),
         k = (0, o.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_WEBHOOKS, n), [n]),
@@ -209,9 +209,9 @@ function I(e) {
                     P.length > 0
                         ? (0, r.jsx)(O.Z, {
                               webhooks: P,
-                              editedWebhook: I,
+                              editedWebhook: E,
                               selectableWebhookChannels: d,
-                              errors: E,
+                              errors: I,
                               canNavigate: S
                           })
                         : (0, r.jsx)(a.Zbd, {

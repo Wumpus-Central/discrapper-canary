@@ -22,8 +22,8 @@ var r = n(255367),
     _ = n(600164),
     C = n(666657),
     N = n(664452),
-    I = n(560114),
-    E = n(699516),
+    E = n(560114),
+    I = n(699516),
     S = n(594174),
     T = n(630388),
     w = n(965638),
@@ -120,7 +120,7 @@ function W(e) {
                                     (0, r.jsx)(b.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: (0, v.F6)(n.channel, S.default, E.Z, !0)
+                                        children: (0, v.F6)(n.channel, S.default, I.Z, !0)
                                     })
                             ]
                         })
@@ -222,11 +222,11 @@ function H(e) {
                           .value(),
             [t, f]
         ),
-        E = () => {
+        I = () => {
             (0, b.ZDy)(
                 async () => (e) =>
                     (0, r.jsx)(
-                        I.default,
+                        E.default,
                         M(L({}, e), {
                             channel: u,
                             guild: l,
@@ -319,7 +319,7 @@ function H(e) {
                             (0, r.jsx)(b.R94, {
                                 className: R.marginBottom20,
                                 type: b.geA.DESCRIPTION,
-                                children: !0 === a ? A.intl.format(A.t['97VdNj'], { onCreateInvite: E }) : A.intl.string(A.t.WDw38P)
+                                children: !0 === a ? A.intl.format(A.t['97VdNj'], { onCreateInvite: I }) : A.intl.string(A.t.WDw38P)
                             }),
                             (0, r.jsxs)('div', {
                                 className: k.inviteDisabledContainer,
@@ -359,7 +359,7 @@ function H(e) {
                     hasInvites: y.length > 0,
                     setHeight: T,
                     onShowDisableInvites: D,
-                    onShowInviteModal: E,
+                    onShowInviteModal: I,
                     hasInviteDisabledPermission: j,
                     invitesDisabled: v,
                     canCreateInvites: a

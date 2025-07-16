@@ -91,7 +91,9 @@ function j(e) {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
-                distributor: e.distributor
+                distributor: e.distributor,
+                sku: e.sku,
+                gameMetadata: e.gameMetadata
             });
     }
     null != c ? (R[u] = c) : delete R[u];

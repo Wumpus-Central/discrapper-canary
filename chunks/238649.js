@@ -76,7 +76,7 @@ let N = r.memo(
                                             variant: 'expressive',
                                             size: 'md',
                                             fullWidth: A,
-                                            text: R,
+                                            buttonTextOverride: R,
                                             subscriptionTier: D
                                         }),
                                         !A &&

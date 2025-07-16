@@ -21,8 +21,8 @@ var i = n(255367),
     C = n(388610),
     N = n(592125),
     S = n(496675),
-    O = n(699516),
-    E = n(594174),
+    E = n(699516),
+    O = n(594174),
     T = n(585483),
     w = n(787263),
     Z = n(975316),
@@ -84,7 +84,7 @@ class M extends l.PureComponent {
                                                           className: L.channelIcon
                                                       })
                                                     : null,
-                                                (0, m.F6)(t, E.default, O.Z),
+                                                (0, m.F6)(t, O.default, E.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
@@ -92,7 +92,7 @@ class M extends l.PureComponent {
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
                                                           className: L.category,
-                                                          children: (0, m.F6)(n, E.default, O.Z)
+                                                          children: (0, m.F6)(n, O.default, E.Z)
                                                       })
                                                     : null
                                             ]

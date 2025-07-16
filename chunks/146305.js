@@ -204,7 +204,8 @@ let eb = {
                         stores: [S.Z],
                         element: L._
                     },
-                    predicate: () => t.canManageRoles
+                    predicate: () => t.canManageRoles,
+                    icon: t.pinPermissionMigrationAvailable ? (0, r.jsx)('div', { className: ef.redDot }) : void 0
                 };
             case em.pNK.EMOJI:
                 return {

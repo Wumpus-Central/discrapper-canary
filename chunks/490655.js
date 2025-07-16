@@ -22,25 +22,25 @@ var r = n(255367),
     _ = n(351644),
     C = n(108053),
     N = n(981631),
-    I = n(388032),
-    E = n(498181);
+    E = n(388032),
+    I = n(498181);
 function S(e, t) {
     switch (e) {
         case N.b4C.APPLICATION:
             var n;
             return null != (n = null == t ? void 0 : t.application.name) ? n : '';
         case N.b4C.OVERVIEW:
-            return I.intl.string(I.t.s69NLC);
+            return E.intl.string(E.t.s69NLC);
         case N.b4C.CHANNEL_FOLLOWING:
-            return I.intl.string(I.t.OrV60t);
+            return E.intl.string(E.t.OrV60t);
         case N.b4C.TWITCH:
-            return I.intl.string(I.t.q4pBGx);
+            return E.intl.string(E.t.q4pBGx);
         case N.b4C.WEBHOOKS:
-            return I.intl.string(I.t.xOg4SE);
+            return E.intl.string(E.t.xOg4SE);
         case N.b4C.YOUTUBE:
-            return I.intl.string(I.t.aS6cKy);
+            return E.intl.string(E.t.aS6cKy);
         case N.b4C.LOBBIES_LINKED:
-            return I.intl.string(I.t.tqtDXF);
+            return E.intl.string(E.t.tqtDXF);
         default:
             return '';
     }
@@ -142,10 +142,10 @@ let T = i.memo(function (e) {
                     guild: l,
                     integrations: X[N.ABu.TWITCH],
                     editedIntegration: P,
-                    labelText: I.intl.string(I.t.q4pBGx),
+                    labelText: E.intl.string(E.t.q4pBGx),
                     platformType: N.ABu.TWITCH,
-                    descriptionText: I.intl.string(I.t.V9kNqq),
-                    helpText: I.intl.format(I.t.ro1jEB, {
+                    descriptionText: E.intl.string(E.t.V9kNqq),
+                    helpText: E.intl.format(E.t.ro1jEB, {
                         connectAction: () =>
                             (0, u.Z)({
                                 platformType: N.ABu.TWITCH,
@@ -162,10 +162,10 @@ let T = i.memo(function (e) {
                     guild: l,
                     integrations: X[N.ABu.YOUTUBE],
                     editedIntegration: P,
-                    labelText: I.intl.string(I.t.aS6cKy),
+                    labelText: E.intl.string(E.t.aS6cKy),
                     platformType: N.ABu.YOUTUBE,
-                    descriptionText: I.intl.string(I.t['7Tv7JC']),
-                    helpText: I.intl.format(I.t['4OSAQ0'], {
+                    descriptionText: E.intl.string(E.t['7Tv7JC']),
+                    helpText: E.intl.format(E.t['4OSAQ0'], {
                         connectAction: () => (0, u.Z)({ platformType: N.ABu.YOUTUBE }),
                         helpdeskArticle: x.Z.getArticleURL(N.BhN.YOUTUBE_INTEGRATION)
                     }),
@@ -270,7 +270,7 @@ let T = i.memo(function (e) {
         children: [
             (0, r.jsx)(p.Z, {
                 align: p.Z.Align.CENTER,
-                className: E.breadcrumbs,
+                className: I.breadcrumbs,
                 children:
                     t === N.b4C.OVERVIEW
                         ? (0, r.jsx)(s.vwX, {
@@ -289,7 +289,7 @@ let T = i.memo(function (e) {
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, r.jsx)(s.vwX, {
                                       tag: 'h1',
-                                      className: t ? E.breadcrumbActive : E.breadcrumbInactive,
+                                      className: t ? I.breadcrumbActive : I.breadcrumbInactive,
                                       children: e.label
                                   })
                           })

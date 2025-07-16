@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-function I(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function I(e, t) {
         e
     );
 }
-let E = (e) => {
+let I = (e) => {
     if (null == e) return null;
     let t = new g.Z(e);
     return O.ZP.getUserTag(t);
@@ -92,7 +92,7 @@ function T(e) {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
-                    I(N({}, e), {
+                    E(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
                         confirmText: _.intl.string(_.t['W+K1Fh']),
                         cancelText: _.intl.string(_.t.xNhj0N),
@@ -123,7 +123,7 @@ function T(e) {
         ? L.push({
               icon: c.T39,
               text: _.intl.formatToPlainString(_.t['7EcUbm'], {
-                  user: E(n.user),
+                  user: I(n.user),
                   timestamp: j.default.extractTimestamp(n.id)
               })
           })
@@ -236,7 +236,7 @@ function T(e) {
                                                         className: C.copyButton,
                                                         children: (0, r.jsx)(
                                                             c.zxk,
-                                                            I(
+                                                            E(
                                                                 N(
                                                                     {
                                                                         variant: 'secondary',

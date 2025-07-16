@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => v }), r(35282), r(388685));
+(r.d(t, { Z: () => v }), r(388685), r(35282));
 var n = r(255367),
     l = r(73800),
     i = r(120356),
@@ -16,7 +16,7 @@ var n = r(255367),
     m = r(709999),
     _ = r(81136),
     O = r(501638),
-    C = r(484920);
+    C = r(538314);
 function v(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: i, scrollerRef: v, tab: E } = e,
@@ -49,8 +49,13 @@ function v(e) {
     }, [y, i, j, x, r, E]);
     let Z = l.useRef(null),
         { setQueryPageSize: F, setQueryPageOffset: D, queryPageSize: M } = (0, f.S)(),
-        H = r || k || null == T,
-        W = M > 0 && !H && 0 === R.length;
+        [H, W] = l.useState(!1),
+        V = r || k || null == T;
+    l.useEffect(() => {
+        if (V) return void W(!1);
+        R.length > 0 && W(!0);
+    }, [V, R.length]);
+    let U = M > 0 && !V && 0 === R.length;
     return (
         l.useEffect(() => {
             let e = new ResizeObserver(() => {
@@ -61,15 +66,15 @@ function v(e) {
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: o()({ [C.productsEmpty]: W }),
+                    className: o()({ [C.productsEmpty]: U }),
                     children: [
-                        W && (0, n.jsx)(O.Z, {}),
+                        U && (0, n.jsx)(O.Z, {}),
                         (0, n.jsxs)('div', {
-                            className: C.products,
+                            className: o()(C.products, { [C.loadIn]: H }),
                             ref: Z,
                             children: [
-                                H && [...Array(M)].map((e, t) => (0, n.jsx)(b.K, {}, t)),
-                                !H &&
+                                V && [...Array(M)].map((e, t) => (0, n.jsx)(b.K, {}, t)),
+                                !V &&
                                     R.map((e, t) => {
                                         let r = d.Z.getCategory(e.categorySkuId);
                                         return null == r

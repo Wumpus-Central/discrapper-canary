@@ -27,8 +27,8 @@ var i = n(255367),
     C = n(429673),
     N = n(933557),
     S = n(541716),
-    O = n(752305),
-    E = n(893718),
+    E = n(752305),
+    O = n(893718),
     T = n(600164),
     w = n(313201),
     Z = n(318766),
@@ -125,11 +125,11 @@ let eg = (0, w.hQ)(),
     eC = (0, w.hQ)(),
     eN = (0, w.hQ)(),
     eS = (0, w.hQ)(),
-    eO = (0, U.kt)({
+    eE = (0, U.kt)({
         id: '1',
         type: ei.d4z.DM
     }),
-    eE = {
+    eO = {
         popoutLocation: {
             page: ei.ZY5.CHANNEL_SETTINGS,
             section: ei.jXE.CHANNEL_DEFAULT_REACTION,
@@ -243,7 +243,7 @@ class eI extends l.PureComponent {
             r !== this.state.textTopicValue &&
             this.setState({
                 textTopicValue: r,
-                richTopicValue: (0, O.JM)(r)
+                richTopicValue: (0, E.JM)(r)
             });
     }
     getError(e) {
@@ -260,7 +260,7 @@ class eI extends l.PureComponent {
         var n, l, r, d, h, p;
         let f,
             j,
-            { canManageChannels: b, canSendMessages: v, isThreadModerator: C, canManageThread: N, guild: O, isForumPost: T, isOwner: w, showAdvancedSlowModeSetting: Z } = this.props,
+            { canManageChannels: b, canSendMessages: v, isThreadModerator: C, canManageThread: N, guild: E, isForumPost: T, isOwner: w, showAdvancedSlowModeSetting: Z } = this.props,
             R = U.Ec.has(e.type),
             I = e.isForumLikeChannel(),
             P = I && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
@@ -271,13 +271,13 @@ class eI extends l.PureComponent {
                           (0, i.jsx)(g.xJW, {
                               title: I ? eo.intl.string(eo.t.yR6Hwc) : eo.intl.string(eo.t.X8jMDg),
                               className: ed.marginTop20,
-                              children: (0, i.jsx)(E.Z, {
+                              children: (0, i.jsx)(O.Z, {
                                   innerClassName: ec.topic,
                                   characterCountClassName: ec.topicCharacterCount,
                                   maxCharacterCount: I ? el.Z7 : el.$x,
                                   onChange: this.handleChangeRichTopic,
                                   placeholder: eo.intl.string(eo.t['71fbmp']),
-                                  channel: eO,
+                                  channel: eE,
                                   textValue: this.state.textTopicValue,
                                   richValue: this.state.richTopicValue,
                                   type: I ? S.Ie.FORUM_CHANNEL_GUIDELINES : S.Ie.CHANNEL_TOPIC,
@@ -625,7 +625,7 @@ class eI extends l.PureComponent {
                           })
                       })
                     : null,
-            er = null != O && (0, W.Y2)(O),
+            er = null != E && (0, W.Y2)(E),
             eu = U.ov.has(e.type)
                 ? (0, i.jsx)('div', {
                       children: (0, i.jsx)(g.j7V, {
@@ -640,7 +640,7 @@ class eI extends l.PureComponent {
                   })
                 : null,
             eb =
-                U.Y0.has(e.type) && null != O && O.features.has(ei.oNc.NEWS) && e.id !== (null == O ? void 0 : O.rulesChannelId) && e.id !== (null == O ? void 0 : O.publicUpdatesChannelId)
+                U.Y0.has(e.type) && null != E && E.features.has(ei.oNc.NEWS) && e.id !== (null == E ? void 0 : E.rulesChannelId) && e.id !== (null == E ? void 0 : E.publicUpdatesChannelId)
                     ? (0, i.jsx)('div', {
                           children: (0, i.jsx)(g.j7V, {
                               note: (0, i.jsxs)(i.Fragment, {
@@ -684,9 +684,9 @@ class eI extends l.PureComponent {
                 ? (0, i.jsx)(g.j7V, {
                       note: eo.intl.format(eo.t.feJW19, { helpdeskArticle: Q.Z.getArticleURL(ei.BhN.CONVERSATION_SUMMARIES) }),
                       onChange: this.handleChannelSummariesToggled,
-                      value: !e.hasFlag(el.zZ.SUMMARIES_DISABLED) && (null == O ? void 0 : O.features.has(ei.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      value: !e.hasFlag(el.zZ.SUMMARIES_DISABLED) && (null == E ? void 0 : E.features.has(ei.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !b || !(null == O ? void 0 : O.features.has(ei.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !b || !(null == E ? void 0 : E.features.has(ei.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, i.jsxs)('div', {
                           className: ec.badgedItem,
                           children: [
@@ -1005,7 +1005,7 @@ class eI extends l.PureComponent {
                     },
                     pickerIntention: er.Hz.COMMUNITY_CONTENT,
                     channel: n,
-                    analyticsOverride: eE
+                    analyticsOverride: eO
                 });
             }),
             eu(this, 'handleRequireTagChanged', (e) => {
@@ -1143,7 +1143,7 @@ class eI extends l.PureComponent {
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : '';
         this.state = {
             textTopicValue: r,
-            richTopicValue: (0, O.JM)(r),
+            richTopicValue: (0, E.JM)(r),
             topicFocused: !1,
             updateNameInputCursorPosition: !1
         };
@@ -1176,7 +1176,7 @@ function e_() {
             guildId: null == o ? void 0 : o.id,
             location: 'ChannelSettingsOverview'
         }),
-        O = l.useCallback(
+        E = l.useCallback(
             (e) => {
                 null != x && f.getState().setLayoutType(x, e);
             },
@@ -1197,7 +1197,7 @@ function e_() {
         subsection: r,
         isForumPost: null != t && t.isForumPost(),
         isOwner: null == t ? void 0 : t.isOwner(p),
-        handleSetDefaultLayout: O,
+        handleSetDefaultLayout: E,
         showChannelSummariesSettings: j,
         showAdvancedSlowModeSetting: y,
         isEmojiInChannelNamesEnabled: S

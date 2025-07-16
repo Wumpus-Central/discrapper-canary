@@ -4,7 +4,7 @@ n(73800);
 var i = n(680018),
     a = n(481060),
     o = n(648613),
-    s = n(388032);
+    s = n(433390);
 function l(e, t, n) {
     return (
         t in e
@@ -78,36 +78,40 @@ function _(e, t) {
     return i;
 }
 let p = function (e) {
-    var { subscriptionTier: t, onClick: n, postSuccessGuild: l, onSubscribeModalClose: u, premiumModalAnalyticsLocation: _, applicationId: p, confirmationFooter: h, paymentModalBanner: m, text: g } = e,
-        E = f(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'text']);
+    var { subscriptionTier: t, onClick: n, postSuccessGuild: l, onSubscribeModalClose: u, premiumModalAnalyticsLocation: _, applicationId: p, confirmationFooter: h, paymentModalBanner: m, buttonTextOverride: g } = e,
+        E = f(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride']);
     let b = {
-        onClick: n,
-        subscriptionTier: t,
-        postSuccessGuild: l,
-        onSubscribeModalClose: u,
-        premiumModalAnalyticsLocation: _,
-        applicationId: p,
-        confirmationFooter: h,
-        paymentModalBanner: m
-    };
+            onClick: n,
+            subscriptionTier: t,
+            postSuccessGuild: l,
+            onSubscribeModalClose: u,
+            premiumModalAnalyticsLocation: _,
+            applicationId: p,
+            confirmationFooter: h,
+            paymentModalBanner: m
+        },
+        { buttonText: y, disabled: O } = (0, s.Z)({
+            subscriptionTier: t,
+            buttonTextOverride: g
+        });
     return (0, r.jsx)(
         o.Z,
         d(c({}, b), {
             children: (e) => {
                 let { onClick: t } = e,
-                    n = null != g ? g : s.intl.string(s.t['2pG5GR']),
-                    { variant: o } = E,
-                    l = f(E, ['variant']);
+                    { variant: n } = E,
+                    o = f(E, ['variant']);
                 return (0, r.jsx)(
                     i.z,
                     c(
                         {
                             onClick: t,
-                            text: n,
+                            text: y,
+                            disabled: O,
                             icon: a.SrA,
-                            variant: o
+                            variant: n
                         },
-                        l
+                        o
                     )
                 );
             }

@@ -59,7 +59,7 @@ function g(e, t) {
     );
 }
 let d = {},
-    S = (e) => {
+    O = (e) => {
         let t = {
             [c.fX.KEYWORD]: [],
             [c.fX.ML_SPAM]: [],
@@ -77,7 +77,7 @@ let d = {},
             t
         );
     },
-    O = (0, i.F)((e, t) => ({
+    S = (0, i.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
@@ -87,9 +87,9 @@ let d = {},
                 { rules: c } = t(),
                 f = null != (r = c[i]) ? r : {},
                 d = null != (l = f[o]) ? l : [],
-                S = d.some((e) => e.id === u),
-                O = d.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
-                j = S ? O.map((e) => (e.id === u ? n : e)) : [...O, n];
+                O = d.some((e) => e.id === u),
+                S = d.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
+                j = O ? S.map((e) => (e.id === u ? n : e)) : [...S, n];
             (0, a.j)(() => {
                 e({
                     rules: g(E({}, c), { [i]: g(E({}, f), { [o]: j }) }),
@@ -124,7 +124,7 @@ let d = {},
                 d[n] = Date.now();
                 try {
                     let r = await (0, o.$Y)(n),
-                        l = S(r),
+                        l = O(r),
                         i = t().rules;
                     (0, a.j)(() => {
                         e({
@@ -143,11 +143,11 @@ let d = {},
     })),
     j = (e, t) => {
         var n, r;
-        return (null != (r = null == (n = O.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
+        return (null != (r = null == (n = S.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
     };
 function p(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = O((e) => [e.syncRules, e.fetching], l.X);
+        [i, a] = S((e) => [e.syncRules, e.fetching], l.X);
     return [
         t,
         r.useCallback(async () => {
@@ -172,7 +172,7 @@ function A(e) {
     );
 }
 function _(e) {
-    return O((t) => {
+    return S((t) => {
         var n;
         return {
             rulesByTriggerType: null != (n = t.rules[null != e ? e : f.lds]) ? n : {},

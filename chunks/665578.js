@@ -22,8 +22,8 @@ var r = n(255367),
     _ = n(454092),
     C = n(289465),
     N = n(981631),
-    I = n(689079),
-    E = n(388032),
+    E = n(689079),
+    I = n(388032),
     S = n(190434);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -177,11 +177,11 @@ function P(e) {
                             {
                                 editPermissions: F,
                                 guildId: O,
-                                headerText: E.intl.string(E.t['i1c+kZ']),
+                                headerText: I.intl.string(I.t['i1c+kZ']),
                                 hasMemberSearch: !1,
                                 overwrittenKeys: e,
                                 search: Z,
-                                searchPlaceholderText: E.intl.string(E.t['TLQo/v']),
+                                searchPlaceholderText: I.intl.string(I.t['TLQo/v']),
                                 selectedPermissionCount: R
                             },
                             n
@@ -201,10 +201,10 @@ function P(e) {
                                 editPermissions: F,
                                 guildId: O,
                                 hasMemberSearch: !0,
-                                headerText: E.intl.string(E.t['56jRn5']),
+                                headerText: I.intl.string(I.t['56jRn5']),
                                 overwrittenKeys: e,
                                 search: A,
-                                searchPlaceholderText: E.intl.string(E.t.wAfO5e),
+                                searchPlaceholderText: I.intl.string(I.t.wAfO5e),
                                 selectedPermissionCount: R
                             },
                             n
@@ -221,22 +221,22 @@ function P(e) {
                 }),
             [L]
         ),
-        Y = R - I._n,
+        Y = R - E._n,
         X = Y >= 0,
         $ = [
             {
                 buttonClick: K,
-                buttonText: E.intl.string(E.t['56jRn5']),
-                noneSelectedText: E.intl.string(E.t.C0rYfn),
+                buttonText: I.intl.string(I.t['56jRn5']),
+                noneSelectedText: I.intl.string(I.t.C0rYfn),
                 overwrites: H,
-                title: null == l ? E.intl.string(E.t['vPWe+/']) : E.intl.string(E.t['1jLVGB'])
+                title: null == l ? I.intl.string(I.t['vPWe+/']) : I.intl.string(I.t['1jLVGB'])
             },
             {
                 buttonClick: V,
-                buttonText: E.intl.string(E.t['i1c+kZ']),
-                noneSelectedText: E.intl.string(E.t.UBJhCw),
+                buttonText: I.intl.string(I.t['i1c+kZ']),
+                noneSelectedText: I.intl.string(I.t.UBJhCw),
                 overwrites: W,
-                title: null == l ? E.intl.string(E.t.OGiMXF) : E.intl.string(E.t.Ujbaqq)
+                title: null == l ? I.intl.string(I.t.OGiMXF) : I.intl.string(I.t.Ujbaqq)
             }
         ];
     return (0, r.jsxs)(i.Fragment, {
@@ -244,7 +244,7 @@ function P(e) {
             Y > 0
                 ? (0, r.jsx)(d.Wn, {
                       messageType: d.QYI.WARNING,
-                      children: E.intl.format(E.t['B/dFBA'], { removeCount: Y })
+                      children: I.intl.format(I.t['B/dFBA'], { removeCount: Y })
                   })
                 : null,
             M
@@ -258,14 +258,14 @@ function P(e) {
                           }),
                           (0, r.jsx)('span', {
                               className: S.message,
-                              children: E.intl.format(E.t['2889Gh'], {})
+                              children: I.intl.format(I.t['2889Gh'], {})
                           }),
                           (0, r.jsx)(c.zx, {
                               color: c.zx.Colors.PRIMARY,
                               onClick: q,
                               size: c.zx.Sizes.SMALL,
                               className: S.addButton,
-                              children: E.intl.string(E.t['HO/oXl'])
+                              children: I.intl.string(I.t['HO/oXl'])
                           })
                       ]
                   })
@@ -285,7 +285,7 @@ function P(e) {
                         ),
                     i = null;
                 return (
-                    B ? X && (i = E.intl.string(E.t.XTwtW1)) : (i = null != l ? E.intl.string(E.t.tybdam) : E.intl.string(E.t.z2hjk5)),
+                    B ? X && (i = I.intl.string(I.t.XTwtW1)) : (i = null != l ? I.intl.string(I.t.tybdam) : I.intl.string(I.t.z2hjk5)),
                     (0, r.jsx)(
                         C.Z,
                         {

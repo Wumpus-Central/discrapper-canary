@@ -150,6 +150,7 @@ function Y(e) {
         sku: e.sku,
         pid: e.pid,
         pidPath: null != (o = e.pidPath) ? o : [],
+        gameMetadata: e.gameMetadata,
         windowHandle: null != (s = e.windowHandle) ? s : null,
         fullscreenType: null != (l = e.fullscreenType) ? l : _.Jx.UNKNOWN,
         isLauncher: null != (c = e.isLauncher) && c

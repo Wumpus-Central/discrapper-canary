@@ -89,9 +89,9 @@ function y(e, t, n) {
         ),
         C = null != n ? n : t,
         N = null != n ? y : o,
-        I = r.useMemo(() => (null != _ ? _ : v({}, null != N ? N : {})), [_, N]),
-        E = r.useMemo(() => Object.keys(I).length, [I]),
-        S = r.useMemo(() => (null == N || null == I ? null : !a().isEqual(N, I)), [N, I]);
+        E = r.useMemo(() => (null != _ ? _ : v({}, null != N ? N : {})), [_, N]),
+        I = r.useMemo(() => Object.keys(E).length, [E]),
+        S = r.useMemo(() => (null == N || null == E ? null : !a().isEqual(N, E)), [N, E]);
     return (
         r.useEffect(() => {
             C === t && (S ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
@@ -200,9 +200,9 @@ function y(e, t, n) {
                     }
                     return l;
                 }, [y, n, i, a, t, _, C]);
-            })(e, I),
+            })(e, E),
             hasChanges: S,
-            selectedPermissionCount: E
+            selectedPermissionCount: I
         }
     );
 }

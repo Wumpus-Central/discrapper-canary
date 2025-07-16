@@ -222,7 +222,7 @@ function ef(e) {
                 N = (C || n.canDeleteOwnMessage(p)) && h && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (N = N && C);
             let T = (0, X.a4)(n),
-                A = (0, J.Z)(n, t, C),
+                A = (0, J.Z)(n, t),
                 w = !t.isSystemDM() && (0, Q.Z)(n, p) && h && !g,
                 { disableReactionCreates: R } = (0, $.Z)({
                     channel: t,

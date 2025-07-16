@@ -231,6 +231,7 @@ let G = Object.freeze({
         SEND_MESSAGES_IN_THREADS: i.r0(38),
         SEND_VOICE_MESSAGES: i.r0(46),
         SEND_POLLS: i.r0(49),
+        PIN_MESSAGES: i.r0(51),
         CONNECT: i.r0(20),
         SPEAK: i.r0(21),
         MUTE_MEMBERS: i.r0(22),
