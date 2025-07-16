@@ -26,7 +26,7 @@ function m(e) {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null == (t = e.game) ? void 0 : t.name) != null && (null == (n = e.game) ? void 0 : n.type) === f.wW.GAME;
+                    return (null == (t = e.game) ? void 0 : t.name) != null && (null == (n = e.game) ? void 0 : n.type) === f.wW.DEPRECATED_GAME;
                 })
                 .map((e) => e.game.name);
             a.default.track(h.rMx.OPEN_POPOUT, {

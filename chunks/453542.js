@@ -9,7 +9,7 @@ function o() {
 function s(e, t) {
     let n = e.reduce((e, t) => {
         var n;
-        let r = null != (n = t.party.currentActivities.filter((e) => null != e.game.name && e.game.type === a.wW.GAME).map((e) => e.game.name)) ? n : [];
+        let r = null != (n = t.party.currentActivities.filter((e) => null != e.game.name && e.game.type === a.wW.DEPRECATED_GAME).map((e) => e.game.name)) ? n : [];
         return e.concat(r);
     }, []);
     return {
