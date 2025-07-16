@@ -17,8 +17,8 @@ var r = n(255367),
     v = n(271383),
     g = n(485386),
     h = n(430824),
-    E = n(594174),
-    j = n(5192),
+    j = n(594174),
+    E = n(5192),
     C = n(998502),
     N = n(981631),
     I = n(93841),
@@ -36,22 +36,22 @@ function S(e) {
                 return (null == e || null == (t = e.tags) ? void 0 : t.premium_subscriber) !== void 0;
             })
         ),
-        T = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-        y = null == T ? void 0 : T.id,
-        A = (0, s.e7)([v.ZP], () => (null != y ? v.ZP.getMember(u, y) : void 0), [y, u]),
+        y = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
+        T = null == y ? void 0 : y.id,
+        A = (0, s.e7)([v.ZP], () => (null != T ? v.ZP.getMember(u, T) : void 0), [T, u]),
         R = (null == A ? void 0 : A.premiumSince) != null,
         L = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         {
             avatarDecorationSrc: D,
-            avatarSrc: U,
-            eventHandlers: k
+            avatarSrc: k,
+            eventHandlers: U
         } = (0, b.Z)({
-            userId: null == T ? void 0 : T.id,
+            userId: null == y ? void 0 : y.id,
             guildId: u,
             size: d.EFr.SIZE_40,
             animateOnHover: !L
         });
-    return null == C || null == A || null == T
+    return null == C || null == A || null == y
         ? null
         : (0, r.jsxs)(l.$, {
               className: Z.container,
@@ -113,11 +113,11 @@ function S(e) {
                                           }));
                                   }
                                   return e;
-                              })({}, k)),
+                              })({}, U)),
                               (i = i =
                                   {
-                                      user: T,
-                                      src: U,
+                                      user: y,
+                                      src: k,
                                       avatarDecoration: D,
                                       size: d.EFr.SIZE_40,
                                       'aria-hidden': !0,
@@ -139,7 +139,7 @@ function S(e) {
                           ),
                           username: (0, r.jsx)(d.PUh, {
                               variant: 'text-md/semibold',
-                              name: j.ZP.getName(u, null, T),
+                              name: E.ZP.getName(u, null, y),
                               roleColors: null == S ? void 0 : S.colorStrings,
                               color: null != (t = null == S ? void 0 : S.colorString) ? t : void 0
                           }),

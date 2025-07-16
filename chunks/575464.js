@@ -14,9 +14,9 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: C = !0, onClick: x, onMouseEnter: v, 'aria-setsize': O, 'aria-posinset': j } = e,
-        E = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        S = (0, a.JA)(String(i.id));
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, disabled: C = !1, inlineUsername: x = !0, onClick: v, onMouseEnter: O, 'aria-setsize': j, 'aria-posinset': E } = e,
+        S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
+        P = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
         s.P3F,
         ((t = (function (e) {
@@ -46,38 +46,39 @@ function m(e) {
         })(
             {
                 id: 'user-row-'.concat(m),
-                className: f.friendWrapper,
+                className: l()(f.friendWrapper, { [f.disabled]: C }),
                 onClick: () => {
-                    null != x && x(i.id);
+                    null != v && v(i.id);
                 },
                 onMouseEnter: () => {
-                    null != v && v(m);
+                    null != O && O(m);
                 }
             },
-            S
+            P
         )),
         (n = n =
             {
                 role: 'option',
                 'aria-selected': y,
-                'aria-setsize': O,
-                'aria-posinset': j,
+                'aria-disabled': C,
+                'aria-setsize': j,
+                'aria-posinset': E,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {
                         [f.friendSelected]: _,
-                        [f.twoRows]: !C
+                        [f.twoRows]: !x
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
                             user: i,
-                            status: E,
+                            status: S,
                             className: f.avatar
                         }),
                         (0, r.jsxs)(d.Z, {
                             className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: C ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     tag: 'strong',
@@ -104,6 +105,7 @@ function m(e) {
                             displayOnly: !0,
                             size: 22,
                             value: y,
+                            disabled: C,
                             className: f.checkbox
                         })
                     ]

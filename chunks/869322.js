@@ -1,7 +1,5 @@
 e.exports = {
-    header: 'header__01c8c',
-    question: 'question__01c8c',
-    close: 'close__01c8c',
+    body: 'body__01c8c',
     content: 'content__01c8c',
     panel: 'panel__01c8c',
     scroller: 'scroller__01c8c',

@@ -1,7 +1,7 @@
 n.d(t, {
     IV: () => o,
-    P: () => c,
-    fH: () => s,
+    P: () => s,
+    fH: () => c,
     xt: () => u
 });
 var r = n(166459),
@@ -11,9 +11,9 @@ var r = n(166459),
 async function o(e, t, n) {
     let r = (0, i.Yk)(t, n),
         a = await fetch(n);
-    return (s(e, t, new File([await a.blob()], r, { type: 'image/gif' })), n);
+    return (c(e, t, new File([await a.blob()], r, { type: 'image/gif' })), n);
 }
-function s(e, t, n) {
+function c(e, t, n) {
     let i = {
         id: t,
         channelId: e,
@@ -26,7 +26,7 @@ function s(e, t, n) {
         draftType: l.d.Poll
     });
 }
-async function c(e, t, n) {
+async function s(e, t, n) {
     r.Z.remove(e, t, l.d.Poll);
 }
 async function u(e) {

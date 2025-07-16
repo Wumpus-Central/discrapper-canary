@@ -1,47 +1,44 @@
-n.d(t, { Z: () => h });
-var i = n(255367);
+n.d(t, { Z: () => E });
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var i = n(481060),
     l = n(230711),
-    o = n(985754),
-    s = n(91802),
-    a = n(222727),
-    c = n(981631),
-    d = n(921944),
-    u = n(388032),
+    a = n(985754),
+    o = n(91802),
+    c = n(222727),
+    s = n(981631),
+    u = n(921944),
+    d = n(388032),
     _ = n(131715);
-let h =
-    12633 == n.j
-        ? (e) => {
-              let { notice: t, noticeType: n, dismissCurrentNotice: h } = e,
-                  E = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
-                  I = (0, s.n)();
-              if (((0, a.U)(c.jXE.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I)) return null;
-              let p = I.countryCode,
-                  C = I.currency,
-                  g = I.paymentSourceTypes.length > 0;
-              return (0, i.jsxs)(r.qXd, {
-                  color: E ? r.DM8.BRAND : r.DM8.PREMIUM_TIER_2,
-                  children: [
-                      (0, i.jsx)(r.RyX, {
-                          onClick: () => h(d.L.UNKNOWN),
-                          noticeType: n
-                      }),
-                      !E &&
-                          (0, i.jsx)(r.SrA, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: _.premiumIcon
-                          }),
-                      (0, o.Gv)(p, C, g, E),
-                      (0, i.jsx)(r.NoS, {
-                          onClick: () => {
-                              (h(d.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM));
-                          },
-                          noticeType: n,
-                          children: u.intl.string(u.t.hvVgAQ)
-                      })
-                  ]
-              });
-          }
-        : null;
+let E = (e) => {
+    let { notice: t, noticeType: n, dismissCurrentNotice: E } = e,
+        I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
+        O = (0, o.n)();
+    if (((0, c.U)(s.jXE.NOTIFICATION_BAR, null == O ? void 0 : O.countryCode), null == O)) return null;
+    let p = O.countryCode,
+        T = O.currency,
+        S = O.paymentSourceTypes.length > 0;
+    return (0, r.jsxs)(i.qXd, {
+        color: I ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
+        children: [
+            (0, r.jsx)(i.RyX, {
+                onClick: () => E(u.L.UNKNOWN),
+                noticeType: n
+            }),
+            !I &&
+                (0, r.jsx)(i.SrA, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: _.premiumIcon
+                }),
+            (0, a.Gv)(p, T, S, I),
+            (0, r.jsx)(i.NoS, {
+                onClick: () => {
+                    (E(u.L.UNKNOWN), l.Z.open(s.oAB.PREMIUM));
+                },
+                noticeType: n,
+                children: d.intl.string(d.t.hvVgAQ)
+            })
+        ]
+    });
+};

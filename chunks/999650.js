@@ -345,14 +345,16 @@ function eo(e, t, n) {
         query: e,
         type: p.sH,
         guildId: t,
-        limit: 1 / 0
+        limit: 1 / 0,
+        allowEmptyQueries: !0
     })
         .concat(
             O.ZP.queryChannels({
                 query: e,
                 type: p.Zb,
                 guildId: t,
-                limit: 1 / 0
+                limit: 1 / 0,
+                allowEmptyQueries: !0
             })
         )
         .map((e) => {

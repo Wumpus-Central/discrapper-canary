@@ -1,30 +1,29 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(73800),
-    i = n(100527),
-    l = n(367907),
-    o = n(906732),
-    s = n(26323),
-    a = n(30513),
-    c = n(981631),
-    u = n(388032);
-function d(e) {
-    let { analyticsLocations: t } = (0, o.ZP)(i.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+    i = n(367907),
+    l = n(906732),
+    o = n(26323),
+    s = n(30513),
+    a = n(981631),
+    c = n(388032);
+function u(e, t, n) {
+    let { analyticsLocations: u } = (0, l.ZP)(t);
     return r.useCallback(() => {
-        ((0, l.yw)(c.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-            location: { section: c.jXE.PREMIUM_GUILD_PROGRESS_BAR },
+        ((0, i.yw)(a.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+            location: { section: n },
             guild_id: e.id,
-            location_stack: t
+            location_stack: u
         }),
-            (0, s.Z)({
-                analyticsLocations: t,
+            (0, o.Z)({
+                analyticsLocations: u,
                 analyticsSourceLocation: {
-                    page: c.ZY5.GUILD_CHANNEL,
-                    section: c.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-                    object: c.qAy.TOOLTIP
+                    page: a.ZY5.GUILD_CHANNEL,
+                    section: n,
+                    object: a.qAy.TOOLTIP
                 },
                 guild: e,
-                perks: (0, a.VF)(),
-                perkIntro: u.intl.string(u.t.ZhvSn5)
+                perks: (0, s.VF)(),
+                perkIntro: c.intl.string(c.t.ZhvSn5)
             }));
-    }, [t, e]);
+    }, [u, n, e]);
 }

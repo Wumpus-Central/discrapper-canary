@@ -19,7 +19,7 @@ var i = n(793030),
 function g(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
-        { available: g, spent: h, total: E } = (0, p.Z)(t);
+        { available: g, spent: h, total: j } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)('div', {
             className: v.container,
@@ -51,7 +51,7 @@ function g(e) {
                             type: _.b.SPENT
                         }),
                         (0, r.jsx)(_.Z, {
-                            count: E,
+                            count: j,
                             type: _.b.TOTAL
                         })
                     ]

@@ -4,8 +4,8 @@ var r = n(255367),
     l = n(120356),
     i = n.n(l),
     o = n(263568),
-    s = n(481060),
-    c = n(388032),
+    c = n(481060),
+    s = n(388032),
     u = n(564755);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -52,12 +52,12 @@ function f(e, t) {
 }
 function m(e) {
     let { label: t, isSelected: n, onClick: a, children: l } = e,
-        o = (0, s.xUy)({
+        o = (0, c.xUy)({
             isSelected: n,
             label: t
         });
     return (0, r.jsx)(
-        s.P3F,
+        c.P3F,
         f(d({}, o), {
             onClick: a,
             className: i()(u.option, n && u.optionSelected),
@@ -67,7 +67,7 @@ function m(e) {
 }
 let p = function (e) {
     let { selectedLayoutType: t, onSelectedLayoutType: n } = e,
-        l = (0, s.arW)({ orientation: 'horizontal' }),
+        l = (0, c.arW)({ orientation: 'horizontal' }),
         { ref: i } = l,
         p = (function (e, t) {
             if (null == e) return {};
@@ -92,13 +92,13 @@ let p = function (e) {
             () => [
                 {
                     name: o.C.DEFAULT,
-                    label: c.intl.string(c.t.GhK6X1),
-                    icon: s.jE$
+                    label: s.intl.string(s.t.GhK6X1),
+                    icon: c.jE$
                 },
                 {
                     name: o.C.IMAGE_ONLY_ANSWERS,
-                    label: c.intl.string(c.t.an4GKS),
-                    icon: s.XBm
+                    label: s.intl.string(s.t.an4GKS),
+                    icon: c.XBm
                 }
             ],
             []
@@ -112,7 +112,7 @@ let p = function (e) {
             d(
                 {
                     className: u.container,
-                    'aria-label': c.intl.string(c.t.e9hWx8),
+                    'aria-label': s.intl.string(s.t.e9hWx8),
                     ref: i
                 },
                 p

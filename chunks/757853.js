@@ -186,12 +186,12 @@ function H(e) {
                             ]
                         }),
                         'toggle' === l &&
-                            !_ &&
                             (0, r.jsx)(h.XZJ, {
                                 type: h.XZJ.Types.INVERTED,
                                 displayOnly: !0,
                                 size: 24,
                                 value: d,
+                                disabled: _,
                                 className: k.checkbox
                             }),
                         'send' === l &&

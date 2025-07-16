@@ -1,185 +1,200 @@
-(n.d(e, { default: () => p }), n(704826), n(35282));
+(n.d(e, { default: () => k }), n(704826), n(35282));
 var a = n(255367);
 n(73800);
-var l = n(990547),
-    i = n(82659),
-    r = n(481060),
-    s = n(213609),
-    o = n(313201),
-    c = n(724723),
-    d = n(626135),
-    x = n(988158),
-    m = n(981631),
-    u = n(388032),
-    h = n(946555);
-function p(t) {
-    let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: f } = t,
-        _ = (0, o.Dt)(),
-        v = (0, c.q)('MaskedLinkModal'),
+var i = n(990547),
+    r = n(704215),
+    l = n(82659),
+    s = n(481060),
+    o = n(213609),
+    c = n(313201),
+    d = n(724723),
+    x = n(243778),
+    m = n(993440),
+    u = n(201798),
+    h = n(626135),
+    C = n(988158),
+    g = n(981631),
+    p = n(921944),
+    _ = n(388032),
+    v = n(946555);
+function k(t) {
+    let { url: e, trustUrl: n, isProtocol: k, onConfirm: f, onCancel: b, onClose: j, transitionState: N } = t,
+        y = (0, c.Dt)(),
+        T = (0, d.q)('MaskedLinkModal'),
         {
-            protocol: b,
-            authorityPrefix: j,
-            hostname: T,
-            theRestOfTheUrl: M,
-            shouldTrustUrl: y,
-            setShouldTrustUrl: D,
-            handleConfirm: L,
-            handleCancel: N
-        } = (0, x.X)({
+            protocol: E,
+            authorityPrefix: I,
+            hostname: M,
+            theRestOfTheUrl: R,
+            shouldTrustUrl: A,
+            setShouldTrustUrl: O,
+            handleConfirm: D,
+            handleCancel: L
+        } = (0, C.X)({
             url: e,
             trustUrl: n,
-            onConfirm: C,
-            onCancel: k,
-            onClose: g
+            onConfirm: f,
+            onCancel: b,
+            onClose: j
         }),
-        X = () => {
-            (L(),
-                d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
-                    is_trust_url_selected: y,
+        S = () => {
+            (D(),
+                h.default.track(g.rMx.MASKED_LINK_MODAL_CLICKED, {
+                    is_trust_url_selected: A,
                     action_type: 'confirm'
                 }));
         },
-        E = () => {
-            (N(),
-                d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
-                    is_trust_url_selected: y,
+        X = () => {
+            (L(),
+                h.default.track(g.rMx.MASKED_LINK_MODAL_CLICKED, {
+                    is_trust_url_selected: A,
                     action_type: 'cancel'
                 }));
         };
-    return (
-        (0, s.Z)({
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.MASKED_LINK_MODAL
-        }),
-        v
-            ? (0, a.jsxs)(i.u, {
-                  size: 'md',
-                  transitionState: f,
-                  onClose: g,
-                  title: u.intl.string(u.t['3w1QGh']),
-                  subtitle: p ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU),
-                  actions: [
-                      {
-                          text: u.intl.string(u.t['/g10LC']),
-                          onClick: E,
-                          variant: 'secondary'
-                      },
-                      {
-                          text: p ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
-                          onClick: X,
-                          variant: 'primary'
-                      }
-                  ],
-                  children: [
-                      (0, a.jsxs)(r.Ttm, {
-                          className: h.linkCalloutContainer,
-                          children: [
-                              (0, a.jsxs)(r.Text, {
-                                  tag: 'span',
-                                  variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                  color: p ? 'text-default' : 'text-muted',
-                                  children: [b, j]
-                              }),
-                              (0, a.jsx)(r.Text, {
-                                  tag: 'span',
-                                  variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                  color: p ? 'text-muted' : 'text-default',
-                                  children: T
-                              }),
-                              (0, a.jsx)(r.Text, {
-                                  tag: 'span',
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: M
-                              })
-                          ]
-                      }),
-                      (0, a.jsx)(r.XZJ, {
-                          className: h.checkboxMana,
-                          type: r.XZJ.Types.INVERTED,
-                          value: y,
-                          onChange: (t, e) => D(e),
-                          children: (0, a.jsx)(r.Text, {
-                              variant: 'text-sm/normal',
-                              children: p ? u.intl.format(u.t['haA+X1'], { protocol: b.replace(':', '') }) : u.intl.format(u.t.ZgXDsL, { domain: T })
-                          })
-                      })
-                  ]
+    (0, o.Z)({
+        type: i.ImpressionTypes.MODAL,
+        name: i.ImpressionNames.MASKED_LINK_MODAL
+    });
+    let { enabled: P } = (0, m.p)({ location: 'Masked Link Modal' }),
+        z = P
+            ? (0, a.jsx)(x.ZP, {
+                  contentTypes: [r.z.NITRO_PRIVATE_BROWSING_SURVEY],
+                  children: (t) => {
+                      let { visibleContent: e, markAsDismissed: n } = t;
+                      return e === r.z.NITRO_PRIVATE_BROWSING_SURVEY ? (0, a.jsx)(u.f, { onClose: () => n(p.L.TAKE_ACTION) }) : null;
+                  }
               })
-            : (0, a.jsxs)(r.Y0X, {
-                  size: r.CgR.DYNAMIC,
-                  transitionState: f,
-                  'aria-labelledby': _,
-                  parentComponent: 'MaskedLinkModal',
-                  children: [
-                      (0, a.jsxs)(r.hzk, {
-                          children: [
-                              (0, a.jsx)(r.X6q, {
-                                  id: _,
-                                  variant: 'heading-xl/bold',
-                                  className: h.title,
-                                  children: u.intl.string(u.t['3w1QGh'])
-                              }),
-                              (0, a.jsx)(r.Text, {
-                                  className: h.warningText,
-                                  variant: 'text-md/normal',
-                                  children: p ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU)
-                              }),
-                              (0, a.jsxs)(r.Ttm, {
-                                  className: h.linkCalloutContainer,
-                                  children: [
-                                      (0, a.jsxs)(r.Text, {
-                                          tag: 'span',
-                                          variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                          color: p ? 'text-default' : 'text-muted',
-                                          children: [b, j]
-                                      }),
-                                      (0, a.jsx)(r.Text, {
-                                          tag: 'span',
-                                          variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                          color: p ? 'text-muted' : 'text-default',
-                                          children: T
-                                      }),
-                                      (0, a.jsx)(r.Text, {
-                                          tag: 'span',
-                                          variant: 'text-md/normal',
-                                          color: 'text-muted',
-                                          children: M
-                                      })
-                                  ]
-                              }),
-                              (0, a.jsx)(r.XZJ, {
-                                  className: h.checkbox,
-                                  type: r.XZJ.Types.INVERTED,
-                                  value: y,
-                                  onChange: (t, e) => D(e),
-                                  children: (0, a.jsx)(r.Text, {
-                                      variant: 'text-sm/normal',
-                                      children: p ? u.intl.format(u.t['haA+X1'], { protocol: b.replace(':', '') }) : u.intl.format(u.t.ZgXDsL, { domain: T })
-                                  })
-                              })
-                          ]
-                      }),
-                      (0, a.jsx)(r.mzw, {
-                          children: (0, a.jsxs)(r.hE2, {
-                              direction: 'horizontal-reverse',
+            : null;
+    return T
+        ? (0, a.jsxs)(l.u, {
+              size: 'md',
+              transitionState: N,
+              onClose: j,
+              title: _.intl.string(_.t['3w1QGh']),
+              subtitle: k ? _.intl.format(_.t.aCYv19, {}) : _.intl.string(_.t.soRxRU),
+              actions: [
+                  {
+                      text: _.intl.string(_.t['/g10LC']),
+                      onClick: X,
+                      variant: 'secondary'
+                  },
+                  {
+                      text: k ? _.intl.string(_.t.COq6kp) : _.intl.string(_.t.NcJfJC),
+                      onClick: S,
+                      variant: 'primary'
+                  }
+              ],
+              children: [
+                  (0, a.jsxs)(s.Ttm, {
+                      className: v.linkCalloutContainer,
+                      children: [
+                          (0, a.jsxs)(s.Text, {
+                              tag: 'span',
+                              variant: k ? 'text-md/semibold' : 'text-md/normal',
+                              color: k ? 'text-default' : 'text-muted',
+                              children: [E, I]
+                          }),
+                          (0, a.jsx)(s.Text, {
+                              tag: 'span',
+                              variant: k ? 'text-md/normal' : 'text-md/semibold',
+                              color: k ? 'text-muted' : 'text-default',
+                              children: M
+                          }),
+                          (0, a.jsx)(s.Text, {
+                              tag: 'span',
+                              variant: 'text-md/normal',
+                              color: 'text-muted',
+                              children: R
+                          })
+                      ]
+                  }),
+                  (0, a.jsx)(s.XZJ, {
+                      className: v.checkboxMana,
+                      type: s.XZJ.Types.INVERTED,
+                      value: A,
+                      onChange: (t, e) => O(e),
+                      children: (0, a.jsx)(s.Text, {
+                          variant: 'text-sm/normal',
+                          children: k ? _.intl.format(_.t['haA+X1'], { protocol: E.replace(':', '') }) : _.intl.format(_.t.ZgXDsL, { domain: M })
+                      })
+                  }),
+                  z
+              ]
+          })
+        : (0, a.jsxs)(s.Y0X, {
+              size: s.CgR.DYNAMIC,
+              transitionState: N,
+              'aria-labelledby': y,
+              parentComponent: 'MaskedLinkModal',
+              children: [
+                  (0, a.jsxs)(s.hzk, {
+                      children: [
+                          (0, a.jsx)(s.X6q, {
+                              id: y,
+                              variant: 'heading-xl/bold',
+                              className: v.title,
+                              children: _.intl.string(_.t['3w1QGh'])
+                          }),
+                          (0, a.jsx)(s.Text, {
+                              className: v.warningText,
+                              variant: 'text-md/normal',
+                              children: k ? _.intl.format(_.t.aCYv19, {}) : _.intl.string(_.t.soRxRU)
+                          }),
+                          (0, a.jsxs)(s.Ttm, {
+                              className: v.linkCalloutContainer,
                               children: [
-                                  (0, a.jsx)(r.zxk, {
-                                      variant: 'primary',
-                                      text: p ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
-                                      type: 'button',
-                                      onClick: X
+                                  (0, a.jsxs)(s.Text, {
+                                      tag: 'span',
+                                      variant: k ? 'text-md/semibold' : 'text-md/normal',
+                                      color: k ? 'text-default' : 'text-muted',
+                                      children: [E, I]
                                   }),
-                                  (0, a.jsx)(r.zxk, {
-                                      variant: 'secondary',
-                                      text: u.intl.string(u.t['/g10LC']),
-                                      type: 'button',
-                                      onClick: E
+                                  (0, a.jsx)(s.Text, {
+                                      tag: 'span',
+                                      variant: k ? 'text-md/normal' : 'text-md/semibold',
+                                      color: k ? 'text-muted' : 'text-default',
+                                      children: M
+                                  }),
+                                  (0, a.jsx)(s.Text, {
+                                      tag: 'span',
+                                      variant: 'text-md/normal',
+                                      color: 'text-muted',
+                                      children: R
                                   })
                               ]
-                          })
+                          }),
+                          (0, a.jsx)(s.XZJ, {
+                              className: v.checkbox,
+                              type: s.XZJ.Types.INVERTED,
+                              value: A,
+                              onChange: (t, e) => O(e),
+                              children: (0, a.jsx)(s.Text, {
+                                  variant: 'text-sm/normal',
+                                  children: k ? _.intl.format(_.t['haA+X1'], { protocol: E.replace(':', '') }) : _.intl.format(_.t.ZgXDsL, { domain: M })
+                              })
+                          }),
+                          z
+                      ]
+                  }),
+                  (0, a.jsx)(s.mzw, {
+                      children: (0, a.jsxs)(s.hE2, {
+                          direction: 'horizontal-reverse',
+                          children: [
+                              (0, a.jsx)(s.zxk, {
+                                  variant: 'primary',
+                                  text: k ? _.intl.string(_.t.COq6kp) : _.intl.string(_.t.NcJfJC),
+                                  type: 'button',
+                                  onClick: S
+                              }),
+                              (0, a.jsx)(s.zxk, {
+                                  variant: 'secondary',
+                                  text: _.intl.string(_.t['/g10LC']),
+                                  type: 'button',
+                                  onClick: X
+                              })
+                          ]
                       })
-                  ]
-              })
-    );
+                  })
+              ]
+          });
 }

@@ -1,34 +1,34 @@
 (n.d(t, {
     Wt: () => _,
-    mc: () => h,
-    q$: () => E
+    mc: () => E,
+    q$: () => I
 }),
     n(415506),
     n(997841),
     n(35282));
-var i = n(570140),
-    r = n(566620),
+var r = n(570140),
+    i = n(566620),
     l = n(728345),
-    o = n(812206),
-    s = n(973616),
-    a = n(630388),
-    c = n(591759),
-    d = n(978085),
-    u = n(981631);
+    a = n(812206),
+    o = n(973616),
+    c = n(630388),
+    s = n(591759),
+    u = n(978085),
+    d = n(981631);
 async function _(e, t) {
-    i.Z.dispatch({
+    r.Z.dispatch({
         applicationId: e,
         type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_START'
     });
     try {
-        if (!(await (0, r.W5)(e))) throw Error('Do not have access!');
-        let n = o.Z.getApplication(e);
-        null == n && (n = s.ZP.createFromServer(await l.ZP.fetchApplication(e)));
-        let _ = (0, a.yE)(n.flags, u.udG.EMBEDDED);
-        if (_ && (null == t || !c.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
+        if (!(await (0, i.W5)(e))) throw Error('Do not have access!');
+        let n = a.Z.getApplication(e);
+        null == n && (n = o.ZP.createFromServer(await l.ZP.fetchApplication(e)));
+        let _ = (0, c.yE)(n.flags, d.udG.EMBEDDED);
+        if (_ && (null == t || !s.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (
-            _ || d.GR(n),
-            i.Z.dispatch({
+            _ || u.GR(n),
+            r.Z.dispatch({
                 type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS',
                 applicationId: e,
                 originURL: _ ? t : null
@@ -37,7 +37,7 @@ async function _(e, t) {
         );
     } catch (t) {
         return (
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL',
                 applicationId: e,
                 error: t.message
@@ -46,9 +46,9 @@ async function _(e, t) {
         );
     }
 }
-function h() {
-    i.Z.dispatch({ type: 'DEVELOPER_TEST_MODE_RESET' });
-}
 function E() {
-    i.Z.dispatch({ type: 'DEVELOPER_TEST_MODE_RESET_ERROR' });
+    r.Z.dispatch({ type: 'DEVELOPER_TEST_MODE_RESET' });
+}
+function I() {
+    r.Z.dispatch({ type: 'DEVELOPER_TEST_MODE_RESET_ERROR' });
 }

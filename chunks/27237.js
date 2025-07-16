@@ -17,7 +17,7 @@ var r = n(255367),
     v = n(388032),
     g = n(568413),
     h = n(117172);
-function E(e) {
+function j(e) {
     let t,
         { active: n, nextActive: i, position: o } = e;
     return (
@@ -40,7 +40,7 @@ function E(e) {
         })
     );
 }
-function j(e) {
+function E(e) {
     let { isActive: t, index: n } = e,
         o = (0, _.d)(t),
         a = (0, _.u)(t),
@@ -102,7 +102,7 @@ function C(e) {
         powerup: o,
         className: g.card,
         children: [
-            (0, r.jsx)(E, {
+            (0, r.jsx)(j, {
                 position: 0 === n ? 'start' : null == a ? 'end' : 'middle',
                 active: x,
                 nextActive: null != a ? b : void 0
@@ -115,7 +115,7 @@ function C(e) {
                         color: I,
                         children: o.title
                     }),
-                    (0, r.jsx)(j, {
+                    (0, r.jsx)(E, {
                         isActive: x,
                         index: n
                     }),
