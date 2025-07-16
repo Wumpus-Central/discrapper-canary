@@ -2155,6 +2155,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     max-width: 100%
 }
 
+.headerGraphic__53cea .lottie__53cea {
+    height: 100%;
+    max-width: 100%
+}
+
 .headerLeading__53cea,
 .headerLeadingSpacer__53cea {
     margin-left: calc((var(--custom-modal-padding) - var(--space-8))*-1);
