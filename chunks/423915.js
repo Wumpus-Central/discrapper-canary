@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(73800),
     o = n(442837),
-    i = n(481060),
-    a = n(668826),
+    a = n(481060),
+    i = n(668826),
     c = n(120421),
     l = n(18582),
     u = n(603571),
@@ -23,7 +23,7 @@ function g() {
         onMouseLeave: () => t(!1),
         children: [
             (0, r.jsx)(l.Z, {
-                onClick: () => (0, a.Zj)(!h),
+                onClick: () => (0, i.Zj)(!h),
                 children: (0, r.jsx)('img', {
                     className: f.icon,
                     src: h ? m : p,
@@ -31,14 +31,14 @@ function g() {
                 })
             }),
             e || n
-                ? (0, r.jsx)(i.iRW, {
+                ? (0, r.jsx)(a.iRW, {
                       className: f.volumeSlider,
                       initialValue: h ? 0 : 100 * y,
                       minValue: 0,
                       maxValue: 100,
                       asValueChanges: (e) => {
-                          ((0, a.jA)(e / 100),
-                              (0, a.Zj)(0 === e),
+                          ((0, i.jA)(e / 100),
+                              (0, i.Zj)(0 === e),
                               g(!0),
                               clearTimeout(b.current),
                               (b.current = setTimeout(() => {

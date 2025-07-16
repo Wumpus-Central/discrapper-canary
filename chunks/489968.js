@@ -19,7 +19,7 @@ var i = n(255367),
     j = n(450890),
     E = n(145133);
 let O = (0, r.Un)({
-    createPromise: () => Promise.all([n.e('3589'), n.e('67544')]).then(n.bind(n, 894308)),
+    createPromise: () => n.e('67544').then(n.bind(n, 894308)),
     webpackId: 894308,
     name: 'ClickerGamePopoutWindow'
 });

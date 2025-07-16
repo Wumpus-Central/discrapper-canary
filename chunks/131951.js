@@ -25,8 +25,8 @@ var u,
     D = n(646047),
     L = n(594190),
     x = n(502286),
-    M = n(822253),
-    k = n(355552),
+    k = n(822253),
+    M = n(355552),
     j = n(294473),
     U = n(706629),
     G = n(166884),
@@ -127,8 +127,8 @@ let eC = new C.Z('MediaEngineStore'),
     eD = 1,
     eL = 1,
     ex = 1,
-    eM = 0.5,
-    ek = {
+    ek = 0.5,
+    eM = {
         left: 1,
         right: 1
     },
@@ -145,7 +145,7 @@ function eZ() {
             threshold: eG,
             autoThreshold: er.isPlatformEmbedded || __OVERLAY__,
             vadUseKrisp: !0,
-            vadKrispActivationThreshold: eM,
+            vadKrispActivationThreshold: ek,
             vadLeading: 5,
             vadTrailing: 25,
             delay: 20,
@@ -312,10 +312,10 @@ function tx(e) {
         n = !ez || t.mute || t.deaf;
     (e.context === ev.Yn.DEFAULT ? (n = n || e1 || e2 || e3 || !z.Z.didHavePermission(eb.Eu.AUDIO)) : e.context === ev.Yn.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === ev.Yn.DEFAULT && S.Z.updateNativeMute());
 }
-function tM(e) {
+function tk(e) {
     e !== eX && (null != a && eY.setGoLiveSource(null, eX), (eX = e));
 }
-function tk() {
+function tM() {
     var e, t, n;
     let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e5,
         o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
@@ -434,7 +434,7 @@ function tB() {
             e.setGoLiveUsePixelCounts(r);
         }
         ((0, er.isWindows)() ? ((null == tT ? void 0 : tT.startsWith('NVIDIA')) || (null == tT ? void 0 : tT.startsWith('AMD')) ? e.setExperimentFlag(ev.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(ev.V8.SIGNAL_AV1_DECODE, !0)) : ((0, er.isMac)() || (0, er.isLinux)()) && e.setExperimentFlag(ev.V8.SIGNAL_AV1_DECODE, !0), (0, er.isWindows)() && e.setExperimentFlag(ev.V8.SIGNAL_AV1_HARDWARE_DECODE, !0), eY.setHasFullbandPerformance((0, R.Z)()));
-        let f = (0, k.D)('setupMediaEngine').enabled;
+        let f = (0, M.D)('setupMediaEngine').enabled;
         if ((e.setRemoteAudioHistory(1000 * !!f), (0, N.Z)(r))) {
             let t = A.Z.getSettings();
             e.setExperimentFlag(ev.V8.STREAMER_CLIP, t.clipsEnabled);
@@ -828,7 +828,7 @@ function tq() {
 function tX() {
     var e, t, n;
     let r = tw();
-    (eY.setAudioInputDevice(r.inputDeviceId), eY.setAudioOutputDevice(r.outputDeviceId), tk(), eY.setInputVolume(r.inputVolume), eY.setOutputVolume(r.outputVolume), eY.setH264Enabled(null == (e = r.hardwareEncoding) || e || r.openH264), eY.setAv1Enabled(null == (t = r.hardwareEncoding) || t), eY.setH265Enabled(null == (n = r.hardwareEncoding) || n), eY.setAecDump(r.aecDumpEnabled), eY.setSidechainCompression(r.sidechainCompression), eY.setSidechainCompressionStrength(r.sidechainCompressionStrength), eY.setAudioInputBypassSystemProcessing(r.bypassSystemInputProcessing));
+    (eY.setAudioInputDevice(r.inputDeviceId), eY.setAudioOutputDevice(r.outputDeviceId), tM(), eY.setInputVolume(r.inputVolume), eY.setOutputVolume(r.outputVolume), eY.setH264Enabled(null == (e = r.hardwareEncoding) || e || r.openH264), eY.setAv1Enabled(null == (t = r.hardwareEncoding) || t), eY.setH265Enabled(null == (n = r.hardwareEncoding) || n), eY.setAecDump(r.aecDumpEnabled), eY.setSidechainCompression(r.sidechainCompression), eY.setSidechainCompressionStrength(r.sidechainCompressionStrength), eY.setAudioInputBypassSystemProcessing(r.bypassSystemInputProcessing));
 }
 function tQ() {
     ez ||
@@ -896,7 +896,7 @@ function t3(e) {
         var n;
         let e = void 0 !== e0[e6],
             r = e6 === ev.w5 && (null == (n = t[ev.w5]) ? void 0 : n.disabled);
-        tk(e || r);
+        tM(e || r);
     }
 }
 function t4() {
@@ -984,7 +984,7 @@ function t8(e) {
             nR()));
     let t = tw();
     if ((tH() && (tY() ? n6(ev.iA.AUTOMATIC) : t.automaticAudioSubsystem && n8()), eY.supports(ev.AN.OFFLOAD_ADM_CONTROLS))) {
-        let { enabled: e } = M.S.getCurrentConfig({ location: 'handleConnectionOpen' }, { autoTrackExposure: !0 });
+        let { enabled: e } = k.S.getCurrentConfig({ location: 'handleConnectionOpen' }, { autoTrackExposure: !0 });
         eY.setOffloadAdmControls(e);
     }
     ((0, J.wt)({
@@ -1020,7 +1020,7 @@ function ne(e) {
             ((ti = !1), (ta = !1));
             break;
         case eg.hes.RTC_CONNECTED:
-            tk();
+            tM();
             break;
         case eg.hes.DISCONNECTED:
             (nc(), nu());
@@ -1029,7 +1029,7 @@ function ne(e) {
 }
 function nt(e) {
     let { voiceStates: t } = e;
-    return t.reduce((e, t) => (i === t.sessionId ? ((e1 = t.mute || t.suppress), (e4 = t.deaf), eY.eachConnection(tx), tk((null == t.guildId || null == t.channelId || null == th || th === t.channelId) && e5), (th = t.channelId), !0) : (__OVERLAY__ || t.userId !== el.default.getId() || null != e_.Z.getChannelId() || tk(!1, null), e)), !1);
+    return t.reduce((e, t) => (i === t.sessionId ? ((e1 = t.mute || t.suppress), (e4 = t.deaf), eY.eachConnection(tx), tM((null == t.guildId || null == t.channelId || null == th || th === t.channelId) && e5), (th = t.channelId), !0) : (__OVERLAY__ || t.userId !== el.default.getId() || null != e_.Z.getChannelId() || tM(!1, null), e)), !1);
 }
 function nn(e) {
     let { mute: t } = e;
@@ -1164,7 +1164,7 @@ function ng(e) {
 }
 function nE(e) {
     let { id: t } = e;
-    (tz({ videoDeviceId: (t = t0(e0, t)) }), tk());
+    (tz({ videoDeviceId: (t = t0(e0, t)) }), tM());
 }
 function nb(e) {
     let { inputProfile: t } = e,
@@ -1269,11 +1269,11 @@ function nL(e) {
 function nx(e) {
     (q.Z.setKrispModelOverride(e.model), (c = e.model), nP());
 }
-function nM(e) {
+function nk(e) {
     var t;
     (0, er.isWeb)() || ((tu = e.enabled), null == (t = eY.setNoiseCancellationEnableStats) || t.call(eY, e.enabled));
 }
-function nk(e) {
+function nM(e) {
     let t = tz({ experimentalEncoders: e.enabled });
     eY.eachConnection((e) => e.setExperimentalEncoders(t.experimentalEncoders));
 }
@@ -1343,7 +1343,7 @@ function nq(e) {
             ((tE = !0), eY.eachConnection(tx));
             break;
         case eb.Eu.CAMERA:
-            !r && e5 && tk(!1);
+            !r && e5 && tM(!1);
             break;
         default:
             return !1;
@@ -1417,7 +1417,7 @@ function n8() {
 }
 function n7(e) {
     let { guildId: t, channelId: n, currentVoiceChannelId: r, video: i } = e;
-    if ((r !== n && tk(i, null), null != t || null == n)) {
+    if ((r !== n && tM(i, null), null != t || null == n)) {
         to = !1;
         return;
     }
@@ -1447,7 +1447,7 @@ function rt(e) {
                 ((ez = !1), eY.eachConnection(tx));
                 break;
             case 'video':
-                tk(!1);
+                tM(!1);
         }
 }
 function rn(e) {
@@ -1461,7 +1461,7 @@ function rn(e) {
 }
 function rr(e) {
     let { enabled: t } = e;
-    (z.Z.requestPermission(eb.Eu.CAMERA), tk(t));
+    (z.Z.requestPermission(eb.Eu.CAMERA), tM(t));
 }
 function ri(e) {
     let { sourceId: t, applicationName: n, quality: i } = e,
@@ -1522,8 +1522,8 @@ function ro(e) {
                       },
             c = !1 === o ? null : et.Z.getPidFromDesktopSource(i);
         (er.isPlatformEmbedded && !0 === o && (({ soundshareId: e, soundshareSession: r } = t5(c)), null != e && t6(e, r)),
-            tM(s),
-            tk(s === ev.Yn.STREAM && e5, {
+            tk(s),
+            tM(s === ev.Yn.STREAM && e5, {
                 desktopSource: {
                     id: i,
                     sourcePid: c,
@@ -1546,7 +1546,7 @@ function ro(e) {
                           resolution: 720,
                           frameRate: 30
                       };
-        tk(o, {
+        tM(o, {
             cameraSource: {
                 videoDeviceGuid: t,
                 audioDeviceGuid: n
@@ -1556,7 +1556,7 @@ function ro(e) {
                 frameRate: s.frameRate
             }
         });
-    } else tk(e5, null);
+    } else tM(e5, null);
 }
 function rs(e) {
     let { section: t } = e;
@@ -1582,10 +1582,10 @@ function ru(e) {
 function rd(e) {
     let { state: t } = e,
         n = D.Z.isEnabled();
-    if (t === eg.$7l.BACKGROUND && e5 && !n) ((tt = !0), tk(!1));
+    if (t === eg.$7l.BACKGROUND && e5 && !n) ((tt = !0), tM(!1));
     else {
         if (t !== eg.$7l.ACTIVE || !tt) return !1;
-        ((tt = !1), tk(!0));
+        ((tt = !1), tM(!0));
     }
     return !0;
 }
@@ -1594,7 +1594,7 @@ function rf(e) {
 }
 function r_() {
     if ((!e5 && null == a) || null != e_.Z.getRTCConnectionId()) return !1;
-    tk(!1, null);
+    tM(!1, null);
 }
 function rp() {
     return !!tm && ((tm = !1), !0);
@@ -1791,7 +1791,7 @@ class ry extends (u = E.ZP.Store) {
     getLocalPan(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ev.Yn.DEFAULT,
             n = tw(t).localPans[e];
-        return null != n ? n : ek;
+        return null != n ? n : eM;
     }
     getLocalVolume(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ev.Yn.DEFAULT,
@@ -2004,7 +2004,7 @@ class ry extends (u = E.ZP.Store) {
     }
     getKrispVadActivationThreshold() {
         var e;
-        return null != (e = tw().modeOptions.vadKrispActivationThreshold) ? e : eM;
+        return null != (e = tw().modeOptions.vadKrispActivationThreshold) ? e : ek;
     }
     hasActiveCallKitCall() {
         return tA;
@@ -2111,7 +2111,7 @@ let rv = (r = new ry(v.Z, {
     AUDIO_SET_DISPLAY_SILENCE_WARNING: nU,
     AUDIO_SET_DEBUG_LOGGING: nG,
     AUDIO_SET_KRISP_SUPPRESSION_LEVEL: nB,
-    AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS: nM,
+    AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS: nk,
     MEDIA_ENGINE_SET_VIDEO_HOOK: nV,
     MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE: nF,
     MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER: nZ,
@@ -2128,7 +2128,7 @@ let rv = (r = new ry(v.Z, {
     MEDIA_ENGINE_PERMISSION: rt,
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ro,
     MEDIA_ENGINE_SET_VIDEO_DEVICE: nE,
-    MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS: nk,
+    MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS: nM,
     MEDIA_ENGINE_INTERACTION_REQUIRED: ny,
     USER_SETTINGS_MODAL_INIT: rs,
     USER_SETTINGS_MODAL_SET_SECTION: rs,

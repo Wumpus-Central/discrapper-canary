@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -126,7 +126,7 @@ let B = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(x({}, t), {
+                                M(x({}, t), {
                                     sourceAnalyticsLocations: s,
                                     location: 'UserProfileCustomStatusBubble',
                                     prompt: a
@@ -190,14 +190,14 @@ let B = i.forwardRef(function (e, t) {
             N = (0, T.yi)(),
             { trackUserProfileAction: C } = (0, v.KZ)(),
             L = (0, h.p)({ location: 'CustomStatusBubble' }),
-            [x, M] = i.useState(!1);
+            [x, k] = i.useState(!1);
         i.useEffect(() => {
-            null != W.current ? M(W.current.getBoundingClientRect().height > P.Ow + P.P) : M(!1);
+            null != W.current ? k(W.current.getBoundingClientRect().height > P.Ow + P.P) : k(!1);
         }, [S, x]);
-        let k = null != _ ? P.Hp : 0,
+        let M = null != _ ? P.Hp : 0,
             j = null != S ? P.du : 0,
-            U = (x && (null == _ || null != p) ? P._v : P.hT) + k + j,
-            B = P.YF + k + j,
+            U = (x && (null == _ || null != p) ? P._v : P.hT) + M + j,
+            B = P.YF + M + j,
             V = i.useRef(null),
             F = i.useRef(null),
             Z = i.useRef(null),
@@ -380,7 +380,7 @@ let B = i.forwardRef(function (e, t) {
         let [c, u] = i.useState(!1);
         return (0, r.jsx)(
             V,
-            k(x({}, l), {
+            M(x({}, l), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -418,10 +418,10 @@ function Z(e) {
             [E]
         ),
         L = (e) => (null == e ? null : null != e.id ? '`' + ':'.concat(e.name, ':') + '`' : y.ZP.translateSurrogatesToInlineEmoji(e.name)),
-        M = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
+        k = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
         U = () => {
             let e = L(t),
-                r = null == n ? e : M(e, n);
+                r = null == n ? e : k(e, n);
             return null != a ? ''.concat((0, g.Z)(a), ':\n> ').concat(r) : r;
         };
     return (0, r.jsx)(S.Z, {
@@ -440,7 +440,7 @@ function Z(e) {
                 user: o,
                 children: (0, r.jsx)(
                     V,
-                    k(x({}, u), {
+                    M(x({}, u), {
                         ref: b,
                         emoji: t,
                         text: n,

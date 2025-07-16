@@ -1,10 +1,10 @@
 n.d(t, {
     EK: () => j,
     Io: () => x,
-    NY: () => M,
+    NY: () => k,
     Ox: () => w,
     Vq: () => L,
-    Wf: () => k,
+    Wf: () => M,
     cB: () => D,
     dy: () => R,
     wP: () => P
@@ -211,7 +211,7 @@ function x(e) {
           })
         : (0, r.jsx)('span', { children: '#' + a });
 }
-function M(e) {
+function k(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, d.l)(t),
         o = (0, d.W)(t, n, i);
@@ -220,7 +220,7 @@ function M(e) {
         children: [a, null != o && (0, r.jsx)(_.Z, {}), o]
     });
 }
-function k(e) {
+function M(e) {
     let { text: t, id: n } = e;
     return (0, r.jsxs)(f.Z, {
         children: [t, '(', n, ')']

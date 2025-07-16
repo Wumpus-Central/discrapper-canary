@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(46140),
     L = n(981631),
     x = n(231338),
-    M = n(388032),
-    k = n(777444);
+    k = n(388032),
+    M = n(777444);
 function j(e, t, n) {
     return (
         t in e
@@ -208,28 +208,28 @@ function Z(e) {
         eE =
             $ && !Q
                 ? {
-                      headerText: M.intl.string(M.t.gHerLS),
+                      headerText: k.intl.string(k.t.gHerLS),
                       ctaText: ec,
                       handleClickCta: q,
                       tileAssetType: 'reward'
                   }
                 : J && !Q
                   ? {
-                        headerText: M.intl.string(M.t.uH2sf3),
-                        ctaText: M.intl.string(M.t.VN1Ajo),
+                        headerText: k.intl.string(k.t.uH2sf3),
+                        ctaText: k.intl.string(k.t.VN1Ajo),
                         handleClickCta: eh,
                         tileAssetType: 'reward'
                     }
                   : F(j, z)
                     ? {
-                          headerText: M.intl.string(M.t.Bz6SkJ),
-                          ctaText: M.intl.string(M.t.BXFP39),
+                          headerText: k.intl.string(k.t.Bz6SkJ),
+                          ctaText: k.intl.string(k.t.BXFP39),
                           handleClickCta: eg,
                           tileAssetType: 'game'
                       }
                     : {
-                          headerText: M.intl.string(M.t.Bz6SkJ),
-                          ctaText: M.intl.string(M.t.BSXPZ2),
+                          headerText: k.intl.string(k.t.Bz6SkJ),
+                          ctaText: k.intl.string(k.t.BSXPZ2),
                           handleClickCta: eh,
                           tileAssetType: 'game'
                       };
@@ -238,7 +238,7 @@ function Z(e) {
             W.current = e;
         },
         'aria-expanded': ea,
-        className: k.wrapper,
+        className: M.wrapper,
         style: {
             width: null != (O = null == (y = C.current) ? void 0 : y.clientWidth) ? O : V,
             height: eu.height,
@@ -249,21 +249,21 @@ function Z(e) {
             ref: (e) => {
                 er.current = e;
             },
-            className: k.container,
+            className: M.container,
             style: { borderRadius: e_ },
             children: [
                 (0, r.jsxs)('div', {
-                    className: k.top,
+                    className: M.top,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: k.left,
+                            className: M.left,
                             children: [
                                 (0, r.jsx)(u.X6q, {
                                     variant: 'heading-sm/semibold',
                                     children: eE.headerText
                                 }),
                                 (0, r.jsxs)(u.P3F, {
-                                    className: k.help,
+                                    className: M.help,
                                     onClick: (e) => {
                                         (ef(), em(e));
                                     },
@@ -271,12 +271,12 @@ function Z(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-muted',
-                                            className: k.helpText,
-                                            children: M.intl.format(M.t['Lm8/mJ'], { gamePublisher: v.config.messages.gamePublisher })
+                                            className: M.helpText,
+                                            children: k.intl.format(k.t['Lm8/mJ'], { gamePublisher: v.config.messages.gamePublisher })
                                         }),
                                         (0, r.jsx)(u.idN, {
                                             size: 'custom',
-                                            className: k.helpIcon,
+                                            className: M.helpIcon,
                                             width: B,
                                             height: B,
                                             color: u.TVs.colors.INTERACTIVE_NORMAL
@@ -286,30 +286,30 @@ function Z(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: k.right,
+                            className: M.right,
                             children: (0, r.jsxs)('div', {
-                                className: k.imgWrapper,
+                                className: M.imgWrapper,
                                 children: [
                                     ed(
                                         (e, t) =>
                                             t &&
                                             (0, r.jsx)(a.animated.div, {
                                                 style: e,
-                                                className: k.imgUnderlay
+                                                className: M.imgUnderlay
                                             })
                                     ),
                                     'game' === eE.tileAssetType &&
                                         (0, r.jsx)('img', {
-                                            alt: M.intl.formatToPlainString(M.t.IskzPj, {
+                                            alt: k.intl.formatToPlainString(k.t.IskzPj, {
                                                 gameTitle: v.config.messages.gameTitle,
                                                 gamePublisher: v.config.messages.gamePublisher
                                             }),
-                                            className: k.assetTile,
+                                            className: M.assetTile,
                                             src: (0, N.fh)(v, N.eC.GAME_TILE, et).url
                                         }),
                                     'reward' === eE.tileAssetType &&
                                         (0, r.jsx)(R.Z, {
-                                            className: k.assetTile,
+                                            className: M.assetTile,
                                             quest: v,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
@@ -327,7 +327,7 @@ function Z(e) {
                         (ef(), eE.handleClickCta());
                     },
                     color: c.zx.Colors.CUSTOM,
-                    className: k.ctaButton,
+                    className: M.ctaButton,
                     children: eE.ctaText
                 })
             ]

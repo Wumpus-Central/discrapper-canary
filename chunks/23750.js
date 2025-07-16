@@ -194,8 +194,8 @@ class E extends m {
     }
     addReactionBatch(e, t) {
         return e.reduce((e, n) => {
-            let { users: r, emoji: i } = n;
-            return r.reduce((e, n) => e.addReaction(i, n === t), e);
+            let { users: r, emoji: i, reactionType: a } = n;
+            return r.reduce((e, n) => e.addReaction(i, n === t, [], a), e);
         }, this);
     }
     removeReaction(e) {

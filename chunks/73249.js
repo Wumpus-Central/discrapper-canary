@@ -1,31 +1,30 @@
-(n.d(t, { Z: () => G }), n(388685));
+(n.d(t, { Z: () => Z }), n(388685));
 var a = n(255367),
     r = n(73800),
-    o = n(120356),
-    i = n.n(o),
+    i = n(120356),
+    o = n.n(i),
     c = n(442837),
-    l = n(755721),
-    s = n(481060),
-    u = n(607070),
-    d = n(299206),
-    p = n(868643),
-    m = n(912332),
-    g = n(296182),
-    f = n(850908),
+    l = n(481060),
+    s = n(607070),
+    u = n(299206),
+    d = n(868643),
+    p = n(912332),
+    m = n(296182),
+    g = n(850908),
     y = n(695346),
-    b = n(572004),
-    O = n(424218),
-    _ = n(49012),
-    h = n(358085),
-    S = n(998502),
-    v = n(254109),
-    j = n(212459),
-    C = n(369171),
-    T = n(312097),
-    E = n(388032),
-    x = n(505348);
-function P() {
-    return (P =
+    f = n(572004),
+    b = n(424218),
+    O = n(49012),
+    _ = n(358085),
+    h = n(998502),
+    S = n(254109),
+    v = n(212459),
+    j = n(369171),
+    C = n(312097),
+    T = n(388032),
+    E = n(505348);
+function x() {
+    return (x =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -35,7 +34,7 @@ function P() {
             return e;
         }).apply(this, arguments);
 }
-function M(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -60,30 +59,12 @@ function M(e) {
     }
     return e;
 }
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
+function M() {
+    (0, l.Mr3)(C.Q);
 }
-function I() {
-    (0, s.Mr3)(T.Q);
-}
-let D = r.forwardRef(function (e, t) {
-    var { onClick: n, tooltipText: r, selected: o, icon: c } = e,
-        u = (function (e, t) {
+let w = r.forwardRef(function (e, t) {
+    var { tooltipText: n } = e,
+        r = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -92,160 +73,164 @@ let D = r.forwardRef(function (e, t) {
                     var n,
                         a,
                         r = {},
-                        o = Object.keys(e);
-                    for (a = 0; a < o.length; a++) ((n = o[a]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        i = Object.keys(e);
+                    for (a = 0; a < i.length; a++) ((n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]));
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < o.length; a++) ((n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                var i = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < i.length; a++) ((n = i[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['onClick', 'tooltipText', 'selected', 'icon']);
-    return (0, a.jsx)(s.ua7, {
-        text: r,
+        })(e, ['tooltipText']);
+    return (0, a.jsx)(l.ua7, {
+        text: n,
         position: 'bottom',
         children: (e) => {
-            var r = P(
-                {},
-                (function (e) {
-                    if (null == e) throw TypeError('Cannot destructure ' + e);
-                    return e;
-                })(e)
-            );
+            var i,
+                o,
+                c = x(
+                    {},
+                    (function (e) {
+                        if (null == e) throw TypeError('Cannot destructure ' + e);
+                        return e;
+                    })(e)
+                );
             return (0, a.jsx)(
-                l.zx,
-                w(
-                    M(
-                        w(M({}, r), {
+                l.hU,
+                P(
+                    ((i = P({}, c)),
+                    (o = o =
+                        {
                             buttonRef: t,
-                            onClick: n,
-                            look: l.iL.BLANK,
-                            size: l.Ph.ICON,
-                            color: l.Tt.TRANSPARENT,
-                            className: i()(x.actionButton, { [x.selected]: o }),
-                            wrapperClassName: x.actionButtonWrapper,
-                            innerClassName: x.actionButtonInner,
-                            grow: !1
-                        }),
-                        u
-                    ),
-                    {
-                        children: c({
-                            color: 'currentColor',
+                            variant: 'icon-only',
+                            'aria-label': n,
                             size: 'sm'
-                        })
-                    }
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var a = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, a);
+                              }
+                              return n;
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                          }),
+                    i),
+                    r
                 )
             );
         }
     });
 });
-function A() {
-    let { zoomed: e, setZoomed: t } = (0, j.Y)();
-    return (0, a.jsx)(D, {
+function D() {
+    let { zoomed: e, setZoomed: t } = (0, v.Y)();
+    return (0, a.jsx)(w, {
         onClick: () => {
-            ((0, v.yg)(e ? v.uG.ZOOM_OUT_BUTTON_PRESSED : v.uG.ZOOM_IN_BUTTON_PRESSED), t(!e));
+            ((0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e));
         },
-        tooltipText: e ? E.intl.string(E.t.vOFof3) : E.intl.string(E.t.Kt4gZ2),
-        icon: e ? s.BlJ : s.OyE
+        tooltipText: e ? T.intl.string(T.t.vOFof3) : T.intl.string(T.t.Kt4gZ2),
+        icon: e ? l.BlJ : l.OyE
     });
 }
-function L(e) {
+function I(e) {
     var t, n;
-    let { item: o } = e,
-        i = null == (t = o.sourceMetadata) ? void 0 : t.message,
-        c = null == (n = o.sourceMetadata) ? void 0 : n.identifier,
-        l = r.useCallback(() => {
-            if (null != i && null != c) {
-                if (((0, v.yg)(v.uG.FORWARD_PRESSED), 'embed' === c.type))
-                    return void (0, m.l8)({
-                        message: i,
+    let { item: i } = e,
+        o = null == (t = i.sourceMetadata) ? void 0 : t.message,
+        c = null == (n = i.sourceMetadata) ? void 0 : n.identifier,
+        s = r.useCallback(() => {
+            if (null != o && null != c) {
+                if (((0, S.yg)(S.uG.FORWARD_PRESSED), 'embed' === c.type))
+                    return void (0, p.l8)({
+                        message: o,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [c.embedIndex] },
-                        onRequestSent: I
+                        onRequestSent: M
                     });
-                (0, m.l8)({
-                    message: i,
+                (0, p.l8)({
+                    message: o,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [c.attachmentId] },
-                    onRequestSent: I
+                    onRequestSent: M
                 });
             }
-        }, [i, c]);
-    return null != i && null != c && (0, p.h)(i)
-        ? (0, a.jsx)(D, {
-              onClick: l,
-              tooltipText: E.intl.string(E.t.I3ltXF),
-              icon: s.WZu
+        }, [o, c]);
+    return null != o && null != c && (0, d.h)(o)
+        ? (0, a.jsx)(w, {
+              onClick: s,
+              tooltipText: T.intl.string(T.t.I3ltXF),
+              icon: l.WZu
           })
         : null;
 }
-function N(e) {
+function A(e) {
     let { item: t } = e,
-        [n, o] = r.useState(!1);
-    if (!('VIDEO' === t.type || (h.isPlatformEmbedded && null == t.children && 'IMAGE' === t.type && (0, g.gS)(t.url, t.contentType)))) return null;
-    let i = (0, g.s$)(t.url, t.contentType, g.wV);
+        [n, i] = r.useState(!1);
+    if (!('VIDEO' === t.type || (_.isPlatformEmbedded && null == t.children && 'IMAGE' === t.type && (0, m.gS)(t.url, t.contentType)))) return null;
+    let o = (0, m.s$)(t.url, t.contentType, m.wV);
     async function c() {
-        if (((0, v.yg)(v.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === t.type && (0, _.q)({ href: i }), 'IMAGE' === t.type)) {
-            o(!0);
+        if (((0, S.yg)(S.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === t.type && (0, O.q)({ href: o }), 'IMAGE' === t.type)) {
+            i(!0);
             try {
-                (await S.ZP.saveImage(i, t.contentType, g.wV), (0, s.showToast)((0, s.createToast)(E.intl.string(E.t.cqpdJS), s.ToastType.SUCCESS)));
+                (await h.ZP.saveImage(o, t.contentType, m.wV), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.cqpdJS), l.ToastType.SUCCESS)));
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(E.intl.string(E.t['8Ve/S0']), s.ToastType.FAILURE));
+                (0, l.showToast)((0, l.createToast)(T.intl.string(T.t['8Ve/S0']), l.ToastType.FAILURE));
             } finally {
-                o(!1);
+                i(!1);
             }
         }
     }
-    return (0, a.jsx)(D, {
+    return (0, a.jsx)(w, {
         onClick: c,
-        tooltipText: E.intl.string('VIDEO' === t.type ? E.t.JVuuz8 : E.t['S/xNKS']),
-        submitting: n,
-        icon: s._8t
+        tooltipText: T.intl.string('VIDEO' === t.type ? T.t.JVuuz8 : T.t['S/xNKS']),
+        loading: n,
+        icon: l._8t
     });
 }
-function R(e) {
+function L(e) {
     var t;
     let { item: n } = e;
-    if (!(0, g.Jj)(n.url)) return null;
-    let r = (0, g.s$)(null != (t = n.original) ? t : n.url, n.contentType);
-    return (0, a.jsx)(D, {
+    if (!(0, m.Jj)(n.url)) return null;
+    let r = (0, m.s$)(null != (t = n.original) ? t : n.url, n.contentType);
+    return (0, a.jsx)(w, {
         onClick: () => {
-            ((0, v.yg)(v.uG.OPEN_LINK_PRESSED), (0, _.q)({ href: r }));
+            ((0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, O.q)({ href: r }));
         },
-        tooltipText: E.intl.string(E.t.q5jLJC),
-        icon: s.rgF
+        tooltipText: T.intl.string(T.t.q5jLJC),
+        icon: l.rgF
     });
 }
-function k(e) {
+function N(e) {
     var t, n;
-    let { item: r, canCopyImage: o, canCopyLink: i, onClose: c, onSelect: l } = e,
-        u = (null == (n = r.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment' ? r.sourceMetadata.identifier.attachmentId : null,
-        p = (0, d.Z)({
-            id: u,
-            label: E.intl.string(E.t.nwg3lZ)
+    let { item: r, canCopyImage: i, canCopyLink: o, onClose: c, onSelect: s } = e,
+        d = (null == (n = r.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment' ? r.sourceMetadata.identifier.attachmentId : null,
+        p = (0, u.Z)({
+            id: d,
+            label: T.intl.string(T.t.nwg3lZ)
         }),
-        m = (function (e) {
+        y = (function (e) {
             var t;
-            let { alt: n, sourceMetadata: r, width: o, height: i } = e,
-                c = Z(E.intl.string(E.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
-                l = Z(E.intl.string(E.t['3Nf9u7']), 'size'),
-                u = Z(E.intl.string(E.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
+            let { alt: n, sourceMetadata: r, width: i, height: o } = e,
+                c = R(T.intl.string(T.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
+                s = R(T.intl.string(T.t['3Nf9u7']), 'size'),
+                u = R(T.intl.string(T.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == r || null == (t = r.identifier) ? void 0 : t.type) !== 'attachment') return null;
-            let d = (0, f.Z)(r.identifier),
-                p = (0, O.BU)(r.identifier.size / 1000);
+            let d = (0, g.Z)(r.identifier),
+                p = (0, b.BU)(r.identifier.size / 1000);
             return (0, a.jsxs)(
-                s.sNh,
+                l.sNh,
                 {
                     id: 'media-viewer-details',
-                    label: E.intl.string(E.t.sqBLa2),
+                    label: T.intl.string(T.t.sqBLa2),
                     children: [
                         c(d),
-                        l(
-                            E.intl.formatToPlainString(E.t.DTdonJ, {
-                                width: o,
-                                height: i,
+                        s(
+                            T.intl.formatToPlainString(T.t.DTdonJ, {
+                                width: i,
+                                height: o,
                                 fileSize: p
                             })
                         ),
@@ -255,63 +240,63 @@ function k(e) {
                 'media-viewer-details'
             );
         })(r);
-    async function y() {
-        (0, v.yg)(v.uG.COPY_IMAGE_PRESSED);
-        let e = (0, g.s$)(r.url, r.contentType, g.wV);
+    async function O() {
+        (0, S.yg)(S.uG.COPY_IMAGE_PRESSED);
+        let e = (0, m.s$)(r.url, r.contentType, m.wV);
         try {
-            (await S.ZP.copyImage(e, r.contentType), (0, s.showToast)((0, s.createToast)(E.intl.string(E.t.bhUpvL), s.ToastType.SUCCESS)));
+            (await h.ZP.copyImage(e, r.contentType), (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.bhUpvL), l.ToastType.SUCCESS)));
         } catch (e) {
-            (0, s.showToast)((0, s.createToast)(E.intl.string(E.t.PTPbj4), s.ToastType.FAILURE));
+            (0, l.showToast)((0, l.createToast)(T.intl.string(T.t.PTPbj4), l.ToastType.FAILURE));
         }
     }
-    return (0, a.jsxs)(s.v2r, {
+    return (0, a.jsxs)(l.v2r, {
         navId: 'image-menu',
         'aria-label': 'placeholder',
         onClose: c,
-        onSelect: l,
+        onSelect: s,
         children: [
-            (0, a.jsxs)(s.kSQ, {
+            (0, a.jsxs)(l.kSQ, {
                 children: [
-                    o &&
+                    i &&
                         (0, a.jsx)(
-                            s.sNh,
+                            l.sNh,
                             {
-                                label: E.intl.string(E.t.tvUqWl),
+                                label: T.intl.string(T.t.tvUqWl),
                                 id: 'media-viewer-copy-image',
-                                icon: s.TIy,
-                                action: y
+                                icon: l.TIy,
+                                action: O
                             },
                             'media-viewer-copy-image'
                         ),
-                    i &&
+                    o &&
                         (0, a.jsx)(
-                            s.sNh,
+                            l.sNh,
                             {
                                 id: 'media-viewer-copy-link',
-                                label: E.intl.string(E.t.WqhZsr),
-                                icon: s.xPt,
+                                label: T.intl.string(T.t.WqhZsr),
+                                icon: l.xPt,
                                 action: function () {
                                     var e;
-                                    (0, v.yg)(v.uG.COPY_LINK_PRESSED);
-                                    let t = (0, g.s$)(null != (e = r.original) ? e : r.url, r.contentType);
-                                    (0, b.JG)(t, () => (0, s.showToast)((0, s.createToast)(E.intl.string(E.t['L/PwZW']), s.ToastType.SUCCESS)));
+                                    (0, S.yg)(S.uG.COPY_LINK_PRESSED);
+                                    let t = (0, m.s$)(null != (e = r.original) ? e : r.url, r.contentType);
+                                    (0, f.JG)(t, () => (0, l.showToast)((0, l.createToast)(T.intl.string(T.t['L/PwZW']), l.ToastType.SUCCESS)));
                                 }
                             },
                             'media-viewer-copy-link'
                         )
                 ]
             }),
-            m,
+            y,
             p
         ]
     });
 }
-function Z(e, t, n) {
-    let o = r.useCallback((e) => {
-        (0, b.JG)(e, () =>
-            (0, s.showToast)({
-                message: E.intl.string(E.t.mGZ66O),
-                type: s.ToastType.SUCCESS,
+function R(e, t, n) {
+    let i = r.useCallback((e) => {
+        (0, f.JG)(e, () =>
+            (0, l.showToast)({
+                message: T.intl.string(T.t.mGZ66O),
+                type: l.ToastType.SUCCESS,
                 id: 'media-viewer-detail-copied'
             })
         );
@@ -319,10 +304,10 @@ function Z(e, t, n) {
     return (r) =>
         null != r
             ? (0, a.jsx)(
-                  s.sNh,
-                  M(
+                  l.sNh,
+                  P(
                       {
-                          action: () => o(r),
+                          action: () => i(r),
                           label: e,
                           subtext: r,
                           id: t
@@ -333,68 +318,67 @@ function Z(e, t, n) {
               )
             : null;
 }
-function B(e) {
+function k(e) {
     var t, n;
-    let { item: o } = e,
-        i = r.useRef(null),
-        [c, l] = r.useState(!1),
+    let { item: i } = e,
+        o = r.useRef(null),
+        [c, s] = r.useState(!1),
         u = y.Sb.useSetting(),
-        d = 'IMAGE' === o.type && null == o.children && !o.animated && (0, g.Lz)(o.url, o.contentType),
-        p = (0, g.Jj)(o.url);
-    return u || d || p || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
-        ? (0, a.jsx)(s.yRy, {
-              targetElementRef: i,
+        d = 'IMAGE' === i.type && null == i.children && !i.animated && (0, m.Lz)(i.url, i.contentType),
+        p = (0, m.Jj)(i.url);
+    return u || d || p || (null == (n = i.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
+        ? (0, a.jsx)(l.yRy, {
+              targetElementRef: o,
               shouldShow: c,
               align: 'left',
               position: 'top',
               spacing: 18,
-              onRequestClose: () => l(!1),
-              animation: s.yRy.Animation.NONE,
+              onRequestClose: () => s(!1),
+              animation: l.yRy.Animation.NONE,
               renderPopout: () =>
-                  (0, a.jsx)(k, {
-                      item: o,
+                  (0, a.jsx)(N, {
+                      item: i,
                       canCopyImage: d,
                       canCopyLink: p,
-                      onClose: () => l(!1)
+                      onClose: () => s(!1)
                   }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, a.jsx)(D, {
-                      ref: i,
-                      tooltipText: E.intl.string(E.t.UKOtz8),
+                  return (0, a.jsx)(w, {
+                      ref: o,
+                      tooltipText: T.intl.string(T.t.UKOtz8),
                       onClick: () => {
-                          ((0, v.yg)(v.uG.MORE_BUTTON_PRESSED), l(!c));
+                          ((0, S.yg)(S.uG.MORE_BUTTON_PRESSED), s(!c));
                       },
-                      selected: c,
-                      icon: s.xhG
+                      icon: l.xhG
                   });
               }
           })
         : null;
 }
-let G = r.memo(function (e) {
+let Z = r.memo(function (e) {
     let { item: t, hideMediaOptions: n } = e,
-        o = (0, c.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        i = (0, c.e7)([s.Z], () => s.Z.keyboardModeEnabled),
         l = r.useRef(null),
-        s = r.useCallback(() => {
+        u = r.useCallback(() => {
             var e;
-            !o && (null == (e = l.current) ? void 0 : e.contains(document.activeElement)) && document.activeElement.blur();
-        }, [o]);
+            !i && (null == (e = l.current) ? void 0 : e.contains(document.activeElement)) && document.activeElement.blur();
+        }, [i]);
     return (
         ('IMAGE' === t.type || !n) &&
-        (0, a.jsx)(C.ZP, {
-            mode: C.lx.FOCUS_SENSITIVE,
+        (0, a.jsx)(j.ZP, {
+            mode: j.lx.FOCUS_SENSITIVE,
             children: (e) =>
                 (0, a.jsxs)('div', {
                     ref: l,
-                    className: i()(x.actionButtons, e),
+                    className: o()(E.actionButtons, e),
                     onClick: (e) => e.stopPropagation(),
-                    onMouseLeave: s,
+                    onMouseLeave: u,
                     children: [
-                        'IMAGE' === t.type && (0, a.jsx)(A, {}),
+                        'IMAGE' === t.type && (0, a.jsx)(D, {}),
                         !n &&
                             (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(L, { item: t }), (0, a.jsx)(N, { item: t }), (0, a.jsx)(R, { item: t }), (0, a.jsx)(B, { item: t })]
+                                children: [(0, a.jsx)(I, { item: t }), (0, a.jsx)(A, { item: t }), (0, a.jsx)(L, { item: t }), (0, a.jsx)(k, { item: t })]
                             })
                     ]
                 })

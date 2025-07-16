@@ -85,10 +85,10 @@ function x(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
         (y = !1));
 }
-function M(e) {
+function k(e) {
     delete m[e.channelId];
 }
-class k extends (i = d.ZP.Store) {
+class M extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -104,8 +104,8 @@ class k extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(k, 'displayName', 'InstantInviteStore');
-let j = new k(f.Z, {
+h(M, 'displayName', 'InstantInviteStore');
+let j = new M(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: C,
@@ -118,5 +118,5 @@ let j = new k(f.Z, {
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,
     FRIEND_INVITES_FETCH_RESPONSE: x,
-    INSTANT_INVITE_CLEAR: M
+    INSTANT_INVITE_CLEAR: k
 });

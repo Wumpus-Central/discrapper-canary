@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(793030),
-    i = n(55935),
-    a = n(668826),
+    a = n(55935),
+    i = n(668826),
     c = n(284539),
     l = n(67411),
     u = n(18582),
@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(292337),
     j = n(225893);
 let N = n(974138),
-    _ = () => [
+    P = () => [
         {
             content: b.intl.string(g.default.CKPQ6O),
             username: 'BurgerBoi',
@@ -192,8 +192,8 @@ let N = n(974138),
             ]
         }
     ];
-function P(e) {
-    let { currentMessage: t, response: n, handleResponse: a, index: c, onMount: l } = e;
+function _(e) {
+    let { currentMessage: t, response: n, handleResponse: i, index: c, onMount: l } = e;
     return (
         (0, s.useEffect)(() => {
             l();
@@ -223,7 +223,7 @@ function P(e) {
                                         (0, r.jsx)(o.xv, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: (0, i.Y4)(new Date())
+                                            children: (0, a.Y4)(new Date())
                                         })
                                     ]
                                 }),
@@ -264,7 +264,7 @@ function P(e) {
                                         u.Z,
                                         {
                                             className: y.response,
-                                            onClick: () => a(c, e.responsePoints, e.responseMessage),
+                                            onClick: () => i(c, e.responsePoints, e.responseMessage),
                                             children: (0, r.jsx)(f.Z, {
                                                 variant: 'text-md/normal',
                                                 children: e.content
@@ -278,32 +278,32 @@ function P(e) {
         })
     );
 }
-let w = [m.FK.MESSAGE_1, m.FK.MESSAGE_2, m.FK.MESSAGE_3];
-function C(e) {
+let C = [m.FK.MESSAGE_1, m.FK.MESSAGE_2, m.FK.MESSAGE_3];
+function Z(e) {
     var t;
     let { isPaused: n } = e,
         o = (0, s.useRef)(null),
-        i = (0, s.useRef)(-1),
+        a = (0, s.useRef)(-1),
         [u, f] = (0, s.useState)(0),
         [g, b] = (0, s.useState)(null),
-        y = _()[u],
+        y = P()[u],
         [h, x] = (0, c.Z)(m.yN.MESSAGES),
         v = null != (t = h.count) ? t : 0;
-    (0, l.Z)(w, v);
+    (0, l.Z)(C, v);
     let O = (0, d.eR)(N),
         j = (e, t, n) => {
             (b({
                 points: t,
                 responseMessage: n
             }),
-                (0, a.KH)(m.yN.MESSAGES, t),
+                (0, i.KH)(m.yN.MESSAGES, t),
                 x({ count: v + 1 }),
-                (i.current = setTimeout(() => {
+                (a.current = setTimeout(() => {
                     var t;
                     (null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null));
                 }, 3000)));
         };
-    return ((0, s.useEffect)(() => () => clearTimeout(i.current), []), u >= _().length)
+    return ((0, s.useEffect)(() => () => clearTimeout(a.current), []), u >= P().length)
         ? null
         : (0, r.jsx)(p.Z, {
               ref: o,
@@ -316,7 +316,7 @@ function C(e) {
               height: 0,
               children: (e) =>
                   (0, r.jsx)(
-                      P,
+                      _,
                       {
                           currentMessage: y,
                           response: g,

@@ -43,8 +43,8 @@ let C = {},
     D = !1,
     L = !1,
     x = I.default.fromTimestamp(Date.now()),
-    M = I.default.fromTimestamp(Date.now()),
-    k = !0,
+    k = I.default.fromTimestamp(Date.now()),
+    M = !0,
     j = !0;
 function U() {
     let e = y.ZP.getFlattenedGuildIds().flatMap((e) => g.ZP.getSelectableChannelIds(e)),
@@ -135,7 +135,7 @@ function Z() {
     ((w = w.filter((e) => e.kind !== T.fL.ALL_MESSAGES_CHANNEL || e.channelId in C)), F());
 }
 function H() {
-    for (let n of ((C = {}), (R = null), (P = []), (w = []), (D = !1), (L = !1), (x = I.default.fromTimestamp(Date.now())), (M = I.default.fromTimestamp(Date.now())), (k = !0), (j = !0), Z(), null != R ? R : [])) {
+    for (let n of ((C = {}), (R = null), (P = []), (w = []), (D = !1), (L = !1), (x = I.default.fromTimestamp(Date.now())), (k = I.default.fromTimestamp(Date.now())), (M = !0), (j = !0), Z(), null != R ? R : [])) {
         var e, t;
         let r = V(n);
         null != r && ((C[n].loadState = T.a7.LOADED), (C[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null), F());
@@ -211,12 +211,12 @@ function J() {
 }
 function $(e) {
     let { onlyUnread: t, finished: n, requestedMessageId: r } = e;
-    ((D = !1), t || (k = !0 !== n), (j = !0 !== n), !0 !== n && (L = !0), null != r && (M = r));
+    ((D = !1), t || (M = !0 !== n), (j = !0 !== n), !0 !== n && (L = !0), null != r && (k = r));
 }
 function ee(e, t) {
     if (null == R || D || (t && !j)) return !1;
-    let n = null == e || 0 > I.default.compare(e, M);
-    return k || n;
+    let n = null == e || 0 > I.default.compare(e, k);
+    return M || n;
 }
 function et() {
     D = !1;
@@ -241,7 +241,7 @@ class en extends (r = l.ZP.Store) {
         return C;
     }
     get hasMoreCurrentRequest() {
-        return k;
+        return M;
     }
     get hasMoreUnreadToLoad() {
         return j;
@@ -253,10 +253,10 @@ class en extends (r = l.ZP.Store) {
         return L;
     }
     get oldestRequestedMessageId() {
-        return M;
+        return k;
     }
     get isLoadingComplete() {
-        return !D && !k && '0' === M;
+        return !D && !M && '0' === k;
     }
 }
 N(en, 'displayName', 'NotificationsInboxStore');

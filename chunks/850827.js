@@ -9,56 +9,56 @@ var i = n(120356),
     c = n(755721),
     u = n(730749),
     d = n(726542),
-    f = n(40851),
-    p = n(600164),
+    p = n(40851),
+    f = n(600164),
     m = n(750154),
     g = n(892001),
     _ = n(594174),
-    b = n(374129),
-    h = n(639351),
-    v = n(503438),
+    v = n(374129),
+    b = n(639351),
+    h = n(503438),
     y = n(802856),
     O = n(387903),
     j = n(606925),
-    S = n(719216),
-    x = n(429589),
+    x = n(719216),
+    S = n(429589),
     I = n(636245),
-    C = n(697761),
-    P = n(611459),
+    P = n(697761),
+    C = n(611459),
     E = n(544671),
     w = n(757182),
-    T = n(910424),
-    N = n(981631),
+    N = n(910424),
+    T = n(981631),
     Z = n(477839),
     A = n(388032),
     D = n(603571),
-    L = n(126485);
-let k = (e) => {
+    k = n(126485);
+let L = (e) => {
         let { user: t, color: n, look: i, activity: l, onAction: a } = e,
-            o = (0, f.Aq)();
+            o = (0, p.Aq)();
         return (0, r.jsx)(
-            S.Z,
+            x.Z,
             {
                 user: t,
                 color: n,
                 look: i,
                 activity: l,
                 onAction: () => {
-                    (o.dispatch(N.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a());
+                    (o.dispatch(T.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a());
                 }
             },
             'custom-activity-button'
         );
     },
     M = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: f, channelId: g, source: M, color: R = c.zx.Colors.WHITE, look: F = c.zx.Looks.OUTLINED, type: U, onAction: V } = e,
+        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: p, channelId: g, source: M, color: R = c.zx.Colors.WHITE, look: F = c.zx.Looks.OUTLINED, type: U, onAction: V } = e,
             B = (0, s.e7)([_.default], () => {
                 let e = _.default.getCurrentUser();
                 return (o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
             }),
             Y = U === O.Y.STREAM_PREVIEW || null != a,
-            W = (0, v.Z)(t),
-            z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL;
+            W = (0, h.Z)(t),
+            z = W || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === Z.bO) {
             var G, H;
             return (
@@ -105,7 +105,7 @@ let k = (e) => {
                           Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(H, e));
                       }),
                 (t = G),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(L, {
                     user: i,
                     color: R,
                     look: F,
@@ -114,35 +114,35 @@ let k = (e) => {
                 })
             );
         }
-        let J = z === p.Z.Direction.VERTICAL;
-        return (0, r.jsx)(p.Z, {
+        let J = z === f.Z.Direction.VERTICAL;
+        return (0, r.jsx)(f.Z, {
             grow: 0,
-            align: p.Z.Align.STRETCH,
+            align: f.Z.Align.STRETCH,
             direction: z,
-            wrap: J ? p.Z.Wrap.WRAP : p.Z.Wrap.NO_WRAP,
-            className: l()(u, L.buttonsWrapper, J ? L.vertical : L.horizontal),
+            wrap: J ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
+            className: l()(u, k.buttonsWrapper, J ? k.vertical : k.horizontal),
             children: (() => {
                 if ((0, y.Z)(t))
                     return (0, r.jsx)(
                         j.Z,
                         {
-                            platform: d.Z.get(N.ABu.XBOX),
+                            platform: d.Z.get(T.ABu.XBOX),
                             look: F,
                             color: R,
                             onAction: V,
-                            Icon: h.Z
+                            Icon: b.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if ((null == t ? void 0 : t.platform) === N.M7m.PS4 || (null == t ? void 0 : t.platform) === N.M7m.PS5)
+                if ((null == t ? void 0 : t.platform) === T.M7m.PS4 || (null == t ? void 0 : t.platform) === T.M7m.PS5)
                     return (0, r.jsx)(
                         j.Z,
                         {
                             look: F,
                             color: R,
-                            platform: d.Z.get(N.ABu.PLAYSTATION),
+                            platform: d.Z.get(T.ABu.PLAYSTATION),
                             onAction: V,
-                            Icon: b.Z
+                            Icon: v.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
@@ -152,7 +152,7 @@ let k = (e) => {
                             {
                                 activity: t,
                                 user: i,
-                                guildId: f,
+                                guildId: p,
                                 channelId: g,
                                 source: M,
                                 look: F,
@@ -162,7 +162,7 @@ let k = (e) => {
                             'spotify-activity-sync-button'
                         ),
                         n = (0, r.jsx)(
-                            P.Z,
+                            C.Z,
                             {
                                 activity: t,
                                 user: i,
@@ -195,7 +195,7 @@ let k = (e) => {
                 }
                 return Y
                     ? (0, r.jsx)(
-                          T.Z,
+                          N.Z,
                           {
                               isCurrentUser: B.id === i.id,
                               color: R,
@@ -218,7 +218,7 @@ let k = (e) => {
                                   'watch-button'
                               ),
                               (0, r.jsx)(
-                                  x.Z,
+                                  S.Z,
                                   {
                                       activity: t,
                                       embeddedActivity: n,
@@ -230,7 +230,7 @@ let k = (e) => {
                                   'join-activity-button'
                               ),
                               (0, r.jsx)(
-                                  C.Z,
+                                  P.Z,
                                   {
                                       activity: t,
                                       user: i,
@@ -241,7 +241,7 @@ let k = (e) => {
                                   'notify-button'
                               ),
                               (0, r.jsx)(
-                                  S.Z,
+                                  x.Z,
                                   {
                                       user: i,
                                       color: R,

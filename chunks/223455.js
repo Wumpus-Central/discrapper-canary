@@ -47,7 +47,10 @@ function D(e) {
                         draftType: f.d.ChannelMessage
                     }),
                     (0, n.jsx)(g.Z, { channel: a }),
-                    (0, n.jsx)(c.Z, { inPopoutWindow: !0 })
+                    (0, n.jsx)(c.Z, {
+                        popoutWindowKey: t,
+                        popoutWindowHasTitleBar: !0
+                    })
                 ]
             })
         })

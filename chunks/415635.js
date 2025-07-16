@@ -8,28 +8,28 @@ var r = n(255367),
     c = n(367907),
     u = n(37091),
     d = n(721264),
-    f = n(963838),
-    p = n(39127),
+    p = n(963838),
+    f = n(39127),
     m = n(981631),
     g = n(490650);
 function _(e) {
-    let { channelId: t, guildId: n, userId: _, containerDimensions: b } = e,
-        h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [v, y] = i.useState([]),
-        O = v.length < 50;
+    let { channelId: t, guildId: n, userId: _, containerDimensions: v } = e,
+        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [h, y] = i.useState([]),
+        O = h.length < 50;
     i.useEffect(() => {
         function e(e) {
             var r;
-            let { channelId: i, userId: a, emoji: o, animationType: s, animationId: p } = e;
+            let { channelId: i, userId: a, emoji: o, animationType: s, animationId: f } = e;
             if ((null != _ && _ !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
-            let g = null != o && null != s && null != p;
-            if (i === t && !h && O && g) {
-                let e = (0, f._r)(o),
+            let g = null != o && null != s && null != f;
+            if (i === t && !b && O && g) {
+                let e = (0, p._r)(o),
                     r = null != o.id && !o.animated,
                     i = {
                         id: (0, l.Z)(),
                         animationType: s,
-                        animationId: p,
+                        animationId: f,
                         shouldResize: r,
                         url: e,
                         userId: a
@@ -47,7 +47,7 @@ function _(e) {
                 o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, _, h, O]);
+    }, [t, n, _, b, O]);
     let j = i.useCallback((e) => {
         y((t) => {
             let n = [...t],
@@ -55,18 +55,18 @@ function _(e) {
             return (n.splice(r, 1), n);
         });
     }, []);
-    return h
+    return b
         ? null
         : (0, r.jsx)('div', {
               className: g.effectsWrapper,
-              style: { width: b.width },
+              style: { width: v.width },
               children: (0, r.jsx)('div', {
                   className: g.effects,
-                  children: v.map((e) =>
+                  children: h.map((e) =>
                       (0, r.jsx)(
-                          p.Z,
+                          f.Z,
                           {
-                              containerDimensions: b,
+                              containerDimensions: v,
                               effect: e,
                               onComplete: j
                           },

@@ -7,7 +7,7 @@
     SI: () => C,
     UJ: () => N,
     X6: () => O,
-    aQ: () => k,
+    aQ: () => M,
     g4: () => A,
     hi: () => w,
     kC: () => y,
@@ -50,7 +50,7 @@ let h = -1,
     },
     b = (e) => {
         let t = m();
-        return null == e ? p.qn.NONE : R(t.map((t) => (k(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
+        return null == e ? p.qn.NONE : R(t.map((t) => (M(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
     };
 function y(e) {
     let t = g(e);
@@ -275,7 +275,7 @@ function D(e, t) {
             ('thumbnail' in e && null != e.thumbnail && (null == (i = e.thumbnail) ? void 0 : i.width) === 0 && (null == (a = e.thumbnail) ? void 0 : a.height) === 0) ||
             ('image' in e && null != e.image && (null == (o = e.image) ? void 0 : o.width) === 0 && (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ('images' in e && (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && M(U(e), t)
+        ) && k(U(e), t)
     );
 }
 function L(e, t) {
@@ -290,7 +290,7 @@ function L(e, t) {
                         media: e
                     })
             ).length &&
-        M(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
 function x(e, t) {
@@ -305,14 +305,14 @@ function x(e, t) {
                         media: e
                     })
             ).length &&
-        M(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
-function M(e, t) {
+function k(e, t) {
     let n = _.Z.validContentScanVersion;
     return e !== h && (t.includes(p._.GORE) ? null == e || e < n : null == e);
 }
-function k(e) {
+function M(e) {
     return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);
 }
 function j(e) {

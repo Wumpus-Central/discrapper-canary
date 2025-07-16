@@ -53,7 +53,7 @@ let A = function (e) {
             onClose: (e) => e && t()
         });
     }
-    function M() {
+    function k() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
@@ -146,7 +146,7 @@ let A = function (e) {
                               innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
-                              onClick: M,
+                              onClick: k,
                               size: c.zx.Sizes.LARGE,
                               children: [
                                   (0, r.jsx)(u.OgN, {

@@ -65,27 +65,27 @@ var r = n(98405),
             get: e
         };
     },
-    M = function (e) {
+    k = function (e) {
         return x(function () {
             return R(this)[e];
         });
     };
-(y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D)));
-var k = o(function () {
+(y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D)));
+var M = o(function () {
         return !(new S() instanceof T);
     }),
     j =
-        k ||
+        M ||
         o(function () {
             return N.toString !== h || '2: 1' !== String(new S(1, 2));
         }),
     U =
-        k ||
+        M ||
         o(function () {
             return 25 !== new S(1, 'DataCloneError').code;
         }),
-    G = k || 25 !== S[I] || 25 !== A[I],
-    B = O ? j || U || G : k;
+    G = M || 25 !== S[I] || 25 !== A[I],
+    B = O ? j || U || G : M;
 r(
     {
         global: !0,

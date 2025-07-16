@@ -7,15 +7,15 @@ var i = n(557711),
     o = n(981631),
     s = n(145131);
 function c(e) {
-    let { activity: t, user: n, guildId: c, channelId: u, source: d, look: f, color: p, onAction: m } = e;
+    let { activity: t, user: n, guildId: c, channelId: u, source: d, look: p, color: f, onAction: m } = e;
     return null != t && (0, l.Z)(t, o.xjy.SYNC) && (0, a.Z)(t)
         ? (0, r.jsx)(
               i.Z,
               {
                   className: s.button,
                   size: s.buttonSize,
-                  look: f,
-                  color: p,
+                  look: p,
+                  color: f,
                   user: n,
                   activity: t,
                   guildId: null != c ? c : void 0,

@@ -59,8 +59,8 @@ var i,
     D = n(866119),
     L = n(671999),
     x = n(998502),
-    M = n(145597),
-    k = n(372679),
+    k = n(145597),
+    M = n(372679),
     j = n(981631),
     U = n(757744);
 function G(e, t, n) {
@@ -226,15 +226,15 @@ let ed = 'none',
         onTimeout: (e, t) => {
             let n = 'overlayLock: lastMutexCall '.concat(ed, '}');
             eo.error(n);
-            let r = el((0, M.getPID)());
+            let r = el((0, k.getPID)());
             (ec(
-                (0, M.getPID)(),
+                (0, k.getPID)(),
                 F(B({}, r), {
                     error_description: n,
                     success: !1
                 })
             ),
-                w.default.track(j.rMx.OVERLAY_HOOK_RESULT, el((0, M.getPID)())));
+                w.default.track(j.rMx.OVERLAY_HOOK_RESULT, el((0, k.getPID)())));
         },
         timeoutMs: 180000
     });
@@ -294,13 +294,13 @@ async function em(e) {
                 ed = 'reconcile.getOverlayURL';
                 let t = await ev();
                 ((ed = 'reconcile.createHostProcess'), e.createHostProcess(t, eS, eT));
-            } else ((ed = 'reconcile.destroyHostProcess'), e.destroyHostProcess(), eO((0, M.getPID)()));
+            } else ((ed = 'reconcile.destroyHostProcess'), e.destroyHostProcess(), eO((0, k.getPID)()));
         else if (z) {
             let t = await ev();
             e.createHostProcess(t, eS, eT);
-        } else (e.destroyHostProcess(), eO((0, M.getPID)()));
+        } else (e.destroyHostProcess(), eO((0, k.getPID)()));
     } catch (t) {
-        (eo.error('reconcileHostProcess', t), (0, O.D)(t), eO((0, M.getPID)()));
+        (eo.error('reconcileHostProcess', t), (0, O.D)(t), eO((0, k.getPID)()));
         try {
             e.destroyHostProcess();
         } catch (e) {
@@ -316,7 +316,7 @@ async function eg(e) {
     let r = W.get(e);
     if (null != r) return void eo.warn('Trying to attach to pid='.concat(e, ', that is already in status: ').concat(r));
     (await f.Z.updateOverlayState(e, p.mM.WAITING_FOR_OVERLAY_OPEN), (ed = 'attach.getOverlayModule'));
-    let i = await (0, k.K)();
+    let i = await (0, M.K)();
     if (null == i) return void eo.error('Trying to attach to pid='.concat(e, ', but overlay module failed loaded'));
     ((ed = 'attach.transitionOverlayPIDStatus'), eh(e, 'ATTACHING'), (ed = 'attach.attachToProcess'));
     let a = await m.YT(e);
@@ -327,9 +327,9 @@ async function eE(e) {
     eh(e, 'DISCONNECTING');
     try {
         ed = 'detach.getOverlayModule';
-        let t = await (0, k.K)();
+        let t = await (0, M.K)();
         if (null == t) return void eo.error('Trying to detach from pid='.concat(e, ', but overlay module failed loaded'));
-        (e !== M.DEV_PID && ((ed = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, s._v)(16), (ed = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (ed = 'detach.transitionOverlayPIDStatus'), eh(e, null), (ed = 'detach.reconcileHostProcess'), await em(t));
+        (e !== k.DEV_PID && ((ed = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, s._v)(16), (ed = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (ed = 'detach.transitionOverlayPIDStatus'), eh(e, null), (ed = 'detach.reconcileHostProcess'), await em(t));
     } catch (t) {
         ((0, O.D)(t, p.gl.Hook), eo.error('Error during overlay detachment for pid '.concat(e, ':'), t), eh(e, null));
     }
@@ -406,8 +406,8 @@ async function eb(e) {
 }
 let ey = e_('updateIntendedOverlayPIDs', (e) => (eo.info('updateIntendedOverlayPIDs', e), eb(e))),
     eO = e_('clearPID', (e) => {
-        if (null == e) return (0, M.setPID)(M.UNSET_PID);
-        A.ZP.isOverlayV3EnabledForPID(e) || (0, M.setPID)(M.UNSET_PID);
+        if (null == e) return (0, k.setPID)(k.UNSET_PID);
+        A.ZP.isOverlayV3EnabledForPID(e) || (0, k.setPID)(k.UNSET_PID);
     });
 function ev() {
     return new Promise((e) => {
@@ -417,10 +417,10 @@ function ev() {
     });
 }
 let eI = e_('setOverlayEnabled', async (e) => {
-    if (!(0, M.supportsLegacy)()) return;
+    if (!(0, k.supportsLegacy)()) return;
     if (z === e) return void eo.verbose('setOverlayEnabled: no change', { newOverlayEnabled: e });
     ((z = e), eJ.emitChange());
-    let t = await (0, k.K)();
+    let t = await (0, M.K)();
     if (null == t) return void eo.error('setOverlayEnabled: overlay module failed loaded');
     (z || (await eb(void 0)), W.size > 0 && (await em(t)));
 });
@@ -441,7 +441,7 @@ function eS(e, t, n) {
             n
         );
     (ec(e, B({}, o)),
-        (0, d.te)(M.OVERLAY_LAYOUT_ID, P.Z.getDefaultLayout(M.OVERLAY_LAYOUT_ID), U.bv, {
+        (0, d.te)(k.OVERLAY_LAYOUT_ID, P.Z.getDefaultLayout(k.OVERLAY_LAYOUT_ID), U.bv, {
             width: n.graphics_width,
             height: n.graphics_height
         }),
@@ -474,7 +474,7 @@ function eC(e) {
         case j.BmY.CONNECT:
             let t = C.default.getToken();
             if (null == t) break;
-            ((0, d.te)(M.OVERLAY_LAYOUT_ID, P.Z.getDefaultLayout(M.OVERLAY_LAYOUT_ID), U.bv),
+            ((0, d.te)(k.OVERLAY_LAYOUT_ID, P.Z.getDefaultLayout(k.OVERLAY_LAYOUT_ID), U.bv),
                 Promise.all([(0, I.Z)(t, e.pid), o.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -491,7 +491,7 @@ function eC(e) {
                             payloads: [n]
                         }),
                         eh(i, 'READY'),
-                        (0, M.setPID)(i),
+                        (0, k.setPID)(i),
                         f.Z.overlayReady(i));
                     let o = el(i);
                     ec(i, F(B({}, o), { total_mount_time_ms: null != o.mounting_started_at ? new Date().getTime() - o.mounting_started_at : void 0 }));
@@ -505,13 +505,13 @@ function eC(e) {
     }
 }
 async function eR(e, t) {
-    let n = await (0, k.K)();
+    let n = await (0, M.K)();
     if (null == n) return void eo.error('setInputLocked: overlay module failed loaded');
     let r = null != t ? t : Q;
     if (null != r && 'DISCONNECTING' === W.get(r)) return void eo.warn('Overlay module is no longer valid during input lock');
     try {
         null != r &&
-            r !== M.DEV_PID &&
+            r !== k.DEV_PID &&
             n.sendCommand(r, {
                 message: 'intercept_input',
                 intercept: !e
@@ -543,13 +543,13 @@ function eL(e) {
 function ex() {
     (ei.clear(), eP(!0, Q));
 }
-function eM(e) {
+function ek(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    (n.append('build_id', '845bfcf761afb50a993291e763a005335e6e06b7'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
+    (n.append('build_id', 'b2e0250d74c64a41539d4f4cb31d63e5e26fdd3a'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
 }
-function ek(e) {
+function eM(e) {
     let { channelId: t, ring: n } = e;
     setImmediate(() => {
         (_.default.selectPrivateChannel(t), c.Z.call(t, !1, !!n));
@@ -653,7 +653,7 @@ function eX() {
 }
 class eQ extends (i = o.ZP.Store) {
     initialize() {
-        !(0, M.supportsLegacy)() || __OVERLAY__ || (this.waitFor(y.ZP, b.Z, C.default, A.ZP, T.default), this.syncWith([b.Z], ez), g.sr(eC, eN), C.default.addChangeListener(eA), l.Z.addInterceptor(en.queueDispatch));
+        !(0, k.supportsLegacy)() || __OVERLAY__ || (this.waitFor(y.ZP, b.Z, C.default, A.ZP, T.default), this.syncWith([b.Z], ez), g.sr(eC, eN), C.default.addChangeListener(eA), l.Z.addInterceptor(en.queueDispatch));
     }
     isFocusedPidInputLocked() {
         let e = this.getFocusedPID();
@@ -669,7 +669,7 @@ class eQ extends (i = o.ZP.Store) {
         return !ee.has(e);
     }
     isSupported() {
-        return (0, M.supportsLegacy)() || !1;
+        return (0, k.supportsLegacy)() || !1;
     }
     get enabled() {
         return A.ZP.isOverlayV3Enabled() ? A.ZP.enabled : z;
@@ -689,7 +689,7 @@ class eQ extends (i = o.ZP.Store) {
         return null != e && T.default.isOverlayOOPEnabledForPid(e);
     }
     isCurrentPidOutOfProcess() {
-        return T.default.isOverlayOOPEnabledForPid((0, M.getPID)());
+        return T.default.isOverlayOOPEnabledForPid((0, k.getPID)());
     }
     isReady(e) {
         return A.ZP.isOverlayV3EnabledForPID(e) ? A.ZP.isReady(e) : 'READY' === W.get(e);
@@ -719,8 +719,8 @@ let eJ = new eQ(
                   OVERLAY_SET_INPUT_LOCKED: eD,
                   OVERLAY_ACTIVATE_REGION: eL,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: ex,
-                  RPC_SERVER_READY: eM,
-                  OVERLAY_CALL_PRIVATE_CHANNEL: ek,
+                  RPC_SERVER_READY: ek,
+                  OVERLAY_CALL_PRIVATE_CHANNEL: eM,
                   OVERLAY_JOIN_GAME: eZ,
                   OVERLAY_CRASHED: eU,
                   OVERLAY_UPDATE_OVERLAY_METHOD: eK

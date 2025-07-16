@@ -56,8 +56,8 @@ function A() {
 }
 function w(e) {
     let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: w, editorTextContent: R, setValue: M, openClips: D } = e,
-        { analyticsLocations: k } = (0, p.ZP)(),
-        L = (0, g.Dt)({ channel: t }),
+        { analyticsLocations: L } = (0, p.ZP)(),
+        k = (0, g.Dt)({ channel: t }),
         U = (0, E.Z)();
     function B() {
         (0, b.R6)(t, void 0, 'Plus Button');
@@ -131,7 +131,7 @@ function w(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: k
+                analyticsLocations: L
             }),
             (0, u.w1)({ guildId: t.guild_id }));
     }
@@ -237,7 +237,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }
@@ -258,7 +258,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }
@@ -279,7 +279,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }
@@ -324,7 +324,7 @@ function w(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: L
+                                children: k
                             },
                             'scheduled_message'
                         );

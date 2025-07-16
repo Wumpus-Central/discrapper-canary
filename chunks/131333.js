@@ -109,7 +109,7 @@ function x() {
             return t;
         });
 }
-function M(e) {
+function k(e) {
     if (null == e) return 'enter';
     switch (e) {
         case 'enter':
@@ -120,7 +120,7 @@ function M(e) {
             return 'enter';
     }
 }
-let k = i.forwardRef(function (e, t) {
+let M = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [o, s] = i.useState(null),
         { confettiCanvas: c } = i.useContext(l.h),
@@ -179,7 +179,7 @@ function j(e) {
     let { children: t } = e,
         n = i.useRef({}),
         [a, l] = i.useState(null),
-        c = M(a),
+        c = k(a),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef('jack_o_lantern'),
@@ -228,7 +228,7 @@ function j(e) {
                   Object.keys(w).map((e) => {
                       let t = w[e];
                       return (0, r.jsx)(
-                          k,
+                          M,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];

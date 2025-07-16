@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => w }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(505266),
-    i = n(442837),
-    a = n(522474),
+    a = n(442837),
+    i = n(522474),
     c = n(359013),
     l = n(115092),
     u = n(3072),
@@ -23,8 +23,8 @@ let O = n(774809),
         colorize: !1
     })),
     N = new o.qA({ wind: -5 }),
-    _ = [],
-    P = {
+    P = [],
+    _ = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -43,18 +43,18 @@ let O = n(774809),
             uniformVectorValues: !0
         }
     };
-function w(e) {
+function C(e) {
     var t, n;
     let { isPaused: m, width: g, windowKey: b } = e,
         y = c.Mq[f.yN.RAIN];
     (0, u.is)(O, m);
     let [h, x] = (0, s.useState)(null),
-        [v, w] = (0, s.useState)(null),
-        C = (0, o.uR)(h, v),
-        Z = (0, i.e7)([a.Z], () => a.Z.getWindow(b)),
-        S = (0, s.useCallback)(() => {
+        [v, C] = (0, s.useState)(null),
+        Z = (0, o.uR)(h, v),
+        w = (0, a.e7)([i.Z], () => i.Z.getWindow(b)),
+        E = (0, s.useCallback)(() => {
             var e, t;
-            C.createConfetti(
+            Z.createConfetti(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,7 +79,7 @@ function w(e) {
                             }));
                     }
                     return e;
-                })({}, P)),
+                })({}, _)),
                 (t = t =
                     {
                         position: {
@@ -108,19 +108,19 @@ function w(e) {
                       }),
                 e)
             );
-        }, [C, g]);
+        }, [Z, g]);
     return (
         (0, l.Z)({
-            onInterval: S,
+            onInterval: E,
             interval: 1000 / 60,
-            isPaused: m || !C.isReady
+            isPaused: m || !Z.isReady
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.Ji, {
-                    ref: w,
+                    ref: C,
                     sprites: j,
-                    colors: _,
+                    colors: P,
                     spriteWidth: 50,
                     spriteHeight: 50
                 }),
@@ -128,8 +128,8 @@ function w(e) {
                     className: p.canvas,
                     environment: N,
                     ref: x,
-                    requestAnimationFrame: null != (t = null == Z ? void 0 : Z.requestAnimationFrame) ? t : requestAnimationFrame,
-                    cancelAnimationFrame: null != (n = null == Z ? void 0 : Z.cancelAnimationFrame) ? n : cancelAnimationFrame
+                    requestAnimationFrame: null != (t = null == w ? void 0 : w.requestAnimationFrame) ? t : requestAnimationFrame,
+                    cancelAnimationFrame: null != (n = null == w ? void 0 : w.cancelAnimationFrame) ? n : cancelAnimationFrame
                 }),
                 (0, r.jsx)(d.Z, {
                     itemId: f.yN.RAIN,

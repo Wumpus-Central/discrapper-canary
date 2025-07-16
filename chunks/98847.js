@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     addItemContainer: 'addItemContainer__0651b',
     addItemButton: 'addItemButton__0651b',
     dragging: 'dragging__0651b',

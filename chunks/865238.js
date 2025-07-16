@@ -57,11 +57,11 @@ function N(e) {
         w = null != T.find((e) => e.ownerId === (null == A ? void 0 : A.id)),
         R = (0, u.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
         M = w && null != R && R.resolution !== j.LY.RESOLUTION_1440 && R.frameRate !== j.ws.FPS_60,
-        [D, k] = (0, i.useState)(!1);
+        [D, L] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        k(!0);
+        L(!0);
     }, []);
-    let L = (0, i.useContext)(g.h9),
+    let k = (0, i.useContext)(g.h9),
         U = (0, p.q_F)({
             from: D
                 ? {
@@ -71,7 +71,7 @@ function N(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: L ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: k ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,

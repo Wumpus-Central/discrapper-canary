@@ -160,27 +160,27 @@ function x(e) {
     if (null == n) return !1;
     (null != n.searchFetcher && n.searchFetcher.cancel(), delete b[t]);
 }
-function M(e) {
+function k(e) {
     if (e === N) return !1;
     (null != e && null == b[e] && y(e), (N = e));
 }
-function k() {
-    ((S = !0), null != N && (0, d.g)(N) === m.aib.CHANNEL && (0, f.a)({ location: 'SearchStore_handleConnectionOpen' }) && M(m.aib.DMS));
+function M() {
+    ((S = !0), null != N && (0, d.g)(N) === m.aib.CHANNEL && (0, f.a)({ location: 'SearchStore_handleConnectionOpen' }) && k(m.aib.DMS));
 }
 function j(e) {
     let { guildId: t, channelId: n } = e;
     null != t
-        ? M(t)
+        ? k(t)
         : (0, f.a)({
                 location: 'SearchStore_handleChannelSelect',
                 autoTrackExposure: S
             })
-          ? M(m.aib.DMS)
-          : M(n);
+          ? k(m.aib.DMS)
+          : k(n);
 }
 function U(e) {
     let { searchId: t } = e;
-    M(t);
+    k(t);
 }
 function G(e) {
     let { searchId: t } = e;
@@ -311,7 +311,7 @@ class K extends (r = o.ZP.Store) {
 }
 g(K, 'displayName', 'SearchStore');
 let z = new K(l.Z, {
-    CONNECTION_OPEN: k,
+    CONNECTION_OPEN: M,
     SEARCH_START: P,
     SEARCH_INDEXING: D,
     SEARCH_FINISH: L,

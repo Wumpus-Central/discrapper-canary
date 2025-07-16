@@ -33,11 +33,11 @@ var r = n(255367),
     R = n(388032),
     M = n(934680);
 let D = T.Hz.CHAT,
-    k = {
+    L = {
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    L = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
+    k = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
 function U(e) {
     var t;
     let { channel: n, closePopout: m, onFocus: y } = e,
@@ -48,7 +48,7 @@ function U(e) {
         H = i.useRef(!1),
         G = i.useRef(null),
         V = (0, f.wC)(n.guild_id),
-        z = (0, l.uniqBy)([...V, ...L], 'name')
+        z = (0, l.uniqBy)([...V, ...k], 'name')
             .filter(
                 (e) =>
                     !_.ZP.isEmojiFilteredOrLocked({
@@ -137,7 +137,7 @@ function U(e) {
                         onSelectDisabledEmoji: K,
                         onFocus: y,
                         onExpandedToggle: X,
-                        analyticsOverride: k,
+                        analyticsOverride: L,
                         emojiSearchProps: {
                             accessory: (0, r.jsx)(E.Z, {
                                 labelText: R.intl.string(R.t['ktEv/v']),

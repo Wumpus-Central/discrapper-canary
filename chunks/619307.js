@@ -3,7 +3,7 @@
     UN: () => P,
     cY: () => N,
     gz: () => C,
-    q4: () => k,
+    q4: () => M,
     s6: () => R
 }),
     n(388685));
@@ -159,7 +159,7 @@ function D(e) {
     return e.map((e) => w(e)).join(', ');
 }
 function L(e) {
-    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: v, onOpen: S, renderOptionLabel: A = w, renderOptionValue: N = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, isProcessing: V = !1, 'aria-label': F, 'aria-labelledby': Z } = e,
+    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: v, onOpen: S, renderOptionLabel: A = w, renderOptionValue: N = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: k, select: M, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, isProcessing: V = !1, 'aria-label': F, 'aria-labelledby': Z } = e,
         [H, Y] = i.useState(!1),
         { ref: W, width: K, height: z } = (0, p.ZP)();
     i.useLayoutEffect(() => {
@@ -180,12 +180,12 @@ function L(e) {
         Q = (0, h.O)(X),
         J = i.useCallback(
             (e) => {
-                if ((k(e), M)) {
+                if ((M(e), k)) {
                     var t;
                     null == (t = W.current) || t.focus();
                 }
             },
-            [k, M, W]
+            [M, k, W]
         ),
         $ = i.useCallback(
             (e) => {
@@ -216,7 +216,7 @@ function L(e) {
                 let { closePopout: n, position: i, updatePosition: a } = e;
                 return (0, r.jsx)(x, {
                     className: C,
-                    closeOnSelect: M,
+                    closeOnSelect: k,
                     maxVisibleItems: l,
                     width: 'auto' === f ? void 0 : null != f ? f : K,
                     isSelected: j,
@@ -362,7 +362,7 @@ function x(e) {
                 _.map((e, t) => {
                     var n;
                     return (0, r.jsx)(
-                        M,
+                        k,
                         {
                             isSelected: d(e.value),
                             value: e.value,
@@ -377,7 +377,7 @@ function x(e) {
                 }),
             [L, d, y, _, g, E]
         ),
-        k = _.length <= h ? f.xV : f.h2;
+        M = _.length <= h ? f.xV : f.h2;
     return (0, r.jsx)(l.bG, {
         navigator: w,
         children: (0, r.jsx)(l.SJ, {
@@ -387,7 +387,7 @@ function x(e) {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
-                            k,
+                            M,
                             I(
                                 O(
                                     {
@@ -422,7 +422,7 @@ function x(e) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { className: t, value: n, label: i, onSelect: a, isSelected: s, isDisabled: u, serialize: d } = e,
         f = (0, l.JA)(d(n));
     return (0, r.jsxs)(
@@ -456,7 +456,7 @@ function M(e) {
         )
     );
 }
-function k(e) {
+function M(e) {
     var { value: t, onChange: n } = e,
         i = T(e, ['value', 'onChange']);
     let a = A({

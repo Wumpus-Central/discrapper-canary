@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => w }), n(642613));
+(n.d(t, { Z: () => C }), n(642613));
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(442837),
+    a = n.n(o),
+    i = n(442837),
     c = n(481060),
     l = n(120421),
     u = n(340078),
@@ -27,7 +27,7 @@ function j(e) {
 }
 function N(e) {
     let { name: t, iconSrc: n, valueTotal: s, valuePerSecond: o } = e,
-        a = o >= 0 ? y.default.QMkrPj : y.default.VN4aTU;
+        i = o >= 0 ? y.default.QMkrPj : y.default.VN4aTU;
     return (0, r.jsxs)('tr', {
         className: x.statRow,
         children: [
@@ -64,9 +64,9 @@ function N(e) {
             }),
             (0, r.jsx)(j, {
                 children: (0, r.jsx)(c.Text, {
-                    className: i()(x.statValuePerSecond, x.monospace),
+                    className: a()(x.statValuePerSecond, x.monospace),
                     variant: 'text-xs/medium',
-                    children: h.intl.format(a, {
+                    children: h.intl.format(i, {
                         points: Math.abs(o),
                         grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, x.pointsIcon)
                     })
@@ -75,27 +75,27 @@ function N(e) {
         ]
     });
 }
-function _(e) {
+function P(e) {
     let { itemId: t, isPaused: n } = e,
-        s = (0, a.e7)([l.Z], () => {
+        s = (0, i.e7)([l.Z], () => {
             var e;
             return null != (e = l.Z.pointsByItem[t]) ? e : 0;
         }),
         o = (0, g.w2)()[t],
-        i = (0, f.Z)(s, n);
+        a = (0, f.Z)(s, n);
     return (0, r.jsx)(N, {
         name: o.name,
         valueTotal: s,
-        valuePerSecond: i,
+        valuePerSecond: a,
         iconSrc: o.purchaseIconSrc
     });
 }
-function P(e) {
+function _(e) {
     let { transitionState: t, isPaused: n } = e,
-        o = (0, a.e7)([l.Z], () => l.Z.pointsByItem),
-        i = (0, a.e7)([l.Z], () => l.Z.lifetimePoints),
-        u = (0, f.Z)(i, n),
-        d = (0, a.e7)([l.Z], () => l.Z.pointsByItem),
+        o = (0, i.e7)([l.Z], () => l.Z.pointsByItem),
+        a = (0, i.e7)([l.Z], () => l.Z.lifetimePoints),
+        u = (0, f.Z)(a, n),
+        d = (0, i.e7)([l.Z], () => l.Z.pointsByItem),
         m = (0, s.useMemo)(
             () =>
                 Object.keys(o).sort((e, t) => {
@@ -136,12 +136,12 @@ function P(e) {
                                     (0, r.jsx)(N, {
                                         name: h.intl.string(y.default.wAfrVl),
                                         iconSrc: v,
-                                        valueTotal: i,
+                                        valueTotal: a,
                                         valuePerSecond: u
                                     }),
                                     m.map((e) =>
                                         (0, r.jsx)(
-                                            _,
+                                            P,
                                             {
                                                 itemId: e,
                                                 isPaused: n
@@ -157,7 +157,7 @@ function P(e) {
             })
     });
 }
-function w(e) {
+function C(e) {
     let { isPaused: t } = e;
     return (0, r.jsx)(m.O, {
         iconSrc: O,
@@ -167,7 +167,7 @@ function w(e) {
                 Promise.resolve((e) => {
                     var n, s;
                     return (0, r.jsx)(
-                        P,
+                        _,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

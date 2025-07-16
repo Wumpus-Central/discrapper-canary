@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(388032),
     M = n(210408);
 let D = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = 'vc-activities-'.concat((0, o.Z)());
-function L(e) {
+    L = 'vc-activities-'.concat((0, o.Z)());
+function k(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -158,14 +158,14 @@ let U = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': k,
+                'aria-labelledby': L,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: k,
+                                id: L,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
@@ -211,7 +211,7 @@ let U = i.forwardRef(function (e, t) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(L, {
+                            (0, r.jsx)(k, {
                                 openInPopout: D,
                                 channel: l,
                                 onClick: () => {

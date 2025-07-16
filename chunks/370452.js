@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(442837),
     o = n(481060),
-    i = n(120421),
-    a = n(763283),
+    a = n(120421),
+    i = n(763283),
     c = n(424984),
     l = n(944548),
     u = n(477839),
@@ -40,19 +40,19 @@ function y(e) {
 }
 function h(e) {
     let { achievementId: t, achievement: n } = e,
-        o = (0, s.e7)([i.Z], () => i.Z.hasUnlockedAchievement(t));
+        o = (0, s.e7)([a.Z], () => a.Z.hasUnlockedAchievement(t));
     return (0, r.jsx)(l.Z, {
         borderColor: 'green',
         text: o
             ? (0, r.jsxs)('div', {
                   className: m.tooltip,
                   children: [
-                      (0, r.jsx)(a.Z, {
+                      (0, r.jsx)(i.Z, {
                           variant: 'text-md/bold',
                           color: 'always-white',
                           children: n.name
                       }),
-                      (0, r.jsx)(a.Z, {
+                      (0, r.jsx)(i.Z, {
                           variant: 'text-xs/normal',
                           color: 'text-muted',
                           children: n.description
@@ -110,12 +110,12 @@ function x(e) {
                         separator: !1,
                         className: m.header,
                         children: [
-                            (0, r.jsx)(a.Z, {
+                            (0, r.jsx)(i.Z, {
                                 variant: 'heading-lg/semibold',
                                 color: 'always-white',
                                 children: p.intl.string(f.default['236TJC']).toLocaleLowerCase()
                             }),
-                            (0, r.jsx)(a.Z, {
+                            (0, r.jsx)(i.Z, {
                                 variant: 'text-md/medium',
                                 color: 'text-muted',
                                 children: p.intl.string(f.default.wgMDm5).toLocaleLowerCase()

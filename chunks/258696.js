@@ -40,7 +40,7 @@ function A(e) {
     let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
         L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         x = N(C.id, O, P),
-        { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
+        { activeCommand: k, activeCommandOption: M } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(C.id),
             activeCommandOption: c.Z.getActiveOption(C.id)
         })),
@@ -51,7 +51,7 @@ function A(e) {
         V = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
-            null == M &&
+            null == k &&
             !j &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
@@ -65,7 +65,7 @@ function A(e) {
                 )
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
-            null == M &&
+            null == k &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -78,7 +78,7 @@ function A(e) {
                 )
             ),
         V &&
-            null == M &&
+            null == k &&
             U.push(
                 (0, r.jsx)(
                     b.Z,
@@ -91,7 +91,7 @@ function A(e) {
             ),
         !V &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
-            null == M &&
+            null == k &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -104,7 +104,7 @@ function A(e) {
                 )
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
+        (null == k || (null != M && M.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,

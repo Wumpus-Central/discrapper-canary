@@ -20,8 +20,8 @@ var n = a(255367),
     _ = a(77498),
     y = a(823379),
     C = a(550532),
-    O = a(71585),
-    N = a(146282),
+    N = a(71585),
+    O = a(146282),
     T = a(780106),
     E = a(650613),
     S = a(789086),
@@ -65,7 +65,7 @@ let R = [
 function k(e) {
     var t, a;
     let { type: r } = e,
-        l = (0, u.e7)([N.Z], () => N.Z.getFilters()),
+        l = (0, u.e7)([O.Z], () => O.Z.getFilters()),
         i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
     return (0, n.jsx)(x.XZJ, {
         value: i,
@@ -84,9 +84,9 @@ function k(e) {
 }
 function Z() {
     var e, t;
-    let a = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
+    let a = (0, u.e7)([O.Z], () => O.Z.getFeed(P.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -98,9 +98,9 @@ function Z() {
                 };
             });
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([N.Z], () => {
+        c = (0, u.e7)([O.Z], () => {
             var e;
-            return (null == (e = N.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = O.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [k, Z] = r.useState(''),
         D = (0, u.e7)(
@@ -125,8 +125,8 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        B = (0, b.Z)(M).filter(y.lm),
-        F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+        F = (0, b.Z)(M).filter(y.lm),
+        B = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, n.jsx)('div', {
         className: I.panel,
         children: (0, n.jsxs)(x.zJl, {
@@ -211,7 +211,7 @@ function Z() {
                             error: k.length > 0 && null == L ? 'No game profile for '.concat(null != D ? D : k + ' - try by id', '.') : void 0,
                             style: null != L ? { border: '1px solid green' } : {}
                         }),
-                        (0, n.jsx)('ul', { children: B.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, n.jsx)('ul', { children: F.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, n.jsxs)(x.hjN, {
@@ -226,7 +226,7 @@ function Z() {
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === F,
+                            isSelected: (e) => e === B,
                             select: function (e) {
                                 p.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',

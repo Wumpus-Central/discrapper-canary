@@ -1,27 +1,25 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(255367),
     i = n(73800),
-    l = n(755721),
-    a = n(481060),
-    o = n(283836),
-    s = n(728345),
-    c = n(388032),
-    u = n(75905);
-function d(e) {
+    l = n(481060),
+    a = n(283836),
+    o = n(728345),
+    s = n(388032);
+function c(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: i } = (0, s.IX)(t);
+        { data: i } = (0, o.IX)(t);
     return null == i
         ? null
-        : (0, r.jsx)(p, {
+        : (0, r.jsx)(u, {
               app: i,
               guildId: n
           });
 }
-function p(e) {
-    let { app: t, guildId: s } = e;
-    (0, o.q)(t.id);
-    let d = i.useCallback(() => {
-        (0, a.ZDy)(async () => {
+function u(e) {
+    let { app: t, guildId: o } = e;
+    (0, a.q)(t.id);
+    let c = i.useCallback(() => {
+        (0, l.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('77803'), n.e('83372')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, r.jsx)(
@@ -53,26 +51,17 @@ function p(e) {
                     })(
                         {
                             appId: t.id,
-                            guildId: s
+                            guildId: o
                         },
                         n
                     )
                 );
         });
-    }, [t, s]);
-    return (0, r.jsx)(l.zx, {
-        color: l.zx.Colors.BRAND,
-        size: l.zx.Sizes.SMALL,
-        onClick: d,
-        children: (0, r.jsxs)('div', {
-            className: u.button,
-            children: [
-                (0, r.jsx)(a.QJP, {
-                    size: 'xs',
-                    color: 'white'
-                }),
-                c.intl.format(c.t.XDRjs7, { appName: t.name })
-            ]
-        })
+    }, [t, o]);
+    return (0, r.jsx)(l.zxk, {
+        size: 'sm',
+        onClick: c,
+        icon: l.QJP,
+        text: s.intl.format(s.t.XDRjs7, { appName: t.name })
     });
 }

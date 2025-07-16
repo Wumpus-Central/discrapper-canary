@@ -158,7 +158,7 @@ let L = function (e) {
                 T.set(e.id, a));
         }
     },
-    M = (e, t, n) => {
+    k = (e, t, n) => {
         v.set(e.id, e);
         let r = [...S];
         if (t) {
@@ -167,7 +167,7 @@ let L = function (e) {
         }
         (t || n) && e.stickers.forEach((e) => L(e));
     },
-    k = () => {
+    M = () => {
         (C.forEach((e, t) => {
             let n = _.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
@@ -208,11 +208,11 @@ let F = () => {
     },
     H = (e) => {
         let { packs: t } = e;
-        (t.forEach((e) => M(e, !0)), (A = Date.now()), (N = !1));
+        (t.forEach((e) => k(e, !0)), (A = Date.now()), (N = !1));
     },
     Y = (e) => {
         let { pack: t, ingestStickers: n } = e;
-        M(t, !1, n);
+        k(t, !1, n);
     },
     W = (e) => {
         let { guildId: t, stickers: n } = e;
@@ -255,7 +255,7 @@ class X extends (r = a.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return (w(), null == T && ((T = new Map()), k()), T);
+        return (w(), null == T && ((T = new Map()), M()), T);
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();

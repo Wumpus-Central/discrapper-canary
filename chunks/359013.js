@@ -1,7 +1,7 @@
 n.d(t, {
-    Mq: () => a,
+    Mq: () => i,
     Tw: () => c,
-    p9: () => i
+    p9: () => a
 });
 var r = n(562858),
     s = n(477839);
@@ -45,7 +45,7 @@ let o = {
         points: 10
     }
 };
-function i(e) {
+function a(e) {
     let t = o[e];
     switch (t.type) {
         case r.e.BASIC:
@@ -56,17 +56,17 @@ function i(e) {
             return t.multiplier;
     }
 }
-let a = {
+let i = {
     [s.yN.CLICKER_BUTTON]: {
         type: r.e.UPGRADES,
         getPoints: (e) =>
             Math.floor(
                 Object.keys(e).reduce((t, n) => {
                     var r;
-                    return t + i(n) * (null != (r = e[n]) ? r : 0);
+                    return t + a(n) * (null != (r = e[n]) ? r : 0);
                 }, 1) *
-                    (null != e[s.uv.CLICKER_BUTTON_RAINBOW] ? i(s.uv.CLICKER_BUTTON_RAINBOW) : 1) *
-                    (null != e[s.uv.CLICKER_BUTTON_AFFIRMATIONS] ? i(s.uv.CLICKER_BUTTON_AFFIRMATIONS) : 1)
+                    (null != e[s.uv.CLICKER_BUTTON_RAINBOW] ? a(s.uv.CLICKER_BUTTON_RAINBOW) : 1) *
+                    (null != e[s.uv.CLICKER_BUTTON_AFFIRMATIONS] ? a(s.uv.CLICKER_BUTTON_AFFIRMATIONS) : 1)
             )
     },
     [s.yN.RAIN]: {
@@ -75,7 +75,7 @@ let a = {
     },
     [s.yN.SUN]: {
         type: r.e.SUN,
-        getPoints: (e) => 55 + e * i(s.uv.SUN_RAISE)
+        getPoints: (e) => 55 + e * a(s.uv.SUN_RAISE)
     },
     [s.yN.STATS]: { type: r.e.NONE },
     [s.yN.RATE]: { type: r.e.NONE },
@@ -95,8 +95,8 @@ let a = {
     [s.yN.BOUNCING_LOGO]: {
         type: r.e.BOUNCING_LOGOS,
         getPoints: (e, t, n) => {
-            let r = i(s.uv.BOUNCING_LOGO_CORNERS),
-                o = i(s.uv.BOUNCING_LOGO_COLORS);
+            let r = a(s.uv.BOUNCING_LOGO_CORNERS),
+                o = a(s.uv.BOUNCING_LOGO_COLORS);
             return 15 * (n ? o : 1) * (t && e ? r : 1);
         }
     },
@@ -146,7 +146,7 @@ let a = {
     },
     [s.yN.AT_SOMEONE]: {
         type: r.e.UPGRADES,
-        getPoints: (e) => 70 * (null != e[s.uv.FULLSCREEN_AT_SOMEONE] ? i(s.uv.FULLSCREEN_AT_SOMEONE) : 1)
+        getPoints: (e) => 70 * (null != e[s.uv.FULLSCREEN_AT_SOMEONE] ? a(s.uv.FULLSCREEN_AT_SOMEONE) : 1)
     },
     [s.yN.CURSORS]: {
         type: r.e.BASIC,
@@ -166,7 +166,7 @@ let a = {
     },
     [s.yN.MUSIC]: {
         type: r.e.UPGRADES,
-        getPoints: (e) => (null != e[s.uv.MUSIC_CHANGE] ? 5 + i(s.uv.MUSIC_CHANGE) : 5)
+        getPoints: (e) => (null != e[s.uv.MUSIC_CHANGE] ? 5 + a(s.uv.MUSIC_CHANGE) : 5)
     },
     [s.yN.LAWNMOWER]: {
         type: r.e.BASIC,
@@ -175,7 +175,7 @@ let a = {
     [s.yN.COMPLETE_GAME]: { type: r.e.NONE }
 };
 function c(e) {
-    let t = a[e];
+    let t = i[e];
     switch (t.type) {
         case r.e.BASIC:
             return t.points;

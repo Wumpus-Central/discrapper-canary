@@ -16,7 +16,7 @@ function d(e) {
             [c._.CUSTOM]: u.intl.string(u.t['N/PQjo'])
         },
         d = (0, i.e7)([o.Z], () => o.Z.getActiveInputProfile()),
-        f = t.map((t) =>
+        p = t.map((t) =>
             (0, r.jsx)(
                 l.k5B,
                 {
@@ -33,6 +33,6 @@ function d(e) {
         id: 'input-profiles',
         label: u.intl.string(u.t.LM3U3t),
         subtext: n[null != d ? d : c._.CUSTOM],
-        children: f
+        children: p
     });
 }

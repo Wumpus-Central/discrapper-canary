@@ -69,7 +69,7 @@ let E = i.memo(function (e) {
         R = (0, b.Uj)(w),
         M = (0, c.p)(),
         D = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        k = i.useMemo(() => {
+        L = i.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
             if (e.type === x.uaV.USER_JOIN)
@@ -130,7 +130,7 @@ let E = i.memo(function (e) {
             }
             return null;
         }, [w, R, S, D, M]),
-        { isReplyAuthorBlocked: L, isReplyAuthorIgnored: U } = (0, l.cj)(
+        { isReplyAuthorBlocked: k, isReplyAuthorIgnored: U } = (0, l.cj)(
             [f.Z],
             () => ({
                 isReplyAuthorBlocked: null != w && f.Z.isBlockedForMessage(w),
@@ -155,9 +155,9 @@ let E = i.memo(function (e) {
         channel: S,
         baseAuthor: z,
         referencedMessage: E,
-        content: k,
+        content: L,
         compact: P,
-        isReplyAuthorBlocked: L,
+        isReplyAuthorBlocked: k,
         isReplyAuthorIgnored: U,
         showAvatarPopout: Z,
         showUsernamePopout: I,

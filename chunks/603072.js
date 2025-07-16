@@ -21,9 +21,9 @@ var l = t(255367),
     v = t(592125),
     y = t(430824),
     O = t(944486),
-    I = t(31445),
+    Z = t(31445),
     N = t(59350),
-    Z = t(290511),
+    I = t(290511),
     w = t(176505),
     P = t(921944),
     E = t(388032),
@@ -31,7 +31,7 @@ var l = t(255367),
     T = t(100658);
 function B(e) {
     let { guild: n, previousChannel: t } = e,
-        i = (0, I.Z)(n);
+        i = (0, Z.Z)(n);
     r.useEffect(() => {
         (0, p.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: P.L.DISMISS });
     });
@@ -101,14 +101,14 @@ function B(e) {
 function A(e) {
     let { guildId: n, selectedSection: t } = e,
         i = (0, o.e7)([y.Z], () => y.Z.getGuild(n)),
-        s = (0, I.Z)(i),
-        [d, m] = r.useState(null != t ? t : Z.l7.CUSTOMIZE);
+        s = (0, Z.Z)(i),
+        [d, m] = r.useState(null != t ? t : I.l7.CUSTOMIZE);
     r.useEffect(() => {
         null != t && m(t);
     }, [t]);
     let h = (0, o.e7)([O.Z], () => O.Z.getLastSelectedChannelId(n)),
         p = (0, o.e7)([b.ZP], () => b.ZP.getCurrentSidebarChannelId(w.oC.CHANNEL_BROWSER)),
-        f = null != p && d === Z.l7.BROWSE,
+        f = null != p && d === I.l7.BROWSE,
         g = (0, o.e7)([v.Z], () => v.Z.getChannel(h)),
         j = (0, o.e7)([C.Z], () => C.Z.getNewChannelIds(n).size > 0),
         P = (0, x.fU)(n);
@@ -138,16 +138,16 @@ function A(e) {
                                                   u.njP.Item,
                                                   {
                                                       className: S.tabBarItem,
-                                                      id: Z.l7.CUSTOMIZE,
+                                                      id: I.l7.CUSTOMIZE,
                                                       children: E.intl.string(E.t.H2cICQ)
                                                   },
-                                                  Z.l7.CUSTOMIZE
+                                                  I.l7.CUSTOMIZE
                                               ),
                                               (0, l.jsxs)(
                                                   u.njP.Item,
                                                   {
                                                       className: S.tabBarItem,
-                                                      id: Z.l7.BROWSE,
+                                                      id: I.l7.BROWSE,
                                                       'aria-label': E.intl.string(E.t.et6wam),
                                                       children: [
                                                           E.intl.string(E.t.et6wam),
@@ -158,18 +158,18 @@ function A(e) {
                                                           })
                                                       ]
                                                   },
-                                                  Z.l7.BROWSE
+                                                  I.l7.BROWSE
                                               )
                                           ]
                                       }),
                                   (() => {
                                       switch (d) {
-                                          case Z.l7.CUSTOMIZE:
+                                          case I.l7.CUSTOMIZE:
                                               return (0, l.jsx)(N.Z, {
                                                   guildId: n,
-                                                  onBrowseChannels: () => m(Z.l7.BROWSE)
+                                                  onBrowseChannels: () => m(I.l7.BROWSE)
                                               });
-                                          case Z.l7.BROWSE:
+                                          case I.l7.BROWSE:
                                           default:
                                               return (0, l.jsx)(_.Z, { guildId: n });
                                       }

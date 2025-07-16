@@ -240,7 +240,7 @@ let I = /\b\B/,
         contains: [w]
     },
     x = { begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ },
-    M = function (e, t, n = {}) {
+    k = function (e, t, n = {}) {
         let r = i(
             {
                 scope: 'comment',
@@ -260,9 +260,9 @@ let I = /\b\B/,
         let a = E('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
         return (r.contains.push({ begin: m(/[ ]+/, '(', a, /[.]?[:]?([.][ ]|[ ])/, '){3}') }), r);
     },
-    k = M('//', '$'),
-    j = M('/\\*', '\\*/'),
-    U = M('#', '$'),
+    M = k('//', '$'),
+    j = k('/\\*', '\\*/'),
+    U = k('#', '$'),
     G = {
         scope: 'regexp',
         begin: /\/(?=[^/\n]*\/)/,
@@ -297,9 +297,9 @@ var F = Object.freeze({
         relevance: 0
     },
     BINARY_NUMBER_RE: C,
-    COMMENT: M,
+    COMMENT: k,
     C_BLOCK_COMMENT_MODE: j,
-    C_LINE_COMMENT_MODE: k,
+    C_LINE_COMMENT_MODE: M,
     C_NUMBER_MODE: {
         scope: 'number',
         begin: N,
@@ -631,7 +631,7 @@ let em = r,
                         i = u(w, r);
                     if (i) {
                         let [e, a] = i;
-                        if ((L.addText(n), (n = ''), (l[r] = (l[r] || 0) + 1), l[r] <= eb && (M += a), e.startsWith('_'))) n += t[0];
+                        if ((L.addText(n), (n = ''), (l[r] = (l[r] || 0) + 1), l[r] <= eb && (k += a), e.startsWith('_'))) n += t[0];
                         else {
                             let n = N.classNameAliases[e] || e;
                             p(t[0], n);
@@ -648,7 +648,7 @@ let em = r,
                     if (!r[w.subLanguage]) return void L.addText(x);
                     ((e = b(w.subLanguage, x, !0, D[w.subLanguage])), (D[w.subLanguage] = e._top));
                 } else e = v(x, w.subLanguage.length ? w.subLanguage : null);
-                (w.relevance > 0 && (M += e.relevance), L.__addSublanguage(e._emitter, e.language));
+                (w.relevance > 0 && (k += e.relevance), L.__addSublanguage(e._emitter, e.language));
             }
             function _() {
                 (null != w.subLanguage ? f() : d(), (x = ''));
@@ -703,7 +703,7 @@ let em = r,
                 if (!i) return eE;
                 let a = w;
                 w.endScope && w.endScope._wrap ? (_(), p(n, w.endScope._wrap)) : w.endScope && w.endScope._multi ? (_(), h(w.endScope, e)) : a.skip ? (x += n) : (a.returnEnd || a.excludeEnd || (x += n), _(), a.excludeEnd && (x = n));
-                do (w.scope && L.closeNode(), w.skip || w.subLanguage || (M += w.relevance), (w = w.parent));
+                do (w.scope && L.closeNode(), w.skip || w.subLanguage || (k += w.relevance), (w = w.parent));
                 while (w !== i.parent);
                 return (i.starts && m(i.starts, e), a.returnEnd ? 0 : n.length);
             }
@@ -746,22 +746,22 @@ let em = r,
                 L = new c.__emitter(c);
             T();
             let x = '',
-                M = 0,
                 k = 0,
+                M = 0,
                 j = 0,
                 U = !1;
             try {
                 if (N.__emitTokens) N.__emitTokens(t, L);
                 else {
                     for (w.matcher.considerAll(); ; ) {
-                        (j++, U ? (U = !1) : w.matcher.considerAll(), (w.matcher.lastIndex = k));
+                        (j++, U ? (U = !1) : w.matcher.considerAll(), (w.matcher.lastIndex = M));
                         let e = w.matcher.exec(t);
                         if (!e) break;
-                        let n = t.substring(k, e.index),
+                        let n = t.substring(M, e.index),
                             r = A(n, e);
-                        k = e.index + r;
+                        M = e.index + r;
                     }
-                    A(t.substring(k));
+                    A(t.substring(M));
                 }
                 return (
                     L.finalize(),
@@ -769,7 +769,7 @@ let em = r,
                     {
                         language: e,
                         value: R,
-                        relevance: M,
+                        relevance: k,
                         illegal: !1,
                         _emitter: L,
                         _top: w
@@ -784,8 +784,8 @@ let em = r,
                         relevance: 0,
                         _illegalBy: {
                             message: n.message,
-                            index: k,
-                            context: t.slice(k - 100, k + 100),
+                            index: M,
+                            context: t.slice(M - 100, M + 100),
                             mode: n.mode,
                             resultSoFar: R
                         },
@@ -935,7 +935,7 @@ let em = r,
                 e[n] && e[n](t);
             });
         }
-        function M(e) {
+        function k(e) {
             return (ei('10.7.0', 'highlightBlock will be removed entirely in v12.0'), ei('10.7.0', 'Please use highlightElement now.'), T(e));
         }
         for (let n in (Object.assign(e, {
@@ -943,7 +943,7 @@ let em = r,
             highlightAuto: v,
             highlightAll: C,
             highlightElement: T,
-            highlightBlock: M,
+            highlightBlock: k,
             configure: function (e) {
                 c = eg(c, e);
             },

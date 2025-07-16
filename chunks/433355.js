@@ -67,7 +67,7 @@ function L() {
 function x() {
     (S || u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), (S = w(S)));
 }
-function M(e) {
+function k(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     A = !1;
     let a = R(r);
@@ -82,7 +82,7 @@ function M(e) {
         !0)
     );
 }
-function k(e) {
+function M(e) {
     let { guildId: t } = e;
     return null != C[t] && (delete C[t], !0);
 }
@@ -222,10 +222,10 @@ let K = new W(o.Z, {
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: x,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: L,
     SIDEBAR_VIEW_CHANNEL: j,
-    SIDEBAR_VIEW_GUILD: M,
+    SIDEBAR_VIEW_GUILD: k,
     SIDEBAR_CREATE_THREAD: U,
     SIDEBAR_CLOSE: Z,
-    SIDEBAR_CLOSE_GUILD: k,
+    SIDEBAR_CLOSE_GUILD: M,
     CHANNEL_DELETE: G,
     CHANNEL_SELECT: Y,
     THREAD_CREATE: V,

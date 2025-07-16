@@ -60,13 +60,13 @@ function L(e) {
 }
 let x = {
     key: S.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(k, L({}, e)),
+    renderStep: (e) => (0, r.jsx)(M, L({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => R.intl.string(R.t['W685+f'])
     }
 };
-function M(e) {
+function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, T.JL)(),
         c = l ? S.h8.REVIEW : S.h8.ADD_PAYMENT_STEPS;
@@ -82,16 +82,16 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: a = '', setCustomGiftMessage: l, giftRecipientError: c, setGiftRecipientError: g, validatingGiftRecipient: S, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: x, setValidatingGiftRecipient: k } = (0, I.wD)(),
+        { customGiftMessage: a = '', setCustomGiftMessage: l, giftRecipientError: c, setGiftRecipientError: g, validatingGiftRecipient: S, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: x, setValidatingGiftRecipient: M } = (0, I.wD)(),
         { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: V, skuPricePreviewsById: F } = (0, T.JL)(),
         Z = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = p.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         W = H && x === C.Wt.DM_CHANNEL,
         K = Y === p.u.POPULAR ? R.intl.string(R.t.Kwgrrq) : R.intl.string(R.t.r1huYW),
         z = async (e, t) => {
-            (k(!0), null != c && g(), (await (0, u.B1)(e.id, t)) || g(R.intl.string(R.t['4kgVqa'])), k(!1));
+            (M(!0), null != c && g(), (await (0, u.B1)(e.id, t)) || g(R.intl.string(R.t['4kgVqa'])), M(!1));
         };
     (0, s.ZP)(() => {
         null != U && null != D && (O.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
@@ -196,7 +196,7 @@ function k(e) {
                 children: (0, r.jsx)(o.mzw, {
                     justify: _.Z.Justify.BETWEEN,
                     align: _.Z.Align.CENTER,
-                    children: (0, r.jsx)(M, {
+                    children: (0, r.jsx)(k, {
                         onStepChange: t,
                         onBackClick: n,
                         disabled: null != c || null == D || D.id === (null == Z ? void 0 : Z.id) || a.length > C.$n,

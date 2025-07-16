@@ -160,8 +160,8 @@ function L(e) {
         A = i.useRef(null),
         R = (0, p.Z)(),
         [L, x] = i.useState(!1),
-        M = i.useRef(new u.sW(C, () => x(!1))),
-        k = (0, c.Wu)(
+        k = i.useRef(new u.sW(C, () => x(!1))),
+        M = (0, c.Wu)(
             [m.Z, g.default],
             () => {
                 if (s.type === y.fO.STREAM) {
@@ -177,13 +177,13 @@ function L(e) {
             [s]
         );
     i.useEffect(() => {
-        R && (M.current.cancel(), x(!1));
+        R && (k.current.cancel(), x(!1));
     }, [R]);
     let j = i.useCallback(() => {
-            (M.current.cancel(), x(!0));
+            (k.current.cancel(), x(!0));
         }, []),
         U = i.useCallback(() => {
-            M.current.delay();
+            k.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
@@ -199,17 +199,17 @@ function L(e) {
             },
             [U, j]
         );
-    if (0 === k.length) return null;
+    if (0 === M.length) return null;
     if (b)
         return (0, r.jsx)(w, {
             maxVisibleUsers: T,
-            users: k,
+            users: M,
             guildId: a,
             channelId: t,
             className: h,
             participantType: s.type
         });
-    let B = l()(k)
+    let B = l()(M)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
@@ -225,12 +225,12 @@ function L(e) {
         )
         .value();
     return (
-        k.length > T &&
+        M.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 'div',
                 {
                     className: I.overflow,
-                    children: ['+', k.length - T + 1]
+                    children: ['+', M.length - T + 1]
                 },
                 'overflow'
             )),
@@ -247,7 +247,7 @@ function L(e) {
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: k,
+                            users: M,
                             disableInteraction: v
                         }),
                     shouldShow: L && !R,

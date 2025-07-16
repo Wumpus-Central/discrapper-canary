@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(73800),
     o = n(442837),
-    i = n(359013),
-    a = n(120421),
+    a = n(359013),
+    i = n(120421),
     c = n(284539),
     l = n(3072),
     u = n(401258),
@@ -17,28 +17,28 @@ let b = n(288874),
 function h(e) {
     var t;
     let { isPaused: n } = e,
-        h = (0, o.e7)([a.Z], () => a.Z.getNumPurchasesForItemUpgrade(d.yN.SUN, d.uv.SUN_RAISE)),
-        x = i.Mq[d.yN.SUN],
+        h = (0, o.e7)([i.Z], () => i.Z.getNumPurchasesForItemUpgrade(d.yN.SUN, d.uv.SUN_RAISE)),
+        x = a.Mq[d.yN.SUN],
         v = (0, s.useMemo)(() => x.getPoints(h), [h, x]),
         O = (0, l.eR)(b),
         [j, N] = (0, c.Z)(d.yN.SUN),
-        _ = null != (t = j.lastPlayedSunRiseSound) ? t : 0,
-        P = h * y,
-        w = 120 + 16 * h,
-        C = -w / 5;
+        P = null != (t = j.lastPlayedSunRiseSound) ? t : 0,
+        _ = h * y,
+        C = 120 + 16 * h,
+        Z = -C / 5;
     return (
         (0, s.useEffect)(() => {
-            h > _ && (O(), N({ lastPlayedSunRiseSound: h }));
-        }, [O, h, _, N]),
+            h > P && (O(), N({ lastPlayedSunRiseSound: h }));
+        }, [O, h, P, N]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('img', {
                     className: m.sun,
                     style: {
-                        bottom: 'calc('.concat(P, '% - ').concat(w / 2, 'px)'),
-                        right: C,
-                        width: w,
-                        height: w
+                        bottom: 'calc('.concat(_, '% - ').concat(C / 2, 'px)'),
+                        right: Z,
+                        width: C,
+                        height: C
                     },
                     src: g,
                     alt: p.intl.string(f.default.JTkCcX)

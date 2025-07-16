@@ -8,17 +8,17 @@ var i = n(442837),
     s = n(388032),
     c = n(558803);
 let u = (e) => {
-    let { guildId: t, channelId: n, color: u, look: d, onAction: f } = e,
-        p = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
+    let { guildId: t, channelId: n, color: u, look: d, onAction: p } = e,
+        f = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
     return (0, r.jsx)(
         o.Z,
         {
             className: c.button,
             color: u,
             look: d,
-            disabled: p,
+            disabled: f,
             onClick: () => {
-                (null == f || f(), l.AC(t, n));
+                (null == p || p(), l.AC(t, n));
             },
             fullWidth: !0,
             children: s.intl.string(s.t.ZYO5OD)

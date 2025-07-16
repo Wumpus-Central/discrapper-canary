@@ -1,7 +1,7 @@
 (n.d(t, {
     default: () => j,
-    h: () => k,
-    j: () => M
+    h: () => M,
+    j: () => k
 }),
     n(388685));
 var r = n(255367),
@@ -90,11 +90,11 @@ function L(e) {
                                 onClose: p
                             })
                           : L
-                            ? (0, r.jsx)(M, {
+                            ? (0, r.jsx)(k, {
                                   duration: (0, T.kb)(null != (u = null == (n = C.entitlements) ? void 0 : n.items) ? u : []),
                                   onClose: p
                               })
-                            : (0, r.jsx)(k, {
+                            : (0, r.jsx)(M, {
                                   duration: (0, T.kb)(null != (d = null == (a = C.entitlements) ? void 0 : a.items) ? d : []),
                                   onClose: p
                               })
@@ -148,7 +148,7 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { duration: t, onClose: n } = e,
         { theme: a } = (0, c.TCT)(),
         o = (0, p.Z)({ forceFetch: !0 }),
@@ -215,7 +215,7 @@ function M(e) {
               ]
           });
 }
-function k(e) {
+function M(e) {
     let { duration: t, onClose: n } = e,
         a = (0, p.Z)({ forceFetch: !0 }),
         s = (0, f.ZP)(),

@@ -5,6 +5,6 @@ e.exports = {
     closeButton: 'closeButton_bc0d35',
     image: 'image_bc0d35',
     heading: 'heading_bc0d35',
-    tip: 'tip_bc0d35',
-    checkItOut: 'checkItOut_bc0d35'
+    description: 'description_bc0d35',
+    tip: 'tip_bc0d35'
 };

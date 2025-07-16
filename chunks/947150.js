@@ -12,7 +12,7 @@ function u(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         u = (0, o.zX)({ location: 'useInputAudioDeviceItems' }),
         d = (0, i.e7)([s.Z], s.Z.getInputDeviceId),
-        f =
+        p =
             null ==
             (t = u.find((e) => {
                 let { id: t } = e;
@@ -20,7 +20,7 @@ function u(e) {
             }))
                 ? void 0
                 : t.name,
-        p = u.map((t) => {
+        f = u.map((t) => {
             let { id: n, disabled: i, name: o } = t;
             return (0, r.jsx)(
                 l.k5B,
@@ -39,11 +39,11 @@ function u(e) {
         ? (0, r.jsx)(l.sNh, {
               id: 'input-devices',
               label: c.intl.string(c.t.ElbIXF),
-              subtext: f,
-              children: p
+              subtext: p,
+              children: f
           })
         : (0, r.jsx)(l.kSQ, {
               label: c.intl.string(c.t.ElbIXF),
-              children: p
+              children: f
           });
 }

@@ -70,7 +70,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function M(e, t) {
         e
     );
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -119,7 +119,7 @@ let U = new d.Z('ConnectionStore'),
                     null == i
                         ? void 0
                         : i.merge(
-                              M(L({}, r), {
+                              k(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
@@ -675,7 +675,7 @@ function J(e) {
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = k(e, ['newly_created']);
+                r = M(e, ['newly_created']);
             z({
                 type: t,
                 isNewlyCreated: n,
@@ -1202,6 +1202,22 @@ function J(e) {
                 name: ''
             },
             reactionType: _.O.VOTE
+        });
+    }),
+    H(['MESSAGE_POLL_VOTE_ADD_MANY'], (e) => {
+        z({
+            type: 'MESSAGE_REACTION_ADD_MANY',
+            channelId: e.channel_id,
+            messageId: e.message_id,
+            reactions: e.votes.map((e) =>
+                k(L({}, e), {
+                    emoji: {
+                        id: e.answer_id,
+                        name: ''
+                    },
+                    reactionType: _.O.VOTE
+                })
+            )
         });
     }),
     H(['MESSAGE_REACTION_REMOVE_ALL'], (e) => {

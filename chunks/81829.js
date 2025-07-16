@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367),
     s = n(120356),
     o = n.n(s),
-    i = n(71347),
-    a = n(481060),
+    a = n(71347),
+    i = n(481060),
     c = n(763283),
     l = n(603571),
     u = n(388032),
@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(225893);
 function p(e) {
     let { id: t, points: n, onFinished: s } = e,
-        o = (0, a.q_F)({
+        o = (0, i.q_F)({
             from: {
                 x: 0,
                 y: 0,
@@ -28,7 +28,7 @@ function p(e) {
             },
             onRest: () => s(t)
         });
-    return (0, r.jsxs)(i.animated.div, {
+    return (0, r.jsxs)(a.animated.div, {
         className: d.point,
         style: o,
         children: [
@@ -52,10 +52,10 @@ function m(e) {
             x: 0,
             y: 0
         },
-        fullWidth: i = !0
+        fullWidth: a = !0
     } = e;
     return (0, r.jsx)('div', {
-        className: o()(d.pointsAnimation, { [d.fullWidth]: i }),
+        className: o()(d.pointsAnimation, { [d.fullWidth]: a }),
         style: {
             left: s.x,
             top: s.y

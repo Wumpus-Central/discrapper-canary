@@ -315,8 +315,8 @@ function x(e, t) {
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     }));
-var M = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
-function k(e, t) {
+var k = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
+function M(e, t) {
     if (!e) {
         var n = Error('Promise was rejected with a falsy value');
         ((n.reason = e), (e = n));
@@ -325,11 +325,11 @@ function k(e, t) {
 }
 ((t.promisify = function (e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
-    if (M && e[M]) {
-        var t = e[M];
+    if (k && e[k]) {
+        var t = e[k];
         if ('function' != typeof t) throw TypeError('The "util.promisify.custom" argument must be of type Function');
         return (
-            Object.defineProperty(t, M, {
+            Object.defineProperty(t, k, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -363,8 +363,8 @@ function k(e, t) {
     }
     return (
         Object.setPrototypeOf(t, Object.getPrototypeOf(e)),
-        M &&
-            Object.defineProperty(t, M, {
+        k &&
+            Object.defineProperty(t, k, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -373,7 +373,7 @@ function k(e, t) {
         Object.defineProperties(t, i(e))
     );
 }),
-    (t.promisify.custom = M),
+    (t.promisify.custom = k),
     (t.callbackify = function (e) {
         if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
         function t() {
@@ -389,7 +389,7 @@ function k(e, t) {
                     r.nextTick(o.bind(null, null, e));
                 },
                 function (e) {
-                    r.nextTick(k.bind(null, e, o));
+                    r.nextTick(M.bind(null, e, o));
                 }
             );
         }

@@ -34,7 +34,7 @@ function L() {
     (N.stop(), null != r && (u.Z.removeSink(r, A), (r = null)));
 }
 let x = s().debounce((e, t, n, r) => {
-    k(
+    M(
         e,
         (0, y.V9)({
             streamType: null != t ? O.lo.GUILD : O.lo.CALL,
@@ -44,7 +44,7 @@ let x = s().debounce((e, t, n, r) => {
         })
     );
 }, 500);
-function M(e) {
+function k(e) {
     let t = Math.min(P / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
@@ -60,13 +60,13 @@ function M(e) {
         })
     );
 }
-async function k(e, t) {
+async function M(e, t) {
     if (r !== e || ((0, E.isWeb)() && h.I0.getSetting()) || m.Z.getIsActiveStreamPreviewDisabled(t)) return;
-    let n = () => k(e, t);
+    let n = () => M(e, t);
     if (!C)
         try {
             let n = await j(e, 60);
-            await M(n);
+            await k(n);
             let r = R.toDataURL('image/jpeg');
             if (
                 (_.Z.dispatch({

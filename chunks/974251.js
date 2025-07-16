@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(193910),
     M = n(951211),
     D = n(981631),
-    k = n(356659),
-    L = n(921944),
+    L = n(356659),
+    k = n(921944),
     U = n(388032),
     B = n(911777);
 function F(e) {
@@ -93,7 +93,7 @@ let G = i.memo(function (e) {
         en = (0, o.e7)([E.ZP], () => null == E.ZP.getCurrentSidebarChannelId(V.id)),
         { showClipsHeaderEntrypoint: er } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         ei = (0, o.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        el = (0, u.s9z)((e) => (0, u.DEQ)(e, k.Qr)),
+        el = (0, u.s9z)((e) => (0, u.DEQ)(e, L.Qr)),
         ea = (0, o.e7)([S.Z], () => S.Z.hasLayers()),
         eo = (0, o.e7)([b.Z], () => b.Z.hasClips()),
         [es, ec] = i.useState(null),
@@ -118,7 +118,7 @@ let G = i.memo(function (e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('72739')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, H(F({}, t), { channelId: V.id }));
             },
-            { modalKey: k.Qr }
+            { modalKey: L.Qr }
         ),
             ec(null));
     }
@@ -177,10 +177,10 @@ let G = i.memo(function (e) {
             position: 'top',
             positionKey: null != es ? es : 'null',
             onRequestOpen: () => {
-                (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), ec('attachMenu'));
+                (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: k.L.TAKE_ACTION }), ec('attachMenu'));
             },
             onRequestClose: () => {
-                (0, u.$sL)() || (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), ec(null));
+                (0, u.$sL)() || (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), ec(null));
             },
             renderPopout: (e) => {
                 switch (es) {

@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(73800),
     o = n(392711),
-    i = n(772848),
-    a = n(755721),
+    a = n(772848),
+    i = n(755721),
     c = n(481060),
     l = n(377171),
     u = n(668826),
@@ -100,7 +100,7 @@ function O(e) {
             x: 0,
             y: 0
         }),
-        _ = (e, t) => {
+        P = (e, t) => {
             var n, r;
             (N({
                 x: e.clientX,
@@ -108,7 +108,7 @@ function O(e) {
             }),
                 O(
                     ((n = x({}, y)),
-                    (r = r = { [(0, i.Z)()]: t }),
+                    (r = r = { [(0, a.Z)()]: t }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -144,23 +144,23 @@ function O(e) {
                             null == l ? void 0 : l.title,
                             (null == l ? void 0 : l.primaryButtonCTA) != null &&
                                 (0, r.jsx)(f.Z, {
-                                    size: a.zx.Sizes.TINY,
-                                    look: a.zx.Looks.OUTLINED,
-                                    color: a.zx.Colors.WHITE,
+                                    size: i.zx.Sizes.TINY,
+                                    look: i.zx.Looks.OUTLINED,
+                                    color: i.zx.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
-                                        (_(t, l.primaryButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
+                                        (P(t, l.primaryButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
                                     },
                                     children: l.primaryButtonCTA
                                 }),
                             (null == l ? void 0 : l.secondaryButtonCTA) != null &&
                                 (0, r.jsx)(f.Z, {
-                                    size: a.zx.Sizes.TINY,
-                                    look: a.zx.Looks.OUTLINED,
-                                    color: a.zx.Colors.WHITE,
+                                    size: i.zx.Sizes.TINY,
+                                    look: i.zx.Looks.OUTLINED,
+                                    color: i.zx.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
-                                        (_(t, l.secondaryButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
+                                        (P(t, l.secondaryButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
                                     },
                                     children: l.secondaryButtonCTA
                                 }),
@@ -170,7 +170,7 @@ function O(e) {
                                     focusProps: { offset: 6 },
                                     onClick: (t) => {
                                         var r;
-                                        (_(t, l.closeButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
+                                        (P(t, l.closeButtonPoints), null == (r = n.current) || r.removeDrop(e), b((0, o.sample)(v())));
                                     },
                                     children: (0, r.jsx)(c.Dio, {
                                         size: 'md',

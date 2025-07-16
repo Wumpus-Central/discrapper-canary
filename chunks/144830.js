@@ -35,8 +35,8 @@ function d(e) {
     }
     return e;
 }
-var f = (((r = f || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), r),
-    p = (((i = p || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
+var p = (((r = p || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), r),
+    f = (((i = f || {}).START = 'START'), (i.END = 'END'), (i.TIME = 'TIME'), i);
 let m = (e) => (t, n) => (null == n ? '' : c.intl.format(e(), d({ time: t }, n))),
     g = {
         ACTIVITY_FEED: {
@@ -171,17 +171,17 @@ function _(e) {
                         return i;
                     })(r, ['location', 'messageProps', 'isApplicationStreaming']),
                     { time: u } = this.state,
-                    f = this.getType();
-                if (null == f) return null;
-                let p = this.getTimeUnit(u, i, f),
-                    m = g[i][f];
+                    p = this.getType();
+                if (null == p) return null;
+                let f = this.getTimeUnit(u, i, p),
+                    m = g[i][p];
                 if (null == m) return null;
-                let _ = m[p],
-                    b = Math.floor((0, o.A3)(u, p));
+                let _ = m[f],
+                    v = Math.floor((0, o.A3)(u, f));
                 return (0, l.jsx)(
                     e,
                     ((t = d({}, c)),
-                    (n = n = { children: null == _ ? void 0 : _(b, a, s) }),
+                    (n = n = { children: null == _ ? void 0 : _(v, a, s) }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -206,8 +206,8 @@ function _(e) {
                     }));
             }
         }),
-        u(n, 'Locations', f),
-        u(n, 'Types', p),
+        u(n, 'Locations', p),
+        u(n, 'Types', f),
         n
     );
 }

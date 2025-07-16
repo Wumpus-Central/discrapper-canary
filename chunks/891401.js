@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => O }), a(49124));
+(a.d(t, { Z: () => N }), a(49124));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -61,13 +61,13 @@ function C(e, t) {
         e
     );
 }
-function O() {
+function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(N, {}), (0, n.jsx)(T, {})]
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(T, {})]
     });
 }
-function N() {
+function O() {
     var e, t;
     let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
         l = (0, b.Z)(a),
@@ -85,13 +85,13 @@ function N() {
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        O = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 P(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        N = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
@@ -230,7 +230,7 @@ function N() {
                                     {
                                         type: 'color',
                                         value: d.secondary_color,
-                                        onChange: O
+                                        onChange: N
                                     },
                                     'secondaryColor-'.concat(d.secondary_color)
                                 ),
@@ -300,7 +300,7 @@ function N() {
                                     {
                                         type: 'color',
                                         value: d.link_color,
-                                        onChange: N
+                                        onChange: O
                                     },
                                     'linkColor-'.concat(d.link_color)
                                 ),

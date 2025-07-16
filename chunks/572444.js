@@ -91,8 +91,8 @@ function y() {
         s = (0, c.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
         [g, y] = r.useState(null),
         C = r.useRef(null),
-        O = r.useRef(null),
-        [N, T] = r.useState(0.5),
+        N = r.useRef(null),
+        [O, T] = r.useState(0.5),
         {
             krispModels: E,
             krispModelOverride: S,
@@ -106,7 +106,7 @@ function y() {
             noiseSuppression: D,
             noiseSuppressionSupported: L,
             noiseCancellationSupported: M,
-            noiseCancellationEnableStats: B
+            noiseCancellationEnableStats: F
         } = (0, c.cj)([h.Z], () => ({
             krispModels: h.Z.getKrispModels(),
             krispModelOverride: h.Z.getKrispModelOverride(),
@@ -122,7 +122,7 @@ function y() {
             noiseCancellationSupported: h.Z.isNoiseCancellationSupported(),
             noiseCancellationEnableStats: h.Z.getKrispEnableStats()
         })),
-        F = A ? 'KRISP' : D ? 'STANDARD' : 'NONE',
+        B = A ? 'KRISP' : D ? 'STANDARD' : 'NONE',
         z = (0, x.N)(),
         U = r.useCallback(() => {
             var e;
@@ -134,7 +134,7 @@ function y() {
     function V(e) {
         if ((t && G(), U(), null == z)) return;
         let a = z.createBufferSource();
-        ((a.buffer = e.audioBuffer), (O.current = z.createGain()), (O.current.gain.value = N), a.connect(O.current), O.current.connect(z.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
+        ((a.buffer = e.audioBuffer), (N.current = z.createGain()), (N.current.gain.value = O), a.connect(N.current), N.current.connect(z.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
     }
     r.useEffect(() => {
         U();
@@ -184,7 +184,7 @@ function y() {
                         title: 'Noise Cancellation',
                         tag: u.RB0.H3,
                         children: (0, n.jsx)(u.q4e, {
-                            value: F,
+                            value: B,
                             onChange: (e) => {
                                 (m.Z.setNoiseCancellation('KRISP' === e), m.Z.setNoiseSuppression('STANDARD' === e));
                             },
@@ -192,7 +192,7 @@ function y() {
                             popoutLayerContext: b.O$
                         })
                     }),
-                    'KRISP' === F &&
+                    'KRISP' === B &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(u.hjN, {
@@ -229,7 +229,7 @@ function y() {
                                     title: 'Noise Cancellation Stats',
                                     tag: u.RB0.H3,
                                     children: (0, n.jsx)(u.j7V, {
-                                        value: B,
+                                        value: F,
                                         onChange: (e) => m.Z.setNoiseCancellationEnableStats(e),
                                         children: 'Enable Stats'
                                     })
@@ -328,7 +328,7 @@ function y() {
                                                       inputName: d,
                                                       audioBuffer: c,
                                                       createdAt: Date.now(),
-                                                      suppression: F,
+                                                      suppression: B,
                                                       echoCancellation: I,
                                                       krispSuppressionLevel: s
                                                   }
@@ -342,9 +342,9 @@ function y() {
                         title: 'Volume',
                         tag: u.RB0.H3,
                         children: (0, n.jsx)(u.iRW, {
-                            initialValue: N,
+                            initialValue: O,
                             asValueChanges: function (e) {
-                                null != O.current && ((O.current.gain.value = e), T(e));
+                                null != N.current && ((N.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1

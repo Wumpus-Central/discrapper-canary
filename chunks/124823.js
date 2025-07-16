@@ -59,8 +59,8 @@ function w(e) {
         R = (0, g.ZP)(t.id),
         M = (0, s.ZP)(),
         D = i.useRef(Date.now()),
-        { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        L = (0, f.ZB)({
+        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        k = (0, f.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
@@ -71,18 +71,18 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: k,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0
                     },
-                    L,
+                    k,
                     e
                 )
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: k,
+        value: L,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
+            value: k,
             openedAt: D.current,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
@@ -166,9 +166,9 @@ function w(e) {
                                             A(
                                                 {
                                                     action: 'PRESS_VIEW_PROFILE',
-                                                    analyticsLocations: k
+                                                    analyticsLocations: L
                                                 },
-                                                L
+                                                k
                                             )
                                         ));
                                 },

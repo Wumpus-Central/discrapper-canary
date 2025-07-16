@@ -21,9 +21,9 @@ var l = t(255367),
     v = t(6025),
     y = t(592125),
     O = t(703558),
-    I = t(731290),
+    Z = t(731290),
     N = t(430824),
-    Z = t(375954),
+    I = t(375954),
     w = t(594174),
     P = t(933557),
     E = t(287746),
@@ -78,10 +78,10 @@ function R(e) {
         M = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
         H = (0, i.e7)([N.Z], () => N.Z.getGuild(null == M ? void 0 : M.getGuildId())),
         U = (0, i.e7)([w.default], () => w.default.getCurrentUser()),
-        G = (0, i.e7)([I.Z], () => I.Z.didAgree(null == M ? void 0 : M.guild_id)),
+        G = (0, i.e7)([Z.Z], () => Z.Z.didAgree(null == M ? void 0 : M.guild_id)),
         W = (null == U ? void 0 : U.nsfwAllowed) === !0,
-        z = (0, P.ZP)(M),
-        F = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
+        F = (0, P.ZP)(M),
+        z = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
         q = (0, g.Z)(n),
         X = (0, i.e7)([f.Z], () => {
             var e;
@@ -96,7 +96,7 @@ function R(e) {
     )
         return null;
     let J = [];
-    return (F || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
+    return (z || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
     J.push(
         (0, l.jsx)(
             x.ZP.Icon,
@@ -120,7 +120,7 @@ function R(e) {
                       'aria-label': T.intl.string(T.t.BIYAqa),
                       children: (0, C.ud)({
                           channel: M,
-                          channelName: q ? X : z,
+                          channelName: q ? X : F,
                           guild: H,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
@@ -137,7 +137,7 @@ function R(e) {
                               });
                           },
                           handleClick: () => {
-                              let e = Z.Z.getMessages(M.id);
+                              let e = I.Z.getMessages(M.id);
                               if (L) {
                                   ((0, b.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null));
                                   return;

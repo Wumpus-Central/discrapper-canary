@@ -19,7 +19,7 @@ e.exports = {
     channelName: 'channelName_e4503a',
     topic: 'topic_e4503a',
     separator: 'separator_e4503a',
-    viewChannelButton: 'viewChannelButton_e4503a',
+    viewChannelButtonWrapper: 'viewChannelButtonWrapper_e4503a',
     checkboxInner: 'checkboxInner_e4503a',
     scrollerInner: 'scrollerInner_e4503a'
 };

@@ -8,5 +8,5 @@ n.exports = {
     channel: 'channel_f08fc1',
     channelIcon: 'channelIcon_f08fc1',
     channelName: 'channelName_f08fc1',
-    button: 'button_f08fc1'
+    buttons: 'buttons_f08fc1'
 };

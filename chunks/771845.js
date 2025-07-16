@@ -173,14 +173,14 @@ function x(e) {
     let o = 'string' == typeof n ? new Date(n) : n;
     return o !== a.joinedAt && null != o && C();
 }
-function M(e) {
+function k(e) {
     let { folderId: t } = e,
         n = T.getNode(t),
         r = p.Z.isFolderExpanded(t);
     if (null == n || n.type !== c.eD.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
-function k(e) {
+function M(e) {
     let { folderId: t, expanded: n } = e,
         r = T.getNode(t);
     if (null == r || r.type !== c.eD.FOLDER || r.expanded === n) return !1;
@@ -252,8 +252,8 @@ class Z extends E.Z {
             GUILD_FOLDER_CREATE_LOCAL: w,
             GUILD_FOLDER_EDIT_LOCAL: D,
             GUILD_FOLDER_DELETE_LOCAL: L,
-            TOGGLE_GUILD_FOLDER_EXPAND: M,
-            SET_GUILD_FOLDER_EXPANDED: k,
+            TOGGLE_GUILD_FOLDER_EXPAND: k,
+            SET_GUILD_FOLDER_EXPANDED: M,
             GUILD_FOLDER_COLLAPSE: j
         }),
             O(this, 'loadCache', () => {

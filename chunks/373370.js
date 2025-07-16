@@ -1,7 +1,7 @@
 (n.d(t, {
-    CR: () => M,
+    CR: () => k,
     DD: () => D,
-    up: () => k
+    up: () => M
 }),
     n(953529),
     n(388685));
@@ -296,7 +296,7 @@ function L(e) {
 function x(e) {
     return r.useMemo(() => L(e), [e]);
 }
-function M(e) {
+function k(e) {
     let { quest: t } = e;
     switch (x(t)) {
         case 0:
@@ -308,7 +308,7 @@ function M(e) {
             return t.config.features.includes(_.S7.START_QUEST_CTA) ? h.intl.string(h.t.ToGcxM) : h.intl.string(h.t.l7E81t);
     }
 }
-function k(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (0, c.f)({
         location: e,

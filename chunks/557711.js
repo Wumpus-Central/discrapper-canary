@@ -9,17 +9,17 @@ var i = n(120356),
     c = n(829820),
     u = n(862863);
 function d(e) {
-    let { activity: t, user: n, channelId: i, guildId: d, source: f, size: p, look: m, color: g, className: _, onAction: b } = e,
-        { tooltip: h, loading: v, disabled: y, onClick: O } = (0, c.Fe)(t, n, f, s.ZP.getNickname(d, i, n)),
+    let { activity: t, user: n, channelId: i, guildId: d, source: p, size: f, look: m, color: g, className: _, onAction: v } = e,
+        { tooltip: b, loading: h, disabled: y, onClick: O } = (0, c.Fe)(t, n, p, s.ZP.getNickname(d, i, n)),
         j = () => {
-            (null == b || b(), O());
+            (null == v || v(), O());
         };
     return (0, r.jsx)(o.ua7, {
-        text: h,
+        text: b,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
             return (0, r.jsx)(a.zx, {
-                size: p,
+                size: f,
                 className: l()(u.syncButton, _),
                 innerClassName: u.syncButtonInner,
                 look: m,
@@ -28,8 +28,8 @@ function d(e) {
                 onMouseEnter: n,
                 onMouseLeave: i,
                 disabled: y,
-                submitting: v,
-                'aria-label': null != h ? h : t.name,
+                submitting: h,
+                'aria-label': null != b ? b : t.name,
                 children: (0, r.jsx)(o.iOO, {
                     size: 'xs',
                     color: 'currentColor'

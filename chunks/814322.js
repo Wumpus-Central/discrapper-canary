@@ -1,9 +1,9 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => w });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    i = n.n(o),
-    a = n(442837),
+    a = n.n(o),
+    i = n(442837),
     c = n(393238),
     l = n(522474),
     u = n(451478),
@@ -20,28 +20,28 @@ var r = n(255367),
     O = n(423915),
     j = n(477839),
     N = n(981631),
-    _ = n(412190);
-function P() {
-    let e = Math.floor((0, a.e7)([p.Z], () => p.Z.currentPoints)),
+    P = n(412190);
+function _() {
+    let e = Math.floor((0, i.e7)([p.Z], () => p.Z.currentPoints)),
         t = e.toString().length,
         n = '0'.repeat(Math.max(0, j.eg - t));
     return (0, r.jsxs)('div', {
-        className: _.points,
+        className: P.points,
         children: [
             (0, r.jsx)('span', {
-                className: _.pointsPadding,
+                className: P.pointsPadding,
                 children: n
             }),
             (0, r.jsx)('span', {
-                className: _.pointsValue,
+                className: P.pointsValue,
                 children: e
             })
         ]
     });
 }
-function w(e) {
-    let { items: t, width: n, height: s, isPaused: o, windowKey: i } = e,
-        c = (0, a.e7)([p.Z], () => p.Z.purchasedItems);
+function C(e) {
+    let { items: t, width: n, height: s, isPaused: o, windowKey: a } = e,
+        c = (0, i.e7)([p.Z], () => p.Z.purchasedItems);
     return null == s || null == n
         ? null
         : (0, r.jsx)(r.Fragment, {
@@ -54,107 +54,107 @@ function w(e) {
                           isPaused: o,
                           width: n,
                           height: s,
-                          windowKey: i
+                          windowKey: a
                       },
                       e
                   );
               })
           });
 }
-function C() {
+function Z() {
     return ((0, m.f)(), (0, g.Z)(), null);
 }
-function Z(e) {
+function w(e) {
     let { className: t, windowKey: n } = e,
         { ref: o, width: m, height: g } = (0, c.ZP)(),
-        { ref: j, height: Z } = (0, c.ZP)(),
-        S = (0, a.e7)([p.Z], () => p.Z.lifetimePoints > 0),
-        I = (0, a.e7)([u.Z, l.Z], () => {
+        { ref: j, height: w } = (0, c.ZP)(),
+        E = (0, i.e7)([p.Z], () => p.Z.lifetimePoints > 0),
+        S = (0, i.e7)([u.Z, l.Z], () => {
             let e = l.Z.getWindow(n);
             return null == e || !u.Z.isFocused((0, f.ZY)(e));
         });
     return (
         (0, s.useEffect)(() => {
-            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: S ? 'CONTINUE' : 'NEW' });
+            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? 'CONTINUE' : 'NEW' });
         }, []),
         (0, r.jsxs)('div', {
             ref: o,
-            className: i()(t, _.container),
+            className: a()(t, P.container),
             children: [
                 (0, r.jsx)('div', {
-                    className: _.fullscreenItems,
-                    children: (0, r.jsx)(w, {
+                    className: P.fullscreenItems,
+                    children: (0, r.jsx)(C, {
                         items: b.nw,
                         width: m,
                         height: g,
-                        isPaused: I,
+                        isPaused: S,
                         windowKey: n
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: _.aboveGround,
+                    className: P.aboveGround,
                     children: [
                         (0, r.jsx)('div', {
-                            className: _.fullscreenItems,
-                            children: (0, r.jsx)(w, {
+                            className: P.fullscreenItems,
+                            children: (0, r.jsx)(C, {
                                 items: b.uK,
                                 width: m,
                                 height: g,
-                                isPaused: I,
+                                isPaused: S,
                                 windowKey: n
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: _.buttonAndPoints,
+                            className: P.buttonAndPoints,
                             children: [
-                                (0, r.jsx)(w, {
+                                (0, r.jsx)(C, {
                                     items: b.rQ,
                                     width: m,
                                     height: g,
-                                    isPaused: I,
+                                    isPaused: S,
                                     windowKey: n
                                 }),
-                                (0, r.jsx)(P, {}),
+                                (0, r.jsx)(_, {}),
                                 (0, r.jsx)('div', {
-                                    className: _.pointsItems,
-                                    children: (0, r.jsx)(w, {
+                                    className: P.pointsItems,
+                                    children: (0, r.jsx)(C, {
                                         items: b.ci,
                                         width: m,
                                         height: g,
-                                        isPaused: I,
+                                        isPaused: S,
                                         windowKey: n
                                     })
                                 })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: _.fullscreenItems,
+                            className: P.fullscreenItems,
                             ref: j,
-                            children: (0, r.jsx)(w, {
+                            children: (0, r.jsx)(C, {
                                 items: b.Ou,
                                 width: m,
-                                height: Z,
-                                isPaused: I,
+                                height: w,
+                                isPaused: S,
                                 windowKey: n
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)('div', { className: _.groundLine }),
+                (0, r.jsx)('div', { className: P.groundLine }),
                 (0, r.jsxs)('div', {
-                    className: _.mainInteractables,
+                    className: P.mainInteractables,
                     children: [
-                        (0, r.jsx)(x.Z, { className: _.primaryShop }),
+                        (0, r.jsx)(x.Z, { className: P.primaryShop }),
                         (0, r.jsxs)(y.Z, {
-                            className: _.toolbar,
+                            className: P.toolbar,
                             children: [
                                 (0, r.jsx)(v.Z, {}),
-                                (0, r.jsx)('div', { className: _.toolbarSpacer }),
-                                (0, r.jsx)(w, {
+                                (0, r.jsx)('div', { className: P.toolbarSpacer }),
+                                (0, r.jsx)(C, {
                                     items: b.WY,
                                     width: m,
                                     height: g,
-                                    isPaused: I,
+                                    isPaused: S,
                                     windowKey: n
                                 })
                             ]
@@ -162,19 +162,19 @@ function Z(e) {
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: _.fullscreenItems,
+                    className: P.fullscreenItems,
                     children: [
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(C, {
                             items: b.wT,
                             width: m,
                             height: g,
-                            isPaused: I,
+                            isPaused: S,
                             windowKey: n
                         }),
                         (0, r.jsx)(O.Z, {})
                     ]
                 }),
-                (0, r.jsx)(C, {}),
+                (0, r.jsx)(Z, {}),
                 (0, r.jsx)(h.Z, {})
             ]
         })

@@ -45,7 +45,7 @@ let x = () =>
                 ]
             })
         }),
-    M = (e) => {
+    k = (e) => {
         let { markAsDismissed: t } = e,
             n = (0, N.q)(),
             i = () => {
@@ -70,7 +70,7 @@ let x = () =>
             ]
         });
     },
-    k = (e) => {
+    M = (e) => {
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: o } = e,
             { analyticsLocations: s } = (0, g.ZP)(m.Z.CLIENT_THEMES_EDITOR),
@@ -122,7 +122,7 @@ let x = () =>
             className: L.editorFooter,
             children: [
                 a &&
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(M, {
                         onSubscribeSuccess: () => {
                             c(!0);
                         },
@@ -169,7 +169,7 @@ function U(e) {
                 className: o()(L.themeEditor, c ? L.editorAnimate : null),
                 children: (0, r.jsxs)(d.y5t, {
                     children: [
-                        n ? (0, r.jsx)(x, {}) : (0, r.jsx)(M, { markAsDismissed: t }),
+                        n ? (0, r.jsx)(x, {}) : (0, r.jsx)(k, { markAsDismissed: t }),
                         (0, r.jsx)(d.Ttm, {
                             className: L.editorBody,
                             children: (0, r.jsxs)(C.ZP, {

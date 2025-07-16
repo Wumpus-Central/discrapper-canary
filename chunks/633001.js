@@ -20,8 +20,8 @@ var n = a(255367),
     _ = a(355863),
     y = a(449224),
     C = a(808506),
-    O = a(572004),
-    N = a(70956),
+    N = a(572004),
+    O = a(70956),
     T = a(145597),
     E = a(246992),
     S = a(981631),
@@ -138,14 +138,14 @@ function M(e) {
             color: c.zx.Colors.LINK,
             size: c.zx.Sizes.MIN,
             onClick: function () {
-                (0, O.JG)(t, () => l(!0));
+                (0, N.JG)(t, () => l(!0));
             },
             className: I.copyId,
             children: ['Application Id: ', t, ' ', a ? w.intl.string(w.t['t5VZ8/']) : null]
         })
     );
 }
-let B = r.memo(function (e) {
+let F = r.memo(function (e) {
         let { trackedGame: t } = e,
             a = (0, o.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
             r = (0, o.e7)([y.Z], () => y.Z.getGameForPID(t.pid)),
@@ -273,7 +273,7 @@ let B = r.memo(function (e) {
             ]
         });
     }),
-    F = r.memo(function (e) {
+    B = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.cj)([C.default], () => C.default.getOverlayPIDStatuses()),
             r = (0, o.cj)([f.default], () => f.default.getTrackedGames()),
@@ -558,7 +558,7 @@ let H = r.memo(function (e) {
                                 k({}, e)
                             )
                         );
-                    }, +N.Z.Millis.SECOND)),
+                    }, +O.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 []
@@ -634,7 +634,7 @@ let H = r.memo(function (e) {
                         color: 'text-default',
                         children: 'No tracked game times'
                     }),
-                Object.values(a).map((e) => (0, n.jsx)(F, { pid: e.pid }, e.pid)),
+                Object.values(a).map((e) => (0, n.jsx)(B, { pid: e.pid }, e.pid)),
                 (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsxs)(d.Text, {
@@ -892,7 +892,7 @@ let H = r.memo(function (e) {
                                                 color: 'text-default',
                                                 children: 'No running games'
                                             }),
-                                        Object.values(e).map((e) => (0, n.jsx)(B, { trackedGame: e }, e.pid))
+                                        Object.values(e).map((e) => (0, n.jsx)(F, { trackedGame: e }, e.pid))
                                     ]
                                 })
                             })

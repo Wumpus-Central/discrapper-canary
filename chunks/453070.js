@@ -3,7 +3,7 @@
     LZ: () => D,
     Pq: () => v,
     RJ: () => P,
-    Sd: () => M,
+    Sd: () => k,
     XW: () => x,
     el: () => T,
     fP: () => A,
@@ -280,7 +280,7 @@ let L = (e) => {
             ? [e, s]
             : [null != n ? n : null, s];
     },
-    M = (e) => {
+    k = (e) => {
         let t = L(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

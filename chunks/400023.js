@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(47481),
     M = n(977391),
     D = n(959258),
-    k = n(73274),
-    L = n(419388),
+    L = n(73274),
+    k = n(419388),
     U = n(406534),
     B = n(981631),
     F = n(388032),
@@ -127,7 +127,7 @@ let W = i.memo(
                               }),
                     [x, P, p]
                 ),
-                X = (0, L.ZP)({
+                X = (0, k.ZP)({
                     messages: b,
                     channel: g,
                     compact: x,
@@ -139,7 +139,7 @@ let W = i.memo(
                     handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
                     additionalMessagePadding: 48 * !!W
                 }),
-                Q = (0, k.Z)({
+                Q = (0, L.Z)({
                     scrollerRef: X.ref,
                     isEditing: null != S,
                     keyboardModeEnabled: Z,
@@ -321,8 +321,8 @@ let W = i.memo(
             {
                 messageGroupSpacing: A,
                 fontSize: M,
-                messageDisplayCompact: k,
-                renderSpoilers: L,
+                messageDisplayCompact: L,
+                renderSpoilers: k,
                 keyboardModeEnabled: U
             } = (function () {
                 let e = v.jU.useSetting(),
@@ -412,7 +412,7 @@ let W = i.memo(
                 };
             })(t);
         return (0, r.jsx)(b.aQ.Provider, {
-            value: (0, w.Z)(L, h),
+            value: (0, w.Z)(k, h),
             children: (0, r.jsx)(D.v, {
                 children: (0, r.jsx)(
                     W,
@@ -420,7 +420,7 @@ let W = i.memo(
                         messageGroupSpacing: A,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !o && (a || k),
+                        messageDisplayCompact: !o && (a || L),
                         messages: F,
                         channelStream: H,
                         permissionVersion: C,

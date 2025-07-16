@@ -9,13 +9,13 @@ var i = n(442837),
     c = n(40851),
     u = n(102172),
     d = n(199902),
-    f = n(592125),
-    p = n(585483),
+    p = n(592125),
+    f = n(585483),
     m = n(915863),
     g = n(981631),
     _ = n(388032),
-    b = n(128746);
-function h(e) {
+    v = n(128746);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function h(e) {
     }
     return e;
 }
-function v(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function v(e, t) {
 }
 function y(e) {
     let { isCurrentUser: t, color: n, look: y, applicationStream: O, onAction: j } = e,
-        { activeStream: S, watchingOtherStream: x } = (0, i.cj)([d.Z], () => ({
+        { activeStream: x, watchingOtherStream: S } = (0, i.cj)([d.Z], () => ({
             activeStream: d.Z.getActiveStreamForApplicationStream(O),
             watchingOtherStream:
                 null != O &&
@@ -69,16 +69,16 @@ function y(e) {
                     return t !== O.ownerId;
                 }).length > 0
         })),
-        I = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
-        [C, P] = (0, u.wq)(I),
+        I = (0, i.e7)([p.Z], () => p.Z.getChannel(null == O ? void 0 : O.channelId)),
+        [P, C] = (0, u.wq)(I),
         E = (0, c.Aq)(),
-        w = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
-        T = (e) => {
-            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
+        w = null != x && null != O && x.state !== g.jm8.ENDED && x.ownerId === O.ownerId,
+        N = (e) => {
+            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == O) return null;
-    let N = (0, u.P9)(P);
-    t ? (N = _.intl.string(_.t.XvBdeX)) : w && (N = _.intl.string(_.t.JH1SJy));
+    let T = (0, u.P9)(C);
+    t ? (T = _.intl.string(_.t.XvBdeX)) : w && (T = _.intl.string(_.t.JH1SJy));
     let Z = {
         color: n,
         look: y
@@ -87,11 +87,11 @@ function y(e) {
         children: [
             (0, r.jsxs)(
                 m.Z,
-                v(
-                    h(
+                h(
+                    b(
                         {
-                            disabled: t || w || !C,
-                            onClick: () => T(!1)
+                            disabled: t || w || !P,
+                            onClick: () => N(!1)
                         },
                         Z
                     ),
@@ -101,37 +101,37 @@ function y(e) {
                             (0, r.jsx)(l.hGI, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: b.streamIcon
+                                className: v.streamIcon
                             }),
-                            N
+                            T
                         ]
                     }
                 ),
                 'play'
             ),
-            x && !w
+            S && !w
                 ? (0, r.jsx)(l.ua7, {
                       text: _.intl.string(_.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
-                              v(
-                                  h(
-                                      v(h({}, e), {
+                              h(
+                                  b(
+                                      h(b({}, e), {
                                           onClick: () => {
                                               var t;
-                                              (null == (t = e.onClick) || t.call(e), T(!0));
+                                              (null == (t = e.onClick) || t.call(e), N(!0));
                                           }
                                       }),
                                       Z
                                   ),
                                   {
-                                      className: b.iconButton,
-                                      size: b.iconButtonSize,
+                                      className: v.iconButton,
+                                      size: v.iconButtonSize,
                                       children: (0, r.jsx)(l.OgY, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: b.iconSize
+                                          className: v.iconSize
                                       })
                                   }
                               )

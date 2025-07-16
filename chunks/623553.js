@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(73800),
     o = n(668826),
-    i = n(18582),
-    a = n(3072),
+    a = n(18582),
+    i = n(3072),
     c = n(763283),
     l = n(892689),
     u = n(477839),
@@ -22,22 +22,22 @@ function x(e) {
         v = (0, s.useRef)(null),
         O = (0, s.useRef)(-1),
         [j, N] = (0, s.useState)(!1),
-        _ = (0, s.useRef)(h()),
-        P = (0, a.eR)(y),
-        w = (e) => {
-            var t;
-            (null == (t = v.current) || t.removeDrop(e), (_.current = h()), N(!1), clearTimeout(O.current));
-        },
+        P = (0, s.useRef)(h()),
+        _ = (0, i.eR)(y),
         C = (e) => {
+            var t;
+            (null == (t = v.current) || t.removeDrop(e), (P.current = h()), N(!1), clearTimeout(O.current));
+        },
+        Z = (e) => {
             (N(!0),
-                P(),
-                (0, o.KH)(u.yN.LOOTBOXES, _.current),
+                _(),
+                (0, o.KH)(u.yN.LOOTBOXES, P.current),
                 (O.current = setTimeout(() => {
-                    w(e);
+                    C(e);
                 }, 1000)));
         };
     (0, s.useEffect)(() => () => clearTimeout(O.current), []);
-    let Z = (e) =>
+    let w = (e) =>
         j
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -46,7 +46,7 @@ function x(e) {
                           children: [
                               (0, r.jsxs)(c.Z, {
                                   variant: 'text-lg/normal',
-                                  children: ['+', _.current]
+                                  children: ['+', P.current]
                               }),
                               (0, r.jsx)('img', {
                                   src: m,
@@ -62,8 +62,8 @@ function x(e) {
                       })
                   ]
               })
-            : (0, r.jsx)(i.Z, {
-                  onClick: () => C(e),
+            : (0, r.jsx)(a.Z, {
+                  onClick: () => Z(e),
                   children: (0, r.jsx)('img', {
                       src: g,
                       alt: f.intl.string(d.default.CwZfY2),
@@ -84,7 +84,7 @@ function x(e) {
         children: (e) =>
             (0, r.jsx)('div', {
                 className: p.lootbox,
-                children: Z(e)
+                children: w(e)
             })
     });
 }

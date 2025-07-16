@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => w }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     s = n(73800),
     o = n(71347),
-    i = n(442837),
-    a = n(481060),
+    a = n(442837),
+    i = n(481060),
     c = n(313201),
     l = n(668826),
     u = n(120421),
@@ -22,7 +22,7 @@ let O = n(450862),
 function N(e) {
     return 0 === e ? 0 : Math.floor(-((1000 * (1 - Math.pow(1.25, e))) / 0.25));
 }
-function _(e) {
+function P(e) {
     let { fill: t = !1, stroke: n = !1 } = e;
     return (0, r.jsx)('path', {
         stroke: n ? '#fff' : void 0,
@@ -32,10 +32,10 @@ function _(e) {
         d: 'M30.646 2.801c-6.131-.346-12.605-1.232-18.75-.55-.78.087-1.366.094-2.084.434-.68.323-2.099.535-2.488 1.158C6.3 5.48 4.381 6.596 3.157 8.125 2.592 8.833 2 12.716 2 13.74c0 2.983.639 2.47 3.24 3.24 8.881 2.632 18.235.926 27.373.926 7.838 0 15.634.27 23.438.521 25.652.828 51.238 2.084 76.968 2.084 13.726 0 27.377.52 41.087.52h41.436c9.814 0 19.365-1.041 29.166-1.041 10.655 0 21.458-.521 32.176-.521 19.826 0 39.571.626 59.317 2.199 5.641.45 13.403 1.38 19.04-.232 3.723-1.063 8.121-1.111 11.342-3.124.519-.325 3.618-3.579 3.646-4.052.151-2.564-.235-3.14-1.562-5.092-1.862-2.738-3.122-4.467-6.25-5.585-3.823-1.365-8.212-.78-12.24-.78h-15.625c-14.383 0-28.609 1.04-42.969 1.04h-48.958c-9.341 0-18.557-1.04-27.865-1.04-5.905 0-11.915.52-17.708.52-8.783 0-17.725.52-26.591.52-8.649 0-17.122-1.562-25.724-1.562-16.453 0-32.844.521-49.247.521H32.208'
     });
 }
-function P(e) {
+function _(e) {
     let { percent: t } = e,
         n = (0, c.Dt)(),
-        s = (0, a.q_F)({ width: (t / 100) * 372 });
+        s = (0, i.q_F)({ width: (t / 100) * 372 });
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         width: '372',
@@ -45,7 +45,7 @@ function P(e) {
             (0, r.jsx)('defs', {
                 children: (0, r.jsx)('mask', {
                     id: n,
-                    children: (0, r.jsx)(_, { fill: !0 })
+                    children: (0, r.jsx)(P, { fill: !0 })
                 })
             }),
             (0, r.jsx)(o.animated.rect, {
@@ -79,34 +79,34 @@ function P(e) {
                 y: '0',
                 height: '24'
             }),
-            (0, r.jsx)(_, { stroke: !0 })
+            (0, r.jsx)(P, { stroke: !0 })
         ]
     });
 }
-function w() {
+function C() {
     var e, t;
-    let n = (0, i.e7)([u.Z], () => u.Z.lifetimePoints),
-        [o, a] = (0, f.Z)(y.yN.LEVELING),
+    let n = (0, a.e7)([u.Z], () => u.Z.lifetimePoints),
+        [o, i] = (0, f.Z)(y.yN.LEVELING),
         c = null != (e = null == o ? void 0 : o.lastLevelClaimed) ? e : 0,
-        _ = null != (t = null == o ? void 0 : o.pointsWhenUnlocked) ? t : n,
-        w = n - _,
-        C = (function e(t, n) {
+        P = null != (t = null == o ? void 0 : o.pointsWhenUnlocked) ? t : n,
+        C = n - P,
+        Z = (function e(t, n) {
             return t >= N(n) ? e(t, n + 1) : n;
-        })(w, 1),
-        Z = N(C - 1),
-        S = N(C),
-        I = w - Z,
-        E = S - Z,
+        })(C, 1),
+        w = N(Z - 1),
+        E = N(Z),
+        S = C - w,
+        I = E - w,
         k = c + 1,
         M = Math.floor(0.1 * (N(k) - N(k - 1))),
-        A = (0, g.eR)(O);
-    (0, p.Z)(j, C);
-    let R = (0, s.useCallback)(() => {
-        (a({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), A());
-    }, [k, M, A, a]);
+        R = (0, g.eR)(O);
+    (0, p.Z)(j, Z);
+    let A = (0, s.useCallback)(() => {
+        (i({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), R());
+    }, [k, M, R, i]);
     return (
         (0, s.useEffect)(() => {
-            (null == o ? void 0 : o.pointsWhenUnlocked) == null && a({ pointsWhenUnlocked: n });
+            (null == o ? void 0 : o.pointsWhenUnlocked) == null && i({ pointsWhenUnlocked: n });
         }, []),
         (0, r.jsxs)('div', {
             className: v.leveling,
@@ -117,15 +117,15 @@ function w() {
                         (0, r.jsx)(b.Z, {
                             variant: 'text-lg/bold',
                             color: 'clicker-game-brand',
-                            children: x.intl.format(h.default.IG6UGB, { level: C })
+                            children: x.intl.format(h.default.IG6UGB, { level: Z })
                         }),
                         (0, r.jsx)(b.Z, {
                             className: v.experience,
                             variant: 'text-sm/medium',
                             color: 'clicker-game-brand',
                             children: x.intl.format(h.default.Rfy3Cg, {
-                                currentExperience: Math.floor(I),
-                                requiredExperience: E,
+                                currentExperience: Math.floor(S),
+                                requiredExperience: I,
                                 experienceHook: (e, t) =>
                                     (0, r.jsx)(
                                         'span',
@@ -140,11 +140,11 @@ function w() {
                         })
                     ]
                 }),
-                (0, r.jsx)(P, { percent: (I / E) * 100 }),
-                k < C
+                (0, r.jsx)(_, { percent: (S / I) * 100 }),
+                k < Z
                     ? (0, r.jsx)(m.Z, {
                           className: v.claimButton,
-                          onClick: R,
+                          onClick: A,
                           children: x.intl.format(h.default.IUF6np, {
                               points: M,
                               grassIconHook: d.Z

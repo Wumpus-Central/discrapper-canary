@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(339340),
     M = n(354459),
     D = n(981631),
-    k = n(231338),
-    L = n(388032),
+    L = n(231338),
+    k = n(388032),
     U = n(610633),
     B = n(73433);
 function F(e) {
@@ -190,14 +190,14 @@ function W(e) {
         y = (0, f.ZP)(t),
         S = (0, m.KS)(t),
         [I] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
-        T = L.intl.string(L.t.BVZqJi);
-    t.isDM() ? (T = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (T = L.intl.string(L.t['e5y+go']));
+        T = k.intl.string(k.t.BVZqJi);
+    t.isDM() ? (T = k.intl.string(k.t.jN2DfX)) : t.isGroupDM() && (T = k.intl.string(k.t['e5y+go']));
     let w = (0, o.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         D = t.isGuildVoice() && u && null != w && w.length > 0,
         G = (0, N.ZP)(t),
         V = D
             ? (0, r.jsx)(s.ua7, {
-                  text: L.intl.string(L.t.Mgpxi4),
+                  text: k.intl.string(k.t.Mgpxi4),
                   delay: 500,
                   position: 'bottom',
                   shouldShow: G,
@@ -240,7 +240,7 @@ function W(e) {
         className: U.subtitleContainer,
         children: [
             (0, r.jsx)(s.f6W, {
-                theme: k.BR.DARK,
+                theme: L.BR.DARK,
                 children: (e) =>
                     (0, r.jsxs)(C.ZP, {
                         onDoubleClick: x.O,
@@ -269,13 +269,13 @@ function W(e) {
                                         y,
                                         Y &&
                                             (0, r.jsx)(s.ua7, {
-                                                text: L.intl.string(L.t.QyZ4TU),
+                                                text: k.intl.string(k.t.QyZ4TU),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         s.tQf,
                                                         H(F({}, e), {
                                                             size: 'xs',
-                                                            'aria-label': L.intl.string(L.t.VHXh8f),
+                                                            'aria-label': k.intl.string(k.t.VHXh8f),
                                                             color: s.TVs.colors.INTERACTIVE_NORMAL,
                                                             className: U.secureFramesIcon
                                                         })

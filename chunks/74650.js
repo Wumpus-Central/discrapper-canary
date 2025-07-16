@@ -47,16 +47,12 @@ function h(e) {
                     ]
                 }),
                 f
-                    ? (0, i.jsx)(s.zx, {
-                          color: s.zx.Colors.BRAND,
-                          look: s.zx.Looks.FILLED,
-                          size: s.zx.Sizes.LARGE,
+                    ? (0, i.jsx)(a.zxk, {
+                          text: m.intl.string(m.t.LhcHi4),
                           fullWidth: !0,
                           onClick: () => {
                               (t(d.L.TAKE_ACTION), n());
-                          },
-                          className: p.button,
-                          children: m.intl.string(m.t.LhcHi4)
+                          }
                       })
                     : (0, i.jsx)(l.Z, {
                           onClick: () => {

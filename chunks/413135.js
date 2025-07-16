@@ -112,10 +112,10 @@ function O(e, t, n) {
             case 'utf-8':
                 return D(this, t, n);
             case 'ascii':
-                return M(this, t, n);
+                return k(this, t, n);
             case 'latin1':
             case 'binary':
-                return k(this, t, n);
+                return M(this, t, n);
             case 'base64':
                 return w(this, t, n);
             case 'ucs2':
@@ -433,13 +433,13 @@ function x(e) {
     for (var n = '', r = 0; r < t; ) n += String.fromCharCode.apply(String, e.slice(r, (r += L)));
     return n;
 }
-function M(e, t, n) {
+function k(e, t, n) {
     var r = '';
     n = Math.min(e.length, n);
     for (var i = t; i < n; ++i) r += String.fromCharCode(127 & e[i]);
     return r;
 }
-function k(e, t, n) {
+function M(e, t, n) {
     var r = '';
     n = Math.min(e.length, n);
     for (var i = t; i < n; ++i) r += String.fromCharCode(e[i]);

@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(336383),
     L = n(194811),
     x = n(265386),
-    M = n(668700),
-    k = n(384298),
+    k = n(668700),
+    M = n(384298),
     j = n(386019),
     U = n(228168),
     G = n(981631),
@@ -160,7 +160,7 @@ function Y(e) {
                               users: et,
                               guildId: $.id,
                               channelId: ee.id,
-                              maxUsers: M.W,
+                              maxUsers: k.W,
                               size: l.EFr.SIZE_16,
                               onClick: (e) => {
                                   (null == e || e.stopPropagation(), null == ei || ei({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
@@ -175,7 +175,7 @@ function Y(e) {
         eh = () =>
             q === U.lY.MODAL || q === U.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(M.Z, {
+                : (0, r.jsx)(k.Z, {
                       user: t,
                       guild: $,
                       channel: ee,
@@ -187,7 +187,7 @@ function Y(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: V.actions,
-                      children: (0, r.jsx)(k.Z, {
+                      children: (0, r.jsx)(M.Z, {
                           channel: ee,
                           onAction: ei,
                           onClose: W

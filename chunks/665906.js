@@ -6,7 +6,7 @@
     JQ: () => S,
     NE: () => E,
     RG: () => D,
-    Xb: () => M,
+    Xb: () => k,
     Xu: () => y,
     Y: () => U,
     cD: () => O,
@@ -115,12 +115,12 @@ function C(e, t, n) {
 }
 function R(e) {
     let t = (0, o.e7)([_.Z], () => N(e, _.Z)),
-        n = M(e);
+        n = k(e);
     return C(e, t, n);
 }
 function P(e) {
     let t = N(e, _.Z),
-        n = k(e);
+        n = M(e);
     return C(e, t, n);
 }
 function w(e) {
@@ -139,10 +139,10 @@ function L(e) {
 function x(e, t) {
     return null != e && t.can(m.Plq.MANAGE_THREADS, e);
 }
-function M(e) {
-    return (0, o.e7)([_.Z], () => k(e, [_.Z]));
-}
 function k(e) {
+    return (0, o.e7)([_.Z], () => M(e, [_.Z]));
+}
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [_.Z],
         [n] = t;
     return x(e, n);
@@ -152,7 +152,7 @@ function j(e) {
         let t = f.Z.getChannel(e);
         if (null == t) return !1;
         let n = d.default.getId();
-        return (t.type === m.d4z.PRIVATE_THREAD && t.ownerId === n) || k(t, [_.Z]);
+        return (t.type === m.d4z.PRIVATE_THREAD && t.ownerId === n) || M(t, [_.Z]);
     });
 }
 function U(e) {
@@ -169,6 +169,6 @@ function U(e) {
     return !t && e.isVocalThread() && i && n && r;
 }
 function G(e) {
-    let t = M(e);
+    let t = k(e);
     return e.isLockedThread() && !t;
 }

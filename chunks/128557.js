@@ -120,11 +120,11 @@ function R(e) {
         p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
         x = (0, s.e7)([_.default], () => (null == l ? void 0 : l.ownerId) === _.default.getId(), [l]),
         { canInvite: R, canManageGuild: M, canMessage: D } = (0, f.TE)(t, l),
-        k = (0, s.e7)([C.default], () => {
+        L = (0, s.e7)([C.default], () => {
             var e, t;
             return (null == (e = C.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = C.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: L, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: F,
             handleMessage: H,
@@ -198,7 +198,7 @@ function R(e) {
                 }, [e])
             };
         })(l),
-        W = !(k || L || U || B),
+        W = !(L || k || U || B),
         { titleAnimatedStyle: Y, opacities: q } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -281,7 +281,7 @@ function R(e) {
                         children: (0, r.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
-                            completed: L,
+                            completed: k,
                             onClick: F
                         })
                     },
@@ -332,7 +332,7 @@ function R(e) {
                         children: (0, r.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
-                            completed: k,
+                            completed: L,
                             onClick: V
                         })
                     },

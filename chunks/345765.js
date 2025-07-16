@@ -132,11 +132,11 @@ async function x(e) {
             S.delete(t);
         }
 }
-function M() {
+function k() {
     L();
 }
-function k() {
-    M();
+function M() {
+    k();
 }
 function j() {
     D(v);
@@ -170,11 +170,11 @@ class F extends o.Z {
     constructor(...e) {
         (super(...e),
             b(this, 'actions', {
-                POST_CONNECTION_OPEN: k,
+                POST_CONNECTION_OPEN: M,
                 CONNECTION_CLOSED: j,
-                WINDOW_FOCUS: M,
-                IDLE: M,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
+                WINDOW_FOCUS: k,
+                IDLE: k,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
                 CONTENT_INVENTORY_MANUAL_REFRESH: U,
                 CONTENT_INVENTORY_INBOX_STALE: G,
                 SPOTIFY_NEW_TRACK: B,

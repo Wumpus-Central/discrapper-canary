@@ -258,7 +258,7 @@ let h = [
                   ]
               });
     },
-    O = () => {
+    N = () => {
         let { validateShopAssetPackage: e, reset: t, validationComplete: a, warnings: s, errors: o } = (0, m.g)(),
             c = Object.entries(o),
             u = Object.entries(s),
@@ -396,7 +396,7 @@ let h = [
             ]
         });
     },
-    N = () => {
+    O = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: a } = (0, c.N9)(),
             { ignoredFilenames: s, clearAssets: o, clearIgnoredFilenames: m, processAndUpsertAssets: p } = (0, u.hm)(),
             h = r.useCallback(
@@ -461,8 +461,8 @@ let h = [
                     optionClassName: x.panelModeControlOption
                 }),
                 (0, n.jsx)(i.LZC, { size: 8 }),
-                'preview' === e && (0, n.jsx)(N, {}),
-                'validate' === e && (0, n.jsx)(O, {}),
+                'preview' === e && (0, n.jsx)(O, {}),
+                'validate' === e && (0, n.jsx)(N, {}),
                 (0, n.jsx)(i.LZC, { size: 16 })
             ]
         });

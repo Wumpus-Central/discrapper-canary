@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(642613));
+(n.d(t, { Z: () => k }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,10 +31,10 @@ var r = n(255367),
     D = n(388032),
     L = n(136266);
 let x = 1500;
-function M(e) {
+function k(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: f, hasSentMessage: _, giftRecipient: m, giftMessageError: b, isSendingMessage: y } = e,
         [v, T] = i.useState(d.kO8.Modes.DEFAULT),
-        M = (0, c.e7)([I.Z], () => I.Z.enabled),
+        k = (0, c.e7)([I.Z], () => I.Z.enabled),
         j = _ || (null != l && null != m),
         U = (null == a ? void 0 : a.productLine) === P.POd.COLLECTIBLES,
         G = (0, E.Z)(),
@@ -93,7 +93,7 @@ function M(e) {
                     (0, r.jsx)(d.vwX, { children: D.intl.string(D.t['/dG4ND']) }),
                     null != t &&
                         (0, r.jsx)(d.kO8, {
-                            hideMessage: M ? D.intl.string(D.t['0RLn4+']) : null,
+                            hideMessage: k ? D.intl.string(D.t['0RLn4+']) : null,
                             value: (0, A.Nz)(t),
                             mode: v,
                             text: e,
@@ -118,7 +118,7 @@ function M(e) {
                         children: Y()
                     }),
                     null == b &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             giftCode: t,
                             onClose: f
                         }),
@@ -187,7 +187,7 @@ function M(e) {
               ]
           });
 }
-let k = (e) => {
+let M = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         (_.Z.fetchRelationships(), (0, b._)());

@@ -16,7 +16,7 @@ function i(e) {
     G6: () => eQ,
     H0: () => F,
     Hh: () => eR,
-    IU: () => ek,
+    IU: () => eM,
     KD: () => Y,
     KE: () => eS,
     Mc: () => Q,
@@ -74,7 +74,7 @@ function i(e) {
     ok: () => e$,
     p0: () => ez,
     pC: () => V,
-    pj: () => eM,
+    pj: () => ek,
     qJ: () => U,
     qb: () => er,
     qt: () => e7,
@@ -82,7 +82,7 @@ function i(e) {
     rs: () => T,
     sB: () => eY,
     up: () => eC,
-    vz: () => k,
+    vz: () => M,
     w7: () => ex,
     xQ: () => e2,
     xb: () => eq,
@@ -316,17 +316,17 @@ class x {
         r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
     }
 }
-let M =
+let k =
     'undefined' == typeof FinalizationRegistry
         ? {
               register: () => {},
               unregister: () => {}
           }
         : new FinalizationRegistry((e) => r.__wbg_experimentcacher_free(e >>> 0, 1));
-class k {
+class M {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), M.unregister(this), e);
+        return ((this.__wbg_ptr = 0), k.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -589,10 +589,10 @@ function eL(e, t) {
 function ex(e, t) {
     e.headers = t;
 }
-function eM(e, t, n) {
+function ek(e, t, n) {
     e.method = l(t, n);
 }
-function ek(e, t) {
+function eM(e, t) {
     e.mode = D[t];
 }
 function ej(e, t) {

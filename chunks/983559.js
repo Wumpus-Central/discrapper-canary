@@ -58,8 +58,8 @@ function R(e) {
     let { user: t, currentUser: n, channel: R } = e,
         M = __OVERLAY__,
         D = (0, g.ZP)(t.id),
-        k = (0, u.ZP)(),
-        L = i.useRef(Date.now()),
+        L = (0, u.ZP)(),
+        k = i.useRef(Date.now()),
         { analyticsLocations: U } = (0, p.ZP)(d.Z.USER_PROFILE_SIDEBAR),
         B = (0, f.ZB)({
             layout: 'SIDEBAR',
@@ -89,7 +89,7 @@ function R(e) {
         value: U,
         children: (0, r.jsx)(f.Mt, {
             value: B,
-            openedAt: L.current,
+            openedAt: k.current,
             fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
             fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
             isLoaded: null == D ? void 0 : D.isLoaded,
@@ -100,7 +100,7 @@ function R(e) {
                     user: t,
                     displayProfile: D,
                     themeType: N.lY.SIDEBAR,
-                    themeOverride: k,
+                    themeOverride: L,
                     children: [
                         null != G.interactionType &&
                             (0, r.jsx)(l.animated.div, {

@@ -161,7 +161,7 @@ function v(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, p) {
-        var { className: g, onScroll: v, onResize: I = null, onContentResize: T = null, dir: S = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: V, fade: F = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: X, innerClassName: Q, innerTag: J = 'div' } = a,
+        var { className: g, onScroll: v, onResize: I = null, onContentResize: T = null, dir: S = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: k, renderListHeader: M, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: V, fade: F = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: X, innerClassName: Q, innerTag: J = 'div' } = a,
             $ = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
@@ -303,7 +303,7 @@ function v(e, t, n, a) {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: k,
+                                                renderListHeader: M,
                                                 stickyListHeader: j,
                                                 renderSection: D,
                                                 renderRow: L,
@@ -313,17 +313,17 @@ function v(e, t, n, a) {
                                             })
                                         })
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es]
+                                [J, W, K, z, q, X, el, Q, ec, M, j, D, L, x, U, es]
                             ),
                             i.useMemo(
                                 () =>
                                     O({
                                         isSidebarVisible: eu,
-                                        renderSidebar: M,
+                                        renderSidebar: k,
                                         sidebarHeight: P,
                                         isListVisible: 0 !== ec.length
                                     }),
-                                [eu, M, P, ec.length]
+                                [eu, k, P, ec.length]
                             )
                         ]
                     }

@@ -11,9 +11,9 @@ function u(e) {
         { activeVoice: n } = (0, s.o)(),
         u = null != n,
         d = e ? 'unmute' : 'mute',
-        f = (0, l.P)(d),
-        p = (0, i.O)(d),
-        m = u ? f : p,
+        p = (0, l.P)(d),
+        f = (0, i.O)(d),
+        m = u ? p : f,
         g = t === c.IlC.POPOUT ? (u ? (e ? a.TYr : a.x8H) : e ? a.nRN : a.S6n) : m.Component;
     return r.useMemo(() => {
         var e, t;

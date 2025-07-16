@@ -46,8 +46,8 @@ var i = n(658722),
     D = n(580005),
     L = n(984933),
     x = n(271383),
-    M = n(485386),
-    k = n(430824),
+    k = n(485386),
+    M = n(430824),
     j = n(375954),
     U = n(496675),
     G = n(158776),
@@ -194,10 +194,10 @@ function eL(e) {
     return o;
 }
 let ex = [L.sH, L.Zb, ee.d4z.GUILD_CATEGORY];
-function eM(e, t) {
+function ek(e, t) {
     return e.split(/(?:,| )+/).every((e) => RegExp(X.Z.escape(e), 'i').test(t));
 }
-function ek(e, t) {
+function eM(e, t) {
     let { exactQuery: n, containQuery: r, queryLower: i } = t,
         o = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     try {
@@ -206,7 +206,7 @@ function ek(e, t) {
             return ef;
         }
         if (r.test(e)) return e_;
-        if (eM(i, e)) return ep;
+        if (ek(i, e)) return ep;
         if (o && a()(i, e)) return eh;
     } catch (e) {
         eu.error(e);
@@ -323,7 +323,7 @@ function eZ(e, t, n) {
     let r = 0,
         i = null;
     for (let a of t) {
-        let t = ek(e, a, n);
+        let t = eM(e, a, n);
         t > r && ((r = t), (i = a));
     }
     return (null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r);
@@ -333,7 +333,7 @@ function eH(e, t) {
     let n = t[e.guild_id];
     if (null == n) {
         var r;
-        n = t[e.guild_id] = null == (r = k.Z.getGuild(e.guild_id)) ? void 0 : r.name.toLocaleLowerCase();
+        n = t[e.guild_id] = null == (r = M.Z.getGuild(e.guild_id)) ? void 0 : r.name.toLocaleLowerCase();
     }
     return n;
 }
@@ -471,7 +471,7 @@ let eK = (0, Y.oH)((e, t, n) => {
         },
         queryGuildUsers(e) {
             let { guildId: t, query: n, limit: r = 10, request: i = !0, checkRecentlyTalkedOnEmptyQuery: a = !0, filter: o, allowSnowflake: s } = e;
-            if (null == k.Z.getGuild(t)) return [];
+            if (null == M.Z.getGuild(t)) return [];
             if (0 === n.length && a) {
                 let e = eW(V.Z.getChannelId(t), r);
                 if (e.length > 0) return e;
@@ -556,10 +556,10 @@ let eK = (0, Y.oH)((e, t, n) => {
                     queryLower: o
                 },
                 l = [];
-            for (let e of k.Z.getGuildsArray()) {
+            for (let e of M.Z.getGuildsArray()) {
                 if (!i(e)) continue;
                 let t = e.name.toLocaleLowerCase(),
-                    n = ek(t, s, r);
+                    n = eM(t, s, r);
                 n > 0 &&
                     l.push({
                         type: et.h8.GUILD,
@@ -612,10 +612,10 @@ let eK = (0, Y.oH)((e, t, n) => {
                 if (!e.isMultiUserDM() || !i(e)) continue;
                 let t = (0, f.F6)(e, Z.default, B.Z).toLocaleLowerCase(),
                     n = (0, J._I)((0, J.Fv)(t)),
-                    o = ek(n, l, r);
+                    o = eM(n, l, r);
                 if ('' !== e.name) {
                     let t = (0, f.on)(e, Z.default, B.Z).toLocaleLowerCase();
-                    o = Math.max(o, ek((0, J._I)((0, J.Fv)(t)), l, r));
+                    o = Math.max(o, eM((0, J._I)((0, J.Fv)(t)), l, r));
                 }
                 o > 0 &&
                     u.push({
@@ -641,7 +641,7 @@ let eK = (0, Y.oH)((e, t, n) => {
             for (let { application: e } of s) {
                 if (!i(e)) continue;
                 let t = e.name.toLocaleLowerCase(),
-                    n = ek(t, o, r);
+                    n = eM(t, o, r);
                 n > 0 &&
                     l.push({
                         type: et.h8.APPLICATION,
@@ -674,7 +674,7 @@ let eK = (0, Y.oH)((e, t, n) => {
                 if (null != n)
                     for (let e of n) {
                         let n = e.toLocaleLowerCase(),
-                            i = ek(n, a, r);
+                            i = eM(n, a, r);
                         i > 0 &&
                             l.push({
                                 type: et.h8.IN_APP_NAVIGATION,
@@ -689,7 +689,7 @@ let eK = (0, Y.oH)((e, t, n) => {
                 el.getState().options.forEach((e) => {
                     var t;
                     let n = [e.title].concat(e.searchableTitles),
-                        i = null != (t = (0, o.max)(n.map((e) => eD(ek(e.toLocaleLowerCase(), a, r))))) ? t : 0;
+                        i = null != (t = (0, o.max)(n.map((e) => eD(eM(e.toLocaleLowerCase(), a, r))))) ? t : 0;
                     i > 0 &&
                         l.push({
                             type: et.h8.IN_APP_NAVIGATION,
@@ -717,7 +717,7 @@ let eK = (0, Y.oH)((e, t, n) => {
             for (let e of l)
                 if (e.type === ee.epS.DURABLE_PRIMARY && i(e)) {
                     let t = e.name.toLocaleLowerCase(),
-                        n = ek(t, o, r);
+                        n = eM(t, o, r);
                     n > 0 &&
                         c.push({
                             type: et.h8.SKU,
@@ -765,9 +765,9 @@ let eK = (0, Y.oH)((e, t, n) => {
                 b = [];
             if (g < _ && c) {
                 let e = n.getGuildId(),
-                    i = k.Z.getGuild(e);
+                    i = M.Z.getGuild(e);
                 if (null != i) {
-                    let n = s()(M.Z.getRoles(i.id))
+                    let n = s()(k.Z.getRoles(i.id))
                         .filter((t) => {
                             let { mentionable: n, name: i, id: o } = t;
                             return (n || r || d) && (a()(E, i.toLowerCase()) || (h && E === o)) && o !== Q.default.castGuildIdAsEveryoneGuildRoleId(e);
@@ -798,9 +798,9 @@ let eK = (0, Y.oH)((e, t, n) => {
                 d = t.toLowerCase(),
                 f = [];
             if (u < ee.rnv && o) {
-                let e = k.Z.getGuild(n);
+                let e = M.Z.getGuild(n);
                 null != e &&
-                    (s()(M.Z.getRoles(e.id))
+                    (s()(k.Z.getRoles(e.id))
                         .filter((e) => {
                             let { mentionable: t, name: i, id: o } = e;
                             return (t || r || l) && a()(d, i.toLowerCase()) && (0, _.Gy)(n, o);
@@ -828,7 +828,7 @@ let eK = (0, Y.oH)((e, t, n) => {
                 l = RegExp(X.Z.escape(a), 'i'),
                 c = s()(n)
                     .map((e, t) => {
-                        let n = ek(
+                        let n = eM(
                             e.displayName.toLocaleLowerCase(),
                             {
                                 exactQuery: o,
@@ -879,7 +879,7 @@ let eK = (0, Y.oH)((e, t, n) => {
                 (e.id !== en.HY.SERVER_GUIDE || a) &&
                     (e.id !== en.HY.CHANNEL_BROWSER || o) &&
                     (e.id !== en.HY.CUSTOMIZE_COMMUNITY || s) &&
-                    ek(e.name.toLocaleLowerCase(), i, !1) > 0 &&
+                    eM(e.name.toLocaleLowerCase(), i, !1) > 0 &&
                     c.push(
                         new R.nl({
                             id: e.id,
@@ -1023,8 +1023,8 @@ let eK = (0, Y.oH)((e, t, n) => {
         matchSentinel: (e, t, n) => !eN.test(t) && e === n,
         hasSameRoleAsUsername(e, t) {
             if (!t.isPomelo()) return !1;
-            let n = k.Z.getGuild(e.getGuildId());
-            for (let { name: e } of Object.values(null != n ? M.Z.getRoles(n.id) : {})) if (t.username.startsWith(e.toLowerCase())) return !0;
+            let n = M.Z.getGuild(e.getGuildId());
+            for (let { name: e } of Object.values(null != n ? k.Z.getRoles(n.id) : {})) if (t.username.startsWith(e.toLowerCase())) return !0;
             return !1;
         }
     };

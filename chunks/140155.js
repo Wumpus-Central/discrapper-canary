@@ -169,11 +169,11 @@ function x(e) {
     let { ids: t } = e;
     D(t, !1);
 }
-function M(e) {
+function k(e) {
     let { active: t } = e;
     y.notifCenterActive = t;
 }
-function k(e) {
+function M(e) {
     let { focused: t } = e;
     y.notifCenterTabFocused = t;
 }
@@ -327,8 +327,8 @@ let z = new K(a.Z, {
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: S,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: R,
     RESET_NOTIFICATION_CENTER: () => I(),
-    NOTIFICATION_CENTER_SET_ACTIVE: M,
-    NOTIFICATION_CENTER_TAB_FOCUSED: k,
+    NOTIFICATION_CENTER_SET_ACTIVE: k,
+    NOTIFICATION_CENTER_TAB_FOCUSED: M,
     RELATIONSHIP_ADD: G,
     RELATIONSHIP_UPDATE: G,
     RELATIONSHIP_REMOVE: B,

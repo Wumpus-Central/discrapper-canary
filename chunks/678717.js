@@ -21,8 +21,8 @@ a(381996);
 var _ = a(392750),
     y = a(926976),
     C = a(789654),
-    O = a(719672),
-    N = a(691867),
+    N = a(719672),
+    O = a(691867),
     T = a(916790),
     E = a(645973),
     S = a(903502),
@@ -36,8 +36,8 @@ var _ = a(392750),
     D = a(484662),
     L = a(496025),
     M = a(442954),
-    B = a(633001),
-    F = a(702904),
+    F = a(633001),
+    B = a(702904),
     z = a(178821),
     U = a(891401),
     G = a(958328),
@@ -136,7 +136,7 @@ function ei(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: ee.v0.GAMES,
-                        render: () => (0, n.jsx)(B.Z, {})
+                        render: () => (0, n.jsx)(F.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -166,7 +166,7 @@ function ei(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: ee.v0.UI,
-                    render: () => (0, n.jsx)(N.Z, {})
+                    render: () => (0, n.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -221,7 +221,7 @@ function ei(e) {
                     id: 'dcf',
                     name: 'DCF',
                     group: ee.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(O.Z, {})
+                    render: () => (0, n.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'perks',
@@ -246,7 +246,7 @@ function ei(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: ee.v0.BILLING,
-                        render: () => (0, n.jsx)(F.Z, {})
+                        render: () => (0, n.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

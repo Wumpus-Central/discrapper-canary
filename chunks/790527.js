@@ -62,7 +62,7 @@ function w(e) {
     var t,
         n,
         a,
-        { title: R, type: w, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: M, context: k, glowUp: j, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: V, headerClassName: F, bodyClassName: Z, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: X, subscribeButtonText: Q, showNewBadge: J = !1, showBetaBadge: $ = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: ef = !1, footerClassName: e_ } = e,
+        { title: R, type: w, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: k, context: M, glowUp: j, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: V, headerClassName: F, bodyClassName: Z, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: X, subscribeButtonText: Q, showNewBadge: J = !1, showBetaBadge: $ = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: ef = !1, footerClassName: e_ } = e,
         ep = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'artClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let eh = null != D,
         em = (0, b.N)(),
@@ -176,7 +176,7 @@ function w(e) {
                                 type: w,
                                 subscriptionTier: null != (a = null == em || null == (n = em.subscription_trial) ? void 0 : n.sku_id) ? a : I.Si.TIER_2,
                                 headingText: R,
-                                context: k,
+                                context: M,
                                 analyticsLocationObject: x,
                                 discountOffer: eg,
                                 trialOffer: em,
@@ -199,7 +199,7 @@ function w(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: ef ? 'text-sm/normal' : 'text-md/normal',
                                                 className: o()(Z, A.subHeader),
-                                                children: M
+                                                children: k
                                             })
                                         ]
                                     })

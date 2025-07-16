@@ -42,8 +42,8 @@ var r,
     R = n(912114),
     M = n(366980),
     D = n(703656),
-    k = n(93127),
-    L = n(752048),
+    L = n(93127),
+    k = n(752048),
     U = n(131704),
     B = n(592125),
     F = n(341165),
@@ -564,7 +564,7 @@ class eg extends (r = l.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = L.Z.getUserAffinity(e);
+                let n = k.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
             })
         };
@@ -909,7 +909,7 @@ function ey(e) {
     );
     let P = (0, p.e7)([Y.default], () => Y.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return ((0, j.ZP)(() => {
-        (0, k._)();
+        (0, L._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
         ? null
@@ -961,7 +961,7 @@ function ey(e) {
 function eC(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, j.ZP)(() => {
-        (0, k._)();
+        (0, L._)();
     });
     let o = (0, w.a)('PrivateChannelRecipientsInviteTextButton'),
         s = l.useRef(null),

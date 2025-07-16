@@ -19,9 +19,9 @@ function _(e) {
         b = (0, d.wj)((0, h.ZP)()),
         [v, y] = r.useState(!1),
         O = v && !C,
-        I = r.useRef(null),
+        Z = r.useRef(null),
         { reducedMotion: N } = r.useContext(u.Sfi),
-        Z = (0, s.e7)([p.ZP], () => {
+        I = (0, s.e7)([p.ZP], () => {
             var e, n, l, r;
             return (null == (e = t.emoji) ? void 0 : e.id) != null && null != (r = null == (n = p.ZP.getCustomEmojiById(null == (l = t.emoji) ? void 0 : l.id)) ? void 0 : n.animated) && r;
         }),
@@ -68,11 +68,11 @@ function _(e) {
     r.useEffect(() => {
         if (O)
             return (
-                (I.current = setTimeout(() => {
-                    (y(!1), (I.current = null));
+                (Z.current = setTimeout(() => {
+                    (y(!1), (Z.current = null));
                 }, 3000)),
                 () => {
-                    null != I.current && clearTimeout(I.current);
+                    null != Z.current && clearTimeout(Z.current);
                 }
             );
     }, [O]);
@@ -94,7 +94,7 @@ function _(e) {
             children: [
                 null != t.emoji && (null != t.emoji.id || null != t.emoji.name)
                     ? (0, l.jsx)(m.Z, {
-                          animated: t.emoji.animated || Z,
+                          animated: t.emoji.animated || I,
                           className: x.buttonEmoji,
                           emojiId: t.emoji.id,
                           emojiName: t.emoji.name

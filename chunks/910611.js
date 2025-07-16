@@ -1,6 +1,6 @@
 (n.d(t, {
     TS: () => H,
-    ud: () => L,
+    ud: () => k,
     v0: () => B
 }),
     n(388685));
@@ -79,7 +79,7 @@ function D(e, t) {
         e
     );
 }
-function k(e) {
+function L(e) {
     var t;
     let { channel: n, children: i } = e,
         l = (0, u.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
@@ -159,7 +159,7 @@ function k(e) {
         a
     );
 }
-function L(e) {
+function k(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: o, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         b = (0, h.KS)(t, o),
         { prefix: _, level: y } = (function (e, t) {
@@ -243,7 +243,7 @@ function L(e) {
         case T.d4z.GUILD_FORUM:
         case T.d4z.GUILD_MEDIA:
             return null != t.linkedLobby
-                ? (0, r.jsxs)(k, {
+                ? (0, r.jsxs)(L, {
                       channel: t,
                       children: [
                           F(b, t.type === T.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),

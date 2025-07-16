@@ -2,7 +2,7 @@ n.d(t, {
     BU: () => tz,
     CX: () => tR,
     F3: () => ey,
-    UE: () => tk,
+    UE: () => tM,
     _7: () => eL,
     mH: () => tF,
     vt: () => eY
@@ -73,8 +73,8 @@ var y = new WeakMap(),
     D = new WeakMap(),
     L = new WeakMap(),
     x = new WeakMap(),
-    M = new WeakMap(),
     k = new WeakMap(),
+    M = new WeakMap(),
     j = new WeakMap(),
     U = new WeakMap(),
     G = new WeakMap(),
@@ -546,7 +546,7 @@ var y = new WeakMap(),
         return e;
     },
     ex = (e) => {
-        var { leaf: t, isLast: n, text: r, parent: i, renderPlaceholder: a, renderLeaf: o = (e) => c.createElement(ek, Object.assign({}, e)) } = e,
+        var { leaf: t, isLast: n, text: r, parent: i, renderPlaceholder: a, renderLeaf: o = (e) => c.createElement(eM, Object.assign({}, e)) } = e,
             s = (0, c.useRef)(null),
             l = (0, c.useRef)(null),
             u = eL(),
@@ -615,8 +615,8 @@ var y = new WeakMap(),
             text: r
         });
     },
-    eM = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[V] === e.leaf[V]),
-    ek = (e) => {
+    ek = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[V] === e.leaf[V]),
+    eM = (e) => {
         var { attributes: t, children: n } = e;
         return c.createElement('span', Object.assign({}, t), n);
     },
@@ -624,7 +624,7 @@ var y = new WeakMap(),
         for (var { decorations: t, isLast: n, parent: r, renderPlaceholder: i, renderLeaf: a, text: o } = e, s = eL(), l = (0, c.useRef)(null), u = d.xv.decorations(o, t), f = ey.findKey(s, o), _ = [], p = 0; p < u.length; p++) {
             var h = u[p];
             _.push(
-                c.createElement(eM, {
+                c.createElement(ek, {
                     isLast: n && p === u.length - 1,
                     key: ''.concat(f.id, '-').concat(p),
                     renderPlaceholder: i,
@@ -1244,13 +1244,13 @@ function th(e) {
             if ((o && (clearTimeout(o), (o = null)), s && (clearTimeout(s), (s = null)), !y() && !b())) return void u();
             (i || ((i = !0), setTimeout(() => (i = !1))), b() && (i = 'action'));
             var e = t.selection && d.ML.rangeRef(t, t.selection, { affinity: 'forward' });
-            (k.set(t, t.marks), t_('flush', U.get(t), j.get(t)));
+            (M.set(t, t.marks), t_('flush', U.get(t), j.get(t)));
             for (var a = y(); (l = null == (_ = j.get(t)) ? void 0 : _[0]); ) {
                 var l,
                     _,
                     p,
-                    h = M.get(t);
-                (void 0 !== h && (M.delete(t), (t.marks = h)), h && !1 === c && (c = null));
+                    h = k.get(t);
+                (void 0 !== h && (k.delete(t), (t.marks = h)), h && !1 === c && (c = null));
                 var m = tr(l);
                 ((t.selection && d.e6.equals(t.selection, m)) || d.YR.select(t, m),
                     l.diff.text ? d.ML.insertText(t, l.diff.text) : d.ML.deleteFragment(t),
@@ -1263,13 +1263,13 @@ function th(e) {
                                   return t !== l.id;
                               })
                     ),
-                    e8(t, l) || ((a = !1), U.delete(t), k.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref()));
+                    e8(t, l) || ((a = !1), U.delete(t), M.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref()));
             }
             var g = null == e ? void 0 : e.unref();
             if ((!g || G.get(t) || (t.selection && d.e6.equals(g, t.selection)) || d.YR.select(t, g), b())) return void f();
             (a && n(), n.flush(), r.flush(), u());
-            var E = k.get(t);
-            (k.delete(t), void 0 !== E && ((t.marks = E), t.onChange()));
+            var E = M.get(t);
+            (M.delete(t), void 0 !== E && ((t.marks = E), t.onChange()));
         },
         p = (e) => {
             (a && clearTimeout(a),
@@ -1456,7 +1456,7 @@ function th(e) {
                     case 'insertText':
                         if (tp(i)) return g(() => ey.insertData(t, i), { at: r });
                         var x = null != i ? i : '';
-                        if ((M.get(t) && (x = x.replace('\uFEFF', '')), 'insertText' === n && /.*\n.*\n$/.test(x) && (x = x.slice(0, -1)), x.includes('\n')))
+                        if ((k.get(t) && (x = x.replace('\uFEFF', '')), 'insertText' === n && /.*\n.*\n$/.test(x) && (x = x.slice(0, -1)), x.includes('\n')))
                             return g(
                                 () => {
                                     var e = x.split('\n');
@@ -1467,17 +1467,17 @@ function th(e) {
                                 { at: r }
                             );
                         if (d.y$.equals(r.anchor.path, r.focus.path)) {
-                            var [k, U] = d.e6.edges(r),
+                            var [M, U] = d.e6.edges(r),
                                 G = {
-                                    start: k.offset,
+                                    start: M.offset,
                                     end: U.offset,
                                     text: x
                                 };
                             if (x && c && 'insertCompositionText' === n) {
                                 var B = c.start + c.text.search(/\S|$/);
                                 G.start + G.text.search(/\S|$/) === B + 1 && G.end === c.start + c.text.length ? ((G.start -= 1), (c = null), A()) : (c = !1);
-                            } else c = 'insertText' === n && (null === c ? G : !!(c && d.e6.isCollapsed(r)) && c.end + c.text.length === k.offset && tu(tu({}, c), {}, { text: c.text + x }));
-                            if (l) return void m(k.path, G);
+                            } else c = 'insertText' === n && (null === c ? G : !!(c && d.e6.isCollapsed(r)) && c.end + c.text.length === M.offset && tu(tu({}, c), {}, { text: c.text + x }));
+                            if (l) return void m(M.path, G);
                         }
                         return g(() => d.ML.insertText(t, x), { at: r });
                 }
@@ -1930,9 +1930,9 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                 if (e) {
                     var { anchor: t } = e,
                         n = d.NB.leaf(C, t.path);
-                    if (er && !d.xv.equals(n, er, { loose: !0 })) return void M.set(C, er);
+                    if (er && !d.xv.equals(n, er, { loose: !0 })) return void k.set(C, er);
                 }
-                M.delete(C);
+                k.delete(C);
             });
         });
         var e_ = null == (t = T.get(C)) || null == (n = t.getBoundingClientRect()) ? void 0 : n.height;
@@ -2058,10 +2058,10 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                                 onCompositionEnd: (0, c.useCallback)(
                                     (e) => {
                                         if (ey.hasSelectableTarget(C, e.target) && (ey.isComposing(C) && (x(!1), w.set(C, !1)), null == J || J.handleCompositionEnd(e), !tL(e, N.onCompositionEnd) && !el && !eu && !eh && !eo && !eg && !em) && e.data) {
-                                            var t = M.get(C);
-                                            (M.delete(C), void 0 !== t && (k.set(C, C.marks), (C.marks = t)), d.ML.insertText(C, e.data));
-                                            var n = k.get(C);
-                                            (k.delete(C), void 0 !== n && (C.marks = n));
+                                            var t = k.get(C);
+                                            (k.delete(C), void 0 !== t && (M.set(C, C.marks), (C.marks = t)), d.ML.insertText(C, e.data));
+                                            var n = M.get(C);
+                                            (M.delete(C), void 0 !== n && (C.marks = n));
                                         }
                                     },
                                     [N.onCompositionEnd]
@@ -2353,8 +2353,8 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
         var n = t(e);
         return null != n ? n : e.defaultPrevented;
     },
-    tM = (0, c.createContext)(!1),
-    tk = () => (0, c.useContext)(tM);
+    tk = (0, c.createContext)(!1),
+    tM = () => (0, c.useContext)(tk);
 function tj(e) {
     return e instanceof Error;
 }
@@ -2436,7 +2436,7 @@ var tV = ['editor', 'children', 'onChange', 'value'],
                           (document.removeEventListener('focus', e, !0), document.removeEventListener('blur', e, !0));
                       });
             }, []),
-            c.createElement(tU.Provider, { value: u }, c.createElement(eq.Provider, { value: s }, c.createElement(eD.Provider, { value: s.editor }, c.createElement(tM.Provider, { value: p }, n))))
+            c.createElement(tU.Provider, { value: u }, c.createElement(eq.Provider, { value: s }, c.createElement(eD.Provider, { value: s.editor }, c.createElement(tk.Provider, { value: p }, n))))
         );
     },
     tZ = (e, t) => {
@@ -2494,11 +2494,11 @@ var tz = function (e) {
             C.set(n, new WeakMap()),
             (n.addMark = (e, t) => {
                 var r, i;
-                (null == (r = x.get(n)) || r(), !M.get(n) && null != (i = j.get(n)) && i.length && M.set(n, null), k.delete(n), o(e, t));
+                (null == (r = x.get(n)) || r(), !k.get(n) && null != (i = j.get(n)) && i.length && k.set(n, null), M.delete(n), o(e, t));
             }),
             (n.removeMark = (e) => {
                 var t;
-                (!M.get(n) && null != (t = j.get(n)) && t.length && M.set(n, null), k.delete(n), s(e));
+                (!k.get(n) && null != (t = j.get(n)) && t.length && k.set(n, null), M.delete(n), s(e));
             }),
             (n.deleteBackward = (e) => {
                 if ('line' !== e) return a(e);

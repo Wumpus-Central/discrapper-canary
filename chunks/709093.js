@@ -81,8 +81,8 @@ let N = function (e) {
         D = (0, h.Ng)(),
         L = null == D || null == (t = D.discount) ? void 0 : t.amount,
         x = P ? T : I,
-        M = P ? p.Z : _.Z,
-        { step: k, breadcrumbs: j, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
+        k = P ? p.Z : _.Z,
+        { step: M, breadcrumbs: j, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
     if (null == j || 0 === j.length) return null;
     let G = j.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
@@ -100,10 +100,10 @@ let N = function (e) {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
-        })).find((e) => e.id === k),
+        })).find((e) => e.id === M),
         V = null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B)) ? i : null == B ? void 0 : B.label,
-        F = null != V && null != k,
-        Z = w && F && k === u.h8.REVIEW;
+        F = null != V && null != M,
+        Z = w && F && M === u.h8.REVIEW;
     return (0, r.jsxs)('div', {
         className: E.container,
         children: [
@@ -125,7 +125,7 @@ let N = function (e) {
                     }),
                     (0, r.jsx)('div', {
                         className: E.textContainer,
-                        children: (0, r.jsx)(M, {
+                        children: (0, r.jsx)(k, {
                             color: R ? 'black' : 'white',
                             className: E.wordmark
                         })
@@ -137,7 +137,7 @@ let N = function (e) {
                 (0, r.jsx)(S, {
                     isOneStepCheckout: w,
                     headerText: V,
-                    step: k,
+                    step: M,
                     filteredBreadcrumbs: G
                 }),
             Z &&

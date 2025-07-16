@@ -1,46 +1,50 @@
-(n.d(t, { Z: () => V }), n(388685));
-var i,
-    r = n(255367),
-    l = n(73800),
+(n.d(t, {
+    Y: () => K,
+    Z: () => X
+}),
+    n(388685));
+var r,
+    i = n(255367),
+    a = n(73800),
     o = n(120356),
     s = n.n(o),
-    c = n(670481),
-    a = n(512722),
-    u = n.n(a),
+    l = n(670481),
+    c = n(512722),
+    u = n.n(c),
     d = n(688642),
-    h = n(731965),
-    p = n(442837),
-    m = n(481060),
-    b = n(490173),
-    f = n(175724),
-    v = n(280492),
-    g = n(40851),
-    y = n(607070),
-    O = n(899663),
-    x = n(317381),
-    C = n(100527),
-    j = n(906732),
-    w = n(168551),
-    P = n(260035),
-    k = n(628123),
-    Z = n(686546),
-    E = n(950796);
+    f = n(731965),
+    _ = n(442837),
+    p = n(481060),
+    h = n(490173),
+    m = n(175724),
+    g = n(280492),
+    E = n(40851),
+    b = n(607070),
+    y = n(899663),
+    O = n(317381),
+    v = n(100527),
+    I = n(906732),
+    T = n(168551),
+    S = n(260035),
+    A = n(628123),
+    N = n(686546),
+    C = n(950796);
 n(151851);
-var S = n(587061),
-    z = n(280049),
-    N = n(314910),
+var R = n(587061),
+    P = n(280049),
+    w = n(314910),
     D = n(22205),
-    T = n(746106),
-    M = n(892071),
-    L = n(358085),
-    R = n(62883),
-    I = n(998502),
-    W = n(473159),
-    _ = n(928518),
-    A = n(981631),
-    U = n(501787),
+    L = n(746106),
+    x = n(892071),
+    k = n(358085),
+    M = n(62883),
+    j = n(998502),
+    U = n(473159),
+    G = n(928518),
+    B = n(981631),
+    V = n(501787),
     F = n(728294);
-function K(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,45 +57,54 @@ function K(e, t, n) {
         e
     );
 }
-function q(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                K(e, t, n[t]);
+            r.forEach(function (t) {
+                Z(e, t, n[t]);
             }));
     }
     return e;
 }
-function B(e, t) {
+function Y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : Y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class H extends (i = l.Component) {
+function K(e) {
+    let { withTitleBar: t, isFullScreen: n } = e;
+    return t && k.isPlatformEmbedded && !n;
+}
+class z extends (r = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        (null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, W.O)(e), e.addEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.addEventListener('contextmenu', R.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', R.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds());
+        (null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), k.isPlatformEmbedded ? t.addEventListener('contextmenu', M.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', M.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds());
     }
     componentDidUpdate(e) {
         let { title: t, clientThemesCSS: n } = this.props;
@@ -100,7 +113,7 @@ class H extends (i = l.Component) {
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), L.isPlatformEmbedded ? t.removeEventListener('contextmenu', R.contextMenuCallbackNative) : t.removeEventListener('contextmenu', R.contextMenuCallbackWeb), (0, h.j)(() => m.s9z.setState((e) => B(q({}, e), { [m.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
+        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), k.isPlatformEmbedded ? t.removeEventListener('contextmenu', M.contextMenuCallbackNative) : t.removeEventListener('contextmenu', M.contextMenuCallbackWeb), (0, f.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -110,68 +123,72 @@ class H extends (i = l.Component) {
     updateClientTheme() {
         let { clientThemesCSS: e, guestWindow: t } = this.props,
             n = t.document,
+            r = !1,
             i = n.head;
-        u()(null != i, 'Window document '.concat('head', ' was null'));
-        let r = i.querySelector('style['.concat(w.PQ, ']'));
-        if (null != r) {
-            r.textContent = e;
+        u()(null != i, 'Window document '.concat(r ? 'body' : 'head', ' was null'));
+        let a = i.querySelector('style['.concat(T.PQ, ']'));
+        if (null != a) {
+            a.textContent = e;
             return;
         }
-        let l = n.createElement('style');
-        (l.setAttribute(w.PQ, 'true'), (l.textContent = e), i.appendChild(l));
+        let o = n.createElement('style');
+        (o.setAttribute(T.PQ, 'true'), (o.textContent = e), i.appendChild(o));
     }
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        for (let e of ((this._combokeys = (0, z.r)(t.documentElement)), [v.iN, v.oV, f.f])) if (e.comboKeysBindGlobal) for (let t of e.binds) this._combokeys.bindGlobal(t, (t, n) => ('function' == typeof e.action && e.action(t, n), !1));
+        for (let e of ((this._combokeys = (0, P.r)(t.documentElement)), [g.iN, g.oV, m.f])) if (e.comboKeysBindGlobal) for (let t of e.binds) this._combokeys.bindGlobal(t, (t, n) => ('function' == typeof e.action && e.action(t, n), !1));
     }
     unregisterPopoutGlobalKeybinds() {
         null != this._combokeys && this._combokeys.reset();
     }
     render() {
-        let { focused: e, forcedColors: t, children: n, windowKey: i, isFullScreen: l, withTitleBar: o, guestWindow: a, clientThemesClassName: u, contentClassName: h, hideModals: p = !1 } = this.props;
-        (0, L.getPlatform)();
-        let f = i === U.$J ? D.Z : k.Z;
-        return (0, r.jsx)(d.VK, {
-            children: (0, r.jsx)(
-                T.w,
+        let { focused: e, forcedColors: t, children: n, windowKey: r, isFullScreen: a, withTitleBar: o, guestWindow: c, clientThemesClassName: u, contentClassName: f, hideModals: _ = !1 } = this.props;
+        (0, k.getPlatform)();
+        let m = K({
+                withTitleBar: o,
+                isFullScreen: a
+            }),
+            g = r === V.$J ? D.Z : A.Z;
+        return (0, i.jsx)(d.VK, {
+            children: (0, i.jsx)(
+                L.w,
                 {
-                    windowKey: i,
-                    children: (0, r.jsx)(O.Z, {
-                        children: (0, r.jsxs)(m.JcV, {
+                    windowKey: r,
+                    children: (0, i.jsx)(y.Z, {
+                        children: (0, i.jsxs)(p.JcV, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, r.jsx)(G, {
-                                    guestWindow: a,
+                                (0, i.jsx)(q, {
+                                    guestWindow: c,
                                     className: u,
-                                    children: (0, r.jsxs)(f, {
+                                    children: (0, i.jsxs)(g, {
                                         children: [
-                                            (0, r.jsx)(Z.Co, {}),
-                                            (0, r.jsx)(g.Wu, {
-                                                appContext: A.IlC.POPOUT,
-                                                renderWindow: a,
-                                                children: (0, r.jsx)(P.m, {
-                                                    children: (0, r.jsxs)(N.yP, {
+                                            (0, i.jsx)(N.Co, {}),
+                                            (0, i.jsx)(E.Wu, {
+                                                appContext: B.IlC.POPOUT,
+                                                renderWindow: c,
+                                                children: (0, i.jsx)(S.m, {
+                                                    children: (0, i.jsxs)(w.yP, {
                                                         children: [
-                                                            (0, r.jsxs)('div', {
+                                                            (0, i.jsxs)('div', {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    o &&
-                                                                        !l &&
-                                                                        (0, r.jsx)(E.T, {
-                                                                            windowKey: i,
+                                                                    m &&
+                                                                        (0, i.jsx)(C.TF, {
+                                                                            windowKey: r,
                                                                             short: !0
                                                                         }),
                                                                     null,
-                                                                    (0, r.jsx)('div', {
-                                                                        className: s()(F.content, h),
+                                                                    (0, i.jsx)('div', {
+                                                                        className: s()(F.content, f),
                                                                         children: n
                                                                     })
                                                                 ]
                                                             }),
-                                                            !p && (0, r.jsx)(m.nKe, {}),
-                                                            (0, r.jsx)(b.Z, {}),
-                                                            (0, r.jsx)(N.Un, {})
+                                                            !_ && (0, i.jsx)(p.nKe, {}),
+                                                            (0, i.jsx)(h.Z, {}),
+                                                            (0, i.jsx)(w.Un, {})
                                                         ]
                                                     })
                                                 })
@@ -179,7 +196,7 @@ class H extends (i = l.Component) {
                                         ]
                                     })
                                 }),
-                                (0, r.jsx)(c.OU, {})
+                                (0, i.jsx)(l.OU, {})
                             ]
                         })
                     })
@@ -190,13 +207,13 @@ class H extends (i = l.Component) {
     }
     constructor(...e) {
         (super(...e),
-            K(this, 'rootRef', l.createRef()),
-            K(this, '_cleanupWindowActionCreators', void 0),
-            K(this, '_combokeys', null),
-            K(this, 'beforeUnload', (e) => {
+            Z(this, 'rootRef', a.createRef()),
+            Z(this, '_cleanupWindowActionCreators', void 0),
+            Z(this, '_combokeys', null),
+            Z(this, 'beforeUnload', (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
-                        (_.Z.unmountWindow(this.props.windowKey), L.isPlatformEmbedded && I.ZP.close(this.props.windowKey));
+                        (G.Z.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && j.ZP.close(this.props.windowKey));
                     };
                 null != t
                     ? t({
@@ -205,65 +222,65 @@ class H extends (i = l.Component) {
                       })
                     : n();
             }),
-            K(this, 'handleBlur', () => {
+            Z(this, 'handleBlur', () => {
                 var e, t;
                 null == (e = (t = this.props).onBlur) || e.call(t);
             }));
     }
 }
-K(H, 'defaultProps', { withTitleBar: !0 });
-let G = l.forwardRef(function (e, t) {
-        let { guestWindow: n, className: i, children: o } = e,
-            { lang: c, style: a, className: d } = (0, M.vP)();
+Z(z, 'defaultProps', { withTitleBar: !0 });
+let q = a.forwardRef(function (e, t) {
+        let { guestWindow: n, className: r, children: o } = e,
+            { lang: l, style: c, className: d } = (0, x.vP)();
         return (
-            l.useEffect(() => {
+            a.useEffect(() => {
                 let e = n.document.documentElement;
-                (u()(null != e, 'Window document element was null'), e.setAttribute('style', a));
-            }, [n, a]),
-            l.useEffect(() => {
-                let e = n.document.documentElement;
-                (u()(null != e, 'Window document element was null'), e.setAttribute('lang', c));
+                (u()(null != e, 'Window document element was null'), e.setAttribute('style', c));
             }, [n, c]),
-            (0, r.jsx)('div', {
+            a.useEffect(() => {
+                let e = n.document.documentElement;
+                (u()(null != e, 'Window document element was null'), e.setAttribute('lang', l));
+            }, [n, l]),
+            (0, i.jsx)('div', {
                 'data-popout-root': !0,
                 ref: t,
-                className: s()(d, i),
+                className: s()(d, r),
                 children: o
             })
         );
     }),
-    V = l.forwardRef(function (e, t) {
+    X = a.forwardRef(function (e, t) {
         let {
             guestWindow: n,
-            focused: i,
-            isFullScreen: l
-        } = (0, p.cj)([_.Z], () => ({
-            guestWindow: _.Z.getWindow(e.windowKey),
-            focused: _.Z.getWindowFocused(e.windowKey),
-            isFullScreen: _.Z.isWindowFullScreen(e.windowKey)
+            focused: r,
+            isFullScreen: a
+        } = (0, _.cj)([G.Z], () => ({
+            guestWindow: G.Z.getWindow(e.windowKey),
+            focused: G.Z.getWindowFocused(e.windowKey),
+            isFullScreen: G.Z.isWindowFullScreen(e.windowKey)
         }));
         u()(null != n, 'Missing guestWindow reference');
-        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, p.cj)([y.Z, x.ZP], () => ({
-            forcedColors: y.Z.useForcedColors ? 'yes' : 'no',
-            connectedEmbeddedActivity: x.ZP.getCurrentEmbeddedActivity()
+        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([b.Z, O.ZP], () => ({
+            forcedColors: b.Z.useForcedColors ? 'yes' : 'no',
+            connectedEmbeddedActivity: O.ZP.getCurrentEmbeddedActivity()
         }));
-        (0, S.Z)(n, !1);
-        let { analyticsLocations: c } = (0, j.ZP)(C.Z.POPOUT_WINDOW),
-            { clientThemesClassName: a, clientThemesCSS: d } = (0, w.ZP)();
+        (0, R.Z)(n, !1);
+        let { analyticsLocations: l } = (0, I.ZP)(v.Z.POPOUT_WINDOW),
+            { clientThemesClassName: c, clientThemesCSS: d } = (0, T.ZP)();
         return null == n
             ? null
-            : (0, r.jsx)(m.Sle, {
-                  children: (0, r.jsx)(j.Gt, {
-                      value: c,
-                      children: (0, r.jsx)(
-                          H,
-                          B(q({ ref: t }, e), {
+            : (0, i.jsx)(p.Sle, {
+                  children: (0, i.jsx)(I.Gt, {
+                      value: l,
+                      children: (0, i.jsx)(
+                          z,
+                          W(H({ ref: t }, e), {
                               guestWindow: n,
-                              focused: i,
-                              isFullScreen: l,
+                              focused: r,
+                              isFullScreen: a,
                               forcedColors: o,
                               connectedEmbeddedActivity: s,
-                              clientThemesClassName: a,
+                              clientThemesClassName: c,
                               clientThemesCSS: d
                           })
                       )

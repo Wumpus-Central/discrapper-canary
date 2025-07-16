@@ -108,9 +108,9 @@ function L(e) {
 function x() {
     f = c.QZA.SUBMITTING;
 }
-function M() {
+function k() {
     let e = l.default.getCurrentUser();
-    (k(),
+    (M(),
         null != e &&
             (b = d(
                 {},
@@ -128,7 +128,7 @@ function M() {
                 })
             )));
 }
-function k() {
+function M() {
     ((f = c.QZA.OPEN), (g = {}));
 }
 function j(e) {
@@ -193,6 +193,6 @@ let G = new U(s.Z, {
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
-    USER_SETTINGS_MODAL_RESET: M
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
+    USER_SETTINGS_MODAL_RESET: k
 });

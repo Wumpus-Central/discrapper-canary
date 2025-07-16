@@ -2,8 +2,8 @@
 var r = n(255367),
     s = n(73800),
     o = n(668826),
-    i = n(115092),
-    a = n(647964);
+    a = n(115092),
+    i = n(647964);
 function c(e, t, n) {
     return {
         x: Math.min(Math.random() * e, e - n),
@@ -39,18 +39,18 @@ let l = (0, s.forwardRef)(function (e, t) {
         (v(), O());
     }, [v, O]);
     return (
-        (0, i.Z)({
+        (0, a.Z)({
             isPaused: n,
             onInterval: j,
             interval: 1000
         }),
         (0, r.jsx)('div', {
-            className: a.container,
+            className: i.container,
             children: h.map((e, t) =>
                 (0, r.jsx)(
                     'div',
                     {
-                        className: a.drop,
+                        className: i.drop,
                         style: {
                             top: e.y,
                             left: e.x
