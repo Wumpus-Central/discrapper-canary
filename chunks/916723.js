@@ -1,10 +1,10 @@
-(n.r(e),
-    n.d(e, {
-        default: () => a,
-        messagesLoader: () => r
+(n.r(t),
+    n.d(t, {
+        default: () => b,
+        messagesLoader: () => i
     }));
-let { createLoader: i } = n(515149),
-    r = i(
+let { createLoader: h } = n(515149),
+    i = h(
         {
             bg: () => n.e('29162').then(n.t.bind(n, 340984, 19)),
             cs: () => n.e('11182').then(n.t.bind(n, 950246, 19)),
@@ -40,5 +40,5 @@ let { createLoader: i } = n(515149),
         },
         'en-US'
     ),
-    { makeMessagesProxy: l } = n(515149),
-    a = l(r);
+    { makeMessagesProxy: d } = n(515149),
+    b = d(i);

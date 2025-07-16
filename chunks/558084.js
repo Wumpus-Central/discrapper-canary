@@ -1,2 +1,2 @@
-(s.r(t), s.d(t, { default: () => a }));
-let a = JSON.parse('{"JOpi7+":"Choose Effect Color","1wilMz":"Choose Effect","nP0ngY":"Choose Font","cAtmqa":"Preview","NOGFdn":"Surprise Me","ZPMAlZ":"Change Display Name Style","vJqrIi":"Change Style","ymq8WV":"Remove Style","86GtGB":"Display Name Styles"}');
+(i.r(c), i.d(c, { default: () => n }));
+let n = JSON.parse('{"bdtv8/":"bdtv8/","91ufEx":"91ufEx","rN7cub":"rN7cub","CbHHnJ":"CbHHnJ","GsMX6u":"GsMX6u","ZEL6m5":"ZEL6m5","iEcEKC":"iEcEKC","DL7jLS":"DL7jLS","jq4aRk":"jq4aRk","WMG3Mz":"WMG3Mz","jV9DNz":"jV9DNz","JOpi7+":"JOpi7+","9pltjo":"9pltjo","1wilMz":"1wilMz","nP0ngY":"nP0ngY","cPZTfX":"cPZTfX","cAtmqa":"cAtmqa","NOGFdn":"NOGFdn","ZPMAlZ":"ZPMAlZ","vJqrIi":"vJqrIi","ymq8WV":"ymq8WV","86GtGB":"86GtGB"}');
