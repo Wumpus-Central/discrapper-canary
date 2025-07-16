@@ -5837,6 +5837,7 @@
   "8RCtpK": "Please select a server for the emoji.",
   "xZLPcH": "The selected file failed to load.\\n\\nSupported file types include .jpg, .png, .gif, .webp, and others.\\n\\n",
   "QY7ZFR": "You currently don't have emoji upload permissions in any of your servers.",
+  "SLhH39": "{count, plural, one { animated slot} other { animated slots} }",
   "WkK72t": "{count, plural, one { open slot} other { open slots} }",
   "oBPhdH": "Drag image to reposition",
   "U2JFHR": "emoji_name",
