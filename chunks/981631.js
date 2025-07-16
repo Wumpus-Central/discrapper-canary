@@ -3379,6 +3379,7 @@ var np = (function (e) {
             (e.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED = 'search_results_feedback_entrypoint_viewed'),
             (e.SEARCH_MESSAGES_CHANNEL_PREFILL = 'search_messages_channel_prefill'),
             (e.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED = 'search_messages_autocomplete_clicked'),
+            (e.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED = 'search_messages_selected_channel_filter_clicked'),
             (e.SEARCH_HISTORY_CLICKED = 'search_history_clicked'),
             (e.MESSAGES_SEARCH_STARTED = 'messages_search_started'),
             (e.SEARCH_V2_OPENED = 'search_v2_opened'),

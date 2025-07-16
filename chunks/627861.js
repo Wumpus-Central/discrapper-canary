@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(880251),
     E = n(515344),
     y = n(371991),
-    x = n(561308),
-    C = n(810568),
+    C = n(561308),
+    x = n(810568),
     v = n(567409),
     O = n(168524),
     j = n(592745),
@@ -104,8 +104,8 @@ function es(e) {
     let { application: c, currentUserPresenceActivity: u, hideParty: d, message: p, onView: m, partyStatusElement: f, presenceActivity: g } = e,
         b = eo(u, g),
         E = (0, S.Lz)(g, p.author, 'Invite Embed'),
-        x = !(0, Y.Z)(g, p, c.id),
-        C = i.useMemo(() => {
+        C = !(0, Y.Z)(g, p, c.id),
+        x = i.useMemo(() => {
             let e = [];
             if (!b) {
                 var t;
@@ -124,7 +124,7 @@ function es(e) {
             if (null != g) return () => (0, I.aG)(g);
         }, [g]),
         O = (0, V.dQ)(c.name, null == (t = p.activity) ? void 0 : t.type);
-    if (x) {
+    if (C) {
         let e = (0, r.jsx)(s.Text, {
             variant: 'text-xs/medium',
             className: en.description,
@@ -194,7 +194,7 @@ function es(e) {
             title: e,
             iconSrc: null != (o = (0, z.Z)(g, c.id)) ? o : void 0,
             info: u,
-            actions: C,
+            actions: x,
             onClickContent: v,
             trackingConfig: {
                 id: c.id,
@@ -209,7 +209,7 @@ function ec(e, t) {
         openGameProfileModal: (0, O.Z)({
             location: 'Rich Presence Activity Invite Embed',
             applicationId: e,
-            source: C.m1.Embed,
+            source: x.m1.Embed,
             trackEntryPointImpression: !0,
             sourceUserId: t
         }),
@@ -300,7 +300,7 @@ function eu(e) {
 }
 function ed(e) {
     var t, n, a, g;
-    let { analyticsLocations: C, application: O, channel: j, currentUserId: I, currentUserPresenceActivity: S, hideParty: T, message: N, onView: P, partyStatusElement: A, presenceActivity: Z } = e,
+    let { analyticsLocations: x, application: O, channel: j, currentUserId: I, currentUserPresenceActivity: S, hideParty: T, message: N, onView: P, partyStatusElement: A, presenceActivity: Z } = e,
         R = (0, m.ye)(O),
         { bot: L } = O,
         k = U.ZP.getApplicationIconURL({
@@ -336,12 +336,12 @@ function ed(e) {
                               (0, p.W)({
                                   appId: ep,
                                   botId: ef.id,
-                                  analyticsLocations: C
+                                  analyticsLocations: x
                               });
                           }
                       }
                     : null,
-            [C, G, em, ep, ef]
+            [x, G, em, ep, ef]
         ),
         eh = (function (e) {
             let { presenceActivity: t, currentUserPresenceActivity: n, currentUserId: r, message: i, application: l, isEmbeddedApplication: a, isGameLaunchable: o } = e;
@@ -380,7 +380,7 @@ function ed(e) {
                                   channelId: j.id,
                                   messageId: N.id,
                                   source: $.Sbl.MESSAGE_EMBED,
-                                  analyticsLocations: C,
+                                  analyticsLocations: x,
                                   embedded: (0, K.Z)(Z, $.xjy.EMBEDDED)
                               }),
                                   (0, X.Z)({
@@ -392,7 +392,7 @@ function ed(e) {
                                       applicationId: Z.application_id,
                                       partyId: null == (e = Z.party) ? void 0 : e.id,
                                       messageId: N.id,
-                                      analyticsLocations: C
+                                      analyticsLocations: x
                                   }));
                           }
                       }
@@ -429,9 +429,9 @@ function ed(e) {
                           : null != e_
                             ? e_
                             : void 0,
-            [C, eh, eE, eg, j.id, j.guild_id, I, eb, N.author.id, N.id, Z, e_]
+            [x, eh, eE, eg, j.id, j.guild_id, I, eb, N.author.id, N.id, Z, e_]
         ),
-        ex = i.useMemo(
+        eC = i.useMemo(
             () =>
                 ee
                     ? {
@@ -454,14 +454,14 @@ function ed(e) {
                         : void 0,
             [O.id, ee, es, null == Q ? void 0 : Q.id, e_]
         ),
-        eC = (0, E.G)(O),
-        ev = i.useMemo(() => (null != J ? J : null != er ? er : null != eC && R ? eC : void 0), [R, J, er, eC]),
+        ex = (0, E.G)(O),
+        ev = i.useMemo(() => (null != J ? J : null != er ? er : null != ex && R ? ex : void 0), [R, J, er, ex]),
         eO = i.useMemo(() => {
             let e = [];
-            return (z || null == ey ? z && null != ex && e.push(ex) : e.push(ey), e);
-        }, [ex, z, ey]),
+            return (z || null == ey ? z && null != eC && e.push(eC) : e.push(ey), e);
+        }, [eC, z, ey]),
         ej = (0, V.dQ)(O.name, null == (t = N.activity) ? void 0 : t.type),
-        eI = (0, v.N)(O.id).some((e) => (0, x.ig)(e) === l.o.GLOBAL)
+        eI = (0, v.N)(O.id).some((e) => (0, C.ig)(e) === l.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(s.YqE, {
@@ -592,22 +592,22 @@ function ep(e) {
                 }),
             [h]
         ),
-        x = (0, ee.Ps)(null == f || null == (t = f.party) ? void 0 : t.id) || p.id === T.r9.id,
-        C = (0, r.jsx)(er, {
+        C = (0, ee.Ps)(null == f || null == (t = f.party) ? void 0 : t.id) || p.id === T.r9.id,
+        x = (0, r.jsx)(er, {
             partyMembers: y,
             partySize: b,
             maxPartySize: E,
             guildId: s.guild_id,
             activityActionType: null == (n = c.activity) ? void 0 : n.type
         });
-    return x
+    return C
         ? (0, r.jsx)(es, {
               application: p,
               currentUserPresenceActivity: _,
               hideParty: u,
               message: c,
               onView: d,
-              partyStatusElement: C,
+              partyStatusElement: x,
               presenceActivity: f
           })
         : (0, r.jsx)(ed, {
@@ -619,7 +619,7 @@ function ep(e) {
               hideParty: u,
               message: c,
               onView: d,
-              partyStatusElement: C,
+              partyStatusElement: x,
               presenceActivity: f
           });
 }

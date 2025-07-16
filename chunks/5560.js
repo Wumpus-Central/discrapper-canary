@@ -1,6 +1,6 @@
 (n.d(t, {
-    V: () => O,
-    Z: () => j
+    V: () => j,
+    Z: () => O
 }),
     n(388685));
 var r = n(255367),
@@ -67,7 +67,7 @@ function v(e, t) {
         e
     );
 }
-class O extends i.PureComponent {
+class j extends i.PureComponent {
     componentDidMount() {
         this.updateCache();
     }
@@ -123,7 +123,7 @@ class O extends i.PureComponent {
                 left: null != b ? i.x + b : void 0,
                 top: null != _ ? i.y + _ : void 0
             },
-            O = (e) => {
+            j = (e) => {
                 let t = n && !e;
                 return !0 !== u
                     ? null
@@ -144,7 +144,7 @@ class O extends i.PureComponent {
                           ]
                       });
             },
-            j = (e) => {
+            O = (e) => {
                 let t = n && !e;
                 return {
                     [y.animating]: t,
@@ -182,8 +182,8 @@ class O extends i.PureComponent {
                                 style: C,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)('div', {
-                                    className: a()(y.animationContainer, j(n)),
-                                    children: [O(n), (0, r.jsx)('div', { className: a()(y.innerCircle, j(n)) }), (0, r.jsx)('div', { className: a()(y.outerCircle, j(n)) })]
+                                    className: a()(y.animationContainer, O(n)),
+                                    children: [j(n), (0, r.jsx)('div', { className: a()(y.innerCircle, O(n)) }), (0, r.jsx)('div', { className: a()(y.outerCircle, O(n)) })]
                                 })
                             })
                         );
@@ -204,7 +204,7 @@ class O extends i.PureComponent {
             }));
     }
 }
-let j =
+let O =
     12633 == n.j
         ? function () {
               let {
@@ -226,7 +226,7 @@ let j =
                             return (
                                 s()(null != a, 'Missing tutorial definition for '.concat(i)),
                                 (0, r.jsx)(
-                                    O,
+                                    j,
                                     x(
                                         {
                                             tutorialId: i,

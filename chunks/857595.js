@@ -16,7 +16,8 @@ n.d(t, {
     qz: () => O,
     r_: () => g,
     rf: () => p,
-    u1: () => S
+    u1: () => S,
+    vW: () => C
 });
 var r = n(570140),
     i = n(153867),
@@ -131,4 +132,10 @@ function A() {
 }
 function N() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE' });
+}
+function C(e) {
+    r.Z.dispatch({
+        type: 'ACCESSIBILITY_SET_CONTRAST_MODE',
+        contrastMode: e
+    });
 }

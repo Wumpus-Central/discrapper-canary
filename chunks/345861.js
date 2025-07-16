@@ -1,38 +1,38 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     l = n(755721),
     o = n(481060),
     a = n(813197);
 function c(e) {
     var t,
         n,
-        { buttonCTA: s, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: g = !1, maxFileSizeBytes: b, filters: v, className: m } = e,
+        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: g = !1, maxFileSizeBytes: b, filters: v, className: m } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                s = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        s = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
-                    return s;
+                        i = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) ((n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) ((n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
-            return s;
+            return i;
         })(e, ['buttonCTA', 'onChange', 'onFileSizeError', 'aria-label', 'multiple', 'disabled', 'submitting', 'maxFileSizeBytes', 'filters', 'className']);
     return (0, r.jsx)(o.tEY, {
         within: !0,
         children: (0, r.jsxs)('div', {
-            className: i()(
+            className: s()(
                 (0, l.nY)(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -85,7 +85,7 @@ function c(e) {
             children: [
                 (0, r.jsx)('span', {
                     'aria-hidden': !0,
-                    children: s
+                    children: i
                 }),
                 (0, r.jsx)(a.ZP, {
                     tabIndex: 0,
@@ -94,7 +94,7 @@ function c(e) {
                     multiple: f,
                     maxFileSizeBytes: b,
                     filters: v,
-                    'aria-label': null != d ? d : s,
+                    'aria-label': null != d ? d : i,
                     disabled: p
                 })
             ]

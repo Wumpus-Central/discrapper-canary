@@ -25,12 +25,12 @@ function g(e) {
         !v)
     )
         return null;
-    let O = !0 === _ ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
-        j = 'ban-user-'.concat(null == g ? void 0 : g.id);
+    let j = !0 === _ ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
+        O = 'ban-user-'.concat(null == g ? void 0 : g.id);
     return (0, r.jsx)(
         h.Z,
         {
-            text: O,
+            text: j,
             icon: o.pgN,
             onClick: () => {
                 null != g &&
@@ -92,6 +92,6 @@ function g(e) {
             submitting: C,
             color: a.zx.Colors.RED
         },
-        j
+        O
     );
 }

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r,
-    s = n(255367),
-    i = n(73800),
+    i = n(255367),
+    s = n(73800),
     l = n(846519),
     o = n(755721),
     a = n(481060),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = i.PureComponent) {
+class f extends (r = s.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
@@ -28,8 +28,8 @@ class f extends (r = i.PureComponent) {
         var e, t;
         let { text: n } = this.props,
             { mode: r } = this.state,
-            i = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
-        return (0, s.jsx)(
+            s = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
+        return (0, i.jsx)(
             a.kO8,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -51,7 +51,7 @@ class f extends (r = i.PureComponent) {
                 {
                     onCopy: this.handleCopy,
                     mode: r,
-                    text: i,
+                    text: s,
                     supportsCopy: c.wS
                 }),
             Object.getOwnPropertyDescriptors

@@ -33,10 +33,10 @@ var r = n(255367),
     T = n(664559),
     N = n(767893),
     k = n(206697),
-    w = n(74551),
+    A = n(74551),
     Z = n(981631),
-    A = n(388032),
-    M = n(585693);
+    w = n(388032),
+    L = n(585693);
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function F(e) {
     }
     return e;
 }
-function L(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -89,13 +89,13 @@ let D = {
 function H(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.VqE, {
-        'aria-label': A.intl.string(A.t['2pAkDA']),
+        'aria-label': w.intl.string(w.t['2pAkDA']),
         children: (0, r.jsxs)('div', {
-            className: M.popoutContainer,
+            className: L.popoutContainer,
             children: [
                 (0, r.jsx)(m.h4, {
                     icon: f.plf,
-                    title: A.intl.string(A.t['2pAkDA'])
+                    title: w.intl.string(w.t['2pAkDA'])
                 }),
                 (0, r.jsx)(B, { closePopout: t })
             ]
@@ -192,14 +192,14 @@ function G(e) {
                         })(e, ['ref']);
                     return (0, r.jsx)(
                         f.h21,
-                        L(
+                        M(
                             F(
                                 {
                                     ref: (e) => {
                                         var t;
                                         ((l.current = e), (s.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     },
-                                    className: M.messagesScroller
+                                    className: L.messagesScroller
                                 },
                                 a
                             ),
@@ -244,15 +244,15 @@ function W(e) {
         c = (0, p.e7)([O.Z], () => !!((null == o ? void 0 : o.type) === Z.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || O.Z.can(Z.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, r.jsxs)('div', {
-              className: M.messageContainer,
+              className: L.messageContainer,
               children: [
                   (0, r.jsx)(f.P3F, {
-                      className: M.clickableMessageBackground,
+                      className: L.clickableMessageBackground,
                       onClick: i,
-                      'aria-label': A.intl.string(A.t['+TSRGB'])
+                      'aria-label': w.intl.string(w.t['+TSRGB'])
                   }),
                   null != t.saveData.dueAt
-                      ? (0, r.jsx)(w.Z, {
+                      ? (0, r.jsx)(A.Z, {
                             reminder: t,
                             throttledNow: l
                         })
@@ -263,7 +263,7 @@ function W(e) {
                       {
                           message: t.message,
                           channel: o,
-                          className: M.message,
+                          className: L.message,
                           compact: j.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: D,
@@ -272,7 +272,7 @@ function W(e) {
                       t.message.id
                   ),
                   (0, r.jsx)(x.ZP, {
-                      className: M.hoverBar,
+                      className: L.hoverBar,
                       children: (0, r.jsx)(q, {
                           savedMessage: t,
                           jumpToMessage: i
@@ -281,10 +281,10 @@ function W(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(M.messageContainer, M.deletedMessage),
+              className: a()(L.messageContainer, L.deletedMessage),
               children: [
                   (0, r.jsx)('div', {
-                      className: M.deleteIcon,
+                      className: L.deleteIcon,
                       children: (0, r.jsx)(f.P4T, {
                           size: 'xxs',
                           color: f.TVs.colors.INTERACTIVE_ACTIVE
@@ -293,14 +293,14 @@ function W(e) {
                   (0, r.jsx)(f.X6q, {
                       variant: 'text-md/semibold',
                       color: 'header-secondary',
-                      children: null != t.saveData.dueAt ? A.intl.string(A.t['wuQm+v']) : A.intl.string(A.t.o572FR)
+                      children: null != t.saveData.dueAt ? w.intl.string(w.t['wuQm+v']) : w.intl.string(w.t.o572FR)
                   }),
                   (0, r.jsx)(x.ZP, {
-                      className: M.hoverBar,
+                      className: L.hoverBar,
                       children: (0, r.jsx)(
                           x.sF,
                           {
-                              label: A.intl.string(A.t.SvXS1d),
+                              label: w.intl.string(w.t.SvXS1d),
                               icon: f.XHJ,
                               dangerous: !0,
                               onClick: () => (0, C.x)(t.saveData)
@@ -330,7 +330,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t.yjGtdH),
+                          label: w.intl.string(w.t.yjGtdH),
                           icon: f.dz2,
                           onClick: () =>
                               (0, C.z)({
@@ -344,7 +344,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t.vrbqs7),
+                          label: w.intl.string(w.t.vrbqs7),
                           icon: f.vdY,
                           onClick: (e) =>
                               (0, g.jW)(e, async () => {
@@ -352,8 +352,8 @@ function q(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          L(F({}, n), {
-                                              label: A.intl.string(A.t.roMu1N),
+                                          M(F({}, n), {
+                                              label: w.intl.string(w.t.roMu1N),
                                               message: t.message
                                           })
                                       );
@@ -365,7 +365,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t['+TSRGB']),
+                          label: w.intl.string(w.t['+TSRGB']),
                           icon: f.d4D,
                           onClick: (e) => s(e)
                       },
@@ -374,7 +374,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t.SvXS1d),
+                          label: w.intl.string(w.t.SvXS1d),
                           icon: f.plf,
                           onClick: () => (0, C.x)(t.saveData)
                       },
@@ -387,7 +387,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t.mJ3P0N),
+                          label: w.intl.string(w.t.mJ3P0N),
                           icon: f.T39,
                           onClick: (e) =>
                               (0, g.jW)(e, async () => {
@@ -395,8 +395,8 @@ function q(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          L(F({}, n), {
-                                              label: A.intl.string(A.t.mJ3P0N),
+                                          M(F({}, n), {
+                                              label: w.intl.string(w.t.mJ3P0N),
                                               message: t.message
                                           })
                                       );
@@ -407,7 +407,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t['+TSRGB']),
+                          label: w.intl.string(w.t['+TSRGB']),
                           icon: f.d4D,
                           onClick: (e) => s(e)
                       },
@@ -416,7 +416,7 @@ function q(e) {
                   (0, r.jsx)(
                       x.sF,
                       {
-                          label: A.intl.string(A.t.SvXS1d),
+                          label: w.intl.string(w.t.SvXS1d),
                           icon: f.plf,
                           onClick: () => (0, C.x)(t.saveData)
                       },

@@ -1,12 +1,12 @@
-(n.d(t, { Z: () => f }), n(539854));
+(n.d(t, { Z: () => h }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
     a = n(179658),
     o = n(230711),
-    c = n(482215),
-    s = n(906467),
+    s = n(482215),
+    c = n(906467),
     u = n(857192),
     d = n(594174),
     p = n(695346),
@@ -55,29 +55,29 @@ function O(e, t) {
         e
     );
 }
-function f() {
+function h() {
     let {
             layoutDebuggingEnabled: e,
             isStaff: t,
             isDeveloper: n,
-            isLoggingGatewayEvents: f,
-            isLoggingOverlayEvents: h,
+            isLoggingGatewayEvents: h,
+            isLoggingOverlayEvents: f,
             isLoggingAnalyticsEvents: j,
             isAnalyticsDebuggerEnabled: v,
-            isTracingRequests: S,
-            isForcedCanary: E,
+            isTracingRequests: E,
+            isForcedCanary: S,
             isSourceMapsEnabled: P,
             isIdleStatusIndicatorEnabled: m,
             isAxeEnabled: x,
             preventPopoutClose: w,
             onlyShowPreviewAppCollections: k,
             disableAppCollectionsCache: D
-        } = (0, i.cj)([u.default, d.default, s.Z], () => {
+        } = (0, i.cj)([u.default, d.default, c.Z], () => {
             var e;
             return {
                 layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
                 isStaff: (null == (e = d.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0,
-                isDeveloper: s.Z.isDeveloper,
+                isDeveloper: c.Z.isDeveloper,
                 isLoggingGatewayEvents: u.default.isLoggingGatewayEvents,
                 isLoggingOverlayEvents: u.default.isLoggingOverlayEvents,
                 isLoggingAnalyticsEvents: u.default.isLoggingAnalyticsEvents,
@@ -92,8 +92,8 @@ function f() {
                 disableAppCollectionsCache: u.default.disableAppCollectionsCache
             };
         }),
-        { horizontalSpacing: Z, verticalSpacing: A, maxHorizontalSpacing: C, maxVerticalSpacing: I } = (0, c.i)(),
-        { setHorizontalSpacing: T, setVerticalSpacing: _ } = c.i.getState(),
+        { horizontalSpacing: Z, verticalSpacing: A, maxHorizontalSpacing: C, maxVerticalSpacing: I } = (0, s.i)(),
+        { setHorizontalSpacing: T, setVerticalSpacing: _ } = s.i.getState(),
         N = p.zY.useSetting(),
         R = [];
     return (
@@ -140,9 +140,9 @@ function f() {
                                 {
                                     id: 'tracing-requests',
                                     label: 'Tracing Requests',
-                                    checked: S,
+                                    checked: E,
                                     action: () => {
-                                        (0, a.y)({ trace: !S });
+                                        (0, a.y)({ trace: !E });
                                     }
                                 },
                                 'tracing-requests'
@@ -152,9 +152,9 @@ function f() {
                                 {
                                     id: 'forced-canary',
                                     label: 'Forced Canary',
-                                    checked: E,
+                                    checked: S,
                                     action: () => {
-                                        (0, a.y)({ canary: !E });
+                                        (0, a.y)({ canary: !S });
                                     }
                                 },
                                 'forced-canary'
@@ -263,9 +263,9 @@ function f() {
                                 {
                                     id: 'gateway-events',
                                     label: 'Gateway Events',
-                                    checked: f,
+                                    checked: h,
                                     action: () => {
-                                        (0, a.y)({ logGatewayEvents: !f });
+                                        (0, a.y)({ logGatewayEvents: !h });
                                     }
                                 },
                                 'gateway-events'
@@ -275,9 +275,9 @@ function f() {
                                 {
                                     id: 'overlay-events',
                                     label: 'Overlay RPC Events',
-                                    checked: h,
+                                    checked: f,
                                     action: () => {
-                                        (0, a.y)({ logOverlayEvents: !h });
+                                        (0, a.y)({ logOverlayEvents: !f });
                                     }
                                 },
                                 'overlay-events'

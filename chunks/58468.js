@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => p }), n(388685));
 var r,
-    s = n(442837),
-    i = n(570140),
+    i = n(442837),
+    s = n(570140),
     l = n(709054),
     o = n(592125);
 function a(e, t, n) {
@@ -24,7 +24,7 @@ function d() {
         null == o.Z.getChannel(e) && delete u[e];
     });
 }
-class f extends (r = s.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (this.waitFor(o.Z), (u = null != e ? e : c));
     }
@@ -39,7 +39,7 @@ class f extends (r = s.ZP.PersistedStore) {
     }
 }
 (a(f, 'displayName', 'CollapsedVoiceChannelStore'), a(f, 'persistKey', 'collapsedChannels'));
-let p = new f(i.Z, {
+let p = new f(s.Z, {
     CONNECTION_OPEN: d,
     OVERLAY_INITIALIZE: d,
     CHANNEL_COLLAPSE: function (e) {

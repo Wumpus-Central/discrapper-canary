@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     l = n(704215),
     o = n(481060),
     a = n(266454),
@@ -11,7 +11,7 @@ var s = n(120356),
 function d() {
     return (0, a.zu)(l.z.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)('div', {
-              className: i()(u.premiumTrialBadge, u.premiumTrialAcknowledgedBadge, {}),
+              className: s()(u.premiumTrialBadge, u.premiumTrialAcknowledgedBadge, {}),
               children: [
                   (0, r.jsx)(o.T39, {
                       size: 'custom',
@@ -28,7 +28,7 @@ function d() {
               ]
           })
         : (0, r.jsx)('div', {
-              className: i()(u.premiumTrialBadge, u.backgroundGradient),
+              className: s()(u.premiumTrialBadge, u.backgroundGradient),
               children: (0, r.jsx)(o.Text, {
                   variant: 'eyebrow',
                   color: 'always-white',

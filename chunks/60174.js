@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(594174),
     E = n(630388),
     y = n(74538),
-    x = n(566006),
-    C = n(981631),
+    C = n(566006),
+    x = n(981631),
     v = n(185923),
     O = n(474936),
     j = n(388032),
@@ -57,9 +57,9 @@ class P extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === C.yb.SENDING,
-            f = e === x.O.BURST;
-        if (c || (0, E.yE)(t.flags, C.iLy.EPHEMERAL)) return null;
+            c = t.state === x.yb.SENDING,
+            f = e === C.O.BURST;
+        if (c || (0, E.yE)(t.flags, x.iLy.EPHEMERAL)) return null;
         let _ = b.default.getCurrentUser(),
             h = (0, y.I5)(_),
             g = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
@@ -70,7 +70,7 @@ class P extends i.Component {
                 color: 'currentColor',
                 className: O.icon
             };
-        return t.type === C.uaV.EMOJI_ADDED && 0 === t.reactions.length
+        return t.type === x.uaV.EMOJI_ADDED && 0 === t.reactions.length
             ? (0, r.jsx)(p.e, {
                   message: t,
                   className: a()(O.reactionBtn, n)
@@ -138,14 +138,14 @@ class P extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = b.default.getCurrentUser();
-                (t !== x.O.BURST ||
+                (t !== C.O.BURST ||
                     (0, y.I5)(r) ||
                     (0, f.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(n),
-                            object: C.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: x.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle());
@@ -155,11 +155,11 @@ class P extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === x.O.BURST && {
+                        n === C.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
-                            object: C.qAy.REACTION_RAIL
+                            object: x.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(g.$, {

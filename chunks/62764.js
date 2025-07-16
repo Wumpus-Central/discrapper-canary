@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(216337),
     x = n(920888),
     v = n(287151),
-    O = n(799903),
-    j = n(501517),
+    j = n(799903),
+    O = n(501517),
     E = n(982168),
     S = n(216572),
     P = n(817608),
@@ -87,7 +87,7 @@ function G(e) {
         [o, d] = i.useState(!1),
         p = () => {
             (d(!0),
-                j.Z.resolveFlag(t.id).then(() => {
+                O.Z.resolveFlag(t.id).then(() => {
                     d(!1);
                 }));
         };
@@ -97,7 +97,7 @@ function G(e) {
               look: c.zx.Looks.FILLED,
               color: c.zx.Colors.PRIMARY,
               onClick: () => {
-                  !0 === s.K.get(O.F)
+                  !0 === s.K.get(j.F)
                       ? p()
                       : (0, u.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 799903));
@@ -128,7 +128,7 @@ function G(e) {
 }
 function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
-        { ref: O, width: j } = (0, h.ZP)(),
+        { ref: j, width: O } = (0, h.ZP)(),
         [E, k] = i.useState(3),
         [V, z] = i.useState(!n),
         [W, Y] = (0, f.Z)(!1, 2000),
@@ -152,7 +152,7 @@ function V(e) {
             [n]
         );
     i.useLayoutEffect(() => {
-        let e = O.current;
+        let e = j.current;
         if (null == e || !n) return;
         let t = new IntersectionObserver(ea, { threshold: 1 });
         return (
@@ -165,8 +165,8 @@ function V(e) {
     let [eo, es] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (k(Math.floor((j - 280) / 58)), es(!1));
-        }, [j]),
+            null != O && (k(Math.floor((O - 280) / 58)), es(!1));
+        }, [O]),
         null == q || null == K)
     )
         return null;
@@ -194,7 +194,7 @@ function V(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: a()(U.container, { [U.header]: V }),
-                ref: O,
+                ref: j,
                 children: [
                     en
                         ? (0, r.jsx)('div', {

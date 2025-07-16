@@ -73,8 +73,8 @@ async function R(e) {
         'Minimize' === e ? T.ZP.minimize() : 'Maximize' === e && T.ZP.maximize();
     }
 }
-function C(e) {
-    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: g = !0, toolbar: C, mobileToolbar: P, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
+function P(e) {
+    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: g = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
         Z = null == o || (0, f.AB)(o) ? null : o,
         L = (0, l.e7)([O.Z], () => O.Z.isInChannel(Z) || !1),
         j = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
@@ -84,13 +84,13 @@ function C(e) {
         className: n,
         innerClassName: T,
         toolbar: (function () {
-            if (null == C) return null;
+            if (null == P) return null;
             let e = null != o && !U;
             return i.tq
-                ? P
+                ? C
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          C,
+                          P,
                           e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : o) : null,
                           M && (0, r.jsx)(S.ZP.Divider, {}),
                           k && !x ? (0, r.jsx)(_.Z, {}) : null,
@@ -116,7 +116,7 @@ function C(e) {
         children: t
     });
 }
-function P(e) {
+function C(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: a, disableDoubleClick: o } = e;
     return (0, r.jsx)(S.ZP, {
         className: n,
@@ -151,7 +151,7 @@ function y(e) {
     let { analyticsLocations: i } = (0, c.ZP)(o.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(C, g(A({}, n), { className: n.className })) : (0, r.jsx)(P, g(A({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(P, g(A({}, n), { className: n.className })) : (0, r.jsx)(C, g(A({}, n), { className: n.className }))
     });
 }
 ((y.Title = S.ZP.Title), (y.Icon = S.ZP.Icon), (y.Divider = S.ZP.Divider), (y.Caret = S.ZP.Caret));

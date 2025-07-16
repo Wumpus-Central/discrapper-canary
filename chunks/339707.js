@@ -7,6 +7,7 @@ e.exports = {
     disabled: 'disabled__001a7',
     collapsibleItem: 'collapsibleItem__001a7',
     tooltipWrapper: 'tooltipWrapper__001a7',
+    container: 'container__001a7',
     info: 'info__001a7',
     icon: 'icon__001a7',
     radioIndicator: 'radioIndicator__001a7',

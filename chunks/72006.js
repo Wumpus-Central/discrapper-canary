@@ -1,15 +1,15 @@
 (n.d(t, {
     FZ: () => N,
-    Hl: () => L,
+    Hl: () => M,
     NJ: () => Z,
-    R8: () => M,
+    R8: () => L,
     Sq: () => R,
     Wg: () => F,
     Zn: () => I,
     c2: () => k,
-    eE: () => A,
+    eE: () => w,
     iE: () => D,
-    iK: () => w,
+    iK: () => A,
     lv: () => P,
     nR: () => T,
     q0: () => l.a,
@@ -157,17 +157,17 @@ function k(e, t) {
     let n = R(t);
     return E(e, t, 0, n.length);
 }
-function w(e, t) {
+function A(e, t) {
     let n = t.getSelection();
     return ((n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), r.EditorState.forceSelection(t, n));
 }
 function Z(e) {
-    return w(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return A(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
-function A(e) {
-    return w(0, e);
+function w(e) {
+    return A(0, e);
 }
-function M(e) {
+function L(e) {
     let t = e.getSelection();
     return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t));
 }
@@ -176,7 +176,7 @@ function F(e) {
         n = e.getSelection();
     return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));
 }
-function L(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = R(e);
     if (n.length > t) {

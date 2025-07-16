@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(981631),
     x = n(388032),
     v = n(285580);
-function O(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function O(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -141,9 +141,9 @@ let S = function (e) {
     }, [T, Z, M, a]),
     (0, d.ZP)(
         () => (
-            _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'opened' })),
+            _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, L), { action: 'opened' })),
             () => {
-                _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'dismissed' }));
+                _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, L), { action: 'dismissed' }));
             }
         )
     ),
@@ -159,7 +159,7 @@ let S = function (e) {
                       if (
                           (_.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
-                              j(O({}, L), {
+                              O(j({}, L), {
                                   action: 'saved',
                                   new_name_set: '' !== T,
                                   new_icon_set: (i ? w : null == I ? void 0 : I.icon) != null,

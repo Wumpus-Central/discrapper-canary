@@ -24,8 +24,8 @@ var r = n(255367),
     b = n(509545),
     E = n(238),
     y = n(55563),
-    x = n(551428),
-    C = n(626135),
+    C = n(551428),
+    x = n(626135),
     v = n(572004),
     O = n(601911),
     j = n(504211),
@@ -35,12 +35,12 @@ var r = n(255367),
     N = n(979007),
     P = n(388032),
     A = n(197866);
-let w = (0, o.Kb)([y.Z, x.Z, b.Z], {
+let w = (0, o.Kb)([y.Z, C.Z, b.Z], {
         queryId: (e) => T.McO.SKU(e),
         get: (e) => {
             if (null == e) return;
             let t = y.Z.get(e),
-                n = x.Z.getForSKU(e);
+                n = C.Z.getForSKU(e);
             if (null == t || null == n) return;
             let r = b.Z.getForSKU(e);
             return {
@@ -67,7 +67,7 @@ let w = (0, o.Kb)([y.Z, x.Z, b.Z], {
 function R(e) {
     let { appId: t, message: l } = e,
         a = (0, I.R)(t),
-        [d, p, _, h, b, y, x] = (0, o.Wu)(
+        [d, p, _, h, b, y, C] = (0, o.Wu)(
             [m.Z, E.Z, g.Z],
             () => {
                 var e;
@@ -118,10 +118,10 @@ function R(e) {
         onLinkCopy: () => {
             (0, j.X)(t, j.B.STORE_EMBED);
         },
-        iconSrc: x,
+        iconSrc: C,
         onIconClick: () => {
             (Z(),
-                C.default.track(T.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                x.default.track(T.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: 'app_icon'
                 }));
@@ -129,7 +129,7 @@ function R(e) {
         children: (0, r.jsx)(s.zx, {
             onClick: () => {
                 (Z(),
-                    C.default.track(T.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    x.default.track(T.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'open_store_button'
                     }));
@@ -162,7 +162,7 @@ function L(e) {
             };
         })(u, a),
         { data: y } = (0, p.IX)(null == f ? void 0 : f.applicationId),
-        x = (0, o.e7)(
+        C = (0, o.e7)(
             [g.Z],
             () => {
                 var e;
@@ -174,7 +174,7 @@ function L(e) {
         R = (0, I.R)(null != (l = null == y ? void 0 : y.id) ? l : ''),
         { openModal: L, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: u,
-            initialSubscribeForGuild: x
+            initialSubscribeForGuild: C
         });
     if (!R || null == y || null == f) return null;
     let M = f.type === T.epS.SUBSCRIPTION,
@@ -187,7 +187,7 @@ function L(e) {
                         transitionState: t.transitionState,
                         onClose: t.onClose,
                         appId: y.id,
-                        guildId: x
+                        guildId: C
                     });
             });
         },
@@ -204,7 +204,7 @@ function L(e) {
                               transitionState: n.transitionState,
                               appId: y.id,
                               skuId: f.id,
-                              guildId: x,
+                              guildId: C,
                               subscriptionType: U ? 'user' : 'guild',
                               onClose: n.onClose,
                               onHeaderTitleClick: i
@@ -250,7 +250,7 @@ function L(e) {
               : t.trim();
     '' === G && (G = void 0);
     let H = () => {
-        C.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+        x.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: y.id,
             sku_id: f.id,
             area: 'purchase_button'
@@ -267,7 +267,7 @@ function L(e) {
         iconSrc: v,
         onIconClick: () => {
             (F(),
-                C.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                x.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: y.id,
                     sku_id: f.id,
                     area: 'app_icon'
@@ -280,7 +280,7 @@ function L(e) {
                     color: s.Tt.CUSTOM,
                     onClick: () => {
                         (B(),
-                            C.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                            x.default.track(T.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: y.id,
                                 sku_id: f.id,
                                 area: 'view_details'

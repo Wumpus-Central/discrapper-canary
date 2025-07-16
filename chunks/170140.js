@@ -26,9 +26,9 @@ function b(e, t) {
             [b]
         ),
         y = (0, i.e7)([l.Z], () => null != b && (null == b ? void 0 : b.channelId) != null && l.Z.isChannelGated(b.guildId, b.channelId), [b]),
-        x = t.hasFlag(g.iLy.IS_CROSSPOST),
+        C = t.hasFlag(g.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: C,
+            rawMediaPostEmbedData: x,
             guild: v,
             parentChannel: O,
             user: j,
@@ -58,7 +58,7 @@ function b(e, t) {
         T = r.useMemo(() => {
             var e, t;
             let n = (0, h.ku)({
-                mediaPostEmbedData: C,
+                mediaPostEmbedData: x,
                 guild: v,
                 parentChannel: O,
                 user: j,
@@ -106,14 +106,14 @@ function b(e, t) {
                             Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                         }),
                   e);
-        }, [C, v, O, j, I, S]);
+        }, [x, v, O, j, I, S]);
     return (
         r.useEffect(() => {
             if ((null == b ? void 0 : b.threadId) != null) {
                 let e = _.Z.getEmbedFetchState(b.threadId);
-                !0 !== n || e !== _.M.NOT_FETCHED || (E && !1 === y) || (!E && x) || (0, m.xP)(null == b ? void 0 : b.threadId);
+                !0 !== n || e !== _.M.NOT_FETCHED || (E && !1 === y) || (!E && C) || (0, m.xP)(null == b ? void 0 : b.threadId);
             }
-        }, [b, n, E, y, x]),
+        }, [b, n, E, y, C]),
         T
     );
 }

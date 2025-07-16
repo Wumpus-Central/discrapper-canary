@@ -22,12 +22,12 @@ function f() {
     return e;
 }
 function _(e) {
-    let { rootClassName: t, lang: n, theme: a, density: f, focused: _, fontScale: p, fontScaleClass: h, mouseMode: m, keyboardModeEnabled: g, saturation: E, desaturateUserColors: b, useForcedColors: y, systemForcedColors: O, useReducedMotion: v, alwaysShowLinkDecorations: I, hardwareAccelerationEnabled: T, children: S } = e,
-        A = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        N = 'font-size: '.concat(p, '%; --saturation-factor: ').concat(E, ';'),
-        C = (0, u.Z)('highlight_mana_buttons'),
-        R = (0, u.Z)('highlight_void_buttons'),
-        P = o()(
+    let { rootClassName: t, lang: n, theme: a, density: f, focused: _, fontScale: p, fontScaleClass: h, mouseMode: m, keyboardModeEnabled: g, saturation: E, desaturateUserColors: b, useForcedColors: y, systemForcedColors: O, useReducedMotion: v, alwaysShowLinkDecorations: I, hardwareAccelerationEnabled: T, highContrastMode: S, children: A } = e,
+        N = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        C = 'font-size: '.concat(p, '%; --saturation-factor: ').concat(E, ';'),
+        R = (0, u.Z)('highlight_mana_buttons'),
+        P = (0, u.Z)('highlight_void_buttons'),
+        w = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
             'density-'.concat(f),
@@ -36,8 +36,8 @@ function _(e) {
                 'low-saturation': E <= l.AEw,
                 'keyboard-mode': g,
                 'decorate-links': I,
-                'no-webkit-scrollbar': !A,
-                'has-webkit-scrollbar': A,
+                'no-webkit-scrollbar': !N,
+                'has-webkit-scrollbar': N,
                 'mouse-mode': m,
                 'reduce-motion': v,
                 'full-motion': !v,
@@ -49,21 +49,22 @@ function _(e) {
                 'visual-refresh': !0,
                 'hardware-acceleration-disabled': !T,
                 'visual-refresh-chat-input': !1,
-                'highlight-mana-buttons': C,
-                'highlight-void-buttons': R
+                'highlight-mana-buttons': R,
+                'highlight-void-buttons': P,
+                'high-contrast-mode': S
             },
             t
         ),
-        w = i.useMemo(
+        D = i.useMemo(
             () => ({
                 lang: n,
-                style: N,
-                className: P
+                style: C,
+                className: w
             }),
-            [n, N, P]
+            [n, C, w]
         );
     return (0, r.jsx)(d.Provider, {
-        value: w,
-        children: S
+        value: D,
+        children: A
     });
 }

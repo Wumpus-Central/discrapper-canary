@@ -43,14 +43,14 @@ function m() {
         [_, y] = i.useState(!1),
         [C, x] = i.useState(null),
         v = o.C.useExperiment({ location: 'ChannelAttachMenu' }),
-        O = null != (e = null == v ? void 0 : v.enableAIFeatures) && e;
+        j = null != (e = null == v ? void 0 : v.enableAIFeatures) && e;
     i.useEffect(
         () => () => {
             (m([]), b(!1), y(!1), x(null));
         },
         []
     );
-    let j = i.useCallback(async (e, t) => {
+    let O = i.useCallback(async (e, t) => {
         (b(!0), m([]));
         let n = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
@@ -71,11 +71,11 @@ function m() {
     }, []);
     return (
         i.useEffect(() => {
-            _ && null != C && O && j(C.channel, C.editorTextContent);
-        }, [_, C, O, j]),
+            _ && null != C && j && O(C.channel, C.editorTextContent);
+        }, [_, C, j, O]),
         i.useCallback(
             (e, i) =>
-                O
+                j
                     ? (_ ||
                           (x({
                               channel: e,
@@ -189,7 +189,7 @@ function m() {
                                 )
                             )
                     : null,
-            [O, _, g, t]
+            [j, _, g, t]
         )
     );
 }

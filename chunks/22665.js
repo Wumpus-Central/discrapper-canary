@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,15 +17,15 @@ var r = n(255367),
     b = n(537670),
     E = n(848697),
     y = n(328756);
-let x = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: x, reportedTimestamp: C } = e,
+let C = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: C, reportedTimestamp: x } = e,
         v = f.default.getUser(t),
         O = i.useMemo(() => (l ? (0, p.Z)((0, _.vc)(s()(), 'LT')) : null), [l]),
         j = (0, m.l)({
             user: v,
             channelId: o.id,
             guildId: n,
-            messageId: x
+            messageId: C
         })((0, u.JZ)(v, o)),
         I = null != v ? v.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
         S =
@@ -59,7 +59,7 @@ let x = (e) => {
                         children: '\u2022'
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: C,
+                        timestamp: x,
                         className: b.timestamp
                     })
                 ]

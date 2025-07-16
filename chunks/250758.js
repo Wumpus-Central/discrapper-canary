@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(539854), n(781311), n(290780));
+(n.d(t, { Z: () => L }), n(388685), n(539854), n(781311), n(290780));
 var r,
     s,
     l,
@@ -85,7 +85,7 @@ function C(e, t) {
             cursorScope: d,
             autocompletes: h
         })),
-        A.emitChange());
+        w.emitChange());
 }
 function I(e, t, n) {
     var r, s, l;
@@ -239,7 +239,7 @@ function k(e) {
         autocompletes: P(e, n)
     });
 }
-function w() {
+function A() {
     return k(y.Z.getCurrentSearchId());
 }
 class Z extends (r = a.ZP.Store) {
@@ -260,7 +260,7 @@ class Z extends (r = a.ZP.Store) {
               writable: !0
           })
         : (Z[s] = l));
-let A = new Z(o.Z, {
+let w = new Z(o.Z, {
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
             var t;
             let n,
@@ -303,8 +303,8 @@ let A = new Z(o.Z, {
         },
         CHANNEL_CREATE: T,
         CHANNEL_DELETE: T,
-        STREAMER_MODE_UPDATE: w,
-        SEARCH_SCREEN_OPEN: w,
+        STREAMER_MODE_UPDATE: A,
+        SEARCH_SCREEN_OPEN: A,
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
             null != t ? N(t) : Object.keys(v).forEach(N);
@@ -327,4 +327,4 @@ let A = new Z(o.Z, {
             Object.keys(v).forEach(N);
         }
     }),
-    M = A;
+    L = w;

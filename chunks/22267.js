@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(7284),
+    f = n(821795),
     _ = n(172751),
     p = n(359135),
     h = n(516817),
@@ -32,8 +32,7 @@ let T = {
             k = (0, s.e7)([g.Z], () => (null != t ? g.Z.getStatus(t.id) : c.Skl.ONLINE)),
             M = L ? '#706F74' : '#aaaab2',
             j = i.useRef(null),
-            U = (0, f.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles }),
-            G = T[w];
+            U = T[w];
         return (0, r.jsx)('div', {
             role: 'img',
             'aria-label': y.intl.string(y.t.SZeUdX),
@@ -70,7 +69,7 @@ let T = {
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: null,
-                                              avatarSize: G,
+                                              avatarSize: U,
                                               status: C ? k : void 0,
                                               'aria-hidden': !0
                                           }),
@@ -79,7 +78,9 @@ let T = {
                                               className: O.tagChiplet
                                           }),
                                           name: null != P && '' !== P ? P : E.ZP.getName(null, null, t),
-                                          innerClassName: o()(A, U)
+                                          innerClassName: A,
+                                          displayNameStyles: t.displayNameStyles,
+                                          displayNameStyleEffects: f.F.ANIMATED
                                       })
                                   })
                                 : null,
@@ -88,7 +89,7 @@ let T = {
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: L ? v : I,
-                                        size: G,
+                                        size: U,
                                         'aria-hidden': !0,
                                         status: c.Skl.ONLINE,
                                         statusColor: M,

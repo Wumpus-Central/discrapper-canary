@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => y,
-    z: () => x
+    z: () => C
 });
 var r = n(73800),
     i = n(442837),
@@ -78,7 +78,7 @@ function y(e, t) {
         [e.id, i, n, c, u, d, l, t, p]
     );
 }
-function x(e) {
+function C(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
         i = y(e);
     return r.useMemo(

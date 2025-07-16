@@ -727,6 +727,11 @@ let e$ = () => {
                 element: el.Z,
                 url: eW.Z5c.SETTINGS('accessibility')
             },
+            [eH.s6.ACCESSIBILITY_HIGH_CONTRAST]: {
+                section: eW.oAB.ACCESSIBILITY,
+                searchableTitles: ['High Contrast Mode'],
+                parent: eH.s6.ACCESSIBILITY
+            },
             [eH.s6.ACCESSIBILITY_SATURATION]: {
                 section: eW.oAB.ACCESSIBILITY,
                 searchableTitles: [eq.intl.string(eq.t['5PWWCQ'])],

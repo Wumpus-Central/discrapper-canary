@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(539854));
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,102 +17,54 @@ var r = n(255367),
     _ = n(388032),
     y = n(32709);
 function C(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
-            }));
-    }
-    return e;
-}
-function x(e) {
     let { channel: t } = e,
-        l = (0, o.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
-        [a, d] = (0, i.useState)(!1),
-        [h, _] = (0, i.useState)(!1),
-        y = (0, g.bK)(),
-        [x, O] = (0, i.useState)(!1);
+        n = (0, o.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
+        [l, a] = (0, i.useState)(!1),
+        [c, d] = (0, i.useState)(!1),
+        h = (0, g.bK)(),
+        [_, y] = (0, i.useState)(!1);
     ((0, u.ZP)(() => {
-        t.isHDStreamSplashed && O(!0);
+        t.isHDStreamSplashed && y(!0);
     }),
-        (0, g.Uu)(t),
-        (function (e) {
-            let t = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-                l = [];
-            e.hdStreamingBuyerId !== (null == t ? void 0 : t.id) || e.isHDStreamSplashed || l.push(s.z.HD_STREAMING_POTION_MODAL_UPSELL);
-            let [a, u] = (0, p.US)(l);
-            (0, i.useEffect)(() => {
-                a === s.z.HD_STREAMING_POTION_MODAL_UPSELL &&
-                    (0, c.ZDy)(async () => {
-                        let { default: t } = await n.e('88452').then(n.bind(n, 552394));
-                        return (n) =>
-                            (0, r.jsx)(
-                                t,
-                                C(
-                                    {
-                                        markAsDismissed: u,
-                                        channel: e
-                                    },
-                                    n
-                                )
-                            );
-                    });
-            }, [a, u, e]);
-        })(t));
-    let j = () => {
-        d(!1);
+        (0, g.Uu)(t));
+    let C = () => {
+        a(!1);
     };
     (0, g.J)(t, () => {
-        if (y) {
-            (_(!0), j());
+        if (h) {
+            (d(!0), C());
             return;
         }
-        d(!0);
+        a(!0);
         let e = setTimeout(() => {
-            _(!0);
+            d(!0);
         }, 25000);
         return () => clearTimeout(e);
     });
-    let E = x ? [s.z.HD_STREAMING_POTION_BANNER] : [],
-        [S, P] = (0, p.US)(E);
-    return null == l
+    let v = _ ? [s.z.HD_STREAMING_POTION_BANNER] : [],
+        [j, O] = (0, p.US)(v);
+    return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  a &&
-                      (0, r.jsx)(v, {
-                          buyer: l,
-                          onEnd: j
+                  l &&
+                      (0, r.jsx)(x, {
+                          buyer: n,
+                          onEnd: C
                       }),
-                  (h || S === s.z.HD_STREAMING_POTION_BANNER) &&
+                  (c || j === s.z.HD_STREAMING_POTION_BANNER) &&
                       (0, r.jsx)(m.Z, {
                           channel: t,
-                          buyer: l,
+                          buyer: n,
                           streaming: !0,
                           onClose: () => {
-                              (_(!1), x && P(b.L.DISMISS));
+                              (d(!1), _ && O(b.L.DISMISS));
                           }
                       })
               ]
           });
 }
-function v(e) {
+function x(e) {
     let { onEnd: t, buyer: n } = e,
         l = (0, i.useRef)(null),
         o = (0, i.useRef)(null),
@@ -158,7 +110,31 @@ function v(e) {
                 children: [
                     (0, r.jsx)(
                         c.qEK,
-                        C(
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        })
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        ((r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0
+                                                  })
+                                                : (e[t] = r));
+                                    }));
+                            }
+                            return e;
+                        })(
                             {
                                 src: m,
                                 'aria-label': n.username,

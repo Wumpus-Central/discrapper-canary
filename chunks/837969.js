@@ -23,24 +23,24 @@ function d(e) {
             },
             [E]
         ),
-        [x, C] = r.useReducer(y, {
+        [C, x] = r.useReducer(y, {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: v, focusedIndex: O } = x,
-        [j] = r.useState(() => (0, a.P2)(C, 16));
+        { itemCount: v, focusedIndex: O } = C,
+        [j] = r.useState(() => (0, a.P2)(x, 16));
     return (
         r.useEffect(() => {
-            C({
+            x({
                 type: i.G.UPDATE_ITEM_COUNT,
                 itemCount: n
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: _, maintainFocusPosition: h, includeSetSizes: g, focusOnMount: b, enabled: E, makeId: y = a.qR, getIndexFromId: x } = e,
-                C = r.useRef(n),
-                v = r.useRef(x);
-            ((v.current = x), (C.current = n));
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: _, maintainFocusPosition: h, includeSetSizes: g, focusOnMount: b, enabled: E, makeId: y = a.qR, getIndexFromId: C } = e,
+                x = r.useRef(n),
+                v = r.useRef(C);
+            ((v.current = C), (x.current = n));
             let O = r.useRef(E);
             r.useEffect(() => {
                 O.current = E;
@@ -165,7 +165,7 @@ function d(e) {
                         let { index: n } = e;
                         return {
                             role: 'listitem',
-                            'aria-setsize': g ? C.current : void 0,
+                            'aria-setsize': g ? x.current : void 0,
                             'aria-posinset': g ? n + 1 : void 0,
                             id: y(t, n),
                             tabIndex: h && n === d ? 0 : -1,

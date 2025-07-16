@@ -1,11 +1,10 @@
 (n.d(t, {
     Gq: () => _,
-    SN: () => E,
-    Zu: () => h,
+    SN: () => g,
     gA: () => p,
-    qc: () => m,
-    x8: () => b,
-    zI: () => g
+    qc: () => h,
+    x8: () => E,
+    zI: () => m
 }),
     n(415506));
 var r = n(544891),
@@ -103,29 +102,14 @@ let f = {
             );
         }
     },
-    h = async (e) => {
-        try {
-            (await r.tn.post({
-                url: d.ANM.CONSUME_HD_STREAMING_POTION,
-                body: { channel_id: e },
-                rejectWithError: !1
-            }),
-                a.Z.dispatch({
-                    type: 'CLEAR_CONSUMED_ENTITLEMENT',
-                    skuId: l.FX
-                }));
-        } catch (e) {
-            throw new i.Hx(e);
-        }
-    },
-    m = async (e, t, n) => {
+    h = async (e, t, n) => {
         try {
             (await r.tn.post({
                 url: d.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
                 body: {
                     channel_id: e,
                     message_id: t,
-                    emoji_name: g(n)
+                    emoji_name: m(n)
                 },
                 rejectWithError: !1
             }),
@@ -139,14 +123,14 @@ let f = {
         let o = (0, u.NV)(n);
         (0, c.I)(o, void 0, !0, s.LL.MessageSent);
     },
-    g = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
-    E = (e) => {
+    m = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
+    g = (e) => {
         a.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
-    b = (e) => {
+    E = (e) => {
         a.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e

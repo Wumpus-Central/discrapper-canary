@@ -28,8 +28,8 @@ var r,
     C = n(708690),
     x = n(194359),
     v = n(425493),
-    O = n(794433),
-    j = n(493773),
+    j = n(794433),
+    O = n(493773),
     E = n(40851),
     S = n(100527),
     P = n(367907),
@@ -345,13 +345,13 @@ class eg extends (r = l.PureComponent) {
             (0, i.jsxs)('div', {
                 className: el.searchBar,
                 children: [
-                    (0, i.jsx)(O.Z, {
+                    (0, i.jsx)(j.Z, {
                         ref: this.searchBarRef,
                         className: el.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === a.size ? ei.intl.string(ei.t.Wxnb6u) : '',
                         disabled: this.isPartyFull(),
-                        size: O.Z.Sizes.MEDIUM,
+                        size: j.Z.Sizes.MEDIUM,
                         maxHeight: this.props.inBornThisNamedExperiment ? 110 : void 0,
                         query: t,
                         selectedRow: l,
@@ -898,7 +898,7 @@ function ey(e) {
             [r, y, _]
         ),
         v = l.useRef(null),
-        [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
+        [j, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
         S = l.useCallback(() => (_ ? (C ? (0, f.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
     l.useEffect(
         () => (
@@ -910,7 +910,7 @@ function ey(e) {
         [m, S, _]
     );
     let P = (0, p.e7)([Y.default], () => Y.default.getUser(null == r ? void 0 : r.getRecipientId()));
-    return ((0, j.ZP)(() => {
+    return ((0, O.ZP)(() => {
         (0, L._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
@@ -937,7 +937,7 @@ function ey(e) {
                         })
                     ),
                 position: d,
-                shouldShow: O,
+                shouldShow: j,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: h,
@@ -962,7 +962,7 @@ function ey(e) {
 }
 function eC(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
-    (0, j.ZP)(() => {
+    (0, O.ZP)(() => {
         (0, L._)();
     });
     let o = (0, w.a)('PrivateChannelRecipientsInviteTextButton'),

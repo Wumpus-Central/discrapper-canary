@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(434404),
     x = n(454585),
     v = n(485386),
-    O = n(430824),
-    j = n(496675),
+    j = n(430824),
+    O = n(496675),
     E = n(594174),
     S = n(700785),
     P = n(51144),
@@ -37,9 +37,9 @@ function M(e) {
         o = (0, m.ZP)(t, !0),
         M = t.guild_id,
         D = (0, d.e7)([v.Z], () => (null != M ? v.Z.getRoles(M) : void 0)),
-        L = (0, d.e7)([E.default, O.Z], () => {
+        L = (0, d.e7)([E.default, j.Z], () => {
             var e;
-            return E.default.getUser(null == (e = O.Z.getGuild(M)) ? void 0 : e.ownerId);
+            return E.default.getUser(null == (e = j.Z.getGuild(M)) ? void 0 : e.ownerId);
         }),
         k = i.useMemo(
             () =>
@@ -90,7 +90,7 @@ function M(e) {
             },
             [t, L]
         ),
-        F = j.Z.can(T.Plq.MANAGE_CHANNELS, t) || j.Z.can(T.Plq.MANAGE_ROLES, t),
+        F = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
         H = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(Z.ZP, {
         channelId: t.id,

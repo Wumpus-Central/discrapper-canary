@@ -1,7 +1,7 @@
 (n.d(t, {
     FB: () => E,
-    GE: () => C,
-    Pu: () => x,
+    GE: () => x,
+    Pu: () => C,
     Vt: () => h,
     XX: () => m,
     Zs: () => y,
@@ -58,7 +58,7 @@ function E(e) {
     return null != e && null != e.guild_metadata;
 }
 let y = (e) => (e === u.evJ.DSA_APPEAL_REQUEST_DEFLECTION ? p.intl.string(p.t['0qyXXF']) : p.intl.string(p.t.aPmsx8));
-function x(e) {
+function C(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
     try {
@@ -67,4 +67,4 @@ function x(e) {
         return null;
     }
 }
-let C = () => null != (0, l.e7)([o.default], () => o.default.getSuspendedUserToken());
+let x = () => null != (0, l.e7)([o.default], () => o.default.getSuspendedUserToken());

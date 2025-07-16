@@ -21,13 +21,13 @@ function b(e) {
         C = m.intl.string(g.default['Beo/7u']),
         { firstMessage: x } = (0, s.cl)(b),
         v = null == x || null == (t = x.messageSnapshots) ? void 0 : t[0],
-        O = null == v || null == (n = v.moderatorReport) ? void 0 : n.reported_user_id;
-    return b.isModeratorReportChannel() && null != O
+        j = null == v || null == (n = v.moderatorReport) ? void 0 : n.reported_user_id;
+    return b.isModeratorReportChannel() && null != j
         ? (0, r.jsx)(u.ZP.Icon, {
               onClick: () => {
                   ((0, d.Kh)(b.id),
                       (0, o.i)(),
-                      (0, c.r)(b.guild_id, O, b.id, {
+                      (0, c.r)(b.guild_id, j, b.id, {
                           modViewPanel: f.k.INFO,
                           sourceLocation: null != location ? location : _.location
                       }),

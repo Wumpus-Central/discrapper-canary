@@ -1,6 +1,6 @@
-n.d(t, { Q: () => s });
+n.d(t, { Q: () => i });
 var r = n(863750);
-function s() {
+function i() {
     return r.Z.get('enable_recently_active');
 }
 n(238428);

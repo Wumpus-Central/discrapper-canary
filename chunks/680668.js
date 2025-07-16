@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(997841), n(388685));
+(n.d(t, { Z: () => C }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(533800),
@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(981631),
     E = n(388032),
     y = n(273254);
-function x(e) {
-    var t, x, C;
+function C(e) {
+    var t, C, x;
     let v,
         O,
         j,
@@ -32,7 +32,7 @@ function x(e) {
         F = null != D && D.isGuildVocal(),
         B = null != D && D.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (x = null == T ? void 0 : T.features.has(b.oNc.HUB)) && x,
+        H = null != (C = null == T ? void 0 : T.features.has(b.oNc.HUB)) && C,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
@@ -56,7 +56,7 @@ function x(e) {
         }, [N, P, z, M, I, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(g.Z, {});
-        (T = _.Qs(N.guild)).premiumTier = null != (C = N.guild.premium_tier) ? C : b.Eu4.NONE;
+        (T = _.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
     }
     let J = (0, h.e)({
         isVoiceChannel: F,

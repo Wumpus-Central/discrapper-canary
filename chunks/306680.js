@@ -391,32 +391,27 @@ class eM {
         return null != e && e.isPrivate();
     }
     rebuildChannelState(e) {
-        var t, n, r;
-        let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            a = arguments.length > 2 ? arguments[2] : void 0;
-        if (((this.ackMessageId = null != (t = null != e ? e : this._ackMessageId) ? t : this.guessAckMessageId()), (this.isManualAck = null != e), (this.oldestUnreadMessageId = null), (this.estimated = !1), (this.unreadCount = 0), i && (this.mentionCount = 0), this.hasUnread())) {
+        var t, n;
+        let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            i = arguments.length > 2 ? arguments[2] : void 0;
+        if (((this.ackMessageId = null != (t = null != e ? e : this._ackMessageId) ? t : this.guessAckMessageId()), (this.isManualAck = null != e), (this.oldestUnreadMessageId = null), (this.estimated = !1), (this.unreadCount = 0), r && (this.mentionCount = 0), this.hasUnread())) {
             let e = J.default.getCurrentUser(),
                 t = this.getAckTimestamp(),
+                i = !1,
                 a = !1,
-                o = !1,
-                s = null,
-                l = K.Z.getMessages(this.channelId);
-            if (
-                (l.forAll((n) => {
-                    if (a) {
-                        var r;
-                        this.oldestUnreadMessageId = null != (r = this._oldestUnreadMessageId) ? r : n.id;
-                    } else a = n.id === this._ackMessageId;
-                    G.default.extractTimestamp(n.id) > t ? (this.unreadCount++, i && eR(n, e) && this.mentionCount++, (s = null != s ? s : n.id)) : (o = !0);
-                }),
-                l.hasPresent() && l.length > 0 && null != this.lastMessageId)
-            ) {
-                let e = null == (n = l.last()) ? void 0 : n.id;
-                null != e && e !== this.lastMessageId && (this.lastMessageId = e);
-            }
-            ((this.estimated = !l.hasPresent() || (!(a || o) && l.length === this.unreadCount)), (this.oldestUnreadMessageId = null != (r = this._oldestUnreadMessageId) ? r : s));
+                o = null,
+                s = K.Z.getMessages(this.channelId);
+            (s.forAll((n) => {
+                if (i) {
+                    var s;
+                    this.oldestUnreadMessageId = null != (s = this._oldestUnreadMessageId) ? s : n.id;
+                } else i = n.id === this._ackMessageId;
+                G.default.extractTimestamp(n.id) > t ? (this.unreadCount++, r && eR(n, e) && this.mentionCount++, (o = null != o ? o : n.id)) : (a = !0);
+            }),
+                (this.estimated = !s.hasPresent() || (!(i || a) && s.length === this.unreadCount)),
+                (this.oldestUnreadMessageId = null != (n = this._oldestUnreadMessageId) ? n : o));
         }
-        null != a && (this.mentionCount = a);
+        null != i && (this.mentionCount = i);
     }
     handleGuildEventRemoval(e, t) {
         var n;

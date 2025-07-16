@@ -18,8 +18,8 @@ var r = n(255367),
 function E(e) {
     var t;
     let { invite: n, message: E, getAcceptInviteContext: y } = e,
-        x = (0, l.e7)([p.default], () => p.default.getId()),
-        C = (null == (t = n.inviter) ? void 0 : t.id) === x,
+        C = (0, l.e7)([p.default], () => p.default.getId()),
+        x = (null == (t = n.inviter) ? void 0 : t.id) === C,
         v = n.state === h.r2o.ACCEPTING,
         { analyticsLocations: O } = (0, c.ZP)(s.Z.INVITE_EMBED),
         j = (0, l.e7)([f.Z], () => {
@@ -59,8 +59,8 @@ function E(e) {
     let T = j ? I : S,
         N = g.intl.string(g.t.ib7Ng4),
         P = u.Z.Button.Colors.GREEN;
-    j ? ((N = g.intl.string(g.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : C && ((N = g.intl.string(g.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
-    let A = C ? g.intl.string(g.t.eQyu1N) : g.intl.string(g.t.PYJHW1),
+    j ? ((N = g.intl.string(g.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : x && ((N = g.intl.string(g.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
+    let A = x ? g.intl.string(g.t.eQyu1N) : g.intl.string(g.t.PYJHW1),
         w = null != n.inviter ? ''.concat(n.inviter.username) : '',
         Z = null != n.inviter ? _.ZP.getUserTag(n.inviter) : '';
     return (0, r.jsxs)(u.Z, {
@@ -85,7 +85,7 @@ function E(e) {
                     (0, r.jsx)(u.Z.Button, {
                         onClick: T,
                         submitting: v,
-                        isDisabled: C,
+                        isDisabled: x,
                         color: P,
                         children: N
                     })

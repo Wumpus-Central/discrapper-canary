@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     l = n(596454),
     o = n(377171),
     a = n(403910),
@@ -10,17 +10,17 @@ var s = n(120356),
     u = n(366523);
 function d(e) {
     var t;
-    let { guildId: n, emojiId: s, emojiName: d, className: f } = e,
-        p = (0, a.Z)(n, s);
+    let { guildId: n, emojiId: i, emojiName: d, className: f } = e,
+        p = (0, a.Z)(n, i);
     return null != p || null != d
         ? (0, r.jsx)(l.Z, {
               emojiId: null == p ? void 0 : p.id,
               emojiName: null != d ? d : null == p ? void 0 : p.name,
               animated: null != (t = null == p ? void 0 : p.animated) && t,
-              className: i()(u.emojiIcon, f)
+              className: s()(u.emojiIcon, f)
           })
         : (0, r.jsx)(c.Z, {
-              className: i()(u.emojiIcon, f),
+              className: s()(u.emojiIcon, f),
               color: o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
           });
 }

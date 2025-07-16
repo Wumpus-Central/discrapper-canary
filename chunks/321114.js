@@ -1,7 +1,7 @@
 n.d(t, { c: () => o });
 var r = n(544891),
-    s = n(570140),
-    i = n(594174),
+    i = n(570140),
+    s = n(594174),
     l = n(981631);
 async function o(e, t) {
     try {
@@ -15,7 +15,7 @@ async function o(e, t) {
         });
         return (
             n.ok &&
-                s.Z.dispatch({
+                i.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
                     user: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -41,7 +41,7 @@ async function o(e, t) {
                                 }));
                         }
                         return e;
-                    })({}, i.default.getCurrentUser(), n.body)
+                    })({}, s.default.getCurrentUser(), n.body)
                 }),
             n
         );

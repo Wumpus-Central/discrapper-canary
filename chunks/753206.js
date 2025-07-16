@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
-    s = n(73800),
-    i = n(120356),
-    l = n.n(i),
+    i = n(73800),
+    s = n(120356),
+    l = n.n(s),
     o = n(628238),
     a = n(750030),
     c = n(492593),
@@ -10,19 +10,19 @@ var r = n(255367),
     d = n(963550),
     f = n(845080),
     p = n(30804);
-let g = s.memo(function (e) {
+let g = i.memo(function (e) {
     var t;
-    let { message: n, channel: i, compact: g, className: b, isGroupStart: v, hideSimpleEmbedContent: m = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
-        S = null != O ? O : (0, a.k)(n),
-        E = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+    let { message: n, channel: s, compact: g, className: b, isGroupStart: v, hideSimpleEmbedContent: m = !0, disableInteraction: h, previewGuildId: O, preview: y, author: E } = e,
+        j = null != O ? O : (0, a.k)(n),
+        S = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: x } = (0, u.Z)(n, {
             hideSimpleEmbedContent: m,
-            allowList: E,
-            allowHeading: E,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        P = s.useMemo(() => {
+        P = i.useMemo(() => {
             var t, n;
             return (0, f.Z)(
                 ((t = (function (e) {
@@ -52,8 +52,8 @@ let g = s.memo(function (e) {
                 })({}, e)),
                 (n = n =
                     {
-                        channel: i,
-                        guildId: S
+                        channel: s,
+                        guildId: j
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -69,7 +69,7 @@ let g = s.memo(function (e) {
                       }),
                 t)
             );
-        }, [e, i, S]);
+        }, [e, s, j]);
     return (0, r.jsx)(c.Z, {
         compact: g,
         className: l()(b, {
@@ -80,7 +80,7 @@ let g = s.memo(function (e) {
         childrenHeader: P,
         childrenMessageContent: (0, d.Z)(e, x),
         disableInteraction: h,
-        author: j,
+        author: E,
         preview: y
     });
 });

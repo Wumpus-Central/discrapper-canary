@@ -1,63 +1,59 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(67390),
-    a = n(896835),
-    o = n(447564),
-    s = n(63063),
-    c = n(739566),
-    u = n(942951),
-    d = n(834129),
-    p = n(981631),
-    m = n(388032),
-    f = n(861477);
-function _(e) {
-    let { compact: t, message: n, channel: _ } = e,
-        h = (0, c.ZP)(n),
-        g = (0, u.l)({
+    a = n(63063),
+    o = n(739566),
+    s = n(942951),
+    c = n(834129),
+    u = n(981631),
+    d = n(388032),
+    p = n(861477);
+function m(e) {
+    let { compact: t, message: n, channel: m } = e,
+        f = (0, o.ZP)(n),
+        _ = (0, s.l)({
             user: n.author,
             channelId: n.channel_id,
-            guildId: _.guild_id,
+            guildId: m.guild_id,
             messageId: n.id
-        })(h),
-        b = (0, a.j)('HDStreamingUpgradedMessage'),
-        E = () => (0, o.k)(_, 'HDStreamingUpgradedMessage'),
-        y = b ? E : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
+        })(f),
+        h = a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: f.parentContainer,
-                children: (0, r.jsx)(d.Z, {
+                className: p.parentContainer,
+                children: (0, r.jsx)(c.Z, {
                     iconNode: (0, r.jsx)(i.hh5, { size: 'sm' }),
                     timestamp: n.timestamp,
                     compact: t,
-                    children: m.intl.format(m.t['u0qJ4+'], {
-                        actorName: h.nick,
-                        actorHook: g
+                    children: d.intl.format(d.t['u0qJ4+'], {
+                        actorName: f.nick,
+                        actorHook: _
                     })
                 })
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    b ? E() : window.open(s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION), '_blank');
+                    window.open(a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), '_blank');
                 },
-                className: f.embed,
+                className: p.embed,
                 children: [
                     (0, r.jsx)(l.Z, {}),
                     (0, r.jsxs)('div', {
-                        className: f.text,
+                        className: p.text,
                         children: [
                             (0, r.jsx)(i.Text, {
                                 color: 'text-default',
                                 variant: 'text-sm/semibold',
-                                className: f.title,
-                                children: m.intl.string(m.t['Fh/mk5'])
+                                className: p.title,
+                                children: d.intl.string(d.t['Fh/mk5'])
                             }),
                             (0, r.jsx)(i.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: m.intl.format(m.t['bmGF+f'], { helpCenterLink: y })
+                                children: d.intl.format(d.t['bmGF+f'], { helpCenterLink: h })
                             })
                         ]
                     })

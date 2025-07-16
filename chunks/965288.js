@@ -22,8 +22,8 @@ var r = n(255367),
     C = n(314897),
     x = n(271383),
     v = n(5192),
-    O = n(590415),
-    j = n(354459),
+    j = n(590415),
+    O = n(354459),
     E = n(387147);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -105,8 +105,8 @@ let I = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: o } = e,
             { user: s, blocked: c, ignored: u, rtsState: d } = n,
-            h = d === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = d === O.xO.REQUESTED_TO_SPEAK || h;
+            h = d === j.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = d === j.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -142,7 +142,7 @@ let I = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
-            O = C.default.getId(),
+            j = C.default.getId(),
             { newestAnalyticsLocation: I } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             N = (0, f.bp)(),
             T = (0, u.e7)(
@@ -162,8 +162,8 @@ let I = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'AudienceTile',
-                        is_tile_owner: o.id === O,
-                        tile_type: j.TH.USER
+                        is_tile_owner: o.id === j,
+                        tile_type: O.TH.USER
                     }
                 }),
                     (0, h.jW)(
@@ -182,7 +182,7 @@ let I = i.memo(function (e) {
                                         showChatItems: !1,
                                         onInteraction: (0, _.u)('GuildChannelUserContextMenu', I, {
                                             targetUserId: o.id,
-                                            tileType: j.TH.USER
+                                            tileType: O.TH.USER
                                         })
                                     })
                                 );
@@ -190,7 +190,7 @@ let I = i.memo(function (e) {
                         { context: N }
                     ));
             },
-            [o, O, N, v, l, I]
+            [o, j, N, v, l, I]
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: A,

@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => M,
+    ZP: () => L,
     h4: () => N,
     nH: () => k
 }),
@@ -85,7 +85,7 @@ let N = (e) => {
             ]
         });
     };
-class w extends s.PureComponent {
+class A extends s.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsxs)(h.P3F, {
@@ -139,13 +139,13 @@ class w extends s.PureComponent {
 let Z = u.ZP.connectStores([j.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && j.Z.can(C.Plq.MANAGE_MESSAGES, t) };
-})(w);
-function A(e) {
+})(A);
+function w(e) {
     let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: m, renderEmptyState: b, renderItem: y, getProTip: S, scrollerClassName: x, className: j, listName: N } = e,
         k = s.useRef(null),
-        w = (0, f.Z)(N, k),
+        A = (0, f.Z)(N, k),
         Z = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
-        A = (0, u.e7)([v.Z], () => v.Z.windowSize());
+        w = (0, u.e7)([v.Z], () => v.Z.windowSize());
     (s.useEffect(() => {
         _.default.track(C.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -166,13 +166,13 @@ function A(e) {
                 }
             );
         }, []));
-    let M = s.useCallback(() => {
+    let L = s.useCallback(() => {
             var e;
             let t = null == (e = k.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 250 && l && !o && (null == p || p());
         }, [l, p, o]),
         F = [],
-        L = !0;
+        M = !0;
     null == n || (o && 0 === n.length)
         ? (F = [
               (0, r.jsx)(
@@ -186,7 +186,7 @@ function A(e) {
           ])
         : 0 === n.length
           ? F.push((0, r.jsx)(s.Fragment, { children: b() }, 'empty-state'))
-          : ((L = !1),
+          : ((M = !1),
             (F = []),
             i().each(n, (e) => {
                 F.push(...y(e));
@@ -221,7 +221,7 @@ function A(e) {
                 }));
     let H = null == S ? void 0 : S(),
         B =
-            L && null != H
+            M && null != H
                 ? (0, r.jsx)('div', {
                       className: R.footer,
                       children: (0, r.jsx)(g.Z, {
@@ -234,7 +234,7 @@ function A(e) {
                       })
                   })
                 : null,
-        U = { maxHeight: A.height - 43 - 25 - 48 };
+        U = { maxHeight: w.height - 43 - 25 - 48 };
     Z && (U.maxHeight -= 40);
     let G = null != p && l;
     return (0, r.jsx)('div', {
@@ -248,11 +248,11 @@ function A(e) {
             children: [
                 (0, r.jsxs)(h.Den, {
                     className: a()(R.messagesPopout, x),
-                    onScroll: G ? M : void 0,
+                    onScroll: G ? L : void 0,
                     ref: k,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: w,
+                            navigator: A,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var t,
@@ -321,7 +321,7 @@ function A(e) {
         })
     });
 }
-function M(e) {
+function L(e) {
     let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: i, loadMore: c, onJump: d, canCloseAllMessages: h = !1, renderHeader: f, renderEmptyState: g, renderMessage: j, getProTip: O, scrollerClassName: v, className: _, onCloseMessage: E, listName: I } = e,
         P = (0, u.e7)([x.Z], () => {
             let e = null != l ? x.Z.getMessages(l.id) : null;
@@ -347,7 +347,7 @@ function M(e) {
                   })),
         [a, l]
     );
-    return (0, r.jsx)(A, {
+    return (0, r.jsx)(w, {
         className: _,
         scrollerClassName: v,
         items: N,

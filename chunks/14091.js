@@ -34,12 +34,12 @@ var r = n(255367),
     T = n(406326),
     N = n(994463),
     k = n(611004),
-    w = n(619753),
+    A = n(619753),
     Z = n(902733),
-    A = n(981631),
-    M = n(531578),
+    w = n(981631),
+    L = n(531578),
     F = n(388032),
-    L = n(682065);
+    M = n(682065);
 function D(e, t, n) {
     return (
         t in e
@@ -118,19 +118,19 @@ class B extends s.Component {
 let U = (e) => {
     let { children: t } = e;
     return (0, r.jsx)('div', {
-        className: L.emptyResultsWrap,
+        className: M.emptyResultsWrap,
         children: (0, r.jsx)('div', {
-            className: L.emptyResultsContent,
+            className: M.emptyResultsContent,
             children: t
         })
     });
 };
 class G extends s.PureComponent {
     componentDidMount() {
-        v.S.subscribe(A.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        v.S.subscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        v.S.unsubscribe(A.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        v.S.unsubscribe(w.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -142,13 +142,13 @@ class G extends s.PureComponent {
     }
     render() {
         return (0, r.jsxs)('section', {
-            className: L.searchResultsWrap,
+            className: M.searchResultsWrap,
             'aria-label': F.intl.string(F.t.zkoeq6),
             children: [
                 this.renderHeader(),
                 (0, r.jsx)(u.Den, {
                     ref: this.scrollerRef,
-                    className: L.scroller,
+                    className: M.scroller,
                     children: this.renderContent()
                 }),
                 this.renderFooter()
@@ -227,12 +227,12 @@ class G extends s.PureComponent {
                 });
             }),
             D(this, 'renderIndexing', () => {
-                let e = this.props.searchType === A.aib.GUILD ? F.intl.string(F.t.AXPbZm) : F.intl.string(F.t.Q0JJjo);
+                let e = this.props.searchType === w.aib.GUILD ? F.intl.string(F.t.AXPbZm) : F.intl.string(F.t.Q0JJjo);
                 return (0, r.jsxs)(U, {
                     children: [
                         (0, r.jsx)(N.Z, {}),
                         (0, r.jsx)('div', {
-                            className: (L.emptyResultsText, L.stillIndexing),
+                            className: (M.emptyResultsText, M.stillIndexing),
                             children: e
                         })
                     ]
@@ -243,9 +243,9 @@ class G extends s.PureComponent {
                     t = e ? F.intl.string(F.t['VrK/2d']) : F.intl.string(F.t.V6nAfH);
                 return (0, r.jsxs)(U, {
                     children: [
-                        (0, r.jsx)('div', { className: a()(L.noResultsImage, { [L.alt]: e }) }),
+                        (0, r.jsx)('div', { className: a()(M.noResultsImage, { [M.alt]: e }) }),
                         (0, r.jsx)('div', {
-                            className: a()(L.emptyResultsText, L.noResults, { [L.alt]: e }),
+                            className: a()(M.emptyResultsText, M.noResults, { [M.alt]: e }),
                             children: t
                         })
                     ]
@@ -254,9 +254,9 @@ class G extends s.PureComponent {
             D(this, 'renderError', () =>
                 (0, r.jsxs)(U, {
                     children: [
-                        (0, r.jsx)('div', { className: L.errorImage }),
+                        (0, r.jsx)('div', { className: M.errorImage }),
                         (0, r.jsx)('div', {
-                            className: a()(L.emptyResultsText, L.errorMessage),
+                            className: a()(M.emptyResultsText, M.errorMessage),
                             children: F.intl.string(F.t.uvDZBQ)
                         })
                     ]
@@ -273,10 +273,11 @@ class G extends s.PureComponent {
                     searchAnalyticsId: a,
                     guildId: r,
                     channelId: e.channel_id,
+                    messageId: e.id,
                     pageResults: null != this.props.searchResults ? this.props.searchResults.length : null,
                     totalResults: i,
-                    limit: A.vpv,
-                    page: Math.floor(o / A.vpv) + 1,
+                    limit: w.vpv,
+                    page: Math.floor(o / w.vpv) + 1,
                     offset: o,
                     index: t,
                     searchQueryString: H(s),
@@ -293,7 +294,7 @@ class G extends s.PureComponent {
                       : c
                         ? null
                         : i > 0
-                          ? (0, r.jsx)(w.Z, {
+                          ? (0, r.jsx)(A.Z, {
                                 search: s,
                                 searchResults: e,
                                 onClick: this.handleSearchResultClick,
@@ -358,7 +359,7 @@ function W(e) {
                 searchAnalyticsId: u,
                 searchResults: d,
                 searchOffset: o.offset,
-                searchLimit: A.vpv,
+                searchLimit: w.vpv,
                 searchHasError: o.hasError,
                 searchTotalResults: o.totalResults,
                 searchIsIndexing: o.isHistoricalIndexing,
@@ -369,7 +370,7 @@ function W(e) {
 }
 function z(e) {
     let { theme: t, isFeedbackVisible: n, dismissFeedbackEntrypoint: l } = e,
-        a = s.useMemo(() => ({ type: A.aib.DMS }), []),
+        a = s.useMemo(() => ({ type: w.aib.DMS }), []),
         o = (0, y.WJ)(a),
         i = (0, c.cj)([b.Z, j.Z], () => {
             var e, t, n, r;
@@ -416,10 +417,10 @@ function z(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(G, {
-                searchId: A.aib.DMS,
+                searchId: w.aib.DMS,
                 search: i,
                 searchAnalyticsId: u,
-                searchType: A.aib.DMS,
+                searchType: w.aib.DMS,
                 searchResults: d,
                 ignoreCount: h,
                 blockCount: p,
@@ -433,12 +434,12 @@ function z(e) {
                 searchMode: f
             }),
             (0, r.jsx)(B, {
-                searchId: A.aib.DMS,
-                searchType: A.aib.DMS,
+                searchId: w.aib.DMS,
+                searchType: w.aib.DMS,
                 searchAnalyticsId: u,
                 searchResults: d,
                 searchOffset: i.offset,
-                searchLimit: A.vpv,
+                searchLimit: w.vpv,
                 searchHasError: i.hasError,
                 searchTotalResults: i.totalResults,
                 searchIsIndexing: i.isHistoricalIndexing,
@@ -463,7 +464,7 @@ function q(e) {
                     (t !== a.current &&
                         ((a.current = t),
                         f.Z.possiblyShowFeedbackModal(
-                            M.nw.SEARCH_RESULTS,
+                            L.nw.SEARCH_RESULTS,
                             () => i(!0),
                             () => i(!1)
                         ))));
@@ -471,7 +472,7 @@ function q(e) {
     let d = s.useCallback(() => {
         i(!1);
     }, []);
-    return l && t === A.aib.DMS
+    return l && t === w.aib.DMS
         ? (0, r.jsx)(z, {
               theme: n,
               isFeedbackVisible: o,

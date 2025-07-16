@@ -4,8 +4,8 @@ var r = n(255367),
     l = n(481060),
     a = n(239091),
     o = n(230711),
-    c = n(493544),
-    s = n(108843),
+    s = n(493544),
+    c = n(108843),
     u = n(100527),
     d = n(906732),
     p = n(386506),
@@ -13,26 +13,26 @@ var r = n(255367),
     b = n(991346),
     y = n(606669),
     O = n(53432),
-    f = n(74869),
-    h = n(45570),
+    h = n(74869),
+    f = n(45570),
     j = n(308512),
     v = n(594791),
-    S = n(393431),
-    E = n(69021),
+    E = n(393431),
+    S = n(69021),
     P = n(981631),
     m = n(388032);
-let x = (0, s.Z)(
+let x = (0, c.Z)(
     function (e) {
-        let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
+        let { webBuildOverride: t, onSelect: n, onInteraction: c } = e,
             [u, x] = i.useState(!1),
-            w = (0, h.Z)(),
+            w = (0, f.Z)(),
             k = (0, j.Z)(),
             D = (0, O.Z)(),
             Z = (0, y.Z)(),
-            A = (0, S.Z)(),
+            A = (0, E.Z)(),
             C = (0, v.Z)(),
-            I = (0, f.Z)(),
-            T = (0, E.Z)(),
+            I = (0, h.Z)(),
+            T = (0, S.Z)(),
             { analyticsLocations: _ } = (0, d.ZP)(),
             N = i.useMemo(() => (0, g.j)(), []);
         async function R() {
@@ -67,7 +67,7 @@ let x = (0, s.Z)(
             M = (0, b.VO)()
                 .filter((e) => {
                     let { section: t } = e;
-                    return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
+                    return t !== s.ID.HEADER && t !== s.ID.CUSTOM && t !== s.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, r.jsx)(d.Gt, {
@@ -77,12 +77,12 @@ let x = (0, s.Z)(
                 onClose: a.Zy,
                 'aria-label': m.intl.string(m.t.opYYHh),
                 onSelect: n,
-                onInteraction: s,
+                onInteraction: c,
                 children: [
                     M.map((e) => {
                         var t, n;
-                        let { section: i, label: a, onClick: c } = e,
-                            s = i.replace(/\W/gi, '_');
+                        let { section: i, label: a, onClick: s } = e,
+                            c = i.replace(/\W/gi, '_');
                         return (0, r.jsx)(
                             l.sNh,
                             ((t = (function (e) {
@@ -110,12 +110,12 @@ let x = (0, s.Z)(
                                 }
                                 return e;
                             })(
-                                { id: s },
+                                { id: c },
                                 {
                                     label: a,
                                     action: () =>
-                                        null != c
-                                            ? c()
+                                        null != s
+                                            ? s()
                                             : (function (e, t) {
                                                   let n = Object.values(P.oAB).filter((t) => t === e)[0];
                                                   null != n && o.Z.open(n, void 0, { analyticsLocations: t });
@@ -136,7 +136,7 @@ let x = (0, s.Z)(
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
-                            s
+                            c
                         );
                     }),
                     e.user.isStaff() && N.length > 0

@@ -47,10 +47,10 @@ function g(e) {
     let v = i.useCallback(() => {
             (null == g || g(), t());
         }, [g, t]),
-        O = i.useCallback(() => {
+        j = i.useCallback(() => {
             (null == b || b(), t());
         }, [b, t]),
-        j = i.useRef(null);
+        O = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
@@ -61,9 +61,9 @@ function g(e) {
                     (async () => {
                         let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? x.dark() : x.light()]);
                         r ||
-                            null == j.current ||
+                            null == O.current ||
                             (e = i.loadAnimation({
-                                container: j.current,
+                                container: O.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
@@ -87,7 +87,7 @@ function g(e) {
                             null != x &&
                                 (0, r.jsx)('div', {
                                     className: f.animation,
-                                    ref: j
+                                    ref: O
                                 }),
                             (0, r.jsxs)('div', {
                                 className: f.content,
@@ -111,7 +111,7 @@ function g(e) {
                                                     (0, r.jsx)(o.zx, {
                                                         className: f.button,
                                                         color: o.zx.Colors.PRIMARY,
-                                                        onClick: O,
+                                                        onClick: j,
                                                         children: h.intl.string(h.t.fsBWmZ)
                                                     }),
                                                     (0, r.jsx)(s.Text, {

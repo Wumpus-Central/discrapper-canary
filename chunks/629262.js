@@ -1,6 +1,6 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => s });
 var r = n(442837),
-    s = n(592125);
-function i(e) {
-    return (0, r.Wu)([s.Z], () => e.filter((e) => s.Z.hasChannel(e.ref_id)), [e]);
+    i = n(592125);
+function s(e) {
+    return (0, r.Wu)([i.Z], () => e.filter((e) => i.Z.hasChannel(e.ref_id)), [e]);
 }

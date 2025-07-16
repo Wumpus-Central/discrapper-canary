@@ -17,7 +17,7 @@ var r = n(255367),
     b = n(489887),
     E = n(388032),
     y = n(271629);
-function x() {
+function C() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
@@ -32,10 +32,10 @@ function x() {
         })
     });
 }
-function C(e) {
+function x(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(x, {});
+    if (n) t = (0, r.jsx)(C, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(d.Z, {
@@ -163,7 +163,7 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: a()(y.container, { [y.containerWithImage]: u }, t),
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(x, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -217,8 +217,8 @@ function j(e) {
         d = n.embeds[0],
         p = i.useMemo(() => (0, h.Z)(d), [d]),
         g = (0, o.aF)(null != (t = null == p ? void 0 : p.questionText) ? t : '', b.Dv),
-        x = (0, m.ZP)(n),
-        C = (0, f.l)({
+        C = (0, m.ZP)(n),
+        x = (0, f.l)({
             user: n.author,
             channelId: l.id,
             guildId: l.guild_id,
@@ -243,8 +243,8 @@ function j(e) {
                       timestamp: n.timestamp,
                       compact: a,
                       children: E.intl.format(E.t['VJcK4+'], {
-                          username: x.nick,
-                          usernameHook: C(x),
+                          username: C.nick,
+                          usernameHook: x(C),
                           title: g,
                           titleOnClick: j
                       })

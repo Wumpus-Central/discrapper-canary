@@ -5,6 +5,7 @@ e.exports = {
     muted: 'muted__972a0',
     interactive: 'interactive__972a0',
     overflowTooltip: 'overflowTooltip__972a0',
+    withDisplayNameStyles: 'withDisplayNameStyles__972a0',
     clanTag: 'clanTag__972a0',
     clanTagMuted: 'clanTagMuted__972a0',
     interactiveSelected: 'interactiveSelected__972a0',

@@ -15,7 +15,7 @@ var r = n(255367),
 let g = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: g, setWhichPopoutIsOpen: b } = e,
         { isHovered: _, setIsHovered: y, onMouseEnter: C, onMouseLeave: x, cancelTimers: v } = (0, u.Z)(200, 300),
-        [O, j] = i.useState(!1),
+        [j, O] = i.useState(!1),
         E = (0, l.e7)([p.Z], () => p.Z.effectCooldownEndTime),
         S = i.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
         { seconds: P } = (0, o.Z)(null != E ? E : new Date()),
@@ -23,20 +23,20 @@ let g = (e) => {
         { parentAnalyticsLocation: Z } = (0, s.ZP)(),
         N = i.useCallback(
             (e) => {
-                'focus' !== e.type && (O || I || C());
+                'focus' !== e.type && (j || I || C());
             },
-            [O, I, C]
+            [j, I, C]
         ),
         T = i.useCallback(() => {
-            O || x();
-        }, [x, O]),
+            j || x();
+        }, [x, j]),
         A = i.useCallback(
             (e, t) => {
-                (v(), j(!O), g === f.D.EMOJI ? null == b || b(void 0) : null == b || b(f.D.EMOJI), (!_ || O) && (null == t || t(e)));
+                (v(), O(!j), g === f.D.EMOJI ? null == b || b(void 0) : null == b || b(f.D.EMOJI), (!_ || j) && (null == t || t(e)));
             },
-            [v, O, _, b, g]
+            [v, j, _, b, g]
         ),
-        w = (_ || O) && (g === f.D.EMOJI || null == g),
+        w = (_ || j) && (g === f.D.EMOJI || null == g),
         R = i.useRef(null);
     return (0, r.jsx)(a.yRy, {
         targetElementRef: R,
@@ -47,7 +47,7 @@ let g = (e) => {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            (y(!1), j(!1), null == b || b(void 0));
+            (y(!1), O(!1), null == b || b(void 0));
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -57,14 +57,14 @@ let g = (e) => {
                 closePopout: n,
                 onMouseEnter: C,
                 onMouseLeave: T,
-                onFocus: () => j(!0)
+                onFocus: () => O(!0)
             });
         },
         children: (e) => {
             let { onClick: t, onKeyDown: i } = e;
             return (0, r.jsx)(d.Z, {
                 isCenterButton: !0,
-                color: O ? 'primaryDark' : void 0,
+                color: j ? 'primaryDark' : void 0,
                 totalCooldownSeconds: S,
                 remainingCooldownSeconds: P,
                 className: n,
@@ -76,7 +76,7 @@ let g = (e) => {
                 },
                 onMouseEnter: N,
                 onMouseLeave: T,
-                isActive: O,
+                isActive: j,
                 ref: R
             });
         }

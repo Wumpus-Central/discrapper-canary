@@ -10,19 +10,19 @@ var r = n(255367),
     d = n(423163);
 let p = function (e) {
     let { message: t, subtitle: n, countdown: p, buttonText: h, buttonColor: f, buttonSubmitting: m, onButtonClick: g, imageSrc: b, animationSrc: _, secondaryButtonText: y, onSecondaryButtonClick: C, children: x, useReducedMotion: v = !1 } = e,
-        O = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
-    if (l.tq && O) return null;
+        j = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
+    if (l.tq && j) return null;
     if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(x) });
-    let j = null;
+    let O = null;
     return (
         null != b
-            ? (j = (0, r.jsx)('img', {
+            ? (O = (0, r.jsx)('img', {
                   alt: '',
                   src: b,
                   className: d.image
               }))
             : null != _ &&
-              (j = (0, r.jsx)(s.Fmz, {
+              (O = (0, r.jsx)(s.Fmz, {
                   importData: _,
                   shouldAnimate: !v,
                   className: d.animation
@@ -33,7 +33,7 @@ let p = function (e) {
                 (0, r.jsxs)('div', {
                     className: d.content,
                     children: [
-                        j,
+                        O,
                         (0, r.jsxs)('div', {
                             className: d.text,
                             children: [

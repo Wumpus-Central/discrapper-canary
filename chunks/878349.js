@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(546240),
     g = n(952009);
 function b(e) {
-    let { checked: t, labelText: n, tooltipText: l, canToggle: b, iconAltText: _, onChange: y, tooltipColor: C, className: x, id: v = 'fancybutton-toggle', collapseWhenChecked: O = !0, onClick: j, disabled: E } = e,
+    let { checked: t, labelText: n, tooltipText: l, canToggle: b, iconAltText: _, onChange: y, tooltipColor: C, className: x, id: v = 'fancybutton-toggle', collapseWhenChecked: j = !0, onClick: O, disabled: E } = e,
         S = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
         [P, I] = i.useState(!1),
         Z = (0, d.ZP)(),
@@ -40,7 +40,7 @@ function b(e) {
                         let e = !t;
                         (I(!0), null == y || y(e));
                     }
-                    'function' == typeof j && j();
+                    'function' == typeof O && O();
                 },
                 id: v,
                 type: 'checkbox',
@@ -53,7 +53,7 @@ function b(e) {
                     [f.labelChecked]: t,
                     [f.labelUnchecked]: !t && !b
                 }),
-                style: O ? { width: t ? T : T + w } : void 0,
+                style: j ? { width: t ? T : T + w } : void 0,
                 children: [
                     t
                         ? (0, r.jsx)(c.ZX5, {
@@ -70,7 +70,7 @@ function b(e) {
                         ref: R,
                         children: (0, r.jsx)(c.Text, {
                             className: a()(f.burstText, {
-                                [f.visuallyHidden]: t && O,
+                                [f.visuallyHidden]: t && j,
                                 [f.burstTextChecked]: t
                             }),
                             variant: 'text-sm/semibold',

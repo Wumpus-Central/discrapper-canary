@@ -25,19 +25,19 @@ let y = (e) => {
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(C, {
+            : (0, r.jsx)(x, {
                   url: n,
                   description: i
               });
     },
-    x = (e) => {
+    C = (e) => {
         var t, n, i;
         let { embed: l } = e;
         if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(C, { url: a });
+        return null == a ? null : (0, r.jsx)(x, { url: a });
     },
-    C = (e) => {
+    x = (e) => {
         let { url: t, description: n } = e,
             i = (0, m.cb)(t);
         return (0, r.jsx)('div', {
@@ -66,7 +66,7 @@ function v(e) {
 function O(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: u, onConfirmPress: p, transitionState: m, onClose: f } = e,
         g = (0, d.Dt)(),
-        C = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
+        x = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
         v = i.useCallback(() => {
             ((0, _.aP)({
                 action: _.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -93,7 +93,7 @@ function O(e) {
             context: a
         });
     }, [t, n, a]);
-    let j = i.useMemo(() => (C ? b.intl.string(b.t['z4du/P']) : b.intl.string(b.t.gg5Dp6)), [C]);
+    let j = i.useMemo(() => (x ? b.intl.string(b.t['z4du/P']) : b.intl.string(b.t.gg5Dp6)), [x]);
     return (0, r.jsxs)(c.Y0X, {
         transitionState: m,
         'aria-labelledby': g,
@@ -120,7 +120,7 @@ function O(e) {
                         children: j
                     }),
                     null != o && (0, r.jsx)(y, { attachment: o }),
-                    null != u && (0, r.jsx)(x, { embed: u })
+                    null != u && (0, r.jsx)(C, { embed: u })
                 ]
             }),
             (0, r.jsxs)(c.mzw, {

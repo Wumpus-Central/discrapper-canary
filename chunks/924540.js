@@ -4,9 +4,9 @@ n.d(t, {
     _y: () => m
 });
 var r = n(255367),
-    s = n(73800),
-    i = n(120356),
-    l = n.n(i),
+    i = n(73800),
+    s = n(120356),
+    l = n.n(s),
     o = n(481060),
     a = n(774078),
     c = n(55935),
@@ -15,8 +15,8 @@ var r = n(255367),
     f = n(388032),
     p = n(952849);
 function g(e) {
-    let { isTabSelected: t, expiresAt: n, trialDuration: i, className: u } = e,
-        d = s.useMemo(() => Date.parse(n), [n]),
+    let { isTabSelected: t, expiresAt: n, trialDuration: s, className: u } = e,
+        d = i.useMemo(() => Date.parse(n), [n]),
         g = (0, a.Z)(d, 60000);
     return Object.values(g).every((e) => 0 === e)
         ? null
@@ -27,7 +27,7 @@ function g(e) {
                   minutes: f.t.IzmIlZ
               }),
               children: (e) => {
-                  var n, s;
+                  var n, i;
                   return (0, r.jsxs)(
                       'div',
                       ((n = (function (e) {
@@ -55,7 +55,7 @@ function g(e) {
                           }
                           return e;
                       })({}, e)),
-                      (s = s =
+                      (i = i =
                           {
                               className: l()(p.premiumTrialBadge, p.premiumTrialAcknowledgedBadge, u, { [p.premiumTrialBadgeSelected]: t }),
                               children: [
@@ -68,12 +68,12 @@ function g(e) {
                                   }),
                                   (0, r.jsxs)(o.Text, {
                                       variant: 'eyebrow',
-                                      children: [' ', i, ' ']
+                                      children: [' ', s, ' ']
                                   })
                               ]
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
+                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -81,8 +81,8 @@ function g(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(s)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
                       n)
                   );
@@ -91,32 +91,32 @@ function g(e) {
 }
 function b(e) {
     var t;
-    let { isTabSelected: n, trialOffer: s } = e,
-        i = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
+    let { isTabSelected: n, trialOffer: i } = e,
+        s = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
         l = (0, u.a5)({
-            intervalType: null == i ? void 0 : i.interval,
-            intervalCount: null == i ? void 0 : i.interval_count
+            intervalType: null == s ? void 0 : s.interval,
+            intervalCount: null == s ? void 0 : s.interval_count
         });
     return (0, r.jsx)(m, {
         isTabSelected: n,
         badgeCopy: l,
-        offerExpiresAt: s.expires_at
+        offerExpiresAt: i.expires_at
     });
 }
 function v(e) {
-    let { isTabSelected: t, userDiscount: n, includesAmountOff: s } = e,
-        i = f.intl.formatToPlainString(f.t.iiLbvr, { percent: n.discount.amount });
+    let { isTabSelected: t, userDiscount: n, includesAmountOff: i } = e,
+        s = f.intl.formatToPlainString(f.t.iiLbvr, { percent: n.discount.amount });
     return (0, r.jsx)(m, {
         isTabSelected: t,
-        badgeCopy: s ? i : f.intl.string(f.t['/DTtr6']),
+        badgeCopy: i ? s : f.intl.string(f.t['/DTtr6']),
         offerExpiresAt: n.expires_at
     });
 }
 function m(e) {
-    let { isTabSelected: t, badgeCopy: n, offerExpiresAt: s } = e;
-    return null != s
+    let { isTabSelected: t, badgeCopy: n, offerExpiresAt: i } = e;
+    return null != i
         ? (0, r.jsx)(g, {
-              expiresAt: s,
+              expiresAt: i,
               isTabSelected: t,
               trialDuration: n
           })

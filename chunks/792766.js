@@ -102,12 +102,12 @@ let _ = (e) => {
         let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: h = !1, onClick: g } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: y, participant_count: x } = n,
-            C = null != (t = n.members) ? t : [],
-            v = h ? C.slice(0, 3) : C,
+        let { topic: E, speaker_count: y, participant_count: C } = n,
+            x = null != (t = n.members) ? t : [],
+            v = h ? x.slice(0, 3) : x,
             O = y - v.length;
         return (
-            h && (O += C.length - v.length),
+            h && (O += x.length - v.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -143,7 +143,7 @@ let _ = (e) => {
                                     (0, r.jsx)(s.X6q, {
                                         className: a()(f.__invalid_label, f.listeners),
                                         variant: 'heading-sm/semibold',
-                                        children: x
+                                        children: C
                                     })
                                 ]
                             })

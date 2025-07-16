@@ -1,4 +1,4 @@
-let r, s, i;
+let r, i, s;
 (n.d(t, { Z: () => T }), n(388685), n(539854));
 var l,
     o,
@@ -15,9 +15,9 @@ var l,
     h = n(592125),
     O = n(430824),
     y = n(306680),
-    j = n(9156),
-    S = n(594174),
-    E = n(709054);
+    E = n(9156),
+    j = n(594174),
+    S = n(709054);
 let x = new f.h(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
@@ -25,7 +25,7 @@ let x = new f.h(
     },
     (e) => {
         let { lastMessageId: t } = e;
-        return -E.default.extractTimestamp(t);
+        return -S.default.extractTimestamp(t);
     }
 );
 function P(e) {
@@ -35,11 +35,11 @@ function P(e) {
             : (function (e) {
                   var t, n;
                   let r = null != (n = null != (t = y.ZP.lastMessageId(e.id)) ? t : e.lastMessageId) ? n : e.id,
-                      s = e.isMessageRequestTimestamp;
-                  if (null != s) {
-                      let e = u()(s).valueOf(),
-                          t = E.default.fromTimestamp(e);
-                      return E.default.compare(r, t) > 0 ? r : t;
+                      i = e.isMessageRequestTimestamp;
+                  if (null != i) {
+                      let e = u()(i).valueOf(),
+                          t = S.default.fromTimestamp(e);
+                      return S.default.compare(r, t) > 0 ? r : t;
                   }
                   return r;
               })(e);
@@ -62,30 +62,30 @@ function _() {
 }
 let w =
     ((r = []),
-    (s = []),
     (i = []),
+    (s = []),
     () => {
         let e = x.values('FAVORITE'),
             t = x.values('DEFAULT');
         return (
-            (r !== e || s !== t) &&
-                ((i = []),
+            (r !== e || i !== t) &&
+                ((s = []),
                 e.forEach((e) => {
                     let { channelId: t } = e;
-                    return i.push(t);
+                    return s.push(t);
                 }),
                 (r = e),
                 t.forEach((e) => {
                     let { channelId: t } = e;
-                    return i.push(t);
+                    return s.push(t);
                 }),
-                (s = t)),
-            i
+                (i = t)),
+            s
         );
     });
 class N extends (l = d.ZP.Store) {
     initialize() {
-        (this.waitFor(h.Z, O.Z, S.default, b.Z, j.ZP), this.syncWith([j.ZP, b.Z], C));
+        (this.waitFor(h.Z, O.Z, j.default, b.Z, E.ZP), this.syncWith([E.ZP, b.Z], C));
     }
     getPrivateChannelIds() {
         return w();
