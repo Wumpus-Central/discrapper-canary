@@ -1,10 +1,11 @@
 (n.d(t, {
-    IZ: () => d,
+    IZ: () => f,
     Re: () => s,
-    j_: () => f
+    j_: () => _
 }),
     n(953529),
-    n(539854));
+    n(539854),
+    n(388685));
 var r = n(512722),
     i = n.n(r),
     a = n(668757);
@@ -77,5 +78,58 @@ class u extends c {
         (super(e), o(this, 'storeName', void 0), (this.storeName = t));
     }
 }
-let d = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
-    f = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');
+class d extends c {
+    isEnabled() {
+        let e = this.getCachedConfig();
+        return void 0 !== e && e.treatmentId > 0;
+    }
+    getLabel() {
+        return 'libdiscore Telemetry';
+    }
+    getTreatments() {
+        return [
+            {
+                treatmentId: 0,
+                label: 'Disabled'
+            },
+            {
+                treatmentId: 1,
+                label: 'Enabled (1% sample rate)'
+            },
+            {
+                treatmentId: 2,
+                label: 'Enabled (5% sample rate)'
+            },
+            {
+                treatmentId: 3,
+                label: 'Enabled (100% sample rate)'
+            }
+        ];
+    }
+    getMetricsSampleRate() {
+        let e = this.getCachedConfig();
+        switch (null == e ? void 0 : e.treatmentId) {
+            case 1:
+                return 0.01;
+            case 2:
+                return 0.05;
+            case 3:
+                return 1;
+            default:
+                return 0;
+        }
+    }
+    didEmit() {
+        this.emissionsCount++;
+    }
+    shouldCollectMetrics() {
+        let e = this.getMetricsSampleRate();
+        return 0 !== e && (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e));
+    }
+    constructor(...e) {
+        (super(...e), o(this, 'MAX_EMISSIONS_PER_APP_LAUNCH', 5), o(this, 'emissionsCount', 0));
+    }
+}
+let f = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
+    _ = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');
+new d('2025-07_libdiscore_telemetry');

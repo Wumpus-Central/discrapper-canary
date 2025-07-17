@@ -100,6 +100,10 @@ let u = '1340102344645283891',
         }
     }),
     T = {
+        [s.oNc.VANITY_URL]: {
+            boostPrice: 5,
+            includedInLevel: s.Eu4.TIER_3
+        },
         [s.oNc.GUILD_TAGS]: {
             boostPrice: 3,
             includedInLevel: void 0

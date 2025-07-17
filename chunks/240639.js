@@ -10,7 +10,6 @@ e.exports = {
     recentAvatarButton: 'recentAvatarButton__1df30 circular__1df30',
     deleteButton: 'deleteButton__1df30',
     recentAvatar: 'recentAvatar__1df30 circular__1df30',
-    deleteButtonInner: 'deleteButtonInner__1df30',
     deleteIcon: 'deleteIcon__1df30',
     emptyAvatarSlots: 'emptyAvatarSlots__1df30',
     avatarPlaceholder: 'avatarPlaceholder__1df30 circular__1df30'

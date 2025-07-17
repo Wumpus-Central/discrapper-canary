@@ -190,9 +190,12 @@ function Z(e) {
                     }
                 });
             if ((0, c.Z)(i))
-                return (0, r.jsx)(R.Z, {
-                    variant: 'text-xs/normal',
-                    text: i.details
+                return (0, r.jsx)(p._, {
+                    href: i.details_url,
+                    children: (0, r.jsx)(R.Z, {
+                        variant: 'text-xs/normal',
+                        text: i.details
+                    })
                 });
             if ((0, b.dS)(i)) {
                 var e;
@@ -239,9 +242,12 @@ function Z(e) {
                 ? (0, r.jsxs)('div', {
                       className: U.gameState,
                       children: [
-                          (0, r.jsx)(R.Z, {
-                              variant: 'text-xs/normal',
-                              text: i.state
+                          (0, r.jsx)(p._, {
+                              href: i.state_url,
+                              children: (0, r.jsx)(R.Z, {
+                                  variant: 'text-xs/normal',
+                                  text: i.state
+                              })
                           }),
                           (0, r.jsx)(R.Z, {
                               variant: 'text-xs/normal',
@@ -256,9 +262,12 @@ function Z(e) {
                   ? (0, r.jsxs)('div', {
                         className: U.gameState,
                         children: [
-                            (0, r.jsx)(R.Z, {
-                                variant: 'text-xs/normal',
-                                text: i.state
+                            (0, r.jsx)(p._, {
+                                href: i.state_url,
+                                children: (0, r.jsx)(R.Z, {
+                                    variant: 'text-xs/normal',
+                                    text: i.state
+                                })
                             }),
                             (0, r.jsx)(R.Z, {
                                 variant: 'text-xs/normal',
@@ -273,9 +282,12 @@ function Z(e) {
                         ]
                     })
                   : null == i.party
-                    ? (0, r.jsx)(R.Z, {
-                          variant: 'text-xs/normal',
-                          text: i.state
+                    ? (0, r.jsx)(p._, {
+                          href: i.state_url,
+                          children: (0, r.jsx)(R.Z, {
+                              variant: 'text-xs/normal',
+                              text: i.state
+                          })
                       })
                     : null;
         },

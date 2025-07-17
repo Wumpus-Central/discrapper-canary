@@ -74,11 +74,14 @@ function g(e) {
     h[t] = f(u({}, b(t)), { appliedBoosts: E(t) });
 }
 function E(e) {
-    var t;
-    let n = o.Z.getGuild(e),
-        r = (null == n ? void 0 : n.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.Hk)) (null == n ? void 0 : n.features.has(e)) && (null == t.includedInLevel || n.premiumTier < t.includedInLevel) && (r += t.boostPrice);
-    return r;
+    var t, n;
+    let r = o.Z.getGuild(e),
+        i = (null == r ? void 0 : r.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == r ? void 0 : r.premiumTier) ? t : l.Eu4.NONE];
+    for (let [e, t] of Object.entries(s.Hk)) {
+        let a = e;
+        (null == r || null == (n = r.premiumFeatures) ? void 0 : n.features.includes(a)) && (null == t.includedInLevel || r.premiumTier < t.includedInLevel) && (i += t.boostPrice);
+    }
+    return i;
 }
 function b(e) {
     if (null == h[e]) {

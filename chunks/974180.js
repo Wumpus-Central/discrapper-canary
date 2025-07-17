@@ -217,7 +217,11 @@ async function tP(t, e) {
             activity: t.name
         }),
         '',
-        { notif_type: 'game_notif' },
+        {
+            notif_type: 'game_notif',
+            application_id: t.id,
+            affine_user_id: e
+        },
         {
             onClick: (t) => {
                 d.Z.openPrivateChannel({ recipientIds: e });

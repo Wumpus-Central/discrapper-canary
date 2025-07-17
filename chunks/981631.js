@@ -2950,6 +2950,7 @@ var np = (function (e) {
             (e.APP_JS_STALLED = 'app_js_stalled'),
             (e.LIBDISCORE_LOADED = 'libdiscore_loaded'),
             (e.LIBDISCORE_KV_DUAL_READ_ERROR = 'libdiscore_kv_dual_read_error'),
+            (e.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY = 'libdiscore_dispatch_bridge_telemetry'),
             (e.REGISTER_INPUT_FOCUS = 'register_input_focus'),
             (e.REGISTER_INPUT_BLUR = 'register_input_blur'),
             (e.SESSION_START = 'session_start'),

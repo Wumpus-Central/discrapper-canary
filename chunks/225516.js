@@ -3,8 +3,8 @@ n.d(t, {
     N: () => d
 });
 var r = n(544891),
-    l = n(481060),
-    a = n(570140),
+    a = n(481060),
+    l = n(570140),
     i = n(668781),
     s = n(881052),
     o = n(482207),
@@ -12,36 +12,36 @@ var r = n(544891),
     u = n(388032);
 async function d() {
     if (o.Z.shouldFetch) {
-        a.Z.dispatch({ type: 'RECENT_AVATARS_FETCH_START' });
+        l.Z.dispatch({ type: 'RECENT_AVATARS_FETCH_START' });
         try {
             let e = await r.tn.get({
                 url: c.ANM.RECENT_AVATARS,
                 rejectWithError: !0
             });
-            a.Z.dispatch({
+            l.Z.dispatch({
                 type: 'RECENT_AVATARS_FETCH_SUCCESS',
                 avatars: e.body.avatars.map((e) => {
                     var t,
                         n,
                         { storage_hash: r } = e,
-                        l = (function (e, t) {
+                        a = (function (e, t) {
                             if (null == e) return {};
                             var n,
                                 r,
-                                l = (function (e, t) {
+                                a = (function (e, t) {
                                     if (null == e) return {};
                                     var n,
                                         r,
-                                        l = {},
-                                        a = Object.keys(e);
-                                    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
-                                    return l;
+                                        a = {},
+                                        l = Object.keys(e);
+                                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]));
+                                    return a;
                                 })(e, t);
                             if (Object.getOwnPropertySymbols) {
-                                var a = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+                                var l = Object.getOwnPropertySymbols(e);
+                                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
                             }
-                            return l;
+                            return a;
                         })(e, ['storage_hash']);
                     return (
                         (t = (function (e) {
@@ -68,7 +68,7 @@ async function d() {
                                     }));
                             }
                             return e;
-                        })({}, l)),
+                        })({}, a)),
                         (n = { storageHash: r }),
                         (n = null != n ? n : {}),
                         Object.getOwnPropertyDescriptors
@@ -88,7 +88,7 @@ async function d() {
                 })
             });
         } catch (e) {
-            a.Z.dispatch({
+            l.Z.dispatch({
                 type: 'RECENT_AVATARS_FETCH_FAILURE',
                 error: new s.Hx(e)
             });
@@ -101,11 +101,11 @@ async function f(e) {
             url: c.ANM.RECENT_AVATARS_DELETE(e),
             rejectWithError: !0
         }),
-            await a.Z.dispatch({
+            await l.Z.dispatch({
                 type: 'RECENT_AVATAR_DELETE',
                 avatarId: e
             }),
-            l.uvj.announce(u.intl.string(u.t.YJPieH)));
+            a.uvj.announce(u.intl.string(u.t.YJPieH)));
     } catch (e) {
         i.Z.show({
             title: u.intl.string(u.t.iufib2),
