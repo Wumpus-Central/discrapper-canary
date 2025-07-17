@@ -105,8 +105,8 @@ function I(e) {
         })(),
         E = C ? c.Iy5 : c.X_q,
         w = i.useCallback(() => (0, m.v6)(null), []),
-        N = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
-        T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        T = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
+        N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         Z = i.useRef(0),
         A = n !== l ? Z.current + 1 : Z.current;
     i.useEffect(() => {
@@ -121,7 +121,7 @@ function I(e) {
                 opacity: +!!D,
                 height: 72 * !!D,
                 pointerEvents: D ? 'auto' : 'none',
-                backgroundColor: null != (t = null == I ? void 0 : I.baseColor) ? t : N,
+                backgroundColor: null != (t = null == I ? void 0 : I.baseColor) ? t : T,
                 config: (e) =>
                     'backgroundColor' === e
                         ? {
@@ -133,7 +133,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        F = (0, c.Yzy)(
+        U = (0, c.Yzy)(
             null == I ? void 0 : I.id,
             {
                 key: A,
@@ -156,7 +156,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        [U] = (0, c.bYB)(
+        [F] = (0, c.bYB)(
             2,
             (e) => ({
                 from: L
@@ -225,7 +225,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        B = (0, c.Yzy)(
+        Y = (0, c.Yzy)(
             null == I ? void 0 : I.name,
             {
                 key: A,
@@ -268,7 +268,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        Y = v.intl.string(C ? v.t.esVyo6 : v.t.UQqFCA);
+        W = v.intl.string(C ? v.t.esVyo6 : v.t.UQqFCA);
     return (0, r.jsxs)(o.animated.div, {
         className: b.voiceFilterHero,
         'aria-hidden': k,
@@ -277,7 +277,7 @@ function I(e) {
             (0, r.jsx)('div', {
                 className: a()([b.bgGradient, b.bgGradientHighlight])
             }),
-            F((e) =>
+            U((e) =>
                 (0, r.jsx)(o.animated.div, {
                     className: b.bgGradient,
                     style: e
@@ -300,7 +300,7 @@ function I(e) {
             }),
             (0, r.jsx)('div', {
                 className: b.descriptionWrapper,
-                children: B((e, t) =>
+                children: Y((e, t) =>
                     (0, r.jsxs)(o.animated.div, {
                         className: b.description,
                         style: e,
@@ -324,7 +324,7 @@ function I(e) {
                 className: b.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
-                        'aria-label': Y,
+                        'aria-label': W,
                         tooltipClassName: b.tooltip,
                         tooltipContentClassName: b.tooltipContent,
                         shouldShow: D,
@@ -334,7 +334,7 @@ function I(e) {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
                                     className: b.tooltipHeader,
-                                    children: Y
+                                    children: W
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
@@ -346,7 +346,7 @@ function I(e) {
                         children: (e) =>
                             (0, r.jsx)(o.animated.div, {
                                 className: b.buttonWrapper,
-                                style: U[0],
+                                style: F[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
@@ -365,7 +365,7 @@ function I(e) {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
-                                                color: T
+                                                color: N
                                             })
                                         }
                                     )
@@ -378,7 +378,7 @@ function I(e) {
                         children: (e) =>
                             (0, r.jsx)(o.animated.div, {
                                 className: b.buttonWrapper,
-                                style: U[1],
+                                style: F[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
@@ -397,7 +397,7 @@ function I(e) {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
-                                                color: T
+                                                color: N
                                             })
                                         }
                                     )

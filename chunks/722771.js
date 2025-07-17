@@ -10,5 +10,6 @@ e.exports = {
     neutralFace: 'neutralFace__5c58b emoji__5c58b',
     happyFace: 'happyFace__5c58b emoji__5c58b',
     thumbsDown: 'thumbsDown__5c58b emoji__5c58b',
-    thumbsUp: 'thumbsUp__5c58b emoji__5c58b'
+    thumbsUp: 'thumbsUp__5c58b emoji__5c58b',
+    animatedFace: 'animatedFace__5c58b emoji__5c58b'
 };

@@ -2,8 +2,8 @@ n.d(t, { default: () => d });
 var r = n(255367),
     o = n(73800),
     i = n(481060),
-    l = n(211266),
-    a = n(332664),
+    a = n(211266),
+    l = n(332664),
     c = n(626135),
     s = n(867003),
     u = n(987562),
@@ -11,16 +11,16 @@ var r = n(255367),
     b = n(388032);
 function d(e) {
     let { onClose: t, transitionState: d } = e,
-        f = (0, l.Z)(u.Me),
+        f = (0, a.Z)(u.Me),
         g = o.useMemo(() => f.map((e) => e.value), [f]);
     o.useEffect(() => {
         c.default.track(_.rMx.OPEN_MODAL, { type: 'Ignore User Feedback' });
     }, []);
     let m = o.useCallback((e) => {
         var t;
-        let { rating: o, problem: l, feedback: a } = e,
+        let { rating: o, problem: a, feedback: l } = e,
             c = null == o;
-        ((0, s.wT)(o, a, null != (t = null == l ? void 0 : l.value) ? t : null, c),
+        ((0, s.wT)(o, l, null != (t = null == a ? void 0 : a.value) ? t : null, c),
             c ||
                 (0, i.ZDy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -55,7 +55,7 @@ function d(e) {
                         );
                 }));
     }, []);
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(l.Z, {
         modalType: 'ignore_user',
         header: b.intl.string(b.t.Ib6biY),
         body: b.intl.string(b.t['uW0/nZ']),

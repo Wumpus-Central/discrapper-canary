@@ -1,11 +1,11 @@
 n.d(t, {
-    Z: () => l,
+    Z: () => a,
     f: () => c
 });
 var o,
     r = n(388032),
     c = (((o = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"), (o.CONFUSING_LANGUAGE = 'I found the language confusing'), (o.OTHER = 'Other'), o);
-function l() {
+function a() {
     return [
         {
             label: r.intl.string(r.t.cigGCQ),

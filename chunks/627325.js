@@ -27,7 +27,7 @@ function j(e) {
         {
             isNativeModuleLoaded: E,
             isNativeModuleLoading: w,
-            catalogLastFetchTime: N
+            catalogLastFetchTime: T
         } = (0, s.cj)([g.Z], () => ({
             isNativeModuleLoaded: g.Z.isNativeModuleLoaded(),
             isNativeModuleLoading: g.Z.isNativeModuleLoading(),
@@ -72,7 +72,7 @@ function j(e) {
                     })
                 ]
             })
-          : w || null == N
+          : w || null == T
             ? (0, r.jsx)('div', {
                   className: h.loading,
                   children: (0, r.jsx)(u.$jN, {

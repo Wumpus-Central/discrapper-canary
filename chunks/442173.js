@@ -2,15 +2,15 @@ n.d(t, { default: () => m });
 var o = n(255367),
     r = n(73800),
     c = n(481060),
-    l = n(957115),
-    a = n(332664),
+    a = n(957115),
+    l = n(332664),
     i = n(626135),
     _ = n(798733),
     u = n(559187),
     b = n(981631),
     s = n(531578),
-    p = n(388032);
-function d(e) {
+    d = n(388032);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -65,36 +65,36 @@ function m(e) {
             });
         }, [t, m]),
         (0, o.jsx)(
-            a.Z,
-            d(
+            l.Z,
+            p(
                 {
                     modalType: 'in_app_report',
-                    header: p.intl.string(p.t.MP5lDg),
-                    body: p.intl.string(p.t['7Ct0Dg']),
-                    problemTitle: p.intl.string(p.t.FJmoxM),
+                    header: d.intl.string(d.t.MP5lDg),
+                    body: d.intl.string(d.t['7Ct0Dg']),
+                    problemTitle: d.intl.string(d.t.FJmoxM),
                     problems: (0, _.Z)(),
                     freeformNeededProblems: f,
                     onSubmit: function (e) {
                         var r;
-                        let { rating: a, problem: i, dontShowAgain: _, feedback: b } = e;
+                        let { rating: l, problem: i, dontShowAgain: _, feedback: b } = e;
                         (_ &&
-                            (0, l.Uv)({
+                            (0, a.Uv)({
                                 feedbackType: s.nw.IN_APP_REPORTS,
                                 location: 'InAppReportsFeedbackModal'
                             }),
                             (0, u.Z)({
-                                rating: a,
+                                rating: l,
                                 problem: null != (r = null == i ? void 0 : i.value) ? r : null,
                                 feedback: b,
                                 reportId: t,
                                 reportType: m,
                                 dontShowAgain: _
                             }),
-                            null != a &&
+                            null != l &&
                                 null != i &&
                                 (0, c.ZDy)(async () => {
                                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                    return (t) => (0, o.jsx)(e, d({ body: p.intl.string(p.t['d9+vQ0']) }, t));
+                                    return (t) => (0, o.jsx)(e, p({ body: d.intl.string(d.t['d9+vQ0']) }, t));
                                 }));
                     },
                     otherKey: _.f.OTHER

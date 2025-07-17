@@ -856,12 +856,13 @@ function eP(e) {
             throw Error('Unexpected step: '.concat(eH));
     }
     let tH = eP && tv,
-        tY = (0, r.jsxs)(c.qBt, {
+        tY = tH ? 'combined_stripe_elements' : void 0,
+        tW = (0, r.jsxs)(c.qBt, {
             className: $.sequencer,
             staticClassName: $.sequencerStatic,
             animatedNodeClassName: $.sequencerAnimatedNode,
             fillParent: !0,
-            overrideKey: tH ? 'combined_stripe_elements' : void 0,
+            overrideKey: tY,
             step: eH,
             steps: ez.steps,
             sideMargin: 20,
@@ -888,7 +889,7 @@ function eP(e) {
                 n
             ]
         }),
-        tW = eH === C.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
+        tK = eH === C.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
     return q
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -898,19 +899,20 @@ function eP(e) {
                           isEligibleForTrial: ee
                       }),
                   (0, r.jsxs)(w.C3, {
-                      children: [(0, r.jsx)(x.Z, { className: J.paymentModalError }), tY]
+                      children: [(0, r.jsx)(x.Z, { className: J.paymentModalError }), tW]
                   }),
-                  (0, r.jsx)(w.O3, { children: tW })
+                  (0, r.jsx)(w.O3, { children: tK })
               ]
           })
         : (0, r.jsx)(Y.Z, {
               steps: null != A ? A : ez.steps,
               currentStep: null != k ? k : eH,
+              overrideKey: tY,
               paymentError: h.paymentError,
               header: j,
               hideBreadcrumbs: W,
-              body: tY,
-              footer: tW
+              body: tW,
+              footer: tK
           });
 }
 function ew(e) {

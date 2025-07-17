@@ -1,73 +1,76 @@
-n.d(t, { default: () => O });
+n.d(t, { default: () => g });
 var r = n(255367),
-    o = n(73800),
-    i = n(990547),
+    i = n(73800),
+    o = n(990547),
     l = n(481060),
     a = n(957115),
-    c = n(891802),
+    c = n(328171),
+    u = n(891802),
     s = n(332664),
-    u = n(538211),
-    _ = n(698066),
-    b = n(626135),
-    d = n(981631),
+    d = n(538211),
+    b = n(698066),
+    _ = n(626135),
+    m = n(981631),
     p = n(531578),
-    m = n(70722),
-    f = n(388032);
-let y = [m.kr.OTHER];
-function O(e) {
-    let { isStreamer: t, stream: O, streamApplication: g, onClose: h, transitionState: w, analyticsData: S } = e;
-    o.useEffect(() => {
-        b.default.track(d.rMx.OPEN_MODAL, {
+    f = n(70722),
+    y = n(388032);
+let O = [f.kr.OTHER];
+function g(e) {
+    let { isStreamer: t, stream: g, streamApplication: h, onClose: v, transitionState: j, analyticsData: w } = e;
+    i.useEffect(() => {
+        _.default.track(m.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
-            other_user_id: O.ownerId,
-            application_id: null != g ? g.id : null,
-            application_name: null != g ? g.name : null,
-            game_id: null != g ? g.id : null,
+            other_user_id: g.ownerId,
+            application_id: null != h ? h.id : null,
+            application_name: null != h ? h.name : null,
+            game_id: null != h ? h.id : null,
             source: 'Stream End'
         });
-    }, [O.ownerId, g]);
-    let { showVibesHoneypot: j } = (0, c.X)({ location: 'StreamFeedback' }),
-        v = f.intl.string(f.t['5smP3d']),
-        k = f.intl.string(f.t['0uxA2d']),
-        E = f.intl.string(f.t.CqjnLC);
+    }, [g.ownerId, h]);
+    let { surveyEmojiKind: S } = (0, c.R)({ location: 'StreamFeedback' }),
+        { showVibesHoneypot: E } = (0, u.X)({ location: 'StreamFeedback' }),
+        k = y.intl.string(y.t['5smP3d']),
+        P = y.intl.string(y.t['0uxA2d']),
+        R = y.intl.string(y.t.CqjnLC);
     return (0, r.jsx)(s.Z, {
         modalType: 'stream',
-        header: v,
+        header: k,
+        ratingEmojiKind: S,
         impression: {
-            impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
+            impressionName: o.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: S.media_session_id,
-                rtc_connection_id: S.rtc_connection_id,
-                parent_media_session_id: S.parent_media_session_id
+                media_session_id: w.media_session_id,
+                rtc_connection_id: w.rtc_connection_id,
+                parent_media_session_id: w.parent_media_session_id
             }
         },
-        body: t ? k : E,
-        problemTitle: f.intl.string(f.t['6Y1t5O']),
-        problems: (0, u.Z)({
+        body: t ? P : R,
+        problemTitle: y.intl.string(y.t['6Y1t5O']),
+        problems: (0, d.Z)({
             isStreamer: t,
             isEndStream: !0,
-            showVibesHoneypot: j
+            showVibesHoneypot: E
         }),
-        freeformNeededProblems: y,
+        freeformNeededProblems: O,
         onSubmit: function (e) {
             var t;
-            let { rating: o, problem: i, dontShowAgain: c, feedback: s } = e;
+            let { rating: i, problem: o, dontShowAgain: c, feedback: u } = e;
             (c &&
                 (0, a.Uv)({
                     feedbackType: p.nw.STREAM,
                     location: 'StreamFeedback'
                 }),
-                null != o &&
-                    ((0, _.Z)({
-                        problem: null != (t = null == i ? void 0 : i.value) ? t : null,
-                        stream: O,
-                        feedback: s,
-                        streamApplication: g,
-                        analyticsData: S,
+                null != i &&
+                    ((0, b.Z)({
+                        problem: null != (t = null == o ? void 0 : o.value) ? t : null,
+                        stream: g,
+                        feedback: u,
+                        streamApplication: h,
+                        analyticsData: w,
                         location: 'Stream End',
-                        rating: o
+                        rating: i
                     }),
-                    null != i &&
+                    null != o &&
                         (0, l.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
@@ -97,12 +100,12 @@ function O(e) {
                                                 }));
                                         }
                                         return e;
-                                    })({ body: f.intl.string(f.t.mMTVnp) }, t)
+                                    })({ body: y.intl.string(y.t.mMTVnp) }, t)
                                 );
                         })));
         },
-        onClose: h,
-        transitionState: w,
-        otherKey: m.kr.OTHER
+        onClose: v,
+        transitionState: j,
+        otherKey: f.kr.OTHER
     });
 }

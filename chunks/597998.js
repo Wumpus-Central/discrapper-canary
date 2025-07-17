@@ -33,8 +33,8 @@ var r = n(255367),
     C = n(630388),
     E = n(51144),
     w = n(981631),
-    N = n(354459),
-    T = n(927923),
+    T = n(354459),
+    N = n(927923),
     Z = n(388032),
     A = n(850999);
 function D(e) {
@@ -75,7 +75,7 @@ function L(e) {
         { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
     if (f || _) return null;
     let M = [],
-        U = (0, r.jsx)(F, {
+        F = (0, r.jsx)(U, {
             iconClassName: h,
             mute: n,
             localMute: i,
@@ -148,7 +148,7 @@ function L(e) {
                 'activity'
             )
         ),
-        O === T.YE.XBOX || j === N.wR.XBOX
+        O === N.YE.XBOX || j === T.wR.XBOX
             ? M.push(
                   (0, r.jsx)(
                       'div',
@@ -159,7 +159,7 @@ function L(e) {
                       'xbox'
                   )
               )
-            : (O === T.YE.PLAYSTATION || j === N.wR.PLAYSTATION) &&
+            : (O === N.YE.PLAYSTATION || j === T.wR.PLAYSTATION) &&
               M.push(
                   (0, r.jsx)(
                       'div',
@@ -197,16 +197,16 @@ function L(e) {
                     'stream'
                 )
             ));
-    let B = null != x && !(0, C.yE)(x.flags, w.udG.EMBEDDED);
-    return 0 !== M.length || null != U || B
+    let Y = null != x && !(0, C.yE)(x.flags, w.udG.EMBEDDED);
+    return 0 !== M.length || null != F || Y
         ? (0, r.jsxs)('div', {
               className: a()(A.icons, t),
               children: [
                   (0, r.jsxs)('div', {
                       className: A.iconGroup,
-                      children: [U, M]
+                      children: [F, M]
                   }),
-                  B &&
+                  Y &&
                       (0, r.jsx)('div', {
                           className: A.iconGroup,
                           children: (0, r.jsx)(
@@ -247,7 +247,7 @@ let M = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: T, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: W, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = b,
+    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: U, collapsed: F, mute: V, serverMute: Y, guildId: W, nick: B, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = b,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -280,7 +280,7 @@ let M = i.forwardRef(function (e, t) {
                 null == C || C(e, K);
             },
             onContextMenu: (e) => {
-                null == T || T(e, K);
+                null == N || N(e, K);
             },
             onMouseLeave: (e) => {
                 null == k || k(e, K);
@@ -289,34 +289,34 @@ let M = i.forwardRef(function (e, t) {
                 null == M || M(e, K);
             },
             onKeyDown: P,
-            'aria-label': null != (n = null != X ? X : W) ? n : K.username,
+            'aria-label': null != (n = null != X ? X : B) ? n : K.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: a()(A.content, { [A.flipped]: G }),
                 children: [
-                    R && !U
+                    R && !F
                         ? (0, r.jsx)(s.ua7, {
                               text: Z.intl.string(Z.t.BVK71t),
-                              children: (e) => (0, r.jsx)('div', D({ className: a()(A.iconPriortySpeaker, { [A.iconPriortySpeakerSpeaking]: !V && !B && F }) }, e))
+                              children: (e) => (0, r.jsx)('div', D({ className: a()(A.iconPriortySpeaker, { [A.iconPriortySpeakerSpeaking]: !V && !Y && U }) }, e))
                           })
                         : null,
                     (0, r.jsx)('div', {
                         className: a()(l, A.avatar, {
                             [A.avatarLarge]: d === w.ipw.LARGE,
                             [A.avatarSmall]: d === w.ipw.SMALL,
-                            [A.avatarSpeaking]: F
+                            [A.avatarSpeaking]: U
                         }),
-                        style: { backgroundImage: 'url('.concat(K.getAvatarURL(Y, d === w.ipw.LARGE ? 38 : 24), ')') }
+                        style: { backgroundImage: 'url('.concat(K.getAvatarURL(W, d === w.ipw.LARGE ? 38 : 24), ')') }
                     }),
                     (function () {
                         var e, t;
                         let n = (0, r.jsxs)('div', {
                                 className: a()(c, {
                                     [A.username]: !0,
-                                    [A.usernameSpeaking]: !V && !B && F
+                                    [A.usernameSpeaking]: !V && !Y && U
                                 }),
                                 children: [
-                                    null != W ? W : E.ZP.getName(K),
+                                    null != B ? B : E.ZP.getName(K),
                                     z
                                         ? (0, r.jsxs)('span', {
                                               className: A.guestSuffix,
@@ -328,13 +328,13 @@ let M = i.forwardRef(function (e, t) {
                             i = {
                                 primaryGuild: K.primaryGuild,
                                 userId: K.id,
-                                contextGuildId: Y,
+                                contextGuildId: W,
                                 isOverlay: v,
                                 disableTooltip: !0,
                                 className: a()(A.clanTag, v && A.isOverlay),
                                 profileViewedAnalytics: { source: v ? w.jXE.OVERLAY : w.Sbl.VOICE_PANEL }
                             };
-                        return !U || v
+                        return !F || v
                             ? (0, r.jsx)(
                                   h.Z,
                                   ((e = D({}, i)),
@@ -356,14 +356,14 @@ let M = i.forwardRef(function (e, t) {
                             : null;
                     })(),
                     (0, r.jsx)(L, D({ disabled: f }, b)),
-                    !U && en
+                    !F && en
                         ? (0, r.jsx)(s.DY3, {
                               text: Z.intl.string(Z.t['+1H47u']),
                               className: a()(A.optionsButtonContainer, { [A.optionsContainerActive]: er }),
                               children: (0, r.jsx)(s.P3F, {
                                   className: a()(A.optionsButton, { [A.optionsActive]: er }),
                                   onClick: function (e) {
-                                      null != Y &&
+                                      null != W &&
                                           null != et &&
                                           ((0, g.v)($, g.d.MORE),
                                           ei(!0),
@@ -371,7 +371,7 @@ let M = i.forwardRef(function (e, t) {
                                               (0, _.o)({
                                                   menuName: e,
                                                   menuItemProps: t,
-                                                  entrypoint: N.A5.THREE_DOT,
+                                                  entrypoint: T.A5.THREE_DOT,
                                                   location: $,
                                                   targetUserId: K.id
                                               });
@@ -425,7 +425,7 @@ function R(e) {
         })
     );
 }
-function F(e) {
+function U(e) {
     let { iconClassName: t, mute: n, localMute: i, serverMute: l, deaf: o, serverDeaf: c } = e,
         u = [];
     if (n) {

@@ -1,4 +1,4 @@
-o.d(t, { default: () => d });
+o.d(t, { default: () => p });
 var r = o(255367),
     n = o(73800),
     c = o(481060),
@@ -33,9 +33,9 @@ function u(e) {
     }
     return e;
 }
-let p = ['OTHER'];
-function d(e) {
-    let { analyticsData: t, transitionState: d, onClose: m } = e;
+let d = ['OTHER'];
+function p(e) {
+    let { analyticsData: t, transitionState: p, onClose: m } = e;
     return (
         n.useEffect(() => {
             l.default.track(_.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
@@ -67,9 +67,9 @@ function d(e) {
                     label: s.intl.string(s.t['emlT9/'])
                 }
             ],
-            freeformNeededProblems: p,
+            freeformNeededProblems: d,
             onSubmit: function (e) {
-                var n, i, p, d;
+                var n, i, d, p;
                 let { rating: m, problem: f, dontShowAgain: O, feedback: y } = e;
                 (O &&
                     (0, a.Uv)({
@@ -80,15 +80,15 @@ function d(e) {
                         ((i = null != (n = null == f ? void 0 : f.value) ? n : null),
                         l.default.track(
                             _.rMx.VIDEO_BACKGROUND_FEEDBACK,
-                            ((p = u({}, t)),
-                            (d = d =
+                            ((d = u({}, t)),
+                            (p = p =
                                 {
                                     reason: i,
                                     rating: m,
                                     feedback: y
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(d))
+                                ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
                                 : (function (e, t) {
                                       var o = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -96,10 +96,10 @@ function d(e) {
                                           o.push.apply(o, r);
                                       }
                                       return o;
-                                  })(Object(d)).forEach(function (e) {
-                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(d, e));
+                                  })(Object(p)).forEach(function (e) {
+                                      Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
                                   }),
-                            p)
+                            d)
                         ),
                         null != f &&
                             (0, c.ZDy)(async () => {
@@ -108,7 +108,7 @@ function d(e) {
                             })));
             },
             onClose: m,
-            transitionState: d,
+            transitionState: p,
             otherKey: 'OTHER'
         })
     );

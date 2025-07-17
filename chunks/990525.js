@@ -68,8 +68,8 @@ let P = (e) => {
         { activeVoice: P, mostRecentlyRequestedVoiceId: C } = (0, h.o)(),
         E = (0, b.z)(t.id),
         w = t.id === P,
-        N = !t.available && !t.temporarilyAvailable,
-        T = t.temporarilyAvailable && !n && !w,
+        T = !t.available && !t.temporarilyAvailable,
+        N = t.temporarilyAvailable && !n && !w,
         Z = !w && t.id === C,
         [A, D] = i.useState(!1);
     i.useEffect(() => {
@@ -85,25 +85,25 @@ let P = (e) => {
         }),
         L = (0, o.e7)([v.Z], () => v.Z.isVoiceFilterDownloaded(t.id), [t]),
         M = null == E ? void 0 : E.previewSoundURLs,
-        [R, F] = i.useState(0),
-        { isPlaying: U, playSound: V, stopSound: B, preloadSound: Y } = (0, d.Z)(null != M ? M[R] : null, { soundId: t.id }),
-        W = x[t.styleKey],
+        [R, U] = i.useState(0),
+        { isPlaying: F, playSound: V, stopSound: Y, preloadSound: W } = (0, d.Z)(null != M ? M[R] : null, { soundId: t.id }),
+        B = x[t.styleKey],
         z = i.useCallback(() => {
-            n || !N ? ((0, m.v6)(P === t.id ? null : t.id, l), T && p.default.track(y.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED, S({ voice_filter_id: t.id }, (0, g.w)(l)))) : (0, u.i)();
-        }, [n, N, P, t.id, l, T]),
+            n || !T ? ((0, m.v6)(P === t.id ? null : t.id, l), N && p.default.track(y.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED, S({ voice_filter_id: t.id }, (0, g.w)(l)))) : (0, u.i)();
+        }, [n, T, P, t.id, l, N]),
         G = i.useCallback(() => {
             (p.default.track(y.rMx.VOICE_FILTER_PREVIEW_PLAYED, S({ voice_filter_id: t.id }, (0, g.w)(l))),
                 V({
                     volume: 0.5,
                     outputChannel: O.w.VOICE
                 }),
-                (0.25 > Math.random() || R > 0) && null != M && F((e) => (e + 1) % M.length));
+                (0.25 > Math.random() || R > 0) && null != M && U((e) => (e + 1) % M.length));
         }, [l, V, R, M, t.id]),
         H = null != E ? j.intl.string(E.name) : '';
     return (0, r.jsxs)('div', {
-        className: a()(x.filter, W, {
+        className: a()(x.filter, B, {
             [x.selected]: w,
-            [x.locked]: N && !w
+            [x.locked]: T && !w
         }),
         children: [
             (0, r.jsx)(c.ua7, {
@@ -132,7 +132,7 @@ let P = (e) => {
                             },
                             onMouseEnter: () => {
                                 var t;
-                                (Y(), null == e || null == (t = e.onMouseEnter) || t.call(e));
+                                (W(), null == e || null == (t = e.onMouseEnter) || t.call(e));
                             },
                             children: [
                                 (0, r.jsxs)('div', {
@@ -160,7 +160,7 @@ let P = (e) => {
                                                     secondaryColor: s.Z.unsafe_rawColors.WHITE_500.css
                                                 })
                                             }),
-                                        N &&
+                                        T &&
                                             !w &&
                                             (0, r.jsx)('div', {
                                                 className: a()([x.iconCircle, x.lockedCircle]),
@@ -172,7 +172,7 @@ let P = (e) => {
                                                     colorClass: x.lockedIcon
                                                 })
                                             }),
-                                        T &&
+                                        N &&
                                             (0, r.jsx)('div', {
                                                 className: a()([x.iconCircle, x.iconBorder]),
                                                 children: (0, r.jsx)('div', {
@@ -214,15 +214,15 @@ let P = (e) => {
             }),
             null != M &&
                 (0, r.jsx)(c.ua7, {
-                    text: j.intl.string(U ? j.t.ItuPbm : j.t['0gtbEx']),
+                    text: j.intl.string(F ? j.t.ItuPbm : j.t['0gtbEx']),
                     children: (e) =>
                         (0, r.jsx)(
                             c.P3F,
                             I(S({}, e), {
-                                className: a()([x.hoverButtonCircle, x.previewButton], { [x.visible]: U }),
-                                onClick: U ? B : G,
+                                className: a()([x.hoverButtonCircle, x.previewButton], { [x.visible]: F }),
+                                onClick: F ? Y : G,
                                 'aria-label': j.intl.formatToPlainString(j.t.gDzvjY, { voiceFilterName: H }),
-                                children: U
+                                children: F
                                     ? (0, r.jsx)(c.wNq, {
                                           size: 'custom',
                                           height: 16,

@@ -27,8 +27,8 @@ var i = n(120356),
     C = n(611459),
     E = n(544671),
     w = n(757182),
-    N = n(910424),
-    T = n(981631),
+    T = n(910424),
+    N = n(981631),
     Z = n(477839),
     A = n(388032),
     D = n(603571),
@@ -44,21 +44,21 @@ let L = (e) => {
                 look: i,
                 activity: l,
                 onAction: () => {
-                    (o.dispatch(T.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a());
+                    (o.dispatch(N.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a());
                 }
             },
             'custom-activity-button'
         );
     },
     M = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: p, channelId: g, source: M, color: R = c.zx.Colors.WHITE, look: F = c.zx.Looks.OUTLINED, type: U, onAction: V } = e,
-            B = (0, s.e7)([_.default], () => {
+        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: p, channelId: g, source: M, color: R = c.zx.Colors.WHITE, look: U = c.zx.Looks.OUTLINED, type: F, onAction: V } = e,
+            Y = (0, s.e7)([_.default], () => {
                 let e = _.default.getCurrentUser();
                 return (o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
             }),
-            Y = U === O.Y.STREAM_PREVIEW || null != a,
-            W = (0, h.Z)(t),
-            z = W || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            W = F === O.Y.STREAM_PREVIEW || null != a,
+            B = (0, h.Z)(t),
+            z = B || W ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === Z.bO) {
             var G, H;
             return (
@@ -108,7 +108,7 @@ let L = (e) => {
                 (0, r.jsx)(L, {
                     user: i,
                     color: R,
-                    look: F,
+                    look: U,
                     activity: t,
                     onAction: V
                 })
@@ -126,27 +126,27 @@ let L = (e) => {
                     return (0, r.jsx)(
                         j.Z,
                         {
-                            platform: d.Z.get(T.ABu.XBOX),
-                            look: F,
+                            platform: d.Z.get(N.ABu.XBOX),
+                            look: U,
                             color: R,
                             onAction: V,
                             Icon: b.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if ((null == t ? void 0 : t.platform) === T.M7m.PS4 || (null == t ? void 0 : t.platform) === T.M7m.PS5)
+                if ((null == t ? void 0 : t.platform) === N.M7m.PS4 || (null == t ? void 0 : t.platform) === N.M7m.PS5)
                     return (0, r.jsx)(
                         j.Z,
                         {
-                            look: F,
+                            look: U,
                             color: R,
-                            platform: d.Z.get(T.ABu.PLAYSTATION),
+                            platform: d.Z.get(N.ABu.PLAYSTATION),
                             onAction: V,
                             Icon: v.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (W) {
+                if (B) {
                     let e = (0, r.jsx)(
                             E.Z,
                             {
@@ -155,7 +155,7 @@ let L = (e) => {
                                 guildId: p,
                                 channelId: g,
                                 source: M,
-                                look: F,
+                                look: U,
                                 color: R,
                                 onAction: V
                             },
@@ -167,7 +167,7 @@ let L = (e) => {
                                 activity: t,
                                 user: i,
                                 source: M,
-                                look: F,
+                                look: U,
                                 color: R,
                                 onAction: V
                             },
@@ -187,19 +187,19 @@ let L = (e) => {
                                   guildId: e.guildId,
                                   channelId: e.channelId,
                                   color: R,
-                                  look: F,
+                                  look: U,
                                   onAction: V
                               },
                               e.channelId
                           );
                 }
-                return Y
+                return W
                     ? (0, r.jsx)(
-                          N.Z,
+                          T.Z,
                           {
-                              isCurrentUser: B.id === i.id,
+                              isCurrentUser: Y.id === i.id,
                               color: R,
-                              look: F,
+                              look: U,
                               applicationStream: a,
                               onAction: V
                           },
@@ -212,7 +212,7 @@ let L = (e) => {
                                   {
                                       activity: t,
                                       color: R,
-                                      look: F,
+                                      look: U,
                                       onAction: V
                                   },
                                   'watch-button'
@@ -224,7 +224,7 @@ let L = (e) => {
                                       embeddedActivity: n,
                                       user: i,
                                       color: R,
-                                      look: F,
+                                      look: U,
                                       onAction: V
                                   },
                                   'join-activity-button'
@@ -235,7 +235,7 @@ let L = (e) => {
                                       activity: t,
                                       user: i,
                                       color: R,
-                                      look: F,
+                                      look: U,
                                       onAction: V
                                   },
                                   'notify-button'
@@ -245,7 +245,7 @@ let L = (e) => {
                                   {
                                       user: i,
                                       color: R,
-                                      look: F,
+                                      look: U,
                                       activity: t,
                                       onAction: V
                                   },
