@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, disabled: C = !1, inlineUsername: x = !0, onClick: v, onMouseEnter: j, 'aria-setsize': O, 'aria-posinset': E } = e,
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, disabled: C = !1, inlineUsername: x = !0, onClick: v, onMouseEnter: O, 'aria-setsize': j, 'aria-posinset': E } = e,
         S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
         P = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
@@ -51,7 +51,7 @@ function m(e) {
                     null != v && v(i.id);
                 },
                 onMouseEnter: () => {
-                    null != j && j(m);
+                    null != O && O(m);
                 }
             },
             P
@@ -61,7 +61,7 @@ function m(e) {
                 role: 'option',
                 'aria-selected': y,
                 'aria-disabled': C,
-                'aria-setsize': O,
+                'aria-setsize': j,
                 'aria-posinset': E,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,

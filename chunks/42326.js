@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -11,11 +11,11 @@ var r = n(255367),
     f = n(618158),
     p = n(981631),
     m = n(388032),
-    g = n(975985);
-function E(e) {
+    E = n(975985);
+function g(e) {
     let { errorMessage: t, className: n, avError: i } = e,
-        E = '',
-        { text: h, node: v } = (function (e) {
+        g = '',
+        { text: v, node: h } = (function (e) {
             var t;
             if (null == e)
                 return {
@@ -38,7 +38,7 @@ function E(e) {
                     : i
             };
         })(i);
-    null != t && null != h ? (E = ''.concat(t, ' ').concat(h)) : null != t && (E = t);
+    null != t && null != v ? (g = ''.concat(t, ' ').concat(v)) : null != t && (g = t);
     let [S] = l.useState(new o.V7()),
         [b, O] = l.useState(!1);
     function y() {
@@ -58,19 +58,19 @@ function E(e) {
                 onMouseLeave: y,
                 children: [
                     t,
-                    null != v &&
+                    null != h &&
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-muted',
-                            className: g.errorCodeMessage,
-                            children: v
+                            className: E.errorCodeMessage,
+                            children: h
                         })
                 ]
             })
         }),
         position: 'bottom',
         color: u.FGA.GREY,
-        'aria-label': E,
+        'aria-label': g,
         children: (e) => {
             var t, l;
             return (0, r.jsx)(
@@ -104,7 +104,7 @@ function E(e) {
                     {
                         onMouseEnter: Z,
                         onMouseLeave: y,
-                        className: a()(n, g.root),
+                        className: a()(n, E.root),
                         children: (0, r.jsx)(f.Z, {
                             children: (0, r.jsx)(u.P4T, {
                                 onMouseEnter: Z,
@@ -113,8 +113,8 @@ function E(e) {
                                 width: 20,
                                 height: 20,
                                 color: 'currentColor',
-                                'aria-label': E,
-                                className: g.warningIcon
+                                'aria-label': g,
+                                className: E.warningIcon
                             })
                         })
                     }),

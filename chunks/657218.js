@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(893718),
     x = n(303628),
     v = n(313201),
-    j = n(967128),
-    O = n(665149),
+    O = n(967128),
+    j = n(665149),
     E = n(294218),
     S = n(913663),
     P = n(268350),
     I = n(695346),
     Z = n(592125),
-    N = n(703558),
-    T = n(375954),
+    T = n(703558),
+    N = n(375954),
     A = n(496675),
     w = n(117530),
     R = n(459273),
@@ -84,7 +84,7 @@ function K(e) {
                       children: [
                           (0, r.jsx)(f.Z, {
                               channel: l,
-                              draftType: N.d.FirstThreadMessage
+                              draftType: T.d.FirstThreadMessage
                           }),
                           (0, r.jsx)(X, { parentChannelId: t }),
                           (0, r.jsx)(Q, {
@@ -100,9 +100,9 @@ function K(e) {
 function X(e) {
     let { parentChannelId: t } = e,
         n = i.useCallback(() => {
-            let e = N.Z.getThreadSettings(t),
-                n = N.Z.getDraft(t, N.d.FirstThreadMessage).trim(),
-                r = w.Z.getUploads(t, N.d.FirstThreadMessage);
+            let e = T.Z.getThreadSettings(t),
+                n = T.Z.getDraft(t, T.d.FirstThreadMessage).trim(),
+                r = w.Z.getUploads(t, T.d.FirstThreadMessage);
             if (((null == e ? void 0 : e.name) != null && (null == e ? void 0 : e.name) !== '') || 0 !== n.length || 0 !== r.length)
                 return void p.Z.show({
                     title: V.intl.string(V.t['6kDZh4']),
@@ -117,19 +117,19 @@ function X(e) {
                 });
             (0, B.NK)(t);
         }, [t]);
-    return (0, r.jsxs)(O.ZP, {
-        toolbar: (0, r.jsx)(O.ZP.Icon, {
+    return (0, r.jsxs)(j.ZP, {
+        toolbar: (0, r.jsx)(j.ZP.Icon, {
             icon: c.Dio,
             tooltip: V.intl.string(V.t.cpT0Cg),
             onClick: n
         }),
         children: [
-            (0, r.jsx)(O.ZP.Icon, {
+            (0, r.jsx)(j.ZP.Icon, {
                 icon: c.or_,
                 disabled: !0,
                 'aria-label': V.intl.string(V.t['7Xm5QE'])
             }),
-            (0, r.jsx)(O.ZP.Title, { children: V.intl.string(V.t['4WNcpq']) })
+            (0, r.jsx)(j.ZP.Title, { children: V.intl.string(V.t['4WNcpq']) })
         ]
     });
 }
@@ -185,14 +185,14 @@ function Q(e) {
                 i.useEffect(() => {
                     function n(n) {
                         var i;
-                        let l = N.Z.getDraft(e.id, N.d.FirstThreadMessage);
-                        ((0 === l.length || !0 === n) && r((0, y.eK)(l)), t(null != (i = N.Z.getThreadSettings(e.id)) ? i : {}));
+                        let l = T.Z.getDraft(e.id, T.d.FirstThreadMessage);
+                        ((0 === l.length || !0 === n) && r((0, y.eK)(l)), t(null != (i = T.Z.getThreadSettings(e.id)) ? i : {}));
                     }
                     return (
                         n(!0),
-                        N.Z.addChangeListener(n),
+                        T.Z.addChangeListener(n),
                         () => {
-                            N.Z.removeChangeListener(n);
+                            T.Z.removeChangeListener(n);
                         }
                     );
                 }, [e.id, t]),
@@ -206,7 +206,7 @@ function Q(e) {
         {
             isGeneratingAI: x,
             enableAIFeatures: v,
-            renderAiGenerateButton: O
+            renderAiGenerateButton: j
         } = (0, F.U)({
             parentChannel: t,
             parentMessageId: n,
@@ -218,7 +218,7 @@ function Q(e) {
             nameError: E,
             messageError: I,
             submit: Z,
-            submitting: T
+            submitting: N
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: l, textAreaState: a, location: o, enableAIFeatures: s } = e,
                 [c, u] = i.useState(null),
@@ -244,7 +244,7 @@ function Q(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                        (f(!0), null == e && (e = a.textValue), (e = e.trim()), (null == i || 0 === i.length) && (i = null == (o = S.Z.getStickerPreview(t.id, q.drafts.type)) ? void 0 : o.map((e) => e.id)), (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, N.d.FirstThreadMessage)));
+                        (f(!0), null == e && (e = a.textValue), (e = e.trim()), (null == i || 0 === i.length) && (i = null == (o = S.Z.getStickerPreview(t.id, q.drafts.type)) ? void 0 : o.map((e) => e.id)), (null == l || 0 === l.length) && (l = w.Z.getUploads(t.id, T.d.FirstThreadMessage)));
                         let g = null != (c = r.name) ? c : '',
                             b = (s || null == n) && 0 === g.length,
                             _ = '' === e && (null == i || 0 === i.length) && 0 === l.length;
@@ -326,7 +326,7 @@ function Q(e) {
                         children: (0, r.jsxs)('div', {
                             className: z.scrollerInner,
                             children: [
-                                (0, r.jsxs)(j.ZP, {
+                                (0, r.jsxs)(O.ZP, {
                                     channelId: 'create-thread-null',
                                     children: [
                                         (0, r.jsx)('div', {
@@ -339,10 +339,10 @@ function Q(e) {
                                             threadSettings: p,
                                             updateThreadSettings: g,
                                             error: E,
-                                            disabled: T,
+                                            disabled: N,
                                             isGeneratingAI: x,
                                             enableAIFeatures: v,
-                                            renderAiGenerateButton: O
+                                            renderAiGenerateButton: j
                                         }),
                                         t.type === G.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(J, {
@@ -469,7 +469,7 @@ function ee(e) {
         g = i.useCallback(() => f(!1), []),
         b = i.useCallback(
             (e, n, r) => {
-                (u.Z.saveDraft(t.id, n, N.d.FirstThreadMessage),
+                (u.Z.saveDraft(t.id, n, T.d.FirstThreadMessage),
                     l(
                         (e) => (
                             '' !== n && e.textValue !== n ? d.Z.startTyping(t.id) : '' === n && d.Z.stopTyping(t.id),
@@ -530,7 +530,7 @@ function ee(e) {
 }
 function et(e) {
     let { parentChannel: t, parentMessageId: n } = e,
-        i = (0, o.e7)([T.Z], () => (null == n ? null : T.Z.getMessage(t.id, n))),
+        i = (0, o.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
         l = I.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {

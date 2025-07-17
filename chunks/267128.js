@@ -1,6 +1,6 @@
 (n.d(t, {
-    Z: () => A,
-    f: () => D
+    Z: () => D,
+    f: () => A
 }),
     n(388685));
 var s = n(255367),
@@ -25,15 +25,15 @@ var s = n(255367),
     b = n(55935),
     y = n(823379),
     P = n(453687),
-    E = n(930282),
-    N = n(123145),
+    N = n(930282),
+    E = n(123145),
     S = n(223021),
     I = n(217702),
     T = n(981631),
     M = n(388032),
     k = n(848697),
-    L = n(73433);
-function w(e) {
+    w = n(73433);
+function L(e) {
     let { width: t = 12, height: n = 8, color: a = 'currentColor', className: r, foreground: l } = e;
     return (0, s.jsx)('svg', {
         className: r,
@@ -61,7 +61,7 @@ function _(e) {
         })
     });
 }
-function D(e, t, n, a, r, i) {
+function A(e, t, n, a, r, i) {
     let o,
         u,
         m,
@@ -70,10 +70,10 @@ function D(e, t, n, a, r, i) {
         { trailingIconClass: C, leadingIconClass: v, iconSize: b } = i,
         y = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
         P = (0, O.cv)(f).length > 0,
-        N = null != f.interaction,
+        E = null != f.interaction,
         S = f.hasFlag(T.iLy.IS_VOICE_MESSAGE),
         I = f.isPoll(),
-        w = f.type === T.uaV.POLL_RESULT;
+        L = f.type === T.uaV.POLL_RESULT;
     if (
         ((0, g.Z)(e) &&
             (d = (0, s.jsx)(j.Z, {
@@ -94,17 +94,17 @@ function D(e, t, n, a, r, i) {
         });
     else if (y)
         if (I) {
-            var _, D;
+            var _, A;
             u = (0, s.jsx)('div', {
-                className: l()(k.repliedTextContent, L.markup),
-                children: null == f || null == (D = f.poll) || null == (_ = D.question) ? void 0 : _.text
+                className: l()(k.repliedTextContent, w.markup),
+                children: null == f || null == (A = f.poll) || null == (_ = A.question) ? void 0 : _.text
             });
         } else
-            w
+            L
                 ? (o = (0, x.N4)(f))
                 : P
                   ? (o = M.intl.string(M.t.kHdYCQ))
-                  : N
+                  : E
                     ? (o = M.intl.string(M.t['E+6SSU']))
                     : S
                       ? (o = M.intl.string(M.t['XC3A5+']))
@@ -119,7 +119,7 @@ function D(e, t, n, a, r, i) {
                               height: b
                           })));
     else
-        u = (0, s.jsx)(E.ZP, {
+        u = (0, s.jsx)(N.ZP, {
             message: f,
             content: t,
             className: r,
@@ -134,7 +134,7 @@ function D(e, t, n, a, r, i) {
                   width: b,
                   height: b
               }))
-            : N
+            : E
               ? (m = (0, s.jsx)(c.SsZ, {
                     size: 'custom',
                     color: 'currentColor',
@@ -151,7 +151,7 @@ function D(e, t, n, a, r, i) {
                       height: b
                   }))
                 : (f.attachments.length > 0 || f.embeds.length > 0) &&
-                  !w &&
+                  !L &&
                   (m = (0, s.jsx)(c.XBm, {
                       size: 'custom',
                       color: 'currentColor',
@@ -167,13 +167,13 @@ function D(e, t, n, a, r, i) {
         }
     );
 }
-function A(e) {
+function D(e) {
     let t,
         { repliedAuthor: n, baseAuthor: r, baseMessage: i, referencedMessage: p, renderPopout: g, isReplySpineClickable: h, showReplySpine: j } = e,
         { canShowReactionsOnMessageHover: x } = d.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [O, E] = a.useState(!1),
-        L = a.useMemo(() => (null != g && p.state === f.Y.LOADED ? (e) => g(e, p.message) : void 0), [p, g]),
-        A = a.useCallback(() => E((e) => !e), []),
+        [O, N] = a.useState(!1),
+        w = a.useMemo(() => (null != g && p.state === f.Y.LOADED ? (e) => g(e, p.message) : void 0), [p, g]),
+        D = a.useCallback(() => N((e) => !e), []),
         R = (function (e, t, n) {
             let { referencedMessage: r, channel: i, compact: o, isReplyAuthorBlocked: d, repliedAuthor: p, showAvatarPopout: g, onClickAvatar: h, onContextMenu: j, onPopoutRequestClose: x } = e,
                 { analyticsLocations: C } = (0, m.ZP)(u.Z.AVATAR),
@@ -186,7 +186,7 @@ function A(e) {
                       })
                     : (0, s.jsx)('div', {
                           className: k.replyBadge,
-                          children: (0, s.jsx)(w, { className: k.replyIcon })
+                          children: (0, s.jsx)(L, { className: k.replyIcon })
                       });
             if (r.message.type === T.uaV.USER_JOIN || r.message.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || r.message.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || r.message.type === T.uaV.GUILD_GAMING_STATS_PROMPT) return (0, s.jsx)(_, { className: k.userJoinSystemMessageIcon });
             if (r.message.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
@@ -243,13 +243,13 @@ function A(e) {
                       value: C,
                       children: b()
                   });
-        })(e, L, i.type),
+        })(e, w, i.type),
         Z = (function (e, t) {
             let { baseMessage: n, channel: a, referencedMessage: r, showUsernamePopout: l, onClickUsername: i, onContextMenu: o, onPopoutRequestClose: c } = e,
                 u = (null == r ? void 0 : r.state) === f.Y.LOADED ? r.message : void 0;
             return null == u || u.type === T.uaV.USER_JOIN || u.type === T.uaV.ROLE_SUBSCRIPTION_PURCHASE || u.type === T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || u.type === T.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || u.type === T.uaV.GUILD_GAMING_STATS_PROMPT || u.type === T.uaV.POLL_RESULT
                 ? null
-                : (0, s.jsx)(N.Z, {
+                : (0, s.jsx)(E.Z, {
                       message: u,
                       channel: a,
                       compact: !0,
@@ -261,8 +261,8 @@ function A(e) {
                       onPopoutRequestClose: c,
                       isRepliedMessage: !0
                   });
-        })(e, L),
-        U = (function (e, t, n) {
+        })(e, w),
+        V = (function (e, t, n) {
             let { content: a, referencedMessage: r, isReplyAuthorBlocked: i, isReplyAuthorIgnored: o, onClickReply: u } = e,
                 m = r.state !== f.Y.DELETED ? u : void 0;
             switch (r.state) {
@@ -272,7 +272,7 @@ function A(e) {
                         renderedContent: u,
                         trailingIcon: d,
                         leadingIcon: p
-                    } = D(r.message, a, i, o, k.repliedTextContent, {
+                    } = A(r.message, a, i, o, k.repliedTextContent, {
                         trailingIconClass: k.repliedTextContentTrailingIcon,
                         leadingIconClass: k.repliedTextContentLeadingIcon,
                         iconSize: I.WW
@@ -319,18 +319,18 @@ function A(e) {
                 default:
                     (0, y.vE)(r);
             }
-        })(e, O, A),
-        V = a.useMemo(() => (e.compact ? (0, S.Z)((0, b.vc)(o()(), 'LT')) : null), [e.compact]);
+        })(e, O, D),
+        U = a.useMemo(() => (e.compact ? (0, S.Z)((0, b.vc)(o()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != r &&
         (t = M.intl.formatToPlainString(M.t.RhbQ2N, {
             author: null == r ? void 0 : r.nick,
             repliedAuthor: null == n ? void 0 : n.nick
         }));
-    let z = i.type === T.uaV.CONTEXT_MENU_COMMAND;
+    let G = i.type === T.uaV.CONTEXT_MENU_COMMAND;
     return (0, s.jsxs)('div', {
         id: (0, P.Gq)(i),
-        className: l()(k.repliedMessage, V, z ? k.contextCommandMessage : { [k.messageSpine]: !x || (!h && j) }),
+        className: l()(k.repliedMessage, U, G ? k.contextCommandMessage : { [k.messageSpine]: !x || (!h && j) }),
         'aria-label': t,
         children: [
             x &&
@@ -341,12 +341,12 @@ function A(e) {
                     'aria-label': M.intl.string(M.t.dpjpOj),
                     className: l()(k.repliedMessageClickableSpine, { [k.repliedMessageContentHovered]: O }),
                     onClick: e.onClickReply,
-                    onMouseEnter: A,
-                    onMouseLeave: A
+                    onMouseEnter: D,
+                    onMouseLeave: D
                 }),
             R,
             Z,
-            U
+            V
         ]
     });
 }

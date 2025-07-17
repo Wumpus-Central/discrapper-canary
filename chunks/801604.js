@@ -54,7 +54,7 @@ function y(e) {
 function O(e) {
     var t, n, i, c;
     let { nativePickerEnabled: x } = e,
-        [{ preset: O, resolution: Z, fps: w, muteStreamAudio: I, selectedSource: N, sourceType: T, audioSourceId: E }] = (0, g.E_)(),
+        [{ preset: O, resolution: Z, fps: w, muteStreamAudio: I, selectedSource: N, sourceType: E, audioSourceId: T }] = (0, g.E_)(),
         { twoClickVariant: P } = (0, m.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
@@ -63,10 +63,10 @@ function O(e) {
         [A, k] = null != (i = (0, _.Z)(O)) ? i : [Z, w],
         M = (0, h.L)(O),
         L = (0, p.M)(A),
-        D = T === s.vA.CAMERA,
+        D = E === s.vA.CAMERA,
         B = null != N || (!!P && (!x || D)),
-        U = null != N ? (null == N || null == (t = N.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : D,
-        G = B ? void 0 : O === v.tI.PRESET_VIDEO ? b.intl.string(j.default.MuHUFR) : O === v.tI.PRESET_DOCUMENTS ? b.intl.string(j.default.y0JuYW) : void 0,
+        G = null != N ? (null == N || null == (t = N.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : D,
+        U = B ? void 0 : O === v.tI.PRESET_VIDEO ? b.intl.string(j.default.MuHUFR) : O === v.tI.PRESET_DOCUMENTS ? b.intl.string(j.default.y0JuYW) : void 0,
         W = (0, o.e7)([u.Z], () => u.Z.getUseSystemScreensharePicker() && (0, f.isLinux)());
     return (0, r.jsxs)('div', {
         className: S.root,
@@ -103,9 +103,9 @@ function O(e) {
                                         (0, r.jsx)(C, {})
                                     ]
                                 }),
-                            null != G &&
+                            null != U &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: G }), (0, r.jsx)(C, {})]
+                                    children: [(0, r.jsx)('span', { children: U }), (0, r.jsx)(C, {})]
                                 }),
                             (0, r.jsx)('span', { children: L }),
                             (0, r.jsx)(C, {}),
@@ -128,12 +128,12 @@ function O(e) {
                                     ]
                                 }),
                             !I &&
-                                !U &&
+                                !G &&
                                 W &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [(0, r.jsx)(C, {}), b.intl.string(j.default['n9/rUl'])]
                                 }),
-                            U
+                            G
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(C, {}),
@@ -142,7 +142,7 @@ function O(e) {
                                                   null ==
                                                   (n = R.find((e) => {
                                                       let { id: t } = e;
-                                                      return E === t;
+                                                      return T === t;
                                                   }))
                                                       ? void 0
                                                       : n.name

@@ -179,21 +179,14 @@ let _ = function (e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
+                                      className: j.bannerDescription,
                                       children: b.intl.string(b.t.Vwintr)
                                   }),
-                                  (0, r.jsxs)(s.gtL, {
-                                      className: j.upsellButton,
-                                      innerClassName: j.upsellButtonInner,
-                                      color: l.zx.Colors.GREEN,
-                                      onClick: O,
-                                      children: [
-                                          (0, r.jsx)(s.$Eu, {
-                                              size: 'custom',
-                                              height: 16,
-                                              width: 16
-                                          }),
-                                          b.intl.string(b.t['+7XY39'])
-                                      ]
+                                  (0, r.jsx)(s.zxk, {
+                                      variant: 'expressive',
+                                      icon: s.$Eu,
+                                      text: b.intl.string(b.t['+7XY39']),
+                                      onClick: O
                                   })
                               ]
                           }),

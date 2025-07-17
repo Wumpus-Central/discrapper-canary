@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,10 +26,10 @@ function v(e) {
         }),
         a = (0, h.Kt)(),
         { verifyAgreementButtonText: c, verifyGateDescription: v } = (0, h.a1)((0, m.Y2)(t) ? y.L0.NSFW_SERVER : y.L0.NSFW_CHANNEL),
-        j = i.useCallback(() => {
+        O = i.useCallback(() => {
             null != t && u.Z.nsfwReturnToSafety(t.id);
         }, [t]),
-        O = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != t && u.Z.nsfwAgree(t.id);
         }, [t]),
         E = i.useCallback(() => {
@@ -43,7 +43,7 @@ function v(e) {
               channelId: n,
               modalType: p.it.NSFW_CHANNEL_AGE_VERIFY,
               onAgree: E,
-              onDisagree: j,
+              onDisagree: O,
               title: P,
               description: v,
               agreement: c,
@@ -56,8 +56,8 @@ function v(e) {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: p.it.NSFW_CHANNEL_UNDERAGE,
-                onAgree: O,
-                onDisagree: j,
+                onAgree: j,
+                onDisagree: O,
                 title: C.intl.string(C.t.NEabBQ),
                 description: C.intl.format(C.t['2kHZen'], { helpURL: b.Z.getArticleURL(_.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
@@ -68,15 +68,15 @@ function v(e) {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: p.it.NSFW_CHANNEL_VERIFIED,
-                onAgree: O,
-                onDisagree: j,
+                onAgree: j,
+                onDisagree: O,
                 title: P,
                 description: C.intl.string(S ? C.t.ZtuRtr : C.t.E4Cd5O),
                 agreement: C.intl.string(C.t.wVq7ur),
                 disagreement: C.intl.string(C.t['/g10LC'])
             });
 }
-let j = function (e) {
+let O = function (e) {
     let { guild: t, channelId: n, className: l } = e,
         o = i.useRef(null);
     return (

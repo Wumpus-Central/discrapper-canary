@@ -23,7 +23,17 @@ var s = n(255367),
     C = n(841935);
 function O(e) {
     let { message: t, rendered: n } = e;
-    return null == (0, j.xE)(t.content) ? f.intl.string(f.t['lcP/KC']) : f.intl.format(f.t.DzUzkZ, { emoji: n });
+    return null == (0, j.xE)(t.content)
+        ? f.intl.format(f.t.k6Jc9f, {
+              username: null,
+              usernameHook: () => null
+          })
+        : f.intl.format(f.t.IihHBw, {
+              emojiPreview: n,
+              emojiName: null,
+              username: null,
+              usernameHook: () => null
+          });
 }
 function v(e) {
     let { message: t, className: n } = e,
@@ -166,7 +176,7 @@ function b(e) {
                     addSpace: !0
                 });
         }, [y, c]),
-        E = a.useMemo(() => {
+        N = a.useMemo(() => {
             var e;
             return null == y
                 ? null
@@ -192,7 +202,7 @@ function b(e) {
         contentClassName: C.content,
         children: (0, s.jsx)('span', {
             children:
-                null == y || null == E
+                null == y || null == N
                     ? f.intl.format(f.t.k6Jc9f, {
                           username: v.nick,
                           usernameHook: b
@@ -201,7 +211,7 @@ function b(e) {
                           username: v.nick,
                           usernameHook: b,
                           emojiPreview: (0, s.jsx)(m.Y, {
-                              node: E,
+                              node: N,
                               isInteracting: p
                           }),
                           emojiName: (0, s.jsx)(o.P3F, {

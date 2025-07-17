@@ -14,10 +14,10 @@ var r = n(255367),
     f = n(414910),
     p = n(502053),
     m = n(965048),
-    g = n(266910),
-    E = n(352978),
-    h = n(928518),
-    v = n(518950),
+    E = n(266910),
+    g = n(352978),
+    v = n(928518),
+    h = n(518950),
     S = n(470956),
     b = n(314897),
     O = n(271383),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(65154),
     x = n(388032),
     R = n(519417);
-let N = u.EFr.SIZE_80,
-    C = u.EFr.SIZE_40;
+let C = u.EFr.SIZE_80,
+    N = u.EFr.SIZE_40;
 function T(e) {
     let { channelId: t, participant: n } = e;
     return (0, S.Eu)(t, n.id)
@@ -98,15 +98,15 @@ function D(e) {
         W = (0, o.e7)([b.default], () => b.default.getId()),
         { user: H, streamId: Y, speaking: z } = t,
         G = H.id === W,
-        K = (0, _.ZP)(t),
-        B = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
-        q = (0, o.e7)([h.Z], () => h.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
+        B = (0, _.ZP)(t),
+        K = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
+        q = (0, o.e7)([v.Z], () => v.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
         J = (0, o.e7)([y.Z], () => null != H.id && y.Z.isLocalVideoDisabled(H.id, (0, f.Z)(t.type)), [H.id, t.type]),
         X = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, H.id)),
         Q = j.ZP.getName(n.getGuildId(), n.id, H) + (X ? ' '.concat(x.intl.string(x.t['pFO/Pj'])) : ''),
-        $ = z && (q || B),
-        ee = u < 124 ? C : N,
-        { avatarSrc: et, avatarDecorationSrc: en } = (0, v.Z)({
+        $ = z && (q || K),
+        ee = u < 124 ? N : C,
+        { avatarSrc: et, avatarDecorationSrc: en } = (0, h.Z)({
             userId: H.id,
             guildId: n.guild_id,
             size: ee,
@@ -126,9 +126,9 @@ function D(e) {
     }),
     l.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
-        e.isGuildStageVoice() && !K && (null == t ? void 0 : t.id) === n.id && s.Z.selectParticipant(e.id, null);
-    }, [K]),
-    i && !J && !L && K && !S && null != V && y.Z.supports(A.AN.VIDEO))
+        e.isGuildStageVoice() && !B && (null == t ? void 0 : t.id) === n.id && s.Z.selectParticipant(e.id, null);
+    }, [B]),
+    i && !J && !L && B && !S && null != V && y.Z.supports(A.AN.VIDEO))
         ? null != el && null == ei
             ? (0, r.jsx)(I.Z, {
                   avError: el,
@@ -137,7 +137,7 @@ function D(e) {
                   selected: S
               })
             : (0, r.jsx)(
-                  E.Z,
+                  g.Z,
                   {
                       onResize: T,
                       wrapperClassName: R.videoWrapper,
@@ -154,7 +154,7 @@ function D(e) {
               )
         : (0, r.jsx)('div', {
               className: a()(R.content, { [R.blockedAvatar]: D || M }),
-              children: (0, r.jsx)(g.Z, {
+              children: (0, r.jsx)(E.Z, {
                   'aria-label': Q,
                   src: et,
                   avatarDecoration: en,

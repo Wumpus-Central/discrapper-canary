@@ -37,11 +37,11 @@ function C() {
     let [{ preset: C, fps: y, sourceType: O, resolution: Z }, w] = (0, h.E_)(),
         I = (0, m.Z)(),
         N = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
-        [T, E] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
+        [E, T] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
         [P, R] = null != (t = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? t : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
         [A, k] = null != (n = (0, g.Z)(C)) ? n : [Z, y],
-        M = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, T, P, Z]),
-        L = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
+        M = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, E, P, Z]),
+        L = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, T, R, y]),
         D = C === _.tI.PRESET_DOCUMENTS,
         B = p.Vf.map((e) => {
             let { value: t } = e,
@@ -54,7 +54,7 @@ function C() {
                 className: n ? void 0 : b.premiumOption
             };
         }),
-        U = p.YX.map((e) => {
+        G = p.YX.map((e) => {
             let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, I);
             return {
                 value: e,
@@ -119,7 +119,7 @@ function C() {
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
                     disabled: D,
-                    options: U,
+                    options: G,
                     value: L,
                     look: 'pill',
                     onChange: (e) =>

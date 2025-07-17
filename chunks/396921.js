@@ -3,7 +3,6 @@ e.exports = {
     hexInput: 'hexInput_c202a4',
     preview: 'preview_c202a4',
     simArea: 'simArea_c202a4',
-    toggleButton: 'toggleButton_c202a4',
     themePicker: 'themePicker_c202a4',
     controls: 'controls_c202a4',
     toggles: 'toggles_c202a4',

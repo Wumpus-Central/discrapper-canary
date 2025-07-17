@@ -34,7 +34,7 @@ function v(e) {
             );
         }),
         v = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        O = null != v ? (0, g.EB)(v, 32, !0) : null,
+        j = null != v ? (0, g.EB)(v, 32, !0) : null,
         E = !s || (u && !m);
     return ((0, d.Z)(
         {
@@ -62,7 +62,7 @@ function v(e) {
                               width: 24,
                               height: 24,
                               children:
-                                  null == O
+                                  null == j
                                       ? (0, r.jsx)('div', {
                                             className: l()(x.guildIcon, x.guildIconWithoutImage),
                                             children: (0, r.jsx)('div', {
@@ -72,7 +72,7 @@ function v(e) {
                                         })
                                       : (0, r.jsx)('img', {
                                             alt: null == v ? void 0 : v.name,
-                                            src: O,
+                                            src: j,
                                             className: x.guildIcon
                                         })
                           }),
@@ -95,7 +95,7 @@ function v(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(O, {
                       channelId: n.id,
                       recipientUserId: t.id,
                       isUserRinging: m
@@ -103,7 +103,7 @@ function v(e) {
               ]
           });
 }
-function j(e) {
+function O(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
         l = i ? C.intl.string(C.t.ygslb2) : C.intl.string(C.t['3Hv9qa']),
         a = i

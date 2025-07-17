@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => j }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,14 +19,14 @@ var r = n(255367),
     C = n(390322),
     x = n(871499),
     v = n(127379),
-    j = n(388032);
-function O(e) {
-    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
+    O = n(388032);
+function j(e) {
+    let { channel: t, themeable: j, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
         { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
             Component: I,
             play: Z,
-            events: { onMouseEnter: N, onMouseLeave: T }
+            events: { onMouseEnter: T, onMouseLeave: N }
         } = (0, o.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
@@ -135,17 +135,17 @@ function O(e) {
             (0, r.jsx)(x.d, {
                 ref: Y,
                 isTrayButton: !0,
-                themeable: O,
-                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
+                themeable: j,
+                label: w ? O.intl.string(O.t['Ox4/zc']) : R ? O.intl.string(O.t['+YBKYG']) : M ? O.intl.string(O.t.X1lQlp) : void 0,
                 iconComponent: I,
                 disabled: D,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    (G(), N());
+                    (G(), T());
                 },
                 onMouseLeave: () => {
-                    null == E && (V(), T());
+                    null == E && (V(), N());
                 },
                 isActive: F || E === v.D.SOUNDBOARD,
                 color: F || E === v.D.SOUNDBOARD ? 'primaryDark' : void 0

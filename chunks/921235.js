@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(583741));
+(n.d(t, { Z: () => O }), n(388685), n(583741));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -19,14 +19,14 @@ var r = n(255367),
     C = n(388032),
     x = n(900170);
 let v = '749054660769218631';
-function j(e) {
+function O(e) {
     var t;
     let { channel: n } = e,
-        [l, j] = i.useState('');
+        [l, O] = i.useState('');
     i.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let O = (0, o.e7)(
+    let j = (0, o.e7)(
             [f.Z, h.default],
             () =>
                 !!a()(f.Z.getMessages(n.id).toArray())
@@ -47,11 +47,11 @@ function j(e) {
                             type: 'Send wave'
                         }));
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(C.intl.string(C.t['Whhv4+']));
+                    e.ok || 429 !== e.status || O(C.intl.string(C.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
         Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: S }),
-        N =
+        T =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
                       className: x.error,
@@ -60,7 +60,7 @@ function j(e) {
                       children: l
                   })
                 : null;
-    return O
+    return j
         ? (0, r.jsxs)('div', {
               className: x.containerCompact,
               children: [
@@ -80,7 +80,7 @@ function j(e) {
                           })
                       ]
                   }),
-                  N
+                  T
               ]
           })
         : (0, r.jsxs)('div', {
@@ -99,7 +99,7 @@ function j(e) {
                       disabled: !!l,
                       text: Z
                   }),
-                  N
+                  T
               ]
           });
 }

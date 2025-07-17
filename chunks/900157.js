@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(592125),
     x = n(703558),
     v = n(430824),
-    j = n(979651),
-    O = n(664342),
+    O = n(979651),
+    j = n(664342),
     E = n(124368),
     S = n(981631),
     P = n(388032),
@@ -50,7 +50,7 @@ function Z(e) {
     }
     return e;
 }
-function N(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,13 +68,13 @@ function N(e, t) {
         e
     );
 }
-function T(e) {
-    let { channelId: t, baseChannelId: l, channelViewSource: T = 'Split View' } = e,
+function N(e) {
+    let { channelId: t, baseChannelId: l, channelViewSource: N = 'Split View' } = e,
         A = (0, o.e7)([C.Z], () => C.Z.getChannel(t)),
         w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
     var M = A;
-    let D = (0, o.e7)([j.Z], () => null != M && !a().isEmpty(j.Z.getVoiceStatesForChannel(M.id)));
+    let D = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
     i.useEffect(() => {
         D &&
             null != M &&
@@ -90,12 +90,12 @@ function T(e) {
             if (null == A || L.current) return;
             L.current = !0;
             let e = (0, p.K)(C.Z.getChannel(A.id), !0);
-            ((0, d.yw)(S.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id }));
-        }, [A, T]),
+            ((0, d.yw)(S.rMx.CHANNEL_OPENED, T(Z({}, e, (0, d.$H)(A.id)), { channel_view: N })), (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id }));
+        }, [A, N]),
         null == A || null == w)
     )
         return null;
-    let k = (0, r.jsx)(O.Z, {
+    let k = (0, r.jsx)(j.Z, {
         channel: A,
         baseChannelId: l
     });
@@ -116,7 +116,7 @@ function T(e) {
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
-                            return (t) => (0, r.jsx)(e, N(Z({}, t), { channel: A }));
+                            return (t) => (0, r.jsx)(e, T(Z({}, t), { channel: A }));
                         });
                     },
                     handleClick: function () {

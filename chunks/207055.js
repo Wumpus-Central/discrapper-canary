@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(131951),
     x = n(496675),
     v = n(158776),
-    j = n(885110),
-    O = n(797258),
+    O = n(885110),
+    j = n(797258),
     E = n(606304),
     S = n(979651),
     P = n(51144),
     I = n(649739),
     Z = n(262317),
-    N = n(981631),
-    T = n(524484),
+    T = n(981631),
+    N = n(524484),
     A = n(50259);
 let w = i.memo((e) => {
     var t, n, i;
@@ -53,16 +53,16 @@ let w = i.memo((e) => {
         ),
         G = (0, p.Z)(null != H ? [H.applicationId] : []),
         V = (0, I.Hr)('voice_users_eligibility_check', !1),
-        z = (0, o.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === N.IIU.PLAYING),
+        z = (0, o.e7)([v.Z, O.Z], () => (R ? O.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === T.IIU.PLAYING),
         W = (0, o.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
     null != W && I.ZP.trackExposure({ location: 'voice_users' });
     let [Y, q] = (0, o.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
-        K = (0, o.e7)([O.Z], () => O.Z.getSessionById(x)),
+        K = (0, o.e7)([j.Z], () => j.Z.getSessionById(x)),
         X = P.ZP.useName(s),
         Q = (0, o.e7)([S.Z], () => S.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
         J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
-        shakeLocation: T.oZ.VOICE_USER,
+        shakeLocation: N.oZ.VOICE_USER,
         isShaking: U,
         children: (0, r.jsx)(
             Z.ZP,
@@ -107,7 +107,7 @@ let w = i.memo((e) => {
                     priority: k,
                     embeddedApplication: G[0],
                     isStreaming: null != Y && Y.channelId === g.id,
-                    isWatching: null != q && q.state !== N.jm8.ENDED,
+                    isWatching: null != q && q.state !== T.jm8.ENDED,
                     isGuest: B,
                     isSelf: _.default.getId() === s.id,
                     application: V ? W : void 0
@@ -131,14 +131,14 @@ let w = i.memo((e) => {
 w.displayName = 'ConnectedVoiceUser';
 let R = [],
     M = function (e) {
-        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: j, children: O } = e,
+        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: O, children: j } = e,
             [E, S] = i.useState(null),
             [P, I] = i.useState(!1),
-            T = i.useRef(null),
+            N = i.useRef(null),
             M = (0, m.Es)(l.id, null != c ? c : R),
             D = i.useRef(
                 new s.sW(50, () => {
-                    (S(T.current), (T.current = null));
+                    (S(N.current), (N.current = null));
                 })
             ),
             L = i.useRef(
@@ -148,7 +148,7 @@ let R = [],
             ),
             k = i.useCallback(
                 (e) => {
-                    t && (I(!0), L.current.cancel(), (T.current = e), D.current.delay());
+                    t && (I(!0), L.current.cancel(), (N.current = e), D.current.delay());
                 },
                 [t]
             ),
@@ -195,7 +195,7 @@ let R = [],
                             sessionId: null != (i = s.sessionId) ? i : '',
                             channel: l,
                             collapsed: u,
-                            canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
+                            canDrag: n && x.Z.can(T.Plq.MOVE_MEMBERS, l),
                             showPreview: k,
                             hidePreview: U,
                             previewIsOpen: P,
@@ -218,14 +218,14 @@ let R = [],
                 i
             );
         })();
-        return null == F && null == O
+        return null == F && null == j
             ? null
             : (0, r.jsxs)(g.eJ, {
-                  className: a()(j, A.list, {
+                  className: a()(O, A.list, {
                       [A.collapsed]: u,
                       [A.withGuildIcon]: C
                   }),
                   collapsed: u,
-                  children: [F, O]
+                  children: [F, j]
               });
     };

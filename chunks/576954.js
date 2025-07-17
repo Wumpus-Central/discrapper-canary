@@ -48,36 +48,36 @@ function x(e) {
     });
 }
 function v(e) {
-    let { channelId: t, warningId: v, senderId: j } = e,
-        { isBlocked: O } = (0, a.cj)([h.Z], () => ({ isBlocked: h.Z.isBlocked(j) }), [j]),
+    let { channelId: t, warningId: v, senderId: O } = e,
+        { isBlocked: j } = (0, a.cj)([h.Z], () => ({ isBlocked: h.Z.isBlocked(O) }), [O]),
         E = i.useCallback(() => {
             (0, f.T)(t, [v]);
         }, [t, v]),
         S = (0, _.C2)(),
         P = i.useCallback(
             (e) => () => {
-                (c.Z.blockUser(j, { location: _.zr }).then(() => {
+                (c.Z.blockUser(O, { location: _.zr }).then(() => {
                     E();
                 }),
                     (0, g.qc)({
                         channelId: t,
                         warningId: v,
-                        senderId: j,
+                        senderId: O,
                         warningType: m.pj.STRANGER_DANGER,
                         cta: e
                     }));
             },
-            [E, t, v, j]
+            [E, t, v, O]
         );
     i.useEffect(() => {
         ((0, g.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: v,
-            senderId: j,
+            senderId: O,
             warningType: m.pj.STRANGER_DANGER
         }),
             u.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
-    }, [t, v, j]);
+    }, [t, v, O]);
     let I = () => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
@@ -88,7 +88,7 @@ function v(e) {
                         onClose: l,
                         channelId: t,
                         warningId: v,
-                        senderId: j,
+                        senderId: O,
                         description: C.intl.string(C.t.DJMZX1),
                         safetyTipRows: S.map((e, t) =>
                             (0, r.jsx)(
@@ -106,7 +106,7 @@ function v(e) {
                                 (0, r.jsx)(
                                     x,
                                     {
-                                        senderId: j,
+                                        senderId: O,
                                         channelId: t,
                                         warningId: v
                                     },
@@ -165,14 +165,14 @@ function v(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                userId: j,
+                                userId: O,
                                 confirmBlock: P(e),
                                 onCancel: () => {
                                     (null == l || l(),
                                         (0, g.qc)({
                                             channelId: t,
                                             warningId: v,
-                                            senderId: j,
+                                            senderId: O,
                                             warningType: m.pj.STRANGER_DANGER,
                                             cta: i
                                         }));
@@ -198,7 +198,7 @@ function v(e) {
     return (0, r.jsx)(b.Q, {
         channelId: t,
         warningId: v,
-        senderId: j,
+        senderId: O,
         warningType: m.pj.STRANGER_DANGER,
         header: C.intl.string(C.t.iOkDpK),
         description: C.intl.string(C.t.ISUbcH),
@@ -212,13 +212,13 @@ function v(e) {
                         (0, g.qc)({
                             channelId: t,
                             warningId: v,
-                            senderId: j,
+                            senderId: O,
                             warningType: m.pj.STRANGER_DANGER,
                             cta: g.NM.OPEN_MORE_TIPS
                         }));
                 }
             },
-            ...(O
+            ...(j
                 ? []
                 : [
                       {

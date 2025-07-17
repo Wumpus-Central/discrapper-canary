@@ -1,21 +1,21 @@
 r.d(t, {
     Mf: () => a,
-    Y6: () => c,
+    Y6: () => s,
     pF: () => l
 });
 var n = r(97519),
-    o = r(731965);
-let i = Object.freeze({
+    i = r(731965);
+let o = Object.freeze({
         inspectedStickerPosition: {
             rowIndex: -1,
             columnIndex: -1
         }
     }),
-    s = (0, n.U)((e) => i),
-    c = s,
+    c = (0, n.U)((e) => o),
+    s = c,
     a = (e, t, r) => {
-        (0, o.j)(() =>
-            s.setState({
+        (0, i.j)(() =>
+            c.setState({
                 inspectedStickerPosition: {
                     rowIndex: t,
                     columnIndex: e,

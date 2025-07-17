@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(359110),
     x = n(585483),
     v = n(407908),
-    j = n(739830),
-    O = n(488131),
+    O = n(739830),
+    j = n(488131),
     E = n(981631),
     S = n(388032);
 function P(e) {
@@ -83,7 +83,7 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(N, I(P({}, e), { channel: t }));
+            return (0, r.jsx)(T, I(P({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -101,18 +101,18 @@ function Z(e) {
         }
     });
 }
-function N(e) {
+function T(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         _ = (0, c.Z)(t, 'Sidebar Overflow'),
         y = (0, d.Z)(t),
         v = (0, f.Z)(t),
-        j = (0, m.Z)(t),
-        O = (0, a.Z)(t),
+        O = (0, m.Z)(t),
+        j = (0, a.Z)(t),
         P = (0, u.Z)(t),
         I = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
-        N = (0, s.Z)(t),
-        T = (0, o.Z)(t),
+        T = (0, s.Z)(t),
+        N = (0, o.Z)(t),
         A = (0, b.Z)({
             id: t.id,
             label: S.intl.string(S.t.DQ797u)
@@ -138,7 +138,7 @@ function N(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [v, j]
+                children: [v, O]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [Z, y, I]
@@ -167,25 +167,25 @@ function N(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, O, P, N]
+                children: [w, j, P, T]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [T, A]
+                children: [N, A]
             })
         ]
     });
 }
-function T(e) {
+function N(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(j.Z, { channel: t }),
+            t.isForumPost() ? null : (0, r.jsx)(O.Z, { channel: t }),
             (0, r.jsx)(v.Z, { channel: t }),
             (0, r.jsx)(Z, { channel: t }),
             (0, r.jsx)(y.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, O.vN)((0, _.e)(t), null != n ? n : t.parent_id)
+                onClick: () => (0, j.vN)((0, _.e)(t), null != n ? n : t.parent_id)
             })
         ]
     });

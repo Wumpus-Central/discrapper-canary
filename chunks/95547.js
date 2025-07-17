@@ -6,7 +6,5 @@ e.exports = {
     skuPreviewFooterCloseButton: 'skuPreviewFooterCloseButton_fa5bb9',
     header: 'header_fa5bb9',
     container: 'container_fa5bb9',
-    containerWithHeader: 'containerWithHeader_fa5bb9',
-    premiumButtonNitroWheel: 'premiumButtonNitroWheel_fa5bb9',
-    premiumButtonInner: 'premiumButtonInner_fa5bb9'
+    containerWithHeader: 'containerWithHeader_fa5bb9'
 };

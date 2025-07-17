@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(569545),
     p = n(314910),
     m = n(83773);
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +36,12 @@ function g(e) {
     }
     return e;
 }
-let E = { visibility: 'hidden' },
-    h = {
+let g = { visibility: 'hidden' },
+    v = {
         precision: 0.0001,
         duration: 300
     },
-    v = {
+    h = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
@@ -67,7 +67,7 @@ function b(e) {
             var e;
             let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
             return null == t || n
-                ? E
+                ? g
                 : {
                       width: t.width,
                       height: t.height,
@@ -77,7 +77,7 @@ function b(e) {
         },
         P = (e) => {
             let t = null == y ? void 0 : y.getBoundingClientRect();
-            if (((I.current = t), e.timestamp !== j || null == t || n)) return E;
+            if (((I.current = t), e.timestamp !== j || null == t || n)) return g;
             let { top: r, left: l } = t;
             return {
                 top: r + 36,
@@ -94,18 +94,18 @@ function b(e) {
                 ref: A,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: h
+                config: v
             },
             'animate-always'
         ),
         R = (0, l.useRef)(null),
-        N = (0, u.Yzy)(
+        C = (0, u.Yzy)(
             _,
             {
                 ref: R,
                 keys: (e) => e.timestamp,
                 from: (e) =>
-                    g(
+                    E(
                         {
                             position: 'fixed',
                             visibility: 'hidden',
@@ -114,7 +114,7 @@ function b(e) {
                         b.enabled ? P(e) : w()
                     ),
                 enter: (e) => [
-                    g(
+                    E(
                         {
                             opacity: 1,
                             visibility: 'visible'
@@ -122,10 +122,10 @@ function b(e) {
                         P(e)
                     )
                 ],
-                leave: g(
+                leave: E(
                     { opacity: 0 },
                     !b.enabled &&
-                        g(
+                        E(
                             {
                                 height: 0,
                                 width: 0
@@ -139,7 +139,7 @@ function b(e) {
                             })()
                         )
                 ),
-                config: b.enabled ? S : v,
+                config: b.enabled ? S : h,
                 onRest: (e, t) => {
                     null != t.item && null != _.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(Z, t.item.timestamp);
                 }
@@ -165,7 +165,7 @@ function b(e) {
                 (0, r.jsx)(p.ZP, {
                     children: (0, r.jsx)('div', {
                         className: m.hidden,
-                        children: N(
+                        children: C(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(i.animated.img, {

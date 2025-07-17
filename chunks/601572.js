@@ -11,8 +11,8 @@ var n = a(255367),
     p = a(313201),
     _ = a(695346),
     g = a(932724),
-    f = a(716161),
-    m = a(672339),
+    m = a(716161),
+    f = a(672339),
     b = a(898531),
     y = a(131951),
     O = a(594174),
@@ -27,8 +27,8 @@ function A(e) {
         E = (0, p.Dt)(),
         w = (0, b.Z)(),
         N = _.qF.useSetting(),
-        [R, D] = r.useState((0, g.P)(O.default.getCurrentUser())),
-        L = (0, l.O)(),
+        [R, L] = r.useState((0, g.P)(O.default.getCurrentUser())),
+        D = (0, l.O)(),
         { analyticsLocations: x } = (0, u.ZP)(s.Z.CAMERA_PREVIEW),
         j = r.useRef(null);
     (r.useEffect(() => {
@@ -38,12 +38,12 @@ function A(e) {
             var e;
             null == (e = j.current) || e.scrollToTop();
         }, []));
-    let M = async () => {
-            (await U(), o.Z.setVideoEnabled(!0), null == A || A());
+    let U = async () => {
+            (await Z(), o.Z.setVideoEnabled(!0), null == A || A());
         },
-        U = async () => {
+        Z = async () => {
             try {
-                await (0, m.wG)(R, {
+                await (0, f.wG)(R, {
                     location: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
@@ -68,10 +68,10 @@ function A(e) {
                                 }));
                         }
                         return e;
-                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, L.location)
+                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, D.location)
                 });
             } catch (e) {}
-            (await I(), (0, f.Up)(R));
+            (await I(), (0, m.Up)(R));
         };
     return (0, n.jsx)(u.Gt, {
         value: x,
@@ -100,7 +100,7 @@ function A(e) {
                                 hideDeviceHeader: !0,
                                 hideCameraSettingsLink: !0,
                                 selectedBackgroundOption: R,
-                                onSelectBackgroundOption: D,
+                                onSelectBackgroundOption: L,
                                 hideDeviceSelector: a,
                                 renderCamera: (e) =>
                                     (0, n.jsxs)('div', {
@@ -131,7 +131,7 @@ function A(e) {
                                     variant: 'primary',
                                     size: 'sm',
                                     text: e,
-                                    onClick: a ? U : M,
+                                    onClick: a ? Z : U,
                                     autoFocus: !a
                                 });
                             })(),

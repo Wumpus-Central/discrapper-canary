@@ -1,60 +1,59 @@
 (r.d(t, { default: () => M }), r(539854), r(388685));
 var n = r(255367),
-    o = r(73800),
-    i = r(120356),
-    s = r.n(i),
-    c = r(954955),
-    a = r.n(c),
+    i = r(73800),
+    o = r(120356),
+    c = r.n(o),
+    s = r(954955),
+    a = r.n(s),
     l = r(442837),
     u = r(477690),
-    f = r(755721),
-    d = r(481060),
-    b = r(691251),
-    p = r(563132),
-    m = r(409813),
+    f = r(481060),
+    d = r(691251),
+    b = r(563132),
+    p = r(409813),
     h = r(185139),
     j = r(624138),
     O = r(790954),
-    g = r(453070),
-    P = r(926491),
-    k = r(378233),
-    y = r(515005),
-    S = r(282896),
-    _ = r(929204),
-    x = r(981631),
-    I = r(388032),
+    m = r(453070),
+    g = r(926491),
+    P = r(378233),
+    k = r(515005),
+    y = r(282896),
+    S = r(929204),
+    _ = r(981631),
+    x = r(388032),
     v = r(95547);
-let C = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-    E = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-    N = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-    w = C + 2 * E,
-    T = a()(O.pF, 250),
-    W = () => {
-        T.cancel();
+let I = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+    C = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+    w = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+    E = I + 2 * C,
+    N = a()(O.pF, 250),
+    T = () => {
+        N.cancel();
     },
-    R = (e) => {
+    W = (e) => {
         let { visibleRowIndex: t, columnIndex: r } = e;
-        (T.cancel(), (0, O.Mf)(r, t, b.u.MOUSE_EVENT));
+        (N.cancel(), (0, O.Mf)(r, t, d.u.MOUSE_EVENT));
     },
     A = (e) => {
-        let { stickerPack: t, width: r, hasHeaderImage: i, isScrolling: c, onInspect: a } = e,
-            l = o.useMemo(() => [(0, k.z)(t)], [t]),
+        let { stickerPack: t, width: r, hasHeaderImage: o, isScrolling: s, onInspect: a } = e,
+            l = i.useMemo(() => [(0, P.z)(t)], [t]),
             u = (0, O.Y6)((e) => e.inspectedStickerPosition),
             {
                 rowCountBySection: f,
                 stickersGrid: d,
                 gutterWidth: b
-            } = (0, g.el)({
+            } = (0, m.el)({
                 stickersCategories: l,
-                stickerNodeMargin: N,
-                stickerNodeWidth: w,
+                stickerNodeMargin: w,
+                stickerNodeWidth: E,
                 listWidth: r
             });
         return (0, n.jsxs)('div', {
-            className: s()(v.container, { [v.containerWithHeader]: i }),
+            className: c()(v.container, { [v.containerWithHeader]: o }),
             children: [
                 (0, n.jsx)(
-                    S.Z,
+                    y.Z,
                     {
                         className: v.header,
                         stickerPack: t,
@@ -63,28 +62,28 @@ let C = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                     t.id
                 ),
                 (0, n.jsx)('div', {
-                    onFocus: W,
-                    onBlur: T,
-                    onMouseOver: W,
-                    onMouseOut: T,
+                    onFocus: T,
+                    onBlur: N,
+                    onMouseOver: T,
+                    onMouseOut: N,
                     children: (() => {
                         if (0 === f.length) return null;
                         let e = [];
                         for (let t = 0; t < f[0]; t++)
                             e.push(
                                 (0, n.jsx)(
-                                    y.Z,
+                                    k.Z,
                                     {
                                         enlargeOnInteraction: !0,
                                         preferAnimation: !0,
                                         gutterWidth: b,
                                         inspectedStickerPosition: u,
-                                        isScrolling: c,
+                                        isScrolling: s,
                                         onInspect: a,
                                         rowIndex: t,
                                         stickerDescriptors: d[t],
-                                        stickerPadding: E,
-                                        stickerSize: C,
+                                        stickerPadding: C,
+                                        stickerSize: I,
                                         isDisplayingIndividualStickers: !0,
                                         checkSendability: !1
                                     },
@@ -97,52 +96,45 @@ let C = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
             ]
         });
     },
-    B = (e) => {
+    R = (e) => {
         let { onClose: t, stickerPack: r } = e;
-        (0, g.fP)();
-        let o = (0, l.e7)([P.Z], () => P.Z.isPremiumPack(r.id));
-        return (0, n.jsxs)(d.mzw, {
+        (0, m.fP)();
+        let i = (0, l.e7)([g.Z], () => g.Z.isPremiumPack(r.id));
+        return (0, n.jsxs)(f.mzw, {
             className: v.footer,
             children: [
-                (0, n.jsx)(d.eee, {
+                (0, n.jsx)(f.eee, {
                     onClick: t,
                     className: v.skuPreviewFooterCloseButton,
-                    children: I.intl.string(I.t.cpT0Cg)
+                    children: x.intl.string(x.t.cpT0Cg)
                 }),
-                o &&
-                    (0, n.jsxs)(d.gtL, {
-                        color: f.zx.Colors.GREEN,
+                i &&
+                    (0, n.jsx)(f.zxk, {
+                        variant: 'expressive',
                         type: 'submit',
-                        innerClassName: v.premiumButtonInner,
+                        icon: f.SrA,
+                        text: x.intl.string(x.t['w+kuhY']),
                         onClick: () => {
-                            (t(), (0, _.Z)({ section: x.jXE.STICKER_PACK_VIEW_ALL }));
-                        },
-                        children: [
-                            (0, n.jsx)(d.SrA, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: v.premiumButtonNitroWheel
-                            }),
-                            I.intl.string(I.t['w+kuhY'])
-                        ]
+                            (t(), (0, S.Z)({ section: _.jXE.STICKER_PACK_VIEW_ALL }));
+                        }
                     })
             ]
         });
     },
     D = (e) => {
         let { stickerPack: t, onClose: r } = e,
-            o = (0, k.sM)(t, 1024);
-        return null == o
+            i = (0, P.sM)(t, 1024);
+        return null == i
             ? null
-            : (0, n.jsxs)(d.xBx, {
+            : (0, n.jsxs)(f.xBx, {
                   className: v.headerWithImage,
                   children: [
                       (0, n.jsx)('div', {
                           role: 'image',
-                          style: { backgroundImage: 'url('.concat(o, ')') },
+                          style: { backgroundImage: 'url('.concat(i, ')') },
                           className: v.backgroundImage
                       }),
-                      (0, n.jsx)(d.olH, {
+                      (0, n.jsx)(f.olH, {
                           className: v.closeButton,
                           onClick: r
                       })
@@ -152,40 +144,40 @@ let C = (0, j.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
 function M(e) {
     var t,
         r,
-        { onClose: i, stickerPack: s } = e,
-        c = (function (e, t) {
+        { onClose: o, stickerPack: c } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
             }
-            return o;
+            return i;
         })(e, ['onClose', 'stickerPack']);
-    let [a, l] = o.useState(null),
-        u = o.useCallback((e) => {
+    let [a, l] = i.useState(null),
+        u = i.useCallback((e) => {
             null !== e && l(e.offsetWidth);
         }, []);
     return (
-        o.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             (0, O.pF)();
         }, []),
-        (0, n.jsx)(p.PaymentContextProvider, {
+        (0, n.jsx)(b.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
             skuIDs: [],
             children: (0, n.jsx)(
-                d.Y0X,
+                f.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -210,7 +202,7 @@ function M(e) {
                             }));
                     }
                     return e;
-                })({}, c)),
+                })({}, s)),
                 (r = r =
                     {
                         'aria-labelledby': 'sticker-pack-sku-preview-modal',
@@ -222,23 +214,23 @@ function M(e) {
                                 children:
                                     null != a &&
                                     (0, n.jsx)(A, {
-                                        stickerPack: s,
+                                        stickerPack: c,
                                         hasHeaderImage: !0,
-                                        onInspect: R,
+                                        onInspect: W,
                                         width: a
                                     })
                             }),
-                            footer: (0, n.jsx)(B, {
-                                onClose: i,
-                                stickerPack: s
+                            footer: (0, n.jsx)(R, {
+                                onClose: o,
+                                stickerPack: c
                             }),
                             header: (0, n.jsx)(D, {
-                                onClose: i,
-                                stickerPack: s
+                                onClose: o,
+                                stickerPack: c
                             }),
-                            onScroll: T,
-                            steps: [m.h8.SKU_PREVIEW],
-                            currentStep: m.h8.SKU_PREVIEW
+                            onScroll: N,
+                            steps: [p.h8.SKU_PREVIEW],
+                            currentStep: p.h8.SKU_PREVIEW
                         })
                     }),
                 Object.getOwnPropertyDescriptors

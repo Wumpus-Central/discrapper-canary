@@ -19,20 +19,20 @@ var r = n(255367),
     C = n(149203),
     x = n(388032),
     v = n(760420);
-let j = { height: _.lv };
-function O() {
+let O = { height: _.lv };
+function j() {
     f.yT(m.ti.DISMISSED);
 }
 function E(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         f = i.useRef(null),
         { renderWindow: x, windowDispatch: v } = i.useContext(s.ZP),
-        j = null != u,
+        O = null != u,
         E = (0, a.Jw)(null != u ? u : ''),
         S = i.useCallback(
             (e) => {
                 var t;
-                if ((!j && (0, a.$s)()) || (j && !(E && n)) || d.Z.isOpen() || e.defaultPrevented) return;
+                if ((!O && (0, a.$s)()) || (O && !(E && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
                 if ((0, l.k)(r) && null != r.closest('.' + _.Jh)) return;
                 for (; (0, l.k)(r); ) {
@@ -43,27 +43,27 @@ function E(e) {
                     if (r.classList.contains(_.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
-                O();
+                j();
                 let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
                 (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS);
             },
-            [n, E, j]
+            [n, E, O]
         );
     (i.useLayoutEffect(
         () => (
             x.addEventListener('mousedown', S),
             x.addEventListener('contextmenu', S),
-            v.subscribe(y.CkL.POPOUT_CLOSE, O),
+            v.subscribe(y.CkL.POPOUT_CLOSE, j),
             () => {
-                (x.removeEventListener('mousedown', S), x.removeEventListener('contextmenu', S), v.unsubscribe(y.CkL.POPOUT_CLOSE, O));
+                (x.removeEventListener('mousedown', S), x.removeEventListener('contextmenu', S), v.unsubscribe(y.CkL.POPOUT_CLOSE, j));
             }
         ),
         [S, x, v]
     ),
         (0, o.Tbt)(f),
         i.useEffect(() => {
-            ((!j && (0, a.$s)()) || (j && !E)) && O();
-        }, [E, j]));
+            ((!O && (0, a.$s)()) || (O && !E)) && j();
+        }, [E, O]));
     let P = (0, b.Z)();
     return (0, r.jsx)(g.Z, {
         ref: f,
@@ -111,7 +111,7 @@ let S = i.memo(function (e) {
                 return (0, r.jsx)('section', {
                     className: v.positionContainer,
                     role: 'dialog',
-                    style: j,
+                    style: O,
                     'aria-label': x.intl.string(x.t['3CNGLC']),
                     children:
                         t &&

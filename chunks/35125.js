@@ -3,7 +3,7 @@ n.d(e, {
     Tn: () => c,
     _i: () => I,
     eI: () => _,
-    vp: () => N,
+    vp: () => f,
     y8: () => T
 });
 var r = n(367907),
@@ -18,7 +18,7 @@ function s(t) {
 }
 function c(t) {
     let { username: e, usernameOnClickHandler: n, roleSubscriptionOnClickHandler: r, guildId: l, roleSubscriptionData: i } = t,
-        { content: a, formatParams: u } = f({
+        { content: a, formatParams: u } = N({
             username: e,
             usernameOnClickHandler: n,
             roleSubscriptionOnClickHandler: r,
@@ -29,7 +29,7 @@ function c(t) {
 }
 function m(t) {
     let { username: e, usernameOnClickHandler: n, roleSubscriptionOnClickHandler: r, guildId: l, roleSubscriptionData: i } = t,
-        { content: a, formatParams: u } = f({
+        { content: a, formatParams: u } = N({
             username: e,
             usernameOnClickHandler: n,
             roleSubscriptionOnClickHandler: r,
@@ -49,11 +49,11 @@ function d(t, e) {
         isRenewal: null != (r = null == e ? void 0 : e.is_renewal) && r
     };
 }
-function f(t) {
+function N(t) {
     let { username: e, usernameOnClickHandler: n = s, roleSubscriptionOnClickHandler: r = u.dG4, guildId: l, roleSubscriptionData: i } = t,
-        { guild: a, totalMonthsSubscribed: c, showWithDuration: m, isRenewal: f } = d(l, i);
+        { guild: a, totalMonthsSubscribed: c, showWithDuration: m, isRenewal: N } = d(l, i);
     return {
-        content: m ? (f ? o.t.Iy66Mz : o.t.eCgb2d) : f ? o.t.mPTTdn : o.t.mYjFFx,
+        content: m ? (N ? o.t.Iy66Mz : o.t.eCgb2d) : N ? o.t.mPTTdn : o.t.mYjFFx,
         formatParams: {
             username: e,
             usernameHook: n,
@@ -64,12 +64,12 @@ function f(t) {
         }
     };
 }
-function N(t) {
+function f(t) {
     let e,
         { username: n, usernameOnClickHandler: r = s, roleSubscriptionOnClickHandler: l = u.dG4, guildId: i, roleSubscriptionData: a } = t,
-        { guild: c, totalMonthsSubscribed: m, showWithDuration: f, isRenewal: N } = d(i, a);
+        { guild: c, totalMonthsSubscribed: m, showWithDuration: N, isRenewal: f } = d(i, a);
     return (
-        (e = f ? (N ? o.t.OQ0OU1 : o.t['+N9bxs']) : N ? o.t.OxP1ND : o.t['6Z1E+/']),
+        (e = N ? (f ? o.t.OQ0OU1 : o.t['+N9bxs']) : f ? o.t.OxP1ND : o.t['6Z1E+/']),
         o.intl.formatToParts(e, {
             guildName: null == c ? void 0 : c.name,
             tierName: null == a ? void 0 : a.tier_name,

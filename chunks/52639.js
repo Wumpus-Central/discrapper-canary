@@ -21,9 +21,9 @@ function y(e) {
         { analyticsLocations: y } = (0, l.ZP)(),
         { context: C } = (0, s.KZ)(),
         x = (0, i.Z)(),
-        { mutualFriendsCount: v, mutualFriends: j, mutualGuilds: O } = (0, c.Z)(t),
+        { mutualFriendsCount: v, mutualFriends: O, mutualGuilds: j } = (0, c.Z)(t),
         E = !t.bot && null != v && v > 0,
-        S = null != O && O.length > 0;
+        S = null != j && j.length > 0;
     return E || S
         ? (0, r.jsxs)(m.Z.Overlay, {
               className: _.overlay,
@@ -33,7 +33,7 @@ function y(e) {
                           section: 'MUTUAL_GUILDS',
                           header: b.intl.string(b.t['4lTDZm']),
                           listClassName: _.list,
-                          items: O.map((e) => {
+                          items: j.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
                                   f.Z,
@@ -55,7 +55,7 @@ function y(e) {
                           listClassName: _.list,
                           onExpand: () => (0, u.Z)(t.id, x),
                           items:
-                              null == j
+                              null == O
                                   ? Array.from({ length: v }).map((e, t) =>
                                         (0, r.jsxs)(
                                             'div',
@@ -75,7 +75,7 @@ function y(e) {
                                             t
                                         )
                                     )
-                                  : j.map((e) => {
+                                  : O.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
                                             h.Z,

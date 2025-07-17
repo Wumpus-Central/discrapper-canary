@@ -1,5 +1,5 @@
-a.d(t, { Xs: () => r });
-let n = (0, a(818083).B)({
+n.d(t, { Xs: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_dm_mute_feedback',
     label: 'DM Mute Feedback Experiment',
@@ -13,6 +13,6 @@ let n = (0, a(818083).B)({
     ]
 });
 function r(e) {
-    let { enabled: t } = n.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    let { enabled: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

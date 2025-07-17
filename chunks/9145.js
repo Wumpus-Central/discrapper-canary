@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(271383),
     x = n(944486),
     v = n(594174),
-    j = n(585483),
-    O = n(51144),
+    O = n(585483),
+    j = n(51144),
     E = n(566620),
     S = n(317381),
     P = n(619915),
     I = n(988980),
     Z = n(16609),
-    N = n(952561),
-    T = n(563218),
+    T = n(952561),
+    N = n(563218),
     A = n(884338),
     w = n(617552),
     R = n(719296),
@@ -45,7 +45,7 @@ let F = A.u8.SIZE_32,
 function G(e) {
     var t, n, l;
     let { maxHeight: G, connectedLocation: V, renderExternalHeader: z } = e,
-        W = (0, N.Z)(),
+        W = (0, T.Z)(),
         Y = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
         q = (0, Z.p)(V),
         K = (0, o.e7)([y.Z], () => y.Z.getChannel(q)),
@@ -183,7 +183,7 @@ function G(e) {
         var t;
         if (null == e || void 0 === e || e === A.ag) return null;
         let n = em.get(e.id),
-            i = null != (t = null == n ? void 0 : n.nick) ? t : O.ZP.getName(e);
+            i = null != (t = null == n ? void 0 : n.nick) ? t : j.ZP.getName(e);
         return (0, r.jsx)(
             c.DY3,
             {
@@ -234,7 +234,7 @@ function G(e) {
                                     paddingBottom: eu
                                 },
                                 ref: el,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(N.Z, {
                                     className: B.iframe,
                                     embedId: (0, R.Z)(V.id, W.id)
                                 })
@@ -298,10 +298,10 @@ function G(e) {
                               maxHeight: G,
                               resizableNode: $,
                               onResize: (e) => {
-                                  (j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
+                                  (O.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
                               },
                               onResizeEnd: (e) => {
-                                  (j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
+                                  (O.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
                               }
                           })
                         : null

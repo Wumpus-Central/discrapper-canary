@@ -1,9 +1,9 @@
 (r.d(t, { Z: () => d }), r(953529));
 var n = r(255367),
-    o = r(73800),
-    i = r(120356),
-    s = r.n(i),
-    c = r(481060),
+    i = r(73800),
+    o = r(120356),
+    c = r.n(o),
+    s = r(481060),
     a = r(378233),
     l = r(388032),
     u = r(717996);
@@ -12,14 +12,14 @@ let f = (e) => {
         return (0, n.jsx)('div', {
             className: u.features,
             children: (0, a.X_)(t)
-                ? (0, n.jsx)(c.ua7, {
+                ? (0, n.jsx)(s.ua7, {
                       tooltipClassName: u.featuresTooltip,
                       position: 'top',
                       text: l.intl.string(l.t.W11rMT),
                       children: (e) => {
                           var t, r;
                           return (0, n.jsx)(
-                              c.o1U,
+                              s.o1U,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
@@ -71,15 +71,15 @@ let f = (e) => {
                 : null
         });
     },
-    d = o.memo((e) => {
-        let { className: t, stickerPack: r, withDescription: o = !1 } = e;
+    d = i.memo((e) => {
+        let { className: t, stickerPack: r, withDescription: i = !1 } = e;
         return (0, n.jsxs)('div', {
-            className: s()(u.header, t),
+            className: c()(u.header, t),
             children: [
                 (0, n.jsxs)('div', {
                     className: u.title,
                     children: [
-                        (0, n.jsx)(c.X6q, {
+                        (0, n.jsx)(s.X6q, {
                             className: u.heading,
                             variant: 'heading-sm/semibold',
                             children: r.name
@@ -87,9 +87,9 @@ let f = (e) => {
                         (0, n.jsx)(f, { stickerPack: r })
                     ]
                 }),
-                o &&
+                i &&
                     null != r.description &&
-                    (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(s.Text, {
                         className: u.description,
                         variant: 'text-sm/normal',
                         children: r.description

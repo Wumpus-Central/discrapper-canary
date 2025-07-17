@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(665149),
     x = n(984370),
     v = n(616286),
-    j = n(975146),
-    O = n(430824),
+    O = n(975146),
+    j = n(430824),
     E = n(496675),
     S = n(626135),
     P = n(431328),
     I = n(501655),
     Z = n(200498),
-    N = n(146085),
-    T = n(427679),
+    T = n(146085),
+    N = n(427679),
     A = n(592473),
     w = n(903108),
     R = n(981631),
@@ -68,7 +68,7 @@ function k(e) {
             !u &&
                 C &&
                 (0, r.jsx)(
-                    j.Z,
+                    O.Z,
                     {
                         className: a()(L.button, { [L.sidebarOpen]: c }),
                         onClick: () => {
@@ -94,14 +94,14 @@ function U(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: p } = e,
         h = (0, b.ZP)(n),
-        f = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
+        f = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id)),
         m = (0, P.Io)(n.id),
         g = (0, P.Rk)(n.id, I.pV.AUDIENCE),
-        _ = (0, o.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
+        _ = (0, o.e7)([j.Z], () => j.Z.getGuild(n.guild_id), [n.guild_id]),
         v = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
-        j = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
+        O = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
         Z = (0, w.Z)(n),
-        A = (0, o.e7)([E.Z], () => E.Z.can(N.yP, n)),
+        A = (0, o.e7)([E.Z], () => E.Z.can(T.yP, n)),
         U = () => {
             (d.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                 S.default.track(R.rMx.BOOSTING_UPSELL_CLICKED, {
@@ -201,18 +201,18 @@ function U(e) {
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: j ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
+                                      children: O ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
                                   }),
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-default',
-                                      children: j ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
+                                      children: O ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
                               className: L.buttons,
-                              children: j
+                              children: O
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zx, {

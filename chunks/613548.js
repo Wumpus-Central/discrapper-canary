@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(651183),
     x = n(853476),
     v = n(390322),
-    j = n(616286),
-    O = n(975146),
+    O = n(616286),
+    j = n(975146),
     E = n(597998),
     S = n(606304),
     P = n(358221),
     I = n(355827),
     Z = n(185935),
-    N = n(354459),
-    T = n(388032),
+    T = n(354459),
+    N = n(388032),
     A = n(232989);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -78,7 +78,7 @@ function M(e) {
             let e = Date.now();
             return s()(S.Z.getSpeakers())
                 .map((e) => P.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, y.ZP)(e))
+                .filter((e) => null != e && e.type === T.fO.USER && e.speaking && !(0, y.ZP)(e))
                 .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -92,7 +92,7 @@ function M(e) {
                       {
                           position: 'bottom',
                           color: u.ua7.Colors.GREY,
-                          text: T.intl.formatToPlainString(T.t.JjdizM, { username: e.user.username }),
+                          text: N.intl.formatToPlainString(N.t.JjdizM, { username: e.user.username }),
                           children: (l) =>
                               (0, r.jsx)(
                                   E.ZP,
@@ -119,7 +119,7 @@ function D(e) {
             voiceParticipantsHidden: y,
             selectedParticipant: E,
             userParticipantCount: S,
-            participantsListOpen: T
+            participantsListOpen: N
         } = (0, c.cj)(
             [P.Z],
             () => ({
@@ -132,7 +132,7 @@ function D(e) {
         ),
         D = t.isGuildVoice() && !n,
         { hasParticipantsPanel: L } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        k = !T && L && (t.isGuildVoice() || t.isGroupDM()),
+        k = !N && L && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: U, inInbox: B } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         F = [];
     return (
@@ -157,7 +157,7 @@ function D(e) {
                 'clips-enabled-indicator'
             )
         ),
-        (null == E ? void 0 : E.type) === N.fO.STREAM &&
+        (null == E ? void 0 : E.type) === T.fO.STREAM &&
             (F.push(
                 (0, r.jsx)(
                     C.Z,
@@ -181,7 +181,7 @@ function D(e) {
                     'live-indicator'
                 )
             )),
-        (null == E ? void 0 : E.type) === N.fO.USER &&
+        (null == E ? void 0 : E.type) === T.fO.USER &&
             F.push(
                 (0, r.jsx)(
                     x.Z,
@@ -204,7 +204,7 @@ function D(e) {
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                O.Z,
+                                j.Z,
                                 R(w({}, e), {
                                     buttonRef: l,
                                     isActive: n,
@@ -222,10 +222,10 @@ function D(e) {
         k &&
             F.push(
                 (0, r.jsx)(
-                    O.Z,
+                    j.Z,
                     {
                         className: a()(A.button, { [A.lastButton]: n }),
-                        onClick: () => d.Z.toggleParticipantsList(t.id, !T)
+                        onClick: () => d.Z.toggleParticipantsList(t.id, !N)
                     },
                     'participants-list-button'
                 )
@@ -233,10 +233,10 @@ function D(e) {
         D &&
             F.push(
                 (0, r.jsx)(
-                    j.T,
+                    O.T,
                     {
                         channelId: t.id,
-                        className: a()(A.button, { [A.lastButton]: T }),
+                        className: a()(A.button, { [A.lastButton]: N }),
                         disabled: n
                     },
                     'chat-spacer'

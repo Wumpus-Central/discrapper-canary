@@ -102,7 +102,7 @@ function N(e, t) {
                             a.Z.setInputLocked(!1, (0, f.getPID)()),
                             (0, o.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('46746'), n.e('32087')]).then(n.bind(n, 60594));
+                                    let { default: e } = await Promise.all([n.e('46746'), n.e('79839')]).then(n.bind(n, 60594));
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,

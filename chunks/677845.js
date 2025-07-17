@@ -19,12 +19,12 @@ var r = n(255367),
     C = n(434488),
     x = n(27457),
     v = n(251564),
-    j = n(695492),
-    O = n(981631),
+    O = n(695492),
+    j = n(981631),
     E = n(600295);
 function S(e) {
-    let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: P, channel: I, className: Z, inCall: N, totalNumberOfParticipants: T } = e,
-        A = (0, c.bp)() === O.IlC.POPOUT,
+    let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: P, channel: I, className: Z, inCall: T, totalNumberOfParticipants: N } = e,
+        A = (0, c.bp)() === j.IlC.POPOUT,
         w = (0, o.e7)([_.Z], () => _.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
         M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(I.id), [I]),
@@ -59,7 +59,7 @@ function S(e) {
                         onClick: n,
                         onDoubleClick: S,
                         onContextMenu: P,
-                        inCall: N,
+                        inCall: T,
                         width: t,
                         inPopout: A
                     },
@@ -71,7 +71,7 @@ function S(e) {
             type: l.ImpressionTypes.VIEW,
             name: l.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
-                total_participants: T,
+                total_participants: N,
                 can_invite: k,
                 is_afk_channel: U,
                 channel_user_limit: I.userLimit
@@ -98,7 +98,7 @@ function S(e) {
                             })
                         )
                       : z.push((e) =>
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(O.Z, {
                                 width: e,
                                 channel: I,
                                 guild: w,

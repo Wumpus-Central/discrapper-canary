@@ -1,15 +1,16 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(73800),
     i = n(115434),
     l = n(264181),
     a = n(442837),
     o = n(704215),
-    s = n(243778),
-    c = n(874703),
-    u = n(794324),
-    d = n(302800),
-    p = n(921944);
-let h = (e, t) => {
+    s = n(481060),
+    c = n(243778),
+    u = n(874703),
+    d = n(794324),
+    p = n(302800),
+    h = n(921944);
+let f = (e, t) => {
         var n, r, i, a, o, s, c, u;
         if ((null == t ? void 0 : t.type) === l.Z.COACHTIP || e.hasPreviewAssets) {
             let i =
@@ -49,7 +50,7 @@ let h = (e, t) => {
                             }));
                     }
                     return e;
-                })({ type: d.k2.COACHTIP }, i)),
+                })({ type: p.k2.COACHTIP }, i)),
                 (u = u =
                     {
                         imageSrc: null != (r = e.coachtipAvatar) ? r : '',
@@ -78,7 +79,7 @@ let h = (e, t) => {
         if ((null == t ? void 0 : t.type) === l.Z.COACHMARK) {
             let e = t.refTargetBackground;
             return {
-                type: d.k2.COACHMARK,
+                type: p.k2.COACHMARK,
                 title: () => t.title,
                 body: () => t.body,
                 assetDark: t.assetDark,
@@ -92,17 +93,18 @@ let h = (e, t) => {
         }
         return null;
     },
-    f = () => {
+    g = () => {
         var e;
-        let t = (0, a.e7)([c.Z], () => c.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
-            [n, l] = (0, s.XR)(o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING, null != (e = null == t ? void 0 : t.version) ? e : 0, void 0, !0),
-            d = (0, u.mB)(t),
-            f = null != n ? h(d, t) : null,
-            g = r.useCallback(() => {
-                null != f && l(p.L.AUTO);
-            }, [f, l]);
+        let t = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
+            n = !(0, s.$sL)(),
+            [l, p] = (0, c.XR)(n ? o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null != (e = null == t ? void 0 : t.version) ? e : 0, void 0, !0),
+            g = (0, d.mB)(t),
+            m = null != l ? f(g, t) : null,
+            b = r.useCallback(() => {
+                null != m && p(h.L.AUTO);
+            }, [m, p]);
         return {
-            shopButtonDisplayOptions: f,
-            dismissShopButtonDC: g
+            shopButtonDisplayOptions: m,
+            dismissShopButtonDC: b
         };
     };

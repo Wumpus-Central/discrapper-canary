@@ -23,7 +23,7 @@ var r = n(255367),
     C = n(981631),
     x = n(388032),
     v = n(285580);
-function j(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -123,8 +123,8 @@ let S = function (e) {
         P = (0, g.Dt)(),
         I = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         Z = null == I ? void 0 : I.name,
-        N = (0, m.cO)(I),
-        [T, A] = i.useState(null != Z ? Z : ''),
+        T = (0, m.cO)(I),
+        [N, A] = i.useState(null != Z ? Z : ''),
         [w, R] = i.useState(void 0),
         M = void 0 !== w,
         { analyticsLocations: D } = (0, h.ZP)(S, p.Z.GROUP_DM_EDIT_MODAL),
@@ -137,13 +137,13 @@ let S = function (e) {
             old_icon_set: (null == I ? void 0 : I.icon) != null
         };
     return (i.useEffect(() => {
-        a(T !== Z || M);
-    }, [T, Z, M, a]),
+        a(N !== Z || M);
+    }, [N, Z, M, a]),
     (0, d.ZP)(
         () => (
-            _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, L), { action: 'opened' })),
+            _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'opened' })),
             () => {
-                _.default.track(C.rMx.GDM_EDIT_INTERACTED, O(j({}, L), { action: 'dismissed' }));
+                _.default.track(C.rMx.GDM_EDIT_INTERACTED, j(O({}, L), { action: 'dismissed' }));
             }
         )
     ),
@@ -154,14 +154,14 @@ let S = function (e) {
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = T !== Z,
+                      let r = N !== Z,
                           i = void 0 !== w;
                       if (
                           (_.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
-                              O(j({}, L), {
+                              j(O({}, L), {
                                   action: 'saved',
-                                  new_name_set: '' !== T,
+                                  new_name_set: '' !== N,
                                   new_icon_set: (i ? w : null == I ? void 0 : I.icon) != null,
                                   name_changed: r,
                                   icon_changed: i
@@ -170,7 +170,7 @@ let S = function (e) {
                           r || i)
                       ) {
                           let e = {};
-                          (r && (e.name = T), i && (e.icon = w), u.Z.updateChannel(t, e, S).catch(y.g6));
+                          (r && (e.name = N), i && (e.icon = w), u.Z.updateChannel(t, e, S).catch(y.g6));
                       }
                       n();
                   },
@@ -208,8 +208,8 @@ let S = function (e) {
                                   }),
                                   (0, r.jsx)(c.oil, {
                                       'aria-label': x.intl.string(x.t.GEGW3N),
-                                      placeholder: null != N ? N : '',
-                                      value: T,
+                                      placeholder: null != T ? T : '',
+                                      value: N,
                                       onChange: A,
                                       autoFocus: !0
                                   })
@@ -222,7 +222,7 @@ let S = function (e) {
                                       variant: 'primary',
                                       text: x.intl.string(x.t.R3BPHx),
                                       type: 'submit',
-                                      disabled: T === Z && !M
+                                      disabled: N === Z && !M
                                   }),
                                   (0, r.jsx)(s.zx, {
                                       onClick: f,

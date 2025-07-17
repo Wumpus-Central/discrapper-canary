@@ -1,115 +1,73 @@
 (n.d(t, {
-    J: () => I,
-    Nt: () => R,
-    R2: () => O,
-    Uu: () => T,
-    ZC: () => C,
-    bK: () => S,
-    t6: () => v,
-    tv: () => A,
-    vY: () => N
+    Nt: () => g,
+    R2: () => f,
+    ZC: () => m,
+    t6: () => _,
+    tv: () => p,
+    vY: () => h
 }),
     n(388685));
-var r = n(73800),
-    i = n(525654),
-    a = n.n(i),
-    o = n(442837),
-    s = n(846027),
-    l = n(607070),
-    c = n(578976),
-    u = n(199902),
-    d = n(131951),
-    f = n(594174),
-    _ = n(451478),
-    p = n(980463),
-    h = n(823961),
-    m = n(317951),
-    g = n(111810),
-    E = n(477931),
-    b = n(981631),
-    y = n(37113);
-function O(e) {
-    let [t, n, i] = (0, o.Wu)([h.Z], () => [h.Z.isFetchingPrice(e), h.Z.getPrice(e), h.Z.getErrored(e)]);
+var r = n(73800);
+n(525654);
+var i = n(442837);
+n(607070);
+var a = n(594174);
+n(451478);
+var o = n(980463),
+    s = n(823961),
+    l = n(317951),
+    c = n(111810),
+    u = n(477931),
+    d = n(981631);
+function f(e) {
+    let [t, n, a] = (0, i.Wu)([s.Z], () => [s.Z.isFetchingPrice(e), s.Z.getPrice(e), s.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            t || null != n || i || (0, p.Gq)(e);
-        }, [t, n, i, e]),
+            t || null != n || a || (0, o.Gq)(e);
+        }, [t, n, a, e]),
         {
             price: n,
             fetchingPrice: t,
-            error: i
+            error: a
         }
     );
 }
-function v(e) {
-    let t = (0, g.V1)('Utils.tsx'),
-        [n, i, a, s, l] = (0, o.Wu)([h.Z], () => [h.Z.isEntitlementFetched(e), h.Z.fetchPotionCount(e), h.Z.isEntitlementFetching(e), h.Z.getEntitlement(e), h.Z.getErrored(e)]);
+function _(e) {
+    let t = (0, c.V1)('Utils.tsx'),
+        [n, a, l, u, d] = (0, i.Wu)([s.Z], () => [s.Z.isEntitlementFetched(e), s.Z.fetchPotionCount(e), s.Z.isEntitlementFetching(e), s.Z.getEntitlement(e), s.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            null != l || n || a || !t || (0, p.gA)(e);
-        }, [n, a, e, t, l]),
+            null != d || n || l || !t || (0, o.gA)(e);
+        }, [n, l, e, t, d]),
         {
-            entitlement: s,
-            numPotions: i,
+            entitlement: u,
+            numPotions: a,
             fetchedEntitlement: n,
-            error: l
+            error: d
         }
     );
 }
-function I(e, t) {
-    let n = (0, r.useRef)(!0),
-        i = null == e ? void 0 : e.hdStreamingUntil,
-        a = (0, r.useRef)(t);
-    ((0, r.useEffect)(() => {
-        a.current = t;
-    }),
-        (0, r.useEffect)(() => {
-            if (n.current) {
-                n.current = !1;
-                return;
-            }
-            if (null != i && new Date(i) > new Date()) return a.current();
-        }, [i]));
-}
-function T(e) {
-    I(e, () => {
-        let t = u.Z.getCurrentUserActiveStream();
-        if (null != t && t.channelId === e.id) {
-            let e = d.Z.getState().goLiveSource;
-            (0, p.x8)(null == e ? void 0 : e.quality);
-            let t = (0, c.s_)(y.LY.RESOLUTION_1440, y.ws.FPS_60, e);
-            s.Z.setGoLiveSource(t);
-        }
-    });
-}
-function S() {
-    var e;
-    let t = (null != (e = a().name) ? e : 'unknown').toLowerCase(),
-        n = (0, o.e7)([_.Z], () => _.Z.isFocused()),
-        r = (0, o.e7)([l.Z], () => l.Z.useReducedMotion);
-    return 'safari' === t || !n || r;
-}
-function A(e, t, n, r) {
+function p(e, t, n, r) {
     return !t && null == n && ('' !== e || (null != r && r.length > 0));
 }
-function N(e) {
+function h(e) {
     if (null != e)
         return {
             message_emoji: {
                 id: e.emoji.id,
-                name: (0, p.zI)(e.emoji)
+                name: (0, o.zI)(e.emoji)
             }
         };
 }
-function C(e) {
+function m(e) {
     if (null == e || null == e.potions || 0 === e.potions.length) return null;
     for (let r of e.potions) {
         var t, n;
-        if (r.type === E.B.CONFETTI && r.used_by === (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && (null == (n = r.emoji) ? void 0 : n.length) > 0) return r.emoji[0];
+        if (r.type === u.B.CONFETTI && r.used_by === (null == (t = a.default.getCurrentUser()) ? void 0 : t.id) && (null == (n = r.emoji) ? void 0 : n.length) > 0) return r.emoji[0];
     }
     return null;
 }
-let R = () => {
-    let { entitlement: e, numPotions: t } = v(m.D1);
-    return null != e && e.type === b.qc2.PURCHASE && null != t && t > 0;
+let g = () => {
+    let { entitlement: e, numPotions: t } = _(l.D1);
+    return null != e && e.type === d.qc2.PURCHASE && null != t && t > 0;
 };

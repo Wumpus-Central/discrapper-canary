@@ -19,14 +19,14 @@ var r = n(255367),
     C = n(594174),
     x = n(626135),
     v = n(585483),
-    j = n(233870),
-    O = n(51144),
+    O = n(233870),
+    j = n(51144),
     E = n(998502),
     S = n(276264),
     P = n(981631),
     I = n(388032),
     Z = n(11847);
-function N(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,24 +51,24 @@ function N(e) {
     }
     return e;
 }
-let T = [],
+let N = [],
     A = E.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: o, status: u, activities: d } = e,
         p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
         f = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
         x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        j = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
+        O = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
         Z = i.useRef(null),
-        T = (e) => {
+        N = (e) => {
             (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
                         e,
-                        ((i = N({}, n)),
+                        ((i = T({}, n)),
                         (l = l =
                             {
                                 user: t,
@@ -92,7 +92,7 @@ function w(e) {
             });
         },
         w = () => {
-            let e = '@'.concat(O.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(j.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
             (v.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
                 v.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
@@ -135,7 +135,7 @@ function w(e) {
                 })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
                 S.Z,
-                N(
+                T(
                     {
                         ref: Z,
                         user: t,
@@ -148,10 +148,10 @@ function w(e) {
                         activities: d,
                         applicationStream: E,
                         channel: o,
-                        onContextMenu: T,
+                        onContextMenu: N,
                         selected: M,
                         isMobile: x,
-                        nick: j,
+                        nick: O,
                         nameplate: R,
                         onClick: (e) => {
                             e.shiftKey ? null == w || w() : D((e) => !e);
@@ -184,18 +184,18 @@ function M(e) {
         { listItems: c } = (0, a.e7)(
             [_.Z, C.default, b.Z],
             () => {
-                let e = (0, j.T)(t.recipients, C.default),
+                let e = (0, O.T)(t.recipients, C.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
                     _.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
-                              activities: null != (l = b.Z.getActivities(t.id)) ? l : T
+                              activities: null != (l = b.Z.getActivities(t.id)) ? l : N
                           })
                         : (n[t.id] = {
                               status: P.Skl.OFFLINE,
-                              activities: T
+                              activities: N
                           });
                 }
                 let a = [];

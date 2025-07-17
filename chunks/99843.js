@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function j(e, t) {
         e
     );
 }
-let O = (e) => {
+let j = (e) => {
         let { channel: t } = e;
         return (0, b.m$)({ channelId: t.id })
             ? (0, r.jsx)(o.ua7, {
@@ -69,7 +69,7 @@ let O = (e) => {
                   children: (e) =>
                       (0, r.jsx)(
                           o.tQf,
-                          j(v({}, e), {
+                          O(v({}, e), {
                               size: 'xs',
                               'aria-label': C.intl.string(C.t.VHXh8f),
                               color: o.TVs.colors.INTERACTIVE_NORMAL
@@ -106,7 +106,7 @@ let O = (e) => {
                     })(e, ['onMouseEnter']);
                 return (0, r.jsx)(
                     o.P3F,
-                    j(v({}, p), {
+                    O(v({}, p), {
                         className: s,
                         onClick: a,
                         onContextMenu: (e) =>
@@ -120,7 +120,7 @@ let O = (e) => {
                                             return (e) =>
                                                 (0, r.jsx)(
                                                     n,
-                                                    j(v({}, e), {
+                                                    O(v({}, e), {
                                                         channel: t,
                                                         selected: !0
                                                     })
@@ -183,7 +183,7 @@ let O = (e) => {
                                                     })
                                                 ]
                                             }),
-                                            (0, r.jsx)(O, { channel: t })
+                                            (0, r.jsx)(j, { channel: t })
                                         ]
                                     })
                                   : (0, r.jsx)('form', {
@@ -293,7 +293,7 @@ let O = (e) => {
                             onBlur: a,
                             onMouseEnter: c
                         }),
-                        (0, r.jsx)(O, { channel: t })
+                        (0, r.jsx)(j, { channel: t })
                     ]
                 })
             ]

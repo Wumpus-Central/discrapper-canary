@@ -19,15 +19,15 @@ var r = n(255367),
     C = n(665149),
     x = n(984370),
     v = n(910611),
-    j = n(454585),
-    O = n(134483),
+    O = n(454585),
+    j = n(134483),
     E = n(210975),
     S = n(809244),
     P = n(937995),
     I = n(618158),
     Z = n(358221),
-    N = n(362721),
-    T = n(887012),
+    T = n(362721),
+    N = n(887012),
     A = n(613548),
     w = n(221888),
     R = n(339340),
@@ -120,7 +120,7 @@ function V(e) {
 function z(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
-        a = (0, T.Z)(l, !0),
+        a = (0, N.Z)(l, !0),
         o = (0, b.qY)(l.id),
         c = null != o ? (0, _.DK)(o) : null,
         u = null != o;
@@ -190,11 +190,11 @@ function W(e) {
         y = (0, f.ZP)(t),
         S = (0, m.KS)(t),
         [I] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
-        T = k.intl.string(k.t.BVZqJi);
-    t.isDM() ? (T = k.intl.string(k.t.jN2DfX)) : t.isGroupDM() && (T = k.intl.string(k.t['e5y+go']));
+        N = k.intl.string(k.t.BVZqJi);
+    t.isDM() ? (N = k.intl.string(k.t.jN2DfX)) : t.isGroupDM() && (N = k.intl.string(k.t['e5y+go']));
     let w = (0, o.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         D = t.isGuildVoice() && u && null != w && w.length > 0,
-        G = (0, N.ZP)(t),
+        G = (0, T.ZP)(t),
         V = D
             ? (0, r.jsx)(s.ua7, {
                   text: k.intl.string(k.t.Mgpxi4),
@@ -211,7 +211,7 @@ function W(e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       className: a()(U.channelStatus, B.markup, { [U.hoverable]: G }),
-                                      children: j.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
+                                      children: O.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
                                   }),
                                   G &&
                                       (0, r.jsx)(s.vdY, {
@@ -260,7 +260,7 @@ function W(e) {
                                 ? (0, r.jsx)(C.ZP.Icon, {
                                       icon: S,
                                       disabled: !0,
-                                      'aria-label': T
+                                      'aria-label': N
                                   })
                                 : null,
                             (0, r.jsx)(C.ZP.Title, {
@@ -296,7 +296,7 @@ function W(e) {
                         ]
                     })
             }),
-            (0, r.jsx)(O.Z, { channelId: t.id })
+            (0, r.jsx)(j.Z, { channelId: t.id })
         ]
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(35282), n(539854), n(388685), n(387201), n(642613));
+(n.d(t, { Z: () => T }), n(35282), n(539854), n(388685), n(387201), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,7 +26,7 @@ var r = n(255367),
     w = n(676462),
     I = n(388032),
     N = n(152965);
-function T(e) {
+function E(e) {
     let { result: t, onSelectChannel: n } = e,
         i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
         l = (0, o.Wu)([C.ZP, S.default], () =>
@@ -77,7 +77,7 @@ function T(e) {
         ]
     });
 }
-function E(e) {
+function T(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: u, results: p } = (0, m.Z)({ searchOptions: { frecencyBoosters: !0 } }),
         S = (0, o.Wu)([b.Z, _.ZP, x.Z, v.Z, j.Z], () => {
@@ -100,7 +100,7 @@ function E(e) {
             for (let n of g.Z.getFrequentlyWithoutFetchingLatest()) n instanceof h.Sf && n.type === Z.d4z.GUILD_VOICE && !t.has(n.id) && (0, O.JL)(n, v.Z, j.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
-        E = i.useMemo(() => {
+        T = i.useMemo(() => {
             let e = new Set(C.map((e) => e.id)),
                 t = new Set(S.map((e) => e.id));
             return [
@@ -112,7 +112,7 @@ function E(e) {
                     .filter(y.lm)
             ];
         }, [C, S]),
-        R = '' !== u ? p : E;
+        R = '' !== u ? p : T;
     return (0, r.jsxs)('div', {
         className: s()(N.root, n),
         children: [
@@ -149,7 +149,7 @@ function E(e) {
                           let { rowIndex: n } = e,
                               i = R[n];
                           return (0, r.jsx)(
-                              T,
+                              E,
                               {
                                   result: i,
                                   onSelectChannel: t

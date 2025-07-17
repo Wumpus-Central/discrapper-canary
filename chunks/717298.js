@@ -26,8 +26,8 @@ var r = n(255367),
     w = n(358085),
     I = n(74538),
     N = n(668519),
-    T = n(299570),
-    E = n(989941),
+    E = n(299570),
+    T = n(989941),
     P = n(562224),
     R = n(586290),
     A = n(544753),
@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(311924),
     D = n(485299),
     B = n(615161),
-    U = n(289989),
-    G = n(328242),
+    G = n(289989),
+    U = n(328242),
     W = n(565574),
     F = n(286420),
     z = n(51708),
@@ -175,7 +175,7 @@ function Q(e) {
                                     (0, r.jsx)(k.Z, {
                                         mainCTADisabled: !eh && '' === ea.nativeSourceType,
                                         mainCTAOnClick: () => {
-                                            ((0, T.t)(), (0, T.T)(ea.nativeSourceType));
+                                            ((0, E.t)(), (0, E.T)(ea.nativeSourceType));
                                         },
                                         align: 'right',
                                         ctaText: J.intl.string(J.t.FiBjwc),
@@ -218,7 +218,7 @@ function Q(e) {
                 impressionName: d.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
                     location_stack: el,
-                    application_id: (0, w.isWindows)() ? (null == (t = (0, E.Z)(j.ZP, Z.Z)) ? void 0 : t.id) : void 0,
+                    application_id: (0, w.isWindows)() ? (null == (t = (0, T.Z)(j.ZP, Z.Z)) ? void 0 : t.id) : void 0,
                     parent_media_session_id: y.Z.getMediaSessionId()
                 }
             },
@@ -262,8 +262,8 @@ function Q(e) {
                                     className: K.content,
                                     children:
                                         ei && eC !== f.vA.CAMERA
-                                            ? (0, r.jsx)(U.Z, { onSourceSelect: eZ })
-                                            : (0, r.jsx)(G.Z, {
+                                            ? (0, r.jsx)(G.Z, { onSourceSelect: eZ })
+                                            : (0, r.jsx)(U.Z, {
                                                   onClick: function (e) {
                                                       function t() {
                                                           var t;

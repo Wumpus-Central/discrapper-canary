@@ -28,15 +28,15 @@ var r,
     C = n(708690),
     x = n(194359),
     v = n(425493),
-    j = n(794433),
-    O = n(493773),
+    O = n(794433),
+    j = n(493773),
     E = n(40851),
     S = n(100527),
     P = n(367907),
     I = n(906732),
     Z = n(43267),
-    N = n(933557),
-    T = n(600164),
+    T = n(933557),
+    N = n(600164),
     A = n(313201),
     w = n(429090),
     R = n(912114),
@@ -136,10 +136,10 @@ let ed = (0, A.hQ)(),
     ep = (0, A.hQ)();
 function eh(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsxs)(T.Z, {
-        align: T.Z.Align.CENTER,
-        justify: T.Z.Justify.CENTER,
-        direction: T.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(N.Z, {
+        align: N.Z.Align.CENTER,
+        justify: N.Z.Justify.CENTER,
+        direction: N.Z.Direction.VERTICAL,
         className: o()(el.errorState, t),
         children: [(0, i.jsx)('div', { className: o()(el.errorStateIcon, ea.marginBottom20) }), n]
     });
@@ -147,7 +147,7 @@ function eh(e) {
 let ef = (e) => {
         var t;
         let { channel: n, onClose: r } = e,
-            l = null != (t = (0, N.ZP)(n)) ? t : '',
+            l = null != (t = (0, T.ZP)(n)) ? t : '',
             a = (0, p.e7)([V.ZP], () => {
                 var e;
                 return null != (e = V.ZP.lastMessageId(n.id)) ? e : n.id;
@@ -345,13 +345,13 @@ class eg extends (r = l.PureComponent) {
             (0, i.jsxs)('div', {
                 className: el.searchBar,
                 children: [
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(O.Z, {
                         ref: this.searchBarRef,
                         className: el.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === a.size ? ei.intl.string(ei.t.Wxnb6u) : '',
                         disabled: this.isPartyFull(),
-                        size: j.Z.Sizes.MEDIUM,
+                        size: O.Z.Sizes.MEDIUM,
                         maxHeight: this.props.inBornThisNamedExperiment ? 110 : void 0,
                         query: t,
                         selectedRow: l,
@@ -379,8 +379,8 @@ class eg extends (r = l.PureComponent) {
         let e = null != this.scrollerRef.current && this.state.separator,
             t = this.isNotFriends() ? ei.intl.string(ei.t.Xjlbvr) : ei.intl.string(ei.t.CdNhGR);
         return (0, i.jsxs)(f.xBx, {
-            direction: T.Z.Direction.VERTICAL,
-            align: T.Z.Align.STRETCH,
+            direction: N.Z.Direction.VERTICAL,
+            align: N.Z.Align.STRETCH,
             className: el.header,
             separator: e,
             children: [
@@ -827,7 +827,7 @@ function eb(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, I.ZP)(S.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, w.a)(S.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, N.pT)(Array.from(t), Y.default, z.Z);
+    let c = (0, T.pT)(Array.from(t), Y.default, z.Z);
     return (0, i.jsxs)('div', {
         className: el.customizationContainer,
         children: [
@@ -898,7 +898,7 @@ function ey(e) {
             [r, y, _]
         ),
         v = l.useRef(null),
-        [j, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
+        [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
         S = l.useCallback(() => (_ ? (C ? (0, f.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
     l.useEffect(
         () => (
@@ -910,7 +910,7 @@ function ey(e) {
         [m, S, _]
     );
     let P = (0, p.e7)([Y.default], () => Y.default.getUser(null == r ? void 0 : r.getRecipientId()));
-    return ((0, O.ZP)(() => {
+    return ((0, j.ZP)(() => {
         (0, L._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
@@ -937,7 +937,7 @@ function ey(e) {
                         })
                     ),
                 position: d,
-                shouldShow: j,
+                shouldShow: O,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: h,
@@ -962,7 +962,7 @@ function ey(e) {
 }
 function eC(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
-    (0, O.ZP)(() => {
+    (0, j.ZP)(() => {
         (0, L._)();
     });
     let o = (0, w.a)('PrivateChannelRecipientsInviteTextButton'),

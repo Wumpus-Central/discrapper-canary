@@ -24,8 +24,8 @@ function x(e) {
     var t;
     let { context: n, activityItem: r, onClick: a, aspectRatio: C = 0, animatedDivClass: x, commandOrigin: v } = e,
         {
-            onActivityItemSelected: j,
-            imageBackground: O,
+            onActivityItemSelected: O,
+            imageBackground: j,
             activityAction: E,
             labelType: S
         } = (0, d.ZP)({
@@ -42,10 +42,10 @@ function x(e) {
         Z = l.useCallback(() => {
             I(!0);
         }, [I]),
-        N = l.useCallback(() => {
+        T = l.useCallback(() => {
             I(!1);
         }, [I]),
-        T = l.useMemo(
+        N = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
                     className: b.overlayBadge,
@@ -88,14 +88,14 @@ function x(e) {
             }
         }, [E]);
     return (0, i.jsx)(c.zx, {
-        onClick: j,
+        onClick: O,
         color: 'transparent',
         look: c.zx.Looks.BLANK,
         size: c.zx.Sizes.NONE,
         onFocus: Z,
-        onBlur: N,
+        onBlur: T,
         onMouseEnter: Z,
-        onMouseLeave: N,
+        onMouseLeave: T,
         innerClassName: b.activityItemButtonInnerClass,
         children: (0, i.jsx)(u.AMe, {
             config: y,
@@ -116,12 +116,12 @@ function x(e) {
                             },
                             children: [
                                 (0, i.jsx)(p.Z, {
-                                    imageBackground: O,
+                                    imageBackground: j,
                                     applicationName: r.application.name,
                                     imageClassName: b.activitySuggestionImage,
                                     imageNotFoundClassName: b.brokenImageIconWrapper
                                 }),
-                                T,
+                                N,
                                 A
                             ]
                         })

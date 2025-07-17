@@ -1,6 +1,6 @@
 (n.d(t, {
-    ZB: () => h,
-    ZP: () => v,
+    ZB: () => v,
+    ZP: () => h,
     cF: () => p
 }),
     n(388685),
@@ -17,13 +17,13 @@ var r = n(255367),
     f = n(921500);
 let p = 112,
     m = (16 / 9) * 112 + 8,
-    g = 10 * u.Z.Millis.SECOND;
-function E(e) {
+    E = 10 * u.Z.Millis.SECOND;
+function g(e) {
     var t;
     let n = o.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null == (t = e.voiceState) ? void 0 : t.selfVideo);
 }
-function h(e, t) {
+function v(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
@@ -35,11 +35,11 @@ function h(e, t) {
                       cropSelfVideo: !1
                   },
         { tileWidth: r, tileMinWidth: o, tileMargin: u, limit: c, cropSelfVideo: f, version: p } = n,
-        [h, v] = l.useState(Date.now());
+        [v, h] = l.useState(Date.now());
     l.useEffect(() => {
         let e = setTimeout(() => {
-            v(Date.now());
-        }, g);
+            h(Date.now());
+        }, E);
         return () => {
             clearTimeout(e);
         };
@@ -60,7 +60,7 @@ function h(e, t) {
                                 var n;
                                 let r = '\x06';
                                 return (
-                                    e.speaking ? (r = '\x03') : t - e.lastSpoke < g ? (r = '\x04') : (null == (n = e.voiceState) ? void 0 : n.selfVideo) && (r = '\x05'),
+                                    e.speaking ? (r = '\x03') : t - e.lastSpoke < E ? (r = '\x04') : (null == (n = e.voiceState) ? void 0 : n.selfVideo) && (r = '\x05'),
                                     ''
                                         .concat(r)
                                         .concat(
@@ -75,10 +75,10 @@ function h(e, t) {
                     })(e, n)
                 ),
                 [p, m] = (0, i.partition)(l, d.Io),
-                h = p.findIndex(E),
-                v = null;
-            -1 !== h && ((v = p[h]), p.splice(h, 1));
-            let b = null == v || f ? e : e - r - u,
+                v = p.findIndex(g),
+                h = null;
+            -1 !== v && ((h = p[v]), p.splice(v, 1));
+            let b = null == h || f ? e : e - r - u,
                 O = Math.max(0, Math.min(Math.floor((b - u) / (o + u)), c, t.length)),
                 y = Math.min((b - u) / O - u, r),
                 Z = Math.max(0, O - m.length),
@@ -102,26 +102,26 @@ function h(e, t) {
             S.current = (0, i.keyBy)((0, i.range)(w.length), (e) => w[e].id);
             let P = [...j, ...w];
             return (
-                null != v && (f && P.length >= O ? (P[Math.max(0, P.length - 1)] = v) : P.push(v)),
+                null != h && (f && P.length >= O ? (P[Math.max(0, P.length - 1)] = h) : P.push(h)),
                 {
                     visibleParticipants: P,
                     participantTileWidth: y
                 }
             );
-        }, [e, t, h, p, f, c, u, o, r]);
+        }, [e, t, v, p, f, c, u, o, r]);
     return {
         visibleParticipants: b,
         participantTileWidth: O
     };
 }
-function v(e) {
+function h(e) {
     let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: i, onContextMenu: a, onClick: o, channel: u, inCall: s, popoutWindow: d, paused: p = !1 } = e,
-        g = null != d;
+        E = null != d;
     return (0, r.jsx)('div', {
         className: f.root,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = E(e);
+            let t = g(e);
             return (0, r.jsx)(
                 'div',
                 {
@@ -139,7 +139,7 @@ function v(e) {
                         width: t ? m : n,
                         inCall: s,
                         paused: p,
-                        inPopout: g
+                        inPopout: E
                     })
                 },
                 e.id

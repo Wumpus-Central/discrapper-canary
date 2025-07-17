@@ -18,11 +18,11 @@ function b(e) {
         _ = (0, f.Z)(),
         [y, C] = r.useState(!1),
         [x, v] = r.useState(!1),
-        [j, O] = r.useState(!1),
+        [O, j] = r.useState(!1),
         [E, S] = r.useState(!1),
         [P, I] = r.useState(!1),
-        Z = y || x || j,
-        N = r.useCallback(
+        Z = y || x || O,
+        T = r.useCallback(
             async (e) => {
                 if (!Z) {
                     C(!0);
@@ -38,7 +38,7 @@ function b(e) {
             },
             [Z, n, b]
         ),
-        T = r.useCallback(
+        N = r.useCallback(
             async (e) => {
                 if (!Z) {
                     v(!0);
@@ -75,7 +75,7 @@ function b(e) {
             async (e) => {
                 if (Z) return;
                 if (null != t && null == s.Z.getMutualGuilds(t.id)) {
-                    O(!0);
+                    j(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -83,7 +83,7 @@ function b(e) {
                         });
                     } catch (e) {
                     } finally {
-                        O(!1);
+                        j(!1);
                     }
                 }
                 let n = async () => {
@@ -95,7 +95,7 @@ function b(e) {
                         mutual_guild_ids: null != r ? r : [],
                         other_user_id: null == t ? void 0 : t.id
                     }),
-                        await N(e));
+                        await T(e));
                 };
                 (0, h.H)({
                     channelId: e,
@@ -112,14 +112,14 @@ function b(e) {
                     }
                 });
             },
-            [N, Z, t]
+            [T, Z, t]
         ),
         R = r.useCallback(
             (e, t, n) => {
                 let r = (r, i) => {
                         (i && u.kJ.updateSetting(r),
                             r && null != t && (0, o.zd)(t),
-                            N(e.id),
+                            T(e.id),
                             d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: m.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
@@ -142,16 +142,16 @@ function b(e) {
                       })
                     : r(i);
             },
-            [N]
+            [T]
         );
     return {
-        acceptMessageRequest: _ ? w : N,
-        rejectMessageRequest: T,
+        acceptMessageRequest: _ ? w : T,
+        rejectMessageRequest: N,
         rejectAll: A,
         markAsNotSpam: R,
         isAcceptLoading: y,
         isRejectLoading: x,
-        isUserProfileLoading: j,
+        isUserProfileLoading: O,
         isOptimisticAccepted: E,
         isOptimisticRejected: P
     };

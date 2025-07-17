@@ -60,10 +60,10 @@ function m(e, t, n) {
             },
             [t, n, e]
         ),
-        g = r.useCallback(
+        E = r.useCallback(
             (r, o, p) => {
                 l.current = (0, a.Z)();
-                let g = f(d({}, r), {
+                let E = f(d({}, r), {
                     id: l.current,
                     x: o,
                     y: p,
@@ -71,13 +71,13 @@ function m(e, t, n) {
                     state: s.f.START,
                     lastUpdatedAt: Date.now()
                 });
-                ((0, u.BR)(t, n, g), (0, u.gr)(g, e, n), i.current.start(c.FO, () => m(g)));
+                ((0, u.BR)(t, n, E), (0, u.gr)(E, e, n), i.current.start(c.FO, () => m(E)));
             },
             [e, t, n, m]
         ),
-        E = r.useCallback(
+        g = r.useCallback(
             (r, a, o) => {
-                let g = f(d({}, r), {
+                let E = f(d({}, r), {
                     id: l.current,
                     x: a,
                     y: o,
@@ -85,11 +85,11 @@ function m(e, t, n) {
                     state: s.f.START,
                     lastUpdatedAt: Date.now()
                 });
-                (p(t, n, g), (0, u.gr)(g, e, n), i.current.start(c.FO, () => m(g)));
+                (p(t, n, E), (0, u.gr)(E, e, n), i.current.start(c.FO, () => m(E)));
             },
             [e, t, n, m]
         ),
-        h = r.useCallback(
+        v = r.useCallback(
             (r, a, o) => {
                 (p.cancel(),
                     (0, u.Df)(t, n, l.current),
@@ -109,14 +109,14 @@ function m(e, t, n) {
             },
             [t, n, e]
         ),
-        v = r.useCallback((e, t, n) => E(e, t, n), [E]);
+        h = r.useCallback((e, t, n) => g(e, t, n), [g]);
     return r.useMemo(
         () => ({
-            handleMouseDown: g,
-            handleMouseMove: E,
-            handleMouseUp: h,
-            handleMouseEnter: v
+            handleMouseDown: E,
+            handleMouseMove: g,
+            handleMouseUp: v,
+            handleMouseEnter: h
         }),
-        [g, v, E, h]
+        [E, h, g, v]
     );
 }

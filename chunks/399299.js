@@ -26,8 +26,8 @@ var r = n(255367),
     w = n(823379),
     I = n(63063),
     N = n(358085),
-    T = n(653255),
-    E = n(989941),
+    E = n(653255),
+    T = n(989941),
     P = n(618407),
     R = n(586290),
     A = n(233037),
@@ -36,14 +36,14 @@ var r = n(255367),
     L = n(641115),
     D = n(143135),
     B = n(70722),
-    U = n(981631),
-    G = n(526761),
+    G = n(981631),
+    U = n(526761),
     W = n(388032),
     F = n(14383),
     z = n(347226);
 function H(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
-        s = (0, o.e7)([h.ZP, O.Z], () => ((0, N.isWindows)() ? (0, E.Z)(h.ZP, O.Z) : null)),
+        s = (0, o.e7)([h.ZP, O.Z], () => ((0, N.isWindows)() ? (0, T.Z)(h.ZP, O.Z) : null)),
         d = (0, o.e7)([u.Z], () => ((null == s ? void 0 : s.id) != null ? u.Z.getApplication(s.id) : null)),
         f = (0, o.e7)([h.ZP], () => h.ZP.getRunningGames()),
         m = (0, o.Wu)([u.Z], () => f.map((e) => (null != e.id ? u.Z.getApplication(e.id) : null)).filter(w.lm), [f]),
@@ -147,7 +147,7 @@ function X(e) {
         }),
         l = g.eo.useSetting(),
         a = i.useCallback((e, t) => {
-            (g.eo.updateSetting(t), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
+            (g.eo.updateSetting(t), Z.default.track(G.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
         }, []);
     return n >= 2 && n <= B.tB
         ? (0, r.jsx)(c.xJW, {
@@ -208,10 +208,10 @@ function K(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: a, sourceChanged: c, selectedGuildId: u, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: g, onClose: j, onChangeSelectedFPS: b, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: N, onChangeAudioDevice: E, onChangeGuild: M, onChangeSound: D, onChangePreviewDisabled: B } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: a, sourceChanged: c, selectedGuildId: u, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: g, onClose: j, onChangeSelectedFPS: b, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: N, onChangeAudioDevice: T, onChangeGuild: M, onChangeSound: D, onChangePreviewDisabled: B } = e,
         z = (0, o.e7)([C.Z, v.Z], () => v.Z.getChannel(C.Z.getVoiceChannelId())),
-        q = (0, o.e7)([T.Z], () => T.Z.GPUDriversOutdated),
-        Q = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
+        q = (0, o.e7)([E.Z], () => E.Z.GPUDriversOutdated),
+        Q = (0, o.e7)([E.Z], () => E.Z.problematicGPUDriver),
         $ = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
         ee = (0, P.Z)();
     null != t && t.id.startsWith('screen') && !S.Z.supportsScreenSoundshare() && (ee = W.intl.string(W.t['1b0Gm5']));
@@ -225,7 +225,7 @@ function q(e) {
                 ? (0, r.jsx)(R.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: N,
-                      onChangeAudioDevice: E
+                      onChangeAudioDevice: T
                   })
                 : (0, r.jsxs)('div', {
                       children: [
@@ -260,14 +260,14 @@ function q(e) {
                   }),
             null != u && en && er ? (0, r.jsx)(X, { guildId: u }) : null,
             q ? (0, r.jsx)(Y, { text: W.intl.string(W.t.q65tS0) }) : null,
-            Q ? (0, r.jsx)(Y, { text: W.intl.format(W.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            Q ? (0, r.jsx)(Y, { text: W.intl.format(W.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(G.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             ei &&
                 (0, r.jsx)(_.Z, {
                     look: _.z.WARNING,
                     className: F.hardwareWarning,
                     children: W.intl.format(W.t.zCLXws, {
                         onClick: () => {
-                            (j(), d.Z.open(U.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
+                            (j(), d.Z.open(G.oAB.VOICE, U.gP, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
                         }
                     })
                 }),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     l = n(73800),
     i = n(71347),
@@ -11,11 +11,11 @@ var r = n(255367),
     f = n(209767);
 let p = 6 * c.Z.Millis.SECOND,
     m = 2 * c.Z.Millis.SECOND,
-    g = 2 * c.Z.Millis.SECOND,
-    E = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
-function h(e) {
+    E = 2 * c.Z.Millis.SECOND,
+    g = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
+function v(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
-        { emoji: h, sentAt: v } = n,
+        { emoji: v, sentAt: h } = n,
         S = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         [b, O] = l.useState(!0),
         y = !S,
@@ -32,7 +32,7 @@ function h(e) {
     return (l.useEffect(() => {
         let e;
         return (
-            Date.now() - v >= g
+            Date.now() - h >= E
                 ? (0, d.H)(t)
                 : (e = setTimeout(
                       () => {
@@ -44,7 +44,7 @@ function h(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [v, t, y]),
+    }, [h, t, y]),
     y)
         ? null
         : Z((e, t) => {
@@ -54,12 +54,12 @@ function h(e) {
                   t &&
                   (0, r.jsx)(i.animated.div, {
                       className: f.voiceChannelEffectEmojiContainer,
-                      style: { transform: l.to(E) },
+                      style: { transform: l.to(g) },
                       children: (0, r.jsx)(u.Z, {
                           className: f.voiceChannelEffectEmoji,
-                          emojiId: h.id,
-                          emojiName: h.name,
-                          animated: null != (n = h.animated) && n
+                          emojiId: v.id,
+                          emojiName: v.name,
+                          animated: null != (n = v.animated) && n
                       })
                   })
               );

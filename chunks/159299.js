@@ -143,15 +143,15 @@ class x {
     }
 }
 function v(e) {
-    return j(e.user.id);
+    return O(e.user.id);
 }
-function j(e) {
+function O(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in C) C[n].updateUserId(e) && (t = !0);
     return t;
 }
-function O(e) {
+function j(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in C) C[e].guildId === t && (C[e].rebuild(), (n = !0));
@@ -168,7 +168,7 @@ class E extends (r = a.ZP.Store) {
             }),
             this.syncWith([p.Z], () => {
                 var e;
-                return j(null == (e = h.default.getCurrentUser()) ? void 0 : e.id);
+                return O(null == (e = h.default.getCurrentUser()) ? void 0 : e.id);
             }));
     }
     getMemberListVersion(e) {
@@ -232,7 +232,7 @@ let S = new E(o.Z, {
         return t
             .map((e) => {
                 let { user: t } = e;
-                return j(t.id);
+                return O(t.id);
             })
             .some((e) => e);
     },
@@ -262,9 +262,9 @@ let S = new E(o.Z, {
         }
         return n;
     },
-    GUILD_ROLE_UPDATE: O,
-    GUILD_ROLE_DELETE: O,
+    GUILD_ROLE_UPDATE: j,
+    GUILD_ROLE_DELETE: j,
     PASSIVE_UPDATE_V2: function (e) {
-        return e.members.reduce((e, t) => j(t.user.id) || e, !1);
+        return e.members.reduce((e, t) => O(t.user.id) || e, !1);
     }
 });

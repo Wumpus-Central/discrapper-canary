@@ -19,8 +19,8 @@ var r = n(73800),
     C = n(585483),
     x = n(358085),
     v = n(709054),
-    j = n(418476),
-    O = n(151007),
+    O = n(418476),
+    j = n(151007),
     E = n(432376),
     S = n(996861),
     P = n(981631);
@@ -33,8 +33,8 @@ let I = function (e, t, n) {
                 if (!I.current || n.target !== n.currentTarget) return;
                 let r = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     Z = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-                    N = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-                    T = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+                    T = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+                    N = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     A = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
                     w = b.Z.getMessage(t, e),
                     R = h.Z.getChannel(t);
@@ -45,13 +45,13 @@ let I = function (e, t, n) {
                         r && (_.Z.can(P.Plq.MANAGE_MESSAGES, R) || w.canDeleteOwnMessage(M)) && (n.preventDefault(), (0, S.$Z)(R, w, n));
                         break;
                     case 'c':
-                        ((0, x.isMac)() ? T : N) && y.wS && (n.preventDefault(), (0, y.JG)(w.content));
+                        ((0, x.isMac)() ? N : T) && y.wS && (n.preventDefault(), (0, y.JG)(w.content));
                         break;
                     case 'e':
-                        r && !R.isSystemDM() && (0, j.Z)(w, M) && (n.preventDefault(), (0, S.Hd)(R, w));
+                        r && !R.isSystemDM() && (0, O.Z)(w, M) && (n.preventDefault(), (0, S.Hd)(R, w));
                         break;
                     case 'p':
-                        (r || A) && (0, O.Z)(w, R) && (n.preventDefault(), (0, S.rY)(R, w, n));
+                        (r || A) && (0, j.Z)(w, R) && (n.preventDefault(), (0, S.rY)(R, w, n));
                         break;
                     case '+':
                         (r || A) &&

@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(989830),
     x = n(388032),
     v = n(837265);
-let j = i.memo(function (e) {
+let O = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
             a = (0, s.e7)([_.ZP], () => _.ZP.getMostRecentMessageCombo(t), [t]),
@@ -59,7 +59,7 @@ let j = i.memo(function (e) {
             })
         );
     }),
-    O = i.memo(function (e) {
+    j = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: l, square: o, flair: s } = i.useMemo(() => (0, y.yz)(n), [n]),
             u = (0, p.Lq)(l);
@@ -158,7 +158,7 @@ let j = i.memo(function (e) {
         i.useEffect(() => {
             (P.multiplier > 1 || P.value > 0) && (I.current = P);
         }, [P]);
-        let { multiplier: Z, value: N } = i.useMemo(
+        let { multiplier: Z, value: T } = i.useMemo(
             () => ({
                 value: E ? P.value : I.current.value,
                 multiplier: E ? P.multiplier : I.current.multiplier
@@ -167,7 +167,7 @@ let j = i.memo(function (e) {
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(j, {
+                (0, r.jsx)(O, {
                     channelId: t,
                     width: m
                 }),
@@ -175,8 +175,8 @@ let j = i.memo(function (e) {
                     ref: p,
                     className: v.combo,
                     style: S,
-                    children: (0, r.jsx)(O, {
-                        value: N,
+                    children: (0, r.jsx)(j, {
+                        value: T,
                         multiplier: Z
                     })
                 })

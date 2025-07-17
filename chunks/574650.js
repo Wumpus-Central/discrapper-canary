@@ -51,9 +51,9 @@ let N =
               let r = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
                   N = (0, s.e7)([u.Z], () => u.Z.getGuild(r), [r]),
                   R = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
-                  A = (0, o.TH)(),
-                  m = (null == (e = (0, o.LX)(A.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-              if (null == N || !(0, I.Dc)(N) || m) return null;
+                  m = (0, o.TH)(),
+                  A = (null == (e = (0, o.LX)(m.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+              if (null == N || !(0, I.Dc)(N) || A) return null;
               let y = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
                   P = null,
                   b = null,

@@ -25,8 +25,8 @@ var i = n(255367),
     f = n(236373),
     N = n(854698),
     R = n(405613),
-    A = n(95291),
-    m = n(742593),
+    m = n(95291),
+    A = n(742593),
     y = n(217804),
     P = n(139712),
     b = n(765305),
@@ -219,11 +219,11 @@ let U = (e, t) => (n) => {
                 onClick: C,
                 children: [
                     null != n.image &&
-                        (0, i.jsx)(A.Z, {
+                        (0, i.jsx)(m.Z, {
                             source: (0, R.Z)(n),
                             className: v.banner
                         }),
-                    (0, i.jsx)(m.ZP, {
+                    (0, i.jsx)(A.ZP, {
                         name: n.name,
                         description: null != (t = n.description) ? t : void 0,
                         descriptionClassName: v.eventDescription,

@@ -21,14 +21,14 @@ function x(e) {
     let { channelId: t } = e,
         x = (0, l.e7)([m.Z], () => m.Z.getChannel(t)),
         v = (0, l.e7)([m.Z], () => m.Z.getChannel(null == x ? void 0 : x.parent_id)),
-        j = (0, l.e7)([b.Z], () => b.Z.getGuild(null == x ? void 0 : x.getGuildId())),
-        O = (0, s.ZP)(x),
+        O = (0, l.e7)([b.Z], () => b.Z.getGuild(null == x ? void 0 : x.getGuildId())),
+        j = (0, s.ZP)(x),
         E = i.useRef(!1);
     if (
         (i.useEffect(() => {
             null == x || E.current || ((E.current = !0), (0, _.lN)(x));
         }, [x]),
-        null == x || null == j)
+        null == x || null == O)
     )
         return null;
     let S = (0, r.jsx)(f.Z, { channel: x });
@@ -44,8 +44,8 @@ function x(e) {
                 children: (0, p.ud)({
                     channel: x,
                     parentChannel: v,
-                    channelName: O,
-                    guild: j,
+                    channelName: j,
+                    guild: O,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, a.jW)(e, async () => {
@@ -108,7 +108,7 @@ function x(e) {
                     c.Z,
                     {
                         channel: x,
-                        guild: j,
+                        guild: O,
                         chatInputType: u.Ie.SIDEBAR
                     },
                     t

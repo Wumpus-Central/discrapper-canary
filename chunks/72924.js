@@ -18,25 +18,25 @@ var r = n(512722),
 async function O(e) {
     var t, n, r, O, T;
     let { applicationId: g, skuId: S, initialPlanId: f, analyticsLocations: N, analyticsLocationObject: R } = e,
-        A = p.Z.get(S);
-    if (null == A) {
+        m = p.Z.get(S);
+    if (null == m) {
         let e = (await (0, s.oJ)(g)).find((e) => e.sku.id === S);
         (l()(null != e, 'Could not find store listing for sku'), e.sku.type === C.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(g, e.id)));
     }
-    ((A = null != A ? A : p.Z.get(S)), l()(null != A && A.applicationId === g, 'SKU must belong to application'), A.type !== C.epS.SUBSCRIPTION || (0, u.a)([A.id]) || (await (0, a.GZ)(A.id)));
-    let m = (function (e) {
+    ((m = null != m ? m : p.Z.get(S)), l()(null != m && m.applicationId === g, 'SKU must belong to application'), m.type !== C.epS.SUBSCRIPTION || (0, u.a)([m.id]) || (await (0, a.GZ)(m.id)));
+    let A = (function (e) {
         let t = (0, c.jA)({ applicationId: e }),
             n = null != t ? h.Z.getWindow(t) : void 0;
         return null == n || n.closed ? o.z1l : o.u1M;
     })(g);
-    if (A.type !== C.epS.SUBSCRIPTION)
+    if (m.type !== C.epS.SUBSCRIPTION)
         return new Promise((e, t) => {
             (0, _.Z)({
                 applicationId: g,
                 skuId: S,
                 analyticsLocationObject: R,
                 analyticsLocations: N,
-                contextKey: m,
+                contextKey: A,
                 onComplete: (t) => {
                     var n;
                     e(null != (n = null == t ? void 0 : t.entitlements) ? n : []);
