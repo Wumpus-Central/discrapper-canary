@@ -49125,7 +49125,7 @@ screen and (max-width:485px) {
 }
 
 .align-chat-input .content__0bd4a {
-    --custom-chat-input-margin-bottom: 8px
+    --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
 @keyframes pulse__7135b {
