@@ -29273,19 +29273,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     color: Highlight
 }
 
-.premiumButtonNitroWheel_b72efa {
-    margin-right: 4px
-}
-
-.premiumButtonInner_b72efa {
-    align-items: center;
-    display: flex
-}
-
-.premiumButton_b72efa {
-    margin-top: 20px
-}
-
 .emptyState__70126 {
     align-items: center;
     display: flex;
@@ -29309,7 +29296,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .stickersRow__70126 {
-    display: flex
+    display: flex;
+    margin-bottom: 20px
 }
 
 .stickersRow__70126 .sticker__70126 {
@@ -29664,7 +29652,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .upsellDescription__4006b {
-    margin-bottom: 24px;
+    margin-bottom: 44px;
     max-width: 400px
 }
 
