@@ -1,12 +1,12 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => g });
 var r,
     i = n(255367);
 n(73800);
 var s = n(755721),
     a = n(481060),
-    o = n(600164),
-    c = n(390668),
-    l = (((r = l || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
+    l = n(600164),
+    o = n(390668),
+    c = (((r = c || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
 let u = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
@@ -14,7 +14,7 @@ let u = {
         UNCLAIMED: 'imageUnclaimed',
         GRANDFATHERED: 'imageCancel'
     },
-    b = (e) => {
+    d = (e) => {
         var t,
             n,
             { children: r } = e,
@@ -84,10 +84,10 @@ let u = {
             t)
         );
     };
-((b.Header = (e) => {
+((d.Header = (e) => {
     let { children: t, onClose: n } = e;
     return (0, i.jsxs)(a.xBx, {
-        justify: o.Z.Justify.BETWEEN,
+        justify: l.Z.Justify.BETWEEN,
         separator: !1,
         children: [
             (0, i.jsx)(a.vwX, {
@@ -96,36 +96,36 @@ let u = {
             }),
             null != n
                 ? (0, i.jsx)(a.olH, {
-                      className: c.__invalid_closeIcon,
+                      className: o.__invalid_closeIcon,
                       onClick: n
                   })
                 : null
         ]
     });
 }),
-    (b.Content = (e) => {
+    (d.Content = (e) => {
         let { children: t, type: n } = e;
         return (0, i.jsxs)(a.hzk, {
             children: [
-                (0, i.jsx)('div', { className: c[u[n]] }),
+                (0, i.jsx)('div', { className: o[u[n]] }),
                 (0, i.jsx)('div', {
-                    className: c.message,
+                    className: o.message,
                     children: t
                 })
             ]
         });
     }),
-    (b.Footer = (e) => {
+    (d.Footer = (e) => {
         let { primary: t, primaryRenderer: n, secondary: r } = e;
         return (0, i.jsx)(a.mzw, {
-            children: (0, i.jsxs)(o.Z, {
-                justify: o.Z.Justify.END,
+            children: (0, i.jsxs)(l.Z, {
+                justify: l.Z.Justify.END,
                 children: [
                     null != r
                         ? (0, i.jsx)(s.zx, {
                               onClick: r.onClick,
                               look: s.zx.Looks.LINK,
-                              innerClassName: c.secondaryButton,
+                              innerClassName: o.secondaryButton,
                               children: r.label
                           })
                         : null,
@@ -140,5 +140,5 @@ let u = {
             })
         });
     }),
-    (b.Types = l));
-let d = b;
+    (d.Types = c));
+let g = d;

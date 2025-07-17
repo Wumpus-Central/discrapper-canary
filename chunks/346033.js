@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => F }), n(388685));
+(n.d(t, { Z: () => G }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -7,191 +7,181 @@ var i = n(255367),
     o = n(622535),
     c = n(780384),
     d = n(755721),
-    u = n(634894),
-    m = n(410030),
-    p = n(100527),
-    g = n(906732),
-    h = n(433811),
-    f = n(214852),
-    b = n(78839),
-    x = n(626135),
-    _ = n(74538),
-    j = n(367074),
-    E = n(140465),
-    O = n(286961),
-    C = n(91802),
-    v = n(639119),
-    S = n(8647),
-    T = n(784238),
-    N = n(605289),
-    I = n(218390),
-    y = n(823188),
-    A = n(135785),
-    P = n(498765),
-    R = n(635921),
-    D = n(177839),
-    Z = n(349803),
-    w = n(179984),
-    k = n(474936),
-    L = n(981631),
-    B = n(388032),
-    M = n(781793),
-    U = n(536135),
-    V = n(865215);
-let G = (e) => {
+    u = n(410030),
+    m = n(100527),
+    p = n(906732),
+    g = n(433811),
+    h = n(214852),
+    f = n(78839),
+    b = n(626135),
+    x = n(74538),
+    _ = n(367074),
+    j = n(140465),
+    E = n(286961),
+    O = n(91802),
+    C = n(639119),
+    v = n(8647),
+    S = n(784238),
+    T = n(605289),
+    N = n(218390),
+    I = n(823188),
+    y = n(135785),
+    A = n(498765),
+    P = n(635921),
+    R = n(177839),
+    D = n(349803),
+    Z = n(179984),
+    w = n(474936),
+    k = n(981631),
+    L = n(388032),
+    B = n(781793),
+    M = n(536135),
+    U = n(865215);
+let V = (e) => {
         let { inOfferExperience: t } = e;
-        return t ? (0, i.jsx)(P.Z, { lifted: t }) : null;
+        return t ? (0, i.jsx)(A.Z, { lifted: t }) : null;
     },
-    F = () => {
+    G = () => {
         var e, t;
-        (0, f.z)(h.X);
+        (0, h.z)(g.X);
         let n = r.useRef(null),
             s = r.useRef(null),
-            P = r.useRef(null),
-            F = (0, m.ZP)(),
-            H = (0, c.wj)(F),
-            [z, W] = r.useState(!1),
-            [Y, K] = r.useState(!1),
-            [q, X] = r.useState(!1),
-            [J, Q] = r.useState(!1),
-            $ = (0, l.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-            ee = null != $ ? (0, _.Af)($) : null,
-            et = null != ee ? _.ZP.getSkuIdForPlan(ee.planId) : null,
-            en = null !== et && et !== k.Si.TIER_2 ? k.Si.TIER_2 : null,
-            ei = (0, C.n)(),
-            er = null != ei,
-            es = (0, v.N)(),
-            ea = null == es || null == (e = es.subscription_trial) ? void 0 : e.sku_id,
-            el = (0, E.Nx)(),
-            eo = (0, j.Vi)(),
-            ec = null != eo && eo,
-            ed = null == (t = (0, O.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
-            { analyticsLocations: eu } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
-            em = 'PremiumMarketingHome';
-        ((0, u.j)({
-            location: em + ' auto on',
-            autoTrackExposure: !0
-        }),
-            (0, u.j)({
-                location: em + ' auto off',
-                autoTrackExposure: !1
-            }),
-            r.useEffect(() => {
-                Q(!0);
-            }, []));
-        let ep = (0, i.jsx)('div', {
-            className: U.premiumTierCardsContainerSettings,
+            A = r.useRef(null),
+            G = (0, u.ZP)(),
+            F = (0, c.wj)(G),
+            [H, z] = r.useState(!1),
+            [W, Y] = r.useState(!1),
+            [K, q] = r.useState(!1),
+            [X, J] = r.useState(!1),
+            Q = (0, l.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
+            $ = null != Q ? (0, x.Af)(Q) : null,
+            ee = null != $ ? x.ZP.getSkuIdForPlan($.planId) : null,
+            et = null !== ee && ee !== w.Si.TIER_2 ? w.Si.TIER_2 : null,
+            en = (0, O.n)(),
+            ei = null != en,
+            er = (0, C.N)(),
+            es = null == er || null == (e = er.subscription_trial) ? void 0 : e.sku_id,
+            ea = (0, j.Nx)(),
+            el = (0, _.Vi)(),
+            eo = null != el && el,
+            ec = null == (t = (0, E.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
+            { analyticsLocations: ed } = (0, p.ZP)(m.Z.PREMIUM_MARKETING);
+        r.useEffect(() => {
+            J(!0);
+        }, []);
+        let eu = (0, i.jsx)('div', {
+            className: M.premiumTierCardsContainerSettings,
             children: (0, i.jsx)(o.$, {
                 innerRef: n,
-                onChange: (e) => K(e),
+                onChange: (e) => Y(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, i.jsx)(y.IY, {
+                children: (0, i.jsx)(I.IY, {
                     innerRef: n,
-                    tier0CTAButton: (0, i.jsx)(T.Z, {
+                    tier0CTAButton: (0, i.jsx)(S.Z, {
                         showIcon: !1,
-                        subscriptionTier: k.Si.TIER_0,
-                        className: M.subButton,
+                        subscriptionTier: w.Si.TIER_0,
+                        className: B.subButton,
                         look: d.iL.OUTLINED,
                         color: d.Tt.WHITE,
-                        buttonShineClassName: M.buttonShine
+                        buttonShineClassName: B.buttonShine
                     }),
                     tier2CTAButton:
-                        ea === k.Si.TIER_0
-                            ? (0, i.jsx)(T.Z, {
+                        es === w.Si.TIER_0
+                            ? (0, i.jsx)(S.Z, {
                                   showIcon: !1,
-                                  subscriptionTier: k.Si.TIER_2,
-                                  className: M.subButton,
+                                  subscriptionTier: w.Si.TIER_2,
+                                  className: B.subButton,
                                   look: d.iL.OUTLINED,
                                   color: d.Tt.WHITE,
-                                  buttonShineClassName: M.buttonShine
+                                  buttonShineClassName: B.buttonShine
                               })
-                            : (0, i.jsx)(T.Z, {
+                            : (0, i.jsx)(S.Z, {
                                   color: d.Tt.BRAND_INVERTED,
                                   showIcon: !1,
-                                  subscriptionTier: k.Si.TIER_2,
-                                  className: M.subButton,
-                                  hasActivePromotion: ec,
-                                  textOptions: { textClassName: M.subButtonText },
-                                  buttonShineClassName: M.buttonShine
+                                  subscriptionTier: w.Si.TIER_2,
+                                  className: B.subButton,
+                                  hasActivePromotion: eo,
+                                  textOptions: { textClassName: B.subButtonText },
+                                  buttonShineClassName: B.buttonShine
                               })
                 })
             })
         });
         return (0, i.jsxs)('div', {
-            className: U.container,
+            className: M.container,
             'data-cy': 'tier-0-marketing-page',
             children: [
-                (0, i.jsx)(A.Z, {
-                    premiumSubscription: $,
-                    className: a()(U.existingSubscriberSpacing, { [U.zIndex1]: el })
+                (0, i.jsx)(y.Z, {
+                    premiumSubscription: Q,
+                    className: a()(M.existingSubscriberSpacing, { [M.zIndex1]: ea })
                 }),
-                (0, i.jsx)(G, { inOfferExperience: el }),
-                er
-                    ? (0, i.jsx)(N.Z, {
-                          localizedPricingPromo: ei,
+                (0, i.jsx)(V, { inOfferExperience: ea }),
+                ei
+                    ? (0, i.jsx)(T.Z, {
+                          localizedPricingPromo: en,
                           smallGap: !0
                       })
                     : (0, i.jsx)('div', {
                           children: (0, i.jsx)(o.$, {
                               innerRef: s,
-                              onChange: (e) => W(e),
+                              onChange: (e) => z(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, i.jsx)(R.ZP, {
+                              children: (0, i.jsx)(P.ZP, {
                                   ref: s,
-                                  subscriptionTier: en,
+                                  subscriptionTier: et,
                                   className: a()({
-                                      [U.settingsHeroNoBackground]: el,
-                                      [U.trialMarketingMargin]: el,
-                                      [U.settingsHeroBogoHeight]: eo,
-                                      [U.noTopPaddingOverride]: null != $
+                                      [M.settingsHeroNoBackground]: ea,
+                                      [M.trialMarketingMargin]: ea,
+                                      [M.settingsHeroBogoHeight]: el,
+                                      [M.noTopPaddingOverride]: null != Q
                                   }),
-                                  isDarkMode: H
+                                  isDarkMode: F
                               })
                           })
                       }),
                 (0, i.jsx)('div', {
-                    className: U.promoBannerContainer,
-                    children: (0, i.jsx)(S.Z, { variant: S.C.NITRO_SETTINGS })
+                    className: M.promoBannerContainer,
+                    children: (0, i.jsx)(v.Z, { variant: v.C.NITRO_SETTINGS })
                 }),
-                ep,
-                null != ed &&
-                    (0, i.jsx)(I.C, {
-                        className: U.giftPromoCard,
-                        config: ed
+                eu,
+                null != ec &&
+                    (0, i.jsx)(N.C, {
+                        className: M.giftPromoCard,
+                        config: ec
                     }),
-                (0, i.jsx)(D.Z, { className: U.perkCardsContainerSpacingSettings }),
+                (0, i.jsx)(R.Z, { className: M.perkCardsContainerSpacingSettings }),
                 (0, i.jsx)('div', {
-                    className: U.planComparisonTableContainer,
-                    children: (0, i.jsx)(w.Z, {
-                        className: U.planComparisonTable,
+                    className: M.planComparisonTableContainer,
+                    children: (0, i.jsx)(Z.Z, {
+                        className: M.planComparisonTable,
                         hideCTAs: !0
                     })
                 }),
-                (0, i.jsx)('div', { className: U.footerSpacing }),
-                (0, i.jsx)(Z.Z, {
-                    isVisible: !z && !Y && J,
-                    subscriptionTier: en,
+                (0, i.jsx)('div', { className: M.footerSpacing }),
+                (0, i.jsx)(D.Z, {
+                    isVisible: !H && !W && X,
+                    subscriptionTier: et,
                     isApplicationHome: !1,
-                    isEligibleForBogoPromotion: eo
+                    isEligibleForBogoPromotion: el
                 }),
                 (0, i.jsx)(o.$, {
-                    innerRef: P,
+                    innerRef: A,
                     onChange: (e) => {
-                        e && !q && (x.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), X(!0));
+                        e && !K && (b.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ed }), q(!0));
                     },
                     children: (0, i.jsx)('div', {
-                        ref: P,
-                        className: U.bottomOfPageVisibilitySensor
+                        ref: A,
+                        className: M.bottomOfPageVisibilitySensor
                     })
                 }),
                 (0, i.jsx)('img', {
-                    src: V,
-                    className: U.bottomIllustration,
+                    src: U,
+                    className: M.bottomIllustration,
                     width: 112,
                     height: 85,
-                    alt: B.intl.string(B.t.X4IxWF)
+                    alt: L.intl.string(L.t.X4IxWF)
                 })
             ]
         });

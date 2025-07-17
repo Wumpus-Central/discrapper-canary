@@ -158,7 +158,7 @@ function eh() {
         [o, c] = i.useState(!1),
         u = i.useRef(!1),
         [d, f] = i.useState(null),
-        _ = !l.tq && !o;
+        _ = !l.tq && !o && (a || !M.default.isAuthenticated());
     if (
         (i.useEffect(() => {
             if (l.eL && a) {
@@ -166,6 +166,7 @@ function eh() {
                 ((t.search = e.search), window.open(t.toString(), '_self'));
             } else
                 l.tq ||
+                    (!a && M.default.isAuthenticated()) ||
                     u.current ||
                     ((u.current = !0),
                     Promise.resolve()

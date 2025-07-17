@@ -32,8 +32,8 @@ var r = n(255367),
     A = n(585483),
     Z = n(63063),
     w = n(405656),
-    L = n(51144),
-    F = n(854709),
+    F = n(51144),
+    L = n(854709),
     M = n(652399),
     D = n(14091),
     H = n(723642),
@@ -118,7 +118,7 @@ let K = h()('2015-05-15').local(),
         let c = k.default.getUser(o.id),
             u = _.Z.getChannel(e),
             d = (null == u ? void 0 : u.isPrivate()) ? C.Z.getNickname(o.id) : null,
-            h = null != (l = null != (s = E.ZP.getNick(e, o.id)) ? s : d) ? l : L.ZP.getName(o),
+            h = null != (l = null != (s = E.ZP.getNick(e, o.id)) ? s : d) ? l : F.ZP.getName(o),
             p = null != (a = null == c ? void 0 : c.getAvatarURL(e, 20)) ? a : o.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
         return [
             (0, r.jsx)(
@@ -142,7 +142,7 @@ let K = h()('2015-05-15').local(),
                 'span',
                 {
                     className: G.displayUsername,
-                    children: L.ZP.getUserTag(o, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: F.ZP.getUserTag(o, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(o.id)
             )
@@ -198,7 +198,7 @@ let K = h()('2015-05-15').local(),
                                     ? null
                                     : (0, r.jsx)('span', {
                                           className: G.searchResultDMUserName,
-                                          children: L.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                                          children: F.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
                                       });
                             }
                             if (null != c)
@@ -436,7 +436,7 @@ class et extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: l === B.I_8 && (0, F.X)(),
+            searchFavorites: l === B.I_8 && (0, L.X)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: a,
             onSelectSearchInSelectedChannel: () => this.handleSearchInChannel({ searchAutocompleteSelectAction: H.Z.CLICK }),

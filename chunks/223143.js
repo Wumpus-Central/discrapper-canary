@@ -1,16 +1,15 @@
 (n.d(t, {
-    ZP: () => _,
-    c7: () => f
+    ZP: () => f,
+    c7: () => d
 }),
     n(388685));
 var r = n(73800),
     i = n(399606),
-    a = n(634894),
-    o = n(335131),
-    s = n(1870),
-    l = n(228624),
-    c = n(267097);
-function u(e, t, n) {
+    a = n(335131),
+    o = n(1870),
+    s = n(228624),
+    l = n(267097);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +22,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -35,63 +34,45 @@ function d(e, t) {
     }
     return n;
 }
-function f() {
+function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
-        n = 'useFetchPurchases';
-    ((0, a.j)({
-        location: n + ' auto on',
-        autoTrackExposure: !0
-    }),
-        (0, a.j)({
-            location: n + ' auto off',
-            autoTrackExposure: !1
-        }));
-    let c = (0, l.hv)('useFetchPurchases'),
-        [u, d, f, _, p, h] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.isClaiming, s.Z.fetchError, s.Z.claimError, s.Z.purchases, s.Z.hasPreviouslyFetched]),
-        m = (0, r.useRef)(s.Z.hasPreviouslyFetched);
+        n = (0, s.hv)('useFetchPurchases'),
+        [l, c, u, d, f, _] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]),
+        p = (0, r.useRef)(o.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
-        m.current = h;
-    }, [h]);
-    let g = (0, r.useRef)(s.Z.fetchError);
+        p.current = _;
+    }, [_]);
+    let h = (0, r.useRef)(o.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
-            g.current = f;
-        }, [f]),
+            h.current = u;
+        }, [u]),
         (0, r.useEffect)(() => {
-            (!0 === e && m.current && null == g.current) ||
-                (0, o.qg)({
-                    variantsReturnStyle: c,
+            (!0 === e && p.current && null == h.current) ||
+                (0, a.qg)({
+                    variantsReturnStyle: n,
                     location: t
                 });
-        }, [t, e, c]),
+        }, [t, e, n]),
         {
-            isClaiming: d,
-            fetchPurchasesError: f,
-            claimError: _,
-            isFetching: u,
-            purchases: p,
-            hasPreviouslyFetched: h
+            isClaiming: c,
+            fetchPurchasesError: u,
+            claimError: d,
+            isFetching: l,
+            purchases: f,
+            hasPreviouslyFetched: _
         }
     );
 }
-function _(e, t) {
+function f(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
-        r = 'useFetchCollectiblesCategoriesAndPurchases';
-    ((0, a.j)({
-        location: r + ' auto on',
-        autoTrackExposure: !0
-    }),
-        (0, a.j)({
-            location: r + ' auto off',
-            autoTrackExposure: !1
-        }));
-    let {
-            isFetching: i,
-            categories: o,
-            fetchCategoriesError: s,
-            refreshCategories: l
-        } = (0, c.Z)(
+        {
+            isFetching: r,
+            categories: i,
+            fetchCategoriesError: a,
+            refreshCategories: o
+        } = (0, l.Z)(
             {
                 paymentGateway: n,
                 noOp: null == e ? void 0 : e.noOp,
@@ -100,18 +81,18 @@ function _(e, t) {
             },
             t
         ),
-        { isClaiming: u, fetchPurchasesError: d, claimError: _, isFetching: p, purchases: h, hasPreviouslyFetched: m } = f(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
+        { isClaiming: s, fetchPurchasesError: c, claimError: u, isFetching: f, purchases: _, hasPreviouslyFetched: p } = d(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
-        isFetching: i || p,
-        isFetchingCategories: i,
-        isFetchingPurchases: p,
-        isClaiming: u,
-        categories: o,
-        purchases: h,
-        fetchCategoriesError: s,
-        fetchPurchasesError: d,
-        claimError: _,
-        refreshCategories: l,
-        hasPreviouslyFetched: m
+        isFetching: r || f,
+        isFetchingCategories: r,
+        isFetchingPurchases: f,
+        isClaiming: s,
+        categories: i,
+        purchases: _,
+        fetchCategoriesError: a,
+        fetchPurchasesError: c,
+        claimError: u,
+        refreshCategories: o,
+        hasPreviouslyFetched: p
     };
 }

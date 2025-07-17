@@ -1,12 +1,11 @@
-(n.d(t, { e: () => m }), n(388685));
+(n.d(t, { e: () => h }), n(388685));
 var r = n(73800),
     i = n(442837),
-    a = n(634894),
-    o = n(353926),
-    s = n(335131),
-    l = n(597688),
-    c = n(228624);
-function u(e, t, n) {
+    a = n(353926),
+    o = n(335131),
+    s = n(597688),
+    l = n(228624);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +29,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                c(e, t, n[t]);
             }));
     }
     return e;
 }
-function f(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,61 +46,52 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = 600000,
-    h = 600000;
-function m(e, t, n) {
-    let u = 'useMaybeFetchCollectiblesCategories';
-    ((0, a.j)({
-        location: u + ' auto on',
-        autoTrackExposure: !0
-    }),
-        (0, a.j)({
-            location: u + ' auto off',
-            autoTrackExposure: !1
-        }));
-    let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        m = null == e ? void 0 : e.includeBundles,
-        g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
-        [E, b, y, O, v, I, T] = (0, i.Wu)([l.Z], () => {
+let _ = 600000,
+    p = 600000;
+function h(e, t, n) {
+    let c = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        d = null == e ? void 0 : e.includeBundles,
+        h = (0, l.hv)('useMaybeFetchCollectiblesCategoriesShared'),
+        [m, g, E, b, y, O, v] = (0, i.Wu)([s.Z], () => {
             var e, t;
-            return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null != (e = l.Z.lastErrorTimestamp) ? e : 0, null != (t = l.Z.lastSuccessfulFetch) ? t : 0, l.Z.categories, l.Z.skipNumCategories];
+            return [s.Z.isFetchingCategories, s.Z.lastFetchOptions, s.Z.error, null != (e = s.Z.lastErrorTimestamp) ? e : 0, null != (t = s.Z.lastSuccessfulFetch) ? t : 0, s.Z.categories, s.Z.skipNumCategories];
         });
     return (
         (0, r.useEffect)(() => {
-            if (!f || E) return;
-            let r = Date.now() - O < h;
-            if (y && r) return;
-            let i = _(d({}, e), {
-                    includeBundles: m,
-                    variantsReturnStyle: g,
-                    skipNumCategories: T
+            if (!c || m) return;
+            let r = Date.now() - b < p;
+            if (E && r) return;
+            let i = f(u({}, e), {
+                    includeBundles: d,
+                    variantsReturnStyle: h,
+                    skipNumCategories: v
                 }),
-                a = !(0, s.oc)(b, i),
-                o = Date.now() - v < p;
-            (a || !o) && (0, s.F$)(i, t, n);
-        }, [f, E, b, v, e, y, m, O, g, t, n, T]),
+                a = !(0, o.oc)(g, i),
+                s = Date.now() - y < _;
+            (a || !s) && (0, o.F$)(i, t, n);
+        }, [c, m, g, y, e, E, d, b, h, t, n, v]),
         {
-            isFetching: E,
-            categories: I,
-            fetchCategoriesError: y,
+            isFetching: m,
+            categories: O,
+            fetchCategoriesError: E,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = _(d({}, e), {
-                    includeBundles: m,
-                    skipNumCategories: T
+                let t = f(u({}, e), {
+                    includeBundles: d,
+                    skipNumCategories: v
                 });
-                (0, s.F$)(t, void 0, n);
-            }, [e, m, n, T])
+                (0, o.F$)(t, void 0, n);
+            }, [e, d, n, v])
         }
     );
 }

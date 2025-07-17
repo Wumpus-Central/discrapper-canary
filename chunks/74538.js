@@ -21,6 +21,7 @@
     Rt: () => eK,
     T4: () => K,
     U2: () => F,
+    UV: () => tG,
     UX: () => X,
     Ue: () => e$,
     V7: () => e_,
@@ -28,7 +29,7 @@
     Wz: () => tP,
     XK: () => e1,
     Z8: () => eO,
-    ZP: () => tG,
+    ZP: () => tB,
     Zx: () => e2,
     _O: () => tw,
     a5: () => eW,
@@ -1512,7 +1513,17 @@ function tU(e) {
         return e + i * r;
     }, 0);
 }
-let tG = Object.freeze({
+function tG(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if (e.interval !== P.rV.YEAR) return;
+    let r = P.IW[e.skuId];
+    if (null == r) return;
+    let i = Y(r, !1, t, n),
+        a = Y(e.id, !1, t, n);
+    if (0 !== i.amount) return Math.floor(100 * (1 - a.amount / (12 * i.amount)));
+}
+let tB = Object.freeze({
     isNewUser: tt,
     isPremiumAtLeast: A.yd,
     isPremium: A.I5,
@@ -1560,6 +1571,7 @@ let tG = Object.freeze({
     getPremiumGradientColor: te,
     getUnactivatedFractionalPremiumHours: tj,
     castPremiumSubscriptionAsSkuId: tP,
+    calculateDiscountPercentageForYearlyPlan: tG,
     canUseAnimatedEmojis: tn,
     canUseEmojisEverywhere: tr,
     canUseSoundboardEverywhere: ti,

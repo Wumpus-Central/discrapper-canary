@@ -1,21 +1,20 @@
-r.d(t, { default: () => w });
+r.d(t, { default: () => y });
 var n = r(255367),
     i = r(73800),
-    s = r(392711),
-    l = r.n(s),
-    u = r(442837),
-    o = r(481060),
+    u = r(392711),
+    s = r.n(u),
+    o = r(442837),
+    l = r(82659),
+    c = r(481060),
     d = r(239091),
-    c = r(276264),
-    a = r(600164),
-    m = r(313201),
+    a = r(276264),
     f = r(670188),
-    b = r(271383),
-    g = r(699516),
-    h = r(594174),
+    m = r(271383),
+    b = r(699516),
+    g = r(594174),
     p = r(432496),
     O = r(388032),
-    j = r(763147);
+    h = r(763147);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -41,50 +40,50 @@ function I(e) {
     }
     return e;
 }
-function y(e) {
-    let { guildId: t, guildOwnerId: s, member: l } = e,
-        u = h.default.getUser(l.userId),
-        o = i.useRef(null);
+function j(e) {
+    let { guildId: t, guildOwnerId: u, member: s } = e,
+        o = g.default.getUser(s.userId),
+        l = i.useRef(null);
     return (0, n.jsx)(
         f.Z,
         {
-            targetElementRef: o,
-            userId: l.userId,
+            targetElementRef: l,
+            userId: s.userId,
             guildId: t,
             spacing: 14,
             clickTrap: !0,
             children: (e, i) => {
-                let { isShown: a } = i;
+                let { isShown: c } = i;
                 return (0, n.jsx)(
-                    c.Z,
+                    a.Z,
                     I(
                         {
-                            ref: o,
-                            className: j.member,
-                            selected: a,
-                            colorString: l.colorString,
-                            colorStrings: l.colorStrings,
-                            user: u,
-                            isOwner: l.userId === s,
-                            nick: l.nick,
-                            premiumSince: null == l.premiumSince ? null : new Date(l.premiumSince),
+                            ref: l,
+                            className: h.member,
+                            selected: c,
+                            colorString: s.colorString,
+                            colorStrings: s.colorStrings,
+                            user: o,
+                            isOwner: s.userId === u,
+                            nick: s.nick,
+                            premiumSince: null == s.premiumSince ? null : new Date(s.premiumSince),
                             guildId: t,
                             onContextMenu: (e) => {
                                 (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('88606')]).then(r.bind(r, 415118));
                                     return (r) => {
-                                        var i, s;
+                                        var i, u;
                                         return (0, n.jsx)(
                                             e,
                                             ((i = I({}, r)),
-                                            (s = s =
+                                            (u = u =
                                                 {
-                                                    user: u,
+                                                    user: o,
                                                     guildId: t,
                                                     showMediaItems: !0
                                                 }),
                                             Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(u))
                                                 : (function (e, t) {
                                                       var r = Object.keys(e);
                                                       if (Object.getOwnPropertySymbols) {
@@ -92,8 +91,8 @@ function y(e) {
                                                           r.push.apply(r, n);
                                                       }
                                                       return r;
-                                                  })(Object(s)).forEach(function (e) {
-                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                                  })(Object(u)).forEach(function (e) {
+                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(u, e));
                                                   }),
                                             i)
                                         );
@@ -103,33 +102,32 @@ function y(e) {
                         },
                         e
                     ),
-                    l.userId
+                    s.userId
                 );
             }
         },
-        u.id
+        o.id
     );
 }
-function w(e) {
-    let { guild: t, transitionState: r, onClose: s } = e,
-        d = (0, m.Dt)(),
-        c = i.useMemo(() => g.Z.getFriendIDs(), []);
+function y(e) {
+    let { guild: t, transitionState: r, onClose: u } = e,
+        d = i.useMemo(() => b.Z.getFriendIDs(), []);
     i.useEffect(() => {
-        p.Z.fetchFriendMembersIfNotFetched(t.id, c);
-    }, [t.id, c]);
-    let f = (0, u.e7)([b.ZP], () => b.ZP.getMembers(t.id)),
-        I = i.useMemo(
+        p.Z.fetchFriendMembersIfNotFetched(t.id, d);
+    }, [t.id, d]);
+    let a = (0, o.e7)([m.ZP], () => m.ZP.getMembers(t.id)),
+        f = i.useMemo(
             () =>
-                l()(f)
-                    .filter((e) => !!c.includes(e.userId) && null != h.default.getUser(e.userId))
+                s()(a)
+                    .filter((e) => !!d.includes(e.userId) && null != g.default.getUser(e.userId))
                     .sortBy((e) => {
                         var t;
-                        let r = h.default.getUser(e.userId);
+                        let r = g.default.getUser(e.userId);
                         return (null != r ? (null != (t = e.nick) ? t : r.username) : '').toLocaleLowerCase();
                     })
                     .map((e) =>
                         (0, n.jsx)(
-                            y,
+                            j,
                             {
                                 guildId: t.id,
                                 guildOwnerId: t.ownerId,
@@ -139,39 +137,18 @@ function w(e) {
                         )
                     )
                     .value(),
-            [c, t.id, t.ownerId, f]
+            [d, t.id, t.ownerId, a]
         ),
-        w = p.Z.isFetchingFriendsForGuild(t.id);
-    return (0, n.jsxs)(o.Y0X, {
+        h = p.Z.isFetchingFriendsForGuild(t.id);
+    return (0, n.jsxs)(l.u, {
+        title: O.intl.string(O.t.kYxEcH),
+        subtitle: O.intl.format(h ? O.t.EtQnZm : O.t.OgMdNT, {
+            guildName: t.name,
+            numFriends: f.length
+        }),
+        actions: void 0,
         transitionState: r,
-        size: o.CgR.SMALL,
-        'aria-labelledby': d,
-        parentComponent: 'GuildFriendsModal',
-        children: [
-            (0, n.jsxs)(o.xBx, {
-                separator: !1,
-                justify: a.Z.Justify.BETWEEN,
-                children: [
-                    (0, n.jsxs)('div', {
-                        className: j.heading,
-                        children: [
-                            (0, n.jsx)('span', { children: (0, n.jsx)(o.iFz, {}) }),
-                            (0, n.jsx)(o.X6q, {
-                                variant: 'heading-lg/semibold',
-                                children: O.intl.format(w ? O.t.EtQnZm : O.t.OgMdNT, {
-                                    guildName: t.name,
-                                    numFriends: I.length
-                                })
-                            })
-                        ]
-                    }),
-                    (0, n.jsx)(o.olH, { onClick: s })
-                ]
-            }),
-            (0, n.jsxs)(o.hzk, {
-                className: j.content,
-                children: [w && (0, n.jsx)(o.$jN, {}), (0, n.jsx)(o.Ttm, { children: I })]
-            })
-        ]
+        onClose: u,
+        children: [h && (0, n.jsx)(c.$jN, {}), f]
     });
 }

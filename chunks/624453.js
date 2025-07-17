@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => O,
-    Z: () => M
+    Z: () => _
 }),
     n(388685),
     n(290780));
@@ -36,7 +36,7 @@ function D() {
             (e.items = e.items.slice()));
     });
 }
-class _ extends (i = c.ZP.Store) {
+class M extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, E.Z, m.ZP, p.Z, N.default, h.default);
     }
@@ -45,15 +45,15 @@ class _ extends (i = c.ZP.Store) {
     }
 }
 ((s = 'ChannelPinsStore'),
-    (r = 'displayName') in _
-        ? Object.defineProperty(_, r, {
+    (r = 'displayName') in M
+        ? Object.defineProperty(M, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[r] = s));
-let M = new _(d.Z, {
+        : (M[r] = s));
+let _ = new M(d.Z, {
     CONNECTION_OPEN: function () {
         S = {};
     },

@@ -2,9 +2,9 @@
     FZ: () => N,
     Hl: () => M,
     NJ: () => Z,
-    R8: () => L,
+    R8: () => F,
     Sq: () => R,
-    Wg: () => F,
+    Wg: () => L,
     Zn: () => I,
     c2: () => k,
     eE: () => w,
@@ -167,11 +167,11 @@ function Z(e) {
 function w(e) {
     return A(0, e);
 }
-function L(e) {
+function F(e) {
     let t = e.getSelection();
     return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t));
 }
-function F(e) {
+function L(e) {
     let t = R(e),
         n = e.getSelection();
     return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));
