@@ -1,5 +1,5 @@
 (n.d(t, {
-    M: () => R,
+    M: () => P,
     h: () => C
 }),
     n(467055),
@@ -240,7 +240,8 @@ let T = [u.h8.PAYMENT_ELEMENT],
                   children: (0, r.jsx)(N, b({}, n))
               });
     },
-    R = (e) => {
+    R = ['city', 'country', 'line1', 'postalCode', 'state'],
+    P = (e) => {
         let { step: t, handleStepChange: n, paymentElementsEnabled: r, logger: a, onBillingAddressChange: o, continueSessionToInitialStep: s } = e,
             l = i.useRef(null),
             [d, f] = i.useState(!1),
@@ -259,11 +260,10 @@ let T = [u.h8.PAYMENT_ELEMENT],
                     onChange: (e) => {
                         var t;
                         let {
-                            complete: n,
-                            value: { address: r, name: i }
-                        } = e;
-                        o(
-                            {
+                                complete: n,
+                                value: { address: r, name: i }
+                            } = e,
+                            a = {
                                 name: i,
                                 country: r.country,
                                 city: r.city,
@@ -272,8 +272,12 @@ let T = [u.h8.PAYMENT_ELEMENT],
                                 state: r.state,
                                 postalCode: r.postal_code
                             },
-                            n
-                        );
+                            s =
+                                R.every((e) => {
+                                    let t = a[e];
+                                    return null != t && '' !== t;
+                                }) && n;
+                        o(a, s);
                     }
                 }),
                 [o]

@@ -26,6 +26,7 @@ function d(e) {
                         onClick: t,
                         disabled: n,
                         isActive: !1,
+                        noHover: n,
                         'aria-label': c.intl.string(c.t.oeb1vr),
                         children: (0, r.jsx)(s.Uuj, {
                             size: 'xs',
