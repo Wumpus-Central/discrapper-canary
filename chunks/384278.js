@@ -1,4 +1,7 @@
-n.d(t, { M1: () => c });
+n.d(t, {
+    M1: () => c,
+    NM: () => a
+});
 var r = n(70956),
     i = n(818083),
     s = n(427164),
@@ -62,7 +65,7 @@ let o = (0, s.le)({
         commonTriggerPoint: l.$P.CONNECTION_OPEN
     }),
     c = (e) => {
-        let { delayMs: t, inExperiment: n } = a.getCurrentConfig({ location: e });
+        let { delayMs: t, inExperiment: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
         if (n)
             return {
                 delayMs: t,

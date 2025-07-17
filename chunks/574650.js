@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854), n(388685));
+(n.d(t, { Z: () => N }), n(539854), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -7,19 +7,19 @@ if (12633 == n.j) var o = n(114858);
 var s = n(442837),
     a = n(755721),
     c = n(481060),
-    d = n(430824),
-    u = n(914010),
+    u = n(430824),
+    d = n(914010),
     _ = n(693546),
     h = n(305325),
     E = n(246364),
     I = n(983736),
     p = n(937111),
     C = n(981631),
-    g = n(176505),
+    O = n(176505),
     T = n(388032),
-    O = n(246752),
+    g = n(246752),
     S = n(240211);
-function N(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -44,21 +44,21 @@ function N(e) {
     }
     return e;
 }
-let f =
+let N =
     12633 == n.j
         ? () => {
               var e, t;
-              let r = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []),
-                  f = (0, s.e7)([d.Z], () => d.Z.getGuild(r), [r]),
+              let r = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
+                  N = (0, s.e7)([u.Z], () => u.Z.getGuild(r), [r]),
                   R = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
-                  m = (0, o.TH)(),
-                  A = (null == (e = (0, o.LX)(m.pathname, C.Z5c.CHANNEL(null == f ? void 0 : f.id, g.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-              if (null == f || !(0, I.Dc)(f) || A) return null;
+                  A = (0, o.TH)(),
+                  m = (null == (e = (0, o.LX)(A.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+              if (null == N || !(0, I.Dc)(N) || m) return null;
               let y = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
                   P = null,
                   b = null,
                   D = null,
-                  v = [O.notice, S.notice];
+                  v = [g.notice, S.notice];
               switch (y) {
                   case E.wB.SUBMITTED:
                       ((P = T.intl.string(T.t['5iLvS0'])),
@@ -68,12 +68,12 @@ let f =
                                   var t, n;
                                   return (0, i.jsx)(
                                       c.ConfirmModal,
-                                      ((t = N(
+                                      ((t = f(
                                           {
                                               header: T.intl.string(T.t.aIz1oa),
                                               confirmText: T.intl.string(T.t['cY+Ooa']),
                                               cancelText: T.intl.string(T.t['ETE/oK']),
-                                              onConfirm: () => _.Z.removeGuildJoinRequest(f.id),
+                                              onConfirm: () => _.Z.removeGuildJoinRequest(N.id),
                                               confirmButtonColor: a.zx.Colors.BRAND
                                           },
                                           e
@@ -108,23 +108,23 @@ let f =
                           (D = () => {
                               (0, c.ZDy)(async () => {
                                   let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                                  return (t) => (0, i.jsx)(e, N({ guildId: f.id }, t));
+                                  return (t) => (0, i.jsx)(e, f({ guildId: N.id }, t));
                               });
                           }),
-                          v.push(O.error));
+                          v.push(g.error));
                       break;
                   default:
                       ((P = T.intl.string(T.t.G5YKXF)),
                           (b = T.intl.string(T.t['r8/DT0'])),
                           (D = () => {
-                              (0, h.hk)(f.id);
+                              (0, h.hk)(N.id);
                           }));
               }
               return (0, i.jsxs)('div', {
                   className: l()(...v),
                   children: [
                       (0, i.jsx)(c.Text, {
-                          className: O.header,
+                          className: g.header,
                           variant: 'text-sm/normal',
                           children: P
                       }),

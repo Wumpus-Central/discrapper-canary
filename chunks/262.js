@@ -93,7 +93,7 @@ function d(e) {
         { content: a, timestamp: d, messageReference: p } = i,
         m = (0, o.ZP)(i),
         f = t(m),
-        _ = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
+        g = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
         h = c.intl.format(c.t['47CZc3'], {
             username: m.nick,
             usernameHook: f,
@@ -103,7 +103,7 @@ function d(e) {
                     u,
                     {
                         messageReference: p,
-                        guildName: _,
+                        guildName: g,
                         children: e
                     },
                     t

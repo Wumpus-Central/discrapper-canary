@@ -24,13 +24,13 @@ function m(e, t) {
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, r.jsx)(r.Fragment, {});
-    let _ = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
-    l()(null != _, 'renderUserGuildPopout: user should never be null');
+    let g = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
+    l()(null != g, 'renderUserGuildPopout: user should never be null');
     let h = d.default.getCurrentUser();
     l()(null != h, 'renderUserGuildPopout: currentUser should never be null');
-    let g = u.Z.getChannel(t.channel_id);
+    let _ = u.Z.getChannel(t.channel_id);
     return (
-        l()(null != g, 'renderUserGuildPopout: channel should never be null'),
+        l()(null != _, 'renderUserGuildPopout: channel should never be null'),
         (0, r.jsx)(
             c.Z,
             ((m = (function (e) {
@@ -60,9 +60,9 @@ function m(e, t) {
             })({}, e)),
             (f = f =
                 {
-                    user: _,
+                    user: g,
                     currentUser: h,
-                    guildId: g.guild_id,
+                    guildId: _.guild_id,
                     channelId: t.channel_id,
                     messageId: t.id
                 }),

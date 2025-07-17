@@ -6,8 +6,8 @@ var i = n(544891),
     s = n(131704),
     a = n(926526),
     c = n(826581),
-    d = n(246364),
-    u = n(937111),
+    u = n(246364),
+    d = n(937111),
     _ = n(981631),
     h = n(388032);
 let E = {
@@ -16,7 +16,7 @@ let E = {
                 url: _.ANM.GUILD_JOIN_REQUEST_BY_ID(e),
                 rejectWithError: !1
             }),
-            n = (0, u.j)(t.body);
+            n = (0, d.j)(t.body);
         return (
             r.Z.dispatch({
                 type: 'GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS',
@@ -26,7 +26,7 @@ let E = {
         );
     },
     fetchGuildJoinRequests: async (e) => {
-        let { guildId: t, status: n = d.wB.SUBMITTED, before: l, after: o, limit: s = d.tB, force: a = !1 } = e,
+        let { guildId: t, status: n = u.wB.SUBMITTED, before: l, after: o, limit: s = u.tB, force: a = !1 } = e,
             h = a || !c.Z.hasFetched(t);
         if (!c.Z.isFetching() && h) {
             r.Z.dispatch({ type: 'GUILD_JOIN_REQUESTS_FETCH_START' });
@@ -43,7 +43,7 @@ let E = {
                         rejectWithError: !1
                     }),
                     a = e.body.total,
-                    c = (null != (E = e.body.guild_join_requests) ? E : []).map(u.j);
+                    c = (null != (E = e.body.guild_join_requests) ? E : []).map(d.j);
                 return (
                     r.Z.dispatch({
                         type: 'GUILD_JOIN_REQUESTS_FETCH_SUCCESS',
@@ -94,7 +94,7 @@ let E = {
         }
     },
     updateGuildJoinRequest: async function (e, t, n) {
-        let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.wB.APPROVED,
+        let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.wB.APPROVED,
             s = arguments.length > 4 ? arguments[4] : void 0;
         (0, a.ID)({
             guildId: e,

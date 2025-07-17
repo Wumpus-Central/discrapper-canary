@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => g,
+    Z: () => _,
     y: () => h
 }),
     n(953529));
@@ -15,7 +15,7 @@ var r = n(255367),
     p = n(411198),
     m = n(388032),
     f = n(515230);
-let _ = (e) => {
+let g = (e) => {
         var t;
         let { speaker: n, guildId: i, isEmbed: l } = e,
             a = new d.Z(n.user);
@@ -97,17 +97,17 @@ let _ = (e) => {
             ]
         });
     },
-    g = (e) => {
+    _ = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: h = !1, onClick: g } = e,
+        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: h = !1, onClick: _ } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: y, participant_count: C } = n,
-            x = null != (t = n.members) ? t : [],
-            v = h ? x.slice(0, 3) : x,
-            O = y - v.length;
+        let { topic: E, speaker_count: x, participant_count: C } = n,
+            v = null != (t = n.members) ? t : [],
+            y = h ? v.slice(0, 3) : v,
+            O = x - y.length;
         return (
-            h && (O += x.length - v.length),
+            h && (O += v.length - y.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -179,13 +179,13 @@ let _ = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(f.members, { [f.embed]: h }),
                         children: [
-                            v.length > 0 &&
+                            y.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: f.speakers,
                                     children: [
-                                        v.map((e) =>
+                                        y.map((e) =>
                                             (0, r.jsx)(
-                                                _,
+                                                g,
                                                 {
                                                     speaker: e,
                                                     guildId: b.id,
@@ -220,7 +220,7 @@ let _ = (e) => {
                             h &&
                                 (0, r.jsx)(o.zx, {
                                     color: o.zx.Colors.GREEN,
-                                    onClick: g,
+                                    onClick: _,
                                     className: f.joinButton,
                                     children: m.intl.string(m.t.ZYO5OD)
                                 })

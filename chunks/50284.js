@@ -6,23 +6,23 @@ var i = n(544891),
     s = n(592125),
     a = n(375954),
     c = n(306680),
-    d = n(594174),
-    u = n(709054),
+    u = n(594174),
+    d = n(709054),
     _ = n(981631);
 let h = new r.Z('markUnread');
 async function E(e, t) {
-    let n = d.default.getCurrentUser();
+    let n = u.default.getCurrentUser();
     if (null == n) return;
     let r = a.Z.getMessages(e),
         E = r
             .toArray()
-            .filter((e) => 0 > u.default.compare(e.id, t))
-            .sort((e, t) => u.default.compare(e.id, t.id))
+            .filter((e) => 0 > d.default.compare(e.id, t))
+            .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
-        I = null == E ? u.default.atPreviousMillisecond(t) : E.id,
+        I = null == E ? d.default.atPreviousMillisecond(t) : E.id,
         p = 0;
     r.forAll((e) => {
-        u.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && p++;
+        d.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && p++;
     });
     let C = s.Z.getChannel(e);
     (null != C && C.isThread() && (C.isArchivedThread() && (await o.Z.unarchiveThread(C, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(C, 'Mark Unread'))),

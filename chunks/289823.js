@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(630403);
 let m = {},
     f = 1 / 4;
-function _(e) {
+function g(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -39,7 +39,7 @@ function h(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(_, {
+              children: (0, r.jsx)(g, {
                   height: n.height,
                   fillColor: l
               })
@@ -56,7 +56,7 @@ function h(e) {
             })
           : null;
 }
-function g(e) {
+function _(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
         className: p.circularImage,
@@ -115,7 +115,7 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: _, style: E, className: y } = e,
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: x } = e,
             C = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -135,15 +135,15 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: x } = c.ny6[s],
+        let { size: v } = c.ny6[s],
             {
-                statusCoords: v,
+                statusCoords: y,
                 frontAvatarOffsetPx: O,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(x, '-').concat(f);
+                let t = ''.concat(v, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,8 +160,8 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [x, f, s]),
-            S = ((t = null != _), f ? b[s].typing : t ? b[s].status : b[s].default);
+            }, [v, f, s]),
+            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: x,
-                    height: x
+                    width: v,
+                    height: v
                 },
                 E
             ),
             'aria-label': C['aria-label'],
             'aria-hidden': C['aria-hidden'],
-            className: a()(p.container, y),
+            className: a()(p.container, x),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: x,
-                    width: x,
+                    height: v,
+                    width: v,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -215,18 +215,18 @@ let b = {
                                 top: O,
                                 left: O
                             },
-                            children: (0, r.jsx)(g, {
+                            children: (0, r.jsx)(_, {
                                 src: l,
                                 size: j,
                                 isTyping: f,
-                                status: _
+                                status: g
                             })
                         })
                     ]
                 }),
                 (0, r.jsx)(h, {
-                    statusCoords: v,
-                    status: _,
+                    statusCoords: y,
+                    status: g,
                     isTyping: f
                 })
             ]

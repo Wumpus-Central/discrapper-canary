@@ -11,29 +11,29 @@ var r,
     p = n(590783),
     m = n(669079),
     f = n(981631);
-let _ = {},
+let g = {},
     h = new Map(),
-    g = [],
+    _ = [],
     b = [],
     E = [],
-    y = new Set(),
+    x = new Set(),
     C = {},
-    x = {},
-    v = new Set();
+    v = {},
+    y = new Set();
 function O(e) {
     let t = p.Z.createFromServer(e),
         n = t.code;
     if (h.has(n)) h.set(n, h.get(n).merge(t));
     else if ((h.set(n, t), null != t.expiresAt)) {
         let e = new c.V7();
-        ((_[n] = e),
+        ((g[n] = e),
             (function e(t) {
                 let n = h.get(t);
                 if (null == n || null == n.expiresAt) return;
                 let r = n.expiresAt.valueOf() - o()().valueOf();
-                if (r <= 0) (h.delete(t), delete _[t], A.emitChange());
+                if (r <= 0) (h.delete(t), delete g[t], A.emitChange());
                 else {
-                    let n = _[t];
+                    let n = g[t];
                     if (null == n) return;
                     n.start(Math.min(2147483647, r), () => e(t));
                 }
@@ -42,19 +42,19 @@ function O(e) {
 }
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !v.has(e.channel_id)) return !1;
+    if (t && !y.has(e.channel_id)) return !1;
     let n = (0, m.Fp)(e) ? (0, m.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0) : (0, m.Q_)(e.content);
     return (
         0 !== n.length &&
         (n.forEach((e) => {
-            g.includes(e) || E.includes(e) || (I({ code: e }), u.Z.wait(() => d.Z.resolveGiftCode(e, !1, !0).catch(f.VqG)));
+            _.includes(e) || E.includes(e) || (I({ code: e }), u.Z.wait(() => d.Z.resolveGiftCode(e, !1, !0).catch(f.VqG)));
         }),
         !1)
     );
 }
 function I(e) {
     let { code: t } = e;
-    g.includes(t) || (g = [...g, t]);
+    _.includes(t) || (_ = [..._, t]);
 }
 function S(e) {
     let { message: t } = e;
@@ -62,7 +62,7 @@ function S(e) {
 }
 function T(e) {
     let { channelId: t, messages: n } = e;
-    (v.add(t), n.forEach((e) => j(e, !0)));
+    (y.add(t), n.forEach((e) => j(e, !0)));
 }
 function N(e) {
     let { firstMessages: t } = e;
@@ -75,13 +75,13 @@ class P extends (r = s.ZP.Store) {
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? x[e] : null;
+        return null != e ? v[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
         return Array.from(h.values()).filter((r) => r.userId === e && r.skuId === t && (null == n || r.subscriptionPlanId === n) && !r.isExpired());
     }
     getIsResolving(e) {
-        return g.includes(e);
+        return _.includes(e);
     }
     getIsResolved(e) {
         return E.includes(e);
@@ -90,13 +90,13 @@ class P extends (r = s.ZP.Store) {
         return b.includes(e);
     }
     getUserGiftCodesFetchingForSKUAndPlan(e, t) {
-        return y.has((0, m.Bg)(e, t));
+        return x.has((0, m.Bg)(e, t));
     }
     getUserGiftCodesLoadedAtForSKUAndPlan(e, t) {
         return C[(0, m.Bg)(e, t)];
     }
     getResolvingCodes() {
-        return g;
+        return _;
     }
     getResolvedCodes() {
         return E;
@@ -116,20 +116,20 @@ class P extends (r = s.ZP.Store) {
         : (P[i] = l));
 let A = new P(u.Z, {
         CONNECTION_OPEN: function () {
-            return (v.clear(), !1);
+            return (y.clear(), !1);
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return (null != t && v.add(t), !1);
+            return (null != t && y.add(t), !1);
         },
         GIFT_CODE_RESOLVE: I,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            return ((g = g.filter((e) => e !== t.code)), E.includes(t.code) || (E = [...E, t.code]), O(t));
+            return ((_ = _.filter((e) => e !== t.code)), E.includes(t.code) || (E = [...E, t.code]), O(t));
         },
         GIFT_CODE_RESOLVE_FAILURE: function (e) {
             let { code: t } = e;
-            ((g = g.filter((e) => e !== t)), E.includes(t) || (E = [...E, t]));
+            ((_ = _.filter((e) => e !== t)), E.includes(t) || (E = [...E, t]));
         },
         GIFT_CODE_REDEEM: function (e) {
             let { code: t } = e;
@@ -152,7 +152,7 @@ let A = new P(u.Z, {
             let { code: t, error: n } = e;
             b = b.filter((e) => e !== t);
             let r = h.get(t);
-            if (((x[t] = n), null != r))
+            if (((v[t] = n), null != r))
                 switch (n.code) {
                     case f.evJ.UNKNOWN_GIFT_CODE:
                         h.set(t, r.set('revoked', !0));
@@ -164,8 +164,8 @@ let A = new P(u.Z, {
         GIFT_CODE_REVOKE_SUCCESS: function (e) {
             let { code: t } = e;
             h.delete(t);
-            let n = _[t];
-            (null != n && (n.stop(), delete _[t]), E.includes(t) || (E = [...E, t]));
+            let n = g[t];
+            (null != n && (n.stop(), delete g[t]), E.includes(t) || (E = [...E, t]));
         },
         GIFT_CODE_CREATE_SUCCESS: function (e) {
             let { giftCode: t } = e;
@@ -173,17 +173,17 @@ let A = new P(u.Z, {
         },
         GIFT_CODES_FETCH: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            y.add((0, m.Bg)(t, n));
+            x.add((0, m.Bg)(t, n));
         },
         GIFT_CODES_FETCH_SUCCESS: function (e) {
             let { giftCodes: t, skuId: n, subscriptionPlanId: r } = e;
             t.forEach(O);
             let i = (0, m.Bg)(n, r);
-            ((C[i] = Date.now()), y.delete(i));
+            ((C[i] = Date.now()), x.delete(i));
         },
         GIFT_CODES_FETCH_FAILURE: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            y.delete((0, m.Bg)(t, n));
+            x.delete((0, m.Bg)(t, n));
         },
         MESSAGE_CREATE: S,
         MESSAGE_UPDATE: S,

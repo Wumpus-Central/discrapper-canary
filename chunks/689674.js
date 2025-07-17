@@ -19,12 +19,12 @@ function d(e) {
             },
             [p.guild_id]
         ),
-        _ = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
+        g = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
         h = p.type === i.d.GUILD_ANNOUNCEMENT && f,
-        g = !d.hasFlag(u.iLy.EPHEMERAL) && (_ || h),
-        b = _ && null != d.messageReference ? d.messageReference.message_id : d.id,
-        E = _ && null != d.messageReference ? d.messageReference.channel_id : p.id,
-        y = _ && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
+        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (g || h),
+        b = g && null != d.messageReference ? d.messageReference.message_id : d.id,
+        E = g && null != d.messageReference ? d.messageReference.channel_id : p.id,
+        x = g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
         C = r.useCallback(
             (e) => {
                 e
@@ -33,20 +33,20 @@ function d(e) {
                           channelId: p.id,
                           guildId: p.guild_id,
                           sourceChannelId: E,
-                          sourceGuildId: y
+                          sourceGuildId: x
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, E, y]
+            [b, p.id, p.guild_id, E, x]
         ),
-        x = s.Z.useExperiment(
+        v = s.Z.useExperiment(
             { location: '836a4b_1' },
             {
-                disable: !g || !m,
+                disable: !_ || !m,
                 autoTrackExposure: !0
             }
         ).enabled,
-        v = (0, a.O)(C, 0, x);
+        y = (0, a.O)(C, 0, v);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +54,6 @@ function d(e) {
             },
             [b]
         ),
-        v
+        y
     );
 }

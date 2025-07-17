@@ -19,7 +19,7 @@ function f(e) {
         var e, n;
         return null != (n = null == (e = c.Z.getChannel(t.channel_id)) ? void 0 : e.isGroupDM()) && n;
     })
-        ? (0, r.jsx)(_, {
+        ? (0, r.jsx)(g, {
               message: t,
               usernameHook: l,
               compact: a,
@@ -37,21 +37,21 @@ function f(e) {
               })
           });
 }
-function _(e) {
+function g(e) {
     let { message: t, usernameHook: i, compact: c } = e,
         f = (0, u.ZP)(t),
-        _ = i(f),
+        g = i(f),
         h = (0, o.I3)('GdmNameChangeSystemMessage', t.channel_id),
-        g = '' === t.content ? p.t.AI1ZZm : p.t.geP3ra;
+        _ = '' === t.content ? p.t.AI1ZZm : p.t.geP3ra;
     return (0, r.jsx)(d.Z, {
         compact: c,
         className: m.channelNameChange,
         icon: n(819373),
         timestamp: t.timestamp,
         children: h
-            ? p.intl.format(g, {
+            ? p.intl.format(_, {
                   username: f.nick,
-                  usernameHook: _,
+                  usernameHook: g,
                   channelName: t.content,
                   editGroupButton: (0, r.jsx)(
                       l.Text,
@@ -67,7 +67,7 @@ function _(e) {
               })
             : p.intl.format(p.t.oItgEx, {
                   username: f.nick,
-                  usernameHook: _,
+                  usernameHook: g,
                   channelName: t.content
               })
     });

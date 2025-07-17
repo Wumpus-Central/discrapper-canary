@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => j,
-    u: () => v
+    u: () => y
 }),
     n(190126),
     n(368063),
@@ -21,12 +21,12 @@ var r,
     p = n(607070),
     m = n(206295),
     f = n(70097),
-    _ = n(314897),
+    g = n(314897),
     h = n(572004),
-    g = n(914498),
+    _ = n(914498),
     b = n(217702),
     E = n(388032),
-    y = n(383195);
+    x = n(383195);
 function C() {
     return (C =
         Object.assign ||
@@ -38,7 +38,7 @@ function C() {
             return e;
         }).apply(this, arguments);
 }
-function x(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,13 +63,13 @@ function x(e) {
     }
     return e;
 }
-var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var y = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
         ? (0, i.jsx)(u.P3F, {
               onClick: t,
-              className: o()({ [y.cursorPointer]: null != t }, r),
+              className: o()({ [x.cursorPointer]: null != t }, r),
               children: n
           })
         : (0, i.jsx)('div', {
@@ -79,11 +79,11 @@ function O(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: v, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: k, onClickBanner: D } = e;
-    L = {
-        id: null != (n = null == (t = L) ? void 0 : t.id) ? n : '0',
-        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
-        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : _.default.getId(),
+    let { title: y, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: k, onClickContent: L, onClickBanner: D } = e;
+    k = {
+        id: null != (n = null == (t = k) ? void 0 : t.id) ? n : '0',
+        linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.Un.UNKNOWN,
+        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : g.default.getId(),
         activityCustomId: null == t ? void 0 : t.activityCustomId,
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
@@ -96,7 +96,7 @@ function j(e) {
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
-                    (null == L || null == (t = L.onView) || t.call(L), (0, g.GF)(L.id, L.linkType, L.referrerId, L.activityCustomId), (G.current = !0));
+                    (null == k || null == (t = k.onView) || t.call(k), (0, _.GF)(k.id, k.linkType, k.referrerId, k.activityCustomId), (G.current = !0));
                 }
             },
             void 0
@@ -107,9 +107,9 @@ function j(e) {
                       look: c.zx.Looks.BLANK,
                       size: c.zx.Sizes.ICON,
                       'aria-label': E.intl.string(E.t.WqhZsr),
-                      className: y.linkIcon,
+                      className: x.linkIcon,
                       onClick: () => {
-                          ((0, h.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, g.Yu)(L.id, L.linkType));
+                          ((0, h.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, _.Yu)(k.id, k.linkType));
                       },
                       children: (0, i.jsx)(u.xPt, {
                           size: 'xs',
@@ -121,7 +121,7 @@ function j(e) {
             null != Z
                 ? (0, i.jsx)(u.eee, {
                       'aria-label': E.intl.string(E.t.wuRE8P),
-                      className: y.linkIcon,
+                      className: x.linkIcon,
                       href: Z,
                       children: (0, i.jsx)(u.d3s, {
                           size: 'xs',
@@ -132,7 +132,7 @@ function j(e) {
         W = null != T,
         K = null != N && !1 === B,
         Y = W || K,
-        X = 0 === P ? y.bannerAspectRatioBot : y.bannerAspectRatioActivity,
+        X = 0 === P ? x.bannerAspectRatioBot : x.bannerAspectRatioActivity,
         q = l.useRef(null),
         Q = l.useCallback(() => {
             let e = q.current;
@@ -140,30 +140,30 @@ function j(e) {
         }, []),
         J = l.useMemo(() => !!K && new URL(N).pathname.endsWith('.gif'), [K, N]),
         $ = l.useMemo(() => {
-            if (null != k)
+            if (null != L)
                 return (e) => {
-                    (k(e), (0, g.KX)(L.id, L.linkType, g.j_.CONTENT, L.referrerId, L.activityCustomId));
+                    (L(e), (0, _.KX)(k.id, k.linkType, _.j_.CONTENT, k.referrerId, k.activityCustomId));
                 };
-        }, [k, L]),
+        }, [L, k]),
         ee = l.useMemo(() => {
             if (null != D)
                 return (e) => {
-                    (D(e), (0, g.KX)(L.id, L.linkType, g.j_.BANNER, L.referrerId, L.activityCustomId));
+                    (D(e), (0, _.KX)(k.id, k.linkType, _.j_.BANNER, k.referrerId, k.activityCustomId));
                 };
-        }, [D, L]);
+        }, [D, k]);
     return (0, i.jsxs)('div', {
         ref: H,
-        className: y.embed,
+        className: x.embed,
         children: [
             Y &&
                 (0, i.jsxs)(O, {
                     onClick: ee,
-                    className: o()(y.bannerWrapper, X, { [y.showVideoOnFocus]: K }),
+                    className: o()(x.bannerWrapper, X, { [x.showVideoOnFocus]: K }),
                     children: [
                         K &&
                             (J
                                 ? (0, i.jsx)('div', {
-                                      className: y.videoBanner,
+                                      className: x.videoBanner,
                                       style: { backgroundImage: 'url('.concat(N, ')') }
                                   })
                                 : (0, i.jsx)(f.Z, {
@@ -172,11 +172,11 @@ function j(e) {
                                       mediaLayoutType: b.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
-                                      className: y.videoBanner
+                                      className: x.videoBanner
                                   })),
                         W &&
                             (0, i.jsx)('div', {
-                                className: y.staticBanner,
+                                className: x.staticBanner,
                                 style: { backgroundImage: 'url('.concat(T, ')') },
                                 onTransitionEnd: Q
                             })
@@ -186,11 +186,11 @@ function j(e) {
                 style: { background: F },
                 children: [
                     (0, i.jsxs)('div', {
-                        className: y.contentContainer,
+                        className: x.contentContainer,
                         children: [
                             null != j &&
                                 (0, i.jsxs)('div', {
-                                    className: y.header,
+                                    className: x.header,
                                     children: [
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/semibold',
@@ -201,29 +201,29 @@ function j(e) {
                                     ]
                                 }),
                             (0, i.jsxs)('div', {
-                                className: y.contentAndCopyButtonWrapper,
+                                className: x.contentAndCopyButtonWrapper,
                                 children: [
                                     (0, i.jsxs)(O, {
                                         onClick: $,
-                                        className: o()(y.contentWrapper, { [y.contentWrapperClickable]: null != $ }),
+                                        className: o()(x.contentWrapper, { [x.contentWrapperClickable]: null != $ }),
                                         children: [
                                             null != A &&
                                                 (0, i.jsx)('div', {
-                                                    className: y.img,
+                                                    className: x.img,
                                                     style: { backgroundImage: 'url('.concat(A, ')') }
                                                 }),
                                             (0, i.jsxs)('div', {
-                                                className: y.content,
+                                                className: x.content,
                                                 children: [
                                                     (0, i.jsx)(u.Text, {
                                                         variant: 'text-md/semibold',
                                                         color: 'none',
                                                         lineClamp: 1,
-                                                        className: y.contentTitle,
-                                                        children: v
+                                                        className: x.contentTitle,
+                                                        children: y
                                                     }),
                                                     (0, i.jsx)('div', {
-                                                        className: y.contentInfoWrapper,
+                                                        className: x.contentInfoWrapper,
                                                         children: S
                                                     })
                                                 ]
@@ -235,7 +235,7 @@ function j(e) {
                             }),
                             R.length > 0 &&
                                 (0, i.jsx)('div', {
-                                    className: y.actionWrapper,
+                                    className: x.actionWrapper,
                                     children: R.map((e, t) => {
                                         let { label: n, icon: r, onClick: l, disabledReason: a, submitting: o, trackingArea: s } = e,
                                             d = null != a,
@@ -248,12 +248,12 @@ function j(e) {
                                                     : n,
                                             f = {
                                                 color: p ? c.zx.Colors.WHITE : c.zx.Colors.TRANSPARENT,
-                                                className: p ? y.primaryButton : y.alwaysWhiteText,
+                                                className: p ? x.primaryButton : x.alwaysWhiteText,
                                                 disabled: d,
                                                 submitting: o,
                                                 children: m,
                                                 onClick(e) {
-                                                    (l(e), (0, g.KX)(L.id, L.linkType, s, L.referrerId, L.activityCustomId));
+                                                    (l(e), (0, _.KX)(k.id, k.linkType, s, k.referrerId, k.activityCustomId));
                                                 }
                                             };
                                         return d
@@ -269,12 +269,12 @@ function j(e) {
                                                                   return e;
                                                               })(e)
                                                           );
-                                                          return (0, i.jsx)(c.zx, x({}, f, t));
+                                                          return (0, i.jsx)(c.zx, v({}, f, t));
                                                       }
                                                   },
                                                   n
                                               )
-                                            : (0, i.jsx)(c.zx, x({}, f), n);
+                                            : (0, i.jsx)(c.zx, v({}, f), n);
                                     })
                                 })
                         ]

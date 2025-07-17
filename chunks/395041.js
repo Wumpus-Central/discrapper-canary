@@ -1,18 +1,18 @@
-n.d(t, {
-    O: () => i,
-    w: () => o
+r.d(t, {
+    O: () => o,
+    w: () => i
 });
-var r = n(255367);
-n(73800);
-var s = n(481060),
-    l = n(277640);
+var n = r(255367);
+r(73800);
+var s = r(481060),
+    l = r(277640);
 function a(e, t) {
-    let { children: n } = e;
-    return (0, r.jsx)(s.Text, {
+    let { children: r } = e;
+    return (0, n.jsx)(s.Text, {
         variant: 'text-sm/medium',
         className: t,
-        children: n
+        children: r
     });
 }
-let o = (e) => a(e, l.searchFilter),
-    i = (e) => a(e, l.searchAnswer);
+let i = (e) => a(e, l.searchFilter),
+    o = (e) => a(e, l.searchAnswer);

@@ -1,7 +1,7 @@
 n.d(t, {
     Hr: () => s,
     P4: () => c,
-    TR: () => d,
+    TR: () => u,
     mz: () => l,
     tM: () => a,
     xv: () => o
@@ -13,4 +13,4 @@ var i,
 let s = 'hasClickedGuildShopProductPreviewTab',
     a = 'hasClickedGuildShopChannelRow',
     c = 'https://discord.com/servershop',
-    d = '1 GB';
+    u = '1 GB';

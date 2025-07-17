@@ -12,7 +12,7 @@ var r = n(255367),
     m = n(848697);
 function f(e) {
     let { message: t, channel: n } = e,
-        { isBlocked: f, isIgnored: _ } = (0, l.cj)(
+        { isBlocked: f, isIgnored: g } = (0, l.cj)(
             [d.Z],
             () => ({
                 isBlocked: d.Z.isBlockedForMessage(t),
@@ -21,8 +21,8 @@ function f(e) {
             [t]
         ),
         h = (0, o.p)(),
-        g = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, a.$)(g);
+        _ = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, a.$)(_);
     let b = i.useMemo(
         () =>
             null != t.content && '' !== t.content
@@ -71,7 +71,7 @@ function f(e) {
                             s
                         ]
                     });
-                })(t, b, f, _)
+                })(t, b, f, g)
             })
         ]
     });

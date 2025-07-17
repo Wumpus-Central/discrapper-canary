@@ -1,132 +1,104 @@
-(i.d(t, { EmojiAddModal: () => x }), i(388685));
-var o = i(255367),
-    a = i(73800),
-    n = i(755721),
-    s = i(481060),
-    l = i(313201),
-    r = i(768581),
-    m = i(570533),
-    c = i(388032),
-    d = i(129458);
-function j(e) {
-    let { emoji: t, onChange: i, value: a } = e,
-        n = r.ZP.getEmojiURL({
-            id: t.id,
-            animated: t.animated,
+(t.d(i, { EmojiAddModal: () => j }), t(388685));
+var a = t(255367),
+    n = t(73800),
+    o = t(82659),
+    s = t(481060),
+    l = t(768581),
+    r = t(570533),
+    m = t(388032),
+    d = t(129458);
+function c(e) {
+    let { emoji: i, onChange: t, value: n } = e,
+        o = l.ZP.getEmojiURL({
+            id: i.id,
+            animated: i.animated,
             size: 24
         });
-    return (0, o.jsx)(s.XZJ, {
+    return (0, a.jsx)(s.XZJ, {
         size: 20,
         className: d.emojiRow,
-        onChange: i,
+        onChange: t,
         type: s.XZJ.Types.INVERTED,
-        value: a,
+        value: n,
         reverse: !0,
-        children: (0, o.jsxs)('div', {
+        children: (0, a.jsxs)('div', {
             className: d.emojiLabel,
             children: [
-                (0, o.jsx)('img', {
+                (0, a.jsx)('img', {
                     className: d.emojiImage,
-                    src: n,
+                    src: o,
                     width: 24,
                     height: 24,
                     alt: ''
                 }),
-                (0, o.jsx)(s.Text, {
+                (0, a.jsx)(s.Text, {
                     color: 'header-primary',
                     variant: 'text-md/medium',
                     className: d.emojiAlias,
-                    children: t.name
+                    children: i.name
                 })
             ]
         })
     });
 }
-function x(e) {
-    let { guildId: t, initialTierEmojiIds: i, onSubmit: r, transitionToManageEmoji: x, transitionState: h, onClose: u } = e,
-        _ = (0, m.Z)(t),
-        [f, p] = a.useState(new Set()),
-        C = f.size > 0,
-        v = (0, l.Dt)();
-    return (0, o.jsx)('form', {
-        onSubmit: function (e) {
-            (e.preventDefault(), r(f), u());
-        },
-        children: (0, o.jsxs)(s.Y0X, {
-            transitionState: h,
-            'aria-labelledby': v,
-            parentComponent: 'EmojiAddModal',
+function j(e) {
+    let { guildId: i, initialTierEmojiIds: t, onSubmit: l, transitionToManageEmoji: j, transitionState: h, onClose: u } = e,
+        x = (0, r.Z)(i),
+        [p, f] = n.useState(new Set()),
+        g = p.size > 0;
+    return (0, a.jsx)(o.u, {
+        transitionState: h,
+        onClose: u,
+        title: m.intl.string(m.t.xC6tUl),
+        actions: [
+            {
+                text: m.intl.string(m.t['ETE/oK']),
+                variant: 'secondary',
+                onClick: u
+            },
+            {
+                text: m.intl.format(m.t.pX74jo, { totalEmoji: p.size }),
+                variant: 'primary',
+                onClick: function () {
+                    (l(p), u());
+                },
+                disabled: !g
+            }
+        ],
+        children: (0, a.jsxs)(s.Kqy, {
+            gap: 'md',
             children: [
-                (0, o.jsxs)(s.xBx, {
-                    children: [
-                        (0, o.jsx)(s.X6q, {
-                            variant: 'heading-md/semibold',
-                            id: v,
-                            children: c.intl.string(c.t.xC6tUl)
-                        }),
-                        (0, o.jsx)(s.olH, {
-                            className: d.closeButton,
-                            onClick: u
-                        })
-                    ]
+                (0, a.jsx)(s.Text, {
+                    variant: 'text-md/normal',
+                    children: m.intl.format(m.t['OnK+Cw'], { transitionToManageEmoji: j })
                 }),
-                (0, o.jsxs)(s.hzk, {
-                    className: d.modalContent,
-                    children: [
-                        (0, o.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
-                            children: c.intl.format(c.t['OnK+Cw'], { transitionToManageEmoji: x })
-                        }),
-                        (0, o.jsx)(s.LZC, { size: 16 }),
-                        null != _ &&
-                            _.length > 0 &&
-                            (0, o.jsx)('div', {
-                                className: d.emojiContainer,
-                                children: _.map((e) =>
-                                    null != i && i.has(e.id)
-                                        ? null
-                                        : (0, o.jsx)(
-                                              j,
-                                              {
-                                                  emoji: e,
-                                                  onChange: () => {
-                                                      var t;
-                                                      return (
-                                                          (t = e.id),
-                                                          void p((e) => {
-                                                              let i = new Set(e);
-                                                              return (f.has(t) ? i.delete(t) : i.add(t), i);
-                                                          })
-                                                      );
-                                                  },
-                                                  value: f.has(e.id)
-                                              },
-                                              e.id
-                                          )
-                                )
-                            }),
-                        (0, o.jsx)(s.LZC, { size: 8 })
-                    ]
-                }),
-                (0, o.jsxs)(s.mzw, {
-                    className: d.modalFooter,
-                    children: [
-                        (0, o.jsx)(s.zxk, {
-                            variant: 'primary',
-                            text: c.intl.format(c.t.pX74jo, { totalEmoji: f.size }),
-                            type: 'submit',
-                            disabled: !C
-                        }),
-                        (0, o.jsx)(n.zx, {
-                            look: n.zx.Looks.LINK,
-                            color: n.zx.Colors.PRIMARY,
-                            className: d.cancelButton,
-                            onClick: u,
-                            children: c.intl.string(c.t['ETE/oK'])
-                        })
-                    ]
-                })
+                null != x &&
+                    x.length > 0 &&
+                    (0, a.jsx)('div', {
+                        className: d.emojiContainer,
+                        children: x.map((e) =>
+                            null != t && t.has(e.id)
+                                ? null
+                                : (0, a.jsx)(
+                                      c,
+                                      {
+                                          emoji: e,
+                                          onChange: () => {
+                                              var i;
+                                              return (
+                                                  (i = e.id),
+                                                  void f((e) => {
+                                                      let t = new Set(e);
+                                                      return (p.has(i) ? t.delete(i) : t.add(i), t);
+                                                  })
+                                              );
+                                          },
+                                          value: p.has(e.id)
+                                      },
+                                      e.id
+                                  )
+                        )
+                    })
             ]
         })
     });

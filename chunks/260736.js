@@ -13,7 +13,7 @@ var i = n(481060),
 function m(e) {
     let { compact: t, message: n, channel: m } = e,
         f = (0, o.ZP)(n),
-        _ = (0, s.l)({
+        g = (0, s.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: m.guild_id,
@@ -30,7 +30,7 @@ function m(e) {
                     compact: t,
                     children: d.intl.format(d.t['u0qJ4+'], {
                         actorName: f.nick,
-                        actorHook: _
+                        actorHook: g
                     })
                 })
             }),

@@ -10,20 +10,20 @@ var i = n(442837),
     u = n(907273);
 function d(e) {
     var t;
-    let { message: n, compact: d, usernameHook: p, onClickThread: m, onClickViewThreads: f, onContextMenuThread: _ } = e,
+    let { message: n, compact: d, usernameHook: p, onClickThread: m, onClickViewThreads: f, onContextMenuThread: g } = e,
         h = (0, o.ZP)(n),
-        g = p(h),
+        _ = p(h),
         b = (0, i.e7)([a.Z], () => {
             var e;
             return a.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
         }),
         E = c.intl.format(c.t.cZ9Uf3, {
             actorName: h.nick,
-            actorHook: g,
+            actorHook: _,
             threadName: null != (t = null == b ? void 0 : b.name) ? t : n.content,
             threadOnClick: {
                 onClick: m,
-                onContextMenu: _
+                onContextMenu: g
             },
             viewThreadsOnClick: f
         });

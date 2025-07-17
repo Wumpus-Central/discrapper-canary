@@ -11,9 +11,9 @@ var r = n(255367),
     p = n(35125),
     m = n(626751),
     f = n(891614),
-    _ = n(981631),
+    g = n(981631),
     h = n(176505),
-    g = n(388032),
+    _ = n(388032),
     b = n(896293);
 function E(e) {
     let { username: t } = e;
@@ -24,7 +24,7 @@ function E(e) {
             className: b.welcomeCardText,
             color: 'status-positive-text',
             variant: 'heading-xl/medium',
-            children: g.intl.format(g.t.MLKSlp, {
+            children: _.intl.format(_.t.MLKSlp, {
                 username: t,
                 usernameHook: (e, t) =>
                     (0, r.jsx)(
@@ -42,12 +42,12 @@ function E(e) {
         })
     });
 }
-function y(e) {
+function x(e) {
     let { guildId: t, user: n, username: i } = e;
     return (0, r.jsxs)('div', {
         className: b.welcomeCard,
         role: 'img',
-        'aria-label': g.intl.formatToPlainString(g.t['utf8+f'], { username: i }),
+        'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: i }),
         children: [
             (0, r.jsx)(f.Z, {
                 guildId: t,
@@ -60,8 +60,8 @@ function y(e) {
 }
 function C(e) {
     var t, l;
-    let { channel: f, message: g, compact: b } = e,
-        E = (0, s.ZP)(g),
+    let { channel: f, message: _, compact: b } = e,
+        E = (0, s.ZP)(_),
         C = (function (e) {
             let { author: t, channel: n, message: r } = e,
                 l = n.guild_id,
@@ -74,7 +74,7 @@ function C(e) {
                 { analyticsLocations: u } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
                 m = r.roleSubscriptionData,
                 f = i.useCallback(() => {
-                    ((0, d.uL)(_.Z5c.CHANNEL(l, h.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, p.y8)(l, n.id, r.id, m.role_subscription_listing_id));
+                    ((0, d.uL)(g.Z5c.CHANNEL(l, h.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, p.y8)(l, n.id, r.id, m.role_subscription_listing_id));
                 }, [l, n, r, m, u]);
             return null == m
                 ? null
@@ -87,29 +87,29 @@ function C(e) {
                   });
         })({
             channel: f,
-            message: g,
+            message: _,
             author: E
         }),
-        x = (null == (t = g.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = g.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
+        v = (null == (t = _.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = _.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
     return null == C
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(u.Z, {
                       icon: n(570111),
-                      timestamp: g.timestamp,
+                      timestamp: _.timestamp,
                       compact: b,
                       children: C
                   }),
-                  x &&
-                      (0, r.jsx)(y, {
+                  v &&
+                      (0, r.jsx)(x, {
                           guildId: f.guild_id,
-                          user: g.author,
+                          user: _.author,
                           username: E.nick
                       }),
                   (0, r.jsx)(m.Z, {
                       channel: f,
-                      message: g
+                      message: _
                   })
               ]
           });

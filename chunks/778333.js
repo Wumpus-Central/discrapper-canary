@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(314897),
     m = n(592125),
     f = n(699516),
-    _ = n(51144),
+    g = n(51144),
     h = n(981631),
-    g = n(388032),
+    _ = n(388032),
     b = n(273254);
 function E(e) {
     var t;
-    let { invite: n, message: E, getAcceptInviteContext: y } = e,
+    let { invite: n, message: E, getAcceptInviteContext: x } = e,
         C = (0, l.e7)([p.default], () => p.default.getId()),
-        x = (null == (t = n.inviter) ? void 0 : t.id) === C,
-        v = n.state === h.r2o.ACCEPTING,
+        v = (null == (t = n.inviter) ? void 0 : t.id) === C,
+        y = n.state === h.r2o.ACCEPTING,
         { analyticsLocations: O } = (0, c.ZP)(s.Z.INVITE_EMBED),
         j = (0, l.e7)([f.Z], () => {
             var e;
@@ -49,20 +49,20 @@ function E(e) {
                 },
                 O
             );
-            let e = y('Invite Button Embed');
+            let e = x('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, O, y]);
+        }, [n, E, O, x]);
     if (null == n.inviter) return null;
     let T = j ? I : S,
-        N = g.intl.string(g.t.ib7Ng4),
+        N = _.intl.string(_.t.ib7Ng4),
         P = u.Z.Button.Colors.GREEN;
-    j ? ((N = g.intl.string(g.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : x && ((N = g.intl.string(g.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
-    let A = x ? g.intl.string(g.t.eQyu1N) : g.intl.string(g.t.PYJHW1),
+    j ? ((N = _.intl.string(_.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : v && ((N = _.intl.string(_.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
+    let A = v ? _.intl.string(_.t.eQyu1N) : _.intl.string(_.t.PYJHW1),
         w = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        Z = null != n.inviter ? _.ZP.getUserTag(n.inviter) : '';
+        Z = null != n.inviter ? g.ZP.getUserTag(n.inviter) : '';
     return (0, r.jsxs)(u.Z, {
         children: [
             (0, r.jsx)(u.Z.Header, { text: A }),
@@ -84,8 +84,8 @@ function E(e) {
                     }),
                     (0, r.jsx)(u.Z.Button, {
                         onClick: T,
-                        submitting: v,
-                        isDisabled: x,
+                        submitting: y,
+                        isDisabled: v,
                         color: P,
                         children: N
                     })

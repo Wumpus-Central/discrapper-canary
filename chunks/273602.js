@@ -18,9 +18,9 @@ var a = n(255367),
     T = n(709054),
     y = n(861990),
     C = n(127654),
-    O = n(979956),
-    x = n(228392),
-    E = n(404616),
+    x = n(979956),
+    E = n(228392),
+    O = n(404616),
     v = n(470623),
     I = n(981631),
     S = n(231338),
@@ -31,16 +31,16 @@ async function w(e) {
     let i,
         { thread: o, attachments: c, setIsUploading: l, guild: p, onClose: _ } = e,
         g = T.default.castChannelIdAsMessageId(o.id),
-        x = new d.Z();
-    x.on('progress', (e) => {
+        E = new d.Z();
+    E.on('progress', (e) => {
         let t = (0, h.dg)(p.id);
-        e.currentSize > t && (x.cancel(), l(!1), _(), (0, C.G)(o, (0, O.KZ)(c)));
+        e.currentSize > t && (E.cancel(), l(!1), _(), (0, C.G)(o, (0, x.KZ)(c)));
     });
-    let E = b.Z.getMessage(o.id, g),
-        v = null != E ? E.attachments : [];
+    let O = b.Z.getMessage(o.id, g),
+        v = null != O ? O.attachments : [];
     l(!0);
     try {
-        i = await x.uploadFiles(c);
+        i = await E.uploadFiles(c);
     } catch (e) {
         l(!1);
         return;
@@ -73,20 +73,20 @@ function P(e) {
             null != h && null != T
                 ? {
                       src: T,
-                      width: E.TJ,
-                      height: E.Lp,
+                      width: O.TJ,
+                      height: O.Lp,
                       spoiler: r[0].spoiler,
                       alt: r[0].description
                   }
                 : null,
-        [O, I] = i.useState(!1),
+        [x, I] = i.useState(!1),
         P = i.useCallback(() => {
-            ((0, x.xI)({ added: !1 }), s(), d());
+            ((0, E.xI)({ added: !1 }), s(), d());
         }, [s, d]),
         N = i.useCallback(() => {
             null != m &&
                 null != f &&
-                ((0, x.xI)({ added: !0 }),
+                ((0, E.xI)({ added: !0 }),
                 w({
                     thread: m,
                     attachments: r,
@@ -104,7 +104,7 @@ function P(e) {
               onClose: d,
               actionBarInput: (0, a.jsx)(c.A, {
                   variant: 'secondary',
-                  disabled: O,
+                  disabled: x,
                   onClick: d,
                   text: M.intl.string(M.t['ETE/oK'])
               }),
@@ -112,20 +112,20 @@ function P(e) {
                   {
                       variant: 'secondary',
                       text: M.intl.string(M.t['8rKVHB']),
-                      disabled: O,
+                      disabled: x,
                       onClick: P
                   },
                   {
                       variant: 'primary',
                       text: M.intl.string(M.t.d611xM),
-                      loading: O,
+                      loading: x,
                       onClick: N,
                       autoFocus: !0
                   }
               ],
               children: (0, a.jsx)(v.oL, {
                   channel: b,
-                  children: (0, a.jsx)(E.ZP, {
+                  children: (0, a.jsx)(O.ZP, {
                       threadId: n,
                       goToThread: S.dG,
                       overrideMedia: C,

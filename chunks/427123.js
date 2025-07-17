@@ -11,19 +11,19 @@ var r,
     p = n(16084),
     m = n(728345),
     f = n(812206),
-    _ = n(594190),
+    g = n(594190),
     h = n(594174),
-    g = n(580130),
+    _ = n(580130),
     b = n(55563),
     E = n(981631);
-let y = 'DetectedOffPlatformPremiumPerksStore',
+let x = 'DetectedOffPlatformPremiumPerksStore',
     C = {},
-    x = {},
-    v = [];
+    v = {},
+    y = [];
 function O() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(x)) {
-        if (v.includes(t)) continue;
+    for (let { skuId: t, applicationId: n } of o().values(v)) {
+        if (y.includes(t)) continue;
         let r = f.Z.getApplication(n);
         if (null == r) {
             f.Z.isFetchingApplication(n) || f.Z.didFetchingApplicationFail(n) || m.ZP.fetchApplication(n);
@@ -34,7 +34,7 @@ function O() {
             b.Z.isFetching(t) || b.Z.didFetchingSkuFail(t) || p.$N(r.id, t);
             continue;
         }
-        g.Z.applicationIdsFetching.has(r.id) || g.Z.isEntitledToSku(h.default.getCurrentUser(), t, r.id, r.id) || !i.available
+        _.Z.applicationIdsFetching.has(r.id) || _.Z.isEntitledToSku(h.default.getCurrentUser(), t, r.id, r.id) || !i.available
             ? null != C[t] && (delete C[t], (e = !0))
             : ((C[t] = {
                   skuId: t,
@@ -47,7 +47,7 @@ function O() {
 class j extends (r = s.ZP.Store) {
     initialize() {
         var e;
-        (this.waitFor(_.ZP, b.Z, g.Z), (v = null != (e = c.K.get(y)) ? e : v));
+        (this.waitFor(g.ZP, b.Z, _.Z), (y = null != (e = c.K.get(x)) ? e : y));
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(C);
@@ -64,7 +64,7 @@ class j extends (r = s.ZP.Store) {
         : (j[i] = l));
 let I = new j(u.Z, {
     LOGOUT: function () {
-        ((C = {}), (x = {}));
+        ((C = {}), (v = {}));
     },
     SKU_FETCH_SUCCESS: O,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: O,
@@ -72,19 +72,19 @@ let I = new j(u.Z, {
     APPLICATION_FETCH_SUCCESS: O,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete C[t], v.includes(t))) return !1;
-        (v.push(t), c.K.set(y, v));
+        if ((delete C[t], y.includes(t))) return !1;
+        (y.push(t), c.K.set(x, y));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
-        for (let { id: t, distributor: n } of _.ZP.getRunningGames())
+        for (let { id: t, distributor: n } of g.ZP.getRunningGames())
             if (null != t && n !== E.GQo.DISCORD)
                 for (let { skuId: n, applicationId: r } of E.Lg6)
                     r !== t ||
-                        v.includes(n) ||
-                        (null == x[n] &&
-                            (g.Z.applicationIdsFetched.has(r) || g.Z.applicationIdsFetching.has(r) || null != g.Z.getForSku(n) || d.yD(r),
-                            (x[n] = {
+                        y.includes(n) ||
+                        (null == v[n] &&
+                            (_.Z.applicationIdsFetched.has(r) || _.Z.applicationIdsFetching.has(r) || null != _.Z.getForSku(n) || d.yD(r),
+                            (v[n] = {
                                 skuId: n,
                                 applicationId: r
                             }),

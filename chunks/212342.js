@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(997841));
+(n.d(t, { Z: () => x }), n(388685), n(997841));
 var r,
     i,
     l,
@@ -11,13 +11,13 @@ var r,
     p = n(594174),
     m = n(630388),
     f = n(110630),
-    _ = n(981631);
+    g = n(981631);
 let h = 'ChannelFollowingBumpChannels',
-    g = new Set(),
+    _ = new Set(),
     b = new Set();
 class E extends (r = a.ZP.Store) {
     initialize() {
-        (this.waitFor(c.default), (g = new Set(o.K.get(h))));
+        (this.waitFor(c.default), (_ = new Set(o.K.get(h))));
     }
     shouldShowBump(e) {
         return b.has(e);
@@ -32,19 +32,19 @@ class E extends (r = a.ZP.Store) {
               writable: !0
           })
         : (E[i] = l));
-let y = new E(s.Z, {
+let x = new E(s.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: r, optimistic: i } = e;
-        if (i || g.has(n)) return !1;
+        if (i || _.has(n)) return !1;
         let l = u.Z.getChannel(n),
             a = p.default.getCurrentUser();
-        if (!(null != l && l.type === _.d4z.GUILD_ANNOUNCEMENT && (0, f.Z)(r) && (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id ? d.Z.can(_.Plq.SEND_MESSAGES, l) : d.Z.can(_.Plq.MANAGE_MESSAGES, l)) && !m.yE(Number(r.flags), _.iLy.CROSSPOSTED))) return !1;
+        if (!(null != l && l.type === g.d4z.GUILD_ANNOUNCEMENT && (0, f.Z)(r) && (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id ? d.Z.can(g.Plq.SEND_MESSAGES, l) : d.Z.can(g.Plq.MANAGE_MESSAGES, l)) && !m.yE(Number(r.flags), g.iLy.CROSSPOSTED))) return !1;
         b.add(r.id);
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
-        b.has(t.id) && m.yE(Number(t.flags), _.iLy.CROSSPOSTED) && b.delete(t.id);
+        b.has(t.id) && m.yE(Number(t.flags), g.iLy.CROSSPOSTED) && b.delete(t.id);
     },
     CHANNEL_SELECT: function (e) {
         b.clear();
@@ -55,6 +55,6 @@ let y = new E(s.Z, {
     },
     CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
         let { channelId: t } = e;
-        (g.add(t), o.K.set(h, g), b.clear());
+        (_.add(t), o.K.set(h, _), b.clear());
     }
 });

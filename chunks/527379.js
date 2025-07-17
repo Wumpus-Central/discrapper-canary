@@ -1,7 +1,7 @@
 n.d(t, {
     Dr: () => f,
     YO: () => p,
-    _X: () => _,
+    _X: () => g,
     _o: () => m,
     nb: () => h,
     zO: () => d
@@ -60,7 +60,7 @@ async function f(e, t) {
         searchState: t
     });
 }
-function _(e) {
+function g(e) {
     let t = (0, o.lv)(e),
         n = a.Z.getGuild(e);
     return !!t && null != n && (n.features.has(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || n.features.has(c.oNc.COMMUNITY) || n.features.has(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, l.uL)(c.Z5c.CHANNEL(e, u.oC.MEMBER_SAFETY)) : i.Z.open(n.id, c.pNK.MEMBERS), !0);

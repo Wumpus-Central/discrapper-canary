@@ -3370,6 +3370,7 @@ var np = (function (e) {
             (e.SEARCH_RESULT_SELECTED = 'search_result_selected'),
             (e.SEARCH_RESULT_EXPANDED = 'search_result_expanded'),
             (e.SEARCH_RESULT_SORT_CHANGED = 'search_result_sort_changed'),
+            (e.SEARCH_RESULT_PAGE_CHANGED = 'search_result_page_changed'),
             (e.SEARCH_RESULT_EMPTY = 'search_result_empty'),
             (e.SEARCH_OPENED = 'search_opened'),
             (e.SEARCH_STARTED = 'search_started'),

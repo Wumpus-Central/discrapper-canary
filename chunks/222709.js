@@ -15,7 +15,7 @@ let m = (e) => {
         f = i.useCallback(() => {
             (s.Z.dismissPublishBump(n), (0, c.Z)(t, n));
         }, [t, n]),
-        _ = i.useCallback(() => {
+        g = i.useCallback(() => {
             s.Z.dismissPublishBump(n);
         }, [n]),
         h = i.useCallback(() => {
@@ -47,7 +47,7 @@ let m = (e) => {
                               children: d.intl.string(d.t['MFGE5+'])
                           }),
                           (0, r.jsx)(o.P3F, {
-                              onClick: _,
+                              onClick: g,
                               children: (0, r.jsx)(o.k$p, {
                                   size: 'xs',
                                   color: 'currentColor',

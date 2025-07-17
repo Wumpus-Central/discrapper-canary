@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -11,9 +11,9 @@ var r,
     p = n(669021),
     m = n(73346),
     f = n(568836),
-    _ = n(345898),
+    g = n(345898),
     h = n(981631),
-    g = n(817165);
+    _ = n(817165);
 function b(e, t, n) {
     return (
         t in e
@@ -30,7 +30,7 @@ function b(e, t, n) {
 class E extends (r = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: r, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
-            c = s ? f.$G : _.Z;
+            c = s ? f.$G : g.Z;
         return (0, i.jsx)(c, {
             className: r,
             renderMedia: null != o ? o : this.renderMedia,
@@ -48,17 +48,17 @@ class E extends (r = l.PureComponent) {
                 return null != n
                     ? n()
                     : (0, i.jsxs)('div', {
-                          className: g.priceOs,
+                          className: _.priceOs,
                           children: [
                               (0, i.jsx)(s.Z, {
                                   type: s.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: a && r ? g.tilePriceWithVisibleBuyButton : g.tilePrice
+                                  className: a && r ? _.tilePriceWithVisibleBuyButton : _.tilePrice
                               }),
                               (0, i.jsx)(c.n, {
                                   systems: [h.TaA.WINDOWS],
-                                  className: g.platform
+                                  className: _.platform
                               }),
                               a ? (0, i.jsx)('div', { children: 'deprecated!' }) : null
                           ]
@@ -69,7 +69,7 @@ class E extends (r = l.PureComponent) {
                 return (0, i.jsxs)(l.Fragment, {
                     children: [
                         (0, i.jsx)(p.Z, {
-                            className: o()(g.splashContainer, { [g.splashContainerHorizontal]: s }),
+                            className: o()(_.splashContainer, { [_.splashContainerHorizontal]: s }),
                             video: null != c.previewVideo ? (0, m._W)(a.applicationId, c.previewVideo) : void 0,
                             image: null != c.thumbnail ? (0, m._W)(a.applicationId, c.thumbnail, 600) : null,
                             title: a.name,
@@ -77,10 +77,10 @@ class E extends (r = l.PureComponent) {
                             muted: t,
                             placeholder: n,
                             onToggleMute: r,
-                            splashClassName: g.splashVideo,
-                            splashPlaceholderClassName: g.splashPlaceholder
+                            splashClassName: _.splashVideo,
+                            splashPlaceholderClassName: _.splashPlaceholder
                         }),
-                        a.exclusive ? (0, i.jsx)(d.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, i.jsx)(u.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : null
+                        a.exclusive ? (0, i.jsx)(d.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, i.jsx)(u.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : null
                     ]
                 });
             }));
@@ -93,4 +93,4 @@ b(E, 'defaultProps', {
     isHorizontal: !1,
     isEmbed: !1
 });
-let y = E;
+let x = E;

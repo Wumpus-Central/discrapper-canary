@@ -17,16 +17,16 @@ function a(e) {
         renderThreadAccessory: p,
         renderSuppressEmbeds: m,
         renderReactions: f,
-        forceAddReactions: _,
+        forceAddReactions: g,
         disableComponentInteractivity: h,
-        className: g
+        className: _
     } = e;
     return u
         ? null
         : (0, r.jsx)(i.Z, {
               message: t,
               children: (0, r.jsx)(l.ZP, {
-                  className: g,
+                  className: _,
                   isInteracting: c,
                   message: t,
                   channel: n,
@@ -37,7 +37,7 @@ function a(e) {
                   renderThreadAccessory: p,
                   disableComponentInteractivity: h,
                   renderSuppressEmbeds: m,
-                  forceAddReactions: _,
+                  forceAddReactions: g,
                   renderReactions: f
               })
           });

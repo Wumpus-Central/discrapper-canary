@@ -12,18 +12,18 @@ var r = n(255367),
 function m(e) {
     let { questId: t } = e,
         { quests: n, excludedQuests: m, isFetchingCurrentQuests: f } = (0, a.J2)({ fetchPolicy: 'cache-or-network' }),
-        _ = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
+        g = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
         h = i.useMemo(() => m.find((e) => e.id === t), [t, m]);
     return f
         ? (0, r.jsx)(l.$jN, { className: p.spinner })
         : null != h
           ? (0, r.jsx)(u.W, { questId: t })
-          : null == _
+          : null == g
             ? (0, r.jsx)(d.o, {
                   questId: t,
                   reason: d.X.NOT_FOUND
               })
-            : (0, s.HJ)(_)
+            : (0, s.HJ)(g)
               ? (0, r.jsx)(d.o, {
                     questId: t,
                     reason: d.X.MOBILE_ONLY
@@ -31,10 +31,10 @@ function m(e) {
               : (0, r.jsx)(
                     c.Z,
                     {
-                        quest: _,
+                        quest: g,
                         location: o.jn.QUESTS_EMBED,
                         sourceQuestContent: o.jn.QUESTS_EMBED
                     },
-                    _.id
+                    g.id
                 );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { H: () => y }), n(953529));
+(n.d(t, { H: () => x }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -12,29 +12,29 @@ var i = n(399606),
     p = n(863663),
     m = n(676651),
     f = n(623488),
-    _ = n(942833),
+    g = n(942833),
     h = n(391181),
-    g = n(964793),
+    _ = n(964793),
     b = n(226060),
     E = n(981631);
-function y(e) {
-    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: C = !0, hideRoleTag: x = !1, lineClamp: v = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
+function x(e) {
+    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: C = !0, hideRoleTag: v = !1, lineClamp: y = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
         N = (0, i.e7)([c.Z], () => c.Z.getGuild(n), [n]),
         P = (0, i.e7)([s.Z], () => {
             var e;
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : E.lds);
         }),
         A = (0, l.U)(t, 600),
-        w = (0, _.C)(t),
+        w = (0, g.C)(t),
         Z = (0, d.SO)(N),
         { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
-        L = (0, _.k)(t);
+        k = (0, g.k)(t);
     if (null == N || R) return null;
-    let k = () =>
-            (0, g.e)({
+    let L = () =>
+            (0, _.e)({
                 guildId: n,
                 guildProductListingId: t.id,
-                analyticsLocation: y
+                analyticsLocation: x
             }),
         D = (0, r.jsx)(h.m, {
             product: t,
@@ -66,21 +66,21 @@ function y(e) {
             imageUrl: A,
             name: t.name,
             description: t.description,
-            formattedPrice: L,
+            formattedPrice: k,
             role: P,
             ctaComponent: (0, r.jsx)(b.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
-                sourceAnalyticsLocations: y
+                sourceAnalyticsLocations: x
             }),
             productType: w,
             shouldShowFullDescriptionButton: C,
-            onShowFullDescription: k,
-            onTapCard: k,
+            onShowFullDescription: L,
+            onTapCard: L,
             actionMenu: D,
             showOpaqueBackground: T,
-            hideRoleTag: x,
-            lineClamp: v,
+            hideRoleTag: v,
+            lineClamp: y,
             cardWidth: O,
             cardHeight: j,
             thumbnailHeight: I,

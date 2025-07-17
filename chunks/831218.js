@@ -457,10 +457,9 @@ class G extends (r = l.Component) {
 }
 L(G, 'defaultProps', { padding: 8 });
 let B = (e) => {
-    var t;
-    let { density: n } = (0, h.TCT)(),
-        { version: r, theme: o, children: s, showDMHeader: d } = e,
-        p = l.Children.count(s),
+    let { density: t } = (0, h.TCT)(),
+        { version: n, theme: r, children: o, showDMHeader: s, listScrollerRef: d } = e,
+        p = l.Children.count(o),
         m = w.Z.getMutablePrivateChannels(),
         _ = (0, I.k1)(m),
         O = (0, u.Wu)(
@@ -473,16 +472,20 @@ let B = (e) => {
         );
     (0, E.z)(j.R);
     let { analyticsLocations: y } = (0, b.ZP)(g.Z.CONTACTS_LIST),
-        v = (0, u.cj)([f.Z, N.Z, w.Z], () => ({
-            theme: N.Z.darkSidebar ? A.BRd.DARK : o,
+        {
+            theme: v,
+            keyboardModeEnabled: x,
+            version: Z
+        } = (0, u.cj)([f.Z, N.Z, w.Z], () => ({
+            theme: N.Z.darkSidebar ? A.BRd.DARK : r,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
-            version: null != r ? ''.concat(r, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
+            version: null != n ? ''.concat(n, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
-        x = l.useRef(null),
-        Z = null != (t = e.listScrollerRef) ? t : x,
-        R = l.useCallback(
+        R = l.useRef(null),
+        D = null != d ? d : R,
+        L = l.useCallback(
             (e) => {
-                let t = Z.current,
+                let t = D.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -496,21 +499,21 @@ let B = (e) => {
                         }
                     });
             },
-            [Z]
+            [D]
         ),
-        D = l.useCallback(
+        U = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = Z.current;
+                    let t = D.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [Z]
+            [D]
         ),
-        L = l.useCallback(
+        B = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = Z.current;
+                    let t = D.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -518,40 +521,31 @@ let B = (e) => {
                         }
                     });
                 }),
-            [Z]
+            [D]
         ),
-        U = (0, C.Dt)(),
-        B = (0, c.ZP)({
-            id: 'private-channels-'.concat(U),
-            isEnabled: v.keyboardModeEnabled,
-            scrollToStart: D,
-            scrollToEnd: L,
-            defaultFocused: (p + +!!d).toString(),
-            setFocus: R
+        V = (0, C.Dt)(),
+        F = (0, c.ZP)({
+            id: 'private-channels-'.concat(V),
+            isEnabled: x,
+            scrollToStart: U,
+            scrollToEnd: B,
+            defaultFocused: (p + +!!s).toString(),
+            setFocus: L
         });
     return (0, i.jsx)(b.Gt, {
         value: y,
         children: (0, i.jsx)(a.bG, {
-            navigator: B,
+            navigator: F,
             children: (0, i.jsx)(
                 G,
-                M(
-                    k(
-                        M(
-                            {
-                                density: n,
-                                channels: _,
-                                privateChannelIds: O,
-                                listRef: Z,
-                                theme: o,
-                                version: r
-                            },
-                            e
-                        ),
-                        { children: s }
-                    ),
-                    v
-                )
+                k(M({}, e), {
+                    density: t,
+                    channels: _,
+                    privateChannelIds: O,
+                    listRef: D,
+                    theme: v,
+                    version: Z
+                })
             )
         })
     });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(539854));
+(n.d(t, { Z: () => x }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -11,23 +11,23 @@ var r = n(255367),
     p = n(131704),
     m = n(592125),
     f = n(594174),
-    _ = n(823379),
+    g = n(823379),
     h = n(358595),
-    g = n(981631),
+    _ = n(981631),
     b = n(388032),
     E = n(273254);
-function y(e) {
+function x(e) {
     let t,
-        { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: C, onAcceptInstantInvite: x } = e,
-        v = y === l.author.id,
-        O = n.state === g.r2o.ACCEPTING,
+        { invite: n, message: l, currentUserId: x, onTransitionToInviteChannel: C, onAcceptInstantInvite: v } = e,
+        y = x === l.author.id,
+        O = n.state === _.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     a()(null == j || j.isPrivate(), 'must be a private channel');
     let { analyticsLocations: I } = (0, u.ZP)(c.Z.INVITE_EMBED),
         S = null != j,
         T = i.useCallback(() => {
             let e = 'noop';
-            (S ? (C(), (e = 'transition')) : (x(), (e = 'accept')),
+            (S ? (C(), (e = 'transition')) : (v(), (e = 'accept')),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,7 +37,7 @@ function y(e) {
                     },
                     I
                 ));
-        }, [n, l, I, S, C, x]);
+        }, [n, l, I, S, C, v]);
     if (null == j) {
         if (null == n.channel) return (0, r.jsx)(h.Z, {});
         ((j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
@@ -54,7 +54,7 @@ function y(e) {
         (N =
             t.length > 0
                 ? t
-                      .filter(_.lm)
+                      .filter(g.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : b.intl.string(b.t.LJpTRE));
@@ -63,7 +63,7 @@ function y(e) {
     S && ((P = b.intl.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
     let w = b.intl.string(b.t['3p3/BA']);
     return (
-        v && (w = b.intl.string(b.t.qmtuXF)),
+        y && (w = b.intl.string(b.t.qmtuXF)),
         (0, r.jsxs)(d.Z, {
             children: [
                 (0, r.jsx)(d.Z.Header, { text: w }),

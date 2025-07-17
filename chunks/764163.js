@@ -1,29 +1,29 @@
 (n.d(t, {
-    DI: () => E,
-    x3: () => I
+    DI: () => I,
+    x3: () => N
 }),
     n(388685),
-    n(953529));
+    n(953529),
+    n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(512722),
     s = n.n(l),
     a = n(442837),
-    o = n(755721),
+    o = n(82659),
     c = n(481060),
     d = n(596454),
-    u = n(600164),
-    m = n(313201),
-    g = n(318766),
-    p = n(907040),
-    f = n(339085),
-    h = n(633302),
-    x = n(984933),
-    b = n(691886),
-    j = n(185923),
-    _ = n(388032),
-    v = n(656147);
-function O(e) {
+    u = n(313201),
+    m = n(318766),
+    g = n(907040),
+    p = n(339085),
+    f = n(633302),
+    h = n(984933),
+    x = n(691886),
+    b = n(185923),
+    j = n(388032),
+    _ = n(656147);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function O(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,17 +66,17 @@ function C(e, t) {
         e
     );
 }
-function y(e) {
+function C(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
         o = i.useRef(null),
-        u = (0, a.e7)([f.ZP], () => (null != n.id ? f.ZP.getCustomEmojiById(n.id) : void 0)),
-        m = (0, a.e7)([x.ZP], () => x.ZP.getDefaultChannel(t)),
-        b = i.useCallback(
+        u = (0, a.e7)([p.ZP], () => (null != n.id ? p.ZP.getCustomEmojiById(n.id) : void 0)),
+        x = (0, a.e7)([h.ZP], () => h.ZP.getDefaultChannel(t)),
+        C = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(p.Z, {
-                    pickerIntention: j.Hz.GUILD_ROLE_BENEFIT_EMOJI,
-                    channel: m,
+                return (0, r.jsx)(g.Z, {
+                    pickerIntention: b.Hz.GUILD_ROLE_BENEFIT_EMOJI,
+                    channel: x,
                     closePopout: t,
                     onNavigateAway: t,
                     onSelectEmoji: (e) => {
@@ -97,7 +97,7 @@ function y(e) {
                     }
                 });
             },
-            [s, m]
+            [s, x]
         ),
         y = i.useMemo(
             () =>
@@ -105,7 +105,7 @@ function y(e) {
                     ? null
                     : function () {
                           return (0, r.jsx)(d.Z, {
-                              className: v.emoji,
+                              className: _.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: null == u ? void 0 : u.animated
@@ -115,35 +115,35 @@ function y(e) {
         ),
         N = '';
     return (
-        null != u ? (N = ':'.concat(u.name, ':')) : null != n.name && (N = h.ZP.convertSurrogateToName(n.name)),
+        null != u ? (N = ':'.concat(u.name, ':')) : null != n.name && (N = f.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(c.yRy, {
             targetElementRef: o,
             animation: c.yRy.Animation.NONE,
             position: 'top',
-            renderPopout: b,
+            renderPopout: C,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, r.jsxs)(
                     'div',
-                    C(
-                        O(
+                    O(
+                        v(
                             {
                                 ref: o,
-                                className: v.emojiInputContainer
+                                className: _.emojiInputContainer
                             },
                             e
                         ),
                         {
                             children: [
-                                (0, r.jsx)(g.Z, {
-                                    className: v.emojiButton,
+                                (0, r.jsx)(m.Z, {
+                                    className: _.emojiButton,
                                     active: n,
                                     tabIndex: 0,
                                     renderButtonContents: y
                                 }),
                                 (0, r.jsx)(c.oil, {
-                                    inputClassName: v.emojiText,
-                                    placeholder: _.intl.string(_.t.qJPLNT),
+                                    inputClassName: _.emojiText,
+                                    placeholder: j.intl.string(j.t.qJPLNT),
                                     value: N,
                                     'aria-labelledby': l,
                                     readOnly: !0
@@ -156,133 +156,104 @@ function y(e) {
         })
     );
 }
-function N(e) {
+function y(e) {
     var t;
-    let { guildId: n, initialData: l, benefitTypeInput: s, descriptionPlaceholder: a, canSubmit: d, onSave: g, onDelete: p, transitionState: f, onClose: h } = e,
-        x = (0, m.Dt)(),
-        b = (0, m.Dt)(),
-        j = (0, m.Dt)(),
-        [O, C] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
-        [N, I] = i.useState(() => ({
+    let { guildId: n, initialData: l, benefitTypeInput: s, descriptionPlaceholder: a, canSubmit: d, onSave: m, onDelete: g, transitionState: p, onClose: f } = e,
+        h = (0, u.Dt)(),
+        x = (0, u.Dt)(),
+        [b, _] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
+        [v, O] = i.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name
         })),
-        E = d && '' !== O && (null != N.id || null != N.name);
-    return (0, r.jsx)('form', {
-        onSubmit: function (e) {
-            (e.preventDefault(),
-                E &&
-                    (g({
-                        description: O,
-                        emojiId: N.id,
-                        emojiName: N.name
-                    }),
-                    h()));
-        },
-        children: (0, r.jsxs)(c.Y0X, {
-            transitionState: f,
-            'aria-labelledby': x,
-            parentComponent: 'EditBenefitModal',
-            children: [
-                (0, r.jsxs)(c.xBx, {
-                    children: [
-                        (0, r.jsx)(c.X6q, {
-                            id: x,
-                            variant: 'heading-md/semibold',
-                            children: _.intl.string(_.t['2qf9EB'])
-                        }),
-                        (0, r.jsx)(c.olH, {
-                            className: v.closeButton,
-                            onClick: h
-                        })
-                    ]
+        y = d && '' !== b && (null != v.id || null != v.name);
+    function N(e) {
+        (e.preventDefault(),
+            y &&
+                (m({
+                    description: b,
+                    emojiId: v.id,
+                    emojiName: v.name
                 }),
-                (0, r.jsxs)(c.hzk, {
-                    className: v.modalContent,
+                f()));
+    }
+    let I = [
+        {
+            text: j.intl.string(j.t['ETE/oK']),
+            variant: 'secondary',
+            onClick: f
+        }
+    ];
+    return (
+        null != g &&
+            I.push({
+                text: j.intl.string(j.t.oyYWHB),
+                variant: 'critical-secondary',
+                onClick: () => {
+                    (g(), f());
+                },
+                icon: c.XHJ
+            }),
+        I.push({
+            text: null == l ? j.intl.string(j.t.OYkgVl) : j.intl.string(j.t.R3BPHx),
+            variant: 'primary',
+            onClick: N,
+            disabled: !y
+        }),
+        (0, r.jsx)('form', {
+            onSubmit: N,
+            children: (0, r.jsx)(o.u, {
+                transitionState: p,
+                onClose: f,
+                title: j.intl.string(j.t['2qf9EB']),
+                actions: I,
+                children: (0, r.jsxs)(c.Kqy, {
+                    gap: 'md',
                     children: [
                         s,
-                        (0, r.jsx)(c.LZC, { size: 24 }),
                         (0, r.jsx)(c.hjN, {
-                            title: _.intl.string(_.t['1Ts7QE']),
-                            titleId: b,
+                            title: j.intl.string(j.t['1Ts7QE']),
+                            titleId: h,
                             children: (0, r.jsx)(c.Kx8, {
                                 placeholder: a,
-                                value: O,
+                                value: b,
                                 rows: 1,
                                 autosize: !0,
-                                onChange: C,
-                                'aria-labelledby': b
+                                onChange: _,
+                                'aria-labelledby': h
                             })
                         }),
-                        (0, r.jsx)(c.LZC, { size: 24 }),
                         (0, r.jsx)(c.hjN, {
-                            title: _.intl.string(_.t.sMOuub),
-                            titleId: j,
-                            children: (0, r.jsx)(y, {
+                            title: j.intl.string(j.t.sMOuub),
+                            titleId: x,
+                            children: (0, r.jsx)(C, {
                                 guildId: n,
-                                emojiData: N,
-                                onSelectEmoji: I,
-                                'aria-labelledby': j
+                                emojiData: v,
+                                onSelectEmoji: O,
+                                'aria-labelledby': x
                             })
-                        })
-                    ]
-                }),
-                (0, r.jsxs)(c.mzw, {
-                    justify: u.Z.Justify.BETWEEN,
-                    children: [
-                        (0, r.jsxs)('div', {
-                            className: v.primaryButtons,
-                            children: [
-                                (0, r.jsx)(c.zxk, {
-                                    variant: 'primary',
-                                    text: null == l ? _.intl.string(_.t.OYkgVl) : _.intl.string(_.t.R3BPHx),
-                                    type: 'submit',
-                                    disabled: !E
-                                }),
-                                null != p &&
-                                    (0, r.jsx)(o.zx, {
-                                        look: o.zx.Looks.BLANK,
-                                        size: o.zx.Sizes.ICON,
-                                        className: v.deleteButton,
-                                        onClick: () => {
-                                            (p(), h());
-                                        },
-                                        children: (0, r.jsx)(c.XHJ, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            'aria-label': _.intl.string(_.t.oyYWHB)
-                                        })
-                                    })
-                            ]
-                        }),
-                        (0, r.jsx)(o.zx, {
-                            look: o.zx.Looks.LINK,
-                            color: o.zx.Colors.PRIMARY,
-                            className: v.cancelButton,
-                            onClick: h,
-                            children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
                 })
-            ]
+            })
         })
-    });
+    );
 }
-function I(e) {
-    let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: o, transitionState: d, onClose: u } = e,
+function N(e) {
+    let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: o, transitionState: d, onClose: m } = e,
         [g, p] = i.useState(null == l ? void 0 : l.ref_id),
-        f = (0, m.Dt)(),
+        f = (0, u.Dt)(),
         h = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Wn, {
                     messageType: c.QYI.WARNING,
-                    children: _.intl.string(_.t.xunxCg)
+                    children: j.intl.string(j.t.xunxCg)
                 }),
                 (0, r.jsx)(c.LZC, { size: 24 }),
                 (0, r.jsx)(c.hjN, {
-                    title: _.intl.string(_.t.GK18KC),
+                    title: j.intl.string(j.t.GK18KC),
                     titleId: f,
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(x.Z, {
                         guildId: t,
                         value: g,
                         initialChannelId: null == l ? void 0 : l.ref_id,
@@ -295,30 +266,30 @@ function I(e) {
                 })
             ]
         });
-    return (0, r.jsx)(N, {
+    return (0, r.jsx)(y, {
         guildId: t,
         initialData: l,
         benefitTypeInput: h,
-        descriptionPlaceholder: _.intl.string(_.t.J8O1Li),
+        descriptionPlaceholder: j.intl.string(j.t.J8O1Li),
         canSubmit: null != g,
         onSave: function (e) {
-            (s()(null != g, 'Cannot submit null channel'), a(C(O({}, e), { channelId: g })));
+            (s()(null != g, 'Cannot submit null channel'), a(O(v({}, e), { channelId: g })));
         },
         transitionState: d,
-        onClose: u,
+        onClose: m,
         onDelete: o
     });
 }
-function E(e) {
+function I(e) {
     var t;
-    let { initialData: n, onSave: l, transitionState: a, onClose: o, onDelete: d, guildId: u } = e,
+    let { initialData: n, onSave: l, transitionState: a, onClose: o, onDelete: d, guildId: m } = e,
         [g, p] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ''),
-        f = (0, m.Dt)(),
+        f = (0, u.Dt)(),
         h = (0, r.jsx)(c.hjN, {
-            title: _.intl.string(_.t.NPOJra),
+            title: j.intl.string(j.t.NPOJra),
             titleId: f,
             children: (0, r.jsx)(c.Kx8, {
-                placeholder: _.intl.string(_.t.NPOJra),
+                placeholder: j.intl.string(j.t.NPOJra),
                 value: g,
                 rows: 1,
                 onChange: function (e) {
@@ -327,14 +298,14 @@ function E(e) {
                 'aria-labelledby': f
             })
         });
-    return (0, r.jsx)(N, {
-        guildId: u,
+    return (0, r.jsx)(y, {
+        guildId: m,
         initialData: n,
         benefitTypeInput: h,
-        descriptionPlaceholder: _.intl.string(_.t.ucP4Tk),
+        descriptionPlaceholder: j.intl.string(j.t.ucP4Tk),
         canSubmit: '' !== g,
         onSave: function (e) {
-            (s()('' !== g, 'Cannot submit empty name'), l(C(O({}, e), { name: g })));
+            (s()('' !== g, 'Cannot submit empty name'), l(O(v({}, e), { name: g })));
         },
         transitionState: a,
         onClose: o,

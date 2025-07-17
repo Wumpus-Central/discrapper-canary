@@ -1,10 +1,10 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => O });
 var r,
     i,
     l = n(255367),
-    a = n(73800),
-    o = n(120356),
-    c = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    c = n.n(a),
     s = n(481060),
     u = n(388032),
     d = n(108921);
@@ -12,7 +12,7 @@ let _ = {
     BLOCK: d.block,
     INLINE: d.inline
 };
-class E extends (i = a.PureComponent) {
+class E extends (i = o.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
         return (0, l.jsxs)('div', {
@@ -43,4 +43,4 @@ class E extends (i = a.PureComponent) {
           writable: !0
       })
     : (E[r] = _);
-let I = E;
+let O = E;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(477690),
@@ -11,9 +11,9 @@ var r = n(255367),
     p = n(453070),
     m = n(373228),
     f = n(419922),
-    _ = n(217588),
+    g = n(217588),
     h = n(981631),
-    g = n(474936),
+    _ = n(474936),
     b = n(282940);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -40,7 +40,7 @@ function E(e) {
     }
     return e;
 }
-function y(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,22 +59,22 @@ function y(e, t) {
     );
 }
 let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    x = (e) => {
+    v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                type: g.cd.STICKER_IN_MESSAGE_HOVER,
+                type: _.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, m.aQ)(e.format_type),
                 is_custom: (0, m.z)(e.type)
             });
     },
-    v = (e) => {
+    y = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: l } = e,
             s = i.useRef(null),
             [d, m] = i.useState(!0),
-            [h, g] = i.useState(String(Date.now())),
-            [v] = (0, p.XW)(t, l),
+            [h, _] = i.useState(String(Date.now())),
+            [y] = (0, p.XW)(t, l),
             { analyticsLocations: O } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             j = (0, r.jsxs)('span', {
                 className: b.stickerName,
@@ -84,7 +84,7 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         color: 'currentColor',
                         className: b.stickerIcon
                     }),
-                    (null != v ? v : t).name
+                    (null != y ? y : t).name
                 ]
             });
         return (0, r.jsx)(c.Gt, {
@@ -98,11 +98,11 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 },
                 renderPopout: (e) =>
                     (0, r.jsx)(
-                        _.Z,
-                        y(E({}, e), {
+                        g.Z,
+                        x(E({}, e), {
                             renderableSticker: t,
                             channel: n,
-                            refreshPositionKey: () => g(String(Date.now()))
+                            refreshPositionKey: () => _(String(Date.now()))
                         })
                     ),
                 targetElementRef: s,
@@ -110,17 +110,17 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                     let { onClick: n } = e;
                     return (0, r.jsx)(
                         a.ua7,
-                        y(E({}, u.b_), {
+                        x(E({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(j),
                             'aria-label': !1,
                             onTooltipShow: () => {
-                                x(v);
+                                v(y);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
                                     a.P3F,
-                                    y(E({}, e), {
+                                    x(E({}, e), {
                                         innerRef: s,
                                         className: b.clickableSticker,
                                         onClick: (e) => {
@@ -130,7 +130,7 @@ let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
                                             size: C,
-                                            sticker: null != v ? v : t
+                                            sticker: null != y ? y : t
                                         })
                                     })
                                 )

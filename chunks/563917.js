@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(955415);
 let u = (e) => {
     let { invite: t, stageInstance: n, guild: u, message: d, isMember: p, onTransitionToInviteChannel: m, onAcceptInstantInvite: f } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(a.Z.INVITE_EMBED),
+        { analyticsLocations: g } = (0, o.ZP)(a.Z.INVITE_EMBED),
         h = i.useCallback(() => {
             let e = 'noop';
             (p ? (m(), (e = 'transition')) : (f(), (e = 'accept')),
@@ -19,9 +19,9 @@ let u = (e) => {
                         inviter_id: d.author.id,
                         invite_message_id: d.id
                     },
-                    _
+                    g
                 ));
-        }, [t, d, _, p, m, f]);
+        }, [t, d, g, p, m, f]);
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Z, {
             isEmbed: !0,

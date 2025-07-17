@@ -19,9 +19,9 @@ function u(e) {
 function d(e) {
     let { guildId: t, children: n, refetchOnMount: u, includeSoftDeleted: d, countryCode: p, dontFetchWhileTrue: m } = e,
         f = (0, l.e7)([a.Z], () => a.Z.isConnected()),
-        _ = (0, l.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
+        g = (0, l.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
         h = i.useRef(u),
-        g = i.useCallback(() => {
+        _ = i.useCallback(() => {
             if (null == t || !f || !0 === m) return;
             let e = s.Z.getSubscriptionGroupListingsForGuildFetchState(t);
             (h.current || e === s.M.NOT_FETCHED) &&
@@ -31,11 +31,11 @@ function d(e) {
                     countryCode: p
                 }));
         }, [f, t, d, p, m]),
-        b = i.useMemo(() => _ === s.M.FETCHED && !0 !== h.current, [_, h]);
+        b = i.useMemo(() => g === s.M.FETCHED && !0 !== h.current, [g, h]);
     return (0, r.jsx)(c.Provider, {
         value: {
             listingsLoaded: b,
-            fetchGroupListingsForGuild: g
+            fetchGroupListingsForGuild: _
         },
         children: n
     });

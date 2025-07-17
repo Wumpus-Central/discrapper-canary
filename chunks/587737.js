@@ -9,12 +9,12 @@ function o(e) {
         p = (0, i.ZP)(t),
         m = (0, i.Sw)(s, o),
         f = c(p),
-        _ = u(null != m ? m : void 0),
+        g = u(null != m ? m : void 0),
         h = a.intl.format(a.t.tusv2t, {
             actorName: p.nick,
             actorHook: f,
             targetName: null == m ? void 0 : m.nick,
-            targetHook: _
+            targetHook: g
         });
     return (0, r.jsx)(l.Z, {
         icon: n(570111),

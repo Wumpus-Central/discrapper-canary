@@ -1,95 +1,95 @@
-n.d(t, {
-    ZP: () => b,
+r.d(t, {
+    ZP: () => _,
     fO: () => m,
     sF: () => g
 });
-var r = n(255367),
-    s = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(481060),
-    i = n(377171),
-    c = n(951394),
-    u = n(407477),
-    d = n(388032),
-    h = n(852747);
+var n = r(255367),
+    s = r(73800),
+    l = r(120356),
+    a = r.n(l),
+    i = r(481060),
+    o = r(377171),
+    c = r(951394),
+    u = r(407477),
+    d = r(388032),
+    h = r(852747);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r));
+                        : (e[t] = n));
             }));
     }
     return e;
 }
 function f(e, t) {
     if (null == e) return {};
-    var n,
-        r,
+    var r,
+        n,
         s = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 s = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
+            for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (s[r] = e[r]));
             return s;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
+        for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]));
     }
     return s;
 }
 let g = s.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: s, tooltipText: l, tooltipColor: g, icon: m, iconProps: b, onClick: y, onTooltipShow: S, onTooltipHide: x, disabled: j, dangerous: O, separator: v, sparkle: _, showNewBadge: E, buttonClassName: C, children: I } = e,
+    var { label: r, ariaLabel: s, tooltipText: l, tooltipColor: g, icon: m, iconProps: _, onClick: S, onTooltipShow: y, onTooltipHide: b, disabled: x, dangerous: E, separator: C, sparkle: O, showNewBadge: I, buttonClassName: v, children: j } = e,
         R = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
-    let { canShowReactionsOnMessageHover: P } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { canShowReactionsOnMessageHover: T } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         u.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
-        (0, r.jsx)(o.ua7, {
-            text: null != l ? l : n,
-            color: null != g ? g : o.FGA.PRIMARY,
-            'aria-label': n,
-            onTooltipShow: S,
-            onTooltipHide: x,
+        (0, n.jsx)(i.ua7, {
+            text: null != l ? l : r,
+            color: null != g ? g : i.FGA.PRIMARY,
+            'aria-label': r,
+            onTooltipShow: y,
+            onTooltipHide: b,
             hideOnClick: !0,
             tooltipClassName: h.tooltip,
             children: (e) => {
                 var l, u;
-                let { onMouseEnter: f, onMouseLeave: g, onClick: S } = e;
-                return (0, r.jsxs)(r.Fragment, {
+                let { onMouseEnter: f, onMouseLeave: g, onClick: y } = e;
+                return (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, r.jsxs)(
+                        (0, n.jsxs)(
                             c.zx,
                             ((l = p(
                                 {
                                     ref: t,
-                                    className: a()(C, { [h.hoverBarButton]: P }),
+                                    className: a()(v, { [h.hoverBarButton]: T }),
                                     onMouseEnter: f,
                                     onMouseLeave: g,
                                     onClick: (e) => {
-                                        (null == S || S(), y(e));
+                                        (null == y || y(), S(e));
                                     },
-                                    'aria-label': null != s ? s : n,
-                                    disabled: j,
-                                    dangerous: O
+                                    'aria-label': null != s ? s : r,
+                                    disabled: x,
+                                    dangerous: E
                                 },
                                 R
                             )),
@@ -97,28 +97,28 @@ let g = s.forwardRef(function (e, t) {
                                 {
                                     children: [
                                         null != m
-                                            ? (0, r.jsx)(
+                                            ? (0, n.jsx)(
                                                   m,
                                                   p(
                                                       {
                                                           className: h.icon,
                                                           color: 'currentColor'
                                                       },
-                                                      b
+                                                      _
                                                   )
                                               )
                                             : null,
-                                        null != I
-                                            ? (0, r.jsx)('div', {
+                                        null != j
+                                            ? (0, n.jsx)('div', {
                                                   className: a()(h.icon, h.buttonContent),
-                                                  children: I
+                                                  children: j
                                               })
                                             : null,
-                                        _ && (0, r.jsx)(o.K1N, {}),
-                                        E &&
-                                            (0, r.jsx)(o.IGR, {
+                                        O && (0, n.jsx)(i.K1N, {}),
+                                        I &&
+                                            (0, n.jsx)(i.IGR, {
                                                 text: d.intl.string(d.t.y2b7CA),
-                                                color: i.Z.BG_BRAND,
+                                                color: o.Z.BG_BRAND,
                                                 className: h.newBadge
                                             })
                                     ]
@@ -126,18 +126,18 @@ let g = s.forwardRef(function (e, t) {
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(u))
                                 : (function (e, t) {
-                                      var n = Object.keys(e);
+                                      var r = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          r.push.apply(r, n);
                                       }
-                                      return n;
+                                      return r;
                                   })(Object(u)).forEach(function (e) {
                                       Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(u, e));
                                   }),
                             l)
                         ),
-                        v && (0, r.jsx)(c.Z0, {})
+                        C && (0, n.jsx)(c.Z0, {})
                     ]
                 });
             }
@@ -146,16 +146,16 @@ let g = s.forwardRef(function (e, t) {
 });
 function m(e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: a()(h.separator, t) });
+    return (0, n.jsx)('div', { className: a()(h.separator, t) });
 }
-function b(e) {
+function _(e) {
     var { children: t } = e,
-        n = f(e, ['children']);
+        r = f(e, ['children']);
     let { canShowReactionsOnMessageHover: s } = u.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (
         u.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
-        (0, r.jsx)(c.ZP, {
-            className: a()(n.className, h.popover, { [h.popoverReactionHoverBar]: s }),
+        (0, n.jsx)(c.ZP, {
+            className: a()(r.className, h.popover, { [h.popoverReactionHoverBar]: s }),
             children: t
         })
     );

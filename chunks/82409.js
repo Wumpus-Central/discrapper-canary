@@ -220,8 +220,7 @@ function L(e, t, n) {
 }
 function M(e) {
     let { hideBanner: t } = e,
-        n = (0, a.e7)([j.Z], () => j.Z.shouldHide),
-        [l, s] = (0, i.useState)(!1);
+        n = (0, a.e7)([j.Z], () => j.Z.shouldHide);
     return (0, r.jsx)('div', {
         className: o()(Z.caughtUpContainer, { [Z.hide]: n || t }),
         children: (0, r.jsxs)('div', {
@@ -236,14 +235,6 @@ function M(e) {
                 (0, r.jsx)(c.W6s, {
                     size: 'sm',
                     color: u.Z.TEXT_FEEDBACK_POSITIVE
-                }),
-                (0, r.jsx)(c.Dio, {
-                    size: 'sm',
-                    onMouseEnter: () => s(!0),
-                    onMouseLeave: () => s(!1),
-                    className: Z.caughtUpCloseIcon,
-                    color: l ? u.Z.CONTROL_ICON_SECONDARY_HOVER : u.Z.ICON_TERTIARY,
-                    onClickCapture: () => j.Z.dismiss()
                 })
             ]
         })

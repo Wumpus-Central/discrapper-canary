@@ -11,21 +11,21 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    _ = n(411198),
+    g = n(411198),
     h = n(277707),
-    g = n(358595),
+    _ = n(358595),
     b = n(981631),
     E = n(388032),
-    y = n(273254);
+    x = n(273254);
 function C(e) {
-    var t, C, x;
-    let v,
+    var t, C, v;
+    let y,
         O,
         j,
         { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
-        k = N.state === b.r2o.ACCEPTING,
+        { channel: Z, approximate_member_count: R, approximate_presence_count: k } = N,
+        L = N.state === b.r2o.ACCEPTING,
         D = null != Z ? (0, m.jD)(Z) : null,
         M = null != T,
         U = null != D,
@@ -55,8 +55,8 @@ function C(e) {
                 ));
         }, [N, P, z, M, I, S]);
     if (null == T) {
-        if (null == N.guild) return (0, r.jsx)(g.Z, {});
-        (T = _.Qs(N.guild)).premiumTier = null != (x = N.guild.premium_tier) ? x : b.Eu4.NONE;
+        if (null == N.guild) return (0, r.jsx)(_.Z, {});
+        (T = g.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
     }
     let J = (0, h.e)({
         isVoiceChannel: F,
@@ -68,7 +68,7 @@ function C(e) {
     });
     return (
         (O = (0, r.jsxs)('span', {
-            className: y.infoTitle,
+            className: x.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
                     guildId: T.id,
@@ -83,7 +83,7 @@ function C(e) {
                         })
                 }),
                 (0, r.jsx)('span', {
-                    className: y.infoBadge,
+                    className: x.infoBadge,
                     children: (0, r.jsx)(d.Z, {
                         guild: T,
                         isBannerVisible: !1,
@@ -94,22 +94,22 @@ function C(e) {
         })),
         G &&
             (j = (0, r.jsx)(a.DY3, {
-                className: y.tooltipContainer,
+                className: x.tooltipContainer,
                 text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: y.infoIcon
+                    className: x.infoIcon
                 })
             })),
         F
             ? ((O = (0, r.jsx)(p.Z.Channel, { channel: D })),
-              (v = (0, r.jsxs)('span', {
-                  className: y.infoTitle,
+              (y = (0, r.jsxs)('span', {
+                  className: x.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
-                          className: y.infoBadge,
+                          className: x.infoBadge,
                           children: (0, r.jsx)(d.Z, {
                               guild: T,
                               isBannerVisible: !1
@@ -117,13 +117,13 @@ function C(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != L && L > 0)
-              ? (v = (0, r.jsx)(p.Z.Data, {
+            : (null != R && R >= 5) || (null != k && k > 0)
+              ? (y = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: L
+                    membersOnline: k
                 }))
               : U &&
-                (v = (0, r.jsx)(p.Z.Channel, {
+                (y = (0, r.jsx)(p.Z.Channel, {
                     channel: D,
                     guild: T
                 })),
@@ -137,19 +137,19 @@ function C(e) {
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: y.headerLine,
+                            className: x.headerLine,
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: T }),
                                 (0, r.jsx)(p.Z.Info, {
                                     title: O,
                                     onClick: q,
-                                    children: v
+                                    children: y
                                 })
                             ]
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: k,
+                            submitting: L,
                             color: p.Z.Button.Colors.GREEN,
                             children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
@@ -158,7 +158,7 @@ function C(e) {
                 T.features.has(b.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: y.separator }),
+                            (0, r.jsx)('div', { className: x.separator }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

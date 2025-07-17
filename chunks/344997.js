@@ -37,7 +37,7 @@ function f(e) {
         children: u.intl.string(u.t['8/GdRE'])
     });
 }
-function _(e) {
+function g(e) {
     let { ctaType: t, classificationId: n, learnMoreLink: i } = e;
     switch (t) {
         case c.wo.POLICY_VIOLATION_DETAIL:
@@ -66,7 +66,7 @@ function h(e) {
           })
         : null;
 }
-function g(e) {
+function _(e) {
     let { children: t, theme: n } = e,
         i = {
             default: d.defaultFooterContainer,
@@ -116,14 +116,14 @@ function b(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(g, {
+                  (0, r.jsx)(_, {
                       theme: i.theme,
                       children:
                           null == (t = i.ctas)
                               ? void 0
                               : t.map((e) =>
                                     (0, r.jsx)(
-                                        _,
+                                        g,
                                         {
                                             ctaType: e,
                                             classificationId: i.classification_id,

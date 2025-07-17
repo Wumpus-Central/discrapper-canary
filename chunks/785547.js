@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(415506), n(388685));
+(n.d(t, { Z: () => k }), n(415506), n(388685));
 var r,
     i,
     l = n(255367),
@@ -11,15 +11,15 @@ var r,
     p = n(2052),
     m = n(710845),
     f = n(703656),
-    _ = n(173747),
+    g = n(173747),
     h = n(7956),
-    g = n(293245),
+    _ = n(293245),
     b = n(417363),
     E = n(941128),
-    y = n(780570),
+    x = n(780570),
     C = n(358085),
-    x = n(814225),
-    v = n(346329),
+    v = n(814225),
+    y = n(346329),
     O = n(701560),
     j = n(981631),
     I = n(388032),
@@ -158,9 +158,9 @@ class R extends (r = a.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = y.KJ(t);
+        let n = x.KJ(t);
         if (null == n) return null;
-        let r = n.type === j.vxO.UNINSTALLING ? u.Exd.INDETERMINATE : y.xI(Number(n.progress), Number(n.total));
+        let r = n.type === j.vxO.UNINSTALLING ? u.Exd.INDETERMINATE : x.xI(Number(n.progress), Number(n.total));
         return (0, l.jsx)(u.Exd, {
             percent: r,
             size: u.Exd.Sizes.XSMALL,
@@ -189,7 +189,7 @@ class R extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = x.en(e.sku);
+                    let t = v.en(e.sku);
                     return null != t ? I.intl.formatToPlainString(I.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -211,11 +211,11 @@ class R extends (r = a.Component) {
             }),
             T(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                v.installApplication(e.id, e.branchId, t);
+                y.installApplication(e.id, e.branchId, t);
             }),
             T(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                v.updateApplication(e.id, e.branchId);
+                y.updateApplication(e.id, e.branchId);
             }),
             T(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
@@ -228,12 +228,12 @@ class R extends (r = a.Component) {
             }));
     }
 }
-function L(e) {
+function k(e) {
     let { libraryApplication: t } = e,
         n = (0, p.O)(),
         [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, h.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
-        a = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
-        s = (0, o.e7)([_.Z], () => _.Z.hasNoBuild(t.id, t.branchId), [t]);
+        a = (0, o.e7)([_.Z], () => _.Z.isSyncing(t.id, t.branchId), [t]),
+        s = (0, o.e7)([g.Z], () => g.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, l.jsx)(
         R,
         P(N({}, e), {

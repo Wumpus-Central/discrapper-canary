@@ -12,11 +12,11 @@ function d(e) {
     let { applicationId: t, customId: n, referrerId: d, linkId: p } = e,
         { analyticsLocations: m } = (0, l.ZP)(i.Z.ACTIVITY_BOOKMARK),
         [f] = (0, s.Z)([t]),
-        _ = null != f && (0, a.ye)(f),
-        { data: h, error: g } = (0, c.h)(null == f ? void 0 : f.id, p);
-    return null == f || !1 === _
+        g = null != f && (0, a.ye)(f),
+        { data: h, error: _ } = (0, c.h)(null == f ? void 0 : f.id, p);
+    return null == f || !1 === g
         ? null
-        : null != p && null == g && null != h
+        : null != p && null == _ && null != h
           ? (0, r.jsx)(l.Gt, {
                 value: m,
                 children: (0, r.jsx)(u.b, {

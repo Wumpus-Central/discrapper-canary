@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => H,
-    n: () => k
+    n: () => L
 }),
     n(415506),
     n(388685),
@@ -19,15 +19,15 @@ var r = n(512722),
     p = n(749210),
     m = n(904245),
     f = n(881052),
-    _ = n(367907),
+    g = n(367907),
     h = n(41776),
-    g = n(58873),
+    _ = n(58873),
     b = n(566006),
     E = n(869765),
-    y = n(314897),
+    x = n(314897),
     C = n(592125),
-    x = n(703558),
-    v = n(607744),
+    v = n(703558),
+    y = n(607744),
     O = n(375954),
     j = n(117530),
     I = n(553803),
@@ -94,7 +94,7 @@ function R(e, t) {
         selectedEmojiAnswersCount: i
     };
 }
-function L(e) {
+function k(e) {
     let { guildId: t, title: n, body: r } = e;
     d.Z.show({
         title: n,
@@ -106,12 +106,12 @@ function L(e) {
         }
     });
 }
-function k(e) {
+function L(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
         i = C.Z.getChannel(t);
     if (null == i) return;
     if (h.Z.isLurking(i.guild_id))
-        return void L({
+        return void k({
             guildId: i.guild_id,
             title: A.intl.string(A.t['7LpysL']),
             body: A.intl.string(A.t['5sHHo6'])
@@ -150,7 +150,7 @@ async function U(e) {
         }),
         l = a().difference(i, r),
         o = a().difference(r, i),
-        c = y.default.getId(),
+        c = x.default.getId(),
         d = [
             ...l.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -185,12 +185,12 @@ async function F(e) {
         r = C.Z.getChannel(t);
     if (null == r) return;
     if (h.Z.isLurking(r.guild_id))
-        return void L({
+        return void k({
             guildId: r.guild_id,
             title: A.intl.string(A.t.Qic1FB),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    if (!v.Z.canChatInGuild(r.guild_id))
+    if (!y.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
             title: A.intl.string(A.t.p245ws),
             body: A.intl.string(A.t['U/uodn'])
@@ -251,7 +251,7 @@ async function B(e) {
         r = C.Z.getChannel(t);
     if (null != r)
         return h.Z.isLurking(r.guild_id)
-            ? void L({
+            ? void k({
                   guildId: r.guild_id,
                   title: A.intl.string(A.t.B9QnBg),
                   body: A.intl.string(A.t.BVZCTk)
@@ -308,7 +308,7 @@ async function G(e) {
                                   }, 0)
                                 : 0;
                     return (
-                        _.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                        g.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
                             channel_id: t,
                             message_id: n,
                             show_results: l,
@@ -329,7 +329,7 @@ async function G(e) {
             });
             break;
         case 'showVoterDetails':
-            k({
+            L({
                 channelId: t,
                 messageId: n
             });
@@ -387,7 +387,7 @@ let H = {
             ),
             { tapShouldOpenVotersModal: s } = null != (n = (0, N.Tk)(o)) ? n : {};
         if (!0 === s)
-            return void k({
+            return void L({
                 channelId: l,
                 messageId: a,
                 answerId: r
@@ -399,7 +399,7 @@ let H = {
                 let e = new Set([r]),
                     { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = R(null == (n = o.poll) ? void 0 : n.answers, e);
                 return (
-                    _.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                    g.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                         channel_id: l,
                         message_id: a,
                         selected_answer_ids: t,
@@ -424,7 +424,7 @@ let H = {
             }
             let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = R(null == (t = o.poll) ? void 0 : t.answers, s);
             return (
-                _.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                g.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                     channel_id: l,
                     message_id: a,
                     selected_answer_ids: u,
@@ -440,7 +440,7 @@ let H = {
     handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
-            c = j.Z.getUploads(t.id, x.d.Poll),
+            c = j.Z.getUploads(t.id, v.d.Poll),
             u = r.map((e) => {
                 var t, n;
                 let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),
@@ -469,7 +469,7 @@ let H = {
             (await m.Z.sendPollMessage(t.id, d, {
                 attachmentsToUpload: c,
                 onAttachmentUploadError: (e, n, r) => {
-                    (0, g.A)({
+                    (0, _.A)({
                         file: e,
                         guildId: t.getGuildId(),
                         analyticsLocations: [],

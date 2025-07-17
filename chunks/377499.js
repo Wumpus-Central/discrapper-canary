@@ -9,20 +9,20 @@ function o(e) {
         { message: o, usernameHook: s, otherUser: c, otherUsernameHook: u, compact: d, channel: p } = e,
         m = (0, i.ZP)(o),
         f = m.nick,
-        _ = s(m),
+        g = s(m),
         h = (0, i.Sw)(c, p);
     if (null != h && null != u) {
         let e = u(h);
         t = a.intl.format(a.t.L2FyVl, {
             username: f,
-            usernameHook: _,
+            usernameHook: g,
             otherUsername: h.nick,
             otherUsernameHook: e
         });
     } else
         t = a.intl.format(a.t['5v2xa2'], {
             username: f,
-            usernameHook: _
+            usernameHook: g
         });
     return (0, r.jsx)(l.Z, {
         icon: n(474019),

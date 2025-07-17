@@ -11,15 +11,15 @@ var r = n(255367),
     p = n(914498),
     m = n(515344),
     f = n(944486),
-    _ = n(768581),
+    g = n(768581),
     h = n(566620),
-    g = n(317381),
+    _ = n(317381),
     b = n(574952),
     E = n(374065),
-    y = n(388032);
+    x = n(388032);
 function C(e) {
     var t, n;
-    let { application: C, customId: x, customLink: v, embedUrl: O, referrerId: j } = e,
+    let { application: C, customId: v, customLink: y, embedUrl: O, referrerId: j } = e,
         I = null == C || null == (t = C.bot) ? void 0 : t.id,
         S = (0, c.ms)({
             context: { type: 'contextless' },
@@ -31,37 +31,37 @@ function C(e) {
         { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, E.KF)(A),
-        Z = (0, i.e7)([g.ZP], () => {
+        Z = (0, i.e7)([_.ZP], () => {
             if (null == A) return;
-            let e = g.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === C.id);
+            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === C.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
-        R = (0, i.e7)([g.ZP], () => g.ZP.getCurrentEmbeddedActivity()),
-        L = (0, b.Z)(),
-        k = w === E.jy.CAN_LAUNCH,
-        D = null != x ? x : v.customId,
+        R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        k = (0, b.Z)(),
+        L = w === E.jy.CAN_LAUNCH,
+        D = null != v ? v : y.customId,
         M = [];
-    (k &&
+    (L &&
         M.push({
-            label: null == Z ? y.intl.string(y.t.RscU7O) : y.intl.string(y.t.VJlc0d),
+            label: null == Z ? x.intl.string(x.t.RscU7O) : x.intl.string(x.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, h.G6)({
                     channelId: null != A ? A : void 0,
                     applicationId: C.id,
                     isStart: null == Z,
-                    embeddedActivitiesManager: L,
+                    embeddedActivitiesManager: k,
                     customId: D,
                     referrerId: j,
                     analyticsLocations: P
                 });
             },
-            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
+            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? x.intl.string(x.t.wJNK8P) : void 0
         }),
         N &&
-            !k &&
+            !L &&
             M.push({
-                label: y.intl.string(y.t.JeK1Wl),
+                label: x.intl.string(x.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
@@ -79,14 +79,14 @@ function C(e) {
         onClickContent: U,
         embedUrl: O,
         header: C.name,
-        iconSrc: _.ZP.getApplicationIconURL({
+        iconSrc: g.ZP.getApplicationIconURL({
             id: C.id,
             icon: C.icon,
             bot: C.bot
         }),
-        info: (0, r.jsx)('div', { children: v.description }),
-        staticBannerSrc: v.getAssetURL(),
-        title: v.title,
+        info: (0, r.jsx)('div', { children: y.description }),
+        staticBannerSrc: y.getAssetURL(),
+        title: y.title,
         trackingConfig: {
             id: C.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,

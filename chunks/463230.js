@@ -7,8 +7,8 @@ var r = n(481060),
     s = n(91802),
     a = n(222727),
     c = n(981631),
-    d = n(921944),
-    u = n(388032),
+    u = n(921944),
+    d = n(388032),
     _ = n(131715);
 let h =
     12633 == n.j
@@ -19,12 +19,12 @@ let h =
               if (((0, a.U)(c.jXE.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I)) return null;
               let p = I.countryCode,
                   C = I.currency,
-                  g = I.paymentSourceTypes.length > 0;
+                  O = I.paymentSourceTypes.length > 0;
               return (0, i.jsxs)(r.qXd, {
                   color: E ? r.DM8.BRAND : r.DM8.PREMIUM_TIER_2,
                   children: [
                       (0, i.jsx)(r.RyX, {
-                          onClick: () => h(d.L.UNKNOWN),
+                          onClick: () => h(u.L.UNKNOWN),
                           noticeType: n
                       }),
                       !E &&
@@ -33,13 +33,13 @@ let h =
                               color: 'currentColor',
                               className: _.premiumIcon
                           }),
-                      (0, o.Gv)(p, C, g, E),
+                      (0, o.Gv)(p, C, O, E),
                       (0, i.jsx)(r.NoS, {
                           onClick: () => {
-                              (h(d.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM));
+                              (h(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM));
                           },
                           noticeType: n,
-                          children: u.intl.string(u.t.hvVgAQ)
+                          children: d.intl.string(d.t.hvVgAQ)
                       })
                   ]
               });
