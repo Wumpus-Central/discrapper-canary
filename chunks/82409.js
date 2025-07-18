@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(626415),
+    s = n(104721),
     a = n(442837),
     c = n(481060);
 (n(100527), n(906732));
@@ -96,7 +96,7 @@ function A(e) {
                               {
                                   id: n.id,
                                   channelId: n.channel_id,
-                                  guildId: null == (t = f.Z.getChannel(n.channel_id)) ? void 0 : t.guild_id,
+                                  guildId: null == (t = f.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
                                   kind: P.fL.BOOKMARK,
                                   message: n
                               }
@@ -195,7 +195,7 @@ function R(e, t) {
                       if (t === P.V5.ALL) return !0;
                       if (t === P.V5.MENTIONS) return i === P.fL.MENTION;
                       if (t === P.V5.ANNOUNCEMENTS) {
-                          let e = f.Z.getChannel(r);
+                          let e = f.Z.getBasicChannel(r);
                           return (null == e ? void 0 : e.type) === N.d4z.GUILD_ANNOUNCEMENT;
                       }
                       return !1;

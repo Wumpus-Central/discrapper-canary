@@ -74,7 +74,7 @@ function O() {
                         null == e ||
                         null ==
                             (t = e.filter((t) => {
-                                let n = s.Z.getChannel(t.channel_id);
+                                let n = s.Z.getBasicChannel(t.channel_id);
                                 return (
                                     null != n &&
                                     E({

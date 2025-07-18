@@ -97,17 +97,20 @@ function j(e, t, r) {
         p = e === E.dCx.FILTER_FROM || e === E.dCx.FILTER_MENTIONS;
     if (c === E.aib.GUILD && p) {
         let e = O[r];
-        null == e
-            ? (a = null)
-            : ((null == t || 0 === h.length) &&
-                  (e.results = d.ZP.getRecentlyTalked(r, 10).map((e) => {
-                      let { record: t } = e;
-                      return {
-                          user: t,
-                          text: f.ZP.getUserTag(t)
-                      };
-                  })),
-              (a = e.results));
+        if (null == e) a = null;
+        else {
+            if (null == t || 0 === h.length) {
+                let t = y.Z.getCurrentlySelectedChannelId(r);
+                e.results = d.ZP.getRecentlyTalked(t, 10).map((e) => {
+                    let { record: t } = e;
+                    return {
+                        user: t,
+                        text: f.ZP.getUserTag(t)
+                    };
+                });
+            }
+            a = e.results;
+        }
     } else {
         let t = null == (l = o.ZP[e]) ? void 0 : l.getAutocompletions;
         a = null != t ? t(h, r, null != i ? i : 10) : [];

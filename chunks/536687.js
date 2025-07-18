@@ -28,8 +28,8 @@ var r = n(255367),
     P = n(46140),
     N = n(981631),
     k = n(388032),
-    w = n(844136);
-function I(e) {
+    I = n(844136);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -113,33 +113,33 @@ function L(e) {
     return (0, r.jsx)(u.Y0X, {
         transitionState: g,
         size: u.CgR.DYNAMIC,
-        className: w.modalRoot,
+        className: I.modalRoot,
         parentComponent: 'Modal',
         children: (0, r.jsx)('div', {
             ref: (e) => {
                 M.current = e;
             },
-            className: w.modalBg,
+            className: I.modalBg,
             children: (0, r.jsx)('div', {
-                className: w.modalBody,
+                className: I.modalBody,
                 children: (0, r.jsxs)('div', {
-                    className: w.modalContent,
+                    className: I.modalContent,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: w.contentHeader,
+                            className: I.contentHeader,
                             children: [
                                 (0, r.jsxs)(u.P3F, {
-                                    className: w.contentHeaderGameInfo,
+                                    className: I.contentHeaderGameInfo,
                                     onClick: er,
                                     children: [
                                         (0, r.jsx)('img', {
                                             alt: T.config.messages.gameTitle,
-                                            className: i()(w.contentHeaderLogotype, w.accentOnHover),
+                                            className: i()(I.contentHeaderLogotype, I.accentOnHover),
                                             src: (0, O.fh)(T, O.eC.LOGO_TYPE, U).url
                                         }),
                                         (0, r.jsx)(x.Z, {}),
                                         (0, r.jsxs)('div', {
-                                            className: w.questHeading,
+                                            className: I.questHeading,
                                             children: [
                                                 (0, r.jsx)(u.X6q, {
                                                     variant: 'heading-md/semibold',
@@ -168,7 +168,7 @@ function L(e) {
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 u.P3F,
-                                                A(I({ className: w.progressCont }, e), {
+                                                A(w({ className: I.progressCont }, e), {
                                                     children: (0, r.jsx)(S.Z, {
                                                         quest: T,
                                                         size: 48,
@@ -176,7 +176,7 @@ function L(e) {
                                                         percentCompleteText: H ? W : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(y.Z, {
-                                                            className: w.questProgressRewardTile,
+                                                            className: I.questProgressRewardTile,
                                                             quest: T,
                                                             questContent: b.jn.VIDEO_MODAL,
                                                             autoplay: !1,
@@ -200,27 +200,27 @@ function L(e) {
                             sourceQuestContent: B
                         }),
                         (0, r.jsxs)('div', {
-                            className: w.contentFooter,
+                            className: I.contentFooter,
                             children: [
                                 (0, r.jsx)(c.zx, {
                                     onClick: j,
                                     color: c.zx.Colors.PRIMARY,
                                     size: c.zx.Sizes.MEDIUM,
-                                    className: w.footerBtn,
+                                    className: I.footerBtn,
                                     children: k.intl.string(k.t.cpT0Cg)
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: w.contentFooterButtonCont,
+                                    className: I.contentFooterButtonCont,
                                     children: [
                                         (0, r.jsx)(c.zx, {
                                             color: c.zx.Colors.PRIMARY,
                                             onClick: en,
                                             size: c.zx.Sizes.NONE,
-                                            className: i()(w.copyLinkBtn, w.footerBtn),
+                                            className: i()(I.copyLinkBtn, I.footerBtn),
                                             children: $
                                         }),
                                         (0, r.jsx)(h.i, {
-                                            className: w.claimBtn,
+                                            className: I.claimBtn,
                                             size: c.zx.Sizes.MEDIUM,
                                             quest: T,
                                             useReducedMotion: Q,
@@ -276,7 +276,7 @@ function R(e) {
               children: (e) =>
                   (0, r.jsx)(
                       L,
-                      A(I({}, i), {
+                      A(w({}, i), {
                           parentModalOpenStartClockTime: o,
                           impressionRef: e,
                           quest: c,

@@ -213,7 +213,7 @@ function y() {
                 label: 'All Payment Request Wallets Enabled',
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
-                        d.ZP,
+                        d.Z,
                         O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ['googlePay', 'applePay']
@@ -225,7 +225,7 @@ function y() {
                 label: 'No Payment Wallets Enabled',
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
-                        d.ZP,
+                        d.Z,
                         O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: []
@@ -237,7 +237,7 @@ function y() {
                 label: 'Is Eligible for Trial',
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
-                        d.ZP,
+                        d.Z,
                         O(E({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
@@ -250,7 +250,7 @@ function y() {
                 label: 'Only Stripe Card Enabled',
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
-                        d.ZP,
+                        d.Z,
                         O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],

@@ -3,7 +3,7 @@ var r = n(255367),
     l = n(73800),
     o = n(120356),
     i = n.n(o),
-    a = n(626415),
+    a = n(104721),
     s = n(442837),
     c = n(692547),
     u = n(561779),
@@ -158,7 +158,7 @@ let y = l.forwardRef(function (e, t) {
 });
 function _(e) {
     var t, n;
-    let { videoRef: o, playerState: E, animSpring: h, visible: _, seekForwardEnabled: x, hideCaptionBtn: D, handlePlaybackBtnClick: T, handleTranscriptBtnClick: P, handleCaptionBtnClick: N, handleFullScreenBtnClick: k, handleSeekBackBtnClick: w, handleSeekForwardBtnClick: I, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
+    let { videoRef: o, playerState: E, animSpring: h, visible: _, seekForwardEnabled: x, hideCaptionBtn: D, handlePlaybackBtnClick: T, handleTranscriptBtnClick: P, handleCaptionBtnClick: N, handleFullScreenBtnClick: k, handleSeekBackBtnClick: I, handleSeekForwardBtnClick: w, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
         R = (0, f.km)((e) => e.volume),
         M = (0, f.km)((e) => e.setVolume),
         V = (0, f.km)((e) => e.muted),
@@ -205,10 +205,10 @@ function _(e) {
                         Q || (e.preventDefault(), T());
                         break;
                     case b.Y1.SEEK_BACK:
-                        w();
+                        I();
                         break;
                     case b.Y1.SEEK_FORWARD:
-                        I();
+                        w();
                         break;
                     case b.Y1.CAPTION:
                         N();
@@ -220,7 +220,7 @@ function _(e) {
                         et();
                 }
             },
-            [N, k, T, w, I, et, Q]
+            [N, k, T, I, w, et, Q]
         );
     (l.useEffect(() => {
         null != J.current && J.current.focus();
@@ -267,7 +267,7 @@ function _(e) {
                         iconComponent: v.d,
                         animationTime: h,
                         visible: _,
-                        onClick: w,
+                        onClick: I,
                         ariaLabel: O.intl.string(O.t.r9s3Ul),
                         tooltipLabel: O.intl.string(O.t.r9s3Ul),
                         shortcut: b.Y1.SEEK_BACK
@@ -276,7 +276,7 @@ function _(e) {
                         iconComponent: g.o,
                         animationTime: h,
                         visible: _,
-                        onClick: I,
+                        onClick: w,
                         disabled: !x,
                         ariaLabel: x ? O.intl.string(O.t.zWDcND) : O.intl.string(O.t.xXh3y8),
                         tooltipLabel: x ? O.intl.string(O.t.zWDcND) : O.intl.string(O.t.xXh3y8),

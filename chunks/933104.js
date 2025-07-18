@@ -66,7 +66,16 @@ function x(e) {
         }),
         { onActivate: o } = (0, m.ZP)(t, n[0]);
     if (0 === n.length) return;
-    let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
+    let a =
+            n.length >= 3
+                ? y.intl.formatToPlainString(O.default['6Sv+3N'], {
+                      perk: n[0].title,
+                      perk2: n[1].title,
+                      perk3: n[2].title
+                  })
+                : 2 === n.length
+                  ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: ''.concat(n[0].title, ' & ').concat(n[1].title) })
+                  : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: n[0].title }),
         u = 1 === n.length;
     return (0, r.jsx)(S, {
         asset:
@@ -77,7 +86,7 @@ function x(e) {
                   })
                 : (0, r.jsx)(g.g, { className: v.image }),
         header: y.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
+        content: a,
         buttonCTA: u ? y.intl.string(O.default.gSxlHR) : y.intl.string(y.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i

@@ -47,7 +47,7 @@ let u = '1340102344645283891',
     E = '1351706802684952639',
     b = '1354906318279807056',
     y = 'guild_powerup_modal',
-    O = new Set([E, b]),
+    O = new Set([E, b, r.A]),
     v = new Set([E, b, r.A]),
     I = () => ({
         [s.oNc.VIDEO_BITRATE_ENHANCED]: {

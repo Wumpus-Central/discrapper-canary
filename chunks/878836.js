@@ -1,13 +1,14 @@
-(n.d(t, { S: () => _ }), n(388685));
+(n.d(t, { S: () => p }), n(388685));
 var r = n(73800),
     i = n(481060),
     a = n(355467),
-    o = n(801937),
-    s = n(493773),
-    l = n(351402),
-    c = n(51144),
-    u = n(561448);
-function d(e, t, n) {
+    o = n(493773),
+    s = n(351402),
+    l = n(51144),
+    c = n(947673),
+    u = n(720452),
+    d = n(561448);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,64 +32,69 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
-let _ = (e) => {
+let p = (e) => {
     let { onSetupError: t } = e,
-        [n, d] = r.useState(void 0),
-        [_, p] = r.useState(null),
-        [h, m] = r.useState(!0),
-        [g, E] = r.useState([]),
-        b = r.useCallback(async () => {
+        [n, f] = r.useState(void 0),
+        [p, h] = r.useState(null),
+        [m, g] = r.useState(!0),
+        [E, b] = r.useState([]),
+        y = r.useCallback(async () => {
             var e;
-            let n = (0, c.vP)(),
-                r = n ? (0, o.Q8)(null != (e = l.Z.ipCountryCode) ? e : 'ALL').countryPaymentMethods : [];
-            E((0, u.lS)(r, n));
+            let n = (0, l.vP)(),
+                r = n
+                    ? (0, u.Q)({
+                          ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : 'ALL',
+                          location: 'stripe_payment_element_options'
+                      }).countryPaymentMethods
+                    : [];
+            b((0, d.lS)(r, n));
             try {
-                let e = await (0, a.R5)({ failImmediatelyWhenRateLimited: !0 }, r.length > 0 ? { regionalPaymentMethods: r } : void 0);
-                d(e);
+                let e = await (0, c.V)(r);
+                f(e);
             } catch (e) {
-                (p(e), null != t && t(e), (0, a.SQ)(e));
+                (h(e), null != t && t(e), (0, a.SQ)(e));
             }
-            m(!1);
+            g(!1);
         }, [t]);
-    (0, s.ZP)(() => {
-        b();
+    (0, o.ZP)(() => {
+        y();
     });
-    let y = (0, i.dQu)(i.TVs.colors.MODAL_BACKGROUND),
-        O = (0, i.dQu)(i.TVs.colors.TEXT_PRIMARY),
-        v = (0, i.dQu)(i.TVs.colors.INPUT_BACKGROUND);
+    let O = (0, i.dQu)(i.TVs.colors.MODAL_BACKGROUND),
+        v = (0, i.dQu)(i.TVs.colors.TEXT_PRIMARY),
+        I = (0, i.dQu)(i.TVs.colors.INPUT_BACKGROUND);
     return {
-        setupError: _,
+        setupError: p,
         elementsOptions: r.useMemo(
             () =>
-                h
+                m
                     ? null
-                    : f(
+                    : _(
                           { clientSecret: n },
                           {
                               appearance: {
                                   theme: 'flat',
                                   variables: {
-                                      colorText: O.hex(),
-                                      colorBackground: y.hex()
+                                      colorText: v.hex(),
+                                      colorBackground: O.hex()
                                   },
                                   rules: {
-                                      '.Input': { backgroundColor: v.hex() },
-                                      '.Tab': { backgroundColor: v.hex() }
+                                      '.Input': { backgroundColor: I.hex() },
+                                      '.Tab': { backgroundColor: I.hex() }
                                   }
                               },
-                              customPaymentMethods: g,
+                              customPaymentMethods: E,
                               paymentMethodCreation: 'manual'
                           }
                       ),
-            [y, O, v, n, g, h]
+            [O, v, I, n, E, m]
         ),
         setupIntentSecret: n,
-        customPaymentMethods: g,
-        isLoading: h
+        customPaymentMethods: E,
+        isLoading: m
     };
 };

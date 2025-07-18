@@ -1,9 +1,4 @@
-(n.d(t, {
-    Q8: () => k,
-    ZP: () => j
-}),
-    n(388685),
-    n(539854));
+(n.d(t, { Z: () => D }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -13,7 +8,7 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(269128),
-    f = n(987032),
+    f = n(720452),
     _ = n(502109),
     p = n(710845),
     h = n(219929),
@@ -95,60 +90,22 @@ let N = new p.Z('ChoosePaymentSourceType'),
         [b.HeQ.IDEAL]: h.ZP.Types.IDEAL,
         [b.HeQ.CASH_APP]: h.ZP.Types.CASH_APP
     },
-    R = [b.HeQ.CARD, b.HeQ.PAYPAL],
-    P = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    w = new Map([
-        [b.HeQ.SOFORT, new Set([])],
-        [b.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
-        [b.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
-        [b.HeQ.PAYSAFE_CARD, new Set(['ALL', ...P])],
-        [b.HeQ.GCASH, new Set(['ALL', 'PH'])],
-        [b.HeQ.GRABPAY_MY, new Set(['ALL', 'MY'])],
-        [b.HeQ.MOMO_WALLET, new Set(['ALL', 'VN'])],
-        [b.HeQ.VENMO, new Set(['ALL', 'US'])],
-        [b.HeQ.KAKAOPAY, new Set(['ALL', 'KR'])],
-        [b.HeQ.GOPAY_WALLET, new Set(['ALL', 'ID'])],
-        [b.HeQ.BANCONTACT, new Set(['ALL', 'BE'])],
-        [b.HeQ.EPS, new Set(['ALL', 'AT'])],
-        [b.HeQ.IDEAL, new Set(['ALL', 'NL'])],
-        [b.HeQ.CASH_APP, new Set(['ALL', 'US'])]
-    ]),
-    D = new Map([[b.HeQ.PAYSAFE_CARD, new Set(['DE'])]]),
-    L = '40c266_1',
-    x = 1000;
-function k(e) {
-    let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: r } = f.ZP.getCurrentConfig({ location: L }, { autoTrackExposure: !1 }),
-        i = null != e ? e : 'ALL';
-    r.length > 0 && null != n && null != e && (i = r.includes(e) ? e : n);
-    let a = new Set(),
-        o = [];
-    return (
-        w.forEach((e, n) => {
-            t.includes(n) && (e.has(i) ? a.add(n) : o.push(n));
-        }),
-        D.forEach((e, t) => {
-            e.has(i) && a.add(t);
-        }),
-        {
-            countryPaymentMethods: [...R, ...Array.from(a)],
-            remainingPaymentMethods: o
-        }
-    );
-}
-class M extends i.PureComponent {
+    R = 1000,
+    P = '40c266_1';
+class w extends i.PureComponent {
     componentDidMount() {
         var e;
         ((0, u.GE)(),
             (null != (e = this.props.paymentRequestWallets) ? e : []).length > 0 &&
                 setTimeout(() => {
                     this.considerPaymentRequestWalletsLoaded();
-                }, x));
+                }, R));
     }
     considerPaymentRequestWalletsLoaded() {
         var e;
         let t = null != (e = this.props.paymentRequestWallets) ? e : [];
         if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
-        N.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(x, ' ms'));
+        N.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(R, ' ms'));
         let n = t.reduce((e, t) => A(T({}, e), { [''.concat(t, 'Loaded')]: !0 }), {});
         this.setState(n);
     }
@@ -200,40 +157,51 @@ class M extends i.PureComponent {
     render() {
         var e;
         let { showAllPaymentMethods: t } = this.state,
-            { onChooseType: n, className: i, onStripePaymentMethodReceived: a, ipCountryCode: s, ipCountryCodeHasError: l, paymentRequestPaymentContext: u, isEligibleForTrial: f = !1 } = this.props,
-            p = null != (e = this.props.paymentRequestWallets) ? e : [],
-            h = {
+            { onChooseType: n, className: i, onStripePaymentMethodReceived: a, ipCountryCode: s, ipCountryCodeHasError: l, paymentRequestPaymentContext: u, isEligibleForTrial: p = !1 } = this.props,
+            h = null != (e = this.props.paymentRequestWallets) ? e : [],
+            m = {
                 iconClassName: O.buttonIcon,
                 paymentLabel: y.intl.string(y.t.ZURqX1),
                 onStripePaymentMethodReceived: a,
                 onChooseType: n,
                 paymentRequestPaymentContext: u
             },
-            m = p.map((e, t) => {
+            g = h.map((e, t) => {
                 let n = () => this.setState({ [''.concat(e, 'Loaded')]: !0 }),
                     i = {
                         onValidPaymentRequest: n,
                         onPaymentRequestFailure: n
                     },
                     a = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, r.jsx)(_.Ch, T({}, h, i), a) : (0, r.jsx)(_.Tr, T({}, h, i), a);
+                return 'applePay' === e ? (0, r.jsx)(_.Ch, T({}, m, i), a) : (0, r.jsx)(_.Tr, T({}, m, i), a);
             }),
-            g = [],
             E = [],
-            b = void 0 === s || this.arePaymentRequestWalletsLoading();
-        if (l) g.push(...this.createPaymentButtons(k('ALL').countryPaymentMethods));
+            b = [],
+            I = void 0 === s || this.arePaymentRequestWalletsLoading();
+        if (l)
+            E.push(
+                ...this.createPaymentButtons(
+                    (0, f.Q)({
+                        ipCountryCode: 'ALL',
+                        location: P
+                    }).countryPaymentMethods
+                )
+            );
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = k(s);
-            (g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(t)));
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, f.Q)({
+                ipCountryCode: s,
+                location: P
+            });
+            (E.push(...this.createPaymentButtons(e)), b.push(...this.createPaymentButtons(t)));
         }
-        let I = (0, r.jsxs)('div', {
+        let S = (0, r.jsxs)('div', {
             children: [
                 (0, r.jsxs)('div', {
                     className: o()(v.wrap, v.horizontal, O.container),
-                    children: [g, m]
+                    children: [E, g]
                 }),
                 (0, r.jsx)('div', {
-                    className: E.length > 0 ? v.flex : O.hidden,
+                    className: b.length > 0 ? v.flex : O.hidden,
                     children: (0, r.jsxs)(c.P3F, {
                         onClick: () => this.toggleAllPayments(),
                         className: o()(v.flex, O.allPaymentsToggleButton),
@@ -243,31 +211,31 @@ class M extends i.PureComponent {
                 t &&
                     (0, r.jsx)('div', {
                         className: o()(v.wrap, v.horizontal, O.allPaymentsSection, O.container, { [v.flex]: t }),
-                        children: E
+                        children: b
                     })
             ]
         });
         return (
-            b &&
+            I &&
                 !l &&
-                (I = (0, r.jsxs)('div', {
+                (S = (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)('div', {
                             className: O.hidden,
-                            children: m
+                            children: g
                         }),
                         (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
                     ]
                 })),
             (0, r.jsxs)('div', {
                 children: [
-                    f && (0, r.jsx)('hr', { className: O.SeparatorUpper }),
+                    p && (0, r.jsx)('hr', { className: O.SeparatorUpper }),
                     (0, r.jsx)(c.hjN, {
-                        title: f ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t['8lqkf3']),
+                        title: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t['8lqkf3']),
                         className: i,
-                        children: I
+                        children: S
                     }),
-                    f && (0, r.jsx)('hr', { className: O.SeparatorLower })
+                    p && (0, r.jsx)('hr', { className: O.SeparatorLower })
                 ]
             })
         );
@@ -281,8 +249,8 @@ class M extends i.PureComponent {
             }));
     }
 }
-let j = s.ZP.connectStores([g.Z], () => ({
+let D = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
     ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
     localizedPromo: g.Z.localizedPricingPromo
-}))(M);
+}))(w);

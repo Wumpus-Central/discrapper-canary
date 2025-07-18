@@ -95,14 +95,14 @@ function G(e) {
     return null != t ? t : (0, u.e5)(e);
 }
 function B(e) {
-    let t = m.Z.getChannel(e.channel_id);
+    let t = m.Z.getBasicChannel(e.channel_id);
     if (null == t || !I.TPd.GUILD_TEXTUAL.has(t.type)) return !1;
     switch (O.ZP.resolvedMessageNotifications(t)) {
         case I.bL.ALL_MESSAGES:
             return !0;
         case I.bL.ONLY_MENTIONS:
-            let n = O.ZP.isSuppressEveryoneEnabled(t.getGuildId()),
-                r = O.ZP.isSuppressRolesEnabled(t.getGuildId()),
+            let n = O.ZP.isSuppressEveryoneEnabled(t.guild_id),
+                r = O.ZP.isSuppressRolesEnabled(t.guild_id),
                 i = v.default.getCurrentUser();
             if (null == i) return !1;
             return (0, d.ZP)({

@@ -113,7 +113,7 @@ async function E(e) {
     );
 }
 function b(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v, displayNameStyles: I } = e;
     return (
         o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, l.Z)(
@@ -134,12 +134,12 @@ function b(e) {
                     },
                     e
                 );
-                (null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v));
+                (null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v), null != I ? ((o.display_name_font_id = I.fontId), (o.display_name_effect_id = I.effectId), (o.display_name_colors = I.colors)) : null === I && ((o.display_name_font_id = null), (o.display_name_effect_id = null), (o.display_name_colors = null)));
                 let l = i.K.get(u.JkL),
                     f = (0, d.xJ)();
                 null != f && null != l && ((o.push_provider = f), (o.push_token = l));
-                let I = i.K.get(u.scU);
-                return (null != d.mv && null != I && ((o.push_voip_provider = d.mv), (o.push_voip_token = I)), E(o));
+                let T = i.K.get(u.scU);
+                return (null != d.mv && null != T && ((o.push_voip_provider = d.mv), (o.push_voip_token = T)), E(o));
             },
             {
                 checkEnabled: !1,
