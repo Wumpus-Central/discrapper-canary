@@ -57,7 +57,7 @@ var r = n(255367),
     ei = n(304445),
     el = n(893607),
     ea = n(703656),
-    eo = n(210887),
+    eo = n(984802),
     es = n(592125),
     ec = n(896797),
     eu = n(271383),
@@ -477,7 +477,7 @@ function e3(e) {
 function e8() {
     var e;
     let t = (0, p.e7)([eh.ZP], () => eh.ZP.hasNotice()),
-        n = (0, p.e7)([eo.Z], () => (eo.Z.darkSidebar ? eC.BRd.DARK : void 0)),
+        n = (0, eo.Ll)(),
         l = (function () {
             let [e, t] = i.useState(() => window.location.pathname.startsWith(eC.Z5c.GUILD_MEMBER_VERIFICATION('')));
             return (

@@ -24,8 +24,8 @@ function x(e) {
     var t;
     let { context: n, activityItem: r, onClick: a, aspectRatio: C = 0, animatedDivClass: x, commandOrigin: v } = e,
         {
-            onActivityItemSelected: O,
-            imageBackground: j,
+            onActivityItemSelected: j,
+            imageBackground: O,
             activityAction: E,
             labelType: S
         } = (0, d.ZP)({
@@ -88,7 +88,7 @@ function x(e) {
             }
         }, [E]);
     return (0, i.jsx)(c.zx, {
-        onClick: O,
+        onClick: j,
         color: 'transparent',
         look: c.zx.Looks.BLANK,
         size: c.zx.Sizes.NONE,
@@ -116,7 +116,7 @@ function x(e) {
                             },
                             children: [
                                 (0, i.jsx)(p.Z, {
-                                    imageBackground: j,
+                                    imageBackground: O,
                                     applicationName: r.application.name,
                                     imageClassName: b.activitySuggestionImage,
                                     imageNotFoundClassName: b.brokenImageIconWrapper

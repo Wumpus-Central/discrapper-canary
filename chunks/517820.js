@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(533244),
     E = n(825829),
     x = n(226192),
-    C = n(36459),
-    v = n(434404),
+    v = n(36459),
+    C = n(434404),
     y = n(518950),
     O = n(670188),
     j = n(592125),
@@ -260,14 +260,14 @@ function H(e) {
     var t;
     let { message: n, compact: l } = e,
         { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: g, resolvedReason: h } = (0, E.FL)(n),
-        C = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
-        v = null != (t = null == C ? void 0 : C.guild_id) ? t : null,
-        { shouldShowIncidentActions: y } = (0, _.mI)(v),
+        v = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
+        C = null != (t = null == v ? void 0 : v.guild_id) ? t : null,
+        { shouldShowIncidentActions: y } = (0, _.mI)(C),
         O = (0, N.sR)(n.author.id, n.channel_id),
         I = i.useCallback(() => {
-            let e = null == C ? void 0 : C.guild_id;
+            let e = null == v ? void 0 : v.guild_id;
             null != e && (0, x.kW)(n.id, e);
-        }, [n.id, C]),
+        }, [n.id, v]),
         S = g === d.$.DM_RAID,
         T = S ? f.P4T : f.b6m;
     return (0, r.jsx)(z, {
@@ -408,8 +408,8 @@ function V(e) {
                         onClick: function () {
                             null != a &&
                                 null != c &&
-                                (0, C.UE)(a, c, () => {
-                                    ((0, g.c)(u), (0, C.T9)(a));
+                                (0, v.UE)(a, c, () => {
+                                    ((0, g.c)(u), (0, v.T9)(a));
                                 });
                         }
                     })
@@ -423,7 +423,7 @@ function V(e) {
                         size: 'sm',
                         text: R.intl.string(R.t['1R7QIy']),
                         onClick: function () {
-                            null != a && v.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                            null != a && C.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                         }
                     })
                 })

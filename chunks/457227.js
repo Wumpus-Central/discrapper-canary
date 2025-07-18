@@ -19,7 +19,10 @@ let c = (e) => Object.values(e).sort((e, t) => e.order - t.order),
                     (0, i.jsxs)('div', {
                         className: o.navBarSectionContentContainer,
                         children: [
-                            (0, i.jsx)(r.SrA, { className: o.nitroWheelIcon }),
+                            (0, i.jsx)(r.SrA, {
+                                className: o.nitroWheelIcon,
+                                colorClass: o.nitroWheelIconColor
+                            }),
                             (0, i.jsx)('div', {
                                 className: o.navBarSectionContent,
                                 children: d.map((e) => {

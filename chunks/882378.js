@@ -21,10 +21,10 @@ let y = i.memo(function (e) {
         C = (0, d.o)(t.id),
         x = (0, p.M)(t.id),
         v = (0, a.f9)(),
-        O = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
-        j = i.useCallback(() => (C ? b.intl.string(b.t['16QyDg']) : null != x ? b.intl.string(b.t.kCN9i4) : null), [C, x]),
-        E = i.useMemo(() => (C || null != x) && !v && !O, [C, x, v, O]),
-        [S, P] = i.useState(j());
+        j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+        O = i.useCallback(() => (C ? b.intl.string(b.t['16QyDg']) : null != x ? b.intl.string(b.t.kCN9i4) : null), [C, x]),
+        E = i.useMemo(() => (C || null != x) && !v && !j, [C, x, v, j]),
+        [S, P] = i.useState(O());
     (i.useEffect(() => {
         (null != x &&
             null != y &&
@@ -58,9 +58,9 @@ let y = i.memo(function (e) {
                 });
         }),
         i.useEffect(() => {
-            let e = j();
+            let e = O();
             null != e && P(e);
-        }, [C, x, j]));
+        }, [C, x, O]));
     let I = i.useCallback(() => {
         (null != x && (0, c.T)(t.id, [x.id]),
             null != y &&

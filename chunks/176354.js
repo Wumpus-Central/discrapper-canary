@@ -1,8 +1,7 @@
 (n.d(t, {
-    B6: () => T,
-    ZP: () => I,
-    qc: () => S,
-    sp: () => v
+    B6: () => I,
+    ZP: () => v,
+    qc: () => T
 }),
     n(388685),
     n(704826),
@@ -48,28 +47,7 @@ function O(e) {
     }
     return (0, a.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
 }
-function v(e, t) {
-    let n = 0,
-        r = 0,
-        a = 0,
-        o = 0,
-        s = 0,
-        l = 0;
-    return (
-        e.forEach((e) => {
-            null != e.id ? (e.type === i.B.GUILD && (e.guildId === t ? (e.managed ? o++ : r++) : e.managed ? s++ : a++), e.animated && l++) : n++;
-        }),
-        {
-            unicode: n,
-            custom: r,
-            customExternal: a,
-            managed: o,
-            managedExternal: s,
-            animated: l
-        }
-    );
-}
-let I = {
+let v = {
     sanitizeEmojiName(e) {
         for (e = e.replace(p.sW, '').slice(0, p.Yc); e.length < 2; ) e += '_';
         return e;
@@ -138,10 +116,10 @@ let I = {
     isFileTooBig: (e) => e.size > h,
     isDataTooBig: (e) => (0, d.QB)(e) > p.h_
 };
-async function T(e) {
+async function I(e) {
     return await u.Z.getEmojiColors(e);
 }
-function S(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
         { id: n, name: r, animated: i } = e;
     return null != n

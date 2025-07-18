@@ -115,7 +115,7 @@ let q = function () {
         W = (0, f.Z)({ forceFetch: !0 }),
         q = (0, w.W)(),
         X = null !== e ? e.currentPeriodEnd : void 0,
-        J = !(q && !(W.unactivatedUnits.length > 0)) && (W.fractionalState !== U.a$.NONE || W.unactivatedUnits.length > 0);
+        Q = !(q && !(W.unactivatedUnits.length > 0)) && (W.fractionalState !== U.a$.NONE || W.unactivatedUnits.length > 0);
     return (r.useEffect(
         () => (
             c.Z.wait(() => {
@@ -148,7 +148,7 @@ let q = function () {
                                         subscriptions: t
                                     })
                                   : (0, i.jsx)(M.MM, {}),
-                              J &&
+                              Q &&
                                   (0, i.jsxs)('section', {
                                       children: [
                                           (0, i.jsx)(o.X6q, {

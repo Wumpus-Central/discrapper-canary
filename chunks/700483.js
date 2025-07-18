@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(258609),
     x = n(74299),
     v = n(924301),
-    O = n(459502),
-    j = n(856691),
+    j = n(459502),
+    O = n(856691),
     E = n(357156),
     S = n(923973),
     P = n(829750),
@@ -113,8 +113,8 @@ function ed(e) {
         b = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: C } = (0, Z.Z)(t),
         x = k.default.getId(),
-        [O] = (0, er.Z)(t),
-        j = q.ZP.isModerator(x, t.id),
+        [j] = (0, er.Z)(t),
+        O = q.ZP.isModerator(x, t.id),
         S = (0, W.B)(t.id),
         P = f(g),
         { parentAnalyticsLocation: I } = (0, h.ZP)(),
@@ -152,7 +152,7 @@ function ed(e) {
             channel: t,
             appContext: l
         });
-    return (j || P) && null != m
+    return (O || P) && null != m
         ? (0, r.jsx)(c.yRy, {
               targetElementRef: T,
               renderPopout: (e) => {
@@ -190,7 +190,7 @@ function ed(e) {
                   });
               }
           })
-        : (C && !S) || O
+        : (C && !S) || j
           ? (0, r.jsx)(M.Z, {
                 label: ea.intl.string(ea.t.SMKyio),
                 onClick: N
@@ -248,14 +248,14 @@ let ef = i.memo(function (e) {
         d = (0, o.e7)([C.Z], () => null != C.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: p, enabled: _ } = (0, S.Z)(),
         v = (0, I.Z)(t),
-        { limit: O, reachedLimit: j } = (0, P.Z)(t),
+        { limit: j, reachedLimit: O } = (0, P.Z)(t),
         E = (0, o.e7)([H.default], () => H.default.getCurrentUser()),
         R = (0, o.e7)([U.Z], () => (0, x.Z)(U.Z)),
         M = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         k = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, X.PK)(t.id),
-        G = O > 0,
-        V = (j && !B) || (null != k && k.user.id !== (null == E ? void 0 : E.id)),
+        G = j > 0,
+        V = (O && !B) || (null != k && k.user.id !== (null == E ? void 0 : E.id)),
         z = (0, y.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
@@ -287,8 +287,8 @@ let ef = i.memo(function (e) {
                 cameraUnavailable: p,
                 onChange: T.r,
                 onCameraUnavailable: A.Z,
-                channelLimitReached: j,
-                channelLimit: O,
+                channelLimitReached: O,
+                channelLimit: j,
                 popoutOpen: i,
                 onPopoutClick: n
             });
@@ -397,10 +397,10 @@ let eg = i.memo(function (e) {
                     (0, r.jsxs)('div', {
                         className: eo.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(O.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, r.jsx)(j.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)('div', { className: eo.separator }),
                             u && a
-                                ? (0, r.jsx)(j.Z, {
+                                ? (0, r.jsx)(O.Z, {
                                       highlight: !0,
                                       channel: t
                                   })

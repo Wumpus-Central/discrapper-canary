@@ -27,12 +27,12 @@ function b(e) {
             return d.Z.isFetchingProfile(null != (e = null == C ? void 0 : C.id) ? e : m.lds);
         }),
         v = (0, o.Z)(x),
-        O = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
-        j = (0, i.e7)([d.Z], () => {
+        j = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == C ? void 0 : C.id)),
+        O = (0, i.e7)([d.Z], () => {
             var e;
             return null !== C ? (null == (e = d.Z.getUserProfile(null == C ? void 0 : C.id)) ? void 0 : e.application) : void 0;
         }),
-        E = null != O ? O : null == j ? void 0 : j.id;
+        E = null != j ? j : null == O ? void 0 : O.id;
     (r.useEffect(() => {
         if (null == E) {
             var e;

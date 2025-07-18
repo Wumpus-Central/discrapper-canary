@@ -20,8 +20,8 @@ var i = n(657707),
     C = n(78806),
     x = n(91433),
     v = n(900927),
-    O = n(944043),
-    j = n(678738),
+    j = n(944043),
+    O = n(678738),
     E = n(638970),
     S = n(502762),
     P = n(530),
@@ -90,14 +90,14 @@ function w(e) {
                     e.applicationId
                 )
             ),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(j.Z, {
                 user: t,
                 className: A.card
             }),
             t.isProvisional &&
                 (0, r.jsx)(S.Z.Overlay, {
                     className: A.card,
-                    children: (0, r.jsx)(j.Z, {
+                    children: (0, r.jsx)(O.Z, {
                         heading: N.intl.string(N.t.Iyka0d),
                         headingIcon: (0, r.jsx)(i.P4T, {
                             size: 'xxs',
@@ -126,7 +126,7 @@ function w(e) {
                     !F &&
                         (null == w ? void 0 : w.bio) != null &&
                         (null == w ? void 0 : w.bio) !== '' &&
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(O.Z, {
                             heading: N.intl.string(N.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, {
@@ -143,12 +143,12 @@ function w(e) {
                             channel: R
                         }),
                     B.length > 0 &&
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(O.Z, {
                             heading: N.intl.string(N.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(C.Z, { applicationIds: B })
                         }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(O.Z, {
                         heading: t.bot ? N.intl.string(N.t['A//N4u']) : N.intl.string(N.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(v.Z, { userId: t.id })

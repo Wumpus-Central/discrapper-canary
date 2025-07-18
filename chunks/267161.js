@@ -26,7 +26,7 @@ var r = n(255367),
     v = n(340137),
     C = n(522474),
     S = n(141321),
-    N = n(210887),
+    N = n(984802),
     T = n(592125),
     P = n(430824),
     j = n(944486),
@@ -170,7 +170,7 @@ let W = i.memo(function () {
     i.useLayoutEffect(() => {
         w.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let l = (0, o.e7)([N.Z], () => (N.Z.darkSidebar ? D.BRd.DARK : void 0)),
+    let l = (0, N.Ll)(),
         a = (0, o.e7)([Z.Z, C.Z], () => (0, L.rB)()),
         { notificationCenterVariant: u, entrypoint: f } = y.Lk.useExperiment({ location: 'AppTitleBar' });
     return a

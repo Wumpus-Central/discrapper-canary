@@ -48,8 +48,8 @@ var r = n(990547),
     K = n(626135),
     q = n(572004),
     X = n(49012),
-    J = n(358085),
-    Q = n(998502),
+    Q = n(358085),
+    J = n(998502),
     $ = n(695346),
     ee = n(604227),
     et = n(38915),
@@ -102,8 +102,8 @@ var r = n(990547),
     eK = n(65154),
     eq = n(388032),
     eX = n(603571),
-    eJ = n(916723),
-    eQ = n(539452);
+    eQ = n(916723),
+    eJ = n(539452);
 let e$ = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return (E.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
@@ -347,7 +347,7 @@ let e$ = () => {
                 section: eW.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eq.intl.string(eq.t.WWaFn5)],
                 parent: eH.s6.DATA_PRIVACY,
-                predicate: () => (0, J.isDesktop)()
+                predicate: () => (0, Q.isDesktop)()
             },
             [eH.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES]: {
                 section: eW.oAB.DATA_AND_PRIVACY,
@@ -497,9 +497,9 @@ let e$ = () => {
             },
             [eH.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eW.oAB.FAMILY_CENTER,
-                searchableTitles: [eq.intl.string(eJ.default.gntCQU)],
-                label: eq.intl.string(eJ.default.gntCQU),
-                ariaLabel: eq.intl.string(eJ.default.gntCQU),
+                searchableTitles: [eq.intl.string(eQ.default.gntCQU)],
+                label: eq.intl.string(eQ.default.gntCQU),
+                ariaLabel: eq.intl.string(eQ.default.gntCQU),
                 element: e_.Z,
                 badgeCount: R,
                 newIndicator: (0, i.jsx)(l.IGR, {
@@ -594,7 +594,7 @@ let e$ = () => {
                 searchableTitles: [eq.intl.string(eq.t.Ipxkoq)],
                 label: eq.intl.string(eq.t.Ipxkoq),
                 element: er.Z,
-                className: eQ.premiumTab
+                className: eJ.premiumTab
             },
             [eH.s6.GUILD_BOOSTING]: {
                 section: eW.oAB.GUILD_BOOSTING,
@@ -1000,7 +1000,7 @@ let e$ = () => {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.AxnPm5)],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-                predicate: () => 'stable' !== Q.ZP.releaseChannel && W.Z.isExperimentalEncodersSupported()
+                predicate: () => 'stable' !== J.ZP.releaseChannel && W.Z.isExperimentalEncodersSupported()
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
                 section: eW.oAB.VOICE,
@@ -1069,7 +1069,7 @@ let e$ = () => {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.KDdjoq), eq.intl.string(eq.t.NMCIf3), eq.intl.string(eq.t.FeUKeH)],
                 parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => W.Z.supportsVideoHook() || W.Z.supportsExperimentalSoundshare() || (W.Z.supportsSystemScreensharePicker() && (0, J.isMac)())
+                predicate: () => W.Z.supportsVideoHook() || W.Z.supportsExperimentalSoundshare() || (W.Z.supportsSystemScreensharePicker() && (0, Q.isMac)())
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK]: {
                 section: eW.oAB.VOICE,
@@ -1087,13 +1087,13 @@ let e$ = () => {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.ie1mgY)],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
-                predicate: () => W.Z.supportsSystemScreensharePicker() && (0, J.isMac)()
+                predicate: () => W.Z.supportsSystemScreensharePicker() && (0, Q.isMac)()
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['aP1N/v'])],
                 parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => J.isPlatformEmbedded
+                predicate: () => Q.isPlatformEmbedded
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
                 section: eW.oAB.VOICE,
@@ -1116,13 +1116,13 @@ let e$ = () => {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.U4FgFB)],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => ('canary' === Q.ZP.releaseChannel || 'development' === Q.ZP.releaseChannel) && e7 && W.Z.supports(eK.AN.CONNECTION_REPLAY)
+                predicate: () => ('canary' === J.ZP.releaseChannel || 'development' === J.ZP.releaseChannel) && e7 && W.Z.supports(eK.AN.CONNECTION_REPLAY)
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: eW.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['726JHB'])],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => J.isPlatformEmbedded && W.Z.supports(eK.AN.DEBUG_LOGGING) && null != g.Z.fileManager.readLogFiles
+                predicate: () => Q.isPlatformEmbedded && W.Z.supports(eK.AN.DEBUG_LOGGING) && null != g.Z.fileManager.readLogFiles
             },
             [eH.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: eW.oAB.VOICE,
@@ -1140,7 +1140,7 @@ let e$ = () => {
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(186542),
-                    className: eQ.clickerGameIcon
+                    className: eJ.clickerGameIcon
                 })
             },
             [eH.s6.POGGERMODE]: {
@@ -1153,7 +1153,7 @@ let e$ = () => {
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(348621),
-                    className: eQ.poggermodeIcon
+                    className: eJ.poggermodeIcon
                 })
             },
             [eH.s6.CHAT]: {
@@ -1281,7 +1281,7 @@ let e$ = () => {
                 section: eW.oAB.NOTIFICATIONS,
                 searchableTitles: [eq.intl.string(eq.t.xSmFQE)],
                 parent: eH.s6.NOTIFICATIONS,
-                predicate: () => (0, J.isWindows)()
+                predicate: () => (0, Q.isWindows)()
             },
             [eH.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
                 section: eW.oAB.NOTIFICATIONS,
@@ -1413,14 +1413,14 @@ let e$ = () => {
                 searchableTitles: [eq.intl.string(eq.t.ZkDZoq)],
                 label: eq.intl.string(eq.t.ZkDZoq),
                 element: eZ.Z,
-                predicate: () => J.isPlatformEmbedded && (0, J.isWindows)()
+                predicate: () => Q.isPlatformEmbedded && (0, Q.isWindows)()
             },
             [eH.s6.LINUX_SETTINGS]: {
                 section: eW.oAB.LINUX,
                 searchableTitles: [eq.intl.string(eq.t['7pPjTU'])],
                 label: eq.intl.string(eq.t['7pPjTU']),
                 element: e6,
-                predicate: () => J.isPlatformEmbedded && (0, J.isLinux)()
+                predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)()
             },
             [eH.s6.STREAMER_MODE]: {
                 section: eW.oAB.STREAMER_MODE,
@@ -1486,7 +1486,7 @@ let e$ = () => {
                 section: eW.oAB.ADVANCED,
                 searchableTitles: [eq.intl.string(eq.t['eOC/Fx'])],
                 parent: eH.s6.SETTINGS_ADVANCED,
-                predicate: () => J.isPlatformEmbedded
+                predicate: () => Q.isPlatformEmbedded
             },
             [eH.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
                 section: eW.oAB.ADVANCED,

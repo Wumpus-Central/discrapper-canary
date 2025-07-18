@@ -150,7 +150,8 @@ class L extends r.PureComponent {
                 });
             else {
                 let t = (0, S.c)(r);
-                e = (0, i.jsxs)(h.Z, {
+                e = (0, i.jsxs)(c.hE2, {
+                    size: 'sm',
                     className: l ? '' : R.marginTop8,
                     children: [
                         (0, i.jsx)(c.zxk, {
@@ -257,37 +258,28 @@ class L extends r.PureComponent {
                     className: R.marginBottom20,
                     children: A.intl.string(A.t.bQwxiY)
                 }),
-                (0, i.jsxs)(h.Z, {
-                    justify: h.Z.Justify.START,
+                (0, i.jsxs)(c.hE2, {
+                    size: 'sm',
                     className: R.marginBottom20,
                     children: [
-                        (0, i.jsx)(h.Z.Child, {
-                            wrap: !0,
-                            grow: 0,
-                            children: n
+                        n,
+                        (0, i.jsx)(b.F, {
+                            setting: N.s6.ACCOUNT_REMOVE_2FA,
+                            children: (0, i.jsx)(c.zxk, {
+                                variant: 'critical-secondary',
+                                size: 'sm',
+                                text: A.intl.string(A.t['D+aE7u']),
+                                onClick: this.handleDisableMFA
+                            })
                         }),
-                        (0, i.jsxs)(h.Z.Child, {
-                            wrap: !0,
-                            children: [
-                                (0, i.jsx)(b.F, {
-                                    setting: N.s6.ACCOUNT_REMOVE_2FA,
-                                    children: (0, i.jsx)(c.zxk, {
-                                        variant: 'critical-secondary',
-                                        size: 'sm',
-                                        text: A.intl.string(A.t['D+aE7u']),
-                                        onClick: this.handleDisableMFA
-                                    })
-                                }),
-                                (0, i.jsx)(b.F, {
-                                    setting: N.s6.ACCOUNT_ENABLE_2FA,
-                                    children: (0, i.jsx)(c.zxk, {
-                                        variant: 'primary',
-                                        size: 'sm',
-                                        text: A.intl.string(A.t.cDgKtb),
-                                        onClick: T.ZP.enableMFA
-                                    })
-                                })
-                            ]
+                        (0, i.jsx)(b.F, {
+                            setting: N.s6.ACCOUNT_ENABLE_2FA,
+                            children: (0, i.jsx)(c.zxk, {
+                                variant: 'primary',
+                                size: 'sm',
+                                text: A.intl.string(A.t.cDgKtb),
+                                onClick: T.ZP.enableMFA
+                            })
                         })
                     ]
                 }),

@@ -20,20 +20,17 @@ function c(e) {
                     type: r.R94.Types.DESCRIPTION,
                     children: m ? l.intl.string(l.t.TIh3Ym) : l.intl.string(l.t.czsGAw)
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)(r.hE2, {
+                    size: 'sm',
                     className: o.buttonContainer,
                     children: [
                         m
-                            ? (0, i.jsx)('div', {
-                                  'data-button-hoisted-classname-wrapper': !0,
-                                  className: o.disableButton,
-                                  children: (0, i.jsx)(r.zxk, {
-                                      variant: 'critical-primary',
-                                      size: 'sm',
-                                      text: l.intl.string(l.t.jf5GGR),
-                                      disabled: c,
-                                      onClick: d
-                                  })
+                            ? (0, i.jsx)(r.zxk, {
+                                  variant: 'critical-primary',
+                                  size: 'sm',
+                                  text: l.intl.string(l.t.jf5GGR),
+                                  disabled: c,
+                                  onClick: d
                               })
                             : null,
                         (0, i.jsx)(s.F, {

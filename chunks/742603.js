@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(665149),
     x = n(984370),
     v = n(910611),
-    O = n(454585),
-    j = n(134483),
+    j = n(454585),
+    O = n(134483),
     E = n(210975),
     S = n(809244),
     P = n(937995),
@@ -211,7 +211,7 @@ function W(e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       className: a()(U.channelStatus, B.markup, { [U.hoverable]: G }),
-                                      children: O.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
+                                      children: j.Z.parseVoiceChannelStatus(w, !0, { channelId: t.id })
                                   }),
                                   G &&
                                       (0, r.jsx)(s.vdY, {
@@ -296,7 +296,7 @@ function W(e) {
                         ]
                     })
             }),
-            (0, r.jsx)(j.Z, { channelId: t.id })
+            (0, r.jsx)(O.Z, { channelId: t.id })
         ]
     });
 }

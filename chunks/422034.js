@@ -44,58 +44,64 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { smallerText: t, className: n, textColor: a, isApplicationHome: c } = e,
-        p = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
-        h = p.map((e, t) =>
+    let { smallerText: t, className: n, textColor: a, isApplicationHome: c, enablePremiumBrandRefresh: p } = e,
+        h = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
+        m = h.map((e, t) =>
             (0, r.jsx)(
                 g,
                 {
                     affinity: e,
-                    applyMask: t !== p.length - 1,
-                    size: d.EF.SIZE_32
+                    applyMask: t !== h.length - 1,
+                    size: p ? d.EF.SIZE_24 : d.EF.SIZE_32
                 },
                 e.id
             )
         ),
-        m = (e) => (null != e.globalName ? e.globalName : e.username),
-        E = i.useMemo(
+        E = (e) => (null != e.globalName ? e.globalName : e.username),
+        b = i.useMemo(
             () =>
-                3 === p.length
-                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: m(p[2]) })
-                    : 2 === p.length
+                3 === h.length
+                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: E(h[2]) })
+                    : 2 === h.length
                       ? f.intl.formatToPlainString(f.t.st8Rh4, {
-                            username: m(p[1]),
-                            otherUsername: m(p[0])
+                            username: E(h[1]),
+                            otherUsername: E(h[0])
                         })
-                      : 1 === p.length
-                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: m(p[0]) })
+                      : 1 === h.length
+                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: E(h[0]) })
                         : '',
-            [p]
+            [h]
         );
-    if (0 === p.length) return null;
-    function b() {
-        return t || c
+    if (0 === h.length) return null;
+    function y() {
+        return p
             ? (0, r.jsx)(l.Text, {
-                  variant: c ? 'text-sm/normal' : 'text-lg/medium',
+                  variant: 'text-sm/medium',
                   color: a,
-                  children: E
+                  children: b
               })
-            : (0, r.jsx)(l.X6q, {
-                  variant: 'heading-xl/medium',
-                  color: a,
-                  children: E
-              });
+            : t || c
+              ? (0, r.jsx)(l.Text, {
+                    variant: c ? 'text-sm/normal' : 'text-lg/medium',
+                    color: a,
+                    children: b
+                })
+              : (0, r.jsx)(l.X6q, {
+                    variant: 'heading-xl/medium',
+                    color: a,
+                    children: b
+                });
     }
     return (0, r.jsxs)('div', {
-        className: o()(_.container, n, { [_.v2Container]: c }),
+        className: o()(p ? _.premiumBrandRefreshContainer : _.container, n, { [_.v2Container]: !p && c }),
         children: [
             (0, r.jsx)('div', {
                 className: _.iconContainer,
-                children: h
+                children: m
             }),
             (0, r.jsx)('div', {
                 className: _.textContainer,
-                children: (0, r.jsx)(b, {})
+                children: (0, r.jsx)(y, {})
             })
         ]
     });

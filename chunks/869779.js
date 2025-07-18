@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => k }));
+(n.r(t), n.d(t, { default: () => B }));
 var i = n(255367),
     l = n(73800),
     r = n(442837),
@@ -13,38 +13,39 @@ var i = n(255367),
     g = n(471445),
     p = n(351123),
     f = n(685929),
-    x = n(665906),
-    j = n(210887),
-    b = n(131704),
-    v = n(533947),
-    y = n(277053),
-    C = n(388610),
-    N = n(592125),
-    S = n(496675),
-    E = n(699516),
-    O = n(594174),
-    T = n(585483),
-    w = n(787263),
-    Z = n(975316),
-    R = n(428813),
-    I = n(2147),
-    _ = n(856606),
-    P = n(981631),
-    A = n(388032),
-    L = n(511740);
-function D(e) {
+    x = n(984802),
+    j = n(665906),
+    b = n(210887),
+    v = n(131704),
+    y = n(533947),
+    C = n(277053),
+    N = n(388610),
+    S = n(592125),
+    E = n(496675),
+    O = n(699516),
+    T = n(594174),
+    w = n(585483),
+    Z = n(787263),
+    R = n(975316),
+    I = n(428813),
+    _ = n(2147),
+    P = n(856606),
+    A = n(981631),
+    L = n(388032),
+    D = n(511740);
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    h.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
+    h.ZP.trackWithMetadata(A.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: 'channel',
         origin_pane: t,
         destination_pane: e,
         location: n
     });
 }
-class M extends l.PureComponent {
+class k extends l.PureComponent {
     componentDidMount() {
-        D(this.props.section, null, this.props.analyticsLocation);
+        M(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         a.Z.wait(() => (0, o.xv)());
@@ -52,7 +53,7 @@ class M extends l.PureComponent {
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
             { formState: i, section: l, canManageRoles: r, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
-        (s || r || a || o) && (i !== P.QZA.CLOSED || i === t) && (r || l !== P.CoT.PERMISSIONS) && (a || o || l !== P.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
+        (s || r || a || o) && (i !== A.QZA.CLOSED || i === t) && (r || l !== A.CoT.PERMISSIONS) && (a || o || l !== A.CoT.INTEGRATIONS) ? l !== n && M(l, n) : (0, c.xf)();
     }
     render() {
         let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
@@ -61,15 +62,15 @@ class M extends l.PureComponent {
             : (0, i.jsx)(d.ZP, {
                   theme: e,
                   sidebarTheme: t,
-                  section: null != n ? n : P.CoT.OVERVIEW,
+                  section: null != n ? n : A.CoT.OVERVIEW,
                   onSetSection: o.zc,
                   onClose: c.xf,
                   sections: (function (e) {
                       let { channel: t, category: n, canManageRoles: l, canManageChannels: r, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
                           f = (0, g.KS)(t),
-                          { GUILD_CATEGORY: x } = P.d4z,
-                          j = b.Ec.has(t.type),
-                          N = t.type === x ? A.intl.string(A.t.ifbXnJ) : j ? (t.isForumPost() ? A.intl.string(A.t.nEOg1N) : A.intl.string(A.t.H7vTe3)) : A.intl.string(A.t['8D8Rsb']);
+                          { GUILD_CATEGORY: x } = A.d4z,
+                          j = v.Ec.has(t.type),
+                          b = t.type === x ? L.intl.string(L.t.ifbXnJ) : j ? (t.isForumPost() ? L.intl.string(L.t.nEOg1N) : L.intl.string(L.t.H7vTe3)) : L.intl.string(L.t['8D8Rsb']);
                       return [
                           {
                               section: u.ID.HEADER,
@@ -81,76 +82,76 @@ class M extends l.PureComponent {
                                                     ? (0, i.jsx)(f, {
                                                           size: 'xxs',
                                                           color: 'currentColor',
-                                                          className: L.channelIcon
+                                                          className: D.channelIcon
                                                       })
                                                     : null,
-                                                (0, m.F6)(t, O.default, E.Z),
+                                                (0, m.F6)(t, T.default, O.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
                                                           variant: 'text-xs/semibold',
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
-                                                          className: L.category,
-                                                          children: (0, m.F6)(n, O.default, E.Z)
+                                                          className: D.category,
+                                                          children: (0, m.F6)(n, T.default, O.Z)
                                                       })
                                                     : null
                                             ]
                                         })
-                                      : A.intl.string(A.t.XPDhcX)
+                                      : L.intl.string(L.t.XPDhcX)
                           },
                           {
-                              section: P.CoT.OVERVIEW,
-                              label: A.intl.string(A.t['/dp6yc']),
-                              ariaLabel: A.intl.string(A.t['/dp6yc']),
-                              element: I.Z,
+                              section: A.CoT.OVERVIEW,
+                              label: L.intl.string(L.t['/dp6yc']),
+                              ariaLabel: L.intl.string(L.t['/dp6yc']),
+                              element: _.Z,
                               notice: {
-                                  element: I.G,
-                                  stores: [C.Z]
+                                  element: _.G,
+                                  stores: [N.Z]
                               },
                               predicate: () => !t.isModeratorReportChannel()
                           },
                           {
-                              section: P.CoT.PERMISSIONS,
-                              label: A.intl.string(A.t.xrmhRU),
+                              section: A.CoT.PERMISSIONS,
+                              label: L.intl.string(L.t.xrmhRU),
                               element: p.Z,
                               notice: {
-                                  element: _.n,
-                                  stores: [y.Z]
+                                  element: P.n,
+                                  stores: [C.Z]
                               },
                               predicate: () => l && !j
                           },
                           {
-                              section: P.CoT.INSTANT_INVITES,
-                              label: A.intl.string(A.t['9F90iY']),
-                              element: R.Z,
+                              section: A.CoT.INSTANT_INVITES,
+                              label: L.intl.string(L.t['9F90iY']),
+                              element: I.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => t.type !== x && r && !j && !t.isModeratorReportChannel()
                           },
                           {
-                              section: P.CoT.INTEGRATIONS,
-                              label: A.intl.string(A.t.s69NLC),
-                              ariaLabel: A.intl.string(A.t.s69NLC),
-                              element: Z.Z,
+                              section: A.CoT.INTEGRATIONS,
+                              label: L.intl.string(L.t.s69NLC),
+                              ariaLabel: L.intl.string(L.t.s69NLC),
+                              element: R.Z,
                               notice: {
-                                  stores: [v.Z],
-                                  element: Z.B
+                                  stores: [y.Z],
+                                  element: R.B
                               },
-                              predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && b.Ti.has(t.type)
+                              predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && v.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {
-                              section: P.CoT.DELETE,
+                              section: A.CoT.DELETE,
                               onClick() {
-                                  (0, w.w)(t, function () {
-                                      (T.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, Z.w)(t, function () {
+                                      (w.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)());
                                   });
                               },
-                              label: N,
-                              ariaLabel: N,
+                              label: b,
+                              ariaLabel: b,
                               icon: (0, i.jsx)(s.XHJ, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -171,27 +172,27 @@ class M extends l.PureComponent {
               });
     }
 }
-function k() {
-    let { channel: e, analyticsLocation: t } = (0, r.cj)([C.Z], () => C.Z.getProps()),
-        n = (0, r.e7)([C.Z], () => C.Z.getFormState()),
-        l = (0, r.e7)([C.Z], () => C.Z.getSection()),
-        s = (0, r.e7)([j.Z], () => j.Z.theme),
-        a = (0, r.e7)([j.Z], () => (j.Z.darkSidebar ? P.BRd.DARK : void 0)),
-        o = (0, x.C7)(e),
-        c = (0, x.Xb)(e),
+function B() {
+    let { channel: e, analyticsLocation: t } = (0, r.cj)([N.Z], () => N.Z.getProps()),
+        n = (0, r.e7)([N.Z], () => N.Z.getFormState()),
+        l = (0, r.e7)([N.Z], () => N.Z.getSection()),
+        s = (0, r.e7)([b.Z], () => b.Z.theme),
+        a = (0, x.Ll)(),
+        o = (0, j.C7)(e),
+        c = (0, j.Xb)(e),
         {
             canManageChannels: d,
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: m
-        } = (0, r.cj)([S.Z], () => ({
-            canManageChannels: S.Z.can(P.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && S.Z.can(P.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && S.Z.can(P.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, S.Z)
+        } = (0, r.cj)([E.Z], () => ({
+            canManageChannels: E.Z.can(A.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && E.Z.can(A.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && E.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, E.Z)
         })),
-        g = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
-    return (0, i.jsx)(M, {
+        g = (0, r.e7)([S.Z], () => S.Z.getChannel(null == e ? void 0 : e.parent_id));
+    return (0, i.jsx)(k, {
         channel: e,
         category: g,
         canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,

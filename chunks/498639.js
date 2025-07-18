@@ -112,8 +112,8 @@ let k = function () {
         [z, W] = r.useState(L.length > 0 ? L[0].value : null),
         { analyticsLocations: Y } = (0, g.ZP)(p.Z.PAYMENT_FLOW_TEST_PAGE),
         [K, q] = r.useState(''),
-        [X, J] = r.useState(A.lds),
-        { balance: Q, isFetching: $, error: ee } = (0, T.A)(),
+        [X, Q] = r.useState(A.lds),
+        { balance: J, isFetching: $, error: ee } = (0, T.A)(),
         { isSubmitting: et, responseMessage: en, redeemVirtualCurrency: ei } = (0, T.f)(),
         [er, es] = r.useState(A.lds),
         [ea, el] = r.useState(''),
@@ -360,7 +360,7 @@ let k = function () {
                                                       children: ['Error fetching Virtual Currency Balance: ', ee.message]
                                                   }),
                                               (0, i.jsx)(N.A4, {
-                                                  balance: null != Q ? Q : 0,
+                                                  balance: null != J ? J : 0,
                                                   balanceWidgetMode: N.b6.SELECTED
                                               })
                                           ]
@@ -435,7 +435,7 @@ let k = function () {
                                 (0, i.jsx)(c.oil, {
                                     placeholder: 'Sku Id',
                                     value: X,
-                                    onChange: (e) => J(e)
+                                    onChange: (e) => Q(e)
                                 }),
                                 (0, i.jsx)(c.zxk, {
                                     variant: 'primary',

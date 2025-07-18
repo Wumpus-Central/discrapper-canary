@@ -22,11 +22,11 @@ function b(e) {
         x = C(_),
         v = i.useRef(null);
     if (null == _) return null;
-    let O = () => {
+    let j = () => {
             if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
             n();
         },
-        j = () => {
+        O = () => {
             h.Z.endEvent(_.id, _.guild_id);
         };
     return x
@@ -43,7 +43,7 @@ function b(e) {
                           children: (0, r.jsx)(a.sNh, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: j,
+                              action: O,
                               label: g.intl.string(g.t.qaYzPD),
                               icon: a.k$p
                           })
@@ -58,7 +58,7 @@ function b(e) {
                   return (0, r.jsx)(u.Z, {
                       buttonRef: v,
                       label: g.intl.string(g.t['6vrfgo']),
-                      onClick: O,
+                      onClick: j,
                       onPopoutClick: t
                   });
               }

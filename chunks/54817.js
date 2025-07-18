@@ -21,7 +21,7 @@ function h(e) {
             avatarSrc: b,
             eventHandlers: { onMouseEnter: E, onMouseLeave: x }
         } = (0, u.m)(!0),
-        C =
+        v =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
                       hour: 'numeric',
@@ -72,7 +72,7 @@ function h(e) {
                                 ? f.intl.format(f.t['+m8eDw'], {
                                       username: h.nick,
                                       usernameHook: _,
-                                      time: C
+                                      time: v
                                   })
                                 : f.intl.format(f.t.BHeke3, {
                                       username: h.nick,

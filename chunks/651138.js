@@ -1,32 +1,32 @@
-(n.d(t, { default: () => h }), n(388685));
-var r = n(255367),
-    i = n(73800),
-    l = n(442837),
-    o = n(481060),
-    s = n(239091),
-    a = n(434404),
-    c = n(496675),
-    u = n(981631),
-    d = n(388032);
-function h(e) {
-    let { guild: t, onSelect: n } = e,
-        [h, p] = i.useState(t.premiumProgressBarEnabled),
-        [f, g] = i.useState(!1),
-        m = (0, l.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_GUILD, t)),
-        b = async () => {
-            m && (g(!0), await a.Z.saveGuild(t.id, { premiumProgressBarEnabled: !h }), p(!h), g(!1));
+(s.d(a, { default: () => p }), s(388685));
+var r = s(255367),
+    t = s(73800),
+    n = s(442837),
+    i = s(481060),
+    d = s(239091),
+    l = s(434404),
+    c = s(496675),
+    o = s(981631),
+    u = s(388032);
+function p(e) {
+    let { guild: a, onSelect: s } = e,
+        [p, b] = t.useState(a.premiumProgressBarEnabled),
+        [h, g] = t.useState(!1),
+        k = (0, n.e7)([c.Z], () => c.Z.can(o.Plq.MANAGE_GUILD, a)),
+        m = async () => {
+            k && (g(!0), await l.Z.saveGuild(a.id, { premiumProgressBarEnabled: !p }), b(!p), g(!1));
         };
-    return (0, r.jsx)(o.v2r, {
+    return (0, r.jsx)(i.v2r, {
         navId: 'progress-bar-context',
-        onClose: s.Zy,
-        'aria-label': d.intl.string(d.t['m85s/v']),
-        onSelect: n,
-        children: (0, r.jsx)(o.S89, {
+        onClose: d.Zy,
+        'aria-label': u.intl.string(u.t['m85s/v']),
+        onSelect: s,
+        children: (0, r.jsx)(i.S89, {
             id: 'progress-bar-enabled',
-            label: d.intl.string(d.t['0CJWPz']),
-            checked: h,
-            disabled: f,
-            action: b
+            label: u.intl.string(u.t['0CJWPz']),
+            checked: p,
+            disabled: h,
+            action: m
         })
     });
 }

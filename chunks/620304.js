@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(539854));
+(n.d(t, { Z: () => N }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,19 +13,16 @@ var r = n(255367),
     f = n(243778),
     g = n(667815),
     m = n(531572),
-    b = n(594174),
-    _ = n(259580),
-    O = n(538445),
-    y = n(232062),
-    v = n(639777),
-    C = n(554549),
-    j = n(441536),
-    E = n(447908),
-    x = n(921944),
-    S = n(93841),
-    I = n(388032),
-    P = n(27053);
-function N(e) {
+    b = n(259580),
+    _ = n(538445),
+    O = n(639777),
+    y = n(441536),
+    v = n(447908),
+    C = n(921944),
+    j = n(93841),
+    E = n(388032),
+    x = n(27053);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +47,7 @@ function N(e) {
     }
     return e;
 }
-function w(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,24 +65,24 @@ function w(e, t) {
         e
     );
 }
-function Z(e) {
-    let { guild: t, withMargin: l } = e,
-        Z = i.useMemo(() => (0, E.Z)(t), [t]),
-        T = (0, v.Z)(t.id),
-        A = i.useCallback(() => {
-            (0, j.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+function P(e) {
+    let { guild: t, tooltipTypes: l, withMargin: P } = e,
+        N = i.useMemo(() => (0, v.Z)(t), [t]),
+        w = (0, O.Z)(t.id),
+        Z = i.useCallback(() => {
+            (0, y.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        R = (0, c.e7)([m.Z], () => {
+        T = (0, c.e7)([m.Z], () => {
             var e;
             return null != (e = m.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        R !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, R, t.premiumSubscriberCount]);
-    let D = Math.min((R / Z) * 100, 100),
-        [L, M] = (0, d.q_F)(
+        T !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, T, t.premiumSubscriberCount]);
+    let A = Math.min((T / N) * 100, 100),
+        [R, D] = (0, d.q_F)(
             () => ({
-                width: R === t.premiumSubscriberCount ? 'calc('.concat(D, '% - 4px)') : '0%',
+                width: T === t.premiumSubscriberCount ? 'calc('.concat(A, '% - 4px)') : '0%',
                 config: {
                     tension: 250,
                     damping: 5,
@@ -93,118 +90,121 @@ function Z(e) {
                 }
             }),
             'respect-motion-settings',
-            [R, t.premiumSubscriberCount]
+            [T, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
-        M({ width: 'calc('.concat(D, '% - 4px)') });
-    }, [D, M]);
-    let k = R >= Z,
-        U = i.useRef(null),
-        G = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
-        B = (0, C.Z)(null == G ? void 0 : G.id, t.id),
-        V = (0, y.W)(t.id, 'GuildPowerupsSidebarDisplay'),
-        F = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0,
-        H = [];
-    B && V && F && H.push(u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK);
-    let [z, W] = (0, f.US)(H);
-    return (0, r.jsx)(d.yRy, {
-        targetElementRef: U,
-        renderPopout: () =>
-            z === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
-                ? (0, r.jsx)(O.Z, {
-                      guild: t,
-                      markAsDismissed: W
-                  })
-                : null,
-        position: 'right',
-        align: 'top',
-        shouldShow: null != z,
-        onRequestClose: () => W(x.L.INDIRECT_ACTION),
-        animation: d.yRy.Animation.TRANSLATE,
-        children: (e) =>
-            (0, r.jsx)('div', {
-                ref: U,
-                children: (0, r.jsx)(
-                    d.P3F,
-                    w(N({}, e), {
-                        'aria-label': void 0,
-                        role: 'button',
-                        focusProps: {
-                            offset: {
-                                left: 10,
-                                right: 4
-                            }
-                        },
-                        onClick: A,
-                        className: o()(P.container, { [P.containerWithMargin]: l }),
-                        onContextMenu: (e) => {
-                            T &&
-                                (0, h.jW)(e, async () => {
-                                    let { default: e } = await Promise.resolve().then(n.bind(n, 651138));
-                                    return (n) => (0, r.jsx)(e, w(N({}, n), { guild: t }));
-                                });
-                        },
-                        children: (0, r.jsxs)('div', {
-                            className: P.contentContainer,
-                            children: [
-                                (0, r.jsx)('div', { className: P.progressContainer }),
-                                (0, r.jsx)(s.animated.div, {
-                                    className: o()(P.progress, { [P.progressLow]: D <= 5 }),
-                                    style: L
-                                }),
-                                (0, r.jsxs)('div', {
-                                    className: P.textContainer,
-                                    children: [
-                                        (0, r.jsxs)('div', {
-                                            className: P.textContentContainer,
-                                            children: [
+        D({ width: 'calc('.concat(A, '% - 4px)') });
+    }, [A, D]);
+    let L = T >= N,
+        M = i.useRef(null),
+        [k, U] = (0, f.US)(l),
+        G = (e) =>
+            (0, r.jsx)(
+                d.P3F,
+                I(S({}, e), {
+                    'aria-label': void 0,
+                    role: 'button',
+                    focusProps: {
+                        offset: {
+                            left: 10,
+                            right: 4
+                        }
+                    },
+                    onClick: () => {
+                        var t;
+                        (null == e || null == (t = e.onClick) || t.call(e), Z());
+                    },
+                    className: o()(x.container, { [x.containerWithMargin]: P }),
+                    onContextMenu: (e) => {
+                        w &&
+                            (0, h.jW)(e, async () => {
+                                let { default: e } = await n.e('8570').then(n.bind(n, 651138));
+                                return (n) => (0, r.jsx)(e, I(S({}, n), { guild: t }));
+                            });
+                    },
+                    children: (0, r.jsxs)('div', {
+                        className: x.contentContainer,
+                        children: [
+                            (0, r.jsx)('div', { className: x.progressContainer }),
+                            (0, r.jsx)(s.animated.div, {
+                                className: o()(x.progress, { [x.progressLow]: A <= 5 }),
+                                style: R
+                            }),
+                            (0, r.jsxs)('div', {
+                                className: x.textContainer,
+                                children: [
+                                    (0, r.jsxs)('div', {
+                                        className: x.textContentContainer,
+                                        children: [
+                                            (0, r.jsx)(a.xv, {
+                                                className: x.text,
+                                                variant: 'text-xs/semibold',
+                                                children: E.intl.string(j.default.NI6IhY)
+                                            }),
+                                            t.premiumSubscriberCount >= N &&
                                                 (0, r.jsx)(a.xv, {
-                                                    className: P.text,
+                                                    className: x.text,
                                                     variant: 'text-xs/semibold',
-                                                    children: I.intl.string(S.default.NI6IhY)
-                                                }),
-                                                t.premiumSubscriberCount >= Z &&
-                                                    (0, r.jsx)(a.xv, {
-                                                        className: P.text,
-                                                        variant: 'text-xs/semibold',
-                                                        children: '\uD83C\uDF89'
-                                                    })
-                                            ]
-                                        }),
-                                        (0, r.jsxs)('div', {
-                                            className: P.textContentContainer,
-                                            children: [
-                                                (0, r.jsx)(a.xv, {
-                                                    className: o()(P.text, P.boostCountText),
-                                                    variant: 'text-xs/semibold',
-                                                    children: k
-                                                        ? I.intl.formatToPlainString(S.default['Ehpq+/'], { appliedBoostCount: R })
-                                                        : I.intl.formatToPlainString(S.default['/rbPDg'], {
-                                                              appliedBoostCount: R,
-                                                              maxBoostCount: Z
-                                                          })
-                                                }),
-                                                (0, r.jsx)(_.Z, {
-                                                    width: 12,
-                                                    height: 12,
-                                                    direction: _.Z.Directions.RIGHT,
-                                                    className: o()(P.text, P.boostCountText)
+                                                    children: '\uD83C\uDF89'
                                                 })
-                                            ]
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
+                                        ]
+                                    }),
+                                    (0, r.jsxs)('div', {
+                                        className: x.textContentContainer,
+                                        children: [
+                                            (0, r.jsx)(a.xv, {
+                                                className: o()(x.text, x.boostCountText),
+                                                variant: 'text-xs/semibold',
+                                                children: L
+                                                    ? E.intl.formatToPlainString(j.default['Ehpq+/'], { appliedBoostCount: T })
+                                                    : E.intl.formatToPlainString(j.default['/rbPDg'], {
+                                                          appliedBoostCount: T,
+                                                          maxBoostCount: N
+                                                      })
+                                            }),
+                                            (0, r.jsx)(b.Z, {
+                                                width: 12,
+                                                height: 12,
+                                                direction: b.Z.Directions.RIGHT,
+                                                className: o()(x.text, x.boostCountText)
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
                     })
-                )
-            })
-    });
+                })
+            );
+    return null != k
+        ? (0, r.jsx)(d.yRy, {
+              targetElementRef: M,
+              renderPopout: () =>
+                  k === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
+                      ? (0, r.jsx)(_.Z, {
+                            guild: t,
+                            markAsDismissed: U
+                        })
+                      : null,
+              position: 'right',
+              align: 'top',
+              shouldShow: !0,
+              closeOnScroll: !0,
+              onRequestClose: () => U(C.L.INDIRECT_ACTION),
+              animation: d.yRy.Animation.TRANSLATE,
+              children: (e) =>
+                  (0, r.jsx)('div', {
+                      ref: M,
+                      children: G(e)
+                  })
+          })
+        : G();
 }
-function T(e) {
-    let { guild: t, withMargin: n } = e;
-    return (0, r.jsx)(Z, {
+function N(e) {
+    let { guild: t, tooltipTypes: n, withMargin: i } = e;
+    return (0, r.jsx)(P, {
         guild: t,
-        withMargin: n
+        tooltipTypes: n,
+        withMargin: i
     });
 }

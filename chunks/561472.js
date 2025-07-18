@@ -19,20 +19,20 @@ var r = n(255367),
     C = n(981631),
     x = n(388032);
 let v = function (e) {
-    let { className: t, style: n, channel: v, draftType: O } = e,
-        [j, E] = i.useState(!0),
+    let { className: t, style: n, channel: v, draftType: j } = e,
+        [O, E] = i.useState(!0),
         S = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         P = (0, l.e7)([h.Z], () => null != v && h.Z.can(C.Plq.ATTACH_FILES, v), [v]),
         I = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(v.id)),
         Z = v.getGuildId(),
-        T = O === c.d.FirstThreadMessage,
+        T = j === c.d.FirstThreadMessage,
         N = (0, l.e7)([m.default], () => {
             var e;
             return !0 == !(null == (e = m.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
         A = (0, l.e7)([u.Z], () => u.Z.didAgree(Z)) && !N,
         w = i.useMemo(() => !S && ((v.isPrivate() && !v.isManaged()) || (null != Z && (!(0, a.aC)(v) || A) && P && d.Z.canChatInGuild(Z))), [P, A, v, Z, S]),
-        R = T ? (C.TPd.GUILD_THREADS_ONLY.has(v.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : j ? x.intl.format(x.t.dYP2FR, { destination: (0, s.F6)(v, m.default, f.Z, !0) }) : x.intl.string(x.t.h76ulJ);
+        R = T ? (C.TPd.GUILD_THREADS_ONLY.has(v.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : O ? x.intl.format(x.t.dYP2FR, { destination: (0, s.F6)(v, m.default, f.Z, !0) }) : x.intl.string(x.t.h76ulJ);
     return I || !w
         ? null
         : (0, r.jsx)(_.Z, {
@@ -45,8 +45,8 @@ let v = function (e) {
                   if (I) return !1;
                   w &&
                       null != v &&
-                      ((0, b.d)(e, v, O, {
-                          requireConfirm: j,
+                      ((0, b.d)(e, v, j, {
+                          requireConfirm: O,
                           showLargeMessageDialog: !1
                       }),
                       g.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
@@ -54,7 +54,7 @@ let v = function (e) {
               onDragClear: () => E(!0),
               onDragOver: (e) => {
                   if (I) return !1;
-                  T || e.shiftKey !== j || E(!e.shiftKey);
+                  T || e.shiftKey !== O || E(!e.shiftKey);
               }
           });
 };

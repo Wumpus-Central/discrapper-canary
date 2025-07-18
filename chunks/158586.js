@@ -1,199 +1,153 @@
-(i.d(t, { default: () => j }), i(388685));
-var n = i(255367),
-    o = i(73800),
-    a = i(755721),
-    l = i(481060),
-    r = i(787014),
-    s = i(907040),
-    d = i(946458),
-    c = i(185923),
-    m = i(388032),
-    u = i(815461);
+(n.d(t, { default: () => j }), n(388685));
+var i = n(255367),
+    o = n(73800),
+    l = n(82659),
+    r = n(481060),
+    a = n(787014),
+    c = n(907040),
+    s = n(946458),
+    d = n(185923),
+    u = n(388032),
+    m = n(815461);
 let j = (e) => {
-    var t, i, j;
-    let { channel: b, onClose: x, transitionState: h } = e,
-        [p, v] = o.useState(null != (j = b.defaultReactionEmoji) ? j : null),
-        [f, g] = o.useState(!1),
-        [y, N] = o.useState(!1),
-        w = o.useRef(null),
-        O = (null == (t = b.defaultReactionEmoji) ? void 0 : t.emojiId) !== (null == p ? void 0 : p.emojiId) || (null == (i = b.defaultReactionEmoji) ? void 0 : i.emojiName) !== (null == p ? void 0 : p.emojiName),
-        _ = (e) => {
-            v(
-                null == e
-                    ? null
-                    : (null == e ? void 0 : e.id) != null
-                      ? {
-                            emojiId: e.id,
-                            emojiName: void 0
-                        }
-                      : {
-                            emojiId: void 0,
-                            emojiName: e.optionallyDiverseSequence
-                        }
-            );
+    var t, n, j, p, b, x, h;
+    let { channel: v, onClose: f, transitionState: y } = e,
+        [g, O] = o.useState(null != (j = v.defaultReactionEmoji) ? j : null),
+        [N, w] = o.useState(!1),
+        [E, P] = o.useState(!1),
+        k = o.useRef(null),
+        _ = (null != (p = null == (t = v.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !== (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
+        R = (null != (x = null == (n = v.defaultReactionEmoji) ? void 0 : n.emojiName) ? x : null) !== (null != (h = null == g ? void 0 : g.emojiName) ? h : null),
+        C = _ || R,
+        I = (e) => {
+            O(null == e ? null : (null == e ? void 0 : e.id) != null ? { emojiId: e.id } : { emojiName: e.optionallyDiverseSequence });
         },
-        E = async () => {
-            if (O) {
-                (g(!0), N(!1));
+        S = async () => {
+            if (C) {
+                (w(!0), P(!1));
                 try {
-                    (await (0, r.wk)(b.id, { defaultReactionEmoji: p }), x());
+                    (await (0, a.wk)(v.id, { defaultReactionEmoji: g }), f());
                 } catch (e) {
-                    N(!0);
+                    P(!0);
                 } finally {
-                    g(!1);
+                    w(!1);
                 }
             }
         };
-    return (0, n.jsxs)(l.Y0X, {
-        transitionState: h,
-        'aria-label': m.intl.string(m.t.XlDE3t),
-        parentComponent: 'ChooseDefaultReactionModal',
+    return (0, i.jsxs)(l.u, {
+        title: u.intl.string(u.t.XlDE3t),
+        subtitle: u.intl.string(u.t.lVqhdX),
+        transitionState: y,
+        onClose: f,
+        actions: [
+            {
+                variant: 'secondary',
+                text: u.intl.string(u.t['ETE/oK']),
+                onClick: f
+            },
+            {
+                variant: 'primary',
+                text: u.intl.string(u.t.R3BPHx),
+                loading: N,
+                disabled: !C,
+                onClick: S,
+                autoFocus: !0
+            }
+        ],
         children: [
-            (0, n.jsx)(l.xBx, {
-                separator: !1,
-                className: u.modalHeader,
-                children: (0, n.jsx)(l.X6q, {
-                    variant: 'heading-md/semibold',
-                    children: m.intl.string(m.t.XlDE3t)
-                })
-            }),
-            (0, n.jsxs)(l.hzk, {
+            (0, i.jsx)(s.Z, { reactionEmoji: g }),
+            (0, i.jsxs)(r.hE2, {
+                size: 'sm',
+                className: m.buttonRow,
                 children: [
-                    (0, n.jsx)(l.Text, {
-                        variant: 'text-sm/medium',
-                        className: u.subtitle,
-                        children: m.intl.string(m.t.lVqhdX)
-                    }),
-                    (0, n.jsx)(d.Z, { reactionEmoji: p }),
-                    (0, n.jsxs)('div', {
-                        className: u.buttonRow,
-                        children: [
-                            (0, n.jsx)(l.yRy, {
-                                targetElementRef: w,
-                                renderPopout: (e) => {
-                                    let { closePopout: t } = e;
-                                    return (0, n.jsx)(s.Z, {
-                                        guildId: null == b ? void 0 : b.guild_id,
-                                        closePopout: t,
-                                        onSelectEmoji: (e) => {
-                                            let { emoji: i, willClose: n } = e;
-                                            (_(i), n && t());
-                                        },
-                                        pickerIntention: c.Hz.COMMUNITY_CONTENT,
-                                        channel: b
-                                    });
+                    (0, i.jsx)(r.yRy, {
+                        targetElementRef: k,
+                        renderPopout: (e) => {
+                            let { closePopout: t } = e;
+                            return (0, i.jsx)(c.Z, {
+                                guildId: null == v ? void 0 : v.guild_id,
+                                closePopout: t,
+                                onSelectEmoji: (e) => {
+                                    let { emoji: n, willClose: i } = e;
+                                    (I(n), i && t());
                                 },
-                                position: 'right',
-                                animation: l.yRy.Animation.NONE,
-                                align: 'center',
-                                children: (e) => {
-                                    var t, i;
-                                    return (0, n.jsx)(
-                                        a.zx,
-                                        ((t = (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var i = null != arguments[t] ? arguments[t] : {},
-                                                    n = Object.keys(i);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
-                                                    (n = n.concat(
-                                                        Object.getOwnPropertySymbols(i).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(i, e).enumerable;
-                                                        })
-                                                    )),
-                                                    n.forEach(function (t) {
-                                                        var n;
-                                                        ((n = i[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: n,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0
-                                                                  })
-                                                                : (e[t] = n));
-                                                    }));
-                                            }
-                                            return e;
-                                        })({}, e)),
-                                        (i = i =
-                                            {
-                                                buttonRef: w,
-                                                size: a.zx.Sizes.SMALL,
-                                                onClick: (t) => {
-                                                    var i;
-                                                    null == (i = e.onClick) || i.call(e, t);
-                                                },
-                                                children: m.intl.string(m.t['59QgaG'])
-                                            }),
-                                        Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                                            : (function (e, t) {
-                                                  var i = Object.keys(e);
-                                                  if (Object.getOwnPropertySymbols) {
-                                                      var n = Object.getOwnPropertySymbols(e);
-                                                      i.push.apply(i, n);
-                                                  }
-                                                  return i;
-                                              })(Object(i)).forEach(function (e) {
-                                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                                              }),
-                                        t)
-                                    );
-                                }
-                            }),
-                            null != b.defaultReactionEmoji
-                                ? (0, n.jsx)(a.zx, {
-                                      className: u.removeButton,
-                                      onClick: () => _(null),
-                                      size: a.zx.Sizes.MIN,
-                                      look: a.zx.Looks.LINK,
-                                      color: a.zx.Colors.RED,
-                                      children: m.intl.string(m.t.N86XcH)
-                                  })
-                                : null
-                        ]
+                                pickerIntention: d.Hz.COMMUNITY_CONTENT,
+                                channel: v
+                            });
+                        },
+                        position: 'right',
+                        animation: r.yRy.Animation.NONE,
+                        align: 'center',
+                        children: (e) => {
+                            var t, n;
+                            return (0, i.jsx)(
+                                r.zxk,
+                                ((t = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            i = Object.keys(n);
+                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                            (i = i.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                })
+                                            )),
+                                            i.forEach(function (t) {
+                                                var i;
+                                                ((i = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: i,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0
+                                                          })
+                                                        : (e[t] = i));
+                                            }));
+                                    }
+                                    return e;
+                                })({}, e)),
+                                (n = n =
+                                    {
+                                        buttonRef: k,
+                                        text: u.intl.string(u.t['59QgaG']),
+                                        variant: 'primary',
+                                        onClick: (t) => {
+                                            var n;
+                                            null == (n = e.onClick) || n.call(e, t);
+                                        }
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var i = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, i);
+                                          }
+                                          return n;
+                                      })(Object(n)).forEach(function (e) {
+                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                      }),
+                                t)
+                            );
+                        }
                     }),
-                    y
-                        ? (0, n.jsx)('div', {
-                              className: u.__invalid_row,
-                              children: (0, n.jsx)(l.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'text-danger',
-                                  children: m.intl.string(m.t.F75nNj)
-                              })
-                          })
-                        : null
+                    null != g &&
+                        (0, i.jsx)(r.zxk, {
+                            text: u.intl.string(u.t.N86XcH),
+                            variant: 'critical-secondary',
+                            onClick: () => I(null)
+                        })
                 ]
             }),
-            (0, n.jsxs)(l.mzw, {
-                className: u.__invalid_footer,
-                children: [
-                    (0, n.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
-                        className: u.button,
-                        children: (0, n.jsx)(l.zxk, {
-                            variant: 'primary',
-                            size: 'sm',
-                            text: m.intl.string(m.t.R3BPHx),
-                            type: 'submit',
-                            onClick: E,
-                            disabled: !O,
-                            loading: f,
-                            autoFocus: !0
-                        })
-                    }),
-                    (0, n.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
-                        className: u.button,
-                        children: (0, n.jsx)(l.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
-                            text: m.intl.string(m.t['ETE/oK']),
-                            onClick: x
-                        })
-                    })
-                ]
-            })
+            E
+                ? (0, i.jsx)(r.Text, {
+                      variant: 'text-sm/normal',
+                      color: 'text-danger',
+                      children: u.intl.string(u.t.F75nNj)
+                  })
+                : null
         ]
     });
 };

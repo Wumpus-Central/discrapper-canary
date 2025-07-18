@@ -1,28 +1,27 @@
-(n.d(t, { Z: () => j }), n(953529));
+(n.d(t, { Z: () => O }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
     o = n(468194),
-    s = n(755721),
-    c = n(481060),
-    u = n(904245),
-    d = n(596454),
-    p = n(377171),
-    m = n(739566),
-    f = n(942951),
-    g = n(834129),
-    h = n(809026),
-    _ = n(139256),
-    b = n(489887),
-    E = n(388032),
-    x = n(271629);
-function C() {
+    s = n(481060),
+    c = n(904245),
+    u = n(596454),
+    d = n(377171),
+    p = n(739566),
+    m = n(942951),
+    f = n(834129),
+    g = n(809026),
+    h = n(139256),
+    _ = n(489887),
+    b = n(388032),
+    E = n(271629);
+function x() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
-        fill: p.Z.INTERACTIVE_NORMAL,
+        fill: d.Z.INTERACTIVE_NORMAL,
         'aria-hidden': !0,
         children: (0, r.jsx)('path', {
             'fill-rule': 'evenodd',
@@ -35,10 +34,10 @@ function C() {
 function v(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(C, {});
+    if (n) t = (0, r.jsx)(x, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
-        t = (0, r.jsx)(d.Z, {
+        t = (0, r.jsx)(u.Z, {
             emojiId: i.id,
             emojiName: e,
             animated: i.animated
@@ -46,12 +45,12 @@ function v(e) {
     }
     return null != t
         ? (0, r.jsx)('div', {
-              className: x.imageContainer,
+              className: E.imageContainer,
               children: t
           })
         : null;
 }
-function y(e) {
+function C(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -76,11 +75,11 @@ function y(e) {
     let l = 'text-muted';
     switch (n) {
         case 'NO_VOTES':
-            t = (0, r.jsx)(c.Text, {
+            t = (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
                 color: 'text-default',
                 scaleFontToUserSetting: !0,
-                children: E.intl.string(E.t['a+lSZ2'])
+                children: b.intl.string(b.t['a+lSZ2'])
             });
             break;
         case 'VICTOR':
@@ -88,57 +87,57 @@ function y(e) {
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: x.victorAnswer,
+                        className: E.victorAnswer,
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-default',
-                                className: x.victorAnswerText,
+                                className: E.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, r.jsx)(_.ZY, {
+                            (0, r.jsx)(h.ZY, {
                                 size: 16,
-                                className: x.victorIcon,
+                                className: E.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0
                             })
                         ]
                     }),
-                    (0, r.jsxs)(c.Text, {
+                    (0, r.jsxs)(s.Text, {
                         variant: 'text-xs/medium',
                         color: l,
                         scaleFontToUserSetting: !0,
-                        children: [E.intl.string(E.t.ufIDIy), ' \u2022 ', o, '%']
+                        children: [b.intl.string(b.t.ufIDIy), ' \u2022 ', o, '%']
                     })
                 ]
             });
             break;
         case 'TIE':
-            let { tiedVotePercentage: s } = i;
+            let { tiedVotePercentage: c } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-default',
                         scaleFontToUserSetting: !0,
-                        children: E.intl.string(E.t.kPN9sr)
+                        children: b.intl.string(b.t.kPN9sr)
                     }),
-                    (0, r.jsxs)(c.Text, {
+                    (0, r.jsxs)(s.Text, {
                         variant: 'text-xs/medium',
                         color: l,
                         scaleFontToUserSetting: !0,
-                        children: [s, '%']
+                        children: [c, '%']
                     })
                 ]
             });
     }
     return (0, r.jsx)('div', {
-        className: x.description,
+        className: E.description,
         children: t
     });
 }
-function O(e) {
+function y(e) {
     let { className: t, data: n, onClickPollLink: l } = e,
         o = i.useMemo(
             () =>
@@ -159,16 +158,16 @@ function O(e) {
                 })(n),
             [n]
         ),
-        u = null != n.victorEmoji || 'NO_VOTES' === o.type;
+        c = null != n.victorEmoji || 'NO_VOTES' === o.type;
     return (0, r.jsxs)('div', {
-        className: a()(x.container, { [x.containerWithImage]: u }, t),
+        className: a()(E.container, { [E.containerWithImage]: c }, t),
         children: [
             (0, r.jsx)(v, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                y,
+                C,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -196,63 +195,57 @@ function O(e) {
                 })({}, o)
             ),
             null != l &&
-                (0, r.jsx)(s.zx, {
-                    className: x.button,
-                    size: s.zx.Sizes.TINY,
+                (0, r.jsx)(s.zxk, {
+                    size: 'sm',
                     onClick: l,
-                    color: s.zx.Colors.PRIMARY,
-                    children: (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'none',
-                        scaleFontToUserSetting: !0,
-                        children: E.intl.string(E.t.Jw7VbW)
-                    })
+                    variant: 'secondary',
+                    text: b.intl.string(b.t.Jw7VbW)
                 })
         ]
     });
 }
-function j(e) {
+function O(e) {
     var t;
-    let { message: n, channel: l, compact: a, disableInteraction: s = !1 } = e,
+    let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
-        p = i.useMemo(() => (0, h.Z)(d), [d]),
-        _ = (0, o.aF)(null != (t = null == p ? void 0 : p.questionText) ? t : '', b.Dv),
-        C = (0, m.ZP)(n),
-        v = (0, f.l)({
+        h = i.useMemo(() => (0, g.Z)(d), [d]),
+        x = (0, o.aF)(null != (t = null == h ? void 0 : h.questionText) ? t : '', _.Dv),
+        v = (0, p.ZP)(n),
+        C = (0, m.l)({
             user: n.author,
             channelId: l.id,
             guildId: l.guild_id,
             messageId: n.id
         }),
-        y = n.messageReference,
+        O = n.messageReference,
         j = i.useCallback(() => {
-            null != y &&
-                u.Z.jumpToMessage({
-                    channelId: y.channel_id,
-                    messageId: y.message_id,
+            null != O &&
+                c.Z.jumpToMessage({
+                    channelId: O.channel_id,
+                    messageId: O.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, y]);
-    return null == p
+        }, [n.id, O]);
+    return null == h
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(g.Z, {
-                      iconNode: (0, r.jsx)(c.QDj, { size: 'xs' }),
+                  (0, r.jsx)(f.Z, {
+                      iconNode: (0, r.jsx)(s.QDj, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: E.intl.format(E.t['VJcK4+'], {
-                          username: C.nick,
-                          usernameHook: v(C),
-                          title: _,
+                      children: b.intl.format(b.t['VJcK4+'], {
+                          username: v.nick,
+                          usernameHook: C(v),
+                          title: x,
                           titleOnClick: j
                       })
                   }),
-                  (0, r.jsx)(O, {
-                      className: x.embed,
-                      data: p,
-                      onClickPollLink: s ? void 0 : j
+                  (0, r.jsx)(y, {
+                      className: E.embed,
+                      data: h,
+                      onClickPollLink: u ? void 0 : j
                   })
               ]
           });

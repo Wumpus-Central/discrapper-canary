@@ -52,7 +52,7 @@ let H = () => {
         Y = (0, u.ZP)(),
         K = (0, c.wj)(Y),
         [q, X] = r.useState(!1),
-        [J, Q] = r.useState(!1),
+        [Q, J] = r.useState(!1),
         [$, ee] = r.useState(!1),
         [et, en] = r.useState(!1),
         [ei, er] = r.useState(!1),
@@ -66,7 +66,7 @@ let H = () => {
         em = null != eu && eu,
         { analyticsLocations: ep } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
         eg = (0, E.Z)({ location: 'PremiumMarketing' }),
-        eh = !q && !$ && (eg || !J);
+        eh = !q && !$ && (eg || !Q);
     r.useEffect(() => {
         er(!0);
     }, []);
@@ -186,13 +186,13 @@ let H = () => {
                 (0, i.jsx)(o.$, {
                     innerRef: z,
                     onChange: (e) => {
-                        Q(e);
+                        J(e);
                     },
                     children: eg
                         ? (0, i.jsx)(A.Z, { ref: z })
                         : (0, i.jsx)(Z.Z, {
                               ref: z,
-                              isFooterVisible: J,
+                              isFooterVisible: Q,
                               isDarkMode: K,
                               isReducedMotion: W,
                               subscriptionTier: eo

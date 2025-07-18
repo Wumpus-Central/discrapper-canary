@@ -26,6 +26,6 @@ function a(e) {
         },
         { fillColor: b, outlineColor: O } = (0, r.bg)(t.userId, s, c, u),
         y = S(O, 6 + i.q2),
-        Z = null != y && v(y);
-    (Z && (0, l.I)(n, y.x, y.y, O, i.q2), S(b, 6), Z && (0, l.T)(n, y.x, y.y, t.userId));
+        _ = null != y && v(y);
+    (_ && (0, l.I)(n, y.x, y.y, O, i.q2), S(b, 6), _ && (0, l.T)(n, y.x, y.y, t.userId));
 }

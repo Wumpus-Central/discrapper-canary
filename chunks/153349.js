@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(496675),
     x = n(158776),
     v = n(471253),
-    O = n(431328),
-    j = n(145834),
+    j = n(431328),
+    O = n(145834),
     E = n(590415),
     S = n(614173),
     P = n(618896),
@@ -93,10 +93,10 @@ let w = i.memo(function (e) {
     R = i.memo(function (e) {
         let { channel: t, participant: l, tempDisableOnInit: o = !1 } = e,
             g = i.useRef(null),
-            [C, O] = i.useState(o);
+            [C, j] = i.useState(o);
         (0, f.ZP)(() => {
             if (!C) return;
-            let e = setTimeout(() => O(!1), 1000);
+            let e = setTimeout(() => j(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = t.getGuildId();
@@ -176,7 +176,7 @@ let w = i.memo(function (e) {
                                                 (0, r.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: (0, j.$)(l)
+                                                    children: (0, O.$)(l)
                                                 })
                                             ]
                                         })
@@ -256,7 +256,7 @@ let w = i.memo(function (e) {
     });
 function L(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        l = (0, O.Fd)(t.id),
+        l = (0, j.Fd)(t.id),
         o = [+!!(0, c.e7)([C.Z], () => C.Z.can(I.Pl.MANAGE_CHANNELS, t) || C.Z.can(I.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
         className: a()(T.container, { [T.chatOpen]: i }),

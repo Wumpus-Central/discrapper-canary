@@ -74,7 +74,7 @@ function X(e) {
     }
     return e;
 }
-function J(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function J(e, t) {
         e
     );
 }
-let Q = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+let J = (e) => 'https://'.concat(H.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
     $ = [H.epS.DURABLE_PRIMARY, H.epS.DURABLE, H.epS.CONSUMABLE],
     ee = [H.PyE.FAILED, H.PyE.REVERSED, H.PyE.CANCELED],
     et = [W.gg.APPLE],
@@ -141,7 +141,7 @@ function ei(e) {
                 })(e, ['onMouseEnter', 'onMouseLeave']);
             return (0, r.jsx)(
                 p.P3F,
-                J(X({}, s), {
+                Q(X({}, s), {
                     onMouseEnter: () => {
                         (a && l(!1), 'function' == typeof n && n());
                     },
@@ -409,7 +409,7 @@ class el extends (i = s.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let a = 0 === i.length,
-            l = Q(t),
+            l = J(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -491,7 +491,7 @@ class el extends (i = s.PureComponent) {
                     children: !n.isCollectible && this.renderRefundCriteria(Y.intl.string(Y.t.H0RNz8), i, Y.intl.formatToPlainString(Y.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                 }),
                 (0, r.jsx)(p.eee, {
-                    href: Q(t),
+                    href: J(t),
                     children: Y.intl.string(Y.t.re5nOD)
                 })
             ]
@@ -619,7 +619,7 @@ class el extends (i = s.PureComponent) {
                                 buttonPosition: S.E.RIGHT,
                                 notice: Y.intl.string(Y.t['3AvulJ']),
                                 ctaLabel: Y.intl.string(Y.t.zoztQE),
-                                onClick: () => (0, h.Z)(Q(n))
+                                onClick: () => (0, h.Z)(J(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -657,7 +657,7 @@ class el extends (i = s.PureComponent) {
             children: (e) =>
                 (0, r.jsxs)(
                     p.P3F,
-                    J(
+                    Q(
                         X(
                             {
                                 onClick: this.handleExpandInfo,

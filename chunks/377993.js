@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(594174),
     x = n(626135),
     v = n(585483),
-    O = n(233870),
-    j = n(51144),
+    j = n(233870),
+    O = n(51144),
     E = n(998502),
     S = n(276264),
     P = n(981631),
@@ -58,7 +58,7 @@ function w(e) {
         p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
         f = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
         x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        O = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
+        j = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
         Z = i.useRef(null),
         N = (e) => {
@@ -92,7 +92,7 @@ function w(e) {
             });
         },
         w = () => {
-            let e = '@'.concat(j.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(O.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
             (v.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
                 v.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
@@ -151,7 +151,7 @@ function w(e) {
                         onContextMenu: N,
                         selected: M,
                         isMobile: x,
-                        nick: O,
+                        nick: j,
                         nameplate: R,
                         onClick: (e) => {
                             e.shiftKey ? null == w || w() : D((e) => !e);
@@ -184,7 +184,7 @@ function M(e) {
         { listItems: c } = (0, a.e7)(
             [_.Z, C.default, b.Z],
             () => {
-                let e = (0, O.T)(t.recipients, C.default),
+                let e = (0, j.T)(t.recipients, C.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;

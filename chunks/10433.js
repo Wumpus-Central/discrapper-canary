@@ -17,11 +17,11 @@ var r = n(255367),
 function b(e) {
     let { code: t, message: n } = e,
         [b, E, x] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
-        C = (0, a.e7)([d.Z], () => {
+        v = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [v, y] = i.useState(!1),
+        [C, y] = i.useState(!1),
         O = i.useCallback((e) => {
             e && y(!0);
         }, []),
@@ -31,26 +31,26 @@ function b(e) {
                 application_id: t,
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: C,
+                guild_id: v,
                 channel_id: n.channel_id
             });
-        }, [t, C, n.author.id, n.channel_id]);
+        }, [t, v, n.author.id, n.channel_id]);
     return (i.useEffect(() => {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        v && x === f.M.FETCHED && I();
-    }, [v, x, I]),
+        C && x === f.M.FETCHED && I();
+    }, [C, x, I]),
     i.useEffect(() => {
-        v &&
+        C &&
             E &&
             p.default.track(g.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: C,
+                guild_id: v,
                 channel_id: n.channel_id
             });
-    }, [v, C, E, n.author.id, n.channel_id]),
+    }, [C, v, E, n.author.id, n.channel_id]),
     E)
         ? (0, r.jsxs)(c.Z, {
               containerRef: j,

@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(867176),
     x = n(451834),
     v = n(502762),
-    O = n(952124),
-    j = n(544989),
+    j = n(952124),
+    O = n(544989),
     E = n(481932),
     S = n(664794),
     P = n(4517),
@@ -109,7 +109,7 @@ function R(e) {
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
-                                (0, r.jsxs)(j.Z, {
+                                (0, r.jsxs)(O.Z, {
                                     children: [
                                         (0, r.jsx)(E.Z, {
                                             user: t,
@@ -117,7 +117,7 @@ function R(e) {
                                             shouldShowTooltip: null === G.interactionType
                                         }),
                                         t.bot
-                                            ? (0, r.jsx)(O.Z, { user: t })
+                                            ? (0, r.jsx)(j.Z, { user: t })
                                             : (0, r.jsx)(S.Z, {
                                                   type: 'banner',
                                                   user: t

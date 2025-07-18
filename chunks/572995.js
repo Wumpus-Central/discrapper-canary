@@ -51,8 +51,8 @@ var i,
     K = n(310960),
     q = n(815581),
     X = n(479390),
-    J = n(377679),
-    Q = n(825087),
+    Q = n(377679),
+    J = n(825087),
     $ = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
     ee = (((r = {}).REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), (r.VOICE_FILTERS = 'voiceFilters'), r);
 let et = (e, t) =>
@@ -129,7 +129,7 @@ let et = (e, t) =>
                       },
                       yourSpace: {
                           thumbnail: x,
-                          assetUrl: e ? J.Z : Q.Z
+                          assetUrl: e ? Q.Z : J.Z
                       },
                       emojis: {
                           thumbnail: f,

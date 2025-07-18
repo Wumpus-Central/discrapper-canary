@@ -17,12 +17,12 @@ var r,
     b = n(55563),
     E = n(981631);
 let x = 'DetectedOffPlatformPremiumPerksStore',
-    C = {},
     v = {},
+    C = {},
     y = [];
 function O() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of o().values(v)) {
+    for (let { skuId: t, applicationId: n } of o().values(C)) {
         if (y.includes(t)) continue;
         let r = f.Z.getApplication(n);
         if (null == r) {
@@ -35,8 +35,8 @@ function O() {
             continue;
         }
         _.Z.applicationIdsFetching.has(r.id) || _.Z.isEntitledToSku(h.default.getCurrentUser(), t, r.id, r.id) || !i.available
-            ? null != C[t] && (delete C[t], (e = !0))
-            : ((C[t] = {
+            ? null != v[t] && (delete v[t], (e = !0))
+            : ((v[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -50,7 +50,7 @@ class j extends (r = s.ZP.Store) {
         (this.waitFor(g.ZP, b.Z, _.Z), (y = null != (e = c.K.get(x)) ? e : y));
     }
     getDetectedOffPlatformPremiumPerks() {
-        return o().values(C);
+        return o().values(v);
     }
 }
 ((l = 'DetectedOffPlatformPremiumPerksStore'),
@@ -64,7 +64,7 @@ class j extends (r = s.ZP.Store) {
         : (j[i] = l));
 let I = new j(u.Z, {
     LOGOUT: function () {
-        ((C = {}), (v = {}));
+        ((v = {}), (C = {}));
     },
     SKU_FETCH_SUCCESS: O,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: O,
@@ -72,7 +72,7 @@ let I = new j(u.Z, {
     APPLICATION_FETCH_SUCCESS: O,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete C[t], y.includes(t))) return !1;
+        if ((delete v[t], y.includes(t))) return !1;
         (y.push(t), c.K.set(x, y));
     },
     RUNNING_GAMES_CHANGE: function () {
@@ -82,9 +82,9 @@ let I = new j(u.Z, {
                 for (let { skuId: n, applicationId: r } of E.Lg6)
                     r !== t ||
                         y.includes(n) ||
-                        (null == v[n] &&
+                        (null == C[n] &&
                             (_.Z.applicationIdsFetched.has(r) || _.Z.applicationIdsFetching.has(r) || null != _.Z.getForSku(n) || d.yD(r),
-                            (v[n] = {
+                            (C[n] = {
                                 skuId: n,
                                 applicationId: r
                             }),

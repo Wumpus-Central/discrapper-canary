@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(100527),
     E = n(906732),
     x = n(783097),
-    C = n(581364),
-    v = n(592180),
+    v = n(581364),
+    C = n(592180),
     y = n(726033),
     O = n(598077),
     j = n(594174),
@@ -93,7 +93,7 @@ function M(e) {
 }
 function U(e, t, n, i, l, o) {
     var s, c, u;
-    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: h, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: x, onClickTargetAvatar: C, onTargetUserContextMenu: v, onPopoutRequestClose: y } = e;
+    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: h, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: x, onClickTargetAvatar: v, onTargetUserContextMenu: C, onPopoutRequestClose: y } = e;
     if (m && 1 === n) return null;
     if ((m && null == d.activityInstance) || g || h)
         return (0, r.jsx)('div', {
@@ -128,8 +128,8 @@ function U(e, t, n, i, l, o) {
                 user: t,
                 guildId: f.guild_id,
                 guildAvatar: O,
-                onClick: 1 === n ? C : E,
-                onContextMenu: 1 === n ? v : x,
+                onClick: 1 === n ? v : E,
+                onContextMenu: 1 === n ? C : x,
                 ref: o
             }),
         S = 1 === n ? b : _;
@@ -212,7 +212,7 @@ function H(e) {
             ),
             [o, l.id, l.interactionData]
         ),
-        V = (0, C.t0)(l),
+        V = (0, v.t0)(l),
         z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new O.Z(V.target_user) : null,
         W = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
         K = (0, N.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
@@ -232,7 +232,7 @@ function H(e) {
             'user'
         );
     };
-    if ((null == l ? void 0 : l.activityInstance) === null || (0, v.g)(l))
+    if ((null == l ? void 0 : l.activityInstance) === null || (0, C.g)(l))
         ((n = R.intl.format(R.t['rg7U+P'], {
             userHook: J,
             commandHook: () => {
@@ -291,7 +291,7 @@ function H(e) {
                                         })
                                     })
                                 );
-                            if (!(0, v.g)(l))
+                            if (!(0, C.g)(l))
                                 return (0, r.jsx)('div', {
                                     className: k.commandName,
                                     ref: n,

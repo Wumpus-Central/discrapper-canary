@@ -132,7 +132,7 @@ let v = (e) => {
                 (0, i.jsxs)('div', {
                     className: j.planTitle,
                     children: [
-                        (0, i.jsx)(o.SrA, {}),
+                        (0, i.jsx)(o.SrA, { colorClass: j.nitroWheelIconColor }),
                         (0, i.jsx)(o.X6q, {
                             variant: 'heading-sm/semibold',
                             children: r

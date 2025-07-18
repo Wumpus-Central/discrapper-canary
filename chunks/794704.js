@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(355863),
     q = n(283595),
     X = n(594174),
-    J = n(556296),
-    Q = n(808506),
+    Q = n(556296),
+    J = n(808506),
     $ = n(237997),
     ee = n(626135),
     et = n(823379),
@@ -113,17 +113,17 @@ function ex(e) {
     var t;
     let n = $.default.getNotificationPositionMode(),
         i = n !== es._vf.DISABLED,
-        r = J.ZP.getOverlayKeybind(),
-        s = J.ZP.getOverlayChatKeybind();
+        r = Q.ZP.getOverlayKeybind(),
+        s = Q.ZP.getOverlayChatKeybind();
     return {
-        enabled: Q.default.enabled,
+        enabled: J.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: L.Z.isNotificationDisabled(R.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, ei.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, ei.BB)(s.shortcut) : null,
         text_opacity_slider: $.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : Q.default.enabled
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : J.default.enabled
     };
 }
 function e_(e) {
@@ -363,8 +363,8 @@ function ev(e) {
         W = (null == d ? void 0 : d.state) != null && eO.has(d.state) && !H,
         K = (null == d ? void 0 : d.overlayMethod) === E.gl.OutOfProcess,
         X = (null == d ? void 0 : d.overlayMethod) === E.gl.OutOfProcessLimitedInteraction,
-        J = (null == d ? void 0 : d.overlayMethod) === E.gl.Hook,
-        Q = (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED_DISABLED,
+        Q = (null == d ? void 0 : d.overlayMethod) === E.gl.Hook,
+        J = (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED_DISABLED,
         $ = !b && !j,
         [ee, et] = (() => {
             switch (!0) {
@@ -406,7 +406,7 @@ function ev(e) {
                         }),
                         null
                     ];
-                case z && J:
+                case z && Q:
                     return [
                         ec.intl.format(ec.t.hFVBIi, {
                             overlayMethod: ec.intl.string(ec.t.bvlpDQ),
@@ -441,7 +441,7 @@ function ev(e) {
                             }
                         })()
                     ];
-                case Q:
+                case J:
                     return [ec.intl.string(ec.t.OFC2a2), null];
                 case U:
                     return [ec.intl.string(ec.t.m7X4a2), null];
@@ -454,7 +454,7 @@ function ev(e) {
                     return [ec.intl.string(ec.t.VWUn0d), null];
                 case W:
                     if (K) return [ec.intl.string(ec.t['s8+CFh']), null];
-                    if (J) return [ec.intl.string(ec.t.JEEdqq), null];
+                    if (Q) return [ec.intl.string(ec.t.JEEdqq), null];
                     if (X) return [ec.intl.string(ec.t.pzBMwc), null];
                     return [ec.intl.string(ec.t['2Xhy9v']), null];
                 case null == d:
@@ -466,7 +466,7 @@ function ev(e) {
     (0, C.ZP)(() => {
         f.Z.getDetectableGames();
     });
-    let [en, ei] = r.useMemo(() => (W ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-feedback-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-feedback-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [W, z, X, K, J]);
+    let [en, ei] = r.useMemo(() => (W ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-feedback-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-feedback-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && Q ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [W, z, X, K, Q]);
     return null == a
         ? null
         : (0, i.jsxs)(eE, {
@@ -787,12 +787,12 @@ function eI() {
 }
 function ey() {
     var e;
-    let t = (0, p.e7)([J.ZP], () => J.ZP.getOverlayKeybind()),
+    let t = (0, p.e7)([Q.ZP], () => Q.ZP.getOverlayKeybind()),
         n = !(0, er.supportsLegacy)(),
         r = !(0, er.supportsOutOfProcess)(),
         [s, a] = (0, p.Wu)([N.ZP], () => [N.ZP.canShowAdminWarning, N.ZP.getVisibleGame()], []),
         l = null != a && a.elevated && s,
-        o = (0, J.s4)(null != (e = null == t ? void 0 : t.shortcut) ? e : []);
+        o = (0, Q.s4)(null != (e = null == t ? void 0 : t.shortcut) ? e : []);
     return (0, i.jsx)(e_, {
         children: (0, i.jsx)('div', {
             className: ed.keybindMainContainer,

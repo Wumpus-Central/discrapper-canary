@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(989830),
     x = n(388032),
     v = n(837265);
-let O = i.memo(function (e) {
+let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
             a = (0, s.e7)([_.ZP], () => _.ZP.getMostRecentMessageCombo(t), [t]),
@@ -59,7 +59,7 @@ let O = i.memo(function (e) {
             })
         );
     }),
-    j = i.memo(function (e) {
+    O = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: l, square: o, flair: s } = i.useMemo(() => (0, y.yz)(n), [n]),
             u = (0, p.Lq)(l);
@@ -167,7 +167,7 @@ let O = i.memo(function (e) {
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(O, {
+                (0, r.jsx)(j, {
                     channelId: t,
                     width: m
                 }),
@@ -175,7 +175,7 @@ let O = i.memo(function (e) {
                     ref: p,
                     className: v.combo,
                     style: S,
-                    children: (0, r.jsx)(j, {
+                    children: (0, r.jsx)(O, {
                         value: T,
                         multiplier: Z
                     })

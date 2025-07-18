@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(867176),
     x = n(280885),
     v = n(900927),
-    O = n(678738),
-    j = n(502762),
+    j = n(678738),
+    O = n(502762),
     E = n(530),
     S = n(679332),
     P = n(544989),
@@ -87,7 +87,7 @@ function w(e) {
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
-            children: (0, r.jsxs)(j.Z, {
+            children: (0, r.jsxs)(O.Z, {
                 ref: U,
                 user: t,
                 displayProfile: R,
@@ -128,10 +128,10 @@ function w(e) {
                                             themeType: I.lY.SIDEBAR
                                         })
                                     }),
-                                    (0, r.jsxs)(j.Z.Overlay, {
+                                    (0, r.jsxs)(O.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(j.Z, {
                                                 heading: Z.intl.string(Z.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(x.Z, {
@@ -141,7 +141,7 @@ function w(e) {
                                                     isHovering: B
                                                 })
                                             }),
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(j.Z, {
                                                 heading: Z.intl.string(Z.t['A//N4u']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(v.Z, { userId: t.id })

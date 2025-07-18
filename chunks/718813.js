@@ -13,7 +13,7 @@ var r,
     f = n(714338),
     g = n(663993),
     m = n(84615),
-    b = n(210887),
+    b = n(984802),
     _ = n(526665),
     E = n(819640),
     O = n(585483),
@@ -285,7 +285,7 @@ class k extends l.PureComponent {
     }
 }
 function M(e) {
-    let t = (0, c.e7)([b.Z], () => b.Z.darkSidebar) ? y.BRd.DARK : void 0,
+    let t = (0, b.Ll)(),
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(

@@ -1,136 +1,70 @@
 n.d(t, {
-    Lx: () => T,
-    kq: () => I,
-    vy: () => v,
-    yX: () => y
+    kq: () => g,
+    vy: () => m
 });
 var r = n(392711),
     i = n(544891),
-    a = n(570140),
-    o = n(100527),
-    s = n(367907),
-    l = n(339085),
-    c = n(697426),
-    u = n(100986),
-    d = n(944486),
-    f = n(70956),
-    _ = n(176354),
-    p = n(696900),
-    h = n(456631),
-    m = n(963838),
-    g = n(353368),
-    E = n(981631),
-    b = n(710111),
-    y = (function (e) {
-        return ((e.EMOJI_PICKER = 'emoji_picker'), (e.EFFECT_BAR = 'effect_bar'), e);
-    })({});
-function O(e) {
+    a = n(100527),
+    o = n(339085),
+    s = n(697426),
+    l = n(100986),
+    c = n(944486),
+    u = n(696900),
+    d = n(963838),
+    f = n(353368),
+    _ = n(981631),
+    p = n(710111);
+function h(e) {
     let t = new AbortController(),
         n = (0, r.throttle)((n) => {
-            d.Z.getVoiceChannelId() !== e && t.abort();
+            c.Z.getVoiceChannelId() !== e && t.abort();
         }, 1000);
     return {
         abortController: t,
         onRequestProgress: n
     };
 }
-function v(e, t, n) {
+function m(e, t, n) {
     var r;
-    let { abortController: a, onRequestProgress: s } = O(e),
-        l = null != (r = p.Z.getState().animationType) ? r : g.q.BASIC,
-        d = {
-            animation_type: l,
-            animation_id: (0, m.Iu)(l, m.v)
+    let { abortController: o, onRequestProgress: c } = h(e),
+        p = null != (r = u.Z.getState().animationType) ? r : f.q.BASIC,
+        m = {
+            animation_type: p,
+            animation_id: (0, d.Iu)(p, d.v)
         };
     (i.tn
         .post({
-            url: E.ANM.CUSTOM_CALL_SOUNDS(e),
-            body: d,
-            signal: a.signal,
-            onRequestProgress: s,
+            url: _.ANM.CUSTOM_CALL_SOUNDS(e),
+            body: m,
+            signal: o.signal,
+            onRequestProgress: c,
             rejectWithError: !0
         })
-        .then(E.VqG, () => {
-            if (a.signal.aborted) return;
+        .then(_.VqG, () => {
+            if (o.signal.aborted) return;
         }),
-        (0, u.Z)([o.Z.CHANNEL_CALL], n, t, c.jy.ENTRY));
+        (0, l.Z)([a.Z.CHANNEL_CALL], n, t, s.jy.ENTRY));
 }
-function I(e, t, n, r) {
-    var a, o;
-    let s = l.ZP.getCustomEmojiById(null != (a = t.emojiId) ? a : ''),
-        { abortController: d, onRequestProgress: f } = O(e),
-        _ = {
+function g(e, t, n, r) {
+    var a, c;
+    let u = o.ZP.getCustomEmojiById(null != (a = t.emojiId) ? a : ''),
+        { abortController: d, onRequestProgress: f } = h(e),
+        m = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
-            emoji_name: null != (o = t.emojiName) ? o : null == s ? void 0 : s.name
+            emoji_name: null != (c = t.emojiName) ? c : null == u ? void 0 : u.name
         };
-    (t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
+    (t.guildId !== p.X8 && (m.source_guild_id = t.guildId),
         i.tn
             .post({
-                url: E.ANM.SEND_SOUNDBOARD_SOUND(e),
-                body: _,
+                url: _.ANM.SEND_SOUNDBOARD_SOUND(e),
+                body: m,
                 signal: d.signal,
                 onRequestProgress: f,
                 rejectWithError: !0
             })
-            .then(E.VqG, () => {
+            .then(_.VqG, () => {
                 if (d.signal.aborted) return;
             }),
-        (0, u.Z)(null != r ? r : [], n, t, c.jy.DEFAULT));
+        (0, l.Z)(null != r ? r : [], n, t, s.jy.DEFAULT));
 }
-let T = async (e) => {
-        let { channel: t, emoji: n, location: r, animationType: o, animationId: s, isPremium: l } = e;
-        if (null == n || h.Z.isOnCooldown) return;
-        let c = l && null != o ? o : g.q.BASIC;
-        try {
-            let e =
-                null != n.id
-                    ? {
-                          emoji_id: n.id,
-                          emoji_name: n.name,
-                          animation_type: c,
-                          animation_id: s
-                      }
-                    : {
-                          emoji_id: null,
-                          emoji_name: n.optionallyDiverseSequence,
-                          animation_type: c,
-                          animation_id: s
-                      };
-            (await i.tn.post({
-                url: E.ANM.VOICE_CHANNEL_EFFECTS(t.id),
-                body: e,
-                rejectWithError: !1
-            }),
-                A(t, n, r, c),
-                a.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' }));
-        } catch (e) {
-            if (429 === e.status && null != e.body.retry_after) {
-                let t = e.body.retry_after * f.Z.Millis.SECOND;
-                a.Z.dispatch({
-                    type: 'VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP',
-                    cooldownEndsAtMs: t
-                });
-            }
-        }
-    },
-    S = {
-        [g.q.BASIC]: 'Basic',
-        [g.q.PREMIUM]: 'Premium'
-    },
-    A = (e, t, n, r) => {
-        let { unicode: i, custom: a, customExternal: o, managed: l, managedExternal: c, animated: u } = (0, _.sp)([t], e.getGuildId()),
-            d = S[r];
-        s.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_EFFECT_SENT, {
-            channel_id: e.id,
-            guild_id: e.getGuildId(),
-            location: n,
-            emoji_unicode: i,
-            emoji_custom: a,
-            emoji_custom_external: o,
-            emoji_managed: l,
-            emoji_managed_external: c,
-            emoji_animated: u,
-            animation_type: d
-        });
-    };

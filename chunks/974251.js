@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(536442),
     x = n(79390),
     v = n(216789),
-    O = n(665906),
-    j = n(695346),
+    j = n(665906),
+    O = n(695346),
     E = n(433355),
     S = n(819640),
     P = n(375954),
@@ -134,14 +134,14 @@ let G = i.memo(function (e) {
             }
         );
     });
-    let eb = (0, O.NE)(V),
-        e_ = (0, O.Xu)(V),
-        ey = !j.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
+    let eb = (0, j.NE)(V),
+        e_ = (0, j.Xu)(V),
+        ey = !O.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
         eC = (0, x.UI)(null != V ? V : void 0),
         ex = (0, f.qB)(),
         ev = (0, v.Us)({ location: 'ChannelAttachButton' }),
-        eO = null != (l = null == et ? void 0 : et.length) ? l : 0,
-        ej = (0, M.Z)({
+        ej = null != (l = null == et ? void 0 : et.length) ? l : 0,
+        eO = (0, M.Z)({
             canAttachFiles: ep,
             canStartThreads: eb || e_,
             useSlate: ey,
@@ -149,14 +149,14 @@ let G = i.memo(function (e) {
             canUseApplicationCommands: !q,
             channel: V,
             activities: J,
-            newClipsCount: eO,
+            newClipsCount: ej,
             canPostPolls: eC,
             canLaunchActivities: ex,
             appContext: K,
             canSendScheduledMessages: ev
         }),
         eE = (0, m.Z)('ChannelAttachButton');
-    if (0 === ej.length) return null;
+    if (0 === eO.length) return null;
     let eS = 'refresh_sm',
         eP = eE
             ? (0, r.jsx)(u.svS, {
@@ -197,7 +197,7 @@ let G = i.memo(function (e) {
                             R.Z,
                             H(F({}, e), {
                                 onClose: () => ec(null),
-                                options: ej,
+                                options: eO,
                                 channel: V,
                                 onFileUpload: () => {
                                     var e;

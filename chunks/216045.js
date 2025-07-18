@@ -74,7 +74,7 @@ function F() {
         K = (0, l.e7)([P.Z], () => P.Z.showNotice()),
         q = k.dN.useSetting() && null != H ? j.ZP.parse(void 0, H).content : H,
         X = Z.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: J, newestAnalyticsLocation: Q } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
+        { analyticsLocations: Q, newestAnalyticsLocation: J } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         $ = (0, I.T)({ location: 'UserSettingsProfileCustomization' }),
         ee = (0, x.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         et = $ && !ee;
@@ -95,7 +95,7 @@ function F() {
     return s
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
-              value: J,
+              value: Q,
               children: [
                   (0, i.jsx)(b.Z, {}),
                   (0, i.jsx)(C.Z, {
@@ -177,7 +177,7 @@ function F() {
                       (0, i.jsx)(E.p, {
                           className: G.floatingNitroUpsell,
                           showUpsell: ec && !es,
-                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: Q }) }),
+                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: J }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(u.gtL, {
                               className: G.floatingNitroButton,

@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(359110),
     x = n(585483),
     v = n(407908),
-    O = n(739830),
-    j = n(488131),
+    j = n(739830),
+    O = n(488131),
     E = n(981631),
     S = n(388032);
 function P(e) {
@@ -106,8 +106,8 @@ function T(e) {
         _ = (0, c.Z)(t, 'Sidebar Overflow'),
         y = (0, d.Z)(t),
         v = (0, f.Z)(t),
-        O = (0, m.Z)(t),
-        j = (0, a.Z)(t),
+        j = (0, m.Z)(t),
+        O = (0, a.Z)(t),
         P = (0, u.Z)(t),
         I = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
@@ -138,7 +138,7 @@ function T(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [v, O]
+                children: [v, j]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [Z, y, I]
@@ -167,7 +167,7 @@ function T(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, j, P, T]
+                children: [w, O, P, T]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [N, A]
@@ -179,13 +179,13 @@ function N(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(O.Z, { channel: t }),
+            t.isForumPost() ? null : (0, r.jsx)(j.Z, { channel: t }),
             (0, r.jsx)(v.Z, { channel: t }),
             (0, r.jsx)(Z, { channel: t }),
             (0, r.jsx)(y.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, j.vN)((0, _.e)(t), null != n ? n : t.parent_id)
+                onClick: () => (0, O.vN)((0, _.e)(t), null != n ? n : t.parent_id)
             })
         ]
     });

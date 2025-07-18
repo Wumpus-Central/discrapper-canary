@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(869765),
     x = n(703656),
     v = n(695346),
-    O = n(592125),
-    j = n(906467),
+    j = n(592125),
+    O = n(906467),
     E = n(323873),
     S = n(709054),
     P = n(786761),
@@ -196,9 +196,9 @@ function ei(e) {
             compact: b = !1,
             className: _,
             groupId: y,
-            viewingChannelId: O
+            viewingChannelId: j
         } = e,
-        j = o.type === q.uaV.REPLY ? o.messageReference : void 0,
+        O = o.type === q.uaV.REPLY ? o.messageReference : void 0,
         E = (0, c.JA)(null != (t = e.id) ? t : ''),
         { onFocus: S } = E,
         I = et(E, ['onFocus']),
@@ -206,7 +206,7 @@ function ei(e) {
         { popouts: F, selected: V, setPopout: Q } = (0, D.Z)(o.id, Y.d$),
         J = v.RS.useSetting(),
         en = v.NA.useSetting(),
-        er = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(j)),
+        er = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(O)),
         ei = (0, m.A)((null != (n = o.editedTimestamp) ? n : o.timestamp).valueOf()),
         {
             handleMouseEnter: el,
@@ -229,7 +229,7 @@ function ei(e) {
             allowHeading: ei,
             allowLinks: !0,
             previewLinkTarget: !0,
-            viewingChannelId: O
+            viewingChannelId: j
         }),
         eh = (0, M.Z)(s, h, es),
         ef = (0, T.ZP)(o),
@@ -275,7 +275,7 @@ function ei(e) {
                                 setPopout: Q,
                                 referencedUsernameProfile: F.referencedUsernameProfile,
                                 referencedAvatarProfile: F.referencedAvatarProfile,
-                                replyReference: j,
+                                replyReference: O,
                                 replyMessage: er,
                                 isReplySpineClickable: !0
                             })
@@ -284,7 +284,7 @@ function ei(e) {
                         messageProps: e,
                         setPopout: Q,
                         messagePopouts: F,
-                        replyReference: j,
+                        replyReference: O,
                         author: ef,
                         repliedMessage: er,
                         roleIcon: ey
@@ -341,8 +341,8 @@ let el = i.memo(function (e) {
         {
             handleMouseEnter: ex,
             handleMouseLeave: ev,
-            hasHovered: eO,
-            isHovered: ej
+            hasHovered: ej,
+            isHovered: eO
         } = (0, R.tn)({
             groupId: ea,
             message: x,
@@ -365,11 +365,11 @@ let el = i.memo(function (e) {
         eN = (0, u.e7)([E.Z], () => E.Z.isEditing(en, I), [en, I]),
         eA = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ew = eb || eN || (eA && eE),
-        eR = ew || ej,
-        eM = (0, u.e7)([O.Z], () => x.hasFlag(q.iLy.HAS_THREAD) && O.Z.getChannel(S.default.castMessageIdAsChannelId(x.id))),
+        eR = ew || eO,
+        eM = (0, u.e7)([j.Z], () => x.hasFlag(q.iLy.HAS_THREAD) && j.Z.getChannel(S.default.castMessageIdAsChannelId(x.id))),
         eD = x.isFirstMessageInForumPost(J),
         eL = (0, m.A)((null != (n = x.editedTimestamp) ? n : x.timestamp).valueOf()),
-        ek = (0, u.e7)([j.Z], () => j.Z.isDeveloper),
+        ek = (0, u.e7)([O.Z], () => O.Z.isDeveloper),
         { content: eU, hasSpoilerEmbeds: eB } = (0, L.Z)(x, {
             hideSimpleEmbedContent: eh && ef,
             isInteracting: eR,
@@ -421,7 +421,7 @@ let el = i.memo(function (e) {
                         (0, r.jsx)(g.Z, {
                             compact: er,
                             message: x,
-                            hovering: ej && !eN && !eQ
+                            hovering: eO && !eN && !eQ
                         }),
                     (0, r.jsx)(
                         A.Z,
@@ -452,7 +452,7 @@ let el = i.memo(function (e) {
                                 [X.editing]: eN,
                                 [X.hasOpenPopouts]: eQ,
                                 [X.potioned]: (0, _.Uw)(x) && ep,
-                                [Q.forceAnimate]: ej
+                                [Q.forceAnimate]: eO
                             }),
                             zalgo: !eN,
                             childrenRepliedMessage:
@@ -489,12 +489,12 @@ let el = i.memo(function (e) {
                                 forceAddReactions: x.type === q.uaV.EMOJI_ADDED
                             }),
                             childrenButtons:
-                                eO || eS
+                                ej || eS
                                     ? (0, F.Z)({
                                           buttonProps: e,
                                           setPopout: e_,
                                           messagePopouts: eg,
-                                          isFocused: ej || eE
+                                          isFocused: eO || eE
                                       })
                                     : void 0,
                             childrenSystemMessage: (0, W.Z)(e),

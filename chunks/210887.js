@@ -1,19 +1,18 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => M });
 var r,
     i = n(442837),
     a = n(780384),
     o = n(570140),
     s = n(607070),
-    l = n(514361),
-    c = n(541049),
-    u = n(765287),
-    d = n(49214),
-    f = n(238514),
-    _ = n(740492),
-    p = n(581883),
-    h = n(874893),
-    m = n(981631);
-function g(e, t, n) {
+    l = n(541049),
+    c = n(765287),
+    u = n(49214),
+    d = n(238514),
+    f = n(740492),
+    _ = n(581883),
+    p = n(874893),
+    h = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             }));
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,96 +53,93 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = 0,
-    v = h.K2,
-    I = (0, c.Z)(),
-    T = v[I],
-    S = null;
+let y = 0,
+    O = p.K2,
+    v = (0, l.Z)(),
+    I = O[v],
+    T = null;
+function S() {
+    return __OVERLAY__ || null == T ? (0, c.Z)(v, O, I) : T;
+}
 function A() {
-    return __OVERLAY__ || null == S ? (0, u.Z)(I, v, T) : S;
+    let e = S();
+    return e === I || ((I = e), (0, u.Z)(I), !0);
 }
-function N() {
-    let e = A();
-    return e === T || ((T = e), (0, d.Z)(T), !0);
-}
-class C extends (r = i.ZP.PersistedStore) {
+class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        ((null == e ? void 0 : e.theme) != null && ((O = 1), (T = e.theme), (0, d.Z)(T), null != e.preferences && (v = e.preferences), (0, a.wj)(T) && (v[h.zd.DARK] = T)), this.waitFor(_.ZP, f.Z, p.Z, s.Z));
+        ((null == e ? void 0 : e.theme) != null && ((y = 1), (I = e.theme), (0, u.Z)(I), null != e.preferences && (O = e.preferences), (0, a.wj)(I) && (O[p.zd.DARK] = I)), this.waitFor(f.ZP, d.Z, _.Z, s.Z));
     }
     getState() {
         return {
             theme: this.theme,
-            preferences: v,
-            status: O
+            preferences: O,
+            status: y
         };
     }
-    get darkSidebar() {
-        return (0, a.ap)(this.theme) && _.ZP.darkSidebar && null == l.Z.gradientPreset;
-    }
     get theme() {
-        return A();
+        return S();
     }
     get systemTheme() {
-        return I;
+        return v;
     }
     themePreferenceForSystemTheme(e) {
-        return v[e];
+        return O[e];
     }
 }
-function R() {
-    return (0 === O && ((v = y(E({}, v), { [h.zd.DARK]: m.BRd.DARKER })), (O = 1)), N());
+function C() {
+    return (0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A());
 }
-function P() {
-    return (0, a.ap)(A());
+function R() {
+    return (0, a.ap)(S());
+}
+function P(e) {
+    return ((T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A()));
 }
 function w(e) {
-    return ((S = null), !e.isSwitchingAccount && T !== m.BRd.DARK && ((T = m.BRd.DARK), (0, d.Z)(T), N()));
+    let { systemTheme: t } = e;
+    return ((v = t), A());
 }
 function D(e) {
-    let { systemTheme: t } = e;
-    return ((I = t), N());
+    return ((O = g({}, O, e.preferences)), A());
 }
 function L(e) {
-    return ((v = E({}, v, e.preferences)), N());
+    return ((T = e.theme), A());
 }
-function x(e) {
-    return ((S = e.theme), N());
+function x() {
+    return ((T = null), A());
 }
-function M() {
-    return ((S = null), N());
-}
-(g(C, 'displayName', 'ThemeStore'),
-    g(C, 'persistKey', 'ThemeStore'),
-    g(C, 'migrations', [
+(m(N, 'displayName', 'ThemeStore'),
+    m(N, 'persistKey', 'ThemeStore'),
+    m(N, 'migrations', [
         (e) => {
             let t = e.theme;
-            return ('amoled' === t && (t = 'midnight'), y(E({}, e), { theme: t }));
+            return ('amoled' === t && (t = 'midnight'), b(g({}, e), { theme: t }));
         },
         (e) => e
     ]));
-let k = new C(o.Z, {
-    CACHE_LOADED: N,
-    CONNECTION_OPEN: R,
-    LOGOUT: w,
-    OVERLAY_INITIALIZE: N,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: N,
-    UNSYNCED_USER_SETTINGS_UPDATE: N,
-    USER_SETTINGS_PROTO_UPDATE: N,
-    RESET_PREVIEW_CLIENT_THEME: N,
-    SYSTEM_THEME_CHANGE: D,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
-    UPDATE_THEME_PREFERENCES: L,
-    SET_THEME_OVERRIDE: x,
-    CLEAR_THEME_OVERRIDE: M
+let M = new N(o.Z, {
+    CACHE_LOADED: A,
+    CONNECTION_OPEN: C,
+    LOGOUT: P,
+    OVERLAY_INITIALIZE: A,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
+    UNSYNCED_USER_SETTINGS_UPDATE: A,
+    USER_SETTINGS_PROTO_UPDATE: A,
+    RESET_PREVIEW_CLIENT_THEME: A,
+    SYSTEM_THEME_CHANGE: w,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
+    UPDATE_THEME_PREFERENCES: D,
+    SET_THEME_OVERRIDE: L,
+    CLEAR_THEME_OVERRIDE: x
 });
