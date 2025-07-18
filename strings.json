@@ -3231,6 +3231,7 @@
   "2gem09": "Before canceling, enjoy **{percent}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {!!{numMonths}!! months} }.",
   "zl7LZm": "Nevermind",
   "AD6odn": "Something went wrong. Try again.",
+  "tQvNlp": "!!{numMonths}!! Month Discount",
   "fiNVio": "Claim Account",
   "gP/vPT": "Claim your account by entering an email and password.",
   "JNWX7O": "Thanks! We've sent a confirmation link to: **!!{email}!!**",
