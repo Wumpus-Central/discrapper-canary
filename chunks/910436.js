@@ -23,13 +23,9 @@ function O(e) {
         { voiceChannels: I, currentActivities: v, partiedMembers: C, applicationStreams: S, guildContext: N } = t,
         T = [],
         P = (e) => {
-            var t, n;
-            let { length: i } = T;
-            if (0 === i) return void T.push(e);
-            let l = T[i - 1],
-                a = ''.concat(null != (t = null == e ? void 0 : e.key) ? t : ''),
-                o = ''.concat(null != (n = null == l ? void 0 : l.key) ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            (T.push((0, r.jsx)(m.Z.Separator, { inset: o }, 'sep-'.concat(a))), T.push(e));
+            let { length: t } = T;
+            if (0 === t) return void T.push(e);
+            T.push(e);
         };
     for (let { activity: e } of (I.length > 0 &&
         I.forEach((e) => {

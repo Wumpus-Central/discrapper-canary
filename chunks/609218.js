@@ -34,15 +34,15 @@ var r = n(255367),
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
 function w(e) {
-    let { containerContext: t, image: n, title: a, description: P, enableSocialProof: w, analyticsLocationSection: D, upsellViewedTrackingData: L, onClose: x, onDisplay: k, onLearnMore: M, isEmojiPickerOverlay: j = !1 } = e,
+    let { containerContext: t, image: n, title: a, description: P, enableSocialProof: w, analyticsLocationSection: D, upsellViewedTrackingData: L, onClose: x, onDisplay: M, onLearnMore: k, isEmojiPickerOverlay: j = !1 } = e,
         U = (0, s.e7)([E.Z], () => E.Z.affinities),
         G = (0, s.e7)([E.Z], () => E.Z.hasFetched);
     (i.useEffect(() => {
         !G && w && d.MH();
     }, [G, w]),
         i.useEffect(() => {
-            (m.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, L), null == k || k());
-        }, [k, L]));
+            (m.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, L), null == M || M());
+        }, [M, L]));
     let B = U.length > 1 && w,
         V = () => (2 === t ? C.hasTabParentContainer : 1 === t ? C.hasParentContainer : C.noParentContainer),
         F = () => {
@@ -50,7 +50,7 @@ function w(e) {
                 location_section: D,
                 location_object: S.qAy.NAVIGATION_LINK
             }),
-                null == M || M(),
+                null == k || k(),
                 (0, p.Z)(),
                 x(),
                 (0, f.xf)(),

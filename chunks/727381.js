@@ -1,73 +1,73 @@
-n.d(t, { Z: () => O });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    i = n.n(l),
-    s = n(399606),
-    a = n(481060),
-    o = n(271383),
-    u = n(594174),
-    c = n(777288),
-    E = n(753042),
-    d = n(787469),
-    _ = n(477718),
-    A = n(791176),
-    T = n(908474),
-    I = n(467014),
-    g = n(388032),
-    m = n(12740);
-function f() {
-    return (0, r.jsxs)('div', {
-        className: m.header,
+t.d(e, { Z: () => w });
+var n = t(255367);
+t(73800);
+var r = t(120356),
+    l = t.n(r),
+    i = t(399606),
+    s = t(481060),
+    a = t(271383),
+    o = t(594174),
+    g = t(777288),
+    f = t(753042),
+    c = t(787469),
+    v = t(477718),
+    h = t(791176),
+    u = t(908474),
+    E = t(467014),
+    d = t(388032),
+    C = t(12740);
+function B() {
+    return (0, n.jsxs)('div', {
+        className: C.header,
         children: [
-            (0, r.jsxs)('div', {
-                className: m.headerTitle,
+            (0, n.jsxs)('div', {
+                className: C.headerTitle,
                 children: [
-                    (0, r.jsx)(c.Z, {
+                    (0, n.jsx)(g.Z, {
                         width: 16,
                         height: 16
                     }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, n.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        children: g.intl.string(g.t.cf5lgo)
+                        children: d.intl.string(d.t.cf5lgo)
                     })
                 ]
             }),
-            (0, r.jsx)('div', {
-                children: (0, r.jsx)(a.M2$, {
+            (0, n.jsx)('div', {
+                children: (0, n.jsx)(s.M2$, {
                     shortcut: 'esc',
-                    keyClassName: m.keyComboInner,
-                    className: m.keyComboContainer
+                    keyClassName: C.keyComboInner,
+                    className: C.keyComboContainer
                 })
             })
         ]
     });
 }
-function O(e) {
-    let { userId: t, guildId: n, location: l, className: c, onNavigate: g } = e,
-        O = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
-        N = (0, s.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == O || null == N
+function w(A) {
+    let { userId: e, guildId: t, location: r, className: g, onNavigate: d } = A,
+        w = (0, i.e7)([o.default], () => o.default.getUser(e), [e]),
+        D = (0, i.e7)([a.ZP], () => a.ZP.getMember(t, e), [t, e]);
+    return null == w || null == D
         ? null
-        : (0, r.jsxs)('div', {
-              className: i()(m.container, c),
+        : (0, n.jsxs)('div', {
+              className: l()(C.container, g),
               children: [
-                  (0, r.jsx)(f, {}),
-                  (0, r.jsxs)(a.Ttm, {
-                      className: m.innerContainer,
+                  (0, n.jsx)(B, {}),
+                  (0, n.jsxs)(s.Ttm, {
+                      className: C.innerContainer,
                       children: [
-                          (0, r.jsx)(T.Z, { member: N }),
-                          (0, r.jsx)(I.Z, {
-                              userId: t,
-                              guildId: n
+                          (0, n.jsx)(u.Z, { member: D }),
+                          (0, n.jsx)(E.Z, {
+                              userId: e,
+                              guildId: t
                           }),
-                          (0, r.jsx)(A.Z, {
-                              member: N,
-                              onNavigate: g
+                          (0, n.jsx)(h.Z, {
+                              member: D,
+                              onNavigate: d
                           }),
-                          (0, r.jsx)(d.Z, { member: N }),
-                          (0, r.jsx)(E.Z, { member: N }),
-                          (0, r.jsx)(_.Z, { member: N })
+                          (0, n.jsx)(c.Z, { member: D }),
+                          (0, n.jsx)(f.Z, { member: D }),
+                          (0, n.jsx)(v.Z, { member: D })
                       ]
                   })
               ]

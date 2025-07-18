@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     root: 'root__48c1c',
     role: 'role__48c1c',
     roleRemoveButton: 'roleRemoveButton__48c1c',

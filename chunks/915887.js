@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     containerDefault: 'containerDefault_c69b6d',
     containerDragAfter: 'containerDragAfter_c69b6d',
     containerDragBefore: 'containerDragBefore_c69b6d',

@@ -43,8 +43,8 @@ let R = {},
     D = [],
     L = !1,
     x = !1,
-    k = I.default.fromTimestamp(Date.now()),
     M = I.default.fromTimestamp(Date.now()),
+    k = I.default.fromTimestamp(Date.now()),
     j = !0,
     U = !0;
 function G() {
@@ -109,17 +109,17 @@ function F(e) {
 }
 function Z() {
     if (null == P) {
-        k = I.default.fromTimestamp(Date.now());
+        M = I.default.fromTimestamp(Date.now());
         return;
     }
     for (let e of (P.sort((e, t) => I.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e))), P)) {
         let t = R[e];
         if (t.loadState === S.a7.UNLOADED && null != t.mostRecentMessageId) {
-            k = t.mostRecentMessageId;
+            M = t.mostRecentMessageId;
             return;
         }
     }
-    k = '0';
+    M = '0';
 }
 function H() {
     let { notifyingChannelIds: e, staleChannelIds: t } = G();
@@ -136,7 +136,7 @@ function H() {
     ((D = D.filter((e) => e.kind !== S.fL.ALL_MESSAGES_CHANNEL || e.channelId in R)), Z());
 }
 function Y() {
-    for (let n of ((R = {}), (P = null), (w = []), (D = []), (L = !1), (x = !1), (k = I.default.fromTimestamp(Date.now())), (M = I.default.fromTimestamp(Date.now())), (j = !0), (U = !0), H(), null != P ? P : [])) {
+    for (let n of ((R = {}), (P = null), (w = []), (D = []), (L = !1), (x = !1), (M = I.default.fromTimestamp(Date.now())), (k = I.default.fromTimestamp(Date.now())), (j = !0), (U = !0), H(), null != P ? P : [])) {
         var e, t;
         let r = F(n);
         null != r && ((R[n].loadState = S.a7.LOADED), (R[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null), Z());
@@ -212,12 +212,12 @@ function $() {
 }
 function ee(e) {
     let { onlyUnread: t, finished: n, requestedMessageId: r } = e;
-    ((L = !1), t || (j = !0 !== n), (U = !0 !== n), !0 !== n && (x = !0), null != r && (M = r));
+    ((L = !1), t || (j = !0 !== n), (U = !0 !== n), !0 !== n && (x = !0), null != r && (k = r));
 }
 function et(e, t) {
     var n;
     if (null == (null == (n = T.Lk.getCurrentConfig({ location: 'NotificationsInboxStore.canLoadMore' })) ? void 0 : n.notificationCenterVariant) || null == P || L || (t && !U)) return !1;
-    let r = null == e || 0 > I.default.compare(e, M);
+    let r = null == e || 0 > I.default.compare(e, k);
     return j || r;
 }
 function en() {
@@ -234,7 +234,7 @@ class er extends (r = l.ZP.Store) {
         return D;
     }
     get oldestDisplayedMessageId() {
-        return k;
+        return M;
     }
     getNotifyingChannelIds() {
         return P;
@@ -255,10 +255,10 @@ class er extends (r = l.ZP.Store) {
         return x;
     }
     get oldestRequestedMessageId() {
-        return M;
+        return k;
     }
     get isLoadingComplete() {
-        return !L && !j && '0' === M;
+        return !L && !j && '0' === k;
     }
 }
 C(er, 'displayName', 'NotificationsInboxStore');

@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     permissionsGroupContainer: 'permissionsGroupContainer__3f11f',
     permissionItemContainer: 'permissionItemContainer__3f11f',
     permissionsItemContainer: 'permissionsItemContainer__3f11f',

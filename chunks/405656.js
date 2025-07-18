@@ -1,10 +1,10 @@
 (n.d(t, {
     $G: () => T,
     BU: () => C,
-    Fr: () => k,
+    Fr: () => M,
     Fz: () => x,
     Ko: () => y,
-    Pe: () => M,
+    Pe: () => k,
     R6: () => j,
     WU: () => L,
     X3: () => U,
@@ -248,11 +248,11 @@ function L() {
 function x(e) {
     return null != e ? O[e] : null;
 }
-function k(e, t) {
+function M(e, t) {
     let n = m.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!m.KA4.test(t.type));
 }
-function M() {
+function k() {
     ((0, o.WK)(), w.reset(), i()(o.ZP).forOwn((e, t) => w.addRule(b({ type: t }, e))));
 }
 function j(e) {

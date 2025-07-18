@@ -1,104 +1,104 @@
-(n.d(t, { Z: () => S }), n(388685));
-var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
-    a = n(442837),
-    o = n(481060),
-    u = n(749210),
-    c = n(110924),
-    E = n(410030),
-    d = n(616780),
-    _ = n(100527),
-    A = n(906732),
-    T = n(527379),
-    I = n(687158),
-    g = n(184301),
-    m = n(502762),
-    f = n(271383),
-    O = n(594174),
-    N = n(189357),
-    h = n(718617),
-    R = n(327250),
-    p = n(50767);
-function S(e) {
-    let { userId: t, guildId: n, onClose: i, className: S, infoPanelClassName: C, style: b } = e,
-        D = (0, N.m)(n),
-        v = (0, a.e7)([O.default], () => O.default.getUser(t), [t]),
-        U = (0, a.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
-        [L, M] = l.useState(null == v || null == U),
-        x = (0, c.Z)(U),
-        P = l.useRef(null),
-        { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
-        y = (0, I.ZP)(t, n),
-        w = (0, E.ZP)();
-    return (l.useEffect(() => {
-        D || i();
-    }, [D, i]),
-    l.useEffect(() => {
-        null == x || null != U || L || i();
-    }, [L, U, i, x]),
-    l.useEffect(() => {
-        null != v && null != U && M(!1);
-    }, [v, U]),
-    l.useEffect(() => {
-        let e = null == U;
+(t.d(e, { Z: () => H }), t(388685));
+var n = t(255367),
+    r = t(73800),
+    l = t(120356),
+    i = t.n(l),
+    s = t(442837),
+    a = t(481060),
+    o = t(749210),
+    g = t(110924),
+    f = t(410030),
+    c = t(616780),
+    v = t(100527),
+    h = t(906732),
+    u = t(527379),
+    E = t(687158),
+    d = t(184301),
+    C = t(502762),
+    B = t(271383),
+    w = t(594174),
+    D = t(189357),
+    M = t(718617),
+    I = t(327250),
+    p = t(50767);
+function H(A) {
+    let { userId: e, guildId: t, onClose: l, className: H, infoPanelClassName: b, style: Q } = A,
+        O = (0, D.m)(t),
+        P = (0, s.e7)([w.default], () => w.default.getUser(e), [e]),
+        V = (0, s.e7)([B.ZP], () => B.ZP.getMember(t, e), [t, e]),
+        [j, T] = r.useState(null == P || null == V),
+        y = (0, g.Z)(V),
+        m = r.useRef(null),
+        { analyticsLocations: L } = (0, h.ZP)(v.Z.GUILD_MEMBER_MOD_VIEW),
+        x = (0, E.ZP)(e, t),
+        Z = (0, f.ZP)();
+    return (r.useEffect(() => {
+        O || l();
+    }, [O, l]),
+    r.useEffect(() => {
+        null == y || null != V || j || l();
+    }, [j, V, l, y]),
+    r.useEffect(() => {
+        null != P && null != V && T(!1);
+    }, [P, V]),
+    r.useEffect(() => {
+        let A = null == V;
         return (
-            !L && e && (P.current = window.setTimeout(i, 500)),
+            !j && A && (m.current = window.setTimeout(l, 500)),
             () => {
-                null != P.current && window.clearTimeout(P.current);
+                null != m.current && window.clearTimeout(m.current);
             }
         );
-    }, [L, U, i]),
-    (0, d.$)({ [n]: [t] }),
-    l.useEffect(() => {
+    }, [j, V, l]),
+    (0, c.$)({ [t]: [e] }),
+    r.useEffect(() => {
         !(async function () {
-            let e = [
-                u.Z.requestMembersById(n, [t]),
-                (0, T.nb)(n, [t]),
-                (0, g.Z)(t, void 0, {
-                    guildId: n,
+            let A = [
+                o.Z.requestMembersById(t, [e]),
+                (0, u.nb)(t, [e]),
+                (0, d.Z)(e, void 0, {
+                    guildId: t,
                     dispatchWait: !0
                 })
             ];
-            (await Promise.all(e), M(!1));
+            (await Promise.all(A), T(!1));
         })();
-    }, [n, t]),
-    D)
-        ? L || null == v || null == U
-            ? (0, r.jsx)('div', {
-                  className: s()(p.sidebarContainer, p.loadingContainer, S),
-                  style: b,
-                  children: (0, r.jsx)(o.$jN, {
+    }, [t, e]),
+    O)
+        ? j || null == P || null == V
+            ? (0, n.jsx)('div', {
+                  className: i()(p.sidebarContainer, p.loadingContainer, H),
+                  style: Q,
+                  children: (0, n.jsx)(a.$jN, {
                       animated: !0,
-                      type: L ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS
+                      type: j ? a.$jN.Type.SPINNING_CIRCLE : a.$jN.Type.CHASING_DOTS
                   })
               })
-            : (0, r.jsx)(A.Gt, {
-                  value: j,
-                  children: (0, r.jsx)('div', {
-                      className: s()(p.sidebarContainer, S),
-                      style: b,
-                      children: (0, r.jsx)(m.Z, {
-                          user: v,
-                          displayProfile: y,
+            : (0, n.jsx)(h.Gt, {
+                  value: L,
+                  children: (0, n.jsx)('div', {
+                      className: i()(p.sidebarContainer, H),
+                      style: Q,
+                      children: (0, n.jsx)(C.Z, {
+                          user: P,
+                          displayProfile: x,
                           themeType: null,
-                          themeOverride: w,
+                          themeOverride: Z,
                           forceShowPremium: !0,
                           className: p.profileThemedContainer,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, n.jsxs)('div', {
                               className: p.innerContainer,
                               children: [
-                                  (0, r.jsx)(R.ZP, {
-                                      userId: t,
-                                      guildId: n,
-                                      onClose: i
+                                  (0, n.jsx)(I.ZP, {
+                                      userId: e,
+                                      guildId: t,
+                                      onClose: l
                                   }),
-                                  (0, r.jsx)(h.Z, {
-                                      userId: t,
-                                      guildId: n,
-                                      onClose: i,
-                                      className: C
+                                  (0, n.jsx)(M.Z, {
+                                      userId: e,
+                                      guildId: t,
+                                      onClose: l,
+                                      className: b
                                   })
                               ]
                           })

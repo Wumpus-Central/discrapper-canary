@@ -157,17 +157,17 @@ function x(e) {
         lastUpdated: Date.now()
     });
 }
-function k(e) {
+function M(e) {
     P(T(e));
 }
-function M(e) {
+function k(e) {
     return null != e && e.length > 1;
 }
 function j(e) {
     let t = {},
         n = {},
         { query: r } = e;
-    if (M(r)) {
+    if (k(r)) {
         let [e, n] = (0, p.C)(r);
         (e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n }));
     }
@@ -329,11 +329,11 @@ function W(e) {
 class K extends c.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return (k(t), H(t));
+        return (M(t), H(t));
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        return k(t.id);
+        return M(t.id);
     }
     handleSearchStateUpdate(e) {
         let { guildId: t } = e;

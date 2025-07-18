@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(35282));
+(n.d(t, { Z: () => k }), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,9 +59,9 @@ function k(e) {
     }
     return e;
 }
-function M(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: x, profileGuildId: M, className: j, onClose: U } = e,
+    let { user: n, currentUser: a, activity: x, profileGuildId: k, className: j, onClose: U } = e,
         G = (0, p.Dt)(),
         B = (0, p.Dt)(),
         V = i.useRef(null),
@@ -152,7 +152,7 @@ function M(e) {
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                guildId: M,
+                guildId: k,
                 themeType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, b.Z)(x) : null,
@@ -184,7 +184,7 @@ function M(e) {
                             onClose: U,
                             'aria-labelledby': K ? ''.concat(B, ' ').concat(G) : G,
                             children: [
-                                (0, r.jsx)(N.Z, k({ textId: B }, W)),
+                                (0, r.jsx)(N.Z, M({ textId: B }, W)),
                                 (0, r.jsx)('div', {
                                     className: L.body,
                                     children: (0, r.jsxs)('div', {

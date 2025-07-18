@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(539854));
+(n.d(t, { Z: () => M }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -102,11 +102,11 @@ let x = {
     animationPhase: 'awaitingInput',
     height: 'auto'
 };
-function k(e) {
+function M(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: h, onOpenUserProfileModal: N, onClose: R } = e,
         { analyticsLocations: P } = (0, f.ZP)(),
-        { trackUserProfileAction: k } = (0, m.KZ)(),
-        { live: M, stream: j } = (0, g.Z)(t.id),
+        { trackUserProfileAction: M } = (0, m.KZ)(),
+        { live: k, stream: j } = (0, g.Z)(t.id),
         { voiceChannel: U, voiceActivity: G } = (0, E.Z)({
             userId: t.id,
             guildId: h
@@ -150,7 +150,7 @@ function k(e) {
                 'stream'
             )
         ),
-        M.forEach((e, t) => {
+        k.forEach((e, t) => {
             en.push(
                 (0, r.jsx)(
                     y.Z,
@@ -176,7 +176,7 @@ function k(e) {
                       color: l.zx.Colors.TRANSPARENT,
                       className: o()(A.viewAllButton, et && A.isShown),
                       onClick: () => {
-                          (k({
+                          (M({
                               action: 'PRESS_VIEW_PROFILE',
                               analyticsLocations: P
                           }),
@@ -191,7 +191,7 @@ function k(e) {
                 : null,
         el = i.useCallback(() => {
             if (null == W.current || null == z.current) return;
-            k({
+            M({
                 action: 'PRESS_SHOW_MORE_ACTIVITY',
                 analyticsLocations: P
             });
@@ -215,7 +215,7 @@ function k(e) {
                                 null == (e = K.current) || e.focus());
                         }, w)));
                 }));
-        }, [P, k]);
+        }, [P, M]);
     return ((0, u.zq)(() => {
         null != q.current && window.clearTimeout(q.current);
     }),

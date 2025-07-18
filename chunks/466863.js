@@ -77,7 +77,7 @@ let o = new (class {
         var t;
         return null == (t = this.getState(e)) ? void 0 : t.sessionId;
     }
-    refreshQueryId(e) {
+    refreshSearchQueryAnalyticsId(e) {
         let t = (0, l.Tm)(e);
         this.searchQueryIds.set(t, (0, n.Z)());
     }

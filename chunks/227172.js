@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     v: () => x
 });
 var r = n(255367),
@@ -70,8 +70,8 @@ let x = {
         [a.z.XBOX]: h.Z,
         [a.z.PLAYSTATION]: p.Z
     },
-    k = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: k, trackRankingItemInteraction: M } = e,
+    M = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
             { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
             { primaryColor: F, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
@@ -129,8 +129,8 @@ let x = {
                           badges: en,
                           entry: n,
                           disableGameProfileLinks: p,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       })
                     : (0, r.jsx)(N.jL, {
                           channel: t,
@@ -140,8 +140,8 @@ let x = {
                           userDescription: w.t['6oWFUF'],
                           entry: n,
                           stream: W,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       }),
             ei = [
                 (0, l.Z)(V, P.xjy.JOIN) || (0, c.Z)(V)

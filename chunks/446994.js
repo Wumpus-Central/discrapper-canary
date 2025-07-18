@@ -707,8 +707,8 @@
                                                                 }
                                                             ],
                                                             x = 0,
-                                                            k = 0,
-                                                            M = 1,
+                                                            M = 0,
+                                                            k = 1,
                                                             j = 0,
                                                             U = 0,
                                                             G = 0,
@@ -720,7 +720,7 @@
                                                                     return n.in_time + n.tempo * (e - n.out_time);
                                                                 },
                                                                 flush: function (e) {
-                                                                    ((j = 0), (T = [0, 0]), (k = 0), (B = 0), (G = 0));
+                                                                    ((j = 0), (T = [0, 0]), (M = 0), (B = 0), (G = 0));
                                                                     for (var t = 0; t < 2; t++) for (var n = 0; n < m; n++) C[t][n] = 0;
                                                                     for (t = 0; t < u.length; t++) u[t] = 0;
                                                                     for (t = 0; t < d.length; t++) d[t] = 0;
@@ -741,7 +741,7 @@
                                                                     ((f = _ = c),
                                                                         e >= 1 ? (_ = Math.round(f / e)) : (f = Math.round(_ * e)),
                                                                         (U = (1 / e - +_ / f) * f),
-                                                                        (M = (function (e, t) {
+                                                                        (k = (function (e, t) {
                                                                             for (var n = (e.length / t) | 0, r = 0, i = 0; i < n; i++) r += e[i * t];
                                                                             return 0.9 / r;
                                                                         })(p, _)),
@@ -807,12 +807,12 @@
                                                                     g[E] = 2 * s;
                                                                     var L = g[(v = 0)],
                                                                         x = g[v + 1],
-                                                                        k = R[v],
-                                                                        M = P[v];
+                                                                        M = R[v],
+                                                                        k = P[v];
                                                                     for (m = 1; m < t.length - 1; m++) {
-                                                                        m >= L && m - L > x - m && ((L = g[++v]), (x = g[v + 1]), (k = R[v]), (M = P[v]));
-                                                                        var j = t[m] * k - n[m] * M,
-                                                                            U = t[m] * M + n[m] * k;
+                                                                        m >= L && m - L > x - m && ((L = g[++v]), (x = g[v + 1]), (M = R[v]), (k = P[v]));
+                                                                        var j = t[m] * M - n[m] * k,
+                                                                            U = t[m] * k + n[m] * M;
                                                                         ((t[m] = j), (n[m] = U));
                                                                     }
                                                                 } else
@@ -827,15 +827,15 @@
                                                                 for (var t = 0; t < s; t++) ((l.m_re[t] = p[t] * u[t]), (l.m_im[t] = p[t] * u[f + t]));
                                                                 (r.blit(u, 2 * f, u, 0, s - f), l.inplace(!1), l.unpack(g, E, b, y), H(x, g, E, 0, 0, +_ / f), H(x + 1, b, y, 0, 0, +(_ + e) / f), r.blit(b, 0, O, 0, m), r.blit(y, 0, v, 0, m), l.repack(g, E, b, y), l.inplace(!0));
                                                                 var n = d.length;
-                                                                for (r.blit(d, k, d, 0, n - k), t = n - k; t < n; t++) d[t] = 0;
+                                                                for (r.blit(d, M, d, 0, n - M), t = n - M; t < n; t++) d[t] = 0;
                                                                 var i = 0,
-                                                                    a = M;
+                                                                    a = k;
                                                                 for (t = 0; t < _; t++) Math.abs(2 * l.m_re[t]) > i && (i = Math.abs(2 * l.m_re[t]));
                                                                 for (t = 0; t < s - _; t++) Math.abs(l.m_re[t + _ + e] + l.m_im[t]) > i && (i = Math.abs(l.m_re[t + _ + e] + l.m_im[t]));
                                                                 for (t = s - _; t < s; t++) Math.abs(2 * l.m_im[t]) > i && (i = Math.abs(2 * l.m_im[t]));
                                                                 var o = 1 / Math.floor(+s / (2 * _));
                                                                 for (a * i > o && (a = o / i), t = 0; t < s; t++) ((d[t] += a * l.m_re[t]), (d[t + _ + e] += a * l.m_im[t]));
-                                                                return ((x += 2), (k = 2 * _ + e));
+                                                                return ((x += 2), (M = 2 * _ + e));
                                                             };
                                                         return (
                                                             (V.process = function (e) {
@@ -1577,8 +1577,8 @@
                         D = 'SEEKING',
                         L = 'ERROR',
                         x = 'NOT_SEEKING',
-                        k = 'BISECT_TO_TARGET',
-                        M = 'BISECT_TO_KEYPOINT',
+                        M = 'BISECT_TO_TARGET',
+                        k = 'BISECT_TO_KEYPOINT',
                         j = 'LINEAR_TO_TARGET',
                         U = 'exact',
                         G = 'fast';
@@ -2150,7 +2150,7 @@
                                                 this._codec.seekToKeypoint(e, function (n) {
                                                     if (n) return ((t._seekState = j), t._fireEventAsync('seeking'), t._didSeek ? void 0 : void t._pingProcessing());
                                                     t._codec.getKeypointOffset(e, function (e) {
-                                                        (e > 0 ? ((t._seekState = j), t._seekStream(e)) : ((t._seekState = k), t._startBisection(t._seekTargetTime)), t._fireEventAsync('seeking'));
+                                                        (e > 0 ? ((t._seekState = j), t._seekStream(e)) : ((t._seekState = M), t._startBisection(t._seekTargetTime)), t._fireEventAsync('seeking'));
                                                     });
                                                 }));
                                         }
@@ -2276,8 +2276,8 @@
                                                   ? this._seekBisector.left() || (this._log('close enough (left)'), (this._seekTargetTime = t), this._continueSeekedPlayback())
                                                   : t + e / 2 < this._bisectTargetTime
                                                     ? this._seekBisector.right() || (this._log('close enough (right)'), (this._seekState = j), this._pingProcessing())
-                                                    : this._seekState == k && this._codec.hasVideo && this._codec.keyframeTimestamp < this._codec.frameTimestamp
-                                                      ? (this._log('finding the keypoint now'), (this._seekState = M), this._startBisection(this._codec.keyframeTimestamp))
+                                                    : this._seekState == M && this._codec.hasVideo && this._codec.keyframeTimestamp < this._codec.frameTimestamp
+                                                      ? (this._log('finding the keypoint now'), (this._seekState = k), this._startBisection(this._codec.keyframeTimestamp))
                                                       : (this._log('straight seeking now'), (this._seekState = j), this._pingProcessing());
                                         }
                                     },
@@ -2416,8 +2416,8 @@
                                         key: '_doProcessSeeking',
                                         value: function () {
                                             if (this._seekState == x) throw Error('seeking in invalid state (not seeking?)');
-                                            if (this._seekState == k) this._doProcessBisectionSeek();
-                                            else if (this._seekState == M) this._doProcessBisectionSeek();
+                                            if (this._seekState == M) this._doProcessBisectionSeek();
+                                            else if (this._seekState == k) this._doProcessBisectionSeek();
                                             else {
                                                 if (this._seekState != j) throw Error('Invalid seek state ' + this._seekState);
                                                 this._doProcessLinearSeeking();

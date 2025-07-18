@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(474936),
     L = n(671147),
     x = n(388032),
-    k = n(882903);
-function M(e, t, n) {
+    M = n(882903);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -101,7 +101,7 @@ function B(e) {
 function V(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)(c.zx, {
-        className: k.closeButton,
+        className: M.closeButton,
         size: c.zx.Sizes.MIN,
         look: c.zx.Looks.BLANK,
         onClick: () => {
@@ -111,14 +111,14 @@ function V(e) {
             size: 'custom',
             height: 20,
             width: 20,
-            className: k.closeIcon,
-            colorClass: k.closeIconWithHover
+            className: M.closeIcon,
+            colorClass: M.closeIconWithHover
         })
     });
 }
 function F() {
     return (0, r.jsxs)('div', {
-        className: k.headerContainer,
+        className: M.headerContainer,
         children: [
             (0, r.jsx)(u.Text, {
                 variant: 'text-md/bold',
@@ -134,7 +134,7 @@ function F() {
                                 size: 'custom',
                                 height: 20,
                                 width: 20,
-                                colorClass: k.nitroIcon
+                                colorClass: M.nitroIcon
                             },
                             e
                         )
@@ -152,21 +152,21 @@ function H(e) {
     let { markAsDismissed: t } = e,
         n = (0, y.m)(D.p9.TIER_2);
     return (0, r.jsxs)('div', {
-        className: k.coachmarkHeaderContainer,
+        className: M.coachmarkHeaderContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: k.badgeAndCloseRow,
+                className: M.badgeAndCloseRow,
                 children: [(0, r.jsx)(u.lBU, { text: x.intl.string(x.t.oW0eUV) }), (0, r.jsx)(V, { markAsDismissed: t })]
             }),
             (0, r.jsxs)('div', {
-                className: k.coachmarkHeaderTextContainer,
+                className: M.coachmarkHeaderTextContainer,
                 children: [
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-lg/extrabold',
                         children: x.intl.string(L.default['23QUzs'])
                     }),
                     (0, r.jsx)(u.Text, {
-                        className: k.subtitle,
+                        className: M.subtitle,
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: x.intl.string(n ? L.default.TRCE4u : L.default['UV/Vtr'])
@@ -180,7 +180,7 @@ function Y(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: i, handleInternalChange: a } = B(t);
     return (0, r.jsxs)('div', {
-        className: o()(k.sliderContainer, k.gradientDirectionSliderContainer),
+        className: o()(M.sliderContainer, M.gradientDirectionSliderContainer),
         children: [
             (0, r.jsx)(u.Text, {
                 variant: 'text-sm/medium',
@@ -208,7 +208,7 @@ function W(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
         { key: i, handleInternalChange: a } = B(t);
     return (0, r.jsxs)('div', {
-        className: k.sliderContainer,
+        className: M.sliderContainer,
         children: [
             (0, r.jsx)(u.Text, {
                 variant: 'text-sm/medium',
@@ -249,8 +249,8 @@ function K(e) {
             (0, r.jsxs)(
                 c.zx,
                 G(j({}, e), {
-                    className: k.surpriseMeButton,
-                    innerClassName: k.surpriseMeButtonContent,
+                    className: M.surpriseMeButton,
+                    innerClassName: M.surpriseMeButtonContent,
                     look: c.zx.Looks.FILLED,
                     color: c.zx.Colors.CUSTOM,
                     size: 'with-text' === t ? c.zx.Sizes.MEDIUM : c.zx.Sizes.ICON,
@@ -284,17 +284,17 @@ function q(e) {
     return (
         (0, N.hf)(i, p.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)('div', {
-            className: k.coachmarkFooterContainer,
+            className: M.coachmarkFooterContainer,
             children: [
                 (0, r.jsx)(K, { type: 'with-text' }),
                 i
                     ? (0, r.jsx)(z, {
-                          className: k.coachmarkSecondButton,
+                          className: M.coachmarkSecondButton,
                           disabled: !n,
                           onApply: t
                       })
                     : (0, r.jsx)(E.Z, {
-                          className: k.coachmarkSecondButton,
+                          className: M.coachmarkSecondButton,
                           premiumModalAnalyticsLocation: {
                               page: P.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
                               section: P.jXE.CUSTOM_THEMES_COACHMARK_FOOTER
@@ -316,14 +316,14 @@ function X(e) {
         ((0, N.Vb)(), (0, g.Q3)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === m.tE.SETTING ? (f.Z.open(), (0, m.Ll)()) : (null == i ? void 0 : i.from) === m.tE.CLIENT_THEMES_EDITOR ? (0, m.XO)(m.wh.CLIENT_THEMES) : (0, m.Ll)());
     };
     return (0, r.jsxs)('div', {
-        className: k.footerContainer,
+        className: M.footerContainer,
         children: [
             (0, r.jsx)(K, { type: 'no-text' }),
             (0, r.jsxs)('div', {
-                className: k.footerRightButtons,
+                className: M.footerRightButtons,
                 children: [
                     (0, r.jsx)(c.zx, {
-                        className: k.backButton,
+                        className: M.backButton,
                         size: c.zx.Sizes.MEDIUM,
                         look: c.zx.Looks.BLANK,
                         onClick: o,
@@ -331,12 +331,12 @@ function X(e) {
                     }),
                     a
                         ? (0, r.jsx)(z, {
-                              className: k.applyButton,
+                              className: M.applyButton,
                               disabled: !n,
                               onApply: t
                           })
                         : (0, r.jsx)(b.Z, {
-                              className: k.subscribeButton,
+                              className: M.subscribeButton,
                               size: c.zx.Sizes.MEDIUM,
                               subscriptionTier: D.Si.TIER_2,
                               showGradient: !0,
@@ -357,7 +357,7 @@ function Q(e) {
         f = A.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         E = (0, S.jJ)(),
         b = i.useRef(!1),
-        { colors: y, chassisMixAmount: T, gradientAngle: P, setColors: D, setChassisMixAmount: L, setGradientAngle: M } = (0, I.Ig)(),
+        { colors: y, chassisMixAmount: T, gradientAngle: P, setColors: D, setChassisMixAmount: L, setGradientAngle: k } = (0, I.Ig)(),
         [j, U] = i.useState(null != (t = y[0]) ? t : I.Dp),
         G = (0, s.e7)([v.Z], () => v.Z.theme),
         B = (0, g.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
@@ -394,14 +394,14 @@ function Q(e) {
     }),
     f)
         ? (0, r.jsx)('div', {
-              className: k.container,
+              className: M.container,
               'data-app-right-panel': !0,
               children: (0, r.jsxs)('div', {
-                  className: k.containerInner,
+                  className: M.containerInner,
                   children: [
                       (0, r.jsx)(u.Ttm, {
                           children: (0, r.jsxs)('div', {
-                              className: k.editorBody,
+                              className: M.editorBody,
                               children: [
                                   (0, r.jsx)(Z, {
                                       markAsDismissed: a,
@@ -419,7 +419,7 @@ function Q(e) {
                                   y.length > 1 &&
                                       (0, r.jsx)(Y, {
                                           gradientAngle: P,
-                                          setGradientAngle: M
+                                          setGradientAngle: k
                                       }),
                                   (0, r.jsx)(W, {
                                       chassisMixAmount: T,
@@ -428,8 +428,8 @@ function Q(e) {
                                       }
                                   }),
                                   (0, r.jsxs)(c.zx, {
-                                      className: k.resetButton,
-                                      innerClassName: k.resetButtonContent,
+                                      className: M.resetButton,
+                                      innerClassName: M.resetButtonContent,
                                       look: c.zx.Looks.FILLED,
                                       color: c.zx.Colors.CUSTOM,
                                       size: c.zx.Sizes.MEDIUM,

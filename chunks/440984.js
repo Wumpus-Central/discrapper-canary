@@ -1,98 +1,98 @@
-(n.d(t, { D: () => j }), n(388685));
-var i = n(255367),
-    r = n(73800),
-    s = n(442837),
+(n.d(t, { D: () => b }), n(388685));
+var r = n(255367),
+    i = n(73800),
+    o = n(442837),
     a = n(780384),
-    l = n(481060),
-    o = n(410030),
+    s = n(481060),
+    l = n(410030),
     c = n(607070),
-    d = n(530618),
-    u = n(74538),
+    u = n(530618),
+    d = n(74538),
     m = n(937615),
     p = n(230916),
-    g = n(798769),
-    h = n(474936),
-    f = n(388032),
-    b = n(583532),
+    _ = n(798769),
+    f = n(474936),
+    C = n(388032),
+    h = n(583532),
     x = n(982404),
-    _ = n(299156);
-function j(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: j, confettiCanvas: E, userWasChurned: O = !1, userDiscountOffer: C } = e,
-        v = (0, o.ZP)(),
-        S = (0, a.wj)(v) ? x : _,
-        T = r.useRef(null),
-        [N, I] = r.useState(!1),
-        y = (0, p._)(t, h.Xh.PREMIUM_MONTH_TIER_2, C),
-        A = (0, u.aS)(h.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+    y = n(299156);
+function b(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: b, confettiCanvas: g, userWasChurned: v = !1, userDiscountOffer: j } = e,
+        I = (0, l.ZP)(),
+        T = (0, a.wj)(I) ? x : y,
+        E = i.useRef(null),
+        [P, O] = i.useState(!1),
+        S = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, j),
+        N = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        P = (0, m.T4)(A.amount, A.currency),
-        R = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
+        R = (0, m.T4)(N.amount, N.currency),
+        D = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
-        (r.useEffect(() => {
-            null != T.current && null != y && I(!0);
-        }, [T, N, y]),
-        null == C || null == y)
+        (i.useEffect(() => {
+            null != E.current && null != S && O(!0);
+        }, [E, P, S]),
+        null == j || null == S)
     )
         return null;
-    let D = f.intl.format(f.t.gPzMHR, {
-            numMonths: C.discount.user_usage_limit,
-            discountedPrice: y,
-            regularPrice: P
+    let w = C.intl.format(C.t.gPzMHR, {
+            numMonths: j.discount.user_usage_limit,
+            discountedPrice: S,
+            regularPrice: R
         }),
-        Z = (0, i.jsx)('div', {
-            className: b.whatYouLoseButtonContainer,
-            children: (0, i.jsx)(l.zxk, {
+        A = (0, r.jsx)('div', {
+            className: h.whatYouLoseButtonContainer,
+            children: (0, r.jsx)(s.zxk, {
                 variant: 'primary',
-                text: f.intl.string(f.t['/r8g/v']),
-                onClick: j
+                text: C.intl.string(C.t['/r8g/v']),
+                onClick: b
             })
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, r.jsx)(_.Z, {
                 premiumType: n,
-                className: b.cancellationHeader,
-                onClose: j
+                className: h.cancellationHeader,
+                onClose: b
             }),
-            (0, i.jsx)('div', {
-                ref: T,
-                children: (0, i.jsx)(l.hzk, {
-                    className: b.body,
+            (0, r.jsx)('div', {
+                ref: E,
+                children: (0, r.jsx)(s.hzk, {
+                    className: h.body,
                     children:
-                        null != y
-                            ? (0, i.jsxs)(i.Fragment, {
+                        null != S
+                            ? (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, i.jsxs)('div', {
-                                          className: b.discountAppliedBody,
+                                      (0, r.jsxs)('div', {
+                                          className: h.discountAppliedBody,
                                           children: [
-                                              (0, i.jsx)('img', {
+                                              (0, r.jsx)('img', {
                                                   alt: '',
-                                                  src: S,
-                                                  className: b.nitroIcon
+                                                  src: T,
+                                                  className: h.nitroIcon
                                               }),
-                                              (0, i.jsx)(l.X6q, {
+                                              (0, r.jsx)(s.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: O ? f.intl.string(f.t.gOOPaG) : f.intl.string(f.t.PZSyRk)
+                                                  children: v ? C.intl.string(C.t.gOOPaG) : C.intl.string(C.t.PZSyRk)
                                               })
                                           ]
                                       }),
-                                      (0, i.jsx)('div', {
-                                          className: b.bodyString,
-                                          children: D
+                                      (0, r.jsx)('div', {
+                                          className: h.bodyString,
+                                          children: w
                                       }),
-                                      Z
+                                      A
                                   ]
                               })
-                            : (0, i.jsx)(l.$jN, {})
+                            : (0, r.jsx)(s.$jN, {})
                 })
             }),
-            !R &&
-                N &&
-                (0, i.jsx)(d.Z, {
-                    confettiTarget: T.current,
-                    confettiCanvas: E,
+            !D &&
+                P &&
+                (0, r.jsx)(u.Z, {
+                    confettiTarget: E.current,
+                    confettiCanvas: g,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

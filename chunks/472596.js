@@ -1,80 +1,80 @@
-n.d(t, {
-    RE: () => d,
-    RN: () => A,
-    po: () => I,
-    vN: () => _,
-    xb: () => g,
-    zq: () => T
+t.d(e, {
+    RE: () => c,
+    RN: () => h,
+    po: () => E,
+    vN: () => v,
+    xb: () => d,
+    zq: () => u
 });
-var r,
-    l = n(73800),
-    i = n(399606),
-    s = n(906732),
-    a = n(892001),
-    o = n(485386),
-    u = n(430824),
-    c = n(594174),
-    E = n(91047);
-let d = (e, t) => {
-    let { guildId: n, userId: r, colorRoleId: l } = e;
-    (0, a.openUserProfileModal)({
-        userId: r,
-        guildId: n,
-        sourceAnalyticsLocations: t,
-        roleId: l
+var n,
+    r = t(73800),
+    l = t(399606),
+    i = t(906732),
+    s = t(892001),
+    a = t(485386),
+    o = t(430824),
+    g = t(594174),
+    f = t(91047);
+let c = (A, e) => {
+    let { guildId: t, userId: n, colorRoleId: r } = A;
+    (0, s.openUserProfileModal)({
+        userId: n,
+        guildId: t,
+        sourceAnalyticsLocations: e,
+        roleId: r
     });
 };
-function _(e, t, n, r) {
-    let { analyticsLocations: i } = (0, s.ZP)();
-    return l.useCallback(
-        (l) => {
-            if (null == e) return;
-            let s = c.default.getUser(e.userId);
-            null != s &&
-                (l.stopPropagation(),
-                (0, E.nm)(l, {
-                    user: s,
-                    guildId: e.guildId,
-                    analyticsLocations: null != n ? [n] : i,
-                    onCloseContextMenu: r,
-                    isViewOnly: t
+function v(A, e, t, n) {
+    let { analyticsLocations: l } = (0, i.ZP)();
+    return r.useCallback(
+        (r) => {
+            if (null == A) return;
+            let i = g.default.getUser(A.userId);
+            null != i &&
+                (r.stopPropagation(),
+                (0, f.nm)(r, {
+                    user: i,
+                    guildId: A.guildId,
+                    analyticsLocations: null != t ? [t] : l,
+                    onCloseContextMenu: n,
+                    isViewOnly: e
                 }));
         },
-        [e, i, r, n, t]
+        [A, l, n, t, e]
     );
 }
-function A(e, t, n) {
-    let { analyticsLocations: r } = (0, s.ZP)();
-    return l.useCallback(
-        (l) => {
-            if (null == e) return;
-            let i = c.default.getUser(e.userId);
-            null != i &&
-                (l.stopPropagation(),
-                (0, E._j)(l, {
-                    user: i,
-                    guildId: e.guildId,
-                    analyticsLocations: null != t ? [t] : r,
-                    onCloseContextMenu: n,
+function h(A, e, t) {
+    let { analyticsLocations: n } = (0, i.ZP)();
+    return r.useCallback(
+        (r) => {
+            if (null == A) return;
+            let l = g.default.getUser(A.userId);
+            null != l &&
+                (r.stopPropagation(),
+                (0, f._j)(r, {
+                    user: l,
+                    guildId: A.guildId,
+                    analyticsLocations: null != e ? [e] : n,
+                    onCloseContextMenu: t,
                     showTransferOwnershipItem: !0
                 }));
         },
-        [e, n, r, t]
+        [A, t, n, e]
     );
 }
-function T(e) {
-    return (0, i.e7)(
-        [u.Z, o.Z],
+function u(A) {
+    return (0, l.e7)(
+        [o.Z, a.Z],
         () => {
-            var t;
-            if (null == e) return null;
-            let n = u.Z.getGuild(e.guildId);
-            return null == n || null == e.highestRoleId ? null : null != (t = o.Z.getRole(n.id, e.highestRoleId)) ? t : null;
+            var e;
+            if (null == A) return null;
+            let t = o.Z.getGuild(A.guildId);
+            return null == t || null == A.highestRoleId ? null : null != (e = a.Z.getRole(t.id, A.highestRoleId)) ? e : null;
         },
-        [e]
+        [A]
     );
 }
-var I = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
-function g(e, t, n) {
-    return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
+var E = (((n = {})[(n.LOADING = 0)] = 'LOADING'), (n[(n.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (n[(n.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (n[(n.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), n);
+function d(A, e, t) {
+    return e ? 0 : A ? 1 : t <= 0 ? 2 : 3;
 }

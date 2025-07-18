@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(692547),
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,9 +60,9 @@ function y(e, t) {
         e
     );
 }
-function O(e) {
+function y(e) {
     let { guildId: t } = e,
-        O = (0, f.xC)(t),
+        y = (0, f.xC)(t),
         { selectedUserIds: _, clearSelection: H } = (0, h.Z)(t),
         w = _.size > 0,
         N = async (e, t, n, r) => {
@@ -71,7 +71,7 @@ function O(e) {
                 ((0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5O), c.ToastType.SUCCESS)),
                     b.default.track(
                         j.rMx.BULK_MODERATION_ACTION_COMPLETED,
-                        y(v({}, (0, C.hH)(e)), {
+                        O(v({}, (0, C.hH)(e)), {
                             action_type: p.jQ.BAN,
                             target_user_ids: [..._],
                             mod_user_id: m.default.getId(),
@@ -126,7 +126,7 @@ function O(e) {
                 })
             ]
         });
-    return O
+    return y
         ? (0, r.jsx)(i.W, {
               component: 'div',
               className: x.saveNoticeContainer,
@@ -137,7 +137,7 @@ function O(e) {
                           onSave: () => {
                               (b.default.track(
                                   j.rMx.BULK_MODERATION_ACTION_STARTED,
-                                  y(v({}, (0, C.hH)(t)), {
+                                  O(v({}, (0, C.hH)(t)), {
                                       action_type: p.jQ.BAN,
                                       target_user_ids: [..._],
                                       mod_user_id: m.default.getId(),
@@ -149,9 +149,9 @@ function O(e) {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              y(v({}, n), {
+                                              O(v({}, n), {
                                                   guildId: t,
-                                                  canBulkBan: O,
+                                                  canBulkBan: y,
                                                   userIds: _,
                                                   onBanMultiple: N
                                               })

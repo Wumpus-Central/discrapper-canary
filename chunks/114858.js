@@ -4,8 +4,8 @@ n.d(t, {
     EN: () => D,
     F0: () => m,
     LX: () => C,
-    TH: () => k,
-    UO: () => M,
+    TH: () => M,
+    UO: () => k,
     k6: () => x,
     l_: () => I,
     rs: () => w,
@@ -271,15 +271,15 @@ var L = i.useContext;
 function x() {
     return L(p);
 }
-function k() {
+function M() {
     return L(h).location;
 }
-function M() {
+function k() {
     var e = L(h).match;
     return e ? e.params : {};
 }
 function j(e) {
-    var t = k(),
+    var t = M(),
         n = L(h).match;
     return e ? C(t.pathname, e) : n;
 }

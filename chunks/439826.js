@@ -1,9 +1,9 @@
 (n.d(t, { Z: () => D }), n(784620), n(973216));
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    i = n(104721),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
+    i = n(42133),
     l = n(780384),
     c = n(755721),
     u = n(481060),
@@ -22,12 +22,12 @@ var r = n(255367),
     C = n(685613),
     O = n(670638),
     E = n(341907),
-    S = n(251360),
-    w = n(19148),
-    P = n(46140),
-    T = n(642145),
-    N = n(981631),
-    A = n(388032),
+    w = n(251360),
+    S = n(19148),
+    T = n(46140),
+    P = n(642145),
+    A = n(981631),
+    N = n(388032),
     R = n(508936);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -72,23 +72,23 @@ function k(e, t) {
         e
     );
 }
-function q(e) {
+function I(e) {
     var t;
-    let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
-        { ref: f, height: g = 0 } = (0, d.ZP)([o]),
+    let { quest: n, errorHints: s, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
+        { ref: f, height: g = 0 } = (0, d.ZP)([s]),
         h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         b = (0, x.z)(n),
-        { type: j, hints: _ } = s.useMemo(
+        { type: j, hints: _ } = o.useMemo(
             () =>
                 h || b
                     ? {
                           type: 2,
                           hints: []
                       }
-                    : o.length > 0
+                    : s.length > 0
                       ? {
                             type: 0,
-                            hints: o.map((e) => e.message)
+                            hints: s.map((e) => e.message)
                         }
                       : a.length > 0
                         ? {
@@ -99,17 +99,17 @@ function q(e) {
                               type: 2,
                               hints: []
                           },
-            [o, h, b, a]
+            [s, h, b, a]
         ),
         v = 2 !== j,
         C = (0, u.q_F)({
             opacity: +!!v,
             height: v ? g : 0,
-            config: T.Y
+            config: P.Y
         }),
         O = 0 === j ? u.P4T : u.d3s,
-        E = (0, m.Lq)(N.Ilk.RED_345),
-        S = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
+        E = (0, m.Lq)(A.Ilk.RED_345),
+        w = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
         style: C,
         children: (0, r.jsxs)('div', {
@@ -121,7 +121,7 @@ function q(e) {
                     children: [
                         (0, r.jsx)(O, {
                             size: 'xs',
-                            color: S
+                            color: w
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-xs/medium',
@@ -135,36 +135,36 @@ function q(e) {
                         onClick: () =>
                             (0, y.y)({
                                 questId: n.id,
-                                errorHints: o,
+                                errorHints: s,
                                 sourceQuestContent: p
                             }),
                         size: c.Ph.MIN,
                         look: c.iL.LINK,
                         color: c.Tt.CUSTOM,
-                        style: { color: (0, m.Lq)(N.Ilk.BLUE_345) },
+                        style: { color: (0, m.Lq)(A.Ilk.BLUE_345) },
                         children: 'See Details'
                     })
             ]
         })
     });
 }
-function I(e) {
-    let { quest: t, isHovering: n, showAssets: o } = e,
-        a = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_IMAGE), [t]),
-        i = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_VIDEO), [t]),
-        l = (0, j.h)(t, P.dr.QUEST_HOME_DESKTOP),
-        { onAssetLoadComplete: c } = s.useContext(S.k);
+function q(e) {
+    let { quest: t, isHovering: n, showAssets: s } = e,
+        a = o.useMemo(() => (0, _.fh)(t, _.eC.HERO_IMAGE), [t]),
+        i = o.useMemo(() => (0, _.fh)(t, _.eC.HERO_VIDEO), [t]),
+        l = (0, j.h)(t, T.dr.QUEST_HOME_DESKTOP),
+        { onAssetLoadComplete: c } = o.useContext(w.k);
     return (0, r.jsx)('div', {
         className: R.heroAssetCont,
         children:
-            o &&
+            s &&
             (0, r.jsx)(v.K, {
                 imageAsset:
                     null != a
                         ? {
                               asset: a,
                               assetId: 'QuestTileBanner',
-                              alt: A.intl.string(A.t.jnijW1),
+                              alt: N.intl.string(N.t.jnijW1),
                               className: R.heroAsset
                           }
                         : void 0,
@@ -186,11 +186,11 @@ function I(e) {
     });
 }
 function D(e) {
-    var t, n, o, i, c;
-    let { quest: d, isHovering: m, errorHints: j, warningHints: _, isVisibleInViewport: v, onCtxMenuClose: y, onCtxMenuOpen: P, onCtxMenuSelect: T, sourceQuestContent: D } = e,
+    var t, n, s, i, c;
+    let { quest: d, isHovering: m, errorHints: j, warningHints: _, isVisibleInViewport: v, onCtxMenuClose: y, onCtxMenuOpen: T, onCtxMenuSelect: P, sourceQuestContent: D } = e,
         Q = (0, b.PB)(d),
         V = (0, p.ZP)(),
-        L = ((0, l.wj)(V) ? N.BRd.DARK : N.BRd.LIGHT) === N.BRd.DARK,
+        L = ((0, l.wj)(V) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
         M = (0, x.tP)(d),
         W = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
         Z = (0, x.B6)(d.config.expiresAt, {
@@ -198,9 +198,9 @@ function D(e) {
             day: 'numeric'
         }),
         U = (null == (n = d.userStatus) ? void 0 : n.enrolledAt) != null,
-        H = (null == (o = d.userStatus) ? void 0 : o.completedAt) != null,
-        { onAssetLoadComplete: z } = s.useContext(S.k),
-        F = s.useCallback(() => {
+        H = (null == (s = d.userStatus) ? void 0 : s.completedAt) != null,
+        { onAssetLoadComplete: z } = o.useContext(w.k),
+        F = o.useCallback(() => {
             Q &&
                 ((0, b.zi)(d) ||
                     U ||
@@ -211,7 +211,9 @@ function D(e) {
                     }),
                 (0, E.openVideoQuestModal)({
                     quest: d,
-                    sourceQuestContent: h.jn.QUEST_HOME_DESKTOP
+                    questContent: h.jn.QUEST_HOME_DESKTOP,
+                    sourceQuestContent: D,
+                    sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO
                 }));
         }, [Q, d, U, D]);
     return (0, r.jsxs)('div', {
@@ -219,7 +221,7 @@ function D(e) {
         children: [
             (0, r.jsx)('div', {
                 className: R.heroAssetWrapper,
-                children: (0, r.jsx)(I, {
+                children: (0, r.jsx)(q, {
                     quest: d,
                     isHovering: m,
                     showAssets: v
@@ -247,18 +249,18 @@ function D(e) {
                                                 variant: 'eyebrow',
                                                 color: 'always-white',
                                                 className: R.eyebrowText,
-                                                children: A.intl.string(A.t.SKNnqq)
+                                                children: N.intl.string(N.t.SKNnqq)
                                             })
                                         }),
                                     Q &&
                                         (0, r.jsx)(u.ua7, {
-                                            text: H ? A.intl.string(A.t.YsCuyM) : U ? A.intl.string(A.t['74Kqra']) : (0, b.zi)(d) ? A.intl.string(A.t['I6JG4+']) : A.intl.string(A.t.umdNio),
+                                            text: H ? N.intl.string(N.t.YsCuyM) : U ? N.intl.string(N.t['74Kqra']) : (0, b.zi)(d) ? N.intl.string(N.t['I6JG4+']) : N.intl.string(N.t.umdNio),
                                             children: (e) =>
                                                 (0, r.jsx)(
                                                     u.P3F,
                                                     k(B({}, e), {
                                                         className: R.utilButtonWrapper,
-                                                        'aria-label': A.intl.string(A.t.RscU7O),
+                                                        'aria-label': N.intl.string(N.t.RscU7O),
                                                         onClick: F,
                                                         children: (0, r.jsx)(u.o1U, {
                                                             color: 'currentColor',
@@ -268,9 +270,9 @@ function D(e) {
                                                 )
                                         }),
                                     (0, r.jsx)(O.r, {
-                                        onOpen: P,
+                                        onOpen: T,
                                         onClose: y,
-                                        onSelect: T,
+                                        onSelect: P,
                                         questContent: h.jn.QUEST_HOME_DESKTOP,
                                         quest: d,
                                         hideLearnMore: !0,
@@ -282,7 +284,7 @@ function D(e) {
                                                 u.P3F,
                                                 k(B({}, e), {
                                                     className: R.utilButtonWrapper,
-                                                    'aria-label': A.intl.string(A.t.DEoVWV),
+                                                    'aria-label': N.intl.string(N.t.DEoVWV),
                                                     children: (0, r.jsx)(u.xhG, {
                                                         size: 'md',
                                                         color: 'currentColor',
@@ -293,7 +295,7 @@ function D(e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(w.E, {
+                            (0, r.jsx)(S.E, {
                                 showPlaceholder: !v,
                                 width: 100,
                                 height: 30,
@@ -313,20 +315,20 @@ function D(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: L ? 'text-muted' : 'always-white',
-                                        children: A.intl.format(A.t.buEvBw, { brandName: null != (c = null == (i = d.config.cosponsorMetadata) ? void 0 : i.name) ? c : d.config.messages.gamePublisher })
+                                        children: N.intl.format(N.t.buEvBw, { brandName: null != (c = null == (i = d.config.cosponsorMetadata) ? void 0 : i.name) ? c : d.config.messages.gamePublisher })
                                     }),
                                     M || W
                                         ? null
                                         : (0, r.jsx)(u.Text, {
                                               variant: 'text-sm/medium',
                                               color: L ? 'text-muted' : 'always-white',
-                                              children: A.intl.format(A.t['7D8r4O'], { expiryDate: Z })
+                                              children: N.intl.format(N.t['7D8r4O'], { expiryDate: Z })
                                           })
                                 ]
                             })
                         ]
                     }),
-                    (0, r.jsx)(q, {
+                    (0, r.jsx)(I, {
                         quest: d,
                         errorHints: j,
                         warningHints: _,

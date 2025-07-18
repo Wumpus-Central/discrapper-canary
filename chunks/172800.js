@@ -97,7 +97,7 @@ function L(e, t) {
     return i;
 }
 let x = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onSelectSoundmoji: P, onInspect: L, surrogateCodePoint: x, getEmojiItemProps: k, getEmojiRowProps: M, isScrolling: j, isUsingKeyboardNavigation: U, rowIndex: G, allowAnimatedEmoji: B, showEmojiFavoriteTooltip: V, channelGuildId: F, category: Z, selectedItemClassName: H, channelId: Y, messageId: W, isBurstReaction: K, inNitroLockedSection: z, handleScrollUpOnSectionCollapse: q } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onSelectSoundmoji: P, onInspect: L, surrogateCodePoint: x, getEmojiItemProps: M, getEmojiRowProps: k, isScrolling: j, isUsingKeyboardNavigation: U, rowIndex: G, allowAnimatedEmoji: B, showEmojiFavoriteTooltip: V, channelGuildId: F, category: Z, selectedItemClassName: H, channelId: Y, messageId: W, isBurstReaction: K, inNitroLockedSection: z, handleScrollUpOnSectionCollapse: q } = e,
         { enabled: X } = O.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         { enabled: Q } = (0, d.q)({
             location: 'emoji_picker_list_row',
@@ -135,7 +135,7 @@ let x = (e) => {
                     var n;
                     let { onMouseEnter: a, onMouseLeave: s, handleSelect: c, icon: u, ariaLabel: d, shouldShowRoundHighlight: f } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: p } = e,
-                        h = null != (n = k(p, G)) ? n : {},
+                        h = null != (n = M(p, G)) ? n : {},
                         { ref: m, tabIndex: g, onFocus: E } = h,
                         b = D(h, ['ref', 'tabIndex', 'onFocus']),
                         y = el.rowIndex === _ && el.columnIndex === p,
@@ -242,7 +242,7 @@ let x = (e) => {
                             onSelect: C,
                             onInspect: L,
                             channelGuildId: F,
-                            getEmojiItemProps: k,
+                            getEmojiItemProps: M,
                             isMediumSize: ep,
                             isLargeSize: e_,
                             pulseItemKey: eu,
@@ -263,7 +263,7 @@ let x = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 'ul',
-                w(R({}, M(G)), {
+                w(R({}, k(G)), {
                     className: o()(N.emojiListRow, {
                         [N.emojiListRowLargeSize]: e_,
                         [N.emojiListRowMediumSize]: ep

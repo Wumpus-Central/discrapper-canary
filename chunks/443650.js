@@ -1,77 +1,39 @@
-var o =
-        Object.assign ||
-        function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var r = arguments[e];
-                for (var o in r) Object.prototype.hasOwnProperty.call(r, o) && (t[o] = r[o]);
-            }
-            return t;
-        },
-    n = f(r(459721)),
-    i = f(r(933982)),
-    a = f(r(639519)),
-    u = r(73800),
-    s = f(u),
-    l = f(r(647895));
-function f(t) {
-    return t && t.__esModule ? t : { default: t };
-}
-var h = {
-        bgColor: a.default.oneOfType([a.default.object, a.default.string]),
-        fgColor: a.default.oneOfType([a.default.object, a.default.string]),
-        level: a.default.string,
-        size: a.default.number,
-        value: a.default.string.isRequired
-    },
-    g = (0, u.forwardRef)(function (t, e) {
-        var r = t.bgColor,
-            a = t.fgColor,
-            u = t.level,
-            f = t.size,
-            h = t.value,
-            g = (function (t, e) {
-                var r = {};
-                for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
-                return r;
-            })(t, ['bgColor', 'fgColor', 'level', 'size', 'value']),
-            c = new n.default(-1, i.default[u]);
-        (c.addData(h), c.make());
-        var d = c.modules;
-        return s.default.createElement(
-            l.default,
-            o({}, g, {
-                bgColor: r,
-                bgD: d
-                    .map(function (t, e) {
-                        return t
-                            .map(function (t, r) {
-                                return t ? '' : 'M ' + r + ' ' + e + ' l 1 0 0 1 -1 0 Z';
-                            })
-                            .join(' ');
-                    })
-                    .join(' '),
-                fgColor: a,
-                fgD: d
-                    .map(function (t, e) {
-                        return t
-                            .map(function (t, r) {
-                                return t ? 'M ' + r + ' ' + e + ' l 1 0 0 1 -1 0 Z' : '';
-                            })
-                            .join(' ');
-                    })
-                    .join(' '),
-                ref: e,
-                size: f,
-                viewBoxSize: d.length
-            })
-        );
+r.d(t, { Z: () => s });
+var n = r(255367);
+r(73800);
+var o = r(120356),
+    c = r.n(o),
+    l = r(481060),
+    i = r(809086),
+    u = r(760146);
+function a(e) {
+    let { className: t, onClose: r } = e;
+    return (0, n.jsx)(l.P3F, {
+        className: c()(u.closeButtonContainer, t),
+        onClick: r,
+        children: (0, n.jsx)(l.Dio, {
+            size: 'xs',
+            color: 'currentColor',
+            className: u.closeButtonIcon
+        })
     });
-((g.displayName = 'QRCode'),
-    (g.propTypes = h),
-    (g.defaultProps = {
-        bgColor: '#FFFFFF',
-        fgColor: '#000000',
-        level: 'L',
-        size: 256
-    }),
-    (e.default = g));
+}
+function s(e) {
+    let { guildProductListing: t, onClose: r, className: o } = e;
+    return (0, n.jsxs)(l.xBx, {
+        className: c()(u.header, o),
+        separator: !1,
+        children: [
+            (0, n.jsx)(i.Z, {
+                className: u.headerImage,
+                listing: t,
+                imageSize: 500,
+                alt: ''
+            }),
+            (0, n.jsx)(a, {
+                className: u.closeButton,
+                onClose: r
+            })
+        ]
+    });
+}

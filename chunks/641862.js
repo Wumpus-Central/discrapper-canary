@@ -50,14 +50,14 @@ var r = n(175730),
             D = i ? A + C : 0,
             L = i ? N + R : 0,
             x = r ? r.width : _(n.width) - D - w,
-            k = r ? r.height : _(n.height) - L - P,
-            M = x + A + w + C,
-            j = k + N + P + R,
+            M = r ? r.height : _(n.height) - L - P,
+            k = x + A + w + C,
+            j = M + N + P + R,
             U = (0, s.v)({
-                devicePixelContentBoxSize: p(Math.round(x * devicePixelRatio), Math.round(k * devicePixelRatio), l),
-                borderBoxSize: p(M, j, l),
-                contentBoxSize: p(x, k, l),
-                contentRect: new a.N(O, E, x, k)
+                devicePixelContentBoxSize: p(Math.round(x * devicePixelRatio), Math.round(M * devicePixelRatio), l),
+                borderBoxSize: p(k, j, l),
+                contentBoxSize: p(x, M, l),
+                contentRect: new a.N(O, E, x, M)
             });
         return (c.set(e, U), U);
     },

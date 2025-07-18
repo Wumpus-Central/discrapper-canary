@@ -1,243 +1,247 @@
-n.d(t, {
-    i: () => P,
-    y: () => N
+r.d(t, {
+    i: () => A,
+    y: () => w
 });
-var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    i = n(755721),
-    l = n(481060),
-    c = n(100527),
-    u = n(335131),
-    d = n(617136),
-    p = n(915750),
-    m = n(113434),
-    f = n(497505),
-    g = n(918701),
-    x = n(373370),
-    h = n(667105),
-    b = n(341907),
-    j = n(46140),
-    _ = n(215023),
-    v = n(388032),
-    y = n(895518);
-function C(e) {
+var n = r(255367),
+    s = r(73800),
+    o = r(120356),
+    l = r.n(o),
+    c = r(755721),
+    i = r(481060),
+    a = r(100527),
+    u = r(335131),
+    d = r(617136),
+    f = r(915750),
+    p = r(113434),
+    x = r(497505),
+    j = r(918701),
+    g = r(373370),
+    h = r(667105),
+    b = r(341907),
+    m = r(46140),
+    y = r(215023),
+    C = r(388032),
+    O = r(895518);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                ((n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r));
+                        : (e[t] = n));
             }));
     }
     return e;
 }
-function O(e) {
-    let { quest: t, sourceQuestContent: n, taskDetails: s } = e;
-    return (0, r.jsx)(i.zx, {
-        className: y.cta,
-        color: i.zx.Colors.BRAND,
+function v(e) {
+    let { quest: t, sourceQuestContent: r, taskDetails: s } = e;
+    return (0, n.jsx)(c.zx, {
+        className: O.cta,
+        color: c.zx.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
+            var e;
+            let n = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
             (0, b.openVideoQuestModal)({
                 quest: t,
-                sourceQuestContent: n
+                questContent: x.jn.QUEST_BAR_V2,
+                sourceQuestContent: r,
+                sourceQuestContentCTA: n
             });
         },
-        size: i.zx.Sizes.SMALL,
-        children: (0, g.F9)(s)
+        size: c.zx.Sizes.SMALL,
+        children: (0, j.F9)(s)
     });
 }
-let E = (e) => {
-        let { quest: t, sourceQuestContent: n } = e,
-            s = (0, p.aM)();
-        return (0, r.jsx)(i.zx, {
-            className: y.cta,
-            size: i.zx.Sizes.SMALL,
+let S = (e) => {
+        let { quest: t, sourceQuestContent: r } = e,
+            s = (0, f.aM)();
+        return (0, n.jsx)(c.zx, {
+            className: O.cta,
+            size: c.zx.Sizes.SMALL,
             onClick: () =>
-                (0, g.nc)(t, {
-                    content: f.jn.QUEST_BAR_V2,
+                (0, j.nc)(t, {
+                    content: x.jn.QUEST_BAR_V2,
                     ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: s,
-                    sourceQuestContent: n
+                    sourceQuestContent: r
                 }),
-            children: (0, g.pO)(t) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
+            children: (0, j.pO)(t) ? C.intl.string(C.t.hvVgAQ) : C.intl.string(C.t.lwQdjI)
         });
     },
-    S = (e) => {
+    N = (e) => {
         var t;
-        let { quest: n, sourceQuestContent: s } = e,
-            o = null == (t = (0, p.WD)()) ? void 0 : t.getId();
-        return (0, r.jsx)(i.zx, {
+        let { quest: r, sourceQuestContent: s } = e,
+            o = null == (t = (0, f.WD)()) ? void 0 : t.getId();
+        return (0, n.jsx)(c.zx, {
             fullWidth: !0,
-            className: y.cta,
+            className: O.cta,
             onClick: () =>
-                (0, g.gI)(
-                    { quest: n },
+                (0, j.gI)(
+                    { quest: r },
                     {
-                        content: f.jn.QUEST_BAR_V2,
+                        content: x.jn.QUEST_BAR_V2,
                         ctaContent: d.jZ.CONNECT_CONSOLE,
                         impressionId: o,
                         sourceQuestContent: s
                     }
                 ),
-            size: i.zx.Sizes.SMALL,
-            children: v.intl.string(v.t.csptqa)
+            size: c.zx.Sizes.SMALL,
+            children: C.intl.string(C.t.csptqa)
         });
     },
-    w = (e) => {
+    E = (e) => {
         let { quest: t } = e,
-            n = (0, g.Vl)(t),
-            s = t.config.features.includes(j.S7.START_QUEST_CTA),
-            o = (0, x.CR)({ quest: t }),
-            { launchInGameActivity: a } = (0, m.zB)(t);
-        return n && s
-            ? (0, r.jsx)(i.zx, {
-                  className: y.cta,
-                  color: i.zx.Colors.BRAND,
+            r = (0, j.Vl)(t),
+            s = t.config.features.includes(m.S7.START_QUEST_CTA),
+            o = (0, g.CR)({ quest: t }),
+            { launchInGameActivity: l } = (0, p.zB)(t);
+        return r && s
+            ? (0, n.jsx)(c.zx, {
+                  className: O.cta,
+                  color: c.zx.Colors.BRAND,
                   fullWidth: !0,
-                  onClick: a,
-                  size: i.zx.Sizes.SMALL,
+                  onClick: l,
+                  size: c.zx.Sizes.SMALL,
                   children: o
               })
             : null;
     },
-    P = (e) => {
+    A = (e) => {
         var t,
-            n,
+            r,
             o,
-            { quest: d, useReducedMotion: p, isExpanded: m, className: x, ctaLabel: b, onClick: j, questContent: O = f.jn.QUEST_BAR_V2, sourceQuestContent: E } = e,
-            S = (function (e, t) {
+            { quest: d, useReducedMotion: f, isExpanded: p, className: g, ctaLabel: b, onClick: m, questContent: v = x.jn.QUEST_BAR_V2, sourceQuestContent: S } = e,
+            N = (function (e, t) {
                 if (null == e) return {};
-                var n,
-                    r,
+                var r,
+                    n,
                     s = (function (e, t) {
                         if (null == e) return {};
-                        var n,
-                            r,
+                        var r,
+                            n,
                             s = {},
                             o = Object.keys(e);
-                        for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
+                        for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (s[r] = e[r]));
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
+                    for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]));
                 }
                 return s;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick', 'questContent', 'sourceQuestContent']);
-        let w = (0, h.hf)({
+        let E = (0, h.hf)({
                 quest: d,
-                questContent: O,
-                sourceQuestContent: E
+                questContent: v,
+                sourceQuestContent: S
             }),
-            P = s.useCallback(
+            A = s.useCallback(
                 (e) => {
                     var t;
-                    (null == j || j(e),
-                        (0, g.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
+                    (null == m || m(e),
+                        (0, j.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, u.mK)({
                                   openInLayer: !1,
-                                  tab: _.AW.ORBS,
+                                  tab: y.AW.ORBS,
                                   analyticsLocations: [],
-                                  analyticsSource: c.Z.QUEST_HOME_PAGE
+                                  analyticsSource: a.Z.QUEST_HOME_PAGE
                               })
-                            : w());
+                            : E());
                 },
-                [j, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, w]
+                [m, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, E]
             );
-        return (0, r.jsx)(
-            l.gtL,
-            ((t = C(
+        return (0, n.jsx)(
+            i.gtL,
+            ((t = k(
                 {
                     fullWidth: !0,
-                    size: i.zx.Sizes.SMALL,
-                    onClick: P,
-                    pauseAnimation: p || !m,
-                    className: a()(y.cta, x),
-                    buttonShineClassName: y.shine
+                    size: c.zx.Sizes.SMALL,
+                    onClick: A,
+                    pauseAnimation: f || !p,
+                    className: l()(O.cta, g),
+                    buttonShineClassName: O.shine
                 },
-                S
+                N
             )),
-            (n = n = { children: null != b ? b : v.intl.string(v.t.cfY4PD) }),
+            (r = r = { children: null != b ? b : C.intl.string(C.t.cfY4PD) }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
-                      var n = Object.keys(e);
+                      var r = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
             t)
         );
     },
-    T = (e) => {
+    z = (e) => {
         var t;
-        let { quest: n, sourceQuestContent: s, useReducedMotion: o, isExpanded: a, awaitingConsoleConnections: i, hasMadeProgress: l, isProgressing: c, activeScreen: u, taskDetails: d } = e,
-            p = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            m = (0, g.q8)(n),
-            x = (0, g.Vl)(n);
-        if (p)
-            return (0, r.jsx)(P, {
-                quest: n,
+        let { quest: r, sourceQuestContent: s, useReducedMotion: o, isExpanded: l, awaitingConsoleConnections: c, hasMadeProgress: i, isProgressing: a, activeScreen: u, taskDetails: d } = e,
+            f = (null == (t = r.userStatus) ? void 0 : t.completedAt) != null,
+            p = (0, j.q8)(r),
+            g = (0, j.Vl)(r);
+        if (f)
+            return (0, n.jsx)(A, {
+                quest: r,
                 sourceQuestContent: s,
                 useReducedMotion: o,
-                isExpanded: a
+                isExpanded: l
             });
-        if (m)
-            return (0, r.jsx)(O, {
-                quest: n,
+        if (p)
+            return (0, n.jsx)(v, {
+                quest: r,
                 sourceQuestContent: s,
                 taskDetails: d
             });
-        if (x) return (0, r.jsx)(w, { quest: n });
-        if (u === f.LI.CONSOLE && i)
-            return (0, r.jsx)(S, {
-                quest: n,
+        if (g) return (0, n.jsx)(E, { quest: r });
+        if (u === x.LI.CONSOLE && c)
+            return (0, n.jsx)(N, {
+                quest: r,
                 sourceQuestContent: s
             });
-        if (u !== f.LI.SELECT && !l && !c)
-            return (0, r.jsx)(E, {
-                quest: n,
+        if (u !== x.LI.SELECT && !i && !a)
+            return (0, n.jsx)(S, {
+                quest: r,
                 sourceQuestContent: s
             });
         return null;
     };
-function N(e) {
-    return (0, r.jsxs)('div', {
-        className: y.ctaButtons,
+function w(e) {
+    return (0, n.jsxs)('div', {
+        className: O.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, r.jsx)(i.zx, {
-                    className: y.backButton,
-                    innerClassName: y.backButtonInner,
+                (0, n.jsx)(c.zx, {
+                    className: O.backButton,
+                    innerClassName: O.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(l.V7D, { className: y.backIcon })
+                    children: (0, n.jsx)(i.V7D, { className: O.backIcon })
                 }),
-            (0, r.jsx)(T, C({}, e))
+            (0, n.jsx)(z, k({}, e))
         ]
     });
 }

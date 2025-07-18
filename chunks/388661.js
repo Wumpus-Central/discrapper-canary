@@ -1,70 +1,70 @@
-n.d(t, { Z: () => g });
-var r = n(255367),
-    i = n(120356),
-    a = n.n(i),
-    s = n(442837),
-    l = n(481060),
-    d = n(510918),
-    o = n(494620),
-    c = n(63063),
-    u = n(434404),
-    h = n(999382),
-    f = n(981631),
-    m = n(195196),
-    p = n(388032),
-    x = n(602268);
+t.d(r, { Z: () => g });
+var n = t(255367),
+    a = t(120356),
+    i = t.n(a),
+    s = t(442837),
+    l = t(481060),
+    o = t(510918),
+    d = t(494620),
+    c = t(63063),
+    u = t(434404),
+    f = t(999382),
+    m = t(981631),
+    p = t(195196),
+    h = t(388032),
+    x = t(602268);
 let g = function (e) {
-    let { className: t, guildId: n, tag: i, badge: g, primaryColor: b, secondaryColor: y, isDisabled: j = !1 } = e,
-        v = (0, s.e7)([h.Z], () => h.Z.getProps().originalProfile),
-        C = null != v && v.tag !== i;
-    return (0, r.jsxs)('div', {
-        className: t,
+    let { className: r, guildId: t, tag: a, badge: g, primaryColor: y, secondaryColor: j, isDisabled: v = !1 } = e,
+        b = (0, s.e7)([f.Z], () => f.Z.getProps().originalProfile),
+        C = null != b && b.tag !== a;
+    return (0, n.jsxs)('div', {
+        className: r,
         children: [
-            (0, r.jsx)(l.vwX, {
+            (0, n.jsx)(l.vwX, {
                 className: x.sectionTitle,
-                children: p.intl.string(m.default['tN+8pK'])
+                children: h.intl.string(p.default['tN+8pK'])
             }),
-            (0, r.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 className: x.tagContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, n.jsx)('div', {
                         className: x.tagInputContainer,
-                        children: (0, r.jsx)(l.oil, {
+                        children: (0, n.jsx)(l.oil, {
                             className: x.tagInputWrapper,
-                            inputClassName: a()(x.tagInput, 'heading-sm/semibold'),
+                            inputClassName: i()(x.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
-                            prefixElement: (0, r.jsx)(d.v, {
+                            prefixElement: (0, n.jsx)(o.v, {
                                 badge: g,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: b,
-                                secondaryTintColor: y
+                                primaryTintColor: y,
+                                secondaryTintColor: j
                             }),
-                            disabled: j,
-                            value: null != i ? i : '',
+                            disabled: v,
+                            value: null != a ? a : '',
                             onChange: function (e) {
-                                u.Z.updateGuildProfile(n, { tag: e });
+                                u.Z.updateGuildProfile(t, { tag: e });
                             }
                         })
                     }),
-                    (0, r.jsx)('div', {
+                    (0, n.jsx)('div', {
                         className: x.tagTooltip,
-                        children: (0, r.jsx)(l.Text, {
+                        children: (0, n.jsx)(l.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: p.intl.string(m.default.CrHXHh)
+                            children: h.intl.string(p.default.CrHXHh)
                         })
                     })
                 ]
             }),
             C &&
-                (0, r.jsx)(o.Z, {
+                (0, n.jsx)(d.Z, {
                     className: x.tagChangeInfoBox,
-                    children: (0, r.jsx)(l.Text, {
+                    children: (0, n.jsx)(l.Text, {
                         variant: 'text-xs/medium',
-                        children: p.intl.format(m.default['4ZKDXl'], { articleUrl: c.Z.getArticleURL(f.BhN.SERVER_TAGS) })
+                        children: h.intl.format(p.default['4ZKDXl'], { articleUrl: c.Z.getArticleURL(m.BhN.SERVER_TAGS) })
                     })
                 })
         ]

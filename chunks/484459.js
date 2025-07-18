@@ -23,9 +23,9 @@ function _(e, t) {
         D = null == P && b,
         L = null == w && E,
         x = (null == R && g) || D || L,
-        k = null == v ? null == A : null == C,
-        M = !k && (N || x);
-    if (!k && !M) return Promise.resolve();
+        M = null == v ? null == A : null == C,
+        k = !M && (N || x);
+    if (!M && !k) return Promise.resolve();
     ((0, s.z)(), null != t && (0, a.vM)(t));
     let j = {
         type: m,
@@ -47,5 +47,5 @@ function _(e, t) {
     };
     if (y) return (r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve());
     let U = (0, i.In)(e, j, d.Z);
-    return M && !O ? Promise.resolve() : U;
+    return k && !O ? Promise.resolve() : U;
 }

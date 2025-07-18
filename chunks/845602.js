@@ -1,13 +1,13 @@
 (r.d(t, {
-    E: () => y,
-    Z: () => C
+    E: () => h,
+    Z: () => v
 }),
     r(388685));
 var n = r(255367),
     o = r(73800),
     a = r(120356),
-    i = r.n(a),
-    s = r(866442),
+    s = r.n(a),
+    i = r(866442),
     l = r(481060),
     c = r(957537),
     u = r(839008),
@@ -16,12 +16,12 @@ var n = r(255367),
     m = r(742409),
     f = r(369509),
     _ = r(141006),
-    g = r(981631),
-    b = r(131085),
+    b = r(981631),
+    g = r(131085),
     j = r(388032),
     x = r(606217),
-    v = r(183375);
-function C() {
+    y = r(183375);
+function v() {
     var e;
     let t = o.useMemo(() => Math.floor(Math.random() * _.tl.length), []),
         [r, a] = o.useState({
@@ -29,8 +29,8 @@ function C() {
             secondary_color: _.tl[t].end
         }),
         { gradientStyle: u, gradientClassname: p } = (0, l.Icv)({
-            primaryColor: (0, s.Rf)(r.primary_color),
-            secondaryColor: (0, s.Rf)(r.secondary_color),
+            primaryColor: (0, i.Rf)(r.primary_color),
+            secondaryColor: (0, i.Rf)(r.secondary_color),
             tertiaryColor: void 0,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
@@ -45,12 +45,12 @@ function C() {
                     avatar: c.Z,
                     username: 'Cherry',
                     usernameStyle: u,
-                    usernameClassName: i()(p, v.animateGradient),
+                    usernameClassName: s()(p, y.animateGradient),
                     message: j.intl.string(j.t['6OSasb'])
                 })
             }),
             (0, n.jsx)(d.default, {
-                defaultColor: g.p6O,
+                defaultColor: b.p6O,
                 colors: _.tl,
                 value: r.primary_color,
                 secondaryValue: null != (e = r.secondary_color) ? e : void 0,
@@ -109,9 +109,9 @@ function C() {
         ]
     });
 }
-function y(e) {
+function h(e) {
     let { guildId: t } = e,
-        [r, a] = o.useState(b.x_.HEART);
+        [r, a] = o.useState(g.x_.HEART);
     return (0, n.jsxs)('div', {
         className: x.container,
         children: [

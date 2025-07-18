@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(104721),
+    s = n(42133),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -101,12 +101,6 @@ function v(e) {
                 htmlFor: a,
                 className: o()(g.label, { [g.labelChecked]: t }),
                 children: [
-                    t
-                        ? (0, r.jsx)(u.ZX5, {
-                              className: g.shine,
-                              shinePaused: v
-                          })
-                        : null,
                     (0, r.jsx)(w, {
                         style: v ? void 0 : R,
                         size: 'custom',

@@ -5,7 +5,7 @@
     CW: () => eD,
     Cr: () => eh,
     DC: () => eo,
-    Ex: () => eM,
+    Ex: () => ek,
     Fg: () => $,
     G6: () => ef,
     H1: () => x,
@@ -30,9 +30,9 @@
     T4: () => L,
     UP: () => eu,
     Wp: () => eR,
-    Wz: () => ek,
+    Wz: () => eM,
     Xc: () => V,
-    Xk: () => k,
+    Xk: () => M,
     Xr: () => ed,
     YC: () => eK,
     YT: () => S,
@@ -67,7 +67,7 @@
     l4: () => eY,
     mX: () => K,
     nc: () => eO,
-    qF: () => M,
+    qF: () => k,
     rN: () => ev,
     tU: () => eg,
     uL: () => G,
@@ -236,7 +236,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    k = (0, d.Zc)(
+    M = (0, d.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -245,7 +245,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    M = (0, d.Zc)(
+    k = (0, d.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -785,7 +785,7 @@ let eS = (0, d.KM)(
         (e) => (null != e ? e : eL),
         (e) => e
     ),
-    ek = (0, d.TG)({
+    eM = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             'privacy',
             'defaultGuildsActivityRestricted',
@@ -797,7 +797,7 @@ let eS = (0, d.KM)(
         ineligibleDefault: a.E5.OFF,
         eligibleDefault: () => a.E5.ON
     }),
-    eM = (0, d.Zc)(
+    ek = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),

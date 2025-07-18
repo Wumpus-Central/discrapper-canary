@@ -19,7 +19,7 @@
     bc: () => j,
     bw: () => D,
     dF: () => X,
-    hv: () => k,
+    hv: () => M,
     iR: () => ea,
     jD: () => eU,
     kt: () => eV,
@@ -131,12 +131,12 @@ function D(e) {
 }
 let L = new Set([g.d4z.GUILD_STAGE_VOICE]),
     x = new Set([g.d4z.DM, g.d4z.GROUP_DM]);
-function k(e) {
+function M(e) {
     return x.has(e);
 }
-let M = new Set([g.d4z.GROUP_DM]);
+let k = new Set([g.d4z.GROUP_DM]);
 function j(e) {
-    return M.has(e);
+    return k.has(e);
 }
 let U = new Set([g.d4z.DM, g.d4z.GROUP_DM, g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]);
 function G(e) {
@@ -282,7 +282,7 @@ class eg extends ep {
         return null != this.application_id;
     }
     isPrivate() {
-        return k(this.type);
+        return M(this.type);
     }
     isGroupDM() {
         return this.type === g.d4z.GROUP_DM;
@@ -691,7 +691,7 @@ class eD extends eg {
 }
 class eL extends eD {}
 class ex extends eD {}
-class ek extends eg {
+class eM extends eg {
     static fromServer(e, t) {
         var n, r, i, a, o;
         let s = {
@@ -737,14 +737,14 @@ class ek extends eg {
             userLimit_: e.user_limit,
             videoQualityMode: e.video_quality_mode
         };
-        return (0, d.gh)(s, ek);
+        return (0, d.gh)(s, eM);
     }
     constructor(e) {
         var t;
         (super(e), (this.appliedTags = null != (t = e.appliedTags) ? t : []), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.member = e.member), (this.memberCount = e.memberCount), (this.memberIdsPreview = e.memberIdsPreview), (this.messageCount = e.messageCount), (this.nsfw_ = e.nsfw_), (this.ownerId = e.ownerId), (this.parent_id = e.parent_id), (this.parentChannelThreadType = e.parentChannelThreadType), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.threadMetadata = e.threadMetadata), (this.userLimit_ = e.userLimit_), (this.videoQualityMode = e.videoQualityMode));
     }
 }
-let eM = {
+let ek = {
     [g.d4z.DM]: eD.fromServer,
     [g.d4z.GROUP_DM]: eD.fromServer,
     [g.d4z.GUILD_TEXT]: ey.fromServer,
@@ -753,16 +753,16 @@ let eM = {
     [g.d4z.GUILD_CATEGORY]: ey.fromServer,
     [g.d4z.GUILD_ANNOUNCEMENT]: ey.fromServer,
     [g.d4z.GUILD_STORE]: ey.fromServer,
-    [g.d4z.ANNOUNCEMENT_THREAD]: ek.fromServer,
-    [g.d4z.PUBLIC_THREAD]: ek.fromServer,
-    [g.d4z.PRIVATE_THREAD]: ek.fromServer,
+    [g.d4z.ANNOUNCEMENT_THREAD]: eM.fromServer,
+    [g.d4z.PUBLIC_THREAD]: eM.fromServer,
+    [g.d4z.PRIVATE_THREAD]: eM.fromServer,
     [g.d4z.GUILD_DIRECTORY]: ey.fromServer,
     [g.d4z.GUILD_FORUM]: eC.fromServer,
     [g.d4z.GUILD_MEDIA]: eC.fromServer
 };
 function ej(e, t) {
     var n, r;
-    return (null != (r = eM[null != (n = e.type) ? n : g.d4z.GUILD_TEXT]) ? r : eE.fromServer)(e, t);
+    return (null != (r = ek[null != (n = e.type) ? n : g.d4z.GUILD_TEXT]) ? r : eE.fromServer)(e, t);
 }
 function eU(e) {
     return eV(e);
@@ -776,9 +776,9 @@ let eG = {
     [g.d4z.GUILD_CATEGORY]: ev,
     [g.d4z.GUILD_ANNOUNCEMENT]: eO,
     [g.d4z.GUILD_STORE]: eS,
-    [g.d4z.ANNOUNCEMENT_THREAD]: ek,
-    [g.d4z.PUBLIC_THREAD]: ek,
-    [g.d4z.PRIVATE_THREAD]: ek,
+    [g.d4z.ANNOUNCEMENT_THREAD]: eM,
+    [g.d4z.PUBLIC_THREAD]: eM,
+    [g.d4z.PRIVATE_THREAD]: eM,
     [g.d4z.GUILD_DIRECTORY]: eI,
     [g.d4z.GUILD_FORUM]: eC,
     [g.d4z.GUILD_MEDIA]: eC

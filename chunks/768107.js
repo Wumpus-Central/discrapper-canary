@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     wrapper: 'wrapper__2ea32',
     icon: 'icon__2ea32',
     typeThread: 'typeThread__2ea32',

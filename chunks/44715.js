@@ -12,16 +12,18 @@ function o(e, t) {
     let n = a(e);
     return (
         t.forEach((e) => {
-            var t, i, a, o, s, l, c, u;
-            let d = n[e.userId],
-                f = null != (i = null != (t = e.joinSourceType) ? t : null == d ? void 0 : d.joinSourceType) ? i : null;
-            ((null == f || f === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (f = r.gq.INVITE),
+            var t, i, a, o, s, l, c, u, d, f, _, p;
+            let h = n[e.userId],
+                m = null != (i = null != (t = e.joinSourceType) ? t : null == h ? void 0 : h.joinSourceType) ? i : null;
+            ((null == m || m === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (m = r.gq.INVITE),
                 (n[e.userId] = {
                     userId: e.userId,
-                    sourceInviteCode: null != (o = null != (a = e.sourceInviteCode) ? a : null == d ? void 0 : d.sourceInviteCode) ? o : null,
-                    joinSourceType: f,
-                    inviterId: null != (l = null != (s = e.inviterId) ? s : null == d ? void 0 : d.inviterId) ? l : null,
-                    integrationType: null != (u = null != (c = e.integrationType) ? c : null == d ? void 0 : d.integrationType) ? u : null
+                    sourceInviteCode: null != (o = null != (a = e.sourceInviteCode) ? a : null == h ? void 0 : h.sourceInviteCode) ? o : null,
+                    joinSourceType: m,
+                    inviterId: null != (l = null != (s = e.inviterId) ? s : null == h ? void 0 : h.inviterId) ? l : null,
+                    integrationType: null != (u = null != (c = e.integrationType) ? c : null == h ? void 0 : h.integrationType) ? u : null,
+                    joinSourceApplicationId: null != (f = null != (d = e.joinSourceApplicationId) ? d : null == h ? void 0 : h.joinSourceApplicationId) ? f : null,
+                    joinSourceChannelId: null != (p = null != (_ = e.joinSourceChannelId) ? _ : null == h ? void 0 : h.joinSourceChannelId) ? p : null
                 }));
         }),
         !0

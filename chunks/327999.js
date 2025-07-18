@@ -40,7 +40,7 @@ function g(e, t) {
     t.forEach((t) => m(e, t, 3));
 }
 var E = (function (e) {
-    return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), e);
+    return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), (e[(e.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = 'SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL'), e);
 })({});
 let b = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -61,6 +61,8 @@ let b = function (e) {
                 return c.intl.string(c.t.dGiD1N);
             case 7:
                 return c.intl.string(c.t.vdu7oa);
+            case 8:
+                return c.intl.string(c.t['9/ZreX']);
             default:
                 return c.intl.string(c.t.DvMBkZ);
         }

@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: 'container__0e476',
     inner: 'inner__0e476',
     disabled: 'disabled__0e476',

@@ -32,8 +32,8 @@ function O(e) {
     C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
     let [w, D] = i.useState(P),
         L = (0, c.iE)(),
-        [x, k] = i.useState(),
-        [M, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
+        [x, M] = i.useState(),
+        [k, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
         [U, G] = i.useState(void 0),
         [B, V] = i.useState(void 0),
         F = (0, d.E5)(O, t),
@@ -72,7 +72,7 @@ function O(e) {
             setSoundEffect: G,
             emojiConfetti: B,
             setEmojiConfetti: V,
-            customGiftMessage: M,
+            customGiftMessage: k,
             setCustomGiftMessage: j,
             selectedGiftStyle: w,
             setSelectedGiftStyle: D,
@@ -84,7 +84,7 @@ function O(e) {
             giftingOrigin: b,
             claimableRewards: L,
             selectedGiftingPromotionReward: x,
-            setSelectedGiftingPromotionReward: k
+            setSelectedGiftingPromotionReward: M
         },
         children: y
     });

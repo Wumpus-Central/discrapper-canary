@@ -2,7 +2,7 @@
     BT: () => H,
     Hn: () => T,
     Hu: () => F,
-    I0: () => k,
+    I0: () => M,
     Og: () => j,
     TP: () => A,
     Uu: () => Y,
@@ -11,7 +11,7 @@
     o4: () => U,
     oz: () => W,
     r6: () => B,
-    uB: () => M,
+    uB: () => k,
     we: () => Z,
     ym: () => w
 }),
@@ -109,7 +109,7 @@ function x(e) {
         }
     return ((f = a.e$(f, O.Plq.ADMINISTRATOR) ? S : L(r.id, n, f, i)), (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)), m.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, C)), D(f, r, t, s));
 }
-function k(e) {
+function M(e) {
     let t,
         { forceRoles: n, context: r, overwrites: i, roles: a, checkElevated: o = !0, excludeGuildPermissions: s } = e,
         l = N;
@@ -122,7 +122,7 @@ function k(e) {
                 ? T
                 : j(
                       r,
-                      k({
+                      M({
                           forceRoles: n,
                           context: e,
                           overwrites: i,
@@ -163,7 +163,7 @@ function k(e) {
         lurkerPermissionsMask: l
     });
 }
-function M(e) {
+function k(e) {
     var t, n, r;
     let i,
         { user: a, context: o, overwrites: s, roles: l, checkElevated: u = !0, excludeGuildPermissions: p = !1 } = e;
@@ -178,7 +178,7 @@ function M(e) {
             let t = g === (null == (n = b.default.getCurrentUser()) ? void 0 : n.id) && d.Z.hasJoined(o.id);
             return j(
                 o,
-                M({
+                k({
                     user: a,
                     context: e,
                     overwrites: s,
@@ -262,7 +262,7 @@ function Z(e) {
 function H(e) {
     let { permission: t, user: n, context: r, overwrites: i, roles: o, excludeGuildPermissions: s } = e;
     return a.e$(
-        M({
+        k({
             user: n,
             context: r,
             overwrites: i,

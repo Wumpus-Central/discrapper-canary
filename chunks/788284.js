@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(392711),
     l = n.n(i),
     c = n(442837),
@@ -22,11 +22,11 @@ async function x(e, t) {
             for (let r in t) {
                 let t = l().get(e, r);
                 if (null == t) continue;
-                let s = t.map((e, t) => {
+                let o = t.map((e, t) => {
                     var r;
                     return null != (r = n[t]) ? r : e;
                 });
-                l().set(e, r, s);
+                l().set(e, r, o);
             }
         })(r, g, t),
         r
@@ -34,11 +34,11 @@ async function x(e, t) {
 }
 function h(e) {
     var t;
-    let { animationClassName: n, className: o, quest: i, useReducedMotion: l } = e,
+    let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
         g = (0, c.e7)([d.Z], () => d.Z.isFocused()),
-        h = s.useRef(null),
-        [b, j] = s.useState(!1),
-        _ = s.useMemo(() => {
+        h = o.useRef(null),
+        [b, j] = o.useState(!1),
+        _ = o.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
                 t = {
@@ -51,11 +51,11 @@ function h(e) {
         }, [i]),
         v = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
         y = !l && g;
-    s.useEffect(() => {
+    o.useEffect(() => {
         var e, t, n, r;
         g ? y && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
     }, [y, g]);
-    let C = s.useCallback(() => {
+    let C = o.useCallback(() => {
         j(!0);
     }, []);
     return null == _ || v
@@ -64,7 +64,7 @@ function h(e) {
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
           })
         : (0, r.jsx)('div', {
-              className: a()(m.lottieAnimationBackgroundWrapper, o),
+              className: a()(m.lottieAnimationBackgroundWrapper, s),
               children: (0, r.jsx)(
                   u.Fmz,
                   {

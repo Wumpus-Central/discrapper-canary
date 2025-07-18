@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(104721),
+    u = n(42133),
     d = n(374470),
     f = n(143450),
     _ = n(84735),
@@ -135,7 +135,7 @@ class T extends (r = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: M = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             V = 0;
         b ? null != o && (null != c ? (V = o[c]) : null != l && (V = o[l])) : (V = this.scaleValue(t));
         let F = ''.concat(V, '%'),
@@ -150,8 +150,8 @@ class T extends (r = a.PureComponent) {
                               {
                                   className: s()(m.mark, {
                                       [m.defaultValue]: r,
-                                      [m.markAbove]: 0 === M,
-                                      [m.markBelow]: 1 === M
+                                      [m.markAbove]: 0 === k,
+                                      [m.markBelow]: 1 === k
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
@@ -237,7 +237,7 @@ class T extends (r = a.PureComponent) {
                                             'div',
                                             y(E({}, e), {
                                                 className: s()(m.grabber, x),
-                                                style: y(E({}, k), { left: F }),
+                                                style: y(E({}, M), { left: F }),
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef
                                             })

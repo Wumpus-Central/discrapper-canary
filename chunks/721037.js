@@ -43,12 +43,12 @@ function x(e, t, n) {
         e
     );
 }
-let k = {
+let M = {
         [R.NYg.VIDEO]: I.Z,
         [R.NYg.ACTIVITY]: _.Z,
         [R.NYg.FRAME]: g.Z
     },
-    M = {
+    k = {
         minWidth: w.Rv[w.cL.VIDEO],
         maxWidth: w.$i[w.cL.VIDEO]
     },
@@ -57,7 +57,7 @@ class U extends i.PureComponent {
     render() {
         let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: s, dockedRect: l, appContext: c, roundCorners: u, getDockedRectPositionY: d } = this.props;
         return (0, r.jsx)(E.Z, {
-            pictureInPictureComponents: k,
+            pictureInPictureComponents: M,
             selectedPIPWindow: e,
             pipWindows: t,
             pipWidth: n,
@@ -69,7 +69,7 @@ class U extends i.PureComponent {
             onWindowResize: this.handleWindowResize,
             appContext: c,
             roundCorners: u,
-            resizeConfig: M,
+            resizeConfig: k,
             className: o()({ [L.pictureInPictureVideo]: (null == e ? void 0 : e.component) === R.NYg.VIDEO }),
             getDockedRectPositionY: d
         });
@@ -92,9 +92,9 @@ let G = s.ZP.connectStores([y.Z, c.ZP, N.Z, O.Z, T.Z, A.Z, S.Z, p.Z, v.ZP, m.Z],
         I = y.Z.getWindowOpen(R.KJ3.ACTIVITY_POPOUT),
         L = c.ZP.getCurrentEmbeddedActivity(),
         x = (0, d.p)(null == L ? void 0 : L.location),
-        k = null != L && !(0, f.Z)(x, T.Z, A.Z),
-        M = c.ZP.getActivityPanelMode(),
-        U = k && M === P.Ez.PANEL,
+        M = null != L && !(0, f.Z)(x, T.Z, A.Z),
+        k = c.ZP.getActivityPanelMode(),
+        U = M && k === P.Ez.PANEL,
         G = null != L && null != x && (null == (t = p.Z.getSelectedParticipant(x)) ? void 0 : t.type) === w.fO.ACTIVITY,
         B = m.Z.getConnectedFrame(),
         V = m.Z.getFrameLayoutMode() === D.U.FOCUSED,
@@ -119,7 +119,7 @@ let G = s.ZP.connectStores([y.Z, c.ZP, N.Z, O.Z, T.Z, A.Z, S.Z, p.Z, v.ZP, m.Z],
             })
                 ? e - h.q8
                 : e;
-    l = (null != L && I) || (F && k) ? null : F || !E || k ? (null != L && U ? (null != (n = S.Z.pipActivityWindow) ? n : S.Z.pipVideoWindow) : null != B && V ? (null != (i = null != (r = S.Z.pipFrameWindow) ? r : S.Z.pipVideoWindow) ? i : S.Z.pipActivityWindow) : null != (o = null != (a = S.Z.pipVideoWindow) ? a : S.Z.pipActivityWindow) ? o : S.Z.pipFrameWindow) : null;
+    l = (null != L && I) || (F && M) ? null : F || !E || M ? (null != L && U ? (null != (n = S.Z.pipActivityWindow) ? n : S.Z.pipVideoWindow) : null != B && V ? (null != (i = null != (r = S.Z.pipFrameWindow) ? r : S.Z.pipVideoWindow) ? i : S.Z.pipActivityWindow) : null != (o = null != (a = S.Z.pipVideoWindow) ? a : S.Z.pipActivityWindow) ? o : S.Z.pipFrameWindow) : null;
     let z = Array.from(S.Z.pipWindows.values()),
         q = S.Z.pipWidth(w.cL.VIDEO),
         X = z.find((e) => e.component === R.NYg.VIDEO),

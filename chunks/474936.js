@@ -1,5 +1,5 @@
 (n.d(t, {
-    $7: () => k,
+    $7: () => M,
     $8: () => eR,
     $e: () => f,
     $n: () => eq,
@@ -42,7 +42,7 @@
     Tp: () => eH,
     UA: () => x,
     UD: () => b,
-    Ue: () => M,
+    Ue: () => k,
     Uq: () => eT,
     VU: () => e2,
     Wt: () => eJ,
@@ -83,7 +83,7 @@
     m8: () => B,
     mn: () => T,
     nG: () => eE,
-    nH: () => ek,
+    nH: () => eM,
     nL: () => eG,
     o4: () => O,
     p9: () => l,
@@ -99,7 +99,7 @@
     wh: () => K,
     xT: () => ee,
     y7: () => m,
-    ys: () => eM,
+    ys: () => ek,
     zp: () => j
 }),
     n(388685));
@@ -325,8 +325,8 @@ let N = Object.freeze({
     D = 30,
     L = 2,
     x = 3,
-    k = 28,
-    M = 30,
+    M = 28,
+    k = 30,
     j = 30,
     U = 7,
     G = 30,
@@ -599,14 +599,14 @@ var eL = (function (e) {
     ex = (function (e) {
         return ((e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e);
     })({});
-let ek = {
+let eM = {
     '1024422698568122368': R,
     '511651876987469824': R,
     '511651885459963904': R,
     '944037208325619722': P,
     '642251038925127690': w
 };
-var eM = (function (e) {
+var ek = (function (e) {
     return ((e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e);
 })({});
 let ej = Object.freeze({

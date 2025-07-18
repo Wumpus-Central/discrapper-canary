@@ -1,52 +1,52 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
-    i = n(73800),
-    o = n(494497),
-    a = n(657707),
-    s = n(793030),
+    o = n(73800),
+    i = n(494497),
+    s = n(657707),
+    a = n(793030),
     l = n(442837),
     c = n(692547),
-    d = n(899667),
-    u = n(905128),
+    u = n(899667),
+    d = n(905128),
     p = n(93841),
     m = n(388032),
-    _ = n(45355);
-function f(e) {
+    f = n(45355);
+function _(e) {
     let { guildId: t, powerups: n } = e,
-        f = (0, l.e7)([u.Z], () => {
+        _ = (0, l.e7)([d.Z], () => {
             var e, n;
-            return null != (n = null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
+            return null != (n = null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
         }),
-        x = (0, l.e7)([d.Z], () => d.Z.getAppliedGuildBoostsForGuild(t), [t]),
-        b =
-            f -
-            i.useMemo(() => {
+        x = (0, l.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
+        v =
+            _ -
+            o.useMemo(() => {
                 var e, t, n;
                 return null != (n = null == x || null == (t = x.filter) || null == (e = t.call(x, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? n : 0;
             }, [x]);
-    if (b <= 0) return null;
-    let v = n.some((e) => e.skuId === o.A);
+    if (v <= 0) return null;
+    let g = n.some((e) => e.skuId === i.A);
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: f.container,
         children: [
-            (0, r.jsx)(a.P4T, {
+            (0, r.jsx)(s.P4T, {
                 color: c.Z.colors.TEXT_FEEDBACK_WARNING,
-                className: _.icon
+                className: f.icon
             }),
-            (0, r.jsx)(s.xv, {
+            (0, r.jsx)(a.xv, {
                 variant: 'text-md/semibold',
                 color: 'text-feedback-warning',
                 children: m.intl.string(p.default.n5hQhY)
             }),
-            (0, r.jsxs)(s.xv, {
+            (0, r.jsxs)(a.xv, {
                 variant: 'text-sm/medium',
                 children: [
                     m.intl.formatToPlainString(p.default.iAaAiI, {
-                        boostCount: b,
+                        boostCount: v,
                         perksString: n.map((e) => e.title).join(', ')
                     }),
-                    v &&
-                        (0, r.jsx)(s.xv, {
+                    g &&
+                        (0, r.jsx)(a.xv, {
                             variant: 'text-sm/medium',
                             color: 'text-feedback-warning',
                             children: m.intl.string(p.default.Sfr0Jy)

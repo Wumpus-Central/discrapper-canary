@@ -1,18 +1,18 @@
-(n.d(t, { Z: () => s }), n(704826), n(35282));
-var r = n(255367),
-    i = n(263145),
-    a = n(203377);
+(t.d(r, { Z: () => s }), t(704826), t(35282));
+var n = t(255367),
+    a = t(263145),
+    i = t(203377);
 function s(e) {
-    let { value: t, onChange: n, error: s, disabled: l, className: d } = e;
-    return (0, r.jsx)(i.Z, {
-        prefix: ''.concat(a.mf, '/'),
-        value: t,
+    let { value: r, onChange: t, error: s, disabled: l, className: o } = e;
+    return (0, n.jsx)(a.Z, {
+        prefix: ''.concat(i.mf, '/'),
+        value: r,
         onChange: (e) => {
-            n(e.replace(/ /g, '-'));
+            t(e.replace(/ /g, '-'));
         },
         maxLength: 25,
         error: s,
         disabled: l,
-        className: d
+        className: o
     });
 }

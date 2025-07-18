@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: 'container__34940',
     topRow: 'topRow__34940',
     memberNameAndTagContainer: 'memberNameAndTagContainer__34940',

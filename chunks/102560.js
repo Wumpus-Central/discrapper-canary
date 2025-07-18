@@ -22,7 +22,7 @@ let p = (e) => {
     l.useEffect(() => {
         v();
     }, [v]);
-    let y = (0, a.Wu)(
+    let O = (0, a.Wu)(
         [C.Z, d.Z],
         () => {
             let e = C.Z.getHighestRole(t);
@@ -85,7 +85,7 @@ let p = (e) => {
                                 multi: !0,
                                 value: g,
                                 onChange: (e) => x(e),
-                                options: y
+                                options: O
                             })
                         })
                     }),

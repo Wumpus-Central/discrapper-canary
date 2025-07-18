@@ -18,14 +18,14 @@ var r = n(255367),
     g = n(285173),
     x = n(388032),
     v = n(506192),
-    y = n(350381);
-let O = new Set();
+    O = n(350381);
+let y = new Set();
 function _(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, f.BG)(t),
         a = (0, m.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], C()),
         [c, d] = l.useState(a.selectedRoleIds),
-        _ = (0, p.h)(t, O, !0),
+        _ = (0, p.h)(t, y, !0),
         H = (e, n) => {
             let { record: l } = e;
             return (0, r.jsx)(
@@ -43,7 +43,7 @@ function _(e) {
                                         children: (0, r.jsx)(
                                             g.Z,
                                             {
-                                                className: y.roleTooltipItem,
+                                                className: O.roleTooltipItem,
                                                 role: l,
                                                 guildId: t
                                             },

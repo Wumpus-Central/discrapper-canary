@@ -289,7 +289,7 @@ function ev(e) {
             },
             [a, d]
         ),
-        g = (0, p.e7)([N.ZP, Y.Z, q.Z], () => (null == a ? null : (0, N.FZ)(a, [N.ZP, Y.Z, q.Z])), [a], o()),
+        g = (0, p.e7)([N.ZP, Y.Z, q.Z], () => (null == a ? null : (0, N.FZ)(a, N.ZP, Y.Z, q.Z)), [a], o()),
         [b, x] = r.useState(m),
         [j, v] = r.useState(u),
         [S, T] = r.useState(!1);
@@ -588,7 +588,7 @@ function eS(e) {
 }
 function eT(e) {
     let { rawGame: t, gameApplication: n, supportDisabled: s, getEnabledFromStatus: a, onChange: l, clientSettingType: o, ariaLabel: c } = e,
-        d = (0, p.cj)([N.ZP, Y.Z, q.Z], () => (0, N.FZ)(t, [N.ZP, Y.Z, q.Z])),
+        d = (0, p.cj)([N.ZP, Y.Z, q.Z], () => (0, N.FZ)(t, N.ZP, Y.Z, q.Z)),
         u = (0, p.cj)([Y.Z, q.Z], () => (0, N.b6)(t, !1, [Y.Z, q.Z]), [t]),
         m = a(u),
         [g, f] = r.useState(m);

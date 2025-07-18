@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: 'container__3a5a1',
     innerContainer: 'innerContainer__3a5a1',
     keyComboInner: 'keyComboInner__3a5a1',

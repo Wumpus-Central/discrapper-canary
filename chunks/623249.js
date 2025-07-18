@@ -1,12 +1,12 @@
 (n.d(t, {
-    default: () => S,
-    y: () => P
+    default: () => w,
+    y: () => T
 }),
     n(388685));
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(442837),
     l = n(780384),
     c = n(755721),
@@ -50,33 +50,33 @@ function E(e) {
     }
     return e;
 }
-function S(e) {
+function w(e) {
     var t;
-    let { questId: n, errorHints: o, transitionState: S, onClose: P, sourceQuestContent: T } = e,
-        N = (0, x.sf)(n);
-    null == N && P();
-    let [A, R] = (0, s.useState)(o),
+    let { questId: n, errorHints: s, transitionState: w, onClose: T, sourceQuestContent: P } = e,
+        A = (0, x.sf)(n);
+    null == A && T();
+    let [N, R] = (0, o.useState)(s),
         B = (0, x.KX)(),
         k = (0, f.O5)(),
-        q = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
-        I = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        I = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
+        q = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         D = (0, _.g2)({
-            useReducedMotion: I,
+            useReducedMotion: q,
             className: C.colorTransition
         }),
-        Q = A.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        V = (0, b.Bz)(N),
+        Q = N.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        V = (0, b.Bz)(A),
         L = (0, i.e7)([m.Z], () => m.Z.getState().theme),
         M = (0, l.wj)(L) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: W, startingConsoleQuest: Z } = (0, x.GI)({
-            questId: N.id,
+            questId: A.id,
             beforeRequest: () => {
                 (D.startAnimation(),
                     k({
-                        questId: N.id,
+                        questId: A.id,
                         questContent: h.jn.CONNECTIONS_MODAL,
                         questContentCTA: f.jZ.DEFIBRILLATOR,
-                        sourceQuestContent: T
+                        sourceQuestContent: P
                     }));
             },
             afterRequest: (e) => {
@@ -84,7 +84,7 @@ function S(e) {
             }
         });
     return (0, r.jsxs)(u.Y0X, {
-        transitionState: S,
+        transitionState: w,
         size: u.CgR.DYNAMIC,
         className: C.modalRoot,
         parentComponent: 'QuestConsoleConnectionErrorsModal',
@@ -107,7 +107,7 @@ function S(e) {
                             }),
                             (0, r.jsx)(u.olH, {
                                 className: C.closeBtn,
-                                onClick: P
+                                onClick: T
                             })
                         ]
                     }),
@@ -152,24 +152,24 @@ function S(e) {
                     (0, r.jsxs)('div', {
                         className: C.accountsWrapper,
                         children: [
-                            (0, r.jsx)(w, {
+                            (0, r.jsx)(S, {
                                 icon: (0, r.jsx)(u.pzj, { size: 'sm' }),
                                 text: y.intl.string(y.t.br3uIi)
                             }),
-                            (0, r.jsx)(w, {
+                            (0, r.jsx)(S, {
                                 icon: (0, r.jsx)(u.iWm, { size: 'sm' }),
                                 text: y.intl.string(y.t.XF4wuL),
                                 errors: V ? void 0 : Q.map((e) => e.message),
                                 gameTile: V
                                     ? (0, r.jsx)(u.ua7, {
-                                          'aria-label': N.config.messages.gameTitle,
+                                          'aria-label': A.config.messages.gameTitle,
                                           text: () =>
                                               (0, r.jsxs)('div', {
                                                   className: C.tooltip,
                                                   children: [
                                                       (0, r.jsx)(u.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: N.config.messages.gameTitle
+                                                          children: A.config.messages.gameTitle
                                                       }),
                                                       (0, r.jsx)(u.Text, {
                                                           variant: 'text-xs/normal',
@@ -186,8 +186,8 @@ function S(e) {
                                                   (n = n =
                                                       {
                                                           className: C.gameTile,
-                                                          alt: N.config.messages.gameTitle,
-                                                          src: (0, j.fh)(N, j.eC.GAME_TILE, M).url
+                                                          alt: A.config.messages.gameTitle,
+                                                          src: (0, j.fh)(A, j.eC.GAME_TILE, M).url
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -216,7 +216,7 @@ function S(e) {
                 children: [
                     (0, r.jsx)(c.zx, {
                         size: c.Ph.MIN,
-                        onClick: P,
+                        onClick: T,
                         className: C.footerCloseButton,
                         children: y.intl.string(y.t.cpT0Cg)
                     }),
@@ -224,14 +224,14 @@ function S(e) {
                         variant: 'secondary',
                         text: y.intl.string(y.t['qiS+xs']),
                         onClick: () => {
-                            (P(),
+                            (T(),
                                 (0, b.V$)(
-                                    { quest: N },
+                                    { quest: A },
                                     {
                                         content: h.jn.CONNECTIONS_MODAL,
                                         ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: q,
-                                        sourceQuestContent: T
+                                        impressionId: I,
+                                        sourceQuestContent: P
                                     }
                                 ));
                         }
@@ -241,9 +241,9 @@ function S(e) {
         ]
     });
 }
-function w(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
-        i = s.length > 0,
+function S(e) {
+    let { icon: t, text: n, errors: o = [], gameTile: s } = e,
+        i = o.length > 0,
         l = i ? u._3e : u.B_b;
     return (0, r.jsxs)('div', {
         className: C.connectionRow,
@@ -265,7 +265,7 @@ function w(e) {
                     (0, r.jsxs)('div', {
                         className: C.connectionRowHeaderContent,
                         children: [
-                            o,
+                            s,
                             (0, r.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
@@ -280,7 +280,7 @@ function w(e) {
             }),
             (0, r.jsx)('div', {
                 className: C.errorsContainer,
-                children: s.map((e) =>
+                children: o.map((e) =>
                     (0, r.jsxs)(
                         'div',
                         {
@@ -305,7 +305,7 @@ function w(e) {
         ]
     });
 }
-function P(e) {
+function T(e) {
     (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return (n) => (0, r.jsx)(t, E({}, n, e));

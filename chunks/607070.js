@@ -165,10 +165,10 @@ function L() {
 function x(e) {
     O.roleStyle = e.roleStyle;
 }
-function k() {
+function M() {
     (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
 }
-function M() {
+function k() {
     (O = p({}, O)).syncProfileThemeWithUserTheme = !O.syncProfileThemeWithUserTheme;
 }
 function j(e) {
@@ -417,8 +417,8 @@ let q = new z(s.Z, {
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: Z,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: H,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: Y,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: M,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: M,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: k,
     ACCESSIBILITY_SET_CONTRAST: W,
     ACCESSIBILITY_SET_CONTRAST_MODE: K
 });

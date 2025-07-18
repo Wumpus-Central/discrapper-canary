@@ -24,7 +24,7 @@ var i = n(120356),
     T = n(388032),
     S = n(997926);
 function A(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: A, pendingAvatar: C, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: V = !0, hideExampleButton: F = !1, showViewFullProfileButton: Z = !1, pendingBadges: H, shouldOpenBadgeTooltip: Y, showNameplatePreview: W = !1, interactive: K = !0 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: h, pendingBio: m, pendingPronouns: A, pendingAvatar: C, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: M, containerClassName: k, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: V = !0, hideExampleButton: F = !1, showViewFullProfileButton: Z = !1, pendingBadges: H, shouldOpenBadgeTooltip: Y, showNameplatePreview: W = !1, interactive: K = !0 } = e,
         z = (0, u.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: q, avatarDecorationSrc: X } = (0, f.Z)({
             userId: null == t ? void 0 : t.id,
@@ -52,7 +52,7 @@ function A(e) {
                     displayProfile: z,
                     themeType: I.lY.POPOUT,
                     pendingThemeColors: D,
-                    className: a()(S.container, M),
+                    className: a()(S.container, k),
                     forceShowPremium: i,
                     children: [
                         (0, r.jsxs)('header', {
@@ -78,7 +78,7 @@ function A(e) {
                                     previewAvatarDecoration: X,
                                     previewTheme: J,
                                     previewPrimaryColor: $,
-                                    className: k,
+                                    className: M,
                                     disabledInputs: U,
                                     isTryItOutFlow: j,
                                     onUpsellClick: () => (null == o ? void 0 : o({ object: v.qAy.AVATAR }))

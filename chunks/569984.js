@@ -11,7 +11,7 @@ var T,
     D = n(184299),
     L = n(5881),
     x = n(46140);
-function k(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             }));
     }
     return e;
@@ -67,7 +67,7 @@ let G = new Map(),
     B = null,
     V = 1000;
 function F() {
-    ((r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (G = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), ew(), (I = null));
+    ((r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (G = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eD(), (I = null));
 }
 function Z(e, t) {
     var n, r, i, a;
@@ -76,7 +76,7 @@ function Z(e, t) {
 function H(e, t) {
     let n = (o = new Map(o)).get(e);
     if (null != n) {
-        let r = M({}, n, t);
+        let r = k({}, n, t);
         (Z(e, t), o.set(e, r));
     }
 }
@@ -88,7 +88,7 @@ function W(e, t) {
     Y(e, t);
     let n = o.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && H(e, { userStatus: U(M({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && H(e, { userStatus: U(k({}, r), { claimedAt: t.claimedAt }) });
 }
 function K(e) {
     var t;
@@ -106,7 +106,7 @@ function z(e, t) {
         let n = K({ entitlements: t });
         (null != n && Y(e, n),
             H(e, {
-                userStatus: U(M({}, i), {
+                userStatus: U(k({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null
                 })
@@ -117,7 +117,7 @@ function q(e) {
     null != E.get(e) && (E = new Map(E)).delete(e);
 }
 function X() {
-    (ew(), F());
+    (eD(), F());
 }
 function Q() {
     r = !0;
@@ -128,7 +128,7 @@ function J(e) {
     let a = new Map();
     for (let e of t) (o.set(e.id, e), a.set(e.id, (0, w.zi)(e)), e.targetedContent.includes(P.jn.QUEST_BAR) && (0, L.T)({ location: x.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')')));
     for (let e of ((v = a), (s = new Map()), n)) s.set(e.id, e);
-    (eP(), (I = null != i ? new Date(i) : null));
+    (ew(), (I = null != i ? new Date(i) : null));
 }
 function $() {
     ((c = 0), (r = !1));
@@ -269,6 +269,10 @@ function eA(e) {
     (a.set(r, i), G.set(n, a));
 }
 function eN(e) {
+    let { questId: t } = e;
+    (G.has(t) && G.delete(t), D.ZP.getState().resetQuest(t));
+}
+function eC(e) {
     let { quest: t, placement: n, adDecisionData: r } = e;
     ((u = Date.now()),
         (i = !1),
@@ -279,34 +283,34 @@ function eN(e) {
                   adDecisionData: r
               }));
 }
-function eC(e) {
+function eR(e) {
     let { placement: t } = e;
     (O.delete(t), (u = Date.now()), (i = !1));
 }
-function eR() {
+function eP() {
     let e = !1,
         t = new Map(v);
     (o.forEach((n, r) => {
         !0 !== t.get(r) && ((0, w.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((v = t), ex.emitChange()));
-}
-function eP() {
-    null === B &&
-        (eR(),
-        (B = setInterval(() => {
-            eR();
-        }, V)));
+        e && ((v = t), eM.emitChange()));
 }
 function ew() {
+    null === B &&
+        (eP(),
+        (B = setInterval(() => {
+            eP();
+        }, V)));
+}
+function eD() {
     null !== B && (clearInterval(B), (B = null));
 }
-function eD(e) {
+function eL(e) {
     let { quest_enrollment_blocked_until: t } = e;
     I = null != t ? new Date(t) : null;
 }
 F();
-class eL extends (T = C.ZP.Store) {
+class ex extends (T = C.ZP.Store) {
     get quests() {
         return o;
     }
@@ -383,8 +387,8 @@ class eL extends (T = C.ZP.Store) {
         return null != (t = v.get(e)) && t;
     }
 }
-k(eL, 'displayName', 'QuestsStore');
-let ex = new eL(R.Z, {
+M(ex, 'displayName', 'QuestsStore');
+let eM = new ex(R.Z, {
         LOGOUT: X,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: Q,
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: J,
@@ -393,8 +397,8 @@ let ex = new eL(R.Z, {
         QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: en,
         QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: er,
         QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: ee,
-        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eN,
-        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eC,
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eC,
+        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eR,
         QUESTS_SEND_HEARTBEAT_SUCCESS: ei,
         QUESTS_SEND_HEARTBEAT_FAILURE: ea,
         QUESTS_ENROLL_BEGIN: el,
@@ -416,6 +420,7 @@ let ex = new eL(R.Z, {
         QUESTS_DELIVERY_OVERRIDE: eT,
         QUESTS_SELECT_TASK_PLATFORM: eS,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eA,
-        QUESTS_USER_COMPLETION_UPDATE: eD
+        QUESTS_RESET_OPTIMISTIC_PROGRESS: eN,
+        QUESTS_USER_COMPLETION_UPDATE: eL
     }),
-    ek = ex;
+    ek = eM;

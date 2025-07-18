@@ -201,7 +201,7 @@ class b extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, k, M, j, U;
+        var t, n, i, a, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
         (super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'displayNameStyles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1));
         let G = null != (n = e.premium_type) ? n : e.premiumType;
         ((this.id = e.id),
@@ -227,9 +227,9 @@ class b extends i.Z {
             (this.guildMemberAvatars = null != (P = e.guildMemberAvatars) ? P : {}),
             (this.hasBouncedEmail = null != (D = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && D),
             (this.personalConnectionId = null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
-            (this.globalName = null != (k = e.global_name) ? k : e.globalName),
+            (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, s.l)(null != (j = null != (M = e.primary_guild) ? M : e.primaryGuild) ? j : null)),
+            (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.b)(e.display_name_styles)),
             Object.defineProperties(this, {

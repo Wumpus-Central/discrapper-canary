@@ -1,13 +1,13 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367),
-    i = n(793030),
-    o = n(481060),
-    a = n(921944),
-    s = n(93841),
+    o = n(793030),
+    i = n(481060),
+    s = n(921944),
+    a = n(93841),
     l = n(388032),
     c = n(305063),
-    d = n(719119);
-function u(e) {
+    u = n(719119);
+function d(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
         className: c.container,
@@ -15,23 +15,23 @@ function u(e) {
             (0, r.jsx)('img', {
                 alt: '',
                 className: c.image,
-                src: d
+                src: u
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(o.xv, {
                 color: 'always-white',
                 variant: 'text-md/semibold',
-                children: l.intl.string(s.default.diMhWV)
+                children: l.intl.string(a.default.diMhWV)
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(o.xv, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: l.intl.string(s.default.pycxTk)
+                children: l.intl.string(a.default.pycxTk)
             }),
-            (0, r.jsx)(o.olH, {
+            (0, r.jsx)(i.olH, {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {
-                    t(a.L.USER_DISMISS);
+                    t(s.L.USER_DISMISS);
                 }
             })
         ]

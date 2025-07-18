@@ -9,7 +9,7 @@ var r = n(255367),
     a = n(505266),
     o = n(512722),
     s = n.n(o),
-    l = n(104721),
+    l = n(42133),
     c = n(278074),
     u = n(979554),
     d = n(314794),
@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(585483),
     L = n(597688),
     x = n(1870),
-    k = n(429368),
-    M = n(884697),
+    M = n(429368),
+    k = n(884697),
     j = n(587792),
     U = n(228624),
     G = n(635552),
@@ -285,8 +285,8 @@ let ed = 880,
             w = (0, f.e7)([m.Z], () => m.Z.useReducedMotion),
             D = i.useRef(null),
             { analyticsLocations: x } = (0, E.ZP)([...l, g.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            { collectedModalBackground: k } = (0, $.Ac)(S),
-            M = (0, v.Z)();
+            { collectedModalBackground: M } = (0, $.Ac)(S),
+            k = (0, v.Z)();
         function U() {
             var e;
             if (S.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
@@ -301,7 +301,7 @@ let ed = 880,
                           onClose: n
                       });
             }
-            let t = (0, O.Tl)(null == M || null == (e = M.planSelection) ? void 0 : e.gradientConfig);
+            let t = (0, O.Tl)(null == k || null == (e = k.planSelection) ? void 0 : e.gradientConfig);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
@@ -313,7 +313,7 @@ let ed = 880,
                                       style: t
                                   })
                                 : (0, r.jsx)(H.Z, {
-                                      asset: k,
+                                      asset: M,
                                       size: (0, Y.ML)(ed),
                                       className: eo.decorationBanner,
                                       categoryBannerOverride: (0, et.ZS)(S.categorySkuId)
@@ -379,7 +379,7 @@ let ed = 880,
                 onError: o
             }),
             { firstAvatarDecoration: I, firstProfileEffect: T } = (0, V.Rj)(n),
-            S = (0, M.x6)(n) ? null != I && null != T : null != I || null != T || n.type === u.Z.NAMEPLATE;
+            S = (0, k.x6)(n) ? null != I && null != T : null != I || null != T || n.type === u.Z.NAMEPLATE;
         i.useEffect(() => {
             et.Vt.ORB_PROFILE_BADGE === n.skuId && (0, C.Ls)([(0, z.X)()], eg);
         }, [n.skuId]);
@@ -560,7 +560,7 @@ let ed = 880,
     eO = (e) => {
         let { transitionState: t, product: n, onClose: o, analyticsLocations: s, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, itemConsumed: d, purchaseType: _ = et.o8.FIAT } = e,
             h = (0, f.e7)([x.Z], () => x.Z.purchases),
-            m = (0, k.o)(n, h),
+            m = (0, M.o)(n, h),
             b = (0, J.W)(n, m),
             y = i.useRef(new a.qA()),
             [O, v] = i.useState(null),
@@ -569,7 +569,7 @@ let ed = 880,
                 skuId: b.skuId
             }),
             { analyticsLocations: T } = (0, E.ZP)([...s, g.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            S = i.useMemo(() => (0, M.jm)(b.type, b.skuId), [b.type, b.skuId]);
+            S = i.useMemo(() => (0, k.jm)(b.type, b.skuId), [b.type, b.skuId]);
         return (
             i.useEffect(() => {
                 w.default.track(en.rMx.OPEN_MODAL, {

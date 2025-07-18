@@ -141,9 +141,9 @@ function L(e, t, n) {
 }
 function x(e) {
     let t = h.Z.getChannel(e);
-    return null == t ? R : null == t.memberListId ? k(t) : t.memberListId;
+    return null == t ? R : null == t.memberListId ? M(t) : t.memberListId;
 }
-function k(e) {
+function M(e) {
     return f.oz(I.Plq.VIEW_CHANNEL, e)
         ? R
         : s()
@@ -158,7 +158,7 @@ function k(e) {
               )
               .toString();
 }
-class M {
+class k {
     updateOwnerId() {
         let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
@@ -235,7 +235,7 @@ class j {
         let r = n[t];
         return (
             null == r &&
-                ((r = new M(e, t)).setGroups([
+                ((r = new k(e, t)).setGroups([
                     {
                         id: I.Skl.UNKNOWN,
                         count: 0

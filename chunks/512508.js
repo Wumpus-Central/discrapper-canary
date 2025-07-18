@@ -24,8 +24,8 @@ var r = n(255367),
     g = n(592125),
     x = n(485386),
     v = n(699516),
-    y = n(594174),
-    O = n(388032),
+    O = n(594174),
+    y = n(388032),
     _ = n(962923);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -88,8 +88,8 @@ function S(e) {
 }
 let D = (0, p.hQ)(),
     Z = (0, p.hQ)(),
-    R = 'text-sm/medium';
-function L(e) {
+    L = 'text-sm/medium';
+function R(e) {
     return 1 === e.type;
 }
 function I(e) {
@@ -111,7 +111,7 @@ function P(e) {
     };
 }
 function M(e) {
-    let t = (0, C.F6)(e, y.default, v.Z);
+    let t = (0, C.F6)(e, O.default, v.Z);
     return {
         tag: {
             type: d.F.CHANNEL,
@@ -151,7 +151,7 @@ let V = l.memo(function (e) {
             }),
             null != d ? (0, r.jsx)(b.Z, w(H({ className: _.roleTagIcon }, d), { enableTooltip: !1 })) : m,
             (0, r.jsx)(u.Text, {
-                variant: R,
+                variant: L,
                 className: _.roleTagLabel,
                 children: s
             })
@@ -172,14 +172,14 @@ function E(e) {
                     className: _.channelIcon
                 }),
             (0, r.jsx)(u.Text, {
-                variant: t.isCategory() ? 'eyebrow' : R,
+                variant: t.isCategory() ? 'eyebrow' : L,
                 children: n.display
             })
         ]
     });
 }
 function T(e, t, n) {
-    return L(e)
+    return R(e)
         ? (0, r.jsx)(
               V,
               {
@@ -223,14 +223,14 @@ function k(e) {
             [a, C, h]
         ),
         v = l.useMemo(() => Object.keys(j), [j]),
-        [y, S] = l.useState(''),
-        [R, V] = l.useState(!1),
+        [O, S] = l.useState(''),
+        [L, V] = l.useState(!1),
         [E, k] = l.useState(!1),
         [A, B] = l.useState(!1),
         U = l.useRef(null),
         { sections: F, sectionCounts: z } = l.useMemo(() => {
-            let e = '' !== y ? o.filter((e) => s()(y, e.display.toLocaleLowerCase())) : o,
-                t = '' !== y ? n.filter((e) => s()(y, e.display.toLocaleLowerCase())) : n,
+            let e = '' !== O ? o.filter((e) => s()(O, e.display.toLocaleLowerCase())) : o,
+                t = '' !== O ? n.filter((e) => s()(O, e.display.toLocaleLowerCase())) : n,
                 r = [],
                 l = [];
             return (
@@ -243,7 +243,7 @@ function k(e) {
                     sectionCounts: l
                 }
             );
-        }, [y, o, n]),
+        }, [O, o, n]),
         q = l.useCallback(
             (e) => {
                 let t = Object.values(e),
@@ -256,7 +256,7 @@ function k(e) {
                     r = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return L(t);
+                            return R(t);
                         })
                         .map((e) => e.row.record.id);
                 m(new Set(n), new Set(r));
@@ -268,19 +268,19 @@ function k(e) {
         };
     l.useEffect(() => {
         let e = setTimeout(() => {
-            B(R || E);
+            B(L || E);
         }, 32);
         return () => {
             clearTimeout(e);
         };
-    }, [R, E]);
+    }, [L, E]);
     let Y = (e, t, n) => {
             (n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), k(e)));
         },
         W = l.useCallback(
             (e) => {
                 let t = H({}, j);
-                (I(e) ? (t[e.id] = M(e.record)) : L(e) && (t[e.id] = P(e.record)),
+                (I(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = P(e.record)),
                     q(t),
                     S(''),
                     G(),
@@ -336,7 +336,7 @@ function k(e) {
                         tags: J,
                         maxHeight: 98,
                         size: d.Z.Sizes.MEDIUM,
-                        query: y,
+                        query: O,
                         ref: U,
                         onRemoveTag: (e) => {
                             let t = v[e],
@@ -368,7 +368,7 @@ function k(e) {
                         onQueryChange: (e) => {
                             S(e.trim().toLocaleLowerCase());
                         },
-                        placeholder: null != b ? b : O.intl.string(O.t.uqHLzc),
+                        placeholder: null != b ? b : y.intl.string(y.t.uqHLzc),
                         sections: [v.length],
                         inputProps: {
                             'aria-labelledby': D,
@@ -398,9 +398,9 @@ function k(e) {
                                               {
                                                   tag: 'h5',
                                                   className: i()(_.sectionTitle, _.sectionHeight),
-                                                  children: O.intl.string(O.t.OGiMXF)
+                                                  children: y.intl.string(y.t.OGiMXF)
                                               },
-                                              O.intl.string(O.t.OGiMXF)
+                                              y.intl.string(y.t.OGiMXF)
                                           )
                                         : 1 === t
                                           ? (0, r.jsx)(
@@ -408,9 +408,9 @@ function k(e) {
                                                 {
                                                     tag: 'h5',
                                                     className: i()(_.sectionTitle, _.sectionHeight),
-                                                    children: O.intl.string(O.t.LPJmLy)
+                                                    children: y.intl.string(y.t.LPJmLy)
                                                 },
-                                                O.intl.string(O.t.LPJmLy)
+                                                y.intl.string(y.t.LPJmLy)
                                             )
                                           : null;
                                 },

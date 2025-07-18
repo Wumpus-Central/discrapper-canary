@@ -29,8 +29,8 @@ let T = {
         let { user: t, nameplate: n, nameplateData: a, className: S, innerClassName: A, isHighlighted: N, showStatus: C, showPlaceholderUser: R, pendingGlobalName: P, nameplatePreviewSize: w = 'default', isPurchased: D = !1 } = e,
             L = (0, s.e7)([m.Z], () => (0, l.wj)(m.Z.theme)),
             x = null != n ? (0, b.EU)(n) : a,
-            k = (0, s.e7)([g.Z], () => (null != t ? g.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            M = L ? '#706F74' : '#aaaab2',
+            M = (0, s.e7)([g.Z], () => (null != t ? g.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            k = L ? '#706F74' : '#aaaab2',
             j = i.useRef(null),
             U = T[w];
         return (0, r.jsx)('div', {
@@ -70,7 +70,7 @@ let T = {
                                               user: t,
                                               guildId: null,
                                               avatarSize: U,
-                                              status: C ? k : void 0,
+                                              status: C ? M : void 0,
                                               'aria-hidden': !0
                                           }),
                                           decorators: (0, r.jsx)(_.ZP, {
@@ -92,7 +92,7 @@ let T = {
                                         size: U,
                                         'aria-hidden': !0,
                                         status: c.Skl.ONLINE,
-                                        statusColor: M,
+                                        statusColor: k,
                                         className: O.avatar
                                     }),
                                     (0, r.jsx)('div', { className: O.placeholderUsername })

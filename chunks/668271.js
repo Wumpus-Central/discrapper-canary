@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: 'container__11014',
     unfocusedMessage: 'unfocusedMessage__11014',
     badgeContainer: 'badgeContainer__11014',

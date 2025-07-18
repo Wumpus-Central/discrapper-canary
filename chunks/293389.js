@@ -126,7 +126,7 @@ function Z(e) {
 function w(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: c } = e,
-        h = (0, l.cj)([g.ZP, b.Z, x.Z], () => (0, g.FZ)(n, [g.ZP, b.Z, x.Z])),
+        h = (0, l.cj)([g.ZP, b.Z, x.Z], () => (0, g.FZ)(n, g.ZP, b.Z, x.Z)),
         [j, E] = r.useState(!1),
         [O, T] = r.useState(null != (t = h.name) ? t : '???'),
         y = a()(N.flexCenter, {

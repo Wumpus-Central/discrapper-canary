@@ -41,11 +41,11 @@ let x = {
         start: 10,
         end: 15
     },
-    k = [a],
-    M = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    M = [a],
+    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
     j = {
-        [D.q.BASIC]: k,
-        [D.q.PREMIUM]: M
+        [D.q.BASIC]: M,
+        [D.q.PREMIUM]: k
     },
     U = i().memoize(
         (e) =>

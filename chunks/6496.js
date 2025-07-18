@@ -2,7 +2,7 @@
     RR: () => A,
     WW: () => T,
     bE: () => C,
-    n4: () => k,
+    n4: () => M,
     q8: () => N,
     t$: () => S,
     xl: () => x
@@ -163,7 +163,7 @@ function x(e) {
           }
         : null;
 }
-function k(e) {
+function M(e) {
     var t, n, r, i, c, u, d;
     let { channelId: _, sessionId: p } = e,
         m = l.Z.getChannel(_);

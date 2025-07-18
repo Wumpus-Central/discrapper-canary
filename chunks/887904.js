@@ -1,10 +1,10 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => o });
 var i = n(255367);
 n(73800);
 var a = n(481060),
     r = n(557239),
     l = n(388032);
-function d(e) {
+function o(e) {
     let { guildFriendsEnabled: t } = r.Z.useExperiment({ location: 'useFriendsItem' }, { autoTrackExposure: !1 });
     return t
         ? (0, i.jsx)(a.sNh, {

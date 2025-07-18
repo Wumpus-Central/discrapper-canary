@@ -1,17 +1,17 @@
-(n.d(t, {
-    E: () => l,
-    G: () => i
+(r.d(t, {
+    E: () => i,
+    G: () => c
 }),
-    n(388685));
-var r = n(73800),
-    s = n(481060),
-    o = n(410030),
-    a = n(113434);
-function i() {
+    r(388685));
+var n = r(73800),
+    s = r(481060),
+    o = r(410030),
+    l = r(113434);
+function c() {
     let [{ spring: e }, t] = (0, s.q_F)(() => ({ spring: 0 }), 'animate-always');
     return {
         completionSpring: e,
-        startCompletionAnimation: r.useCallback(() => {
+        startCompletionAnimation: n.useCallback(() => {
             (t({ spring: 1 }),
                 t({
                     spring: 0,
@@ -20,16 +20,16 @@ function i() {
         }, [t])
     };
 }
-function l(e, t) {
-    var n;
-    let r = (0, a.z)(e),
-        s = null != (n = (0, o.i6)()) ? n : 0,
-        i = 'var(--green-330)',
-        l = ['var(--background-base-lowest)', 'var(--interactive-normal)'];
+function i(e, t) {
+    var r;
+    let n = (0, l.z)(e),
+        s = null != (r = (0, o.i6)()) ? r : 0,
+        c = 'var(--green-330)',
+        i = ['var(--background-base-lowest)', 'var(--interactive-normal)'];
     return {
-        backgroundTop: t ? l[s] : ['#828288', '#CBCDD4'][s],
-        backgroundBottom: t ? l[s] : ['#535356', '#8B8C95'][s],
-        foreground: i,
-        glow: t && r ? i : '#C4C1D66E'
+        backgroundTop: t ? i[s] : ['#828288', '#CBCDD4'][s],
+        backgroundBottom: t ? i[s] : ['#535356', '#8B8C95'][s],
+        foreground: c,
+        glow: t && n ? c : '#C4C1D66E'
     };
 }

@@ -1,37 +1,37 @@
 n.d(t, {
     Z: () => p,
-    b: () => u
+    b: () => d
 });
 var r,
-    i = n(255367);
+    o = n(255367);
 n(73800);
-var o = n(657707),
-    a = n(793030),
-    s = n(692547),
+var i = n(657707),
+    s = n(793030),
+    a = n(692547),
     l = n(93841),
     c = n(388032),
-    d = n(154142),
-    u = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
+    u = n(154142),
+    d = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
 function p(e) {
     let { count: t, type: n } = e;
-    return (0, i.jsxs)('div', {
-        className: d.container,
+    return (0, o.jsxs)('div', {
+        className: u.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: d.headerContainer,
+            (0, o.jsxs)('div', {
+                className: u.headerContainer,
                 children: [
-                    (0, i.jsx)(o.$Eu, {
+                    (0, o.jsx)(i.$Eu, {
                         size: 'sm',
-                        color: 0 !== n ? s.Z.colors.HEADER_MUTED : s.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
+                        color: 0 !== n ? a.Z.colors.HEADER_MUTED : a.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
                     }),
-                    (0, i.jsx)(a.X6, {
+                    (0, o.jsx)(s.X6, {
                         color: 0 !== n ? 'header-muted' : 'header-primary',
                         variant: 'heading-lg/semibold',
                         children: t
                     })
                 ]
             }),
-            (0, i.jsx)(a.xv, {
+            (0, o.jsx)(s.xv, {
                 color: 'header-muted',
                 variant: 'text-sm/medium',
                 children: (() => {

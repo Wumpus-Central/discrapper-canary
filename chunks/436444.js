@@ -7,7 +7,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(104721),
+    o = n(42133),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -98,8 +98,8 @@ let T = {
             D = w - C,
             L = A <= N || b,
             x = L && A <= i.premiumTier,
-            k = L && A < i.premiumTier,
-            M = L && A === i.premiumTier,
+            M = L && A < i.premiumTier,
+            k = L && A === i.premiumTier,
             j = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
@@ -168,8 +168,8 @@ let T = {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: V,
-                                    [E.progressBarMarkerLower]: k,
-                                    [E.progressBarMarkerCurrent]: M
+                                    [E.progressBarMarkerLower]: M,
+                                    [E.progressBarMarkerCurrent]: k
                                 }),
                                 style: { left: ''.concat(100 * T[A], '%') }
                             },
