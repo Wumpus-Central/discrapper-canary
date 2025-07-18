@@ -1,33 +1,51 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    a = n(873546),
-    l = n(481060),
-    o = n(993413),
-    c = n(388032),
-    d = n(775853);
-function u(e) {
-    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m, showViewFullProfileButton: p } = e,
-        g = () =>
-            (0, i.jsx)(o.Z, {
-                title: null != m ? m : c.intl.string(c.t.Zb06yM),
-                showViewFullProfileButton: p,
-                className: d.preview,
-                children: u
-            });
+    a = n(481060),
+    l = n(993413),
+    o = n(388032),
+    c = n(775853);
+function d(e) {
+    let { children: t, className: n, layoutClassName: r, profilePreview: d, profilePreviewTitle: u, nameplatePreview: m, showViewFullProfileButton: p } = e;
     return (0, i.jsx)('div', {
         className: n,
-        children: (0, i.jsxs)(l.hjN, {
-            className: d.profileCustomizationSection,
-            children: [
-                a.tq && g(),
-                (0, i.jsxs)('div', {
-                    className: s()(d.baseLayout, r),
-                    children: [t, !a.tq && g()]
-                })
-            ]
+        children: (0, i.jsx)(a.hjN, {
+            className: c.profileCustomizationSection,
+            children: (0, i.jsxs)('div', {
+                className: s()(c.baseLayout, r),
+                children: [
+                    t,
+                    null != m
+                        ? (0, i.jsxs)('div', {
+                              children: [
+                                  (0, i.jsx)(l.Z, {
+                                      title: null != u ? u : o.intl.string(o.t.Zb06yM),
+                                      showViewFullProfileButton: p,
+                                      hideDivider: !0,
+                                      className: c.preview,
+                                      children: d
+                                  }),
+                                  null != m
+                                      ? (0, i.jsx)(l.Z, {
+                                            title: o.intl.string(o.t['7KRt6e']),
+                                            className: c.preview,
+                                            hideDivider: !0,
+                                            children: m
+                                        })
+                                      : null
+                              ]
+                          })
+                        : (0, i.jsx)(l.Z, {
+                              title: null != u ? u : o.intl.string(o.t.Zb06yM),
+                              showViewFullProfileButton: p,
+                              hideDivider: !0,
+                              className: c.preview,
+                              children: d
+                          })
+                ]
+            })
         })
     });
 }

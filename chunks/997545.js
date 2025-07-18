@@ -1043,8 +1043,8 @@ class x extends _.Z {
             I(this, 'handleNoInput', (e) => {
                 this.emit(m.Sh.Silence, !e);
             }),
-            I(this, 'handleDesktopSourceEnded', () => {
-                this.emit(m.Sh.DesktopSourceEnd);
+            I(this, 'handleDesktopSourceEnded', (e, t) => {
+                this.emit(m.Sh.DesktopSourceEnd, e, t);
             }),
             I(this, 'handleSoundshare', (e) => {
                 e && ((this.soundshareActive = !0), this.conn.setTransportOptions({ encodingVoiceBitRate: Math.max(v.ed, this.voiceBitrate) }), this.emit(m.Sh.SoundshareAttached));

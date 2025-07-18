@@ -1,4 +1,4 @@
-r.d(t, { Z: () => v });
+r.d(t, { Z: () => b });
 var n = r(255367),
     i = r(120356),
     l = r.n(i),
@@ -7,18 +7,20 @@ var n = r(255367),
     s = r(597688),
     c = r(709999),
     u = r(22267),
-    d = r(388032),
-    p = r(52431);
-let v = (e) => {
+    d = r(25990),
+    p = r(388032),
+    v = r(52431);
+let b = (e) => {
     let { user: t, selectedNameplate: r, purchased: i } = e,
-        v = (0, a.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));
+        b = (0, a.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
+        f = (0, a.e7)([d.Z], () => d.Z.getPendingGlobalName());
     return (0, n.jsxs)('div', {
-        className: l()(p.previewBorder, { [p.upsell]: !i && null != r }),
+        className: l()(v.previewBorder, { [v.upsell]: !i && null != r }),
         children: [
             (0, n.jsx)('div', {
-                className: p.previewBox,
+                className: v.previewBox,
                 children: (0, n.jsxs)('div', {
-                    className: p.previewContents,
+                    className: v.previewContents,
                     children: [
                         (0, n.jsx)(c.d, {
                             width: 124,
@@ -31,6 +33,7 @@ let v = (e) => {
                         (0, n.jsx)(u.Z, {
                             user: t,
                             nameplate: r,
+                            pendingGlobalName: f,
                             isHighlighted: !0
                         }),
                         (0, n.jsx)(c.d, {
@@ -46,17 +49,17 @@ let v = (e) => {
             }),
             null != r
                 ? (0, n.jsxs)('div', {
-                      className: p.previewDescription,
+                      className: v.previewDescription,
                       children: [
                           (0, n.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
-                              children: null == v ? void 0 : v.name
+                              children: null == b ? void 0 : b.name
                           }),
                           i
                               ? null
                               : (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
-                                    children: d.intl.string(d.t.fEGjVV)
+                                    children: p.intl.string(p.t.fEGjVV)
                                 })
                       ]
                   })

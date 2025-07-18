@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => F }), n(388685));
+(n.d(t, { Z: () => H }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -14,41 +14,42 @@ var i = n(255367),
     h = n(100527),
     f = n(906732),
     b = n(475977),
-    x = n(266454),
-    _ = n(243778),
-    j = n(957730),
-    E = n(53691),
-    O = n(267717),
-    C = n(296810),
-    v = n(678135),
-    S = n(610794),
-    T = n(935147),
-    N = n(643879),
-    I = n(373230),
-    y = n(726525),
-    A = n(246946),
-    P = n(25990),
-    R = n(594174),
-    D = n(626135),
-    Z = n(74538),
-    w = n(413182),
-    k = n(695346),
-    L = n(265159),
-    B = n(532495),
-    M = n(981631),
-    U = n(921944),
-    V = n(388032),
-    G = n(775274);
-function F() {
+    x = n(22267),
+    _ = n(266454),
+    j = n(243778),
+    E = n(957730),
+    O = n(53691),
+    C = n(267717),
+    v = n(296810),
+    S = n(678135),
+    T = n(610794),
+    N = n(935147),
+    I = n(643879),
+    y = n(373230),
+    A = n(726525),
+    P = n(246946),
+    R = n(25990),
+    D = n(594174),
+    Z = n(626135),
+    w = n(74538),
+    k = n(413182),
+    L = n(695346),
+    B = n(265159),
+    M = n(532495),
+    U = n(981631),
+    V = n(921944),
+    G = n(388032),
+    F = n(775274);
+function H() {
     var e, t;
-    let n = (0, l.e7)([R.default], () => {
-            let e = R.default.getCurrentUser();
+    let n = (0, l.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return (a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e);
         }),
-        s = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        F = (0, l.cj)([P.Z], () => P.Z.getAllPending()),
-        { pendingBio: H, pendingAvatar: z } = F,
-        W = (function (e, t) {
+        s = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
+        H = (0, l.cj)([R.Z], () => R.Z.getAllPending()),
+        { pendingBio: z, pendingAvatar: W, pendingNameplate: Y } = H,
+        K = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -66,42 +67,42 @@ function F() {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(F, ['pendingBio', 'pendingAvatar']),
-        Y = (0, N.SD)({
+        })(H, ['pendingBio', 'pendingAvatar', 'pendingNameplate']),
+        q = (0, I.SD)({
             userId: n.id,
-            image: z
+            image: W
         }),
-        K = (0, l.e7)([P.Z], () => P.Z.showNotice()),
-        q = k.dN.useSetting() && null != H ? j.ZP.parse(void 0, H).content : H,
-        X = Z.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: Q, newestAnalyticsLocation: J } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
-        $ = (0, I.T)({ location: 'UserSettingsProfileCustomization' }),
-        ee = (0, x.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
-        et = $ && !ee;
+        X = (0, l.e7)([R.Z], () => R.Z.showNotice()),
+        Q = L.dN.useSetting() && null != z ? E.ZP.parse(void 0, z).content : z,
+        J = w.ZP.canUsePremiumProfileCustomization(n),
+        { analyticsLocations: $, newestAnalyticsLocation: ee } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
+        et = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
+        en = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        ei = et && !en;
     r.useEffect(() => {
-        et && (0, x.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
-    }, [et]);
-    let [en, ei] = (0, _.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
-        er = en === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
+        ei && (0, _.Q3)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+    }, [ei]);
+    let [er, es] = (0, j.US)([o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
+        ea = er === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     (r.useEffect(() => {
-        er && ei(U.L.TAKE_ACTION);
-    }, [er, ei]),
+        ea && es(V.L.TAKE_ACTION);
+    }, [ea, es]),
         r.useEffect(() => () => m.Z.wait(p.W3), []));
-    let [es, ea] = r.useState(!1),
-        { showRedesign: el } = w.b.useExperiment({ location: 'profile customization' }),
-        eo = (0, y.q)({ location: 'UserSettingsProfileCustomization' }),
-        ec = !X,
-        ed = r.useRef(null);
+    let [el, eo] = r.useState(!1),
+        { showRedesign: ec } = k.b.useExperiment({ location: 'profile customization' }),
+        ed = (0, A.q)({ location: 'UserSettingsProfileCustomization' }),
+        eu = !J,
+        em = r.useRef(null);
     return s
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
-              value: Q,
+              value: $,
               children: [
                   (0, i.jsx)(b.Z, {}),
-                  (0, i.jsx)(C.Z, {
-                      showViewFullProfileButton: eo,
+                  (0, i.jsx)(v.Z, {
+                      showViewFullProfileButton: ed,
                       profilePreview: (0, i.jsx)(
-                          v.Z,
+                          S.Z,
                           ((e = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -129,17 +130,16 @@ function F() {
                           })(
                               {
                                   user: n,
-                                  canUsePremiumCustomization: X,
-                                  onUpsellClick: L.Z,
-                                  pendingBio: q
+                                  canUsePremiumCustomization: J,
+                                  onUpsellClick: B.Z,
+                                  pendingBio: Q
                               },
-                              W
+                              K
                           )),
                           (t = t =
                               {
-                                  pendingAvatar: Y,
-                                  showViewFullProfileButton: eo,
-                                  showNameplatePreview: !0
+                                  pendingAvatar: q,
+                                  showViewFullProfileButton: ed
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -155,36 +155,44 @@ function F() {
                                 }),
                           e)
                       ),
-                      children: (0, i.jsx)(B.Z, {})
+                      nameplatePreview: (0, i.jsx)(x.Z, {
+                          user: n,
+                          nameplate: Y,
+                          nameplateData: void 0 === Y ? n.nameplate : void 0,
+                          pendingGlobalName: K.pendingGlobalName,
+                          className: F.nameplatePreview,
+                          isHighlighted: !0
+                      }),
+                      children: (0, i.jsx)(M.Z, {})
                   }),
-                  el && (0, i.jsx)(S.Z, {}),
+                  ec && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
-                      innerRef: ed,
-                      onChange: (e) => ea(e),
+                      innerRef: em,
+                      onChange: (e) => eo(e),
                       threshold: 0.25,
-                      active: ec,
+                      active: eu,
                       children: (0, i.jsx)('div', {
-                          ref: ed,
-                          children: (0, i.jsx)(T.Z, {
+                          ref: em,
+                          children: (0, i.jsx)(N.Z, {
                               user: n,
-                              shouldShow: ec,
-                              isVisible: es
+                              shouldShow: eu,
+                              isVisible: el
                           })
                       })
                   }),
-                  ec &&
-                      !K &&
-                      (0, i.jsx)(E.p, {
-                          className: G.floatingNitroUpsell,
-                          showUpsell: ec && !es,
-                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: J }) }),
+                  eu &&
+                      !X &&
+                      (0, i.jsx)(O.p, {
+                          className: F.floatingNitroUpsell,
+                          showUpsell: eu && !el,
+                          text: G.intl.format(G.t.TmfgIy, { onClick: () => (0, C.y)({ analyticsSource: ee }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(u.gtL, {
-                              className: G.floatingNitroButton,
-                              innerClassName: G.floatingNitroButtonInner,
+                              className: F.floatingNitroButton,
+                              innerClassName: F.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  (D.default.track(M.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == ed || null == (e = ed.current) || e.scrollIntoView({ behavior: 'smooth' }));
+                                  (Z.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == em || null == (e = em.current) || e.scrollIntoView({ behavior: 'smooth' }));
                               },
                               color: d.zx.Colors.GREEN,
                               size: d.Ph.MEDIUM,
@@ -196,7 +204,7 @@ function F() {
                                   (0, i.jsx)(u.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: V.intl.string(V.t.uw9zIy)
+                                      children: G.intl.string(G.t.uw9zIy)
                                   })
                               ]
                           })

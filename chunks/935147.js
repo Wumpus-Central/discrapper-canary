@@ -132,7 +132,7 @@ function V(e) {
                   children: [
                       (0, i.jsx)(I.Z, {
                           layoutClassName: U.tryItOutLayout,
-                          previewTitle: (0, i.jsxs)(i.Fragment, {
+                          profilePreviewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(a.SrA, {
                                       size: 'md',

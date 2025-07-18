@@ -12,9 +12,9 @@ var r = n(255367),
     _ = n(172751),
     p = n(359135),
     h = n(516817),
-    m = n(210887),
-    g = n(158776),
-    E = n(5192),
+    m = n(654904),
+    g = n(210887),
+    E = n(158776),
     b = n(579407),
     y = n(388032),
     O = n(538566),
@@ -27,12 +27,21 @@ let T = {
     },
     S = (e) => {
         let { user: t, nameplate: n, nameplateData: a, className: S, innerClassName: A, isHighlighted: N, showStatus: C, showPlaceholderUser: R, pendingGlobalName: P, nameplatePreviewSize: w = 'default', isPurchased: D = !1 } = e,
-            L = (0, s.e7)([m.Z], () => (0, l.wj)(m.Z.theme)),
+            L = (0, s.e7)([g.Z], () => (0, l.wj)(g.Z.theme)),
             x = null != n ? (0, b.EU)(n) : a,
-            M = (0, s.e7)([g.Z], () => (null != t ? g.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            M = (0, s.e7)([E.Z], () => (null != t ? E.Z.getStatus(t.id) : c.Skl.ONLINE)),
             k = L ? '#706F74' : '#aaaab2',
             j = i.useRef(null),
-            U = T[w];
+            U =
+                null != t
+                    ? (0, m.Ly)({
+                          pendingNickname: void 0,
+                          pendingGlobalName: P,
+                          user: t,
+                          guildMember: null
+                      })
+                    : void 0,
+            G = T[w];
         return (0, r.jsx)('div', {
             role: 'img',
             'aria-label': y.intl.string(y.t.SZeUdX),
@@ -69,7 +78,7 @@ let T = {
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: null,
-                                              avatarSize: U,
+                                              avatarSize: G,
                                               status: C ? M : void 0,
                                               'aria-hidden': !0
                                           }),
@@ -77,7 +86,7 @@ let T = {
                                               userId: t.id,
                                               className: O.tagChiplet
                                           }),
-                                          name: null != P && '' !== P ? P : E.ZP.getName(null, null, t),
+                                          name: U,
                                           innerClassName: A,
                                           displayNameStyles: t.displayNameStyles,
                                           displayNameStyleEffects: f.F.ANIMATED
@@ -89,7 +98,7 @@ let T = {
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: L ? v : I,
-                                        size: U,
+                                        size: G,
                                         'aria-hidden': !0,
                                         status: c.Skl.ONLINE,
                                         statusColor: k,
