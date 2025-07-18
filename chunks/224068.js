@@ -4,8 +4,8 @@ n(73800);
 var i = n(120356),
     a = n.n(i),
     l = n(278074),
-    o = n(979554),
-    s = n(481060),
+    s = n(979554),
+    o = n(481060),
     c = n(388032),
     u = n(956946);
 function d(e) {
@@ -16,12 +16,12 @@ function d(e) {
             d
                 ? c.intl.string(c.t['0TmQRE'])
                 : (0, l.EQ)(t)
-                      .with(o.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
-                      .with(o.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
+                      .with(s.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
+                      .with(s.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
                       .otherwise(() => null));
     return null === m
         ? null
-        : (0, r.jsx)(s.Text, {
+        : (0, r.jsx)(o.Text, {
               variant: 'text-xxs/normal',
               className: a()([u.container, i ? u.darkText : u.lightText]),
               children: m

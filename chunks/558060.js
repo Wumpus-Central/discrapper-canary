@@ -19,7 +19,7 @@ function d(e) {
             children: (0, n.jsx)(s.F, { price: m })
         });
     let _ = (0, o.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        O =
+        C =
             (0, o.x6)(l) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
@@ -61,21 +61,21 @@ function d(e) {
                         }),
                   t)
                 : m,
-        C = d && null != _;
+        O = d && null != _;
     return (0, n.jsxs)('div', {
         className: i()(u.priceTagsContainer, f),
         children: [
             g
                 ? null
                 : (0, n.jsx)(a.y, {
-                      price: O,
+                      price: C,
                       className: u.price
                   }),
             (0, n.jsx)(s.F, {
-                price: C ? _ : O,
+                price: O ? _ : C,
                 discount: p,
                 className: u.price,
-                nitroIconType: C ? h : void 0,
+                nitroIconType: O ? h : void 0,
                 nitroIconSize: b
             })
         ]

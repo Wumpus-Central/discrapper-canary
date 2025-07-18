@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function O(e, t) {
         e
     );
 }
-function C(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -89,7 +89,7 @@ let v = s()((e) => {
             { isPurchased: S } = (0, h.L)(r),
             y = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             { onFocus: x } = y,
-            j = C(y, ['onFocus']),
+            j = O(y, ['onFocus']),
             T = l.useCallback(
                 (e) => {
                     (e.preventDefault(), e.stopPropagation(), (0, g.$)(t, i), x());
@@ -103,7 +103,7 @@ let v = s()((e) => {
             children: (e) =>
                 (0, n.jsx)(
                     p.P3F,
-                    O(_({}, j), {
+                    C(_({}, j), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -161,10 +161,10 @@ let v = s()((e) => {
                 children: (e) => {
                     var t,
                         { ref: r } = e,
-                        c = C(e, ['ref']);
+                        c = O(e, ['ref']);
                     return (0, n.jsxs)(
                         'div',
-                        O(_({ ref: r }, c), {
+                        C(_({ ref: r }, c), {
                             className: o()(m.variantsPanel, i, {
                                 [m.minimalState]: d,
                                 [m.alternativeColor]: h

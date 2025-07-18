@@ -1,4 +1,4 @@
-(r.d(t, { default: () => y }), r(388685));
+(r.d(t, { default: () => g }), r(388685));
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -14,13 +14,13 @@ var n = r(255367),
     f = r(576386),
     m = r(981631),
     h = r(388032),
-    g = r(637635);
-function y(e) {
+    y = r(637635);
+function g(e) {
     let { transitionState: t, analyticsLocations: r, onClose: c } = e,
         d = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         { analyticsLocations: b } = (0, s.ZP)(r, o.Z.EDIT_NAMEPLATE_MODAL),
-        { available: f, purchased: h, isFetchingCategories: y, isFetchingPurchases: j } = (0, u.yV)('NameplateModal'),
-        _ = y || (j && 0 === h.length);
+        { available: f, purchased: h, isFetchingCategories: g, isFetchingPurchases: j } = (0, u.yV)('NameplateModal'),
+        _ = g || (j && 0 === h.length);
     return (
         (0, i.useEffect)(() => {
             v.default.track(m.rMx.OPEN_MODAL, {
@@ -38,7 +38,7 @@ function y(e) {
                       parentComponent: 'NameplateModal',
                       children: _
                           ? (0, n.jsx)(a.$jN, {
-                                className: g.spinner,
+                                className: y.spinner,
                                 type: a.$jN.Type.SPINNING_CIRCLE
                             })
                           : (0, n.jsx)(O, {
@@ -59,7 +59,7 @@ function O(e) {
             return e.skuId === (null == t || null == (n = t.collectibles) || null == (r = n.nameplate) ? void 0 : r.skuId);
         }),
         { pendingNameplate: v } = (0, d._A)(),
-        [m, y] = (0, i.useState)(() => (void 0 !== v ? v : null != p ? p : null)),
+        [m, g] = (0, i.useState)(() => (void 0 !== v ? v : null != p ? p : null)),
         [O, j] = (0, i.useState)(null != m),
         _ = (0, i.useCallback)(
             (e) => {
@@ -76,26 +76,26 @@ function O(e) {
         children: [
             (0, n.jsxs)(a.xBx, {
                 separator: !1,
-                className: g.header,
+                className: y.header,
                 children: [
                     (0, n.jsx)(a.X6q, {
                         variant: 'heading-lg/semibold',
                         children: h.intl.string(h.t.BwdeMz)
                     }),
                     (0, n.jsx)(a.olH, {
-                        className: g.closeButton,
+                        className: y.closeButton,
                         onClick: u
                     })
                 ]
             }),
             (0, n.jsxs)(a.hzk, {
-                className: g.content,
+                className: y.content,
                 scrollbarType: 'none',
                 children: [
                     (0, n.jsx)(f.Z, {
                         selected: m,
                         onSelect: (e, t) => {
-                            (y(e), j(null != t && t));
+                            (g(e), j(null != t && t));
                         },
                         onOpenShop: _,
                         available: r,

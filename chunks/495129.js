@@ -18,8 +18,8 @@ var i = n(120356),
     b = n(594174),
     E = n(938475),
     x = n(5192),
-    v = n(981631),
-    C = n(388032),
+    C = n(981631),
+    v = n(388032),
     y = n(653072);
 function O(e) {
     var t, n, i, O, j, I, S, T, N, P;
@@ -66,11 +66,11 @@ function O(e) {
                 : T.rawValue,
         W = null != z ? z.split(',') : [],
         K = (0, a.Wu)([b.default], () => W.map((e) => b.default.getUser(e)).filter(Boolean)),
-        Y = M && null != F ? C.intl.formatToPlainString(C.t['er/cHx'], { username: G }) : C.intl.formatToPlainString(C.t.noNjkZ, { username: B.nick }),
+        Y = M && null != F ? v.intl.formatToPlainString(v.t['er/cHx'], { username: G }) : v.intl.formatToPlainString(v.t.noNjkZ, { username: B.nick }),
         X = null != k && null != L,
         q = null;
-    ((q = X ? (M || V ? C.intl.format(C.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) }) : C.intl.format(C.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) })) : C.intl.string(C.t['tHT/Vl'])), 0 === H.length && (q = M ? C.intl.string(C.t.IE2uZW) : C.intl.string(C.t.QVhmGx)));
-    let Q = M ? C.intl.string(C.t['00XIbm']) : C.intl.string(C.t['7CrE9/']);
+    ((q = X ? (M || V ? v.intl.format(v.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) }) : v.intl.format(v.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) })) : v.intl.string(v.t['tHT/Vl'])), 0 === H.length && (q = M ? v.intl.string(v.t.IE2uZW) : v.intl.string(v.t.QVhmGx)));
+    let Q = M ? v.intl.string(v.t['00XIbm']) : v.intl.string(v.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
@@ -121,7 +121,7 @@ function O(e) {
                     (0, r.jsxs)(o.zx, {
                         color: o.zx.Colors.BRAND,
                         onClick: () => {
-                            null != R && null != Z && ((0, g.uL)(v.Z5c.CHANNEL(Z, R)), u.default.selectVoiceChannel(R));
+                            null != R && null != Z && ((0, g.uL)(C.Z5c.CHANNEL(Z, R)), u.default.selectVoiceChannel(R));
                         },
                         className: y.button,
                         innerClassName: y.buttonInner,
@@ -131,7 +131,7 @@ function O(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            C.intl.string(C.t.zIeJq6)
+                            v.intl.string(v.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zx, {

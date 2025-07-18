@@ -1,49 +1,49 @@
-(n.d(t, { Z: () => s }), n(953529), n(388685));
-var r = n(255367),
-    l = n(73800),
-    i = n(82659),
-    a = n(481060),
-    o = n(388032),
-    c = n(98847);
-function s(e) {
-    let { errorText: t, title: n, description: s, transitionState: u, onCancel: d, onConfirm: p, children: g } = e,
-        [m, b] = l.useState(!1),
-        h = l.useCallback(async () => {
-            b(!0);
+(r.d(e, { Z: () => s }), r(953529), r(388685));
+var n = r(255367),
+    a = r(73800),
+    i = r(82659),
+    o = r(481060),
+    c = r(388032),
+    l = r(98847);
+function s(t) {
+    let { errorText: e, title: r, description: s, transitionState: u, onCancel: d, onConfirm: p, children: b } = t,
+        [g, y] = a.useState(!1),
+        f = a.useCallback(async () => {
+            y(!0);
             try {
                 await p();
-            } catch (e) {
-                throw e;
+            } catch (t) {
+                throw t;
             } finally {
-                b(!1);
+                y(!1);
             }
         }, [p]);
-    return (0, r.jsxs)(i.u, {
+    return (0, n.jsxs)(i.u, {
         transitionState: u,
         onClose: d,
-        title: n,
+        title: r,
         subtitle: s,
         actions: [
             {
-                text: o.intl.string(o.t['ETE/oK']),
+                text: c.intl.string(c.t['ETE/oK']),
                 variant: 'secondary',
                 onClick: d
             },
             {
-                text: o.intl.string(o.t.R3BPHx),
-                onClick: h,
+                text: c.intl.string(c.t.R3BPHx),
+                onClick: f,
                 variant: 'primary',
-                loading: m
+                loading: g
             }
         ],
         children: [
-            g,
-            null != t && '' !== t
-                ? (0, r.jsx)(a.Text, {
-                      className: c.errorText,
+            b,
+            null != e && '' !== e
+                ? (0, n.jsx)(o.Text, {
+                      className: l.errorText,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: t
+                      children: e
                   })
                 : null
         ]

@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(314897),
     E = n(430824),
     x = n(701190),
-    v = n(411198),
-    C = n(610699),
+    C = n(411198),
+    v = n(610699),
     y = n(313876),
     O = n(778333),
     j = n(949981),
@@ -68,7 +68,7 @@ function R(e) {
         },
         z = () => {
             if (null == B && (null == k ? void 0 : k.guild) != null) {
-                let e = v.Qs(k.guild);
+                let e = C.Qs(k.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
             (0, h.yU)()
@@ -165,7 +165,7 @@ function R(e) {
                         break;
                     }
                     if ((0, g.P1)(M)) {
-                        W = (0, r.jsx)(C.Z, {
+                        W = (0, r.jsx)(v.Z, {
                             invite: M,
                             getAcceptInviteContext: R,
                             message: n

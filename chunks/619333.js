@@ -6,6 +6,7 @@ e.exports = {
     stickerCategoryGenericSelected: 'stickerCategoryGenericSelected__3ad28',
     stickerCategoryGenericIcon: 'stickerCategoryGenericIcon__3ad28',
     stickerCategoryGeneric: 'stickerCategoryGeneric__3ad28',
+    stickerCategoryGenericLast: 'stickerCategoryGenericLast__3ad28',
     stickerCategoryGenericDisabled: 'stickerCategoryGenericDisabled__3ad28',
     guildCategorySeparator: 'guildCategorySeparator__3ad28',
     standardStickerShortcut: 'standardStickerShortcut__3ad28',

@@ -3,18 +3,18 @@ var r = n(255367),
     i = n(481060),
     a = n(688465),
     l = n(794231),
-    o = n(558060),
-    s = n(539598),
+    s = n(558060),
+    o = n(539598),
     c = n(755007),
     u = n(231338),
     d = n(388032),
     m = n(651726);
 function f(e) {
     var t;
-    let { orbPrice: n, isProductDisabled: o, hasSufficientOrbs: s } = e,
+    let { orbPrice: n, isProductDisabled: s, hasSufficientOrbs: o } = e,
         { showBetaTag: u } = l.Z.useExperiment({ location: 'shop_orb_full_price_line' }),
-        f = o ? d.intl.string(d.t.wu4gyc) : d.intl.string(d.t.eFNRzc),
-        p = o || !s;
+        f = s ? d.intl.string(d.t.wu4gyc) : d.intl.string(d.t.eFNRzc),
+        p = s || !o;
     return (0, r.jsxs)('div', {
         className: m.priceLine,
         children: [
@@ -53,7 +53,7 @@ function p(e) {
                     (0, r.jsxs)('div', {
                         className: m.priceTagContainer,
                         children: [
-                            (0, r.jsx)(o.Z, {
+                            (0, r.jsx)(s.Z, {
                                 product: l,
                                 discount: a,
                                 isPremiumUser: i,
@@ -61,7 +61,7 @@ function p(e) {
                                 nitroIconType: 'tooltip',
                                 nitroIconSize: 'xs'
                             }),
-                            i ? null : (0, r.jsx)(s.Z, { product: l })
+                            i ? null : (0, r.jsx)(o.Z, { product: l })
                         ]
                     }),
                     n.length > 1 &&

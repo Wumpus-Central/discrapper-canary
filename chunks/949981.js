@@ -18,7 +18,7 @@ var r = n(255367),
     E = n(273254);
 function x(e) {
     let t,
-        { invite: n, message: l, currentUserId: x, onTransitionToInviteChannel: v, onAcceptInstantInvite: C } = e,
+        { invite: n, message: l, currentUserId: x, onTransitionToInviteChannel: C, onAcceptInstantInvite: v } = e,
         y = x === l.author.id,
         O = n.state === _.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
@@ -27,7 +27,7 @@ function x(e) {
         S = null != j,
         T = i.useCallback(() => {
             let e = 'noop';
-            (S ? (v(), (e = 'transition')) : (C(), (e = 'accept')),
+            (S ? (C(), (e = 'transition')) : (v(), (e = 'accept')),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,7 +37,7 @@ function x(e) {
                     },
                     I
                 ));
-        }, [n, l, I, S, v, C]);
+        }, [n, l, I, S, C, v]);
     if (null == j) {
         if (null == n.channel) return (0, r.jsx)(h.Z, {});
         ((j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));

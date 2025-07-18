@@ -3,7 +3,7 @@ var r = n(73800),
     i = n(979554),
     a = n(215023),
     l = n(388032);
-let o = function (e) {
+let s = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (t) {
             var n;
@@ -15,9 +15,9 @@ let o = function (e) {
             pfxName: i.name
         });
     },
-    s = function (e) {
+    o = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null == e ? '' : e.type === i.Z.BUNDLE ? o(e, t) : e.summary;
+        return null == e ? '' : e.type === i.Z.BUNDLE ? s(e, t) : e.summary;
     },
     c = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -29,7 +29,7 @@ let o = function (e) {
             case i.Z.NAMEPLATE:
                 return l.intl.string(l.t.ik37ER);
             case i.Z.BUNDLE:
-                return o(e, t);
+                return s(e, t);
             default:
                 return '';
         }
@@ -37,5 +37,5 @@ let o = function (e) {
     u = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (null == e ? void 0 : e.skuId) != null && (0, a.o0)(null == e ? void 0 : e.skuId);
-        return (0, r.useMemo)(() => (n ? s(e, t) : c(e, t)), [n, e, t]);
+        return (0, r.useMemo)(() => (n ? o(e, t) : c(e, t)), [n, e, t]);
     };

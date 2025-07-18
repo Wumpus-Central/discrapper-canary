@@ -200,7 +200,7 @@ function eu(e) {
                         children: [
                             u(),
                             (0, r.jsx)(c.X6q, {
-                                variant: 'eyebrow',
+                                variant: 'text-sm/semibold',
                                 color: 'none',
                                 className: q.sectionTitle,
                                 children: d()

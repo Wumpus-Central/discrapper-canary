@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(336197),
     E = n(406432),
     x = n(348238),
-    v = n(38267),
-    C = n(884902),
+    C = n(38267),
+    v = n(884902),
     y = n(670188),
     O = n(695346),
     j = n(271383),
@@ -82,7 +82,7 @@ function U(e) {
         H = i.useRef(null),
         V = i.useRef(null),
         z = (0, A.J)(F, B),
-        { setPopout: W } = (0, v.Z)(B.id, Z.d$),
+        { setPopout: W } = (0, C.Z)(B.id, Z.d$),
         K = (0, x.qo)(B, G, W, !0),
         Y = O.QK.useSetting(),
         X = (0, N.n)(),
@@ -103,7 +103,7 @@ function U(e) {
             var e;
             return [null != (e = null == en ? void 0 : en.colorString) ? e : 'inherit', null == en ? void 0 : en.colorStrings, null == en ? void 0 : en.colorRoleId];
         }, [en]),
-        eo = (0, C.X7)(null == en ? void 0 : en.guildId, null != (l = null == z ? void 0 : z.authorId) ? l : void 0, el),
+        eo = (0, v.X7)(null == en ? void 0 : en.guildId, null != (l = null == z ? void 0 : z.authorId) ? l : void 0, el),
         { reducedMotion: es } = i.useContext(d.Sfi),
         [ec, eu] = i.useState(!1),
         ed = i.useCallback(() => {

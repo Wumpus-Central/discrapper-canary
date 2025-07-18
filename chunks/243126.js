@@ -23,8 +23,8 @@ let b = (e, t) => {
             return null != (t = null == e ? void 0 : e[o.m.POPULAR]) ? t : [];
         }, [e]),
         m = l.length > 0 && r,
-        [_, O] = n.useState(m ? o.m.RECOMMENDED : o.m.POPULAR),
-        [C, v] = n.useState(0),
+        [_, C] = n.useState(m ? o.m.RECOMMENDED : o.m.POPULAR),
+        [O, v] = n.useState(0),
         E = (0, d.u)(),
         S = (0, a.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         y = (0, p.a)(),
@@ -45,13 +45,13 @@ let b = (e, t) => {
                           : _ === o.m.RANDOM && (e = i().shuffle(S)),
                 y(e)
             );
-        }, [_, y, S, t, E, l, b, C]),
+        }, [_, y, S, t, E, l, b, O]),
         j = n.useCallback(() => {
-            (v((e) => e + 1), O(o.m.RANDOM));
+            (v((e) => e + 1), C(o.m.RANDOM));
         }, []);
     return {
         sortType: _,
-        setSortType: O,
+        setSortType: C,
         sortedItems: (0, f.l)(x),
         sortOptions: n.useMemo(() => {
             let e = [

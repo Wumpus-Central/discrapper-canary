@@ -18,14 +18,14 @@ var r = n(255367),
     E = n(711643);
 function x(e) {
     let { message: t, channel: l, compact: x } = e,
-        v = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [C, y] = i.useState(null);
+        C = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [v, y] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            v.length > 0 && y(v[Math.floor(Math.random() * v.length)]);
+            C.length > 0 && y(C[Math.floor(Math.random() * C.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [v]),
+    }, [C]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)('div', {
@@ -83,10 +83,10 @@ function x(e) {
                                           (0, h.O)(t.id, l));
                                   },
                                   children:
-                                      null != C
+                                      null != v
                                           ? (0, r.jsx)(m.Z, {
                                                 size: 32,
-                                                sticker: C
+                                                sticker: v
                                             })
                                           : (0, r.jsx)(c.EO4, {
                                                 size: 'md',

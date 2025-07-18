@@ -50,13 +50,13 @@ let h = a.memo(function (e) {
         [I, T] = a.useState(!1),
         [D, R] = a.useState(0),
         [_, F] = a.useState(-1),
-        z = a.useMemo(() => D / p.fineTuningScale, [p.fineTuningScale, D]);
+        A = a.useMemo(() => D / p.fineTuningScale, [p.fineTuningScale, D]);
     a.useEffect(() => {
         if (null == y) return;
         let e = y.duration * o.Z.Millis.SECOND;
         (N(0), S(0), E(e), R(e));
     }, [y]);
-    let A = a.useCallback(
+    let B = a.useCallback(
             (e, t) => {
                 if ((n(), 0 === e.button))
                     switch (t) {
@@ -72,7 +72,7 @@ let h = a.memo(function (e) {
             },
             [n]
         ),
-        B = a.useCallback((e) => {
+        U = a.useCallback((e) => {
             switch (e) {
                 case 0:
                     Z(!1);
@@ -85,7 +85,7 @@ let h = a.memo(function (e) {
             }
             F(-1);
         }, []),
-        U = a.useCallback(
+        z = a.useCallback(
             (e) => {
                 if (null == y || !P) return;
                 let t = parseInt(e.target.value),
@@ -156,24 +156,24 @@ let h = a.memo(function (e) {
                                     ref: v,
                                     className: r()(m.rangeHandle, m.rangeHandleStart),
                                     type: 'range',
-                                    min: (0, c.ao)(_, z, D),
-                                    max: (0, c.MN)(_, z, D),
+                                    min: (0, c.ao)(_, A, D),
+                                    max: (0, c.MN)(_, A, D),
                                     value: w,
-                                    onChange: U,
-                                    onMouseDown: (e) => A(e, 0),
-                                    onMouseUp: () => B(0),
+                                    onChange: z,
+                                    onMouseDown: (e) => B(e, 0),
+                                    onMouseUp: () => U(0),
                                     disabled: !b || g
                                 }),
                                 (0, l.jsx)('input', {
                                     ref: j,
                                     className: r()(m.rangeHandle, m.rangeHandleEnd),
                                     type: 'range',
-                                    min: (0, c.ao)(_, z, D),
-                                    max: (0, c.MN)(_, z, D),
+                                    min: (0, c.ao)(_, A, D),
+                                    max: (0, c.MN)(_, A, D),
                                     value: O,
                                     onChange: G,
-                                    onMouseDown: (e) => A(e, 2),
-                                    onMouseUp: () => B(2),
+                                    onMouseDown: (e) => B(e, 2),
+                                    onMouseUp: () => U(2),
                                     disabled: !b || g
                                 })
                             ]
@@ -184,12 +184,12 @@ let h = a.memo(function (e) {
                                 ref: x,
                                 className: r()(m.rangeHandle, m.rangeHandlePlayhead),
                                 type: 'range',
-                                min: (0, c.ao)(_, z, D),
-                                max: (0, c.MN)(_, z, D),
+                                min: (0, c.ao)(_, A, D),
+                                max: (0, c.MN)(_, A, D),
                                 value: C,
                                 onChange: L,
-                                onMouseDown: (e) => A(e, 1),
-                                onMouseUp: () => B(1),
+                                onMouseDown: (e) => B(e, 1),
+                                onMouseUp: () => U(1),
                                 disabled: !b || g
                             })
                         })
@@ -204,8 +204,8 @@ let h = a.memo(function (e) {
                                 [m.endDragging]: I
                             }),
                             style: {
-                                left: ''.concat((0, c.pN)(w, _, z, D), '%'),
-                                right: ''.concat((0, c.kD)(O, _, z, D), '%')
+                                left: ''.concat((0, c.pN)(w, _, A, D), '%'),
+                                right: ''.concat((0, c.kD)(O, _, A, D), '%')
                             },
                             children: [
                                 (0, l.jsx)('div', {
@@ -238,7 +238,7 @@ let h = a.memo(function (e) {
                             className: m.playheadTrack,
                             children: (0, l.jsx)('div', {
                                 className: r()(m.playhead, { [m.dragging]: M || P || I || t }),
-                                style: { left: ''.concat((0, c.pN)(C, _, z, D), '%') }
+                                style: { left: ''.concat((0, c.pN)(C, _, A, D), '%') }
                             })
                         })
                     ]
@@ -247,7 +247,7 @@ let h = a.memo(function (e) {
                     className: m.waveformContainer,
                     children: (0, l.jsx)(d.Z, {
                         fineTuning: _,
-                        fineTuningResolution: z,
+                        fineTuningResolution: A,
                         duration: D
                     })
                 })

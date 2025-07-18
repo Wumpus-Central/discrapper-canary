@@ -1,70 +1,68 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(255367),
     r = n(73800),
-    s = n(755721),
-    a = n(481060),
-    l = n(100527),
-    o = n(906732),
-    c = n(626135),
-    d = n(335131),
-    u = n(196033),
-    m = n(981631),
-    p = n(474936),
-    g = n(388032),
-    h = n(811344);
-let f = () => {
-    let { analyticsLocations: e } = (0, o.ZP)(l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+    s = n(481060),
+    a = n(100527),
+    l = n(906732),
+    o = n(626135),
+    c = n(335131),
+    d = n(196033),
+    u = n(981631),
+    m = n(474936),
+    p = n(388032),
+    g = n(811344);
+let h = () => {
+    let { analyticsLocations: e } = (0, l.ZP)(a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = r.useRef(null),
-        { asset: n, popoutAsset: f, title: b, body: x, version: _, revertTextColor: j } = (0, u.W)();
+        { asset: n, popoutAsset: h, title: f, body: b, version: x, revertTextColor: _ } = (0, d.W)();
     return (
         r.useEffect(() => {
-            c.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: p.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            o.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: m.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: e,
-                version: _
+                version: x
             });
-        }, [e, _]),
+        }, [e, x]),
         (0, i.jsxs)('div', {
             ref: t,
-            className: h.container,
+            className: g.container,
             style: { backgroundImage: 'url('.concat(n, ')') },
             children: [
                 (0, i.jsx)('div', {
-                    className: h.artContainer,
+                    className: g.artContainer,
                     'aria-hidden': !0,
                     role: 'presentation',
                     children: (0, i.jsx)('img', {
-                        src: f,
-                        className: h.art,
+                        src: h,
+                        className: g.art,
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.mainColumn,
+                    className: g.mainColumn,
                     children: [
-                        (0, i.jsx)(a.X6q, {
+                        (0, i.jsx)(s.X6q, {
                             variant: 'heading-lg/extrabold',
-                            color: j ? 'redesign-button-overlay-text' : 'currentColor',
-                            className: h.title,
-                            children: b
+                            color: _ ? 'redesign-button-overlay-text' : 'currentColor',
+                            className: g.title,
+                            children: f
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            color: j ? 'redesign-button-overlay-text' : 'currentColor',
-                            children: x
+                            color: _ ? 'redesign-button-overlay-text' : 'currentColor',
+                            children: b
                         })
                     ]
                 }),
-                (0, i.jsx)(a.zxk, {
+                (0, i.jsx)(s.zxk, {
                     onClick: () => {
-                        (0, d.mK)({
+                        (0, c.mK)({
                             analyticsLocations: e,
-                            analyticsSource: l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                            analyticsSource: a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                         });
                     },
                     variant: 'overlay-primary',
-                    color: s.Tt.BRAND_INVERTED,
-                    text: g.intl.string(g.t.fYfGgI)
+                    text: p.intl.string(p.t.fYfGgI)
                 })
             ]
         })

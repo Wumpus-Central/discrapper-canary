@@ -3,15 +3,15 @@ var r = n(255367),
     i = n(442837),
     a = n(678135),
     l = n(643879),
-    o = n(25990),
-    s = n(74538),
+    s = n(25990),
+    o = n(74538),
     c = n(755419),
     u = n(99595);
 let d = (e) => {
     var t, n;
     let { user: d } = e,
-        m = s.ZP.canUsePremiumProfileCustomization(d),
-        f = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
+        m = o.ZP.canUsePremiumProfileCustomization(d),
+        f = (0, i.cj)([s.Z], () => s.Z.getAllPending()),
         { pendingAvatar: p } = f,
         h = (function (e, t) {
             if (null == e) return {};

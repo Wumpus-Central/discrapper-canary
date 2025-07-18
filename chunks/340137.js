@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,16 +11,17 @@ var r = n(255367),
     p = n(358085),
     h = n(821020),
     f = n(370774),
-    g = n(961040),
-    m = n(981631),
-    b = n(388032),
-    _ = n(61626);
-function E(e) {
+    g = n(128008),
+    m = n(961040),
+    b = n(981631),
+    _ = n(388032),
+    E = n(61626);
+function O(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o } = e,
         [s, d] = i.useState(!1),
         h = (0, f.D)(),
         { unreadRecentMentionsCount: g, unreadChannelIds: m } = (0, f.O4)(),
-        E =
+        b =
             g > 0
                 ? {
                       type: 'mentions',
@@ -34,7 +35,7 @@ function E(e) {
                   : { type: null },
         O = n || n || h,
         y = (0, r.jsx)(c.Dkj, {
-            className: _.icon,
+            className: E.icon,
             color: s || O ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
             size: 'custom',
             height: 20,
@@ -50,7 +51,7 @@ function E(e) {
             }),
             (0, r.jsx)(c.ua7, {
                 shouldShow: !O,
-                text: b.intl.string(b.t.HcoRu7),
+                text: _.intl.string(_.t.HcoRu7),
                 children: (e) => {
                     var n, i, s;
                     return (0, r.jsxs)(
@@ -82,7 +83,7 @@ function E(e) {
                         })(
                             {
                                 innerRef: o,
-                                className: _.clickableContainer
+                                className: E.clickableContainer
                             },
                             e,
                             l
@@ -103,9 +104,9 @@ function E(e) {
                                 },
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: a()(_.iconWrapper, null),
+                                        className: a()(E.iconWrapper, null),
                                         children:
-                                            'unread' === E.type
+                                            'unread' === b.type
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(u.ZP, {
@@ -114,17 +115,17 @@ function E(e) {
                                                               mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                               children: y
                                                           }),
-                                                          (0, r.jsx)('div', { className: _.unreadDot })
+                                                          (0, r.jsx)('div', { className: E.unreadDot })
                                                       ]
                                                   })
                                                 : y
                                     }),
-                                    'mentions' === E.type && null != E.count && (0, r.jsx)(c.mAB, { count: E.count }),
-                                    'unread' === E.type &&
-                                        null != E.count &&
+                                    'mentions' === b.type && null != b.count && (0, r.jsx)(c.mAB, { count: b.count }),
+                                    'unread' === b.type &&
+                                        null != b.count &&
                                         (0, r.jsx)(c.Text, {
                                             variant: 'eyebrow',
-                                            children: (s = E.count) > 50 ? ''.concat(50, '+') : s.toString()
+                                            children: (s = b.count) > 50 ? ''.concat(50, '+') : s.toString()
                                         })
                                 ]
                             }),
@@ -147,24 +148,31 @@ function E(e) {
         ]
     });
 }
-function O() {
+function y() {
     let e = i.useRef(null),
         { notificationCenterVariant: t } = h.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
         n = (0, s.e7)([d.Z], () => d.Z.getChannelId()),
-        l = i.useMemo(() => m.Z5c.NOTIFICATIONS_INBOX(null != n ? n : void 0), [n]);
+        l = i.useMemo(() => b.Z5c.NOTIFICATIONS_INBOX(null != n ? n : void 0), [n]),
+        a = (0, g.m)();
     return t === h.jP.SIDEBAR
-        ? (0, r.jsx)(E, { onClick: () => (0, o.uL)(l) })
+        ? (0, r.jsx)(O, {
+              onClick: () => {
+                  (a(), (0, o.uL)(l));
+              }
+          })
         : t === h.jP.POPOUT
-          ? (0, r.jsx)(g.Z, {
+          ? (0, r.jsx)(m.Z, {
                 targetElementRef: e,
                 popoutPosition: 'bottom',
                 popoutAlign: 'center',
                 spacing: 2,
                 children: (t, n, i) =>
-                    (0, r.jsx)(E, {
+                    (0, r.jsx)(O, {
                         ref: e,
                         selectedOverride: n,
-                        onClick: t,
+                        onClick: () => {
+                            (a(), t());
+                        },
                         popoutProps: i
                     })
             })

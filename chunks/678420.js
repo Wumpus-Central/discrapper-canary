@@ -3,14 +3,14 @@ var r = n(255367),
     o = n(73800),
     i = n(481060),
     a = n(661111),
-    s = n(766411),
-    l = n(626135),
+    l = n(766411),
+    s = n(626135),
     c = n(388080),
     d = n(981631),
     u = n(596401),
     p = n(388032),
     m = n(104313);
-function _(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                b(e, t, n[t]);
             }));
     }
     return e;
@@ -50,7 +50,7 @@ class g extends o.PureComponent {
         var e, t;
         return (0, r.jsx)(
             c.Z,
-            ((e = b({}, this.props)),
+            ((e = _({}, this.props)),
             (t = t =
                 {
                     onClose: this.close,
@@ -76,40 +76,40 @@ class g extends o.PureComponent {
         var t;
         (super(...e),
             (t = this),
-            _(this, 'maxScrolledPercentage', 0),
-            _(this, 'mountedAt', 0),
-            _(this, 'close', () => {
+            b(this, 'maxScrolledPercentage', 0),
+            b(this, 'mountedAt', 0),
+            b(this, 'close', () => {
                 (0, i.Mr3)(u.Xd);
             }),
-            _(this, 'handleScroll', (e) => {
+            b(this, 'handleScroll', (e) => {
                 let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
                 this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
             }),
-            _(this, 'track', function (e) {
+            b(this, 'track', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: o } = t.props,
                     { date: i, revision: a } = o,
-                    s = b({ change_log_id: ''.concat(i, ':').concat(a) }, n);
+                    l = _({ change_log_id: ''.concat(i, ':').concat(a) }, n);
                 (r ||
-                    (s = b(
+                    (l = _(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10)
                         },
-                        s
+                        l
                     )),
-                    l.default.track(e, s));
+                    s.default.track(e, l));
             }));
     }
 }
 function h(e) {
-    let { changelog: t, loaded: n, clientTooOld: l } = (0, s.E)();
+    let { changelog: t, loaded: n, clientTooOld: s } = (0, l.E)();
     if (
         (o.useEffect(() => {
             if (n && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
         }, [n, t]),
-        l)
+        s)
     )
         return (0, r.jsx)(i.Y0X, {
             transitionState: e.transitionState,

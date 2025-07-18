@@ -1,30 +1,29 @@
-(r.d(t, { Z: () => m }), r(388685));
+(r.d(t, { Z: () => b }), r(388685));
 var n = r(255367),
     l = r(73800),
     i = r(120356),
     o = r.n(i),
     a = r(622535),
-    s = r(755721),
-    c = r(481060),
-    u = r(63063),
-    d = r(597688),
-    p = r(297651),
-    f = r(215023),
-    g = r(981631),
-    h = r(388032),
-    b = r(806734);
-let m = (e) => {
+    s = r(481060),
+    c = r(63063),
+    u = r(597688),
+    d = r(297651),
+    p = r(215023),
+    f = r(981631),
+    g = r(388032),
+    h = r(806734);
+let b = (e) => {
     var t, r, i;
-    let { wideBannerBlock: m, handleTransition: _, tab: O } = e,
-        C = null == (t = d.Z.getCategoryByStoreListingId(m.categoryStoreListingId)) ? void 0 : t.skuId,
+    let { wideBannerBlock: b, handleTransition: m, tab: _ } = e,
+        C = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
+        O = l.useRef(null),
         v = l.useRef(null),
-        E = l.useRef(null),
-        [S, y] = l.useState();
+        [E, S] = l.useState();
     l.useEffect(() => {
-        let e = E.current;
+        let e = v.current;
         if (null == e) return;
         let t = () => {
-            e.naturalWidth > 0 && e.naturalHeight > 0 && y(1080 * (e.naturalHeight / e.naturalWidth));
+            e.naturalWidth > 0 && e.naturalHeight > 0 && S(1080 * (e.naturalHeight / e.naturalWidth));
         };
         return (
             e.complete ? t() : (e.onload = t),
@@ -33,56 +32,58 @@ let m = (e) => {
             }
         );
     }, []);
-    let x = null != C ? C : '',
-        { handleCardVisibilityChange: j } = (0, p.E)(x, 'home', 'marketing wide banner'),
-        T = m.bannerUrl;
-    if (null == T) return null;
-    let P = O === f.AW.ORBS;
+    let y = null != C ? C : '',
+        { handleCardVisibilityChange: x } = (0, d.E)(y, 'home', 'marketing wide banner'),
+        j = b.bannerUrl;
+    if (null == j) return null;
+    let T = _ === p.AW.ORBS;
     return (0, n.jsx)(a.$, {
-        innerRef: v,
-        onChange: j,
+        innerRef: O,
+        onChange: x,
         threshold: 0,
         children: (0, n.jsxs)('div', {
-            ref: v,
-            className: o()(b.row, b.between, b.bannerBlockContainer, b.centeredSection, { [b.extraRounded]: P }),
+            ref: O,
+            className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
             children: [
                 (0, n.jsx)('div', {
-                    className: o()(b.wideBannerBackgroundImg, { [b.extraRounded]: P }),
+                    className: o()(h.wideBannerBackgroundImg, { [h.extraRounded]: T }),
                     children: (0, n.jsx)('img', {
-                        ref: E,
-                        src: T,
-                        alt: m.title,
-                        className: o()(b.wideBannerArt, { [b.wideBannerArtOrbs]: P }),
-                        style: { height: null != S ? ''.concat(S, 'px') : 'auto' }
+                        ref: v,
+                        src: j,
+                        alt: b.title,
+                        className: o()(h.wideBannerArt, { [h.wideBannerArtOrbs]: T }),
+                        style: { height: null != E ? ''.concat(E, 'px') : 'auto' }
                     })
                 }),
                 (0, n.jsx)('div', {
-                    className: b.wideBannerContentContainer,
-                    style: { maxHeight: null != S ? ''.concat(S, 'px') : 'auto' },
+                    className: h.wideBannerContentContainer,
+                    style: { maxHeight: null != E ? ''.concat(E, 'px') : 'auto' },
                     children: (0, n.jsxs)('div', {
-                        className: b.wideBannerTextContainer,
+                        className: h.wideBannerTextContainer,
                         children: [
-                            (0, n.jsx)(c.X6q, {
-                                style: { color: null != (r = m.bannerTextColor) ? r : 'var(--header-primary)' },
-                                className: P ? b.wideBannerOrbsHeading : void 0,
-                                variant: P ? 'heading-xl/bold' : 'heading-lg/semibold',
-                                children: m.title
+                            (0, n.jsx)(s.X6q, {
+                                style: { color: null != (r = b.bannerTextColor) ? r : 'var(--header-primary)' },
+                                className: T ? h.wideBannerOrbsHeading : void 0,
+                                variant: T ? 'heading-xl/bold' : 'heading-lg/semibold',
+                                children: b.title
                             }),
-                            (0, n.jsx)(c.Text, {
-                                style: { color: null != (i = m.bannerTextColor) ? i : 'var(--text-muted)' },
+                            (0, n.jsx)(s.Text, {
+                                style: { color: null != (i = b.bannerTextColor) ? i : 'var(--text-muted)' },
                                 lineClamp: 2,
-                                variant: P ? 'text-md/medium' : 'text-sm/medium',
-                                children: P ? h.intl.format(h.t.SFFP7O, { helpdeskArticle: u.Z.getArticleURL(g.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : m.body
+                                variant: T ? 'text-md/medium' : 'text-sm/medium',
+                                children: T ? g.intl.format(g.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : b.body
                             })
                         ]
                     })
                 }),
-                !0 !== m.disableCta &&
-                    (0, n.jsx)(s.zx, {
-                        className: b.wideBannerBlockButton,
-                        color: s.Tt.PRIMARY,
-                        onClick: () => _('shop wide banner', x),
-                        children: h.intl.string(h.t.jVcuVV)
+                !0 !== b.disableCta &&
+                    (0, n.jsx)('div', {
+                        className: h.wideBannerBlockButton,
+                        children: (0, n.jsx)(s.zxk, {
+                            variant: 'overlay-primary',
+                            onClick: () => m('shop wide banner', y),
+                            text: g.intl.string(g.t.jVcuVV)
+                        })
                     })
             ]
         })

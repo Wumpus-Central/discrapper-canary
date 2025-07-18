@@ -25,8 +25,8 @@ var r = n(255367),
     b = n(706454),
     E = n(314897),
     x = n(699516),
-    v = n(914010),
-    C = n(594174),
+    C = n(914010),
+    v = n(594174),
     y = n(768581),
     O = n(433534),
     j = n(506895),
@@ -42,8 +42,8 @@ function R(e) {
     let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: h } = e,
         { name: _, bot: b } = (t = (0, N.O)(t)),
         x = null == b ? void 0 : b.id,
-        v = (0, f.ye)(t),
-        C = y.ZP.getApplicationIconURL({
+        C = (0, f.ye)(t),
+        v = y.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
@@ -58,14 +58,14 @@ function R(e) {
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != x && v && H,
-        z = B && v,
+        V = null != x && C && H,
+        z = B && C,
         W = (0, A.G)(t),
         K = (0, A.z)(t),
         Y = i.useMemo(() => {
             let e = [];
             return (
-                v
+                C
                     ? (z &&
                           e.push({
                               label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
@@ -101,15 +101,15 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, M, t.id, G, a, R, D, v, K, x]),
-        X = v ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
+        }, [z, V, U, F, M, t.id, G, a, R, D, C, K, x]),
+        X = C ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
     return (0, r.jsx)(I.W, {
         title: _,
         staticBannerSrc: O,
         videoBannerSrc: S,
         onClickBanner: W,
         bannerAspectRatio: Z,
-        iconSrc: C,
+        iconSrc: v,
         embedUrl: n,
         info: X,
         actions: Y,
@@ -176,21 +176,21 @@ function L(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(
-            [v.Z],
+            [C.Z],
             () => {
                 var e;
-                return null != (e = v.Z.getGuildId()) ? e : void 0;
+                return null != (e = C.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         u = (0, _.N)(t.id),
         d = (0, o.Wu)(
-            [C.default, x.Z],
+            [v.default, x.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = C.default.getUser(n.author_id),
+                    let r = v.default.getUser(n.author_id),
                         i = x.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }

@@ -2,7 +2,6 @@ e.exports = {
     modalRoot: 'modalRoot_c50f62',
     modalContent: 'modalContent_c50f62',
     profilePreviewHeader: 'profilePreviewHeader_c50f62',
-    modalCloseButton: 'modalCloseButton_c50f62',
     collectibleInfoContainer: 'collectibleInfoContainer_c50f62',
     collectiblePreviewsContainer: 'collectiblePreviewsContainer_c50f62',
     previewsContainerInner: 'previewsContainerInner_c50f62',

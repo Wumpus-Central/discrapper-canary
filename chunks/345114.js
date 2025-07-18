@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -58,11 +58,11 @@ function x(e) {
         ]
     });
 }
-function v(e) {
+function C(e) {
     var t, l;
     let { channel: f, message: _, compact: b } = e,
         E = (0, s.ZP)(_),
-        v = (function (e) {
+        C = (function (e) {
             let { author: t, channel: n, message: r } = e,
                 l = n.guild_id,
                 s = (0, c.l)({
@@ -90,8 +90,8 @@ function v(e) {
             message: _,
             author: E
         }),
-        C = (null == (t = _.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = _.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
-    return null == v
+        v = (null == (t = _.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = _.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
+    return null == C
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -99,9 +99,9 @@ function v(e) {
                       icon: n(570111),
                       timestamp: _.timestamp,
                       compact: b,
-                      children: v
+                      children: C
                   }),
-                  C &&
+                  v &&
                       (0, r.jsx)(x, {
                           guildId: f.guild_id,
                           user: _.author,

@@ -15,28 +15,28 @@ var n = r(255367),
     b = r(752053),
     m = r(81136),
     _ = r(566564),
-    O = r(795477),
-    C = r(215023);
-let v = [C.AW.HOME, C.AW.ORBS];
+    C = r(795477),
+    O = r(215023);
+let v = [O.AW.HOME, O.AW.ORBS];
 function E(e) {
     let { tab: t, isFullScreen: r, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: E, advancedScroller: x } = e,
         j = S();
     y(j);
     let T = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
         { setCategoryRef: P, handleScrollToCategory: L } = (0, h.xV)(s.current),
-        I = l.useCallback(
+        k = l.useCallback(
             async (e, t, n) => {
                 m(e, t);
                 let l = n && !r && !T,
-                    o = t === i.T.ORB ? C.AW.ORBS : C.AW.CATALOG;
+                    o = t === i.T.ORB ? O.AW.ORBS : O.AW.CATALOG;
                 (await u(o, l), null != t && L(t));
             },
             [r, T, u, L, m]
         ),
-        k = (0, p.FF)('CollectiblesContent'),
-        { searchError: B } = (0, f.a)();
-    return k && null != B
-        ? (0, n.jsx)(O.Z, {})
+        I = (0, p.FF)('CollectiblesContent'),
+        { searchError: N } = (0, f.a)();
+    return I && null != N
+        ? (0, n.jsx)(C.Z, {})
         : null != j
           ? (0, n.jsx)(b.Z, {
                 onRetry: E,
@@ -47,7 +47,7 @@ function E(e) {
             ? (0, n.jsx)(_.Z, {
                   isFullScreen: r,
                   scrollerRef: s,
-                  handleTransition: I,
+                  handleTransition: k,
                   tab: t,
                   transitionState: d
               })
