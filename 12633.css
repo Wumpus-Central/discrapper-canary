@@ -39536,17 +39536,9 @@ body .headerAnimation_b54a5b {
     gap: 8px
 }
 
-.buyButton__78e61 {
-    gap: 4px
-}
-
-.buyButton__78e61,
 .easterEggContainer__78e61 {
     align-items: center;
-    display: flex
-}
-
-.easterEggContainer__78e61 {
+    display: flex;
     height: 228px;
     justify-content: center;
     position: absolute;
@@ -40427,10 +40419,6 @@ div.modalOverrideBody__34eac {
     border: 1px solid var(--input-border);
     border-radius: var(--radius-xs);
     padding: var(--size-12) var(--size-8)
-}
-
-.innerEmojiSelect__0f18a {
-    flex: 1
 }
 
 .emojiContent__0f18a {
