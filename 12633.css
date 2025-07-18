@@ -26597,25 +26597,6 @@ span.clanTag__5d473 {
     padding-right: 4px
 }
 
-.shine__0d242 {
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: Shine__0d242;
-    animation-timing-function: ease-in-out;
-    color: var(--opacity-white-8);
-    visibility: hidden
-}
-
-@keyframes Shine__0d242 {
-    0% {
-        transform: translate3d(-100%, 0, 0)
-    }
-
-    to {
-        transform: translate3d(200%, 0, 0)
-    }
-}
-
 input[type=checkbox]:focus-visible+.label__0d242 {
     box-shadow: 0 0 8px var(--brand-500)
 }
@@ -26637,10 +26618,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .labelChecked__0d242 {
     background: var(--brand-500);
     box-shadow: unset
-}
-
-.label__0d242:hover .shine__0d242 {
-    visibility: visible
 }
 
 .icon__0d242 {
