@@ -116,8 +116,9 @@ function ei(e) {
 }
 function ea(e) {
     if ((0, d.Z)(e)) return v.r9;
+    if ((0, f.Z)(e)) return en(e.name);
     let t = null != e.application_id ? m.Z.getApplication(e.application_id) : null;
-    return null != t ? t : (0, f.Z)(e) ? en(e.name) : (0, _.Z)(e) && null != e.url ? er(e.url) : (null != e.application_id && ei(e.application_id), t);
+    return null != t ? t : (0, _.Z)(e) && null != e.url ? er(e.url) : (null != e.application_id && ei(e.application_id), t);
 }
 function eo(e) {
     let t = m.Z.getApplication(e);

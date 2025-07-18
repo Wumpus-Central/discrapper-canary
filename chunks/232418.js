@@ -1,10 +1,4 @@
-n.d(t, { S: () => _ });
-var r = n(255367);
-n(73800);
-var i = n(692547),
-    a = n(331595),
-    o = n(267843);
-function s(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,23 +11,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            }));
-    }
-    return e;
-}
-function c(e, t) {
+function i(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,29 +23,7 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = f(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-    }
-    return i;
-}
-function f(e, t) {
+function a(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,27 +32,4 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = (e) => {
-    var t,
-        n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
-        h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
-    return (0, r.jsx)(
-        'svg',
-        u(l({}, (0, a.Z)(h)), {
-            xmlns: 'http://www.w3.org/2000/svg',
-            width: g,
-            height: E,
-            fill: 'none',
-            viewBox: '0 0 24 24',
-            children: (0, r.jsx)('path', {
-                d: 'M10.24 3.17a1 1 0 1 1-.39-1.96l.53-.1a11.09 11.09 0 0 1 3.77.1l.1.02a1 1 0 0 1-.5 1.94 9.06 9.06 0 0 0-3.5 0ZM20.87 7.27A1 1 0 0 1 19.48 7 9.06 9.06 0 0 0 17 4.52a1 1 0 0 1 1.11-1.67c1.2.8 2.23 1.84 3.04 3.04a1 1 0 0 1-.28 1.38ZM4.52 7a1 1 0 0 1-1.67-1.11c.8-1.2 1.84-2.23 3.04-3.04l.09-.05A1 1 0 0 1 7 4.52l-.36.25A9.06 9.06 0 0 0 4.52 7ZM18.09 10.86a1.5 1.5 0 0 1-2.05-1.1 1.52 1.52 0 0 1 1.47-1.8 1.5 1.5 0 0 1 1.5 1.51 1.51 1.51 0 0 1-.92 1.4ZM6.5 10.98a1.5 1.5 0 0 1-1.47-1.8 1.51 1.51 0 0 1 1.18-1.19 1.5 1.5 0 0 1 1.8 1.48 1.51 1.51 0 0 1-1.5 1.5ZM21.97 13.3a1 1 0 0 1-.97-1.03V12c0-.6-.06-1.19-.17-1.76a1 1 0 1 1 1.96-.39c.14.7.21 1.42.21 2.15v.08a1 1 0 0 1 0 .1V12.32l-.01.1a1 1 0 0 1-1.02.87ZM2.38 14.93a1 1 0 0 1-1.17-.78l-.1-.53a11.08 11.08 0 0 1 .1-3.77l.02-.1a1 1 0 0 1 1.94.5 9.05 9.05 0 0 0 0 3.5 1 1 0 0 1-.79 1.18ZM12.17 15.67a5.49 5.49 0 0 1-4.54-2.18l-.2-.27-.05-.1a1.01 1.01 0 0 1 .33-1.3 1 1 0 0 1 1.32.2l.07.08.12.17a3.51 3.51 0 0 0 5.7-.17 1 1 0 1 1 1.67 1.12 5.52 5.52 0 0 1-4.42 2.45ZM7.27 20.87a1 1 0 0 1-1.38.28c-1.2-.8-2.23-1.84-3.04-3.04A1 1 0 1 1 4.52 17c.65.98 1.5 1.83 2.48 2.48a1 1 0 0 1 .27 1.4ZM12 23c-.73 0-1.45-.07-2.15-.2a1 1 0 0 1 .4-1.97c.56.11 1.15.17 1.75.17h.14a1 1 0 0 1 .08 0h.07a1 1 0 0 1 .06 2H12ZM19 14a1 1 0 0 1 1 1v3h3.1a1 1 0 0 1 0 2H20v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z',
-                fill: 'string' == typeof _ ? _ : _.css,
-                className: p
-            })
-        })
-    );
-};
+(n(255367), n(73800), n(692547), n(331595), n(267843));
