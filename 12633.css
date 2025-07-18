@@ -26797,7 +26797,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .emojiPickerHasTabWrapper_c0e32c .categoryList_c0e32c {
-    top: 50px;
     top: 53px
 }
 
@@ -26969,7 +26968,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     box-sizing: border-box;
     display: flex;
     height: var(--custom-expression-picker-constants-expression-picker-list-section-heading-height);
-    padding: 0 4px 0 12px;
+    padding: 0 4px 0 8px;
     z-index: 1
 }
 
@@ -26987,7 +26986,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     align-items: center;
     color: var(--header-secondary);
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: var(--font-weight-semibold);
     justify-content: flex-start;
     min-width: 0;
@@ -27009,15 +27008,14 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .headerLabel__14245 {
-    margin-right: 8px;
+    margin-right: 4px;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-transform: uppercase;
     white-space: nowrap
 }
 
 .headerIcon__14245+.headerLabel__14245 {
-    margin-left: 8px
+    margin-left: 4px
 }
 
 .headerCollapseIcon__14245 {
@@ -29064,6 +29062,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .sectionHeaderContent__61424 {
+    align-items: center;
     display: flex
 }
 
@@ -29085,8 +29084,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .sectionTitle__61424 {
-    margin: 0 8px;
-    text-transform: uppercase
+    margin: 0 4px
 }
 
 .headerIcon__61424 {
@@ -29156,7 +29154,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .categoryList__3ad28 {
-    top: 50px
+    top: 53px
 }
 
 .stickerCategory__3ad28 {
@@ -29186,7 +29184,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .stickerCategoryGeneric__3ad28 {
     box-sizing: border-box;
+    margin-bottom: 2px;
     padding: 4px
+}
+
+.stickerCategoryGeneric__3ad28.stickerCategoryGenericLast__3ad28 {
+    margin-bottom: var(--custom-stickers-constants-sticker-category-icon-margin)
 }
 
 .stickerCategoryGeneric__3ad28:hover {
@@ -29570,6 +29573,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .packHeader_e94b8c {
+    padding-left: 0;
     position: -webkit-sticky;
     position: sticky;
     top: 0
