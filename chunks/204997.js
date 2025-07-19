@@ -6,5 +6,6 @@ e.exports = {
     questTile: 'questTile__60f82',
     selected: 'selected__60f82',
     unselected: 'unselected__60f82',
-    spinner: 'spinner__60f82'
+    spinner: 'spinner__60f82',
+    emptyStateContainer: 'emptyStateContainer__60f82'
 };

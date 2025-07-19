@@ -114,18 +114,18 @@ let q = function () {
         }, [z]);
     (0, g.Tt)({ location: H.intl.string(H.t.JALI2N) });
     let q = z ? H.intl.format(H.t.BCBIlp, {}) : H.intl.format(H.t.lmMBf3, {}),
-        Q = z ? H.intl.format(H.t.U9FY0N, {}) : H.intl.string(H.t.oWCrBg),
-        X = i.useRef(null);
+        X = z ? H.intl.format(H.t.U9FY0N, {}) : H.intl.string(H.t.oWCrBg),
+        Q = i.useRef(null);
     return (0, r.jsx)(k.k.Provider, {
         value: { onAssetLoadComplete: P },
         children: (0, r.jsx)('div', {
             className: F.container,
             children: z
                 ? (0, r.jsx)(M.t.Provider, {
-                      value: X,
+                      value: Q,
                       children: (0, r.jsxs)(v.Z, {
                           onScroll: l,
-                          ref: X,
+                          ref: Q,
                           children: [
                               (0, r.jsx)(I.a, {
                                   selectedTabId: e,
@@ -153,7 +153,7 @@ let q = function () {
                               }),
                               (0, r.jsxs)(_.Z, {
                                   title: q,
-                                  description: Q,
+                                  description: X,
                                   betaTag: z && W,
                                   button: z
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -199,14 +199,14 @@ let q = function () {
                               children: [(0, r.jsx)('div', { className: F.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: u.qDn })]
                           }),
                           (0, r.jsx)(M.t.Provider, {
-                              value: X,
+                              value: Q,
                               children: (0, r.jsxs)(v.Z, {
                                   onScroll: l,
-                                  ref: X,
+                                  ref: Q,
                                   children: [
                                       (0, r.jsxs)(_.Z, {
                                           title: q,
-                                          description: Q,
+                                          description: X,
                                           button: (0, r.jsx)(u.zxk, {
                                               variant: 'overlay-primary',
                                               text: H.intl.string(H.t.hvVgAQ),

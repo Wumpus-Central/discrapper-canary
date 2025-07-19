@@ -22,7 +22,8 @@ async function d() {
 function f() {
     let e = [];
     (s.Re.forEach((t) => {
-        t.isEnabled() && e.push(t.id);
+        let n = t.getEnabledFeatureName();
+        null != n && e.push(n);
     }),
         o.default.track(l.rMx.LIBDISCORE_LOADED, {
             success: !0,

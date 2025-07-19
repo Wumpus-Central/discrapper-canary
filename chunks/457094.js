@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(306721),
     K = n(531551),
     q = n(38618),
-    Q = n(972830),
-    X = n(684572),
+    X = n(972830),
+    Q = n(684572),
     J = n(584233),
     $ = n(15274),
     ee = n(434404),
@@ -100,8 +100,8 @@ var r = n(255367),
     eY = n(944486),
     eK = n(914010),
     eq = n(695103),
-    eQ = n(241890),
-    eX = n(417363),
+    eX = n(241890),
+    eQ = n(417363),
     eJ = n(900974),
     e$ = n(358085),
     e0 = n(998502),
@@ -164,7 +164,7 @@ let e9 = (0, m.l)((e) => {
             n = (0, ek.default)(t.pathname);
         return (
             null != n &&
-                (0, Q.h)(() =>
+                (0, X.h)(() =>
                     f.Z.open(n.section, n.subsection, {
                         openWithoutBackstack: !1,
                         impressionSource: n.source
@@ -209,7 +209,7 @@ let e9 = (0, m.l)((e) => {
         }
     ),
     tt = (0, m.l)((0, T.e)(j.Z, null, { passProps: !1 })),
-    tn = (0, T.e)(X.default, null, { passProps: !1 }),
+    tn = (0, T.e)(Q.default, null, { passProps: !1 }),
     tr = [e3.Z5c.GUILD_BOOSTING_MARKETING(ey.Hw.guildId()), ...Array.from(e8.Vg).map((e) => e3.Z5c.CHANNEL(ey.Hw.guildId(), e))];
 function ti(e) {
     let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
@@ -240,7 +240,7 @@ let tl = [
             let { match: t } = e,
                 { id: n } = t.params;
             return (
-                (0, Q.h)(() =>
+                (0, X.h)(() =>
                     (0, ew.openUserProfileModal)({
                         userId: n,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME]
@@ -256,7 +256,7 @@ let tl = [
             let { match: t } = e,
                 { gameId: n, action: i } = t.params;
             return (
-                eX.Z.whenInitialized(() => {
+                eQ.Z.whenInitialized(() => {
                     eW.Z.whenInitialized(() => {
                         switch (i) {
                             case 'launch': {
@@ -290,7 +290,7 @@ let tl = [
     {
         path: [e3.Z5c.GUILD_CREATE],
         render: function () {
-            return ((0, Q.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute }));
+            return ((0, X.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute }));
         }
     },
     {
@@ -300,7 +300,7 @@ let tl = [
                 { section: n, subsection: i } = t.params,
                 o = (0, l.parse)(location.search).feature;
             return (
-                (0, Q.h)(() =>
+                (0, X.h)(() =>
                     en.v({
                         section: (0, et.Z)(e3.pNK, n),
                         subsection: (0, et.Z)(e3.KsC, i),
@@ -323,7 +323,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: i } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e('5863'), n.e('95626')]).then(n.bind(n, 751212));
                         return (t) => {
@@ -357,7 +357,7 @@ let tl = [
     {
         path: [e3.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return ((0, Q.h)(() => f.Z.open(e3.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute }));
+            return ((0, X.h)(() => f.Z.open(e3.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eH.Z.defaultRoute }));
         },
         isSessionRequired: !0
     },
@@ -378,7 +378,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     (0, $.bO)({ eventId: i });
                 }),
                 (0, r.jsx)(a.l_, { to: e3.Z5c.CHANNEL(n) })
@@ -392,7 +392,7 @@ let tl = [
             let { match: t } = e,
                 { guildId: n, section: i, subsection: l } = t.params;
             return (
-                (0, Q.h)(() => {
+                (0, X.h)(() => {
                     ee.Z.open(n, (0, et.Z)(e3.pNK, i), void 0, (0, et.Z)(e3.KsC, l));
                 }),
                 (0, r.jsx)(a.l_, { to: e3.Z5c.CHANNEL(n) })
@@ -456,7 +456,7 @@ class ts extends i.PureComponent {
             eJ.Z.init(),
             O.Z.initialize(),
             ex.Z.init(),
-            eQ.Z.init(),
+            eX.Z.init(),
             eR.Z.init(),
             eP.Z.initialize(),
             ej.Z.initialize(),

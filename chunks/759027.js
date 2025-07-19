@@ -77,8 +77,8 @@ function y(e) {
         [E, S] = r.useState(!1),
         [P, w] = r.useState(!1),
         [I, R] = r.useState(!1),
-        [k, A] = r.useState(!1),
-        [Z, D] = r.useState(null),
+        [k, Z] = r.useState(!1),
+        [A, D] = r.useState(null),
         L = (e) => ((null == e && (e = O.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
         M = (e) => {
             let t = new Date(e);
@@ -118,7 +118,7 @@ function y(e) {
             }),
                 T());
         },
-        B = async () => {
+        U = async () => {
             try {
                 await s.tn.post({
                     url: '/debug/subscriptions/'.concat(O.id, '/transition'),
@@ -135,13 +135,13 @@ function y(e) {
             }
             T();
         },
-        z = (null == (t = b.GP[O.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
-        U = null == (a = O.metadata) ? void 0 : a.ended_at,
-        G = null != U ? new Date(U).toISOString().substring(0, 10) : '',
+        B = (null == (t = b.GP[O.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
+        z = null == (a = O.metadata) ? void 0 : a.ended_at,
+        G = null != z ? new Date(z).toISOString().substring(0, 10) : '',
         V = O.hasActiveTrial,
         H = (null == (l = O.metadata) ? void 0 : l.active_discount_id) != null;
     return (0, n.jsxs)('div', {
-        className: i()(f.card, z ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
+        className: i()(f.card, B ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
         children: [
             V &&
                 (0, n.jsx)(o.P3F, {
@@ -261,7 +261,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                A(!k);
+                                Z(!k);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -392,13 +392,13 @@ function y(e) {
                                             variant: 'primary',
                                             size: 'sm',
                                             text: 'Renew Subscription',
-                                            onClick: (e) => B()
+                                            onClick: (e) => U()
                                         }),
-                                        null !== Z &&
+                                        null !== A &&
                                             (0, n.jsx)(o.kzN, {
                                                 className: v.error,
                                                 onDismiss: () => D(null),
-                                                children: Z
+                                                children: A
                                             })
                                     ]
                                 }),

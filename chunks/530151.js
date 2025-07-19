@@ -435,7 +435,7 @@ let Y = () =>
             onClick: () => m.A1(t.applicationId, t.branchId)
         });
     },
-    Q = (e) => {
+    X = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(B, {
             icon: h.Dio,
@@ -443,7 +443,7 @@ let Y = () =>
             onClick: () => m.al(t.applicationId, t.branchId)
         });
     },
-    X = [
+    Q = [
         {
             key: 'name',
             cellClassName: k.nameCell,
@@ -491,8 +491,8 @@ let Y = () =>
                                     })
                                   : null)
                         : null != e.state
-                          ? e.state.type !== R.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, r.jsx)(q, { item: e }) : null != t && t.paused ? (0, r.jsx)(Y, {}) : (0, r.jsx)(K, { item: e })), (i = (0, r.jsx)(Q, { item: e })))
-                          : (i = (0, r.jsx)(Q, { item: e })),
+                          ? e.state.type !== R.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, r.jsx)(q, { item: e }) : null != t && t.paused ? (0, r.jsx)(Y, {}) : (0, r.jsx)(K, { item: e })), (i = (0, r.jsx)(X, { item: e })))
+                          : (i = (0, r.jsx)(X, { item: e })),
                     (0, r.jsxs)(I.Z, {
                         justify: I.Z.Justify.END,
                         children: [n, i]
@@ -547,7 +547,7 @@ class J extends i.PureComponent {
                       }),
                       (0, r.jsx)(v.Z, {
                           hasHeader: !1,
-                          columns: X,
+                          columns: Q,
                           data: e,
                           className: k.table,
                           rowClassName: k.row,

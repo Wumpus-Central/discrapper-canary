@@ -1,22 +1,22 @@
-n.d(t, { Z: () => l });
+n.d(e, { Z: () => l });
 var i = n(255367);
 n(73800);
-var a = n(180781),
-    o = n(321867),
+var o = n(180781),
+    a = n(321867),
     r = n(486324);
-function l(e) {
-    let { type: t, analyticsPage: n, analyticsSection: l, isGIF: c, banner: s } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && c
-        ? (0, i.jsx)(o.Z, {
+function l(t) {
+    let { type: e, analyticsPage: n, analyticsSection: l, isGIF: s, banner: d } = t;
+    return [r.pC.BANNER, r.pC.AVATAR].includes(e) && s
+        ? (0, i.jsx)(a.Z, {
               analyticsSection: l,
-              type: t
+              type: e
           })
-        : t === r.pC.GUILD_BANNER
-          ? (0, i.jsx)(a.Z, {
+        : e === r.pC.GUILD_BANNER
+          ? (0, i.jsx)(o.Z, {
                 analyticsSection: l,
                 analyticsPage: n,
-                isGIF: c,
-                banner: s
+                isGIF: s,
+                banner: d
             })
           : null;
 }

@@ -25,6 +25,10 @@ function o(e, t, n) {
 let s = [],
     l = Symbol('unknown');
 class c {
+    getEnabledFeatureName() {
+        let e = this.getCachedConfig();
+        return void 0 === e || e.treatmentId <= 0 ? null : ''.concat(this.id, ':').concat(e.treatmentId);
+    }
     getCachedConfig() {
         return (this.cachedConfig === l && ((0, a.X6)() ? (this.cachedConfig = (0, a.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)), this.cachedConfig);
     }
@@ -51,9 +55,9 @@ class u extends c {
                 return 'typescript';
         }
     }
-    isEnabled() {
-        let e = this.getCachedConfig();
-        return void 0 !== e && e.treatmentId > 0;
+    getEnabledFeatureName() {
+        let e = this.getCachedKvStoreMode();
+        return 'typescript' === e ? null : 'KvStore['.concat(this.storeName, ',').concat(e, ']');
     }
     getLabel() {
         return 'libdiscore KVStore['.concat(this.storeName, '] Migration');
@@ -79,10 +83,6 @@ class u extends c {
     }
 }
 class d extends c {
-    isEnabled() {
-        let e = this.getCachedConfig();
-        return void 0 !== e && e.treatmentId > 0;
-    }
     getLabel() {
         return 'libdiscore Telemetry';
     }

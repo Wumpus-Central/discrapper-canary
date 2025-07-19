@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(285865),
     K = n(659971),
     q = n(821020),
-    Q = n(147341),
-    X = n(82409),
+    X = n(147341),
+    Q = n(82409),
     J = n(664608),
     $ = n(270759),
     ee = n(918701),
@@ -241,7 +241,7 @@ let eZ = (0, u.Un)({
             { notificationCenterVariant: n } = q.Lk.useExperiment({ location: 'Sidebar' }),
             i = (0, p.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
         return window.location.pathname.startsWith(eC.Z5c.NOTIFICATIONS_INBOX())
-            ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(X.Z, { includePanelSpacing: !0 }))
+            ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(Q.Z, { includePanelSpacing: !0 }))
             : window.location.pathname.startsWith(eC.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(eC.Z5c.GUILD_DISCOVERY) || (0, ee.OG)()
               ? (0, r.jsx)(L.Z, {})
               : null != e
@@ -257,7 +257,7 @@ let eZ = (0, u.Un)({
     }),
     eB = (e) => (0, r.jsx)(eU, eA({}, e)),
     eV = () => (0, r.jsx)(w.Z, {}),
-    eH = (e) => (null != e.match.params.channelId ? eB(e) : (0, r.jsx)(Q.Z, {})),
+    eH = (e) => (null != e.match.params.channelId ? eB(e) : (0, r.jsx)(X.Z, {})),
     eF = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(D.Z, { guildId: t.params.guildId }) : null;
@@ -292,8 +292,8 @@ let eZ = (0, u.Un)({
         };
     },
     eq = (e) => (0, r.jsx)(y.Z, eA({}, e)),
-    eQ = () => (0, r.jsx)($.Z, {}),
-    eX = () => (0, r.jsx)(W.Z, {}),
+    eX = () => (0, r.jsx)($.Z, {}),
+    eQ = () => (0, r.jsx)(W.Z, {}),
     eJ = () => (0, r.jsx)(J.Z, {}),
     e$ = (e) => {
         let { match: t } = e;
@@ -602,7 +602,7 @@ function e8() {
                                                 }),
                                                 (0, r.jsx)(I.Z, {
                                                     path: eC.Z5c.MESSAGE_REQUESTS,
-                                                    render: eX,
+                                                    render: eQ,
                                                     disableTrack: !0
                                                 }),
                                                 (0, r.jsx)(I.Z, {
@@ -613,7 +613,7 @@ function e8() {
                                                 (0, r.jsx)(I.Z, {
                                                     path: eC.Z5c.ME,
                                                     exact: !0,
-                                                    render: eQ,
+                                                    render: eX,
                                                     impressionName: c.ImpressionNames.FRIENDS,
                                                     disableTrack: !0
                                                 }),

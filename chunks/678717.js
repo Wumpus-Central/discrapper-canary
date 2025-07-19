@@ -31,15 +31,15 @@ var _ = a(392750),
     I = a(272193),
     R = a(685560),
     k = a(735959),
-    A = a(572444),
-    Z = a(246992),
+    Z = a(572444),
+    A = a(246992),
     D = a(484662),
     L = a(496025),
     M = a(442954),
     F = a(633001),
-    B = a(702904),
-    z = a(178821),
-    U = a(891401),
+    U = a(702904),
+    B = a(178821),
+    z = a(891401),
     G = a(958328),
     V = a(315384),
     H = a(514866),
@@ -124,7 +124,7 @@ function ei(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: ee.v0.DEVELOPMENT,
-                        render: () => (0, n.jsx)(z.ZP, {})
+                        render: () => (0, n.jsx)(B.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -227,7 +227,7 @@ function ei(e) {
                     id: 'perks',
                     name: 'Perks',
                     group: ee.v0.PREMIUM,
-                    render: () => (0, n.jsx)(U.Z, {})
+                    render: () => (0, n.jsx)(z.Z, {})
                 }),
                 e.push({
                     id: 'potions',
@@ -246,7 +246,7 @@ function ei(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: ee.v0.BILLING,
-                        render: () => (0, n.jsx)(B.Z, {})
+                        render: () => (0, n.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -276,7 +276,7 @@ function ei(e) {
                     id: 'krisp_tester',
                     name: 'Krisp Tester',
                     group: ee.v0.AUDIO_VIDEO,
-                    render: () => (0, n.jsx)(A.Z, {})
+                    render: () => (0, n.jsx)(Z.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
@@ -307,7 +307,7 @@ function ei(e) {
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
-        (0, n.jsxs)(Z.Gk, {
+        (0, n.jsxs)(A.Gk, {
             children: [
                 (0, n.jsxs)(x.ZP, {
                     className: er.headerBar,
@@ -355,7 +355,7 @@ function ei(e) {
                 }),
                 (0, n.jsx)(i, {}),
                 o(),
-                (0, n.jsx)(Z.Br, { className: en.layerContainer })
+                (0, n.jsx)(A.Br, { className: en.layerContainer })
             ]
         })
     );

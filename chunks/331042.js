@@ -520,7 +520,7 @@ let eu = 880,
         return (0, r.jsx)(_.zxk, {
             variant: 'secondary',
             onClick: s,
-            text: ei.intl.string(ei.t.gmnzqK),
+            text: ei.intl.string(ei.t.ouo4FB),
             icon: _.OgN
         });
     },

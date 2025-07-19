@@ -99,8 +99,8 @@ function S(e) {
             clearTimeout(e);
         };
     }, [O]);
-    let { id: P, expires_at: w, redeemed_at: I, trial_id: R, subscription_trial: k, referrer: A } = m,
-        Z =
+    let { id: P, expires_at: w, redeemed_at: I, trial_id: R, subscription_trial: k, referrer: Z } = m,
+        A =
             null !=
             (a =
                 null ==
@@ -112,14 +112,14 @@ function S(e) {
                     : t.label)
                 ? a
                 : 'Unknown';
-    null != A && (Z = ''.concat(Z, ' from @').concat(A.username));
+    null != Z && (A = ''.concat(A, ' from @').concat(Z.username));
     let D = null != w,
         L = null != w && new Date(w).getTime() < Date.now(),
         M = (null == k ? void 0 : k.sku_id) === j.Si.TIER_0,
         F = async () => {
-            (T(!0), D ? await B({ expiresAt: null }) : await (0, d.a)(m), b(), T(!1));
+            (T(!0), D ? await U({ expiresAt: null }) : await (0, d.a)(m), b(), T(!1));
         },
-        B = async (e) => {
+        U = async (e) => {
             T(!0);
             try {
                 await s.tn.patch({
@@ -173,10 +173,10 @@ function S(e) {
             };
         }
     }, [f, y]);
-    let z = 'Active';
+    let B = 'Active';
     return (
-        D && (z = 'Acked'),
-        L && (z = 'Expired'),
+        D && (B = 'Acked'),
+        L && (B = 'Expired'),
         (0, n.jsxs)('div', {
             className: i()(_.card, M ? _.gradientWrapperTier0 : _.gradientWrapperTier2),
             children: [
@@ -185,7 +185,7 @@ function S(e) {
                     children: (0, n.jsx)(c.X6q, {
                         variant: 'heading-lg/semibold',
                         color: 'always-white',
-                        children: Z
+                        children: A
                     })
                 }),
                 (0, n.jsxs)(c.P3F, {
@@ -263,7 +263,7 @@ function S(e) {
                         (0, n.jsx)('input', {
                             type: 'date',
                             value: null != w ? w.substring(0, 10) : '',
-                            onChange: (e) => B({ expiresAt: e.target.value })
+                            onChange: (e) => U({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -277,8 +277,8 @@ function S(e) {
                         }),
                         (0, n.jsx)('input', {
                             type: 'text',
-                            value: null != (u = null == A ? void 0 : A.id) ? u : '',
-                            onChange: (e) => B({ referrerId: e.target.value })
+                            value: null != (u = null == Z ? void 0 : Z.id) ? u : '',
+                            onChange: (e) => U({ referrerId: e.target.value })
                         })
                     ]
                 }),
@@ -293,8 +293,8 @@ function S(e) {
                             }),
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acked' === z ? void 0 : 'always-white',
-                                children: z
+                                color: 'Acked' === B ? void 0 : 'always-white',
+                                children: B
                             })
                         }),
                         null != I &&
@@ -391,10 +391,10 @@ function P(e) {
             };
         }
     }, [m, h]);
-    let A = 'Active';
+    let Z = 'Active';
     return (
-        I && (A = 'Expired'),
-        w && (A = 'Acked'),
+        I && (Z = 'Expired'),
+        w && (Z = 'Acked'),
         (0, n.jsxs)('div', {
             className: i()(_.card, _.discount),
             children: [
@@ -500,8 +500,8 @@ function P(e) {
                             }),
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acked' === A ? void 0 : 'always-white',
-                                children: A
+                                color: 'Acked' === Z ? void 0 : 'always-white',
+                                children: Z
                             })
                         }),
                         null != T &&
@@ -531,15 +531,15 @@ function w() {
         [j, N] = r.useState([]),
         [w, I] = r.useState([]),
         [R, k] = r.useState(!0),
-        [A, Z] = r.useState(10080),
+        [Z, A] = r.useState(10080),
         [D, L] = r.useState([]),
-        { entitlements: M, deleteFractionalPremium: F, refreshEntitlementList: B } = (0, f.m)();
+        { entitlements: M, deleteFractionalPremium: F, refreshEntitlementList: U } = (0, f.m)();
     r.useEffect(() => {
-        B();
-    }, [B]);
-    let z = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
+        U();
+    }, [U]);
+    let B = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     (r.useEffect(() => {
-        L(z(M));
+        L(B(M));
     }, [M]),
         r.useEffect(() => {
             (0 === e.length || 0 === a.length || R) &&
@@ -564,7 +564,7 @@ function w() {
                     (N(e.trial.sort((e, t) => e.id.localeCompare(t.id))), I(e.discount.sort((e, t) => e.id.localeCompare(t.id))));
                 }));
         }, [R]));
-    let U = async () => {
+    let z = async () => {
             null != i && (await C(i, 'trial'), k(!0));
         },
         G = async () => {
@@ -574,8 +574,8 @@ function w() {
             (await T(), k(!0));
         },
         H = async () => {
-            let e = new Date(Date.now() + 60 * A * 1000).toISOString();
-            (await E(e), B());
+            let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
+            (await E(e), U());
         };
     return (0, n.jsx)(c.zJl, {
         className: g.panel,
@@ -636,7 +636,7 @@ function w() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
                                     text: 'Create',
-                                    onClick: U
+                                    onClick: z
                                 })
                             ]
                         })
@@ -742,10 +742,10 @@ function w() {
                                             value: 10080
                                         }
                                     ],
-                                    isSelected: (e) => A === e,
+                                    isSelected: (e) => Z === e,
                                     placeholder: 'Reverse Trial Length',
                                     serialize: (e) => String(e),
-                                    select: (e) => Z(e),
+                                    select: (e) => A(e),
                                     popoutLayerContext: b.O$
                                 }),
                                 (0, n.jsx)(c.zxk, {

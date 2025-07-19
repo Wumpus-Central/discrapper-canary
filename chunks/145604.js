@@ -46,7 +46,7 @@ var r = n(255367),
     Y = n(630388),
     K = n(823379),
     q = n(981631);
-function Q(e, t, n) {
+function X(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function Q(e, t, n) {
         e
     );
 }
-function X(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function X(e) {
                 })
             )),
             r.forEach(function (t) {
-                Q(e, t, n[t]);
+                X(e, t, n[t]);
             }));
     }
     return e;
@@ -86,7 +86,7 @@ class J extends i.PureComponent {
                 i = y.ZP.getActiveEventByChannel(e.voiceChannelId);
             W.default.track(
                 q.rMx.LEAVE_VOICE_CHANNEL,
-                X(
+                Q(
                     {
                         channel_id: e.voiceChannelId,
                         channel_type: e.voiceChannelType,
@@ -112,13 +112,13 @@ class J extends i.PureComponent {
                 t = null != e ? e.name : '',
                 n = j.Z.getStageInstanceByChannel(d),
                 r = y.ZP.getActiveEventByChannel(d);
-            ((0, u.yw)(q.rMx.CHANNEL_OPENED, X({}, (0, u.$H)(d))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: d }));
+            ((0, u.yw)(q.rMx.CHANNEL_OPENED, Q({}, (0, u.$H)(d))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: d }));
             let i = null,
                 l = z.default.getFocusedPID();
             (null != l && N.default.getOverlayMethod(l) !== o.gl.Disabled && (z.default.isInstanceLocked() ? (i = q.ADE.OVERLAY_LOCKED_ACTIVATED) : z.default.isInstanceLocked() || (i = z.default.isPinned(q.Odu.TEXT) ? q.ADE.OVERLAY_UNLOCKED_PINNED : q.ADE.OVERLAY_UNLOCKED)),
                 W.default.track(
                     q.rMx.JOIN_VOICE_CHANNEL,
-                    X(
+                    Q(
                         {
                             location: i,
                             channel_id: d,
@@ -208,7 +208,7 @@ class J extends i.PureComponent {
             (v ? ((e = 'screen'), (n = (0, f.t)())) : I && (e = 'camera'),
                 W.default.track(
                     q.rMx.VIDEO_INPUT_TOGGLED,
-                    X(
+                    Q(
                         {
                             video_input_type: e,
                             video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
@@ -236,7 +236,7 @@ class J extends i.PureComponent {
                         });
                 W.default.track(
                     q.rMx.ACK_COMMUNITY_MESSAGES,
-                    X(
+                    Q(
                         {
                             last_message_id: null == i ? void 0 : i.id,
                             last_message_reference_message_id: null == i || null == (c = i.messageReference) ? void 0 : c.message_id,
@@ -261,7 +261,7 @@ class J extends i.PureComponent {
         return null;
     }
     constructor(...e) {
-        (super(...e), Q(this, 'isMessageRequestsInitialized', !1));
+        (super(...e), X(this, 'isMessageRequestsInitialized', !1));
     }
 }
 function $() {
@@ -318,21 +318,21 @@ function $() {
     i.useEffect(() => {
         z.current = k;
     }, [k]);
-    let { connected: Y, friendsTabSection: K, homeLink: Q, isMemberPending: $, selectedChannelId: ee, selectedGuildId: et } = k;
+    let { connected: Y, friendsTabSection: K, homeLink: X, isMemberPending: $, selectedChannelId: ee, selectedGuildId: et } = k;
     (i.useEffect(() => {
         if (Y && null != ee) {
             let e = (0, d.K)(Z.Z.getChannel(ee), !0);
-            ((0, u.yw)(q.rMx.CHANNEL_OPENED, X({}, e, (0, u.$H)(ee))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), z.current.isTextInVoice && (0, u.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel }));
+            ((0, u.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, u.$H)(ee))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), z.current.isTextInVoice && (0, u.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel }));
         }
     }, [Y, ee]),
         i.useEffect(() => {
-            Y && null == et && Q === q.Z5c.FRIENDS && (0, h.Z)({ tab_opened: K });
-        }, [Y, K, Q, et]),
+            Y && null == et && X === q.Z5c.FRIENDS && (0, h.Z)({ tab_opened: K });
+        }, [Y, K, X, et]),
         i.useEffect(() => {
             if (Y && null != et) {
                 var e, t, n, r;
                 let i =
-                    ((n = X(
+                    ((n = Q(
                         {},
                         $
                             ? {
@@ -367,8 +367,8 @@ function $() {
     let en = i.useRef(!1);
     return (
         i.useEffect(() => {
-            Y && null == et && Q === q.Z5c.MESSAGE_REQUESTS && !en.current && ((en.current = !0), W.default.track(q.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: z.current.numMessageRequests }));
-        }, [Y, et, Q]),
-        (0, r.jsx)(J, X({}, k))
+            Y && null == et && X === q.Z5c.MESSAGE_REQUESTS && !en.current && ((en.current = !0), W.default.track(q.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: z.current.numMessageRequests }));
+        }, [Y, et, X]),
+        (0, r.jsx)(J, Q({}, k))
     );
 }

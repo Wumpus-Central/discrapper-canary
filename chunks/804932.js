@@ -1,18 +1,31 @@
 n.d(t, {
-    Qz: () => c,
-    RZ: () => u,
-    s_: () => a,
-    vU: () => d
+    Qz: () => u,
+    RZ: () => d,
+    s_: () => c,
+    vU: () => _
 });
-var r,
-    i = n(73800),
-    l = n(493773),
-    o = n(626135),
-    s = n(981631),
-    a = (((r = {}).CLICK = 'click'), (r.CONTEXT_MENU = 'context_menu'), (r.BOOKMARK = 'bookmark'), (r.ACK = 'ack'), (r.SETTINGS = 'settings'), r);
-function c(e) {
+var r = n(73800),
+    i = n(493773),
+    a = n(626135),
+    o = n(981631);
+function s(e) {
+    let { variant: t } = e;
+    a.default.track(o.rMx.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t });
+}
+function l(e) {
+    let { timeToLoad: t, unreadsCount: n, totalMessagesCount: r } = e;
+    a.default.track(o.rMx.NOTIFICATIONS_INBOX_LOADED, {
+        time_to_load: t,
+        unreads_count: n,
+        total_messages_count: r
+    });
+}
+var c = (function (e) {
+    return ((e.CLICK = 'click'), (e.CONTEXT_MENU = 'context_menu'), (e.BOOKMARK = 'bookmark'), (e.ACK = 'ack'), (e.SETTINGS = 'settings'), e);
+})({});
+function u(e) {
     let { message: t, interactionType: n } = e;
-    o.default.track(s.rMx.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+    a.default.track(o.rMx.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
         interaction_type: n,
         message_id: t.id,
         channel_id: t.channel_id,
@@ -20,52 +33,42 @@ function c(e) {
         message_type: t.type
     });
 }
-function u(e) {
+function d(e) {
     let { section: t, enabled: n } = e;
-    o.default.track(s.rMx.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
+    a.default.track(o.rMx.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
         section: t,
         enabled: n
     });
 }
-function d(e) {
-    let { notificationCenterVariant: t, messages: n, unreadMessages: r } = e,
-        a = i.useRef(null),
-        c = i.useRef(!1);
-    ((0, l.ZP)(() => {
-        (!(function (e) {
-            let { variant: t } = e;
-            o.default.track(s.rMx.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t });
-        })({ variant: t }),
-            (a.current = Date.now()));
+function f(e) {
+    let { unreadsCount: t, totalMessagesCount: n } = e;
+    a.default.track(o.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
+        unreads_count: t,
+        total_messages_count: n
+    });
+}
+function _(e) {
+    let { notificationCenterVariant: t, messages: n, unreadMessages: a } = e,
+        o = r.useRef(null),
+        c = r.useRef(!1);
+    ((0, i.ZP)(() => {
+        (s({ variant: t }), (o.current = Date.now()));
     }),
-        i.useEffect(() => {
-            if (null != a.current && null != n && null != r && !c.current) {
-                let e = Date.now() - a.current;
+        r.useEffect(() => {
+            if (null != o.current && null != n && null != a && !c.current) {
+                let e = Date.now() - o.current;
                 ((c.current = !0),
-                    (function (e) {
-                        let { timeToLoad: t, unreadsCount: n, totalMessagesCount: r } = e;
-                        o.default.track(s.rMx.NOTIFICATIONS_INBOX_LOADED, {
-                            time_to_load: t,
-                            unreads_count: n,
-                            total_messages_count: r
-                        });
-                    })({
+                    l({
                         timeToLoad: e,
-                        unreadsCount: r.length,
+                        unreadsCount: a.length,
                         totalMessagesCount: n.length
                     }));
             }
-        }, [n, r]),
-        (0, l.zq)(() => {
+        }, [n, a]),
+        (0, i.zq)(() => {
             var e, t;
-            !(function (e) {
-                let { unreadsCount: t, totalMessagesCount: n } = e;
-                o.default.track(s.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
-                    unreads_count: t,
-                    total_messages_count: n
-                });
-            })({
-                unreadsCount: null != (e = null == r ? void 0 : r.length) ? e : 0,
+            f({
+                unreadsCount: null != (e = null == a ? void 0 : a.length) ? e : 0,
                 totalMessagesCount: null != (t = null == n ? void 0 : n.length) ? t : 0
             });
         }));

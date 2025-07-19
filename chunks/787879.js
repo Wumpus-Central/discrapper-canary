@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ei }), n(361932), n(187205), n(539854), n(388685), n(642613));
+(n.d(t, { Z: () => el }), n(361932), n(187205), n(539854), n(388685), n(642613));
 var r,
     i = n(512722),
     a = n.n(i),
@@ -205,7 +205,7 @@ function Q(e) {
 }
 function J(e) {
     let { ids: t } = e;
-    s().forEach(t, X);
+    t.forEach(X);
 }
 function $() {
     L = !0;
@@ -223,7 +223,20 @@ function et(e, t) {
 function en() {
     L = !1;
 }
-class er extends (r = l.ZP.Store) {
+let er = null;
+function ei(e) {
+    let { messageId: t, isUnread: n } = e,
+        r = T.Lk.getCurrentConfig({ location: 'handleInboxItemClick' }).notificationCenterVariant;
+    er = n && r === T.jP.SIDEBAR ? t : null;
+}
+function ea(e) {
+    let { messageId: t } = e;
+    t === er && (er = null);
+}
+function eo() {
+    er = null;
+}
+class es extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(y.ZP, g.ZP, m.Z, b.ZP, f.Z, _.Z, O.ZP, E.Z, d.ZP);
     }
@@ -233,14 +246,14 @@ class er extends (r = l.ZP.Store) {
     getInboxMessages() {
         return D;
     }
-    get oldestDisplayedMessageId() {
-        return M;
-    }
     getNotifyingChannelIds() {
         return P;
     }
     getChannelInfoMap() {
         return R;
+    }
+    get oldestDisplayedMessageId() {
+        return M;
     }
     get hasMoreCurrentRequest() {
         return j;
@@ -260,9 +273,12 @@ class er extends (r = l.ZP.Store) {
     get isLoadingComplete() {
         return !L && !j && '0' === k;
     }
+    get lastClickedUnreadMessageId() {
+        return er;
+    }
 }
-C(er, 'displayName', 'NotificationsInboxStore');
-let ei = new er(c.Z, {
+C(es, 'displayName', 'NotificationsInboxStore');
+let el = new es(c.Z, {
     LOAD_RECENT_MENTIONS_SUCCESS: q,
     LOAD_MESSAGES_SUCCESS: z,
     MESSAGE_CREATE: K,
@@ -279,5 +295,8 @@ let ei = new er(c.Z, {
     CHANNEL_DELETE: H,
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START: $,
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: ee,
-    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: en
+    NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: en,
+    NOTIFICATIONS_INBOX_ITEM_CLICK: ei,
+    NOTIFICATIONS_INBOX_ITEM_ACK: ea,
+    NOTIFICATIONS_INBOX_CLOSE: eo
 });

@@ -34,8 +34,6 @@ e.exports = {
     titleImageContainer: 'titleImageContainer_c50f62',
     titleImage: 'titleImage_c50f62',
     description: 'description_c50f62',
-    button: 'button_c50f62',
-    primaryButton: 'primaryButton_c50f62',
     disclaimer: 'disclaimer_c50f62',
     disclaimerLight: 'disclaimerLight_c50f62',
     learnMoreLink: 'learnMoreLink_c50f62',
@@ -47,5 +45,6 @@ e.exports = {
     checkoutButtonsRow: 'checkoutButtonsRow_c50f62',
     variantsSwitch: 'variantsSwitch_c50f62',
     headerButtonContainer: 'headerButtonContainer_c50f62',
-    externalProductProfilePreview: 'externalProductProfilePreview_c50f62'
+    externalProductProfilePreview: 'externalProductProfilePreview_c50f62',
+    orbIconAligned: 'orbIconAligned_c50f62'
 };

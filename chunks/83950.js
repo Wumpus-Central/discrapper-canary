@@ -1,4 +1,4 @@
-e.d(t, { default: () => k });
+e.d(t, { default: () => A });
 var r = e(255367),
     n = e(73800),
     s = e(990547),
@@ -10,26 +10,26 @@ var r = e(255367),
     d = e(213609),
     u = e(1585),
     E = e(313201),
-    v = e(300284),
-    m = e(626135),
-    p = e(768581),
-    x = e(335131),
-    f = e(981631),
+    x = e(300284),
+    v = e(626135),
+    f = e(768581),
+    m = e(335131),
+    p = e(981631),
     h = e(388032),
     b = e(777134),
     L = e(749423);
-function A() {
-    let a = (0, p.NZ)({
+function k() {
+    let a = (0, f.NZ)({
             avatarDecoration: { asset: 'a_49c479e15533fb4c02eb320c9c137433' },
             canAnimate: !1,
             size: (0, u.y9)(c.EFr.SIZE_120)
         }),
-        t = (0, p.NZ)({
+        t = (0, f.NZ)({
             avatarDecoration: { asset: 'a_c3cffc19e9784f7d0b005eecdf1b566e' },
             canAnimate: !1,
             size: (0, u.y9)(c.EFr.SIZE_120)
         }),
-        e = (0, p.NZ)({
+        e = (0, f.NZ)({
             avatarDecoration: { asset: 'a_d72066b8cecbadd9fc951913ebcc384f' },
             canAnimate: !1,
             size: (0, u.y9)(c.EFr.SIZE_120)
@@ -61,31 +61,31 @@ function A() {
         ]
     });
 }
-function k(a) {
-    let { transitionState: t, onClose: e, skuId: p } = a,
+function A(a) {
+    let { transitionState: t, onClose: e, skuId: f } = a,
         L = (0, E.Dt)(),
-        { analyticsLocations: k } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
-        I = (0, v.Z)({ analyticsLocations: k }),
+        { analyticsLocations: A } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
+        I = (0, x.Z)({ analyticsLocations: A }),
         C = n.useRef(null);
     return (
         n.useEffect(
             () => (
                 (0, o.Mn)({ avatarDecoration: null }),
                 () => {
-                    m.default.track(f.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
+                    v.default.track(p.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
                         reason: C.current,
-                        sku_id: p
+                        sku_id: f
                     });
                 }
             ),
-            [p]
+            [f]
         ),
         (0, d.Z)({
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
             properties: {
-                location_stack: k,
-                sku_id: p
+                location_stack: A,
+                sku_id: f
             }
         }),
         (0, r.jsxs)(c.Y0X, {
@@ -94,7 +94,7 @@ function k(a) {
             className: b.container,
             parentComponent: 'CollectiblesExpiryModal',
             children: [
-                (0, r.jsx)(A, {}),
+                (0, r.jsx)(k, {}),
                 (0, r.jsx)(c.olH, {
                     onClick: () => {
                         ((C.current = 'tap_close_button'), e());
@@ -119,11 +119,11 @@ function k(a) {
                 (0, r.jsxs)(c.mzw, {
                     className: b.footer,
                     children: [
-                        (0, r.jsx)(c.Avr, {
-                            variant: 'primary',
+                        (0, r.jsx)(c.zxk, {
+                            variant: 'secondary',
                             text: h.intl.string(h.t['x8T+k5']),
                             onClick: () => {
-                                ((C.current = 'change_avatar_decoration'), e(), (0, i.xf)(), I(), (0, u.ps)({ analyticsLocations: k }));
+                                ((C.current = 'change_avatar_decoration'), e(), (0, i.xf)(), I(), (0, u.ps)({ analyticsLocations: A }));
                             }
                         }),
                         (0, r.jsx)(c.zxk, {
@@ -132,8 +132,8 @@ function k(a) {
                             onClick: () => {
                                 ((C.current = 'go_to_shop'),
                                     e(),
-                                    (0, x.mK)({
-                                        analyticsLocations: k,
+                                    (0, m.mK)({
+                                        analyticsLocations: A,
                                         analyticsSource: l.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
                                     }));

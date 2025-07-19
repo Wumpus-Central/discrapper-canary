@@ -82,8 +82,8 @@ let V = (e) => {
                 return i;
             })(e, ['selected', 'route', 'locationState']);
         let q = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-            Q = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-            X = (0, E.Qo)(q, Q),
+            X = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
+            Q = (0, E.Qo)(q, X),
             { enabled: J, variant: $ } = v.p1.useExperiment({ location: 'NitroTabButton' }),
             { enabled: ee } = v.pd.useExperiment({ location: 'NitroTabButton' });
         (v.VL.useConfig({ location: 'NitroTabButton' }), v.CF.useConfig({ location: 'NitroTabButton' }));
@@ -172,7 +172,7 @@ let V = (e) => {
                           })),
                           (O = 4));
         let eO = G.intl.string(G.t.Ipxkoq);
-        (X && ee && (eO = G.intl.string(G.t['4gwVVl'])), !X && J && ($ === v.Rx.TRY_NITRO && null != en ? (eO = G.intl.string(G.t['3O6A4e'])) : $ === v.Rx.JOIN_NITRO ? (eO = G.intl.string(G.t.brBiOz)) : $ === v.Rx.GET_NITRO && (eO = G.intl.string(G.t.GayC1t))));
+        (Q && ee && (eO = G.intl.string(G.t['4gwVVl'])), !Q && J && ($ === v.Rx.TRY_NITRO && null != en ? (eO = G.intl.string(G.t['3O6A4e'])) : $ === v.Rx.JOIN_NITRO ? (eO = G.intl.string(G.t.brBiOz)) : $ === v.Rx.GET_NITRO && (eO = G.intl.string(G.t.GayC1t))));
         let ey = (0, r.jsx)(
             c.Qj,
             ((H = (function (e) {
@@ -210,7 +210,7 @@ let V = (e) => {
                         (eh === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ef(U.L.TAKE_ACTION),
                             _.default.track(M.rMx.NITRO_TAB_VISITED, {
                                 badge_decorator: O,
-                                has_premium: X
+                                has_premium: Q
                             }),
                             null != e_ && eE(U.L.USER_DISMISS));
                     }
