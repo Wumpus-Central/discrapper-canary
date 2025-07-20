@@ -29333,7 +29333,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background-color: var(--background-base-lowest);
     border-radius: 4px;
     display: flex;
-    padding: 8px 0 8px 8px
+    padding: 8px 12px 8px 8px
 }
 
 .icon_ac65bb {
