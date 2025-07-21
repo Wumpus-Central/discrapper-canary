@@ -6,7 +6,7 @@ var r = n(512722),
     s = n(570140),
     l = n(311929),
     c = n(611907),
-    u = n(466772);
+    u = n(544407);
 function d(e, t, n) {
     return (
         t in e
@@ -34,10 +34,9 @@ class b extends a.yh {
     memoized(e) {
         let t = Symbol();
         return () => {
-            let { memoized: n } = this.derived;
-            if (h.call(n, t)) return n[t];
-            let r = e(this.root);
-            return ((n[t] = r), r);
+            let { memoized: n } = this.derived,
+                r = n[t];
+            return (h.call(n, t) || ((r = e(this.root)), (n[t] = r)), r);
         };
     }
     version() {
