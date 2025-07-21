@@ -225,7 +225,7 @@ function ei(e, t) {
             error: t.message,
             error_description: t.stack
         }),
-        (0, E.V)(t, K[e], { extra: er(e, 'host') }),
+        (0, E.V6)(t, K[e], { extra: er(e, 'host') }),
         J.clearClickZones());
 }
 function ea(e, t) {
@@ -235,7 +235,7 @@ function ea(e, t) {
             error: t.message,
             error_description: t.stack
         }),
-        (0, E.V)(t, K[e], { extra: er(e, 'renderer') }),
+        (0, E.V6)(t, K[e], { extra: er(e, 'renderer') }),
         J.clearClickZones());
 }
 function eo(e, t) {
@@ -444,7 +444,7 @@ let eS = (() => {
             let r = m.ZP.requireModule('discord_desktop_overlay');
             (null == r || null == (e = r.init) || e.call(r), r.setCaptureZoneCallback(eE), r.setHostWindowCallbacks(ep, eh, eg), r.setFocusCallback(ey), null == (t = r.setFocusLostCallback) || t.call(r, eO), null == (n = r.setSuccessfullyShownCallback) || n.call(r, eT), (B = r), (0, g.setOutOfProcessSupport)(!0), eu(), M.info('OverlayV3 Module Loaded'));
         } catch (e) {
-            throw (M.error('failed loading overlay module', e), (0, g.setOutOfProcessSupport)(!1), (0, E.V)(e, s.gl.OutOfProcess, { extra: er(null != Z ? Z : g.UNSET_PID, 'module_load') }), e);
+            throw (M.error('failed loading overlay module', e), (0, g.setOutOfProcessSupport)(!1), (0, E.V6)(e, s.gl.OutOfProcess, { extra: er(null != Z ? Z : g.UNSET_PID, 'module_load') }), e);
         }
     }
     return () => (null == e && (e = t()), e);

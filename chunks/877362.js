@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(99690),
     p = n(607070),
     m = n(623624),
-    f = n(678558),
-    _ = n(343649),
+    _ = n(678558),
+    f = n(343649),
     x = n(742409),
     v = n(518950),
     g = n(271383),
@@ -150,7 +150,7 @@ function y(e) {
                               className: O.boostIcon
                           })
                       }),
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(_.Z, {
                       guild: C,
                       className: O.content,
                       analyticsLocation: {
@@ -159,7 +159,7 @@ function y(e) {
                       },
                       color: c.Tt.BRAND,
                       size: c.Ph.MEDIUM,
-                      intent: _.P.NONE,
+                      intent: f.P.NONE,
                       fullWidth: !0,
                       icon: (0, r.jsx)(u.$Eu, {
                           color: 'currentColor',

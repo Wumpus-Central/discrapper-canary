@@ -93,7 +93,7 @@ function O(e) {
     let { dismissibleContent: t, guildId: n } = e,
         r = new Date();
     if ((m.renderedAtTimestamps.set(t, r.getTime()), s.O.has(t) || m.dailyCapOverridden)) return;
-    let i = (0, l.Vc)(t) && null != n;
+    let i = (0, l.fn)(t) && null != n;
     if (!(!i && m.dismissibleContentSeenDuringSession.has(t))) {
         if (!(i && y(t, n))) {
             if (i) {
@@ -152,7 +152,7 @@ class S extends (r = i.ZP.PersistedStore) {
     hasUserHitDCCap(e, t) {
         if (null != e && (s.O.has(e) || m.dailyCapOverridden)) return !1;
         if (null != e) {
-            let n = null != t && (0, l.Vc)(e);
+            let n = null != t && (0, l.fn)(e);
             if ((n && null != t && y(e, t)) || (!n && m.dismissibleContentSeenDuringSession.has(e))) return !1;
         }
         let n = new Date();

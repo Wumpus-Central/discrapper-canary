@@ -1,6 +1,6 @@
 n.d(t, {
-    D: () => c,
-    V: () => u
+    D1: () => u,
+    V6: () => d
 });
 var r = n(615287),
     i = n(960048);
@@ -56,27 +56,27 @@ function l(e, t) {
         e
     );
 }
-function c(e) {
-    var t, n;
-    let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        s = arguments.length > 2 ? arguments[2] : void 0;
-    i.Z.captureException(
-        e,
-        l(o({}, s), {
-            extra: l(o({}, null != (t = null == s ? void 0 : s.extra) ? t : {}), { overlayMethod: null == a ? null : r.gl[null != a ? a : r.gl.Disabled] }),
-            tags: o({ source: 'overlay' }, null != (n = null == s ? void 0 : s.tags) ? n : {})
-        })
-    );
+function c() {
+    var e;
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+        n = arguments.length > 1 ? arguments[1] : void 0;
+    return l(o({}, n), {
+        tags: o(
+            {
+                source: 'overlay',
+                overlayMethod: ''.concat(null == t ? null : r.gl[null != t ? t : r.gl.Disabled])
+            },
+            null != (e = null == n ? void 0 : n.tags) ? e : {}
+        )
+    });
 }
 function u(e) {
-    var t, n;
-    let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        s = arguments.length > 2 ? arguments[2] : void 0;
-    return i.Z.captureCrash(
-        e,
-        l(o({}, s), {
-            extra: l(o({}, null != (t = null == s ? void 0 : s.extra) ? t : {}), { overlayMethod: null == a ? null : r.gl[null != a ? a : r.gl.Disabled] }),
-            tags: o({ source: 'overlay' }, null != (n = null == s ? void 0 : s.tags) ? n : {})
-        })
-    );
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        n = arguments.length > 2 ? arguments[2] : void 0;
+    i.Z.captureException(e, c(t, n));
+}
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        n = arguments.length > 2 ? arguments[2] : void 0;
+    return i.Z.captureCrash(e, c(t, n));
 }

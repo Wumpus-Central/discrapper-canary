@@ -67,17 +67,17 @@ let a = (0, r.Z)({
         }
     }),
     s = (e) => {
-        let { enabled: t, delayMs: n, inExperiment: r } = a.getCurrentConfig({ location: e });
-        if (r)
-            return {
-                enabled: t,
-                delayMs: n,
-                inExperiment: !0
-            };
-        let { enabled: i, delayMs: s, inExperiment: l } = o.getConfig({ location: e });
-        return {
-            enabled: i,
-            delayMs: s,
-            inExperiment: l
-        };
+        let { enabled: t, delayMs: n, inExperiment: r } = a.getCurrentConfig({ location: e }),
+            { enabled: i, delayMs: s, inExperiment: l } = o.getConfig({ location: e });
+        return r
+            ? {
+                  enabled: t,
+                  delayMs: n,
+                  inExperiment: !0
+              }
+            : {
+                  enabled: i,
+                  delayMs: s,
+                  inExperiment: l
+              };
     };

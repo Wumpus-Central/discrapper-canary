@@ -153,7 +153,7 @@ let L = {
     },
     [j.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger(e, t) {
-            if ((0, v.s4)(t.shortcut)) return;
+            if (!(0, v.I1)(t.shortcut)) return;
             let n = (0, T.Z)();
             null != n && l.Z.setInputLocked(!S.default.isLocked(n), n);
         },

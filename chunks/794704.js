@@ -792,7 +792,7 @@ function ey() {
         r = !(0, er.supportsOutOfProcess)(),
         [s, a] = (0, p.Wu)([N.ZP], () => [N.ZP.canShowAdminWarning, N.ZP.getVisibleGame()], []),
         l = null != a && a.elevated && s,
-        o = (0, J.s4)(null != (e = null == t ? void 0 : t.shortcut) ? e : []);
+        o = !(0, J.I1)(null != (e = null == t ? void 0 : t.shortcut) ? e : []);
     return (0, i.jsx)(e_, {
         children: (0, i.jsx)('div', {
             className: ed.keybindMainContainer,

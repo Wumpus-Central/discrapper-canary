@@ -55,7 +55,21 @@ function p(e, t) {
             }
         };
     }
-    {
+    if ((0, o.ms)(e)) {
+        let t = r.Z.getGuildId();
+        if (null == t)
+            return {
+                isDismissed: !1,
+                handleToggleDismissState: () => {}
+            };
+        let n = (0, d.oK)(e, t);
+        return {
+            isDismissed: n,
+            handleToggleDismissState: function () {
+                null != t && (m(e, n), n ? (0, d.J0)(e, t) : (0, d.Ei)(e, t));
+            }
+        };
+    } else {
         let n = (0, a.jl)(t, e);
         return {
             isDismissed: n,

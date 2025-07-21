@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(838968),
     p = n(262212),
     m = n(279604),
-    f = n(279475),
-    _ = n(535396),
+    _ = n(279475),
+    f = n(535396),
     x = n(981631),
     v = n(93841),
     g = n(388032),
@@ -42,8 +42,8 @@ function E(e) {
 }
 function h(e) {
     let { isActive: t, index: n } = e,
-        i = (0, f.d)(t),
-        s = (0, f.u)(t),
+        i = (0, _.d)(t),
+        s = (0, _.u)(t),
         l = o.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
@@ -91,12 +91,12 @@ function C(e) {
     let { guildId: t, index: n, powerup: i, nextPowerup: s } = e,
         l = (0, u.Z)(t, i),
         c = (0, u.Z)(t, s),
-        x = l.type !== _.A3.INACTIVE,
-        v = c.type !== _.A3.INACTIVE,
-        g = l.type === _.A3.TIER_OVERRIDE_ACTIVATED,
+        x = l.type !== f.A3.INACTIVE,
+        v = c.type !== f.A3.INACTIVE,
+        g = l.type === f.A3.TIER_OVERRIDE_ACTIVATED,
         [C, I] = o.useState(void 0);
     (0, m.KT)(C);
-    let N = (0, f.d)(x);
+    let N = (0, _.d)(x);
     return (0, r.jsxs)(d.Z, {
         guildId: t,
         powerup: i,

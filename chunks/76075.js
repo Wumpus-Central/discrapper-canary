@@ -1,90 +1,73 @@
-e.d(t, { default: () => v });
-var i = e(255367);
-e(73800);
-var l = e(442837),
-    a = e(82659),
-    o = e(481060),
-    r = e(313201),
-    s = e(724723),
-    c = e(271383),
-    d = e(430824),
-    u = e(594174),
-    m = e(693546),
-    f = e(305325),
-    x = e(937111),
-    h = e(702286),
-    p = e(523924),
+e.d(t, { default: () => h });
+var i = e(255367),
+    o = e(73800),
+    a = e(442837),
+    l = e(82659),
+    r = e(481060),
+    s = e(271383),
+    u = e(430824),
+    c = e(594174),
+    d = e(693546),
+    m = e(305325),
+    p = e(937111),
+    f = e(702286),
     g = e(388032),
-    j = e(568410);
-let v = function (n) {
-    let { guildId: t, transitionState: e, onClose: v } = n,
-        R = (0, s.q)('MemberVerificationRejectedModal'),
-        C = (0, r.Dt)(),
-        _ = (0, l.e7)([x.Z], () => x.Z.getRequest(t), [t]),
-        b = (0, l.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        Z = (0, l.e7)([u.default], () => {
+    _ = e(568410);
+let h = function (n) {
+    let { guildId: t, transitionState: e, onClose: h } = n,
+        v = (0, a.e7)([p.Z], () => p.Z.getRequest(t), [t]),
+        C = (0, a.e7)([u.Z], () => u.Z.getGuild(t), [t]),
+        R = (0, a.e7)([c.default], () => {
             var n;
-            return null == (n = u.default.getCurrentUser()) ? void 0 : n.id;
+            return null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
         }),
-        T = (0, l.e7)([c.ZP], () => (null != Z ? c.ZP.getMember(t, Z) : null), [Z, t]),
-        y = () => {
-            (v(), null == T && (0, h.Z)());
-        },
-        P = async () => {
-            if (null == T ? void 0 : T.isPending) {
+        x = (0, a.e7)([s.ZP], () => (null != R ? s.ZP.getMember(t, R) : null), [R, t]),
+        Z = o.useCallback(() => {
+            (h(), null == x && (0, f.Z)());
+        }, [x, h]),
+        j = o.useCallback(async () => {
+            if (null == x ? void 0 : x.isPending) {
                 try {
-                    await m.Z.removeGuildJoinRequest(t);
+                    await d.Z.removeGuildJoinRequest(t);
                 } catch (n) {
                     throw n;
                 }
-                (v(), (0, f.hk)(t));
-            } else m.Z.resetGuildJoinRequest(t);
-        };
-    return R
-        ? (0, i.jsx)(a.u, {
-              transitionState: e,
-              onClose: v,
-              title: (null == b ? void 0 : b.name) != null ? g.intl.formatToPlainString(g.t['P+/gzM'], { guildName: b.name }) : g.intl.string(g.t.gBPcuL),
-              actions: [
-                  {
-                      text: g.intl.string(g.t.I1LYVl),
-                      variant: 'secondary',
-                      onClick: P
-                  },
-                  {
-                      text: g.intl.string(g.t.BddRzc),
-                      variant: 'critical-primary',
-                      onClick: y
-                  }
-              ],
-              children:
-                  (null == _ ? void 0 : _.rejectionReason) != null && (null == _ ? void 0 : _.rejectionReason) !== ''
-                      ? (0, i.jsxs)(o.Text, {
-                            variant: 'text-md/medium',
-                            color: 'header-secondary',
-                            children: [
-                                (0, i.jsx)('span', {
-                                    className: j.rejectionReasonLabel,
-                                    children: g.intl.string(g.t.cf1psb)
-                                }),
-                                (0, i.jsx)('span', { children: null == _ ? void 0 : _.rejectionReason })
-                            ]
-                        })
-                      : null
-          })
-        : (0, i.jsx)(o.Y0X, {
-              size: o.CgR.DYNAMIC,
-              transitionState: e,
-              'aria-labelledby': C,
-              parentComponent: 'MemberVerificationRejectedModal',
-              children: (0, i.jsx)(p.Z, {
-                  headerId: C,
-                  reapplyText: g.intl.string(g.t.I1LYVl),
-                  onReapply: P,
-                  confirmText: g.intl.string(g.t.BddRzc),
-                  onWithdrawApplication: y,
-                  rejectionReason: null == _ ? void 0 : _.rejectionReason,
-                  guild: b
-              })
-          });
+                (h(), (0, m.hk)(t));
+            } else d.Z.resetGuildJoinRequest(t);
+        }, [t, null == x ? void 0 : x.isPending, h]),
+        k = o.useMemo(
+            () => [
+                {
+                    text: g.intl.string(g.t.I1LYVl),
+                    variant: 'secondary',
+                    onClick: j
+                },
+                {
+                    text: g.intl.string(g.t.BddRzc),
+                    variant: 'critical-primary',
+                    onClick: Z
+                }
+            ],
+            [j, Z]
+        );
+    return (0, i.jsx)(l.u, {
+        transitionState: e,
+        onClose: h,
+        title: (null == C ? void 0 : C.name) != null ? g.intl.formatToPlainString(g.t['P+/gzM'], { guildName: C.name }) : g.intl.string(g.t.gBPcuL),
+        actions: k,
+        children:
+            (null == v ? void 0 : v.rejectionReason) != null && (null == v ? void 0 : v.rejectionReason) !== ''
+                ? (0, i.jsxs)(r.Text, {
+                      variant: 'text-md/medium',
+                      color: 'header-secondary',
+                      children: [
+                          (0, i.jsx)('span', {
+                              className: _.rejectionReasonLabel,
+                              children: g.intl.string(g.t.cf1psb)
+                          }),
+                          (0, i.jsx)('span', { children: null == v ? void 0 : v.rejectionReason })
+                      ]
+                  })
+                : null
+    });
 };

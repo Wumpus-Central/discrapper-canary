@@ -11,8 +11,8 @@ var o = n(990547),
     d = n(430824),
     p = n(742139),
     m = n(639777),
-    f = n(504392),
-    _ = n(981631);
+    _ = n(504392),
+    f = n(981631);
 function x(e) {
     let { guildId: t, powerupSkuId: n } = e,
         x = (0, i.e7)([d.Z], () => d.Z.getGuild(t)),
@@ -33,14 +33,14 @@ function x(e) {
     E)
         ? null
         : g || j
-          ? (0, r.jsx)(f.Z, {
+          ? (0, r.jsx)(_.Z, {
                 guildId: t,
                 powerupSkuId: n
             })
           : (0, r.jsx)(c.Z, {
                 analyticsLocation: {
-                    section: _.jXE.CHANNEL_LIST,
-                    object: _.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
+                    section: f.jXE.CHANNEL_LIST,
+                    object: f.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
                 },
                 guild: x
             });

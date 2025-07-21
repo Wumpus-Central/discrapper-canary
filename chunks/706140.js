@@ -122,31 +122,26 @@ function v(e, t, n) {
             var t, n, r;
             return null !== e ? (null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates) || null == (t = n[e]) ? void 0 : t.lastDismissedAtMs) : void 0;
         }),
-        o = null != a ? (Number.isNaN(Number(a)) ? void 0 : Number(a)) : void 0,
-        c = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
-        u = null;
-    if (null != e) {
-        let n = !(0, h.Bh)(e),
-            r = void 0 === o ? 0 : o + t.cooldownDurationMs,
-            i = Date.now(),
-            a = null == t.showAfterTimestamp || (i >= t.showAfterTimestamp && (null != o ? o : 0) <= t.showAfterTimestamp);
-        s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) ? (u = n && a && (null == o || i >= r) ? e : null) : null != o && (u = n && a && i >= r ? e : null);
-    }
-    return [
-        b(u, c, n),
-        r.useCallback(
-            (e, t) => {
-                null != u &&
-                    (0, p.Ow)(u, {
-                        dismissAction: e,
-                        groupName: n,
-                        guildId: c,
-                        forceTrack: t
-                    });
-            },
-            [u, n, c]
-        )
-    ];
+        o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
+        c = null;
+    return (
+        null != e && (c = T(!(0, h.Bh)(e), a, t) ? e : null),
+        [
+            b(c, o, n),
+            r.useCallback(
+                (e, t) => {
+                    null != c &&
+                        (0, p.Ow)(c, {
+                            dismissAction: e,
+                            groupName: n,
+                            guildId: o,
+                            forceTrack: t
+                        });
+                },
+                [c, n, o]
+            )
+        ]
+    );
 }
 function I(e, t, n, a) {
     let o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
@@ -169,4 +164,11 @@ function I(e, t, n, a) {
             )
         ]
     );
+}
+function T(e, t, n) {
+    let r = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
+        i = void 0 === r ? 0 : r + n.cooldownDurationMs,
+        a = Date.now(),
+        o = null == n.showAfterTimestamp || (a >= n.showAfterTimestamp && (null != r ? r : 0) <= n.showAfterTimestamp);
+    return s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) ? e && o && (null == r || a >= i) : null != r && e && o && a >= i;
 }

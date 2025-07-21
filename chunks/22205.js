@@ -171,7 +171,7 @@ class M extends i.PureComponent {
         });
         let r = (0, v.getPID)();
         (p.Z.setOverlayCrashed(r, e), p.Z.setInputLocked(!0, r));
-        let i = (0, I.V)(e, h.gl.OutOfProcess, {
+        let i = (0, I.V6)(e, h.gl.OutOfProcess, {
             extra: {
                 info: t,
                 location: n

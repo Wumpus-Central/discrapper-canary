@@ -11,8 +11,8 @@ var o = n(793030),
     d = n(63063),
     p = n(317169),
     m = n(639660),
-    f = n(767218),
-    _ = n(981631),
+    _ = n(767218),
+    f = n(981631),
     x = n(93841),
     v = n(388032),
     g = n(466649);
@@ -35,24 +35,24 @@ function b(e) {
                         (0, r.jsx)(o.xv, {
                             className: g.learnMore,
                             variant: 'text-xs/semibold',
-                            children: v.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
+                            children: v.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(f.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
                     className: g.contentContainer,
                     children: [
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(_.Z, {
                             count: b,
-                            type: f.b.AVAILABLE
+                            type: _.b.AVAILABLE
                         }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(_.Z, {
                             count: j,
-                            type: f.b.SPENT
+                            type: _.b.SPENT
                         }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(_.Z, {
                             count: E,
-                            type: f.b.TOTAL
+                            type: _.b.TOTAL
                         })
                     ]
                 }),
@@ -60,8 +60,8 @@ function b(e) {
                     className: g.boostButton,
                     guild: n,
                     analyticsLocation: {
-                        page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
-                        section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
+                        page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: f.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                     },
                     color: s.Tt.CUSTOM,
                     size: s.Ph.LARGE,

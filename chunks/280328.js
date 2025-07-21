@@ -9,7 +9,7 @@ function l(e, t) {
         l = !n && null != e && !i.O.has(e);
     r.useEffect(
         () => () => {
-            l && (a.Z.lastDCDismissed !== e || (0, o.Vc)(e)) && t(s.L.AUTO_DISMISS, !0);
+            l && (a.Z.lastDCDismissed !== e || (0, o.fn)(e)) && t(s.L.AUTO_DISMISS, !0);
         },
         [l, t, e]
     );

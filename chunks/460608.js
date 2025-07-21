@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(720202),
     p = n(271383),
     m = n(430824),
-    f = n(709054),
-    _ = n(659679),
+    _ = n(709054),
+    f = n(659679),
     x = n(388032),
     v = n(211886);
 function g(e) {
@@ -24,7 +24,7 @@ function g(e) {
             },
             [t]
         ),
-        g = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
+        g = o.useMemo(() => n.sort((e, t) => (_.default.extractTimestamp(e.id) < _.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
         b = (0, a.Wu)(
             [p.ZP],
             () => {
@@ -63,7 +63,7 @@ function g(e) {
                   (0, r.jsx)(i.zJ, {
                       className: v.container,
                       fade: !0,
-                      children: g.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
+                      children: g.map((e, t) => (0, r.jsx)(f.Z, { boost: e }, 'boost-activity-'.concat(t)))
                   })
               ]
           });

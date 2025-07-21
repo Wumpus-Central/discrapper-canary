@@ -30,7 +30,7 @@ async function S(e, t) {
         try {
             await m.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            (C.error('Window does not exist while trying to show inactive', e), (0, g.D)(e, l.gl.OutOfProcess));
+            (C.error('Window does not exist while trying to show inactive', e), (0, g.D1)(e, l.gl.OutOfProcess));
         }
         for (let a = 0; a < r; a++)
             try {
@@ -42,7 +42,7 @@ async function S(e, t) {
                 if ((null == (o = e.message) ? void 0 : o.includes('IPC')) && a < r - 1) {
                     let t = (n / 2) * Math.pow(2, a + 1);
                     (C.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
-                } else throw ((0, g.D)(e, l.gl.OutOfProcess), e);
+                } else throw ((0, g.D1)(e, l.gl.OutOfProcess), e);
             }
     }
 }

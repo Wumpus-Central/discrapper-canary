@@ -36,7 +36,7 @@ function m(e) {
         return null == n ? c.ZP.GetWindowFullscreenTypeByPid(e) : c.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
     } catch (t) {
         var a;
-        return (f.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), (0, u.D)(t, r.gl.OutOfProcess), null != (a = null == n ? void 0 : n.fullscreenType) ? a : i.Jx.UNKNOWN);
+        return (f.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), (0, u.D1)(t, r.gl.OutOfProcess), null != (a = null == n ? void 0 : n.fullscreenType) ? a : i.Jx.UNKNOWN);
     }
 }
 function g(e) {

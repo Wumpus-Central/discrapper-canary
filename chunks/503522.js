@@ -40,7 +40,7 @@ class f extends i.Z {
                     if (this.enabled === this.shouldEnable) return;
                     (null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.window).setWindowContentProtection) || e.call(t, c.$J, this.shouldEnable), (this.enabled = this.shouldEnable));
                 } catch (e) {
-                    (d.error('Error setting content protection:', e), (0, l.D)(e, r.gl.OutOfProcess));
+                    (d.error('Error setting content protection:', e), (0, l.D1)(e, r.gl.OutOfProcess));
                 }
             }),
             u(this, 'actions', {

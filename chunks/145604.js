@@ -137,8 +137,9 @@ class J extends i.PureComponent {
                     )
                 ));
         }
-        let V = null != w && null != w.distributor && null != w.sku && null != e.runningGame && e.runningGame.distributor === w.distributor && w.sku === e.runningGame.sku;
-        if (e.runningGame !== w && null != w && !w.isLauncher && !V) {
+        let V = null != w && null != w.distributor && null != w.sku && null != e.runningGame && e.runningGame.distributor === w.distributor && w.sku === e.runningGame.sku,
+            H = null != e.runningGame && null != w && e.runningGame.isLauncher !== w.isLauncher;
+        if (e.runningGame !== w && null != w && !w.isLauncher && (!V || H)) {
             let e = x.Z.getGameByName(w.name),
                 c = _.ZP.getOverrideForGame(w),
                 u = L.Z.getGuildIds(),

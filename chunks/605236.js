@@ -1,20 +1,23 @@
 (n.d(t, {
     Bn: () => O,
+    Ei: () => A,
     F8: () => y,
-    Fo: () => N,
-    H4: () => A,
-    JO: () => M,
-    ME: () => D,
-    Ow: () => k,
-    UJ: () => C,
+    Fo: () => R,
+    H4: () => C,
+    J0: () => N,
+    JO: () => U,
+    ME: () => M,
+    Ow: () => G,
+    UJ: () => P,
     XM: () => T,
-    XY: () => R,
+    XY: () => w,
     ZF: () => S,
-    bj: () => L,
-    kk: () => P,
+    bj: () => k,
+    kk: () => L,
+    oK: () => D,
     po: () => I,
-    u9: () => w,
-    wH: () => x,
+    u9: () => x,
+    wH: () => j,
     wx: () => b,
     z2: () => v
 }),
@@ -82,6 +85,22 @@ function S(e, t) {
     });
 }
 function A(e, t) {
+    return (0, a.m9)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: '0'
+    });
+}
+function N(e, t) {
+    return (0, a.m9)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: '0',
+        lastDismissedObjectId: '0'
+    });
+}
+function C(e, t) {
     var n, r;
     if ((0, h.Bh)(e))
         return {
@@ -95,7 +114,7 @@ function A(e, t) {
         lastDismissedVersion: i
     };
 }
-function N(e, t) {
+function R(e, t) {
     var n, r;
     if ((0, h.Bh)(e))
         return {
@@ -121,7 +140,7 @@ function N(e, t) {
         lastDismissedAtMs: a
     };
 }
-function C(e, t, n) {
+function P(e, t, n) {
     var r, i, a, s;
     if ((0, h.Bh)(e)) return !0;
     let c = null == (i = o.Z.settings.userContent) || null == (r = i.recurringDismissibleContentStates[e]) ? void 0 : r.lastDismissedObjectId,
@@ -137,12 +156,17 @@ function C(e, t, n) {
     let _ = null != c && 1 !== l.default.compare(t, c);
     return f && _;
 }
-function R(e, t) {
+function w(e, t) {
     if ((0, h.Bh)(e)) return !0;
     let n = o.Z.getGuildDismissedContentState(t);
     return null != n && null != n[e] && !0 === n[e].dismissed;
 }
-function P(e, t, n) {
+function D(e, t) {
+    if ((0, h.Bh)(e)) return !0;
+    let n = o.Z.getGuildDismissedContentState(t);
+    return null != n && null != n[e] && null != n[e].lastDismissedAtMs && '0' !== n[e].lastDismissedAtMs;
+}
+function L(e, t, n) {
     !((0, _.cI)(e) || f.Z.hasUserHitDCCap(e, null == t ? void 0 : t.guildId)) &&
         (n ||
             (i.Z.dispatch({
@@ -170,11 +194,11 @@ function P(e, t, n) {
                 }
             })));
 }
-function w(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (((0, _.cI)(e) || t.forceTrack) && j(e, t), (0, d.Vr)(e));
+    (((0, _.cI)(e) || t.forceTrack) && B(e, t), (0, d.Vr)(e));
 }
-function D(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = !f.Z.hasUserHitDCCap();
     (0, _.gE)(
@@ -185,23 +209,23 @@ function D(e) {
         n
     );
 }
-async function L(e) {
+async function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = (0, m.t)(e);
-    await x(e, n, t);
+    await j(e, n, t);
 }
-async function x(e, t) {
+async function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (w(e, n), await O(e, t), D(e, n));
+    (x(e, n), await O(e, t), M(e, n));
 }
-async function M(e, t, n) {
-    (w(e, n), await I(e, t), D(e, n));
+async function U(e, t, n) {
+    (x(e, n), await I(e, t), M(e, n));
 }
-async function k(e) {
+async function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (w(e, t), await v(e), D(e, t));
+    (x(e, t), await v(e), M(e, t));
 }
-function j(e, t) {
+function B(e, t) {
     var n;
     let [i] = (0, _.Aq)(),
         a = f.Z.getRenderedAtTimestamp(e),

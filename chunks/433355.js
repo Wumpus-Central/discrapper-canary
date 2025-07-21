@@ -59,7 +59,7 @@ function w(e) {
     return (null != n && n in N && (delete N[n], (t = !0)), t && e ? e : !e);
 }
 function D() {
-    (T && (T = w(T)), (I = w(I)));
+    (A && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), T && (T = w(T)), (I = w(I)));
 }
 function L() {
     (I && (I = w(I)), (T = w(T)));

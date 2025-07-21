@@ -31,7 +31,7 @@ let _ = new i.Z('OverlayWindowRAFManager'),
                 r = null != t && t.document.hasFocus();
             if (n || r) return t.requestAnimationFrame(e);
         } catch (e) {
-            (_.error('RAF redirect failed, falling back to original', e), (0, s.D)(e, u.ZP.getOverlayMethod((0, o.getPID)())));
+            (_.error('RAF redirect failed, falling back to original', e), (0, s.D1)(e, u.ZP.getOverlayMethod((0, o.getPID)())));
         }
         return p(e);
     };

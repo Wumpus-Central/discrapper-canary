@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(781311), n(290780));
+(n.d(t, { Z: () => K }), n(781311), n(290780));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -209,15 +209,12 @@ function Z(e) {
 function H() {
     (s.K.remove(v), (A = {}));
 }
-function Y() {
-    return null != N && x({ searchId: N });
-}
-function W(e) {
+function Y(e) {
     let { searchId: t, queryString: n, query: r, offset: i } = e,
         a = y(t);
     ((a.searchResultsQueryString = n), (a.query = r), (a.offset = null != i ? i : 0));
 }
-class K extends (r = o.ZP.Store) {
+class W extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, p.Z, u.Z);
         let e = s.K.get(v);
@@ -309,13 +306,13 @@ class K extends (r = o.ZP.Store) {
         };
     }
 }
-g(K, 'displayName', 'SearchStore');
-let z = new K(l.Z, {
+g(W, 'displayName', 'SearchStore');
+let K = new W(l.Z, {
     CONNECTION_OPEN: k,
     SEARCH_START: P,
     SEARCH_INDEXING: D,
     SEARCH_FINISH: L,
-    SEARCH_RESULTS_QUERY_UPDATE: W,
+    SEARCH_RESULTS_QUERY_UPDATE: Y,
     SEARCH_EDITOR_STATE_CLEAR: x,
     SEARCH_ENSURE_SEARCH_STATE: R,
     SEARCH_EDITOR_STATE_CHANGE: C,
@@ -323,7 +320,6 @@ let z = new K(l.Z, {
     SEARCH_SET_SHOW_NO_RESULTS_ALT: Z,
     SEARCH_SCREEN_OPEN: U,
     CHANNEL_SELECT: j,
-    CHANNEL_TOGGLE_MEMBERS_SECTION: Y,
     SEARCH_CLEAR_HISTORY: G,
     SEARCH_REMOVE_HISTORY: B,
     SEARCH_ADD_HISTORY: w,

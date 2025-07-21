@@ -127,6 +127,7 @@ let X = (0, B.Un)({
                                                                                             className: o()(u ? q.mobileApp : q.app),
                                                                                             children: t
                                                                                         }),
+                                                                                        (0, r.jsx)(f.Z, {}),
                                                                                         (0, r.jsx)(I.Z, {}),
                                                                                         (0, r.jsx)(_.Z, {}),
                                                                                         (0, r.jsx)(d.nKe, {}),
@@ -146,7 +147,6 @@ let X = (0, B.Un)({
                                                                     })
                                                                 }),
                                                                 (0, r.jsx)(T.Z, {}),
-                                                                (0, r.jsx)(f.Z, {}),
                                                                 (0, r.jsx)(Z.Z, {}),
                                                                 (0, r.jsx)(V.Z, {}),
                                                                 (0, r.jsx)(R.Z, { mobile: u })

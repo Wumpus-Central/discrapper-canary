@@ -268,7 +268,7 @@ function ep() {
                 }
         });
     } catch (e) {
-        (eo.error('tryUploadDiscordHookCrashes', e), (0, O.D)(e));
+        (eo.error('tryUploadDiscordHookCrashes', e), (0, O.D1)(e));
     }
 }
 function eh(e, t) {
@@ -300,11 +300,11 @@ async function em(e) {
             e.createHostProcess(t, eS, eT);
         } else (e.destroyHostProcess(), eO((0, M.getPID)()));
     } catch (t) {
-        (eo.error('reconcileHostProcess', t), (0, O.D)(t), eO((0, M.getPID)()));
+        (eo.error('reconcileHostProcess', t), (0, O.D1)(t), eO((0, M.getPID)()));
         try {
             e.destroyHostProcess();
         } catch (e) {
-            (eo.error('reconcileHostProcess: destroyHostProcess', e), (0, O.D)(e));
+            (eo.error('reconcileHostProcess: destroyHostProcess', e), (0, O.D1)(e));
         }
     }
 }
@@ -331,7 +331,7 @@ async function eE(e) {
         if (null == t) return void eo.error('Trying to detach from pid='.concat(e, ', but overlay module failed loaded'));
         (e !== M.DEV_PID && ((ed = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, s._v)(16), (ed = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (ed = 'detach.transitionOverlayPIDStatus'), eh(e, null), (ed = 'detach.reconcileHostProcess'), await em(t));
     } catch (t) {
-        ((0, O.D)(t, p.gl.Hook), eo.error('Error during overlay detachment for pid '.concat(e, ':'), t), eh(e, null));
+        ((0, O.D1)(t, p.gl.Hook), eo.error('Error during overlay detachment for pid '.concat(e, ':'), t), eh(e, null));
     }
 }
 async function eb(e) {
@@ -352,7 +352,7 @@ async function eb(e) {
         try {
             (await t.deconstructor(), J.delete(e));
         } catch (n) {
-            ((0, O.D)(n, p.gl.Hook), eo.error('Failed to deconstruct tracked game '.concat(e), n), (H[e] = t), J.add(e));
+            ((0, O.D1)(n, p.gl.Hook), eo.error('Failed to deconstruct tracked game '.concat(e), n), (H[e] = t), J.add(e));
         }
     }
     let i = !1;
@@ -517,7 +517,7 @@ async function eR(e, t) {
                 intercept: !e
             });
     } catch (e) {
-        ((0, O.D)(e, p.gl.Hook), eo.error('Error during input lock', e));
+        ((0, O.D1)(e, p.gl.Hook), eo.error('Error during input lock', e));
     }
 }
 function eP(e, t) {
@@ -547,7 +547,7 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    (n.append('build_id', 'c1ca6c1130102a84f7d5f60ff82d870ade0a13cd'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
+    (n.append('build_id', '3259689eb5967ecde624dcdba31120d862a523f5'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
 }
 function ek(e) {
     let { channelId: t, ring: n } = e;
@@ -571,7 +571,7 @@ function eU(e) {
             error_description: r instanceof Error ? r.stack : void 0
         }),
         eo.verbose('OverlayBridgeStore: handleOverlayCrashed: '.concat(n)),
-        (0, O.V)(i, p.gl.Hook));
+        (0, O.V6)(i, p.gl.Hook));
 }
 function eG() {
     ((X = !0), (Y = !1), ez());
