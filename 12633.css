@@ -19038,11 +19038,17 @@ svg.radioIcon_c1e9c4 {
 }
 
 .bioRhyme__89a31 {
-    font-family: BioRhyme, Arial, sans-serif
+    font-family: BioRhyme, Arial, sans-serif;
+    letter-spacing: .03em
 }
 
 .cherryBomb__89a31 {
     font-family: Cherry Bomb One, Arial, sans-serif
+}
+
+.cherryBomb__89a31,
+.chicle__89a31 {
+    letter-spacing: .04em
 }
 
 .chicle__89a31 {
@@ -19054,15 +19060,18 @@ svg.radioIcon_c1e9c4 {
 }
 
 .museoModerno__89a31 {
-    font-family: Museo Moderno, Arial, sans-serif
+    font-family: Museo Moderno, Arial, sans-serif;
+    letter-spacing: .01em
 }
 
 .neoCastel__89a31 {
-    font-family: Neo Castel, Arial, sans-serif
+    font-family: Neo Castel, Arial, sans-serif;
+    letter-spacing: .02em
 }
 
 .pixelify__89a31 {
-    font-family: Pixelify Sans, Arial, sans-serif
+    font-family: Pixelify Sans, Arial, sans-serif;
+    letter-spacing: .02em
 }
 
 .ribes__89a31 {
@@ -19070,7 +19079,8 @@ svg.radioIcon_c1e9c4 {
 }
 
 .sinistre__89a31 {
-    font-family: Sinistre, Arial, sans-serif
+    font-family: Sinistre, Arial, sans-serif;
+    letter-spacing: .01em
 }
 
 .container_dfb989 {
