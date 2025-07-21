@@ -48575,8 +48575,7 @@ screen and (max-width:485px) {
     cursor: grabbing;
     height: 100%;
     pointer-events: auto;
-    width: 100%;
-    z-index: 1002
+    width: 100%
 }
 
 .pictureInPictureWindow__6341f {
@@ -49161,10 +49160,6 @@ screen and (max-width:485px) {
 
 .videoControls__2cdb8 {
     background: none
-}
-
-.pictureInPictureVideo__29048 {
-    z-index: 1002
 }
 
 .loading__6ef4d {
