@@ -14,6 +14,5 @@ e.exports = {
     partnerLabelContainer: 'partnerLabelContainer_b1c9f2',
     descriptionContainer: 'descriptionContainer_b1c9f2',
     expandableDescriptionClickable: 'expandableDescriptionClickable_b1c9f2',
-    overflowHidden: 'overflowHidden_b1c9f2',
-    closeButton: 'closeButton_b1c9f2'
+    overflowHidden: 'overflowHidden_b1c9f2'
 };

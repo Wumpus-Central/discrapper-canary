@@ -25,11 +25,11 @@ var r = n(278074),
     E = n(839963),
     x = n(897325),
     v = n(57101),
-    C = n(562293),
-    y = n(981631),
+    y = n(562293),
+    C = n(981631),
     O = n(388032);
 let j = {
-    channelId: y.lds,
+    channelId: C.lds,
     selectedAnswerIds: new Set(),
     submitting: !1,
     editing: !1,
@@ -95,8 +95,8 @@ function N(e, t) {
     let { formattedExpirationLabel: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: o } = e;
     if (null == o) return;
-    let m = e.state === y.yb.SENT,
-        f = m ? (null != a ? a : (0, C.H)(o.expiry)) : '',
+    let m = e.state === C.yb.SENT,
+        f = m ? (null != a ? a : (0, y.H)(o.expiry)) : '',
         g = null == f && m,
         { selectedAnswerIds: h, submitting: b, editing: E, showResults: x } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : j,
         v = e.reactions,
@@ -141,11 +141,11 @@ function P(e, t) {
     let { animateEmoji: c = !1, theme: d = 'dark', formattedExpirationLabel: p } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: _ } = e;
     if (null == _) return;
-    let C = m.default.getCurrentUser();
-    if (null == C) return;
-    let y = l.Z.useReducedMotion,
+    let y = m.default.getCurrentUser();
+    if (null == y) return;
+    let C = l.Z.useReducedMotion,
         j = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        T = (0, x.E)(C, j),
+        T = (0, x.E)(y, j),
         P = _.answers,
         A = _.layout_type,
         w = N(e, t, { formattedExpirationLabel: p });
@@ -212,7 +212,7 @@ function P(e, t) {
                 isVictor: B && h,
                 didSelfVote: _,
                 style: b,
-                shouldAnimateTransition: z && !y,
+                shouldAnimateTransition: z && !C,
                 votesPercentage: Math.round(100 * p),
                 votes: (0, r.EQ)(A)
                     .with(i.C.IMAGE_ONLY_ANSWERS, () => '('.concat(d.toLocaleString(), ')'))

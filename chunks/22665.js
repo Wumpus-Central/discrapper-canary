@@ -18,20 +18,20 @@ var r = n(255367),
     E = n(848697),
     x = n(328756);
 let v = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: v, reportedTimestamp: C } = e,
-        y = f.default.getUser(t),
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: v, reportedTimestamp: y } = e,
+        C = f.default.getUser(t),
         O = i.useMemo(() => (l ? (0, p.Z)((0, g.vc)(s()(), 'LT')) : null), [l]),
         j = (0, m.l)({
-            user: y,
+            user: C,
             channelId: o.id,
             guildId: n,
             messageId: v
-        })((0, u.JZ)(y, o)),
-        I = null != y ? y.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : x,
+        })((0, u.JZ)(C, o)),
+        I = null != C ? C.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : x,
         S =
-            null != y
+            null != C
                 ? _.intl.format(h.default['+zqXZm'], {
-                      username: y.username,
+                      username: C.username,
                       onUserClick: j
                   })
                 : _.intl.string(h.default.xpRjfX);
@@ -59,7 +59,7 @@ let v = (e) => {
                         children: '\u2022'
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: C,
+                        timestamp: y,
                         className: b.timestamp
                     })
                 ]

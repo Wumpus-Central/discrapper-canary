@@ -2,16 +2,16 @@ t.d(a, { L: () => c });
 var r = t(255367);
 t(73800);
 var s = t(481060),
-    l = t(600164),
-    n = t(424071),
+    n = t(600164),
+    l = t(424071),
     i = t(388032),
     o = t(475286);
 function c(e) {
     let { onClose: a, img: t, title: c, body: d, content: x } = e;
-    return (0, r.jsxs)(n.Z, {
+    return (0, r.jsxs)(l.Z, {
         children: [
             (0, r.jsxs)(s.xBx, {
-                direction: l.Z.Direction.VERTICAL,
+                direction: n.Z.Direction.VERTICAL,
                 className: o.header,
                 separator: !1,
                 children: [

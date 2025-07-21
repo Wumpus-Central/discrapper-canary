@@ -52,8 +52,8 @@ let z = () => {
         Y = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
         K = (0, u.ZP)(),
         q = (0, c.wj)(K),
-        [X, Q] = r.useState(!1),
-        [J, $] = r.useState(!1),
+        [X, J] = r.useState(!1),
+        [Q, $] = r.useState(!1),
         [ee, et] = r.useState(!1),
         [en, ei] = r.useState(!1),
         [er, es] = r.useState(!1),
@@ -67,7 +67,7 @@ let z = () => {
         ep = null != em && em,
         { analyticsLocations: eg } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
         eh = (0, E.Z)({ location: 'PremiumMarketing' }),
-        ef = !X && !ee && (eh || !J);
+        ef = !X && !ee && (eh || !Q);
     r.useEffect(() => {
         es(!0);
     }, []);
@@ -103,7 +103,7 @@ let z = () => {
                             ref: ej.ref,
                             children: (0, i.jsx)(o.$, {
                                 innerRef: s,
-                                onChange: (e) => Q(e),
+                                onChange: (e) => J(e),
                                 threshold: 0,
                                 active: !0,
                                 children: eh
@@ -193,7 +193,7 @@ let z = () => {
                         ? (0, i.jsx)(A.Z, { ref: W })
                         : (0, i.jsx)(Z.Z, {
                               ref: W,
-                              isFooterVisible: J,
+                              isFooterVisible: Q,
                               isDarkMode: q,
                               isReducedMotion: Y,
                               subscriptionTier: ec

@@ -52,8 +52,8 @@ var i = n(255367),
     K = n(258609),
     q = n(53891),
     X = n(291533),
-    Q = n(427347),
-    J = n(50697),
+    J = n(427347),
+    Q = n(50697),
     $ = n(90042),
     ee = n(78933),
     et = n(850020),
@@ -106,8 +106,8 @@ var i = n(255367),
     eK = n(70956),
     eq = n(823379),
     eX = n(74538),
-    eQ = n(374023),
-    eJ = n(51144),
+    eJ = n(374023),
+    eQ = n(51144),
     e$ = n(998502),
     e0 = n(578817),
     e1 = n(870569),
@@ -361,7 +361,7 @@ class tl extends r.PureComponent {
               ? (0, i.jsx)(N.Z, {
                     hoverText: a,
                     forceHover: e,
-                    children: (0, i.jsx)(T.Z, { text: eJ.ZP.humanizeStatus(s) })
+                    children: (0, i.jsx)(T.Z, { text: eQ.ZP.humanizeStatus(s) })
                 })
               : a;
     }
@@ -472,7 +472,7 @@ class tl extends r.PureComponent {
                                       )
                                   ]
                               }),
-                              (0, i.jsx)(Q.Z, {}),
+                              (0, i.jsx)(J.Z, {}),
                               (0, i.jsx)(G.Z, {})
                           ]
                       })
@@ -585,7 +585,7 @@ class tl extends r.PureComponent {
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
                 ((0, ez.JG)(
-                    eJ.ZP.getUserTag(e, {
+                    eQ.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
@@ -634,7 +634,7 @@ class tl extends r.PureComponent {
                                   className: e9.panelTitleContainer,
                                   children: (0, i.jsx)(e6.Z, {
                                       children: (0, i.jsx)(Y.Z, {
-                                          userName: eJ.ZP.getName(t),
+                                          userName: eQ.ZP.getName(t),
                                           displayNameStyles: e,
                                           effectDisplayType: W.F.STATIC
                                       })
@@ -716,7 +716,7 @@ function tc() {
         }),
         l = (0, d.e7)([eP.Z], () => eP.Z.getAnyStreamForUser(n)),
         c = (0, E.Z)({ userId: n }),
-        m = eJ.ZP.useUserTag(t, { decoration: 'never' }),
+        m = eQ.ZP.useUserTag(t, { decoration: 'never' }),
         p = (0, d.e7)([eU.Z], () => eU.Z.hidePersonalInformation),
         g = (0, d.e7)([eL.Z, eD.Z], () => {
             let e = eL.Z.getChannelId();
@@ -732,7 +732,7 @@ function tc() {
         T = (0, d.e7)([ek.Z], () => ek.Z.getSpeakingWhileMuted()),
         N = (0, d.e7)([Z.Z], () => Z.Z.isFullscreenInContext()),
         A = (0, d.e7)([ew.Z], () => ew.Z.hasLayers()),
-        P = (0, f.s9z)(f.JQI) || A || eQ.s.isDisallowPopupsSet() || N,
+        P = (0, f.s9z)(f.JQI) || A || eJ.s.isDisallowPopupsSet() || N,
         w = (0, es.b)(),
         k = (0, d.e7)([K.Z], () => null != K.Z.getAwaitingRemoteSessionInfo()),
         L = (0, d.e7)([eB.Z], () => eB.Z.getGuildId()),
@@ -741,12 +741,12 @@ function tc() {
         U = eX.ZP.canUsePremiumGuildMemberProfile(t),
         V = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
         { voiceActivityStatusEnabled: G } = (0, C.U)({ location: 'Account' }),
-        F = (0, J.m)(),
+        F = (0, Q.m)(),
         [H, z] = (0, X.G)(null != L ? L : null),
         { analyticsLocations: W } = (0, y.ZP)(I.Z.ACCOUNT),
         Y = (0, et.K)({ user: t }),
         q = (0, eo.Ws)({ location: e7.dr.CONFLICT_CHECKS }),
-        Q = (0, d.e7)([em.Z, eV.default, eZ.Z], () => {
+        J = (0, d.e7)([em.Z, eV.default, eZ.Z], () => {
             let e,
                 t = em.Z.getSyncingWith(),
                 n = em.Z.getActivity(),
@@ -796,7 +796,7 @@ function tc() {
                 nameplate: Y,
                 selectedGuildId: L,
                 isQuestBarEmpty: q,
-                isListenAlongVisible: Q
+                isListenAlongVisible: J
             })
         })
     );
@@ -890,7 +890,7 @@ function tu(e) {
             [j, H]
         ),
         [q, X] = r.useState(!1),
-        Q = r.useCallback((e) => {
+        J = r.useCallback((e) => {
             var t;
             if ((0, c.k)(null == e ? void 0 : e.target, Node) && (null == (t = v.current) ? void 0 : t.contains(e.target))) return h.F;
             X(!1);
@@ -901,7 +901,7 @@ function tu(e) {
             X(!0);
         }
     });
-    let [J, $] = r.useState(!1);
+    let [Q, $] = r.useState(!1);
     r.useEffect(() => {
         let e;
         return (
@@ -965,7 +965,7 @@ function tu(e) {
                         useMouseEnter: !0,
                         ignoreModalClicks: !0,
                         onRequestOpen: ee,
-                        onRequestClose: Q,
+                        onRequestClose: J,
                         shouldShow: q,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
@@ -1026,10 +1026,10 @@ function tu(e) {
                                                         {
                                                             ref: S,
                                                             plated: null != E,
-                                                            tooltipForceOpen: J,
-                                                            tooltipColor: J ? f.FGA.GREEN : void 0,
-                                                            tooltipContentClassName: J ? e9.voiceFilterWarning : void 0,
-                                                            tooltipText: J
+                                                            tooltipForceOpen: Q,
+                                                            tooltipColor: Q ? f.FGA.GREEN : void 0,
+                                                            tooltipContentClassName: Q ? e9.voiceFilterWarning : void 0,
+                                                            tooltipText: Q
                                                                 ? (0, i.jsxs)(i.Fragment, {
                                                                       children: [
                                                                           (0, i.jsx)('img', {

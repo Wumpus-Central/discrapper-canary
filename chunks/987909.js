@@ -41,7 +41,7 @@ function x(e) {
                 }),
             [u, t, l]
         ),
-        C = i.useCallback(async () => {
+        y = i.useCallback(async () => {
             let { valid: e } = await (0, h.v)({
                 type: s.Ie.FORM,
                 content: '',
@@ -123,7 +123,7 @@ function x(e) {
         color: a.Tt.PRIMARY,
         onMouseEnter: () => _(!0),
         onMouseLeave: () => _(!1),
-        onClick: C,
+        onClick: y,
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,

@@ -1,4 +1,4 @@
-(n.d(t, { n: () => I }), n(539854));
+(n.d(t, { n: () => j }), n(539854));
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -19,7 +19,7 @@ var r = n(255367),
     b = n(515622),
     g = n(997892),
     v = n(234286);
-let j = (e) => {
+let I = (e) => {
         let { churnUserDiscountOffer: t } = e;
         return null == t
             ? null
@@ -28,8 +28,8 @@ let j = (e) => {
                   children: (0, r.jsx)(f.o, { userDiscountOffer: t })
               });
     },
-    I = () => {
-        let { transitionState: e, onClose: t, premiumType: n, setStep: o, expressive: f, churnUserDiscountOffer: b, isFetchingChurnDiscountOffer: I } = (0, h.a)(),
+    j = () => {
+        let { transitionState: e, onClose: t, premiumType: n, setStep: o, expressive: f, churnUserDiscountOffer: b, isFetchingChurnDiscountOffer: j } = (0, h.a)(),
             T = (0, s.e7)([m.default], () => {
                 let e = m.default.getCurrentUser();
                 return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
@@ -39,7 +39,7 @@ let j = (e) => {
         }, [T]);
         let E = (0, p.Z)(),
             P = 'US' === E.ipCountryCode && 'CA' === E.ipSubdivisionCode;
-        if (I)
+        if (j)
             return (0, r.jsx)(c.u, {
                 transitionState: e,
                 title: '',
@@ -72,7 +72,7 @@ let j = (e) => {
             let i = n === x.p9.TIER_2;
             return (0, r.jsx)(l.I, {
                 gradientColor: i ? 'nitro-pink' : 'nitro-green',
-                graphic: i ? v : g,
+                graphic: { src: i ? v : g },
                 title: y.intl.string(y.t.PWq8TE),
                 subtitle: y.intl.format(y.t.nsGVzs, {}),
                 actions: O,
@@ -91,7 +91,7 @@ let j = (e) => {
             title: y.intl.string(y.t.PWq8TE),
             subtitle: y.intl.format(y.t.nsGVzs, {}),
             actions: O,
-            preview: (0, r.jsx)(j, { churnUserDiscountOffer: b }),
+            preview: (0, r.jsx)(I, { churnUserDiscountOffer: b }),
             onClose: async () => t(),
             children: (0, r.jsx)(_.g, {
                 currentUser: T,

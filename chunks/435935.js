@@ -1,13 +1,13 @@
-n.d(t, { k: () => I });
-var r,
-    i,
-    a = n(255367),
-    o = n(73800),
-    s = n(120356),
-    l = n.n(s),
+n.d(t, { k: () => E });
+var i,
+    r,
+    s = n(255367),
+    a = n(73800),
+    l = n(120356),
+    o = n.n(l),
     c = n(742421),
-    u = n(765890);
-function d(e, t, n) {
+    d = n(765890);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,71 +20,65 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
+            i.forEach(function (t) {
+                u(e, t, n[t]);
             }));
     }
     return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
-    }
-    return n;
 }
 function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
-        r,
-        i = m(e, t);
+        i,
+        r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = {},
+                s = Object.keys(e);
+            for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+            return r;
+        })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        var s = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
     }
-    return i;
+    return r;
 }
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-    return i;
-}
-let g = {
+let h = {
         VERTICAL: c.flexVertical,
         HORIZONTAL: c.flexHorizontal,
         HORIZONTAL_REVERSE: c.flexHorizontalReverse
     },
-    E = {
+    f = {
         START: c.flexJustifyStart,
         END: c.flexJustifyEnd,
         CENTER: c.flexJustifyCenter,
@@ -96,85 +90,85 @@ let g = {
         WRAP: c.flexWrap,
         WRAP_REVERSE: c.flexWrapReverse
     },
-    y = {
+    x = {
         START: c.flexAlignStart,
         END: c.flexAlignEnd,
         CENTER: c.flexAlignCenter,
         STRETCH: c.flexAlignStretch
     },
-    O = {
-        SMALL: u.flexGutterSmall,
-        LARGE: u.flexGutterLarge
+    _ = {
+        SMALL: d.flexGutterSmall,
+        LARGE: d.flexGutterLarge
     };
-class v extends (r = o.PureComponent) {
+class j extends (i = a.PureComponent) {
     render() {
         let e = this.props,
-            { children: t, className: n, shrink: r, grow: i, basis: s, style: c, wrap: d } = e,
-            _ = h(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']),
-            m = f(
+            { children: t, className: n, shrink: i, grow: r, basis: l, style: c, wrap: u } = e,
+            h = g(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']),
+            f = m(
                 {
-                    style: f(
+                    style: m(
                         {
-                            flexGrow: i,
-                            flexShrink: r,
-                            flexBasis: s
+                            flexGrow: r,
+                            flexShrink: i,
+                            flexBasis: l
                         },
                         c
                     ),
-                    className: n === u.flexChild ? n : l()(u.flexChild, n)
+                    className: n === d.flexChild ? n : o()(d.flexChild, n)
                 },
-                _
+                h
             );
-        if (!d && 'string' != typeof t && 1 === o.Children.count(t)) {
-            let e = o.Children.only(t);
-            return ((m.style = f({}, m.style, e.props.style)), (m.className = l()(e.props.className, n)), o.cloneElement(e, m));
+        if (!u && 'string' != typeof t && 1 === a.Children.count(t)) {
+            let e = a.Children.only(t);
+            return ((f.style = m({}, f.style, e.props.style)), (f.className = o()(e.props.className, n)), a.cloneElement(e, f));
         }
-        return (0, a.jsx)('div', p(f({}, m), { children: t }));
+        return (0, s.jsx)('div', p(m({}, f), { children: t }));
     }
 }
-d(v, 'defaultProps', {
-    className: u.flexChild,
+u(j, 'defaultProps', {
+    className: d.flexChild,
     style: {},
     wrap: !1
 });
-class I extends (i = o.PureComponent) {
+class E extends (r = a.PureComponent) {
     render() {
         let e = this.props,
-            { children: t, className: n, direction: r, justify: i, align: o, wrap: s, shrink: c, grow: d, basis: _, style: m, gutter: g } = e,
-            E = h(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style', 'gutter']),
-            b = f(
+            { children: t, className: n, direction: i, justify: r, align: a, wrap: l, shrink: c, grow: u, basis: h, style: f, gutter: b } = e,
+            x = g(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style', 'gutter']),
+            _ = m(
                 {
                     flexShrink: c,
-                    flexGrow: d,
-                    flexBasis: _
+                    flexGrow: u,
+                    flexBasis: h
                 },
-                m
+                f
             );
-        return (0, a.jsx)(
+        return (0, s.jsx)(
             'div',
             p(
-                f(
+                m(
                     {
-                        style: b,
-                        className: l()(u.flex, r, i, o, s, g, n)
+                        style: _,
+                        className: o()(d.flex, i, r, a, l, b, n)
                     },
-                    E
+                    x
                 ),
                 { children: t }
             )
         );
     }
 }
-(d(I, 'Child', v),
-    d(I, 'Direction', g),
-    d(I, 'Align', y),
-    d(I, 'Justify', E),
-    d(I, 'Wrap', b),
-    d(I, 'Gutter', O),
-    d(I, 'defaultProps', {
-        direction: g.HORIZONTAL,
-        justify: E.START,
-        align: y.STRETCH,
+(u(E, 'Child', j),
+    u(E, 'Direction', h),
+    u(E, 'Align', x),
+    u(E, 'Justify', f),
+    u(E, 'Wrap', b),
+    u(E, 'Gutter', _),
+    u(E, 'defaultProps', {
+        direction: h.HORIZONTAL,
+        justify: f.START,
+        align: x.STRETCH,
         wrap: b.WRAP,
         shrink: 1,
         grow: 1,

@@ -28,8 +28,8 @@ var r,
     E = n(603270),
     x = n(234431),
     v = n(162297),
-    C = n(222709),
-    y = n(446411),
+    y = n(222709),
+    C = n(446411),
     O = n(960904),
     j = n(161314),
     I = n(629710),
@@ -82,8 +82,8 @@ var r,
     eE = n(630388),
     ex = n(709054),
     ev = n(591759),
-    eC = n(594173),
-    ey = n(169525),
+    ey = n(594173),
+    eC = n(169525),
     eO = n(786761),
     ej = n(161010),
     eI = n(255269),
@@ -226,13 +226,13 @@ class e8 extends (r = l.Component) {
         let { message: e, channel: t, ctaButtonType: n } = this.props,
             r = null;
         switch (n) {
-            case eC.aD.MARK_AS_FALSE_POSITIVE:
+            case ey.aD.MARK_AS_FALSE_POSITIVE:
                 r = (0, i.jsx)(N.Z, {
                     messageId: e.id,
                     channelId: t.id
                 });
                 break;
-            case eC.aD.AGE_VERIFICATION_RETRY:
+            case ey.aD.AGE_VERIFICATION_RETRY:
                 r = (0, i.jsx)(_.Z, { channelId: t.id });
                 break;
             default:
@@ -410,7 +410,7 @@ class e8 extends (r = l.Component) {
             g = p.length > 1,
             h = (0, eE.yE)(u, eK.iLy.IS_VOICE_MESSAGE);
         function _(e, t) {
-            return (0, ey.dn)(e.originalItem, t);
+            return (0, eC.dn)(e.originalItem, t);
         }
         let b = d.map((i) => {
             let o = (0, z.VY)(i),
@@ -516,7 +516,7 @@ class e8 extends (r = l.Component) {
     renderPublishBump(e) {
         return this.props.channel.type !== eK.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
             ? null
-            : (0, i.jsx)(C.Z, {
+            : (0, i.jsx)(y.Z, {
                   channelId: e.channel_id,
                   messageId: e.id
               });
@@ -706,8 +706,8 @@ class e8 extends (r = l.Component) {
             E = this.renderPublishBump(t),
             x = this.renderEphemeralAccessories(t),
             v = this.renderStickersAccessories(t),
-            C = this.renderThreadAccessories(t),
-            y = this.renderComponentAccessories(t),
+            y = this.renderThreadAccessories(t),
+            C = this.renderComponentAccessories(t),
             O = this.renderThreadRoleMentionWarning(t),
             j = this.renderEmbeddedApplicationInstanceEmbed(t),
             I = this.renderInteractionPremiumUpsell(t),
@@ -719,12 +719,12 @@ class e8 extends (r = l.Component) {
             w = this.renderPoll(t, r),
             Z = this.renderForwardedMessage(t),
             R = this.renderReportedMessage(t);
-        return null == u && null == m && null == h && null == _ && null == b && null == d && null == p && null == E && null == x && null == v && null == C && null == y && null == j && null == O && null == S && null == T && null != I && null == w && null == P && null == Z && null == R
+        return null == u && null == m && null == h && null == _ && null == b && null == d && null == p && null == E && null == x && null == v && null == y && null == C && null == j && null == O && null == S && null == T && null != I && null == w && null == P && null == Z && null == R
             ? null
             : (0, i.jsxs)('div', {
                   id: (0, eL.bX)(t),
                   className: o()(e, eq.container),
-                  children: [R, Z, O, w, u, d, p, S, m, f, h, A, _, v, y, j, I, g, c, b, E, x, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), C, T, N, P]
+                  children: [R, Z, O, w, u, d, p, S, m, f, h, A, _, v, C, j, I, g, c, b, E, x, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), y, T, N, P]
               });
     }
     constructor(...e) {
@@ -748,7 +748,7 @@ class e8 extends (r = l.Component) {
                 let { gifAutoPlay: l, inlineEmbedMedia: a, canSuppressEmbeds: o, hasSpoilerEmbeds: s, enabledContentHarmTypeFlags: c, isSearchResult: u } = this.props,
                     d = r.channel_id,
                     p = r.id,
-                    m = (0, ey.BP)(e, d, p, s, c);
+                    m = (0, eC.BP)(e, d, p, s, c);
                 return e.type === eK.hBH.GIFT
                     ? null
                     : (0, i.jsx)(
@@ -756,7 +756,7 @@ class e8 extends (r = l.Component) {
                           {
                               value: (0, ez.P)(e.url, e.image, e.video),
                               children: (0, i.jsx)(
-                                  y.ZP,
+                                  C.ZP,
                                   e$(
                                       {
                                           embed: e,
@@ -832,9 +832,9 @@ function e6(e) {
         ),
         x = (0, Z.ux)(n.guild_id),
         [, v] = (0, R.AB)(n.guild_id),
-        C = (0, eo.$R)(n),
-        y = (o === r.author.id || E) && r.author.id !== eK.LAt && !1 !== l && !(0, eE.yE)(r.flags, eK.iLy.EPHEMERAL) && C && 1 === (0, eS.Z)(r),
-        O = o === r.author.id && C && !a,
+        y = (0, eo.$R)(n),
+        C = (o === r.author.id || E) && r.author.id !== eK.LAt && !1 !== l && !(0, eE.yE)(r.flags, eK.iLy.EPHEMERAL) && y && 1 === (0, eS.Z)(r),
+        O = o === r.author.id && y && !a,
         j = r.author.id === o,
         I = r.isFirstMessageInForumPost(n),
         T = (0, eN.Z)({
@@ -845,7 +845,7 @@ function e6(e) {
             isLurking: g,
             isGuest: h,
             communicationDisabled: v,
-            isActiveChannelOrUnarchivableThread: C,
+            isActiveChannelOrUnarchivableThread: y,
             isAutomodQuarantined: x
         }),
         N = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
@@ -853,7 +853,7 @@ function e6(e) {
         A = (0, q.Z)(r),
         w = (0, S.v)(r),
         k = (0, eI._)(n),
-        L = (0, eC.ro)(r.id, r.channel_id);
+        L = (0, ey.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
         e8,
         e0(
@@ -861,7 +861,7 @@ function e6(e) {
                 e0(
                     e$(
                         {
-                            canSuppressEmbeds: y,
+                            canSuppressEmbeds: C,
                             canDeleteAttachments: O
                         },
                         T
@@ -924,7 +924,7 @@ let e4 = (e) => {
         h = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         _ = (0, K.Z)(null == r ? void 0 : r.id),
         b = (0, S.v)(n),
-        E = (0, eC.ro)(n.id, n.channel_id),
+        E = (0, ey.ro)(n.id, n.channel_id),
         x = (0, q.Z)(n);
     return (0, i.jsx)(
         e8,

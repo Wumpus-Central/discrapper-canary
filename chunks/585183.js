@@ -1,8 +1,8 @@
 (t.d(a, { h: () => C }), t(388685));
 var r = t(255367),
     s = t(73800),
-    l = t(512722),
-    n = t.n(l),
+    n = t(512722),
+    l = t.n(n),
     i = t(481060),
     o = t(457330),
     c = t(600164),
@@ -13,16 +13,16 @@ var r = t(255367),
     m = t(475286);
 let N = new d.Z('TwoWayLinkDiscordConsentWeb');
 function C(e) {
-    let { platformType: a, clientId: t, scopes: l, authToken: d, onContinue: C, onError: j, onClose: p, redirectUri: v } = e,
+    let { platformType: a, clientId: t, scopes: n, authToken: d, onContinue: C, onError: j, onClose: p, redirectUri: v } = e,
         [k, f] = s.useState(!1),
         b = s.useCallback(
             async (e) => {
                 let t,
                     r,
                     { location: s } = e,
-                    { callbackCode: l, callbackState: n } = d;
+                    { callbackCode: n, callbackState: l } = d;
                 try {
-                    t = await o.Z.completeTwoWayLink(a, s, l, n);
+                    t = await o.Z.completeTwoWayLink(a, s, n, l);
                 } catch (e) {
                     var i;
                     (N.error(''.concat(a, ' link error:'), e), (r = null == (i = e.body) ? void 0 : i.code));
@@ -38,15 +38,16 @@ function C(e) {
             sendAuthorize: O
         } = (0, x.useOAuth2AuthorizeForm)({
             clientId: t,
-            scopes: l,
+            scopes: n,
             responseType: 'code',
             callback: b,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
-            redirectUri: v
+            redirectUri: v,
+            isTwoWayLinkDiscordConsent: !0
         }),
         y = s.useCallback(() => {
-            (n()(null != O, 'sendAuthorize not available'), f(!0), O(!0));
+            (l()(null != O, 'sendAuthorize not available'), f(!0), O(!0));
         }, [O]);
     return (0, r.jsxs)(u.Z, {
         children: [
@@ -74,7 +75,14 @@ function C(e) {
             (0, r.jsxs)(i.hzk, {
                 className: m.consentContent,
                 paddingFix: !1,
-                children: [E, T, g]
+                children: [
+                    (0, r.jsx)('div', {
+                        className: m.consentHeader,
+                        children: E
+                    }),
+                    T,
+                    g
+                ]
             }),
             (0, r.jsx)(i.mzw, {
                 className: m.footer,

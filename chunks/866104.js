@@ -24,8 +24,8 @@ var r = n(255367),
     E = n(506071),
     x = n(696014),
     v = n(847033),
-    C = n(544978),
-    y = n(893182),
+    y = n(544978),
+    C = n(893182),
     O = n(388032),
     j = n(414521);
 function I(e) {
@@ -105,7 +105,7 @@ function T(e) {
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: Z, isPhantomPreview: R } = (0, v.m)(),
-        k = Z === C.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
+        k = Z === y.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
         L = N
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -119,7 +119,7 @@ function T(e) {
                       }),
                       E &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, y.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, C.Z)({ guildId: m }) })]
                           })
                   ]
               })

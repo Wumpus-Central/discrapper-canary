@@ -1,43 +1,43 @@
-e.d(t, { default: () => p });
-var o = e(255367);
-e(73800);
-var i = e(481060),
-    r = e(864762),
-    s = e(779341),
-    l = e(642566),
-    a = e(742699),
-    c = e(686494),
-    d = e(573703),
-    u = e(798930),
-    C = e(981631),
-    h = e(475286);
-function p(n) {
-    let { transitionState: t, onClose: e, analyticsLocation: p } = n,
-        { slide: _, gotoNext: x, gotoError: g, handleWaitingForConnection: b, handleAuthToken: f, expectedCallbackState: v, callbackData: j } = (0, r.k)(p, C.ABu.CRUNCHYROLL);
+t.d(e, { default: () => h });
+var o = t(255367);
+t(73800);
+var i = t(481060),
+    r = t(864762),
+    s = t(779341),
+    l = t(642566),
+    a = t(742699),
+    c = t(686494),
+    d = t(573703),
+    u = t(798930),
+    C = t(981631),
+    _ = t(475286);
+function h(n) {
+    let { transitionState: e, onClose: t, analyticsLocation: h } = n,
+        { slide: p, gotoNext: x, gotoError: b, handleWaitingForConnection: g, handleAuthToken: f, expectedCallbackState: v, callbackData: j } = (0, r.k)(h, C.ABu.CRUNCHYROLL);
     return (0, o.jsx)(i.Y0X, {
-        className: h.modal,
-        transitionState: t,
+        className: _.modal,
+        transitionState: e,
         disableTrack: !0,
         parentComponent: 'CrunchyrollLinkModal',
         children: (0, o.jsxs)(i.MyZ, {
-            activeSlide: _,
+            activeSlide: p,
             width: 408,
             children: [
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.LANDING,
                     children: (0, o.jsx)(a.Z, {
                         onContinue: x,
-                        onClose: e
+                        onClose: t
                     })
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.PRE_CONNECT,
                     children: (0, o.jsx)(c.Z, {
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: b,
+                        onWaitingForConnection: g,
                         onAuthToken: f,
-                        onError: g,
-                        onClose: e
+                        onError: b,
+                        onClose: t
                     })
                 }),
                 (0, o.jsx)(i.Mi4, {
@@ -46,8 +46,8 @@ function p(n) {
                         isWaitingForConnection: !0,
                         expectedCallbackState: v,
                         onAuthToken: f,
-                        onError: g,
-                        onClose: e
+                        onError: b,
+                        onClose: t
                     })
                 }),
                 (0, o.jsx)(i.Mi4, {
@@ -55,20 +55,20 @@ function p(n) {
                     children: (0, o.jsx)(s.Z, {
                         authToken: j,
                         onContinue: x,
-                        onError: g,
-                        onClose: e
+                        onError: b,
+                        onClose: t
                     })
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.ERROR,
                     children: (0, o.jsx)(l.Z, {
                         onContinue: x,
-                        onClose: e
+                        onClose: t
                     })
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.SUCCESS,
-                    children: (0, o.jsx)(d.Z, { onClose: e })
+                    children: (0, o.jsx)(d.Z, { onClose: t })
                 })
             ]
         })

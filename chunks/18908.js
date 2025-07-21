@@ -2,6 +2,7 @@ e.exports = {
     body: 'body__89307',
     title: 'title__89307',
     whatYouLoseItemContainer: 'whatYouLoseItemContainer__89307',
+    premiumRebrand: 'premiumRebrand__89307',
     whatYouLoseItem: 'whatYouLoseItem__89307',
     whatYouLoseItemLeftColumn: 'whatYouLoseItemLeftColumn__89307',
     whatYouLoseItemLearnMore: 'whatYouLoseItemLearnMore__89307',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     a = n(793030),
@@ -10,18 +10,20 @@ var r = n(255367),
     d = n(630388),
     f = n(489863),
     _ = n(713938),
-    p = n(981631),
-    h = n(182294),
-    m = n(388032),
-    g = n(441533);
-function E(e) {
-    let { id: t, user: n, application: E, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
-        T = u.ZP.getApplicationIconURL({
-            id: E.id,
-            icon: E.icon
+    p = n(314583),
+    h = n(981631),
+    m = n(182294),
+    g = n(388032),
+    E = n(441533);
+function b(e) {
+    let { user: t, application: n, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
+        T = (0, p.X)(),
+        S = u.ZP.getApplicationIconURL({
+            id: n.id,
+            icon: n.icon
         }),
-        S = u.ZP.getUserAvatarURL(n),
-        A = i.useMemo(
+        A = u.ZP.getUserAvatarURL(t),
+        N = i.useMemo(
             () =>
                 I.some((e) => (0, _.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
@@ -29,12 +31,12 @@ function E(e) {
                               (0, r.jsx)(l.x, {
                                   variant: 'text-lg/normal',
                                   color: 'header-secondary',
-                                  children: m.intl.string(m.t.uT1CPT)
+                                  children: g.intl.string(g.t.uT1CPT)
                               }),
                               (0, r.jsx)(a.X6, {
                                   variant: 'heading-xxl/bold',
                                   color: 'header-primary',
-                                  children: E.name
+                                  children: n.name
                               })
                           ]
                       })
@@ -44,11 +46,11 @@ function E(e) {
                                   variant: 'text-lg/bold',
                                   color: 'header-primary',
                                   children: [
-                                      E.name,
+                                      n.name,
                                       null != b
                                           ? (0, r.jsx)(c.Z, {
-                                                className: g.botTag,
-                                                verified: null != b.public_flags && (0, d.yE)(b.public_flags, p.xW$.VERIFIED_BOT)
+                                                className: E.botTag,
+                                                verified: null != b.public_flags && (0, d.yE)(b.public_flags, h.xW$.VERIFIED_BOT)
                                             })
                                           : null
                                   ]
@@ -57,75 +59,75 @@ function E(e) {
                                   ? (0, r.jsx)(l.x, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: m.intl.string(m.t.jFbDnJ)
+                                        children: g.intl.string(g.t.jFbDnJ)
                                     })
                                   : (0, r.jsx)(l.x, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: m.intl.string(m.t['X+Fdpq'])
+                                        children: g.intl.string(g.t['X+Fdpq'])
                                     })
                           ]
                       }),
-            [y.length, E, b, I]
+            [y.length, n, b, I]
         );
     return (0, r.jsxs)('header', {
-        id: t,
-        className: g.header,
+        id: T,
+        className: E.header,
         children: [
             (0, r.jsxs)('div', {
-                className: g.headerIcons,
+                className: E.headerIcons,
                 children: [
                     (0, r.jsx)(o.qE, {
-                        className: g.avatar,
-                        src: T,
-                        size: h.EF.SIZE_80,
-                        'aria-label': E.name
+                        className: E.avatar,
+                        src: S,
+                        size: m.EF.SIZE_80,
+                        'aria-label': n.name
                     }),
                     (0, r.jsxs)('div', {
-                        className: g.ellipseGroup,
-                        children: [(0, r.jsx)('div', { className: g.ellipse }), (0, r.jsx)('div', { className: g.ellipse }), (0, r.jsx)('div', { className: g.ellipse })]
+                        className: E.ellipseGroup,
+                        children: [(0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse })]
                     }),
                     (0, r.jsx)(o.qE, {
-                        className: g.avatar,
-                        src: S,
-                        size: h.EF.SIZE_80,
-                        'aria-label': n.username
+                        className: E.avatar,
+                        src: A,
+                        size: m.EF.SIZE_80,
+                        'aria-label': t.username
                     })
                 ]
             }),
-            A,
+            N,
             O
                 ? (0, r.jsx)('div', {
-                      className: g.currentUser,
+                      className: E.currentUser,
                       children: (0, r.jsxs)(l.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
-                              m.intl.format(m.t.qRvpYW, {
+                              g.intl.format(g.t.qRvpYW, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           l.x,
                                           {
-                                              className: g.currentUserTag,
+                                              className: E.currentUserTag,
                                               variant: 'text-sm/normal',
                                               children: [
-                                                  n.username,
-                                                  !n.isPomelo() &&
+                                                  t.username,
+                                                  !t.isPomelo() &&
                                                       (0, r.jsx)(l.x, {
-                                                          className: g.currentUserDiscriminator,
+                                                          className: E.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
-                                                          children: '#'.concat(n.discriminator)
+                                                          children: '#'.concat(t.discriminator)
                                                       })
                                               ]
                                           },
-                                          n.id
+                                          t.id
                                       )
                               }),
                               (0, r.jsx)(s.P, {
                                   tag: 'a',
-                                  className: g.logoutLink,
+                                  className: E.logoutLink,
                                   onClick: () => (0, f.c$)(v, 'oauth2_logout'),
-                                  children: m.intl.string(m.t['yV/hjI'])
+                                  children: g.intl.string(g.t['yV/hjI'])
                               })
                           ]
                       })

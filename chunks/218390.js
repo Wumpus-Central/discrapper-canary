@@ -51,8 +51,8 @@ var i = n(255367),
     K = n(823188),
     q = n(504865),
     X = n(179984),
-    Q = n(386733),
-    J = n(474936),
+    J = n(386733),
+    Q = n(474936),
     $ = n(981631),
     ee = n(388032),
     et = n(133525),
@@ -65,10 +65,10 @@ let er = 'to_premium_home_button',
 function eo(e) {
     let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: r, theme: s } = e,
         a = t.hasActiveTrial,
-        l = t.planIdFromItems === J.Xh.PREMIUM_YEAR_TIER_2,
+        l = t.planIdFromItems === Q.Xh.PREMIUM_YEAR_TIER_2,
         c = n || a,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        m = J.GP[t.planIdFromItems],
+        m = Q.GP[t.planIdFromItems],
         g = k.ZP.formatPriceString(k.ZP.getDefaultPrice(m.id), m.interval);
     if (c) {
         var h, f, b;
@@ -92,13 +92,13 @@ function eo(e) {
                           })
                         : l
                           ? ee.intl.format(ee.t['+qqh6u'], {
-                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : J.Bo,
+                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : Q.Bo,
                                 regularPrice: g
                             })
                           : ee.intl.formatToPlainString(ee.t['3Ziutb'], {
-                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : J.M_,
+                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : Q.M_,
                                 regularPrice: g,
-                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : J.rt
+                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : Q.rt
                             })
                 })
             ]
@@ -106,7 +106,7 @@ function eo(e) {
     }
     return (0, i.jsx)(q.Z, {
         variant: void 0,
-        subscriptionTier: J.Si.TIER_2,
+        subscriptionTier: Q.Si.TIER_2,
         interval: m.interval
     });
 }
@@ -405,7 +405,7 @@ let em = function () {
                     className: et.__invalid_container,
                     children: [
                         (0, i.jsx)(ec, {}),
-                        y && (0, i.jsx)(Q.Z, { isInSettings: !0 }),
+                        y && (0, i.jsx)(J.Z, { isInSettings: !0 }),
                         (0, i.jsx)(eu, {}),
                         (0, i.jsx)(X.Z, {
                             className: et.__invalid_planComparisonTable,
@@ -413,7 +413,7 @@ let em = function () {
                             headingOverride: ee.intl.string(ee.t.dnVvQU),
                             hidePill: !L,
                             selectedPlanColumnClassName: et.tier2PlanComparisonTableBackground,
-                            selectedPlanTier: J.p9.TIER_2
+                            selectedPlanTier: Q.p9.TIER_2
                         })
                     ]
                 }),

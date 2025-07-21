@@ -19,8 +19,8 @@ var i = n(120356),
     E = n(938475),
     x = n(5192),
     v = n(981631),
-    C = n(388032),
-    y = n(653072);
+    y = n(388032),
+    C = n(653072);
 function O(e) {
     var t, n, i, O, j, I, S, T, N, P;
     let { message: A, channel: w } = e,
@@ -66,15 +66,15 @@ function O(e) {
                 : T.rawValue,
         W = null != z ? z.split(',') : [],
         K = (0, a.Wu)([b.default], () => W.map((e) => b.default.getUser(e)).filter(Boolean)),
-        Y = M && null != F ? C.intl.formatToPlainString(C.t['er/cHx'], { username: G }) : C.intl.formatToPlainString(C.t.noNjkZ, { username: B.nick }),
+        Y = M && null != F ? y.intl.formatToPlainString(y.t['er/cHx'], { username: G }) : y.intl.formatToPlainString(y.t.noNjkZ, { username: B.nick }),
         X = null != k && null != L,
         q = null;
-    ((q = X ? (M || V ? C.intl.format(C.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) }) : C.intl.format(C.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) })) : C.intl.string(C.t['tHT/Vl'])), 0 === H.length && (q = M ? C.intl.string(C.t.IE2uZW) : C.intl.string(C.t.QVhmGx)));
-    let Q = M ? C.intl.string(C.t['00XIbm']) : C.intl.string(C.t['7CrE9/']);
+    ((q = X ? (M || V ? y.intl.format(y.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) }) : y.intl.format(y.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(m.Z, { channel: null != L ? L : void 0 }, t) })) : y.intl.string(y.t['tHT/Vl'])), 0 === H.length && (q = M ? y.intl.string(y.t.IE2uZW) : y.intl.string(y.t.QVhmGx)));
+    let Q = M ? y.intl.string(y.t['00XIbm']) : y.intl.string(y.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
-                className: y.card,
+                className: C.card,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/semibold',
@@ -88,7 +88,7 @@ function O(e) {
                     }),
                     H.length > 0
                         ? (0, r.jsx)('div', {
-                              className: y.participants,
+                              className: C.participants,
                               children: (0, r.jsx)(f.Z, {
                                   guildId: Z,
                                   partySize: {
@@ -101,7 +101,7 @@ function O(e) {
                               })
                           })
                         : (0, r.jsx)('div', {
-                              className: l()(y.participants, y.disabled),
+                              className: l()(C.participants, C.disabled),
                               children: (0, r.jsx)(f.Z, {
                                   guildId: Z,
                                   partySize: {
@@ -116,22 +116,22 @@ function O(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: y.actions,
+                className: C.actions,
                 children: [
                     (0, r.jsxs)(o.zx, {
                         color: o.zx.Colors.BRAND,
                         onClick: () => {
                             null != R && null != Z && ((0, g.uL)(v.Z5c.CHANNEL(Z, R)), u.default.selectVoiceChannel(R));
                         },
-                        className: y.button,
-                        innerClassName: y.buttonInner,
+                        className: C.button,
+                        innerClassName: C.buttonInner,
                         disabled: V || !X,
                         children: [
                             (0, r.jsx)(s.gj8, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            C.intl.string(C.t.zIeJq6)
+                            y.intl.string(y.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zx, {
@@ -139,7 +139,7 @@ function O(e) {
                         onClick: () => {
                             c.Z.sendMessage(w.id, d.ZP.parse(w, '\uD83D\uDC4B'));
                         },
-                        className: y.button,
+                        className: C.button,
                         children: Q
                     })
                 ]

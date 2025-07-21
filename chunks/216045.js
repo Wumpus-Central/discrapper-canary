@@ -73,8 +73,8 @@ function H() {
             image: W
         }),
         X = (0, l.e7)([R.Z], () => R.Z.showNotice()),
-        Q = L.dN.useSetting() && null != z ? E.ZP.parse(void 0, z).content : z,
-        J = w.ZP.canUsePremiumProfileCustomization(n),
+        J = L.dN.useSetting() && null != z ? E.ZP.parse(void 0, z).content : z,
+        Q = w.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: $, newestAnalyticsLocation: ee } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         et = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
         en = (0, _.Nj)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
@@ -91,7 +91,7 @@ function H() {
     let [el, eo] = r.useState(!1),
         { showRedesign: ec } = k.b.useExperiment({ location: 'profile customization' }),
         ed = (0, A.q)({ location: 'UserSettingsProfileCustomization' }),
-        eu = !J,
+        eu = !Q,
         em = r.useRef(null);
     return s
         ? (0, i.jsx)(g.Z, {})
@@ -130,9 +130,9 @@ function H() {
                           })(
                               {
                                   user: n,
-                                  canUsePremiumCustomization: J,
+                                  canUsePremiumCustomization: Q,
                                   onUpsellClick: B.Z,
-                                  pendingBio: Q
+                                  pendingBio: J
                               },
                               K
                           )),

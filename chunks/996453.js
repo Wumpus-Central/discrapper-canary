@@ -1,171 +1,171 @@
-(e.d(n, {
+(n.d(t, {
     G: () => g,
-    Z: () => x
+    Z: () => f
 }),
-    e(388685));
-var i = e(255367),
-    l = e(73800),
-    a = e(755721),
-    s = e(481060),
-    r = e(749210),
-    d = e(820160),
-    c = e(600164),
-    o = e(313201),
-    m = e(594174),
-    C = e(892880),
-    p = e(458879),
-    u = e(981631),
-    _ = e(388032),
-    L = e(685554);
-function g(t) {
-    var n;
-    let { guildTemplate: e, onClose: g, onBack: x, onHubGuildInfoSet: T, onGuildCreated: E, isSlideReady: h, hasFooter: I = !0, isCommunity: G = !1 } = t,
-        [y, D] = l.useState(C.Z.getGuildNameSuggestion()),
-        [z, U] = l.useState(null),
-        [j, N] = l.useState(!1),
-        [f, A] = l.useState(null),
-        M = !!(null == (n = m.default.getCurrentUser()) ? void 0 : n.isStaff()),
-        [S, v] = l.useState(M),
-        O = (0, o.Dt)(),
-        R = l.useRef(null);
-    l.useEffect(() => {
-        var t;
-        h && (null == (t = R.current) || t.focus());
-    }, [h]);
-    let Z = l.useCallback(
-            async (t) => {
-                if ((t.preventDefault(), null != e)) {
-                    (N(!0), A(null));
+    n(388685));
+var i = n(255367),
+    s = n(73800),
+    l = n(755721),
+    a = n(481060),
+    r = n(749210),
+    o = n(820160),
+    c = n(600164),
+    d = n(313201),
+    u = n(594174),
+    m = n(892880),
+    x = n(458879),
+    C = n(981631),
+    h = n(388032),
+    p = n(685554);
+function g(e) {
+    var t;
+    let { guildTemplate: n, onClose: g, onBack: f, onHubGuildInfoSet: j, onGuildCreated: _, isSlideReady: b, hasFooter: L = !0, isCommunity: N = !1 } = e,
+        [I, y] = s.useState(m.Z.getGuildNameSuggestion()),
+        [v, Z] = s.useState(null),
+        [S, E] = s.useState(!1),
+        [T, O] = s.useState(null),
+        B = !!(null == (t = u.default.getCurrentUser()) ? void 0 : t.isStaff()),
+        [M, k] = s.useState(B),
+        H = (0, d.Dt)(),
+        D = s.useRef(null);
+    s.useEffect(() => {
+        var e;
+        b && (null == (e = D.current) || e.focus());
+    }, [b]);
+    let G = s.useCallback(
+            async (e) => {
+                if ((e.preventDefault(), null != n)) {
+                    (E(!0), O(null));
                     try {
-                        if (null != T) T(y, z);
+                        if (null != j) j(I, v);
                         else {
-                            let t = await p.Z.createGuildFromTemplate(y, z, e, G, S);
-                            (r.Z.transitionToGuildSync(t.id), null == E || E(t.id));
+                            let e = await x.Z.createGuildFromTemplate(I, v, n, N, M);
+                            (r.Z.transitionToGuildSync(e.id), null == _ || _(e.id));
                         }
-                    } catch (t) {
-                        A(t);
+                    } catch (e) {
+                        O(e);
                     }
-                    N(!1);
+                    E(!1);
                 }
             },
-            [e, T, y, z, G, S, E]
+            [n, j, I, v, N, M, _]
         ),
-        b = (0, i.jsxs)(i.Fragment, {
+        w = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.zxk, {
+                (0, i.jsx)(a.zxk, {
                     variant: 'primary',
-                    text: null != T ? _.intl.string(_.t.PDTjLC) : _.intl.string(_.t.CumH4u),
-                    onClick: Z,
-                    disabled: 0 === y.length,
-                    loading: j
+                    text: null != j ? h.intl.string(h.t.PDTjLC) : h.intl.string(h.t.CumH4u),
+                    onClick: G,
+                    disabled: 0 === I.length,
+                    loading: S
                 }),
-                (0, i.jsx)(a.zx, {
-                    className: L.backButton,
-                    look: a.zx.Looks.BLANK,
-                    size: a.zx.Sizes.MIN,
-                    onClick: x,
-                    children: _.intl.string(_.t['13/7kZ'])
+                (0, i.jsx)(l.zx, {
+                    className: p.backButton,
+                    look: l.zx.Looks.BLANK,
+                    size: l.zx.Sizes.MIN,
+                    onClick: f,
+                    children: h.intl.string(h.t['13/7kZ'])
                 })
             ]
         });
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(s.xBx, {
+                (0, i.jsxs)(a.xBx, {
                     direction: c.Z.Direction.VERTICAL,
-                    className: L.header,
+                    className: p.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.X6q, {
-                            className: L.title,
+                        (0, i.jsx)(a.X6q, {
+                            className: p.title,
                             variant: 'heading-xl/semibold',
-                            children: _.intl.string(_.t['2H6Nio'])
+                            children: h.intl.string(h.t['2H6Nio'])
                         }),
-                        (0, i.jsx)(s.Text, {
-                            className: L.subtitle,
+                        (0, i.jsx)(a.Text, {
+                            className: p.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: _.intl.string(_.t.AAfVqa)
+                            children: h.intl.string(h.t.AAfVqa)
                         }),
                         null != g &&
-                            (0, i.jsx)(s.olH, {
-                                className: L.closeButton,
+                            (0, i.jsx)(a.olH, {
+                                className: p.closeButton,
                                 onClick: g
                             })
                     ]
                 }),
-                (0, i.jsxs)(s.hzk, {
-                    className: L.createGuild,
+                (0, i.jsxs)(a.hzk, {
+                    className: p.createGuild,
                     children: [
                         (0, i.jsx)('div', {
-                            className: L.uploadIcon,
-                            children: (0, i.jsx)(d.Z, {
-                                icon: z,
-                                onChange: U
+                            className: p.uploadIcon,
+                            children: (0, i.jsx)(o.Z, {
+                                icon: v,
+                                onChange: Z
                             })
                         }),
                         (0, i.jsxs)('form', {
-                            onSubmit: Z,
+                            onSubmit: G,
                             children: [
-                                (0, i.jsxs)(s.xJW, {
-                                    className: L.nameInput,
-                                    error: null == f ? void 0 : f.getFirstFieldErrorMessage('name'),
+                                (0, i.jsxs)(a.xJW, {
+                                    className: p.nameInput,
+                                    error: null == T ? void 0 : T.getFirstFieldErrorMessage('name'),
                                     children: [
-                                        (0, i.jsx)(s.vwX, {
+                                        (0, i.jsx)(a.vwX, {
                                             tag: 'label',
-                                            htmlFor: O,
-                                            children: _.intl.string(_.t.dBih7e)
+                                            htmlFor: H,
+                                            children: h.intl.string(h.t.dBih7e)
                                         }),
-                                        (0, i.jsx)(s.oil, {
+                                        (0, i.jsx)(a.oil, {
                                             type: 'text',
-                                            value: y,
+                                            value: I,
                                             maxLength: 100,
-                                            onChange: D,
-                                            inputRef: R,
-                                            id: O
+                                            onChange: y,
+                                            inputRef: D,
+                                            id: H
                                         })
                                     ]
                                 }),
-                                M &&
-                                    (0, i.jsx)(s.j7V, {
+                                B &&
+                                    (0, i.jsx)(a.j7V, {
                                         hideBorder: !0,
-                                        value: S,
-                                        onChange: (t) => v(t),
-                                        note: _.intl.string(_.t.edQ5vb),
-                                        className: L.formItemSpaced,
-                                        children: (0, i.jsx)(s.vwX, {
+                                        value: M,
+                                        onChange: (e) => k(e),
+                                        note: h.intl.string(h.t.edQ5vb),
+                                        className: p.formItemSpaced,
+                                        children: (0, i.jsx)(a.vwX, {
                                             tag: 'label',
                                             children: 'Staff Only'
                                         })
                                     }),
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    className: L.guidelines,
-                                    children: _.intl.format(_.t['2bprX1'], { guidelinesURL: u.EYA.GUIDELINES })
+                                    className: p.guidelines,
+                                    children: h.intl.format(h.t['2bprX1'], { guidelinesURL: C.EYA.GUIDELINES })
                                 })
                             ]
                         }),
-                        null == f || f.hasFieldErrors()
+                        null == T || T.hasFieldErrors()
                             ? null
-                            : (0, i.jsx)(s.Text, {
+                            : (0, i.jsx)(a.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-danger',
-                                  children: f.message
+                                  children: T.message
                               })
                     ]
                 }),
-                I &&
-                    (0, i.jsx)(s.mzw, {
+                L &&
+                    (0, i.jsx)(a.mzw, {
                         justify: c.Z.Justify.BETWEEN,
-                        children: b
+                        children: w
                     })
             ]
         }),
-        footer: b
+        footer: w
     };
 }
-function x(t) {
-    let { content: n } = g(t);
-    return n;
+function f(e) {
+    let { content: t } = g(e);
+    return t;
 }

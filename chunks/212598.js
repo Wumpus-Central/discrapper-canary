@@ -1,8 +1,8 @@
 (t.d(a, { t: () => v }), t(415506));
 var r = t(255367),
     s = t(73800),
-    l = t(512722),
-    n = t.n(l),
+    n = t(512722),
+    l = t.n(n),
     i = t(478677),
     o = t(755721),
     c = t(481060),
@@ -16,7 +16,7 @@ var r = t(255367),
     j = t(475286);
 let p = new m.Z('TwoWayLink');
 function v(e) {
-    let { platformType: a, isWaitingForConnection: t, onWaitingForConnection: l, expectedCallbackState: m, onAuthToken: v, onError: k, onClose: f, img: b, title: E, body: T, redirectDestination: g } = e,
+    let { platformType: a, isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: m, onAuthToken: v, onError: k, onClose: f, img: b, title: E, body: T, redirectDestination: g } = e,
         O = s.useCallback(async () => {
             let e;
             try {
@@ -26,8 +26,8 @@ function v(e) {
                 return;
             }
             let { state: t } = (0, x.xp)(e);
-            (n()(null != t, 'Authorize URL state query parameter must be present'), null == l || l(t));
-        }, [a, k, l]),
+            (l()(null != t, 'Authorize URL state query parameter must be present'), null == n || n(t));
+        }, [a, k, n]),
         y = s.useCallback(
             (e) => {
                 let { callbackCode: t, callbackState: r } = e;

@@ -26,8 +26,8 @@ var r = n(255367),
     E = n(314897),
     x = n(699516),
     v = n(914010),
-    C = n(594174),
-    y = n(768581),
+    y = n(594174),
+    C = n(768581),
     O = n(433534),
     j = n(506895),
     I = n(758199),
@@ -43,7 +43,7 @@ function R(e) {
         { name: _, bot: b } = (t = (0, N.O)(t)),
         x = null == b ? void 0 : b.id,
         v = (0, f.ye)(t),
-        C = y.ZP.getApplicationIconURL({
+        y = C.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
@@ -109,7 +109,7 @@ function R(e) {
         videoBannerSrc: S,
         onClickBanner: W,
         bannerAspectRatio: Z,
-        iconSrc: C,
+        iconSrc: y,
         embedUrl: n,
         info: X,
         actions: Y,
@@ -185,12 +185,12 @@ function L(e) {
         ),
         u = (0, _.N)(t.id),
         d = (0, o.Wu)(
-            [C.default, x.Z],
+            [y.default, x.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = C.default.getUser(n.author_id),
+                    let r = y.default.getUser(n.author_id),
                         i = x.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }

@@ -8,7 +8,5 @@ e.exports = {
     label: 'label__4c520',
     votePercentageBar: 'votePercentageBar__4c520',
     votesData: 'votesData__4c520',
-    voteCount: 'voteCount__4c520',
-    voteCountButton: 'voteCountButton__4c520',
     answerSelectionIcon: 'answerSelectionIcon__4c520'
 };

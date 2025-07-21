@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(121306),
     q = n(588866),
     X = n(20493),
-    Q = n(283574);
-function J(e, t, n) {
+    J = n(283574);
+function Q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -72,7 +72,7 @@ function $(e) {
                 })
             )),
             i.forEach(function (t) {
-                J(e, t, n[t]);
+                Q(e, t, n[t]);
             }));
     }
     return e;
@@ -172,13 +172,13 @@ class er extends r.Component {
     }
     constructor(...e) {
         (super(...e),
-            J(this, 'handleRemoveBuildOverride', () => {
+            Q(this, 'handleRemoveBuildOverride', () => {
                 this.props.onBuildOverrideRemoved(this.props.project);
             }),
-            J(this, 'handleOverrideIdChanged', (e) => {
+            Q(this, 'handleOverrideIdChanged', (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, { id: e });
             }),
-            J(this, 'handleOverrideTypeChanged', (e) => {
+            Q(this, 'handleOverrideTypeChanged', (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
                     type: e,
                     id: ''
@@ -356,7 +356,7 @@ class es extends r.Component {
     }
     constructor(...e) {
         (super(...e),
-            J(this, 'state', {
+            Q(this, 'state', {
                 loading: !0,
                 buildOverrides: {},
                 loadedBuildOverrides: {},
@@ -364,7 +364,7 @@ class es extends r.Component {
                 saving: !1,
                 didSave: !1
             }),
-            J(this, 'handleAddBuildOverride', async () => {
+            Q(this, 'handleAddBuildOverride', async () => {
                 var e;
                 let t = await ((e = this.getAvailableProjects()),
                 new Promise((t) => {
@@ -423,24 +423,24 @@ class es extends r.Component {
                 });
                 this.setState({ buildOverrides: n });
             }),
-            J(this, 'handleBuildOverrideUpdated', (e, t) => {
+            Q(this, 'handleBuildOverrideUpdated', (e, t) => {
                 let { buildOverrides: n } = this.state,
                     i = $({}, null != n ? n[e] : {}, t),
                     r = ee($({}, this.state.buildOverrides), { [e]: i });
                 this.setState({ buildOverrides: r });
             }),
-            J(this, 'handleBuildOverrideRemoved', (e) => {
+            Q(this, 'handleBuildOverrideRemoved', (e) => {
                 let t = $({}, this.state.buildOverrides);
                 (delete t[e], this.setState({ buildOverrides: t }));
             }),
-            J(this, 'handleDiscardChanges', () => {
+            Q(this, 'handleDiscardChanges', () => {
                 this.setState({
                     buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
                     errors: {},
                     didSave: !1
                 });
             }),
-            J(this, 'handleSaveChanges', async () => {
+            Q(this, 'handleSaveChanges', async () => {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({ saving: !0 });
@@ -467,7 +467,7 @@ class es extends r.Component {
                         didSave: !1
                     });
             }),
-            J(this, 'handleLinkGeneration', () => {
+            Q(this, 'handleLinkGeneration', () => {
                 let { buildOverrides: e } = this.state;
                 (0, p.h7j)((t) => (0, i.jsx)(ea, ee($({}, t), { buildOverrides: e })));
             }));
@@ -622,7 +622,7 @@ class ea extends r.Component {
                     return null == r
                         ? t()
                         : (0, i.jsx)('code', {
-                              className: 'hljs scroller '.concat(r.language, ' ').concat(Q.scrollbarGhost, ' ').concat(K.codebox),
+                              className: 'hljs scroller '.concat(r.language, ' ').concat(J.scrollbarGhost, ' ').concat(K.codebox),
                               dangerouslySetInnerHTML: { __html: r.value }
                           });
                 }
@@ -701,7 +701,7 @@ class ea extends r.Component {
         var t;
         (super(...e),
             (t = this),
-            J(this, 'state', {
+            Q(this, 'state', {
                 ttlSeconds: 3600,
                 releaseChannel: 'all',
                 userIds: new Set(),
@@ -715,17 +715,17 @@ class ea extends r.Component {
                 status: 0,
                 allowLoggedOut: !1
             }),
-            J(this, 'setUserEntryError', (e) => {
+            Q(this, 'setUserEntryError', (e) => {
                 this.setState({ userIdEntryError: e });
             }),
-            J(this, 'setStatusMessage', function (e) {
+            Q(this, 'setStatusMessage', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                 t.setState({
                     statusText: e,
                     status: n
                 });
             }),
-            J(this, 'handleUserIDEntry', (e) => {
+            Q(this, 'handleUserIDEntry', (e) => {
                 if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError('User IDs are numbers!');
                 let t = new Set(e.split(/[,\s]+/).filter(Boolean));
                 this.setState({
@@ -733,16 +733,16 @@ class ea extends r.Component {
                     userIds: t
                 });
             }),
-            J(this, 'setAllowedVersionError', (e) => {
+            Q(this, 'setAllowedVersionError', (e) => {
                 this.setState({ allowedVersionEntryError: e });
             }),
-            J(this, 'handleAllowedVersionEntry', (e) => {
+            Q(this, 'handleAllowedVersionEntry', (e) => {
                 this.setState({ allowedVersionEntry: e });
             }),
-            J(this, 'handleAllowedVersionEnter', (e) => {
+            Q(this, 'handleAllowedVersionEnter', (e) => {
                 e.charCode === W.yXg.ENTER && this.handleAddAllowedVersion();
             }),
-            J(this, 'handleAddAllowedVersion', () => {
+            Q(this, 'handleAddAllowedVersion', () => {
                 let { allowedVersions: e, allowedVersionEntry: t } = this.state;
                 return 0 === (t = t.trim()).length
                     ? this.setAllowedVersionError('Enter a valid version number!')
@@ -754,20 +754,20 @@ class ea extends r.Component {
                             allowedVersionEntryError: ''
                         });
             }),
-            J(this, 'handleRemoveAllowedVersion', (e) => {
+            Q(this, 'handleRemoveAllowedVersion', (e) => {
                 let { allowedVersions: t } = this.state;
                 ((t = t.filter((t) => t !== e)), this.setState({ allowedVersions: t }));
             }),
-            J(this, 'handleAllowLoggedOut', (e) => {
+            Q(this, 'handleAllowLoggedOut', (e) => {
                 this.setState({ allowLoggedOut: e });
             }),
-            J(this, 'handleExpirationChange', (e) => {
+            Q(this, 'handleExpirationChange', (e) => {
                 this.setState({ ttlSeconds: e });
             }),
-            J(this, 'handleReleaseChannelChange', (e) => {
+            Q(this, 'handleReleaseChannelChange', (e) => {
                 this.setState({ releaseChannel: e });
             }),
-            J(this, 'handleExperiments', (e) => {
+            Q(this, 'handleExperiments', (e) => {
                 if (0 === e.trim().length) return void this.setState({ experimentsError: void 0 });
                 try {
                     let t = JSON.parse(e);
@@ -784,7 +784,7 @@ class ea extends r.Component {
                     experimentsError: void 0
                 });
             }),
-            J(this, 'generatePayload', () => ({
+            Q(this, 'generatePayload', () => ({
                 overrides: this.props.buildOverrides,
                 meta: {
                     release_channel: 'all' === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -795,7 +795,7 @@ class ea extends r.Component {
                     experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
                 }
             })),
-            J(this, 'handleGenerateLink', async () => {
+            Q(this, 'handleGenerateLink', async () => {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length) return void this.setAllowedVersionError('You must add at least one allowed version for iOS');
                 this.setStatusMessage(null);
                 let e = this.generatePayload(),

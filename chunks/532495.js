@@ -99,8 +99,8 @@ function R() {
         }),
         q = (0, o.gS)(),
         X = y.ZP.canUsePremiumProfileCustomization(k),
-        Q = (0, u.gd)(B, k.avatar),
-        J = (0, u.f$)(U, null == L ? void 0 : L.banner),
+        J = (0, u.gd)(B, k.avatar),
+        Q = (0, u.f$)(U, null == L ? void 0 : L.banner),
         $ = (0, T.ZP)(k.id),
         ee = null == $ ? void 0 : $.getLegacyUsername(),
         et = (null != (n = null == (e = Y.global_name) ? void 0 : e.length) ? n : 0) > 0 ? Y.global_name : null != (r = null == q ? void 0 : q.nick) ? r : [],
@@ -132,7 +132,7 @@ function R() {
                 g.Z,
                 {
                     onAvatarChange: l.I5,
-                    showRemoveAvatarButton: Q,
+                    showRemoveAvatarButton: J,
                     errors: Y.avatar,
                     sectionTitle: A.intl.string(A.t.lqaIxM),
                     forcedDivider: !0
@@ -162,7 +162,7 @@ function R() {
                           (0, i.jsx)(
                               x.Z,
                               {
-                                  showRemoveBannerButton: J,
+                                  showRemoveBannerButton: Q,
                                   errors: Y.banner,
                                   onBannerChange: v.g_,
                                   forcedDivider: !0

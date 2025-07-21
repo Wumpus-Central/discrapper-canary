@@ -389,7 +389,7 @@ function X(e) {
         ]
     });
 }
-function Q(e) {
+function J(e) {
     let t,
         { className: r, user: s } = e;
     if (!s.isClaimed()) return null;
@@ -477,7 +477,7 @@ function Q(e) {
         })
     );
 }
-function J(e) {
+function Q(e) {
     let { user: t } = e,
         n = (0, j.Z)({
             id: t.id,
@@ -610,7 +610,7 @@ function et() {
                                         className: F.userTag,
                                         discriminatorClass: F.discriminator
                                     }),
-                                    (0, i.jsx)(J, { user: t })
+                                    (0, i.jsx)(Q, { user: t })
                                 ]
                             }),
                             (0, i.jsx)(y.Z, {
@@ -662,7 +662,7 @@ function et() {
                             }),
                             (0, i.jsx)(S.F, {
                                 setting: B.s6.ACCOUNT_PHONE_NUMBER,
-                                children: (0, i.jsx)(Q, {
+                                children: (0, i.jsx)(J, {
                                     className: F.fieldSpacer,
                                     user: t
                                 })

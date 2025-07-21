@@ -17,12 +17,12 @@ let h = () => {
     let { transitionState: e, onClose: t, premiumType: n, premiumSubscription: h, confettiCanvas: x, churnUserDiscountOffer: y } = (0, d.a)(),
         b = (0, i.useRef)(null),
         [g, v] = (0, i.useState)(!1),
-        j = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        I = (0, c._)(h, m.Xh.PREMIUM_MONTH_TIER_2, y);
+        I = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        j = (0, c._)(h, m.Xh.PREMIUM_MONTH_TIER_2, y);
     if (
         ((0, i.useEffect)(() => {
-            null !== b.current && null !== I && v(!0);
-        }, [b, I]),
+            null !== b.current && null !== j && v(!0);
+        }, [b, j]),
         null === y)
     )
         return null;
@@ -39,7 +39,7 @@ let h = () => {
         ref: b,
         children: [
             (0, r.jsx)(a.I, {
-                graphic: T ? C : f,
+                graphic: { src: T ? C : f },
                 gradientColor: T ? 'nitro-pink' : 'nitro-green',
                 transitionState: e,
                 title: p.intl.string(p.t.PZSyRk),
@@ -53,7 +53,7 @@ let h = () => {
                     })
                 })
             }),
-            !j &&
+            !I &&
                 g &&
                 (0, r.jsx)(l.Z, {
                     confettiTarget: b.current,

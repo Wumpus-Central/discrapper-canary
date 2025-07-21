@@ -17,13 +17,13 @@ var r = n(255367),
 let x = [_.O0b.PAST_DUE, _.O0b.PAUSED, _.O0b.BILLING_RETRY],
     y = () => {
         var e, t;
-        let { transitionState: n, onClose: c, premiumType: _, setStep: y, premiumSubscription: g, analyticsLocations: v, analyticsLocation: j } = (0, m.a)(),
-            [I, T] = (0, i.useState)(!1),
+        let { transitionState: n, onClose: c, premiumType: _, setStep: y, premiumSubscription: g, analyticsLocations: v, analyticsLocation: I } = (0, m.a)(),
+            [j, T] = (0, i.useState)(!1),
             [E, P] = (0, i.useState)(!1),
             O = async () => {
                 (T(!0), P(!1));
                 try {
-                    if (x.includes(g.status)) await (0, s.EO)(g.id, v, j);
+                    if (x.includes(g.status)) await (0, s.EO)(g.id, v, I);
                     else {
                         var e, t;
                         let n = null != (t = null == (e = g.renewalMutations) ? void 0 : e.items) ? t : g.items,
@@ -37,7 +37,7 @@ let x = [_.O0b.PAST_DUE, _.O0b.PAUSED, _.O0b.BILLING_RETRY],
                             },
                             (0, u.UX)(r, g.currency, g.paymentSourceId),
                             v,
-                            j
+                            I
                         );
                     }
                     c();
@@ -71,19 +71,19 @@ let x = [_.O0b.PAST_DUE, _.O0b.PAUSED, _.O0b.BILLING_RETRY],
                 ? w.push({
                       text: f.intl.string(f.t.PDTjLC),
                       onClick: () => y(d.R.PREVIEW),
-                      disabled: I,
+                      disabled: j,
                       variant: 'critical-primary',
-                      loading: I
+                      loading: j
                   })
                 : w.push({
                       text: f.intl.string(f.t['cY+Ooa']),
                       onClick: () => O(),
-                      disabled: I,
+                      disabled: j,
                       variant: 'critical-primary',
-                      loading: I
+                      loading: j
                   }),
             (0, r.jsx)(a.I, {
-                graphic: R ? h : C,
+                graphic: { src: R ? h : C },
                 gradientColor: R ? 'nitro-pink' : 'nitro-green',
                 transitionState: n,
                 title: ''.concat(f.intl.format(f.t.LZunzc, { planPremiumType: u.ZP.getDisplayPremiumType(''.concat(S)) })),

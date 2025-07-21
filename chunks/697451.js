@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(906732),
     x = n(783097),
     v = n(581364),
-    C = n(592180),
-    y = n(726033),
+    y = n(592180),
+    C = n(726033),
     O = n(598077),
     j = n(594174),
     I = n(768581),
@@ -93,7 +93,7 @@ function M(e) {
 }
 function U(e, t, n, i, l, o) {
     var s, c, u;
-    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: h, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: x, onClickTargetAvatar: v, onTargetUserContextMenu: C, onPopoutRequestClose: y } = e;
+    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: h, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: x, onClickTargetAvatar: v, onTargetUserContextMenu: y, onPopoutRequestClose: C } = e;
     if (m && 1 === n) return null;
     if ((m && null == d.activityInstance) || g || h)
         return (0, r.jsx)('div', {
@@ -129,7 +129,7 @@ function U(e, t, n, i, l, o) {
                 guildId: f.guild_id,
                 guildAvatar: O,
                 onClick: 1 === n ? v : E,
-                onContextMenu: 1 === n ? C : x,
+                onContextMenu: 1 === n ? y : x,
                 ref: o
             }),
         S = 1 === n ? b : _;
@@ -139,7 +139,7 @@ function U(e, t, n, i, l, o) {
               renderPopout: l,
               shouldShow: S,
               position: 'right',
-              onRequestClose: y,
+              onRequestClose: C,
               children: j
           })
         : j();
@@ -185,7 +185,7 @@ function H(e) {
                 s()(null != f, 'ExecutedCommand: currentUser cannot be undefined'),
                 s()(null != o, 'ExecutedCommand: channel cannot be undefined'),
                 (0, r.jsx)(
-                    y.Z,
+                    C.Z,
                     D(L({}, e), {
                         user: t,
                         currentUser: f,
@@ -232,7 +232,7 @@ function H(e) {
             'user'
         );
     };
-    if ((null == l ? void 0 : l.activityInstance) === null || (0, C.g)(l))
+    if ((null == l ? void 0 : l.activityInstance) === null || (0, y.g)(l))
         ((n = R.intl.format(R.t['rg7U+P'], {
             userHook: J,
             commandHook: () => {
@@ -291,7 +291,7 @@ function H(e) {
                                         })
                                     })
                                 );
-                            if (!(0, C.g)(l))
+                            if (!(0, y.g)(l))
                                 return (0, r.jsx)('div', {
                                     className: k.commandName,
                                     ref: n,

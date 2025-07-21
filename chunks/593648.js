@@ -74,7 +74,7 @@ function X(e) {
     }
     return e;
 }
-function Q(e, t) {
+function J(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function Q(e, t) {
         e
     );
 }
-function J(e) {
+function Q(e) {
     let { label: t, enabled: n, disabled: r, onPreview: s, onChange: a, tooltip: l } = e;
     return (0, i.jsx)(u.j7V, {
         className: Y.soundRow,
@@ -274,7 +274,7 @@ function $(e) {
                 m.map((e) => {
                     let { label: r, sound: s, focusModeDisabled: a } = e;
                     return (0, i.jsx)(
-                        J,
+                        Q,
                         {
                             label: r,
                             disabled: n || !0 === a,
@@ -659,7 +659,7 @@ async function es(e) {
 }
 function ea(e) {
     let t = (0, v.p)();
-    return (0, i.jsx)(et, Q(X({}, e), { focusMode: t }));
+    return (0, i.jsx)(et, J(X({}, e), { focusMode: t }));
 }
 function el() {
     let e = (0, c.cj)([w.Z], () => ({
@@ -671,7 +671,7 @@ function el() {
         ttsType: w.Z.getTTSType(),
         notifyMessagesInSelectedChannel: w.Z.getNotifyMessagesInSelectedChannel()
     }));
-    return (0, i.jsx)(ea, Q(X({}, e), { afkTimeout: U.CM.useSetting() }));
+    return (0, i.jsx)(ea, J(X({}, e), { afkTimeout: U.CM.useSetting() }));
 }
 function eo() {
     let e = (0, _._x)('notification_settings'),

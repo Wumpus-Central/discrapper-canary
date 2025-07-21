@@ -1,18 +1,22 @@
 n.d(t, {
-    G: () => E,
-    j: () => b
+    G: () => v,
+    j: () => I
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(466377),
-    s = n(481060),
-    l = n(252618),
-    c = n(981631),
-    u = n(388032),
-    d = n(484618);
-function f(e, t, n) {
+    o = n(257465),
+    s = n(369585),
+    l = n(103866),
+    c = n(213734),
+    u = n(37148),
+    d = n(481060),
+    f = n(252618),
+    _ = n(981631),
+    p = n(388032),
+    h = n(484618);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +40,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                m(e, t, n[t]);
             }));
     }
     return e;
 }
-function p(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,29 +57,29 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function g(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,55 +88,56 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function E(e) {
+function v(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, l.Tt)({ location: u.intl.string(u.t['3S249/']) }),
-        (0, r.jsx)(s.f6W, {
-            theme: c.BRd.DARK,
+        (0, f.Tt)({ location: p.intl.string(p.t['3S249/']) }),
+        (0, r.jsx)(d.f6W, {
+            theme: _.BRd.DARK,
             children: (e) =>
                 (0, r.jsx)('div', {
-                    className: a()(e, d.oauth2PageWrapper, i),
+                    className: a()(e, h.oauth2PageWrapper, i),
                     children:
                         !0 === n
                             ? t
                             : (0, r.jsx)('div', {
-                                  className: d.oauth2PageContent,
+                                  className: h.oauth2PageContent,
                                   children: t
                               })
                 })
         })
     );
 }
-function b(e) {
-    var { children: t, footer: n, transitionState: i, modalSize: a } = e,
-        s = m(e, ['children', 'footer', 'transitionState', 'modalSize']);
+function I(e) {
+    var t,
+        n,
+        { hideHeader: i } = e,
+        a = y(e, ['hideHeader']);
     return (0, r.jsxs)(
-        o.Y0,
-        h(
-            _(
-                {
-                    size: null != a ? a : o.Cg.DYNAMIC,
-                    transitionState: i,
-                    className: d.oauth2ModalWrapper
-                },
-                s
-            ),
-            {
-                parentComponent: 'OAuth2Page',
-                children: [
-                    (0, r.jsx)(o.hz, {
-                        paddingFix: !1,
-                        className: d.oauth2ModalContent,
-                        children: t
-                    }),
-                    null != n &&
-                        (0, r.jsx)(o.mz, {
-                            className: d.footer,
-                            children: n
-                        })
-                ]
-            }
-        )
+        o.IX,
+        b(g({}, a), {
+            onClose: () => {
+                var e;
+                return Promise.resolve(null == (e = a.onClose) ? void 0 : e.call(a));
+            },
+            children: [
+                i
+                    ? null
+                    : (0, r.jsx)(u.x, {
+                          title: null != (t = a.title) ? t : '',
+                          subtitle: a.subtitle
+                      }),
+                (0, r.jsx)(l.f, {
+                    controls: a.input,
+                    children: a.children
+                }),
+                (0, r.jsx)(c.m, { children: a.preview }),
+                (0, r.jsx)(s.G, {
+                    leading: a.actionBarInput,
+                    actions: null != (n = a.actions) ? n : [],
+                    actionsFullWidth: null == a.actionBarInput
+                })
+            ]
+        })
     );
 }

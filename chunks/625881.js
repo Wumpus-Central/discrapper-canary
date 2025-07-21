@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(982404),
     g = n(299156);
 let v = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: o, onConfirm: v, userDiscountOffer: j } = e,
-        [I, T] = i.useState(!1),
+    let { premiumSubscription: t, premiumType: n, onClose: o, onConfirm: v, userDiscountOffer: I } = e,
+        [j, T] = i.useState(!1),
         [E, P] = i.useState(!1),
         O = async (e) => {
             try {
@@ -39,13 +39,13 @@ let v = function (e) {
         },
         S = (0, u.ZP)(),
         N = (0, l.wj)(S) ? b : g,
-        R = (0, _._)(t, C.Xh.PREMIUM_MONTH_TIER_2, j),
+        R = (0, _._)(t, C.Xh.PREMIUM_MONTH_TIER_2, I),
         D = (0, m.aS)(C.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
         w = (0, p.T4)(D.amount, D.currency);
-    return null == j
+    return null == I
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -60,7 +60,7 @@ let v = function (e) {
                           children: [
                               (0, r.jsx)(c.X6q, {
                                   variant: 'heading-xl/bold',
-                                  children: x.intl.format(x.t.q9Vxu7, { percent: j.discount.amount })
+                                  children: x.intl.format(x.t.q9Vxu7, { percent: I.discount.amount })
                               }),
                               (0, r.jsxs)('div', {
                                   className: y.confirmDiscountDescription,
@@ -73,8 +73,8 @@ let v = function (e) {
                                       (0, r.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           children: x.intl.format(x.t.Eq1RHB, {
-                                              percent: j.discount.amount,
-                                              numMonths: j.discount.user_usage_limit,
+                                              percent: I.discount.amount,
+                                              numMonths: I.discount.user_usage_limit,
                                               price: w
                                           })
                                       })
@@ -87,14 +87,14 @@ let v = function (e) {
                                       className: y.confirmDiscountLegaleseText,
                                       children: x.intl.format(x.t.hrGTjI, {
                                           discountedPrice: R,
-                                          billingPeriod: (0, m.JP)(j.discount.user_usage_limit_interval),
-                                          numMonths: j.discount.user_usage_limit,
+                                          billingPeriod: (0, m.JP)(I.discount.user_usage_limit_interval),
+                                          numMonths: I.discount.user_usage_limit,
                                           fullPrice: w,
                                           helpdeskArticle: d.Z.getArticleURL(h.BhN.PAID_TERMS)
                                       })
                                   })
                               }),
-                              I &&
+                              j &&
                                   (0, r.jsx)('div', {
                                       className: y.redemptionFailedMessage,
                                       children: (0, r.jsx)(c.Text, {
@@ -105,8 +105,8 @@ let v = function (e) {
                                   }),
                               (0, r.jsxs)('div', {
                                   className: a()(y.confirmDiscountButtons, {
-                                      [y.confrimDiscountsButtonsError]: I,
-                                      [y.confrimDiscountsButtonsNoError]: !I
+                                      [y.confrimDiscountsButtonsError]: j,
+                                      [y.confrimDiscountsButtonsNoError]: !j
                                   }),
                                   children: [
                                       (0, r.jsx)(c.Avr, {
@@ -119,7 +119,7 @@ let v = function (e) {
                                           size: 'sm',
                                           text: x.intl.string(x.t.CKSuZG),
                                           loading: E,
-                                          onClick: () => O(j.id)
+                                          onClick: () => O(I.id)
                                       })
                                   ]
                               })

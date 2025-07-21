@@ -1,6 +1,7 @@
 t.exports = {
     formGroup: 'formGroup__9b8f6',
     formDivider: 'formDivider__9b8f6',
+    modalFooter: 'modalFooter__9b8f6',
     modalRoot: 'modalRoot__9b8f6',
     inputContainer: 'inputContainer__9b8f6',
     modalCloseButton: 'modalCloseButton__9b8f6',
