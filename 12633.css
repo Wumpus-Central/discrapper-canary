@@ -25971,6 +25971,11 @@ span.clanTag__5d473 {
     width: 48px
 }
 
+.high-contrast-mode .wrapper__4e6ce {
+    border-right: 1px solid var(--border-subtle);
+    box-sizing: border-box
+}
+
 .enable-forced-colors .wrapper__4e6ce {
     border-right: 1px solid CanvasText
 }
@@ -26745,6 +26750,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     pointer-events: none;
     position: absolute;
     width: 100%
+}
+
+.high-contrast-mode .wrapper_c0e32c:not(.emojiPickerHasTabWrapper_c0e32c) {
+    border: 1px solid var(--border-normal);
+    contain: content
 }
 
 .emojiPicker_c0e32c {
@@ -28594,6 +28604,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     box-shadow: 0 0 0 2px var(--focus-primary)
 }
 
+.high-contrast-mode .result__2dc39 {
+    border: 1px solid var(--border-strong)
+}
+
 .gif__2dc39 {
     background-color: transparent;
     border-radius: 5px;
@@ -29845,6 +29859,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     transition: background-color .1s ease-in-out, color .1s ease-in-out
 }
 
+.high-contrast-mode .navButton__08434 {
+    border: 1px solid var(--border-subtle);
+    box-sizing: border-box
+}
+
 .navButton__08434:hover {
     background-color: var(--button-secondary-background-hover);
     color: var(--interactive-hover)
@@ -29856,14 +29875,19 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .navButtonActive__08434 {
-    background-color: var(--button-secondary-background);
-    color: var(--button-secondary-text)
+    background-color: var(--background-mod-normal);
+    color: var(--text-primary)
 }
 
 .navButtonActive__08434:active,
 .navButtonActive__08434:hover {
-    background-color: var(--background-modifier-hover);
+    background-color: var(--background-mod-strong);
     color: var(--interactive-active)
+}
+
+.high-contrast-mode .navButtonActive__08434 {
+    border: 1px solid var(--border-normal);
+    box-sizing: border-box
 }
 
 .resizeHandle__08434 {
@@ -54805,9 +54829,9 @@ html.disable-forced-colors * {
     --control-border-primary-default: var(--blurple-18);
     --control-border-primary-hover: var(--blurple-18);
     --control-border-primary-loading: var(--blurple-18);
-    --control-border-secondary-active: var(--neutral-39);
-    --control-border-secondary-default: var(--neutral-39);
-    --control-border-secondary-hover: var(--neutral-39);
+    --control-border-secondary-active: var(--neutral-36);
+    --control-border-secondary-default: var(--neutral-36);
+    --control-border-secondary-hover: var(--neutral-36);
     --control-border-secondary-loading: var(--neutral-35);
     --control-icon-critical-secondary-active: var(--red-new-6);
     --control-icon-critical-secondary-default: var(--red-new-6);
@@ -54830,6 +54854,7 @@ html.disable-forced-colors * {
     --control-text-secondary-hover: var(--white);
     --control-text-secondary-loading: var(--white);
     --embed-title: var(--white);
+    --focus-primary: var(--blue-new-18);
     --header-muted: var(--neutral-12);
     --header-primary: var(--white);
     --header-secondary: var(--neutral-1);
@@ -54848,7 +54873,7 @@ html.disable-forced-colors * {
     --info-warning-background: hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039);
     --info-warning-text: var(--yellow-new-7);
     --input-background: hsl(var(--opacity-black-28-hsl)/0.2784313725490196);
-    --input-border: var(--neutral-39);
+    --input-border: var(--neutral-36);
     --input-placeholder-text: var(--neutral-29);
     --interactive-active: var(--white);
     --interactive-hover: var(--white);
@@ -54926,6 +54951,7 @@ html.disable-forced-colors * {
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-25) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --focus-primary: color-mix(in oklab, var(--blue-new-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -54944,7 +54970,7 @@ html.disable-forced-colors * {
         --info-warning-background: color-mix(in oklab, hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --info-warning-text: color-mix(in oklab, var(--yellow-new-7) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-background: color-mix(in oklab, hsl(var(--opacity-black-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border: color-mix(in oklab, var(--neutral-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-border: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --input-placeholder-text: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-active: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-hover: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -55088,6 +55114,7 @@ html.disable-forced-colors * {
     --control-text-secondary-hover: var(--black);
     --control-text-secondary-loading: var(--black);
     --embed-title: var(--black);
+    --focus-primary: var(--blue-new-63);
     --header-muted: var(--neutral-49);
     --header-primary: var(--black);
     --header-secondary: var(--neutral-76);
@@ -55184,6 +55211,7 @@ html.disable-forced-colors * {
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-59) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --focus-primary: color-mix(in oklab, var(--blue-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-49) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -55346,6 +55374,7 @@ html.disable-forced-colors * {
     --control-text-secondary-hover: var(--white);
     --control-text-secondary-loading: var(--white);
     --embed-title: var(--white);
+    --focus-primary: var(--blue-new-34);
     --header-muted: var(--neutral-23);
     --header-primary: var(--white);
     --header-secondary: var(--neutral-6);
@@ -55442,6 +55471,7 @@ html.disable-forced-colors * {
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-24) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-35) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --focus-primary: color-mix(in oklab, var(--blue-new-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -55604,6 +55634,7 @@ html.disable-forced-colors * {
     --control-text-secondary-hover: var(--white);
     --control-text-secondary-loading: var(--white);
     --embed-title: var(--white);
+    --focus-primary: var(--blue-new-29);
     --header-muted: var(--neutral-19);
     --header-primary: var(--white);
     --header-secondary: var(--neutral-1);
@@ -55700,6 +55731,7 @@ html.disable-forced-colors * {
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-20) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --embed-title: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --focus-primary: color-mix(in oklab, var(--blue-new-29) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
