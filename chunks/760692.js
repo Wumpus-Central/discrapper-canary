@@ -36,6 +36,7 @@ function l(e, t) {
         case r.m.NEON:
         case r.m.POP:
         case r.m.TOON:
+        case r.m.SOLID:
             return o(t[0]);
         default:
             return {};

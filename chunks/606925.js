@@ -8,11 +8,11 @@ var i = n(442837),
     s = n(388032),
     c = n(289356);
 function u(e) {
-    let { platform: t, color: n, look: u, onAction: d, Icon: p } = e;
+    let { platform: t, color: n, look: u, onAction: d, Icon: f } = e;
     if ((0, i.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let f =
-        null != p
-            ? (0, r.jsx)(p, { className: c.platformIcon })
+    let p =
+        null != f
+            ? (0, r.jsx)(f, { className: c.platformIcon })
             : (0, r.jsx)('img', {
                   alt: '',
                   className: c.platformIcon,
@@ -33,7 +33,7 @@ function u(e) {
             fullWidth: !0,
             children: (0, r.jsxs)('div', {
                 className: c.flex,
-                children: [f, s.intl.format(s.t.XWSHTU, { platform: t.name })]
+                children: [p, s.intl.format(s.t.XWSHTU, { platform: t.name })]
             })
         },
         'connect-platform-activity'

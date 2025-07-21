@@ -9,9 +9,9 @@ var r = n(255367),
     u = n(791422);
 function d() {
     let e = (0, a.e7)([s.Z], () => s.Z.getError());
-    return e ? (0, r.jsx)(p, { error: e }) : null;
+    return e ? (0, r.jsx)(f, { error: e }) : null;
 }
-let p = (e) => {
+let f = (e) => {
     let { error: t } = e,
         [n, a] = (0, i.useState)(!1),
         d = (0, o.Yzy)(
@@ -32,7 +32,7 @@ let p = (e) => {
             },
             'respect-motion-settings'
         ),
-        p = (() => {
+        f = (() => {
             switch (t) {
                 case s.r.ERROR_DOWNLOADING_DEPENDENCY:
                     return c.intl.string(c.t.D9neaG);
@@ -54,7 +54,7 @@ let p = (e) => {
                           (0, r.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
                               color: 'always-white',
-                              children: p
+                              children: f
                           }),
                           (0, r.jsx)(o.RyX, { onClick: () => a(!0) })
                       ]

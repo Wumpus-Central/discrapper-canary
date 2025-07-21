@@ -37,6 +37,33 @@ let a = (0, r.Z)({
                     delayMs: 200,
                     inExperiment: !0
                 }
+            },
+            {
+                id: 3,
+                label: 'Control (overlap)',
+                config: {
+                    enabled: !1,
+                    delayMs: 0,
+                    inExperiment: !0
+                }
+            },
+            {
+                id: 4,
+                label: 'Delay 100 ms (overlap)',
+                config: {
+                    enabled: !0,
+                    delayMs: 100,
+                    inExperiment: !0
+                }
+            },
+            {
+                id: 5,
+                label: 'Delay 200 ms (overlap)',
+                config: {
+                    enabled: !0,
+                    delayMs: 200,
+                    inExperiment: !0
+                }
             }
         ]
     }),
@@ -60,6 +87,21 @@ let a = (0, r.Z)({
                 inExperiment: !0
             },
             2: {
+                enabled: !0,
+                delayMs: 200,
+                inExperiment: !0
+            },
+            3: {
+                enabled: !1,
+                delayMs: 0,
+                inExperiment: !0
+            },
+            4: {
+                enabled: !0,
+                delayMs: 100,
+                inExperiment: !0
+            },
+            5: {
                 enabled: !0,
                 delayMs: 200,
                 inExperiment: !0

@@ -1,40 +1,21 @@
-n.d(t, { Z: () => m });
-var i = n(255367),
-    r = n(73800),
-    s = n(442837),
-    a = n(481060),
-    l = n(846027),
-    o = n(906732),
-    c = n(72897),
-    d = n(131951),
-    u = n(388032);
-function m() {
-    let e = (0, c.kj)({ location: 'UserSettingsCameraSelect' }),
-        { currentDeviceId: t, isVideoAvailable: n } = (0, s.cj)([d.Z], () => ({
-            currentDeviceId: d.Z.getVideoDeviceId(),
-            isVideoAvailable: d.Z.isVideoAvailable()
-        })),
-        { analyticsLocations: m } = (0, o.ZP)(),
-        p = r.useMemo(
-            () =>
-                e.map((e) => {
-                    let { id: t, name: n } = e;
-                    return {
-                        value: t,
-                        label: n
-                    };
-                }),
-            [e]
-        );
-    return (0, i.jsx)(a.xJW, {
-        title: u.intl.string(u.t.FsQ3OT),
-        children: (0, i.jsx)(a.q4e, {
-            placeholder: u.intl.string(u.t['t9eQ/v']),
-            options: p,
-            value: t,
-            isDisabled: !n,
-            onChange: (e) => l.Z.setVideoDevice(e, { analyticsLocations: m }),
-            'aria-label': u.intl.string(u.t['t9eQ/v'])
+n.d(t, { Z: () => d });
+var i = n(255367);
+n(73800);
+var r = n(442837),
+    s = n(481060),
+    a = n(670863),
+    l = n(131951),
+    o = n(65154),
+    c = n(388032);
+function d() {
+    let e = (0, r.e7)([l.Z], () => l.Z.isVideoAvailable());
+    return (0, i.jsx)(s.xJW, {
+        title: c.intl.string(c.t.FsQ3OT),
+        children: (0, i.jsx)(a.j, {
+            deviceType: o.h7.VIDEO_INPUT,
+            location: 'UserSettingsCameraSelect',
+            isDisabled: !e,
+            showAllDevices: !0
         })
     });
 }

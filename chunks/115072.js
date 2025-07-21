@@ -31,7 +31,7 @@ function P(e) {
         T = r.useRef(null),
         W = r.useRef(null),
         [N, A] = r.useState(''),
-        [L, R] = r.useState(''),
+        [R, L] = r.useState(''),
         [I, Z] = r.useState(),
         [z, J] = r.useState(''),
         [M, q] = r.useState([]),
@@ -69,8 +69,8 @@ function P(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '3259689eb5967ecde624dcdba31120d862a523f5' !== e.body.hash) {
-                    let e = new Date('1753125849833'),
+                if (null != e.body && 'dec72d5c0a737ab882854bb47df858f5d6ca0cee' !== e.body.hash) {
+                    let e = new Date('1753131118526'),
                         t = new Date(),
                         n = (0, j.TD)(t, e);
                     n.hours > 6 && ef(n.hours);
@@ -93,7 +93,7 @@ function P(e) {
         };
     async function ej() {
         var e, t;
-        if ((em(!1), '' === N || '' === L || null == I)) return void es(!0);
+        if ((em(!1), '' === N || '' === R || null == I)) return void es(!0);
         let r = null == B || null == (e = B.features) ? void 0 : e.find((e) => (0, b.pD)(e) === G);
         (ec(!0), es(!1));
         let l = (0, O.D)(
@@ -105,7 +105,7 @@ function P(e) {
             a = await (0, b.ZD)(
                 {
                     name: N,
-                    description: L,
+                    description: R,
                     priority: I,
                     feature: r,
                     url: z,
@@ -264,18 +264,19 @@ function P(e) {
                                     })
                                 }),
                                 (0, i.jsxs)(u.xJW, {
-                                    error: eo && '' === L ? S.intl.string(S.t.EkokLy) : null,
+                                    error: eo && '' === R ? S.intl.string(S.t.EkokLy) : null,
                                     title: S.intl.string(S.t['1SplHx']),
                                     children: [
                                         (0, i.jsx)(u.Kx8, {
                                             placeholder: 'What did you expect to see?',
-                                            value: L,
-                                            onChange: R
+                                            value: R,
+                                            onChange: L
                                         }),
-                                        (0, i.jsx)(u.R94, {
-                                            type: u.geA.DESCRIPTION,
-                                            children: 'You can add additional information/media on the ticket after submitting'
-                                        })
+                                        ep &&
+                                            (0, i.jsx)(u.R94, {
+                                                type: u.geA.DESCRIPTION,
+                                                children: 'You can add additional information/media on the ticket after submitting'
+                                            })
                                     ]
                                 }),
                                 (0, i.jsx)(u.xJW, {
@@ -522,7 +523,7 @@ function P(e) {
                     children: [
                         (0, i.jsx)(u.zxk, {
                             variant: 'primary',
-                            text: 'Submit and Open Report',
+                            text: ep ? 'Submit and Open Report' : 'Submit Report',
                             loading: eu,
                             onClick: ej
                         }),

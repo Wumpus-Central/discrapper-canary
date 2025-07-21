@@ -7,10 +7,10 @@ var i = n(755721),
     o = n(829820),
     s = n(862863);
 function c(e) {
-    let { activity: t, user: n, source: c, className: u, size: d, look: p, color: f, fullWidth: m, onAction: g } = e,
-        { label: _, tooltip: v, loading: b, disabled: h, onClick: y } = (0, o.Ih)(t, n, c),
+    let { activity: t, user: n, source: c, className: u, size: d, look: f, color: p, fullWidth: m, onAction: g } = e,
+        { label: _, tooltip: v, loading: b, disabled: y, onClick: h } = (0, o.Ih)(t, n, c),
         O = () => {
-            (null == g || g(), y());
+            (null == g || g(), h());
         };
     return (0, r.jsx)(l.ua7, {
         text: v,
@@ -20,13 +20,13 @@ function c(e) {
                 className: u,
                 innerClassName: s.playButtonInner,
                 size: d,
-                look: p,
-                color: f,
+                look: f,
+                color: p,
                 fullWidth: m,
                 onClick: O,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: h,
+                disabled: y,
                 submitting: b,
                 children: [
                     (0, r.jsx)(a.Z, {

@@ -19,18 +19,18 @@ function _(e) {
     var t, n, _;
     let { onClose: v } = e,
         { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
-        b = (0, d.N)(),
-        S = (0, c.Ng)(),
-        C = (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 || (0, c.Wp)(S, h.Si.TIER_2),
+        S = (0, d.N)(),
+        b = (0, c.Ng)(),
+        C = (null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 || (0, c.Wp)(b, h.Si.TIER_2),
         y = x.intl.string(p.default['+f+cqq']);
     return (
         C &&
-            (null != b
+            (null != S
                 ? (y = (0, f.Rt)({
-                      intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
-                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count
+                      intervalType: null == S || null == (n = S.subscription_trial) ? void 0 : n.interval,
+                      intervalCount: null == S || null == (_ = S.subscription_trial) ? void 0 : _.interval_count
                   }))
-                : null != S && (y = x.intl.formatToPlainString(x.t.bkQ4bG, { percent: S.discount.amount }))),
+                : null != b && (y = x.intl.formatToPlainString(x.t.bkQ4bG, { percent: b.discount.amount }))),
         (0, r.jsxs)('div', {
             className: g.root,
             children: [

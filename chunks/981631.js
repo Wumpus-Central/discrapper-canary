@@ -3307,6 +3307,7 @@ var nm = (function (e) {
             (e.LAUNCHPAD_SEARCHED = 'launchpad_searched'),
             (e.LAUNCHPAD_OPENED = 'launchpad_opened'),
             (e.MEDIA_DEVICE_CHANGED = 'media_device_changed'),
+            (e.DEVICES_LIST_SHOW_MORE_CLICKED = 'devices_list_show_more_clicked'),
             (e.IMAGE_VIDEO_DATA_SETTINGS_UPDATED = 'image_video_data_settings_updated'),
             (e.QUEST_HOVER = 'quest_hover'),
             (e.QUEST_HOVER_OFF = 'quest_hover_off'),

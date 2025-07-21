@@ -125,8 +125,8 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        F = (0, b.Z)(M).filter(y.lm),
-        U = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+        U = (0, b.Z)(M).filter(y.lm),
+        F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, n.jsx)('div', {
         className: I.panel,
         children: (0, n.jsxs)(x.zJl, {
@@ -211,7 +211,7 @@ function Z() {
                             error: k.length > 0 && null == L ? 'No game profile for '.concat(null != D ? D : k + ' - try by id', '.') : void 0,
                             style: null != L ? { border: '1px solid green' } : {}
                         }),
-                        (0, n.jsx)('ul', { children: F.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, n.jsx)('ul', { children: U.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, n.jsxs)(x.hjN, {
@@ -226,7 +226,7 @@ function Z() {
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === U,
+                            isSelected: (e) => e === F,
                             select: function (e) {
                                 p.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',

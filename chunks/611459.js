@@ -7,7 +7,7 @@ var i = n(246841),
     o = n(981631),
     s = n(145131);
 function c(e) {
-    let { activity: t, user: n, source: c, look: u, color: d, onAction: p } = e;
+    let { activity: t, user: n, source: c, look: u, color: d, onAction: f } = e;
     return null != t && (0, l.Z)(t, o.xjy.PLAY) && (0, a.Z)(t)
         ? (0, r.jsx)(
               i.Z,
@@ -20,7 +20,7 @@ function c(e) {
                   activity: t,
                   user: n,
                   source: c,
-                  onAction: p
+                  onAction: f
               },
               'play'
           )

@@ -1,6 +1,6 @@
 (n.d(t, {
-    E_: () => S,
-    Ti: () => b,
+    E_: () => b,
+    Ti: () => S,
     Yw: () => j
 }),
     n(415506),
@@ -136,21 +136,21 @@ function j(e) {
         })
     });
 }
-function b(e, t, n) {
+function S(e, t, n) {
     var r, l;
     let g = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'source_select',
-        { preset: _, resolution: j, fps: b, soundshareEnabled: S } = (0, s.cj)([c.Z], () => c.Z.getState()),
+        { preset: _, resolution: j, fps: S, soundshareEnabled: b } = (0, s.cj)([c.Z], () => c.Z.getState()),
         C = (0, s.e7)([d.Z], () => d.Z.getInputDeviceId()),
         y = null != (r = a.I0.useSetting()) && r,
         O = null != (l = a.eo.useSetting()) && l;
-    (0, u.Z)(f.tI.PRESET_CUSTOM, j, b, t, n) || ((j = f.LY.RESOLUTION_720), (b = f.ws.FPS_30));
-    let [Z, w] = i.useReducer(
+    (0, u.Z)(f.tI.PRESET_CUSTOM, j, S, t, n) || ((j = f.LY.RESOLUTION_720), (S = f.ws.FPS_30));
+    let [I, Z] = i.useReducer(
         v,
         p(h({}, x), {
-            muteStreamAudio: !S,
+            muteStreamAudio: !b,
             preset: _,
             resolution: j,
-            fps: b,
+            fps: S,
             hidePreview: y,
             notifyFriends: O,
             selectedSource: e,
@@ -161,18 +161,18 @@ function b(e, t, n) {
     return (
         i.useEffect(() => {
             o.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
-                w({
+                Z({
                     type: 'set_has_permission',
                     value: e
                 })
             );
         }, []),
         {
-            state: Z,
-            dispatch: w
+            state: I,
+            dispatch: Z
         }
     );
 }
-function S() {
+function b() {
     return [i.useContext(g), i.useContext(_)];
 }

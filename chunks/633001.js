@@ -145,7 +145,7 @@ function M(e) {
         })
     );
 }
-let F = r.memo(function (e) {
+let U = r.memo(function (e) {
         let { trackedGame: t } = e,
             a = (0, o.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
             r = (0, o.e7)([y.Z], () => y.Z.getGameForPID(t.pid)),
@@ -273,7 +273,7 @@ let F = r.memo(function (e) {
             ]
         });
     }),
-    U = r.memo(function (e) {
+    F = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.cj)([C.default], () => C.default.getOverlayPIDStatuses()),
             r = (0, o.cj)([f.default], () => f.default.getTrackedGames()),
@@ -634,7 +634,7 @@ let H = r.memo(function (e) {
                         color: 'text-default',
                         children: 'No tracked game times'
                     }),
-                Object.values(a).map((e) => (0, n.jsx)(U, { pid: e.pid }, e.pid)),
+                Object.values(a).map((e) => (0, n.jsx)(F, { pid: e.pid }, e.pid)),
                 (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsxs)(d.Text, {
@@ -892,7 +892,7 @@ let H = r.memo(function (e) {
                                                 color: 'text-default',
                                                 children: 'No running games'
                                             }),
-                                        Object.values(e).map((e) => (0, n.jsx)(F, { trackedGame: e }, e.pid))
+                                        Object.values(e).map((e) => (0, n.jsx)(U, { trackedGame: e }, e.pid))
                                     ]
                                 })
                             })

@@ -18,11 +18,11 @@ function d(e) {
             return n
                 ? (0, r.jsx)(o.l9, {
                       onClose: t,
-                      onSelect: t
+                      onSelect: void 0
                   })
                 : (0, r.jsx)(o.ZP, {
                       onClose: t,
-                      onSelect: t
+                      onSelect: void 0
                   });
         },
         children: (e) => {

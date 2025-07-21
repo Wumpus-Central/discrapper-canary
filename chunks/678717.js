@@ -36,8 +36,8 @@ var _ = a(392750),
     D = a(484662),
     L = a(496025),
     M = a(442954),
-    F = a(633001),
-    U = a(702904),
+    U = a(633001),
+    F = a(702904),
     B = a(178821),
     z = a(891401),
     G = a(958328),
@@ -136,7 +136,7 @@ function ei(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: ee.v0.GAMES,
-                        render: () => (0, n.jsx)(F.Z, {})
+                        render: () => (0, n.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -246,7 +246,7 @@ function ei(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: ee.v0.BILLING,
-                        render: () => (0, n.jsx)(U.Z, {})
+                        render: () => (0, n.jsx)(F.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

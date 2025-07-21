@@ -1,89 +1,67 @@
-n.d(t, { Z: () => O });
+(n.d(t, { Z: () => _ }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
     a = n(780384),
     l = n(481060),
-    o = n(846027),
-    c = n(906732),
-    d = n(72897),
-    u = n(463395),
-    m = n(131951),
-    p = n(358085),
-    g = n(210887),
-    h = n(494620),
-    f = n(962100),
-    b = n(65154),
-    x = n(388032),
-    _ = n(209782),
-    j = n(20493);
-let E = p.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
-function O() {
-    let e,
-        t,
-        { analyticsLocations: p } = (0, c.ZP)(),
-        O = (0, s.e7)([g.Z], () => g.Z.theme),
-        {
-            canSetInputDevice: C,
-            canSetOutputDevice: v,
-            inputDeviceId: S,
-            outputDeviceId: T
-        } = (0, s.cj)([m.Z], () => ({
-            canSetInputDevice: m.Z.supports(b.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: m.Z.supports(b.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: m.Z.getInputDeviceId(),
-            outputDeviceId: m.Z.getOutputDeviceId()
+    o = n(670863),
+    c = n(72897),
+    d = n(463395),
+    u = n(131951),
+    m = n(358085),
+    p = n(210887),
+    g = n(494620),
+    h = n(65154),
+    f = n(388032),
+    b = n(209782);
+let x = m.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
+function _() {
+    var e, t;
+    let m = (0, s.e7)([p.Z], () => p.Z.theme),
+        { canSetInputDevice: _, canSetOutputDevice: j } = (0, s.cj)([u.Z], () => ({
+            canSetInputDevice: u.Z.supports(h.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: u.Z.supports(h.AN.AUDIO_OUTPUT_DEVICE)
         })),
-        N = (0, d.zX)({ location: 'UserSettingsDevices' }),
-        I = (0, d.rB)({ location: 'UserSettingsDevices' }),
+        E = (0, c.p)(h.h7.AUDIO_INPUT),
+        O = (0, c.p)(h.h7.AUDIO_OUTPUT),
+        [C, v] = (0, c.L)(h.h7.AUDIO_INPUT, { location: 'UserSettingsDevices' }),
+        [S, T] = (0, c.L)(h.h7.AUDIO_OUTPUT, { location: 'UserSettingsDevices' }),
+        N = C.concat(v),
+        I = S.concat(T),
         y = r.useMemo(() => {
-            let e = N.find((e) => e.id === S),
-                t = I.find((e) => e.id === T),
-                n = E.some((t) => {
-                    var n;
-                    return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
+            let e = x.some((e) => {
+                    var t;
+                    return null == E || null == (t = E.hardwareId) ? void 0 : t.startsWith(e);
                 }),
-                i = E.some((e) => {
-                    var n;
-                    return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
+                t = x.some((e) => {
+                    var t;
+                    return null == O || null == (t = O.hardwareId) ? void 0 : t.startsWith(e);
                 });
-            return n && i && (null == e ? void 0 : e.containerId) != null && e.containerId === (null == t ? void 0 : t.containerId);
-        }, [N, I, S, T]);
-    (C ||
-        (e = (0, i.jsx)(l.R94, {
-            type: l.R94.Types.DESCRIPTION,
-            className: j.marginTop8,
-            children: x.intl.format(x.t['1iK6UV'], { onDownloadClick: () => (0, f.y)('Help Text Input Devices') })
-        })),
-        v ||
-            (t = (0, i.jsx)(l.R94, {
-                type: l.R94.Types.DESCRIPTION,
-                className: j.marginTop8,
-                children: x.intl.format(x.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
-            })));
-    let A = N[0],
-        P = null != A ? A.disabled : null != e,
-        R = I[0],
-        D = null != R ? R.disabled : null != t;
+            return e && t && (null == E ? void 0 : E.containerId) != null && E.containerId === (null == O ? void 0 : O.containerId);
+        }, [E, O]),
+        A = N[0],
+        P = I[0],
+        R = null != (e = null == A ? void 0 : A.disabled) ? e : !_,
+        D = null != (t = null == P ? void 0 : P.disabled) ? t : !j;
     function Z(e) {
         let t,
             { label: r, value: s } = e;
-        if (u.Z.isCertified(s)) {
-            let e = (0, a.ap)(O) ? n(561259) : n(887695);
+        if (d.Z.isCertified(s)) {
+            let e = (0, a.ap)(m) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: _.deviceOptionCertified
+                className: b.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: _.deviceOption,
+                className: b.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: _.deviceOptionLabel,
-                        children: u.Z.getCertifiedDeviceName(s, r)
+                        className: b.deviceOptionLabel,
+                        children: d.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
                 ]
@@ -91,75 +69,44 @@ function O() {
             s
         );
     }
-    function w(e) {
-        return Z(e[0]);
-    }
     return (0, i.jsxs)('div', {
-        className: _.devices,
+        className: b.devices,
         children: [
             (0, i.jsxs)('div', {
-                className: _.deviceColumns,
+                className: b.deviceColumns,
                 children: [
                     (0, i.jsx)('div', {
-                        className: _.column,
-                        children: (0, i.jsxs)(l.xJW, {
-                            title: x.intl.string(x.t.hHMYbW),
-                            children: [
-                                (0, i.jsx)(l.q4e, {
-                                    value: S,
-                                    onChange: (e) =>
-                                        o.Z.setInputDevice(e, {
-                                            location: 'Settings',
-                                            analyticsLocations: p
-                                        }),
-                                    options: N.map((e) => {
-                                        let { id: t, name: n } = e;
-                                        return {
-                                            value: t,
-                                            label: n
-                                        };
-                                    }),
-                                    isDisabled: P,
-                                    renderOptionValue: w,
-                                    renderOptionLabel: Z
-                                }),
-                                e
-                            ]
+                        className: b.column,
+                        children: (0, i.jsx)(l.xJW, {
+                            title: f.intl.string(f.t.hHMYbW),
+                            children: (0, i.jsx)(o.j, {
+                                deviceType: h.h7.AUDIO_INPUT,
+                                location: 'UserSettingsDevices',
+                                hideDeviceTypeIcon: !0,
+                                isDisabled: R,
+                                renderOptionLabel: Z
+                            })
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: _.column,
-                        children: (0, i.jsxs)(l.xJW, {
-                            title: x.intl.string(x.t.dl18zc),
-                            children: [
-                                (0, i.jsx)(l.q4e, {
-                                    value: T,
-                                    onChange: (e) =>
-                                        o.Z.setOutputDevice(e, {
-                                            location: 'Settings',
-                                            analyticsLocations: p
-                                        }),
-                                    options: I.map((e) => {
-                                        let { id: t, name: n } = e;
-                                        return {
-                                            value: t,
-                                            label: n
-                                        };
-                                    }),
-                                    isDisabled: D,
-                                    renderOptionValue: w,
-                                    renderOptionLabel: Z
-                                }),
-                                t
-                            ]
+                        className: b.column,
+                        children: (0, i.jsx)(l.xJW, {
+                            title: f.intl.string(f.t.dl18zc),
+                            children: (0, i.jsx)(o.j, {
+                                deviceType: h.h7.AUDIO_OUTPUT,
+                                location: 'UserSettingsDevices',
+                                hideDeviceTypeIcon: !0,
+                                isDisabled: D,
+                                renderOptionLabel: Z
+                            })
                         })
                     })
                 ]
             }),
             y &&
-                (0, i.jsx)(h.Z, {
-                    look: h.z.WARNING,
-                    children: x.intl.string(x.t.Ioz3g4)
+                (0, i.jsx)(g.Z, {
+                    look: g.z.WARNING,
+                    children: f.intl.string(f.t.Ioz3g4)
                 })
         ]
     });

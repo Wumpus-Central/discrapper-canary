@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(709706),
     u = n(378441),
     d = n(358820),
-    p = n(388032),
-    f = n(690410);
+    f = n(388032),
+    p = n(690410);
 function m() {
     let { hasActiveDownloads: e, progress: t } = (function () {
             let e = (0, o.cj)([c.Z], () => c.Z.getOngoingDownloads()),
@@ -57,20 +57,20 @@ function m() {
         null != n
             ? (0, r.jsx)(a.animated.div, {
                   style: e,
-                  className: f.floaterWrapper,
+                  className: p.floaterWrapper,
                   children: (0, r.jsxs)('div', {
-                      className: f.visibleFloater,
+                      className: p.visibleFloater,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: f.progressText,
+                              className: p.progressText,
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/semibold',
                                       color: 'text-primary',
-                                      children: p.intl.format(p.t['r+uZYW'], { progress: t })
+                                      children: f.intl.format(f.t['r+uZYW'], { progress: t })
                                   }),
                                   (0, r.jsx)(s.Avr, {
-                                      text: p.intl.string(p.t['ETE/oK']),
+                                      text: f.intl.string(f.t['ETE/oK']),
                                       onClick: d.ge,
                                       variant: 'always-white',
                                       textVariant: 'text-sm/normal'
