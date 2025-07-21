@@ -52,7 +52,7 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: h, tooltipPosition: _, onClick: b, className: E, source: x, hover: C, innerClassName: v } = e,
+    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: h, tooltipPosition: _, onClick: b, className: E, source: x, hover: v, innerClassName: C } = e,
         y = {
             fullWidth: n,
             size: m,
@@ -61,8 +61,8 @@ function m(e) {
             tooltipPosition: _,
             onClick: b,
             className: E,
-            hover: C,
-            innerClassName: v
+            hover: v,
+            innerClassName: C
         },
         O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
         j = null != O ? O.sku.id : null,

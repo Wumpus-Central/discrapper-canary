@@ -7,11 +7,11 @@ var r = n(755721),
     s = n(981631),
     a = n(261496);
 function c(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: c, showCloseButton: u } = e;
+    let { buttonText: t, onGoBack: n, onDismiss: c, showCloseButton: d } = e;
     return (0, i.jsxs)(l.qXd, {
         className: a.backNotice,
         children: [
-            u &&
+            d &&
                 (0, i.jsx)(l.RyX, {
                     onClick: c,
                     noticeType: s.kVF.BACK_TO_PREVIOUS_SCREEN

@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(880251),
     E = n(515344),
     x = n(835473),
-    C = n(471445),
-    v = n(111028),
+    v = n(471445),
+    C = n(111028),
     y = n(592125),
     O = n(430824),
     j = n(496675),
@@ -83,7 +83,7 @@ function k(e) {
 function L(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: l } = e;
     if (null != t && null != n) {
-        let e = (0, C.KS)(t, n);
+        let e = (0, v.KS)(t, n);
         return (0, r.jsxs)('div', {
             className: a()(R.channel, { [R.ended]: i }),
             children: [
@@ -94,7 +94,7 @@ function L(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(C.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: l,
@@ -110,7 +110,7 @@ function L(e) {
     return null != n
         ? (0, r.jsx)('div', {
               className: a()(R.channel, { [R.ended]: i }),
-              children: (0, r.jsx)(v.Z, {
+              children: (0, r.jsx)(C.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       color: l,
@@ -133,8 +133,8 @@ function D(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        C = (0, c.e7)([O.Z], () => (null != a.guild ? O.Z.getGuild(a.guild.id) : null), [a]),
-        v = (0, x.Z)([b.id])[0],
+        v = (0, c.e7)([O.Z], () => (null != a.guild ? O.Z.getGuild(a.guild.id) : null), [a]),
+        C = (0, x.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == a ? void 0 : a.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) ? void 0 : e.applicationId) === b.id;
@@ -177,22 +177,22 @@ function D(e) {
                 }));
         }, [a, o, D, u]),
         G = a.state === A.r2o.ACCEPTING,
-        H = null != C;
-    if (null == C) {
+        H = null != v;
+    if (null == v) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
-        C = (0, N.Qs)(a.guild);
+        v = (0, N.Qs)(a.guild);
     }
     let V = (H && !L) || (H && T);
-    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), L || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
+    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), L || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == C)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
               children: (0, r.jsx)(M, {
-                  app: v,
+                  app: C,
                   activityUsers: F,
                   isMember: H,
                   channel: k,
-                  guild: C,
+                  guild: v,
                   members: g,
                   membersOnline: h,
                   isActivityActive: R,
@@ -206,7 +206,7 @@ function D(e) {
 }
 function M(e) {
     var t, n;
-    let { app: l, activityUsers: a, isMember: o, channel: s, guild: c, members: u, membersOnline: d, isActivityActive: p, submitting: m, isDisabled: f, tooltip: x, handleAcceptInvite: C, onView: v } = e,
+    let { app: l, activityUsers: a, isMember: o, channel: s, guild: c, members: u, membersOnline: d, isActivityActive: p, submitting: m, isDisabled: f, tooltip: x, handleAcceptInvite: v, onView: C } = e,
         { bot: y, icon: O } = l,
         j = T.ZP.getApplicationIconURL({
             id: l.id,
@@ -223,10 +223,10 @@ function M(e) {
                     trackingArea: o ? _.j_.PLAY : _.j_.JOIN_SERVER,
                     submitting: m,
                     disabledReason: f && null != x ? x : void 0,
-                    onClick: C
+                    onClick: v
                 }
             ],
-            [C, p, f, o, m, x]
+            [v, p, f, o, m, x]
         );
     return (0, r.jsx)(
         g.W,
@@ -293,7 +293,7 @@ function M(e) {
                 trackingConfig: {
                     id: l.id,
                     linkType: _.Un.ACTIVITY_INVITE,
-                    onView: v
+                    onView: C
                 }
             }),
         Object.getOwnPropertyDescriptors

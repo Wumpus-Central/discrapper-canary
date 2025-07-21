@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(314940));
+(n.d(t, { Z: () => v }), n(314940));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -184,7 +184,7 @@ function x(e) {
               })
           });
 }
-function C(e) {
+function v(e) {
     let { message: t, poll: n, className: i } = e;
     return (0, r.jsx)(p.XL, {
         message: t,

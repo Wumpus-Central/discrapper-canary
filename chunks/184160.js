@@ -1,8 +1,8 @@
 t.d(n, { x: () => j });
 var i = t(255367);
 t(73800);
-var l = t(512722),
-    r = t.n(l),
+var r = t(512722),
+    l = t.n(r),
     s = t(780384),
     a = t(755721),
     o = t(410030),
@@ -16,7 +16,7 @@ var l = t(512722),
     f = t(959803);
 function j(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        l = (0, o.ZP)(),
+        r = (0, o.ZP)(),
         { activeSubscription: j, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
         { isGift: g } = (0, c.wD)(),
         y = null != j ? (0, d.Af)(j) : null,
@@ -29,7 +29,7 @@ function j(e) {
             startedPaymentFlowWithPaymentSources: L.current
         });
     return (
-        r()(null != S, 'Expected premium type'),
+        l()(null != S, 'Expected premium type'),
         (0, i.jsx)(C.Z, {
             premiumType: S,
             titleText: h.intl.string(h.t['7VcWW1']),
@@ -45,7 +45,7 @@ function j(e) {
                     }),
                     (0, i.jsx)(a.zx, {
                         look: a.zx.Looks.LINK,
-                        color: (0, s.wj)(l) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
+                        color: (0, s.wj)(r) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
                         onClick: t,
                         children: h.intl.string(h.t.h9tkAA)
                     })

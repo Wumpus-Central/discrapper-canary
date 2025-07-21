@@ -7,8 +7,8 @@ if (12633 == n.j) var o = n(114858);
 var s = n(442837),
     a = n(755721),
     c = n(481060),
-    u = n(430824),
-    d = n(914010),
+    d = n(430824),
+    u = n(914010),
     _ = n(693546),
     h = n(305325),
     E = n(246364),
@@ -48,8 +48,8 @@ let N =
     12633 == n.j
         ? () => {
               var e, t;
-              let r = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
-                  N = (0, s.e7)([u.Z], () => u.Z.getGuild(r), [r]),
+              let r = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []),
+                  N = (0, s.e7)([d.Z], () => d.Z.getGuild(r), [r]),
                   R = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
                   m = (0, o.TH)(),
                   A = (null == (e = (0, o.LX)(m.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;

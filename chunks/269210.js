@@ -10,14 +10,14 @@ var r = n(120356),
     l = n.n(r),
     o = n(708816),
     a = n(368072),
-    s = n(777207),
-    u = n(692547),
+    u = n(777207),
+    s = n(692547),
     c = n(330711),
     d = n(812743),
     p = n(820468);
 let f = 5;
 function S(t) {
-    let { description: e, imgSrc: n, renderPurchaseButton: r, onPurchase: S, title: O, onDetails: I, benefitItems: b, benefitsSummary: g, subtitle: _, maxBenefits: P = f } = t;
+    let { description: e, imgSrc: n, renderPurchaseButton: r, onPurchase: S, title: O, onDetails: I, benefitItems: b, benefitsSummary: g, subtitle: _, maxBenefits: y = f } = t;
     return (0, i.jsx)(o.tE, {
         children: (0, i.jsxs)('div', {
             className: l()(d.container, p.hoverCard),
@@ -34,7 +34,7 @@ function S(t) {
                     children: (0, i.jsxs)('div', {
                         className: d.body,
                         children: [
-                            (0, i.jsx)(s.x, {
+                            (0, i.jsx)(u.x, {
                                 tag: 'div',
                                 variant: 'heading-lg/semibold',
                                 children: O
@@ -48,7 +48,7 @@ function S(t) {
                                               alt: ''
                                           })
                                         : (0, i.jsx)(a.V, {
-                                              color: u.Z.colors.ICON_PRIMARY,
+                                              color: s.Z.colors.ICON_PRIMARY,
                                               size: 'custom',
                                               height: 48,
                                               width: 48
@@ -56,7 +56,6 @@ function S(t) {
                             }),
                             null != r
                                 ? r({
-                                      className: d.purchaseBtn,
                                       onClick: (t) => {
                                           (t.stopPropagation(), null == S || S());
                                       }
@@ -65,7 +64,7 @@ function S(t) {
                             _,
                             null != e &&
                                 '' !== e &&
-                                (0, i.jsx)(s.x, {
+                                (0, i.jsx)(u.x, {
                                     className: d.description,
                                     color: 'text-default',
                                     variant: 'text-sm/medium',
@@ -77,7 +76,7 @@ function S(t) {
                 null != g &&
                     (0, i.jsx)('div', {
                         className: d.benefitsSummary,
-                        children: (0, i.jsx)(s.x, {
+                        children: (0, i.jsx)(u.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
                             children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: g })
@@ -92,19 +91,19 @@ function S(t) {
                             children: (0, i.jsxs)('div', {
                                 className: d.benefitsList,
                                 children: [
-                                    (0, i.jsx)(s.x, {
+                                    (0, i.jsx)(u.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
-                                    b.length > P
+                                    b.length > y
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  b.slice(0, P),
-                                                  (0, i.jsx)(s.x, {
+                                                  b.slice(0, y),
+                                                  (0, i.jsx)(u.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: b.length - P })
+                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: b.length - y })
                                                   })
                                               ]
                                           })
@@ -129,12 +128,12 @@ function O(t) {
             (0, i.jsxs)('div', {
                 children: [
                     null != n &&
-                        (0, i.jsx)(s.x, {
+                        (0, i.jsx)(u.x, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             children: n
                         }),
-                    (0, i.jsx)(s.x, {
+                    (0, i.jsx)(u.x, {
                         variant: 'text-sm/normal',
                         children: r
                     })

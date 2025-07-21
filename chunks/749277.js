@@ -7,8 +7,8 @@ var r = n(442837),
     s = n(232567),
     a = n(230711),
     c = n(726542),
-    u = n(100527),
-    d = n(231757),
+    d = n(100527),
+    u = n(231757),
     _ = n(674525),
     h = n(963249),
     E = n(303172),
@@ -103,7 +103,7 @@ let D = (e) => {
                             P.intl.string(P.t['5NUVHB']),
                             (0, i.jsx)(o.NoS, {
                                 onClick: () =>
-                                    (0, d.Z)({
+                                    (0, u.Z)({
                                         platformType: m.ABu.SPOTIFY,
                                         location: 'Notice Bar'
                                     }),
@@ -125,7 +125,7 @@ let D = (e) => {
                             P.intl.string(P.t.WHWgoa),
                             (0, i.jsx)(o.EyT, {
                                 onClick: () =>
-                                    (0, d.Z)({
+                                    (0, u.Z)({
                                         platformType: m.ABu.PLAYSTATION,
                                         location: 'Notice Bar'
                                     }),
@@ -278,7 +278,7 @@ let D = (e) => {
                                 onClick: () => {
                                     (0, h.Z)({
                                         subscriptionTier: y.Si.TIER_2,
-                                        analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
+                                        analyticsLocations: [d.Z.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: m.Sbl.CHECKOUT_RECOVERY_NAGBAR,
                                         onClose: () => r(R.L.UNKNOWN)
                                     });

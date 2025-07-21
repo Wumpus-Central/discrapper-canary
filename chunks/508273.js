@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(798476),
     E = n(358595),
     x = n(981631),
-    C = n(388032),
-    v = n(583136);
+    v = n(388032),
+    C = n(583136);
 function y(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         p = i.useRef(null),
@@ -49,46 +49,46 @@ function y(e) {
     return null == T
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: a()(v.guildInviteContainer, { [v.clickable]: y && f }),
+              className: a()(C.guildInviteContainer, { [C.clickable]: y && f }),
               onClick: N,
               style: A,
               children: [
                   (0, r.jsxs)('div', {
-                      className: v.cardHeightMeasure,
+                      className: C.cardHeightMeasure,
                       ref: p,
                       children: [
                           (0, r.jsx)(b.Z7, {
                               profile: T,
-                              className: v.banner
+                              className: C.banner
                           }),
                           (0, r.jsx)(b.N3, { profile: T }),
                           (0, r.jsx)(_.Z, { profile: T }),
                           (0, r.jsx)(g.E, {
                               profile: T,
-                              className: v.mainContent
+                              className: C.mainContent
                           })
                       ]
                   }),
                   y && !f
                       ? (0, r.jsx)('div', {
-                            className: v.hideDetailsButtonContainer,
+                            className: C.hideDetailsButtonContainer,
                             children: (0, r.jsx)(s.Avr, {
                                 textVariant: 'text-xs/medium',
                                 variant: 'secondary',
                                 size: 'sm',
                                 onClick: P,
-                                text: C.intl.string(C.t.xdCLeH)
+                                text: v.intl.string(v.t.xdCLeH)
                             })
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: a()(v.footer, { [v.floatingFooter]: y }),
+                      className: a()(C.footer, { [C.floatingFooter]: y }),
                       children: [
-                          y && f ? (0, r.jsx)('div', { className: v.gradient }) : null,
+                          y && f ? (0, r.jsx)('div', { className: C.gradient }) : null,
                           (0, r.jsx)('div', {
-                              className: a()(v.footerContent, { [v.collapsedFooterContent]: y && f }),
+                              className: a()(C.footerContent, { [C.collapsedFooterContent]: y && f }),
                               children: (0, r.jsx)('div', {
-                                  className: v.buttonContainer,
+                                  className: C.buttonContainer,
                                   children: (0, r.jsx)(O, {
                                       invite: t,
                                       profile: T,

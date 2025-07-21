@@ -1,7 +1,7 @@
 t.d(n, { c: () => x });
 var i = t(255367),
-    l = t(442837),
-    r = t(780384),
+    r = t(442837),
+    l = t(780384),
     s = t(481060),
     a = t(410030),
     o = t(607070),
@@ -12,9 +12,9 @@ var i = t(255367),
     p = t(42154);
 function x() {
     var e;
-    let n = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+    let n = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         t = (0, a.ZP)(),
-        x = (0, r.wj)(t),
+        x = (0, l.wj)(t),
         h = (0, c.Z)(),
         f = null == h ? void 0 : h.planSelectionBanner,
         { claimableRewards: j } = (0, C.wD)();

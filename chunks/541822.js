@@ -1,14 +1,14 @@
-(n.d(e, { Z: () => u }), n(388685));
+(n.d(e, { Z: () => s }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(120356),
     o = n.n(l),
     a = n(349361),
-    s = n(806726);
-function u(t) {
+    u = n(806726);
+function s(t) {
     var e,
         n,
-        { children: l, gradientClassName: u } = t,
+        { children: l, gradientClassName: s } = t,
         c = (function (t, e) {
             if (null == t) return {};
             var n,
@@ -86,7 +86,7 @@ function u(t) {
                 e)
             ),
             (0, i.jsx)('div', {
-                className: o()(s.containerScrollGradient, u),
+                className: o()(u.containerScrollGradient, s),
                 'data-shown': p
             })
         ]

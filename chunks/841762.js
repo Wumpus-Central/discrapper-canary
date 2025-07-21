@@ -30,7 +30,7 @@ function c(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -49,15 +49,15 @@ function u(e, t) {
     }
     return r;
 }
-function d(e) {
+function u(e) {
     var t,
         n,
         { alt: l } = e,
-        o = u(e, ['alt']);
-    let [d, _] = r.useState(!0);
+        o = d(e, ['alt']);
+    let [u, _] = r.useState(!0);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            d &&
+            u &&
                 (0, i.jsx)(s.$jN, {
                     type: s.$jN.Type.LOW_MOTION,
                     className: a.loader
@@ -89,7 +89,7 @@ function d(e) {
 }
 function _(e) {
     var { src: t, backgroundSrc: n, alt: r, aspectRatio: l, className: s, imageChildClassName: _ } = e,
-        h = u(e, ['src', 'backgroundSrc', 'alt', 'aspectRatio', 'className', 'imageChildClassName']);
+        h = d(e, ['src', 'backgroundSrc', 'alt', 'aspectRatio', 'className', 'imageChildClassName']);
     return (0, i.jsxs)('div', {
         className: o()(a.container, s),
         children: [
@@ -103,7 +103,7 @@ function _(e) {
                 style: { aspectRatio: l },
                 className: a.imageContainer,
                 children: (0, i.jsx)(
-                    d,
+                    u,
                     c(
                         {
                             src: t,

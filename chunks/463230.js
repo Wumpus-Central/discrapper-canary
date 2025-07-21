@@ -7,8 +7,8 @@ var r = n(481060),
     s = n(91802),
     a = n(222727),
     c = n(981631),
-    u = n(921944),
-    d = n(388032),
+    d = n(921944),
+    u = n(388032),
     _ = n(131715);
 let h =
     12633 == n.j
@@ -24,7 +24,7 @@ let h =
                   color: E ? r.DM8.BRAND : r.DM8.PREMIUM_TIER_2,
                   children: [
                       (0, i.jsx)(r.RyX, {
-                          onClick: () => h(u.L.UNKNOWN),
+                          onClick: () => h(d.L.UNKNOWN),
                           noticeType: n
                       }),
                       !E &&
@@ -36,10 +36,10 @@ let h =
                       (0, o.Gv)(p, C, O, E),
                       (0, i.jsx)(r.NoS, {
                           onClick: () => {
-                              (h(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM));
+                              (h(d.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM));
                           },
                           noticeType: n,
-                          children: d.intl.string(d.t.hvVgAQ)
+                          children: u.intl.string(u.t.hvVgAQ)
                       })
                   ]
               });

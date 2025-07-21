@@ -5,8 +5,8 @@ let l = ['embedded_cover', 'embedded_background'];
 function o(e) {
     let { applicationId: t, size: n, names: o = l } = e,
         [s, a] = i.useState(null),
-        [c, u] = i.useState(!0),
-        d = (0, r.xF)(t, s, n),
+        [c, d] = i.useState(!0),
+        u = (0, r.xF)(t, s, n),
         _ = i.useRef(o);
     return (
         i.useEffect(() => {
@@ -16,12 +16,12 @@ function o(e) {
             let { current: e } = _;
             null != t &&
                 (0, r.Vh)(t).then((t) => {
-                    for (let [n, i] of (u(!1), Object.entries(t))) if (null != i && '' !== i.id && e.includes(i.name)) return void a(i.id);
+                    for (let [n, i] of (d(!1), Object.entries(t))) if (null != i && '' !== i.id && e.includes(i.name)) return void a(i.id);
                 });
         }, [t]),
         {
-            url: d,
-            state: c ? 'loading' : null != d ? 'fetched' : 'not-found'
+            url: u,
+            state: c ? 'loading' : null != u ? 'fetched' : 'not-found'
         }
     );
 }

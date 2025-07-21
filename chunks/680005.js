@@ -1,16 +1,16 @@
 n.d(e, {
-    YG: () => P,
-    pV: () => _,
-    rf: () => g
+    YG: () => _,
+    pV: () => g,
+    rf: () => b
 });
 var i,
     r = n(255367);
 n(73800);
 var l = n(860911),
-    o = n(755721),
+    o = n(481060),
     a = n(100527),
-    s = n(906732),
-    u = n(349167),
+    u = n(906732),
+    s = n(349167),
     c = n(929011),
     d = n(703656),
     p = n(626135),
@@ -18,29 +18,24 @@ var l = n(860911),
     S = n(110742),
     O = n(981631),
     I = n(388032),
-    b = n(299283),
-    g = (((i = {})[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (i[(i.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (i[(i.UNAVAILABLE = 4)] = 'UNAVAILABLE'), i);
-function _(t) {
-    let { appId: e, className: n, onClick: i, onHasClicked: l, skuId: o, subscriptionPlan: a, icon: s, state: u = 0 } = t,
-        c = null != a ? (0, f.xg)(a) : null,
-        d = 1 === u;
-    return 0 === u || d
+    b = (((i = {})[(i.AVAILABLE = 0)] = 'AVAILABLE'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.UPCOMING_PLAN = 2)] = 'UPCOMING_PLAN'), (i[(i.SUBSCRIBED = 3)] = 'SUBSCRIBED'), (i[(i.UNAVAILABLE = 4)] = 'UNAVAILABLE'), i);
+function g(t) {
+    let { appId: e, onClick: n, onHasClicked: i, skuId: l, subscriptionPlan: o, icon: a, state: u = 0 } = t,
+        s = null != o ? (0, f.xg)(o) : null,
+        c = 1 === u;
+    return 0 === u || c
         ? (0, r.jsx)(y, {
               appId: e,
-              skuId: o,
+              skuId: l,
               onClick: (t) => {
-                  (i(t), null == l || l());
+                  (n(t), null == i || i());
               },
-              className: n,
-              submitting: d,
-              children: (0, r.jsxs)('div', {
-                  className: b.btnContent,
-                  children: [s, null != c ? I.intl.formatToPlainString(I.t.i4T8v7, { rate: c }) : I.intl.string(I.t.uuzaAA)]
-              })
+              loading: c,
+              icon: a,
+              text: null != s ? I.intl.formatToPlainString(I.t.i4T8v7, { rate: s }) : I.intl.string(I.t.uuzaAA)
           })
-        : (0, r.jsx)(m, {
-              className: n,
-              children: (function (t, e) {
+        : (0, r.jsx)(P, {
+              text: (function (t, e) {
                   switch (t) {
                       case 2:
                           return I.intl.formatToPlainString(I.t.k1ew5O, { rate: e });
@@ -49,46 +44,40 @@ function _(t) {
                       case 4:
                           return I.intl.string(I.t.DLAKbm);
                   }
-              })(u, null != c ? c : '')
+              })(u, null != s ? s : '')
           });
 }
-function P(t) {
-    let { appId: e, className: n, onClick: i, onHasClicked: l, sku: o, icon: u } = t,
-        { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_STOREFRONT),
-        p = () => {
+function _(t) {
+    let { appId: e, onClick: n, onHasClicked: i, sku: l, icon: o } = t,
+        { analyticsLocations: s } = (0, u.ZP)(a.Z.APP_STOREFRONT),
+        d = () => {
             (0, c.r)({
                 appId: e,
-                skuId: o.id,
-                analyticsLocations: d
+                skuId: l.id,
+                analyticsLocations: s
             });
         },
-        g = (0, S.M)(o.id),
-        _ = o.type === O.epS.DURABLE && g,
-        { price: P } = o;
-    return null == P
+        p = (0, S.M)(l.id),
+        b = l.type === O.epS.DURABLE && p,
+        { price: g } = l;
+    return null == g
         ? null
-        : _
-          ? (0, r.jsx)(m, {
-                className: n,
-                children: I.intl.string(I.t['6cfuDg'])
-            })
+        : b
+          ? (0, r.jsx)(P, { text: I.intl.string(I.t['6cfuDg']) })
           : (0, r.jsx)(y, {
                 appId: e,
-                skuId: o.id,
+                skuId: l.id,
                 onClick: (t) => {
-                    ((null != i ? i : p)(t), null == l || l());
+                    ((null != n ? n : d)(t), null == i || i());
                 },
-                className: n,
-                children: (0, r.jsxs)('div', {
-                    className: b.btnContent,
-                    children: [u, I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(P.amount, P.currency) })]
-                })
+                text: I.intl.format(I.t.Xp5WTk, { price: (0, f.T4)(g.amount, g.currency) }),
+                icon: o
             });
 }
 function y(t) {
     var e,
         n,
-        { appId: i, skuId: a, onClick: s } = t,
+        { appId: i, skuId: a, onClick: u } = t,
         c = (function (t, e) {
             if (null == t) return {};
             var n,
@@ -108,9 +97,9 @@ function y(t) {
             }
             return r;
         })(t, ['appId', 'skuId', 'onClick']);
-    let f = (0, u.Z)();
+    let f = (0, s.Z)();
     return (0, r.jsx)(
-        o.zx,
+        o.zxk,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
@@ -152,7 +141,7 @@ function y(t) {
                         (0, d.uL)(n);
                         return;
                     }
-                    null == s || s(t);
+                    null == u || u(t);
                 }
             }),
         Object.getOwnPropertyDescriptors
@@ -170,13 +159,11 @@ function y(t) {
         e)
     );
 }
-function m(t) {
-    let { className: e, children: n } = t;
-    return (0, r.jsx)(o.zx, {
+function P(t) {
+    let { text: e } = t;
+    return (0, r.jsx)(o.zxk, {
+        text: e,
         disabled: !0,
-        className: e,
-        look: o.zx.Looks.OUTLINED,
-        color: o.zx.Colors.PRIMARY,
-        children: n
+        variant: 'primary'
     });
 }

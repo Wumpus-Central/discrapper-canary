@@ -17,8 +17,8 @@ var r,
     b = n(346329),
     E = n(981631),
     x = n(388032),
-    C = n(637214);
-function v(e, t, n) {
+    v = n(637214);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                C(e, t, n[t]);
             }));
     }
     return e;
@@ -74,14 +74,14 @@ class j extends (r = l.PureComponent) {
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, i.jsxs)(u.P3F, {
                   'aria-label': x.intl.string(x.t.KTPVLC),
-                  className: C.dropdownArrowHitbox,
+                  className: v.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, i.jsx)('div', { className: C.arrowSeparator }),
+                      (0, i.jsx)('div', { className: v.arrowSeparator }),
                       (0, i.jsx)(u.CJ0, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.dropdownArrow
+                          className: v.dropdownArrow
                       })
                   ]
               })
@@ -90,20 +90,20 @@ class j extends (r = l.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: r, size: l, customDisabledColor: a, tooltipPosition: o } = this.props;
         return (0, i.jsxs)('div', {
-            className: C.disabledButtonWrapper,
+            className: v.disabledButtonWrapper,
             children: [
                 (0, i.jsx)(c.zx, {
                     className: n,
                     fullWidth: r,
                     size: l,
-                    color: null != a ? a : C.disabledButtonColor,
+                    color: null != a ? a : v.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
                 (0, i.jsx)(u.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, i.jsx)('div', y({ className: C.disabledButtonOverlay }, e))
+                    children: (e) => (0, i.jsx)('div', y({ className: v.disabledButtonOverlay }, e))
                 })
             ]
         });
@@ -114,8 +114,8 @@ class j extends (r = l.PureComponent) {
         if (s) return this.renderDisabledButton(x.intl.string(x.t['3elwAA']));
         let m = d ? u.gtL : c.zx;
         return (0, i.jsxs)(m, {
-            className: o()(C.playButton, e),
-            innerClassName: C.playButtonContents,
+            className: o()(v.playButton, e),
+            innerClassName: v.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != r ? r : c.zx.Colors.GREEN,
@@ -123,7 +123,7 @@ class j extends (r = l.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, i.jsx)('div', {
-                    className: C.buttonText,
+                    className: v.buttonText,
                     children: x.intl.string(x.t['359PbW'])
                 }),
                 this.renderDropdown()
@@ -132,7 +132,7 @@ class j extends (r = l.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            v(this, 'handleDropdownClick', (e) => {
+            C(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: l } = this.props;
                 if ((null == r || r(e), null == t)) throw Error('Unexpected missing libraryApplication');
@@ -152,7 +152,7 @@ class j extends (r = l.PureComponent) {
                     { onClose: l }
                 );
             }),
-            v(this, 'handleClick', () => {
+            C(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: r } = this.props;
                 b.playApplication(e, t, {
                     analyticsParams: {
@@ -181,7 +181,7 @@ function I(e) {
         })
     );
 }
-v(j, 'defaultProps', {
+C(j, 'defaultProps', {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     tooltipPosition: 'top',

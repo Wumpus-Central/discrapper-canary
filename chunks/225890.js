@@ -19,8 +19,8 @@ function b(e) {
         [n, b, E] = t.split('-'),
         {
             guildScheduledEvent: x,
-            guild: C,
-            channel: v,
+            guild: v,
+            channel: C,
             isMember: y
         } = (0, l.cj)(
             [f.ZP, d.Z, c.Z, u.ZP, p.default],
@@ -43,14 +43,14 @@ function b(e) {
             ((null == x ? void 0 : x.id) == null && g.Z.fetchGuildEvent(n, b), m.Z.getGuildEventUserCounts(n, b, null != E ? [E] : []), m.Z.getGuildEventsForCurrentUser(n));
         }, [b, n, null == x ? void 0 : x.id, E]),
         (0, r.jsx)(h.ZP, {
-            guild: C,
-            channel: v,
+            guild: v,
+            channel: C,
             guildScheduledEvent: x,
             isMember: y,
             onAcceptInstantInvite: _.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, o.n)(n)) return void (0, a.hk)(n);
-                (null == v ? void 0 : v.isGuildStageVoice()) ? (0, s.Cq)(v) : (null == v ? void 0 : v.isGuildVoice()) && g.Z.joinVoiceEvent(v.guild_id, v.id);
+                (null == C ? void 0 : C.isGuildStageVoice()) ? (0, s.Cq)(C) : (null == C ? void 0 : C.isGuildVoice()) && g.Z.joinVoiceEvent(C.guild_id, C.id);
             },
             recurrenceId: E
         })

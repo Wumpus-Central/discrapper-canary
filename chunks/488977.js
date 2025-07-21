@@ -142,7 +142,7 @@ function L(e) {
                                             label: I.intl.string(I.t.kRvlKC),
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('14529')]).then(n.bind(n, 7225));
+                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('17883')]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, l.jsx)(e, {
                                                             transitionState: t.transitionState,

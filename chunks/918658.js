@@ -9,8 +9,8 @@ var i = n(255367),
     s = n(442837),
     a = n(692547),
     c = n(755721),
-    u = n(481060),
-    d = n(549817),
+    d = n(481060),
+    u = n(549817),
     _ = n(819553),
     h = n(17181),
     E = n(303737),
@@ -82,10 +82,10 @@ function M() {
         Z = n === A.oC.GUILD_ONBOARDING,
         k = (e) => {
             let { backToSettings: n } = e;
-            null != t && (N.Z.isFullServerPreview(t) && (0, p.uL)(m.Z5c.CHANNEL(t)), _.ZP.shouldShowOnboarding(t) && (d.Z.finishOnboarding(t), (0, h.EI)(t)), (0, f.mL)(t), n && I.Z.open(t, o), o === m.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
+            null != t && (N.Z.isFullServerPreview(t) && (0, p.uL)(m.Z5c.CHANNEL(t)), _.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, h.EI)(t)), (0, f.mL)(t), n && I.Z.open(t, o), o === m.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
         };
-    return (0, i.jsxs)(u.qXd, {
-        color: u.DM8.BRAND,
+    return (0, i.jsxs)(d.qXd, {
+        color: d.DM8.BRAND,
         className: D.notice,
         children: [
             (0, i.jsxs)(v, {
@@ -116,7 +116,7 @@ function M() {
                               className: D.noticeText,
                               children: c ? b.intl.formatToPlainString(b.t['0PHahI'], { numRoles: Object.keys(l).length }) : b.intl.formatToPlainString(b.t.vMlK8v, { numRoles: Object.keys(l).length })
                           }),
-                          (0, i.jsx)(u.yRy, {
+                          (0, i.jsx)(d.yRy, {
                               targetElementRef: e,
                               position: 'bottom',
                               renderPopout: () => (0, i.jsx)(R.Z, { guildId: t }),
@@ -138,22 +138,22 @@ function M() {
                               }
                           }),
                           c &&
-                              (0, i.jsx)(u.DY3, {
+                              (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: b.intl.string(b.t.mW4DUF),
-                                  children: (0, i.jsx)(u.P4T, {
+                                  children: (0, i.jsx)(d.P4T, {
                                       size: 'xs',
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
                           S &&
-                              (0, i.jsx)(u.DY3, {
+                              (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: b.intl.formatToPlainString(b.t.eummvb, {
                                       maxTiers: P.fF,
                                       maxProducts: y.dD
                                   }),
-                                  children: (0, i.jsx)(u.P4T, {
+                                  children: (0, i.jsx)(d.P4T, {
                                       size: 'xs',
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
