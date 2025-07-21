@@ -1,99 +1,114 @@
 n.d(t, {
-    $h: () => E,
-    jG: () => j,
-    yI: () => x
+    $h: () => x,
+    cO: () => I,
+    jG: () => E,
+    yI: () => S
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(793030),
-    s = n(442837),
-    a = n(481060),
-    c = n(100527),
-    u = n(623624),
-    d = n(970731),
-    h = n(430824),
-    p = n(639777),
-    f = n(441536),
-    g = n(795338),
-    m = n(279604),
-    b = n(981631),
-    _ = n(921944),
-    O = n(93841),
-    y = n(388032),
-    v = n(423151),
-    C = n(928381);
-function j(e) {
+    o = n(494497),
+    s = n(793030),
+    a = n(442837),
+    c = n(481060),
+    u = n(100527),
+    d = n(623624),
+    h = n(970731),
+    p = n(430824),
+    f = n(639777),
+    g = n(441536),
+    m = n(795338),
+    b = n(279604),
+    _ = n(981631),
+    O = n(921944),
+    y = n(93841),
+    v = n(388032),
+    C = n(423151),
+    j = n(928381);
+function E(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(S, {
-        asset: (0, r.jsx)(g.g, { className: v.image }),
-        header: y.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
-        content: y.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: y.intl.string(y.t.RzWDqa),
-        onClick: () => (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
+    return (0, r.jsx)(P, {
+        asset: (0, r.jsx)(m.g, { className: C.image }),
+        header: v.intl.formatToPlainString(y.default['Zg/m9P'], { perkName: n.title }),
+        content: v.intl.formatToPlainString(y.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
+        onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
 }
-function E(e) {
+function x(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        i = (0, p.Z)(t);
-    return (0, r.jsx)(S, {
+        i = (0, f.Z)(t);
+    return (0, r.jsx)(P, {
         asset: (0, r.jsx)('img', {
             alt: '',
-            src: C.Z,
-            className: l()(v.image, v.newPerksImage)
+            src: j.Z,
+            className: l()(C.image, C.newPerksImage)
         }),
-        header: y.intl.string(O.default.QpQBPT),
-        content: i ? y.intl.string(O.default['6hn0xM']) : y.intl.string(O.default.RDuvXl),
-        buttonCTA: y.intl.string(y.t.RzWDqa),
+        header: v.intl.string(y.default.QpQBPT),
+        content: i ? v.intl.string(y.default['6hn0xM']) : v.intl.string(y.default.RDuvXl),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
         onClick: () =>
             i
-                ? (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
-                : (0, u.f)({
+                ? (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
+                : (0, d.f)({
                       guildId: t,
-                      location: { section: b.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK }
+                      location: { section: _.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK }
                   }),
         markAsDismissed: n,
-        caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
+        caretPosition: i ? h.DF.LEFT_TOP : h.DF.TOP_CENTER
     });
 }
-function x(e) {
+function S(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([h.Z], () => {
+        l = (0, a.e7)([p.Z], () => {
             var e;
-            return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = p.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        { onActivate: o } = (0, m.ZP)(t, n[0]);
+        { onActivate: o } = (0, b.ZP)(t, n[0]);
     if (0 === n.length) return;
-    let a =
+    let s =
             n.length >= 3
-                ? y.intl.formatToPlainString(O.default['6Sv+3N'], {
+                ? v.intl.formatToPlainString(y.default['6Sv+3N'], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title
                   })
                 : 2 === n.length
-                  ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: ''.concat(n[0].title, ' & ').concat(n[1].title) })
-                  : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: n[0].title }),
-        u = 1 === n.length;
-    return (0, r.jsx)(S, {
+                  ? v.intl.formatToPlainString(y.default.wcQOqK, { perks: ''.concat(n[0].title, ' & ').concat(n[1].title) })
+                  : v.intl.formatToPlainString(y.default.ZF8NT0, { perk: n[0].title }),
+        c = 1 === n.length;
+    return (0, r.jsx)(P, {
         asset:
             1 === n.length
-                ? (0, r.jsx)(g.m, {
-                      className: v.image,
+                ? (0, r.jsx)(m.m, {
+                      className: C.image,
                       powerup: n[0]
                   })
-                : (0, r.jsx)(g.g, { className: v.image }),
-        header: y.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
-        content: a,
-        buttonCTA: u ? y.intl.string(O.default.gSxlHR) : y.intl.string(y.t.RzWDqa),
-        onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
+                : (0, r.jsx)(m.g, { className: C.image }),
+        header: v.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
+        content: s,
+        buttonCTA: c ? v.intl.string(y.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
+        onClick: (e) => (c ? o(e) : (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
 }
-function S(e) {
-    var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
+function I(e) {
+    let { guildId: t, powerup: n, markAsDismissed: i } = e;
+    return n.skuId === o.A$
+        ? (0, r.jsx)(P, {
+              header: v.intl.string(y.default.Ygpx4e),
+              content: v.intl.string(y.default.mmNkUF),
+              asset: (0, r.jsx)(m.g, { className: C.image }),
+              onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, n.skuId),
+              markAsDismissed: i,
+              buttonCTA: v.intl.string(v.t.RzWDqa)
+          })
+        : null;
+}
+function P(e) {
+    var { asset: t, header: n, content: i, caretPosition: o, markAsDismissed: a } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -113,10 +128,10 @@ function S(e) {
             }
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
-    let h = null != s ? s : d.DF.LEFT_TOP,
-        p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? v[h] : '';
+    let d = null != o ? o : h.DF.LEFT_TOP,
+        p = d === h.DF.TOP_CENTER || d === h.DF.LEFT_TOP ? C[d] : '';
     return (0, r.jsx)(
-        d.ZP,
+        h.ZP,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -144,29 +159,29 @@ function S(e) {
         })(
             {
                 asset: (0, r.jsxs)('div', {
-                    className: v.imageContainer,
+                    className: C.imageContainer,
                     children: [
                         t,
-                        (0, r.jsx)(a.olH, {
-                            className: v.close,
-                            onClick: () => (null == c ? void 0 : c(_.L.USER_DISMISS))
+                        (0, r.jsx)(c.olH, {
+                            className: C.close,
+                            onClick: () => (null == a ? void 0 : a(O.L.USER_DISMISS))
                         })
                     ]
                 }),
-                header: (0, r.jsx)(o.xv, {
+                header: (0, r.jsx)(s.xv, {
                     variant: 'text-md/semibold',
                     children: n
                 }),
-                content: (0, r.jsx)(o.xv, {
+                content: (0, r.jsx)(s.xv, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     children: i
                 }),
-                className: l()(v.container, p),
-                headerClassName: v.header,
-                contentClassName: v.header,
-                caretPosition: h,
-                markAsDismissed: c
+                className: l()(C.container, p),
+                headerClassName: C.header,
+                contentClassName: C.header,
+                caretPosition: d,
+                markAsDismissed: a
             },
             u
         )

@@ -46,7 +46,7 @@ function y(e) {
                     return (0, n.jsx)(f.E, { guildId: y });
                 case b.If:
                     return (0, n.jsx)(f.Z, {});
-                case a.A:
+                case a.A$:
                     return (0, n.jsx)(_.Z, {});
                 default:
                     return;

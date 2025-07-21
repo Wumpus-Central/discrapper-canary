@@ -537,7 +537,7 @@ let z = {
         },
         unpauseFrameEvictor() {
             var e, t;
-            null == (e = (t = I.app).pauseFrameEvictor) || e.call(t);
+            null == (e = (t = I.app).unpauseFrameEvictor) || e.call(t);
         },
         getPidFromDesktopSource(e) {
             if (!(0, h.isDesktop)() || null == this.getDiscordUtils().getPidFromWindowHandle) return null;

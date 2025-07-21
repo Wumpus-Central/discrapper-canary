@@ -102,7 +102,7 @@ function N(e) {
                 (e.preventDefault(),
                     e.stopPropagation(),
                     b
-                        ? (g.Z.close(), (0, m.Z)(t.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A))
+                        ? (g.Z.close(), (0, m.Z)(t.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
                         : (0, x.E6)({
                               guild: t,
                               analyticsLocations: p,

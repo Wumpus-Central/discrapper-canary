@@ -30,8 +30,8 @@ var r = n(255367),
     w = n(657795),
     D = n(489762),
     L = n(31543),
-    x = n(814042),
-    M = n(15350),
+    x = n(15350),
+    M = n(151189),
     k = n(611480),
     j = n(981631),
     U = n(655304);
@@ -126,7 +126,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ed = b._O.useSetting(),
             ef = i.useMemo(() => new Set(ed), [ed]),
             e_ = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-            ep = i.useMemo(() => (0, M.S)(ea, e_, c), [ea, e_, c]),
+            ep = i.useMemo(() => (0, x.S)(ea, e_, c), [ea, e_, c]),
             eh = (0, A.RJ)(),
             em = (0, A.LZ)(),
             eg = (0, l.cj)([N.Z], () => N.Z.getAllGuildStickers()),
@@ -283,7 +283,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                               })
                           ]
                       }),
-                ei && (0, r.jsx)(x.C, { onLearnMore: eM })
+                ei && (0, r.jsx)(M.C, { onLearnMore: eM })
             ]
         });
     }),

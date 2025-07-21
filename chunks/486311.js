@@ -68,6 +68,8 @@ let C = {
                         return (0, r.jsx)(g.$h, v({ guildId: t }, j.popout));
                     case p.J.PERKS_PURCHASABLE:
                         return (0, r.jsx)(g.yI, v({ guildId: t }, j.popout));
+                    case p.J.NEW_PERK_AVAILABLE:
+                        return (0, r.jsx)(g.cO, v({ guildId: t }, j.popout));
                     default:
                         return (0, r.jsx)('div', {});
                 }

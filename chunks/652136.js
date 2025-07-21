@@ -47,7 +47,7 @@ function c(e) {
             location: u
         }),
         (0, i.ZDy)(async () => {
-            let { default: e } = await n.e('39511').then(n.bind(n, 433550));
+            let { default: e } = await n.e('656').then(n.bind(n, 861348));
             return (n) => (0, r.jsx)(e, l({ stickerPack: t }, n));
         })
     );

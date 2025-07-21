@@ -25,7 +25,7 @@ function f(e) {
                 return null != (n = null == x || null == (t = x.filter) || null == (e = t.call(x, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? n : 0;
             }, [x]);
     if (v <= 0) return null;
-    let g = n.some((e) => e.skuId === i.A);
+    let g = n.some((e) => e.skuId === i.A$);
     return (0, r.jsxs)('div', {
         className: _.container,
         children: [

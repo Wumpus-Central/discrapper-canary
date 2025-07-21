@@ -90,6 +90,7 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_COACHMARK_LEVEL_UP = 'guild powerups - coachmark - level up'),
         (e.GUILD_POWERUPS_COACHMARK_NEW_PERKS = 'guild powerups - coachmark - new perks'),
         (e.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS = 'guild powerups - coachmark - purchaseable perks'),
+        (e.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE = 'guild powerups - coachmark - new perk available'),
         (e.GUILD_POWERUPS_MARKETING = 'guild powerups - marketing'),
         (e.GUILD_BOOSTING_PREMIUM_UPSELL = 'guild boosting premium upsell'),
         (e.RPC = 'rpc'),

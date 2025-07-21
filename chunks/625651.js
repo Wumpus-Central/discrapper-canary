@@ -86,7 +86,7 @@ function j(e) {
                                   })
                                 : v.intl.formatToPlainString(k.default.cavtEh, { perk: t.title });
                         break;
-                    case a.A:
+                    case a.A$:
                         e = b
                             ? (0, r.jsx)(s.Text, {
                                   color: 'text-danger',

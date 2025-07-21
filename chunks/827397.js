@@ -16,7 +16,7 @@ function c(e, t) {
                     case a.If:
                         s.Z.open(e, l.pNK.ROLES, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case o.A:
+                    case o.A$:
                         s.Z.open(e, l.pNK.BOOST_PERKS, l.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:

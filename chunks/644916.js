@@ -22,6 +22,8 @@ function d(e) {
                 storeState: s.ZP.getState(),
                 surface: o.eR.VOICE_LAUNCHER
             });
+        case i.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
+            return 0;
         default:
             return ((0, a.UT)(e, { andFail: !1 }), 0);
     }

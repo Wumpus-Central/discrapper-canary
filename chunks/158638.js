@@ -1,6 +1,7 @@
 n.d(t, {
-    AR: () => c,
+    AR: () => u,
     g1: () => l,
+    qI: () => c,
     sT: () => o
 });
 var r = n(818083),
@@ -50,6 +51,20 @@ function l(e, t) {
     ).enabled;
 }
 function c(e, t) {
+    let n = s(e),
+        r = o.useExperiment(
+            {
+                guildId: e,
+                location: t
+            },
+            {
+                disable: !n,
+                autoTrackExposure: !1
+            }
+        );
+    return r.enabled && !r.rollbackEnabled;
+}
+function u(e, t) {
     return (
         !!s(e) &&
         o.getCurrentConfig(

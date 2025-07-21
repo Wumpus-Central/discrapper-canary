@@ -75,7 +75,7 @@ if (null != D.Z) {
         .join(', ');
     new G.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(u, ', build: ').concat(t));
     let d = null == (l = (c = D.Z.remoteApp).getReleaseChannel) ? void 0 : l.call(c);
-    (('canary' === d || 'development' === d) && T.ZP.pauseFrameEvictor(), T.ZP.initializeExitHook(), T.ZP.initializeWERHandler());
+    (('ptb' === d || 'canary' === d || 'development' === d) && T.ZP.pauseFrameEvictor(), T.ZP.initializeExitHook(), T.ZP.initializeWERHandler());
 }
 if (((0, P.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
