@@ -45,12 +45,12 @@ class g extends a.Z {
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        (0, c.I8)(t, n, p.L0.NSFW_CHANNEL);
+        (0, c.T5)() && (0, c.I8)(t, n, p.L0.NSFW_CHANNEL);
     }
     handleConnectionOpen() {
         let e = s.Z.getGuildId(),
             t = o.Z.getChannelId();
-        (0, c.I8)(e, t);
+        (0, c.T5)() && (0, c.I8)(e, t);
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;

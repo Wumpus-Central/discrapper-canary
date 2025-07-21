@@ -1,7 +1,7 @@
 (n.d(t, {
-    PY: () => F,
-    ZP: () => Z,
-    iR: () => B
+    PY: () => V,
+    ZP: () => F,
+    iR: () => G
 }),
     n(388685));
 var r = n(255367),
@@ -22,12 +22,11 @@ var r = n(255367),
     E = n(198620),
     b = n(29909),
     y = n(591759),
-    O = n(868814),
-    v = n(132748),
-    I = n(981631),
-    T = n(388032),
-    S = n(171341);
-function A(e, t, n) {
+    O = n(132748),
+    v = n(981631),
+    I = n(388032),
+    T = n(171341);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +39,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,61 +50,58 @@ function N(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                S(e, t, n[t]);
             }));
     }
     return e;
 }
-let C = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
-    R = 220,
-    P = 1220,
-    w = Array.from({ length: 16 }).map((e, t) => ({
+let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
+    C = 220,
+    R = 1220,
+    P = Array.from({ length: 16 }).map((e, t) => ({
         id: ''.concat(t),
         height: Math.floor(100 * Math.random()) + 120
     }));
-function D(e) {
+function w(e) {
     var t;
     return null != (t = e.id) ? t : e.src;
 }
-function L(e, t) {
-    let n = w[t];
+function D(e, t) {
+    let n = P[t];
     return null == n ? 0 : n.height;
 }
-function x(e, t, n, i) {
+function L(e, t, n, i) {
     if (!(e > 0))
-        return null == w[t]
+        return null == P[t]
             ? null
             : (0, r.jsx)(
                   'div',
                   {
-                      className: S.placeholder,
-                      style: N({ animationDelay: ''.concat(75 * t, 'ms') }, n)
+                      className: T.placeholder,
+                      style: A({ animationDelay: ''.concat(75 * t, 'ms') }, n)
                   },
                   i
               );
 }
-function M(e, t) {
+function x(e, t) {
     var n, r;
-    return e > 0 ? '' : null != (r = null == (n = w[t]) ? void 0 : n.id) ? r : '';
+    return e > 0 ? '' : null != (r = null == (n = P[t]) ? void 0 : n.id) ? r : '';
 }
-function k(e) {
+function M(e) {
     return e === u.EO.VIDEO;
 }
-function j(e) {
+function k(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && (e.pathname.toLowerCase().endsWith('.webp') || e.pathname.toLowerCase().endsWith('.avif'));
 }
-function U(e) {
+function j(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && e.pathname.toLowerCase().endsWith('.gif');
 }
-function G(e) {
-    let { optimizationsEnabled: t, sendParam: n } = O.Z.getCurrentConfig({ location: 'GIFPickerSearchResults' }, { autoTrackExposure: !0 }),
-        r = y.Z.toURLSafe(e),
-        i = null != r && U(r),
-        a = t && i,
-        o = n && i;
-    return null != r && (j(r) || a || o) ? (o && r.searchParams.set('gif_treatment', String(+t)), a && r.searchParams.set('format', 'webp'), (j(r) || a) && r.searchParams.set('animated', 'true'), r.toString()) : e;
+function U(e) {
+    let t = y.Z.toURLSafe(e),
+        n = null != t && j(t);
+    return null != t && (k(t) || n) ? (n && t.searchParams.set('format', 'webp'), t.searchParams.set('animated', 'true'), t.toString()) : e;
 }
-class B extends i.PureComponent {
+class G extends i.PureComponent {
     componentDidMount() {
         let {
             props: {
@@ -138,10 +134,10 @@ class B extends i.PureComponent {
             { loaded: i } = this.state;
         return i
             ? (0, r.jsx)('img', {
-                  src: G(e),
+                  src: U(e),
                   width: t,
                   height: n,
-                  className: S.gif,
+                  className: T.gif,
                   alt: ''
               })
             : null;
@@ -154,38 +150,38 @@ class B extends i.PureComponent {
             innerRef: (e) => {
                 this.ref = e;
             },
-            className: S.result,
+            className: T.result,
             'data-focused': a,
             onClick: this.handleClick,
-            style: N({ backgroundColor: s ? void 0 : o }, i),
-            children: [k(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+            style: A({ backgroundColor: s ? void 0 : o }, i),
+            children: [M(n) ? null : this.renderGIF(), null != t ? t(e) : null]
         });
     }
     constructor(e) {
         (super(e),
-            A(this, 'ref', null),
-            A(this, '_video', null),
-            A(this, '_image', null),
-            A(this, '_mounted', !0),
-            A(this, 'handleCanPlay', () => {
+            S(this, 'ref', null),
+            S(this, '_video', null),
+            S(this, '_image', null),
+            S(this, '_mounted', !0),
+            S(this, 'handleCanPlay', () => {
                 this._mounted && this.setState({ loaded: !0 });
             }),
-            A(this, 'handleClick', () => {
+            S(this, 'handleClick', () => {
                 let { onClick: e, item: t, index: n } = this.props;
                 null != e && e(t, n);
             }));
         let { format: t, color: n, imagePool: r } = this.props;
         ((this.state = {
-            color: null == n ? l().sample(C) : n,
+            color: null == n ? l().sample(N) : n,
             loaded: !1
         }),
-            k(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src)));
+            M(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src)));
     }
 }
-class V extends i.PureComponent {
+class B extends i.PureComponent {
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === I.wI2.FAVORITES && ((0, p.t1)(I.wI2.FAVORITES), (0, p.hM)(t, I.wI2.FAVORITES, { limit: null }));
+        e === v.wI2.FAVORITES && ((0, p.t1)(v.wI2.FAVORITES), (0, p.hM)(t, v.wI2.FAVORITES, { limit: null }));
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
@@ -202,51 +198,51 @@ class V extends i.PureComponent {
             }));
     }
     getSectionHeight(e) {
-        return 1 === e ? R : 0;
+        return 1 === e ? C : 0;
     }
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (0, r.jsx)('div', {
-            className: S.emptyHint,
+            className: T.emptyHint,
             children:
                 null != e
                     ? (0, r.jsxs)('div', {
-                          className: S.emptyHintCard,
+                          className: T.emptyHintCard,
                           children: [
                               t
                                   ? (0, r.jsx)(_.r7p, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: S.emptyHintFavorite
+                                        className: T.emptyHintFavorite
                                     })
                                   : null,
                               (0, r.jsx)('div', {
-                                  className: S.emptyHintText,
+                                  className: T.emptyHintText,
                                   children: e
                               })
                           ]
                       })
-                    : (0, r.jsx)('div', { className: S.emptyHintSpacer })
+                    : (0, r.jsx)('div', { className: T.emptyHintSpacer })
         });
     }
     renderEmptyFavorites() {
         return (0, r.jsx)(_.Ttm, {
-            className: S.results,
+            className: T.results,
             fade: !0,
             children: (0, r.jsxs)('div', {
-                className: S.emptyHints,
-                children: [this.renderEmptyFavorite(T.intl.string(T.t['3gyw4e']), !0), this.renderEmptyFavorite(T.intl.string(T.t.yThUi4)), this.renderEmptyFavorite(T.intl.string(T.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(T.intl.string(T.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(T.intl.string(T.t.o6CLLy))]
+                className: T.emptyHints,
+                children: [this.renderEmptyFavorite(I.intl.string(I.t['3gyw4e']), !0), this.renderEmptyFavorite(I.intl.string(I.t.yThUi4)), this.renderEmptyFavorite(I.intl.string(I.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(I.intl.string(I.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(I.intl.string(I.t.o6CLLy))]
             })
         });
     }
     render() {
         let { data: e, resultQuery: t, query: n, resultType: i } = this.props;
-        return 0 === e.length && t === n && i !== I.wI2.TRENDING_GIFS
-            ? i === I.wI2.FAVORITES
+        return 0 === e.length && t === n && i !== v.wI2.TRENDING_GIFS
+            ? i === v.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(m.Z, {
-                      message: T.intl.string(T.t['5dX4UF']),
-                      className: S.noResults
+                      message: I.intl.string(I.t['5dX4UF']),
+                      className: T.noResults
                   })
             : (0, r.jsx)(
                   h.Z,
@@ -255,7 +251,7 @@ class V extends i.PureComponent {
                       getCoordsMap: this.getCoordsMap,
                       onFocus: this.handleFocus,
                       onSelect: this.handleSelect,
-                      children: (0, r.jsx)(v.Z, {
+                      children: (0, r.jsx)(O.Z, {
                           desiredItemWidth: 200,
                           maxColumns: 8,
                           children: this.renderContent
@@ -266,10 +262,10 @@ class V extends i.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            A(this, '_masonryRef', i.createRef()),
-            A(this, 'prevResultQuery', null),
-            A(this, 'state', { focusedId: null }),
-            A(this, 'handleFocus', (e) => {
+            S(this, '_masonryRef', i.createRef()),
+            S(this, 'prevResultQuery', null),
+            S(this, 'state', { focusedId: null }),
+            S(this, 'handleFocus', (e) => {
                 let { current: t } = this._masonryRef;
                 if (null == t) return;
                 let n = t.getCoordsMap()[e];
@@ -280,30 +276,30 @@ class V extends i.PureComponent {
                     }),
                     this.setState({ focusedId: e }));
             }),
-            A(this, 'handleSelect', (e) => {
+            S(this, 'handleSelect', (e) => {
                 let t,
                     { data: n } = this.props,
-                    r = n.findIndex((t) => D(t) === e);
+                    r = n.findIndex((t) => w(t) === e);
                 (-1 !== r && (t = n[r]), null != t && this.selectItem(t, r));
             }),
-            A(this, 'handleClickItem', (e, t) => {
+            S(this, 'handleClickItem', (e, t) => {
                 this.selectItem(e, t);
             }),
-            A(this, 'handleScroll', () => {
+            S(this, 'handleScroll', () => {
                 let { resultQuery: e } = this.props,
                     { current: t } = this._masonryRef;
                 if (null == t) return;
                 let { scrollTop: n, scrollHeight: r } = t.getScrollerState();
-                r - n <= P && (e !== this.prevResultQuery && (0, p.mO)(e), (this.prevResultQuery = e));
+                r - n <= R && (e !== this.prevResultQuery && (0, p.mO)(e), (this.prevResultQuery = e));
             }),
-            A(this, 'renderItem', (e, t, n, i) => {
+            S(this, 'renderItem', (e, t, n, i) => {
                 if (e > 0) return null;
                 let { focusedId: a } = this.state,
                     o = this.props.data[t];
                 return null == o
                     ? null
                     : (0, r.jsx)(
-                          B,
+                          G,
                           {
                               item: o,
                               index: t,
@@ -311,43 +307,43 @@ class V extends i.PureComponent {
                               src: o.src,
                               coords: n,
                               onClick: this.handleClickItem,
-                              renderExtras: () => (0, r.jsx)(b.Z, N({ className: S.favButton }, o)),
-                              focused: D(o) === a,
+                              renderExtras: () => (0, r.jsx)(b.Z, A({ className: T.favButton }, o)),
+                              focused: w(o) === a,
                               imagePool: this.props.imagePool,
                               videoPool: this.props.videoPool
                           },
                           i
                       );
             }),
-            A(this, 'getItemHeight', (e, t, n) => {
+            S(this, 'getItemHeight', (e, t, n) => {
                 if (e > 0) return 0;
                 let r = this.props.data[t];
                 return null == r ? 0 : n * (r.height / r.width);
             }),
-            A(this, 'getItemKey', (e, t) => {
+            S(this, 'getItemKey', (e, t) => {
                 var n;
                 if (e > 0) return null;
                 let r = this.props.data[t];
                 return null != r ? (null != (n = r.id) ? n : r.src) : null;
             }),
-            A(this, 'renderSection', (e, t, n) => {
+            S(this, 'renderSection', (e, t, n) => {
                 let { onSelectSuggestion: a, suggestions: o } = this.props;
                 return 1 === e
                     ? (0, r.jsx)(
                           'div',
                           {
-                              className: S.endContainer,
+                              className: T.endContainer,
                               style: t,
                               children:
                                   o.length > 0
                                       ? (0, r.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, r.jsx)('div', {
-                                                    className: S.endText,
-                                                    children: T.intl.string(T.t['3JGJo6'])
+                                                    className: T.endText,
+                                                    children: I.intl.string(I.t['3JGJo6'])
                                                 }),
                                                 (0, r.jsx)('div', {
-                                                    className: S.searchSuggestions,
+                                                    className: T.searchSuggestions,
                                                     children: o.map((e) =>
                                                         (0, r.jsx)(
                                                             f.zx,
@@ -355,7 +351,7 @@ class V extends i.PureComponent {
                                                                 look: f.zx.Looks.OUTLINED,
                                                                 color: f.zx.Colors.PRIMARY,
                                                                 size: f.zx.Sizes.SMALL,
-                                                                className: S.searchSuggestion,
+                                                                className: T.searchSuggestion,
                                                                 onClick: () => {
                                                                     a(e);
                                                                 },
@@ -373,20 +369,20 @@ class V extends i.PureComponent {
                       )
                     : null;
             }),
-            A(this, 'renderContent', (e, t, n) => {
+            S(this, 'renderContent', (e, t, n) => {
                 let { className: i, data: a, resultQuery: s, query: l, resultType: c } = this.props;
-                return 0 === a.length && (s !== l || c === I.wI2.TRENDING_GIFS)
+                return 0 === a.length && (s !== l || c === v.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
                           _.GMG,
                           {
                               fade: !0,
-                              className: o()(S.results, i),
-                              sections: [w.length],
+                              className: o()(T.results, i),
+                              sections: [P.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: M,
-                              getItemHeight: L,
-                              renderItem: x,
+                              getItemKey: x,
+                              getItemHeight: D,
+                              renderItem: L,
                               chunkSize: 128
                           },
                           s
@@ -397,7 +393,7 @@ class V extends i.PureComponent {
                               ref: this._masonryRef,
                               fade: !0,
                               itemGutter: 12,
-                              className: o()(S.results, i),
+                              className: o()(T.results, i),
                               columns: e,
                               sections: [a.length, 0],
                               getItemKey: this.getItemKey,
@@ -411,17 +407,17 @@ class V extends i.PureComponent {
                           ''.concat(s, '-').concat(null != c ? c : '')
                       );
             }),
-            A(this, 'getItemGrid', () => {
+            S(this, 'getItemGrid', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getItemGrid() : [];
             }),
-            A(this, 'getCoordsMap', () => {
+            S(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
             }));
     }
 }
-function F() {
+function V() {
     let { renderWindow: e } = i.useContext(g.ZP),
         t = e.document,
         [n] = i.useState(
@@ -438,7 +434,7 @@ function F() {
                 new c.w(
                     () => {
                         let e = t.createElement('video');
-                        return ((e.className = S.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e);
+                        return ((e.className = T.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e);
                     },
                     (e) => {
                         ((e.src = ''), (e.oncanplay = null));
@@ -452,7 +448,7 @@ function F() {
         videoPool: r
     };
 }
-let Z = function (e) {
-    let t = F();
-    return (0, r.jsx)(V, N({}, e, t));
+let F = function (e) {
+    let t = V();
+    return (0, r.jsx)(B, A({}, e, t));
 };

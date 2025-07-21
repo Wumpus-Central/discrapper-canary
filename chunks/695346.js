@@ -795,7 +795,7 @@ let eS = (0, d.KM)(
         isEligible: () => (0, c.o0)('user_settings'),
         useIsEligible: () => (0, c.Yd)('user_settings'),
         ineligibleDefault: a.E5.OFF,
-        eligibleDefault: () => a.E5.ON
+        eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS
     }),
     ek = (0, d.Zc)(
         'privacy',

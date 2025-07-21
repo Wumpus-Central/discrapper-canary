@@ -8,9 +8,8 @@ var r = n(255367),
     c = n(375954),
     u = n(981631),
     d = n(489887),
-    p = n(388032),
-    h = n(377912);
-function f(e) {
+    p = n(388032);
+function h(e) {
     var t, n, r;
     let i = null != (r = null == (t = e.author) ? void 0 : t.username) ? r : 'Unknown',
         l = ''.concat(i, ': ').concat(e.content);
@@ -36,160 +35,158 @@ function f(e) {
     }
     return l;
 }
+function f(e, t) {
+    (0, a.ZDy)(
+        async () => {
+            let { default: i } = await n.e('68784').then(n.bind(n, 611611)),
+                l =
+                    null == t
+                        ? void 0
+                        : t.answers.map((e) => {
+                              var t, n;
+                              return {
+                                  text: e.text,
+                                  image: {
+                                      emoji: (null == (t = e.image) ? void 0 : t.emoji) != null && null != (n = s.ZP.convertSurrogateToBase(e.image.emoji)) ? n : void 0,
+                                      stickerId: void 0,
+                                      mediaAttachmentState: void 0
+                                  }
+                              };
+                          });
+            return (n) => {
+                var a, o;
+                return (0, r.jsx)(
+                    i,
+                    ((a = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    })
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    ((r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (e[t] = r));
+                                }));
+                        }
+                        return e;
+                    })({}, n)),
+                    (o = o =
+                        {
+                            channel: e,
+                            initialQuestion: null == t ? void 0 : t.question,
+                            initialAnswers: l
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+                          }),
+                    a)
+                );
+            };
+        },
+        { modalKey: d.$z }
+    );
+}
 function m() {
     var e;
-    let [t, m] = i.useState([]),
-        [g, b] = i.useState(!1),
-        [_, y] = i.useState(!1),
-        [C, x] = i.useState(null),
-        v = o.C.useExperiment({ location: 'ChannelAttachMenu' }),
-        j = null != (e = null == v ? void 0 : v.enableAIFeatures) && e;
+    let [t, n] = i.useState([]),
+        [s, d] = i.useState(!1),
+        [m, g] = i.useState(!1),
+        b = o.C.useExperiment({ location: 'ChannelAttachMenu' }),
+        _ = null != (e = null == b ? void 0 : b.enableAIFeatures) && e;
     i.useEffect(
         () => () => {
-            (m([]), b(!1), y(!1), x(null));
+            (n([]), d(!1), g(!1));
         },
         []
     );
-    let O = i.useCallback(async (e, t) => {
-        (b(!0), m([]));
-        let n = (function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                r = c.Z.getMessages(e.id).toArray().slice(-n).map(f).join('\n');
-            return r + ('' !== r ? '\n\n' : '') + t;
-        })(e, t);
-        try {
-            let e = await l.tn.post({
-                    url: u.ANM.AI_POLL_SUGGESTIONS,
-                    body: { content: n },
-                    rejectWithError: !1
-                }),
-                t = e.body;
-            e.ok && null != t.suggestions && m(t.suggestions);
-        } finally {
-            b(!1);
-        }
-    }, []);
-    return (
-        i.useEffect(() => {
-            _ && null != C && j && O(C.channel, C.editorTextContent);
-        }, [_, C, j, O]),
-        i.useCallback(
-            (e, i) =>
-                j
-                    ? (_ ||
-                          (x({
-                              channel: e,
-                              editorTextContent: i
-                          }),
-                          y(!0)),
-                      g)
-                        ? (0, r.jsx)(
-                              a.sNh,
-                              {
-                                  id: 'poll-suggestions-fetching',
-                                  disabled: !0,
-                                  'aria-label': p.intl.string(p.t.GlVijo),
-                                  label: (0, r.jsxs)('div', {
-                                      className: h.loadingContainer,
-                                      children: [(0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }), (0, r.jsx)('span', { children: p.intl.string(p.t.GlVijo) })]
-                                  })
-                              },
-                              'poll-suggestions-fetching'
-                          )
-                        : 0 === t.length
-                          ? (0, r.jsx)(
-                                a.sNh,
+    let y = i.useCallback(async (e, t) => {
+            (d(!0), n([]));
+            let r = (function (e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
+                    r = c.Z.getMessages(e.id).toArray().slice(-n).map(h).join('\n');
+                return r + ('' !== r ? '\n\n' : '') + t;
+            })(e, t);
+            try {
+                let e = await l.tn.post({
+                        url: u.ANM.AI_POLL_SUGGESTIONS,
+                        body: { content: r },
+                        rejectWithError: !1
+                    }),
+                    t = e.body;
+                e.ok && null != t.suggestions && n(t.suggestions);
+            } finally {
+                d(!1);
+            }
+        }, []),
+        C = i.useCallback(
+            (e, t) => {
+                !m && _ && (g(!0), y(e, t));
+            },
+            [m, _, y]
+        );
+    return i.useCallback(
+        (e, n) =>
+            _
+                ? s
+                    ? { icon: (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) }
+                    : 0 === t.length
+                      ? { onFocus: () => C(e, n) }
+                      : {
+                            children: (0, r.jsxs)(
+                                a.kSQ,
                                 {
-                                    id: 'no-poll-suggestions',
-                                    label: p.intl.string(p.t.evkygI),
-                                    disabled: !0,
-                                    'aria-label': p.intl.string(p.t.evkygI)
-                                },
-                                'no-poll-suggestions'
-                            )
-                          : t.map((t, i) =>
-                                (0, r.jsx)(
-                                    a.sNh,
-                                    {
-                                        id: 'poll-suggestions-'.concat(i),
-                                        label: t.title,
-                                        subtext: t.question,
-                                        'aria-label': t.question,
-                                        action: () => {
-                                            (0, a.ZDy)(
-                                                async () => {
-                                                    let { default: i } = await n.e('68784').then(n.bind(n, 611611)),
-                                                        l = t.answers.map((e) => {
-                                                            var t;
-                                                            return {
-                                                                text: e.text,
-                                                                image: {
-                                                                    emoji: null != (t = s.ZP.convertSurrogateToBase(e.image.emoji)) ? t : void 0,
-                                                                    stickerId: void 0,
-                                                                    mediaAttachmentState: void 0
-                                                                }
-                                                            };
-                                                        });
-                                                    return (n) => {
-                                                        var a, o;
-                                                        return (0, r.jsx)(
-                                                            i,
-                                                            ((a = (function (e) {
-                                                                for (var t = 1; t < arguments.length; t++) {
-                                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                                        r = Object.keys(n);
-                                                                    ('function' == typeof Object.getOwnPropertySymbols &&
-                                                                        (r = r.concat(
-                                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                            })
-                                                                        )),
-                                                                        r.forEach(function (t) {
-                                                                            var r;
-                                                                            ((r = n[t]),
-                                                                                t in e
-                                                                                    ? Object.defineProperty(e, t, {
-                                                                                          value: r,
-                                                                                          enumerable: !0,
-                                                                                          configurable: !0,
-                                                                                          writable: !0
-                                                                                      })
-                                                                                    : (e[t] = r));
-                                                                        }));
-                                                                }
-                                                                return e;
-                                                            })({}, n)),
-                                                            (o = o =
-                                                                {
-                                                                    channel: e,
-                                                                    initialQuestion: t.question,
-                                                                    initialAnswers: l
-                                                                }),
-                                                            Object.getOwnPropertyDescriptors
-                                                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
-                                                                : (function (e, t) {
-                                                                      var n = Object.keys(e);
-                                                                      if (Object.getOwnPropertySymbols) {
-                                                                          var r = Object.getOwnPropertySymbols(e);
-                                                                          n.push.apply(n, r);
-                                                                      }
-                                                                      return n;
-                                                                  })(Object(o)).forEach(function (e) {
-                                                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
-                                                                  }),
-                                                            a)
-                                                        );
-                                                    };
+                                    label: p.intl.string(p.t.JXxsam),
+                                    children: [
+                                        t.map((t, n) =>
+                                            (0, r.jsx)(
+                                                a.sNh,
+                                                {
+                                                    id: 'poll-suggestions-'.concat(n),
+                                                    label: t.title,
+                                                    subtext: t.question,
+                                                    'aria-label': t.question,
+                                                    action: () => f(e, t)
                                                 },
-                                                { modalKey: d.$z }
-                                            );
-                                        }
-                                    },
-                                    'poll-suggestions-'.concat(i)
-                                )
+                                                'poll-suggestions-'.concat(n)
+                                            )
+                                        ),
+                                        (0, r.jsx)(a.Clw, {}),
+                                        (0, r.jsx)(
+                                            a.sNh,
+                                            {
+                                                id: 'poll-suggestions-custom',
+                                                label: p.intl.string(p.t.R4MCra),
+                                                action: () => f(e)
+                                            },
+                                            'poll-suggestions-custom'
+                                        )
+                                    ]
+                                },
+                                'poll-suggestions'
                             )
-                    : null,
-            [j, _, g, t]
-        )
+                        }
+                : null,
+        [_, s, t, C]
     );
 }

@@ -2,15 +2,15 @@ t.d(r, { Z: () => u });
 var n = t(255367);
 t(73800);
 var o = t(481060),
-    i = t(198952),
-    s = t(329242),
+    s = t(198952),
+    i = t(329242),
     c = t(916723),
     l = t(388032),
     a = t(305623);
 let d = (e) => {
     var r,
         t,
-        { children: i, className: s } = e,
+        { children: s, className: i } = e,
         c = (function (e, r) {
             if (null == e) return {};
             var t,
@@ -20,13 +20,13 @@ let d = (e) => {
                     var t,
                         n,
                         o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((t = i[n]), r.indexOf(t) >= 0 || (o[t] = e[t]));
+                        s = Object.keys(e);
+                    for (n = 0; n < s.length; n++) ((t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]));
                     return o;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((t = i[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
+                var s = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < s.length; n++) ((t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
             }
             return o;
         })(e, ['children', 'className']);
@@ -56,11 +56,11 @@ let d = (e) => {
                     }));
             }
             return e;
-        })({ className: s }, c)),
+        })({ className: i }, c)),
         (t = t =
             {
                 parentComponent: 'FamilyCenterCommonModal',
-                children: i
+                children: s
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
@@ -89,7 +89,7 @@ let d = (e) => {
         return (0, n.jsxs)('div', {
             className: a.header,
             children: [
-                (0, n.jsx)(i.Z, {
+                (0, n.jsx)(s.Z, {
                     currentUser: t,
                     otherUser: c,
                     children: r
@@ -101,7 +101,7 @@ let d = (e) => {
                             variant: 'text-lg/bold',
                             children: l
                         }),
-                        (0, n.jsx)(s.Z, { user: c })
+                        (0, n.jsx)(i.Z, { user: c })
                     ]
                 })
             ]

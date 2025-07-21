@@ -1,28 +1,25 @@
-n.d(t, { Z: () => r });
-let r = (0, n(818083).B)({
-    kind: 'user',
-    id: '2025-07_gif_picker_optimizations',
-    label: 'GIF Picker Optimizations',
-    defaultConfig: {
-        sendParam: !1,
-        optimizationsEnabled: !1
-    },
-    treatments: [
-        {
-            id: 0,
-            label: 'Control',
-            config: {
-                sendParam: !0,
-                optimizationsEnabled: !1
-            }
-        },
-        {
-            id: 1,
-            label: 'Enabled',
-            config: {
-                sendParam: !0,
-                optimizationsEnabled: !0
-            }
-        }
-    ]
-});
+(n.d(t, { Z: () => o }), n(539854), n(642613));
+var r = n(442837),
+    i = n(977258),
+    l = n(958832),
+    s = n(592125),
+    a = n(981631);
+function o(e) {
+    return (0, r.Wu)([l.Z, s.Z], () => {
+        var t;
+        let n = (null != (t = l.Z.getTopChannelIds(e.id)) ? t : []).map((e) => s.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
+            r = [],
+            o = 0;
+        return (
+            n.forEach((e) => {
+                if (e.type === a.d4z.GUILD_ANNOUNCEMENT) {
+                    if (o >= 2) return;
+                    o++;
+                }
+                r.length < 5 && !r.includes(e) && r.push(e);
+            }),
+            r.sort((t, n) => +!!(0, i.s)(e.id, n.id) - +!!(0, i.s)(e.id, t.id)),
+            r
+        );
+    });
+}

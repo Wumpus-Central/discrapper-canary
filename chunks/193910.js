@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(413496), n(433524), n(35282), n(539854), n(388685));
+(n.d(t, { Z: () => R }), n(413496), n(433524), n(35282), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(831209),
@@ -27,8 +27,33 @@ var r = n(255367),
     I = n(489887),
     Z = n(388032),
     T = n(725776);
-let N = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
-function A() {
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r));
+            }));
+    }
+    return e;
+}
+let A = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
+function w() {
     let e = (0, a.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
@@ -54,21 +79,21 @@ function A() {
         })
     );
 }
-function w(e) {
-    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: w, editorTextContent: R, setValue: M, openClips: D } = e,
-        { analyticsLocations: L } = (0, p.ZP)(),
-        k = (0, g.Dt)({ channel: t }),
-        U = (0, E.Z)();
-    function B() {
+function R(e) {
+    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: R, editorTextContent: M, setValue: D, openClips: L } = e,
+        { analyticsLocations: k } = (0, p.ZP)(),
+        U = (0, g.Dt)({ channel: t }),
+        B = (0, E.Z)();
+    function F() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
-    function F() {
-        (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M('/', (0, j.JM)('/')));
-    }
     function H() {
-        D();
+        (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D('/', (0, j.JM)('/')));
     }
     function G() {
+        L();
+    }
+    function V() {
         ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: P.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -77,31 +102,7 @@ function w(e) {
                         var i, l;
                         return (0, r.jsx)(
                             e,
-                            ((i = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            ((r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0
-                                                      })
-                                                    : (e[t] = r));
-                                        }));
-                                }
-                                return e;
-                            })({}, n)),
+                            ((i = N({}, n)),
                             (l = l = { channel: t }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -122,7 +123,7 @@ function w(e) {
                 { modalKey: I.$z }
             ));
     }
-    function V() {
+    function z() {
         (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
@@ -131,16 +132,16 @@ function w(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: L
+                analyticsLocations: k
             }),
             (0, u.w1)({ guildId: t.guild_id }));
     }
-    function z() {
-        let e = R,
+    function W() {
+        let e = M,
             n = 'txt',
             r = '',
-            i = R.match(N);
-        (null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, w), C.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: r }));
+            i = M.match(A);
+        (null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, R), C.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: r }));
     }
     return (
         i.useEffect(() => {
@@ -190,13 +191,13 @@ function w(e) {
                             'upload-file'
                         );
                     case O.r.UPLOAD_TEXT_AS_FILE:
-                        if ('' === R) return null;
+                        if ('' === M) return null;
                         return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: 'upload-text-as-file',
                                 label: i,
-                                action: z
+                                action: W
                             },
                             'upload-text-as-file'
                         );
@@ -206,21 +207,22 @@ function w(e) {
                             {
                                 id: 'clips',
                                 label: i,
-                                action: H
+                                action: G
                             },
                             'clips'
                         );
                     case O.r.POLL:
-                        let a = U(t, R);
+                        let a = B(t, M);
                         return (0, r.jsx)(
                             s.sNh,
-                            {
-                                id: 'poll',
-                                label: i,
-                                hasSubmenu: null != a,
-                                action: G,
-                                children: a
-                            },
+                            N(
+                                {
+                                    id: 'poll',
+                                    label: i,
+                                    action: V
+                                },
+                                a
+                            ),
                             'poll'
                         );
                     case O.r.INVITE_TO_PLAY_GAME:
@@ -237,7 +239,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.JOIN,
                                             activity: n,
-                                            location: L[L.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -258,7 +260,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.LISTEN,
                                             activity: n,
-                                            location: L[L.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -279,7 +281,7 @@ function w(e) {
                                             channelId: t.id,
                                             type: S.mFx.WATCH,
                                             activity: n,
-                                            location: L[L.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -292,7 +294,7 @@ function w(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: B
+                                action: F
                             },
                             'THREAD'
                         );
@@ -302,7 +304,7 @@ function w(e) {
                             {
                                 id: 'SLASH_COMMAND',
                                 label: i,
-                                action: F
+                                action: H
                             },
                             'SLASH_COMMAND'
                         );
@@ -312,8 +314,8 @@ function w(e) {
                             {
                                 id: 'activity',
                                 label: i,
-                                action: V,
-                                hint: (0, r.jsx)(A, {})
+                                action: z,
+                                hint: (0, r.jsx)(w, {})
                             },
                             'activity'
                         );
@@ -324,7 +326,7 @@ function w(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: k
+                                children: U
                             },
                             'scheduled_message'
                         );
