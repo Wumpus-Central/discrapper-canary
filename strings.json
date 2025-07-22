@@ -19314,6 +19314,7 @@
   "TR2B4e": "Popular",
   "ZGVL3t": "{count, plural, =0 {No Results} one {!!{count}!! Result} other {!!{count}!! Results} }",
   "tc619f": "in all Direct Messages",
+  "A2dqWF": "in {filterCount, plural, =1 { DM} other { DMs} }",
   "jqqLb2": "Transfer",
   "WZoUsr": "Transfer Group Ownership",
   "Z5s7PD": "Transfer Ownership",
