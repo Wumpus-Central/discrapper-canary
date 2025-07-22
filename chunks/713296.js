@@ -1,0 +1,1 @@
+a.exports = JSON.parse('{"RPb8Zm":"Palautteesi auttaa meitä parantamaan Discordin turvallisuustoimintoja.","KZw6kp":"Mikä ei toimi hyvin?","ep5SQk":"Jokin muu","Q5cQ4+":"Kuvaile ongelmasi","zApKaW":"Haluatko kertoa tästä tarkemmin?","4djgOz":"Kiitos palautteesta!"}');

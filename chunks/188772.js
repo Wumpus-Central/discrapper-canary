@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"RPb8Zm":"Din feedback hjælper os med at forbedre Discords sikkerhedsfunktioner.","KZw6kp":"Hvad fungerer ikke godt?","ep5SQk":"Noget andet","Q5cQ4+":"Beskriv dit problem","zApKaW":"Vil du fortælle os mere?","4djgOz":"Tak for feedback!"}');

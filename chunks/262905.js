@@ -1,0 +1,1 @@
+p.exports = JSON.parse('{"RPb8Zm":"Tvoje zpětná vazba nám pomůže vylepšit funkce pro zabezpečení Discordu.","KZw6kp":"Co nefungovalo dobře?","ep5SQk":"Něco jiného","Q5cQ4+":"Popiš svůj problém","zApKaW":"Chceš nám k\xA0tomu sdělit víc?","4djgOz":"Děkujeme za zpětnou vazbu!"}');

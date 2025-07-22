@@ -1,0 +1,1 @@
+a.exports = JSON.parse('{"RPb8Zm":"Tu opinión nos ayuda a mejorar las funciones de Discord Safety.","KZw6kp":"\xBFQué es lo que no va bien?","ep5SQk":"Otro","Q5cQ4+":"Describir el problema","zApKaW":"\xBFTe gustaría contarnos más?","4djgOz":"\xA1Gracias por tu opinión!"}');
