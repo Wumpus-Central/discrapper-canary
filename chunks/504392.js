@@ -3,15 +3,15 @@ var r = n(255367),
     o = n(73800),
     i = n(120356),
     s = n.n(i),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     c = n(984370),
     u = n(713081),
     d = n(905128),
     p = n(639777),
     m = n(27237),
-    _ = n(51859),
-    f = n(184478),
+    f = n(51859),
+    _ = n(184478),
     x = n(877362),
     v = n(460608),
     g = n(279604),
@@ -27,7 +27,7 @@ function N(e) {
         ((0, u.Sn)(t), (0, u.Fm)(t));
     }, [t]),
         (0, b.Wj)(t));
-    let i = (0, a.e7)([d.Z], () => d.Z.getStateForGuild(t)),
+    let i = (0, l.e7)([d.Z], () => d.Z.getStateForGuild(t)),
         N = (0, p.Z)(t),
         Z = o.useRef(!1);
     return (o.useEffect(() => {
@@ -47,7 +47,7 @@ function N(e) {
                       toolbar: (0, r.jsx)('div', {}),
                       children: [
                           (0, r.jsx)(c.Z.Icon, {
-                              icon: l.$Eu,
+                              icon: a.$Eu,
                               'aria-label': ''
                           }),
                           (0, r.jsx)(c.Z.Title, { children: h.intl.string(E.default.yv3DJC) })
@@ -56,12 +56,12 @@ function N(e) {
                   (0, r.jsxs)('div', {
                       className: C.contentContainer,
                       children: [
-                          (0, r.jsx)(l.zJl, {
+                          (0, r.jsx)(a.zJl, {
                               className: C.powerupsContainer,
                               children: I.map((e) => {
                                   let n = i.powerupCatalog[e];
                                   if (null == n) return;
-                                  let { title: o, description: a } = (function (e) {
+                                  let { title: o, description: l } = (function (e) {
                                           switch (e) {
                                               case j.Us.LEVEL:
                                                   return {
@@ -75,7 +75,7 @@ function N(e) {
                                                   };
                                           }
                                       })(e),
-                                      c = e === j.Us.LEVEL ? l.zJl : 'div';
+                                      c = e === j.Us.LEVEL ? a.zJl : 'div';
                                   return (0, r.jsxs)(
                                       'div',
                                       {
@@ -84,15 +84,15 @@ function N(e) {
                                               (0, r.jsxs)('div', {
                                                   className: C.powerupHorizontalPadding,
                                                   children: [
-                                                      (0, r.jsx)(l.X6q, {
+                                                      (0, r.jsx)(a.X6q, {
                                                           color: 'header-primary',
                                                           variant: 'heading-lg/semibold',
                                                           children: o
                                                       }),
-                                                      (0, r.jsx)(l.Text, {
+                                                      (0, r.jsx)(a.Text, {
                                                           color: 'text-muted',
                                                           variant: 'text-sm/medium',
-                                                          children: a
+                                                          children: l
                                                       })
                                                   ]
                                               }),
@@ -115,7 +115,7 @@ function N(e) {
                                                               );
                                                           case j.Us.PERK:
                                                               return (0, r.jsx)(
-                                                                  _.Z,
+                                                                  f.Z,
                                                                   {
                                                                       guildId: t,
                                                                       powerup: e
@@ -133,7 +133,7 @@ function N(e) {
                           }),
                           (0, r.jsxs)('div', {
                               className: C.sidebarContainer,
-                              children: [N ? (0, r.jsx)(f.Z, { guildId: t }) : (0, r.jsx)(x.Z, { guildId: t }), (0, r.jsx)(v.Z, { guildId: t })]
+                              children: [N ? (0, r.jsx)(_.Z, { guildId: t }) : (0, r.jsx)(x.Z, { guildId: t }), (0, r.jsx)(v.Z, { guildId: t })]
                           })
                       ]
                   })

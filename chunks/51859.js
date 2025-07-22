@@ -3,25 +3,25 @@ var r = n(255367),
     o = n(73800),
     i = n(831209),
     s = n(494497),
-    a = n(793030),
-    l = n(481060),
+    l = n(793030),
+    a = n(481060),
     c = n(158638),
     u = n(973772),
     d = n(838968),
     p = n(262212),
     m = n(795338),
-    _ = n(279604),
-    f = n(279475),
+    f = n(279604),
+    _ = n(279475),
     x = n(535396),
     v = n(388032),
     g = n(117172);
 function b(e) {
     let { guildId: t, powerup: n } = e,
         [b, j] = o.useState(void 0);
-    (0, _.KT)(b);
+    (0, f.KT)(b);
     let [E, h] = o.useState(!1),
         C = (0, u.Z)(t, n).type !== x.A3.INACTIVE,
-        I = (0, f.d)(C),
+        I = (0, _.d)(C),
         N = (0, c.g1)(t, 'GuildPowerupPerkCard'),
         Z = n.skuId === s.A$;
     return (0, r.jsxs)(d.Z, {
@@ -39,13 +39,13 @@ function b(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: g.headerContainer,
-                        children: (0, r.jsx)(a.X6, {
+                        children: (0, r.jsx)(l.X6, {
                             color: I,
                             variant: 'heading-md/bold',
                             children: n.title
                         })
                     }),
-                    (0, r.jsx)(a.xv, {
+                    (0, r.jsx)(l.xv, {
                         className: g.description,
                         color: I,
                         variant: 'text-sm/medium',
@@ -67,13 +67,13 @@ function b(e) {
             }),
             !Z &&
                 !N &&
-                (0, r.jsx)(l.IGR, {
+                (0, r.jsx)(a.IGR, {
                     className: g.new,
                     text: v.intl.string(v.t.y2b7CA)
                 }),
             Z &&
                 N &&
-                (0, r.jsx)(l.IGR, {
+                (0, r.jsx)(a.IGR, {
                     className: g.new,
                     text: v.intl.string(v.t.oW0eUV),
                     color: i.Z.BG_BRAND

@@ -3,15 +3,15 @@ var r = n(255367),
     o = n(120356),
     i = n.n(o),
     s = n(793030),
-    a = n(442837),
-    l = n(304789),
+    l = n(442837),
+    a = n(304789),
     c = n(755721),
     u = n(481060),
     d = n(99690),
     p = n(607070),
     m = n(623624),
-    _ = n(678558),
-    f = n(343649),
+    f = n(678558),
+    _ = n(343649),
     x = n(742409),
     v = n(518950),
     g = n(271383),
@@ -29,18 +29,18 @@ let w = C.ZP.getEnableHardwareAcceleration() ? u.Xo$ : d.Z;
 function y(e) {
     var t, n, o;
     let { guildId: d } = e,
-        C = (0, a.e7)([j.Z], () => j.Z.getGuild(d)),
-        y = (0, a.e7)([b.Z], () =>
+        C = (0, l.e7)([j.Z], () => j.Z.getGuild(d)),
+        y = (0, l.e7)([b.Z], () =>
             Object.values(b.Z.getRoles(d)).find((e) => {
                 var t;
                 return (null == e || null == (t = e.tags) ? void 0 : t.premium_subscriber) !== void 0;
             })
         ),
-        T = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
+        T = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         S = null == T ? void 0 : T.id,
-        A = (0, a.e7)([g.ZP], () => (null != S ? g.ZP.getMember(d, S) : void 0), [S, d]),
+        A = (0, l.e7)([g.ZP], () => (null != S ? g.ZP.getMember(d, S) : void 0), [S, d]),
         R = (null == A ? void 0 : A.premiumSince) != null,
-        L = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+        L = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         {
             avatarDecorationSrc: k,
             avatarSrc: D,
@@ -53,7 +53,7 @@ function y(e) {
         });
     return null == C || null == A || null == T
         ? null
-        : (0, r.jsxs)(l.$, {
+        : (0, r.jsxs)(a.$, {
               className: O.container,
               children: [
                   (0, r.jsx)('img', {
@@ -150,7 +150,7 @@ function y(e) {
                               className: O.boostIcon
                           })
                       }),
-                  (0, r.jsx)(_.Z, {
+                  (0, r.jsx)(f.Z, {
                       guild: C,
                       className: O.content,
                       analyticsLocation: {
@@ -159,7 +159,7 @@ function y(e) {
                       },
                       color: c.Tt.BRAND,
                       size: c.Ph.MEDIUM,
-                      intent: f.P.NONE,
+                      intent: _.P.NONE,
                       fullWidth: !0,
                       icon: (0, r.jsx)(u.$Eu, {
                           color: 'currentColor',

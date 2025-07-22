@@ -7,8 +7,8 @@ var r,
 n(73800);
 var i = n(657707),
     s = n(793030),
-    a = n(692547),
-    l = n(93841),
+    l = n(692547),
+    a = n(93841),
     c = n(388032),
     u = n(154142),
     d = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
@@ -22,7 +22,7 @@ function p(e) {
                 children: [
                     (0, o.jsx)(i.$Eu, {
                         size: 'sm',
-                        color: 0 !== n ? a.Z.colors.HEADER_MUTED : a.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
+                        color: 0 !== n ? l.Z.colors.HEADER_MUTED : l.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
                     }),
                     (0, o.jsx)(s.X6, {
                         color: 0 !== n ? 'header-muted' : 'header-primary',
@@ -37,11 +37,11 @@ function p(e) {
                 children: (() => {
                     switch (n) {
                         case 0:
-                            return c.intl.formatToPlainString(l.default.BdRXZG, { boostCount: t });
+                            return c.intl.formatToPlainString(a.default.BdRXZG, { boostCount: t });
                         case 1:
-                            return c.intl.formatToPlainString(l.default.xvgIVF, { boostCount: t });
+                            return c.intl.formatToPlainString(a.default.xvgIVF, { boostCount: t });
                         case 2:
-                            return c.intl.string(l.default['/F7Z29']);
+                            return c.intl.string(a.default['/F7Z29']);
                     }
                 })()
             })

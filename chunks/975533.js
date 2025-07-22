@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(570140),
     i = n(846027),
     l = n(13245),
@@ -57,227 +57,228 @@ function w(e, t, n) {
     y.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(s, t), l);
 }
 let L = {
-    [j.kg4.TOGGLE_PRIORITY_SPEAKER]: {
-        onTrigger() {},
-        keyEvents: {}
-    },
-    [j.kg4.UNASSIGNED]: {
-        onTrigger() {},
-        keyEvents: {}
-    },
-    [j.kg4.PUSH_TO_TALK]: {
-        onTrigger(e, t) {
-            y.Z.getMode(t.context) === j.pM4.PUSH_TO_TALK && ((L[j.kg4.PUSH_TO_TALK].isPressed = e), w(e, !1, t));
+        [j.kg4.TOGGLE_PRIORITY_SPEAKER]: {
+            onTrigger() {},
+            keyEvents: {}
         },
-        keyEvents: {
-            keyup: !0,
-            keydown: !0
+        [j.kg4.UNASSIGNED]: {
+            onTrigger() {},
+            keyEvents: {}
         },
-        isPressed: !1
-    },
-    [j.kg4.PUSH_TO_TALK_PRIORITY]: {
-        onTrigger(e, t) {
-            (y.Z.getMode() === j.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: 'keybinds' }).onPTTKeybind) && ((L[j.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), w(e, !0, t));
+        [j.kg4.PUSH_TO_TALK]: {
+            onTrigger(e, t) {
+                y.Z.getMode(t.context) === j.pM4.PUSH_TO_TALK && ((L[j.kg4.PUSH_TO_TALK].isPressed = e), w(e, !1, t));
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !0
+            },
+            isPressed: !1
         },
-        keyEvents: {
-            keyup: !0,
-            keydown: !0
+        [j.kg4.PUSH_TO_TALK_PRIORITY]: {
+            onTrigger(e, t) {
+                (y.Z.getMode() === j.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: 'keybinds' }).onPTTKeybind) && ((L[j.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), w(e, !0, t));
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !0
+            },
+            isPressed: !1
         },
-        isPressed: !1
-    },
-    [j.kg4.VAD_PRIORITY]: {
-        onTrigger(e, t) {
-            y.Z.getMode() === j.pM4.VOICE_ACTIVITY && P.Z.getCurrentConfig({ location: 'keybinds' }).separateKeybind && ((L[j.kg4.VAD_PRIORITY].isPressed = e), w(e, !0, t));
+        [j.kg4.VAD_PRIORITY]: {
+            onTrigger(e, t) {
+                y.Z.getMode() === j.pM4.VOICE_ACTIVITY && P.Z.getCurrentConfig({ location: 'keybinds' }).separateKeybind && ((L[j.kg4.VAD_PRIORITY].isPressed = e), w(e, !0, t));
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !0
+            },
+            isPressed: !1
         },
-        keyEvents: {
-            keyup: !0,
-            keydown: !0
+        [j.kg4.PUSH_TO_MUTE]: {
+            onTrigger(e) {
+                y.Z.getMode() === j.pM4.VOICE_ACTIVITY && ((L[j.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !0
+            },
+            isPressed: !1
         },
-        isPressed: !1
-    },
-    [j.kg4.PUSH_TO_MUTE]: {
-        onTrigger(e) {
-            y.Z.getMode() === j.pM4.VOICE_ACTIVITY && ((L[j.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !0
-        },
-        isPressed: !1
-    },
-    [j.kg4.TOGGLE_MUTE]: {
-        onTrigger: () =>
-            i.Z.toggleSelfMute({
-                usedKeybind: !0,
-                location: 'Custom Keybind'
-            }),
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_DEAFEN]: {
-        onTrigger: () =>
-            i.Z.toggleSelfDeaf({
-                usedKeybind: !0,
-                location: 'Custom Keybind'
-            }),
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_CAMERA]: {
-        onTrigger: () => (0, c.r)(),
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_VOICE_MODE]: {
-        onTrigger() {
-            let e = y.Z.getMode() === j.pM4.PUSH_TO_TALK ? j.pM4.VOICE_ACTIVITY : j.pM4.PUSH_TO_TALK;
-            i.Z.setMode(e);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_OVERLAY]: {
-        onTrigger() {},
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
-        onTrigger(e, t) {
-            if (!(0, v.I1)(t.shortcut)) return;
-            let n = (0, T.Z)();
-            null != n && l.Z.setInputLocked(!S.default.isLocked(n), n);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
-        onTrigger() {
-            let e = C.default.getFocusedPID(),
-                t = null != e;
-            null != e && t && S.default.isPinned(j.Odu.TEXT) && S.default.isLocked(e) && C.default.isReady(e) && l.Z.activateRegion(j.O0n.TEXT_WIDGET);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_GO_LIVE_STREAMING]: {
-        onTrigger() {
-            let e = O.Z.getCurrentUserActiveStream();
-            if (null != e) return (0, o.g)((0, h.V9)(e));
-            (0, f.Z)();
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.TOGGLE_STREAMER_MODE]: {
-        onTrigger() {
-            s.Z.setEnabled(!I.Z.enabled);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.NAVIGATE_BACK]: {
-        onTrigger: () => (0, g.op)(),
-        keyEvents: {
-            keyup: !0,
-            keydown: !1,
-            focused: !0,
-            blurred: !1
-        }
-    },
-    [j.kg4.NAVIGATE_FORWARD]: {
-        onTrigger: () => (0, g.eH)(),
-        keyEvents: {
-            keyup: !0,
-            keydown: !1,
-            focused: !0,
-            blurred: !1
-        }
-    },
-    [j.kg4.SOUNDBOARD]: {
-        onTrigger: () => {
-            let e = (0, T.Z)();
-            if (null != e)
-                if (m.Z.enabled) (0, _.oZ)(e);
-                else {
-                    if (!(0, b.D)()) return;
-                    (0, _.IN)(!0, e);
-                }
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1
-        }
-    },
-    [j.kg4.SOUNDBOARD_HOLD]: {
-        onTrigger: (e) => {
-            let t = (0, T.Z)();
-            if (null != t) {
-                if (e) {
-                    if (!(0, b.D)()) return;
-                    (0, _.IN)(!1, t);
-                } else (0, _.oZ)(t);
-                return;
+        [j.kg4.TOGGLE_MUTE]: {
+            onTrigger: () =>
+                i.Z.toggleSelfMute({
+                    usedKeybind: !0,
+                    location: 'Custom Keybind'
+                }),
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
             }
         },
-        keyEvents: {
-            keyup: !0,
-            keydown: !0
+        [j.kg4.TOGGLE_DEAFEN]: {
+            onTrigger: () =>
+                i.Z.toggleSelfDeaf({
+                    usedKeybind: !0,
+                    location: 'Custom Keybind'
+                }),
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_CAMERA]: {
+            onTrigger: () => (0, c.r)(),
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_VOICE_MODE]: {
+            onTrigger() {
+                let e = y.Z.getMode() === j.pM4.PUSH_TO_TALK ? j.pM4.VOICE_ACTIVITY : j.pM4.PUSH_TO_TALK;
+                i.Z.setMode(e);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_OVERLAY]: {
+            onTrigger() {},
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
+            onTrigger(e, t) {
+                if (!(0, v.I1)(t.shortcut)) return;
+                let n = (0, T.Z)();
+                null != n && l.Z.setInputLocked(!S.default.isLocked(n), n);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
+            onTrigger() {
+                let e = C.default.getFocusedPID(),
+                    t = null != e;
+                null != e && t && S.default.isPinned(j.Odu.TEXT) && S.default.isLocked(e) && C.default.isReady(e) && l.Z.activateRegion(j.O0n.TEXT_WIDGET);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_GO_LIVE_STREAMING]: {
+            onTrigger() {
+                let e = O.Z.getCurrentUserActiveStream();
+                if (null != e) return (0, o.g)((0, h.V9)(e));
+                (0, f.Z)();
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.TOGGLE_STREAMER_MODE]: {
+            onTrigger() {
+                s.Z.setEnabled(!I.Z.enabled);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.NAVIGATE_BACK]: {
+            onTrigger: () => (0, g.op)(),
+            keyEvents: {
+                keyup: !0,
+                keydown: !1,
+                focused: !0,
+                blurred: !1
+            }
+        },
+        [j.kg4.NAVIGATE_FORWARD]: {
+            onTrigger: () => (0, g.eH)(),
+            keyEvents: {
+                keyup: !0,
+                keydown: !1,
+                focused: !0,
+                blurred: !1
+            }
+        },
+        [j.kg4.SOUNDBOARD]: {
+            onTrigger: () => {
+                let e = (0, T.Z)();
+                if (null != e)
+                    if (m.Z.enabled) (0, _.oZ)(e);
+                    else {
+                        if (!(0, b.D)()) return;
+                        (0, _.IN)(!0, e);
+                    }
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1
+            }
+        },
+        [j.kg4.SOUNDBOARD_HOLD]: {
+            onTrigger: (e) => {
+                let t = (0, T.Z)();
+                if (null != t) {
+                    if (e) {
+                        if (!(0, b.D)()) return;
+                        (0, _.IN)(!1, t);
+                    } else (0, _.oZ)(t);
+                    return;
+                }
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !0
+            }
+        },
+        [j.kg4.SAVE_CLIP]: {
+            onTrigger: () => {
+                (0, d.ln)() && (N.default.track(j.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, p.C1)());
+            },
+            keyEvents: {
+                keyup: !1,
+                keydown: !0
+            }
+        },
+        [j.kg4.SWITCH_TO_VOICE_CHANNEL]: {
+            onTrigger(e, t) {
+                let {
+                    params: { channelId: n }
+                } = t;
+                null != n && a.default.selectVoiceChannel(n);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1,
+                blurred: !0,
+                focused: !0
+            }
+        },
+        [j.kg4.DISCONNECT_FROM_VOICE_CHANNEL]: {
+            onTrigger() {
+                a.default.selectVoiceChannel(null);
+            },
+            keyEvents: {
+                keyup: !0,
+                keydown: !1,
+                blurred: !0,
+                focused: !0
+            }
         }
     },
-    [j.kg4.SAVE_CLIP]: {
-        onTrigger: () => {
-            (0, d.ln)() && (N.default.track(j.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, p.C1)());
-        },
-        keyEvents: {
-            keyup: !1,
-            keydown: !0
-        }
-    },
-    [j.kg4.SWITCH_TO_VOICE_CHANNEL]: {
-        onTrigger(e, t) {
-            let {
-                params: { channelId: n }
-            } = t;
-            null != n && a.default.selectVoiceChannel(n);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1,
-            blurred: !0,
-            focused: !0
-        }
-    },
-    [j.kg4.DISCONNECT_FROM_VOICE_CHANNEL]: {
-        onTrigger() {
-            a.default.selectVoiceChannel(null);
-        },
-        keyEvents: {
-            keyup: !0,
-            keydown: !1,
-            blurred: !0,
-            focused: !0
-        }
-    }
-};
-class R extends u.Z {
+    R = null;
+class D extends u.Z {
     _initialize() {
         (r.Z.wait(() =>
             r.Z.dispatch({
@@ -286,10 +287,14 @@ class R extends u.Z {
             })
         ),
             r.Z.subscribe('AUDIO_SET_MODE', this.resetPTTState),
-            r.Z.subscribe('VOICE_CHANNEL_SELECT', this.resetPTTState));
+            r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect));
     }
     _terminate() {
-        (r.Z.unsubscribe('AUDIO_SET_MODE', this.resetPTTState), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.resetPTTState));
+        (r.Z.unsubscribe('AUDIO_SET_MODE', this.resetPTTState), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect));
+    }
+    handleVoiceChannelSelect(e) {
+        let { currentVoiceChannelId: t } = e;
+        (t !== R && this.resetPTTState(), (R = t));
     }
     resetPTTState() {
         (x.clear(),
@@ -298,4 +303,4 @@ class R extends u.Z {
             }, Z.Yn.DEFAULT));
     }
 }
-let D = new R();
+let k = new D();
