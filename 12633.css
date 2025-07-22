@@ -18753,6 +18753,11 @@ svg.radioIcon_c1e9c4 {
     flex-shrink: 0
 }
 
+.hangStatusIcon_c9d15c {
+    height: 14px;
+    width: 14px
+}
+
 .customStatusLabel_c9d15c {
     white-space: nowrap
 }
