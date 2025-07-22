@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(585483),
     u = n(871499),
     d = n(981631),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -82,14 +82,14 @@ function E(e, t) {
     return i;
 }
 function b(e) {
-    var { channel: t, centerButton: n = !1, onCallJoined: f } = e,
+    var { channel: t, centerButton: n = !1, onCallJoined: _ } = e,
         h = g(e, ['channel', 'centerButton', 'onCallJoined']);
     let { parentAnalyticsLocation: E } = (0, s.ZP)(),
         b = n ? u.d : u.Z,
-        y = t.isManaged() || !t.isPrivate() ? _.intl.string(_.t.S0W8Z2) : _.intl.string(_.t['0D/6R0']),
+        y = t.isManaged() || !t.isPrivate() ? f.intl.string(f.t.S0W8Z2) : f.intl.string(f.t['0D/6R0']),
         O = i.useCallback(() => {
-            (null == f || f(), (0, l.v)(E, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id));
-        }, [t.id, f, E]);
+            (null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id));
+        }, [t.id, _, E]);
     return (
         i.useEffect(
             () => (

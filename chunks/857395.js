@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -75,9 +75,9 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function _(e) {
+function f(e) {
     var { guildId: t, name: n, position: o = 'right', onClose: l, targetElementRef: d } = e,
-        _ = u(e, ['guildId', 'name', 'position', 'onClose', 'targetElementRef']);
+        f = u(e, ['guildId', 'name', 'position', 'onClose', 'targetElementRef']);
     return (0, r.jsx)(
         i.yRy,
         s(
@@ -97,7 +97,7 @@ function _(e) {
                         })
                     )
             },
-            _
+            f
         )
     );
 }

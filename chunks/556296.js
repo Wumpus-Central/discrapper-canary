@@ -17,8 +17,8 @@ var i,
     c = n(442837),
     u = n(570140),
     d = n(714338),
-    _ = n(710845),
-    f = n(280049),
+    f = n(710845),
+    _ = n(280049),
     p = n(658785),
     h = n(41534),
     m = n(131951),
@@ -84,7 +84,7 @@ function P(e, t) {
         e
     );
 }
-let w = new _.Z('KeybindsStore'),
+let w = new f.Z('KeybindsStore'),
     D = {
         id: '1000',
         action: I.kg4.TOGGLE_MUTE,
@@ -203,7 +203,7 @@ function et(e, t, n, r) {
     if (E.isPlatformEmbedded) b.ZP.inputEventRegister(parseInt(e), t, n, r);
     else {
         en(e);
-        let i = (0, f.r)(document);
+        let i = (0, _.r)(document);
         (r.keyup && i.bindGlobal((0, O.BB)(t), () => n(!1), 'keyup'), r.keydown && i.bindGlobal((0, O.BB)(t), () => n(!0), 'keydown'), (B[e] = i));
     }
 }
@@ -327,7 +327,7 @@ function ed(e, t) {
         !0)
     );
 }
-function e_(e) {
+function ef(e) {
     let t = !1;
     return (
         l().each(V, (n) => {
@@ -336,7 +336,7 @@ function e_(e) {
         t
     );
 }
-let ef = [
+let e_ = [
     function () {
         let e = m.Z.getShortcuts();
         return (
@@ -380,7 +380,7 @@ let ef = [
         return !!v.default.getAnyGlobalEnabledOverlay() && ed(I.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, ']`');
     },
     function () {
-        let e = e_(I.kg4.SOUNDBOARD_HOLD);
+        let e = ef(I.kg4.SOUNDBOARD_HOLD);
         return ed(I.kg4.SOUNDBOARD_HOLD, S.D_, !1) || e;
     },
     function () {
@@ -388,7 +388,7 @@ let ef = [
     }
 ];
 function ep() {
-    return (J(), X(), ef.reduce((e, t) => t() || e, !1));
+    return (J(), X(), e_.reduce((e, t) => t() || e, !1));
 }
 function eh() {
     return (

@@ -12,8 +12,8 @@ var i = n(481060),
     c = n(358085),
     u = n(857595),
     d = n(607070),
-    _ = n(981631),
-    f = n(874893);
+    f = n(981631),
+    _ = n(874893);
 function p(e, t, n) {
     return (
         t in e
@@ -64,10 +64,10 @@ let S = {
     init() {
         (this.initBasic(),
             a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
-                l.default.track(_.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
+                l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
             }),
             a.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
-                l.default.track(_.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
+                l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
             }));
     },
     maybeShowKeyboardNavigationExplainerModal() {
@@ -86,8 +86,8 @@ let S = {
         });
     },
     handleSystemColorPreferencesChanged() {
-        let e = f.zd.NO_PREFERENCE;
-        b.matches ? (e = f.zd.DARK) : y.matches && (e = f.zd.LIGHT);
+        let e = _.zd.NO_PREFERENCE;
+        b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
         let t = (!c.isPlatformEmbedded || T()) && O.matches ? 'active' : 'none';
         a.Z.wait(() => {
             (o.Q_(e), u.Ej(t));

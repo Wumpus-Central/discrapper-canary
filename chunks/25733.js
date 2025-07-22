@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(433517),
@@ -57,7 +57,7 @@ function d(e, t) {
         e
     );
 }
-let _ = {
+let f = {
     openDmSettingsUpsellModal(e) {
         let t = i.K.get(s.G),
             l = Date.now();

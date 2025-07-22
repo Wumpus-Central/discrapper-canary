@@ -1,6 +1,6 @@
 (n.d(t, {
     Gv: () => p,
-    Wo: () => _,
+    Wo: () => f,
     vB: () => h
 }),
     n(388685),
@@ -14,7 +14,7 @@ var r = n(217986),
     c = n(388032);
 let u = new Set([l.pK.ARS, l.pK.CLP, l.pK.COP]),
     d = new Set([l.pK.USD, l.pK.JPY]),
-    _ = {
+    f = {
         [s.HeQ.CARD]: () => c.intl.string(c.t['ei5/p6']),
         [s.HeQ.PAYPAL]: () => c.intl.string(c.t['2dgEq6']),
         [s.HeQ.SOFORT]: () => c.intl.string(c.t['edKX//']),
@@ -33,7 +33,7 @@ let u = new Set([l.pK.ARS, l.pK.CLP, l.pK.COP]),
         [s.HeQ.CASH_APP]: () => c.intl.string(c.t['+rbTmJ']),
         [s.HeQ.APPLE]: () => c.intl.string(c.t.RFi12t)
     },
-    f = [s.HeQ.EPS, s.HeQ.BANCONTACT, s.HeQ.IDEAL, s.HeQ.SOFORT, s.HeQ.GIROPAY, s.HeQ.SEPA_DEBIT, s.HeQ.PAYSAFE_CARD],
+    _ = [s.HeQ.EPS, s.HeQ.BANCONTACT, s.HeQ.IDEAL, s.HeQ.SOFORT, s.HeQ.GIROPAY, s.HeQ.SEPA_DEBIT, s.HeQ.PAYSAFE_CARD],
     p = (e, t, n, r) => {
         if (null == e) return '';
         let a = (0, i.q9)(e);
@@ -86,9 +86,9 @@ let u = new Set([l.pK.ARS, l.pK.CLP, l.pK.COP]),
                       })),
             y && 1)
         ) {
-            let e = [...f.filter((e) => b.includes(e)), ...b.filter((e) => !f.includes(e))].slice(0, 2).map((e) => {
+            let e = [..._.filter((e) => b.includes(e)), ...b.filter((e) => !_.includes(e))].slice(0, 2).map((e) => {
                 var t, n;
-                return null != (n = null == (t = _[e]) ? void 0 : t.call(_)) ? n : c.intl.string(c.t.jdPblp);
+                return null != (n = null == (t = f[e]) ? void 0 : t.call(f)) ? n : c.intl.string(c.t.jdPblp);
             });
             b.length >= 3 && e.push(c.intl.string(c.t.Tp5NkZ));
             let t = new Intl.ListFormat(p, {

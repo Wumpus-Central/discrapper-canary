@@ -62,7 +62,7 @@ function w(e) {
     }
     return e;
 }
-function F(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function F(e, t) {
         e
     );
 }
-let D = {
+let F = {
     offset: {
         left: 4,
         right: -12
@@ -192,7 +192,7 @@ function W(e) {
                         })(e, ['ref']);
                     return (0, r.jsx)(
                         f.h21,
-                        F(
+                        D(
                             w(
                                 {
                                     ref: (e) => {
@@ -266,7 +266,7 @@ function G(e) {
                           className: L.message,
                           compact: x.jU.getSetting(),
                           animateAvatar: !1,
-                          focusProps: D,
+                          focusProps: F,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
@@ -352,7 +352,7 @@ function Q(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          F(w({}, n), {
+                                          D(w({}, n), {
                                               label: M.intl.string(M.t.roMu1N),
                                               message: t.message
                                           })
@@ -395,7 +395,7 @@ function Q(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          F(w({}, n), {
+                                          D(w({}, n), {
                                               label: M.intl.string(M.t.mJ3P0N),
                                               message: t.message
                                           })

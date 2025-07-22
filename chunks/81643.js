@@ -23,8 +23,8 @@ var r = n(73800),
     c = n(314897),
     u = n(375954),
     d = n(594174),
-    _ = n(168107),
-    f = n(352138),
+    f = n(168107),
+    _ = n(352138),
     p = n(469775),
     h = n(981631),
     m = n(484710);
@@ -81,8 +81,8 @@ function A(e) {
                 n(!0);
                 try {
                     a.Z.dispatch({ type: 'INITIATE_AGE_VERIFICATION' });
-                    let n = await (0, f.K)();
-                    _.Z.showAgeVerification({
+                    let n = await (0, _.K)();
+                    f.Z.showAgeVerification({
                         webviewUrl: n.verification_webview_url,
                         onComplete: e,
                         onClose: c,

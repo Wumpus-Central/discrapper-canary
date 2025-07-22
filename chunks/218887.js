@@ -71,13 +71,13 @@ var s = {
                 } else a > c && (47 === e.charCodeAt(n + d) ? (u = d) : 0 === d && (u = 0));
                 break;
             }
-            var _ = e.charCodeAt(n + d);
-            if (_ !== t.charCodeAt(o + d)) break;
-            47 === _ && (u = d);
+            var f = e.charCodeAt(n + d);
+            if (f !== t.charCodeAt(o + d)) break;
+            47 === f && (u = d);
         }
-        var f = '';
-        for (d = n + u + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === f.length ? (f += '..') : (f += '/..'));
-        return f.length > 0 ? f + t.slice(o + u) : ((o += u), 47 === t.charCodeAt(o) && ++o, t.slice(o));
+        var _ = '';
+        for (d = n + u + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === _.length ? (_ += '..') : (_ += '/..'));
+        return _.length > 0 ? _ + t.slice(o + u) : ((o += u), 47 === t.charCodeAt(o) && ++o, t.slice(o));
     },
     _makeLong: function (e) {
         return e;

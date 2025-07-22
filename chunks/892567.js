@@ -8,12 +8,12 @@ var r = n(255367),
     c = n(442837),
     u = n(607070),
     d = n(594928),
-    _ = n(821795),
-    f = n(760692),
+    f = n(821795),
+    _ = n(760692),
     p = n(7284),
     h = n(482695);
 let m = i.memo(function (e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = _.F.STATIC } = e,
+    let { userName: t, displayNameStyles: n, effectDisplayType: i = f.F.STATIC } = e,
         a = d.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
         s = (0, p.j)({ displayNameStyles: n }),
         {
@@ -27,12 +27,12 @@ let m = i.memo(function (e) {
         }));
     if (!a || null == n) return t;
     let y = n.colors.map((e) => (0, l.ho)(e, !1, b ? E : null)),
-        O = (0, f.K)(n.effectId, y),
+        O = (0, _.K)(n.effectId, y),
         v = g(n.effectId);
     return (0, r.jsx)('div', {
         className: o()(h.container, v, s, {
-            [h.showEffect]: i !== _.F.PLAIN,
-            [h.animated]: i === _.F.ANIMATED && !m
+            [h.showEffect]: i !== f.F.PLAIN,
+            [h.animated]: i === f.F.ANIMATED && !m
         }),
         style: O,
         'data-username-with-effects': 'string' == typeof t ? t : '',

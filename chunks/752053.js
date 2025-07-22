@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => p,
-    i: () => f
+    i: () => _
 }),
     n(953529));
 var r = n(255367);
@@ -13,12 +13,12 @@ var i = n(442837),
     c = n(388032),
     u = n(373063),
     d = n(982240),
-    _ = n(533854),
-    f = (function (e) {
+    f = n(533854),
+    _ = (function (e) {
         return ((e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL'), e);
     })({});
 let p = (e) => {
-    let { onRetry: t, errorOrigin: n, errorMessage: f } = e,
+    let { onRetry: t, errorOrigin: n, errorMessage: _ } = e,
         p = (0, s.ZP)(),
         h = (0, i.e7)([l.default], () => {
             let e = l.default.getCurrentUser();
@@ -31,7 +31,7 @@ let p = (e) => {
         children: [
             (0, r.jsx)('img', {
                 className: u.__invalid_loadIssueImg,
-                src: (0, a.wj)(p) ? d : _,
+                src: (0, a.wj)(p) ? d : f,
                 alt: ''
             }),
             (0, r.jsx)(o.X6q, {
@@ -45,10 +45,10 @@ let p = (e) => {
                 children: g
             }),
             h &&
-                null != f &&
+                null != _ &&
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: 'staff-only debug: ' + f
+                    children: 'staff-only debug: ' + _
                 }),
             (0, r.jsx)('div', {
                 'data-button-hoisted-classname-wrapper': !0,

@@ -19,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,7 +52,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -79,7 +79,7 @@ function g(e, t) {
 function E(e, t) {
     let n = y(e),
         r = O(e);
-    return null != n && null != r && ((h[e] = p(_({}, n), { message: (0, o.wi)(r, t) })), !0);
+    return null != n && null != r && ((h[e] = p(f({}, n), { message: (0, o.wi)(r, t) })), !0);
 }
 function b(e, t) {
     let n = O(e);

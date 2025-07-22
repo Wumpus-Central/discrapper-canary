@@ -10,7 +10,7 @@ function c(e, t) {
     return Array.from((null != (n = t.current) ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
 }
 function u(e) {
-    let { id: t, defaultFocused: n, isEnabled: u, scrollToStart: d, scrollToEnd: _, onNavigatePreviousAtStart: f, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: b = !1, orientation: y = s.hy.VERTICAL, disableClickOnSpace: O = !1 } = e,
+    let { id: t, defaultFocused: n, isEnabled: u, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: b = !1, orientation: y = s.hy.VERTICAL, disableClickOnSpace: O = !1 } = e,
         v = r.useRef(n ? (0, l.jb)(t, n) : null),
         I = r.useRef(!1),
         T = r.useRef(null),
@@ -56,9 +56,9 @@ function u(e) {
                         return null == (e = T.current) ? void 0 : e.ownerDocument.activeElement;
                     },
                     scrollToStart: d,
-                    scrollToEnd: _
+                    scrollToEnd: f
                 }),
-            [t, d, _]
+            [t, d, f]
         ),
         [D, L] = r.useState(!1),
         x = r.useRef(D);
@@ -130,8 +130,8 @@ function u(e) {
         j = r.useCallback(async () => {
             let e = await w.getPreviousFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? P(t) : null == e && null != f && f();
-        }, [w, M, f, P]),
+            null != t ? P(t) : null == e && null != _ && _();
+        }, [w, M, _, P]),
         U = r.useCallback(
             (e) => {
                 if (!S.current || (!E && !x.current)) return;
@@ -156,7 +156,7 @@ function u(e) {
                     case s.R8.END:
                         (e.stopPropagation(),
                             e.preventDefault(),
-                            _().then(() => {
+                            f().then(() => {
                                 var e;
                                 let n = c(t, T),
                                     r = null == (e = n[n.length - 1]) ? void 0 : e.getAttribute(l.ie);
@@ -177,7 +177,7 @@ function u(e) {
                     }
                 }
             },
-            [k, j, t, y, _, d, P, E]
+            [k, j, t, y, f, d, P, E]
         ),
         G = r.useCallback(
             (e) => {

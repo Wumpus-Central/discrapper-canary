@@ -1,5 +1,5 @@
 n.d(t, {
-    Hs: () => _,
+    Hs: () => f,
     ZP: () => m,
     qy: () => p
 });
@@ -12,10 +12,10 @@ var r = n(255367),
     c = n(297781),
     u = n(443487),
     d = n(522314);
-let _ = [c.E6],
-    f = [a._.WEEK];
+let f = [c.E6],
+    _ = [a._.WEEK];
 function p(e) {
-    let t = f;
+    let t = _;
     return null != e && t.includes(e);
 }
 let h = (e) => {
@@ -24,8 +24,8 @@ let h = (e) => {
                 entry: t,
                 showCoverImage: !1
             }),
-            f = (0, l.Nq)(t);
-        return null != f && p(f)
+            _ = (0, l.Nq)(t);
+        return null != _ && p(_)
             ? (0, r.jsxs)(u.Zb, {
                   selected: i,
                   children: [
@@ -39,7 +39,7 @@ let h = (e) => {
                               (0, r.jsx)(u.ll, { children: t.extra.game_name }),
                               (0, r.jsx)(c.Gk, {
                                   location: c.Gt.CARD,
-                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                                  children: f.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                               })
                           ]
                       }),

@@ -20,12 +20,12 @@ e.exports = function (e) {
             begin: '^#',
             end: '$'
         },
-        _ = {
+        f = {
             className: 'type',
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        f = {
+        _ = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
@@ -43,7 +43,7 @@ e.exports = function (e) {
         p = {
             begin: /\{/,
             end: /\}/,
-            contains: f.contains
+            contains: _.contains
         },
         h = {
             className: 'number',
@@ -60,14 +60,14 @@ e.exports = function (e) {
                 beginKeywords: 'module',
                 end: 'where',
                 keywords: 'module where',
-                contains: [f, c],
+                contains: [_, c],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: '\\bimport\\b',
                 end: '$',
                 keywords: 'import qualified as hiding',
-                contains: [f, c],
+                contains: [_, c],
                 illegal: '\\W\\.|;'
             },
             {
@@ -75,19 +75,19 @@ e.exports = function (e) {
                 begin: '^(\\s*)?(class|instance)\\b',
                 end: 'where',
                 keywords: 'class family instance where',
-                contains: [_, f, c]
+                contains: [f, _, c]
             },
             {
                 className: 'class',
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [u, _, f, p, c]
+                contains: [u, f, _, p, c]
             },
             {
                 beginKeywords: 'default',
                 end: '$',
-                contains: [_, f, c]
+                contains: [f, _, c]
             },
             {
                 beginKeywords: 'infix infixl infixr',
@@ -98,7 +98,7 @@ e.exports = function (e) {
                 begin: '\\bforeign\\b',
                 end: '$',
                 keywords: 'foreign import export ccall stdcall cplusplus jvm dotnet safe unsafe',
-                contains: [_, e.QUOTE_STRING_MODE, c]
+                contains: [f, e.QUOTE_STRING_MODE, c]
             },
             {
                 className: 'meta',
@@ -120,7 +120,7 @@ e.exports = function (e) {
             },
             e.QUOTE_STRING_MODE,
             h,
-            _,
+            f,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             { begin: `(?!-)${l}--+|--+(?!-)${l}` },
             c,

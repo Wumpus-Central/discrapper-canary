@@ -1,6 +1,6 @@
 n.d(t, {
-    ps: () => f,
-    y9: () => _
+    ps: () => _,
+    y9: () => f
 });
 var r = n(255367);
 n(73800);
@@ -61,11 +61,11 @@ function d(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     return 'number' != typeof e ? (0, i.pxk)(e) * o.hs : e * o.hs;
 }
-let f = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: o, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: _, onClose: f } = e;
+let _ = (e) => {
+    let { analyticsLocations: t, initialSelectedDecoration: o, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: f, onClose: _ } = e;
     (0, i.ZDy)(async () => {
         (0, a.s1)().location.pathname === s.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, a.uL)(s.Z5c.APP);
         let { default: e } = await Promise.resolve().then(n.bind(n, 235400));
@@ -74,12 +74,12 @@ let f = (e) => {
                 e,
                 d(c({}, n), {
                     onCloseModal: n.onClose,
-                    onClose: f,
+                    onClose: _,
                     analyticsLocations: t,
                     initialSelectedDecoration: o,
                     initialSelectedDecorationId: l,
                     isTryItOutFlow: u,
-                    guild: _
+                    guild: f
                 })
             );
     }, {});

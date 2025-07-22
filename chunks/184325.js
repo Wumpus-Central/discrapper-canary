@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(906732),
     u = n(335131),
     d = n(927513),
-    _ = n(768865),
-    f = n(617136),
+    f = n(768865),
+    _ = n(617136),
     p = n(497505),
     h = n(703656),
     m = n(317257),
@@ -143,7 +143,7 @@ function U(e) {
                         ) {
                             ((null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)
                                 ? (0, h.uL)(N.Z5c.NITRO_HOME)
-                                : (0, _.k)({
+                                : (0, f.k)({
                                       analyticsLocations: G,
                                       displayProfile: g
                                   }),
@@ -156,7 +156,7 @@ function U(e) {
                             return (null == L || L(), n(t));
                         }
                         return (
-                            (0, _.k)({
+                            (0, f.k)({
                                 analyticsLocations: G,
                                 displayProfile: g
                             }),
@@ -167,7 +167,7 @@ function U(e) {
                     if (null != n) return (null == L || L(), n(t));
                 },
                 v = () => {
-                    (e.id === T.i && b.default.track(N.rMx.QUEST_CONTENT_VIEWED, k(x({}, (0, f.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 })),
+                    (e.id === T.i && b.default.track(N.rMx.QUEST_CONTENT_VIEWED, k(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 })),
                         V({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)(
                             x(

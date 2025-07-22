@@ -28,16 +28,16 @@ function u(e) {
     };
 }
 let d = (e, t) => ''.concat(t, '-').concat(e),
-    _ = {
+    f = {
         BY_APPLICATION_ID: (e) => 'application-id-'.concat(e),
         BY_USER_ID: (e) => 'user-id-'.concat(e),
         BY_RELATIONSHIP_TYPE: (e) => 'relationship-type-'.concat(e)
     };
-function f(e) {
+function _(e) {
     let t = [];
-    return (t.push(_.BY_APPLICATION_ID(e.applicationId)), t.push(_.BY_USER_ID(e.id)), t.push(_.BY_RELATIONSHIP_TYPE(e.type)), t);
+    return (t.push(f.BY_APPLICATION_ID(e.applicationId)), t.push(f.BY_USER_ID(e.id)), t.push(f.BY_RELATIONSHIP_TYPE(e.type)), t);
 }
-let p = new a.h(f, (e) => ''.concat(e.since)),
+let p = new a.h(_, (e) => ''.concat(e.since)),
     h = 0,
     m = 0,
     g = 0;
@@ -67,7 +67,7 @@ function y(e, t) {
 function O(e) {
     let { unknownApplicationIds: t } = e;
     if (null != t) {
-        for (let e of t) for (let t of p.values(_.BY_APPLICATION_ID(e))) (t.type === l.OGo.PENDING_INCOMING || t.type === l.OGo.PENDING_OUTGOING) && y(t.id, e);
+        for (let e of t) for (let t of p.values(f.BY_APPLICATION_ID(e))) (t.type === l.OGo.PENDING_INCOMING || t.type === l.OGo.PENDING_OUTGOING) && y(t.id, e);
         E();
     }
 }
@@ -98,10 +98,10 @@ class S extends (r = i.ZP.Store) {
         return g;
     }
     getGameFriendsForApplication(e) {
-        return p.values(_.BY_APPLICATION_ID(e), !0).filter((e) => e.type === l.OGo.FRIEND);
+        return p.values(f.BY_APPLICATION_ID(e), !0).filter((e) => e.type === l.OGo.FRIEND);
     }
     getGameRelationshipsForUser(e) {
-        return p.values(_.BY_USER_ID(e), !0);
+        return p.values(f.BY_USER_ID(e), !0);
     }
     getGameRelationshipsForUserByType(e, t) {
         return this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
@@ -116,7 +116,7 @@ class S extends (r = i.ZP.Store) {
         return p;
     }
     getGameRelationshipsByType(e) {
-        return p.values(_.BY_RELATIONSHIP_TYPE(e), !0);
+        return p.values(f.BY_RELATIONSHIP_TYPE(e), !0);
     }
     getGameRelationshipsVersion() {
         return p.version;

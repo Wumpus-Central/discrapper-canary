@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(984933),
     u = n(594174),
     d = n(483360),
-    _ = n(892880),
-    f = n(591759),
+    f = n(892880),
+    _ = n(591759),
     p = n(279779),
     h = n(620490),
     m = n(727785);
@@ -146,7 +146,7 @@ class I {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(m.h8.USER)) return;
         let { userFilters: i } = this.options;
-        (void 0 !== t && _.Z.requestMembers(t, e, 100),
+        (void 0 !== t && f.Z.requestMembers(t, e, 100),
             r.setLimit(n),
             r.setQuery({
                 query: e,
@@ -187,8 +187,8 @@ class I {
             return [];
         }
         let { pathname: i, hostname: a = '', host: s } = n,
-            c = f.Z.isDiscordHostname(a) || window.location.host === s;
-        return null !== i && c && f.Z.isAppRoute(i)
+            c = _.Z.isDiscordHostname(a) || window.location.host === s;
+        return null !== i && c && _.Z.isAppRoute(i)
             ? [
                   {
                       type: m.h8.LINK,

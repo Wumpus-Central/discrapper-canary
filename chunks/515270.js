@@ -16,8 +16,8 @@ var r = n(466332),
     c = n(925994),
     u = n(436660),
     d = n(887490),
-    _ = n(42530);
-let f = new Set(['line']),
+    f = n(42530);
+let _ = new Set(['line']),
     p = /^[a-z0-9_+\-.#]+$/i;
 function h(e) {
     let { onChange: t } = e,
@@ -58,20 +58,20 @@ function b(e, t, n, r, i) {
         let [t] = d.bN.node(e, c.path);
         u = t.text.substring(c.offset + 3);
     }
-    let _ = n && null != l,
-        f = n && 0 === o.length,
+    let f = n && null != l,
+        _ = n && 0 === o.length,
         h = r && 0 === o.length,
-        m = (_ ? o.slice(1) : o).length % 2 == 1,
+        m = (f ? o.slice(1) : o).length % 2 == 1,
         g = m && (null == u || '' === u || null != u.match(p)),
         E = g && null != u && null != (a = s.default.resolveLanguageName(u)) ? a : null;
     return {
         blockEntry: t,
         wasInCodeBlock: n,
-        isInCodeBlock: f,
+        isInCodeBlock: _,
         isStyledCodeBlockLine: h,
-        lang: m || _ ? E : i,
+        lang: m || f ? E : i,
         hljsTypes: null,
-        closesCodeBlock: _,
+        closesCodeBlock: f,
         opensCodeBlock: m,
         opensCodeBlockOnOwnLine: g
     };
@@ -166,7 +166,7 @@ function S(e, t) {
 function A(e) {
     let t,
         [n, r] = e;
-    if (!f.has(n.type)) return [];
+    if (!_.has(n.type)) return [];
     let i = [],
         a = /\\|```/g;
     for (let e = 0; e < n.children.length; e++) {
@@ -190,7 +190,7 @@ function N(e, t) {
     for (let i of d.bN.nodes(e, {
         at: {
             anchor: {
-                path: _.u9,
+                path: f.u9,
                 offset: 0
             },
             focus: t

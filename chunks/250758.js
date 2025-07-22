@@ -202,37 +202,50 @@ function T(e, t, n) {
                                 (function (e, t) {
                                     let n = (null != e ? e.getFullMatch() : '').trim();
                                     if (null != n && '' !== n) {
-                                        var r, s, l;
+                                        var r, s, l, a, i, c, u, d, h;
                                         let e =
-                                                null == (r = o.ZP[E.dCx.FILTER_BEFORE])
+                                                null == (l = o.ZP[E.dCx.FILTER_BEFORE]) ||
+                                                null == (s = l.getAutocompletions) ||
+                                                null ==
+                                                    (r = s.call(l, {
+                                                        query: n,
+                                                        searchId: t,
+                                                        maxResults: 1
+                                                    }))
                                                     ? void 0
-                                                    : r.getAutocompletions({
-                                                          query: n,
-                                                          searchId: t,
-                                                          maxResults: 1
-                                                      })[0],
-                                            a =
-                                                null == (s = o.ZP[E.dCx.FILTER_ON])
+                                                    : r[0],
+                                            p =
+                                                null == (c = o.ZP[E.dCx.FILTER_ON]) ||
+                                                null == (i = c.getAutocompletions) ||
+                                                null ==
+                                                    (a = i.call(c, {
+                                                        query: n,
+                                                        searchId: t,
+                                                        maxResults: 1
+                                                    }))
                                                     ? void 0
-                                                    : s.getAutocompletions({
-                                                          query: n,
-                                                          searchId: t,
-                                                          maxResults: 1
-                                                      })[0],
-                                            i =
-                                                null == (l = o.ZP[E.dCx.FILTER_AFTER])
+                                                    : a[0],
+                                            f =
+                                                null == (h = o.ZP[E.dCx.FILTER_AFTER]) ||
+                                                null == (d = h.getAutocompletions) ||
+                                                null ==
+                                                    (u = d.call(h, {
+                                                        query: n,
+                                                        searchId: t,
+                                                        maxResults: 1
+                                                    }))
                                                     ? void 0
-                                                    : l.getAutocompletions({
-                                                          query: n,
-                                                          searchId: t,
-                                                          maxResults: 1
-                                                      })[0];
-                                        return null == e
-                                            ? null
-                                            : {
-                                                  group: E.rtL.DATES,
-                                                  results: [e, a, i]
-                                              };
+                                                    : u[0];
+                                        if (null == e) return null;
+                                        let g = [e];
+                                        return (
+                                            null != p && g.push(p),
+                                            null != f && g.push(f),
+                                            {
+                                                group: E.rtL.DATES,
+                                                results: g
+                                            }
+                                        );
                                     }
                                 })(e, t)
                             )),

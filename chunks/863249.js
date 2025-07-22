@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(962086),
     u = n(160404),
     d = n(264229),
-    _ = n(271383),
-    f = n(701190),
+    f = n(271383),
+    _ = n(701190),
     p = n(594174),
     h = n(626135),
     m = n(246364),
@@ -76,9 +76,9 @@ function T(e) {
 }
 let S = {
     fetchVerificationForm: async (e, t) => {
-        let n = null != t ? t : f.Z.getInviteKeyForGuildId(e),
+        let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
             a = p.default.getCurrentUser(),
-            o = !_.ZP.isMember(e, null == a ? void 0 : a.id);
+            o = !f.ZP.isMember(e, null == a ? void 0 : a.id);
         try {
             let t = await r.tn.get({
                 url: g.ANM.GUILD_MEMBER_VERIFICATION(e),

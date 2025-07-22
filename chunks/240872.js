@@ -36,7 +36,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -61,7 +61,7 @@ function f(e, t) {
 }
 let p = {
     show(e) {
-        let { title: t, body: n, confirmColor: u, confirmText: _, confirmVariant: p = 'primary', cancelText: h, onConfirm: m, onCancel: g, onCloseCallback: E, secondaryConfirmText: b, onConfirmSecondary: y, className: O, titleClassName: v, contextKey: I } = e,
+        let { title: t, body: n, confirmColor: u, confirmText: f, confirmVariant: p = 'primary', cancelText: h, onConfirm: m, onCancel: g, onCloseCallback: E, secondaryConfirmText: b, onConfirmSecondary: y, className: O, titleClassName: v, contextKey: I } = e,
             T = l.Z.getCurrentConfig({ location: 'AlertActionCreators' }, { autoTrackExposure: !0 }).enabled;
         (0, i.h7)(
             (e) => {
@@ -78,7 +78,7 @@ let p = {
                                 variant: 'secondary'
                             }),
                         i.push({
-                            text: null != _ ? _ : c.intl.string(c.t.BddRzc),
+                            text: null != f ? f : c.intl.string(c.t.BddRzc),
                             onClick: () => {
                                 (null == m || m(), e.onClose());
                             },
@@ -86,7 +86,7 @@ let p = {
                         }),
                         (0, r.jsx)(
                             a.u,
-                            f(d({}, e), {
+                            _(d({}, e), {
                                 size: 'sm',
                                 title: t,
                                 subtitle: n,
@@ -97,11 +97,11 @@ let p = {
                 }
                 return (0, r.jsx)(
                     s.default,
-                    f(d({}, e), {
+                    _(d({}, e), {
                         title: t,
                         body: n,
                         confirmColor: 'critical-primary' === p ? o.Tt.RED : o.Tt.BRAND,
-                        confirmText: _,
+                        confirmText: f,
                         cancelText: h,
                         onConfirm: m,
                         onCancel: g,

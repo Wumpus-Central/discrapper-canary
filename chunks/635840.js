@@ -1,126 +1,127 @@
-(i.d(t, { Z: () => C }), i(388685));
+(i.d(t, { Z: () => u }), i(388685));
 var n = i(255367),
     a = i(73800),
-    s = i(481060),
-    l = i(153867),
-    r = i(626135),
-    o = i(981631),
-    d = i(388032),
-    c = i(266354);
-let _ = [
+    s = i(755721),
+    l = i(481060),
+    r = i(153867),
+    o = i(626135),
+    d = i(981631),
+    c = i(388032),
+    _ = i(266354);
+let C = [
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH',
-        nameGetter: () => d.intl.string(d.t['+RZgNT'])
+        nameGetter: () => c.intl.string(c.t['+RZgNT'])
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE',
-        nameGetter: () => d.intl.string(d.t.kgPXgo)
+        nameGetter: () => c.intl.string(c.t.kgPXgo)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH',
-        nameGetter: () => d.intl.string(d.t.vujsUF)
+        nameGetter: () => c.intl.string(c.t.vujsUF)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE',
-        nameGetter: () => d.intl.string(d.t.AYAOLC)
+        nameGetter: () => c.intl.string(c.t.AYAOLC)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER',
-        nameGetter: () => d.intl.string(d.t.wZLu3d)
+        nameGetter: () => c.intl.string(c.t.wZLu3d)
     }
 ];
-function C(e) {
-    let { application: t, subscriptionId: i, onClose: C } = e,
-        [u, N] = a.useState(!1),
-        [m, x] = a.useState(null),
-        [S, I] = a.useState(''),
-        h = a.useCallback(() => {
-            null != m &&
-                (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
-                    answer: m,
+function u(e) {
+    let { application: t, subscriptionId: i, onClose: u } = e,
+        [N, m] = a.useState(!1),
+        [x, I] = a.useState(null),
+        [S, h] = a.useState(''),
+        T = a.useCallback(() => {
+            null != x &&
+                (o.default.track(d.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                    answer: x,
                     application_id: t.id,
                     reason: S,
                     subscription_id: i
                 }),
-                C());
-        }, [t.id, i, m, C, S]);
+                u());
+        }, [t.id, i, x, u, S]);
     return (
         a.useEffect(() => {
-            l.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: u });
-        }, [u]),
+            r.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: N });
+        }, [N]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsxs)(s.xBx, {
-                    className: c.headerContainer,
+                (0, n.jsxs)(l.xBx, {
+                    className: _.headerContainer,
                     separator: !1,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: c.titleContainer,
+                            className: _.titleContainer,
                             children: [
-                                (0, n.jsx)(s.Text, {
-                                    className: c.headerTitle,
+                                (0, n.jsx)(l.Text, {
+                                    className: _.headerTitle,
                                     variant: 'text-lg/semibold',
-                                    children: d.intl.string(d.t.zPxMdX)
+                                    children: c.intl.string(c.t.zPxMdX)
                                 }),
-                                (0, n.jsx)(s.olH, {
-                                    className: c.modalCloseButton,
-                                    onClick: C
+                                (0, n.jsx)(l.olH, {
+                                    className: _.modalCloseButton,
+                                    onClick: u
                                 })
                             ]
                         }),
-                        (0, n.jsx)(s.LZC, { size: 8 }),
-                        (0, n.jsx)(s.Text, {
-                            className: c.headerSubtitle,
+                        (0, n.jsx)(l.LZC, { size: 8 }),
+                        (0, n.jsx)(l.Text, {
+                            className: _.headerSubtitle,
                             variant: 'text-md/medium',
-                            children: d.intl.string(d.t.QJGdBw)
+                            children: c.intl.string(c.t.QJGdBw)
                         })
                     ]
                 }),
-                (0, n.jsxs)(s.hzk, {
+                (0, n.jsxs)(l.hzk, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: c.answerChoicesContainer,
-                            children: (0, n.jsx)(s.FXm, {
-                                value: m,
-                                options: _.map((e) => {
+                            className: _.answerChoicesContainer,
+                            children: (0, n.jsx)(l.FXm, {
+                                value: x,
+                                options: C.map((e) => {
                                     let { nameGetter: t, value: i } = e;
                                     return {
                                         name: t(),
                                         value: i
                                     };
                                 }),
-                                onChange: (e) => x(e.value),
+                                onChange: (e) => I(e.value),
                                 withTransparentBackground: !0
                             })
                         }),
-                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === m &&
-                            (0, n.jsx)(s.oil, {
+                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === x &&
+                            (0, n.jsx)(s.Is, {
                                 autoFocus: !0,
-                                className: c.otherField,
-                                placeholder: d.intl.string(d.t.s6tM8f),
+                                className: _.otherField,
+                                placeholder: c.intl.string(c.t.s6tM8f),
                                 value: S,
-                                onChange: I
+                                onChange: h
                             })
                     ]
                 }),
-                (0, n.jsxs)(s.mzw, {
-                    className: c.footer,
+                (0, n.jsxs)(l.mzw, {
+                    className: _.footer,
                     children: [
-                        (0, n.jsx)(s.zxk, {
+                        (0, n.jsx)(l.zxk, {
                             variant: 'primary',
-                            text: d.intl.string(d.t.geKm7u),
-                            onClick: h,
-                            disabled: null == m
+                            text: c.intl.string(c.t.geKm7u),
+                            onClick: T,
+                            disabled: null == x
                         }),
-                        (0, n.jsx)(s.XZJ, {
-                            type: s.XZJ.Types.INVERTED,
-                            value: u,
-                            onChange: (e, t) => N(t),
+                        (0, n.jsx)(l.XZJ, {
+                            type: l.XZJ.Types.INVERTED,
+                            value: N,
+                            onChange: (e, t) => m(t),
                             size: 20,
-                            className: c.__invalid_checkbox,
-                            children: (0, n.jsx)(s.Text, {
+                            className: _.__invalid_checkbox,
+                            children: (0, n.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                children: d.intl.string(d.t['3vPFQk'])
+                                children: c.intl.string(c.t['3vPFQk'])
                             })
                         })
                     ]

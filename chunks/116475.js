@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(42133),
@@ -14,19 +14,19 @@ function u(e) {
         l = (window.innerHeight - n) / 2 + r.y,
         c = (window.innerWidth + t) / 2 + r.x,
         u = (window.innerHeight + n) / 2 + r.y,
-        { x: d, y: _ } = r;
+        { x: d, y: f } = r;
     return (
         a && ((d += i.x), s + i.x > 0 && (d = (t - window.innerWidth) / 2), c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
-        o && ((_ += i.y), l + i.y > 0 && (_ = (n - window.innerHeight) / 2), u + i.y < window.innerHeight && (_ = (window.innerHeight - n) / 2)),
+        o && ((f += i.y), l + i.y > 0 && (f = (n - window.innerHeight) / 2), u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
         {
             x: d,
-            y: _
+            y: f
         }
     );
 }
 function d(e) {
     let { children: t } = e,
-        { scale: n, x: d, y: _, setOffset: f, zoomed: p, setZoomed: h } = (0, l.Y)(),
+        { scale: n, x: d, y: f, setOffset: _, zoomed: p, setZoomed: h } = (0, l.Y)(),
         { ref: m, width: g, height: E } = (0, o.ZP)(),
         [b, y] = [null != g ? g : 0, null != E ? E : 0],
         O = i.useRef(!1),
@@ -40,14 +40,14 @@ function d(e) {
                 height: y * n.goal,
                 offset: {
                     x: d.goal,
-                    y: _.goal
+                    y: f.goal
                 },
                 delta: {
                     x: e,
                     y: t
                 }
             });
-            f(r.x, r.y, { immediate: !0 });
+            _(r.x, r.y, { immediate: !0 });
         },
         S = (e) => {
             p &&
@@ -77,7 +77,7 @@ function d(e) {
                                 y: -r * (n.goal - 1)
                             }
                         });
-                    f(i.x, i.y);
+                    _(i.x, i.y);
                 }
                 return;
             }
@@ -94,10 +94,10 @@ function d(e) {
         style: {
             scale: n,
             x: d,
-            y: _,
+            y: f,
             cursor: p ? 'zoom-out' : 'zoom-in'
         },
         children: t
     });
 }
-let _ = i.memo(d);
+let f = i.memo(d);

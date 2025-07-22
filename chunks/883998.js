@@ -11,7 +11,7 @@ let c = {
     },
     u = l.Hz.MESSAGE_CONFETTI;
 function d(e) {
-    let { channel: t, setEmojiConfetti: n, shouldShow: s, onRequestClose: l, position: d, align: _, positionRef: f, children: p } = e,
+    let { channel: t, setEmojiConfetti: n, shouldShow: s, onRequestClose: l, position: d, align: f, positionRef: _, children: p } = e,
         h = i.useCallback(
             (e) => {
                 let { emoji: t } = e;
@@ -22,8 +22,8 @@ function d(e) {
     return (0, r.jsx)(a.yRy, {
         shouldShow: s,
         position: d,
-        targetElementRef: f,
-        align: _,
+        targetElementRef: _,
+        align: f,
         onRequestClose: l,
         renderPopout: (e) => {
             let { closePopout: n } = e;

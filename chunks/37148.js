@@ -8,11 +8,11 @@ var r = n(255367),
     c = n(226690),
     u = n(146187),
     d = n(304789),
-    _ = n(667137),
-    f = n(946598);
+    f = n(667137),
+    _ = n(946598);
 function p(e) {
     let { shouldColorMix: t = !1 } = e,
-        { onClose: n } = (0, _.v)();
+        { onClose: n } = (0, f.v)();
     return (0, r.jsx)(u.P, {
         onClick: n,
         colorMix: t
@@ -24,12 +24,12 @@ function h(e) {
         children: [
             null != t &&
                 (0, r.jsx)('div', {
-                    className: f.headerLeading,
+                    className: _.headerLeading,
                     children: t
                 }),
             a,
             (0, r.jsxs)('div', {
-                className: f.headerTrailing,
+                className: _.headerTrailing,
                 children: [null != n && n, (0, r.jsx)(p, { shouldColorMix: i })]
             })
         ]
@@ -39,15 +39,15 @@ function m(e) {
     let { leading: t, trailing: n, hasGradient: a, children: s } = e,
         [l, c] = i.useState(24),
         [u, d] = i.useState(24),
-        _ = i.useRef(null),
+        f = i.useRef(null),
         h = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
             let e = new ResizeObserver(() => {
                 let e = 0,
                     t = 0;
-                if (null != _ && null != _.current) {
-                    let n = _.current.getBoundingClientRect();
+                if (null != f && null != f.current) {
+                    let n = f.current.getBoundingClientRect();
                     ((e = Math.max(e, n.height)), (t = Math.max(t, n.width)));
                 }
                 if (null != h && null != h.current) {
@@ -56,17 +56,17 @@ function m(e) {
                 }
                 (d(Math.ceil(t)), c(Math.ceil(e)));
             });
-            return (null != _.current && e.observe(_.current), null != h.current && e.observe(h.current), () => e.disconnect());
+            return (null != f.current && e.observe(f.current), null != h.current && e.observe(h.current), () => e.disconnect());
         }, []),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
-                    ref: _,
-                    className: o()(f.headerLeading, f.headerLeadingAbsolute),
+                    ref: f,
+                    className: o()(_.headerLeading, _.headerLeadingAbsolute),
                     children: t
                 }),
                 (0, r.jsx)('div', {
-                    className: f.headerLeadingSpacer,
+                    className: _.headerLeadingSpacer,
                     style: {
                         height: l,
                         width: u
@@ -74,7 +74,7 @@ function m(e) {
                 }),
                 s,
                 (0, r.jsx)('div', {
-                    className: f.headerTrailingSpacer,
+                    className: _.headerTrailingSpacer,
                     style: {
                         height: l,
                         width: u
@@ -82,7 +82,7 @@ function m(e) {
                 }),
                 (0, r.jsxs)('div', {
                     ref: h,
-                    className: o()(f.headerTrailing, f.headerTrailingAbsolute),
+                    className: o()(_.headerTrailing, _.headerTrailingAbsolute),
                     children: [null != n && n, (0, r.jsx)(p, { shouldColorMix: a })]
                 })
             ]
@@ -111,17 +111,17 @@ function b(e) {
                   autoplay: !0,
                   shouldAnimate: !n.enabled,
                   importData: t.lottie,
-                  className: f.lottie
+                  className: _.lottie
               })
             : null;
 }
 function y(e) {
     let { gradientColor: t, graphic: n, title: i, titleTextVariant: a, subtitle: l, alignCenter: c = !1, leading: u, trailing: p } = e,
-        { headingId: g } = (0, _.v)(),
+        { headingId: g } = (0, f.v)(),
         E = null != t,
         y = c ? m : h,
         O = (0, r.jsx)('div', {
-            className: f.headerGraphic,
+            className: _.headerGraphic,
             children: (0, r.jsx)(b, { graphic: n })
         }),
         v = (0, r.jsx)(s.X6, {
@@ -136,19 +136,19 @@ function y(e) {
             children: l
         }),
         T = (0, r.jsx)('header', {
-            className: o()(f.section, f.header, { [f.headerCentered]: c }),
+            className: o()(_.section, _.header, { [_.headerCentered]: c }),
             children: (0, r.jsxs)(s.Kq, {
                 gap: 8,
                 children: [
                     (0, r.jsx)('div', {
-                        className: f.headerLayout,
+                        className: _.headerLayout,
                         children: (0, r.jsx)(y, {
                             leading: u,
                             trailing: p,
                             hasGradient: E,
                             children: (0, r.jsxs)(s.Kq, {
                                 gap: 8,
-                                className: f.headerMain,
+                                className: _.headerMain,
                                 children: [null != n && O, null == n && null != i && v]
                             })
                         })
@@ -161,7 +161,7 @@ function y(e) {
     return E
         ? (0, r.jsx)(d.$, {
               color: t,
-              className: f.headerGradient,
+              className: _.headerGradient,
               children: T
           })
         : T;

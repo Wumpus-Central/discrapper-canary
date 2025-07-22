@@ -3,7 +3,7 @@ n.d(t, {
     hY: () => m,
     og: () => b,
     rO: () => O,
-    vu: () => _
+    vu: () => f
 });
 var r,
     i,
@@ -14,12 +14,12 @@ var r,
     c = n.n(l);
 let u = (null != (r = c().name) ? r : 'unknown').toLowerCase(),
     d = 'chrome' === u.toLowerCase() ? parseInt(null != (i = c().version) ? i : '', 10) : -1;
-function _() {
+function f() {
     return d;
 }
-let f = 'electron' === u.toLowerCase() ? parseInt(null != (a = c().version) ? a : '', 10) : -1;
+let _ = 'electron' === u.toLowerCase() ? parseInt(null != (a = c().version) ? a : '', 10) : -1;
 function p() {
-    return f;
+    return _;
 }
 let h = 'firefox' === u.toLowerCase() ? parseInt(null != (o = c().version) ? o : '', 10) : -1;
 function m() {
@@ -30,7 +30,7 @@ function E() {
     return g;
 }
 function b() {
-    return -1 !== _() || -1 !== p() || -1 !== m() || -1 !== E();
+    return -1 !== f() || -1 !== p() || -1 !== m() || -1 !== E();
 }
 function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent,

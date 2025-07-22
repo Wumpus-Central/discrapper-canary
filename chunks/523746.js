@@ -8,8 +8,8 @@ var r,
     c = n(592125),
     u = n(944486),
     d = n(914010),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -125,7 +125,7 @@ function A(e) {
         (delete E[t],
             1 !== e.indexOf('all') && (e = null),
             s.tn.post({
-                url: _.ANM.CALL_RING(t),
+                url: f.ANM.CALL_RING(t),
                 body: { recipients: e },
                 oldFormErrors: !0,
                 rejectWithError: !0
@@ -196,7 +196,7 @@ class w extends (r = o.ZP.Store) {
         };
     }
 }
-f(w, 'displayName', 'CallStore');
+_(w, 'displayName', 'CallStore');
 let D = new w(l.Z, {
     CONNECTION_OPEN: y,
     CONNECTION_CLOSED: v,

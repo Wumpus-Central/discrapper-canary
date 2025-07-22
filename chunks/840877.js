@@ -1,6 +1,6 @@
 (n.d(t, {
-    ZP: () => _,
-    tJ: () => f
+    Yn: () => f,
+    tJ: () => _
 }),
     n(415506));
 var r = n(664751),
@@ -50,11 +50,9 @@ class d {
         (l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n));
     }
 }
-class _ extends d {
+class f extends d {
     getEndpoint() {
         switch (this.searchType) {
-            case s.aib.DMS:
-                return s.ANM.SEARCH_DMS;
             case s.aib.FAVORITES:
                 return s.ANM.SEARCH_FAVORITES;
             case s.aib.GUILD:
@@ -79,7 +77,7 @@ class _ extends d {
               });
     }
 }
-class f extends d {
+class _ extends d {
     getEndpoint() {
         switch (this.searchType) {
             case s.aib.DMS:

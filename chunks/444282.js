@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(53281),
     u = n(476326),
     d = n(703558),
-    _ = n(117530),
-    f = n(859235),
+    f = n(117530),
+    _ = n(859235),
     p = n(898463),
     h = n(981631),
     m = n(98030),
@@ -18,7 +18,7 @@ function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = i.useRef(null),
         [b, y] = i.useState(!1),
-        O = _.Z.getUpload(t, n.name, d.d.SlashCommand),
+        O = f.Z.getUpload(t, n.name, d.d.SlashCommand),
         v = i.useRef(null),
         I = (e) => {
             if (e.which === h.yXg.ENTER) {
@@ -99,7 +99,7 @@ function E(e) {
               }),
               canEdit: !1
           })
-        : (0, r.jsxs)(f.Z, {
+        : (0, r.jsxs)(_.Z, {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: a,

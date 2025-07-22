@@ -11,7 +11,7 @@ function s(e) {
         c = l ? (0, r.Z)(l) : null,
         u = l ? (0, i.Z)(l) : null,
         d = n.x + n.width / 2 - s.width / 2,
-        _ = n.y + n.height / 2 - s.height / 2;
+        f = n.y + n.height / 2 - s.height / 2;
     switch (c) {
         case o.we:
             t = {
@@ -28,13 +28,13 @@ function s(e) {
         case o.F2:
             t = {
                 x: n.x + n.width,
-                y: _
+                y: f
             };
             break;
         case o.t$:
             t = {
                 x: n.x - s.width,
-                y: _
+                y: f
             };
             break;
         default:
@@ -43,15 +43,15 @@ function s(e) {
                 y: n.y
             };
     }
-    var f = c ? (0, a.Z)(c) : null;
-    if (null != f) {
-        var p = 'y' === f ? 'height' : 'width';
+    var _ = c ? (0, a.Z)(c) : null;
+    if (null != _) {
+        var p = 'y' === _ ? 'height' : 'width';
         switch (u) {
             case o.BL:
-                t[f] = t[f] - (n[p] / 2 - s[p] / 2);
+                t[_] = t[_] - (n[p] / 2 - s[p] / 2);
                 break;
             case o.ut:
-                t[f] = t[f] + (n[p] / 2 - s[p] / 2);
+                t[_] = t[_] + (n[p] / 2 - s[p] / 2);
         }
     }
     return t;

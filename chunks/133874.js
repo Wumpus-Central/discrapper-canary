@@ -10,10 +10,10 @@ var i = n(698091),
     c = n(73800),
     u = n(263114),
     d = Symbol.for('Animated:node'),
-    _ = function (e) {
+    f = function (e) {
         return !!e && e[d] === e;
     },
-    f = function (e) {
+    _ = function (e) {
         return e && e[d];
     },
     p = function (e, t) {
@@ -116,7 +116,7 @@ var i = n(698091),
                 var t = {};
                 return (
                     i.each(this.source, function (n, r) {
-                        if (_(n)) t[r] = n.getValue(e);
+                        if (f(n)) t[r] = n.getValue(e);
                         else {
                             var a = i.getFluidConfig(n);
                             a ? (t[r] = a.get()) : e || (t[r] = n);
@@ -231,19 +231,19 @@ var i = n(698091),
                         !1 === n && l();
                     }
                 }),
-                _ = new Set();
+                f = new Set();
             return (
                 d.setValue(n, {
-                    dependencies: _,
+                    dependencies: f,
                     host: t
                 }),
                 u.useLayoutEffect(function () {
                     return (
-                        i.each(_, function (e) {
+                        i.each(f, function (e) {
                             return e.addChild(d);
                         }),
                         function () {
-                            return i.each(_, function (e) {
+                            return i.each(f, function (e) {
                                 return e.removeChild(d);
                             });
                         }
@@ -307,4 +307,4 @@ var S = Symbol.for('AnimatedComponent'),
     N = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
-((t.Animated = m), (t.AnimatedArray = O), (t.AnimatedObject = y), (t.AnimatedProps = v), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = A), (t.getAnimated = f), (t.getPayload = h), (t.isAnimated = _), (t.setAnimated = p));
+((t.Animated = m), (t.AnimatedArray = O), (t.AnimatedObject = y), (t.AnimatedProps = v), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = A), (t.getAnimated = _), (t.getPayload = h), (t.isAnimated = f), (t.setAnimated = p));

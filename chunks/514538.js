@@ -39,10 +39,10 @@ e.exports = function (e) {
             begin: /``/,
             end: /``/
         },
-        _ = /\B('|\^)/,
-        f = {
+        f = /\B('|\^)/,
+        _ = {
             scope: 'symbol',
-            variants: [{ match: i(_, /``.*?``/) }, { match: i(_, e.UNDERSCORE_IDENT_RE) }],
+            variants: [{ match: i(f, /``.*?``/) }, { match: i(f, e.UNDERSCORE_IDENT_RE) }],
             relevance: 0
         },
         p = function ({ includeEqual: e }) {
@@ -66,7 +66,7 @@ e.exports = function (e) {
                 end: r(o(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(l, { type: s }),
-                contains: [c, f, e.inherit(d, { scope: null }), m]
+                contains: [c, _, e.inherit(d, { scope: null }), m]
             };
         },
         E = g(/:/, 'operator'),
@@ -82,7 +82,7 @@ e.exports = function (e) {
             contains: [
                 c,
                 e.inherit(d, { scope: null }),
-                f,
+                _,
                 {
                     scope: 'operator',
                     match: /<|>/
@@ -150,7 +150,7 @@ e.exports = function (e) {
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (N.contains = [R, C, S, T, w, n, c, d, E, O, v, I, f, h]),
+        (N.contains = [R, C, S, T, w, n, c, d, E, O, v, I, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -177,7 +177,7 @@ e.exports = function (e) {
                 O,
                 v,
                 I,
-                f,
+                _,
                 h
             ]
         }

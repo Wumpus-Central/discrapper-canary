@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(872810),
     u = n(110924),
     d = n(833664),
-    _ = n(579630),
-    f = n(100527),
+    f = n(579630),
+    _ = n(100527),
     p = n(906732),
     h = n(194082),
     m = n(318374),
@@ -50,8 +50,8 @@ function B(e) {
                   })
                 : []
         ),
-        K = (0, o.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, _.Z)(e))),
-        { analyticsLocations: z } = (0, p.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        K = (0, o.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
+        { analyticsLocations: z } = (0, p.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         q = (0, T.Z)({
             display: 'live',
             voiceChannelId: null == Y ? void 0 : Y.id,

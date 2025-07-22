@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var l = n(255367);
 n(73800);
 var r = n(481060),
-    i = n(600164),
-    s = n(388032),
+    s = n(600164),
+    i = n(388032),
     a = n(895453);
 let o = {
     SlideContent: function (e) {
@@ -26,25 +26,25 @@ let o = {
               });
     },
     SlideFooter: function (e) {
-        let { mfaChallenge: t, setSlide: n, leadingButton: i, showConfirm: a = !1, disabled: o, submitting: d } = e,
+        let { mfaChallenge: t, setSlide: n, leadingButton: s, showConfirm: a = !1, disabled: o, submitting: d } = e,
             c = t.methods.length > 1;
-        return null != i || c || a
+        return null != s || c || a
             ? (0, l.jsx)(r.mzw, {
                   children: (0, l.jsxs)(r.hE2, {
                       fullWidth: !0,
                       children: [
-                          i,
+                          s,
                           c &&
                               (0, l.jsx)(r.zxk, {
                                   variant: 'secondary',
-                                  text: s.intl.string(s.t.Tot4EB),
+                                  text: i.intl.string(i.t.Tot4EB),
                                   onClick: () => n('select')
                               }),
                           a &&
                               (0, l.jsx)(r.zxk, {
                                   type: 'submit',
                                   variant: 'primary',
-                                  text: s.intl.string(s.t['cY+Ooa']),
+                                  text: i.intl.string(i.t['cY+Ooa']),
                                   disabled: o,
                                   loading: d
                               })
@@ -56,13 +56,13 @@ let o = {
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n } = e;
         return (0, l.jsxs)(r.xBx, {
-            direction: i.Z.Direction.VERTICAL,
+            direction: s.Z.Direction.VERTICAL,
             className: a.header,
             separator: !1,
             children: [
                 (0, l.jsx)(r.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: s.intl.string(s.t.saHocH)
+                    children: i.intl.string(i.t.saHocH)
                 }),
                 null != t &&
                     (0, l.jsx)(r.Text, {

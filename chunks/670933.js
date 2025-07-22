@@ -12,8 +12,8 @@ function o(e, t) {
     if ('string' != typeof e && '[object String]' !== Object.prototype.toString.call(e)) return new Date(NaN);
     var l = d(e);
     if (l.date) {
-        var c = _(l.date, s);
-        r = f(c.restDateString, c.year);
+        var c = f(l.date, s);
+        r = _(c.restDateString, c.year);
     }
     if (!r || isNaN(r.getTime())) return new Date(NaN);
     var u = r.getTime(),
@@ -47,7 +47,7 @@ function d(e) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     var n = RegExp('^(?:(\\d{4}|[+-]\\d{' + (4 + t) + '})|(\\d{2}|[+-]\\d{' + (2 + t) + '})$)'),
         r = e.match(n);
     if (!r)
@@ -62,7 +62,7 @@ function _(e, t) {
         restDateString: e.slice((r[1] || r[2]).length)
     };
 }
-function f(e, t) {
+function _(e, t) {
     if (null === t) return new Date(NaN);
     var n = e.match(l);
     if (!n) return new Date(NaN);

@@ -43,7 +43,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,12 +55,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,9 +87,9 @@ let p = {
 };
 function h(e, t) {
     let n,
-        { attributes: i, children: c, leaf: u, text: _ } = t,
+        { attributes: i, children: c, leaf: u, text: f } = t,
         h = !1,
-        [m] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, _)));
+        [m] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, f)));
     switch (o.bN.isEditor(m) ? 'editor' : m.type) {
         case 'line':
         case 'blockQuote': {
@@ -114,10 +114,10 @@ function h(e, t) {
         }
     }
     return (
-        (n = a()(n, { [l.emptyText]: '' === _.text })),
+        (n = a()(n, { [l.emptyText]: '' === f.text })),
         (0, r.jsx)(
             'span',
-            f(d({}, i), {
+            _(d({}, i), {
                 className: n,
                 spellCheck: h,
                 children: c

@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(600164),
     u = n(981631),
     d = n(318343),
-    _ = n(20493);
-function f(e, t, n) {
+    f = n(20493);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -70,16 +70,16 @@ class b extends i.PureComponent {
     render() {
         let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: a, offsetY: l, style: u } = this.props;
         return (0, r.jsx)(E, {
-            children: (f) =>
+            children: (_) =>
                 (0, r.jsx)(c.Z.Child, {
                     grow: 0,
-                    className: o()(d.image, _.marginBottom40),
+                    className: o()(d.image, f.marginBottom40),
                     style: m(p({}, u), {
                         width: n,
                         height: i,
                         marginLeft: a,
                         marginTop: l,
-                        backgroundImage: 'url('.concat((0, s.wj)(f) ? t : e, ')')
+                        backgroundImage: 'url('.concat((0, s.wj)(_) ? t : e, ')')
                     })
                 })
         });
@@ -99,7 +99,7 @@ let y = (e) => {
                 }),
             null != a
                 ? (0, r.jsx)('div', {
-                      className: o()(i, d.text, _.marginTop8),
+                      className: o()(i, d.text, f.marginTop8),
                       children: a
                   })
                 : null

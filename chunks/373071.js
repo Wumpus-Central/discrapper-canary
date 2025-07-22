@@ -47,7 +47,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -76,7 +76,7 @@ let p = '__DEBUG_PROFILE_EFFECTS_STORE',
         l.K.set(p, e.profileEffects);
     },
     g = (0, o.F)((e) =>
-        f(d({}, h), {
+        _(d({}, h), {
             upsertConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
@@ -117,15 +117,15 @@ let p = '__DEBUG_PROFILE_EFFECTS_STORE',
                         let t = (0, c.$j)(e);
                         return (n.current.push(t), t);
                     },
-                    r = t.config.effects.map((t) => f(d({}, t), { src: e(t.base64) })),
+                    r = t.config.effects.map((t) => _(d({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,
                     a = null != i ? d({}, i) : {};
                 for (let t in a) {
                     let n = a[t];
-                    null != n && (a[t] = f(d({}, n), { src: e(n.base64) }));
+                    null != n && (a[t] = _(d({}, n), { src: e(n.base64) }));
                 }
-                return f(d({}, t), {
-                    config: f(d({}, t.config), {
+                return _(d({}, t), {
+                    config: _(d({}, t.config), {
                         effects: r,
                         stillFrames: a
                     })

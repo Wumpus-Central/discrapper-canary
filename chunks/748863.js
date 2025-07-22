@@ -32,26 +32,26 @@ e.exports = function (e) {
             keywords: i
         },
         d = e.inherit(u, { illegal: /\n/ }),
-        _ = {
+        f = {
             className: 'string',
             begin: /\$"/,
             end: '"',
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, d]
         },
-        f = {
+        _ = {
             className: 'string',
             begin: /\$@"/,
             end: '"',
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, u]
         },
-        p = e.inherit(f, {
+        p = e.inherit(_, {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d]
         });
-    ((u.contains = [f, _, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, _, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]));
+    ((u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]));
     let h = {
-            variants: [s, f, _, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+            variants: [s, _, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
         m = {
             begin: '<',

@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(748780),
     u = n(793030),
     d = n(143450),
-    _ = n(186325),
-    f = n(507274),
+    f = n(186325),
+    _ = n(507274),
     p = n(667137),
     h = n(946598);
 let m = 200;
@@ -32,7 +32,7 @@ function E(e) {
             [S, v]
         ),
         N = 0 === t || 1 === t,
-        { reducedMotion: C } = i.useContext(_.S),
+        { reducedMotion: C } = i.useContext(f.S),
         R = (0, d.q)(
             {
                 opacity: +!!N,
@@ -47,7 +47,7 @@ function E(e) {
         );
     return (0, r.jsx)(p.t.Provider, {
         value: A,
-        children: (0, r.jsx)(f.V, {
+        children: (0, r.jsx)(_.V, {
             id: S,
             role: y,
             'aria-label': O,

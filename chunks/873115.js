@@ -3,7 +3,7 @@
     Nj: () => b,
     RS: () => y,
     by: () => g,
-    eI: () => f,
+    eI: () => _,
     f6: () => m,
     i0: () => O,
     ib: () => p,
@@ -20,11 +20,11 @@ var r = n(544891),
     c = n(981631);
 let u = 'https://www.paypal.com',
     d = 'https://sandbox.paypal.com';
-function _(e) {
+function f(e) {
     let t = c.Ai1.BRAINTREE.KEY.startsWith('production_') ? u : d;
     return ''.concat(t, '/agreements/approve?nolegacy=1&ba_token=').concat(e);
 }
-function f() {
+function _() {
     (0, o.S)().then((e) => {
         e.client
             .create({ authorization: c.Ai1.BRAINTREE.KEY })
@@ -84,7 +84,7 @@ function h() {
                             let {
                                 body: { token: t }
                             } = e;
-                            this._frameService.redirect(_(t));
+                            this._frameService.redirect(f(t));
                         })
                         .catch((e) => (this._frameService.close(), (this._authorizationInProgress = !1), Promise.reject(Error(e.body && e.body.message))));
                 }),

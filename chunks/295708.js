@@ -1,27 +1,28 @@
-(n.d(t, { Z: () => u }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    s = n(273504),
-    a = n(981631),
-    o = n(388032),
-    c = n(957270),
-    d = n(282338);
-function u(e) {
+    l = n(755721),
+    s = n(481060),
+    a = n(273504),
+    o = n(981631),
+    c = n(388032),
+    d = n(957270),
+    u = n(282338);
+function m(e) {
     let { rule: t, onChangeRule: n } = e,
-        [u, m] = i.useState(t.name);
-    return (0, r.jsxs)(l.xJW, {
+        [m, g] = i.useState(t.name);
+    return (0, r.jsxs)(s.xJW, {
         children: [
-            (0, r.jsx)(l.Text, {
-                className: d.triggerHeader,
+            (0, r.jsx)(s.Text, {
+                className: u.triggerHeader,
                 variant: 'text-sm/semibold',
-                children: o.intl.string(o.t.WVAHxM)
+                children: c.intl.string(c.t.WVAHxM)
             }),
-            (0, r.jsx)(l.oil, {
-                className: c.ruleNameInput,
+            (0, r.jsx)(l.Is, {
+                className: d.ruleNameInput,
                 onChange: (e) => {
                     var r, i;
-                    (m(e),
+                    (g(e),
                         n(
                             ((r = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -66,11 +67,11 @@ function u(e) {
                 },
                 onClick: (e) => e.stopPropagation(),
                 onKeyPress: (e) => {
-                    e.which === a.yXg.SPACE && e.stopPropagation();
+                    e.which === o.yXg.SPACE && e.stopPropagation();
                 },
-                placeholder: o.intl.string(o.t['5AO43N']),
-                maxLength: s.OU,
-                value: u
+                placeholder: c.intl.string(c.t['5AO43N']),
+                maxLength: a.OU,
+                value: m
             })
         ]
     });

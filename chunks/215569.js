@@ -1,4 +1,4 @@
-(n.d(t, { W: () => f }), n(539854), n(388685));
+(n.d(t, { W: () => _ }), n(539854), n(388685));
 var r,
     i = n(73800),
     a = n(830483);
@@ -52,23 +52,23 @@ function c(e, t) {
     return i;
 }
 function u(e, t) {
-    if ('object' !== _(e) || null === e) return e;
+    if ('object' !== f(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
         var r = n.call(e, t || 'default');
-        if ('object' !== _(r)) return r;
+        if ('object' !== f(r)) return r;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
     return ('string' === t ? String : Number)(e);
 }
 function d(e) {
     var t = u(e, 'string');
-    return 'symbol' === _(t) ? t : String(t);
+    return 'symbol' === f(t) ? t : String(t);
 }
-function _(e) {
+function f(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-class f extends (r = i.Component) {
+class _ extends (r = i.Component) {
     static getDerivedStateFromProps(e, t) {
         let { children: n, firstRender: r } = t,
             i = (0, a.n)(e.children);
@@ -160,7 +160,7 @@ class f extends (r = i.Component) {
                 );
         }
         let a = s({}, this.props);
-        return (Object.keys(f.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r));
+        return (Object.keys(_.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r));
     }
     constructor(e) {
         (super(e),
@@ -182,7 +182,7 @@ class f extends (r = i.Component) {
             (this._isMounted = !1));
     }
 }
-o(f, 'defaultProps', {
+o(_, 'defaultProps', {
     component: 'span',
     transitionAppear: !0,
     transitionLeave: !0,

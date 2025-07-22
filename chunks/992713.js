@@ -8,8 +8,8 @@ var r = n(108131),
     c = n(710845),
     u = n(339085),
     d = n(926491),
-    _ = n(592125),
-    f = n(485386),
+    f = n(592125),
+    _ = n(485386),
     p = n(430824),
     h = n(709054),
     m = n(38618);
@@ -67,8 +67,8 @@ function S(e) {
     var t, n, r;
     let i = null == (t = p.Z.getGuild(e)) ? void 0 : t.name;
     b.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
-    let a = A(Object.keys(_.Z.getMutableBasicGuildChannelsForGuild(e))),
-        o = A(Object.keys(f.Z.getRoles(e))),
+    let a = A(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
+        o = A(Object.keys(_.Z.getRoles(e))),
         s = A(u.ZP.getGuildEmoji(e).map((e) => e.id)),
         l = A(null != (r = null == (n = d.Z.getStickersByGuildId(e)) ? void 0 : n.map((e) => e.id)) ? r : []);
     m.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, o, s, l);
@@ -77,7 +77,7 @@ function A(e) {
     return i().v3(e.sort().join(',')).toString();
 }
 function N(e, t) {
-    let n = h.default.keys(_.Z.getMutableBasicGuildChannelsForGuild(e));
+    let n = h.default.keys(f.Z.getMutableBasicGuildChannelsForGuild(e));
     (b.fileOnly('syncChannels', {
         channelIdsInMemory: n,
         channelIdsFromServer: t
@@ -95,7 +95,7 @@ function N(e, t) {
         }));
 }
 function C(e, t) {
-    h.default.keys(f.Z.getRoles(e)).forEach((n) => {
+    h.default.keys(_.Z.getRoles(e)).forEach((n) => {
         t.has(n) ||
             o.Z.dispatch({
                 type: 'GUILD_ROLE_DELETE',

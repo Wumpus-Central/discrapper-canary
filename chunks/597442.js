@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => p,
-    T: () => f
+    T: () => _
 });
 var r,
     i = n(73800),
@@ -59,24 +59,24 @@ function d(e, t) {
         e
     );
 }
-let _ = null != (r = document.getElementById('app-mount')) ? r : document;
-function f(e) {
+let f = null != (r = document.getElementById('app-mount')) ? r : document;
+function _(e) {
     var t, n, r;
     let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         u = (0, o.e7)([s.Z], () => s.Z.keyboardModeEnabled),
-        f = i.useRef(!1);
+        _ = i.useRef(!1);
     return (
-        (f.current = !u),
+        (_.current = !u),
         (0, a.ZP)(
             e,
             d(c({}, l), {
-                disableReturnRef: f,
-                attachTo: null != (r = null != (n = l.attachTo) ? n : null == (t = e.current) ? void 0 : t.ownerDocument) ? r : _,
+                disableReturnRef: _,
+                attachTo: null != (r = null != (n = l.attachTo) ? n : null == (t = e.current) ? void 0 : t.ownerDocument) ? r : f,
                 returnRef: l.returnRef
             })
         )
     );
 }
 function p(e) {
-    return (f(e.containerRef), e.children);
+    return (_(e.containerRef), e.children);
 }

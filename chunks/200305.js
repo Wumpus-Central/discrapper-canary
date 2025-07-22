@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    s = n(893776),
+    s = n(481060),
+    o = n(893776),
     a = n(809206),
     c = n(607070),
     u = n(220082),
@@ -29,7 +29,7 @@ var r = n(255367),
     R = n(419851),
     T = n(246403);
 let S = (e) => {
-        let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c, hasManualFormFields: u, isMember: d } = e;
+        let { headerId: t, email: n, password: i, setEmail: l, setPassword: o, emailError: a, passwordError: c, hasManualFormFields: u, isMember: d } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
             children: [
@@ -41,36 +41,36 @@ let S = (e) => {
                         className: F.applicationIcon
                     })
                 }),
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(s.X6q, {
                     id: t,
                     variant: 'heading-xl/semibold',
                     className: F.header,
                     children: u && !d ? P.intl.string(P.t['qQYF6+']) : P.intl.string(P.t.MhcDLy)
                 }),
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: P.intl.string(P.t.SPlaR0)
                 }),
                 (0, r.jsx)('hr', { className: F.divider }),
-                (0, r.jsx)(o.xJW, {
+                (0, r.jsx)(s.xJW, {
                     title: P.intl.string(P.t.dI4d4e),
                     className: F.formItem,
-                    children: (0, r.jsx)(o.oil, {
+                    children: (0, r.jsx)(s.oil, {
                         value: n,
                         error: a,
                         onChange: l,
                         autoFocus: !0
                     })
                 }),
-                (0, r.jsx)(o.xJW, {
+                (0, r.jsx)(s.xJW, {
                     title: P.intl.string(P.t['CIGa+/']),
                     className: F.formItem,
-                    children: (0, r.jsx)(o.oil, {
+                    children: (0, r.jsx)(s.oil, {
                         type: 'password',
                         value: i,
                         error: c,
-                        onChange: s
+                        onChange: o
                     })
                 })
             ]
@@ -86,21 +86,21 @@ let S = (e) => {
                     src: T,
                     className: F.applicationIcon
                 }),
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(s.X6q, {
                     id: t,
                     variant: 'heading-xl/semibold',
                     className: F.header,
                     children: P.intl.format(P.t.v01XgI, { email: n })
                 }),
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: P.intl.string(P.t['/Hw5aW'])
                 }),
                 (0, r.jsx)('div', {
                     className: F.resendButtonContainer,
-                    children: (0, r.jsx)(o.Avr, {
-                        onClick: () => s.Z.verifyResend(),
+                    children: (0, r.jsx)(s.Avr, {
+                        onClick: () => o.Z.verifyResend(),
                         text: P.intl.string(P.t['MLk/mJ'])
                     })
                 })
@@ -109,30 +109,30 @@ let S = (e) => {
     },
     w = (e) => {
         var t;
-        let { guildId: n, formState: i, updateFormState: o, isPreview: s = !1, disableVerification: a = !1 } = e,
+        let { guildId: n, formState: i, updateFormState: s, isPreview: o = !1, disableVerification: a = !1 } = e,
             c = (0, l.e7)([_.Z], () => _.Z.get(n));
         if (null == c) return null;
         let u = null != (t = null != i ? i : null == c ? void 0 : c.formFields) ? t : [],
-            d = s ? y.W : y.r;
+            d = o ? y.W : y.r;
         return (0, r.jsx)(d, {
             guildId: n,
             formFields: u,
-            updateFormFields: o,
+            updateFormFields: s,
             disableVerification: a
         });
     },
     A = (e) => {
-        let { guildId: t, headerId: n, formState: i, updateFormState: l, guildName: s, hasManualFormFields: a, disableVerification: c, isPreview: u = !1 } = e;
+        let { guildId: t, headerId: n, formState: i, updateFormState: l, guildName: o, hasManualFormFields: a, disableVerification: c, isPreview: u = !1 } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
             children: [
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(s.X6q, {
                     id: n,
                     variant: 'heading-xxl/normal',
                     className: F.header,
-                    children: a ? P.intl.format(P.t.cgX47e, { guildName: s }) : P.intl.string(P.t.DrEECw)
+                    children: a ? P.intl.format(P.t.cgX47e, { guildName: o }) : P.intl.string(P.t.DrEECw)
                 }),
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: a ? P.intl.string(P.t['3smSPD']) : P.intl.string(P.t['7D3C5u'])
@@ -148,7 +148,7 @@ let S = (e) => {
         });
     },
     k = (e) => {
-        var t, n, s, y;
+        var t, n, o, y;
         let { verificationForm: R, headerId: T, guildId: w, onClose: k, onComplete: D, isPreview: q = !1 } = e,
             Z = (0, O.N0)(w, null == R ? void 0 : R.guild, q),
             { guildProfile: L, fetchGuildProfile: B } = (0, d.u)(w),
@@ -158,19 +158,19 @@ let S = (e) => {
             U && !H && null == L && B().finally(() => z(!0));
         }, [B, L, H, U]);
         let G = null == R ? void 0 : R.formFields.some((e) => e.field_type !== j.QJ.TERMS),
-            [W, V] = i.useState(null != (s = null == R ? void 0 : R.formFields) ? s : []),
+            [W, V] = i.useState(null != (o = null == R ? void 0 : R.formFields) ? o : []),
             [J, K] = i.useState(!1),
             [Q, Y] = i.useState(null),
             [X, $] = i.useState(''),
             [ee, et] = i.useState(''),
             [en, er] = i.useState(null),
             [ei, el] = i.useState(null),
-            { storeMemberCount: eo, storeOnlineCount: es } = (0, l.cj)([p.Z], () => ({
+            { storeMemberCount: es, storeOnlineCount: eo } = (0, l.cj)([p.Z], () => ({
                 storeMemberCount: p.Z.getMemberCount(w),
                 storeOnlineCount: p.Z.getOnlineCount(w)
             })),
-            ea = null != es ? es : null == R || null == (t = R.guild) ? void 0 : t.approximate_presence_count,
-            ec = null != eo ? eo : null == R || null == (n = R.guild) ? void 0 : n.approximate_member_count,
+            ea = null != eo ? eo : null == R || null == (t = R.guild) ? void 0 : t.approximate_presence_count,
+            ec = null != es ? es : null == R || null == (n = R.guild) ? void 0 : n.approximate_member_count,
             eu = null != G && G;
         (i.useEffect(() => {
             null != R && V(R.formFields);
@@ -220,16 +220,16 @@ let S = (e) => {
                                   size: 40
                               })
                             : void 0,
-                    n = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
-                    r = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWEST).hex(),
-                    [i, l, s] = (0, u.Cf)(t, n, !1);
-                return 'linear-gradient(-45deg, '.concat(i, ', ').concat(null != s ? s : r, ')');
+                    n = (0, s.dQu)(s.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
+                    r = (0, s.dQu)(s.TVs.colors.BACKGROUND_BASE_LOWEST).hex(),
+                    [i, l, o] = (0, u.Cf)(t, n, !1);
+                return 'linear-gradient(-45deg, '.concat(i, ', ').concat(null != o ? o : r, ')');
             })(Z),
             eC = (function (e) {
-                let t = (0, o.dQu)(o.TVs.colors.BORDER_SUBTLE).hex();
+                let t = (0, s.dQu)(s.TVs.colors.BORDER_SUBTLE).hex();
                 return 'linear-gradient(-45deg, '.concat(t, ', ').concat(e, ')');
             })(null != (y = null == L ? void 0 : L.brandColorPrimary) ? y : '');
-        if (null == Z) return (0, r.jsx)(o.$jN, {});
+        if (null == Z) return (0, r.jsx)(s.$jN, {});
         let eO = async () => {
                 (K(!0), er(null), el(null));
                 try {
@@ -343,7 +343,7 @@ let S = (e) => {
                                 containerRef: e_,
                                 faderSize: 180,
                                 faderEdgeThreshold: 48,
-                                children: (0, r.jsx)(o.qBt, {
+                                children: (0, r.jsx)(s.qBt, {
                                     className: F.sequencer,
                                     steps: [O.KJ.CLAIM_ACCOUNT, O.KJ.EMAIL_CONFIRMATION, O.KJ.VERIFICATION_FORM],
                                     step: em,
@@ -391,7 +391,7 @@ let S = (e) => {
                                                 (0, r.jsx)('div', {
                                                     'data-button-hoisted-classname-wrapper': !0,
                                                     className: F.submitButton,
-                                                    children: (0, r.jsx)(o.zxk, {
+                                                    children: (0, r.jsx)(s.zxk, {
                                                         variant: 'primary',
                                                         text: P.intl.string(P.t.PDTjLC),
                                                         type: 'submit',
@@ -400,7 +400,7 @@ let S = (e) => {
                                                         disabled: 0 === X.length || 0 === ee.length
                                                     })
                                                 }),
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
                                                     children: P.intl.string(P.t['9GPiR0'])
@@ -413,13 +413,13 @@ let S = (e) => {
                                         return (0, r.jsxs)('div', {
                                             className: F.footer,
                                             children: [
-                                                (0, r.jsx)(o.DY3, {
+                                                (0, r.jsx)(s.DY3, {
                                                     shouldShow: eb && ex && G,
                                                     text: eg ? P.intl.string(P.t.PLNbh4) : P.intl.string(P.t.brWmV1),
                                                     children: (0, r.jsx)('div', {
                                                         'data-button-hoisted-classname-wrapper': !0,
                                                         className: F.submitButton,
-                                                        children: (0, r.jsx)(o.zxk, {
+                                                        children: (0, r.jsx)(s.zxk, {
                                                             variant: 'active',
                                                             text: P.intl.string(P.t.geKm7u),
                                                             type: 'submit',
@@ -430,7 +430,7 @@ let S = (e) => {
                                                     })
                                                 }),
                                                 null != Q &&
-                                                    (0, r.jsx)(o.Text, {
+                                                    (0, r.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
                                                         color: 'text-danger',
                                                         children: Q
@@ -440,12 +440,12 @@ let S = (e) => {
                                                     (0, r.jsxs)('div', {
                                                         className: F.disclaimerFooter,
                                                         children: [
-                                                            (0, r.jsx)(o.Text, {
+                                                            (0, r.jsx)(s.Text, {
                                                                 color: 'header-secondary',
                                                                 variant: 'text-xs/normal',
                                                                 children: P.intl.string(P.t['+fPCTU'])
                                                             }),
-                                                            (0, r.jsx)(o.Text, {
+                                                            (0, r.jsx)(s.Text, {
                                                                 color: 'header-secondary',
                                                                 variant: 'text-xs/normal',
                                                                 children: P.intl.string(P.t.VjgH0d)

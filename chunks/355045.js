@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(906732),
-    _ = n(975298),
-    f = n(565138),
+    f = n(975298),
+    _ = n(565138),
     p = n(963249),
     h = n(317169),
     m = n(199778),
@@ -28,7 +28,7 @@ let A = function (e) {
         N = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         C = (0, s.e7)([E.Z], () => E.Z.boostSlots),
         { analyticsLocations: R } = (0, d.ZP)(),
-        { fractionalState: P } = (0, _.Z)({ forceFetch: !1 }),
+        { fractionalState: P } = (0, f.Z)({ forceFetch: !1 }),
         w = i.useMemo(
             () =>
                 Object.keys(C).filter((e) => {
@@ -71,10 +71,10 @@ let A = function (e) {
     return (0, r.jsxs)('div', {
         className: S.guildStatus,
         children: [
-            (0, r.jsx)(f.Z, {
+            (0, r.jsx)(_.Z, {
                 className: S.guildIcon,
                 guild: n,
-                size: f.Z.Sizes.LARGER
+                size: _.Z.Sizes.LARGER
             }),
             (0, r.jsx)(u.X6q, {
                 className: S.guildName,

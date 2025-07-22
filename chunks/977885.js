@@ -5,7 +5,7 @@ var r = n(392711),
     a = n(603263),
     i = n(952537),
     o = n(405656),
-    c = n(700366),
+    c = n(961216),
     u = n(416638),
     d = n(981631);
 let h = {
@@ -45,7 +45,8 @@ let h = {
             })({}, b, (0, a.zH)(S)),
             E = (0, u.s5)(t);
         null != E && o.jW(x, E);
-        let C = c.Z.getSearchTabFetcher({
+        let C = c.Z.create({
+                id: (0, u.Tm)(t),
                 searchContext: t,
                 searchQuery: x,
                 searchTabs: n,

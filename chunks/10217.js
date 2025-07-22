@@ -255,36 +255,36 @@ function M(e) {
     let { clip: n, focused: a, onFocus: o } = e,
         [s, c] = l.useState(n.name),
         u = !n.name,
-        [d, m] = l.useState(!1),
-        [b, g] = l.useState(null != (t = n.name) ? t : ''),
-        [j, y] = l.useState(!1),
-        h = async () => {
-            (y(!0), await (0, w.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), m(!1));
+        [d, b] = l.useState(!1),
+        [g, j] = l.useState(null != (t = n.name) ? t : ''),
+        [y, h] = l.useState(!1),
+        x = async () => {
+            (h(!0), await (0, w.Tm)(n.id, { name: '' === g ? void 0 : g }), h(!1), b(!1));
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
             var e;
-            (c(n.name), g(null != (e = n.name) ? e : ''));
+            (c(n.name), j(null != (e = n.name) ? e : ''));
         }
     }, [n.name, s]),
     d)
-        ? (0, r.jsx)(f.oil, {
+        ? (0, r.jsx)(m.Is, {
               inputClassName: i()(Z['heading-lg/medium'], k.clipTitleInput),
               onClick: (e) => e.stopPropagation(),
-              value: b,
+              value: g,
               autoFocus: !0,
               onKeyDown: (e) => {
-                  'Enter' === e.key && h();
+                  'Enter' === e.key && x();
               },
-              disabled: j,
-              onChange: g,
-              onBlur: h
+              disabled: y,
+              onChange: j,
+              onBlur: x
           })
         : (0, r.jsxs)(f.P3F, {
               className: k.clipTitleInputPlaceholder,
               onFocus: o,
               onClick: (e) => {
-                  (e.stopPropagation(), m(!0));
+                  (e.stopPropagation(), b(!0));
               },
               children: [
                   u

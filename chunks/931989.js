@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(912811);
 o.RuntimeLoader.setWasmUrl(a);
 let u = i.forwardRef(function (e, t) {
-    let { buffer: n, autoplay: a = !0, className: l, fit: u, alignment: _, style: f, eventTargetRef: p, artboard: h, withReducedMotion: m = 'halt' } = e,
+    let { buffer: n, autoplay: a = !0, className: l, fit: u, alignment: f, style: _, eventTargetRef: p, artboard: h, withReducedMotion: m = 'halt' } = e,
         g = i.useContext(s.Sfi),
         E = d(),
         [b, y] = i.useState(void 0),
@@ -22,7 +22,7 @@ let u = i.forwardRef(function (e, t) {
             useOffscreenRenderer: !0,
             layout: new o.Layout({
                 fit: null != u ? c.L[u] : o.Fit.Cover,
-                alignment: null != _ ? c.E[_] : o.Alignment.Center
+                alignment: null != f ? c.E[f] : o.Alignment.Center
             })
         });
     (i.useImperativeHandle(
@@ -102,7 +102,7 @@ let u = i.forwardRef(function (e, t) {
         }, [v, E]),
         (0, r.jsx)(I, {
             className: l,
-            style: f
+            style: _
         })
     );
 });

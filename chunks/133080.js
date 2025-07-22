@@ -1,7 +1,7 @@
 n.d(t, {
     K4: () => u,
     Zz: () => c,
-    q9: () => _
+    q9: () => f
 });
 var r = n(512722),
     i = n.n(r),
@@ -287,6 +287,6 @@ let d = {
     ZM: () => o.intl.string(o.t.e0NQFR),
     ZW: () => o.intl.string(o.t.kQ6oLi)
 };
-function _(e) {
+function f(e) {
     return d[e]();
 }

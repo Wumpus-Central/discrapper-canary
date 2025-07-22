@@ -2,7 +2,7 @@ n.d(t, {
     Qz: () => u,
     RZ: () => d,
     s_: () => c,
-    vU: () => f
+    vU: () => _
 });
 var r = n(73800),
     i = n(493773),
@@ -40,14 +40,14 @@ function d(e) {
         enabled: n
     });
 }
-function _(e) {
+function f(e) {
     let { unreadsCount: t, totalMessagesCount: n } = e;
     a.default.track(o.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
         unreads_count: t,
         total_messages_count: n
     });
 }
-function f(e) {
+function _(e) {
     let { notificationCenterVariant: t, messages: n, unreadMessages: a } = e,
         o = r.useRef(null),
         c = r.useRef(!1);
@@ -67,7 +67,7 @@ function f(e) {
         }, [n, a]),
         (0, i.zq)(() => {
             var e, t;
-            _({
+            f({
                 unreadsCount: null != (e = null == a ? void 0 : a.length) ? e : 0,
                 totalMessagesCount: null != (t = null == n ? void 0 : n.length) ? t : 0
             });

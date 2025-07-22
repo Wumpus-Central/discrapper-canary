@@ -26,16 +26,16 @@ function s(e) {
             }
             return n;
         },
-        [_, f] = r.useState(() => d(t, n, l, s));
+        [f, _] = r.useState(() => d(t, n, l, s));
     return (
         r.useEffect(() => {
-            u ? f(d(t, n, l, s)) : (0, a.tZ)();
+            u ? _(d(t, n, l, s)) : (0, a.tZ)();
         }, [u, t, n, l, s]),
         {
             paymentSources: c,
             hasPaymentSources: Object.keys(c).length > 0,
-            paymentSourceId: _,
-            setPaymentSourceId: f,
+            paymentSourceId: f,
+            setPaymentSourceId: _,
             hasFetchedPaymentSources: u,
             defaultPaymentSource: null != l ? c[l] : null
         }

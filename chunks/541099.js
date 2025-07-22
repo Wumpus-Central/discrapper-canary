@@ -33,7 +33,7 @@ function u(e) {
     return ((l.show = !1), (l.entrypoint = o._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0);
 }
 let d = new Set();
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {}
     shouldShowPopup() {
         return l.show && l.entrypoint === o._b.TEXT;
@@ -60,7 +60,7 @@ class _ extends (r = i.ZP.Store) {
         return d;
     }
 }
-function f() {
+function _() {
     u({ closeReason: o.ti.DISMISSED });
 }
 function p() {
@@ -74,13 +74,13 @@ function m(e) {
     let { channelId: t } = e;
     d.delete(t);
 }
-s(_, 'displayName', 'AppLauncherStore');
-let g = new _(a.Z, {
+s(f, 'displayName', 'AppLauncherStore');
+let g = new f(a.Z, {
     APP_LAUNCHER_SHOW: c,
     APP_LAUNCHER_DISMISS: u,
-    CONNECTION_OPEN: f,
-    LOGOUT: f,
-    CHANNEL_SELECT: f,
+    CONNECTION_OPEN: _,
+    LOGOUT: _,
+    CHANNEL_SELECT: _,
     APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
     APP_LAUNCHER_SET_ACTIVE_COMMAND: p,
     APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: h,

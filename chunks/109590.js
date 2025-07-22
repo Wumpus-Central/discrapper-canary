@@ -13,8 +13,8 @@ var r = n(392711),
     u = n(238349),
     d = n(660189);
 n(682474);
-var _ = n(981631);
-function f(e, t, n) {
+var f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ class m {
         return c.default.keys(this._set)[0];
     }
     constructor(e) {
-        (f(this, '_set', void 0), f(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e));
+        (_(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e));
     }
 }
 class g {
@@ -73,7 +73,7 @@ class g {
         0 === this.requested.get(e).size && this.requested.delete(e);
     }
     constructor() {
-        (f(this, 'requested', void 0), (this.requested = new m(() => new Set())));
+        (_(this, 'requested', void 0), (this.requested = new m(() => new Set())));
     }
 }
 let E = new g(),
@@ -127,7 +127,7 @@ async function A(e) {
         let {
             body: { threads: i }
         } = await o.tn.post({
-            url: _.ANM.FORUM_POSTS(e),
+            url: f.ANM.FORUM_POSTS(e),
             body: { thread_ids: t },
             rejectWithError: !0
         });

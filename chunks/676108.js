@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(872635),
     u = n(185923),
     d = n(763169);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -62,7 +62,7 @@ function h(e, t) {
 }
 function m(e) {
     var t;
-    let { editorRef: n, options: _, channel: p } = e,
+    let { editorRef: n, options: f, channel: p } = e,
         m = null == (t = n.current) ? void 0 : t.getSlateEditor(),
         g = i.useRef(null),
         E = i.useCallback(
@@ -106,7 +106,7 @@ function m(e) {
                       className: d.staticButtons,
                       children: (0, r.jsx)(c.I, {
                           editorRef: n,
-                          options: _,
+                          options: f,
                           iconClassName: d.staticIcon,
                           dividerClassName: d.staticDivider
                       })
@@ -121,7 +121,7 @@ function m(e) {
                           let { isShown: n } = t;
                           return (0, r.jsx)(
                               o.Z,
-                              h(f({}, e), {
+                              h(_({}, e), {
                                   ref: g,
                                   active: n,
                                   className: d.emojiButton,

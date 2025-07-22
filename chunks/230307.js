@@ -20,10 +20,10 @@ let l = {},
     c = null,
     u = 86400000,
     d = 3600000;
-function _() {
+function f() {
     ((l = {}), (c = null));
 }
-function f(e) {
+function _(e) {
     let { statistics: t } = e;
     (t.forEach((e) => {
         l[e.application_id] = e;
@@ -83,7 +83,7 @@ class h extends (r = i.ZP.Store) {
 }
 s(h, 'displayName', 'LibraryApplicationStatisticsStore');
 let m = new h(a.Z, {
-    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: f,
+    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: _,
     ACTIVITY_UPDATE_START: p,
-    LOGOUT: _
+    LOGOUT: f
 });

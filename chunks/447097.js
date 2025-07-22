@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => d }), n(704826), n(35282), n(388685), n(457542));
 var l = n(255367),
     r = n(73800),
-    i = n(658550),
-    s = n(481060),
+    s = n(658550),
+    i = n(481060),
     a = n(507453),
     o = n(388032);
 function d(e) {
@@ -45,15 +45,15 @@ function d(e) {
             children: [
                 (0, l.jsx)(a.Z.SlideHeader, { onClose: c }),
                 (0, l.jsx)(a.Z.SlideContent, {
-                    children: (0, l.jsxs)(s.xJW, {
+                    children: (0, l.jsxs)(i.xJW, {
                         title: b,
                         children: [
-                            (0, l.jsx)(s.oil, {
+                            (0, l.jsx)(i.oil, {
                                 inputRef: j,
                                 onChange: S,
                                 placeholder: y,
-                                maxLength: i.tL,
-                                minLength: i.th,
+                                maxLength: s.tL,
+                                minLength: s.th,
                                 value: x,
                                 spellCheck: 'false',
                                 disabled: h

@@ -27,14 +27,14 @@ async function d(e) {
             application_id: e.application.id
         }));
 }
-function _(e) {
+function f(e) {
     ((0, s.Z)(e),
         a.default.track(l.rMx.OPEN_MODAL, {
             type: u,
             application_id: e.application.id
         }));
 }
-function f(e) {
+function _(e) {
     let { application: t } = e,
         n = i.ZP.getIFrameModalApplicationId(),
         r = i.ZP.getIFrameModalKey();
@@ -57,13 +57,13 @@ class h extends r.Z {
                     d(e);
                 },
                 INTERACTION_IFRAME_MODAL_CREATE: (e) => {
-                    ((this.iframeModalOpenTimeMs = Date.now()), _(e));
+                    ((this.iframeModalOpenTimeMs = Date.now()), f(e));
                 },
                 INTERACTION_IFRAME_MODAL_CLOSE: (e) => {
                     (p(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0));
                 },
                 RPC_APP_DISCONNECTED: (e) => {
-                    f(e);
+                    _(e);
                 }
             }));
     }

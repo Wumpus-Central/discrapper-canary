@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(470167),
     i = n(147913),
     a = n(681678),
@@ -22,15 +22,15 @@ function u(e, t, n) {
 function d(e) {
     var t, n, i;
     let { channelId: u, message: d } = e,
-        _ = o.Z.getMessage(u, d.id);
-    if ((null == _ || null == (n = _.embeds) || null == (t = n[0]) ? void 0 : t.type) === r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
-        let e = null == (i = _.embeds[0].fields) ? void 0 : i.find((e) => e.rawName === l.g0.CONTENT_TYPE);
+        f = o.Z.getMessage(u, d.id);
+    if ((null == f || null == (n = f.embeds) || null == (t = n[0]) ? void 0 : t.type) === r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+        let e = null == (i = f.embeds[0].fields) ? void 0 : i.find((e) => e.rawName === l.g0.CONTENT_TYPE);
         (null == e ? void 0 : e.rawValue) === l.L0.ERROR ? (a.Z.showFailedToast(c.wQ.TIGGER_PAWTECT_ERROR), (0, s.zi)(s.o6.ERROR)) : (null == e ? void 0 : e.rawValue) === l.L0.VERIFIED_ADULT ? (a.Z.showSuccessToast(c.wQ.TIGGER_PAWTECT_VERIFIED), (0, s.zi)(s.o6.VERIFIED_ADULT)) : (null == e ? void 0 : e.rawValue) === l.L0.VERIFIED_TEEN && (a.Z.showSuccessToast(c.wQ.TIGGER_PAWTECT_VERIFIED), (0, s.zi)(s.o6.VERIFIED_TEEN));
     }
 }
-class _ extends i.Z {
+class f extends i.Z {
     constructor(...e) {
         (super(...e), u(this, 'actions', { MESSAGE_CREATE: d }));
     }
 }
-let f = new _();
+let _ = new f();

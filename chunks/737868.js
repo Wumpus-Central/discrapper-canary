@@ -29,8 +29,8 @@ var l = t(255367),
     T = t(495084);
 let Z = (e) => {
     var n, t;
-    let { guildId: Z, welcomeChannel: w, transitionState: B, onSave: D, onClose: z } = e,
-        I = i.useRef(null),
+    let { guildId: Z, welcomeChannel: w, transitionState: B, onSave: D, onClose: I } = e,
+        z = i.useRef(null),
         H = (0, j.Dt)(),
         [L, R] = i.useState(null != w ? w.channel_id : null),
         [A, M] = i.useState(null != w ? w.description : ''),
@@ -62,7 +62,7 @@ let Z = (e) => {
             });
     });
     let Q = () => {
-            (F(!1), z());
+            (F(!1), I());
         },
         ee = i.useCallback((e) => M(e), []),
         en = (e) => {
@@ -139,7 +139,7 @@ let Z = (e) => {
                         }),
                         (0, l.jsx)(s.hjN, {
                             className: T.__invalid_formGroup,
-                            children: (0, l.jsx)(s.oil, {
+                            children: (0, l.jsx)(a.Is, {
                                 maxLength: 42,
                                 value: A,
                                 inputClassName: T.input,
@@ -171,7 +171,7 @@ let Z = (e) => {
                                         hasSetEmoji: null != W,
                                         onClick: en,
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: I,
+                                            targetElementRef: z,
                                             renderPopout: (e) => {
                                                 let { closePopout: n } = e,
                                                     t = C.ZP.getDefaultChannel(Z);
@@ -228,7 +228,7 @@ let Z = (e) => {
                                                         })({}, e)),
                                                         (i = i =
                                                             {
-                                                                ref: I,
+                                                                ref: z,
                                                                 onClick: (n) => {
                                                                     var t;
                                                                     (et(), null == (t = e.onClick) || t.call(e, n));

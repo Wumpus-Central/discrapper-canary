@@ -7,7 +7,7 @@ var r = n(255367),
     l = n(388032),
     c = n(163845);
 let u = i.forwardRef(function (e, t) {
-    let { className: n, src: i, unicodeEmoji: a, name: u, size: d = 20, enableTooltip: _ = !0, enableHeight: f = !0, onClick: p } = e;
+    let { className: n, src: i, unicodeEmoji: a, name: u, size: d = 20, enableTooltip: f = !0, enableHeight: _ = !0, onClick: p } = e;
     if (null == i && null == a) return null;
     let h = () => {
         let e = (0, r.jsx)('img', {
@@ -15,7 +15,7 @@ let u = i.forwardRef(function (e, t) {
             alt: '',
             'aria-label': l.intl.formatToPlainString(l.t['9+YWrK'], { name: u }),
             className: o()(c.roleIcon, n, { [c.clickable]: null != p }),
-            height: f ? d : void 0,
+            height: _ ? d : void 0,
             src: i,
             width: d
         });
@@ -25,7 +25,7 @@ let u = i.forwardRef(function (e, t) {
                 alt: '',
                 'aria-label': a.allNamesString,
                 className: o()(c.roleIcon, n, { [c.clickable]: null != p }),
-                height: f ? d : void 0,
+                height: _ ? d : void 0,
                 src: a.url,
                 width: d
             })),
@@ -44,7 +44,7 @@ let u = i.forwardRef(function (e, t) {
     return (0, r.jsx)(s.DY3, {
         text: u,
         'aria-label': !1,
-        shouldShow: _,
+        shouldShow: f,
         element: 'span',
         children: h()
     });

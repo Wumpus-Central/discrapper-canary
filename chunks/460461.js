@@ -538,7 +538,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         'dropdown-' + t
                                                                     ),
                                                                     (0, r.jsx)(
-                                                                        o.oil,
+                                                                        a.Is,
                                                                         {
                                                                             value: e,
                                                                             className: A.isPublished ? T.socialLinksMax : T.socialLinksMin,

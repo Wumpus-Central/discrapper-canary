@@ -2,19 +2,19 @@ n.d(t, { Z: () => d });
 var l = n(255367);
 n(73800);
 var r = n(481060),
-    i = n(507453),
-    s = n(48550),
+    s = n(507453),
+    i = n(48550),
     a = n(388032),
     o = n(895453);
 function d(e) {
     let { mfaChallenge: t, setSlide: n, onClose: d } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(i.Z.SlideHeader, {
+            (0, l.jsx)(s.Z.SlideHeader, {
                 subtitle: a.intl.string(a.t['XQaT+/']),
                 onClose: d
             }),
-            (0, l.jsx)(i.Z.SlideContent, {
+            (0, l.jsx)(s.Z.SlideContent, {
                 children: t.methods.map((e) =>
                     (0, l.jsxs)(
                         r.P3F,
@@ -27,7 +27,7 @@ function d(e) {
                                 (0, l.jsx)(r.Text, {
                                     className: o.listItemText,
                                     variant: 'text-md/semibold',
-                                    children: s.P[e.type]
+                                    children: i.P[e.type]
                                 }),
                                 (0, l.jsx)(r.Fbu, {
                                     size: 'custom',

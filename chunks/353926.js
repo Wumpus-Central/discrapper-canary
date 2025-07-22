@@ -18,8 +18,8 @@ var r = n(392711),
     c = n(865427),
     u = n(710845),
     d = n(314897),
-    _ = n(750041),
-    f = n(626135),
+    f = n(750041),
+    _ = n(626135),
     p = n(360359),
     h = n(987338),
     m = n(981631);
@@ -151,9 +151,9 @@ function X(e) {
     }
     if (n.override) return !1;
     let u = l === h.a0.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
-        _ = H(t, n, r, u),
+        f = H(t, n, r, u),
         p = Y(n);
-    if ((c && q(_, p)) || z(_, p)) return !1;
+    if ((c && q(f, p)) || z(f, p)) return !1;
     if (n.type === h.xY.USER) {
         let e = {
             name: t,
@@ -173,7 +173,7 @@ function X(e) {
             holdout_bucket: n.holdoutBucket
         };
         null != a && (e.context_guild_id = a.guildId);
-        let _ = u ? m.rMx.EXPERIMENT_USER_TRIGGERED_FALLBACK : m.rMx.EXPERIMENT_USER_TRIGGERED;
+        let f = u ? m.rMx.EXPERIMENT_USER_TRIGGERED_FALLBACK : m.rMx.EXPERIMENT_USER_TRIGGERED;
         if (c) {
             let t = y(E({}, e), {
                 assignment_fingerprint: n.fingerprint,
@@ -181,12 +181,12 @@ function X(e) {
                 current_fingerprint: d.default.getFingerprint(),
                 current_source: w.source
             });
-            f.default.track(m.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, t, {
+            _.default.track(m.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, t, {
                 flush: !1,
                 fingerprint: o
             });
         } else
-            f.default.track(_, e, {
+            _.default.track(f, e, {
                 flush: !0,
                 fingerprint: o
             });
@@ -216,23 +216,23 @@ function X(e) {
                 current_fingerprint: d.default.getFingerprint(),
                 current_source: w.source
             });
-            f.default.track(m.rMx.EXPERIMENT_GUILD_TRIGGERED_IGNORED, e, {
+            _.default.track(m.rMx.EXPERIMENT_GUILD_TRIGGERED_IGNORED, e, {
                 flush: !1,
                 fingerprint: o
             });
         } else
-            f.default.track(e, a, {
+            _.default.track(e, a, {
                 flush: !0,
                 fingerprint: o
             });
     }
     c
-        ? R.set(_, p)
+        ? R.set(f, p)
         : ((C[H(t, n, r, u)] = {
               time: Date.now(),
               hash: Y(n)
           }),
-          ef(C));
+          e_(C));
 }
 function Q(e) {
     let [t, n] = e;
@@ -270,7 +270,7 @@ function ee(e) {
         'EXPERIMENTS_FETCH_SUCCESS' === e.type &&
             N &&
             'ready_payload' === w.source &&
-            f.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
+            _.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
                 fingerprint: e.fingerprint,
                 current_snapshot_source: w.source,
                 current_snapshot_session_id: w.sessionId,
@@ -309,7 +309,7 @@ function et(e) {
         fingerprint: a
     }),
         t.forEach((e) => {
-            let [t, n, s, l, c, u, d, _, f, p, h] = e;
+            let [t, n, s, l, c, u, d, f, _, p, h] = e;
             D[t] = {
                 type: 'user',
                 revision: n,
@@ -318,19 +318,19 @@ function et(e) {
                 override: 0 === l,
                 hashResult: null != u ? u : -1,
                 aaMode: 1 === d,
-                triggerDebuggingEnabled: F(1 === _, t),
+                triggerDebuggingEnabled: F(1 === f, t),
                 assignmentSource: r,
                 sessionId: i,
                 loadedFromCache: o,
                 fingerprint: a,
-                holdoutName: f,
+                holdoutName: _,
                 holdoutRevision: p,
                 holdoutBucket: h
             };
         }),
         null != n &&
             n.forEach((e) => {
-                let [t, n, s, l, c, u, d, _, f, p] = e;
+                let [t, n, s, l, c, u, d, f, _, p] = e;
                 L[t] = {
                     hashKey: n,
                     revision: s,
@@ -338,8 +338,8 @@ function et(e) {
                     overrides: J(c),
                     overridesFormatted: (null != u ? u : []).map((e) => e.map($)),
                     holdoutName: null != d ? d : null,
-                    holdoutControlBucket: null != _ ? _ : null,
-                    aaMode: 1 === f,
+                    holdoutControlBucket: null != f ? f : null,
+                    aaMode: 1 === _,
                     triggerDebuggingEnabled: F(1 === p, t),
                     assignmentSource: r,
                     sessionId: i,
@@ -410,17 +410,17 @@ function ei(e, t) {
                 loadedFromCache: a.loadedFromCache
             };
     if (null == (d = en(e, a.populations, u))) return null;
-    let _ = null;
+    let f = null;
     return null != a.holdoutName &&
         null != a.holdoutControlBucket &&
         a.holdoutName !== t &&
-        (null == (_ = ei(e, a.holdoutName)) ? void 0 : _.bucket) != null &&
-        (!0 !== _.override &&
+        (null == (f = ei(e, a.holdoutName)) ? void 0 : f.bucket) != null &&
+        (!0 !== f.override &&
             X({
                 experimentId: a.holdoutName,
-                descriptor: _
+                descriptor: f
             }),
-        (null == _ ? void 0 : _.bucket) === a.holdoutControlBucket)
+        (null == f ? void 0 : f.bucket) === a.holdoutControlBucket)
         ? null
         : {
               type: h.xY.GUILD,
@@ -433,9 +433,9 @@ function ei(e, t) {
               assignmentSource: a.assignmentSource,
               sessionId: a.sessionId,
               loadedFromCache: a.loadedFromCache,
-              holdoutName: null != _ ? a.holdoutName : null,
-              holdoutRevision: null == _ ? void 0 : _.revision,
-              holdoutBucket: null == _ ? void 0 : _.bucket
+              holdoutName: null != f ? a.holdoutName : null,
+              holdoutRevision: null == f ? void 0 : f.revision,
+              holdoutBucket: null == f ? void 0 : f.bucket
           };
 }
 function ea(e) {
@@ -481,7 +481,7 @@ function eu() {
         n = Date.now(),
         r = !1;
     for (let e in t) n - t[e].time > V && (delete t[e], (r = !0));
-    return (r && ef(t), t);
+    return (r && e_(t), t);
 }
 function ed() {
     var e, t, n;
@@ -513,14 +513,14 @@ function ed() {
                 bucket: o[e]
             }),
             (a = !0));
-    a && e_();
+    a && ef();
 }
-function e_() {
+function ef() {
     try {
         s.K.set(I, M);
     } catch (e) {
         (A.error('Error saving user experiment overrides, unsaved data will be lost', e),
-            f.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
             }));
@@ -529,13 +529,13 @@ function e_() {
         s.K.set(T, k);
     } catch (e) {
         (A.error('Error saving guild experiment overrides, unsaved data will be lost', e),
-            f.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
             }));
     }
 }
-function ef(e) {
+function e_(e) {
     try {
         s.K.set(O, {
             v: S,
@@ -543,7 +543,7 @@ function ef(e) {
         });
     } catch (e) {
         (A.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
-            f.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
             }));
@@ -588,7 +588,7 @@ function eh(e) {
         !a)
     )
         for (let e of [M, k]) for (let t in e) null == P[t] && delete M[t];
-    e_();
+    ef();
 }
 function em(e) {
     let { guild: t } = e;
@@ -597,7 +597,7 @@ function em(e) {
         t.id === n && delete x[e];
     }
 }
-class eg extends _.Z {
+class eg extends f.Z {
     initialize() {
         ((C = eu()), ed(), this.waitFor(d.default), this.loadCache());
     }

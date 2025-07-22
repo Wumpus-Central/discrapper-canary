@@ -1,8 +1,8 @@
 (n.d(t, {
     De: () => p,
     EJ: () => h,
-    Ic: () => f,
-    JU: () => _
+    Ic: () => _,
+    JU: () => f
 }),
     n(413496),
     n(433524),
@@ -17,12 +17,12 @@ var r = n(255367),
     c = n(981631),
     u = n(183375);
 let d = RegExp('\\p{Emoji_Presentation}', 'gu');
-function _(e) {
+function f(e) {
     var t, n;
-    let { primaryColor: r, secondaryColor: i, tertiaryColor: a, useReducedMotion: s, roleStyle: l, includeConvenienceGlow: d, animateGradient: _ } = e,
-        f = 'username' === l,
+    let { primaryColor: r, secondaryColor: i, tertiaryColor: a, useReducedMotion: s, roleStyle: l, includeConvenienceGlow: d, animateGradient: f } = e,
+        _ = 'username' === l,
         p = 'dot' === l,
-        h = f && d;
+        h = _ && d;
     return {
         gradientStyle: {
             '--custom-gradient-color-1': null != r ? r : c.p6O,
@@ -30,25 +30,25 @@ function _(e) {
             '--custom-gradient-color-3': null != (n = null != a ? a : r) ? n : c.p6O
         },
         gradientClassname: o()(null != a ? u.threeColorGradient : u.twoColorGradient, {
-            [u.usernameGradient]: f,
+            [u.usernameGradient]: _,
             [u.convenienceGlowGradient]: h,
-            [u.convenienceGlowGradientActive]: h && _,
+            [u.convenienceGlowGradientActive]: h && f,
             [u.gradientDotAnimation]: !s && p,
-            [u.animateGradient]: _ && f
+            [u.animateGradient]: f && _
         }),
         gradientGlowClassname: o()(null != a ? u.threeColorGradient : u.twoColorGradient, u.usernameGlow, {
-            [u.usernameGradient]: f,
-            [u.animateGradient]: _ && f,
-            [u.usernameGlowActive]: f && _
+            [u.usernameGradient]: _,
+            [u.animateGradient]: f && _,
+            [u.usernameGlowActive]: _ && f
         })
     };
 }
-function f(e) {
+function _(e) {
     let { primaryColor: t, secondaryColor: n, tertiaryColor: r, roleStyle: a, includeConvenienceGlow: o, animateGradient: c } = e,
         u = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     return i.useMemo(
         () =>
-            _({
+            f({
                 primaryColor: t,
                 secondaryColor: n,
                 tertiaryColor: r,

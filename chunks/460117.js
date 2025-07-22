@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var i = n(255367),
-    l = n(73800),
-    r = n(481060),
+    r = n(73800),
+    l = n(481060),
     o = n(596454),
     s = n(318766),
     a = n(907040),
@@ -9,19 +9,19 @@ var i = n(255367),
     d = n(185923);
 function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: j } = e,
-        v = l.useRef(null),
+        v = r.useRef(null),
         h = (e) => (t) => {
             var n, i;
-            let { emoji: l, willClose: r } = t;
-            null != l &&
-                (null == l.id
-                    ? m({ name: null != (n = l.optionallyDiverseSequence) ? n : '' })
+            let { emoji: r, willClose: l } = t;
+            null != r &&
+                (null == r.id
+                    ? m({ name: null != (n = r.optionallyDiverseSequence) ? n : '' })
                     : m({
-                          id: l.id,
-                          name: null != (i = l.originalName) ? i : l.name,
-                          animated: l.animated
+                          id: r.id,
+                          name: null != (i = r.originalName) ? i : r.name,
+                          animated: r.animated
                       }),
-                r && e());
+                l && e());
         },
         p =
             null == u || null == u.name
@@ -40,7 +40,7 @@ function u(e) {
         onClick: () => {
             m(null);
         },
-        children: (0, i.jsx)(r.yRy, {
+        children: (0, i.jsx)(l.yRy, {
             targetElementRef: v,
             position: 'bottom',
             renderPopout: (e) => {
@@ -53,11 +53,11 @@ function u(e) {
                 });
             },
             children: (e, n) => {
-                var l, r;
+                var r, l;
                 let { isShown: o } = n;
                 return (0, i.jsx)(
                     s.Z,
-                    ((l = (function (e) {
+                    ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
@@ -82,7 +82,7 @@ function u(e) {
                         }
                         return e;
                     })({}, e)),
-                    (r = r =
+                    (l = l =
                         {
                             ref: v,
                             tabIndex: 0,
@@ -91,7 +91,7 @@ function u(e) {
                             renderButtonContents: p
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -99,10 +99,10 @@ function u(e) {
                                   n.push.apply(n, i);
                               }
                               return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
-                    l)
+                    r)
                 );
             }
         })

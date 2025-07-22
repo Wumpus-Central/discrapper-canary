@@ -1,38 +1,39 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
-    o = n(481060),
-    s = n(873115),
-    l = n(219929),
-    c = n(618541),
-    u = n(975060),
-    d = n(388032),
+    o = n(755721),
+    s = n(481060),
+    l = n(873115),
+    c = n(219929),
+    u = n(618541),
+    d = n(975060),
+    f = n(388032),
     _ = n(912296);
-class f extends i.PureComponent {
+class p extends i.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && s.f6();
+        null != this.props.paypalClient && l.f6();
     }
     componentWillUnmount() {
-        s.Nj().then(() => s.Dz());
+        l.Nj().then(() => l.Dz());
     }
     render() {
         let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
-        return (0, r.jsx)(o.hjN, {
+        return (0, r.jsx)(s.hjN, {
             className: t,
-            title: d.intl.string(d.t.QQBAoq),
+            title: f.intl.string(f.t.QQBAoq),
             children: (0, r.jsxs)('div', {
                 className: _.inputWrapper,
                 children: [
-                    (0, r.jsx)(l.ZP, {
-                        type: l.ZP.Types.PAYPAL,
+                    (0, r.jsx)(c.ZP, {
+                        type: c.ZP.Types.PAYPAL,
                         className: _.paypalIcon
                     }),
-                    (0, r.jsx)(o.oil, {
+                    (0, r.jsx)(o.Is, {
                         value: e,
                         editable: !1,
                         readOnly: !0,
-                        placeholder: null == n ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
+                        placeholder: null == n ? f.intl.string(f.t.dte2Mz) : f.intl.string(f.t.hopw7e),
                         inputClassName: _.paypalInput
                     })
                 ]
@@ -40,7 +41,7 @@ class f extends i.PureComponent {
         });
     }
 }
-let p = a.ZP.connectStores([c.Z, u.Z], () => ({
-    braintreeEmail: u.Z.braintreeEmail,
-    paypalClient: c.Z.getPayPalClient()
-}))(f);
+let h = a.ZP.connectStores([u.Z, d.Z], () => ({
+    braintreeEmail: d.Z.braintreeEmail,
+    paypalClient: u.Z.getPayPalClient()
+}))(p);

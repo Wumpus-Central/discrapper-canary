@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => d }), n(388685), n(457542));
 var l = n(255367),
     r = n(73800),
-    i = n(658550),
-    s = n(481060),
+    s = n(658550),
+    i = n(481060),
     a = n(507453),
     o = n(388032);
 function d(e) {
@@ -39,15 +39,15 @@ function d(e) {
                 (0, l.jsx)(a.Z.SlideHeader, { onClose: c }),
                 (0, l.jsx)(a.Z.SlideContent, {
                     scrollbarType: 'none',
-                    children: (0, l.jsxs)(s.xJW, {
+                    children: (0, l.jsxs)(i.xJW, {
                         title: o.intl.string(o.t.HZPBOT),
                         children: [
-                            (0, l.jsx)(s.oil, {
+                            (0, l.jsx)(i.oil, {
                                 inputRef: j,
                                 onChange: p,
                                 placeholder: o.intl.string(o.t.tARzgo),
-                                maxLength: i.gH,
-                                minLength: i.gH,
+                                maxLength: s.gH,
+                                minLength: s.gH,
                                 value: x,
                                 autoComplete: 'one-time-code',
                                 spellCheck: 'false',
@@ -61,7 +61,7 @@ function d(e) {
                     mfaChallenge: t,
                     setSlide: d,
                     showConfirm: !0,
-                    disabled: x.length !== i.gH,
+                    disabled: x.length !== s.gH,
                     submitting: h
                 })
             ]

@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(451478),
     u = n(648613),
     d = n(433390),
-    _ = n(474936),
-    f = n(163882);
+    f = n(474936),
+    _ = n(163882);
 function p(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let y = function (e) {
             paymentModalBanner: R
         };
     function k(e) {
-        let n = null != P ? P : t === _.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
+        let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
             g(h({}, M), {
@@ -116,18 +116,18 @@ let y = function (e) {
                                 {
                                     disabled: x.disabled,
                                     onClick: c,
-                                    innerClassName: f.premiumSubscribeButton,
+                                    innerClassName: _.premiumSubscribeButton,
                                     color: n,
                                     size: i,
                                     className: A,
                                     wrapperClassName: a()(
                                         {
-                                            [f.tier2Gradient]: N && t === _.Si.TIER_2,
-                                            [f.tier1Gradient]: N && t === _.Si.TIER_1
+                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
+                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
                                         },
                                         p
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in D ? D.buttonShineClassName : n === s.Tt.BRAND_INVERTED ? f.brandShine : void 0,
+                                    buttonShineClassName: 'buttonShineClassName' in D ? D.buttonShineClassName : n === s.Tt.BRAND_INVERTED ? _.brandShine : void 0,
                                     pauseAnimation: !L || T
                                 },
                                 D,
@@ -139,10 +139,10 @@ let y = function (e) {
                                         (0, r.jsx)(l.SrA, {
                                             size: 'md',
                                             color: w,
-                                            className: a()(f.premiumIcon, b)
+                                            className: a()(_.premiumIcon, b)
                                         }),
                                     (0, r.jsx)('span', {
-                                        className: a()(f.buttonText, null == m ? void 0 : m.textClassName),
+                                        className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
                                         children: x.buttonText
                                     })
                                 ]

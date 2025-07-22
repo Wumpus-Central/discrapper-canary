@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(619899),
     u = n(451478),
     d = n(119837),
-    _ = n(802433),
-    f = n(658312),
+    f = n(802433),
+    _ = n(658312),
     p = n(729436),
     h = n(142145),
     m = n(710867),
@@ -62,7 +62,7 @@ let v = (e) => {
                 stop: D,
                 reset: L,
                 ticking: x
-            } = (0, f.Z)((e) => {
+            } = (0, _.Z)((e) => {
                 w((t) => t + e);
             }),
             M = i.useRef(O);
@@ -85,7 +85,7 @@ let v = (e) => {
         let [k, j] = i.useState(!1);
         return (
             i.useEffect(() => {
-                (!0 === c || s || (D(), w(0)), !s && k && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === _.Q.PERSISTENT ? w(u === _.j.FromStart ? 0 : S) : w(0)));
+                (!0 === c || s || (D(), w(0)), !s && k && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0)));
             }, [s, k, S, a, D, L, x, E.animationType, c, u]),
             (0, r.jsx)('div', {
                 ref: v,
@@ -95,7 +95,7 @@ let v = (e) => {
                 children: (0, r.jsx)('div', {
                     className: y ? b.innerNoRadius : b.inner,
                     children: I.map((e, i) => {
-                        if (!x.current && E.animationType === _.Q.PERSISTENT && null != E.staticFrameSrc && 0 === i && !0 === c) {
+                        if (!x.current && E.animationType === f.Q.PERSISTENT && null != E.staticFrameSrc && 0 === i && !0 === c) {
                             var a, o, s, l;
                             let { staticFrameSrc: n } = E;
                             return (0, r.jsx)(
@@ -158,11 +158,11 @@ let v = (e) => {
             n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
             [a, o] = i.useState(!1),
             { preset: d } = (0, E.Z)(e.profileEffectId, () => o(!1)),
-            f = (0, c.ex)(null == d ? void 0 : d.config),
+            _ = (0, c.ex)(null == d ? void 0 : d.config),
             h = (0, p.C)(null == d ? void 0 : d.config),
-            g = null != f ? f : h;
-        return null != d && null != g && (t || e.shopPreview || d.config.animationType !== _.Q.INTERMITTENT)
-            ? (!t && e.shopPreview) || (!t && d.config.animationType === _.Q.PERSISTENT) || n || (!1 === e.autoPlay && !1 === e.isHovering)
+            g = null != _ ? _ : h;
+        return null != d && null != g && (t || e.shopPreview || d.config.animationType !== f.Q.INTERMITTENT)
+            ? (!t && e.shopPreview) || (!t && d.config.animationType === f.Q.PERSISTENT) || n || (!1 === e.autoPlay && !1 === e.isHovering)
                 ? (0, r.jsx)(I, {
                       useThumbnail: e.useThumbnail,
                       config: g,

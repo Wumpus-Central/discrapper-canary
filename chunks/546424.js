@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(28546),
     u = n(970731),
     d = n(210887),
-    _ = n(921944),
-    f = n(957825),
+    f = n(921944),
+    _ = n(957825),
     p = n(231338),
     h = n(388032),
     m = n(245541),
@@ -19,7 +19,7 @@ function b(e) {
     let { markAsDismissed: t } = e,
         n = (0, a.e7)([d.Z], () => d.Z.theme) === p.BR.LIGHT ? E.Z : g.Z,
         b = i.useCallback(() => {
-            (0, c.RO)(f.X1.SOUNDBOARD, l.Ie.NORMAL);
+            (0, c.RO)(_.X1.SOUNDBOARD, l.Ie.NORMAL);
         }, []);
     return (0, r.jsx)(u.ZP, {
         className: m.container,
@@ -36,7 +36,7 @@ function b(e) {
                     'aria-label': h.intl.string(h.t.cpT0Cg),
                     look: o.zx.Looks.BLANK,
                     size: o.zx.Sizes.NONE,
-                    onClick: () => t(_.L.USER_DISMISS),
+                    onClick: () => t(f.L.USER_DISMISS),
                     children: (0, r.jsx)(s.Dio, {
                         size: 'xs',
                         className: m.closeIcon,

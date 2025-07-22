@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,14 +37,14 @@ function _(e) {
     }
     return e;
 }
-class f extends l.Z {
+class _ extends l.Z {
     _initialize() {
         (super._initialize(), c.ZP.initializeIfNeeded());
     }
     platformShowStreamFull() {
         (0, i.ZDy)(async () => {
             let { default: e } = await n.e('63757').then(n.bind(n, 309690));
-            return (t) => (0, r.jsx)(e, _({}, t));
+            return (t) => (0, r.jsx)(e, f({}, t));
         });
     }
     platformHandleStreamStart() {}
@@ -58,4 +58,4 @@ class f extends l.Z {
         });
     }
 }
-let p = new f();
+let p = new _();

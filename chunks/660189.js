@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,7 +91,7 @@ function y(e) {
     if (e.message.id !== e.message.channel_id) return !1;
     let t = p[c.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    p[c.default.castMessageIdAsChannelId(e.message.id)] = f(d({}, t), { firstMessage: (0, o.wi)(t.firstMessage, e.message) });
+    p[c.default.castMessageIdAsChannelId(e.message.id)] = _(d({}, t), { firstMessage: (0, o.wi)(t.firstMessage, e.message) });
 }
 function O(e) {
     if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
@@ -112,9 +112,9 @@ function I(e) {
         c = p[n];
     if (null == c || null == c.firstMessage || r !== c.firstMessage.id) return !1;
     let u = l.default.getCurrentUser(),
-        _ = null != u && u.id === i;
-    if (o && !_) return !1;
-    ((p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, _, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, _, s)));
+        f = null != u && u.id === i;
+    if (o && !f) return !1;
+    ((p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, f, s)));
 }
 function T(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
@@ -122,19 +122,19 @@ function T(e) {
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
     let a = l.default.getCurrentUser(),
         o = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
-    p[t] = f(d({}, i), { firstMessage: o });
+    p[t] = _(d({}, i), { firstMessage: o });
 }
 function S(e) {
     let { channelId: t, messageId: n } = e,
         r = p[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    p[t] = f(d({}, r), { firstMessage: r.firstMessage.set('reactions', []) });
+    p[t] = _(d({}, r), { firstMessage: r.firstMessage.set('reactions', []) });
 }
 function A(e) {
     let { channelId: t, messageId: n, emoji: r } = e,
         i = p[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
-    p[t] = f(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
+    p[t] = _(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
 }
 function N(e) {
     let { channelId: t, messages: n } = e,

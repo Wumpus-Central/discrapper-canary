@@ -9,8 +9,8 @@ var i = n(512722),
     c = n(906732),
     u = n(650958),
     d = n(594174),
-    _ = n(737013),
-    f = n(137810),
+    f = n(737013),
+    _ = n(137810),
     p = n(981631),
     h = n(65154),
     m = n(388032);
@@ -27,8 +27,8 @@ function g(e) {
             showAllDevices: !0,
             asSubmenu: i
         }),
-        v = (0, _.Z)(y.id, g),
-        I = (0, f.Z)(g);
+        v = (0, f.Z)(y.id, g),
+        I = (0, _.Z)(g);
     return (0, r.jsx)(l.Z, {
         object: p.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.v2r, {

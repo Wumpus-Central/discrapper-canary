@@ -11,8 +11,8 @@ var r = n(442837),
     c = n(592125),
     u = n(271383),
     d = n(607744),
-    _ = n(496675),
-    f = n(699516),
+    f = n(496675),
+    _ = n(699516),
     p = n(979651),
     h = n(981631);
 function m(e) {
@@ -20,7 +20,7 @@ function m(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = (0, r.e7)([c.Z], () => c.Z.getChannel(n)),
         a = (0, r.e7)([s.default], () => s.default.getId() === e.id),
-        o = (0, r.e7)([f.Z], () => f.Z.isFriend(e.id)),
+        o = (0, r.e7)([_.Z], () => _.Z.isFriend(e.id)),
         l = null == i ? void 0 : i.type,
         u = null != l && h.TPd.CALLABLE.has(l),
         d = E(e, t, i) || u;
@@ -46,7 +46,7 @@ function g(e) {
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'useCanRingToGuildVoiceChannel',
         n = arguments.length > 2 ? arguments[2] : void 0,
-        s = (0, r.e7)([_.Z], () => null != n && (0, i.Z)(n, _.Z)),
+        s = (0, r.e7)([f.Z], () => null != n && (0, i.Z)(n, f.Z)),
         l = (0, r.e7)([u.ZP, d.Z], () => {
             let t = null == n ? void 0 : n.guild_id;
             if (null == t) return !1;
@@ -55,10 +55,10 @@ function E(e) {
             return r && i;
         }),
         { needSubscriptionToAccess: c } = (0, a.Z)(null == n ? void 0 : n.id),
-        { enabled: f } = o.Z.useExperiment({
+        { enabled: _ } = o.Z.useExperiment({
             guildId: null == n ? void 0 : n.guild_id,
             location: t
         }),
         p = (null == n ? void 0 : n.type) === h.d4z.GUILD_VOICE;
-    return f && p && l && s && !c;
+    return _ && p && l && s && !c;
 }

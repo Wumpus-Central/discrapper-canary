@@ -9,20 +9,20 @@ function c(e) {
     let { application: t, location: n, analyticsLocations: c } = e,
         { enabled: u } = s.t.useExperiment({ location: n }, { autoTrackExposure: !0 }),
         d = (0, l.Z)(t),
-        _ = null == d ? void 0 : d.id,
-        { data: f } = (0, o.IX)(_),
-        { bot: p } = null != f ? f : { bot: null };
+        f = null == d ? void 0 : d.id,
+        { data: _ } = (0, o.IX)(f),
+        { bot: p } = null != _ ? _ : { bot: null };
     return r.useMemo(
         () =>
-            u && null != _ && null != p && null != f && (0, a.ye)(f)
+            u && null != f && null != p && null != _ && (0, a.ye)(_)
                 ? () => {
                       (0, i.W)({
-                          appId: _,
+                          appId: f,
                           botId: p.id,
                           analyticsLocations: null != c ? c : []
                       });
                   }
                 : null,
-        [c, u, f, p, _]
+        [c, u, _, p, f]
     );
 }

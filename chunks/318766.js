@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(704215),
     u = n(481060),
     d = n(607070),
-    _ = n(243778),
-    f = n(255963),
+    f = n(243778),
+    _ = n(255963),
     p = n(140465),
     h = n(125900),
     m = n(546424),
@@ -120,21 +120,21 @@ let x = function (e) {
         Z = i.useCallback(() => {
             if (B) return;
             let e = Math.floor(Math.random() * P);
-            (j(!0), G(e), (0, f.x)(O.qR.EmojiButtonMouseEntered));
+            (j(!0), G(e), (0, _.x)(O.qR.EmojiButtonMouseEntered));
         }, [B, j, G]),
         H = i.useCallback(() => {
             j(!1);
         }, [j]),
-        Y = i.useCallback(() => (0, f.x)(O.qR.EmojiButtonFocused), []),
+        Y = i.useCallback(() => (0, _.x)(O.qR.EmojiButtonFocused), []),
         W = (0, p.B4)(),
-        [K, z] = (0, _.US)(W ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        [K, z] = (0, f.US)(W ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         q = K === c.z.TRIAL_NUX_EMOJI_BUTTON,
         X = !T && q,
         Q = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [J, $] = i.useState(!1),
         [ee, et] = i.useState(!1),
         en = (0, h.V2)({ location: 'EmojiButton' }),
-        [er, ei] = (0, _.US)(x && en ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        [er, ei] = (0, f.US)(x && en ? [c.z.SOUNDMOJI_COACHMARK] : []),
         ea = !J && er === c.z.SOUNDMOJI_COACHMARK && !ee,
         eo = i.useRef(null),
         es = null != M ? M : eo;

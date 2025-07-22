@@ -847,7 +847,7 @@ function eb(e) {
                 color: 'header-muted',
                 children: ei.intl.string(ei.t.YynaLC)
             }),
-            (0, i.jsx)(f.oil, {
+            (0, i.jsx)(h.Is, {
                 'aria-label': ei.intl.string(ei.t.YynaLC),
                 className: el.channelNameInput,
                 placeholder: c,

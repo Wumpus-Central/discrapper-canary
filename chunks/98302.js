@@ -8,8 +8,8 @@ var r = n(846519),
     c = n(19780),
     u = n(885110),
     d = n(606304),
-    _ = n(938475),
-    f = n(70956),
+    f = n(938475),
+    _ = n(70956),
     p = n(367907),
     h = n(981631);
 function m(e, t, n) {
@@ -41,7 +41,7 @@ function g(e) {
     }
     return e;
 }
-let E = +f.Z.Millis.MINUTE;
+let E = +_.Z.Millis.MINUTE;
 class b extends i.Z {
     _initialize() {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(c.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
@@ -65,7 +65,7 @@ class b extends i.Z {
                         guild_id: t,
                         rtc_connection_id: c.Z.getRTCConnectionId(),
                         media_session_id: c.Z.getMediaSessionId(),
-                        voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId)
+                        voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId)
                     },
                     this.getGameMetadata(),
                     c.Z.getPacketStats()
@@ -89,7 +89,7 @@ class b extends i.Z {
                     guild_id: t,
                     rtc_connection_id: c.Z.getRTCConnectionId(),
                     media_session_id: c.Z.getMediaSessionId(),
-                    voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId)
+                    voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId)
                 },
                 this.getGameMetadata()
             )

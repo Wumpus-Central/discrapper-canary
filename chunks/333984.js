@@ -32,11 +32,11 @@ function d() {
         }),
         (l = !0));
 }
-function _(e) {
+function f(e) {
     let { channelId: t } = e;
     s.add(t);
 }
-function f(e) {
+function _(e) {
     let { channel: t } = e;
     return u(t);
 }
@@ -83,10 +83,10 @@ class m extends i.Z {
             CONNECTION_OPEN: d,
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: f,
+            CHANNEL_CREATE: _,
             CHANNEL_UPDATES: p,
             CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: _
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
         });
     }
 }

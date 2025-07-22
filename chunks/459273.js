@@ -1,8 +1,8 @@
 (n.d(t, {
-    I3: () => _,
+    I3: () => f,
     d9: () => p,
     oo: () => d,
-    yp: () => f
+    yp: () => _
 }),
     n(388685),
     n(415506));
@@ -48,7 +48,7 @@ class u {
     bumpDispatchPriority() {}
 }
 let d = i.createContext(new u()),
-    _ = i.forwardRef(function (e, t) {
+    f = i.forwardRef(function (e, t) {
         let { children: n } = e,
             a = (0, o.Z)(() => new c());
         return (
@@ -59,7 +59,7 @@ let d = i.createContext(new u()),
             })
         );
     });
-function f(e) {
+function _(e) {
     let { event: t, handler: n } = e,
         r = i.useContext(d),
         a = i.useRef(n);
@@ -85,5 +85,5 @@ function f(e) {
     );
 }
 function p(e) {
-    return (f(e), null);
+    return (_(e), null);
 }

@@ -12,10 +12,10 @@ if (n(738146)() || n(247131)()) {
         c = n(745872),
         u = c('%Map%', !0),
         d = c('%Set%', !0),
-        _ = n(887937),
-        f = _('Array.prototype.push'),
-        p = _('String.prototype.charCodeAt'),
-        h = _('String.prototype.slice'),
+        f = n(887937),
+        _ = f('Array.prototype.push'),
+        p = f('String.prototype.charCodeAt'),
+        h = f('String.prototype.slice'),
         m = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
             var n = p(e, t);
@@ -62,13 +62,13 @@ if (n(738146)() || n(247131)()) {
     if (u || d) {
         var b = n(913306),
             y = n(282702),
-            O = _('Map.prototype.forEach', !0),
-            v = _('Set.prototype.forEach', !0);
+            O = f('Map.prototype.forEach', !0),
+            v = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node)
-            var I = _('Map.prototype.iterator', !0),
-                T = _('Set.prototype.iterator', !0);
-        var S = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator_', !0),
-            A = _('Set.prototype.@@iterator', !0) || _('Set.prototype._es6-shim iterator_', !0),
+            var I = f('Map.prototype.iterator', !0),
+                T = f('Set.prototype.iterator', !0);
+        var S = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
+            A = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             N = function (e) {
                 if (b(e)) {
                     if (I) return a(I(e));
@@ -77,7 +77,7 @@ if (n(738146)() || n(247131)()) {
                         var t = [];
                         return (
                             O(e, function (e, n) {
-                                f(t, [n, e]);
+                                _(t, [n, e]);
                             }),
                             g(t)
                         );
@@ -90,7 +90,7 @@ if (n(738146)() || n(247131)()) {
                         var n = [];
                         return (
                             v(e, function (e) {
-                                f(n, e);
+                                _(n, e);
                             }),
                             g(n)
                         );

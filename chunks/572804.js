@@ -37,8 +37,8 @@ function l(e) {
     if (u || null == l || 0 === l.length) return !1;
     let d = r.Z.getChannel(n);
     if (null == d) return !1;
-    let _ = d.getGuildId();
-    if (null == _ || null == a.Z.getGuild(_)) return !1;
-    let f = i.ZP.getMember(_, t);
-    return null != f && l.some((e) => f.roles.includes(e));
+    let f = d.getGuildId();
+    if (null == f || null == a.Z.getGuild(f)) return !1;
+    let _ = i.ZP.getMember(f, t);
+    return null != _ && l.some((e) => _.roles.includes(e));
 }

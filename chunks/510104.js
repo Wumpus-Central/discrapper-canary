@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(685516),
     i = n(285363),
     a = n(175922),
@@ -8,11 +8,11 @@ var r = n(685516),
     c = n(882159),
     u = n(544338),
     d = n(581206);
-function _(e, t) {
+function f(e, t) {
     void 0 === t && (t = {});
     var n = t,
-        _ = n.placement,
-        f = void 0 === _ ? e.placement : _,
+        f = n.placement,
+        _ = void 0 === f ? e.placement : f,
         p = n.strategy,
         h = void 0 === p ? e.strategy : p,
         m = n.boundary,
@@ -35,7 +35,7 @@ function _(e, t) {
             reference: w,
             element: C,
             strategy: 'absolute',
-            placement: f
+            placement: _
         }),
         L = (0, s.Z)(Object.assign({}, C, D)),
         x = O === l.k5 ? L : w,
@@ -47,7 +47,7 @@ function _(e, t) {
         },
         k = e.modifiersData.offset;
     if (O === l.k5 && k) {
-        var j = k[f];
+        var j = k[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';

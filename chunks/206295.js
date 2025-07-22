@@ -9,8 +9,8 @@ var o = n(442837),
     c = n(220082),
     u = n(210887),
     d = n(373397);
-let _ = 8,
-    f = 0.725,
+let f = 8,
+    _ = 0.725,
     p = (e) => {
         let t = (0, o.e7)([l.Z], () => l.Z.saturation),
             n = (0, o.e7)([u.Z], () => u.Z.theme),
@@ -19,8 +19,8 @@ let _ = 8,
         return r.useMemo(() => {
             let e = (0, s._i)(p),
                 t = (0, s._i)(h);
-            for (let t = 1; t < _ && !((0, s.Bd)(e) >= f); t++) e = a()(e).darken(0.5).num();
-            for (let e = 1; e < _ && !((0, s.Bd)(t) >= f); e++) t = a()(t).darken(0.5).num();
+            for (let t = 1; t < f && !((0, s.Bd)(e) >= _); t++) e = a()(e).darken(0.5).num();
+            for (let e = 1; e < f && !((0, s.Bd)(t) >= _); e++) t = a()(t).darken(0.5).num();
             return {
                 primaryColor: (0, s.Rf)(e),
                 secondaryColor: (0, s.Rf)(t)

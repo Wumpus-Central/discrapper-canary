@@ -20,12 +20,12 @@ function c(e, t) {
         c = t.months ? (0, s.Z)(t.months) : 0,
         u = t.weeks ? (0, s.Z)(t.weeks) : 0,
         d = t.days ? (0, s.Z)(t.days) : 0,
-        _ = t.hours ? (0, s.Z)(t.hours) : 0,
-        f = t.minutes ? (0, s.Z)(t.minutes) : 0,
+        f = t.hours ? (0, s.Z)(t.hours) : 0,
+        _ = t.minutes ? (0, s.Z)(t.minutes) : 0,
         p = t.seconds ? (0, s.Z)(t.seconds) : 0,
         h = (0, a.default)(e),
         m = c || n ? (0, i.default)(h, c + 12 * n) : h,
         g = d || u ? (0, r.default)(m, d + 7 * u) : m,
-        E = 1000 * (p + 60 * (f + 60 * _));
+        E = 1000 * (p + 60 * (_ + 60 * f));
     return new Date(g.getTime() + E);
 }

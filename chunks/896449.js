@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(168524),
     u = n(37258),
     d = n(26033),
-    _ = n(178762),
-    f = n(388032),
+    f = n(178762),
+    _ = n(388032),
     p = n(442826);
 function h(e, t, n) {
     return (
@@ -71,7 +71,7 @@ function y(e) {
     var t;
     let { user: n, guildId: h, channel: g, entry: y, onSelect: O, disableGameProfileLinks: v } = e,
         I = i.useRef(null),
-        T = i.useContext(_.Ir),
+        T = i.useContext(f.Ir),
         S = (0, u.Z)({
             userId: n.id,
             guildId: h,
@@ -80,12 +80,12 @@ function y(e) {
         }),
         A = (0, s.Z)({
             id: n.id,
-            label: f.intl.string(f.t['/AXYnJ'])
+            label: _.intl.string(_.t['/AXYnJ'])
         }),
         N = 'application_id' in y.extra ? y.extra.application_id : null,
         C = (0, s.Z)({
             id: N,
-            label: f.intl.string(f.t['FfCL+/'])
+            label: _.intl.string(_.t['FfCL+/'])
         }),
         R = (0, d.dX)(y),
         P = (0, c.Z)({
@@ -107,7 +107,7 @@ function y(e) {
                 onClose: () => {
                     ((0, o.Zy)(), t());
                 },
-                'aria-label': f.intl.string(f.t.liqwPD),
+                'aria-label': _.intl.string(_.t.liqwPD),
                 onSelect: O,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -117,7 +117,7 @@ function y(e) {
                                 null != P &&
                                     (0, r.jsx)(a.sNh, {
                                         id: 'game-profile',
-                                        label: f.intl.string(f.t.f7aVGh),
+                                        label: _.intl.string(_.t.f7aVGh),
                                         action: (e) => {
                                             (P(e), null == T || T());
                                         }
@@ -133,7 +133,7 @@ function y(e) {
         },
         children: (e) =>
             (0, r.jsx)(a.ua7, {
-                text: f.intl.string(f.t.UKOtz8),
+                text: _.intl.string(_.t.UKOtz8),
                 children: (t) =>
                     (0, r.jsx)(
                         a.P3F,

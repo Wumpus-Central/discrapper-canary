@@ -2,8 +2,8 @@ n.d(t, { default: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(215569),
-    o = n(146187),
-    s = n(257465),
+    s = n(146187),
+    o = n(257465),
     a = n(755721),
     c = n(481060),
     u = n(852860),
@@ -41,7 +41,7 @@ let v = () =>
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)(s.IX, {
+                      (0, r.jsxs)(o.IX, {
                           transitionState: t,
                           'aria-labelledby': O,
                           size: 'xl',
@@ -49,7 +49,7 @@ let v = () =>
                           children: [
                               (0, r.jsx)('div', {
                                   className: b.closeButton,
-                                  children: (0, r.jsx)(o.P, { onClick: () => a(!1) })
+                                  children: (0, r.jsx)(s.P, { onClick: () => a(!1) })
                               }),
                               (0, r.jsx)('div', {
                                   className: b.container,

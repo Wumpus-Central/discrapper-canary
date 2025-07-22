@@ -8,16 +8,16 @@ var r = n(73800),
     c = n(180335),
     u = n(561308),
     d = n(314897),
-    _ = n(158776),
-    f = n(9161),
+    f = n(158776),
+    _ = n(9161),
     p = n(981631);
 let h = [],
     m = [];
 function g(e) {
-    let { recentActivityTabEnabled: t } = (0, f.O)({ location: 'useUserProfileActivity' }),
+    let { recentActivityTabEnabled: t } = (0, _.O)({ location: 'useUserProfileActivity' }),
         n = (0, a.e7)([d.default], () => d.default.getId() === e),
         g = (0, o.Z)(e),
-        E = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
+        E = (0, a.e7)([f.Z], () => f.Z.getActivities(e)),
         b = (0, a.e7)([s.Z], () => (n || t ? s.Z.getUserOutbox(e) : void 0)),
         { live: y, recent: O } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(

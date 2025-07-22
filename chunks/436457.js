@@ -89,7 +89,7 @@ function C(e) {
                                 title: h.intl.string(h.t.qreV29),
                                 error: T,
                                 titleClassName: l()(x.formTitle, { [x.error]: null != T }),
-                                children: (0, o.jsx)(d.oil, {
+                                children: (0, o.jsx)(c.Is, {
                                     value: i,
                                     onChange: C,
                                     className: x.input,

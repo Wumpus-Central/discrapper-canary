@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(166459),
     u = n(990169),
     d = n(476326),
-    _ = n(752305),
-    f = n(849522),
+    f = n(752305),
+    _ = n(849522),
     p = n(703558),
     h = n(626135),
     m = n(358085),
@@ -76,11 +76,11 @@ function C(e) {
     var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
-        [d, _] = i.useState(!1),
-        [f, p] = i.useState({}),
+        [d, f] = i.useState(!1),
+        [_, p] = i.useState({}),
         h = i.useRef(null);
     (i.useEffect(() => {
-        if ((null != h.current && _(!1), null == s)) return;
+        if ((null != h.current && f(!1), null == s)) return;
         let e = URL.createObjectURL(s);
         return (
             c(e),
@@ -108,7 +108,7 @@ function C(e) {
                                 width: void 0,
                                 height: A / t
                             }),
-                        _(!0));
+                        f(!0));
                 });
         }, []));
     let m = (0, u.Z)(h),
@@ -120,11 +120,11 @@ function C(e) {
         'aria-hidden': !0,
         alt: '',
         style: {
-            width: null != (n = f.width) ? n : 'initial',
-            height: null != (a = f.height) ? a : A,
+            width: null != (n = _.width) ? n : 'initial',
+            height: null != (a = _.height) ? a : A,
             marginLeft: g,
             marginRight: g,
-            marginTop: null != f.height ? A - f.height - 33 : -33
+            marginTop: null != _.height ? A - _.height - 33 : -33
         }
     });
 }
@@ -193,7 +193,7 @@ class P extends i.Component {
                                     className: y.label,
                                     children: (0, r.jsx)('span', { children: b.intl.string(b.t.ILJuBg) })
                                 }),
-                                (0, r.jsx)(l.oil, {
+                                (0, r.jsx)(s.Is, {
                                     className: o()(y.channelTextAreaUpload, O.marginTop8),
                                     value: this.state.filename,
                                     onChange: (e) => this.setState({ filename: e }),
@@ -208,7 +208,7 @@ class P extends i.Component {
                                                   className: y.label,
                                                   children: (0, r.jsx)('span', { children: b.intl.string(b.t.eOB2eX) })
                                               }),
-                                              (0, r.jsx)(l.oil, {
+                                              (0, r.jsx)(s.Is, {
                                                   className: o()(y.channelTextAreaUpload, O.marginTop8),
                                                   placeholder: b.intl.string(b.t.RNH1jo),
                                                   value: this.state.description,
@@ -284,7 +284,7 @@ class P extends i.Component {
                     t());
             }));
         let s = e.ignoreDraft ? '' : p.Z.getDraft(this.props.channelId, e.draftType);
-        this.state = S(I({}, (0, _.eK)(s)), {
+        this.state = S(I({}, (0, f.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
             filename: null != (a = null == (n = e.upload) ? void 0 : n.filename) ? a : '',
@@ -294,7 +294,7 @@ class P extends i.Component {
     }
 }
 function w(e) {
-    let t = (0, f.Z)();
+    let t = (0, _.Z)();
     return e.upload.item.platform !== d.ow.WEB
         ? null
         : (0, r.jsx)(

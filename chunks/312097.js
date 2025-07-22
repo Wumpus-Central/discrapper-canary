@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => p,
-    Q: () => f
+    Q: () => _
 });
 var r = n(255367),
     i = n(481060),
@@ -41,14 +41,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -57,14 +57,14 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let f = 'Media Viewer Modal';
+let _ = 'Media Viewer Modal';
 function p(e) {
     var t,
         c,
-        _,
+        f,
         { location: p, contextKey: h } = e,
         m = d(e, ['location', 'contextKey']);
-    let g = null == (c = m.items[null != (_ = m.startingIndex) ? _ : 0]) || null == (t = c.sourceMetadata) ? void 0 : t.message,
+    let g = null == (c = m.items[null != (f = m.startingIndex) ? f : 0]) || null == (t = c.sourceMetadata) ? void 0 : t.message,
         E = a.Z.getChannel(null == g ? void 0 : g.channel_id);
     ((0, s.fS)({
         guildId: null == E ? void 0 : E.guild_id,
@@ -87,7 +87,7 @@ function p(e) {
                 return (t) => (0, r.jsx)(e, u({}, t, m));
             },
             {
-                modalKey: f,
+                modalKey: _,
                 contextKey: h,
                 onCloseCallback: s.VO,
                 backdropStyle: i.fCB.LIGHTBOX

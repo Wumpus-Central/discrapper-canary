@@ -63,7 +63,7 @@ function O(e) {
                             title: j.intl.string(j.t.grbGJy),
                             titleId: k,
                             disabled: L,
-                            children: (0, r.jsx)(a.oil, {
+                            children: (0, r.jsx)(s.Is, {
                                 placeholder: j.intl.string(j.t['So2/xM']),
                                 value: C,
                                 inputClassName: _.formInput,

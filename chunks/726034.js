@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(153867),
-    _ = n(230711),
-    f = n(493773),
+    f = n(230711),
+    _ = n(493773),
     p = n(100527),
     h = n(906732),
     m = n(550385),
@@ -313,7 +313,7 @@ function X(e) {
         a = (0, y.m)(D.p9.TIER_2);
     (0, N.hf)(a, p.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
-        ((0, N.Vb)(), (0, g.Q3)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === m.tE.SETTING ? (_.Z.open(), (0, m.Ll)()) : (null == i ? void 0 : i.from) === m.tE.CLIENT_THEMES_EDITOR ? (0, m.XO)(m.wh.CLIENT_THEMES) : (0, m.Ll)());
+        ((0, N.Vb)(), (0, g.Q3)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === m.tE.SETTING ? (f.Z.open(), (0, m.Ll)()) : (null == i ? void 0 : i.from) === m.tE.CLIENT_THEMES_EDITOR ? (0, m.XO)(m.wh.CLIENT_THEMES) : (0, m.Ll)());
     };
     return (0, r.jsxs)('div', {
         className: M.footerContainer,
@@ -354,7 +354,7 @@ function X(e) {
 function Q(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
-        _ = A.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
+        f = A.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         E = (0, S.jJ)(),
         b = i.useRef(!1),
         { colors: y, chassisMixAmount: T, gradientAngle: P, setColors: D, setChassisMixAmount: L, setGradientAngle: k } = (0, I.Ig)(),
@@ -389,10 +389,10 @@ function Q(e) {
         },
         [E]
     ),
-    (0, f.ZP)(() => {
+    (0, _.ZP)(() => {
         o || (0, S.lT)(y, j, D);
     }),
-    _)
+    f)
         ? (0, r.jsx)('div', {
               className: M.container,
               'data-app-right-panel': !0,

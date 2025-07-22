@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(468026),
     u = n(724723),
     d = n(131951),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -44,7 +44,7 @@ let h = () => {
     function n() {
         null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
     }
-    function f() {
+    function _() {
         l.Z.interact();
     }
     return (
@@ -57,13 +57,13 @@ let h = () => {
                               o.u,
                               p(
                                   {
-                                      title: _.intl.string(_.t.dLLxCw),
-                                      subtitle: _.intl.string(_.t['64lmt7']),
+                                      title: f.intl.string(f.t.dLLxCw),
+                                      subtitle: f.intl.string(f.t['64lmt7']),
                                       actions: [
                                           {
-                                              text: _.intl.string(_.t.BddRzc),
+                                              text: f.intl.string(f.t.BddRzc),
                                               onClick: () => {
-                                                  (f(), t.onClose());
+                                                  (_(), t.onClose());
                                               }
                                           }
                                       ]
@@ -75,10 +75,10 @@ let h = () => {
                               c.default,
                               p(
                                   {
-                                      title: _.intl.string(_.t.dLLxCw),
-                                      body: _.intl.string(_.t['64lmt7']),
-                                      onConfirm: f,
-                                      confirmText: _.intl.string(_.t.BddRzc)
+                                      title: f.intl.string(f.t.dLLxCw),
+                                      body: f.intl.string(f.t['64lmt7']),
+                                      onConfirm: _,
+                                      confirmText: f.intl.string(f.t.BddRzc)
                                   },
                                   t
                               )

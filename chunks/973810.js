@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => m }), n(388685), n(49124));
 var l = n(255367),
     r = n(73800),
-    i = n(849055),
-    s = n(544891),
+    s = n(849055),
+    i = n(544891),
     a = n(481060),
     o = n(358085),
     d = n(960048),
@@ -17,7 +17,7 @@ function m(e) {
         { challenge: y } = t.methods.find((e) => 'webauthn' === e.type),
         S = async () => {
             (p(!0), b(null));
-            let e = o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN) ? c.ZP.webAuthnAuthenticate(y) : i.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
+            let e = o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN) ? c.ZP.webAuthnAuthenticate(y) : s.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
                         await n({
@@ -25,7 +25,7 @@ function m(e) {
                             data: e
                         });
                     } catch (e) {
-                        e instanceof s.Pd ? b(f.intl.string(f.t.xSCvBQ)) : b(e.message);
+                        e instanceof i.Pd ? b(f.intl.string(f.t.xSCvBQ)) : b(e.message);
                     }
                 };
             try {

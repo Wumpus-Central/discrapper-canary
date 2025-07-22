@@ -1,7 +1,7 @@
 (n.d(t, {
     Fs: () => p,
-    Xu: () => f,
-    ZP: () => _,
+    Xu: () => _,
+    ZP: () => f,
     ms: () => m,
     sV: () => u
 }),
@@ -15,13 +15,13 @@ var r = n(73800),
     c = n(367790);
 let u = 'no primary app command for application',
     d = [a.yU.PRIMARY_ENTRY_POINT];
-async function _(e, t) {
+async function f(e, t) {
     let n,
         r = o.Z.getChannel(e);
     if (
         (null != r &&
             null ==
-                (n = f(
+                (n = _(
                     {
                         channel: r,
                         type: 'channel'
@@ -32,7 +32,7 @@ async function _(e, t) {
                 type: 'application',
                 applicationId: t
             }),
-            (n = f(
+            (n = _(
                 {
                     channel: r,
                     type: 'channel'
@@ -44,7 +44,7 @@ async function _(e, t) {
         return n;
     throw Error(u);
 }
-function f(e, t) {
+function _(e, t) {
     return l.ZP.query(
         e,
         { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },

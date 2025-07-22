@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(906732),
     u = n(335131),
     d = n(628952),
-    _ = n(225657),
-    f = n(600164),
+    f = n(225657),
+    _ = n(600164),
     p = n(109213),
     h = n(927699),
     m = n(987716),
@@ -167,7 +167,7 @@ function k(e) {
             return (0, r.jsxs)('div', {
                 className: P.bodyColumnRight,
                 children: [
-                    (0, r.jsx)(_.Z, {
+                    (0, r.jsx)(f.Z, {
                         selectedSkuId: U,
                         className: P.sendTo,
                         validateSelectedGift: z
@@ -194,8 +194,8 @@ function k(e) {
             }),
             (0, r.jsx)(A.O3, {
                 children: (0, r.jsx)(o.mzw, {
-                    justify: f.Z.Justify.BETWEEN,
-                    align: f.Z.Align.CENTER,
+                    justify: _.Z.Justify.BETWEEN,
+                    align: _.Z.Align.CENTER,
                     children: (0, r.jsx)(M, {
                         onStepChange: t,
                         onBackClick: n,

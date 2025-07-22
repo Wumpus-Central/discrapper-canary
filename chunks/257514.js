@@ -13,8 +13,8 @@ var n = i(255367),
     N = i(225715),
     m = i(635840),
     x = i(981631),
-    S = i(388032),
-    I = i(650764);
+    I = i(388032),
+    S = i(650764);
 let h = (e) => {
     let [t, i] = a.useState(!1),
         [n, s] = a.useState(null);
@@ -47,7 +47,7 @@ function T(e) {
     let b = (0, u.KW)(r.skuFlags);
     return (0, n.jsx)(l.Y0X, {
         transitionState: t,
-        className: I.modal,
+        className: S.modal,
         'aria-labelledby': p,
         parentComponent: 'CancelSubscriptionModal',
         children: (0, n.jsxs)(l.MyZ, {
@@ -57,11 +57,11 @@ function T(e) {
                 (0, n.jsx)(l.Mi4, {
                     id: 0,
                     children: (0, n.jsxs)('div', {
-                        className: I.slideContainer,
+                        className: S.slideContainer,
                         children: [
                             null != j ? (0, n.jsx)(l.kzN, { children: j.message }) : null,
                             (0, n.jsxs)(l.hzk, {
-                                className: I.content,
+                                className: S.content,
                                 children: [
                                     (0, n.jsx)(l.LZC, { size: 16 }),
                                     (0, n.jsxs)(N.q$, {
@@ -69,14 +69,14 @@ function T(e) {
                                             (0, n.jsx)(N.CW, { application: i }),
                                             (0, n.jsx)(N.r0, {
                                                 id: p,
-                                                children: S.intl.format(S.t.irka9v, { tier: r.summary })
+                                                children: I.intl.format(I.t.irka9v, { tier: r.summary })
                                             }),
                                             (0, n.jsx)(N.s$, {}),
                                             (0, n.jsx)(N.K9, {
-                                                title: S.intl.string(S.t.LZunzc),
+                                                title: I.intl.string(I.t.LZunzc),
                                                 description: b
-                                                    ? S.intl.formatToPlainString(S.t['+HdfBw'], { timestamp: T.currentPeriodEnd.getTime() })
-                                                    : S.intl.formatToPlainString(S.t.qxiBnZ, {
+                                                    ? I.intl.formatToPlainString(I.t['+HdfBw'], { timestamp: T.currentPeriodEnd.getTime() })
+                                                    : I.intl.formatToPlainString(I.t.qxiBnZ, {
                                                           timestamp: T.currentPeriodEnd.getTime(),
                                                           guildName: null == A ? void 0 : A.name
                                                       })
@@ -90,20 +90,20 @@ function T(e) {
                                 ]
                             }),
                             (0, n.jsxs)(l.mzw, {
-                                className: I.footer,
+                                className: S.footer,
                                 children: [
                                     (0, n.jsx)(l.zxk, {
                                         variant: 'critical-primary',
-                                        text: S.intl.string(S.t.KSqyfX),
+                                        text: I.intl.string(I.t.KSqyfX),
                                         onClick: R,
                                         loading: P
                                     }),
                                     (0, n.jsx)(s.zx, {
                                         look: s.zx.Looks.LINK,
                                         color: s.zx.Colors.PRIMARY,
-                                        className: I.goBackButton,
+                                        className: S.goBackButton,
                                         onClick: E,
-                                        children: S.intl.string(S.t['05jDxs'])
+                                        children: I.intl.string(I.t['05jDxs'])
                                     })
                                 ]
                             })
@@ -113,7 +113,7 @@ function T(e) {
                 (0, n.jsx)(l.Mi4, {
                     id: 1,
                     children: (0, n.jsx)('div', {
-                        className: I.slideContainer,
+                        className: S.slideContainer,
                         children: (0, n.jsx)(m.Z, {
                             application: i,
                             subscriptionId: T.id,

@@ -26,7 +26,7 @@
             c = !1;
         return (
             'string' == typeof e && (e = K(e)),
-            'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = F(e.s)), (i = F(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = F(e.s)), (a = F(e.l)), (t = f(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
+            'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = F(e.s)), (i = F(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = F(e.s)), (a = F(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
             (n = M(n)),
             {
                 ok: l,
@@ -45,7 +45,7 @@
             b: 255 * k(n, 255)
         };
     }
-    function _(e, t, n) {
+    function f(e, t, n) {
         e = k(e, 255);
         var r,
             i,
@@ -73,7 +73,7 @@
             l: c
         };
     }
-    function f(e, t, n) {
+    function _(e, t, n) {
         var r, i, a;
         function o(e, t, n) {
             return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
@@ -309,7 +309,7 @@
             return 1 == this._a ? 'hsv(' + t + ', ' + n + '%, ' + r + '%)' : 'hsva(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
         },
         toHsl: function () {
-            var e = _(this._r, this._g, this._b);
+            var e = f(this._r, this._g, this._b);
             return {
                 h: 360 * e.h,
                 s: e.s,
@@ -318,7 +318,7 @@
             };
         },
         toHslString: function () {
-            var e = _(this._r, this._g, this._b),
+            var e = f(this._r, this._g, this._b),
                 t = a(360 * e.h),
                 n = a(100 * e.s),
                 r = a(100 * e.l);

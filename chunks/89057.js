@@ -14,8 +14,8 @@ var i = n(120356),
     c = n(410030),
     u = n(600164),
     d = n(63063),
-    _ = n(211242),
-    f = n(981631),
+    f = n(211242),
+    _ = n(981631),
     p = n(388032),
     h = n(747168),
     m = n(51125),
@@ -36,7 +36,7 @@ function E(e) {
                 className: h.description,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: [(0, r.jsx)('p', { children: p.intl.string(p.t.fev8MT) }), (0, r.jsx)('p', { children: p.intl.format(p.t.IHxEJS, { helpdeskArticle: d.Z.getArticleURL(f.BhN.BLOCKED_PAYMENTS) }) })]
+                children: [(0, r.jsx)('p', { children: p.intl.string(p.t.fev8MT) }), (0, r.jsx)('p', { children: p.intl.format(p.t.IHxEJS, { helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS) }) })]
             }),
             (0, r.jsx)('img', {
                 src: i,
@@ -67,7 +67,7 @@ function y(e) {
 }
 function O(e) {
     let { className: t } = e;
-    return (0, _.Q)()
+    return (0, f.Q)()
         ? (0, r.jsxs)(l.Zbd, {
               className: a()(h.blockedPaymentsWarning, t),
               type: l.Zbd.Types.CUSTOM,
@@ -81,7 +81,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: 'text-sm/normal',
-                      children: p.intl.format(p.t.NYkcCg, { helpdeskArticle: d.Z.getArticleURL(f.BhN.BLOCKED_PAYMENTS) })
+                      children: p.intl.format(p.t.NYkcCg, { helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS) })
                   })
               ]
           })

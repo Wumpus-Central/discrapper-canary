@@ -78,7 +78,7 @@ function l(e, t, n) {
         }),
         i = function (e) {
             return r.some(function (t) {
-                return _(t, e);
+                return f(t, e);
             });
         };
     return null == n ? i : i(n);
@@ -99,26 +99,26 @@ function d(e, t) {
         c = !1,
         u = void 0;
     try {
-        for (var d, _ = a[Symbol.iterator](); !(l = (d = _.next()).done); l = !0) {
+        for (var d, f = a[Symbol.iterator](); !(l = (d = f.next()).done); l = !0) {
             var h = d.value,
                 m = h.endsWith('?') && h.length > 1;
             m && (h = h.slice(0, -1));
             var g = p(h),
                 E = i[g];
-            ((1 !== o && E) || (n ? (r.key = g) : (r.which = f(h))), E && (r[E] = !m || null));
+            ((1 !== o && E) || (n ? (r.key = g) : (r.which = _(h))), E && (r[E] = !m || null));
         }
     } catch (e) {
         ((c = !0), (u = e));
     } finally {
         try {
-            !l && _.return && _.return();
+            !l && f.return && f.return();
         } finally {
             if (c) throw u;
         }
     }
     return r;
 }
-function _(e, t) {
+function f(e, t) {
     for (var n in e) {
         var r = e[n],
             i = void 0;
@@ -126,7 +126,7 @@ function _(e, t) {
     }
     return !0;
 }
-function f(e) {
+function _(e) {
     return o[(e = p(e))] || e.toUpperCase().charCodeAt(0);
 }
 function p(e) {

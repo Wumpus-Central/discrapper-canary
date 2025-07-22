@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(28546),
     u = n(443603),
     d = n(957825),
-    _ = n(388032),
-    f = n(302195);
+    f = n(388032),
+    _ = n(302195);
 function p(e, t, n) {
     return (
         t in e
@@ -75,16 +75,16 @@ function E(e, t) {
     return n
         ? null
         : (0, r.jsx)('div', {
-              className: o()(d.CT, f.buttonContainer),
+              className: o()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(
                   u.Z,
-                  g(h({ innerClassName: o()(f.button, f.stickerButton) }, I), {
+                  g(h({ innerClassName: o()(_.button, _.stickerButton) }, I), {
                       onClick: () => {
                           (O(), T());
                       },
                       isActive: b,
-                      'aria-label': _.intl.string(_.t.rZpidX),
+                      'aria-label': f.intl.string(f.t.rZpidX),
                       'aria-expanded': b,
                       'aria-haspopup': 'dialog',
                       'aria-controls': m,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(963249),
     u = n(109213),
     d = n(51144),
-    _ = n(443603),
-    f = n(981631),
+    f = n(443603),
+    _ = n(981631),
     p = n(388032),
     h = n(302195);
 function m(e, t, n) {
@@ -70,7 +70,7 @@ function y(e) {
         E = (0, d.Ft)(i),
         { Component: y, events: O, play: v } = (0, a.$)(),
         { enabled: I } = u.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        T = i.type === f.d4z.DM;
+        T = i.type === _.d4z.DM;
     if (t) return null;
     let S = () => {
         I && T && null != E
@@ -82,10 +82,10 @@ function y(e) {
                           g(
                               {
                                   analyticsObject: {
-                                      page: f.ZY5.DM_CHANNEL,
-                                      section: f.jXE.CHANNEL_TEXT_AREA,
-                                      object: f.qAy.BUTTON_ICON,
-                                      objectType: f.Qqv.GIFT
+                                      page: _.ZY5.DM_CHANNEL,
+                                      section: _.jXE.CHANNEL_TEXT_AREA,
+                                      object: _.qAy.BUTTON_ICON,
+                                      objectType: _.Qqv.GIFT
                                   },
                                   analyticsLocations: m,
                                   giftRecipient: E
@@ -100,10 +100,10 @@ function y(e) {
                   initialPlanId: null,
                   analyticsLocations: m,
                   analyticsObject: {
-                      page: i.isPrivate() ? f.ZY5.DM_CHANNEL : f.ZY5.GUILD_CHANNEL,
-                      section: f.jXE.CHANNEL_TEXT_AREA,
-                      object: f.qAy.BUTTON_ICON,
-                      objectType: f.Qqv.GIFT
+                      page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+                      section: _.jXE.CHANNEL_TEXT_AREA,
+                      object: _.qAy.BUTTON_ICON,
+                      objectType: _.Qqv.GIFT
                   }
               });
     };
@@ -111,7 +111,7 @@ function y(e) {
         text: p.intl.string(p.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(
-                _.Z,
+                f.Z,
                 b(
                     g(
                         b(g({}, e), {

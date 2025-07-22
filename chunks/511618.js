@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(768581),
     u = n(981631),
     d = n(185923),
-    _ = n(474936),
-    f = n(388032),
+    f = n(474936),
+    _ = n(388032),
     p = n(292290);
 let h = 3,
     m = (e) => {
@@ -17,7 +17,7 @@ let h = 3,
             { analyticsLocations: n } = (0, a.ZP)();
         i.useEffect(() => {
             l.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: _.cd.EMOJI_AUTOCOMPLETE_INLINE,
+                type: f.cd.EMOJI_AUTOCOMPLETE_INLINE,
                 location_stack: n
             });
         }, [n]);
@@ -57,6 +57,6 @@ let h = 3,
         });
         return (0, r.jsxs)(o.RX, {
             className: p.upsell,
-            children: [(0, r.jsx)(o.z5, { children: (0, r.jsx)(o.BR, { children: f.intl.format(f.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(o.dY, { children: m })]
+            children: [(0, r.jsx)(o.z5, { children: (0, r.jsx)(o.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(o.dY, { children: m })]
         });
     };

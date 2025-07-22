@@ -40,11 +40,11 @@ e.exports = function (e) {
             relevance: 0
         },
         d = e.COMMENT(';', '$', { relevance: 0 }),
-        _ = {
+        f = {
             className: 'literal',
             begin: /\b(true|false|nil)\b/
         },
-        f = {
+        _ = {
             begin: '\\[|(#::?' + n + ')?\\{',
             end: '[\\]\\}]',
             relevance: 0
@@ -68,7 +68,7 @@ e.exports = function (e) {
             relevance: 0,
             starts: m
         },
-        E = [u, h, s, l, c, d, p, f, o, _, a];
+        E = [u, h, s, l, c, d, p, _, o, f, a];
     return (
         (h.contains = [
             {
@@ -92,12 +92,12 @@ e.exports = function (e) {
             m
         ]),
         (m.contains = E),
-        (f.contains = E),
+        (_.contains = E),
         {
             name: 'Clojure',
             aliases: ['clj', 'edn'],
             illegal: /\S/,
-            contains: [u, h, s, l, c, d, p, f, o, _]
+            contains: [u, h, s, l, c, d, p, _, o, f]
         }
     );
 };

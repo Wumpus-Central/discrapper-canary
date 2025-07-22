@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,12 +80,12 @@ function p(e, t) {
 let h = 500;
 function m(e) {
     let { children: t, 'aria-label': n, className: a, position: c } = e,
-        d = f(e, ['children', 'aria-label', 'className', 'position']),
+        d = _(e, ['children', 'aria-label', 'className', 'position']),
         p = i.useRef(null),
         m = null != n ? n : 'string' == typeof t && t;
     return (0, r.jsx)(
         s.ua7,
-        _(u({}, d), {
+        f(u({}, d), {
             position: null != c ? c : 'top',
             delay: h,
             text: t,

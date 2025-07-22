@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(317381),
     u = n(638880),
     d = n(255621),
-    _ = n(16609),
-    f = n(452634),
+    f = n(16609),
+    _ = n(452634),
     p = n(527805),
     h = n(620662),
     m = n(841784),
@@ -44,8 +44,8 @@ function U(e) {
         q = null != B || (0, m.Z)(G),
         X = (0, i.e7)([R.default], () => R.default.getCurrentUser()),
         Q = V.id === (null == X ? void 0 : X.id),
-        J = (0, f.Z)({
-            channelId: (0, _.p)(null == B ? void 0 : B.location),
+        J = (0, _.Z)({
+            channelId: (0, f.p)(null == B ? void 0 : B.location),
             userId: V.id,
             activity: G
         }),
@@ -65,7 +65,7 @@ function U(e) {
         ee = (0, i.e7)([c.ZP], () =>
             Array.from(c.ZP.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, location: n } = e;
-                return (t === (null == G ? void 0 : G.application_id) || t === (null == B ? void 0 : B.applicationId)) && (0, _.p)(n) === J;
+                return (t === (null == G ? void 0 : G.application_id) || t === (null == B ? void 0 : B.applicationId)) && (0, f.p)(n) === J;
             })
         ),
         et = (0, i.e7)([w.Z], () => null != G && null != G.application_id && w.Z.getState(G.application_id, M.mFx.JOIN) === M.OcF.LOADING),
@@ -141,7 +141,7 @@ function U(e) {
                 });
             }
         },
-        e_ = async () => {
+        ef = async () => {
             let e = !1;
             async function t() {
                 let e;
@@ -178,13 +178,13 @@ function U(e) {
                 await t();
             }
         },
-        ef = ei ? j.intl.string(j.t.VJlc0d) : j.intl.string(j.t.OKsSCQ);
+        e_ = ei ? j.intl.string(j.t.VJlc0d) : j.intl.string(j.t.OKsSCQ);
     return (
-        ea && (ef = j.intl.string(j.t.DPfdsr)),
+        ea && (e_ = j.intl.string(j.t.DPfdsr)),
         {
-            buttonCTA: ef,
+            buttonCTA: e_,
             tooltip: U,
-            handleJoinRequest: e_,
+            handleJoinRequest: ef,
             isEnabled: ec,
             isJoining: et,
             isEmbedded: q

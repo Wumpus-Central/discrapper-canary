@@ -1,5 +1,5 @@
 n.d(t, {
-    $i: () => f,
+    $i: () => _,
     A5: () => s,
     I: () => u,
     Io: () => c,
@@ -10,7 +10,7 @@ n.d(t, {
     dF: () => a,
     e5: () => h,
     fO: () => r,
-    l8: () => _,
+    l8: () => f,
     wR: () => o
 });
 var r = (function (e) {
@@ -40,11 +40,11 @@ function u(e) {
 var d = (function (e) {
     return ((e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW'), e);
 })({});
-let _ = {
+let f = {
         0: 320,
         1: 160
     },
-    f = {
+    _ = {
         0: 960,
         1: 480
     },

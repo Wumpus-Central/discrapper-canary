@@ -12,8 +12,8 @@
 var r,
     i = n(73800),
     l = n(442837),
-    o = n(999382),
-    s = n(658666),
+    s = n(999382),
+    o = n(658666),
     a = n(384632),
     c = n(430824),
     u = n(411198),
@@ -25,11 +25,11 @@ var r,
     x = n(388032),
     g = (((r = {})[(r.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'), (r[(r.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'), (r[(r.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM'), r);
 function b(e, t, n) {
-    let [r, o] = i.useState(!1),
+    let [r, s] = i.useState(!1),
         c = (0, l.e7)([m.Z], () => m.Z.get(e)),
-        u = (0, l.e7)([s.Z], () => s.Z.pendingState);
+        u = (0, l.e7)([o.Z], () => o.Z.pendingState);
     i.useEffect(() => {
-        t || d.ZP.fetchVerificationForm(e, n).finally(() => o(!0));
+        t || d.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
     }, [e, n, t]);
     let h = i.useMemo(() => {
         var e, n;
@@ -63,8 +63,8 @@ function b(e, t, n) {
 }
 function v(e, t, n) {
     let r = (0, l.e7)([c.Z], () => c.Z.getGuild(e)),
-        s = (0, l.e7)([o.Z], () => o.Z.getGuild());
-    return i.useMemo(() => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, u.Rj)(t) : null), [n, s, e, r, t]);
+        o = (0, l.e7)([s.Z], () => s.Z.getGuild());
+    return i.useMemo(() => (n && (null == o ? void 0 : o.id) === e ? o : null != r ? r : null != t ? (0, u.Rj)(t) : null), [n, o, e, r, t]);
 }
 function _(e) {
     let t = !(null == e ? void 0 : e.isClaimed()),

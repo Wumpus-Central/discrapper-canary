@@ -8,8 +8,8 @@ var r,
     c = n.n(l),
     u = n(579092),
     d = n(46973),
-    _ = n(912095),
-    f = n(405475),
+    f = n(912095),
+    _ = n(405475),
     p = n(886848),
     h = n(586021),
     m = n(649318),
@@ -34,7 +34,7 @@ let y = 10,
 function I(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? 'sendrecv' : 'recvonly'));
 }
-class T extends _.Z {
+class T extends f.Z {
     destroy() {
         (super.destroy(), 'closed' !== this.signalingState && this.pc.close());
     }
@@ -105,7 +105,7 @@ class T extends _.Z {
             (super.setBitRate(e),
             this.setAudioEncoderParameters([
                 {
-                    parameter: _.p.AUDIO_BITRATE,
+                    parameter: f.p.AUDIO_BITRATE,
                     value: e
                 }
             ]));
@@ -185,7 +185,7 @@ class T extends _.Z {
             .catch((e) => a(e));
     }
     setAudioEncoderParameters(e) {
-        let t = { [_.p.AUDIO_BITRATE]: 'maxBitrate' },
+        let t = { [f.p.AUDIO_BITRATE]: 'maxBitrate' },
             n = [];
         for (let { parameter: r, value: i } of e) {
             let e = t[r];
@@ -199,9 +199,9 @@ class T extends _.Z {
     }
     setVideoEncoderParameters(e) {
         let t = {
-                [_.p.VIDEO_BITRATE]: 'maxBitrate',
-                [_.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
-                [_.p.VIDEO_FRAMERATE]: 'maxFramerate'
+                [f.p.VIDEO_BITRATE]: 'maxBitrate',
+                [f.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
+                [f.p.VIDEO_FRAMERATE]: 'maxFramerate'
             },
             n = [];
         for (let { parameter: r, value: i } of e) {
@@ -289,8 +289,8 @@ class T extends _.Z {
             c = this.videoPayloadType,
             u = this.videoSupported && (null == (a = this.videoTransceiver) || null == (i = a.sender) ? void 0 : i.track) != null,
             d = this.rtxPayloadType,
-            _ = this.sdp;
-        if (null == o || null == s || null == l || null == c || null == d || null == _)
+            f = this.sdp;
+        if (null == o || null == s || null == l || null == c || null == d || null == f)
             throw Error(
                 'Invalid payload: audioCodec: '
                     .concat(o, ', audioPayloadType: ')
@@ -298,15 +298,15 @@ class T extends _.Z {
                     .concat(l, ', videoCodecPayloadType: ')
                     .concat(null == c ? 'null' : c, ', rtxPayloadType: ')
                     .concat(null == d ? 'null' : d, ', sdp: ')
-                    .concat(null == _ ? 'null' : _)
+                    .concat(null == f ? 'null' : f)
             );
-        let { ssrcs: f, remainingAudioStreams: p, remainingVideoStreams: h } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
+        let { ssrcs: _, remainingAudioStreams: p, remainingVideoStreams: h } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
         return {
             remainingAudioStreams: p,
             remainingVideoStreams: h,
             answer: (0, m.Rx)({
                 type: 'answer',
-                baseSDP: _,
+                baseSDP: f,
                 audioCodec: o,
                 audioPayloadType: s,
                 audioBitRate: this.voiceBitrate,
@@ -315,7 +315,7 @@ class T extends _.Z {
                 videoBitRate: 2500,
                 sendingVideo: u,
                 rtxPayloadType: d,
-                ssrcs: f,
+                ssrcs: _,
                 extensions: this.extensions,
                 enableAudioNack: this.enableAudioNack
             })
@@ -352,12 +352,12 @@ class T extends _.Z {
         } catch (e) {
             (this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(o.type, ', sdp: ').concat(o.sdp)), this.emit(d.Sh.SdpError, 'setLocalDescription', e.message, o.type));
         }
-        let { sdp: l, outboundStreams: c, codecs: u, audioSSRC: _, videoSSRC: f, rtxSSRC: p, extensions: h } = this.parseLocalDescription();
-        if (((this.codecs = u), (this.extensions = h), _ !== this.audioSSRC || f !== this.videoSSRC)) {
+        let { sdp: l, outboundStreams: c, codecs: u, audioSSRC: f, videoSSRC: _, rtxSSRC: p, extensions: h } = this.parseLocalDescription();
+        if (((this.codecs = u), (this.extensions = h), f !== this.audioSSRC || _ !== this.videoSSRC)) {
             var g;
-            null == (g = this.daveSessionManager) || g.updateSsrcs(this.userId, _, [f]);
+            null == (g = this.daveSessionManager) || g.updateSsrcs(this.userId, f, [_]);
         }
-        ((this.audioSSRC = _), (this.videoSSRC = f), (this.videoReady = f > 0 && p > 0), (this.videoStreamParameters[0].ssrc !== f || this.videoStreamParameters[0].rtxSsrc !== p || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === f ? this.videoStreamParameters[0].ssrc : f), (this.videoStreamParameters[0].rtxSsrc = 0 === p ? this.videoStreamParameters[0].rtxSsrc : p), (this.videoStreamParameters[0].active = this.videoReady), this.emit(d.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, f, p, this.videoStreamParameters)), null == this.sdp ? this.emit(d.Sh.Connected, 'webrtc', (0, m.sc)(l)) : this.setRemoteAnswer(c, t, n, r));
+        ((this.audioSSRC = f), (this.videoSSRC = _), (this.videoReady = _ > 0 && p > 0), (this.videoStreamParameters[0].ssrc !== _ || this.videoStreamParameters[0].rtxSsrc !== p || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === _ ? this.videoStreamParameters[0].ssrc : _), (this.videoStreamParameters[0].rtxSsrc = 0 === p ? this.videoStreamParameters[0].rtxSsrc : p), (this.videoStreamParameters[0].active = this.videoReady), this.emit(d.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, _, p, this.videoStreamParameters)), null == this.sdp ? this.emit(d.Sh.Connected, 'webrtc', (0, m.sc)(l)) : this.setRemoteAnswer(c, t, n, r));
     }
     constructor(e) {
         var t;
@@ -453,7 +453,7 @@ class T extends _.Z {
         let n = e.dave;
         (null == n || (0, h.IT)() || (this.logger.warn('DAVE is initialized but encoded transforms are not supported'), (n = null)),
             null != n &&
-                ((this.daveSessionManager = new f.j(n, e.transientKeys, this.userId)),
+                ((this.daveSessionManager = new _.j(n, e.transientKeys, this.userId)),
                 this.daveSessionManager.on(d.Sh.MLSFailure, (e, t) => {
                     this.emit(d.Sh.MLSFailure, e, t);
                 }),

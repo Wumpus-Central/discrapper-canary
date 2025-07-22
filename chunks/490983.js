@@ -8,8 +8,8 @@ var r,
     c = n.n(l),
     u = n(442837),
     d = n(570140),
-    _ = n(812206),
-    f = n(594190),
+    f = n(812206),
+    _ = n(594190),
     p = n(592745),
     h = n(706454),
     m = n(757266),
@@ -85,7 +85,7 @@ function z(e) {
 }
 function q(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
-    let a = _.Z.getApplication(e.id);
+    let a = f.Z.getApplication(e.id);
     if (null == a) return null;
     let o = K(a, n);
     return (t.add(e.id), (0, N.Je)(e) || v.Z.isInstalled(e.id, e.branchId))
@@ -113,7 +113,7 @@ function q(e, t, n, r, i) {
         : null;
 }
 function X(e, t, n, r) {
-    let i = null != e ? _.Z.getApplication(e) : null;
+    let i = null != e ? f.Z.getApplication(e) : null;
     if (null == i || null == e || t.has(e)) return null;
     let a = K(i, n);
     return (
@@ -142,10 +142,10 @@ function X(e, t, n, r) {
     );
 }
 function Q() {
-    let e = new Set(f.ZP.getRunningVerifiedApplicationIds()),
+    let e = new Set(_.ZP.getRunningVerifiedApplicationIds()),
         t = {},
         n = new Set(),
-        r = f.ZP.getGamesSeen(!1, !1).map((e) => {
+        r = _.ZP.getGamesSeen(!1, !1).map((e) => {
             let n = g.Z.getGameByGameData(e);
             return null != n ? ((t[n.id] = e.lastFocused * T.Z.Millis.SECOND), n.id) : null;
         }),
@@ -168,7 +168,7 @@ function Q() {
 }
 class J extends (r = u.ZP.Store) {
     initialize() {
-        (this.syncWith([_.Z, g.Z, p.Z, f.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
+        (this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
     }
     get applicationFilterQuery() {
         return j;

@@ -29,8 +29,8 @@ var r = n(524437),
     c = n(594174),
     u = n(630388),
     d = n(823379),
-    _ = n(991621),
-    f = n(774863),
+    f = n(991621),
+    _ = n(774863),
     p = n(294509);
 let h = -1,
     m = () =>
@@ -66,7 +66,7 @@ function O(e, t) {
                   (e) =>
                       S(
                           {
-                              type: _.l.Attachment,
+                              type: f.l.Attachment,
                               media: e
                           },
                           t
@@ -78,7 +78,7 @@ function O(e, t) {
                   (e) =>
                       S(
                           {
-                              type: _.l.Embed,
+                              type: f.l.Embed,
                               media: e
                           },
                           t
@@ -120,7 +120,7 @@ function I(e, t) {
             : n.some((e) =>
                   N(
                       {
-                          type: _.l.Attachment,
+                          type: f.l.Attachment,
                           media: e
                       },
                       i
@@ -131,7 +131,7 @@ function I(e, t) {
             : r.some((e) =>
                   N(
                       {
-                          type: _.l.Embed,
+                          type: f.l.Embed,
                           media: e
                       },
                       i
@@ -141,7 +141,7 @@ function I(e, t) {
             v(e.components).some((e) =>
                 N(
                     {
-                        type: _.l.GenericMedia,
+                        type: f.l.GenericMedia,
                         media: e
                     },
                     i
@@ -168,7 +168,7 @@ function T(e) {
                 : t.filter((e) =>
                       N(
                           {
-                              type: _.l.Attachment,
+                              type: f.l.Attachment,
                               media: e
                           },
                           a
@@ -180,7 +180,7 @@ function T(e) {
                 : n.filter((e) =>
                       N(
                           {
-                              type: _.l.Embed,
+                              type: f.l.Embed,
                               media: e
                           },
                           a
@@ -206,11 +206,11 @@ function N(e, t) {
     let n = P(t);
     if (0 === n.length) return !1;
     switch (e.type) {
-        case _.l.Embed:
+        case f.l.Embed:
             return D(e.media, n);
-        case _.l.Attachment:
+        case f.l.Attachment:
             return L(e.media, n);
-        case _.l.GenericMedia:
+        case f.l.GenericMedia:
             return x(e.media, n);
         default:
             return !1;
@@ -222,11 +222,11 @@ function C(e, t) {
     let s = p.Fj[e];
     if (null != s.devSettingKey && a.ZP.get(s.devSettingKey)) return !0;
     switch (t.type) {
-        case _.l.Embed:
+        case f.l.Embed:
             return (0, u.yE)(null != (n = t.media.flags) ? n : 0, s.embedFlag);
-        case _.l.Attachment:
+        case f.l.Attachment:
             return (0, u.yE)(null != (r = t.media.flags) ? r : 0, s.attachmentFlag);
-        case _.l.GenericMedia:
+        case f.l.GenericMedia:
             return (0, u.yE)(null != (o = null == (i = t.media.contentScanMetadata) ? void 0 : i.flags) ? o : 0, s.genericMediaFlag);
         default:
             return !1;
@@ -255,7 +255,7 @@ function w(e, t) {
         [r, i] = n,
         a = r.getChannel(e),
         o = c.default.getCurrentUser();
-    return null == o || t === o.id || null == a ? null : a.isDM() || a.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? _.n.FRIEND_DM : _.n.NON_FRIEND_DM) : _.n.GUILD;
+    return null == o || t === o.id || null == a ? null : a.isDM() || a.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? f.n.FRIEND_DM : f.n.NON_FRIEND_DM) : f.n.GUILD;
 }
 function D(e, t) {
     var n, r, i, a, o, s, l;
@@ -267,7 +267,7 @@ function D(e, t) {
                 t.filter(
                     (t) =>
                         !C(t, {
-                            type: _.l.Embed,
+                            type: f.l.Embed,
                             media: e
                         })
                 ).length ||
@@ -286,7 +286,7 @@ function L(e, t) {
             t.filter(
                 (t) =>
                     !C(t, {
-                        type: _.l.Attachment,
+                        type: f.l.Attachment,
                         media: e
                     })
             ).length &&
@@ -301,7 +301,7 @@ function x(e, t) {
             t.filter(
                 (t) =>
                     !C(t, {
-                        type: _.l.GenericMedia,
+                        type: f.l.GenericMedia,
                         media: e
                     })
             ).length &&
@@ -309,7 +309,7 @@ function x(e, t) {
     );
 }
 function M(e, t) {
-    let n = f.Z.validContentScanVersion;
+    let n = _.Z.validContentScanVersion;
     return e !== h && (t.includes(p._.GORE) ? null == e || e < n : null == e);
 }
 function k(e) {

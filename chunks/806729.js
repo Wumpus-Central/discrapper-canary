@@ -7,8 +7,8 @@ var r = n(73800),
     l = n(771845),
     c = n(621853);
 function u(e) {
-    let [t, n, u, d, _] = (0, a.Wu)([c.Z], () => [c.Z.getMutualFriendsCount(e.id), c.Z.getMutualFriends(e.id), c.Z.getMutualGuilds(e.id), c.Z.isFetchingProfile(e.id), c.Z.isFetchingFriends(e.id)]),
-        f = (0, a.e7)([s.Z], () => s.Z.getUserAffinitiesMap()),
+    let [t, n, u, d, f] = (0, a.Wu)([c.Z], () => [c.Z.getMutualFriendsCount(e.id), c.Z.getMutualFriends(e.id), c.Z.getMutualGuilds(e.id), c.Z.isFetchingProfile(e.id), c.Z.isFetchingFriends(e.id)]),
+        _ = (0, a.e7)([s.Z], () => s.Z.getUserAffinitiesMap()),
         p = (0, a.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
         h = (0, r.useMemo)(
             () =>
@@ -17,9 +17,9 @@ function u(e) {
                     : (0, i.sortBy)(n, (e) => {
                           var t, n;
                           let { user: r } = e;
-                          return -((null != (n = null == (t = f.get(r.id)) ? void 0 : t.communicationProbability) ? n : -1) * 1);
+                          return -((null != (n = null == (t = _.get(r.id)) ? void 0 : t.communicationProbability) ? n : -1) * 1);
                       }),
-            [n, f]
+            [n, _]
         ),
         m = (0, r.useMemo)(() => {
             if (null == u || u.length < 2) return u;
@@ -38,6 +38,6 @@ function u(e) {
         mutualFriends: null != h ? h : E,
         mutualGuilds: null != m ? m : b,
         isFetching: d,
-        isFetchingFriends: _
+        isFetchingFriends: f
     };
 }

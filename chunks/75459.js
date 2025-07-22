@@ -12,8 +12,8 @@ var r = n(674746),
     u = n(941098),
     d = n(683951);
 n(801236);
-var _ = n(335677),
-    f = n(518914);
+var f = n(335677),
+    _ = n(518914);
 let p = [
         {
             skuId: i.d.SUMMER_2025_GIFTING_REWARD_SKU_ID,
@@ -34,7 +34,7 @@ let p = [
             gradientConfig: m,
             getImageUrl: () => u.Z,
             getBackgroundImageUrl: () => d.Z,
-            getCardImageUrl: () => f.Z
+            getCardImageUrl: () => _.Z
         },
         chatGiftIcon: {
             trinketsAnimation: {
@@ -43,7 +43,7 @@ let p = [
             }
         },
         firstTimeNotice: {
-            getImageUrl: (e, t) => (t ? u.Z : _.Z),
+            getImageUrl: (e, t) => (t ? u.Z : f.Z),
             title: () => c.intl.string(c.t.PWaKU1),
             description: () => c.intl.string(c.t.EWn7kZ),
             cta: () => c.intl.string(c.t.RzWDqa),
@@ -57,7 +57,7 @@ let p = [
             gradientConfig: () => m
         },
         billingSettingsMarketingBanner: {
-            getAnimatedImageUrl: () => _.Z,
+            getAnimatedImageUrl: () => f.Z,
             getStaticImageUrl: () => u.Z,
             title: () => c.intl.string(c.t.ydPofH),
             body: () => c.intl.string(c.t.iI74ho),

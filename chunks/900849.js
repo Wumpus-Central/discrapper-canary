@@ -24,7 +24,7 @@ var r = n(749210),
     c = n(430824),
     u = n(626135),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -78,7 +78,7 @@ function h(e, t) {
 }
 async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: a, onSuccess: l, joinSource: u, loadId: _, shouldNavigate: p = !0 } = n,
+        { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: p = !0 } = n,
         m = (0, o.s1)(),
         g = c.Z.getGuild(e),
         E = { state: { analyticsSource: t } };
@@ -88,7 +88,7 @@ async function m(e, t) {
               ? (0, s.X)(e, E)
               : (0, i.Z)(
                     d.Z5c.CHANNEL(e, a, n.messageId),
-                    h(f({}, E), {
+                    h(_({}, E), {
                         navigationReplace: !0,
                         openChannel: !0
                     })
@@ -96,13 +96,13 @@ async function m(e, t) {
         : (await r.Z.joinGuild(e, {
               lurker: !0,
               source: u,
-              loadId: _,
+              loadId: f,
               lurkLocation: null == t ? void 0 : t.page
           }),
           p &&
               (await r.Z.transitionToGuildSync(
                   e,
-                  h(f({}, E), {
+                  h(_({}, E), {
                       welcomeModalChannelId: a,
                       navigationReplace: null != a,
                       openChannel: null != a,

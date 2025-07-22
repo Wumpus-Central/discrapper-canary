@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(833664),
     u = n(545957),
     d = n(699516),
-    _ = n(303524),
-    f = n(329520),
+    f = n(303524),
+    _ = n(329520),
     p = n(233023),
     h = n(868781),
     m = n(122943),
@@ -38,7 +38,7 @@ function y(e) {
         w = (null == R ? void 0 : R.state) != null && 'xs' === I,
         D = () => {
             if (null != C)
-                return (0, r.jsx)(f.Z, {
+                return (0, r.jsx)(_.Z, {
                     stream: C,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(I, '/medium'),
@@ -103,7 +103,7 @@ function y(e) {
                 children: g.l
             }),
             x(),
-            S && (0, r.jsx)(_.Z, {})
+            S && (0, r.jsx)(f.Z, {})
         ]
     });
 }

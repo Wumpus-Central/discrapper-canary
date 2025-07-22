@@ -34,8 +34,8 @@ var r = n(278074),
     c = n(594174),
     u = n(626135),
     d = n(823379),
-    _ = n(74538),
-    f = n(226951),
+    f = n(74538),
+    _ = n(226951),
     p = n(73346),
     h = n(981631),
     m = n(474936),
@@ -71,9 +71,9 @@ function b(e) {
 }
 let y = ['discordapp.com/gifts', 'discord.com/gifts'],
     O = 3,
-    v = [f.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...y.map((e) => f.Z.escape(e))].join('|'),
+    v = [_.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...y.map((e) => _.Z.escape(e))].join('|'),
     I = RegExp('(?: |^|https?://)(?:'.concat(v, ')/([a-z0-9-]+)'), 'gi'),
-    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => f.Z.escape(e))].join('|'),
+    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => _.Z.escape(e))].join('|'),
     S = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
     N = (e, t) =>
@@ -288,7 +288,7 @@ function et(e, t) {
         case h.evJ.UNKNOWN_GIFT_CODE:
             return g.intl.string(g.t.roztIi);
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return g.intl.formatToPlainString(g.t['4YTHKy'], { planName: (0, _.M5)(t, m.p9.TIER_2) ? g.intl.string(g.t['lG6a5+']) : g.intl.string(g.t['FSOz7+']) });
+            return g.intl.formatToPlainString(g.t['4YTHKy'], { planName: (0, f.M5)(t, m.p9.TIER_2) ? g.intl.string(g.t['lG6a5+']) : g.intl.string(g.t['FSOz7+']) });
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return g.intl.string(g.t['9i1J39']);
         case h.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:

@@ -8,7 +8,7 @@ var r = n(727429),
     c = n(849027),
     u = n(927723),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -65,7 +65,7 @@ function m(e) {
     let t = s.Z.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, r.e)(t);
-    return h(f({}, e), { guildId: null != n ? n : d.ME });
+    return h(_({}, e), { guildId: null != n ? n : d.ME });
 }
 async function g(e, t) {
     let n = (0, l.Qj)(e);

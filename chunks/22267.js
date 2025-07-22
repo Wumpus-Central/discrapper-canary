@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    _ = n(821795),
-    f = n(172751),
+    f = n(821795),
+    _ = n(172751),
     p = n(359135),
     h = n(516817),
     m = n(654904),
@@ -82,14 +82,14 @@ let T = {
                                               status: C ? M : void 0,
                                               'aria-hidden': !0
                                           }),
-                                          decorators: (0, r.jsx)(f.ZP, {
+                                          decorators: (0, r.jsx)(_.ZP, {
                                               userId: t.id,
                                               className: O.tagChiplet
                                           }),
                                           name: U,
                                           innerClassName: A,
                                           displayNameStyles: t.displayNameStyles,
-                                          displayNameStyleEffects: _.F.ANIMATED
+                                          displayNameStyleEffects: f.F.ANIMATED
                                       })
                                   })
                                 : null,

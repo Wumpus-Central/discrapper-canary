@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(944611),
     u = n(377108),
     d = n(692547),
-    _ = n(755721),
-    f = n(481060),
+    f = n(755721),
+    _ = n(481060),
     p = n(68405),
     h = n(527429),
     m = n(788911),
@@ -145,7 +145,7 @@ class G extends i.PureComponent {
     render() {
         let { item: e, renderExtras: t, format: n, coords: i, focused: a } = this.props,
             { color: o, loaded: s } = this.state;
-        return (0, r.jsxs)(f.P3F, {
+        return (0, r.jsxs)(_.P3F, {
             tabIndex: -1,
             innerRef: (e) => {
                 this.ref = e;
@@ -210,7 +210,7 @@ class B extends i.PureComponent {
                           className: T.emptyHintCard,
                           children: [
                               t
-                                  ? (0, r.jsx)(f.r7p, {
+                                  ? (0, r.jsx)(_.r7p, {
                                         size: 'xs',
                                         color: 'currentColor',
                                         className: T.emptyHintFavorite
@@ -226,7 +226,7 @@ class B extends i.PureComponent {
         });
     }
     renderEmptyFavorites() {
-        return (0, r.jsx)(f.Ttm, {
+        return (0, r.jsx)(_.Ttm, {
             className: T.results,
             fade: !0,
             children: (0, r.jsxs)('div', {
@@ -346,11 +346,11 @@ class B extends i.PureComponent {
                                                     className: T.searchSuggestions,
                                                     children: o.map((e) =>
                                                         (0, r.jsx)(
-                                                            _.zx,
+                                                            f.zx,
                                                             {
-                                                                look: _.zx.Looks.OUTLINED,
-                                                                color: _.zx.Colors.PRIMARY,
-                                                                size: _.zx.Sizes.SMALL,
+                                                                look: f.zx.Looks.OUTLINED,
+                                                                color: f.zx.Colors.PRIMARY,
+                                                                size: f.zx.Sizes.SMALL,
                                                                 className: T.searchSuggestion,
                                                                 onClick: () => {
                                                                     a(e);
@@ -373,7 +373,7 @@ class B extends i.PureComponent {
                 let { className: i, data: a, resultQuery: s, query: l, resultType: c } = this.props;
                 return 0 === a.length && (s !== l || c === v.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
-                          f.GMG,
+                          _.GMG,
                           {
                               fade: !0,
                               className: o()(T.results, i),
@@ -388,7 +388,7 @@ class B extends i.PureComponent {
                           s
                       )
                     : (0, r.jsx)(
-                          f.GMG,
+                          _.GMG,
                           {
                               ref: this._masonryRef,
                               fade: !0,

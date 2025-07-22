@@ -153,7 +153,7 @@ let s = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0
     },
-    _ = {
+    f = {
         analyticsName: 'voice_channel_status',
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -174,7 +174,7 @@ let s = {
         showCharacterCount: !0,
         layout: 1
     },
-    f = {
+    _ = {
         analyticsName: 'thread_creation',
         attachments: !0,
         drafts: { type: i.d.FirstThreadMessage },
@@ -352,8 +352,8 @@ let s = {
         SIDEBAR: c,
         EDIT: u,
         FORM: d,
-        VOICE_CHANNEL_STATUS: _,
-        THREAD_CREATION: f,
+        VOICE_CHANNEL_STATUS: f,
+        THREAD_CREATION: _,
         USER_PROFILE: m,
         USER_PROFILE_REPLY: E,
         PROFILE_BIO_INPUT: b,

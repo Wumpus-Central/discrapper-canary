@@ -20,20 +20,20 @@ let l = [],
     c = new Map(),
     u = new Map(),
     d = new Map(),
-    _ = new Map(),
     f = new Map(),
+    _ = new Map(),
     p = new Map(),
     h = (e) => {
-        (f.set(e.tab, !0), _.set(e.tab, void 0), d.set(e.tab, e.options), d.set(e.tab, e.options), u.set(e.tab, void 0));
+        (_.set(e.tab, !0), f.set(e.tab, void 0), d.set(e.tab, e.options), d.set(e.tab, e.options), u.set(e.tab, void 0));
     },
     m = (e) => {
-        (p.set(e.tab, e.shopHome.shopBlocks), c.set(e.tab, Date.now()), f.set(e.tab, !1), _.set(e.tab, void 0), u.set(e.tab, void 0));
+        (p.set(e.tab, e.shopHome.shopBlocks), c.set(e.tab, Date.now()), _.set(e.tab, !1), f.set(e.tab, void 0), u.set(e.tab, void 0));
     },
     g = (e) => {
-        (p.set(e.tab, l), f.set(e.tab, !1), _.set(e.tab, e.error), u.set(e.tab, Date.now()));
+        (p.set(e.tab, l), _.set(e.tab, !1), f.set(e.tab, e.error), u.set(e.tab, Date.now()));
     },
     E = () => {
-        (p.clear(), d.clear(), _.clear(), f.clear(), c.clear(), u.clear(), (r = void 0));
+        (p.clear(), d.clear(), f.clear(), _.clear(), c.clear(), u.clear(), (r = void 0));
     },
     b = (e) => {
         r = e.shopHomeConfigOverride;
@@ -49,10 +49,10 @@ class y extends (i = a.ZP.Store) {
         return d.get(e);
     }
     getFetchShopHomeError(e) {
-        return _.get(e);
+        return f.get(e);
     }
     getIsFetchingShopHome(e) {
-        return f.get(e);
+        return _.get(e);
     }
     getShopBlocks(e) {
         var t;

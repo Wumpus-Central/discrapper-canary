@@ -39,6 +39,6 @@ function c(e, t) {
         u = t;
     'animate-always' !== n && ('respect-motion-settings' !== n || c) && (u = 'function' == typeof t ? (e, n) => l({}, t(e, n), o.F) : t.map((e) => l({}, e, o.F)));
     let d = 'function' == typeof u,
-        [_, f, p] = (0, i.useSprings)(e, u, s);
-    return d || 4 == arguments.length ? [_, f, p] : _;
+        [f, _, p] = (0, i.useSprings)(e, u, s);
+    return d || 4 == arguments.length ? [f, _, p] : f;
 }

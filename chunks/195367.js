@@ -164,7 +164,7 @@ function N(e) {
                         className: b.topicFormItem,
                         required: !0,
                         children: [
-                            (0, l.jsx)(o.oil, {
+                            (0, l.jsx)(s.Is, {
                                 className: b.textInput,
                                 onChange: (e) => {
                                     P({ name: e });

@@ -7,11 +7,11 @@ var i = n(837411),
     s = n(200669);
 function l(e) {
     let { user: t, guildId: n, channelId: l, onClose: c, appContext: u, disableAutoFocus: d = !1 } = e,
-        _ = (0, i.Z)(t.id, n);
+        f = (0, i.Z)(t.id, n);
     return (0, r.jsxs)('footer', {
         className: s.footer,
         children: [
-            _ &&
+            f &&
                 (0, r.jsx)(o.Z, {
                     user: t,
                     guildId: n,
@@ -19,7 +19,7 @@ function l(e) {
                     onClose: c,
                     disableAutoFocus: d
                 }),
-            !_ &&
+            !f &&
                 (0, r.jsx)(a.Z, {
                     user: t,
                     guildId: n,

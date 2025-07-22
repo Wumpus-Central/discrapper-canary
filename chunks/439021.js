@@ -36,14 +36,14 @@ function u(e) {
 }
 function d(e) {
     let t,
-        { onChooseType: n, onStripePaymentMethodReceived: c, onPaymentRequestFailure: d, onValidPaymentRequest: _, paymentRequestRef: f, paymentRequestWallet: p } = e,
+        { onChooseType: n, onStripePaymentMethodReceived: c, onPaymentRequestFailure: d, onValidPaymentRequest: f, paymentRequestRef: _, paymentRequestWallet: p } = e,
         h = {
             paymentLabel: s.intl.string(s.t.ZURqX1),
-            paymentRequestRef: f,
+            paymentRequestRef: _,
             renderConnectorView: !0,
             onStripePaymentMethodReceived: c,
             onPaymentRequestFailure: d,
-            onValidPaymentRequest: _,
+            onValidPaymentRequest: f,
             onChooseType: n,
             loadingComponent: (0, r.jsx)(i.zx, {
                 color: i.zx.Colors.TRANSPARENT,

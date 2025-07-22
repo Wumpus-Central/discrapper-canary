@@ -22,11 +22,11 @@ let c = new o.Z('GuildAvailabilityStore'),
 function d(e) {
     ((u = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && c.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds)));
 }
-function _(e) {
+function f(e) {
     if (!u.has(e.guildId)) return !1;
     u.delete(e.guildId);
 }
-function f(e) {
+function _(e) {
     if (u.has(e.guildId)) return !1;
     let t = s.Z.getGuild(e.guildId),
         n = '???';
@@ -60,9 +60,9 @@ l(m, 'displayName', 'GuildAvailabilityStore');
 let g = new m(a.Z, {
     CONNECTION_OPEN: d,
     OVERLAY_INITIALIZE: d,
-    GUILD_UNAVAILABLE: f,
+    GUILD_UNAVAILABLE: _,
     GUILD_DELETE: h,
     GUILD_CREATE: p,
     GUILD_UPDATE: p,
-    GUILD_GEO_RESTRICTED: _
+    GUILD_GEO_RESTRICTED: f
 });

@@ -8,15 +8,15 @@ var r = n(255367),
     c = n(481060),
     u = n(892001),
     d = n(594174),
-    _ = n(403182),
-    f = n(587446),
+    f = n(403182),
+    _ = n(587446),
     p = n(504983),
     h = n(388032),
     m = n(396032);
 function g(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);
-        return isNaN(t) ? e : (0, _.Ng)(t);
+        return isNaN(t) ? e : (0, f.Ng)(t);
     });
 }
 function E(e) {
@@ -37,7 +37,7 @@ function E(e) {
     });
 }
 let b = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: a, description: _, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
+    let { title: n, titleIcon: i, titleId: a, description: f, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
         R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         P = () => {
             null != R &&
@@ -66,7 +66,7 @@ let b = i.forwardRef(function (e, t) {
                     id: a,
                     children: [
                         n,
-                        N && (0, r.jsx)(f.Z, {}),
+                        N && (0, r.jsx)(_.Z, {}),
                         i,
                         C &&
                             null != R &&
@@ -83,11 +83,11 @@ let b = i.forwardRef(function (e, t) {
                             })
                     ]
                 }),
-                null != _
+                null != f
                     ? (0, r.jsx)(c.R94, {
                           type: c.R94.Types.DESCRIPTION,
                           className: m.sectionDescription,
-                          children: _
+                          children: f
                       })
                     : null,
                 g,

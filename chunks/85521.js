@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(997841));
+(n.d(t, { Z: () => f }), n(997841));
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
@@ -20,9 +20,9 @@ function u(e, t, n) {
     );
 }
 let d = 'master';
-class _ extends a.Z {
+class f extends a.Z {
     static createFromServer(e) {
-        return new _({
+        return new f({
             id: e.application.id,
             branchId: e.branch_id,
             entitlements: null != e.entitlements ? e.entitlements.map((e) => l.Z.createFromServer(e)) : [],
@@ -39,7 +39,7 @@ class _ extends a.Z {
         });
     }
     static createForTestMode(e) {
-        return new _({
+        return new f({
             id: e.id,
             entitlements: [],
             branchId: e.branch.id,

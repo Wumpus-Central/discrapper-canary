@@ -20,7 +20,7 @@ let l = {},
     c = new Set(),
     u = new Set(),
     d = 1800000,
-    _ = async (e) => {
+    f = async (e) => {
         if (!(0 === a.ZP.getGuildScheduledEventsForGuild(e).length || c.has(e)) && !u.has(e))
             try {
                 (c.add(e), await o.Z.getGuildEventsForCurrentUser(e), u.add(e));
@@ -28,7 +28,7 @@ let l = {},
                 c.delete(e);
             }
     };
-class f extends r.Z {
+class _ extends r.Z {
     async getGuildEventUserCounts(e, t, n) {
         let r = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > d);
         if (!(Date.now() - l[''.concat(e, '-').concat(t)] < d) || 0 !== r.length) {
@@ -42,7 +42,7 @@ class f extends r.Z {
         return o.Z.fetchUsersForGuildEvent(e, t, n);
     }
     getGuildEventsForCurrentUser(e) {
-        return _(e);
+        return f(e);
     }
     async handleConnectionOpen() {
         (c.clear(), u.clear(), (l = {}), i.Z.getLastSelectedGuildId());
@@ -61,7 +61,7 @@ class f extends r.Z {
         let { invite: n } = e,
             r = n.guild_scheduled_event,
             i = null == (t = n.guild) ? void 0 : t.id;
-        null != r && null != i && _(i);
+        null != r && null != i && f(i);
     }
     async handleChannelSelect(e) {
         let { guildId: t } = e;
@@ -84,4 +84,4 @@ class f extends r.Z {
             }));
     }
 }
-let p = new f();
+let p = new _();

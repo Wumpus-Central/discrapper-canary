@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(149765),
@@ -8,25 +8,25 @@ var r = n(255367),
     c = n(422559),
     u = n(388032),
     d = n(527134);
-function _(e) {
-    let { application: t, permissions: n, deniedPermissions: _, onPermissionsChange: f, guild: p } = e,
+function f(e) {
+    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
         h = i.useMemo(() => a.U_(p.permissions), [p.permissions]);
     i.useEffect(() => {
-        f(!1, a.hX(n, h));
-    }, [h, f, n]);
+        _(!1, a.hX(n, h));
+    }, [h, _, n]);
     let m = c.VY.filter((e) => a.e$(n, e)),
         g = m
             .filter((e) => !a.e$(h, e))
             .map((e) => {
                 let t = (0, c.wt)(e),
-                    n = !a.e$(_, e);
+                    n = !a.e$(f, e);
                 return (0, r.jsx)(
                     'li',
                     {
                         className: d.permission,
                         children: (0, r.jsx)(o.X, {
                             value: n,
-                            onChange: (t, n) => f(n, e),
+                            onChange: (t, n) => _(n, e),
                             type: o.X.Types.INVERTED,
                             children: (0, r.jsx)(s.x, {
                                 variant: 'text-md/normal',

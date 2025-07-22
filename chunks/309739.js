@@ -286,7 +286,7 @@ function M() {
                           className: R.marginBottom8,
                           children: A.intl.string(A.t['4F2KoK'])
                       }),
-                      (0, i.jsx)(p.oil, {
+                      (0, i.jsx)(m.Is, {
                           className: P.searchInput,
                           value: n,
                           onChange: s,

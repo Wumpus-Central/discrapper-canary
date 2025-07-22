@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(618541),
     u = n(975060),
     d = n(388032),
-    _ = n(422743);
-class f extends i.PureComponent {
+    f = n(422743);
+class _ extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && s.by();
     }
@@ -25,26 +25,26 @@ class f extends i.PureComponent {
                 (0, r.jsx)(l.ZP, {
                     type: l.ZP.Types.VENMO,
                     size: l.Uy.MEDIUM,
-                    className: _.venmoIcon
+                    className: f.venmoIcon
                 }),
                 i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.X6q, {
                                   variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
-                                  className: _.connectionInstructions,
+                                  className: f.connectionInstructions,
                                   children: d.intl.format(d.t.DowIra, { venmoUsername: e })
                               }),
                               (0, r.jsx)(o.Text, {
                                   variant: 'text-md/medium',
-                                  className: _.connectionInstructions,
+                                  className: f.connectionInstructions,
                                   children: d.intl.string(d.t.kmEvnZ)
                               })
                           ]
                       })
                     : (0, r.jsx)(o.Text, {
                           variant: 'text-md/medium',
-                          className: _.connectionInstructions,
+                          className: f.connectionInstructions,
                           children: null == n ? d.intl.string(d.t['2ouZDQ']) : d.intl.string(d.t.mIL6JS)
                       })
             ]
@@ -54,4 +54,4 @@ class f extends i.PureComponent {
 let p = a.ZP.connectStores([c.Z, u.Z], () => ({
     venmoUsername: u.Z.venmoUsername,
     venmoClient: c.Z.getVenmoClient()
-}))(f);
+}))(_);

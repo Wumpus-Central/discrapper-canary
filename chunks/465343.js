@@ -13,8 +13,8 @@ var r = n(933557),
     c = n(271383),
     u = n(485386),
     d = n(430824),
-    _ = n(594174),
-    f = n(483360),
+    f = n(594174),
+    _ = n(483360),
     p = n(709054),
     h = n(752305);
 function m(e, t, n, r) {
@@ -56,7 +56,7 @@ function E(e, t, n, r, i) {
                       return t;
                   })
         )
-            .map((e) => _.default.getUser(e))
+            .map((e) => f.default.getUser(e))
             .filter((e) => void 0 !== e && b(a, o, e));
         if (1 === r.length) {
             let e = r[0];
@@ -86,7 +86,7 @@ function y(e, t) {
                 channelId: e,
                 children: [{ text: '' }]
             };
-    for (let e of f.k1)
+    for (let e of _.k1)
         if (e !== l.sH) {
             for (let { channel: r } of l.ZP.getChannels(t)[e])
                 if (r.name === n)

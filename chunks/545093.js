@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,10 +90,10 @@ function p(e) {
         position: 'bottom',
         children: (e) => {
             var { onClick: n } = e,
-                f = _(e, ['onClick']);
+                _ = f(e, ['onClick']);
             return (0, r.jsx)(
                 o.P3F,
-                d(c({}, f), {
+                d(c({}, _), {
                     'aria-label': i,
                     onClick: (e) => {
                         (null == n || n(), t(e));

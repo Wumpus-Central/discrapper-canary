@@ -1,6 +1,6 @@
 (n.d(t, {
-    M: () => _,
-    Z: () => y
+    M: () => S,
+    Z: () => b
 }),
     n(415506),
     n(781311),
@@ -62,10 +62,56 @@ function g(e, t) {
         e
     );
 }
-function m(e) {
+let m = (e) => {
+    let { query: t, searchFavorites: n, showDMQueryText: r } = e,
+        {
+            filterCount: a,
+            queryContent: i,
+            isQueryEmpty: c
+        } = l.useMemo(() => {
+            var e, n, r;
+            let s = (0, u.kG)(t),
+                l = (0, u.$G)(s),
+                a = null != (n = l.content) ? n : '';
+            return {
+                filterCount: null != (r = null == (e = l.channel_id) ? void 0 : e.length) ? r : 0,
+                isQueryEmpty: 0 === a.length,
+                queryContent: a
+            };
+        }, [t]);
+    return n
+        ? (0, s.jsx)('div', {
+              className: h.queryText,
+              children: d.intl.string(d.t['6RVtLC'])
+          })
+        : r
+          ? a > 0
+              ? (0, s.jsx)(o.Text, {
+                    variant: 'text-sm/medium',
+                    color: 'text-secondary',
+                    className: h.searchDMQueryText,
+                    children: c
+                        ? d.intl.format(d.t.iV2ftr, { filterCount: a })
+                        : d.intl.format(d.t['5CTmUl'], {
+                              filterCount: a,
+                              value: i
+                          })
+                })
+              : (0, s.jsx)(o.Text, {
+                    variant: 'text-sm/medium',
+                    color: 'text-secondary',
+                    className: h.searchDMQueryText,
+                    children: c ? d.intl.string(d.t.w39VdH) : d.intl.format(d.t['9gKPv7'], { value: i })
+                })
+          : (0, s.jsx)('div', {
+                className: h.queryText,
+                children: d.intl.format(d.t.ub226e, { value: t })
+            });
+};
+function _(e) {
     (e.stopPropagation(), e.preventDefault());
 }
-function _(e, t, n) {
+function S(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
@@ -73,22 +119,23 @@ function _(e, t, n) {
         'aria-selected': n
     };
 }
-class S extends (r = l.PureComponent) {
+class y extends (r = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p } = this.props;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: _ } = this.props;
         if (e || u) return null;
-        let m = -1 === r;
+        let y = -1 === r;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
                     o.P3F,
-                    g(f({ className: i()(h.queryContainer, { [h.focused]: m }) }, _(n, -1, m)), {
+                    g(f({ className: i()(h.queryContainer, { [h.focused]: y }) }, S(n, -1, y)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
-                            (0, s.jsx)('div', {
-                                className: h.queryText,
-                                children: p ? d.intl.string(d.t['6RVtLC']) : d.intl.format(d.t.ub226e, { value: t })
+                            (0, s.jsx)(m, {
+                                query: t,
+                                searchFavorites: p,
+                                showDMQueryText: _
                             }),
                             (0, s.jsx)('div', {
                                 className: h.queryShortcut,
@@ -105,7 +152,7 @@ class S extends (r = l.PureComponent) {
                 p &&
                     (0, s.jsxs)(
                         o.P3F,
-                        g(f({ className: i()(h.queryContainer, { [h.focused]: m }) }, _(n, -1, m)), {
+                        g(f({ className: i()(h.queryContainer, { [h.focused]: y }) }, S(n, -1, y)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
@@ -142,7 +189,7 @@ class S extends (r = l.PureComponent) {
         return (0, s.jsxs)('div', {
             className: h.container,
             style: { width: r },
-            onMouseDown: m,
+            onMouseDown: _,
             role: 'listbox',
             id: n,
             tabIndex: -1,
@@ -164,7 +211,7 @@ class S extends (r = l.PureComponent) {
                     });
                 return (0, s.jsx)(
                     o.P3F,
-                    g(f({}, _(e, -1, -1 === r)), {
+                    g(f({}, S(e, -1, -1 === r)), {
                         className: h.inChannelOptionContainer,
                         onClick: l,
                         children: (0, s.jsx)(o.Text, {
@@ -178,9 +225,9 @@ class S extends (r = l.PureComponent) {
             }));
     }
 }
-p(S, 'defaultProps', {
+p(y, 'defaultProps', {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 });
-let y = S;
+let b = y;

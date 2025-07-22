@@ -3,8 +3,8 @@
     ZP: () => g,
     pW: () => p,
     wk: () => h,
-    xv: () => _,
-    zc: () => f,
+    xv: () => f,
+    zc: () => _,
     zz: () => m
 }),
     n(997841));
@@ -28,17 +28,17 @@ function u(e, t, n) {
 function d(e, t, n) {
     (u(e, t, n), (0, l.jN)(c.S9g.CHANNEL_SETTINGS));
 }
-function _() {
+function f() {
     i.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' });
 }
-function f(e) {
+function _(e) {
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_SET_SECTION',
         section: e
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: a, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: _, defaultReactionEmoji: f, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
+    let { name: t, type: n, topic: r, bitrate: a, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
@@ -51,8 +51,8 @@ function p(e) {
         rateLimitPerUser: c,
         defaultThreadRateLimitPerUser: u,
         defaultAutoArchiveDuration: d,
-        template: _,
-        defaultReactionEmoji: f,
+        template: f,
+        defaultReactionEmoji: _,
         rtcRegion: p,
         videoQualityMode: h,
         autoArchiveDuration: m,
@@ -67,7 +67,7 @@ function p(e) {
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: _, userLimit: f, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: T, locked: S, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: T, locked: S, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
         L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -80,8 +80,8 @@ async function h(e, t) {
                     type: l,
                     position: u,
                     topic: d,
-                    bitrate: _,
-                    user_limit: f,
+                    bitrate: f,
+                    user_limit: _,
                     nsfw: p,
                     flags: h,
                     permission_overwrites: m,
@@ -157,13 +157,13 @@ async function m(e) {
         rejectWithError: !0
     });
     let n = null == t ? void 0 : t.getGuildId();
-    (null == n || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(n), _());
+    (null == n || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(n), f());
 }
 let g = {
     init: u,
     open: d,
-    close: _,
-    setSection: f,
+    close: f,
+    setSection: _,
     selectPermissionOverwrite: function (e) {
         i.Z.dispatch({
             type: 'CHANNEL_SETTINGS_OVERWRITE_SELECT',

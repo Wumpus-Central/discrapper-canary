@@ -14,18 +14,18 @@ function l(e) {
             useConfig: function (e) {
                 let t = c(a, e),
                     [u, d] = (0, i.Wu)([s.Z], () => s.Z.getEvaluationAndAssignment(a, t, n), [t]),
-                    _ = null == d ? void 0 : d.variantId,
-                    f = null == d ? void 0 : d.revision,
+                    f = null == d ? void 0 : d.variantId,
+                    _ = null == d ? void 0 : d.revision,
                     p = null == d ? void 0 : d.isOverride;
                 if (
                     ((0, r.useEffect)(() => {
-                        null != u && null != _ && null != f && !1 === p && s.Z.trackExperimentExposure(u, n, e.location, a, f, _);
-                    }, [t, u, _, f, e.location, p]),
-                    null == _)
+                        null != u && null != f && null != _ && !1 === p && s.Z.trackExperimentExposure(u, n, e.location, a, _, f);
+                    }, [t, u, f, _, e.location, p]),
+                    null == f)
                 )
                     return l;
                 {
-                    let e = o[_];
+                    let e = o[f];
                     return null != e ? e : l;
                 }
             },
@@ -34,8 +34,8 @@ function l(e) {
                     [r, i] = s.Z.getEvaluationAndAssignment(a, t, n),
                     u = null == i ? void 0 : i.variantId,
                     d = null == i ? void 0 : i.revision,
-                    _ = null == i ? void 0 : i.isOverride;
-                if ((null != r && null != u && null != d && !1 === _ && s.Z.trackExperimentExposure(r, n, e.location, a, d, u), null == u)) return l;
+                    f = null == i ? void 0 : i.isOverride;
+                if ((null != r && null != u && null != d && !1 === f && s.Z.trackExperimentExposure(r, n, e.location, a, d, u), null == u)) return l;
                 {
                     let e = o[u];
                     return null != e ? e : l;

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(661637),
     u = n(549006),
     d = n(146128),
-    _ = n(981631),
-    f = n(675654),
+    f = n(981631),
+    _ = n(675654),
     p = n(776280);
 function h(e, t, n) {
     return (
@@ -131,7 +131,7 @@ let k = i.forwardRef(function (e, t) {
             () => ({
                 fireConfetti: (e, t) => {
                     u.createMultipleConfetti(
-                        E(m({}, f.We), {
+                        E(m({}, _.We), {
                             position: {
                                 type: 'static',
                                 value: {
@@ -180,7 +180,7 @@ function j(e) {
         n = i.useRef({}),
         [a, l] = i.useState(null),
         c = M(a),
-        f = i.useRef(null),
+        _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef('jack_o_lantern'),
         E = (0, s.bp)(),
@@ -207,19 +207,19 @@ function j(e) {
             'exit' === e && m(!1);
         }, []),
         I = i.useCallback((e) => {
-            f.current = e;
+            _.current = e;
         }, []);
     return (i.useEffect(() => {
         if ('confetti' === a) {
-            if (null == f.current) return;
-            let e = f.current.getBoundingClientRect(),
+            if (null == _.current) return;
+            let e = _.current.getBoundingClientRect(),
                 t = e.left - T,
                 r = e.top + S,
                 i = n.current[g.current];
             null == i || i.fireConfetti(t, r);
         }
     }, [a]),
-    E !== _.IlC.APP)
+    E !== f.IlC.APP)
         ? t
         : (0, r.jsxs)(d.Rm.Provider, {
               value: y,

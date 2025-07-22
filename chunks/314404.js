@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(490504),
-    _ = n(911969),
-    f = n(975298),
+    f = n(911969),
+    _ = n(975298),
     p = n(940824),
     h = n(987209),
     m = n(563132),
@@ -169,7 +169,7 @@ function ee(e, t) {
 function et(e) {
     var t, n, a, s;
     let { premiumSubscription: g, skuId: b, selectedPlanId: U, setSelectedPlanId: G, planGroup: z, priceOptions: X, planOptions: $, eligibleForMultiMonthPlans: et, referralTrialOfferId: en, subscriptionPeriodEnd: er, showTotal: ei = !0, discountInvoiceItems: ea, useCompactGiftComponents: eo, handleClose: es } = e,
-        { activeSubscription: el, setSelectedPlanId: ec, selectedSkuId: eu, selectedPlan: ed, priceOptions: e_, enablePremiumBrandRefresh: ef } = (0, m.JL)(),
+        { activeSubscription: el, setSelectedPlanId: ec, selectedSkuId: eu, selectedPlan: ed, priceOptions: ef, enablePremiumBrandRefresh: e_ } = (0, m.JL)(),
         { isGift: ep, giftRecipient: eh, selectedGiftStyle: em, customGiftMessage: eg, setCustomGiftMessage: eE, giftingOrigin: eb, claimableRewards: ey, setSelectedGiftingPromotionReward: eO } = (0, h.wD)(),
         ev = (0, y.MY)(eh),
         eI = ep && (0, y.pO)(eh),
@@ -188,9 +188,9 @@ function et(e) {
             },
             [G, ec]
         ),
-        ex = null != X ? X : e_;
+        ex = null != X ? X : ef;
     l()(null != ex, 'Price option has to be set');
-    let eM = (0, f.Z)({
+    let eM = (0, _.Z)({
             forceFetch: !1,
             excludeReverseTrial: !1,
             excludeReverseTrialFromCountdown: !0
@@ -224,7 +224,7 @@ function et(e) {
         eK = (0, v.Ap)(ex.paymentSourceId),
         ez = i.useMemo(() => ((null == eC ? void 0 : eC.interval) === F.rV.DAY ? ((null == eC ? void 0 : eC.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eC]),
         eq = !ep && (ej || (null != eC && ek && null != er)),
-        eX = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === F.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === _.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
+        eX = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === F.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
         eQ = (e, t, n) => {
             if (eI)
                 return (0, r.jsx)(u.vwX, {
@@ -326,7 +326,7 @@ function et(e) {
             e8 &&
                 (0, r.jsx)(M.n, {
                     fractionalPremiumInfo: eM,
-                    enablePremiumBrandRefresh: ef
+                    enablePremiumBrandRefresh: e_
                 }),
             (0, r.jsxs)('div', {
                 className: eI ? e1 : void 0,
@@ -390,12 +390,12 @@ function et(e) {
 }
 function en(e) {
     let { onStepChange: t, selectedPlanId: n, paymentSources: i, onBackClick: a, showBackButton: o, planOptions: s, shouldRenderUpdatedPaymentModal: l = !1, isTrial: c } = e,
-        { paymentSources: d, selectedPlan: _ } = (0, m.JL)(),
-        { isGift: f, claimableRewards: p, giftRecipient: g } = (0, h.wD)(),
+        { paymentSources: d, selectedPlan: f } = (0, m.JL)(),
+        { isGift: _, claimableRewards: p, giftRecipient: g } = (0, h.wD)(),
         E = (0, y.pO)(g);
     return (
         (i = null != i ? i : d),
-        (n = null != n ? n : null == _ ? void 0 : _.id),
+        (n = null != n ? n : null == f ? void 0 : f.id),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != n && s.includes(n)
@@ -403,7 +403,7 @@ function en(e) {
                           paymentSources: i,
                           onStepChange: t,
                           selectedPlanId: n,
-                          isGift: f,
+                          isGift: _,
                           claimableRewards: p,
                           shouldRenderUpdatedPaymentModal: l,
                           isTrial: c
@@ -415,7 +415,7 @@ function en(e) {
                       }),
                 o
                     ? (0, r.jsx)(U.Z, {
-                          className: f && E ? K.equalDistantBackButton : void 0,
+                          className: _ && E ? K.equalDistantBackButton : void 0,
                           onClick: a
                       })
                     : null
@@ -426,14 +426,14 @@ function en(e) {
 function er(e) {
     let { onStepChange: t, selectedPlanId: n, isGift: i, claimableRewards: a, paymentSources: o, shouldRenderUpdatedPaymentModal: s, isTrial: l } = e,
         d = (0, c.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
-        { step: _, selectedPlan: f } = (0, m.JL)(),
+        { step: f, selectedPlan: _ } = (0, m.JL)(),
         { hasEntitlements: p } = (0, G.H)(n, i),
         h = (null != d && null != d.paymentSourceId) || Object.keys(o).length > 0 || (p && !l);
     var E = s ? Y.intl.string(Y.t.PDTjLC) : Y.intl.string(Y.t.XqMe3N),
         y = g.h8.ADD_PAYMENT_STEPS;
     return (
         h && (y = g.h8.REVIEW),
-        (0, C.id)(f, i, a) && _ !== g.h8.SELECT_FREE_SKU && (y = g.h8.SELECT_FREE_SKU),
+        (0, C.id)(_, i, a) && f !== g.h8.SELECT_FREE_SKU && (y = g.h8.SELECT_FREE_SKU),
         (0, r.jsx)(u.zxk, {
             variant: 'primary',
             text: E,

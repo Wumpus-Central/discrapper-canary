@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(692547),
     u = n(481060),
     d = n(987209),
-    _ = n(706454),
-    f = n(509545),
+    f = n(706454),
+    _ = n(509545),
     p = n(669079),
     h = n(930153),
     m = n(74538),
@@ -23,8 +23,8 @@ var i = n(120356),
     I = n(106981);
 function T(e) {
     let { premiumSubscription: t, planId: n, selectPlan: i, selected: o, priceOptions: T, shouldShowUpdatedPaymentModal: S, isEligibleForDiscount: A, discountAmountOff: N, isEligibleForTrial: C } = e,
-        R = (0, l.e7)([_.default], () => _.default.locale),
-        P = (0, l.e7)([f.Z], () => f.Z.get(n)),
+        R = (0, l.e7)([f.default], () => f.default.locale),
+        P = (0, l.e7)([_.Z], () => _.Z.get(n)),
         { isGift: w, giftRecipient: D } = (0, d.wD)(),
         L = w && (0, p.pO)(D);
     s()(null != P, 'Missing subscriptionPlan');

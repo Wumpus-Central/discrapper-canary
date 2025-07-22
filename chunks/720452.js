@@ -26,17 +26,17 @@ function c(e) {
         u = null != t ? t : 'ALL';
     c.length > 0 && null != o && null != t && (u = c.includes(t) ? t : o);
     let d = new Set(),
-        _ = [];
+        f = [];
     return (
         s.forEach((e, t) => {
-            i.includes(t) && (e.has(u) ? d.add(t) : _.push(t));
+            i.includes(t) && (e.has(u) ? d.add(t) : f.push(t));
         }),
         l.forEach((e, t) => {
             e.has(u) && d.add(t);
         }),
         {
             countryPaymentMethods: [...a, ...Array.from(d)],
-            remainingPaymentMethods: _
+            remainingPaymentMethods: f
         }
     );
 }

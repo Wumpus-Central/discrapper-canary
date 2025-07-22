@@ -172,7 +172,7 @@ function M(e) {
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 250 && l && !i && (null == p || p());
         }, [l, p, i]),
         w = [],
-        F = !0;
+        D = !0;
     null == n || (i && 0 === n.length)
         ? (w = [
               (0, r.jsx)(
@@ -186,16 +186,16 @@ function M(e) {
           ])
         : 0 === n.length
           ? w.push((0, r.jsx)(s.Fragment, { children: _() }, 'empty-state'))
-          : ((F = !1),
+          : ((D = !1),
             (w = []),
             o().each(n, (e) => {
                 w.push(...S(e));
             }));
-    let D = null;
+    let F = null;
     null != n &&
         n.length > 0 &&
         null != p &&
-        (D = i
+        (F = i
             ? (0, r.jsx)(
                   'div',
                   {
@@ -221,7 +221,7 @@ function M(e) {
                 }));
     let H = null == y ? void 0 : y(),
         B =
-            F && null != H
+            D && null != H
                 ? (0, r.jsx)('div', {
                       className: R.footer,
                       children: (0, r.jsx)(g.Z, {
@@ -313,7 +313,7 @@ function M(e) {
                                 }
                             })
                         }),
-                        D
+                        F
                     ]
                 }),
                 B

@@ -13,8 +13,8 @@ var i,
     c = n(314897),
     u = n(592125),
     d = n(944486),
-    _ = n(594174),
-    f = n(585483),
+    f = n(594174),
+    _ = n(585483),
     p = n(358085),
     h = n(636449),
     m = n(155268),
@@ -112,7 +112,7 @@ function X(e) {
 }
 function Q(e) {
     var t, n, r, i, a, o, s;
-    let { location: l, applicationId: u, launchId: d, compositeInstanceId: _, participants: f } = e,
+    let { location: l, applicationId: u, launchId: d, compositeInstanceId: f, participants: _ } = e,
         p = (0, m.ZP)(u);
     if (null == p) return;
     let h = (0, E.p)(l),
@@ -120,11 +120,11 @@ function Q(e) {
         y = null != b && 0 === b.length,
         O = null != (r = k.get(l.id)) ? r : R,
         v = O.find((e) => e.applicationId === u),
-        I = f.map((e) => e.userId),
+        I = _.map((e) => e.userId),
         T = c.default.getId(),
         A = I.some((e) => e === T),
-        N = null == (t = f.find((e) => e.userId === T)) ? void 0 : t.sessionId,
-        C = f.some((e) => (0, g.J)(e)),
+        N = null == (t = _.find((e) => e.userId === T)) ? void 0 : t.sessionId,
+        C = _.some((e) => (0, g.J)(e)),
         P = D.get(u),
         w = U.get(j(null != h ? h : null, u)),
         M = null == w ? void 0 : w.launchParams,
@@ -132,10 +132,10 @@ function Q(e) {
             applicationId: u,
             location: l,
             launchId: d,
-            compositeInstanceId: _,
+            compositeInstanceId: f,
             url: p,
             userIds: new Set(I),
-            participants: f,
+            participants: _,
             referrerId: null != (i = null == P ? void 0 : P.referrerId) ? i : null == M ? void 0 : M.referrerId,
             customId: null != (a = null == P ? void 0 : P.customId) ? a : null == M ? void 0 : M.customId
         };
@@ -149,9 +149,9 @@ function Q(e) {
               ei({
                   applicationId: u,
                   launchId: d,
-                  compositeInstanceId: _,
+                  compositeInstanceId: f,
                   location: l,
-                  participants: f,
+                  participants: _,
                   isFirstActivityInChannel: y,
                   isStart: null == v,
                   referrerId: G.referrerId,
@@ -189,7 +189,7 @@ function J(e) {
         });
 }
 function $(e) {
-    (D.delete(e.applicationId), f.S.dispatch(I.CkL.RELEASE_ACTIVITY_WEB_VIEW));
+    (D.delete(e.applicationId), _.S.dispatch(I.CkL.RELEASE_ACTIVITY_WEB_VIEW));
 }
 function ee(e) {
     let { guilds: t } = e;
@@ -237,7 +237,7 @@ function ei(e) {
     let C = (0, E.p)(l),
         R = u.Z.getChannel(C),
         P = null == R ? void 0 : R.getGuildId();
-    if (null == _.default.getCurrentUser() || (null == P && !(null != (n = null == R ? void 0 : R.isPrivate()) && n))) return !1;
+    if (null == f.default.getCurrentUser() || (null == P && !(null != (n = null == R ? void 0 : R.isPrivate()) && n))) return !1;
     r = l;
     let w = {
         applicationId: i,
@@ -252,7 +252,7 @@ function ei(e) {
         customId: T
     };
     (D.set(i, w),
-        f.S.dispatch(I.CkL.OPEN_EMBEDDED_ACTIVITY, {
+        _.S.dispatch(I.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: i,
             isFirstActivityInChannel: g,
@@ -336,7 +336,7 @@ function ed(e) {
         }, {});
     C.dateRangesForSurfaces = i;
 }
-function e_(e) {
+function ef(e) {
     let { guildId: t, activities: n } = e,
         r = X(t);
     G.set(r, n);
@@ -350,7 +350,7 @@ function e_(e) {
             lastFetchTimestampMs: i
         }));
 }
-function ef(e) {
+function e_(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: a, inviterUserId: o } = e;
     (U.set(j(a, t), {
         isLaunching: !0,
@@ -553,7 +553,7 @@ let eS = new eT(o.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: ee,
         GUILD_CREATE: et,
         CHANNEL_DELETE: en,
-        EMBEDDED_ACTIVITY_LAUNCH_START: ef,
+        EMBEDDED_ACTIVITY_LAUNCH_START: e_,
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: ep,
         EMBEDDED_ACTIVITY_LAUNCH_FAIL: eh,
         EMBEDDED_ACTIVITY_CLOSE: ea,
@@ -562,7 +562,7 @@ let eS = new eT(o.Z, {
         LOCAL_ACTIVITY_UPDATE: es,
         EMBEDDED_ACTIVITY_SET_CONFIG: el,
         EMBEDDED_ACTIVITY_FETCH_SHELF: ec,
-        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: e_,
+        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: ef,
         EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: eu,
         EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: eg,
         EMBEDDED_ACTIVITY_SET_PANEL_MODE: eE,

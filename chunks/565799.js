@@ -8,8 +8,8 @@ var r,
     c = n(759174),
     u = n(570140),
     d = n(569545),
-    _ = n(199902),
-    f = n(314897),
+    f = n(199902),
+    _ = n(314897),
     p = n(592125),
     h = n(430824),
     m = n(496675),
@@ -166,7 +166,7 @@ function $(e) {
 let ee = [];
 class et extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.default, b.default, p.Z, E.Z, y.Z, m.Z, O.ZP, h.Z, I.ZP, g.Z, T.Z, _.Z);
+        this.waitFor(_.default, b.default, p.Z, E.Z, y.Z, m.Z, O.ZP, h.Z, I.ZP, g.Z, T.Z, f.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

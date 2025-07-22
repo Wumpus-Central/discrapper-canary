@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-let f = 86400000,
+let _ = 86400000,
     p = 3600000,
     h = {};
 function m() {
@@ -71,7 +71,7 @@ function g(e) {
     let {
         guild: { id: t }
     } = e;
-    h[t] = _(u({}, b(t)), { appliedBoosts: E(t) });
+    h[t] = f(u({}, b(t)), { appliedBoosts: E(t) });
 }
 function E(e) {
     var t, n;
@@ -86,15 +86,15 @@ function E(e) {
 function b(e) {
     if (null == h[e]) {
         let t = E(e);
-        h[e] = _(u({}, m()), { appliedBoosts: t });
+        h[e] = f(u({}, m()), { appliedBoosts: t });
     }
     return h[e];
 }
 function y(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
         i = b(t);
-    h = _(u({}, h), {
-        [t]: _(u({}, i), {
+    h = f(u({}, h), {
+        [t]: f(u({}, i), {
             allPowerups: n,
             powerupCatalog: r,
             catalogFetchCooldown: Date.now(),
@@ -106,8 +106,8 @@ function O(e) {
     let { guildId: t, unlockedPowerups: n } = e,
         r = b(t),
         i = E(t);
-    h = _(u({}, h), {
-        [t]: _(u({}, r), {
+    h = f(u({}, h), {
+        [t]: f(u({}, r), {
             unlockedPowerups: n,
             appliedBoosts: i,
             unlockedPowerupsFetchCooldown: Date.now(),
@@ -121,7 +121,7 @@ function v(e, t) {
     (r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     }),
-        (h = _(u({}, h), { [n]: _(u({}, i), { appliedBoosts: E(n) }) })));
+        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: E(n) }) })));
 }
 function I(e) {
     v(e, !0);
@@ -145,7 +145,7 @@ class A extends (r = i.ZP.PersistedStore) {
     shouldFetchCatalogForGuild(e) {
         var t;
         let n = null == (t = h[e]) ? void 0 : t.catalogFetchCooldown;
-        return null == n || n + f < Date.now();
+        return null == n || n + _ < Date.now();
     }
     shouldFetchPowerupsForGuild(e) {
         var t;
@@ -179,7 +179,7 @@ class A extends (r = i.ZP.PersistedStore) {
                                   o = a;
                               return [
                                   i,
-                                  _(u({}, o), {
+                                  f(u({}, o), {
                                       allPowerups: null != (t = o.allPowerups) ? t : {},
                                       powerupCatalog: null != (n = o.powerupCatalog) ? n : {},
                                       unlockedPowerups: null != (r = o.unlockedPowerups) ? r : {}

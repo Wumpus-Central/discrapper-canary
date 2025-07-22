@@ -27,8 +27,8 @@ var r = n(255367),
     c = n(374470),
     u = n(442837),
     d = n(481060),
-    _ = n(904245),
-    f = n(45114),
+    f = n(904245),
+    _ = n(45114),
     p = n(431279),
     h = n(794295),
     m = n(593472),
@@ -144,7 +144,7 @@ function J(e) {
     var { onVolumeChange: t, onMute: n, volume: a, autoMute: o, alt: s, renderAdjacentContent: l, renderOverlayContent: c } = e,
         u = K(e, ['onVolumeChange', 'onMute', 'volume', 'autoMute', 'alt', 'renderAdjacentContent', 'renderOverlayContent']);
     let d = X(t),
-        _ = Q(n);
+        f = Q(n);
     return (
         (a = null == a ? M.FC : a),
         (o = null == o ? M.rs : o),
@@ -157,7 +157,7 @@ function J(e) {
                         volume: a,
                         autoMute: o,
                         onVolumeChange: d,
-                        onMute: _,
+                        onMute: f,
                         renderLinkComponent: en,
                         renderOverlayContent: c
                     })
@@ -173,7 +173,7 @@ function $(e) {
     let u = X(t),
         d = Q(a);
     n = null == n ? M.FC : n;
-    let _ = () => !1;
+    let f = () => !1;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(
@@ -184,7 +184,7 @@ function $(e) {
                     onVolumeShow: o,
                     onVolumeHide: s,
                     volume: n,
-                    autoMute: _,
+                    autoMute: f,
                     renderLinkComponent: en
                 })
             ),
@@ -210,8 +210,8 @@ function ee(e) {
     );
 }
 function et(e) {
-    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: _, imageContainerStyle: f, mosaicStyleAlt: h } = e,
-        m = _ === j.hV.MOSAIC || !0 === h,
+    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: f, imageContainerStyle: _, mosaicStyleAlt: h } = e,
+        m = f === j.hV.MOSAIC || !0 === h,
         g = !c && C.H1.getSetting() && null != t && '' !== t && !0 !== n,
         E = (e) => {
             let { altText: t } = e;
@@ -243,7 +243,7 @@ function et(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: o()(F.imageContainer, l),
-                style: f,
+                style: _,
                 children: [(0, r.jsx)(p.Z, H({}, e)), null != a && a()]
             }),
             m &&
@@ -390,13 +390,13 @@ function eu(e) {
         s = i.useCallback(() => {
             let e = P.ZP.ackMessageId(n);
             null != e
-                ? _.Z.jumpToMessage({
+                ? f.Z.jumpToMessage({
                       channelId: n,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : _.Z.jumpToMessage({
+                : f.Z.jumpToMessage({
                       channelId: n,
                       messageId: k.default.castChannelIdAsMessageId(n),
                       offset: 1,
@@ -404,7 +404,7 @@ function eu(e) {
                   });
         }, [n]),
         l = i.useCallback(() => {
-            (0, f.In)(n, {
+            (0, _.In)(n, {
                 section: U.jXE.NEW_MESSAGES_BANNER,
                 object: U.qAy.MARK_CHANNEL_AS_READ_BUTTON,
                 objectType: U.Qqv.ACK_MANUAL
@@ -503,7 +503,7 @@ function ed(e) {
                     : [];
             },
             [M],
-            ef
+            e_
         ),
         Z = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
         H = null == M || null == (t = M[Z]) ? void 0 : t.topic;
@@ -569,7 +569,7 @@ function ed(e) {
                         channel_id: s.id,
                         channel_type: s.type
                     }),
-                    _.Z.jumpToMessage({
+                    f.Z.jumpToMessage({
                         channelId: s.id,
                         messageId: n.startId,
                         flash: !0,
@@ -647,13 +647,13 @@ function ed(e) {
         et = i.useCallback(() => {
             let e = P.ZP.ackMessageId(s.id);
             null != e
-                ? _.Z.jumpToMessage({
+                ? f.Z.jumpToMessage({
                       channelId: s.id,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : _.Z.jumpToMessage({
+                : f.Z.jumpToMessage({
                       channelId: s.id,
                       messageId: k.default.castChannelIdAsMessageId(s.id),
                       offset: 1,
@@ -661,7 +661,7 @@ function ed(e) {
                   });
         }, [s.id]),
         en = i.useCallback(() => {
-            (0, f.In)(s.id, {
+            (0, _.In)(s.id, {
                 section: U.jXE.NEW_TOPICS_BAR,
                 object: U.qAy.MARK_CHANNEL_AS_READ_BUTTON,
                 objectType: U.Qqv.ACK_MANUAL
@@ -777,15 +777,15 @@ function ed(e) {
               })
     );
 }
-function e_(e, t) {
+function ef(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
-function ef(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => !e_(e, t[n]));
+function e_(e, t) {
+    return null != t && e.length === t.length && !e.some((e, n) => !ef(e, t[n]));
 }
 function ep(e) {
     var t, n, a;
-    let { channel: s, scrollManager: f } = e,
+    let { channel: s, scrollManager: _ } = e,
         { disableInteractions: p } = i.useContext(b.G),
         [h, E] = i.useState(null),
         y = i.useRef(null),
@@ -836,7 +836,7 @@ function ep(e) {
                     : [];
             },
             [C],
-            ef
+            e_
         ),
         M = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
         k = null == C || null == (t = C[M]) ? void 0 : t.topic;
@@ -890,13 +890,13 @@ function ep(e) {
                 if (null == n) return;
                 ((0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id));
                 let r = () => {
-                    (f.removeScrollCompleteCallback(r),
+                    (_.removeScrollCompleteCallback(r),
                         setTimeout(() => {
-                            f.addAutomaticAnchorCallback(Y, !1);
+                            _.addAutomaticAnchorCallback(Y, !1);
                         }, 100));
                 };
-                (f.removeAutomaticAnchorCallback(Y),
-                    f.addScrollCompleteCallback(r),
+                (_.removeAutomaticAnchorCallback(Y),
+                    _.addScrollCompleteCallback(r),
                     L.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
@@ -904,7 +904,7 @@ function ep(e) {
                         channel_id: s.id,
                         channel_type: s.type
                     }),
-                    _.Z.jumpToMessage({
+                    f.Z.jumpToMessage({
                         channelId: s.id,
                         messageId: n.startId,
                         flash: !0,
@@ -913,7 +913,7 @@ function ep(e) {
                         context: 'Summary Jump'
                     }));
             },
-            [C, s, Y, f]
+            [C, s, Y, _]
         ),
         X = i.useCallback(() => {
             q(M - 1, B.DZ.PILL_NEXT_ARROW);
@@ -955,12 +955,12 @@ function ep(e) {
     );
     (i.useEffect(
         () => (
-            f.addAutomaticAnchorCallback(Y),
+            _.addAutomaticAnchorCallback(Y),
             () => {
-                f.removeAutomaticAnchorCallback(Y);
+                _.removeAutomaticAnchorCallback(Y);
             }
         ),
-        [f, Y]
+        [_, Y]
     ),
         i.useEffect(() => {
             (0, S.G1)(s.id);

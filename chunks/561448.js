@@ -70,14 +70,14 @@ let d = (e) => {
         let t = T[(0, r.rI)()];
         return e in t ? t[e] : null;
     },
-    _ = new Set([a.He.CARD, a.He.PAYPAL]),
-    f = new Set([a.He.IDEAL, a.He.GOPAY_WALLET, a.He.KAKAOPAY]);
+    f = new Set([a.He.CARD, a.He.PAYPAL]),
+    _ = new Set([a.He.IDEAL, a.He.GOPAY_WALLET, a.He.KAKAOPAY]);
 function p(e, t) {
     let n = null != t ? t : (0, i.vP)(),
-        a = _.has(e);
+        a = f.has(e);
     if (!n) return a;
     let o = (0, r.rI)();
-    return (!h(e) || 'live' !== o || null != b(e, o)) && (a || f.has(e));
+    return (!h(e) || 'live' !== o || null != b(e, o)) && (a || _.has(e));
 }
 function h(e) {
     return e in m;

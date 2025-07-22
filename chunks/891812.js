@@ -7,8 +7,8 @@ var a = n(46973),
     c = n(358085),
     u = n(994234),
     d = n(375538),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function f(e, t, n) {
 class p extends s.Z {
     constructor(...e) {
         (super(...e),
-            f(this, 'handlePostConnectionOpen', () => {
+            _(this, 'handlePostConnectionOpen', () => {
                 (null == r || r(),
                     null == i || i(),
                     (0, c.isWeb)() ||
@@ -39,11 +39,11 @@ class p extends s.Z {
                             null == (t = o.Z.setNoiseCancellationEnableStats) || t.call(o.Z, n);
                         }))));
             }),
-            f(this, 'handleRtcConnectionState', (e) => {
+            _(this, 'handleRtcConnectionState', (e) => {
                 let { state: t, context: n } = e;
-                (0, c.isWeb)() || (n === a.Yn.DEFAULT && t !== _.hes.DISCONNECTED && (t === _.hes.RTC_CONNECTED && l.Z.getKrispEnableStats() && l.Z.getNoiseCancellation() && (o.Z.setNoiseCancellation(!1), o.Z.setNoiseCancellation(!0)), u.z.trackExposure({ location: 'KrispExperimentManager' })));
+                (0, c.isWeb)() || (n === a.Yn.DEFAULT && t !== f.hes.DISCONNECTED && (t === f.hes.RTC_CONNECTED && l.Z.getKrispEnableStats() && l.Z.getNoiseCancellation() && (o.Z.setNoiseCancellation(!1), o.Z.setNoiseCancellation(!0)), u.z.trackExposure({ location: 'KrispExperimentManager' })));
             }),
-            f(this, 'actions', {
+            _(this, 'actions', {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 RTC_CONNECTION_STATE: this.handleRtcConnectionState
             }));

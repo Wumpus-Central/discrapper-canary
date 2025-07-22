@@ -34,8 +34,8 @@ var r = n(255367),
     M = n(652399),
     L = n(14091),
     w = n(579612),
-    F = n(723642),
-    D = n(981631),
+    D = n(723642),
+    F = n(981631),
     H = n(388032),
     B = n(290082);
 function U(e, t, n) {
@@ -200,22 +200,22 @@ let Q = h()('2015-05-15').local(),
             })
         ),
     X = {
-        [D.dCx.FILTER_FROM]: {
+        [F.dCx.FILTER_FROM]: {
             titleText: () => H.intl.string(H.t.catERE),
             component: J
         },
-        [D.dCx.FILTER_MENTIONS]: {
+        [F.dCx.FILTER_MENTIONS]: {
             titleText: () => H.intl.string(H.t.l3K4Bw),
             component: J
         },
-        [D.dCx.FILTER_HAS]: { titleText: () => H.intl.string(H.t.IC7gHB) },
-        [D.dCx.FILTER_FILE_TYPE]: { titleText: () => H.intl.string(H.t.SXIfV1) },
-        [D.dCx.FILTER_IN]: {
+        [F.dCx.FILTER_HAS]: { titleText: () => H.intl.string(H.t.IC7gHB) },
+        [F.dCx.FILTER_FILE_TYPE]: { titleText: () => H.intl.string(H.t.SXIfV1) },
+        [F.dCx.FILTER_IN]: {
             titleText: () => H.intl.string(H.t.vHyCgo),
             component: (e) => (0, r.jsx)(Y, G(W({}, e), { renderResult: V }))
         },
-        [D.rtL.DATES]: { titleText: () => H.intl.string(H.t.UiL5e3) },
-        [D.rtL.HISTORY]: {
+        [F.rtL.DATES]: { titleText: () => H.intl.string(H.t.UiL5e3) },
+        [F.rtL.HISTORY]: {
             titleText: () => H.intl.string(H.t.tSZd5e),
             groupTip(e) {
                 let { searchId: t } = e;
@@ -251,8 +251,8 @@ let Q = h()('2015-05-15').local(),
                         .map((e) => {
                             let t = e.getFullMatch();
                             if ('' === t.trim()) return null;
-                            let n = D.TNx.test(e.type),
-                                s = D.KA4.test(e.type);
+                            let n = F.TNx.test(e.type),
+                                s = F.KA4.test(e.type);
                             return (
                                 (h += t),
                                 (0, r.jsx)(
@@ -295,7 +295,7 @@ let Q = h()('2015-05-15').local(),
                 );
             }
         },
-        [D.rtL.SEARCH_OPTIONS]: {
+        [F.rtL.SEARCH_OPTIONS]: {
             titleText: () => H.intl.string(H.t['8Zkyw8']),
             groupTip: () =>
                 (0, r.jsx)(g.ua7, {
@@ -306,7 +306,7 @@ let Q = h()('2015-05-15').local(),
                             'div',
                             G(W({ className: B.searchLearnMore }, e), {
                                 children: (0, r.jsx)(g.eee, {
-                                    href: N.Z.getArticleURL(D.BhN.USING_SEARCH),
+                                    href: N.Z.getArticleURL(F.BhN.USING_SEARCH),
                                     title: H.intl.string(H.t.hvVgAQ),
                                     children: (0, r.jsx)(g.idN, {
                                         size: 'md',
@@ -359,7 +359,7 @@ class $ extends s.PureComponent {
         let { resultsState: n, totalResults: r } = this.props,
             { mode: s } = n,
             { resultsState: l } = e;
-        null != s.filter && null == l.mode.filter && r > 0 ? this.setSelectedIndex(0) : s.type === D.Sap.FILTER_ALL && l.mode.type !== s.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
+        null != s.filter && null == l.mode.filter && r > 0 ? this.setSelectedIndex(0) : s.type === F.Sap.FILTER_ALL && l.mode.type !== s.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
     }
     setSelectedIndex(e) {
         this.setState({ selectedIndex: e }, () => this.props.onSelectedIndexChanged(e));
@@ -379,10 +379,11 @@ class $ extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: l === D.I_8 && (0, k.X)(),
+            searchFavorites: l === F.I_8 && (0, k.X)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: a,
-            onSelectSearchInSelectedChannel: () => this.handleSearchInChannel({ searchAutocompleteSelectAction: F.Z.CLICK })
+            onSelectSearchInSelectedChannel: () => this.handleSearchInChannel({ searchAutocompleteSelectAction: D.Z.CLICK }),
+            showDMQueryText: l === F.aib.DMS && (0, A.R6)(l)
         });
     }
     constructor(...e) {
@@ -399,14 +400,14 @@ class $ extends s.PureComponent {
                     searchQuery: v.Z.getQuery(this.props.searchId),
                     searchQueryString: (0, L.$)(this.props.searchId),
                     searchTokenType: this.props.resultsState.mode.filter,
-                    searchAutocompleteGroup: D.rtL.DATES,
+                    searchAutocompleteGroup: F.rtL.DATES,
                     searchAutocompleteMode: this.props.resultsState.mode,
                     isSearchFilterPrefix: !1,
                     isSearchFilterAnswer: !0,
                     isSearchFilterComplete: !1,
-                    searchAutocompleteSelectAction: F.Z.CLICK
+                    searchAutocompleteSelectAction: D.Z.CLICK
                 }),
-                    this.setSearchQuery(e.format(D.b2L) + ' ', !0));
+                    this.setSearchQuery(e.format(F.b2L) + ' ', !0));
             }),
             U(this, 'keepCurrentOptionSelected', (e, t) => {
                 let { selectedIndex: n } = this.state,
@@ -451,8 +452,8 @@ class $ extends s.PureComponent {
                 if (r >= a.length) return !1;
                 let i = a[r],
                     o = a.length;
-                if (i.group === D.rtL.HISTORY) {
-                    let e = s.find((e) => (null == e ? void 0 : e.group) === D.rtL.HISTORY);
+                if (i.group === F.rtL.HISTORY) {
+                    let e = s.find((e) => (null == e ? void 0 : e.group) === F.rtL.HISTORY);
                     if (null != e) {
                         let t = r - (o - e.results.length);
                         (0, M.$z)({
@@ -469,7 +470,7 @@ class $ extends s.PureComponent {
                         a = (0, y._m)(i.group) ? i.group : null != l && (0, y._m)(l) ? l : null,
                         u = null != (c = null != s ? s : t) ? c : a,
                         h = i.result.channel,
-                        p = u === D.dCx.FILTER_IN && null != h && h.id === I.Z.getChannelId();
+                        p = u === F.dCx.FILTER_IN && null != h && h.id === I.Z.getChannelId();
                     (0, M.bh)({
                         searchId: this.props.searchId,
                         searchQuery: v.Z.getQuery(this.props.searchId),
@@ -479,9 +480,9 @@ class $ extends s.PureComponent {
                         searchAutocompleteMode: this.props.resultsState.mode,
                         searchAutocompleteResultIndex: r,
                         searchAutocompleteTotalResults: o,
-                        isSearchFilterPrefix: e === D.Sap.EMPTY,
-                        isSearchFilterAnswer: e === D.Sap.FILTER,
-                        isSearchFilterComplete: e === D.Sap.FILTER_ALL,
+                        isSearchFilterPrefix: e === F.Sap.EMPTY,
+                        isSearchFilterAnswer: e === F.Sap.FILTER,
+                        isSearchFilterComplete: e === F.Sap.FILTER_ALL,
                         isInFilterForSelectedChannel: p,
                         searchAutocompleteSelectAction: n
                     });
@@ -504,7 +505,7 @@ class $ extends s.PureComponent {
                     l = 0;
                 null != r.token ? (l = r.token.start) : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
                 let a = null != r.token ? r.token.end : l;
-                (P.S.dispatch(D.CkL.SET_SEARCH_QUERY, {
+                (P.S.dispatch(F.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: l,
                     focus: a,
@@ -514,14 +515,14 @@ class $ extends s.PureComponent {
             }),
             U(this, 'shouldShowSearchQuery', () => {
                 let { mode: e } = this.props.resultsState;
-                return e.type !== D.Sap.FILTER && e.type !== D.Sap.EMPTY && !A.Fz(e.filter);
+                return e.type !== F.Sap.FILTER && e.type !== F.Sap.EMPTY && !A.Fz(e.filter);
             }),
             U(this, 'shouldShowSearchInSelectedChannel', () => {
                 let {
                     searchId: e,
                     resultsState: { mode: t }
                 } = this.props;
-                return e === D.aib.DMS && (0, A.R6)(e) && t.type === D.Sap.EMPTY && !A.Fz(t.filter);
+                return e === F.aib.DMS && (0, A.R6)(e) && t.type === F.Sap.EMPTY && !A.Fz(t.filter);
             }),
             U(this, 'handleSearchInChannel', (e) => {
                 var t;
@@ -532,7 +533,7 @@ class $ extends s.PureComponent {
                     searchId: s,
                     searchAutocompleteSelectAction: n
                 });
-                let l = D.dCx.FILTER_IN,
+                let l = F.dCx.FILTER_IN,
                     a = y.ZP[l],
                     i = (0, A.X3)(r),
                     o = ''.concat(null != (t = null == a ? void 0 : a.key) ? t : l.toString(), ' ').concat(i);
@@ -569,7 +570,7 @@ class $ extends s.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             U(this, 'performSearch', (e) => {
-                P.S.dispatch(D.CkL.PERFORM_SEARCH, null != e ? e : {});
+                P.S.dispatch(F.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
             U(this, 'renderAutocompletes', () => {
                 let { selectedIndex: e } = this.state,
@@ -592,7 +593,7 @@ class $ extends s.PureComponent {
                     let p = null != (o = h.groupTip) ? o : null,
                         f = null != p ? (0, r.jsx)(p, { searchId: n }) : null,
                         g = null != (c = h.component) ? c : Y,
-                        m = l.type === D.Sap.FILTER_ALL;
+                        m = l.type === F.Sap.FILTER_ALL;
                     return (0, r.jsxs)(
                         'ul',
                         {
@@ -616,7 +617,7 @@ class $ extends s.PureComponent {
                                                 showFilter: m,
                                                 onSelect: this.selectOption.bind(null, {
                                                     selectedIndex: a,
-                                                    searchAutocompleteSelectAction: F.Z.CLICK
+                                                    searchAutocompleteSelectAction: D.Z.CLICK
                                                 }),
                                                 onFocus: this.focusOption.bind(null, a)
                                             },
@@ -642,7 +643,7 @@ let ee = s.forwardRef((e, t) => {
             let e = j.Z.getGuildId(),
                 t = I.Z.getChannelId(),
                 r = x.Z.getChannel(t),
-                s = null != e ? e : n ? D.aib.DMS : t;
+                s = null != e ? e : n ? F.aib.DMS : t;
             o()(null != s, 'SearchPopout.getStateFromStores - invalid searchId');
             let l = O.Z.getState(s),
                 a = A.BU(l.autocompletes);

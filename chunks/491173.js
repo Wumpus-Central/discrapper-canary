@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(65029),
     u = n(430824),
     d = n(624138),
-    _ = n(926491),
-    f = n(373228),
+    f = n(926491),
+    _ = n(373228),
     p = n(378233),
     h = n(419922),
     m = n(388032),
@@ -23,7 +23,7 @@ let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             let i = u.Z.getGuild(e.guild_id);
             null != i && ((t = m.intl.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(s.Z, { guild: i })));
         } else if ((0, p.jl)(e)) {
-            let i = _.Z.getStickerPack(e.pack_id);
+            let i = f.Z.getStickerPack(e.pack_id);
             null != i &&
                 ((t = m.intl.format(m.t.cZOkbm, { source: i.name })),
                 (n = (0, r.jsx)(h.Z, {
@@ -44,12 +44,12 @@ let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
                 var e;
                 let { rowIndex: r, columnIndex: i } = n,
                     a = null == (e = t[r]) ? void 0 : e[i];
-                return (null == a ? void 0 : a.type) === f.al.CREATE_STICKER
+                return (null == a ? void 0 : a.type) === _.al.CREATE_STICKER
                     ? {
                           guild_id: a.guild_id,
                           name: a.name
                       }
-                    : (null == a ? void 0 : a.type) !== f.al.STICKER
+                    : (null == a ? void 0 : a.type) !== _.al.STICKER
                       ? null
                       : a.sticker;
             }, [t, n]);

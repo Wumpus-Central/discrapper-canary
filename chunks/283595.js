@@ -8,8 +8,8 @@ var r,
     c = n(85521),
     u = n(630388),
     d = n(780570),
-    _ = n(314897),
-    f = n(981631);
+    f = n(314897),
+    _ = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -101,7 +101,7 @@ function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         a = B(t, n);
-    (null != a && !a.isHidden() && u.yE(r, f.eHb.HIDDEN) && (A = !0), I.add(i));
+    (null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i));
 }
 function x(e) {
     let { libraryApplication: t } = e,
@@ -144,7 +144,7 @@ function V() {
 }
 class F extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.default);
+        this.waitFor(f.default);
         let e = s.K.get(E);
         null != e && (null == e.activeLaunchOptionIds ? N() : (S = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
     }

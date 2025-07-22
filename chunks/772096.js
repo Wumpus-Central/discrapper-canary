@@ -23,8 +23,8 @@ var s = n(159635),
     c = n(830121),
     u = n(823379),
     d = n(591759),
-    _ = n(172244),
-    f = n(571989);
+    f = n(172244),
+    _ = n(571989);
 function p(e, t, n) {
     return (
         t in e
@@ -82,8 +82,8 @@ function b(e) {
     let t = e,
         n = E.get(t);
     if (null != n) return n;
-    let r = (0, f.yx)(e),
-        i = (0, f.zq)(r),
+    let r = (0, _.yx)(e),
+        i = (0, _.zq)(r),
         a = {
             whitespaceSanitized: r,
             fullySanitized: i
@@ -91,16 +91,16 @@ function b(e) {
     return (E.set(t, a), a);
 }
 let y = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
-    O = [_.b.TEXT, _.b.UNDERLINE, _.b.STRONG, _.b.ITALICS, _.b.STRIKETHROUGH, _.b.INLINE_CODE, _.b.SPOILER, _.b.LINE_BREAK, _.b.TIMESTAMP],
-    v = [...O, _.b.EMOJI, _.b.CUSTOM_EMOJI],
-    I = [_.b.LIST, _.b.HEADING, _.b.BLOCK_QUOTE, _.b.SUBTEXT],
-    T = [_.b.TEXT],
-    S = [_.b.UNDERLINE, _.b.STRONG, _.b.ITALICS, _.b.STRIKETHROUGH, _.b.INLINE_CODE, _.b.SPOILER, _.b.LINE_BREAK, _.b.TIMESTAMP, _.b.EMOJI, _.b.CUSTOM_EMOJI, _.b.LIST, _.b.HEADING, _.b.BLOCK_QUOTE, _.b.SUBTEXT];
+    O = [f.b.TEXT, f.b.UNDERLINE, f.b.STRONG, f.b.ITALICS, f.b.STRIKETHROUGH, f.b.INLINE_CODE, f.b.SPOILER, f.b.LINE_BREAK, f.b.TIMESTAMP],
+    v = [...O, f.b.EMOJI, f.b.CUSTOM_EMOJI],
+    I = [f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT],
+    T = [f.b.TEXT],
+    S = [f.b.UNDERLINE, f.b.STRONG, f.b.ITALICS, f.b.STRIKETHROUGH, f.b.INLINE_CODE, f.b.SPOILER, f.b.LINE_BREAK, f.b.TIMESTAMP, f.b.EMOJI, f.b.CUSTOM_EMOJI, f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT];
 function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
-        if (r.type === _.b.INLINE_CODE) {
+        if (r.type === f.b.INLINE_CODE) {
             let e = [...t, ...n];
             if (null == A(r.validationChildContent, e)) return null;
         }
@@ -112,33 +112,33 @@ function N(e) {
     let t = '';
     for (let n of e)
         switch (n.type) {
-            case _.b.TEXT:
-            case _.b.INLINE_CODE:
+            case f.b.TEXT:
+            case f.b.INLINE_CODE:
                 t += n.content;
                 break;
-            case _.b.CUSTOM_EMOJI:
+            case f.b.CUSTOM_EMOJI:
                 t += n.name;
                 break;
-            case _.b.EMOJI:
+            case f.b.EMOJI:
                 t += n.surrogate;
                 break;
-            case _.b.LINE_BREAK:
+            case f.b.LINE_BREAK:
                 t += '\n';
                 break;
-            case _.b.STRONG:
-            case _.b.ITALICS:
-            case _.b.UNDERLINE:
-            case _.b.STRIKETHROUGH:
-            case _.b.SPOILER:
+            case f.b.STRONG:
+            case f.b.ITALICS:
+            case f.b.UNDERLINE:
+            case f.b.STRIKETHROUGH:
+            case f.b.SPOILER:
                 t += N(n.content);
                 break;
-            case _.b.TIMESTAMP:
+            case f.b.TIMESTAMP:
                 t += '<timestamp>';
                 break;
-            case _.b.BLOCK_QUOTE:
-            case _.b.LIST:
-            case _.b.HEADING:
-            case _.b.SUBTEXT:
+            case f.b.BLOCK_QUOTE:
+            case f.b.LIST:
+            case f.b.HEADING:
+            case f.b.SUBTEXT:
                 t += '<'.concat(n.type, 'Content>');
                 break;
             default:
@@ -162,9 +162,9 @@ function R(e) {
             r = null != (t = n.protocol) ? t : '';
         if (!y.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
-        let i = (0, f.MO)(n);
+        let i = (0, _.MO)(n);
         ((n.username = ''), (n.password = ''));
-        let a = (0, f.MO)(n);
+        let a = (0, _.MO)(n);
         return {
             target: i,
             displayTarget: a
@@ -178,15 +178,15 @@ let P = g(h({}, l().defaultRules.link), {
     parse(e, t, n) {
         let [r, a, o, s] = e,
             u = () => ({
-                type: _.b.TEXT,
+                type: f.b.TEXT,
                 content: r
             });
         if (C(o)) return u();
         let d = b(o),
-            f = b(a),
+            _ = b(a),
             p = b(null != s ? s : ''),
             m = d.whitespaceSanitized,
-            E = f.fullySanitized,
+            E = _.fullySanitized,
             y = p.fullySanitized,
             P = E.trim();
         if (0 === m.trim().length || 0 === P.length) return u();
@@ -201,11 +201,11 @@ let P = g(h({}, l().defaultRules.link), {
             M = n.allowEmojiLinks ? v : O,
             k = [...M, ...I],
             j = [...T, ...S],
-            U = A(t(E, x), k, [_.b.EMOJI]),
+            U = A(t(E, x), k, [f.b.EMOJI]),
             G = A(t(y, x), j);
         if (null == U || null == G || 0 === N(U).trim().length) return u();
         let B = i().pick(t.rules, M),
-            V = l().parserFor(B)(f.whitespaceSanitized, x),
+            V = l().parserFor(B)(_.whitespaceSanitized, x),
             F = p.whitespaceSanitized,
             { target: Z } = w;
         return {

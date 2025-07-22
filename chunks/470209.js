@@ -1,15 +1,16 @@
-A.d(t, { Z: () => h });
+A.d(t, { Z: () => m });
 var n = A(255367),
     r = A(73800),
     a = A(512722),
     l = A.n(a),
     i = A(866442),
-    o = A(481060),
-    s = A(313201),
-    c = A(981631),
-    d = A(388032),
-    u = A(143886);
-function f(e) {
+    o = A(755721),
+    s = A(481060),
+    c = A(313201),
+    d = A(981631),
+    u = A(388032),
+    f = A(143886);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(A);
@@ -34,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,58 +53,58 @@ function g(e, t) {
         e
     );
 }
-let p = (0, s.hQ)();
-function h(e) {
+let h = (0, c.hQ)();
+function m(e) {
     let { newRoleParams: t, setNewRoleParams: A } = e,
         a = r.useRef(null),
-        { name: s, color: h } = t,
-        m = (e) => A((t) => (l()(null != t, 'newRoleParams should be defined'), g(f({}, t), { color: e })));
+        { name: c, color: m } = t,
+        b = (e) => A((t) => (l()(null != t, 'newRoleParams should be defined'), p(g({}, t), { color: e })));
     return (0, n.jsxs)('div', {
-        className: u.roleInputContainer,
+        className: f.roleInputContainer,
         children: [
-            (0, n.jsx)(o.oil, {
+            (0, n.jsx)(o.Is, {
                 autoFocus: !0,
-                value: s,
-                onChange: (e) => A((t) => (l()(null != t, 'newRoleParams should be defined'), g(f({}, t), { name: e }))),
-                id: p,
-                placeholder: d.intl.string(d.t.oNauur),
-                maxLength: c.VKK,
-                inputClassName: u.input
+                value: c,
+                onChange: (e) => A((t) => (l()(null != t, 'newRoleParams should be defined'), p(g({}, t), { name: e }))),
+                id: h,
+                placeholder: u.intl.string(u.t.oNauur),
+                maxLength: d.VKK,
+                inputClassName: f.input
             }),
             (0, n.jsxs)('div', {
-                className: u.roleColorContainer,
+                className: f.roleColorContainer,
                 children: [
-                    (0, n.jsx)(o.nn4, { children: d.intl.format(d.t['Vlq/pK'], { color: (0, i.Rf)(h) }) }),
+                    (0, n.jsx)(s.nn4, { children: u.intl.format(u.t['Vlq/pK'], { color: (0, i.Rf)(m) }) }),
                     (0, n.jsx)('div', {
-                        className: u.roleColorPreview,
-                        style: { backgroundColor: (0, i.Rf)(h) }
+                        className: f.roleColorPreview,
+                        style: { backgroundColor: (0, i.Rf)(m) }
                     }),
-                    (0, n.jsx)(o.LZC, {
+                    (0, n.jsx)(s.LZC, {
                         size: 8,
                         horizontal: !0
                     }),
-                    (0, n.jsx)(o.yRy, {
+                    (0, n.jsx)(s.yRy, {
                         targetElementRef: a,
                         renderPopout: (e) =>
                             (0, n.jsx)(
-                                o.Z$W,
-                                g(f({}, e), {
-                                    value: h,
-                                    onChange: m
+                                s.Z$W,
+                                p(g({}, e), {
+                                    value: m,
+                                    onChange: b
                                 })
                             ),
                         children: (e) =>
                             (0, n.jsx)(
-                                o.P3F,
-                                g(f({}, e), {
+                                s.P3F,
+                                p(g({}, e), {
                                     innerRef: a,
                                     tag: 'span',
-                                    'aria-label': d.intl.string(d.t.QLgdlZ),
-                                    className: u.dropperIconContainer,
-                                    children: (0, n.jsx)(o.ilE, {
+                                    'aria-label': u.intl.string(u.t.QLgdlZ),
+                                    className: f.dropperIconContainer,
+                                    children: (0, n.jsx)(s.ilE, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: u.dropperIcon
+                                        className: f.dropperIcon
                                     })
                                 })
                             )

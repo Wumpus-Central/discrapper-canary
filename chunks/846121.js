@@ -56,8 +56,8 @@ function c(e, t) {
 }
 let u = {},
     d = {},
-    _ = new Set();
-function f(e) {
+    f = new Set();
+function _(e) {
     let { guildId: t, channelId: n } = e;
     d = c(s({}, d), { [t]: c(s({}, d[t]), { [n]: !0 }) });
 }
@@ -67,15 +67,15 @@ function p(e) {
         d[n] = u;
         return;
     }
-    ((d[n] = t), _.delete(n));
+    ((d[n] = t), f.delete(n));
 }
 function h(e) {
     let { guildId: t } = e;
-    _.add(t);
+    f.add(t);
 }
 function m(e) {
     let { guildId: t } = e;
-    _.delete(t);
+    f.delete(t);
 }
 function g(e) {
     let { guild: t } = e;
@@ -100,7 +100,7 @@ class b extends (r = i.ZP.Store) {
             ? {}
             : {
                   completedActions: d[e],
-                  loading: _.has(e)
+                  loading: f.has(e)
               };
     }
 }
@@ -110,6 +110,6 @@ let y = new b(a.Z, {
     GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: p,
     GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,
     GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: E,
-    COMPLETE_NEW_MEMBER_ACTION: f,
+    COMPLETE_NEW_MEMBER_ACTION: _,
     GUILD_DELETE: g
 });

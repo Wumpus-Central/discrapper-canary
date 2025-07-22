@@ -1,15 +1,16 @@
-(r.d(t, { default: () => _ }), r(388685));
+(r.d(t, { default: () => C }), r(388685));
 var n = r(255367),
     i = r(73800),
-    s = r(481060),
-    o = r(816814),
-    a = r(600164),
-    c = r(198993),
-    l = r(594174),
-    d = r(287880),
-    u = r(388032),
-    h = r(366293);
-function p(e, t, r) {
+    s = r(755721),
+    o = r(481060),
+    a = r(816814),
+    c = r(600164),
+    l = r(198993),
+    d = r(594174),
+    u = r(287880),
+    h = r(388032),
+    p = r(366293);
+function g(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,56 +23,56 @@ function p(e, t, r) {
         e
     );
 }
-let g = (e) => {
-    let { image: t, label: r, text: i, children: o } = e;
-    return (0, n.jsxs)(a.Z, {
-        className: h.spacing,
+let f = (e) => {
+    let { image: t, label: r, text: i, children: s } = e;
+    return (0, n.jsxs)(c.Z, {
+        className: p.spacing,
         children: [
-            (0, n.jsx)(a.Z, {
+            (0, n.jsx)(c.Z, {
                 grow: 0,
                 shrink: 0,
                 basis: '156px',
-                justify: a.Z.Justify.CENTER,
-                className: h.image,
+                justify: c.Z.Justify.CENTER,
+                className: p.image,
                 children: t
             }),
-            (0, n.jsx)(a.Z, {
-                direction: a.Z.Direction.VERTICAL,
-                justify: a.Z.Justify.CENTER,
+            (0, n.jsx)(c.Z, {
+                direction: c.Z.Direction.VERTICAL,
+                justify: c.Z.Justify.CENTER,
                 children: (0, n.jsxs)('div', {
                     children: [
-                        (0, n.jsx)(s.vwX, {
+                        (0, n.jsx)(o.vwX, {
                             tag: 'h5',
-                            className: h.headerSpacing,
+                            className: p.headerSpacing,
                             children: r
                         }),
-                        (0, n.jsx)(s.R94, {
-                            type: s.R94.Types.DESCRIPTION,
+                        (0, n.jsx)(o.R94, {
+                            type: o.R94.Types.DESCRIPTION,
                             children: i
                         }),
-                        o
+                        s
                     ]
                 })
             })
         ]
     });
 };
-class f extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
         var e;
         let { transitionState: t, onClose: i } = this.props,
-            { totpSecret: o, code: p, isVerifying: f } = this.state,
-            _ = null == (e = l.default.getCurrentUser()) ? void 0 : e.email,
-            C = (0, d.U0)(null != _ ? _ : '', o),
-            E = (0, n.jsx)('form', {
+            { totpSecret: a, code: g, isVerifying: _ } = this.state,
+            C = null == (e = d.default.getCurrentUser()) ? void 0 : e.email,
+            E = (0, u.U0)(null != C ? C : '', a),
+            S = (0, n.jsx)('form', {
                 onSubmit: this.handleActivate,
-                children: (0, n.jsxs)(a.Z, {
-                    className: h.inputContainer,
-                    align: a.Z.Align.START,
+                children: (0, n.jsxs)(c.Z, {
+                    className: p.inputContainer,
+                    align: c.Z.Align.START,
                     children: [
-                        (0, n.jsx)(s.oil, {
-                            value: p,
-                            className: h.input,
+                        (0, n.jsx)(s.Is, {
+                            value: g,
+                            className: p.input,
                             placeholder: '000 000',
                             maxLength: 7,
                             autoComplete: 'one-time-code',
@@ -79,95 +80,95 @@ class f extends i.PureComponent {
                             error: this.state.error,
                             autoFocus: !0
                         }),
-                        (0, n.jsx)(a.Z.Child, {
+                        (0, n.jsx)(c.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, n.jsx)(s.zxk, {
+                            children: (0, n.jsx)(o.zxk, {
                                 variant: 'primary',
-                                text: u.intl.string(u.t['/a5+YW']),
+                                text: h.intl.string(h.t['/a5+YW']),
                                 type: 'submit',
-                                loading: f
+                                loading: _
                             })
                         })
                     ]
                 })
             });
-        return (0, n.jsxs)(s.Y0X, {
+        return (0, n.jsxs)(o.Y0X, {
             transitionState: t,
-            size: s.CgR.DYNAMIC,
-            className: h.customWidth,
+            size: o.CgR.DYNAMIC,
+            className: p.customWidth,
             parentComponent: 'MFAEnable',
             children: [
-                (0, n.jsxs)(s.xBx, {
+                (0, n.jsxs)(o.xBx, {
                     separator: !1,
                     children: [
-                        (0, n.jsxs)(a.Z.Child, {
+                        (0, n.jsxs)(c.Z.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [
-                                (0, n.jsx)(s.X6q, {
+                                (0, n.jsx)(o.X6q, {
                                     variant: 'heading-lg/semibold',
-                                    children: u.intl.string(u.t.cDgKtb)
+                                    children: h.intl.string(h.t.cDgKtb)
                                 }),
-                                (0, n.jsx)(s.Text, {
+                                (0, n.jsx)(o.Text, {
                                     variant: 'text-xs/normal',
-                                    className: h.subHeader,
-                                    children: u.intl.string(u.t['7NGwtL'])
+                                    className: p.subHeader,
+                                    children: h.intl.string(h.t['7NGwtL'])
                                 })
                             ]
                         }),
-                        (0, n.jsx)(a.Z.Child, {
+                        (0, n.jsx)(c.Z.Child, {
                             grow: 0,
-                            children: (0, n.jsx)(s.olH, { onClick: i })
+                            children: (0, n.jsx)(o.olH, { onClick: i })
                         })
                     ]
                 }),
-                (0, n.jsxs)(s.hzk, {
+                (0, n.jsxs)(o.hzk, {
                     children: [
-                        (0, n.jsx)(g, {
+                        (0, n.jsx)(f, {
                             image: (0, n.jsx)('img', {
                                 alt: '',
                                 src: r(340061),
                                 width: 100,
                                 height: 100
                             }),
-                            label: u.intl.string(u.t['9E74Dw']),
-                            text: u.intl.format(u.t.A7Aeh4, {
+                            label: h.intl.string(h.t['9E74Dw']),
+                            text: h.intl.format(h.t.A7Aeh4, {
                                 googleAuthURL: 'https://support.google.com/accounts/answer/1066447?hl=en',
                                 authyURL: 'https://www.authy.com/'
                             })
                         }),
-                        (0, n.jsx)(s.$i$, { className: h.divider }),
-                        (0, n.jsx)(g, {
-                            image: (0, n.jsx)(c.ZP, { text: C }),
-                            label: u.intl.string(u.t['91InFx']),
-                            text: u.intl.string(u.t.hFeBkp),
+                        (0, n.jsx)(o.$i$, { className: p.divider }),
+                        (0, n.jsx)(f, {
+                            image: (0, n.jsx)(l.ZP, { text: E }),
+                            label: h.intl.string(h.t['91InFx']),
+                            text: h.intl.string(h.t.hFeBkp),
                             children: (0, n.jsxs)('div', {
-                                className: h.topSpacing,
+                                className: p.topSpacing,
                                 children: [
-                                    (0, n.jsx)(s.vwX, {
+                                    (0, n.jsx)(o.vwX, {
                                         tag: 'h5',
-                                        className: h.headerSpacing,
-                                        children: u.intl.string(u.t['76IPws'])
+                                        className: p.headerSpacing,
+                                        children: h.intl.string(h.t['76IPws'])
                                     }),
-                                    (0, n.jsx)(s.Text, {
+                                    (0, n.jsx)(o.Text, {
                                         variant: 'text-md/normal',
-                                        className: h.secret,
+                                        className: p.secret,
                                         selectable: !0,
-                                        children: o
+                                        children: a
                                     })
                                 ]
                             })
                         }),
-                        (0, n.jsx)(s.$i$, { className: h.divider }),
-                        (0, n.jsx)(g, {
+                        (0, n.jsx)(o.$i$, { className: p.divider }),
+                        (0, n.jsx)(f, {
                             image: (0, n.jsx)('img', {
                                 alt: '',
                                 src: r(308777)
                             }),
-                            label: u.intl.string(u.t['SaD/LS']),
-                            text: u.intl.string(u.t.vI1ziY),
-                            children: E
+                            label: h.intl.string(h.t['SaD/LS']),
+                            text: h.intl.string(h.t.vI1ziY),
+                            children: S
                         })
                     ]
                 })
@@ -176,22 +177,22 @@ class f extends i.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            p(this, 'state', {
+            g(this, 'state', {
                 code: '',
-                totpSecret: (0, d.bV)(),
+                totpSecret: (0, u.bV)(),
                 error: null,
                 isVerifying: !1
             }),
-            p(this, 'handleCodeChange', (e) => {
+            g(this, 'handleCodeChange', (e) => {
                 this.setState({ code: e });
             }),
-            p(this, 'handleActivate', (e) => {
+            g(this, 'handleActivate', (e) => {
                 e.preventDefault();
                 let { totpSecret: t, code: r } = this.state;
                 (this.setState({ isVerifying: !0 }),
-                    o.Z.enable({
+                    a.Z.enable({
                         code: r,
-                        secret: (0, d.Qe)(t)
+                        secret: (0, u.Qe)(t)
                     }).then(this.handleActivateSuccess, (e) =>
                         this.setState({
                             error: e.body.message,
@@ -199,10 +200,10 @@ class f extends i.PureComponent {
                         })
                     ));
             }),
-            p(this, 'handleActivateSuccess', () => {
+            g(this, 'handleActivateSuccess', () => {
                 let { onClose: e, handleEnableMFASuccess: t } = this.props;
                 (this.setState({ isVerifying: !1 }), t(), null == e || e());
             }));
     }
 }
-let _ = f;
+let C = _;

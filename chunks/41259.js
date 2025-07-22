@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(385499),
     u = n(768581),
     d = n(630388),
-    _ = n(489863),
-    f = n(713938),
+    f = n(489863),
+    _ = n(713938),
     p = n(314583),
     h = n(981631),
     m = n(182294),
@@ -25,7 +25,7 @@ function b(e) {
         A = u.ZP.getUserAvatarURL(t),
         N = i.useMemo(
             () =>
-                I.some((e) => (0, f.sg)(e))
+                I.some((e) => (0, _.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.x, {
@@ -126,7 +126,7 @@ function b(e) {
                               (0, r.jsx)(s.P, {
                                   tag: 'a',
                                   className: E.logoutLink,
-                                  onClick: () => (0, _.c$)(v, 'oauth2_logout'),
+                                  onClick: () => (0, f.c$)(v, 'oauth2_logout'),
                                   children: g.intl.string(g.t['yV/hjI'])
                               })
                           ]

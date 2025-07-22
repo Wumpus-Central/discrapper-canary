@@ -62,28 +62,28 @@ function C(e, t) {
     );
 }
 function v(e) {
-    let { transitionState: t, onClose: a, ticket: l, challenge: c } = e,
-        m = (0, d.Dt)(),
-        [b, O] = r.useState(''),
-        [C, v] = r.useState(!0),
-        [S, T] = r.useState(x.x.INIT),
-        [N, I] = r.useState(''),
-        [y, A] = r.useState(null),
-        P = async () => {
+    let { transitionState: t, onClose: a, ticket: c, challenge: m } = e,
+        b = (0, d.Dt)(),
+        [O, C] = r.useState(''),
+        [v, S] = r.useState(!0),
+        [T, N] = r.useState(x.x.INIT),
+        [I, y] = r.useState(''),
+        [A, P] = r.useState(null),
+        R = async () => {
             let e;
-            T(x.x.REGISTER);
-            let t = p.isPlatformEmbedded && h.ZP.supportsFeature(_.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            N(x.x.REGISTER);
+            let t = p.isPlatformEmbedded && h.ZP.supportsFeature(_.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(m) : s.Ue(JSON.parse(m)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                (g.Z.captureException(e), A(j.intl.string(j.t.xSCvBQ)), T(x.x.INIT));
+                (g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), N(x.x.INIT));
                 return;
             }
-            (I(e), T(x.x.NAME));
+            (y(e), N(x.x.NAME));
         };
     return (0, i.jsxs)(o.Y0X, {
         transitionState: t,
-        'aria-labelledby': m,
+        'aria-labelledby': b,
         parentComponent: 'UserSettingsWebAuthn',
         children: [
             (0, i.jsxs)(o.xBx, {
@@ -91,9 +91,9 @@ function v(e) {
                 separator: !1,
                 children: [
                     (0, i.jsxs)(o.X6q, {
-                        id: m,
+                        id: b,
                         variant: 'heading-lg/semibold',
-                        children: [S === x.x.INIT && j.intl.string(j.t.vrOCCg), S === x.x.REGISTER && j.intl.string(j.t.wePEBA), S === x.x.NAME && j.intl.string(j.t['cY/IOj'])]
+                        children: [T === x.x.INIT && j.intl.string(j.t.vrOCCg), T === x.x.REGISTER && j.intl.string(j.t.wePEBA), T === x.x.NAME && j.intl.string(j.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(o.olH, {
                         onClick: a,
@@ -102,7 +102,7 @@ function v(e) {
                 ]
             }),
             (0, i.jsxs)(o.MyZ, {
-                activeSlide: S,
+                activeSlide: T,
                 width: 440,
                 children: [
                     (0, i.jsxs)(o.Mi4, {
@@ -120,11 +120,11 @@ function v(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         children:
-                                            null != y &&
+                                            null != A &&
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-md/normal',
                                                 color: 'status-danger',
-                                                children: y
+                                                children: A
                                             })
                                     }),
                                     (0, i.jsx)('div', {
@@ -139,7 +139,7 @@ function v(e) {
                                 children: (0, i.jsx)(o.zxk, {
                                     variant: 'primary',
                                     text: j.intl.string(j.t.oibaQU),
-                                    onClick: P
+                                    onClick: R
                                 })
                             })
                         ]
@@ -179,13 +179,13 @@ function v(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 (e.preventDefault(),
-                                    (0, f.Sr)(b, l, N)
+                                    (0, f.Sr)(O, c, I)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            (A(j.intl.string(j.t.fEptJC)), T(x.x.INIT));
+                                            (P(j.intl.string(j.t.fEptJC)), N(x.x.INIT));
                                         }));
                             },
                             children: [
@@ -205,11 +205,11 @@ function v(e) {
                                                     variant: 'text-md/normal',
                                                     children: j.intl.string(j.t['Jzd+z8'])
                                                 }),
-                                                (0, i.jsx)(o.oil, {
+                                                (0, i.jsx)(l.Is, {
                                                     className: E.input,
-                                                    value: b,
+                                                    value: O,
                                                     onChange: (e) => {
-                                                        (O(e), v(0 === e.length));
+                                                        (C(e), S(0 === e.length));
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -227,13 +227,13 @@ function v(e) {
                                                 variant: 'primary',
                                                 text: j.intl.string(j.t['5dyZ1d']),
                                                 type: 'submit',
-                                                disabled: C
+                                                disabled: v
                                             }),
                                             (0, i.jsx)(o.zxk, {
                                                 variant: 'secondary',
                                                 text: j.intl.string(j.t['13/7kZ']),
                                                 onClick: () => {
-                                                    T(x.x.INIT);
+                                                    N(x.x.INIT);
                                                 }
                                             })
                                         ]

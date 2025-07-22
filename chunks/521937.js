@@ -40,7 +40,7 @@ function m(e) {
                         className: x.text,
                         children: h.intl.string(h.t.xRHk7e)
                     }),
-                    (0, a.jsx)(d.oil, {
+                    (0, a.jsx)(c.Is, {
                         placeholder: h.intl.formatToPlainString(h.t['0tbz6+'], { number: p.A.USER_CODE_LENGTH }),
                         maxLength: p.A.USER_CODE_LENGTH,
                         className: x.textInputContainer,

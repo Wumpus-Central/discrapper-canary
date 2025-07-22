@@ -426,38 +426,38 @@ function J(e) {
 }
 function $(e) {
     var t;
-    let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: o, error: s, disabled: u, isGeneratingAI: p, enableAIFeatures: h, renderAiGenerateButton: f } = e,
-        m = null != (t = l.name) ? t : '',
-        g = (0, L.Op)(s, { content: m }),
-        b = (0, k.Od)(n, i),
-        _ = null != i && !h,
-        y = (0, v.Dt)(),
-        C = h ? V.intl.string(V.t['Nb2/RE']) : '' !== b ? b : V.intl.string(V.t['Nb2/RE']);
+    let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: o, error: u, disabled: p, isGeneratingAI: h, enableAIFeatures: f, renderAiGenerateButton: m } = e,
+        g = null != (t = l.name) ? t : '',
+        b = (0, L.Op)(u, { content: g }),
+        _ = (0, k.Od)(n, i),
+        y = null != i && !f,
+        C = (0, v.Dt)(),
+        x = f ? V.intl.string(V.t['Nb2/RE']) : '' !== _ ? _ : V.intl.string(V.t['Nb2/RE']);
     return (0, r.jsx)(c.hjN, {
         tag: 'label',
-        htmlFor: y,
-        title: V.intl.string(_ ? V.t.JPvIiI : V.t.j3XWjI),
+        htmlFor: C,
+        title: V.intl.string(y ? V.t.JPvIiI : V.t.j3XWjI),
         className: z.formSection,
         children: (0, r.jsxs)('div', {
             className: z.threadNameContainer,
             children: [
-                (0, r.jsx)(c.oil, {
-                    value: m,
-                    id: y,
-                    placeholder: C,
+                (0, r.jsx)(s.Is, {
+                    value: g,
+                    id: C,
+                    placeholder: x,
                     maxLength: G.HN8,
                     onChange: (e) => {
                         (o({ name: (0, U.Z)(e, !1) }), '' !== e ? d.Z.startTyping(n.id) : d.Z.stopTyping(n.id));
                     },
                     onBlur: () => {
-                        let e = (0, U.Z)(m, !0);
-                        e !== m && o({ name: e });
+                        let e = (0, U.Z)(g, !0);
+                        e !== g && o({ name: e });
                     },
-                    error: g,
-                    disabled: u || p,
-                    inputClassName: a()({ [z.threadNameInputWithAI]: h })
+                    error: b,
+                    disabled: p || h,
+                    inputClassName: a()({ [z.threadNameInputWithAI]: f })
                 }),
-                f(u)
+                m(p)
             ]
         })
     });

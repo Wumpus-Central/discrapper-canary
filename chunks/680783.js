@@ -13,8 +13,8 @@ function u(e) {
         }),
         { previewWallpaperId: n, activePickerChannelId: u } = (0, l.B)(),
         d = (0, c.P)(null == t ? void 0 : t.setterId),
-        _ = (0, i.wj)((0, a.ZP)()),
-        f = (0, s.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
+        f = (0, i.wj)((0, a.ZP)()),
+        _ = (0, s.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
         p = s.qM.useExperiment({ location: 'ChatWallpaperSetSystemMessage' });
     return null == e
         ? void 0
@@ -23,12 +23,12 @@ function u(e) {
                 wallpaperId: n,
                 setterId: void 0,
                 isPreview: !0,
-                isViewable: f
+                isViewable: _
             }
           : void 0 !== t
             ? {
                   wallpaperId: t.wallpaperId,
-                  isViewable: f && d && (_ || p.lightMode)
+                  isViewable: _ && d && (f || p.lightMode)
               }
             : void 0;
 }

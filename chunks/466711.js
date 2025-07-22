@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(644916),
-    _ = n(243778),
-    f = n(963249),
+    f = n(243778),
+    _ = n(963249),
     p = n(802408),
     h = n(819640),
     m = n(594174),
@@ -150,13 +150,13 @@ function L(e) {
         C = null != N ? E.default.age(N.id) : 0,
         { giftBoxAnimation: R, trinketsAnimation: L } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         x = null != n.firstTimeNotice && !s && A && C >= D,
-        [M, k] = (0, _.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        [M, k] = (0, f.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         j = null != M,
         U = I || j,
         G = (0, b.Ft)(g);
     if (s) return null;
     let B = () => {
-            (0, f.Z)({
+            (0, _.Z)({
                 isGift: !0,
                 giftRecipient: null == G ? void 0 : G,
                 initialPlanId: null,
