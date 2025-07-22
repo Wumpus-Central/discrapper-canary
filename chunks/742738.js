@@ -8,8 +8,8 @@ var r,
     c = n(430824),
     u = n(19780),
     d = n(944486),
-    f = n(700785),
-    _ = n(565799),
+    _ = n(700785),
+    f = n(565799),
     p = n(501655),
     h = n(750154),
     m = n(427679),
@@ -37,15 +37,15 @@ function v() {
     let u = m.Z.getStageInstanceByChannel(s);
     if (null == u) return null;
     let y = l.Z.getChannel(s);
-    if (null == y || !f.oz(b.Plq.VIEW_CHANNEL, y)) return null;
+    if (null == y || !_.oz(b.Plq.VIEW_CHANNEL, y)) return null;
     let v = c.Z.getGuild(y.getGuildId());
     if (null == v || !v.features.has(b.oNc.DISCOVERABLE)) return null;
     let I = (0, h.Lw)(y, u),
         T = (null == O || null == (e = O.party) ? void 0 : e.id) === I ? O : null,
-        S = _.Z.getMutableParticipants(y.id, p.pV.SPEAKER),
+        S = f.Z.getMutableParticipants(y.id, p.pV.SPEAKER),
         A = S.filter((e) => e.type === p.Ui.STREAM).length,
         N = S.length - A,
-        C = _.Z.getParticipantCount(s) - A,
+        C = f.Z.getParticipantCount(s) - A,
         R = (null == T || null == (t = T.party) ? void 0 : t.size) != null ? T.party.size[1] : 0;
     return {
         application_id: E.gD,

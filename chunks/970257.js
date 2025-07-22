@@ -1,7 +1,7 @@
 n.d(t, {
     Fi: () => c,
     a4: () => u,
-    vc: () => f
+    vc: () => _
 });
 var r = n(592125),
     i = n(650774),
@@ -28,6 +28,6 @@ function d(e) {
     }
     return !1;
 }
-function f(e) {
+function _(e) {
     return null != e && u(e) && d(e.getChannelId());
 }

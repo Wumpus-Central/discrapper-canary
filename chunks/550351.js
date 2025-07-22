@@ -8,14 +8,14 @@ var r = n(594190),
     c = n(979651),
     u = n(709054),
     d = n(356659),
-    f = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    f = n(388032);
 function p(e) {
     var t, n;
     if (null != e) {
         let { ownerId: t } = i.my(e);
         if (t !== o.default.getId()) {
-            let e = s.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
+            let e = s.Z.getActivities(t).find((e) => e.type === _.IIU.PLAYING);
             return {
                 sourceName: null == e ? void 0 : e.name,
                 sourceApplicationId: null == e ? void 0 : e.application_id
@@ -39,7 +39,7 @@ function h(e) {
         {
             id: u.default.fromTimestamp(Date.now()),
             version: d.Bg,
-            applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
+            applicationName: null != t ? t : f.intl.string(f.t.qtSJxc),
             applicationId: n,
             users: i,
             clipMethod: 'manual',

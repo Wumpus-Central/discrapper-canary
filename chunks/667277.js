@@ -8,8 +8,8 @@ var r = n(393655),
     c = n(198050),
     u = n(217224),
     d = n(951516),
-    f = n(608297),
-    _ = n(416778),
+    _ = n(608297),
+    f = n(416778),
     p = n(633605);
 function h(e) {
     return (h =
@@ -126,7 +126,7 @@ function S(e, t, n, g) {
             weekStartsOn: C,
             locale: S
         },
-        q = [new f.GT()],
+        q = [new _.GT()],
         X = O.match(y)
             .map(function (e) {
                 var t = e[0];
@@ -141,7 +141,7 @@ function S(e, t, n, g) {
             var t = K.value;
             (!(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e));
             var n = t[0],
-                r = _.f[n];
+                r = f.f[n];
             if (r) {
                 var i = r.incompatibleTokens;
                 if (Array.isArray(i)) {

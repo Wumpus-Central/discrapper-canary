@@ -72,11 +72,11 @@ function s(e, t) {
         let { channelId: t, messages: n } = e;
         (a.add(t), null == r || r(), n.forEach((e) => s(e)));
     }
-    function f(e) {
+    function _(e) {
         let { messages: n } = e;
         (null == r || r(), n.forEach((e) => t(e)));
     }
-    function _(e) {
+    function f(e) {
         let { pins: n } = e;
         (null == r || r(),
             n.forEach((e) => {
@@ -99,8 +99,8 @@ function s(e, t) {
         MESSAGE_UPDATE: u,
         LOAD_MESSAGES_SUCCESS: d,
         LOAD_MESSAGES_AROUND_SUCCESS: d,
-        LOAD_RECENT_MENTIONS_SUCCESS: f,
-        LOAD_PINNED_MESSAGES_SUCCESS: _,
+        LOAD_RECENT_MENTIONS_SUCCESS: _,
+        LOAD_PINNED_MESSAGES_SUCCESS: f,
         SEARCH_FINISH: p,
         MOD_VIEW_SEARCH_FINISH: p,
         CHANNEL_SELECT: {

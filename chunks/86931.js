@@ -1,7 +1,4 @@
 e.exports = {
-    returnButton: 'returnButton_c791b2',
-    returnButtonText: 'returnButtonText_c791b2',
-    returnIcon: 'returnIcon_c791b2',
     container: 'container_c791b2',
     page: 'page_c791b2',
     header: 'header_c791b2',

@@ -19,13 +19,13 @@ e.exports = function (e, t) {
         ? function (r, o) {
               var s = c(arguments.length, 1) > n,
                   d = a(r) ? r : u(r),
-                  f = s ? l(arguments, n) : [],
-                  _ = s
+                  _ = s ? l(arguments, n) : [],
+                  f = s
                       ? function () {
-                            i(d, this, f);
+                            i(d, this, _);
                         }
                       : d;
-              return t ? e(_, o) : e(_);
+              return t ? e(f, o) : e(f);
           }
         : e;
 };

@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -71,7 +71,7 @@ let p = 'daily_cap',
         seenForGuildId: new Map()
     };
 function g() {
-    m = _(d({}, m), {
+    m = f(d({}, m), {
         dismissibleContentSeenDuringSession: new Set(),
         renderedAtTimestamps: new Map(),
         seenForGuildId: new Map()

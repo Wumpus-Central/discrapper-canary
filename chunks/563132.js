@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(442837),
     u = n(211266),
     d = n(115130),
-    f = n(566620),
-    _ = n(317381),
+    _ = n(566620),
+    f = n(317381),
     p = n(728345),
     h = n(211242),
     m = n(975298),
@@ -109,8 +109,8 @@ function Q(e) {
         eu = null == ec ? void 0 : ec.eligiblePaymentGateways,
         {
             paymentSources: ed,
-            hasPaymentSources: ef,
-            paymentSourceId: e_,
+            hasPaymentSources: e_,
+            paymentSourceId: ef,
             setPaymentSourceId: ep,
             hasFetchedPaymentSources: eh
         } = (0, D.Z)({
@@ -118,7 +118,7 @@ function Q(e) {
             activeSubscription: H,
             eligiblePaymentGateways: eu
         }),
-        em = i.useRef(ef),
+        em = i.useRef(e_),
         {
             hasFetchedSubscriptionPlans: eg,
             priceOptions: eE,
@@ -128,7 +128,7 @@ function Q(e) {
         } = (0, P.Z)({
             activeSubscription: H,
             skuIDs: X,
-            paymentSourceId: e_,
+            paymentSourceId: ef,
             isGift: Q,
             excludeSubscriptionPlansBySKU: er
         }),
@@ -180,7 +180,7 @@ function Q(e) {
     (i.useEffect(() => {
         null != tr.current || tn.isSame(s()(0)) || (tr.current = tn);
     }, [tn]),
-        (0, R.m)(el, e_));
+        (0, R.m)(el, ef));
     let {
             skusById: ti,
             hasFetchedSkus: ta,
@@ -189,27 +189,27 @@ function Q(e) {
         } = (0, j.Z)({
             applicationId: null != et ? et : F.CL,
             skuIDs: X,
-            currentPaymentSourceId: e_,
+            currentPaymentSourceId: ef,
             isGift: Q,
             excludeSKUPurchasePreviews: ei
         }),
         tl = ti[null != eU ? eU : ''],
         tc = null != eU ? ts[eU] : null,
         [tu, td] = i.useState(tc),
-        tf = i.useMemo(() => {
+        t_ = i.useMemo(() => {
             if (null == eU) return null;
             let e = to[eU];
-            return null == e ? null : e[null != e_ ? e_ : O.c];
-        }, [eU, to, e_]),
-        { data: t_ } = (0, p.IX)(et),
+            return null == e ? null : e[null != ef ? ef : O.c];
+        }, [eU, to, ef]),
+        { data: tf } = (0, p.IX)(et),
         tp = b.Sb.useSetting(),
         th = (0, c.e7)([d.Z], () => d.Z.getFetchState());
     i.useEffect(() => {
-        null != t_ && (0, S.yE)(t_.flags, V.udG.EMBEDDED) && tp && null == th && (0, f.$h)();
-    }, [t_, tp, th]);
-    let tm = (0, S.yE)(null != (t = null == t_ ? void 0 : t_.flags) ? t : 0, V.udG.EMBEDDED) && (0, S.yE)(null != (n = null == t_ ? void 0 : t_.flags) ? n : 0, V.udG.EMBEDDED_IAP),
-        tg = (0, c.e7)([_.ZP], () =>
-            Array.from(_.ZP.getSelfEmbeddedActivities().values()).find((e) => {
+        null != tf && (0, S.yE)(tf.flags, V.udG.EMBEDDED) && tp && null == th && (0, _.$h)();
+    }, [tf, tp, th]);
+    let tm = (0, S.yE)(null != (t = null == tf ? void 0 : tf.flags) ? t : 0, V.udG.EMBEDDED) && (0, S.yE)(null != (n = null == tf ? void 0 : tf.flags) ? n : 0, V.udG.EMBEDDED_IAP),
+        tg = (0, c.e7)([f.ZP], () =>
+            Array.from(f.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
                 return t === et;
             })
@@ -238,8 +238,8 @@ function Q(e) {
                     setSubscriptionMetadataRequest: e5,
                     hasFetchedPaymentSources: eh,
                     paymentSources: ed,
-                    hasPaymentSources: ef,
-                    paymentSourceId: e_,
+                    hasPaymentSources: e_,
+                    paymentSourceId: ef,
                     setPaymentSourceId: ep,
                     priceOptions: eE,
                     setCurrency: eb,
@@ -296,8 +296,8 @@ function Q(e) {
                 hasFetchedSkus: ta,
                 skusById: ti,
                 skuPricePreviewsById: to,
-                selectedSkuPricePreview: tf,
-                application: t_,
+                selectedSkuPricePreview: t_,
+                application: tf,
                 purchaseType: ee,
                 isEmbeddedIAP: tm,
                 activitySessionId: tE,

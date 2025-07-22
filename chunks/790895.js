@@ -3,6 +3,7 @@ n.r(
         boxBackdrop: 'boxBackdrop_b0db00',
         bentoSectionHeader: 'bentoSectionHeader_b0db00',
         bentoBoxesGrid: 'bentoBoxesGrid_b0db00',
+        bentoBoxButton: 'bentoBoxButton_b0db00',
         backgroundColor: 'backgroundColor_b0db00',
         description: 'description_b0db00',
         boxesSubHeader: 'boxesSubHeader_b0db00',

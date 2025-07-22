@@ -20,13 +20,13 @@ function d(e, t, n) {
         e
     );
 }
-let f = new Map(),
-    _ = new Map(),
+let _ = new Map(),
+    f = new Map(),
     p = new Map();
 function h(e) {
-    if (!_.has(e)) {
+    if (!f.has(e)) {
         var t;
-        _.set(e, {
+        f.set(e, {
             commandId: null == (t = c.Z.getActiveCommand(e)) ? void 0 : t.id,
             optionName: c.Z.getActiveOptionName(e),
             optionNameToAutocompleteQueries: new Map(),
@@ -37,10 +37,10 @@ function h(e) {
             lastResponseNonce: void 0
         });
     }
-    return _.get(e);
+    return f.get(e);
 }
 function m() {
-    return (f.clear(), _.clear(), !0);
+    return (_.clear(), f.clear(), !0);
 }
 function g(e) {
     var t;
@@ -52,8 +52,8 @@ function g(e) {
     if (null != s) return ((o.lastErrored = !1), o.optionNameToLastResults.set(a, s), !0);
     let l = o.optionNameToNonce.get(a);
     if (
-        (null != l && f.delete(l),
-        f.set(n, {
+        (null != l && _.delete(l),
+        _.set(n, {
             channelId: r,
             query: i,
             name: a
@@ -68,12 +68,12 @@ let E = (0, l.isDesktop)();
 function b(e) {
     var t, n, r;
     let { choices: i, nonce: a } = e,
-        l = f.get(a);
+        l = _.get(a);
     if (null == l) return !1;
-    f.delete(a);
+    _.delete(a);
     let d = h(l.channelId);
     null == d.optionNameToAutocompleteQueries.get(l.name) && d.optionNameToAutocompleteQueries.set(l.name, new Map());
-    let _ = E && (null == (t = c.Z.getActiveOption(l.channelId)) ? void 0 : t.type) === o.jw.INTEGER,
+    let f = E && (null == (t = c.Z.getActiveOption(l.channelId)) ? void 0 : t.type) === o.jw.INTEGER,
         m =
             null !=
             (r =
@@ -84,7 +84,7 @@ function b(e) {
                           return {
                               displayName: null != n ? n : r,
                               name: r,
-                              value: (t = _ ? Number(t) : t)
+                              value: (t = f ? Number(t) : t)
                           };
                       }))
                 ? r
@@ -107,9 +107,9 @@ function b(e) {
 function y(e) {
     let { nonce: t } = e;
     if (null == t) return !1;
-    let n = f.get(t);
+    let n = _.get(t);
     if (null == n) return !1;
-    f.delete(t);
+    _.delete(t);
     let r = p.get(t),
         i = null != r ? new Date().getTime() - r.getTime() : 0;
     return (
@@ -132,7 +132,7 @@ function v(e) {
 }
 function I(e, t) {
     let n = c.Z.getActiveOptionName(e),
-        r = _.get(e);
+        r = f.get(e);
     return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), (r.lastErrored = !1), (r.commandId = t), (r.optionName = n), !0);
 }
 class T extends (r = i.ZP.Store) {

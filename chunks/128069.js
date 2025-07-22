@@ -46,8 +46,8 @@ let c = Object.freeze({
 var d = (function (e) {
     return ((e.CARD = 'card'), (e.ADDRESS = 'address'), e);
 })(d || {});
-let f = new Set(['cardNumber', 'cvc', 'expirationDate', 'name']),
-    _ = new Set(['name', 'line1', 'line2', 'city', 'state', 'postalCode', 'country']);
+let _ = new Set(['cardNumber', 'cvc', 'expirationDate', 'name']),
+    f = new Set(['name', 'line1', 'line2', 'city', 'state', 'postalCode', 'country']);
 function p(e) {
     var t, n, i, a, o;
     if ('string' != typeof e && (null == e || null == (t = e.body) ? void 0 : t.code) === r.f$) {
@@ -67,10 +67,10 @@ class h extends i.Z {
         for (let t in this.fields) if (e.has(t)) return !0;
     }
     hasCardError() {
-        return this._isInFieldSet(f);
+        return this._isInFieldSet(_);
     }
     hasAddressError() {
-        return this._isInFieldSet(_);
+        return this._isInFieldSet(f);
     }
     constructor(e, t) {
         for (let n in (super(e, t), o(this, 'paymentId', null), 100027 === this.code ? (this.message = a.intl.string(a.t['+4Empq'])) : 50048 === this.code ? (this.message = a.intl.string(a.t.DtFqEB)) : 100002 === this.code ? (this.message = a.intl.string(a.t.yNYvKy)) : 100042 === this.code ? (this.message = a.intl.string(a.t['3jprCQ'])) : 100078 === this.code ? (this.message = a.intl.string(a.t.MHlpoK)) : 100096 === this.code ? (this.message = a.intl.string(a.t.Hiwqub)) : 100097 === this.code ? (this.message = a.intl.string(a.t.c5zDr6)) : 100107 === this.code ? (this.message = a.intl.string(a.t.yX8s2t)) : 100054 === this.code ? (this.message = a.intl.string(a.t.p0UBvb)) : 100111 === this.code ? (this.message = a.intl.string(a.t.uhPY5u)) : 429 === this.status ? (this.message = a.intl.string(a.t.sUWxgY)) : 0 === this.code ? (this.message = a.intl.string(a.t['5mlOCQ'])) : 400 === this.status && null != this.fields.captcha_key && (this.message = a.intl.string(a.t['3s/vDA'])), this.fields)) {
@@ -83,5 +83,5 @@ class h extends i.Z {
         null != e.body && 'string' == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
     }
 }
-(o(h, 'ErrorCodes', s), o(h, 'Fields', l), o(h, 'Sections', d), o(h, 'CARD_ERRORS', f), o(h, 'ADDRESS_ERRORS', _));
+(o(h, 'ErrorCodes', s), o(h, 'Fields', l), o(h, 'Sections', d), o(h, 'CARD_ERRORS', _), o(h, 'ADDRESS_ERRORS', f));
 let m = h;

@@ -6,8 +6,8 @@ let r, i, a, o, s, l, c;
     n(388685));
 var u,
     d = n(392711),
-    f = n.n(d),
-    _ = n(149765),
+    _ = n.n(d),
+    f = n(149765),
     p = n(442837),
     h = n(433517),
     m = n(570140),
@@ -94,9 +94,9 @@ function V() {
             lastConnectedTime: l,
             selectedChannelIds: k,
             mostRecentSelectedTextChannelIds: U,
-            knownThreadIds: f()(k)
+            knownThreadIds: _()(k)
                 .values()
-                .concat(f().values(U))
+                .concat(_().values(U))
                 .filter(b.lm)
                 .uniq()
                 .filter((e) => {
@@ -121,17 +121,17 @@ function Z(e, t) {
 }
 function H(e) {
     let t = O.Z.getMutableBasicGuildChannelsForGuild(e),
-        n = f().find(t, (e) => e.type === N.d4z.GUILD_VOICE);
+        n = _().find(t, (e) => e.type === N.d4z.GUILD_VOICE);
     return null == n ? void 0 : n.id;
 }
 function Y() {
     let e = !1,
         t = I.Z.getGuildsArray();
     return (
-        f().each(k, (t, n) => {
+        _().each(k, (t, n) => {
             (null != t && (O.Z.hasChannel(t) || t === a || G.has(t) || (0, C.ME)(t))) || (delete k[n], delete j[n], (e = !0));
         }),
-        f().each(U, (t, n) => {
+        _().each(U, (t, n) => {
             (null != t && (O.Z.hasChannel(t) || G.has(t))) || (delete U[n], (e = !0));
         }),
         t.forEach((e) => {
@@ -145,7 +145,7 @@ function Y() {
 function W(e) {
     if (((r = e.sessionId), null != s)) {
         let e = O.Z.getChannel(s);
-        (null != e && S.Z.can(_.$e(N.Plq.VIEW_CHANNEL, N.Plq.CONNECT), e)) || (s = null);
+        (null != e && S.Z.can(f.$e(N.Plq.VIEW_CHANNEL, N.Plq.CONNECT), e)) || (s = null);
     }
     Y() && V();
 }

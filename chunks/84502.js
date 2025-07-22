@@ -10,12 +10,12 @@ function l(A, e, t) {
 function i(A) {
     let { primaryBaseColors: e, primaryTintColor: t, primaryTintLuminances: n, primaryLuminanceWeights: r, secondaryBaseColors: i, secondaryTintColor: s, secondaryTintLuminances: a, secondaryLuminanceWeights: o } = A,
         g = null != t ? l(n, t, r) : e,
-        f = [];
+        v = [];
     return (
-        null != i && null != a && null != o && (f = null != s ? l(a, s, o) : i),
+        null != i && null != a && null != o && (v = null != s ? l(a, s, o) : i),
         {
             primaryColorsTransformed: g,
-            secondaryColorsTransformed: f
+            secondaryColorsTransformed: v
         }
     );
 }

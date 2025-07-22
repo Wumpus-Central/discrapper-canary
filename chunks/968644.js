@@ -1,29 +1,29 @@
-t.d(n, {
+n.d(t, {
     Z: () => m,
     p: () => h
 });
-var l = t(442837),
-    r = t(933557),
-    i = t(592125),
-    a = t(485386),
-    o = t(699516),
-    s = t(594174),
-    c = t(823379),
-    d = t(388032);
-function u(e, n, t) {
+var l = n(442837),
+    r = n(933557),
+    i = n(592125),
+    a = n(485386),
+    o = n(699516),
+    s = n(594174),
+    c = n(823379),
+    d = n(388032);
+function u(e, t, n) {
     return 0 === e.length
         ? ''
-        : d.intl.format(t ? d.t.cJZxWV : d.t.Kj5GIS, {
+        : d.intl.format(n ? d.t.cJZxWV : d.t.Kj5GIS, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
               role2: e[1],
-              itemHook: n
+              itemHook: t
           });
 }
 function m(e) {
-    let { guild: n, prompt: t, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
-        f = (0, l.e7)([a.Z], () => (null != n ? a.Z.getRoles(n.id) : void 0)),
+    let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
+        f = (0, l.e7)([a.Z], () => (null != t ? a.Z.getRoles(t.id) : void 0)),
         g = (0, l.Wu)([i.Z, s.default, o.Z], () =>
             Array.from(h)
                 .map((e) => i.Z.getChannel(e))
@@ -32,12 +32,12 @@ function m(e) {
         ),
         x = Array.from(m)
             .map((e) => {
-                var n;
-                return null == (n = (null != f ? f : {})[e]) ? void 0 : n.name;
+                var t;
+                return null == (t = (null != f ? f : {})[e]) ? void 0 : t.name;
             })
             .filter(c.lm)
             .map((e) => '@'.concat(e)),
-        _ = (null == t ? void 0 : t.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
+        _ = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
         C = '';
     if (0 === g.length && x.length > 0) _ = u(x, p);
     else
@@ -59,8 +59,8 @@ function m(e) {
     };
 }
 function h(e) {
-    let { guild: n, prompt: t, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
-        p = (0, l.e7)([a.Z], () => (null != n ? a.Z.getRoles(n.id) : void 0)),
+    let { guild: t, prompt: n, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
+        p = (0, l.e7)([a.Z], () => (null != t ? a.Z.getRoles(t.id) : void 0)),
         f = (0, l.Wu)([i.Z, s.default, o.Z], () =>
             Array.from(m)
                 .map((e) => i.Z.getChannel(e))
@@ -69,12 +69,12 @@ function h(e) {
         ),
         g = Array.from(u)
             .map((e) => {
-                var n;
-                return null == (n = (null != p ? p : {})[e]) ? void 0 : n.name;
+                var t;
+                return null == (t = (null != p ? p : {})[e]) ? void 0 : t.name;
             })
             .filter(c.lm)
             .map((e) => '@'.concat(e)),
-        x = (null == t ? void 0 : t.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
+        x = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
     return (
         0 === f.length && g.length > 0
             ? (x = d.intl.format(d.t.vdtNYW, {

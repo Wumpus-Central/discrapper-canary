@@ -7,17 +7,17 @@ var a = n(570140),
     c = n(436181),
     u = n(626135),
     d = n(358085),
-    f = n(998502),
-    _ = n(981631),
+    _ = n(998502),
+    f = n(981631),
     p = n(186901);
 let h = new s.Z('NativeDispatchUtils');
 function m() {
     return null != r
         ? Promise.resolve(r)
         : (0, d.isDesktop)()
-          ? Promise.all([f.ZP.ensureModule('discord_dispatch'), f.ZP.ensureModule('discord_modules')]).then(() => {
-                f.ZP.requireModule('discord_modules');
-                let e = f.ZP.getDispatch();
+          ? Promise.all([_.ZP.ensureModule('discord_dispatch'), _.ZP.ensureModule('discord_modules')]).then(() => {
+                _.ZP.requireModule('discord_modules');
+                let e = _.ZP.getDispatch();
                 return null != e ? ((r = e), e) : Promise.reject(Error('dispatch not found'));
             })
           : Promise.reject(Error('not desktop client'));
@@ -35,13 +35,13 @@ function b(e, t) {
 function y(e) {
     let { properties: t } = e;
     switch ((null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name)) {
-        case _.rMx.DISPATCH_PATCH_STARTED:
-        case _.rMx.DISPATCH_PATCH_PAUSED:
-        case _.rMx.DISPATCH_PATCH_FAILED:
-        case _.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
-        case _.rMx.DISPATCH_PATCH_COMPLETE:
-        case _.rMx.DISPATCH_PATCH_CANCELLED:
-        case _.rMx.DISPATCH_APPLICATION_UNINSTALLED:
+        case f.rMx.DISPATCH_PATCH_STARTED:
+        case f.rMx.DISPATCH_PATCH_PAUSED:
+        case f.rMx.DISPATCH_PATCH_FAILED:
+        case f.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
+        case f.rMx.DISPATCH_PATCH_COMPLETE:
+        case f.rMx.DISPATCH_PATCH_CANCELLED:
+        case f.rMx.DISPATCH_APPLICATION_UNINSTALLED:
             u.default.track(e.event_name, t);
     }
 }
@@ -52,7 +52,7 @@ let O = {
             m().then((e) => {
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: '421478'
+                        build_number: '421614'
                     },
                     u = l.default.getCurrentUser();
                 null != u && ((c.user_id = u.id), (c.user_name = u.tag), null != u.email && (c.email = u.email));

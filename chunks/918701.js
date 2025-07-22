@@ -15,7 +15,7 @@
     FX: () => ep,
     Fs: () => ts,
     GN: () => ed,
-    Gd: () => t_,
+    Gd: () => tf,
     HJ: () => e3,
     Jg: () => eT,
     K: () => ey,
@@ -61,15 +61,15 @@
     q8: () => e0,
     qe: () => ty,
     t2: () => ec,
-    u7: () => tf,
+    u7: () => t_,
     vQ: () => eb,
     vR: () => ev,
     xN: () => eg,
-    xn: () => e_,
+    xn: () => ef,
     yH: () => tl,
     yI: () => en,
     ys: () => eI,
-    zE: () => ef,
+    zE: () => e_,
     zK: () => eD,
     zi: () => W
 }),
@@ -90,9 +90,9 @@ var r = n(991998),
     c = n(887003),
     u = n(570140),
     d = n(230711),
-    f = n(782568);
+    _ = n(782568);
 n(597688);
-var _ = n(231757),
+var f = n(231757),
     p = n(706454),
     h = n(866960),
     m = n(572004),
@@ -396,21 +396,21 @@ function eu(e) {
 function ed(e) {
     return Object.keys(R.a_).includes(S.jn[e]);
 }
-function ef(e, t) {
+function e_(e, t) {
     if (!ed(t)) return !1;
     let n = S.jn[t];
     return (0, b.yE)(e.dismissedQuestContent, R.a_[n]);
 }
-function e_(e) {
+function ef(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === c.w.COLLECTIBLE);
     return (null == t ? void 0 : t.type) === c.w.COLLECTIBLE ? t : null;
 }
 function ep(e) {
-    let t = e_(e);
+    let t = ef(e);
     return null != t && 'expiresAtPremium' in t && null != t.expiresAtPremium ? tr(t.expiresAtPremium) : null;
 }
 function eh(e) {
-    let t = e_(e);
+    let t = ef(e);
     if (null == t || !('expiresAt' in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
         i = new Date(t.expiresAt),
@@ -437,7 +437,7 @@ function eg(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === c.w.VIRTUAL_CURRENCY);
 }
 function eE(e) {
-    return null != e_(e);
+    return null != ef(e);
 }
 function eb(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === c.w.IN_GAME);
@@ -512,7 +512,7 @@ function ex(e, t) {
         sourceQuestContent: t.sourceQuestContent
     }),
         g.S.dispatch(P.CkL.QUEST_GAME_LINK_OPENED),
-        (0, f.Z)(n));
+        (0, _.Z)(n));
 }
 let eM = (e, t) => {
         ((0, v._3)({
@@ -687,7 +687,7 @@ function e6(e) {
     return null != e.userStatus && (e5(e.userStatus, o.X.PLAY_ON_XBOX) || e5(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
 }
 function e8(e) {
-    return !!e0(e) && (0, n(952265).nf)(tf(e.id));
+    return !!e0(e) && (0, n(952265).nf)(t_(e.id));
 }
 function e7() {
     d.Z.open(P.oAB.CONNECTIONS);
@@ -701,7 +701,7 @@ function e9(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId
     }),
-        (0, _.Z)({
+        (0, f.Z)({
             platformType: n,
             location: t.ctaContent
         }));
@@ -718,10 +718,10 @@ function te(e, t) {
         sourceQuestContent: t.sourceQuestContent
     });
     let r = td(n);
-    if (1 === r.length) return (0, _.Z)({ platformType: r.at(0) });
+    if (1 === r.length) return (0, f.Z)({ platformType: r.at(0) });
     u.Z.dispatch({
         type: 'CONNECTIONS_GRID_MODAL_SHOW',
-        onComplete: (e) => (0, _.Z)({ platformType: e }),
+        onComplete: (e) => (0, f.Z)({ platformType: e }),
         includedPlatformTypes: new Set(r)
     });
 }
@@ -761,8 +761,8 @@ function to(e) {
                   idx: null != (r = null == o ? void 0 : o.tier) ? r : null == (t = a.userStatus) ? void 0 : t.claimedTier
               })
             : null,
-        f = null != (i = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform) ? i : l.defaultRewardRedemptionInstructionsByPlatform;
-    return null != u ? f[u] : void 0;
+        _ = null != (i = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform) ? i : l.defaultRewardRedemptionInstructionsByPlatform;
+    return null != u ? _[u] : void 0;
 }
 function ts(e) {
     let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, cosponsorName: i } = e;
@@ -786,12 +786,12 @@ function tl(e) {
 }
 function tc(e) {
     var t;
-    let n = null == (t = e_(e)) ? void 0 : t.expirationMode;
+    let n = null == (t = ef(e)) ? void 0 : t.expirationMode;
     return null != n && U.has(n);
 }
 function tu(e) {
     var t;
-    return tc(e) && (null == (t = e_(e)) ? void 0 : t.expirationMode) === l.n.PREMIUM_PERMANENT;
+    return tc(e) && (null == (t = ef(e)) ? void 0 : t.expirationMode) === l.n.PREMIUM_PERMANENT;
 }
 function td(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
@@ -806,10 +806,10 @@ function td(e) {
         }
     return n;
 }
-function tf(e) {
+function t_(e) {
     return 'VIDEO-QUEST-'.concat(e);
 }
-function t_(e) {
+function tf(e) {
     let t = e0(e),
         n = eR(e);
     return t || n;

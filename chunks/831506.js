@@ -8,7 +8,7 @@ var r,
     c = n(699516),
     u = n(885110),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -78,7 +78,7 @@ function y(e) {
 }
 function O(e) {
     let { parties: t, userParties: n } = e;
-    ((h = new Map()), (p = _({}, n)), Object.keys(t).forEach((e) => h.set(e, new Set(t[e]))));
+    ((h = new Map()), (p = f({}, n)), Object.keys(t).forEach((e) => h.set(e, new Set(t[e]))));
 }
 function v(e) {
     let { guild: t } = e,
@@ -165,7 +165,7 @@ class w extends (r = o.ZP.Store) {
         return h;
     }
 }
-f(w, 'displayName', 'GamePartyStore');
+_(w, 'displayName', 'GamePartyStore');
 let D = new w(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: y,
     OVERLAY_INITIALIZE: O,

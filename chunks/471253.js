@@ -2,12 +2,12 @@ n.d(t, {
     DT: () => N,
     Ef: () => y,
     HO: () => A,
-    NZ: () => P,
-    Pq: () => m,
-    Q1: () => T,
+    NZ: () => b,
+    Pq: () => R,
+    Q1: () => g,
     RK: () => S,
-    _0: () => g,
-    hz: () => R,
+    _0: () => T,
+    hz: () => m,
     yi: () => f
 });
 var i = n(512722),
@@ -18,8 +18,8 @@ var i = n(512722),
 n(749210);
 var a = n(911969),
     c = n(367907),
-    d = n(944486),
-    u = n(979651),
+    u = n(944486),
+    d = n(979651),
     _ = n(700785),
     h = n(922482),
     E = n(192079),
@@ -51,7 +51,7 @@ function O(e) {
     }
     return e;
 }
-function T(e, t) {
+function g(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),
@@ -66,7 +66,7 @@ function T(e, t) {
         })
     );
 }
-function g(e, t) {
+function T(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),
@@ -85,7 +85,7 @@ function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null == e ? void 0 : e.getGuildId();
     r()(null != i, 'This channel cannot be guildless.');
-    let l = u.Z.getVoiceStateForChannel(e.id);
+    let l = d.Z.getVoiceStateForChannel(e.id);
     return (
         (0, p.gf)(l) !== p.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, c.yw)(C.rMx.PROMOTED_TO_SPEAKER, O({}, (0, E.s$)(e))),
         o.tn.patch({
@@ -132,7 +132,7 @@ function N(e, t, n) {
         })
     );
 }
-function R(e, t) {
+function m(e, t) {
     if (null == t || null == e) return;
     let n = t.getGuildId();
     return (
@@ -150,7 +150,7 @@ function R(e, t) {
         })
     );
 }
-function m(e, t, n) {
+function R(e, t, n) {
     let i = e.getGuildId();
     r()(null != i, 'Channel cannot be guildless');
     let o = e.permissionOverwrites[i],
@@ -167,13 +167,13 @@ function m(e, t, n) {
 }
 async function A(e, t, n, i) {
     if ('' === t) return;
-    d.Z.getVoiceChannelId() !== e.id && (0, h.TM)(e);
+    u.Z.getVoiceChannelId() !== e.id && (0, h.TM)(e);
     let r = await (0, I.me)(e.id, t, n, i);
     return (S(e, !1, !0), r);
 }
 async function y(e, t, n) {
     if ('' !== t) return await (0, I.Dk)(e.id, t, n);
 }
-async function P(e) {
+async function b(e) {
     await (0, I.Ix)(e.id);
 }

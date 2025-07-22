@@ -77,7 +77,8 @@ function h(e) {
                                 (0, r.jsx)(d.k, {
                                     guild: l,
                                     rules: n,
-                                    setRules: b
+                                    setRules: b,
+                                    disabled: !t
                                 })
                             ]
                         })

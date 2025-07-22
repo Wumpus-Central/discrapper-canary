@@ -30,7 +30,7 @@ function c(t) {
     }
     return t;
 }
-function d(t, e) {
+function g(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -48,8 +48,8 @@ function d(t, e) {
         t
     );
 }
-function m(t) {
-    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: d, tags: m, attachment: g } = t,
+function d(t) {
+    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: g, tags: d, attachment: m } = t,
         { name: u, avatarSrc: p } = e;
     return (0, a.jsxs)('div', {
         className: l.post,
@@ -84,7 +84,7 @@ function m(t) {
                                             color: 'header-primary',
                                             variant: 'text-xxs/medium',
                                             className: l.inlineTag,
-                                            children: m[n]
+                                            children: d[n]
                                         })
                                     ]
                                 })
@@ -142,22 +142,22 @@ function m(t) {
                             (0, a.jsx)(i.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-xs/medium',
-                                children: d
+                                children: g
                             })
                         ]
                     })
                 ]
             }),
-            null != g &&
+            null != m &&
                 (0, a.jsx)('img', {
-                    src: g,
+                    src: m,
                     alt: o.intl.formatToPlainString(o.t.MJHFt7, { name: r }),
                     className: l.attachment
                 })
         ]
     });
 }
-function g(t) {
+function m(t) {
     let { author: e, content: n } = t,
         { name: r, isOP: s, avatarSrc: c } = e;
     return (0, a.jsxs)('div', {
@@ -221,7 +221,7 @@ function u(t) {
                     children: n.map((t, e) =>
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(g, c({}, t), e),
+                                (0, a.jsx)(m, c({}, t), e),
                                 0 === e &&
                                     (0, a.jsxs)('div', {
                                         children: [
@@ -279,7 +279,7 @@ function u(t) {
 function p(t) {
     let { id: e } = t,
         [n, o] = r.useState(0),
-        g = r.useRef(null),
+        m = r.useRef(null),
         { tags: p, posts: x, postPreview: h, ariaLabel: f } = (0, s.Z)(e);
     return (
         r.useEffect(() => {
@@ -287,7 +287,7 @@ function p(t) {
         }, [e]),
         r.useEffect(() => {
             var t;
-            0 === n && (null == g || null == (t = g.current) ? void 0 : t.clientHeight) != null && o(g.current.clientHeight - 40);
+            0 === n && (null == m || null == (t = m.current) ? void 0 : t.clientHeight) != null && o(m.current.clientHeight - 40);
         }, [n]),
         (0, a.jsxs)('div', {
             className: l.container,
@@ -295,7 +295,7 @@ function p(t) {
             'aria-label': f,
             children: [
                 (0, a.jsxs)('div', {
-                    ref: g,
+                    ref: m,
                     className: l.browser,
                     'aria-hidden': !0,
                     children: [
@@ -316,11 +316,11 @@ function p(t) {
                         }),
                         (0, a.jsx)('div', {
                             className: l.posts,
-                            children: x.map((t, e) => (0, a.jsx)(m, d(c({}, t), { tags: p }), e))
+                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e))
                         })
                     ]
                 }),
-                (0, a.jsx)(u, d(c({}, h), { maxHeight: n }))
+                (0, a.jsx)(u, g(c({}, h), { maxHeight: n }))
             ]
         })
     );

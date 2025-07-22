@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(97519),
     u = n(731965),
     d = n(477690),
-    f = n(481060),
-    _ = n(714338),
+    _ = n(481060),
+    f = n(714338),
     p = n(624138),
     h = n(314910),
     m = n(308569),
@@ -88,13 +88,13 @@ let v = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
 function T(e) {
     let { item: t, containerRef: n } = e;
     return (
-        (0, f.Tbt)(n),
+        (0, _.Tbt)(n),
         i.useEffect(
             () => (
-                _.Z.disable(),
-                t.key !== m.CV && _.Z.enableTemp(P(t.key)),
+                f.Z.disable(),
+                t.key !== m.CV && f.Z.enableTemp(P(t.key)),
                 () => {
-                    _.Z.disableTemp();
+                    f.Z.disableTemp();
                 }
             ),
             [t.key]
@@ -131,7 +131,7 @@ let S = {
         exitDone: g.exitDoneReducedMotion
     };
 function N() {
-    let { reducedMotion: e } = i.useContext(f.Sfi),
+    let { reducedMotion: e } = i.useContext(_.Sfi),
         t = e.enabled ? A : S,
         n = I((e) => e.fullScreenLayers),
         a = n.map((e) => ({

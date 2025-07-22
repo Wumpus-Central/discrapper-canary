@@ -11,10 +11,10 @@ function o(e) {
             leaderboardId: o,
             intervalOffset: s
         }),
-        f = null == d ? void 0 : d.users.find((e) => e.user_id === t),
-        _ = null == f ? void 0 : f.statistics[l];
+        _ = null == d ? void 0 : d.users.find((e) => e.user_id === t),
+        f = null == _ ? void 0 : _.statistics[l];
     return {
         lastUpdateRequested: u,
-        statisticLastUpdatedDate: null != _ ? new Date(_.updated_at) : void 0
+        statisticLastUpdatedDate: null != f ? new Date(f.updated_at) : void 0
     };
 }

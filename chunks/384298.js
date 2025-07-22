@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(496675),
     u = n(979651),
     d = n(652853),
-    f = n(475413),
-    _ = n(228168),
+    _ = n(475413),
+    f = n(228168),
     p = n(981631),
     h = n(388032);
 function m(e) {
@@ -18,19 +18,19 @@ function m(e) {
         { themeType: g } = (0, d.z)(),
         E = (0, i.e7)([u.Z], () => u.Z.isInChannel(t.id));
     if (!(0, i.e7)([c.Z], () => t.isPrivate() || c.Z.can(p.Plq.CONNECT, t))) return null;
-    let b = () => (g === _.lY.MODAL || g === _.lY.MODAL_V2 ? h.intl.string(h.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t['7hwn2N']) : t.isGuildStageVoice() ? h.intl.string(h.t.Acqcoq) : h.intl.string(h.t.BXxdl5)),
-        y = () => (g === _.lY.MODAL || g === _.lY.MODAL_V2 ? h.intl.string(h.t.VJlc0d) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t.ozoE2N) : t.isGuildStageVoice() ? h.intl.string(h.t['7vb2cX']) : h.intl.string(h.t['96ANUF'])),
+    let b = () => (g === f.lY.MODAL || g === f.lY.MODAL_V2 ? h.intl.string(h.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t['7hwn2N']) : t.isGuildStageVoice() ? h.intl.string(h.t.Acqcoq) : h.intl.string(h.t.BXxdl5)),
+        y = () => (g === f.lY.MODAL || g === f.lY.MODAL_V2 ? h.intl.string(h.t.VJlc0d) : t.isDM() || t.isGroupDM() ? h.intl.string(h.t.ozoE2N) : t.isGuildStageVoice() ? h.intl.string(h.t['7vb2cX']) : h.intl.string(h.t['96ANUF'])),
         O = (e) => {
             (e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, l.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == m || m());
         };
-    return g === _.lY.MODAL_V2
-        ? (0, r.jsx)(f.tG, {
+    return g === f.lY.MODAL_V2
+        ? (0, r.jsx)(_.tG, {
               text: E ? b() : y(),
               size: a.Ph.TINY,
               themeColor: 'secondary',
               onClick: O
           })
-        : (0, r.jsx)(f.tG, {
+        : (0, r.jsx)(_.tG, {
               text: E ? b() : y(),
               themeColor: 'secondary',
               fullWidth: !0,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(26151),
     d = n(922555),
-    f = n(287734),
-    _ = n(249000),
+    _ = n(287734),
+    f = n(249000),
     p = n(100527),
     h = n(367907),
     m = n(906732),
@@ -147,7 +147,7 @@ function eo(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, T.Z)(),
-        _ = (0, S.Z)(n),
+        f = (0, S.Z)(n),
         p = i.useRef(null),
         g = a > 1;
     return (0, r.jsxs)('div', {
@@ -195,7 +195,7 @@ function eo(e) {
                             className: o()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: g }),
                             color: 'green',
                             centerButton: !0,
-                            hasPermission: _,
+                            hasPermission: f,
                             cameraUnavailable: l,
                             channel: n,
                             onPopoutClick: g ? i : null,
@@ -214,7 +214,7 @@ function eo(e) {
                                             (0, h.v_)(n)
                                         )
                                     ),
-                                    f.default.selectVoiceChannel(n.id, !0),
+                                    _.default.selectVoiceChannel(n.id, !0),
                                     (0, y.XU)(null != (e = n.guild_id) ? e : H.ME, n.id));
                             }
                         });
@@ -242,7 +242,7 @@ function eo(e) {
 }
 function es(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: h } = e,
+    let { animatedStyle: n, y: a, x: _, channel: h } = e,
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
@@ -331,11 +331,11 @@ function es(e) {
         el = (0, l.e7)([M.Z], () => M.Z.windowSize());
     return (0, r.jsx)(m.Gt, {
         value: y,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(f.Z, {
             className: z.wrapper,
             selector: '.'.concat(z.root),
             initialPosition: {
-                left: f,
+                left: _,
                 top: a
             },
             maxX: el.width,

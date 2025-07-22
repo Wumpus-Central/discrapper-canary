@@ -11,9 +11,9 @@ var n,
     a = t(91192),
     o = t(442837),
     g = t(481060),
-    f = t(239091),
-    c = t(596454),
-    v = t(607070),
+    v = t(239091),
+    f = t(596454),
+    c = t(607070),
     h = t(339085),
     u = t(695346),
     E = t(572004),
@@ -73,12 +73,12 @@ function M(A) {
         m = (!P || !V) && (null != Q || null != O),
         L = 0 === n,
         x = l.useRef(null),
-        Z = (0, o.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        Z = (0, o.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         N = (A) => {
             let n = u.Sb.getSetting();
             E.wS &&
                 n &&
-                (0, f.jW)(A, async () => {
+                (0, v.jW)(A, async () => {
                     let { default: A } = await t.e('29646').then(t.bind(t, 955116));
                     return (t) => (0, r.jsx)(A, w(B({}, t), { tag: e }));
                 });
@@ -86,7 +86,7 @@ function M(A) {
         R = (0, r.jsxs)(r.Fragment, {
             children: [
                 m
-                    ? (0, r.jsx)(c.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           className: s()(C.emoji, { [C.small]: L }),
                           emojiId: Q,
                           emojiName: O,

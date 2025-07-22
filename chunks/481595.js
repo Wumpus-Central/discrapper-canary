@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(16084),
     d = n(224550),
-    f = n(609194),
-    _ = n(275850),
+    _ = n(609194),
+    f = n(275850),
     p = n(672971),
     h = n(115130),
     m = n(925329),
@@ -69,8 +69,8 @@ function U(e) {
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, w.m)(B, V),
-        e_ = null != ef ? ef.type : null;
+        e_ = (0, w.m)(B, V),
+        ef = null != e_ ? e_.type : null;
     i.useEffect(() => {
         en &&
             V === et &&
@@ -84,18 +84,18 @@ function U(e) {
                     X(e);
                 });
     }, [et, en, V, er.applicationId, er.id, es, X, J]);
-    let ep = null != ei && ei.length > 0 && (V === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
+    let ep = null != ei && ei.length > 0 && (V === I.c || null === ef) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)('div', {
         className: k.stepBody,
         children: [
             (0, r.jsx)(E.Y, { paymentRestrictionBannerType: ep }),
             el
                 ? (0, r.jsx)(
-                      f.Z,
+                      _.Z,
                       {
                           icon: (0, c.GSL)(S.Z),
-                          iconSize: f.Z.Sizes.SMALL,
-                          color: f.Z.Colors.WARNING,
+                          iconSize: _.Z.Sizes.SMALL,
+                          color: _.Z.Colors.WARNING,
                           className: k.errorBlock,
                           children: M.intl.string(M.t.OvMyMT)
                       },
@@ -104,11 +104,11 @@ function U(e) {
                 : null,
             (0, A.yE)(U.flags, x.udG.EMBEDDED) && q === h.O.ERROR
                 ? (0, r.jsx)(
-                      f.Z,
+                      _.Z,
                       {
                           icon: (0, c.GSL)(S.Z),
-                          iconSize: f.Z.Sizes.SMALL,
-                          color: f.Z.Colors.ERROR,
+                          iconSize: _.Z.Sizes.SMALL,
+                          color: _.Z.Colors.ERROR,
                           className: k.errorBlock,
                           children: M.intl.string(M.t.tAmECg)
                       },
@@ -147,7 +147,7 @@ function U(e) {
                         tag: c.RB0.H5,
                         children: M.intl.string(M.t.mmDvV1)
                     }),
-                    (0, r.jsx)(_.ZP, {
+                    (0, r.jsx)(f.ZP, {
                         paymentSources: Object.values(B),
                         selectedPaymentSourceId: V,
                         onChange: a,
@@ -171,7 +171,7 @@ function U(e) {
                     isGift: J,
                     checkboxLabel: er.productLine === x.POd.COLLECTIBLES ? M.intl.format(M.t['1EdAlZ'], { paidURL: x.EYA.PAID_TERMS }) : void 0,
                     finePrint: (0, r.jsx)(d.Z, {
-                        paymentSourceType: e_,
+                        paymentSourceType: ef,
                         isEmbeddedIAP: W,
                         purchaseType: K,
                         productLine: er.productLine,

@@ -7,15 +7,15 @@ var r = n(127849),
     c = n(284955),
     u = n(511696),
     d = n(287353),
-    f = i && i.prototype,
-    _ = l('species'),
+    _ = i && i.prototype,
+    f = l('species'),
     p = !1,
     h = a(r.PromiseRejectionEvent);
 e.exports = {
     CONSTRUCTOR: o('Promise', function () {
         var e = s(i),
             t = e !== String(i);
-        if ((!t && 66 === d) || (u && !(f.catch && f.finally))) return !0;
+        if ((!t && 66 === d) || (u && !(_.catch && _.finally))) return !0;
         if (!d || d < 51 || !/native code/.test(e)) {
             var n = new i(function (e) {
                     e(1);
@@ -26,7 +26,7 @@ e.exports = {
                         function () {}
                     );
                 };
-            if ((((n.constructor = {})[_] = r), !(p = n.then(function () {}) instanceof r))) return !0;
+            if ((((n.constructor = {})[f] = r), !(p = n.then(function () {}) instanceof r))) return !0;
         }
         return !t && ('BROWSER' === c || 'DENO' === c) && !h;
     }),

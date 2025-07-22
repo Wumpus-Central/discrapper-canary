@@ -11,18 +11,18 @@ function s(e, t, n) {
     t && (0, r.Re)(e) && ((l = (e.offsetWidth > 0 && (0, i.NM)(s.width) / e.offsetWidth) || 1), (c = (e.offsetHeight > 0 && (0, i.NM)(s.height) / e.offsetHeight) || 1));
     var u = ((0, r.kK)(e) ? (0, a.Z)(e) : window).visualViewport,
         d = !(0, o.Z)() && n,
-        f = (s.left + (d && u ? u.offsetLeft : 0)) / l,
-        _ = (s.top + (d && u ? u.offsetTop : 0)) / c,
+        _ = (s.left + (d && u ? u.offsetLeft : 0)) / l,
+        f = (s.top + (d && u ? u.offsetTop : 0)) / c,
         p = s.width / l,
         h = s.height / c;
     return {
         width: p,
         height: h,
-        top: _,
-        right: f + p,
-        bottom: _ + h,
-        left: f,
-        x: f,
-        y: _
+        top: f,
+        right: _ + p,
+        bottom: f + h,
+        left: _,
+        x: _,
+        y: f
     };
 }

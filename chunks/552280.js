@@ -1,4 +1,4 @@
-n.d(t, { a: () => _ });
+n.d(t, { a: () => f });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        E = null != (n = null == m ? void 0 : m.height) ? n : _;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -94,12 +94,12 @@ let _ = (e) => {
             viewBox: '0 0 24 24',
             children: [
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     d: 'M13 16V5.41l3.3 3.3a1 1 0 1 0 1.4-1.42l-5-5a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.42L11 5.4V16a1 1 0 1 0 2 0Z',
                     className: p
                 }),
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     d: 'M4 15a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2H5a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a3 3 0 0 0-3-3h-2a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4Z',
                     className: p
                 })

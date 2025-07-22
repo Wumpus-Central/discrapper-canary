@@ -23,24 +23,24 @@ function d(e) {
             },
             [E]
         ),
-        [v, y] = r.useReducer(x, {
+        [v, C] = r.useReducer(x, {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: C, focusedIndex: O } = v,
-        [j] = r.useState(() => (0, a.P2)(y, 16));
+        { itemCount: y, focusedIndex: O } = v,
+        [j] = r.useState(() => (0, a.P2)(C, 16));
     return (
         r.useEffect(() => {
-            y({
+            C({
                 type: i.G.UPDATE_ITEM_COUNT,
                 itemCount: n
             });
         }, [n]),
         (function (e) {
             let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: g, maintainFocusPosition: h, includeSetSizes: _, focusOnMount: b, enabled: E, makeId: x = a.qR, getIndexFromId: v } = e,
-                y = r.useRef(n),
-                C = r.useRef(v);
-            ((C.current = v), (y.current = n));
+                C = r.useRef(n),
+                y = r.useRef(v);
+            ((y.current = v), (C.current = n));
             let O = r.useRef(E);
             r.useEffect(() => {
                 O.current = E;
@@ -49,7 +49,7 @@ function d(e) {
                 [S] = r.useState(
                     () =>
                         new a.$o((e) => () => {
-                            let t = null != C.current && 'string' == typeof e ? C.current(e) : e;
+                            let t = null != y.current && 'string' == typeof e ? y.current(e) : e;
                             'number' != typeof t ||
                                 t < 0 ||
                                 g({
@@ -165,11 +165,11 @@ function d(e) {
                         let { index: n } = e;
                         return {
                             role: 'listitem',
-                            'aria-setsize': _ ? y.current : void 0,
+                            'aria-setsize': _ ? C.current : void 0,
                             'aria-posinset': _ ? n + 1 : void 0,
                             id: x(t, n),
                             tabIndex: h && n === d ? 0 : -1,
-                            onFocus: S.get(null != C.current ? x(t, n) : n)
+                            onFocus: S.get(null != y.current ? x(t, n) : n)
                         };
                     },
                     [x, t, d, h, S, _]
@@ -184,7 +184,7 @@ function d(e) {
             );
         })({
             navId: t,
-            itemCount: C,
+            itemCount: y,
             focusedIndex: O,
             dispatch: j,
             onSelect: p,

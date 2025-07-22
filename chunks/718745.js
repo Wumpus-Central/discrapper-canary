@@ -44,11 +44,11 @@ function d(e) {
             integration: t
         }));
 }
-function f(e) {
+function _(e) {
     let { integration: t, query: n } = e;
     delete l[t][n];
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getResults(e, t) {
         if (null == e || null == t) return null;
         let n = l[e];
@@ -58,9 +58,9 @@ class _ extends (r = i.ZP.Store) {
         return c;
     }
 }
-s(_, 'displayName', 'IntegrationQueryStore');
-let p = new _(a.Z, {
+s(f, 'displayName', 'IntegrationQueryStore');
+let p = new f(a.Z, {
     INTEGRATION_QUERY: u,
     INTEGRATION_QUERY_SUCCESS: d,
-    INTEGRATION_QUERY_FAILURE: f
+    INTEGRATION_QUERY_FAILURE: _
 });

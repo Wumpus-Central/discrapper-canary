@@ -12,8 +12,8 @@ var r,
     c = n(481060),
     u = n(600164),
     d = n(153066),
-    f = n(388032),
-    _ = n(159485);
+    _ = n(388032),
+    f = n(159485);
 function p(e, t, n) {
     return (
         t in e
@@ -42,7 +42,7 @@ class m extends (r = a.PureComponent) {
         let { value: n, mode: r, autoFocus: a, spellCheck: o, inputClassName: l, placeholder: c } = this.props,
             u = null == (t = this.context) ? void 0 : t.titleId;
         return (0, i.jsx)('input', {
-            className: s()((0, d.l)(_, 'input', r), l, { [_.inputHidden]: e }),
+            className: s()((0, d.l)(f, 'input', r), l, { [f.inputHidden]: e }),
             ref: this.inputRef,
             type: 'text',
             value: n,
@@ -56,7 +56,7 @@ class m extends (r = a.PureComponent) {
     }
     render() {
         let e,
-            { text: t = f.intl.string(f.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: o, supportsCopy: p, disabled: m } = this.props,
+            { text: t = _.intl.string(_.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: o, supportsCopy: p, disabled: m } = this.props,
             g = null != r;
         switch (n) {
             case h.SUCCESS:
@@ -72,18 +72,18 @@ class m extends (r = a.PureComponent) {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, i.jsx)('div', {
-                className: s()((0, d.l)(_, 'copyInput', n), a),
+                className: s()((0, d.l)(f, 'copyInput', n), a),
                 ref: this.containerRef,
                 children: (0, i.jsxs)(u.Z, {
-                    className: _.layout,
+                    className: f.layout,
                     children: [
                         (0, i.jsxs)(u.Z, {
-                            className: _.inputWrapper,
+                            className: f.inputWrapper,
                             children: [
                                 this.renderInput(g),
                                 g
                                     ? (0, i.jsx)('div', {
-                                          className: _.hiddenMessage,
+                                          className: f.hiddenMessage,
                                           children: r
                                       })
                                     : null
@@ -95,7 +95,7 @@ class m extends (r = a.PureComponent) {
                                   grow: 0,
                                   style: { margin: 0 },
                                   children: (0, i.jsx)(l.zx, {
-                                      className: _.button,
+                                      className: f.button,
                                       onClick: this.handleButtonClick,
                                       size: l.Ph.MIN,
                                       color: e,

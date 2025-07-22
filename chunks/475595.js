@@ -1,9 +1,9 @@
 (n.d(t, {
     Dm: () => b,
-    N0: () => f,
+    N0: () => _,
     Q2: () => E,
     Rt: () => p,
-    eC: () => _,
+    eC: () => f,
     f0: () => I,
     fh: () => m,
     nK: () => O,
@@ -25,17 +25,17 @@ var r = n(887003),
     o = n(918701),
     s = n(46140),
     l = n(981631),
-    c = n(151702);
+    c = n(380299);
 let u = 3,
     d = /\.([a-zA-Z0-9]+)$/,
-    f = ['video/mp4', 'video/webm'];
-var _ = (function (e) {
+    _ = ['video/mp4', 'video/webm'];
+var f = (function (e) {
     return ((e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.REWARD_IMAGE = 'reward_image'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e);
 })({});
 function p(e, t, n) {
     let r = E(e, t, n),
         i = b(t),
-        a = null != i && f.includes(i);
+        a = null != i && _.includes(i);
     return {
         url: r,
         mimetype: i,

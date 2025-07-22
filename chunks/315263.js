@@ -8,8 +8,8 @@ var r = n(873546),
     c = n(566620),
     u = n(122613),
     d = n(649256),
-    f = n(574952),
-    _ = n(367907),
+    _ = n(574952),
+    f = n(367907),
     p = n(421474),
     h = n(812206),
     m = n(506895),
@@ -115,8 +115,8 @@ function B(e) {
             let { code: r, url: i } = C,
                 a = h.Z.getApplication(r),
                 l = new URL(i),
-                _ = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
-                p = (0, f.Z)(),
+                f = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
+                p = (0, _.Z)(),
                 { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, m.v)(r);
             if (y)
                 return (
@@ -131,7 +131,7 @@ function B(e) {
                                 isStart: null == E,
                                 embeddedActivitiesManager: p,
                                 customId: t,
-                                referrerId: _,
+                                referrerId: f,
                                 analyticsLocations: s
                             });
                         })
@@ -150,7 +150,7 @@ function B(e) {
                                 channelId: e,
                                 analyticsLocations: s,
                                 customId: t,
-                                referrerId: _
+                                referrerId: f
                             });
                         })
                         .catch(() => {}),
@@ -230,7 +230,7 @@ function B(e) {
     if (null != B && Z) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
-        if (null != i) return (e) => (null == e || e.preventDefault(), null != C && C.type === g.g.APP_OAUTH2_LINK && _.ZP.trackWithMetadata(M.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
+        if (null != i) return (e) => (null == e || e.preventDefault(), null != C && C.type === g.g.APP_OAUTH2_LINK && f.ZP.trackWithMetadata(M.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
     }
     let H = (0, v.Ao)(B);
     if (null != B && Z && null != H)

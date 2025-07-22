@@ -8,9 +8,9 @@ var r = t(120356),
     a = t(271383),
     o = t(594174),
     g = t(777288),
-    f = t(753042),
-    c = t(787469),
-    v = t(477718),
+    v = t(753042),
+    f = t(787469),
+    c = t(477718),
     h = t(791176),
     u = t(908474),
     E = t(467014),
@@ -65,9 +65,9 @@ function w(A) {
                               member: D,
                               onNavigate: d
                           }),
-                          (0, n.jsx)(c.Z, { member: D }),
                           (0, n.jsx)(f.Z, { member: D }),
-                          (0, n.jsx)(v.Z, { member: D })
+                          (0, n.jsx)(v.Z, { member: D }),
+                          (0, n.jsx)(c.Z, { member: D })
                       ]
                   })
               ]

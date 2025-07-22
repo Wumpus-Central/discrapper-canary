@@ -7,13 +7,13 @@ var r,
     c = n(809290),
     u = n(661314),
     d = '>',
-    f = '<',
-    _ = 'prototype',
+    _ = '<',
+    f = 'prototype',
     p = 'script',
     h = u('IE_PROTO'),
     m = function () {},
     g = function (e) {
-        return f + p + d + e + f + '/' + p + d;
+        return _ + p + d + e + _ + '/' + p + d;
     },
     E = function (e) {
         (e.write(g('')), e.close());
@@ -31,7 +31,7 @@ var r,
             r = new ActiveXObject('htmlfile');
         } catch (e) {}
         y = 'undefined' != typeof document ? (document.domain && r ? E(r) : b()) : E(r);
-        for (var e = o.length; e--; ) delete y[_][o[e]];
+        for (var e = o.length; e--; ) delete y[f][o[e]];
         return y();
     };
 ((s[h] = !0),
@@ -39,5 +39,5 @@ var r,
         Object.create ||
         function (e, t) {
             var n;
-            return (null !== e ? ((m[_] = i(e)), (n = new m()), (m[_] = null), (n[h] = e)) : (n = y()), void 0 === t ? n : a.f(n, t));
+            return (null !== e ? ((m[f] = i(e)), (n = new m()), (m[f] = null), (n[h] = e)) : (n = y()), void 0 === t ? n : a.f(n, t));
         }));

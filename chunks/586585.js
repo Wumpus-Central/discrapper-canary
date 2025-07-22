@@ -24,7 +24,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -67,17 +67,17 @@ var h = (function (e) {
     return ((e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e);
 })({});
 let m = (e) => {
-    let { onBack: t, backText: n, primaryIcon: d, primaryCTA: _, primaryType: h, primaryText: m, primaryTooltip: g, primaryDisabled: E, primarySubmitting: b, onPrimary: y, secondaryText: O, onSecondary: v } = e,
+    let { onBack: t, backText: n, primaryIcon: d, primaryCTA: f, primaryType: h, primaryText: m, primaryTooltip: g, primaryDisabled: E, primarySubmitting: b, onPrimary: y, secondaryText: O, onSecondary: v } = e,
         { premiumBrandRefreshBackgroundClassName: I } = (0, s.JL)(),
         T = () => {
-            if (null == _ || null == m) return null;
-            let e = 2 === _ ? a.gtL : i.zx,
+            if (null == f || null == m) return null;
+            let e = 2 === f ? a.gtL : i.zx,
                 t = {
                     innerClassName: u.button,
                     type: h,
                     disabled: E,
                     submitting: b,
-                    color: 0 === _ ? i.zx.Colors.BRAND : i.zx.Colors.GREEN,
+                    color: 0 === f ? i.zx.Colors.BRAND : i.zx.Colors.GREEN,
                     onClick: y
                 };
             return null != g
@@ -86,7 +86,7 @@ let m = (e) => {
                       children: (n) =>
                           (0, r.jsxs)(
                               e,
-                              p(f({}, n, t), {
+                              p(_({}, n, t), {
                                   children: [
                                       null == d
                                           ? null
@@ -101,7 +101,7 @@ let m = (e) => {
                   })
                 : (0, r.jsxs)(
                       e,
-                      p(f({}, t), {
+                      p(_({}, t), {
                           children: [
                               null == d
                                   ? null

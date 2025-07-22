@@ -39,12 +39,12 @@ function b(e) {
     }
     return e;
 }
-let v = 10 * u.Z.Millis.SECOND,
-    m = {},
+let m = 10 * u.Z.Millis.SECOND,
+    v = {},
     h = Object.freeze({});
 function O(e) {
     var t;
-    return null != (t = m[e]) ? t : h;
+    return null != (t = v[e]) ? t : h;
 }
 function y(e) {
     let { channelId: t, userId: n } = e,
@@ -56,20 +56,20 @@ function y(e) {
                 channelId: t,
                 userId: n
             });
-        }, v)),
-        (m[t] = r));
+        }, m)),
+        (v[t] = r));
 }
 function E(e) {
     let { channelId: t, userId: n } = e,
-        r = m[t];
+        r = v[t];
     if (null == r || null == r[n]) return !1;
     let i = b({}, r);
-    (clearTimeout(i[n]), delete i[n], (m[t] = i));
+    (clearTimeout(i[n]), delete i[n], (v[t] = i));
 }
-function j() {
-    m = {};
+function S() {
+    v = {};
 }
-class S extends (i = s.ZP.Store) {
+class j extends (i = s.ZP.Store) {
     getTypingUsers(e) {
         return O(e);
     }
@@ -77,8 +77,8 @@ class S extends (i = s.ZP.Store) {
         return null != O(e)[t];
     }
 }
-g(S, 'displayName', 'TypingStore');
-let x = new S(o.Z, {
+g(j, 'displayName', 'TypingStore');
+let x = new j(o.Z, {
     TYPING_START: y,
     TYPING_STOP: E,
     TYPING_START_LOCAL: function (e) {
@@ -87,7 +87,7 @@ let x = new S(o.Z, {
         if (null == n || t === a.V) return !1;
         null != r && r.channelId !== t && (null != r.timeout && clearTimeout(r.timeout), (r = null));
         let i = Date.now(),
-            s = 0.8 * v;
+            s = 0.8 * m;
         if (null != r && (null != r.timeout || r.prevSend + s > i)) return !1;
         let { delayMs: u } = (0, c.M1)('typing_store'),
             g = setTimeout(
@@ -159,8 +159,8 @@ let x = new S(o.Z, {
             }))
         );
     },
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
+    CONNECTION_OPEN: S,
+    OVERLAY_INITIALIZE: S,
     MESSAGE_CREATE: function (e) {
         let {
             channelId: t,

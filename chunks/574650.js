@@ -7,8 +7,8 @@ if (12633 == n.j) var o = n(114858);
 var s = n(442837),
     a = n(755721),
     c = n(481060),
-    d = n(430824),
-    u = n(914010),
+    u = n(430824),
+    d = n(914010),
     _ = n(693546),
     h = n(305325),
     E = n(246364),
@@ -16,8 +16,8 @@ var s = n(442837),
     p = n(937111),
     C = n(981631),
     O = n(176505),
-    T = n(388032),
-    g = n(246752),
+    g = n(388032),
+    T = n(246752),
     S = n(240211);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -48,21 +48,21 @@ let N =
     12633 == n.j
         ? () => {
               var e, t;
-              let r = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []),
-                  N = (0, s.e7)([d.Z], () => d.Z.getGuild(r), [r]),
-                  R = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
-                  m = (0, o.TH)(),
-                  A = (null == (e = (0, o.LX)(m.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+              let r = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
+                  N = (0, s.e7)([u.Z], () => u.Z.getGuild(r), [r]),
+                  m = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
+                  R = (0, o.TH)(),
+                  A = (null == (e = (0, o.LX)(R.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
               if (null == N || !(0, I.Dc)(N) || A) return null;
-              let y = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
-                  P = null,
+              let y = null != (t = null == m ? void 0 : m.applicationStatus) ? t : E.wB.STARTED,
                   b = null,
+                  P = null,
                   D = null,
-                  v = [g.notice, S.notice];
+                  v = [T.notice, S.notice];
               switch (y) {
                   case E.wB.SUBMITTED:
-                      ((P = T.intl.string(T.t['5iLvS0'])),
-                          (b = T.intl.string(T.t.mqtdmZ)),
+                      ((b = g.intl.string(g.t['5iLvS0'])),
+                          (P = g.intl.string(g.t.mqtdmZ)),
                           (D = () => {
                               (0, c.h7j)((e) => {
                                   var t, n;
@@ -70,9 +70,9 @@ let N =
                                       c.ConfirmModal,
                                       ((t = f(
                                           {
-                                              header: T.intl.string(T.t.aIz1oa),
-                                              confirmText: T.intl.string(T.t['cY+Ooa']),
-                                              cancelText: T.intl.string(T.t['ETE/oK']),
+                                              header: g.intl.string(g.t.aIz1oa),
+                                              confirmText: g.intl.string(g.t['cY+Ooa']),
+                                              cancelText: g.intl.string(g.t['ETE/oK']),
                                               onConfirm: () => _.Z.removeGuildJoinRequest(N.id),
                                               confirmButtonColor: a.zx.Colors.BRAND
                                           },
@@ -82,7 +82,7 @@ let N =
                                           {
                                               children: (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/normal',
-                                                  children: T.intl.string(T.t['13tjTU'])
+                                                  children: g.intl.string(g.t['13tjTU'])
                                               })
                                           }),
                                       Object.getOwnPropertyDescriptors
@@ -103,19 +103,19 @@ let N =
                           }));
                       break;
                   case E.wB.REJECTED:
-                      ((P = T.intl.string(T.t.lk30cX)),
-                          (b = T.intl.string(T.t['8RrsHh'])),
+                      ((b = g.intl.string(g.t.lk30cX)),
+                          (P = g.intl.string(g.t['8RrsHh'])),
                           (D = () => {
                               (0, c.ZDy)(async () => {
                                   let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                                   return (t) => (0, i.jsx)(e, f({ guildId: N.id }, t));
                               });
                           }),
-                          v.push(g.error));
+                          v.push(T.error));
                       break;
                   default:
-                      ((P = T.intl.string(T.t.G5YKXF)),
-                          (b = T.intl.string(T.t['r8/DT0'])),
+                      ((b = g.intl.string(g.t.G5YKXF)),
+                          (P = g.intl.string(g.t['r8/DT0'])),
                           (D = () => {
                               (0, h.hk)(N.id);
                           }));
@@ -124,15 +124,15 @@ let N =
                   className: l()(...v),
                   children: [
                       (0, i.jsx)(c.Text, {
-                          className: g.header,
+                          className: T.header,
                           variant: 'text-sm/normal',
-                          children: P
+                          children: b
                       }),
                       (0, i.jsx)(c.zxk, {
                           variant: 'overlay-primary',
                           size: 'sm',
                           onClick: D,
-                          text: b
+                          text: P
                       })
                   ]
               });

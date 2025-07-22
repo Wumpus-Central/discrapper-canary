@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(40851),
     u = n(358085),
     d = n(960048),
-    f = n(752305),
-    _ = n(53529),
+    _ = n(752305),
+    f = n(53529),
     p = n(789952),
     h = n(436660),
     m = n(887490),
@@ -165,7 +165,7 @@ class P extends i.PureComponent {
                 null != t &&
                     null != e.data &&
                     (m.M8.isExpanded(t)
-                        ? _.T.withSingleEntry(n, () => {
+                        ? f.T.withSingleEntry(n, () => {
                               ((n.selection = t), n.deleteFragment(), n.insertText(e.data), e.preventDefault());
                           })
                         : (n.insertText(e.data), e.preventDefault()));
@@ -336,7 +336,7 @@ class P extends i.PureComponent {
     }
     render() {
         let e = this.props,
-            { editor: t, className: n, containerClassName: i, canFocus: a, autoFocus: l, placeholder: c, channelId: u, guildId: d, onChange: f, onFocus: _, onBlur: p, onKeyDown: h, onKeyUp: m, decorateExtra: g, renderExtraElement: E, renderExtraLeaf: b } = e,
+            { editor: t, className: n, containerClassName: i, canFocus: a, autoFocus: l, placeholder: c, channelId: u, guildId: d, onChange: _, onFocus: f, onBlur: p, onKeyDown: h, onKeyUp: m, decorateExtra: g, renderExtraElement: E, renderExtraLeaf: b } = e,
             y = C(e, ['editor', 'className', 'containerClassName', 'canFocus', 'autoFocus', 'placeholder', 'channelId', 'guildId', 'onChange', 'onFocus', 'onBlur', 'onKeyDown', 'onKeyUp', 'decorateExtra', 'renderExtraElement', 'renderExtraLeaf']);
         return (0, r.jsxs)('div', {
             ref: this.containerRef,
@@ -398,7 +398,7 @@ class P extends i.PureComponent {
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             m.bN.isEditorEmpty(e.editor)
                 ? (this.state = {
-                      initialValue: (0, f.H2)().richValue,
+                      initialValue: (0, _.H2)().richValue,
                       showPlaceholder: !0
                   })
                 : (this.state = {

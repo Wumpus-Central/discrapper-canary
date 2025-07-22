@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,24 +57,24 @@ function f(e, t) {
         e
     );
 }
-let _ = {};
+let f = {};
 function p(e) {
-    ((_ = {}),
+    ((f = {}),
         e.guilds.forEach((e) => {
-            _[e.id] = e.roles instanceof Array ? l.C5(e.id, e.roles) : e.roles;
+            f[e.id] = e.roles instanceof Array ? l.C5(e.id, e.roles) : e.roles;
         }));
 }
 function h(e) {
     for (let n of e.guilds) {
         var t;
-        if (null == _[n.id] || 'unavailable' === n.data_mode) return;
-        _[n.id] = 'partial' === n.data_mode ? l.EO(n.id, null != (t = _[n.id]) ? t : S, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : l.C5(n.id, n.roles);
+        if (null == f[n.id] || 'unavailable' === n.data_mode) return;
+        f[n.id] = 'partial' === n.data_mode ? l.EO(n.id, null != (t = f[n.id]) ? t : S, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : l.C5(n.id, n.roles);
     }
 }
 function m(e) {
-    for (let { id: t, roles: n } of ((_ = {}), e)) {
+    for (let { id: t, roles: n } of ((f = {}), e)) {
         for (let e in n) l.k0(n[e]);
-        _[t] = n;
+        f[t] = n;
     }
 }
 function g(e) {
@@ -85,50 +85,50 @@ function E(e) {
     m(e.guilds);
 }
 function b(e) {
-    _ = e.allGuildsRoles;
+    f = e.allGuildsRoles;
 }
 function y(e) {
-    _[e.guild.id] = e.guild.roles instanceof Array ? l.C5(e.guild.id, e.guild.roles) : e.guild.roles;
+    f[e.guild.id] = e.guild.roles instanceof Array ? l.C5(e.guild.id, e.guild.roles) : e.guild.roles;
 }
 function O(e) {
-    _[e.guild.id] = l.C5(e.guild.id, e.guild.roles);
+    f[e.guild.id] = l.C5(e.guild.id, e.guild.roles);
 }
 function v(e) {
     let { guild: t } = e;
-    if (null == _[t.id] || t.unavailable) return !1;
-    delete _[t.id];
+    if (null == f[t.id] || t.unavailable) return !1;
+    delete f[t.id];
 }
 function I(e) {
     let { guildId: t, role: n } = e,
-        r = _[t],
+        r = f[t],
         i = l.CL(n),
         o = null == r ? void 0 : r[i.id];
     if (null != o && (0, a.Z)(i, o)) return !1;
-    ((r = f(u({}, r), { [n.id]: l.CL(n) })), (r = l.iw(t, Object.values(r))), (_[t] = r));
+    ((r = _(u({}, r), { [n.id]: l.CL(n) })), (r = l.iw(t, Object.values(r))), (f[t] = r));
 }
 function T(e) {
     let { guildId: t, roleId: n } = e,
-        r = _[t];
+        r = f[t];
     if (null == r) return !1;
-    ((r = u({}, r)), delete r[n], (_[t] = r));
+    ((r = u({}, r)), delete r[n], (f[t] = r));
 }
 let S = Object.freeze({});
 class A extends (r = i.ZP.Store) {
     getAllGuildsRoles() {
-        return _;
+        return f;
     }
     getRoles(e) {
         var t;
-        return null != (t = _[e]) ? t : S;
+        return null != (t = f[e]) ? t : S;
     }
     getRole(e, t) {
         var n;
-        return null == (n = _[e]) ? void 0 : n[t];
+        return null == (n = f[e]) ? void 0 : n[t];
     }
     getEveryoneRole(e) {
         var t;
         let n = (0, s.lV)(e),
-            r = null == (t = _[e.id]) ? void 0 : t[n];
+            r = null == (t = f[e.id]) ? void 0 : t[n];
         if (null == r) throw Error('Guild '.concat(e.id, ' does not have an @everyone role'));
         return r;
     }

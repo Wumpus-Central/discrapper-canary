@@ -8,7 +8,7 @@ var r = n(570140),
     c = n(944486),
     u = n(914010),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends a.Z {
+class f extends a.Z {
     handleGuildCreate(e) {
         let { guild: t } = e,
             n = c.Z.getChannelId(d.ME),
@@ -46,11 +46,11 @@ class _ extends a.Z {
     }
     constructor(...e) {
         (super(...e),
-            f(this, 'actions', {
+            _(this, 'actions', {
                 GUILD_CREATE: this.handleGuildCreate,
                 CHANNEL_CREATE: this.handleChannelCreate,
                 LOGOUT: this.handleLogout
             }));
     }
 }
-let p = new _();
+let p = new f();

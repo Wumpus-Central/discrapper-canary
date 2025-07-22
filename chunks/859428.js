@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -6,8 +6,8 @@ var i = n(255367),
     s = n(442837),
     a = n(755721),
     c = n(481060),
-    d = n(749210),
-    u = n(703656),
+    u = n(749210),
+    d = n(703656),
     _ = n(430824),
     h = n(914010),
     E = n(900849),
@@ -15,17 +15,17 @@ var i = n(255367),
     p = n(388032),
     C = n(8940),
     O = n(240211);
-let T =
+let g =
     12633 == n.j
         ? () => {
               let e = (0, s.e7)([h.Z], () => h.Z.getGuildId(), []),
                   t = (0, s.e7)([_.Z], () => _.Z.getGuild(e), [e]),
                   [n, l] = r.useState(!1);
               if (null == t) return null;
-              let T = async () => {
+              let g = async () => {
                   l(!0);
                   try {
-                      (E.mT(t.id), await d.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR }));
+                      (E.mT(t.id), await u.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR }));
                   } catch (e) {
                       l(!1);
                   }
@@ -40,7 +40,7 @@ let T =
                           className: o()(C.button, C.back),
                           innerClassName: C.iconButton,
                           onClick: () => {
-                              (0, u.s1)().goBack();
+                              (0, d.s1)().goBack();
                           },
                           children: [
                               (0, i.jsx)(c.whL, {
@@ -62,7 +62,7 @@ let T =
                           color: a.zx.Colors.WHITE,
                           size: a.zx.Sizes.NONE,
                           submitting: n,
-                          onClick: T,
+                          onClick: g,
                           children: p.intl.format(p.t.uHN7n5, { guild: t.name })
                       })
                   ]

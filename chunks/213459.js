@@ -26,8 +26,8 @@ var r,
     c = n(749210),
     u = n(911969),
     d = n(822245),
-    f = n(710845),
-    _ = n(399860),
+    _ = n(710845),
+    f = n(399860),
     p = n(706454),
     h = n(675478),
     m = n(314897),
@@ -99,7 +99,7 @@ function k(e, t) {
         e
     );
 }
-let j = new f.Z('ApplicationCommandIndexStore'),
+let j = new _.Z('ApplicationCommandIndexStore'),
     U = Symbol('currentUser'),
     G = Symbol('stale'),
     B = Symbol('current'),
@@ -230,7 +230,7 @@ function er(e) {
         } else null != e.bot && (l[e.bot.id] = e.id);
         let t = {
             descriptor: k(x({}, (0, C.X0)(eP(e))), {
-                permissions: null != e.permissions ? (0, _.tk)(ex(e.permissions, o)) : void 0,
+                permissions: null != e.permissions ? (0, f.tk)(ex(e.permissions, o)) : void 0,
                 botId: e.bot_id
             }),
             commands: {}
@@ -372,7 +372,7 @@ function ed(e) {
     for (let e of t) n = eo(e.guildId, e.members) || n;
     return n;
 }
-function ef() {
+function e_() {
     let e = p.default.locale;
     return (
         e !== ep.oldLocale &&
@@ -385,12 +385,12 @@ function ef() {
         !0)
     );
 }
-class e_ extends (r = s.ZP.Store) {
+class ef extends (r = s.ZP.Store) {
     initialize() {
         (this.waitFor(p.default),
             this.waitFor(m.default),
             this.syncWith([p.default], () => {
-                ef();
+                e_();
             }));
     }
     getContextState(e) {
@@ -466,7 +466,7 @@ class e_ extends (r = s.ZP.Store) {
                     applicationId: n.applicationId
                 }),
                 (d = !0)));
-        let f = eS({
+        let _ = eS({
             permissionContext: l,
             text: t.text,
             allowApplicationCommands: u,
@@ -480,7 +480,7 @@ class e_ extends (r = s.ZP.Store) {
             singleApplicationId: n.applicationId,
             installOnDemand: n.installOnDemand
         });
-        return ((f.loading = f.loading || d), f);
+        return ((_.loading = _.loading || d), _);
     }
     queryInstallOnDemandApp(e, t) {
         let n = g.Z.getChannel(t);
@@ -505,8 +505,8 @@ class e_ extends (r = s.ZP.Store) {
         (super(...e), L(this, 'indices', {}), L(this, 'applicationIndices', new Map()), L(this, 'applicationIndicesVersion', 0), L(this, 'oldLocale', p.default.locale), L(this, 'collator', new Intl.Collator(p.default.locale, Y)));
     }
 }
-L(e_, 'displayName', 'ApplicationCommandIndexStore');
-let ep = new e_(l.Z, {
+L(ef, 'displayName', 'ApplicationCommandIndexStore');
+let ep = new ef(l.Z, {
         LOGOUT: Q,
         CONNECTION_OPEN: $,
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: ee,
@@ -701,7 +701,7 @@ function eT(e, t, n) {
 }
 function eS(e) {
     var t, n, r, i, a, s, l;
-    let { permissionContext: c, contextState: u, userState: f, applicationStates: _, text: p, builtIns: m = A.D.ALLOW, allowApplicationCommands: g = !0, singleApplicationId: b, allowEmptySections: y = !1, scoreMethod: O = A.p.NONE, sortOptions: I = eI, installOnDemand: S = !1 } = e,
+    let { permissionContext: c, contextState: u, userState: _, applicationStates: f, text: p, builtIns: m = A.D.ALLOW, allowApplicationCommands: g = !0, singleApplicationId: b, allowEmptySections: y = !1, scoreMethod: O = A.p.NONE, sortOptions: I = eI, installOnDemand: S = !1 } = e,
         { commandTypes: N } = c,
         C = null == p ? void 0 : p.toLowerCase(),
         R = null == C ? void 0 : C.split(' '),
@@ -717,7 +717,7 @@ function eS(e) {
             installOnDemand: S
         },
         j = null != (i = null == (t = u.result) ? void 0 : t.sections) ? i : {},
-        U = null != (a = null == (n = f.result) ? void 0 : n.sections) ? a : {},
+        U = null != (a = null == (n = _.result) ? void 0 : n.sections) ? a : {},
         G = new Set();
     if (g) {
         if (c.hasBaseAccessPermissions)
@@ -731,7 +731,7 @@ function eS(e) {
         }
     }
     let B = new Map();
-    for (let [e, t] of _)
+    for (let [e, t] of f)
         if (null == b || e === b) {
             let e = null == (s = t.result) ? void 0 : s.sections;
             if (null != e) for (let t of Object.keys(e)) (G.add(t), B.set(t, e[t]));
@@ -811,15 +811,15 @@ function eS(e) {
         commands: V,
         descriptors: L.map((e) => e.section),
         sectionedCommands: L,
-        loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == f ? void 0 : f.fetchState.fetching) === !0 || (null != b && (null == (r = _.get(b)) ? void 0 : r.fetchState.fetching) === !0)
+        loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == _ ? void 0 : _.fetchState.fetching) === !0 || (null != b && (null == (r = f.get(b)) ? void 0 : r.fetchState.fetching) === !0)
     };
 }
 function eA(e, t, n, r, i) {
     let a,
         { query: o, splitQuery: s, allowEmptySections: l, scoreMethod: c, permissionContext: u, installOnDemand: d } = i,
-        { context: f, userId: _, roleIds: p, isImpersonating: h } = u,
-        m = (null == f ? void 0 : f.guild_id) != null ? P.ML(e.permissions, f.guild_id, _, p, h) : null,
-        g = (null == f ? void 0 : f.guild_id) != null ? P.ZJ(e.permissions, f, f.guild_id) : null,
+        { context: _, userId: f, roleIds: p, isImpersonating: h } = u,
+        m = (null == _ ? void 0 : _.guild_id) != null ? P.ML(e.permissions, _.guild_id, f, p, h) : null,
+        g = (null == _ ? void 0 : _.guild_id) != null ? P.ZJ(e.permissions, _, _.guild_id) : null,
         E = [];
     for (let i of t)
         P.Ft(i, u, {
@@ -965,10 +965,10 @@ function eG(e, t) {
             isUserInstalled: !0
         };
     let d = ep.getContextState(e),
-        f = ep.getUserState(),
-        _ = null != (o = null == (n = d.result) ? void 0 : n.sections) ? o : {},
-        p = null != (s = null == (r = f.result) ? void 0 : r.sections) ? s : {},
-        h = _[t],
+        _ = ep.getUserState(),
+        f = null != (o = null == (n = d.result) ? void 0 : n.sections) ? o : {},
+        p = null != (s = null == (r = _.result) ? void 0 : r.sections) ? s : {},
+        h = f[t],
         m = p[t],
         g = null == (a = ep.getApplicationState(t).result) || null == (i = a.sections) ? void 0 : i[t];
     if (null != h && null != m) {

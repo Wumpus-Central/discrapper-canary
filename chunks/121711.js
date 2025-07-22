@@ -42,8 +42,8 @@ var r = n(255367),
     H = n(388032),
     F = n(87671),
     z = n(13299),
-    W = n(428383),
-    Y = n(843385);
+    W = n(606199),
+    Y = n(164792);
 function K(e) {
     let { onLoadComplete: t } = e,
         { enabled: n } = (0, N.WX)({ location: G.dr.QUEST_HOME_DESKTOP }),

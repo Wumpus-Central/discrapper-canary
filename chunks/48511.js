@@ -7,8 +7,8 @@ var r = 'function' == typeof Map && Map.prototype,
     c = s && l && 'function' == typeof l.get ? l.get : null,
     u = s && Set.prototype.forEach,
     d = 'function' == typeof WeakMap && WeakMap.prototype ? WeakMap.prototype.has : null,
-    f = 'function' == typeof WeakSet && WeakSet.prototype ? WeakSet.prototype.has : null,
-    _ = 'function' == typeof WeakRef && WeakRef.prototype ? WeakRef.prototype.deref : null,
+    _ = 'function' == typeof WeakSet && WeakSet.prototype ? WeakSet.prototype.has : null,
+    f = 'function' == typeof WeakRef && WeakRef.prototype ? WeakRef.prototype.deref : null,
     p = Boolean.prototype.valueOf,
     h = Object.prototype.toString,
     m = Function.prototype.toString,
@@ -116,19 +116,19 @@ e.exports = function e(t, r, i, s) {
     if ('boolean' != typeof d && 'symbol' !== d) throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
     if ($(l, 'indent') && null !== l.indent && '\t' !== l.indent && !(parseInt(l.indent, 10) === l.indent && l.indent > 0)) throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
     if ($(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator) throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
-    var f = l.numericSeparator;
+    var _ = l.numericSeparator;
     if (void 0 === t) return 'undefined';
     if (null === t) return 'null';
     if ('boolean' == typeof t) return t ? 'true' : 'false';
     if ('string' == typeof t) return ec(t, l);
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
-        var _ = String(t);
-        return f ? x(t, _) : _;
+        var f = String(t);
+        return _ ? x(t, f) : f;
     }
     if ('bigint' == typeof t) {
         var h = String(t) + 'n';
-        return f ? x(t, h) : h;
+        return _ ? x(t, h) : h;
     }
     var m = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= m && m > 0 && 'object' == typeof t)) return Z(t) ? '[Array]' : '[Object]';
@@ -175,7 +175,7 @@ e.exports = function e(t, r, i, s) {
                 o.call(t, function (e, n) {
                     eE.push(y(n, t, !0) + ' => ' + y(e, t));
                 }),
-            e_('Map', a.call(t), eE, g)
+            ef('Map', a.call(t), eE, g)
         );
     }
     if (eo(t)) {
@@ -185,12 +185,12 @@ e.exports = function e(t, r, i, s) {
                 u.call(t, function (e) {
                     eb.push(y(e, t));
                 }),
-            e_('Set', c.call(t), eb, g)
+            ef('Set', c.call(t), eb, g)
         );
     }
-    if (ei(t)) return ef('WeakMap');
-    if (es(t)) return ef('WeakSet');
-    if (ea(t)) return ef('WeakRef');
+    if (ei(t)) return e_('WeakMap');
+    if (es(t)) return e_('WeakSet');
+    if (ea(t)) return e_('WeakRef');
     if (z(t)) return ed(y(Number(t)));
     if (Q(t)) return ed(y(N.call(t)));
     if (q(t)) return ed(p.call(t));
@@ -246,7 +246,7 @@ function ei(e) {
     try {
         d.call(e, d);
         try {
-            f.call(e, f);
+            _.call(e, _);
         } catch (e) {
             return !0;
         }
@@ -255,9 +255,9 @@ function ei(e) {
     return !1;
 }
 function ea(e) {
-    if (!_ || !e || 'object' != typeof e) return !1;
+    if (!f || !e || 'object' != typeof e) return !1;
     try {
-        return (_.call(e), !0);
+        return (f.call(e), !0);
     } catch (e) {}
     return !1;
 }
@@ -275,9 +275,9 @@ function eo(e) {
     return !1;
 }
 function es(e) {
-    if (!f || !e || 'object' != typeof e) return !1;
+    if (!_ || !e || 'object' != typeof e) return !1;
     try {
-        f.call(e, f);
+        _.call(e, _);
         try {
             d.call(e, d);
         } catch (e) {
@@ -313,10 +313,10 @@ function eu(e) {
 function ed(e) {
     return 'Object(' + e + ')';
 }
-function ef(e) {
+function e_(e) {
     return e + ' { ? }';
 }
-function e_(e, t, n, r) {
+function ef(e, t, n, r) {
     return e + ' (' + t + ') {' + (r ? em(n, r) : T.call(n, ', ')) + '}';
 }
 function ep(e) {

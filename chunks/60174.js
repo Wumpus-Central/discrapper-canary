@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(630388),
     x = n(74538),
     v = n(566006),
-    y = n(981631),
-    C = n(185923),
+    C = n(981631),
+    y = n(185923),
     O = n(474936),
     j = n(388032),
     I = n(92254),
@@ -57,9 +57,9 @@ class P extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === y.yb.SENDING,
+            c = t.state === C.yb.SENDING,
             f = e === v.O.BURST;
-        if (c || (0, E.yE)(t.flags, y.iLy.EPHEMERAL)) return null;
+        if (c || (0, E.yE)(t.flags, C.iLy.EPHEMERAL)) return null;
         let g = b.default.getCurrentUser(),
             h = (0, x.I5)(g),
             _ = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
@@ -70,7 +70,7 @@ class P extends i.Component {
                 color: 'currentColor',
                 className: O.icon
             };
-        return t.type === y.uaV.EMOJI_ADDED && 0 === t.reactions.length
+        return t.type === C.uaV.EMOJI_ADDED && 0 === t.reactions.length
             ? (0, r.jsx)(p.e, {
                   message: t,
                   className: a()(O.reactionBtn, n)
@@ -99,8 +99,8 @@ class P extends i.Component {
                                       onClick: (e) => {
                                           this.handleAddReactionClick(e);
                                       },
-                                      onMouseEnter: () => (0, d.x)(C.qR.AddReactionPopoutMouseEntered),
-                                      onFocus: () => (0, d.x)(C.qR.AddReactionPopoutFocused),
+                                      onMouseEnter: () => (0, d.x)(y.qR.AddReactionPopoutMouseEntered),
+                                      onFocus: () => (0, d.x)(y.qR.AddReactionPopoutFocused),
                                       className: a()(O.reactionBtn, { [O.active]: c }, n),
                                       children: [f ? (0, r.jsx)(u.Pt5, N({}, T)) : (0, r.jsx)(u.EO4, N({}, T)), i]
                                   }),
@@ -143,9 +143,9 @@ class P extends i.Component {
                     (0, f.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(n),
-                            object: y.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: C.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle());
@@ -157,9 +157,9 @@ class P extends i.Component {
                         { openPopoutType: 'message_reaction_emoji_picker' },
                         n === v.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
-                            object: y.qAy.REACTION_RAIL
+                            object: C.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(_.$, {

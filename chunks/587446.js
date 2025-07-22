@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,14 +58,14 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     let { text: t = s.intl.string(s.t['5AFxuL']), className: n } = e;
     return (0, r.jsx)(o.ua7, {
         text: t,
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                f(u({}, e), {
+                _(u({}, e), {
                     children: (0, r.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',

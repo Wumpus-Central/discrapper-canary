@@ -24,11 +24,11 @@ var r = n(475637),
         abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
         wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
     },
-    f = {
+    _ = {
         narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
         any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
     },
-    _ = {
+    f = {
         narrow: /^[smtwf]/i,
         short: /^(su|mo|tu|we|th|fr|sa)/i,
         abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
@@ -80,11 +80,11 @@ let g = {
     month: (0, r.Z)({
         matchPatterns: d,
         defaultMatchWidth: 'wide',
-        parsePatterns: f,
+        parsePatterns: _,
         defaultParseWidth: 'any'
     }),
     day: (0, r.Z)({
-        matchPatterns: _,
+        matchPatterns: f,
         defaultMatchWidth: 'wide',
         parsePatterns: p,
         defaultParseWidth: 'any'

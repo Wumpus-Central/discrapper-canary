@@ -9,18 +9,18 @@ var r = n(373793),
     u = n(981631);
 async function d(e) {
     var t, n, d;
-    let { applicationId: f, channel: _, commandIntegrationTypes: p, appLauncherContext: h } = e;
+    let { applicationId: _, channel: f, commandIntegrationTypes: p, appLauncherContext: h } = e;
     if (
         !(0, c.x$)({
-            applicationId: f,
-            channel: _,
+            applicationId: _,
+            channel: f,
             commandIntegrationTypes: p
         })
     )
         return Promise.resolve({ isAuthorized: !0 });
-    let m = l.Z.getApplication(f);
+    let m = l.Z.getApplication(_);
     if (null == m) {
-        let e = await (0, s.UM)(f);
+        let e = await (0, s.UM)(_);
         m = o.ZP.createFromServer(e);
     }
     let g = r.Y.USER_INSTALL,
@@ -28,7 +28,7 @@ async function d(e) {
     return (
         null != h &&
             (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-                application_id: f,
+                application_id: _,
                 location: h.location,
                 section_name: h.sectionName,
                 source: h.entrypoint
@@ -36,7 +36,7 @@ async function d(e) {
         new Promise((e) => {
             (0, a.openOAuth2Modal)(
                 {
-                    clientId: f,
+                    clientId: _,
                     integrationType: g,
                     scopes: E,
                     callback: (t) => {
@@ -44,7 +44,7 @@ async function d(e) {
                         null != n
                             ? (null != h &&
                                   (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-                                      application_id: f,
+                                      application_id: _,
                                       location: h.location,
                                       section_name: h.sectionName,
                                       source: h.entrypoint

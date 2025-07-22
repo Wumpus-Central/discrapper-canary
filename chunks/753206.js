@@ -12,17 +12,17 @@ var r = n(255367),
     p = n(30804);
 let g = i.memo(function (e) {
     var t;
-    let { message: n, channel: s, compact: g, className: b, isGroupStart: v, hideSimpleEmbedContent: m = !0, disableInteraction: h, previewGuildId: O, preview: y, author: E } = e,
-        j = null != O ? O : (0, a.k)(n),
-        S = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+    let { message: n, channel: s, compact: g, className: b, isGroupStart: m, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: E } = e,
+        S = null != O ? O : (0, a.k)(n),
+        j = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: x } = (0, u.Z)(n, {
-            hideSimpleEmbedContent: m,
-            allowList: S,
-            allowHeading: S,
+            hideSimpleEmbedContent: v,
+            allowList: j,
+            allowHeading: j,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        P = i.useMemo(() => {
+        C = i.useMemo(() => {
             var t, n;
             return (0, f.Z)(
                 ((t = (function (e) {
@@ -53,7 +53,7 @@ let g = i.memo(function (e) {
                 (n = n =
                     {
                         channel: s,
-                        guildId: j
+                        guildId: S
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -69,15 +69,15 @@ let g = i.memo(function (e) {
                       }),
                 t)
             );
-        }, [e, s, j]);
+        }, [e, s, S]);
     return (0, r.jsx)(c.Z, {
         compact: g,
         className: l()(b, {
             [p.message]: !0,
             [p.cozyMessage]: !g,
-            [p.groupStart]: v
+            [p.groupStart]: m
         }),
-        childrenHeader: P,
+        childrenHeader: C,
         childrenMessageContent: (0, d.Z)(e, x),
         disableInteraction: h,
         author: E,

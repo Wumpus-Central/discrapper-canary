@@ -7,9 +7,9 @@ var n = t(255367),
     a = t(481060),
     o = t(749210),
     g = t(110924),
-    f = t(410030),
-    c = t(616780),
-    v = t(100527),
+    v = t(410030),
+    f = t(616780),
+    c = t(100527),
     h = t(906732),
     u = t(527379),
     E = t(687158),
@@ -29,9 +29,9 @@ function H(A) {
         [j, T] = r.useState(null == P || null == V),
         y = (0, g.Z)(V),
         m = r.useRef(null),
-        { analyticsLocations: L } = (0, h.ZP)(v.Z.GUILD_MEMBER_MOD_VIEW),
+        { analyticsLocations: L } = (0, h.ZP)(c.Z.GUILD_MEMBER_MOD_VIEW),
         x = (0, E.ZP)(e, t),
-        Z = (0, f.ZP)();
+        Z = (0, v.ZP)();
     return (r.useEffect(() => {
         O || l();
     }, [O, l]),
@@ -50,7 +50,7 @@ function H(A) {
             }
         );
     }, [j, V, l]),
-    (0, c.$)({ [t]: [e] }),
+    (0, f.$)({ [t]: [e] }),
     r.useEffect(() => {
         !(async function () {
             let A = [

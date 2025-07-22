@@ -8,8 +8,8 @@ var r = n(664751),
     c = n(638880),
     u = n(812206),
     d = n(439849),
-    f = n(669764),
-    _ = n(706454),
+    _ = n(669764),
+    f = n(706454),
     p = n(757266),
     h = n(77498),
     m = n(283595),
@@ -117,12 +117,12 @@ async function x(e) {
         if (null == e) throw Error('Missing dispatch game when launching');
         let i = m.Z.getLibraryApplication(t, n);
         if (null == i) throw Error('Missing library application when launching');
-        d = L(t).then((t) => y.Z.launchDispatchApplication(e, t, _.default.locale, i.getBranchName(), r));
+        d = L(t).then((t) => y.Z.launchDispatchApplication(e, t, f.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? y.Z.launch(e) : y.Z.launchGame(t);
     }
-    let f = Error('game not found');
+    let _ = Error('game not found');
     return null != d
         ? (l.Z.dispatch({
               type: 'LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE',
@@ -146,15 +146,15 @@ async function x(e) {
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
-                          error: f
+                          error: _
                       }));
               }))
         : (l.Z.dispatch({
               type: 'GAME_LAUNCH_FAIL',
               applicationId: t,
-              error: f
+              error: _
           }),
-          Promise.reject(f));
+          Promise.reject(_));
 }
 let M = {
     addGame(e, t) {
@@ -218,7 +218,7 @@ let M = {
         ),
     getDetectableGamesSupplemental(e) {
         let { forceFetch: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { forceFetch: !1 },
-            n = t ? e : e.filter(f.Z.canFetch);
+            n = t ? e : e.filter(_.Z.canFetch);
         if (0 === n.length) return;
         l.Z.dispatch({
             type: 'DETECTABLE_GAME_SUPPLEMENTAL_FETCH',

@@ -43,8 +43,8 @@ var s = function (e, t) {
                       return e !== c;
                   };
     if (!r(e)) throw TypeError('Invalid target');
-    for (var f, _, p = document.scrollingElement || document.documentElement, h = [], m = e; r(m) && d(m); ) {
-        if ((m = null == (_ = (f = m).parentElement) ? f.getRootNode().host || null : _) === p) {
+    for (var _, f, p = document.scrollingElement || document.documentElement, h = [], m = e; r(m) && d(m); ) {
+        if ((m = null == (f = (_ = m).parentElement) ? _.getRootNode().host || null : f) === p) {
             h.push(m);
             break;
         }

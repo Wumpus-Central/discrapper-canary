@@ -36,8 +36,8 @@ var i,
     c = n(26151),
     u = n(224706),
     d = n(765250),
-    f = n(13245),
-    _ = n(287734),
+    _ = n(13245),
+    f = n(287734),
     p = n(615287),
     h = n(579806),
     m = n(887278),
@@ -220,7 +220,7 @@ function eu(e) {
     };
 }
 let ed = 'none',
-    ef = (0, a.H)({
+    e_ = (0, a.H)({
         onContention: (e, t) => eo.verbose('overlayLock contention: lastMutexCall '.concat(ed)),
         onContentionResolved: () => eo.verbose('overlayLock contention: resolved.'),
         onTimeout: (e, t) => {
@@ -238,10 +238,10 @@ let ed = 'none',
         },
         timeoutMs: 180000
     });
-function e_(e, t) {
+function ef(e, t) {
     return function () {
         for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-        ef(() => t(...r), e);
+        e_(() => t(...r), e);
     };
 }
 function ep() {
@@ -277,7 +277,7 @@ function eh(e, t) {
     (null === n || r === n) &&
         r !== t &&
         (null == t ? W.delete(e) : W.set(e, t),
-        (null == t || 'CRASHED' === t) && (f.Z.setFocusedPID(null), ep()),
+        (null == t || 'CRASHED' === t) && (_.Z.setFocusedPID(null), ep()),
         ee.delete(e),
         eo.info(
             'pid='
@@ -310,12 +310,12 @@ async function em(e) {
 }
 async function eg(e) {
     var t;
-    ef.isMutexHeld() || eo.error('_attachPIDMustBeLocked: overlayMutex is not held.', e);
+    e_.isMutexHeld() || eo.error('_attachPIDMustBeLocked: overlayMutex is not held.', e);
     let n = null != (t = el(e).mounting_started_at) ? t : new Date().getTime();
     ec(e, { mounting_started_at: n });
     let r = W.get(e);
     if (null != r) return void eo.warn('Trying to attach to pid='.concat(e, ', that is already in status: ').concat(r));
-    (await f.Z.updateOverlayState(e, p.mM.WAITING_FOR_OVERLAY_OPEN), (ed = 'attach.getOverlayModule'));
+    (await _.Z.updateOverlayState(e, p.mM.WAITING_FOR_OVERLAY_OPEN), (ed = 'attach.getOverlayModule'));
     let i = await (0, k.K)();
     if (null == i) return void eo.error('Trying to attach to pid='.concat(e, ', but overlay module failed loaded'));
     ((ed = 'attach.transitionOverlayPIDStatus'), eh(e, 'ATTACHING'), (ed = 'attach.attachToProcess'));
@@ -323,7 +323,7 @@ async function eg(e) {
     null == a ? ((ed = 'attach.transitionOverlayPIDStatus (CONNECTING)'), eh(e, 'CONNECTING', 'ATTACHING'), (ed = 'attach.reconcileHostProcess'), await em(i), i.connectProcess(e)) : ((ed = 'attach.transitionOverlayPIDStatus (HOOK_FAILED)'), eh(e, 'HOOK_FAILED', 'ATTACHING'), eo.warn('Could not hook to pid='.concat(e, ', error=').concat(a)));
 }
 async function eE(e) {
-    if ((ef.isMutexHeld() || eo.error('_detachPIDMustBeLocked: overlayMutex is not held.', e), !W.has(e))) return void eo.warn('Trying to detach from pid '.concat(e, ', which is in an unknown state'));
+    if ((e_.isMutexHeld() || eo.error('_detachPIDMustBeLocked: overlayMutex is not held.', e), !W.has(e))) return void eo.warn('Trying to detach from pid '.concat(e, ', which is in an unknown state'));
     eh(e, 'DISCONNECTING');
     try {
         ed = 'detach.getOverlayModule';
@@ -341,7 +341,7 @@ async function eb(e) {
             isConnectionOpened: X,
             action: e
         }),
-        ef.isMutexHeld() || eo.error('updateIntendedOverlayPIDs: overlayMutex is not held.', e),
+        e_.isMutexHeld() || eo.error('updateIntendedOverlayPIDs: overlayMutex is not held.', e),
         !X && null != e)
     )
         return void eo.verbose('updateIntendedOverlayPIDs: Connection is not opened while updating applications.', e);
@@ -404,8 +404,8 @@ async function eb(e) {
     for (let t of e.removed) (eo.verbose('updateIntendedOverlayPIDs: removedGame', t), await r(t), (i = !0));
     i && eJ.emitChange();
 }
-let ey = e_('updateIntendedOverlayPIDs', (e) => (eo.info('updateIntendedOverlayPIDs', e), eb(e))),
-    eO = e_('clearPID', (e) => {
+let ey = ef('updateIntendedOverlayPIDs', (e) => (eo.info('updateIntendedOverlayPIDs', e), eb(e))),
+    eO = ef('clearPID', (e) => {
         if (null == e) return (0, M.setPID)(M.UNSET_PID);
         A.ZP.isOverlayV3EnabledForPID(e) || (0, M.setPID)(M.UNSET_PID);
     });
@@ -416,7 +416,7 @@ function ev() {
         });
     });
 }
-let eI = e_('setOverlayEnabled', async (e) => {
+let eI = ef('setOverlayEnabled', async (e) => {
     if (!(0, M.supportsLegacy)()) return;
     if (z === e) return void eo.verbose('setOverlayEnabled: no change', { newOverlayEnabled: e });
     ((z = e), eJ.emitChange());
@@ -425,7 +425,7 @@ let eI = e_('setOverlayEnabled', async (e) => {
     (z || (await eb(void 0)), W.size > 0 && (await em(t)));
 });
 function eT(e) {
-    f.Z.setFocusedPID(0 === e ? null : e);
+    _.Z.setFocusedPID(0 === e ? null : e);
 }
 function eS(e, t, n) {
     var r;
@@ -445,7 +445,7 @@ function eS(e, t, n) {
             width: n.graphics_width,
             height: n.graphics_height
         }),
-        f.Z.updateOverlayState(e, p.mM.OVERLAY_RENDERING));
+        _.Z.updateOverlayState(e, p.mM.OVERLAY_RENDERING));
     let s = el(e);
     (w.default.track(j.rMx.OVERLAY_HOOK_RESULT, s), eo.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s), t ? eh(e, 'CONNECTED', 'CONNECTING') : eh(e, 'CONNECT_FAILED', 'CONNECTING'));
 }
@@ -492,7 +492,7 @@ function eC(e) {
                         }),
                         eh(i, 'READY'),
                         (0, M.setPID)(i),
-                        f.Z.overlayReady(i));
+                        _.Z.overlayReady(i));
                     let o = el(i);
                     ec(i, F(B({}, o), { total_mount_time_ms: null != o.mounting_started_at ? new Date().getTime() - o.mounting_started_at : void 0 }));
                 }));
@@ -547,12 +547,12 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    (n.append('build_id', '50858bb3bc6db605e11ed6a4b6763c013ee9218b'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
+    (n.append('build_id', '1c369a1fa54625ced3a5112d1b96db77ac9771bd'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString())));
 }
 function ek(e) {
     let { channelId: t, ring: n } = e;
     setImmediate(() => {
-        (_.default.selectPrivateChannel(t), c.Z.call(t, !1, !!n));
+        (f.default.selectPrivateChannel(t), c.Z.call(t, !1, !!n));
     });
 }
 function ej(e) {
@@ -577,7 +577,7 @@ function eG() {
     ((X = !0), (Y = !1), ez());
 }
 function eB() {
-    ((X = !1), f.Z.setFocusedPID(null), ey(void 0), eo.verbose('OverlayBridgeStore: handleConnectionClosed'));
+    ((X = !1), _.Z.setFocusedPID(null), ey(void 0), eo.verbose('OverlayBridgeStore: handleConnectionClosed'));
 }
 function eV() {
     return !0;
@@ -596,7 +596,7 @@ function eZ(e) {
             channelId: i,
             messageId: a
         }),
-            null != Q && f.Z.setInputLocked(!0, Q));
+            null != Q && _.Z.setInputLocked(!0, Q));
     });
 }
 function eH(e) {

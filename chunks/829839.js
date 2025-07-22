@@ -14,7 +14,7 @@ var r,
     c = n(553813),
     u = n.n(c),
     d = n(65154);
-let f = [
+let _ = [
     {
         name: 'H265',
         encode: 'undefined' == typeof window || (null == (i = window) || null == (r = i.DiscordNative) ? void 0 : r.process.platform) !== 'darwin' || ((null == (o = window) || null == (a = o.DiscordNative) ? void 0 : a.os.arch) === 'arm64' && u().satisfies(null == (l = window) || null == (s = l.DiscordNative) ? void 0 : s.os.release, d.n4)),
@@ -36,8 +36,8 @@ let f = [
         decode: !0
     }
 ];
-function _(e, t) {
-    let n = t.concat(f),
+function f(e, t) {
+    let n = t.concat(_),
         r = [];
     return (
         n.forEach((t) => {
@@ -72,7 +72,7 @@ function p(e) {
 }
 function h(e, t) {
     return 'string' == typeof e
-        ? _(
+        ? f(
               JSON.parse(e).map((e) => ({
                   codec: m(e.codec),
                   encode: e.encode,
@@ -80,7 +80,7 @@ function h(e, t) {
               })),
               t
           )
-        : _(
+        : f(
               e.map((e) => ({
                   codec: m(e),
                   encode: !0,

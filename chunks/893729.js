@@ -12,14 +12,14 @@ var r = n(255367),
     p = n(594174),
     g = n(5192),
     b = n(981631),
-    v = n(388032),
-    m = n(264700);
+    m = n(388032),
+    v = n(264700);
 function h(e) {
     var t;
-    let { guildId: n, role: s, theme: h, content: O = v.intl.string(v.t['6OSasb']), className: y } = e,
+    let { guildId: n, role: s, theme: h, content: O = m.intl.string(m.t['6OSasb']), className: y } = e,
         E = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        j = g.ZP.useName(n, null, E),
-        S = (0, c.Kz)(s),
+        S = g.ZP.useName(n, null, E),
+        j = (0, c.Kz)(s),
         x = i.useMemo(() => {
             var e, t;
             return (0, u.e5)(
@@ -79,19 +79,19 @@ function h(e) {
                 e)
             );
         }, [E, O]),
-        P = {
-            nick: j,
+        C = {
+            nick: S,
             colorString: null != (t = s.colorString) ? t : void 0
         };
     return (0, r.jsx)(a.f6W, {
         theme: h,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: l()(e, m.container, y),
+                className: l()(e, v.container, y),
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: P,
-                    roleIcon: S,
+                    author: C,
+                    roleIcon: j,
                     message: x,
                     isGroupStart: !0,
                     disableInteraction: !0

@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(271383),
     u = n(496675),
     d = n(246946),
-    f = n(594174),
-    _ = n(106824),
+    _ = n(594174),
+    f = n(106824),
     p = n(691841),
     h = n(981631),
     m = n(185923);
@@ -68,11 +68,11 @@ function y(e, t) {
 function O(e, t, n) {
     var g, b, O, v, I, T, S;
     let { channel: A, type: N } = e,
-        [C, R] = r.useState(() => (0, _.P)()),
+        [C, R] = r.useState(() => (0, f.P)()),
         P = (0, i.Z)(),
-        w = (0, a.e7)([c.ZP, f.default], () => {
+        w = (0, a.e7)([c.ZP, _.default], () => {
             var e, t;
-            let n = f.default.getCurrentUser();
+            let n = _.default.getCurrentUser();
             return null != (t = null != A.guild_id && null != n ? (null == (e = c.ZP.getMember(A.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
         { canMentionEveryone: D, hidePersonalInformation: L } = (0, a.cj)(
@@ -107,7 +107,7 @@ function O(e, t, n) {
             currentWordIsAtStart: (null == j ? void 0 : j.isAtStart) === !0,
             optionText: null != M ? (0, o.KF)({ [M.name]: null != (S = null == (O = e.editorRef.current) ? void 0 : O.getCurrentCommandOptionValue()) ? S : [] }, M.name) : ''
         }),
-        [G] = r.useState(() => new _.Z(U));
+        [G] = r.useState(() => new f.Z(U));
     return (
         r.useEffect(() => {
             G.updateProps(U);

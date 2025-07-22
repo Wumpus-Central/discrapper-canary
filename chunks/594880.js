@@ -11,6 +11,8 @@ n.r(
         promoBannerContainer: 'promoBannerContainer_f48ee4',
         whatsNewSectionContainer: 'whatsNewSectionContainer_f48ee4',
         bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_f48ee4',
-        scroller: 'scroller_f48ee4'
+        scroller: 'scroller_f48ee4',
+        topOfPageGradient: 'topOfPageGradient_f48ee4',
+        bottomOfPageGradient: 'bottomOfPageGradient_f48ee4'
     })
 );

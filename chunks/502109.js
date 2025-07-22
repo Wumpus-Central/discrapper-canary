@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(710845),
     u = n(219929),
     d = n(626135),
-    f = n(526167),
-    _ = n(358085),
+    _ = n(526167),
+    f = n(358085),
     p = n(622999),
     h = n(981631),
     m = n(388032),
@@ -100,7 +100,7 @@ let T = new c.Z('PaymentRequest'),
     });
 class A extends i.Component {
     componentDidMount() {
-        if (!(0, _.isDesktop)()) {
+        if (!(0, f.isDesktop)()) {
             if (!this.isBrowserCompatible()) return void this.onPaymentRequestFailure();
             ((this.disableWallets = S.filter((e) => e !== this.paymentRequestWallet).sort()),
                 (0, p.d2)().then((e) => {
@@ -224,11 +224,11 @@ class A extends i.Component {
             : this.renderButton({
                   iconType: u.ZP.Types.PAYMENT_REQUEST,
                   buttonText: m.intl.string(m.t.f19PPT),
-                  submitting: !(0, _.isDesktop)() && this.state.submitting
+                  submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }
     render() {
-        if ((0, _.isDesktop)()) return this.renderMain();
+        if ((0, f.isDesktop)()) return this.renderMain();
         if (this.state.submitting) return this.props.loadingComponent;
         let { available: e } = this.validatePaymentRequest();
         return e ? this.renderMain() : null;
@@ -286,7 +286,7 @@ class A extends i.Component {
                 );
             }),
             E(this, 'attemptPaymentRequest', () => {
-                if ((0, _.isDesktop)()) return void this.props.onChooseType(h.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
+                if ((0, f.isDesktop)()) return void this.props.onChooseType(h.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
                 let { available: e } = this.validatePaymentRequest();
                 if (!e) return void this.onPaymentRequestFailure();
                 let { paymentRequest: t } = this.state;
@@ -296,7 +296,7 @@ class A extends i.Component {
 }
 class N extends A {
     isBrowserCompatible() {
-        return (0, f.vu)() >= 61;
+        return (0, _.vu)() >= 61;
     }
     validatePaymentRequest() {
         if (!this.isBrowserCompatible()) {
@@ -358,7 +358,7 @@ class N extends A {
             : this.renderButton({
                   iconType: u.ZP.Types.G_PAY,
                   buttonText: m.intl.string(m.t.p2jr2N),
-                  submitting: !(0, _.isDesktop)() && this.state.submitting
+                  submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }
     constructor(...e) {
@@ -367,7 +367,7 @@ class N extends A {
 }
 class C extends A {
     isBrowserCompatible() {
-        return (0, f.G6)();
+        return (0, _.G6)();
     }
     validatePaymentRequest() {
         if (!this.isBrowserCompatible()) {
@@ -429,7 +429,7 @@ class C extends A {
             : this.renderButton({
                   iconType: u.ZP.Types.APPLE_LIGHT,
                   buttonText: m.intl.string(m.t.xdGS1t),
-                  submitting: !(0, _.isDesktop)() && this.state.submitting
+                  submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }
     constructor(...e) {

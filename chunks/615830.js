@@ -29,10 +29,10 @@ function d(e) {
     }
     (t.push(e.keyVersion), (c = t));
 }
-function f() {
+function _() {
     c = s;
 }
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
         ((l = null != (t = null == e ? void 0 : e.persistentCodesEnabled) && t), (c = null != (n = null == e ? void 0 : e.uploadedKeyVersions) ? n : s));
@@ -50,9 +50,9 @@ class _ extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-(o(_, 'displayName', 'SecureFramesPersistedStore'), o(_, 'persistKey', 'SecureFramesPersistedStore'));
-let p = new _(a.Z, {
+(o(f, 'displayName', 'SecureFramesPersistedStore'), o(f, 'persistKey', 'SecureFramesPersistedStore'));
+let p = new f(a.Z, {
     SECURE_FRAMES_SETTINGS_UPDATE: u,
     SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: d,
-    SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: f
+    SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: _
 });

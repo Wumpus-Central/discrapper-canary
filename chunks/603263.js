@@ -1,17 +1,17 @@
 n.d(t, {
-    Gn: () => T,
+    Gn: () => g,
     Nz: () => _,
     QQ: () => E,
     QY: () => O,
-    Vj: () => u,
+    Vj: () => d,
     Vs: () => S,
-    h7: () => g,
+    h7: () => T,
     j8: () => I,
     oO: () => h,
     qt: () => p,
     u$: () => C,
     yC: () => c,
-    zH: () => d
+    zH: () => u
 });
 var i = n(570140),
     r = n(768119),
@@ -71,7 +71,7 @@ function c(e, t, n, r) {
             searchEverywhere: r
         }));
 }
-function d(e) {
+function u(e) {
     switch (e) {
         case o.QIO.MOST_RELEVANT:
             return {
@@ -91,20 +91,20 @@ function d(e) {
             };
     }
 }
-function u(e) {
+function d(e) {
     return null == e.sort_by || null == e.sort_order ? o.QIO.NEWEST : 'relevance' === e.sort_by ? o.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? o.QIO.OLDEST : o.QIO.NEWEST;
 }
 function _(e, t, n) {
     let i = r.Z.getQuery(e);
-    return c(e, a(s({}, i, d(t)), { offset: 0 }), n);
+    return c(e, a(s({}, i, u(t)), { offset: 0 }), n);
 }
 function h(e, t, n) {
     var i = e,
         l = t * o.vpv,
-        d = n;
-    let u = r.Z.getQuery(i),
+        u = n;
+    let d = r.Z.getQuery(i),
         _ = r.Z.getTotalResults(i);
-    return l < 0 || l > _ ? void 0 : c(i, a(s({}, u), { offset: l }), d);
+    return l < 0 || l > _ ? void 0 : c(i, a(s({}, d), { offset: l }), u);
 }
 function E(e) {
     i.Z.dispatch({
@@ -144,13 +144,13 @@ function O(e, t) {
         showBlocked: t
     });
 }
-function T(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
         searchId: e
     });
 }
-function g(e, t) {
+function T(e, t) {
     i.Z.dispatch({
         type: 'SEARCH_ADD_HISTORY',
         searchId: e,

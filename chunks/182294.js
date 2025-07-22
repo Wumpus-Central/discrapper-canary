@@ -8,7 +8,7 @@
     d_: () => c,
     e7: () => a,
     ny: () => u,
-    px: () => f
+    px: () => _
 }),
     n(415506));
 let r = 1.5,
@@ -113,6 +113,6 @@ let u = Object.freeze({
 function d(e) {
     return u[e];
 }
-function f(e) {
+function _(e) {
     return 'number' != typeof e ? d(e).size : e;
 }

@@ -17,8 +17,8 @@ var r,
     c = n(570140),
     u = n(122810),
     d = n(709054),
-    f = n(314897),
-    _ = n(594174),
+    _ = n(314897),
+    f = n(594174),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -126,7 +126,7 @@ function D(e) {
 }
 function L(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: o, hiddenActivities: s, processedAtTimestamp: l } = e;
-    if (n === f.default.getId()) return !1;
+    if (n === _.default.getId()) return !1;
     let c = r === p.Skl.OFFLINE && (null == s || 0 === s.length),
         u = g[n];
     if (null == u) {
@@ -157,7 +157,7 @@ function L(e) {
 }
 function x(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-    if (n === f.default.getId()) return;
+    if (n === _.default.getId()) return;
     let l = r === p.Skl.OFFLINE && (null == o || 0 === o.length),
         c = g[n];
     if (null == c) {
@@ -184,7 +184,7 @@ function x(e) {
     }
 }
 function M(e, t) {
-    if (t === f.default.getId()) return !1;
+    if (t === _.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
     (delete n[e], 0 === Object.keys(n).length && delete g[t], P(t));
@@ -197,7 +197,7 @@ function j() {
 }
 function U(e) {
     let { guilds: t, presences: n } = e,
-        r = f.default.getId();
+        r = _.default.getId();
     ((g = {}), (v = {}), (E = { [r]: E[r] }), (b = { [r]: b[r] }), (y = { [r]: y[r] }), (O = { [r]: {} }));
     let i = new Set();
     (t.forEach((e) => {
@@ -325,7 +325,7 @@ function W(e) {
         });
 }
 function K(e) {
-    let t = f.default.getId();
+    let t = _.default.getId();
     if (E[t] === e.status && b[t] === e.activities && y[t] === e.hiddenActivities) return !1;
     ((E[t] = e.status), (b[t] = [...e.activities].sort(R)), (y[t] = [...e.hiddenActivities].sort(R)), delete v[t]);
 }
@@ -335,16 +335,16 @@ function z(e) {
 }
 class q extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.default);
+        this.waitFor(_.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        ((E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(R)));
+        ((E[_.default.getId()] = e), (b[_.default.getId()] = [...t].sort(R)));
     }
     getStatus(e) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Skl.OFFLINE,
-            a = _.default.getUser(e);
+            a = f.default.getUser(e);
         if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (i = p.Skl.UNKNOWN), null == r)) return null != (t = E[e]) ? t : i;
         let o = I(e, r);
         return null != (n = null == o ? void 0 : o.status) ? n : i;

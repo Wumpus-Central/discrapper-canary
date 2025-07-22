@@ -1,7 +1,7 @@
 (n.d(t, {
     FW: () => u,
-    fZ: () => f,
-    py: () => _
+    fZ: () => _,
+    py: () => f
 }),
     n(388685),
     n(415506));
@@ -14,7 +14,7 @@ var r = n(911969),
     c = n(185923);
 function u(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: o = !0, canMentionRoles: s = !0, canMentionChannels: c = !0, canMentionEveryone: u, useNewSlashCommands: d, canOnlyUseTextCommands: f, canSendStickers: _, canSendSoundmoji: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: b, onSendMessage: y, onSendSticker: O, setValue: v } = e,
+    let { activeCommandOption: n, canMentionUsers: o = !0, canMentionRoles: s = !0, canMentionChannels: c = !0, canMentionEveryone: u, useNewSlashCommands: d, canOnlyUseTextCommands: _, canSendStickers: f, canSendSoundmoji: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: b, onSendMessage: y, onSendSticker: O, setValue: v } = e,
         I = {
             mentions: {
                 channel: l.nS.DENY,
@@ -23,7 +23,7 @@ function u(e) {
                 user: l.h3.DENY
             },
             commands: l.L8.DISABLED,
-            allowStickers: !0 === _,
+            allowStickers: !0 === f,
             allowSoundmoji: !0 === p,
             forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
             hideMentionDescription: !0 === h,
@@ -48,7 +48,7 @@ function u(e) {
         let e = (0, i.$z)(n);
         (e.canMentionChannels && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (I.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (I.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (I.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (I.hideMentionDescription = !0));
     } else (c && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), s && (I.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (I.mentions.user = l.h3.ALLOW_CHANNEL), u && (I.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE));
-    return ((null == (t = g.commands) ? void 0 : t.enabled) && (d ? (I.commands = f ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (I.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I);
+    return ((null == (t = g.commands) ? void 0 : t.enabled) && (d ? (I.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (I.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I);
 }
 function d(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: o } = e,
@@ -59,9 +59,9 @@ function d(e) {
     }
     return null == l.matches || !!l.matches(n, r, i, a, o);
 }
-function f(e) {
-    let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: a, textValue: u, optionText: f } = e,
-        _ = null;
+function _(e) {
+    let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: a, textValue: u, optionText: _ } = e,
+        f = null;
     for (let e of s.R) {
         var p, h, m, g, E, b;
         let y = s.W[e];
@@ -77,7 +77,7 @@ function f(e) {
                         options: r
                     })
                 ) {
-                    _ = {
+                    f = {
                         type: e,
                         typeInfo: y,
                         query: u
@@ -89,7 +89,7 @@ function f(e) {
                     type: e,
                     channel: t,
                     guild: n,
-                    query: f,
+                    query: _,
                     isAtStart: !1,
                     options: r
                 })
@@ -97,7 +97,7 @@ function f(e) {
                 return {
                     type: e,
                     typeInfo: y,
-                    query: f
+                    query: _
                 };
         } else if (e === l.eq.STICKERS) {
             if (
@@ -105,7 +105,7 @@ function f(e) {
                     type: e,
                     channel: t,
                     guild: n,
-                    query: f,
+                    query: _,
                     isAtStart: !1,
                     options: r
                 })
@@ -113,7 +113,7 @@ function f(e) {
                 return {
                     type: e,
                     typeInfo: y,
-                    query: f
+                    query: _
                 };
         } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
             if (
@@ -126,7 +126,7 @@ function f(e) {
                     options: r
                 })
             ) {
-                _ = {
+                f = {
                     type: e,
                     typeInfo: y,
                     query: u.substring(null != (h = null == (p = y.sentinel) ? void 0 : p.length) ? h : 0)
@@ -144,7 +144,7 @@ function f(e) {
                     options: r
                 })
             ) {
-                _ = {
+                f = {
                     type: e,
                     typeInfo: y,
                     query: u
@@ -164,7 +164,7 @@ function f(e) {
                         options: r
                     }))
             ) {
-                _ = {
+                f = {
                     type: e,
                     typeInfo: y,
                     query: i.substring(null != (g = null == (m = y.sentinel) ? void 0 : m.length) ? g : 0)
@@ -182,7 +182,7 @@ function f(e) {
                 options: r
             })
         ) {
-            _ = {
+            f = {
                 type: e,
                 typeInfo: y,
                 query: i.substring(null != (b = null == (E = y.sentinel) ? void 0 : E.length) ? b : 0)
@@ -190,9 +190,9 @@ function f(e) {
             break;
         }
     }
-    return null == _ ? null : ((_.query = _.query.toLocaleLowerCase()), _);
+    return null == f ? null : ((f.query = f.query.toLocaleLowerCase()), f);
 }
-function _(e, t) {
+function f(e, t) {
     let n;
     if (null == t || null == e) return null;
     if (null != e.choices || e.autocomplete) n = l.eq.CHOICES;

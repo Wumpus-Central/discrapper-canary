@@ -1,144 +1,119 @@
-(t.d(n, { default: () => f }), t(388685), t(953529));
+(t.d(n, { default: () => j }), t(388685), t(953529));
 var i = t(255367),
     l = t(73800),
-    a = t(120356),
-    r = t.n(a),
-    s = t(442837),
-    c = t(755721),
-    o = t(481060),
-    u = t(313201),
-    d = t(41776),
-    h = t(357156),
-    v = t(513449),
-    m = t(592125),
-    x = t(430824),
-    g = t(305298),
-    p = t(405613),
-    j = t(460838),
-    C = t(765305),
-    N = t(388032),
-    y = t(817576);
-function f(e) {
+    r = t(442837),
+    a = t(82659),
+    s = t(481060),
+    c = t(41776),
+    o = t(357156),
+    u = t(513449),
+    d = t(592125),
+    h = t(430824),
+    v = t(305298),
+    m = t(405613),
+    g = t(460838),
+    x = t(765305),
+    p = t(388032),
+    C = t(817576);
+function j(e) {
     var n;
-    let { transitionState: t, event: a, onSuccess: f, onClose: b } = e,
-        E = (0, u.Dt)(),
-        { guild_id: k, privacy_level: w } = a,
-        I = (0, s.e7)([m.Z], () => m.Z.getChannel(a.channel_id), [a]),
-        Z = (0, s.e7)([x.Z], () => x.Z.getGuild(k), [k]),
-        { canManageGuildEvent: S } = (0, h.XJ)(null != I ? I : Z),
-        T = S(a),
-        O = (0, s.e7)([d.Z], () => d.Z.isLurking(k), [k]),
-        _ = a.entity_type === C.WX.STAGE_INSTANCE,
-        [P, A] = l.useState(_),
-        [G, { loading: L, error: X }] = (0, g.Z)();
-    if (!T) return null;
-    let R = w === C.j8.PUBLIC ? N.intl.string(N.t.HhlaLC) : N.intl.string(N.t.GI3xXV),
-        M = () => {
-            (null == f || f(), b(), (0, v.Ku)(!1));
+    let { transitionState: t, event: j, onSuccess: N, onClose: f } = e,
+        { guild_id: y, privacy_level: k } = j,
+        E = (0, r.e7)([d.Z], () => d.Z.getChannel(j.channel_id), [j]),
+        b = (0, r.e7)([h.Z], () => h.Z.getGuild(y), [y]),
+        { canManageGuildEvent: w } = (0, o.XJ)(null != E ? E : b),
+        I = w(j),
+        Z = (0, r.e7)([c.Z], () => c.Z.isLurking(y), [y]),
+        S = j.entity_type === x.WX.STAGE_INSTANCE,
+        [T, O] = l.useState(S),
+        [_, { loading: P, error: A }] = (0, v.Z)();
+    if (!I) return null;
+    let G = k === x.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
+        L = () => {
+            (null == N || N(), f(), (0, u.Ku)(!1));
         },
-        z = async () => {
-            await G(a, P, { onSuccess: M });
+        X = async () => {
+            await _(j, T, { onSuccess: L });
         };
-    return (0, i.jsx)(o.Y0X, {
+    return (0, i.jsxs)(a.u, {
         transitionState: t,
-        'aria-labelledby': E,
-        parentComponent: 'StartEventModal',
-        children: (0, i.jsxs)(o.hzk, {
-            className: y.content,
-            children: [
-                (0, i.jsx)('div', {
-                    className: y.previewCard,
-                    children: (0, i.jsx)(j.Z, {
-                        guild: Z,
-                        channel: I,
-                        name: a.name,
-                        description: null != (n = a.description) ? n : void 0,
-                        imageSource: (0, p.Z)(a),
-                        isActive: !1,
-                        isUserLurking: O,
-                        speakers: [],
-                        speakerCount: 0,
-                        rsvped: !0,
-                        guildEvent: a
+        onClose: f,
+        title: j.name,
+        subtitle: p.intl.format(p.t.UMajoq, {
+            privacyLevel: G,
+            privacyLevelHook: (e, n) =>
+                k !== x.j8.PUBLIC
+                    ? null
+                    : (0, i.jsxs)(
+                          'div',
+                          {
+                              className: C.privacyLevel,
+                              children: [
+                                  (0, i.jsx)(s.enf, {
+                                      size: 'xs',
+                                      color: 'currentColor',
+                                      className: C.publicIcon
+                                  }),
+                                  (0, i.jsx)(s.Text, {
+                                      variant: 'text-md/normal',
+                                      children: e
+                                  })
+                              ]
+                          },
+                          n
+                      )
+        }),
+        actions: [
+            {
+                variant: 'secondary',
+                text: p.intl.string(p.t.CZGqeX),
+                onClick: () => {
+                    f();
+                }
+            },
+            {
+                variant: 'active',
+                text: p.intl.string(p.t.cK1GGR),
+                onClick: X,
+                loading: P
+            }
+        ],
+        children: [
+            (0, i.jsx)(g.Z, {
+                guild: b,
+                channel: E,
+                name: j.name,
+                description: null != (n = j.description) ? n : void 0,
+                imageSource: (0, m.Z)(j),
+                isActive: !1,
+                isUserLurking: Z,
+                speakers: [],
+                speakerCount: 0,
+                rsvped: !0,
+                guildEvent: j
+            }),
+            S &&
+                (0, i.jsx)(s.XZJ, {
+                    className: C.verticalSpacing,
+                    type: s.XZJ.Types.INVERTED,
+                    value: T,
+                    onChange: (e) => {
+                        let { currentTarget: n } = e;
+                        return O(n.checked);
+                    },
+                    children: (0, i.jsx)(s.Text, {
+                        variant: 'text-sm/normal',
+                        children: p.intl.string(p.t.dGNtgI)
                     })
                 }),
-                (0, i.jsx)(o.Text, {
-                    color: 'header-secondary',
-                    className: y.privacyLevel,
-                    variant: 'text-sm/normal',
-                    children: N.intl.format(N.t.UMajoq, {
-                        privacyLevel: R,
-                        privacyLevelHook: (e, n) =>
-                            w !== C.j8.PUBLIC
-                                ? null
-                                : (0, i.jsxs)(
-                                      'div',
-                                      {
-                                          className: y.privacyLevel,
-                                          children: [
-                                              (0, i.jsx)(o.enf, {
-                                                  size: 'xs',
-                                                  color: 'currentColor',
-                                                  className: y.publicIcon
-                                              }),
-                                              (0, i.jsx)(o.Text, {
-                                                  variant: 'text-sm/normal',
-                                                  children: e
-                                              })
-                                          ]
-                                      },
-                                      n
-                                  )
-                    })
-                }),
-                (0, i.jsx)(o.X6q, {
-                    variant: 'heading-xl/semibold',
-                    className: y.header,
-                    children: a.name
-                }),
-                _ &&
-                    (0, i.jsx)(o.XZJ, {
-                        className: y.verticalSpacing,
-                        type: o.XZJ.Types.INVERTED,
-                        value: P,
-                        onChange: (e) => {
-                            let { currentTarget: n } = e;
-                            return A(n.checked);
-                        },
-                        children: (0, i.jsx)(o.Text, {
-                            variant: 'text-sm/normal',
-                            children: N.intl.string(N.t.dGNtgI)
-                        })
-                    }),
-                (0, i.jsxs)('div', {
-                    className: r()(y.inline, y.buttons, y.verticalSpacing),
-                    children: [
-                        (0, i.jsx)(c.zx, {
-                            color: c.zx.Colors.PRIMARY,
-                            onClick: () => {
-                                b();
-                            },
-                            className: r()(y.button, y.spacing),
-                            children: N.intl.string(N.t.CZGqeX)
-                        }),
-                        (0, i.jsx)(c.zx, {
-                            color: c.zx.Colors.GREEN,
-                            onClick: z,
-                            submitting: L,
-                            className: y.button,
-                            children: N.intl.string(N.t.cK1GGR)
-                        })
-                    ]
-                }),
-                null != X && null != X.getAnyErrorMessage()
-                    ? (0, i.jsx)(o.Text, {
-                          color: 'text-danger',
-                          variant: 'text-sm/normal',
-                          className: y.errorMessage,
-                          children: X.getAnyErrorMessage()
-                      })
-                    : null
-            ]
-        })
+            null != A && null != A.getAnyErrorMessage()
+                ? (0, i.jsx)(s.Text, {
+                      color: 'text-danger',
+                      variant: 'text-sm/normal',
+                      className: C.errorMessage,
+                      children: A.getAnyErrorMessage()
+                  })
+                : null
+        ]
     });
 }

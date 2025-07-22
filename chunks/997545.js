@@ -8,8 +8,8 @@ var r = n(595182),
     c = n(971793),
     u = n.n(c),
     d = n(420994),
-    f = n(579092),
-    _ = n(839548),
+    _ = n(579092),
+    f = n(839548),
     p = n(198274),
     h = n(701597),
     m = n(46973),
@@ -85,7 +85,7 @@ function D(e) {
 function L(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
-class x extends _.Z {
+class x extends f.Z {
     static create(e, t, n) {
         let r = new x(e, t, !0);
         return (r.initialize(n), r);
@@ -209,7 +209,7 @@ class x extends _.Z {
                             this.logger.info('Audio codecs: '.concat(this.codecs.filter((e) => 'audio' === e.type).map((e) => e.name))),
                             this.logger.info('Video codecs: '.concat(this.codecs.filter((e) => 'video' === e.type).map((e) => e.name + '[encode: ' + e.encode + ', decode: ' + e.decode + ']'))),
                             t.getEncryptionModes((r) => {
-                                var i, a, c, u, d, f, _, p, h, g, E, b, y;
+                                var i, a, c, u, d, _, f, p, h, g, E, b, y;
                                 (this.logger.info('Encryption modes: '.concat(r)),
                                     t.setTransportOptions(this.getConnectionTransportOptions()),
                                     t.setSelfMute(this.selfMute || this.context === v.Yn.STREAM),
@@ -221,8 +221,8 @@ class x extends _.Z {
                                     null == (u = t.setPingInterval) || u.call(t, v.$B),
                                     t.setPingCallback(this.handlePing),
                                     null == (d = t.setPingTimeoutCallback) || d.call(t, this.handlePingTimeout),
-                                    null == (f = t.setOnVideoEncoderFallbackCallback) || f.call(t, this.handleVideoEncoderFallback),
-                                    null == (_ = t.setOnRtcpMessageCallback) || _.call(t, this.handleRTCPMessage),
+                                    null == (_ = t.setOnVideoEncoderFallbackCallback) || _.call(t, this.handleVideoEncoderFallback),
+                                    null == (f = t.setOnRtcpMessageCallback) || f.call(t, this.handleRTCPMessage),
                                     n.setTransportOptions({
                                         builtInEchoCancellation: !0,
                                         echoCancellation: this.echoCancellation,
@@ -574,12 +574,12 @@ class x extends _.Z {
             if (null != e.desktopDescription) {
                 let { id: t, soundshareId: n, useLoopback: r, useVideoHook: i, useGraphicsCaptureApiLevel: a, useGraphicsCapture: o, useQuartzCapturer: s, allowScreenCaptureKit: l, videoHookStaleFrameTimeoutMs: c, graphicsCaptureStaleFrameTimeoutMs: u, hdrCaptureMode: d } = e.desktopDescription;
                 this.setSoundshareSource(n, r);
-                let [f, _] = null != t ? t.split(':') : ['', ''];
+                let [_, f] = null != t ? t.split(':') : ['', ''];
                 (null != t
                     ? this.logger.info(
                           'capturing desktop (type: '
-                              .concat(f, ', handle: ')
-                              .concat(_, ', use-video-hook: ')
+                              .concat(_, ', handle: ')
+                              .concat(f, ', use-video-hook: ')
                               .concat(i.toString(), ', use-graphics-capture: ')
                               .concat(null == o ? void 0 : o.toString(), ', use-graphics-capture-api-level: ')
                               .concat(null == a ? void 0 : a.toString(), ').')
@@ -588,8 +588,8 @@ class x extends _.Z {
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != t
                             ? this.conn.setDesktopSourceWithOptions({
-                                  type: f,
-                                  sourceId: _,
+                                  type: _,
+                                  sourceId: f,
                                   useVideoHook: i,
                                   useGraphicsCapture: o,
                                   useGraphicsCaptureApiLevel: a,
@@ -600,7 +600,7 @@ class x extends _.Z {
                                   hdrCaptureMode: d
                               })
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource('wumpus-'.concat(_), i, f));
+                        : this.conn.setDesktopSource('wumpus-'.concat(f), i, _));
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({
@@ -1114,7 +1114,7 @@ class x extends _.Z {
                 this.emit(m.Sh.MLSFailure, e, t);
             }),
             (this.videoSupported = n),
-            (this.logger = new f.Yd('Connection('.concat(e, ')'))),
+            (this.logger = new _.Yd('Connection('.concat(e, ')'))),
             this.logger.enableNativeLogger(!0));
     }
 }

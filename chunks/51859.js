@@ -37,19 +37,23 @@ function b(e) {
             (0, r.jsxs)('div', {
                 className: g.contentContainer,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: g.headerContainer,
-                        children: (0, r.jsx)(l.X6, {
-                            color: I,
-                            variant: 'heading-md/bold',
-                            children: n.title
-                        })
-                    }),
-                    (0, r.jsx)(l.xv, {
-                        className: g.description,
-                        color: I,
-                        variant: 'text-sm/medium',
-                        children: n.description
+                    (0, r.jsxs)('div', {
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: g.headerContainer,
+                                children: (0, r.jsx)(l.X6, {
+                                    color: I,
+                                    variant: 'heading-md/bold',
+                                    children: n.title
+                                })
+                            }),
+                            (0, r.jsx)(l.xv, {
+                                className: g.description,
+                                color: I,
+                                variant: 'text-sm/medium',
+                                children: n.description
+                            })
+                        ]
                     }),
                     (0, r.jsx)(d.u, {
                         guildId: t,

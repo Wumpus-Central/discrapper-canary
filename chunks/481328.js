@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(791819),
     i = n(44837),
     a = n(455412),
@@ -20,7 +20,7 @@ var s = n(73800),
             return e;
         }
     },
-    f = (function (e) {
+    _ = (function (e) {
         function t(t, n) {
             var r = e.call(this, t, n) || this,
                 i = r.handleExited.bind((0, a.Z)(r));
@@ -72,5 +72,5 @@ var s = n(73800),
             t
         );
     })(s.Component);
-((f.propTypes = {}), (f.defaultProps = d));
-let _ = f;
+((_.propTypes = {}), (_.defaultProps = d));
+let f = _;

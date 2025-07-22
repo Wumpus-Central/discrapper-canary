@@ -50,12 +50,12 @@ e.exports = function (e) {
             match: t.either(...s),
             className: 'operator'
         },
-        f = {
+        _ = {
             className: 'string',
             begin: /"""/,
             end: /"""/
         },
-        _ = {
+        f = {
             className: 'property',
             begin: t.concat(/\./, t.lookahead(n)),
             end: n,
@@ -140,6 +140,6 @@ e.exports = function (e) {
             'variable.language': a,
             literal: i
         },
-        contains: [I, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, p, _, v]
+        contains: [I, m, y, _, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, p, f, v]
     };
 };

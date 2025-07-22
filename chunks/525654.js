@@ -13,8 +13,8 @@
             c = /\bOpera/,
             u = Object.prototype,
             d = u.hasOwnProperty,
-            f = u.toString;
-        function _(e) {
+            _ = u.toString;
+        function f(e) {
             return (e = String(e)).charAt(0).toUpperCase() + e.slice(1);
         }
         function p(e, t, n) {
@@ -61,13 +61,13 @@
             else g(e, t);
         }
         function m(e) {
-            return ((e = v(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : _(e));
+            return ((e = v(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : f(e));
         }
         function g(e, t) {
             for (var n in e) d.call(e, n) && t(e[n], n, e);
         }
         function E(e) {
-            return null == e ? _(e) : f.call(e).slice(8, -1);
+            return null == e ? f(e) : _.call(e).slice(8, -1);
         }
         function b(e, t) {
             var n = null != e ? typeof e[t] : 'number';
@@ -97,14 +97,14 @@
             var o = r.navigator || {},
                 s = o.userAgent || '';
             e || (e = s);
-            var l = a ? !!o.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(f.toString()),
+            var l = a ? !!o.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(_.toString()),
                 u = 'Object',
                 d = a ? u : 'ScriptBridgingProxyObject',
-                _ = a ? u : 'Environment',
+                f = a ? u : 'Environment',
                 h = a && r.java ? 'JavaPackage' : E(r.java),
                 T = a ? u : 'RuntimeObject',
                 S = /\bJava/.test(h) && r.java,
-                A = S && E(r.environment) == _,
+                A = S && E(r.environment) == f,
                 N = S ? 'a' : 'α',
                 C = S ? 'b' : 'β',
                 R = r.document || {},

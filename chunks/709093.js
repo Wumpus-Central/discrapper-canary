@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(563132),
     u = n(409813),
     d = n(614223),
-    f = n(493572),
-    _ = n(756896),
+    _ = n(493572),
+    f = n(756896),
     p = n(589072),
     h = n(104494),
     m = n(573702),
@@ -41,7 +41,7 @@ function S(e) {
                 children: n
             }),
             o &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(_.Z, {
                     activeId: i,
                     breadcrumbs: a
                 })
@@ -74,14 +74,14 @@ function A(e) {
 }
 let N = function (e) {
     var t, n, i;
-    let { hideCloseButton: f = !1, hideCloseOnFullScreen: b, onClose: y, upgradeToPremiumType: O, isEligibleForTrial: v = !1, showTrialBadge: N = !1, showDiscountBadge: C = !1 } = e,
+    let { hideCloseButton: _ = !1, hideCloseOnFullScreen: b, onClose: y, upgradeToPremiumType: O, isEligibleForTrial: v = !1, showTrialBadge: N = !1, showDiscountBadge: C = !1 } = e,
         R = (0, s.apv)((0, l.ZP)()),
         P = O === g.p9.TIER_2,
         w = (0, d.Fv)(v),
         D = (0, h.Ng)(),
         L = null == D || null == (t = D.discount) ? void 0 : t.amount,
         x = P ? T : I,
-        M = P ? p.Z : _.Z,
+        M = P ? p.Z : f.Z,
         { step: k, breadcrumbs: j, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
     if (null == j || 0 === j.length) return null;
     let G = j.flatMap((e) => {
@@ -112,7 +112,7 @@ let N = function (e) {
                 className: a()(E.headerContainer, { [E.containerBottomPadding]: !F }),
                 children: [
                     (0, r.jsx)(A, { isTier2: P }),
-                    !f &&
+                    !_ &&
                         (0, r.jsx)(s.olH, {
                             hideOnFullscreen: b,
                             onClick: y,

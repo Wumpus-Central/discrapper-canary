@@ -31,7 +31,7 @@
     Sk: () => h,
     TC: () => H,
     U6: () => x,
-    U9: () => _,
+    U9: () => f,
     Uk: () => N,
     V6: () => W,
     Vq: () => V,
@@ -44,7 +44,7 @@
     aO: () => eO,
     aV: () => S,
     am: () => ec,
-    cN: () => ef,
+    cN: () => e_,
     dG: () => B,
     fK: () => eu,
     fr: () => K,
@@ -56,9 +56,9 @@
     lT: () => Q,
     ld: () => C,
     pK: () => ep,
-    rx: () => f,
+    rx: () => _,
     tP: () => s.t,
-    tx: () => e_,
+    tx: () => ef,
     vS: () => $,
     xr: () => d,
     yA: () => er,
@@ -78,8 +78,8 @@ let l = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     c = location.protocol + '//discord.gg',
     u = 'discord.com',
     d = 'support.discord.com',
-    f = 'support-dev.discord.com',
-    _ = 'discord.com',
+    _ = 'support-dev.discord.com',
+    f = 'discord.com',
     p = 'feedback.discord.com';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
@@ -282,14 +282,14 @@ let $ = 250,
         HELP_AND_SUPPORT: '//'.concat(d, '/hc/en-us'),
         HELP_ARTICLE_ORBS_FAQ: 'https://'.concat(d, '/hc/en-us/articles/30593690165783'),
         FEEDBACK: '//'.concat(p),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(_),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(_),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(_),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(_),
+        EMAIL_SUPPORT: 'mailto:support@'.concat(f),
+        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(f),
+        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(f),
+        EMAIL_JOBS: 'mailto:jobs@'.concat(f),
         DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
         VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
         BASE_URL: 'https://'.concat(u),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(_),
+        PRESS_INQUIRIES: 'mailto:press@'.concat(f),
         CONTACT_US: 'https://dis.gd/contact',
         DEV_LANDING: '/build',
         DEV_PORTAL: '/developers',
@@ -352,10 +352,10 @@ let el = (0, a.Ft)(eo),
 var ed = (function (e) {
         return ((e.EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'), (e.EXPERIMENT_GUILD_TRIGGERED = 'experiment_guild_triggered'), (e.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'), (e.MKTG_PAGE_VIEWED = 'mktg_page_viewed'), (e.CLICK_LANDING_CTA = 'click_landing_cta'), (e.DOWNLOAD_APP = 'download_app'), (e.MKTG_HYPESQUAD_FORM_SUBMITTED = 'mktg_hypesquad_form_submitted'), (e.MKTG_HYPESQUAD_FORM_OPENED = 'mktg_hypesquad_form_opened'), (e.CHANGE_MARKETING_LOCALE = 'change_marketing_locale'), (e.GAME_CLICKED_LANDING = 'game_clicked_landing'), (e.MAIN_NAVIGATION_MENU = 'main_navigation_menu'), (e.MKTG_APPLICATION_STEP = 'mktg_application_step'), (e.MKTG_WARFRAME_CTA_CLICKED = 'mktg_warframe_cta_clicked'), (e.MKTG_PAGE_CTA_CLICKED = 'mktg_page_cta_clicked'), (e.MKTG_VIDEO_PLAYED = 'mktg_video_played'), (e.DEEP_LINK_CLICKED = 'deep_link_clicked'), (e.SEO_PAGE_VIEWED = 'seo_server_landing_page_viewed'), (e.SEO_PAGE_CTA_CLICKED = 'seo_server_landing_page_cta_clicked'), (e.SEO_AGGREGATOR_PAGE_VIEWED = 'seo_aggregator_page_viewed'), (e.SEO_AGGREGATOR_CTA_CLICKED = 'seo_aggregator_page_cta_clicked'), (e.LOCATION_STACK_METADATA = 'location_stack_metadata'), (e.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'), (e.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'), e);
     })({}),
-    ef = (function (e) {
+    e_ = (function (e) {
         return ((e.CLIENT_TELEMETRY = 'client_telemetry'), e);
     })({}),
-    e_ = (function (e) {
+    ef = (function (e) {
         return ((e.CLIENT_TELEMETRY = '/beaker'), e);
     })({}),
     ep = (function (e) {

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(866442),
     u = n(692547),
     d = n(84735),
-    f = n(481060),
-    _ = n(600164),
+    _ = n(481060),
+    f = n(600164),
     p = n(981631),
     h = n(812441),
     m = n(20493);
@@ -84,28 +84,28 @@ class v extends i.PureComponent {
                 : null != n && (e = { color: n }),
             (0, r.jsx)(d.t, {
                 offset: { left: 4 },
-                children: (0, r.jsxs)(_.Z, {
+                children: (0, r.jsxs)(f.Z, {
                     className: o()(h.selectableItem, i, { [h.selected]: t }),
                     onClick: this.handleClick,
                     onKeyUp: this.handleKeyUp,
-                    align: _.Z.Align.CENTER,
+                    align: f.Z.Align.CENTER,
                     style: E({}, e, this.props.style),
                     role: 'button',
                     tabIndex: 0,
                     children: [
-                        (0, r.jsx)(_.Z, {
-                            align: _.Z.Align.CENTER,
+                        (0, r.jsx)(f.Z, {
+                            align: f.Z.Align.CENTER,
                             className: h.selectableItemLabel,
                             shrink: 1,
                             children: a
                         }),
                         t &&
-                            (0, r.jsx)(_.Z, {
-                                wrap: _.Z.Wrap.WRAP,
+                            (0, r.jsx)(f.Z, {
+                                wrap: f.Z.Wrap.WRAP,
                                 className: m.marginReset,
                                 grow: 0,
                                 shrink: 0,
-                                children: (0, r.jsx)(f.dz2, {
+                                children: (0, r.jsx)(_.dz2, {
                                     size: 'md',
                                     color: s
                                 })

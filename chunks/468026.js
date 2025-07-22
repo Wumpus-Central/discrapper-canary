@@ -8,14 +8,14 @@ var r = n(255367),
     c = n(466377),
     u = n(993365),
     d = n(481060),
-    f = n(600164),
-    _ = n(388032),
+    _ = n(600164),
+    f = n(388032),
     p = n(551988);
 let h = (e) => {
     let t,
         n,
         a,
-        { body: h, cancelText: m, className: g, confirmColor: E, confirmText: b = _.intl.string(_.t.BddRzc), secondaryConfirmText: y, onCancel: O, onClose: v, onConfirm: I, onConfirmSecondary: T, title: S, transitionState: A, titleClassName: N } = e,
+        { body: h, cancelText: m, className: g, confirmColor: E, confirmText: b = f.intl.string(f.t.BddRzc), secondaryConfirmText: y, onCancel: O, onClose: v, onConfirm: I, onConfirmSecondary: T, title: S, transitionState: A, titleClassName: N } = e,
         C = s.zx.Sizes.MEDIUM,
         [R, P] = i.useState(!1);
     i.useEffect(
@@ -89,9 +89,9 @@ let h = (e) => {
                     }),
                     (0, r.jsx)(c.hz, {
                         className: p.modalContent,
-                        children: (0, r.jsx)(f.Z, {
-                            direction: f.Z.Direction.VERTICAL,
-                            justify: f.Z.Justify.START,
+                        children: (0, r.jsx)(_.Z, {
+                            direction: _.Z.Direction.VERTICAL,
+                            justify: _.Z.Justify.START,
                             className: p.content,
                             children:
                                 null != h &&
@@ -105,7 +105,7 @@ let h = (e) => {
                     }),
                     (0, r.jsxs)(c.mz, {
                         justify: void 0,
-                        wrap: f.Z.Wrap.WRAP,
+                        wrap: _.Z.Wrap.WRAP,
                         className: p.modalFooter,
                         children: [n, t, a]
                     })

@@ -42,21 +42,21 @@ function v(e) {
     }
     return e;
 }
-function y(e) {
+function C(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [h, _] = i.useState(''),
-        [E, y] = i.useState(!1),
-        C = '' !== h && E,
+        [E, C] = i.useState(!1),
+        y = '' !== h && E,
         O = i.useCallback(() => {
             _((0, g.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
-            (O(), y(!0));
+            (O(), C(!0));
         }, [O]),
         I = i.useCallback(() => {
-            y(!1);
+            C(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
@@ -88,7 +88,7 @@ function y(e) {
                                       scaleFontToUserSetting: !0,
                                       children: h
                                   }),
-                                  forceOpen: C,
+                                  forceOpen: y,
                                   'aria-label': !1,
                                   children: (e) => {
                                       var t, i;
@@ -102,7 +102,7 @@ function y(e) {
                                                   onFocus: j,
                                                   onBlur: I,
                                                   onClick: S,
-                                                  'aria-describedby': C ? s : void 0,
+                                                  'aria-describedby': y ? s : void 0,
                                                   text: n,
                                                   variant: 'secondary',
                                                   textVariant: 'text-xs/semibold'
@@ -123,7 +123,7 @@ function y(e) {
                                       );
                                   }
                               }),
-                              C &&
+                              y &&
                                   (0, r.jsx)(o.T, {
                                       id: s,
                                       children: h
@@ -146,7 +146,7 @@ function y(e) {
         })
     );
 }
-function C(e) {
+function y(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -213,7 +213,7 @@ function j(e) {
         }),
         children: [
             l
-                ? (0, r.jsx)(C, {
+                ? (0, r.jsx)(y, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -232,7 +232,7 @@ function j(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
             l &&
-                (0, r.jsx)(y, {
+                (0, r.jsx)(C, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,

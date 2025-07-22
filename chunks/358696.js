@@ -12,7 +12,7 @@ var i = n(120356),
     c = n(264832),
     u = n(388032),
     d = n(393113);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -101,7 +101,7 @@ function b(e) {
 }
 function y(e) {
     var t, n;
-    let { image: i, smallImage: f, aspectRatio: p, onClick: g, size: y, className: O } = e,
+    let { image: i, smallImage: _, aspectRatio: p, onClick: g, size: y, className: O } = e,
         { imageSize: v, smallImageSize: I, mask: T } = E[y];
     if (null == i)
         return (0, r.jsx)(l.f, {
@@ -129,10 +129,10 @@ function y(e) {
                         children: (0, r.jsx)(c._, {
                             href: i.url,
                             children:
-                                null != f
+                                null != _
                                     ? (0, r.jsx)(
                                           s.ZP,
-                                          h(_({}, e), {
+                                          h(f({}, e), {
                                               className: d.imageContainer,
                                               mask: T,
                                               width: v,
@@ -142,7 +142,7 @@ function y(e) {
                                       )
                                     : (0, r.jsx)(
                                           'div',
-                                          h(_({}, e), {
+                                          h(f({}, e), {
                                               className: d.imageContainer,
                                               children: S
                                           })
@@ -150,20 +150,20 @@ function y(e) {
                         })
                     })
             }),
-            null != f &&
+            null != _ &&
                 (0, r.jsx)(o.ua7, {
-                    text: f.text,
+                    text: _.text,
                     children: (e) => {
                         var t;
                         return (0, r.jsx)(c._, {
-                            href: f.url,
+                            href: _.url,
                             children: (0, r.jsx)(
                                 'div',
-                                h(_({}, e), {
+                                h(f({}, e), {
                                     className: d.smallImageContainer,
                                     children: (0, r.jsx)(l.f, {
-                                        src: f.src,
-                                        alt: null != (t = f.alt) ? t : f.text,
+                                        src: _.src,
+                                        alt: null != (t = _.alt) ? t : _.text,
                                         size: I,
                                         className: d.contentImage,
                                         constrain: 'width'

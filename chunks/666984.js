@@ -9,8 +9,8 @@ var i = n(755721),
     c = n(395361),
     u = n(652853),
     d = n(475413),
-    f = n(228168),
-    _ = n(981631),
+    _ = n(228168),
+    f = n(981631),
     p = n(388032),
     h = n(227832);
 function m(e) {
@@ -19,14 +19,14 @@ function m(e) {
         { themeType: O } = (0, u.z)(),
         v = (0, l.Ih)(b, E),
         I = (0, l.Fe)(b, E);
-    if (!(0, s.Z)(b) || (!(0, o.Z)(b, _.xjy.PLAY) && !(0, o.Z)(b, _.xjy.SYNC))) return null;
+    if (!(0, s.Z)(b) || (!(0, o.Z)(b, f.xjy.PLAY) && !(0, o.Z)(b, f.xjy.SYNC))) return null;
     let T = (e) => {
             (null == e || e.stopPropagation(), null == y || y({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), v.onClick());
         },
         S = (e) => {
             (e.stopPropagation(), null == y || y({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), I.onClick());
         };
-    return O === f.lY.MODAL_V2
+    return O === _.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(a.DY3, {

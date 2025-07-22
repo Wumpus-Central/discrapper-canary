@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(287734),
-    f = n(872810),
-    _ = n(393238),
+    _ = n(872810),
+    f = n(393238),
     p = n(40851),
     h = n(607070),
     m = n(258609),
@@ -86,7 +86,7 @@ function F(e) {
         $ = (0, s.e7)([E.Z], () => E.Z.getState().theme),
         ee = (0, l.wj)($) ? L.BR.DARK : L.BR.LIGHT,
         et = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
-        { ref: en, height: er } = (0, _.ZP)(),
+        { ref: en, height: er } = (0, f.ZP)(),
         [ei, ea] = i.useState(et),
         eo = (0, p.Aq)(),
         es = (0, o.eg)();
@@ -138,7 +138,7 @@ function F(e) {
         },
         ed = 'top' === F ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
     if (null == v || q || (X && !V(k, K))) return null;
-    let ef = () => {
+    let e_ = () => {
             ((0, I._3)({
                 questId: v.id,
                 questContent: S.jn.MEMBERS_LIST,
@@ -152,7 +152,7 @@ function F(e) {
                     sourceQuestContent: S.jn.MEMBERS_LIST
                 }));
         },
-        e_ = () => {
+        ef = () => {
             ((0, I._3)({
                 questId: v.id,
                 questContent: S.jn.MEMBERS_LIST,
@@ -166,7 +166,7 @@ function F(e) {
                 }));
         },
         ep = (e) => {
-            (e.stopPropagation(), ef());
+            (e.stopPropagation(), e_());
         },
         eh = () => {
             V(k, K) && null != K
@@ -194,14 +194,14 @@ function F(e) {
                                               sourceQuestContent: S.jn.MEMBERS_LIST
                                           }),
                                           d.default.selectVoiceChannel(K.id),
-                                          (0, f.iV)(k)
+                                          (0, _.iV)(k)
                                       )
                                   },
                                   t
                               )
                           );
                   }))
-                : e_();
+                : ef();
         },
         em =
             J && !X
@@ -215,7 +215,7 @@ function F(e) {
                   ? {
                         headerText: x.intl.string(x.t.uH2sf3),
                         ctaText: x.intl.string(x.t.VN1Ajo),
-                        handleClickCta: e_,
+                        handleClickCta: ef,
                         tileAssetType: 'reward'
                     }
                   : V(k, K)
@@ -228,7 +228,7 @@ function F(e) {
                     : {
                           headerText: x.intl.string(x.t.Bz6SkJ),
                           ctaText: x.intl.string(x.t.BSXPZ2),
-                          handleClickCta: e_,
+                          handleClickCta: ef,
                           tileAssetType: 'game'
                       };
     return (0, r.jsx)(a.animated.div, {

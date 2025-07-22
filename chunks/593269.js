@@ -11,7 +11,7 @@ class s extends Error {
         (super(`No value for variable '${e}' was provided for the localized message '${t}'`), (this.variableName = e), (this.originalMessage = t), (this.nodeType = n));
     }
 }
-function l(e, t, n, o, u, d = {}, f, _) {
+function l(e, t, n, o, u, d = {}, _, f) {
     var p;
     if (1 === t.length && 'string' == typeof t[0]) return void e.pushLiteralText(t[0]);
     let h = 0;
@@ -22,14 +22,14 @@ function l(e, t, n, o, u, d = {}, f, _) {
         }
         let t = m[0];
         if (t === i.FormatJsNodeType.Pound) {
-            if ('number' == typeof f) {
-                let t = o.formatNumber(f);
+            if ('number' == typeof _) {
+                let t = o.formatNumber(_);
                 e.pushLiteralText(t);
             }
             continue;
         }
         let g = m[1];
-        if (!(g in d) && !a(g)) throw new s(g, _, t);
+        if (!(g in d) && !a(g)) throw new s(g, f, t);
         let E = d[g];
         switch (t) {
             case i.FormatJsNodeType.Argument:
@@ -57,8 +57,8 @@ function l(e, t, n, o, u, d = {}, f, _) {
             case i.FormatJsNodeType.Tag: {
                 let t = m[2],
                     r = m[3],
-                    i = c(e.constructor, t, n, o, u, d, f),
-                    s = null != r ? c(e.constructor, r, n, o, u, d, f) : [];
+                    i = c(e.constructor, t, n, o, u, d, _),
+                    s = null != r ? c(e.constructor, r, n, o, u, d, _) : [];
                 if (a(g)) e.pushRichTextTag(g, i, s);
                 else {
                     if ('function' != typeof E) throw `expected a function type for a Tag formatting value, ${g}. got ${typeof E}: ${E}`;

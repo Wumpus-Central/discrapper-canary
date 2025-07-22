@@ -7,16 +7,16 @@ var n = t(255367),
     a = t(527379),
     o = t(376923),
     g = t(16829),
-    f = t(430824),
-    c = t(944486),
-    v = t(189432),
+    v = t(430824),
+    f = t(944486),
+    c = t(189432),
     h = t(776767),
     u = t(981631),
     E = t(388032),
     d = t(12740);
 function C(A) {
     let { member: e } = A,
-        t = (0, l.e7)([f.Z], () => f.Z.getGuild(e.guildId), [e.guildId]),
+        t = (0, l.e7)([v.Z], () => v.Z.getGuild(e.guildId), [e.guildId]),
         C = (0, o.mh)(e.userId, e.guildId),
         B = (0, o.mV)(e.userId, e.guildId),
         w = (0, o.LD)(e.userId),
@@ -138,8 +138,8 @@ function C(A) {
                                   guildId: e.guildId,
                                   showJoinMethodContextAsFooter: !0,
                                   onClickInviter: (A) => {
-                                      let t = c.Z.getChannelId();
-                                      (0, v.r)(e.guildId, A.id, null != t ? t : u.lds);
+                                      let t = f.Z.getChannelId();
+                                      (0, c.r)(e.guildId, A.id, null != t ? t : u.lds);
                                   }
                               })
                           })

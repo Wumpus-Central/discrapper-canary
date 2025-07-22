@@ -18,8 +18,8 @@ let i = ['#87553B', '#B88166'],
     o = (A) => {
         var e,
             t,
-            { width: o = 24, height: g = 24, primaryTintColor: f } = A,
-            c = (function (A, e) {
+            { width: o = 24, height: g = 24, primaryTintColor: v } = A,
+            f = (function (A, e) {
                 if (null == A) return {};
                 var t,
                     n,
@@ -38,9 +38,9 @@ let i = ['#87553B', '#B88166'],
                 }
                 return r;
             })(A, ['width', 'height', 'primaryTintColor']);
-        let { primaryColorsTransformed: v } = (0, l.s)({
+        let { primaryColorsTransformed: c } = (0, l.s)({
             primaryBaseColors: i,
-            primaryTintColor: f,
+            primaryTintColor: v,
             primaryTintLuminances: s,
             primaryLuminanceWeights: a
         });
@@ -70,7 +70,7 @@ let i = ['#87553B', '#B88166'],
                         }));
                 }
                 return A;
-            })({}, (0, r.Z)(c))),
+            })({}, (0, r.Z)(f))),
             (t = t =
                 {
                     width: o,
@@ -81,39 +81,39 @@ let i = ['#87553B', '#B88166'],
                     children: [
                         (0, n.jsx)('path', {
                             d: 'M15 6H13V8H15V6Z',
-                            fill: v[1]
+                            fill: c[1]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M2.99998 6H0.999985V8H2.99998V6Z',
-                            fill: v[1]
+                            fill: c[1]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M9.99998 14H5.99998V5H6.99998V4H8.99998V5H9.99998V14Z',
-                            fill: v[1]
+                            fill: c[1]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M10 6V7H9V10H11V11H12V6H10Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M6 6V7H7V10H5V11H4V6H6Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M9.99998 12H5.99998V13H9.99998V12Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M15 7H13V8H15V7Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M2.99998 7H0.999985V8H2.99998V7Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M8.99998 14H6.99998V15H8.99998V14Z',
-                            fill: v[0]
+                            fill: c[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M9.99998 4H8.99998V5H9.99998V4Z',

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(880949),
     d = n(806966),
-    f = n(254494),
-    _ = n(593618),
+    _ = n(254494),
+    f = n(593618),
     p = n(594174),
     h = n(626135),
     m = n(74538),
@@ -182,7 +182,7 @@ function x(e) {
         case g.bg.FREQUENTLY_USED:
             return v.intl.string(v.t['+cGVV1']);
         case g.bg.GUILD:
-            return (0, r.jsx)(_.K, {
+            return (0, r.jsx)(f.K, {
                 guild: e.categoryInfo.guild,
                 includeActivity: !1
             });
@@ -217,8 +217,8 @@ function k(e) {
 function j(e) {
     let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: o = P, guildId: s, inExpressionPicker: c } = e,
         u = i.useRef(null),
-        _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        g = (0, m.I5)(_, O.p9.TIER_2),
+        f = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        g = (0, m.I5)(f, O.p9.TIER_2),
         v = i.useCallback(
             (e, t, n, i) => {
                 let o = a && (0, E.O)(e.categoryInfo, g, s),
@@ -243,7 +243,7 @@ function j(e) {
             },
             [s, a, g]
         );
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(_.Z, {
         className: c ? I.expressionPickerCategoryList : I.categoryList,
         categoryListRef: u,
         expressionsListRef: t,

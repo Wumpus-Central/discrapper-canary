@@ -9,8 +9,8 @@
             c = 2147483647,
             u = 36,
             d = 1,
-            f = 26,
-            _ = 38,
+            _ = 26,
+            f = 38,
             p = 700,
             h = 72,
             m = 128,
@@ -56,8 +56,8 @@
         }
         function D(e, t, n) {
             var r = 0;
-            for (e = n ? I(e / p) : e >> 1, e += I(e / t); e > (v * f) >> 1; r += u) e = I(e / v);
-            return I(r + ((v + 1) * e) / (e + _));
+            for (e = n ? I(e / p) : e >> 1, e += I(e / t); e > (v * _) >> 1; r += u) e = I(e / v);
+            return I(r + ((v + 1) * e) / (e + f));
         }
         function L(e) {
             var t,
@@ -68,7 +68,7 @@
                 o,
                 s,
                 l,
-                _,
+                f,
                 p,
                 E = [],
                 b = e.length,
@@ -77,7 +77,7 @@
                 v = h;
             for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) (e.charCodeAt(r) >= 128 && S('not-basic'), E.push(e.charCodeAt(r)));
             for (i = n > 0 ? n + 1 : 0; i < b; ) {
-                for (a = y, o = 1, s = u; i >= b && S('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && S('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) (o > I(c / (p = u - _)) && S('overflow'), (o *= p));
+                for (a = y, o = 1, s = u; i >= b && S('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && S('overflow'), (y += l * o), !(l < (f = s <= v ? d : s >= v + _ ? _ : s - v)); s += u) (o > I(c / (p = u - f)) && S('overflow'), (o *= p));
                 ((v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && S('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O));
             }
             return R(E);
@@ -91,7 +91,7 @@
                 o,
                 s,
                 l,
-                _,
+                f,
                 p,
                 E,
                 b,
@@ -104,7 +104,7 @@
                 for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
                 for (s - t > I((c - n) / (y = r + 1)) && S('overflow'), n += (s - t) * y, t = s, o = 0; o < b; ++o)
                     if (((E = e[o]) < t && ++n > c && S('overflow'), E == t)) {
-                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) ((v = l - p), (O = u - p), A.push(T(w(p + (v % O), 0))), (l = I(v / O)));
+                        for (l = n, f = u; !(l < (p = f <= a ? d : f >= a + _ ? _ : f - a)); f += u) ((v = l - p), (O = u - p), A.push(T(w(p + (v % O), 0))), (l = I(v / O)));
                         (A.push(T(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r);
                     }
                 (++n, ++t);

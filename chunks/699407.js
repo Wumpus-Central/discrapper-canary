@@ -15,7 +15,7 @@ var s = n(756647),
     c = n(544891),
     u = n(761609),
     d = n(231338);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -153,7 +153,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
         function ee(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
                 n = Date.now(),
-                i = e.map((e) => h(_({}, e), { properties: h(_({}, e.properties), { client_send_timestamp: n }) })),
+                i = e.map((e) => h(f({}, e), { properties: h(f({}, e.properties), { client_send_timestamp: n }) })),
                 a = {};
             return (
                 j || ((G = (0, o.Z)()), (a[m] = G), (j = !0)),
@@ -260,7 +260,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                             s = {
                                 type: t,
                                 fingerprint: i,
-                                properties: _(
+                                properties: f(
                                     {
                                         client_track_timestamp: Date.now(),
                                         client_heartbeat_session_id: o,
@@ -285,8 +285,8 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 null != O && this.waitFor(...O);
             }
             constructor(...e) {
-                (super(...e), f(this, 'submitEventsImmediately', ee));
+                (super(...e), _(this, 'submitEventsImmediately', ee));
             }
         }
-        return (f(ea, 'displayName', 'AnalyticsTrackingStore'), new ea(n, a));
+        return (_(ea, 'displayName', 'AnalyticsTrackingStore'), new ea(n, a));
     };

@@ -8,8 +8,8 @@ var r = n(928801),
     c = n(695346),
     u = n(199902),
     d = n(592125),
-    f = n(131951),
-    _ = n(936349),
+    _ = n(131951),
+    f = n(936349),
     p = n(630388),
     h = n(981631);
 function m(e, t, n) {
@@ -37,22 +37,22 @@ class g extends r.Z {
         let r = 0,
             d = c.tU.getSetting();
         r = (0, p.mB)(r, h.BVn.ALLOW_VOICE_RECORDING, d);
-        let _ = (0, o.Z)(f.Z),
+        let f = (0, o.Z)(_.Z),
             m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null == (e = u.Z.getCurrentUserActiveStream()) ? void 0 : e.state) === h.jm8.ACTIVE || (null == (t = u.Z.getCurrentUserActiveStream()) ? void 0 : t.state) === h.jm8.PAUSED),
             g = a.Z.isDecoupledGameClippingEnabled(),
-            E = _ && a.Z.getSettings().decoupledClipsEnabled && (null == (n = s.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null && g;
+            E = f && a.Z.getSettings().decoupledClipsEnabled && (null == (n = s.ZP.getVisibleGame()) ? void 0 : n.windowHandle) != null && g;
         r = (0, p.mB)(r, h.BVn.CLIPS_ENABLED, m || E);
         let { enableViewerClipping: b } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
-            y = b && _ && a.Z.getSettings().viewerClipsEnabled;
+            y = b && f && a.Z.getSettings().viewerClipsEnabled;
         return (0, p.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, y);
     }
     getInitialState() {
         return {
             guildId: null,
             channelId: null,
-            selfMute: f.Z.isSelfMute(),
-            selfDeaf: f.Z.isSelfDeaf(),
-            selfVideo: f.Z.isVideoEnabled(),
+            selfMute: _.Z.isSelfMute(),
+            selfDeaf: _.Z.isSelfDeaf(),
+            selfVideo: _.Z.isVideoEnabled(),
             preferredRegion: null,
             preferredRegions: null,
             videoStreamParameters: null,
@@ -64,12 +64,12 @@ class g extends r.Z {
         return {
             guildId: t,
             channelId: n,
-            selfMute: f.Z.isSelfMute(),
-            selfDeaf: f.Z.isSelfDeaf(),
-            selfVideo: f.Z.isVideoEnabled(),
-            preferredRegion: _.Z.getPreferredRegion(),
-            preferredRegions: _.Z.getPreferredRegions(),
-            videoStreamParameters: f.Z.getVideoStreamParameters(),
+            selfMute: _.Z.isSelfMute(),
+            selfDeaf: _.Z.isSelfDeaf(),
+            selfVideo: _.Z.isVideoEnabled(),
+            preferredRegion: f.Z.getPreferredRegion(),
+            preferredRegions: f.Z.getPreferredRegions(),
+            videoStreamParameters: _.Z.getVideoStreamParameters(),
             flags: this.computeVoiceFlags()
         };
     }

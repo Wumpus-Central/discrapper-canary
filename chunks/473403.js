@@ -12,9 +12,9 @@ if (12633 == t.j) var s = t(91192);
 var a = t(442837),
     o = t(481060),
     g = t(43267),
-    f = t(933557),
-    c = t(471445),
-    v = t(111028),
+    v = t(933557),
+    f = t(471445),
+    c = t(111028),
     h = t(727429),
     u = t(810123),
     E = t(690221),
@@ -117,16 +117,16 @@ function T(A) {
 }
 let y = (A) => {
         let { className: e, containerClassName: t, channel: r, locked: l, hasActiveThreads: s, withGuildIcon: g } = A,
-            f = (0, a.e7)([d.Z], () => d.Z.getGuild(r.guild_id), [r.guild_id]),
-            v = r.type === M.d4z.DM || r.type === M.d4z.GROUP_DM,
+            v = (0, a.e7)([d.Z], () => d.Z.getGuild(r.guild_id), [r.guild_id]),
+            c = r.type === M.d4z.DM || r.type === M.d4z.GROUP_DM,
             h = null;
-        if (g && null != f && !v)
+        if (g && null != v && !c)
             h = (0, n.jsx)(u.Z, {
                 size: u.E.SMALL_32,
                 className: H.iconContainerWithGuildIcon,
                 iconClassName: H.iconWithGuildIcon,
                 channel: r,
-                guild: f,
+                guild: v,
                 locked: l,
                 hasActiveThreads: s
             });
@@ -142,9 +142,9 @@ let y = (A) => {
                             return (0, n.jsx)(j, { channel: A });
                         };
                     default:
-                        return (0, c.KS)(A, e, t);
+                        return (0, f.KS)(A, e, t);
                 }
-            })(r, f, {
+            })(r, v, {
                 locked: l,
                 hasActiveThreads: s
             });
@@ -154,8 +154,8 @@ let y = (A) => {
                 className: i()(H.icon, e)
             });
         }
-        let E = g ? (null == f ? void 0 : f.name) : (0, c.bT)(r, f, l, s),
-            C = g && null != f ? ''.concat(f.name, ' - ').concat(E, ' icon') : ''.concat(E, ' icon');
+        let E = g ? (null == v ? void 0 : v.name) : (0, f.bT)(r, v, l, s),
+            C = g && null != v ? ''.concat(v.name, ' - ').concat(E, ' icon') : ''.concat(E, ' icon');
         return (0, n.jsx)(o.ua7, {
             text: E,
             delay: 500,
@@ -179,7 +179,7 @@ let y = (A) => {
                           channel: l,
                           name: a,
                           muted: g,
-                          selected: c,
+                          selected: f,
                           connected: u,
                           unread: d,
                           locked: C,
@@ -233,7 +233,7 @@ let y = (A) => {
                       At = r.useRef(null),
                       An = (0, h.Z)(l),
                       Ar = M.Z5c.CHANNEL(An, l.id),
-                      Al = (0, f.ZP)(l),
+                      Al = (0, v.ZP)(l),
                       Ai = l.isGuildVocal(),
                       As = (0, n.jsx)('div', {
                           className: i()({ [H.favoritesSuggestion]: Y }),
@@ -267,7 +267,7 @@ let y = (A) => {
                                                       locked: C,
                                                       withGuildIcon: W
                                                   }),
-                                                  (0, n.jsx)(v.Z, {
+                                                  (0, n.jsx)(c.Z, {
                                                       className: i()(H.name, { [H.activeEvent]: J }),
                                                       'aria-hidden': !0,
                                                       children: null == a ? Al : a
@@ -311,7 +311,7 @@ let y = (A) => {
                               m,
                               null != w || null != V || null != D || z ? H.wrapper : H.notInteractive,
                               (() => {
-                                  if (c) return i()(p.selectedChannel, O.SELECTED);
+                                  if (f) return i()(p.selectedChannel, O.SELECTED);
                                   if (u) return i()(p.selectedChannel, O.CONNECTED);
                                   if (C) return O.LOCKED;
                                   if (g) return O.MUTED;

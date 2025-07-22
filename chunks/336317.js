@@ -44,19 +44,19 @@ let r = (function () {
         for (var n, r, i = e.childNodes, a = i.length; a--; ) 3 === (r = (n = i[a]).nodeType) ? t.push(n) : 1 !== r || 'ownerSVGElement' in n || o.test(n.nodeName.toLowerCase()) || d(n, t);
         return t;
     }
-    function f(e) {
+    function _(e) {
         return v(0 > e.indexOf(i) ? e.replace(r, '') : e);
     }
-    function _(e, t) {
-        for (var r, i, a, o, s, c, u, _, p, h, m, g, E, b = d(e, []), y = b.length; y--; ) {
-            for (a = !1, o = document.createDocumentFragment(), c = (s = b[y]).nodeValue, _ = 0; (u = n.exec(c)); ) {
-                if (((p = u.index) !== _ && o.appendChild(l(c.slice(_, p), !0)), (g = f((m = u[0]))), (_ = p + m.length), (E = t.callback(g, t)), g && E)) {
+    function f(e, t) {
+        for (var r, i, a, o, s, c, u, f, p, h, m, g, E, b = d(e, []), y = b.length; y--; ) {
+            for (a = !1, o = document.createDocumentFragment(), c = (s = b[y]).nodeValue, f = 0; (u = n.exec(c)); ) {
+                if (((p = u.index) !== f && o.appendChild(l(c.slice(f, p), !0)), (g = _((m = u[0]))), (f = p + m.length), (E = t.callback(g, t)), g && E)) {
                     for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(m, g)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
                     ((h.className = t.className), (h.alt = m), (h.src = E), (a = !0), o.appendChild(h));
                 }
                 (h || o.appendChild(l(m, !1)), (h = null));
             }
-            a && (_ < c.length && o.appendChild(l(c.slice(_), !0)), s.parentNode.replaceChild(o, s));
+            a && (f < c.length && o.appendChild(l(c.slice(f), !0)), s.parentNode.replaceChild(o, s));
         }
         return e;
     }
@@ -65,7 +65,7 @@ let r = (function () {
             var n,
                 r,
                 i = e,
-                a = f(e),
+                a = _(e),
                 o = t.callback(a, t);
             if (a && o) {
                 for (r in ((i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', o, '"')), (n = t.attributes(e, a)))) n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '=') && (i = i.concat(' ', r, '="', c(n[r]), '"'));
@@ -90,7 +90,7 @@ let r = (function () {
     function b(t, n) {
         return (
             (n && 'function' != typeof n) || (n = { callback: n }),
-            ('string' == typeof t ? p : _)(t, {
+            ('string' == typeof t ? p : f)(t, {
                 callback: n.callback || u,
                 attributes: 'function' == typeof n.attributes ? n.attributes : m,
                 base: 'string' == typeof n.base ? n.base : e.base,

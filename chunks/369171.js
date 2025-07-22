@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => f,
+    ZP: () => _,
     lx: () => u
 });
 var r = n(73800),
@@ -23,4 +23,4 @@ function d(e) {
         })
     );
 }
-let f = r.memo(d);
+let _ = r.memo(d);

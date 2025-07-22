@@ -8,9 +8,9 @@ var r = t(397110),
     a = t(819837),
     o = t(165440),
     g = t(21822),
-    f = t(285916),
-    c = t(168646),
-    v = t(470831),
+    v = t(285916),
+    f = t(168646),
+    c = t(470831),
     h = t(96824),
     u = t(187485),
     E = t(713897),
@@ -115,7 +115,7 @@ let Z = (A) => {
         case L.x_.HEART:
             return (0, n.jsx)(C.h, x({ primaryTintColor: t }, N));
         case L.x_.FIRE:
-            return (0, n.jsx)(c.G, x({ primaryTintColor: t }, N));
+            return (0, n.jsx)(f.G, x({ primaryTintColor: t }, N));
         case L.x_.COMPASS:
             return (0, n.jsx)(
                 i.Q,
@@ -140,7 +140,7 @@ let Z = (A) => {
             );
         case L.x_.FLOWER:
             return (0, n.jsx)(
-                v.N,
+                c.N,
                 x(
                     {
                         primaryTintColor: t,
@@ -294,7 +294,7 @@ let Z = (A) => {
         case L.x_.MONEY_BAG:
             return (0, n.jsx)(M.k, x({ primaryTintColor: t }, N));
         case L.x_.DOLLAR_SIGN:
-            return (0, n.jsx)(f.W, x({ primaryTintColor: t }, N));
+            return (0, n.jsx)(v.W, x({ primaryTintColor: t }, N));
     }
     return null;
 };

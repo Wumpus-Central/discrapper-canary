@@ -21,8 +21,8 @@ var l = n(44315),
     c = n(686546),
     u = n(981631),
     d = n(182294),
-    f = n(121061);
-function _(e, t, n) {
+    _ = n(121061);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -258,7 +258,7 @@ function S(e) {
         .concat(0.25 * e);
 }
 function A(e, t, n) {
-    let { bgRadius: i, bgY: a, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
+    let { bgRadius: i, bgY: a, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: _, cutoutHeight: f, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
@@ -274,8 +274,8 @@ function A(e, t, n) {
             (0, r.jsx)(o.animated.rect, {
                 x: u,
                 y: d,
-                width: f,
-                height: _,
+                width: _,
+                height: f,
                 rx: p,
                 ry: p,
                 fill: 'black'
@@ -330,22 +330,22 @@ function C(e, t, n) {
 function R(e) {
     let { status: t, isMobile: n = !1, size: i = g, className: o, style: s, color: l } = e,
         d = t === u.Skl.ONLINE && n,
-        _ = b(t, l);
+        f = b(t, l);
     return (0, r.jsx)(
         c.ZP,
         m(
             p(
                 {
                     mask: N(t, d),
-                    className: a()(f.mask, o),
+                    className: a()(_.mask, o),
                     style: s
                 },
                 C(i, t, d)
             ),
             {
                 children: (0, r.jsx)('div', {
-                    style: { backgroundColor: _ },
-                    className: f.status
+                    style: { backgroundColor: f },
+                    className: _.status
                 })
             }
         )

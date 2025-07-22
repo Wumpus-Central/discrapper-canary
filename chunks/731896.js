@@ -8,7 +8,7 @@ let s = (e) => {
         n = null != t;
     return (
         r.useEffect(() => {
-            null == e || n || (0, a.z)(!0);
+            null == e || n || (0, a.r)(!0);
         }, [e, n]),
         t
     );

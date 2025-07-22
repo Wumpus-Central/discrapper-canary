@@ -1,4 +1,4 @@
-n.d(t, { M: () => _ });
+n.d(t, { M: () => f });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        E = null != (n = null == m ? void 0 : m.height) ? n : _;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -94,14 +94,14 @@ let _ = (e) => {
             viewBox: '0 0 24 24',
             children: [
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     fillRule: 'evenodd',
                     d: 'M19.56 2a3 3 0 0 0-2.46 1.28 3.85 3.85 0 0 1-1.86 1.42l-8.9 3.18a.5.5 0 0 0-.34.47v10.09a3 3 0 0 0 2.27 2.9l.62.16c1.57.4 3.15-.56 3.55-2.12a.92.92 0 0 1 1.23-.63l2.36.94c.42.27.79.62 1.07 1.03A3 3 0 0 0 19.56 22h.94c.83 0 1.5-.67 1.5-1.5v-17c0-.83-.67-1.5-1.5-1.5h-.94Zm-8.53 15.8L8 16.7v1.73a1 1 0 0 0 .76.97l.62.15c.5.13 1-.17 1.12-.67.1-.41.29-.78.53-1.1Z',
                     clipRule: 'evenodd',
                     className: p
                 }),
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     d: 'M2 10c0-1.1.9-2 2-2h.5c.28 0 .5.22.5.5v7a.5.5 0 0 1-.5.5H4a2 2 0 0 1-2-2v-4Z',
                     className: p
                 })

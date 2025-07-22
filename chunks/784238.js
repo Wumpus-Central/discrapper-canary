@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,7 +59,7 @@ function p(e, t) {
 }
 let h = (e) => {
     var { textOptions: t, subscriptionTier: n, hasActivePromotion: d = !1, isPersistentCTA: p = !1, useShorterCTA: h = !1, showGradient: m, confirmationFooter: g, paymentModalBanner: E, color: b } = e,
-        y = _(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
+        y = f(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
     let O = (0, o.ZP)(),
         { buttonText: v, marketingSubscriptionTierSkuId: I } = (0, c.G)({
             hasActivePromotion: d,
@@ -73,10 +73,10 @@ let h = (e) => {
         N = null != b ? b : (0, i.wj)(O) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
     return (0, r.jsx)(
         l.Z,
-        f(
+        _(
             {
                 color: N,
-                textOptions: f(
+                textOptions: _(
                     {
                         textOverride: v,
                         textClassName: A ? u.freeTrialText : void 0

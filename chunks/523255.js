@@ -1,6 +1,6 @@
 n.d(t, {
     SI: () => c,
-    hZ: () => u
+    hZ: () => d
 });
 var i = n(913527),
     r = n.n(i),
@@ -10,7 +10,7 @@ var i = n(913527),
     a = n(905567);
 let c = (e) => {
         var t;
-        if (!d(e)) return !1;
+        if (!u(e)) return !1;
         let n = null == (t = s.Z.settings.userContent) ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
             i = null != n ? l.E.toDate(n) : void 0,
             o = null != i ? r()().diff(i, 'days') : null;
@@ -18,8 +18,8 @@ let c = (e) => {
         let { isEligible: c } = a.C.getCurrentConfig({ location: '657a81_1' }, { autoTrackExposure: !0 });
         return c;
     },
-    d = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
-    u = () => {
+    u = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
+    d = () => {
         let e = l.E.now();
         o.hW.updateAsync(
             'userContent',

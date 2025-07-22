@@ -1,6 +1,6 @@
 (n.d(t, {
     Qw: () => u,
-    ZP: () => _,
+    ZP: () => f,
     mX: () => o,
     oC: () => l
 }),
@@ -37,7 +37,7 @@ function o() {
                     })
                 ));
         })();
-        return (f(e), e);
+        return (_(e), e);
     }
 }
 function s(e) {
@@ -57,7 +57,7 @@ function d() {
     var e;
     return null != (e = window._libdiscoreInitPromise) ? e : null;
 }
-function f(e) {
+function _(e) {
     window._libdiscoreInitPromise = e;
 }
-let _ = u;
+let f = u;

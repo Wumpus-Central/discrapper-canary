@@ -7,8 +7,8 @@ var r,
     c = n(429675),
     u = n(815329),
     d = n(102099),
-    f = n(469855),
-    _ = n(143500),
+    _ = n(469855),
+    f = n(143500),
     p = n(950464),
     h = n(376447),
     m = n(802471),
@@ -119,8 +119,8 @@ var r,
         '%Function.prototype.apply%': R,
         '%Object.defineProperty%': v,
         '%Object.getPrototypeOf%': N,
-        '%Math.abs%': f,
-        '%Math.floor%': _,
+        '%Math.abs%': _,
+        '%Math.floor%': f,
         '%Math.max%': p,
         '%Math.min%': h,
         '%Math.pow%': m,
@@ -251,22 +251,22 @@ e.exports = function (e, t) {
         s = !1,
         l = i.alias;
     l && ((r = l[0]), B(n, G([0, 1], l)));
-    for (var d = 1, f = !0; d < n.length; d += 1) {
-        var _ = n[d],
-            p = F(_, 0, 1),
-            h = F(_, -1);
+    for (var d = 1, _ = !0; d < n.length; d += 1) {
+        var f = n[d],
+            p = F(f, 0, 1),
+            h = F(f, -1);
         if (('"' === p || "'" === p || '`' === p || '"' === h || "'" === h || '`' === h) && p !== h) throw new c('property names with quotes must have matching quotes');
-        if ((('constructor' !== _ && f) || (s = !0), (r += '.' + _), U(L, (a = '%' + r + '%')))) o = L[a];
+        if ((('constructor' !== f && _) || (s = !0), (r += '.' + f), U(L, (a = '%' + r + '%')))) o = L[a];
         else if (null != o) {
-            if (!(_ in o)) {
+            if (!(f in o)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
                 return;
             }
             if (O && d + 1 >= n.length) {
-                var m = O(o, _);
-                o = (f = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : o[_];
-            } else ((f = U(o, _)), (o = o[_]));
-            f && !s && (L[a] = o);
+                var m = O(o, f);
+                o = (_ = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : o[f];
+            } else ((_ = U(o, f)), (o = o[f]));
+            _ && !s && (L[a] = o);
         }
     }
     return o;

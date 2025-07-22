@@ -7,5 +7,5 @@ t.exports = {
     image: 'image__11e4a',
     title: 'title__11e4a',
     text: 'text__11e4a',
-    button: 'button__11e4a'
+    buttonContainer: 'buttonContainer__11e4a'
 };

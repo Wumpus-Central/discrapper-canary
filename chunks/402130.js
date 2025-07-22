@@ -1,17 +1,16 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(911367),
+    a = n(44876),
     o = n(594174),
-    s = n(212321),
-    c = n(788111),
-    u = n(60577),
-    d = n(184301),
-    p = n(124823),
-    h = n(550818),
-    f = n(983559);
-function m(e) {
+    s = n(788111),
+    c = n(60577),
+    u = n(184301),
+    d = n(124823),
+    p = n(550818),
+    h = n(983559);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,54 +35,53 @@ function m(e) {
     }
     return e;
 }
-function g(e) {
+function m(e) {
     let { channel: t } = e,
         [n] = t.recipients,
-        g = (0, l.e7)([o.default], () => o.default.getUser(n)),
-        b = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        _ = (0, u.Z)(),
-        [y, C] = (0, c.Z)(n);
-    (0, a.t)();
-    let { withMutualFriendsCount: x } = (0, s.j)({ location: 'UserProfileSidebarRenderer' });
-    return (i.useEffect(() => {
-        (0, d.Z)(null != g ? g : n, {
+        m = (0, l.e7)([o.default], () => o.default.getUser(n)),
+        g = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        b = (0, c.Z)(),
+        [_, y] = (0, s.Z)(n);
+    return ((0, a.k)(),
+    i.useEffect(() => {
+        (0, u.Z)(null != m ? m : n, {
             type: 'sidebar',
-            withMutualFriendsCount: (null == g ? void 0 : g.bot) !== !0 && x,
-            withMutualFriends: (null == g ? void 0 : g.bot) !== !0 && !x,
+            withMutualFriendsCount: (null == m ? void 0 : m.bot) !== !0,
+            withMutualFriends: !1,
             withMutualGuilds: !0,
             channelId: t.id
         });
-    }, [g, n, t.id, x]),
-    null != g && null != b && _)
-        ? y
+    }, [m, n, t.id]),
+    null != m && null != g && b)
+        ? _
             ? (0, r.jsx)(
-                  h.Z,
-                  m(
+                  p.Z,
+                  f(
                       {
-                          user: g,
-                          currentUser: b,
-                          onHide: C
+                          user: m,
+                          currentUser: g,
+                          onHide: y
                       },
                       e
                   )
               )
-            : g.isNonUserBot()
+            : m.isNonUserBot()
               ? (0, r.jsx)(
-                    p.Z,
-                    m(
+                    d.Z,
+                    f(
                         {
-                            user: g,
-                            currentUser: b
+                            user: m,
+                            currentUser: g
                         },
                         e
                     )
                 )
               : (0, r.jsx)(
-                    f.Z,
-                    m(
+                    h.Z,
+                    f(
                         {
-                            user: g,
-                            currentUser: b
+                            user: m,
+                            currentUser: g
                         },
                         e
                     )

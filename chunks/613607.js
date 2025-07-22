@@ -5,14 +5,14 @@ function a(e, t, n, a, o, s) {
     for (var l = [], c = 0; c < e.length; c++) {
         var u = void 0,
             d = void 0,
-            f = e[c];
-        f < 0 ? ((u = Math.floor(f / t.length)), (d = (0, i.Vy)(f, t.length))) : ((u = Math.floor((f - 1) / t.length)), (d = (0, i.Vy)(f - 1, t.length)));
-        for (var _ = [], p = n; p < a; p++) {
+            _ = e[c];
+        _ < 0 ? ((u = Math.floor(_ / t.length)), (d = (0, i.Vy)(_, t.length))) : ((u = Math.floor((_ - 1) / t.length)), (d = (0, i.Vy)(_ - 1, t.length)));
+        for (var f = [], p = n; p < a; p++) {
             var h = s[p];
-            (0, i.EN)(h) && _.push(h);
+            (0, i.EN)(h) && f.push(h);
         }
         var m = void 0;
-        m = u < 0 ? _.slice(u)[0] : _[u];
+        m = u < 0 ? f.slice(u)[0] : f[u];
         var g = t[d],
             E = (0, r.zU)(o.yearordinal + m),
             b = (0, r.$e)(E, g);

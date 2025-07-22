@@ -23,13 +23,13 @@ function l(e, t, n) {
         l = i.threshold,
         u = void 0 === l ? o.MATCHES : l,
         d = i.baseSort,
-        f = void 0 === d ? s : d,
+        _ = void 0 === d ? s : d,
         p = i.sorter;
     return (
         void 0 === p
             ? function (e) {
                   return e.sort(function (e, t) {
-                      return _(e, t, f);
+                      return f(e, t, _);
                   });
               }
             : p
@@ -69,15 +69,15 @@ function c(e, t, n, r) {
                 l = e.keyIndex,
                 c = e.keyThreshold,
                 d = t.itemValue,
-                f = t.attributes,
-                _ = u(d, n, r),
+                _ = t.attributes,
+                f = u(d, n, r),
                 p = s,
-                h = f.minRanking,
-                m = f.maxRanking,
-                g = f.threshold;
+                h = _.minRanking,
+                m = _.maxRanking,
+                g = _.threshold;
             return (
-                _ < h && _ >= o.MATCHES ? (_ = h) : _ > m && (_ = m),
-                _ > a && ((a = _), (l = i), (c = g), (p = d)),
+                f < h && f >= o.MATCHES ? (f = h) : f > m && (f = m),
+                f > a && ((a = f), (l = i), (c = g), (p = d)),
                 {
                     rankedValue: p,
                     rank: a,
@@ -95,7 +95,7 @@ function c(e, t, n, r) {
     );
 }
 function u(e, t, n) {
-    return ((e = p(e, n)), (t = p(t, n)).length > e.length) ? o.NO_MATCH : e === t ? o.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? o.EQUAL : e.startsWith(t) ? o.STARTS_WITH : e.includes(' ' + t) ? o.WORD_STARTS_WITH : e.includes(t) ? o.CONTAINS : 1 === t.length ? o.NO_MATCH : d(e).includes(t) ? o.ACRONYM : f(e, t);
+    return ((e = p(e, n)), (t = p(t, n)).length > e.length) ? o.NO_MATCH : e === t ? o.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? o.EQUAL : e.startsWith(t) ? o.STARTS_WITH : e.includes(' ' + t) ? o.WORD_STARTS_WITH : e.includes(t) ? o.CONTAINS : 1 === t.length ? o.NO_MATCH : d(e).includes(t) ? o.ACRONYM : _(e, t);
 }
 function d(e) {
     var t = '';
@@ -108,7 +108,7 @@ function d(e) {
         t
     );
 }
-function f(e, t) {
+function _(e, t) {
     var n = 0,
         r = 0;
     function i(e, t, r) {
@@ -126,7 +126,7 @@ function f(e, t) {
     for (var l = 1, c = t.length; l < c; l++) if (!((r = i(t[l], e, r)) > -1)) return o.NO_MATCH;
     return a(r - s);
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r = -1,
         i = 1,
         a = e.rank,
@@ -162,8 +162,8 @@ function m(e, t) {
         r = s;
     }
     if (Array.isArray(r[0])) {
-        var f = [];
-        return f.concat.apply(f, r);
+        var _ = [];
+        return _.concat.apply(_, r);
     }
     return r;
 }

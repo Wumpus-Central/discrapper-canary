@@ -93,7 +93,7 @@ e.exports = function (e) {
                 starts: t
             };
         },
-        f = function (t, n) {
+        _ = function (t, n) {
             return e.inherit(
                 {
                     begin: '\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{' + t + '\\})',
@@ -106,7 +106,7 @@ e.exports = function (e) {
                 u(l, n)
             );
         },
-        _ = (t = 'string') =>
+        f = (t = 'string') =>
             e.END_SAME_AS_BEGIN({
                 className: t,
                 begin: /(.|\r?\n)/,
@@ -147,12 +147,12 @@ e.exports = function (e) {
         name: 'LaTeX',
         aliases: ['tex'],
         contains: [
-            ...['verb', 'lstinline'].map((e) => d(e, { contains: [_()] })),
-            d('mint', u(l, { contains: [_()] })),
+            ...['verb', 'lstinline'].map((e) => d(e, { contains: [f()] })),
+            d('mint', u(l, { contains: [f()] })),
             d(
                 'mintinline',
                 u(l, {
-                    contains: [h(), _()]
+                    contains: [h(), f()]
                 })
             ),
             d('url', {
@@ -160,8 +160,8 @@ e.exports = function (e) {
             }),
             d('hyperref', { contains: [h('link')] }),
             d('href', u(c, { contains: [h('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, p('verbatim' + e)), f('filecontents' + e, u(l, p('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, u(c, p(t + 'Verbatim' + e))))])),
-            f('minted', u(c, u(l, p('minted')))),
+            ...[].concat(...['', '\\*'].map((e) => [_('verbatim' + e, p('verbatim' + e)), _('filecontents' + e, u(l, p('filecontents' + e))), ...['', 'B', 'L'].map((t) => _(t + 'Verbatim' + e, u(c, p(t + 'Verbatim' + e))))])),
+            _('minted', u(c, u(l, p('minted')))),
             ...i
         ]
     };

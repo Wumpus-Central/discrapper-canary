@@ -1,7 +1,7 @@
 (n.d(t, {
     AS: () => o,
     S4: () => s,
-    X4: () => _
+    X4: () => f
 }),
     n(388685));
 var r = n(73800),
@@ -114,12 +114,12 @@ function u(e, t, n) {
 function d(e, t) {
     return t && e > 0 ? 0 : 1;
 }
-let f = {
+let _ = {
     mass: 0.8,
     friction: 25,
     tension: 320
 };
-function _(e, t, n) {
+function f(e, t, n) {
     let [a, o] = (0, i.q_F)(
             () => ({
                 from: {
@@ -133,7 +133,7 @@ function _(e, t, n) {
             void 0,
             []
         ),
-        _ = r.useRef(o),
+        f = r.useRef(o),
         p = r.useContext(s),
         h = r.useMemo(() => {
             let t = !1;
@@ -142,7 +142,7 @@ function _(e, t, n) {
                     ? p.unsubscribe(e)
                     : p.subscribe(e, n, (e) => {
                           let { locked: n, matchHeight: r, height: i, top: a, index: o } = e,
-                              { current: s } = _,
+                              { current: s } = f,
                               p = {
                                   opacity: l(o, n),
                                   scale: c(o, n),
@@ -161,7 +161,7 @@ function _(e, t, n) {
                                         height: n ? r : i
                                     },
                               to: p,
-                              config: f
+                              config: _
                           }),
                               (t = !0));
                       });
@@ -172,13 +172,13 @@ function _(e, t, n) {
             if (t === i.pJH.YEETED) {
                 let t = p.getLayoutSpecs(e);
                 if (null == t) return void n();
-                (_.current({
+                (f.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
                         transform: u(t.index, p.locked, t.top) + (p.locked ? 0 : t.height / 2)
                     },
-                    config: f
+                    config: _
                 }),
                     setTimeout(n, 300));
             }

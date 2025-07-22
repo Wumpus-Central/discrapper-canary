@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(16609),
     u = n(917107),
     d = n(866885),
-    f = n(358221),
-    _ = n(950796),
+    _ = n(358221),
+    f = n(950796),
     p = n(591472),
     h = n(857096),
     m = n(241915),
@@ -86,7 +86,7 @@ class k extends i.PureComponent {
             }));
     }
 }
-let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z], (e) => {
+let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, _.Z, O.ZP, p.Z], (e) => {
     var t, n, r, i, a, o, d;
     let h,
         { popoutWindowKey: m, popoutWindowHasTitleBar: g = !1 } = e,
@@ -97,7 +97,7 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         k = null != L && !(0, u.Z)(x, I.Z, S.Z),
         j = s.ZP.getActivityPanelMode(),
         U = k && j === R.Ez.PANEL,
-        G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
+        G = null != L && null != x && (null == (t = _.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
         V = p.Z.getFrameLayoutMode() === w.U.FOCUSED,
         F = null != m,
@@ -119,7 +119,7 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
                 withTitleBar: g,
                 isFullScreen: H
             })
-                ? e - _.q8
+                ? e - f.q8
                 : e;
     h = (null != L && D) || (F && k) ? null : F || !v || k ? (null != L && U ? (null != (n = T.Z.pipActivityWindow) ? n : T.Z.pipVideoWindow) : null != B && V ? (null != (i = null != (r = T.Z.pipFrameWindow) ? r : T.Z.pipVideoWindow) ? i : T.Z.pipActivityWindow) : null != (o = null != (a = T.Z.pipVideoWindow) ? a : T.Z.pipActivityWindow) ? o : T.Z.pipFrameWindow) : null;
     let z = Array.from(T.Z.pipWindows.values()),
@@ -129,7 +129,7 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         J = O.ZP.callChatSidebarWidth,
         $ = S.Z.getVoiceChannelId(),
         ee = S.Z.getChannelId() === $,
-        et = null != $ && f.Z.getChatOpen($),
+        et = null != $ && _.Z.getChatOpen($),
         en = U || G,
         er = en && null != L && (0, l.q)(L.applicationId),
         ei = !en && null != h && ee && et;

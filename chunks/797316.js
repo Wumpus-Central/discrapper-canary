@@ -8,8 +8,8 @@ var i,
     c = n(177523),
     u = n(353926),
     d = n(768419),
-    f = n(314897),
-    _ = n(439170),
+    _ = n(314897),
+    f = n(439170),
     p = n(433355),
     h = n(592125),
     m = n(486472),
@@ -56,7 +56,7 @@ function N(e, t) {
     return (S.subscribeToGuild(e), null != t && p.ZP.getSection(t) === I.ULH.MEMBERS && C(e, t, c.KV));
 }
 function C(e, t, n) {
-    if (t === _.oL) return S.subscribeChannel(e, t, n);
+    if (t === f.oL) return S.subscribeChannel(e, t, n);
     let r = h.Z.getChannel(t);
     if (null == r) return !1;
     let i = r.getGuildId();
@@ -100,7 +100,7 @@ function M(e) {
     let { guildId: t, userIds: n } = e;
     return (
         n.forEach((e) => {
-            e !== f.default.getId() && S.subscribeUser(t, e);
+            e !== _.default.getId() && S.subscribeUser(t, e);
         }),
         !1
     );
@@ -173,7 +173,7 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        (this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], Z));
+        (this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, _.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], Z));
     }
     getSubscribedThreadIds() {
         return S.getSubscribedThreadIds();

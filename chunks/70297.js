@@ -1,34 +1,34 @@
-(t.d(n, {
+(n.d(t, {
     Z: () => C,
     q: () => _
 }),
-    t(953529));
-var l = t(255367);
-t(73800);
-var r = t(120356),
-    i = t.n(r),
-    a = t(704215),
-    o = t(481060),
-    s = t(266454),
-    c = t(605236),
-    d = t(434404),
-    u = t(707076),
-    m = t(398758),
-    h = t(981631),
-    p = t(921944),
-    f = t(388032),
-    g = t(402895),
-    x = t(697611);
+    n(953529));
+var l = n(255367);
+n(73800);
+var r = n(120356),
+    i = n.n(r),
+    a = n(704215),
+    o = n(481060),
+    s = n(266454),
+    c = n(605236),
+    d = n(434404),
+    u = n(707076),
+    m = n(398758),
+    h = n(981631),
+    p = n(921944),
+    f = n(388032),
+    g = n(402895),
+    x = n(697611);
 function _(e) {
     return (0, m.te)(e) ? 250 : 152;
 }
 function C(e) {
-    let { guild: n } = e,
-        t = (0, m.te)(n.id),
+    let { guild: t } = e,
+        n = (0, m.te)(t.id),
         r = (0, s.Nj)(a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
-        _ = t && !r ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
+        _ = n && !r ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
     (0, c.kk)(_);
-    let C = t
+    let C = n
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)('div', {
@@ -48,7 +48,7 @@ function C(e) {
                           (0, l.jsx)(o.zxk, {
                               variant: 'overlay-primary',
                               onClick: () => {
-                                  (d.Z.open(n.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY }));
+                                  (d.Z.open(t.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY }));
                               },
                               text: f.intl.string(f.t['+OtO4e'])
                           })
@@ -91,7 +91,7 @@ function C(e) {
               ]
           });
     return (0, l.jsxs)('div', {
-        className: i()(g.container, { [g.adminUpsell]: t }),
+        className: i()(g.container, { [g.adminUpsell]: n }),
         children: [
             (0, l.jsx)(o.P3F, {
                 className: g.closeButton,

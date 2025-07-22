@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(98278),
     x = n(767714),
     v = n(430824),
-    y = n(594174),
-    C = n(626135),
+    C = n(594174),
+    y = n(626135),
     O = n(74538),
     j = n(453070),
     I = n(926491),
@@ -80,7 +80,7 @@ let D = (e, t) => (t ? w.intl.format(w.t.auckX1, { stickerPackName: e.name }) : 
         return i.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
 function U(e) {
-    (C.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
+    (y.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? P.ZY5.GUILD_CHANNEL : P.ZY5.DM_CHANNEL,
         location_section: P.jXE.STICKER_POPOUT
     }),
@@ -138,7 +138,7 @@ let B = (e) => {
         }, [u]),
         i.useEffect(() => {
             let { channel: e } = h.current;
-            C.default.track(
+            y.default.track(
                 P.rMx.OPEN_POPOUT,
                 k(
                     {
@@ -206,7 +206,7 @@ let B = (e) => {
             { sticker: n, channel: l, closePopout: f, refreshPositionKey: E } = e,
             [j, I] = i.useState(null),
             [S, N] = i.useState(!1),
-            D = y.default.getCurrentUser(),
+            D = C.default.getCurrentUser(),
             M = O.ZP.canUseCustomStickersEverywhere(D),
             B = (0, o.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             G = null != B,
@@ -256,7 +256,7 @@ let B = (e) => {
             e();
         }, [S, j]),
         (0, d.ZP)(() => {
-            C.default.track(P.rMx.OPEN_POPOUT, k({ type: ee }, Y));
+            y.default.track(P.rMx.OPEN_POPOUT, k({ type: ee }, Y));
         }),
         S)
             ? (0, r.jsxs)(b.W_, {

@@ -7,8 +7,8 @@ var r = n(46015),
     c = n(845691),
     u = n(199838),
     d = u.enforce,
-    f = u.get,
-    _ = String,
+    _ = u.get,
+    f = String,
     p = Object.defineProperty,
     h = r(''.slice),
     m = r(''.replace),
@@ -20,7 +20,7 @@ var r = n(46015),
         }),
     b = String(String).split('String'),
     y = (e.exports = function (e, t, n) {
-        ('Symbol(' === h(_(t), 0, 7) && (t = '[' + m(_(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
+        ('Symbol(' === h(f(t), 0, 7) && (t = '[' + m(f(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
             n && n.getter && (t = 'get ' + t),
             n && n.setter && (t = 'set ' + t),
             (!o(e, 'name') || (l && e.name !== t)) &&
@@ -38,5 +38,5 @@ var r = n(46015),
         return (o(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e);
     });
 Function.prototype.toString = y(function () {
-    return (a(this) && f(this).source) || c(this);
+    return (a(this) && _(this).source) || c(this);
 }, 'toString');

@@ -1,8 +1,7 @@
-(n.d(t, { Z: () => l }), n(415506));
+(n.d(t, { Z: () => s }), n(415506));
 var r = n(598077),
-    i = n(830181),
-    a = n(484459);
-function o(e, t, n) {
+    i = n(484459);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,31 +25,31 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             }));
     }
     return e;
 }
-async function l() {
+function s() {
     let e, t, n;
-    for (var o = arguments.length, l = Array(o), c = 0; c < o; c++) l[c] = arguments[c];
-    let u = l[0],
-        d = l[1];
-    if ('string' == typeof u && ('string' == typeof d || null == d)) ((e = u), (t = d), (n = l[2]));
-    else if (u instanceof r.Z && ('object' == typeof d || null == d)) ((e = u.id), (t = u.getAvatarURL(void 0, 80)), (n = d));
+    for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
+    let c = s[0],
+        u = s[1];
+    if ('string' == typeof c && ('string' == typeof u || null == u)) ((e = c), (t = u), (n = s[2]));
+    else if (c instanceof r.Z && ('object' == typeof u || null == u)) ((e = c.id), (t = c.getAvatarURL(void 0, 80)), (n = u));
     else throw Error('Invalid arguments');
-    if (null == e) return Promise.resolve();
-    let { waitForRefetch: f } = (0, i.x)({ location: 'preloadUserProfileForPopout' });
-    await (0, a.Z)(
-        e,
-        t,
-        s(
-            {
-                withMutualFriends: !0,
-                withMutualGuilds: !0,
-                waitForRefetch: f
-            },
-            n
-        )
-    );
+    return null == e
+        ? Promise.resolve()
+        : (0, i.Z)(
+              e,
+              t,
+              o(
+                  {
+                      withMutualFriends: !0,
+                      withMutualGuilds: !0,
+                      waitForRefetch: !1
+                  },
+                  n
+              )
+          );
 }

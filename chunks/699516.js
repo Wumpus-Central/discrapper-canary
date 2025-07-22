@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-let _ = 300000,
+let f = 300000,
     p = new Map(),
     h = {},
     m = {},
@@ -123,9 +123,9 @@ function L(e) {
 function x(e) {
     let t = p.get(e.relationship.id);
     (R(e.relationship.id, e.relationship.type),
-        null != e.relationship.nickname && (h = f(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
-        null != e.relationship.since && (m = f(u({}, m), { [e.relationship.id]: e.relationship.since })),
-        null != e.relationship.originApplicationId && (y = f(u({}, y), { [e.relationship.id]: e.relationship.originApplicationId })),
+        null != e.relationship.nickname && (h = _(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
+        null != e.relationship.since && (m = _(u({}, m), { [e.relationship.id]: e.relationship.since })),
+        null != e.relationship.originApplicationId && (y = _(u({}, y), { [e.relationship.id]: e.relationship.originApplicationId })),
         e.relationship.isSpamRequest ? g.add(e.relationship.id) : g.delete(e.relationship.id),
         e.relationship.userIgnored ? (E.add(e.relationship.id), e.relationship.type === l.OGo.PENDING_INCOMING ? b.add(e.relationship.id) : e.relationship.type === l.OGo.FRIEND && b.delete(e.relationship.id)) : (E.delete(e.relationship.id), b.delete(e.relationship.id)),
         w(),
@@ -149,7 +149,7 @@ function j(e) {
 }
 function U(e) {
     v[e.userId] = {
-        expiry: Date.now() + _,
+        expiry: Date.now() + f,
         isStranger: e.isStranger
     };
 }

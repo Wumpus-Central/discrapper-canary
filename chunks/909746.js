@@ -14,7 +14,7 @@
     N$: () => J,
     N5: () => Ad,
     QM: () => Au,
-    V$: () => Af,
+    V$: () => Av,
     _$: () => AD,
     cT: () => AB,
     em: () => AC,
@@ -22,7 +22,7 @@
     hx: () => K,
     lR: () => W,
     lU: () => F,
-    nm: () => Av,
+    nm: () => Ac,
     oD: () => z,
     pA: () => At,
     pY: () => G,
@@ -44,9 +44,9 @@ var n = t(654861),
     a = t(533800),
     o = t(149765),
     g = t(866442),
-    f = t(379649),
-    c = t(911969),
-    v = t(933557),
+    v = t(379649),
+    f = t(911969),
+    c = t(933557),
     h = t(710845),
     u = t(339085),
     E = t(236413),
@@ -113,7 +113,7 @@ function Z(A, e) {
     );
 }
 let N = new h.Z('AuditLogUtils'),
-    R = [f.J6.DAYS, f.J6.HOURS, f.J6.MINUTES, f.J6.SECONDS],
+    R = [v.J6.DAYS, v.J6.HOURS, v.J6.MINUTES, v.J6.SECONDS],
     S = () => ({ [j.zUn.REASON]: () => L.t['2IW3Cw'] }),
     G = () =>
         x(
@@ -713,36 +713,36 @@ let N = new h.Z('AuditLogUtils'),
             label: L.intl.string(L.t.V9PEQ0)
         }
     ];
-function Af(A, e) {
+function Av(A, e) {
     return null != e.changes ? e.changes.find((e) => e.key === A) : null;
 }
-function Ac(A, e) {
+function Af(A, e) {
     return null != e.changes ? e.changes.filter((e) => e.key === A) : [];
 }
-function Av(A) {
+function Ac(A) {
     var e;
     let t = Ag().find((e) => e.value === A.action);
-    return null != Af(j.zUn.COMMUNICATION_DISABLED_UNTIL, A) ? L.intl.string(L.t.z3wbj4) : null != (e = null == t ? void 0 : t.label) ? e : null;
+    return null != Av(j.zUn.COMMUNICATION_DISABLED_UNTIL, A) ? L.intl.string(L.t.z3wbj4) : null != (e = null == t ? void 0 : t.label) ? e : null;
 }
 let Ah = {
-    [f.J6.SECONDS]: (A) => L.intl.formatToPlainString(L.t.geSp4O, { seconds: A }),
-    [f.J6.MINUTES]: (A) => L.intl.formatToPlainString(L.t.iXLF9f, { minutes: A }),
-    [f.J6.HOURS]: (A) => L.intl.formatToPlainString(L.t.xCjYxM, { hours: A }),
-    [f.J6.DAYS]: (A) => L.intl.formatToPlainString(L.t.k2UNz8, { days: A })
+    [v.J6.SECONDS]: (A) => L.intl.formatToPlainString(L.t.geSp4O, { seconds: A }),
+    [v.J6.MINUTES]: (A) => L.intl.formatToPlainString(L.t.iXLF9f, { minutes: A }),
+    [v.J6.HOURS]: (A) => L.intl.formatToPlainString(L.t.xCjYxM, { hours: A }),
+    [v.J6.DAYS]: (A) => L.intl.formatToPlainString(L.t.k2UNz8, { days: A })
 };
 function Au(A) {
-    let e = Af(j.zUn.COMMUNICATION_DISABLED_UNTIL, A),
-        t = Ac(j.zUn.ROLES_ADD, A).length > 0,
-        n = Ac(j.zUn.ROLES_REMOVE, A).length > 0;
+    let e = Av(j.zUn.COMMUNICATION_DISABLED_UNTIL, A),
+        t = Af(j.zUn.ROLES_ADD, A).length > 0,
+        n = Af(j.zUn.ROLES_REMOVE, A).length > 0;
     if (null != e) {
         if ((null == e ? void 0 : e.newValue) != null) {
             let t = new Date(null == e ? void 0 : e.newValue).getTime() - P.default.extractTimestamp(A.id),
                 n = Math.round(t / 1000 / 60),
-                r = (0, f.CI)(n, R);
+                r = (0, v.CI)(n, R);
             if (null == r.unit || null == r.time) return null;
             if (r.unit in Ah) {
                 let A = r.unit,
-                    e = r.unit === f.J6.SECONDS ? Math.round(t / 1000) : r.time;
+                    e = r.unit === v.J6.SECONDS ? Math.round(t / 1000) : r.time;
                 return Ah[A](e);
             }
         } else if ((null == e ? void 0 : e.oldValue) != null) return L.intl.string(L.t.MA1ltr);
@@ -752,8 +752,8 @@ function Au(A) {
     return null;
 }
 function AE(A) {
-    let e = Ac(j.zUn.ROLES_ADD, A),
-        t = Ac(j.zUn.ROLES_REMOVE, A),
+    let e = Af(j.zUn.ROLES_ADD, A),
+        t = Af(j.zUn.ROLES_REMOVE, A),
         n =
             null == e
                 ? void 0
@@ -1127,7 +1127,7 @@ function AD(A, e) {
                                 A,
                                 j.zUn.NAME,
                                 (A) => M.Z.getChannel(A),
-                                (A) => (0, v.F6)(A, H.default, p.Z, !0)
+                                (A) => (0, c.F6)(A, H.default, p.Z, !0)
                             );
                         case j.KFR.USER:
                             return AH(
@@ -1224,7 +1224,7 @@ function AD(A, e) {
                                 (A) => V.Z.applicationCommands.find((e) => e.id === A),
                                 (A) => {
                                     let e = null != A.name_localized && '' !== A.name_localized ? A.name_localized : A.name;
-                                    return A.type === c.yU.CHAT ? '/\u2060'.concat(e) : e;
+                                    return A.type === f.yU.CHAT ? '/\u2060'.concat(e) : e;
                                 }
                             );
                         case j.KFR.AUTO_MODERATION_RULE:
@@ -1249,7 +1249,7 @@ function AD(A, e) {
                                 A,
                                 j.zUn.STATUS,
                                 (A) => M.Z.getChannel(A),
-                                (A) => (0, v.F6)(A, H.default, p.Z, !0)
+                                (A) => (0, c.F6)(A, H.default, p.Z, !0)
                             );
                         default:
                             return (N.warn('Unknown targetType for log', A), null);
@@ -1324,7 +1324,7 @@ function AD(A, e) {
                                             : (A.subtarget = Ab(
                                                   e.id,
                                                   (A) => M.Z.getChannel(A),
-                                                  (A) => (0, v.F6)(A, H.default, p.Z, !0)
+                                                  (A) => (0, c.F6)(A, H.default, p.Z, !0)
                                               ));
                                 }
                                 return A;
@@ -1340,7 +1340,7 @@ function AD(A, e) {
                                     return Ap(
                                         A,
                                         (A) => M.Z.getChannel(A),
-                                        (A) => (0, v.F6)(A, H.default, p.Z, !0)
+                                        (A) => (0, c.F6)(A, H.default, p.Z, !0)
                                     );
                                 case j.zUn.AFK_TIMEOUT:
                                     return Ap(A, (A) => A / 60);
@@ -1470,7 +1470,7 @@ function AD(A, e) {
                                             (A) =>
                                                 A.map(M.Z.getChannel)
                                                     .filter((A) => null != A)
-                                                    .map((A) => (0, v.F6)(A, H.default, p.Z, !0)),
+                                                    .map((A) => (0, c.F6)(A, H.default, p.Z, !0)),
                                             (A) => (null != A && A.length > 0 ? A.join(', ') : L.intl.string(L.t['K/EdV1']))
                                         );
                                     break;

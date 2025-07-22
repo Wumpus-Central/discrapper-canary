@@ -8,8 +8,8 @@ var r = n(990547),
     c = n(408987),
     u = n(962086),
     d = n(160404),
-    f = n(41776),
-    _ = n(703656),
+    _ = n(41776),
+    f = n(703656),
     p = n(6025),
     h = n(314897),
     m = n(271383),
@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            (await Promise.all([n.e('49645'), n.e('44947'), n.e('25292'), n.e('22878'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('28467'), n.e('90508'), n.e('8739'), n.e('16766'), n.e('86282'), n.e('73057'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('30424'), n.e('51308'), n.e('94136'), n.e('40694'), n.e('36006'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('61636'), n.e('49049'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('27063'), n.e('54408'), n.e('20087'), n.e('88388'), n.e('79381'), n.e('64679'), n.e('91398'), n.e('3496'), n.e('56534'), n.e('89144')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS));
+            (await Promise.all([n.e('49645'), n.e('44947'), n.e('25292'), n.e('22878'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('28467'), n.e('90508'), n.e('8739'), n.e('16766'), n.e('86282'), n.e('73057'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('30424'), n.e('51308'), n.e('94136'), n.e('40694'), n.e('88625'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('67032'), n.e('49049'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('27063'), n.e('54408'), n.e('20087'), n.e('88388'), n.e('79381'), n.e('64679'), n.e('91398'), n.e('3496'), n.e('56534'), n.e('79465')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS));
         },
         close() {
             a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' });
@@ -228,7 +228,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, ownerConfiguredContentLevel: S, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: P, profile: w, moderatorReportingEnabled: D } = t,
+            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: _, afkTimeout: f, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, ownerConfiguredContentLevel: S, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: P, profile: w, moderatorReportingEnabled: D } = t,
                 L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 x = A(
                     T(
@@ -241,8 +241,8 @@ let R = new s.Z('GuildSettingsActionCreators'),
                             home_header: d,
                             features: E,
                             preferred_locale: y,
-                            afk_channel_id: f,
-                            afk_timeout: _,
+                            afk_channel_id: _,
+                            afk_timeout: f,
                             system_channel_id: p,
                             verification_level: h,
                             default_message_notifications: m,
@@ -375,7 +375,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = f.Z.isLurking(e);
+                n = _.Z.isLurking(e);
             (await i.tn.del({
                 url: O.ANM.GUILD_LEAVE(e),
                 body: { lurking: n || m.ZP.isCurrentUserGuest(e) },
@@ -383,7 +383,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 rejectWithError: !1
             }),
                 P.close(),
-                t && n && (0, _.uL)(O.Z5c.GUILD_DISCOVERY));
+                t && n && (0, f.uL)(O.Z5c.GUILD_DISCOVERY));
         },
         async updateMemberRoles(e, t, n, r, o) {
             if (d.Z.isFullServerPreview(e) && t === h.default.getId()) return void (0, u.og)(e, n);

@@ -9,16 +9,16 @@ function s(e, t) {
         c = (0, r.e7)([a.Z], () => a.Z.isHighContrastModeEnabled),
         u = (0, o.Ml)('useToken'),
         d = (0, o.CL)('useToken'),
-        f = (0, o.VM)('useToken'),
-        _ = [];
+        _ = (0, o.VM)('useToken'),
+        f = [];
     return (
-        u && _.push('refresh-fast-follow-avatars'),
-        d && _.push('refresh-fast-follow-guild-bg'),
-        f && _.push('refresh-fast-follow-distinct-borders'),
+        u && f.push('refresh-fast-follow-avatars'),
+        d && f.push('refresh-fast-follow-guild-bg'),
+        _ && f.push('refresh-fast-follow-distinct-borders'),
         e.resolve({
             theme: null != t ? t : n,
             saturation: l,
-            enabledExperiments: _,
+            enabledExperiments: f,
             density: s,
             highContrastModeEnabled: c
         })

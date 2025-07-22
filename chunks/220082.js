@@ -15,7 +15,7 @@ var r = n(73800),
     c = n(607070),
     u = n(302221),
     d = n(956664);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -79,20 +79,20 @@ async function E(e) {
 }
 async function b(e) {
     if (!m.getState().fetching[e]) {
-        (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !0 }) })));
+        (0, s.j)(() => m.setState((t) => ({ fetching: h(f({}, t.fetching), { [e]: !0 }) })));
         try {
             let t = await (0, d.OF)(e),
                 n = (0, u.WY)(t[0]);
             (0, s.j)(() => {
                 m.setState((r) => ({
-                    fetching: h(_({}, r.fetching), { [e]: !1 }),
-                    palette: h(_({}, r.palette), {
+                    fetching: h(f({}, r.fetching), { [e]: !1 }),
+                    palette: h(f({}, r.palette), {
                         [e]: [...t.slice(0, 2), ...n]
                     })
                 }));
             });
         } catch (t) {
-            (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !1 }) })));
+            (0, s.j)(() => m.setState((t) => ({ fetching: h(f({}, t.fetching), { [e]: !1 }) })));
         }
     }
 }

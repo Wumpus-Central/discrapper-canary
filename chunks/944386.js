@@ -8,7 +8,7 @@ var r = n(73800),
     c = n(255963),
     u = n(185923),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,15 +32,15 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
 }
 let p = (e) => {
-    let { emojiId: t, currentGuildId: n, popoutData: f, nonce: p, demoMode: h } = e,
+    let { emojiId: t, currentGuildId: n, popoutData: _, nonce: p, demoMode: h } = e,
         { current: m } = r.useRef(
-            _(
+            f(
                 {
                     guild_id: n,
                     emoji_id: t
@@ -55,9 +55,9 @@ let p = (e) => {
                 h ||
                     l.default.track(
                         d.rMx.OPEN_POPOUT,
-                        _(
+                        f(
                             {
-                                type: null != (e = null == f ? void 0 : f.analyticsType) ? e : 'Standard Emoji Popout',
+                                type: null != (e = null == _ ? void 0 : _.analyticsType) ? e : 'Standard Emoji Popout',
                                 nonce: p
                             },
                             m

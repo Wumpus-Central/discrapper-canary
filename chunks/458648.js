@@ -34,9 +34,9 @@ var s = n(914747),
     u = n(10730);
 n(833157);
 var d = n(639388),
-    f = n.g.Set || n(567315);
-function _(e) {
-    var t = new f();
+    _ = n.g.Set || n(567315);
+function f(e) {
+    var t = new _();
     function n(e) {
         'function' == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
     }
@@ -151,7 +151,7 @@ e.exports = (function (e) {
             {
                 key: '_updateValue',
                 value: function (e) {
-                    for (var t in ((this._value = e), _(this), this._listeners)) this._listeners[t]({ value: this.__getValue() });
+                    for (var t in ((this._value = e), f(this), this._listeners)) this._listeners[t]({ value: this.__getValue() });
                 }
             }
         ]),

@@ -19,8 +19,8 @@ var r = n(255367),
     c = n(166459),
     u = n(95152),
     d = n(476326),
-    f = n(543651),
-    _ = n(377171),
+    _ = n(543651),
+    f = n(377171),
     p = n(95398),
     h = n(70097),
     m = n(592125),
@@ -130,7 +130,7 @@ function C(e) {
 function R(e) {
     let { file: t, alt: n, spoiler: a, size: s = y.q.MEDIUM, onMouseEnter: c } = e,
         [u, d] = i.useState(),
-        [f, _] = i.useState({
+        [_, f] = i.useState({
             width: 0,
             height: 0
         }),
@@ -143,7 +143,7 @@ function R(e) {
         return (
             (n.onload = () => {
                 let { width: e, height: t } = (0, g.zp)(n.width, n.height);
-                _({
+                f({
                     width: e,
                     height: t
                 });
@@ -151,7 +151,7 @@ function R(e) {
             (n.src = e),
             () => {
                 (d(void 0),
-                    _({
+                    f({
                         width: 0,
                         height: 0
                     }),
@@ -172,10 +172,10 @@ function R(e) {
                           }),
                           'aria-hidden': !0,
                           alt: null != n ? n : '',
-                          style: t ? f : {}
+                          style: t ? _ : {}
                       });
             },
-            [u, p, n, f]
+            [u, p, n, _]
         ),
         m = i.useCallback(() => {
             null != u &&
@@ -209,7 +209,7 @@ function R(e) {
 function P(e) {
     let { file: t, alt: n, spoiler: a, size: s = y.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
         [u, d] = i.useState(),
-        f = i.useRef(null);
+        _ = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) return;
@@ -230,7 +230,7 @@ function P(e) {
                 spoiler: a,
                 renderContent: (e) =>
                     (0, r.jsx)(h.Z, {
-                        ref: f,
+                        ref: _,
                         src: u,
                         className: o()(v.media, {
                             [v.spoiler]: e,
@@ -383,7 +383,7 @@ function D(e) {
             N &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(_.Z, {
                             className: v.clipsFooter,
                             createdAt: E.default.extractTimestamp(S.id),
                             participantIds: S.users,
@@ -392,7 +392,7 @@ function D(e) {
                             guildId: R
                         }),
                         (0, r.jsx)(l.IGR, {
-                            color: _.Z.BG_BRAND,
+                            color: f.Z.BG_BRAND,
                             className: v.clipsBadge,
                             text: O.intl.string(O.t.oA4afH)
                         })

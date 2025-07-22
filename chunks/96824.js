@@ -7,7 +7,7 @@ var n = t(255367),
 let a = ['#be0351', '#ff2c52', '#f0f0f0'],
     o = ['#ffb84b', '#ffe361', '#f0f0f0'],
     g = [0.3, 0.4, 1],
-    f = [
+    v = [
         {
             base: 8,
             tint: 1
@@ -21,8 +21,8 @@ let a = ['#be0351', '#ff2c52', '#f0f0f0'],
             tint: 1
         }
     ],
-    c = [0.3, 0.5, 1],
-    v = [
+    f = [0.3, 0.5, 1],
+    c = [
         {
             base: 8,
             tint: 1
@@ -64,11 +64,11 @@ let a = ['#be0351', '#ff2c52', '#f0f0f0'],
                 primaryBaseColors: a,
                 primaryTintColor: E,
                 primaryTintLuminances: g,
-                primaryLuminanceWeights: f,
+                primaryLuminanceWeights: v,
                 secondaryBaseColors: o,
                 secondaryTintColor: d,
-                secondaryTintLuminances: c,
-                secondaryLuminanceWeights: v
+                secondaryTintLuminances: f,
+                secondaryLuminanceWeights: c
             });
         return (0, n.jsxs)(
             'svg',

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(186325),
     u = n(390507),
     d = n(679400),
-    f = n(493773),
-    _ = n(580747),
+    _ = n(493773),
+    f = n(580747),
     p = n(480993);
 function h(e, t, n) {
     return (
@@ -53,13 +53,13 @@ function g(e, t) {
                       height: b
                   }
                 : (0, u.m)(g),
-        w = !(0, _.Z)('lottie_hover_multiple_loop'),
+        w = !(0, f.Z)('lottie_hover_multiple_loop'),
         D = i.useContext(c.S).reducedMotion.enabled,
         { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         x = D || !L,
         M = i.useRef(O);
     return (
-        (0, f.zq)(() => {
+        (0, _.zq)(() => {
             var e, t;
             null == T || T({ finalFrame: null != (t = null == (e = R.current) ? void 0 : e.currentFrame) ? t : null });
         }),

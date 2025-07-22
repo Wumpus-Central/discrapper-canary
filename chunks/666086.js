@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(592125),
     u = n(650774),
     d = n(271383),
-    f = n(430824),
-    _ = n(375954),
+    _ = n(430824),
+    f = n(375954),
     p = n(944486),
     h = n(522558),
     m = n(795448),
@@ -37,7 +37,7 @@ class v extends o.Z {
             case i.d.GROUP_DM:
                 return !0;
             case i.d.GUILD_TEXT:
-                let n = f.Z.getGuild(t),
+                let n = _.Z.getGuild(t),
                     r = u.Z.getMemberCount(t);
                 return null != r && r <= y && (null == n ? void 0 : n.rulesChannelId) !== e.id && !(0, s.aC)(e) && !(0, l.Z)(e) && null == e.linkedLobby;
             default:
@@ -49,7 +49,7 @@ class v extends o.Z {
             let r = p.Z.getChannelId();
             !g.Z.isGiftIntentMessageInCooldown(n) &&
                 e === r &&
-                _.Z.isReady(e) &&
+                f.Z.isReady(e) &&
                 (a.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,

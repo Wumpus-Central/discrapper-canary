@@ -135,15 +135,15 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: y } = c.ny6[s],
+        let { size: C } = c.ny6[s],
             {
-                statusCoords: C,
+                statusCoords: y,
                 frontAvatarOffsetPx: O,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(y, '-').concat(f);
+                let t = ''.concat(C, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,7 +160,7 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [y, f, s]),
+            }, [C, f, s]),
             S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
@@ -189,8 +189,8 @@ let b = {
                 return e;
             })(
                 {
-                    width: y,
-                    height: y
+                    width: C,
+                    height: C
                 },
                 E
             ),
@@ -200,8 +200,8 @@ let b = {
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: y,
-                    width: y,
+                    height: C,
+                    width: C,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -225,7 +225,7 @@ let b = {
                     ]
                 }),
                 (0, r.jsx)(h, {
-                    statusCoords: C,
+                    statusCoords: y,
                     status: g,
                     isTyping: f
                 })

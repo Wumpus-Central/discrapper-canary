@@ -97,7 +97,7 @@ let E = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
-                    className: m.boltTrinket,
+                    className: m.boltContainer,
                     children: (0, i.jsx)(E, {
                         blurAnimationData: {
                             startBlurRadius: 10,
@@ -124,12 +124,13 @@ let E = (e) => {
                         isMotionReduced: t,
                         children: (0, i.jsx)('img', {
                             src: p.Z,
+                            className: m.boltTrinket,
                             alt: ''
                         })
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.carTrinket,
+                    className: m.carContainer,
                     children: (0, i.jsx)(E, {
                         yAxisAnimationData: {
                             range: 15,
@@ -146,12 +147,13 @@ let E = (e) => {
                         isMotionReduced: t,
                         children: (0, i.jsx)('img', {
                             src: g.Z,
+                            className: m.carTrinket,
                             alt: ''
                         })
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.hammerTrinket,
+                    className: m.hammerContainer,
                     children: (0, i.jsx)(E, {
                         yAxisAnimationData: {
                             range: 15,
@@ -168,12 +170,13 @@ let E = (e) => {
                         isMotionReduced: t,
                         children: (0, i.jsx)('img', {
                             src: h.Z,
+                            className: m.hammerTrinket,
                             alt: ''
                         })
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.keyTrinket,
+                    className: m.keyContainer,
                     children: (0, i.jsx)(E, {
                         blurAnimationData: {
                             startBlurRadius: 5,
@@ -200,12 +203,13 @@ let E = (e) => {
                         isMotionReduced: t,
                         children: (0, i.jsx)('img', {
                             src: f.Z,
+                            className: m.keyTrinket,
                             alt: ''
                         })
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.starTrinket,
+                    className: m.starContainer,
                     children: (0, i.jsx)(E, {
                         blurAnimationData: {
                             startBlurRadius: 0,
@@ -232,6 +236,7 @@ let E = (e) => {
                         isMotionReduced: t,
                         children: (0, i.jsx)('img', {
                             src: b.Z,
+                            className: m.starTrinket,
                             alt: ''
                         })
                     })

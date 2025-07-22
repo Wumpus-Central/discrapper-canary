@@ -56,8 +56,8 @@ function u(e, t) {
     );
 }
 let d = 50,
-    f = 10,
-    _ = 100;
+    _ = 10,
+    f = 100;
 function p(e, t) {
     return (
         (t = null != t ? t : 1),
@@ -98,7 +98,7 @@ let h = function (e) {
         [g, E] = i.useState(!1);
     return (
         i.useEffect(() => {
-            let e = Array(f).fill(0);
+            let e = Array(_).fill(0);
             return (
                 null != t &&
                     m.isReady &&
@@ -106,7 +106,7 @@ let h = function (e) {
                     (e = e.map((n, r) =>
                         setTimeout(() => {
                             (r === e.length - 1 && E(!0), m.createMultipleConfetti(p(t.getBoundingClientRect(), s), d));
-                        }, r * _)
+                        }, r * f)
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);

@@ -7,9 +7,9 @@ var n = t(255367),
     a = t(481060),
     o = t(893966),
     g = t(472596),
-    f = t(285173),
-    c = t(485386),
-    v = t(430824),
+    v = t(285173),
+    f = t(485386),
+    c = t(430824),
     h = t(496675),
     u = t(776767),
     E = t(981631),
@@ -17,8 +17,8 @@ var n = t(255367),
     C = t(12740);
 function B(A) {
     let { member: e } = A,
-        t = (0, s.e7)([v.Z], () => v.Z.getGuild(e.guildId)),
-        l = (0, s.e7)([c.Z], () => c.Z.getRoles(e.guildId)),
+        t = (0, s.e7)([c.Z], () => c.Z.getGuild(e.guildId)),
+        l = (0, s.e7)([f.Z], () => f.Z.getRoles(e.guildId)),
         B = r.useMemo(
             () =>
                 null == t
@@ -59,7 +59,7 @@ function B(A) {
                                                 return (0, n.jsx)(a.P3F, {
                                                     onMouseEnter: t,
                                                     onMouseLeave: r,
-                                                    children: (0, n.jsx)(f.Z, {
+                                                    children: (0, n.jsx)(v.Z, {
                                                         className: i()(C.roleTooltipItem, C.highestRole),
                                                         role: D,
                                                         guildId: e.guildId
@@ -69,7 +69,7 @@ function B(A) {
                                         }),
                                         B.map((A) =>
                                             (0, n.jsx)(
-                                                f.Z,
+                                                v.Z,
                                                 {
                                                     className: C.roleTooltipItem,
                                                     role: l[A],

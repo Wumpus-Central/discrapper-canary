@@ -8,8 +8,8 @@ var r,
     c = n(592125),
     u = n(984933),
     d = n(430824),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function y(e) {
             });
         };
     return (
-        t[f.d4z.GUILD_CATEGORY].forEach((e) => {
+        t[_.d4z.GUILD_CATEGORY].forEach((e) => {
             let { channel: t } = e;
             (n._categories.push({
                 channel: t,
@@ -125,7 +125,7 @@ function D(e) {
     y(t);
 }
 function L() {
-    y(f.I_8);
+    y(_.I_8);
 }
 function x(e) {
     let t = h[e];
@@ -139,7 +139,7 @@ class M extends (r = i.ZP.Store) {
         return null != e ? x(e) : E;
     }
 }
-_(M, 'displayName', 'GuildCategoryStore');
+f(M, 'displayName', 'GuildCategoryStore');
 let k = new M(a.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,

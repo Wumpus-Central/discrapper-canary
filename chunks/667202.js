@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,8 +78,8 @@ function _(e, t) {
     return i;
 }
 function p(e) {
-    var { size: t = 'md', gradientColor: n = 'purple', graphic: l, title: u, subtitle: _, actionBarInput: p, actions: h, children: m } = e,
-        g = f(e, ['size', 'gradientColor', 'graphic', 'title', 'subtitle', 'actionBarInput', 'actions', 'children']);
+    var { size: t = 'md', gradientColor: n = 'purple', graphic: l, title: u, subtitle: f, actionBarInput: p, actions: h, children: m } = e,
+        g = _(e, ['size', 'gradientColor', 'graphic', 'title', 'subtitle', 'actionBarInput', 'actions', 'children']);
     return (0, r.jsxs)(
         i.IX,
         d(c({}, g), {
@@ -91,7 +91,7 @@ function p(e) {
                     graphic: l,
                     title: u,
                     titleTextVariant: 'heading-xl/semibold',
-                    subtitle: _,
+                    subtitle: f,
                     alignCenter: !0
                 }),
                 (0, r.jsx)(o.f, { children: m }),

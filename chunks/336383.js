@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(785717),
     u = n(892001),
     d = n(502762),
-    f = n(652853),
-    _ = n(228168),
+    _ = n(652853),
+    f = n(228168),
     p = n(388032),
     h = n(227832);
 function m(e, t, n) {
@@ -87,10 +87,10 @@ function O(e, t) {
 let v = i.forwardRef(function (e, t) {
     var { children: n, className: i, subsection: a, onAction: m, onClose: E, 'aria-label': O, 'aria-labelledby': v } = e,
         I = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose', 'aria-label', 'aria-labelledby']);
-    let { themeType: T } = (0, f.z)(),
+    let { themeType: T } = (0, _.z)(),
         { analyticsLocations: S } = (0, l.ZP)(),
         { context: A } = (0, c.KZ)();
-    return T === _.lY.MODAL || T === _.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
+    return T === f.lY.MODAL || T === f.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
         ? (0, r.jsx)('article', {
               'aria-label': O,
               'aria-labelledby': v,
@@ -119,7 +119,7 @@ let v = i.forwardRef(function (e, t) {
                           (0, u.openUserProfileModal)(
                               g(
                                   {
-                                      section: _.oh.ACTIVITY,
+                                      section: f.oh.ACTIVITY,
                                       sourceAnalyticsLocations: S,
                                       subsection: a
                                   },

@@ -8,8 +8,8 @@ var i,
     c = n(490029),
     u = n(710845),
     d = n(48481),
-    f = n(131704),
-    _ = n(314897),
+    _ = n(131704),
+    f = n(314897),
     p = n(592125),
     h = n(984933),
     m = n(355863),
@@ -137,8 +137,8 @@ function W(e) {
             case 'THREAD_UPDATE':
             case 'CHANNEL_DELETE':
             case 'THREAD_DELETE':
-                let r = (0, f.kt)(e.channel);
-                if (!f.AW.has(r.type)) break;
+                let r = (0, _.kt)(e.channel);
+                if (!_.AW.has(r.type)) break;
                 s.Z.dispatch({
                     type: e.type,
                     channel: r
@@ -147,17 +147,17 @@ function W(e) {
             case 'CHANNEL_UPDATES':
                 s.Z.dispatch({
                     type: e.type,
-                    channels: e.channels.map((e) => (0, f.kt)(e))
+                    channels: e.channels.map((e) => (0, _.kt)(e))
                 });
                 break;
             case 'CONNECTION_OPEN_SUPPLEMENTAL':
-                ((e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))), s.Z.dispatch(e));
+                ((e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, _.kt)(e))), s.Z.dispatch(e));
                 break;
             case 'THREAD_LIST_SYNC':
-                s.Z.dispatch(N(S({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
+                s.Z.dispatch(N(S({}, e), { threads: e.threads.map((e) => (0, _.kt)(e)) }));
                 break;
             case 'GUILD_CREATE':
-                let i = (e) => (0, f.kt)(e),
+                let i = (e) => (0, _.kt)(e),
                     a = e.guild;
                 switch (((a.threads = null == (n = a.threads) ? void 0 : n.map(i)), a.channels.op)) {
                     case 'full_sync':
@@ -267,11 +267,11 @@ function ed(e) {
     let { mode: t } = e;
     F.avatarSizeMode = t;
 }
-function ef(e) {
+function e_(e) {
     let { mode: t } = e;
     F.notificationPositionMode = t;
 }
-function e_(e) {
+function ef(e) {
     let { disable: t } = e;
     F.disableClickableRegions = t;
 }
@@ -366,9 +366,9 @@ function eI(e) {
 class eT extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (
-            (this.waitFor(_.default),
-            this.syncWith([_.default], () => {
-                let e = _.default.getId();
+            (this.waitFor(f.default),
+            this.syncWith([f.default], () => {
+                let e = f.default.getId();
                 F = null != e ? V(e) : S({}, P);
             }),
             __OVERLAY__)
@@ -381,7 +381,7 @@ class eT extends (i = a.ZP.PersistedStore) {
         }
         if (null != e) {
             D = e;
-            let t = _.default.getId();
+            let t = f.default.getId();
             null != t && (null == (F = V(t)).textChatNotifications && (F.textChatNotifications = P.textChatNotifications), null == F.textWidgetOpacity && (F.textWidgetOpacity = P.textWidgetOpacity), null == F.disableClickableRegions && (F.disableClickableRegions = P.disableClickableRegions));
         }
     }
@@ -479,7 +479,7 @@ class eT extends (i = a.ZP.PersistedStore) {
             return S({}, P, 5 === i ? a : null);
         },
         (e) => {
-            let t = _.default.getId();
+            let t = f.default.getId();
             return null == e || null == t ? {} : { [t]: S({}, e) };
         }
     ]));
@@ -498,8 +498,8 @@ let eS = new eT(s.Z, {
     OVERLAY_SET_DISPLAY_NAME_MODE: ec,
     OVERLAY_SET_DISPLAY_USER_MODE: eu,
     OVERLAY_SET_AVATAR_SIZE_MODE: ed,
-    OVERLAY_SET_NOTIFICATION_POSITION_MODE: ef,
-    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: e_,
+    OVERLAY_SET_NOTIFICATION_POSITION_MODE: e_,
+    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: ef,
     OVERLAY_SET_SHOW_KEYBIND_INDICATORS: ep,
     OVERLAY_SET_INVITE_MESSAGE: eh,
     OVERLAY_SET_GAME_INVITE_NOTIFICATION: eg,

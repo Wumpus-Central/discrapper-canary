@@ -2,7 +2,7 @@
     L9: () => N,
     ZK: () => T,
     d4: () => S,
-    dS: () => C,
+    dS: () => y,
     jY: () => I,
     q7: () => j,
     vZ: () => O
@@ -52,7 +52,7 @@ function v(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,11 +70,11 @@ function y(e, t) {
         e
     );
 }
-function C(e) {
+function y(e) {
     var t;
     let n = e.item.originalItem;
     return (0, _.Yi)(
-        y(v({}, e), {
+        C(v({}, e), {
             alt: n.description,
             src: (0, m.q)({
                 proxyURL: n.proxy_url,
@@ -126,7 +126,7 @@ function O(e) {
         ? null
         : (c.searchParams.append('format', 'webp'),
           (0, _.lV)(
-              y(v({}, e), {
+              C(v({}, e), {
                   alt: n.description,
                   poster: c.toString(),
                   fileSize: n.size,
@@ -151,7 +151,7 @@ function O(e) {
 function j(e) {
     let t = e.item.originalItem;
     return (0, _.hX)(
-        y(v({}, e), {
+        C(v({}, e), {
             fileSize: t.size,
             fileName: (0, h.Z)(t),
             src: t.url
@@ -184,7 +184,7 @@ function I(e) {
             [t]
         );
     return (0, _.wj)(
-        y(v({}, e), {
+        C(v({}, e), {
             fileSize: r.size,
             fileName: (0, h.Z)(r),
             src: r.url,
@@ -200,7 +200,7 @@ function I(e) {
 function S(e) {
     let t = e.item.originalItem;
     return (0, _.xi)(
-        y(v({}, e), {
+        C(v({}, e), {
             url: t.url,
             fileName: (0, h.Z)(t),
             fileSize: t.size,
@@ -211,7 +211,7 @@ function S(e) {
 function T(e) {
     let t = e.item.originalItem;
     return (0, _.ur)(
-        y(v({}, e), {
+        C(v({}, e), {
             url: t.url,
             fileName: (0, h.Z)(t),
             fileSize: t.size

@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(74340),
     u = n(19391),
     d = n(584973),
-    f = n(556638),
-    _ = n(843280);
+    _ = n(556638),
+    f = n(843280);
 function p(e) {
     let { customStatusActivity: t, textClassName: n, iconClassName: i, tooltipClassName: p, textSize: h = 'xs', animateEmoji: m = !0, hideEmoji: g = !1, hideTooltip: E = !1 } = e,
         b = (0, l.Z)({ location: 'CustomStatusActivityStatus' }),
@@ -37,7 +37,7 @@ function p(e) {
                       children: [I, A, N]
                   })
                 : (0, r.jsxs)(s.Z, {
-                      delay: f.X,
+                      delay: _.X,
                       tooltipClassName: p,
                       children: [I, A, N]
                   });
@@ -45,7 +45,7 @@ function p(e) {
     return (0, r.jsx)(o.Text, {
         variant: 'text-'.concat(h, '/medium'),
         color: 'none',
-        className: a()(_.truncated, n),
+        className: a()(f.truncated, n),
         children: C()
     });
 }

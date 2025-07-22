@@ -12,55 +12,55 @@ var r = n(255367),
     p = n(655525),
     g = n(52188),
     b = n(924540),
-    v = n(351402),
-    m = n(170671),
+    m = n(351402),
+    v = n(170671),
     h = n(921944),
     O = n(474936),
     y = n(374594);
 function E(e) {
     let t,
         { decoration: n, label: s, isSelected: E } = e,
-        j = (0, f.N)(),
-        S = (0, d.Ng)(),
+        S = (0, f.N)(),
+        j = (0, d.Ng)(),
         x = (0, u.Vi)(),
-        P = (0, o.e7)([v.Z], () => v.Z.isLocalizedPromoEnabled) && null == j && null == n,
-        C = (null == j ? void 0 : j.trial_id) === O.a7,
+        C = (0, o.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == S && null == n,
+        P = (null == S ? void 0 : S.trial_id) === O.a7,
         _ = [];
     x && _.push(a.z.BOGO_2025_NITRO_TAB_BADGE);
-    let [w, N] = (0, c.US)(_, void 0, !0);
+    let [N, w] = (0, c.US)(_, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === E && w === a.z.BOGO_2025_NITRO_TAB_BADGE && N(h.L.AUTO_DISMISS);
-        }, [N, E, w]),
+            !0 === E && N === a.z.BOGO_2025_NITRO_TAB_BADGE && w(h.L.AUTO_DISMISS);
+        }, [w, E, N]),
         (t = x
             ? (0, r.jsx)(p.Z, {})
-            : null != S
+            : null != j
               ? (0, r.jsx)(b.GN, {
                     isTabSelected: E,
-                    userDiscount: S,
+                    userDiscount: j,
                     includesAmountOff: !1
                 })
-              : null == j || C
+              : null == S || P
                 ? null != n
                     ? n
-                    : P
+                    : C
                       ? (0, r.jsx)(g.k, { entryPoint: g.U.SettingsMenu })
-                      : (0, r.jsx)(m.Z, { isSelected: E })
+                      : (0, r.jsx)(v.Z, { isSelected: E })
                 : (0, r.jsx)(b.$H, {
                       isTabSelected: E,
-                      trialOffer: j
+                      trialOffer: S
                   })),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: l()(y.premiumLabel, { [y.selected]: (E || P) && !x }),
+                    className: l()(y.premiumLabel, { [y.selected]: (E || C) && !x }),
                     children: [s, t]
                 }),
                 (0, r.jsx)('div', {
                     className: l()(y.background, {
-                        [y.auPromo]: P && !E,
-                        [y.auPromoSelected]: P && E,
-                        [y.selectedBackground]: !P && !x && E
+                        [y.auPromo]: C && !E,
+                        [y.auPromoSelected]: C && E,
+                        [y.selectedBackground]: !C && !x && E
                     })
                 })
             ]

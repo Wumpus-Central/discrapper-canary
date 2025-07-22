@@ -26,8 +26,8 @@ function d(e, t, n) {
     );
 }
 n(334431);
-let f = 3 * s.Z.Millis.DAY,
-    _ = 2 * s.Z.Millis.DAY,
+let _ = 3 * s.Z.Millis.DAY,
+    f = 2 * s.Z.Millis.DAY,
     p = +s.Z.Millis.HOUR;
 function h(e) {
     let { channelId: t } = e;
@@ -59,11 +59,11 @@ function E(e) {
 function b(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return !!(!n && g()) || (null != (t = (0, l._$)(e)) ? t : 0) > Date.now() - _;
+    return !!(!n && g()) || (null != (t = (0, l._$)(e)) ? t : 0) > Date.now() - f;
 }
 function y(e) {
     var t;
-    return (null != (t = (0, l.YF)(e)) ? t : 0) > Date.now() - f;
+    return (null != (t = (0, l.YF)(e)) ? t : 0) > Date.now() - _;
 }
 class O extends r.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {

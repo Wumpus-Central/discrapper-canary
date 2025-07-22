@@ -9,7 +9,7 @@ var i = n(120356),
 function c(e) {
     var t,
         n,
-        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: g = !1, maxFileSizeBytes: b, filters: v, className: m } = e,
+        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: g = !1, maxFileSizeBytes: b, filters: m, className: v } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -78,7 +78,7 @@ function c(e) {
                           }),
                     t)
                 ),
-                m
+                v
             ),
             style: { width: 'max-content' },
             'aria-disabled': p,
@@ -93,7 +93,7 @@ function c(e) {
                     onFileSizeError: u,
                     multiple: f,
                     maxFileSizeBytes: b,
-                    filters: v,
+                    filters: m,
                     'aria-label': null != d ? d : i,
                     disabled: p
                 })

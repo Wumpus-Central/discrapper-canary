@@ -9,13 +9,11 @@ var i = n(149765),
     c = n(340181);
 let u = 5;
 function d(e) {
-    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: _ = !1 } = e,
-        p = f
-            .filter((e) => i.e$(e.permissions, s.Plq.MANAGE_GUILD))
-            .map((e) => ({
-                value: e.id,
-                label: e.name
-            }));
+    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: _, disabled: f = !1 } = e,
+        p = _.filter((e) => i.e$(e.permissions, s.Plq.MANAGE_GUILD)).map((e) => ({
+            value: e.id,
+            label: e.name
+        }));
     return (0, r.jsxs)('div', {
         className: c.selectorGroup,
         children: [
@@ -37,7 +35,7 @@ function d(e) {
                 placeholder: l.intl.string(l.t.oM4E1N),
                 options: p,
                 onChange: d,
-                isDisabled: _,
+                isDisabled: f,
                 value: n
             }),
             (0, r.jsx)(a.x, {

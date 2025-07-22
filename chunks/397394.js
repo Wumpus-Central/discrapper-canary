@@ -20,8 +20,8 @@ var r = n(255367),
     c = n(442837),
     u = n(922770),
     d = n(993365),
-    f = n(257465),
-    _ = n(481060),
+    _ = n(257465),
+    f = n(481060),
     p = n(686546),
     h = n(252618),
     m = n(258971),
@@ -119,7 +119,7 @@ function k(e) {
             children: [
                 s ? (0, r.jsx)(u.$, {}) : null,
                 (0, r.jsx)('div', { className: o()(R.header, i) }),
-                (0, r.jsx)(_.X6q, {
+                (0, r.jsx)(f.X6q, {
                     variant: 'heading-lg/bold',
                     className: R.text,
                     children: t
@@ -158,7 +158,7 @@ function U(e) {
             (null == o || o(), v.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id }));
         }, [o, null == n ? void 0 : n.id]),
         d = window.location.pathname.startsWith(N.Z5c.APPLICATION_DIRECTORY),
-        f = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
                 (null == o || o(),
                 null != l && (0, g.uL)(''),
@@ -166,8 +166,8 @@ function U(e) {
                     (T.S.dispatchToLastSubscribed(N.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), v.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [null == n ? void 0 : n.id, o, l]),
-        _ = (0, c.e7)([O.Z, b.Z], () => b.Z.getChannel(O.Z.getChannelId())),
-        p = (0, c.e7)([y.Z], () => y.Z.can(N.Plq.SEND_MESSAGES, _)),
+        f = (0, c.e7)([O.Z, b.Z], () => b.Z.getChannel(O.Z.getChannelId())),
+        p = (0, c.e7)([y.Z], () => y.Z.can(N.Plq.SEND_MESSAGES, f)),
         h = null != t,
         I = null == t && p && (!d || null != l),
         S = [];
@@ -189,7 +189,7 @@ function U(e) {
                 S.push({
                     variant: 'primary',
                     text: C.intl.string(C.t['0cCDKC']),
-                    onClick: f
+                    onClick: _
                 })),
         (0, r.jsx)(
             A.j,
@@ -281,7 +281,7 @@ function B(e) {
                     (0, r.jsxs)('div', {
                         className: R.authorizedSuccessExternalCopy,
                         children: [
-                            (0, r.jsx)(_.X6q, {
+                            (0, r.jsx)(f.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: C.intl.format(C.t['1Q+p1t'], { appName: t.name })
@@ -322,7 +322,7 @@ function Z() {
     return (0, r.jsx)(A.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(A.j, {
-            transitionState: f.Dv.ENTERED,
+            transitionState: _.Dv.ENTERED,
             hideHeader: !0,
             children: (0, r.jsx)(G, {
                 guild: null == (e = n.state) ? void 0 : e.guild,
@@ -345,7 +345,7 @@ function H(e) {
     return (0, r.jsx)(A.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(A.j, {
-            transitionState: f.Dv.ENTERED,
+            transitionState: _.Dv.ENTERED,
             hideHeader: !0,
             title: C.intl.string(C.t.j2d6Ki),
             subtitle: l

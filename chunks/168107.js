@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,7 +83,7 @@ function p(e) {
 let h = {
     showAgeVerification: (e) => {
         var { onClose: t, entryPoint: a } = e,
-            o = f(e, ['onClose', 'entryPoint']);
+            o = _(e, ['onClose', 'entryPoint']);
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('12014').then(n.bind(n, 879367));

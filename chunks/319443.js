@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => U }), n(388685), n(781311));
+(n.r(t), n.d(t, { default: () => z }), n(388685), n(781311));
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -36,7 +36,7 @@ var r = n(255367),
     k = n(981631),
     M = n(388032),
     G = n(691133);
-function z(e) {
+function B(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getApplication(t)),
         [d, u] = a.useState(n),
@@ -78,7 +78,7 @@ function z(e) {
         ]
     });
 }
-function B() {
+function U() {
     let e = a.useCallback(() => {
             (0, S.qF)();
         }, []),
@@ -119,12 +119,12 @@ function B() {
         ]
     });
 }
-let U = function () {
+let z = function () {
     var e;
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
         { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
-        U = (0, S.nu)(),
+        z = (0, S.nu)(),
         F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: V, section: H } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
@@ -156,8 +156,8 @@ let U = function () {
             C.CP();
         }, []),
         a.useEffect(() => {
-            U && C.g5();
-        }, [U]),
+            z && C.g5();
+        }, [z]),
         a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]));
     let { enabled: ei } = d.c.useExperiment({ location: 'GlobalDiscoveryAppsRoot' }, { autoTrackExposure: !0 }),
         el = null != V,
@@ -209,7 +209,7 @@ let U = function () {
     return (0, r.jsxs)('div', {
         className: l()(G.outerContainer, { [G.loggedOutContainer]: t }),
         children: [
-            t ? (0, r.jsx)(B, {}) : null,
+            t ? (0, r.jsx)(U, {}) : null,
             (0, r.jsxs)('div', {
                 className: G.innerContainer,
                 children: [
@@ -218,7 +218,7 @@ let U = function () {
                         children: [
                             !eb && (0, r.jsx)(m.z6, { scrollPosition: i }),
                             el
-                                ? (0, r.jsx)(z, {
+                                ? (0, r.jsx)(B, {
                                       applicationId: V,
                                       hideDetailHeaderButtons: ee,
                                       onClickBack: ex

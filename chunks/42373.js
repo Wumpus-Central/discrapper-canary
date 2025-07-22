@@ -70,10 +70,13 @@ let v = (e) => {
                 (r(), n());
             };
         return s
-            ? (0, i.jsx)(o.z, {
-                  variant: 'secondary',
-                  onClick: g,
-                  text: t
+            ? (0, i.jsx)('div', {
+                  className: E.bentoBoxButton,
+                  children: (0, i.jsx)(o.z, {
+                      variant: 'secondary',
+                      onClick: g,
+                      text: t
+                  })
               })
             : (0, i.jsx)(u.zx, {
                   look: u.iL.OUTLINED,

@@ -12,13 +12,13 @@ var r = n(255367),
     c = n(679219),
     u = n(939039),
     d = n(358085),
-    f = n(998502),
-    _ = n(388032),
+    _ = n(998502),
+    f = n(388032),
     p = n(908420);
 let h = 24,
-    m = (e) => f.ZP.close(e),
-    g = (e) => f.ZP.minimize(e),
-    E = (e) => f.ZP.maximize(e);
+    m = (e) => _.ZP.close(e),
+    g = (e) => _.ZP.minimize(e),
+    E = (e) => _.ZP.maximize(e);
 function b(e) {
     e.stopPropagation();
 }
@@ -27,21 +27,21 @@ function y(e) {
         i = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonClose),
             onClick: () => m(t),
-            'aria-label': _.intl.string(_.t.ZdNUj4),
+            'aria-label': f.intl.string(f.t.ZdNUj4),
             tabIndex: -1,
             children: (0, r.jsx)(l.Z, {})
         }),
         a = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonMinMax),
             onClick: () => E(t),
-            'aria-label': _.intl.string(_.t.G1u0hI),
+            'aria-label': f.intl.string(f.t.G1u0hI),
             tabIndex: -1,
             children: (0, r.jsx)(c.Z, {})
         }),
         d = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonMinMax),
             onClick: () => g(t),
-            'aria-label': _.intl.string(_.t.CxOC4e),
+            'aria-label': f.intl.string(f.t.CxOC4e),
             tabIndex: -1,
             children: (0, r.jsx)(u.Z, {})
         });
@@ -53,10 +53,10 @@ function y(e) {
 function O(e) {
     let { leading: t, title: n, trailing: a, windowKey: s, short: l, className: c } = e,
         u = (0, d.getPlatform)(),
-        f = i.useCallback(() => E(s), [s]);
+        _ = i.useCallback(() => E(s), [s]);
     return (0, r.jsxs)('div', {
         className: o()(p.bar, c, { [p.shortBar]: l }),
-        onDoubleClick: f,
+        onDoubleClick: _,
         children: [
             (0, r.jsx)('div', {
                 className: p.title,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(493773),
     d = n(468363),
-    f = n(906732),
-    _ = n(158776),
+    _ = n(906732),
+    f = n(158776),
     p = n(885110),
     h = n(823379),
     m = n(785717),
@@ -104,7 +104,7 @@ let x = {
 };
 function M(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: h, onOpenUserProfileModal: N, onClose: R } = e,
-        { analyticsLocations: P } = (0, f.ZP)(),
+        { analyticsLocations: P } = (0, _.ZP)(),
         { trackUserProfileAction: M } = (0, m.KZ)(),
         { live: k, stream: j } = (0, g.Z)(t.id),
         { voiceChannel: U, voiceActivity: G } = (0, E.Z)({
@@ -112,8 +112,8 @@ function M(e) {
             guildId: h
         }),
         B = t.id === n.id,
-        V = (0, s.e7)([p.Z, _.Z], () => {
-            let e = B ? p.Z.getStatus() : _.Z.getStatus(t.id, h);
+        V = (0, s.e7)([p.Z, f.Z], () => {
+            let e = B ? p.Z.getStatus() : f.Z.getStatus(t.id, h);
             return e === T.Sk.OFFLINE || e === T.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, d.U)({ location: 'UserProfileStackedActivity' }),

@@ -14,8 +14,8 @@ var r = n(759174),
     c = n(271383),
     u = n(699516),
     d = n(594174),
-    f = n(979651),
-    _ = n(938475),
+    _ = n(979651),
+    f = n(938475),
     p = n(5192),
     h = n(88751),
     m = n(427679),
@@ -84,14 +84,14 @@ function S(e) {
     let { speaker: n, role: r, user: a, userNick: o, connectedOn: s, voiceState: l, type: c } = e,
         u = n ? '\0' : '\x01',
         d = 'STREAM' === c ? '\0' : '\x01',
-        f = l.selfMute ? '\x01' : '\0',
-        _ = l.selfVideo ? '\0' : '\x01',
+        _ = l.selfMute ? '\x01' : '\0',
+        f = l.selfVideo ? '\0' : '\x01',
         p = ''.concat(null != (t = null == r ? void 0 : r.position) ? t : 999).padStart(3, '0');
     return ''
         .concat(u)
         .concat(d)
-        .concat(f)
         .concat(_)
+        .concat(f)
         .concat(p)
         .concat(s)
         .concat((0, i.Z)(o, a));
@@ -114,7 +114,7 @@ class R {
         var n, r, i;
         let s,
             b = [],
-            O = f.Z.getVoiceStateForChannel(this.channelId, e);
+            O = _.Z.getVoiceStateForChannel(this.channelId, e);
         if (null == O) return b;
         let I = d.default.getUser(e);
         if (null == I) return (null != this.guildId && m.Z.isPublic(this.channelId) && l.Z.requestMember(this.guildId, e), b);
@@ -125,7 +125,7 @@ class R {
                 user: I,
                 userNick: p.ZP.getName(this.guildId, this.channelId, I),
                 nick: A,
-                comparator: (0, _.sQ)(O, A),
+                comparator: (0, f.sQ)(O, A),
                 voiceState: O,
                 role: (0, E.H)(this.guildId, e),
                 speaker: h.ZP.isSpeaker(e, this.channelId),
@@ -172,7 +172,7 @@ class R {
     rebuild() {
         let e = s.Z.getChannel(this.channelId);
         if (null == e || !e.isGuildStageVoice()) return !1;
-        let t = new Set(Object.keys(f.Z.getVoiceStatesForChannel(e.id)));
+        let t = new Set(Object.keys(_.Z.getVoiceStatesForChannel(e.id)));
         return (this._participantsIndex.clear(), this._requestToSpeakIndex.clear(), (this.participants = {}), t.forEach((e) => this.updateParticipant(e)), !0);
     }
     get version() {

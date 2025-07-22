@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(570140),
     d = n(166459),
-    f = n(911969),
-    _ = n(607070),
+    _ = n(911969),
+    f = n(607070),
     p = n(209613),
     h = n(998698),
     m = n(117530),
@@ -94,7 +94,7 @@ function C(e, t) {
 let R = [];
 function P(e) {
     let { channelId: t, type: n } = e,
-        a = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        a = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         I = (0, p.Z)('attachments', l.hy.HORIZONTAL),
         S = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
@@ -124,7 +124,7 @@ function P(e) {
                         ? void 0
                         : P.filter((e) => {
                               var t;
-                              return e.type === f.jw.ATTACHMENT && (null == w || null == (t = w[e.name]) ? void 0 : t.hasValue);
+                              return e.type === _.jw.ATTACHMENT && (null == w || null == (t = w[e.name]) ? void 0 : t.hasValue);
                           }))
                 ? e
                 : [];

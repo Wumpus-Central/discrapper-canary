@@ -13,7 +13,7 @@ function u(e) {
 }
 let d = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: d = [0, 0, 0, 0], renderRow: f, renderSection: _, renderSectionHeader: p, renderSectionFooter: h, renderListHeader: m, rowCount: g, rowCountBySection: E, rowHeight: b, sectionMarginBottom: y, sectionHeaderHeight: O, sectionFooterHeight: v, listHeaderHeight: I, stickyHeaders: T = !1, className: S, hideScrollbar: A = !1, fade: N = !1, initialScrollTop: C = 0, role: R = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: d = [0, 0, 0, 0], renderRow: _, renderSection: f, renderSectionHeader: p, renderSectionFooter: h, renderListHeader: m, rowCount: g, rowCountBySection: E, rowHeight: b, sectionMarginBottom: y, sectionHeaderHeight: O, sectionFooterHeight: v, listHeaderHeight: I, stickyHeaders: T = !1, className: S, hideScrollbar: A = !1, fade: N = !1, initialScrollTop: C = 0, role: R = 'list' } = e,
             [P, w] = i.useState(-1),
             [D, L] = i.useState(-1),
             x = i.useRef(null),
@@ -260,7 +260,7 @@ let d = i.memo(
                             if (c <= e) r = c - (T ? u : 0);
                             else if (c > e && o < t)
                                 l.push(
-                                    f(n, {
+                                    _(n, {
                                         sectionIndex: a,
                                         sectionRowIndex: E
                                     })
@@ -270,14 +270,14 @@ let d = i.memo(
                         }
                         let O = s + u + g,
                             v = O + d >= e && O <= t;
-                        (null != h && v && l.push(h(a)), null != _ ? i.push(_(a, l)) : (i = [...i, ...l]));
+                        (null != h && v && l.push(h(a)), null != f ? i.push(f(a, l)) : (i = [...i, ...l]));
                     } else break;
                 }
                 return {
                     visibleItems: i,
                     listOffset: r
                 };
-            }, [U, B, G, V, d, f, _, h, p, P, W, T, m, j, D]),
+            }, [U, B, G, V, d, _, f, h, p, P, W, T, m, j, D]),
             Q = i.useMemo(() => {
                 var e, t, n;
                 return {

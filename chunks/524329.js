@@ -1,5 +1,5 @@
 (t.d(e, {
-    Es: () => f,
+    Es: () => v,
     RM: () => s,
     VP: () => g,
     Xb: () => a,
@@ -50,7 +50,7 @@ let i = function (A) {
             settings: A
         });
     },
-    f = async (A, e) => {
+    v = async (A, e) => {
         r.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let t = await n.tn.patch({

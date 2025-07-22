@@ -8,8 +8,8 @@ var r,
     c = n(846519),
     u = n(215569),
     d = n(600164),
-    f = n(981631),
-    _ = n(68379);
+    _ = n(981631),
+    f = n(68379);
 function p(e, t, n) {
     return (
         t in e
@@ -25,10 +25,10 @@ function p(e, t, n) {
 }
 let h = 3000,
     m = {
-        [f.AEg.NORMAL]: _.normal,
-        [f.AEg.MINIMUM]: _.minimum,
-        [f.AEg.NO_CHAT]: _.noChat,
-        [f.AEg.FULL_SCREEN]: _.fullScreen
+        [_.AEg.NORMAL]: f.normal,
+        [_.AEg.MINIMUM]: f.minimum,
+        [_.AEg.NO_CHAT]: f.noChat,
+        [_.AEg.FULL_SCREEN]: f.fullScreen
     };
 class g extends a.PureComponent {
     componentDidAppear() {
@@ -50,7 +50,7 @@ class g extends a.PureComponent {
     }
     render() {
         return (0, i.jsx)(l.Z.div, {
-            className: s()(_.videoBackgroundTransition, this.props.className),
+            className: s()(f.videoBackgroundTransition, this.props.className),
             style: { opacity: this.state.animation },
             children: this.props.children
         });
@@ -83,7 +83,7 @@ class E extends (r = a.PureComponent) {
         let { background: e, backgroundKey: t, layout: n } = this.props,
             r = ''.concat(n, '-').concat(null != t ? t : '');
         return (0, i.jsx)(u.W, {
-            className: _.videoBackground,
+            className: f.videoBackground,
             component: 'div',
             children: (0, i.jsx)(g, { children: e }, r)
         });
@@ -92,30 +92,30 @@ class E extends (r = a.PureComponent) {
         let { top: e, center: t, bottom: n, layout: r, focused: a } = this.props,
             { idle: o } = this.state;
         return (0, i.jsx)(d.Z, {
-            className: s()(_.video, m[r], { [_.idle]: o }),
+            className: s()(f.video, m[r], { [f.idle]: o }),
             direction: d.Z.Direction.VERTICAL,
             justify: d.Z.Justify.CENTER,
             children: (0, i.jsxs)(d.Z, {
-                className: _.videoWrapper,
+                className: f.videoWrapper,
                 direction: d.Z.Direction.VERTICAL,
                 children: [
                     this.renderBackground(),
                     (0, i.jsxs)(d.Z, {
-                        className: s()(_.videoInner, { [_.focused]: a }),
+                        className: s()(f.videoInner, { [f.focused]: a }),
                         direction: d.Z.Direction.VERTICAL,
                         justify: d.Z.Justify.BETWEEN,
                         children: [
                             (0, i.jsx)(d.Z, {
-                                className: _.videoTop,
+                                className: f.videoTop,
                                 grow: 0,
                                 children: e
                             }),
                             (0, i.jsx)(d.Z, {
-                                className: _.videoCenter,
+                                className: f.videoCenter,
                                 children: t
                             }),
                             (0, i.jsx)(d.Z, {
-                                className: _.videoBottom,
+                                className: f.videoBottom,
                                 grow: 0,
                                 children: n
                             })
@@ -128,7 +128,7 @@ class E extends (r = a.PureComponent) {
     render() {
         let { layout: e, className: t, animated: n } = this.props;
         return (0, i.jsx)('div', {
-            className: s()(_.videoHeight, m[e], t, { [_.animated]: n }),
+            className: s()(f.videoHeight, m[e], t, { [f.animated]: n }),
             children: this.renderContents()
         });
     }
@@ -137,7 +137,7 @@ class E extends (r = a.PureComponent) {
             p(this, '_timeout', new c.V7()),
             p(this, 'handleMouseEvent', () => {
                 let { layout: e } = this.props;
-                (e === f.AEg.FULL_SCREEN || e === f.AEg.NO_CHAT) && (this._timeout.start(h, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 }));
+                (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT) && (this._timeout.start(h, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 }));
             }),
             (this.state = {
                 idle: !1,
@@ -147,6 +147,6 @@ class E extends (r = a.PureComponent) {
     }
 }
 p(E, 'defaultProps', {
-    layout: f.AEg.MINIMUM,
+    layout: _.AEg.MINIMUM,
     animated: !0
 });

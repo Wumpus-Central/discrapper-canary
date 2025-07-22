@@ -13,9 +13,9 @@ var n = t(255367),
     a = t.n(s),
     o = t(772848),
     g = t(91192),
-    f = t(924826),
-    c = t(866442),
-    v = t(442837),
+    v = t(924826),
+    f = t(866442),
+    c = t(442837),
     h = t(692547),
     u = t(481060),
     E = t(239091),
@@ -146,7 +146,7 @@ function G(A) {
 let U = r.forwardRef(function (A, e) {
     var l, s, a;
     let o,
-        { canRemove: f, className: d, role: C, onRemove: w, guildId: M, disableBorderColor: p, onMouseDown: b } = A,
+        { canRemove: v, className: d, role: C, onRemove: w, guildId: M, disableBorderColor: p, onMouseDown: b } = A,
         O = (0, g.JA)(C.id),
         { tabIndex: P } = O,
         V = R(O, ['tabIndex']),
@@ -155,7 +155,7 @@ let U = r.forwardRef(function (A, e) {
             size: 16,
             guildId: M
         }),
-        T = (0, v.e7)([B.Z], () => B.Z.roleStyle),
+        T = (0, c.e7)([B.Z], () => B.Z.roleStyle),
         y = (0, Q._f)(M, C, C.colorStrings),
         m = (null == (l = C.tags) ? void 0 : l.guild_connections) === null,
         S = r.useCallback(
@@ -176,14 +176,14 @@ let U = r.forwardRef(function (A, e) {
         ),
         G = (0, u.dQu)(h.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         U = null != (s = C.colorString) ? s : G,
-        F = null != (a = (0, c.wK)(U, 0.6)) ? a : void 0,
+        F = null != (a = (0, f.wK)(U, 0.6)) ? a : void 0,
         X = h.Z.unsafe_rawColors.WHITE_500.css,
-        z = (0, c._i)(U);
-    (null != z && 0.3 > (0, c.Bd)(z) && (X = h.Z.unsafe_rawColors.PRIMARY_630.css),
+        z = (0, f._i)(U);
+    (null != z && 0.3 > (0, f.Bd)(z) && (X = h.Z.unsafe_rawColors.PRIMARY_630.css),
         (o = m
             ? (0, n.jsx)(D.Z, {
                   className: x.roleFlowerStar,
-                  iconClassName: f ? x.roleVerifiedIcon : void 0,
+                  iconClassName: v ? x.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
@@ -222,15 +222,15 @@ let U = r.forwardRef(function (A, e) {
                 {
                     children: [
                         (0, n.jsxs)(u.P3F, {
-                            className: i()(f && x.roleRemoveButtonCanRemove, x.roleRemoveButton),
-                            onClick: f ? w : void 0,
-                            tabIndex: f ? P : -1,
+                            className: i()(v && x.roleRemoveButtonCanRemove, x.roleRemoveButton),
+                            onClick: v ? w : void 0,
+                            tabIndex: v ? P : -1,
                             focusProps: { focusClassName: x.roleRemoveIconFocused },
-                            'aria-hidden': !f,
+                            'aria-hidden': !v,
                             'aria-label': L.intl.formatToPlainString(L.t.QrxwhY, { roleName: C.name }),
                             children: [
                                 o,
-                                f
+                                v
                                     ? (0, n.jsx)(u.Dio, {
                                           size: 'md',
                                           color: X,
@@ -273,9 +273,9 @@ function F(A) {
 }
 function X(A) {
     let e = r.useRef(null),
-        { guild: t, user: l, handleAddRole: s, roleClassName: a, addButtonClassName: o, addButtonIconClassName: f } = A,
-        c = (0, g.JA)('overflow-add-roles-'.concat(l.id)),
-        h = (0, v.e7)([B.Z], () => B.Z.roleStyle),
+        { guild: t, user: l, handleAddRole: s, roleClassName: a, addButtonClassName: o, addButtonIconClassName: v } = A,
+        f = (0, g.JA)('overflow-add-roles-'.concat(l.id)),
+        h = (0, c.e7)([B.Z], () => B.Z.roleStyle),
         E = V.Z.getHighestRole(t),
         d = O.ZP.getMember(t.id, l.id),
         C = (A) => (0, w.Gy)(t.id, A.id) && !A.managed && V.Z.isRoleHigher(t, E, A) && (null == d || -1 === d.roles.indexOf(A.id));
@@ -304,13 +304,13 @@ function X(A) {
                                 'aria-label': L.intl.string(L.t.e3Wly8),
                                 type: 'button'
                             }),
-                            c
+                            f
                         ),
                         {
                             children: (0, n.jsx)(u.qJs, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: i()(x.addButtonIcon, f),
+                                className: i()(x.addButtonIcon, v),
                                 'aria-hidden': !0
                             })
                         }
@@ -321,7 +321,7 @@ function X(A) {
 }
 function z(A) {
     let e,
-        { user: t, guild: l, userRoles: s, wrap: c = !0, width: h, className: u, readOnly: E, roleClassName: C, disableBorderColor: B } = A,
+        { user: t, guild: l, userRoles: s, wrap: f = !0, width: h, className: u, readOnly: E, roleClassName: C, disableBorderColor: B } = A,
         w = r.useRef({}),
         D = r.useCallback(
             (A) => {
@@ -339,7 +339,7 @@ function z(A) {
             [s, l.id, t.id]
         ),
         [I, p] = r.useState(null),
-        H = (0, v.e7)([P.Z], () => P.Z.getRoles(l.id)),
+        H = (0, c.e7)([P.Z], () => P.Z.getRoles(l.id)),
         Q = r.useMemo(() => {
             let A = Object.values(H)
                 .filter((A) => s.includes(A.id))
@@ -353,7 +353,7 @@ function z(A) {
         }, [H, I, s]),
         O = s.length - Q.length;
     r.useLayoutEffect(() => {
-        if (c) return;
+        if (f) return;
         if ('number' != typeof h) throw Error('Unexpected null width');
         let A = 0,
             e = 0,
@@ -367,13 +367,13 @@ function z(A) {
             }
         }
         p((e) => (A < Q.length ? A : e));
-    }, [c, h, Q]);
+    }, [f, h, Q]);
     let y = j.default.getCurrentUser();
     a()(null != y, 'MemberRolesList: currentUser cannot be undefined');
     let G = !E && V.Z.can(m.Plq.MANAGE_ROLES, l),
         z = T.e9(l, y.id),
         k = r.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
-        K = (0, f.ZP)({
+        K = (0, v.ZP)({
             id: k,
             isEnabled: !0,
             scrollToStart: S,
@@ -431,7 +431,7 @@ function z(A) {
 let k = (0, C.Z)(z);
 function K(A) {
     return (
-        (0, v.e7)([V.Z], () => {
+        (0, c.e7)([V.Z], () => {
             var e;
             return V.Z.getGuildVersion(null == (e = A.guild) ? void 0 : e.id);
         }),

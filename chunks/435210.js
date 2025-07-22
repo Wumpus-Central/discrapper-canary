@@ -75,7 +75,7 @@ function c(e, n) {
         seen: [],
         stylize: d
     };
-    return (arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), T(r.showHidden) && (r.showHidden = !1), T(r.depth) && (r.depth = 2), T(r.colors) && (r.colors = !1), T(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), _(r, e, r.depth));
+    return (arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), T(r.showHidden) && (r.showHidden = !1), T(r.depth) && (r.depth = 2), T(r.colors) && (r.colors = !1), T(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), f(r, e, r.depth));
 }
 function u(e, t) {
     var n = c.styles[t];
@@ -84,7 +84,7 @@ function u(e, t) {
 function d(e, t) {
     return e;
 }
-function f(e) {
+function _(e) {
     var t = {};
     return (
         e.forEach(function (e, n) {
@@ -93,16 +93,16 @@ function f(e) {
         t
     );
 }
-function _(e, n, r) {
+function f(e, n, r) {
     if (e.customInspect && n && R(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var i,
             a = n.inspect(r, e);
-        return (I(a) || (a = _(e, a, r)), a);
+        return (I(a) || (a = f(e, a, r)), a);
     }
     var o = p(e, n);
     if (o) return o;
     var s = Object.keys(n),
-        l = f(s);
+        l = _(s);
     if ((e.showHidden && (s = Object.getOwnPropertyNames(n)), C(n) && (s.indexOf('message') >= 0 || s.indexOf('description') >= 0))) return h(n);
     if (0 === s.length) {
         if (R(n)) {
@@ -158,7 +158,7 @@ function g(e, t, n, r, i, a) {
         x(r, i) || (o = '[' + i + ']'),
         !s &&
             (0 > e.seen.indexOf(l.value)
-                ? (s = O(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
+                ? (s = O(n) ? f(e, l.value, null) : f(e, l.value, n - 1)).indexOf('\n') > -1 &&
                   (s = a
                       ? s
                             .split('\n')

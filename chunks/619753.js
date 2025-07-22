@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(804063),
     x = n(703656),
     v = n(359110),
-    y = n(695346),
-    C = n(131704),
+    C = n(695346),
+    y = n(131704),
     O = n(592125),
     j = n(430824),
     I = n(496675),
@@ -79,7 +79,7 @@ function M(e, t) {
 let U = i.memo(function (e) {
     var t;
     let { search: n, searchId: l, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: g, ignoreCount: h, onPageChange: _, onClick: b } = e,
-        { offset: v, totalResults: y, isSearching: C, showBlockedResults: j } = n,
+        { offset: v, totalResults: C, isSearching: y, showBlockedResults: j } = n,
         I = i.useCallback(
             (e, t) => {
                 if ((null == b || b(e, t), (0, E.Z)(e))) {
@@ -153,7 +153,7 @@ let U = i.memo(function (e) {
                     highlighter: z,
                     startIndex: i,
                     resultRefs: P,
-                    totalResults: y,
+                    totalResults: C,
                     scrollTo: m,
                     searchId: l,
                     renderEmbeds: a,
@@ -177,7 +177,7 @@ let U = i.memo(function (e) {
             (0, r.jsx)(
                 'div',
                 M(D({ ref: K }, G.getContainerProps(), Y), {
-                    'aria-busy': C,
+                    'aria-busy': y,
                     children: W
                 })
             ),
@@ -195,12 +195,12 @@ let U = i.memo(function (e) {
                       ]
                   })
                 : null,
-            !C &&
+            !y &&
                 !V &&
                 (0, r.jsx)(w.Z, {
                     onPageChange: _,
                     offset: v,
-                    totalCount: y,
+                    totalCount: C,
                     pageSize: R.vpv
                 })
         ]
@@ -226,7 +226,7 @@ function F(e) {
             })
         ]
     });
-    return (0, C.Em)(t.type)
+    return (0, y.Em)(t.type)
         ? (0, r.jsx)(s.P3F, {
               className: a()(L.parentChannelName, L.parentChannelNameClickable),
               onClick: (e) => {
@@ -241,8 +241,8 @@ function F(e) {
 }
 function B(e) {
     var t, n, l;
-    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: x, renderEmbeds: C, offset: T, jumpToMessage: A, listNavigator: w, favoriteSearch: k } = e,
-        U = y.cC.useSetting(),
+    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: x, renderEmbeds: y, offset: T, jumpToMessage: A, listNavigator: w, favoriteSearch: k } = e,
+        U = C.cC.useSetting(),
         B = (0, h.p)(),
         G = i.useCallback((e) => {
             if (e === N.Z.getChannelId()) return;
@@ -320,7 +320,7 @@ function B(e) {
                             totalResults: p,
                             scrollTo: E,
                             searchId: x,
-                            renderEmbeds: C,
+                            renderEmbeds: y,
                             searchOffset: T,
                             pageResultsLength: o.length,
                             result: e,

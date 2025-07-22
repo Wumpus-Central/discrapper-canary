@@ -10,22 +10,22 @@ var i = n(620662),
     u = n(388032);
 function d(e) {
     let { user: t, activity: n, onAction: d } = e,
-        { themeType: f } = (0, o.z)();
+        { themeType: _ } = (0, o.z)();
     if (!(0, i.Z)(n, c.xjy.INSTANCE)) return null;
-    let _ = (e) => {
+    let f = (e) => {
         (e.stopPropagation(), null == d || d({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n));
     };
-    return f === l.lY.MODAL_V2
+    return _ === l.lY.MODAL_V2
         ? (0, r.jsx)(s.tG, {
               text: u.intl.string(u.t.vwl1PD),
               size: 'tiny',
               themeColor: 'secondary',
-              onClick: _
+              onClick: f
           })
         : (0, r.jsx)(s.tG, {
               text: u.intl.string(u.t.vwl1PD),
               themeColor: 'secondary',
               fullWidth: !0,
-              onClick: _
+              onClick: f
           });
 }

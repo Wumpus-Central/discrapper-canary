@@ -1,102 +1,102 @@
-(t.d(n, { Z: () => R }), t(539854));
-var l = t(255367),
-    r = t(73800),
-    i = t(442837),
-    a = t(481060),
-    o = t(239091),
-    s = t(561472),
-    c = t(36311),
-    d = t(622822),
-    u = t(367907),
-    m = t(188471),
-    h = t(541716),
-    p = t(526120),
-    f = t(563534),
-    g = t(736052),
-    x = t(665149),
-    _ = t(442336),
-    C = t(910611),
-    j = t(41776),
-    b = t(703656),
-    v = t(6025),
-    y = t(592125),
-    O = t(703558),
-    Z = t(731290),
-    N = t(430824),
-    I = t(375954),
-    w = t(594174),
-    P = t(933557),
-    E = t(287746),
-    S = t(981631),
-    T = t(388032),
-    B = t(560460);
-function A(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+(n.d(t, { Z: () => R }), n(539854));
+var l = n(255367),
+    r = n(73800),
+    i = n(442837),
+    a = n(481060),
+    o = n(239091),
+    s = n(561472),
+    c = n(36311),
+    d = n(622822),
+    u = n(367907),
+    m = n(188471),
+    h = n(541716),
+    p = n(526120),
+    f = n(563534),
+    g = n(736052),
+    x = n(665149),
+    _ = n(442336),
+    C = n(910611),
+    j = n(41776),
+    b = n(703656),
+    v = n(6025),
+    y = n(592125),
+    O = n(703558),
+    Z = n(731290),
+    N = n(430824),
+    I = n(375954),
+    w = n(594174),
+    P = n(933557),
+    E = n(287746),
+    S = n(981631),
+    T = n(388032),
+    A = n(560460);
+function B(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            l = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
+            l.forEach(function (t) {
                 var l;
-                ((l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
+                ((l = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l));
+                        : (e[t] = l));
             }));
     }
     return e;
 }
-function k(e, n) {
+function k(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var l = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, l);
+                      n.push.apply(n, l);
                   }
-                  return t;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function R(e) {
-    let { channelId: n, baseChannelId: R, channelViewSource: D = 'Split View', isResourceChannelView: L } = e,
-        M = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
+    let { channelId: t, baseChannelId: R, channelViewSource: D = 'Split View', isResourceChannelView: L } = e,
+        M = (0, i.e7)([y.Z], () => y.Z.getChannel(t)),
         H = (0, i.e7)([N.Z], () => N.Z.getGuild(null == M ? void 0 : M.getGuildId())),
         U = (0, i.e7)([w.default], () => w.default.getCurrentUser()),
         G = (0, i.e7)([Z.Z], () => Z.Z.didAgree(null == M ? void 0 : M.guild_id)),
         W = (null == U ? void 0 : U.nsfwAllowed) === !0,
         F = (0, P.ZP)(M),
-        z = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
-        q = (0, g.Z)(n),
+        q = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
+        z = (0, g.Z)(t),
         X = (0, i.e7)([f.Z], () => {
             var e;
-            return null == (e = f.Z.getResourceForChannel(null == H ? void 0 : H.id, n)) ? void 0 : e.title;
+            return null == (e = f.Z.getResourceForChannel(null == H ? void 0 : H.id, t)) ? void 0 : e.title;
         }),
         V = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, k(A({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
+            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, k(B({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
         }, [M, D]),
         null == M || null == H)
     )
         return null;
     let J = [];
-    return (z || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
+    return (q || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
     J.push(
         (0, l.jsx)(
             x.ZP.Icon,
@@ -120,16 +120,16 @@ function R(e) {
                       'aria-label': T.intl.string(T.t.BIYAqa),
                       children: (0, C.ud)({
                           channel: M,
-                          channelName: q ? X : F,
+                          channelName: z ? X : F,
                           guild: H,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await t.e('24783').then(t.bind(t, 439635));
-                                  return (n) =>
+                                  let { default: e } = await n.e('24783').then(n.bind(n, 439635));
+                                  return (t) =>
                                       (0, l.jsx)(
                                           e,
-                                          k(A({}, n), {
+                                          k(B({}, t), {
                                               channel: M,
                                               guild: H
                                           })
@@ -147,7 +147,7 @@ function R(e) {
                       })
                   }),
                   (0, l.jsx)('div', {
-                      className: B.chat,
+                      className: A.chat,
                       children: (0, l.jsx)(
                           E.Z,
                           {
@@ -155,7 +155,7 @@ function R(e) {
                               guild: H,
                               chatInputType: h.Ie.SIDEBAR
                           },
-                          n
+                          t
                       )
                   })
               ]

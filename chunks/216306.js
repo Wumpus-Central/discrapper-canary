@@ -15,9 +15,9 @@ var n = t(73800),
     a = t(442837),
     o = t(704215),
     g = t(45114),
-    f = t(740504),
-    c = t(266454),
-    v = t(931261),
+    v = t(740504),
+    f = t(266454),
+    c = t(931261),
     h = t(540126),
     u = t(671098),
     E = t(703656),
@@ -35,7 +35,7 @@ function b(A, e) {
 }
 function Q(A, e, t, r) {
     r = r.toLowerCase();
-    let i = (0, v.g)(A),
+    let i = (0, c.g)(A),
         s = n.useCallback((A, e) => !(i && A.channel.hasFlag(M.zZ.IS_GUILD_RESOURCE_CHANNEL)) && A.channel.type !== D.d4z.GUILD_DIRECTORY && (0 === e.length || l()(e, A.channel.name.toLowerCase()) || A.channel.topic.toLowerCase().includes(e)), [i]);
     return n.useMemo(() => {
         let A = {
@@ -48,7 +48,7 @@ function Q(A, e, t, r) {
                 ('null' === n.id && (A.null = e.null.filter((A) => s(A, r))), (A[n.id] = e[n.id].filter((A) => s(A, r))));
             }),
             (A._categories = e._categories.filter((e) => 'null' === e.channel.id || 0 === r.length || A[e.channel.id].length > 0)),
-            (0, f.Z)(A._categories, A).forEach(b),
+            (0, v.Z)(A._categories, A).forEach(b),
             A
         );
     }, [e, t, s, r]);
@@ -83,7 +83,7 @@ function P(A, e) {
         null != t && (0, E.uL)(D.Z5c.CHANNEL(A, t)));
 }
 function V(A, e, t, n) {
-    let r = (0, c.Nj)(o.z.CHANNEL_BROWSER_NUX),
+    let r = (0, f.Nj)(o.z.CHANNEL_BROWSER_NUX),
         l = (0, a.cj)(
             [d.Z],
             () => {

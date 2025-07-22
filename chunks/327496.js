@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,10 +93,10 @@ function b(e, t) {
 }
 let y = (e) => {
     let t, n;
-    var { backgroundStyle: a = 'always', children: d, icon: _, name: m, ariaLabel: g, className: y, style: O, to: v, onClick: I, selected: T = !1 } = e,
+    var { backgroundStyle: a = 'always', children: d, icon: f, name: m, ariaLabel: g, className: y, style: O, to: v, onClick: I, selected: T = !1 } = e,
         S = h(e, ['backgroundStyle', 'children', 'icon', 'name', 'ariaLabel', 'className', 'style', 'to', 'onClick', 'selected']);
     let A = (0, s.k6)();
-    null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
+    null == f && null != m && (n = E((t = (0, c.Zg)(m))));
     let N = i.useCallback(
             (e) => {
                 if (null == v);
@@ -112,10 +112,10 @@ let y = (e) => {
         C = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
-        p(f({}, S), {
+        p(_({}, S), {
             onClick: N,
             className: o()(y, u.wrapper, { [u.selected]: T }),
-            style: p(f({}, O), { fontSize: n }),
+            style: p(_({}, O), { fontSize: n }),
             focusProps: { enabled: !1 },
             children: [
                 (0, r.jsx)(l.nn4, { children: null != g && '' !== g ? g : null != m ? m : '' }),
@@ -126,10 +126,10 @@ let y = (e) => {
                           children: t
                       })
                     : null,
-                null != _
+                null != f
                     ? (0, r.jsx)('img', {
                           className: u.icon,
-                          src: _,
+                          src: f,
                           alt: ' ',
                           width: C,
                           height: C,

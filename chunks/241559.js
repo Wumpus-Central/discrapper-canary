@@ -1,6 +1,6 @@
 (n.d(t, {
     hB: () => g,
-    lv: () => f,
+    lv: () => _,
     n2: () => p,
     nX: () => m,
     rX: () => E,
@@ -24,7 +24,7 @@ let d = function (e) {
             guild: i
         };
     },
-    f = function (e) {
+    _ = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, s.default],
             n = d(e, t);
         return (
@@ -39,17 +39,17 @@ let d = function (e) {
             )
         );
     },
-    _ = function (e) {
+    f = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, s.default],
             n = d(e, t);
         return null != n && o.Z.can(u.Plq.MANAGE_GUILD, n.guild) && o.Z.can(u.Plq.BAN_MEMBERS, n.guild);
     };
 function p(e) {
-    return (0, i.e7)([a.Z, s.default], () => f(e, [a.Z, s.default]), [e]);
+    return (0, i.e7)([a.Z, s.default], () => _(e, [a.Z, s.default]), [e]);
 }
 function h(e) {
     let t = p(e),
-        n = (0, i.e7)([a.Z, s.default], () => _(e, [a.Z, s.default]), [e]);
+        n = (0, i.e7)([a.Z, s.default], () => f(e, [a.Z, s.default]), [e]);
     return t && n;
 }
 function m(e) {

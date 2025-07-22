@@ -3,7 +3,7 @@ n.d(t, {
     Hw: () => u,
     M5: () => o,
     Ps: () => c,
-    SD: () => f,
+    SD: () => _,
     ai: () => l,
     c8: () => m,
     kG: () => d,
@@ -24,17 +24,17 @@ var u = (function (e) {
     d = (function (e) {
         return ((e.USER_ACTIVITY_PLAY = 'user_activity_play'), (e.USER_ACTIVITY_SYNC = 'user_activity_sync'), (e.EMBED_SYNC = 'embed_sync'), e);
     })({});
-let f = ['open.spotify.com', 'www.spotify.com'],
-    _ = 'https://api.spotify.com/v1',
+let _ = ['open.spotify.com', 'www.spotify.com'],
+    f = 'https://api.spotify.com/v1',
     p = (e) => '?utm_source=discord&utm_medium='.concat(e),
     h = Object.freeze({
-        PROFILE: ''.concat(_, '/me'),
-        NOTIFICATIONS_PLAYER: ''.concat(_, '/me/notifications/player'),
-        PLAYER: ''.concat(_, '/me/player'),
-        PLAYER_DEVICES: ''.concat(_, '/me/player/devices'),
-        PLAYER_PLAY: ''.concat(_, '/me/player/play'),
-        PLAYER_PAUSE: ''.concat(_, '/me/player/pause'),
-        PLAYER_REPEAT: ''.concat(_, '/me/player/repeat'),
+        PROFILE: ''.concat(f, '/me'),
+        NOTIFICATIONS_PLAYER: ''.concat(f, '/me/notifications/player'),
+        PLAYER: ''.concat(f, '/me/player'),
+        PLAYER_DEVICES: ''.concat(f, '/me/player/devices'),
+        PLAYER_PLAY: ''.concat(f, '/me/player/play'),
+        PLAYER_PAUSE: ''.concat(f, '/me/player/pause'),
+        PLAYER_REPEAT: ''.concat(f, '/me/player/repeat'),
         WEB_OPEN: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'desktop';
             return 'https://open.spotify.com/'.concat(encodeURIComponent(e), '/').concat(encodeURIComponent(t)).concat(p(n));

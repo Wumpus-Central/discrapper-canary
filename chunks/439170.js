@@ -16,8 +16,8 @@ var r,
     c = n(442837),
     u = n(570140),
     d = n(353926),
-    f = n(700785),
-    _ = n(199902),
+    _ = n(700785),
+    f = n(199902),
     p = n(314897),
     h = n(592125),
     m = n(650774),
@@ -126,7 +126,7 @@ function L(e, t, n) {
         i = y.Z.isMobileOnline(n),
         a = r ? O.Z.getStatus() : y.Z.getStatus(n, e),
         o = r ? O.Z.getActivities() : y.Z.getActivities(n, e),
-        s = _.Z.getStreamForUser(n, e),
+        s = f.Z.getStreamForUser(n, e),
         l = v.default.getUser(n);
     return null == l
         ? null
@@ -144,7 +144,7 @@ function x(e) {
     return null == t ? R : null == t.memberListId ? M(t) : t.memberListId;
 }
 function M(e) {
-    return f.oz(I.Plq.VIEW_CHANNEL, e)
+    return _.oz(I.Plq.VIEW_CHANNEL, e)
         ? R
         : s()
               .v3(
@@ -162,7 +162,7 @@ class k {
     updateOwnerId() {
         let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
-        let t = f.iJ(e);
+        let t = _.iJ(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
     }
     setGroups(e) {
@@ -311,7 +311,7 @@ function H(e) {
 }
 let Y = [];
 function W() {
-    let e = _.Z.getAllApplicationStreams(),
+    let e = f.Z.getAllApplicationStreams(),
         t = Y.concat(e);
     ((Y = e),
         t.forEach((e) => {
@@ -327,7 +327,7 @@ function z() {
 }
 class q extends (r = c.ZP.Store) {
     initialize() {
-        (this.waitFor(v.default, b.Z, E.Z, h.Z, g.ZP, y.Z, O.Z, p.default, m.Z, _.Z, d.Z), this.syncWith([O.Z], K), this.syncWith([_.Z], W));
+        (this.waitFor(v.default, b.Z, E.Z, h.Z, g.ZP, y.Z, O.Z, p.default, m.Z, f.Z, d.Z), this.syncWith([O.Z], K), this.syncWith([f.Z], W));
     }
     getProps(e, t) {
         let n = U.get(e, x(t));

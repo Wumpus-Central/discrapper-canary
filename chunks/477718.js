@@ -7,9 +7,9 @@ var n = t(255367),
     a = t.n(s),
     o = t(399606),
     g = t(481060),
-    f = t(480137),
-    c = t(906732),
-    v = t(376923),
+    v = t(480137),
+    f = t(906732),
+    c = t(376923),
     h = t(472596),
     u = t(987707),
     E = t(909746),
@@ -27,19 +27,19 @@ var n = t(255367),
 function O(A) {
     var e;
     let { log: t, member: l, guild: s } = A,
-        { analyticsLocations: f } = (0, c.ZP)(),
+        { analyticsLocations: v } = (0, f.ZP)(),
         u = E.nm(t),
         w = E.QM(t),
         M = null == (e = E.V$(I.zUn.REASON, t)) ? void 0 : e.newValue,
         Q = E.J5(t),
-        O = (0, v.LJ)(t.id),
+        O = (0, c.LJ)(t.id),
         P = (0, o.e7)([B.ZP], () => (null != t.userId ? B.ZP.getMember(l.guildId, t.userId) : null), [l.guildId, t.userId]),
         V = (0, C.X7)(null == P ? void 0 : P.guildId, null == P ? void 0 : P.userId, null == P ? void 0 : P.colorStrings),
         j = r.useCallback(
             (A) => (e) => {
-                (e.preventDefault(), e.stopPropagation(), null != A && (0, h.RE)(A, f));
+                (e.preventDefault(), e.stopPropagation(), null != A && (0, h.RE)(A, v));
             },
-            [f]
+            [v]
         ),
         T = r.useCallback(
             () =>
@@ -174,7 +174,7 @@ function P(A) {
         );
     return (r.useEffect(() => {
         !(async function (A, e) {
-            await f.gV(e, A);
+            await v.gV(e, A);
         })(e.guildId, e.userId);
     }, [e.guildId, e.userId]),
     null == t || 0 === l.length)

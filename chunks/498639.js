@@ -21,7 +21,7 @@ var i = n(255367),
     O = n(963249),
     C = n(87484),
     v = n(736519),
-    S = n(911367),
+    S = n(44876),
     T = n(43747),
     N = n(970815),
     I = n(430824),
@@ -97,7 +97,7 @@ let k = function () {
         [n, _] = r.useState(null),
         j = (0, l.Wu)([I.Z], () => I.Z.getGuildsArray()),
         [k] = (0, l.Wu)([y.Z], () => [y.Z.getPremiumSubscription()]);
-    (0, S.t)();
+    (0, S.k)();
     let L = j.map((e) => ({
             value: e,
             label: e.name

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,15 +76,15 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function _(e) {
-    var { activity: t, embeddedActivity: n, user: s, onAction: c, ButtonComponent: f = o.Z, location: _ } = e,
+function f(e) {
+    var { activity: t, embeddedActivity: n, user: s, onAction: c, ButtonComponent: _ = o.Z, location: f } = e,
         p = d(e, ['activity', 'embeddedActivity', 'user', 'onAction', 'ButtonComponent', 'location']);
     let h = (0, a.e)({
         activity: null != t ? t : void 0,
         embeddedActivity: n,
         user: s,
         onGameJoin: c,
-        location: _
+        location: f
     });
     if (null == h) return null;
     let { isJoining: m, handleJoinRequest: g, buttonCTA: E, tooltip: b, isEnabled: y } = h;
@@ -95,7 +95,7 @@ function _(e) {
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: n } = e;
                 return (0, r.jsx)(
-                    f,
+                    _,
                     u(
                         l(
                             {

@@ -20,8 +20,8 @@ let l = '',
     c = null,
     u = '',
     d = null,
-    f = !1,
-    _ = null,
+    _ = !1,
+    f = null,
     p = '',
     h = '',
     m = '',
@@ -36,7 +36,7 @@ let l = '',
     S = null,
     A = null;
 function N() {
-    ((d = null), (l = ''), (c = null), (u = ''), (f = !1), (_ = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (b = ''), (y = ''), (O = ''), (v = !1), (I = null), (T = null), (S = null), (A = null));
+    ((d = null), (l = ''), (c = null), (u = ''), (_ = !1), (f = null), (p = 'US'), (h = ''), (m = ''), (g = ''), (E = ''), (b = ''), (y = ''), (O = ''), (v = !1), (I = null), (T = null), (S = null), (A = null));
 }
 function C(e) {
     ((h = e.name), (p = e.country), (g = e.line1), (E = e.line2), (b = e.city), (y = e.postalCode), (O = e.state), (m = e.email));
@@ -64,7 +64,7 @@ function L(e) {
 }
 function x(e) {
     let { info: t, isValid: n } = e;
-    ((h = t.name), (f = n));
+    ((h = t.name), (_ = n));
 }
 function M(e) {
     let { info: t, isValid: n } = e;
@@ -72,7 +72,7 @@ function M(e) {
 }
 function k(e) {
     let { data: t } = e;
-    _ = t;
+    f = t;
 }
 function j() {
     I = null;
@@ -108,7 +108,7 @@ class V extends (r = i.ZP.Store) {
         return T;
     }
     get adyenPaymentData() {
-        return _;
+        return f;
     }
     get redirectedPaymentSourceId() {
         return A;
@@ -117,7 +117,7 @@ class V extends (r = i.ZP.Store) {
         return { name: h };
     }
     get isCardInfoValid() {
-        return f;
+        return _;
     }
     getBillingAddressInfo() {
         return {

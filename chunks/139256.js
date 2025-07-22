@@ -27,8 +27,8 @@ var r = n(255367),
     E = n(839963),
     x = n(294608),
     v = n(65145),
-    y = n(981631),
-    C = n(388032),
+    C = n(981631),
+    y = n(388032),
     O = n(56228);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,7 +76,7 @@ function I(e, t) {
 function S(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('ul', {
-        'aria-label': C.intl.string(C.t.sJpqBQ),
+        'aria-label': y.intl.string(y.t.sJpqBQ),
         className: t,
         children: n
     });
@@ -84,7 +84,7 @@ function S(e) {
 function T(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('div', {
-        'aria-label': C.intl.string(C.t.sJpqBQ),
+        'aria-label': y.intl.string(y.t.sJpqBQ),
         role: 'group',
         className: t,
         children: n
@@ -118,7 +118,7 @@ function N(e) {
         I(
             j(
                 {
-                    'aria-label': C.intl.string(C.t.sJpqBQ),
+                    'aria-label': y.intl.string(y.t.sJpqBQ),
                     ref: l
                 },
                 a
@@ -317,7 +317,7 @@ function M(e) {
                 },
                 () => ({
                     color: d.Z.BUTTON_POSITIVE_BACKGROUND,
-                    backgroundColor: (0, u.Lq)(y.Ilk.WHITE_500)
+                    backgroundColor: (0, u.Lq)(C.Ilk.WHITE_500)
                 })
             )
             .with(
@@ -331,8 +331,8 @@ function M(e) {
                 })
             )
             .otherwise(() => ({
-                color: (0, u.Lq)(y.Ilk.BRAND_500),
-                backgroundColor: (0, u.Lq)(y.Ilk.WHITE_500)
+                color: (0, u.Lq)(C.Ilk.BRAND_500),
+                backgroundColor: (0, u.Lq)(C.Ilk.WHITE_500)
             }));
     return (0, r.jsx)(s.owK, {
         size: 'custom',
@@ -378,7 +378,7 @@ function F(e) {
                 size: 'custom',
                 width: l,
                 height: l,
-                color: (0, u.Lq)(y.Ilk.WHITE_500)
+                color: (0, u.Lq)(C.Ilk.WHITE_500)
             })
     });
 }

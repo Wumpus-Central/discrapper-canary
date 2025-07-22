@@ -7,9 +7,9 @@ var n = t(255367),
     a = t(481060),
     o = t(285173),
     g = t(422559),
-    f = t(485386),
-    c = t(430824),
-    v = t(233608),
+    v = t(485386),
+    f = t(430824),
+    c = t(233608),
     h = t(776767),
     u = t(351127),
     E = t(50493),
@@ -18,11 +18,11 @@ var n = t(255367),
     B = t(514983);
 function w(A) {
     var e, t;
-    let { permission: r, roleIds: l, guild: c, specMap: v } = A,
+    let { permission: r, roleIds: l, guild: f, specMap: c } = A,
         h = d.Plq[r],
-        E = null != (t = null == (e = v[h.toString()]) ? void 0 : e.title) ? t : (0, g.wt)(h),
+        E = null != (t = null == (e = c[h.toString()]) ? void 0 : e.title) ? t : (0, g.wt)(h),
         w = u._o.has(h),
-        D = (0, s.e7)([f.Z], () => f.Z.getRoles(c.id));
+        D = (0, s.e7)([v.Z], () => v.Z.getRoles(f.id));
     return (0, n.jsx)(a.ua7, {
         'aria-label': C.intl.string(C.t['0g8Xd3']),
         tooltipClassName: B.roleTooltipContainer,
@@ -41,7 +41,7 @@ function w(A) {
                             className: B.roleTooltipItem,
                             children: (0, n.jsx)(o.Z, {
                                 role: D[A],
-                                guildId: c.id
+                                guildId: f.id
                             })
                         },
                         A
@@ -75,16 +75,16 @@ function w(A) {
 }
 let D = r.memo(function (A) {
     let { member: e, onNavigate: t } = A,
-        l = (0, s.e7)([c.Z], () => c.Z.getGuild(e.guildId), [e.guildId]),
+        l = (0, s.e7)([f.Z], () => f.Z.getGuild(e.guildId), [e.guildId]),
         o = (0, u.B2)(e.userId, e.guildId, u.Qn),
         g = (0, u.B2)(e.userId, e.guildId, u.pd),
-        f = Object.keys(o).length,
+        v = Object.keys(o).length,
         D = Object.keys(g).length,
-        M = r.useMemo(() => (null != l ? v.Z.getGuildPermissionSpecMap(l) : null), [l]),
-        I = r.useMemo(() => (null != l ? v.Z.generateGuildPermissionSpec(l) : null), [l]),
+        M = r.useMemo(() => (null != l ? c.Z.getGuildPermissionSpecMap(l) : null), [l]),
+        I = r.useMemo(() => (null != l ? c.Z.generateGuildPermissionSpec(l) : null), [l]),
         p = r.useMemo(() => {
             if (null == l || null == M) return null;
-            if (0 === f)
+            if (0 === v)
                 return (0, n.jsx)('div', {
                     className: i()(B.permissionChiplet, B.noModPerms),
                     children: (0, n.jsx)(a.Text, {
@@ -119,7 +119,7 @@ let D = r.memo(function (A) {
                     }),
                 A
             );
-        }, [l, f, o, I, M]);
+        }, [l, v, o, I, M]);
     return null == l
         ? null
         : (0, n.jsx)(a.xJW, {

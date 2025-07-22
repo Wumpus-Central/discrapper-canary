@@ -11,9 +11,9 @@ var r = t(120356),
     a = t(737770),
     o = t(839008),
     g = t(685184),
-    f = t(369509),
-    c = t(195196),
-    v = t(388032),
+    v = t(369509),
+    f = t(195196),
+    c = t(388032),
     h = t(668271);
 function u(A) {
     return (0, n.jsxs)('div', {
@@ -94,22 +94,22 @@ let E = function (A) {
                 avatar: s.Z,
                 username: 'Roka',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: v.intl.string(c.default.bpghV1)
+                message: c.intl.string(f.default.bpghV1)
             }),
             (0, n.jsx)(u, {
                 className: h.unfocusedMessage,
                 avatar: a.Z,
                 username: 'hongo',
                 usernameStyle: { color: 'var(--green-230)' },
-                message: v.intl.string(c.default['rnpv7+'])
+                message: c.intl.string(f.default['rnpv7+'])
             }),
             (0, n.jsx)(u, {
                 avatar: o.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: v.intl.string(c.default.u7tjsr),
+                message: c.intl.string(f.default.u7tjsr),
                 decorations: (0, n.jsx)(
-                    f.S,
+                    v.S,
                     (function (A) {
                         for (var e = 1; e < arguments.length; e++) {
                             var t = null != arguments[e] ? arguments[e] : {},
@@ -142,14 +142,14 @@ let E = function (A) {
                 avatar: g.Z,
                 username: 'sharon',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: v.intl.string(c.default.GlWVJC)
+                message: c.intl.string(f.default.GlWVJC)
             }),
             (0, n.jsx)(u, {
                 className: h.unfocusedMessage,
                 avatar: o.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: v.intl.string(c.default.AIp9ho)
+                message: c.intl.string(f.default.AIp9ho)
             })
         ]
     });

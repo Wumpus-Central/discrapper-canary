@@ -7,9 +7,9 @@ var n = t(255367),
     a = t(481060),
     o = t(110924),
     g = t(714338),
-    f = t(237617),
-    c = t(433355),
-    v = t(189432),
+    v = t(237617),
+    f = t(433355),
+    c = t(189432),
     h = t(727381),
     u = t(313692),
     E = t(596443),
@@ -27,15 +27,15 @@ function B(A, e) {
 function w(A) {
     var e;
     let { userId: t, guildId: w, onClose: D, analyticsLocation: M, className: I } = A,
-        p = (0, i.e7)([c.ZP], () => c.ZP.getGuildSidebarState(w), [w]),
+        p = (0, i.e7)([f.ZP], () => f.ZP.getGuildSidebarState(w), [w]),
         H = null != (e = null == p ? void 0 : p.details.modViewPanel) ? e : d.k.INFO,
         b = (0, o.Z)(t),
         Q = null == H ? null : H === d.k.INFO ? 'backwards' : 'forwards',
-        O = (0, f.Z)(Q),
+        O = (0, v.Z)(Q),
         { reducedMotion: P } = r.useContext(s.S),
         V = r.useCallback(
             (A) => {
-                null != p && (0, v.r)(w, t, p.baseChannelId, { modViewPanel: A });
+                null != p && (0, c.r)(w, t, p.baseChannelId, { modViewPanel: A });
             },
             [p, w, t]
         ),

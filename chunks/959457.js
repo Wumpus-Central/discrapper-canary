@@ -8,8 +8,8 @@ var i,
     c = n(442837),
     u = n(46973),
     d = n(570140),
-    f = n(594190),
-    _ = n(444852),
+    _ = n(594190),
+    f = n(444852),
     p = n(569545),
     h = n(687516),
     m = n(139656),
@@ -44,7 +44,7 @@ let S = {},
 function L(e, t, n, i) {
     return (
         o()(null != r, 'Creating RTCConnection without session.'),
-        new _.Z({
+        new f.Z({
             sessionId: r,
             streamKey: e,
             serverId: t,
@@ -85,7 +85,7 @@ function j(e) {
         (N[u] = a),
         null != a)
     ) {
-        let e = f.ZP.getGameForPID(a);
+        let e = _.ZP.getGameForPID(a);
         null != e &&
             (A[u] = {
                 name: e.name,
@@ -116,7 +116,7 @@ function G(e) {
         null == N[t] && (A[t] = null);
         let e = (0, p.my)(t);
         null == A[t] && null == C[t] && (A[t] = (0, h.L2)(e, y.Z));
-        let s = new _.A({
+        let s = new f.A({
             streamRegion: i,
             streamApplication: A[t],
             streamSourceType: X(C[t]),

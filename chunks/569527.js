@@ -50,7 +50,7 @@ function T(e) {
         }, [R.search]),
         M = (0, o.e7)([_.Z], () => _.Z.getCategories()),
         G = a.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === k)), [M, k]),
-        z = a.useCallback(
+        B = a.useCallback(
             (e) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: w,
@@ -80,10 +80,10 @@ function T(e) {
                     pageSize: P.PAGE_SIZE,
                     source: s.F.APP_DIRECTORY
                 },
-                onSuccessCallback: z
+                onSuccessCallback: B
             }));
-    }, [k, D, w, z]);
-    let { fetchState: B, searchResults: U } = (0, o.cj)([b.Z], () => ({
+    }, [k, D, w, B]);
+    let { fetchState: U, searchResults: z } = (0, o.cj)([b.Z], () => ({
             fetchState: b.Z.getFetchState({
                 query: w,
                 categoryId: k,
@@ -132,8 +132,8 @@ function T(e) {
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
                 : {};
         }),
-        V = (0, d.Z)(U),
-        H = a.useMemo(() => (B === f.M.FETCHING ? V : U), [B, V, U]),
+        V = (0, d.Z)(z),
+        H = a.useMemo(() => (U === f.M.FETCHING ? V : z), [U, V, z]),
         Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -195,9 +195,9 @@ function T(e) {
                                         })
                                     }),
                                     (0, r.jsx)(C.Z, {
-                                        loading: B === f.M.FETCHING,
+                                        loading: U === f.M.FETCHING,
                                         children:
-                                            B === f.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
+                                            U === f.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
                                                 ? (0, r.jsx)(S.Z, {
                                                       selectedCategoryId: null != k ? k : K.id,
                                                       searchAllCategories: () => W(K)

@@ -25,10 +25,10 @@ if (a) {
             }
         }));
 } else {
-    var f = i('Object.prototype.toString'),
-        _ = '[object RegExp]';
+    var _ = i('Object.prototype.toString'),
+        f = '[object RegExp]';
     r = function (e) {
-        return !!e && ('object' == typeof e || 'function' == typeof e) && f(e) === _;
+        return !!e && ('object' == typeof e || 'function' == typeof e) && _(e) === f;
     };
 }
 e.exports = r;
