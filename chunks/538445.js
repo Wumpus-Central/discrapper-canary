@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,23 +23,24 @@ var r = n(255367),
     E = n(388032),
     x = n(951078),
     S = n(183375),
-    I = n(128647);
-function P(e) {
+    I = n(445648),
+    P = n(128647);
+function N(e) {
     var t;
     let { guild: n, markAsDismissed: l } = e,
-        P = (null == n ? void 0 : n.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
-        N = P === g.DF.TOP_CENTER || P === g.DF.LEFT_TOP ? x[P] : '',
-        { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
-        Z = i.useCallback(() => {
+        N = (null == n ? void 0 : n.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
+        w = N === g.DF.TOP_CENTER || N === g.DF.LEFT_TOP ? x[N] : '',
+        { analyticsLocations: Z } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
+        T = i.useCallback(() => {
             (0, p.u)({
                 analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
-                analyticsLocations: w,
+                analyticsLocations: Z,
                 guild: n
             });
-        }, [n, w]),
-        T = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
-        A =
+        }, [n, Z]),
+        A = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
+        R =
             ((t = n.id),
             (0, a.e7)([m.Z], () => {
                 let e = Object.values(m.Z.getRoles(t)).find((e) => (0, O.YB)(e));
@@ -50,10 +51,10 @@ function P(e) {
                       }
                     : e.colors;
             })),
-        { gradientStyle: R, gradientClassname: D } = (0, c.Icv)({
-            primaryColor: (0, s.Rf)(A.primary_color),
-            secondaryColor: (0, s.Rf)(A.secondary_color),
-            tertiaryColor: null != A.tertiary_color ? (0, s.Rf)(A.tertiary_color) : void 0,
+        { gradientStyle: D, gradientClassname: L } = (0, c.Icv)({
+            primaryColor: (0, s.Rf)(R.primary_color),
+            secondaryColor: (0, s.Rf)(R.secondary_color),
+            tertiaryColor: null != R.tertiary_color ? (0, s.Rf)(R.tertiary_color) : void 0,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
             animateGradient: !0
@@ -62,25 +63,28 @@ function P(e) {
         asset: (0, r.jsxs)('div', {
             className: x.imageContainer,
             children: [
-                null != T
+                null != A
                     ? (0, r.jsx)('div', {
                           className: x.messageContainer,
                           children: (0, r.jsx)(f.l, {
                               avatar: (0, r.jsx)(h.Z, {
-                                  user: T,
+                                  user: A,
                                   guildId: n.id,
                                   avatarSize: c.EFr.SIZE_40,
                                   'aria-hidden': !0
                               }),
-                              usernameStyle: R,
-                              usernameClassName: o()(D, S.animateGradient),
-                              username: _.ZP.getName(n.id, null, T),
-                              message: E.intl.string(E.t['6OSasb'])
+                              usernameStyle: D,
+                              usernameClassName: o()(L, S.animateGradient),
+                              username: _.ZP.getName(n.id, null, A),
+                              asset: (0, r.jsx)('img', {
+                                  alt: '',
+                                  src: I.Z
+                              })
                           })
                       })
                     : (0, r.jsx)('img', {
                           alt: '',
-                          src: I.Z,
+                          src: P.Z,
                           className: x.image
                       }),
                 (0, r.jsx)(c.olH, {
@@ -100,9 +104,9 @@ function P(e) {
             children: E.intl.string(j.default['/DTbiY'])
         }),
         buttonCTA: E.intl.string(E.t['oPAx7+']),
-        onClick: Z,
-        className: o()(x.container, N),
-        caretPosition: P,
+        onClick: T,
+        className: o()(x.container, w),
+        caretPosition: N,
         markAsDismissed: l
     });
 }

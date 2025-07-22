@@ -1,16 +1,16 @@
-(n.d(i, {
-    A: () => e,
-    m: () => S
+(r.d(t, {
+    A: () => i,
+    m: () => l
 }),
-    n(388685));
-var E = n(442837),
-    l = n(430824),
-    r = n(981631);
-function e(t) {
-    var i;
-    let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z];
-    return !!(null == (i = n.getGuild(t)) ? void 0 : i.features.has(r.oNc.COMMUNITY));
+    r(388685));
+var a = r(442837),
+    n = r(430824),
+    o = r(981631);
+function i(e) {
+    var t;
+    let [r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [n.Z];
+    return !!(null == (t = r.getGuild(e)) ? void 0 : t.features.has(o.oNc.COMMUNITY));
 }
-function S(t) {
-    return (0, E.e7)([l.Z], () => e(t, [l.Z]), [t]);
+function l(e) {
+    return (0, a.e7)([n.Z], () => i(e, [n.Z]), [e]);
 }

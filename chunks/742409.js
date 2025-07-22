@@ -54,10 +54,12 @@ function u(A) {
                                 })
                         ]
                     }),
-                    (0, n.jsx)(i.Text, {
-                        variant: 'text-md/medium',
-                        children: A.message
-                    })
+                    null != A.message &&
+                        (0, n.jsx)(i.Text, {
+                            variant: 'text-md/medium',
+                            children: A.message
+                        }),
+                    A.asset
                 ]
             })
         ]

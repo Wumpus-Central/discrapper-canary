@@ -1120,7 +1120,7 @@ let { Themes: r } = n(15202).V,
             },
             CONTROL_BORDER_SECONDARY_ACTIVE: {
                 [r.DARK]: {
-                    raw: 'NEUTRAL_39',
+                    raw: 'NEUTRAL_36',
                     opacity: 1
                 },
                 [r.LIGHT]: {
@@ -1138,7 +1138,7 @@ let { Themes: r } = n(15202).V,
             },
             CONTROL_BORDER_SECONDARY_DEFAULT: {
                 [r.DARK]: {
-                    raw: 'NEUTRAL_39',
+                    raw: 'NEUTRAL_36',
                     opacity: 1
                 },
                 [r.LIGHT]: {
@@ -1156,7 +1156,7 @@ let { Themes: r } = n(15202).V,
             },
             CONTROL_BORDER_SECONDARY_HOVER: {
                 [r.DARK]: {
-                    raw: 'NEUTRAL_39',
+                    raw: 'NEUTRAL_36',
                     opacity: 1
                 },
                 [r.LIGHT]: {
@@ -1568,6 +1568,24 @@ let { Themes: r } = n(15202).V,
                     opacity: 1
                 }
             },
+            FOCUS_PRIMARY: {
+                [r.DARK]: {
+                    raw: 'BLUE_NEW_18',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BLUE_NEW_63',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'BLUE_NEW_34',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'BLUE_NEW_29',
+                    opacity: 1
+                }
+            },
             HEADER_MUTED: {
                 [r.DARK]: {
                     raw: 'NEUTRAL_12',
@@ -1786,7 +1804,7 @@ let { Themes: r } = n(15202).V,
             },
             INPUT_BORDER: {
                 [r.DARK]: {
-                    raw: 'NEUTRAL_39',
+                    raw: 'NEUTRAL_36',
                     opacity: 1
                 },
                 [r.LIGHT]: {

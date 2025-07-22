@@ -1,33 +1,31 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(255367),
     l = n(73800),
-    i = n(794433),
-    a = n(932197);
-let s = l.forwardRef(function (e, t) {
-    let { query: n, onQueryChange: l, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: b, isReady: y, 'aria-labelledby': f, 'aria-controls': p } = e;
+    i = n(794433);
+let a = l.forwardRef(function (e, t) {
+    let { query: n, onQueryChange: l, onRemoveTag: a, onSelect: s, onSelectionChange: o, selectedSection: c, selectedRow: d, tags: u, sections: m, placeholder: x = '', focusAfterReady: h, isReady: b, 'aria-labelledby': y, 'aria-controls': f } = e;
     return (0, r.jsx)(i.Z, {
         autoFocus: !0,
-        className: a.searchBar,
         maxHeight: 100,
         onQueryChange: l,
-        onRemoveTag: s,
-        selectedSection: d,
-        selectedRow: u,
-        onSelect: o,
-        onSelectionChange: c,
-        placeholder: 0 === m.length ? h : '',
+        onRemoveTag: a,
+        selectedSection: c,
+        selectedRow: d,
+        onSelect: s,
+        onSelectionChange: o,
+        placeholder: 0 === u.length ? x : '',
         query: n,
         ref: t,
         size: i.Z.Sizes.MEDIUM,
-        tags: m,
-        sections: x,
-        focusAfterReady: b,
-        isReady: y,
+        tags: u,
+        sections: m,
+        focusAfterReady: h,
+        isReady: b,
         inputProps: {
-            'aria-labelledby': f,
-            'aria-controls': p,
+            'aria-labelledby': y,
+            'aria-controls': f,
             'aria-expanded': !0,
-            'aria-activedescendant': 'user-row-'.concat(u)
+            'aria-activedescendant': 'user-row-'.concat(d)
         }
     });
 });

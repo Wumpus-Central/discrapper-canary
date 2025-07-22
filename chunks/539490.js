@@ -1,8 +1,8 @@
 e.exports = {
     wrapper: 'wrapper_c0e32c',
     isBurstReactionPicker: 'isBurstReactionPicker_c0e32c',
-    emojiPicker: 'emojiPicker_c0e32c',
     emojiPickerHasTabWrapper: 'emojiPickerHasTabWrapper_c0e32c',
+    emojiPicker: 'emojiPicker_c0e32c',
     header: 'header_c0e32c',
     searchBar: 'searchBar_c0e32c',
     searchBarFullRow: 'searchBarFullRow_c0e32c',

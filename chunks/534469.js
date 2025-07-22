@@ -403,11 +403,12 @@ let el = i.memo(function (e) {
             message: x,
             channel: J
         }),
-        eX = null != eq,
-        eQ = i.useMemo(() => Object.values(eg).some((e) => e), [eg]);
-    l = x.type === q.uaV.CUSTOM_GIFT ? '' : !eN && eX ? (0, B.Z)(e, eU) : (0, G.Z)(e, eU, eN);
-    let eJ = x.id === ea,
-        e$ = (0, r.jsx)(d.tEY, {
+        eX = i.useRef(window),
+        eQ = null != eq,
+        eJ = i.useMemo(() => Object.values(eg).some((e) => e), [eg]);
+    l = x.type === q.uaV.CUSTOM_GIFT ? '' : !eN && eQ ? (0, B.Z)(e, eU) : (0, G.Z)(e, eU, eN);
+    let e$ = x.id === ea,
+        e0 = (0, r.jsx)(d.tEY, {
             offset: {
                 left: 4,
                 right: 4
@@ -421,7 +422,7 @@ let el = i.memo(function (e) {
                         (0, r.jsx)(g.Z, {
                             compact: er,
                             message: x,
-                            hovering: eO && !eN && !eQ
+                            hovering: eO && !eN && !eJ
                         }),
                     (0, r.jsx)(
                         A.Z,
@@ -444,13 +445,13 @@ let el = i.memo(function (e) {
                                 [X.ephemeral]: (0, P.Pv)(x),
                                 [X.nitroMessage]: x.type === q.uaV.NITRO_NOTIFICATION || x.type === q.uaV.CHAT_WALLPAPER_SET || x.type === q.uaV.CHAT_WALLPAPER_REMOVED,
                                 [X.systemMessage]: (0, Z.Z)(x),
-                                [X.groupStart]: !eo && (eJ || x.type === q.uaV.REPLY),
+                                [X.groupStart]: !eo && (e$ || x.type === q.uaV.REPLY),
                                 [X.selected]: ew,
                                 [X.replying]: (null == eG ? void 0 : eG.message.id) === x.id,
                                 [X.interactionSending]: x.isCommandType() && x.state === q.yb.SENDING,
-                                [X.automodMessage]: eX,
+                                [X.automodMessage]: eQ,
                                 [X.editing]: eN,
-                                [X.hasOpenPopouts]: eQ,
+                                [X.hasOpenPopouts]: eJ,
                                 [X.potioned]: (0, _.Uw)(x) && ep,
                                 [Q.forceAnimate]: eO
                             }),
@@ -485,7 +486,7 @@ let el = i.memo(function (e) {
                                 hasSpoilerEmbeds: eB,
                                 handleContextMenu: ey,
                                 isInteracting: eR,
-                                isAutomodBlockedMessage: eX,
+                                isAutomodBlockedMessage: eQ,
                                 forceAddReactions: x.type === q.uaV.EMOJI_ADDED
                             }),
                             childrenButtons:
@@ -494,7 +495,8 @@ let el = i.memo(function (e) {
                                           buttonProps: e,
                                           setPopout: e_,
                                           messagePopouts: eg,
-                                          isFocused: eO || eE
+                                          isFocused: eO || eE,
+                                          messageWindow: eX.current
                                       })
                                     : void 0,
                             childrenSystemMessage: (0, W.Z)(e),
@@ -504,7 +506,10 @@ let el = i.memo(function (e) {
                             hasThread: !eo && x.hasFlag(q.iLy.HAS_THREAD) && null != eM,
                             isSystemMessage: (0, Z.Z)(x),
                             hasReply: x.type === q.uaV.REPLY,
-                            messageRef: eK,
+                            messageRef: (e) => {
+                                var t, n;
+                                ((eK.current = e), (eX.current = null != (n = null == e || null == (t = e.ownerDocument) ? void 0 : t.defaultView) ? n : window));
+                            },
                             author: eH
                         })
                     )
@@ -520,9 +525,9 @@ let el = i.memo(function (e) {
                       [X.backgroundFlash]: !0,
                       [X.groupStart]: !er && x.id === ea
                   }),
-                  children: e$
+                  children: e0
               },
               'bg-flash-'.concat(o)
           )
-        : e$;
+        : e0;
 });

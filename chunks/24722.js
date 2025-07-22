@@ -5,8 +5,8 @@ var n = r(255367),
     l = r(442837),
     i = r(755721),
     s = r(481060),
-    c = r(794433),
-    d = r(185413),
+    d = r(794433),
+    c = r(185413),
     u = r(971628),
     b = r(600164),
     m = r(892880),
@@ -40,26 +40,26 @@ function C(e) {
     var t;
     let { onClose: r, roleId: R, guildId: C, onBack: S, isCreateRoleFlow: O, focusSearchAfterReady: M, isReady: L } = e,
         T = (0, l.e7)([h.Z], () => h.Z.getRole(R), [R]),
-        [B, N] = o.useState(''),
-        [z, P] = o.useState({}),
+        [N, z] = o.useState(''),
+        [P, B] = o.useState({}),
         [E, I] = o.useState(!1);
     o.useEffect(() => {
-        m.Z.requestMembers(C, B.trim().toLowerCase(), p._4);
-    }, [C, B]);
+        m.Z.requestMembers(C, N.trim().toLowerCase(), p._4);
+    }, [C, N]);
     let A = o.useCallback((e) => !e.roles.includes(R), [R]),
         Z = (0, p.lJ)(C, A),
-        Y = o.useMemo(() => Z.filter((e) => (0, p.eg)(B, e)), [B, Z]),
+        Y = o.useMemo(() => Z.filter((e) => (0, p.eg)(N, e)), [N, Z]),
         q = o.useCallback(async () => {
-            let e = Object.values(z).map((e) => e.row.id);
+            let e = Object.values(P).map((e) => e.row.id);
             I(!0);
             try {
                 (await x.Z.bulkAddMemberRoles(C, R, e), (0, f.H)(C, R, !1), r());
             } catch (e) {
                 I(!1);
             }
-        }, [C, R, z, r]),
+        }, [C, R, P, r]),
         U = o.useCallback((e) => {
-            P((t) => {
+            B((t) => {
                 let r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -91,7 +91,7 @@ function C(e) {
                         ? delete r[n]
                         : (r[n] = {
                               display: {
-                                  type: c.F.MEMBER,
+                                  type: d.F.MEMBER,
                                   label: e.name,
                                   avatar: e.avatarURL
                               },
@@ -102,7 +102,7 @@ function C(e) {
             });
         }, []),
         H = o.useCallback((e) => {
-            P((t) => {
+            B((t) => {
                 let { [e]: r } = t;
                 return (function (e, t) {
                     if (null == e) return {};
@@ -145,7 +145,7 @@ function C(e) {
                 }),
             [Y]
         ),
-        V = o.useMemo(() => Object.keys(z).length, [z]);
+        V = o.useMemo(() => Object.keys(P).length, [P]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(s.xBx, {
@@ -181,11 +181,11 @@ function C(e) {
                           })
                 ]
             }),
-            (0, n.jsx)(d.t, {
+            (0, n.jsx)(c.t, {
                 listClassName: j.list,
-                pendingAdditions: z,
-                query: B,
-                onQueryChange: N,
+                pendingAdditions: P,
+                query: N,
+                onQueryChange: z,
                 onClickRow: U,
                 onRemovePendingAddition: H,
                 roles: [],

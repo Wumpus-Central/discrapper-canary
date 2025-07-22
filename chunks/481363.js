@@ -11,21 +11,23 @@ function c(e) {
             setPopout: t,
             messagePopouts: { emojiPicker: n, emojiBurstPicker: c, moreUtilities: u },
             isFocused: d,
-            buttonProps: { message: p, channel: h, groupId: f, compact: m = !1 }
+            buttonProps: { message: p, channel: h, groupId: f, compact: m = !1 },
+            messageWindow: g
         } = e,
-        g = p.state === o.yb.SENDING,
-        b = p.id === f,
-        _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
-        y = p.state === o.yb.SEND_FAILED;
-    return g || (_ && !y)
+        b = p.state === o.yb.SENDING,
+        _ = p.id === f,
+        y = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        C = p.state === o.yb.SEND_FAILED;
+    return b || (y && !C)
         ? null
         : (0, r.jsx)(a.Z, {
               className: s.buttons,
               innerClassName: s.buttonsInner,
-              isHeader: !m && b && !(0, l.Z)(p),
+              isHeader: !m && _ && !(0, l.Z)(p),
               isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
               channel: h,
               message: p,
+              messageWindow: g,
               setPopout: t,
               showEmojiPicker: n,
               showEmojiBurstPicker: c,

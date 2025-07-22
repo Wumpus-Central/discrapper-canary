@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => D }));
+(r.r(t), r.d(t, { default: () => j }));
 var n = r(255367),
     a = r(120356),
     i = r.n(a),
@@ -7,21 +7,27 @@ var n = r(255367),
     s = r(399606),
     c = r(721037),
     d = r(561472),
-    u = r(317381),
-    m = r(617552),
-    p = r(372900),
-    h = r(238246),
-    y = r(592125),
-    f = r(703558),
-    g = r(677601),
-    v = r(87390);
-function D(e) {
+    u = r(679080),
+    m = r(777019),
+    p = r(400332),
+    h = r(721383),
+    y = r(317381),
+    f = r(617552),
+    g = r(372900),
+    v = r(238246),
+    D = r(592125),
+    b = r(703558),
+    C = r(677601),
+    E = r(87390);
+let P = [u.S, m.O, p.U, h._];
+function j(e) {
     let { windowKey: t, channelId: r } = e,
-        a = (0, s.e7)([y.Z], () => y.Z.getChannel(r));
+        a = (0, s.e7)([D.Z], () => D.Z.getChannel(r));
     o()(null != a, 'channel cannot be null for popout');
-    let l = (0, s.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(a.id), [a]);
-    return (0, n.jsx)(h.Z, {
+    let l = (0, s.e7)([y.ZP], () => y.ZP.getSelfEmbeddedActivityForChannel(a.id), [a]);
+    return (0, n.jsx)(v.Z, {
         withTitleBar: !0,
+        keybinds: P,
         windowKey: t,
         title: a.name,
         channelId: a.id,
@@ -29,7 +35,7 @@ function D(e) {
             let { e: t, unmountWindow: r } = e;
             null != l
                 ? (t.preventDefault(),
-                  (0, m.Z)({
+                  (0, f.Z)({
                       onConfirm: () => {
                           r();
                       },
@@ -38,15 +44,15 @@ function D(e) {
                 : r();
         },
         children: (0, n.jsx)('div', {
-            className: i()('root', v.rootPopout),
-            children: (0, n.jsxs)(p.Z.Provider, {
+            className: i()('root', E.rootPopout),
+            children: (0, n.jsxs)(g.Z.Provider, {
                 value: a.guild_id,
                 children: [
                     (0, n.jsx)(d.Z, {
                         channel: a,
-                        draftType: f.d.ChannelMessage
+                        draftType: b.d.ChannelMessage
                     }),
-                    (0, n.jsx)(g.Z, { channel: a }),
+                    (0, n.jsx)(C.Z, { channel: a }),
                     (0, n.jsx)(c.Z, {
                         popoutWindowKey: t,
                         popoutWindowHasTitleBar: !0
