@@ -20,17 +20,17 @@ var r,
     x = n(594174),
     E = n(981631);
 let C = {},
-    O = {};
-function v(e) {
+    v = {};
+function O(e) {
     let { searchId: t, query: n, mode: r, tokens: s, cursorScope: l, autocompletes: a } = e,
-        i = O[t];
+        i = v[t];
     return (
         null == i &&
             ((i = {
                 results: [],
                 context: c.Z.getSearchContext(I.bind(null, t))
             }),
-            (O[t] = i)),
+            (v[t] = i)),
         {
             query: null != n ? n : '',
             mode:
@@ -49,7 +49,7 @@ function v(e) {
 }
 function I(e, t) {
     let { results: n } = t,
-        r = O[e],
+        r = v[e],
         s = C[e];
     if (null == r || null == s) return;
     let { type: l, filter: a } = s.mode;
@@ -77,7 +77,7 @@ function I(e, t) {
     let { query: o, mode: c, tokens: u, cursorScope: d } = s,
         { autocompletes: h } = s;
     ((h = T(e, c, u)),
-        (C[e] = v({
+        (C[e] = O({
             searchId: e,
             query: o,
             mode: c,
@@ -96,7 +96,7 @@ function j(e) {
         g = null != (n = null == a || null == (t = a.getFullMatch()) ? void 0 : t.trim()) ? n : '',
         m = l === E.dCx.FILTER_FROM || l === E.dCx.FILTER_MENTIONS;
     if (p === E.aib.GUILD && m) {
-        let e = O[i];
+        let e = v[i];
         if (null == e) s = null;
         else {
             if (null == a || 0 === g.length) {
@@ -277,7 +277,7 @@ function N(e) {
     let t = C[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: s, cursorScope: l, autocompletes: a } = t;
-    C[e] = v({
+    C[e] = O({
         searchId: e,
         query: n,
         mode: r,
@@ -289,7 +289,7 @@ function N(e) {
 function A(e) {
     if (null == e || null == C[e]) return !1;
     let { query: t, mode: n, tokens: r, cursorScope: s } = C[e];
-    C[e] = v({
+    C[e] = O({
         searchId: e,
         query: t,
         mode: n,
@@ -307,7 +307,7 @@ class k extends (r = a.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = C[e]) ? t : v({ searchId: e });
+        return null != (t = C[e]) ? t : O({ searchId: e });
     }
 }
 ((l = 'SearchAutocompleteStore'),
@@ -327,7 +327,7 @@ let M = new k(i.Z, {
                 a = (0, p.cl)(s),
                 i = (0, p.qc)(l, s),
                 o = null != (t = C[r]) ? t : {},
-                c = O[r],
+                c = v[r],
                 u = !0;
             if (a === o.query && (null == o.mode || o.mode.filter === i.filter)) ((n = o.autocompletes), (u = !1));
             else if (i.type === E.Sap.EMPTY || (i.type === E.Sap.FILTER && i.filter !== E.dCx.FILTER_FROM && i.filter !== E.dCx.FILTER_MENTIONS)) (null != c && (c.context.clearQuery(), (c.results = [])), (n = T(r, i, s)));
@@ -344,7 +344,7 @@ let M = new k(i.Z, {
                     : (c.context.clearQuery(), (n = T(r, i, s)));
             }
             return (
-                (C[r] = v({
+                (C[r] = O({
                     searchId: r,
                     query: a,
                     mode: i,
@@ -357,8 +357,8 @@ let M = new k(i.Z, {
         },
         SEARCH_EDITOR_STATE_CLEAR: function (e) {
             let { searchId: t } = e,
-                n = O[t];
-            (null != n && (n.context.destroy(), (n.results = []), delete O[t]), delete C[t]);
+                n = v[t];
+            (null != n && (n.context.destroy(), (n.results = []), delete v[t]), delete C[t]);
         },
         CHANNEL_CREATE: P,
         CHANNEL_DELETE: P,

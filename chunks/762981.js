@@ -10,7 +10,7 @@ var r = n(255367),
     l = n(558452),
     c = n(770278),
     u = n(724723),
-    d = n(257465),
+    d = n(985316),
     f = n(574697);
 function _(e, t, n) {
     return (
@@ -50,7 +50,7 @@ function m(e) {
         a,
         {
             keys: (e) => (e ? 'scrim' : 'empty'),
-            config: { duration: d.aU },
+            config: d.Px,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 }

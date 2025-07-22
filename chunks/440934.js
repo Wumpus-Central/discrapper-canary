@@ -23,7 +23,7 @@ function p(e) {
         onSubmit: (e) => {
             (e.preventDefault(), y());
         },
-        children: (0, o.jsxs)(i.IX, {
+        children: (0, o.jsxs)(i.I, {
             transitionState: p,
             onClose: t,
             children: [

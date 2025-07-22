@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(592125),
     E = n(271383),
     C = n(699516),
-    O = n(250758),
-    v = n(768119),
+    v = n(250758),
+    O = n(768119),
     I = n(944486),
     j = n(914010),
     R = n(246946),
@@ -397,7 +397,7 @@ class $ extends s.PureComponent {
             U(this, 'handleDateChange', (e) => {
                 ((0, M.bh)({
                     searchId: this.props.searchId,
-                    searchQuery: v.Z.getQuery(this.props.searchId),
+                    searchQuery: O.Z.getQuery(this.props.searchId),
                     searchQueryString: (0, L.$)(this.props.searchId),
                     searchTokenType: this.props.resultsState.mode.filter,
                     searchAutocompleteGroup: F.rtL.DATES,
@@ -473,7 +473,7 @@ class $ extends s.PureComponent {
                         p = u === F.dCx.FILTER_IN && null != h && h.id === I.Z.getChannelId();
                     (0, M.bh)({
                         searchId: this.props.searchId,
-                        searchQuery: v.Z.getQuery(this.props.searchId),
+                        searchQuery: O.Z.getQuery(this.props.searchId),
                         searchQueryString: (0, L.$)(this.props.searchId),
                         searchTokenType: u,
                         searchAutocompleteGroup: null != (d = i.group) ? d : l,
@@ -639,13 +639,13 @@ class $ extends s.PureComponent {
 }
 let ee = s.forwardRef((e, t) => {
     let n = (0, b.U)({ location: 'SearchPopout' }),
-        [s, l, a, i] = (0, f.Wu)([j.Z, I.Z, O.Z, x.Z], () => {
+        [s, l, a, i] = (0, f.Wu)([j.Z, I.Z, v.Z, x.Z], () => {
             let e = j.Z.getGuildId(),
                 t = I.Z.getChannelId(),
                 r = x.Z.getChannel(t),
                 s = null != e ? e : n ? F.aib.DMS : t;
             o()(null != s, 'SearchPopout.getStateFromStores - invalid searchId');
-            let l = O.Z.getState(s),
+            let l = v.Z.getState(s),
                 a = A.BU(l.autocompletes);
             return [s, l, a, r];
         });

@@ -130,9 +130,9 @@ function G(e) {
                       };
             })(A)
         ),
-        [X, q] = i.useState(L),
-        W = (0, o.e7)([j.Z], () => j.Z.getChannel(null == X ? void 0 : X.value)),
-        V = (null == W ? void 0 : W.isMediaChannel()) === !0,
+        [q, W] = i.useState(L),
+        X = (0, o.e7)([j.Z], () => j.Z.getChannel(null == q ? void 0 : q.value)),
+        V = (null == X ? void 0 : X.isMediaChannel()) === !0,
         Y = i.useMemo(
             () => [
                 {
@@ -141,10 +141,10 @@ function G(e) {
                 },
                 {
                     value: g.oi.CHAT,
-                    name: (null == W ? void 0 : W.type) === S.d4z.GUILD_FORUM ? (V ? _.intl.string(_.t['1EgDpK']) : _.intl.string(_.t.x5Di7O)) : _.intl.string(_.t['R+dC4O'])
+                    name: (null == X ? void 0 : X.type) === S.d4z.GUILD_FORUM ? (V ? _.intl.string(_.t['1EgDpK']) : _.intl.string(_.t.x5Di7O)) : _.intl.string(_.t['R+dC4O'])
                 }
             ],
-            [null == W ? void 0 : W.type, V]
+            [null == X ? void 0 : X.type, V]
         ),
         [B, K] = i.useState(Z()),
         [Q, J] = i.useState(null != (n = null == A ? void 0 : A.title) ? n : ''),
@@ -161,21 +161,21 @@ function G(e) {
             return null == (e = N.Z.getNewMemberAction(null == A ? void 0 : A.channelId)) ? void 0 : e.icon;
         }),
         [ea, er] = i.useState(
-            null != ei && null != X
+            null != ei && null != q
                 ? y.ZP.getNewMemberActionIconURL({
-                      channelId: X.value,
+                      channelId: q.value,
                       icon: ei
                   })
                 : null
         ),
         eo = (0, p.Z)(ea),
         es = (0, p.Z)(el),
-        eu = null == Q || 0 === Q.length || null == ee || null == X,
+        eu = null == Q || 0 === Q.length || null == ee || null == q,
         ec = Object.values(B).flat().length > 0,
         ed = i.useCallback(() => {
-            if (null == X || null == ee || Q.length <= 0) return;
+            if (null == q || null == ee || Q.length <= 0) return;
             let e = {
-                    channelId: X.value,
+                    channelId: q.value,
                     title: Q,
                     description: '',
                     actionType: ee.value,
@@ -184,7 +184,7 @@ function G(e) {
                 },
                 n = ea !== eo || el !== es;
             (R(e, null != ea ? ea : null, n), D());
-        }, [R, D, Q, ee, X, el, ei, ea, eo, es]),
+        }, [R, D, Q, ee, q, el, ei, ea, eo, es]),
         em = i.useCallback(() => {
             (null == z || z(), D());
         }, [z, D]),
@@ -193,7 +193,7 @@ function G(e) {
                 (J(e),
                     K(
                         M({
-                            channelId: null == X ? void 0 : X.value,
+                            channelId: null == q ? void 0 : q.value,
                             title: e,
                             description: '',
                             actionType: null == ee ? void 0 : ee.value,
@@ -201,11 +201,11 @@ function G(e) {
                         })
                     ));
             },
-            [J, K, X, ee, el]
+            [J, K, q, ee, el]
         ),
         eh = i.useCallback(
             (e) => {
-                (q(e),
+                (W(e),
                     K(
                         M({
                             channelId: null == e ? void 0 : e.value,
@@ -216,14 +216,14 @@ function G(e) {
                         })
                     ));
             },
-            [q, K, Q, ee, el]
+            [W, K, Q, ee, el]
         ),
         ev = i.useCallback(
             (e) => {
                 (en(e),
                     K(
                         M({
-                            channelId: null == X ? void 0 : X.value,
+                            channelId: null == q ? void 0 : q.value,
                             title: Q,
                             description: '',
                             actionType: null == e ? void 0 : e.value,
@@ -231,7 +231,7 @@ function G(e) {
                         })
                     ));
             },
-            [en, K, X, Q, el]
+            [en, K, q, Q, el]
         ),
         eg = i.useCallback(
             (e) =>
@@ -353,7 +353,7 @@ function G(e) {
         ],
         [ed, ec, eu, D]
     );
-    return (0, t.jsxs)(u.IX, {
+    return (0, t.jsxs)(u.I, {
         transitionState: G,
         onClose: D,
         children: [
@@ -391,7 +391,7 @@ function G(e) {
                                 children: [_.intl.string(_.t.jVDc5e), (0, t.jsx)(O.Z, {})]
                             }),
                             (0, t.jsx)(d.VcW, {
-                                value: X,
+                                value: q,
                                 renderOptionPrefix: ex,
                                 options: eg,
                                 onChange: eh
@@ -455,7 +455,7 @@ function G(e) {
                                                             (l(), n());
                                                         }),
                                                         pickerIntention: T.Hz.COMMUNITY_CONTENT,
-                                                        channel: W
+                                                        channel: X
                                                     });
                                                 },
                                                 children: (e) =>
@@ -528,7 +528,7 @@ function G(e) {
                                 size: d.FXm.Sizes.NONE,
                                 value: null == ee ? void 0 : ee.value,
                                 onChange: ev,
-                                options: null == W ? Y : Y.map((e) => P(E({}, e), { disabled: !w(e.value, W) }))
+                                options: null == X ? Y : Y.map((e) => P(E({}, e), { disabled: !w(e.value, X) }))
                             }),
                             null != ee && B.actionType.length > 0
                                 ? B.actionType.map((e) =>

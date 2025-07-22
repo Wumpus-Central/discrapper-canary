@@ -240,7 +240,7 @@ function L(e) {
     return (0, n.jsx)('form', {
         onSubmit: ej,
         className: k.form,
-        children: (0, n.jsxs)(c.IX, {
+        children: (0, n.jsxs)(c.I, {
             transitionState: K,
             onClose: M,
             size: 'lg',

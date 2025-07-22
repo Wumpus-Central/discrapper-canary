@@ -20,7 +20,7 @@ let d = () =>
         var t, n;
         let p = (0, s.Dt)();
         return (0, r.jsxs)(
-            i.IX,
+            i.I,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

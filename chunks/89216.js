@@ -208,7 +208,7 @@ function k(e) {
             [P, a, k.length]
         );
     return 0 === u
-        ? (0, t.jsx)(c.IX, {
+        ? (0, t.jsx)(c.I, {
               onClose: a,
               transitionState: l,
               children: (0, t.jsx)(N, {

@@ -82,6 +82,7 @@ function u(e) {
             {
                 onRequestClose: C,
                 gradientColor: _,
+                caretConfig: p,
                 children: (0, i.jsxs)('div', {
                     ref: E,
                     children: [

@@ -81,7 +81,7 @@ function p(e) {
     var { size: t = 'md', gradientColor: n = 'purple', graphic: l, title: u, subtitle: _, actionBarInput: p, actions: h, children: m } = e,
         g = f(e, ['size', 'gradientColor', 'graphic', 'title', 'subtitle', 'actionBarInput', 'actions', 'children']);
     return (0, r.jsxs)(
-        i.IX,
+        i.I,
         d(c({}, g), {
             size: t,
             paddingSize: 'lg',

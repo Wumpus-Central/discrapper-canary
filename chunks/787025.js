@@ -114,7 +114,7 @@ function I(e) {
         { hideHeader: i } = e,
         a = y(e, ['hideHeader']);
     return (0, r.jsxs)(
-        o.IX,
+        o.I,
         b(g({}, a), {
             onClose: () => {
                 var e;

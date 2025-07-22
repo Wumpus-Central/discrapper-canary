@@ -328,7 +328,7 @@ function ea(e) {
                                                                                                   return r;
                                                                                               })(e, ['onClose']);
                                                                                           return (0, i.jsx)(
-                                                                                              o.IX,
+                                                                                              o.I,
                                                                                               ((t = es({ onClose: r }, s)),
                                                                                               (n = n =
                                                                                                   {

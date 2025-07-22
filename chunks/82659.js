@@ -83,7 +83,7 @@ function h(e) {
         E = _(e, ['size', 'title', 'subtitle', 'input', 'preview', 'actions', 'actionBarInput', 'children']);
     let b = null != t ? t : null != d || null != g ? 'md' : 'sm';
     return (0, r.jsxs)(
-        i.IX,
+        i.I,
         f(u({}, E), {
             size: b,
             children: [

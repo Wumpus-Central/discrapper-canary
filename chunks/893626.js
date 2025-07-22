@@ -125,8 +125,8 @@ function k(e) {
         U = null != (n = C.authorIds[0]) ? n : '',
         E = (0, s.e7)([g.ZP], () => (null != O ? g.ZP.getMember(O, U) : null)),
         H = (0, s.e7)([h.default], () => (null != E ? h.default.getUser(E.userId) : null)),
-        X = null != (a = null != (t = null == E ? void 0 : E.nick) ? t : null == H ? void 0 : H.username) ? a : '',
-        R = (function (e) {
+        R = null != (a = null != (t = null == E ? void 0 : E.nick) ? t : null == H ? void 0 : H.username) ? a : '',
+        X = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < m.ZR) return b.intl.formatToPlainString(b.t.Lj831N, { minLength: m.ZR });
@@ -144,12 +144,12 @@ function k(e) {
                     text: b.intl.string(b.t.R3BPHx),
                     onClick: G,
                     variant: 'primary',
-                    disabled: 0 === C.message.length || null != R
+                    disabled: 0 === C.message.length || null != X
                 }
             ],
-            [R, G, I, C.message.length]
+            [X, G, I, C.message.length]
         );
-    return (0, r.jsxs)(u.IX, {
+    return (0, r.jsxs)(u.I, {
         transitionState: k,
         onClose: I,
         children: [
@@ -176,7 +176,7 @@ function k(e) {
                             (0, r.jsx)(d.VcW, {
                                 value: {
                                     value: U,
-                                    label: X
+                                    label: R
                                 },
                                 renderOptionPrefix: T,
                                 options: S,
@@ -206,11 +206,11 @@ function k(e) {
                                 onChange: N,
                                 maxLength: m.W4
                             }),
-                            null != R
+                            null != X
                                 ? (0, r.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-danger',
-                                      children: R
+                                      children: X
                                   })
                                 : null
                         ]

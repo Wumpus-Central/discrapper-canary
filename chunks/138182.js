@@ -1,7 +1,5 @@
-r.d(t, { a: () => a });
-var n = r(818083),
-    i = r(772209);
-let l = (0, n.B)({
+r.d(t, { a: () => i });
+let n = (0, r(818083).B)({
         kind: 'user',
         id: '2025-02_voice_activity_status_mobile',
         label: 'Voice Activity Status (Mobile)',
@@ -14,17 +12,7 @@ let l = (0, n.B)({
             }
         ]
     }),
-    a = (e) => {
-        let { location: t, autoTrackExposure: r = !0 } = e,
-            n = (0, i.q)({
-                location: t,
-                autoTrackExposure: r
-            });
-        return l.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: r,
-                disable: n
-            }
-        );
+    i = (e) => {
+        let { location: t, autoTrackExposure: r = !0 } = e;
+        return n.useExperiment({ location: t }, { autoTrackExposure: r });
     };

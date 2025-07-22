@@ -322,7 +322,7 @@ function Z() {
     return (0, r.jsx)(A.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(A.j, {
-            transitionState: f.Dv.ENTERED,
+            transitionState: f.D.ENTERED,
             hideHeader: !0,
             children: (0, r.jsx)(G, {
                 guild: null == (e = n.state) ? void 0 : e.guild,
@@ -345,7 +345,7 @@ function H(e) {
     return (0, r.jsx)(A.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(A.j, {
-            transitionState: f.Dv.ENTERED,
+            transitionState: f.D.ENTERED,
             hideHeader: !0,
             title: C.intl.string(C.t.j2d6Ki),
             subtitle: l

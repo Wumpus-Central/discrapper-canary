@@ -1,7 +1,6 @@
 n.d(t, {
-    Dv: () => g,
-    IX: () => E,
-    aU: () => m
+    D: () => m,
+    I: () => g
 });
 var r = n(255367),
     i = n(73800),
@@ -9,61 +8,58 @@ var r = n(255367),
     o = n.n(a),
     s = n(42133),
     l = n(990547),
-    c = n(748780),
-    u = n(793030),
-    d = n(143450),
-    f = n(186325),
-    _ = n(507274),
-    p = n(667137),
-    h = n(946598);
-let m = 200;
-var g = (function (e) {
-    return ((e[(e.ENTERING = 0)] = 'ENTERING'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.EXITING = 2)] = 'EXITING'), (e[(e.EXITED = 3)] = 'EXITED'), (e[(e.HIDDEN = 4)] = 'HIDDEN'), e);
-})({});
-function E(e) {
-    let { transitionState: t, animationVariant: n = 'default', size: a = 'md', paddingSize: g = 'sm', fullScreenOnMobile: E = !0, returnRef: b, role: y = 'dialog', 'aria-label': O, onClose: v, contentOutsideContainer: I, children: T } = e,
-        S = i.useId(),
-        A = i.useMemo(
+    c = n(793030),
+    u = n(143450),
+    d = n(186325),
+    f = n(507274),
+    _ = n(667137),
+    p = n(985316),
+    h = n(946598),
+    m = (function (e) {
+        return ((e[(e.ENTERING = 0)] = 'ENTERING'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.EXITING = 2)] = 'EXITING'), (e[(e.EXITED = 3)] = 'EXITED'), (e[(e.HIDDEN = 4)] = 'HIDDEN'), e);
+    })({});
+function g(e) {
+    let { transitionState: t, animationVariant: n = 'default', size: a = 'md', paddingSize: m = 'sm', fullScreenOnMobile: g = !0, returnRef: E, role: b = 'dialog', 'aria-label': y, onClose: O, contentOutsideContainer: v, children: I } = e,
+        T = i.useId(),
+        S = i.useMemo(
             () => ({
-                id: S,
-                headingId: 'heading-'.concat(S),
-                onClose: v
+                id: T,
+                headingId: 'heading-'.concat(T),
+                onClose: O
             }),
-            [S, v]
+            [T, O]
         ),
-        N = 0 === t || 1 === t,
-        { reducedMotion: C } = i.useContext(f.S),
-        R = (0, d.q)(
+        A = 0 === t || 1 === t,
+        { reducedMotion: N } = i.useContext(d.S),
+        C = A || N.enabled || 'subtle' === n ? 'scale(1)' : 'scale(0.9)',
+        R = (0, u.q)(
             {
-                opacity: +!!N,
-                transform: N || C.enabled || 'subtle' === n ? 'scale(1)' : 'scale(0.7)',
-                config: {
-                    duration: m,
-                    easing: c.Z.Easing.out(c.Z.Easing.quad),
-                    clamp: !0
-                }
+                opacity: +!!A,
+                transform: C,
+                config: A ? p.jF : p.W$,
+                delay: 64 * !!A
             },
             'animate-always'
         );
-    return (0, r.jsx)(p.t.Provider, {
-        value: A,
-        children: (0, r.jsx)(_.V, {
-            id: S,
-            role: y,
-            'aria-label': O,
-            'aria-labelledby': null != O ? void 0 : A.headingId,
-            returnRef: b,
+    return (0, r.jsx)(_.t.Provider, {
+        value: S,
+        children: (0, r.jsx)(f.V, {
+            id: T,
+            role: b,
+            'aria-label': y,
+            'aria-labelledby': null != y ? void 0 : S.headingId,
+            returnRef: E,
             impressionType: l.ImpressionTypes.MODAL,
-            children: (0, r.jsx)(u.y5, {
+            children: (0, r.jsx)(c.y5, {
                 forceLevel: 1,
                 children: (0, r.jsxs)('div', {
-                    className: o()(h.outerContainer, { [h.fullScreenOnMobile]: E }),
+                    className: o()(h.outerContainer, { [h.fullScreenOnMobile]: g }),
                     children: [
-                        I,
+                        v,
                         (0, r.jsx)(s.animated.div, {
-                            className: o()(h.container, h['size-'.concat(a)], h['padding-size-'.concat(g)]),
+                            className: o()(h.container, h['size-'.concat(a)], h['padding-size-'.concat(m)]),
                             style: R,
-                            children: T
+                            children: I
                         })
                     ]
                 })

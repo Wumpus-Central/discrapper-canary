@@ -105,7 +105,7 @@ function y(t) {
                         N(f.L.PRIMARY));
                 }
             }),
-        (0, a.jsxs)(s.IX, {
+        (0, a.jsxs)(s.I, {
             transitionState: P,
             size: 'xl',
             onClose: async () => await N(),

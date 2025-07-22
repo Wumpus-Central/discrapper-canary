@@ -9,7 +9,7 @@ let a = r.createContext({
         setStep: () => {},
         premiumType: o.p9.TIER_0,
         onClose: () => {},
-        transitionState: i.Dv.ENTERING,
+        transitionState: i.D.ENTERING,
         premiumSubscription: {},
         analyticsLocations: [],
         analyticsLocation: void 0,

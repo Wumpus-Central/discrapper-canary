@@ -31,8 +31,8 @@ function b(e, n, l, a) {
 function f(e) {
     var n, l;
     let { transitionState: i, onClose: f, resourceChannel: N, guildId: Z, onSave: y, onDelete: G, onIconUpload: S } = e,
-        [X, P] = r.useState(null != (n = null == N ? void 0 : N.title) ? n : ''),
-        [U, B] = r.useState(null != (l = null == N ? void 0 : N.description) ? l : ''),
+        [P, U] = r.useState(null != (n = null == N ? void 0 : N.title) ? n : ''),
+        [X, B] = r.useState(null != (l = null == N ? void 0 : N.description) ? l : ''),
         [R, T] = r.useState(
             (function (e) {
                 if (null == e) return null;
@@ -53,10 +53,10 @@ function f(e) {
             var e, n;
             return (null != (n = null == (e = C.Z.getSettings()) ? void 0 : e.resourceChannels) ? n : []).map((e) => e.channelId);
         }),
-        w = X.length < h.n || null == R,
+        w = P.length < h.n || null == R,
         H = r.useCallback(() => {
-            null == R || X.length <= 0 || (y(b(R, X, U, W)), f());
-        }, [y, f, X, R, W, U]),
+            null == R || P.length <= 0 || (y(b(R, P, X, W)), f());
+        }, [y, f, P, R, W, X]),
         K = r.useCallback(() => {
             (null == G || G(), f());
         }, [G, f]),
@@ -97,9 +97,9 @@ function f(e) {
         ),
         E = r.useCallback(
             (e) => {
-                null != S && null != R && S(b(R, X, U), e);
+                null != S && null != R && S(b(R, P, X), e);
             },
-            [R, X, S, U]
+            [R, P, S, X]
         ),
         J = r.useCallback(
             () =>
@@ -127,7 +127,7 @@ function f(e) {
             ],
             [H, w, f]
         );
-    return (0, a.jsxs)(c.IX, {
+    return (0, a.jsxs)(c.I, {
         transitionState: i,
         onClose: f,
         children: [
@@ -180,8 +180,8 @@ function f(e) {
                                 children: [I.intl.string(I.t['lFy+aW']), (0, a.jsx)(k.Z, {})]
                             }),
                             (0, a.jsx)(u.oil, {
-                                value: X,
-                                onChange: P,
+                                value: P,
+                                onChange: U,
                                 placeholder: I.intl.string(I.t.XKUimJ),
                                 maxLength: h.am
                             })
@@ -197,7 +197,7 @@ function f(e) {
                                 children: I.intl.string(I.t.CnkilJ)
                             }),
                             (0, a.jsx)(u.Kx8, {
-                                value: U,
+                                value: X,
                                 onChange: B,
                                 placeholder: I.intl.string(I.t.na0V4O),
                                 maxLength: h.Vu
