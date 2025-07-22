@@ -63,8 +63,8 @@ function y(e) {
     let { guildId: t, transitionState: n, onClose: y, analyticsData: _ } = e,
         C = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         N = !!(null == C ? void 0 : C.features.has(h.oNc.INVITES_DISABLED)),
-        [E] = i.useState(!1),
-        [I, S] = i.useState(f.Fl),
+        [S] = i.useState(!1),
+        [I, E] = i.useState(f.Fl),
         T = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
         w = (0, p.BT)(C),
         P = (0, m.SG)(T) || N,
@@ -109,7 +109,7 @@ function y(e) {
                             placeholder: x.intl.string(x.t.vKYZzc),
                             options: (0, f.c1)(),
                             select: (e) => {
-                                (S(e), M(!0));
+                                (E(e), M(!0));
                             },
                             isSelected: (e) => e === I,
                             serialize: (e) => String(e)
@@ -201,14 +201,14 @@ function y(e) {
                                 }),
                                     y());
                             },
-                            loading: E,
+                            loading: S,
                             disabled: !B
                         }),
                         (0, r.jsx)(a.zxk, {
                             variant: 'secondary',
                             text: x.intl.string(x.t['ETE/oK']),
                             onClick: y,
-                            disabled: E
+                            disabled: S
                         })
                     ]
                 })

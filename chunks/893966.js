@@ -227,15 +227,17 @@ function X(e) {
         f = y(c),
         { memberIds: g, memberSupplementals: E } = u.reduce(
             (e, t) => {
-                let { member: n, source_invite_code: r, join_source_type: i, inviter_id: a } = t,
-                    o = n.user;
+                let { member: n, source_invite_code: r, join_source_type: i, join_source_application_id: a, join_source_channel_id: o, inviter_id: s } = t,
+                    l = n.user;
                 return (
-                    e.memberIds.push(o.id),
+                    e.memberIds.push(l.id),
                     e.memberSupplementals.push({
-                        userId: o.id,
+                        userId: l.id,
                         sourceInviteCode: r,
                         joinSourceType: i,
-                        inviterId: a
+                        joinSourceApplicationId: a,
+                        joinSourceChannelId: o,
+                        inviterId: s
                     }),
                     e
                 );

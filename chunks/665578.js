@@ -22,9 +22,9 @@ var r = n(255367),
     _ = n(454092),
     C = n(289465),
     N = n(981631),
-    E = n(689079),
+    S = n(689079),
     I = n(388032),
-    S = n(190434);
+    E = n(190434);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -221,9 +221,9 @@ function P(e) {
                 }),
             [L]
         ),
-        Y = R - E._n,
+        Y = R - S._n,
         X = Y >= 0,
-        $ = [
+        J = [
             {
                 buttonClick: K,
                 buttonText: I.intl.string(I.t['56jRn5']),
@@ -249,28 +249,28 @@ function P(e) {
                 : null,
             M
                 ? (0, r.jsxs)('div', {
-                      className: S.requiredPermissionsBanner,
+                      className: E.requiredPermissionsBanner,
                       children: [
                           (0, r.jsx)(d.d3s, {
                               size: 'sm',
                               color: 'currentColor',
-                              className: S.icon
+                              className: E.icon
                           }),
                           (0, r.jsx)('span', {
-                              className: S.message,
+                              className: E.message,
                               children: I.intl.format(I.t['2889Gh'], {})
                           }),
                           (0, r.jsx)(c.zx, {
                               color: c.zx.Colors.PRIMARY,
                               onClick: q,
                               size: c.zx.Sizes.SMALL,
-                              className: S.addButton,
+                              className: E.addButton,
                               children: I.intl.string(I.t['HO/oXl'])
                           })
                       ]
                   })
                 : null,
-            $.map((e, t) => {
+            J.map((e, t) => {
                 let n = (t) =>
                         (0, r.jsx)(
                             c.zx,
@@ -279,7 +279,7 @@ function P(e) {
                                 disabled: X || !B,
                                 onClick: e.buttonClick,
                                 size: c.zx.Sizes.TINY,
-                                className: S.addButton,
+                                className: E.addButton,
                                 children: e.buttonText
                             })
                         ),
@@ -290,7 +290,7 @@ function P(e) {
                         C.Z,
                         {
                             bar: (0, r.jsx)(d.ua7, {
-                                tooltipClassName: S.tooltip,
+                                tooltipClassName: E.tooltip,
                                 text: i,
                                 shouldShow: null != i,
                                 children: (e) => n(e)
@@ -298,7 +298,7 @@ function P(e) {
                             inModal: v,
                             title: e.title,
                             children: (0, r.jsx)('div', {
-                                className: v ? void 0 : S.listContainer,
+                                className: v ? void 0 : E.listContainer,
                                 children: (0, r.jsx)(y.Z, {
                                     guildId: O,
                                     commandId: l,

@@ -1,35 +1,35 @@
-r.d(t, {
+n.d(t, {
     AT: () => g,
     fC: () => _,
     gr: () => m,
     hQ: () => f
 });
-var n,
-    s = r(73800),
-    l = r(913527),
-    a = r.n(l),
-    i = r(442837),
-    o = r(493683),
-    c = r(336197),
-    u = r(131704),
-    d = r(592125),
-    h = r(981631),
-    p = r(388032),
-    f = (((n = {})[(n.LONG = 0)] = 'LONG'), (n[(n.SHORT = 1)] = 'SHORT'), n);
+var r,
+    s = n(73800),
+    l = n(913527),
+    a = n.n(l),
+    i = n(442837),
+    o = n(493683),
+    c = n(336197),
+    u = n(131704),
+    d = n(592125),
+    h = n(981631),
+    p = n(388032),
+    f = (((r = {})[(r.LONG = 0)] = 'LONG'), (r[(r.SHORT = 1)] = 'SHORT'), r);
 function g(e) {
-    let { dueAt: t, now: r, type: n } = e;
+    let { dueAt: t, now: n, type: r } = e;
     if (null == t)
         return {
             string: '',
             isOverdue: !1
         };
-    let s = 0 === n ? p.t.TjNWND : p.t.H4gnX1,
-        l = 0 === n ? p.t.haia19 : p.t['Uq7Y+/'],
-        i = r > t;
+    let s = 0 === r ? p.t.TjNWND : p.t.H4gnX1,
+        l = 0 === r ? p.t.haia19 : p.t['Uq7Y+/'],
+        i = n > t;
     return {
         dueInText: p.intl.formatToPlainString(i ? l : s, {
             duration: a()
-                .duration(t.getTime() - r.getTime(), 'millisecond')
+                .duration(t.getTime() - n.getTime(), 'millisecond')
                 .humanize()
         }),
         isOverdue: i

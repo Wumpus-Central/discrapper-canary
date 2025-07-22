@@ -1,124 +1,125 @@
-(r.d(t, {
-    M: () => m,
-    Z: () => S
+(n.d(t, {
+    M: () => _,
+    Z: () => y
 }),
-    r(415506),
-    r(781311),
-    r(388685));
-var n,
-    s = r(255367),
-    l = r(73800),
-    a = r(120356),
-    i = r.n(a),
-    o = r(481060),
-    c = r(405656),
-    u = r(388032),
-    d = r(953928);
-function h(e, t, r) {
+    n(415506),
+    n(781311),
+    n(388685));
+var r,
+    s = n(255367),
+    l = n(73800),
+    a = n(120356),
+    i = n.n(a),
+    o = n(481060),
+    c = n(579612),
+    u = n(405656),
+    d = n(388032),
+    h = n(953928);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                h(e, t, r[t]);
+            r.forEach(function (t) {
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function f(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function m(e) {
     (e.stopPropagation(), e.preventDefault());
 }
-function m(e, t, r) {
+function _(e, t, n) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
         tabIndex: -1,
-        'aria-selected': r
+        'aria-selected': n
     };
 }
-class _ extends (n = l.PureComponent) {
+class S extends (r = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: h, searchFavorites: g } = this.props;
-        if (e || h) return null;
-        let _ = -1 === n;
+        let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p } = this.props;
+        if (e || u) return null;
+        let m = -1 === r;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
                     o.P3F,
-                    f(p({ className: i()(d.queryContainer, { [d.focused]: _ }) }, m(r, -1, _)), {
+                    g(f({ className: i()(h.queryContainer, { [h.focused]: m }) }, _(n, -1, m)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
                             (0, s.jsx)('div', {
-                                className: d.queryText,
-                                children: g ? u.intl.string(u.t['6RVtLC']) : u.intl.format(u.t.ub226e, { value: t })
+                                className: h.queryText,
+                                children: p ? d.intl.string(d.t['6RVtLC']) : d.intl.format(d.t.ub226e, { value: t })
                             }),
                             (0, s.jsx)('div', {
-                                className: d.queryShortcut,
+                                className: h.queryShortcut,
                                 'aria-hidden': !0,
                                 children: (0, s.jsx)(o.M2$, {
                                     shortcut: 'return',
                                     dim: !0,
-                                    className: d.keyCombo
+                                    className: h.keyCombo
                                 })
                             })
                         ]
                     })
                 ),
-                g &&
+                p &&
                     (0, s.jsxs)(
                         o.P3F,
-                        f(p({ className: i()(d.queryContainer, { [d.focused]: _ }) }, m(r, -1, _)), {
+                        g(f({ className: i()(h.queryContainer, { [h.focused]: m }) }, _(n, -1, m)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
                                 (0, s.jsx)('div', {
-                                    className: d.queryText,
-                                    children: u.intl.string(u.t.FtSUxc)
+                                    className: h.queryText,
+                                    children: d.intl.string(d.t.FtSUxc)
                                 }),
                                 (0, s.jsx)('div', {
-                                    className: d.queryShortcut,
+                                    className: h.queryShortcut,
                                     'aria-hidden': !0,
                                     children: (0, s.jsx)(o.M2$, {
                                         shortcut: 'shift+return',
                                         dim: !0,
-                                        className: d.keyCombo
+                                        className: h.keyCombo
                                     })
                                 })
                             ]
@@ -128,62 +129,58 @@ class _ extends (n = l.PureComponent) {
         });
     }
     renderResults(e) {
-        let { numResults: t, renderNoResults: r, renderInitialState: n, renderResult: s, renderCustomResults: l } = this.props;
-        if (e) return n();
-        if (0 === t) return r();
+        let { numResults: t, renderNoResults: n, renderInitialState: r, renderResult: s, renderCustomResults: l } = this.props;
+        if (e) return r();
+        if (0 === t) return n();
         if (null != s) return Array.from({ length: t }).map((e, t) => s(t));
         if (null != l) return l();
         throw Error('SearchResultsPopout.renderResults: Flow should never allow this...');
     }
     render() {
-        let { query: e, focusedIndex: t, navId: r, width: n } = this.props,
+        let { query: e, focusedIndex: t, navId: n, width: r } = this.props,
             l = '' === e.trim();
         return (0, s.jsxs)('div', {
-            className: d.container,
-            style: { width: n },
-            onMouseDown: g,
+            className: h.container,
+            style: { width: r },
+            onMouseDown: m,
             role: 'listbox',
-            id: r,
+            id: n,
             tabIndex: -1,
-            'aria-activedescendant': ''.concat(r, '-').concat(t),
+            'aria-activedescendant': ''.concat(n, '-').concat(t),
             children: [this.renderQuery(l), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(l)]
         });
     }
     constructor(...e) {
         (super(...e),
-            h(this, 'renderSearchInSelectedChannelAutocomplete', () => {
-                let { navId: e, channel: t, showSearchInSelectedChannel: r, focusedIndex: n, onSelectSearchInSelectedChannel: l, renderChannel: a } = this.props;
-                if (!r || null == t) return null;
-                let i = (0, c.X3)(t),
-                    h = a(
-                        null,
-                        '',
-                        {
-                            channel: t,
-                            text: u.intl.formatToPlainString(u.t.LDpotL, { guildName: i })
-                        },
-                        d.channelContainer,
-                        d.searchResultNameContainer
-                    );
+            p(this, 'renderSearchInSelectedChannelAutocomplete', () => {
+                let { navId: e, channel: t, showSearchInSelectedChannel: n, focusedIndex: r, onSelectSearchInSelectedChannel: l } = this.props;
+                if (!n || null == t) return null;
+                let a = (0, u.X3)(t),
+                    i = (0, s.jsx)(c.ZP, {
+                        channel: t,
+                        text: d.intl.formatToPlainString(d.t.LDpotL, { guildName: a }),
+                        channelContainerClassName: h.channelContainer,
+                        textContainerClassName: h.searchResultNameContainer
+                    });
                 return (0, s.jsx)(
                     o.P3F,
-                    f(p({}, m(e, -1, -1 === n)), {
-                        className: d.inChannelOptionContainer,
+                    g(f({}, _(e, -1, -1 === r)), {
+                        className: h.inChannelOptionContainer,
                         onClick: l,
                         children: (0, s.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'interactive-normal',
-                            className: d.inChannelOption,
-                            children: u.intl.format(u.t.LDpotL, { guildName: h })
+                            className: h.inChannelOption,
+                            children: d.intl.format(d.t.LDpotL, { guildName: i })
                         })
                     })
                 );
             }));
     }
 }
-h(_, 'defaultProps', {
+p(S, 'defaultProps', {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 });
-let S = _;
+let y = S;

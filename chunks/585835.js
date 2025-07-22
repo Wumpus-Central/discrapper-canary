@@ -21,7 +21,7 @@ var r = n(255367),
     y = n(694095);
 function _(e) {
     var t, n, l;
-    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: E, iconClassName: I, iconWrapperClassName: S, details: T, integration: w, buttonText: P, buttonDisabled: Z, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
+    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: E, details: T, integration: w, buttonText: P, buttonDisabled: Z, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
         [B, U] = i.useState(!1),
         [W, H] = i.useState(!1),
         G = L && !R && !W && void 0 !== D && null != w,
@@ -138,15 +138,15 @@ function _(e) {
         }),
         Y = (0, p.LD)(D, !0),
         X = (null == w ? void 0 : w.application) != null && Object.keys(null != (l = null == (n = Y.result) || null == (t = n.sections[w.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
-        $ = (0, r.jsxs)(m.Z, {
+        J = (0, r.jsxs)(m.Z, {
             children: [
                 (0, r.jsx)(x.Z, {
                     name: _,
                     icon: C,
                     imageSrc: N,
-                    iconBackgroundColor: E,
+                    iconBackgroundColor: S,
                     iconClassName: I,
-                    iconWrapperClassName: S,
+                    iconWrapperClassName: E,
                     details: T,
                     isPremium: q.length > 0
                 }),
@@ -236,12 +236,12 @@ function _(e) {
               children: (0, r.jsx)(d.Zbd, {
                   editable: !0,
                   className: o()(y.card, y.clickable),
-                  children: $
+                  children: J
               })
           })
         : (0, r.jsx)(d.Zbd, {
               editable: !0,
               className: y.card,
-              children: $
+              children: J
           });
 }

@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-function E(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ let I = (e) => {
     let t = new g.Z(e);
     return O.ZP.getUserTag(t);
 };
-function S(e, t) {
+function E(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -83,7 +83,7 @@ function T(e) {
         [P, Z] = i.useState(!1),
         [A] = i.useState(new s.V7());
     i.useEffect(() => () => A.stop(), [A]);
-    let k = i.useMemo(() => S(n, n.avatar), [n]),
+    let k = i.useMemo(() => E(n, n.avatar), [n]),
         D = i.useCallback(() => {
             let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -92,7 +92,7 @@ function T(e) {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
-                    E(N({}, e), {
+                    S(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
                         confirmText: _.intl.string(_.t['W+K1Fh']),
                         cancelText: _.intl.string(_.t.xNhj0N),
@@ -153,7 +153,7 @@ function T(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => S(n, e),
+                                            makeURL: (e) => E(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0
                                         }),
@@ -236,7 +236,7 @@ function T(e) {
                                                         className: C.copyButton,
                                                         children: (0, r.jsx)(
                                                             c.zxk,
-                                                            E(
+                                                            S(
                                                                 N(
                                                                     {
                                                                         variant: 'secondary',

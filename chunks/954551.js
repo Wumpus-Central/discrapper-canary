@@ -1,50 +1,50 @@
-r.d(t, { Z: () => c });
-var n = r(255367);
-r(73800);
-var s = r(481060),
-    l = r(665149),
-    a = r(388035),
-    i = r(453473),
-    o = r(388032);
+n.d(t, { Z: () => c });
+var r = n(255367);
+n(73800);
+var s = n(481060),
+    l = n(665149),
+    a = n(388035),
+    i = n(453473),
+    o = n(388032);
 function c(e) {
-    let { onOpen: t, onClose: r, className: c } = e;
-    return (0, n.jsx)(i.P, {
+    let { onOpen: t, onClose: n, className: c } = e;
+    return (0, r.jsx)(i.P, {
         onOpen: t,
-        onClose: r,
+        onClose: n,
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, r, i, u) => {
+        children: (e, t, n, i, u) => {
             var d, h;
-            return (0, n.jsx)(a.U, {
+            return (0, r.jsx)(a.U, {
                 location: 'bookmarks-button',
                 targetElementRef: u,
-                children: (0, n.jsx)(
+                children: (0, r.jsx)(
                     l.JO,
                     ((d = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
                             ('function' == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    ((n = r[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    ((r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: n,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = n));
+                                            : (e[t] = r));
                                 }));
                         }
                         return e;
-                    })({}, r)),
+                    })({}, n)),
                     (h = h =
                         {
                             ref: u,
@@ -59,12 +59,12 @@ function c(e) {
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(h))
                         : (function (e, t) {
-                              var r = Object.keys(e);
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
-                              return r;
+                              return n;
                           })(Object(h)).forEach(function (e) {
                               Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(h, e));
                           }),

@@ -1,233 +1,176 @@
-(r.d(t, { ZP: () => er }), r(781311), r(35282), r(388685));
-var n = r(255367),
-    s = r(73800),
-    l = r(120356),
-    a = r.n(l),
-    i = r(512722),
-    o = r.n(i),
-    c = r(392711),
-    u = r.n(c),
-    d = r(913527),
-    h = r.n(d),
-    p = r(608787),
-    f = r(442837),
-    g = r(481060),
-    m = r(603263),
-    _ = r(542051),
-    S = r(349033),
-    y = r(999650),
-    b = r(933557),
-    x = r(471445),
-    E = r(266076),
-    C = r(778877),
-    O = r(592125),
-    I = r(271383),
-    v = r(699516),
-    j = r(250758),
-    R = r(768119),
-    T = r(944486),
-    P = r(914010),
-    N = r(246946),
-    A = r(594174),
-    Z = r(585483),
-    k = r(63063),
-    M = r(405656),
-    L = r(51144),
-    w = r(854709),
-    F = r(652399),
-    D = r(14091),
-    H = r(723642),
-    B = r(981631),
-    U = r(388032),
-    W = r(290082);
-function G(e, t, r) {
+(n.d(t, { ZP: () => ee }), n(781311), n(35282), n(388685));
+var r = n(255367),
+    s = n(73800),
+    l = n(120356),
+    a = n.n(l),
+    i = n(512722),
+    o = n.n(i),
+    c = n(392711),
+    u = n.n(c),
+    d = n(913527),
+    h = n.n(d),
+    p = n(608787),
+    f = n(442837),
+    g = n(481060),
+    m = n(603263),
+    _ = n(542051),
+    S = n(349033),
+    y = n(999650),
+    b = n(778877),
+    x = n(592125),
+    E = n(271383),
+    C = n(699516),
+    O = n(250758),
+    v = n(768119),
+    I = n(944486),
+    j = n(914010),
+    R = n(246946),
+    T = n(594174),
+    P = n(585483),
+    N = n(63063),
+    A = n(405656),
+    Z = n(51144),
+    k = n(854709),
+    M = n(652399),
+    L = n(14091),
+    w = n(579612),
+    F = n(723642),
+    D = n(981631),
+    H = n(388032),
+    B = n(290082);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-function q(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                G(e, t, r[t]);
+            r.forEach(function (t) {
+                U(e, t, n[t]);
             }));
     }
     return e;
 }
-function Q(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function z(e, t) {
+function q(e, t) {
     if (null == e) return {};
-    var r,
-        n,
+    var n,
+        r,
         s = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 s = {},
                 l = Object.keys(e);
-            for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (s[r] = e[r]));
+            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
             return s;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]));
+        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
     }
     return s;
 }
-let K = h()('2015-05-15').local(),
-    V = (0, p.Un)({
-        createPromise: () => Promise.resolve().then(r.bind(r, 547800)),
+let Q = h()('2015-05-15').local(),
+    z = (0, p.Un)({
+        createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
         webpackId: 547800
     }),
-    Y = (e, t, r) => {
+    K = (e, t, n) => {
         var s, l, a;
-        let { user: i, text: o } = r;
-        if (null == i) return (0, n.jsx)('strong', { children: o });
-        let c = A.default.getUser(i.id),
-            u = O.Z.getChannel(e),
-            d = (null == u ? void 0 : u.isPrivate()) ? v.Z.getNickname(i.id) : null,
-            h = null != (l = null != (s = I.ZP.getNick(e, i.id)) ? s : d) ? l : L.ZP.getName(i),
+        let { user: i, text: o } = n;
+        if (null == i) return (0, r.jsx)('strong', { children: o });
+        let c = T.default.getUser(i.id),
+            u = x.Z.getChannel(e),
+            d = (null == u ? void 0 : u.isPrivate()) ? C.Z.getNickname(i.id) : null,
+            h = null != (l = null != (s = E.ZP.getNick(e, i.id)) ? s : d) ? l : Z.ZP.getName(i),
             p = null != (a = null == c ? void 0 : c.getAvatarURL(e, 20)) ? a : i.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
         return [
-            (0, n.jsx)(
+            (0, r.jsx)(
                 'img',
                 {
                     alt: '',
-                    className: W.displayAvatar,
+                    className: B.displayAvatar,
                     src: p
                 },
                 'avatar-'.concat(t, '-').concat(i.id)
             ),
-            (0, n.jsx)(
+            (0, r.jsx)(
                 'span',
                 {
-                    className: W.displayedNick,
+                    className: B.displayedNick,
                     children: h
                 },
                 'display-nick-'.concat(t, '-').concat(i.id)
             ),
-            (0, n.jsx)(
+            (0, r.jsx)(
                 'span',
                 {
-                    className: W.displayUsername,
-                    children: L.ZP.getUserTag(i, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
+                    className: B.displayUsername,
+                    children: Z.ZP.getUserTag(i, { identifiable: R.Z.enabled && R.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(i.id)
             )
         ];
     },
-    J = (e, t, r, s, l) => {
-        let { channel: i, text: o } = r;
-        if (null == i) return (0, n.jsx)('strong', { children: o });
-        let c = O.Z.getChannel(i.parent_id);
-        return (0, n.jsxs)('div', {
-            className: a()(W.resultChannel, s),
-            children: [
-                (() => {
-                    if (i.isDM()) {
-                        let e = i.getRecipientId(),
-                            t = A.default.getUser(e);
-                        if (null == t) return null;
-                        let r = t.getAvatarURL(null, 20);
-                        return (0, n.jsx)(g.qEK, {
-                            'aria-hidden': !0,
-                            className: W.searchResultDMChannelIcon,
-                            size: g.EFr.SIZE_20,
-                            src: r
-                        });
-                    }
-                    {
-                        if (i.isGroupDM())
-                            return (0, n.jsx)(E.Z, {
-                                'aria-hidden': !0,
-                                className: W.searchResultGDMChannelIcon,
-                                channel: i,
-                                size: g.EFr.SIZE_20,
-                                experimentLocation: 'search_popout'
-                            });
-                        let e = (0, x.KS)(i);
-                        return null == e ? null : (0, n.jsx)(e, { className: W.searchResultChannelIcon });
-                    }
-                })(),
-                (0, n.jsxs)('div', {
-                    className: l,
-                    children: [
-                        i.isDM() || i.isGroupDM()
-                            ? (0, n.jsx)('span', {
-                                  className: W.searchResultDMChannelName,
-                                  children: (0, b.F6)(i, A.default, v.Z)
-                              })
-                            : (0, n.jsx)('strong', { children: (0, b.F6)(i, A.default, v.Z) }),
-                        (() => {
-                            if (i.isDM()) {
-                                let e = i.getRecipientId(),
-                                    t = A.default.getUser(e);
-                                return null == t
-                                    ? null
-                                    : (0, n.jsx)('span', {
-                                          className: W.searchResultDMUserName,
-                                          children: L.ZP.getUserTag(t, { identifiable: N.Z.enabled && N.Z.hidePersonalInformation ? 'never' : 'always' })
-                                      });
-                            }
-                            if (null != c)
-                                return (0, n.jsx)('span', {
-                                    className: W.searchResultChannelCategory,
-                                    children: (0, b.F6)(c, A.default, v.Z)
-                                });
-                        })()
-                    ]
-                })
-            ]
-        });
+    V = (e, t, n) => {
+        let { channel: s, text: l } = n;
+        return null == s
+            ? (0, r.jsx)('strong', { children: l })
+            : (0, r.jsxs)('div', {
+                  className: B.resultChannel,
+                  children: [(0, r.jsx)(w.MC, { channel: s }), (0, r.jsx)(w.GQ, { channel: s }), (0, r.jsx)(w.P, { channel: s })]
+              });
     },
-    X = (e) => {
+    Y = (e) => {
         let t,
-            r,
+            n,
             { id: s, searchId: l, result: i, group: o, className: c, role: u, tabIndex: d, 'aria-selected': h, onSelect: p, onFocus: f, showFilter: m, renderResult: _ } = e;
         if (m) {
             var S, b;
-            t = (0, n.jsx)('span', {
-                className: W.filter,
+            t = (0, r.jsx)('span', {
+                className: B.filter,
                 children: null != (b = null == (S = y.ZP[o]) ? void 0 : S.key) ? b : 'addme:'
             });
         }
         return (
-            (r = null != _ ? _(l, o, i) : (0, n.jsx)('strong', { children: i.text })),
-            (0, n.jsxs)(g.P3F, {
+            (n = null != _ ? _(l, o, i) : (0, r.jsx)('strong', { children: i.text })),
+            (0, r.jsxs)(g.P3F, {
                 tag: 'li',
-                className: a()(W.option, c),
+                className: a()(B.option, c),
                 onClick: p,
                 onFocus: f,
                 id: s,
@@ -235,60 +178,60 @@ let K = h()('2015-05-15').local(),
                 tabIndex: d,
                 'aria-selected': h,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: W.content,
-                        children: [t, r]
+                    (0, r.jsxs)('div', {
+                        className: B.content,
+                        children: [t, n]
                     }),
-                    (0, n.jsx)(g.qJs, {
+                    (0, r.jsx)(g.qJs, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: W.plusIcon
+                        className: B.plusIcon
                     })
                 ]
             })
         );
     },
-    $ = (e) =>
-        (0, n.jsx)(
-            X,
-            Q(q({}, e), {
-                className: W.user,
-                renderResult: Y
+    J = (e) =>
+        (0, r.jsx)(
+            Y,
+            G(W({}, e), {
+                className: B.user,
+                renderResult: K
             })
         ),
-    ee = {
-        [B.dCx.FILTER_FROM]: {
-            titleText: () => U.intl.string(U.t.catERE),
-            component: $
+    X = {
+        [D.dCx.FILTER_FROM]: {
+            titleText: () => H.intl.string(H.t.catERE),
+            component: J
         },
-        [B.dCx.FILTER_MENTIONS]: {
-            titleText: () => U.intl.string(U.t.l3K4Bw),
-            component: $
+        [D.dCx.FILTER_MENTIONS]: {
+            titleText: () => H.intl.string(H.t.l3K4Bw),
+            component: J
         },
-        [B.dCx.FILTER_HAS]: { titleText: () => U.intl.string(U.t.IC7gHB) },
-        [B.dCx.FILTER_FILE_TYPE]: { titleText: () => U.intl.string(U.t.SXIfV1) },
-        [B.dCx.FILTER_IN]: {
-            titleText: () => U.intl.string(U.t.vHyCgo),
-            component: (e) => (0, n.jsx)(X, Q(q({}, e), { renderResult: J }))
+        [D.dCx.FILTER_HAS]: { titleText: () => H.intl.string(H.t.IC7gHB) },
+        [D.dCx.FILTER_FILE_TYPE]: { titleText: () => H.intl.string(H.t.SXIfV1) },
+        [D.dCx.FILTER_IN]: {
+            titleText: () => H.intl.string(H.t.vHyCgo),
+            component: (e) => (0, r.jsx)(Y, G(W({}, e), { renderResult: V }))
         },
-        [B.rtL.DATES]: { titleText: () => U.intl.string(U.t.UiL5e3) },
-        [B.rtL.HISTORY]: {
-            titleText: () => U.intl.string(U.t.tSZd5e),
+        [D.rtL.DATES]: { titleText: () => H.intl.string(H.t.UiL5e3) },
+        [D.rtL.HISTORY]: {
+            titleText: () => H.intl.string(H.t.tSZd5e),
             groupTip(e) {
                 let { searchId: t } = e;
-                return (0, n.jsx)(g.ua7, {
-                    text: U.intl.string(U.t.dwAvX1),
+                return (0, r.jsx)(g.ua7, {
+                    text: H.intl.string(H.t.dwAvX1),
                     position: 'left',
                     children: (e) => {
-                        let { onMouseEnter: r, onMouseLeave: s } = e;
-                        return (0, n.jsx)(g.P3F, {
+                        let { onMouseEnter: n, onMouseLeave: s } = e;
+                        return (0, r.jsx)(g.P3F, {
                             onClick: () => (0, m.QQ)(t),
-                            onMouseEnter: r,
+                            onMouseEnter: n,
                             onMouseLeave: s,
-                            className: W.searchClearHistory,
-                            title: U.intl.string(U.t.dwAvX1),
-                            'aria-label': U.intl.string(U.t.dwAvX1),
-                            children: (0, n.jsx)(g.XHJ, {
+                            className: B.searchClearHistory,
+                            title: H.intl.string(H.t.dwAvX1),
+                            'aria-label': H.intl.string(H.t.dwAvX1),
+                            children: (0, r.jsx)(g.XHJ, {
                                 size: 'md',
                                 color: 'currentColor'
                             })
@@ -297,28 +240,28 @@ let K = h()('2015-05-15').local(),
                 });
             },
             component: function (e) {
-                var { onSelect: t, onFocus: r, result: l, showFilter: i, searchId: o, renderResult: c, group: u } = e,
-                    d = z(e, ['onSelect', 'onFocus', 'result', 'showFilter', 'searchId', 'renderResult', 'group']);
+                var { onSelect: t, onFocus: n, result: l, showFilter: i, searchId: o, renderResult: c, group: u } = e,
+                    d = q(e, ['onSelect', 'onFocus', 'result', 'showFilter', 'searchId', 'renderResult', 'group']);
                 let h = '',
                     p = s
                         .useMemo(() => {
                             var e;
-                            return ((e = l.text), M.kG(e).map((e, t, r) => (M.Fr(e, r[t + 1]) ? e : new S.WU(e.getFullMatch(), S.Xe))));
+                            return ((e = l.text), A.kG(e).map((e, t, n) => (A.Fr(e, n[t + 1]) ? e : new S.WU(e.getFullMatch(), S.Xe))));
                         }, [l.text])
                         .map((e) => {
                             let t = e.getFullMatch();
                             if ('' === t.trim()) return null;
-                            let r = B.TNx.test(e.type),
-                                s = B.KA4.test(e.type);
+                            let n = D.TNx.test(e.type),
+                                s = D.KA4.test(e.type);
                             return (
                                 (h += t),
-                                (0, n.jsx)(
+                                (0, r.jsx)(
                                     'span',
                                     {
-                                        className: a()(W.searchHistoryRow, {
-                                            [W.filter]: r,
-                                            [W.answer]: s,
-                                            [W.nonText]: !r && !s
+                                        className: a()(B.searchHistoryRow, {
+                                            [B.filter]: n,
+                                            [B.answer]: s,
+                                            [B.nonText]: !n && !s
                                         }),
                                         children: t
                                     },
@@ -326,25 +269,25 @@ let K = h()('2015-05-15').local(),
                                 )
                             );
                         });
-                return (0, n.jsxs)(
+                return (0, r.jsxs)(
                     g.P3F,
-                    Q(
-                        q(
+                    G(
+                        W(
                             {
-                                className: W.option,
+                                className: B.option,
                                 onClick: t,
-                                onFocus: r
+                                onFocus: n
                             },
                             d
                         ),
                         {
-                            'aria-label': U.intl.formatToPlainString(U.t.WoiGra, { suggestion: h }),
+                            'aria-label': H.intl.formatToPlainString(H.t.WoiGra, { suggestion: h }),
                             children: [
                                 p,
-                                (0, n.jsx)(g.qJs, {
+                                (0, r.jsx)(g.qJs, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: W.plusIcon
+                                    className: B.plusIcon
                                 })
                             ]
                         }
@@ -352,20 +295,20 @@ let K = h()('2015-05-15').local(),
                 );
             }
         },
-        [B.rtL.SEARCH_OPTIONS]: {
-            titleText: () => U.intl.string(U.t['8Zkyw8']),
+        [D.rtL.SEARCH_OPTIONS]: {
+            titleText: () => H.intl.string(H.t['8Zkyw8']),
             groupTip: () =>
-                (0, n.jsx)(g.ua7, {
-                    text: U.intl.string(U.t.hvVgAQ),
+                (0, r.jsx)(g.ua7, {
+                    text: H.intl.string(H.t.hvVgAQ),
                     position: 'left',
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, r.jsx)(
                             'div',
-                            Q(q({ className: W.searchLearnMore }, e), {
-                                children: (0, n.jsx)(g.eee, {
-                                    href: k.Z.getArticleURL(B.BhN.USING_SEARCH),
-                                    title: U.intl.string(U.t.hvVgAQ),
-                                    children: (0, n.jsx)(g.idN, {
+                            G(W({ className: B.searchLearnMore }, e), {
+                                children: (0, r.jsx)(g.eee, {
+                                    href: N.Z.getArticleURL(D.BhN.USING_SEARCH),
+                                    title: H.intl.string(H.t.hvVgAQ),
+                                    children: (0, r.jsx)(g.idN, {
                                         size: 'md',
                                         color: 'currentColor'
                                     })
@@ -375,15 +318,15 @@ let K = h()('2015-05-15').local(),
                 }),
             component: function (e) {
                 var t,
-                    { result: r, onSelect: s, onFocus: l, showFilter: i, searchId: o } = e,
-                    c = z(e, ['result', 'onSelect', 'onFocus', 'showFilter', 'searchId']);
-                let u = M.Ko(null != (t = r.token) ? t : '');
-                return (0, n.jsxs)(
+                    { result: n, onSelect: s, onFocus: l, showFilter: i, searchId: o } = e,
+                    c = q(e, ['result', 'onSelect', 'onFocus', 'showFilter', 'searchId']);
+                let u = A.Ko(null != (t = n.token) ? t : '');
+                return (0, r.jsxs)(
                     g.P3F,
-                    Q(
-                        q(
+                    G(
+                        W(
                             {
-                                className: a()(W.option, W.searchOption),
+                                className: a()(B.option, B.searchOption),
                                 onClick: s,
                                 onFocus: l
                             },
@@ -391,18 +334,18 @@ let K = h()('2015-05-15').local(),
                         ),
                         {
                             children: [
-                                (0, n.jsx)('span', {
-                                    className: W.filter,
-                                    children: r.text
+                                (0, r.jsx)('span', {
+                                    className: B.filter,
+                                    children: n.text
                                 }),
-                                (0, n.jsx)('span', {
-                                    className: a()({ [W.answer]: u }),
+                                (0, r.jsx)('span', {
+                                    className: a()({ [B.answer]: u }),
                                     children: u
                                 }),
-                                (0, n.jsx)(g.qJs, {
+                                (0, r.jsx)(g.qJs, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: W.plusIcon
+                                    className: B.plusIcon
                                 })
                             ]
                         }
@@ -411,22 +354,22 @@ let K = h()('2015-05-15').local(),
             }
         }
     };
-class et extends s.PureComponent {
+class $ extends s.PureComponent {
     componentDidUpdate(e, t) {
-        let { resultsState: r, totalResults: n } = this.props,
-            { mode: s } = r,
+        let { resultsState: n, totalResults: r } = this.props,
+            { mode: s } = n,
             { resultsState: l } = e;
-        null != s.filter && null == l.mode.filter && n > 0 ? this.setSelectedIndex(0) : s.type === B.Sap.FILTER_ALL && l.mode.type !== s.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
+        null != s.filter && null == l.mode.filter && r > 0 ? this.setSelectedIndex(0) : s.type === D.Sap.FILTER_ALL && l.mode.type !== s.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
     }
     setSelectedIndex(e) {
         this.setState({ selectedIndex: e }, () => this.props.onSelectedIndexChanged(e));
     }
     render() {
         let { selectedIndex: e } = this.state,
-            { navId: t, resultsState: r, totalResults: s, searchId: l, channel: a } = this.props;
-        return (0, n.jsx)(_.Z, {
+            { navId: t, resultsState: n, totalResults: s, searchId: l, channel: a } = this.props;
+        return (0, r.jsx)(_.Z, {
             numResults: s,
-            query: r.query,
+            query: n.query,
             navId: t,
             hideQuery: !this.shouldShowSearchQuery(),
             focusedIndex: e,
@@ -436,84 +379,83 @@ class et extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: l === B.I_8 && (0, w.X)(),
+            searchFavorites: l === D.I_8 && (0, k.X)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: a,
-            onSelectSearchInSelectedChannel: () => this.handleSearchInChannel({ searchAutocompleteSelectAction: H.Z.CLICK }),
-            renderChannel: J
+            onSelectSearchInSelectedChannel: () => this.handleSearchInChannel({ searchAutocompleteSelectAction: F.Z.CLICK })
         });
     }
     constructor(...e) {
         var t;
         (super(...e),
             (t = this),
-            G(this, 'state', {
+            U(this, 'state', {
                 dateHint: (0, y.Pr)(),
                 selectedIndex: -1
             }),
-            G(this, 'handleDateChange', (e) => {
-                ((0, F.bh)({
+            U(this, 'handleDateChange', (e) => {
+                ((0, M.bh)({
                     searchId: this.props.searchId,
-                    searchQuery: R.Z.getQuery(this.props.searchId),
-                    searchQueryString: (0, D.$)(this.props.searchId),
+                    searchQuery: v.Z.getQuery(this.props.searchId),
+                    searchQueryString: (0, L.$)(this.props.searchId),
                     searchTokenType: this.props.resultsState.mode.filter,
-                    searchAutocompleteGroup: B.rtL.DATES,
+                    searchAutocompleteGroup: D.rtL.DATES,
                     searchAutocompleteMode: this.props.resultsState.mode,
                     isSearchFilterPrefix: !1,
                     isSearchFilterAnswer: !0,
                     isSearchFilterComplete: !1,
-                    searchAutocompleteSelectAction: H.Z.CLICK
+                    searchAutocompleteSelectAction: F.Z.CLICK
                 }),
-                    this.setSearchQuery(e.format(B.b2L) + ' ', !0));
+                    this.setSearchQuery(e.format(D.b2L) + ' ', !0));
             }),
-            G(this, 'keepCurrentOptionSelected', (e, t) => {
-                let { selectedIndex: r } = this.state,
-                    { resultsState: n, totalResults: s } = this.props,
-                    { mode: l, autocompletes: a } = n,
+            U(this, 'keepCurrentOptionSelected', (e, t) => {
+                let { selectedIndex: n } = this.state,
+                    { resultsState: r, totalResults: s } = this.props,
+                    { mode: l, autocompletes: a } = r,
                     { resultsState: i } = e;
                 if (l.type !== i.mode.type) this.setSelectedIndex(-1);
-                else if (t.selectedIndex >= 0 && (t.selectedIndex === r || i.autocompletes.length !== a.length)) {
-                    let e = M.i3(i.autocompletes, i.mode)[t.selectedIndex],
-                        r = M.i3(a, l).findIndex((t) => {
-                            let { resultText: r } = t;
-                            return r === (null == e ? void 0 : e.resultText);
+                else if (t.selectedIndex >= 0 && (t.selectedIndex === n || i.autocompletes.length !== a.length)) {
+                    let e = A.i3(i.autocompletes, i.mode)[t.selectedIndex],
+                        n = A.i3(a, l).findIndex((t) => {
+                            let { resultText: n } = t;
+                            return n === (null == e ? void 0 : e.resultText);
                         });
-                    -1 !== r ? this.setSelectedIndex(r) : t.selectedIndex >= s && this.setSelectedIndex(s - 1);
+                    -1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= s && this.setSelectedIndex(s - 1);
                 }
             }),
-            G(this, 'focusNextOption', () => {
+            U(this, 'focusNextOption', () => {
                 this.focusOtherOption(1);
             }),
-            G(this, 'focusPreviousOption', () => {
+            U(this, 'focusPreviousOption', () => {
                 this.focusOtherOption(-1);
             }),
-            G(this, 'focusOtherOption', (e) => {
+            U(this, 'focusOtherOption', (e) => {
                 let { selectedIndex: t } = this.state,
-                    { resultsState: r } = this.props;
-                M.Fz(r.mode.filter) || this.focusOption(t + e);
+                    { resultsState: n } = this.props;
+                A.Fz(n.mode.filter) || this.focusOption(t + e);
             }),
-            G(this, 'focusOption', (e) => {
+            U(this, 'focusOption', (e) => {
                 let t = e,
-                    { autocompletes: r } = this.props.resultsState,
-                    n = this.shouldShowSearchQuery(),
+                    { autocompletes: n } = this.props.resultsState,
+                    r = this.shouldShowSearchQuery(),
                     s = this.shouldShowSearchInSelectedChannel();
-                (t < -1 || (!n && !s && t < 0) ? (t = M.BU(r) - 1) : (n || s) && t >= M.BU(r) ? (t = -1) : !n && t >= M.BU(r) && (t = 0), this.setSelectedIndex(t));
+                (t < -1 || (!r && !s && t < 0) ? (t = A.BU(n) - 1) : (r || s) && t >= A.BU(n) ? (t = -1) : !r && t >= A.BU(n) && (t = 0), this.setSelectedIndex(t));
             }),
-            G(this, 'selectOption', (e) => {
-                let { selectedIndex: t, searchAutocompleteSelectAction: r } = e,
-                    n = t;
-                if ((null == n && (n = this.state.selectedIndex), n < 0)) return !1;
+            U(this, 'selectOption', (e) => {
+                let { selectedIndex: t, searchAutocompleteSelectAction: n } = e,
+                    r = t;
+                if ((null == r && (r = this.state.selectedIndex), r < 0)) return !1;
                 let { autocompletes: s, mode: l } = this.props.resultsState;
-                if (M.Fz(l.filter)) return;
-                let a = M.i3(s, l);
-                if (n >= a.length) return !1;
-                let i = a[n],
+                if (A.Fz(l.filter)) return;
+                let a = A.i3(s, l);
+                if (r >= a.length) return !1;
+                let i = a[r],
                     o = a.length;
-                if (i.group === B.rtL.HISTORY) {
-                    let e = s.find((e) => (null == e ? void 0 : e.group) === B.rtL.HISTORY);
+                if (i.group === D.rtL.HISTORY) {
+                    let e = s.find((e) => (null == e ? void 0 : e.group) === D.rtL.HISTORY);
                     if (null != e) {
-                        let t = n - (o - e.results.length);
-                        (0, F.$z)({
+                        let t = r - (o - e.results.length);
+                        (0, M.$z)({
                             searchId: this.props.searchId,
                             searchHistoryIndex: t,
                             searchHistoryTotalResults: e.results.length
@@ -527,94 +469,94 @@ class et extends s.PureComponent {
                         a = (0, y._m)(i.group) ? i.group : null != l && (0, y._m)(l) ? l : null,
                         u = null != (c = null != s ? s : t) ? c : a,
                         h = i.result.channel,
-                        p = u === B.dCx.FILTER_IN && null != h && h.id === T.Z.getChannelId();
-                    (0, F.bh)({
+                        p = u === D.dCx.FILTER_IN && null != h && h.id === I.Z.getChannelId();
+                    (0, M.bh)({
                         searchId: this.props.searchId,
-                        searchQuery: R.Z.getQuery(this.props.searchId),
-                        searchQueryString: (0, D.$)(this.props.searchId),
+                        searchQuery: v.Z.getQuery(this.props.searchId),
+                        searchQueryString: (0, L.$)(this.props.searchId),
                         searchTokenType: u,
                         searchAutocompleteGroup: null != (d = i.group) ? d : l,
                         searchAutocompleteMode: this.props.resultsState.mode,
-                        searchAutocompleteResultIndex: n,
+                        searchAutocompleteResultIndex: r,
                         searchAutocompleteTotalResults: o,
-                        isSearchFilterPrefix: e === B.Sap.EMPTY,
-                        isSearchFilterAnswer: e === B.Sap.FILTER,
-                        isSearchFilterComplete: e === B.Sap.FILTER_ALL,
+                        isSearchFilterPrefix: e === D.Sap.EMPTY,
+                        isSearchFilterAnswer: e === D.Sap.FILTER,
+                        isSearchFilterComplete: e === D.Sap.FILTER_ALL,
                         isInFilterForSelectedChannel: p,
-                        searchAutocompleteSelectAction: r
+                        searchAutocompleteSelectAction: n
                     });
                 }
                 let h = (function (e) {
                     let t = !0,
-                        r = e.trim();
+                        n = e.trim();
                     return (
                         u()(y.ZP).forOwn((e) => {
-                            '' !== e.key && null != e.key && r === e.key && (t = !1);
+                            '' !== e.key && null != e.key && n === e.key && (t = !1);
                         }),
                         t
                     );
                 })(i.resultText);
                 return (this.setSearchQuery(i.resultText, h), !0);
             }),
-            G(this, 'setSearchQuery', function (e) {
-                let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    { mode: n, cursorScope: s } = t.props.resultsState,
+            U(this, 'setSearchQuery', function (e) {
+                let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    { mode: r, cursorScope: s } = t.props.resultsState,
                     l = 0;
-                null != n.token ? (l = n.token.start) : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
-                let a = null != n.token ? n.token.end : l;
-                (Z.S.dispatch(B.CkL.SET_SEARCH_QUERY, {
+                null != r.token ? (l = r.token.start) : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
+                let a = null != r.token ? r.token.end : l;
+                (P.S.dispatch(D.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: l,
                     focus: a,
-                    performSearch: r
+                    performSearch: n
                 }),
                     t.setSelectedIndex(-1));
             }),
-            G(this, 'shouldShowSearchQuery', () => {
+            U(this, 'shouldShowSearchQuery', () => {
                 let { mode: e } = this.props.resultsState;
-                return e.type !== B.Sap.FILTER && e.type !== B.Sap.EMPTY && !M.Fz(e.filter);
+                return e.type !== D.Sap.FILTER && e.type !== D.Sap.EMPTY && !A.Fz(e.filter);
             }),
-            G(this, 'shouldShowSearchInSelectedChannel', () => {
+            U(this, 'shouldShowSearchInSelectedChannel', () => {
                 let {
                     searchId: e,
                     resultsState: { mode: t }
                 } = this.props;
-                return e === B.aib.DMS && (0, M.R6)(e) && t.type === B.Sap.EMPTY && !M.Fz(t.filter);
+                return e === D.aib.DMS && (0, A.R6)(e) && t.type === D.Sap.EMPTY && !A.Fz(t.filter);
             }),
-            G(this, 'handleSearchInChannel', (e) => {
+            U(this, 'handleSearchInChannel', (e) => {
                 var t;
-                let { searchAutocompleteSelectAction: r } = e,
-                    { channel: n, searchId: s } = this.props;
-                if (!this.shouldShowSearchInSelectedChannel() || null == n) return !1;
-                (0, F.tA)({
+                let { searchAutocompleteSelectAction: n } = e,
+                    { channel: r, searchId: s } = this.props;
+                if (!this.shouldShowSearchInSelectedChannel() || null == r) return !1;
+                (0, M.tA)({
                     searchId: s,
-                    searchAutocompleteSelectAction: r
+                    searchAutocompleteSelectAction: n
                 });
-                let l = B.dCx.FILTER_IN,
+                let l = D.dCx.FILTER_IN,
                     a = y.ZP[l],
-                    i = (0, M.X3)(n),
+                    i = (0, A.X3)(r),
                     o = ''.concat(null != (t = null == a ? void 0 : a.key) ? t : l.toString(), ' ').concat(i);
                 return (this.setSearchQuery(o, !0), !0);
             }),
-            G(this, 'renderDatePicker', () =>
-                (0, n.jsxs)('div', {
-                    className: W.datePicker,
+            U(this, 'renderDatePicker', () =>
+                (0, r.jsxs)('div', {
+                    className: B.datePicker,
                     children: [
-                        (0, n.jsx)(V, {
+                        (0, r.jsx)(z, {
                             onSelect: this.handleDateChange,
                             maxDate: h()().local(),
-                            minDate: K
+                            minDate: Q
                         }),
-                        (0, n.jsxs)('div', {
-                            className: W.datePickerHint,
+                        (0, r.jsxs)('div', {
+                            className: B.datePickerHint,
                             children: [
-                                (0, n.jsxs)('span', {
-                                    className: W.hint,
-                                    children: [U.intl.string(U.t.fmtCi4), '\xA0']
+                                (0, r.jsxs)('span', {
+                                    className: B.hint,
+                                    children: [H.intl.string(H.t.fmtCi4), '\xA0']
                                 }),
-                                (0, n.jsx)(g.P3F, {
+                                (0, r.jsx)(g.P3F, {
                                     tag: 'span',
-                                    className: W.hintValue,
+                                    className: B.hintValue,
                                     onClick: this.handleHintClick,
                                     children: this.state.dateHint
                                 })
@@ -623,40 +565,40 @@ class et extends s.PureComponent {
                     ]
                 })
             ),
-            G(this, 'handleHintClick', () => {
+            U(this, 'handleHintClick', () => {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
-            G(this, 'performSearch', (e) => {
-                Z.S.dispatch(B.CkL.PERFORM_SEARCH, null != e ? e : {});
+            U(this, 'performSearch', (e) => {
+                P.S.dispatch(D.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
-            G(this, 'renderAutocompletes', () => {
+            U(this, 'renderAutocompletes', () => {
                 let { selectedIndex: e } = this.state,
-                    { navId: t, searchId: r } = this.props,
+                    { navId: t, searchId: n } = this.props,
                     { autocompletes: s, mode: l } = this.props.resultsState;
-                if (M.Fz(l.filter)) return this.renderDatePicker();
+                if (A.Fz(l.filter)) return this.renderDatePicker();
                 let a = -1;
                 return s.map((s) => {
                     var i, o, c;
                     let u, d;
                     if (null == s || 0 === s.results.length) return null;
-                    let h = null != (i = ee[s.group]) ? i : {};
+                    let h = null != (i = X[s.group]) ? i : {};
                     null != h.titleText &&
                         ((d = ''.concat(s.group, '-header')),
-                        (u = (0, n.jsx)('div', {
+                        (u = (0, r.jsx)('div', {
                             id: d,
-                            className: W.header,
+                            className: B.header,
                             children: h.titleText()
                         })));
                     let p = null != (o = h.groupTip) ? o : null,
-                        f = null != p ? (0, n.jsx)(p, { searchId: r }) : null,
-                        g = null != (c = h.component) ? c : X,
-                        m = l.type === B.Sap.FILTER_ALL;
-                    return (0, n.jsxs)(
+                        f = null != p ? (0, r.jsx)(p, { searchId: n }) : null,
+                        g = null != (c = h.component) ? c : Y,
+                        m = l.type === D.Sap.FILTER_ALL;
+                    return (0, r.jsxs)(
                         'ul',
                         {
                             role: 'group',
                             'aria-labelledby': d,
-                            className: W.resultsGroup,
+                            className: B.resultsGroup,
                             children: [
                                 u,
                                 f,
@@ -664,17 +606,17 @@ class et extends s.PureComponent {
                                     var i, o;
                                     if (null == l || null == s) return null;
                                     let c = e === (a += 1);
-                                    return (0, n.jsx)(
+                                    return (0, r.jsx)(
                                         g,
-                                        q(
+                                        W(
                                             {
-                                                searchId: r,
+                                                searchId: n,
                                                 group: null != (i = l.group) ? i : s.group,
                                                 result: l,
                                                 showFilter: m,
                                                 onSelect: this.selectOption.bind(null, {
                                                     selectedIndex: a,
-                                                    searchAutocompleteSelectAction: H.Z.CLICK
+                                                    searchAutocompleteSelectAction: F.Z.CLICK
                                                 }),
                                                 onFocus: this.focusOption.bind(null, a)
                                             },
@@ -694,21 +636,21 @@ class et extends s.PureComponent {
             }));
     }
 }
-let er = s.forwardRef((e, t) => {
-    let r = (0, C.U)({ location: 'SearchPopout' }),
-        [s, l, a, i] = (0, f.Wu)([P.Z, T.Z, j.Z, O.Z], () => {
-            let e = P.Z.getGuildId(),
-                t = T.Z.getChannelId(),
-                n = O.Z.getChannel(t),
-                s = null != e ? e : r ? B.aib.DMS : t;
+let ee = s.forwardRef((e, t) => {
+    let n = (0, b.U)({ location: 'SearchPopout' }),
+        [s, l, a, i] = (0, f.Wu)([j.Z, I.Z, O.Z, x.Z], () => {
+            let e = j.Z.getGuildId(),
+                t = I.Z.getChannelId(),
+                r = x.Z.getChannel(t),
+                s = null != e ? e : n ? D.aib.DMS : t;
             o()(null != s, 'SearchPopout.getStateFromStores - invalid searchId');
-            let l = j.Z.getState(s),
-                a = M.BU(l.autocompletes);
-            return [s, l, a, n];
+            let l = O.Z.getState(s),
+                a = A.BU(l.autocompletes);
+            return [s, l, a, r];
         });
-    return (0, n.jsx)(
-        et,
-        Q(q({}, e), {
+    return (0, r.jsx)(
+        $,
+        G(W({}, e), {
             searchId: s,
             resultsState: l,
             totalResults: a,

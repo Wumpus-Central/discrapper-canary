@@ -3445,6 +3445,7 @@ var nm = (function (e) {
             (e.DISMISSIBLE_CONTENT_SHOWN = 'dismissible_content_shown'),
             (e.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN = 'dismissible_content_shown_before_connection_open'),
             (e.DISMISSIBLE_CONTENT_DISMISSED = 'dismissible_content_dismissed'),
+            (e.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN = 'dismissible_content_dismissed_before_connection_open'),
             (e.DISMISSIBLE_CONTENT_REJECTED = 'dismissible_content_rejected'),
             (e.PREMIUM_CHANGELOG_CTA_CLICKED = 'premium_changelog_cta_clicked'),
             (e.JUMP = 'jump'),

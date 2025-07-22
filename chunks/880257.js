@@ -1,9 +1,9 @@
-n.d(e, { Z: () => l });
-var i = n(442837),
-    r = n(594174);
-function l() {
-    return (0, i.e7)([r.default], () => {
+n.d(e, { Z: () => a });
+var r = n(442837),
+    l = n(594174);
+function a() {
+    return (0, r.e7)([l.default], () => {
         var t;
-        return null == (t = r.default.getCurrentUser()) ? void 0 : t.nsfwAllowed;
+        return null == (t = l.default.getCurrentUser()) ? void 0 : t.nsfwAllowed;
     });
 }

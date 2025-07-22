@@ -5,22 +5,22 @@ var i = n(255367),
     s = n.n(o),
     E = n(755721),
     r = n(481060),
-    _ = n(788080),
-    a = n(81643),
-    I = n(469775),
+    I = n(788080),
+    _ = n(81643),
+    a = n(469775),
     c = n(388032),
     N = n(23525);
 let A = function (e) {
     let { onClose: t, onComplete: n, onCancel: o, transitionState: A, webviewUrl: L, useV1: S = !1 } = e,
-        u = (0, _.GE)(),
+        u = (0, I.GE)(),
         T = l.useCallback(() => {
             (n(), t());
         }, [n, t]),
-        d = l.useCallback(() => {
-            (0, r.nfh)(I.zJ) && T();
+        C = l.useCallback(() => {
+            (0, r.nfh)(a.zJ) && T();
         }, [T]);
-    (0, a.F5)(d);
-    let C = l.useCallback(
+    (0, _.F5)(C);
+    let d = l.useCallback(
         (e) => {
             if (u && '' !== L) {
                 var t;
@@ -32,17 +32,18 @@ let A = function (e) {
     return (
         l.useEffect(
             () => (
-                window.addEventListener('message', C),
+                window.addEventListener('message', d),
                 () => {
-                    window.removeEventListener('message', C);
+                    window.removeEventListener('message', d);
                 }
             ),
-            [C]
+            [d]
         ),
         (0, i.jsxs)(r.Y0X, {
             transitionState: A,
             className: N.root,
             parentComponent: 'AgeVerificationModal',
+            size: r.CgR.MEDIUM,
             children: [
                 (0, i.jsxs)(r.hzk, {
                     className: s()(N.content, { [N.fullbleed]: !S }),
