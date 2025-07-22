@@ -1,71 +1,71 @@
 t.d(r, { Z: () => y });
 var n = t(255367),
-    a = t(120356),
-    i = t.n(a),
+    i = t(120356),
+    a = t.n(i),
     s = t(442837),
     l = t(755721),
     o = t(481060),
-    d = t(510918),
-    c = t(494620),
+    c = t(510918),
+    d = t(494620),
     u = t(63063),
-    f = t(434404),
-    m = t(999382),
-    p = t(981631),
-    h = t(195196),
-    x = t(388032),
-    g = t(602268);
+    m = t(434404),
+    p = t(999382),
+    h = t(981631),
+    f = t(195196),
+    g = t(388032),
+    x = t(602268);
 let y = function (e) {
-    let { className: r, guildId: t, tag: a, badge: y, primaryColor: j, secondaryColor: v, isDisabled: b = !1 } = e,
-        C = (0, s.e7)([m.Z], () => m.Z.getProps().originalProfile),
-        N = null != C && C.tag !== a;
+    let { className: r, guildId: t, tag: i, badge: y, primaryColor: j, secondaryColor: v, isDisabled: C = !1 } = e,
+        b = (0, s.e7)([p.Z], () => p.Z.getProps().originalProfile),
+        N = null != b && b.tag !== i;
     return (0, n.jsxs)('div', {
         className: r,
         children: [
             (0, n.jsx)(o.vwX, {
-                className: g.sectionTitle,
-                children: x.intl.string(h.default['tN+8pK'])
+                className: x.sectionTitle,
+                children: g.intl.string(f.default['tN+8pK'])
             }),
             (0, n.jsxs)('div', {
-                className: g.tagContainer,
+                className: x.tagContainer,
                 children: [
                     (0, n.jsx)('div', {
-                        className: g.tagInputContainer,
+                        className: x.tagInputContainer,
                         children: (0, n.jsx)(l.Is, {
-                            className: g.tagInputWrapper,
-                            inputClassName: i()(g.tagInput, 'heading-sm/semibold'),
+                            className: x.tagInputWrapper,
+                            inputClassName: a()(x.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
-                            prefixElement: (0, n.jsx)(d.v, {
+                            prefixElement: (0, n.jsx)(c.v, {
                                 badge: y,
                                 width: 40,
                                 height: 40,
                                 primaryTintColor: j,
                                 secondaryTintColor: v
                             }),
-                            disabled: b,
-                            value: null != a ? a : '',
+                            disabled: C,
+                            value: null != i ? i : '',
                             onChange: function (e) {
-                                f.Z.updateGuildProfile(t, { tag: e });
+                                m.Z.updateGuildProfile(t, { tag: e });
                             }
                         })
                     }),
                     (0, n.jsx)('div', {
-                        className: g.tagTooltip,
+                        className: x.tagTooltip,
                         children: (0, n.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: x.intl.string(h.default.CrHXHh)
+                            children: g.intl.string(f.default.CrHXHh)
                         })
                     })
                 ]
             }),
             N &&
-                (0, n.jsx)(c.Z, {
-                    className: g.tagChangeInfoBox,
+                (0, n.jsx)(d.Z, {
+                    className: x.tagChangeInfoBox,
                     children: (0, n.jsx)(o.Text, {
                         variant: 'text-xs/medium',
-                        children: x.intl.format(h.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS) })
+                        children: g.intl.format(f.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(h.BhN.SERVER_TAGS) })
                     })
                 })
         ]

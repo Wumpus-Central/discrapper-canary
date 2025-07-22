@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,12 +18,12 @@ var r = n(255367),
     E = n(358595),
     x = n(981631),
     v = n(388032),
-    C = n(583136);
-function y(e) {
+    y = n(583136);
+function C(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         p = i.useRef(null),
         [f, h] = i.useState(!0),
-        [y, j] = i.useState(!1),
+        [C, j] = i.useState(!1),
         I = t.state === x.r2o.ACCEPTING,
         S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
@@ -32,46 +32,46 @@ function y(e) {
     }, [j]);
     let T = (0, m.PC)(t),
         N = i.useCallback(() => {
-            y && f && h(!1);
-        }, [f, y]),
+            C && f && h(!1);
+        }, [f, C]),
         P = i.useCallback(() => {
-            y && (f || h(!0));
-        }, [f, y]),
+            C && (f || h(!0));
+        }, [f, C]),
         A = i.useMemo(() => {
             var e;
-            return y && (null == (e = p.current) ? void 0 : e.clientHeight) != null
+            return C && (null == (e = p.current) ? void 0 : e.clientHeight) != null
                 ? {
                       height: f ? 292 : p.current.clientHeight + 36 + 48,
                       transition: S ? void 0 : 'height 0.2s ease'
                   }
                 : {};
-        }, [f, y, S]);
+        }, [f, C, S]);
     return null == T
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: a()(C.guildInviteContainer, { [C.clickable]: y && f }),
+              className: a()(y.guildInviteContainer, { [y.clickable]: C && f }),
               onClick: N,
               style: A,
               children: [
                   (0, r.jsxs)('div', {
-                      className: C.cardHeightMeasure,
+                      className: y.cardHeightMeasure,
                       ref: p,
                       children: [
                           (0, r.jsx)(b.Z7, {
                               profile: T,
-                              className: C.banner
+                              className: y.banner
                           }),
                           (0, r.jsx)(b.N3, { profile: T }),
                           (0, r.jsx)(_.Z, { profile: T }),
                           (0, r.jsx)(g.E, {
                               profile: T,
-                              className: C.mainContent
+                              className: y.mainContent
                           })
                       ]
                   }),
-                  y && !f
+                  C && !f
                       ? (0, r.jsx)('div', {
-                            className: C.hideDetailsButtonContainer,
+                            className: y.hideDetailsButtonContainer,
                             children: (0, r.jsx)(s.Avr, {
                                 textVariant: 'text-xs/medium',
                                 variant: 'secondary',
@@ -82,13 +82,13 @@ function y(e) {
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: a()(C.footer, { [C.floatingFooter]: y }),
+                      className: a()(y.footer, { [y.floatingFooter]: C }),
                       children: [
-                          y && f ? (0, r.jsx)('div', { className: C.gradient }) : null,
+                          C && f ? (0, r.jsx)('div', { className: y.gradient }) : null,
                           (0, r.jsx)('div', {
-                              className: a()(C.footerContent, { [C.collapsedFooterContent]: y && f }),
+                              className: a()(y.footerContent, { [y.collapsedFooterContent]: C && f }),
                               children: (0, r.jsx)('div', {
-                                  className: C.buttonContainer,
+                                  className: y.buttonContainer,
                                   children: (0, r.jsx)(O, {
                                       invite: t,
                                       profile: T,

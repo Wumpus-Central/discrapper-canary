@@ -1,16 +1,36 @@
-l.d(t, {
-    Cl: () => o,
-    ey: () => i
+r.d(t, {
+    Cl: () => c,
+    ey: () => d,
+    pM: () => g
 });
-var n = l(149765),
-    s = l(900089),
-    a = l(700785),
-    r = l(981631);
-l(388032);
-let o = 371,
-    i = 30,
-    u = a.TP;
-n.Od(u, r.Plq.MENTION_EVERYONE);
-let h = n.$e(u, r.Plq.VIEW_AUDIT_LOG, r.Plq.MANAGE_NICKNAMES, r.Plq.KICK_MEMBERS, r.Plq.BAN_MEMBERS, r.Plq.MANAGE_MESSAGES, r.Plq.MUTE_MEMBERS, r.Plq.DEAFEN_MEMBERS, r.Plq.MOVE_MEMBERS, r.Plq.PRIORITY_SPEAKER, r.Plq.MODERATE_MEMBERS),
-    c = n.$e(h, r.Plq.MANAGE_CHANNELS, r.Plq.MANAGE_THREADS, r.Plq.MANAGE_ROLES, r.Plq.MANAGE_GUILD_EXPRESSIONS, r.Plq.MANAGE_GUILD, r.Plq.MANAGE_WEBHOOKS, r.Plq.SEND_TTS_MESSAGES);
-(n.IH(c, r.Plq.VIEW_GUILD_ANALYTICS), (0, s.Fw)('BRAND_500'), a.Hn, (0, s.Fw)('GREEN_360'), (0, s.Fw)('YELLOW_300'), (0, s.Fw)('RED_400'));
+var l = r(149765),
+    n = r(900089),
+    o = r(700785),
+    i = r(946724),
+    a = r(981631),
+    s = r(141006),
+    u = r(388032);
+let c = 371,
+    d = 30,
+    E = o.TP;
+l.Od(E, a.Plq.MENTION_EVERYONE);
+let f = l.$e(E, a.Plq.VIEW_AUDIT_LOG, a.Plq.MANAGE_NICKNAMES, a.Plq.KICK_MEMBERS, a.Plq.BAN_MEMBERS, a.Plq.MANAGE_MESSAGES, a.Plq.MUTE_MEMBERS, a.Plq.DEAFEN_MEMBERS, a.Plq.MOVE_MEMBERS, a.Plq.PRIORITY_SPEAKER, a.Plq.MODERATE_MEMBERS),
+    _ = l.$e(f, a.Plq.MANAGE_CHANNELS, a.Plq.MANAGE_THREADS, a.Plq.MANAGE_ROLES, a.Plq.MANAGE_GUILD_EXPRESSIONS, a.Plq.MANAGE_GUILD, a.Plq.MANAGE_WEBHOOKS, a.Plq.SEND_TTS_MESSAGES);
+(l.IH(_, a.Plq.VIEW_GUILD_ANALYTICS), (0, n.Fw)('BRAND_500'), o.Hn, (0, n.Fw)('GREEN_360'), (0, n.Fw)('YELLOW_300'), (0, n.Fw)('RED_400'));
+let g = [
+    {
+        id: i.g.SOLID,
+        colors: { primary_color: a.p6O },
+        labelString: u.t['8Qyaho']
+    },
+    {
+        id: i.g.GRADIENT,
+        colors: s.Eg,
+        labelString: u.t.XpWmJy
+    },
+    {
+        id: i.g.HOLOGRAPHIC,
+        colors: s.SK,
+        labelString: u.t.QTKppa
+    }
+];

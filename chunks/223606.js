@@ -41,11 +41,11 @@ let g = {},
     v = (e) => {
         (null != g[e] && delete g[e], h++);
     };
-function C(e) {
+function y(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return (E(t, n), !0);
 }
-function y(e) {
+function C(e) {
     var t;
     let { channelId: n, messages: r } = e,
         i = null == (t = s.Z.getChannel(n)) ? void 0 : t.getGuildId();
@@ -99,16 +99,16 @@ let j = new O(l.Z, {
     CONNECTION_OPEN: function (e) {
         return 0 !== Object.keys(g).length && ((g = {}), h++, !0);
     },
-    LOAD_MESSAGES_SUCCESS: y,
-    LOCAL_MESSAGES_LOADED: y,
+    LOAD_MESSAGES_SUCCESS: C,
+    LOCAL_MESSAGES_LOADED: C,
     MESSAGE_CREATE: function (e) {
         let { guildId: t, message: n } = e;
         if (null == t || n.type !== m.uaV.AUTO_MODERATION_ACTION) return !1;
         let r = (0, o.e5)(n);
         return !!(0, p.nY)(r) && !!(0, p.OP)(r) && ((b[t] = r.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: C,
-    MESSAGE_EDIT_FAILED_AUTOMOD: C,
+    MESSAGE_SEND_FAILED_AUTOMOD: y,
+    MESSAGE_EDIT_FAILED_AUTOMOD: y,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
         return (v(t), !0);

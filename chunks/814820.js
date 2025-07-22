@@ -1,4 +1,4 @@
-(n.d(t, { f: () => C }), n(388685));
+(n.d(t, { f: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -61,7 +61,7 @@ let v = (e) => {
                   })
         });
     },
-    C = (e) => {
+    y = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
             a = (0, l.e7)([f.default, m.Z, p.Z, d.ZP], () => {

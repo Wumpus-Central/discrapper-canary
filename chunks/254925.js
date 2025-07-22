@@ -1,28 +1,28 @@
 t.d(r, {
     QV: () => R,
-    ZP: () => O,
-    go: () => _
+    ZP: () => k,
+    go: () => O
 });
 var n = t(255367),
-    a = t(73800),
-    i = t(580685),
+    i = t(73800),
+    a = t(580685),
     s = t(442837),
     l = t(704215),
     o = t(481060),
-    d = t(100527),
-    c = t(266454),
+    c = t(100527),
+    d = t(266454),
     u = t(314852),
-    f = t(65361),
-    m = t(731722),
-    p = t(441536),
-    h = t(494620),
-    x = t(434404),
-    g = t(999382),
+    m = t(65361),
+    p = t(731722),
+    h = t(441536),
+    f = t(494620),
+    g = t(434404),
+    x = t(999382),
     y = t(70086),
     j = t(835887),
     v = t(388661),
-    b = t(500230),
-    C = t(58909),
+    C = t(500230),
+    b = t(58909),
     N = t(742409),
     S = t(981631),
     I = t(921944),
@@ -31,7 +31,7 @@ var n = t(255367),
     Z = t(388032),
     T = t(602268);
 let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKULL, P.x_.MOON, P.x_.LIGHTNING, P.x_.COMPASS, P.x_.TOADSTOOL],
-    _ = [
+    O = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -85,17 +85,17 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
             secondary: '#cccccc'
         }
     ],
-    O = function () {
+    k = function () {
         var e, r, t, P;
         (0, Z.useSyncMessages)(E.messagesLoader);
-        let O = (0, s.e7)([g.Z], () => g.Z.getGuild()),
-            k = (0, s.e7)([g.Z], () => g.Z.getGuildProfile()),
-            { fetchGuildProfile: w, fetchStatus: G } = (0, f.u)(null == O ? void 0 : O.id);
+        let k = (0, s.e7)([x.Z], () => x.Z.getGuild()),
+            _ = (0, s.e7)([x.Z], () => x.Z.getGuildProfile()),
+            { fetchGuildProfile: w, fetchStatus: G } = (0, m.u)(null == k ? void 0 : k.id);
         if (
-            (a.useEffect(() => {
-                (0, c.Q3)(l.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: I.L.AUTO });
+            (i.useEffect(() => {
+                (0, d.Q3)(l.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: I.L.AUTO });
             }, []),
-            a.useEffect(() => {
+            i.useEffect(() => {
                 G === u.a.NOT_FETCHED && w();
             }, [w, G]),
             G !== u.a.FETCHED)
@@ -104,20 +104,20 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                 className: T.spinnerContainer,
                 children: (0, n.jsx)(o.$jN, {})
             });
-        if (null == O || null == k) return null;
-        let A = i.Y.VISIBLE.has(k.visibility),
-            L = (0, m.up)(O),
-            F = !L || (null == k ? void 0 : k.tag) == null,
-            D = null != (e = k.badge) ? e : R[0],
-            B = null != (r = k.badgeColorPrimary) ? r : _[0].primary,
-            M = null != (t = k.badgeColorSecondary) ? t : _[0].secondary,
+        if (null == k || null == _) return null;
+        let A = a.Y.VISIBLE.has(_.visibility),
+            L = (0, p.up)(k),
+            F = !L || (null == _ ? void 0 : _.tag) == null,
+            D = null != (e = _.badge) ? e : R[0],
+            B = null != (r = _.badgeColorPrimary) ? r : O[0].primary,
+            M = null != (t = _.badgeColorSecondary) ? t : O[0].secondary,
             U = (0, n.jsxs)(n.Fragment, {
                 children: [
                     (0, n.jsx)(v.Z, {
                         className: T.section,
-                        guildId: O.id,
+                        guildId: k.id,
                         isDisabled: F,
-                        tag: null != (P = k.tag) ? P : '',
+                        tag: null != (P = _.tag) ? P : '',
                         badge: D,
                         primaryColor: B,
                         secondaryColor: M
@@ -125,11 +125,11 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                     (0, n.jsx)(j.Z, {
                         className: T.section,
                         selectedBadge: D,
-                        guildId: O.id
+                        guildId: k.id
                     }),
-                    (0, n.jsx)(b.Z, {
+                    (0, n.jsx)(C.Z, {
                         className: T.section,
-                        guildId: O.id,
+                        guildId: k.id,
                         badge: D,
                         primaryColor: B,
                         secondaryColor: M
@@ -157,19 +157,19 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                             color: 'text-secondary',
                                             children: Z.intl.format(E.default['655Un5'], {
                                                 onClickServerProfile: () => {
-                                                    x.Z.setSection(S.pNK.PROFILE);
+                                                    g.Z.setSection(S.pNK.PROFILE);
                                                 },
                                                 onClickApplyToJoin: () => {
-                                                    x.Z.setSection(S.pNK.ACCESS);
+                                                    g.Z.setSection(S.pNK.ACCESS);
                                                 }
                                             })
                                         }),
                                         !A &&
-                                            (0, n.jsx)(h.Z, {
+                                            (0, n.jsx)(f.Z, {
                                                 className: T.privateProfileWarning,
                                                 children: (0, n.jsx)(o.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: Z.intl.format(E.default.CRbkIy, { onClickEditSetting: () => x.Z.setSection(S.pNK.PROFILE, S.KsC.PROFILE_VISIBILITY) })
+                                                    children: Z.intl.format(E.default.CRbkIy, { onClickEditSetting: () => g.Z.setSection(S.pNK.PROFILE, S.KsC.PROFILE_VISIBILITY) })
                                                 })
                                             })
                                     ]
@@ -192,13 +192,13 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                                   onChange: () => {
                                                       if (F) {
                                                           var e;
-                                                          x.Z.updateGuildProfile(O.id, {
-                                                              tag: null != (e = k.tag) ? e : '',
+                                                          g.Z.updateGuildProfile(k.id, {
+                                                              tag: null != (e = _.tag) ? e : '',
                                                               badge: D,
                                                               badgeColorPrimary: B,
                                                               badgeColorSecondary: M
                                                           });
-                                                      } else x.Z.updateGuildProfile(O.id, { tag: null });
+                                                      } else g.Z.updateGuildProfile(k.id, { tag: null });
                                                   }
                                               })
                                           ]
@@ -207,7 +207,7 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                                           className: T.boostingLinkContainer,
                                           children: (0, n.jsx)(y.P, {
                                               onClick: () => {
-                                                  ((0, p.Z)(O.id, d.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), x.Z.close());
+                                                  ((0, h.Z)(k.id, c.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), g.Z.close());
                                               }
                                           })
                                       }),
@@ -225,13 +225,13 @@ let R = [P.x_.LEAF, P.x_.SWORD, P.x_.HEART, P.x_.FIRE, P.x_.WATER_DROP, P.x_.SKU
                             className: T.sidebarContainer,
                             children: [
                                 (0, n.jsx)(N.Z, {
-                                    guildId: O.id,
-                                    tag: k.tag,
+                                    guildId: k.id,
+                                    tag: _.tag,
                                     badge: D,
                                     primaryColor: B,
                                     secondaryColor: M
                                 }),
-                                !F && (0, n.jsx)(C.Z, { guildId: O.id })
+                                !F && (0, n.jsx)(b.Z, { guildId: k.id })
                             ]
                         })
                     ]

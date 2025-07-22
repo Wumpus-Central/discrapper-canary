@@ -52,8 +52,8 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: h, tooltipPosition: _, onClick: b, className: E, source: x, hover: v, innerClassName: C } = e,
-        y = {
+    let { application: t, fullWidth: n = !1, size: m = l.zx.Sizes.LARGE, color: f, customDisabledColor: g, hideNotLaunchable: h, tooltipPosition: _, onClick: b, className: E, source: x, hover: v, innerClassName: y } = e,
+        C = {
             fullWidth: n,
             size: m,
             color: f,
@@ -62,7 +62,7 @@ function m(e) {
             onClick: b,
             className: E,
             hover: v,
-            innerClassName: C
+            innerClassName: y
         },
         O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
         j = null != O ? O.sku.id : null,
@@ -71,7 +71,7 @@ function m(e) {
     return null != O && (0, s.Je)(O)
         ? (0, r.jsx)(
               u.Z,
-              p(d({}, y), {
+              p(d({}, C), {
                   libraryApplication: O,
                   source: x
               })
@@ -80,7 +80,7 @@ function m(e) {
           ? (0, r.jsx)('div', { children: 'deprecated!' })
           : (0, r.jsx)(
                 c.Z,
-                p(d({}, y), {
+                p(d({}, C), {
                     hideNotLaunchable: h,
                     applicationId: t.id
                 })

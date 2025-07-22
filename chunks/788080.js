@@ -1,6 +1,6 @@
 (n.d(t, {
     FB: () => E,
-    GE: () => C,
+    GE: () => y,
     Pu: () => v,
     Vt: () => h,
     XX: () => m,
@@ -67,4 +67,4 @@ function v(e) {
         return null;
     }
 }
-let C = () => null != (0, l.e7)([o.default], () => o.default.getSuspendedUserToken());
+let y = () => null != (0, l.e7)([o.default], () => o.default.getSuspendedUserToken());

@@ -243,7 +243,7 @@ let M = 'WELCOME_CHANNEL',
                     i = [...I];
                 (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })), n ? (U(i), g(null)) : g(t));
             },
-            V = i.useRef(!1);
+            W = i.useRef(!1);
         ((0, f.ZP)(
             () => (
                 null != t &&
@@ -263,13 +263,13 @@ let M = 'WELCOME_CHANNEL',
                         { onCloseRequest: () => Z.Vq }
                     ),
                 () => {
-                    V.current = !0;
+                    W.current = !0;
                 }
             )
         ),
             i.useEffect(
                 () => () => {
-                    if (V.current && p) {
+                    if (W.current && p) {
                         let e = [],
                             n = [],
                             r = !1;
@@ -287,10 +287,10 @@ let M = 'WELCOME_CHANNEL',
                             }));
                     }
                 },
-                [p, I, N, T, t, V]
+                [p, I, N, T, t, W]
             ),
             i.useEffect(() => () => (0, C.sm)(), []));
-        let W = i.useCallback(() => {
+        let V = i.useCallback(() => {
             null != t && P.Z.open(t.id, R.pNK.ONBOARDING);
         }, [t]);
         return null == t
@@ -308,7 +308,7 @@ let M = 'WELCOME_CHANNEL',
                                   D.intl.format(D.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(O.Z, {
-                                              onClick: W,
+                                              onClick: V,
                                               children: e
                                           })
                                   })

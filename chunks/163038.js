@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(507418),
     x = n(348238),
     v = n(38267),
-    C = n(25015),
-    y = n(438075),
+    y = n(25015),
+    C = n(438075),
     O = n(359110),
     j = n(6025),
     I = n(695346),
@@ -176,7 +176,7 @@ function G(e) {
         _ = I.NA.useSetting(),
         b = (0, a.e7)([N.Z], () => N.Z.isDeveloper),
         E = (0, f.A)((null != (l = g.editedTimestamp) ? l : g.timestamp).valueOf()),
-        { content: x, hasSpoilerEmbeds: v } = (0, C.Z)(g, {
+        { content: x, hasSpoilerEmbeds: v } = (0, y.Z)(g, {
             hideSimpleEmbedContent: h && _,
             isInteracting: !1,
             formatInline: !1,
@@ -203,7 +203,7 @@ function G(e) {
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
                           }),
-                          (0, y.Z)({
+                          (0, C.Z)({
                               channelMessageProps: {
                                   message: g,
                                   channel: O,

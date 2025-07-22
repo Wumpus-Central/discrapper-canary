@@ -21,9 +21,9 @@ function b(e) {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [C, y] = i.useState(!1),
+        [y, C] = i.useState(!1),
         O = i.useCallback((e) => {
-            e && y(!0);
+            e && C(!0);
         }, []),
         j = (0, o.O)(O),
         I = i.useCallback(() => {
@@ -39,10 +39,10 @@ function b(e) {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        C && x === f.M.FETCHED && I();
-    }, [C, x, I]),
+        y && x === f.M.FETCHED && I();
+    }, [y, x, I]),
     i.useEffect(() => {
-        C &&
+        y &&
             E &&
             p.default.track(g.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
@@ -50,7 +50,7 @@ function b(e) {
                 guild_id: v,
                 channel_id: n.channel_id
             });
-    }, [C, v, E, n.author.id, n.channel_id]),
+    }, [y, v, E, n.author.id, n.channel_id]),
     E)
         ? (0, r.jsxs)(c.Z, {
               containerRef: j,

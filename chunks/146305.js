@@ -41,14 +41,14 @@ var r = n(255367),
     F = n(579648),
     H = n(460461),
     z = n(29605),
-    V = n(365307),
-    W = n(324330),
+    W = n(365307),
+    V = n(324330),
     Y = n(495300),
     K = n(651780),
     X = n(279542),
     q = n(665324),
-    Q = n(208150),
-    J = n(353398),
+    J = n(208150),
+    Q = n(353398),
     $ = n(365774),
     ee = n(178387),
     et = n(993097),
@@ -221,7 +221,7 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_STICKERS,
                     label: ep.intl.string(ep.t.R5nQkZ),
                     ariaLabel: ep.intl.string(ep.t.R5nQkZ),
-                    element: Q.Z,
+                    element: J.Z,
                     predicate: () => t.canManageGuildExpressions
                 };
             case em.pNK.SOUNDBOARD:
@@ -239,10 +239,10 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
                     label: (0, r.jsx)($.Z, { showDirtyIndicator: t.showDirtyGuildTemplateIndicator }),
                     ariaLabel: ep.intl.string(ep.t.KUw7Sk),
-                    element: J.ZP,
+                    element: Q.ZP,
                     notice: {
-                        stores: [J.Sf],
-                        element: J.Q5
+                        stores: [Q.Sf],
+                        element: Q.Q5
                     },
                     predicate: () => t.canManageGuild
                 };
@@ -265,10 +265,10 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
                     label: ep.intl.string(ep.t.CIsNZ2),
                     ariaLabel: ep.intl.string(ep.t.CIsNZ2),
-                    element: V.Z,
+                    element: W.Z,
                     notice: {
                         stores: [E.default, T.Z],
-                        element: V.j
+                        element: W.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
                 };
@@ -455,9 +455,9 @@ let eb = {
                 return {
                     section: em.pNK.MEMBERS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-                    label: (0, r.jsx)(W.$, {}),
+                    label: (0, r.jsx)(V.$, {}),
                     ariaLabel: ep.intl.string(ep.t['9Oq93t']),
-                    element: W.Z,
+                    element: V.Z,
                     type: o.bT.CUSTOM,
                     predicate: () => t.canAccessMembersPage
                 };

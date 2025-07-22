@@ -420,7 +420,7 @@ function k() {
     i.useEffect(() => {
         B(z.current);
     }, [B]);
-    let V = i.useMemo(() => {
+    let W = i.useMemo(() => {
         var e;
         return null != (e = F[G.currentPage - 1]) ? e : [];
     }, [F, G.currentPage]);
@@ -440,7 +440,7 @@ function k() {
                               (0, r.jsx)(A, {
                                   guild: c,
                                   bans: b,
-                                  sortedBans: V,
+                                  sortedBans: W,
                                   ref: N
                               }),
                           !k &&

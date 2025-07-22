@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => j,
-    u: () => y
+    u: () => C
 }),
     n(190126),
     n(368063),
@@ -38,7 +38,7 @@ function v() {
             return e;
         }).apply(this, arguments);
 }
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function C(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var C = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
@@ -79,7 +79,7 @@ function O(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: y, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: k, onClickContent: L, onClickBanner: D } = e;
+    let { title: C, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: k, onClickContent: L, onClickBanner: D } = e;
     k = {
         id: null != (n = null == (t = k) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.Un.UNKNOWN,
@@ -220,7 +220,7 @@ function j(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: x.contentTitle,
-                                                        children: y
+                                                        children: C
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: x.contentInfoWrapper,
@@ -269,12 +269,12 @@ function j(e) {
                                                                   return e;
                                                               })(e)
                                                           );
-                                                          return (0, i.jsx)(c.zx, C({}, f, t));
+                                                          return (0, i.jsx)(c.zx, y({}, f, t));
                                                       }
                                                   },
                                                   n
                                               )
-                                            : (0, i.jsx)(c.zx, C({}, f), n);
+                                            : (0, i.jsx)(c.zx, y({}, f), n);
                                     })
                                 })
                         ]

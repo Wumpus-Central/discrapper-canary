@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(273254);
 function x(e) {
     let t,
-        { invite: n, message: l, currentUserId: x, onTransitionToInviteChannel: v, onAcceptInstantInvite: C } = e,
-        y = x === l.author.id,
+        { invite: n, message: l, currentUserId: x, onTransitionToInviteChannel: v, onAcceptInstantInvite: y } = e,
+        C = x === l.author.id,
         O = n.state === _.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     a()(null == j || j.isPrivate(), 'must be a private channel');
@@ -27,7 +27,7 @@ function x(e) {
         S = null != j,
         T = i.useCallback(() => {
             let e = 'noop';
-            (S ? (v(), (e = 'transition')) : (C(), (e = 'accept')),
+            (S ? (v(), (e = 'transition')) : (y(), (e = 'accept')),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,7 +37,7 @@ function x(e) {
                     },
                     I
                 ));
-        }, [n, l, I, S, v, C]);
+        }, [n, l, I, S, v, y]);
     if (null == j) {
         if (null == n.channel) return (0, r.jsx)(h.Z, {});
         ((j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
@@ -63,7 +63,7 @@ function x(e) {
     S && ((P = b.intl.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
     let w = b.intl.string(b.t['3p3/BA']);
     return (
-        y && (w = b.intl.string(b.t.qmtuXF)),
+        C && (w = b.intl.string(b.t.qmtuXF)),
         (0, r.jsxs)(d.Z, {
             children: [
                 (0, r.jsx)(d.Z.Header, { text: w }),

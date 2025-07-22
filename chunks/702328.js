@@ -219,7 +219,7 @@ let W = () => {
             ]
         });
     return (0, i.jsx)(d.f6W, {
-        theme: ef ? G.BR.DARK : q,
+        theme: ef ? G.BR.DARKER : q,
         children: (t) =>
             (0, i.jsx)(d.yWw, {
                 className: a()(eT.scroller, t),

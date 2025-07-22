@@ -116,11 +116,11 @@ function A(e) {
         );
     }, [H]);
     let z = (0, d.dQu)(a.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        V = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        W = (0, c.wj)(U) ? z : V,
+        W = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        V = (0, c.wj)(U) ? z : W,
         Y = F.to({
             range: [0, 1],
-            output: [W, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()]
+            output: [V, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()]
         });
     if (A) {
         if (D === C.PG.DEFAULT_CHANNELS) return (0, r.jsx)(I.j, {});
@@ -155,7 +155,7 @@ function A(e) {
                 (0, x.Nb)((0, C.lg)(D)),
                 (await X()) && (0, x.IG)(f, D));
         },
-        Q = async () => {
+        J = async () => {
             (g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 Z(R({}, (0, m.hH)(f)), {
@@ -166,8 +166,8 @@ function A(e) {
             ),
                 (await X()) && (0, x.Wy)(f, D));
         },
-        J = null;
-    G && (D === C.PG.SAFETY_CHECK ? (J = (0, r.jsx)(N.j7, {})) : D === C.PG.DEFAULT_CHANNELS ? (J = (0, r.jsx)(N.Io, {})) : D === C.PG.CUSTOMIZATION_QUESTIONS ? (J = (0, r.jsx)(N.cZ, {})) : D === C.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
+        Q = null;
+    G && (D === C.PG.SAFETY_CHECK ? (Q = (0, r.jsx)(N.j7, {})) : D === C.PG.DEFAULT_CHANNELS ? (Q = (0, r.jsx)(N.Io, {})) : D === C.PG.CUSTOMIZATION_QUESTIONS ? (Q = (0, r.jsx)(N.cZ, {})) : D === C.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
     let $ = (0, r.jsx)('div', {
             className: G ? w.hidden : void 0,
             children: (0, r.jsx)(d.zxk, {
@@ -176,7 +176,7 @@ function A(e) {
                 text: P.intl.string(P.t['13/7kZ']),
                 icon: d.whL,
                 iconPosition: 'start',
-                onClick: Q,
+                onClick: J,
                 disabled: G || M
             })
         }),
@@ -211,7 +211,7 @@ function A(e) {
                                       }),
                                       (0, r.jsxs)('div', {
                                           className: w.educationUpsell,
-                                          children: [J, (0, r.jsx)('div', { className: w.educationUpsellArrow })]
+                                          children: [Q, (0, r.jsx)('div', { className: w.educationUpsellArrow })]
                                       })
                                   ]
                               })

@@ -141,7 +141,7 @@ function z(e) {
               ]
           });
 }
-let V = (e) => {
+let W = (e) => {
         var { renderPopoutBody: t, renderPopoutChildren: n, popoutTargetRef: l } = e,
             s = (function (e, t) {
                 if (null == e) return {};
@@ -193,9 +193,9 @@ let V = (e) => {
             )
         );
     },
-    W = () => {
+    V = () => {
         let e = i.useRef(null);
-        return (0, r.jsx)(V, {
+        return (0, r.jsx)(W, {
             renderPopoutBody: () =>
                 (0, r.jsx)(m.Text, {
                     variant: 'text-sm/normal',
@@ -259,7 +259,7 @@ function Y(e) {
               },
               disabled: g <= 0 || !a
           })
-        : (0, r.jsx)(W, {});
+        : (0, r.jsx)(V, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {

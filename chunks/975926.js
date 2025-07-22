@@ -18,6 +18,7 @@ e.exports = {
     tier2: 'tier2_cbfae2',
     gradientColumnBorder: 'gradientColumnBorder_cbfae2 backgroundGradient_cbfae2',
     pill: 'pill_cbfae2',
+    pillGradient: 'pillGradient_cbfae2',
     gradientBackgroundContainer: 'gradientBackgroundContainer_cbfae2',
     gradientBackgroundPosition: 'gradientBackgroundPosition_cbfae2',
     nitroWheelIconColor: 'nitroWheelIconColor_cbfae2'

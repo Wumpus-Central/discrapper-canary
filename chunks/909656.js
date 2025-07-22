@@ -143,14 +143,14 @@ function k(e) {
         [M, G] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [U, B] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: F, error: H, updateSubscriptionsSettings: z } = (0, C.QV)(),
-        { imageCTA: V, imageAriaLabel: W, setFilename: Y } = (0, N.Z)(null == a ? void 0 : a.cover_image_asset),
+        { imageCTA: W, imageAriaLabel: V, setFilename: Y } = (0, N.Z)(null == a ? void 0 : a.cover_image_asset),
         K = (0, b.Dt)(),
         X = (0, b.Dt)(),
         q = (0, b.Dt)();
-    function Q(e, t) {
+    function J(e, t) {
         (o()(null != e, 'Null value not allowed'), null != t && Y(t.name), k(e));
     }
-    let J = i.useMemo(() => {
+    let Q = i.useMemo(() => {
             var e;
             return (null != x && x !== (null != (e = null == a ? void 0 : a.description) ? e : '')) || (null == A ? void 0 : A.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== M || (null == a ? void 0 : a.server_shop_tab_order) !== U;
         }, [A, s, x, a, m, M, U]),
@@ -260,7 +260,7 @@ function k(e) {
                     }),
                     (0, r.jsx)(_.Z, {
                         image: A,
-                        hint: V,
+                        hint: W,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
@@ -268,15 +268,15 @@ function k(e) {
                         iconWrapperClassName: w.coverImageUploaderIconWrapper,
                         imageClassName: w.coverImageUploaderInner,
                         iconClassName: w.coverImageUploaderIcon,
-                        onChange: Q,
-                        'aria-label': W,
+                        onChange: J,
+                        'aria-label': V,
                         disabled: ee
                     }),
                     (0, r.jsx)(p.LZC, { size: 16 }),
                     (0, r.jsx)(j.Z, {
-                        onChange: Q,
-                        buttonCTA: V,
-                        'aria-label': W,
+                        onChange: J,
+                        buttonCTA: W,
+                        'aria-label': V,
                         disabled: ee,
                         look: g.zx.Looks.OUTLINED,
                         color: g.zx.Colors.PRIMARY
@@ -338,7 +338,7 @@ function k(e) {
                 component: 'div',
                 className: w.contentRegion,
                 children:
-                    J &&
+                    Q &&
                     (0, r.jsx)(p.oXn, {
                         children: (0, r.jsx)(f.Z, {
                             submitting: F,

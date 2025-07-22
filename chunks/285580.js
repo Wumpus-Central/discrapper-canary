@@ -9,6 +9,5 @@ e.exports = {
     iconPlaceholder: 'iconPlaceholder__46773',
     iconImage: 'iconImage__46773',
     closeButton: 'closeButton__46773',
-    footer: 'footer__46773',
-    cancelButton: 'cancelButton__46773'
+    footer: 'footer__46773'
 };

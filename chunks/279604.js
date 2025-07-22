@@ -65,7 +65,7 @@ function b(e, t) {
                             )
                         );
                 case p.Us.PERK: {
-                    let { default: i } = await Promise.all([n.e('27063'), n.e('6397')]).then(n.bind(n, 326055));
+                    let { default: i } = await Promise.all([n.e('67649'), n.e('6397')]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,

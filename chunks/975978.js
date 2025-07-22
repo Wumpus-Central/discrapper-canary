@@ -199,7 +199,7 @@ let v = (e) => {
         else {
             let e = null != S ? _.intl.string(_.t.IBYG5e) : _.intl.string(_.t.TR2B4e);
             n = (0, i.jsx)(f.E, {
-                className: j.pill,
+                className: a()(j.pill, j.pillGradient),
                 text: e
             });
         }

@@ -1,7 +1,7 @@
 (n.d(t, {
     FT: () => K,
     L3: () => Y,
-    ZP: () => Q
+    ZP: () => J
 }),
     n(388685),
     n(583741));
@@ -71,7 +71,7 @@ function H(e) {
     return e;
 }
 let z = d().throttle(h.OQ, 1000),
-    V = (e) => {
+    W = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1 } = e,
             [o, c] = i.useState(n.name),
             d = w.ZP.getEmojiURL({
@@ -187,7 +187,7 @@ let z = d().throttle(h.OQ, 1000),
             ]
         });
     },
-    W = (e) => {
+    V = (e) => {
         let { isLoading: t, staticEmojis: i, animatedEmojis: l, theme: s, guild: a } = e;
         return t
             ? (0, r.jsx)(p.$jN, {
@@ -283,7 +283,7 @@ let z = d().throttle(h.OQ, 1000),
                       }),
                       a.map((e) =>
                           (0, r.jsx)(
-                              V,
+                              W,
                               {
                                   guildId: n.id,
                                   emoji: e,
@@ -359,7 +359,7 @@ let z = d().throttle(h.OQ, 1000),
                 })
             ]
         }),
-    Q = () => {
+    J = () => {
         let e = (0, m.e7)([k.Z], () => k.Z.getGuild()),
             [t, l] = i.useState('');
         o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
@@ -379,7 +379,7 @@ let z = d().throttle(h.OQ, 1000),
                     [n, r] = d().partition(t, (e) => !e.animated);
                 return [n, r];
             }, [f, e.id]),
-            V = Math.max(D - G.length, D - F.length),
+            W = Math.max(D - G.length, D - F.length),
             { enabled: Y } = (0, O.q)({
                 location: 'guild_settings',
                 autoTrackExposure: !0
@@ -403,7 +403,7 @@ let z = d().throttle(h.OQ, 1000),
                     }),
                 []
             ),
-            Q = (n, r, i) =>
+            J = (n, r, i) =>
                 (0, y.G)({
                     data: n,
                     file: r,
@@ -413,13 +413,13 @@ let z = d().throttle(h.OQ, 1000),
                     hideErrorModal: !0,
                     analyticsLocation: { page: M.ZY5.GUILD_SETTINGS }
                 }),
-            J = async (n) => {
+            Q = async (n) => {
                 (l((0, u.Z)()),
                     P.default.track(M.rMx.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
                     }),
-                    await (0, E._j)(n, Q),
+                    await (0, E._j)(n, J),
                     b(!0));
             },
             $ = () => {
@@ -428,14 +428,14 @@ let z = d().throttle(h.OQ, 1000),
             ee = async (e) => {
                 R.current = await (0, p.ZDy)(async () => {
                     let { default: t } = await n.e('16169').then(n.bind(n, 935333));
-                    return (n) => (0, r.jsx)(t, H({ processFiles: () => J(e) }, n));
+                    return (n) => (0, r.jsx)(t, H({ processFiles: () => Q(e) }, n));
                 });
             },
             et = (0, v.l)(e);
         return (0, r.jsxs)('div', {
             className: B.emojiSettings,
             children: [
-                0 === V
+                0 === W
                     ? null
                     : (0, r.jsx)(j.Z, {
                           className: B.emojiUploadContainer,
@@ -469,7 +469,7 @@ let z = d().throttle(h.OQ, 1000),
                                                   variant: 'primary',
                                                   text: U.intl.string(U.t.DU0dy8),
                                                   onClick: K,
-                                                  disabled: 0 === V
+                                                  disabled: 0 === W
                                               }),
                                               (0, r.jsx)(p.Text, {
                                                   variant: 'text-xs/normal',
@@ -491,16 +491,16 @@ let z = d().throttle(h.OQ, 1000),
                                                               upload_id: t
                                                           }));
                                                   },
-                                                  disabled: N || 0 === V || !a,
+                                                  disabled: N || 0 === W || !a,
                                                   submitting: N,
                                                   focusProps: { within: !0 },
                                                   children: [
                                                       U.intl.string(U.t.DU0dy8),
-                                                      V > 0
+                                                      W > 0
                                                           ? (0, r.jsx)(E.ZP, {
-                                                                disabled: N || 0 === V || !a,
+                                                                disabled: N || 0 === W || !a,
                                                                 tabIndex: 0,
-                                                                onChange: Q,
+                                                                onChange: J,
                                                                 setLoading: w,
                                                                 multiple: !0
                                                             })
@@ -511,7 +511,7 @@ let z = d().throttle(h.OQ, 1000),
                                       })
                             ]
                         }),
-                        (0, r.jsx)(W, {
+                        (0, r.jsx)(V, {
                             isLoading: null == f,
                             staticEmojis: G,
                             animatedEmojis: F,

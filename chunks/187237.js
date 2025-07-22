@@ -1,23 +1,22 @@
-n.d(t, { v: () => d });
+n.d(t, { v: () => u });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(641360),
-    s = n(140106),
-    c = n(388032),
-    u = n(639041);
-function d(e) {
-    let { channel: t, children: n, className: i, editable: d, location: p } = e;
-    return (0, o.I3)('HeaderBarMaybeClickableGdmIcon', t.id, { autoTrackExposure: d }) && d
+    o = n(140106),
+    s = n(388032),
+    c = n(639041);
+function u(e) {
+    let { channel: t, children: n, className: i, editable: u, location: d } = e;
+    return u
         ? (0, r.jsx)(a.ua7, {
               position: 'bottom',
-              text: c.intl.string(c.t['0qPSMT']),
+              text: s.intl.string(s.t['0qPSMT']),
               children: (e) => {
-                  var o, c;
+                  var s, u;
                   return (0, r.jsxs)(
                       a.P3F,
-                      ((o = (function (e) {
+                      ((s = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
@@ -42,14 +41,14 @@ function d(e) {
                           }
                           return e;
                       })({}, e)),
-                      (c = c =
+                      (u = u =
                           {
-                              className: l()(u.editableGdmIcon, i),
-                              onClick: () => (0, s.P5)(t.id, p),
+                              className: l()(c.editableGdmIcon, i),
+                              onClick: () => (0, o.P5)(t.id, d),
                               children: [
                                   n,
                                   (0, r.jsx)('div', {
-                                      className: u.editableGdmIconIndicator,
+                                      className: c.editableGdmIconIndicator,
                                       children: (0, r.jsx)(a.vdY, {
                                           size: 'xs',
                                           color: 'currentColor'
@@ -58,7 +57,7 @@ function d(e) {
                               ]
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
+                          ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -66,10 +65,10 @@ function d(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(c)).forEach(function (e) {
-                                Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
+                            })(Object(u)).forEach(function (e) {
+                                Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
                             }),
-                      o)
+                      s)
                   );
               }
           })

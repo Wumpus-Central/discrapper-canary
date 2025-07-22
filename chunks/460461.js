@@ -95,7 +95,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             [G, U] = i.useState(!0),
             [B, F] = i.useState([!1]),
             [H, z] = i.useState(['']),
-            V = (e) => {
+            W = (e) => {
                 let t = Object.entries(I.z)
                     .filter((e) => !H.includes(e[1].presentation))
                     .map((e) => ({
@@ -109,7 +109,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                           value: e
                       });
             },
-            W = (e) => {
+            V = (e) => {
                 try {
                     var t, n, r, i;
                     let l = new URL(e).hostname.split('.');
@@ -127,7 +127,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     t = [];
                 (A.socialLinks.forEach((n, r) => {
                     if ('' !== n) {
-                        let i = W(n);
+                        let i = V(n);
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
                     } else e[r] = !0;
                 }),
@@ -190,13 +190,13 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     i = [...k];
                 ((r[t] = e), (n[t] = I.z[e].baseUrl), (i[t] = !0), M(i), z(r), U(i.every((e) => !0 === e)), (0, p.t$)(u.id, n));
             },
-            Q = (e, t) => {
+            J = (e, t) => {
                 let n = [...A.socialLinks],
                     r = n[t],
                     i = e;
                 (0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, p.t$)(u.id, n)));
             },
-            J = (e) => {
+            Q = (e) => {
                 let t = [...B];
                 (t.splice(e, 1), F(t));
                 let n = [...k];
@@ -529,7 +529,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         o.q4e,
                                                                         {
                                                                             className: A.isPublished ? T.socialLinksDropdownMax : T.socialLinksDropdownMin,
-                                                                            options: V(H[t]),
+                                                                            options: W(H[t]),
                                                                             placeholder: S.intl.string(S.t.xSALIC),
                                                                             value: H[t],
                                                                             onChange: (e) => q(e, t),
@@ -542,7 +542,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         {
                                                                             value: e,
                                                                             className: A.isPublished ? T.socialLinksMax : T.socialLinksMin,
-                                                                            onChange: (e) => Q(e, t),
+                                                                            onChange: (e) => J(e, t),
                                                                             placeholder: S.intl.string(S.t.Q6o4pK),
                                                                             maxLength: 150,
                                                                             disabled: !Z
@@ -577,7 +577,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             c.Z,
                                                                             {
                                                                                 className: B[t] ? (A.isPublished ? T.deleteButtonMax : T.deleteButtonMin) : A.isPublished ? T.deleteButtonHiddenMax : T.deleteButtonHiddenMin,
-                                                                                onClick: () => J(t)
+                                                                                onClick: () => Q(t)
                                                                             },
                                                                             'delete-button-' + t
                                                                         )

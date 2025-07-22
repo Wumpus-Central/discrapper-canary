@@ -200,24 +200,24 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     F = Z < m.tier,
                     H = w(d.length, t),
                     z = b && !F && H === m.tier && R !== U.length,
-                    V = z || U.length > 0,
-                    W = R - y,
+                    W = z || U.length > 0,
+                    V = R - y,
                     Y = n(872732),
                     K = G - U.length,
                     X = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
                     q = [];
                 for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
-                let Q = t.premiumTier < m.tier && j >= I.oCV[m.tier],
-                    J = S.intl.string(S.t.dtFw5e),
+                let J = t.premiumTier < m.tier && j >= I.oCV[m.tier],
+                    Q = S.intl.string(S.t.dtFw5e),
                     $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
                     ee = !1;
-                Q &&
+                J &&
                     (k
                         ? (($ = () => {
                               let e = E.Cp[m.tier];
                               null != e && (0, h.H6)(t.id, e);
                           }),
-                          (J = S.intl.string(S.t.g7lkra)),
+                          (Q = S.intl.string(S.t.g7lkra)),
                           t.premiumTier + 1 !== m.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
                         : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
                 let et = H === x + 1 && H > Z,
@@ -246,12 +246,12 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                             onSetRef: u,
                             isAnimatedTo: a,
                             hasBottomMargin: x !== p.length - 1,
-                            withCardBody: !V,
+                            withCardBody: !W,
                             headerButton: l,
                             showHeaderLockStatus: en,
                             guildId: t.id,
                             children: [
-                                V &&
+                                W &&
                                     (0, r.jsxs)('div', {
                                         className: T.grid,
                                         children: [
@@ -296,9 +296,9 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                 color: 'header-secondary',
                                                 children:
                                                     m.tier === I.Eu4.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: W })
+                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: V })
                                                         : S.intl.formatToPlainString(S.t.bLykER, {
-                                                              numAdditional: W,
+                                                              numAdditional: V,
                                                               numTotal: R
                                                           })
                                             }),
@@ -313,7 +313,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                         ((t = P(
                                                             {
                                                                 variant: 'active',
-                                                                text: J
+                                                                text: Q
                                                             },
                                                             e
                                                         )),

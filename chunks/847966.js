@@ -4,8 +4,6 @@ e.exports = {
     verifiedRowWithMetadata: 'verifiedRowWithMetadata_c02108',
     verifiedIcon: 'verifiedIcon_c02108',
     verifiedText: 'verifiedText_c02108',
-    closeButton: 'closeButton_c02108',
-    closeIcon: 'closeIcon_c02108',
     rulesTable: 'rulesTable_c02108',
     ruleContainer: 'ruleContainer_c02108',
     ruleContainerLabel: 'ruleContainerLabel_c02108',

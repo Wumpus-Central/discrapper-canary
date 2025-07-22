@@ -36,13 +36,13 @@ function y(e) {
         [F] = b._T(P),
         [H] = b.mR(P),
         [z] = b.PK(P),
-        [V] = b.d9(P, 1024),
-        W = '' !== F ? F : O.intl.string(O.t.QWhe9P),
-        Y = '' !== F && null != V && '' !== z && null != H && !B,
+        [W] = b.d9(P, 1024),
+        V = '' !== F ? F : O.intl.string(O.t.QWhe9P),
+        Y = '' !== F && null != W && '' !== z && null != H && !B,
         K = b.rU(P),
-        { loading: X, error: q, handleCreateOrUpdateFromEditState: Q } = b.Xo(),
-        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = X || J;
+        { loading: X, error: q, handleCreateOrUpdateFromEditState: J } = b.Xo(),
+        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
+        et = X || Q;
     return (0, r.jsxs)('div', {
         className: C.container,
         children: [
@@ -52,15 +52,15 @@ function y(e) {
                     (0, r.jsx)('div', {
                         className: C.headerImageContainer,
                         children:
-                            null == V
+                            null == W
                                 ? (0, r.jsx)(j.Z, {
                                       className: C.starIcon,
                                       'aria-hidden': !0
                                   })
                                 : (0, r.jsx)('img', {
                                       className: C.headerImage,
-                                      src: V,
-                                      alt: W
+                                      src: W,
+                                      alt: V
                                   })
                     }),
                     (0, r.jsxs)('div', {
@@ -69,7 +69,7 @@ function y(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-md/medium',
                                 color: 'interactive-active',
-                                children: W
+                                children: V
                             }),
                             (0, r.jsx)(d.LZC, { size: 2 }),
                             (0, r.jsxs)('div', {
@@ -117,7 +117,7 @@ function y(e) {
                                   (0, r.jsx)(d.zxk, {
                                       variant: 'primary',
                                       onClick: () =>
-                                          Q({
+                                          J({
                                               guildId: l,
                                               editStateId: P,
                                               groupListingId: E,

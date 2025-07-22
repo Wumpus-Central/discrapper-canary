@@ -46,16 +46,16 @@ function C(e) {
         F = L.config,
         H = l.options.length >= j.fY,
         z = (0, m.kl)(n.id, Array.from(w), [l]).length - w.size,
-        V = i.useRef(null),
-        W = i.useRef(b);
+        W = i.useRef(null),
+        V = i.useRef(b);
     return (i.useEffect(() => {
-        W.current = b;
+        V.current = b;
     }),
     i.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === W.current && !u) {
+            if (0 === V.current && !u) {
                 var e;
-                null == (e = V.current) || e.focus();
+                null == (e = W.current) || e.focus();
             }
         }, 0);
     }, [u]),
@@ -153,7 +153,7 @@ function C(e) {
                       (0, r.jsx)(o.Is, {
                           className: v.title,
                           inputClassName: v.titleInput,
-                          inputRef: V,
+                          inputRef: W,
                           value: l.title,
                           onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
                           placeholder: _.intl.string(_.t.QMCuCg),
