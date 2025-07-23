@@ -115,8 +115,8 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: h, style: E, className: y } = e,
-            x = (function (e, t) {
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: h, style: E, className: x } = e,
+            y = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -194,9 +194,9 @@ let b = {
                 },
                 E
             ),
-            'aria-label': x['aria-label'],
-            'aria-hidden': x['aria-hidden'],
-            className: a()(p.container, y),
+            'aria-label': y['aria-label'],
+            'aria-hidden': y['aria-hidden'],
+            className: a()(p.container, x),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,

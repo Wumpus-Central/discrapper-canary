@@ -5,6 +5,5 @@ e.exports = {
     inner: 'inner_dae93f',
     instructions: 'instructions_dae93f',
     questionIcon: 'questionIcon_dae93f',
-    uploadModalShake: 'uploadModalShake_dae93f',
-    errorModal: 'errorModal_dae93f'
+    uploadModalShake: 'uploadModalShake_dae93f'
 };

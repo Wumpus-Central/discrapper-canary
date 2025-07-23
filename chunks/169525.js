@@ -1,9 +1,9 @@
 (n.d(t, {
     As: () => h,
     BP: () => g,
-    MC: () => y,
+    MC: () => T,
     dn: () => f,
-    hL: () => T,
+    hL: () => y,
     lK: () => b
 }),
     n(997841));
@@ -107,14 +107,14 @@ function h(e, t, n) {
         s = (0, r.UJ)(a, n);
     return l.length > 0 ? [!0, l[0]] : s ? [!0, o.wk.POTENTIAL_EXPLICIT_CONTENT] : e.spoiler ? [t, o.wk.SPOILER] : [!1, void 0];
 }
-function T(e) {
+function y(e) {
     let { channel: t, media: n } = e,
         o = (0, a.e7)([u.Z], () => null != t && u.Z.can(p.Plq.MANAGE_MESSAGES, t)),
         c = l.cC.useSetting(),
         s = (0, r.kh)(i.n.GUILD);
     return h(n, !(0, m.Z)(c, o), s);
 }
-let y = (e) => {
+let T = (e) => {
     switch (e) {
         case o.wk.EXPLICIT_CONTENT:
         case o.wk.GORE_CONTENT:

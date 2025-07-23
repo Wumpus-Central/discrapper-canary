@@ -30,7 +30,7 @@ var r = n(230367),
         return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.CONTROL = 1)] = 'CONTROL'), (e[(e.TREATMENT = 2)] = 'TREATMENT'), (e[(e.OVERRIDE = 3)] = 'OVERRIDE'), e);
     })({}),
     h = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ACTIVE = 1)] = 'ACTIVE'), (e[(e.UNUSED = 2)] = 'UNUSED'), e);
+        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ACTIVE = 1)] = 'ACTIVE'), (e[(e.UNUSED = 2)] = 'UNUSED'), (e[(e.BURNED = 3)] = 'BURNED'), e);
     })({}),
     m = (function (e) {
         return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.DRAFT = 1)] = 'DRAFT'), (e[(e.TESTING = 2)] = 'TESTING'), (e[(e.TESTING_ENDED = 3)] = 'TESTING_ENDED'), (e[(e.ROLLOUT = 4)] = 'ROLLOUT'), (e[(e.ARCHIVED = 5)] = 'ARCHIVED'), e);

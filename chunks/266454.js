@@ -2,6 +2,7 @@ n.d(t, {
     Nj: () => d,
     Ob: () => f,
     Q3: () => _,
+    wE: () => p,
     zu: () => u
 });
 var r = n(442837),
@@ -37,4 +38,8 @@ function f(e, t) {
         isDismissed: null != i && 1 !== o.default.compare(t, i),
         lastDismissedSnowflakeId: i
     };
+}
+async function p(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    ((0, l.u9)(e, n), await (0, l.XM)(e, t), (0, l.ME)(e, n));
 }

@@ -21,8 +21,8 @@ a(381996);
 var _ = a(392750),
     y = a(926976),
     C = a(789654),
-    N = a(719672),
-    O = a(691867),
+    O = a(719672),
+    N = a(691867),
     T = a(916790),
     E = a(645973),
     S = a(903502),
@@ -166,7 +166,7 @@ function ei(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: ee.v0.UI,
-                    render: () => (0, n.jsx)(O.Z, {})
+                    render: () => (0, n.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -221,7 +221,7 @@ function ei(e) {
                     id: 'dcf',
                     name: 'DCF',
                     group: ee.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(N.Z, {})
+                    render: () => (0, n.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'perks',

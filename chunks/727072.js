@@ -1,6 +1,6 @@
 (n.d(t, {
-    I2: () => p,
-    RD: () => A,
+    I2: () => A,
+    RD: () => p,
     mY: () => j,
     pH: () => _
 }),
@@ -145,7 +145,7 @@ let d = {},
         var n, r;
         return (null != (r = null == (n = S.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
     };
-function p(e) {
+function A(e) {
     let [t, n] = r.useState(!1),
         [i, a] = S((e) => [e.syncRules, e.fetching], l.X);
     return [
@@ -160,8 +160,8 @@ function p(e) {
         }, [e, a, i])
     ];
 }
-function A(e) {
-    let [t, n] = p(e);
+function p(e) {
+    let [t, n] = A(e);
     return (
         r.useEffect(() => {
             (async () => {

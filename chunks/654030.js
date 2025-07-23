@@ -16,8 +16,8 @@ var r,
     _ = n(431583),
     b = n(592745),
     E = n(952164),
-    y = n(768419),
-    x = n(456432),
+    x = n(768419),
+    y = n(456432),
     v = n(789407),
     C = n(598077),
     O = n(757266),
@@ -159,7 +159,7 @@ class G extends (r = l.PureComponent) {
             U(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, i.jsx)(
-                    x.Z,
+                    y.Z,
                     F(
                         {
                             guildId: null != n ? n : void 0,
@@ -239,7 +239,7 @@ class G extends (r = l.PureComponent) {
     }
 }
 U(G, 'defaultProps', { isPreview: !1 });
-let H = a.ZP.connectStores([y.Z, j.Z, T.Z, N.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.default, I.ZP], (e) => {
+let H = a.ZP.connectStores([x.Z, j.Z, T.Z, N.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.default, I.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: l, userId: a, guildId: o } = e,
         { id: s } = null != i ? i : {},
@@ -261,8 +261,8 @@ let H = a.ZP.connectStores([y.Z, j.Z, T.Z, N.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.defau
                 }
             );
         }),
-        m = null != n && y.Z.canPlay(n),
-        f = y.Z.getSyncingWith(),
+        m = null != n && x.Z.canPlay(n),
+        f = x.Z.getSyncingWith(),
         h = null != f && null != a && f.userId === a;
     return {
         analyticsLocations: r,

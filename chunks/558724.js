@@ -47,7 +47,7 @@ function E(e) {
     }
     return e;
 }
-function y(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,13 +65,13 @@ function y(e, t) {
         e
     );
 }
-let x = {
+let y = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
         lastSeen: null
     },
-    v = x,
+    v = y,
     C = {},
     O = null,
     j = !1,
@@ -152,7 +152,7 @@ function Z() {
 }
 class R extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        ((v = null != e ? e : x), this.syncWith([h.Z], Z));
+        ((v = null != e ? e : y), this.syncWith([h.Z], Z));
     }
     getState() {
         return v;
@@ -176,11 +176,11 @@ class R extends (r = s.ZP.PersistedStore) {
         },
         (e) => {
             var t;
-            return y(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
+            return x(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
         },
         (e) => {
             var t;
-            return y(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
+            return x(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         }
     ]));
 let L = new R(u.Z, {

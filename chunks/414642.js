@@ -10,24 +10,24 @@ let l = (0, r.B)({
         label: 'Nitro Rebrand Churn Modal',
         defaultConfig: {
             enabled: !1,
-            expressive: !1
+            discountPrimary: !1
         },
         commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
-                label: 'Enables rebranded churn modal w/ utilitarian modals',
+                label: 'Enables rebranded churn modal w/ secondary discount CTA',
                 config: {
                     enabled: !0,
-                    expressive: !1
+                    discountPrimary: !1
                 }
             },
             {
                 id: 2,
-                label: 'Enables rebranded churn modal w/ expressive modals',
+                label: 'Enables rebranded churn modal w/ primary discount CTA',
                 config: {
                     enabled: !0,
-                    expressive: !0
+                    discountPrimary: !0
                 }
             }
         ]

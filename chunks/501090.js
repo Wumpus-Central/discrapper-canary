@@ -12,7 +12,7 @@ let l = (e, t, n) => {
     let [o, l] = r.useState(e),
         [u, d] = r.useState(Date.now()),
         [m] = r.useState(Date.now()),
-        p = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 (i.default.track(
                     s.rMx.CANCELLATION_FLOW_STEP,
@@ -56,7 +56,7 @@ let l = (e, t, n) => {
             },
             [n, m, u, o, t]
         );
-    return [o, p, u, m];
+    return [o, _, u, m];
 };
 function c(e) {
     var t;

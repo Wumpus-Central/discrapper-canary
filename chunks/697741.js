@@ -45,17 +45,17 @@ let a = {
     g = /^(.+?(s|t))(ion)$/,
     b = /^(.+?)(ed|ing)$/,
     h = /(at|bl|iz)$/,
-    T = /^(.+?)eed$/,
-    y = /^.+?[^s]s$/,
+    y = /^(.+?)eed$/,
+    T = /^.+?[^s]s$/,
     C = /^.+?(ss|i)es$/,
-    x = /([^aeiouylsz])\1$/,
-    O = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
-    E = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+    E = /([^aeiouylsz])\1$/,
+    x = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
+    O = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
     v = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
 function I(e) {
     let t,
         n = String(e).toLowerCase();
     if (n.length < 3) return n;
     let o = !1;
-    return (121 === n.codePointAt(0) && ((o = !0), (n = 'Y' + n.slice(1))), C.test(n) ? (n = n.slice(0, -2)) : y.test(n) && (n = n.slice(0, -1)), (t = T.exec(n)) ? l.test(t[1]) && (n = n.slice(0, -1)) : (t = b.exec(n)) && d.test(t[1]) && ((n = t[1]), h.test(n) ? (n += 'e') : x.test(n) ? (n = n.slice(0, -1)) : m.test(n) && (n += 'e')), (t = f.exec(n)) && d.test(t[1]) && (n = t[1] + 'i'), (t = O.exec(n)) && l.test(t[1]) && (n = t[1] + a[t[2]]), (t = E.exec(n)) && l.test(t[1]) && (n = t[1] + i[t[2]]), (t = v.exec(n)) ? u.test(t[1]) && (n = t[1]) : (t = g.exec(n)) && u.test(t[1]) && (n = t[1]), (t = _.exec(n)) && (u.test(t[1]) || (s.test(t[1]) && !m.test(t[1]))) && (n = t[1]), p.test(n) && u.test(n) && (n = n.slice(0, -1)), o && (n = 'y' + n.slice(1)), n);
+    return (121 === n.codePointAt(0) && ((o = !0), (n = 'Y' + n.slice(1))), C.test(n) ? (n = n.slice(0, -2)) : T.test(n) && (n = n.slice(0, -1)), (t = y.exec(n)) ? l.test(t[1]) && (n = n.slice(0, -1)) : (t = b.exec(n)) && d.test(t[1]) && ((n = t[1]), h.test(n) ? (n += 'e') : E.test(n) ? (n = n.slice(0, -1)) : m.test(n) && (n += 'e')), (t = f.exec(n)) && d.test(t[1]) && (n = t[1] + 'i'), (t = x.exec(n)) && l.test(t[1]) && (n = t[1] + a[t[2]]), (t = O.exec(n)) && l.test(t[1]) && (n = t[1] + i[t[2]]), (t = v.exec(n)) ? u.test(t[1]) && (n = t[1]) : (t = g.exec(n)) && u.test(t[1]) && (n = t[1]), (t = _.exec(n)) && (u.test(t[1]) || (s.test(t[1]) && !m.test(t[1]))) && (n = t[1]), p.test(n) && u.test(n) && (n = n.slice(0, -1)), o && (n = 'y' + n.slice(1)), n);
 }

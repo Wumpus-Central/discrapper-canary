@@ -1,8 +1,8 @@
 (n.r(t), n.d(t, { default: () => P }), n(415506), n(388685));
 var r = n(255367),
     o = n(73800),
-    a = n(442837),
-    i = n(13245),
+    i = n(442837),
+    a = n(13245),
     l = n(615287),
     c = n(493773),
     u = n(710845),
@@ -19,8 +19,8 @@ n(371467);
 var g = n(41534),
     h = n(554370),
     y = n(371651),
-    O = n(610394),
-    E = n(757744),
+    E = n(610394),
+    O = n(757744),
     I = n(981631);
 let C = new u.Z('AppOverlay');
 async function S(e, t) {
@@ -32,15 +32,15 @@ async function S(e, t) {
         } catch (e) {
             (C.error('Window does not exist while trying to show inactive', e), (0, g.D1)(e, l.gl.OutOfProcess));
         }
-        for (let a = 0; a < r; a++)
+        for (let i = 0; i < r; i++)
             try {
                 if (!(await m.ZP.waitForIPCReady(n, e))) throw Error('IPC not ready');
                 m.ZP.showInactive(t);
                 return;
             } catch (e) {
                 var o;
-                if ((null == (o = e.message) ? void 0 : o.includes('IPC')) && a < r - 1) {
-                    let t = (n / 2) * Math.pow(2, a + 1);
+                if ((null == (o = e.message) ? void 0 : o.includes('IPC')) && i < r - 1) {
+                    let t = (n / 2) * Math.pow(2, i + 1);
                     (C.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
                 } else throw ((0, g.D1)(e, l.gl.OutOfProcess), e);
             }
@@ -49,34 +49,34 @@ async function S(e, t) {
 let P = o.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         u = (function (e, t) {
-            let n = (0, a.e7)([s.Z], () => s.Z.getWindow(e)),
+            let n = (0, i.e7)([s.Z], () => s.Z.getWindow(e)),
                 r = o.useRef(null),
                 u = o.useRef(null),
                 d = o.useRef(null),
-                m = (0, a.e7)([p.default], () => {
+                m = (0, i.e7)([p.default], () => {
                     let e = p.default.getFocusedPID();
                     return !b.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
                 [g, h] = o.useState(m),
-                [E, C] = o.useState(!1),
+                [O, C] = o.useState(!1),
                 P = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != _.Z.getVoiceChannelId();
-                    (i.Z.track(I.rMx.OVERLAY_INITIALIZED, {
+                    (a.Z.track(I.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: O.ZP.isPinned(I.Odu.TEXT),
+                        text_widget_connected: E.ZP.isPinned(I.Odu.TEXT),
                         overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t)
                     }),
-                        i.Z.successfullyShown(e));
+                        a.Z.successfullyShown(e));
                 }, [t]);
             (0, c.Ng)(() => {
                 let e = (e) => {
                     let t = null != n ? n : window;
-                    e.data === O.Il &&
+                    e.data === E.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(O.A8, '*');
+                                window.parent.postMessage(E.A8, '*');
                             });
                         });
                 };
@@ -97,7 +97,7 @@ let P = o.memo(function (e) {
                             try {
                                 await S(e, t);
                             } catch (e) {
-                                i.Z.setOverlayCrashed((0, v.getPID)(), e);
+                                a.Z.setOverlayCrashed((0, v.getPID)(), e);
                                 return;
                             }
                             u.current = e.setTimeout(() => {
@@ -117,11 +117,11 @@ let P = o.memo(function (e) {
                 (0, c.zq)(() => {
                     null != d.current && d.current();
                 }),
-                E
+                O
             );
-        })(n, E.$S),
+        })(n, O.$S),
         m = (0, v.getPID)(),
-        g = (0, a.e7)([p.default], () => p.default.isInputLocked(m), [m]);
+        g = (0, i.e7)([p.default], () => p.default.isInputLocked(m), [m]);
     return u
         ? (0, r.jsx)(d.Z, {
               withTitleBar: t,

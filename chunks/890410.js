@@ -56,7 +56,7 @@ function p(e) {
             }
             return i;
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
-    let y = (0, a.ZP)(i);
+    let x = (0, a.ZP)(i);
     return (0, r.jsx)('div', {
         className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: h }, f),
         children: (0, r.jsx)(
@@ -77,7 +77,7 @@ function p(e) {
                             {
                                 message: i,
                                 channel: p,
-                                author: y,
+                                author: x,
                                 guildId: null == p ? void 0 : p.guild_id,
                                 compact: h,
                                 hideTimestamp: _,
@@ -87,7 +87,7 @@ function p(e) {
                         )
                     ),
                     compact: h,
-                    author: y
+                    author: x
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

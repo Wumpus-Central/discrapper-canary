@@ -149,9 +149,9 @@ function Z() {
         }, [k]));
     let V = (0, c.e7)([A.Z], () => A.Z.getCurrentPage()),
         W = (0, c.e7)([_.Z], () => null != B && _.Z.getEnabled(B)),
-        Y = (0, c.e7)([S.Z], () => null != B && S.Z.isEmpty(B)),
-        K = (0, y.F)(B).length > 0,
-        q = (0, f.Y)(o);
+        K = (0, c.e7)([S.Z], () => null != B && S.Z.isEmpty(B)),
+        Y = (0, y.F)(B).length > 0,
+        q = (0, f.o)(o);
     return (0, n.jsx)(d.Gt, {
         value: j,
         children: (0, n.jsx)(
@@ -195,11 +195,11 @@ function Z() {
             )),
             (a = a =
                 {
-                    canUnlinkChannels: K,
+                    canUnlinkChannels: Y,
                     canViewGuildAnalytics: G.canViewGuildAnalytics,
                     onboardingStep: V,
                     onboardingEnabled: W,
-                    welcomeScreenEmpty: Y,
+                    welcomeScreenEmpty: K,
                     guildMetadata: h,
                     pinPermissionMigrationAvailable: q
                 }),

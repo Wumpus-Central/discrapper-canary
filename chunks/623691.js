@@ -1,144 +1,154 @@
-(n.d(t, { Z: () => N }), n(953529), n(388685));
+(n.d(t, { Z: () => S }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     s = n.n(l),
     a = n(913527),
     o = n.n(a),
-    c = n(755721),
-    d = n(481060),
-    u = n(668781),
-    m = n(749210),
-    g = n(190263),
-    p = n(494620),
-    f = n(496675),
-    h = n(55935),
-    x = n(63063),
-    b = n(434404),
-    j = n(714939),
-    _ = n(494831),
-    v = n(981631),
-    O = n(231338),
-    C = n(388032),
-    y = n(587072);
-function N(e) {
+    c = n(704215),
+    d = n(755721),
+    u = n(481060),
+    m = n(668781),
+    g = n(749210),
+    p = n(266454),
+    f = n(190263),
+    h = n(494620),
+    x = n(496675),
+    b = n(55935),
+    j = n(63063),
+    _ = n(434404),
+    v = n(714939),
+    O = n(494831),
+    C = n(981631),
+    y = n(921944),
+    N = n(231338),
+    I = n(388032),
+    E = n(587072);
+function S(e) {
     let { guild: t, everyoneRole: n, filteredRoles: l, setEditRoleId: s, query: a, setQuery: o, setHeaderHeight: c } = e,
-        u = i.useRef(null),
-        m = g.D.useExperiment({
+        d = i.useRef(null),
+        m = f.D.useExperiment({
             guildId: t.id,
             location: 'GuildSettingsRolesOverviewHeader'
         }).enabled;
     i.useEffect(() => {
         var e, t;
-        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : _.Cl);
+        c(null != (t = null == (e = d.current) ? void 0 : e.offsetHeight) ? t : O.Cl);
     }, [c]);
-    let p = i.useCallback(() => {
+    let g = i.useCallback(() => {
         s(n.id);
     }, [s, n.id]);
     return (0, r.jsxs)('div', {
-        ref: u,
+        ref: d,
         children: [
-            (0, r.jsx)(d.vwX, {
-                tag: d.RB0.H1,
-                children: C.intl.string(C.t.LPJmLy)
+            (0, r.jsx)(u.vwX, {
+                tag: u.RB0.H1,
+                children: I.intl.string(I.t.LPJmLy)
             }),
-            (0, r.jsx)(d.Text, {
-                className: y.description,
+            (0, r.jsx)(u.Text, {
+                className: E.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: C.intl.string(C.t['1ydhVl'])
+                children: I.intl.string(I.t['1ydhVl'])
             }),
-            m ? (0, r.jsx)(I, { guild: t }) : null,
-            (0, r.jsx)(E, {
+            m ? (0, r.jsx)(T, { guild: t }) : null,
+            (0, r.jsx)(P, {
                 guild: t,
                 everyoneRole: n,
                 filteredRoles: l,
                 query: a,
                 setQuery: o,
-                onEveryoneRoleClick: p
+                onEveryoneRoleClick: g
             })
         ]
     });
 }
-function I(e) {
-    let { guild: t } = e,
-        n = (0, h.vc)(o()(v.LCk), 'LL'),
-        i = t.features.has(v.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
-            ? (0, r.jsx)(d.Text, {
+function T(e) {
+    let { guild: t } = e;
+    i.useEffect(() => {
+        (0, p.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
+            dismissAction: y.L.INDIRECT_ACTION,
+            guildId: t.id,
+            forceTrack: !0
+        });
+    }, [t]);
+    let n = (0, b.vc)(o()(C.LCk), 'LL'),
+        l = t.features.has(C.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
+            ? (0, r.jsx)(u.Text, {
                   variant: 'text-sm/normal',
-                  children: C.intl.format(C.t.Vg2oTE, { breakingChangeDate: n })
+                  children: I.intl.format(I.t.Vg2oTE, { breakingChangeDate: n })
               })
-            : f.Z.can(O.Pl.ADMINISTRATOR, t)
-              ? (0, r.jsx)(d.Text, {
+            : x.Z.can(N.Pl.ADMINISTRATOR, t)
+              ? (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    children: C.intl.format(C.t.HYM8OD, {
+                    children: I.intl.format(I.t.HYM8OD, {
                         onClickMigrate: () => {
-                            u.Z.show({
-                                title: C.intl.string(C.t.nFE8dH),
-                                body: C.intl.format(C.t['1PAzQ0'], { guildName: t.name }),
-                                cancelText: C.intl.string(C.t['ETE/oK']),
-                                confirmText: C.intl.string(C.t['cY+Ooa']),
+                            m.Z.show({
+                                title: I.intl.string(I.t.nFE8dH),
+                                body: I.intl.format(I.t['1PAzQ0'], { guildName: t.name }),
+                                cancelText: I.intl.string(I.t['ETE/oK']),
+                                confirmText: I.intl.string(I.t['cY+Ooa']),
                                 onConfirm: () => {
-                                    b.Z.migratePinPermission(t.id);
+                                    _.Z.migratePinPermission(t.id);
                                 }
                             });
                         },
                         breakingChangeDate: n
                     })
                 })
-              : (0, r.jsx)(d.Text, {
+              : (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    children: C.intl.format(C.t.cAuU1d, { breakingChangeDate: n })
+                    children: I.intl.format(I.t.cAuU1d, { breakingChangeDate: n })
                 });
-    return (0, r.jsx)(p.Z, {
-        look: p.z.WARNING,
-        className: y.migrationInfoBox,
-        children: i
+    return (0, r.jsx)(h.Z, {
+        look: h.z.WARNING,
+        className: E.migrationInfoBox,
+        children: l
     });
 }
-function E(e) {
+function P(e) {
     let { guild: t, everyoneRole: n, filteredRoles: i, query: l, setQuery: a, onEveryoneRoleClick: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(v.Z, {
                 role: n,
                 onClick: o
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(w, {
                 guild: t,
                 query: l,
                 setQuery: a
             }),
-            (0, r.jsx)(d.Text, {
-                className: y.helpText,
+            (0, r.jsx)(u.Text, {
+                className: E.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: C.intl.format(C.t.xkC3YW, { articleURL: x.Z.getArticleURL(v.BhN.PERMISSIONS_TUTORIAL) })
+                children: I.intl.format(I.t.xkC3YW, { articleURL: j.Z.getArticleURL(C.BhN.PERMISSIONS_TUTORIAL) })
             }),
             (0, r.jsx)('div', {
-                className: y.rolesTable,
+                className: E.rolesTable,
                 children: (0, r.jsxs)('div', {
-                    className: y.tableHeader,
+                    className: E.tableHeader,
                     children: [
-                        (0, r.jsx)('div', { className: y.dragSpacing }),
-                        (0, r.jsx)(d.Text, {
-                            className: s()(y.tableTitle, y.roleNameSpacing),
+                        (0, r.jsx)('div', { className: E.dragSpacing }),
+                        (0, r.jsx)(u.Text, {
+                            className: s()(E.tableTitle, E.roleNameSpacing),
                             variant: 'text-sm/normal',
-                            children: C.intl.format(C.t['38N3V1'], { numRoles: String(i.length) })
+                            children: I.intl.format(I.t['38N3V1'], { numRoles: String(i.length) })
                         }),
-                        (0, r.jsx)(d.Text, {
-                            className: s()(y.tableTitle, y.memberSpacing),
+                        (0, r.jsx)(u.Text, {
+                            className: s()(E.tableTitle, E.memberSpacing),
                             variant: 'text-sm/normal',
-                            children: C.intl.string(C.t['9Oq93t'])
+                            children: I.intl.string(I.t['9Oq93t'])
                         }),
-                        (0, r.jsx)('div', { className: y.buttonsSpacing })
+                        (0, r.jsx)('div', { className: E.buttonsSpacing })
                     ]
                 })
             })
         ]
     });
 }
-function S(e) {
+function w(e) {
     let { guild: t, query: n, setQuery: l } = e,
         [s, a] = i.useState(!1),
         o = i.useCallback(
@@ -147,31 +157,31 @@ function S(e) {
             },
             [l]
         ),
-        u = i.useCallback(() => {
+        c = i.useCallback(() => {
             l('');
         }, [l]),
-        g = async () => {
-            (a(!0), await m.Z.createRole(t.id), a(!1));
+        m = async () => {
+            (a(!0), await g.Z.createRole(t.id), a(!1));
         };
     return (0, r.jsx)('div', {
-        className: y.__invalid_rolesList,
+        className: E.__invalid_rolesList,
         children: (0, r.jsxs)('div', {
-            className: y.searchContainer,
+            className: E.searchContainer,
             children: [
-                (0, r.jsx)(d.E1j, {
-                    size: d.E1j.Sizes.MEDIUM,
+                (0, r.jsx)(u.E1j, {
+                    size: u.E1j.Sizes.MEDIUM,
                     query: n,
                     onChange: o,
-                    onClear: u,
-                    placeholder: C.intl.string(C.t.Sojqsr),
-                    'aria-label': C.intl.string(C.t.Sojqsr)
+                    onClear: c,
+                    placeholder: I.intl.string(I.t.Sojqsr),
+                    'aria-label': I.intl.string(I.t.Sojqsr)
                 }),
-                (0, r.jsx)(c.zx, {
-                    className: y.createButton,
-                    size: c.zx.Sizes.SMALL,
-                    onClick: g,
+                (0, r.jsx)(d.zx, {
+                    className: E.createButton,
+                    size: d.zx.Sizes.SMALL,
+                    onClick: m,
                     submitting: s,
-                    children: C.intl.string(C.t.JZZjQE)
+                    children: I.intl.string(I.t.JZZjQE)
                 })
             ]
         })

@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(430824),
     b = n(594174),
     E = n(739566),
-    y = n(761652),
-    x = n(388032),
+    x = n(761652),
+    y = n(388032),
     v = n(912861);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -148,7 +148,7 @@ let T = i.memo(function (e) {
                                                     messageId: P,
                                                     sourceAnalyticsLocations: Z
                                                 }),
-                                            children: [y.ME, e.nick]
+                                            children: [x.ME, e.nick]
                                         })
                                     );
                                 }
@@ -161,7 +161,7 @@ let T = i.memo(function (e) {
                                     (_ = (0, r.jsxs)(
                                         m.Z,
                                         O(C({}, I), {
-                                            children: [y.zy, t.name]
+                                            children: [x.zy, t.name]
                                         })
                                     ));
                                 break;
@@ -173,7 +173,7 @@ let T = i.memo(function (e) {
                                     (_ = (0, r.jsxs)(
                                         m.Z,
                                         O(C({}, I), {
-                                            children: [y.ME, t.name]
+                                            children: [x.ME, t.name]
                                         })
                                     ));
                                 break;
@@ -183,7 +183,7 @@ let T = i.memo(function (e) {
                                     t = null != N ? g.Z.getRole(N.id, e) : void 0;
                                 if (null != t)
                                     _ = (0, r.jsxs)(m.Z, {
-                                        children: [y.ME, t.name]
+                                        children: [x.ME, t.name]
                                     });
                                 else {
                                     let t = b.default.getUser(e);
@@ -198,7 +198,7 @@ let T = i.memo(function (e) {
                                                         guildId: T.guild_id,
                                                         sourceAnalyticsLocations: Z
                                                     }),
-                                                children: [y.ME, e.nick]
+                                                children: [x.ME, e.nick]
                                             })
                                         );
                                     }
@@ -206,7 +206,7 @@ let T = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                _ = S(x.intl.string(x.t.nONJVV));
+                                _ = S(y.intl.string(y.t.nONJVV));
                                 break;
                             default: {
                                 let e = null == w || null == (u = w.choices) ? void 0 : u.find((e) => e.value === v.value);

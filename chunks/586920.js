@@ -9,27 +9,27 @@ var r = n(255367),
     u = n(10508),
     d = n(594135),
     m = n(474936),
-    p = n(388032),
-    _ = n(735912),
+    _ = n(388032),
+    p = n(735912),
     f = n(997892),
     C = n(234286);
 let h = () => {
     let { transitionState: e, onClose: t, premiumType: n, premiumSubscription: h, confettiCanvas: x, churnUserDiscountOffer: y } = (0, d.a)(),
         b = (0, i.useRef)(null),
-        [g, v] = (0, i.useState)(!1),
-        I = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        j = (0, c._)(h, m.Xh.PREMIUM_MONTH_TIER_2, y);
+        [g, j] = (0, i.useState)(!1),
+        v = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        I = (0, c._)(h, m.Xh.PREMIUM_MONTH_TIER_2, y);
     if (
         ((0, i.useEffect)(() => {
-            null !== b.current && null !== j && v(!0);
-        }, [b, j]),
+            null !== b.current && null !== I && j(!0);
+        }, [b, I]),
         null === y)
     )
         return null;
     let T = n === m.p9.TIER_2,
         E = [
             {
-                text: p.intl.string(p.t['/r8g/v']),
+                text: _.intl.string(_.t['/r8g/v']),
                 onClick: () => t(),
                 variant: 'primary',
                 fullWidth: !0
@@ -42,18 +42,18 @@ let h = () => {
                 graphic: { src: T ? C : f },
                 gradientColor: T ? 'nitro-pink' : 'nitro-green',
                 transitionState: e,
-                title: p.intl.string(p.t.PZSyRk),
+                title: _.intl.string(_.t.PZSyRk),
                 actions: E,
                 onClose: async () => t(),
                 children: (0, r.jsx)('div', {
-                    className: _.offerDetailContainer,
+                    className: p.offerDetailContainer,
                     children: (0, r.jsx)(u.o, {
                         applied: !0,
                         userDiscountOffer: y
                     })
                 })
             }),
-            !I &&
+            !v &&
                 g &&
                 (0, r.jsx)(l.Z, {
                     confettiTarget: b.current,

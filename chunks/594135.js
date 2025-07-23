@@ -14,7 +14,7 @@ let a = r.createContext({
         analyticsLocations: [],
         analyticsLocation: void 0,
         confettiCanvas: null,
-        expressive: !1,
+        discountPrimary: !1,
         churnUserDiscountOffer: null,
         isFetchingChurnDiscountOffer: !1
     }),

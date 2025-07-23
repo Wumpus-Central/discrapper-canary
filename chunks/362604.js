@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(472816), n(794429));
+(n.d(t, { Z: () => x }), n(388685), n(472816), n(794429));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,28 +16,28 @@ var r = n(255367),
     _ = n(981631),
     b = n(388032),
     E = n(711643);
-function y(e) {
-    let { message: t, channel: l, compact: y } = e,
-        x = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+function x(e) {
+    let { message: t, channel: l, compact: x } = e,
+        y = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [v, C] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            x.length > 0 && C(x[Math.floor(Math.random() * x.length)]);
+            y.length > 0 && C(y[Math.floor(Math.random() * y.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [x]),
+    }, [y]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(u.Z, {
-                      className: a()(E.mainContainer, { [E.compact]: y }),
+                      className: a()(E.mainContainer, { [E.compact]: x }),
                       icon: n(570111),
-                      compact: y,
+                      compact: x,
                       children: (0, r.jsx)('div', {
-                          className: a()(E.__invalid_content, { [E.compact]: y }),
+                          className: a()(E.__invalid_content, { [E.compact]: x }),
                           children: (0, r.jsx)('div', {
-                              className: a()(E.__invalid_messageContent, { [E.compact]: y }),
+                              className: a()(E.__invalid_messageContent, { [E.compact]: x }),
                               children: '' !== t.content ? t.content : b.intl.string(b.t.wnn1DQ)
                           })
                       })

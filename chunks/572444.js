@@ -90,8 +90,8 @@ function _() {
         j = (0, s.e7)([p.Z], () => p.Z.getKrispSuppressionLevel()),
         [_, y] = r.useState(null),
         C = r.useRef(null),
-        N = r.useRef(null),
-        [O, T] = r.useState(0.5),
+        O = r.useRef(null),
+        [N, T] = r.useState(0.5),
         {
             krispModels: E,
             krispModelOverride: S,
@@ -131,7 +131,7 @@ function _() {
     function G(e) {
         if ((t && z(), B(), null == F)) return;
         let a = F.createBufferSource();
-        ((a.buffer = e.audioBuffer), (N.current = F.createGain()), (N.current.gain.value = O), a.connect(N.current), N.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
+        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = N), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
     }
     r.useEffect(() => {
         B();
@@ -318,9 +318,9 @@ function _() {
                         title: 'Volume',
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: O,
+                            initialValue: N,
                             asValueChanges: function (e) {
-                                null != N.current && ((N.current.gain.value = e), T(e));
+                                null != O.current && ((O.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1

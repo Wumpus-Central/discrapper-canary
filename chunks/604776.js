@@ -97,7 +97,7 @@ function _() {
         [a, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [u, v] = r.useState([]),
         [_, y] = r.useState([]),
-        { refreshEntitlementList: C, grantFractionalPremium: N, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: T, entitlements: E, loading: S } = (0, x.m)();
+        { refreshEntitlementList: C, grantFractionalPremium: O, deleteFractionalPremium: N, triggerNextEntitlementFulfillment: T, entitlements: E, loading: S } = (0, x.m)();
     r.useEffect(() => {
         C();
     }, [C]);
@@ -172,7 +172,7 @@ function _() {
                             (0, n.jsx)(c.zxk, {
                                 variant: 'primary',
                                 text: 'Grant Fractional Nitro',
-                                onClick: () => N(a)
+                                onClick: () => O(a)
                             })
                         ]
                     }),
@@ -204,7 +204,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => O(),
+                                                onClick: () => N(),
                                                 children: 'Delete all'
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -239,7 +239,7 @@ function _() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => O(e.id)
+                                                        onDelete: () => N(e.id)
                                                     },
                                                     e.id
                                                 )

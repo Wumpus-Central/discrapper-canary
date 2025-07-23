@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => N }), a(388685), a(642613));
+(a.d(t, { Z: () => O }), a(388685), a(642613));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -63,17 +63,17 @@ let y = async () =>
             value: j.xT
         }
     ];
-function N() {
+function O() {
     let e = (0, s.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
         t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
         [a, l] = r.useState('511651880837840896'),
         [x, j] = r.useState([]),
-        [N, O] = r.useState(!1),
+        [O, N] = r.useState(!1),
         T = r.useCallback(async () => {
             try {
-                (O(!0), await (0, u.jg)(), await (0, m.In)(t.id), j(await y()));
+                (N(!0), await (0, u.jg)(), await (0, m.In)(t.id), j(await y()));
             } finally {
-                O(!1);
+                N(!1);
             }
         }, [t]);
     r.useEffect(() => {
@@ -109,7 +109,7 @@ function N() {
                             children: null != e ? 'Active Subscription' : 'Subscription Type'
                         }),
                         (0, n.jsx)(c.zx, {
-                            disabled: N,
+                            disabled: O,
                             look: c.zx.Looks.BLANK,
                             size: c.zx.Sizes.ICON,
                             onClick: T,

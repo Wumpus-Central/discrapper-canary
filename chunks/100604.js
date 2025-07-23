@@ -48,24 +48,24 @@ class h {
             _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
-            { snapshotIndex: y, parentMessage: x, messageSnapshot: v } = this,
+            { snapshotIndex: x, parentMessage: y, messageSnapshot: v } = this,
             C = (0, d.Xf)(v.message.timestamp),
             O = m.getChannel(this.parentMessage.channel_id);
-        if (null != O && O.guild_id === (null == (e = x.messageReference) ? void 0 : e.guild_id)) {
-            let e = m.getChannel(null == (n = x.messageReference) ? void 0 : n.channel_id);
+        if (null != O && O.guild_id === (null == (e = y.messageReference) ? void 0 : e.guild_id)) {
+            let e = m.getChannel(null == (n = y.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
                 let e = b.getGuild(O.guild_id);
                 return null == e
-                    ? { snapshotIndex: y }
+                    ? { snapshotIndex: x }
                     : {
-                          snapshotIndex: y,
+                          snapshotIndex: x,
                           footerInfo: f(e, C)
                       };
             }
-            if (!_.can(e.accessPermissions, e)) return { snapshotIndex: y };
+            if (!_.can(e.accessPermissions, e)) return { snapshotIndex: x };
             let t = (0, r.F6)(e, h, g, !0);
             return {
-                snapshotIndex: y,
+                snapshotIndex: x,
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: C,
@@ -76,13 +76,13 @@ class h {
                 }
             };
         }
-        let j = null == (t = x.messageReference) ? void 0 : t.guild_id;
-        if (null == j) return { snapshotIndex: y };
+        let j = null == (t = y.messageReference) ? void 0 : t.guild_id;
+        if (null == j) return { snapshotIndex: x };
         let I = null != (u = b.getGuild(j)) ? u : E.getGuild(j);
         return null == I
-            ? { snapshotIndex: y }
+            ? { snapshotIndex: x }
             : {
-                  snapshotIndex: y,
+                  snapshotIndex: x,
                   footerInfo: f(I, C)
               };
     }

@@ -1,46 +1,42 @@
-(n.d(t, { n: () => j }), n(539854));
+(n.d(t, { n: () => b }), n(539854), n(583741));
 var r = n(255367),
     i = n(73800),
     o = n(512722),
     a = n.n(o),
     s = n(442837),
-    l = n(667202),
-    c = n(82659),
-    u = n(481060),
-    d = n(484459),
-    m = n(594174),
-    p = n(847903),
+    l = n(82659),
+    c = n(481060),
+    u = n(484459),
+    d = n(594174),
+    m = n(847903),
     _ = n(807163),
-    f = n(10508),
-    C = n(45474),
-    h = n(594135),
-    x = n(474936),
-    y = n(388032),
-    b = n(515622),
-    g = n(997892),
-    v = n(234286);
-let I = (e) => {
+    p = n(10508),
+    f = n(45474),
+    C = n(594135),
+    h = n(388032),
+    x = n(515622);
+let y = (e) => {
         let { churnUserDiscountOffer: t } = e;
         return null == t
             ? null
             : (0, r.jsx)('div', {
-                  className: b.previewContainer,
-                  children: (0, r.jsx)(f.o, { userDiscountOffer: t })
+                  className: x.previewContainer,
+                  children: (0, r.jsx)(p.o, { userDiscountOffer: t })
               });
     },
-    j = () => {
-        let { transitionState: e, onClose: t, premiumType: n, setStep: o, expressive: f, churnUserDiscountOffer: b, isFetchingChurnDiscountOffer: j } = (0, h.a)(),
-            T = (0, s.e7)([m.default], () => {
-                let e = m.default.getCurrentUser();
+    b = () => {
+        let { transitionState: e, onClose: t, premiumType: n, setStep: o, discountPrimary: p, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: b } = (0, C.a)(),
+            g = (0, s.e7)([d.default], () => {
+                let e = d.default.getCurrentUser();
                 return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
             });
         i.useEffect(() => {
-            (0, d.Z)(T.id, T.getAvatarURL(null, 80));
-        }, [T]);
-        let E = (0, p.Z)(),
-            P = 'US' === E.ipCountryCode && 'CA' === E.ipSubdivisionCode;
-        if (j)
-            return (0, r.jsx)(c.Modal, {
+            (0, u.Z)(g.id, g.getAvatarURL(null, 80));
+        }, [g]);
+        let j = (0, m.Z)(),
+            v = 'US' === j.ipCountryCode && 'CA' === j.ipSubdivisionCode;
+        if (b)
+            return (0, r.jsx)(l.Modal, {
                 transitionState: e,
                 title: '',
                 actions: [],
@@ -48,56 +44,40 @@ let I = (e) => {
                     t();
                 }
             });
-        let O = [];
-        if (
-            (null != b
-                ? O.push({
-                      text: y.intl.string(y.t.zrCzVF),
-                      onClick: () => o(C.R.CONFIRM_DISCOUNT),
-                      variant: 'secondary',
-                      icon: u.SrA
+        let I = [];
+        return (
+            null != x
+                ? I.push({
+                      text: h.intl.string(h.t.zrCzVF),
+                      onClick: () => o(f.R.CONFIRM_DISCOUNT),
+                      variant: p ? 'primary' : 'secondary',
+                      icon: c.SrA
                   })
-                : O.push({
-                      text: y.intl.string(y.t.h9tkAA),
+                : I.push({
+                      text: h.intl.string(h.t.h9tkAA),
                       onClick: () => t(),
                       variant: 'secondary'
                   }),
-            O.push({
-                text: P ? y.intl.string(y.t.PfnxqK) : y.intl.string(y.t['3PatS0']),
-                onClick: () => o(C.R.CONFIRM),
-                variant: 'primary'
+            I.push({
+                text: v ? h.intl.string(h.t.PfnxqK) : h.intl.string(h.t['3PatS0']),
+                onClick: () => o(f.R.CONFIRM),
+                variant: null !== x && p ? 'secondary' : 'primary'
             }),
-            f && null === b)
-        ) {
-            let i = n === x.p9.TIER_2;
-            return (0, r.jsx)(l.I, {
-                gradientColor: i ? 'nitro-pink' : 'nitro-green',
-                graphic: { src: i ? v : g },
-                title: y.intl.string(y.t.PWq8TE),
-                subtitle: y.intl.format(y.t.nsGVzs, {}),
-                actions: O,
+            p && null !== x && I.reverse(),
+            (0, r.jsx)(l.Modal, {
                 transitionState: e,
+                title: h.intl.string(h.t.PWq8TE),
+                subtitle: h.intl.format(h.t.nsGVzs, {}),
+                actions: I,
+                preview: null !== x && (0, r.jsx)(y, { churnUserDiscountOffer: x }),
                 onClose: async () => t(),
                 children: (0, r.jsx)(_.g, {
-                    currentUser: T,
+                    currentUser: g,
                     premiumType: n,
                     onClose: t,
-                    isDowngrade: !1
+                    isDowngrade: !1,
+                    isPremiumRebrand: !0
                 })
-            });
-        }
-        return (0, r.jsx)(c.Modal, {
-            transitionState: e,
-            title: y.intl.string(y.t.PWq8TE),
-            subtitle: y.intl.format(y.t.nsGVzs, {}),
-            actions: O,
-            preview: (0, r.jsx)(I, { churnUserDiscountOffer: b }),
-            onClose: async () => t(),
-            children: (0, r.jsx)(_.g, {
-                currentUser: T,
-                premiumType: n,
-                onClose: t,
-                isDowngrade: !1
             })
-        });
+        );
     };

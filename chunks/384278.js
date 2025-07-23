@@ -25,6 +25,18 @@ let o = (0, s.le)({
             2: {
                 delayMs: 3 * r.Z.Millis.SECOND,
                 inExperiment: !0
+            },
+            3: {
+                delayMs: 1.5 * r.Z.Millis.SECOND,
+                inExperiment: !0
+            },
+            4: {
+                delayMs: 2 * r.Z.Millis.SECOND,
+                inExperiment: !0
+            },
+            5: {
+                delayMs: 3 * r.Z.Millis.SECOND,
+                inExperiment: !0
             }
         }
     }),
@@ -60,20 +72,44 @@ let o = (0, s.le)({
                     delayMs: 3 * r.Z.Millis.SECOND,
                     inExperiment: !0
                 }
+            },
+            {
+                id: 3,
+                label: '1.5 second delay (overlap)',
+                config: {
+                    delayMs: 1.5 * r.Z.Millis.SECOND,
+                    inExperiment: !0
+                }
+            },
+            {
+                id: 4,
+                label: '2 second delay (overlap)',
+                config: {
+                    delayMs: 2 * r.Z.Millis.SECOND,
+                    inExperiment: !0
+                }
+            },
+            {
+                id: 5,
+                label: '3 second delay (overlap)',
+                config: {
+                    delayMs: 3 * r.Z.Millis.SECOND,
+                    inExperiment: !0
+                }
             }
         ],
         commonTriggerPoint: l.$P.CONNECTION_OPEN
     }),
     c = (e) => {
-        let { delayMs: t, inExperiment: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-        if (n)
-            return {
-                delayMs: t,
-                inExperiment: !0
-            };
-        let { delayMs: r, inExperiment: i } = o.getConfig({ location: e });
-        return {
-            delayMs: r,
-            inExperiment: i
-        };
+        let { delayMs: t, inExperiment: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+            { delayMs: r, inExperiment: i } = o.getConfig({ location: e });
+        return n
+            ? {
+                  delayMs: t,
+                  inExperiment: !0
+              }
+            : {
+                  delayMs: r,
+                  inExperiment: i
+              };
     };

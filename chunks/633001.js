@@ -20,8 +20,8 @@ var n = a(255367),
     _ = a(355863),
     y = a(449224),
     C = a(808506),
-    N = a(572004),
-    O = a(70956),
+    O = a(572004),
+    N = a(70956),
     T = a(145597),
     E = a(246992),
     S = a(981631),
@@ -138,7 +138,7 @@ function M(e) {
             color: c.zx.Colors.LINK,
             size: c.zx.Sizes.MIN,
             onClick: function () {
-                (0, N.JG)(t, () => l(!0));
+                (0, O.JG)(t, () => l(!0));
             },
             className: I.copyId,
             children: ['Application Id: ', t, ' ', a ? w.intl.string(w.t['t5VZ8/']) : null]
@@ -558,7 +558,7 @@ let H = r.memo(function (e) {
                                 k({}, e)
                             )
                         );
-                    }, +O.Z.Millis.SECOND)),
+                    }, +N.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 []

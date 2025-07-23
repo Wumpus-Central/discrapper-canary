@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: C = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: x, actionMenu: y, showOpaqueBackground: v = !1, hideRoleTag: C = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -119,7 +119,7 @@ function h(e) {
                                       })
                             ]
                         }),
-                        x
+                        y
                     ]
                 }),
                 (0, r.jsxs)('div', {
@@ -148,7 +148,7 @@ function h(e) {
                 })
             ]
         });
-    return null == y
+    return null == x
         ? (0, r.jsx)('article', {
               className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground),
               'aria-labelledby': P,
@@ -163,7 +163,7 @@ function h(e) {
                   tag: 'article',
                   'aria-label': d.intl.formatToPlainString(d.t['e+TmJS'], { productName: n }),
                   className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
-                  onClick: y,
+                  onClick: x,
                   children: A
               })
           });

@@ -16,18 +16,18 @@ function u(e) {
 }
 function d(e) {
     let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: p, setFocus: m, getNewFocusIndex: f, maintainFocusPosition: h = !0, includeSetSizes: g = !0, focusOnMount: _ = !0, enabled: b = !0, onDispatch: E } = e,
-        y = r.useCallback(
+        x = r.useCallback(
             (e, t) => {
                 let n = (0, i.Z)(e, t);
                 return (null != E && E(e, n, t), n);
             },
             [E]
         ),
-        [x, v] = r.useReducer(y, {
+        [y, v] = r.useReducer(x, {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: C, focusedIndex: O } = x,
+        { itemCount: C, focusedIndex: O } = y,
         [j] = r.useState(() => (0, a.P2)(v, 16));
     return (
         r.useEffect(() => {
@@ -37,10 +37,10 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: h, maintainFocusPosition: g, includeSetSizes: _, focusOnMount: b, enabled: E, makeId: y = a.qR, getIndexFromId: x } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: h, maintainFocusPosition: g, includeSetSizes: _, focusOnMount: b, enabled: E, makeId: x = a.qR, getIndexFromId: y } = e,
                 v = r.useRef(n),
-                C = r.useRef(x);
-            ((C.current = x), (v.current = n));
+                C = r.useRef(y);
+            ((C.current = y), (v.current = n));
             let O = r.useRef(E);
             r.useEffect(() => {
                 O.current = E;
@@ -68,7 +68,7 @@ function d(e) {
                 [N, P] = r.useState(!0);
             r.useEffect(() => {
                 if (N && !b) return void P(!1);
-                T(y(t, d), d);
+                T(x(t, d), d);
             }, [d]);
             let A = r.useCallback(
                     function () {
@@ -79,9 +79,9 @@ function d(e) {
                                 type: i.G.SET_FOCUSED_INDEX,
                                 index: n
                             }),
-                            e && T(y(t, n), n));
+                            e && T(x(t, n), n));
                     },
-                    [y, d, f, h, t, T]
+                    [x, d, f, h, t, T]
                 ),
                 w = r.useCallback(
                     (e) => {
@@ -113,29 +113,29 @@ function d(e) {
                                 (e.preventDefault(), e.stopPropagation(), h({ type: n }));
                                 return;
                             case l.Us.SELECT_FOCUSED_ITEM:
-                                let r = c(s(y, t, d));
+                                let r = c(s(x, t, d));
                                 if ((null == r ? void 0 : r.ownerDocument.activeElement) !== r || e.repeat) return;
                                 if ((e.preventDefault(), e.stopPropagation(), h({ type: n }), null != p)) return void p(d);
                                 null == r || r.click();
                         }
                     },
-                    [y, t, h, d, A, p]
+                    [x, t, h, d, A, p]
                 ),
                 Z = r.useCallback(() => {
                     j || I(!0);
                 }, [j]),
                 R = r.useCallback(() => {
-                    j || (g ? T(y(t, d), d) : A(!0));
-                }, [y, t, T, g, j, d, A]),
+                    j || (g ? T(x(t, d), d) : A(!0));
+                }, [x, t, T, g, j, d, A]),
                 L = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
-                                if (null == c(s(y, t, d))) return void T(t);
+                                if (null == c(s(x, t, d))) return void T(t);
                                 I(!1);
                             });
                     },
-                    [y, t, d, T]
+                    [x, t, d, T]
                 ),
                 k = r.useRef(null);
             r.useLayoutEffect(() => {
@@ -167,12 +167,12 @@ function d(e) {
                             role: 'listitem',
                             'aria-setsize': _ ? v.current : void 0,
                             'aria-posinset': _ ? n + 1 : void 0,
-                            id: y(t, n),
+                            id: x(t, n),
                             tabIndex: g && n === d ? 0 : -1,
-                            onFocus: S.get(null != C.current ? y(t, n) : n)
+                            onFocus: S.get(null != C.current ? x(t, n) : n)
                         };
                     },
-                    [y, t, d, g, S, _]
+                    [x, t, d, g, S, _]
                 );
             return r.useMemo(
                 () => ({

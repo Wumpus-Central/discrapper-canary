@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(223750),
     b = n(981631),
     E = n(388032),
-    y = n(429495);
-let x = (e) => {
+    x = n(429495);
+let y = (e) => {
         let { channel: t, message: n } = e,
             l = (0, _.t)(),
             [u, d] = i.useState(!1),
@@ -33,7 +33,7 @@ let x = (e) => {
                 });
             }, [t, n, p]);
         return (0, r.jsx)('div', {
-            className: y.welcomeCTA,
+            className: x.welcomeCTA,
             children: l
                 ? (0, r.jsx)(a.zx, {
                       variant: 'secondary',
@@ -43,15 +43,15 @@ let x = (e) => {
                   })
                 : (0, r.jsxs)(o.zx, {
                       'data-migration-pending': !0,
-                      className: y.welcomeCTAButtonOuter,
-                      innerClassName: y.welcomeCTAButton,
+                      className: x.welcomeCTAButtonOuter,
+                      innerClassName: x.welcomeCTAButton,
                       color: o.Tt.PRIMARY,
                       onMouseEnter: () => d(!0),
                       onMouseLeave: () => d(!1),
                       onClick: m,
                       children: [
                           (0, r.jsx)(c.Z, {
-                              className: y.welcomeCTASticker,
+                              className: x.welcomeCTASticker,
                               isInteracting: u,
                               sticker: p,
                               size: 28
@@ -76,7 +76,7 @@ let x = (e) => {
                 return a && !l && !o && !s && h;
             });
         return null != i && a
-            ? (0, r.jsx)(x, {
+            ? (0, r.jsx)(y, {
                   message: t,
                   channel: n
               })

@@ -1,5 +1,5 @@
 (r.d(s, {
-    Z: () => eC,
+    Z: () => eh,
     g: () => ej
 }),
     r(953529),
@@ -19,10 +19,10 @@ var t = r(255367),
     x = r(481060),
     f = r(570140),
     j = r(179360),
-    C = r(230711),
-    h = r(410030),
-    I = r(607070),
-    g = r(543241),
+    h = r(230711),
+    C = r(410030),
+    g = r(607070),
+    I = r(543241),
     N = r(906411),
     T = r(565138),
     v = r(822179),
@@ -90,7 +90,7 @@ let en = R.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
         TR: er
     };
 function eo() {
-    let e = (0, h.ZP)();
+    let e = (0, C.ZP)();
     return (0, d.wj)(e) ? ea : ei;
 }
 function el(e) {
@@ -181,7 +181,7 @@ function eu(e) {
     let s,
         { currentUser: r, premiumType: n, onClose: i } = e,
         a = (0, E.ZP)(r.id),
-        o = (0, m.e7)([I.Z], () => I.Z.useReducedMotion),
+        o = (0, m.e7)([g.Z], () => g.Z.useReducedMotion),
         l = n === D.p9.TIER_1;
     return (
         (s =
@@ -253,7 +253,7 @@ function eu(e) {
             {
                 description: l ? B.intl.format(B.t.xCaYwM, {}) : B.intl.format(B.t['gpqr+v'], {}),
                 onLearnMore: () => {
-                    (i(), C.Z.open(K.oAB.PROFILE_CUSTOMIZATION), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' }));
+                    (i(), h.Z.open(K.oAB.PROFILE_CUSTOMIZATION), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' }));
                 },
                 renderVisual: () => s
             },
@@ -263,8 +263,8 @@ function eu(e) {
 }
 function em(e) {
     let { premiumType: s } = e,
-        r = (0, m.e7)([I.Z], () => I.Z.useReducedMotion),
-        n = (0, g.wC)(null)
+        r = (0, m.e7)([g.Z], () => g.Z.useReducedMotion),
+        n = (0, I.wC)(null)
             .filter((e) => e.type === N.B.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
         i = (0, m.Wu)([v.Z], () => v.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
@@ -329,7 +329,7 @@ function em(e) {
 function ed(e) {
     let { premiumType: s, onClose: r } = e;
     n.useEffect(() => f.Z.wait(() => (0, j.X8)()), []);
-    let i = (0, m.e7)([I.Z], () => I.Z.useReducedMotion),
+    let i = (0, m.e7)([g.Z], () => g.Z.useReducedMotion),
         [o, l] = (0, m.Wu)([U.Z, O.Z], () => {
             let e = U.Z.boostSlots,
                 s = new Map();
@@ -354,7 +354,7 @@ function ed(e) {
         {
             description: s === D.p9.TIER_1 ? B.intl.format(B.t['K4Hv6+'], {}) : B.intl.format(B.t.wRxEDQ, {}),
             onLearnMore: () => {
-                (r(), C.Z.open(K.oAB.GUILD_BOOSTING), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' }));
+                (r(), h.Z.open(K.oAB.GUILD_BOOSTING), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' }));
             },
             renderVisual: () =>
                 c
@@ -532,27 +532,30 @@ function ej(e) {
             return e;
         }, [r, s, i, o, m, u]);
     return (0, t.jsx)('div', {
-        className: a()(G.whatYouLoseItemContainer, { [G.premiumRebrand]: c }),
+        className: a()(G.whatYouLoseItemContainer, {
+            [G.premiumRebrand]: c,
+            [G.noMargin]: c && d.length <= 2
+        }),
         children: d
     });
 }
-let eC = function (e) {
-    let { premiumType: s, titleText: r, subtitleText: i, footer: a, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: d, isLoading: p = !1, churnUserDiscountOffer: f = null, isDowngrade: j = !1, subtitleIcon: C, subtitleClassName: h } = e,
-        I = (0, m.e7)([P.default], () => {
+let eh = function (e) {
+    let { premiumType: s, titleText: r, subtitleText: i, footer: a, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: d, isLoading: p = !1, churnUserDiscountOffer: f = null, isDowngrade: j = !1, subtitleIcon: h, subtitleClassName: C } = e,
+        g = (0, m.e7)([P.default], () => {
             let e = P.default.getCurrentUser();
             return (l()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
         });
     n.useEffect(() => {
-        (0, _.Z)(I.id, I.getAvatarURL(null, 80));
-    }, [I]);
-    let g = null != f && !p;
+        (0, _.Z)(g.id, g.getAvatarURL(null, 80));
+    }, [g]);
+    let I = null != f && !p;
     return (n.useEffect(() => {
-        g &&
+        I &&
             Z.default.track(K.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: d,
                 discount_id: null == f ? void 0 : f.discount_id
             });
-    }, [g, d, f]),
+    }, [I, d, f]),
     p)
         ? (0, t.jsxs)(t.Fragment, {
               children: [
@@ -582,9 +585,9 @@ let eC = function (e) {
                               children: r
                           }),
                           (0, t.jsxs)('div', {
-                              className: h,
+                              className: C,
                               children: [
-                                  C,
+                                  h,
                                   (0, t.jsx)(x.Text, {
                                       variant: 'text-md/normal',
                                       children: i
@@ -592,15 +595,15 @@ let eC = function (e) {
                               ]
                           }),
                           (0, t.jsx)(ej, {
-                              currentUser: I,
+                              currentUser: g,
                               premiumType: s,
                               onClose: o,
                               isDowngrade: j
                           })
                       ]
                   }),
-                  !g && (0, t.jsx)(x.mzw, { children: a }),
-                  g &&
+                  !I && (0, t.jsx)(x.mzw, { children: a }),
+                  I &&
                       (0, t.jsx)(F.Z, {
                           churnUserDiscountOffer: f,
                           onDiscountClaim: c,
