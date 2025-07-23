@@ -72,6 +72,7 @@ function d() {
                         ]
                     }),
                     (0, n.jsx)(i.Z, {
+                        autoFocus: !0,
                         value: e,
                         onChange: t,
                         className: u.vanityUrlInput

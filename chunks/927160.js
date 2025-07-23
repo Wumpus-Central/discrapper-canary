@@ -3,7 +3,7 @@ var n = t(255367),
     i = t(263145),
     a = t(203377);
 function s(e) {
-    let { value: r, onChange: t, error: s, disabled: l, className: o } = e;
+    let { value: r, onChange: t, error: s, disabled: l, className: o, autoFocus: c = !1 } = e;
     return (0, n.jsx)(i.Z, {
         prefix: ''.concat(a.mf, '/'),
         value: r,
@@ -13,6 +13,7 @@ function s(e) {
         maxLength: 25,
         error: s,
         disabled: l,
-        className: o
+        className: o,
+        autoFocus: c
     });
 }

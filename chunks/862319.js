@@ -1,21 +1,19 @@
 n.d(t, {
-    Z: () => x,
-    w: () => b
+    Z: () => f,
+    w: () => h
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(755721),
-    a = n(481060),
-    o = n(259580),
-    c = n(73346),
-    d = n(817460),
-    u = n(723047),
-    m = n(880229),
-    g = n(388032),
-    p = n(748353);
-function f(e) {
+    s = n(481060),
+    a = n(259580),
+    o = n(73346),
+    c = n(817460),
+    d = n(723047),
+    u = n(388032),
+    m = n(748353);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,59 +56,60 @@ function h(e, t) {
         e
     );
 }
-function x(e) {
-    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: i, onImport: o } = e,
-        x = (0, u.mY)();
+function f(e) {
+    let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: a, onImport: f } = e,
+        h = (0, d.mY)();
     return (0, r.jsx)('div', {
-        className: p.container,
-        children: i.map((e) =>
+        className: m.container,
+        children: a.map((e) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: p.row,
+                    className: m.row,
                     children: [
                         (0, r.jsx)('img', {
                             alt: '',
-                            src: null == e.image_asset ? void 0 : (0, c._W)(e.application_id, e.image_asset, 512),
-                            className: l()(p.rowIcon, p.listingImage)
+                            src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
+                            className: l()(m.rowIcon, m.listingImage)
                         }),
                         (0, r.jsxs)('div', {
-                            className: p.rowBody,
+                            className: m.rowBody,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: l()(p.rowText, p.listingName),
+                                    className: l()(m.rowText, m.listingName),
                                     children: e.name
                                 }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: g.intl.format(g.t['QMj+Ii'], {
-                                        channels: e.role_benefits.benefits.filter(d.rC).length,
-                                        benefits: e.role_benefits.benefits.filter(d.lL).length
+                                    children: u.intl.format(u.t['QMj+Ii'], {
+                                        channels: e.role_benefits.benefits.filter(c.rC).length,
+                                        benefits: e.role_benefits.benefits.filter(c.lL).length
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(s.zx, {
-                            look: s.zx.Looks.OUTLINED,
-                            color: s.zx.Colors.PRIMARY,
+                        (0, r.jsx)(s.zxk, {
+                            variant: 'secondary',
                             onClick: () => {
-                                (0, a.h7j)((i) =>
-                                    (0, r.jsx)(
-                                        m.K,
-                                        h(f({}, i), {
-                                            fromSubscriptionListing: e,
-                                            existingChannelBenefits: t,
-                                            existingIntangibleBenefits: n,
-                                            onSubmit: o
-                                        })
-                                    )
-                                );
+                                (0, s.ZDy)(async () => {
+                                    let { ImportBenefitsFromSubscriptionListingModal: l } = await n.e('31667').then(n.bind(n, 880229));
+                                    return (n) =>
+                                        (0, r.jsx)(
+                                            l,
+                                            p(g({}, n), {
+                                                fromSubscriptionListing: e,
+                                                existingChannelBenefits: t,
+                                                existingIntangibleBenefits: i,
+                                                onSubmit: f
+                                            })
+                                        );
+                                });
                             },
-                            disabled: x,
-                            children: g.intl.string(g.t['90bIv7'])
+                            disabled: h,
+                            text: u.intl.string(u.t['90bIv7'])
                         })
                     ]
                 },
@@ -119,41 +118,43 @@ function x(e) {
         )
     });
 }
-function b(e) {
-    let { guildId: t, onImport: n, disabled: i = !1 } = e;
-    return (0, r.jsxs)(a.P3F, {
-        className: l()(p.importRoleCard, { [p.disabled]: i }),
-        onClick: i
+function h(e) {
+    let { guildId: t, onImport: i, disabled: o = !1 } = e;
+    return (0, r.jsxs)(s.P3F, {
+        className: l()(m.importRoleCard, { [m.disabled]: o }),
+        onClick: o
             ? void 0
             : function () {
-                  (0, a.h7j)((e) =>
-                      (0, r.jsx)(
-                          m.C,
-                          h(f({}, e), {
-                              guildId: t,
-                              onImport: n
-                          })
-                      )
-                  );
+                  (0, s.ZDy)(async () => {
+                      let { ImportBenefitsFromRoleModal: e } = await n.e('31667').then(n.bind(n, 880229));
+                      return (n) =>
+                          (0, r.jsx)(
+                              e,
+                              p(g({}, n), {
+                                  guildId: t,
+                                  onImport: i
+                              })
+                          );
+                  });
               },
-        'aria-disabled': i,
+        'aria-disabled': o,
         children: [
-            (0, r.jsx)(a.lZ8, {
+            (0, r.jsx)(s.lZ8, {
                 size: 'custom',
                 width: 23,
                 height: 23,
                 color: 'currentColor',
-                className: p.rowIcon
+                className: m.rowIcon
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                className: p.rowText,
-                children: g.intl.string(g.t.xK9pBA)
+                className: m.rowText,
+                children: u.intl.string(u.t.xK9pBA)
             }),
-            (0, r.jsx)(o.Z, {
-                direction: o.Z.Directions.RIGHT,
-                className: p.caret
+            (0, r.jsx)(a.Z, {
+                direction: a.Z.Directions.RIGHT,
+                className: m.caret
             })
         ]
     });

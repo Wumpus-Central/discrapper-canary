@@ -34,7 +34,7 @@ let y = (e) => {
             (0, u.Z)(g.id, g.getAvatarURL(null, 80));
         }, [g]);
         let j = (0, m.Z)(),
-            v = 'US' === j.ipCountryCode && 'CA' === j.ipSubdivisionCode;
+            I = 'US' === j.ipCountryCode && 'CA' === j.ipSubdivisionCode;
         if (b)
             return (0, r.jsx)(l.Modal, {
                 transitionState: e,
@@ -44,31 +44,31 @@ let y = (e) => {
                     t();
                 }
             });
-        let I = [];
+        let v = [];
         return (
             null != x
-                ? I.push({
+                ? v.push({
                       text: h.intl.string(h.t.zrCzVF),
                       onClick: () => o(f.R.CONFIRM_DISCOUNT),
                       variant: p ? 'primary' : 'secondary',
                       icon: c.SrA
                   })
-                : I.push({
+                : v.push({
                       text: h.intl.string(h.t.h9tkAA),
                       onClick: () => t(),
                       variant: 'secondary'
                   }),
-            I.push({
-                text: v ? h.intl.string(h.t.PfnxqK) : h.intl.string(h.t['3PatS0']),
+            v.push({
+                text: I ? h.intl.string(h.t.PfnxqK) : h.intl.string(h.t['3PatS0']),
                 onClick: () => o(f.R.CONFIRM),
                 variant: null !== x && p ? 'secondary' : 'primary'
             }),
-            p && null !== x && I.reverse(),
+            p && null !== x && v.reverse(),
             (0, r.jsx)(l.Modal, {
                 transitionState: e,
                 title: h.intl.string(h.t.PWq8TE),
                 subtitle: h.intl.format(h.t.nsGVzs, {}),
-                actions: I,
+                actions: v,
                 preview: null !== x && (0, r.jsx)(y, { churnUserDiscountOffer: x }),
                 onClose: async () => t(),
                 children: (0, r.jsx)(_.g, {

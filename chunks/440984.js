@@ -17,12 +17,12 @@ var r = n(255367),
     x = n(982404),
     y = n(299156);
 function b(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: b, confettiCanvas: g, userWasChurned: j = !1, userDiscountOffer: v } = e,
-        I = (0, l.ZP)(),
-        T = (0, a.wj)(I) ? x : y,
+    let { premiumSubscription: t, premiumType: n, onClose: b, confettiCanvas: g, userWasChurned: j = !1, userDiscountOffer: I } = e,
+        v = (0, l.ZP)(),
+        T = (0, a.wj)(v) ? x : y,
         E = i.useRef(null),
         [P, O] = i.useState(!1),
-        S = (0, _._)(t, f.Xh.PREMIUM_MONTH_TIER_2, v),
+        S = (0, _._)(t, f.Xh.PREMIUM_MONTH_TIER_2, I),
         N = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -33,11 +33,11 @@ function b(e) {
         (i.useEffect(() => {
             null != E.current && null != S && O(!0);
         }, [E, P, S]),
-        null == v || null == S)
+        null == I || null == S)
     )
         return null;
     let w = C.intl.format(C.t.gPzMHR, {
-            numMonths: v.discount.user_usage_limit,
+            numMonths: I.discount.user_usage_limit,
             discountedPrice: S,
             regularPrice: R
         }),

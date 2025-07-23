@@ -1,10 +1,11 @@
 (n.d(t, {
-    FO: () => ea,
-    Sq: () => ee,
-    ZP: () => er,
-    el: () => ei,
+    FO: () => es,
+    Sq: () => et,
+    ZP: () => ea,
+    el: () => eo,
     oO: () => G,
-    zO: () => eo
+    wT: () => ei,
+    zO: () => el
 }),
     n(413496),
     n(433524),
@@ -84,19 +85,23 @@ let X = (e) => e.replaceAll(J, ' $2 '),
 (f()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
 let J = RegExp(Q, 'g');
 function $(e, t) {
-    var n, r, i;
-    if ((null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, '')) !== e.host) return null;
-    let a = null != (r = t.pathname) ? r : '',
-        o = null != (i = e.pathPrefix) ? i : '';
-    if (!a.startsWith(o)) return null;
-    let s = a.substring(o.length);
-    return '' === s ? null : s;
+    var n;
+    return (null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, '')) === e.host;
 }
-function ee(e) {
-    var t, n, r, i;
-    return null != (i = null != (r = null != (n = null != (t = $(F, e)) ? t : $(Z, e)) ? n : $(H, e)) ? r : $(Y, e)) ? i : $(W, e);
+function ee(e, t) {
+    var n, r;
+    if (!$(e, t)) return null;
+    let i = null != (n = t.pathname) ? n : '',
+        a = null != (r = e.pathPrefix) ? r : '';
+    if (!i.startsWith(a)) return null;
+    let o = i.substring(a.length);
+    return '' === o ? null : o;
 }
 function et(e) {
+    var t, n, r, i;
+    return null != (i = null != (r = null != (n = null != (t = ee(F, e)) ? t : ee(Z, e)) ? n : ee(H, e)) ? r : ee(Y, e)) ? i : ee(W, e);
+}
+function en(e) {
     if (null == e) return null;
     let t = e.match(P);
     return null != t && t.length >= 4
@@ -107,9 +112,9 @@ function et(e) {
           }
         : null;
 }
-function en(e) {
+function er(e) {
     var t, n, r, i;
-    let a = ea(e);
+    let a = es(e);
     if (null == a || null == a.pathname)
         return {
             url: null,
@@ -117,9 +122,9 @@ function en(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null
         };
-    let o = $(B, a),
-        s = $(V, a),
-        l = null != (i = null != (r = null != (n = null != (t = $(F, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(Y, a)) ? i : $(W, a);
+    let o = ee(B, a),
+        s = ee(V, a),
+        l = null != (i = null != (r = null != (n = null != (t = ee(F, a)) ? t : ee(Z, a)) ? n : ee(H, a)) ? r : ee(Y, a)) ? i : ee(W, a);
     return {
         url: a,
         inviteHostRemainingPath: o,
@@ -127,7 +132,19 @@ function en(e) {
         primaryHostRemainingPath: l
     };
 }
-function er(e) {
+function ei(e) {
+    if (e.includes('\\')) {
+        let r = es(e);
+        if (null == r) return !1;
+        if ($(B, r)) return !0;
+        if ([F, Z, H, Y, W].some((e) => $(e, r))) {
+            var t, n;
+            return null != (n = null == (t = r.pathname) ? void 0 : t.toUpperCase().includes(T.g.INVITE)) && n;
+        }
+    }
+    return !1;
+}
+function ea(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
@@ -137,7 +154,7 @@ function er(e) {
     for (let e of r) {
         var a, o, s;
         if (n.length >= A) break;
-        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = en(e);
+        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = er(e);
         if (null == r || null == r.pathname) continue;
         let u = (r, i) => {
             t.has(i) ||
@@ -149,20 +166,22 @@ function er(e) {
                 }));
         };
         if ((null == i ? void 0 : i.match(N)) != null && ('https:' === r.protocol || 'http:' === r.protocol)) {
-            let e = (0, b.mb)(i.substring(1), r.search);
-            (O.Z.getInvite(e), u(T.g.INVITE, e));
+            let t = (0, b.mb)(i.substring(1), r.search);
+            if ((O.Z.getInvite(t), e.includes('\\'))) continue;
+            u(T.g.INVITE, t);
         }
         (null == l ? void 0 : l.match(N)) != null && u(T.g.TEMPLATE, l.substring(1));
         let d = null == c ? void 0 : c.match(R);
         if (null != d) {
-            let e = d[1].toUpperCase();
-            if (e === T.g.INVITE) {
-                let e = (0, b.mb)(d[2], r.search);
-                u(T.g.INVITE, e);
-            } else u(e, d[2]);
+            let t = d[1].toUpperCase();
+            if (t === T.g.INVITE) {
+                if (e.includes('\\')) continue;
+                let t = (0, b.mb)(d[2], r.search);
+                u(T.g.INVITE, t);
+            } else u(t, d[2]);
         }
         (null == c ? void 0 : c.match(C)) != null && u(T.g.CHANNEL_LINK, c.replace('/channels/', ''));
-        let _ = et(r.pathname);
+        let _ = en(r.pathname);
         if ((null != _ && u(T.g.EVENT, ''.concat(_.guildId, '-').concat(_.guildEventId) + (null != _.recurrenceId ? '-'.concat(_.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
@@ -191,7 +210,7 @@ function er(e) {
         null != m && u(T.g.GUILD_PRODUCT, ''.concat(m[1], '-').concat(m[2]));
         let v = null == c ? void 0 : c.match(M);
         null != v && u(T.g.SERVER_SHOP, v[1]);
-        let I = ei(e);
+        let I = eo(e);
         if ((null != I && u(T.g.QUESTS_EMBED, I), '/shop' === c)) {
             let e = null == (o = r.hash) ? void 0 : o.match(U);
             u(T.g.COLLECTIBLES_SHOP, null != (s = null == e ? void 0 : e[1]) ? s : '');
@@ -199,19 +218,19 @@ function er(e) {
     }
     return n;
 }
-function ei(e) {
+function eo(e) {
     var t, n;
-    let r = en(e),
+    let r = er(e),
         i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(k);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
-function ea(e) {
+function es(e) {
     try {
         return (0, m.parse)(e);
     } catch (e) {
         return null;
     }
 }
-function eo(e) {
-    return er(e)[0];
+function el(e) {
+    return ea(e)[0];
 }

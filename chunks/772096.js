@@ -147,7 +147,7 @@ function N(e) {
     return t;
 }
 function C(e) {
-    if (b(e).whitespaceSanitized !== e) return !0;
+    if ((0, c.wT)(e) || b(e).whitespaceSanitized !== e) return !0;
     let t = d.Z.toURLSafe(e);
     if (null == t) return !0;
     if ('http:' !== t.protocol && 'https:' !== t.protocol) return !1;

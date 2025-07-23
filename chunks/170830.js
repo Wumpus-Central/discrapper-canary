@@ -1,17 +1,17 @@
-function r(e) {
+function s(i) {
     let t = 0,
-        i = [];
+        e = [];
     return async function () {
         if (2 !== t) {
             if (1 === t)
-                return new Promise((e) => {
-                    i.push(e);
+                return new Promise((i) => {
+                    e.push(i);
                 });
-            for (t = 1, await e(), t = 2; i.length > 0; ) {
-                var r;
-                null == (r = i.shift()) || r();
+            for (t = 1, await i(), t = 2; e.length > 0; ) {
+                var s;
+                null == (s = e.shift()) || s();
             }
         }
     };
 }
-(i.d(t, { G: () => r }), i(539854));
+(e.d(t, { G: () => s }), e(539854));
