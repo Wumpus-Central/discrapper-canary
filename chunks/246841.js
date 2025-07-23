@@ -8,9 +8,9 @@ var i = n(755721),
     s = n(862863);
 function c(e) {
     let { activity: t, user: n, source: c, className: u, size: d, look: f, color: p, fullWidth: m, onAction: g } = e,
-        { label: _, tooltip: v, loading: b, disabled: y, onClick: h } = (0, o.Ih)(t, n, c),
+        { label: _, tooltip: v, loading: h, disabled: b, onClick: y } = (0, o.Ih)(t, n, c),
         O = () => {
-            (null == g || g(), h());
+            (null == g || g(), y());
         };
     return (0, r.jsx)(l.ua7, {
         text: v,
@@ -26,8 +26,8 @@ function c(e) {
                 onClick: O,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: y,
-                submitting: b,
+                disabled: b,
+                submitting: h,
                 children: [
                     (0, r.jsx)(a.Z, {
                         width: 16,

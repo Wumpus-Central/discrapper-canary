@@ -893,7 +893,7 @@ let e$ = () => {
             },
             [eH.s6.VOICE_AND_VIDEO_INPUT_PROFILE]: {
                 section: eW.oAB.VOICE,
-                searchableTitles: [],
+                searchableTitles: [eq.intl.string(eq.t.LM3U3t), eq.intl.string(eq.t.nuFtHB), eq.intl.string(eq.t.VZPR0d), eq.intl.string(eq.t.cjPbpa)],
                 parent: eH.s6.VOICE_AND_VIDEO_VOICE,
                 predicate: () => {
                     let { enabledInputProfiles: e } = (0, en.R)({

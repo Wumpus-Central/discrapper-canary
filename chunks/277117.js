@@ -24,15 +24,15 @@ var i = n(657707),
     O = n(678738),
     E = n(638970),
     S = n(502762),
-    P = n(530),
-    I = n(827313),
+    I = n(530),
+    P = n(827313),
     Z = n(228168),
     T = n(981631),
     N = n(388032),
     A = n(283189);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: D } = e,
-        { relationshipType: L, originApplicationId: k } = (0, l.cj)([u.Z], () => ({
+        { relationshipType: k, originApplicationId: L } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
         })),
@@ -47,7 +47,7 @@ function w(e) {
     return (0, r.jsxs)('div', {
         className: A.body,
         children: [
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
@@ -60,7 +60,7 @@ function w(e) {
                     children: [
                         (0, r.jsx)(y.Z, { userId: t.id }),
                         !F &&
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(P.Z, {
                                 userId: t.id,
                                 isHovering: M,
                                 onOpenProfile: D
@@ -68,12 +68,12 @@ function w(e) {
                     ]
                 })
             }),
-            L === T.OGo.PENDING_INCOMING &&
+            k === T.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(x.Z, {
                         user: t,
                         channelId: R.id,
-                        applicationId: k
+                        applicationId: L
                     })
                 }),
             U.map((e) =>

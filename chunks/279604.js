@@ -1,7 +1,7 @@
 (n.d(t, {
-    KE: () => b,
-    KT: () => m,
-    ZP: () => _
+    KE: () => _,
+    KT: () => b,
+    ZP: () => O
 }),
     n(388685),
     n(457542));
@@ -13,11 +13,12 @@ var r = n(255367),
     a = n(879892),
     c = n(343649),
     u = n(430824),
-    d = n(713081),
-    h = n(905128),
-    p = n(535396),
-    f = n(981631);
-function g(e) {
+    d = n(823379),
+    h = n(713081),
+    p = n(905128),
+    f = n(535396),
+    g = n(981631);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,21 +43,21 @@ function g(e) {
     }
     return e;
 }
-function m(e) {
+function b(e) {
     i.useEffect(() => {
         null != e && (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
     }, [e]);
 }
-function b(e, t) {
+function _(e, t) {
     (0, o.ZDy)(
         async () => {
             switch (t.type) {
-                case p.Us.LEVEL:
+                case f.Us.LEVEL:
                     let { default: i } = await n.e('99014').then(n.bind(n, 271224));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            g(
+                            m(
                                 {
                                     guildId: e,
                                     powerup: t
@@ -64,12 +65,12 @@ function b(e, t) {
                                 n
                             )
                         );
-                case p.Us.PERK: {
+                case f.Us.PERK: {
                     let { default: i } = await Promise.all([n.e('67649'), n.e('6397')]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            g(
+                            m(
                                 {
                                     guildId: e,
                                     powerup: t
@@ -80,62 +81,85 @@ function b(e, t) {
                 }
             }
         },
-        { modalKey: p.H2 }
+        { modalKey: f.H2 }
     );
 }
-function _(e, t) {
-    var m;
-    let { analyticsLocations: _ } = (0, s.ZP)(),
-        [O, y] = i.useState(!1),
-        [v, C] = i.useState(void 0),
-        j = (0, l.e7)([h.Z], () => {
+function O(e, t) {
+    var b;
+    let { analyticsLocations: O } = (0, s.ZP)(),
+        [y, v] = i.useState(!1),
+        [C, j] = i.useState(void 0),
+        E = (0, l.e7)([p.Z], () => {
             var t, n;
-            return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
+            return null != (n = null == (t = p.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        E = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        x = Math.max((null != (m = null == E ? void 0 : E.premiumSubscriberCount) ? m : 0) - j, 0),
-        S = i.useCallback(
+        x = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        S = (0, l.e7)([p.Z], () => p.Z.getStateForGuild(e)),
+        I = i.useMemo(
+            () =>
+                t.type === f.Us.LEVEL && null != S
+                    ? (function (e, t) {
+                          let n = f.T1[e.skuId];
+                          return null == n
+                              ? []
+                              : Object.entries(f.Rx)
+                                    .filter((e) => {
+                                        let [r, i] = e;
+                                        return i === n && null != t.unlockedPowerups[r];
+                                    })
+                                    .map((e) => {
+                                        let [n] = e;
+                                        return t.allPowerups[n];
+                                    })
+                                    .filter(d.lm);
+                      })(t, S)
+                    : [],
+            [t, S]
+        ),
+        P = Math.max((null != (b = null == x ? void 0 : x.premiumSubscriberCount) ? b : 0) - E, 0),
+        N = i.useCallback(
             (n) => {
-                let r = n ? d.H6 : d.Th;
+                let r = n ? h.H6 : h.Th;
                 return (
-                    y(!0),
-                    C(void 0),
+                    v(!0),
+                    j(void 0),
                     r(e, t.skuId)
                         .catch((e) => {
                             var t;
-                            throw (C(null != (t = e.body.message) ? t : void 0), e);
+                            throw (j(null != (t = e.body.message) ? t : void 0), e);
                         })
                         .finally(() => {
-                            y(!1);
+                            v(!1);
                         })
                 );
             },
             [e, t.skuId]
         ),
-        I = i.useCallback(
+        w = i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != E))
-                    return x < t.cost
+                if ((e.stopPropagation(), null != x))
+                    return P < t.cost
                         ? void (0, a.u)({
                               analyticsLocation: {
-                                  page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
-                                  section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
+                                  page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
+                                  section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
-                              numberOfBoostsToAdd: t.cost - x,
-                              analyticsLocations: _,
-                              guild: E,
-                              intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
+                              numberOfBoostsToAdd: t.cost - P,
+                              analyticsLocations: O,
+                              guild: x,
+                              intent: t.type === f.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
-                                  S(!0).then(() => {
+                                  N(!0).then(() => {
                                       (0, o.ZDy)(async () => {
                                           let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  g(
+                                                  m(
                                                       {
-                                                          guildId: E.id,
-                                                          powerup: t
+                                                          guildId: x.id,
+                                                          powerup: t,
+                                                          refundablePowerups: I
                                                       },
                                                       n
                                                   )
@@ -143,16 +167,17 @@ function _(e, t) {
                                       });
                                   })
                           })
-                        : S(!0).then(() => {
+                        : N(!0).then(() => {
                               (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          g(
+                                          m(
                                               {
-                                                  guildId: E.id,
-                                                  powerup: t
+                                                  guildId: x.id,
+                                                  powerup: t,
+                                                  refundablePowerups: I
                                               },
                                               n
                                           )
@@ -160,14 +185,14 @@ function _(e, t) {
                               });
                           });
             },
-            [S, t, x, _, E]
+            [N, t, P, O, x, I]
         ),
-        P = i.useCallback((e) => (e.stopPropagation(), S(!1)), [S]);
+        Z = i.useCallback((e) => (e.stopPropagation(), N(!1)), [N]);
     return {
-        isLoading: O,
-        error: v,
-        onActivate: I,
-        onDeactivate: P,
+        isLoading: y,
+        error: C,
+        onActivate: w,
+        onDeactivate: Z,
         onShowDeactivate: i.useCallback(
             (i) => {
                 (i.stopPropagation(),
@@ -176,7 +201,7 @@ function _(e, t) {
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                g(
+                                m(
                                     {
                                         guildId: e,
                                         powerup: t
@@ -189,7 +214,7 @@ function _(e, t) {
             [e, t]
         ),
         onShowMore: i.useCallback(() => {
-            b(e, t);
+            _(e, t);
         }, [e, t])
     };
 }

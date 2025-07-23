@@ -1,22 +1,23 @@
 (n.d(t, {
-    A3: () => A,
+    A3: () => N,
     Cp: () => m,
-    Du: () => N,
+    Du: () => C,
     Fq: () => h,
-    H2: () => y,
-    Hk: () => T,
-    IN: () => E,
-    If: () => b,
-    KW: () => O,
+    H2: () => O,
+    Hk: () => S,
+    IN: () => b,
+    If: () => y,
+    KW: () => v,
     NO: () => u,
-    O5: () => C,
-    Q1: () => g,
-    Rx: () => S,
+    O5: () => R,
+    Q1: () => E,
+    Rx: () => A,
+    T1: () => g,
     Us: () => c,
     XW: () => _,
     ad: () => p,
-    d5: () => I,
-    uc: () => v
+    d5: () => T,
+    uc: () => I
 }),
     n(388685));
 var r = n(494497),
@@ -41,17 +42,22 @@ let u = '1340102344645283891',
         [s.Eu4.NONE]: void 0
     },
     g = {
+        [d]: s.Eu4.TIER_1,
+        [f]: s.Eu4.TIER_2,
+        [_]: s.Eu4.TIER_3
+    },
+    E = {
         [s.Eu4.TIER_1]: i.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
         [s.Eu4.TIER_2]: i.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
         [s.Eu4.TIER_3]: i.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
         [s.Eu4.NONE]: void 0
     },
-    E = '1351706802684952639',
-    b = '1354906318279807056',
-    y = 'guild_powerup_modal',
-    O = new Set([E, b, r.A$]),
-    v = new Set([E, b, r.A$]),
-    I = () => ({
+    b = '1351706802684952639',
+    y = '1354906318279807056',
+    O = 'guild_powerup_modal',
+    v = new Set([b, y, r.A$]),
+    I = new Set([b, y, r.A$]),
+    T = () => ({
         [s.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: a.Ro.STREAM,
             description: l.intl.string(l.t.y4ft4O)
@@ -101,7 +107,7 @@ let u = '1340102344645283891',
             description: l.intl.formatToPlainString(l.t['aFRl5+'], { uploadSizeLimit: l.intl.string(l.t.yMOW8P) })
         }
     }),
-    T = {
+    S = {
         [s.oNc.VANITY_URL]: {
             boostPrice: 5,
             includedInLevel: s.Eu4.TIER_3
@@ -115,11 +121,11 @@ let u = '1340102344645283891',
             includedInLevel: void 0
         }
     },
-    S = { [r.A$]: s.Eu4.TIER_3 };
-var A = (function (e) {
+    A = { [r.A$]: s.Eu4.TIER_3 };
+var N = (function (e) {
         return ((e.INACTIVE = 'inactive'), (e.POWERUP_ACTIVATED = 'powerup_activated'), (e.LEVEL_ACTIVATED = 'level_activated'), (e.TIER_OVERRIDE_ACTIVATED = 'tier_override_activated'), e);
     })({}),
-    N = (function (e) {
+    C = (function (e) {
         return ((e[(e.VANITY_URL = 1)] = 'VANITY_URL'), e);
     })({});
-let C = { 1: r.A$ };
+let R = { 1: r.A$ };

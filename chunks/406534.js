@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(88101),
     E = n(576954),
     S = n(765104),
-    P = n(122707),
-    I = n(779836),
+    I = n(122707),
+    P = n(779836),
     Z = n(23750),
     T = n(306680),
     N = n(944486),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(70956),
     M = n(709054),
     D = n(534091),
-    L = n(554838),
-    k = n(481369),
+    k = n(554838),
+    L = n(481369),
     U = n(186877),
     B = n(294218),
     F = n(534469),
@@ -117,7 +117,7 @@ function en(e) {
         ey = (0, O.P)(f.id),
         eC = (0, v.z)(f.id, Q.zr),
         ex = (0, p.k)(f.id),
-        ev = (0, k.Z)(),
+        ev = (0, L.Z)(),
         ej = (function (e, t) {
             if (e.isDM() && null != t)
                 if (t.type === x.pj.STRANGER_DANGER)
@@ -144,8 +144,8 @@ function en(e) {
         eE = (0, _.Z)(f.id),
         eS = (0, y.nw)(f);
     (0, Y.Z)();
-    let eP = null,
-        eI = [],
+    let eI = null,
+        eP = [],
         eZ = el.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, i;
@@ -153,7 +153,7 @@ function en(e) {
                 return null != ec
                     ? null
                     : e.isSummaryDivider
-                      ? (0, r.jsx)(I.Z, {
+                      ? (0, r.jsx)(P.Z, {
                             index: t,
                             item: e,
                             channel: f,
@@ -199,8 +199,8 @@ function en(e) {
                 );
             }
             if (null != ec && ec > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
-            e.type === X.ys_.MESSAGE && null == eP && (eP = e);
-            let l = e.groupId === (null == eP ? void 0 : eP.groupId) ? eP.content.id : e.groupId,
+            e.type === X.ys_.MESSAGE && null == eI && (eI = e);
+            let l = e.groupId === (null == eI ? void 0 : eI.groupId) ? eI.content.id : e.groupId,
                 a = eS && e.content.isFirstMessageInForumPost(f),
                 o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? F.Ru : F.ZP;
             return (0, r.jsx)(
@@ -218,14 +218,14 @@ function en(e) {
                 e.content.id
             );
         });
-    eI.push(...eZ);
+    eP.push(...eZ);
     let eT = el[el.length - 1];
     if (
         (null != eh &&
             ea.forEach((e, t) => {
                 let n =
                     0 === t &&
-                    (0, L.J)(
+                    (0, k.J)(
                         f,
                         eT,
                         new Z.ZP({
@@ -233,7 +233,7 @@ function en(e) {
                             author: eh
                         })
                     );
-                eI.push(
+                eP.push(
                     (0, r.jsx)(
                         et,
                         {
@@ -250,7 +250,7 @@ function en(e) {
         B.hasMoreBefore && null == ec)
     ) {
         B.length > 0 &&
-            eI.unshift(
+            eP.unshift(
                 (0, r.jsx)(
                     'div',
                     {
@@ -263,11 +263,11 @@ function en(e) {
                 )
             );
         let { useReducedMotion: e } = u.Z;
-        ((e && ef()) || !e) && eI.unshift((0, r.jsx)(z.ZP, $({ compact: ei }, es), 'has-more'));
+        ((e && ef()) || !e) && eP.unshift((0, r.jsx)(z.ZP, $({ compact: ei }, es), 'has-more'));
     }
     if (
         ((B.hasMoreBefore && null == ec) ||
-            eI.unshift(
+            eP.unshift(
                 (0, r.jsx)(
                     m.Z,
                     {
@@ -277,8 +277,8 @@ function en(e) {
                     'empty-message'
                 )
             ),
-        B.hasMoreAfter && eI.push((0, r.jsx)(z.ZP, $({ compact: ei }, es), 'has-more-after')),
-        !eu && em && ef() && eI.push((0, r.jsx)(W.Z, { channel: f })),
+        B.hasMoreAfter && eP.push((0, r.jsx)(z.ZP, $({ compact: ei }, es), 'has-more-after')),
+        !eu && em && ef() && eP.push((0, r.jsx)(W.Z, { channel: f })),
         en > 0 && er && ef())
     ) {
         let e,
@@ -288,7 +288,7 @@ function en(e) {
             o = (0, w.KC)(new Date(), new Date(l));
         if ((T.ZP.isEstimated(f.id) ? ((e = o ? J.t.wvtbbG : J.t.tHqbtr), (t = J.t.vaPWFR)) : ((e = o ? J.t.BctFHx : J.t['3wXb9P']), (t = J.t['4H8ldH'])), eb && (0, c.tW)(f) && ev.includes(q.E.SUMMARIES))) {
             let n = T.ZP.ackMessageId(f.id),
-                o = (0, P.q)(f.id, T.ZP.getOldestUnreadMessageId(f.id));
+                o = (0, I.q)(f.id, T.ZP.getOldestUnreadMessageId(f.id));
             if (
                 ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: o,
@@ -447,7 +447,7 @@ function en(e) {
                     });
     }
     return {
-        channelStreamMarkup: eI,
+        channelStreamMarkup: eP,
         newMessagesBar: i,
         jumpToPresentBar: s,
         forumPostActionBar: eO,

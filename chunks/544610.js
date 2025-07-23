@@ -23,16 +23,16 @@ let x = !1,
     O = [],
     E = !1,
     S = new Set(),
-    P = null;
-function I() {
-    ((v = ''), (j = 0), (O = []), (S = new Set()), (x = !1), (P = null));
+    I = null;
+function P() {
+    ((v = ''), (j = 0), (O = []), (S = new Set()), (x = !1), (I = null));
 }
 function Z(e) {
     ((v = e), (j = 0), T());
 }
 function T() {
     if (!x) return !1;
-    let e = m.Z.getChannel(P);
+    let e = m.Z.getChannel(I);
     if (0 === v.trim().length)
         return (
             null != r && r.clearQuery(),
@@ -130,16 +130,16 @@ function R() {
 }
 function M(e) {
     if (e.key !== C.vTt) return !1;
-    ((x = !0), N(), (r = R()), (P = null), Z(''));
+    ((x = !0), N(), (r = R()), (I = null), Z(''));
 }
 function D(e) {
     if (e.key !== C.vTt) return !1;
-    L();
+    k();
 }
-function L() {
-    (null != r && (r.destroy(), (r = null)), I());
+function k() {
+    (null != r && (r.destroy(), (r = null)), P());
 }
-class k extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         (this.waitFor(y.default, m.Z, _.Z, u.Z, g.Z), this.syncWith([y.default, m.Z], T), this.syncWith([_.Z], N));
     }
@@ -166,34 +166,34 @@ class k extends (i = o.ZP.Store) {
     }
 }
 ((a = 'PrivateChannelRecipientsInviteStore'),
-    (l = 'displayName') in k
-        ? Object.defineProperty(k, l, {
+    (l = 'displayName') in L
+        ? Object.defineProperty(L, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (k[l] = a));
-let U = new k(s.Z, {
+        : (L[l] = a));
+let U = new L(s.Z, {
         CONNECTION_OPEN: function () {
-            I();
+            P();
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let r = x;
-            return (I(), (x = r), (P = n), T());
+            return (P(), (x = r), (I = n), T());
         },
         MODAL_PUSH: M,
         SHOW_ACTION_SHEET: M,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            ((x = !0), N(), (r = R()), (P = e.channelId), Z(''));
+            ((x = !0), N(), (r = R()), (I = e.channelId), Z(''));
         },
         MODAL_POP: D,
         HIDE_ACTION_SHEET: D,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            ((P = e.channelId), Z(e.query));
+            ((I = e.channelId), Z(e.query));
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             j = e.row;

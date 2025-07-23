@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,9 +14,9 @@ var r = n(255367),
     g = n(314897),
     _ = n(430824),
     v = n(496675),
-    b = n(158776),
-    y = n(979651),
-    h = n(626135),
+    h = n(158776),
+    b = n(979651),
+    y = n(626135),
     O = n(102172),
     j = n(687516),
     S = n(718805),
@@ -24,10 +24,10 @@ var r = n(255367),
     I = n(981631),
     P = n(388032),
     C = n(768780);
-class w extends i.PureComponent {
+class E extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        h.default.track(I.rMx.OPEN_POPOUT, {
+        y.default.track(I.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -112,7 +112,7 @@ class w extends i.PureComponent {
               });
     }
 }
-function E(e) {
+function w(e) {
     var t,
         n,
         { user: l, channel: a } = e,
@@ -135,17 +135,17 @@ function E(e) {
             }
             return i;
         })(e, ['user', 'channel']);
-    let [c, d] = (0, o.Wu)([y.Z, _.Z, v.Z, p.Z], () => (0, O.p9)(a, y.Z, _.Z, v.Z, p.Z)),
+    let [c, d] = (0, o.Wu)([b.Z, _.Z, v.Z, p.Z], () => (0, O.p9)(a, b.Z, _.Z, v.Z, p.Z)),
         f = (0, o.e7)([m.Z], () => m.Z.getStreamForUser(l.id, a.getGuildId())),
-        h = (0, o.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(f)),
+        y = (0, o.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(f)),
         S = (0, o.e7)([g.default], () => g.default.getId()),
         x = (0, j.Cf)(f),
-        I = (0, o.e7)([b.Z], () => (0, j.Um)(f, b.Z)),
+        I = (0, o.e7)([h.Z], () => (0, j.Um)(f, h.Z)),
         P = i.useMemo(() => ({ [a.guild_id]: [l.id] }), [a.guild_id, l.id]);
     return (
         (0, u.$)(P),
         (0, r.jsx)(
-            w,
+            E,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -178,7 +178,7 @@ function E(e) {
                     user: l,
                     streamApplication: x,
                     stream: f,
-                    activeStream: h,
+                    activeStream: y,
                     currentUserId: S,
                     activity: I
                 }),

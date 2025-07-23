@@ -4,20 +4,20 @@ var i = e(73800),
 function r(t) {
     let { onSubmit: n, onClose: e } = t,
         [r, c] = i.useState(!1),
-        [o, s] = i.useState(null),
-        l = i.useCallback(async () => {
+        [o, l] = i.useState(null),
+        s = i.useCallback(async () => {
             if (!r) {
-                (c(!0), s(null));
+                (c(!0), l(null));
                 try {
                     (await n(), e());
                 } catch (t) {
-                    (s(new a.Hx(t).getAnyErrorMessage()), c(!1));
+                    (l(new a.Hx(t).getAnyErrorMessage()), c(!1));
                 }
             }
         }, [e, n, r]);
     return {
         submitting: r,
         errorMessage: o,
-        onSubmit: l
+        onSubmit: s
     };
 }

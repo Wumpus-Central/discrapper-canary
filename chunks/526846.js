@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(390322),
     E = n(857192),
     S = n(626135),
-    P = n(456100),
-    I = n(566620),
+    I = n(456100),
+    P = n(566620),
     Z = n(127255),
     T = n(5200),
     N = n(558317),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(388032),
     M = n(210408);
 let D = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    L = 'vc-activities-'.concat((0, o.Z)());
-function k(e) {
+    k = 'vc-activities-'.concat((0, o.Z)());
+function L(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -129,10 +129,10 @@ let U = i.forwardRef(function (e, t) {
         D = j === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => I.ux(), 1000);
+        let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: B } = P.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+    let { enabled: B } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
         F = i.useCallback(() => {
             ((0, A.Z)({
                 channel: l,
@@ -158,14 +158,14 @@ let U = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(O.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': L,
+                'aria-labelledby': k,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: L,
+                                id: k,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
@@ -211,7 +211,7 @@ let U = i.forwardRef(function (e, t) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(L, {
                                 openInPopout: D,
                                 channel: l,
                                 onClick: () => {

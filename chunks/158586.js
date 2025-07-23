@@ -34,7 +34,7 @@ let j = (e) => {
                 }
             }
         };
-    return (0, i.jsxs)(l.u, {
+    return (0, i.jsxs)(l.Modal, {
         title: u.intl.string(u.t.XlDE3t),
         subtitle: u.intl.string(u.t.lVqhdX),
         transitionState: y,

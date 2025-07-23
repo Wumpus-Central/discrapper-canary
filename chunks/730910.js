@@ -128,7 +128,7 @@ function A(e) {
         else if (D === C.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
     }
     let K = D === C.xh[C.xh.length - 1],
-        X = async () => {
+        q = async () => {
             let e = v.Z.advancedMode;
             if (L)
                 try {
@@ -143,7 +143,7 @@ function A(e) {
                 }
             return !0;
         },
-        q = async () => {
+        X = async () => {
             (g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 Z(R({}, (0, m.hH)(f)), {
@@ -153,7 +153,7 @@ function A(e) {
                 })
             ),
                 (0, x.Nb)((0, C.lg)(D)),
-                (await X()) && (0, x.IG)(f, D));
+                (await q()) && (0, x.IG)(f, D));
         },
         J = async () => {
             (g.default.track(
@@ -164,7 +164,7 @@ function A(e) {
                     skip: !1
                 })
             ),
-                (await X()) && (0, x.Wy)(f, D));
+                (await q()) && (0, x.Wy)(f, D));
         },
         Q = null;
     G && (D === C.PG.SAFETY_CHECK ? (Q = (0, r.jsx)(N.j7, {})) : D === C.PG.DEFAULT_CHANNELS ? (Q = (0, r.jsx)(N.Io, {})) : D === C.PG.CUSTOMIZATION_QUESTIONS ? (Q = (0, r.jsx)(N.cZ, {})) : D === C.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
@@ -186,7 +186,7 @@ function A(e) {
             text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t['5WxrcX']),
             icon: d.ZSh,
             iconPosition: 'end',
-            onClick: q,
+            onClick: X,
             disabled: G || M
         });
     return (0, r.jsx)(o.W, {

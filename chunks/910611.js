@@ -1,6 +1,6 @@
 (n.d(t, {
     TS: () => H,
-    ud: () => k,
+    ud: () => L,
     v0: () => B
 }),
     n(388685));
@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(63063),
     E = n(374386),
     S = n(946734),
-    P = n(99843),
-    I = n(372564),
+    I = n(99843),
+    P = n(372564),
     Z = n(984370),
     T = n(217314),
     N = n(981631),
@@ -79,7 +79,7 @@ function D(e, t) {
         e
     );
 }
-function L(e) {
+function k(e) {
     var t;
     let { channel: n, children: i } = e,
         l = (0, u.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
@@ -159,7 +159,7 @@ function L(e) {
         a
     );
 }
-function k(e) {
+function L(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: o, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         b = (0, h.KS)(t, o),
         { prefix: _, level: y } = (function (e, t) {
@@ -229,7 +229,7 @@ function k(e) {
                 children: [
                     (0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }),
                     (0, r.jsx)(
-                        P.Z,
+                        I.Z,
                         {
                             channel: t,
                             legacyIconClassName: R.avatar
@@ -243,7 +243,7 @@ function k(e) {
         case N.d4z.GUILD_FORUM:
         case N.d4z.GUILD_MEDIA:
             return null != t.linkedLobby
-                ? (0, r.jsxs)(L, {
+                ? (0, r.jsxs)(k, {
                       channel: t,
                       children: [
                           F(b, t.type === N.d4z.GUILD_ANNOUNCEMENT ? w.intl.string(w.t.l1dkSE) : w.intl.string(w.t.Pnajj4)),
@@ -396,7 +396,7 @@ function B(e, t) {
         case N.d4z.GROUP_DM:
             return null != t
                 ? (0, r.jsx)(
-                      I.Z,
+                      P.Z,
                       {
                           channel: e,
                           guild: t

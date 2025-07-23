@@ -3,10 +3,10 @@ var r = n(73800),
     i = n(442837),
     l = n(594174),
     a = n(823162),
-    s = n(355298);
-let o = new Set(['GB']);
+    o = n(355298);
+let s = new Set(['GB']);
 function c() {
-    let e = (0, i.e7)([s.Z], () => s.Z.getUserCountryCode()),
+    let e = (0, i.e7)([o.Z], () => o.Z.getUserCountryCode()),
         t =
             !1 ===
             (0, i.e7)([l.default], () => {
@@ -17,6 +17,6 @@ function c() {
         r.useEffect(() => {
             null == e && (0, a.hi)();
         }, [e]),
-        null != e && !!o.has(e.alpha2) && !!t
+        null != e && !!s.has(e.alpha2) && !!t
     );
 }

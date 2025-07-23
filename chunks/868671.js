@@ -29,18 +29,18 @@ function v(e) {
             guildId: j
         } = e,
         [O, E] = r.useState(!1),
-        { requestId: S, entries: P, impressionCappedEntryIds: I, hasLeaderboardEntry: Z } = (0, m.Z)(v),
+        { requestId: S, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
         T = (0, i.e7)([p.Z], () => p.Z.hidden),
         N = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
         M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [D, L, k, U] = r.useMemo(() => {
+        [D, k, L, U] = r.useMemo(() => {
             let e;
-            if (null == P || 0 === P.length || null == S || !M) return [t, n, x];
-            let r = O ? P.length : Z ? 4 : 3,
-                i = P.slice(0, r);
+            if (null == I || 0 === I.length || null == S || !M) return [t, n, x];
+            let r = O ? I.length : Z ? 4 : 3,
+                i = I.slice(0, r);
             e = T
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
@@ -69,15 +69,15 @@ function v(e) {
                     });
                 },
                 expanded: O,
-                expandedCount: P.length,
+                expandedCount: I.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, P, O, t, j, S, n, x, T, M, Z]),
+        }, [v, I, O, t, j, S, n, x, T, M, Z]),
         B = r.useRef(0),
-        F = r.useRef(P),
+        F = r.useRef(I),
         H = r.useRef(void 0),
-        G = r.useRef({ impressionCappedEntryIds: I }),
+        G = r.useRef({ impressionCappedEntryIds: P }),
         V = r.useCallback(
             (e) => {
                 var t;
@@ -89,11 +89,11 @@ function v(e) {
         );
     return (
         r.useEffect(() => {
-            F.current = P;
-        }, [P]),
-        r.useEffect(() => {
-            G.current = { impressionCappedEntryIds: I };
+            F.current = I;
         }, [I]),
+        r.useEffect(() => {
+            G.current = { impressionCappedEntryIds: P };
+        }, [P]),
         r.useEffect(
             () => (
                 (B.current = 0),
@@ -127,8 +127,8 @@ function v(e) {
         ),
         {
             groups: D,
-            rows: L,
-            version: k,
+            rows: k,
+            version: L,
             updateMaxRowSeen: V
         }
     );

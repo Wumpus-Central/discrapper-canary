@@ -6,15 +6,15 @@ var n = r(255367),
     c = r(434404),
     l = r(78451),
     s = r(915509),
-    u = r(981631),
-    d = r(388032),
+    d = r(981631),
+    u = r(388032),
     p = r(20493);
 function b(t) {
     var e, r;
     let { guild: b, onClose: g, hideColors: y } = t,
         [f, _] = a.useState(b.verificationLevel),
         [m, O] = a.useState(null),
-        j = b.features.has(u.oNc.COMMUNITY),
+        j = b.features.has(d.oNc.COMMUNITY),
         v = (0, l.IF)(j, y).filter((t) => !t.disabled),
         h = a.useCallback(async () => {
             null != m && O(null);
@@ -53,7 +53,7 @@ function b(t) {
         })({}, t)),
         (r = r =
             {
-                title: d.intl.string(d.t.DpRdYG),
+                title: u.intl.string(u.t.DpRdYG),
                 errorText: m,
                 onConfirm: h,
                 onCancel: g,
@@ -62,7 +62,7 @@ function b(t) {
                         (0, n.jsx)(i.R94, {
                             type: i.R94.Types.DESCRIPTION,
                             className: p.marginBottom20,
-                            children: d.intl.format(d.t.iuRk2t, {})
+                            children: u.intl.format(u.t.iuRk2t, {})
                         }),
                         (0, n.jsx)(i.FXm, {
                             value: f,

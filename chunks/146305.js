@@ -45,8 +45,8 @@ var r = n(255367),
     V = n(324330),
     Y = n(495300),
     K = n(651780),
-    X = n(279542),
-    q = n(665324),
+    q = n(279542),
+    X = n(665324),
     J = n(208150),
     Q = n(353398),
     $ = n(365774),
@@ -230,7 +230,7 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
                     label: ep.intl.string(ep.t.OWQNYm),
                     ariaLabel: ep.intl.string(ep.t.OWQNYm),
-                    element: q.Z,
+                    element: X.Z,
                     predicate: () => t.canManageGuildExpressions
                 };
             case em.pNK.GUILD_TEMPLATES:
@@ -296,7 +296,7 @@ let eb = {
                     section: em.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: ep.intl.string(ep.t['suhY+f']),
-                    element: X.ZP,
+                    element: q.ZP,
                     predicate: () => t.canManageGuild && !t.guild.features.has(em.oNc.COMMUNITY)
                 };
             case em.pNK.GUILD_AUTOMOD:

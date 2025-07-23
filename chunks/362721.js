@@ -1,4 +1,7 @@
-n.d(t, { ZP: () => u });
+n.d(t, {
+    ZP: () => d,
+    wQ: () => u
+});
 var r = n(442837),
     i = n(496675),
     a = n(700785),
@@ -17,6 +20,11 @@ function c(e, t, n, r) {
     );
 }
 function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 ? arguments[2] : void 0;
+    return c(e, i.Z, t, n);
+}
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return (0, r.e7)([i.Z], () => c(e, i.Z, t, n), [e, t, n]);

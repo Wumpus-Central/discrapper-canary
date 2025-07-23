@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(856691),
     E = n(357156),
     S = n(923973),
-    P = n(829750),
-    I = n(189771),
+    I = n(829750),
+    P = n(189771),
     Z = n(294629),
     T = n(793319),
     N = n(987329),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(871499),
     M = n(88479),
     D = n(386000),
-    L = n(25827),
-    k = n(314897),
+    k = n(25827),
+    L = n(314897),
     U = n(131951),
     B = n(496675),
     F = n(944486),
@@ -112,12 +112,12 @@ function ed(e) {
         g = (0, o.e7)([v.ZP], () => v.ZP.getGuildScheduledEvent(null == m ? void 0 : m.guild_scheduled_event_id)),
         b = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: C } = (0, Z.Z)(t),
-        x = k.default.getId(),
+        x = L.default.getId(),
         [j] = (0, er.Z)(t),
         O = q.ZP.isModerator(x, t.id),
         S = (0, W.B)(t.id),
-        P = f(g),
-        { parentAnalyticsLocation: I } = (0, h.ZP)(),
+        I = f(g),
+        { parentAnalyticsLocation: P } = (0, h.ZP)(),
         T = i.useRef(null);
     if (!b)
         return (0, r.jsx)(s.zx, {
@@ -125,7 +125,7 @@ function ed(e) {
             color: s.zx.Colors.GREEN,
             className: a()(eo.buttonSpacing, eo.buttonWithTextButton),
             onClick: () => {
-                ((0, _.v)(I, _.d.JOIN_STAGE), (0, z.TM)(t));
+                ((0, _.v)(P, _.d.JOIN_STAGE), (0, z.TM)(t));
             },
             children: (0, r.jsxs)('div', {
                 className: eo.buttonWithTextInnerContainer,
@@ -152,7 +152,7 @@ function ed(e) {
             channel: t,
             appContext: l
         });
-    return (O || P) && null != m
+    return (O || I) && null != m
         ? (0, r.jsx)(c.yRy, {
               targetElementRef: T,
               renderPopout: (e) => {
@@ -163,7 +163,7 @@ function ed(e) {
                           'aria-label': ea.intl.string(ea.t['3Uj+2t']),
                           onClose: i,
                           onSelect: n,
-                          onInteraction: (0, y.u)('End Stage', I, { entrypoint: el.A5.CARET }),
+                          onInteraction: (0, y.u)('End Stage', P, { entrypoint: el.A5.CARET }),
                           children: (0, r.jsx)(c.sNh, {
                               id: 'end-stage',
                               color: 'danger',
@@ -247,15 +247,15 @@ let ef = i.memo(function (e) {
         u = (0, W.B)(t.id),
         d = (0, o.e7)([C.Z], () => null != C.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: p, enabled: _ } = (0, S.Z)(),
-        v = (0, I.Z)(t),
-        { limit: j, reachedLimit: O } = (0, P.Z)(t),
+        v = (0, P.Z)(t),
+        { limit: j, reachedLimit: O } = (0, I.Z)(t),
         E = (0, o.e7)([H.default], () => H.default.getCurrentUser()),
         R = (0, o.e7)([U.Z], () => (0, x.Z)(U.Z)),
         M = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
-        k = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
+        L = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, X.PK)(t.id),
         G = j > 0,
-        V = (O && !B) || (null != k && k.user.id !== (null == E ? void 0 : E.id)),
+        V = (O && !B) || (null != L && L.user.id !== (null == E ? void 0 : E.id)),
         z = (0, y.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
@@ -279,7 +279,7 @@ let ef = i.memo(function (e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
-            return (0, r.jsx)(L.C, {
+            return (0, r.jsx)(k.C, {
                 ref: Y,
                 centerButton: !0,
                 hasPermission: v,

@@ -117,7 +117,7 @@ let x = function (e) {
         });
     return _
         ? (0, n.jsx)(
-              i.u,
+              i.Modal,
               v(O({}, S), {
                   onClose: g,
                   actions: [],

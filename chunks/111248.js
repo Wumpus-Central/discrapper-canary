@@ -29,8 +29,8 @@ function _(e) {
         O = null == _.getGuildId() ? 70 : 50,
         E = (0, o.e7)([d.Z], () => d.Z.pipWidth(f.cL.CAMERA_PREVIEW)),
         S = y.length,
-        P = E * S + 8 * (S - 1),
-        I = i.useMemo(
+        I = E * S + 8 * (S - 1),
+        P = i.useMemo(
             () => ({
                 minWidth: f.Rv[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1),
                 maxWidth: f.$i[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1)
@@ -59,7 +59,7 @@ function _(e) {
         children: (0, r.jsx)(u._, {
             position: x,
             id: 0,
-            width: P,
+            width: I,
             ref: j,
             onMove: T,
             onResize: Z,
@@ -69,7 +69,7 @@ function _(e) {
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: I,
+            resizeConfig: P,
             children: (0, r.jsx)('div', {
                 className: m.tileContainer,
                 children: y.map((e) =>

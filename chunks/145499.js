@@ -204,9 +204,9 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     V = R - y,
                     Y = n(872732),
                     K = G - U.length,
-                    X = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
-                    q = [];
-                for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
+                    q = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
+                    X = [];
+                for (let e = 0; e < q; e++) X.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
                 let J = t.premiumTier < m.tier && j >= I.oCV[m.tier],
                     Q = S.intl.string(S.t.dtFw5e),
                     $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
@@ -266,7 +266,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                     e.id
                                                 )
                                             ),
-                                            q
+                                            X
                                         ]
                                     }),
                                 !F &&

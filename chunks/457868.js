@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(965376),
     E = n(159299),
     S = n(670188),
-    P = n(199902),
-    I = n(271383),
+    I = n(199902),
+    P = n(271383),
     Z = n(485386),
     T = n(158776),
     N = n(885110),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(499033),
     M = n(626135),
     D = n(585483),
-    L = n(700785),
-    k = n(51144),
+    k = n(700785),
+    L = n(51144),
     U = n(998502),
     B = n(276264),
     F = n(981631),
@@ -72,7 +72,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
         let { channel: t, sectionId: l, userId: a, guildOwnerId: o } = e,
             s = i.useRef(null),
             u = (0, p.e7)([A.Z], () => A.Z.isTyping(t.id, a)),
-            h = (0, p.e7)([I.ZP], () => I.ZP.getMember(t.guild_id, a)),
+            h = (0, p.e7)([P.ZP], () => P.ZP.getMember(t.guild_id, a)),
             g = (0, p.e7)(
                 [Z.Z],
                 () => {
@@ -87,9 +87,9 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             O = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
-            R = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(a)),
+            R = (0, p.e7)([I.Z], () => I.Z.getAnyStreamForUser(a)),
             M = (0, c.JA)(a),
-            L = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
+            k = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
             U = (null == b ? void 0 : b.id) != null && b.id === o,
             G = i.useCallback(
                 (e) => {
@@ -128,7 +128,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             ),
             V = i.useCallback(() => {
                 if (null == b) return;
-                let e = '@'.concat(k.ZP.getUserTag(b, { decoration: 'never' })),
+                let e = '@'.concat(L.ZP.getUserTag(b, { decoration: 'never' })),
                     n = '<@'.concat(b.id, '>');
                 (D.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
                     D.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
@@ -209,7 +209,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             premiumSince: null == Q ? null : new Date(Q),
                             onClickPremiumGuildIcon: Y,
                             itemProps: M,
-                            lostPermissionTooltipText: L ? void 0 : H.intl.string(H.t['/QcoT0']),
+                            lostPermissionTooltipText: k ? void 0 : H.intl.string(H.t['/QcoT0']),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -357,7 +357,7 @@ function Q(e) {
     )
         return (0, r.jsx)(J, { channel: t });
     let x = s().omit(m.containerProps, ['ref']),
-        v = L.iJ(n);
+        v = k.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: o,
         children: (0, r.jsx)(c.bG, {

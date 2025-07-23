@@ -66,7 +66,7 @@ function k(t) {
               })
             : null;
     return T
-        ? (0, a.jsxs)(l.u, {
+        ? (0, a.jsxs)(l.Modal, {
               size: 'md',
               transitionState: N,
               onClose: j,

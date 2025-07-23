@@ -145,7 +145,7 @@ function S(e) {
             ],
             [_]
         );
-    return (0, l.jsx)(r.u, {
+    return (0, l.jsx)(r.Modal, {
         onClose: a,
         actions: k,
         transitionState: i,

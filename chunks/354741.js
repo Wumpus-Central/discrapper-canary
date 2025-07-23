@@ -1,196 +1,116 @@
-(n.r(t), n.d(t, { default: () => S }), n(388685));
+(n.r(t), n.d(t, { default: () => E }));
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    o = n(493683),
     a = n(239091),
     l = n(883385),
-    c = n(108843),
-    s = n(947440),
-    f = n(100527),
-    u = n(906732),
-    d = n(658138),
-    b = n(299206),
-    p = n(895563),
-    O = n(212205),
-    _ = n(62420),
-    N = n(641360),
-    g = n(769409),
-    y = n(140106),
-    T = n(122074),
-    E = n(314897),
-    h = n(626135),
-    j = n(858687),
-    P = n(461535),
-    I = n(776568),
-    m = n(981631),
-    C = n(388032);
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i));
-            }));
-    }
-    return e;
-}
-let S = (0, c.Z)(
+    o = n(108843),
+    d = n(947440),
+    u = n(100527),
+    c = n(658138),
+    s = n(299206),
+    f = n(895563),
+    b = n(212205),
+    v = n(62420),
+    h = n(769409),
+    p = n(122074),
+    O = n(314897),
+    g = n(858687),
+    _ = n(461535),
+    y = n(776568),
+    C = n(981631),
+    m = n(388032);
+let E = (0, o.Z)(
     (0, l.Z)(
         function (e) {
-            let { channel: t, selected: l, onSelect: c } = e,
-                S = t.isOwner(E.default.getId()),
-                A = (0, P.Z)(t),
-                U = (0, I.ZP)(t),
-                Z = (0, T.Uf)(m.aIL, t.id, 'top'),
-                w = (0, j.Z)(t, l),
-                x = (0, b.Z)({
+            let { channel: t, selected: l, onSelect: o } = e,
+                E = t.isOwner(O.default.getId()),
+                j = (0, _.Z)(t),
+                Z = (0, y.ZP)(t),
+                A = (0, p.Uf)(C.aIL, t.id, 'top'),
+                S = (0, g.Z)(t, l),
+                N = (0, s.Z)({
                     id: t.id,
-                    label: C.intl.string(C.t.gFHI3t)
+                    label: m.intl.string(m.t.gFHI3t)
                 }),
-                M = (0, s.Z)(t),
-                D = (0, p.l)(t),
-                R = (0, p.P)(t),
-                k = (0, O.Z)(t),
-                F = (0, _.Z)(t),
-                G = (0, d.D)(t),
-                { analyticsLocations: Q } = (0, u.ZP)(f.Z.GROUP_DM_CONTEXT_MENU),
-                X = (0, N.p1)(f.Z.GROUP_DM_CONTEXT_MENU, t.id),
-                L = (0, N.I3)(f.Z.GROUP_DM_CONTEXT_MENU, t.id);
+                R = (0, d.Z)(t),
+                I = (0, f.l)(t),
+                U = (0, f.P)(t),
+                T = (0, b.Z)(t),
+                x = (0, v.Z)(t),
+                P = (0, c.D)(t);
             return null == t || t.isManaged()
                 ? null
                 : (0, i.jsxs)(r.v2r, {
                       navId: 'gdm-context',
-                      'aria-label': C.intl.string(C.t.Xm41aW),
+                      'aria-label': m.intl.string(m.t.Xm41aW),
                       onClose: a.Zy,
-                      onSelect: c,
+                      onSelect: o,
                       children: [
-                          (0, i.jsx)(r.kSQ, { children: A }),
+                          (0, i.jsx)(r.kSQ, { children: j }),
                           (0, i.jsxs)(r.kSQ, {
-                              children: [D, k, F]
+                              children: [I, T, x]
                           }),
                           (0, i.jsxs)(r.kSQ, {
                               children: [
-                                  S
+                                  E
                                       ? (0, i.jsx)(r.sNh, {
                                             id: 'instant-invites',
-                                            label: C.intl.string(C.t.ngRFjY),
+                                            label: m.intl.string(m.t.ngRFjY),
                                             action: () =>
                                                 (0, r.ZDy)(async () => {
                                                     let { default: e } = await n.e('97573').then(n.bind(n, 892382));
-                                                    return (n) => (0, i.jsx)(e, v({ channelId: t.id }, n));
+                                                    return (n) =>
+                                                        (0, i.jsx)(
+                                                            e,
+                                                            (function (e) {
+                                                                for (var t = 1; t < arguments.length; t++) {
+                                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                                        i = Object.keys(n);
+                                                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                                                        (i = i.concat(
+                                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                            })
+                                                                        )),
+                                                                        i.forEach(function (t) {
+                                                                            var i;
+                                                                            ((i = n[t]),
+                                                                                t in e
+                                                                                    ? Object.defineProperty(e, t, {
+                                                                                          value: i,
+                                                                                          enumerable: !0,
+                                                                                          configurable: !0,
+                                                                                          writable: !0
+                                                                                      })
+                                                                                    : (e[t] = i));
+                                                                        }));
+                                                                }
+                                                                return e;
+                                                            })({ channelId: t.id }, n)
+                                                        );
                                                 })
                                         })
                                       : null,
-                                  X &&
-                                      (L
-                                          ? (0, i.jsx)(r.sNh, {
-                                                id: 'change-icon',
-                                                label: C.intl.string(C.t['6yrpFR']),
-                                                action: () => (0, y.P5)(t.id, f.Z.GROUP_DM_CONTEXT_MENU)
-                                            })
-                                          : (0, i.jsx)(r.II_, {
-                                                id: 'change-icon',
-                                                showDefaultFocus: !0,
-                                                control: (e, n) => {
-                                                    var a, l;
-                                                    return (0, i.jsx)(
-                                                        r.TEe,
-                                                        ((a = v(
-                                                            {
-                                                                onChange: (n) => {
-                                                                    var i;
-                                                                    let { imageUri: r } = n;
-                                                                    (o.Z.setIcon(t.id, r), null == (i = e.onClose) || i.call(e));
-                                                                },
-                                                                multiple: !1,
-                                                                'aria-label': C.intl.string(C.t['6yrpFR'])
-                                                            },
-                                                            e
-                                                        )),
-                                                        (l = l =
-                                                            {
-                                                                onInteraction: () => {
-                                                                    var n;
-                                                                    (null == (n = e.onInteraction) || n.call(e),
-                                                                        h.default.track(m.rMx.GDM_EDIT_INTERACTED, {
-                                                                            action: 'open',
-                                                                            channel_id: t.id,
-                                                                            channel_type: m.d4z.GROUP_DM,
-                                                                            location: f.Z.GROUP_DM_CONTEXT_MENU,
-                                                                            location_stack: [...Q, f.Z.GROUP_DM_CONTEXT_MENU_CHANGE_ICON]
-                                                                        }));
-                                                                },
-                                                                ref: n
-                                                            }),
-                                                        Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
-                                                            : (function (e, t) {
-                                                                  var n = Object.keys(e);
-                                                                  if (Object.getOwnPropertySymbols) {
-                                                                      var i = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, i);
-                                                                  }
-                                                                  return n;
-                                                              })(Object(l)).forEach(function (e) {
-                                                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
-                                                              }),
-                                                        a)
-                                                    );
-                                                },
-                                                label: C.intl.string(C.t['6yrpFR'])
-                                            })),
-                                  X && null != t.icon
-                                      ? (0, i.jsx)(r.sNh, {
-                                            id: 'remove-icon',
-                                            label: C.intl.string(C.t['uY+Nk5']),
-                                            action: () => {
-                                                (h.default.track(m.rMx.GDM_EDIT_INTERACTED, {
-                                                    action: 'open',
-                                                    channel_id: t.id,
-                                                    channel_type: m.d4z.GROUP_DM,
-                                                    location: f.Z.GROUP_DM_CONTEXT_MENU,
-                                                    location_stack: [...Q, f.Z.GROUP_DM_CONTEXT_MENU_REMOVE_ICON]
-                                                }),
-                                                    o.Z.setIcon(t.id, null));
-                                            }
-                                        })
-                                      : null,
-                                  L &&
-                                      (0, i.jsx)(r.sNh, {
-                                          id: 'edit-gdm',
-                                          label: C.intl.string(C.t['5Q9+/P']),
-                                          action: () => (0, g.B)(t.id, f.Z.GROUP_DM_CONTEXT_MENU)
-                                      }),
-                                  G
+                                  (0, i.jsx)(r.sNh, {
+                                      id: 'edit-gdm',
+                                      label: m.intl.string(m.t['5Q9+/P']),
+                                      action: () => (0, h.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
+                                  }),
+                                  P
                               ]
                           }),
-                          (0, i.jsx)(r.kSQ, { children: M }),
-                          (0, i.jsxs)(r.kSQ, {
-                              children: [U, Z]
-                          }),
-                          (0, i.jsx)(r.kSQ, { children: w }),
                           (0, i.jsx)(r.kSQ, { children: R }),
-                          (0, i.jsx)(r.kSQ, { children: x })
+                          (0, i.jsxs)(r.kSQ, {
+                              children: [Z, A]
+                          }),
+                          (0, i.jsx)(r.kSQ, { children: S }),
+                          (0, i.jsx)(r.kSQ, { children: U }),
+                          (0, i.jsx)(r.kSQ, { children: N })
                       ]
                   });
         },
-        { object: m.qAy.CONTEXT_MENU }
+        { object: C.qAy.CONTEXT_MENU }
     ),
-    [f.Z.CONTEXT_MENU, f.Z.GROUP_DM_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU]
 );

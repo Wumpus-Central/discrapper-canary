@@ -47,8 +47,8 @@ function d(e) {
                     contentKey: S
                 }),
                 (t = S));
-            let P = _[_.length - 1],
-                I = null,
+            let I = _[_.length - 1],
+                P = null,
                 Z = (0, s.DQ)(e);
             y = y || Z;
             let T = (function (e, t, n) {
@@ -59,8 +59,8 @@ function d(e) {
                 return null;
             })(p, e, Z && m);
             (null !== T &&
-                ([I, P] =
-                    ((E = v = P),
+                ([P, I] =
+                    ((E = v = I),
                     null == v || v.type !== T
                         ? ((O = {
                               type: T,
@@ -71,10 +71,10 @@ function d(e) {
                         : (E = (O = v).content[O.content.length - 1]),
                     [O, E])),
             f === e.id && null != C)
-                ? (null != P && P.type === u.ys_.DIVIDER
-                      ? (P.unreadId = e.id)
-                      : null !== I
-                        ? ((j = I),
+                ? (null != I && I.type === u.ys_.DIVIDER
+                      ? (I.unreadId = e.id)
+                      : null !== P
+                        ? ((j = P),
                           e.isFirstMessageInForumPost(p) ||
                               j.content.push({
                                   type: u.ys_.DIVIDER,
@@ -102,7 +102,7 @@ function d(e) {
                     content: N,
                     groupId: N.id
                 });
-            let A = (null == P ? void 0 : P.type) === u.ys_.MESSAGE ? d : P;
+            let A = (null == I ? void 0 : I.type) === u.ys_.MESSAGE ? d : I;
             (0, o.J)(p, A, e) && (n = e.id);
             let w = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
@@ -122,7 +122,7 @@ function d(e) {
                         contentKey: b.startId,
                         isSummaryDivider: !0
                     }),
-                null !== I ? (I.content.push(w), w.jumpTarget && (I.hasJumpTarget = !0)) : _.push(w),
+                null !== P ? (P.content.push(w), w.jumpTarget && (P.hasJumpTarget = !0)) : _.push(w),
                 e.isFirstMessageInForumPost(p) && _.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
                 null != b &&
                     e.id === b.endId &&

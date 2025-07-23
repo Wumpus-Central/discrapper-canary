@@ -13,7 +13,7 @@ function l(e) {
             (h(), null == p || p());
         };
     return u
-        ? (0, n.jsx)(i.u, {
+        ? (0, n.jsx)(i.Modal, {
               title: l,
               subtitle: d,
               transitionState: t,

@@ -4,8 +4,8 @@ var i = e(255367),
     r = e(82659),
     c = e(481060),
     o = e(434404),
-    s = e(703656),
-    l = e(112612),
+    l = e(703656),
+    s = e(112612),
     u = e(981631),
     x = e(176505),
     d = e(388032),
@@ -16,14 +16,14 @@ let f = function (t) {
             submitting: m,
             errorMessage: C,
             onSubmit: k
-        } = (0, l.Z)({
+        } = (0, s.Z)({
             onSubmit: T,
             onClose: f
         }),
         g = a.useCallback(() => {
-            (f(), o.Z.close(), (0, s.uL)(u.Z5c.CHANNEL(n, x.oC.MEMBER_APPLICATIONS)));
+            (f(), o.Z.close(), (0, l.uL)(u.Z5c.CHANNEL(n, x.oC.MEMBER_APPLICATIONS)));
         }, [n, f]);
-    return (0, i.jsxs)(r.u, {
+    return (0, i.jsxs)(r.Modal, {
         transitionState: p,
         onClose: f,
         title: d.intl.formatToPlainString(d.t.chV4JS, { count: e }),

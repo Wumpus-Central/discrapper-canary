@@ -67,6 +67,11 @@ let i = {
         actions: ['POST_CONNECTION_OPEN'],
         inlineRequire: () => n(863065).Z
     },
+    HangStatusManager: {
+        actions: ['POST_CONNECTION_OPEN', 'VOICE_CHANNEL_SELECT', 'LOGOUT', 'GUILD_MEMBER_UPDATE'],
+        inlineRequire: () => n(669750).Z,
+        hasStoreChangeListeners: !0
+    },
     TopEmojisDataManager: {
         actions: ['EMOJI_INTERACTION_INITIATED'],
         inlineRequire: () => n(496207).Z

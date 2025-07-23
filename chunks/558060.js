@@ -1,26 +1,26 @@
 r.d(t, { Z: () => d });
 var n = r(255367);
 r(73800);
-var l = r(120356),
-    i = r.n(l),
-    o = r(884697),
-    a = r(754433),
+var i = r(120356),
+    l = r.n(i),
+    a = r(884697),
+    o = r(754433),
     s = r(409116),
     c = r(981631),
     u = r(561197);
 function d(e) {
     var t, r;
-    let { product: l, isPremiumUser: d, discount: p, className: f, hideStrikethroughPrice: g = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
-        m = (0, o.ql)(l, c.tuJ.DEFAULT);
-    if (null == m) return null;
-    if (m.amount <= 0)
+    let { product: i, isPremiumUser: d, discount: p, className: v, hideStrikethroughPrice: b = !1, nitroIconType: f, nitroIconSize: m = 'md' } = e,
+        h = (0, a.ql)(i, c.tuJ.DEFAULT);
+    if (null == h) return null;
+    if (h.amount <= 0)
         return (0, n.jsx)('div', {
-            className: i()(u.priceTagsContainer, f),
-            children: (0, n.jsx)(s.F, { price: m })
+            className: l()(u.priceTagsContainer, v),
+            children: (0, n.jsx)(s.F, { price: h })
         });
-    let _ = (0, o.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        C =
-            (0, o.x6)(l) && d
+    let y = (0, a.ql)(i, c.tuJ.PREMIUM_TIER_2),
+        g =
+            (0, a.x6)(i) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var r = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function d(e) {
                               }));
                       }
                       return e;
-                  })({}, m)),
+                  })({}, h)),
                   (r = r = { amount: p.original }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -60,23 +60,23 @@ function d(e) {
                             Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                         }),
                   t)
-                : m,
-        O = d && null != _;
+                : h,
+        O = d && null != y;
     return (0, n.jsxs)('div', {
-        className: i()(u.priceTagsContainer, f),
+        className: l()(u.priceTagsContainer, v),
         children: [
-            g
+            b
                 ? null
-                : (0, n.jsx)(a.y, {
-                      price: C,
+                : (0, n.jsx)(o.y, {
+                      price: g,
                       className: u.price
                   }),
             (0, n.jsx)(s.F, {
-                price: O ? _ : C,
+                price: O ? y : g,
                 discount: p,
                 className: u.price,
-                nitroIconType: O ? h : void 0,
-                nitroIconSize: b
+                nitroIconType: O ? f : void 0,
+                nitroIconSize: m
             })
         ]
     });

@@ -296,7 +296,7 @@ let z = d().throttle(h.OQ, 1000),
                   ]
               });
     },
-    X = (e) => {
+    q = (e) => {
         let t,
             n,
             i,
@@ -320,7 +320,7 @@ let z = d().throttle(h.OQ, 1000),
                   }
               }));
     },
-    q = () =>
+    X = () =>
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(p.vwX, {
@@ -445,7 +445,7 @@ let z = d().throttle(h.OQ, 1000),
                     tag: p.RB0.H1,
                     title: U.intl.string(U.t.sMOuub),
                     children: [
-                        (0, r.jsx)(X, {
+                        (0, r.jsx)(q, {
                             guild: e,
                             staticEmojiCount: G.length,
                             animatedEmojiCount: F.length
@@ -479,7 +479,7 @@ let z = d().throttle(h.OQ, 1000),
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(q, {}),
+                                              (0, r.jsx)(X, {}),
                                               (0, r.jsxs)(g.zx, {
                                                   tabIndex: -1,
                                                   size: g.zx.Sizes.MEDIUM,

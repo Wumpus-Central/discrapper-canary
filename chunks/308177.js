@@ -39,7 +39,7 @@ let O = (0, a.Z)((e) => {
         {
             selectedParticipantId: E,
             largeStream: S,
-            chatOpen: P
+            chatOpen: I
         } = (0, l.cj)(
             [o.Z],
             () => ({
@@ -49,25 +49,25 @@ let O = (0, a.Z)((e) => {
             }),
             [a.id]
         ),
-        I = (0, c.Io)(a.id),
+        P = (0, c.Io)(a.id),
         Z = (0, c.Rk)(a.id, u.pV.AUDIENCE),
         T = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
         N = (0, c.w8)(a.id, u.pV.SPEAKER),
         A = N.filter(j),
         w = null != N.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        M = x(y, P),
+        M = x(y, I),
         D = {
             [u.pV.SPEAKER]: M,
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
-        L = (0, d.Dx)(a.id),
-        [k, U] = (0, d.aP)(a.id, D, L),
-        B = [Math.max(null != (t = k[0]) ? t : 1, 1), Math.max(null != (n = k[1]) ? n : 1, 1), k[2]],
+        k = (0, d.Dx)(a.id),
+        [L, U] = (0, d.aP)(a.id, D, k),
+        B = [Math.max(null != (t = L[0]) ? t : 1, 1), Math.max(null != (n = L[1]) ? n : 1, 1), L[2]],
         { speakerTileWidth: F, speakerTileHeight: H } = C(y, M),
         G = S ? y - 32 : Math.min(y - 64, 3 * F + 8),
-        V = (e) => e === k.length - 1 || (0 === Z && 1 === e),
+        V = (e) => e === L.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {
@@ -75,12 +75,12 @@ let O = (0, a.Z)((e) => {
         renderSection: (e) => {
             let { section: t } = e;
             return 1 === t
-                ? 0 === I
+                ? 0 === P
                     ? null
                     : (0, r.jsx)(
                           m.Z,
                           {
-                              participantCount: I,
+                              participantCount: P,
                               label: b.intl.string(b.t.CduOk5),
                               className: _.header,
                               onClick: () => W(!z),

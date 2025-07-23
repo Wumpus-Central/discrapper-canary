@@ -85,7 +85,7 @@ let p = {
                             variant: p
                         }),
                         (0, r.jsx)(
-                            a.u,
+                            a.Modal,
                             _(d({}, e), {
                                 size: 'sm',
                                 title: t,

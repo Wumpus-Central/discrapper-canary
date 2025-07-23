@@ -1,18 +1,18 @@
-n.d(t, {
+r.d(t, {
     $: () => l,
-    w: () => s
+    w: () => i
 });
-var r,
-    o = n(73800),
-    a = n(626135),
-    i = n(981631),
-    s = (((r = {}).DETAIL = 'Boost Perk Shop Details'), (r.DEACTIVATE = 'Boost Perk Shop Disable'), r);
-function l(e, t, n) {
+var n,
+    o = r(73800),
+    a = r(626135),
+    s = r(981631),
+    i = (((n = {}).DETAIL = 'Boost Perk Shop Details'), (n.DEACTIVATE = 'Boost Perk Shop Disable'), n);
+function l(e, t, r) {
     o.useEffect(() => {
-        a.default.track(i.rMx.OPEN_MODAL, {
-            type: n,
+        a.default.track(s.rMx.OPEN_MODAL, {
+            type: r,
             sku_id: t.skuId,
             guild_id: e
         });
-    }, [n, e, t.skuId]);
+    }, [r, e, t.skuId]);
 }

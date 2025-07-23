@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(496675),
     E = n(594174),
     S = n(700785),
-    P = n(51144),
-    I = n(396769),
+    I = n(51144),
+    P = n(396769),
     Z = n(967128),
     T = n(318374),
     N = n(981631),
@@ -37,11 +37,11 @@ function M(e) {
         o = (0, m.ZP)(t, !0),
         M = t.guild_id,
         D = (0, d.e7)([v.Z], () => (null != M ? v.Z.getRoles(M) : void 0)),
-        L = (0, d.e7)([E.default, j.Z], () => {
+        k = (0, d.e7)([E.default, j.Z], () => {
             var e;
             return E.default.getUser(null == (e = j.Z.getGuild(M)) ? void 0 : e.ownerId);
         }),
-        k = i.useMemo(
+        L = i.useMemo(
             () =>
                 null != M
                     ? s()(D)
@@ -53,7 +53,7 @@ function M(e) {
         ),
         U = i.useMemo(
             () =>
-                s()(k)
+                s()(L)
                     .filter((e) => {
                         if (null == M) return !1;
                         let n = S.I0({
@@ -63,13 +63,13 @@ function M(e) {
                         return c.e$(n, N.Plq.ADMINISTRATOR) || c.e$(n, N.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, M, k]
+            [t, M, L]
         ),
         B = (0, d.Wu)(
             [E.default],
             () => {
                 let e = {};
-                for (let n of (null != L && (e[L.id] = L), Object.values(t.permissionOverwrites))) {
+                for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
                     if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
                     let t = E.default.getUser(n.id);
                     null != t && (e[t.id] = t);
@@ -88,7 +88,7 @@ function M(e) {
                     })
                     .value();
             },
-            [t, L]
+            [t, k]
         ),
         F = O.Z.can(N.Plq.MANAGE_CHANNELS, t) || O.Z.can(N.Plq.MANAGE_ROLES, t),
         H = i.useCallback(() => l(!1), []);
@@ -111,7 +111,7 @@ function M(e) {
                 ? (0, r.jsxs)('div', {
                       className: w.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(I.Z, {
+                          (0, r.jsx)(P.Z, {
                               label: A.intl.string(A.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(p.BFJ, {
@@ -119,7 +119,7 @@ function M(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          (0, r.jsx)(I.Z, {
+                          (0, r.jsx)(P.Z, {
                               label: A.intl.string(A.t['3gUsJS']),
                               onClick: function () {
                                   h.ZP.open(t.id);
@@ -144,7 +144,7 @@ function M(e) {
                                 users: B
                             });
                         let e = B[0],
-                            n = P.ZP.getName(e);
+                            n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: w.avatars,
                             children: [

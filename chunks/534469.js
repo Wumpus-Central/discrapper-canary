@@ -27,8 +27,8 @@ var r = n(255367),
     O = n(906467),
     E = n(323873),
     S = n(709054),
-    P = n(786761),
-    I = n(534091),
+    I = n(786761),
+    P = n(534091),
     Z = n(901461),
     T = n(739566),
     N = n(233715),
@@ -37,8 +37,8 @@ var r = n(255367),
     R = n(348238),
     M = n(62072),
     D = n(38267),
-    L = n(25015),
-    k = n(689674),
+    k = n(25015),
+    L = n(689674),
     U = n(438075),
     B = n(764893),
     F = n(481363),
@@ -126,7 +126,7 @@ function et(e, t) {
     return i;
 }
 function en(e, t, n) {
-    return e.getElementById((0, I.p)(t, n));
+    return e.getElementById((0, P.p)(t, n));
 }
 function er(e) {
     var t;
@@ -201,8 +201,8 @@ function ei(e) {
         O = o.type === q.uaV.REPLY ? o.messageReference : void 0,
         E = (0, c.JA)(null != (t = e.id) ? t : ''),
         { onFocus: S } = E,
-        I = et(E, ['onFocus']),
-        { isFocused: N, handleFocus: k, handleBlur: B } = (0, R.bb)(S),
+        P = et(E, ['onFocus']),
+        { isFocused: N, handleFocus: L, handleBlur: B } = (0, R.bb)(S),
         { popouts: F, selected: V, setPopout: Q } = (0, D.Z)(o.id, Y.d$),
         J = v.RS.useSetting(),
         en = v.NA.useSetting(),
@@ -221,7 +221,7 @@ function ei(e) {
         es = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ec = V || (es && N),
         eu = ec || eo,
-        { content: ed, hasSpoilerEmbeds: ep } = (0, L.Z)(o, {
+        { content: ed, hasSpoilerEmbeds: ep } = (0, k.Z)(o, {
             hideSimpleEmbedContent: J && en,
             isInteracting: eu,
             formatInline: !1,
@@ -252,21 +252,21 @@ function ei(e) {
             }),
             (0, r.jsx)(
                 A.Z,
-                ee($({}, I), {
+                ee($({}, P), {
                     id: l,
                     compact: b,
                     className: a()(_, {
                         [X.message]: !0,
                         [X.cozyMessage]: !b,
                         [X.mentioned]: o.mentioned,
-                        [X.ephemeral]: (0, P.Pv)(o),
+                        [X.ephemeral]: (0, I.Pv)(o),
                         [X.systemMessage]: (0, Z.Z)(o),
                         [X.groupStart]: o.id === y || o.type === q.uaV.REPLY,
                         [X.selected]: ec
                     }),
                     zalgo: !0,
                     onKeyDown: eh,
-                    onFocus: k,
+                    onFocus: L,
                     onBlur: B,
                     childrenRepliedMessage:
                         o.type === q.uaV.REPLY &&
@@ -317,7 +317,7 @@ let el = i.memo(function (e) {
         {
             id: o,
             message: x,
-            message: { id: I },
+            message: { id: P },
             channel: J,
             channel: { id: en },
             compact: er = !1,
@@ -349,38 +349,38 @@ let el = i.memo(function (e) {
             defaultValue: eb,
             popouts: eg
         }),
-        { isFocused: eE, hasFocused: eS, handleFocus: eP, handleBlur: eI } = (0, R.bb)(eu),
+        { isFocused: eE, hasFocused: eS, handleFocus: eI, handleBlur: eP } = (0, R.bb)(eu),
         eZ = i.useCallback(
             (e) => {
-                (eP(e), ex(e));
+                (eI(e), ex(e));
             },
-            [eP, ex]
+            [eI, ex]
         ),
         eT = i.useCallback(
             (e) => {
-                (eI(e), ev());
+                (eP(e), ev());
             },
-            [eI, ev]
+            [eP, ev]
         ),
-        eN = (0, u.e7)([E.Z], () => E.Z.isEditing(en, I), [en, I]),
+        eN = (0, u.e7)([E.Z], () => E.Z.isEditing(en, P), [en, P]),
         eA = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ew = eb || eN || (eA && eE),
         eR = ew || eO,
         eM = (0, u.e7)([j.Z], () => x.hasFlag(q.iLy.HAS_THREAD) && j.Z.getChannel(S.default.castMessageIdAsChannelId(x.id))),
         eD = x.isFirstMessageInForumPost(J),
-        eL = (0, m.A)((null != (n = x.editedTimestamp) ? n : x.timestamp).valueOf()),
-        ek = (0, u.e7)([O.Z], () => O.Z.isDeveloper),
-        { content: eU, hasSpoilerEmbeds: eB } = (0, L.Z)(x, {
+        ek = (0, m.A)((null != (n = x.editedTimestamp) ? n : x.timestamp).valueOf()),
+        eL = (0, u.e7)([O.Z], () => O.Z.isDeveloper),
+        { content: eU, hasSpoilerEmbeds: eB } = (0, k.Z)(x, {
             hideSimpleEmbedContent: eh && ef,
             isInteracting: eR,
             formatInline: !1,
-            allowList: eD || eL,
-            allowHeading: eD || eL,
+            allowList: eD || ek,
+            allowHeading: eD || ek,
             allowLinks: !0,
-            allowDevLinks: ek,
+            allowDevLinks: eL,
             previewLinkTarget: !0
         }),
-        eF = (0, M.Z)(I, en, eA),
+        eF = (0, M.Z)(P, en, eA),
         eH = (0, T.ZP)(x),
         eG = (0, u.e7)([y.Z], () => y.Z.getPendingReply(en)),
         eV = (function (e) {
@@ -398,8 +398,8 @@ let el = i.memo(function (e) {
         }),
         eW = (0, w.iG)(x, ea),
         eY = (0, w.Gx)(x),
-        eq = (0, u.e7)([h.Z], () => h.Z.getMessage(I), [I]),
-        eK = (0, k.Z)({
+        eq = (0, u.e7)([h.Z], () => h.Z.getMessage(P), [P]),
+        eK = (0, L.Z)({
             message: x,
             channel: J
         }),
@@ -442,7 +442,7 @@ let el = i.memo(function (e) {
                                 [X.message]: !0,
                                 [X.cozyMessage]: !er,
                                 [X.mentioned]: x.mentioned,
-                                [X.ephemeral]: (0, P.Pv)(x),
+                                [X.ephemeral]: (0, I.Pv)(x),
                                 [X.nitroMessage]: x.type === q.uaV.NITRO_NOTIFICATION || x.type === q.uaV.CHAT_WALLPAPER_SET || x.type === q.uaV.CHAT_WALLPAPER_REMOVED,
                                 [X.systemMessage]: (0, Z.Z)(x),
                                 [X.groupStart]: !eo && (e$ || x.type === q.uaV.REPLY),

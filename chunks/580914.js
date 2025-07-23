@@ -140,7 +140,7 @@ let Z = {
                           className: R.heroBlockContent,
                           children: [
                               (0, n.jsxs)('div', {
-                                  className: R.heroHeaderContainer,
+                                  className: o()(R.heroHeaderContainer, { [R.responsive]: en }),
                                   children: [
                                       r
                                           ? (0, n.jsx)('div', { className: R.heroHeaderBadgeLogoSummaryContainer })

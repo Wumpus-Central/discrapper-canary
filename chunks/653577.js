@@ -15,36 +15,37 @@ var r = n(255367),
     m = n(32066),
     b = n(73433);
 function _(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O } = e,
-        y = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        v = null != y && y.length > 0,
-        C = (0, c.ZP)(t, !0),
-        j = null != _ && _.length > 0;
+    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O, enableHangStatus: y, allowChannelTopic: v } = e,
+        C = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        j = null != C && C.length > 0,
+        E = (0, c.ZP)(t, !0),
+        x = (!y || !!v) && E,
+        S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
-            v &&
+            j &&
                 p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id
                 });
-        }, [v, t.id, t.guild_id]),
+        }, [j, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
-    let E = o()(m.statusDiv, n && C ? m.hoverable : null);
-    return v
+    let I = o()(m.statusDiv, n && x ? m.hoverable : null);
+    return j
         ? (0, r.jsx)(a.P3F, {
-              className: E,
-              onClick: C ? O : void 0,
+              className: I,
+              onClick: x ? O : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(y, !0, { channelId: t.id }) })
+                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(C, !0, { channelId: t.id }) })
               })
           })
-        : n && C && (!j || l)
+        : n && x && (!S || l)
           ? (0, r.jsxs)(a.P3F, {
-                className: E,
+                className: I,
                 onClick: O,
                 children: [
                     (0, r.jsx)(a.Text, {
@@ -59,7 +60,7 @@ function _(e) {
                     })
                 ]
             })
-          : j
+          : S
             ? (0, r.jsx)(d.Z, { children: _ })
             : null;
 }

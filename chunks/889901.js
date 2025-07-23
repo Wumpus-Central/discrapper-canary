@@ -5,8 +5,8 @@ var i = n(325767);
 function l(e) {
     var t,
         n,
-        { width: l = 20, height: a = 20, className: s } = e,
-        o = (function (e, t) {
+        { width: l = 20, height: a = 20, className: o } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -55,9 +55,9 @@ function l(e) {
             {
                 width: l,
                 height: a,
-                className: s
+                className: o
             },
-            (0, i.Z)(o)
+            (0, i.Z)(s)
         )),
         (n = n =
             {

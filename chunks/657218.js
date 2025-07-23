@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(665149),
     E = n(294218),
     S = n(913663),
-    P = n(268350),
-    I = n(695346),
+    I = n(268350),
+    P = n(695346),
     Z = n(592125),
     T = n(703558),
     N = n(375954),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(459273),
     M = n(838440),
     D = n(127654),
-    L = n(241309),
-    k = n(928477),
+    k = n(241309),
+    L = n(928477),
     U = n(456077),
     B = n(488131),
     F = n(842332),
@@ -202,7 +202,7 @@ function Q(e) {
                 }
             );
         })(t, f),
-        C = (0, k.vH)(t),
+        C = (0, L.vH)(t),
         {
             isGeneratingAI: x,
             enableAIFeatures: v,
@@ -216,7 +216,7 @@ function Q(e) {
         }),
         {
             nameError: E,
-            messageError: I,
+            messageError: P,
             submit: Z,
             submitting: N
         } = (function (e) {
@@ -248,7 +248,7 @@ function Q(e) {
                         let g = null != (c = r.name) ? c : '',
                             b = (s || null == n) && 0 === g.length,
                             _ = '' === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((u(b ? (0, L.V_)() : null), p(_ ? (0, L.T4)() : null), b || _))
+                        if ((u(b ? (0, k.V_)() : null), p(_ ? (0, k.T4)() : null), b || _))
                             return (
                                 f(!1),
                                 {
@@ -277,7 +277,7 @@ function Q(e) {
                             await m(e, i, l);
                         } catch (e) {
                             return (
-                                (null == (d = e.body) ? void 0 : d.code) === G.evJ.AUTOMOD_TITLE_BLOCKED && u((0, L.Gx)(e.body, t)),
+                                (null == (d = e.body) ? void 0 : d.code) === G.evJ.AUTOMOD_TITLE_BLOCKED && u((0, k.Gx)(e.body, t)),
                                 f(!1),
                                 {
                                     shouldClear: !1,
@@ -286,7 +286,7 @@ function Q(e) {
                             );
                         }
                         return (
-                            (0, P.qB)(t.id, q.drafts.type),
+                            (0, I.qB)(t.id, q.drafts.type),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -307,7 +307,7 @@ function Q(e) {
             location: l,
             enableAIFeatures: v
         }),
-        A = (0, k.oD)(p, C) ? c.qtY : c.or_;
+        A = (0, L.oD)(p, C) ? c.qtY : c.or_;
     return (0, r.jsx)('div', {
         className: z.chat,
         onMouseDown: d,
@@ -369,7 +369,7 @@ function Q(e) {
                                 textAreaState: b,
                                 setTextAreaState: _,
                                 submit: Z,
-                                error: I
+                                error: P
                             }),
                             (0, r.jsx)(h.ZP, {
                                 channel: t,
@@ -386,7 +386,7 @@ function Q(e) {
 }
 function J(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: i, privateThreadMode: l } = e,
-        a = (0, k.oD)(n, l),
+        a = (0, L.oD)(n, l),
         o = (0, r.jsx)('div', {
             className: z.privateThreadFormTitle,
             children: (0, r.jsx)('span', {
@@ -397,7 +397,7 @@ function J(e) {
         s = (0, r.jsx)(c.XZJ, {
             className: z.checkbox,
             type: c.XZJ.Types.INVERTED,
-            disabled: l === k.Jw.PrivateOnly,
+            disabled: l === L.Jw.PrivateOnly,
             value: a,
             onChange: (e, t) => i({ isPrivate: t }),
             children: (0, r.jsx)(c.Text, {
@@ -406,7 +406,7 @@ function J(e) {
                 children: V.intl.string(V.t.TRPp3t)
             })
         });
-    return t || l === k.Jw.Disabled
+    return t || l === L.Jw.Disabled
         ? null
         : (0, r.jsxs)(c.hjN, {
               title: o,
@@ -428,8 +428,8 @@ function $(e) {
     var t;
     let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: o, error: u, disabled: p, isGeneratingAI: h, enableAIFeatures: f, renderAiGenerateButton: m } = e,
         g = null != (t = l.name) ? t : '',
-        b = (0, L.Op)(u, { content: g }),
-        _ = (0, k.Od)(n, i),
+        b = (0, k.Op)(u, { content: g }),
+        _ = (0, L.Od)(n, i),
         y = null != i && !f,
         C = (0, v.Dt)(),
         x = f ? V.intl.string(V.t['Nb2/RE']) : '' !== _ ? _ : V.intl.string(V.t['Nb2/RE']);
@@ -498,7 +498,7 @@ function ee(e) {
             handler: g
         }));
     let y = (0, o.e7)([A.Z], () => A.Z.can(G.Plq.ATTACH_FILES, t)),
-        v = (0, L.Op)(p, { content: n.textValue });
+        v = (0, k.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(x.Z, {
@@ -531,7 +531,7 @@ function ee(e) {
 function et(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         i = (0, o.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
-        l = I.jU.useSetting();
+        l = P.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {
               className: z.messagePreview,

@@ -15,10 +15,10 @@ var r = n(255367),
     g = n(354459),
     b = n(363987);
 let _ = (0, l.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: j, hasConnectPermission: O, className: E, inCall: S, showParticipants: P = !0, width: I, height: Z, idle: T, mode: N, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: _, layout: y, onSelectParticipant: C, onContextMenuParticipant: x, onFullscreenParticipant: v, channel: j, hasConnectPermission: O, className: E, inCall: S, showParticipants: I = !0, width: P, height: Z, idle: T, mode: N, popoutWindow: A, awaitingRemoteSessionInfo: w, callContainerDimensions: R } = e;
     i.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
-    }, [I, Z, R.width, R.height]);
+    }, [P, Z, R.width, R.height]);
     let M = i.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))), [n, _]);
     return (null == w ? void 0 : w.channelId) === j.id
         ? (0, r.jsx)(d.Z, { height: Z })
@@ -31,7 +31,7 @@ let _ = (0, l.Z)((e) => {
           : N === m.WtW.VOICE
             ? (0, r.jsx)(o.Z, {
                   guildId: j.guild_id,
-                  width: I,
+                  width: P,
                   className: b.voiceCallWrapper,
                   participants: t,
                   onContextMenu: x
@@ -65,10 +65,10 @@ let _ = (0, l.Z)((e) => {
                     className: E,
                     idle: T,
                     height: Z,
-                    width: I,
+                    width: P,
                     layout: y,
                     inCall: S,
                     channel: j,
-                    showParticipants: P
+                    showParticipants: I
                 });
 });

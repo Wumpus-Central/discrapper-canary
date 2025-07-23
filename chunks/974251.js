@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(695346),
     E = n(433355),
     S = n(819640),
-    P = n(375954),
-    I = n(496675),
+    I = n(375954),
+    P = n(496675),
     Z = n(885110),
     T = n(585483),
     N = n(358085),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(193910),
     M = n(951211),
     D = n(981631),
-    L = n(356659),
-    k = n(921944),
+    k = n(356659),
+    L = n(921944),
     U = n(388032),
     B = n(911777);
 function F(e) {
@@ -93,13 +93,13 @@ let G = i.memo(function (e) {
         en = (0, o.e7)([E.ZP], () => null == E.ZP.getCurrentSidebarChannelId(V.id)),
         { showClipsHeaderEntrypoint: er } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         ei = (0, o.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        el = (0, u.s9z)((e) => (0, u.DEQ)(e, L.Qr)),
+        el = (0, u.s9z)((e) => (0, u.DEQ)(e, k.Qr)),
         ea = (0, o.e7)([S.Z], () => S.Z.hasLayers()),
         eo = (0, o.e7)([b.Z], () => b.Z.hasClips()),
         [es, ec] = i.useState(null),
         eu = (0, g.Go)() && ($ || eo),
         ed = V.isPrivate(),
-        ep = (0, o.e7)([I.Z], () => ed || (I.Z.can(D.Plq.ATTACH_FILES, V) && I.Z.can(D.Plq.SEND_MESSAGES, V))),
+        ep = (0, o.e7)([P.Z], () => ed || (P.Z.can(D.Plq.ATTACH_FILES, V) && P.Z.can(D.Plq.SEND_MESSAGES, V))),
         eh = (0, p.Z)(ee);
     (null == eh ? void 0 : eh.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null != (t = null == ee ? void 0 : ee.newClipIds.length) ? t : 0) > 0 && null == es && ei && en && !el && !er && !ea && ec('recentClips');
     let ef = (e, t, n) => {
@@ -111,14 +111,14 @@ let G = i.memo(function (e) {
                   }),
                 T.S.dispatchToLastSubscribed(D.CkL.TEXTAREA_FOCUS));
         },
-        em = (0, o.e7)([P.Z], () => P.Z.hasCurrentUserSentMessageSinceAppStart());
+        em = (0, o.e7)([I.Z], () => I.Z.hasCurrentUserSentMessageSinceAppStart());
     function eg() {
         ((0, u.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('72739')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, H(F({}, t), { channelId: V.id }));
             },
-            { modalKey: L.Qr }
+            { modalKey: k.Qr }
         ),
             ec(null));
     }
@@ -158,7 +158,7 @@ let G = i.memo(function (e) {
         eE = (0, m.Z)('ChannelAttachButton');
     if (0 === eO.length) return null;
     let eS = 'refresh_sm',
-        eP = eE
+        eI = eE
             ? (0, r.jsx)(u.svS, {
                   size: eS,
                   color: 'currentColor',
@@ -169,7 +169,7 @@ let G = i.memo(function (e) {
                   color: 'currentColor',
                   colorClass: B.attachButtonPlus
               }),
-        eI = (0, r.jsx)(u.yRy, {
+        eP = (0, r.jsx)(u.yRy, {
             targetElementRef: Q,
             shouldShow: null != es,
             animation: u.yRy.Animation.NONE,
@@ -177,10 +177,10 @@ let G = i.memo(function (e) {
             position: 'top',
             positionKey: null != es ? es : 'null',
             onRequestOpen: () => {
-                (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: k.L.TAKE_ACTION }), ec('attachMenu'));
+                (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), ec('attachMenu'));
             },
             onRequestClose: () => {
-                (0, u.$sL)() || (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), ec(null));
+                (0, u.$sL)() || (em && (0, y.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), ec(null));
             },
             renderPopout: (e) => {
                 switch (es) {
@@ -235,7 +235,7 @@ let G = i.memo(function (e) {
                             },
                             e
                         ),
-                        { children: eP }
+                        { children: eI }
                     )
                 )
         });
@@ -263,7 +263,7 @@ let G = i.memo(function (e) {
                     animationContainerClassName: B.buttonAnimation,
                     glowClassName: B.buttonAnimationGlow,
                     trinketsClassName: B.buttonAnimationTrinkets,
-                    children: eI
+                    children: eP
                 })
             })
         ]

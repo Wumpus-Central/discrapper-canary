@@ -35,6 +35,7 @@ var r = {
     './halloween_unmute.mp3': '432915',
     './halloween_user_join.mp3': '43351',
     './halloween_user_leave.mp3': '928044',
+    './hang_status_select.mp3': '685673',
     './highfive_clap.mp3': '696730',
     './highfive_whistle.mp3': '656602',
     './human_man.mp3': '129538',

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(539854));
+(n.d(t, { Z: () => L }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,62 +10,72 @@ var r = n(255367),
     d = n(812206),
     p = n(835473),
     h = n(358221),
-    f = n(512384),
-    m = n(470956),
-    g = n(597998),
-    b = n(199902),
-    _ = n(314897),
-    y = n(271383),
-    C = n(131951),
-    x = n(496675),
-    v = n(158776),
-    j = n(885110),
-    O = n(797258),
-    E = n(606304),
-    S = n(979651),
-    P = n(51144),
-    I = n(649739),
-    Z = n(262317),
-    T = n(981631),
-    N = n(524484),
-    A = n(50259);
-let w = i.memo((e) => {
+    f = n(362721),
+    m = n(574176),
+    g = n(106301),
+    b = n(512384),
+    _ = n(470956),
+    y = n(597998),
+    C = n(199902),
+    x = n(314897),
+    v = n(271383),
+    j = n(131951),
+    O = n(496675),
+    E = n(158776),
+    S = n(885110),
+    I = n(797258),
+    P = n(606304),
+    Z = n(979651),
+    T = n(51144),
+    N = n(649739),
+    A = n(262317),
+    w = n(981631),
+    R = n(524484),
+    M = n(50259);
+let D = i.memo((e) => {
     var t, n, i;
-    let { mute: l, deaf: a, user: s, channel: g, sessionId: x, nick: A } = e,
-        w = s.id,
-        R = (0, o.e7)([_.default], () => _.default.getId() === w, [w]),
-        [M, D, L] = (0, o.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
-        k = (0, o.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
-        U = (0, c.Z)({
-            userId: w,
+    let { mute: l, deaf: a, user: s, channel: y, sessionId: O, nick: M } = e,
+        D = s.id,
+        k = (0, o.e7)([x.default], () => x.default.getId() === D, [D]),
+        [L, U, B] = (0, o.Wu)([j.Z], () => (k ? [!j.Z.isSupported() || j.Z.isSelfMute() || j.Z.isSelfMutedTemporarily(), j.Z.isSelfDeaf(), !1] : [!j.Z.isSupported() || j.Z.isLocalMute(D), !1, j.Z.isLocalVideoDisabled(D)]), [k, D]),
+        F = (0, o.e7)([P.Z], () => P.Z.isPrioritySpeaker(D)),
+        H = (0, c.Z)({
+            userId: D,
             checkSoundSharing: !0
         }),
-        B = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(g.guild_id, w)),
-        F = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(g.id).has(w)),
-        H = (0, o.e7)(
+        G = (0, o.e7)([v.ZP], () => v.ZP.isGuestOrLurker(y.guild_id, D)),
+        V = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(y.id).has(D)),
+        z = (0, o.e7)(
             [u.ZP],
             () =>
-                u.ZP.getEmbeddedActivitiesForChannel(g.id).find((e) => {
+                u.ZP.getEmbeddedActivitiesForChannel(y.id).find((e) => {
                     let { userIds: t } = e;
-                    return t.has(w);
+                    return t.has(D);
                 }),
-            [w, g.id]
+            [D, y.id]
         ),
-        G = (0, p.Z)(null != H ? [H.applicationId] : []),
-        V = (0, I.Hr)('voice_users_eligibility_check', !1),
-        z = (0, o.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === T.IIU.PLAYING),
-        W = (0, o.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
-    null != W && I.ZP.trackExposure({ location: 'voice_users' });
-    let [Y, q] = (0, o.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
-        K = (0, o.e7)([O.Z], () => O.Z.getSessionById(x)),
-        X = P.ZP.useName(s),
-        Q = (0, o.e7)([S.Z], () => S.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
-        J = (0, m.Eu)(g.id, w);
-    return (0, r.jsx)(f.Z, {
-        shakeLocation: N.oZ.VOICE_USER,
-        isShaking: U,
+        W = (0, p.Z)(null != z ? [z.applicationId] : []),
+        Y = (0, N.Hr)('voice_users_eligibility_check', !1),
+        q = (0, o.e7)([E.Z, S.Z], () => (k ? S.Z.getActivities() : E.Z.getActivities(D, y.guild_id))).find((e) => null != e.application_id && e.type === w.IIU.PLAYING),
+        K = (0, o.e7)([d.Z], () => ((null == q ? void 0 : q.application_id) != null ? d.Z.getApplication(null == q ? void 0 : q.application_id) : void 0));
+    null != K && N.ZP.trackExposure({ location: 'voice_users' });
+    let [X, Q] = (0, o.Wu)([C.Z], () => [C.Z.getStreamForUser(D, y.getGuildId()), C.Z.getActiveStreamForUser(D, y.getGuildId())], [y, D]),
+        J = (0, o.e7)([I.Z], () => I.Z.getSessionById(O)),
+        $ = T.ZP.useName(s),
+        ee = (0, o.e7)([Z.Z], () => Z.Z.getVoicePlatformForChannel(y.id, D), [y.id, D]),
+        { enableHangStatus: et } = m.n.useExperiment({
+            guildId: y.guild_id,
+            location: 'VoiceUsers'
+        }),
+        en = (0, f.ZP)(y, !0, s),
+        er = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
+        ei = (0, o.e7)([E.Z], () => E.Z.findActivity(D, (e) => e.type === w.IIU.HANG_STATUS), [D]),
+        el = (0, _.Eu)(y.id, D);
+    return (0, r.jsx)(b.Z, {
+        shakeLocation: R.oZ.VOICE_USER,
+        isShaking: H,
         children: (0, r.jsx)(
-            Z.ZP,
+            A.ZP,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -93,24 +103,26 @@ let w = i.memo((e) => {
             })({}, e)),
             (i = i =
                 {
-                    nick: null != A ? A : X,
-                    canDrag: e.canDrag && !B,
-                    otherClientSessionType: null == K || null == (t = K.clientInfo) ? void 0 : t.os,
-                    voicePlatform: Q,
-                    localMute: M && !R,
-                    localVideoDisabled: L,
-                    mute: l || M,
-                    deaf: a || D,
-                    speaking: U,
-                    ringing: F,
-                    disconnected: J,
-                    priority: k,
-                    embeddedApplication: G[0],
-                    isStreaming: null != Y && Y.channelId === g.id,
-                    isWatching: null != q && q.state !== T.jm8.ENDED,
-                    isGuest: B,
-                    isSelf: _.default.getId() === s.id,
-                    application: V ? W : void 0
+                    nick: null != M ? M : $,
+                    canDrag: e.canDrag && !G,
+                    otherClientSessionType: null == J || null == (t = J.clientInfo) ? void 0 : t.os,
+                    voicePlatform: ee,
+                    localMute: L && !k,
+                    localVideoDisabled: B,
+                    mute: l || L,
+                    deaf: a || U,
+                    speaking: H,
+                    ringing: V,
+                    disconnected: el,
+                    priority: F,
+                    embeddedApplication: W[0],
+                    isStreaming: null != X && X.channelId === y.id,
+                    isWatching: null != Q && Q.state !== w.jm8.ENDED,
+                    isGuest: G,
+                    isSelf: k,
+                    application: Y ? K : void 0,
+                    showHangStatus: en && et && (k || null != ei),
+                    hangStatusActivity: k ? er : ei
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -128,44 +140,44 @@ let w = i.memo((e) => {
         )
     });
 });
-w.displayName = 'ConnectedVoiceUser';
-let R = [],
-    M = function (e) {
-        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: j, children: O } = e,
-            [E, S] = i.useState(null),
-            [P, I] = i.useState(!1),
-            N = i.useRef(null),
-            M = (0, m.Es)(l.id, null != c ? c : R),
-            D = i.useRef(
+D.displayName = 'ConnectedVoiceUser';
+let k = [],
+    L = function (e) {
+        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: m, numAudience: g, withGuildIcon: b = !1, className: C, children: v } = e,
+            [j, S] = i.useState(null),
+            [I, P] = i.useState(!1),
+            Z = i.useRef(null),
+            T = (0, _.Es)(l.id, null != c ? c : k),
+            N = i.useRef(
                 new s.sW(50, () => {
-                    (S(N.current), (N.current = null));
+                    (S(Z.current), (Z.current = null));
                 })
             ),
-            L = i.useRef(
+            R = i.useRef(
                 new s.sW(175, () => {
                     S(null);
                 })
             ),
-            k = i.useCallback(
+            L = i.useCallback(
                 (e) => {
-                    t && (I(!0), L.current.cancel(), (N.current = e), D.current.delay());
+                    t && (P(!0), R.current.cancel(), (Z.current = e), N.current.delay());
                 },
                 [t]
             ),
             U = i.useCallback(
                 (e) => {
-                    t && (D.current.cancel(), E === e && (I(!1), L.current.delay()));
+                    t && (N.current.cancel(), j === e && (P(!1), R.current.delay()));
                 },
-                [t, E]
+                [t, j]
             ),
-            B = (0, o.Wu)([v.Z], () => {
+            B = (0, o.Wu)([E.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
-                    null == M ||
-                        M.forEach((t) => {
+                    null == T ||
+                        T.forEach((t) => {
                             let { user: n } = t;
-                            v.Z.getActivities(n.id, l.guild_id).forEach((t) => {
+                            E.Z.getActivities(n.id, l.guild_id).forEach((t) => {
                                 null != t.application_id && e.add(t.application_id);
                             });
                         }),
@@ -174,19 +186,19 @@ let R = [],
             });
         (0, p.Z)(B);
         let F = (() => {
-            if (null == M || 0 === M.length) return null;
-            let e = u && M.length > d + 1 ? M.slice(0, d) : M,
+            if (null == T || 0 === T.length) return null;
+            let e = u && T.length > d + 1 ? T.slice(0, d) : T,
                 t = h.Z.getGuildRingingUsers(l.id),
                 i = e.map((e) => {
                     var i;
                     let { user: a, nick: o, voiceState: s } = e,
                         c = t.has(a.id);
                     return (0, r.jsx)(
-                        w,
+                        D,
                         {
                             user: a,
                             nick: o,
-                            isSelfOnOtherClient: _.default.getId() === a.id && s.sessionId !== _.default.getSessionId(),
+                            isSelfOnOtherClient: x.default.getId() === a.id && s.sessionId !== x.default.getSessionId(),
                             mute: s.isVoiceMuted(),
                             deaf: s.isVoiceDeafened(),
                             video: s.selfVideo,
@@ -195,37 +207,37 @@ let R = [],
                             sessionId: null != (i = s.sessionId) ? i : '',
                             channel: l,
                             collapsed: u,
-                            canDrag: n && x.Z.can(T.Plq.MOVE_MEMBERS, l),
-                            showPreview: k,
+                            canDrag: n && O.Z.can(w.Plq.MOVE_MEMBERS, l),
+                            showPreview: L,
                             hidePreview: U,
-                            previewIsOpen: P,
-                            shouldShowPreview: E === a.id,
+                            previewIsOpen: I,
+                            shouldShowPreview: j === a.id,
                             tabIndex: f,
-                            location: b
+                            location: m
                         },
                         'voice-user-'.concat(a.id, '-').concat(c)
                     );
                 });
             return (
-                null != y && y > 0
+                null != g && g > 0
                     ? i.push(
-                          (0, r.jsx)(Z.ul, {
+                          (0, r.jsx)(A.ul, {
                               collapsed: u,
-                              numAudience: y
+                              numAudience: g
                           })
                       )
-                    : u && M.length > d + 1 && i.push((0, r.jsx)(Z.XX, { numUsers: M.length - d })),
+                    : u && T.length > d + 1 && i.push((0, r.jsx)(A.XX, { numUsers: T.length - d })),
                 i
             );
         })();
-        return null == F && null == O
+        return null == F && null == v
             ? null
-            : (0, r.jsxs)(g.eJ, {
-                  className: a()(j, A.list, {
-                      [A.collapsed]: u,
-                      [A.withGuildIcon]: C
+            : (0, r.jsxs)(y.eJ, {
+                  className: a()(C, M.list, {
+                      [M.collapsed]: u,
+                      [M.withGuildIcon]: b
                   }),
                   collapsed: u,
-                  children: [F, O]
+                  children: [F, v]
               });
     };

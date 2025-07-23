@@ -103,7 +103,7 @@ function b(e, t, n, b) {
             },
             [w]
         ),
-        W = r.useCallback(
+        M = r.useCallback(
             async (e, t, n) => {
                 let r = w[t].localCreationAnswerId;
                 if ((F(e, t), z(g(n, o._.PREPARING), t), null == (await s.IV(e, r, n)))) return void z(g(n, o._.ERROR), t);
@@ -111,7 +111,7 @@ function b(e, t, n, b) {
             },
             [w, z, F]
         ),
-        M = r.useCallback(
+        W = r.useCallback(
             (e, t, n) => {
                 let r = w[t].localCreationAnswerId,
                     a = URL.createObjectURL(n);
@@ -206,9 +206,9 @@ function b(e, t, n, b) {
         canRemoveMoreAnswers: Z,
         handleQuestionChange: Y,
         handleAnswerTextChange: K,
-        handleGifSelect: W,
+        handleGifSelect: M,
         handleEmojiSelect: q,
-        handleCustomUpload: M,
+        handleCustomUpload: W,
         handleAddAnswer: G,
         handleRemoveAnswer: X,
         handleRemoveAnswerImage: H,

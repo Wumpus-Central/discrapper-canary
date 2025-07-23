@@ -46,7 +46,7 @@ function j(e) {
         x = (0, r.Z)(i),
         [p, f] = n.useState(new Set()),
         g = p.size > 0;
-    return (0, a.jsx)(o.u, {
+    return (0, a.jsx)(o.Modal, {
         transitionState: h,
         onClose: u,
         title: m.intl.string(m.t.xC6tUl),

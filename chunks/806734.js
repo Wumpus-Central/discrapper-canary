@@ -29,6 +29,7 @@ e.exports = {
     heroBlockContent: 'heroBlockContent__08415',
     mainContent: 'mainContent__08415',
     heroHeaderContainer: 'heroHeaderContainer__08415',
+    responsive: 'responsive__08415',
     heroHeaderBadgeLogoSummaryContainer: 'heroHeaderBadgeLogoSummaryContainer__08415',
     heroLogoNameContainer: 'heroLogoNameContainer__08415',
     heroHeaderLogo: 'heroHeaderLogo__08415',
@@ -63,6 +64,5 @@ e.exports = {
     wideBannerTextContainer: 'wideBannerTextContainer__08415',
     wideBannerContentContainer: 'wideBannerContentContainer__08415',
     shelfBlockContainer: 'shelfBlockContainer__08415',
-    heroBannerSheenContainer: 'heroBannerSheenContainer__08415',
-    responsive: 'responsive__08415'
+    heroBannerSheenContainer: 'heroBannerSheenContainer__08415'
 };

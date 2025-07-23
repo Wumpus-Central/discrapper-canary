@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(223606),
     E = n(188597),
     S = n(41776),
-    P = n(980463),
-    I = n(328908),
+    I = n(980463),
+    P = n(328908),
     Z = n(992970),
     T = n(135793),
     N = n(576645),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(995774),
     M = n(931651),
     D = n(280845),
-    L = n(2818),
-    k = n(768943),
+    k = n(2818),
+    L = n(768943),
     U = n(665906),
     B = n(695346),
     F = n(314897),
@@ -216,8 +216,8 @@ function eg(e) {
                     }),
                     [t, j]
                 ),
-                P = (0, D.U)(t, n),
-                I = (0, U.NE)(t, n),
+                I = (0, D.U)(t, n),
+                P = (0, U.NE)(t, n),
                 Z = (0, U.Ek)(n),
                 T = (0, u.e7)([S.Z], () => null != t.guild_id && S.Z.isLurking(t.guild_id), [t]),
                 N = (0, u.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
@@ -240,8 +240,8 @@ function eg(e) {
                 X = t.getGuildId(),
                 en = null != X && n.type === ea.uaV.USER_JOIN && W.Z.canWithPartialContext(ea.Plq.MANAGE_GUILD, { guildId: X }),
                 er = (0, v.a)(n),
-                { enabled: ei } = L.Z.useExperiment({ location: 'message_utilities' }),
-                el = (0, u.e7)([k.Z], () => null != k.Z.getSavedMessage(t.id, n.id)),
+                { enabled: ei } = k.Z.useExperiment({ location: 'message_utilities' }),
+                el = (0, u.e7)([L.Z], () => null != L.Z.getSavedMessage(t.id, n.id)),
                 eo = (0, c.Z)(a),
                 es = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled);
             return {
@@ -251,8 +251,8 @@ function eg(e) {
                 canEdit: H,
                 canDelete: w,
                 canReport: R,
-                canReply: P,
-                canStartThread: I,
+                canReply: I,
+                canStartThread: P,
                 canViewThread: Z,
                 canForward: er,
                 canCopy: q.wS,
@@ -290,10 +290,10 @@ function eg(e) {
         eS = i.useCallback(() => {
             eE(!0);
         }, []),
-        eP = i.useCallback(() => {
+        eI = i.useCallback(() => {
             eE(!1);
         }, []),
-        eI = i.useCallback(
+        eP = i.useCallback(
             (e, t) => {
                 (ev(eo.L.TAKE_ACTION), (0, er.ts)(e, t));
             },
@@ -307,7 +307,7 @@ function eg(e) {
         ew = i.useCallback(
             (e) => {
                 try {
-                    (0, P.qc)(t.id, n.id, e);
+                    (0, I.qc)(t.id, n.id, e);
                 } catch (e) {
                     (0, p.showToast)((0, p.createToast)(ec.intl.string(ec.t.xsfC2d), p.ToastType.FAILURE));
                 }
@@ -444,7 +444,7 @@ function eg(e) {
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: ew,
-                                                    onClose: I.Qy,
+                                                    onClose: P.Qy,
                                                     source: Z.YD.MessageExpandingButtons
                                                 }));
                                         }
@@ -483,9 +483,9 @@ function eg(e) {
                       {
                           label: ec.intl.string(ec.t.I3ltXF),
                           icon: j.Z,
-                          onClick: () => eI(t, n),
+                          onClick: () => eP(t, n),
                           onTooltipShow: eS,
-                          onTooltipHide: eP,
+                          onTooltipHide: eI,
                           showNewBadge: !eO && ej
                       },
                       'forward'

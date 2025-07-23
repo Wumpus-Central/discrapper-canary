@@ -1,8 +1,8 @@
 (i.d(n, { default: () => d }), i(388685));
 var e = i(255367),
-    s = i(73800),
-    a = i(82659),
-    l = i(755721),
+    a = i(73800),
+    l = i(82659),
+    s = i(755721),
     u = i(481060),
     r = i(194359),
     o = i(51144),
@@ -10,9 +10,9 @@ var e = i(255367),
     p = i(992089);
 function d(t) {
     let { user: n, nickname: i, transitionState: d, onClose: x } = t,
-        [h, m] = s.useState(!1),
-        [f, g] = s.useState(i),
-        b = s.useRef(null),
+        [h, m] = a.useState(!1),
+        [f, g] = a.useState(i),
+        b = a.useRef(null),
         v = async (t) => {
             (t.preventDefault(), m(!0));
             try {
@@ -25,7 +25,7 @@ function d(t) {
         k = null == i ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
     return (0, e.jsx)('form', {
         onSubmit: v,
-        children: (0, e.jsxs)(a.u, {
+        children: (0, e.jsxs)(l.Modal, {
             title: k,
             transitionState: d,
             subtitle: c.intl.string(c.t['NdQ+lJ']),
@@ -47,7 +47,7 @@ function d(t) {
             children: [
                 (0, e.jsx)(u.xJW, {
                     title: c.intl.string(c.t.pqG6GR),
-                    children: (0, e.jsx)(l.Is, {
+                    children: (0, e.jsx)(s.Is, {
                         inputRef: b,
                         value: null != f ? f : '',
                         placeholder: o.ZP.getName(n),

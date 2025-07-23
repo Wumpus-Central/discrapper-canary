@@ -40,9 +40,9 @@ function y(e) {
         V = '' !== F ? F : O.intl.string(O.t.QWhe9P),
         Y = '' !== F && null != W && '' !== z && null != H && !B,
         K = b.rU(P),
-        { loading: X, error: q, handleCreateOrUpdateFromEditState: J } = b.Xo(),
+        { loading: q, error: X, handleCreateOrUpdateFromEditState: J } = b.Xo(),
         { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = X || Q;
+        et = q || Q;
     return (0, r.jsxs)('div', {
         className: C.container,
         children: [
@@ -152,7 +152,7 @@ function y(e) {
                         allSubscriptionListings: y,
                         priceTiers: N,
                         loading: et,
-                        error: null != q ? q : $,
+                        error: null != X ? X : $,
                         handlePublishTier: () => {
                             (o()(null != E, 'group listing doesnt exist'),
                                 o()(null != R, 'subscription listing doesnt exist'),

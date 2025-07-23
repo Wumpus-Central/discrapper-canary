@@ -97,7 +97,7 @@ function P(e) {
         }, [m, r, I, f, d]);
     return null == b
         ? null
-        : (0, a.jsx)(l.u, {
+        : (0, a.jsx)(l.Modal, {
               title: M.intl.string(M.t.hMWWMT),
               subtitle: M.intl.string(M.t.zMsUsr),
               transitionState: u,

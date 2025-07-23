@@ -16,6 +16,7 @@ e.exports = {
     avatarLarge: 'avatarLarge__07f91',
     avatarSpeaking: 'avatarSpeaking__07f91',
     username: 'username__07f91',
+    hangStatusIcon: 'hangStatusIcon__07f91',
     usernameFont: 'usernameFont__07f91',
     icons: 'icons__07f91',
     iconGroup: 'iconGroup__07f91',

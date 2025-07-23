@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -8,44 +8,53 @@ var i = n(120356),
     l = n(359588),
     c = n(74340),
     u = n(19391),
-    d = n(584973),
-    f = n(556638),
-    _ = n(843280);
-function p(e) {
-    let { customStatusActivity: t, textClassName: n, iconClassName: i, tooltipClassName: p, textSize: h = 'xs', animateEmoji: m = !0, hideEmoji: g = !1, hideTooltip: E = !1 } = e,
-        b = (0, l.Z)({ location: 'CustomStatusActivityStatus' }),
-        y = t.emoji,
-        O = t.state,
-        v = b ? (0, c.Z)(t) : null,
-        I = null != v ? ''.concat((0, u.Z)(v), ': ') : null,
-        T = null != O && '' !== O,
-        S = T || null != v,
-        A =
-            null == y || g
-                ? null
-                : (0, r.jsx)(d.Z, {
-                      emoji: y,
-                      animate: m,
-                      className: i,
-                      hideTooltip: E || S
-                  }),
-        N = T && (null != A ? ' '.concat(O) : O),
-        C = () => {
-            let e = null != y && !g && !T && null == v;
-            return E || e
+    d = n(223135),
+    f = n(741570),
+    _ = n(584973),
+    p = n(556638),
+    h = n(843280);
+function m(e) {
+    let { customStatusActivity: t, textClassName: n, iconClassName: i, tooltipClassName: m, voiceChannel: g, hangStatus: E, textSize: b = 'xs', animateEmoji: y = !0, hideEmoji: O = !1, hideTooltip: v = !1 } = e,
+        I = (0, l.Z)({ location: 'CustomStatusActivityStatus' }),
+        T = (0, f.E)('ActivityStatus', g);
+    if (null == t && null == E) return null;
+    let S = null == t ? void 0 : t.emoji,
+        A = null == t ? void 0 : t.state,
+        N = I ? (0, c.Z)(t) : null,
+        C = null != N ? ''.concat((0, u.Z)(N), ': ') : null,
+        R = null != A && '' !== A,
+        P = R || null != N,
+        w = null;
+    null != E && T
+        ? (w = (0, r.jsx)(d.Z, {
+              className: a()(i, h.hangStatusIcon),
+              hangStatusActivity: E
+          }))
+        : null == S ||
+          O ||
+          (w = (0, r.jsx)(_.Z, {
+              emoji: S,
+              animate: y,
+              className: i,
+              hideTooltip: v || P
+          }));
+    let D = R && (null != w ? ' '.concat(A) : A),
+        L = () => {
+            let e = null != S && !O && !R && null == N;
+            return v || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [I, A, N]
+                      children: [C, w, D]
                   })
                 : (0, r.jsxs)(s.Z, {
-                      delay: f.X,
-                      tooltipClassName: p,
-                      children: [I, A, N]
+                      delay: p.X,
+                      tooltipClassName: m,
+                      children: [C, w, D]
                   });
         };
     return (0, r.jsx)(o.Text, {
-        variant: 'text-'.concat(h, '/medium'),
+        variant: 'text-'.concat(b, '/medium'),
         color: 'none',
-        className: a()(_.truncated, n),
-        children: C()
+        className: a()(h.truncated, n),
+        children: L()
     });
 }

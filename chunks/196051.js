@@ -1,8 +1,8 @@
 n.d(t, {
     Bo: () => a,
-    Ct: () => o,
+    Ct: () => s,
     LA: () => l,
-    NB: () => s,
+    NB: () => o,
     cP: () => i
 });
 var r = n(570140);
@@ -30,10 +30,10 @@ function a(e, t) {
         messageId: t
     });
 }
-function s() {
+function o() {
     r.Z.dispatch({ type: 'STOP_SPEAKING' });
 }
-function o(e) {
+function s(e) {
     r.Z.dispatch({
         type: 'SET_TTS_SPEECH_RATE',
         speechRate: e

@@ -51,7 +51,7 @@ class p extends s.Z {
                   (e) => {
                       var n, o;
                       return (0, r.jsx)(
-                          i.u,
+                          i.Modal,
                           ((n = u(
                               {
                                   title: c.intl.formatToPlainString(c.t['2tN7io'], { name: t.name }),

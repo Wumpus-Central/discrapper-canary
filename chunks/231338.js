@@ -9,23 +9,23 @@
     BZ: () => z,
     Cw: () => w,
     Cy: () => F,
-    EK: () => eg,
-    ET: () => eb,
+    EK: () => eE,
+    ET: () => ey,
     Et: () => q,
     GZ: () => k,
     H0: () => A,
     He: () => I,
     Il: () => o.I,
     Jj: () => M,
-    MA: () => ey,
+    MA: () => eO,
     NY: () => L,
     OL: () => g,
-    OM: () => eh,
+    OM: () => em,
     Pl: () => G,
     Py: () => D,
-    Q: () => em,
+    Q: () => eg,
     QL: () => T,
-    RG: () => eE,
+    RG: () => eb,
     RK: () => ea,
     S7: () => U,
     Sk: () => h,
@@ -41,7 +41,7 @@
     X7: () => P,
     XM: () => et,
     Zu: () => j,
-    aO: () => eO,
+    aO: () => ev,
     aV: () => S,
     am: () => ec,
     cN: () => ef,
@@ -55,8 +55,9 @@
     j_: () => ed,
     lT: () => Q,
     ld: () => C,
-    pK: () => ep,
+    pK: () => eh,
     rx: () => f,
+    tN: () => ep,
     tP: () => s.t,
     tx: () => e_,
     vS: () => $,
@@ -359,24 +360,27 @@ var ed = (function (e) {
         return ((e.CLIENT_TELEMETRY = '/beaker'), e);
     })({}),
     ep = (function (e) {
+        return ((e.CHILLING = 'chilling'), (e.GAMING = 'gaming'), (e.FOCUSING = 'focusing'), (e.BRB = 'brb'), (e.EATING = 'eating'), (e.IN_TRANSIT = 'in-transit'), (e.WATCHING = 'watching'), (e.CUSTOM = 'custom'), e);
+    })({}),
+    eh = (function (e) {
         return ((e.AED = 'aed'), (e.AFN = 'afn'), (e.ALL = 'all'), (e.AMD = 'amd'), (e.ANG = 'ang'), (e.AOA = 'aoa'), (e.ARS = 'ars'), (e.AUD = 'aud'), (e.AWG = 'awg'), (e.AZN = 'azn'), (e.BAM = 'bam'), (e.BBD = 'bbd'), (e.BDT = 'bdt'), (e.BGN = 'bgn'), (e.BHD = 'bhd'), (e.BIF = 'bif'), (e.BMD = 'bmd'), (e.BND = 'bnd'), (e.BOB = 'bob'), (e.BOV = 'bov'), (e.BRL = 'brl'), (e.BSD = 'bsd'), (e.BTN = 'btn'), (e.BWP = 'bwp'), (e.BYN = 'byn'), (e.BYR = 'byr'), (e.BZD = 'bzd'), (e.CAD = 'cad'), (e.CDF = 'cdf'), (e.CHE = 'che'), (e.CHF = 'chf'), (e.CHW = 'chw'), (e.CLF = 'clf'), (e.CLP = 'clp'), (e.CNY = 'cny'), (e.COP = 'cop'), (e.COU = 'cou'), (e.CRC = 'crc'), (e.CUC = 'cuc'), (e.CUP = 'cup'), (e.CVE = 'cve'), (e.CZK = 'czk'), (e.DJF = 'djf'), (e.DKK = 'dkk'), (e.DOP = 'dop'), (e.DZD = 'dzd'), (e.EGP = 'egp'), (e.ERN = 'ern'), (e.ETB = 'etb'), (e.EUR = 'eur'), (e.FJD = 'fjd'), (e.FKP = 'fkp'), (e.GBP = 'gbp'), (e.GEL = 'gel'), (e.GHS = 'ghs'), (e.GIP = 'gip'), (e.GMD = 'gmd'), (e.GNF = 'gnf'), (e.GTQ = 'gtq'), (e.GYD = 'gyd'), (e.HKD = 'hkd'), (e.HNL = 'hnl'), (e.HRK = 'hrk'), (e.HTG = 'htg'), (e.HUF = 'huf'), (e.IDR = 'idr'), (e.ILS = 'ils'), (e.INR = 'inr'), (e.IQD = 'iqd'), (e.IRR = 'irr'), (e.ISK = 'isk'), (e.JMD = 'jmd'), (e.JOD = 'jod'), (e.JPY = 'jpy'), (e.KES = 'kes'), (e.KGS = 'kgs'), (e.KHR = 'khr'), (e.KMF = 'kmf'), (e.KPW = 'kpw'), (e.KRW = 'krw'), (e.KWD = 'kwd'), (e.KYD = 'kyd'), (e.KZT = 'kzt'), (e.LAK = 'lak'), (e.LBP = 'lbp'), (e.LKR = 'lkr'), (e.LRD = 'lrd'), (e.LSL = 'lsl'), (e.LTL = 'ltl'), (e.LVL = 'lvl'), (e.LYD = 'lyd'), (e.MAD = 'mad'), (e.MDL = 'mdl'), (e.MGA = 'mga'), (e.MKD = 'mkd'), (e.MMK = 'mmk'), (e.MNT = 'mnt'), (e.MOP = 'mop'), (e.MRO = 'mro'), (e.MUR = 'mur'), (e.MVR = 'mvr'), (e.MWK = 'mwk'), (e.MXN = 'mxn'), (e.MXV = 'mxv'), (e.MYR = 'myr'), (e.MZN = 'mzn'), (e.NAD = 'nad'), (e.NGN = 'ngn'), (e.NIO = 'nio'), (e.NOK = 'nok'), (e.NPR = 'npr'), (e.NZD = 'nzd'), (e.OMR = 'omr'), (e.PAB = 'pab'), (e.PEN = 'pen'), (e.PGK = 'pgk'), (e.PHP = 'php'), (e.PKR = 'pkr'), (e.PLN = 'pln'), (e.PYG = 'pyg'), (e.QAR = 'qar'), (e.RON = 'ron'), (e.RSD = 'rsd'), (e.RUB = 'rub'), (e.RWF = 'rwf'), (e.SAR = 'sar'), (e.SBD = 'sbd'), (e.SCR = 'scr'), (e.SDG = 'sdg'), (e.SEK = 'sek'), (e.SGD = 'sgd'), (e.SHP = 'shp'), (e.SLL = 'sll'), (e.SOS = 'sos'), (e.SRD = 'srd'), (e.SSP = 'ssp'), (e.STD = 'std'), (e.SVC = 'svc'), (e.SYP = 'syp'), (e.SZL = 'szl'), (e.THB = 'thb'), (e.TJS = 'tjs'), (e.TMT = 'tmt'), (e.TND = 'tnd'), (e.TOP = 'top'), (e.TRY = 'try'), (e.TTD = 'ttd'), (e.TWD = 'twd'), (e.TZS = 'tzs'), (e.UAH = 'uah'), (e.UGX = 'ugx'), (e.USD = 'usd'), (e.USN = 'usn'), (e.USS = 'uss'), (e.UYI = 'uyi'), (e.UYU = 'uyu'), (e.UZS = 'uzs'), (e.VEF = 'vef'), (e.VND = 'vnd'), (e.VUV = 'vuv'), (e.WST = 'wst'), (e.XAF = 'xaf'), (e.XAG = 'xag'), (e.XAU = 'xau'), (e.XBA = 'xba'), (e.XBB = 'xbb'), (e.XBC = 'xbc'), (e.XBD = 'xbd'), (e.XCD = 'xcd'), (e.XDR = 'xdr'), (e.XFU = 'xfu'), (e.XOF = 'xof'), (e.XPD = 'xpd'), (e.XPF = 'xpf'), (e.XPT = 'xpt'), (e.XSU = 'xsu'), (e.XTS = 'xts'), (e.XUA = 'xua'), (e.YER = 'yer'), (e.ZAR = 'zar'), (e.ZMW = 'zmw'), (e.ZWL = 'zwl'), (e.DISCORD_ORB = 'discord_orb'), e);
     })({});
-let eh = 'US';
-var em = (function (e) {
+let em = 'US';
+var eg = (function (e) {
         return ((e[(e.SINGLE_PLAYER = 1)] = 'SINGLE_PLAYER'), (e[(e.ONLINE_MULTIPLAYER = 2)] = 'ONLINE_MULTIPLAYER'), (e[(e.LOCAL_MULTIPLAYER = 3)] = 'LOCAL_MULTIPLAYER'), (e[(e.PVP = 4)] = 'PVP'), (e[(e.LOCAL_COOP = 5)] = 'LOCAL_COOP'), (e[(e.CROSS_PLATFORM = 6)] = 'CROSS_PLATFORM'), (e[(e.RICH_PRESENCE = 7)] = 'RICH_PRESENCE'), (e[(e.DISCORD_GAME_INVITES = 8)] = 'DISCORD_GAME_INVITES'), (e[(e.SPECTATOR_MODE = 9)] = 'SPECTATOR_MODE'), (e[(e.CONTROLLER_SUPPORT = 10)] = 'CONTROLLER_SUPPORT'), (e[(e.CLOUD_SAVES = 11)] = 'CLOUD_SAVES'), (e[(e.ONLINE_COOP = 12)] = 'ONLINE_COOP'), (e[(e.SECURE_NETWORKING = 13)] = 'SECURE_NETWORKING'), e);
     })({}),
-    eg = (function (e) {
+    eE = (function (e) {
         return ((e[(e.ACTION = 1)] = 'ACTION'), (e[(e.ACTION_RPG = 2)] = 'ACTION_RPG'), (e[(e.BRAWLER = 3)] = 'BRAWLER'), (e[(e.HACK_AND_SLASH = 4)] = 'HACK_AND_SLASH'), (e[(e.PLATFORMER = 5)] = 'PLATFORMER'), (e[(e.STEALTH = 6)] = 'STEALTH'), (e[(e.SURVIVAL = 7)] = 'SURVIVAL'), (e[(e.ADVENTURE = 8)] = 'ADVENTURE'), (e[(e.ACTION_ADVENTURE = 9)] = 'ACTION_ADVENTURE'), (e[(e.METROIDVANIA = 10)] = 'METROIDVANIA'), (e[(e.OPEN_WORLD = 11)] = 'OPEN_WORLD'), (e[(e.PSYCHOLOGICAL_HORROR = 12)] = 'PSYCHOLOGICAL_HORROR'), (e[(e.SANDBOX = 13)] = 'SANDBOX'), (e[(e.SURVIVAL_HORROR = 14)] = 'SURVIVAL_HORROR'), (e[(e.VISUAL_NOVEL = 15)] = 'VISUAL_NOVEL'), (e[(e.DRIVING_RACING = 16)] = 'DRIVING_RACING'), (e[(e.VEHICULAR_COMBAT = 17)] = 'VEHICULAR_COMBAT'), (e[(e.MASSIVELY_MULTIPLAYER = 18)] = 'MASSIVELY_MULTIPLAYER'), (e[(e.MMORPG = 19)] = 'MMORPG'), (e[(e.ROLE_PLAYING = 20)] = 'ROLE_PLAYING'), (e[(e.DUNGEON_CRAWLER = 21)] = 'DUNGEON_CRAWLER'), (e[(e.ROGUELIKE = 22)] = 'ROGUELIKE'), (e[(e.SHOOTER = 23)] = 'SHOOTER'), (e[(e.LIGHT_GUN = 24)] = 'LIGHT_GUN'), (e[(e.SHOOT_EM_UP = 25)] = 'SHOOT_EM_UP'), (e[(e.FPS = 26)] = 'FPS'), (e[(e.DUAL_JOYSTICK_SHOOTER = 27)] = 'DUAL_JOYSTICK_SHOOTER'), (e[(e.SIMULATION = 28)] = 'SIMULATION'), (e[(e.FLIGHT_SIMULATOR = 29)] = 'FLIGHT_SIMULATOR'), (e[(e.TRAIN_SIMULATOR = 30)] = 'TRAIN_SIMULATOR'), (e[(e.LIFE_SIMULATOR = 31)] = 'LIFE_SIMULATOR'), (e[(e.FISHING = 32)] = 'FISHING'), (e[(e.SPORTS = 33)] = 'SPORTS'), (e[(e.BASEBALL = 34)] = 'BASEBALL'), (e[(e.BASKETBALL = 35)] = 'BASKETBALL'), (e[(e.BILLIARDS = 36)] = 'BILLIARDS'), (e[(e.BOWLING = 37)] = 'BOWLING'), (e[(e.BOXING = 38)] = 'BOXING'), (e[(e.FOOTBALL = 39)] = 'FOOTBALL'), (e[(e.GOLF = 40)] = 'GOLF'), (e[(e.HOCKEY = 41)] = 'HOCKEY'), (e[(e.SKATEBOARDING_SKATING = 42)] = 'SKATEBOARDING_SKATING'), (e[(e.SNOWBOARDING_SKIING = 43)] = 'SNOWBOARDING_SKIING'), (e[(e.SOCCER = 44)] = 'SOCCER'), (e[(e.TRACK_FIELD = 45)] = 'TRACK_FIELD'), (e[(e.SURFING_WAKEBOARDING = 46)] = 'SURFING_WAKEBOARDING'), (e[(e.WRESTLING = 47)] = 'WRESTLING'), (e[(e.STRATEGY = 48)] = 'STRATEGY'), (e[(e.FOUR_X = 49)] = 'FOUR_X'), (e[(e.ARTILLERY = 50)] = 'ARTILLERY'), (e[(e.RTS = 51)] = 'RTS'), (e[(e.TOWER_DEFENSE = 52)] = 'TOWER_DEFENSE'), (e[(e.TURN_BASED_STRATEGY = 53)] = 'TURN_BASED_STRATEGY'), (e[(e.WARGAME = 54)] = 'WARGAME'), (e[(e.MOBA = 55)] = 'MOBA'), (e[(e.FIGHTING = 56)] = 'FIGHTING'), (e[(e.PUZZLE = 57)] = 'PUZZLE'), (e[(e.CARD_GAME = 58)] = 'CARD_GAME'), (e[(e.EDUCATION = 59)] = 'EDUCATION'), (e[(e.FITNESS = 60)] = 'FITNESS'), (e[(e.GAMBLING = 61)] = 'GAMBLING'), (e[(e.MUSIC_RHYTHM = 62)] = 'MUSIC_RHYTHM'), (e[(e.PARTY_MINI_GAME = 63)] = 'PARTY_MINI_GAME'), (e[(e.PINBALL = 64)] = 'PINBALL'), (e[(e.TRIVIA_BOARD_GAME = 65)] = 'TRIVIA_BOARD_GAME'), (e[(e.TACTICAL = 66)] = 'TACTICAL'), (e[(e.INDIE = 67)] = 'INDIE'), (e[(e.ARCADE = 68)] = 'ARCADE'), (e[(e.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'), e);
     })({}),
-    eE = (function (e) {
+    eb = (function (e) {
         return ((e[(e.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'), (e[(e.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'), e);
     })({}),
-    eb = (function (e) {
+    ey = (function (e) {
         return ((e.PERMISSION_DENIED = 'PERMISSION_DENIED'), (e.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'), (e.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'), e);
     })({}),
-    ey = (function (e) {
+    eO = (function (e) {
         return ((e.SWIPE = 'SWIPE'), (e.BROWSER = 'BROWSER'), (e.KEYBIND = 'KEYBIND'), e);
     })({}),
-    eO = (function (e) {
+    ev = (function (e) {
         return ((e[(e.IN_PROMPT = 1)] = 'IN_PROMPT'), e);
     })({});

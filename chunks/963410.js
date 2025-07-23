@@ -207,7 +207,7 @@ function Z(e) {
         };
     return w
         ? (0, n.jsx)(
-              u.u,
+              u.Modal,
               I(C({ onClose: A }, H), {
                   actions: [ee, $],
                   children: Q

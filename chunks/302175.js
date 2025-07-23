@@ -193,7 +193,7 @@ let k = i.forwardRef((e, t) => {
         (y.Z.shouldFetchCatalogForGuild(o.id) && (0, b.Sn)(o.id), y.Z.shouldFetchPowerupsForGuild(o.id) && (0, b.Fm)(o.id));
     }, [o.id]);
     let u = (0, c.e7)([y.Z], () => y.Z.getStateForGuild(o.id)),
-        d = null != (a = null == u || null == (n = u.powerupCatalog) ? void 0 : n[S.Us.PERK]) ? a : [];
+        d = (null != (a = null == u || null == (n = u.powerupCatalog) ? void 0 : n[S.Us.PERK]) ? a : []).slice(0, 3);
     return 0 === d.length
         ? null
         : (0, r.jsxs)('div', {

@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(796974),
     E = n(323873),
     S = n(607744),
-    P = n(375954),
-    I = n(496675),
+    I = n(375954),
+    P = n(496675),
     Z = n(306680),
     T = n(62817),
     N = n(594174),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(47481),
     M = n(977391),
     D = n(959258),
-    L = n(73274),
-    k = n(419388),
+    k = n(73274),
+    L = n(419388),
     U = n(406534),
     B = n(981631),
     F = n(388032),
@@ -104,7 +104,7 @@ function z(e, t) {
 let W = i.memo(
         function (e) {
             var t, n;
-            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: S, fontSize: P, keyboardModeEnabled: Z, filterAfterTimestamp: T, showingQuarantineBanner: N, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: D, isChatInputBottomAligned: W } = e,
+            let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: x, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: S, fontSize: I, keyboardModeEnabled: Z, filterAfterTimestamp: T, showingQuarantineBanner: N, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: D, isChatInputBottomAligned: W } = e,
                 [Y, q] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
                 K = i.useMemo(
                     () =>
@@ -114,7 +114,7 @@ let W = i.memo(
                                   messageGroups: 30,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: P,
+                                  fontSize: I,
                                   groupSpacing: p
                               })
                             : (0, M.aJ)({
@@ -122,12 +122,12 @@ let W = i.memo(
                                   messageGroups: 26,
                                   groupRange: 4,
                                   attachments: 8,
-                                  fontSize: P,
+                                  fontSize: I,
                                   groupSpacing: p
                               }),
-                    [x, P, p]
+                    [x, I, p]
                 ),
-                X = (0, k.ZP)({
+                X = (0, L.ZP)({
                     messages: b,
                     channel: g,
                     compact: x,
@@ -139,13 +139,13 @@ let W = i.memo(
                     handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
                     additionalMessagePadding: 48 * !!W
                 }),
-                Q = (0, L.Z)({
+                Q = (0, k.Z)({
                     scrollerRef: X.ref,
                     isEditing: null != S,
                     keyboardModeEnabled: Z,
                     hasMoreAfter: b.hasMoreAfter
                 }),
-                J = (0, c.e7)([C.Z], () => (I.Z.can(B.Plq.READ_MESSAGE_HISTORY, g) ? null : C.Z.getViewingRolesTimestamp(g.getGuildId()))),
+                J = (0, c.e7)([C.Z], () => (P.Z.can(B.Plq.READ_MESSAGE_HISTORY, g) ? null : C.Z.getViewingRolesTimestamp(g.getGuildId()))),
                 {
                     channelStreamMarkup: $,
                     newMessagesBar: ee,
@@ -305,10 +305,10 @@ let W = i.memo(
                 let t = e.getGuildId(),
                     n = (0, c.e7)([S.Z], () => null == t || S.Z.canChatInGuild(t), [t]),
                     { canManageMessages: r, permissionVersion: i } = (0, c.cj)(
-                        [I.Z],
+                        [P.Z],
                         () => ({
-                            canManageMessages: I.Z.can(B.Plq.MANAGE_MESSAGES, e),
-                            permissionVersion: null != t ? I.Z.getGuildVersion(t) : null
+                            canManageMessages: P.Z.can(B.Plq.MANAGE_MESSAGES, e),
+                            permissionVersion: null != t ? P.Z.getGuildVersion(t) : null
                         }),
                         [e, t]
                     );
@@ -321,8 +321,8 @@ let W = i.memo(
             {
                 messageGroupSpacing: A,
                 fontSize: M,
-                messageDisplayCompact: L,
-                renderSpoilers: k,
+                messageDisplayCompact: k,
+                renderSpoilers: L,
                 keyboardModeEnabled: U
             } = (function () {
                 let e = v.jU.useSetting(),
@@ -354,7 +354,7 @@ let W = i.memo(
                 editingMessageId: q
             } = (function (e) {
                 var t, n;
-                let r = (0, c.e7)([P.Z], () => P.Z.getMessages(e.id), [e.id]),
+                let r = (0, c.e7)([I.Z], () => I.Z.getMessages(e.id), [e.id]),
                     l = (0, c.e7)(
                         [Z.ZP],
                         () => {
@@ -412,7 +412,7 @@ let W = i.memo(
                 };
             })(t);
         return (0, r.jsx)(b.aQ.Provider, {
-            value: (0, w.Z)(k, h),
+            value: (0, w.Z)(L, h),
             children: (0, r.jsx)(D.v, {
                 children: (0, r.jsx)(
                     W,
@@ -420,7 +420,7 @@ let W = i.memo(
                         messageGroupSpacing: A,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !o && (a || L),
+                        messageDisplayCompact: !o && (a || k),
                         messages: F,
                         channelStream: H,
                         permissionVersion: C,

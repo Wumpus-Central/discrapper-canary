@@ -1,1 +1,1 @@
-e.exports = { deleteListingButton: 'deleteListingButton__490eb' };
+e.exports = { warning: 'warning__490eb' };

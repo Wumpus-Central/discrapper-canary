@@ -112,7 +112,7 @@ function k(e) {
                 let i = new Set(t);
                 return (t.has(e) ? i.delete(e) : i.add(e), i);
             });
-    return (0, n.jsx)(d.u, {
+    return (0, n.jsx)(d.Modal, {
         onClose: i,
         transitionState: t,
         title: y.intl.string(y.t.nP7nDQ),

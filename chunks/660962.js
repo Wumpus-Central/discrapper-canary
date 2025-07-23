@@ -69,7 +69,7 @@ function K(e) {
         })
     );
 }
-function X(e) {
+function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
         o = (e) => l || (a && [T.g.HOLOGRAPHIC, T.g.GRADIENT].includes(e)),
         d = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
@@ -165,7 +165,7 @@ function X(e) {
                                 (0, r.jsx)(p.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'button-outline-primary-text',
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(q, {}) })
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) })
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: 'text-xs/medium',
@@ -200,7 +200,7 @@ function X(e) {
         ]
     });
 }
-function q() {
+function X() {
     let e = (0, d.e7)([x.Z], () => x.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, p.JUn)({
             primaryColor: (0, c.Rf)(G.SK.primary_color),
@@ -407,7 +407,7 @@ function ee(e) {
                 (0, r.jsx)(p.$i$, { className: F.divider }),
                 (a || c) &&
                     null != u &&
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(q, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,

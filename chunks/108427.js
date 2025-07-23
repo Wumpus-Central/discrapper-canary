@@ -1,10 +1,10 @@
-(n.d(t, { e: () => d }), n(388685), n(35282));
+(n.d(t, { e: () => u }), n(388685), n(35282));
 var r = n(772848),
     i = n(579806),
     l = n(626135),
     a = n(998502),
-    s = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ let c = new (class {
         requestIdleCallback(() => {
             var n, r;
             l.default.track(
-                s.rMx.APP_UI_VIEWED,
+                o.rMx.APP_UI_VIEWED,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ let c = new (class {
                                 })
                             )),
                             r.forEach(function (t) {
-                                o(e, t, n[t]);
+                                s(e, t, n[t]);
                             }));
                     }
                     return e;
@@ -106,9 +106,9 @@ let c = new (class {
         }
     }
     constructor() {
-        (o(this, 'loadId', (0, r.Z)()), o(this, 'appUIViewed', !1));
+        (s(this, 'loadId', (0, r.Z)()), s(this, 'appUIViewed', !1));
     }
 })();
-function d(e) {
+function u(e) {
     c.trackAppUIViewed(e);
 }

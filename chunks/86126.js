@@ -1,194 +1,165 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(512722),
     s = n.n(l),
     a = n(442837),
-    o = n(755721),
-    c = n(481060),
-    d = n(674180),
-    u = n(584825),
-    m = n(289393),
-    g = n(727843),
-    p = n(14263),
-    f = n(783454),
-    h = n(388032),
-    x = n(301849),
-    b = n(522659);
-function j(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
-            }));
-    }
-    return e;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function v(e) {
+    o = n(481060),
+    c = n(674180),
+    d = n(584825),
+    u = n(289393),
+    m = n(727843),
+    g = n(14263),
+    p = n(783454),
+    f = n(388032),
+    h = n(301849),
+    x = n(522659);
+function b(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: v, guildId: O, groupListingId: C } = (0, g.N)(),
-        y = (0, a.e7)([m.Z], () => m.Z.getSubscriptionListing(v)),
-        N = null == y ? void 0 : y.id,
-        I = (0, p.Z)(O),
-        E = i.useMemo(() => {
+        { editStateId: b, guildId: j, groupListingId: _ } = (0, m.N)(),
+        v = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
+        O = null == v ? void 0 : v.id,
+        C = (0, g.Z)(j),
+        y = i.useMemo(() => {
             var e;
-            return null != I && null != y && (null != (e = I[y.role_id]) ? e : 0);
-        }, [I, y]),
-        S = 0 === E,
-        T = null == N,
-        P = null != (t = null == y ? void 0 : y.archived) && t,
-        { deleteSubscriptionListing: w, submitting: R } = (0, u.r4)(),
-        { archiveSubscriptionListing: Z, submitting: D } = (0, u._1)(),
-        A = () => {
-            let e = async () => {
-                (T || (s()(null != C, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), await w(O, C, N))) && (null == l || l());
-            };
-            (0, c.ZDy)(async () => {
-                let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
-                return (n) =>
-                    (0, r.jsx)(
-                        t,
-                        _(
-                            j(
-                                {
-                                    header: h.intl.string(h.t['8ZRTsr']),
-                                    confirmText: h.intl.string(h.t.GMtG6u),
-                                    cancelText: h.intl.string(h.t['ETE/oK']),
-                                    onConfirm: () => {
-                                        e();
-                                    },
-                                    confirmButtonColor: o.zx.Colors.RED
-                                },
-                                n
-                            ),
-                            {
-                                children: (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
-                                    children: h.intl.string(h.t.Y4KjUF)
-                                })
-                            }
-                        )
-                    );
-            });
-        },
-        { allowSelfRemoveMonetization: L } = (0, d.gX)(O);
-    return null == y
+            return null != C && null != v && (null != (e = C[v.role_id]) ? e : 0);
+        }, [C, v]),
+        N = 0 === y,
+        I = null == O,
+        E = null != (t = null == v ? void 0 : v.archived) && t,
+        { error: S, deleteSubscriptionListing: T, submitting: P } = (0, d.r4)(),
+        { error: w, archiveSubscriptionListing: R, submitting: Z } = (0, d._1)(),
+        { allowSelfRemoveMonetization: D } = (0, c.gX)(j);
+    return null == v
         ? null
-        : (0, r.jsx)(f.Z, {
-              title: h.intl.string(h.t['7Si8Ul']),
-              children: P
-                  ? (0, r.jsxs)(c.hjN, {
-                        title: h.intl.string(h.t['2D14T0']),
-                        disabled: !L,
-                        children: [
-                            (0, r.jsx)(c.R94, {
-                                type: c.R94.Types.DESCRIPTION,
-                                className: x.formDescription,
-                                disabled: !L,
-                                children: h.intl.string(h.t.Y4KjUF)
-                            }),
-                            (0, r.jsx)(c.ua7, {
-                                shouldShow: !S,
-                                text: h.intl.formatToPlainString(h.t.ABeonZ, { listingMemberCount: E }),
-                                children: (e) =>
-                                    (0, r.jsx)(
-                                        o.zx,
-                                        _(j({}, e), {
-                                            wrapperClassName: b.deleteListingButton,
-                                            color: o.zx.Colors.RED,
-                                            onClick: A,
-                                            submitting: R,
-                                            disabled: !L || !S,
-                                            children: h.intl.string(h.t.GMtG6u)
-                                        })
-                                    )
+        : (0, r.jsx)(p.Z, {
+              title: f.intl.string(f.t['7Si8Ul']),
+              children: (0, r.jsxs)(o.Kqy, {
+                  gap: 16,
+                  children: [
+                      null !== S &&
+                          (0, r.jsx)(o.Wn, {
+                              messageType: o.QYI.ERROR,
+                              children: f.intl.string(f.t['9k8H//'])
+                          }),
+                      null !== w &&
+                          (0, r.jsx)(o.Wn, {
+                              messageType: o.QYI.ERROR,
+                              children: f.intl.string(f.t.up8gUl)
+                          }),
+                      E
+                          ? (0, r.jsxs)(o.hjN, {
+                                title: f.intl.string(f.t['2D14T0']),
+                                disabled: !D,
+                                children: [
+                                    (0, r.jsx)(o.R94, {
+                                        type: o.R94.Types.DESCRIPTION,
+                                        className: h.formDescription,
+                                        disabled: !D,
+                                        children: f.intl.string(f.t.Y4KjUF)
+                                    }),
+                                    (0, r.jsxs)(o.Kqy, {
+                                        gap: 16,
+                                        children: [
+                                            !N &&
+                                                (0, r.jsx)(o.Text, {
+                                                    variant: 'text-sm/normal',
+                                                    className: x.warning,
+                                                    children: f.intl.formatToPlainString(f.t.ABeonZ, { listingMemberCount: y })
+                                                }),
+                                            (0, r.jsx)(o.zxk, {
+                                                variant: 'critical-primary',
+                                                onClick: () => {
+                                                    let e = async () => {
+                                                        (I || (s()(null != _, 'group listing doesnt exist'), s()(null != O, 'subscription listing doesnt exist'), await T(j, _, O))) && (null == l || l());
+                                                    };
+                                                    (0, o.ZDy)(async () => {
+                                                        let { Modal: t } = await Promise.resolve().then(n.bind(n, 82659));
+                                                        return (n) =>
+                                                            (0, r.jsx)(t, {
+                                                                title: f.intl.string(f.t['8ZRTsr']),
+                                                                onClose: n.onClose,
+                                                                transitionState: n.transitionState,
+                                                                actions: [
+                                                                    {
+                                                                        text: f.intl.string(f.t['ETE/oK']),
+                                                                        variant: 'secondary',
+                                                                        onClick: () => n.onClose()
+                                                                    },
+                                                                    {
+                                                                        text: f.intl.string(f.t.GMtG6u),
+                                                                        variant: 'critical-primary',
+                                                                        onClick: async () => {
+                                                                            (await e(), n.onClose());
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                children: (0, r.jsx)(o.Text, {
+                                                                    variant: 'text-md/normal',
+                                                                    children: f.intl.string(f.t.Y4KjUF)
+                                                                })
+                                                            });
+                                                    });
+                                                },
+                                                loading: P,
+                                                disabled: !D || !N,
+                                                text: f.intl.string(f.t.GMtG6u)
+                                            })
+                                        ]
+                                    })
+                                ]
                             })
-                        ]
-                    })
-                  : (0, r.jsxs)(c.hjN, {
-                        title: h.intl.string(h.t['MS/4U1']),
-                        disabled: !L,
-                        children: [
-                            (0, r.jsx)(c.R94, {
-                                type: c.R94.Types.DESCRIPTION,
-                                className: x.formDescription,
-                                disabled: !L,
-                                children: h.intl.string(h.t['5/Jeg4'])
-                            }),
-                            (0, r.jsx)(o.zx, {
-                                wrapperClassName: b.deleteListingButton,
-                                color: o.zx.Colors.RED,
-                                onClick: () => {
-                                    (s()(null != C, 'group listing doesnt exist'),
-                                        s()(null != N, 'subscription listing doesnt exist'),
-                                        (0, c.ZDy)(async () => {
-                                            let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
-                                            return (t) =>
-                                                (0, r.jsx)(
-                                                    e,
-                                                    _(
-                                                        j(
-                                                            {
-                                                                header: h.intl.string(h.t['8ZRTsr']),
-                                                                confirmText: h.intl.string(h.t.RL0wjo),
-                                                                cancelText: h.intl.string(h.t['ETE/oK']),
-                                                                onConfirm: () => {
-                                                                    Z(O, C, N);
+                          : (0, r.jsxs)(o.hjN, {
+                                title: f.intl.string(f.t['MS/4U1']),
+                                disabled: !D,
+                                children: [
+                                    (0, r.jsx)(o.R94, {
+                                        type: o.R94.Types.DESCRIPTION,
+                                        className: h.formDescription,
+                                        disabled: !D,
+                                        children: f.intl.string(f.t['5/Jeg4'])
+                                    }),
+                                    (0, r.jsx)(o.zxk, {
+                                        variant: 'critical-primary',
+                                        onClick: () => {
+                                            (s()(null != _, 'group listing doesnt exist'),
+                                                s()(null != O, 'subscription listing doesnt exist'),
+                                                (0, o.ZDy)(async () => {
+                                                    let { Modal: e } = await Promise.resolve().then(n.bind(n, 82659));
+                                                    return (t) =>
+                                                        (0, r.jsx)(e, {
+                                                            transitionState: t.transitionState,
+                                                            title: f.intl.string(f.t['8ZRTsr']),
+                                                            onClose: t.onClose,
+                                                            actions: [
+                                                                {
+                                                                    text: f.intl.string(f.t['ETE/oK']),
+                                                                    variant: 'secondary',
+                                                                    onClick: () => t.onClose()
                                                                 },
-                                                                confirmButtonColor: o.zx.Colors.RED
-                                                            },
-                                                            t
-                                                        ),
-                                                        {
-                                                            children: (0, r.jsx)(c.Text, {
+                                                                {
+                                                                    text: f.intl.string(f.t.RL0wjo),
+                                                                    variant: 'critical-primary',
+                                                                    onClick: async () => {
+                                                                        (await R(j, _, O), t.onClose());
+                                                                    }
+                                                                }
+                                                            ],
+                                                            children: (0, r.jsx)(o.Text, {
                                                                 variant: 'text-md/normal',
-                                                                children: h.intl.string(h.t['5/Jeg4'])
+                                                                children: f.intl.string(f.t['5/Jeg4'])
                                                             })
-                                                        }
-                                                    )
-                                                );
-                                        }));
-                                },
-                                submitting: D,
-                                disabled: !L,
-                                children: h.intl.string(h.t.RL0wjo)
+                                                        });
+                                                }));
+                                        },
+                                        loading: Z,
+                                        disabled: !D,
+                                        text: f.intl.string(f.t.RL0wjo)
+                                    })
+                                ]
                             })
-                        ]
-                    })
+                  ]
+              })
           });
 }

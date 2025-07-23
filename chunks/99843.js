@@ -145,7 +145,7 @@ let E = (e) => {
             }
         });
     },
-    P = (e) => {
+    I = (e) => {
         let { channel: t, children: n, inlineEditor: l } = e,
             u = t.id,
             d = t.name,
@@ -245,7 +245,7 @@ let E = (e) => {
                   ]
               });
     },
-    I = (e) => {
+    P = (e) => {
         let { channel: t, children: n } = e,
             l = (0, h.ZP)(t),
             a = i.useCallback(
@@ -303,7 +303,7 @@ let E = (e) => {
     Z = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
             { enabled: i, unifiedEditing: l } = (0, f.Ae)('header_bar', t.id);
-        return (0, r.jsx)(i ? P : I, {
+        return (0, r.jsx)(i ? I : P, {
             channel: t,
             inlineEditor: !l,
             children: (0, r.jsx)(g.v, {

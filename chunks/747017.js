@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(781311));
+(n.d(t, { Z: () => v }), n(781311));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -7,103 +7,109 @@ var r = n(255367),
     l = n(442837),
     c = n(833664),
     u = n(545957),
-    d = n(699516),
-    f = n(303524),
-    _ = n(329520),
-    p = n(233023),
-    h = n(868781),
-    m = n(122943),
-    g = n(556638),
-    E = n(981631),
-    b = n(843280);
-function y(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: y, textClassName: O, iconClassName: v, textSize: I = 'xs', animateEmoji: T = !0, hasQuest: S = !1, hideEmoji: A = !1, hideTooltip: N = !1 } = e;
+    d = n(106301),
+    f = n(314897),
+    _ = n(699516),
+    p = n(303524),
+    h = n(329520),
+    m = n(233023),
+    g = n(868781),
+    E = n(122943),
+    b = n(556638),
+    y = n(981631),
+    O = n(843280);
+function v(e) {
+    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: I, iconClassName: T, textSize: S = 'xs', animateEmoji: A = !0, hasQuest: N = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let C = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        R = i.useMemo(() => {
+    let P = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        w = (0, l.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
+        D = (0, l.e7)([d.Z], () => (w ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null)),
+        L = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === E.IIU.CUSTOM_STATUS;
+                          return t === y.IIU.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ('' === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
-    if ((0, l.e7)([d.Z], () => d.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let P = (null == t ? void 0 : t.bot) === !0,
-        w = (null == R ? void 0 : R.state) != null && 'xs' === I,
-        D = () => {
-            if (null != C)
-                return (0, r.jsx)(_.Z, {
-                    stream: C,
+    if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
+    let x = (null == t ? void 0 : t.bot) === !0,
+        M = (null == L ? void 0 : L.state) != null && 'xs' === S,
+        k = () => {
+            if (null != P)
+                return (0, r.jsx)(h.Z, {
+                    stream: P,
                     game: null == n ? void 0 : n.find(c.Z),
-                    textVariant: 'text-'.concat(I, '/medium'),
-                    textClassName: O,
-                    iconClassName: v,
-                    hideText: w,
-                    hideIcon: P,
-                    hideTooltip: N
+                    textVariant: 'text-'.concat(S, '/medium'),
+                    textClassName: I,
+                    iconClassName: T,
+                    hideText: M,
+                    hideIcon: x,
+                    hideTooltip: R
                 });
             let e =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t !== E.IIU.CUSTOM_STATUS && t !== E.IIU.HANG_STATUS;
+                          return t !== y.IIU.CUSTOM_STATUS && t !== y.IIU.HANG_STATUS;
                       });
             return null != e
-                ? (0, r.jsx)(h.Z, {
+                ? (0, r.jsx)(g.Z, {
                       activity: e,
-                      textVariant: 'text-'.concat(I, '/medium'),
-                      textClassName: O,
-                      iconClassName: v,
-                      hideText: w,
-                      hideIcon: P,
-                      hideTooltip: N
+                      textVariant: 'text-'.concat(S, '/medium'),
+                      textClassName: I,
+                      iconClassName: T,
+                      hideText: M,
+                      hideIcon: x,
+                      hideTooltip: R
                   })
-                : null != y
-                  ? (0, r.jsx)(m.Z, {
-                        channel: y,
-                        textVariant: 'text-'.concat(I, '/medium'),
-                        textClassName: O,
-                        iconClassName: v,
-                        hideText: w,
-                        hideTooltip: N
+                : null != v
+                  ? (0, r.jsx)(E.Z, {
+                        channel: v,
+                        textVariant: 'text-'.concat(S, '/medium'),
+                        textClassName: I,
+                        iconClassName: T,
+                        hideText: M,
+                        hideTooltip: R
                     })
                   : null;
         },
-        L = o()(b.container, {
-            [b.textXs]: 'xs' === I,
-            [b.textSm]: 'sm' === I
+        j = o()(O.container, {
+            [O.textXs]: 'xs' === S,
+            [O.textSm]: 'sm' === S
         }),
-        x = () =>
-            null == R
+        U = () =>
+            null == L
                 ? null
-                : (0, r.jsx)(p.Z, {
-                      customStatusActivity: R,
-                      textSize: I,
-                      animateEmoji: T,
-                      hideEmoji: A,
-                      hideTooltip: N,
-                      textClassName: O,
-                      iconClassName: v,
-                      tooltipClassName: L
+                : (0, r.jsx)(m.Z, {
+                      customStatusActivity: L,
+                      textSize: S,
+                      animateEmoji: A,
+                      hideEmoji: C,
+                      hideTooltip: R,
+                      textClassName: I,
+                      iconClassName: T,
+                      tooltipClassName: j,
+                      voiceChannel: v,
+                      hangStatus: D
                   });
     return (0, r.jsxs)('div', {
-        className: L,
+        className: j,
         children: [
-            D(),
+            k(),
             (0, r.jsx)(s.xv, {
-                variant: 'text-'.concat(I, '/normal'),
-                className: o()(b.truncated, b.dot, O),
-                children: g.l
+                variant: 'text-'.concat(S, '/normal'),
+                className: o()(O.truncated, O.dot, I),
+                children: b.l
             }),
-            x(),
-            S && (0, r.jsx)(f.Z, {})
+            U(),
+            N && (0, r.jsx)(p.Z, {})
         ]
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(539854), n(388685), n(997841));
+(n.d(t, { Z: () => j }), n(539854), n(388685), n(997841));
 var r,
     i = n(348327),
     a = n.n(i),
@@ -10,15 +10,16 @@ var r,
     d = n(212517),
     f = n(676035),
     _ = n(594190),
-    p = n(406066),
-    h = n(768419),
-    m = n(695346),
-    g = n(581883),
-    E = n(199902),
-    b = n(272053),
-    y = n(77498),
-    O = n(981631);
-function v(e, t, n) {
+    p = n(106301),
+    h = n(406066),
+    m = n(768419),
+    g = n(695346),
+    E = n(581883),
+    b = n(199902),
+    y = n(272053),
+    O = n(77498),
+    v = n(981631);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +43,12 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             }));
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,121 +60,134 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let A = [],
-    N = {};
-function C() {
+let N = [],
+    C = {};
+function R() {
     let e = [],
-        t = m.Ok.getSetting();
+        t = g.Ok.getSetting();
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.I)(t));
-    let n = p.Z.getActivities();
+    let n = h.Z.getActivities();
     e.push(...n);
-    let r = b.Z.getStream();
-    null != r && e.push(I({ type: O.IIU.STREAMING }, r));
+    let r = y.Z.getStream();
+    null != r && e.push(T({ type: v.IIU.STREAMING }, r));
     let i = new Set();
-    s().forEach(N, (t) => {
+    s().forEach(C, (t) => {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
     let o = _.ZP.getVisibleGame(),
         l = null != o && null != o.name && i.has(o.name),
         c = null != o && o.isLauncher,
-        u = null != E.Z.getCurrentUserActiveStream(),
+        u = null != b.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
     if (null != o && null != o.name && !d) {
-        var g, v, T;
+        var E, I, S;
         e.push({
-            type: O.IIU.PLAYING,
+            type: v.IIU.PLAYING,
             name: o.name,
-            application_id: null != (v = o.id) ? v : null == (g = y.Z.getGameByName(o.name)) ? void 0 : g.id,
-            metadata: { distributor: null != (T = o.distributor) ? T : void 0 },
+            application_id: null != (I = o.id) ? I : null == (E = O.Z.getGameByName(o.name)) ? void 0 : E.id,
+            metadata: { distributor: null != (S = o.distributor) ? S : void 0 },
             timestamps: { start: o.start }
         });
     }
-    let S = h.Z.getActivity();
-    (null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e));
+    let A = m.Z.getActivity();
+    null != A && e.push(T({ type: v.IIU.LISTENING }, A));
+    let R = p.Z.getCurrentHangStatus();
+    if (null != R) {
+        let t = p.Z.getCustomHangStatus();
+        e.push({
+            type: v.IIU.HANG_STATUS,
+            name: 'Hang Status',
+            state: R,
+            details: null == t ? void 0 : t.status,
+            emoji: null == t ? void 0 : t.emoji
+        });
+    }
+    a()(N, e) || (N = e);
 }
-function R() {
-    ((N = {}), C());
-}
-function P(e) {
-    let { socketId: t, pid: n, activity: r } = e;
-    if (a()(N[t], [n, r])) return !1;
-    (null != r ? (N[t] = [n, r]) : delete N[t], C());
+function P() {
+    ((C = {}), R());
 }
 function w(e) {
-    let { socketId: t } = e;
-    (delete N[t], C());
+    let { socketId: t, pid: n, activity: r } = e;
+    if (a()(C[t], [n, r])) return !1;
+    (null != r ? (C[t] = [n, r]) : delete C[t], R());
 }
 function D(e) {
-    let { localActivities: t } = e;
-    ((N = I({}, t)), C());
+    let { socketId: t } = e;
+    (delete C[t], R());
 }
-function L() {
+function L(e) {
+    let { localActivities: t } = e;
+    ((C = T({}, t)), R());
+}
+function x() {
     let e = {},
         t = !1;
-    for (let [r, [i, a]] of Object.entries(N)) {
+    for (let [r, [i, a]] of Object.entries(C)) {
         var n;
         let o = null != (n = a.flags) ? n : 0,
             s = (0, d.Ix)(o);
-        s !== o ? ((e[r] = [i, S(I({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
+        s !== o ? ((e[r] = [i, A(T({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
     }
-    return t ? ((N = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
+    return t ? ((C = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }
-function x() {
-    (L(), C());
+function M() {
+    (x(), R());
 }
-class M extends (r = l.ZP.Store) {
+class k extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(_.ZP, u.ZP, b.Z, E.Z, h.Z, g.Z, y.Z), this.syncWith([p.Z], () => C()));
+        (this.waitFor(_.ZP, u.ZP, y.Z, b.Z, m.Z, E.Z, O.Z, p.Z), this.syncWith([h.Z, p.Z], () => R()));
     }
     getActivities() {
-        return A;
+        return N;
     }
     getPrimaryActivity() {
-        return A[0];
+        return N[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
     }
     getCustomStatusActivity() {
-        return this.findActivity((e) => e.type === O.IIU.CUSTOM_STATUS);
+        return this.findActivity((e) => e.type === v.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return A.find(e);
+        return N.find(e);
     }
     getApplicationActivities() {
-        return N;
+        return C;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(N)) if (t === e) return n;
+        for (let [t, n] of Object.values(C)) if (t === e) return n;
         return null;
     }
 }
-v(M, 'displayName', 'LocalActivityStore');
-let k = new M(c.Z, {
-    OVERLAY_INITIALIZE: D,
-    START_SESSION: R,
-    LOCAL_ACTIVITY_UPDATE: P,
-    RPC_APP_DISCONNECTED: w,
-    RUNNING_GAMES_CHANGE: C,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: C,
-    SPOTIFY_PLAYER_STATE: C,
-    SPOTIFY_PLAYER_PLAY: C,
-    STREAMING_UPDATE: C,
-    USER_CONNECTIONS_UPDATE: C,
-    STREAM_START: C,
-    STREAM_STOP: C,
-    USER_SETTINGS_PROTO_UPDATE: x,
-    EMBEDDED_ACTIVITY_CLOSE: C
+I(k, 'displayName', 'LocalActivityStore');
+let j = new k(c.Z, {
+    OVERLAY_INITIALIZE: L,
+    START_SESSION: P,
+    LOCAL_ACTIVITY_UPDATE: w,
+    RPC_APP_DISCONNECTED: D,
+    RUNNING_GAMES_CHANGE: R,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
+    SPOTIFY_PLAYER_STATE: R,
+    SPOTIFY_PLAYER_PLAY: R,
+    STREAMING_UPDATE: R,
+    USER_CONNECTIONS_UPDATE: R,
+    STREAM_START: R,
+    STREAM_STOP: R,
+    USER_SETTINGS_PROTO_UPDATE: M,
+    EMBEDDED_ACTIVITY_CLOSE: R,
+    UPDATE_HANG_STATUS: R
 });

@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => k,
+    Q: () => L,
     Z: () => F
 });
 var r = n(255367),
@@ -26,8 +26,8 @@ var r = n(255367),
     O = n(670188),
     E = n(199902),
     S = n(314897),
-    P = n(430824),
-    I = n(496675),
+    I = n(430824),
+    P = n(496675),
     Z = n(979651),
     T = n(88751),
     N = n(252132),
@@ -60,7 +60,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function L(e, t) {
         e
     );
 }
-let k = 16 / 9,
+let L = 16 / 9,
     U = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: a, user: o, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
             h = i.useRef(null),
@@ -93,7 +93,7 @@ let k = 16 / 9,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
-                    L(
+                    k(
                         D(
                             {
                                 innerRef: h,
@@ -106,7 +106,7 @@ let k = 16 / 9,
                                 N.Z,
                                 {
                                     participant: n,
-                                    aspectRatio: k,
+                                    aspectRatio: L,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
@@ -137,7 +137,7 @@ let k = 16 / 9,
             T = i.useCallback(
                 (e, t) => {
                     if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, x.p9)(l, Z.Z, P.Z, I.Z, y.Z)[0]) return;
+                        if (!(0, x.p9)(l, Z.Z, I.Z, P.Z, y.Z)[0]) return;
                         (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (S ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
@@ -148,7 +148,7 @@ let k = 16 / 9,
             N.Z,
             {
                 participant: n,
-                aspectRatio: k,
+                aspectRatio: L,
                 fit: n.type === R.fO.USER ? v.L.COVER : void 0,
                 blocked: g,
                 ignored: _,
@@ -188,7 +188,7 @@ let k = 16 / 9,
                     }
                 });
             },
-            P = (e, t, i, a) => {
+            I = (e, t, i, a) => {
                 switch (e.type) {
                     case R.fO.HIDDEN_STREAM:
                     case R.fO.STREAM:
@@ -200,7 +200,7 @@ let k = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            L(D({}, n), {
+                                            k(D({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
@@ -235,7 +235,7 @@ let k = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        L(D({}, t), {
+                                        k(D({}, t), {
                                             user: x,
                                             guildId: y,
                                             channel: l,
@@ -262,7 +262,7 @@ let k = 16 / 9,
                   user: x,
                   width: c,
                   isModerator: O,
-                  onContextMenu: P,
+                  onContextMenu: I,
                   inPopout: p === w.IlC.POPOUT
               })
             : (0, r.jsx)(U, {
@@ -273,7 +273,7 @@ let k = 16 / 9,
                   user: x,
                   width: c,
                   isModerator: O,
-                  onContextMenu: P,
+                  onContextMenu: I,
                   inPopout: p === w.IlC.POPOUT
               });
     });

@@ -6,8 +6,8 @@ var i = n(255367),
     o = n(536442),
     c = n(13140),
     l = n(487029),
-    u = n(388032),
-    d = n(771031);
+    d = n(388032),
+    u = n(771031);
 function y(e) {
     let { guildId: t, channel: y, keybind: h, transitionState: b, onClose: k } = e,
         p = r.useCallback(async () => {
@@ -52,34 +52,34 @@ function y(e) {
             () => [
                 {
                     variant: 'secondary',
-                    text: u.intl.string(u.t['TJ0N9/']),
+                    text: d.intl.string(d.t['TJ0N9/']),
                     onClick: f
                 },
                 {
-                    text: u.intl.string(u.t.ZwRzIC),
+                    text: d.intl.string(d.t.ZwRzIC),
                     onClick: p,
                     variant: 'primary'
                 }
             ],
             [f, p]
         );
-    return (0, i.jsxs)(a.u, {
+    return (0, i.jsxs)(a.Modal, {
         onClose: p,
         actions: j,
         transitionState: b,
-        title: u.intl.string(u.t['yJeV5+']),
+        title: d.intl.string(d.t['yJeV5+']),
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
-                children: u.intl.format(u.t.fq3Sw8, {
+                children: d.intl.format(d.t.fq3Sw8, {
                     keybind: (0, c.BB)(h.shortcut, !0).split(' + '),
                     keybindHook: (e, t) =>
                         (0, i.jsx)(
                             'span',
                             {
-                                className: d.keybindHintKeys,
+                                className: u.keybindHintKeys,
                                 children: (0, i.jsx)(s.M2$, {
-                                    className: d.keybindShortcut,
+                                    className: u.keybindShortcut,
                                     shortcut: (0, c.BB)(h.shortcut, !1)
                                 })
                             },
@@ -97,7 +97,7 @@ function y(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: d.soundWheel,
+                className: u.soundWheel,
                 children: (0, i.jsx)(l.Z, {
                     width: 372,
                     height: 316,

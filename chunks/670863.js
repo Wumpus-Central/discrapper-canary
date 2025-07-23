@@ -1,4 +1,4 @@
-(n.d(t, { j: () => y }), n(388685));
+(n.d(t, { j: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,10 +14,10 @@ var r = n(255367),
     g = n(388032),
     _ = n(583453),
     v = n(20493);
-let b = 'SHOW_MORE';
-function y(e) {
+let h = 'SHOW_MORE';
+function b(e) {
     var t,
-        { deviceType: n, location: y, showAllDevices: h = !1, selectedDeviceId: O, onSelectDevice: j, hideDeviceTypeIcon: S = !1 } = e,
+        { deviceType: n, location: b, showAllDevices: y = !1, selectedDeviceId: O, onSelectDevice: j, hideDeviceTypeIcon: S = !1 } = e,
         x = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -41,8 +41,8 @@ function y(e) {
             setDevice: I,
             Icon: P,
             getCanSetDevice: C,
-            getWarningMessage: w,
-            getLocation: E
+            getWarningMessage: E,
+            getLocation: w
         } = {
             [m.h7.AUDIO_INPUT]: {
                 setDevice: o.Z.setInputDevice,
@@ -67,37 +67,37 @@ function y(e) {
             }
         }[n],
         { analyticsLocations: T } = (0, s.ZP)(),
-        [N, Z] = i.useState(h),
-        D = E(y),
-        [A, k] = (0, f.L)(n, { location: D }),
+        [N, Z] = i.useState(y),
+        A = w(b),
+        [D, k] = (0, f.L)(n, { location: A }),
         { id: L } = (0, f.p)(n),
         M = (0, l.e7)([u.Z], () => C(u.Z)),
-        R = (0, r.jsx)(a.R94, {
+        U = (0, r.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
             className: v.marginTop8,
-            children: w()
+            children: E()
         }),
-        U = i.useCallback(
+        R = i.useCallback(
             (e) => {
-                if (e === b)
+                if (e === h)
                     (Z(!0),
                         d.default.track(p.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: n,
-                            location: D,
+                            location: A,
                             location_stack: T,
-                            shown_device_count: A.length,
+                            shown_device_count: D.length,
                             hidden_device_count: k.length
                         }));
                 else {
                     var t;
                     (null == (t = null == j ? void 0 : j(e)) || t) &&
                         I(e, {
-                            location: D,
+                            location: A,
                             analyticsLocations: T
                         });
                 }
             },
-            [n, D, A.length, k.length, T, j, I]
+            [n, A, D.length, k.length, T, j, I]
         ),
         V =
             null != (t = x.renderOptionLabel)
@@ -154,7 +154,7 @@ function y(e) {
                 })(
                     {
                         value: null != O ? O : L,
-                        onChange: U,
+                        onChange: R,
                         options: (function () {
                             let e = (e) => {
                                     let { id: t, name: n } = e;
@@ -163,14 +163,14 @@ function y(e) {
                                         label: n
                                     };
                                 },
-                                t = A.map(e);
+                                t = D.map(e);
                             if (N || 0 === k.length) {
                                 let n = k.map(e);
                                 return t.concat(n);
                             }
                             {
                                 let e = {
-                                    value: b,
+                                    value: h,
                                     label: g.intl.string(g.t.E99UMj),
                                     preventCloseOnSelect: !0
                                 };
@@ -189,7 +189,7 @@ function y(e) {
                     x
                 )
             ),
-            !M && R
+            !M && U
         ]
     });
 }

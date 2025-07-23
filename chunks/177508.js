@@ -2544,7 +2544,7 @@ function em(e) {
             })
         });
     }
-    return (0, i.jsxs)(x.u, {
+    return (0, i.jsxs)(x.Modal, {
         transitionState: t,
         onClose: n,
         size: 'md',
@@ -2587,7 +2587,7 @@ function em(e) {
 }
 function ep(e) {
     let { transitionState: t, onClose: n } = e;
-    return (0, i.jsx)(x.u, {
+    return (0, i.jsx)(x.Modal, {
         transitionState: t,
         onClose: n,
         title: 'Alert Modal',
@@ -2641,7 +2641,7 @@ function eh(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState('replace'),
         o = s < 3;
-    return (0, i.jsx)(x.u, {
+    return (0, i.jsx)(x.Modal, {
         transitionState: t,
         onClose: n,
         size: 1 === s ? 'md' : 'sm',

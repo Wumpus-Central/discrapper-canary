@@ -4,8 +4,8 @@ var a = n(255367),
     r = n(82659),
     e = n(481060),
     l = n(434404),
-    s = n(703656),
-    o = n(246364),
+    o = n(703656),
+    s = n(246364),
     u = n(981631),
     x = n(176505),
     d = n(388032),
@@ -19,7 +19,7 @@ let C = function (t) {
             [C, E]
         ),
         h = c.useCallback(() => {
-            (C(), l.Z.close(), (0, s.uL)(u.Z5c.CHANNEL(i, x.oC.MEMBER_SAFETY)));
+            (C(), l.Z.close(), (0, o.uL)(u.Z5c.CHANNEL(i, x.oC.MEMBER_SAFETY)));
         }, [i, C]),
         T = n > 200,
         g = [
@@ -30,7 +30,7 @@ let C = function (t) {
             },
             {
                 text: d.intl.string(d.t.Gfg0ra),
-                onClick: () => f(o.wB.REJECTED),
+                onClick: () => f(s.wB.REJECTED),
                 variant: 'critical-primary'
             }
         ];
@@ -38,10 +38,10 @@ let C = function (t) {
         T ||
             g.push({
                 text: d.intl.string(d.t.VWqCvL),
-                onClick: () => f(o.wB.APPROVED),
+                onClick: () => f(s.wB.APPROVED),
                 variant: 'primary'
             }),
-        (0, a.jsx)(r.u, {
+        (0, a.jsx)(r.Modal, {
             title: d.intl.formatToPlainString(d.t.chV4JS, { count: n }),
             onClose: C,
             subtitle: T ? d.intl.string(d.t.EPoNRk) : d.intl.string(d.t['8+nq/P']),

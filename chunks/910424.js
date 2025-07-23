@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -15,7 +15,7 @@ var i = n(442837),
     g = n(981631),
     _ = n(388032),
     v = n(128746);
-function b(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-function h(e) {
-    let { isCurrentUser: t, color: n, look: h, applicationStream: O, onAction: j } = e,
+function y(e) {
+    let { isCurrentUser: t, color: n, look: y, applicationStream: O, onAction: j } = e,
         { activeStream: S, watchingOtherStream: x } = (0, i.cj)([d.Z], () => ({
             activeStream: d.Z.getActiveStreamForApplicationStream(O),
             watchingOtherStream:
@@ -71,26 +71,26 @@ function h(e) {
         })),
         I = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
         [P, C] = (0, u.wq)(I),
-        w = (0, c.Aq)(),
-        E = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
+        E = (0, c.Aq)(),
+        w = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
         T = (e) => {
-            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), E || (0, s.iV)(O, { forceMultiple: e }), w.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
+            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == O) return null;
     let N = (0, u.P9)(C);
-    t ? (N = _.intl.string(_.t.XvBdeX)) : E && (N = _.intl.string(_.t.JH1SJy));
+    t ? (N = _.intl.string(_.t.XvBdeX)) : w && (N = _.intl.string(_.t.JH1SJy));
     let Z = {
         color: n,
-        look: h
+        look: y
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(
                 m.Z,
-                y(
-                    b(
+                b(
+                    h(
                         {
-                            disabled: t || E || !P,
+                            disabled: t || w || !P,
                             onClick: () => T(!1)
                         },
                         Z
@@ -109,15 +109,15 @@ function h(e) {
                 ),
                 'play'
             ),
-            x && !E
+            x && !w
                 ? (0, r.jsx)(l.ua7, {
                       text: _.intl.string(_.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
-                              y(
-                                  b(
-                                      y(b({}, e), {
+                              b(
+                                  h(
+                                      b(h({}, e), {
                                           onClick: () => {
                                               var t;
                                               (null == (t = e.onClick) || t.call(e), T(!0));

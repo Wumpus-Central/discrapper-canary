@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+(n.d(t, { Z: () => k }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(145834),
     E = n(590415),
     S = n(614173),
-    P = n(618896),
-    I = n(231338),
+    I = n(618896),
+    P = n(231338),
     Z = n(388032),
     T = n(916396);
 function N(e) {
@@ -101,7 +101,7 @@ let w = i.memo(function (e) {
         });
         let S = t.getGuildId();
         s()(null != S, 'Channel cannot be guildless');
-        let { isMobile: P, status: I } = (0, c.cj)([x.Z], () => ({
+        let { isMobile: I, status: P } = (0, c.cj)([x.Z], () => ({
                 isMobile: x.Z.isMobileOnline(l.user.id),
                 status: x.Z.getStatus(l.user.id, S)
             })),
@@ -110,10 +110,10 @@ let w = i.memo(function (e) {
             M = i.useMemo(() => ({ [S]: [l.user.id] }), [S, l.user.id]);
         (0, m.$)(M);
         let D = l.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function L() {
+        function k() {
             (0, v.DT)(t, l.user.id, !1);
         }
-        function k() {
+        function L() {
             (0, v.DT)(t, l.user.id, !0);
         }
         let U = (e) => {
@@ -161,8 +161,8 @@ let w = i.memo(function (e) {
                                             size: d.EFr.SIZE_40,
                                             className: T.participantAvatar,
                                             user: l.user,
-                                            isMobile: P,
-                                            status: I
+                                            isMobile: I,
+                                            status: P
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: T.participantTextContainer,
@@ -195,7 +195,7 @@ let w = i.memo(function (e) {
                                 innerClassName: T.buttonContainer,
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
-                                onClick: L,
+                                onClick: k,
                                 disabled: D || C,
                                 children: (0, r.jsx)(d.Lrb, {
                                     size: 'xs',
@@ -213,7 +213,7 @@ let w = i.memo(function (e) {
                                 innerClassName: a()(T.buttonContainer, T.buttonMargin),
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
-                                onClick: k,
+                                onClick: L,
                                 children: (0, r.jsx)(d.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'
@@ -238,7 +238,7 @@ let w = i.memo(function (e) {
         return (0, r.jsxs)('div', {
             className: T.emptyStateContainer,
             children: [
-                (0, r.jsx)(P.Z, {}),
+                (0, r.jsx)(I.Z, {}),
                 (0, r.jsx)(d.Text, {
                     className: T.emptyStateTitle,
                     variant: 'text-lg/semibold',
@@ -254,10 +254,10 @@ let w = i.memo(function (e) {
             ]
         });
     });
-function L(e) {
+function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, j.Fd)(t.id),
-        o = [+!!(0, c.e7)([C.Z], () => C.Z.can(I.Pl.MANAGE_CHANNELS, t) || C.Z.can(I.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
+        o = [+!!(0, c.e7)([C.Z], () => C.Z.can(P.Pl.MANAGE_CHANNELS, t) || C.Z.can(P.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
         className: a()(T.container, { [T.chatOpen]: i }),
         children: [

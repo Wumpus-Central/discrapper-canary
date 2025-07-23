@@ -54,7 +54,7 @@ let h = () => {
                 t.current = (0, s.h7j)((t) =>
                     e
                         ? (0, r.jsx)(
-                              o.u,
+                              o.Modal,
                               p(
                                   {
                                       title: f.intl.string(f.t.dLLxCw),

@@ -1,49 +1,49 @@
-t.d(e, { Z: () => p });
-var l = t(255367),
-    i = t(73800),
-    r = t(481060),
-    o = t(372900),
-    c = t(238246),
-    a = t(788983),
-    s = t(207035),
-    d = t(823748),
-    u = t(981631),
-    h = t(683146);
-function Z(n) {
-    let { windowKey: e, channel: t } = n;
-    return (0, l.jsx)(c.Z, {
+n.d(t, { Z: () => b });
+var i = n(255367),
+    r = n(73800),
+    o = n(481060),
+    a = n(372900),
+    c = n(238246),
+    d = n(788983),
+    l = n(207035),
+    _ = n(823748),
+    s = n(981631),
+    p = n(683146);
+function u(e) {
+    let { windowKey: t, channel: n } = e;
+    return (0, i.jsx)(c.Z, {
         withTitleBar: !0,
-        windowKey: e,
-        title: t.name,
-        channelId: t.id,
-        contentClassName: h.popoutContent,
-        children: (0, l.jsx)(o.Z.Provider, {
-            value: t.guild_id,
-            children: (0, l.jsx)(d.Z, { providedChannel: t })
+        windowKey: t,
+        title: n.name,
+        channelId: n.id,
+        contentClassName: p.popoutContent,
+        children: (0, i.jsx)(a.Z.Provider, {
+            value: n.guild_id,
+            children: (0, i.jsx)(_.Z, { providedChannel: n })
         })
     });
 }
-function p(n, e) {
-    let t = (0, s.P)(e),
-        o = i.useCallback(() => {
-            a.bA(
-                ''.concat(u.KJ3.CHANNEL_POPOUT, '-').concat(n.id),
-                (e) =>
-                    (0, l.jsx)(Z, {
-                        windowKey: e,
-                        channel: n
+function b(e, t) {
+    let n = (0, l.P)(t),
+        a = r.useCallback(() => {
+            d.bA(
+                ''.concat(s.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
+                (t) =>
+                    (0, i.jsx)(u, {
+                        windowKey: t,
+                        channel: e
                     }),
                 {
                     defaultWidth: 854,
                     defaultHeight: 480
                 }
             );
-        }, [n]);
-    return t
-        ? (0, l.jsx)(r.sNh, {
+        }, [e]);
+    return n
+        ? (0, i.jsx)(o.sNh, {
               id: 'channel-pop-out',
               label: 'Open in Popout',
-              action: () => o()
+              action: () => a()
           })
         : null;
 }

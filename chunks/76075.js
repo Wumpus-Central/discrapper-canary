@@ -5,8 +5,8 @@ var i = e(255367),
     l = e(82659),
     r = e(481060),
     s = e(271383),
-    u = e(430824),
-    c = e(594174),
+    c = e(430824),
+    u = e(594174),
     d = e(693546),
     m = e(305325),
     p = e(937111),
@@ -16,10 +16,10 @@ var i = e(255367),
 let h = function (n) {
     let { guildId: t, transitionState: e, onClose: h } = n,
         v = (0, a.e7)([p.Z], () => p.Z.getRequest(t), [t]),
-        C = (0, a.e7)([u.Z], () => u.Z.getGuild(t), [t]),
-        R = (0, a.e7)([c.default], () => {
+        C = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        R = (0, a.e7)([u.default], () => {
             var n;
-            return null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+            return null == (n = u.default.getCurrentUser()) ? void 0 : n.id;
         }),
         x = (0, a.e7)([s.ZP], () => (null != R ? s.ZP.getMember(t, R) : null), [R, t]),
         Z = o.useCallback(() => {
@@ -50,7 +50,7 @@ let h = function (n) {
             ],
             [j, Z]
         );
-    return (0, i.jsx)(l.u, {
+    return (0, i.jsx)(l.Modal, {
         transitionState: e,
         onClose: h,
         title: (null == C ? void 0 : C.name) != null ? g.intl.formatToPlainString(g.t['P+/gzM'], { guildName: C.name }) : g.intl.string(g.t.gBPcuL),

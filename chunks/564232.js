@@ -140,7 +140,7 @@ function y(e) {
             [d, t.id, t.ownerId, a]
         ),
         h = p.Z.isFetchingFriendsForGuild(t.id);
-    return (0, n.jsxs)(l.u, {
+    return (0, n.jsxs)(l.Modal, {
         title: O.intl.string(O.t.kYxEcH),
         subtitle: O.intl.format(h ? O.t.EtQnZm : O.t.OgMdNT, {
             guildName: t.name,

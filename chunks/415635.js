@@ -14,16 +14,16 @@ var r = n(255367),
     g = n(490650);
 function _(e) {
     let { channelId: t, guildId: n, userId: _, containerDimensions: v } = e,
-        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [y, h] = i.useState([]),
-        O = y.length < 50;
+        h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [b, y] = i.useState([]),
+        O = b.length < 50;
     i.useEffect(() => {
         function e(e) {
             var r;
             let { channelId: i, userId: a, emoji: o, animationType: s, animationId: p } = e;
             if ((null != _ && _ !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
             let g = null != o && null != s && null != p;
-            if (i === t && !b && O && g) {
+            if (i === t && !h && O && g) {
                 let e = (0, f._r)(o),
                     r = null != o.id && !o.animated,
                     i = {
@@ -34,7 +34,7 @@ function _(e) {
                         url: e,
                         userId: a
                     };
-                (h((e) => [...e, i]),
+                (y((e) => [...e, i]),
                     c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
@@ -47,22 +47,22 @@ function _(e) {
                 o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, _, b, O]);
+    }, [t, n, _, h, O]);
     let j = i.useCallback((e) => {
-        h((t) => {
+        y((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
             return (n.splice(r, 1), n);
         });
     }, []);
-    return b
+    return h
         ? null
         : (0, r.jsx)('div', {
               className: g.effectsWrapper,
               style: { width: v.width },
               children: (0, r.jsx)('div', {
                   className: g.effects,
-                  children: y.map((e) =>
+                  children: b.map((e) =>
                       (0, r.jsx)(
                           p.Z,
                           {

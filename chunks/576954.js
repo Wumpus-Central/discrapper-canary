@@ -54,7 +54,7 @@ function v(e) {
             (0, f.T)(t, [v]);
         }, [t, v]),
         S = (0, _.C2)(),
-        P = i.useCallback(
+        I = i.useCallback(
             (e) => () => {
                 (c.Z.blockUser(j, { location: _.zr }).then(() => {
                     E();
@@ -78,7 +78,7 @@ function v(e) {
         }),
             u.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
     }, [t, v, j]);
-    let I = () => {
+    let P = () => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -120,7 +120,7 @@ function v(e) {
                                         buttonText: C.intl.string(C.t['5QYPOz']),
                                         buttonColor: o.zx.Colors.RED,
                                         onButtonPress: () => {
-                                            (l(), Z(g.NM.USER_MODAL_BLOCK_CONFIRM, g.NM.USER_MODAL_BLOCK_CANCEL, I));
+                                            (l(), Z(g.NM.USER_MODAL_BLOCK_CONFIRM, g.NM.USER_MODAL_BLOCK_CANCEL, P));
                                         }
                                     },
                                     'block-button'
@@ -166,7 +166,7 @@ function v(e) {
                         (s = s =
                             {
                                 userId: j,
-                                confirmBlock: P(e),
+                                confirmBlock: I(e),
                                 onCancel: () => {
                                     (null == l || l(),
                                         (0, g.qc)({
@@ -208,7 +208,7 @@ function v(e) {
                 text: C.intl.string(C.t['Qk/c4+']),
                 color: o.zx.Colors.BRAND,
                 onclick: () => {
-                    (I(),
+                    (P(),
                         (0, g.qc)({
                             channelId: t,
                             warningId: v,

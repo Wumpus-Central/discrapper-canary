@@ -18,7 +18,7 @@ function s(e) {
                 b(!1);
             }
         }, [p]);
-    return (0, r.jsxs)(a.u, {
+    return (0, r.jsxs)(a.Modal, {
         transitionState: u,
         onClose: d,
         title: n,

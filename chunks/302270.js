@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(430824),
     E = n(496675),
     S = n(626135),
-    P = n(431328),
-    I = n(501655),
+    I = n(431328),
+    P = n(501655),
     Z = n(200498),
     T = n(146085),
     N = n(427679),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(981631),
     M = n(474936),
     D = n(388032),
-    L = n(523335);
-function k(e) {
+    k = n(523335);
+function L(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
         { analyticsLocations: l, newestAnalyticsLocation: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: c, participantsListOpen: u } = (0, o.cj)(
@@ -46,7 +46,7 @@ function k(e) {
             [t.id]
         ),
         b = (0, Z.B)(t.id),
-        y = (0, P.Rk)(t.id, I.pV.REQUESTED_TO_SPEAK_ONLY),
+        y = (0, I.Rk)(t.id, P.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: C } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         x = C && u;
     return (0, r.jsxs)(h.Gt, {
@@ -55,7 +55,7 @@ function k(e) {
             (0, r.jsx)(_.Z, { channelId: t.id }, 'clips-enabled-indicator'),
             !i && b
                 ? (0, r.jsx)('div', {
-                      className: L.button,
+                      className: k.button,
                       children: (0, r.jsx)(A.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               (c && d.Z.updateChatOpen(t.id, !1), u && d.Z.toggleParticipantsList(t.id, !1), (0, g.v)(s, g.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
@@ -70,7 +70,7 @@ function k(e) {
                 (0, r.jsx)(
                     j.Z,
                     {
-                        className: a()(L.button, { [L.sidebarOpen]: c }),
+                        className: a()(k.button, { [k.sidebarOpen]: c }),
                         onClick: () => {
                             (i && n(), d.Z.toggleParticipantsList(t.id, !u));
                         }
@@ -79,12 +79,12 @@ function k(e) {
                 ),
             !c &&
                 (0, r.jsx)('div', {
-                    className: a()(L.button, { [L.sidebarOpen]: x || i }),
+                    className: a()(k.button, { [k.sidebarOpen]: x || i }),
                     children: (0, r.jsx)(v.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
-                        iconClassName: L.buttonIcon
+                        iconClassName: k.buttonIcon
                     })
                 })
         ]
@@ -95,8 +95,8 @@ function U(e) {
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: p } = e,
         h = (0, b.ZP)(n),
         f = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id)),
-        m = (0, P.Io)(n.id),
-        g = (0, P.Rk)(n.id, I.pV.AUDIENCE),
+        m = (0, I.Io)(n.id),
+        g = (0, I.Rk)(n.id, P.pV.AUDIENCE),
         _ = (0, o.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
         v = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
         j = null != _ && _.features.has(R.oNc.COMMUNITY) ? v < R.TU7 : (null == _ ? void 0 : _.premiumTier) !== R.Eu4.TIER_3 && v <= R.eez,
@@ -136,28 +136,28 @@ function U(e) {
         children: (e) => {
             var t;
             return (0, r.jsxs)(C.ZP, {
-                toolbar: (0, r.jsx)(k, {
+                toolbar: (0, r.jsx)(L, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: p,
                     channel: n
                 }),
                 onDoubleClick: x.O,
                 transparent: !0,
-                className: a()(e, L.participants),
+                className: a()(e, k.participants),
                 children: [
                     (0, r.jsx)(C.ZP.Icon, {
                         icon: u.ewx,
                         disabled: !0,
                         'aria-label': D.intl.string(D.t.EErMzM),
-                        className: L.icon,
+                        className: k.icon,
                         color: null != f ? s.Z.colors.HEADER_MUTED.css : void 0
                     }),
                     (0, r.jsx)(C.ZP.Title, {
-                        className: L.channelName,
-                        wrapperClassName: L.channelNameWrapper,
+                        className: k.channelName,
+                        wrapperClassName: k.channelNameWrapper,
                         children: null != (t = null == f ? void 0 : f.topic) ? t : h
                     }),
-                    (0, r.jsx)(C.ZP.Divider, { className: L.divider }),
+                    (0, r.jsx)(C.ZP.Divider, { className: k.divider }),
                     (0, r.jsxs)(C.ZP.Title, {
                         children: [
                             (0, r.jsx)(u.S6n, {
@@ -167,18 +167,18 @@ function U(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: L.speakerCount,
+                                className: k.speakerCount,
                                 children: D.intl.format(D.t.chmM9P, { count: m })
                             }),
                             (0, r.jsx)(u.BFJ, {
                                 size: 'xs',
-                                className: L.icon,
+                                className: k.icon,
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: L.speakerCount,
+                                className: k.speakerCount,
                                 children: D.intl.format(D.t['+v2pNz'], { count: g })
                             })
                         ]
@@ -192,11 +192,11 @@ function U(e) {
               children: [
                   G,
                   (0, r.jsxs)('div', {
-                      className: L.boostUpsell,
+                      className: k.boostUpsell,
                       children: [
                           (0, r.jsx)(B, {}),
                           (0, r.jsxs)('div', {
-                              className: L.text,
+                              className: k.text,
                               children: [
                                   (0, r.jsx)(u.Text, {
                                       variant: 'text-md/medium',
@@ -211,12 +211,12 @@ function U(e) {
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: L.buttons,
+                              className: k.buttons,
                               children: j
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zx, {
-                                                className: L.notNowButton,
+                                                className: k.notNowButton,
                                                 onClick: U,
                                                 look: c.zx.Looks.BLANK,
                                                 size: c.zx.Sizes.SMALL,
@@ -236,13 +236,13 @@ function U(e) {
                                                             action: M.T7.BOOST
                                                         }));
                                                 },
-                                                className: L.boostButton,
+                                                className: k.boostButton,
                                                 children: D.intl.string(D.t.Uj0md3)
                                             })
                                         ]
                                     })
                                   : (0, r.jsx)(c.zx, {
-                                        className: L.notNowButton,
+                                        className: k.notNowButton,
                                         onClick: U,
                                         look: c.zx.Looks.BLANK,
                                         size: c.zx.Sizes.SMALL,

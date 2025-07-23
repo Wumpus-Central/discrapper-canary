@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(51144),
     E = n(566620),
     S = n(317381),
-    P = n(619915),
-    I = n(988980),
+    I = n(619915),
+    P = n(988980),
     Z = n(16609),
     T = n(952561),
     N = n(563218),
@@ -33,14 +33,14 @@ var r = n(255367),
     R = n(719296),
     M = n(225639),
     D = n(651612),
-    L = n(918559),
-    k = n(981631),
+    k = n(918559),
+    L = n(981631),
     U = n(388032),
     B = n(199570);
 let F = A.u8.SIZE_32,
     H = {
-        [L.MI.NO_CHAT]: B.noChat,
-        [L.MI.RESIZABLE]: B.resizable
+        [k.MI.NO_CHAT]: B.noChat,
+        [k.MI.RESIZABLE]: B.resizable
     };
 function G(e) {
     var t, n, l;
@@ -49,14 +49,14 @@ function G(e) {
         Y = (0, o.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
         q = (0, Z.p)(V),
         K = (0, o.e7)([y.Z], () => y.Z.getChannel(q)),
-        X = (0, P.gb)(Y),
-        Q = (0, P.uF)(X),
+        X = (0, I.gb)(Y),
+        Q = (0, I.uF)(X),
         J = i.useCallback(() => {
-            (0, E.tg)(L.Ez.PIP);
+            (0, E.tg)(k.Ez.PIP);
         }, []),
         $ = i.useRef(null),
         ee = (0, o.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        et = ee !== L.MI.NO_CHAT,
+        et = ee !== k.MI.NO_CHAT,
         [en, er] = i.useState(null != (n = null != (t = m.ZP.activityPanelHeight) ? t : G) ? n : null),
         ei = i.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
@@ -77,14 +77,14 @@ function G(e) {
         });
         return (e.observe(el.current), () => e.disconnect());
     }, []);
-    let es = ea.width / Math.max(ea.height, 1) < L.I0,
+    let es = ea.width / Math.max(ea.height, 1) < k.I0,
         ec = 0,
         eu = 0,
-        ed = (0, I.Z)(null == W ? void 0 : W.id);
+        ed = (0, P.Z)(null == W ? void 0 : W.id);
     if (!ed) {
         let e = ea.width,
             t = ea.height;
-        es ? ((t = ea.width / L.I0) > ea.height && (e = (t = ea.height) * L.I0), (eu = (ea.height - t) / 2)) : ((e = Math.min(ea.height * L.I0)) > ea.width && (t = (e = ea.width) / L.I0), (ec = (ea.width - e) / 2));
+        es ? ((t = ea.width / k.I0) > ea.height && (e = (t = ea.height) * k.I0), (eu = (ea.height - t) / 2)) : ((e = Math.min(ea.height * k.I0)) > ea.width && (t = (e = ea.width) / k.I0), (ec = (ea.width - e) / 2));
     }
     let ep = Q.get(null != (l = null == W ? void 0 : W.id) ? l : ''),
         eh = (0, o.e7)([x.Z], () => x.Z.getChannelId()),
@@ -203,7 +203,7 @@ function G(e) {
         );
     };
     return (0, r.jsx)(c.f6W, {
-        theme: k.BRd.DARK,
+        theme: L.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
                 className: a()(B.wrapper, H[ee], e),
@@ -282,7 +282,7 @@ function G(e) {
                                               ? (0, r.jsx)(_.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
-                                                        ((0, h.yw)(k.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED), (0, w.Z)({ onConfirm: E.Gj }));
+                                                        ((0, h.yw)(L.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED), (0, w.Z)({ onConfirm: E.Gj }));
                                                     },
                                                     onClosePopout: () => {}
                                                 })
@@ -298,10 +298,10 @@ function G(e) {
                               maxHeight: G,
                               resizableNode: $,
                               onResize: (e) => {
-                                  (j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
+                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
                               },
                               onResizeEnd: (e) => {
-                                  (j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
+                                  (j.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
                               }
                           })
                         : null

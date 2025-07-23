@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(951211),
     E = n(800513),
     S = n(981631),
-    P = n(921944),
-    I = n(489887),
+    I = n(921944),
+    P = n(489887),
     Z = n(388032),
     T = n(725776);
 function N(e) {
@@ -61,7 +61,7 @@ function w() {
     return (
         i.useEffect(
             () => () => {
-                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: P.L.TAKE_ACTION });
+                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -80,8 +80,8 @@ function w() {
     );
 }
 function R(e) {
-    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: R, editorTextContent: M, setValue: D, openClips: L } = e,
-        { analyticsLocations: k } = (0, p.ZP)(),
+    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: R, editorTextContent: M, setValue: D, openClips: k } = e,
+        { analyticsLocations: L } = (0, p.ZP)(),
         U = (0, g.Dt)({ channel: t }),
         B = (0, E.Z)();
     function F() {
@@ -91,10 +91,10 @@ function R(e) {
         (y.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D('/', (0, j.JM)('/')));
     }
     function G() {
-        L();
+        k();
     }
     function V() {
-        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: P.L.TAKE_ACTION }),
+        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -120,7 +120,7 @@ function R(e) {
                         );
                     };
                 },
-                { modalKey: I.$z }
+                { modalKey: P.$z }
             ));
     }
     function z() {
@@ -132,7 +132,7 @@ function R(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: k
+                analyticsLocations: L
             }),
             (0, u.w1)({ guildId: t.guild_id }));
     }
@@ -239,7 +239,7 @@ function R(e) {
                                             channelId: t.id,
                                             type: S.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }
@@ -260,7 +260,7 @@ function R(e) {
                                             channelId: t.id,
                                             type: S.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }
@@ -281,7 +281,7 @@ function R(e) {
                                             channelId: t.id,
                                             type: S.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: L[L.length - 1]
                                         })
                                     );
                                 }

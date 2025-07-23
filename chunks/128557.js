@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(358085),
     E = n(709054),
     S = n(967128),
-    P = n(981631),
-    I = n(231873),
+    I = n(981631),
+    P = n(231873),
     Z = n(388032),
     T = n(646863);
 function N(e) {
@@ -117,14 +117,14 @@ function w(e) {
 function R(e) {
     let { channel: t } = e,
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
-        p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
+        p = null != l && E.default.extractTimestamp(l.id) < Date.now() - I._8R,
         x = (0, s.e7)([_.default], () => (null == l ? void 0 : l.ownerId) === _.default.getId(), [l]),
         { canInvite: R, canManageGuild: M, canMessage: D } = (0, f.TE)(t, l),
-        L = (0, s.e7)([C.default], () => {
+        k = (0, s.e7)([C.default], () => {
             var e, t;
             return (null == (e = C.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = C.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
+        { guildPopulated: L, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: F,
             handleMessage: H,
@@ -133,9 +133,9 @@ function R(e) {
             handleAddApplication: z
         } = (function (e) {
             let t = i.useCallback(() => {
-                    (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: I.Ft.CHANNEL_WELCOME,
-                        action: I.j7.INVITE
+                    (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: P.Ft.CHANNEL_WELCOME,
+                        action: P.j7.INVITE
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
@@ -145,48 +145,48 @@ function R(e) {
                                         t,
                                         A(N({}, n), {
                                             guild: e,
-                                            source: P.t4x.CHANNEL_WELCOME,
-                                            analyticsLocation: { section: P.jXE.CHANNEL_WELCOME_CTA }
+                                            source: I.t4x.CHANNEL_WELCOME,
+                                            analyticsLocation: { section: I.jXE.CHANNEL_WELCOME_CTA }
                                         })
                                     );
                             }));
                 }, [e]),
                 l = i.useCallback(() => {
-                    (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: I.Ft.CHANNEL_WELCOME,
-                        action: I.j7.SEND_MESSAGE
+                    (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: P.Ft.CHANNEL_WELCOME,
+                        action: P.j7.SEND_MESSAGE
                     }),
-                        v.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
+                        v.S.dispatch(I.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
-                            channelId: P.lds
+                            channelId: I.lds
                         }));
                 }, []),
                 a = i.useCallback(() => {
-                    (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: I.Ft.CHANNEL_WELCOME,
-                        action: I.j7.PERSONALIZE_SERVER
+                    (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: P.Ft.CHANNEL_WELCOME,
+                        action: P.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && m.Z.open(e.id, (0, b.r)(), { section: P.jXE.CHANNEL_WELCOME_CTA }));
+                        null != e && m.Z.open(e.id, (0, b.r)(), { section: I.jXE.CHANNEL_WELCOME_CTA }));
                 }, [e]);
             return {
                 handleInvite: t,
                 handleMessage: l,
                 handlePersonalize: a,
                 handleDownload: i.useCallback(() => {
-                    (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: I.Ft.CHANNEL_WELCOME,
-                        action: I.j7.DOWNLOAD
+                    (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: P.Ft.CHANNEL_WELCOME,
+                        action: P.j7.DOWNLOAD
                     }),
                         (0, u.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
-                            return (t) => (0, r.jsx)(e, N({ source: P.jXE.CHANNEL_WELCOME_CTA }, t));
+                            return (t) => (0, r.jsx)(e, N({ source: I.jXE.CHANNEL_WELCOME_CTA }, t));
                         }));
                 }, []),
                 handleAddApplication: i.useCallback(() => {
                     null != e &&
-                        (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
-                            setup_type: I.Ft.CHANNEL_WELCOME,
-                            action: I.j7.ADD_APP
+                        (h.ZP.trackWithMetadata(I.rMx.SERVER_SETUP_CTA_CLICKED, {
+                            setup_type: P.Ft.CHANNEL_WELCOME,
+                            action: P.j7.ADD_APP
                         }),
                         (0, u.ZDy)(async () => {
                             let { default: t } = await n.e('77046').then(n.bind(n, 272509));
@@ -198,7 +198,7 @@ function R(e) {
                 }, [e])
             };
         })(l),
-        W = !(L || k || U || B),
+        W = !(k || L || U || B),
         { titleAnimatedStyle: Y, opacities: q } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -261,7 +261,7 @@ function R(e) {
             (async () => {
                 try {
                     var e;
-                    let t = await (0, g.i)(null != (e = null == l ? void 0 : l.id) ? e : P.lds);
+                    let t = await (0, g.i)(null != (e = null == l ? void 0 : l.id) ? e : I.lds);
                     X(t.map((e) => e.id));
                 } catch (e) {}
             })();
@@ -281,7 +281,7 @@ function R(e) {
                         children: (0, r.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
-                            completed: k,
+                            completed: L,
                             onClick: F
                         })
                     },
@@ -332,7 +332,7 @@ function R(e) {
                         children: (0, r.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
-                            completed: L,
+                            completed: k,
                             onClick: V
                         })
                     },
@@ -357,7 +357,7 @@ function R(e) {
         ));
     let $ = x ? Z.intl.string(Z.t['1ach9P']) : Z.intl.string(Z.t['ezm+/v']);
     p && ($ = Z.intl.string(Z.t['gwyU/P']));
-    let ee = ''.concat(j.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let ee = ''.concat(j.Z.getArticleURL(I.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, r.jsx)(S.ZP, {
         channelId: t.id,
         children: (0, r.jsx)('div', {

@@ -22,9 +22,9 @@ var r = n(255367),
     j = n(388032);
 function O(e) {
     let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
-        { parentAnalyticsLocation: P } = (0, u.ZP)(),
+        { parentAnalyticsLocation: I } = (0, u.ZP)(),
         {
-            Component: I,
+            Component: P,
             play: Z,
             events: { onMouseEnter: T, onMouseLeave: N }
         } = (0, o.j)(),
@@ -32,8 +32,8 @@ function O(e) {
         { mute: w, suppress: R } = (0, _.Z)(t),
         M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         D = w || R || M,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: D }),
-        [k, U] = (0, h.cv)(L),
+        k = (0, m.sR)({ isSoundboardButtonDisabled: D }),
+        [L, U] = (0, h.cv)(k),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: F, setIsHovered: H, onMouseEnter: G, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
@@ -75,7 +75,7 @@ function O(e) {
                             },
                             t
                         )),
-                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', P) }),
+                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', I) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,7 +94,7 @@ function O(e) {
             });
     }
     function W() {
-        ((0, d.v)(P, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
+        ((0, d.v)(I, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
     }
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
@@ -121,7 +121,7 @@ function O(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  L === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U
@@ -137,7 +137,7 @@ function O(e) {
                 isTrayButton: !0,
                 themeable: O,
                 label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
-                iconComponent: I,
+                iconComponent: P,
                 disabled: D,
                 onContextMenu: z,
                 onClick: W,

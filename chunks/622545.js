@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(388032);
 let i = ['a', 'b', 'c', 'd'],
     l = (e) => e;
@@ -8,7 +8,7 @@ function a(e, t) {
     for (let l = 0; l < r; ++l) n[i[l]] = (n, r) => t(e[l], r);
     return n;
 }
-class s {
+class o {
     asString() {
         return this.transformed(l);
     }
