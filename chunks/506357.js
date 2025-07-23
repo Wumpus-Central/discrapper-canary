@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -16,9 +16,9 @@ var i = n(255367),
     C = n(981631),
     O = n(176505),
     g = n(388032),
-    T = n(302654);
-function S(e) {
-    var t, S;
+    S = n(302654);
+function T(e) {
+    var t, T;
     let { onDismiss: f } = e,
         N = (0, l.e7)([_.Z], () => _.Z.getGuildId()),
         m = (0, l.e7)([u.Z], () => (null != N ? u.Z.getChannelId(N) : null), [N]),
@@ -92,14 +92,14 @@ function S(e) {
             });
         },
         M = (0, i.jsx)(s.Z, {
-            className: T.guildIcon,
+            className: S.guildIcon,
             guild: A,
             size: s.Z.Sizes.MINI
         }),
         L = (0, p.OY)(b, A.name);
-    if (null != (null != (S = b.dmsDisabledUntil) ? S : b.invitesDisabledUntil) && P)
+    if (null != (null != (T = b.dmsDisabledUntil) ? T : b.invitesDisabledUntil) && P)
         return (0, i.jsxs)(o.qXd, {
-            className: T.notice,
+            className: S.notice,
             color: o.DM8.NEUTRAL,
             children: [
                 (0, i.jsx)(o.RyX, {
@@ -109,10 +109,10 @@ function S(e) {
                 M,
                 L,
                 (0, i.jsx)(o.EyT, {
-                    className: T.actionButton,
+                    className: S.actionButton,
                     onClick: () => U(!1),
                     children: (0, i.jsxs)('div', {
-                        className: T.actionButtonInner,
+                        className: S.actionButtonInner,
                         children: [
                             (0, i.jsx)(o.mBM, {
                                 size: 'xs',
@@ -127,7 +127,7 @@ function S(e) {
     let Z = (0, p.CG)(b) ? g.intl.formatToPlainString(g.t.tZTx2N, { guildName: A.name }) : (0, p.kk)(b) ? g.intl.formatToPlainString(g.t['1bSmxs'], { guildName: A.name }) : g.intl.formatToPlainString(g.t.W87xDA, { guildName: A.name }),
         k = D && m === O.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(o.qXd, {
-        className: T.notice,
+        className: S.notice,
         color: o.DM8.WARNING,
         children: [
             (0, i.jsx)(o.RyX, {
@@ -138,10 +138,10 @@ function S(e) {
             Z,
             !k &&
                 (0, i.jsx)(o.EyT, {
-                    className: T.actionButton,
+                    className: S.actionButton,
                     onClick: () => U(!0),
                     children: (0, i.jsx)('div', {
-                        className: T.actionButtonInner,
+                        className: S.actionButtonInner,
                         children: (0, i.jsx)('span', { children: g.intl.string(g.t.zDJDho) })
                     })
                 })

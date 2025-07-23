@@ -21,8 +21,8 @@ var i = n(255367),
     C = n(626135),
     O = n(652515),
     g = n(550951),
-    T = n(544978),
-    S = n(333866),
+    S = n(544978),
+    T = n(333866),
     f = n(629481),
     N = n(981631);
 let m = 12633 == n.j ? r.createContext(void 0) : null;
@@ -41,10 +41,10 @@ function A(e) {
         D = (0, _.mY)(null == R ? void 0 : R.id),
         v = null == (t = (0, u.YB)(o)) ? void 0 : t.server_shop_tab_order,
         U = [],
-        M = T.y.GUILD_SHOP_FULL_PREVIEW;
-    (A || (P && D) ? (U.push(v === S.a3.PRODUCTS_FIRST ? T.y.GUILD_PRODUCTS : T.y.GUILD_ROLE_SUBSCRIPTIONS), U.push(v === S.a3.PRODUCTS_FIRST ? T.y.GUILD_ROLE_SUBSCRIPTIONS : T.y.GUILD_PRODUCTS), (M = U[0])) : P && !D ? (U.push(T.y.GUILD_PRODUCTS), (M = T.y.GUILD_PRODUCTS)) : !P && D && (U.push(T.y.GUILD_ROLE_SUBSCRIPTIONS), (M = T.y.GUILD_ROLE_SUBSCRIPTIONS), y && U.push(T.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : M));
+        M = S.y.GUILD_SHOP_FULL_PREVIEW;
+    (A || (P && D) ? (U.push(v === T.a3.PRODUCTS_FIRST ? S.y.GUILD_PRODUCTS : S.y.GUILD_ROLE_SUBSCRIPTIONS), U.push(v === T.a3.PRODUCTS_FIRST ? S.y.GUILD_ROLE_SUBSCRIPTIONS : S.y.GUILD_PRODUCTS), (M = U[0])) : P && !D ? (U.push(S.y.GUILD_PRODUCTS), (M = S.y.GUILD_PRODUCTS)) : !P && D && (U.push(S.y.GUILD_ROLE_SUBSCRIPTIONS), (M = S.y.GUILD_ROLE_SUBSCRIPTIONS), y && U.push(S.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : M));
     let [L, Z] = r.useState(l),
-        k = (y && !(D && b)) || L === T.y.GUILD_PRODUCTS_PREVIEW;
+        k = (y && !(D && b)) || L === S.y.GUILD_PRODUCTS_PREVIEW;
     return (
         r.useEffect(() => {
             Z(l);
@@ -82,7 +82,7 @@ function A(e) {
                         }
                         return e;
                     })({}, (0, c.hH)(o));
-                    if (L === T.y.GUILD_PRODUCTS_PREVIEW) (e.stopPropagation(), Z(T.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = f.mz.DISMISS_TAB_PREVIEW));
+                    if (L === S.y.GUILD_PRODUCTS_PREVIEW) (e.stopPropagation(), Z(S.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = f.mz.DISMISS_TAB_PREVIEW));
                     else {
                         var n;
                         ((0, E.dL)(N.Z5c.CHANNEL(o, null == (n = I.ZP.getDefaultChannel(o)) ? void 0 : n.id)), (t.action_taken = f.mz.DISMISS_FULL_PREVIEW));

@@ -3,7 +3,6 @@ e.exports = {
     channelName: 'channelName__754bd',
     newWrapper: 'newWrapper__754bd',
     hoverableContainer: 'hoverableContainer__754bd',
-    newGdmIcon: 'newGdmIcon__754bd',
     editing: 'editing__754bd',
     editIcon: 'editIcon__754bd',
     clickableTitle: 'clickableTitle__754bd',

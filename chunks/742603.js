@@ -257,9 +257,8 @@ function W(e) {
                         }),
                         children: [
                             null != S
-                                ? (0, r.jsx)(C.ZP.Icon, {
+                                ? (0, r.jsx)(C.ZP.ChannelIcon, {
                                       icon: S,
-                                      disabled: !0,
                                       'aria-label': N
                                   })
                                 : null,

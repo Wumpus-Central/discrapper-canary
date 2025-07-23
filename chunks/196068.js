@@ -16,8 +16,8 @@ var i = n(255367),
     C = n(626135),
     O = n(74538),
     g = n(243778),
-    T = n(921944),
-    S = n(981631),
+    S = n(921944),
+    T = n(981631),
     f = n(474936),
     N = n(388032),
     m = n(134772);
@@ -67,8 +67,8 @@ let R = (e) => {
                     })({}, b)),
                     (t = t =
                         {
-                            object: S.qAy.BUTTON_CTA,
-                            objectType: S.Qqv.TIER_2
+                            object: T.qAy.BUTTON_CTA,
+                            objectType: T.Qqv.TIER_2
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -86,10 +86,10 @@ let R = (e) => {
             });
         }, [P, b]),
         v = r.useCallback(() => {
-            (c.Z.open(S.oAB.INVENTORY), I.ZP.dismissOutboundPromotionNotice());
+            (c.Z.open(T.oAB.INVENTORY), I.ZP.dismissOutboundPromotionNotice());
         }, []),
         U = r.useCallback(() => {
-            (C.default.track(S.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), y ? D() : v());
+            (C.default.track(T.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), y ? D() : v());
         }, [y, D, v]);
     if (null == n) return null;
     let M = (e) =>
@@ -97,9 +97,9 @@ let R = (e) => {
             color: a.DM8.PREMIUM_TIER_2,
             children: [
                 (0, i.jsx)(a.RyX, {
-                    noticeType: S.kVF.OUTBOUND_PROMOTION,
+                    noticeType: T.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        (I.ZP.dismissOutboundPromotionNotice(), null !== e && e(T.L.USER_DISMISS));
+                        (I.ZP.dismissOutboundPromotionNotice(), null !== e && e(S.L.USER_DISMISS));
                     }
                 }),
                 (0, i.jsx)(a.SrA, {
@@ -117,9 +117,9 @@ let R = (e) => {
                         : N.intl.string(N.t['5JMiOj'])
                     : N.intl.string(N.t['Pzh+Gx']),
                 (0, i.jsx)(a.NoS, {
-                    noticeType: S.kVF.OUTBOUND_PROMOTION,
+                    noticeType: T.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        (U(), null !== e && e(T.L.TAKE_ACTION));
+                        (U(), null !== e && e(S.L.TAKE_ACTION));
                     },
                     children: y ? N.intl.string(N.t.pj0XBA) : N.intl.string(N.t.jVcuVV)
                 })
@@ -129,7 +129,7 @@ let R = (e) => {
         contentType: t,
         newSnowflakeId: n,
         timeRecurringConfig: { cooldownDurationMs: 0 },
-        groupName: T.R.NOTICE_BAR,
+        groupName: S.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;

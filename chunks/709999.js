@@ -26,8 +26,8 @@ var r = i(255367),
     O = i(876917),
     P = i(210887),
     b = i(822857),
-    j = i(960919),
-    y = i(275388),
+    y = i(960919),
+    j = i(275388),
     I = i(626135),
     A = i(74538),
     S = i(335131),
@@ -347,7 +347,7 @@ function ev(e) {
                     tile_position: String(null == O ? void 0 : O.tilePosition),
                     cta_name: 'claim with orbs button'
                 }),
-                    (0, y.q)({
+                    (0, j.q)({
                         skuId: (0, J.S)({
                             product: t,
                             selectedVariantIndex: a
@@ -374,7 +374,7 @@ function ev(e) {
                 variant: 'primary',
                 text: en.intl.format(en.t.kAgx5O, {
                     orbPrice: K[0].amount,
-                    orbIconHook: () => (0, r.jsx)(j.Z, { className: eo.orbIconAligned })
+                    orbIconHook: () => (0, r.jsx)(y.Z, { className: eo.orbIconAligned })
                 }),
                 onClick: (t) => {
                     (t.stopPropagation(), e());
@@ -506,6 +506,7 @@ function ev(e) {
                               : (0, r.jsx)(k.k0, {
                                     newValue: { pageCategory: i === el.AW.HOME || null == O ? void 0 : O.pageCategory },
                                     children: (0, r.jsx)(z.Z, {
+                                        primary: !0,
                                         product: t,
                                         selectedVariantIndex: a,
                                         returnRef: s,
@@ -521,7 +522,7 @@ function ev(e) {
 let ex =
         12633 == i.j
             ? l.memo(function (e) {
-                  let { product: t, user: i, category: a, tab: n, cardRef: c, selectedProduct: g, firstCollectibleItem: _, selectedVariantIndex: E, handleEntering: O, handleLeaving: b, previewingVariantIndex: j, className: y } = e,
+                  let { product: t, user: i, category: a, tab: n, cardRef: c, selectedProduct: g, firstCollectibleItem: _, selectedVariantIndex: E, handleEntering: O, handleLeaving: b, previewingVariantIndex: y, className: j } = e,
                       { analyticsLocations: S } = (0, f.ZP)([C.Z.COLLECTIBLES_SHOP_CARD]),
                       T = (0, k.sp)(),
                       N = (0, v.Z)(c),
@@ -538,7 +539,7 @@ let ex =
                       { hoverVariant: ee } = (0, w.E)('CollectiblesShopTallCard'),
                       { isPurchased: et, isPartiallyOwnedBundle: er } = (0, M.L)(g),
                       { isDisabled: es } = (0, W.G)(g.skuId),
-                      ep = null !== j ? j : E,
+                      ep = null !== y ? y : E,
                       [eg, em] = l.useState(!1);
                   l.useEffect(() => {
                       let { current: e } = c;
@@ -595,7 +596,7 @@ let ex =
                       ? null
                       : (0, r.jsx)(m.tEY, {
                             children: (0, r.jsxs)(m.kL8, {
-                                className: s()(y, Y ? eo.shopCardDark : eo.shopCard, {
+                                className: s()(j, Y ? eo.shopCardDark : eo.shopCard, {
                                     [eo.partiallyOwned]: er && !G,
                                     [eo.shopCardAnimation]: !z && ee !== w.D.NO_MOVEMENT,
                                     [Y ? eo.shopCardDarkHighlighted : eo.shopCardHighlighted]: G
@@ -774,7 +775,7 @@ let ex =
                                                 ? (0, r.jsx)(K.P, {
                                                       variantGroupProduct: t,
                                                       previewingVariantIndexProps: {
-                                                          previewingVariantIndex: j,
+                                                          previewingVariantIndex: y,
                                                           handleEntering: O,
                                                           handleLeaving: b
                                                       },

@@ -19,8 +19,8 @@ var i = n(255367),
     C = n(944486),
     O = n(914010),
     g = n(671533),
-    T = n(259580),
-    S = n(358085),
+    S = n(259580),
+    T = n(358085),
     f = n(962086),
     N = n(160404),
     m = n(889695),
@@ -58,7 +58,7 @@ function M() {
             viewingRoles: l,
             backNavigationSection: o,
             isFullServerPreview: c,
-            isServerShopPreview: S
+            isServerShopPreview: T
         } = (0, s.cj)([N.Z], () => ({
             viewingRoles: null != t ? N.Z.getViewingRoles(t) : null,
             backNavigationSection: N.Z.getBackNavigationSection(t),
@@ -127,10 +127,10 @@ function M() {
                                       buttonRef: e,
                                       children: [
                                           L,
-                                          (0, i.jsx)(T.Z, {
+                                          (0, i.jsx)(S.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: T.Z.Directions.DOWN,
+                                              direction: S.Z.Directions.DOWN,
                                               className: D.selectCaret
                                           })
                                       ]
@@ -146,7 +146,7 @@ function M() {
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          S &&
+                          T &&
                               (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: P.intl.formatToPlainString(P.t.eummvb, {
@@ -169,8 +169,8 @@ function L(e) {
     return (0, s.e7)([N.Z], () => N.Z.isViewingRoles(t))
         ? (0, i.jsx)('div', {
               className: o()(D.settingsWrapper, {
-                  [D.windows]: (0, S.isWindows)(),
-                  [D.osx]: (0, S.isMac)()
+                  [D.windows]: (0, T.isWindows)(),
+                  [D.osx]: (0, T.isMac)()
               }),
               children: (0, i.jsx)(M, {})
           })

@@ -361,6 +361,7 @@ let eN = (e) => {
                         }),
                         n &&
                             (0, r.jsx)(el.Z, {
+                                primary: t,
                                 product: S,
                                 onSuccess: m
                             })

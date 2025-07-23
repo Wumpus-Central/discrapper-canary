@@ -15,10 +15,10 @@ var a = n(481060),
     b = n(200051);
 function p(t) {
     let { user: e, previewText: n, previewEmoji: p, previewStatus: S, placeHolderText: j, transitionState: g, label: O } = t,
-        x = (0, i.ZP)(e.id);
+        v = (0, i.ZP)(e.id);
     return (0, l.jsxs)(c.Z, {
         user: e,
-        displayProfile: x,
+        displayProfile: v,
         themeType: h.lY.POPOUT,
         className: b.profilePreviewContainer,
         children: [
@@ -26,14 +26,14 @@ function p(t) {
                 children: [
                     (0, l.jsx)(u.Z, {
                         user: e,
-                        displayProfile: x,
+                        displayProfile: v,
                         themeType: h.lY.POPOUT
                     }),
                     (0, l.jsx)('div', {
                         inert: !0,
                         children: (0, l.jsx)(o.Z, {
                             user: e,
-                            displayProfile: x,
+                            displayProfile: v,
                             themeType: h.lY.POPOUT,
                             previewStatus: S,
                             className: b.avatar
@@ -51,16 +51,16 @@ function p(t) {
                     })
                 ]
             }),
-            (null == x ? void 0 : x.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: x.profileEffectId }),
+            (null == v ? void 0 : v.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: v.profileEffectId }),
             (0, l.jsx)('div', {
                 className: b.usernameContainer,
                 inert: !0,
                 children: (0, l.jsx)(d.Z, {
                     user: e,
                     nickname: f.ZP.getName(null, null, e),
-                    pronouns: null == x ? void 0 : x.pronouns,
+                    pronouns: null == v ? void 0 : v.pronouns,
                     tags: (0, l.jsx)(s.Z, {
-                        displayProfile: x,
+                        displayProfile: v,
                         themeType: h.lY.POPOUT
                     })
                 })

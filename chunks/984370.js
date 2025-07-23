@@ -154,5 +154,5 @@ function P(e) {
         children: t ? (0, r.jsx)(y, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
     });
 }
-((P.Title = S.ZP.Title), (P.Icon = S.ZP.Icon), (P.Divider = S.ZP.Divider), (P.Caret = S.ZP.Caret));
+((P.Title = S.ZP.Title), (P.Icon = S.ZP.Icon), (P.ChannelIcon = S.ZP.ChannelIcon), (P.Divider = S.ZP.Divider), (P.Caret = S.ZP.Caret));
 let b = P;

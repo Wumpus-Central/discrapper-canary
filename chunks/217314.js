@@ -32,9 +32,9 @@ function m(e) {
                         status: g,
                         isMobile: b,
                         className: f.avatar,
-                        size: l.EFr.SIZE_24,
+                        size: l.EFr.SIZE_20,
                         'aria-label': d.ZP.getName(m),
-                        src: m.getAvatarURL(void 0, 24)
+                        src: m.getAvatarURL(void 0, 20)
                     })
                 }),
             (0, r.jsx)(p.Z.Title, {

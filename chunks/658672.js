@@ -12,6 +12,7 @@ e.exports = {
     titleWrapper: 'titleWrapper__9293f',
     clickable: 'clickable__9293f',
     icon: 'icon__9293f',
+    channelIcon: 'channelIcon__9293f',
     selected: 'selected__9293f',
     iconDisabled: 'iconDisabled__9293f',
     iconBadge: 'iconBadge__9293f',

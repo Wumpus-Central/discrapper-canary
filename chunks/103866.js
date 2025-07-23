@@ -1,4 +1,4 @@
-(n.d(t, { f: () => d }), n(388685));
+(n.d(t, { f: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -6,25 +6,35 @@ var r = n(255367),
     s = n(392711),
     l = n(793030),
     c = n(147479),
-    u = n(946598);
-function d(e) {
-    let { controls: t, children: n } = e;
-    return null == n && null == t
-        ? null
-        : (0, r.jsx)(_, {
-              controls: t,
-              children: n
-          });
-}
+    u = n(993365),
+    d = n(946598);
 function _(e) {
+    return 'string' == typeof e
+        ? (0, r.jsx)(u.x, {
+              variant: 'text-md/normal',
+              color: 'text-secondary',
+              children: e
+          })
+        : e;
+}
+function f(e) {
+    let { controls: t, children: n } = e;
+    if (null == n && null == t) return null;
+    let i = _(n);
+    return (0, r.jsx)(p, {
+        controls: t,
+        children: i
+    });
+}
+function p(e) {
     let { controls: t, children: n } = e,
-        [a, d] = i.useState(!1),
+        [a, u] = i.useState(!1),
         [_, f] = i.useState(!1),
         p = i.useRef(null),
         h = i.useRef(null),
         m = (0, s.throttle)(() => {
             var e;
-            (null == p ? void 0 : p.current) != null && null != t && d((null == (e = p.current) ? void 0 : e.getDistanceFromTop()) > 12);
+            (null == p ? void 0 : p.current) != null && null != t && u((null == (e = p.current) ? void 0 : e.getDistanceFromTop()) > 12);
         }, 200);
     return (
         i.useLayoutEffect(() => {
@@ -41,23 +51,23 @@ function _(e) {
         }, []),
         (0, r.jsxs)(l.y5, {
             children: [
-                (0, r.jsx)('div', { className: o()(u.bodySpacerTop, { [u.bodySpacerTopBorder]: _ && null == t }) }),
+                (0, r.jsx)('div', { className: o()(d.bodySpacerTop, { [d.bodySpacerTopBorder]: _ && null == t }) }),
                 null != t &&
                     (0, r.jsx)('header', {
-                        className: o()(u.bodyControls, { [u.bodyControlsWithFade]: a }),
+                        className: o()(d.bodyControls, { [d.bodyControlsWithFade]: a }),
                         children: t
                     }),
                 (0, r.jsx)(c.yW, {
                     ref: p,
-                    className: u.body,
+                    className: d.body,
                     onScroll: m,
                     children: (0, r.jsx)('main', {
                         ref: h,
-                        className: o()(u.bodyInner, { [u.bodyInnerShouldScroll]: _ }),
+                        className: o()(d.bodyInner, { [d.bodyInnerShouldScroll]: _ }),
                         children: n
                     })
                 }),
-                (0, r.jsx)('div', { className: o()(u.bodySpacerBottom, { [u.bodySpacerBottomBorder]: _ }) })
+                (0, r.jsx)('div', { className: o()(d.bodySpacerBottom, { [d.bodySpacerBottomBorder]: _ }) })
             ]
         })
     );

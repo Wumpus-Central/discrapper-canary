@@ -233,7 +233,7 @@ let E = (e) => {
                   children: [
                       n,
                       (0, r.jsx)(s.Text, {
-                          variant: 'text-md/semibold',
+                          variant: 'text-md/medium',
                           color: 'header-primary',
                           children: null != f ? f : ''
                       }),
@@ -308,14 +308,14 @@ let E = (e) => {
             inlineEditor: !l,
             children: (0, r.jsx)(g.v, {
                 channel: t,
-                className: i ? v.newGdmIcon : n,
+                className: i ? void 0 : n,
                 editable: !l,
                 location: p.Z.HEADER_BAR,
                 children: (0, r.jsx)(m.Z, {
                     'aria-hidden': !0,
                     channel: t,
-                    size: s.EFr.SIZE_24,
-                    facepileSizeOverride: i ? s.EFr.SIZE_24 : s.EFr.SIZE_32,
+                    size: s.EFr.SIZE_20,
+                    facepileSizeOverride: i ? s.EFr.SIZE_20 : s.EFr.SIZE_32,
                     experimentLocation: 'header_bar'
                 })
             })

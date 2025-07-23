@@ -43,9 +43,8 @@ let x = function (e) {
                 toolbar: j,
                 'aria-label': y.intl.string(y.t.BIYAqa),
                 children: [
-                    (0, r.jsx)(h.ZP.Icon, {
+                    (0, r.jsx)(h.ZP.ChannelIcon, {
                         icon: a.kBi,
-                        disabled: !0,
                         'aria-label': y.intl.string(y.t.Kx5kCA)
                     }),
                     (0, r.jsx)(h.ZP.Title, { children: t.name })

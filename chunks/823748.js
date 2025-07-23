@@ -696,7 +696,7 @@ class tc extends i.PureComponent {
                                         showDivider: f && !(0, ex.X)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: a()(ti.title, e),
+                                        className: a()(ti.title, e, { [ti.gdm]: t.type === e8.d4z.GROUP_DM }),
                                         transparent: C,
                                         showToolbar: x,
                                         'aria-label': tr.intl.string(tr.t.BIYAqa),

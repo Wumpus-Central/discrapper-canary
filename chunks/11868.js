@@ -20,8 +20,8 @@ var i = n(255367),
     C = n(411198),
     O = n(15274),
     g = n(924301),
-    T = n(725436),
-    S = n(978227),
+    S = n(725436),
+    T = n(978227),
     f = n(236373),
     N = n(854698),
     m = n(405613),
@@ -76,7 +76,7 @@ let U = (e, t) => (n) => {
             );
         if (null == u) return null;
         let g = null == E ? void 0 : E.IconComponent,
-            S = (0, i.jsxs)(i.Fragment, {
+            T = (0, i.jsxs)(i.Fragment, {
                 children: [
                     null != g &&
                         (0, i.jsx)(g, {
@@ -87,7 +87,7 @@ let U = (e, t) => (n) => {
                     (0, i.jsx)(c.Text, {
                         className: v.channelDescription,
                         variant: 'text-xs/normal',
-                        children: (0, T.m)(null != (t = null == E ? void 0 : E.locationName) ? t : '', !0)
+                        children: (0, S.m)(null != (t = null == E ? void 0 : E.locationName) ? t : '', !0)
                     })
                 ]
             });
@@ -128,9 +128,9 @@ let U = (e, t) => (n) => {
                                 ? (0, i.jsx)(c.P3F, {
                                       className: v.channelLocationLink,
                                       onClick: O,
-                                      children: S
+                                      children: T
                                   })
-                                : S
+                                : T
                         })
                     ]
                 })
@@ -200,7 +200,7 @@ let U = (e, t) => (n) => {
         let { guildScheduledEvent: n, guild: l, channel: s, isMember: a, recurrenceId: d, onAcceptInstantInvite: u, onTransitionToInviteChannel: _ } = e,
             E = null != d ? d : null != n ? (0, N.DK)(n) : null,
             I = (null == n ? void 0 : n.recurrence_rule) == null || null == E || (0, N.Rp)((0, f.KV)(null == n ? void 0 : n.recurrence_rule), E),
-            p = (0, S.Z)(n),
+            p = (0, T.Z)(n),
             C = r.useCallback(() => {
                 a &&
                     null != n &&
@@ -210,7 +210,7 @@ let U = (e, t) => (n) => {
                     });
             }, [a, n, E]);
         if (null == n || !I) return null;
-        let T = (0, g.xt)(n),
+        let S = (0, g.xt)(n),
             y = (0, g.Z2)(n),
             b = n.entity_type === P.WX.EXTERNAL;
         return (0, i.jsx)(h.Z, {
@@ -243,7 +243,7 @@ let U = (e, t) => (n) => {
                                 isMember: a
                             }),
                             (0, i.jsx)(j, {
-                                isActive: T,
+                                isActive: S,
                                 isEnded: y,
                                 isMember: a,
                                 guildId: n.guild_id,

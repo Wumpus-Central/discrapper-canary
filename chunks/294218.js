@@ -16,8 +16,8 @@ var i = n(255367),
     C = n(453687),
     O = n(25015),
     g = n(689674),
-    T = n(438075),
-    S = n(963550),
+    S = n(438075),
+    T = n(963550),
     f = n(845080),
     N = n(295790),
     m = n(145807),
@@ -89,13 +89,13 @@ let D = r.memo(function (e) {
             }
             return r;
         })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
-        G = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        V = r.isFirstMessageInForumPost(L),
+        V = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        G = r.isFirstMessageInForumPost(L),
         B = (0, d.A)((null != (n = r.editedTimestamp) ? n : r.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: W } = (0, O.Z)(r, {
             hideSimpleEmbedContent: M,
-            allowList: V || B,
-            allowHeading: V || B,
+            allowList: G || B,
+            allowHeading: G || B,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
@@ -122,9 +122,9 @@ let D = r.memo(function (e) {
                 compact: l,
                 className: o()(D, {
                     [y.ephemeral]: (0, E.Pv)(r),
-                    [y.disableInteraction]: G
+                    [y.disableInteraction]: V
                 }),
-                disableInteraction: G,
+                disableInteraction: V,
                 childrenRepliedMessage: (0, R.Z)(r, L, z, Y, l),
                 childrenExecutedCommand: (0, m.Z)(r, L, l),
                 childrenHeader: (0, f.Z)(
@@ -134,9 +134,9 @@ let D = r.memo(function (e) {
                         roleIcon: Q
                     })
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, T.Q)(e, W),
-                childrenMessageContent: (0, S.Z)(e, H),
-                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: G })),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, S.Q)(e, W),
+                childrenMessageContent: (0, T.Z)(e, H),
+                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: V })),
                 onContextMenu: v,
                 onClick: U,
                 hasThread: w && null != q && r.hasFlag(A.iLy.HAS_THREAD),

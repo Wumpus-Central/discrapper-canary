@@ -1,36 +1,36 @@
-r.d(t, { Z: () => _ });
+r.d(t, { Z: () => y });
 var n = r(255367),
-    l = r(73800),
-    i = r(979554),
-    o = r(481060),
-    a = r(906732),
+    i = r(73800),
+    l = r(979554),
+    a = r(481060),
+    o = r(906732),
     s = r(333867),
     c = r(626135),
     u = r(381585),
     d = r(884697),
     p = r(228624),
-    f = r(410127),
-    g = r(67409),
-    h = r(981631),
-    b = r(474936),
-    m = r(388032);
-let _ = (e) => {
-    let { product: t, selectedVariantIndex: r, returnRef: _, onSuccess: C, tooltipDelay: O } = e,
-        { analyticsLocations: v } = (0, a.ZP)(),
-        E = l.useRef(null),
-        S = (0, p.hv)('CollectiblesShopGiftButton'),
-        y = (0, u.sp)(),
-        x = (0, f.Z)();
+    v = r(410127),
+    b = r(67409),
+    f = r(981631),
+    m = r(474936),
+    h = r(388032);
+let y = (e) => {
+    let { product: t, primary: r, selectedVariantIndex: y, returnRef: g, onSuccess: O, tooltipDelay: j } = e,
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        x = i.useRef(null),
+        P = (0, p.hv)('CollectiblesShopGiftButton'),
+        w = (0, u.sp)(),
+        C = (0, v.Z)();
     return (0, d.x6)(t)
         ? null
-        : (0, n.jsx)(o.ua7, {
-              text: m.intl.string(m.t['JCFN//']),
-              delay: O,
+        : (0, n.jsx)(a.ua7, {
+              text: h.intl.string(h.t['JCFN//']),
+              delay: j,
               children: (e) => {
-                  var l, a;
+                  var i, o;
                   return (0, n.jsx)(
-                      o.hU,
-                      ((l = (function (e) {
+                      a.hU,
+                      ((i = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
@@ -55,46 +55,46 @@ let _ = (e) => {
                           }
                           return e;
                       })({}, e)),
-                      (a = a =
+                      (o = o =
                           {
-                              'aria-label': m.intl.string(m.t['JCFN//']),
-                              buttonRef: E,
-                              variant: 'primary',
-                              icon: o.OgN,
+                              'aria-label': h.intl.string(h.t['JCFN//']),
+                              buttonRef: x,
+                              variant: r ? 'primary' : 'secondary',
+                              icon: a.OgN,
                               size: 'md',
                               onClick: (e) => {
                                   (e.stopPropagation(),
-                                      c.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == y ? void 0 : y.sessionId,
+                                      c.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: null == w ? void 0 : w.sessionId,
                                           sku_id: t.skuId,
-                                          page_section: null == y ? void 0 : y.pageSection,
-                                          page_category: null == y ? void 0 : y.pageCategory,
-                                          tile_type: i.Z[t.type],
-                                          tile_position: String(null == y ? void 0 : y.tilePosition),
+                                          page_section: null == w ? void 0 : w.pageSection,
+                                          page_category: null == w ? void 0 : w.pageCategory,
+                                          tile_type: l.Z[t.type],
+                                          tile_position: String(null == w ? void 0 : w.tilePosition),
                                           cta_name: 'gift button',
-                                          page_type: x || 'home'
+                                          page_type: C || 'home'
                                       }),
                                       (0, s.Z)({
-                                          skuId: (0, g.S)({
+                                          skuId: (0, b.S)({
                                               product: t,
-                                              selectedVariantIndex: r
+                                              selectedVariantIndex: y
                                           }),
                                           isGift: !0,
-                                          giftingOrigin: b.Wt.SHOP_PAGE,
-                                          analyticsLocations: v,
-                                          returnRef: _,
-                                          variantsReturnStyle: S,
+                                          giftingOrigin: m.Wt.SHOP_PAGE,
+                                          analyticsLocations: _,
+                                          returnRef: g,
+                                          variantsReturnStyle: P,
                                           onClose:
-                                              null != C
+                                              null != O
                                                   ? (e) => {
-                                                        e && C();
+                                                        e && O();
                                                     }
                                                   : void 0
                                       }));
                               }
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                          ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                           : (function (e, t) {
                                 var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -102,10 +102,10 @@ let _ = (e) => {
                                     r.push.apply(r, n);
                                 }
                                 return r;
-                            })(Object(a)).forEach(function (e) {
-                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                            })(Object(o)).forEach(function (e) {
+                                Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                             }),
-                      l)
+                      i)
                   );
               }
           });

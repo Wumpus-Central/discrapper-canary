@@ -17,23 +17,23 @@ var r = n(512722),
     C = n(981631);
 async function O(e) {
     var t, n, r, O, g;
-    let { applicationId: T, skuId: S, initialPlanId: f, analyticsLocations: N, analyticsLocationObject: m } = e,
-        R = p.Z.get(S);
+    let { applicationId: S, skuId: T, initialPlanId: f, analyticsLocations: N, analyticsLocationObject: m } = e,
+        R = p.Z.get(T);
     if (null == R) {
-        let e = (await (0, s.oJ)(T)).find((e) => e.sku.id === S);
-        (l()(null != e, 'Could not find store listing for sku'), e.sku.type === C.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(T, e.id)));
+        let e = (await (0, s.oJ)(S)).find((e) => e.sku.id === T);
+        (l()(null != e, 'Could not find store listing for sku'), e.sku.type === C.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(S, e.id)));
     }
-    ((R = null != R ? R : p.Z.get(S)), l()(null != R && R.applicationId === T, 'SKU must belong to application'), R.type !== C.epS.SUBSCRIPTION || (0, d.a)([R.id]) || (await (0, a.GZ)(R.id)));
+    ((R = null != R ? R : p.Z.get(T)), l()(null != R && R.applicationId === S, 'SKU must belong to application'), R.type !== C.epS.SUBSCRIPTION || (0, d.a)([R.id]) || (await (0, a.GZ)(R.id)));
     let A = (function (e) {
         let t = (0, c.jA)({ applicationId: e }),
             n = null != t ? h.Z.getWindow(t) : void 0;
         return null == n || n.closed ? o.z1l : o.u1M;
-    })(T);
+    })(S);
     if (R.type !== C.epS.SUBSCRIPTION)
         return new Promise((e, t) => {
             (0, _.Z)({
-                applicationId: T,
-                skuId: S,
+                applicationId: S,
+                skuId: T,
                 analyticsLocationObject: m,
                 analyticsLocations: N,
                 contextKey: A,
@@ -46,8 +46,8 @@ async function O(e) {
                 }
             });
         });
-    await ((t = T),
-    (n = S),
+    await ((t = S),
+    (n = T),
     (r = f),
     (O = m),
     (g = N),
