@@ -10,14 +10,14 @@ var r = n(255367),
     u = n(468846),
     p = n(600164),
     m = n(70097),
-    b = n(299379),
-    _ = n(454585),
+    _ = n(299379),
+    b = n(454585),
     g = n(524444),
     h = n(55406),
     f = n(981631),
     y = n(388032),
-    O = n(875231),
-    x = n(321250);
+    x = n(875231),
+    O = n(321250);
 function k(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ function k(e, t, n) {
         e
     );
 }
-let j = _.Z.reactParserFor(h.default.getDefaultRules(O)),
+let j = b.Z.reactParserFor(h.default.getDefaultRules(x)),
     C = {};
 class v extends o.PureComponent {
     track(e, t, n) {
@@ -39,12 +39,12 @@ class v extends o.PureComponent {
     }
     renderFooter() {
         return (0, r.jsxs)('div', {
-            className: O.footer,
+            className: x.footer,
             children: [
                 (0, r.jsx)(c.eee, {
                     'aria-label': y.intl.string(y.t['/84uiI']),
-                    className: O.socialLink,
-                    href: (0, b.Z)(f.RK.TWITTER),
+                    className: x.socialLink,
+                    href: (0, _.Z)(f.RK.TWITTER),
                     target: 'blank',
                     children: (0, r.jsx)(c.TAi, {
                         size: 'xs',
@@ -53,7 +53,7 @@ class v extends o.PureComponent {
                 }),
                 (0, r.jsx)(c.eee, {
                     'aria-label': y.intl.string(y.t['h0or/v']),
-                    className: O.socialLink,
+                    className: x.socialLink,
                     href: f.fK7.FACEBOOK_URL,
                     target: 'blank',
                     children: (0, r.jsx)(c.tdR, {
@@ -63,7 +63,7 @@ class v extends o.PureComponent {
                 }),
                 (0, r.jsx)(c.eee, {
                     'aria-label': y.intl.string(y.t['5uVPyc']),
-                    className: O.socialLink,
+                    className: x.socialLink,
                     href: f.fK7.INSTAGRAM_URL,
                     target: 'blank',
                     children: (0, r.jsx)(c.gST, {
@@ -85,7 +85,7 @@ class v extends o.PureComponent {
             i = e.image;
         if (null != t && '' !== t)
             return (0, r.jsx)(d.BC, {
-                className: O.video,
+                className: x.video,
                 allowFullScreen: !1,
                 href: 'https://youtu.be/'.concat(t),
                 thumbnail: {
@@ -118,7 +118,7 @@ class v extends o.PureComponent {
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                className: O.video,
+                className: x.video,
                 onPlay: () => {
                     this.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 }
@@ -128,7 +128,7 @@ class v extends o.PureComponent {
         {
             let e = i.startsWith('https://') ? i : n(595173)('./'.concat(i));
             return (0, r.jsx)('img', {
-                className: O.image,
+                className: x.image,
                 alt: '',
                 src: e,
                 width: 451,
@@ -140,7 +140,7 @@ class v extends o.PureComponent {
         let { changeLog: e } = this.props;
         return (0, r.jsxs)(c.Y0X, {
             transitionState: c.Dvm.ENTERED,
-            className: x.modal,
+            className: O.modal,
             parentComponent: 'ChangelogStandardTemplate',
             children: [
                 (0, r.jsxs)(c.xBx, {
@@ -155,7 +155,7 @@ class v extends o.PureComponent {
                     ]
                 }),
                 (0, r.jsx)(c.hzk, {
-                    className: a()(x.content, O.container, {}),
+                    className: a()(O.content, x.container, {}),
                     scrollerRef: this.scrollerRef,
                     onScroll: this.handleScroll,
                     children: (0, r.jsxs)('div', {
@@ -211,7 +211,7 @@ class v extends o.PureComponent {
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
-                            className: O.date,
+                            className: x.date,
                             children: y.intl.format(y.t.Fb8xx8, { date: null != e.date && '' !== e.date ? s()(e.date).toDate() : new Date() })
                         })
                     ]

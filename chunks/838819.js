@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => D }), r(388685));
+(r.r(t), r.d(t, { default: () => Z }), r(388685));
 var n = r(255367),
     l = r(73800),
     i = r(120356),
@@ -10,168 +10,140 @@ var n = r(255367),
     d = r(150063),
     p = r(211266),
     f = r(906732),
-    g = r(702486),
-    h = r(977395),
-    b = r(214852),
-    m = r(290026),
-    _ = r(511050),
-    C = r(819640),
-    O = r(594174),
-    v = r(381585),
-    E = r(597688),
-    S = r(780475),
-    y = r(223143),
-    x = r(298228),
-    j = r(309956),
-    T = r(501431),
-    P = r(98535),
-    L = r(426171),
-    k = r(963102),
-    I = r(508498),
-    N = r(849217),
-    A = r(215023),
-    B = r(981631),
-    w = r(420212),
-    R = r(484920);
-let Z = [A.AW.HOME, A.AW.ORBS],
-    F = (e) => {
+    g = r(977395),
+    h = r(214852),
+    b = r(290026),
+    m = r(511050),
+    _ = r(819640),
+    C = r(594174),
+    O = r(381585),
+    v = r(597688),
+    E = r(780475),
+    S = r(223143),
+    y = r(298228),
+    x = r(309956),
+    j = r(501431),
+    T = r(98535),
+    P = r(426171),
+    L = r(963102),
+    k = r(508498),
+    I = r(849217),
+    N = r(215023),
+    A = r(981631),
+    B = r(420212),
+    w = r(484920);
+let R = (e) => {
         let { children: t, shouldAddEventListener: r, onClose: n } = e,
             i = (0, c.f9)();
         return (
             l.useEffect(() => {
                 if (!r || i) return;
                 let e = (e) => {
-                    e.key === w.mR.Escape && n();
+                    e.key === B.mR.Escape && n();
                 };
                 return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
             }, [r, i, n]),
             t
         );
     },
-    D = function (e) {
-        let { isFullScreen: t = !0, tab: r = A.AW.HOME } = e;
-        (0, b.z)(h.f);
+    Z = function (e) {
+        let { isFullScreen: t = !0, tab: r = N.AW.HOME } = e;
+        (0, h.z)(g.f);
         let i = (0, p.Z)((0, a.Z)()),
-            c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-            w = l.useRef(null),
-            { closeIntroToOrbsClaimedCoachmark: D } = (0, _.Z)({ location: 'CollectiblesShop' });
+            c = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
+            { closeIntroToOrbsClaimedCoachmark: B } = (0, m.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                D();
+                B();
             },
-            [i, D]
+            [i, B]
         );
-        let { onClose: M } = (0, I.Db)(),
-            { currentTab: H, hasFilters: W } = (0, T.S)(),
-            V = l.useMemo(() => (r === A.AW.HOME && H && W() ? H : r), [r, H, W]),
-            { categories: U, refreshCategories: z } = (0, y.ZP)(
+        let { onClose: Z } = (0, k.Db)(),
+            { currentTab: F, hasFilters: D } = (0, j.S)(),
+            M = l.useMemo(() => (r === N.AW.HOME && F && D() ? F : r), [r, F, D]),
+            { categories: H, refreshCategories: W } = (0, S.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
                 },
                 {
                     sessionId: i,
-                    tab: V,
+                    tab: M,
                     isFullScreen: t
                 }
             );
-        (0, m.P)();
-        let G = (0, x.O)(U),
-            [q, K] = l.useState(),
-            Y = (0, s.e7)([E.Z], () => {
+        (0, b.P)();
+        let V = (0, y.O)(H),
+            [U, z] = l.useState(),
+            G = (0, s.e7)([v.Z], () => {
                 var e;
-                return null == (e = E.Z.getCategory(q)) ? void 0 : e.name;
+                return null == (e = v.Z.getCategory(U)) ? void 0 : e.name;
             }),
-            [X, J] = l.useState();
-        (0, L.Kp)();
-        let Q = l.useCallback((e, t) => {
-                (J(e), K(t));
+            [q, K] = l.useState();
+        (0, P.Kp)();
+        let Y = l.useCallback((e, t) => {
+                (K(e), z(t));
             }, []),
-            { selectedTab: $, transitionState: ee, transitionToTab: et } = (0, j.B)(w, V, t),
-            { handleScroll: er } = (0, g.z)(w, i, $);
-        ((0, S.q3)(i, $, Y, ee, X),
-            (0, S.EB)($, c),
-            (0, N.Z)(),
+            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(M, t);
+        ((0, E.q3)(i, X, G, J, q),
+            (0, E.EB)(X, c),
+            (0, I.Z)(),
             l.useEffect(() => {
-                t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(A.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
-        let en = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(B.S9g.COLLECTIBLES_SHOP)),
-            el = l.useRef(null),
-            ei = l.useRef(null);
-        (0, u.Tbt)(el);
-        let { setFullScreenOpen: eo, fullScreenOpen: ea } = (0, T.S)();
+        let $ = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(A.S9g.COLLECTIBLES_SHOP)),
+            ee = l.useRef(null),
+            et = l.useRef(null);
+        (0, u.Tbt)(ee);
+        let { setFullScreenOpen: er, fullScreenOpen: en } = (0, j.S)();
         l.useEffect(() => {
-            if (t) return (eo(!0), () => eo(!1));
+            if (t) return (er(!0), () => er(!1));
             if (!t) {
                 var e;
-                null == (e = ei.current) || e.focus();
+                null == (e = et.current) || e.focus();
             }
-        }, [t, eo]);
-        let { analyticsLocations: es } = (0, S.MV)($);
-        return ea && !t
+        }, [t, er]);
+        let { analyticsLocations: el } = (0, E.MV)(X);
+        return en && !t
             ? null
             : (0, n.jsx)(f.Gt, {
-                  value: es,
-                  children: (0, n.jsx)(v.k0, {
+                  value: el,
+                  children: (0, n.jsx)(O.k0, {
                       newValue: {
                           sessionId: i,
-                          pageCategory: Y,
-                          pageSize: A.kN
+                          pageCategory: G,
+                          pageSize: N.kN
                       },
-                      children: (0, n.jsx)(F, {
-                          onClose: M,
-                          shouldAddEventListener: t && !en,
+                      children: (0, n.jsx)(R, {
+                          onClose: Z,
+                          shouldAddEventListener: t && !$,
                           children: (0, n.jsx)('div', {
-                              className: R.shop,
-                              ref: t ? el : ei,
+                              className: w.shop,
+                              ref: t ? ee : et,
                               tabIndex: -1,
                               children: (0, n.jsxs)('div', {
-                                  className: o()(R.shopViewWrapper, {
-                                      [R.visible]: ee === A.f7.VISIBLE,
-                                      [R.in]: ee === A.f7.IN,
-                                      [R.out]: ee === A.f7.OUT
+                                  className: o()(w.shopViewWrapper, {
+                                      [w.visible]: J === N.f7.VISIBLE,
+                                      [w.in]: J === N.f7.IN,
+                                      [w.out]: J === N.f7.OUT
                                   }),
                                   children: [
-                                      (0, n.jsx)(k.I, {
+                                      (0, n.jsx)(L.I, {
                                           isFullScreen: t,
-                                          isLayer: en,
-                                          onClose: M,
-                                          handleTransition: et,
-                                          selectedTab: $
+                                          isLayer: $,
+                                          onClose: Z,
+                                          handleTransition: Q,
+                                          selectedTab: X
                                       }),
-                                      Z.includes($)
-                                          ? (0, n.jsx)(u.Den, {
-                                                className: R.shopScroll,
-                                                ref: w,
-                                                onScroll: er,
-                                                children: (0, n.jsx)(P.Z, {
-                                                    tab: $,
-                                                    isFullScreen: t,
-                                                    scrollerRef: w,
-                                                    refreshCategories: z,
-                                                    transitionToTab: et,
-                                                    transitionState: ee,
-                                                    sortedCategories: G,
-                                                    updateAnalyticsState: Q
-                                                })
-                                            })
-                                          : (0, n.jsx)(P.Z, {
-                                                tab: $,
-                                                isFullScreen: t,
-                                                scrollerRef: w,
-                                                refreshCategories: z,
-                                                transitionToTab: et,
-                                                transitionState: ee,
-                                                sortedCategories: G,
-                                                updateAnalyticsState: Q,
-                                                advancedScroller: (e) =>
-                                                    (0, n.jsx)(u.yWw, {
-                                                        className: R.shopScroll,
-                                                        ref: w,
-                                                        onScroll: er,
-                                                        children: e
-                                                    })
-                                            })
+                                      (0, n.jsx)(T.Z, {
+                                          tab: X,
+                                          isFullScreen: t,
+                                          refreshCategories: W,
+                                          transitionToTab: Q,
+                                          transitionState: J,
+                                          sortedCategories: V,
+                                          updateAnalyticsState: Y
+                                      })
                                   ]
                               })
                           })

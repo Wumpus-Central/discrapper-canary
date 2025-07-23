@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(596401),
     p = n(388032),
     m = n(104313);
-function b(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function b(e, t, n) {
         e
     );
 }
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -50,7 +50,7 @@ class g extends o.PureComponent {
         var e, t;
         return (0, r.jsx)(
             c.Z,
-            ((e = _({}, this.props)),
+            ((e = b({}, this.props)),
             (t = t =
                 {
                     onClose: this.close,
@@ -76,23 +76,23 @@ class g extends o.PureComponent {
         var t;
         (super(...e),
             (t = this),
-            b(this, 'maxScrolledPercentage', 0),
-            b(this, 'mountedAt', 0),
-            b(this, 'close', () => {
+            _(this, 'maxScrolledPercentage', 0),
+            _(this, 'mountedAt', 0),
+            _(this, 'close', () => {
                 (0, i.Mr3)(u.Xd);
             }),
-            b(this, 'handleScroll', (e) => {
+            _(this, 'handleScroll', (e) => {
                 let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
                 this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
             }),
-            b(this, 'track', function (e) {
+            _(this, 'track', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: o } = t.props,
                     { date: i, revision: a } = o,
-                    l = _({ change_log_id: ''.concat(i, ':').concat(a) }, n);
+                    l = b({ change_log_id: ''.concat(i, ':').concat(a) }, n);
                 (r ||
-                    (l = _(
+                    (l = b(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10)

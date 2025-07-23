@@ -15,5 +15,6 @@ e.exports = {
     pageWrapperFilter: 'pageWrapperFilter__1feb0',
     inventoryWrapper: 'inventoryWrapper__1feb0',
     page: 'page__1feb0',
-    pageFilter: 'pageFilter__1feb0'
+    pageFilter: 'pageFilter__1feb0',
+    shopScroll: 'shopScroll__1feb0'
 };

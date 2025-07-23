@@ -3,23 +3,23 @@
     j: () => c
 }),
     t(35282));
-var n = t(255367);
+var r = t(255367);
 t(73800);
-var r = t(120356),
-    i = t.n(r),
+var n = t(120356),
+    i = t.n(n),
     s = t(729594),
     a = t(388032),
     o = t(519222);
-let u = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
-    d = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
+let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
+    u = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
     c = ['PlayStation'],
     h = (e, l) => {
-        let { host: t, pathname: n } = l,
-            r = [];
-        return (null != n && (r = n.split('/')), 'PlayStation' === e)
-            ? null != t && u.includes(t) && 2 === r.length
+        let { host: t, pathname: r } = l,
+            n = [];
+        return (null != r && (n = r.split('/')), 'PlayStation' === e)
+            ? null != t && d.includes(t) && 2 === n.length
                 ? {
-                      embedUrl: d(t, r[1], a.intl.currentLocale),
+                      embedUrl: u(t, n[1], a.intl.currentLocale),
                       style: {
                           width: 400,
                           height: 300,
@@ -32,21 +32,21 @@ let u = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
 function m(e) {
     var l;
     let t = e.embed.url,
-        r = null == (l = e.embed.provider) ? void 0 : l.name;
-    if (null == t || null == r) return null;
+        n = null == (l = e.embed.provider) ? void 0 : l.name;
+    if (null == t || null == n) return null;
     let a = null;
     try {
         a = s.parse(t, !0);
     } catch (e) {
         return null;
     }
-    let u = h(r, a);
-    return null == u
+    let d = h(n, a);
+    return null == d
         ? null
-        : (0, n.jsx)('iframe', {
-              src: u.embedUrl,
+        : (0, r.jsx)('iframe', {
+              src: d.embedUrl,
               className: i()(o.embedIFrame, e.className),
-              style: u.style,
+              style: d.style,
               sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
           });
 }

@@ -49,5 +49,6 @@ e.exports = {
     justifyAuto: 'justifyAuto__623de',
     hiddenAttachment: 'hiddenAttachment__623de',
     spoilerAttachment: 'spoilerAttachment__623de hiddenAttachment__623de',
-    hiddenExplicitAttachment: 'hiddenExplicitAttachment__623de hiddenAttachment__623de'
+    hiddenExplicitAttachment: 'hiddenExplicitAttachment__623de hiddenAttachment__623de',
+    contentPlaceholder: 'contentPlaceholder__623de'
 };

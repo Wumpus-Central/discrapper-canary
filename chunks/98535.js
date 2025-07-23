@@ -1,4 +1,4 @@
-r.d(t, { Z: () => E });
+(r.d(t, { Z: () => v }), r(388685));
 var n = r(255367),
     l = r(73800),
     i = r(180650),
@@ -11,59 +11,56 @@ var n = r(255367),
     p = r(870289),
     f = r(149705),
     g = r(929255),
-    h = r(426171),
-    b = r(752053),
-    m = r(81136),
-    _ = r(566564),
-    C = r(795477),
-    O = r(215023);
-let v = [O.AW.HOME, O.AW.ORBS];
-function E(e) {
-    let { tab: t, isFullScreen: r, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: m, refreshCategories: E, advancedScroller: x } = e,
-        j = S();
-    y(j);
-    let T = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
-        { setCategoryRef: P, handleScrollToCategory: L } = (0, h.xV)(s.current),
-        k = l.useCallback(
+    h = r(752053),
+    b = r(81136),
+    m = r(566564),
+    _ = r(795477),
+    C = r(215023);
+let O = [C.AW.HOME, C.AW.ORBS];
+function v(e) {
+    let { tab: t, isFullScreen: r, sortedCategories: s, transitionToTab: c, transitionState: u, updateAnalyticsState: d, refreshCategories: b } = e,
+        v = E();
+    S(v);
+    let y = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
+        [x, j] = l.useState(void 0),
+        T = l.useCallback(
             async (e, t, n) => {
-                m(e, t);
-                let l = n && !r && !T,
-                    o = t === i.T.ORB ? O.AW.ORBS : O.AW.CATALOG;
-                (await u(o, l), null != t && L(t));
+                d(e, t);
+                let l = n && !r && !y,
+                    o = t === i.T.ORB ? C.AW.ORBS : C.AW.CATALOG;
+                (j(t), await c(o, l));
             },
-            [r, T, u, L, m]
+            [r, y, c, d]
         ),
-        I = (0, p.FF)('CollectiblesContent'),
-        { searchError: N } = (0, f.a)();
-    return I && null != N
-        ? (0, n.jsx)(C.Z, {})
-        : null != j
-          ? (0, n.jsx)(b.Z, {
-                onRetry: E,
-                errorMessage: j,
-                errorOrigin: b.i.SHOP_PAGE
+        P = (0, p.FF)('CollectiblesContent'),
+        { searchError: L } = (0, f.a)();
+    return P && null != L
+        ? (0, n.jsx)(_.Z, {})
+        : null != v
+          ? (0, n.jsx)(h.Z, {
+                onRetry: b,
+                errorMessage: v,
+                errorOrigin: h.i.SHOP_PAGE
             })
-          : v.includes(t)
-            ? (0, n.jsx)(_.Z, {
+          : O.includes(t)
+            ? (0, n.jsx)(m.Z, {
                   isFullScreen: r,
-                  scrollerRef: s,
-                  handleTransition: k,
+                  handleTransition: T,
                   tab: t,
-                  transitionState: d
+                  transitionState: u
               })
             : (0, n.jsx)(g.Z, {
                   isFullScreen: r,
-                  scrollerRef: s,
                   tab: t,
-                  sortedCategories: c,
-                  setCategoryRef: P,
-                  advancedScroller: x
+                  sortedCategories: s,
+                  initialCategoryId: x,
+                  onUnmount: () => j(void 0)
               });
 }
-let S = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
-    y = (e) => {
+let E = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+    S = (e) => {
         let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
-            { noCache: r, includeUnpublished: n } = (0, m.Z)();
+            { noCache: r, includeUnpublished: n } = (0, b.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&

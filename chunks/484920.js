@@ -7,7 +7,6 @@ e.exports = {
     categoryWrapper: 'categoryWrapper__6db1d',
     cardsContainer: 'cardsContainer__6db1d',
     shop: 'shop__6db1d',
-    shopScroll: 'shopScroll__6db1d',
     itemTypeTitle: 'itemTypeTitle__6db1d',
     easterEggAnimation: 'easterEggAnimation__6db1d',
     easterEggAnimationReverse: 'easterEggAnimationReverse__6db1d',

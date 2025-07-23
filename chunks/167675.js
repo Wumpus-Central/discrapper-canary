@@ -1,26 +1,26 @@
 (n.d(t, { Z: () => f }), n(388685));
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    o = n(740492),
-    u = n(27584),
+var i = n(442837),
+    o = n(481060),
+    l = n(740492),
+    c = n(27584),
     a = n(295510),
-    c = n(394059),
-    d = n(65154),
-    s = n(388032);
+    u = n(394059),
+    s = n(65154),
+    d = n(388032);
 function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        [n, f, g] = (0, u.Z)(e, t),
-        _ = (0, l.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT,
+        [n, f, b] = (0, c.Z)(e, t),
+        g = (0, i.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, r.jsx)(i.S89, {
+        ? (0, r.jsx)(o.S89, {
               id: 'self-video-hide',
-              label: s.intl.string(s.t.MH8ESU),
+              label: d.intl.string(d.t.MH8ESU),
               checked: !f,
               action: () => {
-                  if (_ || f) return g(!f);
-                  (0, i.h7j)((e) => {
+                  if (g || f) return b(!f);
+                  (0, o.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
                           a.Z,
@@ -51,8 +51,8 @@ function f(e) {
                           })({}, e)),
                           (n = n =
                               {
-                                  type: c.K.VIDEO,
-                                  onConfirm: () => g(!f)
+                                  type: u.K.VIDEO,
+                                  onConfirm: () => b(!f)
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

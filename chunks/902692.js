@@ -1,5 +1,5 @@
-t.d(l, { P: () => n });
-let n = Object.freeze({
+t.d(l, { P: () => r });
+let r = Object.freeze({
     EMBED: (e, l, t) =>
         'https://embed.music.apple.com/'
             .concat(e, '?theme=')

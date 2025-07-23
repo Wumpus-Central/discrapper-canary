@@ -4851,7 +4851,7 @@ var n9 = (function (e) {
         return ((e[(e.PREMIUM_PURCHASE = 1)] = 'PREMIUM_PURCHASE'), (e[(e.HAS_FREE_PREMIUM_CONTENT = 2)] = 'HAS_FREE_PREMIUM_CONTENT'), (e[(e.AVAILABLE = 4)] = 'AVAILABLE'), (e[(e.PREMIUM_AND_DISTRIBUTION = 8)] = 'PREMIUM_AND_DISTRIBUTION'), (e[(e.STICKER_PACK = 16)] = 'STICKER_PACK'), (e[(e.GUILD_ROLE = 32)] = 'GUILD_ROLE'), (e[(e.AVAILABLE_FOR_SUBSCRIPTION_GIFTING = 64)] = 'AVAILABLE_FOR_SUBSCRIPTION_GIFTING'), (e[(e.APPLICATION_GUILD_SUBSCRIPTION = 128)] = 'APPLICATION_GUILD_SUBSCRIPTION'), (e[(e.APPLICATION_USER_SUBSCRIPTION = 256)] = 'APPLICATION_USER_SUBSCRIPTION'), e);
     })({}),
     rf = (function (e) {
-        return ((e[(e.PREMIUM = 1)] = 'PREMIUM'), (e[(e.BOOST = 2)] = 'BOOST'), (e[(e.ACTIVITY_IAP = 3)] = 'ACTIVITY_IAP'), (e[(e.GUILD_ROLE = 4)] = 'GUILD_ROLE'), (e[(e.GUILD_PRODUCT = 5)] = 'GUILD_PRODUCT'), (e[(e.APPLICATION = 6)] = 'APPLICATION'), (e[(e.COLLECTIBLES = 7)] = 'COLLECTIBLES'), e);
+        return ((e[(e.PREMIUM = 1)] = 'PREMIUM'), (e[(e.BOOST = 2)] = 'BOOST'), (e[(e.GUILD_ROLE = 4)] = 'GUILD_ROLE'), (e[(e.GUILD_PRODUCT = 5)] = 'GUILD_PRODUCT'), (e[(e.APPLICATION = 6)] = 'APPLICATION'), (e[(e.COLLECTIBLES = 7)] = 'COLLECTIBLES'), e);
     })({}),
     r_ = (function (e) {
         return ((e.WIN32 = 'win32'), (e.WIN64 = 'win64'), (e.MACOS = 'macos'), (e.LINUX = 'linux'), e);

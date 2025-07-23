@@ -1,14 +1,13 @@
-let r, i;
-(n.d(t, { Z: () => h }), n(388685));
-var a = n(46973),
-    o = n(846027),
-    s = n(147913),
-    l = n(131951),
-    c = n(358085),
-    u = n(994234),
-    d = n(375538),
-    f = n(981631);
-function _(e, t, n) {
+let r;
+(n.d(t, { Z: () => _ }), n(388685));
+var i = n(46973),
+    a = n(846027),
+    o = n(147913),
+    s = n(131951),
+    l = n(358085),
+    c = n(375538),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,32 +20,26 @@ function _(e, t, n) {
         e
     );
 }
-class p extends s.Z {
+class f extends o.Z {
     constructor(...e) {
         (super(...e),
-            _(this, 'handlePostConnectionOpen', () => {
+            d(this, 'handlePostConnectionOpen', () => {
                 (null == r || r(),
-                    null == i || i(),
-                    (0, c.isWeb)() ||
-                        ((r = u.z.subscribe({ location: 'KrispExperimentManager handlePostConnectionOpen' }, (e) => {
-                            var t, n;
-                            let { forceModel: r, krispSuppressionLevel: i } = e;
-                            (null == (t = o.Z.setKrispModelOverride) || t.call(o.Z, null != r ? r : ''), null == (n = o.Z.setKrispSuppressionLevel) || n.call(o.Z, null != i ? i : 100));
-                        })),
-                        (i = d.g.subscribe({ location: 'KrispExperimentManager handlePostConnectionOpen' }, (e) => {
+                    (0, l.isWeb)() ||
+                        (r = c.g.subscribe({ location: 'KrispExperimentManager handlePostConnectionOpen' }, (e) => {
                             var t;
                             let { enableStats: n } = e;
-                            null == (t = o.Z.setNoiseCancellationEnableStats) || t.call(o.Z, n);
-                        }))));
+                            null == (t = a.Z.setNoiseCancellationEnableStats) || t.call(a.Z, n);
+                        })));
             }),
-            _(this, 'handleRtcConnectionState', (e) => {
+            d(this, 'handleRtcConnectionState', (e) => {
                 let { state: t, context: n } = e;
-                (0, c.isWeb)() || (n === a.Yn.DEFAULT && t !== f.hes.DISCONNECTED && (t === f.hes.RTC_CONNECTED && l.Z.getKrispEnableStats() && l.Z.getNoiseCancellation() && (o.Z.setNoiseCancellation(!1), o.Z.setNoiseCancellation(!0)), u.z.trackExposure({ location: 'KrispExperimentManager' })));
+                !(0, l.isWeb)() && n === i.Yn.DEFAULT && t !== u.hes.DISCONNECTED && t === u.hes.RTC_CONNECTED && s.Z.getKrispEnableStats() && s.Z.getNoiseCancellation() && (a.Z.setNoiseCancellation(!1), a.Z.setNoiseCancellation(!0));
             }),
-            _(this, 'actions', {
+            d(this, 'actions', {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 RTC_CONNECTION_STATE: this.handleRtcConnectionState
             }));
     }
 }
-let h = new p();
+let _ = new f();

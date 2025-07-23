@@ -64,5 +64,6 @@ e.exports = {
     wideBannerTextContainer: 'wideBannerTextContainer__08415',
     wideBannerContentContainer: 'wideBannerContentContainer__08415',
     shelfBlockContainer: 'shelfBlockContainer__08415',
-    heroBannerSheenContainer: 'heroBannerSheenContainer__08415'
+    heroBannerSheenContainer: 'heroBannerSheenContainer__08415',
+    shopScroll: 'shopScroll__08415'
 };

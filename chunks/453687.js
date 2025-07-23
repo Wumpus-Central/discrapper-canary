@@ -1,28 +1,28 @@
 (n.d(t, {
-    Dv: () => c,
-    Gq: () => a,
-    Gx: () => m,
-    XX: () => s,
+    Dv: () => s,
+    Gq: () => c,
+    Gx: () => p,
+    XX: () => l,
     bX: () => d,
     bY: () => u,
-    iG: () => p,
-    ut: () => i
+    iG: () => m,
+    ut: () => r
 }),
     n(781311));
-var r = n(446108),
-    l = n(901461),
+var a = n(446108),
+    i = n(901461),
     o = n(981631);
-function i(e) {
+function r(e) {
     return 'message-content-'.concat(e.id);
 }
-function a(e) {
+function c(e) {
     return 'message-reply-context-'.concat(e.id);
 }
-function s(e, t) {
+function l(e, t) {
     let n = null != t ? t : e.id;
     return 'message-username-'.concat(n);
 }
-function c(e) {
+function s(e) {
     return 'message-timestamp-'.concat(e.id);
 }
 function u(e) {
@@ -31,38 +31,38 @@ function u(e) {
 function d(e) {
     return 'message-accessories-'.concat(e.id);
 }
-function p(e, t, n) {
+function m(e, t, n) {
     let u = e.type === o.uaV.REPLY && null != e.messageReference,
-        p = e.embeds.length > 0,
-        m = e.attachments.length > 0,
-        g = e.stickerItems.length > 0,
+        m = e.embeds.length > 0,
+        p = e.attachments.length > 0,
+        _ = e.stickerItems.length > 0,
         f = e.codedLinks.length > 0,
-        b = e.components.length > 0,
-        h = e.hasFlag(o.iLy.HAS_THREAD),
-        O = p || m || g || f || h || b || e.type === o.uaV.THREAD_CREATED,
-        y = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
-        v = e.type !== o.uaV.DEFAULT || (!y && '' !== e.content),
-        j = (0, l.Z)(e),
-        P = !j && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        x = s(e, t),
-        w = a(e),
-        C = j ? '' : ''.concat(u ? w : x, ' ').concat(r.Z0);
-    if (v) {
-        let t = i(e);
-        C += ' '.concat(t);
+        g = e.components.length > 0,
+        b = e.hasFlag(o.iLy.HAS_THREAD),
+        h = m || p || _ || f || b || g || e.type === o.uaV.THREAD_CREATED,
+        T = m && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
+        y = e.type !== o.uaV.DEFAULT || (!T && '' !== e.content),
+        C = (0, i.Z)(e),
+        x = !C && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        O = l(e, t),
+        E = c(e),
+        v = C ? '' : ''.concat(u ? E : O, ' ').concat(a.Z0);
+    if (y) {
+        let t = r(e);
+        v += ' '.concat(t);
     }
-    if (O) {
+    if (h) {
         let t = d(e);
-        C += ' '.concat(t);
+        v += ' '.concat(t);
     }
-    if (P) {
-        let t = c(e);
-        C += ' '.concat(r.fy, ' ').concat(t);
+    if (x) {
+        let t = s(e);
+        v += ' '.concat(a.fy, ' ').concat(t);
     }
-    return C.trim();
+    return v.trim();
 }
-function m(e) {
+function p(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);
-    return ''.concat(r.Mb, ' ').concat(t);
+    return ''.concat(a.Mb, ' ').concat(t);
 }

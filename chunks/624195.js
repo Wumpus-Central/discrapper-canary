@@ -1,38 +1,38 @@
-(t.d(l, { Z: () => d }), t(413496), t(433524), t(35282));
-var n = t(255367);
+(t.d(l, { Z: () => u }), t(413496), t(433524), t(35282));
+var r = t(255367);
 t(73800);
-var r = t(120356),
-    i = t.n(r),
+var n = t(120356),
+    i = t.n(n),
     s = t(729594),
     a = t(94488);
 let o = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)');
-function u(e) {
+function d(e) {
     let l = null,
         t = null,
-        n = null;
+        r = null;
     try {
-        ((l = (n = s.parse(e, !0)).host), (t = n.pathname));
+        ((l = (r = s.parse(e, !0)).host), (t = r.pathname));
     } catch (e) {
         return null;
     }
-    return null != n && o.test(null != l ? l : '') && null != t ? n : null;
+    return null != r && o.test(null != l ? l : '') && null != t ? r : null;
 }
-function d(e) {
+function u(e) {
     let {
         className: l,
-        embed: { url: t, thumbnail: r }
+        embed: { url: t, thumbnail: n }
     } = e;
-    if (null == t || null == r) return null;
-    let s = u(t);
+    if (null == t || null == n) return null;
+    let s = d(t);
     if (null == s) return null;
     let o = s.query.iframe_url;
-    if (null == o || Array.isArray(o) || null == u(o)) return null;
-    let { width: d, height: c } = r,
-        h = d,
+    if (null == o || Array.isArray(o) || null == d(o)) return null;
+    let { width: u, height: c } = n,
+        h = u,
         m = c;
     return (
-        (d > 500 || c > 400) && (d > c ? ((h = 500), (m = (500 * c) / d)) : ((h = (400 * d) / c), (m = 400))),
-        (0, n.jsx)('iframe', {
+        (u > 500 || c > 400) && (u > c ? ((h = 500), (m = (500 * c) / u)) : ((h = (400 * u) / c), (m = 400))),
+        (0, r.jsx)('iframe', {
             className: i()(a.embedAmazonMusic, l),
             src: o,
             style: {

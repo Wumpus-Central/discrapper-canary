@@ -37,7 +37,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +55,7 @@ function O(e, t) {
         e
     );
 }
-let g = Math.round((p.Jj - 4) / 2);
+let O = Math.round((p.Jj - 4) / 2);
 function I(e) {
     let { visualMediaItems: t, maxWidth: n, footer: i } = e;
     null != i && s()(1 === t.length, 'footer only gets applied to single items');
@@ -172,7 +172,7 @@ function E(e) {
                                 children: (0, r.jsx)(P, {
                                     props: e,
                                     maxWidth: l,
-                                    maxHeight: g
+                                    maxHeight: O
                                 })
                             },
                             e.item.uniqueId
@@ -194,7 +194,7 @@ function b(e) {
                 {
                     props: e,
                     maxWidth: i,
-                    maxHeight: g,
+                    maxHeight: O,
                     displayGridItem: !0
                 },
                 e.item.uniqueId
@@ -230,7 +230,7 @@ let C = (e) => ({
 function P(e) {
     let { props: t, maxWidth: n = p.mT, maxHeight: i = p.Jj, useFullWidth: l = !0, isSingleItem: o = !1, footer: a, displayGridItem: s } = e,
         u = t.item.type,
-        c = O(y({}, t, 'IMAGE' === u && C(t.className), 'VIDEO' === u && v(t.className)), {
+        c = g(y({}, t, 'IMAGE' === u && C(t.className), 'VIDEO' === u && v(t.className)), {
             displayGridItem: s,
             mediaLayoutType: p.hV.MOSAIC,
             maxWidth: n,
@@ -240,7 +240,7 @@ function P(e) {
         });
     return (0, r.jsx)(d.h.Provider, {
         value: t.gifFavoriteButton,
-        children: (0, r.jsx)(h.ZP, O(y({}, c), { footer: a }))
+        children: (0, r.jsx)(h.ZP, g(y({}, c), { footer: a }))
     });
 }
 let T = function (e) {

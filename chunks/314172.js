@@ -1,19 +1,17 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(693789),
-    o = n(235874),
-    s = n(481060),
-    l = n(944613),
-    c = n(607070),
-    u = n(605436),
-    d = n(496675),
-    f = n(475413),
-    _ = n(981631),
-    p = n(388032),
-    h = n(645214);
-function m(e, t, n) {
+    a = n(235874),
+    o = n(481060),
+    s = n(944613),
+    l = n(607070),
+    c = n(605436),
+    u = n(496675),
+    d = n(981631),
+    f = n(388032),
+    _ = n(645214);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +35,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function E(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,68 +52,64 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
-    let { guild: t, guildMember: n, numRoles: m, highestRole: E, onAddRole: y, buttonRef: O } = e,
-        v = (0, i.e7)([c.Z], () => c.Z.roleStyle);
-    if (!(0, i.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
-    let I = (e) => (0, u.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, E, e) && -1 === n.roles.indexOf(e.id);
-    return (0, r.jsx)(o.y, {
-        targetElementRef: O,
+function E(e) {
+    let { guild: t, guildMember: n, numRoles: p, highestRole: m, onAddRole: E, buttonRef: b } = e,
+        y = (0, i.e7)([l.Z], () => l.Z.roleStyle);
+    if (!(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_ROLES, t))) return null;
+    let O = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && u.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
+    return (0, r.jsx)(a.y, {
+        targetElementRef: b,
         position: 'bottom',
         align: 'center',
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(l.Z, {
+            return (0, r.jsx)(s.Z, {
                 guild: t,
-                roleStyle: v,
-                roleFilter: I,
-                onSelect: y,
+                roleStyle: y,
+                roleFilter: O,
+                onSelect: E,
                 onClose: n
             });
         },
         children: (e) =>
-            (0, r.jsx)(s.DY3, {
-                text: p.intl.string(p.t.icyMgY),
+            (0, r.jsx)(o.DY3, {
+                text: f.intl.string(f.t.icyMgY),
                 'aria-label': !1,
-                shouldShow: m > 0,
+                shouldShow: p > 0,
                 children: (0, r.jsxs)(
-                    f.kF,
-                    b(
-                        g(
+                    o.P3F,
+                    g(
+                        h(
                             {
-                                ref: O,
-                                className: h.button,
-                                color: a.zx.Colors.CUSTOM,
-                                themeColor: 'none',
-                                size: a.zx.Sizes.NONE,
-                                grow: !1,
-                                'aria-label': p.intl.string(p.t.icyMgY),
-                                buttonRef: O
+                                innerRef: b,
+                                className: _.button,
+                                role: 'button',
+                                'aria-label': f.intl.string(f.t.icyMgY)
                             },
                             e
                         ),
                         {
                             children: [
-                                (0, r.jsx)(s.qJs, {
+                                (0, r.jsx)(o.qJs, {
                                     size: 'xs',
                                     color: 'currentColor'
                                 }),
-                                0 === m &&
-                                    (0, r.jsx)(s.Text, {
+                                0 === p &&
+                                    (0, r.jsx)(o.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'none',
-                                        children: p.intl.string(p.t.icyMgY)
+                                        children: f.intl.string(f.t.icyMgY)
                                     })
                             ]
                         }

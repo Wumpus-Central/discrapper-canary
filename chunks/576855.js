@@ -1,32 +1,32 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => p });
 var r,
-    i,
-    l = n(255367),
-    o = n(73800),
-    a = n(120356),
-    c = n.n(a),
-    s = n(481060),
-    u = n(388032),
+    o,
+    a = n(255367),
+    i = n(73800),
+    l = n(120356),
+    c = n.n(l),
+    u = n(481060),
+    s = n(388032),
     d = n(108921);
-let _ = {
+let f = {
     BLOCK: d.block,
     INLINE: d.inline
 };
-class E extends (i = o.PureComponent) {
+class _ extends (o = i.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
-        return (0, l.jsxs)('div', {
+        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: o } = this.props;
+        return (0, a.jsxs)('div', {
             className: c()(t, r),
-            style: i,
+            style: o,
             children: [
-                (0, l.jsxs)(s.Text, {
+                (0, a.jsxs)(u.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-feedback-positive',
                     className: d.pro,
-                    children: [u.intl.string(u.t['8tvIiI']), ':']
+                    children: [s.intl.string(s.t['8tvIiI']), ':']
                 }),
-                (0, l.jsx)(s.Text, {
+                (0, a.jsx)(u.Text, {
                     className: c()(d.tip, n),
                     variant: 'text-sm/normal',
                     children: e
@@ -35,12 +35,12 @@ class E extends (i = o.PureComponent) {
         });
     }
 }
-(r = 'Types') in E
-    ? Object.defineProperty(E, r, {
-          value: _,
+(r = 'Types') in _
+    ? Object.defineProperty(_, r, {
+          value: f,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (E[r] = _);
-let O = E;
+    : (_[r] = f);
+let p = _;
