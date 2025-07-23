@@ -55,12 +55,12 @@ var C = Function.prototype,
     x = Object.prototype,
     j = M['__core-js_shared__'],
     R = (a = /[^.]+$/.exec((j && j.keys && j.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + a : '',
-    _ = C.toString,
-    A = x.hasOwnProperty,
+    A = C.toString,
+    _ = x.hasOwnProperty,
     B = x.toString,
     N = RegExp(
         '^' +
-            _.call(A)
+            A.call(_)
                 .replace(/[\\^$.*+?()[\]{}|]/g, '\\$&')
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
             '$'
@@ -195,7 +195,7 @@ function z(e, t) {
             (function (e) {
                 if (null != e) {
                     try {
-                        return _.call(e);
+                        return A.call(e);
                     } catch (e) {}
                     try {
                         return e + '';

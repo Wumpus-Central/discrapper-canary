@@ -2451,6 +2451,7 @@ var tU = (function (e) {
             (e.ORBS_BALANCE_MENU = 'Orbs Balance Menu'),
             (e.ORBS_REWARD_MODAL = 'Orbs Reward Modal'),
             (e.ORBS_SHOP_HERO_BLOCK = 'Orbs Shop Hero Block'),
+            (e.NOTIFICATIONS_INBOX = 'Notifications Inbox'),
             e
         );
     })({}),

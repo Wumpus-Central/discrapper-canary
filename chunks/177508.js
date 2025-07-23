@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => X }), n(704826), n(35282), n(388685), n(361932), n(187205));
+(n.d(t, { Z: () => Q }), n(704826), n(35282), n(388685), n(361932), n(187205));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -26,16 +26,18 @@ var i = n(255367),
     N = n(514361),
     I = n(705262),
     y = n(526156),
-    A = n(706705),
-    P = n(726985),
-    R = n(981631),
-    D = n(231338),
-    Z = n(426617),
-    w = n(177475),
-    k = n(453707),
-    L = n(241539),
-    B = n(715720);
-function M(e) {
+    A = n(799071),
+    P = n(554042),
+    R = n(706705),
+    D = n(726985),
+    Z = n(981631),
+    w = n(231338),
+    k = n(426617),
+    L = n(177475),
+    B = n(453707),
+    M = n(241539),
+    U = n(715720);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -60,7 +62,7 @@ function M(e) {
     }
     return e;
 }
-function U(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,16 +80,16 @@ function U(e, t) {
         e
     );
 }
-function V() {
+function F() {
     return (0, i.jsxs)('div', {
-        className: Z.root,
-        children: [(0, i.jsx)(Q, {}), (0, i.jsx)(ea, {}), (0, i.jsx)(el, {}), (0, i.jsx)(es, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(er, {}), (0, i.jsx)(en, {}), (0, i.jsx)(et, {}), (0, i.jsx)(ef, {}), (0, i.jsx)(G, {}), (0, i.jsx)(eb, {})]
+        className: k.root,
+        children: [(0, i.jsx)(ee, {}), (0, i.jsx)(eo, {}), (0, i.jsx)(ec, {}), (0, i.jsx)(el, {}), (0, i.jsx)(es, {}), (0, i.jsx)(ea, {}), (0, i.jsx)(er, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(ex, {}), (0, i.jsx)(H, {}), (0, i.jsx)(e_, {})]
     });
 }
-function G() {
+function H() {
     let e = Object.keys(S.DM8);
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -111,26 +113,26 @@ function G() {
         ]
     });
 }
-let F = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new', 'pink', 'purple'],
-    H = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
-    z = ['background-gradient-lowest', 'background-gradient-lower', 'background-gradient-low', 'background-gradient-high', 'background-gradient-higher', 'background-gradient-highest'],
-    W = ['', 'background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
-    Y = ['critical', 'warning', 'positive', 'info'],
-    K = ['text-default', 'text-primary', 'text-secondary', 'text-tertiary', 'text-feedback-critical', 'text-feedback-warning', 'text-feedback-positive', 'text-feedback-info', 'premium-nitro-pink-text'];
-function q() {
+let z = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new', 'pink', 'purple'],
+    W = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
+    Y = ['background-gradient-lowest', 'background-gradient-lower', 'background-gradient-low', 'background-gradient-high', 'background-gradient-higher', 'background-gradient-highest'],
+    K = ['', 'background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
+    q = ['critical', 'warning', 'positive', 'info'],
+    X = ['text-default', 'text-primary', 'text-secondary', 'text-tertiary', 'text-feedback-critical', 'text-feedback-warning', 'text-feedback-positive', 'text-feedback-info', 'premium-nitro-pink-text'];
+function J() {
     let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
-                className: Z.heading,
+                className: k.heading,
                 children: 'Background Colors'
             }),
-            H.map((e) =>
+            W.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: Z.palette,
+                        className: k.palette,
                         style: {
                             backgroundColor: 'var(--'.concat(e, ')'),
                             padding: 24
@@ -146,11 +148,11 @@ function q() {
                                     gap: 8,
                                     gridTemplateColumns: 'repeat(3, 1fr)'
                                 },
-                                children: W.map((e) =>
+                                children: K.map((e) =>
                                     (0, i.jsxs)(
                                         'div',
                                         {
-                                            className: Z.color,
+                                            className: k.color,
                                             style: {
                                                 padding: 16,
                                                 background: 'var(--'.concat(e, ')')
@@ -161,8 +163,8 @@ function q() {
                                                     color: 'header-secondary',
                                                     children: e
                                                 }),
-                                                (0, i.jsx)('hr', { className: Z.sectionDivider }),
-                                                K.map((e) =>
+                                                (0, i.jsx)('hr', { className: k.sectionDivider }),
+                                                X.map((e) =>
                                                     (0, i.jsx)(
                                                         S.Text,
                                                         {
@@ -179,19 +181,19 @@ function q() {
                                     )
                                 )
                             }),
-                            (0, i.jsx)('hr', { className: Z.sectionDivider }),
+                            (0, i.jsx)('hr', { className: k.sectionDivider }),
                             (0, i.jsx)('div', {
                                 style: {
                                     display: 'grid',
                                     gap: 8,
                                     gridTemplateColumns: 'repeat(3, 1fr)'
                                 },
-                                children: Y.map((e) => {
+                                children: q.map((e) => {
                                     let t = 'var(--text-feedback-'.concat(e, ')');
                                     return (0, i.jsxs)(
                                         'div',
                                         {
-                                            className: Z.color,
+                                            className: k.color,
                                             style: {
                                                 padding: 16,
                                                 background: 'var(--background-feedback-'.concat(e, ')')
@@ -231,7 +233,7 @@ function q() {
                     children: [
                         (0, i.jsx)(S.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: Z.heading,
+                            className: k.heading,
                             children: 'Gradient Background Colors'
                         }),
                         (0, i.jsx)('div', {
@@ -241,11 +243,11 @@ function q() {
                                 gridTemplateColumns: 'repeat(6, 1fr)',
                                 transform: 'translateZ(0)'
                             },
-                            children: z.map((e) =>
+                            children: Y.map((e) =>
                                 (0, i.jsx)(
                                     'div',
                                     {
-                                        className: Z.palette,
+                                        className: k.palette,
                                         style: {
                                             background: 'var(--'.concat(e, ')'),
                                             height: 400
@@ -263,26 +265,26 @@ function q() {
                 }),
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
-                className: Z.heading,
+                className: k.heading,
                 children: 'Scales'
             }),
-            F.map((e) =>
+            z.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: Z.palette,
+                        className: k.palette,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-lg/semibold',
                                 children: e
                             }),
                             (0, i.jsx)('div', {
-                                className: Z.colors,
+                                className: k.colors,
                                 children: Array.from({ length: 100 }, (t, n) =>
                                     (0, i.jsx)(
                                         'div',
                                         {
-                                            className: Z.color,
+                                            className: k.color,
                                             style: { background: 'var(--'.concat(e.replace('_', '-'), '-').concat(n + 1, ')') },
                                             children: (0, i.jsx)(S.f6W, {
                                                 theme: n < 50 ? 'light' : 'dark',
@@ -306,41 +308,51 @@ function q() {
         ]
     });
 }
-function X() {
+function Q() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(y.Z, {
-                parentSetting: P.s6.DESIGN_SYSTEMS,
-                settingsSection: R.oAB.DESIGN_SYSTEMS,
+                parentSetting: D.s6.DESIGN_SYSTEMS,
+                settingsSection: Z.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: 'Components',
-                        component: () => (0, i.jsx)(V, {}),
-                        setting: P.s6.DESIGN_SYSTEMS_COMPONENTS
+                        component: () => (0, i.jsx)(F, {}),
+                        setting: D.s6.DESIGN_SYSTEMS_COMPONENTS
                     },
                     {
                         title: 'Colors',
-                        component: () => (0, i.jsx)(q, {}),
-                        setting: P.s6.DESIGN_SYSTEMS_COLORS
+                        component: () => (0, i.jsx)(J, {}),
+                        setting: D.s6.DESIGN_SYSTEMS_COLORS
                     },
                     {
                         title: 'Animations',
+                        component: () => (0, i.jsx)(R.Z, {}),
+                        setting: D.s6.ANIMATION_TESTING
+                    },
+                    {
+                        title: 'Text Playground',
+                        component: () => (0, i.jsx)(P.Z, {}),
+                        setting: D.s6.TEXT_PLAYGROUND
+                    },
+                    {
+                        title: 'Text Componnts',
                         component: () => (0, i.jsx)(A.Z, {}),
-                        setting: P.s6.ANIMATION_TESTING
+                        setting: D.s6.TEXT_COMPONENTS
                     }
                 ]
             }),
             (0, i.jsx)('div', {
-                className: Z.themes,
+                className: k.themes,
                 children: (0, i.jsx)(I.ZP, {
                     type: I.yH.SETTINGS,
-                    children: (0, i.jsx)(I.ZP.Basic, { className: Z.themeSelectionGroup })
+                    children: (0, i.jsx)(I.ZP.Basic, { className: k.themeSelectionGroup })
                 })
             })
         ]
     });
 }
-function J(e) {
+function $(e) {
     var { component: t, showLoadingAnimation: n } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -379,21 +391,21 @@ function J(e) {
         ),
         (0, i.jsx)(
             t,
-            U(M({}, s), {
+            G(V({}, s), {
                 loading: n ? a : void 0,
                 onClick: () => l(!a)
             })
         )
     );
 }
-function Q() {
+function ee() {
     let [e, t] = r.useState('md'),
         [n, s] = r.useState('start'),
         [a, o] = r.useState(!0),
         c = ['primary', 'secondary', 'critical-primary', 'critical-secondary', 'active', 'overlay-primary', 'overlay-secondary'],
         p = [...c, 'expressive'].map((t) =>
             (0, i.jsx)(
-                J,
+                $,
                 {
                     component: d.z,
                     variant: t,
@@ -408,7 +420,7 @@ function Q() {
         ),
         h = [...c, 'icon-only'].map((t) =>
             (0, i.jsx)(
-                J,
+                $,
                 {
                     component: m.h,
                     variant: t,
@@ -433,13 +445,13 @@ function Q() {
             )
         );
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Buttons'
             }),
-            (0, i.jsxs)(ee, {
+            (0, i.jsxs)(en, {
                 title: 'Button Options',
                 children: [
                     (0, i.jsx)(S.xJW, {
@@ -538,13 +550,13 @@ function Q() {
                                     (0, i.jsxs)(u.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(J, {
+                                            (0, i.jsx)($, {
                                                 component: d.z,
                                                 variant: 'secondary',
                                                 text: 'Cancel',
                                                 showLoadingAnimation: a
                                             }),
-                                            (0, i.jsx)(J, {
+                                            (0, i.jsx)($, {
                                                 component: d.z,
                                                 variant: 'primary',
                                                 text: 'Submit',
@@ -555,13 +567,13 @@ function Q() {
                                     (0, i.jsxs)(u.h, {
                                         size: e,
                                         children: [
-                                            (0, i.jsx)(J, {
+                                            (0, i.jsx)($, {
                                                 component: d.z,
                                                 variant: 'primary',
                                                 text: 'Submit',
                                                 showLoadingAnimation: a
                                             }),
-                                            (0, i.jsx)(J, {
+                                            (0, i.jsx)($, {
                                                 component: m.h,
                                                 variant: 'secondary',
                                                 icon: S.gw7,
@@ -578,13 +590,13 @@ function Q() {
                                     size: e,
                                     fullWidth: !0,
                                     children: [
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'secondary',
                                             text: 'Cancel',
                                             showLoadingAnimation: a
                                         }),
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'primary',
                                             text: 'Submit',
@@ -609,13 +621,13 @@ function Q() {
                                     direction: 'vertical',
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'secondary',
                                             text: 'Cancel',
                                             showLoadingAnimation: a
                                         }),
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'primary',
                                             text: 'Submit',
@@ -631,13 +643,13 @@ function Q() {
                                     direction: 'vertical',
                                     size: e,
                                     children: [
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'secondary',
                                             text: 'Cancel',
                                             showLoadingAnimation: a
                                         }),
-                                        (0, i.jsx)(J, {
+                                        (0, i.jsx)($, {
                                             component: d.z,
                                             variant: 'primary',
                                             text: 'Submit',
@@ -648,13 +660,13 @@ function Q() {
                             })
                         ]
                     }),
-                    (0, i.jsx)($, { buttonSize: e })
+                    (0, i.jsx)(et, { buttonSize: e })
                 ]
             })
         ]
     });
 }
-function $(e) {
+function et(e) {
     let { buttonSize: t } = e,
         [n, s] = r.useState(!1);
     return (0, i.jsxs)(S.Kqy, {
@@ -671,7 +683,7 @@ function $(e) {
                     (0, i.jsx)(
                         'div',
                         {
-                            className: Z.video,
+                            className: k.video,
                             'data-luminance': e,
                             children: (0, i.jsx)(p.J, {
                                 size: t,
@@ -686,14 +698,14 @@ function $(e) {
         ]
     });
 }
-function ee(e) {
+function en(e) {
     let { children: t, title: n } = e,
         [s, l] = r.useState(!1);
     return (0, i.jsxs)(S.Kqy, {
         direction: 'vertical',
         gap: 0,
         padding: 16,
-        className: Z.floatingControls,
+        className: k.floatingControls,
         children: [
             (0, i.jsxs)(S.Kqy, {
                 direction: 'horizontal',
@@ -715,16 +727,16 @@ function ee(e) {
             }),
             (0, i.jsx)(S.Kqy, {
                 gap: 16,
-                className: a()(Z.floatingControlsContent, { [Z.floatingControlsContentHidden]: !s }),
+                className: a()(k.floatingControlsContent, { [k.floatingControlsContentHidden]: !s }),
                 children: t
             })
         ]
     });
 }
-function et() {
+function ei() {
     let [e, t] = r.useState('1');
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -735,7 +747,7 @@ function et() {
                 look: 'brand',
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: Z.tabBar,
+                className: k.tabBar,
                 children: [
                     (0, i.jsx)(S.njP.Item, {
                         id: '1',
@@ -758,14 +770,14 @@ function et() {
         ]
     });
 }
-function en() {
+function er() {
     let [e, t] = r.useState(1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(5),
         [o, c] = r.useState(!1),
         d = r.useRef(null);
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -880,7 +892,7 @@ function en() {
         ]
     });
 }
-function ei() {
+function es() {
     let [e, t] = r.useState(S.FGA.PRIMARY),
         n = r.useMemo(
             () =>
@@ -894,7 +906,7 @@ function ei() {
             []
         );
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -922,7 +934,7 @@ function ei() {
                         children: (e) =>
                             (0, i.jsx)(
                                 S.zxk,
-                                M(
+                                V(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the top'
@@ -938,7 +950,7 @@ function ei() {
                         children: (e) =>
                             (0, i.jsx)(
                                 S.zxk,
-                                M(
+                                V(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the left'
@@ -954,7 +966,7 @@ function ei() {
                         children: (e) =>
                             (0, i.jsx)(
                                 S.zxk,
-                                M(
+                                V(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the bottom'
@@ -970,7 +982,7 @@ function ei() {
                         children: (e) =>
                             (0, i.jsx)(
                                 S.zxk,
-                                M(
+                                V(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the right'
@@ -985,7 +997,7 @@ function ei() {
         ]
     });
 }
-function er() {
+function ea() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(!1),
@@ -1000,8 +1012,8 @@ function er() {
         [N, I] = r.useState(!1),
         [y, A] = r.useState(!1),
         [P, R] = r.useState(!1),
-        [D, w] = r.useState(!1),
-        [M, U] = r.useState(!1),
+        [D, Z] = r.useState(!1),
+        [w, L] = r.useState(!1),
         [V, G] = r.useState(!1),
         [F, H] = r.useState(!1),
         [z, W] = r.useState(!1),
@@ -1025,10 +1037,10 @@ function er() {
         ed = r.useRef(null),
         eu = r.useRef(null),
         em = r.useCallback(() => {
-            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), T(!1), I(!1), A(!1), R(!1), w(!1), U(!1), G(!1), H(!1), W(!1));
+            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), T(!1), I(!1), A(!1), R(!1), Z(!1), L(!1), G(!1), H(!1), W(!1));
         }, []);
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -1046,7 +1058,7 @@ function er() {
                 body: 'Body',
                 size: 'sm',
                 asset: (0, i.jsx)('img', {
-                    src: L.Z,
+                    src: M.Z,
                     alt: 'Small placeholder'
                 }),
                 badge: 'new',
@@ -1068,7 +1080,7 @@ function er() {
                 title: 'Header',
                 body: 'Body',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
@@ -1107,7 +1119,7 @@ function er() {
                 title: 'Ipsum Dolor',
                 body: 'Lorem ipsum dolor sit amet, consectetur elit. Sed do eiusmod.',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
@@ -1134,7 +1146,7 @@ function er() {
                 title: 'Header',
                 body: 'Body',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
@@ -1162,7 +1174,7 @@ function er() {
                 title: 'No Actions',
                 body: 'This popover has no action buttons, just content to display.',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new'
@@ -1178,7 +1190,7 @@ function er() {
                 title: 'Custom Caret API',
                 body: 'Using CaretConfig with END placement',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
@@ -1200,7 +1212,7 @@ function er() {
                 title: 'Left Side Caret',
                 body: 'Caret positioned on the left side at start',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'early_access',
@@ -1223,7 +1235,7 @@ function er() {
                 title: 'Custom Offset',
                 body: 'Caret positioned 50px from center with custom offset',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'beta',
@@ -1246,7 +1258,7 @@ function er() {
                 title: 'Left Center Positioning',
                 body: 'Popover appears to the right with caret centered on the left side',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 badge: 'new',
@@ -1268,7 +1280,7 @@ function er() {
                 title: 'Purple Gradient',
                 body: 'This popover has a beautiful purple gradient background',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 gradientColor: 'purple',
@@ -1291,7 +1303,7 @@ function er() {
                 title: 'Blue Gradient',
                 body: 'This popover showcases the blue gradient option',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 gradientColor: 'blue',
@@ -1314,7 +1326,7 @@ function er() {
                 title: 'Nitro Pink Gradient',
                 body: 'Experience the premium nitro-pink gradient effect',
                 asset: (0, i.jsx)('img', {
-                    src: k.Z,
+                    src: B.Z,
                     alt: 'Medium placeholder'
                 }),
                 gradientColor: 'nitro-pink',
@@ -1341,7 +1353,7 @@ function er() {
                 title: 'Voice Filters',
                 body: 'Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.',
                 asset: (0, i.jsx)('img', {
-                    src: B.Z,
+                    src: U.Z,
                     alt: 'Voice Filters'
                 }),
                 badge: 'new',
@@ -1373,7 +1385,7 @@ function er() {
             }),
             (0, i.jsx)(v.e, {
                 targetElementRef: eo,
-                shouldShow: M,
+                shouldShow: w,
                 onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
@@ -1384,7 +1396,7 @@ function er() {
                         title: 'Welcome to Quests!',
                         body: 'Journey to Quest Home in Discover to start earning Orbs.',
                         asset: (0, i.jsx)('img', {
-                            src: k.Z,
+                            src: B.Z,
                             alt: 'Medium placeholder'
                         }),
                         badge: 'new',
@@ -1395,7 +1407,7 @@ function er() {
                         title: 'Earn Rewards',
                         body: 'Complete quests to earn Orbs and unlock exclusive rewards.',
                         asset: (0, i.jsx)('img', {
-                            src: B.Z,
+                            src: U.Z,
                             alt: 'Quest Rewards'
                         }),
                         action: { text: 'Next' },
@@ -1405,7 +1417,7 @@ function er() {
                         title: 'Quest Complete!',
                         body: "You're all set to start your quest adventure. Good luck!",
                         asset: (0, i.jsx)('img', {
-                            src: k.Z,
+                            src: B.Z,
                             alt: 'Medium placeholder'
                         }),
                         action: { text: 'Get Started' },
@@ -1430,7 +1442,7 @@ function er() {
                 title: 'Experience Voice Filters',
                 body: 'Enhanced voice quality with our latest filtering technology. Try the expressive button!',
                 asset: (0, i.jsx)('img', {
-                    src: B.Z,
+                    src: U.Z,
                     alt: 'Voice Filters'
                 }),
                 badge: 'new',
@@ -1456,7 +1468,7 @@ function er() {
                         title: 'Discover Features',
                         body: 'Explore amazing new capabilities in Discord.',
                         asset: (0, i.jsx)('img', {
-                            src: k.Z,
+                            src: B.Z,
                             alt: 'Medium placeholder'
                         }),
                         badge: 'new',
@@ -1467,7 +1479,7 @@ function er() {
                         title: 'Unlock Potential',
                         body: 'Learn how to make the most of your Discord experience.',
                         asset: (0, i.jsx)('img', {
-                            src: B.Z,
+                            src: U.Z,
                             alt: 'Features'
                         }),
                         action: { text: 'Almost There' },
@@ -1477,7 +1489,7 @@ function er() {
                         title: 'Ready to Go!',
                         body: "You're all set! Notice the expressive button animation.",
                         asset: (0, i.jsx)('img', {
-                            src: k.Z,
+                            src: B.Z,
                             alt: 'Medium placeholder'
                         }),
                         action: {
@@ -1718,7 +1730,7 @@ function er() {
                                 text: 'Video Media Viewer',
                                 buttonRef: el,
                                 onClick: () => {
-                                    (em(), w(!0));
+                                    (em(), Z(!0));
                                 }
                             })
                         ]
@@ -1744,7 +1756,7 @@ function er() {
                             text: 'Multi-Step',
                             buttonRef: eo,
                             onClick: () => {
-                                (em(), U(!0));
+                                (em(), L(!0));
                             }
                         })
                     })
@@ -1796,14 +1808,14 @@ function er() {
         ]
     });
 }
-function es() {
+function el() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState('auto');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
@@ -1847,7 +1859,7 @@ function es() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
@@ -1862,7 +1874,7 @@ function es() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
@@ -1894,14 +1906,14 @@ function es() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
                         children: 'Slider'
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1917,7 +1929,7 @@ function es() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1933,7 +1945,7 @@ function es() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1949,7 +1961,7 @@ function es() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1965,7 +1977,7 @@ function es() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1979,7 +1991,7 @@ function es() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.slider,
+                        className: k.slider,
                         children: [
                             (0, i.jsx)(S.Text, {
                                 variant: 'text-md/medium',
@@ -1998,14 +2010,14 @@ function es() {
         ]
     });
 }
-function ea() {
+function eo() {
     let [e, t] = r.useState(null),
         [n, s] = r.useState(null),
         [a, l] = r.useState([]),
         [c, d] = r.useState([]),
         [u, m] = r.useState([]);
     return (0, i.jsxs)('div', {
-        className: Z.searchableSelectExamples,
+        className: k.searchableSelectExamples,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -2046,7 +2058,7 @@ function ea() {
                 onChange: (e) => d(e),
                 options: o.G,
                 hidePills: !0,
-                customPillContainerClassName: Z.customPillContainer,
+                customPillContainerClassName: k.customPillContainer,
                 renderCustomPill: (e) =>
                     (0, i.jsx)('div', {
                         style: {
@@ -2063,12 +2075,12 @@ function ea() {
         ]
     });
 }
-function el() {
+function ec() {
     let [e, t] = r.useState(''),
         [n, s] = r.useState(''),
         [a, l] = r.useState('');
     return (0, i.jsxs)('div', {
-        className: Z.section,
+        className: k.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -2132,12 +2144,12 @@ function el() {
         ]
     });
 }
-function eo(e) {
+function ed(e) {
     let { transitionState: t } = e,
         [n, s] = r.useState(!1),
         [a, l] = r.useState(S.CgR.SMALL),
         [o, c] = r.useState(!1),
-        d = n ? Z.modalOutlines : '';
+        d = n ? k.modalOutlines : '';
     return (0, i.jsxs)(S.Y0X, {
         transitionState: t,
         size: a,
@@ -2218,7 +2230,7 @@ function eo(e) {
         ]
     });
 }
-function ec(e) {
+function eu(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState('replace'),
         o = s < 3;
@@ -2303,7 +2315,7 @@ function ec(e) {
                                 text: 'Open Next Modal',
                                 onClick: () => {
                                     let e = s + 1;
-                                    (0, S.h7j)((t) => (0, i.jsx)(ec, U(M({}, t), { modalCount: e })), { stackingBehavior: a });
+                                    (0, S.h7j)((t) => (0, i.jsx)(eu, G(V({}, t), { modalCount: e })), { stackingBehavior: a });
                                 }
                             })
                     ]
@@ -2312,12 +2324,12 @@ function ec(e) {
         ]
     });
 }
-function ed(e) {
+function em(e) {
     let { transitionState: t, onClose: n } = e;
     function r(e) {
         let { children: t } = e;
         return (0, i.jsx)('div', {
-            className: Z.modalOutlines,
+            className: k.modalOutlines,
             style: { padding: '24px' },
             children: t
         });
@@ -2327,7 +2339,7 @@ function ed(e) {
         onClose: n,
         children: [
             (0, i.jsx)('div', {
-                className: Z.modalOutlines,
+                className: k.modalOutlines,
                 children: (0, i.jsx)(O.x, {
                     title: 'Demo Modal',
                     subtitle: 'The ModalHeader can have leading and trailing items on either side of the text',
@@ -2336,18 +2348,18 @@ function ed(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: Z.modalOutlines,
+                className: k.modalOutlines,
                 children: (0, i.jsx)(j.f, {
                     controls: (0, i.jsx)(r, { children: 'This ModalBody renders any controls here' }),
                     children: (0, i.jsx)(r, { children: 'This is the main ModalBody. This area scrolls if there is enough content' })
                 })
             }),
             (0, i.jsx)('div', {
-                className: Z.modalOutlines,
+                className: k.modalOutlines,
                 children: (0, i.jsx)(E.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
             }),
             (0, i.jsx)('div', {
-                className: Z.modalOutlines,
+                className: k.modalOutlines,
                 children: (0, i.jsx)(_.G, {
                     leading: (0, i.jsx)(r, { children: 'ModalActionBar leading' }),
                     actions: [
@@ -2367,7 +2379,7 @@ function ed(e) {
         ]
     });
 }
-function eu(e) {
+function ep(e) {
     let { transitionState: t, onClose: n } = e,
         [s, a] = r.useState('md'),
         [l, o] = r.useState('Demo Modal'),
@@ -2527,7 +2539,7 @@ function eu(e) {
         ]
     });
 }
-function em(e) {
+function eg(e) {
     let { transitionState: t, onClose: n } = e;
     function s(e) {
         let { text: t } = e,
@@ -2585,7 +2597,7 @@ function em(e) {
         children: [(0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' })]
     });
 }
-function ep(e) {
+function eh(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, i.jsx)(x.Modal, {
         transitionState: t,
@@ -2606,13 +2618,13 @@ function ep(e) {
         ]
     });
 }
-function eg(e) {
+function ef(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(!1);
     return (0, i.jsx)(b.I, {
         transitionState: t,
         onClose: s,
-        graphic: a ? { lottie: () => n.e('94792').then(n.t.bind(n, 972951, 19)) } : { src: w },
+        graphic: a ? { lottie: () => n.e('94792').then(n.t.bind(n, 972951, 19)) } : { src: L },
         title: 'Expressive Modal',
         subtitle: 'This is an expressive modal with a header image',
         actions: [
@@ -2637,7 +2649,7 @@ function eg(e) {
         })
     });
 }
-function eh(e) {
+function eb(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState('replace'),
         o = s < 3;
@@ -2660,7 +2672,7 @@ function eh(e) {
                           text: 'Open Next Modal',
                           onClick: () => {
                               let e = s + 1;
-                              (0, S.h7j)((t) => (0, i.jsx)(eh, U(M({}, t), { modalCount: e })), { stackingBehavior: a });
+                              (0, S.h7j)((t) => (0, i.jsx)(eb, G(V({}, t), { modalCount: e })), { stackingBehavior: a });
                           }
                       }
                   ]
@@ -2715,11 +2727,11 @@ function eh(e) {
         })
     });
 }
-function ef() {
+function ex() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
@@ -2729,7 +2741,7 @@ function ef() {
                         variant: 'primary',
                         text: 'Open modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eo, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(ed, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
@@ -2748,13 +2760,13 @@ function ef() {
                         variant: 'primary',
                         text: 'Open modal stacking demo',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(ec, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eu, V({}, e)));
                         }
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: Z.section,
+                className: k.section,
                 children: [
                     (0, i.jsx)(S.X6q, {
                         variant: 'heading-xl/semibold',
@@ -2764,42 +2776,42 @@ function ef() {
                         variant: 'primary',
                         text: 'Open modal section visualizer',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(ed, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(em, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open demo modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eu, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(ep, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open sample invite modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(em, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eg, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open sample alert modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(ep, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eh, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open expressive modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eg, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(ef, V({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open Mana modal stacking demo',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eh, M({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eb, V({}, e)));
                         }
                     })
                 ]
@@ -2807,14 +2819,14 @@ function ef() {
         ]
     });
 }
-function eb() {
+function e_() {
     let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
     return (0, i.jsx)(S.f6W, {
-        theme: D.BR.DARKER,
+        theme: w.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)('div', {
-                className: a()(t, Z.section),
+                className: a()(t, k.section),
                 children: [
                     (0, i.jsx)(S.zxk, {
                         variant: 'secondary',
@@ -2822,10 +2834,10 @@ function eb() {
                         fullWidth: !0
                     }),
                     (0, i.jsx)(S.f6W, {
-                        theme: D.BR.LIGHT,
+                        theme: w.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)('div', {
-                                className: a()(t, Z.section),
+                                className: a()(t, k.section),
                                 children: [
                                     (0, i.jsx)(S.zxk, {
                                         variant: 'secondary',
@@ -2833,10 +2845,10 @@ function eb() {
                                         fullWidth: !0
                                     }),
                                     (0, i.jsx)(S.f6W, {
-                                        theme: D.BR.DARKER,
+                                        theme: w.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)('div', {
-                                                className: a()(e, Z.section),
+                                                className: a()(e, k.section),
                                                 children: (0, i.jsx)(S.zxk, {
                                                     variant: 'secondary',
                                                     text: 'Button',
@@ -2848,7 +2860,7 @@ function eb() {
                                         gradient: e,
                                         children: (e) =>
                                             (0, i.jsx)('div', {
-                                                className: a()(e, Z.section),
+                                                className: a()(e, k.section),
                                                 children: (0, i.jsx)(S.zxk, {
                                                     variant: 'secondary',
                                                     text: 'Button',

@@ -1,9 +1,10 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(433517),
-    o = n(570140);
-function s(e, t, n) {
+    o = n(570140),
+    s = n(622822);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,20 +17,20 @@ function s(e, t, n) {
         e
     );
 }
-let l = 'GuildNSFWAgreeStore',
-    c = {};
-function u(e) {
+let c = 'GuildNSFWAgreeStore',
+    u = {};
+function d(e) {
     let { guildId: t } = e;
-    ((c[t] = !0), a.K.set(l, c));
+    ((u[t] = !0), a.K.set(c, u));
 }
-class d extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
         var e;
-        c = null != (e = a.K.get(l)) ? e : c;
+        u = null != (e = a.K.get(c)) ? e : u;
     }
     didAgree(e) {
-        return null != e && (c[e] || !1);
+        return !(null == e || (0, s.dl)()) && (u[e] || !1);
     }
 }
-s(d, 'displayName', 'GuildNSFWAgreeStore');
-let f = new d(o.Z, { GUILD_NSFW_AGREE: u });
+l(f, 'displayName', 'GuildNSFWAgreeStore');
+let _ = new f(o.Z, { GUILD_NSFW_AGREE: d });

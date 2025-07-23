@@ -400,7 +400,10 @@ function ee(e) {
                     (0, F.JC)(n) && ((n.id = 'cue-'.concat(t)), (n.onenter = () => tU(n)), (n.onexit = () => tQ(n)));
                 }
         }, [e0, to]),
-        tY = e3 ? (eu ? 'anonymous' : void 0) : 'anonymous',
+        tY = (function (e, t) {
+            let { enabled: n, forceNoCrossOrigin: r } = e;
+            if (!n || (!r && t)) return 'anonymous';
+        })(e3, eu),
         tz = 'anonymous' === tY;
     l.useEffect(() => {
         if (null == e1.current || !tz) return;

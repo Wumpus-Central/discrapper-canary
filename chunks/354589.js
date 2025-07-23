@@ -1,152 +1,152 @@
-r.d(n, { default: () => W });
-var t = r(255367);
-r(73800);
-var i = r(442837),
-    s = r(481060),
-    o = r(239091),
-    l = r(883385),
-    a = r(108843),
-    d = r(911969),
-    c = r(947440),
-    u = r(100527),
-    m = r(441061),
-    h = r(167675),
-    b = r(737013),
-    g = r(607783),
-    p = r(299206),
-    f = r(819403),
-    Z = r(163612),
-    j = r(592125),
-    x = r(944486),
-    v = r(777658),
-    _ = r(858488),
-    O = r(44652),
-    I = r(185457),
-    w = r(570870),
-    y = r(389052),
-    C = r(24311),
-    k = r(915193),
-    P = r(332576),
-    E = r(158508),
-    M = r(710631),
-    N = r(297047),
-    S = r(88966),
-    T = r(47091),
-    U = r(397616),
-    D = r(558924),
-    Q = r(991307),
-    R = r(37258),
-    A = r(700994),
-    z = r(332031),
-    G = r(981631),
-    L = r(388032);
-let W = (0, a.Z)(
-    (0, l.Z)(
+t.d(n, { default: () => B });
+var r = t(255367);
+t(73800);
+var i = t(442837),
+    l = t(481060),
+    o = t(239091),
+    a = t(883385),
+    c = t(108843),
+    s = t(911969),
+    u = t(947440),
+    d = t(100527),
+    f = t(441061),
+    h = t(167675),
+    p = t(737013),
+    g = t(607783),
+    b = t(299206),
+    m = t(819403),
+    v = t(163612),
+    y = t(592125),
+    _ = t(944486),
+    O = t(777658),
+    E = t(858488),
+    Z = t(44652),
+    j = t(185457),
+    T = t(570870),
+    S = t(389052),
+    x = t(24311),
+    A = t(915193),
+    I = t(332576),
+    P = t(158508),
+    C = t(710631),
+    w = t(297047),
+    N = t(88966),
+    M = t(47091),
+    D = t(397616),
+    U = t(558924),
+    k = t(991307),
+    R = t(37258),
+    L = t(700994),
+    V = t(332031),
+    G = t(981631),
+    W = t(388032);
+let B = (0, c.Z)(
+    (0, a.Z)(
         function (e) {
             var n;
-            let { user: r, channel: l, context: a, showChatItems: u = !0, showMediaItems: G = !1, showChannelCallItems: W = !1, showModalItems: q = !0, onSelect: B, onHeightUpdate: F, onInteraction: J } = e,
-                X = (0, R.Z)({
-                    userId: r.id,
+            let { user: t, channel: a, context: c, showChatItems: d = !0, showMediaItems: G = !1, showChannelCallItems: B = !1, showModalItems: K = !0, onSelect: H, onHeightUpdate: Q, onInteraction: q } = e,
+                Y = (0, R.Z)({
+                    userId: t.id,
                     guildId: null
                 }),
-                Y = (0, N.Z)(r, null, a),
-                H = (0, i.e7)([x.Z, j.Z], () => {
-                    let e = x.Z.getVoiceChannelId();
-                    return j.Z.getChannel(e);
+                F = (0, w.Z)(t, null, c),
+                z = (0, i.e7)([_.Z, y.Z], () => {
+                    let e = _.Z.getVoiceChannelId();
+                    return y.Z.getChannel(e);
                 }),
-                { enabled: K } = Z.Z.useExperiment({
-                    guildId: null == H ? void 0 : H.guild_id,
+                { enabled: X } = v.Z.useExperiment({
+                    guildId: null == z ? void 0 : z.guild_id,
                     location: 'GroupDMUserContextMenu'
                 }),
-                V = K ? (null == H ? void 0 : H.id) : l.id,
-                $ = (0, D.Z)(r, V),
-                ee = (0, S.Z)(r.id, a),
-                en = (0, C.Z)({
-                    user: r,
-                    context: a
+                J = X ? (null == z ? void 0 : z.id) : a.id,
+                $ = (0, U.Z)(t, J),
+                ee = (0, N.Z)(t.id, c),
+                en = (0, x.Z)({
+                    user: t,
+                    context: c
                 }),
-                er = (0, I.Z)({
-                    user: r,
-                    channelId: l.id,
-                    context: a
+                et = (0, j.Z)({
+                    user: t,
+                    channelId: a.id,
+                    context: c
                 }),
-                et = (0, _.Z)({ user: r }),
-                ei = (0, A.Z)(r.id),
-                es = (0, U.Z)(r.id, l.id),
-                eo = (0, Q.Z)(r.id),
-                el = (0, g.B)({
-                    userId: r.id,
-                    channelId: l.id,
-                    guildId: l.getGuildId()
+                er = (0, E.Z)({ user: t }),
+                ei = (0, L.Z)(t.id),
+                el = (0, D.Z)(t.id, a.id),
+                eo = (0, k.Z)(t.id),
+                ea = (0, g.B)({
+                    userId: t.id,
+                    channelId: a.id,
+                    guildId: a.getGuildId()
                 }),
-                ea = (0, P.Z)(r.id, l.id),
-                ed = (0, M.Z)({ user: r }),
-                ec = (0, c.Z)(null, r),
-                eu = (0, v.Z)({ user: r }),
-                em = (0, O.Z)({ user: r }),
-                eh = (0, T.Z)({ user: r }),
-                eb = (0, y.Z)({
-                    user: r,
+                ec = (0, I.Z)(t.id, a.id),
+                es = (0, C.Z)({ user: t }),
+                eu = (0, u.Z)(null, t),
+                ed = (0, O.Z)({ user: t }),
+                ef = (0, Z.Z)({ user: t }),
+                eh = (0, M.Z)({ user: t }),
+                ep = (0, S.Z)({
+                    user: t,
                     location: 'GroupDMUserContextMenu'
                 }),
-                eg = (0, E.Z)({
-                    user: r,
+                eg = (0, P.Z)({
+                    user: t,
                     location: 'GroupDMUserContextMenu'
                 }),
-                ep = (0, p.Z)({
-                    id: r.id,
-                    label: L.intl.string(L.t['/AXYnJ'])
+                eb = (0, b.Z)({
+                    id: t.id,
+                    label: W.intl.string(W.t['/AXYnJ'])
                 }),
-                ef = (0, z.Z)(r.id),
-                eZ = (0, h.Z)(r.id),
-                ej = (0, m.Z)(l.id),
-                ex = (0, f.Z)(r),
-                ev = (0, b.Z)(r.id),
-                e_ = (0, w.Z)({
-                    commandType: d.yU.USER,
-                    commandTargetId: r.id,
-                    channel: l,
+                em = (0, V.Z)(t.id),
+                ev = (0, h.Z)(t.id),
+                ey = (0, f.Z)(a.id),
+                e_ = (0, m.Z)(t),
+                eO = (0, p.Z)(t.id),
+                eE = (0, T.Z)({
+                    commandType: s.yU.USER,
+                    commandTargetId: t.id,
+                    channel: a,
                     guildId: void 0,
-                    onHeightUpdate: F
+                    onHeightUpdate: Q
                 }),
-                eO = (0, k.Z)(r, l),
-                eI = r.isNonUserBot(),
-                ew = l.isManaged(),
-                ey = null == (n = l.recipients) ? void 0 : n.includes(r.id);
-            return (0, t.jsxs)(s.v2r, {
+                eZ = (0, A.Z)(t, a),
+                ej = t.isNonUserBot(),
+                eT = a.isManaged(),
+                eS = null == (n = a.recipients) ? void 0 : n.includes(t.id);
+            return (0, r.jsxs)(l.v2r, {
                 navId: 'user-context',
                 onClose: o.Zy,
-                'aria-label': L.intl.string(L.t.liqwPD),
-                onSelect: B,
-                onInteraction: J,
+                'aria-label': W.intl.string(W.t.liqwPD),
+                onSelect: H,
+                onInteraction: q,
                 children: [
-                    !eI &&
-                        (0, t.jsxs)(t.Fragment, {
+                    !ej &&
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, t.jsx)(s.kSQ, { children: ex }),
-                                (0, t.jsxs)(s.kSQ, {
-                                    children: [q && X, u && Y, ee, en, !ew && $, q && er, q && et, ef]
+                                (0, r.jsx)(l.kSQ, { children: e_ }),
+                                (0, r.jsxs)(l.kSQ, {
+                                    children: [K && Y, d && F, ee, en, !eT && $, K && et, K && er, em]
                                 }),
-                                G && (0, t.jsx)(s.kSQ, { children: ei }),
-                                ey &&
-                                    (0, t.jsxs)(s.kSQ, {
-                                        children: [!ew && es, eO]
+                                G && (0, r.jsx)(l.kSQ, { children: ei }),
+                                eS &&
+                                    (0, r.jsxs)(l.kSQ, {
+                                        children: [!eT && el, eZ]
                                     }),
-                                (0, t.jsx)(s.kSQ, { children: q && ec }),
-                                (0, t.jsxs)(s.kSQ, {
-                                    children: [G && eo, G && el, G && ea, e_, q && ed, eu, em, eh, q && eg, q && eb, G && ev]
+                                (0, r.jsx)(l.kSQ, { children: K && eu }),
+                                (0, r.jsxs)(l.kSQ, {
+                                    children: [G && eo, G && ea, G && ec, eE, K && es, ed, ef, eh, K && eg, K && ep, G && eO]
                                 }),
-                                W &&
-                                    (0, t.jsxs)(s.kSQ, {
-                                        children: [ej, eZ]
+                                B &&
+                                    (0, r.jsxs)(l.kSQ, {
+                                        children: [ey, ev]
                                     })
                             ]
                         }),
-                    (0, t.jsx)(s.kSQ, { children: ep })
+                    (0, r.jsx)(l.kSQ, { children: eb })
                 ]
             });
         },
         { object: G.qAy.CONTEXT_MENU }
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_USER_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.GROUP_DM_USER_MENU]
 );

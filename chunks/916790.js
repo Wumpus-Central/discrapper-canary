@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => Z }), a(35282), a(388685), a(49124), a(781311));
+(a.d(t, { Z: () => Z }), a(35282), a(388685), a(49124), a(975844), a(781311));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -213,6 +213,14 @@ let R = [
                 let { actionLog: t } = e;
                 return ''.concat(E(t.totalTime), ' ms');
             }
+        },
+        {
+            key: 'timestamp',
+            cellClassName: O.totalTimeColumn,
+            render(e) {
+                let { actionLog: t } = e;
+                return c()(t.createdAt).format('HH:mm:ss.SSS');
+            }
         }
     ],
     k = {
@@ -248,10 +256,12 @@ function Z() {
         })(m.Z.actionLogger),
         o = r.useMemo(
             () =>
-                l.map((e) => ({
-                    key: e.id.toString(),
-                    actionLog: e
-                })),
+                l
+                    .map((e) => ({
+                        key: e.id.toString(),
+                        actionLog: e
+                    }))
+                    .toReversed(),
             [l]
         ),
         [c, d] = r.useState(o),
