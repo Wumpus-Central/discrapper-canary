@@ -1,6 +1,6 @@
 (n.d(t, {
-    GN: () => y,
-    be: () => x,
+    GN: () => x,
+    be: () => y,
     g4: () => b,
     m7: () => _,
     r4: () => v,
@@ -23,9 +23,9 @@ var r = n(991637),
     p = n(144507),
     m = n(853439),
     f = n(981631),
-    g = n(176505);
+    h = n(176505);
 i().shim();
-let h = {};
+let g = {};
 function _(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.getChannel(e)),
         n = (0, l.e7)([m.Z], () => m.Z.getChannel(e));
@@ -75,20 +75,20 @@ function E(e) {
     }
     return i;
 }
-function x(e) {
+function y(e) {
     let t = E(e);
-    ((h[e] = t),
+    ((g[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', g.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', h.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
         }));
 }
-function y(e) {
+function x(e) {
     var t;
-    (null != (t = h[e]) ? t : E(e)).forEach((e) => {
+    (null != (t = g[e]) ? t : E(e)).forEach((e) => {
         a.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e

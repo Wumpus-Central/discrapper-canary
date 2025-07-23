@@ -12,7 +12,7 @@ var r = n(255367),
     c = n(110924),
     u = n(819640),
     d = n(513755);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -74,8 +74,8 @@ let m = (e, t) => (void 0 !== t && t > e ? t : e),
 function E(e) {
     let { onGetElementDimensionsAndBoundingRect: t, targetElementRef: n, shouldPollPositionOnMount: r, positionControlRef: a, debounceTime: o } = e,
         { hasLayers: d } = (0, l.cj)([u.Z], () => ({ hasLayers: u.Z.hasLayers() })),
-        f = i.useRef(null),
-        _ = i.useCallback(() => {
+        _ = i.useRef(null),
+        f = i.useCallback(() => {
             let e = n.current;
             if (null === e)
                 return {
@@ -85,9 +85,9 @@ function E(e) {
                     hasElementPositionChanged: !1
                 };
             let t = e.getBoundingClientRect(),
-                r = !(0, s.isEqual)(g(t), g(f.current));
+                r = !(0, s.isEqual)(g(t), g(_.current));
             return (
-                (f.current = t),
+                (_.current = t),
                 {
                     height: e.offsetHeight,
                     width: e.offsetWidth,
@@ -96,7 +96,7 @@ function E(e) {
                 }
             );
         }, [n]),
-        p = i.useCallback(() => t(_()), [t, _]),
+        p = i.useCallback(() => t(f()), [t, f]),
         h = i.useMemo(
             () =>
                 (0, s.debounce)(() => {
@@ -137,12 +137,12 @@ function E(e) {
         i.useEffect(() => {
             void 0 !== a &&
                 (a.current = {
-                    getElementDimensionsAndBoundingRect: _,
+                    getElementDimensionsAndBoundingRect: f,
                     updateElementPosition: p,
                     updateElementPositionWithPolling: y
                 });
-        }, [p, y, _, a]),
-        { getElementDimensionsAndBoundingRect: _ }
+        }, [p, y, f, a]),
+        { getElementDimensionsAndBoundingRect: f }
     );
 }
 function b(e) {
@@ -154,7 +154,7 @@ function b(e) {
                 (e) => {
                     let { height: t, width: i, elementBoundingRect: o } = e;
                     if (null == o) return r;
-                    let c = _(
+                    let c = f(
                         {},
                         n({
                             height: t,
@@ -174,8 +174,8 @@ function b(e) {
 }
 function y(e) {
     var { children: t, style: n, className: i, key: a } = e;
-    let { offsets: s } = b(_({}, p(e, ['children', 'style', 'className', 'key']))),
-        l = _({}, s, n);
+    let { offsets: s } = b(f({}, p(e, ['children', 'style', 'className', 'key']))),
+        l = f({}, s, n);
     return null === s
         ? null
         : (0, r.jsx)(

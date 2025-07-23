@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -39,14 +39,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -55,10 +55,10 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     let c = null != t ? t : ''.concat(l.jXE.PREMIUM_GUILD_UPSELL_MODAL);
     null != e.targetBoostedGuildTier && (c += ' - Tier '.concat(e.targetBoostedGuildTier));
-    let f = () => {
+    let _ = () => {
         s.default.track(l.rMx.MODAL_DISMISSED, {
             type: c,
             location: e.analyticsSourceLocation
@@ -68,9 +68,9 @@ function _(e, t) {
         type: c,
         location: e.analyticsSourceLocation
     });
-    let { openInPopoutEnabled: _ } = e,
+    let { openInPopoutEnabled: f } = e,
         p = d(e, ['openInPopoutEnabled']),
-        h = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != _ && _;
+        h = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != f && f;
     h && (0, o.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
     let m = h ? i.u1M : i.z1l;
     (0, i.ZDy)(
@@ -79,7 +79,7 @@ function _(e, t) {
             return (t) => (0, r.jsx)(e, u({}, p, t));
         },
         {
-            onCloseCallback: f,
+            onCloseCallback: _,
             contextKey: m
         }
     );

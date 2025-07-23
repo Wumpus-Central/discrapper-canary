@@ -13,5 +13,5 @@ function l(e, t) {
     });
 }
 function i() {
-    for (let e in r.Z.all()) l(e, !1);
+    for (let e in r.Z.enabled()) l(e, !1);
 }

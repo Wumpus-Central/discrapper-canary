@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(963249),
     u = n(703656),
     d = n(594174),
-    f = n(78839),
-    _ = n(639119),
+    _ = n(78839),
+    f = n(639119),
     p = n(474936),
     h = n(981631);
 function m(e, t, n) {
@@ -88,9 +88,9 @@ function O(e, t) {
 function v(e) {
     let { onClick: t, subscriptionTier: m, postSuccessGuild: E, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, applicationId: I, giftMessage: T, confirmationFooter: S, paymentModalBanner: A, isGift: N, children: C } = e,
         R = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        P = (0, i.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
+        P = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         { analyticsLocations: w } = (0, s.ZP)(),
-        D = (0, _.N)(),
+        D = (0, f.N)(),
         L = !N && null != D && null != m && p.nG[D.trial_id].skus.includes(m);
     return C({
         onClick: (e) => {

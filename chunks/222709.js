@@ -15,10 +15,10 @@ let m = (e) => {
         f = i.useCallback(() => {
             (s.Z.dismissPublishBump(n), (0, c.Z)(t, n));
         }, [t, n]),
-        g = i.useCallback(() => {
+        h = i.useCallback(() => {
             s.Z.dismissPublishBump(n);
         }, [n]),
-        h = i.useCallback(() => {
+        g = i.useCallback(() => {
             s.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return m
@@ -47,7 +47,7 @@ let m = (e) => {
                               children: d.intl.string(d.t['MFGE5+'])
                           }),
                           (0, r.jsx)(o.P3F, {
-                              onClick: g,
+                              onClick: h,
                               children: (0, r.jsx)(o.k$p, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -61,7 +61,7 @@ let m = (e) => {
                       className: p.hidePermanently,
                       variant: 'text-sm/normal',
                       children: (0, r.jsx)(o.P3F, {
-                          onClick: h,
+                          onClick: g,
                           children: d.intl.string(d.t.efSkDg)
                       })
                   })

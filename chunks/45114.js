@@ -3,7 +3,7 @@
     FT: () => b,
     In: () => d,
     Ju: () => E,
-    U6: () => _,
+    U6: () => f,
     iV: () => h,
     jT: () => g,
     y5: () => p
@@ -32,7 +32,7 @@ function d(e, t) {
         location: t
     });
 }
-function f(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         l = o.Z.getChannel(e);
@@ -48,16 +48,16 @@ function f(e, t) {
                 let { channel: t } = e;
                 return t.id;
             }),
-        f = [...u];
+        _ = [...u];
     for (let e of (u.forEach((e) => {
         let t = i.Z.getActiveJoinedThreadsForParent(l.guild_id, e);
-        for (let e in t) f.push(e);
+        for (let e in t) _.push(e);
     }),
-    f))
+    _))
         d(e, t, n, r);
 }
-function _(e, t) {
-    e.isCategory() ? f(e.id, t, !0, !0) : e.isForumLikeChannel() ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, t, !0, !0);
+function f(e, t) {
+    e.isCategory() ? _(e.id, t, !0, !0) : e.isForumLikeChannel() ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, t, !0, !0);
 }
 function p(e, t) {
     r.Z.dispatch({

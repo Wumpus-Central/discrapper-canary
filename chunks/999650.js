@@ -1,7 +1,7 @@
 (n.d(t, {
     Pr: () => ee,
     Qe: () => eu,
-    WK: () => e_,
+    WK: () => ef,
     ZP: () => eg,
     _m: () => ep,
     co: () => em,
@@ -25,8 +25,8 @@ var r = n(658722),
     c = n(212819),
     u = n(933557),
     d = n(861262),
-    f = n(778877),
-    _ = n(592125),
+    _ = n(778877),
+    f = n(592125),
     p = n(984933),
     h = n(699516),
     m = n(768119),
@@ -176,7 +176,7 @@ function q(e, t, n) {
     return null != a && (e.setData('channel', a), !0);
 }
 function X(e, t) {
-    let n = Object.values(_.Z.getMutablePrivateChannels()).find((e) => {
+    let n = Object.values(f.Z.getMutablePrivateChannels()).find((e) => {
         if (t === (0, u.F6)(e, y.default, h.Z)) return !0;
         if (e.isDM()) {
             let n = e.getRecipientId(),
@@ -193,7 +193,7 @@ function Q(e) {
         r = m.Z.getCurrentSearchId(),
         i = (0, d.g)(r);
     if (i === A.aib.GUILD) return q(e, t, n);
-    let a = (0, f.a)({ location: 'channelValidator' });
+    let a = (0, _.a)({ location: 'channelValidator' });
     return i === A.aib.DMS && !!a && X(e, t);
 }
 function J(e) {
@@ -246,7 +246,7 @@ function er(e) {
         i = [];
     return (
         n.forEach((e) => {
-            let t = _.Z.getChannel(e);
+            let t = f.Z.getChannel(e);
             if (null != t)
                 if (t.isDM()) {
                     let e = t.getRecipientId();
@@ -293,12 +293,12 @@ function ei(e) {
             return [];
     }
     let u = y.default.getCurrentUser(),
-        f = n.toLowerCase().replace(/^@/, ''),
-        _ = null != u && n.length > 0 && (N.intl.string(N.t.Qf3ptr).startsWith(f) || A.ME.substr(1).startsWith(f)),
+        _ = n.toLowerCase().replace(/^@/, ''),
+        f = null != u && n.length > 0 && (N.intl.string(N.t.Qf3ptr).startsWith(_) || A.ME.substr(1).startsWith(_)),
         p = t
             .filter((e) => {
                 let { record: t } = e;
-                return !h.Z.isBlockedOrIgnored(t.id) && (!_ || t.id !== (null == u ? void 0 : u.id));
+                return !h.Z.isBlockedOrIgnored(t.id) && (!f || t.id !== (null == u ? void 0 : u.id));
             })
             .map((e) => {
                 let { record: t } = e;
@@ -308,7 +308,7 @@ function ei(e) {
                 };
             });
     return (
-        _ &&
+        f &&
             p.unshift({
                 text: A.ME,
                 user: u
@@ -344,7 +344,7 @@ function eo(e, t) {
             .value();
     if ('' === e.trim()) {
         let e = g.Z.getChannelId(),
-            t = _.Z.getChannel(e);
+            t = f.Z.getChannel(e);
         if (null != t && t.isPrivate()) {
             let n = i.findIndex((t) => {
                 let { channel: n } = t;
@@ -417,7 +417,7 @@ function el(e, t, n) {
     (e.startsWith('"') && e.endsWith('"') ? (e = e.substring(1, e.length - 1)) : e.startsWith('"') && (e = e.substring(1)), '#' === e[0] && (e = e.substring(1)));
     let r = (0, d.g)(t);
     if (r === A.aib.GUILD) return es(e, t, n);
-    let i = (0, f.a)({ location: 'getInFilterAutocompletions' });
+    let i = (0, _.a)({ location: 'getInFilterAutocompletions' });
     return r === A.aib.DMS && i ? eo(e, n) : [];
 }
 let ec = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
@@ -595,19 +595,19 @@ function ed() {
         }
     };
 }
-let ef = {};
-function e_() {
-    Object.assign(ef, ed());
+let e_ = {};
+function ef() {
+    Object.assign(e_, ed());
 }
 function ep(e) {
     return A.TNx.test(e);
 }
 function eh(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(ef).length,
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(e_).length,
         n = [];
-    for (let r of Object.keys(ef)) {
+    for (let r of Object.keys(e_)) {
         if (n.length >= t) break;
-        let a = ef[r].key;
+        let a = e_[r].key;
         ep(r) &&
             null != a &&
             i()(e.toLowerCase(), a) &&
@@ -623,4 +623,4 @@ function em(e) {
     let t = e.toLowerCase().replace(/^@/, '');
     return N.intl.string(N.t.Qf3ptr).startsWith(t) || A.ME.substring(1).startsWith(t);
 }
-let eg = ef;
+let eg = e_;

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(608787),
     u = n(866442),
     d = n(19602),
-    f = n(490236),
-    _ = n(755721),
+    _ = n(490236),
+    f = n(755721),
     p = n(481060),
     h = n(408886),
     m = n(233398),
@@ -202,10 +202,10 @@ function D(e) {
                         shouldShow: o.length === C,
                         children: (e) =>
                             (0, r.jsx)(
-                                _.zx,
+                                f.zx,
                                 S(I({}, e), {
-                                    size: _.zx.Sizes.ICON,
-                                    look: _.zx.Looks.BLANK,
+                                    size: f.zx.Sizes.ICON,
+                                    look: f.zx.Looks.BLANK,
                                     disabled: o.length === C,
                                     onClick: j,
                                     children: (0, r.jsx)(p.Text, {
@@ -249,12 +249,12 @@ function D(e) {
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.zx,
+                                            f.zx,
                                             S(
                                                 I(
                                                     {
-                                                        size: _.zx.Sizes.ICON,
-                                                        look: _.zx.Looks.BLANK
+                                                        size: f.zx.Sizes.ICON,
+                                                        look: f.zx.Looks.BLANK
                                                     },
                                                     e
                                                 ),
@@ -275,13 +275,13 @@ function D(e) {
                                     text: y.intl.string(b.default['rTik5+']),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.zx,
+                                            f.zx,
                                             S(I({}, e), {
-                                                size: _.zx.Sizes.ICON,
-                                                look: _.zx.Looks.BLANK,
+                                                size: f.zx.Sizes.ICON,
+                                                look: f.zx.Looks.BLANK,
                                                 onClick: () => U(v),
                                                 className: O.iconButton,
-                                                children: (0, r.jsx)(f.X, {
+                                                children: (0, r.jsx)(_.X, {
                                                     size: 'xs',
                                                     colorClass: O.iconWithHover,
                                                     className: O.icon

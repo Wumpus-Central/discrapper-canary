@@ -20,7 +20,7 @@ let l = (e) => {
     c = (e, t, n, r) => (t || n ? s.intl.string(s.t.fkPGam) : e === o.Si.TIER_2 ? s.intl.formatToPlainString(s.t.bkQ4bG, { percent: r }) : void 0),
     u = (e) => {
         var t, n;
-        let { subscriptionTier: u, hasActivePromotion: d = !1, useShorterCTA: f = !1, isPersistentCTA: _ = !1 } = e,
+        let { subscriptionTier: u, hasActivePromotion: d = !1, useShorterCTA: _ = !1, isPersistentCTA: f = !1 } = e,
             p = (0, a.N)(),
             h = null == p ? void 0 : p.subscription_trial,
             m = (0, i.Ng)(),
@@ -36,12 +36,12 @@ let l = (e) => {
             buttonText: d
                 ? s.intl.string(s.t.J61px8)
                 : null != m
-                  ? c(b, f, _, m.discount.amount)
+                  ? c(b, _, f, m.discount.amount)
                   : l({
                         showTrialCTA: y,
                         subscriptionTier: b,
                         trialDurationCopy: E,
-                        isPersistentCTA: _,
+                        isPersistentCTA: f,
                         shouldShowReferralTrialCopy: O,
                         subscriptionTrial: h
                     }),

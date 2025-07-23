@@ -8,14 +8,14 @@ var i = n(481060),
     l = n(212895),
     c = n(296848);
 let u = function (e) {
-    let { activeSubscription: t, onNext: n, isSubmitting: u, paymentSourceId: d, buttonLabel: f, analyticsLocations: _ } = e,
+    let { activeSubscription: t, onNext: n, isSubmitting: u, paymentSourceId: d, buttonLabel: _, analyticsLocations: f } = e,
         p = async () => {
             let e = o.Z.getPaymentSource(d);
-            null != e && (await (0, l.i1)(d, (0, c.yb)(t)), await a.tq(t, e, t.currency, (0, s.UX)(t.items, t.currency, t.paymentSourceId), _), n());
+            null != e && (await (0, l.i1)(d, (0, c.yb)(t)), await a.tq(t, e, t.currency, (0, s.UX)(t.items, t.currency, t.paymentSourceId), f), n());
         };
     return (0, r.jsx)(i.zxk, {
         variant: 'active',
-        text: f,
+        text: _,
         'data-testid': 'purchase',
         onClick: p,
         loading: u

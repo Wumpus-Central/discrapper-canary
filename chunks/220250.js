@@ -1,7 +1,7 @@
 (n.d(t, {
     TK: () => p,
     dG: () => h,
-    nv: () => _,
+    nv: () => f,
     qw: () => g
 }),
     n(35282));
@@ -14,8 +14,8 @@ var r = n(73800),
     c = n(768581),
     u = n(921948),
     d = n(981631);
-let f = 512;
-function _() {
+let _ = 512;
+function f() {
     let e = (0, s.ZP)(),
         t = (0, a.dQu)(a.TVs.colors.BACKGROUND_BASE_LOWEST),
         n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
@@ -29,7 +29,7 @@ function p(e) {
         let t = c.ZP.getGuildDiscoverySplashURL({
             id: e.id,
             splash: n,
-            size: f * (0, u.Z)()
+            size: _ * (0, u.Z)()
         });
         if (null != t) return 'url('.concat(t, ') center / cover');
     }

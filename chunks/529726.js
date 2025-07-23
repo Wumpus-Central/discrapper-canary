@@ -20,8 +20,8 @@ function c(e, t, n) {
 }
 let u = 60000,
     d = 1000,
-    f = 10,
-    _ = 2000,
+    _ = 10,
+    f = 2000,
     p = 500;
 class h extends a.Z {
     handleMessageBecameVisible(e) {
@@ -59,7 +59,7 @@ class h extends a.Z {
         ((this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null)));
     }
     bufferViewTrack(e) {
-        (this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _)));
+        (this.batchBuffer.length >= _ && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), f)));
     }
     constructor(...e) {
         (super(...e),

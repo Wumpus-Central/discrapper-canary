@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -118,9 +118,9 @@ function y(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         d = (0, o.bp)(),
-        [_, y] = i.useState(null),
+        [f, y] = i.useState(null),
         { confettiCanvas: O } = i.useContext(s.h),
-        v = (0, a.uR)(O, _),
+        v = (0, a.uR)(O, f),
         I = i.useMemo(
             () => ({
                 triggerAnimation: () => l(!0),
@@ -133,7 +133,7 @@ function y(e) {
             if (null == e) return;
             let t = e.getBoundingClientRect();
             v.createConfetti(
-                p(f({}, g), {
+                p(_({}, g), {
                     position: {
                         type: 'static-random',
                         minValue: {

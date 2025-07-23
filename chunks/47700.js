@@ -47,8 +47,8 @@ if (((t.unstable_now = void 0), 'object' == typeof performance && 'function' == 
 }
 var u = [],
     d = [],
-    f = 1,
-    _ = null,
+    _ = 1,
+    f = null,
     p = 3,
     h = !1,
     m = !1,
@@ -90,20 +90,20 @@ function C() {
                 var a = p;
                 try {
                     a: {
-                        for (O(e), _ = r(u); null !== _ && !(_.expirationTime > e && N()); ) {
-                            var s = _.callback;
+                        for (O(e), f = r(u); null !== f && !(f.expirationTime > e && N()); ) {
+                            var s = f.callback;
                             if ('function' == typeof s) {
-                                ((_.callback = null), (p = _.priorityLevel));
-                                var l = s(_.expirationTime <= e);
+                                ((f.callback = null), (p = f.priorityLevel));
+                                var l = s(f.expirationTime <= e);
                                 if (((e = t.unstable_now()), 'function' == typeof l)) {
-                                    ((_.callback = l), O(e), (n = !0));
+                                    ((f.callback = l), O(e), (n = !0));
                                     break a;
                                 }
-                                (_ === r(u) && i(u), O(e));
+                                (f === r(u) && i(u), O(e));
                             } else i(u);
-                            _ = r(u);
+                            f = r(u);
                         }
-                        if (null !== _) n = !0;
+                        if (null !== f) n = !0;
                         else {
                             var c = r(d);
                             (null !== c && D(v, c.startTime - e), (n = !1));
@@ -111,7 +111,7 @@ function C() {
                     }
                     break e;
                 } finally {
-                    ((_ = null), (p = a), (h = !1));
+                    ((f = null), (p = a), (h = !1));
                 }
             }
         } finally {
@@ -223,7 +223,7 @@ function D(e, n) {
         return (
             (s = a + s),
             (e = {
-                id: f++,
+                id: _++,
                 callback: i,
                 priorityLevel: e,
                 startTime: a,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(246946),
     u = n(5192),
     d = n(74538),
-    f = n(209698),
-    _ = n(648052),
+    _ = n(209698),
+    f = n(648052),
     p = n(537006),
     h = n(483424),
     m = n(681837),
@@ -37,7 +37,7 @@ function D(e) {
         })),
         V = (0, o.vh)(t.id),
         F = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        Z = (0, f.b)({ location: 'UserProfilePopoutBody' }),
+        Z = (0, _.b)({ location: 'UserProfilePopoutBody' }),
         H = t.id === n.id,
         Y = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
@@ -56,7 +56,7 @@ function D(e) {
                     }),
                 nickname: U,
                 pronouns: null == D ? void 0 : D.pronouns,
-                tags: (0, r.jsx)(_.Z, {
+                tags: (0, r.jsx)(f.Z, {
                     displayProfile: D,
                     themeType: C.lY.POPOUT,
                     onClose: j

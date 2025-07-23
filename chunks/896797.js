@@ -23,11 +23,11 @@ let c = {
     },
     u = c,
     d = 'LAST_VIEWED_PATH';
-function f(e) {
+function _(e) {
     let { path: t } = e;
     return ((u.lastViewedPath = t), !0);
 }
-function _(e) {
+function f(e) {
     let { path: t } = e;
     return ((u.lastViewedNonVoicePath = t), !0);
 }
@@ -59,6 +59,6 @@ class p extends (r = i.ZP.PersistedStore) {
         }
     ]));
 let h = new p(o.Z, {
-    SAVE_LAST_ROUTE: f,
-    SAVE_LAST_NON_VOICE_ROUTE: _
+    SAVE_LAST_ROUTE: _,
+    SAVE_LAST_NON_VOICE_ROUTE: f
 });

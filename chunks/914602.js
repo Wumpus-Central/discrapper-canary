@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -11,8 +11,8 @@ var r,
     p = n(669021),
     m = n(73346),
     f = n(568836),
-    g = n(345898),
-    h = n(981631),
+    h = n(345898),
+    g = n(981631),
     _ = n(817165);
 function b(e, t, n) {
     return (
@@ -30,7 +30,7 @@ function b(e, t, n) {
 class E extends (r = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: r, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
-            c = s ? f.$G : g.Z;
+            c = s ? f.$G : h.Z;
         return (0, i.jsx)(c, {
             className: r,
             renderMedia: null != o ? o : this.renderMedia,
@@ -57,7 +57,7 @@ class E extends (r = l.PureComponent) {
                                   className: a && r ? _.tilePriceWithVisibleBuyButton : _.tilePrice
                               }),
                               (0, i.jsx)(c.n, {
-                                  systems: [h.TaA.WINDOWS],
+                                  systems: [g.TaA.WINDOWS],
                                   className: _.platform
                               }),
                               a ? (0, i.jsx)('div', { children: 'deprecated!' }) : null
@@ -93,4 +93,4 @@ b(E, 'defaultProps', {
     isHorizontal: !1,
     isEmbed: !1
 });
-let x = E;
+let y = E;

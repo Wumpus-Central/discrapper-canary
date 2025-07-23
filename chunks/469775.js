@@ -1,6 +1,7 @@
 (n.d(t, {
     dx: () => l,
     uH: () => c,
+    ux: () => d,
     zJ: () => u
 }),
     n(388685));
@@ -28,4 +29,5 @@ let l = new Set([a.cU.NSFW_GUILD]),
             })
         }
     ],
-    u = 'AGE_VERIFICATION_MODAL_KEY';
+    u = 'AGE_VERIFICATION_MODAL_KEY',
+    d = 'AGE_VERIFICATION_GET_STARTED_MODAL_KEY';

@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-class _ extends i.fE {
+class f extends i.fE {
     getGuildCount() {
         return this.length();
     }
@@ -48,7 +48,7 @@ class _ extends i.fE {
             d(
                 this,
                 'getGuilds',
-                this.memoized((e) => f({}, e))
+                this.memoized((e) => _({}, e))
             ),
             d(
                 this,
@@ -62,8 +62,8 @@ class _ extends i.fE {
             ));
     }
 }
-d(_, 'displayName', 'GuildStore');
-let p = new _(
+d(f, 'displayName', 'GuildStore');
+let p = new f(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;

@@ -58,8 +58,8 @@ e.exports = function (e) {
             contains: [c, l, a, o]
         }),
         d = /[a-z_]+/,
-        f = u(i, { relevance: 2 }),
-        _ = u([d], { relevance: 1 });
+        _ = u(i, { relevance: 2 }),
+        f = u([d], { relevance: 1 });
     return {
         name: 'Twig',
         aliases: ['craftcms'],
@@ -67,8 +67,8 @@ e.exports = function (e) {
         subLanguage: 'xml',
         contains: [
             e.COMMENT(/\{#/, /#\}/),
-            f,
             _,
+            f,
             {
                 className: 'template-variable',
                 begin: /\{\{/,

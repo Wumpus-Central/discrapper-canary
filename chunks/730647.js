@@ -19,19 +19,19 @@ function u(e) {
 function d(e) {
     let { guildId: t, children: n, refetchOnMount: u, includeSoftDeleted: d, countryCode: p, dontFetchWhileTrue: m } = e,
         f = (0, l.e7)([a.Z], () => a.Z.isConnected()),
-        g = (0, l.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
-        h = i.useRef(u),
+        h = (0, l.e7)([s.Z], () => (null != t ? s.Z.getSubscriptionGroupListingsForGuildFetchState(t) : s.M.FETCHED)),
+        g = i.useRef(u),
         _ = i.useCallback(() => {
             if (null == t || !f || !0 === m) return;
             let e = s.Z.getSubscriptionGroupListingsForGuildFetchState(t);
-            (h.current || e === s.M.NOT_FETCHED) &&
-                ((h.current = !1),
+            (g.current || e === s.M.NOT_FETCHED) &&
+                ((g.current = !1),
                 o.FP(t, {
                     includeSoftDeleted: d,
                     countryCode: p
                 }));
         }, [f, t, d, p, m]),
-        b = i.useMemo(() => g === s.M.FETCHED && !0 !== h.current, [g, h]);
+        b = i.useMemo(() => h === s.M.FETCHED && !0 !== g.current, [h, g]);
     return (0, r.jsx)(c.Provider, {
         value: {
             listingsLoaded: b,

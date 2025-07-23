@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(40851),
     u = n(314910),
     d = n(5967),
-    f = n(53529),
-    _ = n(50659),
+    _ = n(53529),
+    f = n(50659),
     p = n(436660),
     h = n(887490),
     m = n(447525),
@@ -92,8 +92,8 @@ function E(e) {
 let b = i.forwardRef(function (e, t) {
     var n;
     let { editorRef: a, containerRef: o, options: l } = e,
-        f = i.useRef(null),
-        [_, p] = i.useState(!1),
+        _ = i.useRef(null),
+        [f, p] = i.useState(!1),
         m = i.useRef(null),
         b = i.useContext(c.ZP),
         y = i.useCallback(() => {
@@ -103,7 +103,7 @@ let b = i.forwardRef(function (e, t) {
             (e) => {
                 var t;
                 let n = b.renderWindow;
-                (e.target instanceof n.Node && (null == (t = f.current) ? void 0 : t.contains(e.target))) || y();
+                (e.target instanceof n.Node && (null == (t = _.current) ? void 0 : t.contains(e.target))) || y();
             },
             [b, y]
         ),
@@ -114,7 +114,7 @@ let b = i.forwardRef(function (e, t) {
                     if (0 !== e.button) y();
                     else {
                         var n;
-                        let r = e.target instanceof t.Node && (null == (n = f.current) ? void 0 : n.contains(e.target));
+                        let r = e.target instanceof t.Node && (null == (n = _.current) ? void 0 : n.contains(e.target));
                         (clearTimeout(m.current),
                             (m.current = setTimeout(() => {
                                 var t;
@@ -144,7 +144,7 @@ let b = i.forwardRef(function (e, t) {
     let { x: T, y: S } = i.useMemo(() => {
             var e, t, n, r;
             let i = null == (e = a.current) ? void 0 : e.getSlateEditor();
-            if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !_)
+            if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !f)
                 return {
                     x: null,
                     y: null
@@ -159,9 +159,9 @@ let b = i.forwardRef(function (e, t) {
             let u = l.createRange();
             (u.setStart(c.focusNode, c.focusOffset), u.setEnd(c.focusNode, c.focusOffset));
             let d = u.getBoundingClientRect(),
-                f = l.createRange();
-            (f.setStart(c.anchorNode, c.anchorOffset), f.setEnd(c.anchorNode, c.anchorOffset));
-            let p = f.getBoundingClientRect(),
+                _ = l.createRange();
+            (_.setStart(c.anchorNode, c.anchorOffset), _.setEnd(c.anchorNode, c.anchorOffset));
+            let p = _.getBoundingClientRect(),
                 m = l.createRange();
             (m.setStart(c.anchorNode, c.anchorOffset), m.setEnd(c.focusNode, c.focusOffset));
             let g = m.getBoundingClientRect(),
@@ -173,13 +173,13 @@ let b = i.forwardRef(function (e, t) {
                 x: b + (y - b) / 2,
                 y: Math.max(O, Math.min(p.y, d.y))
             };
-        }, [o, _, a]),
+        }, [o, f, a]),
         [A, N] = i.useState(0),
         [C, R] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == T || null == S || null == f.current) return;
-            let e = f.current.getBoundingClientRect();
+            if (null == T || null == S || null == _.current) return;
+            let e = _.current.getBoundingClientRect();
             (R(e.width / 2), N(e.height + 12));
         }, [T, S]),
         null == T || null == S)
@@ -191,7 +191,7 @@ let b = i.forwardRef(function (e, t) {
         : (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
                   id: 'slate-toolbar',
-                  ref: f,
+                  ref: _,
                   className: g.toolbar,
                   style: {
                       top: S - A,
@@ -216,12 +216,12 @@ let b = i.forwardRef(function (e, t) {
 function y(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         a = () => {
-            null != t && f.T.withSingleEntry(t, () => (0, _.py)(t, n));
+            null != t && _.T.withSingleEntry(t, () => (0, f.py)(t, n));
         },
         o = !1;
     if ((null == t ? void 0 : t.selection) != null) {
         let [e, r] = h.M8.edges(t.selection);
-        o = null != (0, _.U4)(t, e, r).before[n];
+        o = null != (0, f.U4)(t, e, r).before[n];
     }
     return (0, r.jsx)('button', {
         'aria-pressed': o,
@@ -233,7 +233,7 @@ function y(e) {
 function O(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         a = () => {
-            null != n && f.T.withSingleEntry(n, () => (0, _.hm)(n, t));
+            null != n && _.T.withSingleEntry(n, () => (0, f.hm)(n, t));
         },
         o = null != n ? h.bN.getCurrentBlock(n) : null,
         s = null != o && h.aj.isType(o[0], t);
@@ -252,7 +252,7 @@ function v(e) {
             (e) => {
                 if ((null == n ? void 0 : n.selection) == null || null == a) return;
                 let t = n.selection;
-                f.T.withSingleEntry(n, () => {
+                _.T.withSingleEntry(n, () => {
                     (p.Q.voidToText(n, e, a), p.Q.select(n, t));
                 });
             },

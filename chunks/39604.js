@@ -28,8 +28,8 @@ var r = n(46973),
     c = n(569545),
     u = n(441167),
     d = n(460181),
-    f = n(695346),
-    _ = n(361291),
+    _ = n(695346),
+    f = n(361291),
     p = n(199902),
     h = n(314897),
     m = n(131951),
@@ -99,7 +99,7 @@ function D(e, t) {
 }
 async function L(e) {
     let { allowVoiceRecording: t } = e;
-    (await f.tU.updateSetting(t), b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }), a.Z.dispatch({ type: 'CLIPS_ALLOW_VOICE_RECORDING_UPDATE' }));
+    (await _.tU.updateSetting(t), b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }), a.Z.dispatch({ type: 'CLIPS_ALLOW_VOICE_RECORDING_UPDATE' }));
 }
 async function x(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1 } = e;
@@ -184,7 +184,7 @@ function V(e) {
     };
 }
 function F(e, t) {
-    var n, r, i, a, o, l, c, u, d, f;
+    var n, r, i, a, o, l, c, u, d, _;
     let p = new Map();
     for (let e in t.framesEncodedByEncoder) {
         let r = t.framesEncodedByEncoder[e],
@@ -201,7 +201,7 @@ function F(e, t) {
         frames_encoded_intel: null != (c = p.get(s.Su.INTEL)) ? c : 0,
         frames_encoded_intel_direct3d: null != (u = p.get(s.Su.INTEL_DIRECT_3D)) ? u : 0,
         frames_encoded_uncategorized: null != (d = p.get(s.Su.UNCATEGORIZED)) ? d : 0,
-        frames_encoded_unknown: null != (f = p.get(s.Su.UNKNOWN)) ? f : 0,
+        frames_encoded_unknown: null != (_ = p.get(s.Su.UNKNOWN)) ? _ : 0,
         frames_submitted: t.framesSubmitted,
         frames_submitted_during_clip: t.framesSubmittedDuringClip,
         frames_encoded: t.framesEncoded,
@@ -215,7 +215,7 @@ function F(e, t) {
         min_fps: t.minFps,
         max_fps: t.maxFps,
         submitted_fps: t.submittedFps,
-        target_fps: _.Z.getState().fps,
+        target_fps: f.Z.getState().fps,
         audio_track_count: t.audioTrackCount,
         saved_at: t.savedAt
     });
@@ -235,12 +235,12 @@ async function Z(e) {
             clip: D(P({}, n), { filepath: i })
         });
     try {
-        var f;
+        var _;
         let { duration: e, clipStats: t } = await (null != u ? s.saveClipForUser(u, i, l) : s.saveClip(i, l)),
             r = F(d, t);
         ((r.clip_save_time_ms = t.clipSaveTimeMs), (r.clip_size_bytes = t.clipSizeBytes), null != t.viewerDecodeFps && ((r.decode_fps_during_clip = t.viewerDecodeFps), (r.encode_fps_during_clip = t.viewerEncodeFps), (r.target_fps = null)), b.default.track(C.rMx.CLIP_SAVED, r));
         let a = await (0, A.R)(o.Z.clips.getClipProtocolURLFromPath(i), 0);
-        return ((n.thumbnail = a), (n.length = e), N.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null != (f = null == a ? void 0 : a.length) ? f : 0, ' bytes thumbnail.')), await s.updateClipMetadata(i, JSON.stringify(n)), D(P({}, n), { filepath: i }));
+        return ((n.thumbnail = a), (n.length = e), N.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null != (_ = null == a ? void 0 : a.length) ? _ : 0, ' bytes thumbnail.')), await s.updateClipMetadata(i, JSON.stringify(n)), D(P({}, n), { filepath: i }));
     } catch (i) {
         if (
             (null != e &&
@@ -262,9 +262,9 @@ async function H(e) {
         { enableViewerClipping: o } = u.Z.getCurrentConfig({ location: 'SaveClip' }, { autoTrackExposure: !1 });
     if (O.Z.getIsAtMaxSaveClipOperations()) return;
     let s = O.Z.getSettings().clipsEnabled && null != p.Z.getCurrentUserActiveStream(),
-        f = n && O.Z.getSettings().decoupledClipsEnabled && (null == (t = l.ZP.getVisibleGame()) ? void 0 : t.windowHandle) != null && m.Z.hasClipsSource(),
-        _ = null != e && null != p.Z.getActiveStreamForStreamKey(e) && o;
-    if (!s && !f && !_) return;
+        _ = n && O.Z.getSettings().decoupledClipsEnabled && (null == (t = l.ZP.getVisibleGame()) ? void 0 : t.windowHandle) != null && m.Z.hasClipsSource(),
+        f = null != e && null != p.Z.getActiveStreamForStreamKey(e) && o;
+    if (!s && !_ && !f) return;
     let g = p.Z.getCurrentUserActiveStream(),
         b = null != g ? (0, c.V9)(g) : void 0,
         y = null != e ? e : b,

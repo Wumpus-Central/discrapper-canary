@@ -20,13 +20,13 @@ function d(e, t, n) {
         e
     );
 }
-let f = new o.Yd('KvStore'),
-    _ = Symbol('setKv'),
+let _ = new o.Yd('KvStore'),
+    f = Symbol('setKv'),
     p = Symbol('setMetadata'),
     h = Object.prototype.hasOwnProperty,
     m = Symbol('version'),
     g = p,
-    E = _;
+    E = f;
 class b extends a.yh {
     getMode() {
         return this.mode;
@@ -53,7 +53,7 @@ class b extends a.yh {
         return this.derived.length;
     }
     constructor(e, t = 'typescript') {
-        'typescript' === t || (0, c.F)() || (f.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
+        'typescript' === t || (0, c.F)() || (_.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
         let n = {};
         if ('typescript' === t || 'typescript-libdiscore-dual-read' === t) {
             let t = !1,
@@ -110,7 +110,7 @@ class b extends a.yh {
                 memoized: {}
             }),
             (this.nextVersion = 0),
-            f.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
+            _.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
             t)
         ) {
             case 'typescript-libdiscore-dual-read':
@@ -124,7 +124,7 @@ class b extends a.yh {
                     (this[p] = (e) => {
                         (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'), (this.shadowState.derived = e));
                     }),
-                    (this[_] = (e, t) => {
+                    (this[f] = (e, t) => {
                         (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'),
                             (this.shadowState = {
                                 root: e,
@@ -147,12 +147,12 @@ class b extends a.yh {
                 ((this[p] = (e) => {
                     this.derived = e;
                 }),
-                    (this[_] = (e, t) => {
+                    (this[f] = (e, t) => {
                         this.setKvRoot(e, t);
                     }));
                 break;
             case 'typescript':
-                this[p] = this[_] = () => {
+                this[p] = this[f] = () => {
                     throw Error('This method should not be called in TypeScript mode.');
                 };
                 break;

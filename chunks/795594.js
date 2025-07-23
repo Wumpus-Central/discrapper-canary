@@ -1,5 +1,5 @@
 (n.d(t, {
-    J: () => e_,
+    J: () => ef,
     Z: () => ep
 }),
     n(997841),
@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(512722),
     u = n.n(c),
     d = n(97519),
-    f = n(243814),
-    _ = n(442837),
+    _ = n(243814),
+    f = n(442837),
     p = n(921072),
     h = n(524437),
     m = n(1561),
@@ -93,7 +93,7 @@ function eo(e) {
     }
     return e;
 }
-let es = _.ZP.connectStores([K.Z], () => ({ theme: K.Z.theme }))(E.ubH);
+let es = f.ZP.connectStores([K.Z], () => ({ theme: K.Z.theme }))(E.ubH);
 function el(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)('div', {
@@ -239,12 +239,12 @@ let ec = (e) => {
               })
             : null;
     },
-    ef = (e) => {
+    e_ = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: g } = e,
             b = a.id,
             I = i.useMemo(() => M.ZP.createFromServer(a), [a]),
             T = (0, F.yE)(I.flags, $.udG.EMBEDDED),
-            S = (0, _.e7)(
+            S = (0, f.e7)(
                 [q.Z],
                 () => {
                     var e, t, n, r;
@@ -254,8 +254,8 @@ let ec = (e) => {
             ),
             A = C.w.useExperiment({ location: 'oauth2_authorize' }),
             P = a.bot,
-            k = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
-            { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, _.cj)([B.ZP], () =>
+            k = (0, f.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
+            { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, f.cj)([B.ZP], () =>
                 null == k
                     ? {
                           appDMChannelMuteConfig: null,
@@ -270,7 +270,7 @@ let ec = (e) => {
             [K, Q] = i.useState(!1),
             ea = () => {
                 let e = [];
-                for (let n of t) (e.push(...(0, x.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk)));
+                for (let n of t) (e.push(...(0, x.CI)(n, t)), n === _.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk)));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: en.appDetailsSection,
@@ -352,7 +352,7 @@ let ec = (e) => {
                         children: (0, L.parseBioReact)(a.description)
                     });
             }, [a.description]),
-            ef = () => {
+            e_ = () => {
                 let e = null != a.description && '' !== a.description,
                     t = null != a.terms_of_service_url || null != a.privacy_policy_url;
                 return e || t
@@ -398,7 +398,7 @@ let ec = (e) => {
                       })
                     : null;
             },
-            e_ = () => {
+            ef = () => {
                 let e = V.ZP.getApplicationIconURL({
                         id: a.id,
                         icon: a.icon
@@ -562,28 +562,28 @@ let ec = (e) => {
         return (0, r.jsx)('div', {
             className: en.authedAppV2,
             children: (0, r.jsx)(E.y5t, {
-                component: e_(),
+                component: ef(),
                 children: (0, r.jsxs)('div', {
                     className: en.appDetailsContainer,
-                    children: [ef(), ea(), em(), eb()]
+                    children: [e_(), ea(), em(), eb()]
                 })
             })
         });
     },
-    e_ = (0, d.U)(() => ({ searchQuery: '' })),
+    ef = (0, d.U)(() => ({ searchQuery: '' })),
     ep = () => {
-        let e = (0, _.e7)([G.Z], () => G.Z.hidePersonalInformation),
-            t = (0, _.e7)([k.Z], () => k.Z.getNonChildrenApps()),
-            n = (0, _.e7)([W.default], () => W.default.locale),
-            a = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
-            o = (0, _.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),
+        let e = (0, f.e7)([G.Z], () => G.Z.hidePersonalInformation),
+            t = (0, f.e7)([k.Z], () => k.Z.getNonChildrenApps()),
+            n = (0, f.e7)([W.default], () => W.default.locale),
+            a = (0, f.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
+            o = (0, f.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),
             s = null == o ? void 0 : o.getGuildId();
         (i.useEffect(() => {
             b.Z.fetch();
         }, []),
             i.useEffect(
                 () => () => {
-                    e_.setState({ searchQuery: '' });
+                    ef.setState({ searchQuery: '' });
                 },
                 []
             ));
@@ -598,9 +598,9 @@ let ec = (e) => {
                         showFeedback: !1
                     });
             },
-            u = e_((e) => e.searchQuery),
-            d = (e) => e_.setState({ searchQuery: e }),
-            f = (e) => {
+            u = ef((e) => e.searchQuery),
+            d = (e) => ef.setState({ searchQuery: e }),
+            _ = (e) => {
                 d(e);
             },
             p = () => {
@@ -612,7 +612,7 @@ let ec = (e) => {
                     children: (0, r.jsx)(E.E1j, {
                         size: E.E1j.Sizes.MEDIUM,
                         query: u,
-                        onChange: f,
+                        onChange: _,
                         onClear: p,
                         placeholder: et.intl.string(et.t['5prvKS']),
                         'aria-label': et.intl.string(et.t['5prvKS'])
@@ -649,7 +649,7 @@ let ec = (e) => {
                                       .sort((e, t) => Number(t.id) - Number(e.id))
                                       .map((e) =>
                                           (0, r.jsx)(
-                                              ef,
+                                              e_,
                                               eo(
                                                   {
                                                       locale: n,

@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(317381),
     d = n(212517),
-    f = n(676035),
-    _ = n(594190),
+    _ = n(676035),
+    f = n(594190),
     p = n(106301),
     h = n(406066),
     m = n(768419),
@@ -76,7 +76,7 @@ let N = [],
 function R() {
     let e = [],
         t = g.Ok.getSetting();
-    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.I)(t));
+    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, _.I)(t));
     let n = h.Z.getActivities();
     e.push(...n);
     let r = y.Z.getStream();
@@ -86,7 +86,7 @@ function R() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let o = _.ZP.getVisibleGame(),
+    let o = f.ZP.getVisibleGame(),
         l = null != o && null != o.name && i.has(o.name),
         c = null != o && o.isLauncher,
         u = null != b.Z.getCurrentUserActiveStream(),
@@ -148,7 +148,7 @@ function M() {
 }
 class k extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(_.ZP, u.ZP, y.Z, b.Z, m.Z, E.Z, O.Z, p.Z), this.syncWith([h.Z, p.Z], () => R()));
+        (this.waitFor(f.ZP, u.ZP, y.Z, b.Z, m.Z, E.Z, O.Z, p.Z), this.syncWith([h.Z, p.Z], () => R()));
     }
     getActivities() {
         return N;

@@ -43,11 +43,11 @@ function u(e) {
 function d(e) {
     l = s({}, e.guildMemberCounts);
 }
-function f(e) {
+function _(e) {
     let { guild: t } = e;
     l[t.id] = t.member_count;
 }
-function _(e) {
+function f(e) {
     let { guild: t } = e;
     if (null == l[t.id] && null == c[t.id]) return !1;
     (delete l[t.id], delete c[t.id]);
@@ -83,8 +83,8 @@ o(g, 'displayName', 'GuildMemberCountStore');
 let E = new g(a.Z, {
     CONNECTION_OPEN: u,
     OVERLAY_INITIALIZE: d,
-    GUILD_CREATE: f,
-    GUILD_DELETE: _,
+    GUILD_CREATE: _,
+    GUILD_DELETE: f,
     GUILD_MEMBER_LIST_UPDATE: p,
     INVITE_ACCEPT_SUCCESS: h,
     INVITE_RESOLVE_SUCCESS: h,

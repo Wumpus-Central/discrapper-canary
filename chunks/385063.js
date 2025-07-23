@@ -12,8 +12,8 @@ var i = n(442837),
 function p(e) {
     let { message: t, usernameHook: n, compact: p, isForumPost: m } = e,
         f = (0, c.ZP)(t),
-        g = n(f),
-        h = (0, i.e7)([s.Z], () => {
+        h = n(f),
+        g = (0, i.e7)([s.Z], () => {
             var e, n;
             return null != (n = null == (e = s.Z.getChannel(t.channel_id)) ? void 0 : e.isGroupDM()) && n;
         });
@@ -24,10 +24,10 @@ function p(e) {
             color: 'currentColor'
         }),
         timestamp: t.timestamp,
-        children: h
+        children: g
             ? d.intl.format('' === t.content ? d.t.AI1ZZm : d.t.geP3ra, {
                   username: f.nick,
-                  usernameHook: g,
+                  usernameHook: h,
                   channelName: (0, r.jsx)(
                       l.Text,
                       {
@@ -52,7 +52,7 @@ function p(e) {
               })
             : d.intl.format(m ? d.t.SOQ4hI : d.t.oItgEx, {
                   username: f.nick,
-                  usernameHook: g,
+                  usernameHook: h,
                   channelName: t.content
               })
     });

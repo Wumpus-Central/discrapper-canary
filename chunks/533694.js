@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -12,7 +12,7 @@ var i = n(399606),
     p = n(981631),
     m = n(388032),
     f = n(48215);
-function g(e) {
+function h(e) {
     let { guildId: t, user: n, username: o } = e,
         s = (0, i.e7)([a.Z], () => !a.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, s),
@@ -51,18 +51,18 @@ function g(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     var t, i, l;
     let { channel: a, message: d, compact: f } = e,
-        h = (0, o.ZP)(d),
+        g = (0, o.ZP)(d),
         _ = (0, s.l)({
             user: d.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: d.id
-        })(h),
+        })(g),
         b = m.intl.format(m.t.TQs67u, {
-            username: h.nick,
+            username: g.nick,
             usernameHook: _,
             productName: null != (l = null == (i = d.purchaseNotification) || null == (t = i.guild_product_purchase) ? void 0 : t.product_name) ? l : '',
             handleProductListingClick: () => {
@@ -78,8 +78,8 @@ function h(e) {
                 compact: f,
                 children: b
             }),
-            (0, r.jsx)(g, {
-                username: h.nick,
+            (0, r.jsx)(h, {
+                username: g.nick,
                 guildId: a.guild_id,
                 user: d.author
             })

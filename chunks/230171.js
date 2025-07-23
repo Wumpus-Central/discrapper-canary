@@ -19,13 +19,13 @@ var r = n(255367),
     p = n(906732),
     m = n(915346),
     f = n(783097),
-    g = n(812236),
-    h = n(561308),
+    h = n(812236),
+    g = n(561308),
     _ = n(567409),
     b = n(706454),
     E = n(314897),
-    x = n(699516),
-    y = n(914010),
+    y = n(699516),
+    x = n(914010),
     v = n(594174),
     C = n(768581),
     O = n(433534),
@@ -39,10 +39,10 @@ var r = n(255367),
     w = n(388032),
     Z = n(758364);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: h } = e,
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
         { name: _, bot: b } = (t = (0, N.O)(t)),
-        x = null == b ? void 0 : b.id,
-        y = (0, f.ye)(t),
+        y = null == b ? void 0 : b.id,
+        x = (0, f.ye)(t),
         v = C.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
@@ -53,19 +53,19 @@ function R(e) {
         { analyticsLocations: D } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
-        H = (0, g.ms)({
+        H = (0, h.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != x && y && H,
-        z = B && y,
+        V = null != y && x && H,
+        z = B && x,
         W = (0, A.G)(t),
         K = (0, A.z)(t),
         Y = i.useMemo(() => {
             let e = [];
             return (
-                y
+                x
                     ? (z &&
                           e.push({
                               label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
@@ -91,7 +91,7 @@ function R(e) {
                               onClick() {
                                   (0, m.W)({
                                       appId: t.id,
-                                      botId: x,
+                                      botId: y,
                                       analyticsLocations: D,
                                       customId: a,
                                       referrerId: R
@@ -101,8 +101,8 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, M, t.id, G, a, R, D, y, K, x]),
-        X = y ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(k, { app: t });
+        }, [z, V, U, F, M, t.id, G, a, R, D, x, K, y]),
+        X = x ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
         title: _,
         staticBannerSrc: O,
@@ -119,11 +119,11 @@ function R(e) {
             linkType: l,
             referrerId: R,
             activityCustomId: a,
-            onView: h
+            onView: g
         }
     });
 }
-function k(e) {
+function L(e) {
     var t, n, a;
     let { app: c } = e,
         u =
@@ -172,26 +172,26 @@ function k(e) {
         ]
     });
 }
-function L(e) {
+function k(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(
-            [y.Z],
+            [x.Z],
             () => {
                 var e;
-                return null != (e = y.Z.getGuildId()) ? e : void 0;
+                return null != (e = x.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         u = (0, _.N)(t.id),
         d = (0, o.Wu)(
-            [v.default, x.Z],
+            [v.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
                     let r = v.default.getUser(n.author_id),
-                        i = x.Z.isFriend(n.author_id);
+                        i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
                 return e;
@@ -205,7 +205,7 @@ function L(e) {
                     guildId: c,
                     activityText: w.intl.formatToPlainString(w.t['IJa+4+'], { count: d.length })
                 });
-            if (u.some((e) => (0, h.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

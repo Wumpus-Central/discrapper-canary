@@ -24,7 +24,7 @@ e.exports = function (e) {
             end: /(?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*/,
             keywords: s
         },
-        f = [
+        _ = [
             e.BINARY_NUMBER_MODE,
             {
                 className: 'number',
@@ -85,8 +85,8 @@ e.exports = function (e) {
                 subLanguage: 'javascript'
             }
         ];
-    u.contains = f;
-    let _ = {
+    u.contains = _;
+    let f = {
             className: 'params',
             begin: '\\(',
             returnBegin: !0,
@@ -95,7 +95,7 @@ e.exports = function (e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: s,
-                    contains: ['self'].concat(f)
+                    contains: ['self'].concat(_)
                 }
             ]
         },
@@ -120,13 +120,13 @@ e.exports = function (e) {
         aliases: ['ls'],
         keywords: s,
         illegal: /\/\*/,
-        contains: f.concat([
+        contains: _.concat([
             e.COMMENT('\\/\\*', '\\*\\/'),
             e.HASH_COMMENT_MODE,
             p,
             {
                 className: 'function',
-                contains: [c, _],
+                contains: [c, f],
                 returnBegin: !0,
                 variants: [
                     {

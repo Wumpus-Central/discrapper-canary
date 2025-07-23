@@ -17,38 +17,38 @@ var r = n(442837),
     c = n(496675),
     u = n(979651),
     d = n(934415),
-    f = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    f = n(388032);
 function p(e, t, n) {
     var r;
     let a = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
     let o = t.getGuild(e.getGuildId()),
         s = null != (r = null == o ? void 0 : o.maxStageVideoChannelUsers) ? r : 0;
-    return (!e.isGuildStageVoice() || !(s <= 0)) && (!a || !!(0, i.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id;
+    return (!e.isGuildStageVoice() || !(s <= 0)) && (!a || !!(0, i.Z)(e, n)) && !!n.can(_.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id;
 }
 function h(e) {
     switch (e) {
         case 0:
-            return _.intl.string(_.t['1i3tSU']);
+            return f.intl.string(f.t['1i3tSU']);
         case 1:
-            return _.intl.string(_.t.elyVbm);
+            return f.intl.string(f.t.elyVbm);
         case 2:
-            return _.intl.string(_.t.pgUTZG);
+            return f.intl.string(f.t.pgUTZG);
         default:
-            return _.intl.string(_.t['7Xq/nZ']);
+            return f.intl.string(f.t['7Xq/nZ']);
     }
 }
 function m(e) {
     switch (e) {
         case 0:
-            return ''.concat(_.intl.string(_.t['7Xq/nZ']), ': ').concat(_.intl.string(_.t['1i3tSU']));
+            return ''.concat(f.intl.string(f.t['7Xq/nZ']), ': ').concat(f.intl.string(f.t['1i3tSU']));
         case 1:
-            return ''.concat(_.intl.string(_.t['7Xq/nZ']), ': ').concat(_.intl.string(_.t.elyVbm));
+            return ''.concat(f.intl.string(f.t['7Xq/nZ']), ': ').concat(f.intl.string(f.t.elyVbm));
         case 2:
-            return ''.concat(_.intl.string(_.t['7Xq/nZ']), ': ').concat(_.intl.string(_.t.pgUTZG));
+            return ''.concat(f.intl.string(f.t['7Xq/nZ']), ': ').concat(f.intl.string(f.t.pgUTZG));
         default:
-            return ''.concat(_.intl.string(_.t['7Xq/nZ']), ': ').concat(_.intl.string(_.t['9C444u']));
+            return ''.concat(f.intl.string(f.t['7Xq/nZ']), ': ').concat(f.intl.string(f.t['9C444u']));
     }
 }
 function g(e, t, n, r, a) {
@@ -57,10 +57,10 @@ function g(e, t, n, r, a) {
     let l = t.isInChannel(e.id),
         c = e instanceof o.Sf && (0, d.rY)(e, t, n),
         u = (0, i.Z)(e, r),
-        f = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId();
-    f ? (s = 0) : u || l ? c && !l && (s = 1) : (s = 2);
-    let _ = u && !c;
-    return [!__OVERLAY__ && !f && (l || _), s];
+        _ = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId();
+    _ ? (s = 0) : u || l ? c && !l && (s = 1) : (s = 2);
+    let f = u && !c;
+    return [!__OVERLAY__ && !_ && (l || f), s];
 }
 function E(e) {
     return (0, r.Wu)([u.Z, l.Z, c.Z, a.Z], () => g(e, u.Z, l.Z, c.Z, a.Z));

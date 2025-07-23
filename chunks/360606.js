@@ -7,8 +7,8 @@ var a,
     c = n(570140),
     u = n(308063),
     d = n(496675),
-    f = n(855674),
-    _ = n(999382),
+    _ = n(855674),
+    f = n(999382),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -54,7 +54,7 @@ function C(e) {
     let { section: t } = e;
     if (t !== p.pNK.INTEGRATIONS) return !1;
     if (null == r) {
-        let e = _.Z.getGuildId();
+        let e = f.Z.getGuildId();
         (null != e && (u.Z.fetchForGuild(e), (v = !0)), P(!1));
     }
 }
@@ -63,11 +63,11 @@ function R(e) {
     ((i = t), (N = n));
 }
 function P(e) {
-    if (null != (r = _.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
-        let e = _.Z.getProps().integrations;
+    if (null != (r = f.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
+        let e = f.Z.getProps().integrations;
         (null == e && (I = !0), (g = null != e ? e : []));
     } else g = [];
-    if (((E = null != r && d.Z.can(p.Plq.MANAGE_WEBHOOKS, r) ? f.Z.getWebhooksForGuild(r.id) : []), !e && null != y)) {
+    if (((E = null != r && d.Z.can(p.Plq.MANAGE_WEBHOOKS, r) ? _.Z.getWebhooksForGuild(r.id) : []), !e && null != y)) {
         let e = K(y.id);
         null != e && (y = e);
     }
@@ -199,7 +199,7 @@ function z(e) {
 }
 class q extends (a = l.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, d.Z);
+        this.waitFor(f.Z, _.Z, d.Z);
     }
     hasChanges() {
         return A;

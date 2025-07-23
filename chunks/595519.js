@@ -2,7 +2,7 @@ n.d(t, {
     NX: () => d,
     WS: () => u,
     l5: () => c,
-    qB: () => _
+    qB: () => f
 });
 var r = n(106351),
     i = n(442837),
@@ -18,14 +18,14 @@ function c(e) {
     return (null == t || (null == t ? void 0 : t.type) === r.d.GUILD_CATEGORY) && l(e.type);
 }
 function u(e) {
-    return f(e, o.Z);
+    return _(e, o.Z);
 }
 function d(e) {
-    return (0, i.e7)([a.Z, o.Z], () => f(a.Z.getChannel(e), o.Z));
+    return (0, i.e7)([a.Z, o.Z], () => _(a.Z.getChannel(e), o.Z));
 }
-function f(e, t) {
+function _(e, t) {
     return null != e && void 0 !== e && !!c(e) && (null == e.guild_id || !!t.can(s.Pl.USE_EMBEDDED_ACTIVITIES, e)) && !0;
 }
-function _() {
+function f() {
     return !1;
 }

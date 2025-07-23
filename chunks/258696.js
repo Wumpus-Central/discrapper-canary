@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(998698),
     u = n(211242),
     d = n(576645),
-    f = n(286961),
-    _ = n(913663),
+    _ = n(286961),
+    f = n(913663),
     p = n(117530),
     h = n(594174),
     m = n(74538),
@@ -23,7 +23,7 @@ var r = n(255367),
     T = n(302195);
 function S(e) {
     let { disabled: t, channel: n } = e,
-        i = (0, f.Z)();
+        i = (0, _.Z)();
     return null != i
         ? (0, r.jsx)(O.Z, {
               giftingPromotionConfig: i,
@@ -36,7 +36,7 @@ function S(e) {
           });
 }
 function A(e) {
-    var t, n, i, f, _, p, y;
+    var t, n, i, _, f, p, y;
     let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
         L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         x = N(C.id, O, P),
@@ -50,7 +50,7 @@ function A(e) {
         B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
         V = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
-        ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
+        ((null == (f = O.gifts) ? void 0 : f.button) != null &&
             null == M &&
             !j &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
@@ -117,7 +117,7 @@ function A(e) {
         ),
     null != D && U.push(D),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
-        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || L) &&
+        ((null == (_ = O.submit) ? void 0 : _.ignorePreference) || L) &&
         U.push(
             (0, r.jsx)(
                 v.Z,
@@ -136,8 +136,8 @@ function A(e) {
           });
 }
 function N(e, t, n) {
-    return (0, o.e7)([_.Z, p.Z], () => {
-        let r = _.Z.getStickerPreview(e, t.drafts.type),
+    return (0, o.e7)([f.Z, p.Z], () => {
+        let r = f.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === p.Z.getUploads(e, t.drafts.type).length && n && !i;
     });

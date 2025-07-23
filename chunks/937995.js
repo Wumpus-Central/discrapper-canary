@@ -47,52 +47,52 @@ function u(e) {
     let { children: t, timeout: n } = e,
         [o, u] = i.useState(!1),
         d = i.useRef(new Set()),
-        f = i.useRef(null);
+        _ = i.useRef(null);
     i.useEffect(
         () => (
-            (f.current = new a.sW(n, () => u(!0))),
-            f.current.delay(),
+            (_.current = new a.sW(n, () => u(!0))),
+            _.current.delay(),
             () => {
                 var e;
-                (null == (e = f.current) || e.cancel(), (f.current = null));
+                (null == (e = _.current) || e.cancel(), (_.current = null));
             }
         ),
         [n]
     );
-    let _ = i.useCallback(
+    let f = i.useCallback(
             (e) => {
                 var t;
-                (u(!1), d.current.add(e), null == (t = f.current) || t.cancel());
+                (u(!1), d.current.add(e), null == (t = _.current) || t.cancel());
             },
-            [d, f, u]
+            [d, _, u]
         ),
         p = i.useCallback(
             (e) => {
                 if ((d.current.delete(e), 0 === d.current.size)) {
                     var t;
-                    null == (t = f.current) || t.delay();
+                    null == (t = _.current) || t.delay();
                 }
             },
-            [d, f]
+            [d, _]
         ),
         h = i.useCallback(() => {
             if ((u(!1), 0 === d.current.size)) {
                 var e;
-                null == (e = f.current) || e.delay();
+                null == (e = _.current) || e.delay();
             }
-        }, [d, f, u]),
+        }, [d, _, u]),
         m = i.useCallback(() => {
             var e;
-            d.current.size > 0 || (null == (e = f.current) || e.cancel(), u(!0));
-        }, [f, u]),
+            d.current.size > 0 || (null == (e = _.current) || e.cancel(), u(!0));
+        }, [_, u]),
         g = i.useMemo(
             () => ({
                 onAllowIdle: p,
-                onPreventIdle: _,
+                onPreventIdle: f,
                 onActive: h,
                 onForceIdle: m
             }),
-            [p, _, h, m]
+            [p, f, h, m]
         );
     return (0, r.jsx)(c.Provider, {
         value: o,

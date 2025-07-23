@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(607070),
     u = n(313201),
     d = n(729894);
-function f(e) {
-    let { children: t, heading: n, headingIcon: a, introText: f, className: _, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
+function _(e) {
+    let { children: t, heading: n, headingIcon: a, introText: _, className: f, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
         E = (0, u.Dt)(),
         b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         y = i.useRef(null);
@@ -24,7 +24,7 @@ function f(e) {
         }, [b]),
         (0, r.jsxs)('section', {
             ref: p ? y : void 0,
-            className: o()(d.section, _),
+            className: o()(d.section, f),
             'aria-labelledby': null != n ? E : void 0,
             children: [
                 null != n &&
@@ -44,10 +44,10 @@ function f(e) {
                                     a
                                 ]
                             }),
-                            null != f &&
+                            null != _ &&
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
-                                    children: f
+                                    children: _
                                 })
                         ]
                     }),

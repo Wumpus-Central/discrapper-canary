@@ -7,7 +7,7 @@ var r = n(255367),
     l = n(388032),
     c = n(870017);
 function u(e) {
-    let { application: t, src: n, className: a, size: u, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
+    let { application: t, src: n, className: a, size: u, botIconFirst: d, fallbackAvatar: _, rendersPlaceholder: f = !1 } = e,
         p = i.useMemo(
             () =>
                 null != t
@@ -17,13 +17,13 @@ function u(e) {
                           bot: t.bot,
                           size: u,
                           botIconFirst: d,
-                          fallbackAvatar: f
+                          fallbackAvatar: _
                       })
                     : n,
-            [t, n, u, d, f]
+            [t, n, u, d, _]
         );
     return null == p
-        ? _
+        ? f
             ? (0, r.jsx)('div', { className: o()(c.icon, c.placeholder, a) })
             : null
         : (0, r.jsx)('img', {

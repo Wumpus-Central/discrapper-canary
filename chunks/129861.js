@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(813549),
     u = n(246946),
     d = n(51144),
-    f = n(388032),
-    _ = n(350651);
+    _ = n(388032),
+    f = n(350651);
 function p(e, t, n) {
     return (
         t in e
@@ -89,17 +89,17 @@ function y(e) {
 let O = (e) => {
         let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: c, className: u, usernameClass: d, color: p, botClass: m, showStreamerModeTooltip: E } = e;
         return (0, r.jsxs)('div', {
-            className: a()(_.info, u),
+            className: a()(f.info, u),
             children: [
                 (0, r.jsx)(s.ua7, {
-                    text: f.intl.string(f.t.Br1ls7),
+                    text: _.intl.string(_.t.Br1ls7),
                     shouldShow: E,
                     'aria-label': !!E && void 0,
                     children: (e) =>
                         (0, r.jsx)(
                             'span',
                             g(h({}, e), {
-                                className: a()(_.__invalid_username, d),
+                                className: a()(f.__invalid_username, d),
                                 style: null != p ? { color: p } : void 0,
                                 children: t
                             })
@@ -107,26 +107,26 @@ let O = (e) => {
                 }),
                 null != n
                     ? (0, r.jsx)('span', {
-                          className: a()(_.infoSpacing, c),
+                          className: a()(f.infoSpacing, c),
                           children: n
                       })
                     : void 0,
                 null != i &&
                     (0, r.jsx)(l.Z, {
                         type: i,
-                        className: a()(_.infoSpacing, m),
+                        className: a()(f.infoSpacing, m),
                         verified: o
                     })
             ]
         });
     },
     v = (e) => {
-        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: f = !1, hideDiscriminator: _ = !1 } = e,
+        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: _ = !1, hideDiscriminator: f = !1 } = e,
             p = E(e, ['user', 'nick', 'forceUsername', 'showAccountIdentifier', 'overrideDiscriminator', 'forcePomelo', 'hideBotTag', 'hideDiscriminator']);
         let m = (0, o.e7)([u.Z], () => u.Z.hidePersonalInformation),
-            g = m || _ || t.isNonUserBot(),
+            g = m || f || t.isNonUserBot(),
             b = t.toString(),
-            v = f ? null : y(t),
+            v = _ ? null : y(t),
             I = t.isVerifiedBot(),
             T = d.ZP.getName(t),
             S = i ? b : null != n ? n : T,

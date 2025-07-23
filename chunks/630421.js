@@ -13,7 +13,7 @@ var r = n(740078),
         bottom: 'auto',
         left: 'auto'
     };
-function f(e, t) {
+function _(e, t) {
     var n = e.x,
         r = e.y,
         i = t.devicePixelRatio || 1;
@@ -22,13 +22,13 @@ function f(e, t) {
         y: (0, u.NM)(r * i) / i || 0
     };
 }
-function _(e) {
+function f(e) {
     var t,
         n,
         l = e.popper,
         c = e.popperRect,
         u = e.placement,
-        _ = e.variation,
+        f = e.variation,
         p = e.offsets,
         h = e.position,
         m = e.gpuAcceleration,
@@ -59,12 +59,12 @@ function _(e) {
         var P = (0, i.Z)(l),
             w = 'clientHeight',
             D = 'clientWidth';
-        (P === (0, a.Z)(l) && ((P = (0, o.Z)(l)), 'static' !== (0, s.Z)(P).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width), (O *= m ? 1 : -1)));
+        (P === (0, a.Z)(l) && ((P = (0, o.Z)(l)), 'static' !== (0, s.Z)(P).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && f === r.ut)) && ((C = r.I), (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && f === r.ut)) && ((N = r.F2), (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width), (O *= m ? 1 : -1)));
     }
     var L = Object.assign({ position: h }, g && d),
         x =
             !0 === E
-                ? f(
+                ? _(
                       {
                           x: O,
                           y: I
@@ -102,7 +102,7 @@ let p = {
             (t.styles.popper = Object.assign(
                 {},
                 t.styles.popper,
-                _(
+                f(
                     Object.assign({}, d, {
                         offsets: t.modifiersData.popperOffsets,
                         position: t.options.strategy,
@@ -115,7 +115,7 @@ let p = {
                 (t.styles.arrow = Object.assign(
                     {},
                     t.styles.arrow,
-                    _(
+                    f(
                         Object.assign({}, d, {
                             offsets: t.modifiersData.arrow,
                             position: 'absolute',

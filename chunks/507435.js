@@ -11,12 +11,12 @@ var r = n(255367),
     p = n(739566),
     m = n(942951),
     f = n(834129),
-    g = n(809026),
-    h = n(139256),
+    h = n(809026),
+    g = n(139256),
     _ = n(489887),
     b = n(388032),
     E = n(271629);
-function x() {
+function y() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
@@ -31,10 +31,10 @@ function x() {
         })
     });
 }
-function y(e) {
+function x(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(x, {});
+    if (n) t = (0, r.jsx)(y, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -96,7 +96,7 @@ function v(e) {
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, r.jsx)(h.ZY, {
+                            (0, r.jsx)(g.ZY, {
                                 size: 16,
                                 className: E.victorIcon,
                                 isVictor: !0,
@@ -162,7 +162,7 @@ function C(e) {
     return (0, r.jsxs)('div', {
         className: a()(E.container, { [E.containerWithImage]: c }, t),
         children: [
-            (0, r.jsx)(y, {
+            (0, r.jsx)(x, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -208,9 +208,9 @@ function O(e) {
     var t;
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
-        h = i.useMemo(() => (0, g.Z)(d), [d]),
-        x = (0, o.aF)(null != (t = null == h ? void 0 : h.questionText) ? t : '', _.Dv),
-        y = (0, p.ZP)(n),
+        g = i.useMemo(() => (0, h.Z)(d), [d]),
+        y = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', _.Dv),
+        x = (0, p.ZP)(n),
         v = (0, m.l)({
             user: n.author,
             channelId: l.id,
@@ -227,7 +227,7 @@ function O(e) {
                     returnMessageId: n.id
                 });
         }, [n.id, O]);
-    return null == h
+    return null == g
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -236,15 +236,15 @@ function O(e) {
                       timestamp: n.timestamp,
                       compact: a,
                       children: b.intl.format(b.t['VJcK4+'], {
-                          username: y.nick,
-                          usernameHook: v(y),
-                          title: x,
+                          username: x.nick,
+                          usernameHook: v(x),
+                          title: y,
                           titleOnClick: j
                       })
                   }),
                   (0, r.jsx)(C, {
                       className: E.embed,
-                      data: h,
+                      data: g,
                       onClickPollLink: u ? void 0 : j
                   })
               ]

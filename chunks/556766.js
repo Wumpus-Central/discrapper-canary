@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(317381),
     d = n(966302),
-    f = n(460181),
-    _ = n(474873),
+    _ = n(460181),
+    f = n(474873),
     p = n(292959),
     h = n(944486),
     m = n(246946),
@@ -92,11 +92,11 @@ function N() {
         t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
         n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
         a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
-        o = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
+        o = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
         y = i.useRef(!1),
         v = (0, s.Z)(() => {
             let e = 'call_ringing';
-            return o === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)('call_ringing', o);
+            return o === b.YC.CLASSIC ? (0, _.tu)(A(), e) : (0, _.uk)('call_ringing', o);
         }, [o]);
     return (
         i.useEffect(

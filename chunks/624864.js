@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,7 +83,7 @@ class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = h();
-        ((m = _(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings) })), this.waitFor(o.default));
+        ((m = f(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings) })), this.waitFor(o.default));
     }
     getState() {
         return m;
@@ -106,7 +106,7 @@ class y extends (r = i.ZP.PersistedStore) {
             var t;
             let n = o.default.getTextChatNotificationMode() === c.Ypu.DISABLED,
                 r = !1 === o.default.showInviteNotification;
-            return _(d({}, e), {
+            return f(d({}, e), {
                 notificationSettings: new Set([n ? l.OverlayNotificationDisabledSetting.TEXT_CHAT : void 0, r ? l.OverlayNotificationDisabledSetting.GAME_ACTIVITY : void 0, ...Array.from(null != (t = e.notificationSettings) ? t : [])].filter(s.lm))
             });
         }

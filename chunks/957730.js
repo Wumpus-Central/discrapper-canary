@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(633302),
     u = n(428595),
     d = n(594199),
-    f = n(11637),
-    _ = n(467798),
+    _ = n(11637),
+    f = n(467798),
     p = n(601070),
     h = n(695346),
     m = n(592125),
@@ -185,7 +185,7 @@ let G = u.Z.RULES,
                 let a = Y.exec(e);
                 if (null != a && i[0].length <= a[0].length) return null;
                 if ('' === n) {
-                    let t = _.v.exec(e);
+                    let t = f.v.exec(e);
                     if (null != t && i[0].length <= t[0].length) return null;
                 }
                 return i;
@@ -325,7 +325,7 @@ let G = u.Z.RULES,
             }
         },
         soundboard: {
-            match: o().anyScopeRegex(f.hf),
+            match: o().anyScopeRegex(_.hf),
             parse(e) {
                 let [t, n, r] = e;
                 return { content: '<sound:'.concat(n, ':').concat(r, '>') };
@@ -459,20 +459,20 @@ function $(e) {
             id: e.id,
             text: e.name
         })),
-        f = l.ZP.getDisambiguatedEmojiContext(n),
-        _ = f.getEscapedCustomEmoticonNames(),
-        h = f.getCustomEmoji(),
-        m = f.getCustomEmoticonRegex();
+        _ = l.ZP.getDisambiguatedEmojiContext(n),
+        f = _.getEscapedCustomEmoticonNames(),
+        h = _.getCustomEmoji(),
+        m = _.getCustomEmoticonRegex();
     return {
         inline: !0,
         mentionableRoles: s,
         guild: r,
         users: o,
         channels: c.concat(u).concat(d),
-        emojiContext: f,
+        emojiContext: _,
         customEmoticonsRegex: m,
         customEmoji: h,
-        textExclusions: _,
+        textExclusions: f,
         disableErrorGuards: !0
     };
 }
@@ -510,11 +510,11 @@ let et = {
             l = n ? K : i().omit(K, ['spoiler', 'timestamp']),
             u = n ? ee : c.ZP.translateSurrogatesToInlineEmoji,
             d = o().parserFor(l),
-            f = {
+            _ = {
                 inline: !0,
                 guild: s,
                 isNotification: n
             };
-        return Q(d(e, f), f, u);
+        return Q(d(e, _), _, u);
     }
 };

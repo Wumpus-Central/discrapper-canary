@@ -14,8 +14,8 @@ var r = n(512722),
     c = n(493683),
     u = n(749210),
     d = n(904245),
-    f = n(911969),
-    _ = n(386696),
+    _ = n(911969),
+    f = n(386696),
     p = n(957730),
     h = n(968437),
     m = n(928477),
@@ -110,7 +110,7 @@ let L = n(227419).Z,
             id: '-1',
             untranslatedName: 'shrug',
             displayName: 'shrug',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -123,7 +123,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.JewOra);
                     },
@@ -142,7 +142,7 @@ let L = n(227419).Z,
             id: '-2',
             untranslatedName: 'tableflip',
             displayName: 'tableflip',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -155,7 +155,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.EI80t7);
                     },
@@ -174,7 +174,7 @@ let L = n(227419).Z,
             id: '-3',
             untranslatedName: 'unflip',
             displayName: 'unflip',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -187,7 +187,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.ETs6go);
                     },
@@ -206,7 +206,7 @@ let L = n(227419).Z,
             id: '-4',
             untranslatedName: 'tts',
             displayName: 'tts',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -219,7 +219,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t['k+sw9v']);
                     },
@@ -245,7 +245,7 @@ let L = n(227419).Z,
             id: '-5',
             untranslatedName: 'me',
             displayName: 'me',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -258,7 +258,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.RWTgNT);
                     },
@@ -278,7 +278,7 @@ let L = n(227419).Z,
             id: '-6',
             untranslatedName: 'spoiler',
             displayName: 'spoiler',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -291,7 +291,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.D13pbW);
                     },
@@ -311,7 +311,7 @@ let L = n(227419).Z,
             id: '-7',
             untranslatedName: 'nick',
             displayName: 'nick',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -324,7 +324,7 @@ let L = n(227419).Z,
                 {
                     name: 'new_nick',
                     displayName: 'new_nick',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.WTSzVl);
                     },
@@ -349,7 +349,7 @@ let L = n(227419).Z,
             id: '-10',
             untranslatedName: 'thread',
             displayName: 'thread',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -362,7 +362,7 @@ let L = n(227419).Z,
                 {
                     name: 'name',
                     displayName: 'name',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.TffOfX);
                     },
@@ -374,7 +374,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.QXfSfX);
                     },
@@ -401,7 +401,7 @@ let L = n(227419).Z,
             id: '-11',
             untranslatedName: 'kick',
             displayName: 'kick',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -414,7 +414,7 @@ let L = n(227419).Z,
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: f.jw.USER,
+                    type: _.jw.USER,
                     get description() {
                         return C.intl.string(C.t.gF8IpK);
                     },
@@ -426,7 +426,7 @@ let L = n(227419).Z,
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.QWldgo);
                     },
@@ -460,7 +460,7 @@ let L = n(227419).Z,
             id: '-12',
             untranslatedName: 'ban',
             displayName: 'ban',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -473,7 +473,7 @@ let L = n(227419).Z,
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: f.jw.USER,
+                    type: _.jw.USER,
                     get description() {
                         return C.intl.string(C.t.z3XPjo);
                     },
@@ -485,7 +485,7 @@ let L = n(227419).Z,
                 {
                     name: 'delete_messages',
                     displayName: 'delete_messages',
-                    type: f.jw.INTEGER,
+                    type: _.jw.INTEGER,
                     get description() {
                         return C.intl.string(C.t.smrvAw);
                     },
@@ -536,7 +536,7 @@ let L = n(227419).Z,
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.dG4noa);
                     },
@@ -572,7 +572,7 @@ let L = n(227419).Z,
             id: '-13',
             untranslatedName: 'timeout',
             displayName: 'timeout',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -585,7 +585,7 @@ let L = n(227419).Z,
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: f.jw.USER,
+                    type: _.jw.USER,
                     get description() {
                         return C.intl.string(C.t.UU3VRk);
                     },
@@ -597,7 +597,7 @@ let L = n(227419).Z,
                 {
                     name: 'duration',
                     displayName: 'duration',
-                    type: f.jw.INTEGER,
+                    type: _.jw.INTEGER,
                     get description() {
                         return C.intl.string(C.t.SNqN1d);
                     },
@@ -617,7 +617,7 @@ let L = n(227419).Z,
                 {
                     name: 'reason',
                     displayName: 'reason',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.akHScH);
                     },
@@ -635,7 +635,7 @@ let L = n(227419).Z,
                 let { guild: n, channel: r } = t;
                 if (null == n || null == r) return;
                 let i = x(e, 'user');
-                if (!(0, _.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, C.intl.string(C.t.F5pqSU));
+                if (!(0, f.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, C.intl.string(C.t.F5pqSU));
                 (async () => {
                     var t, a;
                     let s = null != (t = x(e, 'duration')) ? t : '',
@@ -665,7 +665,7 @@ let L = n(227419).Z,
             id: '-14',
             untranslatedName: 'msg',
             displayName: 'msg',
-            type: f.yU.CHAT,
+            type: _.yU.CHAT,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
@@ -678,7 +678,7 @@ let L = n(227419).Z,
                 {
                     name: 'user',
                     displayName: 'user',
-                    type: f.jw.USER,
+                    type: _.jw.USER,
                     get description() {
                         return C.intl.string(C.t['KmVq/P']);
                     },
@@ -690,7 +690,7 @@ let L = n(227419).Z,
                 {
                     name: 'message',
                     displayName: 'message',
-                    type: f.jw.STRING,
+                    type: _.jw.STRING,
                     get description() {
                         return C.intl.string(C.t.oGUuOD);
                     },

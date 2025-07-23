@@ -56,26 +56,26 @@ function u(e, t) {
     );
 }
 let d = {},
-    f = null,
-    _ = !1;
+    _ = null,
+    f = !1;
 function p(e) {
     let { paymentSources: t } = e;
-    for (let e of ((d = {}), (f = null), t)) ((d[e.id] = o.ZP.createFromServer(e)), e.default && (f = e.id));
-    (null == f && t.length > 0 && (f = t[0].id), (_ = !0));
+    for (let e of ((d = {}), (_ = null), t)) ((d[e.id] = o.ZP.createFromServer(e)), e.default && (_ = e.id));
+    (null == _ && t.length > 0 && (_ = t[0].id), (f = !0));
 }
 function h(e) {
     let { paymentSource: t } = e;
-    ((d = u(l({}, d), { [t.id]: t })), (t.isDefault || 1 === Object.keys(d).length) && (f = t.id));
+    ((d = u(l({}, d), { [t.id]: t })), (t.isDefault || 1 === Object.keys(d).length) && (_ = t.id));
 }
 function m(e) {
     let { id: t } = e;
-    if (((d = l({}, d)), delete d[t], f === t)) {
+    if (((d = l({}, d)), delete d[t], _ === t)) {
         let e = Object.keys(d);
-        f = 0 === e.length ? null : e[0];
+        _ = 0 === e.length ? null : e[0];
     }
 }
 function g() {
-    ((d = {}), (f = null), (_ = !1));
+    ((d = {}), (_ = null), (f = !1));
 }
 class E extends (r = i.ZP.Store) {
     get paymentSources() {
@@ -85,13 +85,13 @@ class E extends (r = i.ZP.Store) {
         return Object.keys(d);
     }
     get defaultPaymentSourceId() {
-        return f;
+        return _;
     }
     get defaultPaymentSource() {
-        return null != f ? d[f] : null;
+        return null != _ ? d[_] : null;
     }
     get hasFetchedPaymentSources() {
-        return _;
+        return f;
     }
     getDefaultBillingCountryCode() {
         let e = this.defaultPaymentSource;

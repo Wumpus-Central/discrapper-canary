@@ -72,12 +72,12 @@ e.exports = function (e) {
                 })
             )
         },
-        f = {
+        _ = {
             className: 'string',
             begin: '~[A-Z](?=' + l + ')',
             contains: c.map((t) => e.inherit(t, { contains: [u(t.end)] }))
         },
-        _ = {
+        f = {
             className: 'regex',
             variants: [
                 {
@@ -160,8 +160,8 @@ e.exports = function (e) {
         }),
         g = [
             p,
-            _,
             f,
+            _,
             d,
             e.HASH_COMMENT_MODE,
             m,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(833664),
-    f = n(545957),
-    _ = n(933557),
+    _ = n(545957),
+    f = n(933557),
     p = n(359588),
     h = n(74340),
     m = n(482798),
@@ -92,7 +92,7 @@ function U(e) {
         i = [],
         { descriptiveTextEnabled: a } = (0, O.f)({ location: 'StackedActivityStatus' }),
         { enableTopNavButton: o } = (0, m.Cq)({ location: 'StackedActivityStatus' }),
-        s = (0, _.ZP)(r),
+        s = (0, f.ZP)(r),
         l = a || o;
     return (
         null != t && i.push(k(t)),
@@ -123,8 +123,8 @@ function B(e) {
     });
 }
 function V(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: l, textClassName: _, iconClassName: m, textSize: O = 'xs', animateEmoji: v = !0, hasQuest: P = !1, hideEmoji: D = !1, hideTooltip: x = !1 } = e;
-    (0, f.Z)(null == t ? void 0 : t.id);
+    let { user: t, activities: n, applicationStream: a, voiceChannel: l, textClassName: f, iconClassName: m, textSize: O = 'xs', animateEmoji: v = !0, hasQuest: P = !1, hideEmoji: D = !1, hideTooltip: x = !1 } = e;
+    (0, _.Z)(null == t ? void 0 : t.id);
     let k = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         j = (0, g.Cf)(k),
         V = i.useMemo(() => {
@@ -182,7 +182,7 @@ function V(e) {
                     stream: k,
                     game: Y,
                     textVariant: 'text-'.concat(O, '/medium'),
-                    textClassName: _,
+                    textClassName: f,
                     iconClassName: m,
                     hideText: ee,
                     hideIcon: W,
@@ -193,7 +193,7 @@ function V(e) {
                 ? (0, r.jsx)(A.Z, {
                       activity: n,
                       textVariant: 'text-'.concat(O, '/medium'),
-                      textClassName: _,
+                      textClassName: f,
                       iconClassName: m,
                       hideText: ee,
                       hideIcon: W,
@@ -203,7 +203,7 @@ function V(e) {
                   ? (0, r.jsx)(N.Z, {
                         channel: l,
                         textVariant: 'text-'.concat(O, '/medium'),
-                        textClassName: _,
+                        textClassName: f,
                         iconClassName: m,
                         hideText: ee,
                         hideTooltip: t
@@ -247,7 +247,7 @@ function V(e) {
         ei = () =>
             (0, r.jsx)(G, {
                 textVariant: 'text-'.concat(O, '/medium'),
-                className: _,
+                className: f,
                 hasCustomStatusText: q,
                 totalActivityCount: J
             }),
@@ -287,7 +287,7 @@ function V(e) {
                       animateEmoji: v,
                       hideEmoji: D,
                       hideTooltip: x,
-                      textClassName: _,
+                      textClassName: f,
                       iconClassName: m,
                       tooltipClassName: eo,
                       voiceChannel: l,
@@ -301,7 +301,7 @@ function V(e) {
                 J > 0 &&
                 (0, r.jsx)(B, {
                     textVariant: 'text-'.concat(O, '/normal'),
-                    className: _
+                    className: f
                 }),
             es(),
             P && (0, r.jsx)(I.Z, {})

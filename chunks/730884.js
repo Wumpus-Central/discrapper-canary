@@ -7,12 +7,12 @@ var r = n(840475),
     c = n(621523),
     u = r.aTypedArray,
     d = r.exportTypedArrayMethod,
-    f = l(''.slice);
+    _ = l(''.slice);
 d(
     'fill',
     function (e) {
         var t = arguments.length;
-        return (u(this), s(i, this, 'Big' === f(o(this), 0, 3) ? a(e) : +e, t > 1 ? arguments[1] : void 0, t > 2 ? arguments[2] : void 0));
+        return (u(this), s(i, this, 'Big' === _(o(this), 0, 3) ? a(e) : +e, t > 1 ? arguments[1] : void 0, t > 2 ? arguments[2] : void 0));
     },
     c(function () {
         var e = 0;

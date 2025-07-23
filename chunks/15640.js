@@ -21,10 +21,10 @@ function d() {
         [n, r, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.Z, s.Z],
         u = n.paymentSourceIds,
         d = n.defaultPaymentSourceId,
-        f = r.isLoadedForSKUs(t),
-        _ = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
-    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t)) return (c('subscription payment source '.concat(_, ' not loaded for ').concat(t)), !1);
+        _ = r.isLoadedForSKUs(t),
+        f = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
+    if (null != f && !r.hasPaymentSourceForSKUIds(f, t)) return (c('subscription payment source '.concat(f, ' not loaded for ').concat(t)), !1);
     if (null != d && !r.hasPaymentSourceForSKUIds(d, t)) return (c('default payment source '.concat(d, ' not loaded for ').concat(t)), !1);
     for (let e of u) if (!r.hasPaymentSourceForSKUIds(e, t)) return (c('payment source '.concat(e, ' not loaded for ').concat(t)), !1);
-    return f;
+    return _;
 }

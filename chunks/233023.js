@@ -9,14 +9,14 @@ var i = n(120356),
     c = n(74340),
     u = n(19391),
     d = n(223135),
-    f = n(741570),
-    _ = n(584973),
+    _ = n(741570),
+    f = n(584973),
     p = n(556638),
     h = n(843280);
 function m(e) {
     let { customStatusActivity: t, textClassName: n, iconClassName: i, tooltipClassName: m, voiceChannel: g, hangStatus: E, textSize: b = 'xs', animateEmoji: y = !0, hideEmoji: O = !1, hideTooltip: v = !1 } = e,
         I = (0, l.Z)({ location: 'CustomStatusActivityStatus' }),
-        T = (0, f.E)('ActivityStatus', g);
+        T = (0, _.E)('ActivityStatus', g);
     if (null == t && null == E) return null;
     let S = null == t ? void 0 : t.emoji,
         A = null == t ? void 0 : t.state,
@@ -32,7 +32,7 @@ function m(e) {
           }))
         : null == S ||
           O ||
-          (w = (0, r.jsx)(_.Z, {
+          (w = (0, r.jsx)(f.Z, {
               emoji: S,
               animate: y,
               className: i,

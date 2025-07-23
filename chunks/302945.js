@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,10 +8,10 @@ var r = n(255367),
     c = n(182294),
     u = n(388032),
     d = n(798984);
-function f(e) {
+function _(e) {
     let { affinities: t, className: n } = e,
         a = (e) => (null != e.globalName ? e.globalName : e.username),
-        f = i.useMemo(
+        _ = i.useMemo(
             () =>
                 t.length > 1
                     ? u.intl.formatToPlainString(u.t.HaVk0d, {
@@ -22,7 +22,7 @@ function f(e) {
             [t]
         );
     if (t.length <= 1) return null;
-    let _ = t.map((e, n) =>
+    let f = t.map((e, n) =>
         (0, r.jsx)(
             l.O,
             {
@@ -38,13 +38,13 @@ function f(e) {
         children: [
             (0, r.jsx)('div', {
                 className: d.iconContainer,
-                children: _
+                children: f
             }),
             (0, r.jsx)('div', {
                 className: d.textContainer,
                 children: (0, r.jsx)(s.xv, {
                     variant: 'text-sm/medium',
-                    children: f
+                    children: _
                 })
             })
         ]

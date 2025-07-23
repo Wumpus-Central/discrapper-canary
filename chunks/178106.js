@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(704907),
     d = n(581883),
-    f = n(594174),
-    _ = n(164878),
+    _ = n(594174),
+    f = n(164878),
     p = n(763296),
     h = n(697426),
     m = n(710111),
@@ -89,7 +89,7 @@ function A(e) {
     let { soundId: n, userId: r } = e;
     if (!L()) return;
     let i = n.toString();
-    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && N(i);
+    r !== (null == (t = _.default.getCurrentUser()) ? void 0 : t.id) && R(i) && N(i);
 }
 function N(e) {
     I.set(e, e);
@@ -123,20 +123,20 @@ function D(e) {
     x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
 function L() {
-    return (0, _.v)({
+    return (0, f.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeRecentlyHeard;
 }
 function x() {
-    return (0, _.v)({
+    return (0, f.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
 class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], w));
+        (this.waitFor(_.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], w));
     }
     getState() {
         return {

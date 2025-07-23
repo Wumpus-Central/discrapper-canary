@@ -7,8 +7,8 @@ var a,
     c = n(911969),
     u = n(314897),
     d = n(592125),
-    f = n(70956),
-    _ = n(622449);
+    _ = n(70956),
+    f = n(622449);
 function p(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function g(e, t) {
         e
     );
 }
-let E = 5 * f.Z.Millis.MINUTE,
-    b = 10 * f.Z.Millis.SECOND,
+let E = 5 * _.Z.Millis.MINUTE,
+    b = 10 * _.Z.Millis.SECOND,
     y = {},
     O = {},
     v = {},
@@ -81,7 +81,7 @@ function S(e) {
     let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: o, onFailure: s } = e;
     (null != n && ((O[n] = t), (v[t] = n)),
         (y[t] = {
-            state: _.F.QUEUED,
+            state: f.F.QUEUED,
             data: r,
             onCreate: i,
             onCancel: a,
@@ -94,8 +94,8 @@ function A(e) {
     let { nonce: n, interactionId: r } = e;
     if (null == n) return !1;
     let i = y[n];
-    if (null == i || i.state !== _.F.QUEUED) return !1;
-    ((i.state = _.F.CREATED), null == (t = i.onCreate) || t.call(i, r));
+    if (null == i || i.state !== f.F.QUEUED) return !1;
+    ((i.state = f.F.CREATED), null == (t = i.onCreate) || t.call(i, r));
 }
 function N(e) {
     let { nonce: t } = e;
@@ -121,7 +121,7 @@ function R(e) {
         s.data.interactionType === c.B8.APPLICATION_COMMAND
             ? j(n)
             : (y[n] = g(h({}, s), {
-                  state: _.F.FAILED,
+                  state: f.F.FAILED,
                   errorCode: r,
                   errorMessage: i
               })));
@@ -129,7 +129,7 @@ function R(e) {
 function P(e) {
     let { channelId: t } = e;
     if (null == d.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && j(e);
+    for (let [e, t] of Object.entries(y)) t.state === f.F.FAILED && j(e);
 }
 function w(e) {
     let { nonce: t } = e;
@@ -193,7 +193,7 @@ class U extends (a = o.ZP.Store) {
     }
     canQueueInteraction(e, t) {
         let n = O[e];
-        return (null == n || null == y[n] || y[n].state === _.F.FAILED) && (null == y[t] || y[t].state === _.F.FAILED);
+        return (null == n || null == y[n] || y[n].state === f.F.FAILED) && (null == y[t] || y[t].state === f.F.FAILED);
     }
     getIFrameModalApplicationId() {
         return i;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(997841), n(388685));
+(n.d(t, { Z: () => x }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(533800),
@@ -11,28 +11,28 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    g = n(411198),
-    h = n(277707),
+    h = n(411198),
+    g = n(277707),
     _ = n(358595),
     b = n(981631),
     E = n(388032),
-    x = n(273254);
-function y(e) {
-    var t, y, v;
+    y = n(273254);
+function x(e) {
+    var t, x, v;
     let C,
         O,
         j,
         { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: k } = N,
-        L = N.state === b.r2o.ACCEPTING,
+        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
+        k = N.state === b.r2o.ACCEPTING,
         D = null != Z ? (0, m.jD)(Z) : null,
         M = null != T,
         U = null != D,
         F = null != D && D.isGuildVocal(),
         B = null != D && D.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (y = null == T ? void 0 : T.features.has(b.oNc.HUB)) && y,
+        H = null != (x = null == T ? void 0 : T.features.has(b.oNc.HUB)) && x,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
@@ -56,9 +56,9 @@ function y(e) {
         }, [N, P, z, M, I, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(_.Z, {});
-        (T = g.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
+        (T = h.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
     }
-    let J = (0, h.e)({
+    let J = (0, g.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
@@ -68,7 +68,7 @@ function y(e) {
     });
     return (
         (O = (0, r.jsxs)('span', {
-            className: x.infoTitle,
+            className: y.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
                     guildId: T.id,
@@ -83,7 +83,7 @@ function y(e) {
                         })
                 }),
                 (0, r.jsx)('span', {
-                    className: x.infoBadge,
+                    className: y.infoBadge,
                     children: (0, r.jsx)(d.Z, {
                         guild: T,
                         isBannerVisible: !1,
@@ -94,22 +94,22 @@ function y(e) {
         })),
         G &&
             (j = (0, r.jsx)(a.DY3, {
-                className: x.tooltipContainer,
+                className: y.tooltipContainer,
                 text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: x.infoIcon
+                    className: y.infoIcon
                 })
             })),
         F
             ? ((O = (0, r.jsx)(p.Z.Channel, { channel: D })),
               (C = (0, r.jsxs)('span', {
-                  className: x.infoTitle,
+                  className: y.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
-                          className: x.infoBadge,
+                          className: y.infoBadge,
                           children: (0, r.jsx)(d.Z, {
                               guild: T,
                               isBannerVisible: !1
@@ -117,10 +117,10 @@ function y(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != k && k > 0)
+            : (null != R && R >= 5) || (null != L && L > 0)
               ? (C = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: k
+                    membersOnline: L
                 }))
               : U &&
                 (C = (0, r.jsx)(p.Z.Channel, {
@@ -137,7 +137,7 @@ function y(e) {
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: x.headerLine,
+                            className: y.headerLine,
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: T }),
                                 (0, r.jsx)(p.Z.Info, {
@@ -149,7 +149,7 @@ function y(e) {
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: L,
+                            submitting: k,
                             color: p.Z.Button.Colors.GREEN,
                             children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
@@ -158,7 +158,7 @@ function y(e) {
                 T.features.has(b.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: x.separator }),
+                            (0, r.jsx)('div', { className: y.separator }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

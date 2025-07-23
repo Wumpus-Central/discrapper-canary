@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(410030),
     u = n(607070),
     d = n(921944),
-    f = n(388032),
-    _ = n(671821);
+    _ = n(388032),
+    f = n(671821);
 function p(e, t, n) {
     return (
         t in e
@@ -67,45 +67,45 @@ function E(e) {
         d = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         p = (0, c.ZP)();
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: f.container,
         children: [
             (0, r.jsx)('img', {
-                alt: f.intl.string(f.t.X4IxWF),
+                alt: _.intl.string(_.t.X4IxWF),
                 src: i.getImageUrl((0, o.wj)(p), d),
-                className: _.coachmark
+                className: f.coachmark
             }),
             (0, r.jsxs)('div', {
-                className: _.body,
+                className: f.body,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        className: _.text,
+                        className: f.text,
                         variant: 'heading-md/extrabold',
                         children: i.title()
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: _.text,
+                        className: f.text,
                         variant: 'text-sm/normal',
                         children: i.description()
                     })
                 ]
             }),
             (0, r.jsx)(s.zx, {
-                className: _.button,
+                className: f.button,
                 color: s.zx.Colors.BRAND_INVERTED,
                 onClick: () => n(),
                 children: i.cta()
             }),
             (0, r.jsx)(l.P3F, {
                 onClick: t,
-                className: _.closeButton,
-                'aria-label': f.intl.string(f.t.cpT0Cg),
+                className: f.closeButton,
+                'aria-label': _.intl.string(_.t.cpT0Cg),
                 children: (0, r.jsx)(l.Dio, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.closeIcon
+                    className: f.closeIcon
                 })
             }),
-            (0, r.jsx)('div', { className: _.pointer })
+            (0, r.jsx)('div', { className: f.pointer })
         ]
     });
 }

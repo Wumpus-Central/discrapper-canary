@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(358085),
@@ -41,7 +41,7 @@ let d = {
     ],
     leaveGameLogPrefix: '[FLog::SingleSurfaceApp] returnToLuaApp:'
 };
-class f extends i.Z {
+class _ extends i.Z {
     constructor(...e) {
         (super(...e),
             u(this, 'currentInterval_', null),
@@ -82,4 +82,4 @@ class f extends i.Z {
             }));
     }
 }
-let _ = new f();
+let f = new _();

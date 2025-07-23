@@ -11,15 +11,15 @@ function l(e) {
         c = null == (t = e.ownerDocument) ? void 0 : t.body,
         u = (0, s.Fp)(n.scrollWidth, n.clientWidth, c ? c.scrollWidth : 0, c ? c.clientWidth : 0),
         d = (0, s.Fp)(n.scrollHeight, n.clientHeight, c ? c.scrollHeight : 0, c ? c.clientHeight : 0),
-        f = -l.scrollLeft + (0, a.Z)(e),
-        _ = -l.scrollTop;
+        _ = -l.scrollLeft + (0, a.Z)(e),
+        f = -l.scrollTop;
     return (
-        'rtl' === (0, i.Z)(c || n).direction && (f += (0, s.Fp)(n.clientWidth, c ? c.clientWidth : 0) - u),
+        'rtl' === (0, i.Z)(c || n).direction && (_ += (0, s.Fp)(n.clientWidth, c ? c.clientWidth : 0) - u),
         {
             width: u,
             height: d,
-            x: f,
-            y: _
+            x: _,
+            y: f
         }
     );
 }

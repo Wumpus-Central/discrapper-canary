@@ -13,10 +13,10 @@ let p = (e) => l()().diff(l().unix(e), 'days');
 function m(e) {
     var t, i, l, m, f;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let g = e.message.embeds[0],
-        h = null != (l = null == (t = g.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID)) ? l : void 0,
-        _ = null != (m = null == h ? void 0 : h.rawValue) ? m : void 0,
-        b = null != (f = null == (i = g.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP)) ? f : void 0,
+    let h = e.message.embeds[0],
+        g = null != (l = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID)) ? l : void 0,
+        _ = null != (m = null == g ? void 0 : g.rawValue) ? m : void 0,
+        b = null != (f = null == (i = h.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP)) ? f : void 0,
         E = null == b || null == b.rawValue ? void 0 : parseFloat(b.rawValue);
     return null == _ || null == E
         ? null

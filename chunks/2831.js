@@ -7,7 +7,7 @@ var r = n(444675);
             o = !1,
             s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        ((l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u));
+        ((l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? f() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u));
     }
     function c(e) {
         'function' != typeof e && (e = Function('' + e));
@@ -41,8 +41,8 @@ var r = n(444675);
                 n.apply(t, r);
         }
     }
-    function f(e) {
-        if (o) setTimeout(f, 0, e);
+    function _(e) {
+        if (o) setTimeout(_, 0, e);
         else {
             var t = a[e];
             if (t) {
@@ -55,10 +55,10 @@ var r = n(444675);
             }
         }
     }
-    function _() {
+    function f() {
         n = function (e) {
             r.nextTick(function () {
-                f(e);
+                _(e);
             });
         };
     }
@@ -79,7 +79,7 @@ var r = n(444675);
     function h() {
         var t = 'setImmediate$' + Math.random() + '$',
             r = function (n) {
-                n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
+                n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && _(+n.data.slice(t.length));
             };
         (e.addEventListener ? e.addEventListener('message', r, !1) : e.attachEvent('onmessage', r),
             (n = function (n) {
@@ -89,7 +89,7 @@ var r = n(444675);
     function m() {
         var e = new MessageChannel();
         ((e.port1.onmessage = function (e) {
-            f(e.data);
+            _(e.data);
         }),
             (n = function (t) {
                 e.port2.postMessage(t);
@@ -100,14 +100,14 @@ var r = n(444675);
         n = function (t) {
             var n = s.createElement('script');
             ((n.onreadystatechange = function () {
-                (f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null));
+                (_(t), (n.onreadystatechange = null), e.removeChild(n), (n = null));
             }),
                 e.appendChild(n));
         };
     }
     function E() {
         n = function (e) {
-            setTimeout(f, 0, e);
+            setTimeout(_, 0, e);
         };
     }
 })('undefined' == typeof self ? (void 0 === n.g ? this : n.g) : self);

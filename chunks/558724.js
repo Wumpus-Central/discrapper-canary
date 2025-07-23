@@ -1,6 +1,6 @@
 (n.d(t, {
     J: () => I,
-    Z: () => k
+    Z: () => L
 }),
     n(388685));
 var r,
@@ -15,8 +15,8 @@ var r,
     p = n(650774),
     m = n(430824),
     f = n(496675),
-    g = n(914010),
-    h = n(594174),
+    h = n(914010),
+    g = n(594174),
     _ = n(981631);
 function b(e, t, n) {
     return (
@@ -47,7 +47,7 @@ function E(e) {
     }
     return e;
 }
-function x(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,13 +65,13 @@ function x(e, t) {
         e
     );
 }
-let y = {
+let x = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
         lastSeen: null
     },
-    v = y,
+    v = x,
     C = {},
     O = null,
     j = !1,
@@ -117,12 +117,12 @@ function A(e) {
                         } catch (e) {}
                     if (!e) continue;
                 }
-                let s = h.default.getCurrentUser(),
+                let s = g.default.getCurrentUser(),
                     c = (null == s ? void 0 : s.id) === a.ownerId,
                     u = f.Z.can(_.Plq.ADMINISTRATOR, a);
                 if ((t.includes('is_owner') && !c) || (t.includes('is_admin') && !u)) continue;
                 null == (C = null != C ? C : {})[e.key] && (C[e.key] = e);
-                let d = g.Z.getGuildId(),
+                let d = h.Z.getGuildId(),
                     m = null != d && d === a.id;
                 if ((!t.includes('is_viewing') || m) && !i) return !0;
             }
@@ -152,7 +152,7 @@ function Z() {
 }
 class R extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        ((v = null != e ? e : y), this.syncWith([g.Z], Z));
+        ((v = null != e ? e : x), this.syncWith([h.Z], Z));
     }
     getState() {
         return v;
@@ -176,14 +176,14 @@ class R extends (r = s.ZP.PersistedStore) {
         },
         (e) => {
             var t;
-            return x(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
+            return y(E({}, e), { lastSeen: null != (t = e.lastSeen) ? t : null });
         },
         (e) => {
             var t;
-            return x(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
+            return y(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         }
     ]));
-let k = new R(u.Z, {
+let L = new R(u.Z, {
     CONNECTION_OPEN: P,
     CONNECTION_RESUMED: P,
     SURVEY_FETCHED: w,

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(269128),
-    f = n(720452),
-    _ = n(502109),
+    _ = n(720452),
+    f = n(502109),
     p = n(710845),
     h = n(219929),
     m = n(985754),
@@ -173,7 +173,7 @@ class w extends i.PureComponent {
                         onPaymentRequestFailure: n
                     },
                     a = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, r.jsx)(_.Ch, T({}, m, i), a) : (0, r.jsx)(_.Tr, T({}, m, i), a);
+                return 'applePay' === e ? (0, r.jsx)(f.Ch, T({}, m, i), a) : (0, r.jsx)(f.Tr, T({}, m, i), a);
             }),
             E = [],
             b = [],
@@ -181,14 +181,14 @@ class w extends i.PureComponent {
         if (l)
             E.push(
                 ...this.createPaymentButtons(
-                    (0, f.Q)({
+                    (0, _.Q)({
                         ipCountryCode: 'ALL',
                         location: P
                     }).countryPaymentMethods
                 )
             );
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, f.Q)({
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, _.Q)({
                 ipCountryCode: s,
                 location: P
             });

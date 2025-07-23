@@ -16,24 +16,24 @@ function d() {
     let e = (0, a.s9z)((e) => u(e)),
         t = (0, i.e7)([l.Z], () => l.Z.isOpen()),
         n = (0, i.e7)([s.Z], () => s.Z.hasLayers()),
-        [d, f] = r.useState(!1),
-        _ = (0, o.Aq)();
+        [d, _] = r.useState(!1),
+        f = (0, o.Aq)();
     return (
         r.useEffect(() => {
             function e() {
-                f(!0);
+                _(!0);
             }
             function t() {
-                f(!1);
+                _(!1);
             }
             return (
-                _.subscribe(c.CkL.POPOUT_SHOW, e),
-                _.subscribe(c.CkL.POPOUT_HIDE, t),
+                f.subscribe(c.CkL.POPOUT_SHOW, e),
+                f.subscribe(c.CkL.POPOUT_HIDE, t),
                 () => {
-                    (_.unsubscribe(c.CkL.POPOUT_SHOW, e), _.unsubscribe(c.CkL.POPOUT_HIDE, t));
+                    (f.unsubscribe(c.CkL.POPOUT_SHOW, e), f.unsubscribe(c.CkL.POPOUT_HIDE, t));
                 }
             );
-        }, [_]),
+        }, [f]),
         e || t || d || n
     );
 }

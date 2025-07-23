@@ -20,8 +20,8 @@ var r = n(73800),
     c = n(166459),
     u = n(238349),
     d = n(577347),
-    f = n(228392),
-    _ = n(58873),
+    _ = n(228392),
+    f = n(58873),
     p = n(957730),
     h = n(48854),
     m = n(467798),
@@ -83,9 +83,9 @@ function M(e, t) {
     }
 }
 function k(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: a, privateThreadMode: o, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: f } = e;
+    let { parentChannel: t, parentMessageId: n, threadSettings: a, privateThreadMode: o, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: _ } = e;
     return r.useCallback(
-        async (e, r, _) => {
+        async (e, r, f) => {
             var p;
             let h = null == n,
                 m = L(a, o),
@@ -109,9 +109,9 @@ function k(e) {
                         rejectWithError: !1
                     });
                 });
-            (v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)), c.Z.clearAll(t.id, E.d.FirstThreadMessage));
+            (v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != f && f.length > 0)) && G(v, e, r, f, _)), c.Z.clearAll(t.id, E.d.FirstThreadMessage));
         },
-        [t, n, a, u, o, l, d, f]
+        [t, n, a, u, o, l, d, _]
     );
 }
 function j(e, t, n, r, a) {
@@ -155,7 +155,7 @@ function U(e) {
                 } catch (i) {
                     let { file: e, code: n, reason: r } = i;
                     throw (
-                        (0, _.A)({
+                        (0, f.A)({
                             file: e,
                             guildId: t.getGuildId(),
                             analyticsLocations: null != o ? o : [],
@@ -176,7 +176,7 @@ function U(e) {
                 s.Z.clearDraft(t.id, E.d.ThreadSettings),
                 s.Z.clearDraft(t.id, E.d.FirstThreadMessage),
                 c.Z.clearAll(t.id, E.d.FirstThreadMessage),
-                (0, f.Je)({
+                (0, _.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     postId: A.id
@@ -213,13 +213,13 @@ async function B(e, t, n, r) {
                       channelId: i.body.id
                   })));
     } catch (r) {
-        var c, f, p, m, E, b, v, I, T;
+        var c, _, p, m, E, b, v, I, T;
         if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
             o.Z.show({
                 title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t['1KEdvL']),
                 body: s ? P.intl.string(P.t.KGaiEB) : P.intl.string(P.t.P0wT5e)
             });
-        else if ((null == (f = r.body) ? void 0 : f.code) === R.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
+        else if ((null == (_ = r.body) ? void 0 : _.code) === R.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             o.Z.show({
                 title: P.intl.string(P.t['1KEdvL']),
                 body: P.intl.string(P.t.jDMxz8)
@@ -253,7 +253,7 @@ async function B(e, t, n, r) {
                         }),
                         (0, d.Z)(e.id, t));
                 } else
-                    (0, _.A)({
+                    (0, f.A)({
                         file: n,
                         guildId: e.getGuildId(),
                         analyticsLocations: null != t ? t : [],

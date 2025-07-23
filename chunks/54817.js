@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,16 +12,16 @@ var i = n(120356),
     p = n(981631),
     m = n(674563),
     f = n(388032),
-    g = n(126759);
-function h(e) {
+    h = n(126759);
+function g(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        h = (0, s.ZP)(t),
-        _ = i(h),
+        g = (0, s.ZP)(t),
+        _ = i(g),
         {
             avatarSrc: b,
-            eventHandlers: { onMouseEnter: E, onMouseLeave: x }
+            eventHandlers: { onMouseEnter: E, onMouseLeave: y }
         } = (0, u.m)(!0),
-        y =
+        x =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
                       hour: 'numeric',
@@ -33,32 +33,32 @@ function h(e) {
                 : '';
     return (0, r.jsx)('div', {
         onMouseEnter: E,
-        onMouseLeave: x,
+        onMouseLeave: y,
         children: (0, r.jsx)(d.Z, {
-            className: l()(g.mainContainer, { [g.compact]: n }),
+            className: l()(h.mainContainer, { [h.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(u.S, { src: b }),
-            iconContainerClassName: g.iconContainer,
+            iconContainerClassName: h.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: l()(g.content, { [g.compact]: n }),
+                className: l()(h.content, { [h.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
-                        messageClassname: g.spanCorrection,
-                        className: l()(g.usernameContainer, g.spanCorrection, { [g.compact]: n }),
+                        messageClassname: h.spanCorrection,
+                        className: l()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
                         username: (0, r.jsxs)('div', {
-                            className: g.spanCorrection,
+                            className: h.spanCorrection,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: g.username,
+                                    className: h.username,
                                     children: f.intl.string(f.t.hG1StL)
                                 }),
                                 (0, r.jsx)(o.Z, {
                                     type: m.Hb.SYSTEM_DM,
-                                    className: g.systemTag
+                                    className: h.systemTag
                                 })
                             ]
                         }),
@@ -66,16 +66,16 @@ function h(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: l()(g.__invalid_messageContent, { [g.compact]: n }),
+                        className: l()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === p.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? f.intl.format(f.t['+m8eDw'], {
-                                      username: h.nick,
+                                      username: g.nick,
                                       usernameHook: _,
-                                      time: y
+                                      time: x
                                   })
                                 : f.intl.format(f.t.BHeke3, {
-                                      username: h.nick,
+                                      username: g.nick,
                                       usernameHook: _
                                   })
                     })

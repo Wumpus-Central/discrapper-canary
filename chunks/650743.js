@@ -9,8 +9,8 @@ var i = n(399606),
     c = n(266454),
     u = n(880949),
     d = n(28546),
-    f = n(65029),
-    _ = n(430824),
+    _ = n(65029),
+    f = n(430824),
     p = n(556296),
     h = n(451478),
     m = n(358085),
@@ -52,12 +52,12 @@ function T(e) {
     let { soundboardSound: t, closePicker: v } = e,
         T = (0, d.Iu)((e) => e.searchQuery),
         S = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
-        A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
+        A = (0, i.e7)([f.Z], () => f.Z.getGuild(null == t ? void 0 : t.guildId)),
         N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
         R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
     if (null != t && T.length > 0)
-        return (0, r.jsx)(f.Z, {
+        return (0, r.jsx)(_.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, r.jsx)(s.Z, {

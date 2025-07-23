@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(314884),
     u = n(509545),
     d = n(626135),
-    f = n(267642),
-    _ = n(852679),
+    _ = n(267642),
+    f = n(852679),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -104,7 +104,7 @@ async function v(e) {
         );
     let x = [];
     (u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x)));
-    let M = (0, f.vx)(c.Z.boostSlots),
+    let M = (0, _.vx)(c.Z.boostSlots),
         k = M.length,
         j = (e) => {
             (null == v || v(), null == N || N(e));
@@ -148,7 +148,7 @@ async function v(e) {
                 }
             ));
     } else
-        (0, _.Z)({
+        (0, f.Z)({
             analyticsLocations: t,
             analyticsLocation: h,
             analyticsSourceLocation: g,

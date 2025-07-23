@@ -1,8 +1,8 @@
 (n.d(t, {
-    SO: () => h,
+    SO: () => g,
     eD: () => p,
     hO: () => m,
-    r: () => g,
+    r: () => h,
     ue: () => f
 }),
     n(388685));
@@ -46,5 +46,5 @@ let p = (e) => {
         let { publishedOnly: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (0, i.e7)([u.Z, a.Z], () => u.Z.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !a.Z.isViewingServerShop(e) }));
     },
-    g = (e) => (0, i.e7)([u.Z], () => (null == e ? void 0 : u.Z.getGuildProduct(e))),
-    h = (e) => (0, i.e7)([o.Z], () => null != e && o.Z.can(d.Plq.ADMINISTRATOR, e));
+    h = (e) => (0, i.e7)([u.Z], () => (null == e ? void 0 : u.Z.getGuildProduct(e))),
+    g = (e) => (0, i.e7)([o.Z], () => null != e && o.Z.can(d.Plq.ADMINISTRATOR, e));

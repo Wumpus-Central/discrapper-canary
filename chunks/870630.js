@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(231338),
     u = n(388032),
     d = n(782121),
-    f = n(744481),
-    _ = n(724641),
+    _ = n(744481),
+    f = n(724641),
     p = n(184229),
     h = n(504309);
 let m = function (e) {
@@ -42,7 +42,7 @@ let m = function (e) {
     ) {
         case c.He.PRZELEWY24: {
             let i = (0, o.wj)(t) ? p : h,
-                { onNameChange: l, onEmailChange: c, onP24BankChange: f, p24BankValue: _, billingAddressInfo: g } = e;
+                { onNameChange: l, onEmailChange: c, onP24BankChange: _, p24BankValue: f, billingAddressInfo: g } = e;
             return (0, r.jsxs)('div', {
                 className: d.body,
                 children: [
@@ -72,10 +72,10 @@ let m = function (e) {
                         children: [
                             (0, r.jsx)(a.P24BankElement, {
                                 options: {
-                                    value: _,
+                                    value: f,
                                     style: m
                                 },
-                                onChange: (e) => f(e.value)
+                                onChange: (e) => _(e.value)
                             }),
                             (0, r.jsx)('div', {
                                 className: d.bankSelectionStub,
@@ -91,7 +91,7 @@ let m = function (e) {
         }
         case c.He.EPS: {
             let { onAccountHolderNameChange: i, onEPSBankChange: l, epsBankValue: c, billingAddressInfo: p } = e,
-                h = (0, o.wj)(t) ? f : _;
+                h = (0, o.wj)(t) ? _ : f;
             return (0, r.jsxs)('div', {
                 className: d.body,
                 children: [

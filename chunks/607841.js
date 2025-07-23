@@ -8,8 +8,8 @@ var r = n(147913),
     c = n(699516),
     u = n(944486),
     d = n(594174),
-    f = n(768581),
-    _ = n(495527),
+    _ = n(768581),
+    f = n(495527),
     p = n(403011),
     h = n(981631);
 function m(e, t, n) {
@@ -30,7 +30,7 @@ function g() {
         { location: 'NativeIntentsManager' },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch()
+            disable: !f.Z.hasSearch()
         }
     ).searchEnabled;
 }
@@ -39,7 +39,7 @@ function E() {
         { location: 'NativeIntentsManager' },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch()
+            disable: !f.Z.hasSearch()
         }
     ).clearEnabled;
 }
@@ -48,7 +48,7 @@ function b() {
         { location: 'NativeIntentsManager' },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasUserActivity()
+            disable: !f.Z.hasUserActivity()
         }
     ).activityEnabled;
 }
@@ -62,16 +62,16 @@ function O(e, t) {
         s = (0, a.F6)(e, d.default, c.Z, !0),
         l = (0, a.F6)(e, d.default, c.Z, !1),
         u = [],
-        f = [s, l],
-        _ = [];
-    e.isGuildVocal() && f.push('!'.concat(l));
+        _ = [s, l],
+        f = [];
+    e.isGuildVocal() && _.push('!'.concat(l));
     let p = o.Z.getChannel(e.parent_id);
     if (null != p) {
         let e = (0, a.F6)(p, d.default, c.Z, !0),
             t = (0, a.F6)(p, d.default, c.Z, !1);
-        (_.push(e), _.push(t), u.push(e));
+        (f.push(e), f.push(t), u.push(e));
     }
-    null != t && (_.push(t.name), u.push(t.name));
+    null != t && (f.push(t.name), u.push(t.name));
     let m = s + (u.length > 0 ? ' ('.concat(u.join(', '), ')') : ''),
         g = h.Z5c.CHANNEL(null != (n = null == t ? void 0 : t.id) ? n : h.ME, e.id);
     return {
@@ -82,15 +82,15 @@ function O(e, t) {
         displayName: m,
         thumbnailURL: y((0, i.x)(e, 128, !1)),
         rankingHint: e.type === h.d4z.DM ? 75 : 50,
-        keywords: _,
-        alternateNames: f,
+        keywords: f,
+        alternateNames: _,
         isUpdate: r
     };
 }
 function v(e) {
     return null != e
         ? y(
-              f.ZP.getGuildIconURL({
+              _.ZP.getGuildIconURL({
                   id: e.id,
                   icon: e.icon,
                   size: 128
@@ -129,7 +129,7 @@ function I(e) {
 function T(e) {
     if (!b()) return;
     let t = null != e ? o.Z.getChannel(e) : void 0;
-    if (null == t) return void _.Z.resignActivity();
+    if (null == t) return void f.Z.resignActivity();
     let n = s.Z.getGuild(t.guild_id),
         r = (0, a.F6)(t, d.default, c.Z, !0) + (null != n ? ' ('.concat(n.name, ')') : ''),
         i = h.Z5c.CHANNEL(t.guild_id, t.id),
@@ -142,7 +142,7 @@ function T(e) {
             displayName: r,
             type: 'com.discord.view-channel'
         };
-    _.Z.setActivity(l);
+    f.Z.setActivity(l);
 }
 function S() {
     if (!g()) return;
@@ -157,7 +157,7 @@ function S() {
         id: h.ME,
         items: t
     }),
-        _.Z.indexDomains(e));
+        f.Z.indexDomains(e));
 }
 function A(e) {
     let t = o.Z.getDMChannelFromUserId(e);
@@ -187,14 +187,14 @@ function N(e) {
                     (r[n] = a));
             }
         } else n.push(a.id);
-    (t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n));
+    (t.length > 0 && f.Z.indexDomains(t), n.length > 0 && f.Z.deleteSearchItems(n));
 }
 class C extends r.Z {
     handleInit() {
-        (T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S());
+        (T(u.Z.getCurrentlySelectedChannelId()), E() && f.Z.clearSearchIndex(), g() && S());
     }
     handleLogout() {
-        E() && _.Z.clearSearchIndex();
+        E() && f.Z.clearSearchIndex();
     }
     handleChannelSelect(e) {
         let { channelId: t } = e;
@@ -207,7 +207,7 @@ class C extends r.Z {
         let r = s.Z.getGuild(n.guild_id);
         if (null == r && null != n.guild_id) return;
         let i = v(r);
-        _.Z.indexDomains([
+        f.Z.indexDomains([
             {
                 id: null != (t = null == r ? void 0 : r.id) ? t : h.ME,
                 items: [O(n, r)],
@@ -217,7 +217,7 @@ class C extends r.Z {
     }
     handleChannelDelete(e) {
         let { channel: t } = e;
-        g() && _.Z.deleteSearchItems([t.id]);
+        g() && f.Z.deleteSearchItems([t.id]);
     }
     handleChannelUpdates(e) {
         let { channels: t } = e;
@@ -227,12 +227,12 @@ class C extends r.Z {
         let { guild: t, type: n } = e;
         if (g()) {
             let e = s.Z.getGuild(t.id);
-            null != e ? _.Z.indexDomains([I(e, 'GUILD_UPDATE' === n)]) : _.Z.deleteSearchDomains([t.id]);
+            null != e ? f.Z.indexDomains([I(e, 'GUILD_UPDATE' === n)]) : f.Z.deleteSearchDomains([t.id]);
         }
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        g() && _.Z.deleteSearchDomains([t.id]);
+        g() && f.Z.deleteSearchDomains([t.id]);
     }
     handleThreadUpdate(e) {
         let { channel: t } = e;

@@ -7,8 +7,8 @@ var a = n(114858),
     c = n(904245),
     u = n(593472),
     d = n(147913),
-    f = n(89892),
-    _ = n(702321),
+    _ = n(89892),
+    f = n(702321),
     p = n(710845),
     h = n(38618),
     m = n(897473),
@@ -43,8 +43,8 @@ function w(e) {
     if (null == n || (0, N.AB)(n)) return;
     let d = b.Z.getChannel(n);
     if ((null == d ? void 0 : d.type) === A.d4z.GUILD_STORE || ((null == d ? void 0 : d.type) != null && A.TPd.GUILD_THREADS_ONLY.has(d.type))) return;
-    let p = f.Z.getOrCreate(n);
-    (p.some(S.k5) && (P.log('Found expired attachment link, clearing messages'), f.Z.clear(n), (p = f.Z.getOrCreate(n))),
+    let p = _.Z.getOrCreate(n);
+    (p.some(S.k5) && (P.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (p = _.Z.getOrCreate(n))),
         null != p.jumpTargetId &&
             null == r &&
             ((p = p.mutate({
@@ -52,11 +52,11 @@ function w(e) {
                 jumped: !1,
                 jumpType: u.SR.ANIMATED
             })),
-            f.Z.commit(p)),
-        null != p.focusTargetId && null == r && ((p = p.mutate({ focusTargetId: null })), f.Z.commit(p)));
+            _.Z.commit(p)),
+        null != p.focusTargetId && null == r && ((p = p.mutate({ focusTargetId: null })), _.Z.commit(p)));
     let m = i;
-    if ((!a || h.Z.isConnected() || p.loadingMore ? (p.loadingMore || (p.ready && !p.cached) ? null != r && (m = !0) : (null == t || null != y.Z.getGuild(t)) && (m = !0)) : (m = !0), (0, _.Z)(n) && O.ZP.hasUnread(n) && (m = !0), m))
-        if ((f.Z.commit(p.mutate({ loadingMore: !0 })), null != r))
+    if ((!a || h.Z.isConnected() || p.loadingMore ? (p.loadingMore || (p.ready && !p.cached) ? null != r && (m = !0) : (null == t || null != y.Z.getGuild(t)) && (m = !0)) : (m = !0), (0, f.Z)(n) && O.ZP.hasUnread(n) && (m = !0), m))
+        if ((_.Z.commit(p.mutate({ loadingMore: !0 })), null != r))
             c.Z.jumpToMessage({
                 channelId: n,
                 messageId: r,
@@ -157,7 +157,7 @@ function j() {
     let t = b.Z.getChannel(e);
     if (null == t) return;
     if (!(0, g.Qm)(t.type)) return void V(t.getGuildId(), t.id);
-    let n = f.Z.getOrCreate(e);
+    let n = _.Z.getOrCreate(e);
     if (n.ready && n.hasFetched) return void V(t.getGuildId(), t.id);
     (w({
         guildId: t.getGuildId(),

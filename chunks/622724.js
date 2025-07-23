@@ -12,8 +12,8 @@ var i = n(442837),
     c = n(87620),
     u = n(314897),
     d = n(594174),
-    f = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    f = n(388032);
 function p(e) {
     let { user: t, guildId: n, color: s, onAction: d, location: p = o.Z.CONTEXT_MENU, appContext: h } = e,
         m = (0, c.oV)(p),
@@ -23,20 +23,20 @@ function p(e) {
         : (0, r.jsx)(a.sNh, {
               id: 'report-user',
               color: s,
-              label: _.intl.string(_.t.A1MM3N),
-              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d, h)
+              label: f.intl.string(f.t.A1MM3N),
+              action: () => (0, l.pX)(t, n === _.ME ? void 0 : n, d, h)
           });
 }
 function h(e) {
     let { user: t, guildId: n, color: o, onAction: c, appContext: u } = e,
-        _ = (0, i.e7)([s.ZP], () => s.ZP.get('iar_testing')),
+        f = (0, i.e7)([s.ZP], () => s.ZP.get('iar_testing')),
         p = (0, i.e7)([d.default], () => d.default.getCurrentUser());
-    return null != p && (t.id === p.id || t.isNonUserBot() || !p.isStaff() || !_)
+    return null != p && (t.id === p.id || t.isNonUserBot() || !p.isStaff() || !f)
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'staff-test-report-user',
               color: o,
               label: '[STAFF] Test Profile Report',
-              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, c, u)
+              action: () => (0, l.I6)(t, n === _.ME ? void 0 : n, c, u)
           });
 }

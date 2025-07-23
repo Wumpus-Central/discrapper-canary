@@ -8,8 +8,8 @@ var r,
     c = n(131704),
     u = n(592125),
     d = n(430824),
-    f = n(306680),
-    _ = n(944486),
+    _ = n(306680),
+    f = n(944486),
     p = n(709054),
     h = n(344185),
     m = n(569471),
@@ -76,7 +76,7 @@ let I = {},
     R = null,
     P = {};
 function w() {
-    for (let e in ((I = {}), (N = {}), (T = {}), (S = {}), (A = {}), (R = _.Z.getChannelId()), P)) clearTimeout(P[e]);
+    for (let e in ((I = {}), (N = {}), (T = {}), (S = {}), (A = {}), (R = f.Z.getChannelId()), P)) clearTimeout(P[e]);
     ((P = {}),
         h.Z.forEachGuild((e) => {
             L(e);
@@ -103,7 +103,7 @@ function L(e) {
                 (ee(I, e, n, !1), ee(N, e, i ? n : null, !1), ee(T, e, r ? n : null, !1), a && Q(e, !0));
             } else {
                 ee(S, e, e, !1);
-                let t = f.ZP.isForumPostUnread(e.id);
+                let t = _.ZP.isForumPostUnread(e.id);
                 ee(A, e, t ? e : null, !1);
             }
         }
@@ -120,12 +120,12 @@ function k(e, t) {
     if (null == n || !n.isForumLikeChannel() || (null == C[e] && (C[e] = {}), (C[e][t] = 0), null == S[e] || null == S[e][t])) return;
     let r = d.Z.getGuild(e);
     if (null == r) return;
-    let i = f.ZP.getTrackedAckMessageId(t);
+    let i = _.ZP.getTrackedAckMessageId(t);
     if (null == i) {
         let e = Date.now();
         (null != r.joinedAt && (r.joinedAt instanceof Date ? (e = r.joinedAt.getTime()) : 'string' == typeof r.joinedAt && (e = new Date(r.joinedAt).getTime())), (i = p.default.fromTimestamp(e)));
     }
-    for (let n in S[e][t]) t === R ? f.ZP.isNewForumThread(n, t, r) && C[e][t]++ : p.default.compare(n, i) > 0 && !f.ZP.hasOpenedThread(n) && C[e][t]++;
+    for (let n in S[e][t]) t === R ? _.ZP.isNewForumThread(n, t, r) && C[e][t]++ : p.default.compare(n, i) > 0 && !_.ZP.hasOpenedThread(n) && C[e][t]++;
 }
 function j(e, t, n) {
     if (null == t) return !1;
@@ -140,7 +140,7 @@ function j(e, t, n) {
                 { isUnread: t, isRelevant: n, isTimedRelevant: a } = X(r);
             (ee(I, r, e, !0), ee(N, r, n ? e : null, !0), ee(T, r, t ? e : null, !0), ee(S, r, null, !0), ee(A, r, null, !0), Q(r, a));
         } else {
-            let e = f.ZP.isForumPostUnread(r.id);
+            let e = _.ZP.isForumPostUnread(r.id);
             (ee(I, r, null, !0), ee(T, r, null, !0), ee(N, r, null, !0), ee(S, r, r, !0), ee(A, r, e ? r : null, !0), $(r.id));
         }
         k(e, t);
@@ -199,7 +199,7 @@ function Z(e) {
             (ee(T, t, c, !0), ee(N, t, u, !0), k(e, r));
         } else {
             let e = en(A, t),
-                n = f.ZP.isForumPostUnread(t.id);
+                n = _.ZP.isForumPostUnread(t.id);
             if (n === e) return !1;
             ee(A, t, n ? t : null, !0);
         }
@@ -217,7 +217,7 @@ function H() {
         for (let t in S[e])
             for (let n in S[e][t]) {
                 let r = S[e][t][n];
-                f.ZP.isForumPostUnread(n) && ee(A, r, r, !1);
+                _.ZP.isForumPostUnread(n) && ee(A, r, r, !1);
             }
     x();
 }
@@ -237,12 +237,12 @@ function z(e) {
 }
 function q() {
     let e = R;
-    if ((R = _.Z.getChannelId()) === e) return !1;
+    if ((R = f.Z.getChannelId()) === e) return !1;
     (M(e), M(R));
 }
 function X(e) {
-    let t = f.ZP.getMentionCount(e.id) > 0,
-        n = f.ZP.hasUnread(e.id) && !m.Z.isMuted(e.id),
+    let t = _.ZP.getMentionCount(e.id) > 0,
+        n = _.ZP.hasUnread(e.id) && !m.Z.isMuted(e.id),
         r = e.hasFlag(E.zZ.PINNED),
         i = e.isActiveThread(),
         a = i && (0, g.Z)(e) > Date.now();
@@ -291,7 +291,7 @@ let ei = {},
     el = {};
 class ec extends (r = o.ZP.Store) {
     initialize() {
-        (this.waitFor(h.Z, u.Z, m.Z, f.ZP), this.syncWith([_.Z], q));
+        (this.waitFor(h.Z, u.Z, m.Z, _.ZP), this.syncWith([f.Z], q));
     }
     hasActiveJoinedUnreadThreads(e, t) {
         return e in T && t in T[e];

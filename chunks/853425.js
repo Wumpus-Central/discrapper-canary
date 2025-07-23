@@ -11,11 +11,11 @@ async function d(e) {
     if (200 !== (await (0, o.f0)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function f(e) {
+async function _(e) {
     if (200 !== (await (0, o.aD)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function _() {
+async function f() {
     (await (0, o.bF)(), window.location.reload(!0));
 }
 let p = i.memo(function (e) {
@@ -27,7 +27,7 @@ let p = i.memo(function (e) {
         g = i.useCallback(() => {
             if ((0, l.mG)(o.url) && null != o.override) {
                 var e;
-                return f(null == (e = o.override) ? void 0 : e.targetBuildOverride);
+                return _(null == (e = o.override) ? void 0 : e.targetBuildOverride);
             }
             return null == p ? Promise.reject(Error('Invalid override payload')) : ((0, u.Z)(o.override, p), d(p));
         }, [p, o]);
@@ -37,7 +37,7 @@ let p = i.memo(function (e) {
               linkMeta: o.override,
               currentOverrides: n.overrides,
               applyBuildOverride: g,
-              clearBuildOverride: _,
+              clearBuildOverride: f,
               url: h
           })
         : null;

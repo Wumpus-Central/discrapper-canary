@@ -11,13 +11,13 @@ var r = n(255367),
     p = n(131704),
     m = n(199902),
     f = n(914010),
-    g = n(411198),
-    h = n(51144),
+    h = n(411198),
+    g = n(51144),
     _ = n(358595),
     b = n(981631),
     E = n(245335),
-    x = n(388032),
-    y = n(273254);
+    y = n(388032),
+    x = n(273254);
 function v(e) {
     let t,
         n,
@@ -31,9 +31,9 @@ function v(e) {
         Z = null != v && v.target_type === E.Iq.STREAM && null != v.target_user && null != P,
         R = null != v && null != A && null != v.channel && null != v.guild && A.channelId === v.channel.id && A.guildId === v.guild.id;
     a()(null != v, 'Invite cannot be null');
-    let { target_type: k, target_user: L } = v;
-    a()(k === E.Iq.STREAM && null != L, 'invalid streaming invite');
-    let D = C === L.id,
+    let { target_type: L, target_user: k } = v;
+    a()(L === E.Iq.STREAM && null != k, 'invalid streaming invite');
+    let D = C === k.id,
         M = v.state === b.r2o.ACCEPTING,
         U = i.useCallback(() => {
             let e = 'noop';
@@ -51,19 +51,19 @@ function v(e) {
         F = null != O;
     if (null == O) {
         if (null == v.guild) return (0, r.jsx)(_.Z, {});
-        O = (0, g.Qs)(v.guild);
+        O = (0, h.Qs)(v.guild);
     }
     let B = null != v.channel ? (0, p.jD)(v.channel) : null,
-        G = h.ZP.getName(L);
-    F && !R ? (l = D ? x.intl.string(x.t.oBLoZG) : x.intl.formatToPlainString(x.t['0QJmAw'], { name: G })) : ((t = x.intl.string(x.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = x.intl.string(x.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = D ? x.intl.string(x.t['4hyaHh']) : x.intl.formatToPlainString(x.t.QmlLEh, { name: G })));
-    let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : x.intl.formatToPlainString(x.t.u0vaDA, { guildName: O.name });
+        G = g.ZP.getName(k);
+    F && !R ? (l = D ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t['0QJmAw'], { name: G })) : ((t = y.intl.string(y.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = y.intl.string(y.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = D ? y.intl.string(y.t['4hyaHh']) : y.intl.formatToPlainString(y.t.QmlLEh, { name: G })));
+    let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : y.intl.formatToPlainString(y.t.u0vaDA, { guildName: O.name });
     return (0, r.jsxs)(d.Z, {
         children: [
-            (0, r.jsx)(d.Z.Header, { text: x.intl.string(x.t['wS+5WV']) }),
+            (0, r.jsx)(d.Z.Header, { text: y.intl.string(y.t['wS+5WV']) }),
             (0, r.jsxs)(d.Z.Body, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: y.headerLine,
+                        className: x.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
                                 guild: O,

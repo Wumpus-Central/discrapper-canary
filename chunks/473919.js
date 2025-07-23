@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,13 +58,13 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: c, onTooltipShow: d } = e,
-        _ = (0, o.vjg)(o.Skl.ONLINE);
+        f = (0, o.vjg)(o.Skl.ONLINE);
     return null == n
         ? (0, r.jsx)(t, {
               size: 'custom',
-              color: _,
+              color: f,
               className: a()(l.icon, c)
           })
         : (0, r.jsx)(o.ua7, {
@@ -76,9 +76,9 @@ function _(e) {
               children: (e) =>
                   (0, r.jsx)(
                       t,
-                      f(u({}, e), {
+                      _(u({}, e), {
                           size: 'custom',
-                          color: _,
+                          color: f,
                           className: a()(l.icon, c)
                       })
                   )

@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(372769),
     u = n(523751),
     d = n(623624),
-    f = n(290034),
-    _ = n(340541),
+    _ = n(290034),
+    f = n(340541),
     p = n(271383),
     h = n(594174),
     m = n(267642),
@@ -90,12 +90,12 @@ function T(e) {
                         }
                     }));
         },
-        _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn5) : m.nW(l),
+        f = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn5) : m.nW(l),
         y = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: b.tierTooltipTitle,
-                    children: _
+                    children: f
                 }),
                 (0, r.jsx)('div', { children: E.intl.format(E.t.If4iTU, { subscriberCount: c }) })
             ]
@@ -105,14 +105,14 @@ function T(e) {
         children: (0, r.jsx)(s.ua7, {
             text: y,
             position: 'bottom',
-            'aria-label': null != _ ? _ : '',
+            'aria-label': null != f ? f : '',
             children: (e) =>
                 (0, r.jsx)(
                     s.P3F,
                     I(O({}, e), {
                         className: b.__invalid_premiumGuildIcon,
                         onClick: u,
-                        children: (0, r.jsx)(f.Z, {
+                        children: (0, r.jsx)(_.Z, {
                             size: 18,
                             premiumTier: l,
                             iconBackgroundClassName: n ? b.boostedGuildTierIconBackgroundWithVisibleBanner : void 0,
@@ -126,7 +126,7 @@ function T(e) {
 function S(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         o = (0, l.Z)(t),
-        { entrypoints: d } = (0, _._k)({ location: 'guild_status_badge' });
+        { entrypoints: d } = (0, f._k)({ location: 'guild_status_badge' });
     return o
         ? (0, r.jsx)('div', {
               className: a()(b.guildIconV2Container, { [b.invitesRefresh]: d }),

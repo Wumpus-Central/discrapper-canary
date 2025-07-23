@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r,
     i = n(442837),
     a = n(570140),
@@ -30,13 +30,13 @@ function d(e) {
         errorCode: n
     };
 }
-class f extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getHookError(e) {
         return l[e];
     }
 }
-s(f, 'displayName', 'HookErrorStore');
-let _ = new f(a.Z, {
+s(_, 'displayName', 'HookErrorStore');
+let f = new _(a.Z, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
     MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: u,
     MEDIA_ENGINE_SOUNDSHARE_FAILED: d

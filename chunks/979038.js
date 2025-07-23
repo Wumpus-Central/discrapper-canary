@@ -9,8 +9,8 @@ var i = n(40851),
     c = n(802856),
     u = n(420660),
     d = n(750154),
-    f = n(374129),
-    _ = n(639351),
+    _ = n(374129),
+    f = n(639351),
     p = n(892001),
     h = n(103479),
     m = n(238607),
@@ -49,13 +49,13 @@ function N(e) {
         : (0, c.Z)(n)
           ? (0, r.jsx)(E.Z, {
                 platformType: v.ABu.XBOX,
-                icon: () => (0, r.jsx)(_.Z, {}),
+                icon: () => (0, r.jsx)(f.Z, {}),
                 onAction: i
             })
           : (0, l.Z)(n)
             ? (0, r.jsx)(E.Z, {
                   platformType: v.ABu.PLAYSTATION,
-                  icon: () => (0, r.jsx)(f.Z, {}),
+                  icon: () => (0, r.jsx)(_.Z, {}),
                   onAction: i
               })
             : (0, u.Z)(n)

@@ -73,7 +73,7 @@ function d(e, t) {
         focusedY: r
     });
 }
-function f(e, t) {
+function _(e, t) {
     let { x: n, y: r } = t,
         i = c(0, u(r, e.columnCounts.length - 1));
     return s(a({}, e), {
@@ -81,7 +81,7 @@ function f(e, t) {
         focusedY: i
     });
 }
-function _(e, t) {
+function f(e, t) {
     let n = c(0, e.focusedY - 1);
     return s(a({}, e), {
         focusedX: u(e.columnCounts[n] - 1, e.focusedX),
@@ -135,7 +135,7 @@ function y(e, t) {
 function O(e, t) {
     switch (t.type) {
         case r.Us.NAVIGATE_UP:
-            return _(e, t);
+            return f(e, t);
         case r.Us.NAVIGATE_DOWN:
             return p(e, t);
         case r.Us.NAVIGATE_RIGHT:
@@ -153,7 +153,7 @@ function O(e, t) {
         case 'UPDATE_COLUMN_COUNTS':
             return d(e, t);
         case 'SET_FOCUSED_POSITION':
-            return f(e, t);
+            return _(e, t);
         case r.Us.SELECT_FOCUSED_ITEM:
             break;
         default:

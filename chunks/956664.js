@@ -1,6 +1,6 @@
 (n.d(t, {
     Bo: () => T,
-    Dc: () => f,
+    Dc: () => _,
     OF: () => y,
     QB: () => I,
     Tj: () => c,
@@ -9,7 +9,7 @@
     c0: () => A,
     fD: () => v,
     kD: () => S,
-    rn: () => _,
+    rn: () => f,
     rv: () => h,
     zp: () => d
 }),
@@ -62,14 +62,14 @@ function d(e, t) {
         maxHeight: i
     });
 }
-function f(e) {
+function _(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
         a = 1;
     (t > r && (a = r / t), (t = Math.round(t * a)));
     let o = 1;
     return ((n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1));
 }
-function _(e) {
+function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
     return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1);
 }

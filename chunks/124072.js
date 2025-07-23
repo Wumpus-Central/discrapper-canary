@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,13 +80,13 @@ function m(e, t) {
     return i;
 }
 let g = (e) => {
-    var { ref: t, children: n, className: a, color: d, roleColors: _, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
+    var { ref: t, children: n, className: a, color: d, roleColors: f, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
         b = h(e, ['ref', 'children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [y, O] = i.useState(!1),
         { gradientStyle: v, gradientClassname: I } = (0, l.Icv)({
-            primaryColor: null == _ ? void 0 : _.primaryColor,
-            secondaryColor: null == _ ? void 0 : _.secondaryColor,
-            tertiaryColor: null == _ ? void 0 : _.tertiaryColor,
+            primaryColor: null == f ? void 0 : f.primaryColor,
+            secondaryColor: null == f ? void 0 : f.secondaryColor,
+            tertiaryColor: null == f ? void 0 : f.tertiaryColor,
             roleStyle: 'username',
             animateGradient: y
         }),
@@ -111,7 +111,7 @@ let g = (e) => {
             }),
         (0, r.jsx)(
             l.P3F,
-            p(f({}, b), {
+            p(_({}, b), {
                 innerRef: t,
                 tag: 'span',
                 className: o()(a, {
@@ -128,9 +128,9 @@ let g = (e) => {
                               iconType: m,
                               children: n
                           })
-                        : null != _
+                        : null != f
                           ? (0, r.jsx)('span', {
-                                style: f({}, v),
+                                style: _({}, v),
                                 className: I,
                                 children: n
                             })

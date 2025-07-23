@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,7 +62,7 @@ function p(e, t) {
 function h(e) {
     let { user: t } = e,
         d = (0, o.ML)(t.id),
-        _ = l.ZP.useName(t),
+        f = l.ZP.useName(t),
         h = i.useCallback(
             (e) => {
                 let { id: i, name: o } = e;
@@ -72,9 +72,9 @@ function h(e) {
                         (0, r.jsx)(
                             e,
                             p(
-                                f(
+                                _(
                                     {
-                                        header: u.intl.formatToPlainString(u.t['GOFk9/'], { name: _ }),
+                                        header: u.intl.formatToPlainString(u.t['GOFk9/'], { name: f }),
                                         confirmText: u.intl.string(u.t['cY+Ooa']),
                                         cancelText: u.intl.string(u.t['ETE/oK']),
                                         onConfirm: () =>
@@ -90,7 +90,7 @@ function h(e) {
                                     children: (0, r.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         children: u.intl.format(u.t.dsU5bm, {
-                                            name: _,
+                                            name: f,
                                             gameName: o
                                         })
                                     })
@@ -99,7 +99,7 @@ function h(e) {
                         );
                 });
             },
-            [_, t]
+            [f, t]
         );
     return (0, c.Z)({
         user: t,

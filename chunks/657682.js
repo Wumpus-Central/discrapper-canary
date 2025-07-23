@@ -13,7 +13,7 @@ let s = /^\d+$/,
     l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
     c = /^[a-zA-Z0-9_\\.]+$/;
 function u(e) {
-    return c.test(e) || (e.includes('#') && l.test(e)) ? null : (f(e), o.intl.string(o.t.paDJBA));
+    return c.test(e) || (e.includes('#') && l.test(e)) ? null : (_(e), o.intl.string(o.t.paDJBA));
 }
 function d(e, t) {
     switch (e) {
@@ -38,7 +38,7 @@ function d(e, t) {
             return o.intl.string(o.t.paDJBA);
     }
 }
-function f(e) {
+function _(e) {
     let [t, n] = e.split('#');
     r.default.track(a.rMx.FRIEND_REQUEST_FAILED, {
         reason: 'Invalid Username',

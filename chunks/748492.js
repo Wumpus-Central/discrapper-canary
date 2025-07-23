@@ -14,8 +14,8 @@ var i = n(120356),
     c = n(40851),
     u = n(906732),
     d = n(835473),
-    f = n(221888),
-    _ = n(522651),
+    _ = n(221888),
+    f = n(522651),
     p = n(600164),
     h = n(788983),
     m = n(189771),
@@ -56,13 +56,13 @@ function M(e) {
         F = (0, m.Z)(a),
         { parentAnalyticsLocation: Z } = (0, u.ZP)(),
         H = (e) => {
-            ((0, _.v)(Z, _.d.CAMERA, e), l.Z.setVideoEnabled(e));
+            ((0, f.v)(Z, f.d.CAMERA, e), l.Z.setVideoEnabled(e));
         },
         Y = () => {
             B ? H(!0) : (0, g.Z)();
         },
         W = () => {
-            ((0, _.v)(Z, _.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) }));
+            ((0, f.v)(Z, f.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) }));
         };
     return (0, r.jsxs)('div', {
         className: L.videoControls,
@@ -98,7 +98,7 @@ function M(e) {
                             }),
                             null != a &&
                                 (0, r.jsx)(E.Z, {
-                                    children: (0, r.jsx)(f.Z, {
+                                    children: (0, r.jsx)(_.Z, {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
@@ -137,21 +137,21 @@ function M(e) {
 }
 function k(e) {
     var t, n;
-    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: f, idle: _, users: p, embeddedActivity: h } = e,
+    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: _, idle: f, users: p, embeddedActivity: h } = e,
         m = (0, d.Z)([o])[0];
     return (0, r.jsxs)(s.P3F, {
         className: a()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: c,
         onMouseDown: l,
         onMouseLeave: u,
-        onDoubleClick: f,
+        onDoubleClick: _,
         children: [
             (0, r.jsx)('div', {
                 className: L.topControls,
                 children: (0, r.jsx)(b.r, {
-                    idle: _,
+                    idle: f,
                     title: null != (n = null != (t = null == m ? void 0 : m.name) ? t : null == i ? void 0 : i.name) ? n : '',
-                    onJumpToChannel: f,
+                    onJumpToChannel: _,
                     preventIdleComponent: E.Z
                 })
             }),
@@ -188,7 +188,7 @@ function j(e) {
 }
 function U(e) {
     var t, n;
-    let { onMouseDown: i, onMouseMove: o, onMouseLeave: l, showControls: c, applicationId: u, channel: f, onJumpToChannel: _, onToggleHeight: p, isExpanded: h, hideExpandedButton: m, embeddedActivity: g } = e,
+    let { onMouseDown: i, onMouseMove: o, onMouseLeave: l, showControls: c, applicationId: u, channel: _, onJumpToChannel: f, onToggleHeight: p, isExpanded: h, hideExpandedButton: m, embeddedActivity: g } = e,
         y = (0, d.Z)([u])[0];
     return (0, r.jsx)('div', {
         className: D.pipHeader,
@@ -209,8 +209,8 @@ function U(e) {
                         children: [
                             (0, r.jsx)(b.r, {
                                 idle: !c,
-                                title: null != (n = null != (t = null == y ? void 0 : y.name) ? t : null == f ? void 0 : f.name) ? n : '',
-                                onJumpToChannel: _,
+                                title: null != (n = null != (t = null == y ? void 0 : y.name) ? t : null == _ ? void 0 : _.name) ? n : '',
+                                onJumpToChannel: f,
                                 preventIdleComponent: E.Z
                             }),
                             (0, r.jsxs)('div', {

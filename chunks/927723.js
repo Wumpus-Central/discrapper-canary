@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -66,7 +66,7 @@ function p(e) {
     let { kind: t } = e;
     (0, a.ZDy)(async () => {
         let { default: e } = await n.e('7285').then(n.bind(n, 951269));
-        return (n) => (0, r.jsx)(e, _(d({}, n), { kind: t }));
+        return (n) => (0, r.jsx)(e, f(d({}, n), { kind: t }));
     });
 }
 function h() {
@@ -75,7 +75,7 @@ function h() {
         return (t) =>
             (0, r.jsx)(
                 e,
-                _(d({}, t), {
+                f(d({}, t), {
                     header: l.intl.string(c.default.odgSTk),
                     confirmText: l.intl.string(l.t.BddRzc),
                     confirmButtonColor: i.zx.Colors.BRAND,

@@ -11,13 +11,13 @@ var r = n(255367),
     p = n(603721),
     m = n(124072),
     f = n(892001),
-    g = n(592125),
-    h = n(485386),
+    h = n(592125),
+    g = n(485386),
     _ = n(430824),
     b = n(594174),
     E = n(739566),
-    x = n(761652),
-    y = n(388032),
+    y = n(761652),
+    x = n(388032),
     v = n(912861);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -82,7 +82,7 @@ let T = i.memo(function (e) {
     let P,
         { channel: A, messageId: w, interactionData: Z } = e,
         { analyticsLocations: R } = (0, u.ZP)(),
-        { onCopy: k, copyRef: L } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
+        { onCopy: L, copyRef: k } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
         D = (0, o.e7)([_.Z], () => _.Z.getGuild(A.guild_id), [A.guild_id]);
     if (
         (i.useEffect(() => {
@@ -129,7 +129,7 @@ let T = i.memo(function (e) {
                             );
                         return t;
                     }
-                    let k = v.value;
+                    let L = v.value;
                     if (null != v.value)
                         switch (v.type) {
                             case c.jw.USER: {
@@ -148,7 +148,7 @@ let T = i.memo(function (e) {
                                                     messageId: P,
                                                     sourceAnalyticsLocations: Z
                                                 }),
-                                            children: [x.ME, e.nick]
+                                            children: [y.ME, e.nick]
                                         })
                                     );
                                 }
@@ -156,34 +156,34 @@ let T = i.memo(function (e) {
                             }
                             case c.jw.CHANNEL: {
                                 let e = v.value.toString(),
-                                    t = g.Z.getChannel(e);
+                                    t = h.Z.getChannel(e);
                                 null != t &&
                                     (_ = (0, r.jsxs)(
                                         m.Z,
                                         O(C({}, I), {
-                                            children: [x.zy, t.name]
+                                            children: [y.zy, t.name]
                                         })
                                     ));
                                 break;
                             }
                             case c.jw.ROLE: {
                                 let e = v.value.toString(),
-                                    t = null != N ? h.Z.getRole(N.id, e) : void 0;
+                                    t = null != N ? g.Z.getRole(N.id, e) : void 0;
                                 null != t &&
                                     (_ = (0, r.jsxs)(
                                         m.Z,
                                         O(C({}, I), {
-                                            children: [x.ME, t.name]
+                                            children: [y.ME, t.name]
                                         })
                                     ));
                                 break;
                             }
                             case c.jw.MENTIONABLE: {
                                 let e = v.value.toString(),
-                                    t = null != N ? h.Z.getRole(N.id, e) : void 0;
+                                    t = null != N ? g.Z.getRole(N.id, e) : void 0;
                                 if (null != t)
                                     _ = (0, r.jsxs)(m.Z, {
-                                        children: [x.ME, t.name]
+                                        children: [y.ME, t.name]
                                     });
                                 else {
                                     let t = b.default.getUser(e);
@@ -198,7 +198,7 @@ let T = i.memo(function (e) {
                                                         guildId: T.guild_id,
                                                         sourceAnalyticsLocations: Z
                                                     }),
-                                                children: [x.ME, e.nick]
+                                                children: [y.ME, e.nick]
                                             })
                                         );
                                     }
@@ -206,15 +206,15 @@ let T = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                _ = S(y.intl.string(y.t.nONJVV));
+                                _ = S(x.intl.string(x.t.nONJVV));
                                 break;
                             default: {
                                 let e = null == w || null == (u = w.choices) ? void 0 : u.find((e) => e.value === v.value);
-                                null != e && (k = null != (d = e.name_localized) ? d : e.name);
+                                null != e && (L = null != (d = e.name_localized) ? d : e.name);
                             }
                         }
                     return (
-                        null == _ && (_ = S(null == k ? void 0 : k.toString())),
+                        null == _ && (_ = S(null == L ? void 0 : L.toString())),
                         [
                             (0, r.jsxs)(
                                 i.Fragment,
@@ -260,12 +260,12 @@ let T = i.memo(function (e) {
         onCopy: (e) => {
             var t, n, r;
             let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : '';
-            i.startsWith('/') && i.endsWith('\n') && k(e, Z);
+            i.startsWith('/') && i.endsWith('\n') && L(e, Z);
         },
         children: [
             (0, r.jsx)('div', {
                 className: v.tooltip,
-                ref: L,
+                ref: k,
                 children: P
             }),
             (0, r.jsx)('div', { className: v.tooltipPointer })

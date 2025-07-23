@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(576635),
     u = n(518950),
     d = n(502762),
-    f = n(4517),
-    _ = n(150039),
+    _ = n(4517),
+    f = n(150039),
     p = n(397689),
     h = n(656229),
     m = n(724241),
@@ -30,7 +30,7 @@ function v(e) {
             size: o.EFr.SIZE_80,
             showPending: !0
         }),
-        q = (0, _.ZT)({
+        q = (0, f.ZT)({
             pendingProfileEffectId: D,
             displayProfile: W
         }),
@@ -77,7 +77,7 @@ function v(e) {
                             onUpsellClick: () => (null == v ? void 0 : v({ object: E.qAy.AVATAR }))
                         }),
                         !U &&
-                            (0, r.jsx)(f.Z, {
+                            (0, r.jsx)(_.Z, {
                                 location: 'UserProfilePreview',
                                 user: t,
                                 themeType: b.lY.POPOUT,

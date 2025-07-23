@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(670596),
     u = n(743236),
     d = n(481060),
-    f = n(939350),
-    _ = n(906944);
+    _ = n(939350),
+    f = n(906944);
 function p(e, t, n) {
     return (
         t in e
@@ -81,9 +81,9 @@ function E(e) {
             h(
                 {
                     innerRef: v,
-                    className: o()(_.item, _.labelContainer, f._[t], {
-                        [_.disabled]: m,
-                        [_.focused]: E
+                    className: o()(f.item, f.labelContainer, _._[t], {
+                        [f.disabled]: m,
+                        [f.focused]: E
                     }),
                     onClick: m ? void 0 : I
                 },
@@ -94,22 +94,22 @@ function E(e) {
                 'aria-disabled': m,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: _.label,
+                        className: f.label,
                         children: [
                             (0, l.I)(n, e),
                             null != p &&
                                 (0, r.jsx)('div', {
-                                    className: _.subtext,
+                                    className: f.subtext,
                                     children: p
                                 })
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: _.iconContainer,
+                        className: f.iconContainer,
                         children: (0, r.jsx)(d.Fj9, {
                             checked: a,
                             disabled: m,
-                            radioItemIconClassName: _.radioIcon
+                            radioItemIconClassName: f.radioIcon
                         })
                     })
                 ]

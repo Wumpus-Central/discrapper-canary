@@ -1,4 +1,4 @@
-(n.d(t, { n: () => g }), n(415506));
+(n.d(t, { n: () => h }), n(415506));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -78,7 +78,7 @@ function f(e) {
         }
     });
 }
-let g = (e) => {
+let h = (e) => {
     let { systems: t, className: n, iconClassName: i } = e;
     return (0, r.jsx)('div', {
         className: l()(p.OSSection, n),

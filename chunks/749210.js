@@ -14,8 +14,8 @@ var r = n(990547),
     c = n(408987),
     u = n(336197),
     d = n(280837),
-    f = n(895886),
-    _ = n(35225),
+    _ = n(895886),
+    f = n(35225),
     p = n(703656),
     h = n(601964),
     m = n(314897),
@@ -131,16 +131,16 @@ function G(e) {
     );
 }
 function B(e, t) {
-    return null != t ? t : (0, _.V)(e);
+    return null != t ? t : (0, f.V)(e);
 }
 let V = {
     joinGuild: async function (e) {
         var t, r, i, s, l;
         let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: u, loadId: d, lurkLocation: _ } = c,
+            { source: u, loadId: d, lurkLocation: f } = c,
             h = null != (t = c.lurker) && t,
             g = v.default.getCurrentUser();
-        if (null != (r = null == g ? void 0 : g.hasFlag(C.xW$.QUARANTINED)) && r) return ((0, f.default)(), new Promise((e, t) => t(Error())));
+        if (null != (r = null == g ? void 0 : g.hasFlag(C.xW$.QUARANTINED)) && r) return ((0, _.default)(), new Promise((e, t) => t(Error())));
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: 'GUILD_JOIN',
@@ -159,7 +159,7 @@ let V = {
                         lurker: h,
                         session_id: h ? m.default.getSessionId() : null,
                         recommendation_load_id: d,
-                        location: h && null != _ ? _ : null
+                        location: h && null != f ? f : null
                     },
                     context: { source: u },
                     oldFormErrors: !0,

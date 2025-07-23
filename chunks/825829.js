@@ -20,8 +20,8 @@ var r = n(73800),
     c = n(999923),
     u = n(729917),
     d = n(932019),
-    f = n(442837),
-    _ = n(592125),
+    _ = n(442837),
+    f = n(592125),
     p = n(496675);
 n(594174);
 var h = n(313889),
@@ -207,8 +207,8 @@ function j(e, t) {
         c = w(e),
         u = L(e),
         d = P(e),
-        f = R(e),
-        _ = N(e, s.G.INTERACTION_CALLBACK_TYPE),
+        _ = R(e),
+        f = N(e, s.G.INTERACTION_CALLBACK_TYPE),
         h = N(e, s.G.APPLICATION_NAME);
     if (null != d) {
         let e = x(l, c, u);
@@ -221,8 +221,8 @@ function j(e, t) {
     return null != O
         ? O
         : null != h
-          ? _ === o.y.MODAL && null != i
-              ? f !== a.P.BLOCKED
+          ? f === o.y.MODAL && null != i
+              ? _ !== a.P.BLOCKED
                   ? E.intl.format(E.t['4xL9Sk'], {
                         applicationName: h,
                         interactionUserHook: i,
@@ -233,7 +233,7 @@ function j(e, t) {
                         interactionUserHook: i,
                         integrationOwnerHook: r
                     })
-              : f !== a.P.BLOCKED
+              : _ !== a.P.BLOCKED
                 ? E.intl.format(E.t.AXQufH, {
                       applicationName: h,
                       channelName: b,
@@ -246,7 +246,7 @@ function j(e, t) {
                       channelHook: y,
                       integrationOwnerHook: r
                   })
-          : f !== a.P.BLOCKED
+          : _ !== a.P.BLOCKED
             ? E.intl.format(E.t.IZg0VV, {
                   channelName: b,
                   channelHook: y
@@ -312,14 +312,14 @@ function V(e) {
         applicationName: N(e, s.G.APPLICATION_NAME),
         interactionUserId: N(e, s.G.INTERACTION_USER_ID),
         interactionCallbackType: N(e, s.G.INTERACTION_CALLBACK_TYPE),
-        embedChannel: _.Z.getChannel(t),
+        embedChannel: f.Z.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: null != r ? r : void 0
     };
 }
 function F(e) {
     let t = r.useMemo(() => V(e), [e]),
-        n = (0, f.e7)([_.Z], () => _.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, _.e7)([f.Z], () => f.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return v(y({}, t), { embedChannel: n });
 }
 function Z(e) {

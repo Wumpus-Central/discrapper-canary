@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends i.PureComponent {
+class _ extends i.PureComponent {
     handleClick(e) {
         let { onBreadcrumbClick: t } = this.props;
         null != t && t(e);
@@ -38,15 +38,15 @@ class f extends i.PureComponent {
         (super(...e),
             d(this, 'renderBreadcrumb', (e, t) => {
                 let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
-                    f = e.id === n,
-                    _ = () => this.handleClick(e),
+                    _ = e.id === n,
+                    f = () => this.handleClick(e),
                     p = t === a.length - 1,
                     h =
                         null != l
-                            ? l(e, f)
+                            ? l(e, _)
                             : (0, r.jsx)('span', {
                                   className: o()(u.breadcrumb, {
-                                      [u.activeBreadcrumb]: f,
+                                      [u.activeBreadcrumb]: _,
                                       [u.interactiveBreadcrumb]: null != i
                                   }),
                                   children: e.label
@@ -59,7 +59,7 @@ class f extends i.PureComponent {
                             null != i
                                 ? (0, r.jsx)(s.P3F, {
                                       tag: 'span',
-                                      onClick: _,
+                                      onClick: f,
                                       className: u.breadcrumbClickWrapper,
                                       children: h
                                   })
@@ -77,4 +77,4 @@ class f extends i.PureComponent {
             }));
     }
 }
-let _ = f;
+let f = _;

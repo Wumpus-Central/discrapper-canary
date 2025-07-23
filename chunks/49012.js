@@ -11,8 +11,8 @@ var r = n(159635),
     c = n(139674),
     u = n(702321),
     d = n(900460),
-    f = n(627714),
-    _ = n(364640),
+    _ = n(627714),
+    f = n(364640),
     p = n(772096),
     h = n(982806),
     m = n(540709),
@@ -87,7 +87,7 @@ function R(e, t) {
                     target: M
                 }));
     }
-    if ((_.Z.trackLinkClicked(M), null != C)) {
+    if ((f.Z.trackLinkClicked(M), null != C)) {
         if (C(t)) return;
     } else {
         let { default: e } = n(315263),
@@ -100,7 +100,7 @@ function R(e, t) {
     let H = () => {
             if (
                 (j &&
-                    _.Z.trackAnnouncementMessageLinkClicked({
+                    f.Z.trackAnnouncementMessageLinkClicked({
                         messageId: U,
                         channelId: L,
                         guildId: k,
@@ -121,7 +121,7 @@ function R(e, t) {
         (null == t || t.preventDefault(), m.Z.show(M));
         return;
     }
-    if ((0, f.I)(M)) {
+    if ((0, _.I)(M)) {
         (null == t || t.preventDefault(), d.Z.show(M));
         return;
     }
@@ -132,7 +132,7 @@ function R(e, t) {
         return void (null == t || (null != w && w)
             ? H()
             : j &&
-              _.Z.trackAnnouncementMessageLinkClicked({
+              f.Z.trackAnnouncementMessageLinkClicked({
                   messageId: U,
                   channelId: L,
                   guildId: k,

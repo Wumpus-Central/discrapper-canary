@@ -8,8 +8,8 @@ var r = n(879443),
     c = n(358085),
     u = n(981631);
 let d = {},
-    f = [],
-    _ = !1,
+    _ = [],
+    f = !1,
     p = (0, s.r)(window),
     h = (0, c.isMac)() || (0, c.isMacWeb)() ? 'cmd' : 'ctrl',
     m = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
@@ -63,20 +63,20 @@ let S = {
         d = e;
     },
     enable() {
-        _ || ((_ = !0), this.checkDupes(d), T(d));
+        f || ((f = !0), this.checkDupes(d), T(d));
     },
     enableTemp(e) {
-        (f.push(d), (d = e), T(e), (_ = !0));
+        (_.push(d), (d = e), T(e), (f = !0));
     },
     disableTemp() {
-        let e = f.pop();
+        let e = _.pop();
         (null != e && (d = e), this.disable(), this.enable());
     },
     disable() {
-        _ && ((_ = !1), y.forEach((e) => e()), (y = []), p.reset());
+        f && ((f = !1), y.forEach((e) => e()), (y = []), p.reset());
     },
     validateKeybind(e) {
-        _ && this.hasBind(e) && p.unbind(e);
+        f && this.hasBind(e) && p.unbind(e);
     },
     hasBind(e) {
         let t = v(d);

@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => _,
-    i: () => f
+    R: () => f,
+    i: () => _
 });
 var r = n(544891),
     i = n(570140),
@@ -59,7 +59,7 @@ function d(e, t) {
         e
     );
 }
-async function f(e) {
+async function _(e) {
     let t = (
         await r.tn.get({
             url: s.ANM.GUILD_INTEGRATIONS(e),
@@ -85,7 +85,7 @@ async function f(e) {
         t
     );
 }
-function _(e) {
+function f(e) {
     return r.tn
         .get({
             url: s.ANM.GUILD_WIDGET(e),

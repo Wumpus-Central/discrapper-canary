@@ -10,23 +10,23 @@ function u(e) {
     return '' === e || '-' === e;
 }
 let d = (e) => {
-    let { value: t, onChange: n, className: a, minValue: d, maxValue: f } = e,
-        [_, p] = i.useState(t),
-        h = u(_) || (null != d && _ <= d),
-        m = u(_) || (null != f && _ >= f),
+    let { value: t, onChange: n, className: a, minValue: d, maxValue: _ } = e,
+        [f, p] = i.useState(t),
+        h = u(f) || (null != d && f <= d),
+        m = u(f) || (null != _ && f >= _),
         g = (e) => {
             (n(u(e) ? (null != d ? d : 0) : e), p(e));
         },
         E = (e) => {
-            (e.stopPropagation(), h || g(_ - 1));
+            (e.stopPropagation(), h || g(f - 1));
         },
         b = (e) => {
-            (e.stopPropagation(), m || g(_ + 1));
+            (e.stopPropagation(), m || g(f + 1));
         },
         y = (e) => {
             if (u(e)) return g(e);
             let t = parseInt(e);
-            if (!isNaN(t)) return null != f && t >= f ? g(f) : null != d && t <= d ? g(d) : g(t);
+            if (!isNaN(t)) return null != _ && t >= _ ? g(_) : null != d && t <= d ? g(d) : g(t);
         };
     return (0, r.jsx)(l.tEY, {
         within: !0,
@@ -44,7 +44,7 @@ let d = (e) => {
                     })
                 }),
                 (0, r.jsx)(s.Is, {
-                    value: ''.concat(_),
+                    value: ''.concat(f),
                     onChange: y,
                     inputClassName: c.value
                 }),

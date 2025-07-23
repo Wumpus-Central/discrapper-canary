@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r,
     i,
     l,
@@ -25,7 +25,7 @@ class f extends (l = s.ZP.Store) {
               writable: !0
           })
         : (f[r] = i));
-let g = new f(c.Z, {
+let h = new f(c.Z, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (null != t) {

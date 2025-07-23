@@ -14,8 +14,8 @@ var i,
     c = n(843991),
     u = n(442837),
     d = n(570140),
-    f = n(882252),
-    _ = n(228392),
+    _ = n(882252),
+    f = n(228392),
     p = n(131704),
     h = n(592125),
     m = n(306680),
@@ -60,7 +60,7 @@ function L(e) {
     let n = h.Z.getChannel(S);
     (null != n &&
         n.isForumLikeChannel() &&
-        (0, _.Hr)({
+        (0, f.Hr)({
             guildId: n.guild_id,
             channelId: n.id,
             numArchivedThreads: N.length,
@@ -122,7 +122,7 @@ function G(e) {
 }
 function B(e) {
     let { channel: t } = e;
-    return S === t.parent_id && !!(0, f.yv)(t.id) && void U(t.id);
+    return S === t.parent_id && !!(0, _.yv)(t.id) && void U(t.id);
 }
 let V = [];
 class F extends (i = u.ZP.Store) {

@@ -11,8 +11,8 @@ var r = n(904245),
     p = n(176354),
     m = n(709054),
     f = n(981631),
-    g = n(185923);
-function h(e) {
+    h = n(185923);
+function g(e) {
     let t = u.Z.getGuild(e);
     return null != t && (t.nsfwLevel === f.V_K.DEFAULT || t.nsfwLevel === f.V_K.SAFE);
 }
@@ -23,13 +23,13 @@ async function _(e, t) {
     let E = d.default.getCurrentUser();
     if (null == E) return;
     await (0, o.$p)();
-    let x = Array.from(s.Z.getAllStickersIterator()),
-        y = x
+    let y = Array.from(s.Z.getAllStickersIterator()),
+        x = y
             .filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => h(e.guild_id) && (0, a.kl)(e, E, t))
+            .filter((e) => g(e.guild_id) && (0, a.kl)(e, E, t))
             .sort((e, t) => -m.default.compare(e.id, t.id));
-    if (y.length > 5) {
-        let i = [y[Math.floor(Math.pow(Math.random(), 2) * y.length)].id];
+    if (x.length > 5) {
+        let i = [x[Math.floor(Math.pow(Math.random(), 2) * x.length)].id];
         r.Z.sendStickers(t.id, i, '', {
             messageReference: {
                 guild_id: null != (n = t.getGuildId()) ? n : void 0,
@@ -40,7 +40,7 @@ async function _(e, t) {
         return;
     }
     let v = u.Z.getGuildIds()
-        .filter(h)
+        .filter(g)
         .map((e) => i.ZP.getUsableGuildEmoji(e))
         .flat()
         .filter(
@@ -50,7 +50,7 @@ async function _(e, t) {
                     emoji: e,
                     channel: t,
                     guildId: b,
-                    intention: g.Hz.CHAT
+                    intention: h.Hz.CHAT
                 })
         )
         .sort((e, t) => -m.default.compare(e.id, t.id));
@@ -65,7 +65,7 @@ async function _(e, t) {
         });
         return;
     }
-    let C = x.filter((e) => e.type === c.n0.STANDARD),
+    let C = y.filter((e) => e.type === c.n0.STANDARD),
         O = [C[Math.floor(Math.random() * C.length)].id];
     r.Z.sendStickers(t.id, O, '', {
         messageReference: {

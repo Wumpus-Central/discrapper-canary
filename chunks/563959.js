@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => f,
-    e: () => g
+    e: () => h
 });
 var r = n(255367),
     i = n(73800),
@@ -101,7 +101,7 @@ function f(e) {
             guildId: i.guild_id,
             messageId: t.id
         }),
-        g = m(i, t);
+        h = m(i, t);
     return (0, r.jsx)(s.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
@@ -110,11 +110,11 @@ function f(e) {
             application: u,
             username: c.nick,
             usernameHook: f(c),
-            applicationNameHook: null != u ? g(u) : p.dG4
+            applicationNameHook: null != u ? h(u) : p.dG4
         })
     });
 }
-function g(e) {
+function h(e) {
     let { message: t, channel: i, compact: l } = e,
         c = (0, a.ZP)(t),
         u = t.application,
@@ -124,7 +124,7 @@ function g(e) {
             guildId: i.guild_id,
             messageId: t.id
         }),
-        g = m(i, t);
+        h = m(i, t);
     return (0, r.jsx)(s.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
@@ -133,7 +133,7 @@ function g(e) {
             application: u,
             username: c.nick,
             usernameHook: f(c),
-            applicationNameHook: null != u ? g(u) : p.dG4
+            applicationNameHook: null != u ? h(u) : p.dG4
         })
     });
 }

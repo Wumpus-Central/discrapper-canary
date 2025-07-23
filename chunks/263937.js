@@ -35,7 +35,7 @@ function c(e) {
 }
 let u = {},
     d = {};
-function f() {
+function _() {
     var e, t, n, r, i, a;
     let o = s.Z.settings;
     return {
@@ -44,8 +44,8 @@ function f() {
         animateStickers: null == (a = o.textAndImages) || null == (i = a.animateStickers) ? void 0 : i.value
     };
 }
-function _() {
-    return ((d = f()), !1);
+function f() {
+    return ((d = _()), !1);
 }
 function p() {
     u = {};
@@ -62,7 +62,7 @@ function g(e) {
     for (let e of t) delete u[e];
 }
 function E() {
-    let e = f(),
+    let e = _(),
         t = !1;
     for (let n in e) {
         let r = n;
@@ -72,7 +72,7 @@ function E() {
 }
 class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        ((u = null != e ? e : {}), this.syncWith([s.Z], _));
+        ((u = null != e ? e : {}), this.syncWith([s.Z], f));
     }
     getState() {
         return u;

@@ -11,8 +11,8 @@ var r = n(590921),
     c = n(277981),
     u = n(420001),
     d = n(65090),
-    f = n(591236),
-    _ = n(233577);
+    _ = n(591236),
+    f = n(233577);
 let p = [r.eq.CHOICES, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
     h = {
         [r.eq.CHANNELS]: i.Z,
@@ -20,9 +20,9 @@ let p = [r.eq.CHOICES, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJ
         [r.eq.COMMAND_OPTIONS]: s.Z,
         [r.eq.CHOICES]: o.Z,
         [r.eq.EMOJIS_AND_STICKERS]: l.Z,
-        [r.eq.STICKERS]: _.Z,
+        [r.eq.STICKERS]: f.Z,
         [r.eq.GIFS]: c.Z,
         [r.eq.LEGACY_COMMANDS]: u.Z,
         [r.eq.MENTIONS]: d.Z,
-        [r.eq.REACTIONS]: f.Z
+        [r.eq.REACTIONS]: _.Z
     };

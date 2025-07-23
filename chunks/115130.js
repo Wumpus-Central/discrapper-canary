@@ -1,5 +1,5 @@
 (n.d(t, {
-    O: () => _,
+    O: () => f,
     Z: () => T
 }),
     n(997841));
@@ -46,26 +46,26 @@ function d() {
         filter: ''
     };
 }
-let f = d();
-var _ = (function (e) {
+let _ = d();
+var f = (function (e) {
     return ((e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR'), e);
 })({});
 let p = 'INITIALIZED',
     h = [];
 function m() {
-    ((f = d()), (p = 'INITIALIZED'), (h = []));
+    ((_ = d()), (p = 'INITIALIZED'), (h = []));
 }
 function g() {
-    f.useActivityUrlOverride = !f.useActivityUrlOverride;
+    _.useActivityUrlOverride = !_.useActivityUrlOverride;
 }
 function E(e) {
     let { activityUrlOverride: t } = e;
-    f.activityUrlOverride = t;
+    _.activityUrlOverride = t;
 }
 function b(e) {
     let { applicationId: t, timestamp: n } = e;
     if (null == h.find((e) => e.id === t)) return !1;
-    f.lastUsedObject[t] = n;
+    _.lastUsedObject[t] = n;
 }
 function y(e) {
     let { applications: t } = e;
@@ -77,32 +77,32 @@ function O(e) {
 }
 function v(e) {
     let { filter: t } = e;
-    f.filter = t;
+    _.filter = t;
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        f = u({}, d(), null != e ? e : {});
+        _ = u({}, d(), null != e ? e : {});
     }
     getState() {
-        return f;
+        return _;
     }
     getIsEnabled() {
         return o.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
-        return f.lastUsedObject;
+        return _.lastUsedObject;
     }
     getUseActivityUrlOverride() {
-        return this.getIsEnabled() && f.useActivityUrlOverride;
+        return this.getIsEnabled() && _.useActivityUrlOverride;
     }
     getActivityUrlOverride() {
-        return this.getIsEnabled() ? f.activityUrlOverride : null;
+        return this.getIsEnabled() ? _.activityUrlOverride : null;
     }
     getFetchState() {
         return p;
     }
     getFilter() {
-        return this.getIsEnabled() ? f.filter : '';
+        return this.getIsEnabled() ? _.filter : '';
     }
     getDeveloperShelfItems() {
         return this.getIsEnabled() ? h : [];

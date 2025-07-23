@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(630403);
 let m = {},
     f = 1 / 4;
-function g(e) {
+function h(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -29,7 +29,7 @@ function g(e) {
         })
     });
 }
-function h(e) {
+function g(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         l = (0, c.vjg)(c.Skl.ONLINE);
     return t
@@ -39,7 +39,7 @@ function h(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(g, {
+              children: (0, r.jsx)(h, {
                   height: n.height,
                   fillColor: l
               })
@@ -115,8 +115,8 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: x } = e,
-            y = (function (e, t) {
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: h, style: E, className: y } = e,
+            x = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -161,7 +161,7 @@ let b = {
                           return ((m[n] = s), s);
                       })(s, f, t);
             }, [v, f, s]),
-            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
+            S = ((t = null != h), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -194,9 +194,9 @@ let b = {
                 },
                 E
             ),
-            'aria-label': y['aria-label'],
-            'aria-hidden': y['aria-hidden'],
-            className: a()(p.container, x),
+            'aria-label': x['aria-label'],
+            'aria-hidden': x['aria-hidden'],
+            className: a()(p.container, y),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
@@ -219,14 +219,14 @@ let b = {
                                 src: l,
                                 size: j,
                                 isTyping: f,
-                                status: g
+                                status: h
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(h, {
+                (0, r.jsx)(g, {
                     statusCoords: C,
-                    status: g,
+                    status: h,
                     isTyping: f
                 })
             ]

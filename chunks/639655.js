@@ -20,7 +20,7 @@ let { NativeModules: l } = {},
     c = {},
     u = 65535,
     d = [];
-class f {
+class _ {
     static canUse() {
         return !1;
     }
@@ -34,7 +34,7 @@ class f {
     }
 }
 (d.push(
-    class extends f {
+    class extends _ {
         static canUse() {
             return (0, o.N)();
         }
@@ -57,7 +57,7 @@ class f {
     }
 ),
     d.push(
-        class extends f {
+        class extends _ {
             static canUse() {
                 return void 0 !== window.Uint8Array;
             }
@@ -116,7 +116,7 @@ class f {
         }
     ),
     d.push(
-        class extends f {
+        class extends _ {
             static canUse() {
                 return !0;
             }
@@ -138,7 +138,7 @@ class f {
         }
     ),
     d.push(
-        class extends f {
+        class extends _ {
             static canUse() {
                 return !1;
             }
@@ -164,7 +164,7 @@ class f {
             }
         }
     ));
-class _ extends f {
+class f extends _ {
     static canUse() {
         return !0;
     }
@@ -181,8 +181,8 @@ class _ extends f {
     close() {}
 }
 function p(e) {
-    if (a.s.isDiscordGatewayPlaintextSet()) return new _(e);
+    if (a.s.isDiscordGatewayPlaintextSet()) return new f(e);
     for (var t of d) if (t.canUse()) return new t(e);
-    return new _(e);
+    return new f(e);
 }
-d.push(_);
+d.push(f);

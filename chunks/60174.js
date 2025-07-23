@@ -11,13 +11,13 @@ var r = n(255367),
     p = n(387188),
     m = n(466794),
     f = n(659215),
-    g = n(222677),
-    h = n(995774),
+    h = n(222677),
+    g = n(995774),
     _ = n(931651),
     b = n(594174),
     E = n(630388),
-    x = n(74538),
-    y = n(566006),
+    y = n(74538),
+    x = n(566006),
     v = n(981631),
     C = n(185923),
     O = n(474936),
@@ -58,12 +58,12 @@ class P extends i.Component {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
             c = t.state === v.yb.SENDING,
-            f = e === y.O.BURST;
+            f = e === x.O.BURST;
         if (c || (0, E.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
-        let g = b.default.getCurrentUser(),
-            h = (0, x.I5)(g),
+        let h = b.default.getCurrentUser(),
+            g = (0, y.I5)(h),
             _ = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
-        !h && f && (_ = (0, r.jsx)(m.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
+        !g && f && (_ = (0, r.jsx)(m.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
         let O = l ? S : I,
             T = {
                 size: 'sm',
@@ -129,7 +129,7 @@ class P extends i.Component {
             T(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
-                (0, g.rU)(n.id, r.id, (0, h.g1)(e), i ? g.TW.FORUM_TOOLBAR : g.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                (0, h.rU)(n.id, r.id, (0, g.g1)(e), i ? h.TW.FORUM_TOOLBAR : h.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
             T(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
@@ -138,13 +138,13 @@ class P extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = b.default.getCurrentUser();
-                (t !== y.O.BURST ||
-                    (0, x.I5)(r) ||
+                (t !== x.O.BURST ||
+                    (0, y.I5)(r) ||
                     (0, f.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
                             page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
-                            section: (0, h.s4)(n),
+                            section: (0, g.s4)(n),
                             object: v.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
@@ -155,10 +155,10 @@ class P extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === y.O.BURST && {
+                        n === x.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != i.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
-                            section: (0, h.s4)(i),
+                            section: (0, g.s4)(i),
                             object: v.qAy.REACTION_RAIL
                         }
                     ),

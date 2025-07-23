@@ -1,7 +1,7 @@
 n.d(t, {
-    KZ: () => _,
+    KZ: () => f,
     Mt: () => d,
-    ZB: () => f
+    ZB: () => _
 });
 var r = n(255367),
     i = n(73800),
@@ -39,11 +39,11 @@ function c(e) {
 }
 let u = i.createContext(null),
     d = (e) => {
-        let { value: t, children: n, openedAt: a, fetchStartedAt: l, fetchEndedAt: d, isLoaded: f = !1 } = e,
-            { analyticsLocations: _ } = (0, o.ZP)(),
+        let { value: t, children: n, openedAt: a, fetchStartedAt: l, fetchEndedAt: d, isLoaded: _ = !1 } = e,
+            { analyticsLocations: f } = (0, o.ZP)(),
             p = i.useRef(void 0),
             h = {
-                analyticsLocations: _,
+                analyticsLocations: f,
                 value: t
             },
             m = i.useRef(h);
@@ -53,7 +53,7 @@ let u = i.createContext(null),
             }),
             i.useEffect(() => {
                 let e = Date.now();
-                if ((null == p.current && null != a && (p.current = e - a), !f)) return;
+                if ((null == p.current && null != a && (p.current = e - a), !_)) return;
                 let { analyticsLocations: t, value: n } = m.current;
                 ((0, s.pQ)(
                     c(
@@ -78,33 +78,33 @@ let u = i.createContext(null),
                             n
                         )
                     ));
-            }, [f]),
+            }, [_]),
             (0, r.jsx)(u.Provider, {
                 value: t,
                 children: n
             })
         );
     },
-    f = (e) => {
+    _ = (e) => {
         var t;
-        let { layout: n, userId: r, guildId: o, channelId: s, messageId: l, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
-            _ = null == (t = i.useContext(u)) ? void 0 : t.sessionId;
+        let { layout: n, userId: r, guildId: o, channelId: s, messageId: l, roleId: c, sourceSessionId: d, showGuildProfile: _ = !0 } = e,
+            f = null == (t = i.useContext(u)) ? void 0 : t.sessionId;
         return i.useMemo(
             () => ({
                 sessionId: (0, a.Z)(),
-                sourceSessionId: null != d ? d : _,
+                sourceSessionId: null != d ? d : f,
                 layout: n,
                 userId: r,
                 guildId: o,
                 channelId: s,
                 messageId: l,
                 roleId: c,
-                showGuildProfile: f
+                showGuildProfile: _
             }),
-            [_, n, r, o, s, l, c, d, f]
+            [f, n, r, o, s, l, c, d, _]
         );
     },
-    _ = () => {
+    f = () => {
         let e = i.useContext(u),
             { analyticsLocations: t } = (0, o.ZP)();
         return {

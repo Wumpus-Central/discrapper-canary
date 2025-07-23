@@ -2,7 +2,7 @@
     n.d(t, {
         AnalyticEventConfigs: () => V,
         AnalyticsContext: () => N,
-        AnalyticsSchema: () => _,
+        AnalyticsSchema: () => f,
         addExtraAnalyticsDecorator: () => B,
         clearAnalyticsEventsRecording: () => et,
         debugLogEvent: () => q,
@@ -29,8 +29,8 @@ var r = n(73800),
     c = n(565384),
     u = n(569611),
     d = n(97145),
-    f = n(857192),
-    _ = n(747161),
+    _ = n(857192),
+    f = n(747161),
     p = n(848479),
     h = n(960048),
     m = n(981631),
@@ -404,7 +404,7 @@ function z(e) {
 }
 function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    (f.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e));
+    (_.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e));
 }
 let X = !1,
     Q = {};

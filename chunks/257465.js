@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(793030),
     u = n(143450),
     d = n(186325),
-    f = n(507274),
-    _ = n(667137),
+    _ = n(507274),
+    f = n(667137),
     p = n(985316),
     h = n(946598),
     m = (function (e) {
@@ -41,9 +41,9 @@ function g(e) {
             },
             'animate-always'
         );
-    return (0, r.jsx)(_.t.Provider, {
+    return (0, r.jsx)(f.t.Provider, {
         value: S,
-        children: (0, r.jsx)(f.V, {
+        children: (0, r.jsx)(_.V, {
             id: T,
             role: b,
             'aria-label': y,

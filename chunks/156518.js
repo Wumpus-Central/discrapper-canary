@@ -11,13 +11,13 @@ var r = n(255367),
     c = n(47091),
     u = n(699516),
     d = n(823379),
-    f = n(785717),
-    _ = n(981631),
+    _ = n(785717),
+    f = n(981631),
     p = n(388032);
 function h(e) {
     let { user: t, analyticsLocation: n } = e,
-        r = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === _.OGo.PENDING_OUTGOING),
-        { trackUserProfileAction: o } = (0, f.KZ)(),
+        r = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === f.OGo.PENDING_OUTGOING),
+        { trackUserProfileAction: o } = (0, _.KZ)(),
         p = (0, s.Z)({
             user: t,
             location: n,

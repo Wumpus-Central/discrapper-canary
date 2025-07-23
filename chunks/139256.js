@@ -3,7 +3,7 @@
     $w: () => D,
     Og: () => U,
     ZY: () => M,
-    sc: () => k,
+    sc: () => L,
     zs: () => F
 }),
     n(314940),
@@ -20,13 +20,13 @@ var r = n(255367),
     p = n(124347),
     m = n(695346),
     f = n(186523),
-    g = n(553826),
-    h = n(506071),
+    h = n(553826),
+    g = n(506071),
     _ = n(203143),
     b = n(79390),
     E = n(839963),
-    x = n(294608),
-    y = n(65145),
+    y = n(294608),
+    x = n(65145),
     v = n(981631),
     C = n(388032),
     O = n(56228);
@@ -132,7 +132,7 @@ function N(e) {
 }
 function P(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: l, children: o } = e,
-        { pollAnswerRef: c } = (0, y.dv)();
+        { pollAnswerRef: c } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'checkbox',
         className: a()(t, O.enabled),
@@ -144,7 +144,7 @@ function P(e) {
 }
 function A(e) {
     let { className: t, children: n, onClick: i, isSelected: l, hasSelectedAnyAnswer: o, isFirstAnswer: c } = e,
-        { pollAnswerRef: u } = (0, y.dv)();
+        { pollAnswerRef: u } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'radio',
         className: a()(t, O.enabled),
@@ -204,8 +204,8 @@ function w(e) {
 }
 function Z(e) {
     let { className: t, answer: n, children: l, hasSelectedAnyAnswer: o, isFirstAnswer: s, elementType: c } = e,
-        { channelId: u, messageId: d } = (0, x.pE)(),
-        p = (0, x.$B)(n.style),
+        { channelId: u, messageId: d } = (0, y.pE)(),
+        p = (0, y.$B)(n.style),
         m = !0 === n.isSelected,
         f = i.useCallback(() => {
             _.Z.handlePollAnswerTapped({
@@ -243,7 +243,7 @@ function Z(e) {
 function R(e) {
     var t;
     let { attachment: n, className: i } = e,
-        l = (0, h.n)(),
+        l = (0, g.n)(),
         a = m.QK.useSetting();
     return (0, r.jsx)(p.ZP, {
         className: i,
@@ -258,7 +258,7 @@ function R(e) {
         shouldRenderAccessory: !1
     });
 }
-function k(e) {
+function L(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(c.Z, {
         className: t,
@@ -267,7 +267,7 @@ function k(e) {
         animated: n.animated
     });
 }
-function L(e, t) {
+function k(e, t) {
     return null != e
         ? (0, r.jsx)('div', {
               className: e,
@@ -277,14 +277,14 @@ function L(e, t) {
 }
 function D(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
-        { message: o } = (0, x.GF)();
+        { message: o } = (0, y.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = o.attachments.find((e) => {
             var n;
             return e.id === (null == (n = t.attachmentIds) ? void 0 : n[0]);
         });
         if (null != e)
-            return L(
+            return k(
                 n,
                 (0, r.jsx)(R, {
                     className: i,
@@ -293,9 +293,9 @@ function D(e) {
             );
     }
     return null != t.emoji
-        ? L(
+        ? k(
               n,
-              (0, r.jsx)(k, {
+              (0, r.jsx)(L, {
                   className: l,
                   emoji: t.emoji
               })
@@ -354,7 +354,7 @@ function U(e) {
         };
     return t
         ? (0, r.jsx)(
-              g.Z,
+              h.Z,
               I(j({}, l), {
                   foreground: O.radioForeground,
                   className: i

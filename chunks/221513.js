@@ -65,7 +65,7 @@ let u = function (e, t, n) {
                 },
                 o
             )
-        ).format(i ? f(e, t) : e);
+        ).format(i ? _(e, t) : e);
     },
     d = {
         [a.pK.AED]: 2,
@@ -252,7 +252,7 @@ let u = function (e, t, n) {
         [a.pK.ZWL]: 2,
         [a.pK.DISCORD_ORB]: 0
     },
-    f = (e, t) => {
+    _ = (e, t) => {
         let n = d[t];
         if (null == n) throw Error('Unexpected currency '.concat(t));
         return new (i())(e).dividedBy(10 ** n).toNumber();

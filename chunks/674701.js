@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => R,
-    Z: () => k
+    Z: () => L
 });
 var r,
     i = n(255367),
@@ -14,13 +14,13 @@ var r,
     p = n(481060),
     m = n(493683),
     f = n(529103),
-    g = n(700582),
-    h = n(906732),
+    h = n(700582),
+    g = n(906732),
     _ = n(213609),
     b = n(541716),
     E = n(28546),
-    x = n(963249),
-    y = n(594174),
+    y = n(963249),
+    x = n(594174),
     v = n(626135),
     C = n(51144),
     O = n(479446),
@@ -34,10 +34,10 @@ var r,
     w = n(388032),
     Z = n(587862),
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function k(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: L, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
-        F = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
-        { analyticsLocations: B } = (0, h.ZP)(),
+function L(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: L, analyticsPage: k, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
+        F = (0, c.e7)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: B } = (0, g.ZP)(),
         G = (0, c.e7)([I.Z], () => I.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
         (0, _.h)({
@@ -77,14 +77,14 @@ function k(e) {
                         (0, i.jsxs)('div', {
                             className: Z.avatars,
                             children: [
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(h.Z, {
                                     className: W,
                                     user: r,
                                     'aria-label': r.username,
                                     size: P.EF.SIZE_56
                                 }),
                                 null != F &&
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(h.Z, {
                                         className: K,
                                         user: F,
                                         'aria-label': r.username,
@@ -161,14 +161,14 @@ function k(e) {
                             onClick: (e) => {
                                 e.stopPropagation();
                                 let i = (0, S.F)(t);
-                                (0, x.Z)({
+                                (0, y.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     giftRecipient: r,
                                     analyticsLocation: 'system_message' === n ? i.chat : i.actionButtonCoachmark,
                                     analyticsLocations: B,
                                     analyticsObject: {
-                                        page: L,
+                                        page: k,
                                         section: D,
                                         object: N.qAy.BUTTON_CTA,
                                         objectType: N.Qqv.GIFT
@@ -197,11 +197,11 @@ function k(e) {
                         })
                     ]
                 }),
-                null != k &&
+                null != L &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === k,
-                            [Z.rightPopoutConnector]: 'right' === k
+                            [Z.leftPopoutConnector]: 'left' === L,
+                            [Z.rightPopoutConnector]: 'right' === L
                         })
                     })
             ]

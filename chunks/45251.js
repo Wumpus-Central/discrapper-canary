@@ -2,7 +2,7 @@
     PV: () => u,
     _e: () => p,
     gD: () => d,
-    kg: () => _,
+    kg: () => f,
     pO: () => h
 }),
     n(415506),
@@ -33,7 +33,7 @@ async function u(e) {
             flags: a.flags
         });
         null != u && (o = await c(u));
-        let f = await r.tn.post({
+        let _ = await r.tn.post({
             url: l.ANM.SCHEDULED_MESSAGES,
             body: {
                 channel_id: t,
@@ -46,19 +46,19 @@ async function u(e) {
             },
             rejectWithError: !0
         });
-        if (!f.ok) throw Error('Failed to create scheduled message');
+        if (!_.ok) throw Error('Failed to create scheduled message');
         return (
             i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_CREATE_SUCCESS',
                 channelId: t,
-                scheduledMessageSend: (0, s.IR)(f.body)
+                scheduledMessageSend: (0, s.IR)(_.body)
             }),
-            f
+            _
         );
     } catch (n) {
-        var d, f;
+        var d, _;
         s.GO.error('Failed to create scheduled message', n);
-        let e = null != (f = null == (d = n.body) ? void 0 : d.message) ? f : n.message;
+        let e = null != (_ = null == (d = n.body) ? void 0 : d.message) ? _ : n.message;
         throw (
             i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_CREATE_FAILURE',
@@ -102,7 +102,7 @@ async function d(e) {
         );
     }
 }
-async function f() {
+async function _() {
     let e = await r.tn.get({
         url: l.ANM.SCHEDULED_MESSAGES,
         rejectWithError: !0
@@ -110,10 +110,10 @@ async function f() {
     if (!e.ok) throw Error('Failed to fetch scheduled messages');
     return e.body.map(s.IR);
 }
-async function _() {
+async function f() {
     i.Z.dispatch({ type: 'FETCH_SCHEDULED_MESSAGES' });
     try {
-        let e = await f();
+        let e = await _();
         (s.GO.info('Fetched scheduled messages', e),
             i.Z.dispatch({
                 type: 'FETCH_SCHEDULED_MESSAGES_SUCCESS',

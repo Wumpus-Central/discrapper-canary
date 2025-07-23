@@ -55,8 +55,8 @@ function u(e) {
         return (l.push([e, t]), t + 1);
     }
     let d = s(0.5 * a),
-        f = s(r, -d),
-        _ = s(r + a, d);
-    for (f > 0 && (f = Math.max(u(0), f)), f = Math.floor(f / i.dj) * i.dj; f <= _; ) f = u(f);
+        _ = s(r, -d),
+        f = s(r + a, d);
+    for (_ > 0 && (_ = Math.max(u(0), _)), _ = Math.floor(_ / i.dj) * i.dj; _ <= f; ) _ = u(_);
     c(t, n, l);
 }

@@ -1,4 +1,4 @@
-n.d(t, { i: () => f });
+n.d(t, { i: () => _ });
 var r = n(255367),
     i = n(481060),
     a = n(626135),
@@ -56,7 +56,7 @@ function d(e, t) {
         e
     );
 }
-let f = async function () {
+let _ = async function () {
     let { userImage: e = null, guildId: t = null, analyticsLocation: l = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (a.default.track(s.rMx.OPEN_MODAL, {
         type: 'Emoji Studio',

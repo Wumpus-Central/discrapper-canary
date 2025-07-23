@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(70956),
     u = n(697492),
     d = n(37091),
-    f = n(721264);
-function _(e, t, n) {
+    _ = n(721264);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function S(e) {
         a = l.default.getId(),
         o = d.Z.getEnabled();
     if (null != t) {
-        if (o && (0, f.Z)(t.name)) return N(t.name, r, n);
+        if (o && (0, _.Z)(t.name)) return N(t.name, r, n);
         r === a && ((O = [...O, t.name].slice(-1 * E)), i().isEqual(O, g) ? (I.play(), y.stop(), (O = []), (0, u.ME)(!o)) : y.start(p, () => (O = [])));
     }
 }
@@ -80,7 +80,7 @@ class C extends o.Z {
     }
     constructor(...e) {
         (super(...e),
-            _(this, 'actions', {
+            f(this, 'actions', {
                 VOICE_CHANNEL_EFFECT_SEND: S,
                 HIGH_FIVE_COMPLETE: A
             }));

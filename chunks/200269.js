@@ -42,14 +42,14 @@ function s(e) {
         u = 1,
         d = 1;
     null != a ? (null != t ? ((u = a), (d = a + 1)) : (d = a)) : null != t ? ((u = o.level), (d = o.level + 1)) : (d = o.level + +!!s);
-    let f = i.useMemo(
+    let _ = i.useMemo(
             () => ({
                 level: u,
                 getLevelAndMarkUsed: () => (l(!0), u)
             }),
             [u]
         ),
-        _ = i.useMemo(
+        f = i.useMemo(
             () => ({
                 level: d,
                 getLevelAndMarkUsed: () => (l(!0), d)
@@ -60,12 +60,12 @@ function s(e) {
         children: [
             null != t
                 ? (0, r.jsx)(c.Provider, {
-                      value: f,
+                      value: _,
                       children: t
                   })
                 : null,
             (0, r.jsx)(c.Provider, {
-                value: _,
+                value: f,
                 children: n
             })
         ]

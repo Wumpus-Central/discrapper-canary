@@ -21,14 +21,14 @@ var r,
     p = n(607070),
     m = n(206295),
     f = n(70097),
-    g = n(314897),
-    h = n(572004),
+    h = n(314897),
+    g = n(572004),
     _ = n(914498),
     b = n(217702),
     E = n(388032),
-    x = n(383195);
-function y() {
-    return (y =
+    y = n(383195);
+function x() {
+    return (x =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -69,7 +69,7 @@ function O(e) {
     return null != t
         ? (0, i.jsx)(u.P3F, {
               onClick: t,
-              className: o()({ [x.cursorPointer]: null != t }, r),
+              className: o()({ [y.cursorPointer]: null != t }, r),
               children: n
           })
         : (0, i.jsx)('div', {
@@ -79,11 +79,11 @@ function O(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: C, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: k, onClickContent: L, onClickBanner: D } = e;
-    k = {
-        id: null != (n = null == (t = k) ? void 0 : t.id) ? n : '0',
+    let { title: C, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: k, onClickBanner: D } = e;
+    L = {
+        id: null != (n = null == (t = L) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : _.Un.UNKNOWN,
-        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : g.default.getId(),
+        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : h.default.getId(),
         activityCustomId: null == t ? void 0 : t.activityCustomId,
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
@@ -96,20 +96,20 @@ function j(e) {
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
-                    (null == k || null == (t = k.onView) || t.call(k), (0, _.GF)(k.id, k.linkType, k.referrerId, k.activityCustomId), (G.current = !0));
+                    (null == L || null == (t = L.onView) || t.call(L), (0, _.GF)(L.id, L.linkType, L.referrerId, L.activityCustomId), (G.current = !0));
                 }
             },
             void 0
         ),
         V =
-            h.wS && null != w
+            g.wS && null != w
                 ? (0, i.jsx)(c.zx, {
                       look: c.zx.Looks.BLANK,
                       size: c.zx.Sizes.ICON,
                       'aria-label': E.intl.string(E.t.WqhZsr),
-                      className: x.linkIcon,
+                      className: y.linkIcon,
                       onClick: () => {
-                          ((0, h.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, _.Yu)(k.id, k.linkType));
+                          ((0, g.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, _.Yu)(L.id, L.linkType));
                       },
                       children: (0, i.jsx)(u.xPt, {
                           size: 'xs',
@@ -121,7 +121,7 @@ function j(e) {
             null != Z
                 ? (0, i.jsx)(u.eee, {
                       'aria-label': E.intl.string(E.t.wuRE8P),
-                      className: x.linkIcon,
+                      className: y.linkIcon,
                       href: Z,
                       children: (0, i.jsx)(u.d3s, {
                           size: 'xs',
@@ -132,7 +132,7 @@ function j(e) {
         W = null != T,
         K = null != N && !1 === B,
         Y = W || K,
-        X = 0 === P ? x.bannerAspectRatioBot : x.bannerAspectRatioActivity,
+        X = 0 === P ? y.bannerAspectRatioBot : y.bannerAspectRatioActivity,
         q = l.useRef(null),
         Q = l.useCallback(() => {
             let e = q.current;
@@ -140,30 +140,30 @@ function j(e) {
         }, []),
         J = l.useMemo(() => !!K && new URL(N).pathname.endsWith('.gif'), [K, N]),
         $ = l.useMemo(() => {
-            if (null != L)
+            if (null != k)
                 return (e) => {
-                    (L(e), (0, _.KX)(k.id, k.linkType, _.j_.CONTENT, k.referrerId, k.activityCustomId));
+                    (k(e), (0, _.KX)(L.id, L.linkType, _.j_.CONTENT, L.referrerId, L.activityCustomId));
                 };
-        }, [L, k]),
+        }, [k, L]),
         ee = l.useMemo(() => {
             if (null != D)
                 return (e) => {
-                    (D(e), (0, _.KX)(k.id, k.linkType, _.j_.BANNER, k.referrerId, k.activityCustomId));
+                    (D(e), (0, _.KX)(L.id, L.linkType, _.j_.BANNER, L.referrerId, L.activityCustomId));
                 };
-        }, [D, k]);
+        }, [D, L]);
     return (0, i.jsxs)('div', {
         ref: H,
-        className: x.embed,
+        className: y.embed,
         children: [
             Y &&
                 (0, i.jsxs)(O, {
                     onClick: ee,
-                    className: o()(x.bannerWrapper, X, { [x.showVideoOnFocus]: K }),
+                    className: o()(y.bannerWrapper, X, { [y.showVideoOnFocus]: K }),
                     children: [
                         K &&
                             (J
                                 ? (0, i.jsx)('div', {
-                                      className: x.videoBanner,
+                                      className: y.videoBanner,
                                       style: { backgroundImage: 'url('.concat(N, ')') }
                                   })
                                 : (0, i.jsx)(f.Z, {
@@ -172,11 +172,11 @@ function j(e) {
                                       mediaLayoutType: b.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
-                                      className: x.videoBanner
+                                      className: y.videoBanner
                                   })),
                         W &&
                             (0, i.jsx)('div', {
-                                className: x.staticBanner,
+                                className: y.staticBanner,
                                 style: { backgroundImage: 'url('.concat(T, ')') },
                                 onTransitionEnd: Q
                             })
@@ -186,11 +186,11 @@ function j(e) {
                 style: { background: F },
                 children: [
                     (0, i.jsxs)('div', {
-                        className: x.contentContainer,
+                        className: y.contentContainer,
                         children: [
                             null != j &&
                                 (0, i.jsxs)('div', {
-                                    className: x.header,
+                                    className: y.header,
                                     children: [
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/semibold',
@@ -201,29 +201,29 @@ function j(e) {
                                     ]
                                 }),
                             (0, i.jsxs)('div', {
-                                className: x.contentAndCopyButtonWrapper,
+                                className: y.contentAndCopyButtonWrapper,
                                 children: [
                                     (0, i.jsxs)(O, {
                                         onClick: $,
-                                        className: o()(x.contentWrapper, { [x.contentWrapperClickable]: null != $ }),
+                                        className: o()(y.contentWrapper, { [y.contentWrapperClickable]: null != $ }),
                                         children: [
                                             null != A &&
                                                 (0, i.jsx)('div', {
-                                                    className: x.img,
+                                                    className: y.img,
                                                     style: { backgroundImage: 'url('.concat(A, ')') }
                                                 }),
                                             (0, i.jsxs)('div', {
-                                                className: x.content,
+                                                className: y.content,
                                                 children: [
                                                     (0, i.jsx)(u.Text, {
                                                         variant: 'text-md/semibold',
                                                         color: 'none',
                                                         lineClamp: 1,
-                                                        className: x.contentTitle,
+                                                        className: y.contentTitle,
                                                         children: C
                                                     }),
                                                     (0, i.jsx)('div', {
-                                                        className: x.contentInfoWrapper,
+                                                        className: y.contentInfoWrapper,
                                                         children: S
                                                     })
                                                 ]
@@ -235,7 +235,7 @@ function j(e) {
                             }),
                             R.length > 0 &&
                                 (0, i.jsx)('div', {
-                                    className: x.actionWrapper,
+                                    className: y.actionWrapper,
                                     children: R.map((e, t) => {
                                         let { label: n, icon: r, onClick: l, disabledReason: a, submitting: o, trackingArea: s } = e,
                                             d = null != a,
@@ -248,12 +248,12 @@ function j(e) {
                                                     : n,
                                             f = {
                                                 color: p ? c.zx.Colors.WHITE : c.zx.Colors.TRANSPARENT,
-                                                className: p ? x.primaryButton : x.alwaysWhiteText,
+                                                className: p ? y.primaryButton : y.alwaysWhiteText,
                                                 disabled: d,
                                                 submitting: o,
                                                 children: m,
                                                 onClick(e) {
-                                                    (l(e), (0, _.KX)(k.id, k.linkType, s, k.referrerId, k.activityCustomId));
+                                                    (l(e), (0, _.KX)(L.id, L.linkType, s, L.referrerId, L.activityCustomId));
                                                 }
                                             };
                                         return d
@@ -262,7 +262,7 @@ function j(e) {
                                                   {
                                                       text: a,
                                                       children: (e) => {
-                                                          var t = y(
+                                                          var t = x(
                                                               {},
                                                               (function (e) {
                                                                   if (null == e) throw TypeError('Cannot destructure ' + e);

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(785717),
     u = n(678738),
     d = n(981631),
-    f = n(388032),
-    _ = n(175354);
+    _ = n(388032),
+    f = n(175354);
 function p(e, t, n) {
     return (
         t in e
@@ -77,9 +77,9 @@ function m(e) {
             ));
     };
     return (0, r.jsx)(u.Z, {
-        heading: f.intl.string(f.t['0hKkS0']),
+        heading: _.intl.string(_.t['0hKkS0']),
         children: (0, r.jsx)('ul', {
-            className: _.list,
+            className: f.list,
             children: O.map((e) =>
                 (0, r.jsx)(
                     'li',

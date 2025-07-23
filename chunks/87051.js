@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(621600),
     u = n(709054),
     d = n(981631),
-    f = n(468788),
-    _ = n(526761),
+    _ = n(468788),
+    f = n(526761),
     p = n(388032);
 let h = {
     open(e) {
@@ -122,7 +122,7 @@ let h = {
             }),
             i.uv.announce(p.intl.string(p.t.MlIsJy)),
             (0, c.jz)({
-                updateType: f.I.AUTHORIZED_APP_DM,
+                updateType: _.I.AUTHORIZED_APP_DM,
                 guildId: e,
                 channelId: t,
                 applicationId: n,
@@ -132,8 +132,8 @@ let h = {
             }));
     },
     setForumThreadsCreated(e, t) {
-        let n = t ? _.ic.NEW_FORUM_THREADS_ON : _.ic.NEW_FORUM_THREADS_OFF,
-            r = t ? _.ic.NEW_FORUM_THREADS_OFF : _.ic.NEW_FORUM_THREADS_ON,
+        let n = t ? f.ic.NEW_FORUM_THREADS_ON : f.ic.NEW_FORUM_THREADS_OFF,
+            r = t ? f.ic.NEW_FORUM_THREADS_OFF : f.ic.NEW_FORUM_THREADS_ON,
             i = (s.ZP.getChannelFlags(e) & ~r) | n;
         this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: i }, c.UE.forumThreadsCreated(t));
     },

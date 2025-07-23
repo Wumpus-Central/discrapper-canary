@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(149203),
     u = n(388032),
     d = n(669486);
-let f = (e) => {
+let _ = (e) => {
         let { emojiSubCategory: t } = e;
         return (0, r.jsxs)('div', {
             className: a()(d.badgeLabel, t === c.t0.TOP_GUILD_EMOJI ? d.topGuildEmojiBadge : d.newlyAddedBadge),
@@ -23,8 +23,8 @@ let f = (e) => {
             ]
         });
     },
-    _ = (e) => {
-        let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: s, titleSecondary: l, isFavorite: _ = !1, emojiSubCategory: p = c.t0.NONE } = e;
+    f = (e) => {
+        let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: s, titleSecondary: l, isFavorite: f = !1, emojiSubCategory: p = c.t0.NONE } = e;
         return (0, r.jsxs)('div', {
             className: a()(d.inspector, t),
             children: [
@@ -40,11 +40,11 @@ let f = (e) => {
                             className: d.titlePrimary,
                             variant: 'text-md/semibold',
                             children: [
-                                _
+                                f
                                     ? (0, r.jsx)(o.r7p, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          'aria-label': _ ? u.intl.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
+                                          'aria-label': f ? u.intl.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
                                           width: 15,
                                           height: 15,
                                           className: d.favorite
@@ -68,7 +68,7 @@ let f = (e) => {
                           'aria-hidden': !0,
                           children: i
                       })
-                    : (0, r.jsx)(f, { emojiSubCategory: p })
+                    : (0, r.jsx)(_, { emojiSubCategory: p })
             ]
         });
     };

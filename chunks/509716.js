@@ -6,11 +6,11 @@ var r = n(456007),
     s = n(388032);
 function l(e) {
     let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
-        f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
-        _ = t.required,
-        p = '' === f;
+        _ = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
+        f = t.required,
+        p = '' === _;
     if (null == n)
-        return _
+        return f
             ? {
                   success: !1,
                   error: s.intl.string(s.t.JZJQLy)
@@ -19,7 +19,7 @@ function l(e) {
     if (p)
         return u
             ? { success: !0 }
-            : _
+            : f
               ? {
                     success: !1,
                     error: s.intl.string(s.t.JZJQLy)
@@ -32,7 +32,7 @@ function l(e) {
             n.length > 1
                 ? {
                       type: 'text',
-                      text: f
+                      text: _
                   }
                 : n[0],
         m = a.Z[t.type](h, t, c, l, d);

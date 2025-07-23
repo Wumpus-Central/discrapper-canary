@@ -1,5 +1,5 @@
 (n.d(t, {
-    Eo: () => f,
+    Eo: () => _,
     KH: () => o,
     nc: () => u,
     yz: () => d
@@ -70,7 +70,7 @@ let a = function (e, t) {
                         color: i.Ilk.ORANGE_345,
                         flair: !0
                     };
-function f(e) {
+function _(e) {
     var t;
     return e.value * (null != (t = e.multiplier) ? t : 1);
 }

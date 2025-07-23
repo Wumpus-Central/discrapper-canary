@@ -7,8 +7,8 @@ var a,
     c = n(442837),
     u = n(433517),
     d = n(570140),
-    f = n(131792),
-    _ = n(252982),
+    _ = n(131792),
+    f = n(252982),
     p = n(434529),
     h = n(981631),
     m = n(757744);
@@ -391,10 +391,10 @@ function S(e) {
     (n.forEach((e, t) => {
         let n = A(e.type),
             r = y(E({}, e), { zIndex: t });
-        ('' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, o)), -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, o))), (i = y(E({}, i), { [r.id]: new _.Z(r) })), s.push(r.id));
+        ('' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, o)), -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, o))), (i = y(E({}, i), { [r.id]: new f.Z(r) })), s.push(r.id));
     }),
         (r = y(E({}, r), {
-            [t]: new f.Z({
+            [t]: new _.Z({
                 id: t,
                 widgets: s,
                 version: a
@@ -484,7 +484,7 @@ function k(e) {
 function j(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
-        let t = new _.Z(e),
+        let t = new f.Z(e),
             n = r[t.layoutId];
         if (null == n) throw Error('LayoutStore - handleAddWidget: Invalid layoutId');
         ((t = t.set('zIndex', n.widgets.length)), (i = y(E({}, i), { [t.id]: t })));
@@ -512,7 +512,7 @@ function V(e) {
     let t = {};
     return (
         s().forEach(e, (e, n) => {
-            t[n] = new f.Z(e);
+            t[n] = new _.Z(e);
         }),
         t
     );
@@ -521,7 +521,7 @@ function F(e) {
     let t = {};
     return (
         s().forEach(e, (e, n) => {
-            t[n] = new _.Z(e);
+            t[n] = new f.Z(e);
         }),
         t
     );
@@ -548,7 +548,7 @@ class H extends (a = c.ZP.PersistedStore) {
                     let c = (0, l.Z)(),
                         u = Z(r);
                     if (null == u) return;
-                    ((n = new _.Z(
+                    ((n = new f.Z(
                         y(E({}, u), {
                             type: r,
                             id: c,

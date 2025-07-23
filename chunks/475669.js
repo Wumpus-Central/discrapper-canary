@@ -64,15 +64,15 @@ function l(e, t, n) {
                 var c = i in t,
                     u = i in s,
                     d = t[i],
-                    f = (0, r.isValidElement)(d) && !d.props.in;
-                u && (!c || f)
+                    _ = (0, r.isValidElement)(d) && !d.props.in;
+                u && (!c || _)
                     ? (l[i] = (0, r.cloneElement)(a, {
                           onExited: n.bind(null, a),
                           in: !0,
                           exit: o(a, 'exit', e),
                           enter: o(a, 'enter', e)
                       }))
-                    : u || !c || f
+                    : u || !c || _
                       ? u &&
                         c &&
                         (0, r.isValidElement)(d) &&

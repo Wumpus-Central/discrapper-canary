@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(755721),
     d = n(481060),
-    f = n(37234),
-    _ = n(194359),
+    _ = n(37234),
+    f = n(194359),
     p = n(700582),
     h = n(925329),
     m = n(479446),
@@ -32,10 +32,10 @@ var r = n(255367),
     L = n(136266);
 let x = 1500;
 function M(e) {
-    let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: f, hasSentMessage: _, giftRecipient: m, giftMessageError: b, isSendingMessage: y } = e,
+    let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: _, hasSentMessage: f, giftRecipient: m, giftMessageError: b, isSendingMessage: y } = e,
         [v, T] = i.useState(d.kO8.Modes.DEFAULT),
         M = (0, c.e7)([I.Z], () => I.Z.enabled),
-        j = _ || (null != l && null != m),
+        j = f || (null != l && null != m),
         U = (null == a ? void 0 : a.productLine) === P.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, R.wD)(),
@@ -55,7 +55,7 @@ function M(e) {
                         intervalCount: s.intervalCount
                     }));
         },
-        W = () => (null != m || (_ && null == b) ? D.intl.string(D.t.zOmK9P) : null != b ? D.intl.string(D.t.d1lrmZ) : D.intl.string(D.t['/s1xR0'])),
+        W = () => (null != m || (f && null == b) ? D.intl.string(D.t.zOmK9P) : null != b ? D.intl.string(D.t.d1lrmZ) : D.intl.string(D.t['/s1xR0'])),
         K = (e, t) => {
             (null != a &&
                 (0, A.dM)(
@@ -120,7 +120,7 @@ function M(e) {
                     null == b &&
                         (0, r.jsx)(k, {
                             giftCode: t,
-                            onClose: f
+                            onClose: _
                         }),
                     (0, r.jsx)('div', { className: L.divider }),
                     z()
@@ -183,14 +183,14 @@ function M(e) {
                       }),
                       children: W()
                   }),
-                  (_ && null != m && null == b) || j ? X() : q()
+                  (f && null != m && null == b) || j ? X() : q()
               ]
           });
 }
 let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        (_.Z.fetchRelationships(), (0, b._)());
+        (f.Z.fetchRelationships(), (0, b._)());
     }, []);
     let [a, o] = i.useState(),
         [s, h] = i.useState(!1),
@@ -242,7 +242,7 @@ let k = (e) => {
                             (E(!0),
                                 (0, m.YD)(a, t)
                                     .then(() => {
-                                        (n(), (0, f.Ou)());
+                                        (n(), (0, _.Ou)());
                                     })
                                     .catch(() => {
                                         (h(!0), E(!1));

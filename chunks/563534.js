@@ -39,15 +39,15 @@ let l = { enabled: !1 },
     c = [],
     u = {},
     d = new Set(),
-    f = {};
-function _(e) {
+    _ = {};
+function f(e) {
     var t;
     let n = null == (t = u[e]) ? void 0 : t.newMemberActions;
-    return null == n ? null : ((f[e] = n), f[e]);
+    return null == n ? null : ((_[e] = n), _[e]);
 }
 function p(e) {
     let { homeSettings: t, guildId: n } = e;
-    null != n && (null == t && (u[n] = l), (u[n] = t), _(n), d.delete(n));
+    null != n && (null == t && (u[n] = l), (u[n] = t), f(n), d.delete(n));
 }
 function h(e) {
     let { guildId: t } = e;
@@ -66,7 +66,7 @@ function g(e) {
 function E(e) {
     let { guild: t } = e;
     if (null == u[t.id]) return !1;
-    (delete u[t.id], delete f[t.id]);
+    (delete u[t.id], delete _[t.id]);
 }
 function b(e) {
     var t;
@@ -93,7 +93,7 @@ class O extends (r = i.ZP.Store) {
     }
     getNewMemberActions(e) {
         var t;
-        return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null ? null : null == f[e] ? _(e) : f[e];
+        return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null ? null : null == _[e] ? f(e) : _[e];
     }
     getActionForChannel(e, t) {
         var n;

@@ -119,13 +119,13 @@ async function u(e, t) {
 function d(e) {
     return e.filter((e) => e.type === CSSRule.FONT_FACE_RULE).filter((e) => (0, a.w7)(e.style.getPropertyValue('src')));
 }
-async function f(e, t) {
+async function _(e, t) {
     if (null == e.ownerDocument) throw Error('Provided element is not within a Document');
     let n = (0, r.qo)(e.ownerDocument.styleSheets);
     return d(await u(n, t));
 }
-async function _(e, t) {
-    let n = await f(e, t);
+async function f(e, t) {
+    let n = await _(e, t);
     return (
         await Promise.all(
             n.map((e) => {
@@ -136,7 +136,7 @@ async function _(e, t) {
     ).join('\n');
 }
 async function p(e, t) {
-    let n = null != t.fontEmbedCSS ? t.fontEmbedCSS : t.skipFonts ? null : await _(e, t);
+    let n = null != t.fontEmbedCSS ? t.fontEmbedCSS : t.skipFonts ? null : await f(e, t);
     if (n) {
         let t = document.createElement('style'),
             r = document.createTextNode(n);

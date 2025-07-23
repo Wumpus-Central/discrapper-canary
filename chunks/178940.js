@@ -13,8 +13,8 @@ var r,
     c = n.n(l),
     u = n(866442),
     d = n(692547),
-    f = n(84735),
-    _ = n(481060),
+    _ = n(84735),
+    f = n(481060),
     p = n(981631),
     h = n(883658);
 function m(e, t, n) {
@@ -63,7 +63,7 @@ let y = {
     };
 class v extends (r = a.PureComponent) {
     render() {
-        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: m } = this.props,
+        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: f, onClick: m } = this.props,
             E =
                 null != l
                     ? (0, i.jsx)('div', {
@@ -76,13 +76,13 @@ class v extends (r = a.PureComponent) {
             y = this.props.disabled ? h.inputDisabled : this.props.readOnly ? h.inputReadonly : h.inputDefault;
         return (0, i.jsxs)(b, {
             className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], a, {
-                [h.row]: 'row' === _,
+                [h.row]: 'row' === f,
                 [h.checked]: n
             }),
             children: [
                 u ? E : null,
                 !d &&
-                    (0, i.jsx)(f.t, {
+                    (0, i.jsx)(_.t, {
                         children: (0, i.jsx)('input', {
                             className: s()(o, y),
                             type: 'checkbox',
@@ -133,7 +133,7 @@ function I(e) {
 function T(e) {
     let { indicatorClassName: t, value: n, size: r, shape: o, checkboxColor: l, disabled: c } = e,
         u = I(e),
-        f = a.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
+        _ = a.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, i.jsx)('div', {
         className: s()(h.checkbox, o, t, {
             [h.checked]: n,
@@ -147,9 +147,9 @@ function T(e) {
             },
             u
         ),
-        children: (0, i.jsx)(_.kSu, {
+        children: (0, i.jsx)(f.kSu, {
             size: 'sm',
-            color: f,
+            color: _,
             'aria-hidden': !0
         })
     });

@@ -353,8 +353,8 @@
                                         c,
                                         u,
                                         d,
-                                        _ = t.length;
-                                    for (s = 0; s < _; s += 1)
+                                        f = t.length;
+                                    for (s = 0; s < f; s += 1)
                                         if ('ks' in (o = t[s]) && !o.completed) {
                                             if (((o.completed = !0), o.hasMask)) {
                                                 var p = o.masksProperties;
@@ -362,7 +362,7 @@
                                                     if (p[l].pt.k.i) a(p[l].pt.k);
                                                     else for (u = 0, d = p[l].pt.k.length; u < d; u += 1) (p[l].pt.k[u].s && a(p[l].pt.k[u].s[0]), p[l].pt.k[u].e && a(p[l].pt.k[u].e[0]));
                                             }
-                                            0 === o.ty ? ((o.layers = r(o.refId, n)), e(o.layers, n)) : 4 === o.ty ? i(o.shapes) : 5 === o.ty && f(o);
+                                            0 === o.ty ? ((o.layers = r(o.refId, n)), e(o.layers, n)) : 4 === o.ty ? i(o.shapes) : 5 === o.ty && _(o);
                                         }
                                 }
                                 function t(t, n) {
@@ -595,20 +595,20 @@
                                             }
                                         };
                                     })();
-                                function f(e) {
+                                function _(e) {
                                     0 === e.t.a.length && e.t.p;
                                 }
-                                var _ = {};
+                                var f = {};
                                 return (
-                                    (_.completeData = function (n) {
+                                    (f.completeData = function (n) {
                                         n.__complete || (u(n), s(n), l(n), c(n), d(n), e(n.layers, n.assets), t(n.chars, n.assets), (n.__complete = !0));
                                     }),
-                                    (_.checkColors = u),
-                                    (_.checkChars = l),
-                                    (_.checkPathProperties = c),
-                                    (_.checkShapes = d),
-                                    (_.completeLayers = e),
-                                    _
+                                    (f.checkColors = u),
+                                    (f.checkChars = l),
+                                    (f.checkPathProperties = c),
+                                    (f.checkShapes = d),
+                                    (f.completeLayers = e),
+                                    f
                                 );
                             }
                             if (
@@ -1259,7 +1259,7 @@
                         i += 1;
                     }
                     var a = new AnimationItem();
-                    return (f(a, e), a.setData(e, n), a);
+                    return (_(a, e), a.setData(e, n), a);
                 }
                 function c() {
                     var e,
@@ -1274,7 +1274,7 @@
                 function d() {
                     i -= 1;
                 }
-                function f(e, n) {
+                function _(e, n) {
                     (e.addEventListener('destroy', s),
                         e.addEventListener('_active', u),
                         e.addEventListener('_idle', d),
@@ -1284,9 +1284,9 @@
                         }),
                         (r += 1));
                 }
-                function _(e) {
+                function f(e) {
                     var t = new AnimationItem();
-                    return (f(t, null), t.setParams(e), t);
+                    return (_(t, null), t.setParams(e), t);
                 }
                 function p(e, n) {
                     var i;
@@ -1367,7 +1367,7 @@
                     var n;
                     for (n = 0; n < r; n += 1) t[n].animation.unmute(e);
                 }
-                return ((e.registerAnimation = l), (e.loadAnimation = _), (e.setSpeed = p), (e.setDirection = h), (e.play = m), (e.pause = b), (e.stop = O), (e.togglePause = v), (e.searchAnimations = T), (e.resize = S), (e.goToAndStop = y), (e.destroy = I), (e.freeze = N), (e.unfreeze = C), (e.setVolume = R), (e.mute = P), (e.unmute = w), (e.getRegisteredAnimations = c), e);
+                return ((e.registerAnimation = l), (e.loadAnimation = f), (e.setSpeed = p), (e.setDirection = h), (e.play = m), (e.pause = b), (e.stop = O), (e.togglePause = v), (e.searchAnimations = T), (e.resize = S), (e.goToAndStop = y), (e.destroy = I), (e.freeze = N), (e.unfreeze = C), (e.setVolume = R), (e.mute = P), (e.unmute = w), (e.getRegisteredAnimations = c), e);
             })(),
             BezierFactory = (function () {
                 var e = {};
@@ -1392,20 +1392,20 @@
                 function d(e, t) {
                     return 3 * t - 6 * e;
                 }
-                function f(e) {
+                function _(e) {
                     return 3 * e;
                 }
-                function _(e, t, n) {
-                    return ((u(t, n) * e + d(t, n)) * e + f(t)) * e;
+                function f(e, t, n) {
+                    return ((u(t, n) * e + d(t, n)) * e + _(t)) * e;
                 }
                 function p(e, t, n) {
-                    return 3 * u(t, n) * e * e + 2 * d(t, n) * e + f(t);
+                    return 3 * u(t, n) * e * e + 2 * d(t, n) * e + _(t);
                 }
                 function h(e, t, n, r, i) {
                     var s,
                         l,
                         c = 0;
-                    do (s = _((l = t + (n - t) / 2), r, i) - e) > 0 ? (n = l) : (t = l);
+                    do (s = f((l = t + (n - t) / 2), r, i) - e) > 0 ? (n = l) : (t = l);
                     while (Math.abs(s) > a && ++c < o);
                     return l;
                 }
@@ -1413,7 +1413,7 @@
                     for (var a = 0; a < r; ++a) {
                         var o = p(t, n, i);
                         if (0 === o) break;
-                        var s = _(t, n, i) - e;
+                        var s = f(t, n, i) - e;
                         t -= s / o;
                     }
                     return t;
@@ -1428,7 +1428,7 @@
                                 n = this._p[1],
                                 r = this._p[2],
                                 i = this._p[3];
-                            return (this._precomputed || this._precompute(), t === n && r === i) ? e : 0 === e ? 0 : 1 === e ? 1 : _(this._getTForX(e), n, i);
+                            return (this._precomputed || this._precompute(), t === n && r === i) ? e : 0 === e ? 0 : 1 === e ? 1 : f(this._getTForX(e), n, i);
                         },
                         _precompute: function () {
                             var e = this._p[0],
@@ -1438,7 +1438,7 @@
                             ((this._precomputed = !0), (e !== t || n !== r) && this._calcSampleValues());
                         },
                         _calcSampleValues: function () {
-                            for (var e = this._p[0], t = this._p[2], n = 0; n < s; ++n) this._mSampleValues[n] = _(n * l, e, t);
+                            for (var e = this._p[0], t = this._p[2], n = 0; n < s; ++n) this._mSampleValues[n] = f(n * l, e, t);
                         },
                         _getTForX: function (e) {
                             for (var t = this._p[0], n = this._p[2], r = this._mSampleValues, a = 0, o = 1, c = s - 1; o !== c && r[o] <= e; ++o) a += l;
@@ -1508,10 +1508,10 @@
             function n(n, r, i, a, o, s, l, c, u) {
                 if (0 === i && 0 === s && 0 === u) return t(n, r, a, o, l, c);
                 var d,
-                    f = e.sqrt(e.pow(a - n, 2) + e.pow(o - r, 2) + e.pow(s - i, 2)),
-                    _ = e.sqrt(e.pow(l - n, 2) + e.pow(c - r, 2) + e.pow(u - i, 2)),
+                    _ = e.sqrt(e.pow(a - n, 2) + e.pow(o - r, 2) + e.pow(s - i, 2)),
+                    f = e.sqrt(e.pow(l - n, 2) + e.pow(c - r, 2) + e.pow(u - i, 2)),
                     p = e.sqrt(e.pow(l - a, 2) + e.pow(c - o, 2) + e.pow(u - s, 2));
-                return (d = f > _ ? (f > p ? f - _ - p : p - _ - f) : p > _ ? p - _ - f : _ - f - p) > -0.0001 && d < 0.0001;
+                return (d = _ > f ? (_ > p ? _ - f - p : p - f - _) : p > f ? p - f - _ : f - _ - p) > -0.0001 && d < 0.0001;
             }
             var r = (function () {
                 return function (e, t, n, r) {
@@ -1523,11 +1523,11 @@
                         c,
                         u = getDefaultCurveSegments(),
                         d = 0,
-                        f = [],
                         _ = [],
+                        f = [],
                         p = bezierLengthPool.newElement();
                     for (i = 0, o = n.length; i < u; i += 1) {
-                        for (a = 0, l = i / (u - 1), c = 0; a < o; a += 1) ((s = bmPow(1 - l, 3) * e[a] + 3 * bmPow(1 - l, 2) * l * n[a] + 3 * (1 - l) * bmPow(l, 2) * r[a] + bmPow(l, 3) * t[a]), (f[a] = s), null !== _[a] && (c += bmPow(f[a] - _[a], 2)), (_[a] = f[a]));
+                        for (a = 0, l = i / (u - 1), c = 0; a < o; a += 1) ((s = bmPow(1 - l, 3) * e[a] + 3 * bmPow(1 - l, 2) * l * n[a] + 3 * (1 - l) * bmPow(l, 2) * r[a] + bmPow(l, 3) * t[a]), (_[a] = s), null !== f[a] && (c += bmPow(_[a] - f[a], 2)), (f[a] = _[a]));
                         (c && (d += c = bmSqrt(c)), (p.percents[i] = l), (p.lengths[i] = d));
                     }
                     return ((p.addedLength = d), p);
@@ -1560,8 +1560,8 @@
                         var c,
                             u,
                             d,
-                            f,
                             _,
+                            f,
                             p,
                             h,
                             m = getDefaultCurveSegments(),
@@ -1570,7 +1570,7 @@
                         2 === n.length && (n[0] !== r[0] || n[1] !== r[1]) && t(n[0], n[1], r[0], r[1], n[0] + i[0], n[1] + i[1]) && t(n[0], n[1], r[0], r[1], r[0] + s[0], r[1] + s[1]) && (m = 2);
                         var b = new a(m);
                         for (c = 0, d = i.length; c < m; c += 1) {
-                            for (u = 0, h = createSizedArray(d), _ = c / (m - 1), p = 0; u < d; u += 1) ((f = bmPow(1 - _, 3) * n[u] + 3 * bmPow(1 - _, 2) * _ * (n[u] + i[u]) + 3 * (1 - _) * bmPow(_, 2) * (r[u] + s[u]) + bmPow(_, 3) * r[u]), (h[u] = f), null !== E && (p += bmPow(h[u] - E[u], 2)));
+                            for (u = 0, h = createSizedArray(d), f = c / (m - 1), p = 0; u < d; u += 1) ((_ = bmPow(1 - f, 3) * n[u] + 3 * bmPow(1 - f, 2) * f * (n[u] + i[u]) + 3 * (1 - f) * bmPow(f, 2) * (r[u] + s[u]) + bmPow(f, 3) * r[u]), (h[u] = _), null !== E && (p += bmPow(h[u] - E[u], 2)));
                             ((g += p = bmSqrt(p)), (b.points[c] = new o(p, h)), (E = h));
                         }
                         ((b.segmentLength = g), (e[l] = b));
@@ -1605,27 +1605,27 @@
                     a < 0 ? (a = 0) : a > 1 && (a = 1);
                     var c,
                         d = l(a, s),
-                        f = l((o = o > 1 ? 1 : o), s),
-                        _ = t.length,
+                        _ = l((o = o > 1 ? 1 : o), s),
+                        f = t.length,
                         p = 1 - d,
-                        h = 1 - f,
+                        h = 1 - _,
                         m = p * p * p,
                         g = d * p * p * 3,
                         E = d * d * p * 3,
                         b = d * d * d,
                         y = p * p * h,
-                        O = d * p * h + p * d * h + p * p * f,
-                        v = d * d * h + p * d * f + d * p * f,
-                        I = d * d * f,
+                        O = d * p * h + p * d * h + p * p * _,
+                        v = d * d * h + p * d * _ + d * p * _,
+                        I = d * d * _,
                         T = p * h * h,
-                        S = d * h * h + p * f * h + p * h * f,
-                        A = d * f * h + p * f * f + d * h * f,
-                        N = d * f * f,
+                        S = d * h * h + p * _ * h + p * h * _,
+                        A = d * _ * h + p * _ * _ + d * h * _,
+                        N = d * _ * _,
                         C = h * h * h,
-                        R = f * h * h + h * f * h + h * h * f,
-                        P = f * f * h + h * f * f + f * h * f,
-                        w = f * f * f;
-                    for (c = 0; c < _; c += 1) ((u[4 * c] = e.round((m * t[c] + g * r[c] + E * i[c] + b * n[c]) * 1000) / 1000), (u[4 * c + 1] = e.round((y * t[c] + O * r[c] + v * i[c] + I * n[c]) * 1000) / 1000), (u[4 * c + 2] = e.round((T * t[c] + S * r[c] + A * i[c] + N * n[c]) * 1000) / 1000), (u[4 * c + 3] = e.round((C * t[c] + R * r[c] + P * i[c] + w * n[c]) * 1000) / 1000));
+                        R = _ * h * h + h * _ * h + h * h * _,
+                        P = _ * _ * h + h * _ * _ + _ * h * _,
+                        w = _ * _ * _;
+                    for (c = 0; c < f; c += 1) ((u[4 * c] = e.round((m * t[c] + g * r[c] + E * i[c] + b * n[c]) * 1000) / 1000), (u[4 * c + 1] = e.round((y * t[c] + O * r[c] + v * i[c] + I * n[c]) * 1000) / 1000), (u[4 * c + 2] = e.round((T * t[c] + S * r[c] + A * i[c] + N * n[c]) * 1000) / 1000), (u[4 * c + 3] = e.round((C * t[c] + R * r[c] + P * i[c] + w * n[c]) * 1000) / 1000));
                     return u;
                 },
                 getPointInSegment: c,
@@ -1657,13 +1657,13 @@
                 c < u - 1 ? (c += 1) : ((l = 0), (d = !1));
             }
             b = this.keyframesMetadata[c] || {};
-            var f = E.t - s,
-                _ = g.t - s;
+            var _ = E.t - s,
+                f = g.t - s;
             if (g.to) {
                 b.bezierData || (b.bezierData = bez.buildBezierData(g.s, E.s || g.e, g.to, g.ti));
                 var p = b.bezierData;
-                if (e >= f || e < _) {
-                    var h = e >= f ? p.points.length - 1 : 0;
+                if (e >= _ || e < f) {
+                    var h = e >= _ ? p.points.length - 1 : 0;
                     for (y = 0, O = p.points[h].point.length; y < O; y += 1) m[y] = p.points[h].point[y];
                 } else {
                     b.__fnct ? (T = b.__fnct) : (b.__fnct = T = BezierFactory.getBezierEasing(g.o.x, g.o.y, g.i.x, g.i.y, g.n).get);
@@ -1678,7 +1678,7 @@
                         T,
                         S,
                         A,
-                        N = T((e - _) / (f - _)),
+                        N = T((e - f) / (_ - f)),
                         C = p.segmentLength * N,
                         R = t.lastFrame < e && t._lastKeyframeIndex === c ? t._lastAddedLength : 0;
                     for (I = t.lastFrame < e && t._lastKeyframeIndex === c ? t._lastPoint : 0, d = !0, v = p.points.length; d; ) {
@@ -1694,8 +1694,8 @@
                     }
                     ((t._lastPoint = I), (t._lastAddedLength = R - p.points[I].partialLength), (t._lastKeyframeIndex = c));
                 }
-            } else if (((u = g.s.length), (S = E.s || g.e), this.sh && 1 !== g.h)) e >= f ? ((m[0] = S[0]), (m[1] = S[1]), (m[2] = S[2])) : e <= _ ? ((m[0] = g.s[0]), (m[1] = g.s[1]), (m[2] = g.s[2])) : quaternionToEuler(m, slerp(createQuaternion(g.s), createQuaternion(S), (e - _) / (f - _)));
-            else for (c = 0; c < u; c += 1) (1 !== g.h && (e >= f ? (N = 1) : e < _ ? (N = 0) : (g.o.x.constructor === Array ? (b.__fnct || (b.__fnct = []), b.__fnct[c] ? (T = b.__fnct[c]) : ((n = void 0 === g.o.x[c] ? g.o.x[0] : g.o.x[c]), (r = void 0 === g.o.y[c] ? g.o.y[0] : g.o.y[c]), (i = void 0 === g.i.x[c] ? g.i.x[0] : g.i.x[c]), (a = void 0 === g.i.y[c] ? g.i.y[0] : g.i.y[c]), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (b.__fnct[c] = T))) : b.__fnct ? (T = b.__fnct) : ((n = g.o.x), (r = g.o.y), (i = g.i.x), (a = g.i.y), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (g.keyframeMetadata = T)), (N = T((e - _) / (f - _))))), (S = E.s || g.e), (o = 1 === g.h ? g.s[c] : g.s[c] + (S[c] - g.s[c]) * N), 'multidimensional' === this.propType ? (m[c] = o) : (m = o));
+            } else if (((u = g.s.length), (S = E.s || g.e), this.sh && 1 !== g.h)) e >= _ ? ((m[0] = S[0]), (m[1] = S[1]), (m[2] = S[2])) : e <= f ? ((m[0] = g.s[0]), (m[1] = g.s[1]), (m[2] = g.s[2])) : quaternionToEuler(m, slerp(createQuaternion(g.s), createQuaternion(S), (e - f) / (_ - f)));
+            else for (c = 0; c < u; c += 1) (1 !== g.h && (e >= _ ? (N = 1) : e < f ? (N = 0) : (g.o.x.constructor === Array ? (b.__fnct || (b.__fnct = []), b.__fnct[c] ? (T = b.__fnct[c]) : ((n = void 0 === g.o.x[c] ? g.o.x[0] : g.o.x[c]), (r = void 0 === g.o.y[c] ? g.o.y[0] : g.o.y[c]), (i = void 0 === g.i.x[c] ? g.i.x[0] : g.i.x[c]), (a = void 0 === g.i.y[c] ? g.i.y[0] : g.i.y[c]), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (b.__fnct[c] = T))) : b.__fnct ? (T = b.__fnct) : ((n = g.o.x), (r = g.o.y), (i = g.i.x), (a = g.i.y), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (g.keyframeMetadata = T)), (N = T((e - f) / (_ - f))))), (S = E.s || g.e), (o = 1 === g.h ? g.s[c] : g.s[c] + (S[c] - g.s[c]) * N), 'multidimensional' === this.propType ? (m[c] = o) : (m = o));
             return ((t.lastIndex = l), m);
         }
         function slerp(e, t, n) {
@@ -1708,12 +1708,12 @@
                 c = e[0],
                 u = e[1],
                 d = e[2],
-                f = e[3],
-                _ = t[0],
+                _ = e[3],
+                f = t[0],
                 p = t[1],
                 h = t[2],
                 m = t[3];
-            return ((i = c * _ + u * p + d * h + f * m) < 0 && ((i = -i), (_ = -_), (p = -p), (h = -h), (m = -m)), 1 - i > 0.000001 ? ((a = Math.sin((r = Math.acos(i)))), (o = Math.sin((1 - n) * r) / a), (s = Math.sin(n * r) / a)) : ((o = 1 - n), (s = n)), (l[0] = o * c + s * _), (l[1] = o * u + s * p), (l[2] = o * d + s * h), (l[3] = o * f + s * m), l);
+            return ((i = c * f + u * p + d * h + _ * m) < 0 && ((i = -i), (f = -f), (p = -p), (h = -h), (m = -m)), 1 - i > 0.000001 ? ((a = Math.sin((r = Math.acos(i)))), (o = Math.sin((1 - n) * r) / a), (s = Math.sin(n * r) / a)) : ((o = 1 - n), (s = n)), (l[0] = o * c + s * f), (l[1] = o * u + s * p), (l[2] = o * d + s * h), (l[3] = o * _ + s * m), l);
         }
         function quaternionToEuler(e, t) {
             var n = t[0],
@@ -1976,10 +1976,10 @@
                     if (e < i[0].t - this.offsetTime) ((a = i[0].s[0]), (s = !0), (r = 0));
                     else if (e >= i[i.length - 1].t - this.offsetTime) ((a = i[i.length - 1].s ? i[i.length - 1].s[0] : i[i.length - 2].e[0]), (s = !0));
                     else {
-                        for (var a, o, s, l, c, u, d, f, _, p, h, m, g, E = r, b = i.length - 1, y = !0; y && ((p = i[E]), !((h = i[E + 1]).t - this.offsetTime > e)); ) E < b - 1 ? (E += 1) : (y = !1);
-                        ((m = this.keyframesMetadata[E] || {}), (s = 1 === p.h), (r = E), s || (e >= h.t - this.offsetTime ? (f = 1) : e < p.t - this.offsetTime ? (f = 0) : (m.__fnct ? (g = m.__fnct) : (m.__fnct = g = BezierFactory.getBezierEasing(p.o.x, p.o.y, p.i.x, p.i.y).get), (f = g((e - (p.t - this.offsetTime)) / (h.t - this.offsetTime - (p.t - this.offsetTime))))), (o = h.s ? h.s[0] : p.e[0])), (a = p.s[0]));
+                        for (var a, o, s, l, c, u, d, _, f, p, h, m, g, E = r, b = i.length - 1, y = !0; y && ((p = i[E]), !((h = i[E + 1]).t - this.offsetTime > e)); ) E < b - 1 ? (E += 1) : (y = !1);
+                        ((m = this.keyframesMetadata[E] || {}), (s = 1 === p.h), (r = E), s || (e >= h.t - this.offsetTime ? (_ = 1) : e < p.t - this.offsetTime ? (_ = 0) : (m.__fnct ? (g = m.__fnct) : (m.__fnct = g = BezierFactory.getBezierEasing(p.o.x, p.o.y, p.i.x, p.i.y).get), (_ = g((e - (p.t - this.offsetTime)) / (h.t - this.offsetTime - (p.t - this.offsetTime))))), (o = h.s ? h.s[0] : p.e[0])), (a = p.s[0]));
                     }
-                    for (l = 0, u = t._length, d = a.i[0].length, n.lastIndex = r; l < u; l += 1) for (c = 0; c < d; c += 1) ((_ = s ? a.i[l][c] : a.i[l][c] + (o.i[l][c] - a.i[l][c]) * f), (t.i[l][c] = _), (_ = s ? a.o[l][c] : a.o[l][c] + (o.o[l][c] - a.o[l][c]) * f), (t.o[l][c] = _), (_ = s ? a.v[l][c] : a.v[l][c] + (o.v[l][c] - a.v[l][c]) * f), (t.v[l][c] = _));
+                    for (l = 0, u = t._length, d = a.i[0].length, n.lastIndex = r; l < u; l += 1) for (c = 0; c < d; c += 1) ((f = s ? a.i[l][c] : a.i[l][c] + (o.i[l][c] - a.i[l][c]) * _), (t.i[l][c] = f), (f = s ? a.o[l][c] : a.o[l][c] + (o.o[l][c] - a.o[l][c]) * _), (t.o[l][c] = f), (f = s ? a.v[l][c] : a.v[l][c] + (o.v[l][c] - a.v[l][c]) * _), (t.v[l][c] = f));
                 }
                 function n() {
                     var t = this.comp.renderedFrame - this.offsetTime,
@@ -2090,17 +2090,17 @@
                                         c = this.os.v,
                                         u = this.is.v,
                                         d = (2 * Math.PI * s) / (2 * i),
-                                        f = (2 * Math.PI * l) / (2 * i),
-                                        _ = -Math.PI / 2;
-                                    _ += this.r.v;
+                                        _ = (2 * Math.PI * l) / (2 * i),
+                                        f = -Math.PI / 2;
+                                    f += this.r.v;
                                     var p = 3 === this.data.d ? -1 : 1;
                                     for (e = 0, this.v._length = 0; e < i; e += 1) {
-                                        ((t = o ? s : l), (n = o ? c : u), (r = o ? d : f));
-                                        var h = t * Math.cos(_),
-                                            m = t * Math.sin(_),
+                                        ((t = o ? s : l), (n = o ? c : u), (r = o ? d : _));
+                                        var h = t * Math.cos(f),
+                                            m = t * Math.sin(f),
                                             g = 0 === h && 0 === m ? 0 : m / Math.sqrt(h * h + m * m),
                                             E = 0 === h && 0 === m ? 0 : -h / Math.sqrt(h * h + m * m);
-                                        ((h += +this.p.v[0]), (m += +this.p.v[1]), this.v.setTripleAt(h, m, h - g * r * n * p, m - E * r * n * p, h + g * r * n * p, m + E * r * n * p, e, !0), (o = !o), (_ += a * p));
+                                        ((h += +this.p.v[0]), (m += +this.p.v[1]), this.v.setTripleAt(h, m, h - g * r * n * p, m - E * r * n * p, h + g * r * n * p, m + E * r * n * p, e, !0), (o = !o), (f += a * p));
                                     }
                                 },
                                 convertPolygonToPath: function () {
@@ -2126,7 +2126,7 @@
                             e
                         );
                     })(),
-                    f = (function () {
+                    _ = (function () {
                         function e(e, t) {
                             ((this.v = shapePool.newElement()), (this.v.c = !0), (this.localShapeCollection = shapeCollectionPool.newShapeCollection()), this.localShapeCollection.addShape(this.v), (this.paths = this.localShapeCollection), (this.elem = e), (this.comp = e.comp), (this.frameId = -1), (this.d = t.d), this.initDynamicPropertyContainer(e), (this.p = PropertyFactory.getProp(e, t.p, 1, 0, this)), (this.s = PropertyFactory.getProp(e, t.s, 1, 0, this)), (this.r = PropertyFactory.getProp(e, t.r, 0, 0, this)), this.dynamicProperties.length ? (this.k = !0) : ((this.k = !1), this.convertRectToPath()));
                         }
@@ -2150,7 +2150,7 @@
                             e
                         );
                     })();
-                function _() {
+                function f() {
                     return s;
                 }
                 function p() {
@@ -2160,9 +2160,9 @@
                 return (
                     (h.getShapeProp = function (e, t, n) {
                         var r;
-                        return (3 === n || 4 === n ? (r = (3 === n ? t.pt : t.ks).k.length ? new c(e, t, n) : new s(e, t, n)) : 5 === n ? (r = new f(e, t)) : 6 === n ? (r = new u(e, t)) : 7 === n && (r = new d(e, t)), r.k && e.addDynamicProperty(r), r);
+                        return (3 === n || 4 === n ? (r = (3 === n ? t.pt : t.ks).k.length ? new c(e, t, n) : new s(e, t, n)) : 5 === n ? (r = new _(e, t)) : 6 === n ? (r = new u(e, t)) : 7 === n && (r = new d(e, t)), r.k && e.addDynamicProperty(r), r);
                     }),
-                    (h.getConstructorFunction = _),
+                    (h.getConstructorFunction = f),
                     (h.getKeyframedConstructorFunction = p),
                     h
                 );
@@ -2210,18 +2210,18 @@
                         o = t(i);
                     return this._t(a, o, 0, 0, -o, a, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)._t(1, 0, 0, 0, n(r), 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)._t(a, -o, 0, 0, o, a, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
                 }
-                function f(e, t, n) {
+                function _(e, t, n) {
                     return (n || 0 === n || (n = 1), 1 === e && 1 === t && 1 === n) ? this : this._t(e, 0, 0, 0, 0, t, 0, 0, 0, 0, n, 0, 0, 0, 0, 1);
                 }
-                function _(e, t, n, r, i, a, o, s, l, c, u, d, f, _, p, h) {
-                    return ((this.props[0] = e), (this.props[1] = t), (this.props[2] = n), (this.props[3] = r), (this.props[4] = i), (this.props[5] = a), (this.props[6] = o), (this.props[7] = s), (this.props[8] = l), (this.props[9] = c), (this.props[10] = u), (this.props[11] = d), (this.props[12] = f), (this.props[13] = _), (this.props[14] = p), (this.props[15] = h), this);
+                function f(e, t, n, r, i, a, o, s, l, c, u, d, _, f, p, h) {
+                    return ((this.props[0] = e), (this.props[1] = t), (this.props[2] = n), (this.props[3] = r), (this.props[4] = i), (this.props[5] = a), (this.props[6] = o), (this.props[7] = s), (this.props[8] = l), (this.props[9] = c), (this.props[10] = u), (this.props[11] = d), (this.props[12] = _), (this.props[13] = f), (this.props[14] = p), (this.props[15] = h), this);
                 }
                 function p(e, t, n) {
                     return ((n = n || 0), 0 !== e || 0 !== t || 0 !== n) ? this._t(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, e, t, n, 1) : this;
                 }
-                function h(e, t, n, r, i, a, o, s, l, c, u, d, f, _, p, h) {
+                function h(e, t, n, r, i, a, o, s, l, c, u, d, _, f, p, h) {
                     var m = this.props;
-                    if (1 === e && 0 === t && 0 === n && 0 === r && 0 === i && 1 === a && 0 === o && 0 === s && 0 === l && 0 === c && 1 === u && 0 === d) return ((m[12] = m[12] * e + m[15] * f), (m[13] = m[13] * a + m[15] * _), (m[14] = m[14] * u + m[15] * p), (m[15] *= h), (this._identityCalculated = !1), this);
+                    if (1 === e && 0 === t && 0 === n && 0 === r && 0 === i && 1 === a && 0 === o && 0 === s && 0 === l && 0 === c && 1 === u && 0 === d) return ((m[12] = m[12] * e + m[15] * _), (m[13] = m[13] * a + m[15] * f), (m[14] = m[14] * u + m[15] * p), (m[15] *= h), (this._identityCalculated = !1), this);
                     var g = m[0],
                         E = m[1],
                         b = m[2],
@@ -2238,7 +2238,7 @@
                         P = m[13],
                         w = m[14],
                         D = m[15];
-                    return ((m[0] = g * e + E * i + b * l + y * f), (m[1] = g * t + E * a + b * c + y * _), (m[2] = g * n + E * o + b * u + y * p), (m[3] = g * r + E * s + b * d + y * h), (m[4] = O * e + v * i + I * l + T * f), (m[5] = O * t + v * a + I * c + T * _), (m[6] = O * n + v * o + I * u + T * p), (m[7] = O * r + v * s + I * d + T * h), (m[8] = S * e + A * i + N * l + C * f), (m[9] = S * t + A * a + N * c + C * _), (m[10] = S * n + A * o + N * u + C * p), (m[11] = S * r + A * s + N * d + C * h), (m[12] = R * e + P * i + w * l + D * f), (m[13] = R * t + P * a + w * c + D * _), (m[14] = R * n + P * o + w * u + D * p), (m[15] = R * r + P * s + w * d + D * h), (this._identityCalculated = !1), this);
+                    return ((m[0] = g * e + E * i + b * l + y * _), (m[1] = g * t + E * a + b * c + y * f), (m[2] = g * n + E * o + b * u + y * p), (m[3] = g * r + E * s + b * d + y * h), (m[4] = O * e + v * i + I * l + T * _), (m[5] = O * t + v * a + I * c + T * f), (m[6] = O * n + v * o + I * u + T * p), (m[7] = O * r + v * s + I * d + T * h), (m[8] = S * e + A * i + N * l + C * _), (m[9] = S * t + A * a + N * c + C * f), (m[10] = S * n + A * o + N * u + C * p), (m[11] = S * r + A * s + N * d + C * h), (m[12] = R * e + P * i + w * l + D * _), (m[13] = R * t + P * a + w * c + D * f), (m[14] = R * n + P * o + w * u + D * p), (m[15] = R * r + P * s + w * d + D * h), (this._identityCalculated = !1), this);
                 }
                 function m(e) {
                     var t = e.props;
@@ -2336,7 +2336,7 @@
                     return 'matrix(' + D(e[0]) + ',' + D(e[1]) + ',' + D(e[4]) + ',' + D(e[5]) + ',' + D(e[12]) + ',' + D(e[13]) + ')';
                 }
                 return function () {
-                    ((this.reset = i), (this.rotate = a), (this.rotateX = o), (this.rotateY = s), (this.rotateZ = l), (this.skew = u), (this.skewFromAxis = d), (this.shear = c), (this.scale = f), (this.setTransform = _), (this.translate = p), (this.transform = h), (this.multiply = m), (this.applyToPoint = O), (this.applyToX = v), (this.applyToY = I), (this.applyToZ = T), (this.applyToPointArray = R), (this.applyToTriplePoints = C), (this.applyToPointStringified = P), (this.toCSS = w), (this.to2dCSS = L), (this.clone = b), (this.cloneFromProps = y), (this.equals = E), (this.inversePoints = N), (this.inversePoint = A), (this.getInverseMatrix = S), (this._t = this.transform), (this.isIdentity = g), (this._identity = !0), (this._identityCalculated = !1), (this.props = createTypedArray('float32', 16)), this.reset());
+                    ((this.reset = i), (this.rotate = a), (this.rotateX = o), (this.rotateY = s), (this.rotateZ = l), (this.skew = u), (this.skewFromAxis = d), (this.shear = c), (this.scale = _), (this.setTransform = f), (this.translate = p), (this.transform = h), (this.multiply = m), (this.applyToPoint = O), (this.applyToX = v), (this.applyToY = I), (this.applyToZ = T), (this.applyToPointArray = R), (this.applyToTriplePoints = C), (this.applyToPointStringified = P), (this.toCSS = w), (this.to2dCSS = L), (this.clone = b), (this.cloneFromProps = y), (this.equals = E), (this.inversePoints = N), (this.inversePoint = A), (this.getInverseMatrix = S), (this._t = this.transform), (this.isIdentity = g), (this._identity = !0), (this._identityCalculated = !1), (this.props = createTypedArray('float32', 16)), this.reset());
                 };
             })();
         function _typeof$3(e) {
@@ -2522,20 +2522,20 @@
                         c,
                         u,
                         d,
-                        f,
                         _,
+                        f,
                         p,
                         h,
                         m,
                         g = [];
                     for (l = 0; l < r; l += 1)
                         if ((p = this.shapes[l]).shape._mdf || this._mdf || e || 2 === this.m) {
-                            if (((u = (s = p.shape.paths)._length), (_ = 0), !p.shape._mdf && p.pathsData.length)) _ = p.totalShapeLength;
+                            if (((u = (s = p.shape.paths)._length), (f = 0), !p.shape._mdf && p.pathsData.length)) f = p.totalShapeLength;
                             else {
-                                for (c = 0, d = this.releasePathsData(p.pathsData); c < u; c += 1) ((f = bez.getSegmentsLength(s.shapes[c])), d.push(f), (_ += f.totalLength));
-                                ((p.totalShapeLength = _), (p.pathsData = d));
+                                for (c = 0, d = this.releasePathsData(p.pathsData); c < u; c += 1) ((_ = bez.getSegmentsLength(s.shapes[c])), d.push(_), (f += _.totalLength));
+                                ((p.totalShapeLength = f), (p.pathsData = d));
                             }
-                            ((i += _), (p.shape._mdf = !0));
+                            ((i += f), (p.shape._mdf = !0));
                         } else p.shape.paths = p.localShapeCollection;
                     var E = a,
                         b = o,
@@ -2599,27 +2599,27 @@
                     c,
                     u,
                     d = e.pathsData,
-                    f = e.shape.paths.shapes,
-                    _ = e.shape.paths._length,
+                    _ = e.shape.paths.shapes,
+                    f = e.shape.paths._length,
                     p = 0,
                     h = [],
                     m = !0;
-                for (n ? ((s = n._length), (u = n._length)) : ((n = shapePool.newElement()), (s = 0), (u = 0)), h.push(n), r = 0; r < _; r += 1) {
-                    for (i = 1, l = d[r].lengths, n.c = f[r].c, a = f[r].c ? l.length : l.length + 1; i < a; i += 1)
+                for (n ? ((s = n._length), (u = n._length)) : ((n = shapePool.newElement()), (s = 0), (u = 0)), h.push(n), r = 0; r < f; r += 1) {
+                    for (i = 1, l = d[r].lengths, n.c = _[r].c, a = _[r].c ? l.length : l.length + 1; i < a; i += 1)
                         if (p + (o = l[i - 1]).addedLength < t.s) ((p += o.addedLength), (n.c = !1));
                         else if (p > t.e) {
                             n.c = !1;
                             break;
-                        } else (t.s <= p && t.e >= p + o.addedLength ? (this.addSegment(f[r].v[i - 1], f[r].o[i - 1], f[r].i[i], f[r].v[i], n, s, m), (m = !1)) : ((c = bez.getNewSegment(f[r].v[i - 1], f[r].v[i], f[r].o[i - 1], f[r].i[i], (t.s - p) / o.addedLength, (t.e - p) / o.addedLength, l[i - 1])), this.addSegmentFromArray(c, n, s, m), (m = !1), (n.c = !1)), (p += o.addedLength), (s += 1));
-                    if (f[r].c && l.length) {
+                        } else (t.s <= p && t.e >= p + o.addedLength ? (this.addSegment(_[r].v[i - 1], _[r].o[i - 1], _[r].i[i], _[r].v[i], n, s, m), (m = !1)) : ((c = bez.getNewSegment(_[r].v[i - 1], _[r].v[i], _[r].o[i - 1], _[r].i[i], (t.s - p) / o.addedLength, (t.e - p) / o.addedLength, l[i - 1])), this.addSegmentFromArray(c, n, s, m), (m = !1), (n.c = !1)), (p += o.addedLength), (s += 1));
+                    if (_[r].c && l.length) {
                         if (((o = l[i - 1]), p <= t.e)) {
                             var g = l[i - 1].addedLength;
-                            t.s <= p && t.e >= p + g ? (this.addSegment(f[r].v[i - 1], f[r].o[i - 1], f[r].i[0], f[r].v[0], n, s, m), (m = !1)) : ((c = bez.getNewSegment(f[r].v[i - 1], f[r].v[0], f[r].o[i - 1], f[r].i[0], (t.s - p) / g, (t.e - p) / g, l[i - 1])), this.addSegmentFromArray(c, n, s, m), (m = !1), (n.c = !1));
+                            t.s <= p && t.e >= p + g ? (this.addSegment(_[r].v[i - 1], _[r].o[i - 1], _[r].i[0], _[r].v[0], n, s, m), (m = !1)) : ((c = bez.getNewSegment(_[r].v[i - 1], _[r].v[0], _[r].o[i - 1], _[r].i[0], (t.s - p) / g, (t.e - p) / g, l[i - 1])), this.addSegmentFromArray(c, n, s, m), (m = !1), (n.c = !1));
                         } else n.c = !1;
                         ((p += o.addedLength), (s += 1));
                     }
                     if ((n._length && (n.setXYAt(n.v[u][0], n.v[u][1], 'i', u), n.setXYAt(n.v[n._length - 1][0], n.v[n._length - 1][1], 'o', n._length - 1)), p > t.e)) break;
-                    r < _ - 1 && ((n = shapePool.newElement()), (m = !0), h.push(n), (s = 0));
+                    r < f - 1 && ((n = shapePool.newElement()), (m = !0), h.push(n), (s = 0));
                 }
                 return h;
             }),
@@ -2640,9 +2640,9 @@
                     d = 0;
                 for (d = 0; d < u; d += 1) ((c[0] += e.v[d][0]), (c[1] += e.v[d][1]));
                 ((c[0] /= u), (c[1] /= u));
-                var f = shapePool.newElement();
-                for (d = 0, f.c = e.c; d < u; d += 1) ((n = e.v[d][0] + (c[0] - e.v[d][0]) * l), (r = e.v[d][1] + (c[1] - e.v[d][1]) * l), (i = e.o[d][0] + -((c[0] - e.o[d][0]) * l)), (a = e.o[d][1] + -((c[1] - e.o[d][1]) * l)), (o = e.i[d][0] + -((c[0] - e.i[d][0]) * l)), (s = e.i[d][1] + -((c[1] - e.i[d][1]) * l)), f.setTripleAt(n, r, i, a, o, s, d));
-                return f;
+                var _ = shapePool.newElement();
+                for (d = 0, _.c = e.c; d < u; d += 1) ((n = e.v[d][0] + (c[0] - e.v[d][0]) * l), (r = e.v[d][1] + (c[1] - e.v[d][1]) * l), (i = e.o[d][0] + -((c[0] - e.o[d][0]) * l)), (a = e.o[d][1] + -((c[1] - e.o[d][1]) * l)), (o = e.i[d][0] + -((c[0] - e.i[d][0]) * l)), (s = e.i[d][1] + -((c[1] - e.i[d][1]) * l)), _.setTripleAt(n, r, i, a, o, s, d));
+                return _;
             }),
             (PuckerAndBloatModifier.prototype.processShapes = function (e) {
                 var t,
@@ -2896,8 +2896,8 @@
                 c = t.v[0 === n ? t._length - 1 : n - 1],
                 u = t.v[(n + 1) % t._length],
                 d = 2 === a ? Math.sqrt(Math.pow(l[0] - c[0], 2) + Math.pow(l[1] - c[1], 2)) : 0,
-                f = 2 === a ? Math.sqrt(Math.pow(l[0] - u[0], 2) + Math.pow(l[1] - u[1], 2)) : 0;
-            setPoint(e, t.v[n % t._length], s, o, r, f / ((i + 1) * 2), d / ((i + 1) * 2), a);
+                _ = 2 === a ? Math.sqrt(Math.pow(l[0] - u[0], 2) + Math.pow(l[1] - u[1], 2)) : 0;
+            setPoint(e, t.v[n % t._length], s, o, r, _ / ((i + 1) * 2), d / ((i + 1) * 2), a);
         }
         function zigZagSegment(e, t, n, r, i, a) {
             for (var o = 0; o < r; o += 1) {
@@ -2938,9 +2938,9 @@
                     d = polarOffset(a, s, 2 * u * roundCorner);
                 return (e.setXYAt(d[0], d[1], 'o', e.length() - 1), (d = polarOffset(o, l, 2 * u * roundCorner)), e.setTripleAt(o[0], o[1], o[0], o[1], d[0], d[1], e.length()), o);
             }
-            var f = pointEqual(a, t.points[2]) ? t.points[0] : t.points[2],
-                _ = pointEqual(o, n.points[1]) ? n.points[3] : n.points[1],
-                p = lineIntersection(f, a, o, _);
+            var _ = pointEqual(a, t.points[2]) ? t.points[0] : t.points[2],
+                f = pointEqual(o, n.points[1]) ? n.points[3] : n.points[1],
+                p = lineIntersection(_, a, o, f);
             return p && pointDistance(p, a) < i ? (e.setTripleAt(p[0], p[1], p[0], p[1], p[0], p[1], e.length()), p) : a;
         }
         function getIntersection(e, t) {
@@ -3102,9 +3102,9 @@
                     }
                     for (i = 0, o = 0; i <= this._groups.length - 1; i += 1) {
                         if (((s = o < u), (this._groups[i]._render = s), this.changeGroupRender(this._groups[i].it, s), !s)) {
-                            var f = this.elemsData[i].it,
-                                _ = f[f.length - 1];
-                            0 !== _.transform.op.v ? ((_.transform.op._mdf = !0), (_.transform.op.v = 0)) : (_.transform.op._mdf = !1);
+                            var _ = this.elemsData[i].it,
+                                f = _[_.length - 1];
+                            0 !== f.transform.op.v ? ((f.transform.op._mdf = !0), (f.transform.op.v = 0)) : (f.transform.op._mdf = !1);
                         }
                         o += 1;
                     }
@@ -3150,14 +3150,14 @@
                     c,
                     u,
                     d,
-                    f,
                     _,
+                    f,
                     p,
                     h = shapePool.newElement();
                 h.c = e.c;
                 var m = e._length,
                     g = 0;
-                for (n = 0; n < m; n += 1) ((r = e.v[n]), (a = e.o[n]), (i = e.i[n]), r[0] === a[0] && r[1] === a[1] && r[0] === i[0] && r[1] === i[1] ? ((0 !== n && n !== m - 1) || e.c ? ((o = 0 === n ? e.v[m - 1] : e.v[n - 1]), (l = (s = Math.sqrt(Math.pow(r[0] - o[0], 2) + Math.pow(r[1] - o[1], 2))) ? Math.min(s / 2, t) / s : 0), (c = _ = r[0] + (o[0] - r[0]) * l), (u = p = r[1] - (r[1] - o[1]) * l), (d = c - (c - r[0]) * roundCorner), (f = u - (u - r[1]) * roundCorner), h.setTripleAt(c, u, d, f, _, p, g), (g += 1), (o = n === m - 1 ? e.v[0] : e.v[n + 1]), (l = (s = Math.sqrt(Math.pow(r[0] - o[0], 2) + Math.pow(r[1] - o[1], 2))) ? Math.min(s / 2, t) / s : 0), (c = d = r[0] + (o[0] - r[0]) * l), (u = f = r[1] + (o[1] - r[1]) * l), (_ = c - (c - r[0]) * roundCorner), (p = u - (u - r[1]) * roundCorner), h.setTripleAt(c, u, d, f, _, p, g)) : h.setTripleAt(r[0], r[1], a[0], a[1], i[0], i[1], g)) : h.setTripleAt(e.v[n][0], e.v[n][1], e.o[n][0], e.o[n][1], e.i[n][0], e.i[n][1], g), (g += 1));
+                for (n = 0; n < m; n += 1) ((r = e.v[n]), (a = e.o[n]), (i = e.i[n]), r[0] === a[0] && r[1] === a[1] && r[0] === i[0] && r[1] === i[1] ? ((0 !== n && n !== m - 1) || e.c ? ((o = 0 === n ? e.v[m - 1] : e.v[n - 1]), (l = (s = Math.sqrt(Math.pow(r[0] - o[0], 2) + Math.pow(r[1] - o[1], 2))) ? Math.min(s / 2, t) / s : 0), (c = f = r[0] + (o[0] - r[0]) * l), (u = p = r[1] - (r[1] - o[1]) * l), (d = c - (c - r[0]) * roundCorner), (_ = u - (u - r[1]) * roundCorner), h.setTripleAt(c, u, d, _, f, p, g), (g += 1), (o = n === m - 1 ? e.v[0] : e.v[n + 1]), (l = (s = Math.sqrt(Math.pow(r[0] - o[0], 2) + Math.pow(r[1] - o[1], 2))) ? Math.min(s / 2, t) / s : 0), (c = d = r[0] + (o[0] - r[0]) * l), (u = _ = r[1] + (o[1] - r[1]) * l), (f = c - (c - r[0]) * roundCorner), (p = u - (u - r[1]) * roundCorner), h.setTripleAt(c, u, d, _, f, p, g)) : h.setTripleAt(r[0], r[1], a[0], a[1], i[0], i[1], g)) : h.setTripleAt(e.v[n][0], e.v[n][1], e.o[n][0], e.o[n][1], e.i[n][0], e.i[n][1], g), (g += 1));
                 return h;
             }),
             (RoundCornersModifier.prototype.processShapes = function (e) {
@@ -3299,8 +3299,8 @@
                 var u = null,
                     d = null;
                 for (i = 0; i < c.length; i += 1) {
-                    var f = c[i];
-                    for (d && (u = joinLines(s, d, f[0], n, r)), d = f[f.length - 1], a = 0; a < f.length; a += 1) ((o = f[a]), u && pointEqual(o.points[0], u) ? s.setXYAt(o.points[1][0], o.points[1][1], 'o', s.length() - 1) : s.setTripleAt(o.points[0][0], o.points[0][1], o.points[1][0], o.points[1][1], o.points[0][0], o.points[0][1], s.length()), s.setTripleAt(o.points[3][0], o.points[3][1], o.points[3][0], o.points[3][1], o.points[2][0], o.points[2][1], s.length()), (u = o.points[3]));
+                    var _ = c[i];
+                    for (d && (u = joinLines(s, d, _[0], n, r)), d = _[_.length - 1], a = 0; a < _.length; a += 1) ((o = _[a]), u && pointEqual(o.points[0], u) ? s.setXYAt(o.points[1][0], o.points[1][1], 'o', s.length() - 1) : s.setTripleAt(o.points[0][0], o.points[0][1], o.points[1][0], o.points[1][1], o.points[0][0], o.points[0][1], s.length()), s.setTripleAt(o.points[3][0], o.points[3][1], o.points[3][0], o.points[3][1], o.points[2][0], o.points[2][1], s.length()), (u = o.points[3]));
                 }
                 return (c.length && joinLines(s, d, c[0][0], n, r), s);
             }),
@@ -3341,7 +3341,7 @@
                 c = 127462,
                 u = 127487,
                 d = ['d83cdffb', 'd83cdffc', 'd83cdffd', 'd83cdffe', 'd83cdfff'];
-            function f(e) {
+            function _(e) {
                 var t,
                     n = e.split(','),
                     r = n.length,
@@ -3349,14 +3349,14 @@
                 for (t = 0; t < r; t += 1) 'sans-serif' !== n[t] && 'monospace' !== n[t] && i.push(n[t]);
                 return i.join(',');
             }
-            function _(e, t) {
+            function f(e, t) {
                 var n = createTag('span');
                 (n.setAttribute('aria-hidden', !0), (n.style.fontFamily = t));
                 var r = createTag('span');
                 ((r.innerText = 'giItT1WQy@!-/#'), (n.style.position = 'absolute'), (n.style.left = '-10000px'), (n.style.top = '-10000px'), (n.style.fontSize = '300px'), (n.style.fontVariant = 'normal'), (n.style.fontStyle = 'normal'), (n.style.fontWeight = 'normal'), (n.style.letterSpacing = '0'), n.appendChild(r), document.body.appendChild(n));
                 var i = r.offsetWidth;
                 return (
-                    (r.style.fontFamily = f(e) + ', ' + t),
+                    (r.style.fontFamily = _(e) + ', ' + t),
                     {
                         node: r,
                         w: i,
@@ -3415,7 +3415,7 @@
                         o,
                         s,
                         l = !0;
-                    if (((n[a].loaded = !1), (n[a].monoCase = _(n[a].fFamily, 'monospace')), (n[a].sansCase = _(n[a].fFamily, 'sans-serif')), n[a].fPath)) {
+                    if (((n[a].loaded = !1), (n[a].monoCase = f(n[a].fFamily, 'monospace')), (n[a].sansCase = f(n[a].fFamily, 'sans-serif')), n[a].fPath)) {
                         if ('p' === n[a].fOrigin || 3 === n[a].origin) {
                             if (((o = document.querySelectorAll('style[f-forigin="p"][f-family="' + n[a].fFamily + '"], style[f-origin="3"][f-family="' + n[a].fFamily + '"]')).length > 0 && (l = !1), l)) {
                                 var c = createTag('style');
@@ -3942,22 +3942,22 @@
                 c = 'clipPath',
                 u = 'clip-path';
             for (d = 0; d < i; d += 1)
-                if (((('a' !== a[d].mode && 'n' !== a[d].mode) || a[d].inv || 100 !== a[d].o.k || a[d].o.x) && ((c = 'mask'), (u = 'mask')), ('s' === a[d].mode || 'i' === a[d].mode) && 0 === o ? ((p = createNS('rect')).setAttribute('fill', '#ffffff'), p.setAttribute('width', this.element.comp.data.w || 0), p.setAttribute('height', this.element.comp.data.h || 0), s.push(p)) : (p = null), (f = createNS('path')), 'n' === a[d].mode))
+                if (((('a' !== a[d].mode && 'n' !== a[d].mode) || a[d].inv || 100 !== a[d].o.k || a[d].o.x) && ((c = 'mask'), (u = 'mask')), ('s' === a[d].mode || 'i' === a[d].mode) && 0 === o ? ((p = createNS('rect')).setAttribute('fill', '#ffffff'), p.setAttribute('width', this.element.comp.data.w || 0), p.setAttribute('height', this.element.comp.data.h || 0), s.push(p)) : (p = null), (_ = createNS('path')), 'n' === a[d].mode))
                     ((this.viewData[d] = {
                         op: PropertyFactory.getProp(this.element, a[d].o, 0, 0.01, this.element),
                         prop: ShapePropertyFactory.getShapeProp(this.element, a[d], 3),
-                        elem: f,
+                        elem: _,
                         lastPath: ''
                     }),
-                        r.appendChild(f));
+                        r.appendChild(_));
                 else {
                     if (
                         ((o += 1),
-                        f.setAttribute('fill', 's' === a[d].mode ? '#000000' : '#ffffff'),
-                        f.setAttribute('clip-rule', 'nonzero'),
-                        0 !== a[d].x.k ? ((c = 'mask'), (u = 'mask'), (g = PropertyFactory.getProp(this.element, a[d].x, 0, null, this.element)), (E = createElementID()), (h = createNS('filter')).setAttribute('id', E), (m = createNS('feMorphology')).setAttribute('operator', 'erode'), m.setAttribute('in', 'SourceGraphic'), m.setAttribute('radius', '0'), h.appendChild(m), r.appendChild(h), f.setAttribute('stroke', 's' === a[d].mode ? '#000000' : '#ffffff')) : ((m = null), (g = null)),
+                        _.setAttribute('fill', 's' === a[d].mode ? '#000000' : '#ffffff'),
+                        _.setAttribute('clip-rule', 'nonzero'),
+                        0 !== a[d].x.k ? ((c = 'mask'), (u = 'mask'), (g = PropertyFactory.getProp(this.element, a[d].x, 0, null, this.element)), (E = createElementID()), (h = createNS('filter')).setAttribute('id', E), (m = createNS('feMorphology')).setAttribute('operator', 'erode'), m.setAttribute('in', 'SourceGraphic'), m.setAttribute('radius', '0'), h.appendChild(m), r.appendChild(h), _.setAttribute('stroke', 's' === a[d].mode ? '#000000' : '#ffffff')) : ((m = null), (g = null)),
                         (this.storedData[d] = {
-                            elem: f,
+                            elem: _,
                             x: g,
                             expan: m,
                             lastPath: '',
@@ -3968,8 +3968,8 @@
                         'i' === a[d].mode)
                     ) {
                         var d,
-                            f,
                             _,
+                            f,
                             p,
                             h,
                             m,
@@ -3977,13 +3977,13 @@
                             E,
                             b = s.length,
                             y = createNS('g');
-                        for (_ = 0; _ < b; _ += 1) y.appendChild(s[_]);
+                        for (f = 0; f < b; f += 1) y.appendChild(s[f]);
                         var O = createNS('mask');
-                        (O.setAttribute('mask-type', 'alpha'), O.setAttribute('id', l + '_' + o), O.appendChild(f), r.appendChild(O), y.setAttribute('mask', 'url(' + getLocationHref() + '#' + l + '_' + o + ')'), (s.length = 0), s.push(y));
-                    } else s.push(f);
+                        (O.setAttribute('mask-type', 'alpha'), O.setAttribute('id', l + '_' + o), O.appendChild(_), r.appendChild(O), y.setAttribute('mask', 'url(' + getLocationHref() + '#' + l + '_' + o + ')'), (s.length = 0), s.push(y));
+                    } else s.push(_);
                     (a[d].inv && !this.solidPath && (this.solidPath = this.createLayerSolidPath()),
                         (this.viewData[d] = {
-                            elem: f,
+                            elem: _,
                             lastPath: '',
                             op: PropertyFactory.getProp(this.element, a[d].o, 0, 0.01, this.element),
                             prop: ShapePropertyFactory.getShapeProp(this.element, a[d], 3),
@@ -4507,18 +4507,18 @@
                         c,
                         u,
                         d,
-                        f,
                         _,
+                        f,
                         p,
                         h = r.styles.length,
                         m = r.lvl;
                     for (u = 0; u < h; u += 1) {
                         if (((l = r.sh._mdf || i), r.styles[u].lvl < m)) {
-                            for (f = t.reset(), _ = m - r.styles[u].lvl, p = r.transformers.length - 1; !l && _ > 0; ) ((l = r.transformers[p].mProps._mdf || l), (_ -= 1), (p -= 1));
-                            if (l) for (_ = m - r.styles[u].lvl, p = r.transformers.length - 1; _ > 0; ) (f.multiply(r.transformers[p].mProps.v), (_ -= 1), (p -= 1));
-                        } else f = e;
+                            for (_ = t.reset(), f = m - r.styles[u].lvl, p = r.transformers.length - 1; !l && f > 0; ) ((l = r.transformers[p].mProps._mdf || l), (f -= 1), (p -= 1));
+                            if (l) for (f = m - r.styles[u].lvl, p = r.transformers.length - 1; f > 0; ) (_.multiply(r.transformers[p].mProps.v), (f -= 1), (p -= 1));
+                        } else _ = e;
                         if (((o = (d = r.sh.paths)._length), l)) {
-                            for (a = 0, s = ''; a < o; a += 1) (c = d.shapes[a]) && c._length && (s += buildShapeString(c, c._length, c.c, f));
+                            for (a = 0, s = ''; a < o; a += 1) (c = d.shapes[a]) && c._length && (s += buildShapeString(c, c._length, c.c, _));
                             r.caches[u] = s;
                         } else s = r.caches[u];
                         ((r.styles[u].d += !0 === n.hd ? '' : s), (r.styles[u]._mdf = l || r.styles[u]._mdf));
@@ -4542,13 +4542,13 @@
                         u = t.s.v,
                         d = t.e.v;
                     if (t.o._mdf || n) {
-                        var f = 'gf' === e.ty ? 'fill-opacity' : 'stroke-opacity';
-                        t.style.pElem.setAttribute(f, t.o.v);
+                        var _ = 'gf' === e.ty ? 'fill-opacity' : 'stroke-opacity';
+                        t.style.pElem.setAttribute(_, t.o.v);
                     }
                     if (t.s._mdf || n) {
-                        var _ = 1 === e.t ? 'x1' : 'cx',
-                            p = 'x1' === _ ? 'y1' : 'cy';
-                        (l.setAttribute(_, u[0]), l.setAttribute(p, u[1]), c && !t.g._collapsable && (t.of.setAttribute(_, u[0]), t.of.setAttribute(p, u[1])));
+                        var f = 1 === e.t ? 'x1' : 'cx',
+                            p = 'x1' === f ? 'y1' : 'cy';
+                        (l.setAttribute(f, u[0]), l.setAttribute(p, u[1]), c && !t.g._collapsable && (t.of.setAttribute(f, u[0]), t.of.setAttribute(p, u[1])));
                     }
                     if (t.g._cmdf || n) {
                         r = t.cst;
@@ -4747,18 +4747,18 @@
                     c,
                     u,
                     d,
-                    f,
-                    _ = [].concat(a),
+                    _,
+                    f = [].concat(a),
                     p = e.length - 1,
                     h = [],
                     m = [];
                 for (s = p; s >= 0; s -= 1) {
-                    if (((f = this.searchProcessedElement(e[s])) ? (t[s] = n[f - 1]) : (e[s]._render = o), 'fl' === e[s].ty || 'st' === e[s].ty || 'gf' === e[s].ty || 'gs' === e[s].ty || 'no' === e[s].ty)) (f ? (t[s].style.closed = !1) : (t[s] = this.createStyleElement(e[s], i)), e[s]._render && t[s].style.pElem.parentNode !== r && r.appendChild(t[s].style.pElem), h.push(t[s].style));
+                    if (((_ = this.searchProcessedElement(e[s])) ? (t[s] = n[_ - 1]) : (e[s]._render = o), 'fl' === e[s].ty || 'st' === e[s].ty || 'gf' === e[s].ty || 'gs' === e[s].ty || 'no' === e[s].ty)) (_ ? (t[s].style.closed = !1) : (t[s] = this.createStyleElement(e[s], i)), e[s]._render && t[s].style.pElem.parentNode !== r && r.appendChild(t[s].style.pElem), h.push(t[s].style));
                     else if ('gr' === e[s].ty) {
-                        if (f) for (l = 0, c = t[s].it.length; l < c; l += 1) t[s].prevViewData[l] = t[s].it[l];
+                        if (_) for (l = 0, c = t[s].it.length; l < c; l += 1) t[s].prevViewData[l] = t[s].it[l];
                         else t[s] = this.createGroupElement(e[s]);
-                        (this.searchShapes(e[s].it, t[s].it, t[s].prevViewData, t[s].gr, i + 1, _, o), e[s]._render && t[s].gr.parentNode !== r && r.appendChild(t[s].gr));
-                    } else 'tr' === e[s].ty ? (f || (t[s] = this.createTransformElement(e[s], r)), (u = t[s].transform), _.push(u)) : 'sh' === e[s].ty || 'rc' === e[s].ty || 'el' === e[s].ty || 'sr' === e[s].ty ? (f || (t[s] = this.createShapeElement(e[s], _, i)), this.setElementStyles(t[s])) : 'tm' === e[s].ty || 'rd' === e[s].ty || 'ms' === e[s].ty || 'pb' === e[s].ty || 'zz' === e[s].ty || 'op' === e[s].ty ? (f ? ((d = t[s]).closed = !1) : ((d = ShapeModifiers.getModifier(e[s].ty)).init(this, e[s]), (t[s] = d), this.shapeModifiers.push(d)), m.push(d)) : 'rp' === e[s].ty && (f ? ((d = t[s]).closed = !0) : ((d = ShapeModifiers.getModifier(e[s].ty)), (t[s] = d), d.init(this, e, s, t), this.shapeModifiers.push(d), (o = !1)), m.push(d));
+                        (this.searchShapes(e[s].it, t[s].it, t[s].prevViewData, t[s].gr, i + 1, f, o), e[s]._render && t[s].gr.parentNode !== r && r.appendChild(t[s].gr));
+                    } else 'tr' === e[s].ty ? (_ || (t[s] = this.createTransformElement(e[s], r)), (u = t[s].transform), f.push(u)) : 'sh' === e[s].ty || 'rc' === e[s].ty || 'el' === e[s].ty || 'sr' === e[s].ty ? (_ || (t[s] = this.createShapeElement(e[s], f, i)), this.setElementStyles(t[s])) : 'tm' === e[s].ty || 'rd' === e[s].ty || 'ms' === e[s].ty || 'pb' === e[s].ty || 'zz' === e[s].ty || 'op' === e[s].ty ? (_ ? ((d = t[s]).closed = !1) : ((d = ShapeModifiers.getModifier(e[s].ty)).init(this, e[s]), (t[s] = d), this.shapeModifiers.push(d)), m.push(d)) : 'rp' === e[s].ty && (_ ? ((d = t[s]).closed = !0) : ((d = ShapeModifiers.getModifier(e[s].ty)), (t[s] = d), d.init(this, e, s, t), this.shapeModifiers.push(d), (o = !1)), m.push(d));
                     this.addProcessedElement(e[s], s + 1);
                 }
                 for (s = 0, p = h.length; s < p; s += 1) h[s].closed = !0;
@@ -4837,29 +4837,29 @@
                     c = [],
                     u = 0,
                     d = 0,
-                    f = t.getFontByName(e.f),
-                    _ = 0,
-                    p = getFontProperties(f);
+                    _ = t.getFontByName(e.f),
+                    f = 0,
+                    p = getFontProperties(_);
                 ((e.fWeight = p.weight), (e.fStyle = p.style), (e.finalSize = e.s), (e.finalText = this.buildFinalText(e.t)), (g = e.finalText.length), (e.finalLineHeight = e.lh));
                 var h = (e.tr / 1000) * e.finalSize;
                 if (e.sz)
                     for (var m, g, E, b, y, O, v, I, T, S, A = !0, N = e.sz[0], C = e.sz[1]; A; ) {
                         ((S = this.buildFinalText(e.t)), (T = 0), (u = 0), (g = S.length), (h = (e.tr / 1000) * e.finalSize));
                         var R = -1;
-                        for (m = 0; m < g; m += 1) ((I = S[m].charCodeAt(0)), (E = !1), ' ' === S[m] ? (R = m) : (13 === I || 3 === I) && ((u = 0), (E = !0), (T += e.finalLineHeight || 1.2 * e.finalSize)), t.chars ? ((v = t.getCharData(S[m], f.fStyle, f.fFamily)), (_ = E ? 0 : (v.w * e.finalSize) / 100)) : (_ = t.measureText(S[m], e.f, e.finalSize)), u + _ > N && ' ' !== S[m] ? (-1 === R ? (g += 1) : (m = R), (T += e.finalLineHeight || 1.2 * e.finalSize), S.splice(m, +(R === m), '\r'), (R = -1), (u = 0)) : ((u += _), (u += h)));
-                        ((T += (f.ascent * e.finalSize) / 100), this.canResize && e.finalSize > this.minimumFontSize && C < T ? ((e.finalSize -= 1), (e.finalLineHeight = (e.finalSize * e.lh) / e.s)) : ((e.finalText = S), (g = e.finalText.length), (A = !1)));
+                        for (m = 0; m < g; m += 1) ((I = S[m].charCodeAt(0)), (E = !1), ' ' === S[m] ? (R = m) : (13 === I || 3 === I) && ((u = 0), (E = !0), (T += e.finalLineHeight || 1.2 * e.finalSize)), t.chars ? ((v = t.getCharData(S[m], _.fStyle, _.fFamily)), (f = E ? 0 : (v.w * e.finalSize) / 100)) : (f = t.measureText(S[m], e.f, e.finalSize)), u + f > N && ' ' !== S[m] ? (-1 === R ? (g += 1) : (m = R), (T += e.finalLineHeight || 1.2 * e.finalSize), S.splice(m, +(R === m), '\r'), (R = -1), (u = 0)) : ((u += f), (u += h)));
+                        ((T += (_.ascent * e.finalSize) / 100), this.canResize && e.finalSize > this.minimumFontSize && C < T ? ((e.finalSize -= 1), (e.finalLineHeight = (e.finalSize * e.lh) / e.s)) : ((e.finalText = S), (g = e.finalText.length), (A = !1)));
                     }
-                ((u = -h), (_ = 0));
+                ((u = -h), (f = 0));
                 var P = 0;
                 for (m = 0; m < g; m += 1)
                     if (
                         ((E = !1),
                         13 === (I = (L = e.finalText[m]).charCodeAt(0)) || 3 === I ? ((P = 0), c.push(u), (d = u > d ? u : d), (u = -2 * h), (b = ''), (E = !0), (l += 1)) : (b = L),
-                        t.chars ? ((v = t.getCharData(L, f.fStyle, t.getFontByName(e.f).fFamily)), (_ = E ? 0 : (v.w * e.finalSize) / 100)) : (_ = t.measureText(b, e.f, e.finalSize)),
-                        ' ' === L ? (P += _ + h) : ((u += _ + h + P), (P = 0)),
+                        t.chars ? ((v = t.getCharData(L, _.fStyle, t.getFontByName(e.f).fFamily)), (f = E ? 0 : (v.w * e.finalSize) / 100)) : (f = t.measureText(b, e.f, e.finalSize)),
+                        ' ' === L ? (P += f + h) : ((u += f + h + P), (P = 0)),
                         r.push({
-                            l: _,
-                            an: _,
+                            l: f,
+                            an: f,
                             add: o,
                             n: E,
                             anIndexes: [],
@@ -4869,13 +4869,13 @@
                         }),
                         2 == a)
                     ) {
-                        if (((o += _), '' === b || ' ' === b || m === g - 1)) {
-                            for (('' === b || ' ' === b) && (o -= _); s <= m; ) ((r[s].an = o), (r[s].ind = i), (r[s].extra = _), (s += 1));
+                        if (((o += f), '' === b || ' ' === b || m === g - 1)) {
+                            for (('' === b || ' ' === b) && (o -= f); s <= m; ) ((r[s].an = o), (r[s].ind = i), (r[s].extra = f), (s += 1));
                             ((i += 1), (o = 0));
                         }
                     } else if (3 == a) {
-                        if (((o += _), '' === b || m === g - 1)) {
-                            for ('' === b && (o -= _); s <= m; ) ((r[s].an = o), (r[s].ind = i), (r[s].extra = _), (s += 1));
+                        if (((o += f), '' === b || m === g - 1)) {
+                            for ('' === b && (o -= f); s <= m; ) ((r[s].an = o), (r[s].ind = i), (r[s].extra = f), (s += 1));
                             ((o = 0), (i += 1));
                         }
                     } else ((r[i].ind = i), (r[i].extra = 0), (i += 1));
@@ -4907,7 +4907,7 @@
                         G = -1;
                     if (1 === x.s.rn) for (m = 0; m < g; m += 1) (G != (M = r[m]).anIndexes[y] && ((G = M.anIndexes[y]), (U = D.splice(Math.floor(Math.random() * D.length), 1)[0])), (M.anIndexes[y] = U));
                 }
-                ((e.yOffset = e.finalLineHeight || 1.2 * e.finalSize), (e.ls = e.ls || 0), (e.ascent = (f.ascent * e.finalSize) / 100));
+                ((e.yOffset = e.finalLineHeight || 1.2 * e.finalSize), (e.ls = e.ls || 0), (e.ascent = (_.ascent * e.finalSize) / 100));
             }),
             (TextProperty.prototype.updateDocumentData = function (e, t) {
                 t = void 0 === t ? this.keysIndex : t;
@@ -4944,20 +4944,20 @@
                             c = 0,
                             u = this.finalS,
                             d = this.finalE,
-                            f = this.data.sh;
-                        if (2 === f) c = l((c = d === u ? +(r >= d) : e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))));
-                        else if (3 === f) c = l((c = d === u ? (r >= d ? 0 : 1) : 1 - e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))));
-                        else if (4 === f) (d === u ? (c = 0) : (c = e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))) < 0.5 ? (c *= 2) : (c = 1 - 2 * (c - 0.5)), (c = l(c)));
-                        else if (5 === f) {
+                            _ = this.data.sh;
+                        if (2 === _) c = l((c = d === u ? +(r >= d) : e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))));
+                        else if (3 === _) c = l((c = d === u ? (r >= d ? 0 : 1) : 1 - e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))));
+                        else if (4 === _) (d === u ? (c = 0) : (c = e(0, t(0.5 / (d - u) + (r - u) / (d - u), 1))) < 0.5 ? (c *= 2) : (c = 1 - 2 * (c - 0.5)), (c = l(c)));
+                        else if (5 === _) {
                             if (d === u) c = 0;
                             else {
-                                var _ = d - u,
-                                    p = -_ / 2 + (r = t(e(0, r + 0.5 - u), d - u)),
-                                    h = _ / 2;
+                                var f = d - u,
+                                    p = -f / 2 + (r = t(e(0, r + 0.5 - u), d - u)),
+                                    h = f / 2;
                                 c = Math.sqrt(1 - (p * p) / (h * h));
                             }
                             c = l(c);
-                        } else 6 === f ? (c = l((c = d === u ? 0 : (1 + Math.cos(Math.PI + (2 * Math.PI * (r = t(e(0, r + 0.5 - u), d - u))) / (d - u))) / 2))) : (r >= n(u) && (c = r - u < 0 ? e(0, t(t(d, 1) - (u - r), 1)) : e(0, t(d - r, 1))), (c = l(c)));
+                        } else 6 === _ ? (c = l((c = d === u ? 0 : (1 + Math.cos(Math.PI + (2 * Math.PI * (r = t(e(0, r + 0.5 - u), d - u))) / (d - u))) / 2))) : (r >= n(u) && (c = r - u < 0 ? e(0, t(t(d, 1) - (u - r), 1)) : e(0, t(d - r, 1))), (c = l(c)));
                         if (100 !== this.sm.v) {
                             var m = 0.01 * this.sm.v;
                             0 === m && (m = 1e-8);
@@ -5048,8 +5048,8 @@
                         c,
                         u,
                         d,
-                        f,
                         _,
+                        f,
                         p,
                         h,
                         m,
@@ -5152,17 +5152,17 @@
                                 ((l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0));
                             } else ((l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0), I.translate(-y[0] * A[R].an * 0.005, -y[1] * z * 0.01, 0));
                             for (i = 0; i < a; i += 1) (n = O[i].a).t.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), (0 !== N || 0 !== e.j) && (this._hasMaskedPath ? (s.length ? (D += n.t.v * s[0]) : (D += n.t.v * s)) : s.length ? (N += n.t.v * s[0]) : (N += n.t.v * s)));
-                            for (e.strokeWidthAnim && (_ = e.sw || 0), e.strokeColorAnim && (f = e.sc ? [e.sc[0], e.sc[1], e.sc[2]] : [0, 0, 0]), e.fillColorAnim && e.fc && (p = [e.fc[0], e.fc[1], e.fc[2]]), i = 0; i < a; i += 1) (n = O[i].a).a.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? I.translate(-n.a.v[0] * s[0], -n.a.v[1] * s[1], n.a.v[2] * s[2]) : I.translate(-n.a.v[0] * s, -n.a.v[1] * s, n.a.v[2] * s));
+                            for (e.strokeWidthAnim && (f = e.sw || 0), e.strokeColorAnim && (_ = e.sc ? [e.sc[0], e.sc[1], e.sc[2]] : [0, 0, 0]), e.fillColorAnim && e.fc && (p = [e.fc[0], e.fc[1], e.fc[2]]), i = 0; i < a; i += 1) (n = O[i].a).a.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? I.translate(-n.a.v[0] * s[0], -n.a.v[1] * s[1], n.a.v[2] * s[2]) : I.translate(-n.a.v[0] * s, -n.a.v[1] * s, n.a.v[2] * s));
                             for (i = 0; i < a; i += 1) (n = O[i].a).s.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? I.scale(1 + (n.s.v[0] - 1) * s[0], 1 + (n.s.v[1] - 1) * s[1], 1) : I.scale(1 + (n.s.v[0] - 1) * s, 1 + (n.s.v[1] - 1) * s, 1));
                             for (i = 0; i < a; i += 1) {
-                                if (((n = O[i].a), (s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), n.sk.propType && (s.length ? I.skewFromAxis(-n.sk.v * s[0], n.sa.v * s[1]) : I.skewFromAxis(-n.sk.v * s, n.sa.v * s)), n.r.propType && (s.length ? I.rotateZ(-n.r.v * s[2]) : I.rotateZ(-n.r.v * s)), n.ry.propType && (s.length ? I.rotateY(n.ry.v * s[1]) : I.rotateY(n.ry.v * s)), n.rx.propType && (s.length ? I.rotateX(n.rx.v * s[0]) : I.rotateX(n.rx.v * s)), n.o.propType && (s.length ? (d += (n.o.v * s[0] - d) * s[0]) : (d += (n.o.v * s - d) * s)), e.strokeWidthAnim && n.sw.propType && (s.length ? (_ += n.sw.v * s[0]) : (_ += n.sw.v * s)), e.strokeColorAnim && n.sc.propType)) for (h = 0; h < 3; h += 1) s.length ? (f[h] += (n.sc.v[h] - f[h]) * s[0]) : (f[h] += (n.sc.v[h] - f[h]) * s);
+                                if (((n = O[i].a), (s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), n.sk.propType && (s.length ? I.skewFromAxis(-n.sk.v * s[0], n.sa.v * s[1]) : I.skewFromAxis(-n.sk.v * s, n.sa.v * s)), n.r.propType && (s.length ? I.rotateZ(-n.r.v * s[2]) : I.rotateZ(-n.r.v * s)), n.ry.propType && (s.length ? I.rotateY(n.ry.v * s[1]) : I.rotateY(n.ry.v * s)), n.rx.propType && (s.length ? I.rotateX(n.rx.v * s[0]) : I.rotateX(n.rx.v * s)), n.o.propType && (s.length ? (d += (n.o.v * s[0] - d) * s[0]) : (d += (n.o.v * s - d) * s)), e.strokeWidthAnim && n.sw.propType && (s.length ? (f += n.sw.v * s[0]) : (f += n.sw.v * s)), e.strokeColorAnim && n.sc.propType)) for (h = 0; h < 3; h += 1) s.length ? (_[h] += (n.sc.v[h] - _[h]) * s[0]) : (_[h] += (n.sc.v[h] - _[h]) * s);
                                 if (e.fillColorAnim && e.fc) {
                                     if (n.fc.propType) for (h = 0; h < 3; h += 1) s.length ? (p[h] += (n.fc.v[h] - p[h]) * s[0]) : (p[h] += (n.fc.v[h] - p[h]) * s);
                                     (n.fh.propType && (p = s.length ? addHueToRGB(p, n.fh.v * s[0]) : addHueToRGB(p, n.fh.v * s)), n.fs.propType && (p = s.length ? addSaturationToRGB(p, n.fs.v * s[0]) : addSaturationToRGB(p, n.fs.v * s)), n.fb.propType && (p = s.length ? addBrightnessToRGB(p, n.fb.v * s[0]) : addBrightnessToRGB(p, n.fb.v * s)));
                                 }
                             }
                             for (i = 0; i < a; i += 1) (n = O[i].a).p.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), this._hasMaskedPath ? (s.length ? I.translate(0, n.p.v[1] * s[0], -n.p.v[2] * s[1]) : I.translate(0, n.p.v[1] * s, -n.p.v[2] * s)) : s.length ? I.translate(n.p.v[0] * s[0], n.p.v[1] * s[1], -n.p.v[2] * s[2]) : I.translate(n.p.v[0] * s, n.p.v[1] * s, -n.p.v[2] * s));
-                            if ((e.strokeWidthAnim && (m = _ < 0 ? 0 : _), e.strokeColorAnim && (g = 'rgb(' + Math.round(255 * f[0]) + ',' + Math.round(255 * f[1]) + ',' + Math.round(255 * f[2]) + ')'), e.fillColorAnim && e.fc && (E = 'rgb(' + Math.round(255 * p[0]) + ',' + Math.round(255 * p[1]) + ',' + Math.round(255 * p[2]) + ')'), this._hasMaskedPath)) {
+                            if ((e.strokeWidthAnim && (m = f < 0 ? 0 : f), e.strokeColorAnim && (g = 'rgb(' + Math.round(255 * _[0]) + ',' + Math.round(255 * _[1]) + ',' + Math.round(255 * _[2]) + ')'), e.fillColorAnim && e.fc && (E = 'rgb(' + Math.round(255 * p[0]) + ',' + Math.round(255 * p[1]) + ',' + Math.round(255 * p[2]) + ')'), this._hasMaskedPath)) {
                                 if ((I.translate(0, -e.ls), I.translate(0, y[1] * z * 0.01 + C, 0), this._pathData.p.v)) {
                                     var ec = (180 * Math.atan((H = (L.point[1] - U.point[1]) / (L.point[0] - U.point[0])))) / Math.PI;
                                     (L.point[0] < U.point[0] && (ec += 180), I.rotate((-ec * Math.PI) / 180));
@@ -5340,9 +5340,9 @@
                     c = 0,
                     u = 0,
                     d = !0,
-                    f = 0.001 * e.tr * e.finalSize;
+                    _ = 0.001 * e.tr * e.finalSize;
                 if (!l || a || e.sz) {
-                    var _ = this.textSpans.length;
+                    var f = this.textSpans.length;
                     for (h = 0; h < m; h += 1) {
                         if (
                             (this.textSpans[h] ||
@@ -5353,7 +5353,7 @@
                                 }),
                             !a || !l || 0 === h)
                         ) {
-                            if (((g = _ > h ? this.textSpans[h].span : createNS(a ? 'g' : 'text')), _ <= h)) {
+                            if (((g = f > h ? this.textSpans[h].span : createNS(a ? 'g' : 'text')), f <= h)) {
                                 if ((g.setAttribute('stroke-linecap', 'butt'), g.setAttribute('stroke-linejoin', 'round'), g.setAttribute('stroke-miterlimit', '4'), (this.textSpans[h].span = g), a)) {
                                     var p = createNS('g');
                                     (g.appendChild(p), (this.textSpans[h].childSpan = p));
@@ -5362,7 +5362,7 @@
                             }
                             g.style.display = 'inherit';
                         }
-                        if ((o.reset(), l && (i[h].n && ((c = -f), (u += e.yOffset), (u += +!!d), (d = !1)), this.applyTextPropertiesToMatrix(e, o, i[h].line, c, u), (c += i[h].l || 0), (c += f)), a)) {
+                        if ((o.reset(), l && (i[h].n && ((c = -_), (u += e.yOffset), (u += +!!d), (d = !1)), this.applyTextPropertiesToMatrix(e, o, i[h].line, c, u), (c += i[h].l || 0), (c += _)), a)) {
                             if (1 === (E = this.globalData.fontManager.getCharData(e.finalText[h], t.fStyle, this.globalData.fontManager.getFontByName(e.f).fFamily)).t) b = new SVGCompElement(E.data, this.globalData, this);
                             else {
                                 var h,
@@ -5394,7 +5394,7 @@
                         default:
                             I = 'start';
                     }
-                    (v.setAttribute('text-anchor', I), v.setAttribute('letter-spacing', f));
+                    (v.setAttribute('text-anchor', I), v.setAttribute('letter-spacing', _));
                     var T = this.buildTextContents(e.finalText);
                     for (h = 0, m = T.length, u = e.ps ? e.ps[1] + e.ascent : 0; h < m; h += 1)
                         (((g = this.textSpans[h].span || createNS('tspan')).textContent = T[h]),
@@ -6077,19 +6077,19 @@
                     c,
                     u,
                     d = e.length - 1,
-                    f = [],
                     _ = [],
+                    f = [],
                     p = [].concat(i);
                 for (a = d; a >= 0; a -= 1) {
-                    if (((l = this.searchProcessedElement(e[a])) ? (t[a] = n[l - 1]) : (e[a]._shouldRender = r), 'fl' === e[a].ty || 'st' === e[a].ty || 'gf' === e[a].ty || 'gs' === e[a].ty)) (l ? (t[a].style.closed = !1) : (t[a] = this.createStyleElement(e[a], p)), f.push(t[a].style));
+                    if (((l = this.searchProcessedElement(e[a])) ? (t[a] = n[l - 1]) : (e[a]._shouldRender = r), 'fl' === e[a].ty || 'st' === e[a].ty || 'gf' === e[a].ty || 'gs' === e[a].ty)) (l ? (t[a].style.closed = !1) : (t[a] = this.createStyleElement(e[a], p)), _.push(t[a].style));
                     else if ('gr' === e[a].ty) {
                         if (l) for (o = 0, s = t[a].it.length; o < s; o += 1) t[a].prevViewData[o] = t[a].it[o];
                         else t[a] = this.createGroupElement(e[a]);
                         this.searchShapes(e[a].it, t[a].it, t[a].prevViewData, r, p);
-                    } else 'tr' === e[a].ty ? (l || ((u = this.createTransformElement(e[a])), (t[a] = u)), p.push(t[a]), this.addTransformToStyleList(t[a])) : 'sh' === e[a].ty || 'rc' === e[a].ty || 'el' === e[a].ty || 'sr' === e[a].ty ? l || (t[a] = this.createShapeElement(e[a])) : 'tm' === e[a].ty || 'rd' === e[a].ty || 'pb' === e[a].ty || 'zz' === e[a].ty || 'op' === e[a].ty ? (l ? ((c = t[a]).closed = !1) : ((c = ShapeModifiers.getModifier(e[a].ty)).init(this, e[a]), (t[a] = c), this.shapeModifiers.push(c)), _.push(c)) : 'rp' === e[a].ty && (l ? ((c = t[a]).closed = !0) : ((c = ShapeModifiers.getModifier(e[a].ty)), (t[a] = c), c.init(this, e, a, t), this.shapeModifiers.push(c), (r = !1)), _.push(c));
+                    } else 'tr' === e[a].ty ? (l || ((u = this.createTransformElement(e[a])), (t[a] = u)), p.push(t[a]), this.addTransformToStyleList(t[a])) : 'sh' === e[a].ty || 'rc' === e[a].ty || 'el' === e[a].ty || 'sr' === e[a].ty ? l || (t[a] = this.createShapeElement(e[a])) : 'tm' === e[a].ty || 'rd' === e[a].ty || 'pb' === e[a].ty || 'zz' === e[a].ty || 'op' === e[a].ty ? (l ? ((c = t[a]).closed = !1) : ((c = ShapeModifiers.getModifier(e[a].ty)).init(this, e[a]), (t[a] = c), this.shapeModifiers.push(c)), f.push(c)) : 'rp' === e[a].ty && (l ? ((c = t[a]).closed = !0) : ((c = ShapeModifiers.getModifier(e[a].ty)), (t[a] = c), c.init(this, e, a, t), this.shapeModifiers.push(c), (r = !1)), f.push(c));
                     this.addProcessedElement(e[a], a + 1);
                 }
-                for (this.removeTransformFromStyleList(), this.closeStyles(f), d = _.length, a = 0; a < d; a += 1) _[a].closed = !0;
+                for (this.removeTransformFromStyleList(), this.closeStyles(_), d = f.length, a = 0; a < d; a += 1) f[a].closed = !0;
             }),
             (CVShapeElement.prototype.renderInnerContent = function () {
                 ((this.transformHelper.opacity = 1), (this.transformHelper._opMdf = !1), this.renderModifiers(), this.transformsManager.processSequences(this._isFirstFrame), this.renderShape(this.transformHelper, this.shapesData, this.itemsData, !0));
@@ -6191,10 +6191,10 @@
                             u = Math.atan2(l[1] - s[1], l[0] - s[0]),
                             d = t.h.v;
                         d >= 1 ? (d = 0.99) : d <= -1 && (d = -0.99);
-                        var f = c * d,
-                            _ = Math.cos(u + t.a.v) * f + s[0],
-                            p = Math.sin(u + t.a.v) * f + s[1];
-                        i = o.createRadialGradient(_, p, 0, s[0], s[1], c);
+                        var _ = c * d,
+                            f = Math.cos(u + t.a.v) * _ + s[0],
+                            p = Math.sin(u + t.a.v) * _ + s[1];
+                        i = o.createRadialGradient(f, p, 0, s[0], s[1], c);
                     }
                     var h = e.g.p,
                         m = t.g.c,
@@ -6227,24 +6227,24 @@
                     c,
                     u,
                     d,
-                    f = this.textProperty.currentData;
-                this.renderedLetters = createSizedArray(f.l ? f.l.length : 0);
-                var _ = !1;
-                (f.fc ? ((_ = !0), (this.values.fill = this.buildColor(f.fc))) : (this.values.fill = 'rgba(0,0,0,0)'), (this.fill = _));
+                    _ = this.textProperty.currentData;
+                this.renderedLetters = createSizedArray(_.l ? _.l.length : 0);
+                var f = !1;
+                (_.fc ? ((f = !0), (this.values.fill = this.buildColor(_.fc))) : (this.values.fill = 'rgba(0,0,0,0)'), (this.fill = f));
                 var p = !1;
-                f.sc && ((p = !0), (this.values.stroke = this.buildColor(f.sc)), (this.values.sWidth = f.sw));
-                var h = this.globalData.fontManager.getFontByName(f.f),
-                    m = f.l,
+                _.sc && ((p = !0), (this.values.stroke = this.buildColor(_.sc)), (this.values.sWidth = _.sw));
+                var h = this.globalData.fontManager.getFontByName(_.f),
+                    m = _.l,
                     g = this.mHelper;
-                ((this.stroke = p), (this.values.fValue = f.finalSize + 'px ' + this.globalData.fontManager.getFontByName(f.f).fFamily), (t = f.finalText.length));
+                ((this.stroke = p), (this.values.fValue = _.finalSize + 'px ' + this.globalData.fontManager.getFontByName(_.f).fFamily), (t = _.finalText.length));
                 var E = this.data.singleShape,
-                    b = 0.001 * f.tr * f.finalSize,
+                    b = 0.001 * _.tr * _.finalSize,
                     y = 0,
                     O = 0,
                     v = !0,
                     I = 0;
                 for (e = 0; e < t; e += 1) {
-                    ((r = ((n = this.globalData.fontManager.getCharData(f.finalText[e], h.fStyle, this.globalData.fontManager.getFontByName(f.f).fFamily)) && n.data) || {}), g.reset(), E && m[e].n && ((y = -b), (O += f.yOffset), (O += +!!v), (v = !1)), (l = (o = r.shapes ? r.shapes[0].it : []).length), g.scale(f.finalSize / 100, f.finalSize / 100), E && this.applyTextPropertiesToMatrix(f, g, m[e].line, y, O), (u = createSizedArray(l - 1)));
+                    ((r = ((n = this.globalData.fontManager.getCharData(_.finalText[e], h.fStyle, this.globalData.fontManager.getFontByName(_.f).fFamily)) && n.data) || {}), g.reset(), E && m[e].n && ((y = -b), (O += _.yOffset), (O += +!!v), (v = !1)), (l = (o = r.shapes ? r.shapes[0].it : []).length), g.scale(_.finalSize / 100, _.finalSize / 100), E && this.applyTextPropertiesToMatrix(_, g, m[e].line, y, O), (u = createSizedArray(l - 1)));
                     var T = 0;
                     for (s = 0; s < l; s += 1)
                         if ('sh' === o[s].ty) {
@@ -6269,8 +6269,8 @@
                     u = this.textProperty.currentData.l;
                 t = u.length;
                 var d = null,
-                    f = null,
                     _ = null,
+                    f = null,
                     p = this.globalData.renderer;
                 for (e = 0; e < t; e += 1)
                     if (!u[e].n) {
@@ -6279,7 +6279,7 @@
                             (this.globalData.canvasContext.closePath(), p.ctxFill());
                         }
                         if (this.stroke) {
-                            for (o && o.sw ? _ !== o.sw && ((_ = o.sw), p.ctxLineWidth(o.sw)) : _ !== this.values.sWidth && ((_ = this.values.sWidth), p.ctxLineWidth(this.values.sWidth)), o && o.sc ? f !== o.sc && ((f = o.sc), p.ctxStrokeStyle(o.sc)) : f !== this.values.stroke && ((f = this.values.stroke), p.ctxStrokeStyle(this.values.stroke)), r = (s = this.textSpans[e].elem).length, this.globalData.canvasContext.beginPath(), n = 0; n < r; n += 1) for (a = (l = s[n]).length, this.globalData.canvasContext.moveTo(l[0], l[1]), i = 2; i < a; i += 6) this.globalData.canvasContext.bezierCurveTo(l[i], l[i + 1], l[i + 2], l[i + 3], l[i + 4], l[i + 5]);
+                            for (o && o.sw ? f !== o.sw && ((f = o.sw), p.ctxLineWidth(o.sw)) : f !== this.values.sWidth && ((f = this.values.sWidth), p.ctxLineWidth(this.values.sWidth)), o && o.sc ? _ !== o.sc && ((_ = o.sc), p.ctxStrokeStyle(o.sc)) : _ !== this.values.stroke && ((_ = this.values.stroke), p.ctxStrokeStyle(this.values.stroke)), r = (s = this.textSpans[e].elem).length, this.globalData.canvasContext.beginPath(), n = 0; n < r; n += 1) for (a = (l = s[n]).length, this.globalData.canvasContext.moveTo(l[0], l[1]), i = 2; i < a; i += 6) this.globalData.canvasContext.bezierCurveTo(l[i], l[i + 1], l[i + 2], l[i + 3], l[i + 4], l[i + 5]);
                             (this.globalData.canvasContext.closePath(), p.ctxStroke());
                         }
                         o && this.globalData.renderer.restore();
@@ -6645,11 +6645,11 @@
                             [e[0], r[0]],
                             [e[1], r[1]]
                         ],
-                        f = 0;
-                    f < 2;
-                    ++f
+                        _ = 0;
+                    _ < 2;
+                    ++_
                 )
-                    ((a = 6 * e[f] - 12 * t[f] + 6 * n[f]), (i = -3 * e[f] + 9 * t[f] - 9 * n[f] + 3 * r[f]), (o = 3 * t[f] - 3 * e[f]), (a |= 0), (o |= 0), (0 == (i |= 0) && 0 === a) || (0 === i ? (s = -o / a) > 0 && s < 1 && d[f].push(this.calculateF(s, e, t, n, r, f)) : (l = a * a - 4 * o * i) >= 0 && ((c = (-a + bmSqrt(l)) / (2 * i)) > 0 && c < 1 && d[f].push(this.calculateF(c, e, t, n, r, f)), (u = (-a - bmSqrt(l)) / (2 * i)) > 0 && u < 1 && d[f].push(this.calculateF(u, e, t, n, r, f)))));
+                    ((a = 6 * e[_] - 12 * t[_] + 6 * n[_]), (i = -3 * e[_] + 9 * t[_] - 9 * n[_] + 3 * r[_]), (o = 3 * t[_] - 3 * e[_]), (a |= 0), (o |= 0), (0 == (i |= 0) && 0 === a) || (0 === i ? (s = -o / a) > 0 && s < 1 && d[_].push(this.calculateF(s, e, t, n, r, _)) : (l = a * a - 4 * o * i) >= 0 && ((c = (-a + bmSqrt(l)) / (2 * i)) > 0 && c < 1 && d[_].push(this.calculateF(c, e, t, n, r, _)), (u = (-a - bmSqrt(l)) / (2 * i)) > 0 && u < 1 && d[_].push(this.calculateF(u, e, t, n, r, _)))));
                 ((this.shapeBoundingBox.left = bmMin.apply(null, d[0])), (this.shapeBoundingBox.top = bmMin.apply(null, d[1])), (this.shapeBoundingBox.right = bmMax.apply(null, d[0])), (this.shapeBoundingBox.bottom = bmMax.apply(null, d[1])));
             }),
             (HShapeElement.prototype.calculateF = function (e, t, n, r, i, a) {
@@ -6718,35 +6718,35 @@
                     s = '',
                     l = 0;
                 for (c = 0; c < u; c += 1) {
-                    if ((this.globalData.fontManager.chars ? (this.textPaths[l] ? (d = this.textPaths[l]) : ((d = createNS('path')).setAttribute('stroke-linecap', lineCapEnum[1]), d.setAttribute('stroke-linejoin', lineJoinEnum[2]), d.setAttribute('stroke-miterlimit', '4')), this.isMasked || (this.textSpans[l] ? (_ = (f = this.textSpans[l]).children[0]) : (((f = createTag('div')).style.lineHeight = 0), (_ = createNS('svg')).appendChild(d), styleDiv(f)))) : this.isMasked ? (d = this.textPaths[l] ? this.textPaths[l] : createNS('text')) : this.textSpans[l] ? ((f = this.textSpans[l]), (d = this.textPaths[l])) : (styleDiv((f = createTag('span'))), styleDiv((d = createTag('span'))), f.appendChild(d)), this.globalData.fontManager.chars)) {
+                    if ((this.globalData.fontManager.chars ? (this.textPaths[l] ? (d = this.textPaths[l]) : ((d = createNS('path')).setAttribute('stroke-linecap', lineCapEnum[1]), d.setAttribute('stroke-linejoin', lineJoinEnum[2]), d.setAttribute('stroke-miterlimit', '4')), this.isMasked || (this.textSpans[l] ? (f = (_ = this.textSpans[l]).children[0]) : (((_ = createTag('div')).style.lineHeight = 0), (f = createNS('svg')).appendChild(d), styleDiv(_)))) : this.isMasked ? (d = this.textPaths[l] ? this.textPaths[l] : createNS('text')) : this.textSpans[l] ? ((_ = this.textSpans[l]), (d = this.textPaths[l])) : (styleDiv((_ = createTag('span'))), styleDiv((d = createTag('span'))), _.appendChild(d)), this.globalData.fontManager.chars)) {
                         var c,
                             u,
                             d,
-                            f,
                             _,
+                            f,
                             p,
                             h,
                             m = this.globalData.fontManager.getCharData(e.finalText[c], r.fStyle, this.globalData.fontManager.getFontByName(e.f).fFamily);
                         if (((h = m ? m.data : null), o.reset(), h && h.shapes && h.shapes.length && ((p = h.shapes[0].it), o.scale(e.finalSize / 100, e.finalSize / 100), (s = this.createPathShape(o, p)), d.setAttribute('d', s)), this.isMasked)) this.innerElem.appendChild(d);
                         else {
-                            if ((this.innerElem.appendChild(f), h && h.shapes)) {
-                                document.body.appendChild(_);
-                                var g = _.getBBox();
-                                (_.setAttribute('width', g.width + 2), _.setAttribute('height', g.height + 2), _.setAttribute('viewBox', g.x - 1 + ' ' + (g.y - 1) + ' ' + (g.width + 2) + ' ' + (g.height + 2)));
-                                var E = _.style,
+                            if ((this.innerElem.appendChild(_), h && h.shapes)) {
+                                document.body.appendChild(f);
+                                var g = f.getBBox();
+                                (f.setAttribute('width', g.width + 2), f.setAttribute('height', g.height + 2), f.setAttribute('viewBox', g.x - 1 + ' ' + (g.y - 1) + ' ' + (g.width + 2) + ' ' + (g.height + 2)));
+                                var E = f.style,
                                     b = 'translate(' + (g.x - 1) + 'px,' + (g.y - 1) + 'px)';
                                 ((E.transform = b), (E.webkitTransform = b), (a[c].yOffset = g.y - 1));
-                            } else (_.setAttribute('width', 1), _.setAttribute('height', 1));
-                            f.appendChild(_);
+                            } else (f.setAttribute('width', 1), f.setAttribute('height', 1));
+                            _.appendChild(f);
                         }
                     } else if (((d.textContent = a[c].val), d.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve'), this.isMasked)) this.innerElem.appendChild(d);
                     else {
-                        this.innerElem.appendChild(f);
+                        this.innerElem.appendChild(_);
                         var y = d.style,
                             O = 'translate3d(0,' + -e.finalSize / 1.2 + 'px,0)';
                         ((y.transform = O), (y.webkitTransform = O));
                     }
-                    (this.isMasked ? (this.textSpans[l] = d) : (this.textSpans[l] = f), (this.textSpans[l].style.display = 'block'), (this.textPaths[l] = d), (l += 1));
+                    (this.isMasked ? (this.textSpans[l] = d) : (this.textSpans[l] = _), (this.textSpans[l].style.display = 'block'), (this.textPaths[l] = d), (l += 1));
                 }
                 for (; l < this.textSpans.length; ) ((this.textSpans[l].style.display = 'none'), (l += 1));
             }),
@@ -6776,8 +6776,8 @@
                         var d = 1;
                         if (this.currentBBox.w !== u.width + 2 * d || this.currentBBox.h !== u.height + 2 * d || this.currentBBox.x !== u.x - d || this.currentBBox.y !== u.y - d) {
                             ((this.currentBBox.w = u.width + 2 * d), (this.currentBBox.h = u.height + 2 * d), (this.currentBBox.x = u.x - d), (this.currentBBox.y = u.y - d), this.svgElement.setAttribute('viewBox', this.currentBBox.x + ' ' + this.currentBBox.y + ' ' + this.currentBBox.w + ' ' + this.currentBBox.h), (a = this.svgElement.style));
-                            var f = 'translate(' + this.currentBBox.x + 'px,' + this.currentBBox.y + 'px)';
-                            ((a.transform = f), (a.webkitTransform = f));
+                            var _ = 'translate(' + this.currentBBox.x + 'px,' + this.currentBBox.y + 'px)';
+                            ((a.transform = _), (a.webkitTransform = _));
                         }
                     }
                 }
@@ -6827,12 +6827,12 @@
                             if ('3d' === (d = this.comp.threeDElements[n]).type) {
                                 if (u) {
                                     var d,
-                                        f,
                                         _,
+                                        f,
                                         p = this.mat.toCSS();
-                                    (((_ = d.container.style).transform = p), (_.webkitTransform = p));
+                                    (((f = d.container.style).transform = p), (f.webkitTransform = p));
                                 }
-                                this.pe._mdf && (((f = d.perspectiveElem.style).perspective = this.pe.v + 'px'), (f.webkitPerspective = this.pe.v + 'px'));
+                                this.pe._mdf && (((_ = d.perspectiveElem.style).perspective = this.pe.v + 'px'), (_.webkitPerspective = this.pe.v + 'px'));
                             }
                         this.mat.clone(this._prevMat);
                     }
@@ -7041,10 +7041,10 @@
                 c = t.pow(2, o),
                 u = 2 * c,
                 d = i - 1;
-            function f(n, r, o) {
+            function _(n, r, o) {
                 var d = [],
-                    f = m(h((r = !0 === r ? { entropy: !0 } : r || {}).entropy ? [n, E(e)] : null === n ? g() : n, 3), d),
-                    b = new _(d),
+                    _ = m(h((r = !0 === r ? { entropy: !0 } : r || {}).entropy ? [n, E(e)] : null === n ? g() : n, 3), d),
+                    b = new f(d),
                     y = function () {
                         for (var e = b.g(a), t = l, n = 0; e < c; ) ((e = (e + n) * i), (t *= i), (n = b.g(1)));
                         for (; e >= u; ) ((e /= 2), (t /= 2), (n >>>= 1));
@@ -7072,10 +7072,10 @@
                                 ? ((t[s] = e), n)
                                 : e;
                         }
-                    )(y, f, 'global' in r ? r.global : this == t, r.state)
+                    )(y, _, 'global' in r ? r.global : this == t, r.state)
                 );
             }
-            function _(e) {
+            function f(e) {
                 var t,
                     n = e.length,
                     r = this,
@@ -7121,7 +7121,7 @@
             function E(e) {
                 return String.fromCharCode.apply(0, e);
             }
-            ((t['seed' + s] = f), m(t.random(), e));
+            ((t['seed' + s] = _), m(t.random(), e));
         }
         function initialize$2(e) {
             seedRandom([], e);
@@ -7770,39 +7770,39 @@
                 }
                 return function (c) {
                     function u(e) {
-                        f.mask = new MaskManagerInterface(e, c);
+                        _.mask = new MaskManagerInterface(e, c);
                     }
                     function d(e) {
-                        f.effect = e;
+                        _.effect = e;
                     }
-                    function f(e) {
+                    function _(e) {
                         switch (e) {
                             case 'ADBE Root Vectors Group':
                             case 'Contents':
                             case 2:
-                                return f.shapeInterface;
+                                return _.shapeInterface;
                             case 1:
                             case 6:
                             case 'Transform':
                             case 'transform':
                             case 'ADBE Transform Group':
-                                return _;
+                                return f;
                             case 4:
                             case 'ADBE Effect Parade':
                             case 'effects':
                             case 'Effects':
-                                return f.effect;
+                                return _.effect;
                             case 'ADBE Text Properties':
-                                return f.textInterface;
+                                return _.textInterface;
                             default:
                                 return null;
                         }
                     }
-                    ((f.getMatrix = e), (f.invertPoint = o), (f.applyPoint = a), (f.toWorld = n), (f.toWorldVec = t), (f.fromWorld = i), (f.fromWorldVec = r), (f.toComp = n), (f.fromComp = s), (f.sampleImage = l), (f.sourceRectAtTime = c.sourceRectAtTime.bind(c)), (f._elem = c));
-                    var _ = TransformExpressionInterface(c.finalTransform.mProp),
-                        p = getDescriptor(_, 'anchorPoint');
+                    ((_.getMatrix = e), (_.invertPoint = o), (_.applyPoint = a), (_.toWorld = n), (_.toWorldVec = t), (_.fromWorld = i), (_.fromWorldVec = r), (_.toComp = n), (_.fromComp = s), (_.sampleImage = l), (_.sourceRectAtTime = c.sourceRectAtTime.bind(c)), (_._elem = c));
+                    var f = TransformExpressionInterface(c.finalTransform.mProp),
+                        p = getDescriptor(f, 'anchorPoint');
                     return (
-                        Object.defineProperties(f, {
+                        Object.defineProperties(_, {
                             hasParent: {
                                 get: function () {
                                     return c.hierarchy.length;
@@ -7813,15 +7813,15 @@
                                     return c.hierarchy[0].layerInterface;
                                 }
                             },
-                            rotation: getDescriptor(_, 'rotation'),
-                            scale: getDescriptor(_, 'scale'),
-                            position: getDescriptor(_, 'position'),
-                            opacity: getDescriptor(_, 'opacity'),
+                            rotation: getDescriptor(f, 'rotation'),
+                            scale: getDescriptor(f, 'scale'),
+                            position: getDescriptor(f, 'position'),
+                            opacity: getDescriptor(f, 'opacity'),
                             anchorPoint: p,
                             anchor_point: p,
                             transform: {
                                 get: function () {
-                                    return _;
+                                    return f;
                                 }
                             },
                             active: {
@@ -7830,17 +7830,17 @@
                                 }
                             }
                         }),
-                        (f.startTime = c.data.st),
-                        (f.index = c.data.ind),
-                        (f.source = c.data.refId),
-                        (f.height = 0 === c.data.ty ? c.data.h : 100),
-                        (f.width = 0 === c.data.ty ? c.data.w : 100),
-                        (f.inPoint = c.data.ip / c.comp.globalData.frameRate),
-                        (f.outPoint = c.data.op / c.comp.globalData.frameRate),
-                        (f._name = c.data.nm),
-                        (f.registerMaskInterface = u),
-                        (f.registerEffectsInterface = d),
-                        f
+                        (_.startTime = c.data.st),
+                        (_.index = c.data.ind),
+                        (_.source = c.data.refId),
+                        (_.height = 0 === c.data.ty ? c.data.h : 100),
+                        (_.width = 0 === c.data.ty ? c.data.w : 100),
+                        (_.inPoint = c.data.ip / c.comp.globalData.frameRate),
+                        (_.outPoint = c.data.op / c.comp.globalData.frameRate),
+                        (_._name = c.data.nm),
+                        (_.registerMaskInterface = u),
+                        (_.registerEffectsInterface = d),
+                        _
                     );
                 };
             })(),
@@ -7968,7 +7968,7 @@
                     var p,
                         h = [],
                         m = e ? e.length : 0;
-                    for (p = 0; p < m; p += 1) 'gr' === e[p].ty ? h.push(n(e[p], t[p], l)) : 'fl' === e[p].ty ? h.push(r(e[p], t[p], l)) : 'st' === e[p].ty ? h.push(o(e[p], t[p], l)) : 'tm' === e[p].ty ? h.push(s(e[p], t[p], l)) : 'tr' === e[p].ty || ('el' === e[p].ty ? h.push(c(e[p], t[p], l)) : 'sr' === e[p].ty ? h.push(u(e[p], t[p], l)) : 'sh' === e[p].ty ? h.push(ShapePathInterface(e[p], t[p], l)) : 'rc' === e[p].ty ? h.push(d(e[p], t[p], l)) : 'rd' === e[p].ty ? h.push(f(e[p], t[p], l)) : 'rp' === e[p].ty ? h.push(_(e[p], t[p], l)) : 'gf' === e[p].ty ? h.push(i(e[p], t[p], l)) : h.push(a(e[p], t[p], l)));
+                    for (p = 0; p < m; p += 1) 'gr' === e[p].ty ? h.push(n(e[p], t[p], l)) : 'fl' === e[p].ty ? h.push(r(e[p], t[p], l)) : 'st' === e[p].ty ? h.push(o(e[p], t[p], l)) : 'tm' === e[p].ty ? h.push(s(e[p], t[p], l)) : 'tr' === e[p].ty || ('el' === e[p].ty ? h.push(c(e[p], t[p], l)) : 'sr' === e[p].ty ? h.push(u(e[p], t[p], l)) : 'sh' === e[p].ty ? h.push(ShapePathInterface(e[p], t[p], l)) : 'rc' === e[p].ty ? h.push(d(e[p], t[p], l)) : 'rd' === e[p].ty ? h.push(_(e[p], t[p], l)) : 'rp' === e[p].ty ? h.push(f(e[p], t[p], l)) : 'gf' === e[p].ty ? h.push(i(e[p], t[p], l)) : h.push(a(e[p], t[p], l)));
                     return h;
                 }
                 function t(t, n, r) {
@@ -8208,7 +8208,7 @@
                         r
                     );
                 }
-                function f(e, t, n) {
+                function _(e, t, n) {
                     function r(t) {
                         return e.r.ix === t || 'Round Corners 1' === t ? r.radius : null;
                     }
@@ -8225,7 +8225,7 @@
                         r
                     );
                 }
-                function _(e, t, n) {
+                function f(e, t, n) {
                     function r(t) {
                         return e.c.ix === t || 'Copies' === t ? r.copies : e.o.ix === t || 'Offset' === t ? r.offset : null;
                     }
@@ -8395,14 +8395,14 @@
                     if (Math.floor((l - i) / r) % 2 != 0) return this.getValueAtTime((r - ((l - i) % r) + i) / this.comp.globalData.frameRate, 0);
                 } else if ('offset' === e) {
                     var d = this.getValueAtTime(i / this.comp.globalData.frameRate, 0),
-                        f = this.getValueAtTime(u / this.comp.globalData.frameRate, 0),
-                        _ = this.getValueAtTime((((l - i) % r) + i) / this.comp.globalData.frameRate, 0),
+                        _ = this.getValueAtTime(u / this.comp.globalData.frameRate, 0),
+                        f = this.getValueAtTime((((l - i) % r) + i) / this.comp.globalData.frameRate, 0),
                         p = Math.floor((l - i) / r);
                     if (this.pv.length) {
-                        for (a = 0, o = (s = Array(d.length)).length; a < o; a += 1) s[a] = (f[a] - d[a]) * p + _[a];
+                        for (a = 0, o = (s = Array(d.length)).length; a < o; a += 1) s[a] = (_[a] - d[a]) * p + f[a];
                         return s;
                     }
-                    return (f - d) * p + _;
+                    return (_ - d) * p + f;
                 } else if ('continue' === e) {
                     var h = this.getValueAtTime(u / this.comp.globalData.frameRate, 0),
                         m = this.getValueAtTime((u - 0.001) / this.comp.globalData.frameRate, 0);
@@ -8430,14 +8430,14 @@
                     if (Math.floor((u - l) / r) % 2 == 0) return this.getValueAtTime((((u - l) % r) + u) / this.comp.globalData.frameRate, 0);
                 } else if ('offset' === e) {
                     var d = this.getValueAtTime(u / this.comp.globalData.frameRate, 0),
-                        f = this.getValueAtTime(i / this.comp.globalData.frameRate, 0),
-                        _ = this.getValueAtTime((r - ((u - l) % r) + u) / this.comp.globalData.frameRate, 0),
+                        _ = this.getValueAtTime(i / this.comp.globalData.frameRate, 0),
+                        f = this.getValueAtTime((r - ((u - l) % r) + u) / this.comp.globalData.frameRate, 0),
                         p = Math.floor((u - l) / r) + 1;
                     if (this.pv.length) {
-                        for (a = 0, o = (s = Array(d.length)).length; a < o; a += 1) s[a] = _[a] - (f[a] - d[a]) * p;
+                        for (a = 0, o = (s = Array(d.length)).length; a < o; a += 1) s[a] = f[a] - (_[a] - d[a]) * p;
                         return s;
                     }
-                    return _ - (f - d) * p;
+                    return f - (_ - d) * p;
                 } else if ('continue' === e) {
                     var h = this.getValueAtTime(u / this.comp.globalData.frameRate, 0),
                         m = this.getValueAtTime((u + 0.001) / this.comp.globalData.frameRate, 0);
@@ -8501,11 +8501,11 @@
                 }
                 if (this.data.p && this.data.p.s) {
                     var d = this.px.getValueAtTime(e),
-                        f = this.py.getValueAtTime(e);
+                        _ = this.py.getValueAtTime(e);
                     if (this.data.p.z) {
-                        var _ = this.pz.getValueAtTime(e);
-                        t.translate(d * this.px.mult, f * this.py.mult, -_ * this.pz.mult);
-                    } else t.translate(d * this.px.mult, f * this.py.mult, 0);
+                        var f = this.pz.getValueAtTime(e);
+                        t.translate(d * this.px.mult, _ * this.py.mult, -f * this.pz.mult);
+                    } else t.translate(d * this.px.mult, _ * this.py.mult, 0);
                 } else {
                     var p = this.p.getValueAtTime(e);
                     t.translate(p[0] * this.p.mult, p[1] * this.p.mult, -p[2] * this.p.mult);
@@ -8586,8 +8586,8 @@
                         if (c + a[s].addedLength > o) {
                             var u = s,
                                 d = r.c && s === l - 1 ? 0 : s + 1,
-                                f = (o - c) / a[s].addedLength;
-                            n = bez.getPointInSegment(r.v[u], r.v[d], r.o[u], r.i[d], f, a[s]);
+                                _ = (o - c) / a[s].addedLength;
+                            n = bez.getPointInSegment(r.v[u], r.v[d], r.o[u], r.i[d], _, a[s]);
                             break;
                         }
                         ((c += a[s].addedLength), (s += 1));
@@ -8791,7 +8791,7 @@
                 return (n.setAttribute('type', 'table'), t.appendChild(n), n);
             }),
             (SVGProLevelsFilter.prototype.getTableValue = function (e, t, n, r, i) {
-                for (var a, o, s = 0, l = 256, c = Math.min(e, t), u = Math.max(e, t), d = Array.call(null, { length: 256 }), f = 0, _ = i - r, p = t - e; s <= 256; ) ((o = (a = s / 256) <= c ? (p < 0 ? i : r) : a >= u ? (p < 0 ? r : i) : r + _ * Math.pow((a - e) / p, 1 / n)), (d[f] = o), (f += 1), (s += 256 / (l - 1)));
+                for (var a, o, s = 0, l = 256, c = Math.min(e, t), u = Math.max(e, t), d = Array.call(null, { length: 256 }), _ = 0, f = i - r, p = t - e; s <= 256; ) ((o = (a = s / 256) <= c ? (p < 0 ? i : r) : a >= u ? (p < 0 ? r : i) : r + f * Math.pow((a - e) / p, 1 / n)), (d[_] = o), (_ += 1), (s += 256 / (l - 1)));
                 return d.join(' ');
             }),
             (SVGProLevelsFilter.prototype.renderFrame = function (e) {

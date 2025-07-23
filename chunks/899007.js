@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(420660),
     u = n(100527),
     d = n(906732),
-    f = n(140701),
-    _ = n(158776),
+    _ = n(140701),
+    f = n(158776),
     p = n(74538),
     h = n(998502),
     m = n(785717),
@@ -79,12 +79,12 @@ function R(e) {
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
         M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        k = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
         { live: j } = (0, g.Z)(t.id),
         [U] = j,
-        { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
-            status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
-            isMobileOnline: _.Z.isMobileOnline(t.id)
+        { status: G, isMobileOnline: B } = (0, s.cj)([f.Z], () => ({
+            status: (0, c.Z)(U) ? O.Skl.STREAMING : f.Z.getStatus(t.id),
+            isMobileOnline: f.Z.isMobileOnline(t.id)
         })),
         V = void 0 !== w ? w : G,
         F = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,

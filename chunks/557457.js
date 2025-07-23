@@ -16,26 +16,26 @@ var r = n(73800),
     c = n(594174),
     u = n(626135),
     d = n(981631),
-    f = n(37113),
-    _ = n(474936),
+    _ = n(37113),
+    f = n(474936),
     p = n(65154),
     h = n(388032);
 function m(e) {
     if (null == e) return;
-    let t = e.maxResolution.type === p.uA.SOURCE ? f.LY.RESOLUTION_SOURCE : e.maxResolution.height,
-        n = (0, f.aW)(t);
-    return (0, f.L9)(e.maxFrameRate) !== f.ws.FPS_5 && null == f.ND.find((e) => e.resolution === n && e.fps !== f.ws.FPS_5 && !E(e));
+    let t = e.maxResolution.type === p.uA.SOURCE ? _.LY.RESOLUTION_SOURCE : e.maxResolution.height,
+        n = (0, _.aW)(t);
+    return (0, _.L9)(e.maxFrameRate) !== _.ws.FPS_5 && null == _.ND.find((e) => e.resolution === n && e.fps !== _.ws.FPS_5 && !E(e));
 }
 function g(e) {
     if (null == e) return;
-    let t = (0, f.L9)(e.maxFrameRate);
-    return null == f.ND.find((e) => e.fps === t && !E(e));
+    let t = (0, _.L9)(e.maxFrameRate);
+    return null == _.ND.find((e) => e.fps === t && !E(e));
 }
 function E(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
 function b(e, t, n) {
-    return f.ND.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n);
+    return _.ND.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n);
 }
 function y(e) {
     return e.type === p.uA.SOURCE ? h.intl.string(h.t.XjXqzs) : h.intl.formatToPlainString(h.t.TEOC0N, { resolution: e.height });
@@ -77,7 +77,7 @@ function T(e, t, n) {
     u.default.track(d.rMx.STREAM_SETTINGS_UPDATE, {
         user_premium_tier: null == i ? void 0 : i.premiumType,
         guild_premium_tier: null == o ? void 0 : o.premiumTier,
-        stream_quality_user_premium_tier: (null == r ? void 0 : r.quality) != null ? _.bg[r.quality] : null,
+        stream_quality_user_premium_tier: (null == r ? void 0 : r.quality) != null ? f.bg[r.quality] : null,
         stream_quality_guild_premium_tier: null == r ? void 0 : r.guildPremiumTier,
         stream_quality_preset: e,
         stream_quality_resolution: t,

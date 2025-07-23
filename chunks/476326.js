@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => f,
+    ZP: () => _,
     ow: () => u,
     rG: () => d
 }),
@@ -29,7 +29,7 @@ var u = (function (e) {
 function d(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
-class f extends r.EventEmitter {
+class _ extends r.EventEmitter {
     cancel() {}
     resetState() {
         return this;

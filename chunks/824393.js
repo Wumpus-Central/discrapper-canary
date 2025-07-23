@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(481060),
     u = n(230711),
     d = n(211266),
-    f = n(410030),
-    _ = n(607070),
+    _ = n(410030),
+    f = n(607070),
     p = n(975298),
     h = n(530618),
     m = n(688465),
@@ -36,11 +36,11 @@ var r = n(255367),
     D = n(593639);
 function L(e) {
     var t, n, a, u, d;
-    let { transitionState: f, onClose: p, quest: m, location: g } = e,
+    let { transitionState: _, onClose: p, quest: m, location: g } = e,
         E = i.useRef(null),
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
-        S = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        S = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         N = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
         [C, P] = i.useState({ state: 'loading' });
     i.useEffect(() => {
@@ -77,7 +77,7 @@ function L(e) {
             (0, r.jsx)('div', {
                 ref: E,
                 children: (0, r.jsx)(c.Y0X, {
-                    transitionState: f,
+                    transitionState: _,
                     size: c.CgR.DYNAMIC,
                     className: o()(R.rootContainer, { [R.rootContainerLoading]: w }),
                     hideShadow: !0,
@@ -218,7 +218,7 @@ function M(e) {
 function k(e) {
     let { duration: t, onClose: n } = e,
         a = (0, p.Z)({ forceFetch: !0 }),
-        s = (0, f.ZP)(),
+        s = (0, _.ZP)(),
         l = i.useCallback(() => {
             (u.Z.open(S.oAB.SUBSCRIPTIONS, null, {}), n());
         }, [n]);

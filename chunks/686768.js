@@ -15,7 +15,7 @@ var o = n(255367),
     m = n(579474);
 let L = function (t) {
     let { transitionState: e, entryPoint: n, onClose: L } = t,
-        { loading: T, initiateAgeVerification: S } = (0, E.WD)(L),
+        { loading: T, initiateAgeVerification: S } = (0, E.WD)(L, !0),
         C = i.useMemo(() => (0, r.Z)(), []);
     i.useEffect(() => {
         (0, d.lA)(C, d.d_.RETRY, n);

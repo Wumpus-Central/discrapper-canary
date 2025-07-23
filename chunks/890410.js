@@ -36,7 +36,7 @@ function d(e) {
 function p(e) {
     var t,
         n,
-        { message: i, channel: p, content: m, className: f, compact: g, popoutProps: h, hideTimestamp: _ = !1, withFooter: b = !1 } = e,
+        { message: i, channel: p, content: m, className: f, compact: h, popoutProps: g, hideTimestamp: _ = !1, withFooter: b = !1 } = e,
         E = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -56,20 +56,20 @@ function p(e) {
             }
             return i;
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
-    let x = (0, a.ZP)(i);
+    let y = (0, a.ZP)(i);
     return (0, r.jsx)('div', {
-        className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: g }, f),
+        className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: h }, f),
         children: (0, r.jsx)(
             o.Z,
             ((t = d({}, E)),
             (n = n =
                 {
-                    className: l()(u.messageContainer, { [u.compact]: g }),
+                    className: l()(u.messageContainer, { [u.compact]: h }),
                     childrenMessageContent: (0, r.jsx)(s.ZP, {
-                        className: l()(u.__invalid_messageContent, { [u.compact]: g }),
+                        className: l()(u.__invalid_messageContent, { [u.compact]: h }),
                         message: i,
                         content: m,
-                        compact: null != g && g
+                        compact: null != h && h
                     }),
                     childrenHeader: (0, r.jsx)(
                         c.ZP,
@@ -77,17 +77,17 @@ function p(e) {
                             {
                                 message: i,
                                 channel: p,
-                                author: x,
+                                author: y,
                                 guildId: null == p ? void 0 : p.guild_id,
-                                compact: g,
+                                compact: h,
                                 hideTimestamp: _,
-                                className: l()(u.header, { [u.compact]: g })
+                                className: l()(u.header, { [u.compact]: h })
                             },
-                            null != h ? h : {}
+                            null != g ? g : {}
                         )
                     ),
-                    compact: g,
-                    author: x
+                    compact: h,
+                    author: y
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

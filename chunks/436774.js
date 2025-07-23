@@ -65,7 +65,7 @@ let s = Object.freeze({
                 })
             ]
         }),
-    f = () =>
+    _ = () =>
         (0, r.jsxs)('linearGradient', {
             id: s.PREMIUM_GUILD,
             children: [
@@ -76,7 +76,7 @@ let s = Object.freeze({
                 })
             ]
         }),
-    _ = () =>
+    f = () =>
         (0, r.jsxs)('linearGradient', {
             id: s.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             gradientTransform: 'rotate(45)',
@@ -104,7 +104,7 @@ let s = Object.freeze({
                     height: 1
                 },
                 'aria-hidden': !0,
-                children: [c(), u(), d(), f(), _()]
+                children: [c(), u(), d(), _(), f()]
             });
         },
         () => !0

@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(453070),
     m = n(373228),
     f = n(419922),
-    g = n(217588),
-    h = n(981631),
+    h = n(217588),
+    g = n(981631),
     _ = n(474936),
     b = n(282940);
 function E(e) {
@@ -40,7 +40,7 @@ function E(e) {
     }
     return e;
 }
-function x(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,10 +58,10 @@ function x(e, t) {
         e
     );
 }
-let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         null != e &&
-            s.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+            s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: _.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
@@ -73,7 +73,7 @@ let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
         let { renderableSticker: t, channel: n, isInteracting: l } = e,
             s = i.useRef(null),
             [d, m] = i.useState(!0),
-            [h, _] = i.useState(String(Date.now())),
+            [g, _] = i.useState(String(Date.now())),
             [C] = (0, p.XW)(t, l),
             { analyticsLocations: O } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             j = (0, r.jsxs)('span', {
@@ -92,14 +92,14 @@ let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             children: (0, r.jsx)(a.yRy, {
                 align: 'center',
                 animation: a.yRy.Animation.TRANSLATE,
-                positionKey: h,
+                positionKey: g,
                 onRequestClose: () => {
                     m(!0);
                 },
                 renderPopout: (e) =>
                     (0, r.jsx)(
-                        g.Z,
-                        x(E({}, e), {
+                        h.Z,
+                        y(E({}, e), {
                             renderableSticker: t,
                             channel: n,
                             refreshPositionKey: () => _(String(Date.now()))
@@ -110,7 +110,7 @@ let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                     let { onClick: n } = e;
                     return (0, r.jsx)(
                         a.ua7,
-                        x(E({}, u.b_), {
+                        y(E({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(j),
                             'aria-label': !1,
@@ -120,7 +120,7 @@ let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             children: (e) =>
                                 (0, r.jsx)(
                                     a.P3F,
-                                    x(E({}, e), {
+                                    y(E({}, e), {
                                         innerRef: s,
                                         className: b.clickableSticker,
                                         onClick: (e) => {
@@ -129,7 +129,7 @@ let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: y,
+                                            size: x,
                                             sticker: null != C ? C : t
                                         })
                                     })

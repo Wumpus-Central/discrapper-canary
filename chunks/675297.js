@@ -1,4 +1,4 @@
-(n.d(t, { H: () => x }), n(953529));
+(n.d(t, { H: () => y }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -12,31 +12,31 @@ var i = n(399606),
     p = n(863663),
     m = n(676651),
     f = n(623488),
-    g = n(942833),
-    h = n(391181),
+    h = n(942833),
+    g = n(391181),
     _ = n(964793),
     b = n(226060),
     E = n(981631);
-function x(e) {
-    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: v = !1, lineClamp: C = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
+function y(e) {
+    let { guildProductListing: t, guildId: n, location: y, shouldShowFullDescriptionButton: x = !0, hideRoleTag: v = !1, lineClamp: C = 1, cardWidth: O, cardHeight: j, thumbnailHeight: I, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: T = !1 } = e,
         N = (0, i.e7)([c.Z], () => c.Z.getGuild(n), [n]),
         P = (0, i.e7)([s.Z], () => {
             var e;
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : E.lds);
         }),
         A = (0, l.U)(t, 600),
-        w = (0, g.C)(t),
+        w = (0, h.C)(t),
         Z = (0, d.SO)(N),
         { shouldHideGuildPurchaseEntryPoints: R } = (0, o.uP)(n),
-        k = (0, g.k)(t);
+        L = (0, h.k)(t);
     if (null == N || R) return null;
-    let L = () =>
+    let k = () =>
             (0, _.e)({
                 guildId: n,
                 guildProductListingId: t.id,
-                analyticsLocation: x
+                analyticsLocation: y
             }),
-        D = (0, r.jsx)(h.m, {
+        D = (0, r.jsx)(g.m, {
             product: t,
             guildId: n,
             showEditProduct: Z,
@@ -66,17 +66,17 @@ function x(e) {
             imageUrl: A,
             name: t.name,
             description: t.description,
-            formattedPrice: k,
+            formattedPrice: L,
             role: P,
             ctaComponent: (0, r.jsx)(b.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
-                sourceAnalyticsLocations: x
+                sourceAnalyticsLocations: y
             }),
             productType: w,
-            shouldShowFullDescriptionButton: y,
-            onShowFullDescription: L,
-            onTapCard: L,
+            shouldShowFullDescriptionButton: x,
+            onShowFullDescription: k,
+            onTapCard: k,
             actionMenu: D,
             showOpaqueBackground: T,
             hideRoleTag: v,

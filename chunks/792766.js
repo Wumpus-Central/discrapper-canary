@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => _,
-    y: () => h
+    y: () => g
 }),
     n(953529));
 var r = n(255367),
@@ -15,7 +15,7 @@ var r = n(255367),
     p = n(411198),
     m = n(388032),
     f = n(515230);
-let g = (e) => {
+let h = (e) => {
         var t;
         let { speaker: n, guildId: i, isEmbed: l } = e,
             a = new d.Z(n.user);
@@ -37,7 +37,7 @@ let g = (e) => {
             ]
         });
     },
-    h = (e) => {
+    g = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = p.Qs(t),
@@ -99,15 +99,15 @@ let g = (e) => {
     },
     _ = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: h = !1, onClick: _ } = e,
+        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: g = !1, onClick: _ } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: x, participant_count: y } = n,
+        let { topic: E, speaker_count: y, participant_count: x } = n,
             v = null != (t = n.members) ? t : [],
-            C = h ? v.slice(0, 3) : v,
-            O = x - C.length;
+            C = g ? v.slice(0, 3) : v,
+            O = y - C.length;
         return (
-            h && (O += v.length - C.length),
+            g && (O += v.length - C.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -143,15 +143,15 @@ let g = (e) => {
                                     (0, r.jsx)(s.X6q, {
                                         className: a()(f.__invalid_label, f.listeners),
                                         variant: 'heading-sm/semibold',
-                                        children: y
+                                        children: x
                                     })
                                 ]
                             })
                         ]
                     }),
-                    h &&
+                    g &&
                         (0, r.jsxs)('div', {
-                            className: a()(f.guild, { [f.embed]: h }),
+                            className: a()(f.guild, { [f.embed]: g }),
                             children: [
                                 (0, r.jsx)(c.ZP, {
                                     mask: c.ZP.Masks.SQUIRCLE,
@@ -172,12 +172,12 @@ let g = (e) => {
                             ]
                         }),
                     (0, r.jsx)(s.X6q, {
-                        variant: d || h ? 'heading-md/semibold' : 'heading-lg/semibold',
-                        className: a()(f.header, { [f.embed]: h }),
+                        variant: d || g ? 'heading-md/semibold' : 'heading-lg/semibold',
+                        className: a()(f.header, { [f.embed]: g }),
                         children: E
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(f.members, { [f.embed]: h }),
+                        className: a()(f.members, { [f.embed]: g }),
                         children: [
                             C.length > 0 &&
                                 (0, r.jsxs)('div', {
@@ -185,11 +185,11 @@ let g = (e) => {
                                     children: [
                                         C.map((e) =>
                                             (0, r.jsx)(
-                                                g,
+                                                h,
                                                 {
                                                     speaker: e,
                                                     guildId: b.id,
-                                                    isEmbed: h
+                                                    isEmbed: g
                                                 },
                                                 e.user.id
                                             )
@@ -199,16 +199,16 @@ let g = (e) => {
                                                   className: f.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: a()(f.icon, { [f.embed]: h }),
+                                                          className: a()(f.icon, { [f.embed]: g }),
                                                           children: (0, r.jsx)(s.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',
-                                                              height: h ? 12 : 14,
+                                                              height: g ? 12 : 14,
                                                               className: f.listeners
                                                           })
                                                       }),
                                                       (0, r.jsxs)(s.Text, {
-                                                          variant: h ? 'text-xs/normal' : 'text-sm/normal',
+                                                          variant: g ? 'text-xs/normal' : 'text-sm/normal',
                                                           color: 'text-secondary',
                                                           children: ['+', m.intl.format(m.t.L1pCBQ, { count: O })]
                                                       })
@@ -217,7 +217,7 @@ let g = (e) => {
                                             : null
                                     ]
                                 }),
-                            h &&
+                            g &&
                                 (0, r.jsx)(o.zx, {
                                     color: o.zx.Colors.GREEN,
                                     onClick: _,

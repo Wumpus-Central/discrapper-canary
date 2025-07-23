@@ -7,7 +7,7 @@ var r = n(98405),
     c = n(733375),
     u = n(423582),
     d = n(556585),
-    f = a && a.prototype;
+    _ = a && a.prototype;
 if (
     (r(
         {
@@ -17,7 +17,7 @@ if (
             forced:
                 !!a &&
                 o(function () {
-                    f.finally.call(
+                    _.finally.call(
                         {
                             then: function () {}
                         },
@@ -50,6 +50,6 @@ if (
     ),
     !i && l(a))
 ) {
-    var _ = s('Promise').prototype.finally;
-    f.finally !== _ && d(f, 'finally', _, { unsafe: !0 });
+    var f = s('Promise').prototype.finally;
+    _.finally !== f && d(_, 'finally', f, { unsafe: !0 });
 }

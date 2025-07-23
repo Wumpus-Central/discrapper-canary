@@ -34,6 +34,7 @@ let s = {
     },
     l = {};
 function c(e) {
+    if (!1 === e.value) return void delete l[e.toggle];
     l[e.toggle] = e.value;
 }
 class u extends (r = i.ZP.DeviceSettingsStore) {
@@ -44,23 +45,21 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
         for (var t in s) {
             var n, r;
             let i = null != (r = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && r;
-            l[t] = i;
+            i && (l[t] = i);
         }
     }
     get(e) {
         var t;
         return null != (t = l[e]) && t;
     }
-    set(e, t) {
-        return ((l[e] = t), t);
-    }
-    all() {
+    enabled() {
         return l;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
-            let [t, n] = e;
-            return [t, n, s[t]];
+        return Object.entries(s).map((e) => {
+            var t;
+            let [n, r] = e;
+            return [n, null != (t = l[n]) && t, r];
         });
     }
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Dl: () => f,
+    Dl: () => _,
     Ms: () => l,
     Ot: () => u,
     T: () => s,
@@ -51,7 +51,7 @@ function d(e) {
         rejectWithError: !1
     });
 }
-function f(e) {
+function _(e) {
     return r.tn.post({
         url: o.ANM.ADD_SAFETY_WARNING(e),
         body: { safety_warning_type: a.pj.STRANGER_DANGER },

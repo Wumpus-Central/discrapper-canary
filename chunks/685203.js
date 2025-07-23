@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,10 +84,10 @@ function h(e) {
         text: c,
         children: (e) => {
             var { onClick: s } = e,
-                c = _(e, ['onClick']);
+                c = f(e, ['onClick']);
             return (0, r.jsx)(
                 o.zx,
-                f(u({}, c), {
+                _(u({}, c), {
                     onClick: (e) => {
                         (null == n || n(e), null == s || s());
                     },

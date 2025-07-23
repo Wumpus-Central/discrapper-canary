@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(866442),
     u = n(1561),
     d = n(507274),
-    f = n(84735),
-    _ = n(755721),
+    _ = n(84735),
+    f = n(755721),
     p = n(481060),
     h = n(408886),
     m = n(44315),
@@ -102,15 +102,15 @@ function P(e) {
     return null == e ? null : 'string' == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
 }
 function w(e) {
-    let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: u = {}, onClick: d, isGradient: _ = !1, 'aria-label': h, gradientStart: g, gradientEnd: b } = e,
+    let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: u = {}, onClick: d, isGradient: f = !1, 'aria-label': h, gradientStart: g, gradientEnd: b } = e,
         O = (0, s.JA)('color-'.concat(t)),
         I = {};
-    if (_ && null != g && null != b) {
+    if (f && null != g && null != b) {
         let e = (0, c.Rf)(g),
             t = (0, c.Rf)(b);
         I = { background: 'linear-gradient(to bottom, '.concat(e, ', ').concat(t, ')') };
     } else I = { backgroundColor: null != t ? (0, c.Rf)(t) : u.backgroundColor };
-    let S = _ ? g : t,
+    let S = f ? g : t,
         A = !1;
     function N() {
         let e = 16,
@@ -125,7 +125,7 @@ function w(e) {
     }
     return (
         i && !a ? (A = !0) : (i || a) && (A = (0, c.Bd)(null != S ? S : E.p6O) > 0.1),
-        (0, r.jsx)(f.t, {
+        (0, r.jsx)(_.t, {
             offset: -2,
             children: (0, r.jsxs)(
                 'button',
@@ -137,15 +137,15 @@ function w(e) {
                                 [y.disabled]: l,
                                 [y.default]: n,
                                 [y.custom]: i,
-                                [y.noColor]: null == t && !_,
-                                [y.gradientPreset]: _
+                                [y.noColor]: null == t && !f,
+                                [y.gradientPreset]: f
                             }),
                             disabled: l,
                             onClick: () =>
                                 null == d
                                     ? void 0
                                     : d(
-                                          _
+                                          f
                                               ? {
                                                     start: g,
                                                     end: b
@@ -153,7 +153,7 @@ function w(e) {
                                               : t
                                       ),
                             style: v({}, u, I),
-                            'aria-label': null != h ? h : _ ? 'Gradient '.concat(g, '-').concat(b) : I.backgroundColor
+                            'aria-label': null != h ? h : f ? 'Gradient '.concat(g, '-').concat(b) : I.backgroundColor
                         },
                         O
                     ),
@@ -202,7 +202,7 @@ class L extends i.PureComponent {
     }
 }
 function x(e) {
-    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: s, suggestedColors: l, middle: f, footer: m, showEyeDropper: E, wrapperComponentType: O, className: I } = e,
+    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: s, suggestedColors: l, middle: _, footer: m, showEyeDropper: E, wrapperComponentType: O, className: I } = e,
         S = (0, h.Z)(),
         A = P(t),
         R = null != A ? A : 0,
@@ -280,7 +280,7 @@ function x(e) {
                         color: L.pending.hsl
                     })
                 }),
-                f,
+                _,
                 (0, r.jsxs)('div', {
                     className: y.customColorPickerInputContainer,
                     children: [
@@ -293,7 +293,7 @@ function x(e) {
                                 className: y.customColorPickerEyeDropper,
                                 icon: p.ilE
                             }),
-                        (0, r.jsx)(_.Is, {
+                        (0, r.jsx)(f.Is, {
                             className: y.customColorPickerInput,
                             value: L.input,
                             onChange: M,
@@ -330,7 +330,7 @@ function x(e) {
 }
 let M = i.memo(x);
 function k(e) {
-    let { className: t, defaultColor: n, customColor: i, colors: a, value: c, secondaryValue: u, disabled: d, onChange: f, renderDefaultButton: _, renderCustomButton: p, colorContainerClassName: h, isGradient: m, renderGradientCustomButton: g } = e,
+    let { className: t, defaultColor: n, customColor: i, colors: a, value: c, secondaryValue: u, disabled: d, onChange: _, renderDefaultButton: f, renderCustomButton: p, colorContainerClassName: h, isGradient: m, renderGradientCustomButton: g } = e,
         E = (e) =>
             (0, r.jsx)('div', {
                 className: y.colorPickerRow,
@@ -343,7 +343,7 @@ function k(e) {
                                   gradientEnd: e.end,
                                   color: 0,
                                   isSelected: c === e.start && u === e.end,
-                                  onClick: () => f(e.start, e.end),
+                                  onClick: () => _(e.start, e.end),
                                   disabled: d,
                                   isGradient: !0,
                                   'aria-label': e.name
@@ -357,7 +357,7 @@ function k(e) {
                               {
                                   color: e,
                                   isSelected: e === c,
-                                  onClick: f,
+                                  onClick: _,
                                   disabled: d,
                                   isGradient: !1
                               },
@@ -396,10 +396,10 @@ function k(e) {
                                         children: [
                                             (0, r.jsx)('div', {
                                                 className: o()(y.defaultContainer, h),
-                                                children: _({
+                                                children: f({
                                                     value: c,
                                                     color: n,
-                                                    onChange: f,
+                                                    onChange: _,
                                                     disabled: d
                                                 })
                                             }),

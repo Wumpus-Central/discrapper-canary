@@ -1,6 +1,6 @@
 n.d(t, {
     $U: () => u,
-    KP: () => _,
+    KP: () => f,
     Tn: () => c,
     dt: () => p,
     xx: () => d
@@ -36,7 +36,7 @@ async function d(e) {
         })
     ).body;
 }
-async function f(e) {
+async function _(e) {
     return (
         await a.tn.del({
             url: o.ANM.NOTIFICATION_SNAPSHOT(e),
@@ -44,7 +44,7 @@ async function f(e) {
         })
     ).body;
 }
-async function _() {
+async function f() {
     let e = await c(),
         t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     0 !== t.length && (await d(t[t.length - 1].id));
@@ -56,7 +56,7 @@ async function p(e) {
             r = null != (t = i().max(e.map((e) => e.length))) ? t : 0;
         if (e.length >= s || n + r > l) {
             let t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
-            await f(t[0].id);
+            await _(t[0].id);
         }
     }
     return u('Backup from '.concat(new Date().toLocaleDateString()));

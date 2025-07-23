@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(73800),
     i = n(442837),
     a = n(812457),
@@ -8,12 +8,12 @@ var r = n(73800),
     c = n(768581),
     u = n(676742),
     d = n(660097);
-let f = (e) => {
+let _ = (e) => {
     var t;
-    let { user: n, guildId: f, size: _, onlyAnimateOnHover: p = !1, showPending: h = !1, showTryItOut: m = !1, avatarDecorationOverride: g } = e,
+    let { user: n, guildId: _, size: f, onlyAnimateOnHover: p = !1, showPending: h = !1, showTryItOut: m = !1, avatarDecorationOverride: g } = e,
         [E, b] = r.useState(!1),
         { canAnimate: y } = (0, a.j)(E, p),
-        O = (0, i.e7)([s.ZP], () => (null != f && null != n ? s.ZP.getMember(f, n.id) : null)),
+        O = (0, i.e7)([s.ZP], () => (null != _ && null != n ? s.ZP.getMember(_, n.id) : null)),
         v = (0, i.e7)([l.default], () => {
             var e;
             return null == (e = l.default.getCurrentUser()) ? void 0 : e.id;
@@ -21,19 +21,19 @@ let f = (e) => {
         I = null == O ? (null == n ? void 0 : n.avatarDecoration) : null === O.avatarDecoration ? null : null != (t = O.avatarDecoration) ? t : null == n ? void 0 : n.avatarDecoration,
         { pendingAvatarDecoration: T } = (0, o.Z)({
             isTryItOut: m,
-            guildId: f
+            guildId: _
         }),
         S = h && void 0 !== T && void 0 !== v && v === (null == n ? void 0 : n.id),
-        A = null != f && null === T,
+        A = null != _ && null === T,
         N = (0, u.Z)(S ? (A ? (null == n ? void 0 : n.avatarDecoration) : null != T ? T : I) : null != I ? I : null == n ? void 0 : n.avatarDecoration),
         C = r.useMemo(
             () =>
                 (0, c.NZ)({
                     avatarDecoration: void 0 !== g ? g : N,
                     canAnimate: y,
-                    size: _
+                    size: f
                 }),
-            [N, y, _, g]
+            [N, y, f, g]
         );
     return {
         avatarPlaceholderSrc: d,

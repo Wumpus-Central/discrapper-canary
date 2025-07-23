@@ -13,16 +13,16 @@ var r = n(544891),
     c = n(406218),
     u = n(314852),
     d = n(981631);
-let f = 60000;
-function _(e) {
-    return Date.now() - (null != e ? e : 0) > f;
+let _ = 60000;
+function f(e) {
+    return Date.now() - (null != e ? e : 0) > _;
 }
 function p(e, t) {
     if (null == e) return Promise.resolve(null);
     let n = u.Z.getFetchStatus(e) === u.a.FETCHING,
         o = u.Z.getLastSyncTimestamp(e),
         s = u.Z.getProfile(e),
-        l = _(o);
+        l = f(o);
     return n && !t
         ? Promise.resolve(null)
         : null == s || l || t

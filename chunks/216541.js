@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(876917),
     u = n(328456),
     d = n(619899),
-    f = n(616066),
-    _ = n(912397),
+    _ = n(616066),
+    f = n(912397),
     p = n(63243),
     h = n(244488);
 let m = (e) => {
@@ -20,11 +20,11 @@ let m = (e) => {
         v = (0, l.ZP)(),
         I = (0, o.ap)(v);
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: f.container,
         children: [
             null != b
                 ? (0, r.jsx)('div', {
-                      className: a()(_.profileEffectShopPreview, E),
+                      className: a()(f.profileEffectShopPreview, E),
                       children: (0, r.jsx)(c.Z, {
                           isHovering: i,
                           profileEffectId: b.id,
@@ -36,8 +36,8 @@ let m = (e) => {
                 : null,
             null != O
                 ? (0, r.jsx)('div', {
-                      className: _.avatarDecorationPreview,
-                      children: (0, r.jsx)(f.R, {
+                      className: f.avatarDecorationPreview,
+                      children: (0, r.jsx)(_.R, {
                           item: O,
                           user: m,
                           avatarSize: s.EFr.SIZE_120,

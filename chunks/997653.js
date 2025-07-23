@@ -8,8 +8,8 @@ var r = n(264344),
     c = n(886848),
     u = n(236842),
     d = n(649318),
-    f = n(199857),
-    _ = n(65154),
+    _ = n(199857),
+    f = n(65154),
     p = n(436620);
 function h(e, t, n) {
     return (
@@ -82,13 +82,13 @@ class g extends s.Z {
         (n.on('addtrack', (e, t) => this.createOutput(m(e), t)),
             n.on('removetrack', (e, t) => this.destroyOutput(m(e), t)),
             n.once('connected', () => {
-                (this.input.reset(), this.setConnectionState(_.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity));
+                (this.input.reset(), this.setConnectionState(f.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity));
             }),
-            n.on('connecting', () => this.setConnectionState(_.$j.DTLS_CONNECTING)),
-            n.on('checking', () => this.setConnectionState(_.$j.ICE_CHECKING)),
-            n.on('failed', () => this.setConnectionState(_.$j.NO_ROUTE)),
-            n.on('disconnected', () => this.setConnectionState(_.$j.DISCONNECTED)),
-            n.on('closed', () => this.setConnectionState(_.$j.DISCONNECTED)),
+            n.on('connecting', () => this.setConnectionState(f.$j.DTLS_CONNECTING)),
+            n.on('checking', () => this.setConnectionState(f.$j.ICE_CHECKING)),
+            n.on('failed', () => this.setConnectionState(f.$j.NO_ROUTE)),
+            n.on('disconnected', () => this.setConnectionState(f.$j.DISCONNECTED)),
+            n.on('closed', () => this.setConnectionState(f.$j.DISCONNECTED)),
             n.on('offer', (e) => {
                 let { sdp: n } = e,
                     { outboundStreams: r, codecs: i, audioSSRC: a, videoSSRC: s, rtxSSRC: l } = (0, d.Nl)(n);
@@ -107,5 +107,5 @@ class g extends s.Z {
 function E(e) {
     let t = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
         n = new a.Yd('Connection('.concat(e.context, ')'));
-    return p.WS ? (n.info('Using Unified Plan ('.concat(t, ')')), new f.Z(e)) : (n.info('Using Plan B ('.concat(t, ')')), new g(e));
+    return p.WS ? (n.info('Using Unified Plan ('.concat(t, ')')), new _.Z(e)) : (n.info('Using Plan B ('.concat(t, ')')), new g(e));
 }

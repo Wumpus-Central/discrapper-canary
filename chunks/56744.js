@@ -12,16 +12,16 @@ var r = n(255367),
 let m = i.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: p, compact: m = !1 } = e,
         f = p.state === o.Y.LOADED ? p.message : void 0,
-        g = (0, a.p)(),
-        h = i.useMemo(
+        h = (0, a.p)(),
+        g = i.useMemo(
             () =>
                 (null == f ? void 0 : f.content) != null && '' !== f.content
                     ? (0, c.ZP)(f, {
                           formatInline: !0,
-                          shouldFilterKeywords: g
+                          shouldFilterKeywords: h
                       }).content
                     : null,
-            [f, g]
+            [f, h]
         ),
         { isReplyAuthorBlocked: _, isReplyAuthorIgnored: b } = (0, l.cj)(
             [s.Z],
@@ -32,14 +32,14 @@ let m = i.memo(function (e) {
             [f]
         ),
         E = (0, u.Uj)(f),
-        x = (0, u.Uj)(t);
+        y = (0, u.Uj)(t);
     return (0, r.jsx)(d.Z, {
         repliedAuthor: E,
-        baseAuthor: x,
+        baseAuthor: y,
         baseMessage: t,
         channel: n,
         referencedMessage: p,
-        content: h,
+        content: g,
         compact: m,
         isReplyAuthorBlocked: _,
         isReplyAuthorIgnored: b,

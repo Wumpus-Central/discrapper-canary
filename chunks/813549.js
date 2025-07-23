@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(674563),
     l = n(367564);
 let c = (e) => {
-    let { name: t, discriminator: n, invertBotTagColor: i, nameColor: s, className: c, botType: u, usernameClass: d, discriminatorClass: f, botClass: _, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
+    let { name: t, discriminator: n, invertBotTagColor: i, nameColor: s, className: c, botType: u, usernameClass: d, discriminatorClass: _, botClass: f, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
     return (0, r.jsxs)('div', {
         className: a()(c, l.nameTag),
         style: h,
@@ -22,7 +22,7 @@ let c = (e) => {
             }),
             null != n
                 ? (0, r.jsxs)('span', {
-                      className: null != f ? f : void 0,
+                      className: null != _ ? _ : void 0,
                       children: ['#', n]
                   })
                 : null,
@@ -30,7 +30,7 @@ let c = (e) => {
                 ? (0, r.jsx)(o.Z, {
                       type: u,
                       invertColor: i,
-                      className: a()(_, l.bot),
+                      className: a()(f, l.bot),
                       verified: p,
                       useRemSizes: m
                   })

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(365710),
     d = n(174604),
-    f = n(302175),
-    _ = n(626135),
+    _ = n(302175),
+    f = n(626135),
     p = n(724884),
     h = n(355045),
     m = n(290799),
@@ -41,7 +41,7 @@ let A = function (e) {
         }, []),
         k = i.useCallback(() => {
             (null == A || A(),
-                _.default.track(I.rMx.MODAL_DISMISSED, {
+                f.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: w,
                     location_section: t.section,
@@ -54,7 +54,7 @@ let A = function (e) {
             (e) => {
                 e &&
                     !R.current &&
-                    (_.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                    (f.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                         type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: w,
                         location_section: t.section,
@@ -66,7 +66,7 @@ let A = function (e) {
             [t, w, n.id]
         );
     (i.useEffect(() => {
-        _.default.track(I.rMx.OPEN_MODAL, {
+        f.default.track(I.rMx.OPEN_MODAL, {
             type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
             location_stack: w,
             location_section: t.section,
@@ -135,7 +135,7 @@ let A = function (e) {
                         className: S.middleBodyContentWrapper,
                         children: [
                             !U && (0, r.jsx)(O.ZP, {}),
-                            (0, r.jsx)(f.Z, {
+                            (0, r.jsx)(_.Z, {
                                 ref: x,
                                 guild: e.guild,
                                 onClose: k

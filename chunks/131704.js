@@ -1,10 +1,10 @@
 (n.d(t, {
     $N: () => ei,
     AW: () => S,
-    CG: () => ef,
+    CG: () => e_,
     Ec: () => H,
     Em: () => z,
-    Gz: () => e_,
+    Gz: () => ef,
     Km: () => P,
     Lr: () => L,
     Q5: () => W,
@@ -51,8 +51,8 @@ var r = n(392711),
     c = n(683860),
     u = n(149765),
     d = n(283693),
-    f = n(860987),
-    _ = n(146085),
+    _ = n(860987),
+    f = n(146085),
     p = n(427679),
     h = n(630388),
     m = n(709054),
@@ -210,10 +210,10 @@ function ec(e) {
 }
 let eu = u.$e(g.Plq.CONNECT, g.Plq.VIEW_CHANNEL),
     ed = g.S7T.CONNECT | g.S7T.VIEW_CHANNEL;
-function ef(e) {
+function e_(e) {
     return D(e) ? eu : g.Plq.VIEW_CHANNEL;
 }
-function e_(e) {
+function ef(e) {
     return D(e) ? ed : g.S7T.VIEW_CHANNEL;
 }
 class ep {
@@ -273,7 +273,7 @@ class eg extends ep {
         return null != t ? new this.constructor(t) : this;
     }
     computeLurkerPermissionsAllowList() {
-        if (this.isGuildStageVoice() && p.Z.isPublic(this.id)) return _.L_;
+        if (this.isGuildStageVoice() && p.Z.isPublic(this.id)) return f.L_;
     }
     isNSFW() {
         return this.nsfw;
@@ -393,7 +393,7 @@ class eg extends ep {
         return this.hasFlag(E.zZ.IS_MODERATOR_REPORT_CHANNEL);
     }
     get accessPermissions() {
-        return ef(this.type);
+        return e_(this.type);
     }
     hasFlag(e) {
         return (0, h.yE)(this.flags, e);
@@ -486,7 +486,7 @@ class eE extends eg {
             linkedLobby: e.linked_lobby,
             hdStreamingUntil: e.hd_streaming_until,
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
-            wallpaper: (0, f.L)(e.wallpaper)
+            wallpaper: (0, _.L)(e.wallpaper)
         };
         return (0, d.gh)(a, eE);
     }
@@ -657,7 +657,7 @@ class eD extends eg {
                 safetyWarnings: e.safety_warnings,
                 blockedUserWarningDismissed: e.blocked_user_warning_dismissed,
                 type: null != e.type ? e.type : g.d4z.DM,
-                wallpaper: (0, f.L)(e.wallpaper)
+                wallpaper: (0, _.L)(e.wallpaper)
             };
         return (0, d.gh)(i, eD);
     }

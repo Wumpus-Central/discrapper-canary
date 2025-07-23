@@ -18,13 +18,13 @@ var r = n(278074),
     p = n(375954),
     m = n(594174),
     f = n(768581),
-    g = n(176354),
-    h = n(358085),
+    h = n(176354),
+    g = n(358085),
     _ = n(798628),
     b = n(79390),
     E = n(839963),
-    x = n(897325),
-    y = n(57101),
+    y = n(897325),
+    x = n(57101),
     v = n(562293),
     C = n(981631),
     O = n(388032);
@@ -97,43 +97,43 @@ function N(e, t) {
     if (null == o) return;
     let m = e.state === C.yb.SENT,
         f = m ? (null != a ? a : (0, v.H)(o.expiry)) : '',
-        g = null == f && m,
-        { selectedAnswerIds: h, submitting: b, editing: E, showResults: x } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : j,
-        y = e.reactions,
+        h = null == f && m,
+        { selectedAnswerIds: g, submitting: b, editing: E, showResults: y } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : j,
+        x = e.reactions,
         O = !0;
     if (!T(e)) {
         let t = p.Z.getMessage(e.channel_id, e.id);
-        ((O = !e.isSearchHit && null != t), (y = null != (l = null == t ? void 0 : t.reactions) ? l : y));
+        ((O = !e.isSearchHit && null != t), (x = null != (l = null == t ? void 0 : t.reactions) ? l : x));
     }
-    let I = h.size > 0,
-        S = y.some((e) => !0 === e.me_vote),
+    let I = g.size > 0,
+        S = x.some((e) => !0 === e.me_vote),
         N = !E && S,
-        P = N || g || x,
+        P = N || h || y,
         A = m && O && (!S || E || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
         R = (0, s.EY)(Z),
-        k = (0, c.b)(Z),
-        L = !b && I && !N && m && !R && !k;
+        L = (0, c.b)(Z),
+        k = !b && I && !N && m && !R && !L;
     return {
         poll: o,
         canTapAnswers: A,
-        canRemoveVote: N && m && !g,
+        canRemoveVote: N && m && !h,
         canShowVoteCounts: P,
-        canSubmitVote: L,
+        canSubmitVote: k,
         expirationLabel: f,
         hasSelectedAnswer: I,
         hasVoted: N,
         hasVoteRecorded: S,
         isEditingVote: E,
-        isExpired: g,
+        isExpired: h,
         isInteractive: O,
         isSent: m,
-        reactions: y,
-        selectedAnswerIds: h,
+        reactions: x,
+        selectedAnswerIds: g,
         submitting: b,
         tapShouldOpenVotersModal: P,
-        showResults: x
+        showResults: y
     };
 }
 function P(e, t) {
@@ -145,12 +145,12 @@ function P(e, t) {
     if (null == v) return;
     let C = l.Z.useReducedMotion,
         j = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        T = (0, x.E)(v, j),
+        T = (0, y.E)(v, j),
         P = _.answers,
         A = _.layout_type,
         w = N(e, t, { formattedExpirationLabel: p });
     if (null == w) return;
-    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: k, canSubmitVote: L, expirationLabel: D = O.intl.string(O.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
+    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: L, canSubmitVote: k, expirationLabel: D = O.intl.string(O.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
         Y = (0, b.cZ)(H),
         X = O.intl.formatToPlainString(O.t.XRkuoa, { count: Y.toLocaleString() }),
         q = Math.max(
@@ -167,14 +167,14 @@ function P(e, t) {
                 d = null != (n = null == u || null == (t = u.count_details) ? void 0 : t.vote) ? n : 0,
                 p = 0 === Y ? 0 : d / Y,
                 m = V.has(s),
-                h = d >= q && 0 !== d,
+                g = d >= q && 0 !== d,
                 _ = U && null != (l = null == u ? void 0 : u.me_vote) && l,
                 b = S({
                     didSelfVote: _,
                     hasVoted: U,
                     isExpired: B,
                     isSelected: m,
-                    isLeader: h,
+                    isLeader: g,
                     showResults: K
                 });
             return {
@@ -196,7 +196,7 @@ function P(e, t) {
                             displayName: null == e.id ? o.ZP.convertSurrogateToName(e.name) : e.name,
                             src:
                                 null == e.id
-                                    ? g.ZP.getURL(e.name)
+                                    ? h.ZP.getURL(e.name)
                                     : f.ZP.getEmojiURL({
                                           id: e.id,
                                           animated: s,
@@ -209,7 +209,7 @@ function P(e, t) {
                     attachmentIds: e.poll_media.attachment_ids
                 },
                 isSelected: m,
-                isVictor: B && h,
+                isVictor: B && g,
                 didSelfVote: _,
                 style: b,
                 shouldAnimateTransition: z && !C,
@@ -221,7 +221,7 @@ function P(e, t) {
         }),
         J = (0, r.EQ)({
             isExpired: B,
-            canSubmitVote: L,
+            canSubmitVote: k,
             hasVoted: U,
             isEditingVote: F,
             canRemoveVote: R,
@@ -257,10 +257,10 @@ function P(e, t) {
             .otherwise(() => ({
                 label: O.intl.string(O.t.JwkNU1),
                 presentation: 'button',
-                enabled: L,
+                enabled: k,
                 type: 'submit'
             })),
-        $ = (0, h.isIOS)() ? O.intl.string(O.t.PVATMz) : O.intl.string(O.t.cHfFqq),
+        $ = (0, g.isIOS)() ? O.intl.string(O.t.PVATMz) : O.intl.string(O.t.cHfFqq),
         ee = (0, r.EQ)({
             isExpired: B,
             isInteractive: G,
@@ -326,7 +326,7 @@ function P(e, t) {
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: A,
-        resources: (0, y.Z)({
+        resources: (0, x.Z)({
             theme: d,
             layoutType: A
         }),
@@ -336,7 +336,7 @@ function P(e, t) {
         canTapAnswers: Z,
         canSelectMultipleAnswers: en,
         hasSelectedAnswer: M,
-        canShowVoteCounts: k,
+        canShowVoteCounts: L,
         hasVoted: U,
         isExpired: B,
         myAvatarUrl: T,

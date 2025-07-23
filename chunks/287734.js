@@ -9,8 +9,8 @@ var s = n(788983),
     c = n(700615),
     u = n(592125),
     d = n(731290),
-    f = n(131951),
-    _ = n(944486),
+    _ = n(131951),
+    f = n(944486),
     p = n(914010),
     h = n(594174),
     m = n(934415),
@@ -41,14 +41,14 @@ let b = {
             o = u.Z.getChannel(e),
             s = null == o ? void 0 : o.getGuildId();
         if ((null == o ? void 0 : o.isGuildVocal()) && (0, i.aC)(o) && (!(null == (t = h.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) || !d.Z.didAgree(s))) return void (0, l.uL)(E.Z5c.CHANNEL(s, e));
-        f.Z.isSupported() && (null != e && f.Z.getMediaEngine().interact(), (0, g.h)(e, s, n, r, a));
+        _.Z.isSupported() && (null != e && _.Z.getMediaEngine().interact(), (0, g.h)(e, s, n, r, a));
     },
     disconnect() {
         let e = o.Z.getRemoteSessionId();
         if ((null != e && a._(e), (0, c.ur)())) this.selectVoiceChannel(null);
         else {
-            let e = u.Z.getChannel(_.Z.getChannelId()),
-                t = _.Z.getChannelId() === _.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
+            let e = u.Z.getChannel(f.Z.getChannelId()),
+                t = f.Z.getChannelId() === f.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
             if ((this.selectVoiceChannel(null), s.xv(E.KJ3.CHANNEL_CALL_POPOUT), t)) {
                 let e = p.Z.getGuildId();
                 null != e && (0, l.uL)((0, m.LY)(e));

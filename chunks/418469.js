@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,14 +37,14 @@ function f(e) {
     }
     return e;
 }
-function _(e, t, d) {
-    var _;
+function f(e, t, d) {
+    var f;
     let p = (0, s.Cf)(e),
         h = (0, i.e7)([l.default], () => l.default.getId());
     if (null == e) return null;
     let m = (0, o.V9)(e),
-        g = null != (_ = c.Z.getVideoStats(m)) ? _ : {},
-        E = f(
+        g = null != (f = c.Z.getVideoStats(m)) ? f : {},
+        E = _(
             {
                 media_session_id: c.Z.getMediaSessionId(m),
                 rtc_connection_id: c.Z.getRtcConnectionId(m),
@@ -61,7 +61,7 @@ function _(e, t, d) {
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                f(
+                                _(
                                     {
                                         stream: e,
                                         streamApplication: p,

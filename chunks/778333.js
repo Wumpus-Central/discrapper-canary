@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(314897),
     m = n(592125),
     f = n(699516),
-    g = n(51144),
-    h = n(981631),
+    h = n(51144),
+    g = n(981631),
     _ = n(388032),
     b = n(273254);
 function E(e) {
     var t;
-    let { invite: n, message: E, getAcceptInviteContext: x } = e,
-        y = (0, l.e7)([p.default], () => p.default.getId()),
-        v = (null == (t = n.inviter) ? void 0 : t.id) === y,
-        C = n.state === h.r2o.ACCEPTING,
+    let { invite: n, message: E, getAcceptInviteContext: y } = e,
+        x = (0, l.e7)([p.default], () => p.default.getId()),
+        v = (null == (t = n.inviter) ? void 0 : t.id) === x,
+        C = n.state === g.r2o.ACCEPTING,
         { analyticsLocations: O } = (0, c.ZP)(s.Z.INVITE_EMBED),
         j = (0, l.e7)([f.Z], () => {
             var e;
@@ -49,12 +49,12 @@ function E(e) {
                 },
                 O
             );
-            let e = x('Invite Button Embed');
+            let e = y('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, O, x]);
+        }, [n, E, O, y]);
     if (null == n.inviter) return null;
     let T = j ? I : S,
         N = _.intl.string(_.t.ib7Ng4),
@@ -62,7 +62,7 @@ function E(e) {
     j ? ((N = _.intl.string(_.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : v && ((N = _.intl.string(_.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
     let A = v ? _.intl.string(_.t.eQyu1N) : _.intl.string(_.t.PYJHW1),
         w = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        Z = null != n.inviter ? g.ZP.getUserTag(n.inviter) : '';
+        Z = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
     return (0, r.jsxs)(u.Z, {
         children: [
             (0, r.jsx)(u.Z.Header, { text: A }),

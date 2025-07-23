@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(230711),
     d = n(351773),
-    f = n(607070),
-    _ = n(100527),
+    _ = n(607070),
+    f = n(100527),
     p = n(906732),
     h = n(550385),
     m = n(639119),
@@ -98,11 +98,11 @@ let P = () => {
     };
 function L(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: a } = (0, p.ZP)(_.Z.APP_ICON_EDITOR),
+        { analyticsLocations: a } = (0, p.ZP)(f.Z.APP_ICON_EDITOR),
         l = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        { isUpsellPreview: u, shouldEditorAnimate: m } = (0, s.cj)([I.Z, f.Z], () => ({
+        { isUpsellPreview: u, shouldEditorAnimate: m } = (0, s.cj)([I.Z, _.Z], () => ({
             isUpsellPreview: I.Z.isUpsellPreview,
-            shouldEditorAnimate: t && !f.Z.useReducedMotion
+            shouldEditorAnimate: t && !_.Z.useReducedMotion
         })),
         g = h.oq.getState().activePanel === h.wh.APP_ICON;
     i.useEffect(() => {

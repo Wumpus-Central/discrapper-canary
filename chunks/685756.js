@@ -26,8 +26,8 @@ var r = n(512722),
     c = n(857192),
     u = n(70956),
     d = n(358085),
-    f = n(65154);
-function _(e, t, n) {
+    _ = n(65154);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -124,7 +124,7 @@ function R(e) {
           }));
 }
 function P(e) {
-    return 'audio' === e ? f.Tr.AUDIO : 'test' === e ? f.Tr.TEST : 'screen' === e ? f.Tr.SCREEN : f.Tr.VIDEO;
+    return 'audio' === e ? _.Tr.AUDIO : 'test' === e ? _.Tr.TEST : 'screen' === e ? _.Tr.SCREEN : _.Tr.VIDEO;
 }
 function w(e) {
     var t;
@@ -194,7 +194,7 @@ class L extends o.Z {
                         break;
                     case 5:
                         let i = r.speaking;
-                        ('boolean' == typeof i && (i = i ? f.Dg.VOICE : f.Dg.NONE), this.emit('speaking', r.user_id, r.ssrc, i));
+                        ('boolean' == typeof i && (i = i ? _.Dg.VOICE : _.Dg.NONE), this.emit('speaking', r.user_id, r.ssrc, i));
                         break;
                     case 3:
                         this.sendHeartbeat();
@@ -541,7 +541,7 @@ class L extends o.Z {
     setHeartbeatIntervalModifier(e) {
         this.heartbeatIntervalModifier = e;
     }
-    constructor(e, t = f.Yn.DEFAULT) {
-        (super(), _(this, 'url', void 0), _(this, 'logger', void 0), _(this, 'backoff', new a.Z(1000, 5000)), _(this, 'webSocket', void 0), _(this, 'connectionState', void 0), _(this, 'heartbeatInterval', void 0), _(this, 'helloTimeout', void 0), _(this, 'heartbeater', void 0), _(this, 'lastHeartbeatAckTime', void 0), _(this, 'expeditedHeartbeatTimeout', void 0), _(this, 'heartbeatAck', void 0), _(this, 'heartbeatIntervalModifier', void 0), _(this, 'connectionStartTime', void 0), _(this, 'lastRecvSeqNum', void 0), _(this, 'sessionId', void 0), _(this, 'serverId', void 0), _(this, 'channelId', void 0), _(this, 'token', void 0), _(this, 'resumable', void 0), _(this, 'serverVersion', 0), (this.url = e), (this.logger = new l.Z('RTCControlSocket('.concat(t, ')'))), this.logger.enableNativeLogger(!0), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.channelId = null), (this.token = null), (this.resumable = !1));
+    constructor(e, t = _.Yn.DEFAULT) {
+        (super(), f(this, 'url', void 0), f(this, 'logger', void 0), f(this, 'backoff', new a.Z(1000, 5000)), f(this, 'webSocket', void 0), f(this, 'connectionState', void 0), f(this, 'heartbeatInterval', void 0), f(this, 'helloTimeout', void 0), f(this, 'heartbeater', void 0), f(this, 'lastHeartbeatAckTime', void 0), f(this, 'expeditedHeartbeatTimeout', void 0), f(this, 'heartbeatAck', void 0), f(this, 'heartbeatIntervalModifier', void 0), f(this, 'connectionStartTime', void 0), f(this, 'lastRecvSeqNum', void 0), f(this, 'sessionId', void 0), f(this, 'serverId', void 0), f(this, 'channelId', void 0), f(this, 'token', void 0), f(this, 'resumable', void 0), f(this, 'serverVersion', 0), (this.url = e), (this.logger = new l.Z('RTCControlSocket('.concat(t, ')'))), this.logger.enableNativeLogger(!0), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.channelId = null), (this.token = null), (this.resumable = !1));
     }
 }

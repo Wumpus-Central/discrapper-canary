@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(553795),
     u = n(517100),
     d = n(451478),
-    f = n(70956),
-    _ = n(162461),
+    _ = n(70956),
+    f = n(162461),
     p = n(564990),
     h = n(71585),
     m = n(146282),
@@ -29,9 +29,9 @@ function b(e, t, n) {
     );
 }
 let y = 4,
-    O = 2 * f.Z.Millis.MINUTE,
+    O = 2 * _.Z.Millis.MINUTE,
     v = g.YN.GLOBAL_FEED,
-    I = 15 * f.Z.Millis.MINUTE,
+    I = 15 * _.Z.Millis.MINUTE,
     T = new Map(),
     S = new Set(),
     A = new Map(),
@@ -51,7 +51,7 @@ function P(e, t) {
 function w(e) {
     if (S.has(e) || (e === g.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== m.Z.getFeed(e)))) return !1;
     if (e === v) {
-        if (!(0, _.sA)('ContentInventoryManager') || (h.Z.hidden && null != m.Z.getFeed(e)) || !d.Z.isFocused() || !l.Z.isConnected()) return !1;
+        if (!(0, f.sA)('ContentInventoryManager') || (h.Z.hidden && null != m.Z.getFeed(e)) || !d.Z.isFocused() || !l.Z.isConnected()) return !1;
         let t = u.Z.getIdleSince();
         if (null != t && Date.now() - t > I) return !1;
     }
@@ -110,7 +110,7 @@ async function x(e) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
             if (e < y) {
-                let i = f.Z.Millis.MINUTE * Math.pow(2, e) + R(e);
+                let i = _.Z.Millis.MINUTE * Math.pow(2, e) + R(e);
                 (T.set(
                     t,
                     setTimeout(

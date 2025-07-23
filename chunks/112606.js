@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(392711),
     i = n.n(r),
     a = n(626135),
@@ -38,8 +38,8 @@ function d(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let f = i().throttle((e) => {
-    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: o, screenshakeEnabledLocations: l, confettiEnabled: f, confettiSize: _, confettiCount: p, confettiEnabledLocations: h } = e;
+let _ = i().throttle((e) => {
+    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: o, screenshakeEnabledLocations: l, confettiEnabled: _, confettiSize: f, confettiCount: p, confettiEnabledLocations: h } = e;
     a.default.track(s.rMx.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
@@ -47,8 +47,8 @@ let f = i().throttle((e) => {
         screenshake_enabled: i,
         shake_intensity: o,
         screenshake_enabled_locations: d(l, c),
-        confetti_enabled: f,
-        confetti_size: _,
+        confetti_enabled: _,
+        confetti_size: f,
         confetti_count: p,
         confetti_enabled_locations: d(h, u)
     });

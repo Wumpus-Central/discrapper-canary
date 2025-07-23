@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(750154),
     u = n(427679),
     d = n(388032);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,17 +21,17 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     var t, n;
-    let { activity: f } = e,
-        { channelId: _ } = null != (t = (0, c.rq)(f)) ? t : {},
-        p = (0, a.e7)([u.Z], () => u.Z.getStageInstanceByChannel(_), [_]),
+    let { activity: _ } = e,
+        { channelId: f } = null != (t = (0, c.rq)(_)) ? t : {},
+        p = (0, a.e7)([u.Z], () => u.Z.getStageInstanceByChannel(f), [f]),
         h = i.useRef(null),
         m = i.useCallback(() => {
-            let e = s.Z.getChannel(_);
+            let e = s.Z.getChannel(f);
             null != e && l.Cq(e);
-        }, [_]),
-        g = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
+        }, [f]),
+        g = null != (n = null == p ? void 0 : p.topic) ? n : _.name,
         E = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: g });
     return (0, r.jsx)('div', {
         ref: h,
@@ -56,6 +56,6 @@ class p {
         };
     }
     constructor() {
-        f(this, 'body', _);
+        _(this, 'body', f);
     }
 }

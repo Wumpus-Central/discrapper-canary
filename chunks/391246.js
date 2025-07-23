@@ -7,8 +7,8 @@ var r = n(127849),
     c = n(573078),
     u = n(477732),
     d = n(621523),
-    f = n(170322),
-    _ = n(77826),
+    _ = n(170322),
+    f = n(77826),
     p = n(554148),
     h = n(730383),
     m = n(953010),
@@ -85,7 +85,7 @@ var r = n(127849),
             l = r(+i),
             c = !!a;
         if (s + t > o.byteLength) throw new Z(D);
-        for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
+        for (var u = o.bytes, d = s + o.byteOffset, _ = 0; _ < t; _++) u[d + _] = l[c ? _ : t - _ - 1];
     };
 if (o) {
     var er = A && k.name !== C;
@@ -99,7 +99,7 @@ if (o) {
         return (new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !N));
     })
         ? (((j = function (e) {
-              return (f(this, U), v(new k(h(e)), this, j));
+              return (_(this, U), v(new k(h(e)), this, j));
           })[P] = U),
           (U.constructor = j),
           I(j, k))
@@ -124,7 +124,7 @@ if (o) {
             ));
 } else
     ((U = (j = function (e) {
-        f(this, U);
+        _(this, U);
         var t = h(e);
         (M(this, {
             type: C,
@@ -134,10 +134,10 @@ if (o) {
             a || ((this.byteLength = t), (this.detached = !1)));
     })[P]),
         (B = (G = function (e, t, n) {
-            (f(this, B), f(e, U));
+            (_(this, B), _(e, U));
             var r = L(e),
                 i = r.byteLength,
-                o = _(t);
+                o = f(t);
             if (o < 0 || o > i) throw new Z('Wrong offset');
             if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new Z(w);
             (M(this, {

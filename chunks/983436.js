@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(287734),
@@ -11,23 +11,23 @@ var r = n(255367),
     p = n(981631),
     m = n(388032),
     f = n(273254);
-function g(e) {
-    let { guild: t, channel: n, message: g } = e,
-        h = u.Z.getGuildId(),
-        _ = c.Z.getChannelId(h),
+function h(e) {
+    let { guild: t, channel: n, message: h } = e,
+        g = u.Z.getGuildId(),
+        _ = c.Z.getChannelId(g),
         b = i.useCallback(() => {
             var e;
             (d.default.track(p.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null == (e = g.author) ? void 0 : e.id,
+                author_id: null == (e = h.author) ? void 0 : e.id,
                 link_guild_id: t.id,
                 link_channel_id: n.id,
                 link_channel_type: n.type,
-                guild_id: h,
+                guild_id: g,
                 channel_id: _
             }),
                 (0, a.K)(t.id, n.id),
                 l.default.selectVoiceChannel(n.id));
-        }, [g, t, n, h, _]),
+        }, [h, t, n, g, _]),
         E = (0, r.jsx)(s.Z.Channel, { channel: n });
     return (0, r.jsx)(s.Z, {
         children: (0, r.jsxs)(s.Z.Body, {

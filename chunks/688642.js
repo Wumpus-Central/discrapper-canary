@@ -30,17 +30,17 @@ a.Component;
 var d = function (e, t) {
         return 'function' == typeof e ? e(t) : e;
     },
-    f = function (e, t) {
+    _ = function (e, t) {
         return 'string' == typeof e ? (0, o.ob)(e, null, null, t) : e;
     },
-    _ = function (e) {
+    f = function (e) {
         return e;
     },
     p = a.forwardRef;
 function h(e) {
     return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
-void 0 === p && (p = _);
+void 0 === p && (p = f);
 var m = p(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
@@ -57,7 +57,7 @@ var m = p(function (e, t) {
                     e.defaultPrevented || 0 !== e.button || (c && '_self' !== c) || h(e) || (e.preventDefault(), r());
                 }
             });
-        return (_ !== p ? (u.ref = t || n) : (u.ref = n), a.createElement('a', u));
+        return (f !== p ? (u.ref = t || n) : (u.ref = n), a.createElement('a', u));
     }),
     g = p(function (e, t) {
         var n = e.component,
@@ -69,7 +69,7 @@ var m = p(function (e, t) {
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, c.Z)(!1);
             var n = e.history,
-                r = f(d(u, e.location), e.location),
+                r = _(d(u, e.location), e.location),
                 l = r ? n.createHref(r) : '',
                 m = (0, s.Z)({}, g, {
                     href: l,
@@ -78,7 +78,7 @@ var m = p(function (e, t) {
                         (o ? n.replace : n.push)(t);
                     }
                 });
-            return (_ !== p ? (m.ref = t || h) : (m.innerRef = h), a.createElement(i, m));
+            return (f !== p ? (m.ref = t || h) : (m.innerRef = h), a.createElement(i, m));
         });
     }),
     E = function (e) {
@@ -99,7 +99,7 @@ function y() {
             i = void 0 === n ? 'page' : n,
             o = e.activeClassName,
             u = void 0 === o ? 'active' : o,
-            _ = e.activeStyle,
+            f = e.activeStyle,
             p = e.className,
             h = e.exact,
             m = e.isActive,
@@ -113,7 +113,7 @@ function y() {
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, c.Z)(!1);
             var n = O || e.location,
-                o = f(d(S, n), n),
+                o = _(d(S, n), n),
                 l = o.pathname,
                 C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
                 R = C
@@ -126,7 +126,7 @@ function y() {
                     : null,
                 P = !!(m ? m(R, n) : R),
                 w = P ? y(p, u) : p,
-                D = P ? (0, s.Z)({}, T, {}, _) : T,
+                D = P ? (0, s.Z)({}, T, {}, f) : T,
                 L = (0, s.Z)(
                     {
                         'aria-current': (P && i) || null,

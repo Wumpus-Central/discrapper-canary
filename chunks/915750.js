@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(110924),
     u = n(516796),
     d = n(186102),
-    f = n(797614),
-    _ = n(358085),
+    _ = n(797614),
+    f = n(358085),
     p = n(617136),
     h = n(569984),
     m = n(918701),
@@ -133,7 +133,7 @@ class R {
                         this.commonProperties(e)
                     );
                     (0, u.S)().then((n) => {
-                        (null != n && ((0, _.isIOS)() ? (r.apple_advertising_id = n.advertisingId) : (0, _.isAndroid)() && (r.android_advertising_id = n.advertisingId)),
+                        (null != n && ((0, f.isIOS)() ? (r.apple_advertising_id = n.advertisingId) : (0, f.isAndroid)() && (r.android_advertising_id = n.advertisingId)),
                             (0, p.dA)({
                                 questId: e.id,
                                 event: b.rMx.QUEST_CONTENT_VIEWED,
@@ -216,7 +216,7 @@ class R {
                             }));
                     }),
                     (0, g.a)('QuestImpressionTracker') &&
-                        f.Z.increment({
+                        _.Z.increment({
                             name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, p._b)(this.questContent))]
                         }),
@@ -265,19 +265,19 @@ function x() {
 function M(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
         d = w(e.questOrQuests),
-        f = i.useRef(null),
-        _ = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []);
+        _ = i.useRef(null),
+        f = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
-            null != f.current && f.current.stop();
+            null != _.current && _.current.stop();
         }),
         i.useEffect(() => {
             let r = a && t,
                 i = (n || c || d) && r,
                 o = ((n || c) && !r) || d;
-            ((i || o) && null != f.current && f.current.stop(),
+            ((i || o) && null != _.current && _.current.stop(),
                 i &&
-                    ((f.current = new R({
+                    ((_.current = new R({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -285,14 +285,14 @@ function M(e) {
                         triggeredByStatusChange: d,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         minViewTimeSeconds: e.minViewTimeSeconds,
-                        isQuestEnrollmentBlocked: _,
+                        isQuestEnrollmentBlocked: f,
                         sourceQuestContent: u
                     })),
-                    f.current.start()));
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, _, u]),
+                    _.current.start()));
+        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, f, u]),
         (0, r.jsx)(D.Provider, {
-            value: f,
-            children: e.children(o, f)
+            value: _,
+            children: e.children(o, _)
         })
     );
 }

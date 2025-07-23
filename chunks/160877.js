@@ -15,12 +15,12 @@ var r = n(255367),
     p = n(70097),
     m = n(406432),
     f = n(584656),
-    g = n(247206),
-    h = n(470734),
+    h = n(247206),
+    g = n(470734),
     _ = n(719548),
     b = n(388032),
     E = n(580297);
-let x = (e) => {
+let y = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
@@ -30,7 +30,7 @@ let x = (e) => {
                   description: i
               });
     },
-    y = (e) => {
+    x = (e) => {
         var t, n, i;
         let { embed: l } = e;
         if (!_.n2.has(l.type)) return null;
@@ -66,10 +66,10 @@ function C(e) {
 function O(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: u, onConfirmPress: p, transitionState: m, onClose: f } = e,
         _ = (0, d.Dt)(),
-        v = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
+        v = (0, g.pn)('ExplicitMediaFalsePositiveModal'),
         C = i.useCallback(() => {
-            ((0, g.aP)({
-                action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+            ((0, h.aP)({
+                action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
                 context: a
@@ -78,16 +78,16 @@ function O(e) {
         }, [t, n, a, f]),
         O = i.useCallback(() => {
             (null == p || p(),
-                (0, g.aP)({
-                    action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+                (0, h.aP)({
+                    action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
                     context: a
                 }));
         }, [t, n, a, p]);
     i.useEffect(() => {
-        (0, g.aP)({
-            action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+        (0, h.aP)({
+            action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
             channelId: t,
             messageId: n,
             context: a
@@ -119,8 +119,8 @@ function O(e) {
                         className: E.subheader,
                         children: j
                     }),
-                    null != o && (0, r.jsx)(x, { attachment: o }),
-                    null != u && (0, r.jsx)(y, { embed: u })
+                    null != o && (0, r.jsx)(y, { attachment: o }),
+                    null != u && (0, r.jsx)(x, { embed: u })
                 ]
             }),
             (0, r.jsxs)(c.mzw, {

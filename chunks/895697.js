@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(5192),
     u = n(621853),
     d = n(209698),
-    f = n(172351),
-    _ = n(648052),
+    _ = n(172351),
+    f = n(648052),
     p = n(483424),
     h = n(681837),
     m = n(678738),
@@ -45,7 +45,7 @@ function R(e) {
                 onOpenProfile: D,
                 nickname: M,
                 pronouns: null == R ? void 0 : R.pronouns,
-                tags: (0, r.jsx)(_.Z, {
+                tags: (0, r.jsx)(f.Z, {
                     displayProfile: R,
                     themeType: S.lY.POPOUT,
                     onClose: x
@@ -105,7 +105,7 @@ function R(e) {
                   }),
             (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
                 null != j &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(_.Z, {
                     applicationId: k.id,
                     commandIds: k.popularApplicationCommandIds,
                     channel: j,

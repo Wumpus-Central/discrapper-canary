@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(742280),
     u = n(442837),
     d = n(692547),
-    f = n(481060),
-    _ = n(190947),
+    _ = n(481060),
+    f = n(190947),
     p = n(224550),
     h = n(275850),
     m = n(672971),
@@ -73,7 +73,7 @@ function Q(e) {
     var t, n, a, s;
     let W,
         Q,
-        { selectedPlanId: J, planGroup: $, paymentSources: ee, priceOptions: et, currencies: en, onCurrencyChange: er, onPaymentSourceChange: ei, handlePaymentSourceAdd: ea, setHasAcceptedTerms: eo, legalTermsNodeRef: es, hasLegalTermsFlash: el, trialId: ec, trialFooterMessageOverride: eu, reviewWarningMessage: ed, metadata: ef, purchaseState: e_, hideSubscriptionDetails: ep, referralTrialOfferId: eh, isTrial: em = !1, isDiscount: eg = !1, handleClose: eE } = e,
+        { selectedPlanId: J, planGroup: $, paymentSources: ee, priceOptions: et, currencies: en, onCurrencyChange: er, onPaymentSourceChange: ei, handlePaymentSourceAdd: ea, setHasAcceptedTerms: eo, legalTermsNodeRef: es, hasLegalTermsFlash: el, trialId: ec, trialFooterMessageOverride: eu, reviewWarningMessage: ed, metadata: e_, purchaseState: ef, hideSubscriptionDetails: ep, referralTrialOfferId: eh, isTrial: em = !1, isDiscount: eg = !1, handleClose: eE } = e,
         { isEmbeddedIAP: eb, activeSubscription: ey, selectedSkuId: eO, defaultPlanId: ev, isPremium: eI, startedPaymentFlowWithPaymentSourcesRef: eT, setInvoicePreview: eS, contextMetadata: eA, inReverseTrial: eN, setPurchaseError: eC, hasPaymentSources: eR, enablePremiumBrandRefresh: eP, premiumBrandRefreshBackgroundClassName: ew } = (0, b.JL)(),
         { isGift: eD, giftRecipient: eL, selectedGiftStyle: ex } = (0, E.wD)(),
         eM = (0, x.Ng)(),
@@ -87,7 +87,7 @@ function Q(e) {
                 quantity: 1
             }
         ],
-        eB = e_ === y.A.PURCHASING || e_ === y.A.COMPLETED,
+        eB = ef === y.A.PURCHASING || ef === y.A.COMPLETED,
         eV = null != eO ? eO : '',
         eF = (0, u.e7)([C.Z], () => C.Z.get(eV), [eV]),
         eZ = null == eF ? void 0 : eF.eligiblePaymentGateways,
@@ -99,7 +99,7 @@ function Q(e) {
             paymentSourceId: et.paymentSourceId,
             currency: et.currency,
             trialId: ec,
-            metadata: ef
+            metadata: e_
         }),
         [eW, eK] = (0, L.ED)({
             subscriptionId: null == ey ? void 0 : ey.id,
@@ -109,7 +109,7 @@ function Q(e) {
             trialId: ec,
             paymentSourceId: et.paymentSourceId,
             currency: et.currency,
-            metadata: ef
+            metadata: e_
         }),
         [ez, eq] = (0, L.ED)({
             items: [
@@ -123,7 +123,7 @@ function Q(e) {
             trialId: ec,
             paymentSourceId: et.paymentSourceId,
             currency: et.currency,
-            metadata: ef
+            metadata: e_
         }),
         [eX, eQ] = (0, L.o5)({
             paymentSourceId: et.paymentSourceId,
@@ -198,11 +198,11 @@ function Q(e) {
                         (0, r.jsxs)('div', {
                             className: q.trialPriceLine,
                             children: [
-                                (0, r.jsx)(f.Text, {
+                                (0, r.jsx)(_.Text, {
                                     variant: 'text-md/bold',
                                     children: z.intl.string(z.t.txajQE)
                                 }),
-                                (0, r.jsx)(f.Text, {
+                                (0, r.jsx)(_.Text, {
                                     variant: 'text-md/normal',
                                     children: z.intl.format(z.t.hXcaLS, {
                                         price: (0, w.T4)(0, ti.currency, {
@@ -228,7 +228,7 @@ function Q(e) {
         if (null == eH || null == eW || tr)
             return (0, r.jsx)('div', {
                 className: q.spinnerWrapper,
-                children: (0, r.jsx)(f.$jN, {})
+                children: (0, r.jsx)(_.$jN, {})
             });
         (em && eH.subscriptionPeriodEnd !== eW.subscriptionPeriodEnd && (W = eH.subscriptionPeriodEnd),
             (Q = (0, r.jsxs)(r.Fragment, {
@@ -278,13 +278,13 @@ function Q(e) {
                       (0, r.jsxs)('div', {
                           className: q.reviewWarningMessageContainer,
                           children: [
-                              (0, r.jsx)(f.d3s, {
+                              (0, r.jsx)(_.d3s, {
                                   size: 'custom',
                                   color: d.Z.unsafe_rawColors.YELLOW_300.css,
                                   width: 20,
                                   height: 20
                               }),
-                              (0, r.jsx)(f.Text, {
+                              (0, r.jsx)(_.Text, {
                                   className: q.reviewWarningMessage,
                                   variant: 'text-sm/normal',
                                   children: ed
@@ -314,7 +314,7 @@ function Q(e) {
                           ]
                       }),
                   eN &&
-                      (0, r.jsx)(f.X6q, {
+                      (0, r.jsx)(_.X6q, {
                           variant: 'heading-md/normal',
                           color: 'always-white',
                           className: q.trialHeader,
@@ -322,8 +322,8 @@ function Q(e) {
                       }),
                   !em &&
                       '' !== tc &&
-                      (0, r.jsx)(f.vwX, {
-                          tag: f.RB0.H5,
+                      (0, r.jsx)(_.vwX, {
+                          tag: _.RB0.H5,
                           children: tc
                       }),
                   eJ &&
@@ -344,13 +344,13 @@ function Q(e) {
                       className: q.paymentSourceWrapper,
                       children: [
                           em
-                              ? (0, r.jsx)(f.vwX, {
-                                    tag: f.RB0.H5,
+                              ? (0, r.jsx)(_.vwX, {
+                                    tag: _.RB0.H5,
                                     className: q.formTitle,
                                     children: z.intl.string(z.t['YH7B+P'])
                                 })
-                              : (0, r.jsx)(f.vwX, {
-                                    tag: f.RB0.H5,
+                              : (0, r.jsx)(_.vwX, {
+                                    tag: _.RB0.H5,
                                     children: z.intl.string(z.t.mmDvV1)
                                 }),
                           (0, r.jsx)(h.ZP, {
@@ -378,15 +378,15 @@ function Q(e) {
                               : null,
                           eg
                               ? null
-                              : (0, r.jsxs)(_.b, {
+                              : (0, r.jsxs)(f.b, {
                                     currencies: en,
                                     className: q.currencyWrapper,
                                     children: [
-                                        (0, r.jsx)(f.vwX, {
-                                            tag: f.RB0.H5,
+                                        (0, r.jsx)(_.vwX, {
+                                            tag: _.RB0.H5,
                                             children: z.intl.string(z.t['/AAR09'])
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(f.Z, {
                                             selectedCurrency: et.currency,
                                             currencies: en,
                                             onChange: er

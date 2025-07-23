@@ -19,13 +19,13 @@ function d(e) {
             },
             [p.guild_id]
         ),
-        g = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
-        h = p.type === i.d.GUILD_ANNOUNCEMENT && f,
-        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (g || h),
-        b = g && null != d.messageReference ? d.messageReference.message_id : d.id,
-        E = g && null != d.messageReference ? d.messageReference.channel_id : p.id,
-        x = g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
-        y = r.useCallback(
+        h = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
+        g = p.type === i.d.GUILD_ANNOUNCEMENT && f,
+        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (h || g),
+        b = h && null != d.messageReference ? d.messageReference.message_id : d.id,
+        E = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
+        y = h && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
+        x = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
@@ -33,11 +33,11 @@ function d(e) {
                           channelId: p.id,
                           guildId: p.guild_id,
                           sourceChannelId: E,
-                          sourceGuildId: x
+                          sourceGuildId: y
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, E, x]
+            [b, p.id, p.guild_id, E, y]
         ),
         v = s.Z.useExperiment(
             { location: '836a4b_1' },
@@ -46,7 +46,7 @@ function d(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        C = (0, a.O)(y, 0, v);
+        C = (0, a.O)(x, 0, v);
     return (
         r.useEffect(
             () => () => {

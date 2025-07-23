@@ -68,13 +68,13 @@ class s {
             let e = new s(d.legacyEnabled || i.iP, null != (t = d.oopEnabled) ? t : i.iP);
             return (e.save(), r.K.remove('OverlayStore4'), e);
         }
-        let f = r.K.get('OverlayStore5');
-        if (null != f) {
-            let e = new s(null != (n = f.legacyEnabled) ? n : i.iP, f.oopEnabled || i.iP);
+        let _ = r.K.get('OverlayStore5');
+        if (null != _) {
+            let e = new s(null != (n = _.legacyEnabled) ? n : i.iP, _.oopEnabled || i.iP);
             return (e.save(), r.K.remove('OverlayStore5'), e);
         }
-        let _ = r.K.get('OverlayStore6');
-        if (null != _) return new s(null != (a = _.legacyEnabled) ? a : i.iP, null != (o = _.oopEnabled) ? o : i.iP);
+        let f = r.K.get('OverlayStore6');
+        if (null != f) return new s(null != (a = f.legacyEnabled) ? a : i.iP, null != (o = f.oopEnabled) ? o : i.iP);
         let p = new s(i.iP, i.iP);
         return (p.save(), p);
     }

@@ -33,7 +33,7 @@ function m(e) {
                 })
             ]
         });
-    let g = __OVERLAY__
+    let h = __OVERLAY__
         ? (0, r.jsx)(a.Z.Button, {
               isDisabled: !0,
               color: a.Z.Button.Colors.PRIMARY,
@@ -109,7 +109,7 @@ function m(e) {
                             })
                         ]
                     }),
-                    g
+                    h
                 ]
             })
         ]

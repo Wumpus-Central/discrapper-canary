@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(621853),
     u = n(475413),
     d = n(388032);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -65,7 +65,7 @@ function m(e) {
         (0, l.q)(t.id),
         (0, r.jsx)(
             u.tG,
-            _(
+            f(
                 {
                     action: 'PRESS_APP_STOREFRONT',
                     icon: o.EOn,
@@ -87,15 +87,15 @@ function g(e) {
             var e;
             return null == (e = c.Z.getUserProfile(a.id)) ? void 0 : e.application;
         }),
-        f = (0, s.R)(null != (t = null == d ? void 0 : d.id) ? t : '');
-    if (null == d || !f) return null;
+        _ = (0, s.R)(null != (t = null == d ? void 0 : d.id) ? t : '');
+    if (null == d || !_) return null;
     let h = () => {
         (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('17883')]).then(n.bind(n, 7225));
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    _(
+                    f(
                         {
                             appId: d.id,
                             guildId: l
@@ -107,7 +107,7 @@ function g(e) {
     };
     return (0, r.jsx)(
         m,
-        _(
+        f(
             {
                 user: a,
                 guildId: l,

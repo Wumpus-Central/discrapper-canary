@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -103,10 +103,10 @@ let h = {
     },
     b = (e) => {
         var { children: t, className: n, direction: i = h.HORIZONTAL, justify: a = m.START, align: l = g.STRETCH, wrap: c = E.NO_WRAP, shrink: d = 1, grow: p = 1, basis: b = 'auto', style: y } = e,
-            O = _(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style']);
+            O = f(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style']);
         return (0, r.jsx)(
             'div',
-            f(
+            _(
                 u(
                     {
                         style: u(
@@ -127,7 +127,7 @@ let h = {
     };
 ((b.Child = (e) => {
     var { children: t, className: n, shrink: a = 1, grow: l = 1, basis: c = 'auto', style: d, wrap: p = !1 } = e,
-        h = _(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']);
+        h = f(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']);
     let m = u(
         {
             className: (n = null != n ? n : s.flexChild),
@@ -146,7 +146,7 @@ let h = {
         let e = i.Children.only(t);
         return ((m.style = u({}, m.style, e.props.style)), (m.className = o()(e.props.className, n)), i.cloneElement(e, m));
     }
-    return (0, r.jsx)('div', f(u({}, m), { children: t }));
+    return (0, r.jsx)('div', _(u({}, m), { children: t }));
 }),
     (b.Direction = h),
     (b.Align = g),

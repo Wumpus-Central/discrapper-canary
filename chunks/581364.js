@@ -31,9 +31,9 @@ var r = n(654861),
     c = n(149765),
     u = n(911969),
     d = n(367907),
-    f = n(399860);
+    _ = n(399860);
 n(131704);
-var _ = n(703558),
+var f = n(703558),
     p = n(895924),
     h = n(689079),
     m = n(981631),
@@ -97,18 +97,18 @@ function v(e) {
     null != a.permissions &&
         a.permissions.length > 0 &&
         (d
-            ? (i = (0, f.tk)(a.permissions))
+            ? (i = (0, _.tk)(a.permissions))
             : ((i = {}),
               a.permissions.forEach((e) => {
                   i[e.id] = e;
               })));
-    let _ = (null != l ? l : []).map((e) => e.name),
+    let f = (null != l ? l : []).map((e) => e.name),
         m = (null != l ? l : []).map((e) => e.displayName);
     return {
         version: a.version,
         guildId: a.guild_id,
-        id: [a.id, ..._].join(h.oQ),
-        untranslatedName: [a.name, ..._].join(' '),
+        id: [a.id, ...f].join(h.oQ),
+        untranslatedName: [a.name, ...f].join(' '),
         serverLocalizedName: o.name_localized,
         applicationId: s,
         type: null != (t = a.type) ? t : u.yU.CHAT,
@@ -297,15 +297,15 @@ function D(e) {
     return ('boolean' != typeof l || !!l) && (null == o || (!c.fS(o, w) && t.can(o, n)));
 }
 function L(e, t, n) {
-    let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
+    let r = n[(0, _.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
     for (let t of e.roles) {
-        let e = n[(0, f.rE)(t, p.Kw.ROLE)];
+        let e = n[(0, _.rE)(t, p.Kw.ROLE)];
         if (null != e && ((i = !0), e.permission)) return !0;
     }
     if (i) return !1;
-    let a = n[(0, f.rE)(t, p.Kw.ROLE)];
+    let a = n[(0, _.rE)(t, p.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
 function x(e) {
@@ -327,7 +327,7 @@ function x(e) {
         case p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
         case p.bB.IMAGE_RECS_MENU:
         case p.bB.IMAGE_RECS_SUBMENU:
-            return _.d.SlashCommand;
+            return f.d.SlashCommand;
     }
 }
 function M(e) {

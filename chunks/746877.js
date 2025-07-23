@@ -1,4 +1,4 @@
-(n.d(t, { S: () => _ }), n(388685));
+(n.d(t, { S: () => f }), n(388685));
 var r = n(73800),
     i = n(392711),
     a = n.n(i),
@@ -10,17 +10,17 @@ let u = '@here';
 function d(e) {
     return e.length > 1 || 1 !== e.length || 'GROUP' !== e[0].type || 'unknown' !== e[0].id;
 }
-function f(e, t, n, r) {
+function _(e, t, n, r) {
     return !!d(c.ZP.getProps(n, r).groups) || (!(e.length < u.length) && !(e.length > t) && -1 !== e.indexOf(u) && ((0, o.b8)(n, r, s.KV), !0));
 }
-function _(e, t, n) {
+function f(e, t, n) {
     let i = (0, l.Z)(),
         [o, s] = r.useState(!1),
         u = r.useMemo(
             () =>
                 a().debounce(
                     (e) => {
-                        f(e, i, t, n) && s(!0);
+                        _(e, i, t, n) && s(!0);
                     },
                     200,
                     { maxWait: 500 }

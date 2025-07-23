@@ -8,8 +8,8 @@ var r,
     c = n(457330),
     u = n(726542),
     d = n(81063),
-    f = n(70956),
-    _ = n(553795),
+    _ = n(70956),
+    f = n(553795),
     p = n(246946),
     h = n(981631);
 function m(e, t, n) {
@@ -26,9 +26,9 @@ function m(e, t, n) {
     );
 }
 let g = '33kozedd0zs6fbauka98psnc7zwom2s',
-    E = +f.Z.Millis.MINUTE,
+    E = +_.Z.Millis.MINUTE,
     b = (e) => 'https://youtube.com/watch?v='.concat(e),
-    y = 5 * f.Z.Millis.MINUTE,
+    y = 5 * _.Z.Millis.MINUTE,
     O = 'https://api.twitch.tv/helix',
     v = /live_user_(.*)-\{width\}/,
     I = 128,
@@ -64,7 +64,7 @@ async function w(e, t) {
 }
 class D {
     start() {
-        this._started || ((this._started = !0), _.Z.isFetching() ? c.Z.fetch() : this._check());
+        this._started || ((this._started = !0), f.Z.isFetching() ? c.Z.fetch() : this._check());
     }
     stop() {
         ((this._started = !1),
@@ -94,12 +94,12 @@ class D {
                 o = a[0];
             if (null == o || 'live' !== o.type) throw Error('no stream');
             let { thumbnail_url: s, game_id: l, title: c } = o,
-                f = { large_image: null != s && null != (r = (0, d.f)(h.ABu.TWITCH, s)) ? r : void 0 },
-                _ = await w(l, t),
+                _ = { large_image: null != s && null != (r = (0, d.f)(h.ABu.TWITCH, s)) ? r : void 0 },
+                f = await w(l, t),
                 p = u.Z.get(h.ABu.TWITCH),
                 m = null != (i = R(s)) ? i : e.name,
                 g = null != c && '' !== c ? c.slice(0, I) : void 0,
-                E = null != _ && '' !== _ ? _.slice(0, I) : void 0;
+                E = null != f && '' !== f ? f.slice(0, I) : void 0;
             return {
                 url:
                     null == (n = p.getPlatformUserUrl)
@@ -109,7 +109,7 @@ class D {
                               name: m
                           }),
                 name: p.name,
-                assets: f,
+                assets: _,
                 details: g,
                 state: E
             };
@@ -162,7 +162,7 @@ class D {
     }
     _check() {
         if (!this._started) return;
-        let e = _.Z.getAccounts();
+        let e = f.Z.getAccounts();
         if (null == e) return;
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [h.ABu.TWITCH],
@@ -199,7 +199,7 @@ function M(e) {
 }
 class k extends (r = o.ZP.Store) {
     initialize() {
-        (x(), this.waitFor(_.Z), this.syncWith([p.Z], x));
+        (x(), this.waitFor(f.Z), this.syncWith([p.Z], x));
     }
     getStream() {
         return T;

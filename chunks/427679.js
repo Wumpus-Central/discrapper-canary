@@ -43,11 +43,11 @@ function d(e, t) {
         }),
         (c[e] = r));
 }
-function f(e) {
+function _(e) {
     let { guilds: t } = e;
     ((c = {}), (u = {}), t.forEach((e) => d(e.id, e.stage_instances)));
 }
-function _(e) {
+function f(e) {
     let { guild: t } = e;
     d(t.id, t.stage_instances);
 }
@@ -102,8 +102,8 @@ class y extends (r = i.ZP.Store) {
 }
 s(y, 'displayName', 'StageInstanceStore');
 let O = new y(a.Z, {
-    CONNECTION_OPEN: f,
-    GUILD_CREATE: _,
+    CONNECTION_OPEN: _,
+    GUILD_CREATE: f,
     GUILD_DELETE: p,
     STAGE_INSTANCE_CREATE: h,
     STAGE_INSTANCE_UPDATE: h,

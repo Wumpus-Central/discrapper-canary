@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(201895),
     u = n(933557),
     d = n(482798),
-    f = n(209698),
-    _ = n(788858),
+    _ = n(209698),
+    f = n(788858),
     p = n(814454),
     h = n(170187),
     m = n(532657),
@@ -69,7 +69,7 @@ function I(e, t) {
     );
 }
 function T(e) {
-    let { channel: t, textVariant: n, textClassName: a, iconClassName: f, hideText: m = !1, hideTooltip: y = !1, canTruncate: v = !0, showChannelName: T = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: a, iconClassName: _, hideText: m = !1, hideTooltip: y = !1, canTruncate: v = !0, showChannelName: T = !1 } = e,
         S = (0, s.vjg)(s.Skl.ONLINE),
         A = (0, u.ZP)(t),
         N = t.isDM() || t.isGroupDM(),
@@ -85,11 +85,11 @@ function T(e) {
         }, [P, t.id]),
         D = () =>
             y || N
-                ? (0, r.jsx)(_.Z, {
+                ? (0, r.jsx)(f.Z, {
                       size: 'custom',
                       color: S,
                       channel: t,
-                      className: o()(b.icon, f)
+                      className: o()(b.icon, _)
                   })
                 : (0, r.jsx)(s.ua7, {
                       text: A,
@@ -98,12 +98,12 @@ function T(e) {
                       onTooltipShow: w,
                       children: (e) =>
                           (0, r.jsx)(
-                              _.Z,
+                              f.Z,
                               I(O({}, e), {
                                   size: 'custom',
                                   color: S,
                                   channel: t,
-                                  className: o()(b.icon, f)
+                                  className: o()(b.icon, _)
                               })
                           )
                   }),
@@ -123,7 +123,7 @@ function T(e) {
     });
 }
 function S(e) {
-    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: l = !1, hideTooltip: c = !1, canTruncate: f = !0, showChannelName: p = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: l = !1, hideTooltip: c = !1, canTruncate: _ = !0, showChannelName: p = !1 } = e,
         h = (0, s.vjg)(s.Skl.ONLINE),
         g = (0, u.ZP)(t),
         y = t.isDM() || t.isGroupDM(),
@@ -132,7 +132,7 @@ function S(e) {
         I = null == g || O ? v : ''.concat(v, ' (').concat(g, ')'),
         T = p ? I : v;
     return (0, r.jsx)(m.Z, {
-        icon: (0, r.jsx)(_.Z, {
+        icon: (0, r.jsx)(f.Z, {
             size: 'custom',
             color: h,
             channel: t,
@@ -143,11 +143,11 @@ function S(e) {
         textVariant: n,
         textClassName: i,
         hideTooltip: c,
-        canTruncate: f,
+        canTruncate: _,
         'aria-label': I,
         hideText: l
     });
 }
 function A(e) {
-    return (0, f.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(S, O({}, e)) : (0, r.jsx)(T, O({}, e));
+    return (0, _.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(S, O({}, e)) : (0, r.jsx)(T, O({}, e));
 }

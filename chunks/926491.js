@@ -8,8 +8,8 @@ var r,
     c = n(856472),
     u = n(633302),
     d = n(41776),
-    f = n(93093),
-    _ = n(430824),
+    _ = n(93093),
+    f = n(430824),
     p = n(70956),
     h = n(373228),
     m = n(378233);
@@ -92,8 +92,8 @@ let O = 2,
 function D(e) {
     let { stickers: t } = e;
     for (let [e, n] of t)
-        if (f.Z.isMember(e) && !C.has(e)) {
-            let t = _.Z.getGuild(e);
+        if (_.Z.isMember(e) && !C.has(e)) {
+            let t = f.Z.getGuild(e);
             for (let e of n) L(e, !0, t);
             R(e, n);
         }
@@ -169,7 +169,7 @@ let L = function (e) {
     },
     k = () => {
         (C.forEach((e, t) => {
-            let n = _.Z.getGuild(t);
+            let n = f.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
         }),
             S.forEach((e) => {
@@ -184,7 +184,7 @@ let L = function (e) {
         ((T = null), (I = new Map()), (C = new Map()), (O = 0));
     };
 function G(e) {
-    let t = _.Z.getGuild(e.id);
+    let t = f.Z.getGuild(e.id);
     null != t && null != e.stickers.items && (e.stickers.items.forEach((e) => L(e, !0, t)), R(t.id, e.stickers.items));
 }
 function B(e) {
@@ -246,7 +246,7 @@ let F = () => {
     };
 class X extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, f.Z, _.Z);
+        this.waitFor(s.Z, _.Z, f.Z);
     }
     get isLoaded() {
         return 0 !== O;

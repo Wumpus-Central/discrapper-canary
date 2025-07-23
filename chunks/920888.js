@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(434624),
     m = n(287151),
     f = n(388032),
-    g = n(92254),
-    h = n(588429);
+    h = n(92254),
+    g = n(588429);
 function _(e, t, n) {
     return (
         t in e
@@ -60,11 +60,11 @@ function E(e, t) {
         e
     );
 }
-let x = (e, t) => (null == e && null == t) || e === t,
-    y = (e, t) => e.findIndex((e) => x(e.emoji.id, null == t ? void 0 : t.id) && x(e.emoji.name, null == t ? void 0 : t.name)),
+let y = (e, t) => (null == e && null == t) || e === t,
+    x = (e, t) => e.findIndex((e) => y(e.emoji.id, null == t ? void 0 : t.id) && y(e.emoji.name, null == t ? void 0 : t.name)),
     v = (e, t) => {
         if (null == t) return e;
-        let n = y(e, t);
+        let n = x(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
 class C extends i.PureComponent {
@@ -80,15 +80,15 @@ class C extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: E, className: x, forceAddReactions: y, reactionClassName: v, useChatFontScaling: C, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: E, className: y, forceAddReactions: x, reactionClassName: v, useChatFontScaling: C, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
             { disableTransitionAppear: T } = this.state,
-            N = C ? h : g,
+            N = C ? g : h,
             P = S > 0;
-        if (!P && !y) return null;
-        let A = y || P;
+        if (!P && !x) return null;
+        let A = x || P;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: a()(N.reactions, x),
+            className: a()(N.reactions, y),
             transitionAppear: !T,
             role: 'group',
             transitionLeave: !1,

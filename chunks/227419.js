@@ -9,8 +9,8 @@ var i = n(392711),
     c = n(911969),
     u = n(933557),
     d = n(699516),
-    f = n(594174),
-    _ = n(895924),
+    _ = n(594174),
+    f = n(895924),
     p = n(689079),
     h = n(981631),
     m = n(388032);
@@ -83,7 +83,7 @@ let v = [
             untranslatedName: e.command,
             displayName: e.command,
             type: c.yU.CHAT,
-            inputType: _.iw.BUILT_IN_INTEGRATION,
+            inputType: f.iw.BUILT_IN_INTEGRATION,
             applicationId: p.bi.BUILT_IN,
             get untranslatedDescription() {
                 return O(e.title);
@@ -117,7 +117,7 @@ let v = [
         untranslatedName: 'leave',
         displayName: 'leave',
         type: c.yU.CHAT,
-        inputType: _.iw.BUILT_IN,
+        inputType: f.iw.BUILT_IN,
         applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.intl.string(m.t['26C4oq']);
@@ -147,8 +147,8 @@ let v = [
             var n, i;
             let { channel: a } = t;
             if (null == a) return;
-            let c = (0, u.F6)(a, f.default, d.Z),
-                _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: c }),
+            let c = (0, u.F6)(a, _.default, d.Z),
+                f = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: c }),
                 p = m.intl.format(m.t.SSIVOj, { name: c }),
                 h = null != (i = null == (n = e.find((e) => 'silent' === e.name)) ? void 0 : n.value) && i;
             async function g() {
@@ -159,14 +159,14 @@ let v = [
                         l.Z.sendBotMessage(a.id, m.intl.string(m.t.YOsuT0));
                     }
             }
-            (a.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
+            (a.isManaged() && ((f = m.intl.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
                         o.ConfirmModal,
                         y(
                             E(
                                 {
-                                    header: _,
+                                    header: f,
                                     confirmText: m.intl.string(m.t['26C4oq']),
                                     cancelText: m.intl.string(m.t['ETE/oK']),
                                     onConfirm: g
@@ -189,7 +189,7 @@ let v = [
         untranslatedName: 'sticker',
         displayName: 'sticker',
         type: c.yU.CHAT,
-        inputType: _.iw.BUILT_IN_INTEGRATION,
+        inputType: f.iw.BUILT_IN_INTEGRATION,
         applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.intl.string(m.t.GUH9IC);

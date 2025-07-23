@@ -8,8 +8,8 @@ var r,
     c = n(581883),
     u = n(594174),
     d = n(626135),
-    f = n(36703),
-    _ = n(709054),
+    _ = n(36703),
+    f = n(709054),
     p = n(710111),
     h = n(981631),
     m = n(526761);
@@ -94,7 +94,7 @@ function j(e) {
 }
 let U = a().debounce((e, t) => {
     (d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
-        volume: Math.round((0, f.P)(e)),
+        volume: Math.round((0, _.P)(e)),
         location_stack: t
     }),
         l.kU.updateSetting({ volume: e }));
@@ -123,7 +123,7 @@ function F(e) {
 }
 function Z(e) {
     let { soundboardStoreState: t } = e;
-    ((E = new Map(_.default.entries(t.soundboardSounds))), (I = new Set(t.favoritedSoundIds)), (y = new Set(t.localSoundboardMutes)));
+    ((E = new Map(f.default.entries(t.soundboardSounds))), (I = new Set(t.favoritedSoundIds)), (y = new Set(t.localSoundboardMutes)));
 }
 class H extends (r = o.ZP.Store) {
     initialize() {
