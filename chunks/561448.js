@@ -65,7 +65,7 @@ function u(e, t) {
     );
 }
 let d = (e) => {
-        if ('card' === e) return a.He.CARD;
+        if ('card' === e || 'link_card_brand' === e) return a.He.CARD;
         if ('ideal' === e) return a.He.IDEAL;
         let t = T[(0, r.rI)()];
         return e in t ? t[e] : null;

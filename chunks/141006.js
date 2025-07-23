@@ -1,18 +1,18 @@
-r.d(t, {
-    Eg: () => n,
-    SK: () => l,
-    tl: () => o
+n.d(t, {
+    Eg: () => i,
+    SK: () => r,
+    tl: () => a
 });
-let l = {
+let r = {
         primary_color: 11127295,
         secondary_color: 16759788,
         tertiary_color: 16761760
     },
-    n = {
+    i = {
         primary_color: 10382335,
         secondary_color: 10469887
     },
-    o = [
+    a = [
         {
             start: 11156283,
             end: 16730184,

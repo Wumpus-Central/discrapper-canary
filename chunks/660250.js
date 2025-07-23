@@ -1,20 +1,20 @@
-(r.r(t), r.d(t, { default: () => x }));
+(r.r(t), r.d(t, { default: () => v }));
 var n = r(255367),
     o = r(73800),
     c = r(442837),
     i = r(82659),
     l = r(481060),
-    s = r(724723),
-    a = r(959457),
+    a = r(724723),
+    s = r(959457),
     u = r(571826),
     d = r(630759),
     f = r(301107),
     p = r(785792),
     b = r(190054),
     h = r(245581),
-    y = r(760373),
-    j = r(388032),
-    m = r(268999);
+    m = r(760373),
+    y = r(388032),
+    j = r(268999);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -40,7 +40,7 @@ function O(e) {
     }
     return e;
 }
-function v(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,42 +58,42 @@ function v(e, t) {
         e
     );
 }
-let x = function (e) {
-    let { transitionState: t, streamKey: r, channelId: x, onClose: g } = e,
-        _ = s.Z.useExperiment({ location: 'SecureFramesStreamVerificationModal' }, { autoTrackExposure: !0 }).enabled,
-        P = (0, c.e7)([a.Z], () => {
+let v = function (e) {
+    let { transitionState: t, streamKey: r, channelId: v, onClose: x } = e,
+        _ = a.Z.useExperiment({ location: 'SecureFramesStreamVerificationModal' }, { autoTrackExposure: !0 }).enabled,
+        P = (0, c.e7)([s.Z], () => {
             var e;
-            return null == (e = a.Z.getSecureFramesState(r)) ? void 0 : e.epochAuthenticator;
+            return null == (e = s.Z.getSecureFramesState(r)) ? void 0 : e.epochAuthenticator;
         }),
         w = (0, f.W)({
             fingerprintBase64: P,
-            chunkSize: y.y6,
-            desiredLength: y.YP
+            chunkSize: m.y6,
+            desiredLength: m.YP
         }),
         k = o.useCallback(() => {
-            (0, u.ih)({ channelId: x });
-        }, [x]),
+            (0, u.ih)({ channelId: v });
+        }, [v]),
         S = {
             transitionState: t,
-            title: j.intl.string(j.t.QogHlZ),
-            subtitle: j.intl.string(j.t.qODBkZ)
+            title: y.intl.string(y.t.QogHlZ),
+            subtitle: y.intl.string(y.t.qODBkZ)
         },
         N = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: m.verification,
+                    className: j.verification,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: m.header,
+                            className: j.header,
                             children: [
                                 (0, n.jsx)(l.X6q, {
                                     variant: 'text-sm/bold',
                                     color: 'header-primary',
-                                    children: j.intl.string(j.t.cgBTyM)
+                                    children: y.intl.string(y.t.cgBTyM)
                                 }),
                                 null != w &&
                                     (0, n.jsx)(b.H, {
-                                        className: m.copyIcon,
+                                        className: j.copyIcon,
                                         chunks: w,
                                         color: l.TVs.colors.INTERACTIVE_NORMAL,
                                         onCopy: k
@@ -101,28 +101,28 @@ let x = function (e) {
                             ]
                         }),
                         (0, n.jsx)(p.b, {
-                            className: m.code,
+                            className: j.code,
                             chunks: w,
-                            columns: y.WK
+                            columns: m.WK
                         })
                     ]
                 }),
                 (0, n.jsx)(l.Text, {
-                    className: m.footer,
+                    className: j.footer,
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    children: j.intl.format(j.t['H3+ktr'], { helpArticle: (0, d.uV)() })
+                    children: y.intl.format(y.t['H3+ktr'], { helpArticle: (0, d.uV)() })
                 })
             ]
         });
     return _
         ? (0, n.jsx)(
               i.Modal,
-              v(O({}, S), {
-                  onClose: g,
+              g(O({}, S), {
+                  onClose: x,
                   actions: [],
                   children: N
               })
           )
-        : (0, n.jsx)(h.Z, v(O({}, S), { children: N }));
+        : (0, n.jsx)(h.Z, g(O({}, S), { children: N }));
 };

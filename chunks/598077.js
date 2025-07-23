@@ -231,7 +231,7 @@ class b extends i.Z {
             (this.banner = e.banner),
             (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.b)(e.display_name_styles)),
+            (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, o.bN)(e.display_name_styles)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,

@@ -99,7 +99,7 @@ function A(e) {
     let E = e.primary_guild;
     void 0 !== E && (e.primary_guild = (0, c.l)(E));
     let b = e.display_name_styles;
-    return (void 0 !== b && ((e.displayNameStyles = (0, l.b)(b)), delete e.display_name_styles), e);
+    return (void 0 !== b && ((e.displayNameStyles = (0, l.bN)(b)), delete e.display_name_styles), e);
 }
 function N(e) {
     return e.id !== h.default.getId();

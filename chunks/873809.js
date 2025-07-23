@@ -8,11 +8,11 @@ var i = a(82659),
     c = a(78349);
 function l(e) {
     let { transitionState: t, header: l, body: d, confirmText: x, onClose: h, onConfirm: p } = e,
-        u = r.Z.useExperiment({ location: 'VideoDevicesWarningModal' }, { autoTrackExposure: !0 }).enabled,
-        m = () => {
+        m = r.Z.useExperiment({ location: 'VideoDevicesWarningModal' }, { autoTrackExposure: !0 }).enabled,
+        u = () => {
             (h(), null == p || p());
         };
-    return u
+    return m
         ? (0, n.jsx)(i.Modal, {
               title: l,
               subtitle: d,
@@ -21,12 +21,13 @@ function l(e) {
               actions: [
                   {
                       text: x,
-                      onClick: m,
+                      onClick: u,
                       variant: 'primary'
                   }
               ]
           })
         : (0, n.jsxs)(s.Y0X, {
+              'data-migration-pending': !0,
               transitionState: t,
               'aria-label': l,
               parentComponent: 'VideoDevicesWarningModal',
@@ -58,7 +59,7 @@ function l(e) {
                                   variant: 'primary',
                                   size: 'sm',
                                   text: x,
-                                  onClick: m
+                                  onClick: u
                               }),
                               (0, n.jsx)(s.zxk, {
                                   variant: 'secondary',

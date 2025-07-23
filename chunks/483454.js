@@ -1,5 +1,5 @@
 (n.d(t, {
-    M: () => w,
+    M: () => D,
     h: () => R
 }),
     n(467055),
@@ -123,6 +123,14 @@ let S = [d.h8.PAYMENT_ELEMENT],
                     }
                 },
                 [l, o, c]
+            ),
+            E = i.useMemo(
+                () => ({
+                    applePay: n.includes('applePay') ? 'auto' : 'never',
+                    googlePay: n.includes('googlePay') ? 'auto' : 'never',
+                    link: n.includes('link') ? 'auto' : 'never'
+                }),
+                [n]
             );
         return (0, r.jsx)(
             a.PaymentElement,
@@ -132,10 +140,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                     options: y(
                         v(y({}, null != p && { paymentMethodOrder: p }), {
                             layout: { type: 'tabs' },
-                            wallets: {
-                                applePay: n.includes('applePay') ? 'auto' : 'never',
-                                googlePay: n.includes('googlePay') ? 'auto' : 'never'
-                            }
+                            wallets: E
                         }),
                         s
                     ),
@@ -244,7 +249,8 @@ let S = [d.h8.PAYMENT_ELEMENT],
               });
     },
     P = ['city', 'country', 'line1', 'postalCode'],
-    w = (e) => {
+    w = ['link'],
+    D = (e) => {
         let { step: t, handleStepChange: n, paymentElementsEnabled: r, logger: a, onBillingAddressChange: o, shouldLogOnChangeEvents: s, continueSessionToInitialStep: l } = e,
             u = i.useRef(null),
             [f, _] = i.useState(!1),
@@ -254,7 +260,8 @@ let S = [d.h8.PAYMENT_ELEMENT],
                 () => ({
                     onChange: (e) => {
                         (s && null != a && a.log('PaymentElements onChange event:', e), _(e.complete), m((0, h.hR)(e.value.type)));
-                    }
+                    },
+                    wallets: w
                 }),
                 [a, s]
             ),

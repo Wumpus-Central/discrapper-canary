@@ -11,7 +11,7 @@ let a = {
     DARK_2: '--custom-display-name-styles-dark-2-color'
 };
 function o(e) {
-    let { main: t, light1: n, light2: r, dark1: o, dark2: s } = (0, i.h)(e);
+    let { main: t, light1: n, light2: r, dark1: o, dark2: s } = (0, i.hX)(e);
     return {
         [a.MAIN]: t,
         [a.LIGHT_1]: n,
