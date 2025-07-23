@@ -126,7 +126,7 @@ function w(e) {
     ((O = n), U.emitChange());
 }
 function R() {
-    return (null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000));
+    return (null != r && (r.destroy(), (r = null)), c.Z.getUserSearchContext(w, 1000));
 }
 function M(e) {
     if (e.key !== C.vTt) return !1;

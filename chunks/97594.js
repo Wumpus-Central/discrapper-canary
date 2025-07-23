@@ -133,6 +133,7 @@ function S(e) {
                     return e;
                 })(
                     {
+                        'data-migration-pending': !0,
                         hideShadow: !0,
                         className: o()(_.carouselModal, e),
                         transitionState: j

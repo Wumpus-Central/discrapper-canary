@@ -4,6 +4,7 @@ e.exports = {
     active: 'active__98cbd',
     buttonContainer: 'buttonContainer__98cbd',
     labelContainer: 'labelContainer__98cbd',
+    rollbackInactive: 'rollbackInactive__98cbd',
     boostProgressBackground: 'boostProgressBackground__98cbd',
     warning: 'warning__98cbd',
     contentContainer: 'contentContainer__98cbd',
@@ -12,6 +13,7 @@ e.exports = {
     image: 'image__98cbd',
     labelContainerEnd: 'labelContainerEnd__98cbd',
     inline: 'inline__98cbd',
+    rollbackInline: 'rollbackInline__98cbd',
     price: 'price__98cbd',
     inlineBoost: 'inlineBoost__98cbd',
     new: 'new__98cbd'

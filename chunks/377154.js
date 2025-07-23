@@ -55,30 +55,31 @@ function c(e, t) {
     );
 }
 function u(e, t) {
-    var n, o, l, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T;
-    let S = null == (n = t.powerup_metadata) ? void 0 : n.category_type;
-    if (null == S) return;
-    let A = null == (o = t.sku) ? void 0 : o.powerup_metadata;
+    var n, o, l, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+    let A = null == (n = t.powerup_metadata) ? void 0 : n.category_type;
     if (null == A) return;
-    let N = {
+    let N = null == (o = t.sku) ? void 0 : o.powerup_metadata;
+    if (null == N) return;
+    let C = {
         title: t.summary,
         skuId: t.sku.id,
-        cost: A.boost_price,
+        cost: N.boost_price,
         dependencies: null != t.sku.dependent_sku_id ? [t.sku.dependent_sku_id] : [],
         animatedImageUrl: null == (l = t.powerup_metadata) ? void 0 : l.animated_image_url,
-        staticImageUrl: null == (u = t.powerup_metadata) ? void 0 : u.static_image_url
+        staticImageUrl: null == (u = t.powerup_metadata) ? void 0 : u.static_image_url,
+        storeRemovalDate: null == (d = t.powerup_metadata) ? void 0 : d.store_removal_date
     };
-    switch (S) {
+    switch (A) {
         case i.Us.LEVEL: {
-            let n = null == (d = t.sku.powerup_metadata) ? void 0 : d.guild_features;
+            let n = null == (f = t.sku.powerup_metadata) ? void 0 : f.guild_features;
             if (null == n) return;
             let o = a.xD + n.additional_emoji_slots,
                 l = r.XB + n.additional_sound_slots,
                 u = r.QF + n.additional_sticker_slots,
-                T = t.sku.dependent_sku_id;
-            for (; null != T; ) {
-                let t = e.find((e) => T === e.sku.id);
-                ((o += null != (O = null == t || null == (p = t.sku) || null == (_ = p.powerup_metadata) || null == (f = _.guild_features) ? void 0 : f.additional_emoji_slots) ? O : 0), (l += null != (v = null == t || null == (g = t.sku) || null == (m = g.powerup_metadata) || null == (h = m.guild_features) ? void 0 : h.additional_sound_slots) ? v : 0), (u += null != (I = null == t || null == (y = t.sku) || null == (b = y.powerup_metadata) || null == (E = b.guild_features) ? void 0 : E.additional_sticker_slots) ? I : 0), (T = null == t ? void 0 : t.sku.dependent_sku_id));
+                d = t.sku.dependent_sku_id;
+            for (; null != d; ) {
+                let t = e.find((e) => d === e.sku.id);
+                ((o += null != (v = null == t || null == (h = t.sku) || null == (p = h.powerup_metadata) || null == (_ = p.guild_features) ? void 0 : _.additional_emoji_slots) ? v : 0), (l += null != (I = null == t || null == (E = t.sku) || null == (g = E.powerup_metadata) || null == (m = g.guild_features) ? void 0 : m.additional_sound_slots) ? I : 0), (u += null != (T = null == t || null == (O = t.sku) || null == (y = O.powerup_metadata) || null == (b = y.guild_features) ? void 0 : b.additional_sticker_slots) ? T : 0), (d = null == t ? void 0 : t.sku.dependent_sku_id));
             }
             return s(
                 {
@@ -89,16 +90,16 @@ function u(e, t) {
                         total_sticker_slots: u
                     })
                 },
-                N
+                C
             );
         }
         case i.Us.PERK:
             return s(
                 {
                     type: i.Us.PERK,
-                    description: null != (T = t.description) ? T : ''
+                    description: null != (S = t.description) ? S : ''
                 },
-                N
+                C
             );
     }
 }

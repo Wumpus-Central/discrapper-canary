@@ -10,8 +10,8 @@ var i = n(149765),
     s = n(496675),
     a = n(914010),
     c = n(594174),
-    u = n(700785),
-    d = n(709054),
+    d = n(700785),
+    u = n(709054),
     _ = n(533244),
     h = n(487419),
     E = n(676770);
@@ -35,13 +35,13 @@ function p() {
     let t = (function (e) {
             let t = c.default.getCurrentUser(),
                 n = h.Z.getIncidentsByGuild();
-            for (let r of d.default.keys(n).map((e) => o.Z.getGuild(e))) {
+            for (let r of u.default.keys(n).map((e) => o.Z.getGuild(e))) {
                 if (null == r) continue;
                 let l = n[r.id];
                 if (
                     !(null == l || (!(0, _.i9)(l) && !(0, _.ur)(l)) || ((0, _.ur)(l) && r.id !== e)) &&
                     i.Db(
-                        u.uB({
+                        d.uB({
                             user: t,
                             context: r,
                             checkElevated: !1

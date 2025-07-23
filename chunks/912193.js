@@ -1,4 +1,4 @@
-n.d(t, { b: () => d });
+n.d(t, { b: () => u });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -9,10 +9,10 @@ let a = null;
 function c() {
     (null !== a && (0, r.Mr3)(a), (a = null));
 }
-function u() {
+function d() {
     l.Z.setSilenceWarning(!1);
 }
-function d() {
+function u() {
     a = (0, r.h7j)((e) =>
         (0, i.jsx)(
             o.default,
@@ -45,7 +45,7 @@ function d() {
                     title: s.intl.string(s.t['zQ1+Jy']),
                     body: s.intl.string(s.t.K1gWXl),
                     secondaryConfirmText: s.intl.string(s.t.XAiAgI),
-                    onConfirmSecondary: u,
+                    onConfirmSecondary: d,
                     onConfirm: c,
                     confirmText: s.intl.string(s.t.BddRzc)
                 },

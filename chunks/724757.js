@@ -31,7 +31,7 @@ function s(e, t, n) {
                 }),
             [t]
         ),
-        u = i.useCallback(
+        d = i.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -48,7 +48,7 @@ function s(e, t, n) {
         isEnabled: s,
         setFocus: a,
         scrollToStart: c,
-        scrollToEnd: u,
+        scrollToEnd: d,
         orientation: null == n ? void 0 : n.orientation
     });
 }

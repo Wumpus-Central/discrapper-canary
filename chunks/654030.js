@@ -17,8 +17,8 @@ var r,
     b = n(592745),
     E = n(952164),
     x = n(768419),
-    v = n(456432),
-    y = n(789407),
+    y = n(456432),
+    v = n(789407),
     C = n(598077),
     O = n(757266),
     j = n(831506),
@@ -72,7 +72,7 @@ class G extends (r = l.PureComponent) {
             let t = (0, p.Z)(e, n.id);
             if (null != t) return t;
         }
-        return null == n || n instanceof y.ZP
+        return null == n || n instanceof v.ZP
             ? null
             : Z.ZP.getApplicationIconURL({
                   id: n.id,
@@ -159,7 +159,7 @@ class G extends (r = l.PureComponent) {
             U(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, i.jsx)(
-                    v.Z,
+                    y.Z,
                     F(
                         {
                             guildId: null != n ? n : void 0,

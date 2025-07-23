@@ -18,8 +18,8 @@ var i = n(512722),
 n(749210);
 var a = n(911969),
     c = n(367907),
-    u = n(944486),
-    d = n(979651),
+    d = n(944486),
+    u = n(979651),
     _ = n(700785),
     h = n(922482),
     E = n(192079),
@@ -85,7 +85,7 @@ function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null == e ? void 0 : e.getGuildId();
     r()(null != i, 'This channel cannot be guildless.');
-    let l = d.Z.getVoiceStateForChannel(e.id);
+    let l = u.Z.getVoiceStateForChannel(e.id);
     return (
         (0, p.gf)(l) !== p.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, c.yw)(C.rMx.PROMOTED_TO_SPEAKER, O({}, (0, E.s$)(e))),
         o.tn.patch({
@@ -167,7 +167,7 @@ function R(e, t, n) {
 }
 async function A(e, t, n, i) {
     if ('' === t) return;
-    u.Z.getVoiceChannelId() !== e.id && (0, h.TM)(e);
+    d.Z.getVoiceChannelId() !== e.id && (0, h.TM)(e);
     let r = await (0, I.me)(e.id, t, n, i);
     return (S(e, !1, !0), r);
 }

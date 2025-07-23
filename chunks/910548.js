@@ -17,8 +17,8 @@ var r,
     b = n(267642),
     E = n(739566),
     x = n(834129),
-    v = n(981631),
-    y = n(388032),
+    y = n(981631),
+    v = n(388032),
     C = n(573510);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -184,7 +184,7 @@ function M(e) {
         { createMultipleConfettiAt: h, confettiCanvas: _ } = l.useContext(f.h),
         [b, E] = l.useState(null),
         x = (0, s.uR)(_, b),
-        v = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -200,8 +200,8 @@ function M(e) {
                     return 'enter';
             }
         })(d, g),
-        y = T.includes(g),
-        O = y && 'exit' === d,
+        v = T.includes(g),
+        O = v && 'exit' === d,
         j = l.useCallback((e) => {
             m(e);
         }, []),
@@ -245,7 +245,7 @@ function M(e) {
             }
         }, [h, g, d, a]),
         l.useEffect(() => {
-            if (y && 'leaf_fall' === d) {
+            if (v && 'leaf_fall' === d) {
                 let e = A[g].leafRotationDirection;
                 x.createConfetti(
                     {
@@ -297,7 +297,7 @@ function M(e) {
                     { sprite: 'TOP_LEFT' === g ? R : k }
                 );
             }
-        }, [y, x, g, d]),
+        }, [v, x, g, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -318,7 +318,7 @@ function M(e) {
                     children: (0, i.jsx)(p.kci, {
                         animationRef: M,
                         className: o()(C.easterEggAnimation, { [C.easterEggAnimationHideLeaf]: O }),
-                        nextScene: v,
+                        nextScene: y,
                         sceneSegments: I,
                         onScenePlay: j,
                         onSceneComplete: P,
@@ -335,12 +335,12 @@ function U(e) {
         { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
-                case v.uaV.GUILD_BOOST_TIER_1:
-                    return v.Eu4.TIER_1;
-                case v.uaV.GUILD_BOOST_TIER_2:
-                    return v.Eu4.TIER_2;
-                case v.uaV.GUILD_BOOST_TIER_3:
-                    return v.Eu4.TIER_3;
+                case y.uaV.GUILD_BOOST_TIER_1:
+                    return y.Eu4.TIER_1;
+                case y.uaV.GUILD_BOOST_TIER_2:
+                    return y.Eu4.TIER_2;
+                case y.uaV.GUILD_BOOST_TIER_3:
+                    return y.Eu4.TIER_3;
             }
             return null;
         })(n),
@@ -355,24 +355,24 @@ function U(e) {
     t =
         null == c || null == a
             ? u > 1
-                ? y.intl.format(y.t.yfC9dn, {
+                ? v.intl.format(v.t.yfC9dn, {
                       username: P,
                       usernameHook: A,
                       numSubscriptions: u
                   })
-                : y.intl.format(y.t['57St//'], {
+                : v.intl.format(v.t['57St//'], {
                       username: P,
                       usernameHook: A
                   })
             : u > 1
-              ? y.intl.format(y.t.PO9uJC, {
+              ? v.intl.format(v.t.PO9uJC, {
                     username: P,
                     usernameHook: A,
                     numSubscriptions: u,
                     guildName: a.name,
                     newTierName: (0, b.nW)(c)
                 })
-              : y.intl.format(y.t.cUfTTE, {
+              : v.intl.format(v.t.cUfTTE, {
                     username: P,
                     usernameHook: A,
                     guildName: a.name,
@@ -391,7 +391,7 @@ function U(e) {
             I(!1);
         }, []),
         k = l.useCallback(() => {
-            ((0, h.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), I(!1));
+            ((0, h.AI)({ settingsVisible: !0 }), m.Z.open(y.oAB.POGGERMODE), I(!1));
         }, []),
         L = l.useCallback(
             (e, t) => {

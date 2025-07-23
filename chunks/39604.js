@@ -4,7 +4,6 @@
     N0: () => k,
     T1: () => j,
     Tm: () => W,
-    UW: () => J,
     _Q: () => M,
     eL: () => K,
     eU: () => G,
@@ -358,10 +357,4 @@ async function Q(e, t) {
     let n = m.Z.getMediaEngine(),
         r = await n.exportClip(e.filepath, t);
     return (0, S.Z)(r);
-}
-function J(e) {
-    a.Z.dispatch({
-        type: 'CLIPS_DISMISS_EDUCATION',
-        educationType: e
-    });
 }

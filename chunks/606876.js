@@ -2,8 +2,8 @@
 var n = r(255367),
     o = r(73800),
     a = r(481060),
-    s = r(927160),
-    i = r(203377),
+    i = r(927160),
+    s = r(203377),
     l = r(93841),
     c = r(388032),
     u = r(606055);
@@ -40,7 +40,7 @@ function d() {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-tertiary',
                                                 className: u.baseUrl,
-                                                children: ''.concat(i.mf, '/')
+                                                children: ''.concat(s.mf, '/')
                                             }),
                                             (0, n.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
@@ -71,7 +71,7 @@ function d() {
                             })
                         ]
                     }),
-                    (0, n.jsx)(s.Z, {
+                    (0, n.jsx)(i.Z, {
                         value: e,
                         onChange: t,
                         className: u.vanityUrlInput

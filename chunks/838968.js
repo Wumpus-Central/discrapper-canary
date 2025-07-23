@@ -1,124 +1,143 @@
 (n.d(t, {
-    Z: () => b,
-    u: () => g
+    Z: () => E,
+    u: () => j
 }),
     n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(434650),
-    c = n(973772),
-    u = n(192371),
-    d = n(69323),
-    p = n(279604),
-    m = n(535396),
-    f = n(93841),
-    _ = n(388032),
-    x = n(117172);
-function v(e) {
+    c = n(10765),
+    u = n(973772),
+    d = n(192371),
+    m = n(834209),
+    p = n(69323),
+    f = n(279604),
+    _ = n(535396),
+    x = n(93841),
+    v = n(388032),
+    g = n(117172);
+function b(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)('div', {
-        className: x.inline,
+        className: g.inline,
         children: [
-            (0, r.jsx)(l.P4T, {
+            (0, r.jsx)(s.P4T, {
                 size: 'xs',
-                color: l.TVs.colors.STATUS_WARNING
+                color: s.TVs.colors.STATUS_WARNING
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(s.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: _.intl.formatToMarkdownString(f.default['ol/ao6'], { dateString: (0, u.Z)(t) })
+                children: v.intl.formatToMarkdownString(x.default['ol/ao6'], { dateString: (0, d.Z)(t) })
             })
         ]
     });
 }
-function g(e) {
+function j(e) {
     var t, n, o;
-    let { guildId: i, powerup: a, className: u } = e,
-        d = (0, c.Z)(i, a),
-        p = d.type !== m.A3.LEVEL_ACTIVATED,
-        g = p ? x.labelContainer : x.labelContainerEnd,
-        b = d.type === m.A3.LEVEL_ACTIVATED ? _.intl.formatToPlainString(f.default.WRRYUV, { perkName: null != (o = null == (t = d.sourcePowerup) ? void 0 : t.title) ? o : _.intl.string(_.t.BfF6EB) }) : d.type === m.A3.POWERUP_ACTIVATED ? _.intl.string(f.default.FFLkm5) : void 0;
+    let { guildId: i, powerup: a, className: d } = e,
+        p = (0, u.Z)(i, a),
+        f = p.type !== _.A3.LEVEL_ACTIVATED,
+        j = f ? g.labelContainer : g.labelContainerEnd,
+        E = (0, c.Z)(i, a, 'GuildPowerupCardBodyFooter'),
+        h = p.type === _.A3.LEVEL_ACTIVATED ? v.intl.formatToPlainString(x.default.WRRYUV, { perkName: null != (o = null == (t = p.sourcePowerup) ? void 0 : t.title) ? o : v.intl.string(v.t.BfF6EB) }) : p.type === _.A3.POWERUP_ACTIVATED ? v.intl.string(x.default.FFLkm5) : void 0;
     return (0, r.jsxs)('div', {
-        className: s()(g, u),
+        className: l()(j, d),
         children: [
-            p &&
+            f &&
                 (0, r.jsxs)('div', {
-                    className: s()(x.inline, x.inlineBoost),
+                    className: l()(g.inline, g.inlineBoost),
                     children: [
-                        (0, r.jsx)(l.$Eu, {
+                        (0, r.jsx)(s.$Eu, {
                             size: 'sm',
-                            color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
+                            color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                         }),
-                        (0, r.jsx)(l.Text, {
-                            className: x.price,
+                        (0, r.jsx)(s.Text, {
+                            className: g.price,
                             tag: 'div',
                             variant: 'heading-md/semibold',
                             color: 'text-secondary',
-                            children: _.intl.formatToPlainString(_.t.t2Wbo6, { required: a.cost })
+                            children: v.intl.formatToPlainString(v.t.t2Wbo6, { required: a.cost })
                         })
                     ]
                 }),
-            (null == (n = d.sourceEntitlement) ? void 0 : n.ends_at) != null
-                ? (0, r.jsx)(v, { dateString: d.sourceEntitlement.ends_at })
-                : null != b
+            (null == (n = p.sourceEntitlement) ? void 0 : n.ends_at) != null
+                ? (0, r.jsx)(b, { dateString: p.sourceEntitlement.ends_at })
+                : E && null != a.storeRemovalDate
                   ? (0, r.jsxs)('div', {
-                        className: x.inline,
+                        className: g.rollbackInline,
                         children: [
-                            (0, r.jsx)(l.owK, {
+                            (0, r.jsx)(s.P4T, {
                                 size: 'xs',
-                                color: l.TVs.colors.STATUS_POSITIVE
+                                color: s.TVs.colors.STATUS_WARNING
                             }),
-                            (0, r.jsx)(l.Text, {
-                                color: 'text-feedback-positive',
+                            (0, r.jsx)(s.Text, {
+                                color: 'status-warning',
                                 variant: 'text-sm/bold',
-                                children: b
+                                children: v.intl.formatToPlainString(x.default['6e2ry8'], { dateString: (0, m.Z)(a.storeRemovalDate) })
                             })
                         ]
                     })
-                  : null
+                  : null != h
+                    ? (0, r.jsxs)('div', {
+                          className: g.inline,
+                          children: [
+                              (0, r.jsx)(s.owK, {
+                                  size: 'xs',
+                                  color: s.TVs.colors.STATUS_POSITIVE
+                              }),
+                              (0, r.jsx)(s.Text, {
+                                  color: 'text-feedback-positive',
+                                  variant: 'text-sm/bold',
+                                  children: h
+                              })
+                          ]
+                      })
+                    : null
         ]
     });
 }
-function b(e) {
+function E(e) {
     var t;
-    let { guildId: n, powerup: i, className: u, onHover: f, children: _ } = e,
-        v = (0, c.Z)(n, i),
-        g = v.type !== m.A3.INACTIVE,
-        b = (null == (t = v.sourceEntitlement) ? void 0 : t.ends_at) != null,
-        j = o.useRef(null),
-        { onShowMore: E } = (0, p.ZP)(n, i),
-        [h, C] = o.useState(!1),
-        I = (0, a.O)(C, 1);
+    let { guildId: n, powerup: i, className: d, onHover: m, children: x } = e,
+        v = (0, u.Z)(n, i),
+        b = v.type !== _.A3.INACTIVE,
+        j = (null == (t = v.sourceEntitlement) ? void 0 : t.ends_at) != null,
+        E = (0, c.Z)(n, i, 'GuildPowerupCard'),
+        h = o.useRef(null),
+        { onShowMore: C } = (0, f.ZP)(n, i),
+        [I, N] = o.useState(!1),
+        Z = (0, a.O)(N, 1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: x.parentContainer,
+                className: l()(g.parentContainer, { [g.rollbackInactive]: E && !b }),
                 ref: (e) => {
-                    ((j.current = e), (I.current = e));
+                    ((h.current = e), (Z.current = e));
                 },
-                children: (0, r.jsx)(l.kL8, {
+                children: (0, r.jsx)(s.kL8, {
                     'aria-label': i.title,
-                    onClick: E,
-                    onMouseOver: () => (null == f ? void 0 : f(!0)),
-                    onMouseLeave: () => (null == f ? void 0 : f(!1)),
-                    className: s()(
-                        x.container,
+                    onClick: C,
+                    onMouseOver: () => (null == m ? void 0 : m(!0)),
+                    onMouseLeave: () => (null == m ? void 0 : m(!1)),
+                    className: l()(
+                        g.container,
                         {
-                            [x.active]: g,
-                            [x.warning]: b
+                            [g.active]: b,
+                            [g.warning]: j
                         },
-                        u
+                        d
                     ),
-                    children: _
+                    children: x
                 })
             }),
-            (0, r.jsx)(d.Z, {
+            (0, r.jsx)(p.Z, {
                 powerup: i,
-                targetRef: j,
-                isCardVisible: h
+                targetRef: h,
+                isCardVisible: I
             })
         ]
     });

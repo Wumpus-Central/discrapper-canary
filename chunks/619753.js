@@ -17,8 +17,8 @@ var r = n(255367),
     b = n(937889),
     E = n(804063),
     x = n(703656),
-    v = n(359110),
-    y = n(695346),
+    y = n(359110),
+    v = n(695346),
     C = n(131704),
     O = n(592125),
     j = n(430824),
@@ -79,7 +79,7 @@ function M(e, t) {
 let U = i.memo(function (e) {
     var t;
     let { search: n, searchId: l, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: g, ignoreCount: h, onPageChange: _, onClick: b } = e,
-        { offset: v, totalResults: y, isSearching: C, showBlockedResults: j } = n,
+        { offset: y, totalResults: v, isSearching: C, showBlockedResults: j } = n,
         I = i.useCallback(
             (e, t) => {
                 if ((null == b || b(e, t), (0, E.Z)(e))) {
@@ -153,11 +153,11 @@ let U = i.memo(function (e) {
                     highlighter: z,
                     startIndex: i,
                     resultRefs: P,
-                    totalResults: y,
+                    totalResults: v,
                     scrollTo: m,
                     searchId: l,
                     renderEmbeds: a,
-                    offset: v,
+                    offset: y,
                     jumpToMessage: I,
                     listNavigator: G,
                     favoriteSearch: V
@@ -199,8 +199,8 @@ let U = i.memo(function (e) {
                 !V &&
                 (0, r.jsx)(w.Z, {
                     onPageChange: _,
-                    offset: v,
-                    totalCount: y,
+                    offset: y,
+                    totalCount: v,
                     pageSize: R.vpv
                 })
         ]
@@ -242,12 +242,12 @@ function F(e) {
 function B(e) {
     var t, n, l;
     let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: x, renderEmbeds: C, offset: T, jumpToMessage: A, listNavigator: w, favoriteSearch: k } = e,
-        U = y.cC.useSetting(),
+        U = v.cC.useSetting(),
         B = (0, h.p)(),
         G = i.useCallback((e) => {
             if (e === N.Z.getChannelId()) return;
             let t = O.Z.getChannel(e);
-            null != t && (I.Z.can(R.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, v.Kh)(t.id);
+            null != t && (I.Z.can(R.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, y.Kh)(t.id);
         }, []),
         H = null != a ? (0, m.F6)(a, P.default, S.Z, !1) : '???',
         V = k && null != a.guild_id ? (null == (t = j.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,

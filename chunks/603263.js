@@ -1,23 +1,27 @@
 n.d(t, {
-    Gn: () => g,
-    Nz: () => _,
-    QQ: () => E,
-    QY: () => O,
-    Vj: () => d,
-    Vs: () => S,
-    h7: () => T,
-    j8: () => I,
-    oO: () => h,
-    qt: () => p,
-    u$: () => C,
-    yC: () => c,
-    zH: () => u
+    Gn: () => N,
+    Nz: () => p,
+    QQ: () => O,
+    QY: () => f,
+    Vj: () => I,
+    Vs: () => R,
+    h7: () => m,
+    j8: () => g,
+    oO: () => C,
+    qt: () => T,
+    u$: () => S,
+    yC: () => h,
+    zH: () => E
 });
 var i = n(570140),
-    r = n(768119),
-    l = n(405656),
-    o = n(981631);
-function s(e) {
+    r = n(861262),
+    l = n(187462),
+    o = n(952537),
+    s = n(592125),
+    a = n(768119),
+    c = n(405656),
+    d = n(981631);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +46,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,30 +64,80 @@ function a(e, t) {
         e
     );
 }
-function c(e, t, n, r) {
-    ((0, l.jW)(t, e),
-        r && (t.search_everywhere = !0),
+function h(e, t, n, a) {
+    var u;
+    ((0, c.jW)(t, e), a && (t.search_everywhere = !0));
+    let _ = (0, r.g)(e),
+        h = l.Z.create({
+            id: e,
+            searchType: _,
+            searchQuery: t
+        }),
+        E = e === d.I_8 ? (null == (u = s.Z.getChannel(e)) ? void 0 : u.guild_id) : _ === d.aib.GUILD ? e : null;
+    (i.Z.dispatch({
+        type: 'SEARCH_START',
+        query: t,
+        searchId: e,
+        queryString: n
+    }),
         i.Z.dispatch({
-            type: 'SEARCH_START',
-            query: t,
+            type: 'SEARCH_ADD_HISTORY',
             searchId: e,
-            queryString: n,
-            searchEverywhere: r
-        }));
+            query: n
+        }),
+        h.fetch(
+            (t) => {
+                var n, r;
+                i.Z.dispatch({
+                    type: 'SEARCH_FINISH',
+                    searchId: e,
+                    guildId: E,
+                    analyticsId: t.body.analytics_id,
+                    totalResults: t.body.total_results,
+                    messages: t.body.messages,
+                    threads: null != (n = t.body.threads) ? n : [],
+                    members: (null != (r = t.body.members) ? r : []).map((e) => (0, o.Z)(e)),
+                    hasError: !1,
+                    doingHistoricalIndex: t.body.doing_deep_historical_index,
+                    documentsIndexed: t.body.documents_indexed
+                });
+            },
+            () => {
+                i.Z.dispatch({
+                    type: 'SEARCH_INDEXING',
+                    searchId: e
+                });
+            },
+            () => {
+                i.Z.dispatch({
+                    type: 'SEARCH_FINISH',
+                    searchId: e,
+                    guildId: E,
+                    messages: [],
+                    threads: [],
+                    members: [],
+                    totalResults: 0,
+                    analyticsId: null,
+                    hasError: !0,
+                    doingHistoricalIndex: !1,
+                    documentsIndexed: 0
+                });
+            }
+        ));
 }
-function u(e) {
+function E(e) {
     switch (e) {
-        case o.QIO.MOST_RELEVANT:
+        case d.QIO.MOST_RELEVANT:
             return {
                 sort_by: 'relevance',
                 sort_order: 'desc'
             };
-        case o.QIO.OLDEST:
+        case d.QIO.OLDEST:
             return {
                 sort_by: 'timestamp',
                 sort_order: 'asc'
             };
-        case o.QIO.NEWEST:
+        case d.QIO.NEWEST:
         default:
             return {
                 sort_by: 'timestamp',
@@ -91,28 +145,28 @@ function u(e) {
             };
     }
 }
-function d(e) {
-    return null == e.sort_by || null == e.sort_order ? o.QIO.NEWEST : 'relevance' === e.sort_by ? o.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? o.QIO.OLDEST : o.QIO.NEWEST;
+function I(e) {
+    return null == e.sort_by || null == e.sort_order ? d.QIO.NEWEST : 'relevance' === e.sort_by ? d.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? d.QIO.OLDEST : d.QIO.NEWEST;
 }
-function _(e, t, n) {
-    let i = r.Z.getQuery(e);
-    return c(e, a(s({}, i, u(t)), { offset: 0 }), n);
+function p(e, t, n) {
+    let i = a.Z.getQuery(e);
+    return h(e, _(u({}, i, E(t)), { offset: 0 }), n);
 }
-function h(e, t, n) {
+function C(e, t, n) {
     var i = e,
-        l = t * o.vpv,
-        u = n;
-    let d = r.Z.getQuery(i),
-        _ = r.Z.getTotalResults(i);
-    return l < 0 || l > _ ? void 0 : c(i, a(s({}, d), { offset: l }), u);
+        r = t * d.vpv,
+        l = n;
+    let o = a.Z.getQuery(i),
+        s = a.Z.getTotalResults(i);
+    return r < 0 || r > s ? void 0 : h(i, _(u({}, o), { offset: r }), l);
 }
-function E(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'SEARCH_CLEAR_HISTORY',
         searchId: e
     });
 }
-function I(e, t) {
+function g(e, t) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',
@@ -120,7 +174,7 @@ function I(e, t) {
             editorState: t
         });
 }
-function p(e) {
+function T(e) {
     i.Z.wait(() =>
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CLEAR',
@@ -128,7 +182,7 @@ function p(e) {
         })
     );
 }
-function C(e, t, n) {
+function S(e, t, n) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
@@ -137,27 +191,27 @@ function C(e, t, n) {
             cursorScope: n
         });
 }
-function O(e, t) {
+function f(e, t) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
         searchId: e,
         showBlocked: t
     });
 }
-function g(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
         searchId: e
     });
 }
-function T(e, t) {
+function m(e, t) {
     i.Z.dispatch({
         type: 'SEARCH_ADD_HISTORY',
         searchId: e,
         query: t
     });
 }
-function S(e, t, n, r) {
+function R(e, t, n, r) {
     i.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

@@ -16,14 +16,14 @@ var i = n(873546),
     _ = n(954551),
     E = n(208450),
     O = n(975146),
-    p = n(979651),
-    I = n(358085),
+    I = n(979651),
+    p = n(358085),
     T = n(998502),
     S = n(665149),
     N = n(981631),
     f = n(176505),
-    A = n(220705);
-function m(e) {
+    m = n(220705);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,16 +67,16 @@ function R(e, t) {
     );
 }
 async function g(e) {
-    if (!e && (0, I.isMac)() && I.isPlatformEmbedded) {
+    if (!e && (0, p.isMac)() && p.isPlatformEmbedded) {
         var t, n, r;
         let e = null != (r = await (null == (t = (n = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) ? void 0 : t.call(n))) ? r : 'Maximize';
         'Minimize' === e ? T.ZP.minimize() : 'Maximize' === e && T.ZP.maximize();
     }
 }
 function y(e) {
-    let { children: t, className: n, channelId: a, channelType: c, guildId: I, innerClassname: T, transparent: m = !1, showToolbar: R = !0, toolbar: y, mobileToolbar: P, 'aria-label': C, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: v, disableDoubleClick: M } = e,
+    let { children: t, className: n, channelId: a, channelType: c, guildId: p, innerClassname: T, transparent: A = !1, showToolbar: R = !0, toolbar: y, mobileToolbar: C, 'aria-label': P, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: v, disableDoubleClick: M } = e,
         Z = null == a || (0, f.AB)(a) ? null : a,
-        L = (0, l.e7)([p.Z], () => p.Z.isInChannel(Z) || !1),
+        L = (0, l.e7)([I.Z], () => I.Z.isInChannel(Z) || !1),
         j = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
         { enabled: k, inInbox: x } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: F } = (0, u.Z)({ location: 'HeaderBar' });
@@ -87,11 +87,11 @@ function y(e) {
             if (null == y) return null;
             let e = null != a && !U;
             return i.tq
-                ? P
+                ? C
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           y,
-                          e ? (0, r.jsx)(E.Z, { className: A.search }, null != I ? I : a) : null,
+                          e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : a) : null,
                           v && (0, r.jsx)(S.ZP.Divider, {}),
                           k && !x ? (0, r.jsx)(_.Z, {}) : null,
                           F &&
@@ -100,23 +100,23 @@ function y(e) {
                               !j &&
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
-                                  className: A.controlButtonWrapper,
+                                  className: m.controlButtonWrapper,
                                   children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(Z, !j) })]
                               })
                       ]
                   });
         })(),
-        transparent: m,
+        transparent: A,
         showToolbar: R,
         onDoubleClick: () => g(M),
-        'aria-label': C,
+        'aria-label': P,
         'aria-labelledby': b,
         role: h,
         scrollable: D,
         children: t
     });
 }
-function P(e) {
+function C(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: o, disableDoubleClick: a } = e;
     return (0, r.jsx)(S.ZP, {
         className: n,
@@ -127,7 +127,7 @@ function P(e) {
         children: t
     });
 }
-function C(e) {
+function P(e) {
     var { isAuthenticated: t = !0 } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -151,8 +151,8 @@ function C(e) {
     let { analyticsLocations: i } = (0, c.ZP)(a.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(y, R(m({}, n), { className: n.className })) : (0, r.jsx)(P, R(m({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(y, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
     });
 }
-((C.Title = S.ZP.Title), (C.Icon = S.ZP.Icon), (C.Divider = S.ZP.Divider), (C.Caret = S.ZP.Caret));
-let b = C;
+((P.Title = S.ZP.Title), (P.Icon = S.ZP.Icon), (P.Divider = S.ZP.Divider), (P.Caret = S.ZP.Caret));
+let b = P;

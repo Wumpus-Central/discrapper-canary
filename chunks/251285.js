@@ -16,7 +16,7 @@ var r = n(442837),
     _ = n(23750),
     E = n(699516),
     O = n(768119);
-function p(e, t) {
+function I(e, t) {
     let [n] = t,
         r = n.getMessage(e.id, e.channel_id);
     return (
@@ -28,7 +28,7 @@ function p(e, t) {
         e
     );
 }
-function I(e) {
+function p(e) {
     return (0, r.e7)(
         [E.Z],
         () => {
@@ -52,7 +52,7 @@ function I(e) {
 }
 function T(e) {
     let t = (0, a.p)(),
-        [n, o, c] = I(
+        [n, o, c] = p(
             (0, r.e7)(
                 [O.Z, u.Z, l.Z],
                 () => {
@@ -66,7 +66,7 @@ function T(e) {
                     return (
                         a.forEach((e) => {
                             let n = new _.ZP(e);
-                            ((n = p(n, [l.Z])).set(
+                            ((n = I(n, [l.Z])).set(
                                 'customRenderedContent',
                                 (0, s.ZP)(n, {
                                     postProcessor: c,
@@ -93,7 +93,7 @@ function T(e) {
 function S(e) {
     let t = (0, a.p)(),
         n = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        [u, d, _] = I(
+        [u, d, _] = p(
             (0, r.e7)(
                 [O.Z, l.Z],
                 () => {
@@ -104,7 +104,7 @@ function S(e) {
                     let u = (0, i.nC)(null != (r = o.content) ? r : '');
                     return a.map((e) =>
                         e.map((e) => {
-                            let r = p((0, c.e5)(e), [l.Z]);
+                            let r = I((0, c.e5)(e), [l.Z]);
                             return r.isSearchHit
                                 ? r.set(
                                       'customRenderedContent',

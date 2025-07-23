@@ -47,7 +47,14 @@ let d = 'mp',
             }
         },
         [d]: {
-            deserialize: (e) => (i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, 'MEDIA_PROXY_ENDPOINT not configured'), new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT).toString()),
+            deserialize: (e) => {
+                i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, 'MEDIA_PROXY_ENDPOINT not configured');
+                let t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT),
+                    n = e.toLowerCase().endsWith('.gif'),
+                    r = e.toLowerCase().endsWith('.webp'),
+                    a = e.toLowerCase().endsWith('.avif');
+                return (n && t.searchParams.set('format', 'webp'), (n || r || a) && t.searchParams.set('animated', 'true'), t.toString());
+            },
             serialize: (e) => e
         }
     },

@@ -2,14 +2,14 @@
 var r = n(255367),
     o = n(793030),
     i = n(442837),
-    s = n(704215),
-    l = n(243778),
+    l = n(704215),
+    s = n(243778),
     a = n(430824),
     c = n(232062),
     u = n(618460),
     d = n(105529),
-    p = n(800869),
-    m = n(309945),
+    m = n(800869),
+    p = n(309945),
     f = n(234368),
     _ = n(981631),
     x = n(93841),
@@ -32,18 +32,18 @@ function j(e) {
         }),
         j = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
         E = [];
-    (E.push(s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), j && E.push(s.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    (E.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), j && E.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
     let h = (0, u.Z)(t),
-        [C, I] = (0, l.US)(E),
+        [C, I] = (0, s.US)(E),
         N =
             h.length > 0
-                ? (0, r.jsx)(m.Z, {
+                ? (0, r.jsx)(p.Z, {
                       guildId: t,
                       powerups: h
                   })
-                : C === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
-                  ? (0, r.jsx)(p.Z, { markAsDismissed: I })
-                  : C === s.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL
+                : C === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
+                  ? (0, r.jsx)(m.Z, { markAsDismissed: I })
+                  : C === l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL
                     ? (0, r.jsx)(d.Z, {
                           guildId: t,
                           perk: f.rm.ENHANCED_ROLE_COLORS,

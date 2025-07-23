@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => K }), n(781311), n(290780));
+(n.d(t, { Z: () => Y }), n(781311), n(290780));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -7,13 +7,11 @@ var r,
     l = n(570140),
     c = n(353926),
     u = n(861262),
-    d = n(187462),
-    f = n(778877),
-    _ = n(952537),
-    p = n(592125),
-    h = n(430824),
-    m = n(981631);
-function g(e, t, n) {
+    d = n(778877),
+    f = n(592125),
+    _ = n(430824),
+    p = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,12 +24,12 @@ function g(e, t, n) {
         e
     );
 }
-let E = 0.05,
-    b = {};
-function y(e) {
+let m = 0.05,
+    g = {};
+function E(e) {
     return (
-        null == b[e] &&
-            (b[e] = {
+        null == g[e] &&
+            (g[e] = {
                 searchId: e,
                 isIndexing: !1,
                 isHistoricalIndexing: !1,
@@ -50,147 +48,89 @@ function y(e) {
                 searchResultsQueryString: null,
                 searchResultsQuery: null
             }),
-        b[e]
+        g[e]
     );
 }
-function O(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (null == e) return n;
-    let r = b[e];
+    let r = g[e];
     return null == r ? n : t(r);
 }
-let v = 'SearchStore',
-    I = 'tokenized',
-    T = !1,
-    S = !1,
-    A = {},
-    N = null;
-function C(e) {
+let y = 'SearchStore',
+    O = 'tokenized',
+    v = !1,
+    I = !1,
+    T = {},
+    S = null;
+function A(e) {
     let { searchId: t, editorState: n } = e;
-    y(t).editorState = n;
+    E(t).editorState = n;
+}
+function N(e) {
+    let { searchId: t } = e;
+    null != t && E(t);
+}
+function C(e) {
+    var t;
+    let { queryString: n, searchId: r, query: i } = e,
+        o = E(r);
+    ((o.isSearching = !0), (o.rawResults = null), (o.analyticsId = null), (o.query = a().omit(i, 'type')), (o.offset = null != (t = i.offset) ? t : 0), (o.showBlockedResults = !1), (o.searchResultsQueryString = n));
 }
 function R(e) {
-    let { searchId: t } = e;
-    null != t && y(t);
-}
-function P(e) {
-    var t, n;
-    let { queryString: r, searchId: i, query: o } = e,
-        s = y(i),
-        c = i,
-        f = (0, u.g)(i),
-        h = d.Z.create({
-            id: i,
-            searchType: f,
-            searchQuery: o
-        });
-    ((s.isSearching = !0),
-        (s.rawResults = null),
-        (s.analyticsId = null),
-        (s.query = a().omit(o, 'type')),
-        (s.offset = null != (n = o.offset) ? n : 0),
-        (s.showBlockedResults = !1),
-        (s.searchResultsQueryString = r),
-        w({
-            type: 'SEARCH_ADD_HISTORY',
-            searchId: i,
-            query: r
-        }));
-    let g = i === m.I_8 ? (null == (t = p.Z.getChannel(c)) ? void 0 : t.guild_id) : f === m.aib.GUILD ? i : null;
-    h.fetch(
-        (e) => {
-            var t, n;
-            l.Z.dispatch({
-                type: 'SEARCH_FINISH',
-                searchId: i,
-                guildId: g,
-                analyticsId: e.body.analytics_id,
-                totalResults: e.body.total_results,
-                messages: e.body.messages,
-                threads: null != (t = e.body.threads) ? t : [],
-                members: (null != (n = e.body.members) ? n : []).map((e) => (0, _.Z)(e)),
-                hasError: !1,
-                doingHistoricalIndex: e.body.doing_deep_historical_index,
-                documentsIndexed: e.body.documents_indexed
-            });
-        },
-        () => {
-            l.Z.dispatch({
-                type: 'SEARCH_INDEXING',
-                searchId: i
-            });
-        },
-        () => {
-            l.Z.dispatch({
-                type: 'SEARCH_FINISH',
-                searchId: i,
-                guildId: g,
-                messages: [],
-                threads: [],
-                members: [],
-                totalResults: 0,
-                analyticsId: null,
-                hasError: !0,
-                doingHistoricalIndex: !1,
-                documentsIndexed: 0
-            });
-        }
-    );
-}
-function w(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
-    let i = (A[n] = null != (t = A[n]) ? t : []),
+    let i = (T[n] = null != (t = T[n]) ? t : []),
         a = i.indexOf(r);
-    (-1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), s.K.set(v, { history: A }));
+    (-1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), s.K.set(y, { history: T }));
 }
-function D(e) {
+function P(e) {
     let { searchId: t } = e,
-        n = y(t);
+        n = E(t);
     ((n.isIndexing = !0), (n.isHistoricalIndexing = !0), (n.isSearching = !1));
 }
-function L(e) {
+function w(e) {
     let { searchId: t } = e,
-        n = y(t);
-    ((n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = Math.random() < E), (n.rawResults = e.messages), null == n.query && (n.hasError = !0));
+        n = E(t);
+    ((n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = Math.random() < m), (n.rawResults = e.messages), null == n.query && (n.hasError = !0));
 }
-function x(e) {
+function D(e) {
     let { searchId: t } = e;
-    if (null == b[t]) return !1;
-    delete b[t];
+    if (null == g[t]) return !1;
+    delete g[t];
+}
+function L(e) {
+    if (e === S) return !1;
+    (null != e && null == g[e] && E(e), (S = e));
+}
+function x() {
+    ((I = !0), null != S && (0, u.g)(S) === p.aib.CHANNEL && (0, d.a)({ location: 'SearchStore_handleConnectionOpen' }) && L(p.aib.DMS));
 }
 function M(e) {
-    if (e === N) return !1;
-    (null != e && null == b[e] && y(e), (N = e));
-}
-function k() {
-    ((S = !0), null != N && (0, u.g)(N) === m.aib.CHANNEL && (0, f.a)({ location: 'SearchStore_handleConnectionOpen' }) && M(m.aib.DMS));
-}
-function j(e) {
     let { guildId: t, channelId: n } = e;
     null != t
-        ? M(t)
-        : (0, f.a)({
+        ? L(t)
+        : (0, d.a)({
                 location: 'SearchStore_handleChannelSelect',
-                autoTrackExposure: S
+                autoTrackExposure: I
             })
-          ? M(m.aib.DMS)
-          : M(n);
+          ? L(p.aib.DMS)
+          : L(n);
+}
+function k(e) {
+    let { searchId: t } = e;
+    L(t);
+}
+function j(e) {
+    let { searchId: t } = e;
+    null == t ? (s.K.remove(y), (T = {})) : (delete T[t], s.K.set(y, { history: T }));
 }
 function U(e) {
-    let { searchId: t } = e;
-    M(t);
+    let { searchId: t, query: n } = e;
+    null != T[t] && ((T[t] = T[t].filter((e) => e !== n)), s.K.set(y, { history: T }));
 }
 function G(e) {
-    let { searchId: t } = e;
-    null == t ? (s.K.remove(v), (A = {})) : (delete A[t], s.K.set(v, { history: A }));
-}
-function B(e) {
-    let { searchId: t, query: n } = e;
-    null != A[t] && ((A[t] = A[t].filter((e) => e !== n)), s.K.set(v, { history: A }));
-}
-function V(e) {
     return (
         Object.keys(e).forEach((t) => {
             (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
@@ -198,96 +138,96 @@ function V(e) {
         e
     );
 }
-function F(e) {
+function B(e) {
     let { searchId: t, showBlocked: n } = e;
-    y(t).showBlockedResults = n;
+    E(t).showBlockedResults = n;
+}
+function V(e) {
+    let { searchId: t } = e;
+    E(t).showNoResultsAlt = Math.random() < m;
+}
+function F() {
+    (s.K.remove(y), (T = {}));
 }
 function Z(e) {
-    let { searchId: t } = e;
-    y(t).showNoResultsAlt = Math.random() < E;
-}
-function H() {
-    (s.K.remove(v), (A = {}));
-}
-function Y(e) {
     let { searchId: t, queryString: n, query: r, offset: i } = e,
-        a = y(t);
+        a = E(t);
     ((a.searchResultsQueryString = n), (a.query = r), (a.offset = null != i ? i : 0));
 }
-class W extends (r = o.ZP.Store) {
+class H extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, p.Z, c.Z);
-        let e = s.K.get(v);
-        ((null == e ? void 0 : e.history) != null && (A = V(e.history)), (T = !!s.K.get(I)));
+        this.waitFor(_.Z, f.Z, c.Z);
+        let e = s.K.get(y);
+        ((null == e ? void 0 : e.history) != null && (T = G(e.history)), (v = !!s.K.get(O)));
     }
     getCurrentSearchId() {
-        return N;
+        return S;
     }
     isActive() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S;
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return T;
+        return v;
     }
     getRawResults(e) {
-        return O(e, (e) => e.rawResults);
+        return b(e, (e) => e.rawResults);
     }
     hasResults(e) {
-        return null != O(e, (e) => e.rawResults);
+        return null != b(e, (e) => e.rawResults);
     }
     isIndexing(e) {
-        return O(e, (e) => e.isIndexing) || !1;
+        return b(e, (e) => e.isIndexing) || !1;
     }
     isHistoricalIndexing(e) {
-        return O(e, (e) => e.isHistoricalIndexing) || !1;
+        return b(e, (e) => e.isHistoricalIndexing) || !1;
     }
     isSearching(e) {
-        return O(e, (e) => e.isSearching) || !1;
+        return b(e, (e) => e.isSearching) || !1;
     }
     getAnalyticsId(e) {
-        return O(e, (e) => e.analyticsId);
+        return b(e, (e) => e.analyticsId);
     }
     getResultsBlocked(e) {
-        return O(e, (e) => e.resultsBlocked);
+        return b(e, (e) => e.resultsBlocked);
     }
     getDocumentsIndexedCount(e) {
-        return O(e, (e) => e.documentsIndexed);
+        return b(e, (e) => e.documentsIndexed);
     }
     getTotalResults(e) {
         var t;
-        return null != (t = O(e, (e) => e.totalResults)) ? t : 0;
+        return null != (t = b(e, (e) => e.totalResults)) ? t : 0;
     }
     getEditorState(e) {
-        return O(e, (e) => e.editorState);
+        return b(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return A[e];
+        return T[e];
     }
     getOffset(e) {
         var t;
-        return null != (t = O(e, (e) => e.offset)) ? t : 0;
+        return null != (t = b(e, (e) => e.offset)) ? t : 0;
     }
     getQuery(e) {
-        return O(e, (e) => e.query);
+        return b(e, (e) => e.query);
     }
     hasError(e) {
         var t;
-        return null != (t = O(e, (e) => e.hasError)) && t;
+        return null != (t = b(e, (e) => e.hasError)) && t;
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null != (t = O(e, (e) => e.showBlockedResults, !1)) && t;
+        return null != (t = b(e, (e) => e.showBlockedResults, !1)) && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null != (t = O(e, (e) => e.showNoResultsAlt, !1)) && t;
+        return null != (t = b(e, (e) => e.showNoResultsAlt, !1)) && t;
     }
     getSearchResultsQueryString(e) {
-        return O(e, (e) => e.searchResultsQueryString);
+        return b(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return O(e, (e) => e.searchResultsQuery);
+        return b(e, (e) => e.searchResultsQuery);
     }
     getResultsState(e) {
         return {
@@ -303,22 +243,22 @@ class W extends (r = o.ZP.Store) {
         };
     }
 }
-g(W, 'displayName', 'SearchStore');
-let K = new W(l.Z, {
-    CONNECTION_OPEN: k,
-    SEARCH_START: P,
-    SEARCH_INDEXING: D,
-    SEARCH_FINISH: L,
-    SEARCH_RESULTS_QUERY_UPDATE: Y,
-    SEARCH_EDITOR_STATE_CLEAR: x,
-    SEARCH_ENSURE_SEARCH_STATE: R,
-    SEARCH_EDITOR_STATE_CHANGE: C,
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: F,
-    SEARCH_SET_SHOW_NO_RESULTS_ALT: Z,
-    SEARCH_SCREEN_OPEN: U,
-    CHANNEL_SELECT: j,
-    SEARCH_CLEAR_HISTORY: G,
-    SEARCH_REMOVE_HISTORY: B,
-    SEARCH_ADD_HISTORY: w,
-    LOGOUT: H
+h(H, 'displayName', 'SearchStore');
+let Y = new H(l.Z, {
+    CONNECTION_OPEN: x,
+    SEARCH_START: C,
+    SEARCH_INDEXING: P,
+    SEARCH_FINISH: w,
+    SEARCH_RESULTS_QUERY_UPDATE: Z,
+    SEARCH_EDITOR_STATE_CLEAR: D,
+    SEARCH_ENSURE_SEARCH_STATE: N,
+    SEARCH_EDITOR_STATE_CHANGE: A,
+    SEARCH_SET_SHOW_BLOCKED_RESULTS: B,
+    SEARCH_SET_SHOW_NO_RESULTS_ALT: V,
+    SEARCH_SCREEN_OPEN: k,
+    CHANNEL_SELECT: M,
+    SEARCH_CLEAR_HISTORY: j,
+    SEARCH_REMOVE_HISTORY: U,
+    SEARCH_ADD_HISTORY: R,
+    LOGOUT: F
 });

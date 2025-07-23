@@ -5,8 +5,8 @@ var r = n(255367),
     l = n(442837),
     a = n(481060),
     s = n(607070),
-    c = n(530618),
-    u = n(372654),
+    u = n(530618),
+    c = n(372654),
     d = n(262212),
     p = n(795338),
     f = n(535396),
@@ -17,7 +17,7 @@ function g(e) {
     var t,
         n,
         { guildId: g, powerup: O, refundablePowerups: y } = e,
-        x = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -36,10 +36,10 @@ function g(e) {
             }
             return o;
         })(e, ['guildId', 'powerup', 'refundablePowerups']);
-    let v = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+    let x = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         C = o.useRef(null),
-        h = o.useRef(new i.qA()),
-        [P, _] = o.useState(null),
+        P = o.useRef(new i.qA()),
+        [h, _] = o.useState(null),
         w = f.uc.has(O.skuId),
         E = null == y ? void 0 : y.reduce((e, t) => e + t.cost, 0);
     return (0, r.jsxs)(r.Fragment, {
@@ -47,7 +47,7 @@ function g(e) {
             (0, r.jsx)(i.O_, {
                 ref: _,
                 className: j.confettiCanvas,
-                environment: h.current
+                environment: P.current
             }),
             (0, r.jsxs)(
                 a.Y0X,
@@ -80,7 +80,7 @@ function g(e) {
                         className: j.modal,
                         size: a.CgR.DYNAMIC
                     },
-                    x
+                    v
                 )),
                 (n = n =
                     {
@@ -122,7 +122,7 @@ function g(e) {
                                                           className: j.button,
                                                           guildId: g,
                                                           powerup: O,
-                                                          onClick: x.onClose
+                                                          onClick: v.onClose
                                                       })
                                                     : (0, r.jsx)('div', {
                                                           'data-button-hoisted-classname-wrapper': !0,
@@ -130,7 +130,7 @@ function g(e) {
                                                           children: (0, r.jsx)(a.zxk, {
                                                               variant: 'primary',
                                                               text: m.intl.string(m.t.cpT0Cg),
-                                                              onClick: x.onClose
+                                                              onClick: v.onClose
                                                           })
                                                       })
                                             ]
@@ -140,13 +140,13 @@ function g(e) {
                             }),
                             (0, r.jsx)(a.olH, {
                                 className: j.close,
-                                onClick: x.onClose
+                                onClick: v.onClose
                             }),
-                            !v &&
-                                (0, r.jsx)(c.Z, {
+                            !x &&
+                                (0, r.jsx)(u.Z, {
                                     confettiTarget: C.current,
-                                    confettiCanvas: P,
-                                    sprites: (0, u.vK)()
+                                    confettiCanvas: h,
+                                    sprites: (0, c.vK)()
                                 })
                         ]
                     }),

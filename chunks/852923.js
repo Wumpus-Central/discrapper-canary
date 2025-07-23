@@ -7,8 +7,8 @@ var r = n(120356),
     s = n(481060),
     a = n(592125),
     c = n(944486),
-    u = n(471253),
-    d = n(623633),
+    d = n(471253),
+    u = n(623633),
     _ = n(930180),
     h = n(388032),
     E = n(957991);
@@ -16,7 +16,7 @@ function I(e) {
     let t = c.Z.getVoiceChannelId();
     if (null == t) return;
     let n = a.Z.getChannel(t);
-    null != n && (0, u.RK)(n, e);
+    null != n && (0, d.RK)(n, e);
 }
 function p(e) {
     var t, n;
@@ -50,7 +50,7 @@ function p(e) {
             : null;
 }
 function C() {
-    let e = (0, d.Z)();
+    let e = (0, u.Z)();
     return null == e
         ? null
         : (0, i.jsxs)(s.qXd, {

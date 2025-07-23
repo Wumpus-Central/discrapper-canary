@@ -11,8 +11,8 @@ var i = n(255367),
     s = n(399606),
     a = n(704215),
     c = n(367907),
-    u = n(266454),
-    d = n(584825),
+    d = n(266454),
+    u = n(584825),
     _ = n(994592),
     h = n(160404),
     E = n(703656),
@@ -39,7 +39,7 @@ function A(e) {
         b = (0, O.RF)(o, 'guild_shop_page'),
         P = (null == R ? void 0 : R.features.has(N.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         D = (0, _.mY)(null == R ? void 0 : R.id),
-        v = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
+        v = null == (t = (0, u.YB)(o)) ? void 0 : t.server_shop_tab_order,
         U = [],
         M = T.y.GUILD_SHOP_FULL_PREVIEW;
     (A || (P && D) ? (U.push(v === S.a3.PRODUCTS_FIRST ? T.y.GUILD_PRODUCTS : T.y.GUILD_ROLE_SUBSCRIPTIONS), U.push(v === S.a3.PRODUCTS_FIRST ? T.y.GUILD_ROLE_SUBSCRIPTIONS : T.y.GUILD_PRODUCTS), (M = U[0])) : P && !D ? (U.push(T.y.GUILD_PRODUCTS), (M = T.y.GUILD_PRODUCTS)) : !P && D && (U.push(T.y.GUILD_ROLE_SUBSCRIPTIONS), (M = T.y.GUILD_ROLE_SUBSCRIPTIONS), y && U.push(T.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : M));
@@ -56,7 +56,7 @@ function A(e) {
                 categoryTabs: U,
                 isPhantomPreview: k,
                 handlePreviewDismiss: (e) => {
-                    (0, u.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW);
+                    (0, d.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW);
                     let t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},

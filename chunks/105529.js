@@ -2,35 +2,35 @@
 var r = n(255367),
     o = n(793030),
     i = n(755721),
-    s = n(481060),
-    l = n(434404),
+    l = n(481060),
+    s = n(434404),
     a = n(485386),
     c = n(944888),
     u = n(234368),
     d = n(981631),
-    p = n(921944),
-    m = n(808353);
+    m = n(921944),
+    p = n(808353);
 function f(e) {
     let { guildId: t, perk: n, markAsDismissed: f } = e,
         _ = u._k[n],
         x = async () => {
             let e = null;
             for (let n of Object.values(a.Z.getRoles(t))) (0, c.YB)(n) && (e = n.id);
-            (await l.Z.open(t, d.pNK.ROLES), null !== e && (await l.Z.selectRole(e)), f(p.L.SECONDARY));
+            (await s.Z.open(t, d.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), f(m.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
-        className: m.container,
+        className: p.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: _.assetUrl,
-                className: m.image
+                className: p.image
             }),
-            (0, r.jsx)(s.olH, {
-                className: m.close,
-                innerClassName: m.innerClose,
+            (0, r.jsx)(l.olH, {
+                className: p.close,
+                innerClassName: p.innerClose,
                 onClick: () => {
-                    f(p.L.USER_DISMISS);
+                    f(m.L.USER_DISMISS);
                 }
             }),
             (0, r.jsx)(o.xv, {
@@ -39,13 +39,13 @@ function f(e) {
                 children: _.title
             }),
             (0, r.jsx)(o.xv, {
-                className: m.description,
+                className: p.description,
                 color: 'text-muted',
                 variant: 'text-sm/medium',
                 children: _.description
             }),
             (0, r.jsx)(i.zx, {
-                className: m.button,
+                className: p.button,
                 onClick: x,
                 children: _.cta
             })

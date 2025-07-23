@@ -172,7 +172,7 @@ class A extends o.Z {
             });
         }
     }
-    getSearchContext(e) {
+    getUserSearchContext(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
         this.initialize();
         let { _worker: n } = this;

@@ -1,13 +1,13 @@
 (r.d(t, {
-    E: () => h,
+    E: () => C,
     Z: () => v
 }),
     r(388685));
 var n = r(255367),
     o = r(73800),
     a = r(120356),
-    s = r.n(a),
-    i = r(866442),
+    i = r.n(a),
+    s = r(866442),
     l = r(481060),
     c = r(957537),
     u = r(839008),
@@ -29,8 +29,8 @@ function v() {
             secondary_color: _.tl[t].end
         }),
         { gradientStyle: u, gradientClassname: p } = (0, l.Icv)({
-            primaryColor: (0, i.Rf)(r.primary_color),
-            secondaryColor: (0, i.Rf)(r.secondary_color),
+            primaryColor: (0, s.Rf)(r.primary_color),
+            secondaryColor: (0, s.Rf)(r.secondary_color),
             tertiaryColor: void 0,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
@@ -45,7 +45,7 @@ function v() {
                     avatar: c.Z,
                     username: 'Cherry',
                     usernameStyle: u,
-                    usernameClassName: s()(p, y.animateGradient),
+                    usernameClassName: i()(p, y.animateGradient),
                     message: j.intl.string(j.t['6OSasb'])
                 })
             }),
@@ -109,7 +109,7 @@ function v() {
         ]
     });
 }
-function h(e) {
+function C(e) {
     let { guildId: t } = e,
         [r, a] = o.useState(g.x_.HEART);
     return (0, n.jsxs)('div', {

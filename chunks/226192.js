@@ -1,7 +1,7 @@
 n.d(t, {
     UV: () => _,
-    _s: () => u,
-    kW: () => d,
+    _s: () => d,
+    kW: () => u,
     km: () => c
 });
 var i = n(255367);
@@ -82,7 +82,7 @@ function c(e) {
             new Promise((c) => {
                 (0, r.ZDy)(async () => {
                     let { default: r } = await n.e('74543').then(n.bind(n, 643611)),
-                        u = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
+                        d = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, i.jsx)(
                             r,
@@ -90,7 +90,7 @@ function c(e) {
                                 s(
                                     {
                                         action: o,
-                                        isEdit: null != u,
+                                        isEdit: null != d,
                                         triggerType: t.triggerType,
                                         guildId: e,
                                         onEditChannel: (e) => {
@@ -131,7 +131,7 @@ function c(e) {
             })
     };
 }
-function u(e, t, l, o) {
+function d(e, t, l, o) {
     (0, r.ZDy)(async () => {
         let { default: r } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
@@ -148,7 +148,7 @@ function u(e, t, l, o) {
             );
     });
 }
-function d(e, t) {
+function u(e, t) {
     (0, r.ZDy)(async () => {
         let { default: r } = await n.e('28382').then(n.bind(n, 537623));
         return (n) =>

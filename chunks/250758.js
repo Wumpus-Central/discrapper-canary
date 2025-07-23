@@ -28,7 +28,7 @@ function O(e) {
         null == i &&
             ((i = {
                 results: [],
-                context: c.Z.getSearchContext(I.bind(null, t))
+                context: c.Z.getUserSearchContext(I.bind(null, t))
             }),
             (v[t] = i)),
         {
@@ -57,22 +57,20 @@ function I(e, t) {
     let i = 3;
     (s.mode.type === E.Sap.FILTER && (i = 10),
         (r.results = (function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-            return (
-                (e = e.reduce((e, t) => {
-                    let n = x.default.getUser(t.id);
-                    return (
-                        null == n ||
-                            e.push({
-                                id: n.id,
-                                text: f.ZP.getUserTag(n),
-                                user: n
-                            }),
-                        e
-                    );
-                }, [])).length > t && (e.length = t),
-                e
-            );
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+                n = [];
+            for (let r of e) {
+                if (n.length >= t) break;
+                let e = x.default.getUser(r.id);
+                if (null == e) continue;
+                let s = f.ZP.getUserTag(e);
+                null != s &&
+                    n.push({
+                        text: s,
+                        user: e
+                    });
+            }
+            return n;
         })(n, i)));
     let { query: o, mode: c, tokens: u, cursorScope: d } = s,
         { autocompletes: h } = s;
@@ -128,7 +126,7 @@ function j(e) {
         null != e &&
             (s = s.filter((t) => {
                 let { user: n } = t;
-                return n.id !== e.id;
+                return (null == n ? void 0 : n.id) !== e.id;
             })).unshift({
                 text: E.ME,
                 user: e

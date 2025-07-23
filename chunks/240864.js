@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => p,
-    Z: () => y
+    Z: () => v
 }),
     n(539854),
     n(388685));
@@ -36,7 +36,7 @@ let E = new s.h(
             })(e)
     ),
     x = [];
-class v extends (r = o.ZP.Store) {
+class y extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = m[e]) ? t : 0;
@@ -58,15 +58,15 @@ class v extends (r = o.ZP.Store) {
     }
 }
 ((a = 'GuildProductsStore'),
-    (l = 'displayName') in v
-        ? Object.defineProperty(v, l, {
+    (l = 'displayName') in y
+        ? Object.defineProperty(y, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (v[l] = a));
-let y = new v(c.Z, {
+        : (y[l] = a));
+let v = new y(c.Z, {
     CONNECTION_OPEN: function () {
         (E.clear(), (m = {}), (f = {}), (g = {}));
     },

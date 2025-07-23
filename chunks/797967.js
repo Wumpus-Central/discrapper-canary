@@ -2,8 +2,8 @@
 var n = r(255367),
     o = r(73800),
     a = r(120356),
-    s = r.n(a),
-    i = r(866442),
+    i = r.n(a),
+    s = r(866442),
     l = r(481060),
     c = r(981631),
     u = r(388032),
@@ -73,14 +73,14 @@ let _ = (e) => {
                 }
                 return o;
             })(e, ['position', 'color', 'disabled']);
-        let u = (0, i.Bd)(null != r ? r : c.p6O) > 0.1;
+        let u = (0, s.Bd)(null != r ? r : c.p6O) > 0.1;
         return (0, n.jsx)(
             'div',
             f(m({}, a), {
-                className: s()('left' === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight, u ? p.lightRing : p.darkRing, { [p.disabled]: o }),
+                className: i()('left' === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight, u ? p.lightRing : p.darkRing, { [p.disabled]: o }),
                 children: (0, n.jsx)('div', {
                     className: p.colorPickerDropperInner,
-                    style: { background: (0, i.Rf)(r) },
+                    style: { background: (0, s.Rf)(r) },
                     children: (0, n.jsx)(l.ilE, {
                         size: 'custom',
                         colorClass: u ? p.colorPickerDropperLight : p.colorPickerDropperDark,
@@ -92,7 +92,7 @@ let _ = (e) => {
         );
     },
     b = (e) => {
-        let { isStart: t, buttonRef: r, color: o, showPopout: a, position: s, onRequestClose: i, onShowPopout: c, onColorChange: b, disabled: g } = e;
+        let { isStart: t, buttonRef: r, color: o, showPopout: a, position: i, onRequestClose: s, onShowPopout: c, onColorChange: b, disabled: g } = e;
         return (0, n.jsx)(l.tEY, {
             children: (0, n.jsx)(l.yRy, {
                 targetElementRef: r,
@@ -101,9 +101,9 @@ let _ = (e) => {
                         onChange: (e) => b(e, t),
                         value: o
                     }),
-                position: s,
+                position: i,
                 shouldShow: a,
-                onRequestClose: i,
+                onRequestClose: s,
                 children: (e) =>
                     (0, n.jsx)('div', {
                         ref: r,
@@ -134,10 +134,10 @@ let _ = (e) => {
         });
     };
 function g(e) {
-    let { defaultColor: t, colors: r, value: a, onChange: s, disabled: d = !1, customPickerPosition: g = 'bottom', secondaryValue: j, onChangeGradientColors: x, isGradient: y = !1 } = e,
+    let { defaultColor: t, colors: r, value: a, onChange: i, disabled: d = !1, customPickerPosition: g = 'bottom', secondaryValue: j, onChangeGradientColors: x, isGradient: y = !1 } = e,
         v = o.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
-        h = o.useRef(null),
         C = o.useRef(null),
+        h = o.useRef(null),
         O = o.useRef(null),
         [k, P] = o.useState(() => (v(a) ? a : null)),
         [w, S] = o.useState({
@@ -157,15 +157,15 @@ function g(e) {
     }, [a, v, j]);
     let N = o.useCallback(
             (e) => {
-                (null == s || s(e), P(null));
+                (null == i || i(e), P(null));
             },
-            [s, P]
+            [i, P]
         ),
         D = o.useCallback(
             (e) => {
-                (null == s || s(e), P(e));
+                (null == i || i(e), P(e));
             },
-            [s, P]
+            [i, P]
         ),
         R = o.useCallback(
             (e, t) => {
@@ -182,13 +182,13 @@ function g(e) {
         }, []),
         Z = o.useCallback(() => {
             var e, t, r, o, a;
-            let s = { background: 'linear-gradient(90deg, '.concat((0, i.Rf)(null != (e = w.start) ? e : c.p6O), ' 0%, ').concat((0, i.Rf)(w.end), ' 100%)') },
+            let i = { background: 'linear-gradient(90deg, '.concat((0, s.Rf)(null != (e = w.start) ? e : c.p6O), ' 0%, ').concat((0, s.Rf)(w.end), ' 100%)') },
                 l = (0, n.jsxs)('div', {
                     className: p.gradientButtonContainer,
                     children: [
                         (0, n.jsx)('div', {
                             className: p.gradientSwatch,
-                            style: s
+                            style: i
                         }),
                         (0, n.jsx)(_, {
                             position: 'left',
@@ -209,11 +209,11 @@ function g(e) {
                       children: [
                           (0, n.jsx)('div', {
                               className: p.gradientSwatch,
-                              style: s
+                              style: i
                           }),
                           (0, n.jsx)(b, {
                               isStart: !0,
-                              buttonRef: C,
+                              buttonRef: h,
                               color: null != (o = w.start) ? o : c.p6O,
                               showPopout: E.showStart,
                               position: g,
@@ -253,15 +253,15 @@ function g(e) {
                 return d
                     ? t
                     : (0, n.jsx)(l.yRy, {
-                          targetElementRef: h,
+                          targetElementRef: C,
                           renderPopout: A,
                           position: g,
                           children: (e) =>
                               (0, n.jsx)(l.ua7, {
-                                  targetElementRef: h,
+                                  targetElementRef: C,
                                   text: u.intl.string(u.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (r) => (0, n.jsx)('div', f(m({ ref: h }, r, e), { children: t }))
+                                  children: (r) => (0, n.jsx)('div', f(m({ ref: C }, r, e), { children: t }))
                               })
                       });
             },

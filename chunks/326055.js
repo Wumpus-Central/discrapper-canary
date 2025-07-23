@@ -2,8 +2,8 @@
 var n = r(255367),
     o = r(73800),
     a = r(494497),
-    s = r(442837),
-    i = r(304789),
+    i = r(442837),
+    s = r(304789),
     l = r(481060),
     c = r(905128),
     u = r(870246),
@@ -20,7 +20,7 @@ function y(e) {
     var t,
         r,
         { guildId: y, powerup: v } = e,
-        h = (function (e, t) {
+        C = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -39,7 +39,7 @@ function y(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [C, O] = o.useState(void 0),
+    let [h, O] = o.useState(void 0),
         k = o.useMemo(() => {
             switch (v.skuId) {
                 case b.IN:
@@ -56,7 +56,7 @@ function y(e) {
     let P = (0, d.Z)(y),
         w = b.Rx[v.skuId],
         S = null != w ? b.Cp[w] : null,
-        E = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(y)),
+        E = (0, i.e7)([c.Z], () => c.Z.getStateForGuild(y)),
         I = null != S ? (null == E ? void 0 : E.allPowerups[S]) : null;
     return (0, n.jsxs)(
         l.Y0X,
@@ -89,7 +89,7 @@ function y(e) {
                 className: x.modal,
                 size: l.CgR.DYNAMIC
             },
-            h
+            C
         )),
         (r = r =
             {
@@ -102,7 +102,7 @@ function y(e) {
                             (0, n.jsxs)('div', {
                                 className: x.sidebar,
                                 children: [
-                                    (0, n.jsx)(i.$, {
+                                    (0, n.jsx)(s.$, {
                                         className: x.powerupImage,
                                         children: (0, n.jsx)(m.m, { powerup: v })
                                     }),
@@ -124,12 +124,12 @@ function y(e) {
                                                     variant: 'text-sm/normal',
                                                     children: j.intl.formatToPlainString(g.default.NAFGkJ, { level: I.title })
                                                 }),
-                                            null != C &&
+                                            null != h &&
                                                 (0, n.jsx)(l.Text, {
                                                     className: x.error,
                                                     color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: C
+                                                    children: h
                                                 }),
                                             P &&
                                                 (0, n.jsx)(p.ZP, {
@@ -151,7 +151,7 @@ function y(e) {
                     }),
                     (0, n.jsx)(l.olH, {
                         className: x.close,
-                        onClick: h.onClose
+                        onClick: C.onClose
                     })
                 ]
             }),

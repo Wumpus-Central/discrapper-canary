@@ -6,8 +6,8 @@ var i = n(255367),
     s = n(91192),
     a = n(442837),
     c = n(518738),
-    u = n(628238),
-    d = n(869765),
+    d = n(628238),
+    u = n(869765),
     _ = n(592125),
     h = n(709054),
     E = n(786761),
@@ -89,18 +89,18 @@ let D = r.memo(function (e) {
             }
             return r;
         })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
-        V = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        G = r.isFirstMessageInForumPost(L),
-        B = (0, u.A)((null != (n = r.editedTimestamp) ? n : r.timestamp).valueOf()),
+        G = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        V = r.isFirstMessageInForumPost(L),
+        B = (0, d.A)((null != (n = r.editedTimestamp) ? n : r.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: W } = (0, O.Z)(r, {
             hideSimpleEmbedContent: M,
-            allowList: G || B,
-            allowHeading: G || B,
+            allowList: V || B,
+            allowHeading: V || B,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
         z = r.type === A.uaV.REPLY ? r.messageReference : void 0,
-        Y = (0, a.e7)([d.Z], () => d.Z.getMessageByReference(z)),
+        Y = (0, a.e7)([u.Z], () => u.Z.getMessageByReference(z)),
         K = (0, s.JA)(r.id),
         X = (0, I.ZP)(r),
         q = (0, a.e7)([_.Z], () => r.hasFlag(A.iLy.HAS_THREAD) && _.Z.getChannel(h.default.castMessageIdAsChannelId(r.id))),
@@ -122,9 +122,9 @@ let D = r.memo(function (e) {
                 compact: l,
                 className: o()(D, {
                     [y.ephemeral]: (0, E.Pv)(r),
-                    [y.disableInteraction]: V
+                    [y.disableInteraction]: G
                 }),
-                disableInteraction: V,
+                disableInteraction: G,
                 childrenRepliedMessage: (0, R.Z)(r, L, z, Y, l),
                 childrenExecutedCommand: (0, m.Z)(r, L, l),
                 childrenHeader: (0, f.Z)(
@@ -136,7 +136,7 @@ let D = r.memo(function (e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, T.Q)(e, W),
                 childrenMessageContent: (0, S.Z)(e, H),
-                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: V })),
+                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: G })),
                 onContextMenu: v,
                 onClick: U,
                 hasThread: w && null != q && r.hasFlag(A.iLy.HAS_THREAD),

@@ -13,8 +13,8 @@ var i = n(570140),
     s = n(973616),
     a = n(630388),
     c = n(591759),
-    u = n(978085),
-    d = n(981631);
+    d = n(978085),
+    u = n(981631);
 async function _(e, t) {
     i.Z.dispatch({
         applicationId: e,
@@ -24,10 +24,10 @@ async function _(e, t) {
         if (!(await (0, r.W5)(e))) throw Error('Do not have access!');
         let n = o.Z.getApplication(e);
         null == n && (n = s.ZP.createFromServer(await l.ZP.fetchApplication(e)));
-        let _ = (0, a.yE)(n.flags, d.udG.EMBEDDED);
+        let _ = (0, a.yE)(n.flags, u.udG.EMBEDDED);
         if (_ && (null == t || !c.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (
-            _ || u.GR(n),
+            _ || d.GR(n),
             i.Z.dispatch({
                 type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS',
                 applicationId: e,

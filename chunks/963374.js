@@ -1,4 +1,4 @@
-(n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854));
+(n.d(t, { nC: () => u }), n(388685), n(704826), n(35282), n(539854));
 var i = n(392711),
     r = n.n(i),
     l = n(697741);
@@ -12,11 +12,11 @@ function a(e) {
 function c(e) {
     return o.has(e);
 }
-function u(e) {
+function d(e) {
     return 0 === e.length;
 }
-function d(e) {
-    let t = new Set(r()(e.split(/\W+/)).map(s).reject(u).map(a).reject(c).map(l.$).value());
+function u(e) {
+    let t = new Set(r()(e.split(/\W+/)).map(s).reject(d).map(a).reject(c).map(l.$).value());
     return (e) =>
         (function e(t, n) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n));
@@ -25,7 +25,7 @@ function d(e) {
                     i = '';
                 (t.content.split(/(\W+)/g).forEach((t) => {
                     var r;
-                    !u((r = a(s((r = t))))) && !c(r) && n.has((0, l.$)(r))
+                    !d((r = a(s((r = t))))) && !c(r) && n.has((0, l.$)(r))
                         ? (i.length > 0 &&
                               e.push({
                                   type: 'text',
