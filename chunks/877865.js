@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(866442),
     d = n(19602),
     _ = n(490236),
-    f = n(755721),
+    f = n(861066),
     p = n(481060),
     h = n(408886),
     m = n(233398),
@@ -202,12 +202,10 @@ function D(e) {
                         shouldShow: o.length === C,
                         children: (e) =>
                             (0, r.jsx)(
-                                f.zx,
+                                p.P3F,
                                 S(I({}, e), {
-                                    size: f.zx.Sizes.ICON,
-                                    look: f.zx.Looks.BLANK,
-                                    disabled: o.length === C,
-                                    onClick: j,
+                                    onClick: o.length === C ? void 0 : j,
+                                    className: l()(O.addColorButton, { [O.disabled]: o.length === C }),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: 'text-sm/medium',
                                         className: O.addColorButtonText,
@@ -249,23 +247,19 @@ function D(e) {
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            f.zx,
+                                            f.h,
                                             S(
                                                 I(
                                                     {
-                                                        size: f.zx.Sizes.ICON,
-                                                        look: f.zx.Looks.BLANK
+                                                        variant: 'icon-only',
+                                                        size: 'sm'
                                                     },
                                                     e
                                                 ),
                                                 {
                                                     onClick: k,
-                                                    className: O.iconButton,
-                                                    children: (0, r.jsx)(d.i, {
-                                                        size: 'xs',
-                                                        colorClass: O.iconWithHover,
-                                                        className: O.icon
-                                                    })
+                                                    icon: d.i,
+                                                    'aria-label': y.intl.string(b.default['8QXO8v'])
                                                 }
                                             )
                                         )
@@ -275,17 +269,13 @@ function D(e) {
                                     text: y.intl.string(b.default['rTik5+']),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            f.zx,
+                                            f.h,
                                             S(I({}, e), {
-                                                size: f.zx.Sizes.ICON,
-                                                look: f.zx.Looks.BLANK,
+                                                variant: 'icon-only',
+                                                size: 'sm',
                                                 onClick: () => U(v),
-                                                className: O.iconButton,
-                                                children: (0, r.jsx)(_.X, {
-                                                    size: 'xs',
-                                                    colorClass: O.iconWithHover,
-                                                    className: O.icon
-                                                })
+                                                icon: _.X,
+                                                'aria-label': y.intl.string(b.default['rTik5+'])
                                             })
                                         )
                                 })

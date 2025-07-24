@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(913527),
     o = n.n(l),
-    s = n(91192),
-    a = n(755721),
+    a = n(91192),
+    s = n(755721),
     c = n(481060),
     u = n(135938),
     d = n(554838),
@@ -26,8 +26,8 @@ let E = {
 };
 function x(e) {
     var t, n, l;
-    let { channel: o, message: a, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: p } = e,
-        g = (0, s.JA)(null != (t = a.id) ? t : ''),
+    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: p } = e,
+        g = (0, a.JA)(null != (t = s.id) ? t : ''),
         m = i.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key) {
@@ -77,11 +77,11 @@ function x(e) {
                     children: [
                         (0, r.jsx)(O.Z, {
                             className: j.jumpButton,
-                            onJump: (e) => p(e, a.id)
+                            onJump: (e) => p(e, s.id)
                         }),
                         (0, r.jsx)(f.Z, {
-                            id: a.id,
-                            message: a,
+                            id: s.id,
+                            message: s,
                             channel: o,
                             className: j.message,
                             compact: u,
@@ -105,13 +105,13 @@ function x(e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                   }),
             n),
-            a.id
+            s.id
         )
     });
 }
 function S(e) {
     var t, n;
-    let { channel: i, channelRecord: l, gotoChannel: s } = e,
+    let { channel: i, channelRecord: l, gotoChannel: a } = e,
         { enabled: f } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         O = g.jU.useSetting(),
         E = (0, h.P1)(l),
@@ -150,7 +150,7 @@ function S(e) {
                             compact: O,
                             isGroupStart: i,
                             treatSpam: !P && f && (0, h.DQ)(n) && E,
-                            gotoChannel: s
+                            gotoChannel: a
                         },
                         n.id
                     )
@@ -159,11 +159,11 @@ function S(e) {
             i.messages.length >= y.hC &&
                 N.push(
                     (0, r.jsxs)(
-                        a.zx,
+                        s.zx,
                         {
-                            color: a.zx.Colors.LINK,
-                            look: a.zx.Looks.LINK,
-                            onClick: (e) => s(e, n[n.length - 1].id),
+                            color: s.zx.Colors.LINK,
+                            look: s.zx.Looks.LINK,
+                            onClick: (e) => a(e, n[n.length - 1].id),
                             children: [C.intl.string(C.t['9OB9ho']), ' \u203A']
                         },
                         'view-all'

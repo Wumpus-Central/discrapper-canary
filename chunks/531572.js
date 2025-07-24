@@ -15,20 +15,20 @@ function o(e, t, n) {
         e
     );
 }
-let s = {};
-class a extends (r = i.ZP.PersistedStore) {
+let a = {};
+class s extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (s = e);
+        null != e && (a = e);
     }
     getState() {
-        return s;
+        return a;
     }
     getCountForGuild(e) {
-        return s[e];
+        return a[e];
     }
 }
-(o(a, 'displayName', 'GuildBoostingProgressBarPersistedStore'), o(a, 'persistKey', 'PremiumGuildProgressBarPersistedStore'));
-let c = new a(l.Z, {
+(o(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'), o(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore'));
+let c = new s(l.Z, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
         var t, n;
         let { guildId: r, premiumCount: i } = e;
@@ -47,7 +47,7 @@ let c = new a(l.Z, {
                     }));
             }
             return e;
-        })({}, s)),
+        })({}, a)),
             (n = n = { [r]: i }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -61,9 +61,9 @@ let c = new a(l.Z, {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            (s = t));
+            (a = t));
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
-        s = {};
+        a = {};
     }
 });

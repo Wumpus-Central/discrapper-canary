@@ -1,14 +1,14 @@
 n.d(t, {
     _k: () => c,
-    oC: () => a,
-    rm: () => s
+    oC: () => s,
+    rm: () => a
 });
 var r,
     i = n(93841),
     l = n(388032),
     o = n(128647),
-    s = (((r = {}).ENHANCED_ROLE_COLORS = 'ENHANCED_ROLE_COLORS'), r);
-let a = {
+    a = (((r = {}).ENHANCED_ROLE_COLORS = 'ENHANCED_ROLE_COLORS'), r);
+let s = {
         primary_color: 16023551,
         secondary_color: 11816191
     },

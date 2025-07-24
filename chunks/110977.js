@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(481060),
-    a = n(593214),
+    a = n(481060),
+    s = n(593214),
     c = n(981631),
     u = n(388032),
     d = n(761168),
@@ -22,7 +22,7 @@ function f() {
 let g = i.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
         l = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, a.up)();
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, s.up)();
             return (
                 i.useEffect(() => {
                     if (e) {
@@ -37,9 +37,9 @@ let g = i.memo(function (e) {
                 e
             );
         })();
-    return (0, r.jsx)(s.ua7, {
+    return (0, r.jsx)(a.ua7, {
         forceOpen: l,
-        color: s.FGA.GREEN,
+        color: a.FGA.GREEN,
         hideOnClick: !0,
         spacing: 12,
         position: 'right',

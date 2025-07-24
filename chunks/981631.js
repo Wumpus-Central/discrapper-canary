@@ -3861,6 +3861,7 @@ var nm = (function (e) {
             (e.DM_MUTE_FEEDBACK_SUBMITTED = 'dm_mute_feedback_submitted'),
             (e.BLOCK_USER_FEEDBACK_SUBMITTED = 'block_user_feedback_submitted'),
             (e.IGNORE_USER_FEEDBACK_SUBMITTED = 'ignore_user_feedback_submitted'),
+            (e.AGE_VERIFICATION_FEEDBACK_SUBMITTED = 'age_verification_feedback_submitted'),
             (e.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = 'emoji_upload_file_size_limit_exceeded'),
             (e.EMOJI_UPLOAD_STARTED = 'emoji_upload_started'),
             (e.EMOJI_UPLOAD_COMPLETED = 'emoji_upload_completed'),

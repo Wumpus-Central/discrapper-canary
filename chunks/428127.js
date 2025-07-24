@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(42133),
-    a = n(442837),
+    a = n(42133),
+    s = n(442837),
     c = n(481060),
     u = n(492162),
     d = n(237583),
@@ -20,20 +20,20 @@ let b = {
 function _(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
-        s = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
-        a = (0, u.Z)(n.id),
+        a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
+        s = (0, u.Z)(n.id),
         h = i.useCallback(
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), l());
             },
             [l]
         ),
-        f = null != (t = null == s ? void 0 : s.getChannelRecords()) ? t : [],
+        f = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
         b = (0, p.c4)({
             channels: f,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
-            voiceStates: a
+            voiceStates: s
         });
     return (0, r.jsxs)(c.P3F, {
         className: o()(m.bar, m.voiceBar),
@@ -64,8 +64,8 @@ function _(e) {
 }
 function O(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: p, topBar: O } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        y = (0, a.e7)([h.Z], () => h.Z.isFocused()),
+        { bottomBar: p, topBar: O } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        y = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         { mode: v, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : O,
         E = v === f.x.HIDDEN,
         x = (0, c.q_F)(
@@ -86,7 +86,7 @@ function O(e) {
             [m.top]: 'top' === t,
             [m.bottom]: 'bottom' === t
         }),
-        children: (0, r.jsx)(s.animated.div, {
+        children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
             style: x,
             'aria-hidden': E,

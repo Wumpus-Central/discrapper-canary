@@ -3,8 +3,8 @@ let r;
 var i,
     l = n(442837),
     o = n(570140),
-    s = n(413605),
-    a = n(703656),
+    a = n(413605),
+    s = n(703656),
     c = n(131704),
     u = n(592125),
     d = n(430824),
@@ -81,12 +81,12 @@ let I = new S(o.Z, {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
             if ((0, c.bc)(e.type)) {
-                if (null != u.Z.getChannel(e.id)) return ((0, a.XU)(b.ME, e.id), m.ZP.focus(), !1);
+                if (null != u.Z.getChannel(e.id)) return ((0, s.XU)(b.ME, e.id), m.ZP.focus(), !1);
             } else {
                 if (null == n) return !1;
-                if (null != d.Z.getGuild(n.id) && !(0, s.TY)(t)) {
+                if (null != d.Z.getGuild(n.id) && !(0, a.TY)(t)) {
                     let e = (function (e) {
-                        if ((0, s.W6)(e)) return _.oC.ROLE_SUBSCRIPTIONS;
+                        if ((0, a.W6)(e)) return _.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
                             let e = u.Z.getChannel(t.id);
@@ -94,7 +94,7 @@ let I = new S(o.Z, {
                         }
                         return null;
                     })(t);
-                    return ((0, a.XU)(n.id, e), m.ZP.focus(), !1);
+                    return ((0, s.XU)(n.id, e), m.ZP.focus(), !1);
                 }
             }
         }
@@ -107,7 +107,7 @@ let I = new S(o.Z, {
             return !1;
         ((v = e.context), (j = !1));
         let n = (function (e) {
-            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: s, stage_instance: a, type: c, channel: u, guild: d, is_nickname_changeable: h } = e,
+            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: a, stage_instance: s, type: c, channel: u, guild: d, is_nickname_changeable: h } = e,
                 p = {
                     code: r,
                     state: i,
@@ -115,8 +115,8 @@ let I = new S(o.Z, {
                     approximate_presence_count: n,
                     target_type: l,
                     target_user: o,
-                    target_application: s,
-                    stage_instance: a,
+                    target_application: a,
+                    stage_instance: s,
                     type: c,
                     is_nickname_changeable: h
                 };

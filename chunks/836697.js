@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(110924),
-    a = n(693546),
+    a = n(110924),
+    s = n(693546),
     c = n(863249),
     u = n(937111),
     d = n(914010),
@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(315268);
 function O(e) {
     let { onActivate: t, children: n } = e,
-        a = i.useRef(null),
+        s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         h = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        p = (0, s.Z)(d),
+        p = (0, a.Z)(d),
         f = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -36,7 +36,7 @@ function O(e) {
             children: [
                 (0, r.jsx)(o.yRy, {
                     ref: f,
-                    targetElementRef: a,
+                    targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)('div', {
@@ -107,7 +107,7 @@ function O(e) {
                             (n = n =
                                 {
                                     className: _.popoutAnchor,
-                                    ref: a
+                                    ref: s
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -136,7 +136,7 @@ function y(e) {
         v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         j = (0, f.Z)(),
-        E = (0, s.Z)(v),
+        E = (0, a.Z)(v),
         x = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -148,7 +148,7 @@ function y(e) {
             return e;
         }, [j, n]);
     i.useEffect(() => {
-        n && !C && a.Z.fetchRequestToJoinGuilds();
+        n && !C && s.Z.fetchRequestToJoinGuilds();
     }, [n, C]);
     let S = null != v && j.includes(v);
     return (i.useEffect(() => {

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(524437),
+    a = n(442837),
+    s = n(524437),
     c = n(481060),
     u = n(140155),
     d = n(497089),
@@ -36,7 +36,7 @@ function E(e) {
 function x(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
         { initialized: c, items: v, loading: j, loadMore: x } = (0, p.y6)(),
-        S = (0, s.e7)([u.Z], () => u.Z.localItems),
+        S = (0, a.e7)([u.Z], () => u.Z.localItems),
         I = (0, g.Us)({ location: 'ForYou' }),
         P = i.useMemo(() => [...[...v, ...S].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, S]),
         N = v.length > 0 ? v[0] : null,
@@ -53,7 +53,7 @@ function x(e) {
         className: o()(C.container, { [C.widerInbox]: I }),
         children: [
             (0, r.jsx)(O.Z, {
-                tab: a.X.FOR_YOU,
+                tab: s.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
                 closePopout: l,

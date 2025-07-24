@@ -2,12 +2,12 @@
 var r = n(73800),
     i = n(442837),
     l = n(603263),
-    o = n(768119),
-    a = n(981631);
+    a = n(768119),
+    o = n(981631);
 function c(e) {
     let { searchId: t } = e,
-        [n, c] = r.useState(a.QIO.NEWEST),
-        s = (0, i.e7)([o.Z], () => o.Z.getQuery(t)),
+        [n, c] = r.useState(o.QIO.NEWEST),
+        s = (0, i.e7)([a.Z], () => a.Z.getSearchResultsQuery(t)),
         u = r.useRef(null);
     return (
         r.useEffect(() => {

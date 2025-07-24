@@ -178,6 +178,7 @@ function A(e) {
                                     l
                                 ),
                                 {
+                                    'data-migration-pending': !0,
                                     children: (0, r.jsx)(F, {
                                         className: T.buttonIcon,
                                         size: 'sm',

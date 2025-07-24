@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => N });
 var a,
     o = n(392711),
     s = n(442837),
@@ -18,59 +18,55 @@ function c(e, t, n) {
     );
 }
 let u = [],
-    d = [],
-    _ = !1,
-    f = u,
-    p = {},
-    h = null,
-    m = 0,
-    g = 300000,
-    E = 60000,
-    b = 3600000,
-    y = (e) => {
-        f = (0, o.cloneDeep)(e);
+    d = !1,
+    _ = u,
+    f = {},
+    p = null,
+    h = 0,
+    m = 300000,
+    g = 60000,
+    E = 3600000,
+    b = (e) => {
+        _ = (0, o.cloneDeep)(e);
         let t = {};
-        (f.forEach((e) => {
-            if (((t[e.id] = e), d.length > 0)) {
-                var n;
-                t[e.id].config.effects = null != (n = (0, o.sample)(d)) ? n : [];
-            }
+        (_.forEach((e) => {
+            t[e.id] = e;
         }),
-            (p = t));
+            (f = t));
+    },
+    y = (e) => {
+        d = !0;
     },
     O = (e) => {
-        _ = !0;
+        let { presets: t } = e;
+        ((r = void 0), (i = Date.now() + m), (h = 0), b(0 === t.length ? u : t), (d = !1));
     },
     v = (e) => {
-        let { presets: t } = e;
-        ((r = void 0), (i = Date.now() + g), (m = 0), y(0 === t.length ? u : t), (_ = !1));
+        let { error: t } = e;
+        ((r = t), (i = Date.now() + Math.min(g * 2 ** h, E)), ++h, b(u), (d = !1));
     },
     I = (e) => {
-        let { error: t } = e;
-        ((r = t), (i = Date.now() + Math.min(E * 2 ** m, b)), ++m, y(u), (_ = !1));
-    },
-    T = (e) => {
         let { id: t } = e;
-        h = t;
+        p = t;
     },
-    S = () => {
-        (y(u), (h = null), (i = void 0), (_ = !1));
+    T = () => {
+        (b(u), (p = null), (i = void 0), (d = !1));
     },
-    A = (e) => {
-        S();
+    S = (e) => {
+        T();
     };
-class N extends (a = s.ZP.Store) {
+class A extends (a = s.ZP.Store) {
     get isFetchingAll() {
-        return _;
+        return d;
     }
     get fetchError() {
         return r;
     }
     get profileEffects() {
-        return f;
+        return _;
     }
     get tryItOutId() {
-        return h;
+        return p;
     }
     canFetch() {
         return null == i || Date.now() >= i;
@@ -79,14 +75,14 @@ class N extends (a = s.ZP.Store) {
         return null != i && null == r;
     }
     getProfileEffectById(e) {
-        return null != e ? p[e] : void 0;
+        return null != e ? f[e] : void 0;
     }
 }
-c(N, 'displayName', 'ProfileEffectStore');
-let C = new N(l.Z, {
-    PROFILE_EFFECTS_FETCH_ALL: O,
-    PROFILE_EFFECTS_FETCH_ALL_SUCCESS: v,
-    PROFILE_EFFECTS_FETCH_ALL_FAILURE: I,
-    PROFILE_EFFECTS_SET_TRY_IT_OUT: T,
-    LOGOUT: A
+c(A, 'displayName', 'ProfileEffectStore');
+let N = new A(l.Z, {
+    PROFILE_EFFECTS_FETCH_ALL: y,
+    PROFILE_EFFECTS_FETCH_ALL_SUCCESS: O,
+    PROFILE_EFFECTS_FETCH_ALL_FAILURE: v,
+    PROFILE_EFFECTS_SET_TRY_IT_OUT: I,
+    LOGOUT: S
 });

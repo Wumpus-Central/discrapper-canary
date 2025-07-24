@@ -1,15 +1,15 @@
-(r.d(t, { Z: () => f }), r(539854), r(388685));
-var l = r(512722),
-    n = r.n(l),
-    i = r(90757),
-    o = r.n(i),
+(r.d(t, { Z: () => u }), r(539854), r(388685));
+var n = r(512722),
+    l = r.n(n),
+    o = r(90757),
+    i = r.n(o),
     s = r(65154);
 let a = [s.vA.WINDOW, s.vA.SCREEN];
-function f(e, t, r) {
-    var l;
-    let i = window.DiscordNative;
-    (n()(null != i, "Can't get desktop sources outside of native app"),
-        (t = null != (l = null == t ? void 0 : t.filter((e) => a.includes(e))) ? l : a),
+function u(e, t, r) {
+    var n;
+    let o = window.DiscordNative;
+    (l()(null != o, "Can't get desktop sources outside of native app"),
+        (t = null != (n = null == t ? void 0 : t.filter((e) => a.includes(e))) ? n : a),
         (r =
             null != r
                 ? r
@@ -17,17 +17,17 @@ function f(e, t, r) {
                       width: 150,
                       height: 150
                   }));
-    let f = [];
+    let u = [];
     return (
-        t.includes(s.vA.SCREEN) && e.supports(s.AN.SCREEN_PREVIEWS) && (f.push(e.getScreenPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.SCREEN))),
-        t.includes(s.vA.WINDOW) && e.supports(s.AN.WINDOW_PREVIEWS) && (f.push(e.getWindowPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.WINDOW))),
+        t.includes(s.vA.SCREEN) && e.supports(s.AN.SCREEN_PREVIEWS) && (u.push(e.getScreenPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.SCREEN))),
+        t.includes(s.vA.WINDOW) && e.supports(s.AN.WINDOW_PREVIEWS) && (u.push(e.getWindowPreviews(r.width, r.height)), (t = t.filter((e) => e !== s.vA.WINDOW))),
         0 !== t.length &&
-            f.push(
-                i.desktopCapture.getDesktopCaptureSources({
+            u.push(
+                o.desktopCapture.getDesktopCaptureSources({
                     types: t,
                     thumbnailSize: r
                 })
             ),
-        Promise.all(f).then((e) => o()(e))
+        Promise.all(u).then((e) => i()(e))
     );
 }

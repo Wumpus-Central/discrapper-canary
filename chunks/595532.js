@@ -6,7 +6,6 @@ e.exports = {
     editorBody: 'editorBody_cf6da1',
     selectionGroup: 'selectionGroup_cf6da1',
     editorFooter: 'editorFooter_cf6da1',
-    footerButton: 'footerButton_cf6da1',
     closeCircleButton: 'closeCircleButton_cf6da1',
     closeCircle: 'closeCircle_cf6da1',
     bannerUpsell: 'bannerUpsell_cf6da1',

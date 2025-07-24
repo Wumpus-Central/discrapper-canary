@@ -1,22 +1,22 @@
 (n.d(t, {
     G: () => T,
-    Z: () => S
+    Z: () => N
 }),
     n(388685),
     n(539854));
 var r = n(442837),
     i = n(963374),
     l = n(735020),
-    o = n(627050),
-    a = n(905405),
+    a = n(627050),
+    o = n(905405),
     c = n(786761),
     s = n(937889),
     u = n(903488),
     d = n(416638),
     _ = n(23750),
     E = n(699516),
-    O = n(768119);
-function I(e, t) {
+    I = n(768119);
+function O(e, t) {
     let [n] = t,
         r = n.getMessage(e.id, e.channel_id);
     return (
@@ -51,22 +51,22 @@ function p(e) {
     );
 }
 function T(e) {
-    let t = (0, a.p)(),
-        [n, o, c] = p(
+    let t = (0, o.p)(),
+        [n, a, c] = p(
             (0, r.e7)(
-                [O.Z, u.Z, l.Z],
+                [I.Z, u.Z, l.Z],
                 () => {
                     var n;
                     let r = (0, d.WJ)(e),
-                        o = O.Z.getSearchResultsQuery(r),
-                        a = u.Z.getMessages(r);
-                    if (null == a || 0 === a.length) return [];
-                    let c = (0, i.nC)(null != (n = null == o ? void 0 : o.content) ? n : ''),
+                        a = I.Z.getSearchResultsQuery(r),
+                        o = u.Z.getMessages(r);
+                    if (null == o || 0 === o.length) return [];
+                    let c = (0, i.nC)(null != (n = null == a ? void 0 : a.content) ? n : ''),
                         E = [];
                     return (
-                        a.forEach((e) => {
+                        o.forEach((e) => {
                             let n = new _.ZP(e);
-                            ((n = I(n, [l.Z])).set(
+                            ((n = O(n, [l.Z])).set(
                                 'customRenderedContent',
                                 (0, s.ZP)(n, {
                                     postProcessor: c,
@@ -86,30 +86,31 @@ function T(e) {
         );
     return {
         searchResults: n,
-        blockCount: o,
+        blockCount: a,
         ignoreCount: c
     };
 }
-function S(e) {
-    let t = (0, a.p)(),
-        n = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        [u, d, _] = p(
+let S = [];
+function N(e) {
+    let t = (0, o.p)(),
+        n = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        [d, _, E] = p(
             (0, r.e7)(
-                [O.Z, l.Z],
+                [I.Z, u.Z, l.Z],
                 () => {
                     var r;
-                    let o = O.Z.getQuery(e),
-                        a = O.Z.getRawResults(e);
-                    if (null == o || null == a) return [];
-                    let u = (0, i.nC)(null != (r = o.content) ? r : '');
-                    return a.map((e) =>
+                    let a = I.Z.getSearchResultsQuery(e),
+                        o = u.Z.getRawMessages(e);
+                    if (null == a || null == o) return S;
+                    let d = (0, i.nC)(null != (r = a.content) ? r : '');
+                    return o.map((e) =>
                         e.map((e) => {
-                            let r = I((0, c.e5)(e), [l.Z]);
+                            let r = O((0, c.e5)(e), [l.Z]);
                             return r.isSearchHit
                                 ? r.set(
                                       'customRenderedContent',
                                       (0, s.ZP)(r, {
-                                          postProcessor: u,
+                                          postProcessor: d,
                                           allowHeading: !0,
                                           allowList: !0,
                                           allowGameMentions: n,
@@ -125,8 +126,8 @@ function S(e) {
             )
         );
     return {
-        searchResults: u,
-        blockCount: d,
-        ignoreCount: _
+        searchResults: d,
+        blockCount: _,
+        ignoreCount: E
     };
 }

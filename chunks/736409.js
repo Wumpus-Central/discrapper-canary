@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    s = n(481060),
-    a = n(266454),
+    a = n(481060),
+    s = n(266454),
     c = n(243778),
     u = n(7093),
     d = n(667105),
@@ -25,14 +25,14 @@ let v = (e) => {
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)('SharingPrivacyPopout'),
                 i = (0, d.Ws)({ location: y.dr.CONFLICT_CHECKS }),
                 o = h.G6.useSetting(),
-                s = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(_.S9g.USER_SETTINGS)),
-                a = (0, l.e7)([f.Z], () => f.Z.getStatus()),
+                a = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(_.S9g.USER_SETTINGS)),
+                s = (0, l.e7)([f.Z], () => f.Z.getStatus()),
                 { isOpen: c } = (0, u.Z)();
-            if ((i || (!i && t)) && !s && !c && !__OVERLAY__ && n) {
-                if (r && o && a !== _.Skl.INVISIBLE) return t ? b.N.Activity : null;
-                if (!o && a === _.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
+            if ((i || (!i && t)) && !a && !c && !__OVERLAY__ && n) {
+                if (r && o && s !== _.Skl.INVISIBLE) return t ? b.N.Activity : null;
+                if (!o && s === _.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
                 if (!o) return t ? b.N.Activity : b.N.ActivityNux;
-                if (a === _.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
+                if (s === _.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
             }
             return null;
         })({ isForceShowSharingPopout: n }),
@@ -47,9 +47,9 @@ let v = (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          ((0, a.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
+                          ((0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
                       };
-                      return (0, r.jsx)(s.yRy, {
+                      return (0, r.jsx)(a.yRy, {
                           targetElementRef: x,
                           shouldShow: !0,
                           spacing: 10,
@@ -65,7 +65,7 @@ let v = (e) => {
                               });
                           },
                           children: () =>
-                              (0, r.jsx)(s.P3F, {
+                              (0, r.jsx)(a.P3F, {
                                   innerRef: x,
                                   onClick: e,
                                   children: t

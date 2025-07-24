@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    s = n(481060),
-    a = n(44315),
+    a = n(481060),
+    s = n(44315),
     c = n(563534),
     u = n(846121),
     d = n(703656),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(509775);
 function b(e, t) {
     return (0, r.jsx)(
-        s.Text,
+        a.Text,
         {
             variant: 'text-xs/bold',
             color: 'text-default',
@@ -44,7 +44,7 @@ let _ = i.memo(function (e) {
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
-                s.P3F,
+                a.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,14 +82,14 @@ let _ = i.memo(function (e) {
                             (0, r.jsxs)('div', {
                                 className: m.progressBarText,
                                 children: [
-                                    (0, r.jsx)(s.X6q, {
+                                    (0, r.jsx)(a.X6q, {
                                         variant: 'heading-sm/bold',
                                         children: g.intl.string(g.t.SnrR39)
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: m.rightContainer,
                                         children: [
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
                                                 className: m.rightText,
@@ -109,9 +109,9 @@ let _ = i.memo(function (e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(s.Exd, {
+                            (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
+                                foregroundGradientColor: [(0, s.Lq)(p.Ilk.GREEN_300), (0, s.Lq)(p.Ilk.GREEN_230)],
                                 percent: (v / C) * 100 + 3,
                                 animate: !0
                             })

@@ -18,7 +18,6 @@ function l(e, t, n) {
 let o = {
         enable_recently_active: 'Enable recently active channels',
         theme_setting_in_account_sheet: 'Show theme settings in the Account action sheet',
-        mobile_profile_effect_debug_controls: 'mobile_profile_effect_debug_controls',
         nav_experiment_server_drawer_enabled: '[NavI] Enable expandable server drawer',
         shop_include_unpublished: '[Shop] show unpublished items in shop',
         show_icymi_debug_scores: 'Show ICYMI debug scores',

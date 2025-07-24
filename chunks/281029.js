@@ -1,7 +1,7 @@
 (n.d(t, {
     Dn: () => h,
     if: () => d,
-    ig: () => s
+    ig: () => a
 }),
     n(388685),
     n(290780),
@@ -10,10 +10,10 @@ var r = n(740504),
     i = n(131704),
     l = n(990492),
     o = n(981631);
-function s(e, t) {
+function a(e, t) {
     return null != e && null != t && (e === t || ((0, i.r8)(e) && (0, i.r8)(t)) || ((0, i.bw)(e) && (0, i.bw)(t)));
 }
-function a(e, t, n, r) {
+function s(e, t, n, r) {
     let i = -1;
     if (
         (r.find((e, n) => {
@@ -25,7 +25,7 @@ function a(e, t, n, r) {
         return null;
     for (let t = i; t >= 0 && t < r.length; t += e) {
         let e = r[t];
-        if (s(e.channel.type, n)) return e;
+        if (a(e.channel.type, n)) return e;
     }
     return null;
 }
@@ -39,7 +39,7 @@ function c(e, t) {
                 let {
                     channel: { type: r }
                 } = t;
-                return null != e && (n || s(e.type, r));
+                return null != e && (n || a(e.type, r));
             })
             .find((t, n) => {
                 let {
@@ -65,7 +65,7 @@ function d(e, t, n, r, l) {
         if (r > t) {
             let { GUILD_CATEGORY: t } = o.d4z,
                 r = l[(null != (h = c(n, l, !0)) ? h : 0) + 1],
-                i = a(-1, n.id, e.type, l);
+                i = s(-1, n.id, e.type, l);
             return null == i || i.channel.id === e.id
                 ? null
                 : null == r || r.channel.type === t
@@ -77,18 +77,18 @@ function d(e, t, n, r, l) {
         }
         return null;
     }
-    if (s(e.type, n.type)) return u(n);
+    if (a(e.type, n.type)) return u(n);
     if (r < t) {
         if (n.type === m) {
             let t = l[(null != (f = c(n, l, !0)) ? f : 0) - 1],
-                r = a(1, n.id, e.type, l);
+                r = s(1, n.id, e.type, l);
             if (null == t)
                 return {
                     referenceId: null,
                     parentId: null
                 };
             if (null != r) {
-                if (s(t.channel.type, e.type) || (e.isGuildVocal() && (0, i.r8)(t.channel.type)))
+                if (a(t.channel.type, e.type) || (e.isGuildVocal() && (0, i.r8)(t.channel.type)))
                     return {
                         referenceId: r.channel.id,
                         parentId: t.channel.parent_id
@@ -102,7 +102,7 @@ function d(e, t, n, r, l) {
             return null;
         }
         let t = l[(null != (p = c(n, l, !0)) ? p : 0) - 1],
-            r = a(1, n.id, e.type, l);
+            r = s(1, n.id, e.type, l);
         return null != t || e.isGuildVocal()
             ? (0, i.r8)(e.type) && null != r && ((0, i.r8)(t.channel.type) || t.channel.isCategory())
                 ? {
@@ -117,14 +117,14 @@ function d(e, t, n, r, l) {
     }
     if (n.type === m) {
         let t = l[(null != (g = c(n, l, !0)) ? g : 0) + 1],
-            r = a(-1, n.id, e.type, l);
+            r = s(-1, n.id, e.type, l);
         if (null != r) {
             if (null == t)
                 return {
                     referenceId: r.channel.id,
                     parentId: n.id
                 };
-            if (s(t.channel.type, e.type) || ((0, i.r8)(e.type) && t.channel.isGuildVocal()))
+            if (a(t.channel.type, e.type) || ((0, i.r8)(e.type) && t.channel.isGuildVocal()))
                 return {
                     referenceId: r.channel.id,
                     parentId: t.channel.parent_id
@@ -138,7 +138,7 @@ function d(e, t, n, r, l) {
         return null;
     }
     let b = l[(null != (d = c(n, l, !0)) ? d : 0) + 1],
-        _ = a(-1, n.id, e.type, l);
+        _ = s(-1, n.id, e.type, l);
     if (null == _) return null;
     if (e.isGuildVocal()) {
         if (null == b || b.channel.isCategory())
@@ -160,8 +160,8 @@ function d(e, t, n, r, l) {
         : null;
 }
 function h(e, t, n, o) {
-    let s,
-        a,
+    let a,
+        s,
         u = [],
         d = [],
         h = o._categories,
@@ -169,7 +169,7 @@ function h(e, t, n, o) {
             var n, r;
             let i;
             return (
-                (i = null == s || null == a || ((n = s), (r = a), +(null == n || null == r || null == t[n] || t[n].channel !== e || null == t[r])) ? [...t] : l.ZP.moveItemFromTo(t, s, a)),
+                (i = null == a || null == s || ((n = a), (r = s), +(null == n || null == r || null == t[n] || t[n].channel !== e || null == t[r])) ? [...t] : l.ZP.moveItemFromTo(t, a, s)),
                 (u = u.concat(
                     l.ZP.calculatePositionDeltas({
                         oldOrdering: t,
@@ -189,7 +189,7 @@ function h(e, t, n, o) {
         };
     if (e.isCategory()) {
         let n = [...h].slice(1);
-        ((s = c(e, n)), (a = c(t, n)), (d = p(n)).unshift(h[0]));
+        ((a = c(e, n)), (s = c(t, n)), (d = p(n)).unshift(h[0]));
     }
     if ((0, i.r8)(e.type) || e.isCategory()) {
         let n = (0, r.Z)(d.length > 0 ? d : h, o, (e) => {
@@ -198,14 +198,14 @@ function h(e, t, n, o) {
             } = e;
             return (0, i.r8)(t);
         });
-        ((s = c(e, n)), (a = c(t, n)), p(n));
+        ((a = c(e, n)), (s = c(t, n)), p(n));
     }
     if (e.isGuildVocal() || e.isCategory()) {
         let n = (0, r.Z)(d.length > 0 ? d : h, o, (e) => {
             let { channel: t } = e;
             return t.isGuildVocal();
         });
-        ((s = c(e, n)), (a = c(t, n)), p(n));
+        ((a = c(e, n)), (s = c(t, n)), p(n));
     }
     if (e.parent_id !== n) {
         let t = !1;

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     c = n(362721),
     u = n(12498),
     d = n(111028),
@@ -16,7 +16,7 @@ var r = n(255367),
     b = n(73433);
 function _(e) {
     let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O, enableHangStatus: y, allowChannelTopic: v } = e,
-        C = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        C = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         j = null != C && C.length > 0,
         E = (0, c.ZP)(t, !0),
         x = (!y || !!v) && E,
@@ -34,26 +34,26 @@ function _(e) {
         return null;
     let I = o()(m.statusDiv, n && x ? m.hoverable : null);
     return j
-        ? (0, r.jsx)(a.P3F, {
+        ? (0, r.jsx)(s.P3F, {
               className: I,
               onClick: x ? O : void 0,
-              children: (0, r.jsx)(a.Text, {
+              children: (0, r.jsx)(s.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
                   children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(C, !0, { channelId: t.id }) })
               })
           })
         : n && x && (!S || l)
-          ? (0, r.jsxs)(a.P3F, {
+          ? (0, r.jsxs)(s.P3F, {
                 className: I,
                 onClick: O,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         className: m.statusText,
                         children: g.intl.string(g.t.Mgpxi4)
                     }),
-                    (0, r.jsx)(a.vdY, {
+                    (0, r.jsx)(s.vdY, {
                         color: 'currentColor',
                         className: m.pencilIcon,
                         size: 'xxs'

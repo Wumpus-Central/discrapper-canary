@@ -18,8 +18,8 @@ var i = n(255367),
     I = n(592125),
     p = n(430824),
     C = n(411198),
-    O = n(15274),
-    g = n(924301),
+    g = n(15274),
+    O = n(924301),
     S = n(725436),
     T = n(978227),
     f = n(236373),
@@ -68,18 +68,18 @@ let U = (e, t) => (n) => {
                 },
                 [a, l]
             ),
-            O = r.useCallback(
+            g = r.useCallback(
                 (e) => {
                     L(l)(e);
                 },
                 [l]
             );
         if (null == u) return null;
-        let g = null == E ? void 0 : E.IconComponent,
+        let O = null == E ? void 0 : E.IconComponent,
             T = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != g &&
-                        (0, i.jsx)(g, {
+                    null != O &&
+                        (0, i.jsx)(O, {
                             size: 'xs',
                             color: 'currentColor',
                             className: v.channelIcon
@@ -127,7 +127,7 @@ let U = (e, t) => (n) => {
                             children: Z(l, a)
                                 ? (0, i.jsx)(c.P3F, {
                                       className: v.channelLocationLink,
-                                      onClick: O,
+                                      onClick: g,
                                       children: T
                                   })
                                 : T
@@ -139,7 +139,7 @@ let U = (e, t) => (n) => {
     }),
     j = r.memo(function (e) {
         let { guildId: t, guildScheduledEventId: n, recurrenceId: r, isActive: l, isEnded: o, isMember: d, isExternal: u, onAcceptInstantInvite: _, onTransitionToInviteChannel: h } = e,
-            E = (0, s.e7)([g.ZP], () => g.ZP.isInterestedInEventRecurrence(n, r), [n, r]),
+            E = (0, s.e7)([O.ZP], () => O.ZP.isInterestedInEventRecurrence(n, r), [n, r]),
             I = (e) => {
                 (e.stopPropagation(), d ? l && h() : _());
             };
@@ -204,14 +204,14 @@ let U = (e, t) => (n) => {
             C = r.useCallback(() => {
                 a &&
                     null != n &&
-                    (0, O.bO)({
+                    (0, g.bO)({
                         eventId: n.id,
                         recurrenceId: E
                     });
             }, [a, n, E]);
         if (null == n || !I) return null;
-        let S = (0, g.xt)(n),
-            y = (0, g.Z2)(n),
+        let S = (0, O.xt)(n),
+            y = (0, O.Z2)(n),
             b = n.entity_type === P.WX.EXTERNAL;
         return (0, i.jsx)(h.Z, {
             className: o()({ [v.clickable]: a }),

@@ -22,7 +22,6 @@ let s = {
         highlight_redesigned_icons: 'Highlight redesigned icons',
         alt_clips_1: 'Use alt clip icon 1',
         alt_clips_2: 'Use alt clip icon 2',
-        profile_effect_debug_controls: 'Shop: Scrolls through profile effects with arrow up / down. Restart with R',
         shop_disable_cache: 'Shop: Disable shop cache',
         shop_include_unpublished: 'Shop: Show unpublished items in the shop',
         enable_avatar_decoration_uploads: 'Shop: Enable avatar decoration uploads',

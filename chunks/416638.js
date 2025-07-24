@@ -1,7 +1,7 @@
 (n.d(t, {
     Tm: () => l,
-    WJ: () => o,
-    s5: () => a
+    WJ: () => a,
+    s5: () => o
 }),
     n(539854),
     n(997841),
@@ -22,7 +22,7 @@ function l(e) {
             return e.type;
     }
 }
-function o(e) {
+function a(e) {
     switch (e.type) {
         case i.aib.GUILD:
         case i.aib.GUILD_CHANNEL:
@@ -35,7 +35,7 @@ function o(e) {
             return e.type;
     }
 }
-function a(e) {
+function o(e) {
     switch (e.type) {
         case i.aib.GUILD_CHANNEL:
         case i.aib.GUILD:

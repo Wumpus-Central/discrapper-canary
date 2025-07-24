@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    s = n(481060),
-    a = n(377171),
+    a = n(481060),
+    s = n(377171),
     c = n(243778),
     u = n(645041),
     d = n(430824),
@@ -43,17 +43,17 @@ function E(e) {
                     p = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
                 return u.length > 0 && d < h
                     ? {
-                          trailing: (0, r.jsx)(s.P4T, {
-                              color: s.TVs.colors.STATUS_WARNING,
+                          trailing: (0, r.jsx)(a.P4T, {
+                              color: a.TVs.colors.STATUS_WARNING,
                               size: 'sm'
                           }),
                           showUnread: !0
                       }
                     : l !== p && l - p > 0
                       ? {
-                            trailing: (0, r.jsx)(s.mAB, {
+                            trailing: (0, r.jsx)(a.mAB, {
                                 count: l - p,
-                                color: a.Z.BACKGROUND_ACCENT
+                                color: s.Z.BACKGROUND_ACCENT
                             }),
                             showUnread: !0
                         }
@@ -66,8 +66,8 @@ function E(e) {
         E = (function (e, t) {
             let [n, r] = (0, c.US)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 l = n === o.z.GUILD_POWERUP_PERKS_COACHMARK,
-                { available: s } = (0, O.Z)(e),
-                a = (function (e, t) {
+                { available: a } = (0, O.Z)(e),
+                s = (function (e, t) {
                     let n = (0, _.qI)(e, 'GuildPowerupsChannelRow');
                     return i.useMemo(() => {
                         if (n) {
@@ -82,7 +82,7 @@ function E(e) {
                         return 0;
                     }, [n, e, t]);
                 })(e, t),
-                [f, g] = (0, c.XR)(null != t && !l && a > 0 ? o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK : null, a),
+                [f, g] = (0, c.XR)(null != t && !l && s > 0 ? o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK : null, s),
                 m = f === o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
                 y = i.useMemo(() => {
                     if (null == t || l || m) return;
@@ -110,7 +110,7 @@ function E(e) {
                     let r = (function (e, t, n) {
                         var r, i;
                         let l = null != (i = null == (r = d.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : C.Eu4.NONE,
-                            s = Array.from(v.KW.values())
+                            a = Array.from(v.KW.values())
                                 .map((e) => {
                                     if (null != t.unlockedPowerups[e]) return;
                                     let r = t.allPowerups[e];
@@ -119,27 +119,27 @@ function E(e) {
                                     if (null == i || !(l >= i)) return t.allPowerups[e];
                                 })
                                 .filter(h.lm);
-                        if (0 !== s.length) {
-                            if (1 === s.length && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
+                        if (0 !== a.length) {
+                            if (1 === a.length && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
                                     type: b.J.PERKS_PURCHASABLE,
-                                    powerups: s,
+                                    powerups: a,
                                     markAsDismissed: (t) => {
                                         (0, u.Qd)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e, !0, t);
                                     }
                                 };
-                            if (s.length > 1 && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e))
+                            if (a.length > 1 && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e))
                                 return {
                                     type: b.J.PERKS_PURCHASABLE,
-                                    powerups: s,
+                                    powerups: a,
                                     markAsDismissed: (t) => {
                                         (0, u.Qd)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e, !0, t);
                                     }
                                 };
                         }
-                    })(e, t, s);
+                    })(e, t, a);
                     if (null != r) return r;
-                }, [e, t, l, m, s]),
+                }, [e, t, l, m, a]),
                 [j, E] = (0, c.bf)(null != y ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: b.d });
             return i.useMemo(() => {
                 if (null != t) {
@@ -149,7 +149,7 @@ function E(e) {
                             markAsDismissed: r
                         };
                     if (m) {
-                        let e = v.O5[a],
+                        let e = v.O5[s],
                             n = t.allPowerups[e];
                         if (null == n) return;
                         return {
@@ -208,7 +208,7 @@ function E(e) {
                         );
                     }
                 }
-            }, [t, l, r, y, j, E, m, g, a]);
+            }, [t, l, r, y, j, E, m, g, s]);
         })(e, n);
     if (null !== n && (null != f || j || null != E))
         return {

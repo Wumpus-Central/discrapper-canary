@@ -96,7 +96,7 @@ function G(e) {
 }
 function B(e) {
     let t = m.Z.getBasicChannel(e.channel_id);
-    if (null == t || !I.TPd.GUILD_TEXTUAL.has(t.type)) return !1;
+    if (null == t || !I.TPd.GUILD_TEXTUAL.has(t.type) || O.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)) return !1;
     switch (O.ZP.resolvedMessageNotifications(t)) {
         case I.bL.ALL_MESSAGES:
             return !0;

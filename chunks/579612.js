@@ -1,31 +1,31 @@
-n.d(t, {
-    GQ: () => _,
+r.d(t, {
+    GQ: () => S,
     MC: () => m,
-    P: () => S,
+    P: () => _,
     ZP: () => y
 });
-var r = n(255367);
-n(73800);
-var s = n(120356),
-    l = n.n(s),
-    a = n(481060),
-    i = n(933557),
-    o = n(471445),
-    c = n(266076),
-    u = n(592125),
-    d = n(699516),
-    h = n(246946),
-    p = n(594174),
-    f = n(51144),
-    g = n(290082);
+var n = r(255367);
+r(73800);
+var s = r(120356),
+    l = r.n(s),
+    a = r(481060),
+    i = r(933557),
+    o = r(471445),
+    c = r(266076),
+    u = r(592125),
+    h = r(699516),
+    d = r(246946),
+    p = r(594174),
+    f = r(51144),
+    g = r(290082);
 function m(e) {
     let { channel: t } = e;
     if (t.isDM()) {
         let e = t.getRecipientId(),
-            n = p.default.getUser(e);
-        if (null == n) return null;
-        let s = n.getAvatarURL(null, 20);
-        return (0, r.jsx)(a.qEK, {
+            r = p.default.getUser(e);
+        if (null == r) return null;
+        let s = r.getAvatarURL(null, 20);
+        return (0, n.jsx)(a.qEK, {
             'aria-hidden': !0,
             className: g.searchResultDMChannelIcon,
             size: a.EFr.SIZE_20,
@@ -33,55 +33,55 @@ function m(e) {
         });
     }
     if (t.isGroupDM())
-        return (0, r.jsx)(c.Z, {
+        return (0, n.jsx)(c.Z, {
             'aria-hidden': !0,
             className: g.searchResultGDMChannelIcon,
             channel: t,
             size: a.EFr.SIZE_20,
             experimentLocation: 'search_popout'
         });
-    let n = (0, o.KS)(t);
-    return null == n ? null : (0, r.jsx)(n, { className: g.searchResultChannelIcon });
-}
-function _(e) {
-    let { channel: t } = e;
-    return t.isDM() || t.isGroupDM()
-        ? (0, r.jsx)('span', {
-              className: g.searchResultDMChannelName,
-              children: (0, i.F6)(t, p.default, d.Z)
-          })
-        : (0, r.jsx)('strong', { children: (0, i.F6)(t, p.default, d.Z) });
+    let r = (0, o.KS)(t);
+    return null == r ? null : (0, n.jsx)(r, { className: g.searchResultChannelIcon });
 }
 function S(e) {
+    let { channel: t } = e;
+    return t.isDM() || t.isGroupDM()
+        ? (0, n.jsx)('span', {
+              className: g.searchResultDMChannelName,
+              children: (0, i.F6)(t, p.default, h.Z)
+          })
+        : (0, n.jsx)('strong', { children: (0, i.F6)(t, p.default, h.Z) });
+}
+function _(e) {
     let { channel: t } = e,
-        n = u.Z.getChannel(t.parent_id);
+        r = u.Z.getChannel(t.parent_id);
     if (t.isDM()) {
         let e = t.getRecipientId(),
-            n = p.default.getUser(e);
-        return null == n
+            r = p.default.getUser(e);
+        return null == r
             ? null
-            : (0, r.jsx)('span', {
+            : (0, n.jsx)('span', {
                   className: g.searchResultDMUserName,
-                  children: f.ZP.getUserTag(n, { identifiable: h.Z.enabled && h.Z.hidePersonalInformation ? 'never' : 'always' })
+                  children: f.ZP.getUserTag(r, { identifiable: d.Z.enabled && d.Z.hidePersonalInformation ? 'never' : 'always' })
               });
     }
-    if (null != n)
-        return (0, r.jsx)('span', {
+    if (null != r)
+        return (0, n.jsx)('span', {
             className: g.searchResultChannelCategory,
-            children: (0, i.F6)(n, p.default, d.Z)
+            children: (0, i.F6)(r, p.default, h.Z)
         });
 }
 function y(e) {
-    let { channel: t, text: n, channelContainerClassName: s, textContainerClassName: a } = e;
+    let { channel: t, text: r, channelContainerClassName: s, textContainerClassName: a } = e;
     return null == t
-        ? (0, r.jsx)('strong', { children: n })
-        : (0, r.jsxs)('div', {
+        ? (0, n.jsx)('strong', { children: r })
+        : (0, n.jsxs)('div', {
               className: l()(g.resultChannel, s),
               children: [
-                  (0, r.jsx)(m, { channel: t }),
-                  (0, r.jsxs)('div', {
+                  (0, n.jsx)(m, { channel: t }),
+                  (0, n.jsxs)('div', {
                       className: a,
-                      children: [(0, r.jsx)(_, { channel: t }), (0, r.jsx)(S, { channel: t })]
+                      children: [(0, n.jsx)(S, { channel: t }), (0, n.jsx)(_, { channel: t })]
                   })
               ]
           });

@@ -17,7 +17,7 @@ var r = n(97519),
     i = n(524437),
     l = n(695346),
     o = n(594174);
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,49 +79,49 @@ let d = (0, r.U)((e) => ({
         touched: !1,
         setNickname: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     nickname: t,
                     touched: !0
                 })
             ),
         setDmsAllowed: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     dmsAllowed: t,
                     touched: !0
                 })
             ),
         setShowActivity: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     showActivity: t,
                     touched: !0
                 })
             ),
         setMutedServer: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     mutedServer: t,
                     touched: !0
                 })
             ),
         setInviteCode: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     inviteCode: t,
                     touched: !0
                 })
             ),
         setGuildId: (t) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     guildId: t,
                     touched: !0
                 })
             ),
         initialize: (t, n, r) =>
             e((e) =>
-                a(s({}, e), {
+                s(a({}, e), {
                     guildSize: t,
                     inviteCode: n,
                     guildId: r,

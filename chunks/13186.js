@@ -6,8 +6,8 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(990547),
+    a = n.n(o),
+    s = n(990547),
     c = n(755721),
     u = n(481060),
     d = n(213609),
@@ -17,8 +17,8 @@ let f = l.forwardRef(function (e, t) {
     let { body: n, header: r, artClassName: l, buttonText: o, onClose: p, art: f, align: g } = e;
     return (
         (0, d.Z)({
-            type: a.ImpressionTypes.POPOUT,
-            name: a.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK
+            type: s.ImpressionTypes.POPOUT,
+            name: s.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK
         }),
         (0, i.jsx)('div', {
             className: h.tooltip,
@@ -61,7 +61,7 @@ let f = l.forwardRef(function (e, t) {
                             children: o
                         })
                     }),
-                    (0, i.jsx)('div', { className: s()(h.pointer, { [h.pointerBottom]: 'bottom' === g }) })
+                    (0, i.jsx)('div', { className: a()(h.pointer, { [h.pointerBottom]: 'bottom' === g }) })
                 ]
             })
         })

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(392711),
-    a = n(114858),
+    a = n(392711),
+    s = n(114858),
     c = n(442837),
     u = n(481060),
     d = n(239091),
@@ -80,7 +80,7 @@ function B(e, t) {
     );
 }
 function V(e) {
-    let { message: t, channel: n, focusProps: l, isSelected: s, isUnread: a, groupedMessages: d } = e,
+    let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
         h = n.type === L.d4z.UNKNOWN ? u.VL1 : (0, f.KS)(n, null),
         m = (0, p.ZP)(n, !1),
         b = (0, c.e7)([w.Z], () => w.Z.getGuild(n.getGuildId())),
@@ -121,7 +121,7 @@ function V(e) {
                     onMouseEnter: E.onMouseEnter,
                     className: U.messageContainer,
                     children: [
-                        a && (0, r.jsx)('div', { className: U.unreadDot }),
+                        s && (0, r.jsx)('div', { className: U.unreadDot }),
                         (0, r.jsx)(u.Kqy, {
                             align: 'start',
                             style: {
@@ -188,9 +188,9 @@ function V(e) {
                                                 (0, r.jsx)(R.Z, {
                                                     message: t,
                                                     channel: n,
-                                                    isUnread: a
+                                                    isUnread: s
                                                 }),
-                                                t.mentioned && a
+                                                t.mentioned && s
                                                     ? (0, r.jsx)(u.mAB, {
                                                           className: U.mentionBadge,
                                                           count: 1
@@ -205,8 +205,8 @@ function V(e) {
                                     align: 'center',
                                     gap: 4,
                                     className: o()(U.channelName, {
-                                        [U.unread]: a,
-                                        [U.selected]: s
+                                        [U.unread]: s,
+                                        [U.selected]: a
                                     }),
                                     children: [
                                         null !== h &&
@@ -218,8 +218,8 @@ function V(e) {
                                             variant: 'text-sm/medium',
                                             lineClamp: 1,
                                             className: o()(U.channelName, {
-                                                [U.unread]: a,
-                                                [U.selected]: s
+                                                [U.unread]: s,
+                                                [U.selected]: a
                                             }),
                                             children: [m, !S && ' \xB7 '.concat(O)]
                                         })
@@ -227,8 +227,8 @@ function V(e) {
                                 }),
                                 (0, r.jsx)(z, {
                                     message: t,
-                                    isUnread: a,
-                                    isSelected: s,
+                                    isUnread: s,
+                                    isSelected: a,
                                     channel: n
                                 }),
                                 d.length > 0 &&
@@ -247,7 +247,7 @@ function V(e) {
 }
 function F(e) {
     let { overflowMessages: t } = e,
-        n = (0, s.uniqBy)(
+        n = (0, a.uniqBy)(
             t.map((e) => e.author),
             (e) => e.id
         ).slice(0, 3);
@@ -280,10 +280,10 @@ function H(e) {
     });
 }
 function z(e) {
-    let { message: t, channel: n, isUnread: l, isSelected: s } = e,
-        { previewContent: a, Icon: c } = (function (e) {
+    let { message: t, channel: n, isUnread: l, isSelected: a } = e,
+        { previewContent: s, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: s } = (0, j.Z)(t, {
+                { content: a } = (0, j.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,
@@ -295,7 +295,7 @@ function z(e) {
             return (0, i.useMemo)(() => {
                 let e = '' === t.content,
                     i = t.embeds.some((e) => e.type === L.hBH.GIFV),
-                    a = (function (e) {
+                    s = (function (e) {
                         let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
@@ -306,7 +306,7 @@ function z(e) {
                     f = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
                     g = t.type === L.uaV.USER_JOIN,
                     _ = null;
-                1 === a ? (_ = u.XBm) : a > 1 ? (_ = u.Ka2) : c ? (_ = b.Z) : h || p ? (_ = u.QDj) : d ? (_ = u.SlE) : f && (_ = u.gj8);
+                1 === s ? (_ = u.XBm) : s > 1 ? (_ = u.Ka2) : c ? (_ = b.Z) : h || p ? (_ = u.QDj) : d ? (_ = u.SlE) : f && (_ = u.gj8);
                 let y = !0,
                     v = null;
                 if (e)
@@ -314,11 +314,11 @@ function z(e) {
                     else if (h) {
                         var C;
                         ((y = !1), (v = null == (C = t.poll) ? void 0 : C.question.text));
-                    } else v = p ? k.intl.string(k.t.sad2PD) : i ? k.intl.string(k.t.p0oZm5) : a > 1 ? k.intl.formatToPlainString(k.t.rtfTKi, { count: a }) : 1 === a ? k.intl.string(k.t.tCcq5u) : d ? k.intl.format(k.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? k.intl.string(k.t.slFYgo) : g ? k.intl.string(k.t.Yvvfw8) : k.intl.string(k.t.sDqZHB);
+                    } else v = p ? k.intl.string(k.t.sad2PD) : i ? k.intl.string(k.t.p0oZm5) : s > 1 ? k.intl.formatToPlainString(k.t.rtfTKi, { count: s }) : 1 === s ? k.intl.string(k.t.tCcq5u) : d ? k.intl.format(k.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? k.intl.string(k.t.slFYgo) : g ? k.intl.string(k.t.Yvvfw8) : k.intl.string(k.t.sDqZHB);
                 else
                     ((y = !1),
                         (v = (0, r.jsx)(O.ZP, {
-                            content: s,
+                            content: a,
                             message: t,
                             compact: !1,
                             className: o()(U.message, {
@@ -341,12 +341,12 @@ function z(e) {
                         Icon: _
                     }
                 );
-            }, [t, s, n, l]);
+            }, [t, a, n, l]);
         })({
             message: t,
             channel: n,
             isUnread: l,
-            isSelected: s
+            isSelected: a
         });
     return (0, r.jsxs)(u.Kqy, {
         direction: 'horizontal',
@@ -362,7 +362,7 @@ function z(e) {
                 variant: 'text-sm/normal',
                 lineClamp: 1,
                 className: U.message,
-                children: a
+                children: s
             })
         ]
     });
@@ -370,9 +370,9 @@ function z(e) {
 let W = (0, i.memo)(
     function (e) {
         var t;
-        let { message: i, groupedMessages: l, isUnread: s } = e,
+        let { message: i, groupedMessages: l, isUnread: a } = e,
             h = i.message,
-            { params: p } = (0, a.$B)(),
+            { params: p } = (0, s.$B)(),
             f = (0, c.e7)([P.Z], () => {
                 if (null == h) return null;
                 let e = P.Z.getChannel(i.channelId);
@@ -395,7 +395,7 @@ let W = (0, i.memo)(
                       T.Z.inboxItemClick({
                           message: h,
                           channel: f,
-                          isUnread: s,
+                          isUnread: a,
                           isSidebar: g === Z.jP.SIDEBAR
                       });
                   },
@@ -421,7 +421,7 @@ let W = (0, i.memo)(
                       channel: f,
                       isSelected: h.id === p.messageId,
                       groupedMessages: m,
-                      isUnread: s
+                      isUnread: a
                   })
               });
     },

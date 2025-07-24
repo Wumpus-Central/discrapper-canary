@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(525654),
-    a = n.n(s),
+    a = n(525654),
+    s = n.n(a),
     c = n(91192),
     u = n(442837),
     d = n(524437),
@@ -29,7 +29,7 @@ var r = n(255367),
     S = n(388032),
     I = n(128406);
 function P(e) {
-    var t, n, l, s, P, w, Z;
+    var t, n, l, a, P, w, Z;
     let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
         k = i.useRef(null),
         [U, G] = (0, E.ZP)(k),
@@ -46,16 +46,16 @@ function P(e) {
             if (null == i || null == r) return;
             let o = null == (e = i.getScrollerNode()) ? void 0 : e.children;
             if (null == o) return;
-            let s = o[r];
-            if (null == s) return;
-            let { scrollTop: a, offsetHeight: c } = i.getScrollerState();
-            (s.offsetTop < a || s.offsetTop > a + c) && i.scrollTo({ to: s.offsetTop });
+            let a = o[r];
+            if (null == a) return;
+            let { scrollTop: s, offsetHeight: c } = i.getScrollerState();
+            (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
-        (s = U),
+        (a = U),
         (P = G),
         i.useEffect(() => {
             let e = () => {
-                let e = s.channels.find((e) => !e.collapsed);
+                let e = a.channels.find((e) => !e.collapsed);
                 null != e && P.markChannelRead(e);
             };
             return (
@@ -64,7 +64,7 @@ function P(e) {
                     _.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [P, s.channels]),
+        }, [P, a.channels]),
         (w = G),
         i.useEffect(() => {
             let e = (e) => {
@@ -105,7 +105,7 @@ function P(e) {
                 (0, r.jsx)(v.Z, {
                     Icon: h.xx7,
                     header: S.intl.string(S.t['6XMM+P']),
-                    tip: (null == (Z = a().os) ? void 0 : Z.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
+                    tip: (null == (Z = s().os) ? void 0 : Z.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
                 })
             ]
         });

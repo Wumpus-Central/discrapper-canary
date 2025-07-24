@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(642613), n(539854), n(388685));
+(n.d(t, { Z: () => O }), n(539854), n(388685));
 var r = n(392711),
     i = n(570140),
     a = n(235820),
@@ -19,57 +19,53 @@ function E(e) {
 }
 let b = (0, r.debounce)(y, g);
 async function y(e) {
-    let { loadUntilMessageId: t, onlyUnread: n = !1 } = e,
-        r = [],
-        a = f.Z.getNotifyingChannelIds();
-    if (null == a) return;
-    let s = f.Z.getChannelInfoMap();
-    for (let e of (a.sort((e, t) => d.default.compare(u.ZP.lastMessageId(t), u.ZP.lastMessageId(e))), a)) {
-        var c, _;
-        if (n && !u.ZP.hasUnread(e)) continue;
-        let i = u.ZP.lastMessageId(e),
-            a = null != t && null != i && 0 > d.default.compare(i, t);
-        if (r.length >= m || a) break;
-        (n ? (null == (c = s[e]) ? void 0 : c.loadState) === p.a7.UNLOADED : (null == (_ = s[e]) ? void 0 : _.loadState) !== p.a7.LOADED) &&
-            r.push(
+    let { onlyUnread: t = !1 } = e,
+        n = [],
+        r = f.Z.getNotifyingChannelIds();
+    if (null == r) return;
+    let a = f.Z.getChannelInfoMap();
+    for (let e of r) {
+        var s, c;
+        if (t && !u.ZP.hasUnread(e)) continue;
+        let r = u.ZP.lastMessageId(e),
+            i = null != r && d.default.age(r) > p.ib;
+        if (n.length >= m || i) break;
+        (t ? (null == (s = a[e]) ? void 0 : s.loadState) === p.a7.UNLOADED : (null == (c = a[e]) ? void 0 : c.loadState) !== p.a7.LOADED) &&
+            n.push(
                 o.Z.fetchMessages({
                     channelId: e,
-                    limit: n ? p.W9 : p.AQ,
-                    isPreload: n
+                    limit: t ? p.W9 : p.AQ,
+                    isPreload: t
                 })
             );
     }
-    let h = l.ZP.getSettingsFilteredMentions(),
-        g = null != h && h.length > 0 ? h[h.length - 1].id : null;
-    if ((l.ZP.hasMore && !l.ZP.loading && r.push(E(g)), 0 === r.length))
+    let _ = l.ZP.getSettingsFilteredMentions(),
+        h = null != _ && _.length > 0 ? _[_.length - 1].id : null;
+    if ((l.ZP.hasMore && !l.ZP.loading && n.push(E(h)), 0 === n.length))
         return void i.Z.dispatch({
             type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS',
-            onlyUnread: n,
-            finished: !0,
-            requestedMessageId: t
+            onlyUnread: t,
+            finished: !0
         });
     try {
-        (await Promise.all(r),
+        (await Promise.all(n),
             i.Z.dispatch({
                 type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS',
-                onlyUnread: n,
-                requestedMessageId: t
+                onlyUnread: t
             }));
     } catch (e) {
         i.Z.dispatch({ type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE' });
     }
 }
 let O = {
-    loadMoreInbox(e, t) {
-        if (!f.Z.canLoadMore(e, t)) return !1;
+    loadMoreInbox() {
+        let { onlyUnread: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!f.Z.canLoadMore({ onlyUnread: e })) return !1;
         (i.Z.dispatch({
             type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START',
-            onlyUnread: t
+            onlyUnread: e
         }),
-            b({
-                loadUntilMessageId: e,
-                onlyUnread: t
-            }));
+            b({ onlyUnread: e }));
     },
     inboxItemClick(e) {
         let { message: t, channel: n, isUnread: r, isSidebar: a, track: l = !0 } = e;

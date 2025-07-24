@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     o = n(704215),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     c = n(239091),
     u = n(266454),
     d = n(45966),
@@ -95,15 +95,15 @@ function E(e) {
         (S && !P && !N) ||
             E ||
             w ||
-            (A = (0, r.jsx)(a.IGR, {
-                color: s.Z.colors.BADGE_BRAND_BG.css,
+            (A = (0, r.jsx)(s.IGR, {
+                color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: C.intl.string(C.t.y2b7CA),
                 className: j.newChannel
             })),
         (0, r.jsx)(_.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
-                (0, r.jsx)(a.H$4, {
+                (0, r.jsx)(s.H$4, {
                     size: 'md',
                     color: 'currentColor',
                     className: e

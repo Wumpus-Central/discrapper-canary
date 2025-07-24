@@ -1,60 +1,60 @@
-(n.d(t, {
+(r.d(t, {
     $: () => F,
-    Z: () => q
+    Z: () => Q
 }),
-    n(388685),
-    n(35282));
-var r = n(255367),
-    s = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    i = n(392711),
-    o = n.n(i),
-    c = n(442837),
-    u = n(481060),
-    d = n(447543),
-    h = n(603263),
-    p = n(410030),
-    f = n(169223),
-    g = n(778877),
-    m = n(903488),
-    _ = n(416638),
-    S = n(695346),
-    y = n(592125),
-    b = n(768119),
-    x = n(944486),
-    E = n(585483),
-    C = n(72006),
-    v = n(965996),
-    O = n(652399),
-    I = n(970850),
-    j = n(861262),
-    R = n(251285),
-    T = n(406326),
-    P = n(994463),
-    N = n(611004),
-    A = n(619753),
-    Z = n(902733),
-    k = n(981631),
-    M = n(531578),
-    L = n(388032),
-    w = n(682065);
-function D(e, t, n) {
+    r(388685),
+    r(35282));
+var n = r(255367),
+    s = r(73800),
+    l = r(120356),
+    a = r.n(l),
+    i = r(392711),
+    o = r.n(i),
+    c = r(442837),
+    u = r(481060),
+    h = r(447543),
+    d = r(603263),
+    p = r(410030),
+    f = r(169223),
+    g = r(778877),
+    m = r(903488),
+    S = r(416638),
+    _ = r(695346),
+    y = r(592125),
+    b = r(768119),
+    x = r(944486),
+    E = r(585483),
+    O = r(72006),
+    C = r(965996),
+    v = r(652399),
+    j = r(970850),
+    R = r(861262),
+    I = r(251285),
+    T = r(406326),
+    P = r(994463),
+    N = r(611004),
+    A = r(619753),
+    M = r(902733),
+    Z = r(981631),
+    k = r(531578),
+    w = r(388032),
+    L = r(682065);
+function D(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
 function F(e) {
     let t = null != e ? b.Z.getEditorState(e) : null;
-    return null != t ? C.Sq(t) : null;
+    return null != t ? O.Sq(t) : null;
 }
 class H extends s.Component {
     componentDidMount() {
@@ -73,8 +73,8 @@ class H extends s.Component {
             D(this, 'autoAnalytics', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
                 if (null == t.props.searchAnalyticsId || t.props.isSearching) return;
-                let n = 0,
-                    r = 0,
+                let r = 0,
+                    n = 0,
                     s = 0,
                     l = 0;
                 (null != t.props.searchResults &&
@@ -82,17 +82,17 @@ class H extends s.Component {
                         .flatten()
                         .filter((e) => e.isSearchHit)
                         .forEach((e) => {
-                            (null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && s++, null != e.attachments && e.attachments.length > 0 && r++);
+                            (null != e.content && '' !== e.content && (r++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && s++, null != e.attachments && e.attachments.length > 0 && n++);
                         }),
-                    0 === n
-                        ? (0, O.Qb)({
+                    0 === r
+                        ? (0, v.Qb)({
                               searchId: t.props.searchId,
                               searchType: t.props.searchType,
                               searchAnalyticsId: t.props.searchAnalyticsId,
                               searchQueryString: F(t.props.searchId),
-                              searchQuery: b.Z.getQuery(t.props.searchId)
+                              searchQuery: null != t.props.searchId ? b.Z.getSearchResultsQuery(t.props.searchId) : null
                           })
-                        : (0, O.hM)({
+                        : (0, v.hM)({
                               searchType: t.props.searchType,
                               searchId: t.props.searchId,
                               searchAnalyticsId: t.props.searchAnalyticsId,
@@ -104,32 +104,32 @@ class H extends s.Component {
                               totalResults: t.props.searchTotalResults,
                               pageResults: null != t.props.searchResults ? t.props.searchResults.length : null,
                               isIndexing: t.props.searchIsIndexing,
-                              pageNumMessages: n,
+                              pageNumMessages: r,
                               pageNumLinks: l,
                               pageNumEmbeds: s,
-                              pageNumAttachments: r,
+                              pageNumAttachments: n,
                               searchQueryString: F(t.props.searchId),
-                              searchQuery: b.Z.getQuery(t.props.searchId)
+                              searchQuery: null != t.props.searchId ? b.Z.getSearchResultsQuery(t.props.searchId) : null
                           }));
             }));
     }
 }
 let B = (e) => {
     let { children: t } = e;
-    return (0, r.jsx)('div', {
-        className: w.emptyResultsWrap,
-        children: (0, r.jsx)('div', {
-            className: w.emptyResultsContent,
+    return (0, n.jsx)('div', {
+        className: L.emptyResultsWrap,
+        children: (0, n.jsx)('div', {
+            className: L.emptyResultsContent,
             children: t
         })
     });
 };
 class U extends s.PureComponent {
     componentDidMount() {
-        E.S.subscribe(k.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        E.S.subscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        E.S.unsubscribe(k.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        E.S.unsubscribe(Z.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -140,14 +140,14 @@ class U extends s.PureComponent {
         }
     }
     render() {
-        return (0, r.jsxs)('section', {
-            className: w.searchResultsWrap,
-            'aria-label': L.intl.string(L.t.zkoeq6),
+        return (0, n.jsxs)('section', {
+            className: L.searchResultsWrap,
+            'aria-label': w.intl.string(w.t.zkoeq6),
             children: [
                 this.renderHeader(),
-                (0, r.jsx)(u.Den, {
+                (0, n.jsx)(u.Den, {
                     ref: this.scrollerRef,
-                    className: w.scroller,
+                    className: L.scroller,
                     children: this.renderContent()
                 }),
                 this.renderFooter()
@@ -157,18 +157,18 @@ class U extends s.PureComponent {
     constructor(...e) {
         (super(...e),
             D(this, 'scrollerRef', s.createRef()),
-            D(this, 'scrollTo', (e, t, n) => {
-                let r = this.scrollerRef.current;
-                if (null == r) return;
-                let s = r.getScrollerState().scrollTop - e;
-                r.scrollTo({
+            D(this, 'scrollTo', (e, t, r) => {
+                let n = this.scrollerRef.current;
+                if (null == n) return;
+                let s = n.getScrollerState().scrollTop - e;
+                n.scrollTo({
                     to: s,
                     animate: t,
-                    callback: n
+                    callback: r
                 });
             }),
             D(this, 'selectChannel', (e) => {
-                e !== x.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
+                e !== x.Z.getChannelId() && h.ZP.transitionToInviteChannelSync(e);
             }),
             D(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
@@ -177,17 +177,17 @@ class U extends s.PureComponent {
             D(this, 'handleSearchModeChange', (e) => {
                 let {
                     searchId: t,
-                    searchType: n,
-                    search: { isSearching: r },
+                    searchType: r,
+                    search: { isSearching: n },
                     searchAnalyticsId: s,
                     onSearchModeChange: l,
                     searchMode: a
                 } = this.props;
                 e === a ||
-                    r ||
-                    ((0, O.zW)({
+                    n ||
+                    ((0, v.zW)({
                         searchId: t,
-                        searchType: n,
+                        searchType: r,
                         searchAnalyticsId: s,
                         mode: e
                     }),
@@ -198,11 +198,11 @@ class U extends s.PureComponent {
                     searchId: e,
                     search: { showBlockedResults: t }
                 } = this.props;
-                h.QY(e, !t);
+                d.QY(e, !t);
             }),
             D(this, 'renderFooter', () =>
                 this.props.isFeedbackVisible
-                    ? (0, r.jsx)(Z.Z, {
+                    ? (0, n.jsx)(M.Z, {
                           searchId: this.props.searchId,
                           searchType: this.props.searchType,
                           dismissFeedbackEntrypoint: this.props.dismissFeedbackEntrypoint
@@ -213,25 +213,25 @@ class U extends s.PureComponent {
                 let {
                     searchId: e,
                     searchMode: t,
-                    search: { totalResults: n, isSearching: s, isHistoricalIndexing: l, documentsIndexed: a }
+                    search: { totalResults: r, isSearching: s, isHistoricalIndexing: l, documentsIndexed: a }
                 } = this.props;
-                return (0, r.jsx)(T.Z, {
+                return (0, n.jsx)(T.Z, {
                     searchId: e,
                     searchMode: t,
                     onSearchModeChange: this.handleSearchModeChange,
-                    totalResults: n,
+                    totalResults: r,
                     isSearching: s,
                     isIndexing: l,
                     documentsIndexed: a
                 });
             }),
             D(this, 'renderIndexing', () => {
-                let e = this.props.searchType === k.aib.GUILD ? L.intl.string(L.t.AXPbZm) : L.intl.string(L.t.Q0JJjo);
-                return (0, r.jsxs)(B, {
+                let e = this.props.searchType === Z.aib.GUILD ? w.intl.string(w.t.AXPbZm) : w.intl.string(w.t.Q0JJjo);
+                return (0, n.jsxs)(B, {
                     children: [
-                        (0, r.jsx)(P.Z, {}),
-                        (0, r.jsx)('div', {
-                            className: (w.emptyResultsText, w.stillIndexing),
+                        (0, n.jsx)(P.Z, {}),
+                        (0, n.jsx)('div', {
+                            className: (L.emptyResultsText, L.stillIndexing),
                             children: e
                         })
                     ]
@@ -239,62 +239,62 @@ class U extends s.PureComponent {
             }),
             D(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
-                    t = e ? L.intl.string(L.t['VrK/2d']) : L.intl.string(L.t.V6nAfH);
-                return (0, r.jsxs)(B, {
+                    t = e ? w.intl.string(w.t['VrK/2d']) : w.intl.string(w.t.V6nAfH);
+                return (0, n.jsxs)(B, {
                     children: [
-                        (0, r.jsx)('div', { className: a()(w.noResultsImage, { [w.alt]: e }) }),
-                        (0, r.jsx)('div', {
-                            className: a()(w.emptyResultsText, w.noResults, { [w.alt]: e }),
+                        (0, n.jsx)('div', { className: a()(L.noResultsImage, { [L.alt]: e }) }),
+                        (0, n.jsx)('div', {
+                            className: a()(L.emptyResultsText, L.noResults, { [L.alt]: e }),
                             children: t
                         })
                     ]
                 });
             }),
             D(this, 'renderError', () =>
-                (0, r.jsxs)(B, {
+                (0, n.jsxs)(B, {
                     children: [
-                        (0, r.jsx)('div', { className: w.errorImage }),
-                        (0, r.jsx)('div', {
-                            className: a()(w.emptyResultsText, w.errorMessage),
-                            children: L.intl.string(L.t.uvDZBQ)
+                        (0, n.jsx)('div', { className: L.errorImage }),
+                        (0, n.jsx)('div', {
+                            className: a()(L.emptyResultsText, L.errorMessage),
+                            children: w.intl.string(w.t.uvDZBQ)
                         })
                     ]
                 })
             ),
             D(this, 'handleSearchResultClick', (e, t) => {
-                let n = y.Z.getChannel(e.channel_id),
-                    r = null != n ? n.getGuildId() : null,
+                let r = y.Z.getChannel(e.channel_id),
+                    n = null != r ? r.getGuildId() : null,
                     { searchId: s, searchType: l, searchAnalyticsId: a } = this.props,
                     { offset: i, totalResults: o } = this.props.search;
-                (0, O.sL)({
+                (0, v.sL)({
                     searchId: s,
                     searchType: l,
                     searchAnalyticsId: a,
-                    guildId: r,
+                    guildId: n,
                     channelId: e.channel_id,
                     messageId: e.id,
                     pageResults: null != this.props.searchResults ? this.props.searchResults.length : null,
                     totalResults: o,
-                    limit: k.vpv,
-                    page: Math.floor(i / k.vpv) + 1,
+                    limit: Z.vpv,
+                    page: Math.floor(i / Z.vpv) + 1,
                     offset: i,
                     index: t,
                     searchQueryString: F(s),
-                    searchQuery: b.Z.getQuery(s)
+                    searchQuery: b.Z.getSearchResultsQuery(s)
                 });
             }),
             D(this, 'handlePageChange', (e) => {
-                let { searchId: t, searchType: n, searchAnalyticsId: r } = this.props;
-                ((0, O.t6)({
+                let { searchId: t, searchType: r, searchAnalyticsId: n } = this.props;
+                ((0, v.t6)({
                     searchId: t,
-                    searchType: n,
-                    searchAnalyticsId: r,
+                    searchType: r,
+                    searchAnalyticsId: n,
                     newPageIndex: e
                 }),
                     this.props.onPageChange(e));
             }),
             D(this, 'renderContent', () => {
-                let { searchResults: e, blockCount: t, ignoreCount: n, search: s, searchId: l, renderEmbeds: a } = this.props,
+                let { searchResults: e, blockCount: t, ignoreCount: r, search: s, searchId: l, renderEmbeds: a } = this.props,
                     { totalResults: i, isSearching: o, isIndexing: c, hasError: u } = s;
                 return u
                     ? this.renderError()
@@ -303,12 +303,12 @@ class U extends s.PureComponent {
                       : o
                         ? null
                         : i > 0
-                          ? (0, r.jsx)(A.Z, {
+                          ? (0, n.jsx)(A.Z, {
                                 search: s,
                                 searchResults: e,
                                 onClick: this.handleSearchResultClick,
                                 blockCount: t,
-                                ignoreCount: n,
+                                ignoreCount: r,
                                 searchId: l,
                                 renderEmbeds: a,
                                 scrollTo: this.scrollTo,
@@ -319,56 +319,86 @@ class U extends s.PureComponent {
     }
 }
 function W(e) {
-    let { searchId: t, isFeedbackVisible: n, theme: l, dismissFeedbackEntrypoint: a } = e,
-        i = (0, c.cj)([b.Z], () => b.Z.getResultsState(t), [t]),
-        o = (0, j.k)(t),
-        u = (0, c.e7)([b.Z], () => b.Z.getAnalyticsId(t)),
-        { searchResults: d, ignoreCount: p, blockCount: f } = (0, R.Z)(t),
-        { searchMode: g, setSearchMode: m } = (0, I.Z)({ searchId: t }),
-        _ = s.useCallback(
+    let { searchId: t, isFeedbackVisible: r, theme: l, dismissFeedbackEntrypoint: a } = e,
+        i = (0, c.cj)([m.Z, b.Z], () => {
+            var e, r, n, s, l;
+            return {
+                isSearching: null != (e = m.Z.getIsFetching(t)) && e,
+                isIndexing: null != (r = m.Z.getIsIndexing(t)) && r,
+                isHistoricalIndexing: null != (n = m.Z.getIsHistoricalIndexing(t)) && n,
+                documentsIndexed: m.Z.getDocumentsIndexed(t),
+                offset: null != (s = b.Z.getSearchResultsOffset(t)) ? s : 0,
+                totalResults: null != (l = m.Z.getTotalCount(t)) ? l : 0,
+                hasError: null != m.Z.getError(t),
+                showBlockedResults: b.Z.shouldShowBlockedResults(t),
+                showNoResultsAlt: b.Z.shouldShowNoResultsAlt(t)
+            };
+        }),
+        o = (0, R.k)(t),
+        u = (0, c.e7)([m.Z], () => m.Z.getAnalyticsId(t)),
+        { searchResults: h, ignoreCount: d, blockCount: p } = (0, I.Z)(t),
+        { searchMode: f, setSearchMode: g } = (0, j.Z)({ searchId: t }),
+        S = s.useCallback(
             (e) => {
-                m(e);
-                let n = F(t);
-                h.Nz(t, e, n);
+                g(e);
+                let r = F(t),
+                    n = b.Z.getSearchResultsQuery(t);
+                null != r &&
+                    null != n &&
+                    N.Z.fetchMessages({
+                        searchId: t,
+                        queryString: r,
+                        searchQuery: n,
+                        searchMode: e,
+                        offset: 0
+                    });
             },
-            [t, m]
+            [t, g]
         ),
         y = s.useCallback(
             (e) => {
                 if (i.isSearching) return;
-                let n = F(t);
-                h.oO(t, e, n);
+                let r = F(t),
+                    n = b.Z.getSearchResultsQuery(t);
+                null != r &&
+                    null != n &&
+                    N.Z.fetchMessages({
+                        searchId: t,
+                        queryString: r,
+                        searchQuery: n,
+                        offset: e * Z.vpv
+                    });
             },
             [t, i.isSearching]
         ),
-        x = s.useDeferredValue(d),
+        x = s.useDeferredValue(h),
         E = s.useDeferredValue(i);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(U, {
+            (0, n.jsx)(U, {
                 searchId: t,
                 search: E,
                 searchAnalyticsId: u,
                 searchType: o,
                 searchResults: x,
-                ignoreCount: p,
-                blockCount: f,
-                renderEmbeds: S.NA.useSetting(),
-                developerMode: S.Sb.useSetting(),
+                ignoreCount: d,
+                blockCount: p,
+                renderEmbeds: _.NA.useSetting(),
+                developerMode: _.Sb.useSetting(),
                 theme: l,
-                isFeedbackVisible: n,
+                isFeedbackVisible: r,
                 dismissFeedbackEntrypoint: a,
                 onPageChange: y,
-                onSearchModeChange: _,
-                searchMode: g
+                onSearchModeChange: S,
+                searchMode: f
             }),
-            (0, r.jsx)(H, {
+            (0, n.jsx)(H, {
                 searchId: t,
                 searchType: o,
                 searchAnalyticsId: u,
-                searchResults: d,
+                searchResults: h,
                 searchOffset: i.offset,
-                searchLimit: k.vpv,
+                searchLimit: Z.vpv,
                 searchHasError: i.hasError,
                 searchTotalResults: i.totalResults,
                 searchIsIndexing: i.isHistoricalIndexing,
@@ -378,26 +408,26 @@ function W(e) {
     });
 }
 function G(e) {
-    let { theme: t, isFeedbackVisible: n, dismissFeedbackEntrypoint: l } = e,
-        a = s.useMemo(() => ({ type: k.aib.DMS }), []),
-        i = (0, _.WJ)(a),
+    let { theme: t, isFeedbackVisible: r, dismissFeedbackEntrypoint: l } = e,
+        a = s.useMemo(() => ({ type: Z.aib.DMS }), []),
+        i = (0, S.WJ)(a),
         o = (0, c.cj)([m.Z, b.Z], () => {
-            var e, t, n, r;
+            var e, t, r, n, s;
             return {
                 isSearching: null != (e = m.Z.getIsFetching(i)) && e,
                 isIndexing: null != (t = m.Z.getIsIndexing(i)) && t,
-                isHistoricalIndexing: null != (n = m.Z.getIsHistoricalIndexing(i)) && n,
+                isHistoricalIndexing: null != (r = m.Z.getIsHistoricalIndexing(i)) && r,
                 documentsIndexed: m.Z.getDocumentsIndexed(i),
-                offset: b.Z.getOffset(i),
-                totalResults: null != (r = m.Z.getTotalCount(i)) ? r : 0,
+                offset: null != (n = b.Z.getSearchResultsOffset(i)) ? n : 0,
+                totalResults: null != (s = m.Z.getTotalCount(i)) ? s : 0,
                 hasError: null != m.Z.getError(i),
                 showBlockedResults: b.Z.shouldShowBlockedResults(i),
                 showNoResultsAlt: b.Z.shouldShowNoResultsAlt(i)
             };
         }),
-        u = (0, c.e7)([m.Z], () => m.Z.getLastSearchAnalyticsId()),
-        { searchResults: d, ignoreCount: h, blockCount: p } = (0, R.G)(a),
-        { searchMode: f, setSearchMode: g } = (0, I.Z)({ searchId: i }),
+        u = (0, c.e7)([m.Z], () => m.Z.getAnalyticsId(i)),
+        { searchResults: h, ignoreCount: d, blockCount: p } = (0, I.G)(a),
+        { searchMode: f, setSearchMode: g } = (0, j.Z)({ searchId: i }),
         y = s.useCallback(
             (e) => {
                 g(e);
@@ -423,32 +453,32 @@ function G(e) {
             },
             [a, i, f]
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(U, {
-                searchId: k.aib.DMS,
+            (0, n.jsx)(U, {
+                searchId: Z.aib.DMS,
                 search: o,
                 searchAnalyticsId: u,
-                searchType: k.aib.DMS,
-                searchResults: d,
-                ignoreCount: h,
+                searchType: Z.aib.DMS,
+                searchResults: h,
+                ignoreCount: d,
                 blockCount: p,
-                renderEmbeds: S.NA.useSetting(),
-                developerMode: S.Sb.useSetting(),
+                renderEmbeds: _.NA.useSetting(),
+                developerMode: _.Sb.useSetting(),
                 theme: t,
-                isFeedbackVisible: n,
+                isFeedbackVisible: r,
                 dismissFeedbackEntrypoint: l,
                 onPageChange: x,
                 onSearchModeChange: y,
                 searchMode: f
             }),
-            (0, r.jsx)(H, {
-                searchId: k.aib.DMS,
-                searchType: k.aib.DMS,
+            (0, n.jsx)(H, {
+                searchId: Z.aib.DMS,
+                searchType: Z.aib.DMS,
                 searchAnalyticsId: u,
-                searchResults: d,
+                searchResults: h,
                 searchOffset: o.offset,
-                searchLimit: k.vpv,
+                searchLimit: Z.vpv,
                 searchHasError: o.hasError,
                 searchTotalResults: o.totalResults,
                 searchIsIndexing: o.isHistoricalIndexing,
@@ -457,13 +487,13 @@ function G(e) {
         ]
     });
 }
-function q(e) {
+function Q(e) {
     let { searchId: t } = e,
-        n = (0, p.ZP)(),
+        r = (0, p.ZP)(),
         l = (0, g.U)({ location: 'SearchResults' }),
         a = s.useRef(null),
         [i, o] = s.useState(!1),
-        { enabled: c, force: u } = (0, v.f)({ location: 'SearchResults' });
+        { enabled: c, force: u } = (0, C.f)({ location: 'SearchResults' });
     (s.useEffect(() => {
         c && u && o(!0);
     }, [u, c]),
@@ -473,24 +503,24 @@ function q(e) {
                     (t !== a.current &&
                         ((a.current = t),
                         f.Z.possiblyShowFeedbackModal(
-                            M.nw.SEARCH_RESULTS,
+                            k.nw.SEARCH_RESULTS,
                             () => o(!0),
                             () => o(!1)
                         ))));
         }, [c, u, t]));
-    let d = s.useCallback(() => {
+    let h = s.useCallback(() => {
         o(!1);
     }, []);
-    return l && t === k.aib.DMS
-        ? (0, r.jsx)(G, {
-              theme: n,
+    return l && t === Z.aib.DMS
+        ? (0, n.jsx)(G, {
+              theme: r,
               isFeedbackVisible: i,
-              dismissFeedbackEntrypoint: d
+              dismissFeedbackEntrypoint: h
           })
-        : (0, r.jsx)(W, {
-              theme: n,
+        : (0, n.jsx)(W, {
+              theme: r,
               searchId: t,
               isFeedbackVisible: i,
-              dismissFeedbackEntrypoint: d
+              dismissFeedbackEntrypoint: h
           });
 }

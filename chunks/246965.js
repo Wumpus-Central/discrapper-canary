@@ -30,14 +30,14 @@ let p =
                           }
                       })(p)
                   ),
-                  O = (0, u.N)(),
-                  g = (0, o.Z)(null != O && null != O.expires_at ? Date.parse(O.expires_at) : 0),
-                  S = null == O || (null == (t = O.subscription_trial) ? void 0 : t.sku_id) !== p || null == O.expires_at || Object.values(g).every((e) => 0 === e);
+                  g = (0, u.N)(),
+                  O = (0, o.Z)(null != g && null != g.expires_at ? Date.parse(g.expires_at) : 0),
+                  S = null == g || (null == (t = g.subscription_trial) ? void 0 : t.sku_id) !== p || null == g.expires_at || Object.values(O).every((e) => 0 === e);
               return ((0, c.Z)(
                   {
                       type: r.ImpressionTypes.VIEW,
                       name: r.ImpressionNames.TRIAL_NOTICE,
-                      properties: { trial_id: null == O ? void 0 : O.trial_id }
+                      properties: { trial_id: null == g ? void 0 : g.trial_id }
                   },
                   { disableTrack: S }
               ),
@@ -70,11 +70,11 @@ let p =
                                     default:
                                         throw Error('Unsupported subscription tier: '.concat(e));
                                 }
-                            })(p, g),
+                            })(p, O),
                             (0, i.jsx)(l.EyT, {
                                 onClick: () => {
                                     (0, d.Z)({
-                                        trialId: O.trial_id,
+                                        trialId: g.trial_id,
                                         subscriptionTier: p,
                                         analyticsLocations: C,
                                         analyticsObject: {

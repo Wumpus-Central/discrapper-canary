@@ -3,8 +3,8 @@ var r,
     i = n(255367),
     l = n(73800),
     o = n(120356),
-    s = n.n(o),
-    a = n(748780),
+    a = n.n(o),
+    s = n(748780),
     c = n(846519),
     u = n(481060),
     d = n(585483),
@@ -42,7 +42,7 @@ class b extends (r = l.PureComponent) {
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
-            a.Z.spring(
+            s.Z.spring(
                 this.state.translateY,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -64,10 +64,10 @@ class b extends (r = l.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: s()(f.arrowGroup, e),
+            className: a()(f.arrowGroup, e),
             children: [
-                (0, i.jsx)(a.Z.div, {
-                    className: s()(f.arrowContainer, f.horizontal),
+                (0, i.jsx)(s.Z.div, {
+                    className: a()(f.arrowContainer, f.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
@@ -76,7 +76,7 @@ class b extends (r = l.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag1),
+                    className: a()(f.arrowContainer, f.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(536404),
@@ -84,7 +84,7 @@ class b extends (r = l.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag2),
+                    className: a()(f.arrowContainer, f.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(569347),
@@ -114,7 +114,7 @@ class b extends (r = l.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: s()(f.tutorial, {
+            className: a()(f.tutorial, {
                 [f.shown]: t,
                 [f.hasQuery]: e
             }),
@@ -142,7 +142,7 @@ class b extends (r = l.PureComponent) {
         (super(...e),
             g(this, 'state', {
                 shown: !1,
-                translateY: new a.Z.Value(0)
+                translateY: new s.Z.Value(0)
             }),
             g(this, 'rootRef', l.createRef()),
             g(this, 'focusTimeout', new c.V7()),

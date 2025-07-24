@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(913527),
-    a = n.n(s),
+    a = n(913527),
+    s = n.n(a),
     c = n(91192),
     u = n(442837),
     d = n(524437),
@@ -73,7 +73,7 @@ function A() {
                         var n,
                             i,
                             { ref: o } = e,
-                            s = (function (e, t) {
+                            a = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
@@ -125,7 +125,7 @@ function A() {
                                         ((l.current = e), (o.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     }
                                 },
-                                s
+                                a
                             )),
                             (i = i = { children: (0, r.jsx)(R, { scheduledMessages: t }) }),
                             Object.getOwnPropertyDescriptors
@@ -199,11 +199,11 @@ function R(e) {
 }
 let D = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        s = new v.ZP({
+        a = new v.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: j.default.getUser(t.userId),
-            timestamp: a()(t.sendAtTimestamp).toDate(),
+            timestamp: s()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId
         }),
         { isError: c, stateMessage: u } = (function (e) {
@@ -274,14 +274,14 @@ let D = i.memo(function (e) {
                                   (0, r.jsx)(
                                       f.Z,
                                       {
-                                          message: s,
+                                          message: a,
                                           channel: n,
                                           className: w.message,
                                           compact: y.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: Z
                                       },
-                                      s.id
+                                      a.id
                                   ),
                                   (0, r.jsx)(h.P3F, {
                                       className: w.cancelMessageButton,
@@ -293,6 +293,6 @@ let D = i.memo(function (e) {
                       ]
                   })
         },
-        s.id
+        a.id
     );
 });

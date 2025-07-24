@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(636977),
     o = n(442837),
-    s = n(704215),
-    a = n(952265),
+    a = n(704215),
+    s = n(952265),
     c = n(481060),
     u = n(570140),
     d = n(266454),
@@ -28,11 +28,11 @@ function x() {
         S = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
         I = (0, c.s9z)(c.JQI),
         P = t || (0, m.EO)(x) || S || I,
-        [N, w] = (0, h.US)(e && !P ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent);
+        [N, w] = (0, h.US)(e && !P ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent);
     i.useEffect(() => {
-        N === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+        N === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
-            (0, a.ZD)(
+            (0, s.ZD)(
                 async () => {
                     let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
                     return function (t) {
@@ -45,11 +45,11 @@ function x() {
                             onClose: o,
                             ctaOnClick: () => {
                                 (w(C.L.TAKE_ACTION),
-                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
+                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
                                         dismissAction: C.L.INDIRECT_ACTION,
                                         groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),
-                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                                         dismissAction: C.L.INDIRECT_ACTION,
                                         groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),

@@ -1,44 +1,39 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(892567),
-    l = n(462991);
-let c = i.forwardRef((e, t) => {
-    let { muted: n = !1, highlighted: i = !1, avatar: a, decorators: c, name: u, subText: d, avatarClassName: _, innerClassName: f, displayNameStyles: p, displayNameStyleEffects: h } = e;
+    s = n(462991);
+let l = i.forwardRef((e, t) => {
+    let { muted: n = !1, highlighted: i = !1, avatar: a, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: _ } = e;
     return (0, r.jsxs)('div', {
         ref: t,
-        className: o()(l.layout, f, {
-            [l.muted]: n,
-            [l.highlighted]: i
+        className: o()(s.layout, _, {
+            [s.muted]: n,
+            [s.highlighted]: i
         }),
         children: [
             (0, r.jsx)('div', {
-                className: o()(l.avatar, _),
+                className: o()(s.avatar, d),
                 children: a
             }),
             (0, r.jsxs)('div', {
-                className: l.content,
+                className: s.content,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: l.nameAndDecorators,
+                        className: s.nameAndDecorators,
                         children: [
                             (0, r.jsx)('div', {
-                                className: l.name,
-                                children: (0, r.jsx)(s.Z, {
-                                    userName: u,
-                                    displayNameStyles: p,
-                                    effectDisplayType: h
-                                })
+                                className: s.name,
+                                children: c
                             }),
-                            c
+                            l
                         ]
                     }),
-                    null != d
+                    null != u
                         ? (0, r.jsx)('div', {
-                              className: l.subText,
-                              children: d
+                              className: s.subText,
+                              children: u
                           })
                         : null
                 ]
@@ -46,5 +41,5 @@ let c = i.forwardRef((e, t) => {
         ]
     });
 });
-c.displayName = 'AvatarWithText';
-let u = c;
+l.displayName = 'AvatarWithText';
+let c = l;

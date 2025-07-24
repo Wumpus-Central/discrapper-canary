@@ -1,23 +1,23 @@
-(n.d(t, { Z: () => o }), n(388685));
-var r = n(772848),
-    s = n(710845),
-    l = n(416638);
-function a(e, t, n) {
+(r.d(t, { Z: () => o }), r(388685));
+var n = r(772848),
+    s = r(710845),
+    l = r(416638);
+function a(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
 function i(e) {
     return {
-        sessionId: (0, r.Z)(),
+        sessionId: (0, n.Z)(),
         selectedSearchTab: null != e ? e : null,
         searchCount: 0,
         searchWithFiltersCount: 0
@@ -26,23 +26,23 @@ function i(e) {
 new s.Z('SearchSessionAnalyticsManager');
 let o = new (class {
     upsertState(e, t) {
-        let n = (0, l.Tm)(e),
-            r = this.sessions.get(n),
-            s = null != r ? r : i();
+        let r = (0, l.Tm)(e),
+            n = this.sessions.get(r),
+            s = null != n ? n : i();
         this.sessions.set(
-            n,
+            r,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            a(e, t, n[t]);
+                        n.forEach(function (t) {
+                            a(e, t, r[t]);
                         }));
                 }
                 return e;
@@ -54,18 +54,18 @@ let o = new (class {
         return this.sessions.get(t);
     }
     incrementSearchCount(e, t) {
-        var n, r;
+        var r, n;
         let s = this.getState(e),
             l = {};
-        ((l.searchCount = (null != (n = null == s ? void 0 : s.searchCount) ? n : 0) + 1), t && (l.searchWithFiltersCount = (null != (r = null == s ? void 0 : s.searchWithFiltersCount) ? r : 0) + 1), this.upsertState(e, l));
+        ((l.searchCount = (null != (r = null == s ? void 0 : s.searchCount) ? r : 0) + 1), t && (l.searchWithFiltersCount = (null != (n = null == s ? void 0 : s.searchWithFiltersCount) ? n : 0) + 1), this.upsertState(e, l));
     }
     getSearchCount(e) {
-        var t, n;
-        return null != (n = null == (t = this.getState(e)) ? void 0 : t.searchCount) ? n : 0;
+        var t, r;
+        return null != (r = null == (t = this.getState(e)) ? void 0 : t.searchCount) ? r : 0;
     }
     getSearchWithFiltersCount(e) {
-        var t, n;
-        return null != (n = null == (t = this.getState(e)) ? void 0 : t.searchWithFiltersCount) ? n : 0;
+        var t, r;
+        return null != (r = null == (t = this.getState(e)) ? void 0 : t.searchWithFiltersCount) ? r : 0;
     }
     getSearchCountWithoutFilters(e) {
         return Math.max(0, this.getSearchCount(e) - this.getSearchWithFiltersCount(e));
@@ -79,7 +79,7 @@ let o = new (class {
     }
     refreshSearchQueryAnalyticsId(e) {
         let t = (0, l.Tm)(e);
-        this.searchQueryIds.set(t, (0, r.Z)());
+        this.searchQueryIds.set(t, (0, n.Z)());
     }
     getQueryId(e) {
         let t = (0, l.Tm)(e);
@@ -90,9 +90,9 @@ let o = new (class {
         return null == (t = this.getState(e)) ? void 0 : t.selectedSearchTab;
     }
     initialize(e) {
-        let { searchContext: t, initialTab: n, initializeSearchQueryId: s } = e,
+        let { searchContext: t, initialTab: r, initializeSearchQueryId: s } = e,
             a = (0, l.Tm)(t);
-        (this.sessions.has(a) || this.sessions.set(a, i(n)), s && !this.searchQueryIds.has(a) && this.searchQueryIds.set(a, (0, r.Z)()));
+        (this.sessions.has(a) || this.sessions.set(a, i(r)), s && !this.searchQueryIds.has(a) && this.searchQueryIds.set(a, (0, n.Z)()));
     }
     terminate(e) {
         let t = (0, l.Tm)(e);

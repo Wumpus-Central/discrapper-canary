@@ -3,15 +3,15 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(215569),
-    s = n(481060),
-    a = n(592125),
+    a = n(481060),
+    s = n(592125),
     c = n(358652),
     u = n(19780),
     d = n(919436),
     h = n(388032);
 function p() {
-    (0, l.e7)([a.Z], () => a.Z.getPrivateChannelsVersion());
-    let e = a.Z.getMutablePrivateChannels(),
+    (0, l.e7)([s.Z], () => s.Z.getPrivateChannelsVersion());
+    let e = s.Z.getMutablePrivateChannels(),
         t = (0, l.Wu)([c.Z], () => c.Z.getUnreadPrivateChannelIds()),
         { selectedVoiceGuildId: n, selectedVoiceChannelId: p } = (0, l.cj)([u.Z], () => ({
             selectedVoiceGuildId: u.Z.getGuildId(),
@@ -24,7 +24,7 @@ function p() {
         g = null == n && null != p ? e[p] : null;
     return (
         null != g && f.unshift((0, r.jsx)(d.Z, { channel: g }, g.id)),
-        (0, r.jsx)(s.Kqy, {
+        (0, r.jsx)(a.Kqy, {
             id: 'guild-list-unread-dms',
             role: 'group',
             'aria-label': h.intl.string(h.t.YUU0RE),

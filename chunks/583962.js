@@ -8,8 +8,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(42133),
-    a = n(91192),
+    a = n(42133),
+    s = n(91192),
     c = n(442837),
     u = n(704215),
     d = n(477690),
@@ -115,7 +115,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 numTotal: x.oCV[L]
             });
         (R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase()));
-        let W = (0, a.JA)('boosts-'.concat(t.id)),
+        let W = (0, s.JA)('boosts-'.concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
             X = () =>
@@ -187,7 +187,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             (0, r.jsxs)('div', {
                                 className: o()(N.progressBarContainer, { [N.progressBarContainerComplete]: R }),
                                 children: [
-                                    (0, r.jsx)(s.animated.div, {
+                                    (0, r.jsx)(a.animated.div, {
                                         className: N.progressBar,
                                         style: B
                                     }),

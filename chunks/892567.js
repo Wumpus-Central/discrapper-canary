@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -6,51 +6,52 @@ var r = n(255367),
     s = n(522942),
     l = n(866442),
     c = n(442837),
-    u = n(607070),
-    d = n(594928),
-    _ = n(821795),
-    f = n(760692),
-    p = n(7284),
-    h = n(482695);
-let m = i.memo(function (e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = _.F.STATIC } = e,
-        a = d.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
-        s = (0, p.j)({ displayNameStyles: n }),
+    u = n(481060),
+    d = n(607070),
+    _ = n(594928),
+    f = n(821795),
+    p = n(760692),
+    h = n(7284),
+    m = n(482695);
+let g = i.memo(function (e) {
+    let { userName: t, displayNameStyles: n, effectDisplayType: i = f.F.STATIC } = e,
+        a = _.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
+        s = (0, h.j)({ displayNameStyles: n }),
         {
-            useReducedMotion: m,
-            saturation: E,
-            desaturateUserColors: b
-        } = (0, c.cj)([u.Z], () => ({
-            useReducedMotion: u.Z.useReducedMotion,
-            saturation: u.Z.saturation,
-            desaturateUserColors: u.Z.desaturateUserColors
+            useReducedMotion: g,
+            saturation: b,
+            desaturateUserColors: y
+        } = (0, c.cj)([d.Z], () => ({
+            useReducedMotion: d.Z.useReducedMotion,
+            saturation: d.Z.saturation,
+            desaturateUserColors: d.Z.desaturateUserColors
         }));
     if (!a || null == n) return t;
-    let y = n.colors.map((e) => (0, l.ho)(e, !1, b ? E : null)),
-        O = (0, f.K)(n.effectId, y),
-        v = g(n.effectId);
+    let O = n.colors.map((e) => (0, l.ho)(e, !1, y ? b : null)),
+        v = (0, p.K)(n.effectId, O),
+        I = E(n.effectId);
     return (0, r.jsx)('div', {
-        className: o()(h.container, v, s, {
-            [h.showEffect]: i !== _.F.PLAIN,
-            [h.animated]: i === _.F.ANIMATED && !m
+        className: o()(m.container, I, s, {
+            [m.showEffect]: i !== f.F.PLAIN,
+            [m.animated]: i === f.F.ANIMATED && !g
         }),
-        style: O,
-        'data-username-with-effects': 'string' == typeof t ? t : '',
+        style: v,
+        'data-username-with-effects': (0, u.qgQ)(t),
         children: t
     });
 });
-function g(e) {
+function E(e) {
     switch (e) {
         case s.m.GRADIENT:
-            return h.gradient;
+            return m.gradient;
         case s.m.NEON:
-            return h.neon;
+            return m.neon;
         case s.m.TOON:
-            return h.toon;
+            return m.toon;
         case s.m.POP:
-            return h.pop;
+            return m.pop;
         case s.m.SOLID:
-            return h.solid;
+            return m.solid;
         default:
             return '';
     }

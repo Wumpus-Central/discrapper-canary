@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(570140),
-    a = n(45114),
+    a = n(570140),
+    s = n(45114),
     c = n(110255),
     u = n(268623),
     d = n(324701),
@@ -69,7 +69,7 @@ let O = {
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
 function v(e) {
-    let { label: t, onClick: n, message: l, Icon: s, interactionType: a } = e,
+    let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
         [c, u] = (0, i.useState)(!1);
     return (0, r.jsx)(o.ua7, {
         text: t,
@@ -85,12 +85,12 @@ function v(e) {
                     onClick: (e) => {
                         ((0, p.Qz)({
                             message: l,
-                            interactionType: a
+                            interactionType: s
                         }),
                             e.stopPropagation(),
                             n(l));
                     },
-                    children: (0, r.jsx)(s, {
+                    children: (0, r.jsx)(a, {
                         size: c ? 'sm' : 'xs',
                         className: m.actionIcon
                     })
@@ -99,7 +99,7 @@ function v(e) {
     });
 }
 function C(e) {
-    let { channel: t, message: n, label: l, Icon: s, Menu: a, interactionType: c } = e,
+    let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
         [h, f] = (0, i.useState)(!1),
         g = (0, i.useRef)(null);
@@ -114,7 +114,7 @@ function C(e) {
         renderPopout: (e) =>
             (0, r.jsx)(o.P3F, {
                 onClick: (e) => e.stopPropagation(),
-                children: (0, r.jsx)(a, {
+                children: (0, r.jsx)(s, {
                     renderPopoutProps: e,
                     channel: t,
                     message: n
@@ -142,7 +142,7 @@ function C(e) {
                                     f(!h));
                             },
                             children: (0, r.jsx)(
-                                s,
+                                a,
                                 _(b({}, e), {
                                     message: n,
                                     'aria-label': l,
@@ -161,11 +161,11 @@ let j = {
             Icon: o.dz2,
             label: g.intl.string(g.t.e6RscX),
             onClick: (e) => {
-                (s.Z.dispatch({
+                (a.Z.dispatch({
                     type: 'NOTIFICATIONS_INBOX_ITEM_ACK',
                     messageId: e.id
                 }),
-                    a.In(
+                    s.In(
                         e.channel_id,
                         {
                             object: f.qAy.MARK_MESSAGE_AS_READ_BUTTON,
@@ -186,7 +186,7 @@ let j = {
             Menu: (e) => {
                 let { message: t, renderPopoutProps: n } = e,
                     i = (0, l.e7)([h.Z], () => h.Z.getSavedMessage(t.channel_id, t.id)),
-                    s = (0, u.x)({
+                    a = (0, u.x)({
                         message: t,
                         savedMessage: i
                     });
@@ -223,7 +223,7 @@ let j = {
                                           })
                                   }),
                             (0, r.jsx)(o.Clw, {}),
-                            s
+                            a
                         ]
                     })
                 );

@@ -8,7 +8,6 @@ e.exports = {
     editorBody: 'editorBody__2a891',
     selectionGroup: 'selectionGroup__2a891',
     editorFooter: 'editorFooter__2a891',
-    footerButton: 'footerButton__2a891',
     closeCircleButton: 'closeCircleButton__2a891',
     closeCircle: 'closeCircle__2a891'
 };

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(42133),
-    a = n(442837),
+    a = n(42133),
+    s = n(442837),
     c = n(481060),
     u = n(570140),
     d = n(45114),
@@ -34,7 +34,7 @@ var p = n(377171),
     R = n(388032),
     D = n(21678);
 let L = {
-    controller: new s.Controller({
+    controller: new a.Controller({
         value: 1,
         immediate: !0
     }),
@@ -49,10 +49,10 @@ let L = {
 function M(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        { selectedFilter: s } = (0, E.Z)(),
-        p = (0, a.e7)([x.Z], () => x.Z.oldestDisplayedMessageId),
-        I = (0, a.Wu)([x.Z], () => x.Z.getInboxMessages()),
-        P = (0, a.Wu)([y.ZP, _.Z, x.Z], () =>
+        { selectedFilter: a } = (0, E.Z)(),
+        p = (0, s.e7)([x.Z], () => x.Z.oldestDisplayedMessageId),
+        I = (0, s.Wu)([x.Z], () => x.Z.getInboxMessages()),
+        P = (0, s.Wu)([y.ZP, _.Z, x.Z], () =>
             I.filter(
                 (e) =>
                     !(0, S.YH)({
@@ -66,7 +66,7 @@ function M(e) {
                     e.id !== x.Z.lastClickedUnreadMessageId
             )
         ),
-        N = (0, a.Wu)([y.ZP, _.Z, x.Z], () =>
+        N = (0, s.Wu)([y.ZP, _.Z, x.Z], () =>
             I.filter(
                 (e) =>
                     (0, S.YH)({
@@ -78,13 +78,10 @@ function M(e) {
                     }) || e.id === x.Z.lastClickedUnreadMessageId
             )
         ),
-        R = i.useCallback(
-            (e) => {
-                s !== T.V5.BOOKMARKS && j.Z.loadMoreInbox(e);
-            },
-            [s]
-        ),
-        { hasLoadedEver: M, hasNotifyingChannels: F } = (0, a.cj)([x.Z], () => ({
+        R = i.useCallback(() => {
+            a !== T.V5.BOOKMARKS && j.Z.loadMoreInbox();
+        }, [a]),
+        { hasLoadedEver: M, hasNotifyingChannels: F } = (0, s.cj)([x.Z], () => ({
             hasLoadedEver: x.Z.hasLoadedEver,
             hasNotifyingChannels: null != x.Z.getNotifyingChannelIds()
         }));
@@ -116,7 +113,7 @@ function M(e) {
                     });
             }, [e, t]);
         })(M ? N : null));
-    let H = (0, a.Wu)([m.Z], () => m.Z.getSavedMessages()),
+    let H = (0, s.Wu)([m.Z], () => m.Z.getSavedMessages()),
         z = i.useMemo(
             () =>
                 H.flatMap((e) => {
@@ -136,8 +133,8 @@ function M(e) {
                 }),
             [H]
         ),
-        W = k(P, s),
-        K = k(N, s);
+        W = k(P, a),
+        K = k(N, a);
     ((0, h.ZP)(() => {
         var e, t;
         if (C.Lk.getCurrentConfig({ location: 'NotificationsInboxSidebar' }).notificationCenterVariant !== C.jP.SIDEBAR) return;
@@ -158,7 +155,7 @@ function M(e) {
         }));
     let { filterStyle: Y } = C.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
         { entrypoints: q } = (0, g._k)({ location: 'NotificationsInboxSidebar' }),
-        X = Y === C.v8.DROPDOWN && s !== T.V5.ALL;
+        X = Y === C.v8.DROPDOWN && a !== T.V5.ALL;
     return (0, r.jsxs)('nav', {
         className: o()(D.container, { [D.panelSpacing]: l }),
         children: [
@@ -219,16 +216,16 @@ function M(e) {
                 t)
             ),
             Y === C.v8.TABS && (0, r.jsx)(w.Z, {}),
-            s === T.V5.ALL && (0, r.jsx)(B, { hideBanner: !M || s !== T.V5.ALL }),
-            X && (0, r.jsx)(V, { filter: s }),
+            a === T.V5.ALL && (0, r.jsx)(B, { hideBanner: !M || a !== T.V5.ALL }),
+            X && (0, r.jsx)(V, { filter: a }),
             (0, r.jsx)(Z.Z, {
                 className: D.messageList,
                 renderMessageGroup: G,
-                messages: s === T.V5.BOOKMARKS ? z : W,
-                unreadMessages: s === T.V5.BOOKMARKS ? [] : K,
+                messages: a === T.V5.BOOKMARKS ? z : W,
+                unreadMessages: a === T.V5.BOOKMARKS ? [] : K,
                 listName: 'notifications-inbox',
                 renderLoadingState: U,
-                ignoreGrouping: s === T.V5.BOOKMARKS,
+                ignoreGrouping: a === T.V5.BOOKMARKS,
                 loadMore: R
             })
         ]
@@ -269,7 +266,7 @@ function G(e, t) {
 }
 function B(e) {
     let { hideBanner: t } = e,
-        n = (0, a.e7)([I.Z], () => I.Z.shouldHide);
+        n = (0, s.e7)([I.Z], () => I.Z.shouldHide);
     return (0, r.jsx)('div', {
         className: o()(D.caughtUpContainer, { [D.hide]: n || t }),
         children: (0, r.jsxs)('div', {

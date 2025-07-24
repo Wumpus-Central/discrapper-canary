@@ -4,8 +4,8 @@ n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    s = n(100527),
-    a = n(963249),
+    a = n(100527),
+    s = n(963249),
     c = n(93127),
     u = n(594174),
     d = n(431),
@@ -89,7 +89,7 @@ class v extends o.Z {
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         return new Promise((t, n) => {
-            (0, a.Z)(
+            (0, s.Z)(
                 y(O({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
@@ -137,9 +137,9 @@ class v extends o.Z {
                 b.Y.trackExposure({ location: 'PremiumManager' });
             }),
             _(this, '_handlePremiumPaymentModalOpen', (e) => {
-                (0, a.Z)(
+                (0, s.Z)(
                     y(O({}, e), {
-                        analyticsLocations: [s.Z.OVERLAY],
+                        analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
                                 type: 'PREMIUM_PAYMENT_MODAL_CLOSE',

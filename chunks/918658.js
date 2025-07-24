@@ -17,8 +17,8 @@ var i = n(255367),
     I = n(434404),
     p = n(703656),
     C = n(944486),
-    O = n(914010),
-    g = n(671533),
+    g = n(914010),
+    O = n(671533),
     S = n(259580),
     T = n(358085),
     f = n(962086),
@@ -52,7 +52,7 @@ function U(e) {
 }
 function M() {
     let e = r.useRef(null),
-        t = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
+        t = (0, s.e7)([g.Z], () => g.Z.getGuildId()),
         n = (0, s.e7)([C.Z], () => C.Z.getChannelId(t)),
         {
             viewingRoles: l,
@@ -92,10 +92,10 @@ function M() {
                 onClick: () => k({ backToSettings: !0 }),
                 className: D.backButton,
                 children: [
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(O.Z, {
                         width: 16,
                         height: 16,
-                        direction: g.Z.Directions.LEFT,
+                        direction: O.Z.Directions.LEFT,
                         className: D.backArrow
                     }),
                     M

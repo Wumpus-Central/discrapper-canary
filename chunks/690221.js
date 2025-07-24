@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(703656),
-    s = n(981631);
-function a(e) {
+    a = n(981631);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ let u = i.forwardRef(function (e, t) {
         })(e, ['href', 'children', 'onClick', 'onKeyPress', 'focusProps']);
     let g = i.useCallback(
             (e) => {
-                e.repeat || ((e.charCode === s.yXg.SPACE || e.charCode === s.yXg.ENTER) && (e.preventDefault(), null != n && (0, o.uL)(n), null == d || d()), null == h || h(e));
+                e.repeat || ((e.charCode === a.yXg.SPACE || e.charCode === a.yXg.ENTER) && (e.preventDefault(), null != n && (0, o.uL)(n), null == d || d()), null == h || h(e));
             },
             [n, h, d]
         ),
@@ -83,7 +83,7 @@ let u = i.forwardRef(function (e, t) {
         b = (0, r.jsx)(
             'a',
             c(
-                a(
+                s(
                     {
                         ref: t,
                         href: n,
@@ -95,5 +95,5 @@ let u = i.forwardRef(function (e, t) {
                 { children: u }
             )
         );
-    return (0, r.jsx)(l.tEY, c(a({}, p), { children: b }));
+    return (0, r.jsx)(l.tEY, c(s({}, p), { children: b }));
 });

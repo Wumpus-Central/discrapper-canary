@@ -9,8 +9,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    s = n(906732),
-    a = n(879892),
+    a = n(906732),
+    s = n(879892),
     c = n(343649),
     u = n(430824),
     d = n(823379),
@@ -86,7 +86,7 @@ function _(e, t) {
 }
 function O(e, t) {
     var b;
-    let { analyticsLocations: O } = (0, s.ZP)(),
+    let { analyticsLocations: O } = (0, a.ZP)(),
         [y, v] = i.useState(!1),
         [C, j] = i.useState(void 0),
         E = (0, l.e7)([p.Z], () => {
@@ -139,7 +139,7 @@ function O(e, t) {
             (e) => {
                 if ((e.stopPropagation(), null != x))
                     return P < t.cost
-                        ? void (0, a.u)({
+                        ? void (0, s.u)({
                               analyticsLocation: {
                                   page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
                                   section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD

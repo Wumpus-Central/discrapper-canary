@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    s = n(866442),
-    a = n(399606),
+    a = n(866442),
+    s = n(399606),
     c = n(481060),
     u = n(100527),
     d = n(906732),
@@ -39,10 +39,10 @@ function N(e) {
                 guild: n
             });
         }, [n, Z]),
-        A = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
+        A = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         R =
             ((t = n.id),
-            (0, a.e7)([m.Z], () => {
+            (0, s.e7)([m.Z], () => {
                 let e = Object.values(m.Z.getRoles(t)).find((e) => (0, O.YB)(e));
                 return null == e
                     ? {
@@ -52,9 +52,9 @@ function N(e) {
                     : e.colors;
             })),
         { gradientStyle: D, gradientClassname: L } = (0, c.Icv)({
-            primaryColor: (0, s.Rf)(R.primary_color),
-            secondaryColor: (0, s.Rf)(R.secondary_color),
-            tertiaryColor: null != R.tertiary_color ? (0, s.Rf)(R.tertiary_color) : void 0,
+            primaryColor: (0, a.Rf)(R.primary_color),
+            secondaryColor: (0, a.Rf)(R.secondary_color),
+            tertiaryColor: null != R.tertiary_color ? (0, a.Rf)(R.tertiary_color) : void 0,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
             animateGradient: !0

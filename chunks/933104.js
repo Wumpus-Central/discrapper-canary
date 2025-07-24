@@ -9,8 +9,8 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(494497),
-    s = n(793030),
-    a = n(442837),
+    a = n(793030),
+    s = n(442837),
     c = n(481060),
     u = n(100527),
     d = n(623624),
@@ -62,13 +62,13 @@ function x(e) {
 }
 function S(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, a.e7)([p.Z], () => {
+        l = (0, s.e7)([p.Z], () => {
             var e;
             return null == (e = p.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: o } = (0, b.ZP)(t, n[0]);
     if (0 === n.length) return;
-    let s =
+    let a =
             n.length >= 3
                 ? v.intl.formatToPlainString(y.default['6Sv+3N'], {
                       perk: n[0].title,
@@ -88,7 +88,7 @@ function S(e) {
                   })
                 : (0, r.jsx)(m.g, { className: C.image }),
         header: v.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
-        content: s,
+        content: a,
         buttonCTA: c ? v.intl.string(y.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
@@ -108,7 +108,7 @@ function I(e) {
         : null;
 }
 function P(e) {
-    var { asset: t, header: n, content: i, caretPosition: o, markAsDismissed: a } = e,
+    var { asset: t, header: n, content: i, caretPosition: o, markAsDismissed: s } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -164,15 +164,15 @@ function P(e) {
                         t,
                         (0, r.jsx)(c.olH, {
                             className: C.close,
-                            onClick: () => (null == a ? void 0 : a(O.L.USER_DISMISS))
+                            onClick: () => (null == s ? void 0 : s(O.L.USER_DISMISS))
                         })
                     ]
                 }),
-                header: (0, r.jsx)(s.xv, {
+                header: (0, r.jsx)(a.xv, {
                     variant: 'text-md/semibold',
                     children: n
                 }),
-                content: (0, r.jsx)(s.xv, {
+                content: (0, r.jsx)(a.xv, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     children: i
@@ -181,7 +181,7 @@ function P(e) {
                 headerClassName: C.header,
                 contentClassName: C.header,
                 caretPosition: d,
-                markAsDismissed: a
+                markAsDismissed: s
             },
             u
         )

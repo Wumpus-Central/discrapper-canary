@@ -15,8 +15,8 @@ var s = n(442837),
     I = n(983736),
     p = n(937111),
     C = n(981631),
-    O = n(176505),
-    g = n(388032),
+    g = n(176505),
+    O = n(388032),
     S = n(246752),
     T = n(240211);
 function f(e) {
@@ -52,7 +52,7 @@ let N =
                   N = (0, s.e7)([d.Z], () => d.Z.getGuild(r), [r]),
                   m = (0, s.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
                   R = (0, o.TH)(),
-                  A = (null == (e = (0, o.LX)(R.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, O.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+                  A = (null == (e = (0, o.LX)(R.pathname, C.Z5c.CHANNEL(null == N ? void 0 : N.id, g.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
               if (null == N || !(0, I.Dc)(N) || A) return null;
               let y = null != (t = null == m ? void 0 : m.applicationStatus) ? t : E.wB.STARTED,
                   b = null,
@@ -61,8 +61,8 @@ let N =
                   v = [S.notice, T.notice];
               switch (y) {
                   case E.wB.SUBMITTED:
-                      ((b = g.intl.string(g.t['5iLvS0'])),
-                          (P = g.intl.string(g.t.mqtdmZ)),
+                      ((b = O.intl.string(O.t['5iLvS0'])),
+                          (P = O.intl.string(O.t.mqtdmZ)),
                           (D = () => {
                               (0, c.h7j)((e) => {
                                   var t, n;
@@ -70,9 +70,9 @@ let N =
                                       c.ConfirmModal,
                                       ((t = f(
                                           {
-                                              header: g.intl.string(g.t.aIz1oa),
-                                              confirmText: g.intl.string(g.t['cY+Ooa']),
-                                              cancelText: g.intl.string(g.t['ETE/oK']),
+                                              header: O.intl.string(O.t.aIz1oa),
+                                              confirmText: O.intl.string(O.t['cY+Ooa']),
+                                              cancelText: O.intl.string(O.t['ETE/oK']),
                                               onConfirm: () => _.Z.removeGuildJoinRequest(N.id),
                                               confirmButtonColor: a.zx.Colors.BRAND
                                           },
@@ -82,7 +82,7 @@ let N =
                                           {
                                               children: (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/normal',
-                                                  children: g.intl.string(g.t['13tjTU'])
+                                                  children: O.intl.string(O.t['13tjTU'])
                                               })
                                           }),
                                       Object.getOwnPropertyDescriptors
@@ -103,8 +103,8 @@ let N =
                           }));
                       break;
                   case E.wB.REJECTED:
-                      ((b = g.intl.string(g.t.lk30cX)),
-                          (P = g.intl.string(g.t['8RrsHh'])),
+                      ((b = O.intl.string(O.t.lk30cX)),
+                          (P = O.intl.string(O.t['8RrsHh'])),
                           (D = () => {
                               (0, c.ZDy)(async () => {
                                   let { default: e } = await n.e('3378').then(n.bind(n, 76075));
@@ -114,8 +114,8 @@ let N =
                           v.push(S.error));
                       break;
                   default:
-                      ((b = g.intl.string(g.t.G5YKXF)),
-                          (P = g.intl.string(g.t['r8/DT0'])),
+                      ((b = O.intl.string(O.t.G5YKXF)),
+                          (P = O.intl.string(O.t['r8/DT0'])),
                           (D = () => {
                               (0, h.hk)(N.id);
                           }));

@@ -4,8 +4,8 @@ n(73800);
 var i = n(755721),
     l = n(481060),
     o = n(933557),
-    s = n(388032),
-    a = n(331884);
+    a = n(388032),
+    s = n(331884);
 function c(e) {
     var t,
         n,
@@ -59,9 +59,9 @@ function c(e) {
             return e;
         })(
             {
-                header: s.intl.string(s.t.YWMtRU),
-                confirmText: s.intl.string(s.t.eW8Gy8),
-                cancelText: s.intl.string(s.t.s4uM3d),
+                header: a.intl.string(a.t.YWMtRU),
+                confirmText: a.intl.string(a.t.eW8Gy8),
+                cancelText: a.intl.string(a.t.s4uM3d),
                 confirmButtonColor: i.zx.Colors.BRAND
             },
             d
@@ -70,9 +70,9 @@ function c(e) {
             {
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    className: a.message,
+                    className: s.message,
                     selectable: !1,
-                    children: s.intl.format(s.t['iKW+jY'], {
+                    children: a.intl.format(a.t['iKW+jY'], {
                         channelName: h,
                         categoryName: p
                     })
