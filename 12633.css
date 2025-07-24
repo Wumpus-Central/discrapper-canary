@@ -60704,3 +60704,7 @@ html:has(.enable-forced-colors:not(.platform-web)).theme-light body:before {
 html:has(.enable-forced-colors:not(.platform-web)).theme-light.app-focused body:before {
     border-color: #483d8b
 }
+
+.highlight-mana-components [data-mana-component] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}
