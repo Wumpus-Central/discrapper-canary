@@ -12,9 +12,9 @@ var i = n(399606),
     p = n(388032);
 function m(e) {
     let { channelId: t, messageId: n, transitionState: m, onClose: f } = e,
-        h = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
-        g = h.attachments.map((e) => e.id),
-        _ = h.attachments.map((e) => e.filename),
+        g = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
+        _ = g.attachments.map((e) => e.id),
+        h = g.attachments.map((e) => e.filename),
         { reportFalsePositive: b, isReportFalsePositiveLoading: E } = (0, u.$)({
             onSuccess: () => {
                 ((0, d.s)(f), a.Z.disableFalsePositiveButton(t, n));
@@ -23,11 +23,11 @@ function m(e) {
                 (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
             },
             report: () => {
-                (0, o.Eq)(t, n, g, _);
+                (0, o.Eq)(t, n, _, h);
             }
         });
     return (
-        h.attachments.length > 0 || f(),
+        g.attachments.length > 0 || f(),
         (0, r.jsx)(d.$, {
             messageId: n,
             channelId: t,

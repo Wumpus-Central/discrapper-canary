@@ -23,11 +23,11 @@ function f(e) {
             (o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(f.id));
         }, [f.id, g]),
         {
-            acceptMessageRequest: E,
-            rejectMessageRequest: O,
+            acceptMessageRequest: O,
+            rejectMessageRequest: E,
             isAcceptLoading: y,
-            isRejectLoading: I,
-            isUserProfileLoading: v,
+            isRejectLoading: v,
+            isUserProfileLoading: I,
             isOptimisticAccepted: C,
             isOptimisticRejected: S
         } = (0, u.m)({
@@ -36,7 +36,7 @@ function f(e) {
             onRejectSuccess: b,
             onError: m
         }),
-        N = y || I || v || C || S;
+        N = y || v || I || C || S;
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -56,10 +56,10 @@ function f(e) {
                             size: 'sm',
                             text: p.intl.string(p.t.B2nygY),
                             onClick: (e) => {
-                                (e.stopPropagation(), O(f.id));
+                                (e.stopPropagation(), E(f.id));
                             },
                             disabled: N,
-                            loading: I || S
+                            loading: v || S
                         })
                     }),
                     (0, r.jsx)('div', {
@@ -70,10 +70,10 @@ function f(e) {
                             size: 'sm',
                             text: p.intl.string(p.t.Kz8Pws),
                             onClick: (e) => {
-                                (e.stopPropagation(), E(f.id));
+                                (e.stopPropagation(), O(f.id));
                             },
                             disabled: N,
-                            loading: y || v || C
+                            loading: y || I || C
                         })
                     })
                 ]

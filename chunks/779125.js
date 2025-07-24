@@ -12,13 +12,13 @@ var i = n(442837),
     p = n(592125),
     m = n(430824),
     f = n(699516),
-    h = n(594174),
-    g = n(934415),
-    _ = n(900849),
+    g = n(594174),
+    _ = n(934415),
+    h = n(900849),
     b = n(981631);
 function E(e) {
-    let { channel: t, onClick: n, beforeTransition: E, className: y, openChatWithoutConnecting: x } = e,
-        v = (0, i.e7)([h.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, h.default, f.Z)), [t]);
+    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: x } = e,
+        v = (0, i.e7)([g.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, g.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
         text: v,
         position: 'top',
@@ -26,7 +26,7 @@ function E(e) {
             let { onMouseEnter: i, onMouseLeave: s } = e;
             return (0, r.jsx)(c.Z, {
                 role: 'link',
-                className: y,
+                className: C,
                 onClick: (e) => {
                     (e.stopPropagation(),
                         null != n
@@ -37,7 +37,7 @@ function E(e) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                   if (null == e || null == t) return;
                                   let r = m.Z.getGuild(e);
-                                  if ((null == r ? void 0 : r.joinedAt) == null) return _.Ub(e, {}, { channelId: t });
+                                  if ((null == r ? void 0 : r.joinedAt) == null) return h.Ub(e, {}, { channelId: t });
                                   let i = p.Z.getChannel(t);
                                   if (null != i && (0, d.bw)(i.type)) {
                                       if (n) {
@@ -52,7 +52,7 @@ function E(e) {
                 },
                 onMouseEnter: i,
                 onMouseLeave: s,
-                iconType: (0, g.wl)(t),
+                iconType: (0, _.wl)(t),
                 children: v
             });
         }

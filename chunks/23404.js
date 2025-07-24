@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(918701),
     b = n(373370),
     _ = n(475595),
-    E = n(566078),
-    O = n(602667),
+    O = n(566078),
+    E = n(602667),
     y = n(611855),
-    I = n(670638),
-    v = n(667105),
+    v = n(670638),
+    I = n(667105),
     C = n(860151),
     S = n(341907),
     N = n(46140),
@@ -51,11 +51,11 @@ function A(e) {
     }
     return e;
 }
-function Z(e) {
+function x(e) {
     var t;
     let { quest: n } = e,
         i = (0, h.B6)(n.config.expiresAt),
-        l = (0, h.B6)(E.r.build(n.config).rewardsExpireAt),
+        l = (0, h.B6)(O.r.build(n.config).rewardsExpireAt),
         a = (0, o.e7)([u.Z], () => u.Z.getState().theme),
         s = (0, c.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
@@ -85,12 +85,12 @@ function Z(e) {
         ]
     });
 }
-function x(e) {
+function Z(e) {
     var t, n, l, u;
-    let { nodeRef: _, quest: E } = e,
-        O = (0, d.O5)(),
-        T = (0, o.e7)([f.Z], () => f.Z.isEnrolling(E.id), [E]),
-        x = (0, o.e7)([f.Z], () => null != f.Z.questEnrollmentBlockedUntil, []),
+    let { nodeRef: _, quest: O } = e,
+        E = (0, d.O5)(),
+        T = (0, o.e7)([f.Z], () => f.Z.isEnrolling(O.id), [O]),
+        Z = (0, o.e7)([f.Z], () => null != f.Z.questEnrollmentBlockedUntil, []),
         [w, L] = i.useState(!1),
         R = i.useCallback(() => L(!0), []),
         D = i.useCallback(() => L(!1), []),
@@ -98,56 +98,56 @@ function x(e) {
             e.stopPropagation();
         }, []),
         M = i.useCallback(() => {
-            (0, p.AH)(E.id, {
+            (0, p.AH)(O.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.ACCEPT_QUEST,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL
             });
-        }, [E]),
+        }, [O]),
         U = i.useCallback(() => {
-            null != E &&
-                (O({
-                    questId: E.id,
+            null != O &&
+                (E({
+                    questId: O.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: d.jZ.TRACK_PROGRESS,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL
                 }),
                 (0, S.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
-                    questId: E.id
+                    questId: O.id
                 }));
-        }, [E, O]),
+        }, [O, E]),
         G = i.useCallback(() => {
-            (O({
-                questId: E.id,
+            (E({
+                questId: O.id,
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.LEARN_MORE,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL
             }),
                 (0, S.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
-                    questId: E.id
+                    questId: O.id
                 }));
-        }, [E.id, O]),
-        B = (0, v.hf)({
-            quest: E,
+        }, [O.id, E]),
+        B = (0, I.hf)({
+            quest: O,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL
         }),
-        V = (0, h.tP)(E),
-        H = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
-        F = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        z = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
-        W = (null == E ? void 0 : E.userStatus) != null && (0, m.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
-        Y = (0, h.Rf)(E),
+        V = (0, h.tP)(O),
+        H = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
+        F = (null == (n = O.userStatus) ? void 0 : n.completedAt) != null,
+        z = (null == (l = O.userStatus) ? void 0 : l.claimedAt) != null,
+        W = (null == O ? void 0 : O.userStatus) != null && (0, m.zE)(O.userStatus, g.jn.ACTIVITY_PANEL),
+        Y = (0, h.Rf)(O),
         K = (0, b.DD)({
-            quest: E,
+            quest: O,
             taskDetails: Y,
             location: N.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL
         });
-    return W || V || z || x
+    return W || V || z || Z
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
@@ -164,11 +164,11 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       className: j.utils,
                       children: [
-                          H ? (0, r.jsx)(Z, { quest: E }) : (0, r.jsx)(y.Z, {}),
-                          (0, r.jsx)(I.r, {
-                              quest: E,
+                          H ? (0, r.jsx)(x, { quest: O }) : (0, r.jsx)(y.Z, {}),
+                          (0, r.jsx)(v.r, {
+                              quest: O,
                               questContent: g.jn.ACTIVITY_PANEL,
-                              shouldShowDisclosure: (null == (u = E.userStatus) ? void 0 : u.enrolledAt) == null,
+                              shouldShowDisclosure: (null == (u = O.userStatus) ? void 0 : u.enrolledAt) == null,
                               showShareLink: !0,
                               sourceQuestContent: g.jn.ACTIVITY_PANEL,
                               children: (e) => {
@@ -206,7 +206,7 @@ function x(e) {
                   !H &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(Z, { quest: E }),
+                              (0, r.jsx)(x, { quest: O }),
                               (0, r.jsx)('div', {
                                   className: j.instructions,
                                   children: (0, r.jsx)(c.Text, {
@@ -222,7 +222,7 @@ function x(e) {
                       (0, r.jsx)(C.Z, {
                           autoplay: w,
                           className: j.rewardTileWithInstructions,
-                          quest: E,
+                          quest: O,
                           questContent: g.jn.ACTIVITY_PANEL,
                           location: N.dr.ACTIVITY_PANEL,
                           taskDetails: Y,
@@ -278,10 +278,10 @@ function x(e) {
           });
 }
 let w = function (e) {
-    return (0, r.jsx)(O.A, {
+    return (0, r.jsx)(E.A, {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(x, A({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(Z, A({ nodeRef: t }, e))
     });
 };

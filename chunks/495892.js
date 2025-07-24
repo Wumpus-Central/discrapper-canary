@@ -105,8 +105,8 @@ function O(e) {
               children: l
           });
 }
-let C = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
-    y = (e) => {
+let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
+    C = (e) => {
         (e.stopPropagation(), e.preventDefault());
     },
     N = (e) => {
@@ -136,9 +136,9 @@ let C = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
                 v(
                     {
                         className: t,
-                        onClick: y,
-                        onMouseDown: y,
-                        onMouseUp: y
+                        onClick: C,
+                        onMouseDown: C,
+                        onMouseUp: C
                     },
                     i
                 ),
@@ -149,9 +149,9 @@ let C = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
 function I(e) {
     var t;
     let { rule: n, onChangeRule: i, onContextMenu: l } = e,
-        a = C(n, i),
+        a = y(n, i),
         o = (e) => {
-            (y(e), l(e));
+            (C(e), l(e));
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -202,7 +202,7 @@ function S(e) {
         { isLoading: c, saveRule: m } = (0, g.w)(),
         { updateRule: f } = (0, u.pH)(t.guildId),
         [h, x] = i.useState(t.enabled),
-        C = (0, l.throttle)(async (e, n) => {
+        y = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = _(v({}, t), { enabled: !h });
                 x(!h);
@@ -211,7 +211,7 @@ function S(e) {
             }
         }, 300),
         I = (e) => {
-            (y(e), a(e));
+            (C(e), a(e));
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
@@ -262,7 +262,7 @@ function S(e) {
                 children: [
                     (0, r.jsx)(s.rsf, {
                         className: j.toggle,
-                        onChange: C,
+                        onChange: y,
                         checked: null != h && h
                     }),
                     !n &&

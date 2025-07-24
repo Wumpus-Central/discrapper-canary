@@ -73,7 +73,7 @@ let h = [],
                 },
                 [t]
             ),
-            C = i.useCallback(() => {
+            y = i.useCallback(() => {
                 if (null != t)
                     return (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('84725').then(n.bind(n, 462499));
@@ -108,7 +108,7 @@ let h = [],
                 x.length < o.x3 &&
                     (0, r.jsxs)(s.P3F, {
                         className: g.addActionItem,
-                        onClick: C,
+                        onClick: y,
                         children: [
                             (0, r.jsx)(s.oFk, {
                                 size: 'xs',

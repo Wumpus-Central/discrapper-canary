@@ -22,9 +22,9 @@ var r = n(255367),
     j = n(388032);
 function O(e) {
     let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
-        { parentAnalyticsLocation: P } = (0, u.ZP)(),
+        { parentAnalyticsLocation: I } = (0, u.ZP)(),
         {
-            Component: I,
+            Component: P,
             play: Z,
             events: { onMouseEnter: T, onMouseLeave: N }
         } = (0, o.j)(),
@@ -75,7 +75,7 @@ function O(e) {
                             },
                             t
                         )),
-                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', P) }),
+                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', I) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,7 +94,7 @@ function O(e) {
             });
     }
     function W() {
-        ((0, d.v)(P, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
+        ((0, d.v)(I, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == S || S(void 0), V()) : (null != E ? (Z(), G()) : Z(), null == S || S(v.D.SOUNDBOARD)));
     }
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
@@ -137,7 +137,7 @@ function O(e) {
                 isTrayButton: !0,
                 themeable: O,
                 label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
-                iconComponent: I,
+                iconComponent: P,
                 disabled: D,
                 onContextMenu: z,
                 onClick: W,

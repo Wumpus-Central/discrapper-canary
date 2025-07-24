@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(410575),
     b = n(224336),
     _ = n(730749),
-    E = n(666743),
-    O = n(115130),
+    O = n(666743),
+    E = n(115130),
     y = n(812206),
-    I = n(770146),
-    v = n(600164),
+    v = n(770146),
+    I = n(600164),
     C = n(606081),
     S = n(252618),
     N = n(100159),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(984370),
     j = n(706454),
     A = n(210887),
-    Z = n(430824),
-    x = n(496675),
+    x = n(430824),
+    Z = n(496675),
     w = n(525395),
     L = n(558314),
     R = n(580130),
@@ -296,7 +296,7 @@ class ep extends i.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(I.Z, {
+                (0, r.jsx)(v.Z, {
                     tag: 'h1',
                     children: eo.intl.format(eo.t.tluX4O, { name: n.name })
                 }),
@@ -383,9 +383,9 @@ class ep extends i.PureComponent {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, r.jsx)(v.Z, {
-                        align: v.Z.Align.CENTER,
-                        justify: v.Z.Justify.CENTER,
+                    (0, r.jsx)(I.Z, {
+                        align: I.Z.Align.CENTER,
+                        justify: I.Z.Justify.CENTER,
                         children: (0, r.jsx)(d.$jN, { className: es.spinner })
                     })
                 ]
@@ -473,7 +473,7 @@ class ep extends i.PureComponent {
             }),
             ec(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (x.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (Z.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(u.zx, {
                           'aria-label': eo.intl.string(eo.t.zJrgTE),
                           look: u.zx.Looks.BLANK,
@@ -588,9 +588,9 @@ class ep extends i.PureComponent {
             ec(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, r.jsx)(v.Z, {
-                          align: v.Z.Align.CENTER,
-                          justify: v.Z.Justify.CENTER,
+                    ? (0, r.jsx)(I.Z, {
+                          align: I.Z.Align.CENTER,
+                          justify: I.Z.Justify.CENTER,
                           children: (0, r.jsx)(d.$jN, {})
                       })
                     : i === ei.b.SMALL
@@ -600,8 +600,8 @@ class ep extends i.PureComponent {
     }
 }
 let eh = (0, _.Z)(
-    (0, E.Z)(
-        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, O.Z, y.Z, w.Z, Z.Z, R.Z], (e) => {
+    (0, O.Z)(
+        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, x.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
@@ -614,7 +614,7 @@ let eh = (0, _.Z)(
                 (null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? D.Z.get(t) : null));
             }
             (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
-            let c = null != l && (M.Z.inTestModeForApplication(l) || O.Z.inDevModeForApplication(l));
+            let c = null != l && (M.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
                 application: null != l ? y.Z.getApplication(l) : null,
@@ -633,7 +633,7 @@ let eh = (0, _.Z)(
                 matureAgree: L.Z.didMatureAgree,
                 theme: A.Z.theme,
                 locale: j.default.locale,
-                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null
+                guild: null != s ? x.Z.getGuild(s.getGuildId()) : null
             };
         })(ep)
     )

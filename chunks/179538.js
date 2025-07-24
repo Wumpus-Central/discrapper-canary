@@ -89,6 +89,7 @@ function h(e) {
                 _(
                     u(
                         {
+                            'data-mana-component': 'text-button',
                             role: t,
                             className: a()(l.textButton, l[c])
                         },

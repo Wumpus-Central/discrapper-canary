@@ -17,7 +17,7 @@ var r = n(255367),
     b = n(948695);
 function j(e) {
     var t, n;
-    let { allSubscriptionListings: j, priceTiers: v, loading: _, error: O, handlePublishTier: C, onDeleteEditState: y } = e,
+    let { allSubscriptionListings: j, priceTiers: v, loading: _, error: O, handlePublishTier: y, onDeleteEditState: C } = e,
         { editStateId: N } = (0, c.N)(),
         I = (0, l.e7)([a.Z], () => a.Z.getSubscriptionListing(N)),
         E = (0, o.mY)(),
@@ -94,7 +94,7 @@ function j(e) {
                                             children: (0, r.jsx)(s.zxk, {
                                                 disabled: T,
                                                 variant: 'secondary',
-                                                onClick: C,
+                                                onClick: y,
                                                 loading: _,
                                                 text: h.intl.string(h.t.Lj6R5u)
                                             })
@@ -121,7 +121,7 @@ function j(e) {
             (0, r.jsx)(g.Z, { allSubscriptionListings: j }),
             (0, r.jsx)(p.Z, {}),
             (0, r.jsx)(f.Z, {}),
-            (0, r.jsx)(u.Z, { onDeleteEditState: y })
+            (0, r.jsx)(u.Z, { onDeleteEditState: C })
         ]
     });
 }

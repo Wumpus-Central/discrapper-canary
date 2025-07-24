@@ -1,6 +1,6 @@
 (r.d(s, {
-    Z: () => eh,
-    g: () => ej
+    Z: () => eg,
+    g: () => eh
 }),
     r(953529),
     r(388685),
@@ -19,27 +19,27 @@ var t = r(255367),
     x = r(481060),
     f = r(570140),
     j = r(179360),
-    h = r(230711),
-    C = r(410030),
+    C = r(230711),
+    h = r(410030),
     g = r(607070),
     I = r(543241),
     N = r(906411),
     T = r(565138),
-    v = r(822179),
-    b = r(419922),
+    b = r(822179),
+    v = r(419922),
     E = r(687158),
     _ = r(484459),
     L = r(813549),
     y = r(867176),
     A = r(502762),
     M = r(652853),
-    O = r(430824),
-    P = r(594174),
+    P = r(430824),
+    O = r(594174),
     U = r(314884),
-    Z = r(626135),
-    w = r(768581),
-    S = r(63063),
-    R = r(998502),
+    R = r(626135),
+    Z = r(768581),
+    w = r(63063),
+    S = r(998502),
     k = r(53900),
     F = r(789155),
     V = r(55610),
@@ -70,7 +70,7 @@ function et() {
             return e;
         }).apply(this, arguments);
 }
-let en = R.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
+let en = S.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
     ei = {
         boostItemVisual: Q,
         emojiStickersVisual: X,
@@ -90,16 +90,17 @@ let en = R.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
         TR: er
     };
 function eo() {
-    let e = (0, C.ZP)();
+    let e = (0, h.ZP)();
     return (0, d.wj)(e) ? ea : ei;
 }
 function el(e) {
-    let { description: s, onLearnMore: r, renderVisual: n } = e;
+    let { description: s, onLearnMore: r, renderVisual: n } = e,
+        i = eC();
     return (0, t.jsxs)('div', {
-        className: G.whatYouLoseItem,
+        className: a()(G.whatYouLoseItem, { [G.premiumRebrand]: i }),
         children: [
             (0, t.jsxs)('div', {
-                className: G.whatYouLoseItemLeftColumn,
+                className: a()(G.whatYouLoseItemLeftColumn, { [G.premiumRebrand]: i }),
                 children: [
                     (0, t.jsx)(x.Text, {
                         variant: 'text-md/normal',
@@ -116,7 +117,7 @@ function el(e) {
                 ]
             }),
             (0, t.jsx)('div', {
-                className: G.whatYouLoseItemRightColumn,
+                className: a()(G.whatYouLoseItemRightColumn, { [G.premiumRebrand]: i }),
                 children: n()
             })
         ]
@@ -253,7 +254,7 @@ function eu(e) {
             {
                 description: l ? B.intl.format(B.t.xCaYwM, {}) : B.intl.format(B.t['gpqr+v'], {}),
                 onLearnMore: () => {
-                    (i(), h.Z.open(K.oAB.PROFILE_CUSTOMIZATION), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' }));
+                    (i(), C.Z.open(K.oAB.PROFILE_CUSTOMIZATION), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' }));
                 },
                 renderVisual: () => s
             },
@@ -267,7 +268,7 @@ function em(e) {
         n = (0, I.wC)(null)
             .filter((e) => e.type === N.B.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
-        i = (0, m.Wu)([v.Z], () => v.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
+        i = (0, m.Wu)([b.Z], () => b.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
         a = eo().emojiStickersVisual,
         o = s === D.p9.TIER_1;
     return (0, t.jsx)(
@@ -275,7 +276,7 @@ function em(e) {
         {
             description: o ? B.intl.format(B.t.couiKC, {}) : B.intl.format(B.t['0hUHi4'], {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(K.BhN.PREMIUM_DETAILS)), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'emojis_stickers' }));
+                (window.open(w.Z.getArticleURL(K.BhN.PREMIUM_DETAILS)), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'emojis_stickers' }));
             },
             renderVisual: () =>
                 (null != n && n.length > 0) || (!o && null != i && i.length > 0)
@@ -286,7 +287,7 @@ function em(e) {
                                   .map((e) =>
                                       null == e.id
                                           ? e.url
-                                          : w.ZP.getEmojiURL({
+                                          : Z.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: !r && e.animated,
                                                 size: 58
@@ -305,7 +306,7 @@ function em(e) {
                                   ? null
                                   : i.map((e) =>
                                         (0, t.jsx)(
-                                            b.Z,
+                                            v.Z,
                                             {
                                                 disableAnimation: r,
                                                 sticker: e,
@@ -330,14 +331,14 @@ function ed(e) {
     let { premiumType: s, onClose: r } = e;
     n.useEffect(() => f.Z.wait(() => (0, j.X8)()), []);
     let i = (0, m.e7)([g.Z], () => g.Z.useReducedMotion),
-        [o, l] = (0, m.Wu)([U.Z, O.Z], () => {
+        [o, l] = (0, m.Wu)([U.Z, P.Z], () => {
             let e = U.Z.boostSlots,
                 s = new Map();
             u()(e)
                 .map('premiumGuildSubscription')
                 .map('guildId')
                 .forEach((e) => {
-                    if (null != O.Z.getGuild(e)) {
+                    if (null != P.Z.getGuild(e)) {
                         var r;
                         let t = null != (r = s.get(e)) ? r : 0;
                         s.set(e, t + 1);
@@ -345,7 +346,7 @@ function ed(e) {
                 });
             let r = null,
                 t = 0;
-            return (s.size > 0 && ([r, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))), [O.Z.getGuild(r), t]);
+            return (s.size > 0 && ([r, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))), [P.Z.getGuild(r), t]);
         }),
         c = null != o && l > 0,
         d = eo().boostItemVisual;
@@ -354,7 +355,7 @@ function ed(e) {
         {
             description: s === D.p9.TIER_1 ? B.intl.format(B.t['K4Hv6+'], {}) : B.intl.format(B.t.wRxEDQ, {}),
             onLearnMore: () => {
-                (r(), h.Z.open(K.oAB.GUILD_BOOSTING), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' }));
+                (r(), C.Z.open(K.oAB.GUILD_BOOSTING), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' }));
             },
             renderVisual: () =>
                 c
@@ -411,7 +412,7 @@ let ep = () => {
         {
             description: B.intl.format(B.t.wK04T0, {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(K.BhN.STREAM_QUALITY_SETTINGS)), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'screen_share' }));
+                (window.open(w.Z.getArticleURL(K.BhN.STREAM_QUALITY_SETTINGS)), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'screen_share' }));
             },
             renderVisual: () =>
                 (0, t.jsx)('img', {
@@ -430,7 +431,7 @@ function ex(e) {
         {
             description: s === D.p9.TIER_2 ? B.intl.format(B.t.GsOFRE, {}) : B.intl.format(B.t.wFWO6O, {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(K.BhN.PREMIUM_DETAILS)), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'msgs_uploads' }));
+                (window.open(w.Z.getArticleURL(K.BhN.PREMIUM_DETAILS)), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'msgs_uploads' }));
             },
             renderVisual: () =>
                 (0, t.jsx)('img', {
@@ -442,26 +443,28 @@ function ex(e) {
     );
 }
 let ef = (e) => {
-    let { country: s } = e,
-        r = eo(),
-        n = 'PL' === s ? r.PL : r.TR;
-    return (0, t.jsx)(
-        el,
-        {
-            description: B.intl.format('PL' === s ? B.t['0MAev7'] : B.t.p2CqUl, {}),
-            onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(K.BhN.LOCALIZED_PRICING)), Z.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'grandfathered_prices' }));
+        let { country: s } = e,
+            r = eo(),
+            n = 'PL' === s ? r.PL : r.TR;
+        return (0, t.jsx)(
+            el,
+            {
+                description: B.intl.format('PL' === s ? B.t['0MAev7'] : B.t.p2CqUl, {}),
+                onLearnMore: () => {
+                    (window.open(w.Z.getArticleURL(K.BhN.LOCALIZED_PRICING)), R.default.track(K.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'grandfathered_prices' }));
+                },
+                renderVisual: () =>
+                    (0, t.jsx)('img', {
+                        alt: '',
+                        src: n
+                    })
             },
-            renderVisual: () =>
-                (0, t.jsx)('img', {
-                    alt: '',
-                    src: n
-                })
-        },
-        'grandfathered-prices-item'
-    );
-};
-function ej(e) {
+            'grandfathered-prices-item'
+        );
+    },
+    ej = n.createContext({ isPremiumRebrand: !1 }),
+    eC = () => n.useContext(ej).isPremiumRebrand;
+function eh(e) {
     let { currentUser: s, premiumType: r, onClose: i, isDowngrade: o = !1, isPremiumRebrand: c = !1 } = e,
         u = (0, k.Z)(),
         m = (0, V.U)(),
@@ -531,18 +534,21 @@ function ej(e) {
             }
             return e;
         }, [r, s, i, o, m, u]);
-    return (0, t.jsx)('div', {
-        className: a()(G.whatYouLoseItemContainer, {
-            [G.premiumRebrand]: c,
-            [G.noMargin]: c && d.length <= 2
-        }),
-        children: d
+    return (0, t.jsx)(ej.Provider, {
+        value: { isPremiumRebrand: c },
+        children: (0, t.jsx)('div', {
+            className: a()(G.whatYouLoseItemContainer, {
+                [G.premiumRebrand]: c,
+                [G.noMargin]: c && d.length <= 2
+            }),
+            children: d
+        })
     });
 }
-let eh = function (e) {
-    let { premiumType: s, titleText: r, subtitleText: i, footer: a, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: d, isLoading: p = !1, churnUserDiscountOffer: f = null, isDowngrade: j = !1, subtitleIcon: h, subtitleClassName: C } = e,
-        g = (0, m.e7)([P.default], () => {
-            let e = P.default.getCurrentUser();
+let eg = function (e) {
+    let { premiumType: s, titleText: r, subtitleText: i, footer: a, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: d, isLoading: p = !1, churnUserDiscountOffer: f = null, isDowngrade: j = !1, subtitleIcon: C, subtitleClassName: h } = e,
+        g = (0, m.e7)([O.default], () => {
+            let e = O.default.getCurrentUser();
             return (l()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
         });
     n.useEffect(() => {
@@ -551,7 +557,7 @@ let eh = function (e) {
     let I = null != f && !p;
     return (n.useEffect(() => {
         I &&
-            Z.default.track(K.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
+            R.default.track(K.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: d,
                 discount_id: null == f ? void 0 : f.discount_id
             });
@@ -585,16 +591,16 @@ let eh = function (e) {
                               children: r
                           }),
                           (0, t.jsxs)('div', {
-                              className: C,
+                              className: h,
                               children: [
-                                  h,
+                                  C,
                                   (0, t.jsx)(x.Text, {
                                       variant: 'text-md/normal',
                                       children: i
                                   })
                               ]
                           }),
-                          (0, t.jsx)(ej, {
+                          (0, t.jsx)(eh, {
                               currentUser: g,
                               premiumType: s,
                               onClose: o,

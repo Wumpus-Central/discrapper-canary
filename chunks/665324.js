@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(208049),
     _ = n(763296),
     O = n(22382),
-    C = n(747071),
-    y = n(286654),
+    y = n(747071),
+    C = n(286654),
     N = n(892001),
     I = n(430824),
     E = n(594174),
@@ -234,7 +234,7 @@ function Y(e) {
         var t;
         null == (t = o.current) || t.pause();
         let n = p[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, C.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, y.Z)(e.volume)), n.play());
     }
     if (
         (i.useEffect(
@@ -343,12 +343,12 @@ function K(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
         { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: _ } = t,
         { analyticsLocations: O } = (0, x.ZP)(),
-        C = (0, c.e7)([E.default], () => (null != f ? f : E.default.getUser(h)), [h, f]),
+        y = (0, c.e7)([E.default], () => (null != f ? f : E.default.getUser(h)), [h, f]),
         { canManageGuildExpression: I } = (0, j.XJ)(o),
         S = i.useMemo(() => I(t), [t, I]),
         P = null != b || null != _,
         [w, Z] = i.useState(!1),
-        D = (0, y.z)(t, o.id);
+        D = (0, C.z)(t, o.id);
     async function A() {
         if (!w) {
             Z(!0);
@@ -360,20 +360,20 @@ function K(e) {
         }
     }
     i.useEffect(() => {
-        null == C && e();
+        null == y && e();
         async function e() {
             await (0, g.PR)(h);
         }
-    }, [C, h]);
+    }, [y, h]);
     let L = i.useCallback(() => {
-            null != C &&
+            null != y &&
                 (0, N.openUserProfileModal)({
-                    userId: C.id,
+                    userId: y.id,
                     guildId: o.id,
                     sourceAnalyticsLocations: O
                 });
-        }, [C, o.id, O]),
-        B = R.ZP.useUserTag(C);
+        }, [y, o.id, O]),
+        B = R.ZP.useUserTag(y);
     return (0, r.jsxs)('div', {
         className: s()(M.row, { [M.active]: l }),
         children: [
@@ -408,7 +408,7 @@ function K(e) {
                     ]
                 })
             }),
-            null != C &&
+            null != y &&
                 (0, r.jsxs)(m.P3F, {
                     className: M.uploader,
                     onClick: L,
@@ -417,7 +417,7 @@ function K(e) {
                             'aria-label': B,
                             size: m.EFr.SIZE_24,
                             className: M.uploaderAvatar,
-                            src: (0, T.ov)(C, !1, 24)
+                            src: (0, T.ov)(y, !1, 24)
                         }),
                         (0, r.jsx)(m.Text, {
                             variant: 'text-sm/normal',

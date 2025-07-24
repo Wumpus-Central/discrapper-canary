@@ -1,5 +1,5 @@
 n.d(t, {
-    EQ: () => O,
+    EQ: () => E,
     Pk: () => y
 });
 var r = n(255367),
@@ -75,7 +75,7 @@ let b = (e) =>
         let e = i.useCallback(() => (0, o.Lk)(document.body.style.getPropertyValue('--custom-channel-header-height'), 48) + (0, o.Lk)(document.body.style.getPropertyValue('--custom-app-top-bar-height'), 36), []);
         return { requiredSpacingFromTop: i.useMemo(() => e(), [e]) };
     },
-    E = (e) => {
+    O = (e) => {
         var { positionControlRef: t, targetElementRef: n, children: l } = e,
             a = m(e, ['positionControlRef', 'targetElementRef', 'children']);
         let { requiredSpacingFromTop: o } = _(),
@@ -97,7 +97,7 @@ let b = (e) =>
             children: l
         });
     },
-    O = (e) => {
+    E = (e) => {
         let { listScrollerRef: t } = e,
             { enabled: n } = (0, c.WX)({ location: 'useShopOnboardingCoachmark' }),
             r = i.useRef(null),
@@ -151,7 +151,7 @@ let b = (e) =>
             errorSource: 'ORBS_SHOP_ONBOARDING_COACHMARK',
             renderCustomErrorComponent: () => i,
             children: (0, r.jsx)(
-                E,
+                O,
                 ((t = g({}, l)),
                 (n = n = { children: i }),
                 Object.getOwnPropertyDescriptors

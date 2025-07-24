@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -23,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function g(e, t) {
         e
     );
 }
-class _ extends i.PureComponent {
+class h extends i.PureComponent {
     render() {
         let { result: e, listItemProps: t, searchOffset: n, index: i, totalResults: l } = this.props,
             o = a().find(e, (e) => e.isSearchHit);
@@ -71,7 +71,7 @@ class _ extends i.PureComponent {
             offset: 4,
             children: (0, r.jsxs)(
                 'li',
-                g(h({ className: m.container }, t), {
+                _(g({ className: m.container }, t), {
                     'aria-posinset': 1 + n + i,
                     'aria-setsize': l,
                     'aria-labelledby': f,
@@ -128,7 +128,7 @@ class _ extends i.PureComponent {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                g(h({}, n), {
+                                _(g({}, n), {
                                     message: t,
                                     channel: i
                                 })

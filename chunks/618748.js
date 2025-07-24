@@ -20,8 +20,8 @@ var i = n(442837),
     v = n(723047),
     _ = n(303737),
     O = n(568074),
-    C = n(411667),
-    y = n(903773),
+    y = n(411667),
+    C = n(903773),
     N = n(822531),
     I = n(909656),
     E = n(210591),
@@ -99,7 +99,7 @@ function k(e) {
         s = [Z.C.ACTION_REQUIRED, Z.C.BLOCKED, Z.C.SUSPENDED];
     return (null == i ? void 0 : i.payout_account_status) != null && s.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(l.LZC, { size: 16 }), (0, r.jsx)(y.Z, { children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(l.LZC, { size: 16 })]
+              children: [(0, r.jsx)(l.LZC, { size: 16 }), (0, r.jsx)(C.Z, { children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(l.LZC, { size: 16 })]
           })
         : null;
 }
@@ -133,9 +133,9 @@ function G(e) {
         c = null != a && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: g, setCurrentTab: j } = (0, T.dw)(),
         v = (0, b.f)(),
-        y = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        C = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
         E = (0, O.Z)(n.id),
-        Z = null != n && (0, p.eM)(n, y),
+        Z = null != n && (0, p.eM)(n, C),
         M = () => {
             let e = f.Z.getEveryoneRole(n);
             o.Z.close();
@@ -180,7 +180,7 @@ function G(e) {
                         type: l.R94.Types.DESCRIPTION,
                         children: D.intl.string(D.t.KyGv0t)
                     }),
-                    (0, r.jsx)(C.Z, { guild: n }),
+                    (0, r.jsx)(y.Z, { guild: n }),
                     c && (0, r.jsx)(k, { application: a }),
                     (0, r.jsxs)('div', {
                         className: A.tabBarContainer,

@@ -24,8 +24,8 @@ var r = n(255367),
     v = n(63063),
     _ = n(78451),
     O = n(434404),
-    C = n(999382),
-    y = n(181339),
+    y = n(999382),
+    C = n(181339),
     N = n(193544),
     I = n(981631),
     E = n(388032),
@@ -351,7 +351,7 @@ function M(e) {
         : null;
 }
 function G() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([C.Z], () => C.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([y.Z], () => y.Z.getProps(), []),
         n = (0, o.e7)([b.Z], () => b.Z.enabled, []);
     return null == e
         ? null
@@ -373,7 +373,7 @@ function G() {
                     (0, r.jsx)(c.$i$, { className: T.divider }),
                     (0, r.jsx)('div', {
                         className: T.setupContainer,
-                        children: (0, r.jsx)(y.w, { guild: e })
+                        children: (0, r.jsx)(C.w, { guild: e })
                     })
                 ]
             });

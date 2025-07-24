@@ -13,8 +13,8 @@ var i = n(120356),
 let g = function (e) {
     let { channelId: t, formField: n, index: i, isDragEnabled: g, isDropHovered: p, onDrop: f, onEdit: h, onRemove: x, canRemove: b, title: j, actionsLocation: v, fieldStyle: _ } = e,
         O = n.values,
-        C = O.slice(0, 1),
-        y = O.length - C.length;
+        y = O.slice(0, 1),
+        C = O.length - y.length;
     return (0, r.jsxs)(d.Z, {
         field: n,
         index: i,
@@ -29,18 +29,18 @@ let g = function (e) {
         fieldStyle: _,
         children: [
             (0, r.jsx)(c.EK, {
-                className: l()(m.fieldBackground, { [m.withFooter]: 0 !== y }),
-                terms: C,
+                className: l()(m.fieldBackground, { [m.withFooter]: 0 !== C }),
+                terms: y,
                 channelId: t
             }),
-            0 !== y &&
+            0 !== C &&
                 (0, r.jsxs)(a.P3F, {
                     className: l()(m.fieldFooterContainer, m.clickable),
                     onClick: h,
                     children: [
                         (0, r.jsx)(a.R94, {
                             className: m.clickable,
-                            children: u.intl.format(u.t.jnhD0d, { count: y })
+                            children: u.intl.format(u.t.jnhD0d, { count: C })
                         }),
                         (0, r.jsx)(o.Z, {
                             className: m.termsFieldCaretIcon,

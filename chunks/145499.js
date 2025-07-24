@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(267642),
     _ = n(926491),
     O = n(909707),
-    C = n(863562),
-    y = n(399829),
+    y = n(863562),
+    C = n(399829),
     N = n(428862),
     I = n(981631),
     E = n(535396),
@@ -184,7 +184,7 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
                     })
                 }
             ];
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(C.Z, {
             tiers: G,
             renderTier: (e) => {
                 let i,
@@ -192,16 +192,16 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
                     { isAnimatedTo: a, onSetRef: u, tier: m, tiers: p, tierIndex: x } = e,
                     { canCreateExpressions: b, canManageGuildExpression: _ } = (0, f.Gw)(t),
                     O = p[x - 1],
-                    y = null != O ? (0, v.A3)(O.tier) : 0,
+                    C = null != O ? (0, v.A3)(O.tier) : 0,
                     R = (0, v.A3)(m.tier, t),
                     G = (0, v.ig)(m.tier),
-                    U = d.slice(y, R),
+                    U = d.slice(C, R),
                     B = U.length > 0,
                     F = Z < m.tier,
                     H = w(d.length, t),
                     z = b && !F && H === m.tier && R !== U.length,
                     W = z || U.length > 0,
-                    V = R - y,
+                    V = R - C,
                     Y = n(872732),
                     K = G - U.length,
                     X = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
@@ -257,7 +257,7 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
                                         children: [
                                             U.map((e) =>
                                                 (0, r.jsx)(
-                                                    C.Z,
+                                                    y.Z,
                                                     {
                                                         isDisabled: F,
                                                         sticker: e,

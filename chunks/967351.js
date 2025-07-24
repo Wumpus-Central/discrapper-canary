@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685), n(415506), n(49124));
+(n.d(t, { Z: () => I }), n(388685), n(415506), n(49124));
 var r = n(413135),
     i = n(836560),
     l = n(392711),
@@ -37,7 +37,7 @@ function b(e, t) {
 function _(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
-function E(e) {
+function O(e) {
     return new Promise((t, n) => {
         'string' == typeof e && (e = f.net.createConnection(e));
         let r = new y(e, 'json');
@@ -46,7 +46,7 @@ function E(e) {
                 r.read(t);
             } catch (t) {
                 (e.end(
-                    O(m.CLOSE, {
+                    E(m.CLOSE, {
                         code: 1003,
                         message: t.message
                     })
@@ -57,7 +57,7 @@ function E(e) {
         let i = () => {
                 try {
                     (e.end(
-                        O(m.CLOSE, {
+                        E(m.CLOSE, {
                             code: p.$VG.CLOSE_NORMAL,
                             message: 'test client going away'
                         })
@@ -81,10 +81,10 @@ function E(e) {
                     throw (i(), e);
                 }
             );
-        return (e.write(O(m.PING, a().uniqueId())), l.then(t, n));
+        return (e.write(E(m.PING, a().uniqueId())), l.then(t, n));
     });
 }
-function O(e, t) {
+function E(e, t) {
     t = JSON.stringify(t);
     let n = r.Buffer.byteLength(t),
         i = r.Buffer.alloc(8 + n);
@@ -96,11 +96,11 @@ class y extends u.Z {
         return (e.copy(i, 0, t, n), i);
     }
     send(e) {
-        (g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(O(m.FRAME, e)));
+        (g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(E(m.FRAME, e)));
     }
     close(e, t) {
         (this.socket.end(
-            O(m.CLOSE, {
+            E(m.CLOSE, {
                 code: e,
                 message: t
             })
@@ -138,7 +138,7 @@ class y extends u.Z {
     dispatchMessage(e, t, n) {
         switch (t) {
             case m.PING:
-                (e.emit('ping', n), e.write(O(m.PONG, n)));
+                (e.emit('ping', n), e.write(E(m.PONG, n)));
                 break;
             case m.PONG:
                 e.emit('pong', n);
@@ -152,7 +152,7 @@ class y extends u.Z {
                 break;
             case m.CLOSE:
                 (e.end(
-                    O(m.CLOSE, {
+                    E(m.CLOSE, {
                         code: p.$VG.CLOSE_NORMAL,
                         message: 'client disconnect'
                     })
@@ -168,7 +168,7 @@ class y extends u.Z {
         (super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 5242880), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1));
     }
 }
-class I extends i.EventEmitter {
+class v extends i.EventEmitter {
     handleConnection(e) {
         let t = new y(e, 'json');
         (e.on('readable', () => {
@@ -181,7 +181,7 @@ class I extends i.EventEmitter {
                 } catch (t) {
                     (g.error('Socket Error: '.concat(t.message)),
                         e.end(
-                            O(m.CLOSE, {
+                            E(m.CLOSE, {
                                 code: p.$VG.CLOSE_UNSUPPORTED,
                                 message: t.message
                             })
@@ -213,11 +213,11 @@ class I extends i.EventEmitter {
         super();
         let e = f.net.createServer((e) => this.handleConnection(e));
         (e.on('error', (e) => g.error('Error: '.concat(e.message))),
-            f.getAvailableSocket(E).then((t) => {
+            f.getAvailableSocket(O).then((t) => {
                 e.listen(t, () => {
                     ('function' == typeof e.listening ? e.listening() : e.listening) && g.info('Starting on '.concat(e.address()));
                 });
             }));
     }
 }
-let v = new I();
+let I = new v();

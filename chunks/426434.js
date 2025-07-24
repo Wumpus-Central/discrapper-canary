@@ -23,7 +23,7 @@ function h(e) {
         v = null == b ? void 0 : b.mfaEnabled,
         _ = h === g.BpS.ELEVATED,
         O = j && v,
-        C = (0, i.throttle)(async (e) => {
+        y = (0, i.throttle)(async (e) => {
             O &&
                 (await u.Z.updateMFALevel({
                     guildId: n.id,
@@ -33,7 +33,7 @@ function h(e) {
         }, 1000);
     if (!x) return null;
     O || (t = j ? p.intl.format(p.t.nFwNyc, { settingsHook: () => a.Z.open(g.oAB.ACCOUNT) }) : p.intl.string(p.t['9Ghu4+']));
-    let y = n.features.has(g.oNc.DISCOVERABLE);
+    let C = n.features.has(g.oNc.DISCOVERABLE);
     return (0, r.jsxs)('div', {
         className: f.simpleItemWrapper,
         children: [
@@ -52,21 +52,21 @@ function h(e) {
                     })
                 ]
             }),
-            !O || (_ && y)
+            !O || (_ && C)
                 ? (0, r.jsx)(s.ua7, {
-                      text: y ? p.intl.string(p.t['KG1V/P']) : j ? p.intl.string(p.t.NmsheX) : p.intl.string(p.t.LieBtb),
+                      text: C ? p.intl.string(p.t['KG1V/P']) : j ? p.intl.string(p.t.NmsheX) : p.intl.string(p.t.LieBtb),
                       children: (e) =>
                           (0, r.jsx)(m.Z, {
                               checked: _,
                               disabled: !0,
-                              onChange: C,
+                              onChange: y,
                               className: f.bringToFront,
                               tooltipProps: e
                           })
                   })
                 : (0, r.jsx)(m.Z, {
                       checked: _,
-                      onChange: C,
+                      onChange: y,
                       className: f.bringToFront
                   })
         ]

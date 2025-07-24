@@ -23,7 +23,7 @@ function b(e) {
             vanityURLUses: v,
             originalVanityURLCode: _,
             errorDetails: O,
-            fetched: C
+            fetched: y
         } = (0, l.cj)([m.Z], () => ({
             vanityURLCode: m.Z.vanityURLCode,
             vanityURLUses: m.Z.vanityURLUses,
@@ -31,10 +31,10 @@ function b(e) {
             errorDetails: m.Z.errorDetails,
             fetched: m.Z.fetchedVanityURL
         })),
-        y = null == t ? void 0 : t.id;
+        C = null == t ? void 0 : t.id;
     return (i.useEffect(() => {
-        null == y || C || (0, u.U5)(y);
-    }, [C, y]),
+        null == C || y || (0, u.U5)(C);
+    }, [y, C]),
     null == t)
         ? null
         : b

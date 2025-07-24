@@ -63,7 +63,7 @@ let f = (e) => {
                 (v(e.body.message), b(!1));
             }
         },
-        C = d.ZP.useUserTag(f.user);
+        y = d.ZP.useUserTag(f.user);
     return (0, r.jsx)(a.ua7, {
         color: a.ua7.Colors.RED,
         forceOpen: null != j,
@@ -100,7 +100,7 @@ let f = (e) => {
                                                 (0, r.jsx)(a.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: C
+                                                    children: y
                                                 })
                                             ]
                                         })

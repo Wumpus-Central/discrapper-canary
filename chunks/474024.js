@@ -32,10 +32,10 @@ function b(e) {
     let O = i.useCallback(() => {
             j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
         }, [b, v, j]),
-        C = i.useCallback(() => {
+        y = i.useCallback(() => {
             g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        y = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
+        C = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
         className: x.twoColumnContainer,
         ref: _,
@@ -47,7 +47,7 @@ function b(e) {
                         onChange: O,
                         value: !j,
                         hideBorder: !0,
-                        disabled: y || !l,
+                        disabled: C || !l,
                         children: h.intl.string(h.t.fjHWen)
                     }),
                     (0, r.jsx)(c.Text, {
@@ -55,7 +55,7 @@ function b(e) {
                         color: 'text-secondary',
                         children: h.intl.string(h.t.J1YOV1)
                     }),
-                    y &&
+                    C &&
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
@@ -64,7 +64,7 @@ function b(e) {
                                     (0, r.jsx)(
                                         c.eee,
                                         {
-                                            onClick: C,
+                                            onClick: y,
                                             children: e
                                         },
                                         t

@@ -22,8 +22,8 @@ function _(e) {
         { guildProfile: c, fetchGuildProfile: g, fetchStatus: _ } = (0, m.u)(t),
         O = _ !== u.a.FETCHED,
         {
-            fetchedEmbed: C,
-            embedEnabled: y,
+            fetchedEmbed: y,
+            embedEnabled: C,
             embedChannelId: N
         } = (0, a.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
@@ -37,10 +37,10 @@ function _(e) {
         E = i.useMemo(() => (0, x.a)(t), [t]),
         [S, T] = i.useState(!1),
         P = null != c && l.Y.VISIBLE.has(c.visibility),
-        w = !O && !P && !y;
+        w = !O && !P && !C;
     (i.useEffect(() => {
-        C || (0, p.R)(t);
-    }, [C, t]),
+        y || (0, p.R)(t);
+    }, [y, t]),
         i.useEffect(() => {
             g();
         }, [t, g]));
@@ -50,12 +50,12 @@ function _(e) {
         },
         [N, t]
     );
-    return C
+    return y
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
                       disabled: S,
-                      value: y,
+                      value: C,
                       hideBorder: !0,
                       onChange: R,
                       children: j.intl.string(j.t.NR6hub)
@@ -68,14 +68,14 @@ function _(e) {
                             children: j.intl.string(j.t.zCGuJy)
                         })
                       : null,
-                  y
+                  C
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', { className: v.divider }),
                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.LUo0Q0) }),
                                 (0, r.jsx)(b.m, {
                                     guildId: t,
-                                    widgetEnabled: y,
+                                    widgetEnabled: C,
                                     widgetChannelId: N,
                                     enableLocalUpdate: !0
                                 }),

@@ -16,11 +16,11 @@ var i = n(243814),
     m = n(596223),
     b = n(838195),
     _ = n(333861),
-    E = n(928518),
-    O = n(23750),
+    O = n(928518),
+    E = n(23750),
     y = n(592125),
-    I = n(293273),
-    v = n(885110),
+    v = n(293273),
+    I = n(885110),
     C = n(451478),
     S = n(630388),
     N = n(823379),
@@ -28,8 +28,8 @@ var i = n(243814),
     P = n(591759),
     j = n(228488),
     A = n(996106),
-    Z = n(914946),
-    x = n(452426),
+    x = n(914946),
+    Z = n(452426),
     w = n(561205),
     L = n(600027),
     R = n(852926),
@@ -38,9 +38,9 @@ var i = n(243814),
     M = n(701488);
 async function U(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        l = I.Z.getApplicationActivity(t);
-    if (null == l || null == l.secrets || !(0, Z.t9)(r, l.party, l.secrets)) throw new A.Z({ errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, m.Z)(l, v.Z);
+        l = v.Z.getApplicationActivity(t);
+    if (null == l || null == l.secrets || !(0, x.t9)(r, l.party, l.secrets)) throw new A.Z({ errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+    let a = (0, m.Z)(l, I.Z);
     if (a) {
         let { lock: t } = (0, R.jU)(e);
         return (0, s.h7)(l, a).then(() => {
@@ -97,7 +97,7 @@ let G = {
             [D.Gp.ANY]: [i.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, x.Z)(e)
+            (0, Z.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -120,7 +120,7 @@ let G = {
             [D.Gp.ANY]: [i.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, x.Z)(e)
+            (0, Z.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([k.mFx.JOIN]),
@@ -166,12 +166,12 @@ let G = {
                     application: t.application,
                     channelId: null == l ? void 0 : l.id
                 }),
-                d = null != u ? E.Z.getWindow(u) : void 0;
+                d = null != u ? O.Z.getWindow(u) : void 0;
             (null == d ? void 0 : d.closed) && (d = void 0);
             let p = null != d ? k.IlC.POPOUT : k.IlC.APP;
             if (((0, j.Pr)({}, null == d ? void 0 : d.document), null != c)) {
                 if (c.applicationId !== i.id) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'Application is not currently mounted.');
-                let e = I.Z.getApplicationActivity(i.id);
+                let e = v.Z.getApplicationActivity(i.id);
                 if (null != e) (0, s.h7)(e, !1, p);
                 else throw new A.Z({ errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
             } else
@@ -248,7 +248,7 @@ let G = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, h.R)()) n = E.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, h.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
                         let e = C.Z.getLastFocusedWindowId();
@@ -294,7 +294,7 @@ let G = {
                 socket: n,
                 args: { mediaUrl: r }
             } = e;
-            (0, Z.bu)(n.transport);
+            (0, x.bu)(n.transport);
             let i = n.application.id;
             if (null == i) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'This application cannot access this API');
@@ -338,7 +338,7 @@ let G = {
                             width: l.width
                         }
                     ]),
-                    (n = new O.ZP({
+                    (n = new E.ZP({
                         id: T.default.cast(T.default.fromTimestamp(Date.now())),
                         applicationId: p,
                         content: c,
@@ -350,7 +350,7 @@ let G = {
                 let t = !1,
                     r = (0, R.jU)(d),
                     l = a.z1l;
-                ((E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
+                ((O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
                         channel: h,

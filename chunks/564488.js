@@ -17,10 +17,10 @@ let m = i.memo(function (e) {
         v = (0, s.U)(null == t ? void 0 : t.id),
         _ = j && null != p ? p : t,
         O = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
-        C = i.useCallback(() => {
+        y = i.useCallback(() => {
             f(t.guildId, t.triggerType);
         }, [t.guildId, t.triggerType, f]),
-        y = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 x || h(e, !0);
             },
@@ -45,8 +45,8 @@ let m = i.memo(function (e) {
             triggerType: t.triggerType,
             isEditMode: j,
             isDefaultRule: v,
-            onChangeRule: y,
-            onSetupRule: C
+            onChangeRule: C,
+            onSetupRule: y
         }),
         isStuck: j && g,
         isExpanded: j,
@@ -56,7 +56,7 @@ let m = i.memo(function (e) {
             (0, r.jsx)(c.Z, {
                 rule: _,
                 isLoading: x,
-                onChangeRule: y
+                onChangeRule: C
             })
     });
 });

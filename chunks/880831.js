@@ -27,8 +27,8 @@ var r = n(255367),
     O = n(70956),
     E = n(823379),
     S = n(981631),
-    P = n(217702),
-    I = n(955525);
+    I = n(217702),
+    P = n(955525);
 let Z = 10 * O.Z.Millis.SECOND;
 function T(e) {
     var t;
@@ -69,10 +69,10 @@ function T(e) {
             renderedContent: N,
             trailingIcon: A,
             leadingIcon: w
-        } = (0, _.f)(n, Z, l, o, I.messageContent, {
-            trailingIconClass: I.messageContentTrailingIcon,
-            leadingIconClass: I.messageContentLeadingIcon,
-            iconSize: P.WW
+        } = (0, _.f)(n, Z, l, o, P.messageContent, {
+            trailingIconClass: P.messageContentTrailingIcon,
+            leadingIconClass: P.messageContentLeadingIcon,
+            iconSize: I.WW
         }),
         R = (0, y.cv)(n),
         M =
@@ -81,7 +81,7 @@ function T(e) {
                       (0, r.jsx)(
                           C.Z,
                           {
-                              className: I.sticker,
+                              className: P.sticker,
                               size: 128,
                               sticker: e,
                               isInteracting: x
@@ -91,7 +91,7 @@ function T(e) {
                   )
                 : null;
     return (0, r.jsxs)(u.P3F, {
-        className: I.toast,
+        className: P.toast,
         onMouseEnter: () => {
             O(!0);
         },
@@ -101,7 +101,7 @@ function T(e) {
         onClick: S,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(I.messageContentWrapper, { [I.mentioned]: n.mentioned }),
+                className: a()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
                 children: [null != M ? null : w, null != (t = null != N ? N : M) ? t : (0, r.jsx)('span', { children: T }), null != M ? null : A]
             }),
             (0, r.jsx)('img', {
@@ -114,7 +114,7 @@ function T(e) {
                               avatar: s.guildMemberAvatar
                           })
                         : n.author.getAvatarURL(d, 32),
-                className: I.avatar
+                className: P.avatar
             })
         ]
     });
@@ -230,7 +230,7 @@ function N(e) {
                 children: v((e, t) =>
                     (0, r.jsx)(s.animated.div, {
                         ref: (e) => _(t.message.id, null != e ? e.offsetHeight : null),
-                        className: I.toastWrapper,
+                        className: P.toastWrapper,
                         style: e,
                         children: (0, r.jsx)(T, { message: t.message })
                     })

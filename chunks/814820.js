@@ -11,29 +11,29 @@ var r = n(255367),
     p = n(430824),
     m = n(496675),
     f = n(594174),
-    h = n(838440),
-    g = n(779139),
-    _ = n(223750),
+    g = n(838440),
+    _ = n(779139),
+    h = n(223750),
     b = n(981631),
     E = n(388032),
-    y = n(429495);
+    C = n(429495);
 let x = (e) => {
         let { channel: t, message: n } = e,
-            l = (0, _.t)(),
+            l = (0, h.t)(),
             [u, d] = i.useState(!1),
-            p = (0, g.y6)(n.id),
+            p = (0, _.y6)(n.id),
             m = i.useCallback(() => {
-                (0, h.v)({
+                (0, g.v)({
                     type: s.Ie.FORM,
                     content: '',
                     channel: t
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, g.TZ)(t, n, p.id);
+                    r && (0, _.TZ)(t, n, p.id);
                 });
             }, [t, n, p]);
         return (0, r.jsx)('div', {
-            className: y.welcomeCTA,
+            className: C.welcomeCTA,
             children: l
                 ? (0, r.jsx)(a.zx, {
                       variant: 'secondary',
@@ -43,15 +43,15 @@ let x = (e) => {
                   })
                 : (0, r.jsxs)(o.zx, {
                       'data-migration-pending': !0,
-                      className: y.welcomeCTAButtonOuter,
-                      innerClassName: y.welcomeCTAButton,
+                      className: C.welcomeCTAButtonOuter,
+                      innerClassName: C.welcomeCTAButton,
                       color: o.Tt.PRIMARY,
                       onMouseEnter: () => d(!0),
                       onMouseLeave: () => d(!1),
                       onClick: m,
                       children: [
                           (0, r.jsx)(c.Z, {
-                              className: y.welcomeCTASticker,
+                              className: C.welcomeCTASticker,
                               isInteracting: u,
                               sticker: p,
                               size: 28
@@ -72,8 +72,8 @@ let x = (e) => {
                     o = null != i && null != r && (null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
                     s = t.author.bot,
                     c = p.Z.getGuild(i),
-                    h = null != c && (c.systemChannelFlags & b.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && h;
+                    g = null != c && (c.systemChannelFlags & b.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return a && !l && !o && !s && g;
             });
         return null != i && a
             ? (0, r.jsx)(x, {

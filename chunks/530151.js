@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(51025),
     b = n(785547),
     _ = n(730749),
-    E = n(112724),
-    O = n(812206),
+    O = n(112724),
+    E = n(812206),
     y = n(44315),
-    I = n(600164),
-    v = n(167533),
+    v = n(600164),
+    I = n(167533),
     C = n(925329),
     S = n(707409),
     N = n(210887),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(417363),
     j = n(941128),
     A = n(451478),
-    Z = n(424218),
-    x = n(780570),
+    x = n(424218),
+    Z = n(780570),
     w = n(353042),
     L = n(86826),
     R = n(981631),
@@ -84,7 +84,7 @@ function V(e, t) {
         case R.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, Z.BU)(e, { useKibibytes: !0 });
+            return (0, x.BU)(e, { useKibibytes: !0 });
     }
 }
 let H = {
@@ -241,8 +241,8 @@ class W extends i.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
-        return (0, r.jsxs)(I.Z, {
-            direction: I.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(h.Exd, {
                     percent: t,
@@ -260,8 +260,8 @@ class W extends i.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, r.jsxs)(I.Z, {
-            direction: I.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(h.yGy, {
                     percents: t,
@@ -295,7 +295,7 @@ class W extends i.PureComponent {
             if (null != r && null != i) {
                 let n = V(i, l),
                     a = V(r, l),
-                    o = Math.floor((t = x.xI(r, i)));
+                    o = Math.floor((t = Z.xI(r, i)));
                 e =
                     l === R.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -326,15 +326,15 @@ class W extends i.PureComponent {
         if (null == e) return null;
         let { progress: n, total: r } = e;
         if (null == n || null == r) return null;
-        let i = x.xI(n, r),
+        let i = Z.xI(n, r),
             l = Math.floor(i),
             a =
                 0 === n && 1 === r
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
                           percent: l,
-                          progress: (0, Z.BU)(n),
-                          total: (0, Z.BU)(r)
+                          progress: (0, x.BU)(n),
+                          total: (0, x.BU)(r)
                       });
         return this.renderBody({
             message: a,
@@ -354,7 +354,7 @@ class W extends i.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: r, type: i } = e;
         if (null == t || null == n || null == r) return null;
-        let l = x.xI(n, t),
+        let l = Z.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -396,8 +396,8 @@ class W extends i.PureComponent {
                 if (null == n) return null;
                 let { stage: r, progress: i, total: l, type: a, readerProgress: o } = n;
                 if (null == i || null == l || null == r) return null;
-                let s = x.xI(i, l),
-                    c = x.xI(null != o ? o : 0, l),
+                let s = Z.xI(i, l),
+                    c = Z.xI(null != o ? o : 0, l),
                     u = (e[e.length - 1] / t) * 1000,
                     d = l - i,
                     p = z({
@@ -448,8 +448,8 @@ let Y = () =>
             key: 'name',
             cellClassName: k.nameCell,
             render: (e) =>
-                (0, r.jsxs)(I.Z, {
-                    align: I.Z.Align.CENTER,
+                (0, r.jsxs)(v.Z, {
+                    align: v.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)(C.Z, {
                             game: e.application,
@@ -493,8 +493,8 @@ let Y = () =>
                         : null != e.state
                           ? e.state.type !== R.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, r.jsx)(q, { item: e }) : null != t && t.paused ? (0, r.jsx)(Y, {}) : (0, r.jsx)(K, { item: e })), (i = (0, r.jsx)(X, { item: e })))
                           : (i = (0, r.jsx)(X, { item: e })),
-                    (0, r.jsxs)(I.Z, {
-                        justify: I.Z.Justify.END,
+                    (0, r.jsxs)(v.Z, {
+                        justify: v.Z.Justify.END,
                         children: [n, i]
                     })
                 );
@@ -545,7 +545,7 @@ class J extends i.PureComponent {
                               })
                           ]
                       }),
-                      (0, r.jsx)(v.Z, {
+                      (0, r.jsx)(I.Z, {
                           hasHeader: !1,
                           columns: Q,
                           data: e,
@@ -647,9 +647,9 @@ function $(e, t, n, r) {
         );
     }, []);
 }
-let ee = (0, E.Z)(
-    c.ZP.connectStores([O.Z, P.Z, j.Z, N.Z, A.Z], () => ({
-        applications: [...$(j.Z.activeItems, !1, O.Z, P.Z), ...$(j.Z.finishedItems, !0, O.Z, P.Z)],
+let ee = (0, O.Z)(
+    c.ZP.connectStores([E.Z, P.Z, j.Z, N.Z, A.Z], () => ({
+        applications: [...$(j.Z.activeItems, !1, E.Z, P.Z), ...$(j.Z.finishedItems, !0, E.Z, P.Z)],
         paused: j.Z.paused,
         isFocused: A.Z.isFocused(),
         theme: N.Z.theme

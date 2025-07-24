@@ -9,17 +9,17 @@ function o(e) {
         p = (0, i.ZP)(t),
         m = (0, i.Sw)(s, o),
         f = c(p),
-        h = u(null != m ? m : void 0),
-        g = a.intl.format(a.t.tusv2t, {
+        g = u(null != m ? m : void 0),
+        _ = a.intl.format(a.t.tusv2t, {
             actorName: p.nick,
             actorHook: f,
             targetName: null == m ? void 0 : m.nick,
-            targetHook: h
+            targetHook: g
         });
     return (0, r.jsx)(l.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: g
+        children: _
     });
 }

@@ -118,6 +118,7 @@ function O(e) {
                             children: [
                                 S,
                                 (0, r.jsx)(s.animated.div, {
+                                    'data-mana-component': 'modal',
                                     className: o()(h.container, h['size-'.concat(m)], h['padding-size-'.concat(E)]),
                                     style: L,
                                     children: N

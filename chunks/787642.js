@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -45,7 +45,7 @@ function _(e, t, n) {
         t
     );
 }
-function E() {
+function O() {
     let e = c.Z.getGuildsArray().filter((e) => e.features.has(h.oNc.HUB)),
         t = (e) => {
             (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e));

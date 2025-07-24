@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => Z }), n(388685));
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -15,16 +15,16 @@ var r = n(392711),
     m = n(19780),
     b = n(594174),
     _ = n(979651),
-    E = n(996106),
-    O = n(914946),
+    O = n(996106),
+    E = n(914946),
     y = n(238679),
-    I = n(452426),
-    v = n(295424),
+    v = n(452426),
+    I = n(295424),
     C = n(222263),
     S = n(863141),
     N = n(186901),
     T = n(981631);
-let P = (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() });
+let P = (e) => (0, v.Z)(e).required().keys({ channel_id: e.string().required() });
 function j(e) {
     var t;
     let {
@@ -32,25 +32,25 @@ function j(e) {
             socket: r
         } = e,
         i = p.Z.getChannel(n);
-    if (null == i || !(0, O.zM)(i, r.application.id, r.authorization.scopes)) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
-    if ((0, o.aC)(i) && (null == (t = b.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
+    if (null == i || !(0, E.zM)(i, r.application.id, r.authorization.scopes)) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
+    if ((0, o.aC)(i) && (null == (t = b.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(i.id));
 }
-let A = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
-function Z(e) {
+let A = (e) => (0, v.Z)(e).keys({ channel_id: e.string().allow(null) });
+function x(e) {
     let {
         args: { channel_id: t }
     } = e;
-    if (null != t && null == p.Z.getChannel(t)) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+    if (null != t && null == p.Z.getChannel(t)) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 }
-let x = {
+let Z = {
     [T.zMe.GUILD_STATUS]: {
         scope: l.x.RPC,
-        validation: (e) => (0, I.Z)(e).required().keys({ guild_id: e.string().required() }),
+        validation: (e) => (0, v.Z)(e).required().keys({ guild_id: e.string().required() }),
         handler(e) {
             let {
                 args: { guild_id: t }
             } = e;
-            if (null == f.Z.getGuild(t)) throw new E.Z({ errorCode: T.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(t));
+            if (null == f.Z.getGuild(t)) throw new O.Z({ errorCode: T.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(t));
             return (e) => {
                 var n;
                 let { prevState: r, dispatch: l } = e,
@@ -72,12 +72,12 @@ let x = {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, v.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == p.Z.getChannel(t)) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == p.Z.getChannel(t)) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = p.Z.getChannel(t);
@@ -91,7 +91,7 @@ let x = {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => r((0, O.aE)(a, l.id, e))),
+                            .forEach((e) => r((0, E.aE)(a, l.id, e))),
                     o
                 );
             };
@@ -101,12 +101,12 @@ let x = {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, v.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == p.Z.getChannel(t)) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == p.Z.getChannel(t)) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = p.Z.getChannel(t);
@@ -119,7 +119,7 @@ let x = {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => r((0, O.aE)(a, l.id, e))),
+                        .forEach((e) => r((0, E.aE)(a, l.id, e))),
                     o
                 );
             };
@@ -129,18 +129,18 @@ let x = {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
-        validation: (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() }),
+        validation: (e) => (0, v.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t }
             } = e;
-            if (null == p.Z.getChannel(t)) throw new E.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+            if (null == p.Z.getChannel(t)) throw new O.Z({ errorCode: T.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
                     l = p.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    o = Object.values(_.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, O.aE)(a, l.id, e));
+                    o = Object.values(_.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
                 return (
                     i()
                         .differenceWith(o, n, i().isEqual)
@@ -157,7 +157,7 @@ let x = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, O.zy)(m.Z.getState()),
+                    state: (0, E.zy)(m.Z.getState()),
                     hostname: m.Z.getHostname(),
                     pings: m.Z.getPings(),
                     average_ping: m.Z.getAveragePing(),
@@ -186,14 +186,14 @@ let x = {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH]
         },
         validation: A,
-        handler: Z
+        handler: x
     },
     [T.zMe.SPEAKING_STOP]: {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH]
         },
         validation: A,
-        handler: Z
+        handler: x
     },
     [T.zMe.GUILD_CREATE]: {
         scope: l.x.RPC,
@@ -317,7 +317,7 @@ let x = {
                 l = d.Z.getStreamerActiveStreamMetadata(),
                 a = (null == l ? void 0 : l.pid) != null ? c.ZP.getGameForPID(l.pid) : null,
                 o = (null == a ? void 0 : a.id) != null ? s.Z.getApplication(a.id) : null,
-                u = null != o ? (0, v.Z)(o) : null,
+                u = null != o ? (0, I.Z)(o) : null,
                 p = null == l ? void 0 : l.sourceName,
                 h = {
                     active: null != l,

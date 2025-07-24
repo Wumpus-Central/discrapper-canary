@@ -16,26 +16,26 @@ var r = n(255367),
     b = n(972308);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
-        E = (0, p.V)(),
-        O = i.useCallback(() => {
+        O = (0, p.V)(),
+        E = i.useCallback(() => {
             ((0, o.showToast)((0, o.createToast)(m.intl.string(m.t.pIQ3h4), o.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW }));
         }, []),
         y = i.useCallback(() => {
             u.Z.closeChannelSidebar(d.uZ);
         }, []),
-        I = i.useCallback(() => {
-            (u.Z.closeChannelSidebar(d.uZ), E && (0, c.Kh)(_.id));
-        }, [_.id, E]),
+        v = i.useCallback(() => {
+            (u.Z.closeChannelSidebar(d.uZ), O && (0, c.Kh)(_.id));
+        }, [_.id, O]),
         {
-            acceptMessageRequest: v,
+            acceptMessageRequest: I,
             isAcceptLoading: C,
             isUserProfileLoading: S,
             isOptimisticAccepted: N
         } = (0, h.m)({
             user: n,
-            onAcceptSuccess: I,
+            onAcceptSuccess: v,
             onRejectSuccess: y,
-            onError: O
+            onError: E
         }),
         T = C || S,
         P = T || N;
@@ -58,7 +58,7 @@ function _(e) {
                             size: 'sm',
                             text: m.intl.string(m.t.vicfl5),
                             onClick: (e) => {
-                                (v(_.id), e.stopPropagation());
+                                (I(_.id), e.stopPropagation());
                             },
                             disabled: P,
                             loading: T

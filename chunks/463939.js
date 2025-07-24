@@ -43,7 +43,7 @@ function O(e) {
     }
     return e;
 }
-let C = (e) => {
+let y = (e) => {
     let { dateUtc: t } = e;
     return (0, l.jsx)(u.Text, {
         variant: 'text-md/medium',
@@ -51,7 +51,7 @@ let C = (e) => {
         children: d()(t).utc().format('MMMM YYYY')
     });
 };
-function y(e) {
+function C(e) {
     let { item: t } = e,
         { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, h.j0)(t),
         a = null != s ? d()(s).add(15, 'days').toISOString() : void 0,
@@ -159,7 +159,7 @@ let N = (0, x.i$)({
                 key: 'PERIOD',
                 cellClassName: _.periodColumn,
                 renderHeader: () => (0, l.jsx)(x.qN, { children: v.intl.string(v.t.fThnXV) }),
-                renderContent: (e) => (0, l.jsx)(C, { dateUtc: e.periodStartingAt }),
+                renderContent: (e) => (0, l.jsx)(y, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, 'CellProps should always be provided');
                     let { ListingIdLabel: n } = t;
@@ -213,7 +213,7 @@ let N = (0, x.i$)({
                 renderContent: (e) =>
                     (0, l.jsx)(x.bL, {
                         className: _.statusCell,
-                        children: (0, l.jsx)(y, { item: e })
+                        children: (0, l.jsx)(C, { item: e })
                     })
             })
         ],

@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(434404),
     _ = n(714939),
     O = n(494831),
-    C = n(981631),
-    y = n(921944),
+    y = n(981631),
+    C = n(921944),
     N = n(231338),
     I = n(388032),
     E = n(587072);
@@ -67,13 +67,13 @@ function T(e) {
     let { guild: t } = e;
     i.useEffect(() => {
         (0, p.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
-            dismissAction: y.L.INDIRECT_ACTION,
+            dismissAction: C.L.INDIRECT_ACTION,
             guildId: t.id,
             forceTrack: !0
         });
     }, [t]);
-    let n = (0, b.vc)(o()(C.LCk), 'LL'),
-        l = t.features.has(C.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
+    let n = (0, b.vc)(o()(y.LCk), 'LL'),
+        l = t.features.has(y.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(u.Text, {
                   variant: 'text-sm/normal',
                   children: I.intl.format(I.t.Vg2oTE, { breakingChangeDate: n })
@@ -123,7 +123,7 @@ function P(e) {
                 className: E.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: I.intl.format(I.t.xkC3YW, { articleURL: j.Z.getArticleURL(C.BhN.PERMISSIONS_TUTORIAL) })
+                children: I.intl.format(I.t.xkC3YW, { articleURL: j.Z.getArticleURL(y.BhN.PERMISSIONS_TUTORIAL) })
             }),
             (0, r.jsx)('div', {
                 className: E.rolesTable,

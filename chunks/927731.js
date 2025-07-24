@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(981631),
     _ = n(388032),
     O = n(199824);
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function C(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function E(e) {
             return (0, a.uniq)(e);
         }, [E, w]),
         D = (e, t) => {
-            R((n) => y(C({}, n), { [e]: t }));
+            R((n) => C(y({}, n), { [e]: t }));
         },
         A = (0, p.ss)(t),
         L = (0, p.Gp)(),
@@ -109,7 +109,7 @@ function E(e) {
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
-                                      y(C({}, n), {
+                                      C(y({}, n), {
                                           guildId: t,
                                           addNewEditStateFromTemplate: T,
                                           addNewEditStateFromScratch: S,

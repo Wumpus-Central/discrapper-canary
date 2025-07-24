@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(151864),
     b = n(725436),
     _ = n(497656),
-    E = n(554747),
-    O = n(230900),
+    O = n(554747),
+    E = n(230900),
     y = n(854698),
-    I = n(703656),
-    v = n(922482),
+    v = n(703656),
+    I = n(922482),
     C = n(565799),
     S = n(501655),
     N = n(427679),
@@ -27,15 +27,15 @@ var r = n(255367),
     P = n(670188),
     j = n(496675),
     A = n(594174),
-    Z = n(662868),
-    x = n(981631),
+    x = n(662868),
+    Z = n(981631),
     w = n(765305),
     L = n(388032),
     R = n(29504);
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
-        d = (0, E.k5)(t.id),
+        d = (0, O.k5)(t.id),
         P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
             [m.Z],
@@ -48,7 +48,7 @@ function D(e) {
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
         B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        V = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
+        V = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
@@ -70,7 +70,7 @@ function D(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: a, eventCreator: o, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     _ = null != n && null != i && !h,
-                    E = null != t ? (0, y.DK)(t) : null;
+                    O = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -178,9 +178,9 @@ function D(e) {
                         }
                     );
                 } else if (t.entity_type === w.WX.EXTERNAL) {
-                    let e = (0, O.cS)(t);
+                    let e = (0, E.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = f.ZP.getUserCount(t.id, E);
+                    let n = f.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -220,7 +220,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = f.ZP.getUserCount(t.id, E);
+                        n = f.ZP.getUserCount(t.id, O);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -296,7 +296,7 @@ function D(e) {
                   (0, r.jsxs)('div', {
                       className: R.header,
                       children: [
-                          (0, r.jsx)(Z.Z, {
+                          (0, r.jsx)(x.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
@@ -352,7 +352,7 @@ function D(e) {
                                 size: 'sm',
                                 text: Q,
                                 onClick: () => {
-                                    if (X) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
+                                    if (X) null != l && null != l.getGuildId() && ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
                                         (0, h.bO)({ eventId: d.id });

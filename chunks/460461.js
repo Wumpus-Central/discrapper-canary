@@ -35,8 +35,8 @@ var r = n(255367),
     v = n(63063),
     _ = n(434404),
     O = n(999382),
-    C = n(718157),
-    y = n(450474),
+    y = n(718157),
+    C = n(450474),
     N = n(190287),
     I = n(465520),
     E = n(981631),
@@ -309,7 +309,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     })
                                                                 ]
                                                             }),
-                                                            (0, r.jsx)(C.E, {
+                                                            (0, r.jsx)(y.E, {
                                                                 guildId: u.id,
                                                                 guildMetadata: A,
                                                                 isDisabled: !Z
@@ -321,7 +321,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         className: T.formTitle,
                                                                         children: S.intl.string(S.t.oOPlPD)
                                                                     }),
-                                                                    (0, r.jsx)(y.Z, {
+                                                                    (0, r.jsx)(C.Z, {
                                                                         guild: u,
                                                                         guildMetadata: A,
                                                                         disabled: !Z

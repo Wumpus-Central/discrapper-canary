@@ -136,10 +136,10 @@ function O(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
         O = (0, a.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
-        C = O.filter((e) => e.inOnboarding),
-        y = O.filter((e) => !0 !== e.inOnboarding),
+        y = O.filter((e) => e.inOnboarding),
+        C = O.filter((e) => !0 !== e.inOnboarding),
         N = [
-            ...C.map((e) => ({
+            ...y.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -147,7 +147,7 @@ function O(e) {
                 id: 'separator',
                 data: (0, h.ae)()
             },
-            ...y.map((e) => ({
+            ...C.map((e) => ({
                 id: e.id,
                 data: e
             }))
@@ -196,7 +196,7 @@ function O(e) {
                                               })
                                           ]
                                       }),
-                                C.map((e, t) =>
+                                y.map((e, t) =>
                                     (0, r.jsx)(
                                         f.Z,
                                         {
@@ -225,14 +225,14 @@ function O(e) {
                       ? null
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                y.map((e, t) =>
+                                C.map((e, t) =>
                                     (0, r.jsx)(
                                         f.Z,
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + C.length,
-                                            dragIndex: t + C.length + 1,
+                                            promptIndex: t + y.length,
+                                            dragIndex: t + y.length + 1,
                                             onPromptDragStart: I,
                                             onPromptDragReset: E,
                                             onPromptDragComplete: S

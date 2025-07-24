@@ -38,11 +38,11 @@ let j = -1,
         tension: 140,
         friction: 30
     },
-    C = {
+    y = {
         tension: 800,
         friction: 20
     };
-class y extends (r = l.Component) {
+class C extends (r = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
         return e[e.length - 1].y + _ / 2;
@@ -146,7 +146,7 @@ class y extends (r = l.Component) {
                     (0, i.jsx)(m.AMe, {
                         from: { scale: 1 },
                         to: { scale: j ? 1.625 : 1 },
-                        config: C,
+                        config: y,
                         children: (t) => {
                             var n, r;
                             return (0, i.jsx)(
@@ -324,5 +324,5 @@ class y extends (r = l.Component) {
             }));
     }
 }
-b(y, 'defaultProps', { initialAnimationDelay: 0 });
-let N = y;
+b(C, 'defaultProps', { initialAnimationDelay: 0 });
+let N = C;

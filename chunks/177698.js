@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
+(n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -57,11 +57,11 @@ function _(e, t) {
         e
     );
 }
-let E = (0, h.Z)(
+let O = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: E, redirectUri: O, codeChallenge: y, codeChallengeMethod: I, state: v, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: Z } = e,
-            x = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
+        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: E, codeChallenge: y, codeChallengeMethod: v, state: I, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: x } = e,
+            Z = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
             w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -83,7 +83,7 @@ let E = (0, h.Z)(
                             (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'OAuth2 Error: No location provided')), a.lock());
                             return;
                         }
-                        if ((e(s), null == O || null == L)) return void a.lock();
+                        if ((e(s), null == E || null == L)) return void a.lock();
                         null == new URL(s).searchParams.get('error')
                             ? (0, i.h7j)(
                                   (e) => (0, r.jsx)(c.$0, b({ application: L }, e)),
@@ -132,7 +132,7 @@ let E = (0, h.Z)(
                             }
                         }
                     );
-                })(x, Z);
+                })(Z, x);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -143,11 +143,11 @@ let E = (0, h.Z)(
                             scopes: null != d ? d : [],
                             disclosures: null != P ? P : [],
                             callback: D,
-                            responseType: E,
-                            redirectUri: O,
+                            responseType: O,
+                            redirectUri: E,
                             codeChallenge: y,
-                            codeChallengeMethod: I,
-                            state: v,
+                            codeChallengeMethod: v,
+                            state: I,
                             permissions: h,
                             guildId: C,
                             channelId: S,
@@ -158,7 +158,7 @@ let E = (0, h.Z)(
                         })
                     ),
                 {
-                    modalKey: x,
+                    modalKey: Z,
                     onCloseCallback: () => {
                         (k(), R || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock()));
                     }

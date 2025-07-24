@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(420966),
     _ = n(203377),
     O = n(981631),
-    C = n(856651),
-    y = n(388032),
+    y = n(856651),
+    C = n(388032),
     N = n(419353),
     I = n(877248);
 function E(e) {
@@ -60,18 +60,18 @@ function P(e) {
             (0, r.jsx)(d.X6q, {
                 className: N.headerHeading,
                 variant: 'eyebrow',
-                children: y.intl.string(y.t.nMir29)
+                children: C.intl.string(C.t.nMir29)
             }),
             (0, r.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 className: N.headerNoConfigSubtitle,
-                children: y.intl.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: C.intl.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, r.jsx)(d.zxk, {
                 disabled: n,
                 onClick: t,
-                text: y.intl.string(y.t['OSvW5+']),
+                text: C.intl.string(C.t['OSvW5+']),
                 fullWidth: !0,
                 variant: 'primary'
             })
@@ -115,7 +115,7 @@ function w(e) {
             onComplete: (e) => G(e),
             excludedPlatformTypes: M,
             integrations: o,
-            onCompleteApplication: (e) => G(C.Kt, e)
+            onCompleteApplication: (e) => G(y.Kt, e)
         });
     }
     let B = null;
@@ -131,7 +131,7 @@ function w(e) {
             (e = (0, r.jsx)(d.zxk, {
                 disabled: l,
                 onClick: U,
-                text: y.intl.string(y.t['OSvW5+']),
+                text: C.intl.string(C.t['OSvW5+']),
                 icon: d.oFk,
                 fullWidth: !0,
                 variant: 'secondary'
@@ -148,21 +148,21 @@ function w(e) {
                                         className: N.headerTitleTextContainer,
                                         children: (0, r.jsx)(d.X6q, {
                                             variant: 'eyebrow',
-                                            children: y.intl.string(y.t.nMir29)
+                                            children: C.intl.string(C.t.nMir29)
                                         })
                                     }),
                                     (0, r.jsx)(d.Avr, {
                                         variant: 'critical',
                                         onClick: F,
                                         disabled: l,
-                                        text: y.intl.string(y.t.ntW1cX),
+                                        text: C.intl.string(C.t.ntW1cX),
                                         textVariant: 'text-sm/semibold'
                                     })
                                 ]
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: y.intl.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: C.intl.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
@@ -170,15 +170,15 @@ function w(e) {
                         let s = T(i, m.O1.OR);
                         return (0, r.jsx)(d.xJW, {
                             className: N.operatorContainer,
-                            title: y.intl.string(y.t.Xs7PHR),
+                            title: C.intl.string(C.t.Xs7PHR),
                             children: (0, r.jsx)(d.FXm, {
                                 options: [
                                     {
-                                        name: y.intl.string(y.t['W3iY5+']),
+                                        name: C.intl.string(C.t['W3iY5+']),
                                         value: m.O1.OR
                                     },
                                     {
-                                        name: y.intl.string(y.t.gHXS9P),
+                                        name: C.intl.string(C.t.gHXS9P),
                                         value: m.O1.AND
                                     }
                                 ],
@@ -304,7 +304,7 @@ function w(e) {
                               (0, r.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-default',
-                                  children: y.intl.string(y.t['2aFeeX'])
+                                  children: C.intl.string(C.t['2aFeeX'])
                               })
                           ]
                       })

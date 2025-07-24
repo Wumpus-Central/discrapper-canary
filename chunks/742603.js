@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(134483),
     E = n(210975),
     S = n(809244),
-    P = n(937995),
-    I = n(618158),
+    I = n(937995),
+    P = n(618158),
     Z = n(358221),
     T = n(362721),
     N = n(887012),
@@ -84,7 +84,7 @@ function G(e) {
     let { focusedParticipant: t, channel: n } = e,
         i = (0, u.bp)(),
         l = (0, o.e7)([Z.Z], () => Z.Z.getLayout(n.id, i));
-    return (0, r.jsx)(I.Z, {
+    return (0, r.jsx)(P.Z, {
         children: (0, r.jsx)(w.Z, {
             className: U.participants,
             participant: t,
@@ -186,10 +186,10 @@ function W(e) {
             }),
             [t.id]
         ),
-        _ = i.useContext(P.h9),
+        _ = i.useContext(I.h9),
         y = (0, f.ZP)(t),
         S = (0, m.KS)(t),
-        [I] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
+        [P] = (0, p.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         N = L.intl.string(L.t.BVZqJi);
     t.isDM() ? (N = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (N = L.intl.string(L.t['e5y+go']));
     let w = (0, o.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -288,7 +288,7 @@ function W(e) {
                                 guild: l
                             }),
                             (0, r.jsx)(z, {
-                                focusedApplication: I,
+                                focusedApplication: P,
                                 focusedParticipant: b,
                                 channel: t
                             })

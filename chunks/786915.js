@@ -41,7 +41,7 @@ function _(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: E = !1, iconClassName: S, look: P, size: I, buttonText: Z, color: T } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: E = !1, iconClassName: S, look: I, size: P, buttonText: Z, color: T } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -76,8 +76,8 @@ function y(e) {
               iconComponent: k,
               label: L,
               iconClassName: S,
-              look: P,
-              size: I,
+              look: I,
+              size: P,
               buttonText: Z,
               color: null != T ? T : void 0
           })
@@ -146,8 +146,8 @@ function y(e) {
                         iconComponent: k,
                         label: L,
                         iconClassName: S,
-                        look: P,
-                        size: I,
+                        look: I,
+                        size: P,
                         color: T,
                         buttonText: Z
                     },

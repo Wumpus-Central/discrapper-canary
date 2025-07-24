@@ -1,34 +1,40 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(73800),
     i = n(876215),
     l = n(442837),
     a = n(676316),
-    o = n(146282),
-    s = n(442853),
-    c = n(520951),
-    u = n(897674),
-    d = n(206583);
-let p = new Set([i.s.PLAYED_GAME, i.s.WATCHED_MEDIA, i.s.TOP_GAME, i.s.TOP_ARTIST, i.s.LISTENED_SESSION, i.s.LAUNCHED_ACTIVITY]);
-function h(e) {
-    let t = (0, u.Z)({ id: d.YN.GLOBAL_FEED });
-    ((t = (0, s.Z)({
-        entries: t,
+    o = n(592125),
+    s = n(146282),
+    c = n(442853),
+    u = n(520951),
+    d = n(567493),
+    p = n(897674),
+    h = n(206583);
+let f = new Set([i.s.PLAYED_GAME, i.s.WATCHED_MEDIA, i.s.TOP_GAME, i.s.TOP_ARTIST, i.s.LISTENED_SESSION, i.s.LAUNCHED_ACTIVITY]);
+function m(e) {
+    let t = (0, l.e7)([o.Z], () => o.Z.getChannel(e)),
+        n = null == t ? void 0 : t.guild_id,
+        i = (0, p.Z)({ id: h.YN.GLOBAL_FEED });
+    ((i = (0, c.Z)({
+        entries: i,
         channelId: e
     })),
-        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => p.has(e.content_type))), [t])));
-    let { entries: n, filteredIds: i } = (0, c.Z)(t);
-    t = n;
-    let { entriesWithLeaderboard: h, hasLeaderboardEntry: f } = (0, a.Z)({
-        entries: t,
+        (i = r.useMemo(() => (null == i ? void 0 : i.filter((e) => f.has(e.content_type))), [i])));
+    let { entries: m, filteredIds: g } = (0, u.Z)(i);
+    i = m;
+    let b = (0, d.i)(n);
+    i = r.useMemo(() => (null == i ? b : [...b, ...i]), [i, b]);
+    let { entriesWithLeaderboard: _, hasLeaderboardEntry: y } = (0, a.Z)({
+        entries: i,
         channelId: e
     });
     return (
-        (t = h),
+        (i = _),
         {
-            requestId: (0, l.e7)([o.Z], () => o.Z.getFeedRequestId(d.YN.GLOBAL_FEED)),
-            entries: t,
-            impressionCappedEntryIds: i,
-            hasLeaderboardEntry: f
+            requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(h.YN.GLOBAL_FEED)),
+            entries: i,
+            impressionCappedEntryIds: g,
+            hasLeaderboardEntry: y
         }
     );
 }

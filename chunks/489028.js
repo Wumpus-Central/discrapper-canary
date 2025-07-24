@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(723047),
     _ = n(416867),
     O = n(903773),
-    C = n(215124),
-    y = n(326578),
+    y = n(215124),
+    C = n(326578),
     N = n(981631),
     I = n(674563),
     E = n(829857),
@@ -57,7 +57,7 @@ function w(e) {
             (await u(t, o, I.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (p(t.id),
                 (0, _.B)({
-                    Icon: y.Z,
+                    Icon: C.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
                 }));
@@ -101,7 +101,7 @@ let R = (e) => {
         d = (0, c.Ob)(t),
         j = (0, l.e7)([x.Z], () => x.Z.isFocused()),
         { teams: v, loading: _ } = (0, p.Z)({ refreshOnDepChange: j }),
-        y = i.useMemo(
+        C = i.useMemo(
             () =>
                 v.filter((e) => {
                     var t;
@@ -109,7 +109,7 @@ let R = (e) => {
                 }),
             [v, n]
         ),
-        I = y.length > 0,
+        I = C.length > 0,
         R = i.useCallback(async () => {
             b.default.track(N.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: d,
@@ -152,7 +152,7 @@ let R = (e) => {
                           I
                               ? (0, r.jsx)(w, {
                                     guild: t,
-                                    eligibleTeams: y,
+                                    eligibleTeams: C,
                                     isGuildOwner: s
                                 })
                               : (0, r.jsx)(P, {
@@ -164,7 +164,7 @@ let R = (e) => {
                   (0, r.jsx)(a.hjN, {
                       title: S.intl.string(S.t['0n7R2d']),
                       className: T.selfDemonetization,
-                      children: (0, r.jsx)(C.Z, {
+                      children: (0, r.jsx)(y.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

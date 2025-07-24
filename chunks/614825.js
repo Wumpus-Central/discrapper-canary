@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(481060),
     m = n(568836),
     f = n(100527),
-    h = n(906732),
-    g = n(963249),
-    _ = n(594174),
+    g = n(906732),
+    _ = n(963249),
+    h = n(594174),
     b = n(78839),
     E = n(55935),
-    y = n(70956),
+    C = n(70956),
     x = n(63063),
     v = n(74538),
-    C = n(276444),
-    O = n(857262),
+    O = n(276444),
+    y = n(857262),
     j = n(93237),
     I = n(786397),
     S = n(474936),
@@ -59,13 +59,13 @@ function w(e) {
 class Z extends i.Component {
     renderTitle(e, t, n) {
         let { trialOffer: r } = this.props,
-            i = _.default.getUser(r.user_id),
+            i = h.default.getUser(r.user_id),
             l = null != i ? i.username : '???',
-            a = _.default.getUser(r.referrer_id),
+            a = h.default.getUser(r.referrer_id),
             o = null != a ? a.username : '???';
         if (e && void 0 === r.redeemed_at) return N.intl.formatToPlainString(N.t.Mptau7, { username: l });
         if (t) return n ? N.intl.string(N.t['9SNdf3']) : N.intl.formatToPlainString(N.t['H0+MxM'], { userName: o });
-        switch (O.Z.getCurrentConfig({ location: 'renderTitle' }, { autoTrackExposure: !1 }).treatmentGroup) {
+        switch (y.Z.getCurrentConfig({ location: 'renderTitle' }, { autoTrackExposure: !1 }).treatmentGroup) {
             case 1:
                 return N.intl.formatToPlainString(N.t['L/leCw'], { receiver: l });
             case 2:
@@ -88,9 +88,9 @@ class Z extends i.Component {
         let { trialOffer: r } = this.props;
         if (e && !n && void 0 === r.redeemed_at) return N.intl.format(N.t.LwCwT0, { helpdeskArticle: x.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM) });
         if (t) return null;
-        let i = _.default.getUser(r.referrer_id),
+        let i = h.default.getUser(r.referrer_id),
             l = null != i ? i.username : '???';
-        switch (O.Z.getCurrentConfig({ location: 'renderBody' }, { autoTrackExposure: !1 }).treatmentGroup) {
+        switch (y.Z.getCurrentConfig({ location: 'renderBody' }, { autoTrackExposure: !1 }).treatmentGroup) {
             case 1:
                 return N.intl.format(N.t.Ylrdnp, { sender: l });
             case 2:
@@ -99,7 +99,7 @@ class Z extends i.Component {
                 return N.intl.string(N.t.Ym5LAw);
             case 4:
                 let a = Date.now(),
-                    o = Math.floor((Date.parse(r.expires_at) - a) / y.Z.Millis.HOUR / 24);
+                    o = Math.floor((Date.parse(r.expires_at) - a) / C.Z.Millis.HOUR / 24);
                 return N.intl.formatToPlainString(N.t['/3ho7u'], {
                     sender: l,
                     nDaysRemaining: o
@@ -132,7 +132,7 @@ class Z extends i.Component {
                                 {
                                     size: d.zx.Sizes.SMALL,
                                     onClick: () => {
-                                        (0, g.Z)({
+                                        (0, _.Z)({
                                             initialPlanId: null,
                                             subscriptionTier: S.Si.TIER_2,
                                             analyticsLocations: s,
@@ -209,7 +209,7 @@ class Z extends i.Component {
     constructor(...e) {
         (super(...e),
             A(this, 'handleStartTrial', (e, t) => {
-                (0, g.Z)({
+                (0, _.Z)({
                     initialPlanId: null,
                     subscriptionTier: S.Si.TIER_2,
                     analyticsLocations: t,
@@ -221,20 +221,20 @@ class Z extends i.Component {
 function R(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: i, isResolving: l } = (0, u.cj)(
-            [C.Z],
+            [O.Z],
             () => ({
-                trialOffer: n ? C.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && C.Z.isResolving(t)
+                trialOffer: n ? O.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && O.Z.isResolving(t)
             }),
             [n, t]
         ),
-        a = _.default.getCurrentUser(),
-        o = (0, u.e7)([_.default], () => null != i && (0, v.I5)(void 0 !== a && i.user_id === a.id ? a : _.default.getUser(i.user_id))),
+        a = h.default.getCurrentUser(),
+        o = (0, u.e7)([h.default], () => null != i && (0, v.I5)(void 0 !== a && i.user_id === a.id ? a : h.default.getUser(i.user_id))),
         s = (0, u.e7)([b.Z], () => {
             var e;
             return o ? (null == (e = b.Z.getPremiumTypeSubscription()) ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: d } = (0, h.ZP)(f.Z.SHARE_NITRO_EMBED);
+        { analyticsLocations: d } = (0, g.ZP)(f.Z.SHARE_NITRO_EMBED);
     return l
         ? (0, r.jsx)(m.OR, { isHorizontal: !c.tq })
         : n && null != i && void 0 !== a

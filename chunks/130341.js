@@ -6,7 +6,7 @@
     eg: () => _,
     lJ: () => b,
     rY: () => v,
-    uo: () => C
+    uo: () => y
 }),
     n(539854),
     n(388685),
@@ -105,6 +105,6 @@ function O(e) {
             (0, d.vE)(e);
     }
 }
-function C(e, t) {
+function y(e, t) {
     return '' === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

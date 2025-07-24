@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(463618),
     d = n(823379),
     p = n(88729);
-let m = (e) => {
+let h = (e) => {
         let { member: t, empty: n, guildId: l } = e,
             a = i.useRef(null);
         return n
@@ -92,7 +92,7 @@ let m = (e) => {
             .take(l)
             .map((e) =>
                 (0, r.jsx)(
-                    m,
+                    h,
                     {
                         member: e,
                         guildId: o
@@ -101,12 +101,12 @@ let m = (e) => {
                 )
             )
             .value();
-        for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(m, { guildId: o }, 'unknown-member-'.concat(e)));
-        let h = c - u - s;
-        for (let e = 0; e < h && f.length < l; e++)
+        for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(h, { guildId: o }, 'unknown-member-'.concat(e)));
+        let g = c - u - s;
+        for (let e = 0; e < g && f.length < l; e++)
             f.push(
                 (0, r.jsx)(
-                    m,
+                    h,
                     {
                         empty: !0,
                         guildId: o
@@ -114,12 +114,12 @@ let m = (e) => {
                     'empty-member-'.concat(e)
                 )
             );
-        let g = Math.max(Math.min(c - f.length, 99), 0);
-        if (1 === g) {
+        let m = Math.max(Math.min(c - f.length, 99), 0);
+        if (1 === m) {
             let e = n[l];
             f.push(
                 (0, r.jsx)(
-                    m,
+                    h,
                     {
                         member: e,
                         guildId: o
@@ -134,10 +134,10 @@ let m = (e) => {
                 className: p.partyMembers,
                 children: [
                     f,
-                    g > 1
+                    m > 1
                         ? (0, r.jsxs)('div', {
                               className: p.partyMemberOverflow,
-                              children: ['+', g]
+                              children: ['+', m]
                           })
                         : null
                 ]

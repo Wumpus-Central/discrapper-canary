@@ -20,12 +20,12 @@ function b(e) {
         { editStateId: b, guildId: j, groupListingId: v } = (0, m.N)(),
         _ = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
         O = null == _ ? void 0 : _.id,
-        C = (0, g.Z)(j),
-        y = i.useMemo(() => {
+        y = (0, g.Z)(j),
+        C = i.useMemo(() => {
             var e;
-            return null != C && null != _ && (null != (e = C[_.role_id]) ? e : 0);
-        }, [C, _]),
-        N = 0 === y,
+            return null != y && null != _ && (null != (e = y[_.role_id]) ? e : 0);
+        }, [y, _]),
+        N = 0 === C,
         I = null == O,
         E = null != (t = null == _ ? void 0 : _.archived) && t,
         { error: S, deleteSubscriptionListing: T, submitting: P } = (0, d.r4)(),
@@ -66,7 +66,7 @@ function b(e) {
                                                 (0, r.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
                                                     className: x.warning,
-                                                    children: f.intl.formatToPlainString(f.t.ABeonZ, { listingMemberCount: y })
+                                                    children: f.intl.formatToPlainString(f.t.ABeonZ, { listingMemberCount: C })
                                                 }),
                                             (0, r.jsx)(o.zxk, {
                                                 variant: 'critical-primary',

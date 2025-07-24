@@ -32,11 +32,11 @@ function f(e) {
                   user: t,
                   onClose: p
               })
-            : null;
+            : (d.oh.WIDGETS, null);
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: x, initialSubsection: y, onClose: _ } = e,
+    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: x, initialSubsection: _, onClose: y } = e,
         { trackUserProfileAction: h } = (0, c.KZ)(),
         [{ section: g, subsection: j, text: I }, v] = r.useState(
             ((n = (function (e) {
@@ -73,7 +73,7 @@ function p(e) {
                     ? t
                     : b[0]
             )),
-            (l = l = { subsection: y }),
+            (l = l = { subsection: _ }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -136,7 +136,7 @@ function p(e) {
                     channelId: m,
                     section: g,
                     subsection: j,
-                    onClose: _
+                    onClose: y
                 })
             })
         ]

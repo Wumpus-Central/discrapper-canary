@@ -15,22 +15,22 @@ var r = n(255367),
     m = n(594174),
     b = n(801077),
     _ = n(626135),
-    E = n(70956),
-    O = n(225559),
+    O = n(70956),
+    E = n(225559),
     y = n(910436),
-    I = n(203028),
-    v = n(358924),
+    v = n(203028),
+    I = n(358924),
     C = n(292140),
     S = n(525296),
     N = n(981631),
     T = n(46140),
     P = n(388032),
     j = n(370168);
-let A = 15 * E.Z.Millis.MINUTE,
-    Z = (0, S.Z)(function (e) {
+let A = 15 * O.Z.Millis.MINUTE,
+    x = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
-            c = (0, r.jsx)(I.Z, {
+            c = (0, r.jsx)(v.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -42,8 +42,8 @@ let A = 15 * E.Z.Millis.MINUTE,
             { partiedMembers: p, applicationStreams: h, currentActivities: f, voiceChannels: g } = t,
             m = p.length,
             b = h.length,
-            E = f.length,
-            O = g.length > 0,
+            O = f.length,
+            E = g.length > 0,
             S = i.useCallback(() => {
                 let e = f
                     .filter((e) => {
@@ -54,11 +54,11 @@ let A = 15 * E.Z.Millis.MINUTE,
                 _.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: m,
                     num_streams: b,
-                    num_activities: E,
-                    in_voice_channel: O,
+                    num_activities: O,
+                    in_voice_channel: E,
                     games_detected: e
                 });
-            }, [m, b, E, O, f]),
+            }, [m, b, O, E, f]),
             T = s()(S, A);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
@@ -76,7 +76,7 @@ let A = 15 * E.Z.Millis.MINUTE,
                       var n, i;
                       let { isShown: l } = t;
                       return (0, r.jsx)(
-                          v.Z,
+                          I.Z,
                           ((n = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -131,7 +131,7 @@ let A = 15 * E.Z.Millis.MINUTE,
               })
             : null;
     }),
-    x = a().throttle(() => f._(), 300000);
+    Z = a().throttle(() => f._(), 300000);
 function w() {
     let {
             nowPlayingCards: e,
@@ -147,9 +147,9 @@ function w() {
             currentUser: m.default.getCurrentUser()
         })),
         o = (0, c.e7)([p.Z], () => p.Z.quests);
-    (i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
+    (i.useEffect(() => (d.Z.wait(() => E.L()), () => d.Z.wait(() => E.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && x();
+            n && !l && Z();
         }, [n, l]));
     let s = i.useMemo(() => {
             let t = new Map(),
@@ -171,7 +171,7 @@ function w() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            Z,
+                            x,
                             {
                                 party: t,
                                 quest: s.get(t.id)

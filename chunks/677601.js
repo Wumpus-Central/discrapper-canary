@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(40851),
     E = n(636449),
     S = n(115130),
-    P = n(317381),
-    I = n(596040),
+    I = n(317381),
+    P = n(596040),
     Z = n(617552),
     T = n(100527),
     N = n(367907),
@@ -77,8 +77,8 @@ var r = n(255367),
     eO = n(887012),
     eE = n(909820),
     eS = n(493010),
-    eP = n(742603),
-    eI = n(71127),
+    eI = n(742603),
+    eP = n(71127),
     eZ = n(221888),
     eT = n(185935),
     eN = n(900211),
@@ -343,7 +343,7 @@ class ez extends i.PureComponent {
                                         maxWidth: s
                                     }),
                                 d &&
-                                    (0, r.jsx)(eI.Z, {
+                                    (0, r.jsx)(eP.Z, {
                                         channel: t,
                                         maxWidth: s
                                     })
@@ -734,7 +734,7 @@ class ez extends i.PureComponent {
                                 ? null == n
                                     ? void 0
                                     : n(p)
-                                : (0, r.jsx)(eP.Z, {
+                                : (0, r.jsx)(eI.Z, {
                                       channel: i,
                                       guild: l,
                                       appContext: a,
@@ -813,13 +813,13 @@ let eW = function (e) {
             y.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         er = null != (t = null == W ? void 0 : W.id) ? t : null,
-        ei = (0, I.Z)(er, n.id),
+        ei = (0, P.Z)(er, n.id),
         el = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
         ef = (0, j.Z)(el);
     i.useEffect(() => {
         el === S.O.ERROR && ef !== S.O.ERROR && (0, h.showToast)((0, h.createToast)(eL.intl.string(eL.t.AlJyIy), h.ToastType.FAILURE));
     }, [el, ef]);
-    let em = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let em = (0, u.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     i.useEffect(() => {
         let e = !1,
             t = null;
@@ -837,7 +837,7 @@ let eW = function (e) {
         { hasParticipantsPanel: e_ } = (0, eT.Z)({ location: 'ChannelCall' }),
         ey = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ex } = (0, A.ZP)(T.Z.CHANNEL_CALL),
-        ej = P.ZP.getEmbeddedActivitiesForChannel(n.id),
+        ej = I.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eS } = (0, h.TCT)();
     return (0, r.jsx)(A.Gt, {
         value: ex,

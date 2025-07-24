@@ -1,19 +1,19 @@
-(n.d(t, { Z: () => c }), n(388685), n(49124));
-var r = n(73800),
-    i = n(442837),
-    l = n(603263),
-    a = n(768119),
-    o = n(981631);
-function c(e) {
+(r.d(t, { Z: () => o }), r(388685), r(49124));
+var n = r(73800),
+    l = r(442837),
+    i = r(603263),
+    a = r(768119),
+    c = r(981631);
+function o(e) {
     let { searchId: t } = e,
-        [n, c] = r.useState(o.QIO.NEWEST),
-        s = (0, i.e7)([a.Z], () => a.Z.getSearchResultsQuery(t)),
-        u = r.useRef(null);
+        [r, o] = n.useState(c.QIO.NEWEST),
+        s = (0, l.e7)([a.Z], () => a.Z.getSearchResultsQuery(t)),
+        u = n.useRef(null);
     return (
-        r.useEffect(() => {
+        n.useEffect(() => {
             JSON.stringify(u.current) !== JSON.stringify(s) &&
-                (c(
-                    l.Vj({
+                (o(
+                    i.Vj({
                         sort_by: null == s ? void 0 : s.sort_by,
                         sort_order: null == s ? void 0 : s.sort_order
                     })
@@ -21,8 +21,8 @@ function c(e) {
                 (u.current = s));
         }, [s]),
         {
-            searchMode: n,
-            setSearchMode: c
+            searchMode: r,
+            setSearchMode: o
         }
     );
 }

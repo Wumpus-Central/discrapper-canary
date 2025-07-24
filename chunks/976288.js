@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(654351),
     _ = n(557359),
     O = n(386885),
-    C = n(203377),
-    y = n(929834),
+    y = n(203377),
+    C = n(929834),
     N = n(388032),
     I = n(356941);
 function E() {
@@ -229,7 +229,7 @@ function P(e) {
         p = i.useCallback(
             (e) => {
                 let { keywords: r } = n;
-                r.length >= C.G7 || (m(null), (0, d.zH)(t, [...r, e]));
+                r.length >= y.G7 || (m(null), (0, d.zH)(t, [...r, e]));
             },
             [t, n]
         ),
@@ -238,7 +238,7 @@ function P(e) {
                 (0, v.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
                     .map((e) => {
-                        let t = n.keywords.length >= C.G7;
+                        let t = n.keywords.length >= y.G7;
                         return {
                             text: e,
                             onClick: () => p(e),
@@ -271,8 +271,8 @@ function P(e) {
                         onRemoveTag: g,
                         onAddTag: p,
                         onAddTagError: m,
-                        maxTags: C.G7,
-                        maxTaxLength: C._0,
+                        maxTags: y.G7,
+                        maxTaxLength: y._0,
                         placeholder: n.keywords.length < 1 ? N.intl.string(N.t.EL4Lho) : void 0
                     }),
                     null != h
@@ -347,7 +347,7 @@ function w(e) {
 }
 function R(e) {
     let { preferredLocale: t } = e,
-        n = i.useMemo(() => (0, y.jb)(), []),
+        n = i.useMemo(() => (0, C.jb)(), []),
         l = i.useCallback((e) => {
             p.Z.updateGuild({ preferredLocale: e });
         }, []);

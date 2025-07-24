@@ -22,7 +22,7 @@ function E(e) {
     var t, n, E;
     let { onClose: O, event: N } = e,
         C = null == N ? void 0 : N.guild_id,
-        S = (0, r.e7)(
+        T = (0, r.e7)(
             [u.ZP],
             () => {
                 var e;
@@ -30,29 +30,29 @@ function E(e) {
             },
             [C]
         ),
-        T = (0, r.e7)([d.Z], () => d.Z.getGuild(C), [C]),
-        { channel_id: I, id: P } = null != N ? N : {},
-        Z = (0, r.e7)(
+        S = (0, r.e7)([d.Z], () => d.Z.getGuild(C), [C]),
+        { channel_id: I, id: Z } = null != N ? N : {},
+        P = (0, r.e7)(
             [x.Z],
             () => {
-                let e = null != I ? I : S;
+                let e = null != I ? I : T;
                 return null == e ? null : x.Z.getInvite(e);
             },
-            [I, S]
+            [I, T]
         );
     if (null == N) return (O(), null);
-    let w = null != (t = null == T ? void 0 : T.vanityURLCode) ? t : null == Z ? void 0 : Z.code,
+    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == P ? void 0 : P.code,
         D =
             null != w
                 ? (0, a.tV)({
                       baseCode: w,
-                      guildScheduledEventId: P
+                      guildScheduledEventId: Z
                   })
                 : null,
-        _ = null == D || null == Z,
+        _ = null == D || null == P,
         R = (0, s.Z)(null != D ? D : ''),
-        L = null != (n = null == Z ? void 0 : Z.maxAge) ? n : y.value,
-        A = null != (E = null == Z ? void 0 : Z.maxUses) ? E : b.value;
+        A = null != (n = null == P ? void 0 : P.maxAge) ? n : y.value,
+        k = null != (E = null == P ? void 0 : P.maxUses) ? E : b.value;
     return (0, l.jsxs)('div', {
         className: j.container,
         children: [
@@ -103,17 +103,17 @@ function E(e) {
                                 channel: I,
                                 channel_type: t,
                                 location: f.t4x.GUILD_EVENTS,
-                                code: Z.code,
+                                code: P.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id
                             });
                         }
                     }),
-                    (null == T ? void 0 : T.vanityURLCode) == null &&
+                    (null == S ? void 0 : S.vanityURLCode) == null &&
                         (0, l.jsx)(i.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             className: j.inviteDetail,
-                            children: (0, v.Vg)(L, A)
+                            children: (0, v.Vg)(A, k)
                         })
                 ]
             })

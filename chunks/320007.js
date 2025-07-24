@@ -16,12 +16,12 @@ var r = n(255367),
     b = n(388032);
 function _(e) {
     let { canShowReminder: t = !1, className: _ } = e,
-        E = (0, h.Z)(u.Z),
-        { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        O = (0, h.Z)(u.Z),
+        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: y,
-            hasNewClips: I,
-            lastClipsSession: v,
+            hasNewClips: v,
+            lastClipsSession: I,
             remindersEnabled: C,
             hasAnyClipAnimations: S
         } = (0, l.cj)([p.Z], () => ({
@@ -31,12 +31,12 @@ function _(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
-        N = null != v && v.newClipIds.length > 0,
+        N = null != I && I.newClipIds.length > 0,
         T = (0, f.n)((e) => e.clipsButtonRef),
         P = (0, f.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: A, allowIdle: Z } = (0, s.Y)('animation');
-    function x() {
+        { preventIdle: A, allowIdle: x } = (0, s.Y)('animation');
+    function Z() {
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
@@ -73,7 +73,7 @@ function _(e) {
             { modalKey: m.Qr }
         );
     }
-    return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), O && E && y)
+    return (i.useEffect(() => (S ? A() : x(), () => x()), [S, A, x]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != T &&
@@ -84,17 +84,17 @@ function _(e) {
                       !j &&
                       (0, r.jsx)(g.Z, {
                           clipIconRef: T,
-                          lastClipsSession: v,
-                          onOpenClipsGallery: x
+                          lastClipsSession: I,
+                          onOpenClipsGallery: Z
                       }),
                   (0, r.jsx)('div', {
                       ref: P,
                       children: (0, r.jsx)(o.JO, {
                           className: _,
                           icon: a.AlX,
-                          showBadge: I,
+                          showBadge: v,
                           tooltip: b.intl.string(b.t.MXaLEB),
-                          onClick: x
+                          onClick: Z
                       })
                   })
               ]

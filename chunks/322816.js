@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(95242),
     _ = n(420966),
     O = n(275296),
-    C = n(203377),
-    y = n(981631),
+    y = n(203377),
+    C = n(981631),
     N = n(388032),
     I = n(96878),
     E = n(877248);
@@ -180,7 +180,7 @@ function R(e) {
         j = i.useRef(!1);
     return (
         i.useEffect(() => {
-            j.current || '' === c.trimStart() || (f.default.track(y.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (j.current = !0));
+            j.current || '' === c.trimStart() || (f.default.track(C.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (j.current = !0));
         }, [c]),
         (0, r.jsx)(d.yWw, {
             className: I.scroller,
@@ -196,7 +196,7 @@ function R(e) {
                             (0, r.jsx)(_.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: C.ZI.PERMISSIONS,
+                                selectedSection: y.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, r.jsx)('div', {

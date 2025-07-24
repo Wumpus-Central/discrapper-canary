@@ -32,7 +32,7 @@ let b = [],
                         .value(),
                 [_, v, null == n ? void 0 : n.rulesChannelId, j]
             ),
-            C = i.useCallback(() => {
+            y = i.useCallback(() => {
                 let e = O.map((e) => e.channel.id);
                 (0, m.q6)(t, e);
             }, [t, O]);
@@ -57,7 +57,7 @@ let b = [],
                                       }),
                                       (0, r.jsxs)(a.P3F, {
                                           className: x.suggestedChannelsDismiss,
-                                          onClick: C,
+                                          onClick: y,
                                           children: [
                                               (0, r.jsx)(a.dz2, {
                                                   size: 'md',

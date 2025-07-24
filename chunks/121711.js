@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(70097),
     b = n(114851),
     _ = n(17845),
-    E = n(374939),
-    O = n(233374),
+    O = n(374939),
+    E = n(233374),
     y = n(611928),
-    I = n(763433),
-    v = n(283293),
+    v = n(763433),
+    I = n(283293),
     C = n(507808),
     S = n(794231),
     N = n(822857),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(526167),
     j = n(63063),
     A = n(113434),
-    Z = n(833435),
-    x = n(150560),
+    x = n(833435),
+    Z = n(150560),
     w = n(672188),
     L = n(558652),
     R = n(736683),
@@ -85,8 +85,8 @@ function K(e) {
 let q = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, U.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
-        d = x.Z.getState().getUtmCurrentContext(),
-        m = (0, Z._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
+        d = Z.Z.getState().getUtmCurrentContext(),
+        m = (0, x._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
         P = (0, D.z)((e) => e.registerAssetLoad),
         w = i.useRef(d);
     (i.useEffect(() => {
@@ -123,11 +123,11 @@ let q = function () {
             children: z
                 ? (0, r.jsx)(M.t.Provider, {
                       value: Q,
-                      children: (0, r.jsxs)(v.Z, {
+                      children: (0, r.jsxs)(I.Z, {
                           onScroll: l,
                           ref: Q,
                           children: [
-                              (0, r.jsx)(I.a, {
+                              (0, r.jsx)(v.a, {
                                   selectedTabId: e,
                                   handleTransition: t,
                                   tabs: n,
@@ -188,7 +188,7 @@ let q = function () {
                                   className: a()(F.bannerContainer, { [F.orbsContainer]: z }),
                                   children: [(0, r.jsx)('div', { className: a()(F.bannerGradient, { [F.orbsGradient]: z }) }), (0, r.jsx)(K, { onLoadComplete: P })]
                               }),
-                              (0, r.jsx)(E.Z, { children: e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
+                              (0, r.jsx)(O.Z, { children: e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
                           ]
                       })
                   })
@@ -200,7 +200,7 @@ let q = function () {
                           }),
                           (0, r.jsx)(M.t.Provider, {
                               value: Q,
-                              children: (0, r.jsxs)(v.Z, {
+                              children: (0, r.jsxs)(I.Z, {
                                   onScroll: l,
                                   ref: Q,
                                   children: [
@@ -217,11 +217,11 @@ let q = function () {
                                           className: a()(F.bannerContainer, { [F.orbsContainer]: z }),
                                           children: [(0, r.jsx)('div', { className: a()(F.bannerGradient, { [F.orbsGradient]: z }) }), (0, r.jsx)(K, { onLoadComplete: P })]
                                       }),
-                                      (0, r.jsxs)(E.Z, {
+                                      (0, r.jsxs)(O.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: F.tabs,
-                                                  children: (0, r.jsx)(O.Z, {
+                                                  children: (0, r.jsx)(E.Z, {
                                                       tabs: n,
                                                       selectedTab: e,
                                                       onTabSelect: t

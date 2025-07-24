@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(430824),
     _ = n(594174),
     O = n(63063),
-    C = n(267101),
-    y = n(294294),
+    y = n(267101),
+    C = n(294294),
     N = n(310800),
     I = n(833695),
     E = n(981631),
@@ -29,7 +29,7 @@ var r = n(255367),
     P = n(560131);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: w } = (0, C.eD)(t),
+        { listingsLoaded: w } = (0, y.eD)(t),
         R = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
         Z = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         D = null != R && (0, b.eM)(R, Z),
@@ -108,7 +108,7 @@ function w(e) {
             ]
         }),
         B = (0, l.EQ)(L)
-            .with('basic_info', () => (0, r.jsx)(y.Z, { guildId: t }))
+            .with('basic_info', () => (0, r.jsx)(C.Z, { guildId: t }))
             .with('manage_listings', () => (0, r.jsx)(N.Z, { guildId: t }))
             .with('payment', () => (0, r.jsx)(I.Z, { guildId: t }))
             .exhaustive(),

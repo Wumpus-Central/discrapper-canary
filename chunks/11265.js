@@ -13,12 +13,12 @@ let m = i.memo(function (e) {
     let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: f, disableAnimation: h, disableBackground: x } = e,
         [b, j] = i.useState(!0),
         [v, _] = i.useState(!1),
-        { ref: O, height: C = 0 } = (0, c.ZP)(),
-        { ref: y, height: N = 0 } = (0, c.ZP)(),
+        { ref: O, height: y = 0 } = (0, c.ZP)(),
+        { ref: C, height: N = 0 } = (0, c.ZP)(),
         [I, E] = i.useState(g),
         S = (0, o.q_F)(
             {
-                height: I ? N + C : C,
+                height: I ? N + y : y,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -95,7 +95,7 @@ let m = i.memo(function (e) {
                         children: l
                     }),
                     (0, r.jsx)('div', {
-                        ref: y,
+                        ref: C,
                         children: m
                     })
                 ]

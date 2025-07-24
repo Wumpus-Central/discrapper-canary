@@ -39,13 +39,13 @@ function g(e) {
             }
             return i;
         })(e, ['applicationId']);
-    let [_, E] = i.useState(!1),
-        [O] = (0, o.Z)([m]),
-        y = null != (g = null == O ? void 0 : O.name) ? g : 'This Activity';
+    let [_, O] = i.useState(!1),
+        [E] = (0, o.Z)([m]),
+        y = null != (g = null == E ? void 0 : E.name) ? g : 'This Activity';
     i.useEffect(() => {
         c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
-    let I = () => {
+    let v = () => {
         let e = 'temporary';
         (_ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(d.rMx.MODAL_DISMISSED, {
@@ -100,7 +100,7 @@ function g(e) {
                                 children: p.intl.string(p.t.NQkK4u)
                             }),
                             (0, r.jsx)(l.olH, {
-                                onClick: I,
+                                onClick: v,
                                 className: h.closeButton
                             })
                         ]
@@ -121,7 +121,7 @@ function g(e) {
                                 type: l.XZJ.Types.INVERTED,
                                 size: 18,
                                 value: _,
-                                onChange: () => E(!_),
+                                onChange: () => O(!_),
                                 children: (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
                                     children: p.intl.string(p.t['5E9SBw'])
@@ -130,7 +130,7 @@ function g(e) {
                             (0, r.jsx)(l.zxk, {
                                 variant: 'secondary',
                                 text: p.intl.string(p.t['Ibf5/v']),
-                                onClick: I
+                                onClick: v
                             }),
                             (0, r.jsx)(l.zxk, {
                                 variant: 'primary',

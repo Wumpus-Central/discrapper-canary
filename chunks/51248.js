@@ -30,11 +30,11 @@ function m(e) {
                 null != e && b(e);
             }
         },
-        C = d.intl.string(d.t['ETE/oK']),
-        y = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == f ? void 0 : f.name }) : void 0;
+        y = d.intl.string(d.t['ETE/oK']),
+        C = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == f ? void 0 : f.name }) : void 0;
     return (
         null != h &&
-            (y = (0, r.jsx)(l.Text, {
+            (C = (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: u.message,
@@ -51,8 +51,8 @@ function m(e) {
                         disabled: g,
                         onSave: O,
                         onReset: m,
-                        onResetText: C,
-                        message: y
+                        onResetText: y,
+                        message: C
                     })
                 })
         })

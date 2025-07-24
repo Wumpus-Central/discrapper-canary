@@ -80,11 +80,11 @@ function j(e) {
             height: 24,
             color: b(t)
         }),
-        C = (0, o.arW)({
+        y = (0, o.arW)({
             orientation: 'horizontal',
             isDisabled: l
         }),
-        { ref: y } = C,
+        { ref: C } = y,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -103,7 +103,7 @@ function j(e) {
                 for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
             }
             return i;
-        })(C, ['ref']),
+        })(y, ['ref']),
         I = (0, o.xUy)({
             isSelected: v,
             label: g.intl.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, a.Rf)(m.p6O) })
@@ -119,7 +119,7 @@ function j(e) {
                 {
                     className: p.buttonsContainer,
                     'aria-label': g.intl.string(g.t.FJjrIy),
-                    ref: y
+                    ref: C
                 },
                 N
             ),

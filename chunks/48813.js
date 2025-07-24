@@ -1,4 +1,4 @@
-(n.d(t, { I: () => j }), n(388685));
+(n.d(e, { I: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -18,57 +18,57 @@ var r = n(255367),
     y = n(474936),
     b = n(981631),
     g = n(301692);
-let j = (e) => {
-    var t;
-    let { analyticsLocation: n, analyticsLocations: a, onClose: j, transitionState: I, premiumSubscription: v, discountPrimary: T } = e,
-        { initialStep: E } = e,
-        P = i.useRef(new o.qA()),
+let I = (t) => {
+    var e;
+    let { analyticsLocation: n, analyticsLocations: a, onClose: I, transitionState: j, premiumSubscription: P, discountPrimary: v } = t,
+        { initialStep: T } = t,
+        E = i.useRef(new o.qA()),
         [O, S] = i.useState(null),
-        N = null == (t = (0, u.Af)(v)) ? void 0 : t.planId,
+        N = null == (e = (0, u.Af)(P)) ? void 0 : e.planId,
         R = null != N ? u.ZP.getPremiumType(N) : null;
     s()(null != R, 'Should not be cancelling Nitro without premiumType');
     let D = R === y.p9.TIER_0 || R === y.p9.TIER_1 || R === y.p9.TIER_2;
-    null == E && (E = D ? f.R.WHAT_YOU_LOSE : f.R.CONFIRM);
-    let [w, A, L, k] = (0, x.q)(E, v, a),
+    null == T && (T = D ? f.R.WHAT_YOU_LOSE : f.R.CONFIRM);
+    let [w, A, L, k] = (0, x.q)(T, P, a),
         M = (0, d.UV)(),
         { churnUserDiscountOffer: U, isFetchingChurnDiscountOffer: F } = (0, d.WR)(!M || w !== f.R.WHAT_YOU_LOSE),
-        B = (e) => {
-            (j(),
+        B = (t) => {
+            (I(),
                 c.default.track(
                     b.rMx.CANCELLATION_FLOW_STEP,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
+                    (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
                                 r = Object.keys(n);
                             ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
+                                r.forEach(function (e) {
                                     var r;
-                                    ((r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
+                                    ((r = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r));
+                                            : (t[e] = r));
                                 }));
                         }
-                        return e;
+                        return t;
                     })(
                         {
-                            from_step: f.O[e],
+                            from_step: f.O[t],
                             to_step: null,
                             step_duration_ms: Date.now() - L,
                             flow_duration_ms: Date.now() - k,
                             location_stack: a
                         },
-                        (0, x.b)(v)
+                        (0, x.b)(P)
                     )
                 ));
         },
@@ -92,12 +92,12 @@ let j = (e) => {
                 setStep: A,
                 premiumType: R,
                 onClose: () => B(w),
-                transitionState: I,
-                premiumSubscription: v,
+                transitionState: j,
+                premiumSubscription: P,
                 analyticsLocations: a,
                 analyticsLocation: n,
                 confettiCanvas: O,
-                discountPrimary: T,
+                discountPrimary: v,
                 churnUserDiscountOffer: U,
                 isFetchingChurnDiscountOffer: M && F
             },
@@ -105,7 +105,7 @@ let j = (e) => {
                 (0, r.jsx)(o.O_, {
                     ref: S,
                     className: g.confettiCanvas,
-                    environment: P.current
+                    environment: E.current
                 }),
                 Z()
             ]

@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(37069),
     _ = n(518513),
     O = n(40271),
-    C = n(348986),
-    y = n(930065),
+    y = n(348986),
+    C = n(930065),
     N = n(345669);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -106,12 +106,12 @@ let E = () => [
     ],
     S = [
         {
-            iconSrc: C,
+            iconSrc: y,
             name: 'Pokemon GO Paris',
             position: [-230, -100]
         },
         {
-            iconSrc: y,
+            iconSrc: C,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
@@ -201,11 +201,11 @@ let E = () => [
             [s, o] = i.useState(0),
             [v, _] = i.useState(),
             O = (0, a.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
-            C = null == v ? void 0 : v.offsetWidth,
-            y = null == v ? void 0 : v.offsetHeight;
+            y = null == v ? void 0 : v.offsetWidth,
+            C = null == v ? void 0 : v.offsetHeight;
         (i.useEffect(() => {
-            (null != C && l(C / 2), null != y && o(y / 2));
-        }, [C, y, l, o]),
+            (null != y && l(y / 2), null != C && o(C / 2));
+        }, [y, C, l, o]),
             i.useEffect(() => {
                 (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []));

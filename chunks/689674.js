@@ -19,12 +19,12 @@ function d(e) {
             },
             [p.guild_id]
         ),
-        h = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
-        g = p.type === i.d.GUILD_ANNOUNCEMENT && f,
-        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (h || g),
-        b = h && null != d.messageReference ? d.messageReference.message_id : d.id,
-        E = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
-        y = h && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
+        g = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
+        _ = p.type === i.d.GUILD_ANNOUNCEMENT && f,
+        h = !d.hasFlag(u.iLy.EPHEMERAL) && (g || _),
+        b = g && null != d.messageReference ? d.messageReference.message_id : d.id,
+        E = g && null != d.messageReference ? d.messageReference.channel_id : p.id,
+        C = g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
         x = r.useCallback(
             (e) => {
                 e
@@ -33,20 +33,20 @@ function d(e) {
                           channelId: p.id,
                           guildId: p.guild_id,
                           sourceChannelId: E,
-                          sourceGuildId: y
+                          sourceGuildId: C
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, E, y]
+            [b, p.id, p.guild_id, E, C]
         ),
         v = s.Z.useExperiment(
             { location: '836a4b_1' },
             {
-                disable: !_ || !m,
+                disable: !h || !m,
                 autoTrackExposure: !0
             }
         ).enabled,
-        C = (0, a.O)(x, 0, v);
+        O = (0, a.O)(x, 0, v);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +54,6 @@ function d(e) {
             },
             [b]
         ),
-        C
+        O
     );
 }

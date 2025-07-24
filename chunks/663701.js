@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(493683),
     b = n(529103),
     _ = n(607070),
-    E = n(557968),
-    O = n(213609),
+    O = n(557968),
+    E = n(213609),
     y = n(463119),
-    I = n(377171),
-    v = n(243778),
+    v = n(377171),
+    I = n(243778),
     C = n(488634),
     S = n(899740),
     N = n(28476),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(631885),
     j = n(849862),
     A = n(522558),
-    Z = n(795448),
-    x = n(441623),
+    x = n(795448),
+    Z = n(441623),
     w = n(457396),
     L = n(108989),
     R = n(51596),
@@ -119,13 +119,13 @@ let el = (e) => {
             n = ei(e, ['selected']);
         let l = (0, c.JA)('friends'),
             a = (0, j.If)(),
-            o = (0, d.e7)([x.Z], () => x.Z.canShowFriendsTabBadge()),
+            o = (0, d.e7)([Z.Z], () => Z.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: p } = A.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             h = o && p;
         i.useEffect(() => {
             h &&
-                (0, O.h)({
+                (0, E.h)({
                     name: s.ImpressionNames.GIFT_INTENT_BADGE,
                     type: s.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }
@@ -142,7 +142,7 @@ let el = (e) => {
                             {
                                 onClick: () => {
                                     let e;
-                                    (h ? (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), (e = X.pJs.ALL), b.Z.setSection(X.pJs.ALL), (0, Z.Gk)()) : (e = F.ZP.getState().section), (0, E.Z)({ tab_opened: e }));
+                                    (h ? (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), (e = X.pJs.ALL), b.Z.setSection(X.pJs.ALL), (0, x.Gk)()) : (e = F.ZP.getState().section), (0, O.Z)({ tab_opened: e }));
                                 },
                                 interactiveClassName: h ? et.friendsBadge : void 0,
                                 selected: t,
@@ -281,14 +281,14 @@ let el = (e) => {
                     className: et.familyCenterPendingBadge,
                     children: (0, r.jsx)(g.mAB, { count: i })
                 })
-              : (0, r.jsx)(v.ZP, {
+              : (0, r.jsx)(I.ZP, {
                     contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, r.jsx)(g.IGR, {
                                   text: $.intl.string($.t.y2b7CA),
-                                  color: I.Z.BG_BRAND
+                                  color: v.Z.BG_BRAND
                               })
                             : null;
                     }

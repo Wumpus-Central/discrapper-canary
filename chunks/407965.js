@@ -1,4 +1,4 @@
-(n.d(t, { n: () => b }), n(539854), n(583741));
+(n.d(e, { n: () => b }), n(539854), n(583741));
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -15,66 +15,66 @@ var r = n(255367),
     C = n(594135),
     h = n(388032),
     x = n(515622);
-let y = (e) => {
-        let { churnUserDiscountOffer: t } = e;
-        return null == t
+let y = (t) => {
+        let { churnUserDiscountOffer: e } = t;
+        return null == e
             ? null
             : (0, r.jsx)('div', {
                   className: x.previewContainer,
-                  children: (0, r.jsx)(p.o, { userDiscountOffer: t })
+                  children: (0, r.jsx)(p.o, { userDiscountOffer: e })
               });
     },
     b = () => {
-        let { transitionState: e, onClose: t, premiumType: n, setStep: o, discountPrimary: p, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: b } = (0, C.a)(),
+        let { transitionState: t, onClose: e, premiumType: n, setStep: o, discountPrimary: p, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: b } = (0, C.a)(),
             g = (0, s.e7)([d.default], () => {
-                let e = d.default.getCurrentUser();
-                return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
+                let t = d.default.getCurrentUser();
+                return (a()(null != t, 'ProfileItem: currentUser cannot be undefined'), t);
             });
         i.useEffect(() => {
             (0, u.Z)(g.id, g.getAvatarURL(null, 80));
         }, [g]);
-        let j = (0, m.Z)(),
-            I = 'US' === j.ipCountryCode && 'CA' === j.ipSubdivisionCode;
+        let I = (0, m.Z)(),
+            j = 'US' === I.ipCountryCode && 'CA' === I.ipSubdivisionCode;
         if (b)
             return (0, r.jsx)(l.Modal, {
-                transitionState: e,
+                transitionState: t,
                 title: '',
                 actions: [],
                 onClose: async () => {
-                    t();
+                    e();
                 }
             });
-        let v = [];
+        let P = [];
         return (
             null != x
-                ? v.push({
+                ? P.push({
                       text: h.intl.string(h.t.zrCzVF),
                       onClick: () => o(f.R.CONFIRM_DISCOUNT),
                       variant: p ? 'primary' : 'secondary',
                       icon: c.SrA
                   })
-                : v.push({
+                : P.push({
                       text: h.intl.string(h.t.h9tkAA),
-                      onClick: () => t(),
+                      onClick: () => e(),
                       variant: 'secondary'
                   }),
-            v.push({
-                text: I ? h.intl.string(h.t.PfnxqK) : h.intl.string(h.t['3PatS0']),
+            P.push({
+                text: j ? h.intl.string(h.t.PfnxqK) : h.intl.string(h.t['3PatS0']),
                 onClick: () => o(f.R.CONFIRM),
                 variant: null !== x && p ? 'secondary' : 'primary'
             }),
-            p && null !== x && v.reverse(),
+            p && null !== x && P.reverse(),
             (0, r.jsx)(l.Modal, {
-                transitionState: e,
+                transitionState: t,
                 title: h.intl.string(h.t.PWq8TE),
-                subtitle: h.intl.format(h.t.nsGVzs, {}),
-                actions: v,
+                subtitle: h.intl.formatToPlainString(h.t.nsGVzs, {}),
+                actions: P,
                 preview: null !== x && (0, r.jsx)(y, { churnUserDiscountOffer: x }),
-                onClose: async () => t(),
+                onClose: async () => e(),
                 children: (0, r.jsx)(_.g, {
                     currentUser: g,
                     premiumType: n,
-                    onClose: t,
+                    onClose: e,
                     isDowngrade: !1,
                     isPremiumRebrand: !0
                 })

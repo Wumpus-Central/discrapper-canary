@@ -60,7 +60,7 @@ function O(e, t) {
         e
     );
 }
-function C(e) {
+function y(e) {
     let { guild: t, channel: i } = e,
         l = (0, h.Mf)(i.id);
     return 'null' === i.id
@@ -124,7 +124,7 @@ function C(e) {
               ]
           });
 }
-let y = i.memo(function () {
+let C = i.memo(function () {
         return (0, r.jsx)('div', { className: v.separator });
     }),
     N = i.memo(function (e) {
@@ -140,7 +140,7 @@ let y = i.memo(function () {
         );
     }),
     I = i.memo(function (e) {
-        let { channel: t, category: i, guild: l, isFirstChannel: p, isLastChannel: C, tooltipDirection: I = 'right' } = e,
+        let { channel: t, category: i, guild: l, isFirstChannel: p, isLastChannel: y, tooltipDirection: I = 'right' } = e,
             E = (0, h.Mf)(t.id, i.id),
             S = (0, h.t4)(t.id, i.id),
             T = (0, h.EH)(t.id, i.id),
@@ -206,7 +206,7 @@ let y = i.memo(function () {
                                     {
                                         className: s()(v.channelRow, {
                                             [v.firstChannel]: p,
-                                            [v.lastChannel]: C,
+                                            [v.lastChannel]: y,
                                             [v.disabled]: S
                                         })
                                     },
@@ -276,7 +276,7 @@ let y = i.memo(function () {
                             )
                         )
                 }),
-                !C && (0, r.jsx)(y, {})
+                !y && (0, r.jsx)(C, {})
             ]
         });
     });
@@ -286,7 +286,7 @@ function E(e) {
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    C,
+                    y,
                     {
                         channel: i.channel,
                         guild: n

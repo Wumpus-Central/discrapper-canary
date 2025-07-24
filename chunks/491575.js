@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -15,10 +15,10 @@ var r = n(255367),
     m = n(451478),
     b = n(585483),
     _ = n(145604),
-    E = n(718813),
-    O = n(981631),
+    O = n(718813),
+    E = n(981631),
     y = n(273034);
-let I = i.memo(function () {
+let v = i.memo(function () {
     let e = i.useRef(null),
         t = i.useCallback((t) => {
             let { duration: n, intensity: r } = t;
@@ -30,9 +30,9 @@ let I = i.memo(function () {
         i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []),
         i.useEffect(
             () => (
-                b.S.subscribe(O.CkL.SHAKE_APP, t),
+                b.S.subscribe(E.CkL.SHAKE_APP, t),
                 () => {
-                    b.S.unsubscribe(O.CkL.SHAKE_APP, t);
+                    b.S.unsubscribe(E.CkL.SHAKE_APP, t);
                 }
             ),
             [t]
@@ -42,7 +42,7 @@ let I = i.memo(function () {
             ref: e,
             className: y.app,
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(O.Z, {
                     className: y.layers,
                     children: (0, r.jsx)(s.Z, {})
                 }),

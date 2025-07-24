@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(710845),
     b = n(581567),
     _ = n(594190),
-    E = n(38618),
-    O = n(501640),
+    O = n(38618),
+    E = n(501640),
     y = n(924301),
-    I = n(734307),
-    v = n(355298),
+    v = n(734307),
+    I = n(355298),
     C = n(454991),
     S = n(32300),
     N = n(371651),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(509003),
     j = n(427679),
     A = n(695346),
-    Z = n(592125),
-    x = n(77498),
+    x = n(592125),
+    Z = n(77498),
     w = n(271383),
     L = n(430824),
     R = n(131951),
@@ -78,7 +78,7 @@ function Q(e) {
 class J extends i.PureComponent {
     componentDidUpdate(e) {
         var t, n, r, i, l, c;
-        let { voiceChannelId: d, voiceChannelGuildId: h, voiceChannelType: E, voiceChannelBitrate: O, videoEnabled: I, isScreenSharing: v, runningGame: w, runningGamePid: R, selectedChannelId: M, selectedGuildId: U, connected: B } = this.props;
+        let { voiceChannelId: d, voiceChannelGuildId: h, voiceChannelType: O, voiceChannelBitrate: E, videoEnabled: v, isScreenSharing: I, runningGame: w, runningGamePid: R, selectedChannelId: M, selectedGuildId: U, connected: B } = this.props;
         if (e.voiceChannelId !== d && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -122,8 +122,8 @@ class J extends i.PureComponent {
                         {
                             location: i,
                             channel_id: d,
-                            channel_type: E,
-                            channel_bitrate: O,
+                            channel_type: O,
+                            channel_bitrate: E,
                             guild_id: h,
                             game_name: t,
                             game_platform: this.props.gamePlatform,
@@ -133,14 +133,14 @@ class J extends i.PureComponent {
                             was_moved: k.Z.getWasMoved()
                         },
                         (0, u.oG)(h, d),
-                        (0, u.kO)(h, d, I)
+                        (0, u.kO)(h, d, v)
                     )
                 ));
         }
         let V = null != w && null != w.distributor && null != w.sku && null != e.runningGame && e.runningGame.distributor === w.distributor && w.sku === e.runningGame.sku,
             H = null != e.runningGame && null != w && e.runningGame.isLauncher !== w.isLauncher;
         if (e.runningGame !== w && null != w && !w.isLauncher && (!V || H)) {
-            let e = x.Z.getGameByName(w.name),
+            let e = Z.Z.getGameByName(w.name),
                 c = _.ZP.getOverrideForGame(w),
                 u = L.Z.getGuildIds(),
                 p = A.SE.getSetting(),
@@ -148,23 +148,23 @@ class J extends i.PureComponent {
                 g = null;
             g = null != c ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
             let y = N.default.getTrackedGameByPid(w.pid),
-                I = (0, _.b6)(w),
-                v = {
-                    enabledOOP: null != (t = null == y ? void 0 : y.oopEnabled) ? t : I.enabledOOP,
-                    enabledLegacy: null != (n = null == y ? void 0 : y.legacyEnabled) ? n : I.enabledLegacy,
-                    overlayMethod: null != (r = null == y ? void 0 : y.overlayMethod) ? r : I.overlayMethod,
-                    source: null != (i = null == y ? void 0 : y.source) ? i : I.source
+                v = (0, _.b6)(w),
+                I = {
+                    enabledOOP: null != (t = null == y ? void 0 : y.oopEnabled) ? t : v.enabledOOP,
+                    enabledLegacy: null != (n = null == y ? void 0 : y.legacyEnabled) ? n : v.enabledLegacy,
+                    overlayMethod: null != (r = null == y ? void 0 : y.overlayMethod) ? r : v.overlayMethod,
+                    source: null != (i = null == y ? void 0 : y.source) ? i : v.source
                 },
-                j = null != (l = N.default.getOverlayMethod(w.pid)) ? l : v.overlayMethod;
+                j = null != (l = N.default.getOverlayMethod(w.pid)) ? l : I.overlayMethod;
             if (
                 (setTimeout(async () => {
                     var t;
                     let n = await (0, T.hj)(w.pid),
                         { gameName: r, gameId: i, exe: l, distributor: a } = (0, b.G8)(w),
                         c = (0, S.NW)('ChatAutoAnalytics', !1),
-                        u = v.enabledLegacy || (c && v.enabledOOP),
+                        u = I.enabledLegacy || (c && I.enabledOOP),
                         p = C.v.legacyEnabled || (c && C.v.oopEnabled),
-                        m = v.source;
+                        m = I.source;
                     (W.default.track(q.rMx.LAUNCH_GAME, {
                         game: r,
                         game_id: i,
@@ -185,8 +185,8 @@ class J extends i.PureComponent {
                         game_detection_enabled: (0, _.ik)(w),
                         executable_path: l,
                         voice_channel_id: d,
-                        voice_channel_type: E,
-                        voice_channel_bitrate: O,
+                        voice_channel_type: O,
+                        voice_channel_bitrate: E,
                         voice_channel_guild_id: h,
                         distributor_game_id: w.sku,
                         hidden_by_distributor: w.hidden,
@@ -194,7 +194,7 @@ class J extends i.PureComponent {
                     }),
                         null != l && _.ZP.addExecutableTrackedByAnalytics(l));
                 }, 10000),
-                null != w.name && null != R && x.Z.shouldReport(w.name))
+                null != w.name && null != R && Z.Z.shouldReport(w.name))
             ) {
                 let e = w.name;
                 a.Z.identifyGame(R, e)
@@ -202,11 +202,11 @@ class J extends i.PureComponent {
                     .catch((e) => new m.Z('AutoAnalytics').error('Cannot identify game', e));
             }
         }
-        if ((e.videoEnabled !== I || e.isScreenSharing !== v) && null != d) {
+        if ((e.videoEnabled !== v || e.isScreenSharing !== I) && null != d) {
             let e = 'none',
-                t = [v ? 'screen' : null, I ? 'camera' : null].filter(K.lm),
+                t = [I ? 'screen' : null, v ? 'camera' : null].filter(K.lm),
                 n = null;
-            (v ? ((e = 'screen'), (n = (0, f.t)())) : I && (e = 'camera'),
+            (I ? ((e = 'screen'), (n = (0, f.t)())) : v && (e = 'camera'),
                 W.default.track(
                     q.rMx.VIDEO_INPUT_TOGGLED,
                     Q(
@@ -224,7 +224,7 @@ class J extends i.PureComponent {
         }
         if (B && null != M && (!e.connected || M !== e.selectedChannelId || U !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
-                n = Z.Z.getChannel(t),
+                n = x.Z.getChannel(t),
                 r = L.Z.getGuild(null == n ? void 0 : n.getGuildId());
             if (null != t && null != n && null != r && r.publicUpdatesChannelId === t) {
                 let e = D.Z.getMessages(t),
@@ -267,10 +267,10 @@ class J extends i.PureComponent {
 }
 function $() {
     let [e, t] = (0, l.Wu)([M.Z], () => [M.Z.getVoiceChannelId(), M.Z.getChannelId()], []),
-        n = (0, l.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
+        n = (0, l.e7)([x.Z], () => x.Z.getChannel(t), [t]),
         a = (0, l.e7)([g.Z], () => (null == n ? void 0 : n.id) != null && g.Z.getChatOpen(n.id), [n]),
         o = null == n ? void 0 : n.nsfw,
-        s = (0, l.e7)([Z.Z], () => Z.Z.getChannel(e), [e]),
+        s = (0, l.e7)([x.Z], () => x.Z.getChannel(e), [e]),
         f = (0, l.e7)([U.Z], () => U.Z.getGuildId(), []),
         m = (0, l.e7)([L.Z], () => L.Z.getGuild(f), [f]),
         b = (0, l.e7)([V.default], () => V.default.getCurrentUser(), []),
@@ -284,12 +284,12 @@ function $() {
         ),
         C = (0, l.e7)([F.ZP], () => F.ZP.getState().section, []),
         S = (0, l.e7)([H.Z], () => H.Z.getHomeLink(), []),
-        N = (0, l.e7)([E.Z], () => E.Z.isConnected(), []),
+        N = (0, l.e7)([O.Z], () => O.Z.isConnected(), []),
         [T, P] = (0, l.Wu)([R.Z], () => [R.Z.isVideoEnabled(), R.Z.isScreenSharing()], []),
         j = (0, l.e7)([G.Z], () => G.Z.getPrimaryActivity(), []),
         A = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
-        x = (0, O.Z)(f),
-        D = (0, l.e7)([v.Z], () => v.Z.getMessageRequestsCount(), []),
+        Z = (0, E.Z)(f),
+        D = (0, l.e7)([I.Z], () => I.Z.getMessageRequestsCount(), []),
         k = {
             selectedChannelId: t,
             isNSFWChannel: o,
@@ -311,7 +311,7 @@ function $() {
             gameExeName: null != A ? A.exeName : null,
             hasPreviewEnabled: null == m ? void 0 : m.features.has(q.oNc.PREVIEW_ENABLED),
             isMemberPending: y,
-            postableChannelCount: x,
+            postableChannelCount: Z,
             isTextInVoice: a,
             numMessageRequests: D
         },
@@ -322,7 +322,7 @@ function $() {
     let { connected: Y, friendsTabSection: K, homeLink: X, isMemberPending: $, selectedChannelId: ee, selectedGuildId: et } = k;
     (i.useEffect(() => {
         if (Y && null != ee) {
-            let e = (0, d.K)(Z.Z.getChannel(ee), !0);
+            let e = (0, d.K)(x.Z.getChannel(ee), !0);
             ((0, u.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, u.$H)(ee))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), z.current.isTextInVoice && (0, u.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel }));
         }
     }, [Y, ee]),
@@ -347,7 +347,7 @@ function $() {
                             postable_channels: z.current.postableChannelCount,
                             premium_progress_bar_enabled: null != (t = null == (e = L.Z.getGuild(U.Z.getGuildId())) ? void 0 : e.premiumProgressBarEnabled) && t,
                             viewing_all_channels: !B.ZP.isOptInEnabled(et),
-                            num_recent_channels: I.Z.recentsChannelCount(et)
+                            num_recent_channels: v.Z.recentsChannelCount(et)
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))

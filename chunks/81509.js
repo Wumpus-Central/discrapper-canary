@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -196,7 +196,7 @@ function O(e) {
         ]
     });
 }
-function C(e) {
+function y(e) {
     let { highlightedCreators: t } = e;
     return (0, r.jsxs)('div', {
         children: [

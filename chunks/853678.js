@@ -15,29 +15,29 @@ var r = n(45792),
     m = n(996106),
     b = n(914946),
     _ = n(452426),
-    E = n(186901),
-    O = n(981631),
+    O = n(186901),
+    E = n(981631),
     y = n(701488),
-    I = n(674563);
-let v = new Set([y.Fu, y.JT]),
+    v = n(674563);
+let I = new Set([y.Fu, y.JT]),
     C = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
     S = new Map([
         [
-            I.Vt,
+            v.Vt,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.fd,
+            v.fd,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.He,
+            v.He,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
@@ -45,9 +45,9 @@ let v = new Set([y.Fu, y.JT]),
         ]
     ]),
     N = {
-        [O.Etm.OPEN_EXTERNAL_LINK]: {
+        [E.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
-                [E.Gp.ANY]: [E.wE, E.b_]
+                [O.Gp.ANY]: [O.wE, O.b_]
             },
             validation: (e) => (0, _.Z)(e).required().keys({ url: e.string().required() }),
             handler(e) {
@@ -62,7 +62,7 @@ let v = new Set([y.Fu, y.JT]),
                     let e = new URL(n),
                         o = e.toString();
                     if (g.isPlatformEmbedded) {
-                        let e = (0, a.R)() ? O.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, a.R)() ? E.KJ3.ACTIVITY_POPOUT : null;
                         p.Z.focus(e, !0);
                     }
                     let c = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
@@ -90,23 +90,23 @@ let v = new Set([y.Fu, y.JT]),
                         )
                     );
                 } catch (e) {
-                    throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
                 }
             }
         },
-        [O.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        [E.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, _.Z)(e),
-            scope: { [E.Gp.ANY]: [E.wE] },
+            scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 let { socket: t } = e;
                 (0, b.bu)(t.transport);
                 let n = (0, b._f)(t.application);
-                if (!v.has(n)) throw new m.Z({ errorCode: O.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                i.Z.open(O.oAB.CONNECTIONS);
+                if (!I.has(n)) throw new m.Z({ errorCode: E.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                i.Z.open(E.oAB.CONNECTIONS);
             }
         },
-        [O.Etm.SHARE_LINK]: (0, r.S)(O.Etm.SHARE_LINK, {
-            scope: { [E.Gp.ANY]: [E.wE] },
+        [E.Etm.SHARE_LINK]: (0, r.S)(E.Etm.SHARE_LINK, {
+            scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 var t;
                 let {
@@ -115,8 +115,8 @@ let v = new Set([y.Fu, y.JT]),
                 } = e;
                 (0, b.bu)(n.transport);
                 let a = (0, b._f)(n.application);
-                if (null == a) throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'No application.');
-                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, O.udG.EMBEDDED)) throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+                if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
+                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED)) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, c._)({
                         applicationId: a,

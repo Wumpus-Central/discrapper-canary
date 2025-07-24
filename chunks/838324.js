@@ -20,8 +20,8 @@ function p(e) {
         v = p ? j.length : x.length,
         _ = p ? b.length : h.length,
         O = v < u.md,
-        C = _ >= u.X,
-        y = j.length - x.length,
+        y = _ >= u.X,
+        C = j.length - x.length,
         N = (0, r.jsx)(s.owK, {
             size: 'sm',
             color: l.Z.unsafe_rawColors.BRAND_500.css,
@@ -35,7 +35,7 @@ function p(e) {
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
         E = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
-        S = !O && C ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        S = !O && y ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [
@@ -73,7 +73,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    C ? N : I,
+                    y ? N : I,
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -113,7 +113,7 @@ function p(e) {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: m.intl.format(m.t['8Geut7'], {
-                                        count: y,
+                                        count: C,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(s.eee, {
                                                 onClick: n,

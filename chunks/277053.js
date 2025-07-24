@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => Z }), n(388685));
 var l,
     a = n(392711),
     o = n.n(a),
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-let E = new Set(),
-    O = f.QZA.CLOSED,
+let O = new Set(),
+    E = f.QZA.CLOSED,
     y = !1,
-    I = null,
     v = null,
+    I = null,
     C = null,
     S = null,
     N = null,
@@ -76,9 +76,9 @@ function j(e) {
 function A() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
-    ((v = I = j(C)), null == I[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (O = f.QZA.CLOSED), E.clear());
+    ((I = v = j(C)), null == v[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (E = f.QZA.CLOSED), O.clear());
 }
-class Z extends (l = s.ZP.Store) {
+class x extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z);
     }
@@ -89,19 +89,19 @@ class Z extends (l = s.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == I ? void 0 : I[e];
+        return null == v ? void 0 : v[e];
     }
     get editedPermissionIds() {
-        return Array.from(E);
+        return Array.from(O);
     }
     get permissionOverwrites() {
-        return I;
+        return v;
     }
     get selectedOverwriteId() {
         return N;
     }
     get formState() {
-        return O;
+        return E;
     }
     get isLockable() {
         return i;
@@ -119,8 +119,8 @@ class Z extends (l = s.ZP.Store) {
         return P;
     }
 }
-m(Z, 'displayName', 'ChannelSettingsPermissionsStore');
-let x = new Z(u.Z, {
+m(x, 'displayName', 'ChannelSettingsPermissionsStore');
+let Z = new x(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
         if (null != C || t !== f.CoT.PERMISSIONS) return !1;
@@ -129,21 +129,21 @@ let x = new Z(u.Z, {
     CHANNEL_SETTINGS_PERMISSIONS_INIT: A,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: i } = e,
-            l = null == I ? void 0 : I[t];
+            l = null == v ? void 0 : v[t];
         if (null == l || null == C) return !1;
         ((l = _(b({}, l), {
             allow: n,
             deny: i
         })),
-            (I = _(b({}, I), { [t]: l })),
-            E.add(t),
-            (O = f.QZA.OPEN),
-            (y = !o().isEqual(I, v)),
+            (v = _(b({}, v), { [t]: l })),
+            O.add(t),
+            (E = f.QZA.OPEN),
+            (y = !o().isEqual(v, I)),
             (r = d.o4(C, S)));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != I && null != I[t]) N = t;
+        if (null != v && null != v[t]) N = t;
         else {
             if (null == C) return !1;
             T = t;
@@ -153,7 +153,7 @@ let x = new Z(u.Z, {
         p.Z.getSection() === f.CoT.PERMISSIONS && A();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        ((O = f.QZA.CLOSED), (I = null), (v = null), (C = null), (S = null), (y = !1), E.clear(), (N = null), (T = null));
+        ((E = f.QZA.CLOSED), (v = null), (I = null), (C = null), (S = null), (y = !1), O.clear(), (N = null), (T = null));
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -166,14 +166,14 @@ let x = new Z(u.Z, {
                     S = p.Z.getCategory();
                     let t = C.getGuildId();
                     if (null == t) return !1;
-                    v = j(C);
+                    I = j(C);
                     let n = {};
                     return (
-                        E.forEach((e) => {
-                            null != I && (n[e] = I[e]);
+                        O.forEach((e) => {
+                            null != v && (n[e] = v[e]);
                         }),
                         null == n[t] && null == C.permissionOverwrites[t] && (n[t] = d.we(t)),
-                        null == (I = b({}, C.permissionOverwrites, n))[N] ? (N = t) : null != T && null != I[T] && ((N = T), (T = null)),
+                        null == (v = b({}, C.permissionOverwrites, n))[N] ? (N = t) : null != T && null != v[T] && ((N = T), (T = null)),
                         (r = d.o4(C, S)),
                         !0
                     );
@@ -181,11 +181,11 @@ let x = new Z(u.Z, {
         return n;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-        O = f.QZA.SUBMITTING;
+        E = f.QZA.SUBMITTING;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
         let { silent: t } = e;
-        t ? (O = f.QZA.OPEN) : ((O = f.QZA.CLOSED), A());
+        t ? (E = f.QZA.OPEN) : ((E = f.QZA.CLOSED), A());
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;

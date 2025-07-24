@@ -92,27 +92,27 @@ let m = ['349134787773988865'],
                 ((a.name = r.application.name), (a.application_id = r.application.id));
                 let _ = r.transport === f.He.POST_MESSAGE;
                 a.platform = _ ? g.M7m.EMBEDDED : g.M7m.DESKTOP;
-                let E = (0, s.S5)(a, _);
-                (E > 0 && (a.flags = E), delete a.instance, null == (t = a.party) || delete t.privacy);
-                let { assets: O, party: y, secrets: I, timestamps: v, buttons: C, type: S } = a;
-                if ((null == S && (a.type = g.IIU.PLAYING), null != I)) {
+                let O = (0, s.S5)(a, _);
+                (O > 0 && (a.flags = O), delete a.instance, null == (t = a.party) || delete t.privacy);
+                let { assets: E, party: y, secrets: v, timestamps: I, buttons: C, type: S } = a;
+                if ((null == S && (a.type = g.IIU.PLAYING), null != v)) {
                     let e = i()
-                        .values(I)
+                        .values(v)
                         .filter((e) => !!e);
                     if (null != y && i().intersection(e, [y.id]).length > 0 && !m.includes(r.application.id)) throw new p.Z({ errorCode: g.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                     if (i().uniq(e).length < e.length) throw new p.Z({ errorCode: g.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                     if (null != C) throw new p.Z({ errorCode: g.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
                 }
-                if ((null != C && ((b.button_urls = C.map((e) => e.url)), (a.buttons = C.map((e) => e.label))), (a.metadata = b), null != v)) for (let e of Object.keys(v)) Date.now().toString().length - v[e].toString().length > 2 && (v[e] = Math.floor(v[e] * d.Z.Millis.SECOND));
-                if (null == O) n = Promise.resolve([]);
+                if ((null != C && ((b.button_urls = C.map((e) => e.url)), (a.buttons = C.map((e) => e.label))), (a.metadata = b), null != I)) for (let e of Object.keys(I)) Date.now().toString().length - I[e].toString().length > 2 && (I[e] = Math.floor(I[e] * d.Z.Millis.SECOND));
+                if (null == E) n = Promise.resolve([]);
                 else {
                     if (null == r.application || null == r.application.id) throw Error();
-                    n = (0, u.hR)(r.application.id, [O.large_image, O.small_image]);
+                    n = (0, u.hR)(r.application.id, [E.large_image, E.small_image]);
                 }
                 return n.then((e) => {
                     var t, n, i, s;
                     let [u, d] = e;
-                    if ((null != O && (null != u ? (O.large_image = u) : delete O.large_image, null != d ? (O.small_image = d) : delete O.small_image), !h())) return;
+                    if ((null != E && (null != u ? (E.large_image = u) : delete E.large_image, null != d ? (E.small_image = d) : delete E.small_image), !h())) return;
                     o.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: r.id,
@@ -129,7 +129,7 @@ let m = ['349134787773988865'],
                             state: null != (s = a.state) ? s : '',
                             has_urls: null != a.state_url || null != a.details_url || (null == (t = a.assets) ? void 0 : t.large_url) != null || (null == (n = a.assets) ? void 0 : n.small_url) != null
                         };
-                    return (null != p && ((m.has_match_secret = !!p.match), (m.has_join_secret = !!p.join)), null != O && (m.has_images = !!(O.large_image || O.small_image)), null != f && ((m.party_max = null != f.size && f.size[1] > 0 ? f.size[1] : void 0), (m.party_id = f.id)), c.default.track(g.rMx.ACTIVITY_UPDATED, m), a);
+                    return (null != p && ((m.has_match_secret = !!p.match), (m.has_join_secret = !!p.join)), null != E && (m.has_images = !!(E.large_image || E.small_image)), null != f && ((m.party_max = null != f.size && f.size[1] > 0 ? f.size[1] : void 0), (m.party_id = f.id)), c.default.track(g.rMx.ACTIVITY_UPDATED, m), a);
                 });
             }
         }

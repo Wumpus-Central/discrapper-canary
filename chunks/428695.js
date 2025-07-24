@@ -13,7 +13,7 @@ var r = n(255367),
     f = n(29504);
 let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
     m = function (e) {
-        let { guild: t, title: n, message: l, image: o, type: m, imageStyles: b, imageMarginX: _, imageMarginTop: E, trackingSource: O, undismissable: y, onDismissed: I, onClick: v, cta: C, ctaColor: S, centerText: N, className: T } = e;
+        let { guild: t, title: n, message: l, image: o, type: m, imageStyles: b, imageMarginX: _, imageMarginTop: O, trackingSource: E, undismissable: y, onDismissed: v, onClick: I, cta: C, ctaColor: S, centerText: N, className: T } = e;
         i.useEffect(() => {
             g(p.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: m,
@@ -30,11 +30,11 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                   onClick: () => {
                       (null != m &&
                           d.default.track(p.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: O,
+                              source: E,
                               guild_id: t.id,
                               notice_type: m
                           }),
-                          null == v || v());
+                          null == I || I());
                   },
                   fullWidth: !0,
                   color: S,
@@ -60,7 +60,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                   color: 'text-muted',
                   children: l
               }));
-        let Z = null != _ ? ''.concat(_, 'px') : '16px';
+        let x = null != _ ? ''.concat(_, 'px') : '16px';
         return (0, r.jsxs)('div', {
             className: a()(f.container, T),
             children: [
@@ -68,7 +68,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(c.P3F, {
                           onClick: () => {
-                              (u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == I || I());
+                              (u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == v || v());
                           },
                           className: f.close,
                           'aria-label': h.intl.string(h.t.WAI6xs),
@@ -82,9 +82,9 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                     (0, r.jsx)('div', {
                         className: f.imageContainer,
                         style: {
-                            marginTop: ''.concat(E, 'px'),
-                            marginLeft: Z,
-                            marginRight: Z
+                            marginTop: ''.concat(O, 'px'),
+                            marginLeft: x,
+                            marginRight: x
                         },
                         children: (0, r.jsx)('img', {
                             className: f.image,

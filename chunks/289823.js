@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(630403);
 let m = {},
     f = 1 / 4;
-function h(e) {
+function g(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -29,7 +29,7 @@ function h(e) {
         })
     });
 }
-function g(e) {
+function _(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         l = (0, c.vjg)(c.Skl.ONLINE);
     return t
@@ -39,7 +39,7 @@ function g(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(h, {
+              children: (0, r.jsx)(g, {
                   height: n.height,
                   fillColor: l
               })
@@ -56,7 +56,7 @@ function g(e) {
             })
           : null;
 }
-function _(e) {
+function h(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
         className: p.circularImage,
@@ -115,7 +115,7 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: h, style: E, className: y } = e,
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: C } = e,
             x = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -137,8 +137,8 @@ let b = {
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
         let { size: v } = c.ny6[s],
             {
-                statusCoords: C,
-                frontAvatarOffsetPx: O,
+                statusCoords: O,
+                frontAvatarOffsetPx: y,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
@@ -161,7 +161,7 @@ let b = {
                           return ((m[n] = s), s);
                       })(s, f, t);
             }, [v, f, s]),
-            S = ((t = null != h), f ? b[s].typing : t ? b[s].status : b[s].default);
+            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -196,7 +196,7 @@ let b = {
             ),
             'aria-label': x['aria-label'],
             'aria-hidden': x['aria-hidden'],
-            className: a()(p.container, y),
+            className: a()(p.container, C),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
@@ -212,21 +212,21 @@ let b = {
                         (0, r.jsx)('div', {
                             style: {
                                 position: 'absolute',
-                                top: O,
-                                left: O
+                                top: y,
+                                left: y
                             },
-                            children: (0, r.jsx)(_, {
+                            children: (0, r.jsx)(h, {
                                 src: l,
                                 size: j,
                                 isTyping: f,
-                                status: h
+                                status: g
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(g, {
-                    statusCoords: C,
-                    status: h,
+                (0, r.jsx)(_, {
+                    statusCoords: O,
+                    status: g,
                     isTyping: f
                 })
             ]

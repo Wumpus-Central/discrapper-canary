@@ -1,4 +1,4 @@
-n.d(t, { W: () => y });
+n.d(t, { W: () => C });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,21 +12,21 @@ var i = n(120356),
     p = n(266843),
     m = n(341907),
     f = n(46140),
-    h = n(981631),
-    g = n(388032),
-    _ = n(355060),
+    g = n(981631),
+    _ = n(388032),
+    h = n(355060),
     b = n(87181);
 function E(e) {
     let { questId: t } = e;
     return (0, r.jsx)('div', {
-        className: _.buttonContainer,
+        className: h.buttonContainer,
         children: (0, r.jsx)(o.zx, {
-            className: _.button,
+            className: h.button,
             color: o.Tt.BRAND,
             onClick: () => {
                 ((0, m.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
                     c.default.track(
-                        h.rMx.QUEST_CONTENT_CLICKED,
+                        g.rMx.QUEST_CONTENT_CLICKED,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -62,11 +62,11 @@ function E(e) {
                         )
                     ));
             },
-            children: g.intl.string(g.t.GURBQk)
+            children: _.intl.string(_.t.GURBQk)
         })
     });
 }
-function y(e) {
+function C(e) {
     let { questId: t } = e,
         { containerRef: n, size: i } = (0, p.h)();
     return (
@@ -75,34 +75,34 @@ function y(e) {
             ref: (e) => {
                 n.current = e;
             },
-            className: l()(_.container, {
-                [_.wide]: 'lg' === i,
-                [_.tall]: 'lg' !== i
+            className: l()(h.container, {
+                [h.wide]: 'lg' === i,
+                [h.tall]: 'lg' !== i
             }),
             children: [
                 (0, r.jsxs)('div', {
-                    className: _.contentContainer,
+                    className: h.contentContainer,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
-                            children: g.intl.string(g.t.vnP31d)
+                            children: _.intl.string(_.t.vnP31d)
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-default',
-                            className: _.__invalid_mobileWebCopy,
-                            children: g.intl.string(g.t.nuWSYW)
+                            className: h.__invalid_mobileWebCopy,
+                            children: _.intl.string(_.t.nuWSYW)
                         }),
                         (0, r.jsx)(E, { questId: t })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: _.imgContainer,
+                    className: h.imgContainer,
                     children: (0, r.jsx)('img', {
                         src: b,
                         alt: '',
-                        className: _.missingQuestImage
+                        className: h.missingQuestImage
                     })
                 })
             ]

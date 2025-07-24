@@ -13,15 +13,15 @@ let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, hasSearchQuery: f, sectionFilter: g, footer: m } = e,
         b = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         _ = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        E = (0, l.ZP)({
+        O = (0, l.ZP)({
             id: 'people',
             isEnabled: b,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        y = _ || f || O,
-        I = i.useMemo(
+        E = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        y = _ || f || E,
+        v = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
@@ -47,7 +47,7 @@ let h = function (e) {
             [n, h, t, y]
         );
     return (0, r.jsx)(a.bG, {
-        navigator: E,
+        navigator: O,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var t,
@@ -107,7 +107,7 @@ let h = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [I, m]
+                            children: [v, m]
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

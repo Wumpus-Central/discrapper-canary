@@ -1,4 +1,4 @@
-(n.d(t, { U: () => j }), n(388685));
+(n.d(e, { U: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(544891),
@@ -18,59 +18,62 @@ var r = n(255367),
     y = n(735912),
     b = n(997892),
     g = n(234286);
-let j = () => {
-    let { transitionState: e, onClose: t, premiumType: n, setStep: j, premiumSubscription: I, churnUserDiscountOffer: v } = (0, f.a)(),
-        [T, E] = (0, i.useState)(!1),
-        [P, O] = (0, i.useState)(!1),
-        S = (0, m._)(I, C.Xh.PREMIUM_MONTH_TIER_2, v),
+let I = () => {
+    let { transitionState: t, onClose: e, premiumType: n, setStep: I, premiumSubscription: j, churnUserDiscountOffer: P } = (0, f.a)(),
+        [v, T] = (0, i.useState)(!1),
+        [E, O] = (0, i.useState)(!1),
+        S = (0, m._)(j, C.Xh.PREMIUM_MONTH_TIER_2, P),
         N = (0, u.aS)(C.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-            currency: I.currency,
-            paymentSourceId: I.paymentSourceId
+            currency: j.currency,
+            paymentSourceId: j.paymentSourceId
         }),
         R = (0, d.T4)(N.amount, N.currency),
         D = async () => {
-            if (null === v) return void O(!0);
-            (E(!0), O(!1));
+            if (null === P) return void O(!0);
+            (T(!0), O(!1));
             try {
                 (await o.tn.post({
                     url: h.ANM.USER_OFFER_REDEEM,
-                    body: { user_discount_offer_id: v.id },
+                    body: { user_discount_offer_id: P.id },
                     rejectWithError: !0
                 }),
-                    j(p.R.DISCOUNT_APPLIED));
-            } catch (e) {
-                (O(!0), E(!1));
+                    I(p.R.DISCOUNT_APPLIED));
+            } catch (t) {
+                (O(!0), T(!1));
             }
         };
-    if (null === v) return null;
+    if (null === P) return null;
     let w = n === C.p9.TIER_2,
         A = [
             {
                 text: x.intl.string(x.t.zl7LZm),
-                onClick: () => t(),
+                onClick: () => e(),
                 variant: 'secondary',
-                disabled: T
+                disabled: v
             },
             {
                 text: x.intl.string(x.t.CKSuZG),
                 onClick: () => D(),
                 variant: 'primary',
                 icon: l.SrA,
-                loading: T,
-                disabled: T
+                loading: v,
+                disabled: v
             }
         ];
     return (0, r.jsxs)(s.I, {
         graphic: { src: w ? g : b },
         gradientColor: w ? 'nitro-pink' : 'nitro-green',
-        transitionState: e,
-        title: ''.concat(x.intl.format(x.t.q9Vxu7, { percent: v.discount.amount })),
+        transitionState: t,
+        title: ''.concat(x.intl.format(x.t.q9Vxu7, { percent: P.discount.amount })),
         actions: A,
-        onClose: async () => t(),
+        onClose: async () => e(),
         children: [
             (0, r.jsx)('div', {
                 className: y.offerDetailContainer,
-                children: (0, r.jsx)(_.o, { userDiscountOffer: v })
+                children: (0, r.jsx)(_.o, {
+                    userDiscountOffer: P,
+                    offerState: _.w.CONFIRMING
+                })
             }),
             (0, r.jsx)('div', {
                 className: y.legalContainer,
@@ -79,14 +82,14 @@ let j = () => {
                     color: 'text-secondary',
                     children: x.intl.format(x.t.hrGTjI, {
                         discountedPrice: S,
-                        billingPeriod: (0, u.JP)(v.discount.user_usage_limit_interval),
-                        numMonths: v.discount.user_usage_limit,
+                        billingPeriod: (0, u.JP)(P.discount.user_usage_limit_interval),
+                        numMonths: P.discount.user_usage_limit,
                         fullPrice: R,
                         helpdeskArticle: c.Z.getArticleURL(h.BhN.PAID_TERMS)
                     })
                 })
             }),
-            P ? (0, r.jsx)(a.k, { children: x.intl.string(x.t['5mlOCQ']) }) : null
+            E ? (0, r.jsx)(a.k, { children: x.intl.string(x.t['5mlOCQ']) }) : null
         ]
     });
 };

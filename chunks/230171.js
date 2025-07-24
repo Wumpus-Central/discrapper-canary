@@ -19,16 +19,16 @@ var r = n(255367),
     p = n(906732),
     m = n(915346),
     f = n(783097),
-    h = n(812236),
-    g = n(561308),
-    _ = n(567409),
+    g = n(812236),
+    _ = n(561308),
+    h = n(567409),
     b = n(706454),
     E = n(314897),
-    y = n(699516),
+    C = n(699516),
     x = n(914010),
     v = n(594174),
-    C = n(768581),
-    O = n(433534),
+    O = n(768581),
+    y = n(433534),
     j = n(506895),
     I = n(758199),
     S = n(943762),
@@ -39,26 +39,26 @@ var r = n(255367),
     w = n(388032),
     Z = n(758364);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
-        { name: _, bot: b } = (t = (0, N.O)(t)),
-        y = null == b ? void 0 : b.id,
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
+        { name: h, bot: b } = (t = (0, N.O)(t)),
+        C = null == b ? void 0 : b.id,
         x = (0, f.ye)(t),
-        v = C.ZP.getApplicationIconURL({
+        v = O.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
         }),
-        { staticBannerSrc: O, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
+        { staticBannerSrc: y, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
         R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
-        { analyticsLocations: D } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { analyticsLocations: k } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
-        H = (0, h.ms)({
+        H = (0, g.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != y && x && H,
+        V = null != C && x && H,
         z = B && x,
         W = (0, A.G)(t),
         K = (0, A.z)(t),
@@ -78,7 +78,7 @@ function R(e) {
                                       embeddedActivitiesManager: G,
                                       customId: a,
                                       referrerId: R,
-                                      analyticsLocations: D
+                                      analyticsLocations: k
                                   });
                               },
                               disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
@@ -91,8 +91,8 @@ function R(e) {
                               onClick() {
                                   (0, m.W)({
                                       appId: t.id,
-                                      botId: y,
-                                      analyticsLocations: D,
+                                      botId: C,
+                                      analyticsLocations: k,
                                       customId: a,
                                       referrerId: R
                                   });
@@ -101,11 +101,11 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, M, t.id, G, a, R, D, x, K, y]),
-        X = x ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
+        }, [z, V, U, F, M, t.id, G, a, R, k, x, K, C]),
+        X = x ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
-        title: _,
-        staticBannerSrc: O,
+        title: h,
+        staticBannerSrc: y,
         videoBannerSrc: S,
         onClickBanner: W,
         bannerAspectRatio: Z,
@@ -119,7 +119,7 @@ function R(e) {
             linkType: l,
             referrerId: R,
             activityCustomId: a,
-            onView: g
+            onView: _
         }
     });
 }
@@ -127,7 +127,7 @@ function L(e) {
     var t, n, a;
     let { app: c } = e,
         u =
-            (0, O.Eb)({
+            (0, y.Eb)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig
@@ -172,7 +172,7 @@ function L(e) {
         ]
     });
 }
-function k(e) {
+function D(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(
@@ -183,15 +183,15 @@ function k(e) {
             },
             []
         ),
-        u = (0, _.N)(t.id),
+        u = (0, h.N)(t.id),
         d = (0, o.Wu)(
-            [v.default, y.Z],
+            [v.default, C.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
                     let r = v.default.getUser(n.author_id),
-                        i = y.Z.isFriend(n.author_id);
+                        i = C.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
                 return e;
@@ -205,7 +205,7 @@ function k(e) {
                     guildId: c,
                     activityText: w.intl.formatToPlainString(w.t['IJa+4+'], { count: d.length })
                 });
-            if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {

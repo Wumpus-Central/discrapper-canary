@@ -118,24 +118,24 @@ function O(e) {
 let E = function (e) {
     let { channelId: t, onClose: n, transitionState: l, setHasPendingChanges: a, closeOrShowDiscardChangesAlert: h, location: E } = e,
         S = (0, m.Dt)(),
-        P = (0, o.e7)([g.Z], () => g.Z.getChannel(t)),
-        I = null == P ? void 0 : P.name,
-        Z = (0, f.cO)(P),
-        [T, N] = i.useState(null != I ? I : ''),
+        I = (0, o.e7)([g.Z], () => g.Z.getChannel(t)),
+        P = null == I ? void 0 : I.name,
+        Z = (0, f.cO)(I),
+        [T, N] = i.useState(null != P ? P : ''),
         [A, w] = i.useState(void 0),
         R = void 0 !== A,
         { analyticsLocations: M } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
         D = {
             channel_id: t,
-            channel_type: null == P ? void 0 : P.type,
+            channel_type: null == I ? void 0 : I.type,
             location: E,
             location_stack: M,
-            old_name_set: '' !== I,
-            old_icon_set: (null == P ? void 0 : P.icon) != null
+            old_name_set: '' !== P,
+            old_icon_set: (null == I ? void 0 : I.icon) != null
         };
     return (i.useEffect(() => {
-        a(T !== I || R);
-    }, [T, I, R, a]),
+        a(T !== P || R);
+    }, [T, P, R, a]),
     (0, u.ZP)(
         () => (
             b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, D), { action: 'opened' })),
@@ -144,14 +144,14 @@ let E = function (e) {
             }
         )
     ),
-    null == P)
+    null == I)
         ? null
         : (0, r.jsx)(p.Gt, {
               value: M,
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = T !== I,
+                      let r = T !== P,
                           i = void 0 !== A;
                       if (
                           (b.default.track(
@@ -159,7 +159,7 @@ let E = function (e) {
                               j(v({}, D), {
                                   action: 'saved',
                                   new_name_set: '' !== T,
-                                  new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
+                                  new_icon_set: (i ? A : null == I ? void 0 : I.icon) != null,
                                   name_changed: r,
                                   icon_changed: i
                               })
@@ -197,7 +197,7 @@ let E = function (e) {
                               className: x.modalContent,
                               children: [
                                   (0, r.jsx)(O, {
-                                      channel: P,
+                                      channel: I,
                                       previewIcon: A,
                                       onIconChange: (e) => w(e.imageUri),
                                       onIconRemove: () => w(null),
@@ -226,7 +226,7 @@ let E = function (e) {
                                           variant: 'primary',
                                           text: C.intl.string(C.t.R3BPHx),
                                           type: 'submit',
-                                          disabled: T === I && !R
+                                          disabled: T === P && !R
                                       })
                                   ]
                               })

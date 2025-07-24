@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(660962),
     _ = n(442182),
     O = n(322816),
-    C = n(266665),
-    y = n(203377),
+    y = n(266665),
+    C = n(203377),
     N = n(981631),
     I = n(443185);
 function E(e) {
@@ -104,7 +104,7 @@ function E(e) {
     )
         return null;
     switch (E) {
-        case y.ZI.DISPLAY:
+        case C.ZI.DISPLAY:
             t = (0, r.jsx)(v.ZP, {
                 guild: T,
                 role: P,
@@ -113,7 +113,7 @@ function E(e) {
                 setSelectedSection: S
             });
             break;
-        case y.ZI.PERMISSIONS:
+        case C.ZI.PERMISSIONS:
             t = (0, r.jsx)(O.ZP, {
                 guild: T,
                 role: P,
@@ -122,7 +122,7 @@ function E(e) {
                 initialSearchQuery: w
             });
             break;
-        case y.ZI.VERIFICATIONS:
+        case C.ZI.VERIFICATIONS:
             t = (0, r.jsx)(j.Z, {
                 guild: T,
                 role: P,
@@ -131,7 +131,7 @@ function E(e) {
                 integrations: null != A ? A : void 0
             });
             break;
-        case y.ZI.MEMBERS:
+        case C.ZI.MEMBERS:
             t = (0, r.jsx)(_.ZP, {
                 guild: T,
                 role: P,
@@ -145,7 +145,7 @@ function E(e) {
     return (0, r.jsxs)(o.hjN, {
         className: I.page,
         children: [
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(y.Z, {
                 guild: T,
                 currentRoleId: n,
                 setCurrentRoleId: l,

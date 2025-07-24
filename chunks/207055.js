@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(496675),
     E = n(158776),
     S = n(885110),
-    P = n(797258),
-    I = n(606304),
+    I = n(797258),
+    P = n(606304),
     Z = n(979651),
     T = n(51144),
     N = n(649739),
@@ -38,7 +38,7 @@ let D = i.memo((e) => {
         D = s.id,
         k = (0, o.e7)([x.default], () => x.default.getId() === D, [D]),
         [L, U, B] = (0, o.Wu)([j.Z], () => (k ? [!j.Z.isSupported() || j.Z.isSelfMute() || j.Z.isSelfMutedTemporarily(), j.Z.isSelfDeaf(), !1] : [!j.Z.isSupported() || j.Z.isLocalMute(D), !1, j.Z.isLocalVideoDisabled(D)]), [k, D]),
-        F = (0, o.e7)([I.Z], () => I.Z.isPrioritySpeaker(D)),
+        F = (0, o.e7)([P.Z], () => P.Z.isPrioritySpeaker(D)),
         H = (0, c.Z)({
             userId: D,
             checkSoundSharing: !0
@@ -60,7 +60,7 @@ let D = i.memo((e) => {
         K = (0, o.e7)([d.Z], () => ((null == q ? void 0 : q.application_id) != null ? d.Z.getApplication(null == q ? void 0 : q.application_id) : void 0));
     null != K && N.ZP.trackExposure({ location: 'voice_users' });
     let [X, Q] = (0, o.Wu)([C.Z], () => [C.Z.getStreamForUser(D, y.getGuildId()), C.Z.getActiveStreamForUser(D, y.getGuildId())], [y, D]),
-        J = (0, o.e7)([P.Z], () => P.Z.getSessionById(O)),
+        J = (0, o.e7)([I.Z], () => I.Z.getSessionById(O)),
         $ = T.ZP.useName(s),
         ee = (0, o.e7)([Z.Z], () => Z.Z.getVoicePlatformForChannel(y.id, D), [y.id, D]),
         { enableHangStatus: et } = m.n.useExperiment({
@@ -145,7 +145,7 @@ let k = [],
     L = function (e) {
         let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: m, numAudience: g, withGuildIcon: b = !1, className: C, children: v } = e,
             [j, S] = i.useState(null),
-            [P, I] = i.useState(!1),
+            [I, P] = i.useState(!1),
             Z = i.useRef(null),
             T = (0, _.Es)(l.id, null != c ? c : k),
             N = i.useRef(
@@ -160,13 +160,13 @@ let k = [],
             ),
             L = i.useCallback(
                 (e) => {
-                    t && (I(!0), R.current.cancel(), (Z.current = e), N.current.delay());
+                    t && (P(!0), R.current.cancel(), (Z.current = e), N.current.delay());
                 },
                 [t]
             ),
             U = i.useCallback(
                 (e) => {
-                    t && (N.current.cancel(), j === e && (I(!1), R.current.delay()));
+                    t && (N.current.cancel(), j === e && (P(!1), R.current.delay()));
                 },
                 [t, j]
             ),
@@ -210,7 +210,7 @@ let k = [],
                             canDrag: n && O.Z.can(w.Plq.MOVE_MEMBERS, l),
                             showPreview: L,
                             hidePreview: U,
-                            previewIsOpen: P,
+                            previewIsOpen: I,
                             shouldShowPreview: j === a.id,
                             tabIndex: f,
                             location: m

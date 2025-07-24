@@ -44,8 +44,8 @@ function h(e) {
         ),
         _ = i.useCallback((e) => v(m.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e), [v]),
         O = i.useCallback((e) => v(m.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e), [v]),
-        C = i.useCallback((e) => v(m.xmn.SUPPRESS_UGC_ADDED_NOTIFICATIONS, !e), [v]),
-        y = i.useCallback((e) => v(m.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e), [v]),
+        y = i.useCallback((e) => v(m.xmn.SUPPRESS_UGC_ADDED_NOTIFICATIONS, !e), [v]),
+        C = i.useCallback((e) => v(m.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e), [v]),
         N = i.useCallback((e) => v(m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e), [v]),
         I = i.useCallback((e) => v(m.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e), [v]),
         E = i.useCallback((e) => v(m.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e), [v]),
@@ -82,7 +82,7 @@ function h(e) {
             }),
             (0, r.jsx)(l.j7V, {
                 className: x,
-                onChange: y,
+                onChange: C,
                 value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                 hideBorder: !0,
                 disabled: !h || T === f,
@@ -91,7 +91,7 @@ function h(e) {
             j &&
                 (0, r.jsx)(l.j7V, {
                     className: x,
-                    onChange: C,
+                    onChange: y,
                     value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_UGC_ADDED_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !h || T === f,

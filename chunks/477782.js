@@ -1,46 +1,46 @@
-(t.d(n, { default: () => f }), t(388685));
-var a = t(255367),
-    i = t(73800),
-    o = t(755721),
-    r = t(481060),
-    s = t(313201),
-    l = t(117984),
-    d = t(388032),
-    c = t(788428);
-function f(e) {
-    let { onClose: n, transitionState: t } = e,
-        f = (0, s.Dt)(),
-        [u, h] = i.useState('');
+(n.d(t, { default: () => h }), n(388685));
+var a = n(255367),
+    i = n(73800),
+    s = n(755721),
+    r = n(481060),
+    l = n(313201),
+    o = n(117984),
+    c = n(388032),
+    d = n(788428);
+function h(e) {
+    let { onClose: t, transitionState: n } = e,
+        h = (0, l.Dt)(),
+        [u, x] = i.useState('');
     return (0, a.jsx)('form', {
         onSubmit: function (e) {
-            (e.preventDefault(), (0, l.CM)(u), n());
+            (e.preventDefault(), (0, o.CM)(u), t());
         },
         children: (0, a.jsxs)(r.Y0X, {
-            transitionState: t,
-            'aria-labelledby': f,
+            transitionState: n,
+            'aria-labelledby': h,
             parentComponent: 'AddFavoriteCategoryModal',
             children: [
                 (0, a.jsxs)(r.hzk, {
                     children: [
                         (0, a.jsx)(r.X6q, {
-                            id: f,
-                            className: c.header,
+                            id: h,
+                            className: d.header,
                             variant: 'heading-xl/semibold',
-                            children: d.intl.string(d.t['ISN+ND'])
+                            children: c.intl.string(c.t['ISN+ND'])
                         }),
                         (0, a.jsx)(r.olH, {
-                            onClick: n,
-                            className: c.closeButton
+                            onClick: t,
+                            className: d.closeButton
                         }),
                         (0, a.jsx)(r.xJW, {
-                            title: d.intl.string(d.t.OCAkGB),
-                            className: c.name,
-                            children: (0, a.jsx)(o.Is, {
+                            title: c.intl.string(c.t.OCAkGB),
+                            className: d.name,
+                            children: (0, a.jsx)(s.Is, {
                                 value: u,
-                                onChange: h,
+                                onChange: x,
                                 maxLength: 100,
-                                placeholder: d.intl.string(d.t.eTVbt7),
-                                className: c.__invalid_inputWrapper,
+                                placeholder: c.intl.string(c.t.eTVbt7),
+                                className: d.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
@@ -52,14 +52,14 @@ function f(e) {
                         children: [
                             (0, a.jsx)(r.zxk, {
                                 variant: 'primary',
-                                text: d.intl.string(d.t['ISN+ND']),
+                                text: c.intl.string(c.t['ISN+ND']),
                                 type: 'submit',
                                 disabled: '' === u
                             }),
                             (0, a.jsx)(r.zxk, {
                                 variant: 'secondary',
-                                text: d.intl.string(d.t['ETE/oK']),
-                                onClick: n
+                                text: c.intl.string(c.t['ETE/oK']),
+                                onClick: t
                             })
                         ]
                     })

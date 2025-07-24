@@ -11,24 +11,24 @@ var r = n(990547),
     p = n(526761);
 let m = {
     createChannel(e) {
-        let { guildId: t, type: n, name: m, permissionOverwrites: f = [], bitrate: h, userLimit: g, parentId: _, skuId: b, branchId: E } = e;
+        let { guildId: t, type: n, name: m, permissionOverwrites: f = [], bitrate: g, userLimit: _, parentId: h, skuId: b, branchId: E } = e;
         l.Z.dispatch({
             type: 'CREATE_CHANNEL_MODAL_SUBMIT',
             guildId: t,
             channelType: n
         });
-        let y = {
+        let C = {
             type: n,
             name: m,
             permission_overwrites: f
         };
-        if ((null != h && h !== d.epw && (y.bitrate = h), null != g && g > 0 && (y.user_limit = g), null != _ && (y.parent_id = _), n === d.d4z.GUILD_STORE)) {
+        if ((null != g && g !== d.epw && (C.bitrate = g), null != _ && _ > 0 && (C.user_limit = _), null != h && (C.parent_id = h), n === d.d4z.GUILD_STORE)) {
             if (null == b) throw Error('Unexpected missing SKU');
-            ((y.sku_id = b), (y.branch_id = E));
+            ((C.sku_id = b), (C.branch_id = E));
         }
         return c.Z.post({
             url: d.ANM.GUILD_CHANNELS(t),
-            body: y,
+            body: C,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.CHANNEL_CREATE,

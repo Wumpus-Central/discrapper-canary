@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(271383),
     _ = n(430824),
     O = n(594174),
-    C = n(267642),
-    y = n(624138),
+    y = n(267642),
+    C = n(624138),
     N = n(981631),
     I = n(388032),
     E = n(560161);
@@ -71,7 +71,7 @@ function P(e, t) {
         e
     );
 }
-let w = (0, y.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let w = (0, C.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class R extends i.Component {
     componentDidMount() {
         this.measure();
@@ -97,7 +97,7 @@ class R extends i.Component {
                 var n;
                 return {
                     numRequired: N.oCV[e.tier],
-                    name: (0, C.nW)(e.tier),
+                    name: (0, y.nW)(e.tier),
                     y: null != (n = t[e.tier]) ? n : 0,
                     key: e.tier
                 };

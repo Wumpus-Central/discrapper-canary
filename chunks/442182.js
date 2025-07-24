@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(946724),
     _ = n(130341),
     O = n(95242),
-    C = n(420966),
-    y = n(566476),
+    y = n(420966),
+    C = n(566476),
     N = n(203377),
     I = n(981631),
     E = n(388032),
@@ -163,7 +163,7 @@ function Z(e) {
                             className: S.memberRow,
                             onContextMenu: x,
                             children: [
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(C.Z, {
                                     className: S.memberDetails,
                                     avatarURL: t.avatarURL,
                                     name: t.name,
@@ -301,10 +301,10 @@ function k(e) {
     let { guild: t, role: l, locked: o, setSelectedSection: d } = e,
         [u, m] = i.useState(''),
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
-        { scrolledToTop: f, handleScroll: h } = (0, C.V)(),
+        { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
         j = l.managed || o,
         v = (0, _.e)(t.id, l.id),
-        y =
+        C =
             (0, a.e7)([b.Z], () => {
                 var e, n;
                 return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
@@ -338,7 +338,7 @@ function k(e) {
                     children: (0, r.jsxs)('div', {
                         className: s()(T.header, { [T.stickyHeaderElevated]: !f }),
                         children: [
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(y.Z, {
                                 guild: t,
                                 role: l,
                                 selectedSection: N.ZI.MEMBERS,
@@ -350,7 +350,7 @@ function k(e) {
                                 locked: j,
                                 handleAddClick: R
                             }),
-                            y
+                            C
                                 ? (0, r.jsx)(c.Wn, {
                                       className: S.searchWarning,
                                       messageType: c.QYI.INFO,

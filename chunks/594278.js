@@ -15,8 +15,8 @@ let g = function (e) {
         [h, x] = i.useState(d.n.LEFT),
         [b, j] = i.useState(0),
         [v, _] = i.useState(!1),
-        [O, C] = i.useState(!1),
-        y = i.useCallback(
+        [O, y] = i.useState(!1),
+        C = i.useCallback(
             (e, t) => {
                 j((n) => {
                     let r = n + t;
@@ -26,11 +26,11 @@ let g = function (e) {
             [j]
         ),
         N = i.useCallback(() => {
-            O || y(t, 1);
-        }, [y, t, O]),
+            O || C(t, 1);
+        }, [C, t, O]),
         I = i.useCallback(() => {
-            O || y(t, -1);
-        }, [y, t, O]);
+            O || C(t, -1);
+        }, [C, t, O]);
     return (
         i.useEffect(() => {
             null != g && (v ? v && f.stop() : f.start(g, N));
@@ -55,8 +55,8 @@ let g = function (e) {
                 (0, r.jsx)(d.Z, {
                     step: b,
                     direction: h,
-                    onAnimationStart: () => C(!0),
-                    onAnimationEnd: () => C(!1),
+                    onAnimationStart: () => y(!0),
+                    onAnimationEnd: () => y(!1),
                     className: s()(m.carousel, n),
                     children: p(t[b])
                 }),

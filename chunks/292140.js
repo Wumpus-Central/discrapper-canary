@@ -17,8 +17,8 @@ function g(e) {
         m = (0, c.Z)(t),
         b = (0, p.Z)(t),
         _ = (0, d.Z)(t),
-        E = (0, u.Z)(t),
-        O = (0, o.Z)(t),
+        O = (0, u.Z)(t),
+        E = (0, o.Z)(t),
         y = (0, s.Z)(t);
     return (
         (0, l.ZP)(() => {
@@ -43,8 +43,8 @@ function g(e) {
                 (0, r.jsxs)(i.kSQ, {
                     children: [b, _]
                 }),
-                (0, r.jsx)(i.kSQ, { children: E }),
                 (0, r.jsx)(i.kSQ, { children: O }),
+                (0, r.jsx)(i.kSQ, { children: E }),
                 y
             ]
         })

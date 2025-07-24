@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(496675),
     E = n(594174),
     S = n(700785),
-    P = n(51144),
-    I = n(396769),
+    I = n(51144),
+    P = n(396769),
     Z = n(967128),
     T = n(318374),
     N = n(981631),
@@ -111,7 +111,7 @@ function M(e) {
                 ? (0, r.jsxs)('div', {
                       className: w.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(I.Z, {
+                          (0, r.jsx)(P.Z, {
                               label: A.intl.string(A.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(p.BFJ, {
@@ -119,7 +119,7 @@ function M(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          (0, r.jsx)(I.Z, {
+                          (0, r.jsx)(P.Z, {
                               label: A.intl.string(A.t['3gUsJS']),
                               onClick: function () {
                                   h.ZP.open(t.id);
@@ -144,7 +144,7 @@ function M(e) {
                                 users: B
                             });
                         let e = B[0],
-                            n = P.ZP.getName(e);
+                            n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: w.avatars,
                             children: [

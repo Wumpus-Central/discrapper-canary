@@ -1,71 +1,71 @@
-t.d(r, { Z: () => y });
-var n = t(255367),
-    i = t(120356),
-    a = t.n(i),
-    s = t(442837),
-    l = t(755721),
-    o = t(481060),
-    c = t(510918),
-    d = t(494620),
-    u = t(63063),
-    m = t(434404),
-    p = t(999382),
-    h = t(981631),
-    f = t(195196),
-    g = t(388032),
-    x = t(602268);
-let y = function (e) {
-    let { className: r, guildId: t, tag: i, badge: y, primaryColor: j, secondaryColor: v, isDisabled: C = !1 } = e,
-        b = (0, s.e7)([p.Z], () => p.Z.getProps().originalProfile),
-        N = null != b && b.tag !== i;
-    return (0, n.jsxs)('div', {
-        className: r,
+n.d(t, { Z: () => b });
+var r = n(255367),
+    i = n(120356),
+    l = n.n(i),
+    s = n(442837),
+    a = n(755721),
+    o = n(481060),
+    c = n(510918),
+    d = n(494620),
+    u = n(63063),
+    m = n(434404),
+    g = n(999382),
+    p = n(981631),
+    f = n(195196),
+    h = n(388032),
+    x = n(602268);
+let b = function (e) {
+    let { className: t, guildId: n, tag: i, badge: b, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
+        O = (0, s.e7)([g.Z], () => g.Z.getProps().originalProfile),
+        y = null != O && O.tag !== i;
+    return (0, r.jsxs)('div', {
+        className: t,
         children: [
-            (0, n.jsx)(o.vwX, {
+            (0, r.jsx)(o.vwX, {
                 className: x.sectionTitle,
-                children: g.intl.string(f.default['tN+8pK'])
+                children: h.intl.string(f.default['tN+8pK'])
             }),
-            (0, n.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: x.tagContainer,
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: x.tagInputContainer,
-                        children: (0, n.jsx)(l.Is, {
+                        children: (0, r.jsx)(a.Is, {
                             className: x.tagInputWrapper,
-                            inputClassName: a()(x.tagInput, 'heading-sm/semibold'),
+                            inputClassName: l()(x.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
-                            prefixElement: (0, n.jsx)(c.v, {
-                                badge: y,
+                            prefixElement: (0, r.jsx)(c.v, {
+                                badge: b,
                                 width: 40,
                                 height: 40,
                                 primaryTintColor: j,
                                 secondaryTintColor: v
                             }),
-                            disabled: C,
+                            disabled: _,
                             value: null != i ? i : '',
                             onChange: function (e) {
-                                m.Z.updateGuildProfile(t, { tag: e });
+                                m.Z.updateGuildProfile(n, { tag: e });
                             }
                         })
                     }),
-                    (0, n.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: x.tagTooltip,
-                        children: (0, n.jsx)(o.Text, {
+                        children: (0, r.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: g.intl.string(f.default.CrHXHh)
+                            children: h.intl.string(f.default.CrHXHh)
                         })
                     })
                 ]
             }),
-            N &&
-                (0, n.jsx)(d.Z, {
+            y &&
+                (0, r.jsx)(d.Z, {
                     className: x.tagChangeInfoBox,
-                    children: (0, n.jsx)(o.Text, {
+                    children: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
-                        children: g.intl.format(f.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(h.BhN.SERVER_TAGS) })
+                        children: h.intl.format(f.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS) })
                     })
                 })
         ]

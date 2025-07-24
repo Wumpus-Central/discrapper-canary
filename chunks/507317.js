@@ -93,7 +93,7 @@ let v = function (e) {
             },
             [t]
         ),
-        C = (0, r.jsx)(d.Z, {
+        y = (0, r.jsx)(d.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -147,7 +147,7 @@ let v = function (e) {
                                   })
                               ]
                           }),
-                          (0, r.jsx)('div', { children: C })
+                          (0, r.jsx)('div', { children: y })
                       ]
                   })
               ]
@@ -195,7 +195,7 @@ let v = function (e) {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
                                   onClick: O,
-                                  children: C
+                                  children: y
                               })
                           })
                       ]

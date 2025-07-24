@@ -6,5 +6,5 @@ e.exports = {
     image: 'image__03b47',
     inlineText: 'inlineText__03b47',
     footer: 'footer__03b47',
-    button: 'button__03b47'
+    textButtonWrapper: 'textButtonWrapper__03b47'
 };

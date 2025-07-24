@@ -148,8 +148,8 @@ function j(e) {
         v = j.length,
         _ = x(t),
         O = (0, m.O4)(t),
-        C = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
-        y = C
+        y = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
+        C = y
             ? p.intl.formatToPlainString(p.t.nHwnLC, {
                   numDefaultChannels: v,
                   numFromQuestions: u - v
@@ -161,14 +161,14 @@ function j(e) {
                     numChattableChannels: g.X
                 });
     return (0, r.jsx)(h, {
-        title: C ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t['4GSygo']),
-        description: y,
+        title: y ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t['4GSygo']),
+        description: C,
         icon: (0, r.jsx)(s.VL1, {
             size: 'md',
             color: 'currentColor',
             className: f.channelIcon
         }),
-        hasStarted: v > 0 || C,
+        hasStarted: v > 0 || y,
         status: _ || O ? (c ? 'none' : 'good') : 'required',
         onEdit: n
     });
@@ -227,11 +227,11 @@ function _(e) {
     v && (x && !o ? (_ = 'good') : x || (_ = 'required'));
     let O = p.intl.string(p.t.GMOwOD);
     x ? v || (O = p.intl.string(p.t.wHOoyM)) : (O = p.intl.string(p.t.wXFbgY));
-    let C = null;
+    let y = null;
     return (
         v &&
             g &&
-            (C = (0, r.jsx)(s.rsf, {
+            (y = (0, r.jsx)(s.rsf, {
                 className: f.inlineSwitch,
                 checked: b,
                 onChange: j,
@@ -248,7 +248,7 @@ function _(e) {
             hasStarted: v,
             status: _,
             onEdit: n,
-            extra: C
+            extra: y
         })
     );
 }

@@ -28,8 +28,8 @@ function y(e) {
         })),
         E = s.Z.getSettings().clipsEnabled,
         S = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        P = !E || !(S || j) || O || null == y,
-        I = i.useCallback((e) => {
+        I = !E || !(S || j) || O || null == y,
+        P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
                 a.xmR,
@@ -77,10 +77,10 @@ function y(e) {
     return (0, r.jsx)(d.Z, {
         className: _.actionBarButton,
         onClick: () => {
-            P || ((0, m.v)(n, m.d.CLIP), S ? (0, c.C1)() : (0, c.C1)(y.id));
+            I || ((0, m.v)(n, m.d.CLIP), S ? (0, c.C1)() : (0, c.C1)(y.id));
         },
-        disabled: P,
-        iconComponent: I,
+        disabled: I,
+        iconComponent: P,
         label: null == x ? b.intl.string(b.t.eg5qtb) : S || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
         grow: !1
     });

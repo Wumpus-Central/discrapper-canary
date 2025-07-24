@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(118470),
     b = n(413307),
     _ = n(374023),
-    E = n(661599),
-    O = n(617899),
+    O = n(661599),
+    E = n(617899),
     y = n(8521),
-    I = n(760326),
-    v = n(785203),
+    v = n(760326),
+    I = n(785203),
     C = n(652785),
     S = n(921944);
 let N = new Set([a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.z.CHANNEL_NOTICE_GUILD_BANNER]);
@@ -58,7 +58,7 @@ function P(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, r.jsx)(O.Z, {
+                            return (0, r.jsx)(E.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -68,7 +68,7 @@ function P(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, r.jsx)(I.Z, {
+                            return (0, r.jsx)(v.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -97,20 +97,20 @@ function P(e) {
 }
 let j = (e) => {
     let { guild: t } = e;
-    switch ((0, v.Z)(t)) {
-        case v.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, I.Z)(t)) {
+        case I.R.ENABLE_PUBLIC_GUILD:
             return (0, r.jsx)(b.Z, { guild: t });
-        case v.R.MAX_MEMBER_COUNT:
+        case I.R.MAX_MEMBER_COUNT:
             return (0, r.jsx)(y.Z, { guild: t });
-        case v.R.GUILD_LIVE_CHANNEL:
+        case I.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(p.ZP, { guild: t });
-        case v.R.GUILD_MFA_WARNING:
-            return (0, r.jsx)(E.Z, { guild: t });
-        case v.R.COMMANDS_MIGRATION:
+        case I.R.GUILD_MFA_WARNING:
+            return (0, r.jsx)(O.Z, { guild: t });
+        case I.R.COMMANDS_MIGRATION:
             return (0, r.jsx)(g.Z, { guild: t });
-        case v.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case I.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, r.jsx)(m.Z, { guild: t });
-        case v.R.HUB_STUDY_ROOM:
+        case I.R.HUB_STUDY_ROOM:
             return (0, r.jsx)(f.Z, { guild: t });
     }
     return _.s.isDisallowPopupsSet() ? null : (0, r.jsx)(P, { guild: e.guild });

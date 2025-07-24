@@ -14,8 +14,8 @@ var r = n(442837),
     m = n(687158),
     b = n(316027),
     x = n(502762),
-    y = n(848780),
-    _ = n(907179),
+    _ = n(848780),
+    y = n(907179),
     h = n(228168),
     g = n(981631),
     j = n(388032),
@@ -46,10 +46,10 @@ function v(e) {
     return e;
 }
 function O(e) {
-    let { user: t, guildId: n, channelId: O, messageId: P, roleId: N, transitionState: A, openedAt: T, onHide: Z, sourceAnalyticsLocations: C = [] } = e,
+    let { user: t, guildId: n, channelId: O, messageId: P, roleId: N, transitionState: A, openedAt: T, onHide: C, sourceAnalyticsLocations: Z = [] } = e,
         w = n === g.ME ? void 0 : n,
         S = (0, r.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: E } = (0, a.ZP)([...C, S ? l.Z.BLOCKED_PROFILE_MODAL : l.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: E } = (0, a.ZP)([...Z, S ? l.Z.BLOCKED_PROFILE_MODAL : l.Z.IGNORED_PROFILE_MODAL]),
         B = (0, f.ZB)({
             layout: 'MODAL_V2',
             userId: t.id,
@@ -133,11 +133,11 @@ function O(e) {
                                 (0, o.jsxs)(c.Kqy, {
                                     align: 'center',
                                     children: [
-                                        (0, o.jsx)(_.Z, {
+                                        (0, o.jsx)(y.Z, {
                                             size: i.Ph.MEDIUM,
                                             isBlocked: S,
                                             onClick: () => {
-                                                (Z(),
+                                                (C(),
                                                     (0, p.pQ)(
                                                         v(
                                                             {
@@ -149,10 +149,10 @@ function O(e) {
                                                     ));
                                             }
                                         }),
-                                        (0, o.jsx)(y.Z, {
+                                        (0, o.jsx)(_.Z, {
                                             userId: t.id,
                                             onClick: () => {
-                                                (Z(),
+                                                (C(),
                                                     (0, p.pQ)(
                                                         v(
                                                             {

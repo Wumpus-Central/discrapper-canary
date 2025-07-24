@@ -20,39 +20,39 @@ function f(e) {
         [j, v] = i.useState(null),
         _ = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, s.J)(e))), [f]),
         O = i.useMemo(() => f.length === m.nx, [f]),
-        C = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null));
             },
             [j, n.id]
         ),
-        y = i.useCallback(
+        C = i.useCallback(
             (e) => {
-                C([...f, e]);
+                y([...f, e]);
             },
-            [f, C]
+            [f, y]
         ),
         N = i.useCallback(
             (e) => {
-                C([...f.slice(0, e), ...f.slice(e + 1)]);
+                y([...f.slice(0, e), ...f.slice(e + 1)]);
             },
-            [f, C]
+            [f, y]
         ),
         I = i.useCallback(
             (e, t) => {
                 if (f[e] === t) return;
                 let n = [...f];
-                ((n[e] = t), C(n));
+                ((n[e] = t), y(n));
             },
-            [f, C]
+            [f, y]
         ),
         E = i.useCallback(
             (e, t, n) => {
                 let r = f.indexOf(e),
                     i = [...f];
-                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && v(null)) : j !== t && v(t));
+                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (y(i), null !== j && v(null)) : j !== t && v(t));
             },
-            [j, f, C]
+            [j, f, y]
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -85,12 +85,12 @@ function f(e) {
                 (0, r.jsx)('div', {
                     className: p.addQuestionsContainer,
                     children: (0, r.jsx)(o.Z, {
-                        addFormField: y,
+                        addFormField: C,
                         guild: n,
                         allowTerms: !_
                     })
                 }),
-            !O && (0, r.jsx)(h, { addFormField: y })
+            !O && (0, r.jsx)(h, { addFormField: C })
         ]
     });
 }

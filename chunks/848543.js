@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(795318),
     b = n(706140),
     _ = n(294629),
-    E = n(131951),
-    O = n(459273),
+    O = n(131951),
+    E = n(459273),
     y = n(242291),
-    I = n(792165),
-    v = n(603074),
+    v = n(792165),
+    I = n(603074),
     C = n(981631),
     S = n(921944),
     N = n(388032),
@@ -89,9 +89,9 @@ function A(e) {
             return i;
         })(e, ['channel']);
     let A = i.useRef(null),
-        { mute: Z, suppress: x } = (0, _.Z)(t),
-        w = (0, o.e7)([E.Z], () => E.Z.isDeaf()),
-        L = Z || x || w,
+        { mute: x, suppress: Z } = (0, _.Z)(t),
+        w = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
+        L = x || Z || w,
         [R, D] = i.useState(!1),
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
@@ -131,13 +131,13 @@ function A(e) {
                 onRequestClose: () => D(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, r.jsx)(v.Z, {
+                    return (0, r.jsx)(I.Z, {
                         guildId: k,
                         channel: t,
                         onClose: n,
                         gridNotice:
                             U === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                            (0, r.jsx)(I.o, {
+                            (0, r.jsx)(v.o, {
                                 onClose: n,
                                 markAsDismissed: G
                             }),
@@ -193,7 +193,7 @@ function A(e) {
             L || D(!R);
         }, [L, R]);
     return (
-        (0, O.yp)({
+        (0, E.yp)({
             event: C.CkL.TOGGLE_SOUNDBOARD,
             handler: q
         }),
@@ -201,7 +201,7 @@ function A(e) {
             value: B,
             children: (0, r.jsx)(d.ua7, {
                 targetElementRef: A,
-                text: Z ? N.intl.string(N.t['Ox4/zc']) : x ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
+                text: x ? N.intl.string(N.t['Ox4/zc']) : Z ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
                 children: (e) => K(e)
             })
         })

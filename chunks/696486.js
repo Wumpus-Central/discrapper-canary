@@ -3,13 +3,13 @@ a.d(e, {
     Dp: () => C,
     Gx: () => m,
     HN: () => v,
-    HR: () => d,
+    HR: () => R,
     Hb: () => f,
     Tt: () => L,
     XU: () => p,
     _4: () => h,
     ed: () => D,
-    i0: () => R,
+    i0: () => d,
     j5: () => g,
     ve: () => I,
     wy: () => N,
@@ -26,8 +26,8 @@ var r = a(370336),
     l = a(793373),
     u = a(99342);
 let I = 0,
-    R = 1;
-function d(t) {
+    d = 1;
+function R(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
     return (0, r.Jr)({
@@ -91,7 +91,7 @@ function p(t) {
 }
 function L(t) {
     let { traceFlags: e } = t.spanContext();
-    return e === R;
+    return e === d;
 }
 function h(t) {
     if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';

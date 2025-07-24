@@ -42,13 +42,13 @@ function _(e) {
             guildProfile: p.Z.getGuildProfile()
         })),
         O = null == n ? void 0 : n.id,
-        C = (0, a.e7)([d.Z], () => d.Z.get(O)),
-        { fetchGuildProfile: y } = (0, u.u)(O),
+        y = (0, a.e7)([d.Z], () => d.Z.get(O)),
+        { fetchGuildProfile: C } = (0, u.u)(O),
         N = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
         I = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
-        null != O && y();
-    }, [O, y]);
+        null != O && C();
+    }, [O, C]);
     let E = i.useMemo(() => (null == n || null == _ ? v : _), [n, _]),
         S = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null && (I ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC }) : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
@@ -57,7 +57,7 @@ function _(e) {
             g.Z.setSection(x.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let P = null != t ? t : null == C ? void 0 : C.formFields;
+    let P = null != t ? t : null == y ? void 0 : y.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.X6, {

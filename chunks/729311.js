@@ -23,8 +23,8 @@ var r = n(255367),
     v = n(889369),
     _ = n(570961),
     O = n(208665),
-    C = n(868814),
-    y = n(974513),
+    y = n(868814),
+    C = n(974513),
     N = n(2348),
     I = n(353890),
     E = n(716130),
@@ -35,14 +35,14 @@ function w(e) {
     let { guild: t } = e,
         a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        h = (0, C.Z)(t),
+        h = (0, y.Z)(t),
         x = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
         b = h.filter((e) => !x.has(e.id)),
         [_, O] = i.useState(!1);
     i.useEffect(() => {
         f || a || (0, g.S)(t.id);
     }, [t.id, f, a]);
-    let y = (e) => {
+    let C = (e) => {
         (0, s.ZDy)(async () => {
             let { default: i } = await n.e('35641').then(n.bind(n, 89216));
             return (n) => {
@@ -192,7 +192,7 @@ function w(e) {
                                                     text: S.intl.string(S.t.zA9d1N),
                                                     icon: s.mBM,
                                                     iconPosition: 'start',
-                                                    onClick: () => y(e.id)
+                                                    onClick: () => C(e.id)
                                                 })
                                       ]
                                   }),
@@ -260,7 +260,7 @@ function R(e) {
                                 color: 'header-secondary',
                                 children: S.intl.string(S.t.Kq7FAQ)
                             }),
-                            (0, r.jsx)(y.Wu, {
+                            (0, r.jsx)(C.Wu, {
                                 className: T.advancedModeToggle,
                                 guildId: n.id
                             }),

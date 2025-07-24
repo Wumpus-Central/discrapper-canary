@@ -1,60 +1,84 @@
-n.d(t, { o: () => _ });
-var r = n(255367);
+n.d(e, {
+    o: () => f,
+    w: () => p
+});
+var r,
+    i = n(255367);
 n(73800);
-var i = n(793030),
-    o = n(74538),
-    a = n(937615),
-    s = n(230916),
-    l = n(594135),
-    c = n(474936),
-    u = n(388032),
-    d = n(930280),
-    m = n(947866);
-let _ = (e) => {
-    let { userDiscountOffer: t, applied: n = !1 } = e,
-        { premiumSubscription: _ } = (0, l.a)(),
-        p = (0, s._)(_, c.Xh.PREMIUM_MONTH_TIER_2, t),
-        f = (0, o.aS)(c.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-            currency: _.currency,
-            paymentSourceId: _.paymentSourceId
-        }),
-        C = (0, a.T4)(f.amount, f.currency);
-    return (0, r.jsxs)('div', {
-        className: d.discountOfferContainer,
-        children: [
-            (0, r.jsx)('img', {
-                alt: '',
-                src: m,
-                className: d.nitroIcon
-            }),
-            (0, r.jsxs)('div', {
-                className: d.discountOfferContent,
-                children: [
-                    (0, r.jsx)(i.xv, {
-                        variant: 'text-md/semibold',
-                        children: u.intl.format(u.t.tQvNlp, { numMonths: t.discount.user_usage_limit })
-                    }),
-                    n &&
-                        (0, r.jsx)(i.xv, {
-                            variant: 'text-md/medium',
-                            color: 'text-secondary',
-                            children: u.intl.format(u.t.gPzMHR, {
-                                numMonths: t.discount.user_usage_limit,
-                                discountedPrice: p,
-                                regularPrice: C
-                            })
+var o = n(793030),
+    a = n(74538),
+    s = n(937615),
+    l = n(230916),
+    c = n(594135),
+    u = n(474936),
+    d = n(388032),
+    m = n(930280),
+    _ = n(947866),
+    p = (((r = {}).NONE = 'none'), (r.CONFIRMING = 'confirming'), (r.APPLIED = 'applied'), r);
+let f = (t) => {
+        let { userDiscountOffer: e, offerState: n = 'none' } = t;
+        return (0, i.jsxs)('div', {
+            className: m.discountOfferContainer,
+            children: [
+                (0, i.jsx)('img', {
+                    alt: '',
+                    src: _,
+                    className: m.nitroIcon
+                }),
+                (0, i.jsxs)('div', {
+                    className: m.discountOfferContent,
+                    children: [
+                        (0, i.jsx)(o.xv, {
+                            variant: 'text-md/semibold',
+                            children: d.intl.format(d.t.tQvNlp, { numMonths: e.discount.user_usage_limit })
                         }),
-                    !n &&
-                        (0, r.jsx)(i.xv, {
-                            variant: 'text-md/medium',
-                            color: 'text-secondary',
-                            children: u.intl.format(u.t['2gem09'], {
-                                percent: t.discount.amount,
-                                numMonths: t.discount.user_usage_limit
-                            })
+                        (0, i.jsx)(C, {
+                            userDiscountOffer: e,
+                            offerState: n
                         })
-                ]
-            })
-        ]
-    });
-};
+                    ]
+                })
+            ]
+        });
+    },
+    C = (t) => {
+        let { userDiscountOffer: e, offerState: n } = t,
+            { premiumSubscription: r } = (0, c.a)(),
+            m = (0, l._)(r, u.Xh.PREMIUM_MONTH_TIER_2, e),
+            _ = (0, a.aS)(u.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+                currency: r.currency,
+                paymentSourceId: r.paymentSourceId
+            }),
+            p = (0, s.T4)(_.amount, _.currency);
+        switch (n) {
+            case 'applied':
+                return (0, i.jsx)(o.xv, {
+                    variant: 'text-md/normal',
+                    color: 'text-secondary',
+                    children: d.intl.formatToPlainString(d.t.gPzMHR, {
+                        numMonths: e.discount.user_usage_limit,
+                        discountedPrice: m,
+                        regularPrice: p
+                    })
+                });
+            case 'confirming':
+                return (0, i.jsx)(o.xv, {
+                    variant: 'text-md/normal',
+                    color: 'text-secondary',
+                    children: d.intl.formatToPlainString(d.t.Eq1RHB, {
+                        percent: e.discount.amount,
+                        numMonths: e.discount.user_usage_limit,
+                        price: p
+                    })
+                });
+            default:
+                return (0, i.jsx)(o.xv, {
+                    variant: 'text-md/normal',
+                    color: 'text-secondary',
+                    children: d.intl.formatToPlainString(d.t['2gem09'], {
+                        percent: e.discount.amount,
+                        numMonths: e.discount.user_usage_limit
+                    })
+                });
+        }
+    };

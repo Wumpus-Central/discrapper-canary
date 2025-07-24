@@ -2,12 +2,12 @@ n.d(t, { Z: () => N });
 var r = n(255367);
 n(73800);
 var i = n(40851),
-    a = n(131734),
-    o = n(620662),
-    s = n(841784),
-    l = n(834353),
-    c = n(802856),
-    u = n(420660),
+    a = n(620662),
+    o = n(841784),
+    s = n(834353),
+    l = n(802856),
+    c = n(420660),
+    u = n(206074),
     d = n(750154),
     _ = n(374129),
     f = n(639351),
@@ -37,7 +37,8 @@ let A = (e) => {
     });
 };
 function N(e) {
-    let { user: t, activity: n, onAction: i, onClose: p, application: N } = e;
+    let { user: t, activity: n, onAction: i, onClose: p, application: N } = e,
+        C = (0, u.q)(N, 'UserProfileActivityButtons');
     return null != n && n.application_id === I.bO
         ? ((n.buttons = [T.intl.string(S.default['Fv/2Oz'])]),
           (n.metadata = { button_urls: [I.U8] }),
@@ -46,53 +47,60 @@ function N(e) {
               activity: n,
               onAction: i
           }))
-        : (0, c.Z)(n)
+        : (0, l.Z)(n)
           ? (0, r.jsx)(E.Z, {
                 platformType: v.ABu.XBOX,
                 icon: () => (0, r.jsx)(f.Z, {}),
                 onAction: i
             })
-          : (0, l.Z)(n)
+          : (0, s.Z)(n)
             ? (0, r.jsx)(E.Z, {
                   platformType: v.ABu.PLAYSTATION,
                   icon: () => (0, r.jsx)(_.Z, {}),
                   onAction: i
               })
-            : (0, u.Z)(n)
+            : (0, c.Z)(n)
               ? (0, r.jsx)(y.Z, {
                     activity: n,
                     onAction: i
                 })
-              : (0, o.Z)(n, v.xjy.JOIN) || (0, s.Z)(n)
+              : (0, a.Z)(n, v.xjy.JOIN) && !(0, o.Z)(n)
                 ? (0, r.jsx)(m.Z, {
                       user: t,
                       activity: n,
                       onAction: i,
                       onClose: p
                   })
-                : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
-                  ? (0, r.jsx)(h.Z, {
-                        user: t,
-                        activity: n,
-                        onAction: i
+                : C && null != N
+                  ? (0, r.jsx)(O.Z, {
+                        application: N,
+                        onAction: i,
+                        onClose: p
                     })
-                  : (0, o.Z)(n, v.xjy.INSTANCE)
-                    ? (0, r.jsx)(g.Z, {
+                  : (0, a.Z)(n, v.xjy.JOIN) || (0, o.Z)(n)
+                    ? (0, r.jsx)(m.Z, {
                           user: t,
                           activity: n,
-                          onAction: i
+                          onAction: i,
+                          onClose: p
                       })
-                    : (0, d.dS)(n)
-                      ? (0, r.jsx)(b.Z, {
+                    : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
+                      ? (0, r.jsx)(h.Z, {
+                            user: t,
                             activity: n,
-                            onAction: i,
-                            onClose: p
+                            onAction: i
                         })
-                      : null != N && null != (0, a.Z)(N)
-                        ? (0, r.jsx)(O.Z, {
-                              application: N,
-                              onAction: i,
-                              onClose: p
+                      : (0, a.Z)(n, v.xjy.INSTANCE)
+                        ? (0, r.jsx)(g.Z, {
+                              user: t,
+                              activity: n,
+                              onAction: i
                           })
-                        : null;
+                        : (0, d.dS)(n)
+                          ? (0, r.jsx)(b.Z, {
+                                activity: n,
+                                onAction: i,
+                                onClose: p
+                            })
+                          : null;
 }

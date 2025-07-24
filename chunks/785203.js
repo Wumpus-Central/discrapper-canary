@@ -23,11 +23,11 @@ function b(e) {
         m = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
         b = (0, o.m)(n),
         _ = (0, l.e7)([h.Z], () => h.Z.isVisible(e)),
-        E = u.Z.useShouldShowChannelNotice(n),
-        O = (0, d.h6)(e),
+        O = u.Z.useShouldShowChannelNotice(n),
+        E = (0, d.h6)(e),
         { enableStudyGroup: y } = (0, c.s)(e),
-        I = O.length > 0,
-        v = y && !(null == e ? void 0 : e.features.has(g.oNc.HUB)),
+        v = E.length > 0,
+        I = y && !(null == e ? void 0 : e.features.has(g.oNc.HUB)),
         C = (0, s.Vm)(n);
     if (
         (i.useEffect(() => {
@@ -39,8 +39,8 @@ function b(e) {
     if (m) return 1;
     if (b || null != C) return 2;
     if (_) return 3;
-    if (E) return 4;
-    else if (I) return 5;
-    else if (v) return 6;
+    if (O) return 4;
+    else if (v) return 5;
+    else if (I) return 6;
     return null;
 }

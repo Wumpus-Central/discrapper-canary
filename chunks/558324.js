@@ -31,8 +31,8 @@ let m = (e) => {
             }
             return i;
         })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
-    let [O, C] = i.useState(null != g ? g : ''),
-        y = m.map((e, t) =>
+    let [O, y] = i.useState(null != g ? g : ''),
+        C = m.map((e, t) =>
             (0, r.jsxs)(
                 'span',
                 {
@@ -61,7 +61,7 @@ let m = (e) => {
                     null == h || h(d.intl.string(d.t.Xx7XeH));
                     return;
                 }
-                (f(e), C(''));
+                (f(e), y(''));
             }
         }, [O, b, f, h, m.length]),
         I = i.useCallback(
@@ -81,7 +81,7 @@ let m = (e) => {
     return (0, r.jsxs)('div', {
         className: s()(l, u.inputWrapper, { [u.disabled]: j }),
         children: [
-            y,
+            C,
             (0, r.jsx)(
                 a.Is,
                 ((t = (function (e) {
@@ -119,7 +119,7 @@ let m = (e) => {
                     {
                         value: O,
                         onKeyDown: I,
-                        onChange: C,
+                        onChange: y,
                         maxLength: x,
                         disabled: j,
                         onBlur: N,

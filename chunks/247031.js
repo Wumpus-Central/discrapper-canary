@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(434404),
     _ = n(372454),
     O = n(999382),
-    C = n(84613),
-    y = n(740903),
+    y = n(84613),
+    C = n(740903),
     N = n(1080),
     I = n(981631),
     E = n(388032),
@@ -234,7 +234,7 @@ class A extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        (v.Z.setSection(I.pNK.SAFETY), (0, C.K)(y.u.DM_AND_SPAM_PROTECTION));
+        (v.Z.setSection(I.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION));
     }
     handleQueryChange(e) {
         v.Z.setSearchQuery(e);

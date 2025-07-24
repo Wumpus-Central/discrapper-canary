@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -15,13 +15,13 @@ var r = n(392711),
     m = n(996106),
     b = n(914946),
     _ = n(452426),
-    E = n(561205),
-    O = n(186901),
+    O = n(561205),
+    E = n(186901),
     y = n(981631);
-let I = {
+let v = {
     [y.Etm.GET_CHANNEL]: {
         scope: {
-            [O.Gp.ANY]: [l.x.RPC, l.x.GUILDS, l.x.GUILDS_CHANNELS_READ]
+            [E.Gp.ANY]: [l.x.RPC, l.x.GUILDS, l.x.GUILDS_CHANNELS_READ]
         },
         handler(e) {
             let {
@@ -68,10 +68,10 @@ let I = {
     },
     [y.Etm.GET_CHANNEL_PERMISSIONS]: {
         scope: {
-            [O.Gp.ANY]: [l.x.GUILDS_MEMBERS_READ, l.x.GUILDS_CHANNELS_READ]
+            [E.Gp.ANY]: [l.x.GUILDS_MEMBERS_READ, l.x.GUILDS_CHANNELS_READ]
         },
         handler(e) {
-            let t = (0, E.Z)();
+            let t = (0, O.Z)();
             if (null == t) throw new m.Z({ errorCode: y.lTL.INVALID_CHANNEL }, 'Invalid channel');
             return { permissions: p.Z.computePermissions(t) };
         }
@@ -118,7 +118,7 @@ let I = {
     },
     [y.Etm.GET_SELECTED_VOICE_CHANNEL]: {
         scope: {
-            [O.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+            [E.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         handler(e) {
             let { socket: t } = e,

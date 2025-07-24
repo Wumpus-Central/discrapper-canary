@@ -15,35 +15,35 @@ var r = n(255367),
     m = n(388032),
     b = n(264634);
 function _(e) {
-    let { onOpen: t, onClose: n, className: _, 'data-jump-section': E } = e,
-        O = i.useRef(null),
+    let { onOpen: t, onClose: n, className: _, 'data-jump-section': O } = e,
+        E = i.useRef(null),
         y = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        I = i.useRef(null),
-        v = (0, l.e7)([d.ZP], () => (null == y ? void 0 : y.id) != null && d.ZP.getMentionCount(y.id, g.W.NOTIFICATION_CENTER) > 0),
+        v = i.useRef(null),
+        I = (0, l.e7)([d.ZP], () => (null == y ? void 0 : y.id) != null && d.ZP.getMentionCount(y.id, g.W.NOTIFICATION_CENTER) > 0),
         { enabled: C } = s.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
         S = (0, l.e7)([o.Z], () => C && o.Z.getUnseenInviteCount() > 0),
         N = (0, a.dQu)(a.TVs.modules.chat.INPUT_ICON_SIZE);
     return (0, r.jsx)(h.k, {
-        targetElementRef: I,
+        targetElementRef: v,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: v },
+        badgeState: { badgeForYou: I },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n, i) => {
             var l, o;
             return (0, r.jsxs)('div', {
-                ref: I,
+                ref: v,
                 className: b.recentsIcon,
                 children: [
                     C &&
                         (0, r.jsx)(f.Z, {
-                            inboxIconRef: I,
+                            inboxIconRef: v,
                             recentsPopoutShown: t
                         }),
                     (0, r.jsx)(u.U, {
                         location: 'inbox-button',
-                        targetElementRef: O,
+                        targetElementRef: E,
                         children: (0, r.jsx)(
                             c.JO,
                             ((l = (function (e) {
@@ -73,7 +73,7 @@ function _(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: O,
+                                    ref: E,
                                     className: _,
                                     onClick: e,
                                     icon: a.xx7,
@@ -81,8 +81,8 @@ function _(e) {
                                     'aria-label': m.intl.string(m.t.GSmTKC),
                                     tooltip: t ? null : m.intl.string(m.t.GSmTKC),
                                     selected: t,
-                                    showBadge: v || S || i,
-                                    'data-jump-section': E
+                                    showBadge: I || S || i,
+                                    'data-jump-section': O
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))

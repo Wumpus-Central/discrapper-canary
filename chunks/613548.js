@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(975146),
     E = n(597998),
     S = n(606304),
-    P = n(358221),
-    I = n(355827),
+    I = n(358221),
+    P = n(355827),
     Z = n(185935),
     T = n(354459),
     N = n(388032),
@@ -74,10 +74,10 @@ function R(e, t) {
 }
 function M(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([S.Z, P.Z], () => {
+        i = (0, c.Wu)([S.Z, I.Z], () => {
             let e = Date.now();
             return s()(S.Z.getSpeakers())
-                .map((e) => P.Z.getParticipant(t, e))
+                .map((e) => I.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === T.fO.USER && e.speaking && !(0, y.ZP)(e))
                 .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
@@ -121,12 +121,12 @@ function D(e) {
             userParticipantCount: S,
             participantsListOpen: N
         } = (0, c.cj)(
-            [P.Z],
+            [I.Z],
             () => ({
-                selectedParticipant: P.Z.getSelectedParticipant(s),
-                voiceParticipantsHidden: P.Z.getVoiceParticipantsHidden(s),
-                userParticipantCount: P.Z.getUserParticipantCount(s),
-                participantsListOpen: P.Z.getParticipantsListOpen(s)
+                selectedParticipant: I.Z.getSelectedParticipant(s),
+                voiceParticipantsHidden: I.Z.getVoiceParticipantsHidden(s),
+                userParticipantCount: I.Z.getUserParticipantCount(s),
+                participantsListOpen: I.Z.getParticipantsListOpen(s)
             }),
             [s]
         ),
@@ -200,7 +200,7 @@ function D(e) {
                     {
                         targetElementRef: l,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(I.Z, { channel: t }) }),
+                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(P.Z, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(

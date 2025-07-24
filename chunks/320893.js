@@ -173,7 +173,7 @@ function O() {
         ]
     });
 }
-function C() {
+function y() {
     return (0, r.jsxs)('div', {
         className: c.followerBenefitCard,
         children: [
@@ -196,7 +196,7 @@ function C() {
         ]
     });
 }
-function y() {
+function C() {
     let e = (0, s.ZP)();
     return (0, r.jsxs)('div', {
         className: c.revenueShareBenefitCard,
@@ -238,7 +238,7 @@ function N() {
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, r.jsx)(O, {}), (0, r.jsx)(C, {}), (0, r.jsx)(y, {})]
+                children: [(0, r.jsx)(O, {}), (0, r.jsx)(y, {}), (0, r.jsx)(C, {})]
             })
         ]
     });

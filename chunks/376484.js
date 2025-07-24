@@ -30,7 +30,7 @@ function f(e) {
             }),
             (0, r.jsx)('div', {
                 className: l()(m.__invalid_embedContent, { [m.compact]: o }),
-                children: (0, r.jsx)(h, { message: t })
+                children: (0, r.jsx)(g, { message: t })
             }),
             (0, r.jsx)('div', {
                 className: m.actions,
@@ -45,7 +45,7 @@ function f(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     var t;
     let { message: n } = e,
         [i] = null != (t = n.embeds) ? t : [];

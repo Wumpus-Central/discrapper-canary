@@ -17,10 +17,10 @@ var i = n(512722),
     b = n(388032);
 function _(e) {
     var t, i;
-    let { party: _, onUserContextMenu: E } = e,
-        { priorityMembers: O, guildContext: y } = _,
-        I = O[0],
-        v = (function (e) {
+    let { party: _, onUserContextMenu: O } = e,
+        { priorityMembers: E, guildContext: y } = _,
+        v = E[0],
+        I = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 r = new Set(
                     t.map((e) => {
@@ -51,22 +51,22 @@ function _(e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: p } = e,
                 _ = i.length,
-                E = c.length - _,
-                O = p[0],
-                y = null == O ? void 0 : O.activity,
-                I = null == O ? void 0 : O.startedPlayingTime,
-                v = { name: null != (t = null == y ? void 0 : y.name) ? t : '' };
+                O = c.length - _,
+                E = p[0],
+                y = null == E ? void 0 : E.activity,
+                v = null == E ? void 0 : E.startedPlayingTime,
+                I = { name: null != (t = null == y ? void 0 : y.name) ? t : '' };
             if ((0, a.Z)(y) && null != y)
                 return {
                     subtitle: (0, r.jsx)(d.ZP, {
-                        start: I,
+                        start: v,
                         location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: v
+                        messageProps: I
                     }),
                     icon: null
                 };
-            if (_ + E === 1 && null != O) {
-                let { game: e } = O;
+            if (_ + O === 1 && null != E) {
+                let { game: e } = E;
                 if (null == y)
                     return {
                         subtitle: null,
@@ -83,9 +83,9 @@ function _(e) {
                             };
                         return {
                             subtitle: (0, r.jsx)(d.ZP, {
-                                start: I,
+                                start: v,
                                 location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: v
+                                messageProps: I
                             }),
                             icon: null != e ? (0, r.jsx)(f.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
@@ -148,7 +148,7 @@ function _(e) {
                         subtitle: (0, r.jsx)(d.ZP, {
                             start: i,
                             location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: v
+                            messageProps: I
                         }),
                         icon: null != n && null != n.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
@@ -165,13 +165,13 @@ function _(e) {
             source: c.m1.FriendsActivityFeed
         });
     return (0, r.jsx)(f.Z.Header, {
-        priorityUser: I,
+        priorityUser: v,
         guildId: null == y ? void 0 : y.id,
-        title: v,
+        title: I,
         subtitle: C,
         icon: S,
         onSubtitleClick: N,
         onIconClick: N,
-        onContextMenu: (e) => E(e, I.user)
+        onContextMenu: (e) => O(e, v.user)
     });
 }

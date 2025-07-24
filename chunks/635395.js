@@ -15,7 +15,7 @@ var r = n(73800),
     m = n(998502),
     b = n(981631);
 let _ = (0, g.isMac)() ? null : 'DEFAULT';
-class E extends r.PureComponent {
+class O extends r.PureComponent {
     componentDidMount() {
         m.ZP.setSystemTrayIcon(this.getIcon());
     }
@@ -47,14 +47,14 @@ class E extends r.PureComponent {
                 : (this[t] = n));
     }
 }
-let O = () => null;
+let E = () => null;
 g.isPlatformEmbedded &&
     (m.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
     m.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
     m.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
         a.Z.open(b.oAB.VOICE);
     }),
-    (O = i.ZP.connectStores([p.Z, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
+    (E = i.ZP.connectStores([p.Z, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
             n = (0, s.m$)([h.Z, o.Z]),
@@ -66,5 +66,5 @@ g.isPlatformEmbedded &&
             deafened: u.Z.isSelfDeaf(),
             unread: r
         };
-    })(E)));
-let y = O;
+    })(O)));
+let y = E;

@@ -1,22 +1,16 @@
-(n.r(t),
-    n.d(t, {
-        default: () => c,
-        useUserSettingsConfigV2: () => d
-    }));
-var i = n(255367),
-    a = n(73800),
-    s = n(37234),
-    o = n(79808),
-    r = n(908820),
+(n.r(t), n.d(t, { default: () => c }));
+var a = n(255367);
+n(73800);
+var i = n(37234),
+    r = n(79808),
+    s = n(604227),
+    o = n(908820),
     l = n(640896);
-function d() {
-    return a.useMemo(() => l.Z, []);
-}
 function c() {
-    let e = d();
-    return (0, i.jsx)(o.Z, {
-        onClose: s.xf,
-        config: e,
-        initialSetting: r.Z
+    return (0, a.jsx)(r.Z, {
+        onClose: i.xf,
+        tree: l.Z,
+        sidebarFooter: s.Z,
+        initialPanel: o.Z
     });
 }

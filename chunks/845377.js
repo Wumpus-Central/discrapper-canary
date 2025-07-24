@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(981631),
     _ = n(388032),
     O = n(252151);
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function C(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -146,7 +146,7 @@ let E = (e) => {
                 var e, n, r;
                 if (null == P) return [];
                 let i = null != (n = (null != (e = f.ZP.getChannels(t.id)) ? e : {})[f.sH]) ? n : [],
-                    l = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => y(C({}, e), { [t.id]: t }), {})) ? r : {};
+                    l = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => C(y({}, e), { [t.id]: t }), {})) ? r : {};
                 return null == P
                     ? []
                     : Object.entries(P).map((e) => {
@@ -239,7 +239,7 @@ let E = (e) => {
                                 onClick: () =>
                                     (0, p.ZDy)(async () => {
                                         let { default: e } = await n.e('23401').then(n.bind(n, 666599));
-                                        return (t) => (0, r.jsx)(e, y(C({}, t), { guildChecklist: m }));
+                                        return (t) => (0, r.jsx)(e, C(y({}, t), { guildChecklist: m }));
                                     }),
                                 children: _.intl.string(_.t.qyiTHx)
                             })
@@ -373,7 +373,7 @@ let E = (e) => {
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [(0, r.jsx)(N, C({}, e)), t < Z.length - 1 ? (0, r.jsx)('hr', { className: O.separator }) : null]
+                        children: [(0, r.jsx)(N, y({}, e)), t < Z.length - 1 ? (0, r.jsx)('hr', { className: O.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

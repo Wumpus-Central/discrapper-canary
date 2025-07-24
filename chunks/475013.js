@@ -23,8 +23,8 @@ var r = n(255367),
     v = n(163249),
     _ = n(150689),
     O = n(203377),
-    C = n(981631);
-function y(e) {
+    y = n(981631);
+function C(e) {
     p.Z.selectRole(e);
 }
 let N = () => {
@@ -42,7 +42,7 @@ let N = () => {
                 l = null;
             (h.Z.hasRoleConfigurationChanges && ((l = h.Z.editedRoleIdsForConfigurations), (i = h.Z.getEditedRoleConnectionConfigurationsMap())), (0, f.Gf)(t, n, r, l, i));
         },
-        submitting: t === C.QZA.SUBMITTING,
+        submitting: t === y.QZA.SUBMITTING,
         onReset: f.S1
     });
 };
@@ -61,9 +61,9 @@ function I(e) {
     s()(null != c, 'Guild must have an everyone role');
     let g = i.useMemo(() => l.filter((e) => !(0, u.pM)(n.id, e.id)), [l, n]),
         p = (0, a.e7)([x.Z], () => x.Z.getSelectedRoleId()),
-        [f, C] = i.useState(g.length > 0);
+        [f, y] = i.useState(g.length > 0);
     (i.useEffect(() => {
-        C(f || g.length > 0);
+        y(f || g.length > 0);
     }, [f, g.length]),
         (0, d.ZP)(() => {
             let e = m.Z.getMemberCount(n.id);
@@ -76,13 +76,13 @@ function I(e) {
     null != p)
         ? (0, r.jsx)(j.Z, {
               editRoleId: p,
-              setEditRoleId: y,
+              setEditRoleId: C,
               selectedSection: N,
               setSelectedSection: I
           })
         : f
           ? (0, r.jsx)(_.Z, {
-                setEditRoleId: y,
+                setEditRoleId: C,
                 guild: n,
                 everyoneRole: c,
                 otherRoles: g,
@@ -92,6 +92,6 @@ function I(e) {
           : (0, r.jsx)(v.Z, {
                 guild: n,
                 everyoneRole: c,
-                setEditRoleId: y
+                setEditRoleId: C
             });
 }

@@ -15,11 +15,11 @@ var r,
     m = n(287259),
     b = n(785547),
     _ = n(600164),
-    E = n(167533),
-    O = n(925329),
+    O = n(167533),
+    E = n(925329),
     y = n(707409),
-    I = n(490983),
-    v = n(799777),
+    v = n(490983),
+    I = n(799777),
     C = n(626135),
     S = n(780570),
     N = n(624138),
@@ -27,7 +27,7 @@ var r,
     P = n(981631),
     j = n(388032),
     A = n(833972);
-function Z(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function Z(e, t, n) {
         e
     );
 }
-function x(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                Z(e, t, n[t]);
+                x(e, t, n[t]);
             }));
     }
     return e;
@@ -86,7 +86,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             a = r.libraryApplication.hasFlag(t);
         return (0, i.jsx)(h.ua7, {
             text: l,
-            children: (e) => (0, i.jsx)(n, x({ className: o()(A.settingIcon, { [A.hidden]: !a }) }, e))
+            children: (e) => (0, i.jsx)(n, Z({ className: o()(A.settingIcon, { [A.hidden]: !a }) }, e))
         });
     },
     M = [
@@ -100,9 +100,9 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 (0, i.jsxs)(_.Z, {
                     align: _.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(O.Z, {
+                        (0, i.jsx)(E.Z, {
                             game: e.application,
-                            size: O.Z.Sizes.SMALL,
+                            size: E.Z.Sizes.SMALL,
                             className: A.gameIcon
                         }),
                         (0, i.jsxs)('div', {
@@ -118,7 +118,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   h.SrA,
-                                                  x(
+                                                  Z(
                                                       {
                                                           size: 'md',
                                                           color: 'currentColor',
@@ -261,7 +261,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),
-            children: (0, i.jsx)('div', x({}, u))
+            children: (0, i.jsx)('div', Z({}, u))
         });
     };
 class G extends (r = l.PureComponent) {
@@ -330,7 +330,7 @@ class G extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        C.default.track(P.rMx.LIBRARY_VIEWED, w(x({}, e), { load_id: t.loadId }));
+        C.default.track(P.rMx.LIBRARY_VIEWED, w(Z({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         m.fS(e, t);
@@ -373,7 +373,7 @@ class G extends (r = l.PureComponent) {
         return (0, i.jsxs)(l.Fragment, {
             children: [
                 n.length > 0
-                    ? (0, i.jsx)(E.Z, {
+                    ? (0, i.jsx)(O.Z, {
                           columns: M,
                           data: n,
                           sortData: !1,
@@ -412,28 +412,28 @@ class G extends (r = l.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            Z(this, '_didUnmount', !1),
-            Z(this, '_rowRefs', {}),
-            Z(this, 'state', {
+            x(this, '_didUnmount', !1),
+            x(this, '_rowRefs', {}),
+            x(this, 'state', {
                 overflowMenuRowKey: null,
                 highlightedApplicationKey: null != this.props.location.state ? this.props.location.state.applicationId : null
             }),
-            Z(this, 'setActiveRowKey', (e) => {
+            x(this, 'setActiveRowKey', (e) => {
                 this.setState({ overflowMenuRowKey: e.key });
             }),
-            Z(this, 'clearActiveRowKey', () => {
+            x(this, 'clearActiveRowKey', () => {
                 this._didUnmount || this.setState({ overflowMenuRowKey: null });
             }),
-            Z(this, 'handleRowMouseEnter', (e) => {
+            x(this, 'handleRowMouseEnter', (e) => {
                 this.props.isNavigatingByKeyboard || m.wX(e.key);
             }),
-            Z(this, 'handleRowMouseLeave', () => {
+            x(this, 'handleRowMouseLeave', () => {
                 this.props.isNavigatingByKeyboard || m.wX(null);
             }),
-            Z(this, 'setRowRef', (e, t) => {
+            x(this, 'setRowRef', (e, t) => {
                 this._rowRefs[t] = e;
             }),
-            Z(this, 'handleApplicationContextMenu', (e, t) => {
+            x(this, 'handleApplicationContextMenu', (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: r } = this.props;
                 (0, g.jW)(
@@ -443,7 +443,7 @@ class G extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                w(x({}, n), {
+                                w(Z({}, n), {
                                     applicationId: t.libraryApplication.id,
                                     branchId: t.libraryApplication.branchId,
                                     analyticsContext: r
@@ -462,25 +462,25 @@ function B(e) {
             applicationViewItems: r,
             filterQuery: a,
             fetched: o
-        } = (0, c.cj)([I.Z], () => ({
-            applicationViewItems: I.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: I.Z.applicationFilterQuery,
-            fetched: I.Z.hasFetchedApplications
+        } = (0, c.cj)([v.Z], () => ({
+            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: v.Z.applicationFilterQuery,
+            fetched: v.Z.hasFetchedApplications
         })),
         {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
             isNavigatingByKeyboard: h
-        } = (0, c.cj)([v.Z], () => ({
-            sortKey: v.Z.sortKey,
-            sortDirection: v.Z.sortDirection,
-            activeRowKey: v.Z.activeRowKey,
-            isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([I.Z], () => ({
+            sortKey: I.Z.sortKey,
+            sortDirection: I.Z.sortDirection,
+            activeRowKey: I.Z.activeRowKey,
+            isNavigatingByKeyboard: I.Z.isNavigatingByKeyboard
         }));
     return (0, i.jsx)(
         G,
-        w(x({}, e), {
+        w(Z({}, e), {
             analyticsContext: t,
             location: n,
             applicationViewItems: r,
@@ -493,4 +493,4 @@ function B(e) {
         })
     );
 }
-Z(G, 'defaultProps', { stickyHeader: !1 });
+x(G, 'defaultProps', { stickyHeader: !1 });

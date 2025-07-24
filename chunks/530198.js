@@ -166,22 +166,22 @@ function O(e) {
         l
     );
 }
-function C(e) {
+function y(e) {
     var t, n;
     let { titleText: l, fieldText: s, fieldTextHook: a, metadataField: o, existingPendingConfiguration: c, platform: m, applicationId: g, onConfigurationChange: p, locked: f, operator: j } = e,
         v = (null == c ? void 0 : c.configuration) != null,
         _ = null != (n = null == c ? void 0 : c.index) ? n : -1,
-        [O, C] = (function (e, t) {
+        [O, y] = (function (e, t) {
             let n = null != t ? t : h.iO.GREATER_THAN,
                 r = Math.round(Number(null != e ? e : 0));
             return (n === h.iO.GREATER_THAN ? (r = Math.max(1, r + 1)) : n === h.iO.LESS_THAN && (r = Math.max(0, r - 1)), [r.toString(), n]);
         })(null == c || null == (t = c.configuration) ? void 0 : t.value, j),
-        [y, N] = i.useState(O),
+        [C, N] = i.useState(O),
         I =
             null != a
                 ? x.intl.format(a, {
-                      count: y,
-                      metadataHook: () => y
+                      count: C,
+                      metadataHook: () => C
                   })
                 : (0, r.jsx)('span', {
                       className: b.fieldText,
@@ -224,7 +224,7 @@ function C(e) {
                         'aria-label': x.intl.string(x.t['FTmi9/']),
                         type: 'number',
                         className: b.numericalRuleInput,
-                        value: y,
+                        value: C,
                         onChange: (e) => {
                             if ((N(e), null == c)) return;
                             let [t, n] = (function (e, t) {
@@ -261,8 +261,8 @@ function C(e) {
                                     connectionType: null != (t = null == m ? void 0 : m.type) ? t : h.Kt,
                                     applicationId: g,
                                     connectionMetadataField: o,
-                                    operator: C,
-                                    value: y
+                                    operator: y,
+                                    value: C
                                 }),
                                 p(r, null != (n = null == c ? void 0 : c.index) ? n : -1));
                         },
@@ -274,7 +274,7 @@ function C(e) {
         o
     );
 }
-function y(e) {
+function C(e) {
     let { children: t } = e;
     return (0, r.jsxs)('table', {
         className: b.rulesTable,
@@ -305,9 +305,9 @@ function y(e) {
 function N(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.STEAM);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.zdXqGx),
                 fieldTextHook: x.t.QPrntb,
                 metadataField: h.PC.CREATED_AT,
@@ -316,7 +316,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.gLs17O),
                 fieldTextHook: x.t.BWDpbm,
                 metadataField: h.PC.STEAM_GAME_COUNT,
@@ -325,7 +325,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.formatToPlainString(x.t.j1Gf2t, { gameName: x.intl.string(x.t.HKUEZm) }),
                 fieldTextHook: x.t['OGUX7+'],
                 metadataField: h.PC.STEAM_ITEM_COUNT_DOTA2,
@@ -334,7 +334,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.formatToPlainString(x.t.j1Gf2t, { gameName: x.intl.string(x.t.C8p1Sk) }),
                 fieldTextHook: x.t.Eq7h8P,
                 metadataField: h.PC.STEAM_ITEM_COUNT_TF2,
@@ -349,9 +349,9 @@ function N(e) {
 function I(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.TWITTER);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.zdXqGx),
                 fieldTextHook: x.t.QPrntb,
                 metadataField: h.PC.CREATED_AT,
@@ -360,7 +360,7 @@ function I(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.wbvDMz),
                 fieldTextHook: x.t.Zwey2d,
                 metadataField: h.PC.TWITTER_FOLLOWERS_COUNT,
@@ -369,7 +369,7 @@ function I(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t['1B3DVl']),
                 fieldTextHook: x.t['lrmh/f'],
                 metadataField: h.PC.TWITTER_STATUSES_COUNT,
@@ -393,9 +393,9 @@ function I(e) {
 function E(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.REDDIT);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.zdXqGx),
                 fieldTextHook: x.t.QPrntb,
                 metadataField: h.PC.CREATED_AT,
@@ -404,7 +404,7 @@ function E(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t['3Xsroq']),
                 fieldTextHook: x.t.A4zKur,
                 metadataField: h.PC.REDDIT_TOTAL_KARMA,
@@ -437,9 +437,9 @@ function E(e) {
 function S(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.PAYPAL);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.zdXqGx),
                 fieldTextHook: x.t.QPrntb,
                 metadataField: h.PC.CREATED_AT,
@@ -463,9 +463,9 @@ function S(e) {
 function T(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.EBAY);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.zdXqGx),
                 fieldTextHook: x.t.QPrntb,
                 metadataField: h.PC.CREATED_AT,
@@ -474,7 +474,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.AuMxf3),
                 fieldTextHook: x.t.IpQ4Ex,
                 metadataField: h.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
@@ -483,7 +483,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.WzvoSk),
                 fieldTextHook: x.t.RH3VAw,
                 metadataField: h.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
@@ -492,7 +492,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.VuSFzs),
                 fieldTextHook: x.t.sn3m7u,
                 metadataField: h.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
@@ -517,7 +517,7 @@ function T(e) {
 function P(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = p.Z.get(f.ABu.TIKTOK);
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(C, {
         children: [
             (0, r.jsx)(O, {
                 titleText: x.intl.string(x.t.QHHwRU),
@@ -528,7 +528,7 @@ function P(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.WUSIHh),
                 fieldTextHook: x.t.Zwey2d,
                 metadataField: h.PC.TIKTOK_FOLLOWER_COUNT,
@@ -537,7 +537,7 @@ function P(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t.w1IVQk),
                 fieldTextHook: x.t.Ueeex8,
                 metadataField: h.PC.TIKTOK_FOLLOWING_COUNT,
@@ -546,7 +546,7 @@ function P(e) {
                 onConfigurationChange: n,
                 locked: i
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 titleText: x.intl.string(x.t['1cFXJi']),
                 fieldTextHook: x.t.uq2UuL,
                 metadataField: h.PC.TIKTOK_LIKES_COUNT,
@@ -593,7 +593,7 @@ function w(e) {
                   case h.xn.DATETIME_LESS_THAN_EQUAL:
                   case h.xn.DATETIME_GREATER_THAN_EQUAL:
                       return (0, r.jsx)(
-                          C,
+                          y,
                           {
                               titleText: e.name,
                               fieldText: e.description,

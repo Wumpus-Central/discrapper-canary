@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(961040),
     b = n(981631),
     _ = n(388032),
-    E = n(61626);
-function O(e) {
+    O = n(61626);
+function E(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o } = e,
         [s, d] = i.useState(!1),
         h = (0, f.D)(),
@@ -33,10 +33,10 @@ function O(e) {
                         count: m.length
                     }
                   : { type: null },
-        O = n || n || h,
+        E = n || n || h,
         y = (0, r.jsx)(c.Dkj, {
-            className: E.icon,
-            color: s || O ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
+            className: O.icon,
+            color: s || E ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
             size: 'custom',
             height: 20,
             width: 20
@@ -51,7 +51,7 @@ function O(e) {
             }),
             ' ',
             (0, r.jsx)(c.ua7, {
-                shouldShow: !O,
+                shouldShow: !E,
                 text: _.intl.string(_.t.HcoRu7),
                 children: (e) => {
                     var n, i, s;
@@ -84,7 +84,7 @@ function O(e) {
                         })(
                             {
                                 innerRef: o,
-                                className: E.clickableContainer
+                                className: O.clickableContainer
                             },
                             e,
                             l
@@ -105,7 +105,7 @@ function O(e) {
                                 },
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: a()(E.iconWrapper, null),
+                                        className: a()(O.iconWrapper, null),
                                         children:
                                             'unread' === b.type
                                                 ? (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ function O(e) {
                                                               mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                               children: y
                                                           }),
-                                                          (0, r.jsx)('div', { className: E.unreadDot })
+                                                          (0, r.jsx)('div', { className: O.unreadDot })
                                                       ]
                                                   })
                                                 : y
@@ -156,7 +156,7 @@ function y() {
         l = i.useMemo(() => b.Z5c.NOTIFICATIONS_INBOX(null != n ? n : void 0), [n]),
         a = (0, g.m)();
     return t === h.jP.SIDEBAR
-        ? (0, r.jsx)(O, {
+        ? (0, r.jsx)(E, {
               onClick: () => {
                   (a(), (0, o.uL)(l));
               }
@@ -168,7 +168,7 @@ function y() {
                 popoutAlign: 'left',
                 spacing: 2,
                 children: (t, n, i) =>
-                    (0, r.jsx)(O, {
+                    (0, r.jsx)(E, {
                         ref: e,
                         selectedOverride: n,
                         onClick: () => {

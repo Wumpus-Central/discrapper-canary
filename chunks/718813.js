@@ -15,11 +15,11 @@ var r,
     m = n(84615),
     b = n(984802),
     _ = n(526665),
-    E = n(819640),
-    O = n(585483),
+    O = n(819640),
+    E = n(585483),
     y = n(981631),
-    I = n(400709);
-function v(e, t, n) {
+    v = n(400709);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             }));
     }
     return e;
@@ -87,17 +87,17 @@ let N = (0, g.Un)({
         name: 'CollectiblesShop'
     }),
     A = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('67649'), n.e('54408'), n.e('20087'), n.e('88388'), n.e('95140')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    Z = {
+    x = {
         [y.S9g.USER_SETTINGS]: () => ((0, _.yP)('Layers') ? (0, i.jsx)(T, {}) : (0, i.jsx)(N, {})),
         [y.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(P, {}),
         [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(A, {}),
         [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {})
     },
-    x = 'SHOWN',
+    Z = 'SHOWN',
     w = 'HIDDEN',
     L = {
         friction: 10,
@@ -119,8 +119,8 @@ class D extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === x && n === w) return this.animateIn();
-            if (t === w && n === x) return this.animateUnder();
+            if (t === Z && n === w) return this.animateIn();
+            if (t === w && n === Z) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -138,9 +138,9 @@ class D extends (r = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        (O.S.dispatch(y.CkL.LAYER_POP_START),
+        (E.S.dispatch(y.CkL.LAYER_POP_START),
             s.Z.parallel([s.Z.spring(t, C({ toValue: 0 }, L)), s.Z.spring(n, C({ toValue: 1.1 }, L))]).start(() => {
-                (e(), O.S.dispatch(y.CkL.LAYER_POP_COMPLETE));
+                (e(), E.S.dispatch(y.CkL.LAYER_POP_COMPLETE));
             }));
     }
     animateUnder() {
@@ -182,9 +182,9 @@ class D extends (r = l.PureComponent) {
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                             'aria-hidden': n === w,
-                            className: o()(I.layer, {
-                                [I.baseLayer]: l,
-                                [I.animating]: e,
+                            className: o()(v.layer, {
+                                [v.baseLayer]: l,
+                                [v.animating]: e,
                                 'stop-animations': n === w
                             }),
                             style: c
@@ -211,7 +211,7 @@ class D extends (r = l.PureComponent) {
         };
     }
     constructor(e) {
-        (super(e), v(this, 'containerRef', l.createRef()));
+        (super(e), I(this, 'containerRef', l.createRef()));
         let t = 1,
             n = 1;
         (e.mode === w && ((t = 0.93), (n = 0)),
@@ -223,13 +223,13 @@ class D extends (r = l.PureComponent) {
             }));
     }
 }
-(v(D, 'defaultProps', { baseLayer: !1 }), v(D, 'contextType', d.Sfi));
+(I(D, 'defaultProps', { baseLayer: !1 }), I(D, 'contextType', d.Sfi));
 class k extends l.PureComponent {
     componentDidMount() {
-        O.S.subscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.subscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     componentWillUnmount() {
-        O.S.unsubscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.unsubscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -240,7 +240,7 @@ class k extends l.PureComponent {
                 (0, i.jsx)(
                     D,
                     {
-                        mode: 0 !== r || n ? w : x,
+                        mode: 0 !== r || n ? w : Z,
                         baseLayer: !0,
                         children: e
                     },
@@ -254,11 +254,11 @@ class k extends l.PureComponent {
     renderComponent(e, t, n) {
         let r;
         return (
-            (r = 'string' == typeof e ? Z[e]() : (0, i.jsx)(e, {})),
+            (r = 'string' == typeof e ? x[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
                 D,
                 {
-                    mode: t === n - 1 ? x : w,
+                    mode: t === n - 1 ? Z : w,
                     children: [(0, i.jsx)(R, {}), r]
                 },
                 'layer-'.concat(t)
@@ -268,7 +268,7 @@ class k extends l.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(d.f6W, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)('div', { className: o()(I.bg, e) })
+            children: (e) => (0, i.jsx)('div', { className: o()(v.bg, e) })
         });
     }
     render() {
@@ -277,7 +277,7 @@ class k extends l.PureComponent {
                 this.renderArtisanalHack(),
                 (0, i.jsx)(u.W, {
                     component: 'div',
-                    className: o()(I.layers, this.props.className),
+                    className: o()(v.layers, this.props.className),
                     children: this.renderLayers()
                 })
             ]
@@ -286,7 +286,7 @@ class k extends l.PureComponent {
 }
 function M(e) {
     let t = (0, b.Ll)(),
-        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
+        n = (0, c.e7)([O.Z], () => O.Z.getLayers()),
         r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(
         k,

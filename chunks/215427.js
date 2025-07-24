@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
@@ -30,7 +30,7 @@ class f extends (l = a.ZP.Store) {
               writable: !0
           })
         : (f[r] = i));
-let h = new f(s.Z, {
+let g = new f(s.Z, {
     CONNECTION_OPEN: function () {
         ((d = null), c.Z.checkScheduledMaintenances());
     },

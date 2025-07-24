@@ -99,8 +99,8 @@ function S(e) {
             clearTimeout(e);
         };
     }, [N]);
-    let { id: P, expires_at: w, redeemed_at: I, trial_id: R, subscription_trial: k, referrer: Z } = m,
-        A =
+    let { id: P, expires_at: w, redeemed_at: I, trial_id: R, subscription_trial: k, referrer: A } = m,
+        Z =
             null !=
             (a =
                 null ==
@@ -112,7 +112,7 @@ function S(e) {
                     : t.label)
                 ? a
                 : 'Unknown';
-    null != Z && (A = ''.concat(A, ' from @').concat(Z.username));
+    null != A && (Z = ''.concat(Z, ' from @').concat(A.username));
     let D = null != w,
         L = null != w && new Date(w).getTime() < Date.now(),
         M = (null == k ? void 0 : k.sku_id) === j.Si.TIER_0,
@@ -185,7 +185,7 @@ function S(e) {
                     children: (0, n.jsx)(c.X6q, {
                         variant: 'heading-lg/semibold',
                         color: 'always-white',
-                        children: A
+                        children: Z
                     })
                 }),
                 (0, n.jsxs)(c.P3F, {
@@ -277,7 +277,7 @@ function S(e) {
                         }),
                         (0, n.jsx)('input', {
                             type: 'text',
-                            value: null != (u = null == Z ? void 0 : Z.id) ? u : '',
+                            value: null != (u = null == A ? void 0 : A.id) ? u : '',
                             onChange: (e) => F({ referrerId: e.target.value })
                         })
                     ]
@@ -391,10 +391,10 @@ function P(e) {
             };
         }
     }, [m, h]);
-    let Z = 'Active';
+    let A = 'Active';
     return (
-        I && (Z = 'Expired'),
-        w && (Z = 'Acked'),
+        I && (A = 'Expired'),
+        w && (A = 'Acked'),
         (0, n.jsxs)('div', {
             className: i()(_.card, _.discount),
             children: [
@@ -500,8 +500,8 @@ function P(e) {
                             }),
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acked' === Z ? void 0 : 'always-white',
-                                children: Z
+                                color: 'Acked' === A ? void 0 : 'always-white',
+                                children: A
                             })
                         }),
                         null != T &&
@@ -531,7 +531,7 @@ function w() {
         [j, O] = r.useState([]),
         [w, I] = r.useState([]),
         [R, k] = r.useState(!0),
-        [Z, A] = r.useState(10080),
+        [A, Z] = r.useState(10080),
         [D, L] = r.useState([]),
         { entitlements: M, deleteFractionalPremium: U, refreshEntitlementList: F } = (0, f.m)();
     r.useEffect(() => {
@@ -574,7 +574,7 @@ function w() {
             (await T(), k(!0));
         },
         H = async () => {
-            let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
+            let e = new Date(Date.now() + 60 * A * 1000).toISOString();
             (await E(e), F());
         };
     return (0, n.jsx)(c.zJl, {
@@ -742,10 +742,10 @@ function w() {
                                             value: 10080
                                         }
                                     ],
-                                    isSelected: (e) => Z === e,
+                                    isSelected: (e) => A === e,
                                     placeholder: 'Reverse Trial Length',
                                     serialize: (e) => String(e),
-                                    select: (e) => A(e),
+                                    select: (e) => Z(e),
                                     popoutLayerContext: b.O$
                                 }),
                                 (0, n.jsx)(c.zxk, {

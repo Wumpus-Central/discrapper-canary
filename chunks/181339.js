@@ -23,8 +23,8 @@ var r = n(255367),
     v = n(699516),
     _ = n(594174),
     O = n(434404),
-    C = n(449226),
-    y = n(981631),
+    y = n(449226),
+    C = n(981631),
     N = n(388032),
     I = n(296205);
 function E(e) {
@@ -48,7 +48,7 @@ function E(e) {
                         guild_id: t.id,
                         channel_id: n
                     };
-                    (0, d.yw)(y.rMx.GUILD_RAID_ALERTS_SETUP, e);
+                    (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
                 ((0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE)), v(!b));
@@ -87,7 +87,7 @@ function E(e) {
                           })
                 ]
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(y.Z, {
                 checked: j,
                 onChange: E,
                 disabled: !h || null == l
@@ -105,7 +105,7 @@ function S(e) {
                 let e = b.ZP.getChannels(n.id)
                     [b.sH].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === a.d.GUILD_TEXT && j.Z.can(y.Plq.SEND_MESSAGES, t);
+                        return t.type === a.d.GUILD_TEXT && j.Z.can(C.Plq.SEND_MESSAGES, t);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -129,7 +129,7 @@ function S(e) {
                         guild_id: n.id,
                         channel_id: e
                     };
-                    (0, d.yw)(y.rMx.GUILD_RAID_ALERTS_SETUP, t);
+                    (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
                 ((0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE)), l(g));

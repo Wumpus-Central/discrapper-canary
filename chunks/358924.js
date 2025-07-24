@@ -15,11 +15,11 @@ var r,
     m = n(655922),
     b = n(122810),
     _ = n(833664),
-    E = n(503438),
-    O = n(420660),
+    O = n(503438),
+    E = n(420660),
     y = n(74433),
-    I = n(906732),
-    v = n(812206),
+    v = n(906732),
+    I = n(812206),
     C = n(933557),
     S = n(194082),
     N = n(264165),
@@ -27,8 +27,8 @@ var r,
     P = n(925329),
     j = n(102172),
     A = n(871118),
-    Z = n(707409),
-    x = n(359110),
+    x = n(707409),
+    Z = n(359110),
     w = n(769654),
     L = n(849171),
     R = n(601964),
@@ -84,15 +84,15 @@ class ee extends l.Component {
         let e,
             { activity: t } = this.props,
             { timestamps: n } = t;
-        return null == n || !(0, _.Z)(t) || (0, E.Z)(t)
+        return null == n || !(0, _.Z)(t) || (0, O.Z)(t)
             ? null
             : Q(
                   (0, b.Z)(t)
                       ? (0, i.jsx)(J, { timestamps: n })
-                      : (0, i.jsx)(Z.ZP, {
+                      : (0, i.jsx)(x.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: Z.ZP.Locations.USER_ACTIVITY,
+                            location: x.ZP.Locations.USER_ACTIVITY,
                             className: Y.__invalid_playTime
                         })
               );
@@ -367,7 +367,7 @@ let ei = (e) => {
                     }),
                     (0, i.jsx)(u.P3F, {
                         onClick: () => {
-                            (d.default.selectVoiceChannel(r.id), (0, x.Kh)(r.id));
+                            (d.default.selectVoiceChannel(r.id), (0, Z.Kh)(r.id));
                         },
                         focusProps: { ringTarget: p },
                         children: (0, i.jsxs)('div', {
@@ -471,7 +471,7 @@ let ei = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: p, application_id: h } = r;
-        if (null != p && (0, O.Z)(r)) {
+        if (null != p && (0, E.Z)(r)) {
             var g;
             t = (0, i.jsx)(N.Z, {
                 className: Y.twitchSectionPreviewWrapper,
@@ -585,12 +585,12 @@ let ei = (e) => {
                     .filter(V.lm)
             ),
             f = (0, h.O)(),
-            { analyticsLocations: m } = (0, I.ZP)();
+            { analyticsLocations: m } = (0, v.ZP)();
         if (null == d) return null;
-        let b = v.Z.getApplication(d);
+        let b = I.Z.getApplication(d);
         if (null == b) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            E = (0, B.xF)(b.id, o, 300);
+            O = (0, B.xF)(b.id, o, 300);
         return (0, i.jsxs)($, {
             children: [
                 (0, i.jsxs)('div', {
@@ -623,9 +623,9 @@ let ei = (e) => {
                 (0, i.jsxs)('div', {
                     className: Y.embeddedActivityPlayerContainer,
                     children: [
-                        null != E
+                        null != O
                             ? (0, i.jsx)('img', {
-                                  src: E,
+                                  src: O,
                                   alt: b.name,
                                   className: Y.embeddedActivityImage
                               })

@@ -16,9 +16,9 @@ var r,
     p = (((i = {})[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), i);
 let m = {},
     f = {},
-    h = {},
-    g = 10 * u.Z.Millis.MINUTE;
-function _(e) {
+    g = {},
+    _ = 10 * u.Z.Millis.MINUTE;
+function h(e) {
     return 'guild:'.concat(e);
 }
 function b(e) {
@@ -26,7 +26,7 @@ function b(e) {
 }
 let E = new s.h(
         (e) => {
-            let t = [_(e.guild_id)];
+            let t = [h(e.guild_id)];
             return (e.published && t.push(b(e.guild_id)), t);
         },
         (e) =>
@@ -35,7 +35,7 @@ let E = new s.h(
                 return e.published ? -t : -t + 1000000000000;
             })(e)
     ),
-    y = [];
+    C = [];
 class x extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
@@ -46,7 +46,7 @@ class x extends (r = o.ZP.Store) {
     }
     getGuildProductsForGuild(e, t) {
         let { publishedOnly: n } = t;
-        return null == e ? y : E.values(n ? b(e) : _(e));
+        return null == e ? C : E.values(n ? b(e) : h(e));
     }
     getGuildProductFetchState(e) {
         var t;
@@ -54,7 +54,7 @@ class x extends (r = o.ZP.Store) {
     }
     isGuildProductsCacheExpired(e) {
         var t;
-        return Date.now() - (null != (t = h[e]) ? t : 0) > g;
+        return Date.now() - (null != (t = g[e]) ? t : 0) > _;
     }
 }
 ((a = 'GuildProductsStore'),
@@ -68,19 +68,19 @@ class x extends (r = o.ZP.Store) {
         : (x[l] = a));
 let v = new x(c.Z, {
     CONNECTION_OPEN: function () {
-        (E.clear(), (m = {}), (f = {}), (h = {}));
+        (E.clear(), (m = {}), (f = {}), (g = {}));
     },
     GUILD_PRODUCTS_FETCH: function (e) {
         let { guildId: t } = e;
         ((m[t] = 1),
-            [...E.values(_(t))].forEach((e) => {
+            [...E.values(h(t))].forEach((e) => {
                 E.delete(e.id);
             }));
     },
     GUILD_PRODUCTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, products: n } = e;
         ((m[t] = 2),
-            (h[t] = Date.now()),
+            (g[t] = Date.now()),
             n.forEach((e) => {
                 (E.set(e.id, e), (f[e.id] = 2));
             }));

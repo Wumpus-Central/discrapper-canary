@@ -22,10 +22,10 @@ function b(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
         v = i.useRef(null),
         _ = i.useRef(null),
-        { drag: O, dragPreview: C, drop: y, isDragging: N } = (0, f.Z)(v, d, u, b);
+        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, f.Z)(v, d, u, b);
     return (
         O(_),
-        C(y(v)),
+        y(C(v)),
         (0, r.jsxs)('div', {
             ref: v,
             className: s()(x.card, {

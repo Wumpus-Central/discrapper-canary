@@ -1,102 +1,105 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => x });
 var l = n(255367);
 n(73800);
 var r = n(442837),
-    i = n(755721),
-    a = n(481060),
-    s = n(536442),
-    o = n(142497),
-    c = n(388032),
-    u = n(482945),
-    d = n(137707);
-let x = () =>
+    i = n(481060),
+    a = n(536442),
+    s = n(142497),
+    o = n(388032),
+    c = n(482945),
+    u = n(137707);
+let d = () =>
     (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: u.inlineText,
-                children: c.intl.string(c.t.GcZzp6)
+                className: c.inlineText,
+                children: o.intl.string(o.t.GcZzp6)
             }),
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: u.inlineText,
-                children: c.intl.string(c.t['/NEGrK'])
+                className: c.inlineText,
+                children: o.intl.string(o.t['/NEGrK'])
             }),
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: u.inlineText,
-                children: c.intl.string(c.t.eUbuHB)
+                className: c.inlineText,
+                children: o.intl.string(o.t.eUbuHB)
             }),
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: u.inlineText,
-                children: c.intl.string(c.t.sCAZeH)
+                className: c.inlineText,
+                children: o.intl.string(o.t.sCAZeH)
             })
         ]
     });
-function m(e) {
+function x(e) {
     let { onClick: t } = e;
-    return (0, r.e7)([s.qc], () => !s.qc.hasHotspot(s.v6.STAGE_CHANNEL_UPSELL))
+    return (0, r.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null
         : (0, l.jsxs)('div', {
-              className: u.container,
+              className: c.container,
               children: [
                   (0, l.jsxs)('div', {
-                      className: u.content,
+                      className: c.content,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: u.textContainer,
+                              className: c.textContainer,
                               children: [
-                                  (0, l.jsx)(a.X6q, {
+                                  (0, l.jsx)(i.X6q, {
                                       variant: 'heading-md/semibold',
-                                      children: c.intl.string(c.t.Sx8Ezs)
+                                      children: o.intl.string(o.t.Sx8Ezs)
                                   }),
-                                  (0, l.jsx)(a.Text, {
+                                  (0, l.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
-                                      className: u.descriptionText,
-                                      children: c.intl.string(c.t.JUzPho)
+                                      className: c.descriptionText,
+                                      children: o.intl.string(o.t.JUzPho)
                                   }),
-                                  (0, l.jsx)(a.Text, {
+                                  (0, l.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
-                                      children: c.intl.format(c.t.Vh7rPz, { suggestionsHook: x })
+                                      children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: d })
                                   })
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: u.image,
+                              className: c.image,
                               children: (0, l.jsx)('img', {
-                                  src: d,
-                                  alt: c.intl.string(c.t['uIm/n5'])
+                                  src: u,
+                                  alt: o.intl.string(o.t['uIm/n5'])
                               })
                           })
                       ]
                   }),
-                  (0, l.jsxs)('div', {
-                      className: u.footer,
-                      children: [
-                          (0, l.jsx)(i.zx, {
-                              onClick: t,
-                              color: i.zx.Colors.PRIMARY,
-                              size: i.zx.Sizes.SMALL,
-                              className: u.button,
-                              children: c.intl.string(c.t['X/3SyM'])
-                          }),
-                          (0, l.jsx)(i.zx, {
-                              onClick: () => {
-                                  o.Kw(s.v6.STAGE_CHANNEL_UPSELL);
-                              },
-                              color: i.zx.Colors.TRANSPARENT,
-                              size: i.zx.Sizes.SMALL,
-                              look: i.iL.LINK,
-                              children: c.intl.string(c.t['5E9SBw'])
-                          })
-                      ]
+                  (0, l.jsx)('div', {
+                      className: c.footer,
+                      children: (0, l.jsxs)(i.hE2, {
+                          direction: 'horizontal',
+                          size: 'sm',
+                          children: [
+                              (0, l.jsx)(i.zxk, {
+                                  onClick: t,
+                                  variant: 'secondary',
+                                  text: o.intl.string(o.t['X/3SyM'])
+                              }),
+                              (0, l.jsx)('div', {
+                                  className: c.textButtonWrapper,
+                                  children: (0, l.jsx)(i.Avr, {
+                                      onClick: () => {
+                                          s.Kw(a.v6.STAGE_CHANNEL_UPSELL);
+                                      },
+                                      variant: 'secondary',
+                                      textVariant: 'text-sm/medium',
+                                      text: o.intl.string(o.t['5E9SBw'])
+                                  })
+                              })
+                          ]
+                      })
                   })
               ]
           });

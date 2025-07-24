@@ -18,24 +18,24 @@ function p(e) {
     var t, n;
     let { guildId: p, guildEvent: j, guildEventId: y, error: b } = e,
         E = r.useMemo(() => (0, x.Gb)(j, p), [j, p]),
-        { channel_id: O, name: N, image: C, description: S } = E,
-        T = (0, i.e7)([c.Z], () => c.Z.getChannel(O), [O]),
+        { channel_id: O, name: N, image: C, description: T } = E,
+        S = (0, i.e7)([c.Z], () => c.Z.getChannel(O), [O]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(p), [p]),
-        P = (0, m.cS)(E),
-        Z = (0, i.e7)([d.default], () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()), [j.creatorId]),
+        Z = (0, m.cS)(E),
+        P = (0, i.e7)([d.default], () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()), [j.creatorId]),
         w = (0, i.e7)([o.Z], () => o.Z.isLurking(p), [p]),
-        D = (0, s.KS)(T, I);
+        D = (0, s.KS)(S, I);
     return (0, l.jsxs)('div', {
         className: f.content,
         children: [
             (0, l.jsx)(v.Z, {
                 className: f.previewCard,
                 guild: I,
-                channel: T,
-                location: null != P ? P : void 0,
-                creator: Z,
+                channel: S,
+                location: null != Z ? Z : void 0,
+                creator: P,
                 name: N,
-                description: S,
+                description: T,
                 imageSource: ((n = (0, x.Gb)(j, p, y)), null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
@@ -60,7 +60,7 @@ function p(e) {
                             null != location
                                 ? h.intl.string(h.t.KDPFi4)
                                 : h.intl.format(h.t.f55NX1, {
-                                      channelName: null != (t = null == T ? void 0 : T.name) ? t : '',
+                                      channelName: null != (t = null == S ? void 0 : S.name) ? t : '',
                                       channelHook: () => {
                                           var e;
                                           return (0, l.jsxs)('div', {
@@ -81,7 +81,7 @@ function p(e) {
                                                             width: 18,
                                                             className: f.locationIcon
                                                         }),
-                                                  null != (e = null == T ? void 0 : T.name) ? e : P
+                                                  null != (e = null == S ? void 0 : S.name) ? e : Z
                                               ]
                                           });
                                       }

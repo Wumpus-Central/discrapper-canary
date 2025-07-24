@@ -1,17 +1,17 @@
-t.d(r, {
+n.d(t, {
     G7: () => s,
     LG: () => d,
-    Pg: () => a,
+    Pg: () => l,
     ZI: () => o,
-    _0: () => l,
+    _0: () => a,
     mf: () => u
 });
-var n,
-    i = t(388032);
-let a = 5,
+var r,
+    i = n(388032);
+let l = 5,
     s = 10,
-    l = 30;
-var o = (((n = {})[(n.DISPLAY = 0)] = 'DISPLAY'), (n[(n.PERMISSIONS = 1)] = 'PERMISSIONS'), (n[(n.MEMBERS = 2)] = 'MEMBERS'), (n[(n.VERIFICATIONS = 3)] = 'VERIFICATIONS'), n);
+    a = 30;
+var o = (((r = {})[(r.DISPLAY = 0)] = 'DISPLAY'), (r[(r.PERMISSIONS = 1)] = 'PERMISSIONS'), (r[(r.MEMBERS = 2)] = 'MEMBERS'), (r[(r.VERIFICATIONS = 3)] = 'VERIFICATIONS'), r);
 let c = {
     afk_channel_id: () => i.intl.string(i.t.KuYcnZ),
     public_updates_channel_id: () => i.intl.string(i.t.vAyDGR),
@@ -19,10 +19,10 @@ let c = {
     system_channel_id: () => i.intl.string(i.t.NASFnp)
 };
 function d(e) {
-    var r;
+    var t;
     if (0 === Object.keys(e).length) return null;
-    let t = Object.keys(e)[0],
-        n = null == (r = c[t]) ? void 0 : r.call(c);
-    return null != n ? '('.concat(n, ') ').concat(e[t]) : e[t];
+    let n = Object.keys(e)[0],
+        r = null == (t = c[n]) ? void 0 : t.call(c);
+    return null != r ? '('.concat(r, ') ').concat(e[n]) : e[n];
 }
 let u = 'https://discord.gg';

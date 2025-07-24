@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(317381),
     m = n(638880),
     f = n(122613),
-    h = n(527805),
-    g = n(100527),
-    _ = n(906732),
+    g = n(527805),
+    _ = n(100527),
+    h = n(906732),
     b = n(895924),
     E = n(758199),
-    y = n(943762),
+    C = n(943762),
     x = n(914498),
     v = n(515344),
-    C = n(429551),
-    O = n(973616),
+    O = n(429551),
+    y = n(973616),
     j = n(314897),
     I = n(592125),
     S = n(158776),
@@ -32,8 +32,8 @@ var r = n(255367),
     Z = n(506071),
     R = n(226378),
     L = n(981631),
-    k = n(701488),
-    D = n(388032),
+    D = n(701488),
+    k = n(388032),
     M = n(484608);
 let U = i.memo((e) => {
     let { start: t } = e,
@@ -51,15 +51,15 @@ let U = i.memo((e) => {
                 () => e.stop()
             );
         }, [c, t]),
-        (0, C.m)(n)
+        (0, O.m)(n)
     );
 });
 U.displayName = 'ActivityRuntimeCounter';
 let F = i.memo(function (e) {
     var t, n, l, s;
     let d,
-        { application: C, channelId: A, guildId: Z } = e,
-        { analyticsLocations: F } = (0, _.ZP)(g.Z.ACTIVITY_INSTANCE_EMBED),
+        { application: O, channelId: A, guildId: Z } = e,
+        { analyticsLocations: F } = (0, h.ZP)(_.Z.ACTIVITY_INSTANCE_EMBED),
         B = (0, u.O)(),
         G = (0, o.e7)([I.Z], () => I.Z.getChannel(A), [A]),
         H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : A,
@@ -71,11 +71,11 @@ let F = i.memo(function (e) {
         } = (0, o.cj)(
             [p.ZP],
             () => ({
-                embeddedActivity: p.ZP.getEmbeddedActivitiesForChannel(null != H ? H : '').find((e) => e.applicationId === C.id),
+                embeddedActivity: p.ZP.getEmbeddedActivitiesForChannel(null != H ? H : '').find((e) => e.applicationId === O.id),
                 currentEmbeddedActivity: p.ZP.getCurrentEmbeddedActivity(),
-                activityLaunchState: p.ZP.getLaunchState(C.id, null != H ? H : void 0)
+                activityLaunchState: p.ZP.getLaunchState(O.id, null != H ? H : void 0)
             }),
-            [H, C.id]
+            [H, O.id]
         ),
         Y = null == z ? void 0 : z.userIds,
         X = (0, o.Wu)(
@@ -91,19 +91,19 @@ let F = i.memo(function (e) {
             () => {
                 if (null == Y) return null;
                 for (let e of Y) {
-                    let t = S.Z.findActivity(e, (e) => e.application_id === C.id);
+                    let t = S.Z.findActivity(e, (e) => e.application_id === O.id);
                     if (null != t) return t;
                 }
                 return null;
             },
-            [C.id, Y]
+            [O.id, Y]
         ),
         Q = null == q ? void 0 : q.details,
         J = i.useMemo(() => {
-            let e = new O.ZP(C);
-            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e);
-        }, [C]),
-        $ = (0, h.s5)({
+            let e = new y.ZP(O);
+            return (null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e);
+        }, [O]),
+        $ = (0, g.s5)({
             userId: V,
             channelId: A,
             application: J
@@ -119,7 +119,7 @@ let F = i.memo(function (e) {
         er = null != K && K.isLaunching && K.componentId === en,
         ei = async () => {
             (N.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: C.id,
+                application_id: O.id,
                 channel_id: A,
                 channel_type: null == G ? void 0 : G.type,
                 is_activity_start: ee,
@@ -127,7 +127,7 @@ let F = i.memo(function (e) {
             }),
                 ee
                     ? await (0, f.Z)({
-                          targetApplicationId: C.id,
+                          targetApplicationId: O.id,
                           channelId: A,
                           locationObject: B.location,
                           analyticsLocations: F,
@@ -142,27 +142,27 @@ let F = i.memo(function (e) {
                           componentId: en
                       }));
         },
-        el = et.disabled ? D.intl.string(D.t.JBnc7O) : D.intl.string(D.t.cX9uLS),
+        el = et.disabled ? k.intl.string(k.t.JBnc7O) : k.intl.string(k.t.cX9uLS),
         ea = (0, v.G)(J, () => {
             N.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: C.id,
+                application_id: O.id,
                 channel_id: A,
                 channel_type: null == G ? void 0 : G.type,
                 cta: 'View'
             });
         }),
         eo = P.ZP.getApplicationIconURL({
-            id: C.id,
-            icon: C.icon,
-            bot: C.bot
+            id: O.id,
+            icon: O.icon,
+            bot: O.bot
         });
     et.disabled && (d = null != (l = et.tooltip) ? l : et.text);
     let es = X.length,
         ec = null != (s = null == q || null == (n = q.timestamps) ? void 0 : n.start) ? s : null == q ? void 0 : q.created_at,
-        eu = (0, y.r)(q),
+        eu = (0, C.r)(q),
         ed = [
             {
-                label: ee ? D.intl.string(D.t.RscU7O) : D.intl.string(D.t.VJlc0d),
+                label: ee ? k.intl.string(k.t.RscU7O) : k.intl.string(k.t.VJlc0d),
                 trackingArea: x.j_.PLAY,
                 onClick: ei,
                 disabledReason: d,
@@ -170,8 +170,8 @@ let F = i.memo(function (e) {
             }
         ];
     return (0, r.jsx)(E.W, {
-        header: D.intl.string(D.t.pkq6Vl),
-        title: C.name,
+        header: k.intl.string(k.t.pkq6Vl),
+        title: O.name,
         iconSrc: eo,
         info: (0, r.jsx)('div', {
             className: M.infoWrapper,
@@ -225,7 +225,7 @@ let F = i.memo(function (e) {
                                   ]
                               }),
                           es > 0 &&
-                              (0, r.jsx)(y.K, {
+                              (0, r.jsx)(C.K, {
                                   activityUsers: X,
                                   guildId: Z,
                                   activityText: eu.text
@@ -236,7 +236,7 @@ let F = i.memo(function (e) {
         actions: ed,
         onClickContent: ea,
         trackingConfig: {
-            id: C.id,
+            id: O.id,
             linkType: x.Un.ACTIVITY_INSTANCE
         }
     });

@@ -1,6 +1,6 @@
 (n.d(t, {
-    $: () => O,
-    s: () => C
+    $: () => y,
+    s: () => O
 }),
     n(953529));
 var r = n(255367),
@@ -15,12 +15,12 @@ var r = n(255367),
     p = n(70097),
     m = n(406432),
     f = n(584656),
-    h = n(247206),
-    g = n(470734),
-    _ = n(719548),
+    g = n(247206),
+    _ = n(470734),
+    h = n(719548),
     b = n(388032),
     E = n(580297);
-let y = (e) => {
+let C = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
@@ -33,7 +33,7 @@ let y = (e) => {
     x = (e) => {
         var t, n, i;
         let { embed: l } = e;
-        if (!_.n2.has(l.type)) return null;
+        if (!h.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
         return null == a ? null : (0, r.jsx)(v, { url: a });
     },
@@ -55,7 +55,7 @@ let y = (e) => {
                   })
         });
     };
-function C(e) {
+function O(e) {
     (u.Z.pop(),
         (0, f.t)({
             id: 'explicit-media-false-positive-modal',
@@ -63,31 +63,31 @@ function C(e) {
         }),
         e());
 }
-function O(e) {
+function y(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: u, onConfirmPress: p, transitionState: m, onClose: f } = e,
-        _ = (0, d.Dt)(),
-        v = (0, g.pn)('ExplicitMediaFalsePositiveModal'),
-        C = i.useCallback(() => {
-            ((0, h.aP)({
-                action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+        h = (0, d.Dt)(),
+        v = (0, _.pn)('ExplicitMediaFalsePositiveModal'),
+        O = i.useCallback(() => {
+            ((0, g.aP)({
+                action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
                 context: a
             }),
                 f());
         }, [t, n, a, f]),
-        O = i.useCallback(() => {
+        y = i.useCallback(() => {
             (null == p || p(),
-                (0, h.aP)({
-                    action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+                (0, g.aP)({
+                    action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
                     context: a
                 }));
         }, [t, n, a, p]);
     i.useEffect(() => {
-        (0, h.aP)({
-            action: h.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+        (0, g.aP)({
+            action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
             channelId: t,
             messageId: n,
             context: a
@@ -96,18 +96,18 @@ function O(e) {
     let j = i.useMemo(() => (v ? b.intl.string(b.t['z4du/P']) : b.intl.string(b.t.gg5Dp6)), [v]);
     return (0, r.jsxs)(c.Y0X, {
         transitionState: m,
-        'aria-labelledby': _,
+        'aria-labelledby': h,
         size: c.CgR.SMALL,
         parentComponent: 'ExplicitMediaFalsePositiveModal',
         children: [
             (0, r.jsxs)(c.hzk, {
                 children: [
                     (0, r.jsx)(c.olH, {
-                        onClick: C,
+                        onClick: O,
                         className: E.closeButton
                     }),
                     (0, r.jsx)(c.X6q, {
-                        id: _,
+                        id: h,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
                         className: E.header,
@@ -119,7 +119,7 @@ function O(e) {
                         className: E.subheader,
                         children: j
                     }),
-                    null != o && (0, r.jsx)(y, { attachment: o }),
+                    null != o && (0, r.jsx)(C, { attachment: o }),
                     null != u && (0, r.jsx)(x, { embed: u })
                 ]
             }),
@@ -133,7 +133,7 @@ function O(e) {
                             text: b.intl.string(b.t['cY+Ooa']),
                             disabled: l,
                             loading: l,
-                            onClick: O
+                            onClick: y
                         })
                     }),
                     (0, r.jsx)(s.zx, {
@@ -141,7 +141,7 @@ function O(e) {
                         disabled: l,
                         color: s.zx.Colors.TRANSPARENT,
                         size: s.zx.Sizes.MEDIUM,
-                        onClick: C,
+                        onClick: O,
                         children: b.intl.string(b.t['ETE/oK'])
                     })
                 ]

@@ -12,7 +12,7 @@ function u(e) {
         p = !1,
         m = (0, i.Z)(),
         f = t.id,
-        h = () => {
+        g = () => {
             p = !0;
         };
     (0, l.ZDy)(
@@ -57,7 +57,7 @@ function u(e) {
                                 guildId: u
                             },
                             loadId: m,
-                            onComplete: h
+                            onComplete: g
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

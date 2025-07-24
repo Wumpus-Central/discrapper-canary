@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(208567),
     _ = n(73346),
     O = n(624138),
-    C = n(584825),
-    y = n(723047),
+    y = n(584825),
+    C = n(723047),
     N = n(927954),
     I = n(164000),
     E = n(587431),
@@ -132,7 +132,7 @@ function k(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, I.Z)(n.id),
-        a = (0, C.YB)(n.id),
+        a = (0, y.YB)(n.id),
         c = i.useCallback(() => {
             var e;
             return (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, D);
@@ -142,7 +142,7 @@ function k(e) {
         [A, k] = i.useState(c),
         [M, G] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [U, B] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
-        { loading: F, error: H, updateSubscriptionsSettings: z } = (0, C.QV)(),
+        { loading: F, error: H, updateSubscriptionsSettings: z } = (0, y.QV)(),
         { imageCTA: W, imageAriaLabel: V, setFilename: Y } = (0, N.Z)(null == a ? void 0 : a.cover_image_asset),
         K = (0, b.Dt)(),
         X = (0, b.Dt)(),
@@ -159,7 +159,7 @@ function k(e) {
         var e;
         (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && k((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, D));
     }, [null == a ? void 0 : a.cover_image_asset]);
-    let ee = (0, y.mY)(),
+    let ee = (0, C.mY)(),
         et = i.useMemo(
             () =>
                 T.kL.map((e) => ({

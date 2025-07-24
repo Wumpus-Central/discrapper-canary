@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(30513),
     _ = n(388032),
     O = n(919957);
-function C(e) {
+function y(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)
         return (0, r.jsx)(a.Text, {
@@ -42,7 +42,7 @@ function C(e) {
     }
     return null;
 }
-function y(e) {
+function C(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, hasError: c } = e,
         d = (null == t ? void 0 : t.features.has(j.oNc.VANITY_URL)) === !0,
         u = i.useCallback(() => {
@@ -117,7 +117,7 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, f.p)(t)
-                ? (0, r.jsx)(y, {
+                ? (0, r.jsx)(C, {
                       guild: t,
                       vanityURLCode: n,
                       vanityURLUses: s,
@@ -128,7 +128,7 @@ function N(e) {
                       onClick: _,
                       className: O.upsellButton
                   }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(y, {
                 errorDetails: d,
                 originalVanityURLCode: a
             })

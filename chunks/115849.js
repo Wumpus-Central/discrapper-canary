@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(388032),
     b = n(28898),
     _ = n(20493);
-function E(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function E(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,28 +59,28 @@ function O(e, t) {
     );
 }
 let y = n(349181),
-    I = {
+    v = {
         canSend: !1,
         hint: null,
         success: null,
         error: null
     },
-    v = (0, p.hQ)(),
-    C = ''.concat(v, '-decription'),
-    S = ''.concat(v, '-error');
+    I = (0, p.hQ)(),
+    C = ''.concat(I, '-decription'),
+    S = ''.concat(I, '-error');
 function N(e, t) {
     switch (t.type) {
         case 'RESET':
-            return I;
+            return v;
         case 'SUCCESS':
-            return O(E({}, I), { success: t.text });
+            return E(O({}, v), { success: t.text });
         case 'HINT':
-            return O(E({}, I), {
+            return E(O({}, v), {
                 canSend: !0,
                 hint: t.text
             });
         case 'ERROR':
-            return O(E({}, e), {
+            return E(O({}, e), {
                 canSend: !0,
                 error: t.text
             });
@@ -90,8 +90,8 @@ function T(e) {
     let { placeholder: t = m.intl.string(m.t['Rn/sLi']) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(N, I),
-        { canSend: E, hint: O, success: T, error: P } = o;
+        [o, p] = i.useReducer(N, v),
+        { canSend: O, hint: E, success: T, error: P } = o;
     return (
         i.useEffect(() => {
             null != T && (s()(null != n.current, 'Input is submitting when not mounted'), (n.current.value = ''), n.current.focus());
@@ -157,7 +157,7 @@ function T(e) {
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
-                                id: v,
+                                id: I,
                                 inputRef: n,
                                 className: b.addFriendInput,
                                 inputClassName: b.input,
@@ -194,17 +194,17 @@ function T(e) {
                                 'aria-invalid': null != P || void 0,
                                 'aria-describedby': null != P ? S : C
                             }),
-                            null != O &&
+                            null != E &&
                                 (0, r.jsx)('div', {
                                     className: b.addFriendHint,
                                     'aria-hidden': !0,
-                                    children: O
+                                    children: E
                                 }),
                             (0, r.jsx)(u.zxk, {
                                 variant: 'primary',
                                 size: 'sm',
                                 text: m.intl.string(m.t['PMsq/f']),
-                                disabled: !E,
+                                disabled: !O,
                                 type: 'submit'
                             })
                         ]

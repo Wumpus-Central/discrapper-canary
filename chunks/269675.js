@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(430824),
     b = n(351402),
     _ = n(730647),
-    E = n(772021),
-    O = n(396828),
+    O = n(772021),
+    E = n(396828),
     y = n(293423),
-    I = n(20967),
-    v = n(504762),
+    v = n(20967),
+    I = n(504762),
     C = n(807152),
     S = n(176505),
     N = n(388032),
@@ -29,11 +29,11 @@ function P(e) {
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         P = (0, a.e7)([f.Z], () => f.Z.isConnected()),
         j = (0, p.Z)(t),
-        A = (0, E.Z)(t),
-        Z = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
-        x = (0, _.f)(),
+        A = (0, O.Z)(t),
+        x = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
+        Z = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, h.uP)(t),
-        R = null == n || !x || Z || L;
+        R = null == n || !Z || x || L;
     ((0, u.Tt)({
         subsection: N.intl.string(N.t['KzCF//']),
         location: null == n ? void 0 : n.name
@@ -49,8 +49,8 @@ function P(e) {
         }, [t, D]),
         l.tq && D)
     ) {
-        let e = null == n ? I.J.NOT_GUILD_MEMBER : I.J.GUILD_NOT_ELIGIBLE;
-        return (0, r.jsx)(I.z, { errorType: e });
+        let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
+        return (0, r.jsx)(v.z, { errorType: e });
     }
     return (0, r.jsxs)('div', {
         className: T.container,
@@ -60,7 +60,7 @@ function P(e) {
                 className: T.headerBar,
                 children: [
                     (0, r.jsx)(g.Z.Icon, {
-                        icon: (0, o.GSL)(O.Z),
+                        icon: (0, o.GSL)(E.Z),
                         'aria-hidden': !0
                     }),
                     (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t['KzCF//']) })
@@ -77,7 +77,7 @@ function P(e) {
                               children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(y.Z, { guild: n })
                           })
                       })
-                    : (0, r.jsx)(v.Z, {})
+                    : (0, r.jsx)(I.Z, {})
             })
         ]
     });

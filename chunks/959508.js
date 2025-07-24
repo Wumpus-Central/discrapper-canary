@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,9 +19,9 @@ var r = n(255367),
     v = n(388032),
     _ = n(434840);
 let O = { optionErrors: [] };
-function C(e) {
+function y(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: u, promptIndex: b, dragIndex: C, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
+    let { guild: n, prompt: l, disableAutofocus: u, promptIndex: b, dragIndex: y, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
         w = (0, a.e7)([f.Z], () => f.Z.editedDefaultChannelIds),
         {
             drag: R,
@@ -30,7 +30,7 @@ function C(e) {
             setIsDraggable: A
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
-            index: C,
+            index: y,
             optionId: l.id,
             onDragStart: T,
             onDragComplete: S,
@@ -160,7 +160,7 @@ function C(e) {
                           maxLength: j.iU,
                           error: L.title
                       }),
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(C, {
                           prompt: l,
                           guild: n
                       }),
@@ -247,7 +247,7 @@ function C(e) {
               })
           });
 }
-function y(e) {
+function C(e) {
     let { prompt: t, guild: n } = e,
         [l, s] = i.useState(!1);
     if (

@@ -1,6 +1,4 @@
-(n.d(t, { KF: () => i }), n(388685));
-var l = n(70956),
-    r = n(981631);
-l.Z.Millis.MINUTE;
-let i = '1312632705086787756';
-(r.hBH.IMAGE, r.hBH.GIFV);
+(n.d(t, { KF: () => r }), n(388685));
+var l = n(981631);
+let r = '1312632705086787756';
+(l.hBH.IMAGE, l.hBH.GIFV);

@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,17 +13,17 @@ function i(e, t, n) {
 }
 (n.d(t, {
     Em: () => f,
-    Jq: () => r,
-    ZP: () => s,
+    Jq: () => o,
+    ZP: () => r,
     k4: () => u,
-    qs: () => d,
-    wf: () => c
+    qs: () => c,
+    wf: () => d
 }),
     n(953529),
     n(388685),
     n(415506));
-let a = Symbol.iterator;
-class s {
+let i = Symbol.iterator;
+class r {
     linkToParent(e) {
         this._parent = e;
     }
@@ -42,27 +42,27 @@ class s {
     isLayoutType() {
         return this.isDataOfType(0) || this.isDataOfType(1) || this.isDataOfType(2) || this.isDataOfType(3) || this.isDataOfType(4);
     }
-    [a]() {
+    [i]() {
         return this.isLayoutType() ? this.data.layout.values() : [].values();
     }
     constructor(e, t, n) {
-        (i(this, 'key', void 0), i(this, 'type', void 0), i(this, 'data', void 0), i(this, '_parent', void 0), (this.type = e), (this.key = t), (this.data = n));
+        (a(this, 'key', void 0), a(this, 'type', void 0), a(this, 'data', void 0), a(this, '_parent', void 0), (this.type = e), (this.key = t), (this.data = n));
     }
 }
-var o,
-    r = (((o = {})[(o.ROOT = 0)] = 'ROOT'), (o[(o.PANEL = 1)] = 'PANEL'), (o[(o.PANE = 2)] = 'PANE'), (o[(o.CATEGORY = 3)] = 'CATEGORY'), (o[(o.ACCORDION = 4)] = 'ACCORDION'), (o[(o.STATIC = 5)] = 'STATIC'), (o[(o.BUTTON = 6)] = 'BUTTON'), (o[(o.TOGGLE = 7)] = 'TOGGLE'), (o[(o.SLIDER = 8)] = 'SLIDER'), (o[(o.SELECT = 9)] = 'SELECT'), (o[(o.RADIO = 10)] = 'RADIO'), (o[(o.CHECKBOX = 11)] = 'CHECKBOX'), (o[(o.NAVIGATOR = 12)] = 'NAVIGATOR'), (o[(o.CUSTOM = 13)] = 'CUSTOM'), o);
+var s,
+    o = (((s = {})[(s.ROOT = 0)] = 'ROOT'), (s[(s.PANEL = 1)] = 'PANEL'), (s[(s.PANE = 2)] = 'PANE'), (s[(s.CATEGORY = 3)] = 'CATEGORY'), (s[(s.ACCORDION = 4)] = 'ACCORDION'), (s[(s.STATIC = 5)] = 'STATIC'), (s[(s.BUTTON = 6)] = 'BUTTON'), (s[(s.TOGGLE = 7)] = 'TOGGLE'), (s[(s.SLIDER = 8)] = 'SLIDER'), (s[(s.SELECT = 9)] = 'SELECT'), (s[(s.RADIO = 10)] = 'RADIO'), (s[(s.CHECKBOX = 11)] = 'CHECKBOX'), (s[(s.NAVIGATOR = 12)] = 'NAVIGATOR'), (s[(s.CUSTOM = 13)] = 'CUSTOM'), s);
 function l(e) {
-    return (t, n) => new s(e, t, n);
+    return (t, n) => new r(e, t, n);
 }
 (l(5), l(6));
-let d = l(7);
-function c(e, t) {
-    return new s(1, e, t);
+let c = l(7);
+function d(e, t) {
+    return new r(1, e, t);
 }
 function u(e, t) {
-    return new s(3, e, t);
+    return new r(3, e, t);
 }
 function f(e, t) {
-    return new s(9, e, t);
+    return new r(9, e, t);
 }
 (l(8), l(12), l(13));

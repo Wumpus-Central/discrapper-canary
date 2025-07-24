@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -50,7 +50,7 @@ function _(e) {
 let O = (e) => {
     var t, n;
     let { guildId: a, application: o } = e,
-        { loading: m, team: g, currentPeriod: O, allPeriods: C, metrics: y } = (0, d.Z)(a, o),
+        { loading: m, team: g, currentPeriod: O, allPeriods: y, metrics: C } = (0, d.Z)(a, o),
         N = (0, u.u)(a),
         I = (0, c.mY)();
     return m
@@ -71,9 +71,9 @@ let O = (e) => {
                               children: [
                                   (0, r.jsx)(p.Z, {
                                       label: b.intl.string(b.t.iY1jW1),
-                                      value: (0, s.T4)(null != (t = y.revenue) ? t : 0, x.pKx.USD),
+                                      value: (0, s.T4)(null != (t = C.revenue) ? t : 0, x.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
-                                          value: y.revenuePctChange,
+                                          value: C.revenuePctChange,
                                           isPercent: !0
                                       })
                                   }),
@@ -81,7 +81,7 @@ let O = (e) => {
                                       label: b.intl.string(b.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              null != (n = y.subscribers) ? n : '-',
+                                              null != (n = C.subscribers) ? n : '-',
                                               ' ',
                                               (0, r.jsx)(i.tBG, {
                                                   size: 'md',
@@ -91,7 +91,7 @@ let O = (e) => {
                                               })
                                           ]
                                       }),
-                                      additionalContent: (0, r.jsx)(p.H, { value: y.subscriberChange })
+                                      additionalContent: (0, r.jsx)(p.H, { value: C.subscriberChange })
                                   })
                               ]
                           }),
@@ -105,7 +105,7 @@ let O = (e) => {
                       title: b.intl.string(b.t['+5Rmho']),
                       className: j.formSection,
                       children: (0, r.jsx)(v, {
-                          payoutsByPeriod: C,
+                          payoutsByPeriod: y,
                           team: g
                       })
                   }),
@@ -123,13 +123,13 @@ let O = (e) => {
                       className: j.formSection,
                       children: (0, r.jsx)(h.Z, {
                           guildId: a,
-                          allPeriods: C
+                          allPeriods: y
                       })
                   })
               ]
           });
 };
-function C(e) {
+function y(e) {
     return (0, r.jsx)(a.l, {
         guildId: e.guildId,
         children: (0, r.jsx)(

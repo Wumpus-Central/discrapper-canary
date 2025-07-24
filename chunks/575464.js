@@ -16,7 +16,7 @@ function m(e) {
     var t, n;
     let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, disabled: C = !1, inlineUsername: x = !0, onClick: v, onMouseEnter: j, 'aria-setsize': O, 'aria-posinset': E } = e,
         S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        P = (0, a.JA)(String(i.id));
+        I = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
         s.P3F,
         ((t = (function (e) {
@@ -54,7 +54,7 @@ function m(e) {
                     null != j && j(m);
                 }
             },
-            P
+            I
         )),
         (n = n =
             {

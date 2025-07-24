@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(951211),
     E = n(800513),
     S = n(981631),
-    P = n(921944),
-    I = n(489887),
+    I = n(921944),
+    P = n(489887),
     Z = n(388032),
     T = n(725776);
 function N(e) {
@@ -61,7 +61,7 @@ function w() {
     return (
         i.useEffect(
             () => () => {
-                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: P.L.TAKE_ACTION });
+                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -94,7 +94,7 @@ function R(e) {
         k();
     }
     function V() {
-        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: P.L.TAKE_ACTION }),
+        ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -120,7 +120,7 @@ function R(e) {
                         );
                     };
                 },
-                { modalKey: I.$z }
+                { modalKey: P.$z }
             ));
     }
     function z() {

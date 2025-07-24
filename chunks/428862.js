@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(953529));
+(n.d(t, { Z: () => C }), n(388685), n(953529));
 var r,
     i,
     l = n(255367),
@@ -106,7 +106,7 @@ function O(e) {
             })
     });
 }
-function C(e) {
+function y(e) {
     let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: r, onSetRef: i, tier: a, showHeaderLockStatus: c, headerButton: d = null, subscriptionsRequired: m, subscriptionCount: g, className: p } = e,
         f = (e) => {
             null == i || i(e);
@@ -161,14 +161,14 @@ function C(e) {
         })
     );
 }
-function y(e) {
+function C(e) {
     let { children: t, subscriptionCount: n, onSetRef: r, tier: i, isAnimatedTo: s, hasBottomMargin: a, headerButton: c = null, withCardBody: m = !0, guildId: h, showHeaderLockStatus: v = !0 } = e,
         _ = (0, d.e7)([f.Z], () => {
             var e, t;
             return null != (t = null == (e = f.Z.getGuild(h)) ? void 0 : e.premiumTier) ? t : x.Eu4.NONE;
         }),
         O = x.oCV[i.tier],
-        y = s && i.tier <= _,
+        C = s && i.tier <= _,
         N = i.tier !== x.Eu4.NONE && i.tier !== x.Eu4.TIER_1,
         I = (e, t) => {
             var n;
@@ -215,7 +215,7 @@ function y(e) {
         {
             className: o()(j.tier, { [j.tierBottomMargin]: a }),
             children: [
-                (0, l.jsx)(C, {
+                (0, l.jsx)(y, {
                     subscriptionCount: n,
                     tier: i,
                     headerButton: c,
@@ -227,7 +227,7 @@ function y(e) {
                     guildId: h,
                     hasBottomMargin: a,
                     subscriptionsRequired: O,
-                    hasAnimatedUnlocked: y,
+                    hasAnimatedUnlocked: C,
                     isAnimatedTo: s
                 }),
                 (0, l.jsx)('div', {
@@ -246,7 +246,7 @@ function y(e) {
                                       null != i.perks &&
                                           (0, l.jsx)('div', {
                                               className: j.perks,
-                                              children: i.perks.map((e) => I(e, y))
+                                              children: i.perks.map((e) => I(e, C))
                                           })
                                   ]
                               })

@@ -154,6 +154,7 @@ function A(e) {
                     O(
                         b(
                             {
+                                'data-mana-component': 'button',
                                 role: u,
                                 'aria-busy': D,
                                 className: o()(g.button, g[q], g[d], {

@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(63063),
     E = n(374386),
     S = n(946734),
-    P = n(99843),
-    I = n(372564),
+    I = n(99843),
+    P = n(372564),
     Z = n(984370),
     T = n(217314),
     N = n(981631),
@@ -226,7 +226,7 @@ function L(e) {
         case N.d4z.GROUP_DM:
             if (t.isManaged()) return x;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }), (0, r.jsx)(P.j, { channel: t }, 'channel-'.concat(t.id))]
+                children: [(0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }), (0, r.jsx)(I.j, { channel: t }, 'channel-'.concat(t.id))]
             });
         case N.d4z.GUILD_ANNOUNCEMENT:
         case N.d4z.GUILD_TEXT:
@@ -386,7 +386,7 @@ function B(e, t) {
         case N.d4z.GROUP_DM:
             return null != t
                 ? (0, r.jsx)(
-                      I.Z,
+                      P.Z,
                       {
                           channel: e,
                           guild: t

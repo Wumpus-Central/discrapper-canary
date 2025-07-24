@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -39,7 +39,7 @@ function m(e) {
 }
 let b = a().debounce(c.ZP.trackWithMetadata, 500),
     _ = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: p, imageMarginTop: m, trackingSource: _, undismissable: E, onDismissed: O, onClick: y, cta: I, ctaColor: v } = e;
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: p, imageMarginTop: m, trackingSource: _, undismissable: O, onDismissed: E, onClick: y, cta: v, ctaColor: I } = e;
         i.useEffect(() => {
             b(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
@@ -47,9 +47,9 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
             });
         }, [t.id, d]);
         let C = null;
-        'function' == typeof I
-            ? (C = I())
-            : null != I &&
+        'function' == typeof v
+            ? (C = v())
+            : null != v &&
               (C = (0, r.jsx)(o.zx, {
                   className: g.btn,
                   size: o.zx.Sizes.SMALL,
@@ -63,18 +63,18 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                           null == y || y());
                   },
                   fullWidth: !0,
-                  color: v,
-                  children: I
+                  color: I,
+                  children: v
               }));
         let S = null != p ? ''.concat(p, 'px') : '16px';
         return (0, r.jsxs)('div', {
             className: g.channelNotice,
             children: [
-                !0 === E
+                !0 === O
                     ? null
                     : (0, r.jsx)(s.P3F, {
                           onClick: () => {
-                              (c.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == O || O());
+                              (c.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == E || E());
                           },
                           className: g.close,
                           'aria-label': f.intl.string(f.t.WAI6xs),
@@ -117,7 +117,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
             ]
         });
     },
-    E = function (e) {
+    O = function (e) {
         let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
         return t ? (0, r.jsx)(p.Z, m({}, e)) : (0, r.jsx)(_, m({}, e));
     };

@@ -15,18 +15,18 @@ var r = n(255367),
     m = n(981631),
     b = n(918559),
     _ = n(388032),
-    E = n(574682);
-let O = {
-    [b.MI.NO_CHAT]: E.noChat,
-    [b.MI.RESIZABLE]: E.resizable
+    O = n(574682);
+let E = {
+    [b.MI.NO_CHAT]: O.noChat,
+    [b.MI.RESIZABLE]: O.resizable
 };
 function y(e) {
     let { frame: t } = e,
         n = (0, u.q)(t.applicationId),
         l = (0, s.Z)(),
         y = i.useRef(null),
-        I = i.useRef(null),
-        [v, C] = i.useState({
+        v = i.useRef(null),
+        [I, C] = i.useState({
             width: 0,
             height: 0
         }),
@@ -40,15 +40,15 @@ function y(e) {
             (0, p.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
     (i.useLayoutEffect(() => {
-        if (null == I.current) return;
+        if (null == v.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
             C({
-                width: null != (n = null == (e = I.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = I.current) ? void 0 : t.clientHeight) ? r : 0
+                width: null != (n = null == (e = v.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = v.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
-        return (e.observe(I.current), () => e.disconnect());
+        return (e.observe(v.current), () => e.disconnect());
     }, []),
         i.useEffect(() => {
             let e = (e) => {
@@ -67,30 +67,30 @@ function y(e) {
                 }
             );
         }, [t.applicationId, l]));
-    let T = v.width / Math.max(v.height, 1) < b.I0,
+    let T = I.width / Math.max(I.height, 1) < b.I0,
         P = 0,
         j = 0,
         A = (0, c.Z)(null == n ? void 0 : n.id);
     if (!A) {
-        let e = v.width,
-            t = v.height;
-        T ? ((t = v.width / b.I0) > v.height && (e = (t = v.height) * b.I0), (j = (v.height - t) / 2)) : ((e = Math.min(v.height * b.I0)) > v.width && (t = (e = v.width) / b.I0), (P = (v.width - e) / 2));
+        let e = I.width,
+            t = I.height;
+        T ? ((t = I.width / b.I0) > I.height && (e = (t = I.height) * b.I0), (j = (I.height - t) / 2)) : ((e = Math.min(I.height * b.I0)) > I.width && (t = (e = I.width) / b.I0), (P = (I.width - e) / 2));
     }
-    let Z = b.MI.NO_CHAT;
+    let x = b.MI.NO_CHAT;
     if (null == n) return null;
-    let x = (0, f.ro)(t);
+    let Z = (0, f.ro)(t);
     return (0, r.jsx)(o.f6W, {
         theme: m.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(E.wrapper, O[Z], e),
+                className: a()(O.wrapper, E[x], e),
                 ref: y,
                 style: {},
                 children: [
                     (0, r.jsx)('div', {
-                        className: E.contextlessHeader,
+                        className: O.contextlessHeader,
                         children: (0, r.jsxs)('div', {
-                            className: E.buttonSection,
+                            className: O.buttonSection,
                             children: [
                                 (0, r.jsx)(d.d, {
                                     isTrayButton: !0,
@@ -110,19 +110,19 @@ function y(e) {
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: E.activityPanelContainer,
+                        className: O.activityPanelContainer,
                         children: (0, r.jsx)('div', {
-                            className: a()(E.activityContainer, { [E.activityContainerNoMargin]: A }),
+                            className: a()(O.activityContainer, { [O.activityContainerNoMargin]: A }),
                             style: {
                                 paddingLeft: P,
                                 paddingRight: P,
                                 paddingTop: j,
                                 paddingBottom: j
                             },
-                            ref: I,
+                            ref: v,
                             children: (0, r.jsx)(h.Z, {
-                                className: E.iframe,
-                                embedId: x
+                                className: O.iframe,
+                                embedId: Z
                             })
                         })
                     })

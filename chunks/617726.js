@@ -3,13 +3,13 @@ a.d(e, {
     Cd: () => T,
     HY: () => A,
     Jd: () => i,
-    KQ: () => R,
+    KQ: () => d,
     R: () => E,
     V$: () => u,
     f4: () => I,
     gv: () => s,
     mL: () => f,
-    zQ: () => d
+    zQ: () => R
 });
 var r = a(967752),
     _ = a(202811),
@@ -89,10 +89,10 @@ function I(t) {
     }
     return [_, n];
 }
-function R(t) {
+function d(t) {
     return [{ type: 'span' }, t];
 }
-function d(t) {
+function R(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({

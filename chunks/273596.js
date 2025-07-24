@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(726115),
     b = n(28494),
     _ = n(746728),
-    E = n(140700),
-    O = n(665807),
+    O = n(140700),
+    E = n(665807),
     y = n(188493),
-    I = n(294330),
-    v = n(981631),
+    v = n(294330),
+    I = n(981631),
     C = n(984503);
 let S = Object.freeze({
         top: 0,
@@ -34,9 +34,9 @@ let S = Object.freeze({
         right: 32
     }),
     T = {
-        page: v.ZY5.GUILD_DISCOVERY,
-        object: v.qAy.CARD,
-        section: v.jXE.DISCOVER_SEARCH
+        page: I.ZY5.GUILD_DISCOVERY,
+        object: I.qAy.CARD,
+        section: I.jXE.DISCOVER_SEARCH
     },
     P = s().throttle(h.c6, 1000, {
         leading: !1,
@@ -44,9 +44,9 @@ let S = Object.freeze({
     });
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: h, searchResultsQuery: v, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
-        Z = 0 === s.length && !h,
-        x = i.useContext(d.AnalyticsContext),
+        { guildIds: s, loading: h, searchResultsQuery: I, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
+        x = 0 === s.length && !h,
+        Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
@@ -55,9 +55,9 @@ function j(e) {
         B = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !x && !h) 336 * (s.length / M) <= e.height && j();
             },
-            [Z, h, s.length, M, j]
+            [x, h, s.length, M, j]
         ),
         H = i.useCallback(
             (e) => {
@@ -74,17 +74,17 @@ function j(e) {
         F = (0, u.y)(H, [R, V]);
     (i.useEffect(() => {
         L((0, m.PM)());
-    }, [v]),
+    }, [I]),
         i.useEffect(() => {
             P({
                 loadId: t,
                 searchId: w,
-                query: v,
+                query: I,
                 guildResults: s.map(f.Z.getGuild).filter(p.lm),
-                analyticsContext: x,
+                analyticsContext: Z,
                 categoryId: A
             });
-        }, [x, s, t, A, w, v]));
+        }, [Z, s, t, A, w, I]));
     let z = i.useCallback((e) => n(e, A), [n, A]),
         W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
@@ -103,9 +103,9 @@ function j(e) {
                                     !R &&
                                         (0, r.jsxs)('div', {
                                             className: C.headingFilters,
-                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })]
+                                            children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })]
                                         }),
-                                    Z && (0, r.jsx)(O.Z, { loadId: t })
+                                    x && (0, r.jsx)(E.Z, { loadId: t })
                                 ]
                             },
                             i
@@ -114,21 +114,21 @@ function j(e) {
                         return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [Z, R, t]
+            [x, R, t]
         ),
         K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = R ? 16 : 50;
-                        return Z ? t + 448 : t;
+                        return x ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [Z, R]
+            [x, R]
         ),
         q = i.useCallback(
             (e, t) => {
@@ -171,7 +171,7 @@ function j(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, r.jsx)(I.ZP, {
+                            children: (0, r.jsx)(v.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await Q(e, t, A, T),
                                 onView: (e) => z(e)

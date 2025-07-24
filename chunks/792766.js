@@ -1,6 +1,6 @@
 (n.d(t, {
-    Z: () => _,
-    y: () => g
+    Z: () => h,
+    y: () => _
 }),
     n(953529));
 var r = n(255367),
@@ -15,7 +15,7 @@ var r = n(255367),
     p = n(411198),
     m = n(388032),
     f = n(515230);
-let h = (e) => {
+let g = (e) => {
         var t;
         let { speaker: n, guildId: i, isEmbed: l } = e,
             a = new d.Z(n.user);
@@ -37,7 +37,7 @@ let h = (e) => {
             ]
         });
     },
-    g = (e) => {
+    _ = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = p.Qs(t),
@@ -97,17 +97,17 @@ let h = (e) => {
             ]
         });
     },
-    _ = (e) => {
+    h = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: g = !1, onClick: _ } = e,
+        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: _ = !1, onClick: h } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: y, participant_count: x } = n,
+        let { topic: E, speaker_count: C, participant_count: x } = n,
             v = null != (t = n.members) ? t : [],
-            C = g ? v.slice(0, 3) : v,
-            O = y - C.length;
+            O = _ ? v.slice(0, 3) : v,
+            y = C - O.length;
         return (
-            g && (O += v.length - C.length),
+            _ && (y += v.length - O.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -149,9 +149,9 @@ let h = (e) => {
                             })
                         ]
                     }),
-                    g &&
+                    _ &&
                         (0, r.jsxs)('div', {
-                            className: a()(f.guild, { [f.embed]: g }),
+                            className: a()(f.guild, { [f.embed]: _ }),
                             children: [
                                 (0, r.jsx)(c.ZP, {
                                     mask: c.ZP.Masks.SQUIRCLE,
@@ -172,55 +172,55 @@ let h = (e) => {
                             ]
                         }),
                     (0, r.jsx)(s.X6q, {
-                        variant: d || g ? 'heading-md/semibold' : 'heading-lg/semibold',
-                        className: a()(f.header, { [f.embed]: g }),
+                        variant: d || _ ? 'heading-md/semibold' : 'heading-lg/semibold',
+                        className: a()(f.header, { [f.embed]: _ }),
                         children: E
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(f.members, { [f.embed]: g }),
+                        className: a()(f.members, { [f.embed]: _ }),
                         children: [
-                            C.length > 0 &&
+                            O.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: f.speakers,
                                     children: [
-                                        C.map((e) =>
+                                        O.map((e) =>
                                             (0, r.jsx)(
-                                                h,
+                                                g,
                                                 {
                                                     speaker: e,
                                                     guildId: b.id,
-                                                    isEmbed: g
+                                                    isEmbed: _
                                                 },
                                                 e.user.id
                                             )
                                         ),
-                                        O > 0
+                                        y > 0
                                             ? (0, r.jsxs)('div', {
                                                   className: f.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: a()(f.icon, { [f.embed]: g }),
+                                                          className: a()(f.icon, { [f.embed]: _ }),
                                                           children: (0, r.jsx)(s.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',
-                                                              height: g ? 12 : 14,
+                                                              height: _ ? 12 : 14,
                                                               className: f.listeners
                                                           })
                                                       }),
                                                       (0, r.jsxs)(s.Text, {
-                                                          variant: g ? 'text-xs/normal' : 'text-sm/normal',
+                                                          variant: _ ? 'text-xs/normal' : 'text-sm/normal',
                                                           color: 'text-secondary',
-                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: O })]
+                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: y })]
                                                       })
                                                   ]
                                               })
                                             : null
                                     ]
                                 }),
-                            g &&
+                            _ &&
                                 (0, r.jsx)(o.zx, {
                                     color: o.zx.Colors.GREEN,
-                                    onClick: _,
+                                    onClick: h,
                                     className: f.joinButton,
                                     children: m.intl.string(m.t.ZYO5OD)
                                 })

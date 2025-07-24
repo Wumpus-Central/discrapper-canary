@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(930282),
     m = n(25015),
     f = n(438075),
-    h = n(695346),
-    g = n(592125),
-    _ = n(906467),
+    g = n(695346),
+    _ = n(592125),
+    h = n(906467),
     b = n(430824),
     E = n(496675),
-    y = n(699516),
+    C = n(699516),
     x = n(594174),
     v = n(100604),
-    C = n(694784),
-    O = n(39154),
+    O = n(694784),
+    y = n(39154),
     j = n(245216),
     I = n(388032),
     S = n(752386);
@@ -45,9 +45,9 @@ function T() {
 function N(e) {
     let { message: t, snapshot: n, index: d } = e,
         p = i.useMemo(() => new v.r(t, n, d), [t, n, d]),
-        m = (0, a.e7)([g.Z, x.default, y.Z, E.Z, b.Z, u.Z], () => p.getForwardInfo(g.Z, x.default, y.Z, E.Z, b.Z, u.Z).footerInfo, [p], o.Z),
+        m = (0, a.e7)([_.Z, x.default, C.Z, E.Z, b.Z, u.Z], () => p.getForwardInfo(_.Z, x.default, C.Z, E.Z, b.Z, u.Z).footerInfo, [p], o.Z),
         f = i.useCallback(() => {
-            (0, C.Z)(t);
+            (0, O.Z)(t);
         }, [t]);
     return null == m
         ? null
@@ -78,12 +78,12 @@ function N(e) {
 function P(e) {
     var t;
     let { message: n, snapshot: l, index: o } = e,
-        s = i.useMemo(() => (0, O.Z)(n, l), [n, l]),
-        c = h.RS.useSetting(),
-        u = h.NA.useSetting(),
-        b = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
+        s = i.useMemo(() => (0, y.Z)(n, l), [n, l]),
+        c = g.RS.useSetting(),
+        u = g.NA.useSetting(),
+        b = (0, a.e7)([h.Z], () => h.Z.isDeveloper),
         E = (0, d.A)((null != (t = s.editedTimestamp) ? t : s.timestamp).valueOf()),
-        { content: y, hasSpoilerEmbeds: x } = (0, m.Z)(s, {
+        { content: C, hasSpoilerEmbeds: x } = (0, m.Z)(s, {
             hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
@@ -93,8 +93,8 @@ function P(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        v = (0, a.e7)([g.Z], () => g.Z.getChannel(n.channel_id)),
-        C = h.jU.useSetting();
+        v = (0, a.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
+        O = g.jU.useSetting();
     return null == v
         ? null
         : (0, r.jsxs)(
@@ -109,14 +109,14 @@ function P(e) {
                               (0, r.jsx)(T, {}),
                               (0, r.jsx)(p.ZP, {
                                   message: s,
-                                  content: y,
-                                  compact: C
+                                  content: C,
+                                  compact: O
                               }),
                               (0, f.Z)({
                                   channelMessageProps: {
                                       message: s,
                                       channel: v,
-                                      compact: C
+                                      compact: O
                                   },
                                   hasSpoilerEmbeds: x,
                                   isInteracting: !1,

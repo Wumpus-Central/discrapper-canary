@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -11,17 +11,17 @@ var r = n(255367),
     p = n(594174),
     m = n(63063),
     f = n(436952),
-    h = n(411149),
-    g = n(115215),
-    _ = n(151480),
+    g = n(411149),
+    _ = n(115215),
+    h = n(151480),
     b = n(680783),
     E = n(66420),
-    y = n(981631),
+    C = n(981631),
     x = n(474936),
     v = n(388032),
-    C = n(510064);
-function O(e) {
-    var t, n, O, j;
+    O = n(510064);
+function y(e) {
+    var t, n, y, j;
     let I,
         S,
         T,
@@ -30,54 +30,54 @@ function O(e) {
         { enabled: Z } = (0, f.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
         R = f.qM.useExperiment({ location: 'ChatWallpaperSetSystemMessage' }).lightMode,
         L = (0, c.ZP)(N),
-        k = (0, o.wjy)((0, s.ZP)()),
+        D = (0, o.wjy)((0, s.ZP)()),
         {
-            chatWallpaper: D,
+            chatWallpaper: k,
             isUpdatingChatWallpaperFlag: M,
             lastSetMessageId: U
-        } = (0, l.cj)([h.Z], () => ({
-            chatWallpaper: h.Z.getWallpaperById(w),
-            isUpdatingChatWallpaperFlag: h.Z.isUpdatingChatWallpaperFlagForChannel(P.id),
-            lastSetMessageId: h.Z.getLastSetWallpaperMessageIdForChannel(P.id)
+        } = (0, l.cj)([g.Z], () => ({
+            chatWallpaper: g.Z.getWallpaperById(w),
+            isUpdatingChatWallpaperFlag: g.Z.isUpdatingChatWallpaperFlagForChannel(P.id),
+            lastSetMessageId: g.Z.getLastSetWallpaperMessageIdForChannel(P.id)
         })),
         F = (0, b.Z)(P.id),
         B = U === N.id,
         G = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         H = (null == G ? void 0 : G.id) === N.author.id,
         V = (0, u.m)(x.p9.TIER_2),
-        z = g.t(P);
+        z = _.t(P);
     return (i.useEffect(() => {
-        null == D && h.Z.shouldFetchWallpapers && _.k9();
-    }, [D]),
+        null == k && g.Z.shouldFetchWallpapers && h.k9();
+    }, [k]),
     null == w)
         ? null
         : ((I = H
-              ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : v.intl.string(v.t['UQMV/P']) })
+              ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t['UQMV/P']) })
               : v.intl.format(v.t['+lKndX'], {
                     username: null == L ? void 0 : L.nick,
-                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : v.intl.string(v.t['UQMV/P'])
+                    wallpaper_name: null != (y = null == k ? void 0 : k.label) ? y : v.intl.string(v.t['UQMV/P'])
                 })),
           Z
-              ? k || R
+              ? D || R
                   ? z && B
-                      ? (S = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : v.intl.string(v.t['UQMV/P']) }))
+                      ? (S = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (j = null == k ? void 0 : k.label) ? j : v.intl.string(v.t['UQMV/P']) }))
                       : H ||
                         V ||
                         !B ||
                         (S = v.intl.format(v.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, d.uL)(y.Z5c.NITRO_HOME);
+                                (0, d.uL)(C.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = v.intl.format(v.t.dBxFsL, { learnMoreLink: m.Z.getArticleURL(y.BhN.DM_WALLPAPERS) }))
+                  : (S = v.intl.format(v.t.dBxFsL, { learnMoreLink: m.Z.getArticleURL(C.BhN.DM_WALLPAPERS) }))
               : (S = v.intl.string(v.t['6JSOu7'])),
           (null == F ? void 0 : F.isViewable) &&
               B &&
               !H &&
               (T = (0, r.jsx)(a.zx, {
-                  className: C.action,
+                  className: O.action,
                   onClick: () => {
-                      _.X(P, w, {
+                      h.X(P, w, {
                           shouldClear: !z,
                           onError: () => {
                               (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.F8FvU1), o.ToastType.FAILURE));

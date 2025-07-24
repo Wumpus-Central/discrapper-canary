@@ -16,7 +16,7 @@ let h = (e) => {
         var t;
         let { reason: n = '', emoji_name: u, onSetReason: p, onSelectEmoji: h, onClearPressed: x, reasonMinLength: b, reasonMaxLength: j, placeholder: v, position: _ } = e,
             O = i.useRef(null),
-            [C, y] = i.useState(!1),
+            [y, C] = i.useState(!1),
             N = (0, l.e7)([m.Z], () => m.Z.isGuildMetadataLoaded());
         return (0, r.jsxs)('div', {
             className: f.reasonContainer,
@@ -24,9 +24,9 @@ let h = (e) => {
                 (0, r.jsx)(a.yRy, {
                     targetElementRef: O,
                     onRequestClose: () => {
-                        y(!1);
+                        C(!1);
                     },
-                    shouldShow: C,
+                    shouldShow: y,
                     position: 'right',
                     align: 'top',
                     animation: a.yRy.Animation.NONE,
@@ -48,7 +48,7 @@ let h = (e) => {
                             children: (0, r.jsx)(c.Z, {
                                 active: !1,
                                 onClick: () => {
-                                    y(!0);
+                                    C(!0);
                                 },
                                 tabIndex: 0,
                                 renderButtonContents:

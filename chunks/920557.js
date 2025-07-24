@@ -11,12 +11,12 @@ var r = n(255367),
     p = n(313201),
     m = n(542578),
     f = n(203143),
-    h = n(79390),
-    g = n(839963),
-    _ = n(139256),
+    g = n(79390),
+    _ = n(839963),
+    h = n(139256),
     b = n(294608),
     E = n(388032),
-    y = n(709893);
+    C = n(709893);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,15 +46,15 @@ function v(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
-        [g, _] = i.useState(''),
+        [_, h] = i.useState(''),
         [E, v] = i.useState(!1),
-        C = '' !== g && E,
-        O = i.useCallback(() => {
-            _((0, h.e1)(u, c, a));
+        O = '' !== _ && E,
+        y = i.useCallback(() => {
+            h((0, g.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
-            (O(), v(!0));
-        }, [O]),
+            (y(), v(!0));
+        }, [y]),
         I = i.useCallback(() => {
             v(!1);
         }, []),
@@ -69,14 +69,14 @@ function v(e) {
         i.useEffect(() => {
             if (E)
                 return (
-                    m.Z.addReactChangeListener(O),
+                    m.Z.addReactChangeListener(y),
                     () => {
-                        m.Z.removeReactChangeListener(O);
+                        m.Z.removeReactChangeListener(y);
                     }
                 );
-        }, [E, O]),
+        }, [E, y]),
         (0, r.jsxs)('div', {
-            className: y.votesData,
+            className: C.votesData,
             children: [
                 l
                     ? (0, r.jsxs)(r.Fragment, {
@@ -86,9 +86,9 @@ function v(e) {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
                                       scaleFontToUserSetting: !0,
-                                      children: g
+                                      children: _
                                   }),
-                                  forceOpen: C,
+                                  forceOpen: O,
                                   'aria-label': !1,
                                   children: (e) => {
                                       var t, i;
@@ -102,7 +102,7 @@ function v(e) {
                                                   onFocus: j,
                                                   onBlur: I,
                                                   onClick: S,
-                                                  'aria-describedby': C ? s : void 0,
+                                                  'aria-describedby': O ? s : void 0,
                                                   text: n,
                                                   variant: 'secondary',
                                                   textVariant: 'text-xs/semibold'
@@ -123,10 +123,10 @@ function v(e) {
                                       );
                                   }
                               }),
-                              C &&
+                              O &&
                                   (0, r.jsx)(o.T, {
                                       id: s,
-                                      children: g
+                                      children: _
                                   })
                           ]
                       })
@@ -146,7 +146,7 @@ function v(e) {
         })
     );
 }
-function C(e) {
+function O(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -160,26 +160,26 @@ function C(e) {
             'animate-always'
         );
     return (0, r.jsx)(s.animated.span, {
-        className: y.votePercentageBar,
+        className: C.votePercentageBar,
         style: i,
         'aria-hidden': !0
     });
 }
-function O(e) {
+function y(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
         didSelfVote: i
     })
-        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
-            (0, r.jsx)(_.Og, {
+        .with({ answersInteraction: _.Y7.RADIO_BUTTONS }, () =>
+            (0, r.jsx)(h.Og, {
                 isSelected: n,
                 size: 24,
                 className: o
             })
         )
-        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
-            (0, r.jsx)(_.zs, {
+        .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
+            (0, r.jsx)(h.zs, {
                 isSelected: n,
                 size: 20,
                 className: o
@@ -187,11 +187,11 @@ function O(e) {
         )
         .with(
             {
-                answersInteraction: g.Y7.LIST,
+                answersInteraction: _.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
-                (0, r.jsx)(_.ZY, {
+                (0, r.jsx)(h.ZY, {
                     isVictor: l,
                     isExpired: a,
                     size: 24,
@@ -207,24 +207,24 @@ function j(e) {
         p = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
     return (0, r.jsxs)('div', {
-        className: a()(y.answerInner, {
-            [y.currentlyVoting]: i !== g.Y7.LIST,
-            [y.selected]: c
+        className: a()(C.answerInner, {
+            [C.currentlyVoting]: i !== _.Y7.LIST,
+            [C.selected]: c
         }),
         children: [
             l
-                ? (0, r.jsx)(C, {
+                ? (0, r.jsx)(O, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
                 : null,
             null != t.pollMedia.emoji &&
-                (0, r.jsx)(_.sc, {
-                    className: y.emoji,
+                (0, r.jsx)(h.sc, {
+                    className: C.emoji,
                     emoji: t.pollMedia.emoji
                 }),
             (0, r.jsx)(d.Text, {
-                className: y.label,
+                className: C.label,
                 variant: 'text-sm/semibold',
                 color: 'none',
                 scaleFontToUserSetting: !0,
@@ -238,13 +238,13 @@ function j(e) {
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(y, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
                 isVictor: p,
                 isExpired: n,
-                className: y.answerSelectionIcon
+                className: C.answerSelectionIcon
             })
         ]
     });
@@ -271,11 +271,11 @@ function I(e) {
             return i;
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
-        _.$e,
+        h.$e,
         x(
             {
-                className: y.answersContainer,
-                answerClassName: y.answer,
+                className: C.answersContainer,
+                answerClassName: C.answer,
                 answersInteraction: n,
                 canTapAnswers: l,
                 renderAnswerContent: (e) =>

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(539854));
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,9 +11,9 @@ var r = n(255367),
     p = n(434624),
     m = n(287151),
     f = n(388032),
-    h = n(92254),
-    g = n(588429);
-function _(e, t, n) {
+    g = n(92254),
+    _ = n(588429);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                h(e, t, n[t]);
             }));
     }
     return e;
@@ -60,14 +60,14 @@ function E(e, t) {
         e
     );
 }
-let y = (e, t) => (null == e && null == t) || e === t,
-    x = (e, t) => e.findIndex((e) => y(e.emoji.id, null == t ? void 0 : t.id) && y(e.emoji.name, null == t ? void 0 : t.name)),
+let C = (e, t) => (null == e && null == t) || e === t,
+    x = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
     v = (e, t) => {
         if (null == t) return e;
         let n = x(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class C extends i.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -80,15 +80,15 @@ class C extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: E, className: y, forceAddReactions: x, reactionClassName: v, useChatFontScaling: C, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: h, isForumToolbar: b, channel: E, className: C, forceAddReactions: x, reactionClassName: v, useChatFontScaling: O, forceHideReactionCreates: y, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
             { disableTransitionAppear: T } = this.state,
-            N = C ? g : h,
+            N = O ? _ : g,
             P = S > 0;
         if (!P && !x) return null;
         let A = x || P;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: a()(N.reactions, y),
+            className: a()(N.reactions, C),
             transitionAppear: !T,
             role: 'group',
             transitionLeave: !1,
@@ -102,9 +102,9 @@ class C extends i.PureComponent {
                     readOnly: n,
                     isLurking: i,
                     isGuest: l,
-                    isPendingMember: _,
+                    isPendingMember: h,
                     isForumToolbar: b,
-                    useChatFontScaling: C,
+                    useChatFontScaling: O,
                     className: v
                 }),
                 j > 0 &&
@@ -121,13 +121,13 @@ class C extends i.PureComponent {
                         })
                     }),
                 !t &&
-                    !O &&
+                    !y &&
                     (0, r.jsx)(u.X, {
                         tabIndex: A || this.state.isHovered ? 0 : -1,
                         type: c.O.NORMAL,
                         message: e,
                         channel: E,
-                        useChatFontScaling: C,
+                        useChatFontScaling: O,
                         isHovered: this.state.isHovered,
                         className: a()({ [N.forceShow]: A })
                     })
@@ -136,14 +136,14 @@ class C extends i.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            _(this, 'state', {
+            h(this, 'state', {
                 disableTransitionAppear: !0,
                 reactionsCount: this.props.message.reactions.length,
                 isHovered: !1
             }));
     }
 }
-let O = (e) => {
+let y = (e) => {
     let { message: t, maxReactions: n, hoistReaction: l } = e,
         {
             combinedReactions: a,
@@ -167,7 +167,7 @@ let O = (e) => {
             );
         }, [l, n, t.reactions]);
     return (0, r.jsx)(
-        C,
+        O,
         E(b({}, e), {
             visibleReactionsCount: s,
             combinedReactions: a,

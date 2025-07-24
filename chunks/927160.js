@@ -1,18 +1,18 @@
-(t.d(r, { Z: () => s }), t(704826), t(35282));
-var n = t(255367),
-    i = t(263145),
-    a = t(203377);
+(n.d(t, { Z: () => s }), n(704826), n(35282));
+var r = n(255367),
+    i = n(263145),
+    l = n(203377);
 function s(e) {
-    let { value: r, onChange: t, error: s, disabled: l, className: o, autoFocus: c = !1 } = e;
-    return (0, n.jsx)(i.Z, {
-        prefix: ''.concat(a.mf, '/'),
-        value: r,
+    let { value: t, onChange: n, error: s, disabled: a, className: o, autoFocus: c = !1 } = e;
+    return (0, r.jsx)(i.Z, {
+        prefix: ''.concat(l.mf, '/'),
+        value: t,
         onChange: (e) => {
-            t(e.replace(/ /g, '-'));
+            n(e.replace(/ /g, '-'));
         },
         maxLength: 25,
         error: s,
-        disabled: l,
+        disabled: a,
         className: o,
         autoFocus: c
     });

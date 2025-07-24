@@ -56,7 +56,7 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: f, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: v, updateFormField: _, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
+    let { dropHoveredIndex: t, formField: p, guild: f, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: v, updateFormField: _, updateFormFieldOrder: O, canRemove: y, actionsLocation: C, fieldStyle: N } = e,
         I = async () => {
             await v(x);
         },
@@ -91,8 +91,8 @@ function p(e) {
             },
             onRemove: I,
             onDrop: S,
-            canRemove: C,
-            actionsLocation: y,
+            canRemove: y,
+            actionsLocation: C,
             fieldStyle: N
         };
     switch (p.field_type) {

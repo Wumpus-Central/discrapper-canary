@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(142961),
     _ = n(729311),
     O = n(850864),
-    C = n(729995),
-    y = n(966301),
+    y = n(729995),
+    C = n(966301),
     N = n(707076),
     I = n(213956),
     E = n(388032),
@@ -47,7 +47,7 @@ function P(e) {
     ) {
         case j.PG.LANDING:
             t = x
-                ? (0, r.jsx)(C.Z, {
+                ? (0, r.jsx)(y.Z, {
                       completed: !0,
                       guildId: n
                   })
@@ -60,13 +60,13 @@ function P(e) {
             t = (0, r.jsx)(_.Z, { saveOnClose: !x });
             break;
         case j.PG.CUSTOMIZATION_QUESTIONS:
-            t = (0, r.jsx)(y.ZP, { saveOnClose: !x });
+            t = (0, r.jsx)(C.ZP, { saveOnClose: !x });
             break;
         case j.PG.HOME_SETTINGS:
             t = (0, r.jsx)(O.Z, { saveOnClose: !x });
             break;
         case j.PG.REVIEW:
-            t = (0, r.jsx)(C.Z, {
+            t = (0, r.jsx)(y.Z, {
                 completed: x,
                 guildId: n
             });

@@ -55,7 +55,7 @@ let D = (e) => {
                                 noticeType: D,
                                 onClick: () => {
                                     (0, o.ZDy)(async () => {
-                                        let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
+                                        let { default: e } = await n.e('74023').then(n.bind(n, 431583));
                                         return (t) =>
                                             (0, i.jsx)(
                                                 e,

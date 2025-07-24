@@ -26,7 +26,7 @@ var r = n(255367),
     v = n(198139),
     _ = n(388032),
     O = n(769570);
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function C(e) {
     }
     return e;
 }
-let y = (e, t, n, i) => {
+let C = (e, t, n, i) => {
         let l = null != i ? o()(i).add(15, 'days').toISOString() : void 0,
             s = (0, f.Zo)(l, 'MMM D');
         switch (e) {
@@ -183,7 +183,7 @@ let y = (e, t, n, i) => {
             children: (e) =>
                 (0, r.jsx)(
                     d.d3s,
-                    C(
+                    y(
                         {
                             size: 'xs',
                             color: 'currentColor',
@@ -203,7 +203,7 @@ let y = (e, t, n, i) => {
             children: (e) =>
                 (0, r.jsx)(
                     d.d3s,
-                    C(
+                    y(
                         {
                             size: 'xs',
                             color: 'currentColor',
@@ -268,7 +268,7 @@ let y = (e, t, n, i) => {
             renderHeader: () => (0, r.jsx)(R, {}),
             render(e) {
                 let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: i, periodEndDate: l } = (0, m.j0)(e);
-                return (0, r.jsx)(E, { children: y(t, n, i, l) });
+                return (0, r.jsx)(E, { children: C(t, n, i, l) });
             }
         }
     ],

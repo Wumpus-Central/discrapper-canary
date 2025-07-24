@@ -25,8 +25,8 @@ var r = n(255367),
     v = n(110924),
     _ = n(200876),
     O = n(556019),
-    C = n(748523),
-    y = n(730089),
+    y = n(748523),
+    C = n(730089),
     N = n(372444),
     I = n(889564),
     E = n(372129),
@@ -395,7 +395,7 @@ let z = d().throttle(h.OQ, 1000),
             }, [c, h, e.id]));
         let K = i.useCallback(
                 () =>
-                    (0, C.i)({
+                    (0, y.i)({
                         analyticsLocation: {
                             page: M.ZY5.GUILD_SETTINGS,
                             section: M.jXE.GUILD_SETTINGS_EMOJI_ADD_BUTTON
@@ -404,7 +404,7 @@ let z = d().throttle(h.OQ, 1000),
                 []
             ),
             J = (n, r, i) =>
-                (0, y.G)({
+                (0, C.G)({
                     data: n,
                     file: r,
                     image: i,

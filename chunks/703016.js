@@ -15,11 +15,11 @@ var r = n(913527),
     m = n(271383),
     b = n(485386),
     _ = n(430824),
-    E = n(131951),
-    O = n(292959),
+    O = n(131951),
+    E = n(292959),
     y = n(699516),
-    I = n(944486),
-    v = n(9156),
+    v = n(944486),
+    I = n(9156),
     C = n(594174),
     S = n(51144),
     N = n(196051),
@@ -27,8 +27,8 @@ var r = n(913527),
     P = n(653477),
     j = n(981631),
     A = n(388032);
-let Z = [],
-    x = null,
+let x = [],
+    Z = null,
     w = null,
     L = null,
     R = /\|\|([\s\S]+?)\|\|/g;
@@ -80,7 +80,7 @@ function k() {
 }
 async function M(e, t, n, r, i) {
     let l = o.e6(e, n);
-    null !== l && (null == w && k(), t ? await (0, N.NB)() : null == x || x.removeEventListener('end', N.NB), l.addEventListener('end', N.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (x = l), o.iq(l, w));
+    null !== l && (null == w && k(), t ? await (0, N.NB)() : null == Z || Z.removeEventListener('end', N.NB), l.addEventListener('end', N.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (Z = l), o.iq(l, w));
 }
 function U(e, t, n, r, i) {
     M(e, t, i, () => {
@@ -92,7 +92,7 @@ function G(e) {
     M(t, n, r, i, l);
 }
 function B() {
-    return (null !== x && x.removeEventListener('end', N.NB), o.M9(), (x = null), !0);
+    return (null !== Z && Z.removeEventListener('end', N.NB), o.M9(), (Z = null), !0);
 }
 function V(e) {
     var t, n, r;
@@ -107,20 +107,20 @@ function V(e) {
 function H(e) {
     var t, n, r, i, l, a;
     let { channelId: o, message: s, optimistic: c } = e;
-    if (c || E.Z.isSelfDeaf()) return !1;
+    if (c || O.Z.isSelfDeaf()) return !1;
     let u = g.Z.getChannel(o);
     if (null == u) return !1;
-    let d = I.Z.getChannelId(),
+    let d = v.Z.getChannelId(),
         b = f.ZP.getCurrentSidebarChannelId(d),
         _ = o === d || o === b,
         C = p.OW.getSetting() && s.tts && _,
-        N = O.Z.getTTSType(),
+        N = E.Z.getTTSType(),
         T = (null == (t = s.author) ? void 0 : t.id) !== h.default.getId() && (N === j.PrB.ALL_CHANNELS || (N === j.PrB.SELECTED_CHANNEL && _));
     if ((C || T) && !y.Z.isBlockedOrIgnoredForMessage(s)) {
-        if (Z.indexOf(s.id) >= 0) return !1;
-        Z.unshift(s.id) > 10 && Z.pop();
+        if (x.indexOf(s.id) >= 0) return !1;
+        x.unshift(s.id) > 10 && x.pop();
         let e = u.getGuildId();
-        if (null != e && v.ZP.getMutedChannels(e).has(o)) return !1;
+        if (null != e && I.ZP.getMutedChannels(e).has(o)) return !1;
         let t = null != (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : S.ZP.getName(s.author)) ? l : '',
             c = s.type === j.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
             d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : S.ZP.getName(c)) : null;
@@ -134,7 +134,7 @@ function F(e) {
     return null != r && t === r.messageId && n === r.channelId && ((0, N.NB)(), !0);
 }
 function z() {
-    E.Z.isSelfDeaf() && o.M9();
+    O.Z.isSelfDeaf() && o.M9();
 }
 let W = {
     init() {

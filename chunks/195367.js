@@ -105,28 +105,28 @@ function O(e) {
         : null;
 }
 function N(e) {
-    let { guildEvent: t, guildEventId: i, guildId: N, editBroadcastInfoData: S, error: T, validationErrorMessage: I, onChange: P, canSetFocus: Z = !1 } = e,
-        { entityType: w, channelId: D, description: _, name: R, image: L, scheduledEndTime: A, scheduledStartTime: z, recurrenceRule: M } = t,
-        k = (0, d._d)(D),
-        G = (0, d.K3)(D),
+    let { guildEvent: t, guildEventId: i, guildId: N, editBroadcastInfoData: T, error: S, validationErrorMessage: I, onChange: Z, canSetFocus: P = !1 } = e,
+        { entityType: w, channelId: D, description: _, name: R, image: A, scheduledEndTime: k, scheduledStartTime: L, recurrenceRule: G } = t,
+        M = (0, d._d)(D),
+        z = (0, d.K3)(D),
         X = null != t && (0, m.xt)(t),
         V = r.useMemo(() => {
             let e = (0, v.v1)(t);
-            return null != e ? e : { startDate: a()(z) };
-        }, [t, z]),
-        [W, U] = r.useState(() => (0, v.zi)(a()(z), M)),
-        F = r.useRef(null);
+            return null != e ? e : { startDate: a()(L) };
+        }, [t, L]),
+        [W, U] = r.useState(() => (0, v.zi)(a()(L), G)),
+        B = r.useRef(null);
     r.useEffect(() => {
-        if (Z) {
+        if (P) {
             var e;
-            null == (e = F.current) || e.focus();
+            null == (e = B.current) || e.focus();
         }
-    }, [Z]);
-    let q = (e) => {
-            P({ image: e });
+    }, [P]);
+    let F = (e) => {
+            Z({ image: e });
         },
-        B = (e, t) => {
-            if (null == e || void 0 === t) return void q(null);
+        q = (e, t) => {
+            if (null == e || void 0 === t) return void F(null);
             (0, o.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
                 return (n) =>
@@ -138,7 +138,7 @@ function N(e) {
                                 file: t,
                                 onCrop: (e) => {
                                     let { imageUri: t } = e;
-                                    return q(t);
+                                    return F(t);
                                 },
                                 uploadType: j.pC.SCHEDULED_EVENT_IMAGE
                             },
@@ -147,14 +147,14 @@ function N(e) {
                     );
             });
         },
-        H = null == T ? void 0 : T.getFirstFieldErrorMessage('name'),
-        Y = null == T ? void 0 : T.getFirstFieldErrorMessage('description'),
-        J = null == H && null == Y ? (null == T ? void 0 : T.getAnyErrorMessage()) : null;
+        H = null == S ? void 0 : S.getFirstFieldErrorMessage('name'),
+        Y = null == S ? void 0 : S.getFirstFieldErrorMessage('description'),
+        J = null == H && null == Y ? (null == S ? void 0 : S.getAnyErrorMessage()) : null;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)('div', {
                 className: b.blockedUsersContainer,
-                children: null != D && !X && (k > 0 || G > 0) && (0, l.jsx)(x.mv, { channelId: D })
+                children: null != D && !X && (M > 0 || z > 0) && (0, l.jsx)(x.mv, { channelId: D })
             }),
             (0, l.jsxs)('div', {
                 className: b.form,
@@ -167,13 +167,13 @@ function N(e) {
                             (0, l.jsx)(s.Is, {
                                 className: b.textInput,
                                 onChange: (e) => {
-                                    P({ name: e });
+                                    Z({ name: e });
                                 },
                                 placeholder: y.intl.string(y.t['6/yarq']),
                                 maxLength: p.p,
                                 value: R,
                                 autoComplete: 'off',
-                                inputRef: F
+                                inputRef: B
                             }),
                             (0, l.jsx)(C, { error: H }),
                             (0, l.jsx)(C, { error: J })
@@ -187,14 +187,14 @@ function N(e) {
                                     scheduledStartTime: null == t ? void 0 : t.toISOString(),
                                     scheduledEndTime: null == n ? void 0 : n.toISOString()
                                 };
-                            (null != t && null != A && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, 'hour').toISOString()), null != t && null != W && (l.recurrenceRule = (0, v.mF)(W, t)), P(l));
+                            (null != t && null != k && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, 'hour').toISOString()), null != t && null != W && (l.recurrenceRule = (0, v.mF)(W, t)), Z(l));
                         },
                         onRecurrenceChange: (e) => {
                             let t = V.startDate;
-                            null != t && (P({ recurrenceRule: (0, v.mF)(e, t) }), U(e));
+                            null != t && (Z({ recurrenceRule: (0, v.mF)(e, t) }), U(e));
                         },
                         schedule: V,
-                        recurrenceRule: M,
+                        recurrenceRule: G,
                         showEndDate: w === p.WX.EXTERNAL,
                         requireEndDate: w === p.WX.EXTERNAL,
                         disableStartDateTime: X,
@@ -209,7 +209,7 @@ function N(e) {
                                 placeholder: y.intl.string(y.t['kWO/Ex']),
                                 value: _,
                                 onChange: (e) => {
-                                    P({ description: e });
+                                    Z({ description: e });
                                 },
                                 maxLength: p.wm,
                                 autosize: !0
@@ -227,13 +227,13 @@ function N(e) {
                                 className: b.addImageHint,
                                 children: y.intl.string(y.t.B9C9bW)
                             }),
-                            null != L
+                            null != A
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)(c.Z, {
                                               className: b.imagePreview,
                                               iconWrapperClassName: b.imagePreviewInner,
-                                              image: L,
+                                              image: A,
                                               makeURL: (e) => {
                                                   if (null == e) return null;
                                                   if (null != N) {
@@ -241,7 +241,7 @@ function N(e) {
                                                       return null != (n = (0, h.Z)((0, g.Gb)(t, N, i))) ? n : null;
                                                   }
                                               },
-                                              onChange: B,
+                                              onChange: q,
                                               hint: y.intl.string(y.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
@@ -250,18 +250,18 @@ function N(e) {
                                               variant: 'primary',
                                               size: 'sm',
                                               text: y.intl.string(y.t.gmUvOz),
-                                              onClick: () => q(null)
+                                              onClick: () => F(null)
                                           })
                                       ]
                                   })
                                 : (0, l.jsx)(u.Z, {
                                       size: s.zx.Sizes.SMALL,
-                                      onChange: B,
+                                      onChange: q,
                                       buttonCTA: y.intl.string(y.t.vKCGYW)
                                   })
                         ]
                     }),
-                    (0, l.jsx)(O, { editBroadcastInfoData: S })
+                    (0, l.jsx)(O, { editBroadcastInfoData: T })
                 ]
             })
         ]

@@ -57,11 +57,11 @@ function x(e, t) {
 }
 let b = function (e) {
     let { guildId: t, resourceChannel: l, index: b, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
-        { title: O, channelId: C, description: y } = l,
-        N = d.Z.getChannel(C),
+        { title: O, channelId: y, description: C } = l,
+        N = d.Z.getChannel(y),
         I = null;
     (null != N && (0, c.k3)(N)) || (I = p.intl.string(p.t.kTdL8f));
-    let E = null == y || 0 === y.length,
+    let E = null == C || 0 === C.length,
         S = u.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon
@@ -166,7 +166,7 @@ let b = function (e) {
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
                                           lineClamp: 1,
-                                          children: y
+                                          children: C
                                       })
                               ]
                           }),

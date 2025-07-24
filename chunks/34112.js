@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(549631),
     _ = n(402235),
     O = n(496675),
-    C = n(626135),
-    y = n(480608),
+    y = n(626135),
+    C = n(480608),
     N = n(243730),
     I = n(130341),
     E = n(970129),
@@ -80,11 +80,11 @@ function k(e) {
         g = (0, d.e7)([O.Z], () => O.Z.getHighestRole(n), [n]),
         f = u.trim();
     i.useEffect(() => {
-        (0, y.E)(n.id);
+        (0, C.E)(n.id);
     }, [n.id]);
     let h = i.useRef(!1);
     i.useEffect(() => {
-        h.current || '' === u.trimStart() || (C.default.track(P.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (h.current = !0));
+        h.current || '' === u.trimStart() || (y.default.track(P.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (h.current = !0));
     }, [u]);
     let x = i.useMemo(() => s.filter((e) => (0, I.uo)(e, f)), [s, f]),
         b = i.useMemo(() => [...s, l], [s, l]),
@@ -144,7 +144,7 @@ function M() {
 }
 function G(e) {
     var t, l, c;
-    let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: _, onDragReset: O, onDragComplete: C, disableHover: y, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
+    let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: _, onDragReset: O, onDragComplete: y, disableHover: C, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
         P = (0, E.T)(u, p, d),
         k = null != P,
         [M, G] = i.useState(!1),
@@ -163,10 +163,10 @@ function G(e) {
                 end: (e, t) => {
                     let n = t.getDropResult();
                     if (null == n) return void O();
-                    C(n.roleId);
+                    y(n.roleId);
                 }
             }),
-            [d, _, O, C, k, M, h]
+            [d, _, O, y, k, M, h]
         ),
         [{ isDragging: F }, H] = (0, a.c)(B),
         z = i.useMemo(
@@ -214,7 +214,7 @@ function G(e) {
     }
     return (0, r.jsxs)(m.P3F, {
         className: s()(R.roleRow, {
-            [R.roleRowDisableHover]: y,
+            [R.roleRowDisableHover]: C,
             [R.containerDragBefore]: null != W && h < W,
             [R.containerDragAfter]: null != W && h > W
         }),
@@ -348,22 +348,22 @@ function U(e) {
     let { guildId: a, role: o, size: d, enableTooltip: g, className: p, defaultIconClassName: f } = e,
         { hasGradient: x, stops: b, gradientId: v } = (0, u.De)(null == (t = o.colorStrings) ? void 0 : t.primaryColor, null == (n = o.colorStrings) ? void 0 : n.secondaryColor, null == (i = o.colorStrings) ? void 0 : i.tertiaryColor),
         O = (0, _.yH)(a, o),
-        C = (0, j.p9)({
+        y = (0, j.p9)({
             guildId: a,
             roleId: o.id,
             size: d
         });
-    if (null != C)
+    if (null != y)
         return (0, r.jsx)(
             h.Z,
-            A(D({}, C), {
+            A(D({}, y), {
                 className: p,
                 enableTooltip: g
             })
         );
-    let y = null != (l = o.colorString) ? l : (0, c.Rf)(P.p6O);
+    let C = null != (l = o.colorString) ? l : (0, c.Rf)(P.p6O);
     return (
-        O && x && (y = 'url(#'.concat(v, ')')),
+        O && x && (C = 'url(#'.concat(v, ')')),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 O &&
@@ -384,7 +384,7 @@ function U(e) {
                 (0, r.jsx)(m.lZ8, {
                     size: 'custom',
                     className: s()(p, f),
-                    color: y,
+                    color: C,
                     width: d,
                     height: d
                 })

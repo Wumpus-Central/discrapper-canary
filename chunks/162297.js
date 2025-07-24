@@ -22,10 +22,10 @@ function f(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, r.jsx)(h, { application: n })
+        ? (0, r.jsx)(g, { application: n })
         : null;
 }
-function h(e) {
+function g(e) {
     let { application: t } = e,
         n = i.useCallback(() => {
             (0, c.h)({

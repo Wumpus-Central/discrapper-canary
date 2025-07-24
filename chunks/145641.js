@@ -35,7 +35,7 @@ let p = function (e) {
                 }),
             []
         ),
-        E = i.useCallback(
+        O = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -44,7 +44,7 @@ let p = function (e) {
                 }),
             []
         ),
-        O = i.useCallback((e) => {
+        E = i.useCallback((e) => {
             let t = document.querySelector(e),
                 n = b.current;
             null != t &&
@@ -59,10 +59,10 @@ let p = function (e) {
             id: 'people-list',
             isEnabled: m,
             scrollToStart: _,
-            scrollToEnd: E,
-            setFocus: O
+            scrollToEnd: O,
+            setFocus: E
         }),
-        I = i.useMemo(() => t.map((e) => e.length), [t]);
+        v = i.useMemo(() => t.map((e) => e.length), [t]);
     return (0, r.jsx)(a.bG, {
         navigator: y,
         children: (0, r.jsx)(a.SJ, {
@@ -125,7 +125,7 @@ let p = function (e) {
                                     rowHeight: u.NV,
                                     renderSection: g,
                                     sectionHeight: u.aS,
-                                    sections: I,
+                                    sections: v,
                                     className: d.peopleList
                                 },
                                 n

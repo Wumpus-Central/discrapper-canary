@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,10 +19,10 @@ var r = n(255367),
     v = n(869269),
     _ = n(981631),
     O = n(388032),
-    C = n(301849);
-function y(e) {
+    y = n(301849);
+function C(e) {
     var t, n;
-    let { guildId: l, initialEditStateId: a, allSubscriptionListings: y, priceTiers: N, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
+    let { guildId: l, initialEditStateId: a, allSubscriptionListings: C, priceTiers: N, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
         [P, w] = i.useState(a),
         R = (0, c.e7)([f.Z], () => f.Z.getSubscriptionListing(P)),
         Z = null == R,
@@ -44,27 +44,27 @@ function y(e) {
         { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
         et = X || Q;
     return (0, r.jsxs)('div', {
-        className: C.container,
+        className: y.container,
         children: [
             (0, r.jsxs)('div', {
-                className: s()(C.header, { [C.headerExpanded]: D }),
+                className: s()(y.header, { [y.headerExpanded]: D }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: C.headerImageContainer,
+                        className: y.headerImageContainer,
                         children:
                             null == W
                                 ? (0, r.jsx)(j.Z, {
-                                      className: C.starIcon,
+                                      className: y.starIcon,
                                       'aria-hidden': !0
                                   })
                                 : (0, r.jsx)('img', {
-                                      className: C.headerImage,
+                                      className: y.headerImage,
                                       src: W,
                                       alt: V
                                   })
                     }),
                     (0, r.jsxs)('div', {
-                        className: C.headerListingInfo,
+                        className: y.headerListingInfo,
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-md/medium',
@@ -73,25 +73,25 @@ function y(e) {
                             }),
                             (0, r.jsx)(d.LZC, { size: 2 }),
                             (0, r.jsxs)('div', {
-                                className: C.headerDescriptionContainer,
+                                className: y.headerDescriptionContainer,
                                 children: [
                                     G &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.YELLOW_300),
                                             text: O.intl.string(O.t.vosPk5),
-                                            className: C.draftBadge
+                                            className: y.draftBadge
                                         }),
                                     M &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: O.intl.string(O.t.nhbtEh),
-                                            className: C.archivedBadge
+                                            className: y.archivedBadge
                                         }),
                                     U &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: O.intl.string(O.t.aiwXen),
-                                            className: C.unsavedBadge
+                                            className: y.unsavedBadge
                                         }),
                                     null != L &&
                                         (0, r.jsxs)(d.Text, {
@@ -105,7 +105,7 @@ function y(e) {
                     }),
                     D
                         ? (0, r.jsxs)('div', {
-                              className: C.headerActions,
+                              className: y.headerActions,
                               children: [
                                   (0, r.jsx)(d.Avr, {
                                       variant: 'secondary',
@@ -138,7 +138,7 @@ function y(e) {
                               children: (0, r.jsx)(d.vdY, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: C.pencilIcon
+                                  className: y.pencilIcon
                               })
                           })
                 ]
@@ -149,7 +149,7 @@ function y(e) {
                     guildId: l,
                     groupListingId: E,
                     children: (0, r.jsx)(v.Z, {
-                        allSubscriptionListings: y,
+                        allSubscriptionListings: C,
                         priceTiers: N,
                         loading: et,
                         error: null != q ? q : $,

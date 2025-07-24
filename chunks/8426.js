@@ -1,6 +1,6 @@
 (n.d(t, {
     Hr: () => b,
-    Hz: () => C,
+    Hz: () => y,
     To: () => E,
     XG: () => O,
     _N: () => f,
@@ -8,7 +8,7 @@
     bj: () => P,
     el: () => x,
     hS: () => j,
-    lq: () => y,
+    lq: () => C,
     mM: () => N,
     oo: () => I,
     q6: () => T,
@@ -104,13 +104,13 @@ function O(e, t) {
         resourceChannel: t
     });
 }
-function C(e) {
+function y(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL',
         resourceChannelId: e
     });
 }
-function y(e) {
+function C(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e

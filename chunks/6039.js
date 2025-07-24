@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(305325),
     b = n(246364),
     _ = n(937111),
-    E = n(381416),
-    O = n(523924),
+    O = n(381416),
+    E = n(523924),
     y = n(390500),
-    I = n(981631),
-    v = n(898625),
+    v = n(981631),
+    I = n(898625),
     C = n(388032),
     S = n(74816);
 function N(e) {
@@ -58,7 +58,7 @@ function N(e) {
 let T = (e) => {
     let { guildId: t } = e,
         { ref: n, width: c, height: u } = (0, s.ZP)(),
-        [h, f] = i.useState(v.hO.INITIAL),
+        [h, f] = i.useState(I.hO.INITIAL),
         T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
         P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: A } = (0, l.cj)([_.Z], () => ({
@@ -66,15 +66,15 @@ let T = (e) => {
             guildPreviewDisabled: _.Z.getJoinRequestGuild(t)
         }));
     (i.useEffect(() => {
-        null != P && (0, d.uL)(I.Z5c.CHANNEL(t));
+        null != P && (0, d.uL)(v.Z5c.CHANNEL(t));
     }, [P, t]),
         i.useEffect(() => {
             j || g.Z.fetchRequestToJoinGuilds();
         }, [j]));
-    let Z = i.useCallback(() => {
-            (f(Math.max(h, v.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(I.Z5c.ME));
+    let x = i.useCallback(() => {
+            (f(Math.max(h, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME));
         }, [t, h]),
-        x = (e, t) => () => {
+        Z = (e, t) => () => {
             (0, o.h7j)((n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -140,8 +140,8 @@ let T = (e) => {
         w = async () => {
             (await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t));
         },
-        L = x(C.intl.format(C.t['9ZezpK'], { name: null == A ? void 0 : A.name }), Z),
-        R = x(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), Z);
+        L = Z(C.intl.format(C.t['9ZezpK'], { name: null == A ? void 0 : A.name }), x),
+        R = Z(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), x);
     return (0, r.jsxs)('div', {
         className: S.page,
         ref: n,
@@ -162,7 +162,7 @@ let T = (e) => {
                                 guild: A
                             });
                         case b.wB.REJECTED:
-                            return (0, r.jsx)(O.Z, {
+                            return (0, r.jsx)(E.Z, {
                                 reapplyText: C.intl.string(C.t.I1LYVl),
                                 onReapply: w,
                                 confirmText: C.intl.string(C.t.g9tK0t),
@@ -171,7 +171,7 @@ let T = (e) => {
                                 guild: A
                             });
                         default:
-                            return (0, r.jsx)(E.s, {
+                            return (0, r.jsx)(O.s, {
                                 onDiscardApplication: R,
                                 onContinueApplication: () => (0, m.hk)(t),
                                 guild: A

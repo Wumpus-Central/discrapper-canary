@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(657352),
     E = n(33154),
     S = n(144114),
-    P = n(703656),
-    I = n(210887),
+    I = n(703656),
+    P = n(210887),
     Z = n(606956),
     T = n(271383),
     N = n(430824),
@@ -262,7 +262,7 @@ class V extends i.PureComponent {
                 }
             }),
             F(this, 'handleGoBack', () => {
-                (this.setState({ submitting: !0 }), (0, P.s1)().goBack());
+                (this.setState({ submitting: !0 }), (0, I.s1)().goBack());
             }),
             F(this, 'handleFollowAnnouncement', () => {
                 let { channel: e } = this.props;
@@ -331,7 +331,7 @@ function z(e) {
             isFollowable: u,
             shouldShowLurkerModeSuccessPopout: x,
             showLurkerModeUpsellPopout: p && null != s && M.Uu(k.Plq.SEND_MESSAGES, i),
-            theme: I.Z.theme,
+            theme: P.Z.theme,
             canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: b,

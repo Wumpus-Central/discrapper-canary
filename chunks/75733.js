@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -163,7 +163,7 @@ function _(e) {
     });
 }
 let O = [0, 1, 2, 3, 4];
-function C(e) {
+function y(e) {
     let { profile: t, canManageGuild: n } = e,
         l = i.useMemo(() => t.traits, [t]),
         s = i.useCallback(

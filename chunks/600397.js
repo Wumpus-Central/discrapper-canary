@@ -12,9 +12,9 @@ var i = n(657707),
     p = n(388032),
     m = n(768921);
 function f(e) {
-    let { message: t, channel: n, author: f, compact: h } = e,
-        { nick: g } = (0, s.Sw)(f, n),
-        _ = (0, c.l)({
+    let { message: t, channel: n, author: f, compact: g } = e,
+        { nick: _ } = (0, s.Sw)(f, n),
+        h = (0, c.l)({
             user: f,
             channelId: n.id,
             guildId: void 0,
@@ -23,8 +23,8 @@ function f(e) {
         b = (0, l.q)(t.applicationId);
     if (null == b) return null;
     let E = p.intl.format(p.t.m7Lwam, {
-        username: g,
-        usernameHook: _,
+        username: _,
+        usernameHook: h,
         gameName: b.name,
         gameIconHook: (e) =>
             (0, r.jsxs)('span', {
@@ -43,7 +43,7 @@ function f(e) {
     });
     return (0, r.jsx)(u.Z, {
         iconNode: (0, r.jsx)(i.iWm, { size: 'sm' }),
-        compact: h,
+        compact: g,
         contentClassName: m.content,
         children: (0, r.jsx)('div', { children: E })
     });

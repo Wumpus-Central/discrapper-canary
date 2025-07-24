@@ -16,7 +16,7 @@ function g(e) {
         g = (0, a.e7)([d.Z], () => d.Z.getAction()),
         [m, b] = i.useState(!1),
         _ = (0, u.Dt)();
-    async function E() {
+    async function O() {
         return (b(!0), g === p.c2C.AGREEMENTS && b(await (0, s.Lr)()), null);
     }
     return (
@@ -74,7 +74,7 @@ function g(e) {
                         variant: 'active',
                         text: h.intl.string(h.t['+TBKLy']),
                         loading: m,
-                        onClick: E
+                        onClick: O
                     })
                 })
             ]

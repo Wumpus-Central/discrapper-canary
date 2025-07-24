@@ -18,12 +18,12 @@ let E = [100, 300],
                 I = (t) => {
                     t.forEach(u);
                 },
-                R = (0, o.N)('first-input', I);
+                d = (0, o.N)('first-input', I);
             ((a = (0, r._)(t, l, E, e.reportAllChanges)),
-                R &&
+                d &&
                     (0, i.u)(
                         (0, c.R)(() => {
-                            (I(R.takeRecords()), R.disconnect());
+                            (I(d.takeRecords()), d.disconnect());
                         })
                     ));
         });

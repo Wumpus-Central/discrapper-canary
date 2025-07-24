@@ -57,13 +57,13 @@ function h(e, t) {
 function x(e) {
     var t, n, x, b, j, v;
     let { rule: _, onChangeRule: O } = e,
-        C = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 O(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { keywordFilter: e }) }));
             },
             [O, _]
         ),
-        y = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 O(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { allowList: e }) }));
             },
@@ -77,7 +77,7 @@ function x(e) {
                 header: g.intl.string(g.t['ue+tnZ']),
                 children: [
                     (0, r.jsx)(o.Z, {
-                        onChangeText: C,
+                        onChangeText: y,
                         maxWordCount: m.RH,
                         initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter
                     }),
@@ -87,7 +87,7 @@ function x(e) {
                         collapsed: (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null || (null == _ || null == (x = _.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0
                     }),
                     (0, r.jsx)(l.Z, {
-                        onChange: y,
+                        onChange: C,
                         initialValue: null == (b = _.triggerMetadata) ? void 0 : b.allowList,
                         maxWordCount: m.n4,
                         collapsed: (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null || (null == (v = _.triggerMetadata) ? void 0 : v.allowList.length) === 0

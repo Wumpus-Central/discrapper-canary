@@ -63,8 +63,8 @@ function h(e) {
         _ = (0, m.V)(n),
         {
             handlePasteEvent: O,
-            handleInputChange: C,
-            handleKeyDown: y,
+            handleInputChange: y,
+            handleKeyDown: C,
             handleContainerKeyUp: N,
             handleRemoveTag: I,
             handleTagChangeEvent: E,
@@ -150,8 +150,8 @@ function h(e) {
                     (0, r.jsx)('input', {
                         className: s()(g.mainTextInput, { [g.isEditingOtherNodes]: k }),
                         ref: b,
-                        onChange: C,
-                        onKeyDownCapture: y,
+                        onChange: y,
+                        onKeyDownCapture: C,
                         onPaste: O,
                         onBlur: w,
                         placeholder: 0 === Z.length ? p : void 0,

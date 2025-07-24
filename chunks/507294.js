@@ -1,6 +1,6 @@
 (n.d(t, {
-    default: () => x,
-    g: () => Z
+    default: () => Z,
+    g: () => x
 }),
     n(388685),
     n(472816),
@@ -22,11 +22,11 @@ var r = n(255367),
     m = n(367907),
     b = n(313201),
     _ = n(598077),
-    E = n(314897),
-    O = n(271383),
+    O = n(314897),
+    E = n(271383),
     y = n(485386),
-    I = n(626135),
-    v = n(63063),
+    v = n(626135),
+    I = n(63063),
     C = n(134433),
     S = n(225104),
     N = n(981631),
@@ -58,7 +58,7 @@ function A(e) {
     }
     return e;
 }
-function Z(e, t) {
+function x(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('82412'), n.e('80993')]).then(n.bind(n, 107807));
         return (n) =>
@@ -74,18 +74,18 @@ function Z(e, t) {
             );
     });
 }
-let x = function (e) {
-    let { guildId: t, transitionState: l, onClose: x } = e,
+let Z = function (e) {
+    let { guildId: t, transitionState: l, onClose: Z } = e,
         w = (0, s.e7)([y.Z], () => y.Z.getRoles(t)),
-        L = (0, s.e7)([E.default], () => E.default.getId()),
-        R = (0, s.e7)([O.ZP], () => O.ZP.getMember(t, L)),
+        L = (0, s.e7)([O.default], () => O.default.getId()),
+        R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [D, k] = i.useState([]),
         M = (0, h.ZP)(),
         U = (0, b.Dt)();
     if (
         (i.useEffect(() => {
             0 !== D.length &&
-                I.default.track(
+                v.default.track(
                     N.rMx.PASSPORT_ENTRY_VIEWED,
                     A(
                         {
@@ -131,7 +131,7 @@ let x = function (e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(u.olH, { onClick: x })
+                    (0, r.jsx)(u.olH, { onClick: Z })
                 ]
             }),
             (0, r.jsxs)(u.hzk, {
@@ -139,7 +139,7 @@ let x = function (e) {
                 children: [
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-md/medium',
-                        children: T.intl.format(T.t['Y+TsER'], { helpdeskArticleUrl: v.Z.getArticleURL(N.BhN.CONNECTION_DETAILS) })
+                        children: T.intl.format(T.t['Y+TsER'], { helpdeskArticleUrl: I.Z.getArticleURL(N.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, r.jsx)('div', {
                         className: P.verifiedRoles,
@@ -181,7 +181,7 @@ let x = function (e) {
                                 u.P3F,
                                 {
                                     className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => Z(e, t),
+                                    onClick: l ? void 0 : () => x(e, t),
                                     onContextMenu: l
                                         ? (i) => {
                                               var l;

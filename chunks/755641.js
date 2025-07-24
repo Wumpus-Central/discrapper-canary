@@ -1,29 +1,46 @@
-t.d(r, { g: () => d });
-var n = t(255367),
-    i = t(120356),
-    a = t.n(i),
-    s = t(481060),
-    l = t(510918),
-    o = t(254925),
-    c = t(602268);
+n.d(t, { g: () => d });
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    l = n.n(i),
+    s = n(481060),
+    a = n(510918),
+    o = n(131085),
+    c = n(602268);
 function d(e) {
-    let { selectedBadge: r, onBadgeClicked: t } = e;
-    return (0, n.jsx)('div', {
+    let { badgeCollection: t, selectedBadge: n, onBadgeClicked: i } = e;
+    return (0, r.jsxs)('div', {
         className: c.pickerGrid,
-        children: o.QV.map((e) =>
-            (0, n.jsx)(
-                s.P3F,
-                {
-                    className: a()(c.pickerItem, { [c.pickerItemSelected]: e === r }),
-                    onClick: () => (null == t ? void 0 : t(e)),
-                    children: (0, n.jsx)(l.v, {
-                        badge: e,
-                        width: 32,
-                        height: 32
-                    })
-                },
-                e
+        children: [
+            t.unlockedBadges.map((e) =>
+                (0, r.jsx)(
+                    s.P3F,
+                    {
+                        className: l()(c.pickerItem, { [c.pickerItemSelected]: e === n }),
+                        onClick: () => (null == i ? void 0 : i(e)),
+                        children: (0, r.jsx)(a.v, {
+                            badge: e,
+                            width: o.Gg.SIZE_32,
+                            height: o.Gg.SIZE_32
+                        })
+                    },
+                    e
+                )
+            ),
+            t.lockedBadges.map((e) =>
+                (0, r.jsx)(
+                    'div',
+                    {
+                        className: l()(c.pickerItem, c.lockedPickerItem),
+                        children: (0, r.jsx)(a.v, {
+                            badge: e,
+                            width: o.Gg.SIZE_32,
+                            height: o.Gg.SIZE_32
+                        })
+                    },
+                    e
+                )
             )
-        )
+        ]
     });
 }
