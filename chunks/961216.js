@@ -94,6 +94,7 @@ class i extends s.L {
         switch (t.type) {
             case a.aib.GUILD:
             case a.aib.GUILD_CHANNEL:
+            case a.aib.THREAD:
                 return new n.tJ(t.guildId, t.type, r, c);
             case a.aib.CHANNEL:
                 return new n.tJ(t.channelId, t.type, r, c);

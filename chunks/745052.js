@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(797614),
     P = n(359110),
     j = n(6025),
-    A = n(897473),
-    x = n(108427),
+    x = n(897473),
+    A = n(108427),
     Z = n(970731),
     w = n(210887),
     L = n(433355),
@@ -211,7 +211,7 @@ function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         i = (0, c.e7)([L.ZP], () => L.ZP.getSidebarState(L.uZ)),
         l = (0, c.e7)([R.Z], () => R.Z.getChannel(null == i ? void 0 : i.channelId));
-    if (null == i || i.type !== A.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    if (null == i || i.type !== x.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
     return (0, r.jsx)(E.Z, {
         sidebarType: E.y.MessageRequestSidebar,
@@ -287,14 +287,14 @@ let es = (0, g.Z)(function (e) {
     let { width: t } = e,
         n = (0, F.q)();
     (0, b.ZP)(() => {
-        (h.Y(Q.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), k.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), T.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
+        (h.Y(Q.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), k.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), T.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
     });
     let l = (0, c.e7)([w.Z], () => w.Z.theme),
         o = (0, W.w)(),
         [u, d] = i.useState(!1),
         f = (0, c.e7)([L.ZP], () => {
             let e = L.ZP.getSidebarState(L.uZ);
-            return null != e && e.type === A.tI.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === x.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == f ? void 0 : f.channelId,
         m = null != f,

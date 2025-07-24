@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(448206),
     P = n(670188),
     j = n(496675),
-    A = n(594174),
-    x = n(662868),
+    x = n(594174),
+    A = n(662868),
     Z = n(981631),
     w = n(765305),
     L = n(388032),
@@ -51,7 +51,7 @@ function D(e) {
         V = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
-        z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
+        z = (0, o.e7)([x.default], () => x.default.getUser(F), [F]);
     i.useEffect(() => {
         null != F && (0, u.PR)(F);
     }, [F]);
@@ -296,7 +296,7 @@ function D(e) {
                   (0, r.jsxs)('div', {
                       className: R.header,
                       children: [
-                          (0, r.jsx)(x.Z, {
+                          (0, r.jsx)(A.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16

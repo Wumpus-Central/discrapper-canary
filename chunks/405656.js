@@ -1,23 +1,25 @@
 (n.d(t, {
     $G: () => T,
-    BU: () => C,
-    Fr: () => x,
-    Fz: () => L,
+    BU: () => R,
+    Fr: () => M,
+    Fz: () => x,
     Ko: () => y,
-    Pe: () => M,
-    R6: () => k,
-    WU: () => D,
-    X3: () => j,
-    cl: () => R,
+    Pe: () => k,
+    R6: () => j,
+    WU: () => L,
+    X3: () => U,
+    cl: () => P,
     g9: () => S,
-    i3: () => N,
+    i3: () => C,
     jW: () => I,
-    kG: () => w,
+    kG: () => D,
     qc: () => A
 }),
     n(35282),
     n(388685),
-    n(781311));
+    n(781311),
+    n(804061),
+    n(704826));
 var r = n(392711),
     i = n.n(r),
     a = n(349033),
@@ -127,7 +129,8 @@ function T(e) {
                 o.add(e.getMatch(1));
                 break;
             case m.dCx.ANSWER_IN:
-                o.add(e.getData('channel').id);
+                var s;
+                for (let t of null != (s = e.getData('channels')) ? s : []) o.add(t.id);
                 break;
             case m.dCx.ANSWER_HAS:
                 o.add(e.getData('has'));
@@ -199,7 +202,14 @@ function A(e, t) {
               token: n
           });
 }
-function N(e, t) {
+function N(e) {
+    if (null == e.match(/([\\" ])/g)) return e;
+    {
+        let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
+        return '"'.concat(t, '"');
+    }
+}
+function C(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -208,7 +218,7 @@ function N(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && n.text.includes(' ') && (i = '"'.concat(i, '"')), t.type === m.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = N(i)), t.type === m.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
                         let e = o.ZP[r];
@@ -228,48 +238,50 @@ function N(e, t) {
         })
     );
 }
-function C(e) {
+function R(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function R(e) {
+function P(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let P = new a.ZP();
-function w(e) {
-    return P.tokenize(e);
+let w = new a.ZP();
+function D(e) {
+    return w.tokenize(e);
 }
-function D() {
-    return P.clearCache();
+function L() {
+    return w.clearCache();
 }
-function L(e) {
+function x(e) {
     return null != e ? O[e] : null;
 }
-function x(e, t) {
+function M(e, t) {
     let n = m.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!m.KA4.test(t.type));
 }
-function M() {
-    ((0, o.WK)(), P.reset(), i()(o.ZP).forOwn((e, t) => P.addRule(b({ type: t }, e))));
+function k() {
+    ((0, o.WK)(), w.reset(), i()(o.ZP).forOwn((e, t) => w.addRule(b({ type: t }, e))));
 }
-function k(e) {
+function j(e) {
     if (e === m.aib.GUILD) return !0;
     {
         let t = (0, l.a)({ location: 'isChannelFilterSupported' });
         return e === m.aib.DMS && t && !_.Z.hidePersonalInformation;
     }
 }
-function j(e) {
-    var t, n;
-    if (e.isGroupDM()) {
-        let t = (0, s.F6)(e, f.default, d.Z);
-        return t.includes(' ') ? '"'.concat(t, '"') : t;
-    }
-    if (e.isDM()) {
+function U(e) {
+    let t = e.name,
+        n = !1;
+    if (e.isGroupDM()) t = (0, s.F6)(e, f.default, d.Z);
+    else if (e.isDM()) {
         let n = e.getRecipientId(),
-            r = f.default.getUser(n);
-        return null != (t = h.ZP.getUserTag(r)) ? t : null;
+            r = f.default.getUser(n),
+            i = h.ZP.getUserTag(r);
+        if (null == i) return null;
+        t = i;
+    } else {
+        n = !e.isThread();
+        let r = c.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
+        (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    let r = c.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id],
-        i = null != (n = null == r ? void 0 : r.name) ? n : e.name;
-    return '#'.concat(i);
+    return ((t = N(t)), n) ? '#'.concat(t) : t;
 }

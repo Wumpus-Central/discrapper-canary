@@ -1,6 +1,6 @@
 (n.d(t, {
     default: () => Z,
-    g: () => x
+    g: () => A
 }),
     n(388685),
     n(472816),
@@ -33,7 +33,7 @@ var r = n(255367),
     T = n(388032),
     P = n(739587),
     j = n(472840);
-function A(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,13 +58,13 @@ function A(e) {
     }
     return e;
 }
-function x(e, t) {
+function A(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('82412'), n.e('80993')]).then(n.bind(n, 107807));
         return (n) =>
             (0, r.jsx)(
                 i,
-                A(
+                x(
                     {
                         role: e,
                         guildId: t
@@ -87,7 +87,7 @@ let Z = function (e) {
             0 !== D.length &&
                 v.default.track(
                     N.rMx.PASSPORT_ENTRY_VIEWED,
-                    A(
+                    x(
                         {
                             role_ids: D.map((e) => {
                                 let { role_id: t } = e;
@@ -181,7 +181,7 @@ let Z = function (e) {
                                 u.P3F,
                                 {
                                     className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => x(e, t),
+                                    onClick: l ? void 0 : () => A(e, t),
                                     onContextMenu: l
                                         ? (i) => {
                                               var l;
@@ -193,7 +193,7 @@ let Z = function (e) {
                                                           var i, a;
                                                           return (0, r.jsx)(
                                                               e,
-                                                              ((i = A({}, n)),
+                                                              ((i = x({}, n)),
                                                               (a = a =
                                                                   {
                                                                       roleId: l,

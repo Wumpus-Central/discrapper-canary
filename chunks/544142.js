@@ -69,7 +69,7 @@ function O(e) {
         O = (0, o.e7)([g.default], () => g.default.getUser(p)),
         E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
         S = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
-    function I(e) {
+    function P(e) {
         if (null == O) return null;
         (0, c.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
@@ -84,12 +84,12 @@ function O(e) {
                 );
         });
     }
-    let P = null != (l = null != (t = null == E ? void 0 : E.nick) ? t : b.ZP.getName(O)) ? l : '???',
+    let I = null != (l = null != (t = null == E ? void 0 : E.nick) ? t : b.ZP.getName(O)) ? l : '???',
         Z = null == E ? void 0 : E.colorString;
     return null == O
         ? (0, r.jsx)('span', {
               className: a()(x.threadCreatorName, x.unknownCreatorName),
-              children: P
+              children: I
           })
         : (0, r.jsx)(d.Gt, {
               value: C,
@@ -107,9 +107,9 @@ function O(e) {
                               innerRef: y,
                               tag: 'span',
                               className: x.threadCreatorName,
-                              onContextMenu: I,
+                              onContextMenu: P,
                               children: (0, r.jsx)(s.PUh, {
-                                  name: P,
+                                  name: I,
                                   color: null != Z ? Z : void 0,
                                   roleColors: S
                               })

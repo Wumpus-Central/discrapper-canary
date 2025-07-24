@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685), n(539854));
+(n.d(t, { Z: () => x }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -96,7 +96,7 @@ function j(e) {
     var t, l;
     let d = i.useRef(null),
         { parentAnalyticsLocation: p } = (0, f.ZP)(),
-        { channel: O, user: j, nick: A, mute: x, deaf: Z, serverMute: w, serverDeaf: L } = e,
+        { channel: O, user: j, nick: x, mute: A, deaf: Z, serverMute: w, serverDeaf: L } = e,
         R = (0, o.e7)([E.Z], () => E.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
@@ -104,7 +104,7 @@ function j(e) {
         }),
         k = null != (t = O.getGuildId()) ? t : void 0,
         M = j.getAvatarURL(O.guild_id, 24),
-        U = null != A ? A : y.ZP.getName(j),
+        U = null != x ? x : y.ZP.getName(j),
         {
             icon: G,
             colorize: B,
@@ -121,7 +121,7 @@ function j(e) {
             serverDeaf: L,
             deaf: Z,
             serverMute: w,
-            mute: x,
+            mute: A,
             localMute: R
         }))
             ? l
@@ -204,7 +204,7 @@ function j(e) {
             })
     });
 }
-function A(e) {
+function x(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, u] = i.useState(!1),
         h = (0, o.e7)([O.default], () => O.default.getId()),

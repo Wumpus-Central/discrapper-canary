@@ -23,7 +23,7 @@ var r = n(255367),
     O = n(488131),
     E = n(981631),
     S = n(388032);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,13 +83,13 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(T, P(I({}, e), { channel: t }));
+            return (0, r.jsx)(T, I(P({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 y.ZP.Icon,
-                P(I({}, e), {
+                I(P({}, e), {
                     ref: o,
                     onClick: s,
                     tooltip: n ? null : c,
@@ -108,8 +108,8 @@ function T(e) {
         v = (0, f.Z)(t),
         j = (0, m.Z)(t),
         O = (0, a.Z)(t),
-        I = (0, u.Z)(t),
-        P = (0, h.Z)(t.id),
+        P = (0, u.Z)(t),
+        I = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
         T = (0, s.Z)(t),
         N = (0, o.Z)(t),
@@ -141,7 +141,7 @@ function T(e) {
                 children: [v, j]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z, y, P]
+                children: [Z, y, I]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -167,7 +167,7 @@ function T(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, O, I, T]
+                children: [w, O, P, T]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [N, A]

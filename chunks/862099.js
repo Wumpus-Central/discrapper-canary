@@ -32,8 +32,8 @@ var r,
     T = n(924301),
     P = n(504160),
     j = n(151864),
-    A = n(835184),
-    x = n(725436),
+    x = n(835184),
+    A = n(725436),
     Z = n(497656),
     w = n(79874),
     L = n(554747),
@@ -148,7 +148,7 @@ function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         r = (0, D.DK)(t),
         l = (0, s.e7)([T.ZP], () => T.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
-        a = (0, s.e7)([A.Z], () => A.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
+        a = (0, s.e7)([x.Z], () => x.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         l || null != a || (0, P._6)(t.id),
         (0, i.jsxs)(c.zx, {
@@ -190,7 +190,7 @@ function z(e) {
     var t;
     let { guildEvent: n, noticeType: r } = e,
         a = (0, R.cS)(n),
-        s = null != a ? (0, x.m)(a, !0) : null,
+        s = null != a ? (0, A.m)(a, !0) : null,
         c = (0, R.nE)(n),
         d = (0, p.KS)(c),
         { startTime: h, endTime: f } = (0, w.ZP)(n),
@@ -295,7 +295,7 @@ function W(e) {
               onClickCloseIcon: () => (0, P.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: G.intl.string(G.t['1+boPj']),
               topic: t.name,
-              location: (0, x.m)(n, !0),
+              location: (0, A.m)(n, !0),
               locationIcon: (0, i.jsx)(u._tJ, {
                   size: 'custom',
                   color: 'currentColor',

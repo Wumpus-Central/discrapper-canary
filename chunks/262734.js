@@ -70,20 +70,20 @@ function y(e) {
     let T = I.width / Math.max(I.height, 1) < b.I0,
         P = 0,
         j = 0,
-        A = (0, c.Z)(null == n ? void 0 : n.id);
-    if (!A) {
+        x = (0, c.Z)(null == n ? void 0 : n.id);
+    if (!x) {
         let e = I.width,
             t = I.height;
         T ? ((t = I.width / b.I0) > I.height && (e = (t = I.height) * b.I0), (j = (I.height - t) / 2)) : ((e = Math.min(I.height * b.I0)) > I.width && (t = (e = I.width) / b.I0), (P = (I.width - e) / 2));
     }
-    let x = b.MI.NO_CHAT;
+    let A = b.MI.NO_CHAT;
     if (null == n) return null;
     let Z = (0, f.ro)(t);
     return (0, r.jsx)(o.f6W, {
         theme: m.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(O.wrapper, E[x], e),
+                className: a()(O.wrapper, E[A], e),
                 ref: y,
                 style: {},
                 children: [
@@ -112,7 +112,7 @@ function y(e) {
                     (0, r.jsx)('div', {
                         className: O.activityPanelContainer,
                         children: (0, r.jsx)('div', {
-                            className: a()(O.activityContainer, { [O.activityContainerNoMargin]: A }),
+                            className: a()(O.activityContainer, { [O.activityContainerNoMargin]: x }),
                             style: {
                                 paddingLeft: P,
                                 paddingRight: P,

@@ -82,6 +82,7 @@ class d extends c {
                 return o.ANM.SEARCH_TABS_DMS;
             case o.aib.GUILD_CHANNEL:
             case o.aib.GUILD:
+            case o.aib.THREAD:
                 if (null == this.searchId || '' === this.searchId) return;
                 return o.ANM.SEARCH_TABS_GUILD(this.searchId);
             case o.aib.CHANNEL:

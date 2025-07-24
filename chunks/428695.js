@@ -50,17 +50,17 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                   className: a()(f.title, { [f.noImageTitle]: null == o }, { [f.center]: N }),
                   children: n
               }));
-        let A = null;
+        let x = null;
         'function' == typeof l
-            ? (A = l())
+            ? (x = l())
             : null != l &&
-              (A = (0, r.jsx)(c.Text, {
+              (x = (0, r.jsx)(c.Text, {
                   className: a()({ [f.center]: N }),
                   variant: 'text-sm/normal',
                   color: 'text-muted',
                   children: l
               }));
-        let x = null != _ ? ''.concat(_, 'px') : '16px';
+        let A = null != _ ? ''.concat(_, 'px') : '16px';
         return (0, r.jsxs)('div', {
             className: a()(f.container, T),
             children: [
@@ -83,8 +83,8 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                         className: f.imageContainer,
                         style: {
                             marginTop: ''.concat(O, 'px'),
-                            marginLeft: x,
-                            marginRight: x
+                            marginLeft: A,
+                            marginRight: A
                         },
                         children: (0, r.jsx)('img', {
                             className: f.image,
@@ -95,7 +95,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                     }),
                 (0, r.jsxs)('div', {
                     className: f.message,
-                    children: [j, A, P]
+                    children: [j, x, P]
                 })
             ]
         });

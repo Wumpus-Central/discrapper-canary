@@ -84,7 +84,9 @@ class h extends i.Z {
                 primarySkuId: e.primary_sku_id,
                 bot: null != e.bot ? new s.Z(e.bot) : null,
                 thirdPartySkus: e.third_party_skus,
-                roleConnectionsVerificationUrl: e.role_connections_verification_url
+                roleConnectionsVerificationUrl: e.role_connections_verification_url,
+                parentId: e.parent_id,
+                connectionEntrypointUrl: e.connection_entrypoint_url
             })
         );
     }
@@ -129,8 +131,8 @@ class h extends i.Z {
             : null;
     }
     constructor(e) {
-        var t, n;
-        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'type', void 0), c(this, 'coverImage', void 0), c(this, 'primarySkuId', void 0), c(this, 'bot', void 0), c(this, 'splash', void 0), c(this, 'thirdPartySkus', void 0), c(this, 'isMonetized', void 0), c(this, 'isVerified', void 0), c(this, 'roleConnectionsVerificationUrl', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.splash = e.splash), (this.primarySkuId = e.primarySkuId), (this.thirdPartySkus = null != (t = e.thirdPartySkus) ? t : []), (this.description = e.description), (this.bot = e.bot), (this.coverImage = e.coverImage), (this.type = e.type), (this.isMonetized = e.is_monetized), (this.isVerified = null != (n = e.is_verified) ? n : e.isVerified), (this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl));
+        var t, n, r, i, a, o;
+        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'type', void 0), c(this, 'coverImage', void 0), c(this, 'primarySkuId', void 0), c(this, 'bot', void 0), c(this, 'splash', void 0), c(this, 'thirdPartySkus', void 0), c(this, 'isMonetized', void 0), c(this, 'isVerified', void 0), c(this, 'roleConnectionsVerificationUrl', void 0), c(this, 'parentId', void 0), c(this, 'connectionEntrypointUrl', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.splash = e.splash), (this.primarySkuId = e.primarySkuId), (this.thirdPartySkus = null != (t = e.thirdPartySkus) ? t : []), (this.description = e.description), (this.bot = e.bot), (this.coverImage = e.coverImage), (this.type = e.type), (this.isMonetized = null != (n = e.is_monetized) ? n : e.isMonetized), (this.isVerified = null != (r = e.is_verified) ? r : e.isVerified), (this.roleConnectionsVerificationUrl = null != (i = e.role_connections_verification_url) ? i : e.roleConnectionsVerificationUrl), (this.parentId = null != (a = e.parent_id) ? a : e.parentId), (this.connectionEntrypointUrl = null != (o = e.connection_entrypoint_url) ? o : e.connectionEntrypointUrl));
     }
 }
 class m extends h {

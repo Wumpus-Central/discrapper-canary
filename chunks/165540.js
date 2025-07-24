@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,7 +39,7 @@ let S = i.forwardRef(function (e, t) {
         let S = i.useCallback(() => {
                 (b ? d.yT(h.ti.DISMISSED) : ((0, _.Q3)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), x());
             }, [b, f, x]),
-            I = (0, r.jsx)(y, {
+            P = (0, r.jsx)(y, {
                 size: 'refresh_sm',
                 color: 'currentColor'
             });
@@ -94,7 +94,7 @@ let S = i.forwardRef(function (e, t) {
                     },
                     C
                 )),
-                (l = l = { children: I }),
+                (l = l = { children: P }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -111,7 +111,7 @@ let S = i.forwardRef(function (e, t) {
             )
         });
     }),
-    I = i.memo(function (e) {
+    P = i.memo(function (e) {
         let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
             s = i.useRef(null),
             c = (0, m.R)({

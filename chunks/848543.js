@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -67,7 +67,7 @@ function j(e, t) {
         e
     );
 }
-function A(e) {
+function x(e) {
     var { channel: t } = e,
         l = (function (e, t) {
             if (null == e) return {};
@@ -88,10 +88,10 @@ function A(e) {
             }
             return i;
         })(e, ['channel']);
-    let A = i.useRef(null),
-        { mute: x, suppress: Z } = (0, _.Z)(t),
+    let x = i.useRef(null),
+        { mute: A, suppress: Z } = (0, _.Z)(t),
         w = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
-        L = x || Z || w,
+        L = A || Z || w,
         [R, D] = i.useState(!1),
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
@@ -124,7 +124,7 @@ function A(e) {
         } = (0, c.j)(),
         K = (e) =>
             (0, r.jsx)(d.yRy, {
-                targetElementRef: A,
+                targetElementRef: x,
                 animation: d.yRy.Animation.FADE,
                 shouldShow: R,
                 position: 'top',
@@ -146,7 +146,7 @@ function A(e) {
                 },
                 children: (t) =>
                     (0, r.jsx)('div', {
-                        ref: A,
+                        ref: x,
                         children: (0, r.jsx)(
                             u.zx,
                             j(
@@ -200,8 +200,8 @@ function A(e) {
         (0, r.jsx)(f.Gt, {
             value: B,
             children: (0, r.jsx)(d.ua7, {
-                targetElementRef: A,
-                text: x ? N.intl.string(N.t['Ox4/zc']) : Z ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
+                targetElementRef: x,
+                text: A ? N.intl.string(N.t['Ox4/zc']) : Z ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
                 children: (e) => K(e)
             })
         })

@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(77987),
     P = n(679891),
     j = n(491575),
-    A = n(954709),
-    x = n(644679),
+    x = n(954709),
+    A = n(644679),
     Z = n(403763),
     w = n(314533),
     L = n(9029),
@@ -80,8 +80,8 @@ var r = n(255367),
     eT = n(377368),
     eP = n(262702),
     ej = n(639033),
-    eA = n(479313),
-    ex = n(911560),
+    ex = n(479313),
+    eA = n(911560),
     eZ = n(703016),
     ew = n(892001),
     eL = n(497805),
@@ -485,14 +485,14 @@ class ts extends i.PureComponent {
             eO.Z.initialize(),
             em.Z.initialize(),
             k.Z.initialize(),
-            A.Z.initialize(),
             x.Z.initialize(),
+            A.Z.initialize(),
             C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange)));
     }
     componentWillUnmount() {
-        (eI.Z.terminate(), eU.Z.terminate(), eb.Z.terminate(), eg.Z.terminate(), P.Z.terminate(), v.ZP.terminate(), V.ZP.terminate(), eM.Z.terminate(), y.Z.terminate(), e_.Z.terminate(), ef.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), G.Z.terminate(), ea.Z.terminate(), O.Z.terminate(), eO.Z.terminate(), eC.Z.terminate(), eT.Z.terminate(), ep.Z.terminate(), ed.Z.terminate(), eh.Z.terminate(), w.Z.terminate(), L.Z.terminate(), em.Z.terminate(), k.Z.terminate(), H.Z.terminate(), A.Z.terminate(), x.Z.terminate(), C.Z.terminate(), F.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten());
+        (eI.Z.terminate(), eU.Z.terminate(), eb.Z.terminate(), eg.Z.terminate(), P.Z.terminate(), v.ZP.terminate(), V.ZP.terminate(), eM.Z.terminate(), y.Z.terminate(), e_.Z.terminate(), ef.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), G.Z.terminate(), ea.Z.terminate(), O.Z.terminate(), eO.Z.terminate(), eC.Z.terminate(), eT.Z.terminate(), ep.Z.terminate(), ed.Z.terminate(), eh.Z.terminate(), w.Z.terminate(), L.Z.terminate(), em.Z.terminate(), k.Z.terminate(), H.Z.terminate(), x.Z.terminate(), A.Z.terminate(), C.Z.terminate(), F.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten());
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -531,7 +531,7 @@ class ts extends i.PureComponent {
                                 messageId: o
                             }));
                         let { summaryId: e } = (0, l.parse)(t);
-                        null != e && eA.ZP.setSelectedSummary(i, e);
+                        null != e && ex.ZP.setSelectedSummary(i, e);
                     }
                     if (null != s && h) {
                         let e = eB.ZP.getCurrentSidebarChannelId(n) !== s,
@@ -573,7 +573,7 @@ class ts extends i.PureComponent {
         if (null != i && (0, ey.cq)(i) && !(0, e8.AB)(i) && a) {
             let n = eV.Z.getChannel(i);
             if (null == n)
-                ex.Z.loadThread(i).then(() =>
+                eA.Z.loadThread(i).then(() =>
                     to({
                         channelId: i,
                         guildId: r,
@@ -589,7 +589,7 @@ class ts extends i.PureComponent {
                 if (!((0, ey.cq)(l) && !(0, e8.AB)(i))) return null;
                 let n = eV.Z.getChannel(l);
                 if (null == n)
-                    ex.Z.loadThread(l).then(() =>
+                    eA.Z.loadThread(l).then(() =>
                         to({
                             channelId: l,
                             guildId: r,

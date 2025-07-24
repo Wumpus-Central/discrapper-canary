@@ -15,8 +15,8 @@ let l = 'custom-theme-background',
     u = 0.9,
     d = 30,
     _ = 0.7,
-    f = 25,
-    p = 0.35,
+    f = 60,
+    p = 0.4,
     h = 30,
     m = -0.2,
     g = 30,
@@ -36,7 +36,7 @@ function O(e, t, n, r) {
             dark: i()(v).set('hsl.s', 1).set('hsl.l', c)
         },
         N = 100 - n,
-        C = '\n      --custom-theme-background: '.concat(T, ';\n      ', '--custom-background-gradient-chat-opacity-base-light', ': 0.95;\n      ', '--custom-background-gradient-highest-opacity-base-light', ': 1.0;\n      ', '--custom-background-gradient-opacity-mix-amount', ': ').concat(((d + _ * N) / 100).toFixed(2), ';\n    '),
+        C = '\n      --custom-theme-background: '.concat(T, ';\n      ', '--custom-background-gradient-chat-opacity-base-light', ': 0.95;\n      ', '--custom-background-gradient-highest-opacity-base-light', ': 1.0;\n      ', '--custom-background-gradient-opacity-mix-amount', ': ').concat(((d + _ * N) / 100).toFixed(2), ';\n      ', '--custom-theme-border-color-amount', ': 5%;\n      '),
         R = S
             ? '\n      '
                   .concat(s.Yk.THEME_BASE_MIX_AMOUNT, ': ')

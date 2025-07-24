@@ -36,7 +36,7 @@ function j(e, t, n, r) {
         return (l.attach('useSound'), () => l.detach());
     });
 }
-function A() {
+function x() {
     return (
         j(
             [E.Z, I.Z],
@@ -56,7 +56,7 @@ function A() {
         null
     );
 }
-function x() {
+function A() {
     return (
         j(
             [E.Z, I.Z],
@@ -328,6 +328,6 @@ function B() {
 }
 function V() {
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(A, {}), (0, r.jsx)(x, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {}), (0, r.jsx)(R, {}), (0, r.jsx)(k, {}), (0, r.jsx)(U, {}), (0, r.jsx)(M, {}), (0, r.jsx)(G, {}), (0, r.jsx)(L, {}), (0, r.jsx)(D, {}), (0, r.jsx)(B, {})]
+        children: [(0, r.jsx)(x, {}), (0, r.jsx)(A, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {}), (0, r.jsx)(R, {}), (0, r.jsx)(k, {}), (0, r.jsx)(U, {}), (0, r.jsx)(M, {}), (0, r.jsx)(G, {}), (0, r.jsx)(L, {}), (0, r.jsx)(D, {}), (0, r.jsx)(B, {})]
     });
 }

@@ -113,12 +113,12 @@ function P(e) {
                 [n.location, t]
             );
         })(e),
-        A = [];
+        x = [];
     for (let e of j) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
-            A.push(
+            x.push(
                 (function (e, t) {
                     let { canJoin: n, activity: i, activityUser: l } = e;
                     if (!n || null == i) return null;
@@ -153,5 +153,5 @@ function P(e) {
                 })(e, n)
             );
     }
-    return [P, ...A];
+    return [P, ...x];
 }

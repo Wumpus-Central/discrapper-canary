@@ -29,7 +29,7 @@ function v(e) {
             guildId: j
         } = e,
         [O, E] = r.useState(!1),
-        { requestId: S, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
+        { requestId: S, entries: P, impressionCappedEntryIds: I, hasLeaderboardEntry: Z } = (0, m.Z)(v),
         T = (0, i.e7)([p.Z], () => p.Z.hidden),
         N = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
@@ -38,9 +38,9 @@ function v(e) {
         M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
         [D, k, L, U] = r.useMemo(() => {
             let e;
-            if (null == I || 0 === I.length || null == S || !M) return [t, n, x];
-            let r = O ? I.length : Z ? 4 : 3,
-                i = I.slice(0, r);
+            if (null == P || 0 === P.length || null == S || !M) return [t, n, x];
+            let r = O ? P.length : Z ? 4 : 3,
+                i = P.slice(0, r);
             e = T
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
@@ -69,15 +69,15 @@ function v(e) {
                     });
                 },
                 expanded: O,
-                expandedCount: I.length,
+                expandedCount: P.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, I, O, t, j, S, n, x, T, M, Z]),
+        }, [v, P, O, t, j, S, n, x, T, M, Z]),
         B = r.useRef(0),
-        F = r.useRef(I),
+        F = r.useRef(P),
         H = r.useRef(void 0),
-        G = r.useRef({ impressionCappedEntryIds: P }),
+        G = r.useRef({ impressionCappedEntryIds: I }),
         V = r.useCallback(
             (e) => {
                 var t;
@@ -89,11 +89,11 @@ function v(e) {
         );
     return (
         r.useEffect(() => {
-            F.current = I;
-        }, [I]),
-        r.useEffect(() => {
-            G.current = { impressionCappedEntryIds: P };
+            F.current = P;
         }, [P]),
+        r.useEffect(() => {
+            G.current = { impressionCappedEntryIds: I };
+        }, [I]),
         r.useEffect(
             () => (
                 (B.current = 0),

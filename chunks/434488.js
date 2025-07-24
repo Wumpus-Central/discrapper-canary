@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(981631),
     E = n(388032),
     S = n(413384),
-    I = n(359165);
-function P(e) {
+    P = n(359165);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -136,7 +136,7 @@ function N(e) {
                             })(e, ['onClick']);
                         return (0, r.jsx)(
                             u.P3F,
-                            Z(P({}, n), {
+                            Z(I({}, n), {
                                 className: S.clickableTile,
                                 onClick: () => {
                                     (null == t || t(), d());
@@ -190,7 +190,7 @@ function A(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        Z(P({}, n), {
+                        Z(I({}, n), {
                             guild: l,
                             channel: t,
                             source: O.t4x.ACTIVITY_ENTRY_POINT_TILE
@@ -219,7 +219,7 @@ function A(e) {
                     className: a()(S.root, S.singleUserRoot, e),
                     children: [
                         (0, r.jsx)('img', {
-                            src: I,
+                            src: P,
                             className: S.art,
                             alt: ''
                         }),

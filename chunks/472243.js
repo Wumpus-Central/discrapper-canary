@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+(n.d(t, { Z: () => S }), n(704826), n(35282));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -68,35 +68,37 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+let I = /<(a?):(\w+):(\d+)>/g,
+    T = (e) => e.replace(I, 'x').length;
+function S(e) {
     var t, n, i, b;
-    let { type: O, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: A } = e,
-        N = (0, o.e7)([_.default], () => f.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
-        C = (0, u.Z)(),
-        R = null != T ? T : C,
-        P = null != (b = null != S ? S : T) ? b : C / 10,
-        w = I.length,
-        D = null != O.upsellLongMessages && (null != w ? w : 0) > h.J6R && N,
-        L = null != O.upsellLongMessages && !N,
-        x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
-        M = R - w,
-        k = M > P,
-        j = M < 0 && x,
-        U = 0 === M ? g.intl.string(g.t.tU6YQ0) : M > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: M }) : g.intl.string(g.t.YSRIqa),
-        { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && M >= 0) || !k || (L && !k))) return null;
-    let B = M >= 0;
+    let { type: O, textValue: I, maxCharacterCount: S, showRemainingCharsAfterCount: A, className: N, parseCustomEmojisForCharCount: C } = e,
+        R = (0, o.e7)([_.default], () => f.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
+        P = (0, u.Z)(),
+        w = null != S ? S : P,
+        D = null != (b = null != A ? A : S) ? b : P / 10,
+        L = C ? T(I) : I.length,
+        x = null != O.upsellLongMessages && (null != L ? L : 0) > h.J6R && R,
+        M = null != O.upsellLongMessages && !R,
+        k = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
+        j = w - L,
+        U = j > D,
+        G = j < 0 && k,
+        B = 0 === j ? g.intl.string(g.t.tU6YQ0) : j > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: j }) : g.intl.string(g.t.YSRIqa),
+        { analyticsLocations: V } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
+    if (!((x && j >= 0) || !U || (M && !U))) return null;
+    let F = j >= 0;
     return (0, r.jsx)(c.Gt, {
-        value: G,
+        value: V,
         children: (0, r.jsxs)('div', {
-            className: a()(A, E.characterCount),
+            className: a()(N, E.characterCount),
             children: [
                 (0, r.jsxs)('div', {
                     className: E.flairContainer,
                     children: [
-                        D && B
+                        x && F
                             ? (0, r.jsx)(s.ua7, {
-                                  text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: R }),
+                                  text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: w }),
                                   position: 'top',
                                   children: (e) =>
                                       (0, r.jsx)(
@@ -112,10 +114,10 @@ function I(e) {
                                       )
                               })
                             : null,
-                        k || j
+                        U || G
                             ? null
                             : (0, r.jsx)(s.ua7, {
-                                  text: U,
+                                  text: B,
                                   position: 'top',
                                   children: (e) =>
                                       (0, r.jsx)(
@@ -130,20 +132,20 @@ function I(e) {
                                                   e
                                               ),
                                               {
-                                                  color: B ? 'text-default' : 'text-danger',
-                                                  children: M
+                                                  color: F ? 'text-default' : 'text-danger',
+                                                  children: j
                                               }
                                           )
                                       )
                               })
                     ]
                 }),
-                (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: M }) }),
-                L && !k
+                (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: j }) }),
+                M && !U
                     ? (0, r.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,
-                          remaining: M
+                          remaining: j
                       })
                     : null
             ]

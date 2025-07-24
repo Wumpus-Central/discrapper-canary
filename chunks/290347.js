@@ -104,7 +104,7 @@ let S = [],
         });
     };
 function P(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: N, modalDismissibleContent: P, modalTopExtra: j, header: A, headerClassName: x, subHeader: Z, subHeaderExtra: w, featureCards: L, changeLogId: R, button: D, body: k } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: N, modalDismissibleContent: P, modalTopExtra: j, header: x, headerClassName: A, subHeader: Z, subHeaderExtra: w, featureCards: L, changeLogId: R, button: D, body: k } = e,
         { onClose: M, transitionState: U } = n,
         G = (0, p.Dt)(),
         B = L.length % 2 == 0,
@@ -210,8 +210,8 @@ function P(e) {
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'display-md',
-                            className: a()(v.headerText, x),
-                            children: A
+                            className: a()(v.headerText, A),
+                            children: x
                         }),
                         'video' === l.type
                             ? (0, r.jsx)(h.Z, {

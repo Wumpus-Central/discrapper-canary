@@ -26,7 +26,7 @@ var r = n(255367),
     T = n(981631),
     P = n(388032),
     j = n(396896);
-function A(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function A(e) {
     }
     return e;
 }
-function x(e) {
+function A(e) {
     var t;
     let { quest: n } = e,
         i = (0, h.B6)(n.config.expiresAt),
@@ -164,7 +164,7 @@ function Z(e) {
                   (0, r.jsxs)('div', {
                       className: j.utils,
                       children: [
-                          H ? (0, r.jsx)(x, { quest: O }) : (0, r.jsx)(y.Z, {}),
+                          H ? (0, r.jsx)(A, { quest: O }) : (0, r.jsx)(y.Z, {}),
                           (0, r.jsx)(v.r, {
                               quest: O,
                               questContent: g.jn.ACTIVITY_PANEL,
@@ -175,7 +175,7 @@ function Z(e) {
                                   var t, n;
                                   return (0, r.jsx)(
                                       c.P3F,
-                                      ((t = A({}, e)),
+                                      ((t = x({}, e)),
                                       (n = n =
                                           {
                                               'aria-label': P.intl.string(P.t.DEoVWV),
@@ -206,7 +206,7 @@ function Z(e) {
                   !H &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(x, { quest: O }),
+                              (0, r.jsx)(A, { quest: O }),
                               (0, r.jsx)('div', {
                                   className: j.instructions,
                                   children: (0, r.jsx)(c.Text, {
@@ -282,6 +282,6 @@ let w = function (e) {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(Z, A({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(Z, x({ nodeRef: t }, e))
     });
 };

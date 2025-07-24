@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(775451),
     P = n(526167),
     j = n(63063),
-    A = n(113434),
-    x = n(833435),
+    x = n(113434),
+    A = n(833435),
     Z = n(150560),
     w = n(672188),
     L = n(558652),
@@ -86,7 +86,7 @@ let q = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, U.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = Z.Z.getState().getUtmCurrentContext(),
-        m = (0, x._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
+        m = (0, A._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
         P = (0, D.z)((e) => e.registerAssetLoad),
         w = i.useRef(d);
     (i.useEffect(() => {
@@ -188,7 +188,7 @@ let q = function () {
                                   className: a()(F.bannerContainer, { [F.orbsContainer]: z }),
                                   children: [(0, r.jsx)('div', { className: a()(F.bannerGradient, { [F.orbsGradient]: z }) }), (0, r.jsx)(K, { onLoadComplete: P })]
                               }),
-                              (0, r.jsx)(O.Z, { children: e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
+                              (0, r.jsx)(O.Z, { children: e === x.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
                           ]
                       })
                   })
@@ -227,7 +227,7 @@ let q = function () {
                                                       onTabSelect: t
                                                   })
                                               }),
-                                              e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
+                                              e === x.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
                                           ]
                                       })
                                   ]

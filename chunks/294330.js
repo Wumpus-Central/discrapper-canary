@@ -1,7 +1,7 @@
 (n.d(t, {
     Eo: () => j,
     VD: () => T,
-    ZP: () => A
+    ZP: () => x
 }),
     n(388685),
     n(953529));
@@ -34,8 +34,8 @@ function T(e) {
         [f, g] = i.useState(!1),
         [O, T] = i.useState(!1),
         [P, j] = i.useState(!1),
-        A = i.useRef(null),
-        x = i.useCallback(async () => {
+        x = i.useRef(null),
+        A = i.useCallback(async () => {
             T(!0);
             try {
                 await l(t.id);
@@ -140,14 +140,14 @@ function T(e) {
                     })
                 }),
             (0, r.jsx)(s.$, {
-                innerRef: A,
+                innerRef: x,
                 onChange: Z,
                 active: !f,
                 threshold: 0.55,
                 children: (0, r.jsxs)(h.Z, {
-                    ref: A,
+                    ref: x,
                     className: I.card,
-                    onClick: x,
+                    onClick: A,
                     disabled: O,
                     onContextMenu: w,
                     'aria-label': v.intl.string(v.t['M9wQ+f']),
@@ -318,4 +318,4 @@ function j(e) {
         })
     });
 }
-let A = i.memo(P);
+let x = i.memo(P);

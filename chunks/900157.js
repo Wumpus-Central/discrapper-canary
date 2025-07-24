@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(664342),
     E = n(124368),
     S = n(981631),
-    I = n(388032),
-    P = n(591837);
+    P = n(388032),
+    I = n(591837);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -107,7 +107,7 @@ function N(e) {
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: L,
-                'aria-label': I.intl.string(I.t.Pwe8tL),
+                'aria-label': P.intl.string(P.t.Pwe8tL),
                 children: (0, _.ud)({
                     channel: A,
                     channelName: R,
@@ -125,7 +125,7 @@ function N(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: P.chat,
+                className: I.chat,
                 children: (0, r.jsx)(
                     m.Z,
                     {

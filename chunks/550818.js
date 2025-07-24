@@ -48,9 +48,9 @@ function O(e) {
 function E(e) {
     let { user: t, channel: n, onHide: E } = e,
         S = (0, m.ZP)(t.id),
-        I = (0, s.ZP)(),
-        P = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: Z } = (0, u.ZP)(P ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        P = (0, s.ZP)(),
+        I = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        { analyticsLocations: Z } = (0, u.ZP)(I ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         T = (0, h.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
@@ -69,7 +69,7 @@ function E(e) {
                 user: t,
                 displayProfile: S,
                 themeType: C.lY.SIDEBAR,
-                themeOverride: I,
+                themeOverride: P,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
                         className: v.container,
@@ -93,7 +93,7 @@ function E(e) {
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: x.intl.format(P ? x.t['8F+WNz'] : x.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
+                                                children: x.intl.format(I ? x.t['8F+WNz'] : x.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
@@ -101,13 +101,13 @@ function E(e) {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(y.Z, {
-                                                isBlocked: P,
+                                                isBlocked: I,
                                                 onClick: () => {
                                                     (E(),
                                                         (0, f.pQ)(
                                                             O(
                                                                 {
-                                                                    action: P ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                                    action: I ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                     analyticsLocations: Z
                                                                 },
                                                                 T

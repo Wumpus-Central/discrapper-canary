@@ -64,7 +64,7 @@ class l extends r.Z {
         return this.audio.noiseCancellation;
     }
     setAutomaticGainControl(e) {
-        this.audio.automaticGainControl = e;
+        this.audio.automaticGainControl = e.enabled;
     }
     setPTTActive(e) {
         this.audio.setPTTActive(e);

@@ -32,8 +32,7 @@ function _(e, t) {
                           left: -4,
                           right: -4
                       }
-                  },
-                  shouldShowSoundmojiCoachmark: !0
+                  }
               })
           });
 }

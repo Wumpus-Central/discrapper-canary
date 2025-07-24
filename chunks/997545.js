@@ -227,7 +227,8 @@ class x extends f.Z {
                                         builtInEchoCancellation: !0,
                                         echoCancellation: this.echoCancellation,
                                         noiseSuppression: this.noiseSuppression,
-                                        automaticGainControl: this.automaticGainControl,
+                                        automaticGainControl: this.automaticGainControl.enabled,
+                                        automaticGainControlConfig: this.automaticGainControl,
                                         noiseCancellation: this.noiseCancellation,
                                         voiceFilters: null != this.voiceFilterId
                                     }),
@@ -477,7 +478,11 @@ class x extends f.Z {
         ((this.noiseSuppression = e), (0, b.zS)().setTransportOptions({ noiseSuppression: this.noiseSuppression }));
     }
     setAutomaticGainControl(e) {
-        ((this.automaticGainControl = e), (0, b.zS)().setTransportOptions({ automaticGainControl: this.automaticGainControl }));
+        ((this.automaticGainControl = e),
+            (0, b.zS)().setTransportOptions({
+                automaticGainControl: this.automaticGainControl.enabled,
+                automaticGainControlConfig: this.automaticGainControl
+            }));
     }
     setNoiseCancellation(e) {
         ((this.noiseCancellation = e), (0, b.zS)().setTransportOptions({ noiseCancellation: this.noiseCancellation }));
@@ -949,7 +954,7 @@ class x extends f.Z {
             I(this, 'soundshareSentSpeakingEvent', !1),
             I(this, 'echoCancellation', !0),
             I(this, 'noiseSuppression', !0),
-            I(this, 'automaticGainControl', !0),
+            I(this, 'automaticGainControl', { enabled: !0 }),
             I(this, 'noiseCancellation', !1),
             I(this, 'voiceFilterId', null),
             I(this, 'experimentalEncoders', !1),

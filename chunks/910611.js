@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(63063),
     E = n(374386),
     S = n(946734),
-    I = n(99843),
-    P = n(372564),
+    P = n(99843),
+    I = n(372564),
     Z = n(984370),
     T = n(217314),
     N = n(981631),
@@ -226,7 +226,7 @@ function L(e) {
         case N.d4z.GROUP_DM:
             if (t.isManaged()) return x;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }), (0, r.jsx)(I.j, { channel: t }, 'channel-'.concat(t.id))]
+                children: [(0, r.jsx)(c.nn4, { children: w.intl.string(w.t['e5y+go']) }), (0, r.jsx)(P.j, { channel: t }, 'channel-'.concat(t.id))]
             });
         case N.d4z.GUILD_ANNOUNCEMENT:
         case N.d4z.GUILD_TEXT:
@@ -350,25 +350,27 @@ function L(e) {
     }
 }
 let U = (e) => {
-    let { channel: t } = e,
-        n = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        l = (0, o.e7)([v.default], () => v.default.getUser(t.getRecipientId())),
-        a = (0, E.G)(),
-        s = (0, o.e7)([_.Z], () => null != l && void 0 !== _.Z.getUserProfile(l.id));
+    var t, n, l;
+    let { channel: a } = e,
+        s = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        c = (0, o.e7)([v.default], () => v.default.getUser(a.getRecipientId())),
+        u = (0, E.G)(),
+        p = (0, o.e7)([_.Z], () => (null != c ? _.Z.getUserProfile(c.id) : null)),
+        h = null != p && (null != (t = null == p ? void 0 : p.fetchEndedAt) ? t : 0) > 0;
     return (i.useEffect(() => {
-        (null == n ? void 0 : n.isStaff()) &&
-            null != l &&
-            !l.isStaff() &&
-            (0, y.Z)(l.id, l.getAvatarURL(void 0, 80), {
+        (null == s ? void 0 : s.isStaff()) &&
+            null != c &&
+            !c.isStaff() &&
+            (0, y.Z)(c.id, c.getAvatarURL(void 0, 80), {
                 dispatchWait: !0,
                 withMutualGuilds: !0,
                 withMutualFriendsCount: !0
             });
-    }, [n, l]),
-    t.isDM() && (null == n ? void 0 : n.isStaff()) && null != l)
-        ? l.isStaff()
+    }, [s, c]),
+    a.isDM() && (null == s ? void 0 : s.isStaff()) && null != c)
+        ? c.isStaff()
             ? (0, r.jsx)(d.Z, { type: d.Z.Types.STAFF_ONLY_DM })
-            : a && s
+            : u && h && !(null != (l = null == (n = p.badges) ? void 0 : n.some((e) => e.id.startsWith('staff'))) && l)
               ? (0, r.jsx)(d.Z, { type: d.Z.Types.NOT_STAFF_WARNING })
               : null
         : null;
@@ -386,7 +388,7 @@ function B(e, t) {
         case N.d4z.GROUP_DM:
             return null != t
                 ? (0, r.jsx)(
-                      P.Z,
+                      I.Z,
                       {
                           channel: e,
                           guild: t

@@ -24,8 +24,8 @@ var i = n(657707),
     O = n(678738),
     E = n(638970),
     S = n(502762),
-    I = n(530),
-    P = n(827313),
+    P = n(530),
+    I = n(827313),
     Z = n(228168),
     T = n(981631),
     N = n(388032),
@@ -47,7 +47,7 @@ function w(e) {
     return (0, r.jsxs)('div', {
         className: A.body,
         children: [
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(P.Z, {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
@@ -60,7 +60,7 @@ function w(e) {
                     children: [
                         (0, r.jsx)(y.Z, { userId: t.id }),
                         !F &&
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: M,
                                 onOpenProfile: D

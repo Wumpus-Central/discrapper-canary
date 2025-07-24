@@ -54,8 +54,8 @@ var r,
     T = n(591759),
     P = n(996106),
     j = n(863141),
-    A = n(186901),
-    x = n(981631);
+    x = n(186901),
+    A = n(981631);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -130,13 +130,13 @@ function V(e, t) {
     let n = [],
         r = e.getGuildId();
     return (
-        [x.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
+        [A.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
                     (E.Z.whenReady(e.id, () => t()),
                         c.Z.fetchMessages({
                             channelId: e.id,
-                            limit: x.AQB
+                            limit: A.AQB
                         }));
                 })
             ),
@@ -236,21 +236,21 @@ function K(e, t, n) {
 }
 function q(e) {
     switch (e) {
-        case x.hes.RTC_CONNECTED:
-        case x.hes.RTC_CONNECTING:
-        case x.hes.RTC_DISCONNECTED:
+        case A.hes.RTC_CONNECTED:
+        case A.hes.RTC_CONNECTING:
+        case A.hes.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, 'VOICE_');
         default:
             return e;
     }
 }
 function X(e, t, n) {
-    return e === x.mFx.JOIN && null != t && null != t.id && null != n.join;
+    return e === A.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
 function Q(e) {
     return o.tn
         .get({
-            url: x.ANM.APPLICATION_RPC(e),
+            url: A.ANM.APPLICATION_RPC(e),
             oldFormErrors: !0,
             retries: 3,
             rejectWithError: !0
@@ -261,19 +261,19 @@ function Q(e) {
                 return t;
             },
             () => {
-                throw new P.Z({ closeCode: x.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new P.Z({ closeCode: A.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function J(e, t, n) {
     let r = d.Z.getApplication(t);
     if ('string' == typeof n)
-        if (e.transport === A.He.POST_MESSAGE) {
+        if (e.transport === x.He.POST_MESSAGE) {
             let e = (0, u.ZP)(t);
-            if (null == e || !B(n, [e])) throw new P.Z({ closeCode: x.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (null == e || !B(n, [e])) throw new P.Z({ closeCode: A.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
             let e = await Q(t);
-            if (((r = f.ZP.createFromServer(e)), !B(n, e.rpc_origins))) throw new P.Z({ closeCode: x.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (((r = f.ZP.createFromServer(e)), !B(n, e.rpc_origins))) throw new P.Z({ closeCode: A.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
     null == r && (r = f.ZP.createFromServer(await Q(t)));
     let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
@@ -290,7 +290,7 @@ async function $(e, t) {
     (null == n && ((n = new s.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process());
 }
 function ee(e, t) {
-    null == t && (e.authorization.scopes = [A.lH]);
+    null == t && (e.authorization.scopes = [x.lH]);
 }
 function et(e) {
     let t = O.Z.getSettings(),
@@ -344,9 +344,9 @@ function en(e, t) {
     };
 }
 function er(e) {
-    if (e !== A.He.POST_MESSAGE) throw new P.Z({ errorCode: x.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== x.He.POST_MESSAGE) throw new P.Z({ errorCode: A.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function ei(e) {
-    if (null == e.id) throw new P.Z({ errorCode: x.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new P.Z({ errorCode: A.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

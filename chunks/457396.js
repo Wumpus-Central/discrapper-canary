@@ -31,8 +31,8 @@ var r = n(255367),
     T = n(639119),
     P = n(655525),
     j = n(93237),
-    A = n(52188),
-    x = n(924540),
+    x = n(52188),
+    A = n(924540),
     Z = n(474486),
     w = n(497334),
     L = n(119850),
@@ -129,7 +129,7 @@ let V = (e) => {
             ((n = (0, r.jsx)(P.Z, {})), (E = 0));
         else if (eo) {
             let e = (0, j.$q)();
-            ((n = (0, r.jsx)(x._y, {
+            ((n = (0, r.jsx)(A._y, {
                 isTabSelected: z,
                 badgeCopy: G.intl.string(G.t.OS9KPj),
                 offerExpiresAt: !0 === e ? (null == en ? void 0 : en.expires_at) : null
@@ -137,7 +137,7 @@ let V = (e) => {
                 (E = 4));
         } else
             e_ === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
-                ? ((n = (0, r.jsx)(x._y, {
+                ? ((n = (0, r.jsx)(A._y, {
                       isTabSelected: z,
                       badgeCopy: G.intl.string(G.t.y2b7CA),
                       offerExpiresAt: null
@@ -152,7 +152,7 @@ let V = (e) => {
                       })),
                       (E = 1))
                     : null != er
-                      ? ((n = (0, r.jsx)(x.GN, {
+                      ? ((n = (0, r.jsx)(A.GN, {
                             userDiscount: er,
                             isTabSelected: z,
                             includesAmountOff: !1
@@ -165,8 +165,8 @@ let V = (e) => {
                                   onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: U.L.TAKE_ACTION })
                               })),
                               (E = 6))
-                            : el && ((n = (0, r.jsx)(A.k, { entryPoint: A.U.PrivateMessages })), z || (t = B.localizeBadge), (E = 5))
-                        : ((n = (0, r.jsx)(x.$H, {
+                            : el && ((n = (0, r.jsx)(x.k, { entryPoint: x.U.PrivateMessages })), z || (t = B.localizeBadge), (E = 5))
+                        : ((n = (0, r.jsx)(A.$H, {
                               trialOffer: en,
                               isTabSelected: z
                           })),
