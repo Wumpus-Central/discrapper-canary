@@ -11891,6 +11891,7 @@
   "uV2AkJ": "Added by $[!!{username}!!]({{usernameHook}}) on {linkedAtDate, date, medium}",
   "xPrJ+v": "Added by **!!{username}!!** on {linkedAtDate, date, medium}",
   "EyygeH": "Added on {linkedAtDate, date, medium}",
+  "EvDn1N": "Connect your account to **!!{name}!!** to send messages.",
   "DA9v5O": "Currently linked to **!!{channelName}!!**.",
   "LLWaxc": "Remove channel link",
   "6l2osr": "Are you sure you want to stop syncing messages with **!!{applicationName}!!**? You can set up a channel link again later.",
