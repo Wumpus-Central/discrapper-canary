@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => B }), n(388685));
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -10,213 +10,215 @@ var i = n(120356),
     u = n(110924),
     d = n(833664),
     _ = n(579630),
-    f = n(100527),
-    p = n(906732),
-    h = n(194082),
-    m = n(318374),
-    g = n(449605),
-    E = n(102172),
-    b = n(592125),
-    y = n(430824),
-    O = n(496675),
-    v = n(158776),
-    I = n(938475),
-    T = n(960870),
-    S = n(139793),
-    A = n(652853),
-    N = n(336383),
-    C = n(194811),
-    R = n(265386),
-    P = n(668700),
-    w = n(384298),
-    D = n(670451),
-    L = n(228168),
-    x = n(981631),
-    M = n(388032),
-    k = n(227832),
-    j = n(162509),
-    U = n(924482),
-    G = n(774797);
-function B(e) {
-    let { user: t, currentUser: n, stream: i, className: B, onClose: V } = e,
-        { themeType: F, theme: Z } = (0, A.z)(),
-        H = (0, o.e7)([y.Z], () => y.Z.getGuild(null == i ? void 0 : i.guildId)),
-        Y = (0, o.e7)([b.Z], () => b.Z.getChannel(null == i ? void 0 : i.channelId)),
-        W = (0, o.Wu)([I.ZP], () =>
-            null != Y
-                ? I.ZP.getVoiceStatesForChannel(Y).map((e) => {
+    f = n(622822),
+    p = n(100527),
+    h = n(906732),
+    m = n(194082),
+    g = n(318374),
+    E = n(449605),
+    b = n(102172),
+    y = n(592125),
+    O = n(430824),
+    v = n(496675),
+    I = n(158776),
+    T = n(938475),
+    S = n(960870),
+    A = n(139793),
+    N = n(652853),
+    C = n(336383),
+    R = n(194811),
+    P = n(265386),
+    w = n(668700),
+    D = n(384298),
+    L = n(670451),
+    x = n(228168),
+    M = n(981631),
+    k = n(388032),
+    j = n(227832),
+    U = n(162509),
+    G = n(924482),
+    B = n(774797);
+function V(e) {
+    let { user: t, currentUser: n, stream: i, className: V, onClose: F } = e,
+        { themeType: Z, theme: H } = (0, N.z)(),
+        Y = (0, o.e7)([O.Z], () => O.Z.getGuild(null == i ? void 0 : i.guildId)),
+        W = (0, o.e7)([y.Z], () => y.Z.getChannel(null == i ? void 0 : i.channelId)),
+        K = (0, o.Wu)([T.ZP], () =>
+            null != W
+                ? T.ZP.getVoiceStatesForChannel(W).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
                 : []
         ),
-        K = (0, o.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, _.Z)(e))),
-        { analyticsLocations: z } = (0, p.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        q = (0, T.Z)({
+        z = (0, o.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: q } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        X = (0, S.Z)({
             display: 'live',
-            voiceChannelId: null == Y ? void 0 : Y.id,
+            voiceChannelId: null == W ? void 0 : W.id,
             user: t,
             stream: i,
-            analyticsLocations: z
+            analyticsLocations: q
         }),
-        X = (0, S.Z)({
+        Q = (0, A.Z)({
             userId: t.id,
-            onAction: q
+            onAction: X
         }),
-        { previewUrl: Q, isLoading: J } = (0, g.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
-        [$, ee] = (0, E.wq)(Y),
-        et = (0, o.e7)([O.Z], () => null != Y && O.Z.canBasicChannel(x.S7T.CONNECT, Y)),
-        en = (0, u.Z)(J ? null : Q),
-        er = J || null == Q ? en : Q;
-    if (null == H || null == Y || !1 === i.discoverable) return null;
-    let ei = () => {
+        { previewUrl: J, isLoading: $ } = (0, E.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
+        [ee, et] = (0, b.wq)(W),
+        en = (0, f.Kt)() && (0, f.zd)(null == W ? void 0 : W.id),
+        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(M.S7T.CONNECT, W)),
+        ei = (0, u.Z)($ ? null : J),
+        ea = $ || null == J ? ei : J;
+    if (null == Y || null == W || !1 === i.discoverable) return null;
+    let eo = () => {
             let e = (e) => {
-                (e.stopPropagation(), $ && (q({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == V || V()));
+                (e.stopPropagation(), ee && (X({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == F || F()));
             };
-            return null == er && J
+            return null == ea && $
                 ? (0, r.jsx)('div', {
-                      className: j.preview,
+                      className: U.preview,
                       children: (0, r.jsx)(s.$jN, {})
                   })
-                : null == er
+                : null == ea || en
                   ? (0, r.jsxs)(s.P3F, {
-                        className: a()(j.preview, j.overlay, $ ? j.clickable : j.disabled),
+                        className: a()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
-                        'aria-label': (0, E.gR)(ee),
-                        'aria-disabled': !$,
+                        'aria-label': (0, b.gR)(et),
+                        'aria-disabled': !ee,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: Z === x.BRd.LIGHT ? G : U
+                                src: H === M.BRd.LIGHT ? B : G
                             }),
-                            F !== L.lY.MODAL &&
-                                F !== L.lY.MODAL_V2 &&
+                            Z !== x.lY.MODAL &&
+                                Z !== x.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
-                                            className: j.overlayText,
+                                            className: U.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, E.P9)(ee)
+                                            children: (0, b.P9)(et)
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: et ? M.intl.string(M.t.uQZTBQ) : M.intl.string(M.t.pgUTZG)
+                                            children: er ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG)
                                         })
                                     ]
                                 })
                         ]
                     })
                   : (0, r.jsxs)(s.P3F, {
-                        className: a()(j.preview, j.overlay, $ ? j.clickable : j.disabled),
+                        className: a()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
-                        'aria-label': (0, E.gR)(ee),
-                        'aria-disabled': !$,
+                        'aria-label': (0, b.gR)(et),
+                        'aria-disabled': !ee,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: er,
-                                className: j.image
+                                src: ea,
+                                className: U.image
                             }),
-                            F !== L.lY.MODAL &&
-                                F !== L.lY.MODAL_V2 &&
+                            Z !== x.lY.MODAL &&
+                                Z !== x.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
-                                            className: j.overlayText,
+                                            className: U.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, E.P9)(ee)
+                                            children: (0, b.P9)(et)
                                         }),
                                         (0, r.jsx)(s.gw7, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: j.clyde
+                                            className: U.clyde
                                         })
                                     ]
                                 })
                         ]
                     });
         },
-        ea = () =>
-            F !== L.lY.MODAL && F !== L.lY.MODAL_V2
+        es = () =>
+            Z !== x.lY.MODAL && Z !== x.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: k.details,
+                      className: j.details,
                       children: [
-                          (0, r.jsx)(R.Z, {
-                              channel: Y,
-                              guild: H,
-                              onAction: q,
-                              onClose: V
+                          (0, r.jsx)(P.Z, {
+                              channel: W,
+                              guild: Y,
+                              onAction: X,
+                              onClose: F
                           }),
-                          (0, r.jsx)(m.Z, {
-                              users: W,
-                              guildId: H.id,
-                              channelId: Y.id,
-                              maxUsers: P.W,
+                          (0, r.jsx)(g.Z, {
+                              users: K,
+                              guildId: Y.id,
+                              channelId: W.id,
+                              maxUsers: w.W,
                               size: s.EFr.SIZE_16,
                               onClick: (e) => {
-                                  (e.stopPropagation(), null == q || q({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
+                                  (e.stopPropagation(), null == X || X({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: 'text-muted'
                           }),
-                          F === L.lY.MODAL_V2 && es()
+                          Z === x.lY.MODAL_V2 && ec()
                       ]
                   }),
-        eo = () =>
-            F === L.lY.MODAL || F === L.lY.MODAL_V2
+        el = () =>
+            Z === x.lY.MODAL || Z === x.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(P.Z, {
+                : (0, r.jsx)(w.Z, {
                       user: t,
-                      guild: H,
-                      channel: Y,
-                      onAction: q,
-                      onClose: V
+                      guild: Y,
+                      channel: W,
+                      onAction: X,
+                      onClose: F
                   }),
-        es = () =>
+        ec = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: k.actions,
-                      children: (0, r.jsx)(w.Z, {
-                          channel: Y,
-                          onAction: q,
-                          onClose: V
+                      className: j.actions,
+                      children: (0, r.jsx)(D.Z, {
+                          channel: W,
+                          onAction: X,
+                          onClose: F
                       })
                   }),
-        el = null != K ? M.intl.formatToPlainString(M.t['4CQq9f'], { name: K.name }) : M.intl.string(M.t['Jpkr/v']);
-    return (0, r.jsx)(p.Gt, {
-        value: z,
-        children: (0, r.jsxs)(N.Z, {
-            ref: X,
-            className: B,
-            onAction: q,
-            onClose: V,
-            'aria-label': el,
+        eu = null != z ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: z.name }) : k.intl.string(k.t['Jpkr/v']);
+    return (0, r.jsx)(h.Gt, {
+        value: q,
+        children: (0, r.jsxs)(C.Z, {
+            ref: Q,
+            className: V,
+            onAction: X,
+            onClose: F,
+            'aria-label': eu,
             children: [
-                (0, r.jsx)(C.Z, {
-                    text: el,
-                    tags: (0, r.jsx)(h.ZP, { size: h.OH.SMALL }),
-                    contextMenu: (0, r.jsx)(D.Z, {
+                (0, r.jsx)(R.Z, {
+                    text: eu,
+                    tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL }),
+                    contextMenu: (0, r.jsx)(L.Z, {
                         display: 'live',
                         user: t,
-                        onClose: V
+                        onClose: F
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: k.body,
+                    className: j.body,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: k.content,
-                            children: [ei(), ea(), F === L.lY.MODAL && es()]
+                            className: j.content,
+                            children: [eo(), es(), Z === x.lY.MODAL && ec()]
                         }),
-                        eo()
+                        el()
                     ]
                 }),
-                F !== L.lY.MODAL && F !== L.lY.MODAL_V2 && es()
+                Z !== x.lY.MODAL && Z !== x.lY.MODAL_V2 && ec()
             ]
         })
     });
