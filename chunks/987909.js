@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(709054),
     b = n(838440),
     E = n(981631),
-    x = n(18485);
-function y(e) {
+    y = n(18485);
+function x(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (_.default.extractTimestamp(n.id) + _.default.extractTimestamp(r.id)) % t.length;
     return t[i];
@@ -28,7 +28,7 @@ function v(e) {
         [E, v] = i.useState(!1),
         C = i.useMemo(
             () =>
-                y({
+                x({
                     assets: m,
                     currentUser: t,
                     message: l
@@ -37,7 +37,7 @@ function v(e) {
         ),
         O = i.useMemo(
             () =>
-                y({
+                x({
                     assets: d,
                     currentUser: t,
                     message: l
@@ -129,15 +129,15 @@ function v(e) {
           })
         : (0, r.jsxs)(o.zx, {
               'data-migration-pending': !0,
-              className: x.CTAMessageButtonOuter,
-              innerClassName: x.CTAMessageButton,
+              className: y.CTAMessageButtonOuter,
+              innerClassName: y.CTAMessageButton,
               color: o.Tt.PRIMARY,
               onMouseEnter: () => v(!0),
               onMouseLeave: () => v(!1),
               onClick: j,
               children: [
                   (0, r.jsx)(u.Z, {
-                      className: x.CTAMessageSticker,
+                      className: y.CTAMessageSticker,
                       isInteracting: E,
                       sticker: C,
                       size: 28
@@ -168,7 +168,7 @@ function C(e) {
         });
     return null != c && u
         ? (0, r.jsx)('div', {
-              className: x.CTAMessage,
+              className: y.CTAMessage,
               children: (0, r.jsx)(v, {
                   currentUser: c,
                   channel: t,

@@ -11,14 +11,14 @@ var l = n(255367),
     m = n(318766),
     f = n(907040),
     h = n(246133),
-    b = n(695346),
-    p = n(293273),
+    p = n(695346),
+    b = n(293273),
     S = n(594174),
     j = n(626135),
     g = n(720449),
     O = n(684269),
-    v = n(678865),
-    x = n(745579),
+    x = n(678865),
+    v = n(745579),
     C = n(875425),
     _ = n(981631),
     T = n(185923),
@@ -185,7 +185,7 @@ class I extends a.PureComponent {
                 options: C.wS.map((t) => ({
                     value: t,
                     key: t,
-                    label: (0, x.Z)(t)
+                    label: (0, v.Z)(t)
                 })),
                 onChange: this.handleChangeClearAfter
             })
@@ -273,7 +273,7 @@ class I extends a.PureComponent {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
                 clearAfter: (0, O.Z)(),
-                status: (0, v.Z)()
+                status: (0, x.Z)()
             }),
             w(this, 'handleClearStatus', () => {
                 this.setState({
@@ -312,7 +312,7 @@ class I extends a.PureComponent {
             w(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: l, clearAfter: a, status: r } = this.state,
-                    i = b.co.getSetting();
+                    i = p.co.getSetting();
                 (i !== r &&
                     (0, h.Z)({
                         nextStatus: r,
@@ -346,13 +346,13 @@ class I extends a.PureComponent {
     }
 }
 let Z = o.ZP.connectStores(
-    [p.Z, S.default],
+    [b.Z, S.default],
     () => {
         let t = S.default.getCurrentUser();
         return (
             i()(null != t, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: p.Z.getCustomStatusActivity(),
+                customStatus: b.Z.getCustomStatusActivity(),
                 user: t
             }
         );

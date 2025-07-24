@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(255269),
     b = n(937889),
     E = n(804063),
-    x = n(703656),
-    y = n(359110),
+    y = n(703656),
+    x = n(359110),
     v = n(903488),
     C = n(695346),
     O = n(131704),
@@ -80,13 +80,13 @@ function U(e, t) {
 let F = i.memo(function (e) {
     var t;
     let { search: n, searchId: l, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: h, ignoreCount: g, onPageChange: _, onClick: b } = e,
-        { offset: y, totalResults: C, isSearching: O, showBlockedResults: I } = n,
+        { offset: x, totalResults: C, isSearching: O, showBlockedResults: I } = n,
         S = i.useCallback(
             (e, t) => {
                 if ((null == b || b(e, t), (0, E.Z)(e))) {
                     let t = j.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    (c.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: v.Z.getAnalyticsId(l) }), (0, x.uL)(L.Z5c.CHANNEL(n, e.channel_id, e.id)));
+                    (c.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: v.Z.getAnalyticsId(l) }), (0, y.uL)(L.Z5c.CHANNEL(n, e.channel_id, e.id)));
                 }
             },
             [b, l]
@@ -158,7 +158,7 @@ let F = i.memo(function (e) {
                     scrollTo: m,
                     searchId: l,
                     renderEmbeds: a,
-                    offset: y,
+                    offset: x,
                     jumpToMessage: S,
                     listNavigator: H,
                     favoriteSearch: z
@@ -200,7 +200,7 @@ let F = i.memo(function (e) {
                 !z &&
                 (0, r.jsx)(Z.Z, {
                     onPageChange: _,
-                    offset: y,
+                    offset: x,
                     totalCount: C,
                     pageSize: L.vpv
                 })
@@ -242,13 +242,13 @@ function B(e) {
 }
 function G(e) {
     var t, n, l;
-    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: x, renderEmbeds: v, offset: O, jumpToMessage: N, listNavigator: w, favoriteSearch: Z } = e,
+    let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: E, searchId: y, renderEmbeds: v, offset: O, jumpToMessage: N, listNavigator: w, favoriteSearch: Z } = e,
         k = C.cC.useSetting(),
         F = (0, g.p)(),
         G = i.useCallback((e) => {
             if (e === P.Z.getChannelId()) return;
             let t = j.Z.getChannel(e);
-            null != t && (S.Z.can(L.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, y.Kh)(t.id);
+            null != t && (S.Z.can(L.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, x.Kh)(t.id);
         }, []),
         H = null != a ? (0, m.F6)(a, A.default, T.Z, !1) : '???',
         V = Z && null != a.guild_id ? (null == (t = I.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
@@ -320,7 +320,7 @@ function G(e) {
                             },
                             totalResults: p,
                             scrollTo: E,
-                            searchId: x,
+                            searchId: y,
                             renderEmbeds: v,
                             searchOffset: O,
                             pageResultsLength: o.length,

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => x,
+    Z: () => y,
     m: () => E
 });
 var r = n(255367),
@@ -124,7 +124,7 @@ function b(e) {
     });
 }
 function E(e) {
-    let { product: t, guildId: n, showEditProduct: l, showUnpublishProduct: a, showTestDownload: s, showCopyLink: c, showDeleteProduct: u, showReportProduct: d, onEditProduct: p, onUnpublishProduct: m, onDeleteProduct: E, onCopyProductLink: x, onTestDownload: y, onReportProduct: v } = e,
+    let { product: t, guildId: n, showEditProduct: l, showUnpublishProduct: a, showTestDownload: s, showCopyLink: c, showDeleteProduct: u, showReportProduct: d, onEditProduct: p, onUnpublishProduct: m, onDeleteProduct: E, onCopyProductLink: y, onTestDownload: x, onReportProduct: v } = e,
         C = i.useRef(null);
     return (0, r.jsx)('div', {
         onClick: (e) => {
@@ -151,8 +151,8 @@ function E(e) {
                         onEditProduct: p,
                         onUnpublishProduct: m,
                         onDeleteProduct: E,
-                        onCopyLink: x,
-                        onTestDownload: y,
+                        onCopyLink: y,
+                        onTestDownload: x,
                         onReportProduct: v
                     })
                 ),
@@ -178,8 +178,8 @@ function E(e) {
         })
     });
 }
-function x(e) {
-    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: l, onDeleteProduct: x, onCopyProductLink: y, onTestDownload: v, disabled: C = !1 } = e,
+function y(e) {
+    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: l, onDeleteProduct: y, onCopyProductLink: x, onTestDownload: v, disabled: C = !1 } = e,
         O = (0, c.U)(t, 600),
         j = null !== t.price_tier ? (0, u.T4)(t.price_tier, m.pK.USD) : void 0,
         I = (0, d.C)(t);
@@ -204,8 +204,8 @@ function x(e) {
                             showReportProduct: !1,
                             onEditProduct: i,
                             onUnpublishProduct: l,
-                            onDeleteProduct: x,
-                            onCopyLink: y,
+                            onDeleteProduct: y,
+                            onCopyLink: x,
                             onTestDownload: v,
                             onReportProduct: () => {}
                         })
@@ -271,8 +271,8 @@ function x(e) {
                             showReportProduct: !1,
                             onEditProduct: i,
                             onUnpublishProduct: l,
-                            onDeleteProduct: x,
-                            onCopyProductLink: y,
+                            onDeleteProduct: y,
+                            onCopyProductLink: x,
                             onTestDownload: v,
                             onReportProduct: () => {}
                         })

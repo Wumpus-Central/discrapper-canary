@@ -24,8 +24,8 @@ var r = n(512722),
     _ = n(58873),
     b = n(566006),
     E = n(869765),
-    x = n(314897),
-    y = n(592125),
+    y = n(314897),
+    x = n(592125),
     v = n(703558),
     C = n(607744),
     O = n(375954),
@@ -108,7 +108,7 @@ function L(e) {
 }
 function k(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
-        i = y.Z.getChannel(t);
+        i = x.Z.getChannel(t);
     if (null == i) return;
     if (g.Z.isLurking(i.guild_id))
         return void L({
@@ -150,7 +150,7 @@ async function U(e) {
         }),
         l = a().difference(i, r),
         o = a().difference(r, i),
-        c = x.default.getId(),
+        c = y.default.getId(),
         d = [
             ...l.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -182,7 +182,7 @@ async function U(e) {
 }
 async function F(e) {
     let { channelId: t, messageId: n } = e,
-        r = y.Z.getChannel(t);
+        r = x.Z.getChannel(t);
     if (null == r) return;
     if (g.Z.isLurking(r.guild_id))
         return void L({
@@ -248,7 +248,7 @@ async function F(e) {
 }
 async function B(e) {
     let { channelId: t, messageId: n } = e,
-        r = y.Z.getChannel(t);
+        r = x.Z.getChannel(t);
     if (null != r)
         return g.Z.isLurking(r.guild_id)
             ? void L({

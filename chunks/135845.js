@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(358595),
     b = n(981631),
     E = n(245335),
-    x = n(388032),
-    y = n(273254);
+    y = n(388032),
+    x = n(273254);
 function v(e) {
     let t,
         n,
@@ -55,15 +55,15 @@ function v(e) {
     }
     let B = null != v.channel ? (0, p.jD)(v.channel) : null,
         G = g.ZP.getName(k);
-    F && !R ? (l = D ? x.intl.string(x.t.oBLoZG) : x.intl.formatToPlainString(x.t['0QJmAw'], { name: G })) : ((t = x.intl.string(x.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = x.intl.string(x.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = D ? x.intl.string(x.t['4hyaHh']) : x.intl.formatToPlainString(x.t.QmlLEh, { name: G })));
-    let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : x.intl.formatToPlainString(x.t.u0vaDA, { guildName: O.name });
+    F && !R ? (l = D ? y.intl.string(y.t.oBLoZG) : y.intl.formatToPlainString(y.t['0QJmAw'], { name: G })) : ((t = y.intl.string(y.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = y.intl.string(y.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = D ? y.intl.string(y.t['4hyaHh']) : y.intl.formatToPlainString(y.t.QmlLEh, { name: G })));
+    let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : y.intl.formatToPlainString(y.t.u0vaDA, { guildName: O.name });
     return (0, r.jsxs)(d.Z, {
         children: [
-            (0, r.jsx)(d.Z.Header, { text: x.intl.string(x.t['wS+5WV']) }),
+            (0, r.jsx)(d.Z.Header, { text: y.intl.string(y.t['wS+5WV']) }),
             (0, r.jsxs)(d.Z.Body, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: y.headerLine,
+                        className: x.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
                                 guild: O,

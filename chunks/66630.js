@@ -11,14 +11,14 @@ var l = n(255367),
     m = n(100527),
     f = n(906732),
     h = n(318766),
-    b = n(907040),
-    p = n(594174),
+    p = n(907040),
+    b = n(594174),
     S = n(626135),
     j = n(644540),
     g = n(359588),
     O = n(368326),
-    v = n(720449),
-    x = n(684269),
+    x = n(720449),
+    v = n(684269),
     C = n(397416),
     _ = n(745579),
     T = n(74340),
@@ -40,14 +40,14 @@ function k(t) {
         H = (0, j.P)({ location: 'CustomStatusModalWithPreview' }),
         W = (0, g.Z)({ location: 'CustomStatusModalWithPreview' }),
         { analyticsLocations: z } = (0, f.ZP)(M, m.Z.CUSTOM_STATUS_MODAL),
-        V = (0, o.e7)([p.default], () => {
+        V = (0, o.e7)([b.default], () => {
             var t;
-            return null != (t = p.default.getCurrentUser()) ? t : null;
+            return null != (t = b.default.getCurrentUser()) ? t : null;
         }),
         G = (0, y.a)(),
         [K, q] = a.useState(null != (e = null == G ? void 0 : G.state) ? e : ''),
         [X, Q] = a.useState(null != (n = null == G ? void 0 : G.emoji) ? n : null),
-        [$, J] = a.useState((0, x.Z)()),
+        [$, J] = a.useState((0, v.Z)()),
         tt = a.useRef(null),
         te = a.useRef(null),
         tn = a.useRef(null),
@@ -97,7 +97,7 @@ function k(t) {
         },
         th = () => {
             $ !== L &&
-                ((0, v.Z)({
+                ((0, x.Z)({
                     text: K,
                     emojiInfo: X,
                     clearAfter: $,
@@ -108,7 +108,7 @@ function k(t) {
                 }),
                 k());
         },
-        tb = () =>
+        tp = () =>
             null == X
                 ? null
                 : () =>
@@ -118,7 +118,7 @@ function k(t) {
                           emojiName: X.name,
                           animated: !!X.animated
                       }),
-        tp = Y ? A.intl.string(A.t.rp0aho) : A.intl.string(A.t.UcdRn5),
+        tb = Y ? A.intl.string(A.t.rp0aho) : A.intl.string(A.t.UcdRn5),
         tS = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: r,
@@ -158,7 +158,7 @@ function k(t) {
                     (0, l.jsxs)(s.hjN, {
                         className: R.formGroup,
                         titleClassName: R.customStatusInputTitle,
-                        title: tp,
+                        title: tb,
                         children: [
                             W &&
                                 (0, l.jsx)('div', {
@@ -202,7 +202,7 @@ function k(t) {
                                             targetElementRef: te,
                                             renderPopout: (t) => {
                                                 let { closePopout: e } = t;
-                                                return (0, l.jsx)(b.Z, {
+                                                return (0, l.jsx)(p.Z, {
                                                     closePopout: e,
                                                     onSelectEmoji: (t) => {
                                                         let { emoji: n, willClose: l } = t;
@@ -251,7 +251,7 @@ function k(t) {
                                                             active: r,
                                                             className: R.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: tb()
+                                                            renderButtonContents: tp()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))

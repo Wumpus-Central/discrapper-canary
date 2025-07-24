@@ -35,8 +35,8 @@ var r = n(255367),
     _ = n(594174),
     b = n(585483),
     E = n(5967),
-    x = n(630388),
-    y = n(358085),
+    y = n(630388),
+    x = n(358085),
     v = n(51144),
     C = n(91047),
     O = n(50284),
@@ -100,12 +100,12 @@ function k(e, t) {
 function D(e, t, a, o) {
     let { id: c } = t,
         { id: u, flags: d } = e,
-        p = (0, x.yE)(d, I.iLy.EPHEMERAL),
+        p = (0, y.yE)(d, I.iLy.EPHEMERAL),
         m = (0, s.bp)();
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!y.isPlatformEmbedded) {
+            if (!x.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -261,21 +261,21 @@ function G(e) {
                 },
                 [t, n]
             )),
-        [E, x] = i.useState(a);
+        [E, y] = i.useState(a);
     g.current = E || g.current;
-    let y = i.useCallback(
+    let x = i.useCallback(
             (e) => {
-                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), x(!0)));
+                (s && (0, m.T6)(), E || (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0)));
             },
             [E, h, s, _]
         ),
         v = i.useCallback(() => {
-            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, h, !1), x(!1));
+            (b.S.dispatchKeyed(I.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1));
         }, [h]);
     return {
         hasHovered: g.current,
         isHovered: E,
-        handleMouseEnter: y,
+        handleMouseEnter: x,
         handleMouseLeave: v
     };
 }

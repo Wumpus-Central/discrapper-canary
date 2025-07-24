@@ -35,8 +35,8 @@ let E = new s.h(
                 return e.published ? -t : -t + 1000000000000;
             })(e)
     ),
-    x = [];
-class y extends (r = o.ZP.Store) {
+    y = [];
+class x extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = m[e]) ? t : 0;
@@ -46,7 +46,7 @@ class y extends (r = o.ZP.Store) {
     }
     getGuildProductsForGuild(e, t) {
         let { publishedOnly: n } = t;
-        return null == e ? x : E.values(n ? b(e) : _(e));
+        return null == e ? y : E.values(n ? b(e) : _(e));
     }
     getGuildProductFetchState(e) {
         var t;
@@ -58,15 +58,15 @@ class y extends (r = o.ZP.Store) {
     }
 }
 ((a = 'GuildProductsStore'),
-    (l = 'displayName') in y
-        ? Object.defineProperty(y, l, {
+    (l = 'displayName') in x
+        ? Object.defineProperty(x, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (y[l] = a));
-let v = new y(c.Z, {
+        : (x[l] = a));
+let v = new x(c.Z, {
     CONNECTION_OPEN: function () {
         (E.clear(), (m = {}), (f = {}), (h = {}));
     },

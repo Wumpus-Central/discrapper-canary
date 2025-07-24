@@ -285,10 +285,9 @@ let W = i.memo(
                                     }
                                 )
                             ),
-                            W ? null : et
+                            et
                         ]
-                    }),
-                    W ? et : null
+                    })
                 ]
             });
         },

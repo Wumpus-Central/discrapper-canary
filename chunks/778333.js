@@ -17,9 +17,9 @@ var r = n(255367),
     b = n(273254);
 function E(e) {
     var t;
-    let { invite: n, message: E, getAcceptInviteContext: x } = e,
-        y = (0, l.e7)([p.default], () => p.default.getId()),
-        v = (null == (t = n.inviter) ? void 0 : t.id) === y,
+    let { invite: n, message: E, getAcceptInviteContext: y } = e,
+        x = (0, l.e7)([p.default], () => p.default.getId()),
+        v = (null == (t = n.inviter) ? void 0 : t.id) === x,
         C = n.state === g.r2o.ACCEPTING,
         { analyticsLocations: O } = (0, c.ZP)(s.Z.INVITE_EMBED),
         j = (0, l.e7)([f.Z], () => {
@@ -49,12 +49,12 @@ function E(e) {
                 },
                 O
             );
-            let e = x('Invite Button Embed');
+            let e = y('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, O, x]);
+        }, [n, E, O, y]);
     if (null == n.inviter) return null;
     let T = j ? I : S,
         N = _.intl.string(_.t.ib7Ng4),

@@ -1,7 +1,5 @@
-n.d(t, { V: () => a });
-var i = n(818083),
-    r = n(355820);
-let s = (0, i.B)({
+n.d(t, { V: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_custom_status_edit_preview_mobile',
     label: 'Custom Status Edit Preview (Mobile)',
@@ -14,18 +12,8 @@ let s = (0, i.B)({
         }
     ]
 });
-function a(e) {
+function r(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        i = (0, r.A)({
-            location: t,
-            autoTrackExposure: n
-        }),
-        { enabled: a } = s.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                disable: i
-            }
-        );
-    return a;
+        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return r;
 }

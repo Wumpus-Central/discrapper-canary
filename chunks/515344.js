@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => x,
-    z: () => y
+    G: () => y,
+    z: () => x
 });
 var r = n(73800),
     i = n(442837),
@@ -49,7 +49,7 @@ function E(e) {
         selectedGuildId: s
     };
 }
-function x(e, t) {
+function y(e, t) {
     let { canViewApp: n, canOpenAppLauncher: i, isInstallable: l, customInstallUrl: c, installParams: u, integrationTypesConfig: d, selectedGuildId: p } = E(e);
     return r.useMemo(
         () =>
@@ -78,9 +78,9 @@ function x(e, t) {
         [e.id, i, n, c, u, d, l, t, p]
     );
 }
-function y(e) {
+function x(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
-        i = x(e);
+        i = y(e);
     return r.useMemo(
         () =>
             t && null != i

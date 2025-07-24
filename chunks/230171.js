@@ -24,8 +24,8 @@ var r = n(255367),
     _ = n(567409),
     b = n(706454),
     E = n(314897),
-    x = n(699516),
-    y = n(914010),
+    y = n(699516),
+    x = n(914010),
     v = n(594174),
     C = n(768581),
     O = n(433534),
@@ -41,8 +41,8 @@ var r = n(255367),
 function R(e) {
     let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
         { name: _, bot: b } = (t = (0, N.O)(t)),
-        x = null == b ? void 0 : b.id,
-        y = (0, f.ye)(t),
+        y = null == b ? void 0 : b.id,
+        x = (0, f.ye)(t),
         v = C.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
@@ -58,14 +58,14 @@ function R(e) {
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        V = null != x && y && H,
-        z = B && y,
+        V = null != y && x && H,
+        z = B && x,
         W = (0, A.G)(t),
         K = (0, A.z)(t),
         Y = i.useMemo(() => {
             let e = [];
             return (
-                y
+                x
                     ? (z &&
                           e.push({
                               label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
@@ -91,7 +91,7 @@ function R(e) {
                               onClick() {
                                   (0, m.W)({
                                       appId: t.id,
-                                      botId: x,
+                                      botId: y,
                                       analyticsLocations: D,
                                       customId: a,
                                       referrerId: R
@@ -101,8 +101,8 @@ function R(e) {
                     : null != K && e.push(K),
                 e
             );
-        }, [z, V, U, F, M, t.id, G, a, R, D, y, K, x]),
-        X = y ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
+        }, [z, V, U, F, M, t.id, G, a, R, D, x, K, y]),
+        X = x ? (0, r.jsx)(k, { app: t }) : (0, r.jsx)(L, { app: t });
     return (0, r.jsx)(I.W, {
         title: _,
         staticBannerSrc: O,
@@ -176,22 +176,22 @@ function k(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: l = 0 } = t,
         c = (0, o.e7)(
-            [y.Z],
+            [x.Z],
             () => {
                 var e;
-                return null != (e = y.Z.getGuildId()) ? e : void 0;
+                return null != (e = x.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         u = (0, _.N)(t.id),
         d = (0, o.Wu)(
-            [v.default, x.Z],
+            [v.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
                     let r = v.default.getUser(n.author_id),
-                        i = x.Z.isFriend(n.author_id);
+                        i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
                 return e;

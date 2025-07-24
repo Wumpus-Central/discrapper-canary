@@ -1,40 +1,49 @@
 n.d(t, {
-    $s: () => d,
-    Hg: () => u,
-    Kn: () => c
+    $s: () => u,
+    Hg: () => m,
+    Kn: () => d
 });
 var i = n(704215),
     r = n(266454),
-    s = n(533525),
-    a = n(796634),
-    l = n(388032);
-let o = (e) => {
-        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e;
+    s = n(53521),
+    a = n(533525),
+    l = n(796634),
+    o = n(388032);
+let c = (e) => {
+        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e,
+            a = s.Z.getCurrentConfig({ location: 'getStandardExperienceSubheaderCopy' }, { autoTrackExposure: !1 });
         return t
-            ? l.intl.format(l.t['3OYZMT'], { helpdeskArticle: r })
+            ? a.enabled
+                ? o.intl.format(o.t['TYu+MD'], { helpdeskArticle: r })
+                : o.intl.format(o.t['3OYZMT'], { helpdeskArticle: r })
             : n
-              ? l.intl.format(l.t.EkWiZm, {
-                    numFriends: a.Q - i,
-                    helpdeskArticle: r
-                })
-              : l.intl.format(l.t.FjrXCg, {
-                    numFriends: a.Q,
-                    helpdeskArticle: r
-                });
+              ? a.enabled
+                  ? o.intl.format(o.t['omMr+f'], { helpdeskArticle: r })
+                  : o.intl.format(o.t.EkWiZm, {
+                        numFriends: l.Q - i,
+                        helpdeskArticle: r
+                    })
+              : a.enabled
+                ? o.intl.format(o.t['omMr+f'], { helpdeskArticle: r })
+                : o.intl.format(o.t.FjrXCg, {
+                      numFriends: l.Q,
+                      helpdeskArticle: r
+                  });
     },
-    c = (e) => {
-        let t = (0, s.b)(e),
+    d = (e) => {
+        let t = (0, a.b)(e),
             n = (0, r.Nj)(i.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return t && !n;
     },
-    d = (e) => {
-        let { hasSentAll: t } = e;
-        return t ? l.intl.string(l.t.M47CJS) : l.intl.string(l.t.USo4s7);
-    },
     u = (e) => {
+        let { hasSentAll: t } = e,
+            n = s.Z.getCurrentConfig({ location: 'getHeaderCopy' }, { autoTrackExposure: !1 });
+        return t ? (n.enabled ? o.intl.string(o.t.USo4s7) : o.intl.string(o.t.M47CJS)) : o.intl.string(o.t.USo4s7);
+    },
+    m = (e) => {
         let { helpdeskArticle: t, referralsStatuses: n } = e;
-        return o({
-            hasSentAll: n.sent >= a.Q,
+        return c({
+            hasSentAll: n.sent >= l.Q,
             hasSentAtLeastOne: n.sent >= 1,
             numSentUsers: n.sent,
             helpdeskArticle: t

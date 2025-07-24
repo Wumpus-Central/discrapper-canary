@@ -17,7 +17,7 @@ function h(e) {
     let { guildId: g, productId: _ } = e,
         b = (0, a.e7)([u.Z], () => u.Z.getGuildProduct(_)),
         E = (null != (h = null == b || null == (t = b.attachments) ? void 0 : t.length) ? h : 0) > 1,
-        x = null == b || null == (i = b.attachments) || null == (n = i[0]) ? void 0 : n.id;
+        y = null == b || null == (i = b.attachments) || null == (n = i[0]) ? void 0 : n.id;
     return E
         ? (0, r.jsxs)(o.zx, {
               onClick: function () {
@@ -40,11 +40,11 @@ function h(e) {
                   })
               ]
           })
-        : (l()(null != x, 'No attachment'),
+        : (l()(null != y, 'No attachment'),
           (0, r.jsxs)(p.Z, {
               guildId: g,
               productId: _,
-              attachmentId: x,
+              attachmentId: y,
               innerClassName: f.textWithIcon,
               children: [
                   (0, r.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(997841));
+(n.d(t, { Z: () => y }), n(388685), n(997841));
 var r,
     i,
     l,
@@ -32,7 +32,7 @@ class E extends (r = a.ZP.Store) {
               writable: !0
           })
         : (E[i] = l));
-let x = new E(s.Z, {
+let y = new E(s.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: r, optimistic: i } = e;

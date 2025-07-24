@@ -5,8 +5,8 @@ n.d(t, {
     EY: () => v,
     I5: () => g,
     JQ: () => j,
-    RY: () => x,
-    Sv: () => y,
+    RY: () => y,
+    Sv: () => x,
     TX: () => T,
     ZW: () => C,
     bK: () => E,
@@ -58,8 +58,8 @@ Object.freeze({
     SPAM: d.jXE.APPEAL_INGESTION_SPAM
 });
 var E = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
-let x = [0, 1, 2, 3],
-    y = 372,
+let y = [0, 1, 2, 3],
+    x = 372,
     v = 279,
     C = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
 var O = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);

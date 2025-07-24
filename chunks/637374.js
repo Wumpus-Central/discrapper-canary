@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(884697),
     b = n(600164),
     E = n(479446),
-    x = n(930114),
-    y = n(981632),
+    y = n(930114),
+    x = n(981632),
     v = n(108989),
     C = n(703656),
     O = n(314897),
@@ -333,7 +333,7 @@ class W extends i.Component {
                         location: H(G({}, this.analyticsLocation), { object: D.qAy.BUTTON_CTA })
                     }));
                 let a = i !== D.uaV.CUSTOM_GIFT ? void 0 : r;
-                (0, x.V)({
+                (0, y.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: a,
@@ -375,7 +375,7 @@ class W extends i.Component {
                             }),
                         i && (0, r.jsx)(P.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(x.Z, {
                                 defaultAnimationState: e.redeemed ? E.SR.LOOP : E.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: o

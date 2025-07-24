@@ -20,7 +20,7 @@ var r = n(255367),
     _ = n(719548),
     b = n(388032),
     E = n(580297);
-let x = (e) => {
+let y = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
@@ -30,7 +30,7 @@ let x = (e) => {
                   description: i
               });
     },
-    y = (e) => {
+    x = (e) => {
         var t, n, i;
         let { embed: l } = e;
         if (!_.n2.has(l.type)) return null;
@@ -119,8 +119,8 @@ function O(e) {
                         className: E.subheader,
                         children: j
                     }),
-                    null != o && (0, r.jsx)(x, { attachment: o }),
-                    null != u && (0, r.jsx)(y, { embed: u })
+                    null != o && (0, r.jsx)(y, { attachment: o }),
+                    null != u && (0, r.jsx)(x, { embed: u })
                 ]
             }),
             (0, r.jsxs)(c.mzw, {
