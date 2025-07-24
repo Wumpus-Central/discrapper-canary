@@ -3,7 +3,7 @@
     LJ: () => w,
     mV: () => d,
     mh: () => C,
-    qc: () => E,
+    qc: () => u,
     wi: () => D
 }),
     t(997841),
@@ -16,8 +16,8 @@ var n,
     a = t(271383),
     o = t(430824),
     g = t(594174),
-    v = t(630388),
-    f = t(709054);
+    f = t(630388),
+    v = t(709054);
 (t(893966), t(527379));
 var c = t(372897);
 let h = {
@@ -25,36 +25,36 @@ let h = {
         day: 'numeric',
         year: 'numeric'
     },
-    u = {
+    E = {
         month: 'numeric',
         day: 'numeric',
         year: 'numeric'
     };
-var E = (((n = {})[(n.NO_GATE = 0)] = 'NO_GATE'), (n[(n.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (n[(n.AGREED = 2)] = 'AGREED'), n);
+var u = (((n = {})[(n.NO_GATE = 0)] = 'NO_GATE'), (n[(n.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (n[(n.AGREED = 2)] = 'AGREED'), n);
 function d(A, e) {
     var t, n;
     let r = (0, l.e7)([g.default], () => g.default.getUser(A), [A]),
         s = (0, l.e7)([a.ZP], () => a.ZP.getMember(e, A), [e, A]),
-        f = (0, l.e7)([o.Z], () => o.Z.getGuild(e), [e]);
-    return (0, i.Dc)(f) ? (null == r || null == s || null == f ? 1 : (0, v.yE)(null != (t = s.flags) ? t : 0, c.q.BYPASSES_VERIFICATION) || (0, v.yE)(null != (n = s.flags) ? n : 0, c.q.COMPLETED_ONBOARDING) || (null != s.isPending && !s.isPending) ? 2 : 1) : 0;
+        v = (0, l.e7)([o.Z], () => o.Z.getGuild(e), [e]);
+    return (0, i.Dc)(v) ? (null == r || null == s || null == v ? 1 : (0, f.yE)(null != (t = s.flags) ? t : 0, c.q.BYPASSES_VERIFICATION) || (0, f.yE)(null != (n = s.flags) ? n : 0, c.q.COMPLETED_ONBOARDING) || (null != s.isPending && !s.isPending) ? 2 : 1) : 0;
 }
 function C(A, e) {
     var t;
     let n = (0, l.e7)([g.default], () => g.default.getUser(A), [A]),
         r = (0, l.e7)([a.ZP], () => a.ZP.getMember(e, A), [e, A]);
     if (null == n || null == r) return !1;
-    let i = (0, v.yE)(null != (t = r.flags) ? t : 0, c.q.BYPASSES_VERIFICATION),
+    let i = (0, f.yE)(null != (t = r.flags) ? t : 0, c.q.BYPASSES_VERIFICATION),
         s = (null == n ? void 0 : n.isPhoneVerified()) || (null == n ? void 0 : n.isStaff()),
         o = (null == r ? void 0 : r.joinedAt) != null;
     return n.verified || s || o || i;
 }
 function B(A) {
     let e = (0, l.e7)([s.default], () => s.default.locale);
-    return r.useMemo(() => new Date(f.default.extractTimestamp(A)).toLocaleDateString(e, h), [A, e]);
+    return r.useMemo(() => new Date(v.default.extractTimestamp(A)).toLocaleDateString(e, h), [A, e]);
 }
 function w(A) {
     let e = (0, l.e7)([s.default], () => s.default.locale);
-    return r.useMemo(() => new Date(f.default.extractTimestamp(A)).toLocaleDateString(e, u), [A, e]);
+    return r.useMemo(() => new Date(v.default.extractTimestamp(A)).toLocaleDateString(e, E), [A, e]);
 }
 function D(A, e) {
     let t = (0, l.e7)([s.default], () => s.default.locale),

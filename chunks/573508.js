@@ -26,8 +26,8 @@ let i = ['#4a8359', '#7fb134', '#bcef42', '#f0f0f0'],
     o = (A) => {
         var e,
             t,
-            { width: o = 24, height: g = 24, primaryTintColor: v } = A,
-            f = (function (A, e) {
+            { width: o = 24, height: g = 24, primaryTintColor: f } = A,
+            v = (function (A, e) {
                 if (null == A) return {};
                 var t,
                     n,
@@ -48,7 +48,7 @@ let i = ['#4a8359', '#7fb134', '#bcef42', '#f0f0f0'],
             })(A, ['width', 'height', 'primaryTintColor']);
         let { primaryColorsTransformed: c } = (0, l.s)({
             primaryBaseColors: i,
-            primaryTintColor: v,
+            primaryTintColor: f,
             primaryTintLuminances: s,
             primaryLuminanceWeights: a
         });
@@ -78,7 +78,7 @@ let i = ['#4a8359', '#7fb134', '#bcef42', '#f0f0f0'],
                         }));
                 }
                 return A;
-            })({}, (0, r.Z)(f))),
+            })({}, (0, r.Z)(v))),
             (t = t =
                 {
                     width: o,

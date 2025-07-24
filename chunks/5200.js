@@ -38,13 +38,13 @@ function x(e) {
             assetNames: _,
             commandOrigin: v
         }),
-        [I, P] = l.useState(!1),
+        [P, I] = l.useState(!1),
         Z = l.useCallback(() => {
-            P(!0);
-        }, [P]),
+            I(!0);
+        }, [I]),
         T = l.useCallback(() => {
-            P(!1);
-        }, [P]),
+            I(!1);
+        }, [I]),
         N = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
@@ -100,7 +100,7 @@ function x(e) {
         children: (0, i.jsx)(u.AMe, {
             config: y,
             from: { value: 0 },
-            to: { value: +!!I },
+            to: { value: +!!P },
             children: (e) => {
                 let { value: t } = e;
                 return (0, i.jsx)(u.f6W, {

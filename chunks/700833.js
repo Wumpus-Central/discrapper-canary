@@ -56,12 +56,12 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: f, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: _, updateFormField: v, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
+    let { dropHoveredIndex: t, formField: p, guild: f, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: v, updateFormField: _, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
         I = async () => {
-            await _(x);
+            await v(x);
         },
         E = async (e) => {
-            await v(x, e);
+            await _(x, e);
         },
         S = async (e, t, n) => {
             await O(e, t, n);

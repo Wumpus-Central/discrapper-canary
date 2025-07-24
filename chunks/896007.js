@@ -19,11 +19,11 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: f, canManageRoles: h, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: _, isGuildAdmin: v, canManageGuildExpressions: O } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: f, canManageRoles: h, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: v, isGuildAdmin: _, canManageGuildExpressions: O } = e,
         C = () =>
             (0, a.X$)({
                 guild: c,
-                isOwner: _,
+                isOwner: v,
                 canManageGuildRoleSubscriptions: (0, a.H2)(c),
                 isMonetizationWaitlistEnabledForGuild: (0, r.mG)(c.id),
                 isGuildEligibleForRoleSubscriptions: (0, s.kT)(c.id),
@@ -89,7 +89,7 @@ function p(e) {
             N.push(m(d.pNK.EMOJI, y)),
             N.push(m(d.pNK.STICKERS, y)),
             N.push(m(d.pNK.SOUNDBOARD, y))),
-        (p || h || b || v) &&
+        (p || h || b || _) &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,

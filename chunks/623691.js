@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(496675),
     b = n(55935),
     j = n(63063),
-    _ = n(434404),
-    v = n(714939),
+    v = n(434404),
+    _ = n(714939),
     O = n(494831),
     C = n(981631),
     y = n(921944),
@@ -89,7 +89,7 @@ function T(e) {
                                 cancelText: I.intl.string(I.t['ETE/oK']),
                                 confirmText: I.intl.string(I.t['cY+Ooa']),
                                 onConfirm: () => {
-                                    _.Z.migratePinPermission(t.id);
+                                    v.Z.migratePinPermission(t.id);
                                 }
                             });
                         },
@@ -110,7 +110,7 @@ function P(e) {
     let { guild: t, everyoneRole: n, filteredRoles: i, query: l, setQuery: a, onEveryoneRoleClick: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(_.Z, {
                 role: n,
                 onClick: o
             }),

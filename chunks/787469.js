@@ -7,18 +7,18 @@ var n = t(255367),
     a = t(481060),
     o = t(893966),
     g = t(472596),
-    v = t(285173),
-    f = t(485386),
+    f = t(285173),
+    v = t(485386),
     c = t(430824),
     h = t(496675),
-    u = t(776767),
-    E = t(981631),
+    E = t(776767),
+    u = t(981631),
     d = t(388032),
     C = t(12740);
 function B(A) {
     let { member: e } = A,
         t = (0, s.e7)([c.Z], () => c.Z.getGuild(e.guildId)),
-        l = (0, s.e7)([f.Z], () => f.Z.getRoles(e.guildId)),
+        l = (0, s.e7)([v.Z], () => v.Z.getRoles(e.guildId)),
         B = r.useMemo(
             () =>
                 null == t
@@ -37,14 +37,14 @@ function B(A) {
         w = (0, s.e7)([o.Z], () => o.Z.getEnhancedMember(e.guildId, e.userId), [e.guildId, e.userId]),
         D = (0, g.zq)(w),
         M = (0, g.vN)(e),
-        I = (0, s.e7)([h.Z], () => h.Z.can(E.Plq.MANAGE_ROLES, t), [t]);
+        I = (0, s.e7)([h.Z], () => h.Z.can(u.Plq.MANAGE_ROLES, t), [t]);
     return null == t
         ? null
         : (0, n.jsx)(a.xJW, {
               title: d.intl.string(d.t.LPJmLy),
               titleClassName: C.infoTitle,
-              children: (0, n.jsx)(u.WM, {
-                  children: (0, n.jsx)(u._2, {
+              children: (0, n.jsx)(E.WM, {
+                  children: (0, n.jsx)(E._2, {
                       description:
                           e.roles.length > 0 || I
                               ? (0, n.jsxs)('div', {
@@ -59,7 +59,7 @@ function B(A) {
                                                 return (0, n.jsx)(a.P3F, {
                                                     onMouseEnter: t,
                                                     onMouseLeave: r,
-                                                    children: (0, n.jsx)(v.Z, {
+                                                    children: (0, n.jsx)(f.Z, {
                                                         className: i()(C.roleTooltipItem, C.highestRole),
                                                         role: D,
                                                         guildId: e.guildId
@@ -69,7 +69,7 @@ function B(A) {
                                         }),
                                         B.map((A) =>
                                             (0, n.jsx)(
-                                                v.Z,
+                                                f.Z,
                                                 {
                                                     className: C.roleTooltipItem,
                                                     role: l[A],

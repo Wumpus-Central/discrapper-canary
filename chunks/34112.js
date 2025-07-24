@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(646892),
     b = n(741247),
     j = n(518738),
-    _ = n(549631),
-    v = n(402235),
+    v = n(549631),
+    _ = n(402235),
     O = n(496675),
     C = n(626135),
     y = n(480608),
@@ -88,7 +88,7 @@ function k(e) {
     }, [u]);
     let x = i.useMemo(() => s.filter((e) => (0, I.uo)(e, f)), [s, f]),
         b = i.useMemo(() => [...s, l], [s, l]),
-        { draggingId: j, handleDragStart: _, handleDragReset: v, handleDragComplete: E } = (0, S.Z)(b),
+        { draggingId: j, handleDragStart: v, handleDragReset: _, handleDragComplete: E } = (0, S.Z)(b),
         T = i.useCallback(
             (e) => {
                 var i;
@@ -103,8 +103,8 @@ function k(e) {
                         highestRole: g,
                         currentPosition: l,
                         memberCount: null != (i = null == m ? void 0 : m[o.id]) ? i : 0,
-                        onDragStart: _,
-                        onDragReset: v,
+                        onDragStart: v,
+                        onDragReset: _,
                         onDragComplete: E,
                         disableHover: null != j,
                         disableDrag: s.length !== x.length,
@@ -114,7 +114,7 @@ function k(e) {
                     o.id
                 );
             },
-            [x, n, g, m, _, v, E, j, s, t, a]
+            [x, n, g, m, v, _, E, j, s, t, a]
         );
     return (0, r.jsx)(p.Xi, {
         sections: [Math.max(x.length, 1)],
@@ -144,7 +144,7 @@ function M() {
 }
 function G(e) {
     var t, l, c;
-    let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: v, onDragReset: O, onDragComplete: C, disableHover: y, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
+    let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: _, onDragReset: O, onDragComplete: C, disableHover: y, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
         P = (0, E.T)(u, p, d),
         k = null != P,
         [M, G] = i.useState(!1),
@@ -152,7 +152,7 @@ function G(e) {
             () => ({
                 type: L,
                 item: () => (
-                    v(d.id),
+                    _(d.id),
                     {
                         id: d.id,
                         position: h
@@ -166,7 +166,7 @@ function G(e) {
                     C(n.roleId);
                 }
             }),
-            [d, v, O, C, k, M, h]
+            [d, _, O, C, k, M, h]
         ),
         [{ isDragging: F }, H] = (0, a.c)(B),
         z = i.useMemo(
@@ -206,11 +206,11 @@ function G(e) {
             },
             className: s()(R.roleRow, R.roleRowDragging)
         });
-    function q() {
+    function X() {
         I(d.id);
     }
-    function X() {
-        (q(), S(T.ZI.MEMBERS));
+    function q() {
+        (X(), S(T.ZI.MEMBERS));
     }
     return (0, r.jsxs)(m.P3F, {
         className: s()(R.roleRow, {
@@ -218,7 +218,7 @@ function G(e) {
             [R.containerDragBefore]: null != W && h < W,
             [R.containerDragAfter]: null != W && h > W
         }),
-        onClick: q,
+        onClick: X,
         onContextMenu: Y,
         innerRef: (e) => {
             H(V(e));
@@ -267,7 +267,7 @@ function G(e) {
                         children: d.name
                     }),
                     (null == (l = d.tags) ? void 0 : l.subscription_listing_id) != null &&
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(v.Z, {
                             className: R.subscriptionRoleIcon,
                             'aria-label': w.intl.string(w.t.a2Ak8f)
                         }),
@@ -283,7 +283,7 @@ function G(e) {
                         m.P3F,
                         A(D({}, e), {
                             className: s()(R.memberCountContainer, Z.memberSpacing),
-                            onClick: X,
+                            onClick: q,
                             children: [
                                 (0, r.jsx)(m.Text, {
                                     variant: 'text-md/normal',
@@ -322,7 +322,7 @@ function G(e) {
                                   width: 20,
                                   height: 20
                               }),
-                        onClick: q
+                        onClick: X
                     }),
                     (0, r.jsx)(m.M0o, {
                         className: R.circleButton,
@@ -346,8 +346,8 @@ function G(e) {
 function U(e) {
     var t, n, i, l;
     let { guildId: a, role: o, size: d, enableTooltip: g, className: p, defaultIconClassName: f } = e,
-        { hasGradient: x, stops: b, gradientId: _ } = (0, u.De)(null == (t = o.colorStrings) ? void 0 : t.primaryColor, null == (n = o.colorStrings) ? void 0 : n.secondaryColor, null == (i = o.colorStrings) ? void 0 : i.tertiaryColor),
-        O = (0, v.yH)(a, o),
+        { hasGradient: x, stops: b, gradientId: v } = (0, u.De)(null == (t = o.colorStrings) ? void 0 : t.primaryColor, null == (n = o.colorStrings) ? void 0 : n.secondaryColor, null == (i = o.colorStrings) ? void 0 : i.tertiaryColor),
+        O = (0, _.yH)(a, o),
         C = (0, j.p9)({
             guildId: a,
             roleId: o.id,
@@ -363,7 +363,7 @@ function U(e) {
         );
     let y = null != (l = o.colorString) ? l : (0, c.Rf)(P.p6O);
     return (
-        O && x && (y = 'url(#'.concat(_, ')')),
+        O && x && (y = 'url(#'.concat(v, ')')),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 O &&
@@ -373,7 +373,7 @@ function U(e) {
                         height: '0',
                         style: { position: 'absolute' },
                         children: (0, r.jsx)('linearGradient', {
-                            id: _,
+                            id: v,
                             x1: '0%',
                             y1: '0%',
                             x2: '0%',

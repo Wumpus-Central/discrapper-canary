@@ -50,7 +50,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,7 +68,7 @@ function I(e, t) {
         e
     );
 }
-let P = i.memo(function (e) {
+let I = i.memo(function (e) {
         let { guildId: t, channelId: n, user: i, isPremium: l, isBlocked: a, isIgnored: o } = e;
         return (0, r.jsxs)('div', {
             className: E.textContainer,
@@ -126,7 +126,7 @@ let P = i.memo(function (e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(P, {
+                (0, r.jsx)(I, {
                     guildId: i,
                     channelId: l.id,
                     user: s,
@@ -143,7 +143,7 @@ let P = i.memo(function (e) {
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
             j = C.default.getId(),
-            { newestAnalyticsLocation: P } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
+            { newestAnalyticsLocation: I } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             T = (0, f.bp)(),
             N = (0, u.e7)(
                 [x.ZP],
@@ -173,14 +173,14 @@ let P = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    I(S({}, t), {
+                                    P(S({}, t), {
                                         user: o,
                                         guildId: v,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', P, {
+                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', I, {
                                             targetUserId: o.id,
                                             tileType: O.TH.USER
                                         })
@@ -190,7 +190,7 @@ let P = i.memo(function (e) {
                         { context: T }
                     ));
             },
-            [o, j, T, v, l, P]
+            [o, j, T, v, l, I]
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: A,
@@ -201,7 +201,7 @@ let P = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    I(
+                    P(
                         S(
                             {
                                 innerRef: A,

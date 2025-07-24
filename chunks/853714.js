@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(598077),
     b = n(592125),
     j = n(430824),
-    _ = n(246946),
-    v = n(594174),
+    v = n(246946),
+    _ = n(594174),
     O = n(823379),
     C = n(51144),
     y = n(987707),
@@ -162,7 +162,7 @@ let M = i.forwardRef((e, t) => {
                                       );
                               });
                           case T.KFR.USER:
-                              let o = v.default.getUser(t.targetId);
+                              let o = _.default.getUser(t.targetId);
                               if (null != o && null != l)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e('50929').then(n.bind(n, 595011));
@@ -596,14 +596,14 @@ class U extends i.PureComponent {
             }));
     }
 }
-let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, _.Z, v.default], () => {
+let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, v.Z, _.default], () => {
     let e = N.Z.getGuildId(),
         t = j.Z.getGuild(e),
         n = y.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: y.Z.userIds.map((e) => v.default.getUser(e)).filter(O.lm),
+        moderators: y.Z.userIds.map((e) => _.default.getUser(e)).filter(O.lm),
         isInitialLoading: y.Z.isInitialLoading,
         isLoading: y.Z.isLoading,
         isLoadingNextPage: y.Z.isLoadingNextPage,
@@ -614,6 +614,6 @@ let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, _.Z, v.default], () => {
         actionFilter: y.Z.actionFilter,
         userIdFilter: y.Z.userIdFilter,
         theme: f.Z.theme,
-        hide: _.Z.enabled
+        hide: v.Z.enabled
     };
 })(U);

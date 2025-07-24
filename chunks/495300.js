@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(208665),
     b = n(359191),
     j = n(84658),
-    _ = n(142961),
-    v = n(729311),
+    v = n(142961),
+    _ = n(729311),
     O = n(850864),
     C = n(729995),
     y = n(966301),
@@ -37,7 +37,7 @@ function P(e) {
             let e = (0, j.lg)(l);
             return null != e && !b.Z.isEducationUpsellDismissed(e);
         }),
-        x = (0, _.Z)(n),
+        x = (0, v.Z)(n),
         T = !x && g;
     switch (
         (i.useEffect(() => {
@@ -57,7 +57,7 @@ function P(e) {
             t = (0, r.jsx)(I.Z, {});
             break;
         case j.PG.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(v.Z, { saveOnClose: !x });
+            t = (0, r.jsx)(_.Z, { saveOnClose: !x });
             break;
         case j.PG.CUSTOMIZATION_QUESTIONS:
             t = (0, r.jsx)(y.ZP, { saveOnClose: !x });

@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(906732),
     b = n(623624),
     j = n(357156),
-    _ = n(208049),
-    v = n(763296),
+    v = n(208049),
+    _ = n(763296),
     O = n(22382),
     C = n(747071),
     y = n(286654),
@@ -216,9 +216,9 @@ let W = (e) => {
     };
 function Y(e) {
     let { guild: t } = e,
-        [l, s] = (0, c.Wu)([v.Z], () => {
+        [l, s] = (0, c.Wu)([_.Z], () => {
             var e;
-            return [null != (e = v.Z.getSoundsForGuild(t.id)) ? e : L.Hy, v.Z.isFetchingSounds() || v.Z.isFetchingDefaultSounds()];
+            return [null != (e = _.Z.getSoundsForGuild(t.id)) ? e : L.Hy, _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds()];
         }),
         { canCreateExpressions: a } = (0, j.XJ)(t),
         o = i.useRef(null),
@@ -226,7 +226,7 @@ function Y(e) {
         u = t.premiumTier,
         g = (0, P.yw)(t, l, u);
     i.useEffect(() => {
-        (0, _.w)();
+        (0, v.w)();
     }, []);
     let p = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, O.Z)(t.soundId))), e), {}), [l]),
         h = 0 === l.length && !s;
@@ -341,19 +341,19 @@ function Y(e) {
 }
 function K(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: v } = t,
+        { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: _ } = t,
         { analyticsLocations: O } = (0, x.ZP)(),
         C = (0, c.e7)([E.default], () => (null != f ? f : E.default.getUser(h)), [h, f]),
         { canManageGuildExpression: I } = (0, j.XJ)(o),
         S = i.useMemo(() => I(t), [t, I]),
-        P = null != b || null != v,
+        P = null != b || null != _,
         [w, Z] = i.useState(!1),
         D = (0, y.z)(t, o.id);
     async function A() {
         if (!w) {
             Z(!0);
             try {
-                await (0, _.AA)(o.id, d);
+                await (0, v.AA)(o.id, d);
             } catch (e) {
                 Z(!1);
             }
@@ -380,7 +380,7 @@ function K(e) {
             P
                 ? (0, r.jsx)(p.Z, {
                       emojiId: b,
-                      emojiName: v,
+                      emojiName: _,
                       className: M.emoji
                   })
                 : (0, r.jsx)(m.XBm, {

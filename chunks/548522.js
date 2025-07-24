@@ -17,12 +17,12 @@ function f(e) {
         [f, x] = i.useState(c);
     i.useEffect(() => x(c), [c]);
     let b = null != (t = (0, a.A)({ guildId: n.id })) ? t : 0,
-        [j, _] = i.useState(null),
-        v = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, s.J)(e))), [f]),
+        [j, v] = i.useState(null),
+        _ = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, s.J)(e))), [f]),
         O = i.useMemo(() => f.length === m.nx, [f]),
         C = i.useCallback(
             (e) => {
-                (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && _(null));
+                (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null));
             },
             [j, n.id]
         ),
@@ -50,7 +50,7 @@ function f(e) {
             (e, t, n) => {
                 let r = f.indexOf(e),
                     i = [...f];
-                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && _(null)) : j !== t && _(t));
+                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && v(null)) : j !== t && v(t));
             },
             [j, f, C]
         );
@@ -87,7 +87,7 @@ function f(e) {
                     children: (0, r.jsx)(o.Z, {
                         addFormField: y,
                         guild: n,
-                        allowTerms: !v
+                        allowTerms: !_
                     })
                 }),
             !O && (0, r.jsx)(h, { addFormField: y })

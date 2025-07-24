@@ -1,10 +1,10 @@
 (n.d(t, {
-    GW: () => v,
+    GW: () => _,
     Qg: () => h,
     Yn: () => O,
     ZP: () => E,
     bL: () => y,
-    i$: () => _,
+    i$: () => v,
     nn: () => j,
     qN: () => C,
     wy: () => x
@@ -135,7 +135,7 @@ function j(e) {
         )
     );
 }
-function _(e) {
+function v(e) {
     var { cellClassName: t, getAmount: n, key: i, renderHeader: l } = e,
         s = f(e, ['cellClassName', 'getAmount', 'key', 'renderHeader']);
     return x(
@@ -153,7 +153,7 @@ function _(e) {
         )
     );
 }
-function v(e) {
+function _(e) {
     var { cellClassName: t, getCount: n, key: i, renderHeader: l } = e,
         s = f(e, ['cellClassName', 'getCount', 'key', 'renderHeader']);
     return x(

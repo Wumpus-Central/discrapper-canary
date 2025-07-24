@@ -59,8 +59,8 @@ function h(e) {
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: h, maxTags: x } = e,
         b = i.useRef(null),
         j = i.useRef(null),
-        _ = i.useRef(null),
-        v = (0, m.V)(n),
+        v = i.useRef(null),
+        _ = (0, m.V)(n),
         {
             handlePasteEvent: O,
             handleInputChange: C,
@@ -72,14 +72,14 @@ function h(e) {
             handleUnselectTag: T,
             handleResetTagSelections: P,
             handleInputBlurEvent: w
-        } = (0, m.Q)(v, {
-            scrollerRef: _,
+        } = (0, m.Q)(_, {
+            scrollerRef: v,
             mainInputRef: b,
             mainContainerRef: j
         }),
         {
             state: { value: R, tags: Z, selections: D, isSelecting: A }
-        } = v,
+        } = _,
         L = (0, o.Z)(Z),
         [k, M] = i.useState(!1),
         G = i.useCallback(() => {
@@ -127,7 +127,7 @@ function h(e) {
         onKeyUp: N,
         children: [
             (0, r.jsxs)(f, {
-                ref: _,
+                ref: v,
                 onClick: G,
                 children: [
                     Z.map((e, t) =>

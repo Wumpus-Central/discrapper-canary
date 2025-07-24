@@ -113,15 +113,15 @@ function j(e) {
                   })
     });
 }
-let _ = 'FORM_FIELD';
-function v(e) {
+let v = 'FORM_FIELD';
+function _(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: g } = e,
         f = (0, a.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
         b = i.useRef(null),
-        [, v] = (0, o.c)({
-            type: _,
+        [, _] = (0, o.c)({
+            type: v,
             item: {
                 index: t,
                 field: n
@@ -131,7 +131,7 @@ function v(e) {
             }
         }),
         [, O] = (0, c.L)({
-            accept: _,
+            accept: v,
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
@@ -149,12 +149,12 @@ function v(e) {
     return (
         i.useLayoutEffect(
             () => (
-                v(O(b)),
+                _(O(b)),
                 () => {
-                    (O(null), v(null));
+                    (O(null), _(null));
                 }
             ),
-            [v, O]
+            [_, O]
         ),
         (0, r.jsxs)('div', {
             ref: b,
@@ -180,7 +180,7 @@ function O(e) {
         children: [
             (0, r.jsx)('div', {
                 className: h.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(v, x({}, e)) : (0, r.jsx)(j, x({}, e))
+                children: e.isDragEnabled ? (0, r.jsx)(_, x({}, e)) : (0, r.jsx)(j, x({}, e))
             }),
             'side' === e.actionsLocation &&
                 (0, r.jsxs)('div', {

@@ -14,7 +14,7 @@ let g = function (e) {
         f = i.useMemo(() => new a.Xp(), []),
         [h, x] = i.useState(d.n.LEFT),
         [b, j] = i.useState(0),
-        [_, v] = i.useState(!1),
+        [v, _] = i.useState(!1),
         [O, C] = i.useState(!1),
         y = i.useCallback(
             (e, t) => {
@@ -33,12 +33,12 @@ let g = function (e) {
         }, [y, t, O]);
     return (
         i.useEffect(() => {
-            null != g && (_ ? _ && f.stop() : f.start(g, N));
-        }, [_, f, g, N]),
+            null != g && (v ? v && f.stop() : f.start(g, N));
+        }, [v, f, g, N]),
         (0, r.jsxs)('div', {
             className: m.root,
-            onMouseEnter: () => v(!0),
-            onMouseLeave: () => v(!1),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
             children: [
                 (0, r.jsx)(o.P3F, {
                     className: s()(m.carouselCaret, l),

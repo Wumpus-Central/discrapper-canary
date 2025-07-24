@@ -17,8 +17,8 @@ var i = n(442837),
     x = n(63063),
     b = n(999382),
     j = n(981631),
-    _ = n(611480),
-    v = n(388032),
+    v = n(611480),
+    _ = n(388032),
     O = n(776739);
 let C = {
         page: j.ZY5.GUILD_SETTINGS,
@@ -36,12 +36,12 @@ let C = {
                 (0, r.jsx)(s.X6q, {
                     className: O.upsellHeader,
                     variant: 'heading-xl/semibold',
-                    children: v.intl.string(v.t.hzCkys)
+                    children: _.intl.string(_.t.hzCkys)
                 }),
                 (0, r.jsx)(s.Text, {
                     className: O.upsellDescription,
                     variant: 'text-md/normal',
-                    children: v.intl.string(v.t.jcesAA)
+                    children: _.intl.string(_.t.jcesAA)
                 }),
                 (0, r.jsxs)('div', {
                     className: O.upsellButtons,
@@ -57,7 +57,7 @@ let C = {
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: a
                                 }),
-                            children: v.intl.string(v.t.Q5dbTk)
+                            children: _.intl.string(_.t.Q5dbTk)
                         }),
                         (0, r.jsx)(l.zx, {
                             innerClassName: O.upsellButton,
@@ -67,7 +67,7 @@ let C = {
                                     guildId: t.id,
                                     location: { section: j.jXE.GUILD_SETTINGS_STICKERS }
                                 }),
-                            children: v.intl.string(v.t.hvVgAQ)
+                            children: _.intl.string(_.t.hvVgAQ)
                         })
                     ]
                 })
@@ -76,15 +76,15 @@ let C = {
     },
     N = () =>
         (0, r.jsxs)(s.hjN, {
-            title: v.intl.string(v.t['9N2OWF']),
+            title: _.intl.string(_.t['9N2OWF']),
             children: [
                 (0, r.jsx)(s.R94, {
                     type: s.geA.DESCRIPTION,
-                    children: v.intl.format(v.t.hxLvi4, { fileSize: (0, f.IC)(_.Ht, { useKibibytes: !0 }) })
+                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, f.IC)(v.Ht, { useKibibytes: !0 }) })
                 }),
                 (0, r.jsx)(s.R94, {
                     type: s.geA.DESCRIPTION,
-                    children: v.intl.format(v.t.UBj0aW, { articleUrl: x.Z.getArticleURL(j.BhN.STICKERS_UPLOAD) })
+                    children: _.intl.format(_.t.UBj0aW, { articleUrl: x.Z.getArticleURL(j.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -101,9 +101,9 @@ let C = {
         return null == c || a === j.Eu4.TIER_3 || o > 0
             ? null
             : (m > u
-                  ? ((t = v.intl.formatToPlainString(v.t.ZtAY1d, { level: c })), (n = v.intl.formatToPlainString(v.t['13hOWl'], { level: c })), (i = j.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = v.intl.string(v.t.zT9Sxc)),
-                    (n = v.intl.formatToPlainString(v.t.YaW9wM, {
+                  ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: c })), (n = _.intl.formatToPlainString(_.t['13hOWl'], { level: c })), (i = j.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = _.intl.string(_.t.zT9Sxc)),
+                    (n = _.intl.formatToPlainString(_.t.YaW9wM, {
                         level: c,
                         numAdditional: (0, h.ig)(c)
                     })),
@@ -136,7 +136,7 @@ let C = {
         return (0, r.jsx)(o.Gt, {
             value: n,
             children: (0, r.jsxs)(s.hjN, {
-                title: v.intl.string(v.t.R5nQkZ),
+                title: _.intl.string(_.t.R5nQkZ),
                 tag: s.RB0.H1,
                 children: [
                     l

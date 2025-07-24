@@ -50,7 +50,7 @@ function j(e) {
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: g, eligibility: p } = n,
         h = (0, a.j)(p),
-        { isLoading: j, error: _, creatorMonetizationOnboardingMarketing: v } = (0, o.Z)(t.id);
+        { isLoading: j, error: v, creatorMonetizationOnboardingMarketing: _ } = (0, o.Z)(t.id);
     return ((0, s.Z)(
         {
             type: i.ImpressionTypes.PANE,
@@ -78,8 +78,8 @@ function j(e) {
                           monetizationEligibility: n
                       }),
                       (0, r.jsx)(b, {
-                          onboardingMarketing: v,
-                          onboardingMarketingError: _
+                          onboardingMarketing: _,
+                          onboardingMarketingError: v
                       })
                   ]
               });

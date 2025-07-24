@@ -4,7 +4,7 @@
     To: () => E,
     XG: () => O,
     _N: () => f,
-    ad: () => _,
+    ad: () => v,
     bj: () => P,
     el: () => x,
     hS: () => j,
@@ -12,7 +12,7 @@
     mM: () => N,
     oo: () => I,
     q6: () => T,
-    r2: () => v,
+    r2: () => _,
     vR: () => h
 }),
     n(361932),
@@ -60,7 +60,7 @@ function j(e) {
         actions: e
     });
 }
-async function _(e, t, n, r) {
+async function v(e, t, n, r) {
     if (!r) return Promise.resolve();
     try {
         let r = await l.tn.patch({
@@ -91,7 +91,7 @@ async function _(e, t, n, r) {
         );
     }
 }
-function v(e) {
+function _(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e

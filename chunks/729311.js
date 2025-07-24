@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(259580),
     b = n(999382),
     j = n(743475),
-    _ = n(889369),
-    v = n(570961),
+    v = n(889369),
+    _ = n(570961),
     O = n(208665),
     C = n(868814),
     y = n(974513),
@@ -36,9 +36,9 @@ function w(e) {
         a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         h = (0, C.Z)(t),
-        x = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
+        x = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
         b = h.filter((e) => !x.has(e.id)),
-        [v, O] = i.useState(!1);
+        [_, O] = i.useState(!1);
     i.useEffect(() => {
         f || a || (0, g.S)(t.id);
     }, [t.id, f, a]);
@@ -96,7 +96,7 @@ function w(e) {
             };
         });
     };
-    return v || 0 === b.length
+    return _ || 0 === b.length
         ? null
         : (0, r.jsxs)('div', {
               className: T.recommendations,
@@ -214,18 +214,18 @@ function R(e) {
         u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         m = i.useRef(null),
         [g, p] = i.useState(!1),
-        _ = i.useRef(n);
+        v = i.useRef(n);
     return (i.useEffect(() => {
-        _.current = n;
+        v.current = n;
     }),
     i.useEffect(() => {
         if (t) {
-            let { current: e } = _;
+            let { current: e } = v;
             return () => {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -318,7 +318,7 @@ function R(e) {
 }
 function Z() {
     let e = (0, l.e7)([b.Z], () => b.Z.getProps().guild),
-        t = (0, l.e7)([_.Z], () => _.Z.submitting),
+        t = (0, l.e7)([v.Z], () => v.Z.submitting),
         n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
     return null == e
         ? null
@@ -326,7 +326,7 @@ function Z() {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },

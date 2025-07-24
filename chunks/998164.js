@@ -156,8 +156,8 @@ let j = function (e) {
             },
             [n, t]
         ),
-        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
-        v = i.useCallback(
+        v = n.map((e) => f(p({}, e), { id: e.channelId })),
+        _ = i.useCallback(
             (e) => {
                 (0, c.hS)(e);
                 let n = d.Z.getSettings();
@@ -165,7 +165,7 @@ let j = function (e) {
             },
             [t]
         ),
-        { handleDragStart: O, handleDragReset: C, handleDragComplete: y } = (0, a.Z)(_, v);
+        { handleDragStart: O, handleDragReset: C, handleDragComplete: y } = (0, a.Z)(v, _);
     return (0, r.jsxs)('div', {
         className: g.section,
         children: [

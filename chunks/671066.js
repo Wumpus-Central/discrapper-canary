@@ -25,7 +25,7 @@ function g(e) {
             [b]
         );
     if (null == x) return null;
-    let { headerText: _, descriptionText: v, icon: O } = x;
+    let { headerText: v, descriptionText: _, icon: O } = x;
     return (0, r.jsxs)('div', {
         className: m.actionContainer,
         children: [
@@ -42,12 +42,12 @@ function g(e) {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: 'heading-sm/semibold',
-                        children: _
+                        children: v
                     }),
                     (0, r.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: v
+                        children: _
                     }),
                     p &&
                         (0, r.jsxs)(l.Text, {

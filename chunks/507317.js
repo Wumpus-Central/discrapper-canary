@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(755721),
@@ -16,10 +16,10 @@ var r = n(255367),
     x = n(200299),
     b = n(388032),
     j = n(773100);
-let _ = function (e) {
+let v = function (e) {
     let { guild: t } = e,
-        _ = t.features.has(p.oNc.BANNER),
-        v = i.useCallback(
+        v = t.features.has(p.oNc.BANNER),
+        _ = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, s.ZDy)(async () => {
@@ -102,13 +102,13 @@ let _ = function (e) {
                           homeHeader: e
                       })
                     : null,
-            disabled: !_,
-            onChange: v,
+            disabled: !v,
+            onChange: _,
             hint: b.intl.string(b.t.NyXznp),
-            enabled: _,
+            enabled: v,
             maxFileSizeBytes: x.B
         });
-    return _
+    return v
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)('div', {
@@ -142,7 +142,7 @@ let _ = function (e) {
                                       color: l.Tt.BRAND,
                                       className: j.uploadButton,
                                       buttonCTA: b.intl.string(b.t.yG2pUl),
-                                      onChange: v,
+                                      onChange: _,
                                       maxFileSizeBytes: x.B
                                   })
                               ]

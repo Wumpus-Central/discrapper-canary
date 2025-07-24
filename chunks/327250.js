@@ -8,12 +8,12 @@ var r = t(120356),
     a = t(493683),
     o = t(906732),
     g = t(69882),
-    v = t(251794),
-    f = t(386696),
+    f = t(251794),
+    v = t(386696),
     c = t(946273),
     h = t(910693),
-    u = t(172751),
-    E = t(314897),
+    E = t(172751),
+    u = t(314897),
     d = t(592125),
     C = t(271383),
     B = t(430824),
@@ -74,7 +74,7 @@ function T(A, e) {
 function y(A) {
     let { user: e, guildId: t, onClose: r } = A,
         l = e.id,
-        a = (0, i.e7)([I.Z, D.Z, E.default], () => (l === E.default.getId() ? I.Z.getStatus() : D.Z.getStatus(l, t)), [l, t]);
+        a = (0, i.e7)([I.Z, D.Z, u.default], () => (l === u.default.getId() ? I.Z.getStatus() : D.Z.getStatus(l, t)), [l, t]);
     return (0, n.jsxs)('div', {
         className: V.topRow,
         children: [
@@ -103,7 +103,7 @@ function y(A) {
                                             color: s.TVs.colors.HEADER_PRIMARY.css
                                         })
                                     }),
-                                    (0, n.jsx)(u.ZP, {
+                                    (0, n.jsx)(E.ZP, {
                                         primaryGuild: null == e ? void 0 : e.primaryGuild,
                                         userId: null == e ? void 0 : e.id,
                                         contextGuildId: t,
@@ -179,7 +179,7 @@ function m(A) {
 }
 function L(A) {
     let { user: e, member: r, guildId: l } = A,
-        u = (0, i.e7)([B.Z], () => B.Z.getGuild(l)),
+        E = (0, i.e7)([B.Z], () => B.Z.getGuild(l)),
         {
             canKickUser: C,
             canBanUser: D,
@@ -187,11 +187,11 @@ function L(A) {
         } = (0, i.cj)(
             [w.Z, p.default, B.Z],
             () => ({
-                canKickUser: (0, c.BK)(e, u),
-                canBanUser: (0, c.mm)(e, u),
-                canModerateMembers: null != u && (0, f.F)(u.id, e.id, [p.default, B.Z, w.Z])
+                canKickUser: (0, c.BK)(e, E),
+                canBanUser: (0, c.mm)(e, E),
+                canModerateMembers: null != E && (0, v.F)(E.id, e.id, [p.default, B.Z, w.Z])
             }),
-            [e, u]
+            [e, E]
         ),
         b = (0, g.b)(r),
         { analyticsLocations: Q, newestAnalyticsLocation: O } = (0, o.ZP)(),
@@ -200,7 +200,7 @@ function L(A) {
             location: O,
             locations: Q
         }),
-        L = (0, i.e7)([E.default], () => E.default.getId() === (null == e ? void 0 : e.id)),
+        L = (0, i.e7)([u.default], () => u.default.getId() === (null == e ? void 0 : e.id)),
         x = (0, i.e7)(
             [M.Z, d.Z],
             () => {
@@ -282,12 +282,12 @@ function L(A) {
                 text: b ? P.intl.string(P.t.N86XcH) : P.intl.string(P.t.kTlLr6),
                 onClick: () => {
                     b
-                        ? (0, v.q)({
+                        ? (0, f.q)({
                               guildId: r.guildId,
                               userId: r.userId,
                               anaylticsLocations: Q
                           })
-                        : (0, v.z)({
+                        : (0, f.z)({
                               guildId: r.guildId,
                               userId: r.userId,
                               anaylticsLocations: Q,

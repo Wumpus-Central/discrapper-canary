@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(239721),
     b = n(438825),
     j = n(236140),
-    _ = n(37069),
-    v = n(518513),
+    v = n(37069),
+    _ = n(518513),
     O = n(40271),
     C = n(348986),
     y = n(930065),
@@ -118,7 +118,7 @@ let E = () => [
             rightAlign: !0
         },
         {
-            iconSrc: v,
+            iconSrc: _,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
@@ -135,7 +135,7 @@ let E = () => [
             position: [-250, 40]
         },
         {
-            iconSrc: _,
+            iconSrc: v,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -199,10 +199,10 @@ let E = () => [
         let { guild: t } = e,
             [n, l] = i.useState(0),
             [s, o] = i.useState(0),
-            [_, v] = i.useState(),
+            [v, _] = i.useState(),
             O = (0, a.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
-            C = null == _ ? void 0 : _.offsetWidth,
-            y = null == _ ? void 0 : _.offsetHeight;
+            C = null == v ? void 0 : v.offsetWidth,
+            y = null == v ? void 0 : v.offsetHeight;
         (i.useEffect(() => {
             (null != C && l(C / 2), null != y && o(y / 2));
         }, [C, y, l, o]),
@@ -217,7 +217,7 @@ let E = () => [
             children: [
                 (0, r.jsxs)('div', {
                     className: x.banner,
-                    ref: (e) => v(e),
+                    ref: (e) => _(e),
                     children: [
                         S.map((e) => {
                             var t, i;

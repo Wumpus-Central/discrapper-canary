@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(953529));
+(n.d(t, { Z: () => _ }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(780384),
@@ -41,7 +41,7 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,8 +59,8 @@ function _(e, t) {
         e
     );
 }
-let v = function (e) {
-    let { guild: t, disabled: v, role: O } = e,
+let _ = function (e) {
+    let { guild: t, disabled: _, role: O } = e,
         C = (0, a.ZP)(),
         y = (0, m.oC)(t.id, O),
         { analyticsLocations: N } = (0, c.ZP)(),
@@ -70,7 +70,7 @@ let v = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        _(j({}, n), {
+                        v(j({}, n), {
                             guildId: t.id,
                             onUploadIcon: (e) => (0, p._l)(O.id, e, null),
                             onSelectUnicodeEmoji: (e) => (0, p._l)(O.id, null, e)
@@ -82,7 +82,7 @@ let v = function (e) {
         S = (e) => {
             E ||
                 ((0, o.yw)(f.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: _(j({}, e), { section: f.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: v(j({}, e), { section: f.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
                     location_stack: N
                 }),
@@ -129,7 +129,7 @@ let v = function (e) {
                             null != y
                                 ? (0, r.jsx)(
                                       d.Z,
-                                      _(j({}, y), {
+                                      v(j({}, y), {
                                           className: b.roleIconPreview,
                                           enableTooltip: !1
                                       })
@@ -147,7 +147,7 @@ let v = function (e) {
                         color: (0, i.ap)(C) ? l.zx.Colors.PRIMARY : l.zx.Colors.WHITE,
                         look: l.zx.Looks.OUTLINED,
                         onClick: () => (t.features.has(f.oNc.ROLE_ICONS) ? I() : S({ object: f.qAy.UPLOAD_IMAGE })),
-                        disabled: v,
+                        disabled: _,
                         children: x.intl.string(x.t.mD1oGB)
                     }),
                     null != y
@@ -158,7 +158,7 @@ let v = function (e) {
                               onClick: () => {
                                   (0, p._l)(O.id, null, null);
                               },
-                              disabled: v,
+                              disabled: _,
                               children: x.intl.string(x.t['uY+Nk5'])
                           })
                         : null

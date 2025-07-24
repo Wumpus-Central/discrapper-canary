@@ -17,7 +17,7 @@ var i = n(481060),
     x = n(981631),
     b = n(388032),
     j = n(264054);
-function _(e) {
+function v(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : b.intl.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
@@ -36,7 +36,7 @@ function _(e) {
               ]
           });
 }
-function v(e) {
+function _(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
         i = (0, o.qi)(t, { includeSoftDeleted: !0 });
     return null == n && 0 === i.length
@@ -95,7 +95,7 @@ let O = (e) => {
                                   })
                               ]
                           }),
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(_, {
                               guildId: a,
                               totalPayoutsForPeriod: O
                           })
@@ -104,7 +104,7 @@ let O = (e) => {
                   (0, r.jsx)(i.hjN, {
                       title: b.intl.string(b.t['+5Rmho']),
                       className: j.formSection,
-                      children: (0, r.jsx)(_, {
+                      children: (0, r.jsx)(v, {
                           payoutsByPeriod: C,
                           team: g
                       })

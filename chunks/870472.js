@@ -215,7 +215,7 @@ function c(e, t) {
             },
             [i, u]
         ),
-        _ = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n } = t;
@@ -229,7 +229,7 @@ function c(e, t) {
             },
             [u]
         ),
-        v = r.useCallback(
+        _ = r.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -330,19 +330,19 @@ function c(e, t) {
         ),
         N = r.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && _(e, !1, !1);
             },
-            [v]
+            [_]
         );
     return {
         handlePasteEvent: p,
-        handleInputChange: _,
+        handleInputChange: v,
         handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (a.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? O(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? y(e) : a.Bd.has(e.key) && t && C(e));
+                'Meta' !== e.key && (a.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? O(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? y(e) : a.Bd.has(e.key) && t && C(e));
             },
-            [v, O, j, y, C]
+            [_, O, j, y, C]
         ),
         handleContainerKeyUp: r.useCallback(
             (e) => {

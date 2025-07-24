@@ -80,7 +80,7 @@ function f() {
             };
         });
     }
-    let _ = (0, l.mY)();
+    let v = (0, l.mY)();
     return (0, r.jsx)(o.Z, {
         title: m.intl.string(m.t['Ah+sQ0']),
         description: m.intl.string(m.t.ixbWiI),
@@ -90,21 +90,21 @@ function f() {
             children: [
                 (0, r.jsx)(i.hjN, {
                     title: m.intl.string(m.t['6OUqDQ']),
-                    disabled: _,
+                    disabled: v,
                     children: (0, r.jsx)(d.Z, {
                         value: h,
                         onChange: x,
-                        disabled: _
+                        disabled: v
                     })
                 }),
                 (0, r.jsxs)(i.hjN, {
                     title: m.intl.string(m.t['zn8/AQ']),
-                    disabled: _,
+                    disabled: v,
                     children: [
                         (0, r.jsx)(i.R94, {
                             type: i.R94.Types.DESCRIPTION,
                             className: g.formDescription,
-                            disabled: _,
+                            disabled: v,
                             children: m.intl.string(m.t.AqHUra)
                         }),
                         (0, r.jsxs)(i.Kqy, {
@@ -115,12 +115,12 @@ function f() {
                                     role: b,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
                                     onClick: j,
-                                    disabled: _
+                                    disabled: v
                                 }),
                                 (0, r.jsx)(i.zxk, {
                                     variant: 'secondary',
                                     onClick: j,
-                                    disabled: _,
+                                    disabled: v,
                                     text: m.intl.string(m.t.mD1oGB)
                                 })
                             ]

@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(607070),
     b = n(100527),
     j = n(605436),
-    _ = n(663993),
-    v = n(243778),
+    v = n(663993),
+    _ = n(243778),
     O = n(518738),
     C = n(753206),
     y = n(402235),
@@ -42,7 +42,7 @@ var r = n(255367),
     H = n(877248),
     z = n(179517),
     W = n(79829);
-let V = (0, _.Un)({
+let V = (0, v.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
@@ -69,13 +69,13 @@ function K(e) {
         })
     );
 }
-function q(e) {
+function X(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
         o = (e) => l || (a && [T.g.HOLOGRAPHIC, T.g.GRADIENT].includes(e)),
         d = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         x = (0, h.ZP)(),
         j = (0, O.oC)(n, t),
-        _ = {
+        v = {
             dark: {
                 src: z,
                 name: t.name
@@ -91,7 +91,7 @@ function q(e) {
                 className: F.roleStyleFormTitle,
                 children: [
                     (0, r.jsx)('div', { children: U.intl.string(U.t['9wVJRE']) }),
-                    (0, r.jsx)(v.ZP, {
+                    (0, r.jsx)(_.ZP, {
                         contentTypes: [u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
                         children: (e) => {
                             let { visibleContent: t } = e;
@@ -138,7 +138,7 @@ function q(e) {
                                             },
                                             message: d,
                                             preview: !0,
-                                            roleIcon: null != j ? j : (0, m.ap)(x) ? _.light : _.dark,
+                                            roleIcon: null != j ? j : (0, m.ap)(x) ? v.light : v.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n
@@ -165,7 +165,7 @@ function q(e) {
                                 (0, r.jsx)(p.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'button-outline-primary-text',
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) })
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(q, {}) })
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: 'text-xs/medium',
@@ -200,7 +200,7 @@ function q(e) {
         ]
     });
 }
-function X() {
+function q() {
     let e = (0, d.e7)([x.Z], () => x.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, p.JUn)({
             primaryColor: (0, c.Rf)(G.SK.primary_color),
@@ -378,11 +378,11 @@ function ee(e) {
         g = i || m,
         f = (0, d.e7)([E.Z], () => E.Z.canImpersonateRole(t, n)),
         { headerHeight: h, headerRef: x } = (0, w.Z)(0),
-        { scrolledToTop: b, handleScroll: _ } = (0, Z.V)();
+        { scrolledToTop: b, handleScroll: v } = (0, Z.V)();
     return (0, r.jsx)(p.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: h },
-        onScroll: _,
+        onScroll: v,
         children: (0, r.jsxs)('div', {
             className: H.contentWidth,
             children: [
@@ -407,7 +407,7 @@ function ee(e) {
                 (0, r.jsx)(p.$i$, { className: F.divider }),
                 (a || c) &&
                     null != u &&
-                    (0, r.jsx)(q, {
+                    (0, r.jsx)(X, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,

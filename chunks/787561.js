@@ -22,8 +22,8 @@ var r = n(255367),
     x = n(650774),
     b = n(430824),
     j = n(496675),
-    _ = n(699516),
-    v = n(594174),
+    v = n(699516),
+    _ = n(594174),
     O = n(434404),
     C = n(999382),
     y = n(54842),
@@ -130,9 +130,9 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 })
                 .catch(() => j(!1));
         });
-        let _ = (0, a.e7)([b.Z], () => b.Z.getGuild('942897714956472401')),
-            v = l.features.has(I.oNc.COMMUNITY) && p >= 1000 && h && null == _;
-        if (t && n && !v) return null;
+        let v = (0, a.e7)([b.Z], () => b.Z.getGuild('942897714956472401')),
+            _ = l.features.has(I.oNc.COMMUNITY) && p >= 1000 && h && null == v;
+        if (t && n && !_) return null;
         let C = async () => {
             try {
                 let e = await o.tn.post({
@@ -143,7 +143,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 (O.Z.close(), (0, f.X)(e.body.id));
             } catch (e) {}
         };
-        return s && !v
+        return s && !_
             ? null
             : (0, r.jsxs)('div', {
                   className: S.upsellContainer,
@@ -188,7 +188,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                       (0, r.jsxs)('div', {
                           className: S.upsellFooter,
                           children: [
-                              v &&
+                              _ &&
                                   (0, r.jsx)('div', {
                                       'data-button-hoisted-classname-wrapper': !0,
                                       className: S.upsellButton,
@@ -261,7 +261,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 t.type === I.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
-                        label: (0, p.F6)(t, v.default, _.Z, !0)
+                        label: (0, p.F6)(t, _.default, v.Z, !0)
                     });
             });
         let g = () => {

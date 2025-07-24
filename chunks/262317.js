@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(670188),
     E = n(597998),
     S = n(314897),
-    I = n(430824),
-    P = n(496675),
+    P = n(430824),
+    I = n(496675),
     Z = n(594174),
     T = n(979651),
     N = n(927923),
@@ -137,7 +137,7 @@ let U = (0, h.$)(function (e) {
         eO = (e) => {
             e && (ev.cancel(), ey(!1));
         },
-        eE = () => J && (0, C.p9)(k, T.Z, I.Z, P.Z, b.Z)[0],
+        eE = () => J && (0, C.p9)(k, T.Z, P.Z, I.Z, b.Z)[0],
         eS = () => {
             if (!eE()) return;
             let e = {
@@ -148,7 +148,7 @@ let U = (0, h.$)(function (e) {
             };
             (S.default.getId() !== h.id && d.default.selectVoiceChannel(k.id), $ ? ((0, x.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e), null == er || er(h.id));
         },
-        eI = (e) => {
+        eP = (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                 return (t) =>
@@ -165,7 +165,7 @@ let U = (0, h.$)(function (e) {
                     );
             });
         },
-        eP = () =>
+        eI = () =>
             (0, r.jsx)(j.Z, {
                 previewIsOpen: el,
                 channel: k,
@@ -212,7 +212,7 @@ let U = (0, h.$)(function (e) {
                     selected: eg,
                     onClick: t ? void 0 : eC,
                     onDoubleClick: eS,
-                    onContextMenu: eI,
+                    onContextMenu: eP,
                     guildId: k.guild_id,
                     isSelf: ed,
                     application: ep,
@@ -252,7 +252,7 @@ let U = (0, h.$)(function (e) {
             return (0, r.jsx)(s.yRy, {
                 targetElementRef: em,
                 position: 'right',
-                renderPopout: (ef && e_) || !J ? eP : eZ,
+                renderPopout: (ef && e_) || !J ? eI : eZ,
                 shouldShow: ei && !eg,
                 onRequestClose: ex,
                 spacing: 0,

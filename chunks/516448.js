@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -16,13 +16,13 @@ var r = n(255367),
     x = n(293810),
     b = n(388032),
     j = n(301849);
-function _(e) {
+function v(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: _ } = (0, o.N)(),
-        [v, O] = c.UE(n),
+        { editStateId: n, guildId: v } = (0, o.N)(),
+        [_, O] = c.UE(n),
         [C, y] = c.R7(n),
         N = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: I } = (0, d.Z)(_),
+        { isFullServerGating: I } = (0, d.Z)(v),
         E = (0, s.Dt)(),
         S = (0, a.mY)();
     return (0, r.jsxs)(u.Z, {
@@ -40,7 +40,7 @@ function _(e) {
                         children: b.intl.string(b.t.kHalVF)
                     }),
                     (0, r.jsx)(m.Z, {
-                        channelBenefits: v,
+                        channelBenefits: _,
                         intangibleBenefits: C,
                         subscriptionListings: N,
                         onImport: function (e, t) {
@@ -49,7 +49,7 @@ function _(e) {
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
                     (0, r.jsx)(m.w, {
-                        guildId: _,
+                        guildId: v,
                         onImport: function (e) {
                             O((t) => {
                                 let n = new Set(

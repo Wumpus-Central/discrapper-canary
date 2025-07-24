@@ -59,18 +59,18 @@ function b(e, t) {
 }
 function j() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
-        [j, _] = c.XZ(e, t),
-        v = (0, u.Z)(t, e),
+        [j, v] = c.XZ(e, t),
+        _ = (0, u.Z)(t, e),
         { setCurrentTab: O } = (0, p.dw)(),
         C = () => O(p.ue.EMOJIS),
         y = (0, i.e7)([s.Z], () => s.Z.getGuild(t)),
         N = null != y ? (0, d.Z)(y) : void 0;
     function I(e) {
-        null == j ? _(new Set(e)) : _(new Set([...j, ...e]));
+        null == j ? v(new Set(e)) : v(new Set([...j, ...e]));
     }
     function E(e) {
         let t = new Set(j);
-        (t.delete(e), _(t));
+        (t.delete(e), v(t));
     }
     let S = (0, a.mY)();
     return (0, r.jsxs)(l.hjN, {
@@ -87,7 +87,7 @@ function j() {
                 tierEmojiIds: j,
                 guildId: t,
                 onRemoveEmoji: function (e) {
-                    e.roles.filter((e) => e !== (null == v ? void 0 : v.id)).length > 0
+                    e.roles.filter((e) => e !== (null == _ ? void 0 : _.id)).length > 0
                         ? E(e.id)
                         : (0, l.ZDy)(async () => {
                               let { default: t } = await n.e('59128').then(n.bind(n, 28564));

@@ -7,12 +7,12 @@ var n = t(255367),
     a = t(399606),
     o = t(481060),
     g = t(493773),
-    v = t(963374),
-    f = t(735020),
+    f = t(963374),
+    v = t(735020),
     c = t(786761),
     h = t(937889),
-    u = t(619753),
-    E = t(433355),
+    E = t(619753),
+    u = t(433355),
     d = t(271383),
     C = t(594174),
     B = t(189432),
@@ -25,7 +25,7 @@ function H(A) {
     var e, t;
     let { userId: l, guildId: H, location: b, className: Q, onNavigate: O } = A,
         P = r.useRef(null),
-        V = (0, a.e7)([E.ZP], () => E.ZP.getGuildSidebarState(H), [H]),
+        V = (0, a.e7)([u.ZP], () => u.ZP.getGuildSidebarState(H), [H]),
         j = r.useRef(0),
         [T, y] = r.useState(null != (e = null == V ? void 0 : V.details.additionalSearchQuery) ? e : {}),
         m = (0, w.z0)(l, H, {
@@ -113,14 +113,14 @@ function H(A) {
         ),
         S = null != (t = null == T ? void 0 : T.offset) ? t : 0,
         G = (0, a.e7)(
-            [f.Z],
+            [v.Z],
             () => {
                 if (null == m.result) return [];
                 let A = m.result.messages,
-                    e = (0, v.nC)('');
+                    e = (0, f.nC)('');
                 return A.map((A) =>
                     A.map((A) => {
-                        let t = f.Z.getMessage(A.id, A.channel_id),
+                        let t = v.Z.getMessage(A.id, A.channel_id),
                             n = (0, c.e5)(A);
                         return (
                             null != t &&
@@ -184,7 +184,7 @@ function H(A) {
                       className: p.innerContainer,
                       ref: P,
                       onScroll: N,
-                      children: (0, n.jsx)(u.Z, {
+                      children: (0, n.jsx)(E.Z, {
                           searchResults: G,
                           search: U,
                           searchId: l,

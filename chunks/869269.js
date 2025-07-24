@@ -17,7 +17,7 @@ var r = n(255367),
     b = n(948695);
 function j(e) {
     var t, n;
-    let { allSubscriptionListings: j, priceTiers: _, loading: v, error: O, handlePublishTier: C, onDeleteEditState: y } = e,
+    let { allSubscriptionListings: j, priceTiers: v, loading: _, error: O, handlePublishTier: C, onDeleteEditState: y } = e,
         { editStateId: N } = (0, c.N)(),
         I = (0, l.e7)([a.Z], () => a.Z.getSubscriptionListing(N)),
         E = (0, o.mY)(),
@@ -28,8 +28,8 @@ function j(e) {
                     var t;
                     return null == (t = e.subscription_plans[0]) ? void 0 : t.price;
                 });
-            return null == _ ? void 0 : _.filter((t) => !e.includes(t));
-        }, [j, N, _]),
+            return null == v ? void 0 : v.filter((t) => !e.includes(t));
+        }, [j, N, v]),
         T = null == I,
         P = null != (t = null == I ? void 0 : I.published) && t,
         w = null != (n = null == I ? void 0 : I.archived) && n;
@@ -95,7 +95,7 @@ function j(e) {
                                                 disabled: T,
                                                 variant: 'secondary',
                                                 onClick: C,
-                                                loading: v,
+                                                loading: _,
                                                 text: h.intl.string(h.t.Lj6R5u)
                                             })
                                         }),

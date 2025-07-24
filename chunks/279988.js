@@ -11,7 +11,7 @@ var i = n(120356),
     u = n(388032),
     m = n(664305);
 let g = function (e) {
-    let { channelId: t, formField: n, index: i, isDragEnabled: g, isDropHovered: p, onDrop: f, onEdit: h, onRemove: x, canRemove: b, title: j, actionsLocation: _, fieldStyle: v } = e,
+    let { channelId: t, formField: n, index: i, isDragEnabled: g, isDropHovered: p, onDrop: f, onEdit: h, onRemove: x, canRemove: b, title: j, actionsLocation: v, fieldStyle: _ } = e,
         O = n.values,
         C = O.slice(0, 1),
         y = O.length - C.length;
@@ -25,8 +25,8 @@ let g = function (e) {
         onRemove: x,
         title: j,
         canRemove: b,
-        actionsLocation: _,
-        fieldStyle: v,
+        actionsLocation: v,
+        fieldStyle: _,
         children: [
             (0, r.jsx)(c.EK, {
                 className: l()(m.fieldBackground, { [m.withFooter]: 0 !== y }),

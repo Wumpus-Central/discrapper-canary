@@ -17,10 +17,10 @@ function h(e) {
         { analyticsLocations: x } = (0, s.ZP)(),
         b = t.features.has(m.oNc.INVITE_SPLASH),
         j = n && b,
-        _ = i.useCallback((e) => {
+        v = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 (e.preventDefault(),
                     e.stopPropagation(),
@@ -43,7 +43,7 @@ function h(e) {
                   f.intl.string(f.t.yG2pUl),
                   (0, r.jsx)(o.ZP, {
                       disabled: !j,
-                      onChange: _,
+                      onChange: v,
                       maxFileSizeBytes: p.B,
                       onFileSizeError: () => (0, a.Z)(p.B)
                   })
@@ -51,6 +51,6 @@ function h(e) {
           })
         : (0, r.jsx)(d.P, {
               className: h,
-              onClick: v
+              onClick: _
           });
 }

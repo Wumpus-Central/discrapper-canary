@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(223606),
     E = n(188597),
     S = n(41776),
-    I = n(980463),
-    P = n(328908),
+    P = n(980463),
+    I = n(328908),
     Z = n(992970),
     T = n(135793),
     N = n(576645),
@@ -216,8 +216,8 @@ function eg(e) {
                     }),
                     [t, j]
                 ),
-                I = (0, D.U)(t, n),
-                P = (0, U.NE)(t, n),
+                P = (0, D.U)(t, n),
+                I = (0, U.NE)(t, n),
                 Z = (0, U.Ek)(n),
                 T = (0, u.e7)([S.Z], () => null != t.guild_id && S.Z.isLurking(t.guild_id), [t]),
                 N = (0, u.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
@@ -251,8 +251,8 @@ function eg(e) {
                 canEdit: H,
                 canDelete: w,
                 canReport: R,
-                canReply: I,
-                canStartThread: P,
+                canReply: P,
+                canStartThread: I,
                 canViewThread: Z,
                 canForward: er,
                 canCopy: q.wS,
@@ -290,10 +290,10 @@ function eg(e) {
         eS = i.useCallback(() => {
             eE(!0);
         }, []),
-        eI = i.useCallback(() => {
+        eP = i.useCallback(() => {
             eE(!1);
         }, []),
-        eP = i.useCallback(
+        eI = i.useCallback(
             (e, t) => {
                 (ev(eo.L.TAKE_ACTION), (0, er.ts)(e, t));
             },
@@ -307,7 +307,7 @@ function eg(e) {
         ew = i.useCallback(
             (e) => {
                 try {
-                    (0, I.qc)(t.id, n.id, e);
+                    (0, P.qc)(t.id, n.id, e);
                 } catch (e) {
                     (0, p.showToast)((0, p.createToast)(ec.intl.string(ec.t.xsfC2d), p.ToastType.FAILURE));
                 }
@@ -444,7 +444,7 @@ function eg(e) {
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: ew,
-                                                    onClose: P.Qy,
+                                                    onClose: I.Qy,
                                                     source: Z.YD.MessageExpandingButtons
                                                 }));
                                         }
@@ -483,9 +483,9 @@ function eg(e) {
                       {
                           label: ec.intl.string(ec.t.I3ltXF),
                           icon: j.Z,
-                          onClick: () => eP(t, n),
+                          onClick: () => eI(t, n),
                           onTooltipShow: eS,
-                          onTooltipHide: eI,
+                          onTooltipHide: eP,
                           showNewBadge: !eO && ej
                       },
                       'forward'

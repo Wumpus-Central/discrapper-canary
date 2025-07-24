@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(984933),
     b = n(540457),
     j = n(681460),
-    _ = n(592286),
-    v = n(981631),
+    v = n(592286),
+    _ = n(981631),
     O = n(388032),
     C = n(350612);
 function y(e) {
@@ -65,7 +65,7 @@ function N(e, t) {
 }
 let I = 'RULE';
 function E(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: h, isDropHovered: x, focused: b, onFocus: j, previewEnabled: v, isDragEnabled: y, disabled: N } = e,
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: h, isDropHovered: x, focused: b, onFocus: j, previewEnabled: _, isDragEnabled: y, disabled: N } = e,
         E = i.useRef(null),
         S = i.useRef(null),
         [{ textValue: T, richValue: P }, w] = i.useState((0, p.eK)(t.value)),
@@ -132,7 +132,7 @@ function E(e) {
                         focused: b,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
-                            (i.length > _.fn && (i = i.slice(0, _.fn)),
+                            (i.length > v.fn && (i = i.slice(0, v.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 a(n),
                                 w({
@@ -141,9 +141,9 @@ function E(e) {
                                 }));
                         },
                         onKeyDown: o,
-                        canMentionChannels: v,
-                        canMentionRoles: v,
-                        maxCharacterCount: _.fn,
+                        canMentionChannels: _,
+                        canMentionRoles: _,
+                        maxCharacterCount: v.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -180,14 +180,14 @@ function E(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: s } = e,
         a = l.rulesChannelId,
-        c = l.features.has(v.oNc.PREVIEW_ENABLED),
+        c = l.features.has(_.oNc.PREVIEW_ENABLED),
         d = (0, u.e7)([h.Z], () => (null != a ? h.Z.getChannel(a) : null)),
         g = (0, u.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
         [p, f] = i.useState(null),
         [I, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
-                if (!s && t.length !== _.X2)
+                if (!s && t.length !== v.X2)
                     if (null != e && '' === t[t.length - 1].value) {
                         let r = [...t];
                         ((r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1));
@@ -240,9 +240,9 @@ function S(e) {
             },
             [s, p, t, n]
         ),
-        D = t.length === _.X2,
+        D = t.length === v.X2,
         A = i.useMemo(() => {
-            let e = D ? O.intl.formatToPlainString(O.t.tU718P, { number: _.X2 }) : void 0;
+            let e = D ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
             return [
                 {
                     text: O.intl.string(O.t.DXq2oa),

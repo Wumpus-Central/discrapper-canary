@@ -28,7 +28,7 @@ var r = n(255367),
     O = n(388032),
     E = n(901593),
     S = n(883760);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -127,12 +127,12 @@ function N(e) {
                                   l = Z(e, ['onClick']);
                               return (0, r.jsx)(
                                   h.zx,
-                                  P(I({}, l), {
+                                  I(P({}, l), {
                                       onClick: () => {
                                           (null == i || i(),
                                               (0, c.ZDy)(async () => {
                                                   let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, I(P({}, n), { entry: t }));
                                               }));
                                       },
                                       'aria-label': O.intl.string(O.t.XnuOvL),
@@ -163,7 +163,7 @@ function N(e) {
                                     l = Z(e, ['onClick']);
                                 return (0, r.jsx)(
                                     h.zx,
-                                    P(I({}, n, l), {
+                                    I(P({}, n, l), {
                                         ref: s,
                                         onClick: (e) => {
                                             (null == i || i(), t(e));
@@ -219,7 +219,7 @@ let A = (e) => {
             onContextMenu: (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, P(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, I(P({}, t), { entry: l }));
                 });
             },
             children: [

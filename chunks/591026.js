@@ -57,7 +57,7 @@ function h(e) {
     var t, n;
     let { rule: h, onChangeRule: x } = e,
         [b, j] = i.useState(null == (t = h.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        _ = (0, s.a)(h.guildId, !1);
+        v = (0, s.a)(h.guildId, !1);
     return (0, r.jsxs)('div', {
         className: g.cardContentsContainer,
         children: [
@@ -105,7 +105,7 @@ function h(e) {
                             })
                         ]
                     }),
-                    _
+                    v
                         ? (0, r.jsxs)('div', {
                               className: g.mentionLimitContainer,
                               children: [

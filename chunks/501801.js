@@ -13,12 +13,12 @@ var n = t(255367),
     a = t.n(s),
     o = t(913527),
     g = t.n(o),
-    v = t(866442),
-    f = t(481060),
+    f = t(866442),
+    v = t(481060),
     c = t(596454),
     h = t(835473),
-    u = t(479099),
-    E = t(592125),
+    E = t(479099),
+    u = t(592125),
     d = t(485386),
     C = t(594174),
     B = t(934415),
@@ -43,7 +43,7 @@ function P(A) {
         t = (0, h.q)(e);
     return null == t
         ? null
-        : (0, n.jsx)(f.Text, {
+        : (0, n.jsx)(v.Text, {
               variant: 'text-md/normal',
               children: t.name
           });
@@ -210,21 +210,21 @@ function T(A) {
                                                     },
                                                     s = (A) => {
                                                         var e;
-                                                        let t = null == (e = E.Z.getChannel(A)) ? void 0 : e.name;
+                                                        let t = null == (e = u.Z.getChannel(A)) ? void 0 : e.name;
                                                         return null == t ? null : '#'.concat(t);
                                                     },
                                                     o = (A, t) => {
                                                         let { title: r, id: l } = t,
                                                             o = A.role_ids.map(i).filter(w.lm),
                                                             g = A.channel_ids.map(s).filter(w.lm),
-                                                            v = t.role_ids.map(i).filter(w.lm),
+                                                            f = t.role_ids.map(i).filter(w.lm),
                                                             c = t.channel_ids.map(s).filter(w.lm),
-                                                            h = a().difference(v, o),
-                                                            u = a().difference(o, v),
-                                                            E = a().difference(c, g),
+                                                            h = a().difference(f, o),
+                                                            E = a().difference(o, f),
+                                                            u = a().difference(c, g),
                                                             d = a().difference(g, c),
                                                             C = [];
-                                                        return (a().isEqual(A.title, t.title) || C.push('title'), a().isEqual(A.description, t.description) || C.push('description'), 0 === h.length && 0 === u.length && 0 === E.length && 0 === d.length && 0 === C.length)
+                                                        return (a().isEqual(A.title, t.title) || C.push('title'), a().isEqual(A.description, t.description) || C.push('description'), 0 === h.length && 0 === E.length && 0 === u.length && 0 === d.length && 0 === C.length)
                                                             ? null
                                                             : (0, n.jsxs)(
                                                                   'li',
@@ -238,7 +238,7 @@ function T(A) {
                                                                                       targetType: e.targetType,
                                                                                       action: e.action
                                                                                   }),
-                                                                                  (0, n.jsx)(f.Text, {
+                                                                                  (0, n.jsx)(v.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: H.intl.format(H.t['WZO+iY'], { title: r })
                                                                                   })
@@ -248,28 +248,28 @@ function T(A) {
                                                                               className: b.onboardingChangeLogItemChanges,
                                                                               children: [
                                                                                   h.length > 0 &&
-                                                                                      (0, n.jsx)(f.Text, {
+                                                                                      (0, n.jsx)(v.Text, {
                                                                                           variant: 'text-md/normal',
                                                                                           children: H.intl.format(H.t['R+km+f'], { roles: h.join(', ') })
                                                                                       }),
-                                                                                  u.length > 0 &&
-                                                                                      (0, n.jsx)(f.Text, {
-                                                                                          variant: 'text-md/normal',
-                                                                                          children: H.intl.format(H.t.xIVRoa, { roles: u.join(', ') })
-                                                                                      }),
                                                                                   E.length > 0 &&
-                                                                                      (0, n.jsx)(f.Text, {
+                                                                                      (0, n.jsx)(v.Text, {
                                                                                           variant: 'text-md/normal',
-                                                                                          children: H.intl.format(H.t.iYowX1, { channels: E.join(', ') })
+                                                                                          children: H.intl.format(H.t.xIVRoa, { roles: E.join(', ') })
+                                                                                      }),
+                                                                                  u.length > 0 &&
+                                                                                      (0, n.jsx)(v.Text, {
+                                                                                          variant: 'text-md/normal',
+                                                                                          children: H.intl.format(H.t.iYowX1, { channels: u.join(', ') })
                                                                                       }),
                                                                                   d.length > 0 &&
-                                                                                      (0, n.jsx)(f.Text, {
+                                                                                      (0, n.jsx)(v.Text, {
                                                                                           variant: 'text-md/normal',
                                                                                           children: H.intl.format(H.t.JLdJpK, { channels: d.join(', ') })
                                                                                       }),
                                                                                   C.map((e, r) =>
                                                                                       (0, n.jsx)(
-                                                                                          f.Text,
+                                                                                          v.Text,
                                                                                           {
                                                                                               variant: 'text-md/normal',
                                                                                               children: H.intl.format(H.t['0698zc'], {
@@ -289,14 +289,14 @@ function T(A) {
                                                               );
                                                     },
                                                     g = a().keyBy(null != l ? l : [], 'id'),
-                                                    v = a().keyBy(null != r ? r : [], 'id'),
+                                                    f = a().keyBy(null != r ? r : [], 'id'),
                                                     c = a()
-                                                        .difference(Object.keys(v), Object.keys(g))
-                                                        .map((A) => v[A]),
+                                                        .difference(Object.keys(f), Object.keys(g))
+                                                        .map((A) => f[A]),
                                                     h = a()
-                                                        .difference(Object.keys(g), Object.keys(v))
+                                                        .difference(Object.keys(g), Object.keys(f))
                                                         .map((A) => g[A]),
-                                                    u = a().intersection(Object.keys(v), Object.keys(g));
+                                                    E = a().intersection(Object.keys(f), Object.keys(g));
                                                 return (0, n.jsxs)(
                                                     'ul',
                                                     {
@@ -318,7 +318,7 @@ function T(A) {
                                                                                         targetType: e.targetType,
                                                                                         action: e.action
                                                                                     }),
-                                                                                    (0, n.jsx)(f.Text, {
+                                                                                    (0, n.jsx)(v.Text, {
                                                                                         variant: 'text-md/normal',
                                                                                         children: H.intl.format(H.t.CZ1tys, { title: l })
                                                                                     })
@@ -328,12 +328,12 @@ function T(A) {
                                                                                 className: b.onboardingChangeLogItemChanges,
                                                                                 children: [
                                                                                     o.length > 0 &&
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t['gt/5z8'], { roles: o.join(', ') })
                                                                                         }),
                                                                                     g.length > 0 &&
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t['4q006e'], { channels: g.join(', ') })
                                                                                         })
@@ -356,7 +356,7 @@ function T(A) {
                                                                                     targetType: e.targetType,
                                                                                     action: e.action
                                                                                 }),
-                                                                                (0, n.jsx)(f.Text, {
+                                                                                (0, n.jsx)(v.Text, {
                                                                                     variant: 'text-md/normal',
                                                                                     children: H.intl.format(H.t['m3dt+P'], { title: A.title })
                                                                                 })
@@ -366,7 +366,7 @@ function T(A) {
                                                                     A.id
                                                                 )
                                                             ),
-                                                            u.map((A) => o(g[A], v[A]))
+                                                            E.map((A) => o(g[A], f[A]))
                                                         ]
                                                     },
                                                     'options'
@@ -387,7 +387,7 @@ function T(A) {
                                                                         ? (0, n.jsx)('li', {
                                                                               children: (0, n.jsx)('div', {
                                                                                   className: b.onboardingChangeLogItemTitle,
-                                                                                  children: (0, n.jsx)(f.Text, {
+                                                                                  children: (0, n.jsx)(v.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: H.intl.format(H.t.PrOzAw, {
                                                                                           oldUser: null != (l = null == a ? void 0 : a.username) ? l : H.intl.string(H.t.PoWNfX),
@@ -397,12 +397,12 @@ function T(A) {
                                                                               })
                                                                           })
                                                                         : null,
-                                                                v =
+                                                                f =
                                                                     (null == e ? void 0 : e.message) !== A.message
                                                                         ? (0, n.jsx)('li', {
                                                                               children: (0, n.jsx)('div', {
                                                                                   className: b.onboardingChangeLogItemTitle,
-                                                                                  children: (0, n.jsx)(f.Text, {
+                                                                                  children: (0, n.jsx)(v.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: H.intl.format(H.t.oB7rBQ, {
                                                                                           oldMessage: null != (s = null == e ? void 0 : e.message) ? s : H.intl.string(H.t.PoWNfX),
@@ -413,7 +413,7 @@ function T(A) {
                                                                           })
                                                                         : null;
                                                             return (0, n.jsxs)('ul', {
-                                                                children: [g, v]
+                                                                children: [g, f]
                                                             });
                                                         })(r, t);
                                                     case p.zUn.NEW_MEMBER_ACTIONS:
@@ -423,7 +423,7 @@ function T(A) {
                                                                 l = a().difference(r, t),
                                                                 o = a().difference(t, r),
                                                                 g = e.filter((A) => l.includes(A.channel_id)),
-                                                                v = A.filter((A) => o.includes(A.channel_id));
+                                                                f = A.filter((A) => o.includes(A.channel_id));
                                                             return (0, n.jsxs)('ul', {
                                                                 children: [
                                                                     g.map((A) =>
@@ -438,7 +438,7 @@ function T(A) {
                                                                                             targetType: i,
                                                                                             action: s
                                                                                         }),
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t['oFSu6+'], { name: A.title })
                                                                                         })
@@ -448,7 +448,7 @@ function T(A) {
                                                                             A.channel_id
                                                                         )
                                                                     ),
-                                                                    v.map((A) =>
+                                                                    f.map((A) =>
                                                                         (0, n.jsx)(
                                                                             'li',
                                                                             {
@@ -460,7 +460,7 @@ function T(A) {
                                                                                             targetType: i,
                                                                                             action: s
                                                                                         }),
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t.GssWam, { name: A.title })
                                                                                         })
@@ -480,7 +480,7 @@ function T(A) {
                                                                 l = a().difference(r, t),
                                                                 o = a().difference(t, r),
                                                                 g = e.filter((A) => l.includes(A.channel_id)),
-                                                                v = A.filter((A) => o.includes(A.channel_id));
+                                                                f = A.filter((A) => o.includes(A.channel_id));
                                                             return (0, n.jsxs)('ul', {
                                                                 children: [
                                                                     g.map((A) =>
@@ -495,7 +495,7 @@ function T(A) {
                                                                                             targetType: i,
                                                                                             action: s
                                                                                         }),
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t.HlGndH, { name: A.title })
                                                                                         })
@@ -505,7 +505,7 @@ function T(A) {
                                                                             A.channel_id
                                                                         )
                                                                     ),
-                                                                    v.map((A) =>
+                                                                    f.map((A) =>
                                                                         (0, n.jsx)(
                                                                             'li',
                                                                             {
@@ -517,7 +517,7 @@ function T(A) {
                                                                                             targetType: i,
                                                                                             action: s
                                                                                         }),
-                                                                                        (0, n.jsx)(f.Text, {
+                                                                                        (0, n.jsx)(v.Text, {
                                                                                             variant: 'text-md/normal',
                                                                                             children: H.intl.format(H.t['7pysg4'], { name: A.title })
                                                                                         })
@@ -541,7 +541,7 @@ function T(A) {
                                     var e, t;
                                     let { changeItem: l, subChanges: i, changeNumber: s, log: a, oldValue: o, newValue: g, change: h } = A;
                                     if (null == l) return (console.warn('No change string for', h), null);
-                                    let E = H.intl.format(l, {
+                                    let u = H.intl.format(l, {
                                         oldValue: o,
                                         newValue: g,
                                         count: Array.isArray(g) ? g.length : null,
@@ -559,9 +559,9 @@ function T(A) {
                                                                 children: [
                                                                     (0, n.jsx)('span', {
                                                                         className: b.colorsHook,
-                                                                        children: ''.concat(t > 0 ? ', ' : '').concat((0, v.Rf)(A).toUpperCase(), ' ')
+                                                                        children: ''.concat(t > 0 ? ', ' : '').concat((0, f.Rf)(A).toUpperCase(), ' ')
                                                                     }),
-                                                                    V(e, (0, v.Rf)(A))
+                                                                    V(e, (0, f.Rf)(A))
                                                                 ]
                                                             },
                                                             t
@@ -574,19 +574,19 @@ function T(A) {
                                         oldColorHook: (A, e) => V(e, h.oldValue),
                                         oldTagHook: (A, e) =>
                                             (0, n.jsx)(
-                                                u.Z,
+                                                E.Z,
                                                 {
                                                     tag: o,
-                                                    size: u.Z.Sizes.SMALL
+                                                    size: E.Z.Sizes.SMALL
                                                 },
                                                 e
                                             ),
                                         newTagHook: (A, e) =>
                                             (0, n.jsx)(
-                                                u.Z,
+                                                E.Z,
                                                 {
                                                     tag: g,
-                                                    size: u.Z.Sizes.SMALL
+                                                    size: E.Z.Sizes.SMALL
                                                 },
                                                 e
                                             ),
@@ -597,7 +597,7 @@ function T(A) {
                                             return (0, n.jsx)(P, { applicationId: null != (t = null == o ? void 0 : o.application_id) ? t : null == g ? void 0 : g.application_id }, e);
                                         }
                                     });
-                                    return null == E
+                                    return null == u
                                         ? null
                                         : (0, n.jsxs)(
                                               'div',
@@ -608,7 +608,7 @@ function T(A) {
                                                       top: 1
                                                   },
                                                   children: [
-                                                      (0, n.jsxs)(f.Text, {
+                                                      (0, n.jsxs)(v.Text, {
                                                           className: b.prefix,
                                                           variant: 'code',
                                                           color: (function (A) {
@@ -634,7 +634,7 @@ function T(A) {
                                                           children: [
                                                               (0, n.jsx)('div', {
                                                                   className: b.changeStr,
-                                                                  children: E
+                                                                  children: u
                                                               }),
                                                               null != i ? (0, n.jsx)('div', { children: i }) : null
                                                           ]
@@ -655,7 +655,7 @@ function T(A) {
                             })
                         )
                         .filter(w.lm);
-                return (0, n.jsx)(f.P3F, {
+                return (0, n.jsx)(v.P3F, {
                     onClick: l,
                     className: i()(b.changeDetails, s),
                     children: h

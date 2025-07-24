@@ -69,8 +69,8 @@ function j(e) {
             },
             [o, d]
         ),
-        _ = i.useRef(d),
-        v = i.useMemo(() => (s().isEqual(new Set(d), new Set(_.current)) || (_.current = [...d]), _.current), [d]);
+        v = i.useRef(d),
+        _ = i.useMemo(() => (s().isEqual(new Set(d), new Set(v.current)) || (v.current = [...d]), v.current), [d]);
     return (0, r.jsxs)(a.hjN, {
         className: p.section,
         children: [
@@ -93,7 +93,7 @@ function j(e) {
                         disabled: !l
                     }),
                     (0, r.jsx)(x, {
-                        gameApplicationIds: v,
+                        gameApplicationIds: _,
                         onRemoveGame: j,
                         disabled: !l
                     }),

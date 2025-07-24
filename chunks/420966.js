@@ -40,11 +40,11 @@ function h(e) {
             },
             [f.id, t.id]
         ),
-        _ = (0, o.pM)(t.id, f.id),
-        v = (0, u.Z)(t.id, f);
+        v = (0, o.pM)(t.id, f.id),
+        _ = (0, u.Z)(t.id, f);
     i.useEffect(() => {
-        _ && x(m.ZI.PERMISSIONS);
-    }, [_, x]);
+        v && x(m.ZI.PERMISSIONS);
+    }, [v, x]);
     let O = (0, c.e)(t, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -123,10 +123,10 @@ function h(e) {
                         : null
                 ]
             }),
-            null != v
+            null != _
                 ? (0, r.jsx)(s.Wn, {
                       messageType: s.QYI.WARNING,
-                      children: v
+                      children: _
                   })
                 : null,
             (0, r.jsxs)(s.njP, {
@@ -140,7 +140,7 @@ function h(e) {
                     (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.DISPLAY,
-                        disabled: _,
+                        disabled: v,
                         children: g.intl.string(g.t.hmdom5)
                     }),
                     (0, r.jsx)(s.njP.Item, {
@@ -151,14 +151,14 @@ function h(e) {
                     (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
-                        disabled: _,
+                        disabled: v,
                         children: g.intl.string(g.t['5//Mur'])
                     }),
                     (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.MEMBERS,
-                        disabled: _,
-                        children: _ ? g.intl.string(g.t['kg//+/']) : g.intl.formatToPlainString(g.t.bHnZWV, { numMembers: String(j) })
+                        disabled: v,
+                        children: v ? g.intl.string(g.t['kg//+/']) : g.intl.formatToPlainString(g.t.bHnZWV, { numMembers: String(j) })
                     })
                 ]
             })

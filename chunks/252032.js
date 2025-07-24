@@ -39,7 +39,7 @@ function v(e) {
         {
             editingMessage: E,
             editingTextValue: S,
-            editingRichValue: I
+            editingRichValue: P
         } = (0, l.cj)(
             [d.Z],
             () => ({
@@ -49,15 +49,15 @@ function v(e) {
             }),
             [s]
         ),
-        P = (0, l.e7)([u.default], () => u.default.getId()),
+        I = (0, l.e7)([u.default], () => u.default.getId()),
         Z = i.useCallback(
             (e, n, r) => {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return (O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve());
+                return (O && (s === I || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve());
             },
-            [E, O, P, t]
+            [E, O, I, t]
         ),
         T = i.useCallback(
             (e) => {
@@ -111,13 +111,13 @@ function v(e) {
             },
             [c]
         );
-    return null != S && null != I
+    return null != S && null != P
         ? (0, r.jsx)(_.Z, {
               ref: void 0,
               channel: t,
               message: n,
               textValue: S,
-              richValue: I,
+              richValue: P,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
               onConfirmDelete: o.Z.confirmDelete,

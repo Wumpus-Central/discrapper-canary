@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(390322),
     E = n(857192),
     S = n(626135),
-    I = n(456100),
-    P = n(566620),
+    P = n(456100),
+    I = n(566620),
     Z = n(127255),
     T = n(5200),
     N = n(558317),
@@ -129,10 +129,10 @@ let U = i.forwardRef(function (e, t) {
         D = j === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => P.ux(), 1000);
+        let e = setTimeout(() => I.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: B } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+    let { enabled: B } = P.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
         F = i.useCallback(() => {
             ((0, A.Z)({
                 channel: l,

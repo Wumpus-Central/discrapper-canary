@@ -22,8 +22,8 @@ var r = n(255367),
     x = n(225433),
     b = n(599059),
     j = n(327802),
-    _ = n(110924),
-    v = n(200876),
+    v = n(110924),
+    _ = n(200876),
     O = n(556019),
     C = n(748523),
     y = n(730089),
@@ -296,7 +296,7 @@ let z = d().throttle(h.OQ, 1000),
                   ]
               });
     },
-    q = (e) => {
+    X = (e) => {
         let t,
             n,
             i,
@@ -320,7 +320,7 @@ let z = d().throttle(h.OQ, 1000),
                   }
               }));
     },
-    X = () =>
+    q = () =>
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(p.vwX, {
@@ -369,7 +369,7 @@ let z = d().throttle(h.OQ, 1000),
                 revision: L.Z.getEmojiRevision(e.id),
                 emojis: L.Z.getEmojis(e.id)
             })),
-            h = (0, _.Z)(c),
+            h = (0, v.Z)(c),
             [x, b] = i.useState(!1),
             [N, w] = i.useState(!1),
             R = i.useRef(null),
@@ -431,7 +431,7 @@ let z = d().throttle(h.OQ, 1000),
                     return (n) => (0, r.jsx)(t, H({ processFiles: () => Q(e) }, n));
                 });
             },
-            et = (0, v.l)(e);
+            et = (0, _.l)(e);
         return (0, r.jsxs)('div', {
             className: B.emojiSettings,
             children: [
@@ -445,7 +445,7 @@ let z = d().throttle(h.OQ, 1000),
                     tag: p.RB0.H1,
                     title: U.intl.string(U.t.sMOuub),
                     children: [
-                        (0, r.jsx)(q, {
+                        (0, r.jsx)(X, {
                             guild: e,
                             staticEmojiCount: G.length,
                             animatedEmojiCount: F.length
@@ -479,7 +479,7 @@ let z = d().throttle(h.OQ, 1000),
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(X, {}),
+                                              (0, r.jsx)(q, {}),
                                               (0, r.jsxs)(g.zx, {
                                                   tabIndex: -1,
                                                   size: g.zx.Sizes.MEDIUM,

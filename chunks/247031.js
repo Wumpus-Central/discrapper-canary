@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(251625),
     b = n(226951),
     j = n(51144),
-    _ = n(434404),
-    v = n(372454),
+    v = n(434404),
+    _ = n(372454),
     O = n(999382),
     C = n(84613),
     y = n(740903),
@@ -234,13 +234,13 @@ class A extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        (_.Z.setSection(I.pNK.SAFETY), (0, C.K)(y.u.DM_AND_SPAM_PROTECTION));
+        (v.Z.setSection(I.pNK.SAFETY), (0, C.K)(y.u.DM_AND_SPAM_PROTECTION));
     }
     handleQueryChange(e) {
-        _.Z.setSearchQuery(e);
+        v.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        _.Z.setSearchQuery('');
+        v.Z.setSearchQuery('');
     }
     constructor(...e) {
         (super(...e),
@@ -373,7 +373,7 @@ let L = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
 function k() {
     var e;
     let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], a.isEqual),
-        { enabled: n } = v.T.useExperiment(
+        { enabled: n } = _.T.useExperiment(
             {
                 guildId: null != (e = null == t ? void 0 : t.id) ? e : I.lds,
                 location: '4d6318_1'

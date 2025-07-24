@@ -1,7 +1,7 @@
 t.d(e, {
-    Pw: () => v,
+    Pw: () => f,
     ZP: () => h,
-    ms: () => f,
+    ms: () => v,
     p5: () => g
 });
 var n = t(913527),
@@ -58,7 +58,7 @@ function g(A) {
     else if (A <= a.rsA.GUILD_MIGRATE_PIN_PERMISSION) return a.KFR.GUILD;
     return (i.Z.captureMessage('Unknown target type for: '.concat(A)), a.KFR.UNKNOWN);
 }
-function v(A) {
+function f(A) {
     switch (A) {
         case a.rsA.CHANNEL_CREATE:
         case a.rsA.CHANNEL_OVERWRITE_CREATE:
@@ -143,7 +143,7 @@ function v(A) {
     }
     return a.vB8.ALL;
 }
-class f {
+class v {
     constructor(A, e, t) {
         (o(this, 'key', void 0), o(this, 'oldValue', void 0), o(this, 'newValue', void 0), o(this, 'subtarget', void 0), (this.key = A), (this.oldValue = e), (this.newValue = t));
     }
@@ -151,7 +151,7 @@ class f {
 class c extends l.Z {
     constructor(A) {
         var e, t, n, l, i, a;
-        (super(), o(this, 'id', void 0), o(this, 'actionType', void 0), o(this, 'action', void 0), o(this, 'targetType', void 0), o(this, 'targetId', void 0), o(this, 'target', void 0), o(this, 'userId', void 0), o(this, 'changes', void 0), o(this, 'timestampStart', void 0), o(this, 'timestampEnd', void 0), o(this, 'user', void 0), o(this, 'options', void 0), (this.id = A.id), (this.action = A.action), (this.actionType = v(this.action)), (this.targetId = A.targetId), (this.timestampStart = null != (e = A.timestampStart) ? e : r()(s.default.extractTimestamp(this.id))), (this.timestampEnd = null != (t = A.timestampEnd) ? t : this.timestampStart), (this.userId = A.userId), (this.changes = null != (n = A.changes) ? n : []), (this.targetType = g(this.action)), (this.options = null != (l = A.options) ? l : {}), (this.target = null != (i = A.target) ? i : A.id), (this.user = null != (a = A.user) ? a : null));
+        (super(), o(this, 'id', void 0), o(this, 'actionType', void 0), o(this, 'action', void 0), o(this, 'targetType', void 0), o(this, 'targetId', void 0), o(this, 'target', void 0), o(this, 'userId', void 0), o(this, 'changes', void 0), o(this, 'timestampStart', void 0), o(this, 'timestampEnd', void 0), o(this, 'user', void 0), o(this, 'options', void 0), (this.id = A.id), (this.action = A.action), (this.actionType = f(this.action)), (this.targetId = A.targetId), (this.timestampStart = null != (e = A.timestampStart) ? e : r()(s.default.extractTimestamp(this.id))), (this.timestampEnd = null != (t = A.timestampEnd) ? t : this.timestampStart), (this.userId = A.userId), (this.changes = null != (n = A.changes) ? n : []), (this.targetType = g(this.action)), (this.options = null != (l = A.options) ? l : {}), (this.target = null != (i = A.target) ? i : A.id), (this.user = null != (a = A.user) ? a : null));
     }
 }
 let h = c;

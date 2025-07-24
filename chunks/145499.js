@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(151494),
     b = n(639777),
     j = n(626135),
-    _ = n(267642),
-    v = n(926491),
+    v = n(267642),
+    _ = n(926491),
     O = n(909707),
     C = n(863562),
     y = n(399829),
@@ -51,11 +51,11 @@ function P(e) {
     }
     return e;
 }
-let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.TIER_1) ? I.Eu4.TIER_1 : e < (0, _.A3)(I.Eu4.TIER_2) ? I.Eu4.TIER_2 : e < (0, _.A3)(I.Eu4.TIER_3) || (null != t && t.features.has(I.oNc.MORE_STICKERS) && e < d.D.MAX_STICKER_SLOTS) ? I.Eu4.TIER_3 : I.Eu4.NONE),
+let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.TIER_1) ? I.Eu4.TIER_1 : e < (0, v.A3)(I.Eu4.TIER_2) ? I.Eu4.TIER_2 : e < (0, v.A3)(I.Eu4.TIER_3) || (null != t && t.features.has(I.oNc.MORE_STICKERS) && e < d.D.MAX_STICKER_SLOTS) ? I.Eu4.TIER_3 : I.Eu4.NONE),
     R = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: i, tier: l } = e,
             s = n < l,
-            a = (0, _.ig)(l);
+            a = (0, v.ig)(l);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.X6q, {
@@ -68,7 +68,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                         variant: 'text-xs/normal',
                         children: S.intl.format(S.t.ZLoNtr, {
                             numTotal: a,
-                            numAvailable: (0, _.Qi)(i, l)
+                            numAvailable: (0, v.Qi)(i, l)
                         })
                     })
             ]
@@ -112,10 +112,10 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
             d = (0, a.e7)(
-                [v.Z],
+                [_.Z],
                 () => {
                     var e;
-                    return null != (e = v.Z.getStickersByGuildId(t.id)) ? e : [];
+                    return null != (e = _.Z.getStickersByGuildId(t.id)) ? e : [];
                 },
                 [t]
             ),
@@ -190,11 +190,11 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                 let i,
                     l,
                     { isAnimatedTo: a, onSetRef: u, tier: m, tiers: p, tierIndex: x } = e,
-                    { canCreateExpressions: b, canManageGuildExpression: v } = (0, f.Gw)(t),
+                    { canCreateExpressions: b, canManageGuildExpression: _ } = (0, f.Gw)(t),
                     O = p[x - 1],
-                    y = null != O ? (0, _.A3)(O.tier) : 0,
-                    R = (0, _.A3)(m.tier, t),
-                    G = (0, _.ig)(m.tier),
+                    y = null != O ? (0, v.A3)(O.tier) : 0,
+                    R = (0, v.A3)(m.tier, t),
+                    G = (0, v.ig)(m.tier),
                     U = d.slice(y, R),
                     B = U.length > 0,
                     F = Z < m.tier,
@@ -204,9 +204,9 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     V = R - y,
                     Y = n(872732),
                     K = G - U.length,
-                    q = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
-                    X = [];
-                for (let e = 0; e < q; e++) X.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
+                    X = z ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
+                    q = [];
+                for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
                 let J = t.premiumTier < m.tier && j >= I.oCV[m.tier],
                     Q = S.intl.string(S.t.dtFw5e),
                     $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
@@ -234,7 +234,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                   page: I.ZY5.GUILD_SETTINGS,
                                   section: I.jXE.GUILD_SETTINGS_STICKERS,
                                   object: I.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-                                  objectType: (0, _.ge)(m.tier)
+                                  objectType: (0, v.ge)(m.tier)
                               }
                           }))
                         : z && (l = (0, r.jsx)(A, { guild: t })),
@@ -261,12 +261,12 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                     {
                                                         isDisabled: F,
                                                         sticker: e,
-                                                        canManageSticker: v(e)
+                                                        canManageSticker: _(e)
                                                     },
                                                     e.id
                                                 )
                                             ),
-                                            X
+                                            q
                                         ]
                                     }),
                                 !F &&

@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(665149),
     E = n(294218),
     S = n(913663),
-    I = n(268350),
-    P = n(695346),
+    P = n(268350),
+    I = n(695346),
     Z = n(592125),
     T = n(703558),
     N = n(375954),
@@ -216,7 +216,7 @@ function Q(e) {
         }),
         {
             nameError: E,
-            messageError: P,
+            messageError: I,
             submit: Z,
             submitting: N
         } = (function (e) {
@@ -286,7 +286,7 @@ function Q(e) {
                             );
                         }
                         return (
-                            (0, I.qB)(t.id, q.drafts.type),
+                            (0, P.qB)(t.id, q.drafts.type),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -369,7 +369,7 @@ function Q(e) {
                                 textAreaState: b,
                                 setTextAreaState: _,
                                 submit: Z,
-                                error: P
+                                error: I
                             }),
                             (0, r.jsx)(h.ZP, {
                                 channel: t,
@@ -531,7 +531,7 @@ function ee(e) {
 function et(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         i = (0, o.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
-        l = P.jU.useSetting();
+        l = I.jU.useSetting();
     return null != i
         ? (0, r.jsx)(E.Z, {
               className: z.messagePreview,

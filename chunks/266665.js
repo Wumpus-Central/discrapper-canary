@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(134433),
     b = n(325476),
     j = n(884902),
-    _ = n(496675),
-    v = n(671533),
+    v = n(496675),
+    _ = n(671533),
     O = n(946724),
     C = n(970129),
     y = n(712181),
@@ -73,7 +73,7 @@ let R = 'DRAGGABLE_ROLE';
 function Z(e) {
     var t, i;
     let l,
-        { guild: d, role: g, highestRole: p, selectedItem: f, onClick: b, currentPosition: _, onDragStart: v, onDragReset: O, onDragComplete: y, roleStyle: N } = e,
+        { guild: d, role: g, highestRole: p, selectedItem: f, onClick: b, currentPosition: v, onDragStart: _, onDragReset: O, onDragComplete: y, roleStyle: N } = e,
         I = (0, C.T)(d, p, g),
         S = (0, h.pM)(d.id, g.id),
         Z = null == I && !S,
@@ -82,10 +82,10 @@ function Z(e) {
         [, L] = (0, a.c)({
             type: R,
             item: () => (
-                v(g.id),
+                _(g.id),
                 {
                     id: g.id,
-                    position: _
+                    position: v
                 }
             ),
             canDrag: () => Z,
@@ -125,8 +125,8 @@ function Z(e) {
                 })),
         (0, r.jsxs)(u.njP.Item, {
             className: s()(T.row, {
-                [T.dragBefore]: null !== k && _ < k,
-                [T.dragAfter]: null !== k && _ > k
+                [T.dragBefore]: null !== k && v < k,
+                [T.dragAfter]: null !== k && v > k
             }),
             id: g.id,
             selectedItem: f,
@@ -171,7 +171,7 @@ function Z(e) {
 function D(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.e7)([O.Z], () => O.Z.roles),
-        c = (0, d.e7)([_.Z], () => _.Z.getHighestRole(t)),
+        c = (0, d.e7)([v.Z], () => v.Z.getHighestRole(t)),
         m = (0, d.e7)([f.Z], () => f.Z.roleStyle),
         [h, x] = i.useState(o.length),
         { scrolledToTop: j, handleScroll: C } = (0, N.V)(),
@@ -206,7 +206,7 @@ function D(e) {
                             className: T.title,
                             onClick: () => l(null),
                             children: [
-                                (0, r.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
+                                (0, r.jsx)(_.Z, { direction: _.Z.Directions.LEFT }),
                                 (0, r.jsx)(u.Text, {
                                     className: T.titleText,
                                     variant: 'text-md/semibold',

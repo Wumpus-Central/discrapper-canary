@@ -1,4 +1,4 @@
-t.d(e, { h: () => f });
+t.d(e, { h: () => v });
 var n = t(255367);
 t(73800);
 var r = t(331595),
@@ -17,17 +17,17 @@ let i = ['#705224', '#F6A830'],
         }
     ],
     g = [0.8],
-    v = [
+    f = [
         {
             base: 6,
             tint: 1
         }
     ],
-    f = (A) => {
+    v = (A) => {
         var e,
             t,
-            { width: f = 24, height: c = 24, primaryTintColor: h, secondaryTintColor: u } = A,
-            E = (function (A, e) {
+            { width: v = 24, height: c = 24, primaryTintColor: h, secondaryTintColor: E } = A,
+            u = (function (A, e) {
                 if (null == A) return {};
                 var t,
                     n,
@@ -52,9 +52,9 @@ let i = ['#705224', '#F6A830'],
             primaryTintLuminances: a,
             primaryLuminanceWeights: o,
             secondaryBaseColors: s,
-            secondaryTintColor: u,
+            secondaryTintColor: E,
             secondaryTintLuminances: g,
-            secondaryLuminanceWeights: v
+            secondaryLuminanceWeights: f
         });
         return (0, n.jsxs)(
             'svg',
@@ -82,10 +82,10 @@ let i = ['#705224', '#F6A830'],
                         }));
                 }
                 return A;
-            })({}, (0, r.Z)(E))),
+            })({}, (0, r.Z)(u))),
             (t = t =
                 {
-                    width: f,
+                    width: v,
                     height: c,
                     viewBox: '0 0 16 16',
                     fill: 'none',

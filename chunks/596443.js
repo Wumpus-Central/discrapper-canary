@@ -7,12 +7,12 @@ var n = t(255367),
     a = t.n(s),
     o = t(399606),
     g = t(481060),
-    v = t(605436),
-    f = t(79712),
+    f = t(605436),
+    v = t(79712),
     c = t(285173),
     h = t(434404),
-    u = t(422559),
-    E = t(271383),
+    E = t(422559),
+    u = t(271383),
     d = t(485386),
     C = t(430824),
     B = t(496675),
@@ -26,14 +26,14 @@ var n = t(255367),
     Q = t(444021);
 function O(A) {
     var e, t, l, s;
-    let { permission: a, roleIds: E, guild: C, specMap: w, categoryTitle: D, userId: M } = A,
+    let { permission: a, roleIds: u, guild: C, specMap: w, categoryTitle: D, userId: M } = A,
         b = (0, o.e7)([d.Z], () => d.Z.getRoles(C.id)),
         O = p.Plq[a],
-        P = null != (l = null == (e = w[O.toString()]) ? void 0 : e.title) ? l : (0, u.wt)(O),
+        P = null != (l = null == (e = w[O.toString()]) ? void 0 : e.title) ? l : (0, E.wt)(O),
         V = null != (s = null == (t = w[O.toString()]) ? void 0 : t.description) ? s : '',
         j = I._o.has(O),
         T = I.Qn.includes(a),
-        y = E.length,
+        y = u.length,
         m = (0, o.e7)([B.Z], () => B.Z.can(p.Plq.MANAGE_ROLES, C), [C]),
         L = r.useCallback(
             async (A) => {
@@ -67,7 +67,7 @@ function O(A) {
                                         j &&
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(f.Z, {
+                                                    (0, n.jsx)(v.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
@@ -142,7 +142,7 @@ function O(A) {
                                             T &&
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(f.Z, {
+                                                    (0, n.jsx)(v.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
@@ -180,7 +180,7 @@ function O(A) {
                 }),
             (0, n.jsx)('div', {
                 className: Q.permissionItemRoleContainer,
-                children: E.map((A) =>
+                children: u.map((A) =>
                     (0, I.Ov)(A, M)
                         ? (0, n.jsx)(
                               'div',
@@ -200,7 +200,7 @@ function O(A) {
                         : (0, n.jsx)(
                               g.P3F,
                               {
-                                  className: i()(Q.roleTooltipItem, { [Q.editable]: m && !(0, v.pM)(C.id, A) }),
+                                  className: i()(Q.roleTooltipItem, { [Q.editable]: m && !(0, f.pM)(C.id, A) }),
                                   onClick: () => L(A),
                                   children: (0, n.jsx)(c.Z, {
                                       role: b[A],
@@ -219,10 +219,10 @@ function P(A, e) {
     return e.toLowerCase().includes(A.toLowerCase());
 }
 function V(A) {
-    let { userId: e, guildId: t, location: l, className: s, onNavigate: v } = A,
-        f = (0, o.e7)([w.default], () => w.default.getUser(e), [e]),
+    let { userId: e, guildId: t, location: l, className: s, onNavigate: f } = A,
+        v = (0, o.e7)([w.default], () => w.default.getUser(e), [e]),
         c = (0, o.e7)([C.Z], () => C.Z.getGuild(t), [t]),
-        h = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, e), [t, e]),
+        h = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, e), [t, e]),
         d = (0, I.B2)(e, t, I.pd),
         B = Object.keys(d).length,
         V = r.useMemo(() => (null != c ? D.Z.getGuildPermissionSpecMap(c) : null), [c]),
@@ -257,18 +257,18 @@ function V(A) {
                             let s = d[i];
                             if (null != s) {
                                 if (m.length > 0) {
-                                    var a, o, g, v, f;
-                                    let A = null != (v = null == (a = V[l.toString()]) ? void 0 : a.title) ? v : (0, u.wt)(l),
-                                        e = null != (f = null == (g = V[l.toString()]) || null == (o = g.description) ? void 0 : o.toString()) ? f : '',
+                                    var a, o, g, f, v;
+                                    let A = null != (f = null == (a = V[l.toString()]) ? void 0 : a.title) ? f : (0, E.wt)(l),
+                                        e = null != (v = null == (g = V[l.toString()]) || null == (o = g.description) ? void 0 : o.toString()) ? v : '',
                                         n = t.title,
                                         r = I._o.has(l),
                                         s = I.Qn.includes(i),
                                         c = r ? H.intl.string(H.t.k7Kqj4) : s ? H.intl.string(H.t.IfqUEB) : null,
                                         h = P(m, A),
-                                        E = P(m, e),
+                                        u = P(m, e),
                                         d = P(m, n),
                                         C = null != c && P(m, c);
-                                    if (!h && !E && !d && !C) return;
+                                    if (!h && !u && !d && !C) return;
                                 }
                                 A.push(
                                     (0, n.jsx)(
@@ -290,7 +290,7 @@ function V(A) {
                 A
             );
         }, [c, V, h, B, j, d, m, e]);
-    return null == f || null == h
+    return null == v || null == h
         ? null
         : (0, n.jsxs)('div', {
               className: i()(b.container, s),
@@ -298,7 +298,7 @@ function V(A) {
                   (0, n.jsx)(M.Z, {
                       guildId: t,
                       userId: e,
-                      onNavigate: v
+                      onNavigate: f
                   }),
                   (0, n.jsx)(g.Ttm, {
                       className: Q.permissionsGroupContainer,

@@ -40,7 +40,7 @@ function b(e) {
     return e;
 }
 let j = { label: '' };
-function _(e) {
+function v(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: l } = e,
         s = i.useRef(null),
         a = i.useMemo(
@@ -105,7 +105,7 @@ function _(e) {
               }
           });
 }
-function v(e) {
+function _(e) {
     let { guildId: t, trait: n, index: l, onTraitUpdate: c, disabled: d } = e,
         u = i.useCallback(() => {
             c(t, l, {
@@ -130,7 +130,7 @@ function v(e) {
             [t, l, c]
         ),
         j = i.useMemo(() => n.emoji, [n.emoji]),
-        v = (null != n.label && n.label.length > 0) || null != n.emoji;
+        _ = (null != n.label && n.label.length > 0) || null != n.emoji;
     return (0, r.jsxs)('div', {
         className: h.traitWrapper,
         children: [
@@ -140,7 +140,7 @@ function v(e) {
                 value: n.label,
                 onChange: b,
                 maxLength: 24,
-                prefixElement: (0, r.jsx)(_, {
+                prefixElement: (0, r.jsx)(v, {
                     emoji: j,
                     disabled: d,
                     handleSelectEmoji: m
@@ -150,7 +150,7 @@ function v(e) {
                 onFocus: f,
                 onBlur: x
             }),
-            v &&
+            _ &&
                 (0, r.jsx)(o.P3F, {
                     onClick: u,
                     className: h.traitRemoveButton,
@@ -191,7 +191,7 @@ function C(e) {
                 children: O.map((e) => {
                     var i;
                     return (0, r.jsx)(
-                        v,
+                        _,
                         {
                             guildId: t.id,
                             trait: null != (i = l[e]) ? i : j,

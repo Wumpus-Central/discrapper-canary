@@ -19,7 +19,7 @@ function b(e) {
     let { profile: n, canManageGuild: l } = e,
         b = n.id,
         j = a.Y.VISIBLE.has(n.visibility),
-        _ = (0, o.e7)(
+        v = (0, o.e7)(
             [d.Z],
             () => {
                 var e;
@@ -27,18 +27,18 @@ function b(e) {
             },
             [b]
         ),
-        v = i.useRef(null);
-    (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
+        _ = i.useRef(null);
+    (0, p.Z)(_, f.KsC.PROFILE_VISIBILITY);
     let O = i.useCallback(() => {
-            j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [b, _, j]),
+            j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [b, v, j]),
         C = i.useCallback(() => {
             g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
         }, []),
         y = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
         className: x.twoColumnContainer,
-        ref: v,
+        ref: _,
         children: [
             (0, r.jsxs)('div', {
                 className: x.column,

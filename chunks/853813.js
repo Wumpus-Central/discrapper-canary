@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(999382),
     b = n(130341),
     j = n(981975),
-    _ = n(660962),
-    v = n(442182),
+    v = n(660962),
+    _ = n(442182),
     O = n(322816),
     C = n(266665),
     y = n(203377),
@@ -105,7 +105,7 @@ function E(e) {
         return null;
     switch (E) {
         case y.ZI.DISPLAY:
-            t = (0, r.jsx)(_.ZP, {
+            t = (0, r.jsx)(v.ZP, {
                 guild: T,
                 role: P,
                 locked: Z,
@@ -132,7 +132,7 @@ function E(e) {
             });
             break;
         case y.ZI.MEMBERS:
-            t = (0, r.jsx)(v.ZP, {
+            t = (0, r.jsx)(_.ZP, {
                 guild: T,
                 role: P,
                 locked: Z,

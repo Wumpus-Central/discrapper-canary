@@ -1,5 +1,5 @@
 (n.d(t, {
-    B: () => _,
+    B: () => v,
     Z: () => j
 }),
     n(953529),
@@ -64,16 +64,16 @@ function b(e, t) {
 }
 function j(e) {
     var t, i, s, c;
-    let { guild: j, prompt: _, singleColumn: v, promptIndex: O, option: C, hasError: y, onDragStart: N, onDragComplete: I, onDragReset: E } = e,
+    let { guild: j, prompt: v, singleColumn: _, promptIndex: O, option: C, hasError: y, onDragStart: N, onDragComplete: I, onDragReset: E } = e,
         S = null,
-        T = a().findIndex(_.options, (e) => e.id === C.id),
+        T = a().findIndex(v.options, (e) => e.id === C.id),
         {
             drag: P,
             dragSourcePosition: w,
             drop: R,
             setIsDraggable: Z
         } = (0, d.Z)({
-            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(_.id),
+            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(v.id),
             index: T,
             optionId: C.id,
             onDragStart: N,
@@ -88,7 +88,7 @@ function j(e) {
                 [h.hasError]: y || null != S,
                 [h.dropIndicatorBefore]: null != w && T < w,
                 [h.dropIndicatorAfter]: null != w && T > w,
-                [h.singleColumn]: v
+                [h.singleColumn]: _
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -98,14 +98,14 @@ function j(e) {
                             e,
                             b(x({}, t), {
                                 guild: j,
-                                prompt: _,
+                                prompt: v,
                                 option: C,
                                 index: O,
                                 onSave: (e) => {
-                                    (0, g.Kk)(j, _.id, { options: _.options.map((t) => (t.id === C.id ? e : t)) });
+                                    (0, g.Kk)(j, v.id, { options: v.options.map((t) => (t.id === C.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, g.Kk)(j, _.id, { options: _.options.filter((e) => e.id !== C.id) });
+                                    (0, g.Kk)(j, v.id, { options: v.options.filter((e) => e.id !== C.id) });
                                 }
                             })
                         );
@@ -165,7 +165,7 @@ function j(e) {
         })
     );
 }
-function _(e) {
+function v(e) {
     let { guild: t, prompt: i, promptIndex: s, singleColumn: a } = e,
         d = () => {
             (0, o.ZDy)(async () => {

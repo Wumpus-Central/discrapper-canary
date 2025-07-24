@@ -40,7 +40,7 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function v(e) {
+function _(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         a = (0, c.nv)(),
         d = (0, c.qw)({
@@ -71,7 +71,7 @@ function v(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                _(j({}, e), {
+                v(j({}, e), {
                     'aria-disabled': !n,
                     tabIndex: n ? 0 : -1,
                     'aria-label': x.intl.string(x.t.W4Nd7e),
@@ -158,7 +158,7 @@ function C(e) {
         children: (0, r.jsxs)('div', {
             className: b.grid,
             children: [
-                (0, r.jsx)(v, {
+                (0, r.jsx)(_, {
                     profile: n,
                     canManageGuild: d,
                     handleClick: y(null),
@@ -173,7 +173,7 @@ function C(e) {
                             children: (e) =>
                                 (0, r.jsx)(
                                     o.P3F,
-                                    _(j({}, e), {
+                                    v(j({}, e), {
                                         'aria-disabled': !d,
                                         tabIndex: d ? 0 : -1,
                                         'aria-label': t,

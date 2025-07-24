@@ -35,8 +35,8 @@ function j(e) {
         ),
         E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         S = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
-        I = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
-        P = i.useCallback(async () => {
+        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
+        I = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
                     (await c.Z.sendGreetMessage(n.id, v),
@@ -67,10 +67,10 @@ function j(e) {
                   (0, r.jsxs)(s.P3F, {
                       className: null != l && '' !== l ? x.compactButtonDisabled : x.compactButton,
                       'aria-label': C.intl.string(C.t.pJObYG),
-                      onClick: P,
+                      onClick: I,
                       children: [
                           (0, r.jsx)(p.Z, {
-                              sticker: I,
+                              sticker: P,
                               size: 24
                           }),
                           (0, r.jsx)(s.Text, {
@@ -87,7 +87,7 @@ function j(e) {
               className: x.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
-                      sticker: I,
+                      sticker: P,
                       size: 160,
                       className: x.stickerExpanded
                   }),
@@ -95,7 +95,7 @@ function j(e) {
                       fullWidth: !0,
                       variant: 'primary',
                       size: 'md',
-                      onClick: P,
+                      onClick: I,
                       disabled: !!l,
                       text: Z
                   }),

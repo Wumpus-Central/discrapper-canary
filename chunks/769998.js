@@ -16,8 +16,8 @@ function p(e) {
     let { action: n, triggerType: p, guildId: f, toggled: h, onToggleAction: x } = e,
         b = (e) => () => x(e),
         j = (0, o.c)(n.type, n, p),
-        _ = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        v = null != _ ? (0, u.L9)(_) : null,
+        v = null == (t = n.metadata) ? void 0 : t.durationSeconds,
+        _ = null != v ? (0, u.L9)(v) : null,
         O = (0, i.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(f)), [f]);
     if (null == j) return null;
     let { headerText: C, descriptionText: y, icon: N } = j;
@@ -49,7 +49,7 @@ function p(e) {
                             color: 'interactive-normal',
                             variant: 'text-xs/medium',
                             children: [
-                                null === v ? null : p === c.fX.MENTION_SPAM ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: v }) : m.intl.format(m.t.mvHxzc, { friendlyDurationString: v }),
+                                null === _ ? null : p === c.fX.MENTION_SPAM ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: _ }) : m.intl.format(m.t.mvHxzc, { friendlyDurationString: _ }),
                                 O &&
                                     (0, r.jsx)(l.P3F, {
                                         onClick: b(!0),

@@ -1,10 +1,11 @@
 n.d(t, {
-    I8: () => S,
+    I8: () => N,
     Kt: () => y,
-    T5: () => N,
+    RW: () => A,
+    T5: () => R,
     Yt: () => E,
     a1: () => O,
-    aC: () => A,
+    aC: () => C,
     bN: () => g,
     dl: () => b,
     zd: () => T
@@ -71,17 +72,19 @@ let v = () => {
             })
         );
     },
-    T = (e) => !!v() && null != e && A(s.Z.getChannel(e));
-function S(e, t, n) {
+    T = (e) => !!v() && null != e && C(s.Z.getChannel(e)),
+    S = (e) => b() && T(e),
+    A = (e) => !!S(e) && ((0, d.mN)(_.L0.NSFW_VOICE_CHANNEL), !0);
+function N(e, t, n) {
     return I(e) ? void (0, d.mN)(null != n ? n : _.L0.NSFW_SERVER) : T(t) ? void (0, d.mN)(null != n ? n : _.L0.NSFW_CHANNEL) : void 0;
 }
-function A(e) {
+function C(e) {
     if (null == e) return !1;
     let t = e.guild_id,
         n = l.Z.getGuild(t);
     return e.isNSFW() || (null != n && (0, o.Y2)(n));
 }
-function N() {
+function R() {
     let e = c.default.getCurrentUser();
     return null != e && null == e.nsfwAllowed;
 }

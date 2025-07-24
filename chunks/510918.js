@@ -8,12 +8,12 @@ var r = t(397110),
     a = t(819837),
     o = t(165440),
     g = t(21822),
-    v = t(285916),
-    f = t(168646),
+    f = t(285916),
+    v = t(168646),
     c = t(470831),
     h = t(96824),
-    u = t(187485),
-    E = t(713897),
+    E = t(187485),
+    u = t(713897),
     d = t(886512),
     C = t(560701),
     B = t(678563),
@@ -115,7 +115,7 @@ let Z = (A) => {
         case L.x_.HEART:
             return (0, n.jsx)(C.h, x({ primaryTintColor: t }, N));
         case L.x_.FIRE:
-            return (0, n.jsx)(f.G, x({ primaryTintColor: t }, N));
+            return (0, n.jsx)(v.G, x({ primaryTintColor: t }, N));
         case L.x_.COMPASS:
             return (0, n.jsx)(
                 i.Q,
@@ -162,7 +162,7 @@ let Z = (A) => {
             );
         case L.x_.GEM:
             return (0, n.jsx)(
-                E.S,
+                u.S,
                 x(
                     {
                         primaryTintColor: t,
@@ -263,7 +263,7 @@ let Z = (A) => {
             );
         case L.x_.FROG:
             return (0, n.jsx)(
-                u.L,
+                E.L,
                 x(
                     {
                         primaryTintColor: t,
@@ -294,7 +294,7 @@ let Z = (A) => {
         case L.x_.MONEY_BAG:
             return (0, n.jsx)(M.k, x({ primaryTintColor: t }, N));
         case L.x_.DOLLAR_SIGN:
-            return (0, n.jsx)(v.W, x({ primaryTintColor: t }, N));
+            return (0, n.jsx)(f.W, x({ primaryTintColor: t }, N));
     }
     return null;
 };

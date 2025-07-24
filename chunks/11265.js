@@ -12,7 +12,7 @@ let m = i.memo(function (e) {
     var t, n;
     let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: f, disableAnimation: h, disableBackground: x } = e,
         [b, j] = i.useState(!0),
-        [_, v] = i.useState(!1),
+        [v, _] = i.useState(!1),
         { ref: O, height: C = 0 } = (0, c.ZP)(),
         { ref: y, height: N = 0 } = (0, c.ZP)(),
         [I, E] = i.useState(g),
@@ -60,17 +60,17 @@ let m = i.memo(function (e) {
                           }),
                     t),
                 onStart: () => {
-                    v(!1);
+                    _(!1);
                 },
                 onRest: () => {
-                    v(!0);
+                    _(!0);
                 }
             },
             b || h ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         i.useLayoutEffect(() => {
-            (v(!1), E(g));
+            (_(!1), E(g));
         }, [g]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -84,7 +84,7 @@ let m = i.memo(function (e) {
                 [u.noBackground]: x
             }),
             children: (0, r.jsxs)(a.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && _ }),
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {

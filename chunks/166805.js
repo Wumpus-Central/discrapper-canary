@@ -16,11 +16,11 @@ var r = n(255367),
     x = n(24318),
     b = n(822693),
     j = n(388032),
-    _ = n(832721);
-function v(e) {
+    v = n(832721);
+function _(e) {
     let { guildId: t } = e,
-        { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
-        O = v !== u.a.FETCHED,
+        { guildProfile: c, fetchGuildProfile: g, fetchStatus: _ } = (0, m.u)(t),
+        O = _ !== u.a.FETCHED,
         {
             fetchedEmbed: C,
             embedEnabled: y,
@@ -64,14 +64,14 @@ function v(e) {
                       ? (0, r.jsx)(s.xv, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            className: _.subtext,
+                            className: v.subtext,
                             children: j.intl.string(j.t.zCGuJy)
                         })
                       : null,
                   y
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)('div', { className: _.divider }),
+                                (0, r.jsx)('div', { className: v.divider }),
                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.LUo0Q0) }),
                                 (0, r.jsx)(b.m, {
                                     guildId: t,
@@ -82,41 +82,41 @@ function v(e) {
                                 (0, r.jsx)(s.xv, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    className: _.subtext,
+                                    className: v.subtext,
                                     children: j.intl.string(j.t.LxVR9P)
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: _.twoColumns,
+                                    className: v.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
+                                            className: v.column,
                                             children: [(0, r.jsx)(o.vwX, { children: j.intl.string(j.t.TRyLUl) }), (0, r.jsx)(d.Z, { value: t })]
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
+                                            className: v.column,
                                             children: [(0, r.jsx)(o.vwX, { children: j.intl.string(j.t.VECJcH) }), (0, r.jsx)(d.Z, { value: I })]
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)('div', { className: _.divider }),
+                                (0, r.jsx)('div', { className: v.divider }),
                                 (0, r.jsxs)('div', {
-                                    className: _.twoColumns,
+                                    className: v.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
+                                            className: v.column,
                                             children: [
                                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.XVGbn5) }),
                                                 (0, r.jsx)(d.Z, { value: E }),
                                                 (0, r.jsx)(s.xv, {
                                                     variant: 'text-sm/medium',
                                                     color: 'text-secondary',
-                                                    className: _.subtext,
+                                                    className: v.subtext,
                                                     children: j.intl.string(j.t['+baN19'])
                                                 })
                                             ]
                                         }),
                                         (0, r.jsx)('img', {
-                                            className: _.column,
+                                            className: v.column,
                                             'data-accessibility': 'desaturate',
                                             alt: '',
                                             src: n(329488)
@@ -139,10 +139,10 @@ function O(e) {
             (0, r.jsx)(s.xv, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: _.description,
+                className: v.description,
                 children: j.intl.string(j.t['dNn/1t'])
             }),
-            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(v, { guildId: t })
+            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(_, { guildId: t })
         ]
     });
 }

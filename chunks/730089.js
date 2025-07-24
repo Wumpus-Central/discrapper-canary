@@ -29,7 +29,7 @@ let f = (e, t, n, r) => (
         });
     },
     x = async (e) => {
-        let { data: t, file: n, guildId: d, uploadId: x, roles: b, image: j, hideErrorModal: _, analyticsLocation: v } = e,
+        let { data: t, file: n, guildId: d, uploadId: x, roles: b, image: j, hideErrorModal: v, analyticsLocation: _ } = e,
             O = c.ZP.sanitizeEmojiName(n.name.split('.')[0]);
         if (c.ZP.isFileTooBig(n)) {
             if ('image/gif' === n.type || 'image/webp' === n.type || 'image/avif' === n.type) return f(n.name, n.size, d, x);
@@ -50,7 +50,7 @@ let f = (e, t, n, r) => (
                 image: t,
                 name: O,
                 roles: b,
-                analyticsLocation: v
+                analyticsLocation: _
             }),
                 o.default.track(m.rMx.EMOJI_UPLOAD_COMPLETED, {
                     guild_id: d,
@@ -78,7 +78,7 @@ let f = (e, t, n, r) => (
                             : (null != r.image || r.code === m.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (n = a.d.RESIZE_GIF)),
                 429 === i && ((e = g.intl.string(g.t['Whhv4+'])), (n = a.d.RATE_LIMIT)),
                 null == e ||
-                    _ ||
+                    v ||
                     l.Z.show({
                         title: g.intl.string(g.t.iufib2),
                         body: e

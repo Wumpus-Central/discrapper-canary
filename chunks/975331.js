@@ -19,16 +19,16 @@ function b() {
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
         [b, j] = m.F2(t),
-        _ = (0, c.oC)(t),
-        { options: v } = (0, p.Z)(null != (e = null == _ ? void 0 : _.active_trial) ? e : null),
+        v = (0, c.oC)(t),
+        { options: _ } = (0, p.Z)(null != (e = null == v ? void 0 : v.active_trial) ? e : null),
         O = (0, g.Z)(),
         C = null != n,
         y = i.useCallback(
             (e) => {
-                let t = v.find((e) => e.isDefault);
+                let t = _.find((e) => e.isDefault);
                 (s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null));
             },
-            [l, v]
+            [l, _]
         ),
         N = (0, d.mY)(),
         I = (0, o.Dt)(),
@@ -58,7 +58,7 @@ function b() {
                     (0, r.jsx)(a.LZC, { size: 8 }),
                     (0, r.jsx)(a.q4e, {
                         'aria-labelledby': I,
-                        options: v,
+                        options: _,
                         className: x.formInput,
                         placeholder: h.intl.string(h.t.WZG1BQ),
                         value: n,

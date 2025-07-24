@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(723047),
     b = n(290348),
     j = n(450215),
-    _ = n(981631),
-    v = n(388032),
+    v = n(981631),
+    _ = n(388032),
     O = n(199824);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -128,7 +128,7 @@ function E(e) {
     return (
         i.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
+                B === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.Mr3)(N);
                 }
@@ -169,7 +169,7 @@ function E(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: 'text-md/normal',
                                     color: 'interactive-active',
-                                    children: v.intl.string(v.t.PiFnn5)
+                                    children: _.intl.string(_.t.PiFnn5)
                                 })
                             ]
                         })
@@ -191,12 +191,12 @@ function S(e) {
         { maxTiers: l } = (0, p.s1)(t),
         s = i.map((e) => e.id);
     return (0, r.jsxs)(d.hjN, {
-        title: v.intl.string(v.t['72+Soq']),
+        title: _.intl.string(_.t['72+Soq']),
         className: O.container,
         children: [
             (0, r.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
-                children: v.intl.format(v.t.nHRSvL, { maxTiers: l })
+                children: _.intl.format(_.t.nHRSvL, { maxTiers: l })
             }),
             (0, r.jsx)(d.LZC, { size: 16 }),
             (0, r.jsx)(E, {

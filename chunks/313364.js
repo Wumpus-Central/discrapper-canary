@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(430824),
     b = n(893966),
     j = n(527379),
-    _ = n(305473),
-    v = n(113679),
+    v = n(305473),
+    _ = n(113679),
     O = n(440857),
     C = n(472596),
     y = n(598948),
@@ -90,8 +90,8 @@ function R(e) {
                                             children: (0, r.jsxs)('div', {
                                                 className: P.tableContainer,
                                                 children: [
-                                                    (0, r.jsx)(v.Z, { guild: n }),
                                                     (0, r.jsx)(_.Z, { guild: n }),
+                                                    (0, r.jsx)(v.Z, { guild: n }),
                                                     A
                                                         ? (0, r.jsxs)('div', {
                                                               className: P.mainTableContainer,

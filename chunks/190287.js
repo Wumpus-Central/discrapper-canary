@@ -14,7 +14,7 @@ var r = n(255367),
     f = n(727138);
 let h = (e) => {
         var t;
-        let { reason: n = '', emoji_name: u, onSetReason: p, onSelectEmoji: h, onClearPressed: x, reasonMinLength: b, reasonMaxLength: j, placeholder: _, position: v } = e,
+        let { reason: n = '', emoji_name: u, onSetReason: p, onSelectEmoji: h, onClearPressed: x, reasonMinLength: b, reasonMaxLength: j, placeholder: v, position: _ } = e,
             O = i.useRef(null),
             [C, y] = i.useState(!1),
             N = (0, l.e7)([m.Z], () => m.Z.isGuildMetadataLoaded());
@@ -69,7 +69,7 @@ let h = (e) => {
                             s.Is,
                             {
                                 inputClassName: f.reason,
-                                placeholder: _,
+                                placeholder: v,
                                 value: n,
                                 minLength: b,
                                 maxLength: j,
@@ -78,7 +78,7 @@ let h = (e) => {
                                 },
                                 defaultDirty: (null == n ? void 0 : n.length) > 0
                             },
-                            'text-input-'.concat(v, '-').concat(N)
+                            'text-input-'.concat(_, '-').concat(N)
                         ),
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != u
                             ? (0, r.jsx)(s.zx, {

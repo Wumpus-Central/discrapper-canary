@@ -30,7 +30,7 @@ function x(e) {
             }),
             (0, r.jsxs)('div', {
                 className: h.channelList,
-                children: [(0, r.jsx)(_, {}), 0 === l.length && (0, r.jsx)(b, {}), (0, r.jsx)(j, { channels: l })]
+                children: [(0, r.jsx)(v, {}), 0 === l.length && (0, r.jsx)(b, {}), (0, r.jsx)(j, { channels: l })]
             })
         ]
     });
@@ -57,12 +57,12 @@ function b() {
 }
 function j(e) {
     let { channels: t } = e;
-    return (0, r.jsx)(r.Fragment, { children: t.map((e) => (e.isCategory() ? (0, r.jsx)(v, { label: e.name }, e.id) : (0, r.jsx)(O, { channel: e }, e.id))) });
+    return (0, r.jsx)(r.Fragment, { children: t.map((e) => (e.isCategory() ? (0, r.jsx)(_, { label: e.name }, e.id) : (0, r.jsx)(O, { channel: e }, e.id))) });
 }
-function _() {
+function v() {
     return (0, r.jsx)('div', { className: h.divider });
 }
-function v(e) {
+function _(e) {
     let { label: t } = e;
     return (0, r.jsxs)('div', {
         className: h.category,

@@ -17,9 +17,9 @@ let x = 'NO_CHANNEL',
     b = l.$e(f.Plq.VIEW_CHANNEL, f.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
     let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: f, enableLocalUpdate: j } = e,
-        _ = (0, s.e7)([c.ZP], () => c.ZP.getChannels(t)),
-        v = i.useMemo(() => {
-            let e = [..._[c.sH], ..._[c.Zb]]
+        v = (0, s.e7)([c.ZP], () => c.ZP.getChannels(t)),
+        _ = i.useMemo(() => {
+            let e = [...v[c.sH], ...v[c.Zb]]
                 .filter((e) => {
                     let { channel: n } = e;
                     return n.guild_id === t;
@@ -42,7 +42,7 @@ function j(e) {
                 }),
                 e
             );
-        }, [_, t, l]),
+        }, [v, t, l]),
         O = i.useCallback(
             (e) => {
                 j ? (0, p.c)(t, n, e !== x ? e : null) : g.Z.updateEmbed(t, n, e !== x ? e : null);
@@ -50,7 +50,7 @@ function j(e) {
             [t, n, j]
         );
     return (0, r.jsx)(a.q4e, {
-        options: v,
+        options: _,
         value: l,
         onChange: O,
         className: f

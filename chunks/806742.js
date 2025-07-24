@@ -78,7 +78,7 @@ let j = function (e) {
                 }),
             [t, l]
         ),
-        _ = (0, a.e7)([u.default], () => u.default.getId());
+        v = (0, a.e7)([u.default], () => u.default.getId());
     return (0, c.pw)(l)
         ? (0, r.jsx)(o.zxk, {
               variant: 'primary',
@@ -93,7 +93,7 @@ let j = function (e) {
                   (0, r.jsx)(d.Z, {
                       guildId: t,
                       welcomeMessage: {
-                          authorIds: l.authorIds.length > 0 ? l.authorIds : [_],
+                          authorIds: l.authorIds.length > 0 ? l.authorIds : [v],
                           message: l.message
                       }
                   }),

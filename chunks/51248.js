@@ -14,11 +14,11 @@ function m(e) {
         { cancelEditingRule: m, isLoading: g, hasChanges: p, editingRule: f, errorMessage: h, saveEditingRule: x } = (0, c.w)(),
         { updateRule: b } = (0, o.pH)(t),
         j = null != f,
-        _ = j && !(0, a.Vb)(f),
-        v = j || p || _,
+        v = j && !(0, a.Vb)(f),
+        _ = j || p || v,
         O = async () => {
-            if (!p && !_) return m();
-            null == f || _ || b(f);
+            if (!p && !v) return m();
+            null == f || v || b(f);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == f ? void 0 : f.id);
@@ -44,7 +44,7 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                v &&
+                _ &&
                 (0, r.jsx)(l.oXn, {
                     children: (0, r.jsx)(s.Z, {
                         submitting: g,

@@ -61,7 +61,7 @@ let h = [],
                 return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
             b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
-            { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
+            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, a.Z)(b, c.lq),
             O = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
@@ -99,8 +99,8 @@ let h = [],
                             resourceChannel: e,
                             index: n,
                             onDragStart: j,
-                            onDragReset: _,
-                            onDragComplete: v
+                            onDragReset: v,
+                            onDragComplete: _
                         },
                         e.channelId
                     )

@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(946724),
     b = n(95242),
     j = n(530198),
-    _ = n(420966),
-    v = n(203377),
+    v = n(420966),
+    _ = n(203377),
     O = n(981631),
     C = n(856651),
     y = n(388032),
@@ -81,7 +81,7 @@ function P(e) {
 function w(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: g, headerRef: w } = (0, b.Z)(0),
-        { scrolledToTop: R, handleScroll: Z } = (0, _.V)(),
+        { scrolledToTop: R, handleScroll: Z } = (0, v.V)(),
         D = (0, c.e7)(
             [f.Z],
             () => {
@@ -283,10 +283,10 @@ function w(e) {
                 (0, r.jsx)('div', {
                     className: s()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
                     ref: w,
-                    children: (0, r.jsx)(_.Z, {
+                    children: (0, r.jsx)(v.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: v.ZI.VERIFICATIONS,
+                        selectedSection: _.ZI.VERIFICATIONS,
                         setSelectedSection: a
                     })
                 }),

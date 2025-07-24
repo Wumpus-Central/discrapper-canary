@@ -22,7 +22,7 @@ function m(e) {
         }),
         b = p.length > 0,
         j = f.length > 0,
-        _ = x.length > 0;
+        v = x.length > 0;
     return null == g
         ? null
         : (0, r.jsxs)('div', {
@@ -35,7 +35,7 @@ function m(e) {
                   (0, r.jsx)(l.zxk, {
                       variant: 'critical-primary',
                       text: u.intl.string(u.t.FrOFSk),
-                      disabled: !h || b || j || _,
+                      disabled: !h || b || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('35282').then(n.bind(n, 157429));

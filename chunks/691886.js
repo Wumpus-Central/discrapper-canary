@@ -18,7 +18,7 @@ var r = n(255367),
 function j(e) {
     return String(e);
 }
-function _(e) {
+function v(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)('div', {
         className: s()(b.label, l),
@@ -46,8 +46,8 @@ function _(e) {
         ]
     });
 }
-function v() {
-    return (0, r.jsx)(_, {
+function _() {
+    return (0, r.jsx)(v, {
         icon: (0, r.jsx)(o.qJs, {
             size: 'md',
             color: 'currentColor',
@@ -66,7 +66,7 @@ function O(e) {
     let s = (0, d.KS)(i),
         a = (0, c.F6)(i, p.default, g.Z),
         o = null != l ? (0, c.F6)(l, p.default, g.Z) : void 0;
-    return (0, r.jsx)(_, {
+    return (0, r.jsx)(v, {
         icon: null != s && (0, r.jsx)(s, { className: b.labelIcon }),
         title: a,
         subtitle: o
@@ -74,18 +74,18 @@ function O(e) {
 }
 function C(e) {
     let { value: t } = e;
-    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(v, {});
+    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(_, {});
 }
 function y(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': b, onChange: _ } = e,
-        v = x.intl.string(x.t.d7YJMD),
+    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': b, onChange: v } = e,
+        _ = x.intl.string(x.t.d7YJMD),
         O = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         y = (0, f.m7)(null != l ? l : h.lds),
         N = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: v
+                        label: _
                     }
                 ],
                 t = !1;
@@ -108,7 +108,7 @@ function y(e) {
                     }),
                 e
             );
-        }, [v, l, y, O, d, s]);
+        }, [_, l, y, O, d, s]);
     return (0, r.jsx)(o.PhF, {
         placeholder: x.intl.string(x.t.r2pts7),
         options: N,
@@ -148,7 +148,7 @@ function y(e) {
                               (l = l =
                                   {
                                       guildId: t,
-                                      onSubmit: _
+                                      onSubmit: v
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -166,7 +166,7 @@ function y(e) {
                           );
                       };
                   })
-                : _(e);
+                : v(e);
         },
         isSelected: (e) => null != l && j(e) === j(l),
         serialize: j,

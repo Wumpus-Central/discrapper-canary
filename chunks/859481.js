@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(949640),
     b = n(927160),
     j = n(981631),
-    _ = n(30513),
-    v = n(388032),
+    v = n(30513),
+    _ = n(388032),
     O = n(919957);
 function C(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
@@ -34,7 +34,7 @@ function C(e) {
             variant: 'text-sm/medium',
             color: 'text-secondary',
             className: O.vanityInfo,
-            children: v.intl.format(v.t['1qTOvr'], {
+            children: _.intl.format(_.t['1qTOvr'], {
                 urlText: e,
                 urlValue: e
             })
@@ -63,13 +63,13 @@ function y(e) {
                           (0, r.jsx)(a.X6q, {
                               variant: 'heading-sm/semibold',
                               color: 'text-default',
-                              children: v.intl.string(v.t['6oJyq6'])
+                              children: _.intl.string(_.t['6oJyq6'])
                           }),
                           n.length > 0
                               ? (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    children: v.intl.format(v.t.MVWOUV, { uses: l })
+                                    children: _.intl.format(_.t.MVWOUV, { uses: l })
                                 })
                               : null
                       ]
@@ -87,7 +87,7 @@ function y(e) {
                             look: s.zx.Looks.LINK,
                             size: s.zx.Sizes.MIN,
                             color: s.zx.Colors.RED,
-                            children: v.intl.string(v.t['3ggb6O'])
+                            children: _.intl.string(_.t['3ggb6O'])
                         })
                       : null
               ]
@@ -97,7 +97,7 @@ function N(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: a, errorDetails: d } = e,
         { analyticsLocations: p } = (0, c.ZP)(),
         b = (0, u.g1)(t.id, 'GuildSettingsBoostPerks'),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 (e.preventDefault(),
                     e.stopPropagation(),
@@ -108,7 +108,7 @@ function N(e) {
                               analyticsLocations: p,
                               analyticsSection: j.jXE.GUILD_SETTINGS_VANITY_URL,
                               analyticsObject: j.qAy.BUTTON_CTA,
-                              perks: (0, _.WW)(),
+                              perks: (0, v.WW)(),
                               targetPremiumGuildTier: j.Eu4.TIER_3
                           }));
             },
@@ -125,7 +125,7 @@ function N(e) {
                       hasError: null != d
                   })
                 : (0, r.jsx)(h.P, {
-                      onClick: v,
+                      onClick: _,
                       className: O.upsellButton
                   }),
             (0, r.jsx)(C, {

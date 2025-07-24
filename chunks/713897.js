@@ -1,4 +1,4 @@
-t.d(e, { S: () => f });
+t.d(e, { S: () => v });
 var n = t(255367);
 t(73800);
 var r = t(331595),
@@ -25,7 +25,7 @@ let i = ['#ff1c90', '#ff7fc0', '#ffa5d3', '#f0f0f0'],
         }
     ],
     g = [0.1, 0.3, 0.5, 0.9],
-    v = [
+    f = [
         {
             base: 8,
             tint: 1
@@ -43,11 +43,11 @@ let i = ['#ff1c90', '#ff7fc0', '#ffa5d3', '#f0f0f0'],
             tint: 1
         }
     ],
-    f = (A) => {
+    v = (A) => {
         var e,
             t,
-            { width: f = 24, height: c = 24, primaryTintColor: h, secondaryTintColor: u } = A,
-            E = (function (A, e) {
+            { width: v = 24, height: c = 24, primaryTintColor: h, secondaryTintColor: E } = A,
+            u = (function (A, e) {
                 if (null == A) return {};
                 var t,
                     n,
@@ -72,9 +72,9 @@ let i = ['#ff1c90', '#ff7fc0', '#ffa5d3', '#f0f0f0'],
             primaryTintLuminances: a,
             primaryLuminanceWeights: o,
             secondaryBaseColors: s,
-            secondaryTintColor: u,
+            secondaryTintColor: E,
             secondaryTintLuminances: g,
-            secondaryLuminanceWeights: v
+            secondaryLuminanceWeights: f
         });
         return (0, n.jsxs)(
             'svg',
@@ -102,10 +102,10 @@ let i = ['#ff1c90', '#ff7fc0', '#ffa5d3', '#f0f0f0'],
                         }));
                 }
                 return A;
-            })({}, (0, r.Z)(E))),
+            })({}, (0, r.Z)(u))),
             (t = t =
                 {
-                    width: f,
+                    width: v,
                     height: c,
                     viewBox: '0 0 16 16',
                     fill: 'none',

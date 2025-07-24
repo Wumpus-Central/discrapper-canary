@@ -12,12 +12,12 @@ if (12633 == t.j) var s = t(91192);
 var a = t(442837),
     o = t(481060),
     g = t(43267),
-    v = t(933557),
-    f = t(471445),
+    f = t(933557),
+    v = t(471445),
     c = t(111028),
     h = t(727429),
-    u = t(810123),
-    E = t(690221),
+    E = t(810123),
+    u = t(690221),
     d = t(430824),
     C = t(158776),
     B = t(111583),
@@ -117,16 +117,16 @@ function T(A) {
 }
 let y = (A) => {
         let { className: e, containerClassName: t, channel: r, locked: l, hasActiveThreads: s, withGuildIcon: g } = A,
-            v = (0, a.e7)([d.Z], () => d.Z.getGuild(r.guild_id), [r.guild_id]),
+            f = (0, a.e7)([d.Z], () => d.Z.getGuild(r.guild_id), [r.guild_id]),
             c = r.type === M.d4z.DM || r.type === M.d4z.GROUP_DM,
             h = null;
-        if (g && null != v && !c)
-            h = (0, n.jsx)(u.Z, {
-                size: u.E.SMALL_32,
+        if (g && null != f && !c)
+            h = (0, n.jsx)(E.Z, {
+                size: E.E.SMALL_32,
                 className: H.iconContainerWithGuildIcon,
                 iconClassName: H.iconWithGuildIcon,
                 channel: r,
-                guild: v,
+                guild: f,
                 locked: l,
                 hasActiveThreads: s
             });
@@ -142,9 +142,9 @@ let y = (A) => {
                             return (0, n.jsx)(j, { channel: A });
                         };
                     default:
-                        return (0, f.KS)(A, e, t);
+                        return (0, v.KS)(A, e, t);
                 }
-            })(r, v, {
+            })(r, f, {
                 locked: l,
                 hasActiveThreads: s
             });
@@ -154,10 +154,10 @@ let y = (A) => {
                 className: i()(H.icon, e)
             });
         }
-        let E = g ? (null == v ? void 0 : v.name) : (0, f.bT)(r, v, l, s),
-            C = g && null != v ? ''.concat(v.name, ' - ').concat(E, ' icon') : ''.concat(E, ' icon');
+        let u = g ? (null == f ? void 0 : f.name) : (0, v.bT)(r, f, l, s),
+            C = g && null != f ? ''.concat(f.name, ' - ').concat(u, ' icon') : ''.concat(u, ' icon');
         return (0, n.jsx)(o.ua7, {
-            text: E,
+            text: u,
             delay: 500,
             children: (A) =>
                 (0, n.jsx)(
@@ -179,8 +179,8 @@ let y = (A) => {
                           channel: l,
                           name: a,
                           muted: g,
-                          selected: f,
-                          connected: u,
+                          selected: v,
+                          connected: E,
                           unread: d,
                           locked: C,
                           hasActiveThreads: B,
@@ -233,17 +233,17 @@ let y = (A) => {
                       At = r.useRef(null),
                       An = (0, h.Z)(l),
                       Ar = M.Z5c.CHANNEL(An, l.id),
-                      Al = (0, v.ZP)(l),
+                      Al = (0, f.ZP)(l),
                       Ai = l.isGuildVocal(),
                       As = (0, n.jsx)('div', {
                           className: i()({ [H.favoritesSuggestion]: Y }),
                           ref: At,
                           children: (0, n.jsxs)(
-                              E.Z,
+                              u.Z,
                               Q(
                                   b(
                                       {
-                                          role: Ai && !u ? 'button' : 'link',
+                                          role: Ai && !E ? 'button' : 'link',
                                           href: Ai ? void 0 : Ar,
                                           target: '_blank',
                                           ref: Ae,
@@ -311,8 +311,8 @@ let y = (A) => {
                               m,
                               null != w || null != V || null != D || z ? H.wrapper : H.notInteractive,
                               (() => {
-                                  if (f) return i()(p.selectedChannel, O.SELECTED);
-                                  if (u) return i()(p.selectedChannel, O.CONNECTED);
+                                  if (v) return i()(p.selectedChannel, O.SELECTED);
+                                  if (E) return i()(p.selectedChannel, O.CONNECTED);
                                   if (C) return O.LOCKED;
                                   if (g) return O.MUTED;
                                   if (d)

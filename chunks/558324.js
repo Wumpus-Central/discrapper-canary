@@ -11,8 +11,8 @@ var r = n(255367),
 let m = (e) => {
     var t,
         n,
-        { className: l, tags: m, value: g, onRemoveTag: p, onAddTag: f, onAddTagError: h, maxTaxLength: x, maxTags: b, disabled: j, placeholder: _ } = e,
-        v = (function (e, t) {
+        { className: l, tags: m, value: g, onRemoveTag: p, onAddTag: f, onAddTagError: h, maxTaxLength: x, maxTags: b, disabled: j, placeholder: v } = e,
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -113,7 +113,7 @@ let m = (e) => {
                         className: u.inputOuter,
                         inputClassName: u.inputInner
                     },
-                    v
+                    _
                 )),
                 (n = n =
                     {
@@ -123,7 +123,7 @@ let m = (e) => {
                         maxLength: x,
                         disabled: j,
                         onBlur: N,
-                        placeholder: _
+                        placeholder: v
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

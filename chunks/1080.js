@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(733026),
     b = n(246946),
     j = n(594174),
-    _ = n(626135),
-    v = n(136015),
+    v = n(626135),
+    _ = n(136015),
     O = n(51144),
     C = n(434404),
     y = n(999382),
@@ -79,19 +79,19 @@ function Z(e) {
         [g, h] = i.useState(!1),
         [x, b] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
-        v = null != (t = null == j ? void 0 : j[0]) ? t : null;
+        _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function C() {
         if (null != l) {
             (b(null), h(!0));
             try {
                 (await d.Z.unbanUser(l.id, s.id),
                     m(),
-                    _.default.track(
+                    v.default.track(
                         E.rMx.GUILD_BAN_REMOVED,
                         R(w({}, (0, p.hH)(l.id)), {
                             target_user_id: s.id,
                             reason: a.reason,
-                            location: v
+                            location: _
                         })
                     ));
             } catch (e) {
@@ -363,8 +363,8 @@ function k() {
         p = null != u && u.trim().length > 0,
         f = (0, m.Z)(p),
         h = p !== f,
-        [b] = (0, a.e7)([y.Z], () => y.Z.getBans(), [], v.Q),
-        _ = null != (e = null == b ? void 0 : b.size) ? e : 0,
+        [b] = (0, a.e7)([y.Z], () => y.Z.getBans(), [], _.Q),
+        v = null != (e = null == b ? void 0 : b.size) ? e : 0,
         O = (0, g.ZP)(),
         C = null != (t = null == c ? void 0 : c.id) ? t : E.lds,
         N = i.useRef(null),
@@ -391,7 +391,7 @@ function k() {
             },
             [I]
         ),
-        Z = i.useMemo(() => P(b, u, _), [b, P, u, _]),
+        Z = i.useMemo(() => P(b, u, v), [b, P, u, v]),
         D = null != b,
         k = Z.length % 1000 == 0 && Z.length > 0 && D,
         M = 0 === Z.length,

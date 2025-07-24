@@ -1,5 +1,5 @@
 t.d(e, {
-    E: () => v,
+    E: () => f,
     Z: () => h
 });
 var n,
@@ -10,23 +10,23 @@ var n,
     a = t(686546),
     o = t(601964),
     g = t(292895),
-    v = (((n = {}).SMALL_32 = 'SMALL_32'), n);
-let f = { SMALL_32: 24 },
+    f = (((n = {}).SMALL_32 = 'SMALL_32'), n);
+let v = { SMALL_32: 24 },
     c = {
         SMALL_32: [13, 11, 10, 10, 10, 10, 10]
     },
     h = function (A) {
-        let { className: e, iconClassName: t, size: n, channel: l, guild: v, locked: h, hasActiveThreads: u } = A;
-        if (null == v) return null;
-        let E = (0, o.EB)(v, 48),
+        let { className: e, iconClassName: t, size: n, channel: l, guild: f, locked: h, hasActiveThreads: E } = A;
+        if (null == f) return null;
+        let u = (0, o.EB)(f, 48),
             d = c[n],
-            C = f[n],
-            B = (0, s.KS)(l, v, {
+            C = v[n],
+            B = (0, s.KS)(l, f, {
                 locked: h,
-                hasActiveThreads: u
+                hasActiveThreads: E
             });
         if (null == B) return null;
-        let w = null != v ? (0, o.gM)(v) : '';
+        let w = null != f ? (0, o.gM)(f) : '';
         return (0, r.jsxs)('div', {
             role: 'img',
             className: e,
@@ -34,10 +34,10 @@ let f = { SMALL_32: 24 },
                 (0, r.jsx)(a.ZP, {
                     mask: a.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                     children:
-                        null != E
+                        null != u
                             ? (0, r.jsx)('img', {
                                   alt: '',
-                                  src: E,
+                                  src: u,
                                   className: g.channelGuildIcon,
                                   style: {
                                       width: C,

@@ -68,7 +68,7 @@ function j(e) {
         u = b(t),
         m = u.length > 0,
         j = g.$X.some((e) => !d.Z.can(e, t, null, { [i.id]: x(h({}, i), { permissions: s.Od(i.permissions, e) }) })),
-        _ = (0, r.jsxs)(r.Fragment, {
+        v = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
                     className: f.itemContent,
@@ -108,7 +108,7 @@ function j(e) {
         ? j
             ? (0, r.jsx)(o.ua7, {
                   text: p.intl.string(p.t['E5v/a2']),
-                  children: (e) => (0, r.jsx)('div', x(h({ className: l()(f.simpleItemWrapper, f.disabled) }, e), { children: _ }))
+                  children: (e) => (0, r.jsx)('div', x(h({ className: l()(f.simpleItemWrapper, f.disabled) }, e), { children: v }))
               })
             : (0, r.jsx)(o.P3F, {
                   onClick: () => {
@@ -118,10 +118,10 @@ function j(e) {
                       });
                   },
                   className: l()(f.simpleItemWrapper, f.clickable),
-                  children: _
+                  children: v
               })
         : (0, r.jsx)('div', {
               className: f.simpleItemWrapper,
-              children: _
+              children: v
           });
 }

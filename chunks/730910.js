@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(983135),
     b = n(8426),
     j = n(969632),
-    _ = n(570961),
-    v = n(208665),
+    v = n(570961),
+    _ = n(208665),
     O = n(359191),
     C = n(84658),
     y = n(142961),
@@ -128,12 +128,12 @@ function A(e) {
         else if (D === C.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
     }
     let K = D === C.xh[C.xh.length - 1],
-        q = async () => {
-            let e = v.Z.advancedMode;
+        X = async () => {
+            let e = _.Z.advancedMode;
             if (L)
                 try {
-                    if (D === C.PG.DEFAULT_CHANNELS) await (0, h.DO)(t).then(() => (e ? (0, _.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (D === C.PG.CUSTOMIZATION_QUESTIONS) await (0, _.rS)(t, { ignoreDefaultPrompt: !0 });
+                    if (D === C.PG.DEFAULT_CHANNELS) await (0, h.DO)(t).then(() => (e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (D === C.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (D === C.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
                         await (0, b.oo)(t.id, e);
@@ -143,7 +143,7 @@ function A(e) {
                 }
             return !0;
         },
-        X = async () => {
+        q = async () => {
             (g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 Z(R({}, (0, m.hH)(f)), {
@@ -153,7 +153,7 @@ function A(e) {
                 })
             ),
                 (0, x.Nb)((0, C.lg)(D)),
-                (await q()) && (0, x.IG)(f, D));
+                (await X()) && (0, x.IG)(f, D));
         },
         J = async () => {
             (g.default.track(
@@ -164,7 +164,7 @@ function A(e) {
                     skip: !1
                 })
             ),
-                (await q()) && (0, x.Wy)(f, D));
+                (await X()) && (0, x.Wy)(f, D));
         },
         Q = null;
     G && (D === C.PG.SAFETY_CHECK ? (Q = (0, r.jsx)(N.j7, {})) : D === C.PG.DEFAULT_CHANNELS ? (Q = (0, r.jsx)(N.Io, {})) : D === C.PG.CUSTOMIZATION_QUESTIONS ? (Q = (0, r.jsx)(N.cZ, {})) : D === C.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
@@ -186,7 +186,7 @@ function A(e) {
             text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t['5WxrcX']),
             icon: d.ZSh,
             iconPosition: 'end',
-            onClick: X,
+            onClick: q,
             disabled: G || M
         });
     return (0, r.jsx)(o.W, {

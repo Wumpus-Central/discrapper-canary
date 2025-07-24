@@ -40,7 +40,7 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function v(e) {
+function _(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, a.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
@@ -66,8 +66,8 @@ function v(e) {
         {
             drag: f,
             drop: j,
-            dragSourcePosition: _,
-            setIsDraggable: v
+            dragSourcePosition: v,
+            setIsDraggable: _
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -79,16 +79,16 @@ function v(e) {
         O = i.useRef(null);
     return (
         i.useEffect(() => {
-            v(!1);
-        }, [v]),
+            _(!1);
+        }, [_]),
         i.useEffect(() => {
             f(j(O));
         }, [f, j, O]),
         (0, r.jsxs)('div', {
             ref: O,
             className: s()(b.separatorSection, {
-                [b.dropIndicatorBefore]: null != _ && m < _,
-                [b.dropIndicatorAfter]: null != _ && m > _
+                [b.dropIndicatorBefore]: null != v && m < v,
+                [b.dropIndicatorAfter]: null != v && m > v
             }),
             children: [
                 !l && u.length < h.b3
@@ -158,9 +158,9 @@ function O(e) {
             handleDragComplete: S
         } = (0, u.Z)(N, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
-                n = e.slice(0, t).map((e) => _(j({}, e.data), { inOnboarding: !0 })),
+                n = e.slice(0, t).map((e) => v(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
-                    _(j({}, e.data), {
+                    v(j({}, e.data), {
                         inOnboarding: !1,
                         required: !1
                     })
@@ -216,7 +216,7 @@ function O(e) {
                                 )
                             ]
                         }),
-                  (0, r.jsx)(v, {
+                  (0, r.jsx)(_, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: i

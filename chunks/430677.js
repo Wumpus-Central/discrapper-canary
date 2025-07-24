@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -40,7 +40,7 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,8 +58,8 @@ function _(e, t) {
         e
     );
 }
-let v = function (e) {
-    var t, l, v, O, C;
+let _ = function (e) {
+    var t, l, _, O, C;
     let { guildId: y, action: N, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
         R = (0, a.e7)([p.Z], () => p.Z.getChannel(N.channelId)),
         Z = (0, a.e7)([f.Z], () => f.Z.getGuild(y)),
@@ -91,7 +91,7 @@ let v = function (e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            _(j({}, t), {
+                            v(j({}, t), {
                                 guildId: y,
                                 action: N,
                                 onSave: (e, t, n) => E(I, e, t, n),
@@ -140,7 +140,7 @@ let v = function (e) {
                         : (0, r.jsx)('div', {
                               className: b.actionItemEmojiWrapper,
                               children: (0, r.jsx)(g.Z, {
-                                  emojiId: null == (v = N.emoji) ? void 0 : v.id,
+                                  emojiId: null == (_ = N.emoji) ? void 0 : _.id,
                                   emojiName: null == (O = N.emoji) ? void 0 : O.name,
                                   size: g.R.MEDIUM,
                                   defaultComponent: (0, r.jsx)(z, {})
@@ -166,7 +166,7 @@ let v = function (e) {
                         children: (e) =>
                             (0, r.jsx)(
                                 o.hU,
-                                _(j({}, e), {
+                                v(j({}, e), {
                                     icon: o.vdY,
                                     size: 'sm',
                                     variant: 'primary',

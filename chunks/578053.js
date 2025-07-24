@@ -1,6 +1,6 @@
 (n.d(t, {
-    g: () => _,
-    u: () => v
+    g: () => v,
+    u: () => _
 }),
     n(290780));
 var r = n(255367),
@@ -37,7 +37,7 @@ function j(e) {
         subtitle: null != s ? u : null
     });
 }
-function _(e) {
+function v(e) {
     let { canManageGuild: t, guildId: n, afkChannelId: a } = e,
         c = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {
@@ -69,7 +69,7 @@ function _(e) {
         onChange: u
     });
 }
-function v(e) {
+function _(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: a } = e,
         c = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {

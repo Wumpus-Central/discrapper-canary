@@ -12,7 +12,7 @@ var r = t(120356),
     s = t(44946);
 let a = 16;
 function o(A) {
-    let { description: e, name: t, icon: r, onNavigate: o, className: g, missingNavIcon: v } = A;
+    let { description: e, name: t, icon: r, onNavigate: o, className: g, missingNavIcon: f } = A;
     return (0, n.jsxs)(i.P3F, {
         onClick: o,
         className: l()(s.modInfoItem, null != o && s.modInfoAction, g),
@@ -41,10 +41,10 @@ function o(A) {
                     })
                 }),
             null == o &&
-                null != v &&
+                null != f &&
                 (0, n.jsx)('div', {
                     className: s.modInfoItemActionIcon,
-                    children: v
+                    children: f
                 })
         ]
     });

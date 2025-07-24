@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(733683),
     b = n(237583),
     j = n(899667),
-    _ = n(271383),
-    v = n(430824),
+    v = n(271383),
+    _ = n(430824),
     O = n(594174),
     C = n(267642),
     y = n(624138),
@@ -286,17 +286,17 @@ class R extends i.Component {
             ));
     }
 }
-let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, O.default, _.ZP], () => {
+let Z = c.ZP.connectStores([_.Z, f.Z, p.Z, j.Z, O.default, v.ZP], () => {
     var e, t;
     let n = p.Z.getGuildId(),
-        r = null != (t = null == (e = v.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : N.Eu4.NONE,
+        r = null != (t = null == (e = _.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : N.Eu4.NONE,
         i = (0, h.I)(n),
         l = null != n ? j.Z.getAppliedGuildBoostsForGuild(n) : null,
         s = o()(null != l ? l : []).uniqBy((e) => e.userId),
         a = s
             .map((e) => ({
                 user: O.default.getUser(e.userId),
-                nick: _.ZP.getNick(n, e.userId)
+                nick: v.ZP.getNick(n, e.userId)
             }))
             .filter((e) => null != e.user)
             .value();

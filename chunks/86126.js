@@ -17,21 +17,21 @@ var r = n(255367),
 function b(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: b, guildId: j, groupListingId: _ } = (0, m.N)(),
-        v = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
-        O = null == v ? void 0 : v.id,
+        { editStateId: b, guildId: j, groupListingId: v } = (0, m.N)(),
+        _ = (0, a.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
+        O = null == _ ? void 0 : _.id,
         C = (0, g.Z)(j),
         y = i.useMemo(() => {
             var e;
-            return null != C && null != v && (null != (e = C[v.role_id]) ? e : 0);
-        }, [C, v]),
+            return null != C && null != _ && (null != (e = C[_.role_id]) ? e : 0);
+        }, [C, _]),
         N = 0 === y,
         I = null == O,
-        E = null != (t = null == v ? void 0 : v.archived) && t,
+        E = null != (t = null == _ ? void 0 : _.archived) && t,
         { error: S, deleteSubscriptionListing: T, submitting: P } = (0, d.r4)(),
         { error: w, archiveSubscriptionListing: R, submitting: Z } = (0, d._1)(),
         { allowSelfRemoveMonetization: D } = (0, c.gX)(j);
-    return null == v
+    return null == _
         ? null
         : (0, r.jsx)(p.Z, {
               title: f.intl.string(f.t['7Si8Ul']),
@@ -72,7 +72,7 @@ function b(e) {
                                                 variant: 'critical-primary',
                                                 onClick: () => {
                                                     let e = async () => {
-                                                        (I || (s()(null != _, 'group listing doesnt exist'), s()(null != O, 'subscription listing doesnt exist'), await T(j, _, O))) && (null == l || l());
+                                                        (I || (s()(null != v, 'group listing doesnt exist'), s()(null != O, 'subscription listing doesnt exist'), await T(j, v, O))) && (null == l || l());
                                                     };
                                                     (0, o.ZDy)(async () => {
                                                         let { Modal: t } = await Promise.resolve().then(n.bind(n, 82659));
@@ -123,7 +123,7 @@ function b(e) {
                                     (0, r.jsx)(o.zxk, {
                                         variant: 'critical-primary',
                                         onClick: () => {
-                                            (s()(null != _, 'group listing doesnt exist'),
+                                            (s()(null != v, 'group listing doesnt exist'),
                                                 s()(null != O, 'subscription listing doesnt exist'),
                                                 (0, o.ZDy)(async () => {
                                                     let { Modal: e } = await Promise.resolve().then(n.bind(n, 82659));
@@ -142,7 +142,7 @@ function b(e) {
                                                                     text: f.intl.string(f.t.RL0wjo),
                                                                     variant: 'critical-primary',
                                                                     onClick: async () => {
-                                                                        (await R(j, _, O), t.onClose());
+                                                                        (await R(j, v, O), t.onClose());
                                                                     }
                                                                 }
                                                             ],

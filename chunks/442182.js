@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(626135),
     b = n(243730),
     j = n(434404),
-    _ = n(946724),
-    v = n(130341),
+    v = n(946724),
+    _ = n(130341),
     O = n(95242),
     C = n(420966),
     y = n(566476),
@@ -99,7 +99,7 @@ function Z(e) {
     function p(e) {
         if ((e.stopPropagation(), !o)) {
             if (e.shiftKey) return void R(t, l, a);
-            let n = _.Z.getRole(a);
+            let n = v.Z.getRole(a);
             (0, c.h7j)((e) =>
                 (0, r.jsxs)(
                     c.ConfirmModal,
@@ -235,8 +235,8 @@ function A(e) {
     let { guildId: t, roleId: n, query: l, headerHeight: s, locked: a, onScroll: o, roleMembers: d, handleAddClick: u } = e,
         { analyticsLocations: m } = (0, p.ZP)(g.Z.MEMBER_LIST),
         f = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, v.rY)(t, f);
-    let h = i.useMemo(() => d.filter((e) => (0, v.eg)(f, e)), [d, f]),
+    (0, _.rY)(t, f);
+    let h = i.useMemo(() => d.filter((e) => (0, _.eg)(f, e)), [d, f]),
         x = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(p.Gt, {
         value: m,
@@ -303,12 +303,12 @@ function k(e) {
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
         { scrolledToTop: f, handleScroll: h } = (0, C.V)(),
         j = l.managed || o,
-        _ = (0, v.e)(t.id, l.id),
+        v = (0, _.e)(t.id, l.id),
         y =
             (0, a.e7)([b.Z], () => {
                 var e, n;
                 return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
-            }) > _.length,
+            }) > v.length,
         R = () => {
             (x.default.track(I.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
@@ -368,7 +368,7 @@ function k(e) {
                 roleId: l.id,
                 locked: j,
                 onScroll: h,
-                roleMembers: _,
+                roleMembers: v,
                 handleAddClick: R
             })
         ]

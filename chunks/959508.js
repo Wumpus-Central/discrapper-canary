@@ -16,8 +16,8 @@ var r = n(255367),
     x = n(208665),
     b = n(976983),
     j = n(290511),
-    _ = n(388032),
-    v = n(434840);
+    v = n(388032),
+    _ = n(434840);
 let O = { optionErrors: [] };
 function C(e) {
     var t;
@@ -66,30 +66,30 @@ function C(e) {
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
                   onMouseLeave: () => U(!1),
-                  className: s()(v.container, {
-                      [v.dropIndicatorBefore]: null != Z && b < Z,
-                      [v.dropIndicatorAfter]: null != Z && b > Z,
-                      [v.containerFocused]: G
+                  className: s()(_.container, {
+                      [_.dropIndicatorBefore]: null != Z && b < Z,
+                      [_.dropIndicatorAfter]: null != Z && b > Z,
+                      [_.containerFocused]: G
                   }),
                   ref: (e) => {
                       R(D(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
-                          className: v.dragContainer,
+                          className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: v.dragIcon
+                              className: _.dragIcon
                           })
                       }),
                       (0, r.jsx)(c.Text, {
-                          className: v.questionNumber,
+                          className: _.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: _.intl.format(_.t.yjS3zs, { index: b + 1 })
+                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 })
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: 'text-lg/semibold',
@@ -97,7 +97,7 @@ function C(e) {
                           children: l.title
                       }),
                       (0, r.jsx)(c.P3F, {
-                          className: v.collapseButton,
+                          className: _.collapseButton,
                           onClick: () => M(!1),
                           children: (0, r.jsx)(g.Z, {
                               direction: g.Z.Directions.DOWN,
@@ -106,10 +106,10 @@ function C(e) {
                           })
                       }),
                       (0, r.jsx)(c.DY3, {
-                          text: _.intl.string(_.t['Ku+86e']),
-                          className: v.removeButton,
+                          text: v.intl.string(v.t['Ku+86e']),
+                          className: _.removeButton,
                           children: (0, r.jsx)(c.P3F, {
-                              className: v.closeIcon,
+                              className: _.closeIcon,
                               onClick: () => (0, h.fi)(n, l.id),
                               children: (0, r.jsx)(c.XHJ, {
                                   size: 'xs',
@@ -125,38 +125,38 @@ function C(e) {
                   tabIndex: 0,
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
-                  className: s()(v.container, {
-                      [v.dropIndicatorBefore]: null != Z && b < Z,
-                      [v.dropIndicatorAfter]: null != Z && b > Z,
-                      [v.containerFocused]: G
+                  className: s()(_.container, {
+                      [_.dropIndicatorBefore]: null != Z && b < Z,
+                      [_.dropIndicatorAfter]: null != Z && b > Z,
+                      [_.containerFocused]: G
                   }),
                   ref: (e) => {
                       R(D(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
-                          className: v.dragContainer,
+                          className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: v.dragIcon
+                              className: _.dragIcon
                           })
                       }),
                       (0, r.jsx)(c.Text, {
-                          className: v.questionNumber,
+                          className: _.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: _.intl.format(_.t.yjS3zs, { index: b + 1 })
+                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 })
                       }),
                       (0, r.jsx)(o.Is, {
-                          className: v.title,
-                          inputClassName: v.titleInput,
+                          className: _.title,
+                          inputClassName: _.titleInput,
                           inputRef: W,
                           value: l.title,
                           onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
-                          placeholder: _.intl.string(_.t.QMCuCg),
+                          placeholder: v.intl.string(v.t.QMCuCg),
                           maxLength: j.iU,
                           error: L.title
                       }),
@@ -165,15 +165,15 @@ function C(e) {
                           guild: n
                       }),
                       (0, r.jsx)(c.Text, {
-                          className: v.optionsHeader,
+                          className: _.optionsHeader,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: H
-                              ? _.intl.formatToPlainString(_.t.AbvhZG, {
+                              ? v.intl.formatToPlainString(v.t.AbvhZG, {
                                     count: l.options.length,
                                     total: j.qm
                                 })
-                              : _.intl.formatToPlainString(_.t.b7VxYW, {
+                              : v.intl.formatToPlainString(v.t.b7VxYW, {
                                     count: l.options.length,
                                     total: j.qm
                                 })
@@ -187,10 +187,10 @@ function C(e) {
                       }),
                       null != B ? (0, r.jsx)(c.pdY, { error: B }) : null,
                       (0, r.jsxs)('div', {
-                          className: v.buttons,
+                          className: _.buttons,
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: v.checkboxes,
+                                  className: _.checkboxes,
                                   children: [
                                       (0, r.jsx)(c.XZJ, {
                                           size: 20,
@@ -200,7 +200,7 @@ function C(e) {
                                           children: (0, r.jsx)(c.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
-                                              children: _.intl.string(_.t.uCebZW)
+                                              children: v.intl.string(v.t.uCebZW)
                                           })
                                       }),
                                       l.inOnboarding
@@ -213,14 +213,14 @@ function C(e) {
                                                 children: (0, r.jsx)(c.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'interactive-normal',
-                                                    children: I ? _.intl.formatToPlainString(_.t['0re8T0'], { count: z }) : _.intl.string(_.t.Ur8Vrq)
+                                                    children: I ? v.intl.formatToPlainString(v.t['0re8T0'], { count: z }) : v.intl.string(v.t.Ur8Vrq)
                                                 })
                                             })
                                           : null
                                   ]
                               }),
                               (0, r.jsx)(c.P3F, {
-                                  className: v.collapseButton,
+                                  className: _.collapseButton,
                                   onClick: () => M(!0),
                                   children: (0, r.jsx)(g.Z, {
                                       direction: g.Z.Directions.UP,
@@ -229,10 +229,10 @@ function C(e) {
                                   })
                               }),
                               (0, r.jsx)(c.DY3, {
-                                  text: _.intl.string(_.t['Ku+86e']),
-                                  className: v.removeButton,
+                                  text: v.intl.string(v.t['Ku+86e']),
+                                  className: _.removeButton,
                                   children: (0, r.jsx)(c.P3F, {
-                                      className: v.closeIcon,
+                                      className: _.closeIcon,
                                       onClick: () => (0, h.fi)(n, l.id),
                                       children: (0, r.jsx)(c.XHJ, {
                                           size: 'xs',
@@ -259,7 +259,7 @@ function y(e) {
         return null;
     function a(e) {
         return (0, r.jsx)(c.P3F, {
-            className: v.example,
+            className: _.example,
             onClick: () => (0, h.Kk)(n, t.id, { title: e }),
             children: (0, r.jsx)(c.Text, {
                 variant: 'text-xs/normal',
@@ -268,16 +268,16 @@ function y(e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: v.examplesSection,
+        className: _.examplesSection,
         children: [
             (0, r.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: _.intl.string(_.t.ECnSLi)
+                children: v.intl.string(v.t.ECnSLi)
             }),
             (0, r.jsxs)('div', {
-                className: v.examples,
-                children: [a(_.intl.string(_.t['7GZMJS'])), a(_.intl.string(_.t.nItydn)), a(_.intl.string(_.t.evuYbm)), a(_.intl.string(_.t.XWRuOj))]
+                className: _.examples,
+                children: [a(v.intl.string(v.t['7GZMJS'])), a(v.intl.string(v.t.nItydn)), a(v.intl.string(v.t.evuYbm)), a(v.intl.string(v.t.XWRuOj))]
             })
         ]
     });
@@ -286,7 +286,7 @@ function N(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: s } = e,
         { handleDragStart: a, handleDragReset: o, handleDragComplete: c } = (0, u.Z)(n.options, (e) => (0, h.Kk)(t, n.id, { options: e }));
     return (0, r.jsxs)('div', {
-        className: v.options,
+        className: _.options,
         children: [
             n.options.map((e, d) =>
                 (0, r.jsx)(

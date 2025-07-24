@@ -6,9 +6,9 @@ var n = t(255367),
     s = t(231338);
 function a(A) {
     var e;
-    let { guildId: t, role: a, className: o, canRemove: g = !1, onRemove: v = s.dG } = A,
-        f = (0, l.dQu)(l.TVs.unsafe_rawColors.PRIMARY_300).hex(),
-        c = null != (e = null == a ? void 0 : a.colorString) ? e : f,
+    let { guildId: t, role: a, className: o, canRemove: g = !1, onRemove: f = s.dG } = A,
+        v = (0, l.dQu)(l.TVs.unsafe_rawColors.PRIMARY_300).hex(),
+        c = null != (e = null == a ? void 0 : a.colorString) ? e : v,
         h = r.useMemo(() => ({ backgroundColor: ''.concat(c, '27') }), [c]);
     return null == a
         ? null
@@ -19,7 +19,7 @@ function a(A) {
                   role: a,
                   guildId: t,
                   canRemove: g,
-                  onRemove: v
+                  onRemove: f
               })
           });
 }

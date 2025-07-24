@@ -22,7 +22,7 @@ function b(e) {
         j = (e) => {
             (0, c.Je)(t, e, { published: !1 });
         },
-        _ = (e, i) => {
+        v = (e, i) => {
             (0, l.ZDy)(async () => {
                 let { default: l } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
@@ -63,7 +63,7 @@ function b(e) {
                     );
             });
         },
-        v = (e, t) => {
+        _ = (e, t) => {
             (0, o.JG)((0, u.ar)(e, t));
         },
         O = m.length > 0;
@@ -87,8 +87,8 @@ function b(e) {
                                       product: e,
                                       onEditProduct: () => i(e.id),
                                       onUnpublishProduct: () => j(e.id),
-                                      onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => v(t, e.id),
+                                      onDeleteProduct: () => v(e.id, e.name),
+                                      onCopyProductLink: () => _(t, e.id),
                                       onTestDownload: () =>
                                           g.Z.open({
                                               guildId: t,

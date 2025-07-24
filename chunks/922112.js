@@ -56,7 +56,7 @@ function x(e, t) {
     );
 }
 let b = function (e) {
-    let { guildId: t, resourceChannel: l, index: b, onDragComplete: j, onDragStart: _, onDragReset: v } = e,
+    let { guildId: t, resourceChannel: l, index: b, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
         { title: O, channelId: C, description: y } = l,
         N = d.Z.getChannel(C),
         I = null;
@@ -75,9 +75,9 @@ let b = function (e) {
             type: 'RESOURCE_CHANNEL',
             optionId: l.channelId,
             index: b,
-            onDragStart: _,
+            onDragStart: v,
             onDragComplete: j,
-            onDragReset: v
+            onDragReset: _
         }),
         Z = i.useCallback(
             (e) => {

@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(611064),
     E = n(677432),
     S = n(178762),
-    I = n(868671),
-    P = n(82295),
+    P = n(868671),
+    I = n(82295),
     Z = n(91218),
     T = n(313201),
     N = n(623624),
@@ -130,7 +130,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
         let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: C, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
             E = ee(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
             S = i.useRef(null),
-            [I, P] = i.useState(!1),
+            [P, I] = i.useState(!1),
             Z = null != j ? new Date(j) : null,
             T = i.useCallback(
                 (e) => {
@@ -184,9 +184,9 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: A,
-            shouldShow: I,
+            shouldShow: P,
             onRequestClose: () => {
-                P(!1);
+                I(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i } = e,
@@ -215,14 +215,14 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                             guildId: C,
                             isMobile: v,
                             onClickPremiumGuildIcon: w,
-                            selected: I,
+                            selected: P,
                             itemProps: E,
                             nameplate: O,
                             onClick: (e) => {
-                                e.shiftKey ? null == A || A() : P((e) => !e);
+                                e.shiftKey ? null == A || A() : I((e) => !e);
                             },
                             onMouseDown: (e) => {
-                                I ? e.stopPropagation() : null == i || i(e);
+                                P ? e.stopPropagation() : null == i || i(e);
                             }
                         },
                         o
@@ -270,7 +270,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                   className: X.membersGroup,
                   children: (0, r.jsx)('div', { className: X.memberGroupsPlaceholder })
               })
-            : (0, r.jsxs)(P.Z, {
+            : (0, r.jsxs)(I.Z, {
                   className: X.membersGroup,
                   children: [
                       (0, r.jsx)(f.nn4, {
@@ -490,7 +490,7 @@ class eo extends i.Component {
                 }, 50)
             ),
             Q(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[I.T];
+                let e = this.props.groups[P.T];
                 if ((0, O.R)(e)) return e;
             }),
             Q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
@@ -501,7 +501,7 @@ class eo extends i.Component {
                     let { rows: n } = this.props,
                         r = e.index;
                     return function (e, i) {
-                        if (e === I.T) {
+                        if (e === P.T) {
                             let e = n[r + 1 + i];
                             return (0, S.iZ)(e);
                         }
@@ -536,7 +536,7 @@ class eo extends i.Component {
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== I.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== P.T));
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -570,7 +570,7 @@ function es(e) {
             groups: p,
             version: m,
             updateMaxRowSeen: g
-        } = (0, I.H)({
+        } = (0, P.H)({
             memberStoreProps: s,
             channelId: t.id,
             guildId: t.guild_id

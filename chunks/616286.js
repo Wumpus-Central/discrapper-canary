@@ -71,8 +71,8 @@ function O(e) {
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
         { disabled: S } = O,
-        I = i.useRef(null),
-        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        P = i.useRef(null),
+        I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: T,
@@ -98,8 +98,8 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            ((0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P));
-        }, [n, P, h, m, _, E]),
+            ((0, p.v)(E, p.d.CHAT, !I), null == h || h(), !I && m && (null == _ || _()), c.Z.updateChatOpen(n, !I));
+        }, [n, I, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -112,7 +112,7 @@ function O(e) {
         ),
         R = i.useCallback(() => {
             var e;
-            null == (e = I.current) || e.focus();
+            null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
         event: C.CkL.FOCUS_CHAT_BUTTON,
@@ -138,7 +138,7 @@ function O(e) {
                 }
             );
         }, [M]));
-    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+    let L = [(t = f && S ? x.intl.string(x.t.DPgc5u) : I ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
         N > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: N })),
         T > 0 && L.push(x.intl.string(x.t.x5zAGR)),
@@ -170,7 +170,7 @@ function O(e) {
                 return e;
             })(
                 {
-                    buttonRef: I,
+                    buttonRef: P,
                     onClick: A,
                     label: t,
                     'aria-label': L.join(', '),

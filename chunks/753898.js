@@ -24,8 +24,8 @@ function C(e) {
         E = null != (t = (0, d.ZP)(x)) ? t : '',
         {
             avatarDecorationSrc: S,
-            eventHandlers: I,
-            isAnimating: P
+            eventHandlers: P,
+            isAnimating: I
         } = (0, g.Z)({
             userId: null == j ? void 0 : j.id,
             size: o.EFr.SIZE_80,
@@ -57,12 +57,12 @@ function C(e) {
                     }));
             }
             return e;
-        })({ channelId: x.id }, I)),
+        })({ channelId: x.id }, P)),
         (C = C =
             {
                 children: [
                     (() => {
-                        let e = !O && P;
+                        let e = !O && I;
                         return x.isMultiUserDM()
                             ? (0, r.jsx)(h.v, {
                                   channel: x,

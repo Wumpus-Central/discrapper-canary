@@ -19,8 +19,8 @@ function j() {
     let e,
         t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, x.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        _ = i.useRef(null),
-        v = (0, u.Z)(null != t ? t : void 0);
+        v = i.useRef(null),
+        _ = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.Q3)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
@@ -29,10 +29,10 @@ function j() {
         (e =
             null == t || j
                 ? (0, r.jsx)(a.$jN, {})
-                : null != v
+                : null != _
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
-                        config: v
+                        config: _
                     })
                   : O
                     ? (0, r.jsx)(f.Z, { guild: t })
@@ -47,10 +47,10 @@ function j() {
                 children: (0, r.jsx)(a.w0Z, {
                     className: b.settingsScroller,
                     children: (0, r.jsx)('main', {
-                        ref: _,
+                        ref: v,
                         className: b.settingsContent,
                         children: (0, r.jsx)(a.JcV, {
-                            containerRef: _,
+                            containerRef: v,
                             children: e
                         })
                     })

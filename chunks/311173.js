@@ -34,8 +34,8 @@ function h(e) {
 function x(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
-        [v] = i.useState(() => ({
+        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: v } = (0, d.Z)(l, a),
+        [_] = i.useState(() => ({
             tags: m,
             value: '',
             selections: [],
@@ -66,16 +66,16 @@ function x(e) {
         ),
         y = i.useCallback(
             (e) => {
-                _(e);
+                v(e);
             },
-            [_]
+            [v]
         );
     return (0, r.jsxs)('div', {
         className: s()(p.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
-                initialValue: v,
+                initialValue: _,
                 onChangeTags: C,
                 onChangeNewTagValue: y,
                 tagErrors: O,
